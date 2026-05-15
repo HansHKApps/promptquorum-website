@@ -106,6 +106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Do the 6 Embedding Models Compare in 2026?',
         content:
           'Tested on 4 document types (legal contracts, research papers, source code, multilingual enterprise wiki) using 100 graded queries per model. Hardware: NVIDIA RTX 4070 (12 GB VRAM) for GPU numbers; Apple M3 Pro (18 GB unified memory) for CPU numbers. Chunk size 256 tokens, batch size 32. Numbers are medians of three runs.',
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-en.svg',
+        imageCaption: 'Retrieval@10 accuracy across 4 document types: jina-embeddings-v3 leads overall at 92%, bge-large dominates English text (94% legal, 93% research) but drops to 79% on multilingual content, nomic-embed-text-v2 excels on multilingual (92%) with strongest cross-language support.',
         columns: ['Model', 'Dim', 'Speed (CPU)', 'Speed (GPU)', 'Memory', 'retrieval@10', 'Multilingual', 'Best for'],
         rows: [
           {
@@ -213,6 +215,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Retrieval Accuracy by Document Type (retrieval@10)',
         content:
           '**retrieval@10 = % of queries where the correct chunk appears in the top-10 results.** Higher is better. Numbers are out of 25 graded queries per document type per model.',
+        image: '/images/best-embedding-models-local-rag-2026-document-types-en.svg',
+        imageCaption: 'Retrieval@10 by document type: jina-embeddings-v3 is the only model staying above 87% on all four types (legal 93%, research 92%, code 87%, multilingual 89%). English-only models (bge-large, gte-large) excel on legal/research but drop 10–15 points on multilingual. Code retrieval remains hardest (82–87% across all models).',
         columns: ['Model', 'Legal', 'Research', 'Code', 'Multilingual', 'Overall'],
         rows: [
           { 'Model': 'nomic-embed-text-v2', 'Legal': '88%', 'Research': '90%', 'Code': '82%', 'Multilingual': '92%', 'Overall': '88%' },
@@ -234,6 +238,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CPU Embedding Speed (Chunks Per Second)',
         content:
           '**Throughput at batch size 32, 256-token chunks, on Apple M3 Pro (no GPU).** Higher is better. CPU speed determines whether you can re-embed a 5,000-page corpus over lunch (jina, nomic) or have to plan an overnight run (bge-large, gte-large).',
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-en.svg',
+        imageCaption: 'CPU vs GPU embedding throughput: nomic-embed-text-v2 dominates CPU at 580 chunks/sec (5× faster than bge-large at 95), shrinking re-index time from 55 minutes to 9 minutes on a 5K-page corpus. GPU narrows the gap; nomic still leads at 4,800 chunks/sec on RTX 4070.',
         columns: ['Model', 'Chunks/sec (CPU)', '5K-page corpus indexing time', 'Notes'],
         rows: [
           { 'Model': 'nomic-embed-text-v2', 'Chunks/sec (CPU)': '580', '5K-page corpus indexing time': '~9 min', 'Notes': 'Mixture-of-experts; activates 305M of 475M params per token' },
@@ -276,6 +282,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Memory Footprint and the Dimension Tradeoff',
         content:
           '**Dimension count is the most over-engineered choice in local RAG.** More dimensions help retrieval up to ~1,024, then plateau. Beyond that, you pay double the storage for sub-1-percentage-point gains.',
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-en.svg',
+        imageCaption: 'Dimension vs storage tradeoff on 50K-page corpus: 768 dims = 0.9 GB, 1,024 dims = 1.2 GB (+33%), 3,072 dims = 3.6 GB (+300%) with only <0.5% retrieval gain. Matryoshka models (jina-v3, nomic) let you truncate from 1,024→512→256 dims without re-embedding, trading ~1–3% retrieval for 50% storage savings.',
         items: [
           '**768 dims (nomic-embed-text-v2):** 768 × 4 bytes = 3 KB per chunk. A 5,000-page corpus chunked at 256 tokens (~30,000 chunks) needs ~90 MB just for vectors.',
           '**1,024 dims (everything else):** 4 KB per chunk. Same corpus needs ~120 MB for vectors. Storage scales linearly — a 50,000-page corpus needs 1.2 GB at 1,024 dims vs 0.9 GB at 768 dims.',
@@ -357,6 +365,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decision Tree: Which Embedder Should You Pick?',
         content:
           '**Five binary questions, in order, get most readers to the right embedder.**',
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-en.svg',
+        imageCaption: '5-step decision flowchart: GPU availability → corpus language → document length → dimension truncation needs → commercial licensing. Default pick if unsure: jina-embeddings-v3 (92% retrieval@10, 89-language multilingual, Matryoshka dimension flexibility). Verify CC BY-NC licensing for commercial deployments.',
         items: [
           '**1. Do you have a GPU available for indexing?** → No: nomic-embed-text-v2 (5× CPU speed). Yes: continue.',
           '**2. Is the corpus English-only?** → No: continue. Yes: bge-large-en-v1.5 if accuracy matters most, gte-large or mxbai-embed-large-v1 if Apache-2.0 license matters.',
