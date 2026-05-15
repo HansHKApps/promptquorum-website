@@ -490,6 +490,22 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
         </div>
       )}
 
+      {/* YouTube embed */}
+      {section.youtubeUrl && (
+        <div className="my-8">
+          <div className="relative w-full overflow-hidden rounded-lg shadow-md bg-black" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              src={section.youtubeUrl.replace('youtube.com/watch?v=', 'youtube-nocookie.com/embed/').split('&')[0]}
+              title="Video tutorial"
+              className="absolute top-0 left-0 w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+        </div>
+      )}
+
       {/* Code block */}
       {section.codeBlock && (
         <div className="my-6">

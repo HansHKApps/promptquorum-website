@@ -119,6 +119,7 @@ schema: {
         { label: 'GPU Memory Configuration', anchor: '#gpu-memory' },
         { label: 'Context Window Adjustment', anchor: '#context-window' },
         { label: 'LM Studio Local API (Beta)', anchor: '#local-api' },
+        { label: 'Watch: Running Claude Code with LM Studio', anchor: '#video-walkthrough' },
         { label: 'LoRA and Fine-Tuning', anchor: '#lora-finetuning' },
         { label: 'Batch Inference', anchor: '#batch-inference' },
         { label: 'Performance Benchmarking', anchor: '#benchmarking' },
@@ -167,6 +168,12 @@ schema: {
           content: 'LM Studio\'s local API (beta as of April 2026) mimics OpenAI\'s API:',
           codeBlock: '# 1. Open LM Studio Settings → Server\n# 2. Turn on "Enable local API server"\n# 3. API runs at http://localhost:1234/v1\n\n# 4. Use it like Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="not-needed"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
+        },
+        videoWalkthrough: {
+          id: 'video-walkthrough',
+          title: 'Watch: Running Claude Code with LM Studio on Local Hardware',
+          content: 'In this community walkthrough, a developer demonstrates running Claude Code with Qwen 3.5 on an RTX 5090, using LM Studio Link to connect a Linux GPU machine to a MacBook — no cloud API keys required. The video covers the full setup and builds a Next.js dashboard from scratch using only local AI inference.',
+          youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
         },
         lora: {
           title: 'Can You Fine-Tune Models With LM Studio?',

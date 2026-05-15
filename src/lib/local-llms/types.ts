@@ -30,6 +30,7 @@ export interface LLMSection {
     quick: string[]
   }
   component?: string
+  youtubeUrl?: string
   costNote?: string
 }
 
