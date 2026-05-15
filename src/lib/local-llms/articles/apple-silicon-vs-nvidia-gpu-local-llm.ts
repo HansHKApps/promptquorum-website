@@ -65,6 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Setup time: Ollama on Mac = 5 minutes. CUDA + drivers + framework on Linux/Windows = 30–60 minutes.',
           'Hybrid setup works well: Mac for daily inference (portable, silent, 70B capable), NVIDIA desktop for fine-tuning (CUDA ecosystem). Total: $5,000 for both.',
           'M5 Ultra (expected mid-2026, 256GB unified memory) will run 70B FP16 lossless and 120B+ models.',
+          'Scope: this guide covers Apple Silicon vs NVIDIA GPUs only. If you are also evaluating CPU-only inference as a third option, see [GPU vs CPU vs Apple Silicon for Local LLMs](/local-llms/gpu-vs-cpu-vs-apple-silicon).',
         ],
       },
 
