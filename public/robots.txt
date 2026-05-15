@@ -7,8 +7,7 @@ Allow: /
 Disallow: /download
 Disallow: /image-license
 
-# Block utility params (preserve indexing of base URLs)
-Disallow: /?*
+# Block utility params except language switcher
 Disallow: /*?print=
 
 # Sitemap
