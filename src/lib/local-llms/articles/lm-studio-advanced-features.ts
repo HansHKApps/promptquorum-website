@@ -984,7 +984,141 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
-      sections: {},
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'LM Studioの高度な設定は「設定」→「サーバー」タブにあります（GPUオプション、コンテキスト長）。',
+            'GPUメモリはVRAMの10%から100%まで手動で設定できます。値を下げると他のアプリ用にGPUが解放されます。',
+            'コンテキストウィンドウ（モデルが処理できるトークン数）はモデルの上限まで拡張できますが、VRAMを多く消費します。',
+            'ローカルAPI（ベータ版）はlocalhost:1234でOpenAI互換エンドポイントを公開します。',
+            '2026年4月現在、LM StudioにはLoRAファインチューニングが搭載されていません。代わりにText-Generation-WebUIやトレーニングスクリプトを使用してください。',
+          ],
+        },
+        quickFacts: {
+          title: 'パフォーマンス指標クイック一覧',
+          items: [
+            '**GPUメモリ：** VRAMの10%から100%まで調整可能。50%割り当てでVRAM消費を約半分に削減',
+            '**コンテキストウィンドウ：** モデルデフォルトから4k、8k、16k、32kトークンに拡張可能。コンテキスト2倍 = VRAM2倍',
+            '**量子化の影響：** Q4_K_MはFP16比で約40%少ないVRAM、品質損失は<1%',
+            '**APIレイテンシ：** Llama 3.2 3Bで120-180ms、7Bで280-420ms、13Bで680-950ms（RTX 3080）',
+            '**バッチ処理：** APIループ経由で同時リクエストあたり8-12トークン/秒のスループット',
+            '**GPU割り当て：** 50%未満では速度が5-10倍低下（CPUフォールバックのオーバーヘッド）',
+          ],
+        },
+        gpuMemory: {
+          title: 'LM StudioでGPUメモリを設定する方法',
+          content: 'LM StudioはモデルのGPU VRAMの使用量を制御できます。',
+          items: [
+            '1. **設定**をクリック（左下の歯車アイコン）。',
+            '2. **GPU加速**スライダーを見つける（デフォルト：100%）。',
+            '3. 50%にスライドすると、GPUはVRAMの50%を使用し、残りを他のアプリケーション用に解放します。',
+            '4. GPU割り当て低下 = 推論速度が遅くなるが、同時実行アプリのヘッドルームが増える。',
+            '5. **再起動**をクリックして変更を適用します。',
+          ],
+        },
+        contextWindow: {
+          title: 'コンテキストウィンドウを拡張する方法',
+          content: 'コンテキストウィンドウはモデルが読み取れる最大トークン（テキスト）数です。拡張すると長い会話が可能になりますが、VRAMを多く消費します。',
+          items: [
+            '1. 設定 → サーバーを開く。',
+            '2. **コンテキスト長**を探す（デフォルト：モデルの組み込み制限）。',
+            '3. 4k、8k、16k、32kに増やす（モデルのサポートに依存）。',
+            '4. コンテキスト長を2倍にするとVRAM使用量が約2倍になります。',
+            '5. 長いプロンプトでチャットを開始して拡張コンテキストをテストします。',
+          ],
+        },
+        localAPI: {
+          title: 'LM Studioのローカルリローカルオルバースト（ベータ）を有効にする方法',
+          content: 'LM Studioのローカルリ（2026年4月時点でベータ版）はOpenAIのAPIを模倣します。',
+          codeBlock: '# 1. LM Studio 設定 → サーバーを開く\n# 2. "Enable local API server" をオンにする\n# 3. APIはhttp://localhost:1234/v1で動作\n\n# 4. Ollamaと同様に使用：\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="不要"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "こんにちは"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        lora: {
+          title: 'LM Studioでモデルをファインチューニングできますか？',
+          content: [
+            '**2026年4月現在、LM StudioにはLoRAファインチューニングが搭載されていません。** ファインチューニングには以下を使用してください：',
+            '- **Text-Generation-WebUI**（LoRAに最も簡単）',
+            '- **LLaMA-Factory**（高度、本番向け）',
+            '- **unsloth**（最速、VRAM使用最適化）',
+            'LM Studioは事前トレーニング済みLoRAアダプターを適用するのに適していますが、新しいものをトレーニングするためではありません。将来のバージョンでLoRAトレーニングが追加される可能性があります。',
+          ],
+        },
+        batch: {
+          title: 'LM Studioでバッチ推論を実行する方法',
+          content: [
+            '**バッチ推論とは、レスポンスを待たずに複数のプロンプトを処理することです。** LM Studioには組み込みのバッチモードがありませんが、APIまたはPythonループでシミュレートできます：',
+          ],
+          codeBlock: '# Python: LM Studio API経由でバッチ推論\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI(base_url="http://localhost:1234/v1", api_key="x")\n\nprompts = [\n  "2+2は何ですか？",\n  "量子コンピューティングを説明して",\n  "トランスフォーマーの仕組みは？"\n]\n\nresults = []\nfor prompt in prompts:\n  response = client.chat.completions.create(\n    model="llama-3.2-3b-gguf",\n    messages=[{"role": "user", "content": prompt}]\n  )\n  results.append({\n    "prompt": prompt,\n    "response": response.choices[0].message.content\n  })\n\nwith open("batch_results.json", "w") as f:\n  json.dump(results, f, indent=2)',
+          codeLanguage: 'python',
+        },
+        benchmarking: {
+          title: 'LM Studioでモデル速度をベンチマークする方法',
+          content: 'LM Studioには組み込みのベンチマークツールがあります：',
+          items: [
+            '1. LM Studioでモデルをロードします。',
+            '2. **設定** → **ベンチマーク**タブをクリック。',
+            '3. **ベンチマーク実行**をクリック - あなたの特定のハードウェアのトークン/秒を測定します。',
+            '4. 結果はチャットのオーバーヘッドなしのベースラインパフォーマンスを示します。',
+            'これにより、本番環境にデプロイする前の期待速度を理解できます。',
+          ],
+        },
+        commonMistakes: {
+          title: 'LM Studio高度な機能の一般的なミス',
+          items: [
+            '**GPU割り当てを下げすぎてモデルのせいにする。** GPUを10%に設定すると、ほとんどCPUで動作するため推論が5-10倍遅くなります。まず80%以上のGPU割り当てでテストしてください。',
+            '**モデルのサポート範囲を超えてコンテキストウィンドウを拡張する。** モデルには最大サポートコンテキスト長があります。それを超えても機能が追加されず、VRAMを無駄に使うだけです。',
+            '**LM StudioでLoRAトレーニングを期待する。** 2026年4月現在、利用できません。Text-Generation-WebUIやトレーニングライブラリを使用してください。',
+            '**APIには明示的な有効化が必要なことを忘れる。** ローカルAPIはデフォルトでオフです。設定 → サーバーで有効にしてください。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'LM Studio高度な機能についてのよくある質問',
+          faqs: [
+            {
+              q: 'LM Studio APIとOllama APIの違いは何ですか？',
+              a: '両方ともOpenAI互換エンドポイントを公開します。LM Studio APIはlocalhost:1234、Ollamaはlocalhost:11434で動作します。どちらも同様に機能します。チャットに好みのツールを選んでください。',
+            },
+            {
+              q: 'LM Studio APIを本番環境で使用できますか？',
+              a: '動作しますが、Ollama APIの方が成熟しています。LM Studio APIはベータ版です。本番環境では、Ollamaの方が安全な選択肢です。',
+            },
+            {
+              q: 'GPU割り当てを下げるとVRAM要件が下がりますか？',
+              a: 'はい。GPU割り当てを50%に下げると、VRAMの使用量が約半分になりますが、モデルが部分的にCPUで動作するため推論が2-5倍遅くなります。',
+            },
+            {
+              q: 'コンテキストウィンドウをいつ拡張すべきですか？',
+              a: 'ユースケースがモデルのデフォルト（通常2k-4kトークン）より長いドキュメントや会話を必要とする場合に拡張します。ドキュメント分析、コードレビュー、複数ターンの会話には8k-16kコンテキストが推奨されます。十分なVRAMがある場合のみ拡張してください（16GB以上のRAM推奨）。',
+            },
+            {
+              q: '本番環境にはLM Studio APIとOllamaのどちらを使うべきですか？',
+              a: '本番デプロイにはOllama APIを使用してください。Ollamaはより成熟して安定しており、モデルサービング専用に設計されています。LM Studio APIは開発とテスト向けです。LM Studio UIを好む場合、OllamaをバックグラウンドでLM StudioのチャットとExploration用に並行して実行できます。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連資料',
+          items: [
+            '[LM Studioのインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) -- macOS、Windows、Linuxの完全インストールガイド。',
+            '[ローカルLLMに必要なVRAM量](/local-llms/how-much-vram-local-llm?lang=ja) -- 異なるモデルサイズのハードウェア要件とVRAM計画。',
+            '[Ollama vs LM Studio](/local-llms/lm-studio-vs-ollama?lang=ja) -- 詳細な比較。',
+            '[ローカルLLM OpenAI互換API](/local-llms/local-llm-openai-compatible-api?lang=ja) -- APIドキュメント。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '出典',
+          items: [
+            'LM Studioドキュメント -- lmstudio.ai/docs',
+            'LM Studioローカルサーバー（ベータ版）-- lmstudio.ai/docs/local-server/overview',
+            'OpenAI API互換性 -- platform.openai.com/docs/api-reference',
+          ],
+        },
+      },
     },
     zh: {
       theme: 'Tools & Interfaces',
@@ -1003,6 +1137,140 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
-      sections: {},
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'LM Studio高级设置位于"设置"→"服务器"选项卡（GPU选项、上下文长度）。',
+            'GPU内存可从VRAM的10%手动设置到100%——较低值可为其他应用释放GPU空间。',
+            '上下文窗口（模型能处理的令牌数）可扩展到模型上限，但会消耗更多VRAM。',
+            '本地API（测试版）在localhost:1234暴露OpenAI兼容端点，可用于集成。',
+            '截至2026年4月，LoRA微调尚未内置于LM Studio；请改用Text-Generation-WebUI或训练脚本。',
+          ],
+        },
+        quickFacts: {
+          title: '性能指标速览',
+          items: [
+            '**GPU内存：** 可从VRAM的10%调整至100%；50%分配可将VRAM消耗减少约一半',
+            '**上下文窗口：** 可从模型默认值扩展到4k、8k、16k或32k令牌；上下文翻倍 = VRAM翻倍',
+            '**量化影响：** Q4_K_M比FP16少用约40% VRAM，质量损失<1%',
+            '**API延迟：** Llama 3.2 3B约120-180ms，7B约280-420ms，13B约680-950ms（RTX 3080）',
+            '**批量处理：** 通过API循环，每个并发请求吞吐量可达8-12令牌/秒',
+            '**GPU分配：** 低于50%会导致速度降低5-10倍（CPU回退开销）',
+          ],
+        },
+        gpuMemory: {
+          title: '如何在LM Studio中配置GPU内存',
+          content: 'LM Studio允许您控制模型使用多少GPU VRAM：',
+          items: [
+            '1. 点击**设置**（左下角齿轮图标）。',
+            '2. 找到**GPU加速**滑块（默认：100%）。',
+            '3. 滑动到50%，如果您希望GPU使用50%的VRAM，将其余部分释放给其他应用程序。',
+            '4. GPU分配越低 = 推理速度越慢，但为同时运行的应用留出更多余量。',
+            '5. 点击**重启**以应用更改。',
+          ],
+        },
+        contextWindow: {
+          title: '如何扩展上下文窗口',
+          content: '上下文窗口是模型可以读取的最大令牌（文本）数量。扩展它可以进行更长的对话，但会消耗更多VRAM。',
+          items: [
+            '1. 打开设置 → 服务器。',
+            '2. 查找**上下文长度**（默认：模型内置限制）。',
+            '3. 增加到4k、8k、16k或32k（取决于模型支持）。',
+            '4. 上下文长度每翻倍，VRAM使用量大约也翻倍。',
+            '5. 通过开始聊天并提供长提示来测试您的扩展上下文。',
+          ],
+        },
+        localAPI: {
+          title: '如何启用LM Studio的本地API（测试版）',
+          content: 'LM Studio的本地API（截至2026年4月为测试版）模仿OpenAI的API：',
+          codeBlock: '# 1. 打开LM Studio 设置 → 服务器\n# 2. 打开"启用本地API服务器"\n# 3. API运行在http://localhost:1234/v1\n\n# 4. 像使用Ollama一样使用：\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="不需要"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "你好"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        lora: {
+          title: '可以用LM Studio微调模型吗？',
+          content: [
+            '**截至2026年4月，LM Studio尚未内置LoRA微调功能。** 如需微调，请使用：',
+            '- **Text-Generation-WebUI**（LoRA最简单选择）',
+            '- **LLaMA-Factory**（高级，生产级别）',
+            '- **unsloth**（最快，VRAM使用最优）',
+            'LM Studio适合应用预训练的LoRA适配器，但不适合训练新的。未来版本可能会直接添加LoRA训练功能。',
+          ],
+        },
+        batch: {
+          title: '如何在LM Studio中运行批量推理',
+          content: [
+            '**批量推理是指在不等待响应的情况下处理多个提示。** LM Studio没有内置批量模式，但您可以通过API或Python循环模拟：',
+          ],
+          codeBlock: '# Python: 通过LM Studio API进行批量推理\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI(base_url="http://localhost:1234/v1", api_key="x")\n\nprompts = [\n  "2+2等于多少？",\n  "解释量子计算",\n  "Transformer是如何工作的？"\n]\n\nresults = []\nfor prompt in prompts:\n  response = client.chat.completions.create(\n    model="llama-3.2-3b-gguf",\n    messages=[{"role": "user", "content": prompt}]\n  )\n  results.append({\n    "prompt": prompt,\n    "response": response.choices[0].message.content\n  })\n\nwith open("batch_results.json", "w") as f:\n  json.dump(results, f, indent=2)',
+          codeLanguage: 'python',
+        },
+        benchmarking: {
+          title: '如何在LM Studio中对模型速度进行基准测试',
+          content: 'LM Studio包含内置基准测试工具：',
+          items: [
+            '1. 在LM Studio中加载模型。',
+            '2. 点击**设置** → **基准测试**选项卡。',
+            '3. 点击**运行基准测试** -- 测量您特定硬件的令牌/秒。',
+            '4. 结果显示无聊天开销的基线性能。',
+            '这有助于您在部署到生产环境之前了解预期速度。',
+          ],
+        },
+        commonMistakes: {
+          title: 'LM Studio高级功能的常见错误',
+          items: [
+            '**将GPU分配降得太低，然后怪罪模型速度慢。** 如果将GPU设置为10%，推理速度会慢5-10倍，因为主要在CPU上运行。先用80%以上的GPU分配测试。',
+            '**将上下文窗口扩展到超出模型支持范围。** 模型有最大支持的上下文长度。超过该限制不会增加功能，只会浪费VRAM。',
+            '**期望在LM Studio中进行LoRA训练。** 截至2026年4月，该功能不可用。请使用Text-Generation-WebUI或训练库。',
+            '**忘记API需要明确启用。** 本地API默认关闭。请在设置 → 服务器中启用它。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'LM Studio高级功能常见问题',
+          faqs: [
+            {
+              q: 'LM Studio API和Ollama API有什么区别？',
+              a: '两者都暴露OpenAI兼容端点。LM Studio API在localhost:1234，Ollama在localhost:11434。两者功能相同。选择您更偏好的聊天工具。',
+            },
+            {
+              q: '可以在生产环境中使用LM Studio API吗？',
+              a: '可以运行，但Ollama API更成熟。LM Studio API处于测试阶段。对于生产环境，Ollama是更安全的选择。',
+            },
+            {
+              q: '降低GPU分配会减少VRAM需求吗？',
+              a: '是的。将GPU分配降低到50%大约会将VRAM使用量减半，但推理速度会慢2-5倍，因为模型部分在CPU上运行。',
+            },
+            {
+              q: '什么时候应该扩展上下文窗口？',
+              a: '当您的用例需要处理比模型默认值（通常2k-4k令牌）更长的文档或对话时扩展。文档分析、代码审查或多轮对话建议使用8k-16k上下文。仅在有足够VRAM时扩展（建议16GB以上RAM）。',
+            },
+            {
+              q: '生产环境应该用LM Studio API还是Ollama？',
+              a: '生产部署使用Ollama API。Ollama更成熟、稳定，专为模型服务设计。LM Studio API适合开发和测试。如果您喜欢LM Studio界面，可以让Ollama在后台运行，同时用LM Studio进行聊天探索。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[如何安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) -- macOS、Windows和Linux的完整安装指南。',
+            '[本地LLM需要多少VRAM](/local-llms/how-much-vram-local-llm?lang=zh) -- 不同模型大小的硬件要求和VRAM规划。',
+            '[Ollama vs LM Studio](/local-llms/lm-studio-vs-ollama?lang=zh) -- 详细比较。',
+            '[本地LLM OpenAI兼容API](/local-llms/local-llm-openai-compatible-api?lang=zh) -- API文档。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '参考资料',
+          items: [
+            'LM Studio文档 -- lmstudio.ai/docs',
+            'LM Studio本地服务器（测试版）-- lmstudio.ai/docs/local-server/overview',
+            'OpenAI API兼容性 -- platform.openai.com/docs/api-reference',
+          ],
+        },
+      },
     },
   };
