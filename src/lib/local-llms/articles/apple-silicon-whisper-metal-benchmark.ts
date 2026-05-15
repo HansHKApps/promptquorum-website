@@ -555,7 +555,826 @@ while True:
       }
     },
   },
-  fr: { theme: 'Hardware & Performance', title: '', sections: {} },
-  ja: { theme: 'Hardware & Performance', title: '', sections: {} },
-  zh: { theme: 'Hardware & Performance', title: '', sections: {} },
+  fr: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-15',
+    theme: 'Hardware & Performance',
+    title: 'Whisper sur Apple Silicon 2026 : Benchmarks Metal, Configuration Core ML, Guide M1–M5',
+    seoTitle: 'Whisper STT Apple Silicon 2026 : Benchmarks GPU Metal M1-M5, Guide d\'installation',
+    intro: 'Whisper sur Apple Silicon : benchmarks Metal et Core ML de M1 à M5 Max. Guide d\'installation, sélection de modèle, transcription en temps réel.',
+    metaDescription: 'Whisper sur Mac Apple Silicon : benchmarks GPU Metal M1-M5 Max, installation, performance STT temps réel.',
+    twitterDescription: 'Whisper sur M5 Pro : large-v3 à 10× temps réel via Metal. Benchmarks, Core ML, guide STT temps réel.',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    current_models_mentioned: ['Whisper tiny', 'Whisper small', 'Whisper large-v3'],
+    current_hardware_mentioned: ['M1', 'M5 Pro', 'M5 Max'],
+    audience: 'Utilisateurs Mac mettant en œuvre la reconnaissance vocale locale.',
+    readTime: '14 min de lecture',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Whisper Apple Silicon STT',
+    targetKeywords: ['Whisper Mac', 'reconnaissance vocale locale', 'transcription temps réel', 'benchmarks Apple Silicon'],
+    leadAnswerBlock: '**Whisper large-v3 sur M5 Pro : 10–12× temps réel. GPU Metal automatique. Large-v3-turbo équilibre vitesse + précision à 14–18×. Gratuit, entièrement hors ligne.**',
+    quickAnswerTop: {
+      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      fr: {
+        question: 'Quelle est la vitesse de Whisper sur Mac ?',
+        answer: 'Whisper tiny : 48–60× temps réel. Small : 22–34× temps réel. Large-v3 : 5–14× temps réel (M1→M5 Pro). Large-v3-turbo : 14–18× temps réel sur M5 base.',
+        bullets: ['Tiny : 48–60× temps réel (rapide, précision réduite)', 'Small : 22–34× temps réel (équilibré)', 'Large-v3-turbo : 14–18× temps réel (meilleur rapport vitesse/qualité)', 'Large-v3 : 5–14× temps réel (meilleure précision)', 'Accélération GPU Metal automatique', 'Coût zéro, entièrement hors ligne'],
+        updatedDate: '2026-05-15',
+      },
+      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+    },
+    toc: [
+      { label: 'Tableau de benchmarks complet (M1–M5)', anchor: '#table' },
+      { label: 'Tailles des modèles Whisper', anchor: '#model-sizes' },
+      { label: 'Metal vs Core ML vs ANE', anchor: '#metal-vs-coreml' },
+      { label: 'Installation : whisper.cpp', anchor: '#setup' },
+      { label: 'Streaming en temps réel', anchor: '#realtime' },
+      { label: 'Pipeline assistant vocal', anchor: '#integration' },
+      { label: 'Meilleure configuration par Mac', anchor: '#model-choice' },
+      { label: 'STT local vs cloud', anchor: '#cloud-comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Articles connexes', anchor: '#related' },
+    ],
+    sections: {
+      table: {
+        id: 'table',
+        title: 'Tableau de benchmarks complet : Performance de Whisper sur Apple Silicon (M1–M5)',
+        tableFormat: true,
+        columns: ['Chip', 'Tiny', 'Base', 'Small', 'Medium', 'Large-v3'],
+        rows: [
+          { chip: 'M1', tiny: '32×', base: '20×', small: '12×', medium: '5×', large: '2–3×' },
+          { chip: 'M1 Pro', tiny: '38×', base: '24×', small: '16×', medium: '7×', large: '3–4×' },
+          { chip: 'M1 Max', tiny: '45×', base: '30×', small: '22×', medium: '10×', large: '5–6×' },
+          { chip: 'M1 Ultra', tiny: '55×', base: '38×', small: '28×', medium: '14×', large: '7–9×' },
+          { chip: 'M2', tiny: '36×', base: '23×', small: '14×', medium: '6×', large: '3–4×' },
+          { chip: 'M2 Pro', tiny: '42×', base: '28×', small: '20×', medium: '9×', large: '4–5×' },
+          { chip: 'M2 Max', tiny: '50×', base: '35×', small: '26×', medium: '12×', large: '6–8×' },
+          { chip: 'M2 Ultra', tiny: '60×', base: '42×', small: '32×', medium: '17×', large: '9–11×' },
+          { chip: 'M3', tiny: '40×', base: '26×', small: '16×', medium: '7×', large: '3–4×' },
+          { chip: 'M3 Pro', tiny: '46×', base: '32×', small: '22×', medium: '10×', large: '5–6×' },
+          { chip: 'M3 Max', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '7–9×' },
+          { chip: 'M4', tiny: '44×', base: '30×', small: '18×', medium: '8×', large: '4–5×' },
+          { chip: 'M4 Pro', tiny: '50×', base: '36×', small: '26×', medium: '12×', large: '6–8×' },
+          { chip: 'M4 Max', tiny: '60×', base: '44×', small: '34×', medium: '16×', large: '8–10×' },
+          { chip: 'M5 (base)', tiny: '48×', base: '34×', small: '22×', medium: '10×', large: '5–7×' },
+          { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
+          { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
+        ],
+        note: '×N temps réel = N secondes d\'audio transcrites en 1 seconde. Benchmarks via whisper.cpp avec accélération Metal. Tous les M1 Pro+ peuvent exécuter large-v3 en temps réel ou plus vite.'
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: 'Tailles des modèles Whisper — Lequel choisir ?',
+        tableFormat: true,
+        columns: ['Modèle', 'Paramètres', 'Taille disque', 'RAM utilisée', 'WER anglais', 'Idéal pour'],
+        rows: [
+          { model: 'tiny', params: '39M', disk: '75 MB', ram: '~1 Go', wer: '7,6%', bestFor: 'Temps réel, précision réduite' },
+          { model: 'base', params: '74M', disk: '142 MB', ram: '~1 Go', wer: '5,0%', bestFor: 'Temps réel sur anciens Mac' },
+          { model: 'small', params: '244M', disk: '466 MB', ram: '~2 Go', wer: '3,4%', bestFor: 'Équilibre vitesse/qualité' },
+          { model: 'medium', params: '769M', disk: '1,5 Go', ram: '~5 Go', wer: '2,9%', bestFor: 'Haute qualité, plus lent' },
+          { model: 'large-v3', params: '1,55B', disk: '3,0 Go', ram: '~10 Go', wer: '2,5%', bestFor: 'Meilleure précision' },
+          { model: 'large-v3-turbo', params: '809M', disk: '1,6 Go', ram: '~6 Go', wer: '2,7%', bestFor: 'Meilleur équilibre vitesse/qualité' },
+          { model: 'distil-large-v3', params: '756M', disk: '1,5 Go', ram: '~5 Go', wer: '2,6%', bestFor: '6× plus rapide que large-v3' },
+        ],
+        note: 'WER (taux d\'erreur de mots) sur le jeu de test LibriSpeech anglais. Large-v3-turbo et distil-large-v3 sont le meilleur compromis pour le temps réel — qualité proche de large-v3 à 4–6× la vitesse.'
+      },
+      metalVsCoreml: {
+        id: 'metal-vs-coreml',
+        title: 'Metal vs Core ML vs Apple Neural Engine : Quel backend ?',
+        content: [
+          'Apple Silicon offre trois chemins d\'accélération pour Whisper. Chacun présente des compromis.',
+          '',
+          'Metal (via whisper.cpp) — Recommandé : Utilise le framework GPU Apple Metal, compatible avec toutes les puces M, 10–12× temps réel sur large-v3 (M5 Pro), configuration via make WHISPER_METAL=1. Idéal pour : la plupart des utilisateurs, configuration la plus simple, performances éprouvées.',
+          '',
+          'Core ML (via format Apple Core ML) — Avancé : Utilise le framework d\'apprentissage automatique Apple, peut cibler le Neural Engine (ANE) pour certaines opérations, 15–20% plus rapide sur certaines charges de travail, nécessite une conversion de modèle (10–15 min de configuration). Idéal pour : les utilisateurs avancés recherchant la vitesse maximale.',
+          '',
+          'Apple Neural Engine (ANE) — Utilisation limitée : Accélérateur IA dédié sur toutes les puces M, non accessible directement (doit passer par Core ML), Whisper n\'exploite pas pleinement l\'ANE en raison d\'incompatibilités architecturales, fonctionne mieux avec les petits modèles (tiny, base). Idéal pour : Whisper tiny/base sur MacBooks sur batterie.',
+          '',
+          'Matrice de décision : Première configuration → Metal (whisper.cpp). Vitesse maximale sur large-v3 → Metal (whisper.cpp). Laptop sur batterie, modèle base → Core ML avec ANE. Serveur de production → Metal (éprouvé, fiable). Transcription temps réel → Metal avec mode streaming. Déploiement cloud sur instances Mac → Metal (conteneurisable).'
+        ],
+        items: [
+          'Metal (whisper.cpp) : Plus rapide, compatible universellement, configuration la plus simple',
+          'Core ML : Optimisation Neural Engine, gain de vitesse de 15–20% sur certaines charges (nécessite conversion)',
+          'Apple Neural Engine : Bénéfice limité pour les grands modèles, meilleur pour tiny/base sur laptops'
+        ]
+      },
+      setup: {
+        id: 'setup',
+        title: 'Installation : whisper.cpp avec accélération Metal',
+        numberedItems: [
+          { title: 'Installer les dépendances', whyItMatters: 'xcode-select --install (outils Xcode)\nbrew install ffmpeg (conversion audio)' },
+          { title: 'Cloner et compiler whisper.cpp avec Metal', whyItMatters: 'git clone https://github.com/ggerganov/whisper.cpp\ncd whisper.cpp\nmake WHISPER_METAL=1\n./main -h | grep -i metal' },
+          { title: 'Télécharger un modèle', whyItMatters: 'bash ./models/download-ggml-model.sh small (466 Mo, temps réel)\nbash ./models/download-ggml-model.sh large-v3 (3 Go, meilleure qualité)\nbash ./models/download-ggml-model.sh large-v3-turbo (1,6 Go, équilibré)' },
+          { title: 'Transcrire un fichier audio', whyItMatters: './main -m models/ggml-large-v3.bin -f /chemin/vers/audio.wav\n./main -m models/ggml-large-v3.bin -f audio.wav -oj (JSON)\n./main -m models/ggml-large-v3.bin -f audio.wav -l en (spécifier la langue)' },
+          { title: 'Convertir d\'abord l\'audio non-WAV', whyItMatters: 'ffmpeg -i input.mp3 -ar 16000 -ac 1 -c:a pcm_s16le output.wav\n./main -m models/ggml-large-v3.bin -f output.wav' }
+        ]
+      },
+      realtime: {
+        id: 'realtime',
+        title: 'Transcription en streaming temps réel (microphone en direct)',
+        content: [
+          'Pour la transcription en direct depuis le microphone — assistants vocaux, transcription de réunions, outils d\'accessibilité.',
+          '',
+          'Option 1 : mode stream de whisper.cpp',
+          './stream -m models/ggml-small.bin --step 500 --length 5000',
+          '# --step 500: traitement toutes les 500ms',
+          '# --length 5000: conserver les 5 dernières secondes de contexte',
+          '',
+          'Option 2 : Python avec faster-whisper (voir bloc de code ci-dessous)',
+          '',
+          'Latence sur M5 Pro : modèle small ~200ms, large-v3-turbo ~400–600ms, large-v3 ~800ms–1,2s derrière le temps réel.'
+        ],
+        codeBlock: `import sounddevice as sd
+import numpy as np
+from faster_whisper import WhisperModel
+
+model = WhisperModel("large-v3-turbo", device="cpu", compute_type="int8")
+buffer = []
+chunk_duration = 3
+sample_rate = 16000
+
+def callback(indata, frames, time, status):
+    buffer.append(indata.copy())
+    if len(buffer) * 1024 / sample_rate >= chunk_duration:
+        audio = np.concatenate(buffer).flatten().astype(np.float32)
+        segments, _ = model.transcribe(audio, beam_size=5)
+        for segment in segments:
+            print(segment.text)
+        buffer.clear()
+
+with sd.InputStream(callback=callback, channels=1, samplerate=sample_rate):
+    print("Listening... (Ctrl+C to stop)")
+    while True:
+        sd.sleep(1000)`,
+        codeLanguage: 'python'
+      },
+      integration: {
+        id: 'integration',
+        title: 'Pipeline assistant vocal : Whisper + Ollama + Piper TTS',
+        content: 'Code complet pour un assistant vocal local fonctionnant entièrement sur Apple Silicon.',
+        codeBlock: `import sounddevice as sd
+import numpy as np
+import requests
+import subprocess
+from faster_whisper import WhisperModel
+
+WHISPER_MODEL = "large-v3-turbo"
+OLLAMA_URL = "http://localhost:11434/api/chat"
+LLM_MODEL = "llama3.1:8b"
+SAMPLE_RATE = 16000
+
+whisper = WhisperModel(WHISPER_MODEL, device="cpu", compute_type="int8")
+
+def record_audio(duration=5):
+    print("Listening...")
+    audio = sd.rec(int(duration * SAMPLE_RATE),
+                   samplerate=SAMPLE_RATE,
+                   channels=1,
+                   dtype=np.float32)
+    sd.wait()
+    return audio.flatten()
+
+def transcribe(audio):
+    segments, _ = whisper.transcribe(audio, beam_size=5)
+    return " ".join([seg.text for seg in segments])
+
+def llm_respond(user_text):
+    response = requests.post(OLLAMA_URL, json={
+        "model": LLM_MODEL,
+        "messages": [{"role": "user", "content": user_text}],
+        "stream": False
+    })
+    return response.json()["message"]["content"]
+
+def speak(text):
+    subprocess.run(
+        ["piper", "--model", "en_US-amy-medium.onnx"],
+        input=text.encode(),
+        check=True
+    )
+
+while True:
+    audio = record_audio(duration=5)
+    user_text = transcribe(audio)
+    print(f"You: {user_text}")
+    if not user_text.strip():
+        continue
+    response = llm_respond(user_text)
+    print(f"AI: {response}")
+    speak(response)`,
+        codeLanguage: 'python',
+        note: 'Performance sur M5 Pro : STT 300ms, LLM 700ms, TTS 200ms. Durée totale de bout en bout : ~1,2 seconde.'
+      },
+      modelChoice: {
+        id: 'model-choice',
+        title: 'Meilleure configuration Whisper par modèle de Mac',
+        tableFormat: true,
+        columns: ['Configuration Mac', 'Modèle recommandé', 'Multiplicateur temps réel', 'Cas d\'usage'],
+        rows: [
+          { config: 'M1/M2 base 8 Go', model: 'small', realtime: '12–14×', useCase: 'Transcription légère' },
+          { config: 'M1/M2 base 16 Go', model: 'small ou distil-large-v3', realtime: '8–15×', useCase: 'Usage général' },
+          { config: 'M3/M4 base', model: 'distil-large-v3', realtime: '12–15×', useCase: 'Meilleure qualité, toujours rapide' },
+          { config: 'M5 base 32 Go', model: 'large-v3-turbo', realtime: '14–18×', useCase: 'Vitesse + qualité' },
+          { config: 'M5 Pro 36–64 Go', model: 'large-v3', realtime: '10–12×', useCase: 'Précision maximale' },
+          { config: 'M5 Pro + LLM simultané', model: 'large-v3 + Llama 3.1 8B', realtime: '10×', useCase: 'Assistant vocal' },
+          { config: 'M5 Max 128 Go', model: 'large-v3 + LLM + TTS', realtime: '12–14×', useCase: 'Stack multimodal complet' },
+        ],
+        note: 'Pour un assistant vocal temps réel : utilisez small ou large-v3-turbo pour la latence la plus faible. Pour la transcription de réunions/podcasts : utilisez large-v3 pour une précision maximale (délai de 1–2 secondes acceptable).'
+      },
+      cloudComparison: {
+        id: 'cloud-comparison',
+        title: 'Whisper local vs services cloud de transcription',
+        tableFormat: true,
+        columns: ['Métrique', 'Whisper local (M5 Pro)', 'Google Speech-to-Text', 'OpenAI Whisper API', 'AssemblyAI'],
+        rows: [
+          { metric: 'Coût par heure audio', local: '0 €', google: 'env. 1,35 €', openai: 'env. 0,34 €', assembly: 'env. 0,61 €' },
+          { metric: 'Précision (WER anglais)', local: '2,5%', google: '4,9%', openai: '2,5%', assembly: '3,0%' },
+          { metric: 'Latence', local: '100–300ms', google: '300–800ms', openai: '500–2000ms', assembly: '400–1500ms' },
+          { metric: 'Confidentialité', local: '100% local', google: 'Envoyé à Google', openai: 'Envoyé à OpenAI', assembly: 'Envoyé à AssemblyAI' },
+          { metric: 'Hors ligne possible', local: 'Oui', google: 'Non', openai: 'Non', assembly: 'Non' },
+          { metric: 'Langues', local: '99', google: '125+', openai: '99', assembly: '50+' },
+          { metric: 'Configuration', local: '5 minutes', google: 'Clé API', openai: 'Clé API', assembly: 'Clé API' },
+        ],
+        note: 'Coût mensuel (8 heures/jour) : Whisper local 0 €, Google env. 325 €, OpenAI env. 82 €, AssemblyAI env. 147 €. Pour les travaux sensibles (médical, juridique, journalisme), Whisper local est la seule option. Pour une transcription à fort volume (plus de 80 €/mois en cloud), un Mac local est rentabilisé en 12 mois.'
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          { q: 'Whisper est-il plus rapide que les API cloud ?', a: 'Whisper local sur M5 Pro : 10× temps réel (latence 100ms). API cloud : latence 100–500ms due au réseau. Le local est plus rapide et gratuit.' },
+          { q: 'Whisper peut-il gérer plusieurs locuteurs ?', a: 'Oui, les horodatages séparent les locuteurs. Utilisez des outils de post-traitement ou de diarisation pour identifier les identités des locuteurs.' },
+          { q: 'Quelles langues sont supportées ?', a: '99 langues avec détection automatique. La précision varie selon la langue — anglais à 2,5% WER, autres langues à 5–15% WER.' },
+          { q: 'Quel modèle Whisper offre le meilleur rapport vitesse/qualité ?', a: 'Large-v3-turbo ou distil-large-v3. Les deux atteignent ~95% de la précision de large-v3 à 4–6× la vitesse. Recommandés pour la plupart des cas d\'usage temps réel.' },
+          { q: 'Whisper gère-t-il l\'anglais accentué ou les locuteurs non natifs ?', a: 'Oui, mais le WER augmente. Anglais natif : ~2,5%. Fort accent/non natif : 5–12%. Large-v3 gère mieux les accents que les petits modèles.' },
+          { q: 'Whisper fonctionne-t-il pour les podcasts et la transcription musicale ?', a: 'Podcasts : oui, excellent pour la parole. Musique avec paroles : médiocre — Whisper est entraîné pour la parole. Utilisez des modèles spécialisés pour la musique.' },
+          { q: 'Quelle est la précision de Whisper pour la terminologie technique ?', a: 'Variable. Termes techniques courants : bonne. Termes très spécialisés : risque de transcription incorrecte. Utilisez --prompt avec le vocabulaire attendu pour améliorer la précision.' },
+          { q: 'Puis-je exécuter plusieurs instances Whisper sur un Mac ?', a: 'Oui, limité par la mémoire. M5 Pro 36 Go : 2 instances large-v3 simultanées. M5 Max 128 Go : 4–6 instances ou une instance plus LLM/TTS.' },
+        ]
+      },
+      related: {
+        id: 'related',
+        title: 'Articles connexes',
+        items: [
+          '[Apple Silicon pour les LLM locaux : Guide complet](/local-llms/apple-silicon-local-llm-guide-2026?lang=fr)',
+          '[Benchmarks M5 Pro vs M5 Max 2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=fr)',
+          '[Comparaison STT Whisper local (whisper.cpp vs faster-whisper)](/power-local-llm/local-whisper-stt-comparison-2026?lang=fr)',
+          '[Créer un assistant vocal local](/power-local-llm/build-local-voice-assistant-2026?lang=fr)',
+          '[TTS local et clonage vocal](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts?lang=fr)',
+          '[Mac Mini M5 comme serveur IA local](/local-llms/mac-mini-m5-local-ai-server?lang=fr)',
+          '[Quelle quantité de mémoire unifiée pour les LLM locaux ?](/local-llms/how-much-unified-memory-for-local-llm?lang=fr)',
+          '[Pipeline multimodal local](/power-local-llm/local-multimodal-pipeline-voice-vision-text?lang=fr)',
+        ]
+      }
+    },
+  },
+  ja: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-15',
+    theme: 'Hardware & Performance',
+    title: 'Apple Silicon上のWhisper 2026：MetalベンチマークとCore ML設定、M1–M5速度ガイド',
+    seoTitle: 'Apple Silicon Whisper STT 2026：Metal GPU ベンチマーク M1-M5、セットアップガイド',
+    intro: 'Apple Silicon上のWhisper音声認識：M1からM5 MaxのMetalおよびCore MLベンチマーク。セットアップガイド、モデル選択、リアルタイム文字起こし。',
+    metaDescription: 'Mac Apple Silicon上のWhisper：Metal GPU ベンチマーク M1-M5 Max、セットアップ、リアルタイムSTTパフォーマンス。',
+    twitterDescription: 'M5 Pro上のWhisper：Metalで large-v3 が10×リアルタイム。ベンチマーク、Core ML設定、リアルタイムSTTガイド。',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    current_models_mentioned: ['Whisper tiny', 'Whisper small', 'Whisper large-v3'],
+    current_hardware_mentioned: ['M1', 'M5 Pro', 'M5 Max'],
+    audience: '音声認識をローカルで実装するMacユーザー。',
+    readTime: '14分で読める',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Whisper Apple Silicon STT',
+    targetKeywords: ['Whisper Mac', '音声認識 ローカル', 'リアルタイム文字起こし', 'Apple Siliconベンチマーク'],
+    leadAnswerBlock: '**M5 Pro上のWhisper large-v3：10–12×リアルタイム。Metal GPU自動。Large-v3-turboは14–18×で速度＋精度を両立。無料、完全オフライン。**',
+    quickAnswerTop: {
+      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      ja: {
+        question: 'MacでWhisperはどれくらい速いですか？',
+        answer: 'Whisper tiny：48–60×リアルタイム。Small：22–34×。Large-v3：5–14×（M1→M5 Pro）。Large-v3-turbo：M5 baseで14–18×リアルタイム。',
+        bullets: ['Tiny：48–60×リアルタイム（高速、精度低め）', 'Small：22–34×リアルタイム（バランス型）', 'Large-v3-turbo：14–18×リアルタイム（最高の速度/品質比）', 'Large-v3：5–14×リアルタイム（最高精度）', 'Metal GPU加速は自動', 'コスト0円、完全オフライン'],
+        updatedDate: '2026-05-15',
+      },
+      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+    },
+    toc: [
+      { label: '完全ベンチマーク表（M1–M5）', anchor: '#table' },
+      { label: 'Whisperモデルサイズ', anchor: '#model-sizes' },
+      { label: 'Metal vs Core ML vs ANE', anchor: '#metal-vs-coreml' },
+      { label: 'セットアップ：whisper.cpp', anchor: '#setup' },
+      { label: 'リアルタイムストリーミング', anchor: '#realtime' },
+      { label: '音声アシスタントパイプライン', anchor: '#integration' },
+      { label: 'Macモデル別最適設定', anchor: '#model-choice' },
+      { label: 'ローカルvsクラウドSTT', anchor: '#cloud-comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連記事', anchor: '#related' },
+    ],
+    sections: {
+      table: {
+        id: 'table',
+        title: '完全ベンチマーク表：Apple Silicon（M1–M5）上のWhisperパフォーマンス',
+        tableFormat: true,
+        columns: ['Chip', 'Tiny', 'Base', 'Small', 'Medium', 'Large-v3'],
+        rows: [
+          { chip: 'M1', tiny: '32×', base: '20×', small: '12×', medium: '5×', large: '2–3×' },
+          { chip: 'M1 Pro', tiny: '38×', base: '24×', small: '16×', medium: '7×', large: '3–4×' },
+          { chip: 'M1 Max', tiny: '45×', base: '30×', small: '22×', medium: '10×', large: '5–6×' },
+          { chip: 'M1 Ultra', tiny: '55×', base: '38×', small: '28×', medium: '14×', large: '7–9×' },
+          { chip: 'M2', tiny: '36×', base: '23×', small: '14×', medium: '6×', large: '3–4×' },
+          { chip: 'M2 Pro', tiny: '42×', base: '28×', small: '20×', medium: '9×', large: '4–5×' },
+          { chip: 'M2 Max', tiny: '50×', base: '35×', small: '26×', medium: '12×', large: '6–8×' },
+          { chip: 'M2 Ultra', tiny: '60×', base: '42×', small: '32×', medium: '17×', large: '9–11×' },
+          { chip: 'M3', tiny: '40×', base: '26×', small: '16×', medium: '7×', large: '3–4×' },
+          { chip: 'M3 Pro', tiny: '46×', base: '32×', small: '22×', medium: '10×', large: '5–6×' },
+          { chip: 'M3 Max', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '7–9×' },
+          { chip: 'M4', tiny: '44×', base: '30×', small: '18×', medium: '8×', large: '4–5×' },
+          { chip: 'M4 Pro', tiny: '50×', base: '36×', small: '26×', medium: '12×', large: '6–8×' },
+          { chip: 'M4 Max', tiny: '60×', base: '44×', small: '34×', medium: '16×', large: '8–10×' },
+          { chip: 'M5 (base)', tiny: '48×', base: '34×', small: '22×', medium: '10×', large: '5–7×' },
+          { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
+          { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
+        ],
+        note: '×Nリアルタイム = 1秒でN秒分の音声を文字起こし。Metal加速付きwhisper.cppによるベンチマーク。M1 Pro以降のすべてのモデルでlarge-v3をリアルタイム以上で実行可能。'
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: 'Whisperモデルサイズ — どれを選ぶべきか？',
+        tableFormat: true,
+        columns: ['モデル', 'パラメータ数', 'ディスク容量', 'RAM使用量', '英語WER', '最適用途'],
+        rows: [
+          { model: 'tiny', params: '39M', disk: '75 MB', ram: '~1 GB', wer: '7.6%', bestFor: 'リアルタイム、精度低め' },
+          { model: 'base', params: '74M', disk: '142 MB', ram: '~1 GB', wer: '5.0%', bestFor: '旧MacでのリアルタイムSTT' },
+          { model: 'small', params: '244M', disk: '466 MB', ram: '~2 GB', wer: '3.4%', bestFor: '速度/品質バランス型' },
+          { model: 'medium', params: '769M', disk: '1.5 GB', ram: '~5 GB', wer: '2.9%', bestFor: '高品質、処理が遅め' },
+          { model: 'large-v3', params: '1.55B', disk: '3.0 GB', ram: '~10 GB', wer: '2.5%', bestFor: '最高精度' },
+          { model: 'large-v3-turbo', params: '809M', disk: '1.6 GB', ram: '~6 GB', wer: '2.7%', bestFor: '最高の速度/品質バランス' },
+          { model: 'distil-large-v3', params: '756M', disk: '1.5 GB', ram: '~5 GB', wer: '2.6%', bestFor: 'large-v3より6×高速' },
+        ],
+        note: 'WER（単語誤り率）は英語LibriSpeechテストセットによる。Large-v3-turboとdistil-large-v3はほとんどのMacでリアルタイム処理の最適バランス — large-v3品質の4–6×の速度。'
+      },
+      metalVsCoreml: {
+        id: 'metal-vs-coreml',
+        title: 'Metal vs Core ML vs Apple Neural Engine：どのバックエンドを使うか？',
+        content: [
+          'Apple SiliconはWhisperに3つの加速経路を提供します。それぞれトレードオフがあります。',
+          '',
+          'Metal（whisper.cpp経由）— 推奨：Apple Metal GPUフレームワークを使用、すべてのMシリーズチップに対応、large-v3でM5 Proにて10–12×リアルタイム、make WHISPER_METAL=1でセットアップ。最適用途：ほとんどのユーザー、最も簡単なセットアップ、実績のあるパフォーマンス。',
+          '',
+          'Core ML（Apple Core MLフォーマット経由）— 上級者向け：Apple機械学習フレームワークを使用、一部の処理でNeural Engine（ANE）を活用可能、一部のワークロードで15–20%高速化、モデル変換が必要（10–15分のセットアップ）。最適用途：最高速度を求める上級ユーザー。',
+          '',
+          'Apple Neural Engine（ANE）— 限定的な用途：すべてのMシリーズチップ搭載の専用AIアクセラレータ、直接アクセス不可（Core ML経由のみ）、アーキテクチャの不一致によりWhisperはANEを十分活用できず、小さいモデル（tiny、base）での使用に限る。最適用途：バッテリー駆動のラップトップでのWhisper tiny/base。',
+          '',
+          '選択マトリックス：初回セットアップ → Metal（whisper.cpp）。large-v3で最高速度 → Metal。バッテリー駆動ラップトップ、baseモデル → ANE付きCore ML。本番サーバー → Metal（実績あり、信頼性高）。リアルタイム文字起こし → ストリーミングモード付きMetal。MacインスタンスへのCloudデプロイ → Metal（コンテナ化可能）。'
+        ],
+        items: [
+          'Metal（whisper.cpp）：高速、広い互換性、最も簡単なセットアップ',
+          'Core ML：Neural Engine最適化、一部のワークロードで15–20%の速度向上（変換が必要）',
+          'Apple Neural Engine：大型モデルへの恩恵は限定的、tiny/baseのラップトップ使用に最適'
+        ]
+      },
+      setup: {
+        id: 'setup',
+        title: 'セットアップ：Metal加速付きwhisper.cpp',
+        numberedItems: [
+          { title: '依存関係のインストール', whyItMatters: 'xcode-select --install (Xcodeツール)\nbrew install ffmpeg (音声変換)' },
+          { title: 'Metal付きwhisper.cppのクローンとビルド', whyItMatters: 'git clone https://github.com/ggerganov/whisper.cpp\ncd whisper.cpp\nmake WHISPER_METAL=1\n./main -h | grep -i metal' },
+          { title: 'モデルのダウンロード', whyItMatters: 'bash ./models/download-ggml-model.sh small (466 MB、リアルタイム)\nbash ./models/download-ggml-model.sh large-v3 (3 GB、最高品質)\nbash ./models/download-ggml-model.sh large-v3-turbo (1.6 GB、バランス型)' },
+          { title: '音声ファイルの文字起こし', whyItMatters: './main -m models/ggml-large-v3.bin -f /path/to/audio.wav\n./main -m models/ggml-large-v3.bin -f audio.wav -oj (JSON)\n./main -m models/ggml-large-v3.bin -f audio.wav -l en (言語指定)' },
+          { title: '非WAV音声を先に変換', whyItMatters: 'ffmpeg -i input.mp3 -ar 16000 -ac 1 -c:a pcm_s16le output.wav\n./main -m models/ggml-large-v3.bin -f output.wav' }
+        ]
+      },
+      realtime: {
+        id: 'realtime',
+        title: 'リアルタイムストリーミング文字起こし（ライブマイク）',
+        content: [
+          'マイクからのライブ文字起こし — 音声アシスタント、会議文字起こし、アクセシビリティツール向け。',
+          '',
+          'オプション1：whisper.cppのストリームモード',
+          './stream -m models/ggml-small.bin --step 500 --length 5000',
+          '# --step 500: 500msごとに処理',
+          '# --length 5000: 直近5秒のコンテキストを保持',
+          '',
+          'オプション2：faster-whisperを使ったPython（以下のコードブロックを参照）',
+          '',
+          'M5 Proでの遅延：smallモデル ~200ms、large-v3-turbo ~400–600ms、large-v3 ~800ms–1.2sのリアルタイム遅延。'
+        ],
+        codeBlock: `import sounddevice as sd
+import numpy as np
+from faster_whisper import WhisperModel
+
+model = WhisperModel("large-v3-turbo", device="cpu", compute_type="int8")
+buffer = []
+chunk_duration = 3
+sample_rate = 16000
+
+def callback(indata, frames, time, status):
+    buffer.append(indata.copy())
+    if len(buffer) * 1024 / sample_rate >= chunk_duration:
+        audio = np.concatenate(buffer).flatten().astype(np.float32)
+        segments, _ = model.transcribe(audio, beam_size=5)
+        for segment in segments:
+            print(segment.text)
+        buffer.clear()
+
+with sd.InputStream(callback=callback, channels=1, samplerate=sample_rate):
+    print("Listening... (Ctrl+C to stop)")
+    while True:
+        sd.sleep(1000)`,
+        codeLanguage: 'python'
+      },
+      integration: {
+        id: 'integration',
+        title: '音声アシスタントパイプライン：Whisper + Ollama + Piper TTS',
+        content: 'Apple Silicon上で完全にローカル動作する音声アシスタントの完全コード。',
+        codeBlock: `import sounddevice as sd
+import numpy as np
+import requests
+import subprocess
+from faster_whisper import WhisperModel
+
+WHISPER_MODEL = "large-v3-turbo"
+OLLAMA_URL = "http://localhost:11434/api/chat"
+LLM_MODEL = "llama3.1:8b"
+SAMPLE_RATE = 16000
+
+whisper = WhisperModel(WHISPER_MODEL, device="cpu", compute_type="int8")
+
+def record_audio(duration=5):
+    print("Listening...")
+    audio = sd.rec(int(duration * SAMPLE_RATE),
+                   samplerate=SAMPLE_RATE,
+                   channels=1,
+                   dtype=np.float32)
+    sd.wait()
+    return audio.flatten()
+
+def transcribe(audio):
+    segments, _ = whisper.transcribe(audio, beam_size=5)
+    return " ".join([seg.text for seg in segments])
+
+def llm_respond(user_text):
+    response = requests.post(OLLAMA_URL, json={
+        "model": LLM_MODEL,
+        "messages": [{"role": "user", "content": user_text}],
+        "stream": False
+    })
+    return response.json()["message"]["content"]
+
+def speak(text):
+    subprocess.run(
+        ["piper", "--model", "en_US-amy-medium.onnx"],
+        input=text.encode(),
+        check=True
+    )
+
+while True:
+    audio = record_audio(duration=5)
+    user_text = transcribe(audio)
+    print(f"You: {user_text}")
+    if not user_text.strip():
+        continue
+    response = llm_respond(user_text)
+    print(f"AI: {response}")
+    speak(response)`,
+        codeLanguage: 'python',
+        note: 'M5 Proでのパフォーマンス：STT 300ms、LLM 700ms、TTS 200ms。エンドツーエンド合計：約1.2秒。'
+      },
+      modelChoice: {
+        id: 'model-choice',
+        title: 'Macモデル別の最適Whisper設定',
+        tableFormat: true,
+        columns: ['Mac設定', '推奨モデル', 'リアルタイム倍率', 'ユースケース'],
+        rows: [
+          { config: 'M1/M2 base 8GB', model: 'small', realtime: '12–14×', useCase: '軽量な文字起こし' },
+          { config: 'M1/M2 base 16GB', model: 'smallまたはdistil-large-v3', realtime: '8–15×', useCase: '一般用途' },
+          { config: 'M3/M4 base', model: 'distil-large-v3', realtime: '12–15×', useCase: '高品質、高速' },
+          { config: 'M5 base 32GB', model: 'large-v3-turbo', realtime: '14–18×', useCase: '速度＋品質' },
+          { config: 'M5 Pro 36–64GB', model: 'large-v3', realtime: '10–12×', useCase: '最高精度' },
+          { config: 'M5 Pro + LLM同時実行', model: 'large-v3 + Llama 3.1 8B', realtime: '10×', useCase: '音声アシスタント' },
+          { config: 'M5 Max 128GB', model: 'large-v3 + LLM + TTS', realtime: '12–14×', useCase: 'フルマルチモーダルスタック' },
+        ],
+        note: 'リアルタイム音声アシスタント向け：最低遅延のためsmallまたはlarge-v3-turboを使用。会議/ポッドキャスト文字起こし向け：最高精度のためlarge-v3を使用（1–2秒の遅延は許容範囲）。'
+      },
+      cloudComparison: {
+        id: 'cloud-comparison',
+        title: 'ローカルWhisper vs クラウド音声認識サービス',
+        tableFormat: true,
+        columns: ['指標', 'Whisperローカル（M5 Pro）', 'Google Speech-to-Text', 'OpenAI Whisper API', 'AssemblyAI'],
+        rows: [
+          { metric: '1時間あたりのコスト', local: '0円', google: '約220円', openai: '約55円', assembly: '約100円' },
+          { metric: '精度（英語WER）', local: '2.5%', google: '4.9%', openai: '2.5%', assembly: '3.0%' },
+          { metric: '遅延', local: '100–300ms', google: '300–800ms', openai: '500–2000ms', assembly: '400–1500ms' },
+          { metric: 'プライバシー', local: '100%ローカル', google: 'Googleに送信', openai: 'OpenAIに送信', assembly: 'AssemblyAIに送信' },
+          { metric: 'オフライン対応', local: 'あり', google: 'なし', openai: 'なし', assembly: 'なし' },
+          { metric: '対応言語数', local: '99', google: '125+', openai: '99', assembly: '50+' },
+          { metric: 'セットアップ', local: '5分', google: 'APIキー', openai: 'APIキー', assembly: 'APIキー' },
+        ],
+        note: '月額コスト（1日8時間）：Whisperローカル 0円、Google 約52,000円、OpenAI 約13,000円、AssemblyAI 約23,000円。機密性の高い作業（医療、法律、ジャーナリズム）では、ローカルWhisperが唯一の選択肢。高ボリュームの文字起こし（クラウドで月10,000円以上）の場合、ローカルMacは12ヶ月で元が取れます。'
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          { q: 'WhisperはクラウドAPIより高速ですか？', a: 'M5 Proでローカル動作：10×リアルタイム（遅延100ms）。クラウドAPI：ネットワークによる100–500msの遅延。ローカルの方が高速かつ無料。' },
+          { q: 'Whisperは複数の話者に対応できますか？', a: 'はい、タイムスタンプで話者を分離できます。話者のIDを特定するには後処理や話者識別（ダイアライゼーション）ツールを使用してください。' },
+          { q: '対応言語はどれくらいですか？', a: '99言語に対応し自動検出。言語によって精度が異なります — 英語は2.5% WER、その他の言語は5–15% WER。' },
+          { q: '速度と品質のバランスが最も良いWhisperモデルはどれですか？', a: 'Large-v3-turboまたはdistil-large-v3。どちらもlarge-v3の精度の約95%を4–6×の速度で達成。ほとんどのリアルタイムユースケースで推奨。' },
+          { q: 'Whisperはアクセントのある英語や非ネイティブスピーカーに対応していますか？', a: 'はい、ただしWERは上昇します。ネイティブ英語：約2.5%。強いアクセント/非ネイティブ：5–12%。Large-v3は小さいモデルよりもアクセントをより良く処理します。' },
+          { q: 'Whisperはポッドキャストや音楽の文字起こしに使えますか？', a: 'ポッドキャスト：はい、音声コンテンツに優れています。歌詞付きの音楽：不向き — Whisperは音声用に学習されています。音楽には専門のモデルを使用してください。' },
+          { q: '技術用語に対するWhisperの精度はどのくらいですか？', a: '様々です。一般的な技術用語：良好。高度に専門的な用語：誤文字起こしの可能性があります。精度向上には--promptフラグで想定語彙を指定してください。' },
+          { q: '1台のMacで複数のWhisperインスタンスを実行できますか？', a: 'はい、メモリ依存です。M5 Pro 36GB：large-v3インスタンス2つを同時実行可能。M5 Max 128GB：4–6インスタンス、またはLLM/TTSと組み合わせた1インスタンス。' },
+        ]
+      },
+      related: {
+        id: 'related',
+        title: '関連記事',
+        items: [
+          '[ローカルLLM向けApple Silicon：完全ガイド](/local-llms/apple-silicon-local-llm-guide-2026?lang=ja)',
+          '[M5 Pro vs M5 Maxベンチマーク 2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=ja)',
+          '[ローカルWhisper STT比較（whisper.cpp vs faster-whisper）](/power-local-llm/local-whisper-stt-comparison-2026?lang=ja)',
+          '[ローカル音声アシスタントを構築する](/power-local-llm/build-local-voice-assistant-2026?lang=ja)',
+          '[ローカルTTSと音声クローニング](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts?lang=ja)',
+          '[ローカルAIサーバーとしてのMac Mini M5](/local-llms/mac-mini-m5-local-ai-server?lang=ja)',
+          '[ローカルLLMに必要なユニファイドメモリ量](/local-llms/how-much-unified-memory-for-local-llm?lang=ja)',
+          '[ローカルマルチモーダルパイプライン](/power-local-llm/local-multimodal-pipeline-voice-vision-text?lang=ja)',
+        ]
+      }
+    },
+  },
+  zh: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-15',
+    theme: 'Hardware & Performance',
+    title: 'Apple Silicon上的Whisper 2026：Metal基准测试、Core ML设置、M1–M5速度指南',
+    seoTitle: 'Apple Silicon Whisper STT 2026：Metal GPU基准测试M1-M5，安装指南',
+    intro: 'Apple Silicon上的Whisper语音识别：M1到M5 Max的Metal和Core ML基准测试。安装指南、模型选择、实时转录。',
+    metaDescription: 'Mac Apple Silicon上的Whisper：Metal GPU基准测试M1-M5 Max，安装，实时STT性能。',
+    twitterDescription: 'M5 Pro上的Whisper：large-v3通过Metal实现10×实时速度。基准测试、Core ML设置、实时STT指南。',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    current_models_mentioned: ['Whisper tiny', 'Whisper small', 'Whisper large-v3'],
+    current_hardware_mentioned: ['M1', 'M5 Pro', 'M5 Max'],
+    audience: '在Mac上本地实现语音识别的用户。',
+    readTime: '阅读约14分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Whisper Apple Silicon STT',
+    targetKeywords: ['Whisper Mac', '本地语音识别', '实时转录', 'Apple Silicon基准测试'],
+    leadAnswerBlock: '**M5 Pro上的Whisper large-v3：10–12×实时速度。Metal GPU自动启用。Large-v3-turbo以14–18×平衡速度和精度。零成本，完全离线。**',
+    quickAnswerTop: {
+      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      zh: {
+        question: 'Whisper在Mac上有多快？',
+        answer: 'Whisper tiny：48–60×实时。Small：22–34×实时。Large-v3：5–14×实时（M1→M5 Pro）。Large-v3-turbo：M5 base上14–18×实时。',
+        bullets: ['Tiny：48–60×实时（快速，精度较低）', 'Small：22–34×实时（平衡型）', 'Large-v3-turbo：14–18×实时（最佳速度/质量比）', 'Large-v3：5–14×实时（最高精度）', 'Metal GPU加速自动启用', '零成本，完全离线'],
+        updatedDate: '2026-05-15',
+      },
+    },
+    toc: [
+      { label: '完整基准测试表（M1–M5）', anchor: '#table' },
+      { label: 'Whisper模型大小', anchor: '#model-sizes' },
+      { label: 'Metal vs Core ML vs ANE', anchor: '#metal-vs-coreml' },
+      { label: '安装：whisper.cpp', anchor: '#setup' },
+      { label: '实时流式传输', anchor: '#realtime' },
+      { label: '语音助手流水线', anchor: '#integration' },
+      { label: '按Mac型号的最佳配置', anchor: '#model-choice' },
+      { label: '本地STT vs 云端服务', anchor: '#cloud-comparison' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '相关文章', anchor: '#related' },
+    ],
+    sections: {
+      table: {
+        id: 'table',
+        title: '完整基准测试表：Apple Silicon（M1–M5）上的Whisper性能',
+        tableFormat: true,
+        columns: ['Chip', 'Tiny', 'Base', 'Small', 'Medium', 'Large-v3'],
+        rows: [
+          { chip: 'M1', tiny: '32×', base: '20×', small: '12×', medium: '5×', large: '2–3×' },
+          { chip: 'M1 Pro', tiny: '38×', base: '24×', small: '16×', medium: '7×', large: '3–4×' },
+          { chip: 'M1 Max', tiny: '45×', base: '30×', small: '22×', medium: '10×', large: '5–6×' },
+          { chip: 'M1 Ultra', tiny: '55×', base: '38×', small: '28×', medium: '14×', large: '7–9×' },
+          { chip: 'M2', tiny: '36×', base: '23×', small: '14×', medium: '6×', large: '3–4×' },
+          { chip: 'M2 Pro', tiny: '42×', base: '28×', small: '20×', medium: '9×', large: '4–5×' },
+          { chip: 'M2 Max', tiny: '50×', base: '35×', small: '26×', medium: '12×', large: '6–8×' },
+          { chip: 'M2 Ultra', tiny: '60×', base: '42×', small: '32×', medium: '17×', large: '9–11×' },
+          { chip: 'M3', tiny: '40×', base: '26×', small: '16×', medium: '7×', large: '3–4×' },
+          { chip: 'M3 Pro', tiny: '46×', base: '32×', small: '22×', medium: '10×', large: '5–6×' },
+          { chip: 'M3 Max', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '7–9×' },
+          { chip: 'M4', tiny: '44×', base: '30×', small: '18×', medium: '8×', large: '4–5×' },
+          { chip: 'M4 Pro', tiny: '50×', base: '36×', small: '26×', medium: '12×', large: '6–8×' },
+          { chip: 'M4 Max', tiny: '60×', base: '44×', small: '34×', medium: '16×', large: '8–10×' },
+          { chip: 'M5 (base)', tiny: '48×', base: '34×', small: '22×', medium: '10×', large: '5–7×' },
+          { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
+          { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
+        ],
+        note: '×N实时 = 1秒内转录N秒音频。通过Metal加速的whisper.cpp基准测试。所有M1 Pro+均可实时或更快运行large-v3。'
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: 'Whisper模型大小 — 应该选哪个？',
+        tableFormat: true,
+        columns: ['模型', '参数量', '磁盘大小', 'RAM占用', '英语WER', '最适合'],
+        rows: [
+          { model: 'tiny', params: '39M', disk: '75 MB', ram: '~1 GB', wer: '7.6%', bestFor: '实时转录，精度较低' },
+          { model: 'base', params: '74M', disk: '142 MB', ram: '~1 GB', wer: '5.0%', bestFor: '旧Mac上的实时转录' },
+          { model: 'small', params: '244M', disk: '466 MB', ram: '~2 GB', wer: '3.4%', bestFor: '速度/质量平衡' },
+          { model: 'medium', params: '769M', disk: '1.5 GB', ram: '~5 GB', wer: '2.9%', bestFor: '高质量，速度较慢' },
+          { model: 'large-v3', params: '1.55B', disk: '3.0 GB', ram: '~10 GB', wer: '2.5%', bestFor: '最高精度' },
+          { model: 'large-v3-turbo', params: '809M', disk: '1.6 GB', ram: '~6 GB', wer: '2.7%', bestFor: '最佳速度/质量平衡' },
+          { model: 'distil-large-v3', params: '756M', disk: '1.5 GB', ram: '~5 GB', wer: '2.6%', bestFor: '比large-v3快6×' },
+        ],
+        note: 'WER（词错误率）基于英语LibriSpeech测试集。Large-v3-turbo和distil-large-v3是大多数Mac实时使用的最佳选择 — 以4–6×的速度实现接近large-v3的质量。'
+      },
+      metalVsCoreml: {
+        id: 'metal-vs-coreml',
+        title: 'Metal vs Core ML vs Apple Neural Engine：选择哪个后端？',
+        content: [
+          'Apple Silicon为Whisper提供三种加速路径，各有权衡。',
+          '',
+          'Metal（通过whisper.cpp）— 推荐：使用Apple Metal GPU框架，兼容所有M系列芯片，在M5 Pro上large-v3达到10–12×实时，通过make WHISPER_METAL=1设置。最适合：大多数用户，设置最简单，性能经过验证。',
+          '',
+          'Core ML（通过Apple Core ML格式）— 进阶：使用Apple机器学习框架，某些操作可以利用Neural Engine（ANE），某些工作负载快15–20%，需要模型转换（10–15分钟设置）。最适合：追求最高速度的高级用户。',
+          '',
+          'Apple Neural Engine（ANE）— 有限使用：所有M系列芯片上的专用AI加速器，无法直接访问（必须通过Core ML），由于架构不匹配Whisper无法充分利用ANE，小模型（tiny、base）效果最好。最适合：电池供电笔记本上的Whisper tiny/base。',
+          '',
+          '决策矩阵：首次设置 → Metal（whisper.cpp）。large-v3最高速度 → Metal。电池供电笔记本，base模型 → Core ML配合ANE。生产服务器 → Metal（可靠稳定）。实时转录 → 流式模式的Metal。Mac实例的云部署 → Metal（可容器化）。'
+        ],
+        items: [
+          'Metal（whisper.cpp）：更快，兼容性广，设置最简单',
+          'Core ML：Neural Engine优化，某些工作负载提速15–20%（需要转换）',
+          'Apple Neural Engine：对大型模型收益有限，最适合笔记本上的tiny/base'
+        ]
+      },
+      setup: {
+        id: 'setup',
+        title: '安装：Metal加速版whisper.cpp',
+        numberedItems: [
+          { title: '安装依赖', whyItMatters: 'xcode-select --install（Xcode工具）\nbrew install ffmpeg（音频转换）' },
+          { title: '克隆并编译Metal版whisper.cpp', whyItMatters: 'git clone https://github.com/ggerganov/whisper.cpp\ncd whisper.cpp\nmake WHISPER_METAL=1\n./main -h | grep -i metal' },
+          { title: '下载模型', whyItMatters: 'bash ./models/download-ggml-model.sh small（466 MB，实时）\nbash ./models/download-ggml-model.sh large-v3（3 GB，最高质量）\nbash ./models/download-ggml-model.sh large-v3-turbo（1.6 GB，平衡型）' },
+          { title: '转录音频文件', whyItMatters: './main -m models/ggml-large-v3.bin -f /path/to/audio.wav\n./main -m models/ggml-large-v3.bin -f audio.wav -oj（JSON格式）\n./main -m models/ggml-large-v3.bin -f audio.wav -l en（指定语言）' },
+          { title: '先转换非WAV音频', whyItMatters: 'ffmpeg -i input.mp3 -ar 16000 -ac 1 -c:a pcm_s16le output.wav\n./main -m models/ggml-large-v3.bin -f output.wav' }
+        ]
+      },
+      realtime: {
+        id: 'realtime',
+        title: '实时流式转录（麦克风直播）',
+        content: [
+          '从麦克风实时转录 — 语音助手、会议转录、无障碍工具。',
+          '',
+          '选项1：whisper.cpp流式模式',
+          './stream -m models/ggml-small.bin --step 500 --length 5000',
+          '# --step 500: 每500ms处理一次',
+          '# --length 5000: 保留最近5秒上下文',
+          '',
+          '选项2：使用faster-whisper的Python（见下方代码块）',
+          '',
+          'M5 Pro上的延迟：small模型约200ms，large-v3-turbo约400–600ms，large-v3约800ms–1.2s的实时延迟。'
+        ],
+        codeBlock: `import sounddevice as sd
+import numpy as np
+from faster_whisper import WhisperModel
+
+model = WhisperModel("large-v3-turbo", device="cpu", compute_type="int8")
+buffer = []
+chunk_duration = 3
+sample_rate = 16000
+
+def callback(indata, frames, time, status):
+    buffer.append(indata.copy())
+    if len(buffer) * 1024 / sample_rate >= chunk_duration:
+        audio = np.concatenate(buffer).flatten().astype(np.float32)
+        segments, _ = model.transcribe(audio, beam_size=5)
+        for segment in segments:
+            print(segment.text)
+        buffer.clear()
+
+with sd.InputStream(callback=callback, channels=1, samplerate=sample_rate):
+    print("Listening... (Ctrl+C to stop)")
+    while True:
+        sd.sleep(1000)`,
+        codeLanguage: 'python'
+      },
+      integration: {
+        id: 'integration',
+        title: '语音助手流水线：Whisper + Ollama + Piper TTS',
+        content: '完整代码，构建一个完全在Apple Silicon上本地运行的语音助手。',
+        codeBlock: `import sounddevice as sd
+import numpy as np
+import requests
+import subprocess
+from faster_whisper import WhisperModel
+
+WHISPER_MODEL = "large-v3-turbo"
+OLLAMA_URL = "http://localhost:11434/api/chat"
+LLM_MODEL = "llama3.1:8b"
+SAMPLE_RATE = 16000
+
+whisper = WhisperModel(WHISPER_MODEL, device="cpu", compute_type="int8")
+
+def record_audio(duration=5):
+    print("Listening...")
+    audio = sd.rec(int(duration * SAMPLE_RATE),
+                   samplerate=SAMPLE_RATE,
+                   channels=1,
+                   dtype=np.float32)
+    sd.wait()
+    return audio.flatten()
+
+def transcribe(audio):
+    segments, _ = whisper.transcribe(audio, beam_size=5)
+    return " ".join([seg.text for seg in segments])
+
+def llm_respond(user_text):
+    response = requests.post(OLLAMA_URL, json={
+        "model": LLM_MODEL,
+        "messages": [{"role": "user", "content": user_text}],
+        "stream": False
+    })
+    return response.json()["message"]["content"]
+
+def speak(text):
+    subprocess.run(
+        ["piper", "--model", "en_US-amy-medium.onnx"],
+        input=text.encode(),
+        check=True
+    )
+
+while True:
+    audio = record_audio(duration=5)
+    user_text = transcribe(audio)
+    print(f"You: {user_text}")
+    if not user_text.strip():
+        continue
+    response = llm_respond(user_text)
+    print(f"AI: {response}")
+    speak(response)`,
+        codeLanguage: 'python',
+        note: 'M5 Pro上的性能：STT 300ms，LLM 700ms，TTS 200ms。端到端总计：约1.2秒。'
+      },
+      modelChoice: {
+        id: 'model-choice',
+        title: '按Mac型号的最佳Whisper配置',
+        tableFormat: true,
+        columns: ['Mac配置', '推荐模型', '实时倍率', '使用场景'],
+        rows: [
+          { config: 'M1/M2 base 8GB', model: 'small', realtime: '12–14×', useCase: '轻量转录' },
+          { config: 'M1/M2 base 16GB', model: 'small或distil-large-v3', realtime: '8–15×', useCase: '通用场景' },
+          { config: 'M3/M4 base', model: 'distil-large-v3', realtime: '12–15×', useCase: '更高质量，仍然快速' },
+          { config: 'M5 base 32GB', model: 'large-v3-turbo', realtime: '14–18×', useCase: '速度+质量' },
+          { config: 'M5 Pro 36–64GB', model: 'large-v3', realtime: '10–12×', useCase: '最高精度' },
+          { config: 'M5 Pro + 同时运行LLM', model: 'large-v3 + Llama 3.1 8B', realtime: '10×', useCase: '语音助手' },
+          { config: 'M5 Max 128GB', model: 'large-v3 + LLM + TTS', realtime: '12–14×', useCase: '完整多模态栈' },
+        ],
+        note: '实时语音助手：使用small或large-v3-turbo以获得最低延迟。会议/播客转录：使用large-v3以获得最高精度（1–2秒延迟可接受）。'
+      },
+      cloudComparison: {
+        id: 'cloud-comparison',
+        title: '本地Whisper vs 云端语音识别服务',
+        tableFormat: true,
+        columns: ['指标', 'Whisper本地（M5 Pro）', 'Google Speech-to-Text', 'OpenAI Whisper API', 'AssemblyAI'],
+        rows: [
+          { metric: '每小时音频成本', local: '$0', google: '$1.44', openai: '$0.36', assembly: '$0.65' },
+          { metric: '精度（英语WER）', local: '2.5%', google: '4.9%', openai: '2.5%', assembly: '3.0%' },
+          { metric: '延迟', local: '100–300ms', google: '300–800ms', openai: '500–2000ms', assembly: '400–1500ms' },
+          { metric: '隐私', local: '100%本地', google: '发送至Google', openai: '发送至OpenAI', assembly: '发送至AssemblyAI' },
+          { metric: '离线可用', local: '是', google: '否', openai: '否', assembly: '否' },
+          { metric: '语言数量', local: '99', google: '125+', openai: '99', assembly: '50+' },
+          { metric: '设置', local: '5分钟', google: 'API密钥', openai: 'API密钥', assembly: 'API密钥' },
+        ],
+        note: '月度成本（每天8小时）：Whisper本地$0，Google $345，OpenAI $86，AssemblyAI $156。对于隐私敏感工作（医疗、法律、新闻），本地Whisper是唯一选择。对于高容量转录（云端每月$100+），本地Mac在12个月内收回成本。'
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          { q: 'Whisper比云端API更快吗？', a: 'M5 Pro本地运行：10×实时（延迟100ms）。云端API：因网络导致100–500ms延迟。本地更快且免费。' },
+          { q: 'Whisper能处理多个说话者吗？', a: '是的，时间戳可以分离说话者。使用后处理或说话者识别工具来区分说话者身份。' },
+          { q: '支持哪些语言？', a: '99种语言，自动检测。精度因语言而异 — 英语2.5% WER，其他语言5–15% WER。' },
+          { q: '哪个Whisper模型的速度/质量比最好？', a: 'Large-v3-turbo或distil-large-v3。两者都以4–6×的速度达到large-v3约95%的精度。推荐用于大多数实时场景。' },
+          { q: 'Whisper能处理带口音的英语或非母语说话者吗？', a: '是的，但WER会上升。母语英语：约2.5%。强口音/非母语：5–12%。Large-v3比小模型更好地处理口音。' },
+          { q: 'Whisper适用于播客和音乐转录吗？', a: '播客：是的，非常适合语音内容。有歌词的音乐：效果差 — Whisper是为语音训练的。音乐请使用专用模型。' },
+          { q: 'Whisper对专业术语的识别精度如何？', a: '因情况而异。常见技术术语：良好。高度专业化术语：可能转录错误。使用--prompt标志指定预期词汇来提高精度。' },
+          { q: '我可以在一台Mac上运行多个Whisper实例吗？', a: '是的，受内存限制。M5 Pro 36GB：2个large-v3实例同时运行。M5 Max 128GB：4–6个实例，或一个实例加LLM/TTS。' },
+        ]
+      },
+      related: {
+        id: 'related',
+        title: '相关文章',
+        items: [
+          '[本地LLM的Apple Silicon：完整指南](/local-llms/apple-silicon-local-llm-guide-2026?lang=zh)',
+          '[M5 Pro vs M5 Max基准测试2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=zh)',
+          '[本地Whisper STT比较（whisper.cpp vs faster-whisper）](/power-local-llm/local-whisper-stt-comparison-2026?lang=zh)',
+          '[构建本地语音助手](/power-local-llm/build-local-voice-assistant-2026?lang=zh)',
+          '[本地TTS和声音克隆](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts?lang=zh)',
+          '[Mac Mini M5作为本地AI服务器](/local-llms/mac-mini-m5-local-ai-server?lang=zh)',
+          '[本地LLM需要多少统一内存？](/local-llms/how-much-unified-memory-for-local-llm?lang=zh)',
+          '[本地多模态流水线](/power-local-llm/local-multimodal-pipeline-voice-vision-text?lang=zh)',
+        ]
+      }
+    },
+  },
 }
