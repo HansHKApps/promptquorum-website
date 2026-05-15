@@ -222,6 +222,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[How Much VRAM Do You Need For Local LLMs?](/local-llms/how-much-vram-local-llm) — Memory requirements by model.',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Reduce VRAM and power via quantization.',
             '[Mac vs Windows vs Linux for Local LLMs](/local-llms/mac-vs-windows-vs-linux-local-llm) — OS power consumption and efficiency comparison.',
+            '[Mac Mini M5 as Local AI Server](/local-llms/mac-mini-m5-local-ai-server) — Always-on LLM stack at $35/year electricity: the power-efficiency case study.',
+            '[M5 Pro vs M5 Max LLM Benchmarks 2026](/local-llms/m5-pro-max-llm-benchmarks-2026) — Power draw measurements alongside tok/sec for every Apple Silicon chip tier.',
+            '[Whisper on Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark) — 10× real-time transcription on M5 Pro at ~30W total system draw.',
           ],
         },
         sources: {
@@ -536,6 +539,9 @@ schema: {
             '[Wie viel VRAM benötigen Sie für lokale LLMs?](/local-llms/how-much-vram-local-llm?lang=de) — Speicheranforderungen nach Modell.',
             '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de) — Reduziere VRAM und Stromverbrauch durch Quantisierung.',
             '[Mac vs Windows vs Linux für lokale LLMs](/local-llms/mac-vs-windows-vs-linux-local-llm?lang=de) — Stromverbrauch des Betriebssystems und Effizienzvergleich.',
+            '[Mac Mini M5 als lokaler KI-Server](/local-llms/mac-mini-m5-local-ai-server?lang=de) — Dauerbetrieb-LLM-Stack für 35 $/Jahr Strom: Fallstudie zur Energieeffizienz.',
+            '[M5 Pro vs M5 Max LLM Benchmarks 2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=de) — Leistungsaufnahme-Messungen neben tok/sec für jede Apple Silicon Chip-Variante.',
+            '[Whisper auf Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark?lang=de) — 10-fache Echtzeit-Transkription auf M5 Pro bei nur ~30 W Gesamtsystemleistung.',
           ],
         },
         sources: {
@@ -858,6 +864,9 @@ schema: {
             '[Combien de VRAM avez-vous besoin pour les LLMs locaux ?](/local-llms/how-much-vram-local-llm?lang=fr) — Exigences de mémoire par modèle.',
             '[Quantification LLM expliquée](/local-llms/llm-quantization-explained?lang=fr) — Réduisez VRAM et la puissance via quantification.',
             '[Mac vs Windows vs Linux pour LLMs locaux](/local-llms/mac-vs-windows-vs-linux-local-llm?lang=fr) — Comparaison de la consommation d\'électricité du système d\'exploitation et d\'efficacité.',
+            '[Mac Mini M5 comme serveur IA local](/local-llms/mac-mini-m5-local-ai-server?lang=fr) — Stack LLM en continu pour 35 $/an d\'électricité : étude de cas en efficacité énergétique.',
+            '[Benchmarks M5 Pro vs M5 Max LLM 2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=fr) — Mesures de consommation énergétique avec tok/sec pour chaque puce Apple Silicon.',
+            '[Whisper sur Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark?lang=fr) — Transcription à 10× temps réel sur M5 Pro à seulement ~30 W de consommation totale.',
           ],
         },
         sources: {
@@ -1145,6 +1154,9 @@ schema: {
             '[本地LLM所需VRAM](/local-llms/how-much-vram-local-llm?lang=zh) — VRAM选择',
             '[LLM量化详解](/local-llms/llm-quantization-explained?lang=zh) — 功耗 & VRAM削减',
             '[Mac vs Windows vs Linux 本地LLM](/local-llms/mac-vs-windows-vs-linux-local-llm?lang=zh) — 系统对比',
+            '[Mac Mini M5作为本地AI服务器](/local-llms/mac-mini-m5-local-ai-server?lang=zh) — 每年35美元电费的持续运行LLM：能源效率案例研究。',
+            '[M5 Pro vs M5 Max LLM基准测试2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=zh) — 每个Apple Silicon芯片的功耗测量与令牌/秒对比。',
+            '[Apple Silicon 2026上的Whisper](/local-llms/apple-silicon-whisper-metal-benchmark?lang=zh) — M5 Pro在~30W总系统功耗下实现10倍实时转录。',
           ],
         },
         sources: {

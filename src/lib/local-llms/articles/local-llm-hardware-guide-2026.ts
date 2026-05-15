@@ -527,6 +527,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek benchmark comparison',
             '[Prompt Engineering for Local LLMs](/prompt-engineering/prompt-engineering-for-local-models) -- optimize prompts for local model constraints',
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) -- improve reasoning quality on DeepSeek-R1 and Qwen3',
+            '[Apple Silicon for Local LLMs: Complete Guide](/local-llms/apple-silicon-local-llm-guide-2026) -- M1 to M5 Max: unified memory, Metal GPU, and framework selection by chip tier.',
+            '[Ollama on Mac: Apple Silicon Setup Guide 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Zero to running in 2 minutes: one-command install with Metal GPU auto-verification.',
+            '[Whisper on Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark) -- STT benchmarks via Metal and Core ML across M1–M5: large-v3 at 10× real-time.',
           ],
         },
         sources: {
@@ -846,6 +849,9 @@ schema: {
             '[70B-Modelle auf 24GB VRAM ausführen](/local-llms/run-70b-models-24gb-vram?lang=de) -- Erweiterte Techniken für große Modelle.',
             '[Multi-GPU lokale LLMs](/local-llms/multi-gpu-local-llms?lang=de) -- Skalierung über mehrere GPUs.',
             '[Beste LLMs für Coding 2026](/local-llms/best-local-llms-for-coding?lang=de) — Qwen2.5-Coder vs DeepSeek Benchmark-Vergleich',
+            '[Apple Silicon für lokale LLMs: Vollständige Anleitung](/local-llms/apple-silicon-local-llm-guide-2026?lang=de) -- M1 bis M5 Max: Unified Memory, Metal GPU und Framework-Auswahl nach Chip-Klasse.',
+            '[Ollama auf Mac: Apple Silicon Setup 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=de) -- Von null bis laufend in 2 Minuten: Ein-Befehl-Installation mit Metal GPU-Verifikation.',
+            '[Whisper auf Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark?lang=de) -- STT-Benchmarks via Metal und Core ML über M1–M5: large-v3 mit 10-facher Echtzeit.',
           ],
         },
         sources: {
@@ -1126,6 +1132,9 @@ schema: {
             '[Exécuter modèles 70B sur 24GB VRAM](/local-llms/run-70b-models-24gb-vram?lang=fr) -- Techniques avancées pour modèles grands.',
             '[Local LLMs multi-GPU](/local-llms/multi-gpu-local-llms?lang=fr) -- Mise à l\'échelle sur multiples GPUs.',
             '[Meilleurs LLMs pour le code 2026](/local-llms/best-local-llms-for-coding?lang=fr) — Comparatif Qwen2.5-Coder vs DeepSeek',
+            '[Apple Silicon pour les LLM locaux : Guide complet](/local-llms/apple-silicon-local-llm-guide-2026?lang=fr) -- M1 à M5 Max : mémoire unifiée, Metal GPU et sélection de framework par puce.',
+            '[Ollama sur Mac : Guide Apple Silicon 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=fr) -- De zéro à fonctionnel en 2 minutes : installation en une commande avec vérification Metal GPU.',
+            '[Whisper sur Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark?lang=fr) -- Benchmarks STT via Metal et Core ML sur M1–M5 : large-v3 à 10× temps réel.',
           ],
         },
         sources: {
@@ -1403,6 +1412,9 @@ schema: {
             '[24GB VRAM で 70B モデルを実行](/local-llms/run-70b-models-24gb-vram?lang=ja) -- 大きなモデル向けの高度な技法。',
             '[マルチ GPU ローカル LLM](/local-llms/multi-gpu-local-llms?lang=ja) -- 複数 GPU 間でのスケーリング。',
             '[2026年コーディング用ローカルLLM比較](/local-llms/best-local-llms-for-coding?lang=ja) — Qwen2.5-CoderとDeepSeekのベンチマーク',
+            '[ローカルLLM向けApple Silicon：完全ガイド](/local-llms/apple-silicon-local-llm-guide-2026?lang=ja) -- M1からM5 Max：Unified Memory、Metal GPU、チップ別フレームワーク選択。',
+            '[MacでOllama：Apple Siliconセットアップ2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=ja) -- 2分でゼロから動作まで：Metal GPU自動検証付き1コマンドインストール。',
+            '[Apple Silicon 2026でのWhisper](/local-llms/apple-silicon-whisper-metal-benchmark?lang=ja) -- M1–M5でのMetalとCore ML経由のSTTベンチマーク：large-v3で10倍リアルタイム。',
           ],
         },
         sources: {
@@ -1674,6 +1686,9 @@ schema: {
             '[在24GB VRAM上运行70B模型](/local-llms/run-70b-models-24gb-vram?lang=zh) -- 大型模型的高级技术。',
             '[多GPU本地LLM](/local-llms/multi-gpu-local-llms?lang=zh) -- 跨多个GPU扩展。',
             '[2026年最佳编程本地LLM对比](/local-llms/best-local-llms-for-coding?lang=zh) — Qwen2.5-Coder与DeepSeek基准测试',
+            '[本地LLM的Apple Silicon：完整指南](/local-llms/apple-silicon-local-llm-guide-2026?lang=zh) -- M1到M5 Max：统一内存、Metal GPU和按芯片级别的框架选择。',
+            '[Mac上的Ollama：Apple Silicon设置2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=zh) -- 2分钟从零到运行：带Metal GPU自动验证的单命令安装。',
+            '[Apple Silicon 2026上的Whisper](/local-llms/apple-silicon-whisper-metal-benchmark?lang=zh) -- M1–M5上Metal和Core ML的STT基准测试：large-v3实现10倍实时。',
           ],
         },
         sources: {

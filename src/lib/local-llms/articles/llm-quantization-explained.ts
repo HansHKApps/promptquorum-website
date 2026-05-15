@@ -339,6 +339,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Long Context Local LLMs](/local-llms/long-context-local-llms) -- Models with 32K-128K context and their quantized RAM requirements.',
             '[Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) -- Fix VRAM errors, slow inference, and quantization load failures.',
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) -- First-model recommendations with specific GGUF quantization variants.',
+            '[Running 70B Models on Apple Silicon M5 Max](/local-llms/running-70b-models-apple-silicon-m5-max) -- Native 70B at Q5 quality without VRAM limits: how unified memory changes quantization decisions.',
+            '[Ollama on Mac: Apple Silicon Setup Guide 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Run quantized GGUF models on Mac with automatic Metal GPU acceleration.',
+            '[Whisper on Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark) -- Metal and Core ML benchmarks for Whisper STT across quantization levels on M1–M5.',
           ],
         },
         faqSection: {
@@ -830,6 +833,9 @@ schema: {
             '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) -- GGUF-quantisierte Modelle herunterladen und ausführen.',
             '[Führen Sie ein lokales LLM auf Ihrem Laptop aus](/local-llms/local-llm-on-laptop?lang=de) -- Praktisches Setup für Q4_K_M-Inference.',
             '[Fehlerbehebung bei lokalem LLM-Setup](/local-llms/troubleshooting-local-llm-setup?lang=de) -- Debuggen Sie VRAM- und Quantisierungsfehler.',
+            '[70B-Modelle auf Apple Silicon M5 Max](/local-llms/running-70b-models-apple-silicon-m5-max?lang=de) -- Nativer 70B-Betrieb ohne VRAM-Grenzen: wie Unified Memory Quantisierungsentscheidungen ändert.',
+            '[Ollama auf Mac: Apple Silicon Setup 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=de) -- Quantisierte GGUF-Modelle auf Mac mit automatischer Metal GPU-Beschleunigung ausführen.',
+            '[Whisper auf Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark?lang=de) -- Metal- und Core ML-Benchmarks für Whisper STT-Quantisierung über M1–M5.',
           ],
         },
         faqSection: {
@@ -1302,6 +1308,9 @@ schema: {
             '[Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) -- Télécharger et exécuter les modèles quantifiés GGUF.',
             '[Exécuter un LLM local sur votre ordinateur portable](/local-llms/local-llm-on-laptop?lang=fr) -- Installation pratique pour l\'inférence Q4_K_M.',
             '[Dépannage du setup LLM local](/local-llms/troubleshooting-local-llm-setup?lang=fr) -- Débogage des erreurs VRAM et quantification.',
+            '[Modèles 70B sur Apple Silicon M5 Max](/local-llms/running-70b-models-apple-silicon-m5-max?lang=fr) -- 70B natif sans limite VRAM : comment la mémoire unifiée change les décisions de quantification.',
+            '[Ollama sur Mac : Guide Apple Silicon 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=fr) -- Exécuter des modèles GGUF quantifiés sur Mac avec accélération Metal GPU automatique.',
+            '[Whisper sur Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark?lang=fr) -- Benchmarks Metal et Core ML pour la quantification Whisper STT sur M1–M5.',
           ],
         },
         faqSection: {
@@ -1756,6 +1765,9 @@ schema: {
             '[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja) -- GGUF量子化モデルのダウンロードと実行。',
             '[ラップトップでローカルLLMを実行](/local-llms/local-llm-on-laptop?lang=ja) -- Q4_K_M推論の実践的セットアップ。',
             '[ローカルLLMセットアップのトラブルシューティング](/local-llms/troubleshooting-local-llm-setup?lang=ja) -- VRAMおよび量子化エラーのデバッグ。',
+            '[Apple Silicon M5 Maxで70Bモデルを実行](/local-llms/running-70b-models-apple-silicon-m5-max?lang=ja) -- VRAMの制限なしにネイティブ70B：ユニファイドメモリが量子化決定をどう変えるか。',
+            '[MacでOllama：Apple Siliconセットアップ2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=ja) -- Metal GPU自動加速で量子化GGUFモデルをMacで実行。',
+            '[Apple Silicon 2026でのWhisper](/local-llms/apple-silicon-whisper-metal-benchmark?lang=ja) -- M1-M5でのWhisper STT量子化のMetalとCore MLベンチマーク。',
           ],
         },
         faqSection: {
@@ -2209,6 +2221,9 @@ schema: {
             '[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh)----下载并运行GGUF量化模型。',
             '[在笔记本电脑上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh)----Q4_K_M推理实践设置。',
             '[本地LLM设置故障排除](/local-llms/troubleshooting-local-llm-setup?lang=zh)----调试VRAM和量化错误。',
+            '[在Apple Silicon M5 Max上运行70B模型](/local-llms/running-70b-models-apple-silicon-m5-max?lang=zh)----无VRAM限制的原生70B：统一内存如何改变量化决策。',
+            '[Mac上的Ollama：Apple Silicon设置2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=zh)----使用Metal GPU自动加速在Mac上运行量化GGUF模型。',
+            '[Apple Silicon 2026上的Whisper](/local-llms/apple-silicon-whisper-metal-benchmark?lang=zh)----M1-M5上Whisper STT量化的Metal和Core ML基准测试。',
           ],
         },
         faqSection: {
