@@ -1,0 +1,57 @@
+import type { Language } from "@/lib/blog/blogContent";
+import type { LLMArticle } from "@/lib/local-llms/types";
+
+export const article: Partial<Record<Language, LLMArticle>> = {
+  en: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-15',
+    theme: 'Hardware & Performance',
+    title: 'Mac Mini M5 as Local AI Server 2026: Always-On LLM, Whisper, RAG, Voice Assistant',
+    seoTitle: 'Mac Mini M5 Local AI Server: Always-On LLM Whisper RAG Voice Assistant 24/7',
+    intro: 'Setup Mac mini M5 (M5 Pro 64GB) as silent, always-on local AI server. Ollama LLM, Whisper STT, RAG pipeline, voice assistant. Power costs $35/year electricity. Complete guide.',
+    metaDescription: 'Mac mini M5 as local AI server: always-on LLM, Whisper STT, RAG, voice assistant. Silent, 25W power, 24/7 operation guide.',
+    twitterDescription: 'Mac mini M5: perfect silent local AI server. Always-on LLM + Whisper + RAG for $35/year electricity.',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    current_models_mentioned: ['Llama 3.1 8B', 'Whisper', 'Piper TTS'],
+    current_hardware_mentioned: ['M5 Pro', 'M5 Max'],
+    audience: 'Users wanting always-on local AI server for home/office.',
+    readTime: '12 min read',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Mac mini local AI server',
+    targetKeywords: ['Mac mini AI server', 'always-on LLM', 'home AI infrastructure'],
+    leadAnswerBlock: '**Mac mini M5 Pro 64GB: $1,200. Ollama + Whisper + RAG runs 24/7 at 25–35W. Annual power cost: $35. No GPU. Silent. Perfect for home AI server.**',
+    quickAnswerTop: {
+      en: {
+        question: 'Why use Mac mini M5 for an AI server?',
+        answer: 'Silent (fanless), 25–35W power consumption, $35/year electricity, $1,200 one-time cost. Runs Ollama 8B LLM + Whisper + RAG simultaneously.',
+        bullets: ['M5 Pro 64GB: $1,200', 'Power: 25–35W (vs 300W GPU desktop)', 'Annual electricity: ~$35 (vs ~$400 GPU)', 'Silent operation', 'Fits in any space', 'REST API access from all devices on LAN'],
+        updatedDate: '2026-05-15',
+      },
+      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+    },
+    toc: [
+      { label: 'Why Mac mini M5', anchor: '#why' },
+      { label: 'Hardware Config', anchor: '#hardware' },
+      { label: 'Server Setup', anchor: '#setup' },
+      { label: 'Use Cases', anchor: '#usecases' },
+      { label: 'Power & Thermal Monitoring', anchor: '#monitoring' },
+      { label: 'FAQ', anchor: '#faq' },
+    ],
+    sections: {
+      why: { id: 'why', title: 'Why Mac mini M5 is the Ideal AI Server', items: ['Silent (fanless)', '25–35W load (vs 300W+ GPU)', '$35/year electricity', 'Tiny footprint', 'No special cooling', 'High reliability'] },
+      hardware: { id: 'hardware', title: 'Hardware Config Recommendation', items: ['Mac mini M5 Pro 64GB: $1,199 (optimal)', 'Network: Gigabit Ethernet (included)', 'Storage: 256GB–512GB SSD (included)', 'No GPU needed'] },
+      setup: { id: 'setup', title: 'Server Setup', items: ['Install Ollama on macOS', 'Set Ollama to start at boot: launchctl', 'Configure firewall to allow :11434 from LAN', 'REST API available to all devices'] },
+      usecases: { id: 'usecases', title: 'Use Cases', numberedItems: [{ title: 'Home AI Server', whyItMatters: 'API for all LAN devices' }, { title: 'RAG Server', whyItMatters: 'ChromaDB + Ollama + embedding' }, { title: 'Voice Assistant', whyItMatters: 'Whisper + TTS always-on' }, { title: 'Private Coding Agent', whyItMatters: 'IDE integration via API' }] },
+      monitoring: { id: 'monitoring', title: 'Power & Thermal Monitoring', items: ['Monitor power via Activity Monitor', 'Log temperatures via `osx-cpu-temp` tool', 'Fan never spins (fanless)', 'Stable 25–35W on Llama 8B workloads'] },
+      faq: { id: 'faq', faqs: [{ q: 'Is Mac mini M5 quieter than alternatives?', a: 'Yes, fanless. RTX GPU: ~70dB. Mac mini: 0dB.' }, { q: 'Can I remote into the Mac mini?', a: 'Yes, SSH or VNC. Use static IP or Bonjour.' }, { q: 'What if I need higher throughput?', a: 'Scale to Mac Studio M5 Max for 2–3× speed.' }] },
+    },
+  },
+  de: { theme: 'Hardware & Performance', title: '', sections: {} },
+  fr: { theme: 'Hardware & Performance', title: '', sections: {} },
+  ja: { theme: 'Hardware & Performance', title: '', sections: {} },
+  zh: { theme: 'Hardware & Performance', title: '', sections: {} },
+}

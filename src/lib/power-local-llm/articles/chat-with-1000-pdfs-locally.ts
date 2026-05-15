@@ -114,6 +114,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decisionTree: {
         id: 'decision-tree',
         title: 'Architecture Decision Tree: Pick by Corpus Size First',
+        image: '/images/chat-with-1000-pdfs-locally-architecture-decision-en.svg',
+        imageCaption: 'Decision flowchart by corpus size: <1k docs → AnythingLLM (drag-and-drop); 1k-5k docs → LlamaIndex (150 lines Python, hierarchical indices); 5k-10k docs → ChromaDB (hybrid search + reranking); 10k+ docs → Qdrant (Docker, metadata filtering, production-grade). Rule of thumb: start one tier above your current size if expecting growth (800 docs now → start LlamaIndex tier for 2k PDFs projected).',
         content:
           '**Choose the simplest architecture that handles your document count. Adding hybrid search, reranking, or hierarchical indices is straightforward to retrofit; switching the entire vector store is not.** Use this tree before opening any installer.',
         snippetBlocks: [
@@ -143,6 +145,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architectureComparison: {
         id: 'architecture-comparison',
         title: 'Architecture Comparison Table',
+        image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
+        imageCaption: 'Query latency P50 scaling across 4 architectures: AnythingLLM (breaks at 2k docs, 150ms @ 100 docs → 1,500ms @ 10k); LlamaIndex (stays flat at 280-285ms through 5k, rises to 260ms @ 10k); ChromaDB+hybrid (300ms @ 100 → 190ms @ 10k, flattens curve); Qdrant (295ms → 180ms, lowest latency at all scales). Hybrid search + reranking flatten the curve entirely.',
         content:
           '**Four architectures benchmarked on identical corpora at 100, 1,000, and 10,000 documents.** Test setup: research-paper PDFs averaging 12 pages each (so ~120k pages at 10k docs). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11; cross-checked on an M5 MacBook Pro (32 GB unified). LLM: Llama 3.3 8B Q4_K_M via Ollama. Embedder: nomic-embed-text-v1.5. All numbers are medians of three runs after warm-up.',
         columns: [
@@ -270,6 +274,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       hybridSearch: {
         id: 'hybrid-search',
         title: 'Hybrid Search: BM25 + Vector Beats Either Alone',
+        image: '/images/chat-with-1000-pdfs-locally-hybrid-rerank-en.svg',
+        imageCaption: '4-step pipeline: (1) parallel retrieval (BM25 top-25 + dense vector top-25), (2) merge via RRF (score = 1/(60+rank_bm25) + 1/(60+rank_dense), top-50 merged), (3) reranking pass (BGE-reranker-v2-m3 top-50 → top-8), (4) LLM generation (top-8 context). Impact at 10k docs: without hybrid 65-70% recall; with hybrid only 85-90%; with hybrid+reranking 92-95% recall, "wrong chunk" failures drop from 15-25% to <5%.',
         content:
           '**Pure cosine retrieval misses queries that hinge on rare proper nouns, statute numbers, or specific identifiers. Pure BM25 misses queries phrased differently from the source text. The combination beats either alone, especially past 1,000 documents.** Implementation cost: one extra retrieval call plus a fusion step.',
         items: [
@@ -328,6 +334,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Measured Benchmarks at 100, 1,000, and 10,000 Documents',
+        image: '/images/chat-with-1000-pdfs-locally-storage-hardware-en.svg',
+        imageCaption: 'Storage sizing by corpus tier: 100-1k docs (1-3 GB vectors, 5-15 min indexing, 16 GB RAM, any CPU/GPU) → AnythingLLM; 1k-5k docs (3-8 GB vectors, 30-60 min, 16 GB RAM + NVMe, GPU optional) → LlamaIndex; 5k-10k docs (5-15 GB vectors, 60-120 min, 32 GB RAM + NVMe, GPU 8GB+ recommended) → ChromaDB+hybrid; 10k+ docs (10-50+ GB, 2-8 hours, 32+ GB RAM + NVMe + GPU 12GB+) → Qdrant. Rule: ~10-30 MB per 100 PDF pages, 50k pages = 5-15 GB vectors, indexing time scales linearly at 30-90 min per 5k PDFs.',
         content:
           '**All four architectures benchmarked on identical corpora. Test rig: NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM), Windows 11 + WSL2, NVMe SSD. Cross-checked on M5 MacBook Pro (32 GB unified). Numbers are medians of three runs after warm-up.** Indexing time, on-disk storage, query latency p50 and p95 across scales.',
         columns: ['Stack', 'Metric', '@ 100 docs', '@ 1,000 docs', '@ 10,000 docs'],
@@ -771,6 +779,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyDefaultsBreak: {
         id: 'why-defaults-break',
         title: 'Warum Standard-RAG über 1.000 Dokumente hinaus scheitert',
+        image: '/images/chat-with-1000-pdfs-locally-why-breaks-en.svg',
+        imageCaption: 'Vier Fehlermuster stapeln sich: Index außerhalb RAM (5-8 GB Vektoren überschreitet 16 GB Laptop, Latenz springt von 300ms auf 1-3s), Cosinus-only-Suche vermisst seltene Begriffe (Abfrage „Section 230(c)(1)" ruft „Section 9" ab), top-K=4 zu eng bei 50k Chunks (bestes Ergebnis bei Rang 12-30), keine Metadaten-Filterung (durchsucht alle 10k Chunks vs. gefilterte 500).',
         content:
           '**Zwei Fehler stapeln sich zwischen 1.000 und 10.000 Dokumenten: Der Index überschreitet RAM, und reine Cosinus-Suche gibt lexikalisch ähnliche aber semantisch falsche Chunks zurück.** Das Spielzeug-Demo, das auf 20 PDFs funktionierte, wird auf einer persönlichen Forschungsbibliothek unbrauchbar – nicht weil der Code falsch ist, sondern weil die in den Standardeinstellungen eingebauten Annahmen nicht mehr gelten.',
         items: [
@@ -791,6 +801,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decisionTree: {
         id: 'decision-tree',
         title: 'Architektur-Entscheidungsbaum: Zuerst nach Bestandsgröße wählen',
+        image: '/images/chat-with-1000-pdfs-locally-architecture-decision-en.svg',
+        imageCaption: 'Entscheidungsflussdiagramm nach Bestandsgröße: <1k Dokumente → AnythingLLM (Drag-and-Drop); 1k-5k Dokumente → LlamaIndex (150 Zeilen Python, hierarchische Indizes); 5k-10k Dokumente → ChromaDB (Hybrid-Suche + Reranking); 10k+ Dokumente → Qdrant (Docker, Metadaten-Filterung, Produktionsreife). Faustregel: eine Stufe über Ihrer aktuellen Größe starten, wenn Wachstum erwartet wird (800 Dokumente jetzt → LlamaIndex-Stufe für projizierte 2k PDFs).',
         content:
           '**Wählen Sie die einfachste Architektur, die Ihre Dokumentanzahl verarbeitet. Hybrid-Suche, Reranking oder hierarchische Indizes hinzuzufügen ist unkompliziert nachzurüsten; Den gesamten Vektor-Store zu wechseln ist es nicht.** Verwenden Sie diesen Baum, bevor Sie einen Installer öffnen.',
         snippetBlocks: [
@@ -820,6 +832,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architectureComparison: {
         id: 'architecture-comparison',
         title: 'Architektur-Vergleichstabelle',
+        image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
+        imageCaption: 'Abfrage-Latenz P50-Skalierung über 4 Architekturen: AnythingLLM (bricht bei 2k Dokumenten zusammen, 150ms @ 100 Dokumente → 1.500ms @ 10k); LlamaIndex (bleibt flach bei 280-285ms bis 5k, steigt auf 260ms @ 10k); ChromaDB+Hybrid (300ms @ 100 → 190ms @ 10k, flacht Kurve ab); Qdrant (295ms → 180ms, niedrigste Latenz bei allen Skalen). Hybrid-Suche + Reranking flachen die Kurve komplett ab.',
         content:
           '**Vier Architekturen auf identischen Beständen bei 100, 1.000 und 10.000 Dokumenten bewertet.** Test-Setup: Forschungs-PDFs mit durchschnittlich 12 Seiten (also ~120k Seiten bei 10k Dokumenten). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB System-RAM) auf Windows 11; Cross-Check auf M5 MacBook Pro (32 GB vereinheitlichter Speicher). LLM: Llama 3.3 8B Q4_K_M über Ollama. Embedding-Modell: nomic-embed-text-v1.5. Alle Zahlen sind Mediane von drei Läufen nach Aufwärmung.',
         columns: [
@@ -947,6 +961,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       hybridSearch: {
         id: 'hybrid-search',
         title: 'Hybrid-Suche: BM25 + Vektor schlägt eine alleine',
+        image: '/images/chat-with-1000-pdfs-locally-hybrid-rerank-en.svg',
+        imageCaption: '4-Schritt-Pipeline: (1) parallele Abrufung (BM25 Top-25 + dichter Vektor Top-25), (2) Merge über RRF (Punktzahl = 1/(60+rank_bm25) + 1/(60+rank_dense), Top-50 gemergt), (3) Reranking-Pass (BGE-reranker-v2-m3 Top-50 → Top-8), (4) LLM-Generierung (Top-8 Kontext). Auswirkung bei 10k Dokumenten: ohne Hybrid 65-70% Recall; mit Hybrid nur 85-90%; mit Hybrid+Reranking 92-95% Recall, „falscher Chunk"-Fehler fallen von 15-25% auf <5%.',
         content:
           '**Reine Cosinus-Abruf verfehlt Abfragen, die auf seltenen Eigennamen, Statutennummern oder spezifischen Identifizierern hinge. Reine BM25 verfehlt Abfragen, die anders als der Quelltext formuliert sind. Die Kombination schlägt einen alleine, besonders über 1.000 Dokumenten.** Implementierungs-Kosten: ein zusätzlicher Abruf-Aufruf plus ein Fusions-Schritt.',
         items: [
@@ -1005,6 +1021,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Gemessene Benchmarks bei 100, 1.000 und 10.000 Dokumenten',
+        image: '/images/chat-with-1000-pdfs-locally-storage-hardware-en.svg',
+        imageCaption: 'Speichergröße nach Bestands-Stufe: 100-1k Dokumente (1-3 GB Vektoren, 5-15 Min Indexierung, 16 GB RAM, beliebige CPU/GPU) → AnythingLLM; 1k-5k Dokumente (3-8 GB Vektoren, 30-60 Min, 16 GB RAM + NVMe, GPU optional) → LlamaIndex; 5k-10k Dokumente (5-15 GB Vektoren, 60-120 Min, 32 GB RAM + NVMe, GPU 8GB+ empfohlen) → ChromaDB+Hybrid; 10k+ Dokumente (10-50+ GB, 2-8 Stunden, 32+ GB RAM + NVMe + GPU 12GB+) → Qdrant. Faustregel: ~10-30 MB pro 100 PDF-Seiten, 50k Seiten = 5-15 GB Vektoren, Indexierungs-Zeit skaliert linear bei 30-90 Min pro 5k PDFs.',
         content:
           '**Alle vier Architekturen auf identischen Beständen bewertet. Test-Rig: NVIDIA RTX 4070 (12 GB VRAM, 32 GB System-RAM), Windows 11 + WSL2, NVMe SSD. Cross-Check auf M5 MacBook Pro (32 GB vereinheitlichter Speicher). Zahlen sind Mediane von drei Läufen nach Aufwärmung.** Indexierungs-Zeit, On-Disk-Speicher, Abfrage-Latenz p50 und p95 über Skalen.',
         columns: ['Stack', 'Metrik', '@ 100 Dokumente', '@ 1.000 Dokumente', '@ 10.000 Dokumente'],
@@ -1451,6 +1469,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyDefaultsBreak: {
         id: 'why-defaults-break',
         title: 'Pourquoi le RAG standard échoue au-delà de 1.000 documents',
+        image: '/images/chat-with-1000-pdfs-locally-why-breaks-en.svg',
+        imageCaption: 'Quatre modes de défaillance empilés : index hors-RAM (5-8 GB vecteurs dépasse laptop 16 GB, latence saute 300ms→1-3s), recherche cosinus-seule manquant termes rares (requête « Section 230(c)(1) » récupère « Section 9 »), top-K=4 trop étroit à 50k chunks (meilleur résultat rang 12-30), pas filtrage métadonnées (cherche tous 10k chunks vs. 500 filtrés).',
         content:
           '**Deux défaillances s\'accumulent entre 1.000 et 10.000 documents : l\'index dépasse la RAM, et la recherche cosinus seule retourne chunks lexicalement similaires mais sémantiquement erronés.** La démo jouet qui fonctionnait sur 20 PDF devient inutilisable sur une bibliothèque personnelle – non parce que le code est mauvais, mais parce que les hypothèses intégrées aux paramètres par défaut cessent de tenir.',
         items: [
@@ -1471,6 +1491,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decisionTree: {
         id: 'decision-tree',
         title: 'Arborescence décisionnelle : Choisissez d\'abord par taille du corpus',
+        image: '/images/chat-with-1000-pdfs-locally-architecture-decision-en.svg',
+        imageCaption: 'Logigramme décision par taille corpus : <1k docs → AnythingLLM (glisser-déposer); 1k-5k docs → LlamaIndex (150 lignes Python, indices hiérarchiques); 5k-10k docs → ChromaDB (recherche hybride + reranking); 10k+ docs → Qdrant (Docker, filtrage métadonnées, prêt-production). Règle: démarrer un palier au-dessus taille actuelle si croissance prévue (800 docs maintenant → LlamaIndex pour 2k PDFs projetés).',
         content:
           '**Choisissez l\'architecture la plus simple qui gère votre nombre de documents. Ajouter recherche hybride, reranking ou indices hiérarchiques est directement possible ; changer tout le vector store ne l\'est pas.** Utilisez cet arbre avant d\'ouvrir un installeur.',
         snippetBlocks: [
@@ -1500,6 +1522,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architectureComparison: {
         id: 'architecture-comparison',
         title: 'Tableau comparatif des architectures',
+        image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
+        imageCaption: 'Latence requête P50 sur 4 architectures : AnythingLLM (casse à 2k docs, 150ms @ 100 docs → 1.500ms @ 10k); LlamaIndex (reste plat 280-285ms jusqu\'à 5k, monte à 260ms @ 10k); ChromaDB+hybride (300ms @ 100 → 190ms @ 10k, aplatit courbe); Qdrant (295ms → 180ms, latence plus basse tous échelles). Recherche hybride + reranking aplatissent la courbe totalement.',
         content:
           '**Quatre architectures testées sur corpus identiques à 100, 1.000 et 10.000 documents.** Setup test : PDF recherche moyens 12 pages chacun (~120k pages à 10k documents). Matériel : NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM système) Windows 11 ; cross-check M5 MacBook Pro (32 GB unified). LLM : Llama 3.3 8B Q4_K_M via Ollama. Embedder : nomic-embed-text-v1.5. Tous chiffres médiane trois runs après warm-up.',
         columns: [
@@ -1627,6 +1651,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       hybridSearch: {
         id: 'hybrid-search',
         title: 'Recherche hybride : BM25 + Vecteur beau l\'un seul',
+        image: '/images/chat-with-1000-pdfs-locally-hybrid-rerank-en.svg',
+        imageCaption: 'Pipeline 4-étapes : (1) récupération parallèle (BM25 top-25 + vecteur dense top-25), (2) fusion via RRF (score = 1/(60+rank_bm25) + 1/(60+rank_dense), top-50 fusionné), (3) passe reranking (BGE-reranker-v2-m3 top-50 → top-8), (4) génération LLM (contexte top-8). Impact 10k documents : sans hybride 65-70% recall; avec hybride seul 85-90%; avec hybride+reranking 92-95% recall, défaillances « mauvais chunk » tombent 15-25% à <5%.',
         content:
           '**Récupération cosinus pur manque requêtes hinge noms propres rares, numéros statut, identifiants spécifiques. BM25 pur manque requêtes paraphrasées différemment texte source. Combinaison beau l\'un seul, spécialement au-delà 1.000 documents.** Coût implémentation : un appel récupération plus étape fusion.',
         items: [
@@ -1685,6 +1711,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Benchmarks mesurés à 100, 1.000 et 10.000 documents',
+        image: '/images/chat-with-1000-pdfs-locally-storage-hardware-en.svg',
+        imageCaption: 'Dimensionnement mémoire par palier corpus : 100-1k docs (1-3 GB vecteurs, 5-15 min indexation, 16 GB RAM, CPU/GPU quelconque) → AnythingLLM; 1k-5k docs (3-8 GB vecteurs, 30-60 min, 16 GB RAM + NVMe, GPU optionnel) → LlamaIndex; 5k-10k docs (5-15 GB vecteurs, 60-120 min, 32 GB RAM + NVMe, GPU 8GB+ recommandé) → ChromaDB+hybride; 10k+ docs (10-50+ GB, 2-8 heures, 32+ GB RAM + NVMe + GPU 12GB+) → Qdrant. Règle : ~10-30 MB par 100 pages PDF, 50k pages = 5-15 GB vecteurs, temps indexation évolue linéairement à 30-90 min par 5k PDFs.',
         content:
           '**Quatre architectures testées corpus identiques. Test rig : NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM système), Windows 11 + WSL2, SSD NVMe. Cross-check M5 MacBook Pro (32 GB unified). Chiffres médiane trois runs après warm-up.** Temps indexation, stockage on-disk, latence requête p50 et p95 sur scales.',
         columns: ['Stack', 'Métrique', '@ 100 documents', '@ 1.000 documents', '@ 10.000 documents'],
@@ -2131,6 +2159,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyDefaultsBreak: {
         id: 'why-defaults-break',
         title: '1,000ドキュメント超でデフォルトRAGが失敗する理由',
+        image: '/images/chat-with-1000-pdfs-locally-why-breaks-en.svg',
+        imageCaption: '4つの故障モード積層：Index Out of RAM（5-8 GB ベクトルが16 GB ラップトップ超過、レイテンシが300ms→1-3sに跳ね上がる）、コサイン単独検索が稀な用語を見落とし（クエリ「Section 230(c)(1)」が「Section 9」を検索）、top-K=4が50kチャンクで狭すぎる（最良結果がランク12-30）、メタデータフィルタリングなし（すべての10kチャンク検索 vs. フィルタ済み500）。',
         content:
           '**1,000~10,000ドキュメント間で2つの失敗が重なります：インデックスがRAMを超過し、コサイン単独検索が字句的に類似だが意味的に誤ったチャンクを返すからです。** 20 PDFで動いたおもちゃのデモが個人研究ライブラリで使い物にならなくなる理由は、コードが悪いからではなく、デフォルト設定に組み込まれた前提が通用しなくなるからです。',
         items: [
@@ -2151,6 +2181,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decisionTree: {
         id: 'decision-tree',
         title: 'アーキテクチャ選択フロー：規模で選ぶ',
+        image: '/images/chat-with-1000-pdfs-locally-architecture-decision-en.svg',
+        imageCaption: '規模別判定フロー：<1k ドキュメント → AnythingLLM（ドラッグ&ドロップ）、1k-5k ドキュメント → LlamaIndex（150行Python、階層インデックス）、5k-10k ドキュメント → ChromaDB（ハイブリッド検索+リランキング）、10k+ ドキュメント → Qdrant（Docker、メタデータフィルタリング、本番対応）。経験則：成長予測なら現在規模より1段階上から開始（今800ドキュメント → 2k PDF見込みでLlamaIndex層選択）。',
         content:
           '**ドキュメント数を処理できる最も単純なアーキテクチャを選んでください。ハイブリッド検索やリランキング、階層インデックスの追加は後付け可能です。ベクトルストア全体の交換はできません。** インストーラを開く前にこのフローを使用してください。',
         snippetBlocks: [
@@ -2180,6 +2212,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architectureComparison: {
         id: 'architecture-comparison',
         title: 'アーキテクチャ比較表',
+        image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
+        imageCaption: 'クエリレイテンシP50 4アーキテクチャスケーリング：AnythingLLM（2k ドキュメント時に障害、150ms @ 100 ドキュメント → 1,500ms @ 10k）、LlamaIndex（5k まで280-285ms 一定、10k で260ms に上昇）、ChromaDB+ハイブリッド（300ms @ 100 → 190ms @ 10k、カーブを平坦化）、Qdrant（295ms → 180ms、すべてのスケールで最低レイテンシ）。ハイブリッド検索+リランキングでカーブ完全平坦化。',
         content:
           '**4つのアーキテクチャを100、1,000、10,000ドキュメント時で同じコーパス上でテスト。** テスト : 平均12ページの研究PDF（10kドキュメント時で~120kページ）。ハードウェア: Windows 11 上の NVIDIA RTX 4070（12 GB VRAM、32 GB RAM）、M5 MacBook Pro（32 GB 統合）でクロスチェック。LLM: Ollama 経由 Llama 3.3 8B Q4_K_M。Embedder: nomic-embed-text-v1.5。すべて値はウォームアップ後3回実行の中央値。',
         columns: [
@@ -2307,6 +2341,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       hybridSearch: {
         id: 'hybrid-search',
         title: 'ハイブリッド検索：BM25 + ベクトル両方が単独より優秀',
+        image: '/images/chat-with-1000-pdfs-locally-hybrid-rerank-en.svg',
+        imageCaption: '4ステップパイプライン：(1) 並列検索（BM25 Top-25 + 密集ベクトル Top-25）、(2) RRF 経由マージ（スコア = 1/(60+rank_bm25) + 1/(60+rank_dense)、Top-50 マージ）、(3) リランキングパス（BGE-reranker-v2-m3 Top-50 → Top-8）、(4) LLM 生成（Top-8 コンテキスト）。10k ドキュメント時の影響：ハイブリッドなし 65-70% リコール; ハイブリッドのみ 85-90%; ハイブリッド+リランキング 92-95% リコール、「誤チャンク」障害が 15-25% から <5% に低下。',
         content:
           '**純コサイン検索は稀な固有名詞、法定番号、特定識別子に基づくクエリを逃します。純BM25 は異なる表現のクエリを逃します。組み合わせは単独より優秀、1,000ドキュメント超で特に。** 実装コスト : 追加の検索呼び出し + 融合ステップ。',
         items: [
@@ -2365,6 +2401,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: '100、1k、10k ドキュメント時の実測ベンチマーク',
+        image: '/images/chat-with-1000-pdfs-locally-storage-hardware-en.svg',
+        imageCaption: 'コーパス層別ストレージサイジング：100-1k ドキュメント（1-3 GB ベクトル、5-15分インデックス、16GB RAM、任意CPU/GPU）→ AnythingLLM; 1k-5k ドキュメント（3-8 GB ベクトル、30-60分、16GB RAM + NVMe、GPU オプション）→ LlamaIndex; 5k-10k ドキュメント（5-15 GB ベクトル、60-120分、32GB RAM + NVMe、GPU 8GB+ 推奨）→ ChromaDB+ハイブリッド; 10k+ ドキュメント（10-50+ GB、2-8時間、32+ GB RAM + NVMe + GPU 12GB+）→ Qdrant。経験則：100ページ PDF ごと~10-30 MB、50k ページ = 5-15 GB ベクトル、インデックス時間は5k PDF ごと 30-90分に線形スケール。',
         content:
           '**4アーキテクチャ同じコーパス上テスト。Test rig : NVIDIA RTX 4070（12 GB VRAM、32 GB RAM）、Windows 11+WSL2、NVMe SSD。M5 MacBook Pro（32 GB unified）で cross-check。中央値 3 run ウォームアップ後。** インデックス時間、on-disk ストレージ、query p50/p95 レイテンシ scales 上。',
         columns: ['スタック', 'メトリック', '@ 100ドキュメント', '@ 1,000ドキュメント', '@ 10,000ドキュメント'],
@@ -2788,6 +2826,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyDefaultsBreak: {
         id: 'why-defaults-break',
         title: '为什么默认RAG在大规模下失效',
+        image: '/images/chat-with-1000-pdfs-locally-why-breaks-en.svg',
+        imageCaption: '四种故障模式堆积：索引超出RAM（5-8GB向量超过16GB笔记本，延迟从300ms跳到1-3s）、余弦单独搜索遗漏稀有词汇（查询"Section 230(c)(1)"检索"Section 9"）、top-K=4在50k chunks时太窄（最佳结果在排名12-30）、无元数据过滤（搜索全部10k chunks vs. 过滤后500个）。',
         content: '向量搜索的失效发生在语料库达到5000-8000个chunks时。当索引大小超过RAM时，数据库开始使用磁盘IO。单纯的余弦相似度搜索开始返回看似相关但语义错误的chunks——因为它衡量的是向量空间中的距离，而不是查询意图。',
         items: [
           '规模影响：1000个文档（~3000 chunks）运行良好。10000个文档（~30000 chunks）时查询延迟从300ms跳到1-3秒。检索到的chunks中语义不符的比例从5-10%跳到30-50%。',
@@ -2797,6 +2837,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decisionTree: {
         id: 'decision-tree',
         title: '架构决策树：按语料库大小选择',
+        image: '/images/chat-with-1000-pdfs-locally-architecture-decision-en.svg',
+        imageCaption: '按语料库大小决策流程图：<1k文档→AnythingLLM（拖放式）、1k-5k文档→LlamaIndex（150行Python、分层索引）、5k-10k文档→ChromaDB（混合搜索+reranking）、10k+文档→Qdrant（Docker、元数据过滤、生产就绪）。经验法则：如预期增长则从现有规模上一个层级开始（现有800文档→预计2k时从LlamaIndex层开始）。',
         content: '按语料库大小匹配最简单的架构。',
         items: [
           '**100-1000个文档：AnythingLLM调优**。使用内置的Ollama集成。启用相似度阈值过滤。调整chunk大小为512 tokens。成本：一个GPU即可，典型部署8GB VRAM。',
@@ -2808,6 +2850,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architectureComparison: {
         id: 'architecture-comparison',
         title: '四种架构的成本对比',
+        image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
+        imageCaption: '跨4个架构的查询延迟P50扩展：AnythingLLM（在2k文档处崩溃，100文档150ms→10k文档1500ms）、LlamaIndex（至5k保持280-285ms平坦，10k升至260ms）、ChromaDB+混合（100文档300ms→10k文档190ms，平坦化曲线）、Qdrant（295ms→180ms，所有规模最低延迟）。混合搜索+reranking完全平坦化曲线。',
         content: '成本按三个维度评估：GPU内存、磁盘存储、和索引时间。',
         columns: ['架构', 'GPU内存', '磁盘空间（10k文档）', '索引时间', '查询延迟', '相似度质量'],
         rows: [
@@ -2895,6 +2939,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       hybridSearch: {
         id: 'hybrid-search',
         title: '混合搜索：BM25+向量组合',
+        image: '/images/chat-with-1000-pdfs-locally-hybrid-rerank-en.svg',
+        imageCaption: '4步管道：(1)并行检索（BM25 top-25 + 密集向量 top-25）、(2)通过RRF合并（分数 = 1/(60+rank_bm25) + 1/(60+rank_dense)，top-50合并）、(3)reranking通过（BGE-reranker-v2-m3 top-50 → top-8）、(4)LLM生成（top-8上下文）。10k文档时的影响：无混合搜索65-70%召回率；仅混合85-90%；混合+reranking 92-95%召回率，"错误chunk"故障从15-25%跌至<5%。',
         content: '混合搜索是扩展RAG时的关键创新。它结合两种不同的相似度概念。',
         items: [
           '**BM25（关键词相关性）**：用于精确术语匹配。如果查询包含"GGUF"，BM25会确保你得到提及GGUF的chunks。',
@@ -2946,6 +2992,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: '实测基准：延迟、存储、准确率',
+        image: '/images/chat-with-1000-pdfs-locally-storage-hardware-en.svg',
+        imageCaption: '按语料库层级存储尺寸：100-1k文档（1-3GB向量，5-15分钟索引，16GB RAM，任意CPU/GPU）→ AnythingLLM; 1k-5k文档（3-8GB向量，30-60分钟，16GB RAM + NVMe，GPU可选）→ LlamaIndex; 5k-10k文档（5-15GB向量，60-120分钟，32GB RAM + NVMe，GPU 8GB+推荐）→ ChromaDB+混合; 10k+文档（10-50+ GB，2-8小时，32+ GB RAM + NVMe + GPU 12GB+）→ Qdrant。经验法则：每100个PDF页面~10-30MB，50k页 = 5-15GB向量，索引时间按5k PDF每30-90分钟线性扩展。',
         content: '基准测试在以下条件下进行：硬件RTX 4070（8GB VRAM），32GB系统RAM，NVMe SSD；文档PDF混合（法律、研究、技术文档），每个PDF平均30页；查询50个真实用户查询；Embedding模型nomic-embed-text-v1.5。',
         items: [
           '**1000个文档**：索引时间15分钟。磁盘空间3GB。查询延迟（向量）180ms。检索准确率88%。',

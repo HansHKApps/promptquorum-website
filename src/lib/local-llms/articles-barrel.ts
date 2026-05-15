@@ -42,6 +42,12 @@ import { article as a_apple_silicon_local_llm_guide_2026 } from "./articles/appl
 import { article as a_m5_pro_max_llm_benchmarks_2026 } from "./articles/m5-pro-max-llm-benchmarks-2026";
 import { article as a_how_much_unified_memory_for_local_llm } from "./articles/how-much-unified-memory-for-local-llm";
 import { article as a_mlx_vs_ollama_vs_llama_cpp_mac } from "./articles/mlx-vs-ollama-vs-llama-cpp-mac";
+import { article as a_ollama_on_mac_apple_silicon_setup_2026 } from "./articles/ollama-on-mac-apple-silicon-setup-2026";
+import { article as a_best_models_apple_silicon_2026 } from "./articles/best-models-apple-silicon-2026";
+import { article as a_mac_mini_m5_local_ai_server } from "./articles/mac-mini-m5-local-ai-server";
+import { article as a_apple_silicon_vs_nvidia_gpu_local_llm } from "./articles/apple-silicon-vs-nvidia-gpu-local-llm";
+import { article as a_apple_silicon_whisper_metal_benchmark } from "./articles/apple-silicon-whisper-metal-benchmark";
+import { article as a_running_70b_models_apple_silicon_m5_max } from "./articles/running-70b-models-apple-silicon-m5-max";
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
@@ -187,4 +193,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "m5-pro-max-llm-benchmarks-2026": a_m5_pro_max_llm_benchmarks_2026,
   "how-much-unified-memory-for-local-llm": a_how_much_unified_memory_for_local_llm,
   "mlx-vs-ollama-vs-llama-cpp-mac": a_mlx_vs_ollama_vs_llama_cpp_mac,
+  "ollama-on-mac-apple-silicon-setup-2026": a_ollama_on_mac_apple_silicon_setup_2026,
+  "best-models-apple-silicon-2026": a_best_models_apple_silicon_2026,
+  "mac-mini-m5-local-ai-server": a_mac_mini_m5_local_ai_server,
+  "apple-silicon-vs-nvidia-gpu-local-llm": a_apple_silicon_vs_nvidia_gpu_local_llm,
+  "apple-silicon-whisper-metal-benchmark": a_apple_silicon_whisper_metal_benchmark,
+  "running-70b-models-apple-silicon-m5-max": a_running_70b_models_apple_silicon_m5_max,
 };

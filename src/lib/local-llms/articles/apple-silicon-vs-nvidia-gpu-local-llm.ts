@@ -1,0 +1,57 @@
+import type { Language } from "@/lib/blog/blogContent";
+import type { LLMArticle } from "@/lib/local-llms/types";
+
+export const article: Partial<Record<Language, LLMArticle>> = {
+  en: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-15',
+    theme: 'Hardware & Performance',
+    title: 'Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared',
+    seoTitle: 'Mac vs NVIDIA for Local AI: M5 vs RTX 4090 Benchmarks, Cost, Power Comparison',
+    intro: 'Apple Silicon vs NVIDIA GPU for local LLMs: M5 Max vs RTX 4090 speed, cost, power, VRAM limit vs unified memory, workflow comparison.',
+    metaDescription: 'Apple Silicon vs NVIDIA GPU for local LLMs: M5 vs RTX 4090 benchmarks, cost, power, VRAM, when to choose each.',
+    twitterDescription: 'Mac vs NVIDIA for local AI: M5 Max vs RTX 4090 benchmarks, cost, power, VRAM. Which platform for local LLMs in 2026?',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.1 70B'],
+    current_hardware_mentioned: ['M5 Pro', 'M5 Max', 'RTX 4070', 'RTX 4090'],
+    audience: 'Users deciding between Mac and PC/GPU for local AI.',
+    readTime: '13 min read',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Apple Silicon vs NVIDIA GPU local LLM',
+    targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX benchmark', 'local AI platform comparison'],
+    leadAnswerBlock: '**M5 Pro 64GB: 50 tok/s on 8B, 10 tok/s on 70B. RTX 4090: 80 tok/s on 8B, OOM on 70B. M5 Max wins on 70B; RTX 4090 faster on small models. TCO 3-yr: Mac Mini $1,305, RTX GPU $1,800.**',
+    quickAnswerTop: {
+      en: {
+        question: 'Should I buy a Mac or GPU for local LLMs?',
+        answer: 'Mac (M5 Max 128GB) if you run 70B models or need multi-model. RTX 4090 if you want raw speed on 7B–24B and accept $350/yr electricity.',
+        bullets: ['M5 Max: 70B models only consumer option without dual-GPU', 'RTX 4090: 20–30% faster on 8B models', 'Power: M5 25–70W, RTX 300–450W', 'Cost 3yr: Mac $1,305, RTX $1,800', 'Winner: Mac for 70B, RTX for small models'],
+        updatedDate: '2026-05-15',
+      },
+      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+    },
+    toc: [
+      { label: 'VRAM Limit vs Unified Memory', anchor: '#vram' },
+      { label: 'Head-to-Head Benchmarks', anchor: '#benchmarks' },
+      { label: 'Total Cost of Ownership', anchor: '#tco' },
+      { label: 'When Apple Silicon Wins', anchor: '#apple-wins' },
+      { label: 'When NVIDIA Wins', anchor: '#nvidia-wins' },
+      { label: 'FAQ', anchor: '#faq' },
+    ],
+    sections: {
+      vram: { id: 'vram', title: 'The Fundamental Difference', content: 'RTX 4090: 24GB VRAM hard limit. 70B model? No (needs 42GB Q4). M5 Max: 128GB unified memory. 70B model? Yes.' },
+      benchmarks: { id: 'benchmarks', title: 'Head-to-Head Benchmarks', tableFormat: true, columns: ['Model', 'M5 Pro 64GB', 'M5 Max 128GB', 'RTX 4090 24GB'], rows: [{ model: 'Llama 3.1 8B Q4', pro: '50–60 tok/s', max: '100–120 tok/s', rtx: '80–100 tok/s' }, { model: 'Llama 3.1 70B Q4', pro: '8–12 tok/s', max: '15–20 tok/s', rtx: 'OOM' }] },
+      tco: { id: 'tco', title: 'Total Cost of Ownership (3-year)', tableFormat: true, columns: ['Config', 'Hardware', 'Annual Electricity', '3-Year Total'], rows: [{ config: 'Mac mini M5 Pro', hw: '€1,200', elec: '€35', total: '€1,305' }, { config: 'RTX 4090 Desktop', hw: '€2,500', elec: '€350', total: '€3,700' }] },
+      appleWins: { id: 'apple-wins', title: 'When Apple Silicon Wins', items: ['Models > 24GB VRAM', 'Always-on server', 'Portable (MacBook Pro)', 'Power-constrained', 'Multi-model stacks'] },
+      nvidiaWins: { id: 'nvidia-wins', title: 'When NVIDIA Wins', items: ['Max speed on 8B–24B models', 'Fine-tuning & training', 'Batch throughput', 'Budget GPU (used RTX 3060)', 'Linux infrastructure'] },
+      faq: { id: 'faq', faqs: [{ q: 'Should I wait for M5 Ultra?', a: 'M5 Ultra (mid-2026, 256GB) will run 70B FP16 (lossless). If budget allows, wait.' }, { q: 'Can I do multi-GPU on Mac?', a: 'No. No way to pool memory across Macs. RTX GPU systems allow dual RTX 4090 for 48GB pooled VRAM.' }, { q: 'Is NVIDIA faster for training?', a: 'Yes, CUDA ecosystem dominates fine-tuning. Use NVIDIA for training, Mac for inference.' }] },
+    },
+  },
+  de: { theme: 'Hardware & Performance', title: '', sections: {} },
+  fr: { theme: 'Hardware & Performance', title: '', sections: {} },
+  ja: { theme: 'Hardware & Performance', title: '', sections: {} },
+  zh: { theme: 'Hardware & Performance', title: '', sections: {} },
+}
