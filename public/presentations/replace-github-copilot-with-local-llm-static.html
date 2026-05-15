@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Replace GitHub Copilot With a Local LLM: Setup + Cost Comparison 2026 | PromptQuorum</title>
+  <meta name="description" content="$0/month vs $20/month. Continue.dev + Qwen3-Coder vs GitHub Copilot. Real test on a Next.js project. Setup walkthrough, cost math, honest verdict." />
+  <meta property="og:title" content="Replace GitHub Copilot With a Local LLM — PromptQuorum" />
+  <meta property="og:description" content="Continue.dev + Ollama + Qwen3-Coder 30B: setup, 24-month cost math, and quality test vs GitHub Copilot Pro." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .presentation-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-left img {
+      height: 28px;
+      width: auto;
+    }
+
+    #header-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1f1f1f;
+      max-width: 600px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .header-links a {
+      font-size: 12px;
+      color: #6750a4;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .header-links a:hover {
+      color: #4a3a7f;
+    }
+
+    .content-area {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 48px 64px;
+      text-align: center;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .slide h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      color: #1f1f1f;
+      margin-bottom: 12px;
+      line-height: 1.15;
+    }
+
+    .slide h2 {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 700;
+      color: #1f1f1f;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .slide p {
+      font-size: clamp(14px, 1.8vw, 17px);
+      color: #49454f;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .slide ul {
+      text-align: left;
+      font-size: clamp(14px, 1.6vw, 17px);
+      line-height: 1.6;
+      margin: 12px auto 0;
+      max-width: 92%;
+    }
+
+    .slide ul li {
+      margin-bottom: 10px;
+      color: #49454f;
+    }
+
+    .slide ol {
+      text-align: left;
+      font-size: clamp(14px, 1.6vw, 17px);
+      line-height: 1.6;
+      margin: 12px auto 0;
+      max-width: 92%;
+    }
+
+    .slide ol li {
+      margin-bottom: 9px;
+      color: #49454f;
+    }
+
+    .slide table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-size: clamp(14px, 1.5vw, 17px);
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .slide table th,
+    .slide table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+      color: #49454f;
+    }
+
+    .slide table th {
+      background: #f7f2fa;
+      font-weight: 700;
+      color: #1f1f1f;
+    }
+
+    .slide table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .slide .subtitle {
+      font-size: clamp(15px, 2vw, 18px);
+      color: #79747e;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .slide .logo {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 12px;
+    }
+
+    .slide .comparison-stat {
+      font-size: clamp(18px, 2.8vw, 28px);
+      font-weight: 700;
+      color: #6750a4;
+      margin: 10px 0;
+    }
+
+    .slide .tip {
+      font-size: clamp(14px, 1.6vw, 16px);
+      color: #6750a4;
+      margin-top: 16px;
+      font-style: italic;
+    }
+
+    .slide .faq-item {
+      margin-bottom: 14px;
+      text-align: left;
+      max-width: 92%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slide .faq-item strong {
+      font-size: clamp(13px, 1.5vw, 15px);
+      color: #1f1f1f;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .slide .faq-item p {
+      font-size: clamp(12px, 1.4vw, 14px);
+      color: #49454f;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      background: white;
+      border-top: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      background: #6750a4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .controls button:hover:not(:disabled) {
+      background: #4a3a7f;
+    }
+
+    .controls button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .slide-counter {
+      font-size: 13px;
+      color: #79747e;
+      font-weight: 600;
+      min-width: 60px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .slide {
+        padding: 32px 24px;
+      }
+
+      .header-left {
+        flex: 1;
+      }
+
+      #header-title {
+        font-size: 12px;
+      }
+
+      .header-links {
+        gap: 8px;
+      }
+
+      .header-links a {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .slide { padding: 20px 16px; }
+      .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
+      .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
+      .slide p { font-size: 14px; margin-bottom: 10px; }
+      .slide ul { font-size: 1em; margin: 10px 0; }
+      .slide ul li { margin-bottom: 8px; }
+      .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
+      .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
+      .header { padding: 10px 12px; }
+      .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .header-links { gap: 8px; font-size: 11px; }
+      .subtitle { font-size: 14px; }
+      .logo { height: 24px; margin-bottom: 12px; }
+      .controls { padding: 10px 12px; }
+      .controls button { padding: 6px 12px; font-size: 12px; }
+    }
+
+    @media print {
+      .header,
+      .controls {
+        display: none;
+      }
+
+      .slide {
+        position: relative;
+        display: flex !important;
+        opacity: 1 !important;
+        page-break-after: always;
+        page-break-inside: avoid;
+        height: 100vh;
+        border: 1px solid #e0e0e0;
+        margin: 0;
+      }
+
+      body {
+        background: white;
+      }
+
+      .presentation-container {
+        height: auto;
+      }
+
+      .content-area {
+        position: static;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Replace GitHub Copilot With a Local LLM</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm" target="_blank" rel="noopener">← Back to Article</a>
+        <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container">
+      <!-- Slides will be dynamically injected here -->
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+      <button onclick="window.print()" style="margin-left: 16px; background: #6750a4;">Save as PDF</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'Replace GitHub Copilot With a Local LLM',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Replace GitHub Copilot With a Local LLM',
+            subtitle: '$0/month vs $20/month — Continue.dev + Ollama + Qwen3-Coder 30B vs GitHub Copilot Pro. Quality within 5–10%. Breakeven in 8–14 months.',
+            link: 'https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm'
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              '<strong>Stack:</strong> Continue.dev (free VS Code extension) + Ollama + Qwen3-Coder 30B Q4_K_M',
+              '<strong>Quality:</strong> 90–95% of Copilot on TypeScript and Python; 88% on Rust',
+              '<strong>Cost breakeven:</strong> 8–14 months on existing RTX 3060+ or M3+ hardware',
+              '<strong>Privacy:</strong> zero code leaves your machine — ideal for NDA work',
+              '<strong>Copilot still wins:</strong> niche libraries with sparse public training data'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Local Stack vs GitHub Copilot at a Glance',
+            columns: ['Criterion', 'Local stack', 'GitHub Copilot Pro'],
+            rows: [
+              { 'Criterion': 'Monthly cost', 'Local stack': '$0', 'GitHub Copilot Pro': '$20' },
+              { 'Criterion': 'Code privacy', 'Local stack': 'Fully local', 'GitHub Copilot Pro': 'Sent to OpenAI/Microsoft' },
+              { 'Criterion': 'Works offline', 'Local stack': 'Yes', 'GitHub Copilot Pro': 'No' },
+              { 'Criterion': 'Quality (TS/Python)', 'Local stack': '90–95% of Copilot', 'GitHub Copilot Pro': 'Baseline' },
+              { 'Criterion': 'Setup time', 'Local stack': '~30 min', 'GitHub Copilot Pro': '~5 min' },
+              { 'Criterion': 'Lock-in / vendor risk', 'Local stack': 'None', 'GitHub Copilot Pro': 'Subscription, ToS changes' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'The Recommended Stack',
+            items: [
+              '<strong>Continue.dev</strong> (free, Apache-licensed) — VS Code / JetBrains extension with autocomplete, chat, and agent mode',
+              '<strong>Ollama</strong> (free, MIT-licensed) — local model runtime; one-line install; OpenAI-compatible API',
+              '<strong>Qwen3-Coder 30B Q4_K_M</strong> — strongest open-source coding model (May 2026); needs ~18 GB VRAM',
+              '<strong>Qwen3-Coder 7B</strong> — fallback for 8–12 GB VRAM; reaches 80–85% of 30B quality'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Cost Math: 24-Month Horizon',
+            line1: 'RTX 3060 (existing hardware) → $45 total local vs $480 Copilot → save $435',
+            line2: 'M3 Pro Mac (existing hardware) → $15 total local vs $480 Copilot → save $465',
+            tip: 'Breakeven: 8–14 months on hardware you already own. Buying new hardware → Copilot wins on cost.'
+          },
+          {
+            type: 'numbered',
+            h2: 'Setup Walkthrough (30 min)',
+            items: [
+              'Install Ollama from ollama.com (macOS/Linux/Windows installer)',
+              'Pull the model: <code>ollama pull qwen3-coder:30b</code> (~18 GB) or <code>:7b</code> for 8–12 GB VRAM',
+              'Ollama server auto-starts on macOS/Windows; on Linux: <code>ollama serve</code>',
+              'Install Continue.dev in VS Code (search "Continue" in Extensions marketplace)',
+              'Open Continue.dev Settings → Add model → Ollama → select qwen3-coder:30b',
+              'Test: open a source file, start typing a function — completions appear within 1–2 s'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Quality Test on Real Next.js Code',
+            columns: ['Task', 'Local (Qwen3-Coder 30B)', 'GitHub Copilot Pro'],
+            rows: [
+              { 'Task': 'TypeScript autocomplete (common)', 'Local (Qwen3-Coder 30B)': '94/100', 'GitHub Copilot Pro': '97/100' },
+              { 'Task': 'Python autocomplete (Pandas/NumPy)', 'Local (Qwen3-Coder 30B)': '92/100', 'GitHub Copilot Pro': '95/100' },
+              { 'Task': 'Rust autocomplete (Tokio async)', 'Local (Qwen3-Coder 30B)': '88/100', 'GitHub Copilot Pro': '93/100' },
+              { 'Task': 'Chat: rare library (Drizzle ORM)', 'Local (Qwen3-Coder 30B)': '13/20', 'GitHub Copilot Pro': '17/20' },
+              { 'Task': 'Autocomplete latency (first token)', 'Local (Qwen3-Coder 30B)': '~280 ms (RTX 4070)', 'GitHub Copilot Pro': '~180 ms' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Where the Local Stack Wins',
+            items: [
+              '<strong>Private codebases:</strong> zero code leaves your machine — NDA work, financial engineering, government contracts',
+              '<strong>Offline development:</strong> flights, trains, restricted networks — Copilot requires internet',
+              '<strong>Zero ongoing cost:</strong> $0/month on existing 12 GB+ GPU or 16 GB+ Apple Silicon Mac',
+              '<strong>No lock-in:</strong> Continue.dev (Apache), Ollama (MIT), Qwen3-Coder (open-weight) — no ToS risk',
+              '<strong>Custom fine-tuning:</strong> fine-tune on your codebase style or internal libraries — impossible with Copilot'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Where GitHub Copilot Still Wins',
+            items: [
+              '<strong>Niche libraries:</strong> sparse public docs (recent SaaS SDKs, internal-only frameworks) — Copilot has seen more live internet',
+              '<strong>Latency:</strong> Copilot returns first token 100–200 ms faster than local on consumer hardware',
+              '<strong>Zero hardware:</strong> works on any laptop including 8 GB Chromebooks — local needs 12 GB+ RAM/VRAM',
+              '<strong>Auto-updates:</strong> Copilot silently improves; local models stay frozen until you pull a new version manually'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Hardware Recommendations',
+            columns: ['Hardware', 'Model', 'Tokens/sec', 'Suitable for'],
+            rows: [
+              { 'Hardware': 'RTX 3060 12 GB', 'Model': 'Qwen3-Coder 7B Q4', 'Tokens/sec': '60–75', 'Suitable for': 'Most everyday work' },
+              { 'Hardware': 'RTX 4070 12 GB', 'Model': 'Qwen3-Coder 7B Q5_K_M', 'Tokens/sec': '85–100', 'Suitable for': 'All everyday work' },
+              { 'Hardware': 'RTX 4090 / 5090 24 GB', 'Model': 'Qwen3-Coder 30B Q4_K_M', 'Tokens/sec': '70–90', 'Suitable for': 'Power users, large refactors' },
+              { 'Hardware': 'Apple M3 Pro (18 GB)', 'Model': 'Qwen3-Coder 7B', 'Tokens/sec': '40–55', 'Suitable for': 'Daily Mac driver' },
+              { 'Hardware': 'Apple M3 Max / M5 (32 GB+)', 'Model': 'Qwen3-Coder 30B', 'Tokens/sec': '35–50', 'Suitable for': 'Mac power users' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5 Common Mistakes',
+            items: [
+              '<strong>30B model on 8 GB VRAM</strong> — loads but thrashes; autocomplete takes 2–5 s. Fix: use 7B on 8–12 GB cards',
+              '<strong>Testing only on rare libraries</strong> — misleading; local models excel on your everyday code patterns',
+              '<strong>Skipping agent mode</strong> — Continue.dev ships with agent mode off by default; enable it for multi-file edits',
+              '<strong>Never updating the model</strong> — new generation every ~6 months; run <code>ollama pull qwen3-coder:30b</code> quarterly',
+              '<strong>Buying new hardware just to drop Copilot</strong> — a $1,200 PC build breaks even in 60 months, not 8'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions',
+            faqs: [
+              {
+                q: 'Will Continue.dev work with models other than Qwen3-Coder?',
+                a: 'Yes — supports any OpenAI-compatible endpoint. Swap in DeepSeek Coder V3, Codestral, or Granite Code without changing the extension.'
+              },
+              {
+                q: 'How much VRAM does Qwen3-Coder 30B need?',
+                a: '~18 GB at Q4_K_M. RTX 4090 24 GB, RTX 5090, or Apple M3 Max / M5 (32 GB+) all fit comfortably. Use 7B on 8–12 GB VRAM cards.'
+              },
+              {
+                q: 'Can I run both Copilot and a local stack?',
+                a: 'Yes — many developers do. Continue.dev for private code; Copilot for open-source and rare libraries. Switching models in Continue.dev is one click.'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Privacy: Why Zero Code Leaves Your Machine',
+            items: [
+              '<strong>No cloud routing:</strong> all inference runs on local GPU — no API call, no telemetry, no data residency risk',
+              '<strong>GDPR / EU compliance:</strong> strongest posture for AI-assisted coding — no personal data or proprietary code leaves the device',
+              '<strong>NDA-protected work:</strong> client code, financial models, proprietary algorithms stay fully auditable and local',
+              '<strong>No ToS exposure:</strong> no subscription means no future terms change can expose your code',
+              '<strong>Fine-tuned models stay local too:</strong> custom weights never leave your infrastructure'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Run Multiple AI Models Together',
+            body: 'PromptQuorum dispatches your prompt to multiple AI models simultaneously and returns a consensus answer — cloud or local. Compare GPT-4o, Claude, Gemini, and local Qwen3-Coder side by side.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'GitHub Copilot ersetzen mit lokalem LLM',
+        slides: [
+          {
+            type: 'title',
+            h1: 'GitHub Copilot ersetzen mit lokalem LLM',
+            subtitle: '0 €/Monat vs. 20 €/Monat — Continue.dev + Ollama + Qwen3-Coder 30B vs. GitHub Copilot Pro. Qualität 5–10 % unter Copilot. Amortisation in 8–14 Monaten.',
+            link: 'https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Zusammenfassung',
+            items: [
+              '<strong>Stack:</strong> Continue.dev (kostenlose VS-Code-Erweiterung) + Ollama + Qwen3-Coder 30B Q4_K_M',
+              '<strong>Qualität:</strong> 90–95 % von Copilot auf TypeScript und Python; 88 % auf Rust',
+              '<strong>Kostenausgleich:</strong> 8–14 Monate auf vorhandener RTX 3060+ oder M3+-Hardware',
+              '<strong>Datenschutz:</strong> Kein Code verlässt Ihren Rechner — ideal für NDA-Arbeit',
+              '<strong>Copilot gewinnt noch:</strong> Nischenbibliotheken mit wenig Trainingsdaten'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Lokaler Stack vs. GitHub Copilot im Überblick',
+            columns: ['Kriterium', 'Lokaler Stack', 'GitHub Copilot Pro'],
+            rows: [
+              { 'Kriterium': 'Monatliche Kosten', 'Lokaler Stack': '0 €', 'GitHub Copilot Pro': '20 €' },
+              { 'Kriterium': 'Code-Datenschutz', 'Lokaler Stack': 'Vollständig lokal', 'GitHub Copilot Pro': 'An OpenAI/Microsoft gesendet' },
+              { 'Kriterium': 'Offline nutzbar', 'Lokaler Stack': 'Ja', 'GitHub Copilot Pro': 'Nein' },
+              { 'Kriterium': 'Qualität (TS/Python)', 'Lokaler Stack': '90–95 % von Copilot', 'GitHub Copilot Pro': 'Baseline' },
+              { 'Kriterium': 'Setup-Zeit', 'Lokaler Stack': 'Ca. 30 Min.', 'GitHub Copilot Pro': 'Ca. 5 Min.' },
+              { 'Kriterium': 'Lock-in / Anbieterrisiko', 'Lokaler Stack': 'Keines', 'GitHub Copilot Pro': 'Abonnement, ToS-Änderungen' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Der empfohlene Stack',
+            items: [
+              '<strong>Continue.dev</strong> (kostenlos, Apache) — VS-Code/JetBrains-Erweiterung mit Autovervollständigung, Chat und Agent-Modus',
+              '<strong>Ollama</strong> (kostenlos, MIT) — lokale Modell-Laufzeit; Einzeileninstallation; OpenAI-kompatible API',
+              '<strong>Qwen3-Coder 30B Q4_K_M</strong> — stärkstes Open-Source-Codemodell (Mai 2026); benötigt ca. 18 GB VRAM',
+              '<strong>Qwen3-Coder 7B</strong> — Fallback für 8–12 GB VRAM; erreicht 80–85 % der 30B-Qualität'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Kostenrechnung: 24-Monats-Horizont',
+            line1: 'RTX 3060 (vorhanden) → 90 € lokal vs. 480 € Copilot → Einsparung 390 €',
+            line2: 'M3 Pro Mac (vorhanden) → 30 € lokal vs. 480 € Copilot → Einsparung 450 €',
+            tip: 'Amortisation: 8–14 Monate auf vorhandener Hardware. Neukauf → Copilot günstiger.'
+          },
+          {
+            type: 'numbered',
+            h2: 'Installations-Anleitung (30 Min.)',
+            items: [
+              'Ollama von ollama.com installieren (macOS/Linux/Windows-Installer)',
+              'Modell abrufen: <code>ollama pull qwen3-coder:30b</code> (ca. 18 GB) oder <code>:7b</code> für 8–12 GB VRAM',
+              'Ollama-Server startet auf macOS/Windows automatisch; auf Linux: <code>ollama serve</code>',
+              'Continue.dev-Erweiterung in VS Code installieren (Suche „Continue" im Marktplatz)',
+              'Continue.dev-Einstellungen → Modell hinzufügen → Ollama → qwen3-coder:30b wählen',
+              'Test: Quelldatei öffnen, Funktion eingeben — Vorschläge erscheinen in 1–2 Sekunden'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Qualitätstest auf echtem Next.js-Code',
+            columns: ['Aufgabe', 'Lokal (Qwen3-Coder 30B)', 'GitHub Copilot Pro'],
+            rows: [
+              { 'Aufgabe': 'TypeScript-Autovervollständigung', 'Lokal (Qwen3-Coder 30B)': '94/100', 'GitHub Copilot Pro': '97/100' },
+              { 'Aufgabe': 'Python-Autovervollständigung', 'Lokal (Qwen3-Coder 30B)': '92/100', 'GitHub Copilot Pro': '95/100' },
+              { 'Aufgabe': 'Rust-Autovervollständigung', 'Lokal (Qwen3-Coder 30B)': '88/100', 'GitHub Copilot Pro': '93/100' },
+              { 'Aufgabe': 'Chat: Nischenbibliothek (Drizzle ORM)', 'Lokal (Qwen3-Coder 30B)': '13/20', 'GitHub Copilot Pro': '17/20' },
+              { 'Aufgabe': 'Latenz (erstes Token)', 'Lokal (Qwen3-Coder 30B)': 'Ca. 280 ms (RTX 4070)', 'GitHub Copilot Pro': 'Ca. 180 ms' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Wo der lokale Stack gewinnt',
+            items: [
+              '<strong>Private Codebases:</strong> Kein Code verlässt den Rechner — NDA-Projekte, Finanzsektorentwicklung',
+              '<strong>Offline-Entwicklung:</strong> Flüge, Züge, eingeschränkte Netzwerke — Copilot braucht Internet',
+              '<strong>Null laufende Kosten:</strong> 0 €/Monat auf vorhandenem 12 GB+ GPU oder 16 GB+ Apple Silicon Mac',
+              '<strong>Keine Herstellerbindung:</strong> Continue.dev (Apache), Ollama (MIT), Qwen3-Coder (Open-Weight)',
+              '<strong>Custom Fine-Tuning:</strong> Modell auf Ihren Codebase-Stil trainieren — mit Copilot unmöglich'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Wo GitHub Copilot noch vorne liegt',
+            items: [
+              '<strong>Nischenbibliotheken:</strong> spärliche Dokumentation (neue SaaS-SDKs) — Copilot hat mehr Internet gesehen',
+              '<strong>Latenz:</strong> Copilot liefert erste Tokens 100–200 ms schneller auf Consumer-Hardware',
+              '<strong>Kein Hardware-Aufwand:</strong> läuft auf jedem Laptop — lokal braucht 12 GB+ RAM/VRAM',
+              '<strong>Automatische Updates:</strong> Copilot verbessert sich lautlos; lokale Modelle bleiben eingefroren'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Hardware-Empfehlungen',
+            columns: ['Hardware', 'Empfohlenes Modell', 'Token/Sek.', 'Geeignet für'],
+            rows: [
+              { 'Hardware': 'RTX 3060 12 GB', 'Empfohlenes Modell': 'Qwen3-Coder 7B Q4', 'Token/Sek.': '60–75', 'Geeignet für': 'Alltägliche Aufgaben' },
+              { 'Hardware': 'RTX 4070 12 GB', 'Empfohlenes Modell': 'Qwen3-Coder 7B Q5_K_M', 'Token/Sek.': '85–100', 'Geeignet für': 'Alle Alltagsaufgaben' },
+              { 'Hardware': 'RTX 4090 / 5090 24 GB', 'Empfohlenes Modell': 'Qwen3-Coder 30B Q4_K_M', 'Token/Sek.': '70–90', 'Geeignet für': 'Power-User, große Refaktors' },
+              { 'Hardware': 'Apple M3 Pro (18 GB)', 'Empfohlenes Modell': 'Qwen3-Coder 7B', 'Token/Sek.': '40–55', 'Geeignet für': 'Täglicher Mac-Betrieb' },
+              { 'Hardware': 'Apple M3 Max / M5 (32 GB+)', 'Empfohlenes Modell': 'Qwen3-Coder 30B', 'Token/Sek.': '35–50', 'Geeignet für': 'Mac-Power-User' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5 häufige Fehler',
+            items: [
+              '<strong>30B-Modell auf 8 GB VRAM</strong> — lädt, schlägt aber um; Autovervollständigung dauert 2–5 Sek. Fix: 7B auf 8–12 GB',
+              '<strong>Nur Nischenbibliotheken testen</strong> — irreführend; lokale Modelle glänzen bei Alltagscode',
+              '<strong>Agent-Modus vergessen</strong> — Continue.dev startet mit deaktiviertem Agent-Modus; für Multi-Datei-Bearbeitung aktivieren',
+              '<strong>Modell nie aktualisieren</strong> — neue Generation ca. alle 6 Monate; <code>ollama pull qwen3-coder:30b</code> vierteljährlich',
+              '<strong>Neue Hardware nur für Copilot-Ersatz kaufen</strong> — 1.100-€-PC-Bau amortisiert sich in 60 Monaten, nicht 8'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen',
+            faqs: [
+              {
+                q: 'Funktioniert Continue.dev auch mit anderen Modellen?',
+                a: 'Ja — unterstützt jeden OpenAI-kompatiblen Endpunkt. Tauschen Sie DeepSeek Coder V3, Codestral oder Granite Code ohne Neuinstallation ein.'
+              },
+              {
+                q: 'Wie viel VRAM benötigt Qwen3-Coder 30B?',
+                a: 'Ca. 18 GB bei Q4_K_M. RTX 4090 24 GB, RTX 5090 oder Apple M3 Max / M5 (32 GB+) passen alle bequem. 7B für 8–12 GB VRAM-Karten.'
+              },
+              {
+                q: 'Kann ich Copilot und den lokalen Stack parallel nutzen?',
+                a: 'Ja — viele Entwickler tun das. Continue.dev für privaten Code; Copilot für Open-Source und Nischenbibliotheken. Modellwechsel ist ein Klick.'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Datenschutz: Warum kein Code Ihren Rechner verlässt',
+            items: [
+              '<strong>Kein Cloud-Routing:</strong> gesamte Inferenz auf lokalem GPU — keine API-Aufrufe, kein Telemetrie',
+              '<strong>DSGVO-Compliance:</strong> stärkste Positionierung — kein Personendaten oder proprietärer Code verlässt das Gerät (Art. 28 DSGVO)',
+              '<strong>NDA-Arbeit:</strong> Kundenprojekte und Finanzmodelle bleiben vollständig lokal und auditierbar',
+              '<strong>Kein ToS-Risiko:</strong> kein Abonnement bedeutet keine zukünftigen Nutzungsbedingungen, die Code gefährden',
+              '<strong>Feinabgestimmte Modelle bleiben lokal:</strong> Custom-Gewichte verlassen nie Ihre Infrastruktur'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Mehrere KI-Modelle gleichzeitig nutzen',
+            body: 'PromptQuorum verteilt Ihren Prompt an mehrere KI-Modelle gleichzeitig und liefert eine Konsensantwort — cloud oder lokal. Vergleichen Sie GPT-4o, Claude, Gemini und lokalen Qwen3-Coder Seite an Seite.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      fr: {
+        title: 'Remplacer GitHub Copilot avec un LLM local',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Remplacer GitHub Copilot avec un LLM local',
+            subtitle: '0 €/mois vs 20 €/mois — Continue.dev + Ollama + Qwen3-Coder 30B vs GitHub Copilot Pro. Qualité à 5–10 % de Copilot. Amortissement en 8–14 mois.',
+            link: 'https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              '<strong>Pile :</strong> Continue.dev (extension VS Code gratuite) + Ollama + Qwen3-Coder 30B Q4_K_M',
+              '<strong>Qualité :</strong> 90–95 % de Copilot sur TypeScript et Python ; 88 % sur Rust',
+              '<strong>Amortissement :</strong> 8–14 mois sur du matériel RTX 3060+ ou M3+ existant',
+              '<strong>Confidentialité :</strong> aucun code ne quitte votre machine — idéal pour les travaux sous NDA',
+              '<strong>Copilot gagne encore :</strong> bibliothèques rares avec peu de données d\'entraînement'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Pile locale vs GitHub Copilot d\'un coup d\'œil',
+            columns: ['Critère', 'Pile locale', 'GitHub Copilot Pro'],
+            rows: [
+              { 'Critère': 'Coût mensuel', 'Pile locale': '0 €', 'GitHub Copilot Pro': '20 €' },
+              { 'Critère': 'Confidentialité du code', 'Pile locale': 'Entièrement local', 'GitHub Copilot Pro': 'Envoyé à OpenAI/Microsoft' },
+              { 'Critère': 'Fonctionne hors ligne', 'Pile locale': 'Oui', 'GitHub Copilot Pro': 'Non' },
+              { 'Critère': 'Qualité (TS/Python)', 'Pile locale': '90–95 % de Copilot', 'GitHub Copilot Pro': 'Référence' },
+              { 'Critère': 'Temps d\'installation', 'Pile locale': 'env. 30 min', 'GitHub Copilot Pro': 'env. 5 min' },
+              { 'Critère': 'Verrouillage / risque vendeur', 'Pile locale': 'Aucun', 'GitHub Copilot Pro': 'Abonnement, changements ToS' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'La pile recommandée',
+            items: [
+              '<strong>Continue.dev</strong> (gratuit, Apache) — extension VS Code/JetBrains avec autocomplétion, chat et mode agent',
+              '<strong>Ollama</strong> (gratuit, MIT) — runtime modèle local ; installation en une ligne ; API compatible OpenAI',
+              '<strong>Qwen3-Coder 30B Q4_K_M</strong> — modèle de codage open-source le plus puissant (mai 2026) ; nécessite env. 18 Go VRAM',
+              '<strong>Qwen3-Coder 7B</strong> — repli pour 8–12 Go VRAM ; atteint 80–85 % de la qualité 30B'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Calcul des coûts : horizon 24 mois',
+            line1: 'RTX 3060 (existant) → 66 € local vs 480 € Copilot → économie 414 €',
+            line2: 'M3 Pro Mac (existant) → 22 € local vs 480 € Copilot → économie 458 €',
+            tip: 'Amortissement : 8–14 mois sur du matériel existant. Nouvel achat → Copilot gagne sur le coût.'
+          },
+          {
+            type: 'numbered',
+            h2: 'Guide d\'installation (30 min)',
+            items: [
+              'Installer Ollama depuis ollama.com (installateur macOS/Linux/Windows)',
+              'Extraire le modèle : <code>ollama pull qwen3-coder:30b</code> (env. 18 Go) ou <code>:7b</code> pour 8–12 Go VRAM',
+              'Le serveur Ollama démarre automatiquement sur macOS/Windows ; sur Linux : <code>ollama serve</code>',
+              'Installer l\'extension Continue.dev dans VS Code (chercher « Continue » dans le marketplace)',
+              'Paramètres Continue.dev → Ajouter un modèle → Ollama → sélectionner qwen3-coder:30b',
+              'Test : ouvrir un fichier source, commencer à taper — les complétions apparaissent en 1–2 s'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Test qualité sur code Next.js réel',
+            columns: ['Tâche', 'Local (Qwen3-Coder 30B)', 'GitHub Copilot Pro'],
+            rows: [
+              { 'Tâche': 'Autocomplétion TypeScript', 'Local (Qwen3-Coder 30B)': '94/100', 'GitHub Copilot Pro': '97/100' },
+              { 'Tâche': 'Autocomplétion Python', 'Local (Qwen3-Coder 30B)': '92/100', 'GitHub Copilot Pro': '95/100' },
+              { 'Tâche': 'Autocomplétion Rust', 'Local (Qwen3-Coder 30B)': '88/100', 'GitHub Copilot Pro': '93/100' },
+              { 'Tâche': 'Chat : bibliothèque rare (Drizzle ORM)', 'Local (Qwen3-Coder 30B)': '13/20', 'GitHub Copilot Pro': '17/20' },
+              { 'Tâche': 'Latence (premier token)', 'Local (Qwen3-Coder 30B)': 'env. 280 ms (RTX 4070)', 'GitHub Copilot Pro': 'env. 180 ms' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Où la pile locale gagne',
+            items: [
+              '<strong>Bases de code privées :</strong> aucun code ne quitte la machine — projets clients sous NDA, ingénierie financière',
+              '<strong>Développement hors ligne :</strong> avions, trains, réseaux restreints — Copilot exige internet',
+              '<strong>Coût nul :</strong> 0 €/mois sur GPU 12 Go+ ou Mac Apple Silicon 16 Go+ existant',
+              '<strong>Sans verrouillage :</strong> Continue.dev (Apache), Ollama (MIT), Qwen3-Coder (poids ouvert)',
+              '<strong>Fine-tuning personnalisé :</strong> entraîner sur le style de votre codebase — impossible avec Copilot'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Où GitHub Copilot gagne encore',
+            items: [
+              '<strong>Bibliothèques rares :</strong> peu de documentation publique (SDK SaaS récents) — Copilot a vu plus d\'internet',
+              '<strong>Latence :</strong> Copilot renvoie le premier token 100–200 ms plus vite sur matériel grand public',
+              '<strong>Pas de matériel :</strong> fonctionne sur n\'importe quel portable — le local nécessite 12 Go+ RAM/VRAM',
+              '<strong>Mises à jour automatiques :</strong> Copilot s\'améliore silencieusement ; les modèles locaux restent figés'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Recommandations matériel',
+            columns: ['Matériel', 'Modèle', 'Tokens/s', 'Adapté pour'],
+            rows: [
+              { 'Matériel': 'RTX 3060 12 Go', 'Modèle': 'Qwen3-Coder 7B Q4', 'Tokens/s': '60–75', 'Adapté pour': 'Travail quotidien courant' },
+              { 'Matériel': 'RTX 4070 12 Go', 'Modèle': 'Qwen3-Coder 7B Q5_K_M', 'Tokens/s': '85–100', 'Adapté pour': 'Toutes tâches quotidiennes' },
+              { 'Matériel': 'RTX 4090 / 5090 24 Go', 'Modèle': 'Qwen3-Coder 30B Q4_K_M', 'Tokens/s': '70–90', 'Adapté pour': 'Power users, grands refactos' },
+              { 'Matériel': 'Apple M3 Pro (18 Go)', 'Modèle': 'Qwen3-Coder 7B', 'Tokens/s': '40–55', 'Adapté pour': 'Mac usage quotidien' },
+              { 'Matériel': 'Apple M3 Max / M5 (32 Go+)', 'Modèle': 'Qwen3-Coder 30B', 'Tokens/s': '35–50', 'Adapté pour': 'Mac power users' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5 erreurs courantes',
+            items: [
+              '<strong>Modèle 30B sur 8 Go VRAM</strong> — se charge mais rame ; autocomplétion 2–5 s. Fix : 7B sur 8–12 Go',
+              '<strong>Tester uniquement les bibliothèques rares</strong> — trompeur ; les modèles locaux excellents sur le code quotidien',
+              '<strong>Oublier le mode agent</strong> — Continue.dev désactive le mode agent par défaut ; activer pour les éditions multi-fichiers',
+              '<strong>Ne jamais mettre à jour le modèle</strong> — nouvelle génération env. tous les 6 mois ; <code>ollama pull qwen3-coder:30b</code> chaque trimestre',
+              '<strong>Acheter du nouveau matériel juste pour éviter Copilot</strong> — un PC à 1 100 € s\'amortit en 60 mois, pas 8'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes',
+            faqs: [
+              {
+                q: 'Continue.dev fonctionnera-t-il avec d\'autres modèles ?',
+                a: 'Oui — supporte tout endpoint compatible OpenAI. Remplacez par DeepSeek Coder V3, Codestral ou Granite Code sans réinstaller l\'extension.'
+              },
+              {
+                q: 'Quelle VRAM pour Qwen3-Coder 30B ?',
+                a: 'Env. 18 Go à Q4_K_M. RTX 4090 24 Go, RTX 5090 ou Apple M3 Max / M5 (32 Go+) conviennent. Utilisez 7B sur les cartes 8–12 Go VRAM.'
+              },
+              {
+                q: 'Puis-je utiliser Copilot et la pile locale en parallèle ?',
+                a: 'Oui — beaucoup de développeurs le font. Continue.dev pour le code privé ; Copilot pour l\'open-source et les bibliothèques rares. Changer de modèle est en un clic.'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Confidentialité : pourquoi aucun code ne quitte votre machine',
+            items: [
+              '<strong>Pas de routage cloud :</strong> toute l\'inférence sur GPU local — aucun appel API, aucune télémétrie',
+              '<strong>Conformité RGPD / CNIL :</strong> posture la plus robuste — aucune donnée personnelle ou propriétaire ne quitte l\'appareil',
+              '<strong>Travail sous NDA :</strong> projets clients et modèles financiers restent entièrement locaux et auditables',
+              '<strong>Pas de risque ToS :</strong> sans abonnement, aucun changement de conditions ne peut exposer votre code',
+              '<strong>Modèles fine-tunés restent locaux :</strong> les poids personnalisés ne quittent jamais votre infrastructure'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Utiliser plusieurs modèles IA simultanément',
+            body: 'PromptQuorum distribue votre prompt à plusieurs modèles IA simultanément et renvoie une réponse consensus — cloud ou local. Comparez GPT-4o, Claude, Gemini et Qwen3-Coder local côte à côte.',
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      ja: {
+        title: 'GitHub Copilot をローカル LLM で置き換える',
+        slides: [
+          {
+            type: 'title',
+            h1: 'GitHub Copilot をローカル LLM で置き換える',
+            subtitle: '月額 0 円 vs 20 ドル — Continue.dev + Ollama + Qwen3-Coder 30B vs GitHub Copilot Pro。品質は Copilot の 5～10% 以内。8～14 ヶ月で回収。',
+            link: 'https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: '重要ポイント',
+            items: [
+              '<strong>スタック：</strong> Continue.dev（無料 VS Code 拡張機能）+ Ollama + Qwen3-Coder 30B Q4_K_M',
+              '<strong>品質：</strong> TypeScript と Python で Copilot の 90～95%；Rust では 88%',
+              '<strong>回収期間：</strong> 既存の RTX 3060+ または M3+ ハードウェアで 8～14 ヶ月',
+              '<strong>プライバシー：</strong> コードはあなたのマシンから出ません — NDA 作業に最適',
+              '<strong>Copilot がまだ優れる：</strong> 訓練データが少ないニッチなライブラリ'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'ローカルスタック vs GitHub Copilot 一目でわかる比較',
+            columns: ['基準', 'ローカルスタック', 'GitHub Copilot Pro'],
+            rows: [
+              { '基準': '月額費用', 'ローカルスタック': '0 円', 'GitHub Copilot Pro': '20 ドル' },
+              { '基準': 'コードプライバシー', 'ローカルスタック': '完全ローカル', 'GitHub Copilot Pro': 'OpenAI/Microsoft に送信' },
+              { '基準': 'オフライン動作', 'ローカルスタック': 'はい', 'GitHub Copilot Pro': 'いいえ' },
+              { '基準': '品質（TS/Python）', 'ローカルスタック': 'Copilot の 90～95%', 'GitHub Copilot Pro': 'ベースライン' },
+              { '基準': 'セットアップ時間', 'ローカルスタック': '初回約 30 分', 'GitHub Copilot Pro': '約 5 分' },
+              { '基準': 'ロックイン / ベンダーリスク', 'ローカルスタック': 'なし', 'GitHub Copilot Pro': 'サブスクリプション、ToS 変更' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '推奨されるスタック',
+            items: [
+              '<strong>Continue.dev</strong>（無料、Apache）— オートコンプリート、チャット、エージェントモードを持つ VS Code/JetBrains 拡張機能',
+              '<strong>Ollama</strong>（無料、MIT）— ローカルモデルランタイム；1 行インストール；OpenAI 互換 API',
+              '<strong>Qwen3-Coder 30B Q4_K_M</strong> — 最強のオープンソースコードモデル（2026 年 5 月）；約 18GB VRAM 必要',
+              '<strong>Qwen3-Coder 7B</strong> — 8～12GB VRAM 用フォールバック；30B 品質の 80～85% に達する'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'コスト計算：24 ヶ月の視野',
+            line1: 'RTX 3060（既存）→ 3,300 円 ローカル vs 480 ドル Copilot → 約 450 ドル節約',
+            line2: 'M3 Pro Mac（既存）→ 1,100 円 ローカル vs 480 ドル Copilot → 約 470 ドル節約',
+            tip: '回収期間：既存ハードウェアで 8～14 ヶ月。新規購入 → Copilot がコスト的に勝ちます。'
+          },
+          {
+            type: 'numbered',
+            h2: 'セットアップガイド（30 分）',
+            items: [
+              'ollama.com から Ollama をインストール（macOS/Linux/Windows 対応）',
+              'モデルをプル：<code>ollama pull qwen3-coder:30b</code>（約 18GB）または 8～12GB VRAM には <code>:7b</code>',
+              'Ollama サーバーは macOS/Windows で自動起動；Linux では <code>ollama serve</code>',
+              'VS Code に Continue.dev 拡張機能をインストール（拡張機能マーケットプレイスで「Continue」を検索）',
+              'Continue.dev 設定 → モデルを追加 → Ollama → qwen3-coder:30b を選択',
+              'テスト：ソースファイルを開き、関数を入力 — 1～2 秒以内に補完が表示される'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '実際の Next.js コードでの品質テスト',
+            columns: ['タスク', 'ローカル（Qwen3-Coder 30B）', 'GitHub Copilot Pro'],
+            rows: [
+              { 'タスク': 'TypeScript オートコンプリート', 'ローカル（Qwen3-Coder 30B）': '94/100', 'GitHub Copilot Pro': '97/100' },
+              { 'タスク': 'Python オートコンプリート', 'ローカル（Qwen3-Coder 30B）': '92/100', 'GitHub Copilot Pro': '95/100' },
+              { 'タスク': 'Rust オートコンプリート', 'ローカル（Qwen3-Coder 30B）': '88/100', 'GitHub Copilot Pro': '93/100' },
+              { 'タスク': 'チャット：ニッチライブラリ（Drizzle ORM）', 'ローカル（Qwen3-Coder 30B）': '13/20', 'GitHub Copilot Pro': '17/20' },
+              { 'タスク': '遅延（最初のトークン）', 'ローカル（Qwen3-Coder 30B）': '約 280ms（RTX 4070）', 'GitHub Copilot Pro': '約 180ms' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ローカルスタックが勝つ場所',
+            items: [
+              '<strong>プライベートコードベース：</strong> コードはマシンから出ません — NDA クライアント作業、金融開発',
+              '<strong>オフライン開発：</strong> フライト、電車、制限されたネットワーク — Copilot はインターネットが必要',
+              '<strong>ゼロランニングコスト：</strong> 既存 12GB+ GPU または 16GB+ Apple Silicon Mac で月額 0 円',
+              '<strong>ロックインなし：</strong> Continue.dev（Apache）、Ollama（MIT）、Qwen3-Coder（オープンウェイト）',
+              '<strong>カスタム Fine-Tuning：</strong> コードベーススタイルでモデルをトレーニング — Copilot では不可能'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'GitHub Copilot がまだ勝つ場所',
+            items: [
+              '<strong>ニッチなライブラリ：</strong> 公開ドキュメントが少ない（最近の SaaS SDK）— Copilot はより多くのインターネットを見ています',
+              '<strong>遅延：</strong> Copilot はコンシューマーハードウェアで 100～200ms 速く最初のトークンを返す',
+              '<strong>ハードウェア不要：</strong> どのノートパソコンでも動作 — ローカルには 12GB+ RAM/VRAM が必要',
+              '<strong>自動更新：</strong> Copilot は静かに改善；ローカルモデルは手動プルまで凍結'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'ハードウェア推奨事項',
+            columns: ['ハードウェア', '推奨モデル', 'トークン/秒', '適合'],
+            rows: [
+              { 'ハードウェア': 'RTX 3060 12GB', '推奨モデル': 'Qwen3-Coder 7B Q4', 'トークン/秒': '60～75', '適合': 'ほとんどの日常作業' },
+              { 'ハードウェア': 'RTX 4070 12GB', '推奨モデル': 'Qwen3-Coder 7B Q5_K_M', 'トークン/秒': '85～100', '適合': 'すべての日常作業' },
+              { 'ハードウェア': 'RTX 4090 / 5090 24GB', '推奨モデル': 'Qwen3-Coder 30B Q4_K_M', 'トークン/秒': '70～90', '適合': 'パワーユーザー、大規模リファクタ' },
+              { 'ハードウェア': 'Apple M3 Pro（18GB）', '推奨モデル': 'Qwen3-Coder 7B', 'トークン/秒': '40～55', '適合': '日常的な Mac 使用' },
+              { 'ハードウェア': 'Apple M3 Max / M5（32GB+）', '推奨モデル': 'Qwen3-Coder 30B', 'トークン/秒': '35～50', '適合': 'Mac パワーユーザー' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'よくある誤り 5 選',
+            items: [
+              '<strong>8GB VRAM で 30B モデルを実行</strong> — スラッシング発生、補完に 2～5 秒。修正：8～12GB カードには 7B を使用',
+              '<strong>ニッチなライブラリのみでテスト</strong> — 誤解を招く；ローカルモデルは日常コードで輝く',
+              '<strong>エージェントモードをスキップ</strong> — Continue.dev はデフォルトでオフ；マルチファイル編集のために有効化',
+              '<strong>モデルを更新しない</strong> — 約 6 ヶ月ごとに新世代；<code>ollama pull qwen3-coder:30b</code> を四半期ごとに実行',
+              '<strong>Copilot 回避のためだけに新ハードウェアを購入</strong> — 200,000 円 PC ビルドは 60 ヶ月で回収、8 ではない'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              {
+                q: 'Continue.dev は Qwen3-Coder 以外のモデルでも動作しますか？',
+                a: 'はい — OpenAI 互換エンドポイントをサポート。DeepSeek Coder V3、Codestral、Granite Code を拡張機能を変えずにスワップできます。'
+              },
+              {
+                q: 'Qwen3-Coder 30B にはどれくらいの VRAM が必要ですか？',
+                a: 'Q4_K_M で約 18GB。RTX 4090 24GB、RTX 5090、Apple M3 Max / M5（32GB+）はすべて快適に対応。8～12GB VRAM カードには 7B を使用。'
+              },
+              {
+                q: 'Copilot とローカルスタックの両方を使い続けることはできますか？',
+                a: 'はい — 多くの開発者がそうしています。プライベートコードには Continue.dev；オープンソースとニッチライブラリには Copilot。Continue.dev 内でのモデル切り替えは 1 クリック。'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'プライバシー：なぜゼロコードがあなたのマシンを離れないのか',
+            items: [
+              '<strong>クラウドルーティングなし：</strong> すべての推論がローカル GPU で実行 — API 呼び出しなし、テレメトリなし',
+              '<strong>METI AI ガバナンス対応：</strong> 経済産業省の AI ガバナンスガイドラインは医療・金融などの機密データにローカル処理を推奨',
+              '<strong>NDA 作業：</strong> クライアントのコードと金融モデルは完全にローカルで監査可能',
+              '<strong>ToS リスクなし：</strong> サブスクリプションなしで将来の利用規約変更がコードを危険にさらすことはない',
+              '<strong>Fine-tuned モデルもローカルに：</strong> カスタムウェイトはインフラから出ない'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '複数の AI モデルを同時に活用',
+            body: 'PromptQuorum はプロンプトを複数の AI モデルに同時に送信し、コンサンサス回答を返します — クラウドまたはローカル。GPT-4o、Claude、Gemini、ローカル Qwen3-Coder を並べて比較。',
+            cta: 'PromptQuorum を無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      zh: {
+        title: '用本地 LLM 替代 GitHub Copilot',
+        slides: [
+          {
+            type: 'title',
+            h1: '用本地 LLM 替代 GitHub Copilot',
+            subtitle: '0 美元/月 vs 20 美元/月 — Continue.dev + Ollama + Qwen3-Coder 30B vs GitHub Copilot Pro。质量在 Copilot 的 5-10% 内。8-14 个月回本。',
+            link: 'https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              '<strong>方案：</strong> Continue.dev（免费 VS Code 扩展）+ Ollama + Qwen3-Coder 30B Q4_K_M',
+              '<strong>质量：</strong> TypeScript 和 Python 上达 Copilot 的 90-95%；Rust 上 88%',
+              '<strong>成本回本：</strong> 在已有 RTX 3060+ 或 M3+ 硬件上 8-14 个月',
+              '<strong>隐私：</strong> 零代码离开本机 — 适合 NDA 工作',
+              '<strong>Copilot 仍领先：</strong> 训练数据稀疏的稀有库'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '本地方案 vs GitHub Copilot 快速对比',
+            columns: ['准则', '本地方案', 'GitHub Copilot Pro'],
+            rows: [
+              { '准则': '月度成本', '本地方案': '0 美元', 'GitHub Copilot Pro': '20 美元' },
+              { '准则': '代码隐私', '本地方案': '完全本地', 'GitHub Copilot Pro': '发送至 OpenAI/Microsoft' },
+              { '准则': '离线工作', '本地方案': '是', 'GitHub Copilot Pro': '否' },
+              { '准则': '质量（TS/Python）', '本地方案': 'Copilot 的 90-95%', 'GitHub Copilot Pro': '基准' },
+              { '准则': '设置时间', '本地方案': '约 30 分钟首次', 'GitHub Copilot Pro': '约 5 分钟' },
+              { '准则': '锁定 / 供应商风险', '本地方案': '无', 'GitHub Copilot Pro': '订阅、ToS 变更' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '推荐堆栈',
+            items: [
+              '<strong>Continue.dev</strong>（免费、Apache）— 具有自动完成、聊天和代理模式的 VS Code/JetBrains 扩展',
+              '<strong>Ollama</strong>（免费、MIT）— 本地模型运行时；一行安装；OpenAI 兼容 API',
+              '<strong>Qwen3-Coder 30B Q4_K_M</strong> — 最强开源代码模型（2026 年 5 月）；需约 18GB VRAM',
+              '<strong>Qwen3-Coder 7B</strong> — 8-12GB VRAM 的后备方案；达 30B 的 80-85% 质量'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '成本计算：24 个月周期',
+            line1: 'RTX 3060（已有）→ 45 美元 本地 vs 480 美元 Copilot → 节省 435 美元',
+            line2: 'M3 Pro Mac（已有）→ 15 美元 本地 vs 480 美元 Copilot → 节省 465 美元',
+            tip: '回本期：已有硬件 8-14 个月。新购硬件 → Copilot 成本更低。'
+          },
+          {
+            type: 'numbered',
+            h2: '设置步骤（30 分钟）',
+            items: [
+              '从 ollama.com 安装 Ollama（支持 macOS/Linux/Windows）',
+              '拉取模型：<code>ollama pull qwen3-coder:30b</code>（约 18GB）或 8-12GB VRAM 用 <code>:7b</code>',
+              'Ollama 服务在 macOS/Windows 自动启动；Linux：<code>ollama serve</code>',
+              '在 VS Code 中安装 Continue.dev 扩展（在扩展市场搜索 "Continue"）',
+              'Continue.dev 设置 → 添加模型 → Ollama → 选择 qwen3-coder:30b',
+              '测试：打开源文件，开始输入函数 — 1-2 秒内补全出现'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '真实 Next.js 代码质量测试',
+            columns: ['任务', '本地（Qwen3-Coder 30B）', 'GitHub Copilot Pro'],
+            rows: [
+              { '任务': 'TypeScript 自动完成', '本地（Qwen3-Coder 30B）': '94/100', 'GitHub Copilot Pro': '97/100' },
+              { '任务': 'Python 自动完成', '本地（Qwen3-Coder 30B）': '92/100', 'GitHub Copilot Pro': '95/100' },
+              { '任务': 'Rust 自动完成', '本地（Qwen3-Coder 30B）': '88/100', 'GitHub Copilot Pro': '93/100' },
+              { '任务': '聊天：稀有库（Drizzle ORM）', '本地（Qwen3-Coder 30B）': '13/20', 'GitHub Copilot Pro': '17/20' },
+              { '任务': '延迟（首令牌）', '本地（Qwen3-Coder 30B）': '约 280ms（RTX 4070）', 'GitHub Copilot Pro': '约 180ms' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '本地方案的优势',
+            items: [
+              '<strong>私有代码库：</strong> 零代码离开本机 — NDA 客户工作、金融工程、政府合同',
+              '<strong>离线开发：</strong> 飞行、火车、受限网络 — Copilot 需要互联网',
+              '<strong>零持续成本：</strong> 已有 12GB+ GPU 或 16GB+ Apple Silicon Mac 上 0 美元/月',
+              '<strong>无供应商锁定：</strong> Continue.dev（Apache）、Ollama（MIT）、Qwen3-Coder（开放权重）',
+              '<strong>自定义微调：</strong> 在代码库风格上微调 — Copilot 做不到'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'GitHub Copilot 仍然领先的地方',
+            items: [
+              '<strong>小众库：</strong> 公开文档稀疏（最近的 SaaS SDK）— Copilot 见过更多互联网',
+              '<strong>延迟：</strong> Copilot 在消费者硬件上首令牌快 100-200ms',
+              '<strong>零硬件：</strong> 适用任何笔记本 — 本地需要 12GB+ RAM/VRAM',
+              '<strong>自动更新：</strong> Copilot 悄悄改进；本地模型冻结直到手动拉取新版本'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '硬件建议',
+            columns: ['硬件', '推荐模型', '令牌/秒', '适合'],
+            rows: [
+              { '硬件': 'RTX 3060 12GB', '推荐模型': 'Qwen3-Coder 7B Q4', '令牌/秒': '60-75', '适合': '大多数日常工作' },
+              { '硬件': 'RTX 4070 12GB', '推荐模型': 'Qwen3-Coder 7B Q5_K_M', '令牌/秒': '85-100', '适合': '所有日常工作' },
+              { '硬件': 'RTX 4090 / 5090 24GB', '推荐模型': 'Qwen3-Coder 30B Q4_K_M', '令牌/秒': '70-90', '适合': '高级用户、大型重构' },
+              { '硬件': 'Apple M3 Pro（18GB）', '推荐模型': 'Qwen3-Coder 7B', '令牌/秒': '40-55', '适合': '日常 Mac 使用' },
+              { '硬件': 'Apple M3 Max / M5（32GB+）', '推荐模型': 'Qwen3-Coder 30B', '令牌/秒': '35-50', '适合': 'Mac 高级用户' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5 个常见错误',
+            items: [
+              '<strong>在 8GB VRAM 上运行 30B 模型</strong> — 加载但抖动；补完需 2-5 秒。修复：8-12GB 卡用 7B',
+              '<strong>仅在稀有库上测试</strong> — 误导性；本地模型在日常代码上表现出色',
+              '<strong>跳过代理模式</strong> — Continue.dev 默认关闭；启用以进行多文件编辑',
+              '<strong>从不更新模型</strong> — 约每 6 个月新代数；每季度运行 <code>ollama pull qwen3-coder:30b</code>',
+              '<strong>仅为避免 Copilot 购买新硬件</strong> — 1,200 美元 PC 60 个月回本，不是 8 个月'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              {
+                q: 'Continue.dev 会与 Qwen3-Coder 以外的模型工作吗？',
+                a: '会 — 支持任何 OpenAI 兼容端点。可换入 DeepSeek Coder V3、Codestral 或 Granite Code，无需重装扩展。'
+              },
+              {
+                q: 'Qwen3-Coder 30B 需要多少 VRAM？',
+                a: 'Q4_K_M 量化下约 18GB。RTX 4090 24GB、RTX 5090 或 Apple M3 Max / M5（32GB+）都可舒适装下。8-12GB VRAM 卡用 7B。'
+              },
+              {
+                q: '我能同时保留 Copilot 和本地方案吗？',
+                a: '能 — 很多开发者这样做。Continue.dev 用于私有代码；Copilot 用于开源和稀有库。Continue.dev 内切换模型是单击。'
+              }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '隐私：为何零代码离开你的机器',
+            items: [
+              '<strong>无云路由：</strong> 所有推理在本地 GPU 上运行 — 无 API 调用、无遥测、无数据驻地风险',
+              '<strong>中国《数据安全法》合规：</strong> 本地推理确保重要数据分级分类管理，代码不经过任何境外服务器',
+              '<strong>NDA 工作：</strong> 客户代码和金融模型完全保留在本地并可审计',
+              '<strong>无 ToS 风险：</strong> 无订阅意味着未来服务条款变更不会危及你的代码',
+              '<strong>微调模型也留本地：</strong> 自定义权重永不离开你的基础设施'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '同时使用多个 AI 模型',
+            body: 'PromptQuorum 将你的提示同时发送给多个 AI 模型并返回共识答案 — 云端或本地均可。并排比较 GPT-4o、Claude、Gemini 和本地 Qwen3-Coder。',
+            cta: '免费试用 PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    const ARTICLE_URL = 'https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm';
+
+    function renderSlide(slide, lang) {
+      const articleUrl = ARTICLE_URL + (lang !== 'en' ? '?lang=' + lang : '');
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+      let html = '';
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p class="subtitle">${slide.subtitle}</p>
+            <p style="margin-top: 32px; font-size: 15px; color: #79747e;">
+              <a href="${slide.link}" target="_blank" rel="noopener" style="color: #6750a4;">${slide.link}</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p>${slide.intro}</p>`;
+          html += '<ul style="font-size: 1.05em; margin-top: 16px;">';
+          slide.items.forEach(item => { html += `<li>${item}</li>`; });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<table><tr>';
+          slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p class="comparison-stat" style="margin-top: 32px; font-size: clamp(16px, 2.2vw, 22px);">${slide.line1}</p>
+            <p class="comparison-stat" style="font-size: clamp(16px, 2.2vw, 22px);">${slide.line2}</p>
+            <p class="tip">${slide.tip}</p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<ol style="font-size: 1.05em; margin-top: 16px;">';
+          slide.items.forEach(item => { html += `<li>${item}</li>`; });
+          html += '</ol>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div class="faq-item"><strong>Q: ${faq.q}</strong><p>A: ${faq.a}</p></div>`;
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="max-width: 600px; margin-top: 16px;">${slide.body}</p>
+            <a href="${slide.href}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: 600;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = ARTICLE_URL + (lang !== 'en' ? '?lang=' + lang : '');
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide, lang);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>
