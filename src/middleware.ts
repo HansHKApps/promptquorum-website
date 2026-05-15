@@ -17,6 +17,24 @@ export function middleware(request: NextRequest) {
   const isApiRoute = url.pathname.startsWith('/api/')
   const isCronRoute = url.pathname.startsWith('/cron/')
 
+  // FIX 0: PE framework slugs → /frameworks/ canonical URL
+  // These articles declare /frameworks/X as canonical but are also indexed via /prompt-engineering/X
+  // causing "Duplicate without user-selected canonical" in GSC. Redirect to canonical.
+  const PE_FRAMEWORK_REDIRECTS: Record<string, string> = {
+    '/prompt-engineering/trace-framework': '/frameworks/trace',
+    '/prompt-engineering/craft-framework': '/frameworks/craft',
+    '/prompt-engineering/risen-framework': '/frameworks/risen',
+    '/prompt-engineering/rtf-framework': '/frameworks/rtf',
+    '/prompt-engineering/co-star-framework': '/frameworks/co-star',
+  }
+  const frameworkRedirect = PE_FRAMEWORK_REDIRECTS[url.pathname]
+  if (frameworkRedirect && !isApiRoute && !isCronRoute) {
+    const redirectUrl = url.clone()
+    redirectUrl.pathname = frameworkRedirect
+    console.log(`[Middleware] 301 redirect (PE framework→canonical): ${url.toString()} -> ${redirectUrl.toString()}`)
+    return NextResponse.redirect(redirectUrl, 301)
+  }
+
   // FIX 3: Special case for ?lang=jp (country code) → 301 to ?lang=ja (language code)
   if (langParam === 'jp' && !isApiRoute && !isCronRoute) {
     const redirectUrl = url.clone()

@@ -1686,6 +1686,173 @@ schema: {
         { label: '使用多语言模型的常见错误', anchor: '#common-mistakes' },
         { label: '常见问题', anchor: '#common-questions' },
       ],
-      sections: {},
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**Qwen2.5 7B** 是中文、日语、韩语的最佳本地模型（中文5星，日语/韩语4星）。',
+            '**Mistral 7B** 与 **Qwen2.5 7B** 在欧洲语言上同等竞争（法语、德语、西班牙语、意大利语各4星）。',
+            '**Q4_K_M量化** 将VRAM需求降低75%，精度损失最小（<1%）——本地部署的标准选择。',
+            '**本地处理**（Ollama、llama.cpp）消除API费用和延迟；对数据保密性和GDPR合规性非常理想。',
+            '亚洲语言选 **Qwen2.5**，欧洲语言选 **Mistral 或 Qwen2.5**（7B模型需要8GB VRAM）。'
+          ],
+        },
+        whichSupport: {
+          title: '哪些本地LLM实际支持多种语言？',
+          content: '所有主流本地模型（Qwen2.5、Llama 3.1、Mistral、Gemma）至少支持前10大语言。但支持质量差异很大：Qwen2.5主导亚洲语言，Mistral和Llama在欧洲语言上具有竞争力。',
+          columns: ['语言组', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          rows: [
+            { '语言组': '中文（所有方言）', 'Qwen2.5 7B': '★★★★★ (5.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '日语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '韩语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '法语 / 德语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★★ (3.0)', 'Mistral 7B': '★★★★ (4.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '西班牙语 / 意大利语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★★ (3.0)', 'Mistral 7B': '★★★ (3.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '阿拉伯语（MSA）', 'Qwen2.5 7B': '★★★ (3.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' }
+          ]
+        },
+        european: {
+          title: '欧洲语言的最佳本地LLM',
+          content: '法语、德语、西班牙语、意大利语：**Mistral 7B** 与 **Qwen2.5 7B** 同等竞争。Mistral在法语和德语上更具优势；Qwen2.5在西班牙语和意大利语上略优。两者在Q4_K_M量化时仅需8GB VRAM。',
+          items: [
+            '**Mistral 7B 适合法语和德语**：Mistral使用大量法语和德语训练数据，提供接近母语的质量。对GDPR合规和区域数据保护要求非常理想。',
+            '**Qwen2.5 7B 适合西班牙语和意大利语**：Qwen2.5在罗曼语系语言上质量优秀。Q4_K_M量化在MacBook Pro M2或标准Linux GPU上运行无内存问题。',
+            '**Llama 3.1 8B 作为备选**：Llama 3.1 8B在欧洲语言上表现尚可（3星评级），但非最优。仅在Qwen2.5或Mistral不可用时使用。',
+            '**DACH专业用户（德国/奥地利/瑞士）**：德语企业：Mistral 7B本地运行满足BSI-Grundschutz要求，无需向美国服务器传输数据。',
+            '**量化标准：Q4_K_M**：7B欧洲语言模型始终使用Q4_K_M。VRAM需求：8GB。精度下降：相比fp16 <0.5%。',
+            '**基准测试：JMT-bench + MMLU**：Qwen2.5与Mistral在MMLU（多选知识测试）上达到72-75%精度。领域特定测试（法律、医疗、金融）降至55-70%。'
+          ]
+        },
+        asian: {
+          title: '日语、韩语和中文的最佳本地LLM',
+          content: 'Qwen2.5 7B在亚洲语言上占据压倒性优势。中文、日语、韩语均达4-5星，而Llama和Mistral仅1-2星。对于日本、韩国、中国企业，Qwen2.5是唯一实用选择。',
+          columns: ['语言', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B'],
+          rows: [
+            { '语言': '中文（简体和繁体）', 'Qwen2.5 7B': '★★★★★ (5.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)' },
+            { '语言': '日语（平假名、汉字、片假名）', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)' },
+            { '语言': '韩语（韩文字母）', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)' }
+          ]
+        },
+        arabic: {
+          title: '阿拉伯语支持',
+          content: '阿拉伯语对本地模型是一大挑战。Qwen2.5在现代标准阿拉伯语（MSA）上获3星，Llama和Mistral仅1-2星。方言阿拉伯语（埃及、海湾）在7B模型上支持不足；需要13B或专用模型。中东企业：Qwen2.5 7B是最佳小型模型，但生产环境建议使用13B模型。'
+        },
+        howToBenchmark: {
+          title: '如何对多语言质量进行基准测试',
+          content: 'MMLU和JMT-bench仅测量英语和日语。要验证真实的多语言能力，请使用实际任务（目标语言文档摘要、领域特定问答、文化语境化）进行测试。最佳实践：',
+          numberedItems: [
+            '用目标语言创建本地测试集：用目标语言（如中文、日语）创建20-50个代表性问题，使用领域特定术语（医疗、法律、技术），保存为JSON文件。',
+            '对所有4个模型运行此测试集：每个模型使用Q4_K_M量化，通过Ollama或llama.cpp本地运行，手动或通过指标（与标准答案的相似度）比较答案质量。',
+            '测量延迟和VRAM消耗：记录每个查询的推理时间和最大VRAM消耗。示例：Qwen2.5 7B (Q4_K_M) on M2 Max = 400ms延迟，8.2GB VRAM。',
+            '用领域特定基准验证：专业用途：日语用JMT-bench，中文用C-Eval，英语用MMLU。将结果与自定义测试结合。'
+          ]
+        },
+        comparisonTable: {
+          title: '多语言本地LLM对比：Qwen2.5 vs Llama vs Mistral vs Gemma',
+          content: '本表汇总语言支持情况。评级基于JMT-bench（日语）、MMLU（通用）和语言特定评估（2026年）。',
+          columns: ['语言组', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          rows: [
+            { '语言组': '中文（所有方言）', 'Qwen2.5 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '日语', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '韩语', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '法语 / 德语', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '西班牙语 / 意大利语', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '阿拉伯语（MSA）', 'Qwen2.5 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' }
+          ],
+          image: 'multilingual-llm-comparison-zh.svg',
+          imageCaption: '多语言LLM对比2026：Qwen2.5 7B主导所有亚洲语言（中文5星，日语/韩语4星）；Mistral 7B在法语/德语上竞争（4星）。评级基于JMT-bench、MMLU及语言专项评估。'
+        },
+        commonMistakes: {
+          title: '使用多语言本地LLM时的常见错误',
+          faqs: [
+            {
+              q: '为什么本地LLM在中文上可以，但在日语上效果差？',
+              a: '可能您正在使用Llama或Mistral——两者都没有针对亚洲语言优化。请切换到Qwen2.5 7B，它明确针对中文、日语、韩语进行了训练。'
+            },
+            {
+              q: '应该使用Q4_K_M还是Q5_K_M？',
+              a: '使用 **Q4_K_M**（除非VRAM超过12GB）。Q4_K_M相比fp16减少75%内存，精度损失<0.5%。Q5_K_M对大多数用途来说并无必要。'
+            },
+            {
+              q: '4GB VRAM能运行7B模型吗？',
+              a: '不能。Qwen2.5 7B (Q4_K_M)最少需要8GB VRAM。4GB VRAM请使用3B模型（Phi-3、MobileLLM），或仅CPU推理（非常慢，不推荐）。'
+            },
+            {
+              q: '为什么Mistral在法语/德语任务上质量更高？',
+              a: 'Mistral有更多法语和德语训练数据。欧洲语言：Mistral与Qwen2.5同等。Qwen2.5在亚洲语言和罗曼语系语言上更优秀。'
+            },
+            {
+              q: '是否应该为特定语言微调模型？',
+              a: '仅在有>10,000条高质量语言样本时才考虑。大多数用途下，提示工程（few-shot上下文内示例）更具成本效益且更快速。'
+            }
+          ]
+        },
+        faqSection: {
+          id: 'faq',
+          title: '多语言本地LLM常见问题',
+          faqs: [
+            {
+              q: '什么是本地LLM，为什么要使用它？',
+              a: '本地LLM在您的机器（MacBook、Linux桌面、服务器）上运行，无需云API。优点：(1) 无API费用，(2) 隐私保护（不上传至OpenAI/Google），(3) 离线使用，(4) 可通过微调适配。缺点：推理较慢，模型大小受限（消费级硬件最大约13B）。'
+            },
+            {
+              q: 'Ollama和llama.cpp哪个更快？',
+              a: '速度相当。**Ollama**更适合新手，使用简便（CLI、Web界面）。**llama.cpp**更直接，在高性能配置下更快。新手选Ollama，专家选llama.cpp。'
+            },
+            {
+              q: '本地LLM与OpenAI GPT-4o的费用对比？',
+              a: '本地使用（硬件折旧后）：0美元/查询。GPT-4o API：0.03美元/1K输入令牌，0.06美元/1K输出令牌。月均1,000次查询：本地0美元，GPT-4o约30-100美元。'
+            },
+            {
+              q: '笔记本电脑能运行13B模型吗？',
+              a: '仅限Q4_K_M量化且RAM/VRAM>16GB时。Qwen2.5 13B (Q4_K_M)需要约12GB VRAM。Llama 3.1 70B在消费级硬件上不实际。建议使用7B模型以获得最大兼容性。'
+            },
+            {
+              q: '本地LLM处理机密数据有多安全？',
+              a: '非常安全。本地运行的模型不离开您的机器。重要：在Ollama中禁用遥测（`OLLAMA_NUM_PARALLEL=1` 环境变量）。企业需求：需安全团队验证。符合GDPR/CCPA（无第三方数据传输）。'
+            },
+            {
+              q: 'Python代码生成选哪个模型？',
+              a: 'Qwen2.5 7B或Mistral 7B。两者在HumanEval（Python编程任务）上成功率均达85-90%。专用代码模型：DeepSeek Coder 7B。高精度需求：Qwen2.5 32B（需要20+GB VRAM）。'
+            },
+            {
+              q: '可以为特定语言微调本地LLM吗？',
+              a: '可以，但需要>5,000条高质量样本。使用LoRA（参数高效微调）或全量微调。工具：Ollama扩展、llama-cpp-python、Hugging Face Transformers。大多数用途：上下文内few-shot提示工程更具成本效益。'
+            },
+            {
+              q: '如何修改GGUF模型量化？',
+              a: '使用 `llama.cpp` 的 `quantize` 工具：`./quantize model.gguf model-q4_km.gguf Q4_K_M`。原始模型不变。量化时间视模型大小：5-20分钟。以新名称保存（加 `-q4_km` 后缀）。'
+            },
+            {
+              q: '大批量处理（100+查询）能与OpenAI竞争吗？',
+              a: '延迟要求：不能。OpenAI GPT-4o快5-10倍。成本优化：能，本地更具成本效益。权衡：隐私/离线选本地，速度/精度选OpenAI。'
+            },
+            {
+              q: '选CPU还是GPU推理？',
+              a: '有GPU就必须用GPU。GPU推理比CPU快10-50倍。仅CPU配置：使用3B量化模型。推荐GPU：NVIDIA（CUDA）、AMD（ROCm）、苹果（M系列Metal）。'
+            }
+          ]
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[Ollama安装完整指南](/local-llms/how-to-install-ollama?lang=zh) -- 全平台支持（macOS、Linux、Windows）。',
+            '[LM Studio vs Ollama：2026对比](/local-llms/lm-studio-vs-ollama?lang=zh) -- 本地模型最佳工具是哪个？',
+            '[本地LLM硬件要求2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) -- Qwen2.5、Llama、Mistral的GPU/CPU/RAM要求。',
+            '[LLM量化解释：Q4_K_M vs Q5_K_M](/local-llms/llm-quantization-explained?lang=zh) -- 为什么Q4_K_M是标准。',
+            '[本地LLM配置故障排除](/local-llms/troubleshooting-local-llm-setup?lang=zh) -- 常见错误与解决方案（VRAM、路径、量化）。'
+          ]
+        },
+        sources: {
+          title: '参考资料',
+          items: [
+            '[Qwen2.5文档](https://huggingface.co/Qwen) -- 官方模型卡、基准测试和多语言训练详情。',
+            '[Llama 3.1基准测试](https://huggingface.co/meta-llama) -- Meta文档，MMLU分数（英语、中文）。',
+            '[Mistral 7B模型卡](https://huggingface.co/mistralai/Mistral-7B) -- 训练、语言支持、许可证。',
+            '[JMT基准（日语）](https://github.com/nlp-waseda/jmt-bench) -- 本地模型日语文本理解基准。',
+            '[Ollama文档](https://github.com/ollama/ollama) -- CLI、安装、模型下载、本地LLM问题解答。'
+          ]
+        }
+      },
     },
   };
