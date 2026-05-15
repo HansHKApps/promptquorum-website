@@ -1,4 +1,3 @@
-import Script from 'next/script'
 import type { Metadata } from 'next'
 import { headers } from 'next/headers'
 import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
@@ -212,10 +211,20 @@ export default async function RootLayout({
           }}
         />
 
-        {/* Google Consent Mode v2 — must run before gtag.js loads */}
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-8DQ4B3DXBS"
+        />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',wait_for_update:500});gtag('js',new Date());gtag('config','G-8DQ4B3DXBS');`,
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8DQ4B3DXBS', {
+  'anonymize_ip': true,
+  'allow_ad_personalization_signals': false
+});`,
           }}
         />
       </head>
@@ -226,10 +235,6 @@ export default async function RootLayout({
           <CookieBanner />
           <Analytics />
           <SpeedInsights />
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-8DQ4B3DXBS"
-            strategy="afterInteractive"
-          />
         </Providers>
       </body>
     </html>
