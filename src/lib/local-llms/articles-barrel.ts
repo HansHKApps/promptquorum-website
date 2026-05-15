@@ -38,6 +38,10 @@ import { article as a_best_local_rag_tools } from "./articles/best-local-rag-too
 import { article as a_desktop_vs_webui_local_llm } from "./articles/desktop-vs-webui-local-llm";
 import { article as a_local_llms_with_vscode_cursor } from "./articles/local-llms-with-vscode-cursor";
 import { article as a_headless_local_llms } from "./articles/headless-local-llms";
+import { article as a_apple_silicon_local_llm_guide_2026 } from "./articles/apple-silicon-local-llm-guide-2026";
+import { article as a_m5_pro_max_llm_benchmarks_2026 } from "./articles/m5-pro-max-llm-benchmarks-2026";
+import { article as a_how_much_unified_memory_for_local_llm } from "./articles/how-much-unified-memory-for-local-llm";
+import { article as a_mlx_vs_ollama_vs_llama_cpp_mac } from "./articles/mlx-vs-ollama-vs-llama-cpp-mac";
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
@@ -179,4 +183,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "local-llm-vs-cloud-gpu-cost": a_local_llm_vs_cloud_gpu_cost,
   "mac-vs-windows-vs-linux-local-llm": a_mac_vs_windows_vs_linux_local_llm,
   "gpu-vs-ai-subscription-roi": a_gpu_vs_ai_subscription_roi,
+  "apple-silicon-local-llm-guide-2026": a_apple_silicon_local_llm_guide_2026,
+  "m5-pro-max-llm-benchmarks-2026": a_m5_pro_max_llm_benchmarks_2026,
+  "how-much-unified-memory-for-local-llm": a_how_much_unified_memory_for_local_llm,
+  "mlx-vs-ollama-vs-llama-cpp-mac": a_mlx_vs_ollama_vs_llama_cpp_mac,
 };

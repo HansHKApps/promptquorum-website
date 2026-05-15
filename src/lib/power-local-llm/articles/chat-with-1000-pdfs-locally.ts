@@ -92,6 +92,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyDefaultsBreak: {
         id: 'why-defaults-break',
         title: 'Why Default RAG Breaks Past 1,000 Documents',
+        image: '/images/chat-with-1000-pdfs-locally-why-breaks-en.svg',
+        imageCaption: 'Four failure modes stacked: index out-of-RAM (5-8 GB vectors exceeds 16 GB laptop, latency jumps 300ms→1-3s), cosine-only search missing rare terms (query "Section 230(c)(1)" retrieves "Section 9" instead), top-K=4 too narrow at 50k chunks (best result at rank 12-30), no metadata filtering (searches all 10k chunks vs. filtered 500).',
         content:
           '**Two failures stack up between 1,000 and 10,000 documents: the index outgrows RAM, and cosine-only search returns lexically similar but semantically wrong chunks.** The toy demo that worked on 20 PDFs becomes unusable on a personal research library not because the code is wrong but because the assumptions baked into default settings stop holding.',
         items: [

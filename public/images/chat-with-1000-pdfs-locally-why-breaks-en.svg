@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Why Default RAG Breaks Past 5,000 Documents
+  </text>
+
+  <!-- Problem 1: Index Out of RAM -->
+  <rect x="40" y="65" width="280" height="140" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="40" y="65" width="280" height="4" fill="#EA4335" rx="0"/>
+
+  <text x="180" y="90" font-size="12" font-weight="700" fill="#EA4335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Index Out of RAM</text>
+
+  <rect x="60" y="105" width="240" height="30" fill="#F7F2FA"/>
+  <text x="180" y="125" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">5-8 GB vectors on 16 GB laptop</text>
+
+  <text x="60" y="152" font-size="10" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Result: p50 latency 300ms→1-3s</text>
+  <text x="60" y="168" font-size="10" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Queries hit disk instead of RAM</text>
+  <text x="60" y="195" font-size="10" font-weight="600" fill="#EA4335" font-family="system-ui, -apple-system, sans-serif">→ Upgrade RAM or use hierarchical indices</text>
+
+  <!-- Problem 2: Cosine-Only Fails -->
+  <rect x="350" y="65" width="280" height="140" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="350" y="65" width="280" height="4" fill="#F4B400" rx="0"/>
+
+  <text x="490" y="90" font-size="12" font-weight="700" fill="#F4B400" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Cosine-Only Search Fails</text>
+
+  <rect x="370" y="105" width="240" height="30" fill="#F7F2FA"/>
+  <text x="490" y="125" font-size="10" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Query: "Section 230(c)(1)" →  "Section 9"</text>
+
+  <text x="370" y="152" font-size="10" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Dense embeddings under-weight</text>
+  <text x="370" y="168" font-size="10" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">rare proper nouns, statute numbers, codes</text>
+  <text x="370" y="195" font-size="10" font-weight="600" fill="#F4B400" font-family="system-ui, -apple-system, sans-serif">→ Add BM25 hybrid search</text>
+
+  <!-- Problem 3: Top-K Too Narrow -->
+  <rect x="40" y="225" width="280" height="115" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="40" y="225" width="280" height="4" fill="#6750A4" rx="0"/>
+
+  <text x="180" y="250" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Top-K Too Narrow (K=4)</text>
+
+  <text x="60" y="280" font-size="10" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">At 1k docs: 4 is enough</text>
+  <text x="60" y="297" font-size="10" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">At 50k chunks: best chunk at rank 12-30</text>
+  <text x="60" y="325" font-size="10" font-weight="600" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">→ Increase K to 6-8 + rerank top-50</text>
+
+  <!-- Problem 4: No Metadata Filtering -->
+  <rect x="350" y="225" width="280" height="115" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="350" y="225" width="280" height="4" fill="#34A853" rx="0"/>
+
+  <text x="490" y="250" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">No Metadata Filtering</text>
+
+  <text x="370" y="280" font-size="10" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Query: "What did Smith say?"</text>
+  <text x="370" y="297" font-size="10" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Searches 10,000 chunks vs. 500 by Smith</text>
+  <text x="370" y="325" font-size="10" font-weight="600" fill="#34A853" font-family="system-ui, -apple-system, sans-serif">→ Pre-filter by author, date, type at query time</text>
+</svg>

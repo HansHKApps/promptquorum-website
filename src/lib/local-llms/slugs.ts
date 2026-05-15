@@ -113,4 +113,16 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-llm-vs-cloud-gpu-cost':          'local-llm-vs-cloud-gpu-cost',
   'mac-vs-windows-vs-linux-local-llm':    'mac-vs-windows-vs-linux-local-llm',
   'gpu-vs-ai-subscription-roi':           'gpu-vs-ai-subscription-roi',
+
+  // Apple Silicon for Local LLMs (NEW)
+  'apple-silicon-local-llm-guide-2026':         'apple-silicon-local-llm-guide-2026',
+  'm5-pro-max-llm-benchmarks-2026':             'm5-pro-max-llm-benchmarks-2026',
+  'how-much-unified-memory-for-local-llm':      'how-much-unified-memory-for-local-llm',
+  'mlx-vs-ollama-vs-llama-cpp-mac':             'mlx-vs-ollama-vs-llama-cpp-mac',
+  'ollama-on-mac-apple-silicon-setup-2026':     'ollama-on-mac-apple-silicon-setup-2026',
+  'best-models-apple-silicon-2026':             'best-models-apple-silicon-2026',
+  'mac-mini-m5-local-ai-server':                'mac-mini-m5-local-ai-server',
+  'apple-silicon-vs-nvidia-gpu-local-llm':      'apple-silicon-vs-nvidia-gpu-local-llm',
+  'apple-silicon-whisper-metal-benchmark':      'apple-silicon-whisper-metal-benchmark',
+  'running-70b-models-apple-silicon-m5-max':    'running-70b-models-apple-silicon-m5-max',
 }
