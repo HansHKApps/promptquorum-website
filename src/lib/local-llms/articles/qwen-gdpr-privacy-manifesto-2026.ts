@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Performance parity has arrived — local models no longer mean quality sacrifice', whyItMatters: 'Qwen 3.6 27B (92.1% HumanEval, 77.2% SWE-bench) and Mistral Devstral Small 24B demonstrate that local open-weight models match frontier cloud performance on coding tasks as of May 2026. The quality argument for cloud exclusivity is no longer valid.' },
           { title: 'Data sovereignty is a competitive advantage for EU organisations', whyItMatters: 'EU data protection standards are becoming the global baseline. Organisations with mature local AI infrastructure will face fewer regulatory transitions as international AI governance converges toward EU-style requirements.' },
           { title: 'Licence transparency is a prerequisite for responsible AI deployment', whyItMatters: 'Apache 2.0 (most Qwen 3 models) grants irrevocable rights to use, modify, and distribute for any purpose. This contrasts with proprietary API terms of service that can change with 30 days\' notice, creating unpredictable compliance risk.' },
-          { title: 'Multi-model dispatch, not single-model lock-in, is the mature AI architecture', whyItMatters: 'No single model optimises cost, quality, latency, and compliance simultaneously. Dispatch systems (PromptQuorum) that route tasks by type — local Qwen for private data, cloud for scale — capture the benefits of both while managing GDPR exposure selectively.' },
+          { title: 'Multi-model dispatch, not single-model lock-in, is the mature AI architecture', whyItMatters: 'No single model optimises cost, quality, latency, and compliance simultaneously. Routing tasks by type — local open-weight for GDPR-sensitive data, cloud for non-sensitive scale tasks — is a documented practice in EU AI governance frameworks and reduces overall compliance surface area.' },
         ],
         callouts: [
           { type: 'important', text: 'This manifesto does not argue that cloud AI is unusable in the EU. It argues that local open-weight models should be the default for data-sensitive tasks, with cloud APIs as an opt-in for tasks where GDPR obligations have been explicitly assessed and satisfied.' },
@@ -211,7 +211,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Why EU Companies Are Switching to Local Qwen](/blog/eu-companies-local-qwen-gdpr-shift)',
           '[How to Run Qwen 3 Locally — Ollama + LM Studio Guide](/local-llms/run-qwen-locally-guide-2026)',
           '[Enterprise Compliance with Local LLMs](/local-llms/enterprise-compliance-local-llms)',
-          '[PromptQuorum for Teams](/local-llms)',
         ],
       },
       faq: {
