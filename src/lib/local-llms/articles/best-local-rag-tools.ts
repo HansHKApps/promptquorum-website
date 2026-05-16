@@ -402,4 +402,197 @@ schema: {
         ]
       },
     },
+    fr: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'Meilleurs outils RAG locaux en 2026: Open WebUI, LlamaIndex et LangChain',
+      seoTitle: 'Meilleurs outils RAG locaux',
+      intro: 'RAG (Retrieval-Augmented Generation) permet à votre LLM local de répondre à des questions sur vos propres documents. En avril 2026, Open WebUI dispose du RAG intégré le plus facile (téléchargez des documents, posez des questions), tandis que LlamaIndex et LangChain sont des frameworks professionnels pour construire des pipelines RAG. Ce guide couvre 8 outils sur la facilité d\'utilisation, les fonctionnalités et la maturité de production.',
+      metaDescription: 'Meilleurs outils RAG locaux: Open WebUI, LlamaIndex, LangChain et plus. Q&A sur documents, récupération, chunking.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**RAG (Retrieval-Augmented Generation) permet à votre LLM local de répondre à des questions sur vos propres documents. En avril 2026, Open WebUI dispose du RAG intégré le plus facile (téléchargez des documents, posez des questions), tandis que LlamaIndex et LangChain sont des frameworks professionnels pour construire des pipelines RAG.**',
+      audience: 'Débutants exécutant leur premier LLM local sur du matériel grand public',
+      readTime: '12 min de lecture',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'RAG local',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Qu\'est-ce que RAG?', anchor: '#what-is-rag' },
+        { label: 'Meilleurs 8 outils RAG en comparaison', anchor: '#top-8-rag-tools' },
+        { label: 'Le plus facile: Open WebUI RAG', anchor: '#easiest-open-webui' },
+        { label: 'Le plus flexible: LlamaIndex', anchor: '#flexible-llamaindex' },
+        { label: 'Le plus professionnel: LangChain', anchor: '#professional-langchain' },
+        { label: 'Alternatives open-source', anchor: '#open-source-alternatives' },
+        { label: 'RAG vs Affinage', anchor: '#rag-vs-finetuning' },
+        { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+        { label: 'Questions courantes', anchor: '#common-questions' },
+        { label: 'Lectures complémentaires', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'RAG = télécharger des documents + laisser le modèle répondre à des questions à ce sujet, en citant les sources.',
+            '**Open WebUI** dispose du RAG intégré le plus facile. Téléchargez un PDF, posez des questions. Configuration en 5 minutes.',
+            '**LlamaIndex** est le framework le plus flexible pour construire des pipelines RAG.',
+            '**LangChain** est le framework professionnel le plus largement utilisé, avec un écosystème massif.',
+            '**Chroma** et **Qdrant** sont les principales bases de données vectorielles pour stocker les chunks de documents.',
+            'En avril 2026, RAG local est mature et prêt pour la production.',
+          ],
+        },
+        whatIsRAG: {
+          title: 'Qu\'est-ce que RAG (Retrieval-Augmented Generation)?',
+          content: [
+            '**RAG est une technique qui permet à votre LLM de répondre à des questions sur vos propres documents sans avoir besoin de affiner le modèle.**',
+            'Le processus: (1) Téléchargez vos documents (PDFs, fichiers texte), (2) divisez-les en chunks, (3) convertissez les chunks en embeddings (vecteurs numériques), (4) stockez les embeddings dans une base de données vectorielle, (5) quand vous posez une question, récupérez les chunks pertinents de la base de données, (6) passez les chunks + question au LLM, (7) le LLM répond en fonction des chunks.',
+            'RAG est préféré à l\'affinage quand vos documents changent fréquemment (l\'affinage est un entraînement ponctuel), et vous avez besoin d\'attribution de source (RAG montre quels documents ont été utilisés).',
+          ],
+        },
+        top8Tools: {
+          title: 'Meilleurs 8 outils RAG locaux en 2026',
+          rows: [
+            { 'Outil': 'Open WebUI', 'Type': 'Application web (Docker)', 'Idéal pour': 'Débutants, configuration la plus facile', 'Base de données vectorielle': 'Intégrée', 'Courbe d\'apprentissage': 'Aucune' },
+            { 'Outil': 'LlamaIndex', 'Type': 'Framework Python', 'Idéal pour': 'Pipelines flexibles', 'Base de données vectorielle': 'N\'importe laquelle (Chroma, Qdrant, Pinecone)', 'Courbe d\'apprentissage': 'Moyenne' },
+            { 'Outil': 'LangChain', 'Type': 'Framework Python', 'Idéal pour': 'Systèmes de production', 'Base de données vectorielle': 'N\'importe laquelle', 'Courbe d\'apprentissage': 'Moyenne' },
+            { 'Outil': 'Chroma', 'Type': 'Base de données vectorielle', 'Idéal pour': 'RAG simple', 'Base de données vectorielle': 'Chroma (intégrée)', 'Courbe d\'apprentissage': 'Faible' },
+            { 'Outil': 'Qdrant', 'Type': 'Base de données vectorielle', 'Idéal pour': 'RAG scalable', 'Base de données vectorielle': 'Qdrant (distribuée)', 'Courbe d\'apprentissage': 'Moyenne' },
+            { 'Outil': 'Weaviate', 'Type': 'Base de données vectorielle', 'Idéal pour': 'Requêtes GraphQL', 'Base de données vectorielle': 'Weaviate', 'Courbe d\'apprentissage': 'Moyenne' },
+            { 'Outil': 'Milvus', 'Type': 'Base de données vectorielle', 'Idéal pour': 'Grande échelle', 'Base de données vectorielle': 'Milvus', 'Courbe d\'apprentissage': 'Élevée' },
+            { 'Outil': 'Text-Generation-WebUI RAG', 'Type': 'Extension', 'Idéal pour': 'Intégré avec le modèle', 'Base de données vectorielle': 'Intégrée', 'Courbe d\'apprentissage': 'Faible' },
+          ],
+          columns: ['Outil', 'Type', 'Idéal pour', 'Base de données vectorielle', 'Courbe d\'apprentissage'],
+        },
+        openWebUIRAG: {
+          title: 'Comment utiliser Open WebUI RAG (le plus facile)?',
+          content: [
+            '**Open WebUI dispose du RAG intégré.** Aucune configuration au-delà de Docker. Téléchargez simplement des documents et posez des questions.',
+          ],
+          codeBlock: '# 1. Exécuter Open WebUI avec Docker\ndocker run -d -p 3000:8080 \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  ghcr.io/open-webui/open-webui:latest\n\n# 2. Ouvrez http://localhost:3000\n# 3. Cliquez sur "+" à côté de l\'entrée de message → "Télécharger des fichiers"\n# 4. Sélectionnez les PDFs ou fichiers texte\n# 5. Posez des questions -- Open WebUI récupère les chunks pertinents\n# 6. Le modèle répond en fonction des documents, avec citations',
+          codeLanguage: 'bash',
+        },
+        llamaindex: {
+          title: 'Comment construire RAG avec LlamaIndex?',
+          content: [
+            '**LlamaIndex est un framework qui gère le chargement de documents, le chunking, l\'embedding et la récupération.** Flexible, supporte n\'importe quelle base de données vectorielle.',
+          ],
+          codeBlock: '# 1. Installer\npip install llama-index\npip install llama-index-embeddings-ollama  # utiliser les embeddings Ollama locaux\npip install llama-index-vector-stores-chroma  # utiliser Chroma pour le stockage\n\n# 2. Pipeline RAG simple\nfrom llama_index.core import SimpleDirectoryReader, VectorStoreIndex\nfrom llama_index.embeddings.ollama import OllamaEmbedding\n\n# Charger les documents\ndocuments = SimpleDirectoryReader("./documents").load_data()\n\n# Créer l\'index avec les embeddings locaux\nembedding_model = OllamaEmbedding(model_name="nomic-embed-text")\nindex = VectorStoreIndex.from_documents(\n  documents,\n  embed_model=embedding_model\n)\n\n# Requête\nquery_engine = index.as_query_engine()\nresponse = query_engine.query("Que dit le document sur X?")\nprint(response)',
+          codeLanguage: 'python',
+        },
+        langchain: {
+          title: 'Comment construire RAG avec LangChain?',
+          content: [
+            '**LangChain est le framework le plus largement utilisé pour les systèmes RAG de production.** Supporte toutes les bases de données vectorielles et fournisseurs de LLM.',
+          ],
+          codeBlock: '# pip install langchain langchain-community langchain-chroma\n\nfrom langchain.document_loaders import DirectoryLoader\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.embeddings import OllamaEmbeddings\nfrom langchain.vectorstores import Chroma\nfrom langchain.chat_models import ChatOllama\nfrom langchain.chains import RetrievalQA\n\n# Charger les documents\nloader = DirectoryLoader("./documents")\ndocs = loader.load()\n\n# Diviser en chunks\nsplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\nchunks = splitter.split_documents(docs)\n\n# Créer les embeddings et le vector store\nembeddings = OllamaEmbeddings(model="nomic-embed-text")\nvectorstore = Chroma.from_documents(chunks, embeddings)\n\n# Créer la chaîne QA\nllm = ChatOllama(model="llama3.2:8b")\nqa = RetrievalQA.from_chain_type(\n  llm=llm,\n  chain_type="stuff",\n  retriever=vectorstore.as_retriever()\n)\n\n# Répondre aux questions\nresult = qa.run("Que dit le document sur X?")\nprint(result)',
+          codeLanguage: 'python',
+        },
+        vectors: {
+          title: 'Quelles bases de données vectorielles sont les meilleures pour RAG local?',
+          content: [
+            '**Chroma** (la plus facile): Base de données vectorielle en processus. Aucune configuration de serveur. Parfaite pour les petits projets RAG (< 1M documents).',
+            '**Qdrant** (scalable): Auto-hébergée ou cloud. Meilleure pour RAG à grande échelle. Plus de fonctionnalités que Chroma.',
+            '**Weaviate**: Basée sur GraphQL. Bonne pour les requêtes complexes sur les embeddings.',
+            '**Milvus**: Classe entreprise. Pour RAG à très grande échelle (100M+ documents).',
+            'Pour la plupart des déploiements locaux, Chroma est suffisant et le plus facile.',
+          ],
+        },
+        ragVsFinetuning: {
+          title: 'Devriez-vous utiliser RAG ou l\'affinage?',
+          content: 'Utilisez ce cadre:',
+          items: [
+            '**Utilisez RAG si:** Vos documents changent fréquemment, vous avez besoin d\'attribution de source, vous voulez zéro entraînement de modèle, ou vous avez moins de 100K documents.',
+            '**Utilisez l\'affinage si:** Votre base de connaissances est fixe, vous voulez que le modèle "comprenne" réellement le domaine, ou vous avez besoin de vitesse d\'inférence (les modèles affinés sont plus rapides).',
+            '**Combinez les deux:** Affinez un modèle sur votre domaine, puis ajoutez RAG par-dessus pour une Q&A de très haute qualité.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes avec RAG local',
+          items: [
+            '**Utiliser la mauvaise taille de chunk.** Trop petit (100 tokens) = trop de petits morceaux. Trop grand (2000 tokens) = pas spécifique. Optimal est 500-1000 tokens.',
+            '**Oublier d\'utiliser les embeddings.** Vous ne pouvez pas faire de RAG sans convertir les chunks en embeddings. Utilisez `nomic-embed-text` (meilleur pour l\'anglais) ou `bge-m3` (multilingue).',
+            '**Ne pas évaluer la qualité de la récupération.** Juste parce que RAG s\'exécute ne signifie pas qu\'il récupère les bons documents. Testez avec des questions connues et vérifiez que les chunks récupérés sont pertinents.',
+            '**Traiter RAG comme un remplacement de l\'affinage.** RAG est récupération + apprentissage en contexte. L\'affinage est une véritable adaptation de modèle. Outils différents pour différents emplois.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Questions courantes sur RAG local',
+          faqs: [
+            {
+              q: 'Combien de documents RAG local peut-il gérer?',
+              a: 'Dépend de la base de données vectorielle. Chroma gère 100K-1M documents facilement sur du matériel grand public. Au-delà de 1M, utilisez Qdrant ou Milvus.',
+            },
+            {
+              q: 'RAG peut-il fonctionner avec des images?',
+              a: 'Seulement si vous extrayez d\'abord du texte (OCR). Pour la compréhension réelle des images, utilisez des modèles multimodaux comme Llama 3.2 Vision avec RAG.',
+            },
+            {
+              q: 'RAG est-il plus lent que l\'affinage?',
+              a: 'RAG nécessite la récupération (millisecondes) plus le passage du contexte (tokens ajoutés au prompt). Généralement plus lent que l\'inférence affinée mais beaucoup plus rapide à mettre en place.',
+            },
+            {
+              q: 'Puis-je utiliser des embeddings cloud avec des LLMs locaux?',
+              a: 'Oui. Utilisez des embeddings cloud (OpenAI, Cohere) pour la récupération et des LLMs locaux pour les réponses. L\'approche hybride est courante.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectures complémentaires',
+          items: [
+            '[Meilleures interfaces de LLM local](/local-llms/best-local-llm-frontends?lang=fr) -- Open WebUI dispose du RAG intégré.',
+            '[Comment installer Ollama](/local-llms/how-to-install-ollama?lang=fr) -- Configuration pour les embeddings.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=fr) -- Moteurs d\'inférence pour RAG.',
+            '[API compatible OpenAI LLM local](/local-llms/local-llm-openai-compatible-api?lang=fr) -- Utiliser les LLMs via API dans les pipelines RAG.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            'Documentation LlamaIndex -- docs.llamaindex.ai',
+            'Documentation LangChain -- python.langchain.com',
+            'Documentation Chroma -- docs.trychroma.com',
+            'Documentation Qdrant -- qdrant.tech/documentation',
+            'Papier RAG -- arxiv.org/abs/2005.11401',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Meilleurs outils RAG locaux en 2026: Open WebUI, LlamaIndex et LangChain',
+        description: 'Meilleurs outils RAG locaux: Open WebUI, LlamaIndex, LangChain et plus. Q&A sur documents, récupération, chunking.',
+        url: 'https://www.promptquorum.com/local-llms/best-local-rag-tools?lang=fr',
+        inLanguage: 'fr',
+        datePublished: '2026-04-04',
+        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'fr',
+        mainEntity: [
+          { '@type': 'Question', 'name': 'Combien de documents RAG local peut-il gérer?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chroma gère 100K-1M documents facilement sur du matériel grand public. Au-delà de 1M, utilisez Qdrant ou Milvus.' } },
+          { '@type': 'Question', 'name': 'RAG peut-il fonctionner avec des images?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Seulement si vous extrayez d\'abord du texte (OCR). Pour la compréhension réelle des images, utilisez des modèles multimodaux comme Llama 3.2 Vision avec RAG.' } },
+          { '@type': 'Question', 'name': 'RAG est-il plus lent que l\'affinage?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RAG nécessite la récupération (millisecondes) plus le passage du contexte. Généralement plus lent que l\'inférence affinée mais beaucoup plus rapide à mettre en place.' } },
+          { '@type': 'Question', 'name': 'Puis-je utiliser des embeddings cloud avec des LLMs locaux?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Utilisez des embeddings cloud (OpenAI, Cohere) pour la récupération et des LLMs locaux pour les réponses. L\'approche hybride est courante.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Meilleurs outils RAG locaux',
+        inLanguage: 'fr',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Chroma', 'description': 'Base de données vectorielle intégrée pour RAG local. Gère 100K-1M documents sur matériel grand public. API Python simple.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'LlamaIndex', 'description': 'Framework pour l\'indexation et la récupération. Supporte plusieurs bases de données vectorielles et modèles d\'embedding.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Open WebUI', 'description': 'Interface web pour LLMs locaux avec support RAG intégré et téléchargement de fichiers.' },
+        ]
+      },
+    },
   };
