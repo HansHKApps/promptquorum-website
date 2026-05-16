@@ -29,30 +29,8 @@ export function QuickAnswer({
 }: QuickAnswerProps): ReactNode {
   const label = LABELS[lang]
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            bullets.length > 0
-              ? `${answer} ${bullets.join('. ')}`
-              : answer,
-        },
-      },
-    ],
-  }
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
 
       <div
         className="bg-slate-900 border border-teal-700/30 border-l-4 border-l-teal-600 rounded-lg p-6 mb-8 max-w-full"

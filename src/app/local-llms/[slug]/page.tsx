@@ -276,12 +276,17 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     ],
   }
 
-  // Auto-generate FAQPage schema from sections with faqs
+  // Auto-generate FAQPage schema from sections with faqs, plus quickAnswerTop if present
   const faqEntries = Object.values(article.sections).flatMap(s => s.faqs ?? [])
-  const faqSchema = article.faqSchema ?? (faqEntries.length > 0 ? {
+  const quickAnswerTopEntry = (article as any).quickAnswerTop?.[selectedLang]
+  const allFaqEntries = [
+    ...(quickAnswerTopEntry ? [{ q: quickAnswerTopEntry.question, a: quickAnswerTopEntry.answer }] : []),
+    ...faqEntries,
+  ]
+  const faqSchema = article.faqSchema ?? (allFaqEntries.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqEntries.map(f => ({
+    mainEntity: allFaqEntries.map(f => ({
       '@type': 'Question',
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
