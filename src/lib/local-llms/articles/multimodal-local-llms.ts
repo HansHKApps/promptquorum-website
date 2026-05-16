@@ -451,4 +451,115 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
     },
+    zh: {
+      freshness_tier: 'semi_annual',
+      theme: 'Advanced Techniques',
+      title: '多模态本地LLM：视觉、音频和文本处理',
+      seoTitle: '多模态本地LLM',
+      intro: '多模态模型处理图像、文本和音频。截至2026年4月，Llama 3.2 Vision、Gemma 3 Vision和Qwen2-VL是实用的本地部署多模态模型。它们支持文档OCR、图像分析和视觉问答，无需云API。',
+      metaDescription: '多模态本地LLM 2026: 视觉、图像处理、OCR、音频模型。LLaVA、Qwen-VL指南和用例。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**多模态模型处理图像、文本和音频。截至2026年4月，Llama 3.2 Vision、Gemma 3 Vision和Qwen2-VL是实用的本地部署多模态模型。**',
+      audience: '在消费级硬件上运行首个本地LLM的初学者',
+      readTime: '10分钟阅读',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: '多模态模型',
+      toc: [
+        { label: '关键要点', anchor: '#key-takeaways' },
+        { label: '可用的多模态模型', anchor: '#models' },
+        { label: '视觉能力', anchor: '#vision' },
+        { label: '设置和使用', anchor: '#setup' },
+        { label: '真实世界用例', anchor: '#use-cases' },
+        { label: '性能和限制', anchor: '#performance' },
+        { label: '常见错误', anchor: '#common-mistakes' },
+        { label: '相关阅读', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+
+          isTldr: true,
+          items: [
+            '**多模态 = 文本 + 图像 (+ 音频)。** 无需OCR预处理即可本机处理图像。',
+            '**最佳模型 (2026年)：** Llama 3.2 Vision 11B、Qwen2-VL 7B、Gemma 3 Vision 9B。',
+            '**用例：** 文档OCR、图像分析、视觉问答、表格提取。',
+            '**速度：** 每张图像2-5秒（11B模型）。比纯文本慢，但实用。',
+            '截至2026年4月，多模态对特定用例已成熟，但尚未通用。',
+          ],
+        },
+        models: {
+          title: '可用的多模态模型 (2026年4月)',
+          rows: [
+            { '模型': 'Llama 3.2 Vision 11B', '图像支持': '是', 'VRAM': '8 GB', '速度': '3-5秒/图像', '最适用': '通用视觉' },
+            { '模型': 'Qwen2-VL 7B', '图像支持': '是', 'VRAM': '5 GB', '速度': '2-3秒/图像', '最适用': '快速视觉' },
+            { '模型': 'Gemma 3 Vision 9B', '图像支持': '是', 'VRAM': '6 GB', '速度': '3秒/图像', '最适用': '均衡' },
+            { '模型': 'Llama 3.2 Vision 90B', '图像支持': '是', 'VRAM': '55 GB', '速度': '10+秒/图像', '最适用': '高质量' },
+          ],
+          columns: ['模型', '图像支持', 'VRAM', '每张图像速度', '最适用'],
+        },
+        vision: {
+          title: '视觉能力',
+          content: [
+            '多模态模型可以：',
+          ],
+          items: [
+            '**图像描述：** 解释图像中的内容。',
+            '**OCR (光学字符识别)：** 从图像提取文本（名片、文档扫描）。',
+            '**视觉问答：** 回答有关图像的问题（"这辆车的品牌是什么？"）。',
+            '**表格提取：** 将图像中的表格解析为结构化数据。',
+            '**图表分析：** 解读数据可视化。',
+            '**物体检测：** 识别和定位图像中的物体。',
+          ],
+        },
+        setup: {
+          title: '设置和使用',
+          content: '使用Ollama运行Llama 3.2 Vision：',
+          codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
+          codeLanguage: 'python',
+        },
+        useCases: {
+          title: '真实世界用例',
+          items: [
+            '**文档处理：** 无需外部OCR服务从扫描PDF提取文本。',
+            '**内容审核：** 标记不适当的图像，无需发送到云端。',
+            '**无障碍：** 为视障用户描述图像。',
+            '**产品分析：** 分析电商产品图像（类别、状态、缺陷）。',
+            '**研究：** 分析科学图表和图解。',
+          ],
+        },
+        performance: {
+          title: '性能和限制',
+          content: [
+            '**准确性：** 适合文档OCR和描述，但不完美用于详细分析或小物体。',
+            '**速度：** 每张图像2-5秒。云模型（GPT-4 Vision）快10-50倍。',
+            '**图像大小：** 支持~1000×1000像素。更大的图像将被缩小采样。',
+            '**限制：** 复杂场景下无法匹配GPT-4 Vision准确性。权衡：隐私对质量。',
+          ],
+        },
+        commonMistakes: {
+          title: '常见错误',
+          items: [
+            '**期望GPT-4 Vision的准确性。** 本地模型准确性低20-30%。用于特定领域，不是通用视觉。',
+            '**不准备图像。** 将图像裁剪到焦点区域。去除噪声。更好的输入 = 更好的输出。',
+            '**使用7B模型处理复杂视觉。** 小模型在微妙细节上困难重重。使用11B+获得可靠视觉。',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[编码最佳本地LLM](/local-llms/best-local-llms-for-coding?lang=zh) -- 视觉可以帮助代码理解。',
+            '[本地RAG 2026](/local-llms/local-rag-2026?lang=zh) -- 将视觉与RAG结合进行文档处理。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '来源',
+          items: [
+            'Llama 3.2 Vision Model Card -- huggingface.co/meta-llama/Llama-3.2-11B-Vision',
+            'Qwen2-VL -- github.com/QwenLM/Qwen2-VL',
+          ],
+        },
+      },
+    },
   };
