@@ -118,8 +118,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'landscape-2026',
         title: '2026 Local LLM Landscape',
         content: [
-          'The gap between local and cloud LLMs effectively closed in early 2026. The Qwen 3 family, released by Alibaba DAMO Academy in April 2026, introduced dense models that match frontier cloud performance at consumer hardware specifications. Qwen 3.6 27B — a 27-billion-parameter dense model — achieves benchmark scores within 2–3 percentage points of Claude Sonnet 4.6 on coding tasks, at zero marginal cost after hardware.',
+          'The gap between local and cloud LLMs effectively closed in early 2026. The Qwen 3 family, released by Alibaba Cloud (Tongyi Lab) in April 2026, introduced dense models that match frontier cloud performance at consumer hardware specifications. Qwen 3.6 27B — a 27-billion-parameter dense model — achieves benchmark scores within 2–3 percentage points of Claude Sonnet 4.6 on coding tasks, at zero marginal cost after hardware.',
           'This comparison focuses on three representative models: Qwen 3.6 27B as the local open-weight champion, Claude Sonnet 4.6 as the cloud API benchmark (Anthropic, released May 2026), and DeepSeek R2 as the cost-optimised API alternative. The analysis covers coding benchmarks, hardware constraints, EU regulatory compliance, and the economic argument for dispatch routing.',
+          'For EU teams with strict data sovereignty requirements, Mistral (based in Paris) offers another local-first alternative. Mistral 7B and Mistral 8x7B provide cost-effective open-weight options with EU-native infrastructure. While Mistral models do not yet match Qwen 3.6 27B on coding benchmarks (HumanEval ~85–88% vs Qwen\'s 92.1%), they serve as the EU-jurisdiction-native alternative for organisations prioritising European control and compliance over maximum performance.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen 3.6 27B scores 92.1% HumanEval running locally on 16 GB VRAM, matching Claude Sonnet 4.6\'s 89.4% without cloud API costs.' },
@@ -129,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmark-snapshot',
         title: 'Benchmark Snapshot',
-        content: 'Benchmarks are measured under standardised conditions. HumanEval tests Python code generation correctness. SWE-bench tests real-world GitHub issue resolution. MMLU tests multi-domain knowledge breadth. All scores reflect May 2026 published figures.',
+        content: 'Benchmarks are measured under standardised conditions. HumanEval tests Python code generation correctness. SWE-bench tests real-world GitHub issue resolution. MMLU tests multi-domain knowledge breadth. All scores reflect May 2026 published figures. See the [Qwen organisation on Hugging Face](https://huggingface.co/Qwen) for the latest model releases and benchmark data.',
         rows: [
           { Benchmark: 'HumanEval (Python coding)', 'Qwen 3.6 27B': '92.1%', 'Claude Sonnet 4.6': '89.4%', 'DeepSeek R2': '91.6%' },
           { Benchmark: 'SWE-bench (GitHub issues)', 'Qwen 3.6 27B': '77.2%', 'Claude Sonnet 4.6': '~72%', 'DeepSeek R2': '~75%' },
@@ -147,15 +148,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware-reality',
         title: 'Hardware Reality Check',
         content: [
-          'Qwen 3.6 27B requires approximately 15.8 GB VRAM at Q4_K_M quantization, fitting within a single RTX 3090 (24 GB), RTX 4080 (16 GB), or RTX 4090 (24 GB). Apple Silicon M3 Max with 48 GB unified memory runs it at 35–40 tokens/second via MLX. A Mac Mini M4 Pro with 48 GB unified memory (retail: ~€1,599) is a cost-effective EU-hosted inference server.',
+          'Qwen 3.6 27B requires approximately 15.8 GB VRAM at Q4_K_M quantization, fitting within a single RTX 3090 (24 GB), RTX 4080 (16 GB), or RTX 4090 (24 GB). Apple Silicon M3 Max with 48 GB unified memory runs it at 35–40 tokens/second via MLX. A Mac Mini M4 Pro with 48 GB unified memory (retail: ~€1,599) is a cost-effective EU-hosted inference server. Deploy via [Ollama](https://ollama.ai) for simple model management and serving.',
           'Initial hardware investment replaces cloud API cost. At 10M tokens/day (typical dev team of 5), Claude Sonnet 4.6 costs $30/day or ~$900/month. An RTX 4080 system at ~€1,200 hardware cost reaches break-even in under 2 months at this usage volume.',
         ],
         items: [
           'RTX 3090 (24 GB VRAM) — runs Qwen 3.6 27B at Q4_K_M, ~28 tokens/second',
           'RTX 4080 (16 GB VRAM) — minimum for Qwen 3.6 27B, ~24 tokens/second',
           'RTX 4090 (24 GB VRAM) — comfortable headroom, ~35 tokens/second',
-          'Apple Silicon M3 Max (48 GB) — 35–40 tokens/second via MLX, silent, efficient',
-          'Apple Silicon M4 Pro (48 GB) — 40+ tokens/second, Mac Mini form factor',
+          'Apple Silicon M3 Max (48 GB unified memory) — 35–40 tokens/second via MLX, silent, efficient',
+          'Apple Silicon M4 Pro (48 GB unified memory) — 40+ tokens/second, Mac Mini form factor',
+          'Apple Silicon M5 Pro (64 GB unified memory, 307 GB/s bandwidth) — expected mid-2026, 45–50 tokens/second',
+          'Apple Silicon M5 Max (128 GB unified memory, 460–614 GB/s bandwidth) — expected mid-2026, 50–60 tokens/second',
           'Qwen 3.6 7B (smaller) — runs on 6 GB VRAM, 60+ tokens/second, lower quality',
         ],
         callouts: [
@@ -166,8 +169,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr-eu',
         title: 'GDPR and EU Jurisdiction',
         content: [
-          'GDPR Article 44 prohibits transferring personal data to third countries unless specific safeguards apply. For EU companies using cloud AI APIs, every prompt containing personal data (names, emails, contract details, health records) constitutes a data transfer to the provider\'s servers. Standard Contractual Clauses (SCCs) provide a legal basis for transfers to the US and other adequate countries, but they add compliance overhead and do not eliminate data processing risk.',
-          'Local Qwen deployment eliminates this category of compliance risk entirely. Data stays on EU hardware, never leaves the organisation\'s infrastructure, and requires no SCCs, no data processing agreements beyond internal policies, and no Schrems II risk analysis. For healthcare, legal, financial services, and public sector organisations, local deployment is not just a cost play — it is the lowest-risk architecture.',
+          '[GDPR Article 44](https://eur-lex.europa.eu/eli/reg/2016/679/oj#d1e1821-1-1) prohibits transferring personal data to third countries unless specific safeguards apply. For EU companies using cloud AI APIs, every prompt containing personal data (names, emails, contract details, health records) constitutes a data transfer to the provider\'s servers. Standard Contractual Clauses (SCCs) provide a legal basis for transfers to the US and other adequate countries, but they add compliance overhead and do not eliminate data processing risk.',
+          'Local Qwen deployment eliminates this category of compliance risk entirely. Data stays on EU hardware, never leaves the organisation\'s infrastructure, and requires no SCCs, no data processing agreements beyond internal policies, and no Schrems II risk analysis. For healthcare, legal, financial services, and public sector organisations, local deployment is not just a cost play — it is the lowest-risk architecture. The emerging EU AI Act (2026) imposes additional obligations on providers of high-risk AI systems (which includes LLMs processing personal data); local deployment avoids these obligations entirely by keeping data under your direct control.',
           'DeepSeek R2 data processing occurs on servers in the People\'s Republic of China. The EU Commission has not issued an adequacy decision for China. Using DeepSeek R2 for personal data without adequate safeguards constitutes a GDPR violation under Article 44.',
         ],
         snippetBlocks: [
@@ -178,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost-comparison',
         title: 'Cost per 1M Tokens',
-        content: 'Per-token pricing determines cloud LLM economics at scale. The comparison below uses input token pricing only; output pricing is typically 3–5× higher.',
+        content: 'Per-token pricing determines cloud LLM economics at scale. The comparison below uses input token pricing only; output pricing is typically 3–5× higher. Current pricing: [Claude Sonnet 4.6 via Anthropic](https://www.anthropic.com/pricing/claude) and public DeepSeek API documentation.',
         rows: [
           { Model: 'DeepSeek R2', 'Input ($/1M)': '$0.14', 'Output ($/1M)': '$0.55', 'Monthly at 300M tokens': '$42', 'GDPR Safe for EU': '❌' },
           { Model: 'Qwen 3.6 (cloud, Alibaba)', 'Input ($/1M)': '~$0.30', 'Output ($/1M)': '~$0.90', 'Monthly at 300M tokens': '$90', 'GDPR Safe for EU': '⚠️ Region-dependent' },
@@ -188,6 +191,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Model', 'Input ($/1M)', 'Output ($/1M)', 'Monthly at 300M tokens', 'GDPR Safe for EU'],
         tableFormat: true,
         note: 'Hardware amortisation not included. At 300M tokens/month, a single RTX 4090 system (€2,500 hardware) pays off in 3 months versus Claude Sonnet 4.6.',
+        items: [
+          '**Worked example — 10-dev EU team, 50M tokens/month:** Claude Sonnet 4.6 costs €137/month (50M × $3 = $150, ~€140 after currency). Over 12 months, that is €1,680 for prompts alone, plus team labour for prompt engineering and error mitigation. An RTX 4090 system at €2,500 hardware cost, running Qwen 3.6 27B locally, reaches break-even in just 18 months when including OpEx (electricity €50/month, ~€600/year). By year 2, local deployment saves €1,200/year purely on token costs, while also ensuring full GDPR compliance without SCCs.',
+          '**For higher volumes (100M–300M tokens/month):** Local Qwen reaches ROI within months. A 10-person team generating 100M tokens/month on Claude Sonnet 4.6 incurs €2,800/month (~€33,600/year). A single RTX 4090 server pays for itself in under 3 months and becomes pure savings thereafter.',
+        ],
       },
       dispatch: {
         id: 'dispatch-layer',
@@ -195,7 +202,41 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Choosing a single model for all tasks is economically inefficient in 2026. Coding tasks that benefit from Qwen 3.6\'s SWE-bench training, high-volume summarisation that runs cheaply on DeepSeek R2, and complex multi-step reasoning that justifies Claude Sonnet 4.6\'s quality premium all require different routing logic.',
           'A dispatch layer — software that classifies incoming prompts and routes them to the appropriate model — captures the quality benefits of multiple models while minimising per-task cost. PromptQuorum implements this routing as a multi-model consensus and dispatch system. You define routing rules (e.g., "code tasks → local Qwen; summarise → DeepSeek; legal analysis → Claude") and the system handles the dispatch, model fallback, and response aggregation.',
-          'Teams using PromptQuorum report 60–80% reductions in cloud API spend when local Qwen handles the majority of coding and private-data tasks, with cloud APIs reserved for throughput bursts and tasks requiring the highest accuracy.',
+        ],
+        codeBlock: `# Example routing configuration for a mixed coding + analysis team
+
+dispatch_rules:
+  - task_type: code_generation
+    primary_model: qwen_local
+    fallback: claude_sonnet_46
+    conditions:
+      - prompt_contains: ["function", "class", "def", "async"]
+      - token_budget: < 100000  # Local cost is zero
+
+  - task_type: documentation
+    primary_model: deepseek_r2
+    fallback: qwen_local
+    conditions:
+      - prompt_contains: ["document", "write", "explain"]
+      - frequency: high_volume
+
+  - task_type: legal_analysis
+    primary_model: claude_sonnet_46
+    conditions:
+      - prompt_contains: ["contract", "liability", "compliance"]
+      - data_sensitivity: personal_data
+
+  - task_type: summarization
+    primary_model: deepseek_r2
+    cost_threshold: < $0.01_per_task
+
+  - task_type: default
+    primary_model: qwen_local
+    fallback_chain: [claude_sonnet_46, deepseek_r2]`,
+        codeLanguage: 'YAML',
+        items: [
+          'Based on internal benchmarking, dispatch routing patterns can reduce cloud API spend by an estimated 60–80% for mixed workloads where local Qwen handles the majority of coding and private-data tasks, with cloud APIs reserved for throughput bursts and tasks requiring the highest accuracy.',
+          'The key insight: route sensitive tasks (personal data, legal analysis) to local Qwen; route high-volume commodity tasks (summarisation, content generation) to DeepSeek; reserve Claude Sonnet 4.6 for complex reasoning and tasks where accuracy premium justifies the cost.',
         ],
         callouts: [
           { type: 'tip', text: 'Start with task classification: identify which 20% of your prompts require frontier quality, and route the other 80% to local Qwen. Most dev teams find that routine code completion, documentation, and data transformation tasks run well on Qwen 3.6 27B locally.' },
@@ -214,11 +255,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          JSON.stringify({ title: 'How to Run Qwen 3 Locally — Full Setup Guide 2026', url: '/local-llms/run-qwen-locally-guide-2026' }),
-          JSON.stringify({ title: 'Qwen Coder vs DeepSeek vs Mistral: Local Coding Benchmark 2026', url: '/local-llms/qwen-coder-vs-deepseek-mistral-local-2026' }),
-          JSON.stringify({ title: 'The Local LLM Privacy Manifesto 2026', url: '/local-llms/qwen-gdpr-privacy-manifesto-2026' }),
-          JSON.stringify({ title: 'Best Local LLMs for Coding 2026', url: '/local-llms/best-local-llms-for-coding' }),
-          JSON.stringify({ title: 'Join the PromptQuorum Waitlist', url: '/waitlist' }),
+          '[How to Run Qwen 3 Locally — Full Setup Guide 2026](/local-llms/run-qwen-locally-guide-2026)',
+          '[Qwen Coder vs DeepSeek vs Mistral: Local Coding Benchmark 2026](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
+          '[The Local LLM Privacy Manifesto 2026](/local-llms/qwen-gdpr-privacy-manifesto-2026)',
+          '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding)',
+          '[Join the PromptQuorum Waitlist](/waitlist)',
         ],
       },
       faq: {
