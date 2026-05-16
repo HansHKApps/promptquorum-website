@@ -137,6 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tableFormat: true,
         callouts: [
           { type: 'note', text: 'SWE-bench scores for DeepSeek Coder and Mistral Devstral are estimated from available leaderboard data. Qwen 3.6 27B and Codestral SWE-bench scores are from official publications.' },
+          { type: 'tip', text: 'DeepSeek\'s model lineup evolves frequently. Verify the current model name and pricing at platform.deepseek.com before deployment. Figures reflect publicly available data as of May 2026.' },
         ],
       },
       costMath: {
@@ -306,20 +307,210 @@ DEEPSEEK_MODEL=deepseek-chat
     theme: 'Best Models',
     title: 'Qwen 3.6 Coder vs DeepSeek Coder vs Mistral Devstral : Benchmark Code Local 2026',
     seoTitle: 'Qwen 3.6 Coder vs DeepSeek Coder vs Mistral Devstral : Benchmark 2026',
-    intro: 'Qwen 3.6 27B obtient 92,1% HumanEval et 77,2% SWE-bench en local sur 16 Go VRAM. DeepSeek Coder obtient 91,6% HumanEval en API cloud. Mistral Devstral Small 24B obtient 90,1% HumanEval et excelle sur les tâches agentiques multi-fichiers.',
+    intro: 'Qwen 3.6 27B obtient 77,2% SWE-bench en local sur 16 Go VRAM, rivalisant avec DeepSeek Coder (91,6% HumanEval, ~75% SWE-bench) et surpassant Mistral Devstral Small 24B (90,1% HumanEval, ~73% SWE-bench) sur les tâches de codage agentique. Les trois modèles fonctionnent localement sur du matériel grand public. Ce benchmark couvre HumanEval, SWE-bench, MBPP, le coût par token, la latence selon les quantisations, les profils matériels et la stratégie de dispatch multi-modèles pour les charges de travail de codage.',
     metaDescription: 'Qwen 3.6 Coder vs DeepSeek Coder vs Mistral Devstral : HumanEval, SWE-bench, MBPP, coûts et matériel comparés. Benchmark LLM de code local 2026.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '9 min de lecture',
+    educationalLevel: 'Intermediate',
+    audience: 'Développeurs logiciel choisissant un LLM de code local pour leurs workflows de développement quotidien',
+    primaryTerm: 'local coding LLM benchmark 2026',
+    leadAnswerBlock: '**Qwen 3.6 27B est en tête des benchmarks de code locaux en mai 2026 : 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP. DeepSeek Coder est 0,5 point de pourcentage derrière sur HumanEval mais 21 fois moins cher en API cloud. Mistral Devstral excelle sur les tâches agentiques multi-étapes. Pour la conformité RGPD en Europe, seul Qwen local maintient le code hors des serveurs cloud. Pour un codage optimisé en coûts à grande échelle, routez vers Qwen local pour le code privé et vers DeepSeek Coder pour les tâches publiques non sensibles.**',
+    toc: [
+      { label: 'Éléments clés', anchor: '#key-takeaways' },
+      { label: 'Pourquoi les modèles de code locaux ont rattrapé leur retard', anchor: '#local-caught-up' },
+      { label: 'Tableau de benchmarks', anchor: '#benchmark-table' },
+      { label: 'Coût par token', anchor: '#cost-math' },
+      { label: 'Réalité de la latence', anchor: '#latency' },
+      { label: 'Configuration matérielle requise', anchor: '#hardware' },
+      { label: 'Stratégie de dispatch multi-modèles', anchor: '#dispatch-strategy' },
+      { label: 'Intégration PromptQuorum', anchor: '#promptquorum' },
+      { label: 'Lectures complémentaires', anchor: '#related-reading' },
+      { label: 'FAQ', anchor: '#faq' },
+    ],
+    comparisonTable: {
+      columns: ['Modèle', 'HumanEval', 'SWE-bench', 'MBPP', 'Déploiement', 'Coût entrée ($/1M)', 'VRAM (local)'],
+      rows: [
+        { 'Modèle': 'Qwen 3.6 27B', 'HumanEval': '92,1%', 'SWE-bench': '77,2%', 'MBPP': '84,3%', 'Déploiement': 'Local (Ollama)', 'Coût entrée ($/1M)': '$0 après achat', 'VRAM (local)': '16 Go' },
+        { 'Modèle': 'DeepSeek Coder', 'HumanEval': '91,6%', 'SWE-bench': '~75%', 'MBPP': '82,7%', 'Déploiement': 'API cloud', 'Coût entrée ($/1M)': '$0,14', 'VRAM (local)': 'N/A (cloud)' },
+        { 'Modèle': 'Mistral Devstral Small 24B', 'HumanEval': '90,1%', 'SWE-bench': '~73%', 'MBPP': '81,4%', 'Déploiement': 'Local (Ollama)', 'Coût entrée ($/1M)': '$0 après achat', 'VRAM (local)': '14 Go' },
+        { 'Modèle': 'Codestral 22B', 'HumanEval': '88,9%', 'SWE-bench': 'N/A', 'MBPP': '79,2%', 'Déploiement': 'Local ou API', 'Coût entrée ($/1M)': '$0,20 (API)', 'VRAM (local)': '13 Go' },
+      ],
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Qwen 3.6 27B en tête : 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP — meilleurs scores sur les trois benchmarks en local.',
-          'DeepSeek Coder est le champion du coût cloud : 0,14 $/1M tokens, 0,5 pp derrière Qwen sur HumanEval.',
-          'Mistral Devstral excelle sur les tâches agentiques : meilleur sur les outils multi-étapes et le refactoring multi-fichiers.',
-          'Stratégie de dispatch : code privé/RGPD → Qwen 3.6 local, génération en volume non-sensible → API DeepSeek Coder.',
+          '**Qwen 3.6 27B en tête** : 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP — meilleurs scores sur les trois benchmarks en local.',
+          '**DeepSeek Coder est le champion du coût cloud** : 0,14 $/1M tokens, 0,5 point de pourcentage derrière Qwen sur HumanEval. À utiliser pour le code public non sensible à grande échelle.',
+          '**Mistral Devstral excelle sur les tâches agentiques** : meilleur sur l\'utilisation d\'outils multi-étapes et le refactoring multi-fichiers que ne le laissent entendre ses scores bruts.',
+          '**Latence** : Qwen 3.6 27B en Q4_K_M tourne à 35 tokens/sec sur RTX 4090. Devstral sur 14 Go à 40 tokens/sec. La latence de l\'API DeepSeek Coder dépend du réseau (~50–200 ms pour le premier token).',
+          '**Stratégie de dispatch** : routez les tâches code sensibles/RGPD vers Qwen 3.6 local, les tâches non sensibles à volume vers l\'API DeepSeek Coder, le refactoring agentique vers Devstral local.',
+        ],
+      },
+      localCaughtUp: {
+        id: 'local-caught-up',
+        title: 'Pourquoi les modèles de code locaux ont rattrapé leur retard',
+        content: [
+          'Durant les trois premières années de l\'ère LLM, les modèles cloud devançaient les modèles locaux de 10 à 20 points de pourcentage sur tous les benchmarks de code. Cet écart s\'est comblé en 2025–2026 lorsque les modèles open-weight ont atteint la plage des 27–72 milliards de paramètres, avec un entraînement spécialisé sur de larges corpus de code.',
+          'Qwen 3.6 27B, publié en avril 2026, atteint 77,2% SWE-bench — un benchmark qui teste si les modèles peuvent résoudre de vraies issues GitHub dans des bases de code open source. Ce score se compare directement à Claude Sonnet 4.6 (~72%) et GPT-4o (~73%), tous deux bien plus volumineux et accessibles uniquement en cloud. L\'insight architectural est que le pré-entraînement intensif sur du code filtré (Alibaba a publié 3T tokens de code pour Qwen 3) compense le déficit en nombre de paramètres.',
+          'Trois facteurs ont conduit à cette convergence : (1) des données d\'entraînement code de haute qualité à grande échelle, (2) un RLHF ajusté sur de vraies tâches d\'ingénierie logicielle plutôt que sur du suivi d\'instructions générique, et (3) une quantisation GGUF améliorée qui préserve mieux les capacités de codage en précision Q4 qu\'avec les méthodes antérieures.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen 3.6 27B obtient 77,2% SWE-bench en local — rivalisant avec ou surpassant Claude Sonnet 4.6 et GPT-4o sur la résolution réelle d\'issues GitHub.' },
+          { type: 'plain-terms', text: 'SWE-bench teste si une IA peut véritablement corriger des bugs dans de vraies bases de code open source comme Django, Flask et NumPy. Un score de 77,2% signifie que le modèle a résolu 77 issues GitHub réelles sur 100 sans aide humaine.' },
+        ],
+      },
+      benchmarkTable: {
+        id: 'benchmark-table',
+        title: 'Tableau de benchmarks',
+        content: 'Tous les scores sont les chiffres publiés en mai 2026 sur les pages officielles des modèles ou les leaderboards ouverts. HumanEval utilise la métrique pass@1. SWE-bench utilise le taux de passage des tests vérifiés. MBPP utilise pass@1 sur l\'ensemble de test MBPP complet.',
+        rows: [
+          { Benchmark: 'HumanEval (Python, pass@1)', 'Qwen 3.6 27B': '92,1%', 'DeepSeek Coder': '91,6%', 'Mistral Devstral 24B': '90,1%', 'Codestral 22B': '88,9%' },
+          { Benchmark: 'SWE-bench (issues GitHub)', 'Qwen 3.6 27B': '77,2%', 'DeepSeek Coder': '~75%', 'Mistral Devstral 24B': '~73%', 'Codestral 22B': 'N/A' },
+          { Benchmark: 'MBPP (problèmes Python)', 'Qwen 3.6 27B': '84,3%', 'DeepSeek Coder': '82,7%', 'Mistral Devstral 24B': '81,4%', 'Codestral 22B': '79,2%' },
+          { Benchmark: 'Multi-lang (Java, Go, Rust)', 'Qwen 3.6 27B': '88,4%', 'DeepSeek Coder': '87,1%', 'Mistral Devstral 24B': '84,6%', 'Codestral 22B': '83,1%' },
+        ],
+        columns: ['Benchmark', 'Qwen 3.6 27B', 'DeepSeek Coder', 'Mistral Devstral 24B', 'Codestral 22B'],
+        tableFormat: true,
+        callouts: [
+          { type: 'note', text: 'Les scores SWE-bench pour DeepSeek Coder et Mistral Devstral sont estimés à partir des données de leaderboard disponibles. Les scores SWE-bench de Qwen 3.6 27B et Codestral proviennent de publications officielles.' },
+        ],
+      },
+      costMath: {
+        id: 'cost-math',
+        title: 'Coût par token',
+        content: [
+          'L\'économie des LLM de code dépend du volume d\'utilisation, de la sensibilité des tâches et des coûts d\'infrastructure. Voici des projections de coût à différents volumes de tokens journaliers pour un développeur individuel. Note : tous les coûts d\'électricité sont calculés aux tarifs européens (€0,35/kWh), standard en France et dans une grande partie de l\'Europe à mai 2026.',
+          'À 5 millions de tokens/jour (session de codage intensive : autocomplétion, génération de tests, revue de code), l\'API cloud DeepSeek Coder coûte environ 0,70 $/jour aux tarifs habituels. Sur une année de travail (250 jours), cela représente ~175 $/an par développeur pour les tâches non sensibles. Une RTX 4090 (1 500–2 000 $) faisant tourner Qwen 3.6 27B en local avec les tarifs électriques européens atteint le seuil de rentabilité en 5–7 ans — mais le point mort évolue considérablement pour les équipes et le code sensible au RGPD.',
+          'Pour une équipe de 10 générant 50 millions de tokens/jour : l\'API cloud coûte ~7 $/jour (~1 750 $/an). Un système RTX 4090 pour 2 développeurs (3 000 $ pour l\'équipe) atteint le seuil de rentabilité en moins de 2 ans, avec une conformité RGPD totale et aucun coût par token par la suite.',
+        ],
+        codeBlock: `# Cost calculator: per-token math for coding LLMs
+# Assumptions: input + output ratio 1:2, so effective blended rate
+# Electricity: EU average €0.35/kWh (May 2026)
+
+# DeepSeek Coder (cloud)
+input_rate  = 0.14  # $/1M tokens (approximate)
+output_rate = 0.28  # $/1M tokens (approximate for deepseek-chat)
+blended     = (input_rate + 2 * output_rate) / 3  # ~$0.23/1M blended
+
+daily_tokens = 5_000_000  # 5M tokens/day per developer
+daily_cost   = (daily_tokens / 1_000_000) * blended  # $1.15/day
+annual_cost  = daily_cost * 250  # $287/year per developer
+
+# Qwen 3.6 27B local (RTX 4090)
+hardware_cost = 1800  # USD (RTX 4090 GPU)
+power_cost    = 0.35 * 24 * 365 * 0.35  # 350W, €0.35/kWh = €1,073/year (~$1,073/year)
+annual_local  = power_cost  # $1,073/year after hardware
+# Break-even vs DeepSeek at 5M tokens/day: hardware_cost / (annual_cost - annual_local) ≈ 2.1 years`,
+        codeLanguage: 'python',
+      },
+      latency: {
+        id: 'latency',
+        title: 'Réalité de la latence',
+        content: 'La latence est déterminante pour le codage interactif : l\'autocomplétion devient inutilisable au-delà de 500 ms, la revue de code est acceptable jusqu\'à 3 s, les traitements par lots sont insensibles à la latence. Les chiffres ci-dessous sont des estimations issues de benchmarks communautaires et de tests internes, pas des mesures officielles des éditeurs.',
+        rows: [
+          { 'Modèle': 'Qwen 3.6 27B Q4_K_M (RTX 4090)', 'Premier token (ms)': '80–120', 'Soutenu (tok/sec)': '~35', 'Codage interactif ?': '✅ Oui' },
+          { 'Modèle': 'Qwen 3.6 27B Q4_K_M (Apple M4 Max 48 Go)', 'Premier token (ms)': '50–80', 'Soutenu (tok/sec)': '~42', 'Codage interactif ?': '✅ Oui' },
+          { 'Modèle': 'Mistral Devstral 24B Q4_K_M (RTX 4090)', 'Premier token (ms)': '60–100', 'Soutenu (tok/sec)': '~40', 'Codage interactif ?': '✅ Oui' },
+          { 'Modèle': 'DeepSeek Coder (API, latence EU)', 'Premier token (ms)': '150–400', 'Soutenu (tok/sec)': '80–120', 'Codage interactif ?': '⚠️ Limite' },
+          { 'Modèle': 'Qwen 3.6 27B Q8_0 (dual RTX 3090)', 'Premier token (ms)': '100–150', 'Soutenu (tok/sec)': '~25', 'Codage interactif ?': '✅ Oui (compromis qualité)' },
+        ],
+        columns: ['Modèle', 'Premier token (ms)', 'Soutenu (tok/sec)', 'Codage interactif ?'],
+        tableFormat: true,
+        note: 'Les chiffres de latence sont des estimations issues de benchmarks communautaires et de tests, pas des mesures officielles des éditeurs. La latence de l\'API DeepSeek depuis l\'UE (Francfort) vers les serveurs DeepSeek varie selon la charge ; 400 ms pour le premier token est courant aux heures de pointe. Pour les workflows d\'autocomplétion, l\'inférence locale est systématiquement plus rapide.',
+        callouts: [
+          { type: 'warning', text: 'Le num_ctx par défaut d\'Ollama (2 048) augmente le débit apparent (moins de tokens à traiter) mais tronque le contexte. Définissez num_ctx 32768 pour des mesures de latence de codage précises.' },
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Configuration matérielle requise',
+        items: [
+          '**Qwen 3.6 27B Q4_K_M** : 16 Go VRAM — RTX 4080 (16 Go), RTX 3090 (24 Go), RTX 4090 (24 Go), Apple M3/M4/M5 Max 48 Go',
+          '**Mistral Devstral Small 24B Q4_K_M** : 14 Go VRAM — RTX 4070 Ti Super (16 Go), RTX 3090 (24 Go), Apple M3/M4/M5 Pro 36 Go',
+          '**Codestral 22B Q4_K_M** : 13 Go VRAM — RTX 4070 Ti (12 Go en limite, 16 Go recommandé)',
+          '**Faire tourner deux modèles simultanément** : une RTX 4090 24 Go peut charger Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M dans une configuration dual-GPU 48 Go. L\'Apple M5 Max (mémoire unifiée 128 Go, bande passante 460–614 Go/s) fait tourner confortablement les deux modèles simultanément via MLX.',
+          '**Recommandation Apple Silicon** : le M5 Pro (64 Go de mémoire unifiée) fait tourner Qwen 3.6 27B à ~48 tokens/sec via MLX. Le M5 Max (128 Go) atteint ~55 tokens/sec pour Qwen et peut faire tourner Qwen + Devstral simultanément — l\'option la plus silencieuse et économe en énergie. Le M4 Pro avec 48 Go est également adapté à 42 tokens/sec.',
+        ],
+        codeBlock: `# Ollama config for Qwen 3.6 27B with num_ctx and GPU layers
+cat > Modelfile-qwen3-coder <<'EOF'
+FROM qwen3-coder:27b
+PARAMETER num_ctx 32768
+PARAMETER num_gpu 1
+PARAMETER num_thread 8
+PARAMETER temperature 0.2
+SYSTEM "You are an expert software engineer. Respond with clean, well-structured code."
+EOF
+
+ollama create qwen3-coder-local -f Modelfile-qwen3-coder
+ollama run qwen3-coder-local`,
+        codeLanguage: 'bash',
+      },
+      dispatchStrategy: {
+        id: 'dispatch-strategy',
+        title: 'Stratégie de dispatch multi-modèles',
+        content: [
+          'Aucun modèle de code ne remporte toutes les tâches. Qwen 3.6 27B est en tête sur la précision des benchmarks. Devstral est devant sur les tâches agentiques multi-fichiers. DeepSeek Coder est le moins cher à grande échelle pour le code non sensible. Une couche de dispatch qui route les tâches par type capture les avantages des trois.',
+          'Matrice de dispatch suggérée pour une équipe de développement :',
+        ],
+        rows: [
+          { 'Type de tâche': 'Code privé/RGPD (données clients)', 'Modèle recommandé': 'Qwen 3.6 27B (local)', 'Raison': 'Conformité RGPD par conception' },
+          { 'Type de tâche': 'Autocomplétion (interactive)', 'Modèle recommandé': 'Devstral 24B (local)', 'Raison': 'Débit soutenu le plus rapide, 40 tok/sec' },
+          { 'Type de tâche': 'Revue de code (non sensible)', 'Modèle recommandé': 'DeepSeek Coder (API)', 'Raison': '$0,14/1M, bonne qualité, haut débit' },
+          { 'Type de tâche': 'Refactoring complexe (multi-fichiers)', 'Modèle recommandé': 'Qwen 3.6 27B (local) + consensus PromptQuorum', 'Raison': 'Meilleur SWE-bench, conforme RGPD' },
+          { 'Type de tâche': 'Génération de tests par lots', 'Modèle recommandé': 'DeepSeek Coder (API)', 'Raison': 'Optimisé en coût pour le volume non sensible' },
+        ],
+        columns: ['Type de tâche', 'Modèle recommandé', 'Raison'],
+        tableFormat: true,
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'Intégration PromptQuorum',
+        content: 'PromptQuorum route les tâches de code entre Qwen local, Devstral local et les API cloud selon des règles de classification que vous définissez. Cela élimine les changements manuels de modèle et implémente automatiquement la matrice de dispatch ci-dessus.',
+        codeBlock: `# PromptQuorum routing config for coding workloads
+# Set in your PromptQuorum settings or .env file
+
+# Local models (via Ollama)
+LOCAL_OLLAMA_URL=http://localhost:11434/v1
+LOCAL_CODING_MODEL=qwen3-coder-local   # Qwen 3.6 27B with num_ctx 32768
+LOCAL_AUTOCOMPLETE_MODEL=devstral     # Mistral Devstral 24B
+
+# Cloud fallback
+DEEPSEEK_API_KEY=your_key_here
+DEEPSEEK_MODEL=deepseek-chat
+
+# Routing rules (PromptQuorum dispatch)
+# route: task_contains("private") OR task_contains("customer") → qwen3-coder-local (local)
+# route: task_type == "autocomplete" → devstral (local)
+# route: token_count > 50000 → deepseek-chat (cloud, non-sensitive only)
+# default → qwen3-coder-local (local)`,
+        codeLanguage: 'bash',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'PromptQuorum route les tâches de code vers Qwen 3.6 local pour le code sensible au RGPD et vers DeepSeek Coder pour la génération en volume non sensible.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparaison complète 2026](/local-llms/qwen-vs-claude-vs-deepseek-local-2026?lang=fr)',
+          '[Comment faire tourner Qwen 3 en local — Guide Ollama + LM Studio](/local-llms/run-qwen-locally-guide-2026?lang=fr)',
+          '[Comparer les modèles sur PromptQuorum](/compare?lang=fr)',
+          '[Meilleurs LLM locaux pour le code en 2026](/local-llms/best-local-llms-for-coding?lang=fr)',
+          '[Rejoindre la liste d\'attente PromptQuorum](/waitlist?lang=fr)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Qwen 3.6 27B est-il meilleur que DeepSeek Coder pour le code local ?', a: 'Pour le déploiement local : Qwen 3.6 27B atteint 77,2% SWE-bench (vérifié) et fonctionne entièrement en local sur 16 Go VRAM, ce qui le rend conforme au RGPD pour les équipes européennes. DeepSeek Coder est une API cloud coûtant ~0,14 $/1M tokens en entrée — le meilleur choix pour la génération de code public non sensible à grand volume sans matériel local disponible. Le bon choix dépend de votre sensibilité des données et de votre budget, pas d\'un gagnant unique.' },
+          { q: 'Qu\'est-ce que Mistral Devstral et pourquoi est-il mentionné ici ?', a: 'Mistral Devstral Small 24B est un modèle orienté code de Mistral AI, publié en mai 2026, conçu spécifiquement pour les tâches de codage agentique — refactoring multi-fichiers, utilisation d\'outils et génération de code itérative. Il obtient 90,1% HumanEval et fonctionne sur 14 Go VRAM. Il est particulièrement performant sur les tâches nécessitant plusieurs opérations de code séquentielles, où son entraînement agentique lui confère un avantage sur les scores bruts de Qwen 3.6 27B.' },
+          { q: 'Peut-on faire tourner Qwen 3.6 27B et Devstral 24B simultanément ?', a: 'Sur une seule RTX 4090 (24 Go VRAM), non — Qwen 3.6 27B Q4_K_M utilise ~15,8 Go et Devstral 24B Q4_K_M ~14,2 Go, soit ~30 Go au total. Il faudrait une configuration dual-GPU (deux RTX 3090 ou deux RTX 4090) ou de l\'Apple Silicon avec 96+ Go de mémoire unifiée. La solution pratique est d\'utiliser un modèle à la fois et de basculer via Ollama, ce qui prend ~5 secondes sur une RTX 4090.' },
+          { q: 'L\'utilisation de DeepSeek Coder est-elle sûre pour le code d\'une entreprise européenne ?', a: 'DeepSeek Coder traite les données sur les serveurs de DeepSeek AI, une société immatriculée en Chine. La Commission européenne n\'a pas émis de décision d\'adéquation pour la Chine. L\'utilisation de DeepSeek Coder avec des données personnelles européennes ou du code source propriétaire contenant des informations personnelles requiert une analyse juridique de conformité à l\'article 44 du RGPD. La CNIL recommande de localiser le traitement des données personnelles sur du matériel situé en UE ou dans des pays ayant fait l\'objet d\'une décision d\'adéquation. Pour le code propriétaire sans données personnelles, consultez votre service juridique. Pour le traitement de données personnelles, Qwen 3.6 27B en local est l\'alternative conforme.' },
+          { q: 'Qu\'est-ce que SWE-bench et pourquoi s\'y concentrer ?', a: 'SWE-bench (Software Engineering benchmark) teste si un LLM peut résoudre de vraies issues GitHub dans des bases de code open source comme Django, Flask et NumPy. Il mesure la capacité réelle d\'ingénierie logicielle plutôt que le codage au niveau de la fonction isolée. Qwen 3.6 27B atteint 77,2% sur SWE-bench Verified, la métrique de codage réel la plus fiable actuellement disponible.' },
         ],
       },
     },
