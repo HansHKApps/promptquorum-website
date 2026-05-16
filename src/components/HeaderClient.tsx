@@ -78,8 +78,8 @@ function t(key: string, lang: string) {
 }
 
 function navHref(path: string, lang: string) {
-  if (lang === 'ja' || lang === 'zh' || lang === 'de') return path === '/' ? `/${lang}` : `/${lang}${path}`
-  return lang === 'en' ? path : `${path}?lang=${lang}`
+  if (lang !== 'en') return path === '/' ? `/${lang}` : `/${lang}${path}`
+  return path
 }
 
 // Power Local LLM uses path-based locales (/de/power-local-llm) instead of ?lang=XX.

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: fwTitle,
     description: fwDesc,
-    alternates: generateAlternates(`/frameworks/${fw.slug}`, lang, true, undefined, ['ja', 'zh', 'de']),
+    alternates: generateAlternates(`/frameworks/${fw.slug}`, lang, true, undefined, ['ja', 'zh', 'de', 'fr']),
     openGraph: {
       type: 'article',
       url: `https://www.promptquorum.com/de/frameworks/${fw.slug}`,

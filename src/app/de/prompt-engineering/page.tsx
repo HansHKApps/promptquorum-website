@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.promptEngineeringHubTitle,
     description: t.promptEngineeringHubDescription,
-    alternates: generateAlternates('/prompt-engineering', lang, true, undefined, ['ja', 'zh', 'de']),
+    alternates: generateAlternates('/prompt-engineering', lang, true, undefined, ['ja', 'zh', 'de', 'fr']),
     openGraph: {
       title: t.promptEngineeringHubTitle,
       description: t.promptEngineeringHubOgDescription ?? t.promptEngineeringHubDescription,
