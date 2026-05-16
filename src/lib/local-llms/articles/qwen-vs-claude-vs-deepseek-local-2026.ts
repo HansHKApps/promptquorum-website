@@ -709,30 +709,6 @@ dispatch_rules:
       },
     },
   },
-  ja: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-16',
-    theme: 'Best Models',
-    title: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2：ローカルLLM vs クラウド比較 2026',
-    seoTitle: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2：2026年ベンチマーク比較',
-    intro: 'Qwen 3.6 27Bは16 GB VRAMでローカル実行して92.1% HumanEvalを達成。Claude Sonnet 4.6はハードウェア不要で89.4% HumanEval。DeepSeek R2は$0.14/1Mトークンでフロンティア推論を提供。このガイドはベンチマーク、EUのGDPR管轄、トークンコスト、ディスパッチ層の問題を網羅します。',
-    metaDescription: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2：HumanEval、SWE-bench、1Mトークンあたりのコスト、GDPRへの適合性、ハードウェア要件を2026年比較。',
-    publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
-    readTime: '10分で読めます',
-    sections: {
-      tldr: {
-        id: 'key-takeaways',
-        isTldr: true,
-        items: [
-          'Qwen 3.6 27Bはコーディングベンチマークをリード：消費者向けGPUで92.1% HumanEvalと77.2% SWE-bench。',
-          'DeepSeek R2は$0.14/1Mトークン。Claude Sonnet 4.6は$3/1Mトークン。ローカルQwenはハードウェア投資後に$0/1Mトークン。',
-          'GDPR第44条：ローカル展開のみが越境データ転送リスクを排除。',
-          'PromptQuorumはコーディングタスクをローカルQwenに、複雑な推論をClaudeに、大量処理をDeepSeekにルーティング。',
-        ],
-      },
-    },
-  },
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
@@ -938,13 +914,6 @@ dispatchers:
     budget:
       cost_max: $0.20/request`,
         codeLanguage: 'yaml',
-        content: [
-          '**ルーティングロジック：**',
-          '• **コーディング依頼** → ローカルQwen（92.1% HumanEval、遅延5～10秒、$0/token）',
-          '• **複雑推論** → Claude Sonnet 4.6（深度優位、レイテンシ 100～200ms、$3/1M）',
-          '• **大量処理** → DeepSeek R2（$0.14/1M、無制限スケーリング）',
-          '• **フォールバック** → ネットワーク障害時はローカルQwenへ自動フェイルオーバー',
-        ],
         callouts: [
           { type: 'tip', text: 'ディスパッチレイヤーで月 100M トークン × 混合ワークロードの場合、マルチモデル戦略は最大 60～80% コスト削減可能。' },
         ],

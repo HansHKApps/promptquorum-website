@@ -14,7 +14,7 @@ export const article: Record<Language, PEArticle> = {
       intro: 'Prompt injection — embedding malicious instructions in user input or documents to override system-prompt controls — is OWASP LLM #1. Learn attack types, jailbreaking differences, and 5 layered defenses.',
       publishDate: '2026-03-30',
       seoTitle: 'Prompt Injection Attacks 2026: How to Protect Your AI Prompts',
-      metaDescription: '40% of teams report prompt injection attacks. Learn defense patterns, input validation, sandboxing for cloud and local LLMs. Security checklist included.',
+      metaDescription: 'Learn prompt injection defense patterns, input validation, sandboxing for cloud and local LLMs. Security checklist included.',
       ogDescription: 'Prompt injection attacks and defense. Security patterns for LLMs.',
       twitterDescription: 'Learn prompt injection defense: input validation, sandboxing, detection patterns. Security guide for LLM applications.',
       dateModified: '2026-03-30',

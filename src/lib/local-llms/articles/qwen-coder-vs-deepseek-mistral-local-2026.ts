@@ -248,7 +248,7 @@ DEEPSEEK_MODEL=deepseek-coder-v3
 # default → qwen3-coder (local)`,
         codeLanguage: 'bash',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'PromptQuorum routes coding tasks to local Qwen 3.6 for GDPR-sensitive code and DeepSeek Coder v3 for non-sensitive bulk generation, reducing cloud API costs by 60–80%.' },
+          { type: 'one-sentence', text: 'PromptQuorum routes coding tasks to local Qwen 3.6 for GDPR-sensitive code and DeepSeek Coder v3 for non-sensitive bulk generation.' },
         ],
       },
       relatedReading: {
