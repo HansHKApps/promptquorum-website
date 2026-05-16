@@ -97,5 +97,29 @@
       "clicks": 0,
       "ctr": 0
     }
+  },
+  {
+    "id": "3fc26d75-94d5-43b6-bcfe-91a6578b5202",
+    "slug": "/prompt-engineering/ai-code-review",
+    "date": "2026-05-16T18:48:51.615Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AI Code Review 2026: Best Tools Ranked (CodeRabbit, Greptile, Snyk) + Prompt Framework",
+        "new": "AI Code Review 2026: Snyk vs Greptile vs CodeRabbit"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AI code review tools detect 42-85% of runtime bugs vs sub-20% for SAST. CodeRabbit, Greptile, and Snyk compared. Includes 5-part prompt framework to cut noise by 3×.",
+        "new": "Snyk vs Greptile vs CodeRabbit: AI code review tools compared. Detect 42-85% of runtime bugs vs SAST's 20%. Benchmarks, pricing, and when to use each."
+      }
+    ],
+    "reason": "geo-meta-optimizer: shift from generic headline to tool-comparison angle matching real queries (snyk, greptile). Add schema.url and schema.inLanguage to EN block. Trim metaDescription to 151 chars.",
+    "baseline": {
+      "position": 7.3,
+      "impressions": 886,
+      "clicks": 0,
+      "ctr": 0
+    }
   }
 ]
