@@ -11115,6 +11115,12 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           ],
           columns: ['Option', 'Monthly Cost', 'GDPR Risk', 'Setup Complexity'],
         },
+        deepseekDisclaimer: {
+          title: 'A Note on DeepSeek Pricing',
+          content: [
+            'DeepSeek\'s model lineup and pricing evolve frequently. Verify the current model name and pricing at platform.deepseek.com before deployment. Figures reflect publicly available data as of May 2026.',
+          ],
+        },
         migrationPath: {
           title: 'How EU Teams Are Making the Switch',
           content: [

@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Commercial freedom is the third benefit. Apache 2.0 grants perpetual, irrevocable rights to use Qwen 3 for any purpose. Proprietary API terms can change. Anthropic, OpenAI, and Google have all modified their usage policies, pricing, and model availability within 12-month windows. Open-weight Apache 2.0 models cannot be unilaterally withdrawn.',
         ],
         callouts: [
-          { type: 'tip', text: 'Always verify the licence on the specific model size before production deployment. Qwen 3 72B uses the Qwen Research License (not Apache 2.0) and has restrictions on commercial deployment at scale. Qwen 3.6 27B and smaller sizes use Apache 2.0.' },
+          { type: 'tip', text: 'DeepSeek\'s model lineup evolves frequently. Verify the current model name and pricing at platform.deepseek.com before deployment. Figures reflect publicly available data as of May 2026.' },
         ],
       },
       qwenLicence: {
@@ -154,15 +154,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qwen Licence Landscape',
         content: 'Licence terms determine whether a model can be used commercially, distributed, and fine-tuned. Review the relevant licence before deploying in production. Verify all licence information against the official Hugging Face model card.',
         rows: [
-          { 'Model Size': '[Qwen 3 0.6B, 1.7B, 4B, 8B](https://huggingface.co/Qwen)', Licence: '[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)', 'Commercial Use': '✅ Unrestricted', 'Fine-tuning': '✅ Yes', 'Redistribution': '✅ Yes' },
-          { 'Model Size': '[Qwen 3.6 27B](https://huggingface.co/Qwen)', Licence: '[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)', 'Commercial Use': '✅ Unrestricted', 'Fine-tuning': '✅ Yes', 'Redistribution': '✅ Yes' },
-          { 'Model Size': '[Qwen 3 32B](https://huggingface.co/Qwen)', Licence: '[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)', 'Commercial Use': '✅ Unrestricted', 'Fine-tuning': '✅ Yes', 'Redistribution': '✅ Yes' },
-          { 'Model Size': '[Qwen 3 72B](https://huggingface.co/Qwen)', Licence: '[Qwen Research License](https://huggingface.co/Qwen)', 'Commercial Use': '⚠️ Restricted (>100M MAU threshold)', 'Fine-tuning': '✅ Yes', 'Redistribution': '⚠️ With attribution' },
-          { 'Model Size': '[Qwen 3 235B MoE](https://huggingface.co/Qwen)', Licence: '[Qwen Research License](https://huggingface.co/Qwen)', 'Commercial Use': '⚠️ Restricted', 'Fine-tuning': '✅ Yes', 'Redistribution': '⚠️ With attribution' },
+          { 'Qwen Model Family': 'All Qwen 3.6 open-weight models', Licence: 'Apache 2.0', 'Commercial Use': '✅ Unrestricted' },
+          { 'Qwen Model Family': 'All Qwen 3.5 open-weight models', Licence: 'Apache 2.0', 'Commercial Use': '✅ Unrestricted' },
+          { 'Qwen Model Family': 'Older Qwen variants (pre-3.5)', Licence: 'Varies — check model card', 'Commercial Use': '⚠️ Verify' },
         ],
-        columns: ['Model Size', 'Licence', 'Commercial Use', 'Fine-tuning', 'Redistribution'],
+        columns: ['Qwen Model Family', 'Licence', 'Commercial Use'],
         tableFormat: true,
-        note: 'Qwen Research License allows commercial use but restricts services with more than 100 million monthly active users. For most EU enterprise deployments, this threshold is not reached. Always verify the current licence text on the model\'s official [Hugging Face repository](https://huggingface.co/Qwen) before production deployment.',
+        blockquote: 'Always verify the license on the specific model\'s Hugging Face page before production deployment. Licenses can change between model releases. This table reflects QwenLM\'s stated policy as of May 2026.',
       },
       gdprFit: {
         id: 'gdpr-fit',
@@ -221,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does GDPR ban cloud AI for EU organisations?', a: 'No. GDPR does not ban cloud AI. It requires that cross-border data transfers have a legal basis (Article 44). Standard Contractual Clauses (SCCs) are the most common legal basis for EU organisations using US-based cloud AI APIs. Cloud AI is legally usable with appropriate SCCs, Data Processing Agreements (DPAs), and data minimisation practices. Local LLMs offer a structurally simpler compliance posture by eliminating the transfer entirely.' },
           { q: 'Is DeepSeek R2 compliant with GDPR for EU personal data?', a: 'Using DeepSeek R2 for EU personal data is high-risk from a GDPR perspective. DeepSeek AI operates from China. The EU Commission has not issued a China adequacy decision. Without an adequacy decision, international transfers require SCCs or Binding Corporate Rules (BCRs). DeepSeek does not currently offer EU-standard SCCs. Consult your DPO before using DeepSeek R2 for any personal data.' },
           { q: 'Does the EU AI Act apply to local Qwen deployment?', a: 'As of May 2026, deploying Qwen 3.6 27B locally makes you a user, not a provider, under the EU AI Act. GPAI provider obligations (Article 53 documentation, adversarial testing for systemic risk models) apply to the model creator (Alibaba) and to organisations that build products on the model and make it available to others. Internal deployment for your own organisation\'s use is covered only by the user provisions (prohibited use cases, end-user transparency where applicable).' },
-          { q: 'Is Qwen 3.6 27B truly Apache 2.0 licensed?', a: 'Yes. Qwen 3.6 27B is released under Apache 2.0, which permits commercial use, modification, and redistribution without royalties. The larger Qwen 3 72B and Qwen 3 235B MoE use the Qwen Research License, which has restrictions on services exceeding 100 million monthly active users. Always verify on the model\'s official Hugging Face repository page before deploying in production.' },
+          { q: 'Is Qwen 3.6 27B truly Apache 2.0 licensed?', a: 'Yes. Qwen 3.6 27B is released under Apache 2.0, which permits commercial use, modification, and redistribution without royalties. Verify each model\'s current license on its Hugging Face model card before deploying in production.' },
           { q: 'What is the EU AI Act\'s GPAI threshold?', a: 'The EU AI Act defines general-purpose AI models trained on more than 10^25 FLOPs compute as "systemic risk" GPAI models requiring additional oversight. Frontier models (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro) cross this threshold. Open-weight models in the 7B–72B range, including Qwen 3.6 27B, are well below the threshold as of May 2026. The threshold applies to the training compute of the model itself — not to inference compute at your organisation.' },
         ],
       },

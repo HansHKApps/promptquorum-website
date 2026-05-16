@@ -9,6 +9,7 @@ import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { FrameworkWheel } from '@/components/FrameworkWheel'
 import { ImageLightbox } from '@/components/ImageLightbox'
+import { FactsDisclaimer } from '@/components/FactsDisclaimer'
 
 // Helper to convert "Published Month DD, YYYY" to ISO date format "YYYY-MM-DD"
 function getDateISO(dateStr: string): string {
@@ -251,6 +252,8 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
             ))}
           </div>
         </article>
+
+        <FactsDisclaimer />
 
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-text-tertiary">

@@ -11,6 +11,7 @@ import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
+import { FactsDisclaimer } from '@/components/FactsDisclaimer'
 
 interface Props {
   slug: string
@@ -50,11 +51,11 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '使用PromptQuorum将您的本地LLM与25+个云模型同时进行比较。',
   },
   ctaButton: {
-    en: 'Try PromptQuorum free →',
-    de: 'PromptQuorum kostenlos testen →',
-    fr: 'Essayer PromptQuorum gratuitement →',
-    ja: 'PromptQuorumを無料で試す →',
-    zh: '免费试用PromptQuorum →',
+    en: 'Join the PromptQuorum Waitlist →',
+    de: 'PromptQuorum-Warteliste beitreten →',
+    fr: 'Rejoindre la liste d\'attente PromptQuorum →',
+    ja: 'PromptQuorumウェイトリストに参加する →',
+    zh: '加入PromptQuorum等待列表 →',
   },
   backLink: {
     en: '← Back to Local LLMs',
@@ -773,13 +774,15 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           })}
         </article>
 
+        <FactsDisclaimer />
+
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-primary/20 text-center">
           <p className="text-text-secondary mb-6">
             {article?.ctaText ?? POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
           </p>
           <a
-            href={(article as any)?.ctaHref ?? (lang === 'en' ? '/' : `/?lang=${lang}`)}
+            href={(article as any)?.ctaHref ?? (lang === 'en' ? '/waitlist' : `/waitlist?lang=${lang}`)}
             className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             {(article as any)?.ctaButton ?? POST_UI.ctaButton[lang] ?? POST_UI.ctaButton['en']}

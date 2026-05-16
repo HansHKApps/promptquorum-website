@@ -142,6 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'SWE-bench figures for Claude Sonnet 4.6 and DeepSeek R2 are estimated from public leaderboard data as of May 2026. Qwen 3.6 27B SWE-bench is Alibaba-published.',
         callouts: [
           { type: 'tip', text: 'Qwen 3.6 27B outperforms Claude Sonnet 4.6 on HumanEval (+2.7 pp) and SWE-bench (+5.2 pp). Claude leads on MMLU (+1.7 pp) and MATH (+2.5 pp). For EU coding teams, the local advantage is clearest in software engineering tasks.' },
+          { type: 'tip', text: 'DeepSeek\'s model lineup evolves frequently. Verify the current model name and pricing at platform.deepseek.com before deployment. Figures reflect publicly available data as of May 2026.' },
         ],
       },
       hardware: {
@@ -235,7 +236,7 @@ dispatch_rules:
     fallback_chain: [claude_sonnet_46, deepseek_r2]`,
         codeLanguage: 'YAML',
         items: [
-          'Based on internal benchmarking, dispatch routing patterns can reduce cloud API spend by an estimated 60–80% for mixed workloads where local Qwen handles the majority of coding and private-data tasks, with cloud APIs reserved for throughput bursts and tasks requiring the highest accuracy.',
+          'Based on internal benchmarking, dispatch routing patterns can significantly reduce cloud API spend for mixed workloads where local Qwen handles the majority of coding and private-data tasks, with cloud APIs reserved for throughput bursts and tasks requiring the highest accuracy.',
           'The key insight: route sensitive tasks (personal data, legal analysis) to local Qwen; route high-volume commodity tasks (summarisation, content generation) to DeepSeek; reserve Claude Sonnet 4.6 for complex reasoning and tasks where accuracy premium justifies the cost.',
         ],
         callouts: [
