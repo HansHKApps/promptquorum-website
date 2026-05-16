@@ -340,4 +340,115 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
     },
+    ja: {
+      freshness_tier: 'semi_annual',
+      theme: 'Advanced Techniques',
+      title: 'マルチモーダルローカルLLM: ビジョン、オーディオ、テキスト処理',
+      seoTitle: 'マルチモーダルローカルLLM',
+      intro: 'マルチモーダルモデルは画像、テキスト、オーディオを処理します。2026年4月現在、Llama 3.2 Vision、Gemma 3 Vision、Qwen2-VLはローカル展開に実用的なマルチモーダルモデルです。クラウドAPIなしでドキュメントOCR、画像分析、視覚的質問応答が可能です。',
+      metaDescription: 'マルチモーダルローカルLLM 2026: ビジョン、画像処理、OCR、オーディオモデル。LLaVA、Qwen-VLガイドと使用例。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**マルチモーダルモデルは画像、テキスト、オーディオを処理します。2026年4月現在、Llama 3.2 Vision、Gemma 3 Vision、Qwen2-VLはローカル展開に実用的なマルチモーダルモデルです。**',
+      audience: 'コンシューマーハードウェアで初めてのローカルLLMを実行する初心者',
+      readTime: '10分の読了',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'マルチモーダルモデル',
+      toc: [
+        { label: '重要なポイント', anchor: '#key-takeaways' },
+        { label: '利用可能なマルチモーダルモデル', anchor: '#models' },
+        { label: 'ビジョン機能', anchor: '#vision' },
+        { label: 'セットアップと使用', anchor: '#setup' },
+        { label: '実世界の使用例', anchor: '#use-cases' },
+        { label: 'パフォーマンスと制限', anchor: '#performance' },
+        { label: 'よくある間違い', anchor: '#common-mistakes' },
+        { label: '関連記事', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+
+          isTldr: true,
+          items: [
+            '**マルチモーダル = テキスト + 画像 (+ オーディオ)。** OCR前処理なしで画像をネイティブに処理します。',
+            '**最適なモデル (2026年):** Llama 3.2 Vision 11B、Qwen2-VL 7B、Gemma 3 Vision 9B。',
+            '**使用例:** ドキュメントOCR、画像分析、視覚的Q&A、表抽出。',
+            '**速度:** 画像あたり2-5秒（11Bモデル）。テキストのみより遅いが実用的。',
+            '2026年4月現在、マルチモーダルは特定の使用例に成熟していますが、まだ汎用的ではありません。',
+          ],
+        },
+        models: {
+          title: '利用可能なマルチモーダルモデル (2026年4月)',
+          rows: [
+            { 'モデル': 'Llama 3.2 Vision 11B', '画像サポート': 'はい', 'VRAM': '8 GB', '速度': '3-5秒/画像', '最適用途': '汎用ビジョン' },
+            { 'モデル': 'Qwen2-VL 7B', '画像サポート': 'はい', 'VRAM': '5 GB', '速度': '2-3秒/画像', '最適用途': '高速ビジョン' },
+            { 'モデル': 'Gemma 3 Vision 9B', '画像サポート': 'はい', 'VRAM': '6 GB', '速度': '3秒/画像', '最適用途': 'バランス型' },
+            { 'モデル': 'Llama 3.2 Vision 90B', '画像サポート': 'はい', 'VRAM': '55 GB', '速度': '10+秒/画像', '最適用途': '高品質' },
+          ],
+          columns: ['モデル', '画像サポート', 'VRAM', '画像あたりの速度', '最適用途'],
+        },
+        vision: {
+          title: 'ビジョン機能',
+          content: [
+            'マルチモーダルモデルは以下が可能です:',
+          ],
+          items: [
+            '**画像説明:** 画像に何が含まれているかを説明します。',
+            '**OCR (光学文字認識):** 画像からテキストを抽出 (名刺、スキャンドキュメント)。',
+            '**視覚的Q&A:** 画像についての質問に回答 (「車のブランドは何ですか？」)。',
+            '**表抽出:** 画像から表を構造化データに変換。',
+            '**グラフ分析:** データビジュアライゼーションを解釈。',
+            '**物体検出:** 画像内の物体を識別して配置。',
+          ],
+        },
+        setup: {
+          title: 'セットアップと使用',
+          content: 'Ollama でLlama 3.2 Visionを使用:',
+          codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
+          codeLanguage: 'python',
+        },
+        useCases: {
+          title: '実世界の使用例',
+          items: [
+            '**ドキュメント処理:** 外部OCRサービスなしでスキャンされたPDFからテキストを抽出。',
+            '**コンテンツモデレーション:** クラウドに送信せず不適切な画像にフラグを立てます。',
+            '**アクセシビリティ:** 視覚障害者ユーザーのために画像を説明。',
+            '**製品分析:** eコマースで製品画像を分析 (カテゴリー、状態、欠陥)。',
+            '**研究:** 科学図表やダイアグラムを分析。',
+          ],
+        },
+        performance: {
+          title: 'パフォーマンスと制限',
+          content: [
+            '**精度:** ドキュメントOCRと説明には適していますが、詳細な分析や小さな物体には完全ではありません。',
+            '**速度:** 画像あたり2-5秒。クラウドモデル (GPT-4 Vision) は10-50倍高速です。',
+            '**画像サイズ:** 最大 ~1000×1000ピクセルをサポート。より大きな画像はダウンサンプリングされます。',
+            '**制限:** 複雑なシーンではGPT-4 Vision精度と同等にはできません。トレードオフ: プライバシー対品質。',
+          ],
+        },
+        commonMistakes: {
+          title: 'よくある間違い',
+          items: [
+            '**GPT-4 Visionの精度を期待する。** ローカルモデルは20-30%精度が低い。汎用ビジョンではなく、特定の領域に使用します。',
+            '**画像を準備しない。** 画像をフォーカス領域にトリミングします。ノイズを除去します。入力が良い = 出力が良い。',
+            '**複雑なビジョンに7Bモデルを使用する。** 小さいモデルは微細な詳細で苦しみます。信頼できるビジョンには11B+を使用します。',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連記事',
+          items: [
+            '[コーディング用最適なローカルLLM](/local-llms/best-local-llms-for-coding?lang=ja) -- ビジョンはコード理解に役立ちます。',
+            '[ローカルRAG 2026](/local-llms/local-rag-2026?lang=ja) -- ビジョンをRAGと組み合わせてドキュメント処理。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'ソース',
+          items: [
+            'Llama 3.2 Vision Model Card -- huggingface.co/meta-llama/Llama-3.2-11B-Vision',
+            'Qwen2-VL -- github.com/QwenLM/Qwen2-VL',
+          ],
+        },
+      },
+    },
   };
