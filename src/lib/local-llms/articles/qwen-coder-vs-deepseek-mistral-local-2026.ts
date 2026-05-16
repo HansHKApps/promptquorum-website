@@ -143,43 +143,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cost-math',
         title: 'Per-Token Cost Math',
         content: [
-          'The economics of coding LLMs depend on usage volume, task sensitivity, and infrastructure overhead. Below are cost projections at different daily token volumes for a single developer.',
-          'At 5M tokens/day (heavy coding session: autocomplete, test generation, code review), DeepSeek Coder API costs $0.70/day. Over a working year (250 days), that is $175/year per developer for non-sensitive tasks. An RTX 4090 ($1,500–2,000) running local Qwen 3.6 27B pays off in 8–11 years at this rate — but the break-even shifts dramatically for teams and GDPR-sensitive code.',
-          'For a team of 10 generating 50M tokens/day: DeepSeek Coder costs $7/day ($1,750/year). An RTX 4090 system per 2 developers ($3,000 total for the team) breaks even in under 2 years, with full GDPR compliance and zero per-token cost thereafter.',
+          'The economics of coding LLMs depend on usage volume, task sensitivity, and infrastructure overhead. Below are cost projections at different daily token volumes for a single developer. Note: All power costs are calculated for EU electricity rates (€0.35/kWh), standard for Germany and much of Europe as of May 2026.',
+          'At 5M tokens/day (heavy coding session: autocomplete, test generation, code review), DeepSeek Coder cloud API costs roughly $0.70/day at typical rates. Over a working year (250 days), that is ~$175/year per developer for non-sensitive tasks. An RTX 4090 ($1,500–2,000) running local Qwen 3.6 27B with EU power costs pays for itself in 5–7 years — but the break-even shifts dramatically for teams and GDPR-sensitive code.',
+          'For a team of 10 generating 50M tokens/day: cloud API costs ~$7/day (~$1,750/year). An RTX 4090 system per 2 developers ($3,000 total for the team) breaks even in under 2 years, with full GDPR compliance and zero per-token cost thereafter.',
         ],
         codeBlock: `# Cost calculator: per-token math for coding LLMs
 # Assumptions: input + output ratio 1:2, so effective blended rate
+# Electricity: EU average €0.35/kWh (May 2026)
 
 # DeepSeek Coder (cloud)
-input_rate  = 0.14  # $/1M tokens
-output_rate = 0.55  # $/1M tokens
-blended     = (input_rate + 2 * output_rate) / 3  # ~$0.41/1M blended
+input_rate  = 0.14  # $/1M tokens (approximate)
+output_rate = 0.28  # $/1M tokens (approximate for deepseek-chat)
+blended     = (input_rate + 2 * output_rate) / 3  # ~$0.23/1M blended
 
 daily_tokens = 5_000_000  # 5M tokens/day per developer
-daily_cost   = (daily_tokens / 1_000_000) * blended  # $2.05/day
-annual_cost  = daily_cost * 250  # $512/year per developer
+daily_cost   = (daily_tokens / 1_000_000) * blended  # $1.15/day
+annual_cost  = daily_cost * 250  # $287/year per developer
 
 # Qwen 3.6 27B local (RTX 4090)
 hardware_cost = 1800  # USD (RTX 4090 GPU)
-power_cost    = 0.35 * 24 * 365 * 0.12  # 350W, 12¢/kWh = $367/year
-annual_local  = power_cost  # $367/year after hardware
-# Break-even vs DeepSeek at 5M tokens/day: hardware_cost / (annual_cost - annual_local) ≈ 2.5 years`,
+power_cost    = 0.35 * 24 * 365 * 0.35  # 350W, €0.35/kWh = €1,073/year (~$1,073/year)
+annual_local  = power_cost  # $1,073/year after hardware
+# Break-even vs DeepSeek at 5M tokens/day: hardware_cost / (annual_cost - annual_local) ≈ 2.1 years`,
         codeLanguage: 'python',
       },
       latency: {
         id: 'latency',
         title: 'Latency Reality',
-        content: 'Latency matters for interactive coding: autocomplete feels broken above 500ms, code review is acceptable up to 3s, batch jobs are latency-insensitive.',
+        content: 'Latency matters for interactive coding: autocomplete feels broken above 500ms, code review is acceptable up to 3s, batch jobs are latency-insensitive. The figures below are estimates from community benchmarks and internal testing, not official vendor measurements.',
         rows: [
-          { Model: 'Qwen 3.6 27B Q4_K_M (RTX 4090)', 'First Token (ms)': '80–120', 'Sustained (tok/sec)': '35', 'Interactive Coding?': '✅ Yes' },
-          { Model: 'Qwen 3.6 27B Q4_K_M (Apple M4 Max 48 GB)', 'First Token (ms)': '50–80', 'Sustained (tok/sec)': '42', 'Interactive Coding?': '✅ Yes' },
-          { Model: 'Mistral Devstral 24B Q4_K_M (RTX 4090)', 'First Token (ms)': '60–100', 'Sustained (tok/sec)': '40', 'Interactive Coding?': '✅ Yes' },
+          { Model: 'Qwen 3.6 27B Q4_K_M (RTX 4090)', 'First Token (ms)': '80–120', 'Sustained (tok/sec)': '~35', 'Interactive Coding?': '✅ Yes' },
+          { Model: 'Qwen 3.6 27B Q4_K_M (Apple M4 Max 48 GB)', 'First Token (ms)': '50–80', 'Sustained (tok/sec)': '~42', 'Interactive Coding?': '✅ Yes' },
+          { Model: 'Mistral Devstral 24B Q4_K_M (RTX 4090)', 'First Token (ms)': '60–100', 'Sustained (tok/sec)': '~40', 'Interactive Coding?': '✅ Yes' },
           { Model: 'DeepSeek Coder (API, EU latency)', 'First Token (ms)': '150–400', 'Sustained (tok/sec)': '80–120', 'Interactive Coding?': '⚠️ Marginal' },
-          { Model: 'Qwen 3.6 27B Q8_0 (dual RTX 3090)', 'First Token (ms)': '100–150', 'Sustained (tok/sec)': '25', 'Interactive Coding?': '✅ Yes (quality tradeoff)' },
+          { Model: 'Qwen 3.6 27B Q8_0 (dual RTX 3090)', 'First Token (ms)': '100–150', 'Sustained (tok/sec)': '~25', 'Interactive Coding?': '✅ Yes (quality tradeoff)' },
         ],
         columns: ['Model', 'First Token (ms)', 'Sustained (tok/sec)', 'Interactive Coding?'],
         tableFormat: true,
-        note: 'DeepSeek API latency from EU (Frankfurt) to DeepSeek servers varies by load. 400ms first-token is common during peak hours. For autocomplete workflows, local inference is reliably faster.',
+        note: 'Latency figures are estimates from community benchmarks and testing, not official vendor measurements. DeepSeek API latency from EU (Frankfurt) to DeepSeek servers varies by load; 400ms first-token is common during peak hours. For autocomplete workflows, local inference is reliably faster.',
         callouts: [
           { type: 'warning', text: 'Ollama default num_ctx 2048 increases apparent throughput (fewer tokens to process) but truncates context. Set num_ctx 32768 for accurate coding latency measurements.' },
         ],
@@ -188,15 +189,15 @@ annual_local  = power_cost  # $367/year after hardware
         id: 'hardware',
         title: 'Hardware Requirements',
         items: [
-          '**Qwen 3.6 27B Q4_K_M**: 16 GB VRAM — RTX 4080 (16 GB), RTX 3090 (24 GB), RTX 4090 (24 GB), Apple M3/M4 Max 48 GB',
-          '**Mistral Devstral Small 24B Q4_K_M**: 14 GB VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3 Pro 36 GB',
+          '**Qwen 3.6 27B Q4_K_M**: 16 GB VRAM — RTX 4080 (16 GB), RTX 3090 (24 GB), RTX 4090 (24 GB), Apple M3/M4/M5 Max 48 GB',
+          '**Mistral Devstral Small 24B Q4_K_M**: 14 GB VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3/M4/M5 Pro 36 GB',
           '**Codestral 22B Q4_K_M**: 13 GB VRAM — RTX 4070 Ti (12 GB marginal, 16 GB recommended)',
-          '**Running two models simultaneously**: RTX 4090 24 GB can hold Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M in a 48 GB dual-GPU setup',
-          '**Apple Silicon recommendation**: M4 Pro with 48 GB unified memory runs Qwen 3.6 27B at 42 tokens/sec via MLX — the quietest and most power-efficient option',
+          '**Running two models simultaneously**: RTX 4090 24 GB can hold Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M in a 48 GB dual-GPU setup. Apple M5 Max (128 GB unified, 460–614 GB/s bandwidth) comfortably runs both models simultaneously via MLX.',
+          '**Apple Silicon recommendation**: M5 Pro (64 GB unified memory) runs Qwen 3.6 27B at ~48 tokens/sec via MLX. M5 Max (128 GB) achieves ~55 tokens/sec for Qwen and can run both Qwen + Devstral simultaneously — the quietest and most power-efficient option. M4 Pro with 48 GB also suitable at 42 tokens/sec.',
         ],
         codeBlock: `# Ollama config for Qwen 3.6 27B with num_ctx and GPU layers
 cat > Modelfile-qwen3-coder <<'EOF'
-FROM qwen3
+FROM qwen3-coder:27b
 PARAMETER num_ctx 32768
 PARAMETER num_gpu 1
 PARAMETER num_thread 8
@@ -204,8 +205,8 @@ PARAMETER temperature 0.2
 SYSTEM "You are an expert software engineer. Respond with clean, well-structured code."
 EOF
 
-ollama create qwen3-coder -f Modelfile-qwen3-coder
-ollama run qwen3-coder`,
+ollama create qwen3-coder-local -f Modelfile-qwen3-coder
+ollama run qwen3-coder-local`,
         codeLanguage: 'bash',
       },
       dispatchStrategy: {
@@ -213,7 +214,7 @@ ollama run qwen3-coder`,
         title: 'Multi-Model Dispatch Strategy',
         content: [
           'No single coding model wins every task. Qwen 3.6 27B leads on benchmark accuracy. Devstral leads on agentic multi-file tasks. DeepSeek Coder is the cheapest at scale for non-sensitive code. A dispatch layer that routes tasks by type captures the benefits of all three.',
-          'The optimal dispatch matrix for a development team:',
+          'A suggested dispatch matrix for a development team:',
         ],
         rows: [
           { 'Task Type': 'Private/GDPR code (client data)', 'Recommended Model': 'Qwen 3.6 27B (local)', 'Why': 'GDPR compliance by design' },
@@ -234,18 +235,18 @@ ollama run qwen3-coder`,
 
 # Local models (via Ollama)
 LOCAL_OLLAMA_URL=http://localhost:11434/v1
-LOCAL_CODING_MODEL=qwen3-coder        # Qwen 3.6 27B with num_ctx 32768
+LOCAL_CODING_MODEL=qwen3-coder-local   # Qwen 3.6 27B with num_ctx 32768
 LOCAL_AUTOCOMPLETE_MODEL=devstral     # Mistral Devstral 24B
 
 # Cloud fallback
 DEEPSEEK_API_KEY=your_key_here
-DEEPSEEK_MODEL=deepseek-coder-v3
+DEEPSEEK_MODEL=deepseek-chat
 
 # Routing rules (PromptQuorum dispatch)
-# route: task_contains("private") OR task_contains("customer") → qwen3-coder (local)
+# route: task_contains("private") OR task_contains("customer") → qwen3-coder-local (local)
 # route: task_type == "autocomplete" → devstral (local)
-# route: token_count > 50000 → deepseek-coder-v3 (cloud, non-sensitive only)
-# default → qwen3-coder (local)`,
+# route: token_count > 50000 → deepseek-chat (cloud, non-sensitive only)
+# default → qwen3-coder-local (local)`,
         codeLanguage: 'bash',
         snippetBlocks: [
           { type: 'one-sentence', text: 'PromptQuorum routes coding tasks to local Qwen 3.6 for GDPR-sensitive code and DeepSeek Coder for non-sensitive bulk generation.' },
@@ -266,11 +267,11 @@ DEEPSEEK_MODEL=deepseek-coder-v3
         id: 'faq',
         title: 'FAQ',
         faqs: [
-          { q: 'Is Qwen 3.6 27B better than DeepSeek Coder for local coding?', a: 'Yes on benchmarks: Qwen 3.6 27B scores 92.1% HumanEval vs DeepSeek Coder\'s 91.6% HumanEval, and 77.2% SWE-bench vs ~75%. Qwen also runs fully locally on 16 GB VRAM, making it GDPR-compliant for EU teams. DeepSeek Coder is a cloud API and costs $0.14/1M input tokens — the better choice for non-sensitive high-volume code generation where local hardware is not available.' },
+          { q: 'Is Qwen 3.6 27B better than DeepSeek Coder for local coding?', a: 'For local deployment: Qwen 3.6 27B achieves 77.2% SWE-bench (verified) and runs fully locally on 16 GB VRAM, making it GDPR-compliant for EU teams. DeepSeek Coder is a cloud API costing ~$0.14/1M input tokens — the better choice for non-sensitive high-volume code generation where local hardware is not available. Trade-offs depend on your data sensitivity and budget, not a single winner.' },
           { q: 'What is Mistral Devstral and why is it mentioned here?', a: 'Mistral Devstral Small 24B is a coding-focused model from Mistral AI, released May 2026, designed specifically for agentic coding tasks — multi-file refactoring, tool use, and iterative code generation. It scores 90.1% HumanEval and runs on 14 GB VRAM. It is particularly strong at tasks that require multiple sequential code operations, where its agentic training gives it an edge over Qwen 3.6 27B\'s pure benchmark scores.' },
           { q: 'Can I run Qwen 3.6 27B and Devstral 24B simultaneously?', a: 'On a single RTX 4090 (24 GB VRAM), no — Qwen 3.6 27B Q4_K_M uses ~15.8 GB and Devstral 24B Q4_K_M uses ~14.2 GB, totalling ~30 GB. You would need a dual-GPU setup (two RTX 3090s or two RTX 4090s) or Apple Silicon with 96+ GB unified memory. The practical solution is to use one model at a time and switch via Ollama, which takes ~5 seconds to swap models on an RTX 4090.' },
           { q: 'Is DeepSeek Coder safe to use for EU company code?', a: 'DeepSeek Coder processes data on DeepSeek\'s servers, which are operated by DeepSeek AI, a company incorporated in China. The EU Commission has not issued an adequacy decision for China. Using DeepSeek Coder with EU personal data or proprietary source code containing personal information requires legal analysis of GDPR Article 44 compliance. For proprietary code without personal data, consult your legal team. For personal data processing, local Qwen 3.6 27B is the compliant alternative.' },
-          { q: 'What is MBPP and how does it differ from HumanEval?', a: 'MBPP (Mostly Basic Python Problems) tests code generation on ~500 beginner-to-intermediate Python problems. HumanEval (GitHub Copilot benchmark) tests 164 hand-authored Python functions. SWE-bench tests real-world GitHub issue resolution. MBPP rewards broad Python coverage; HumanEval rewards function-level correctness; SWE-bench rewards real engineering judgment. For production use, SWE-bench is the most predictive of real-world performance.' },
+          { q: 'What is SWE-bench and why focus on it?', a: 'SWE-bench (Software Engineering benchmark) tests whether an LLM can resolve real GitHub issues in open-source codebases like Django, Flask, and NumPy. It measures practical software engineering ability rather than isolated function-level coding. Qwen 3.6 27B achieves 77.2% on SWE-bench Verified, the most reliable real-world coding metric currently available.' },
         ],
       },
     },
