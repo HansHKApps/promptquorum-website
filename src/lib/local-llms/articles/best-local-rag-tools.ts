@@ -595,4 +595,245 @@ schema: {
         ]
       },
     },
+    ja: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: '2026年のベストローカルRAGツール：Open WebUI、LlamaIndex、LangChain',
+      seoTitle: 'ローカルRAGツール比較ガイド',
+      intro: 'RAG（検索拡張生成）を使うと、ローカルLLMが自分のドキュメントについて質問に答えられるようになります。2026年4月時点では、Open WebUIが最も簡単な組み込みRAG機能を提供しており（ドキュメントをアップロードして質問するだけ）、LlamaIndexとLangChainはRAGパイプラインを構築するためのプロ級フレームワークです。このガイドは、使いやすさ、機能、本番環境対応性を含む8つのツールをカバーしています。',
+      metaDescription: 'ベストローカルRAGツール：Open WebUI、LlamaIndex、LangChain。ドキュメントQ&A、検索、チャンキング対応。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**RAG（検索拡張生成）を使うと、ローカルLLMが自分のドキュメントについて質問に答えられるようになります。2026年4月時点では、Open WebUIが最も簡単な組み込みRAG機能を提供しており、LlamaIndexとLangChainはRAGパイプラインを構築するためのプロ級フレームワークです。**',
+      audience: 'コンシューマーハードウェアで初めてローカルLLMを実行する初心者',
+      readTime: '12分で読める',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'local RAG',
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: 'RAG（検索拡張生成）とは何か？', anchor: '#what-is-rag' },
+        { label: 'トップ8つのRAGツール比較', anchor: '#top-8-rag-tools' },
+        { label: '最も簡単：Open WebUI RAG', anchor: '#easiest-open-webui' },
+        { label: '最も柔軟：LlamaIndex', anchor: '#flexible-llamaindex' },
+        { label: '最も専門的：LangChain', anchor: '#professional-langchain' },
+        { label: 'オープンソースの代替案', anchor: '#open-source-alternatives' },
+        { label: 'RAG対ファインチューニング', anchor: '#rag-vs-finetuning' },
+        { label: 'よくある間違い', anchor: '#common-mistakes' },
+        { label: 'よくある質問', anchor: '#common-questions' },
+        { label: '関連する記事', anchor: '#related-reading' },
+        { label: '参考資料', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'RAG = ドキュメントをアップロードしてモデルに質問に答えさせ、出典を引用させる。',
+            '**Open WebUI**が最も簡単な組み込みRAG機能を提供。PDF をアップロードして質問するだけ。5分で設定完了。',
+            '**LlamaIndex**はRAGパイプライン構築に最も柔軟なフレームワーク。',
+            '**LangChain**は最も広く使われているプロフェッショナルフレームワーク。膨大なエコシステムを持つ。',
+            '**Chroma**と**Qdrant**がドキュメントチャンクを保存するベクトルデータベースのトップ選択肢。',
+            '2026年4月時点で、ローカルRAGは成熟しており、本番環境対応完了。',
+          ],
+        },
+        whatIsRAG: {
+          title: 'RAG（検索拡張生成）とは何か？',
+          content: [
+            '**RAGは、モデルをファインチューニングせずに、LLMが自分のドキュメントについて質問に答えられるようにする技術です。**',
+            'プロセス：(1)ドキュメント（PDF、テキストファイル）をアップロード、(2)チャンク（小片）に分割、(3)チャンクを埋め込み（数値ベクトル）に変換、(4)埋め込みをベクトルデータベースに保存、(5)質問に対して関連チャンクをデータベースから検索、(6)チャンク＋質問をLLMに渡す、(7)LLMがチャンクに基づいて回答。',
+            'RAGはドキュメントが頻繁に変更される場合（ファインチューニングは1回限りのトレーニング）や、出典の表示が必要な場合（どのドキュメントが使用されたかを示す）に、ファインチューニングより好ましいです。',
+          ],
+        },
+        top8Tools: {
+          title: '2026年のトップ8つのローカルRAGツール',
+          rows: [
+            { 'ツール': 'Open WebUI', 'タイプ': 'Webアプリ（Docker）', '最適な用途': '初心者向け、最も簡単なセットアップ', 'ベクトルDB': '組み込み', '学習曲線': 'なし' },
+            { 'ツール': 'LlamaIndex', 'タイプ': 'Pythonフレームワーク', '最適な用途': '柔軟なパイプライン', 'ベクトルDB': 'Any（Chroma、Qdrant、Pinecone）', '学習曲線': '中程度' },
+            { 'ツール': 'LangChain', 'タイプ': 'Pythonフレームワーク', '最適な用途': '本番環境システム', 'ベクトルDB': 'Any', '学習曲線': '中程度' },
+            { 'ツール': 'Chroma', 'タイプ': 'ベクトルデータベース', '最適な用途': 'シンプルなRAG', 'ベクトルDB': 'Chroma（組み込み）', '学習曲線': '低' },
+            { 'ツール': 'Qdrant', 'タイプ': 'ベクトルデータベース', '最適な用途': 'スケーラブルなRAG', 'ベクトルDB': 'Qdrant（分散）', '学習曲線': '中程度' },
+            { 'ツール': 'Weaviate', 'タイプ': 'ベクトルデータベース', '最適な用途': 'GraphQLクエリ', 'ベクトルDB': 'Weaviate', '学習曲線': '中程度' },
+            { 'ツール': 'Milvus', 'タイプ': 'ベクトルデータベース', '最適な用途': '大規模向け', 'ベクトルDB': 'Milvus', '学習曲線': '高' },
+            { 'ツール': 'Text-Generation-WebUI RAG', 'タイプ': '拡張機能', '最適な用途': 'モデルとの統合', 'ベクトルDB': '組み込み', '学習曲線': '低' },
+          ],
+          columns: ['ツール', 'タイプ', '最適な用途', 'ベクトルDB', '学習曲線'],
+        },
+        openWebUIRAG: {
+          title: 'Open WebUI RAG の使い方（最も簡単）',
+          content: [
+            '**Open WebUIには組み込みRAGがあります。** Dockerのセットアップ以外は不要。ドキュメントをアップロードして質問するだけです。',
+          ],
+          codeBlock: '# 1. Dockerで Open WebUI を実行\ndocker run -d -p 3000:8080 \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  ghcr.io/open-webui/open-webui:latest\n\n# 2. http://localhost:3000 を開く\n# 3. メッセージ入力の隣の "+" をクリック → "ファイルをアップロード"\n# 4. PDF またはテキストファイルを選択\n# 5. 質問を入力 -- Open WebUI が関連チャンクを取得\n# 6. モデルがドキュメントに基づいて回答し、出典を表示',
+          codeLanguage: 'bash',
+        },
+        llamaindex: {
+          title: 'LlamaIndex で RAG を構築する方法',
+          content: [
+            '**LlamaIndexはドキュメント読み込み、チャンキング、埋め込み、検索を処理するフレームワークです。** 柔軟性があり、あらゆるベクトルデータベースに対応しています。',
+          ],
+          codeBlock: '# 1. インストール\npip install llama-index\npip install llama-index-embeddings-ollama  # ローカル Ollama 埋め込みを使用\npip install llama-index-vector-stores-chroma  # Chroma をストレージとして使用\n\n# 2. シンプルなRAGパイプライン\nfrom llama_index.core import SimpleDirectoryReader, VectorStoreIndex\nfrom llama_index.embeddings.ollama import OllamaEmbedding\n\n# ドキュメントを読み込む\ndocuments = SimpleDirectoryReader("./documents").load_data()\n\n# ローカル埋め込みを使ってインデックスを作成\nembedding_model = OllamaEmbedding(model_name="nomic-embed-text")\nindex = VectorStoreIndex.from_documents(\n  documents,\n  embed_model=embedding_model\n)\n\n# クエリ実行\nquery_engine = index.as_query_engine()\nresponse = query_engine.query("ドキュメントは X について何と言っていますか？")\nprint(response)',
+          codeLanguage: 'python',
+        },
+        langchain: {
+          title: 'LangChain で RAG を構築する方法',
+          content: [
+            '**LangChainは本番RAGシステム向けの最も広く使われているフレームワークです。** すべてのベクトルデータベースとLLMプロバイダーに対応しています。',
+          ],
+          codeBlock: '# pip install langchain langchain-community langchain-chroma\n\nfrom langchain.document_loaders import DirectoryLoader\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.embeddings import OllamaEmbeddings\nfrom langchain.vectorstores import Chroma\nfrom langchain.chat_models import ChatOllama\nfrom langchain.chains import RetrievalQA\n\n# ドキュメントを読み込む\nloader = DirectoryLoader("./documents")\ndocs = loader.load()\n\n# チャンクに分割\nsplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\nchunks = splitter.split_documents(docs)\n\n# 埋め込みとベクトルストアを作成\nembeddings = OllamaEmbeddings(model="nomic-embed-text")\nvectorstore = Chroma.from_documents(chunks, embeddings)\n\n# QA チェーンを作成\nllm = ChatOllama(model="llama3.2:8b")\nqa = RetrievalQA.from_chain_type(\n  llm=llm,\n  chain_type="stuff",\n  retriever=vectorstore.as_retriever()\n)\n\n# 質問に回答\nresult = qa.run("ドキュメントは X について何と言っていますか？")\nprint(result)',
+          codeLanguage: 'python',
+        },
+        vectors: {
+          title: 'ローカルRAGに最適なベクトルデータベース',
+          content: [
+            '**Chroma**（最も簡単）：インプロセスベクトルデータベース。サーバーセットアップ不要。小規模RAGプロジェクト（100万ドキュメント未満）に最適。',
+            '**Qdrant**（スケーラブル）：分散ベクトルデータベース。大規模RAGプロジェクトに推奨。',
+            '**Weaviate**（エンタープライズ向け）：GraphQL クエリサポート。複雑なフィルタリングが必要な場合。',
+            '**Milvus**（大規模向け）：高度なスケーリング。数百万のドキュメント向け。',
+          ],
+        },
+        ragVsFinetuning: {
+          title: 'RAG 対 ファインチューニング',
+          content: [
+            '**RAGを使用する場合**：ドキュメントが頻繁に変わる場合、出典の表示が必要な場合、事実情報を提供する場合。',
+            '**ファインチューニングを使用する場合**：モデルの性格や文体を変更したい場合、推論のパターンや推理スキルを教えたい場合。',
+            'ベストプラクティス：多くの本番環境システムはRAG + ファインチューニングを組み合わせています。RAGは事実取得用、ファインチューニングは推論用。',
+          ],
+        },
+        commonMistakes: {
+          title: 'よくある間違い',
+          items: [
+            '**チャンクサイズが大きすぎる**。1000 トークン以上のチャンクは、無関係な情報を含む可能性が高くなります。512～1000トークンを推奨。',
+            '**埋め込みモデルが不適切**。事実情報にはnomic-embed-text、テキスト分類にはjina-embeddings-v3を使用。',
+            '**ベクトル検索の結果を十分に取得していない**。通常、質問ごとに上位5～10チャンクを取得することをお勧めします。',
+            '**LLMの足りないコンテキストにフォーカスしていない**。RAGで検索したチャンクを、LLMのコンテキスト長に合わせる必要があります。',
+          ],
+        },
+        faqSection: {
+          id: 'common-questions',
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'ローカルRAGには何GBのVRAMが必要ですか？',
+              a: 'ローカルLLMモデル（7B～13B）で8GB、大規模モデル（34B以上）で16GB以上が推奨されます。ベクトルデータベース自体はVRAMをほぼ使用しません。',
+            },
+            {
+              q: 'RAGではどのベクトル埋め込みモデルを使用すべきですか？',
+              a: 'nomic-embed-textが広く推奨されています。小規模な埋め込み（384次元）で小さいメモリフットプリント。大規模なコーパスにはjina-embeddings-v3（1024次元）を検討。',
+            },
+            {
+              q: 'RAGは本番環境で使用できますか？',
+              a: 'はい。Open WebUI、LlamaIndex、LangChainはすべて本番環境対応です。ただし、ドキュメント品質、埋め込みモデル、ベクトルデータベースのセットアップに依存します。',
+            },
+            {
+              q: 'ローカルRAGはセキュアですか？',
+              a: 'ローカルに実行されるため、データはお使いのマシン上に留まります。ただし、ベクトルデータベースへのアクセスは制限し、本番環境ではファイアウォール保護を推奨します。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連する記事',
+          items: [
+            '[ローカルLLMの完全ガイド](/local-llms/what-are-local-llms?lang=ja) -- ローカルLLMの基礎とセットアップ。',
+            '[Ollamaコマンドガイド](/local-llms/ollama-command-guide?lang=ja) -- Ollamaのセットアップと使用方法。',
+            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) -- GPU選択と本番環境セットアップ。',
+            '[LM Studioの詳細機能](/local-llms/lm-studio-advanced-features?lang=ja) -- 高度なLLM実験とプロンプトエンジニアリング。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '参考資料',
+          items: [
+            'Open WebUI GitHub -- github.com/open-webui/open-webui',
+            'LlamaIndex ドキュメント -- docs.llamaindex.ai',
+            'LangChain ドキュメント -- python.langchain.com',
+            'Chroma ドキュメント -- docs.trychroma.com',
+            'Qdrant ドキュメント -- qdrant.tech/documentation',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '2026年のベストローカルRAGツール：Open WebUI、LlamaIndex、LangChain',
+        description: 'ベストローカルRAGツール：Open WebUI、LlamaIndex、LangChain。ドキュメントQ&A、検索、チャンキング対応。',
+        datePublished: '2026-04-04',
+        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        inLanguage: 'ja',
+        url: 'https://www.promptquorum.com/local-llms/best-local-rag-tools?lang=ja',
+        about: [
+          { '@type': 'Thing', name: 'RAG（検索拡張生成）' },
+          { '@type': 'SoftwareApplication', name: 'Open WebUI' },
+          { '@type': 'SoftwareApplication', name: 'LlamaIndex' },
+          { '@type': 'SoftwareApplication', name: 'LangChain' },
+          { '@type': 'SoftwareApplication', name: 'Chroma' },
+          { '@type': 'SoftwareApplication', name: 'Qdrant' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Ollama' },
+          { '@type': 'SoftwareApplication', name: 'Weaviate' },
+          { '@type': 'SoftwareApplication', name: 'Milvus' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '#key-takeaways'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ja',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'ローカルRAGには何GBのVRAMが必要ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ローカルLLMモデル（7B～13B）で8GB、大規模モデル（34B以上）で16GB以上が推奨されます。ベクトルデータベース自体はVRAMをほぼ使用しません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RAGではどのベクトル埋め込みモデルを使用すべきですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'nomic-embed-textが広く推奨されています。小規模な埋め込み（384次元）で小さいメモリフットプリント。大規模なコーパスにはjina-embeddings-v3（1024次元）を検討。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RAGは本番環境で使用できますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'はい。Open WebUI、LlamaIndex、LangChainはすべて本番環境対応です。ただし、ドキュメント品質、埋め込みモデル、ベクトルデータベースのセットアップに依存します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'ローカルRAGはセキュアですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ローカルに実行されるため、データはお使いのマシン上に留まります。ただし、ベクトルデータベースへのアクセスは制限し、本番環境ではファイアウォール保護を推奨します。',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ja',
+        name: '2026年のトップローカルRAGツール',
+        numberOfItems: 8,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Open WebUI — 最も簡単', description: 'Webアプリ（Docker）。初心者向け。5分で設定完了。' },
+          { '@type': 'ListItem', position: 2, name: 'LlamaIndex — 最も柔軟', description: 'Pythonフレームワーク。あらゆるベクトルデータベースに対応。' },
+          { '@type': 'ListItem', position: 3, name: 'LangChain — 最も広く使用', description: 'Pythonフレームワーク。本番環境RAGシステム向け。' },
+          { '@type': 'ListItem', position: 4, name: 'Chroma — 最も簡単なVectorDB', description: 'インプロセスベクトルデータベース。サーバーセットアップ不要。' },
+          { '@type': 'ListItem', position: 5, name: 'Qdrant — スケーラブル', description: '分散ベクトルデータベース。大規模RAGプロジェクト向け。' },
+          { '@type': 'ListItem', position: 6, name: 'Weaviate — エンタープライズ向け', description: 'GraphQLクエリサポート。複雑なフィルタリング用。' },
+          { '@type': 'ListItem', position: 7, name: 'Milvus — 大規模向け', description: '高度なスケーリング。数百万ドキュメント向け。' },
+          { '@type': 'ListItem', position: 8, name: 'Text-Generation-WebUI RAG', description: '拡張機能。モデルとの統合。' },
+        ],
+      },
+    },
   };
