@@ -864,4 +864,269 @@ schema: {
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
     },
+    zh: {
+      freshness_tier: 'semi_annual',
+      theme: 'Enterprise',
+      title: '本地LLM气隙部署: 隔离架构与分类数据保护',
+      seoTitle: '气隙本地LLM部署: 隔离架构与安全指南',
+      intro: '气隙部署是指LLM基础设施完全隔离于互联网。无互联网连接、无外部API调用、无数据泄露风险。截至2026年4月，这是政府、军事和金融机构处理分类或高度敏感数据的标准做法。',
+      metaDescription: '了解如何在完全隔离的网络环境中部署本地LLM: 包括网络隔离架构设计、模型离线管理、安全更新流程和分类信息保护。适用于政府、军事、金融机构。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**气隙部署是指LLM基础设施完全隔离于互联网。无互联网连接、无外部API调用、无数据泄露风险。截至2026年4月，这是政府、军事和金融机构处理分类或高度敏感数据的标准做法。**',
+      audience: '在生产或企业环境中部署本地LLM的工程师',
+      readTime: '阅读约12分钟',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'air-gapped deployment',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '气隙是什么?', anchor: '#what-is-air-gapped' },
+        { label: '典型气隙架构', anchor: '#architecture' },
+        { label: '网络隔离', anchor: '#network-isolation' },
+        { label: '气隙中的模型管理', anchor: '#model-management' },
+        { label: '更新和维护', anchor: '#updates' },
+        { label: '安全考虑', anchor: '#security' },
+        { label: '常见部署错误', anchor: '#common-mistakes' },
+        { label: '相关阅读', anchor: '#related-reading' },
+        { label: '信息来源', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '气隙 = 完全隔离于互联网。零外部系统网络连接。',
+            '用例: 政府 (分类信息)、军事 (战争场景)、金融 (高度安全)、医疗 (HIPAA超敏感)。',
+            '挑战: 无法自动更新模型、嵌入式或依赖项。需要手动更新流程。',
+            '架构: 专用硬件、加密存储、受限用户访问、物理安全。',
+            '**网络隔离:** 防火墙、气隙设备和网络分段防止任何外部通信。',
+            '**模型管理:** 通过USB、安全媒体或内部网络传输模型；无云访问。',
+            '**更新:** 手动流程 -- 首先离线测试更新，然后通过安全渠道部署。',
+            '截至2026年4月，气隙是政府和国防承包商的标准做法。',
+          ],
+        },
+        whatIsAirGapped: {
+          title: '气隙意味着什么?',
+          content: [
+            '**气隙基础设施与互联网或任何外部系统都没有网络连接。** 所有数据和计算都保留在隔离硬件上。',
+            '**绝对隔离:** 无WiFi、无连接到外部网络的以太网、无连接到互联网设备的USB连接。',
+            '**数据永不离开:** 推理在本地进行，结果保留在本地。',
+            '**更新手动进行:** 无法自动下载模型更新。更新需要物理媒体 (USB驱动器、SD卡) 或内部网络传输。',
+          ],
+        },
+        architecture: {
+          title: '典型气隙架构是什么样的?',
+          content: [
+            '**一台机器或小型集群，完全隔离，具有受限的物理访问。**',
+          ],
+          numberedItems: [
+            '**专用硬件:** 仅用于LLM推理的服务器，无其他用途。',
+            '**隔离网络:** 无连接到企业网络或互联网。最多独立VLAN。',
+            '**加密存储:** 所有模型文件、数据、日志在静止时加密。',
+            '**受控访问:** 仅授权人员可访问。需要多因素身份验证。',
+            '**物理安全:** 锁定的服务器室、监视、访问日志。',
+            '**无可移除媒体:** USB端口禁用、CD/DVD驱动器移除。',
+            '**本地监控:** 日志保留在系统上，不发送到外部监控服务。',
+          ],
+        },
+        networkIsolation: {
+          title: '如何将网络与外部连接隔离?',
+          content: [
+            '**隔离在多个级别强制执行:**',
+          ],
+          items: [
+            '**物理:** 气隙基础设施的独立网络硬件 (交换机、路由器)。',
+            '**防火墙:** 入站和出站流量被阻止。云服务、NTP、外部DNS服务器无例外。',
+            '**软件:** 主机级防火墙 (iptables、Windows Firewall) 作为次要控制。',
+            '**监控:** 网络流量被审计。任何外部连接尝试都被记录和标记。',
+          ],
+        },
+        modelManagement: {
+          title: '如何在气隙环境中管理模型?',
+          content: [
+            '**模型更新是手动的，需要物理媒体传输或内部安全流程。**',
+          ],
+          numberedItems: [
+            '在互联网连接的机器 (独立、非分类环境) 上下载模型。',
+            '验证模型完整性 (校验和、数字签名)。',
+            '通过加密USB驱动器或内部文件服务器传输到气隙系统。',
+            '验证: 运行测试以确保模型完整性在传输过程中未被破坏。',
+            '部署: 将模型加载到推理引擎中。',
+            '文档: 记录部署了哪些模型、版本、日期。',
+          ],
+        },
+        updates: {
+          title: '如何处理更新和补丁?',
+          content: [
+            '**安全更新和模型更新是手动的:**',
+          ],
+          items: [
+            '**模型更新:** 遵循上述流程。按季度或年度安排更新。',
+            '**操作系统补丁:** 首先在隔离的暂存环境中测试，然后部署到生产环境。',
+            '**依赖项:** 仔细评估新版本。气隙系统运行较旧版本的时间较长。',
+            '**无自动更新:** 完全禁用自动更新。所有更新都受控制、记录和审计。',
+          ],
+        },
+        security: {
+          title: '如何确保气隙系统中的安全?',
+          content: [
+            '**气隙本质上更安全 (无外部攻击)，但会出现新风险:**',
+          ],
+          items: [
+            '**内部威胁:** 拥有访问权限的员工可能通过USB复制数据。需要双人完整性检查。',
+            '**供应链攻击:** 传输过程中的模型或依赖项被破坏。验证校验和、数字签名。',
+            '**物理盗窃:** 价值数百万的模型和数据。需要锁定的房间、监视、入侵检测。',
+            '**社交工程:** "相信我，我需要更新模型。" 需要正式的变更控制流程。',
+            '**日志记录缺口:** 如果日志未被审计，没有人会发现内部活动。需要定期外部审计日志。',
+          ],
+        },
+        commonMistakes: {
+          title: '常见的气隙部署错误',
+          items: [
+            '**不完整隔离:** 留下一个开放端口、启用一个无线卡或允许USB设备会破坏气隙。严格审计。',
+            '**无变更控制:** 模型更新非正式进行，无文档。导致部署版本信息丢失。',
+            '**糟糕的备份策略:** 气隙系统需要冗余存储和异地备份。但备份本身必须是气隙的。',
+            '**日志记录不足:** 气隙系统需要全面审计 (谁访问了什么、何时)。没有日志，违规行为无法检测。',
+            '**仅信任物理安全:** 安全需要多个层次: 隔离、加密、访问控制、审计，而不仅仅是锁定的门。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '关于气隙系统的常见问题',
+          faqs: [
+            {
+              q: '我们如何在气隙系统中更新模型?',
+              a: '通过加密USB手动进行，或通过与互联网隔离的内部安全网络进行。所有更新都需要变更控制批准和审计跟踪。',
+            },
+            {
+              q: '我们可以为气隙系统使用云备份吗?',
+              a: '不可以。云备份需要互联网连接 (破坏气隙)。使用物理备份 (加密硬盘) 存储在独立安全设施中。',
+            },
+            {
+              q: '气隙是否真的安全防止所有攻击?',
+              a: '大多数情况下是的，但内部威胁仍然存在。气隙可以防止远程攻击，但物理访问或内部访问可能会破坏它。',
+            },
+            {
+              q: '气隙部署的成本是多少?',
+              a: '硬件成本$50k-$500k (比常规本地部署多不了多少)。运营成本 (安全、审计、培训) 由于手动流程而高5-10倍。',
+            },
+            {
+              q: '我们可以在气隙环境中使用标准工具 (Ollama、vLLM) 吗?',
+              a: '可以。两种工具都可以在没有互联网的情况下工作。部署一次，然后不需要互联网连接。确保所有依赖项都是离线安装的。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[企业为何使用本地LLM](/local-llms/why-enterprises-use-local-llms?lang=zh) -- 本地AI的业务案例。',
+            '[企业合规与本地LLM](/local-llms/enterprise-compliance-local-llms?lang=zh) -- 监管要求。',
+            '[扩展企业本地LLM](/local-llms/scaling-local-llms-enterprise?lang=zh) -- 单机以外的生产部署。',
+            '[本地LLM安全和隐私检查清单](/local-llms/local-llm-security-privacy-checklist?lang=zh) -- 12步安全验证。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '信息来源',
+          items: [
+            'NIST网络安全框架 -- nist.gov/cyberframework',
+            'DoD数据管理 -- defense.gov/News/Releases/',
+            '气隙安全指南 -- ietf.org (RFC关于网络隔离的文档)',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '本地LLM气隙部署: 隔离架构与分类数据保护',
+        'description': '了解如何在完全隔离的网络环境中部署本地LLM: 包括网络隔离架构设计、模型离线管理、安全更新流程和分类信息保护。',
+        'url': 'https://www.promptquorum.com/local-llms/on-prem-air-gapped-local-llm?lang=zh',
+        'inLanguage': 'zh',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
+        'about': [
+          { '@type': 'Thing', 'name': '气隙部署' },
+          { '@type': 'Thing', 'name': '网络隔离' },
+          { '@type': 'Thing', 'name': '本地LLM' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '我们如何在气隙系统中更新模型?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '通过加密USB手动进行，或通过与互联网隔离的内部安全网络进行。所有更新都需要变更控制批准和审计跟踪。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我们可以为气隙系统使用云备份吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不可以。云备份需要互联网连接 (破坏气隙)。使用物理备份 (加密硬盘) 存储在独立安全设施中。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '气隙是否真的安全防止所有攻击?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '大多数情况下是的，但内部威胁仍然存在。气隙可以防止远程攻击，但物理访问或内部访问可能会破坏它。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '气隙部署的成本是多少?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '硬件成本$50k-$500k (比常规本地部署多不了多少)。运营成本 (安全、审计、培训) 由于手动流程而高5-10倍。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我们可以在气隙环境中使用标准工具 (Ollama、vLLM) 吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。两种工具都可以在没有互联网的情况下工作。部署一次，然后不需要互联网连接。确保所有依赖项都是离线安装的。',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '本地LLM气隙部署',
+        'inLanguage': 'zh',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '完全网络隔离',
+            'description': '气隙基础设施与互联网或任何外部系统都没有网络连接，确保零外部访问。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '手动更新流程',
+            'description': '模型更新仅需要物理媒体 (USB驱动器) 或内部安全网络；无云访问。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': '增强的安全性',
+            'description': '保护政府、军事和金融环境中的分类数据，需要最大的数据保护。',
+          },
+        ],
+      },
+    },
   };
