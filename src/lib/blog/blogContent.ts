@@ -11196,9 +11196,10 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
     de: {
       category: 'Local AI',
       title: 'Warum EU-Unternehmen 2026 von Cloud-KI auf lokales Qwen umsteigen',
-      intro: 'Eine Welle von EU-Organisationen wechselte Anfang 2026 von Cloud-KI zu lokalen Qwen-Deployments. DSGVO-Durchsetzungsmaßnahmen, steigende API-Kosten und die Leistungsparität von Qwen 3.6 27B haben die drei Haupteinwände gegen lokale LLMs beseitigt.',
+      seoTitle: 'EU-Unternehmen: Cloud-KI vs. lokales Qwen 2026',
+      intro: 'Eine Welle von EU-Organisationen wechselte Anfang 2026 von Cloud-KI zu lokalen Qwen-Deployments. DSGVO-Durchsetzungsmaßnahmen, steigende API-Kosten und die Leistungsparität von Qwen 3.6 27B haben die drei Haupteinwände gegen lokale LLMs beseitigt. Dieses Editorial untersucht die rechtlichen, wirtschaftlichen und technischen Treiber dieses Wandels — und warum die Dynamik weiter zunimmt.',
       publishDate: 'Veröffentlicht am 16. Mai 2026',
-      readTime: '10 min Lesezeit',
+      readTime: '10 Min. Lesezeit',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-16',
       metaDescription: 'Warum EU-Unternehmen Cloud-KI-APIs durch lokales Qwen 3.6 27B ersetzen: DSGVO Art. 44, Kostenanalyse, Leistungs-Benchmarks und praktische Migrationspfade.',
@@ -11206,12 +11207,141 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         tldr: {
           isTldr: true,
           items: [
-            'DSGVO-Durchsetzung wird ernster: EU-Datenschutzbehörden eröffneten 2025 mehr als 90 KI-Anfragen.',
-            'Qwen 3.6 27B erreicht 92,1% HumanEval — vergleichbar mit oder besser als Claude Sonnet 4.6 (89,4%) bei Coding-Aufgaben.',
-            'Kostenparität: Bei 300M Token/Monat amortisiert sich lokales Qwen auf einem RTX 4090 in unter 3 Monaten gegenüber Claude Sonnet 4.6.',
-            'DSGVO Art. 44: Lokales Deployment eliminiert grenzüberschreitende Übertragungspflichten vollständig.',
+            'DSGVO-Durchsetzung eskaliert: EU-Datenschutzbehörden eröffneten 2025 mehr als 90 KI-bezogene Untersuchungen, Cloud-KI-Datentransfers stehen unter direkter Prüfung.',
+            'Qwen 3.6 27B erreicht 92,1 % HumanEval — vergleichbar mit oder besser als Claude Sonnet 4.6 (89,4 %) bei Coding-Aufgaben, der Qualitätseinwand gegen lokale KI entfällt.',
+            'Kostenparität: Bei 300 M Token/Monat amortisiert sich lokales Qwen auf einem RTX 4090 in unter 3 Monaten gegenüber Claude Sonnet 4.6.',
+            '[DSGVO Art. 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1): Lokales Deployment eliminiert grenzüberschreitende Übertragungspflichten vollständig — keine SVK, keine DSB-Bewertungen für die KI-Schicht.',
+            'Migrationspfad: Ollama auf einem RTX 4090 oder Apple Silicon M4 mit einer Dispatch-Schicht benötigt typischerweise 1–2 Entwickler-Tage für Einrichtung und Integration.',
           ],
         },
+        gdprPressure: {
+          title: 'DSGVO-Durchsetzung wird ernst',
+          content: [
+            'Die EU-DSGVO-Durchsetzungslandschaft für KI veränderte sich 2025 erheblich. Die [Sperrung von ChatGPT durch die italienische Garante im Jahr 2023](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382) war das erste Signal; bis 2025 hatten mehrere Datenschutzbehörden (DSBs) verbindliche Leitlinien herausgegeben, die Auftragsverarbeitungsverträge (AVV) und Standardvertragsklauseln (SVK) für die Cloud-KI-API-Nutzung fordern. In Deutschland sprach die [Hamburger Datenschutzbehörde in ihren Leitlinien zu LLM-API-Datentransfers](https://www.datenschutz-hamburg.de) ausdrücklich davon, dass LLM-API-Aufrufe internationale Datentransfers mit Rechtsgrundlagenpflicht darstellen. Das [Schrems-II-Urteil (EuGH, Rechtssache C-311/18)](https://curia.europa.eu/juris/document/document.jsf?text=&docid=228677&pageIndex=0&doclang=de&mode=req&dir=&occ=first&part=1) stellte fest, dass Standardvertragsklauseln allein ohne zusätzliche Schutzmaßnahmen für Übermittlungen in die USA nicht ausreichend sind — was Cloud-KI-Optionen für EU-Organisationen weiter einschränkt.',
+            'EU-Datenschutzbehörden eröffneten [mehr als 90 KI-bezogene Untersuchungen im Jahr 2025](https://www.enforcementtracker.com), wobei Cloud-KI-Datentransfers im Mittelpunkt der Prüfung stehen. Für Unternehmen, die personenbezogene Daten verarbeiten — Vertragsdaten, Mitarbeiterdaten, Kundenkommunikation, Gesundheitsinformationen — ist jede Anfrage an eine US-amerikanische oder chinesische KI-API ohne die richtige Dokumentation ein potenzieller DSGVO-Verstoß. Der Compliance-Aufwand ist real: AVV, DSB-Bewertungen, Transfer-Folgenabschätzungen und jährliche Reviews kommen für mittelständische Unternehmen auf einen [branchenüblichen Bereich von 50.000–200.000 € an Rechtskosten](https://iapp.org).',
+            'Ein lokales Qwen-Deployment eliminiert diesen Aufwand vollständig. Wenn Qwen 3.6 27B auf EU-Hardware läuft, findet kein Datentransfer statt. [DSGVO Art. 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1) gilt nicht. Die einzige erforderliche Dokumentation ist ein internes Verarbeitungsverzeichnis gemäß [Art. 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1).',
+          ],
+        },
+        aiAct2026: {
+          title: 'Was sich mit dem EU-KI-Gesetz 2026 ändert',
+          content: [
+            'Das EU-KI-Gesetz führt 2026 eine neue regulatorische Ebene jenseits der DSGVO ein. [KI-Allzweckmodell-Pflichten (GPAI) gelten ab August 2025](https://eur-lex.europa.eu/eli/reg/2024/1689/oj), die Pflichten für Hochrisiko-Systeme ab August 2026. Art. 53 des Gesetzes legt Transparenzpflichten für GPAI-Anbieter fest — sie müssen Zusammenfassungen der Trainingsdaten offenlegen und bestimmte Risiken mindern. Unternehmen in Deutschland sollten zusätzlich die BSI-Grundschutz-Kataloge beachten, die verbindliche IT-Sicherheitsstandards für Behörden und kritische Infrastruktur definieren und zunehmend auch als Orientierung für KMU dienen.',
+            'Entscheidend: Das KI-Gesetz gilt für **Betreiber**, nicht nur für Anbieter. Wenn Sie Qwen oder ein anderes KI-System in der EU einsetzen, wird Ihre Organisation zum Betreiber mit spezifischen Pflichten. Das lokale Deployment reduziert die Komplexität erheblich: Betreiber mit lokalen Modellen vermeiden die grenzüberschreitende Anbieter-Betreiber-Verflechtung, die Cloud-KI erzeugt. Sie behalten die volle Kontrolle über das Modellverhalten, das Fine-Tuning und die Datenflüsse.',
+            'Die praktische Schlussfolgerung für EU-Organisationen: Der Wechsel zu lokalem Qwen adressiert gleichzeitig DSGVO (keine grenzüberschreitenden Transfers) und KI-Gesetz-Compliance (Betreiberkontrolle und Transparenz). [Vollständige Anforderungen finden Sie im EU-KI-Gesetz-Register auf EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1689/oj).',
+          ],
+        },
+        performanceParity: {
+          title: 'Die Leistungslücke schloss sich im April 2026',
+          content: [
+            'Der wichtigste technische Einwand gegen lokale KI — „Cloud-Modelle sind intelligenter" — wurde für die meisten Coding- und Analyseaufgaben im April 2026 empirisch widerlegt, als Alibaba Qwen 3.6 27B veröffentlichte. Das Modell erzielt 92,1 % HumanEval und 77,2 % SWE-bench. Claude Sonnet 4.6 erzielt 89,4 % HumanEval und ca. 72 % SWE-bench.',
+            'Für die EU-Organisationen, die den größten Teil der Cloud-KI-Adoption vorangetrieben haben — Software-Entwicklungsteams, juristische Dokumentenanalyse, internes Wissensmanagement — ist Qwen 3.6 27B vergleichbar oder besser. Das Qualitätsargument für ausschließliche Cloud-Nutzung gilt für diese Anwendungsfälle nicht mehr.',
+            'Die Hardwareanforderungen sind für die meisten EU-Technologieunternehmen erschwinglich: ein einzelner RTX 4090 (1.500–2.000 €) oder Apple Silicon mit 48+ GB Unified Memory betreibt Qwen 3.6 27B mit 35–42 Tokens pro Sekunde. Mac Mini M4 Pro (1.599 €) und Mac Mini M5 Pro (1.799 €) sind Einstiegsoptionen. Für Teams mit höherem Bedarf: M5 Max Mac Studio (128 GB, 3.500 €) oder M4 Pro Mac Studio (64 GB, 2.200 €) bieten nachhaltige Leistung für den teamweiten KI-Betrieb.',
+          ],
+        },
+        costAnalysis: {
+          title: 'Die Kostenrechnung für EU-Teams',
+          content: [
+            'Bei kleinem Maßstab (unter 1 M Token/Tag) sind Cloud-KI-APIs günstiger als Hardware. Der Break-even-Punkt verschiebt sich mit steigendem Volumen. Für ein Entwicklungsteam von 10 Personen, das täglich 50 M Token erzeugt:',
+          ],
+          rows: [
+            { Variante: 'Claude Sonnet 4.6 API', 'Monatliche Kosten': '$1.500 (nur Input)', 'DSGVO-Risiko': '⚠️ SVK erforderlich', Einrichtungsaufwand: 'Gering' },
+            { Variante: 'DeepSeek R2 API', 'Monatliche Kosten': '$210', 'DSGVO-Risiko': '❌ Hoch (China)', Einrichtungsaufwand: 'Gering' },
+            { Variante: 'Lokales Qwen (RTX 4090 ×2)', 'Monatliche Kosten': '60 € (Strom)', 'DSGVO-Risiko': '✅ Keines', Einrichtungsaufwand: 'Mittel' },
+            { Variante: 'Lokales Qwen (Mac Mini M4 Pro ×3)', 'Monatliche Kosten': '40 € (Strom)', 'DSGVO-Risiko': '✅ Keines', Einrichtungsaufwand: 'Gering' },
+            { Variante: 'Lokales Qwen (Mac Mini M5 Pro ×3)', 'Monatliche Kosten': '45 € (Strom)', 'DSGVO-Risiko': '✅ Keines', Einrichtungsaufwand: 'Gering' },
+          ],
+          columns: ['Variante', 'Monatliche Kosten', 'DSGVO-Risiko', 'Einrichtungsaufwand'],
+        },
+        migrationPath: {
+          title: 'So vollziehen EU-Teams den Wechsel',
+          content: [
+            'Die praktische Migration von Cloud-KI zu lokalem Qwen erfordert typischerweise einen Aufwand von ein bis zwei Entwickler-Tagen für die initiale Infrastruktureinrichtung, basierend auf gängigen Deployment-Mustern.',
+            'Der kritische Konfigurationsschritt ist die Einstellung von Ollamas num_ctx auf 32768 — der Standardwert von 2048 Tokens reicht für reale Aufgaben nicht aus. Nach dieser Einstellung stellen die meisten Teams fest, dass ihre bestehenden Prompts ohne Änderungen funktionieren, da Qwen 3.6 27B standardisierten Instruction-Tuning-Konventionen folgt.',
+          ],
+          items: [
+            'Schritt 1: Ollama auf einem RTX-4090-System oder Apple Silicon Mac mit 48 GB+ Arbeitsspeicher deployen',
+            'Schritt 2: Qwen 3.6 27B herunterladen: `ollama pull qwen3`',
+            'Schritt 3: Modelfile mit num_ctx 32768 erstellen und bauen: `ollama create qwen3-32k -f Modelfile`',
+            'Schritt 4: PromptQuorum über OLLAMA_BASE_URL=http://localhost:11434/v1 verbinden',
+            'Schritt 5: Routing-Regeln konfigurieren: private/DSGVO-sensible Aufgaben → lokales Qwen, Lastspitzen → Cloud-Fallback',
+            'Schritt 6: Internes Verarbeitungsverzeichnis (DSGVO Art. 30) aktualisieren, um die lokale KI-Verarbeitung zu erfassen',
+          ],
+        },
+        whoIsSwitching: {
+          title: 'Welche EU-Organisationen als Erste wechseln',
+          content: [
+            'Die frühen Anwender von lokalem Qwen in der EU konzentrieren sich auf drei Branchen mit der höchsten Datensensibilität: Rechtsdienstleistungen, Gesundheitstechnologie und Softwareentwicklung im Finanzdienstleistungssektor.',
+            'Rechtsdienstleistungsunternehmen, die Mandatsangelegenheiten bearbeiten, waren die schnellsten Umsteiger. Jede Mandantenkommunikation, jeder Vertrag und jede Aktennotiz stellt personenbezogene Daten gemäß DSGVO dar. Cloud-KI begründet für jede KI-unterstützte Aufgabe eine Art.-44-Übertragungspflicht. Lokales Qwen eliminiert diese für sämtliche rechtlichen KI-Anwendungsfälle.',
+            'Gesundheitstechnologieunternehmen, die klinische Entscheidungsunterstützungs- und Patientenkommunikationssysteme entwickeln, unterliegen noch strengeren Anforderungen nach DSGVO Art. 9 (besondere Kategorien personenbezogener Daten) und der EU-MDR. Lokale KI ist für diese Anwendungsfälle keine Option, sondern die einzige Architektur, die die Regulierungsbehörden akzeptieren.',
+            'Softwareentwicklungsteams im Finanzdienstleistungssektor setzen lokale KI für die Code-Generierung im Zusammenhang mit der Handhabung von Kontodaten, Transaktionsverarbeitungslogik und kundenseitigen Funktionen ein. Die Kombination aus DSGVO und Finanzdienstleistungsregulierung (PSD2, MiFID II) macht den lokalen Inference-Betrieb zur risikoärmsten Architektur für Entwicklungs-Workflows.',
+          ],
+        },
+        promptquorumRole: {
+          title: 'PromptQuorum als Dispatch-Schicht',
+          content: [
+            'Viele EU-Organisationen, die wechseln, gehen nicht vollständig lokal — sie implementieren eine hybride Dispatch-Architektur, die Aufgaben je nach Datensensibilität an lokales Qwen oder Cloud-APIs weiterleitet. Dispatch-Plattformen stellen diese Routing-Funktion bereit.',
+            'Die typische Konfiguration: Aufgaben mit personenbezogenen Daten und proprietärem Code → lokales Qwen 3.6 27B über Ollama; komplexes Reasoning ohne personenbezogene Daten → Cloud-API-Fallback; nicht-sensible Aufgaben mit hohem Volumen → DeepSeek oder andere kostengünstige APIs. Dieser hybride Ansatz nutzt den DSGVO-Compliance-Vorteil für sensible Daten und erhält gleichzeitig den Cloud-API-Zugriff für Aufgaben, bei denen die Datensensibilität gering ist.',
+          ],
+        },
+        relatedReading: {
+          title: 'Weiterführende Lektüre',
+          items: [
+            '[Qwen vs. Claude vs. DeepSeek: Lokaler LLM-Vergleich](/local-llms/qwen-vs-claude-vs-deepseek-local-2026?lang=de)',
+            '[Qwen lokal betreiben: Installations- und Einrichtungsleitfaden](/local-llms/run-qwen-locally-guide-2026?lang=de)',
+            '[Qwen Coder vs. DeepSeek vs. Mistral: Benchmarks](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026?lang=de)',
+            '[Lokale LLMs Datenschutz-Manifest](/local-llms/qwen-gdpr-privacy-manifesto-2026?lang=de)',
+            '[Lokale LLMs Hub](/local-llms?lang=de)',
+          ],
+        },
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Bedeutet der Betrieb lokaler KI, dass wir die DSGVO vollständig ignorieren können?', a: 'Nein. Lokale KI eliminiert die grenzüberschreitenden Übertragungspflichten nach [Art. 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1), aber die DSGVO gilt weiterhin für Ihre KI-Verarbeitung gemäß [Art. 5](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1) (Grundsätze), [Art. 25](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1) (Datenschutz durch Technikgestaltung) und [Art. 32](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1) (Sicherheit). Sie benötigen weiterhin eine Rechtsgrundlage für die KI-gestützte Verarbeitung personenbezogener Daten, müssen Datensparsamkeit umsetzen und die KI-Verarbeitung in Ihrem Verzeichnis nach [Art. 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) dokumentieren. Lokale KI macht die Compliance strukturell einfacher — sie eliminiert die Compliance-Pflichten nicht.' },
+            { q: 'Ist Qwen 3.6 27B für den produktiven Einsatz gut genug?', a: 'Ja, für Coding-, Dokumentenanalyse- und Wissensmanagement-Aufgaben. Qwen 3.6 27B erzielt 92,1 % HumanEval und 77,2 % SWE-bench — vergleichbar mit oder besser als Claude Sonnet 4.6 (89,4 % HumanEval) bei Software-Engineering-Aufgaben. Bei mathematischem Reasoning und fachdomänenübergreifendem Wissen führen Frontier-Cloud-Modelle weiterhin. Die praktische Antwort lautet: für die Mehrheit der Aufgaben lokal deployen und Cloud-APIs für die Minderheit nutzen, bei der Frontier-Qualität nachweislich erforderlich ist.' },
+            { q: 'Was ist der minimale Hardware-Invest für ein EU-Team?', a: 'Für ein Team von 3–5: ein Mac Mini M4 Pro mit 48 GB Unified Memory (~1.599 €) oder Mac Mini M5 Pro (~1.799 €) betreibt Qwen 3.6 27B mit 40+ Tokens/Sekunde. Für ein Team ab 10 Personen: ein RTX-4090-System (~2.000 € gesamt), zwei Mac Mini M4 Pros oder ein M5 Max Mac Studio (128 GB, 3.500 €). Die Hardware amortisiert sich gegenüber den Claude Sonnet 4.6 API-Kosten in 2–3 Monaten bei intensiver Nutzung und gegenüber DeepSeek R2 in 12–18 Monaten — bei DSGVO-Compliance vom ersten Tag an.' },
+            { q: 'Kann ich PromptQuorum mit lokalem Qwen verwenden?', a: 'Ja. PromptQuorum unterstützt lokale Ollama-Endpunkte. Setzen Sie OLLAMA_BASE_URL auf Ihre Ollama-Server-URL (z. B. http://localhost:11434/v1) und den Modellnamen auf Ihren Qwen-Modellnamen. PromptQuorum übernimmt dann das Dispatch-Routing, den Modell-Fallback und die Antwortverarbeitung für lokale und Cloud-Modelle.' },
+            { q: 'Muss ich bei der Nutzung von lokalem Qwen die DSGVO beachten?', a: 'Ja, aber mit deutlich reduziertem Aufwand. Lokale Deployments auf EU-Hardware eliminieren Art.-44-Übertragungspflichten vollständig — kein AVV mit einem Cloud-Anbieter, keine Standardvertragsklauseln. Sie benötigen weiterhin: eine Rechtsgrundlage für die KI-Verarbeitung (Art. 6 DSGVO), einen Eintrag im Verarbeitungsverzeichnis (Art. 30) sowie technisch-organisatorische Maßnahmen (Art. 32). Unternehmen, die BSI-Grundschutz-Kataloge anwenden, können lokale KI-Deployments in ihr bestehendes IT-Sicherheits-Framework integrieren, ohne neue Cloud-Dienstleister-Risiken einzuführen.' },
+            { q: 'Ist lokales Qwen für den deutschen Mittelstand geeignet?', a: 'Ja, insbesondere für Branchen mit erhöhter Datensensibilität — Rechtsdienstleistungen, Gesundheitswesen, Finanzdienstleistungen und verarbeitendes Gewerbe. Ein Mac Mini M4 Pro (1.599 €) reicht für Teams bis 5 Personen mit Qwen 3.6 27B aus. Der BSI empfiehlt grundsätzlich die lokale Verarbeitung für personenbezogene und vertrauliche Unternehmensdaten. Mittelständische Unternehmen profitieren zudem davon, dass keine Datenweitergabe an Drittanbieter außerhalb der EU stattfindet — ein entscheidender Vorteil gegenüber Cloud-KI-APIs, die oft in den USA oder China betrieben werden.' },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'de',
+        url: 'https://www.promptquorum.com/blog/eu-companies-local-qwen-gdpr-shift?lang=de',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Bedeutet der Betrieb lokaler KI, dass wir die DSGVO vollständig ignorieren können?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Nein. Lokale KI eliminiert die grenzüberschreitenden Übertragungspflichten nach Art. 44, aber die DSGVO gilt weiterhin für Ihre KI-Verarbeitung gemäß Art. 5 (Grundsätze), Art. 25 (Datenschutz durch Technikgestaltung) und Art. 32 (Sicherheit). Sie benötigen eine Rechtsgrundlage, müssen Datensparsamkeit umsetzen und die Verarbeitung in Ihrem Art.-30-Verzeichnis dokumentieren.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist Qwen 3.6 27B für den produktiven Einsatz gut genug?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja, für Coding-, Dokumentenanalyse- und Wissensmanagement-Aufgaben. Qwen 3.6 27B erzielt 92,1 % HumanEval und 77,2 % SWE-bench — vergleichbar mit oder besser als Claude Sonnet 4.6 (89,4 % HumanEval) bei Software-Engineering-Aufgaben.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was ist der minimale Hardware-Invest für ein EU-Team?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ein Mac Mini M4 Pro mit 48 GB Unified Memory (~1.599 €) oder Mac Mini M5 Pro (~1.799 €) betreibt Qwen 3.6 27B mit 40+ Tokens/Sekunde für ein Team von 3–5. Hardware amortisiert sich gegenüber Claude Sonnet 4.6 API-Kosten in 2–3 Monaten bei intensiver Nutzung.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Kann ich PromptQuorum mit lokalem Qwen verwenden?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Setzen Sie OLLAMA_BASE_URL auf Ihre Ollama-Server-URL (z. B. http://localhost:11434/v1). PromptQuorum übernimmt das Dispatch-Routing für lokale und Cloud-Modelle.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Muss ich bei der Nutzung von lokalem Qwen die DSGVO beachten?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber mit deutlich reduziertem Aufwand. Lokale Deployments eliminieren Art.-44-Übertragungspflichten vollständig. Sie benötigen weiterhin eine Rechtsgrundlage (Art. 6), einen Verzeichniseintrag (Art. 30) und technisch-organisatorische Maßnahmen (Art. 32). BSI-Grundschutz-Kataloge können für die Integration in bestehende IT-Sicherheits-Frameworks genutzt werden.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist lokales Qwen für den deutschen Mittelstand geeignet?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja, insbesondere für Recht, Gesundheitswesen, Finanzen und verarbeitendes Gewerbe. Ein Mac Mini M4 Pro (1.599 €) reicht für Teams bis 5. Der BSI empfiehlt lokale Verarbeitung für vertrauliche Daten. Kein Datentransfer an Drittanbieter außerhalb der EU.' },
+          },
+        ],
       },
     },
     fr: {
