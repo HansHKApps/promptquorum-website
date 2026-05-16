@@ -1,14 +1,55 @@
-# PromptQuorum robots.txt — Block non-indexable content
+# PromptQuorum robots.txt
+# All search engines and AI crawlers welcome — same rules apply to all
 
-User-agent: *
+# Default rules for all crawlers (Google, Bing, generic crawlers)
+User-Agent: *
 Allow: /
-
-# Block internal utility pages
+Disallow: /_next/static/
+Disallow: /api/og/
+Disallow: /presentations/
 Disallow: /download
 Disallow: /image-license
 
-# Block utility params except language switcher
-Disallow: /*?print=
+# AI crawlers — same access as Googlebot (full site access)
+User-Agent: GPTBot
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+User-Agent: ClaudeBot
+User-Agent: anthropic-ai
+User-Agent: Claude-Web
+User-Agent: Claude-SearchBot
+User-Agent: CCBot
+User-Agent: YouBot
+User-Agent: Google-Extended
+User-Agent: Googlebot-Extended
+User-Agent: Applebot-Extended
+User-Agent: FacebookBot
+User-Agent: Meta-ExternalAgent
+User-Agent: meta-externalagent
+User-Agent: Bytespider
+User-Agent: Diffbot
+User-Agent: cohere-ai
+User-Agent: omgili
+User-Agent: ImagesiftBot
+User-Agent: Valerian
+Allow: /
+Disallow: /_next/static/
+Disallow: /api/og/
+Disallow: /presentations/
+Disallow: /download
+Disallow: /image-license
 
-# Sitemap
+# Bingbot — explicit rules for clarity
+User-Agent: Bingbot
+Allow: /
+Disallow: /_next/static/
+Disallow: /api/og/
+Disallow: /presentations/
+Disallow: /download
+Disallow: /image-license
+
+# Sitemaps
 Sitemap: https://www.promptquorum.com/sitemap.xml
+Sitemap: https://www.promptquorum.com/video-sitemap.xml
