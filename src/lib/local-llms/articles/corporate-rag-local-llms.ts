@@ -796,4 +796,255 @@ schema: {
         ],
       },
     },
+    ja: {
+      freshness_tier: 'annual',
+      theme: 'Enterprise',
+      title: '企業RAGとローカルLLM：組織向けドキュメントQ&A',
+      seoTitle: '企業RAGローカルLLM',
+      intro: 'RAG（検索拡張生成）を企業ドキュメントに適用：ポリシー、契約書、内部Wiki、研究論文。ローカルRAGは所有権のあるドキュメントをオンプレミスに保持し、API コストを排除し、完全な監査証跡を提供します。2026年4月時点で、企業RAGはローカルLLMの#1エンタープライズユースケースです。',
+      metaDescription: '企業RAGとローカルLLM：セキュアなドキュメントQ&A、独自知識ベース、監査証跡、マルチユーザーアクセス制御、エンタープライズ。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**RAG（検索拡張生成）を企業ドキュメントに適用：ポリシー、契約書、内部Wiki、研究論文。ローカルRAGは所有権のあるドキュメントをオンプレミスに保持し、API コストを排除し、完全な監査証跡を提供します。**',
+      audience: 'ローカルLLMを本番またはエンタープライズ環境にデプロイするエンジニア',
+      readTime: '12分で読める',
+      educationalLevel: 'Advanced',
+      primaryTerm: '企業知識ベース',
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: '企業RAGユースケース', anchor: '#use-cases' },
+        { label: '大規模での文書取り込み', anchor: '#ingestion' },
+        { label: 'マルチユーザーRAGアーキテクチャ', anchor: '#architecture' },
+        { label: '検索品質とランキング', anchor: '#retrieval-quality' },
+        { label: 'ガバナンスとアクセス制御', anchor: '#governance' },
+        { label: '企業RAGの一般的なエラー', anchor: '#common-mistakes' },
+        { label: '関連資料', anchor: '#related-reading' },
+        { label: '出典', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**企業RAG＝社内知識ベース。**すべての企業ドキュメントをアップロードし、従業員が質問できるようにします。',
+            '**ユースケース：**ポリシー検索、契約Q&A、研究発見、オンボーディング、コンプライアンス研修。',
+            '**スケール：**10,000～100,000ドキュメント、100～500同時ユーザー、<2秒レイテンシ。',
+            '**ローカルの利点：**所有権のあるドキュメントはネットワークを離れません。誰がいつ何にアクセスしたかの完全な監査証跡。',
+            '2026年4月時点で、企業RAGは従業員生産性により年間$500k～5M の節約をもたらします。',
+          ],
+        },
+        useCases: {
+          title: '企業RAGが処理できるドキュメントの種類',
+          rows: [
+            { '文書タイプ': '従業員ハンドブック', 'RAG利用': 'ポリシー検索（「休暇日数はいくつですか？」）', '典型的なユーザー': 'すべての従業員' },
+            { '文書タイプ': '契約書', 'RAG利用': '条項検索（「解雇条項は何ですか？」）', '典型的なユーザー': '法務、調達' },
+            { '文書タイプ': '技術ドキュメント', 'RAG利用': 'API リファレンス、コード例', '典型的なユーザー': 'エンジニア' },
+            { '文書タイプ': '研究論文', 'RAG利用': '知識発見（「量子MLについての論文？」）', '典型的なユーザー': 'R&D チーム' },
+            { '文書タイプ': 'コンプライアンスドキュメント', 'RAG利用': '規制検索（「データ保持のGDPR要件？」）', '典型的なユーザー': 'コンプライアンス、法務' },
+            { '文書タイプ': '顧客ドキュメント', 'RAG利用': '製品ドキュメント、FAQ', '典型的なユーザー': 'サポート、営業' },
+          ],
+          columns: ['文書タイプ', 'RAG利用', '典型的なユーザー'],
+        },
+        ingestion: {
+          title: '大規模での文書取り込み方法',
+          content: [
+            '**取り込みパイプラインはドキュメントをEmbedding に変換し、ベクトルDBに保存します。**',
+          ],
+          numberedItems: [
+            '**ドキュメント抽出：**ファイルサーバー、SharePoint、Jira、Confluence等から。',
+            '**解析：**PDF、Word文書、HTMLをテキストに変換。テーブル、画像を処理。',
+            '**分割：**500～1,000トークンチャンクに20%重複で分割。',
+            '**Embedding：**ローカルEmbedding モデル（nomic-embed-text）を使用してチャンクをベクトルに変換。',
+            '**インデックス：**ベクトルをメタデータ（ソース、日付、作成者）とともにQdrant、Milvus、またはWeaviate に保存。',
+            '**更新：**更新をキャプチャするために週次または月次に再取り込み。',
+          ],
+        },
+        architecture: {
+          title: 'マルチユーザー企業RAGの設計方法',
+          content: [
+            '典型的なスタック：',
+            '- **フロントエンド：**Webインターフェースまたはslack bot。',
+            '- **API：**RAG クエリ用のREST エンドポイント。',
+            '- **LLM：**ローカルLlama 13B（品質）または7B（速度）。',
+            '- **Embedding：**ローカルnomic-embed-text（または速度向けクラウド）。',
+            '- **ベクトルDB：**10,000+ドキュメント用のQdrant（分散）。',
+            '- **ドキュメント保存：**PDF とソース用の暗号化ファイルサーバー。',
+            '- **アクセス制御：**ユーザーアクセス許可用のLDAP/AD 統合。',
+          ],
+        },
+        retrievalQuality: {
+          title: '検索品質の確保方法',
+          content: [
+            '**検索が悪い＝答えが悪い。**品質は以下に依存します：',
+          ],
+          items: [
+            '**分割戦略：**セマンティックチャンク（トピック別）は固定サイズチャンクを上回ります。',
+            '**Embedding モデル：**利用可能であればドメイン固有のEmbedding を使用。汎用Embedding はドメイン用語を見落とすかもしれません。',
+            '**検索パラメータ：**k=5～10（取得するチャンク数）。低すぎる＝コンテキスト不足。高すぎる＝ノイズ。',
+            '**順位変更：**クロスエンコーダを使用してチャンクを関連度で順位変更（小さな品質向上）。',
+            '**ユーザーフィードバック：**回答の「フィードバック」ボタン。検索パラメータをチューニングするために使用。',
+          ],
+        },
+        governance: {
+          title: 'ガバナンスとアクセス制御の実装',
+          content: [
+            '**企業RAGはコンプライアンスのためのアクセスを追跡する必要があります。METIのAIガバナンス2024は、エンタープライズデプロイメントにおける日本のレギュラトリーフレームワークを定義しています。**',
+          ],
+          items: [
+            '**アクセスログ：**誰がいつどこからどのドキュメントをクエリしたか。',
+            '**保持：**ログを3～7年間保持（規制要件）。',
+            '**アクセス制御：**役割によってドキュメントを制限（例：法務のみ契約を表示）。',
+            '**監査：**異常なアクティビティについてアクセスログの四半期ごとのレビュー。',
+            '**データ分類：**ドキュメントを公開、内部、機密、制限としてマーク。',
+          ],
+        },
+        commonMistakes: {
+          title: '企業RAGの一般的なエラー',
+          items: [
+            '**クリーニングなしの取り込み。**古いドキュメント、重複、テストファイル＝検索ノイズ。取り込み前にクリーニング。',
+            '**インテリジェント分割なし。**固定サイズチャンクは文の途中でトピックを分割。セマンティック分割を使用。',
+            '**アクセス制御なし。**すべてのドキュメントがすべての従業員に表示されると、機密情報が流出。',
+            '**検索品質を無視。**幅広いロールアウト前に実際の従業員でテスト。50%の問題＝検索、生成ではなく。',
+            '**更新の再取り込みなし。**ドキュメントデータベースが古くなります。週次/月次の再取り込みをスケジュール。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '企業RAGについてのよくある質問',
+          faqs: [
+            {
+              q: '企業RAGは何個のドキュメントを処理できますか？',
+              a: '平均ドキュメントサイズとレイテンシに依存。典型的範囲：10,000～100,000ドキュメント。検索レイテンシは<1秒であるべき。遅い場合は、分割またはEmbedding を最適化。実際のドキュメントセットでテスト。',
+            },
+            {
+              q: 'どのEmbedding モデルを使用すればよいですか？',
+              a: 'オープンソースオプション：all-MiniLM-L6-v2（高速、良好）、BAAI/bge-base-en-v1.5（品質向上）。独自：OpenAI text-embedding-3-small。ローカルデプロイメント用はオープンソースを使用。品質の違いが重要：より良いEmbedding ＝より良い検索。',
+            },
+            {
+              q: 'チャット履歴を失わずにドキュメントを更新するにはどうすればよいですか？',
+              a: 'チャット履歴をドキュメントEmbedding から分離して保存。スケジュール（週次/月次）に従ってEmbedding を更新。古いチャットはまだ古いドキュメントバージョンを参照しており、これは問題ありません。バージョン日付を文書化するだけ。',
+            },
+            {
+              q: '機密ドキュメントにRAGを使用できますか？',
+              a: 'はい、ローカルRAGが理想的。ドキュメントはオンプレミスに残り、クエリは外部で記録されず、ロールベースのアクセス許可でアクセスを制御。HIPAAおよびGDPRを満たします。',
+            },
+            {
+              q: 'セマンティック分割と固定サイズ分割とは何ですか？',
+              a: '固定サイズ（例：512トークン）はより簡単ですが、文の途中でトピックを分割。セマンティック分割は文/段落の境界を使用し、意味を保持。セマンティックはRAG品質に向いていますが、セットアップは遅い。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連資料',
+          items: [
+            '[ローカルRAG2026](/local-llms/local-rag-2026?lang=ja) -- 完全なRAG実装ガイド。',
+            '[ローカルLLMスケーリングエンタープライズ](/local-llms/scaling-local-llms-enterprise?lang=ja) -- マルチユーザーインフラストラクチャ。',
+            '[企業がローカルLLMを使用する理由](/local-llms/why-enterprises-use-local-llms?lang=ja) -- ビジネスケース。',
+            '[エンタープライズコンプライアンスローカルLLM](/local-llms/enterprise-compliance-local-llms?lang=ja) -- ドキュメント処理のコンプライアンス。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '出典',
+          items: [
+            'LlamaIndex ドキュメント -- docs.llamaindex.ai',
+            'Qdrant ベクトルデータベース -- qdrant.tech',
+            '検索評価 -- arxiv.org（「RAG evaluation metrics」を検索）',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '企業RAGローカルLLM',
+        'description': '企業RAGとローカルLLM：セキュアなドキュメントQ&A、独自知識ベース、監査証跡、マルチユーザーアクセス制御、エンタープライズ。',
+        'url': 'https://www.promptquorum.com/local-llms/corporate-rag-local-llms?lang=ja',
+        'inLanguage': 'ja',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'about': [
+          { '@type': 'Thing', 'name': 'RAG（検索拡張生成）' },
+          { '@type': 'Thing', 'name': 'ローカルLLM' },
+          { '@type': 'Thing', 'name': '企業知識ベース' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '企業RAGは何個のドキュメントを処理できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '平均ドキュメントサイズとレイテンシに依存。典型的範囲：10,000～100,000ドキュメント。検索レイテンシは<1秒であるべき。遅い場合は、分割またはEmbedding を最適化。実際のドキュメントセットでテスト。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'どのEmbedding モデルを使用すればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'オープンソースオプション：all-MiniLM-L6-v2（高速、良好）、BAAI/bge-base-en-v1.5（品質向上）。独自：OpenAI text-embedding-3-small。ローカルデプロイメント用はオープンソースを使用。品質の違いが重要：より良いEmbedding ＝より良い検索。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チャット履歴を失わずにドキュメントを更新するにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'チャット履歴をドキュメントEmbedding から分離して保存。スケジュール（週次/月次）に従ってEmbedding を更新。古いチャットはまだ古いドキュメントバージョンを参照しており、これは問題ありません。バージョン日付を文書化するだけ。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '機密ドキュメントにRAGを使用できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、ローカルRAGが理想的。ドキュメントはオンプレミスに残り、クエリは外部で記録されず、ロールベースのアクセス許可でアクセスを制御。HIPAAおよびGDPRを満たします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'セマンティック分割と固定サイズ分割とは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '固定サイズ（例：512トークン）はより簡単ですが、文の途中でトピックを分割。セマンティック分割は文/段落の境界を使用し、意味を保持。セマンティックはRAG品質に向いていますが、セットアップは遅い。',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '企業RAGローカルLLM',
+        'inLanguage': 'ja',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '大規模での文書取り込み',
+            'description': '10,000～100,000ドキュメントをアップロード、PDF/Word/HTMLを解析、インテリジェント分割、ローカルモデルで埋め込み。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'マルチユーザーRAGアーキテクチャ',
+            'description': 'ロードバランシング、検索品質最適化、<2秒レイテンシで100～500同時ユーザーにサービス提供。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'ガバナンスとコンプライアンス',
+            'description': 'アクセス制御、監査証跡、データ保持ポリシー、ロールベースドキュメントアクセスを実装。',
+          },
+        ],
+      },
+    },
   };
