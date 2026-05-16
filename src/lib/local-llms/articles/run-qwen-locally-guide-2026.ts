@@ -330,23 +330,274 @@ LOCAL_LLM_MODEL=qwen3:27b
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Getting Started',
-    title: 'Qwen 3 lokal ausfuehren 2026: Ollama + LM Studio Einrichtungsanleitung',
-    seoTitle: 'Qwen 3 lokal ausfuehren 2026: Vollstaendige Ollama & LM Studio Anleitung',
-    intro: 'Qwen 3.6 27B laeuft auf einer einzelnen Consumer-GPU (16 GB VRAM) ueber Ollama oder LM Studio. Die Einrichtung dauert weniger als 10 Minuten. Dieser Leitfaden deckt Modellauswahl, Hardware-Anforderungen, Ollama-CLI-Installation, LM Studio GUI-Setup, die entscheidende num_ctx-Korrektur und die Verbindung mit PromptQuorum ab.',
-    metaDescription: 'Qwen 3 lokal ausfuehren 2026: Schritt-fuer-Schritt Ollama und LM Studio Setup, Hardware-Anforderungen, num_ctx-Korrektur und PromptQuorum-Integration. Stand: Mai 2026.',
+    title: 'Qwen 3 lokal ausführen 2026: Vollständige Anleitung mit Ollama und LM Studio',
+    seoTitle: 'Qwen 3 lokal ausführen 2026: Ollama & LM Studio Anleitung',
+    intro: 'Qwen 3.6 27B läuft auf einer einzelnen Consumer-GPU (16 GB VRAM) über Ollama oder LM Studio. Die Einrichtung dauert weniger als 10 Minuten. Dieser Leitfaden deckt Modellauswahl, Hardware-Anforderungen, Ollama-CLI-Installation, LM Studio GUI-Setup, die entscheidende num_ctx-Korrektur, Stromverbrauch und TCO sowie die Verbindung mit PromptQuorum für Multi-Modell-Dispatch ab.',
+    metaDescription: 'Qwen 3.6 27B lokal ausführen: Ollama- und LM Studio-Setup, Hardware-Anforderungen, num_ctx-Fix und PromptQuorum-Integration. Aktualisiert Mai 2026.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
-    readTime: '10 min Lesezeit',
+    readTime: '10 Min. Lesezeit',
+    educationalLevel: 'Beginner',
+    audience: 'Entwickler, die erstmals ein lokales LLM einrichten; EU-Teams auf der Suche nach DSGVO-konformer KI',
+    primaryTerm: 'run Qwen 3 locally 2026',
+    ctaText: 'Zur PromptQuorum-Warteliste anmelden →',
+    leadAnswerBlock: '**Führen Sie `ollama pull qwen3:27b` auf jedem Rechner mit 16 GB VRAM oder Apple Silicon mit 32+ GB Unified Memory aus. Für den GUI-Zugriff verwenden Sie LM Studio. Beide führen Qwen 3.6 27B vollständig offline aus. Wichtig: Setzen Sie `num_ctx` auf 32768 oder höher — Ollamas Standard von 2048 Token kürzt die meisten realen Aufgaben ab.**',
+    quickAnswerTop: {
+      de: {
+        question: 'Wie führe ich Qwen 3 lokal in 2026 aus?',
+        answer: 'Installieren Sie Ollama, führen Sie `ollama pull qwen3:27b` aus, dann `ollama run qwen3:27b`. Für eine GUI: Laden Sie LM Studio herunter, suchen Sie „Qwen 3 27B", laden Sie die Q4_K_M GGUF-Datei herunter. Wichtig: Setzen Sie num_ctx auf 32768 in Ollama (Standardwert 2048 ist zu klein). Für DSGVO-konformen Team-Betrieb verbinden Sie über den lokalen Ollama-Dispatch-Endpunkt von PromptQuorum.',
+        bullets: [
+          'Mindest-Hardware: 16 GB VRAM (RTX 4080) oder Apple Silicon mit 32 GB Unified Memory',
+          'Ollama-Installation: brew install ollama (Mac) oder install.sh (Linux/Windows)',
+          'Modell laden: ollama pull qwen3:27b (lädt Qwen 3.6 27B Q4_K_M ~17 GB)',
+          'Kontext korrigieren: num_ctx 32768 im Modelfile setzen — Standard 2048 ist zu klein',
+          'LM Studio Alternative: GUI-basiert, kein CLI nötig, gleiche Modellqualität',
+        ],
+        updatedDate: '2026-05-16',
+      },
+    },
+    toc: [
+      { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+      { label: 'Warum Qwen lokal ausführen', anchor: '#why-local' },
+      { label: 'Das richtige Qwen-Modell wählen', anchor: '#choose-model' },
+      { label: 'Hardware-Anforderungen', anchor: '#hardware' },
+      { label: 'Einrichtung mit Ollama', anchor: '#ollama-setup' },
+      { label: 'Einrichtung mit LM Studio', anchor: '#lm-studio-setup' },
+      { label: 'Verbindung mit PromptQuorum', anchor: '#promptquorum' },
+      { label: 'Fehlerbehebung', anchor: '#troubleshooting' },
+      { label: 'Stromverbrauch und Gesamtbetriebskosten (TCO)', anchor: '#power-tco' },
+      { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
+      { label: 'Häufige Fragen', anchor: '#faq' },
+    ],
     sections: {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Zwei Wege: Ollama (CLI, headless, API-bereit) oder LM Studio (GUI, kein CLI). Beide fuehren Qwen 3.6 27B lokal aus.',
-          'Kritische Korrektur: Ollama verwendet standardmaessig num_ctx 2048. Setze num_ctx 32768 in deinem Modelfile.',
-          'Hardware: Mindestens 16 GB VRAM (RTX 4080). Apple Silicon M4 Pro (48 GB) oder M5 Max (128 GB) sind die empfohlenen EU-hosted Inference-Optionen.',
-          'DSGVO: Sobald lokal ausgefuehrt, verlassen keine Daten deinen Rechner.',
-          'PromptQuorum-Integration: Setze OLLAMA_BASE_URL=http://localhost:11434/v1 und LOCAL_LLM_MODEL=qwen3:27b in den lokalen Dispatch-Einstellungen von PromptQuorum.',
+          '**Zwei Wege**: Ollama (CLI, headless, API-bereit) oder LM Studio (GUI, kein CLI). Beide führen Qwen 3.6 27B lokal aus.',
+          '**Kritische Korrektur**: Ollama verwendet standardmäßig `num_ctx 2048`. Dieser Wert ist zu klein für reale Aufgaben. Setzen Sie `num_ctx 32768` in Ihrem Modelfile.',
+          '**Hardware**: Mindestens 16 GB VRAM (RTX 4080). Apple Silicon M4 Pro (48 GB) oder M5 Max (128 GB) sind die empfohlenen EU-hosted Inference-Optionen.',
+          '**DSGVO**: Sobald lokal ausgeführt, verlassen keine Daten Ihren Rechner. Keine SCCs oder Datenverarbeitungsverträge mit Dritten erforderlich.',
+          '**PromptQuorum-Integration**: Setzen Sie `OLLAMA_BASE_URL=http://localhost:11434/v1` und `LOCAL_LLM_MODEL=qwen3:27b` in den lokalen Dispatch-Einstellungen von PromptQuorum — getrennt von der Anthropic-API-Konfiguration.',
+        ],
+      },
+      whyLocal: {
+        id: 'why-local',
+        title: 'Warum Qwen 2026 lokal ausführen',
+        content: [
+          'Qwen 3 lokal auszuführen bedeutet 2026, 0 € pro Token für ein Modell zu zahlen, das 92,1 % HumanEval erreicht — vergleichbar mit oder besser als Claude Sonnet 4.6 bei Coding-Aufgaben. Sobald die Hardware amortisiert ist, ist jede Anfrage kostenlos. Für ein Entwicklungsteam von fünf Personen, das 10 Millionen Token pro Tag generiert, spart lokale Inferenz ca. 830 €/Monat gegenüber Claude Sonnet 4.6 API-Preisen.',
+          'DSGVO-Konformität ist der zweite Treiber. DSGVO Art. 44 schränkt Datenübermittlungen in Drittländer ein. Wenn Sie Qwen lokal auf EU-Hardware ausführen, verlassen Ihre Anfragen, Ihr Code und Ihre Kundendaten niemals Ihre Infrastruktur. Es sind keine Datenverarbeitungsverträge mit US- oder chinesischen Anbietern erforderlich, keine Schrems-II-Risikobewertungen und keine Datenschutz-Folgenabschätzungen für die KI-Schicht.',
+          'Der dritte Grund ist Latenz. Lokale Inferenz auf einer RTX 4090 erzeugt 35+ Token/Sekunde — vergleichbar mit API-Antwortzeiten für kurze Anfragen, ohne Netzwerk-Overhead bei längeren Ausgaben.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen 3.6 27B lokal auszuführen kostet nach der Hardware-Anschaffung 0 € pro Token, hält alle Daten auf EU-Infrastruktur und liefert 35+ Token/Sekunde auf einer RTX 4090.' },
+          { type: 'plain-terms', text: 'Ein lokales LLM bedeutet, dass das KI-Modell auf Ihrem eigenen Computer läuft. Sie laden die Modelldatei herunter (ca. 17 GB für Qwen 3.6 27B), und jede Anfrage wird vollständig auf Ihrem Rechner verarbeitet — nichts wird an einen Server gesendet.' },
+        ],
+      },
+      chooseModel: {
+        id: 'choose-model',
+        title: 'Das richtige Qwen-Modell wählen',
+        content: [
+          'Qwen 3 ist in mehreren Größen erhältlich. Wählen Sie basierend auf Ihrem VRAM und der erforderlichen Qualität. Alle Größen sind auf [Hugging Face (Qwen)](https://huggingface.co/Qwen) und über Ollama mit expliziten Tags verfügbar.',
+        ],
+        rows: [
+          { Modell: 'Qwen 3.6 27B Q4_K_M', VRAM: '16 GB', 'Token/Sek. (RTX 4090)': '~35', 'Empfohlen für': 'Produktiver Coding-Einsatz, komplexe Aufgaben' },
+          { Modell: 'Qwen 3.6 27B Q8_0', VRAM: '28 GB', 'Token/Sek. (RTX 4090)': '~20', 'Empfohlen für': 'Maximale Qualität, Dual-GPU' },
+          { Modell: 'Qwen 3 14B Q4_K_M', VRAM: '9 GB', 'Token/Sek. (RTX 4090)': '~60', 'Empfohlen für': '8–12 GB VRAM, allgemeine Aufgaben' },
+          { Modell: 'Qwen 3 7B Q4_K_M', VRAM: '5 GB', 'Token/Sek. (RTX 4090)': '~80', 'Empfohlen für': 'Wenig VRAM, schnelle Vervollständigungen' },
+          { Modell: 'Qwen 3 72B Q4_K_M', VRAM: '42 GB', 'Token/Sek. (Apple M5 Max 128 GB)': '~22', 'Empfohlen für': 'Maximale Qualität, Apple Silicon 96 GB+' },
+        ],
+        columns: ['Modell', 'VRAM', 'Token/Sek. (RTX 4090)', 'Empfohlen für'],
+        tableFormat: true,
+        note: 'Q4_K_M ist die empfohlene Quantisierung für die meisten Anwender — bestes Qualitäts-/Größenverhältnis. Q8_0 bietet höhere Qualität bei höherem VRAM-Bedarf. Verwenden Sie stets den expliziten Tag (qwen3:27b, nicht qwen3), um sicherzustellen, dass das 27B-Modell heruntergeladen wird.',
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Hardware-Anforderungen',
+        items: [
+          '**Minimum (Qwen 3.6 27B)**: GPU mit 16 GB VRAM — RTX 4080, RTX 4070 Ti Super oder RTX 3090',
+          '**Empfohlen GPU**: RTX 4090 (24 GB VRAM) — führt Q4_K_M mit 35 Token/Sek. aus, 8 GB Puffer',
+          '**Apple Silicon M3/M4 (aktuell)**: M3 Max oder M4 Pro mit 48 GB Unified Memory — lautlos, energieeffizient, 40+ Token/Sek. via [MLX](https://developer.apple.com/metal/mlx)',
+          '**Mac Mini M4 Pro (48 GB)**: ca. 1.599 € im Handel, kompaktes Formfaktor, beste TCO für EU-Büro-Deployment',
+          '**Apple Silicon M5 Pro (64 GB)**: Nächste Generation, 307 GB/s Speicherbandbreite — führt Qwen 3.6 27B schätzungsweise mit 50+ Token/Sek. aus. Apple gibt 4× schnellere LLM-Prompt-Verarbeitung im Vergleich zu M4 an.',
+          '**Apple Silicon M5 Max (128 GB)**: 460–614 GB/s Speicherbandbreite — führt Qwen 3 72B Q4_K_M komfortabel mit Puffer aus. Erwartet Mitte 2026 im Mac Studio; aktueller Mac Mini kommt mit M4 Pro.',
+          '**RAM**: Mindestens 32 GB Systemspeicher neben GPU-Inferenz; 64 GB empfohlen neben einer vollständigen Entwicklungsumgebung',
+          '**Speicher**: 20 GB freier Festplattenspeicher für Qwen 3.6 27B Q4_K_M (GGUF-Datei ~17 GB)',
+        ],
+        callouts: [
+          { type: 'note', text: 'Apple Silicon Unified Memory wird zwischen CPU und GPU geteilt. Ein Mac mit 48 GB Unified Memory kann Qwen 3.6 27B Q4_K_M mit Puffer für Betriebssystem und andere Anwendungen ausführen. Dies macht ihn zur praktischsten EU-hosted Inference-Option in einem einzigen kompakten Gerät.' },
+          { type: 'tip', text: 'M5 Max (128 GB) ist die erste Apple Silicon Konfiguration, bei der Qwen 3 72B mit Produktionsgeschwindigkeit läuft. Wenn Sie sehr lange Kontexte benötigen oder maximale Qualität für EU-regulierte Workloads brauchen, ist der Mac Studio M5 Max die Einzel-Geräte-Empfehlung.' },
+        ],
+      },
+      ollamaSetup: {
+        id: 'ollama-setup',
+        title: 'Einrichtung mit Ollama',
+        content: [
+          'Ollama ist der schnellste Weg, Qwen 3 lokal auszuführen. Es verwaltet Modell-Downloads, stellt eine OpenAI-kompatible API unter localhost:11434 bereit und verarbeitet Quantisierung automatisch. Installieren Sie es von [ollama.com](https://ollama.com/download).',
+        ],
+        numberedItems: [
+          { title: 'Ollama installieren', whyItMatters: 'Ollama verwaltet Modell-Downloads, das GGUF-Format und stellt eine OpenAI-kompatible lokale API bereit.' },
+          { title: 'Qwen 3.6 27B mit explizitem Tag herunterladen', whyItMatters: 'Verwenden Sie qwen3:27b explizit. Der bare Tag `qwen3` lädt standardmäßig das 8B-Modell — nicht das 27B-Modell, auf das sich diese Anleitung bezieht.' },
+          { title: 'Modelfile mit korrekter Kontextlänge erstellen', whyItMatters: 'Der Standard-num_ctx von 2048 Token ist zu klein für reale Coding-Aufgaben. 32768 Token verarbeiten die meisten Dateien und Konversationen.' },
+          { title: 'Eigenes Modell erstellen und starten', whyItMatters: 'Erstellt eine Qwen 3.6 27B Instanz mit erweitertem Kontextfenster. Überprüfen Sie mit einer Test-Anfrage.' },
+          { title: 'API-Endpunkt testen', whyItMatters: 'Ollama stellt eine OpenAI-kompatible API unter localhost:11434/v1 bereit. Verwenden Sie diesen Endpunkt, um LLM-Clients, IDEs und PromptQuorum zu verbinden.' },
+        ],
+        codeBlock: `# Step 1 — Install Ollama
+# macOS
+brew install ollama
+
+# Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Windows — download from https://ollama.com/download
+
+# Step 2 — Pull Qwen 3.6 27B (explicit tag required)
+ollama pull qwen3:27b
+# Downloads Qwen 3.6 27B Q4_K_M (~17 GB)
+# Note: 'ollama pull qwen3' without a tag downloads the 8B model
+
+# Step 3 — Create Modelfile with correct num_ctx
+cat > Modelfile <<'EOF'
+FROM qwen3:27b
+PARAMETER num_ctx 32768
+PARAMETER temperature 0.7
+EOF
+
+# Step 4 — Build and run
+ollama create qwen3-32k -f Modelfile
+ollama run qwen3-32k
+
+# Expected output (Qwen working correctly):
+# >>> Write a Python function to reverse a string.
+# def reverse_string(s: str) -> str:
+#     return s[::-1]
+#
+# This function takes a string s as input and returns the reversed
+# string using Python slice notation with step -1.
+
+# Step 5 — Test API
+curl http://localhost:11434/v1/chat/completions \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "model": "qwen3-32k",
+    "messages": [{"role": "user", "content": "Write a Python function to reverse a string."}]
+  }'`,
+        codeLanguage: 'bash',
+        callouts: [
+          { type: 'warning', text: 'Überspringen Sie Schritt 3 nicht. Ollamas Standard-num_ctx beträgt 2048 Token — etwa 1.500 Wörter. Die meisten Coding-Aufgaben (Datei lesen, Funktion erklären, Tests schreiben) benötigen 8.000–32.000 Token Kontext. Ohne diese Korrektur kürzt Qwen Ihre Anfragen lautlos ab und liefert schlechtere Ausgaben.' },
+        ],
+      },
+      lmStudioSetup: {
+        id: 'lm-studio-setup',
+        title: 'Einrichtung mit LM Studio',
+        content: [
+          'LM Studio bietet eine GUI zum Ausführen lokaler LLMs ohne CLI-Befehle. Es ist der empfohlene Weg für nicht-technische Anwender oder Windows-Setups. Download unter [lmstudio.ai](https://lmstudio.ai).',
+        ],
+        numberedItems: [
+          { title: 'LM Studio herunterladen und installieren', whyItMatters: 'Kostenlose, plattformübergreifende GUI für lokale LLM-Inferenz. Kein CLI erforderlich.' },
+          { title: 'Qwen 3 27B suchen und herunterladen', whyItMatters: 'LM Studios Modell-Browser durchsucht Hugging Face. Suchen Sie nach „Qwen 3 27B" und wählen Sie die Q4_K_M GGUF-Variante für 16 GB VRAM.' },
+          { title: 'Kontextlänge in LM Studio-Einstellungen konfigurieren', whyItMatters: 'Dasselbe num_ctx-Problem wie bei Ollama — ändern Sie die Context Length auf 32768 in den Modell-Parametern vor dem Laden.' },
+          { title: 'Lokalen Server starten', whyItMatters: 'LM Studios „Server starten" erstellt eine OpenAI-kompatible API unter localhost:1234. Verwenden Sie diese URL in Clients und PromptQuorum.' },
+        ],
+        codeBlock: `// LM Studio local server config (exported JSON)
+{
+  "model": "qwen3-27b-q4_k_m",
+  "server": {
+    "host": "localhost",
+    "port": 1234,
+    "cors": true
+  },
+  "inference": {
+    "context_length": 32768,
+    "temperature": 0.7,
+    "gpu_layers": -1
+  }
+}`,
+        codeLanguage: 'json',
+        note: 'Setzen Sie gpu_layers auf -1, um alle Layer auf die GPU auszulagern. Auf Systemen, wo das Modell in den VRAM passt, liefert vollständiges GPU-Offloading die schnellste Inferenz.',
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'Verbindung mit PromptQuorum',
+        content: [
+          'PromptQuorum verteilt Anfragen auf mehrere LLMs. Um Ihre lokale Qwen-Instanz als Dispatch-Ziel zu verwenden, konfigurieren Sie den lokalen LLM-Endpunkt von PromptQuorum so, dass er auf Ihren Ollama-Server zeigt.',
+          'Dies ist der Ollama-Endpunkt (OpenAI-kompatibel) — getrennt von der Anthropic-API-Konfiguration für Claude. Beide können gleichzeitig aktiv sein, wobei PromptQuorum basierend auf Aufgabentyp und Datensensibilität weiterleitet.',
+        ],
+        codeBlock: `# PromptQuorum dispatch config — local Qwen via Ollama
+# Set in your .env or PromptQuorum settings panel
+
+OLLAMA_BASE_URL=http://localhost:11434/v1
+LOCAL_LLM_MODEL=qwen3:27b
+
+# Example routing rules (PromptQuorum dispatch):
+# - task_type: code       → model: qwen3:27b  (local Ollama, GDPR-safe)
+# - task_type: analysis   → model: claude-sonnet-4-6 (Anthropic API, separate config)
+# - task_type: private    → model: qwen3:27b  (local Ollama, no cloud egress)`,
+        codeLanguage: 'bash',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Verbinden Sie PromptQuorum mit lokalem Qwen, indem Sie OLLAMA_BASE_URL auf http://localhost:11434/v1 und LOCAL_LLM_MODEL auf qwen3:27b in den lokalen Dispatch-Einstellungen setzen.' },
+        ],
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: 'Fehlerbehebung',
+        items: [
+          '**Modellantwort wird mitten im Satz abgeschnitten**: num_ctx ist zu niedrig. Erstellen Sie Ihr Modelfile neu mit `PARAMETER num_ctx 32768` und erstellen Sie das Modell mit `ollama create` neu.',
+          '**CUDA out of memory Fehler**: Das Modell passt nicht in Ihren VRAM. Wechseln Sie zu Qwen 3 14B Q4_K_M (~9 GB VRAM) oder probieren Sie eine Q3_K_S Quantisierung des 27B.',
+          '**Ollama API gibt 404 zurück**: Bestätigen Sie, dass der Modellname exakt übereinstimmt. Führen Sie `ollama list` aus, um verfügbare Modelle zu sehen. Verwenden Sie den exakten angezeigten Namen (z. B. `qwen3-32k`).',
+          '**Langsame Generierung (< 5 Token/Sek.)**: GPU-Layer nicht vollständig ausgelagert. Führen Sie `ollama run qwen3-32k` aus und prüfen Sie, dass `num_gpu_layers` maximiert ist. Stellen Sie sicher, dass kein anderer GPU-intensiver Prozess läuft.',
+          '**LM Studio zeigt „Modell konnte nicht geladen werden"**: Unzureichender VRAM. Reduzieren Sie die Q4_K_M Kontextlänge auf 16384 oder wechseln Sie zu Qwen 3 14B.',
+          '**PromptQuorum gibt Authentifizierungsfehler zurück**: Setzen Sie `OLLAMA_BASE_URL=http://localhost:11434/v1` in den lokalen LLM-Einstellungen von PromptQuorum. Falls das Formular einen Key verlangt, geben Sie eine beliebige nicht-leere Zeichenkette ein — Ollama benötigt keine API-Key-Authentifizierung.',
+          '**Ollama verwendet CPU statt GPU**: Bei NVIDIA: Prüfen Sie, dass CUDA-Treiber installiert sind (`nvidia-smi` sollte die GPU anzeigen). Auf Mac: Ollama verwendet automatisch Metal — keine Konfiguration nötig. Wenn Metal nicht aktiv ist, installieren Sie Ollama von ollama.com neu.',
+          '**Modell-Download stoppt oder schlägt fehl**: Große Modelle (Qwen 3.6 27B ~17 GB) können bei langsamen Verbindungen zeitüberschreiten. Führen Sie `ollama pull qwen3:27b` erneut aus — Ollama setzt ab der letzten Position fort. Alternativ laden Sie das GGUF direkt von [Hugging Face](https://huggingface.co/Qwen) herunter und verwenden Sie `ollama create` mit einem lokalen Pfad in der FROM-Klausel des Modelfile.',
+        ],
+        callouts: [
+          { type: 'tip', text: 'Führen Sie `ollama ps` aus, um zu sehen, welche Modelle aktuell in den VRAM geladen sind und wie viel Speicher jedes verbraucht. Verwenden Sie `ollama stop qwen3-32k`, um ein Modell zu entladen, bevor Sie zu einem größeren wechseln.' },
+        ],
+      },
+      powerTco: {
+        id: 'power-tco',
+        title: 'Stromverbrauch und Gesamtbetriebskosten (TCO)',
+        content: [
+          'Hardware-Kosten sind die einmalige Investition. Strom ist der laufende Kostenfaktor. Die richtige Hardware-Wahl hängt von Ihrem Strompreis, den Nutzungsstunden und dem Standort ab — in Deutschland kostet Strom durchschnittlich ca. 0,35 €/kWh in 2026, verglichen mit ca. 0,13 $/kWh in den USA.',
+          'Ein RTX-4090-System zieht unter Inferenz-Last ca. 450 W. Bei 8 Stunden/Tag zum deutschen Strompreis: 0,45 kW × 8 h × 0,35 € × 250 Arbeitstage = **315 €/Jahr Stromkosten**. Die Hardware kostet ca. 2.200–2.500 € für ein vollständiges System.',
+          'Apple Silicon M5 Max im Mac Studio zieht unter LLM-Inferenz-Last ca. 40–50 W. Gleiches Szenario: 0,05 kW × 8 h × 0,35 € × 250 Tage = **35 €/Jahr Stromkosten**. Die Hardware kostet ca. 3.000–4.000 € für einen Mac Studio M5 Max mit 128 GB.',
+          'Im Vergleich zur Claude Sonnet 4.6 API bei 10 Millionen Token/Tag für einen einzelnen Entwickler: 10 Mio. Token × 3 $/1 Mio. × 250 Tage = **7.500 $/Jahr** (USD, da Anthropic API in US-Dollar abgerechnet wird).',
+        ],
+        rows: [
+          { Option: 'Claude Sonnet 4.6 API', Hardware: '—', 'Stromkosten/Jahr (EU)': '—', 'API-Kosten/Jahr (10 Mio. Tok./Tag)': '7.500 $', Amortisation: '—' },
+          { Option: 'RTX 4090 + lokales Qwen', Hardware: '2.200 €', 'Stromkosten/Jahr (EU)': '315 €', 'API-Kosten/Jahr (10 Mio. Tok./Tag)': '0 €', Amortisation: '~4 Monate ggü. Claude' },
+          { Option: 'Mac Mini M4 Pro (48 GB)', Hardware: '1.599 €', 'Stromkosten/Jahr (EU)': '25 €', 'API-Kosten/Jahr (10 Mio. Tok./Tag)': '0 €', Amortisation: '~3 Monate ggü. Claude' },
+          { Option: 'Mac Studio M5 Max (128 GB)', Hardware: 'ca. 3.500 €', 'Stromkosten/Jahr (EU)': '35 €', 'API-Kosten/Jahr (10 Mio. Tok./Tag)': '0 €', Amortisation: '~6 Monate ggü. Claude' },
+        ],
+        columns: ['Option', 'Hardware', 'Stromkosten/Jahr (EU)', 'API-Kosten/Jahr (10 Mio. Tok./Tag)', 'Amortisation'],
+        tableFormat: true,
+        callouts: [
+          { type: 'important', text: 'Für EU-Teams in Hochstrompreis-Ländern bietet der Mac Mini M4 Pro (48 GB) die beste TCO: niedrigste kombinierte Hardware- und Stromkosten, DSGVO-Konformität durch Design und lautloser Betrieb im Büro. Der Mac Studio M5 Max ist die Upgrade-Option für Teams, die Qwen 3 72B Qualität benötigen.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Qwen 3 vs. Claude Sonnet 4.6 vs. DeepSeek R2 — Vergleich 2026](/local-llms/qwen-vs-claude-vs-deepseek-local-2026?lang=de)',
+          '[Warum EU-Unternehmen auf lokales Qwen umsteigen](/blog/eu-companies-local-qwen-gdpr-shift?lang=de)',
+          '[Qwen Coder vs. DeepSeek vs. Mistral — Coding-Benchmark 2026](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026?lang=de)',
+          '[Alle Local-LLM-Guides](/local-llms?lang=de)',
+          '[PromptQuorum-Warteliste beitreten](/waitlist?lang=de)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Häufige Fragen',
+        faqs: [
+          { q: 'Was ist die minimale Hardware, um Qwen 3 lokal auszuführen?', a: 'Für Qwen 3.6 27B bei Q4_K_M Quantisierung: 16 GB VRAM (RTX 4080 oder RTX 3090). Für Apple Silicon: M3 Pro mit 36 GB Unified Memory oder M3 Max mit 48 GB. Für das kleinere Qwen 3 14B: 9 GB VRAM (RTX 3080 oder RTX 4070). Qwen 3 7B läuft auf 5 GB VRAM (GTX 1080 oder besser).' },
+          { q: 'Warum kürzt Ollama meine Anfragen ab?', a: 'Ollama verwendet standardmäßig num_ctx 2048 Token (~1.500 Wörter). Das ist zu wenig für die meisten realen Coding-Aufgaben. Sie müssen num_ctx auf mindestens 32768 in Ihrem Modelfile setzen. Erstellen Sie ein Modelfile mit `PARAMETER num_ctx 32768`, dann führen Sie `ollama create qwen3-32k -f Modelfile` aus, um eine Modellinstanz mit dem richtigen Kontextfenster zu erstellen.' },
+          { q: 'Ist die lokale Ausführung von Qwen DSGVO-konform?', a: 'Ja — lokale Inferenz ist die DSGVO-konformste KI-Architektur. Wenn Qwen auf Ihrer Hardware läuft, werden keine Daten an Dritte übertragen. DSGVO Art. 44 Beschränkungen für internationale Datenübermittlungen greifen nicht, da keine Übermittlung stattfindet. Ihr interner Datenverarbeitungsvertrag gilt, aber für die KI-Schicht sind keine SCCs oder Angemessenheitsbeschlüsse erforderlich.' },
+          { q: 'Kann Qwen 3 ausschließlich auf der CPU ausgeführt werden?', a: 'Ja, über llama.cpp oder Ollama auf einem System ohne GPU. CPU-Inferenz ist deutlich langsamer — typischerweise 1–5 Token/Sekunde auf einer modernen CPU für Qwen 3.6 27B. Für den Produktiveinsatz ist GPU oder Apple Silicon erforderlich. Für gelegentliche Nutzung oder Tests auf einem Laptop ohne dedizierte GPU funktioniert CPU-Inferenz, ist aber für Echtzeit-Konversation unpraktisch.' },
+          { q: 'Wie aktualisiere ich Qwen auf die neueste Version?', a: 'Führen Sie `ollama pull qwen3:27b` erneut aus. Ollama prüft, ob eine neuere Version verfügbar ist, und lädt nur die geänderten Layer herunter. Sie müssen Ihr Modelfile nicht neu erstellen — der Model-Tag (qwen3:27b) zeigt immer auf die neueste 27B-Version. In LM Studio prüfen Sie die Modellbibliothek auf Updates und laden bei Bedarf eine neuere GGUF-Version herunter.' },
+          { q: 'Muss ich bei der lokalen Ausführung von Qwen die DSGVO beachten?', a: 'Ja, aber der Aufwand ist deutlich geringer als bei Cloud-KI. Bei lokaler Inferenz verarbeiten Sie Daten auf Ihrer eigenen Infrastruktur — kein Auftragsverarbeitungsvertrag mit einem Drittanbieter (Art. 28) und kein Angemessenheitsbeschluss (Art. 44) für die KI-Schicht erforderlich. Sie müssen die Verarbeitung jedoch in Ihrem Verzeichnis von Verarbeitungstätigkeiten (VVT) dokumentieren. BSI-Grundschutz-Kataloge empfehlen lokale KI-Inferenz für Verarbeitungen mit Schutzbedarf „hoch" und „sehr hoch".' },
+          { q: 'Ist lokales Qwen 3 für den deutschen Mittelstand geeignet?', a: 'Ja. Der Mac Mini M4 Pro (48 GB) für ca. 1.599 € bietet den besten Einstiegspunkt für mittelständische Unternehmen: lautloser Bürobetrieb, keine zusätzliche Strominfrastruktur, DSGVO-Konformität durch Design ohne separaten SCC-Prozess. Für Code-Generierung eines 5-köpfigen Entwicklungsteams (10 Mio. Token/Tag) amortisiert sich die Hardware gegenüber Claude Sonnet 4.6 API-Preisen in ca. 3 Monaten. Die BSI-Grundschutz-Konformität vereinfacht sich, weil keine personenbezogenen Daten die Unternehmensinfrastruktur verlassen.' },
         ],
       },
     },
