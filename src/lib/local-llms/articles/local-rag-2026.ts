@@ -429,4 +429,215 @@ schema: {
         ]
       },
     },
+    fr: {
+      freshness_tier: 'annual',
+      theme: 'Advanced Techniques',
+      title: 'RAG local 2026 : créer des systèmes de questions-réponses sur documents sans APIs cloud',
+      seoTitle: 'Guide RAG local 2026',
+      intro: 'La génération augmentée par récupération (RAG) permet à votre LLM local de répondre aux questions sur vos propres documents. Vous téléchargez des fichiers PDF et texte, le système les convertit en embeddings, les stocke dans une base de données vectorielle et récupère les chunks pertinents lors de la réponse aux questions. Depuis avril 2026, RAG local est prêt pour la production et élimine les coûts API.',
+      metaDescription: 'RAG local 2026 : créez des systèmes de questions-réponses, bases de données vectorielles, stratégies de chunking et optimisation de récupération. Guide complet.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**La génération augmentée par récupération (RAG) permet à votre LLM local de répondre aux questions sur vos propres documents. Vous téléchargez des fichiers PDF et texte, le système les convertit en embeddings, les stocke dans une base de données vectorielle et récupère les chunks pertinents.**',
+      audience: 'Débutants exécutant leur premier LLM local sur matériel grand public',
+      readTime: '14 min de lecture',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'pipeline RAG local',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Comment fonctionne RAG', anchor: '#how-rag-works' },
+        { label: 'Stratégie de chunking de documents', anchor: '#chunking' },
+        { label: 'Bases de données vectorielles 2026', anchor: '#vector-databases' },
+        { label: 'Modèles d\'embedding', anchor: '#embedding-models' },
+        { label: 'Pipeline de récupération', anchor: '#retrieval' },
+        { label: 'Évaluation et optimisation', anchor: '#evaluation' },
+        { label: 'Modèles de RAG en production', anchor: '#production' },
+        { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+        { label: 'Questions courantes', anchor: '#common-questions' },
+        { label: 'Lectures complémentaires', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+
+          isTldr: true,
+          items: [
+            'RAG = télécharger des documents + récupération + LLM local répond. Aucun entraînement requis.',
+            'Cinq étapes : (1) charger documents, (2) fragmenter en chunks 500-1000 tokens, (3) générer embeddings, (4) stocker dans base vectorielle, (5) récupérer à la requête.',
+            'Meilleur modèle embedding : nomic-embed-text (137M, fonctionne localement, vecteurs 768-dim).',
+            'Meilleure base vectorielle : Chroma (simple, intégrée) pour <1M documents ; Qdrant (distribuée) pour production.',
+            'Depuis avril 2026, RAG local est plus rapide et moins cher que les APIs cloud. Qualité dépend de la précision de récupération et du prompt engineering.',
+          ],
+        },
+        howRag: {
+          title: 'Comment fonctionne RAG étape par étape ?',
+          numberedItems: [
+            '**Ingestion de documents :** charger des fichiers PDF, texte ou pages Web.',
+            '**Chunking :** diviser documents en chunks 500-1000 tokens (chevauchement 20% pour éviter ruptures contexte).',
+            '**Embedding :** convertir chaque chunk en vecteur (768-1536 dimensions) avec modèle embedding local.',
+            '**Stockage :** stocker vecteurs dans base de données vectorielle (Chroma, Qdrant, Milvus) avec métadonnées (nom document, page, timestamp).',
+            '**Temps requête :** convertir question utilisateur en embedding, rechercher base vectorielle pour top K chunks similaires (k=5-10).',
+            '**Assemblage contexte :** combiner chunks récupérés dans prompt avec instructions pour LLM local.',
+            '**Génération :** LLM local génère réponse basée sur contexte récupéré.',
+            '**Attribution :** retourner quels documents la réponse provenait.',
+          ],
+        },
+        chunking: {
+          title: 'Quelle est la stratégie de chunking optimale ?',
+          content: [
+            '**La stratégie de chunking détermine la qualité de récupération.** Mauvais chunking = informations pertinentes divisées sur chunks, récupération échoue.',
+            '**Chunking sémantique (recommandé) :** diviser par phrases ou paragraphes, préservant le sens. Exemple : chaque paragraphe = 1 chunk.',
+            '**Chunking de taille fixe :** 500 tokens par chunk, chevauchement 20%. Simple mais peut diviser phrases.',
+            '**Chunking récursif :** d\'abord par paragraphes, puis par phrases si trop gros. Préserve hiérarchie.',
+            'Depuis avril 2026, chunking sémantique avec chunks 500-1000 tokens et chevauchement 20% est optimal pour la plupart des cas.',
+          ],
+          codeBlock: '# Python: exemple chunking sémantique\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\n\nsplitter = RecursiveCharacterTextSplitter(\n  chunk_size=1000,\n  chunk_overlap=200,  # chevauchement 20%\n  separators=["\\n\\n", "\\n", ".", " "]  # diviser par paragraphe, puis phrase\n)\nchunks = splitter.split_documents(documents)\nprint(f"Créé {len(chunks)} chunks")',
+          codeLanguage: 'python',
+        },
+        vectorDatabases: {
+          title: 'Quelle base de données vectorielle devriez-vous utiliser ?',
+          rows: [
+            { 'Base de données': 'Chroma', 'Type': 'Intégrée', 'Capacité': '<1M docs', 'Effort installation': 'pip install', 'Idéal pour': 'Prototypage, petit RAG' },
+            { 'Base de données': 'Qdrant', 'Type': 'Distribuée', 'Capacité': 'Illimitée', 'Effort installation': 'Docker ou cloud', 'Idéal pour': 'Production, scalable' },
+            { 'Base de données': 'Milvus', 'Type': 'Distribuée', 'Capacité': 'Illimitée', 'Effort installation': 'Complexe', 'Idéal pour': 'Entreprise, grand déploiement' },
+            { 'Base de données': 'Weaviate', 'Type': 'Graphe + Vecteur', 'Capacité': 'Illimitée', 'Effort installation': 'Docker', 'Idéal pour': 'Requêtes complexes, relations' },
+            { 'Base de données': 'Pinecone (cloud)', 'Type': 'Gérée', 'Capacité': 'Illimitée', 'Effort installation': 'Clé API', 'Idéal pour': 'Sans serveur, sans maintenance' },
+          ],
+          columns: ['Base de données', 'Type', 'Capacité', 'Effort installation', 'Idéal pour'],
+        },
+        embeddings: {
+          title: 'Quel modèle d\'embedding devriez-vous choisir ?',
+          rows: [
+            { 'Modèle': 'nomic-embed-text (local)', 'Dimensions': '768', 'Vitesse': 'Rapide', 'Qualité': 'Excellente', 'Recommandation': 'Meilleur pour RAG local' },
+            { 'Modèle': 'bge-m3 (local)', 'Dimensions': '1024', 'Vitesse': 'Rapide', 'Qualité': 'Excellente', 'Recommandation': 'Support multilingue' },
+            { 'Modèle': 'OpenAI text-embedding-3 (cloud)', 'Dimensions': '3072', 'Vitesse': 'Très rapide', 'Qualité': 'Meilleure classe', 'Recommandation': 'Approche hybride' },
+            { 'Modèle': 'Cohere (cloud)', 'Dimensions': '4096', 'Vitesse': 'Rapide', 'Qualité': 'Excellente', 'Recommandation': 'RAG cloud production' },
+          ],
+          columns: ['Modèle', 'Dimensions', 'Vitesse', 'Qualité', 'Recommandation'],
+        },
+        retrieval: {
+          title: 'Comment optimisez-vous la qualité de récupération ?',
+          content: [
+            '**La qualité de récupération** détermine le succès de RAG. Bonne récupération = bonnes réponses. Mauvaise récupération = hallucinations.',
+          ],
+          items: [
+            '**Sélection Top K :** récupérer k=5-10 chunks. K plus élevé = plus contexte (plus lent), k inférieur = moins de distractions.',
+            '**Seuil de similarité :** filtrer résultats par score similarité minimum (p.ex. >0,75). Évite chunks peu pertinents.',
+            '**Reranking :** utiliser reranker (cross-encoder) pour re-classer chunks par pertinence. Petite amélioration précision.',
+            '**Recherche hybride :** combiner recherche sémantique (embeddings) avec recherche par mots-clés BM25. Capture documents avec mots-clés exacts.',
+            '**Expansion requête :** élargir requête utilisateur avec synonymes ou termes connexes. Améliore rappel.',
+          ],
+        },
+        evaluation: {
+          title: 'Comment évaluez-vous la qualité de RAG ?',
+          content: [
+            '**La qualité de RAG a deux dimensions : (1) qualité récupération (avons-nous des chunks pertinents ?), et (2) qualité génération (l\'LLM a-t-il bien répondu ?)**',
+            '**Évaluation récupération :** créer requêtes test avec documents corrects connus. Mesurer précision (combien de récupérés sont pertinents ?) et rappel (avons-nous tous documents pertinents ?).',
+            '**Évaluation génération :** exécuter LLM sur chunks récupérés, noter manuellement réponses (échelle 0-5) pour exactitude et complétude.',
+            'Depuis avril 2026, outils évaluation automatisés (comme Ragas) peuvent mesurer métriques récupération et génération automatiquement.',
+          ],
+        },
+        production: {
+          title: 'Modèles de RAG en production',
+          content: 'Pour services production, utilisez ces modèles :',
+          items: [
+            '**Mise en cache :** mettre en cache embeddings documents fréquemment interrogés pour éviter recalcul.',
+            '**Indexation incrémentale :** ajouter nouveaux documents sans tout ré-indexer. Qdrant et Milvus supportent ceci.',
+            '**Surveillance :** suivre latence récupération, taux hit cache et retours utilisateur sur qualité réponse.',
+            '**Fallback :** si récupération échoue (aucun chunks pertinents), répondre "Je n\'ai pas d\'informations là-dessus" au lieu d\'halluciner.',
+            '**Versioning :** conserver versions documents pour audit trails. Stocker quelle version utilisée pour chaque réponse.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes dans l\'implémentation de RAG local',
+          items: [
+            '**Mauvais chunking documents.** Trop petit chunks = bruit récupération. Trop gros chunks = information divisée. Tester tailles chunks empiriquement.',
+            '**Pas évaluer récupération.** Construire RAG sans tester si récupération fonctionne c\'est comme construire voiture sans tester moteur. Toujours mesurer précision/rappel.',
+            '**Utiliser embeddings génériques pour documents domaine-spécifique.** Documents légaux, médicaux ou techniques peuvent nécessiter embeddings ajustés. Considérer modèles domaine-spécifiques.',
+            '**Oublier fréquence mise à jour.** Si documents changent hebdomadairement, base vectorielle devient stale. Construire pipeline pour ré-embedding et mise à jour.',
+            '**Attendre RAG remplace fine-tuning.** RAG est injection contexte. Fine-tuning est adaptation modèle. Pour meilleurs résultats, combiner les deux.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Questions courantes sur RAG local',
+          faqs: [
+            {
+              q: 'Combien de documents peut gérer RAG local ?',
+              a: 'Chroma gère 100K-1M documents sur hardware consumer. Qdrant scale à milliards avec déploiement distribué. Au-delà 1M, utilisez Qdrant ou Milvus.',
+            },
+            {
+              q: 'Quelle latence dois-je attendre ?',
+              a: 'Requête embedding (nomic-embed-text sur CPU) : 50-200ms. Récupération (Chroma sur disque) : 10-50ms. Génération LLM : 2-10 secondes (dépend taille modèle). Total : 2-10 secondes par requête.',
+            },
+            {
+              q: 'RAG peut-il gérer mises à jour documents en temps réel ?',
+              a: 'Oui. Ajouter dynamiquement nouveaux documents à base vectorielle. Latence indexation 100-500ms par document, donc mises à jour temps réel sont pratiques.',
+            },
+            {
+              q: 'RAG local est-il moins cher que les APIs cloud ?',
+              a: 'Oui. Aucun coût par-token, aucuns appels API à services externes. Setup one-time d\'embeddings, puis requêtes gratuites.',
+            },
+            {
+              q: 'Puis-je utiliser embeddings cloud avec LLMs locaux ?',
+              a: 'Oui. Utiliser OpenAI, Cohere ou autres embeddings cloud pour indexation, puis LLMs locaux pour génération. Approche hybride.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectures complémentaires',
+          items: [
+            '[Meilleurs outils RAG locaux](/local-llms/best-local-rag-tools?lang=fr) -- Bases de données vectorielles et frameworks.',
+            '[Guide prompt engineering](/prompt-engineering?lang=fr) -- Optimiser prompts pour RAG.',
+            '[API OpenAI-compatible LLM local](/local-llms/local-llm-openai-compatible-api?lang=fr) -- Exposer RAG comme API.',
+            '[Fine-Tuning LLMs locaux LoRA](/local-llms/fine-tuning-local-llms-lora?lang=fr) -- Combiner fine-tuning avec RAG.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            'Documentation LlamaIndex -- docs.llamaindex.ai',
+            'Guide RAG LangChain -- python.langchain.com/docs/use_cases/question_answering',
+            'Documentation Chroma -- docs.trychroma.com',
+            'Moteur recherche vectorielle Qdrant -- qdrant.tech',
+            'Papier RAG (Lewis et al.) -- arxiv.org/abs/2005.11401',
+          ],
+        },
+      },
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'RAG local 2026 : créer des systèmes de questions-réponses sur documents sans APIs cloud',
+        'description': 'RAG local 2026 : créez des systèmes de questions-réponses, bases de données vectorielles, stratégies de chunking et optimisation de récupération. Guide complet.',
+        'url': 'https://www.promptquorum.com/local-llms/local-rag-2026?lang=fr',
+        'inLanguage': 'fr',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'fr',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Combien de documents peut gérer RAG local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chroma gère 100K-1M documents sur hardware consumer. Qdrant scale à milliards avec déploiement distribué. Au-delà 1M, utilisez Qdrant ou Milvus.' } },
+          { '@type': 'Question', 'name': 'Quelle latence dois-je attendre ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Requête embedding (nomic-embed-text sur CPU) : 50-200ms. Récupération (Chroma sur disque) : 10-50ms. Génération LLM : 2-10 secondes. Total : 2-10 secondes par requête.' } },
+          { '@type': 'Question', 'name': 'RAG peut-il gérer mises à jour documents en temps réel ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Ajouter dynamiquement nouveaux documents à base vectorielle. Latence indexation 100-500ms par document, donc mises à jour temps réel sont pratiques.' } },
+          { '@type': 'Question', 'name': 'RAG local est-il moins cher que les APIs cloud ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Aucun coût par-token, aucuns appels API à services externes. Setup one-time d\'embeddings, puis requêtes gratuites.' } },
+          { '@type': 'Question', 'name': 'Puis-je utiliser embeddings cloud avec LLMs locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Utiliser OpenAI, Cohere ou autres embeddings cloud pour indexation, puis LLMs locaux pour génération. Approche hybride.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'RAG local 2026 Essentials',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Bien fragmenter documents', 'description': 'Diviser documents en chunks 500-1000 tokens avec chevauchement 20%. Chunking sémantique préserve mieux le sens que taille fixe.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Choisir base de données vectorielle', 'description': 'Chroma pour <1M documents sur hardware consumer. Qdrant pour distribué, RAG scalable en production.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Évaluer qualité récupération', 'description': 'Mesurer précision et rappel. Mauvaise récupération = hallucinations. Utiliser outils automatisés comme Ragas pour évaluation.' },
+        ]
+      },
+    },
   };
