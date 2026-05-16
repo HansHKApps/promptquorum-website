@@ -73,5 +73,29 @@
     ],
     "reason": "Front-load 3 concrete failure modes as statement (not topic list) — stronger snippet hook and matches 'can LLMs verify' long-tail queries",
     "baseline": null
+  },
+  {
+    "id": "1518fa43-f0a6-4eec-ab77-c15c2445c6e4",
+    "slug": "/prompt-engineering/best-prompt-engineering-tools-2026",
+    "date": "2026-05-16T18:39:19.217Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompt Engineering Tools 2026: Complete Directory & Comparison",
+        "new": "Best Prompt Engineering Tools 2026: 6 Tools Ranked"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Directory of 6 prompt engineering tools: Braintrust (evaluation), Vellum (production), Promptfoo (testing), PromptHub (versioning), LangSmith, PromptQuorum. Free to /mo.",
+        "new": "Promptfoo is free. Braintrust starts at /mo. Vellum at . Side-by-side comparison of 6 PE tools ranked by the problem they solve in 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop Directory bot-magnet word across 5 languages, match best prompt engineering tools 2026 query, trim metaDescription to 144 chars",
+    "baseline": {
+      "position": 5.4,
+      "impressions": 4853,
+      "clicks": 0,
+      "ctr": 0
+    }
   }
 ]
