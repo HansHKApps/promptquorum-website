@@ -836,4 +836,245 @@ schema: {
         ],
       },
     },
+    zh: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: '2026年最佳本地RAG工具：Open WebUI、LlamaIndex和LangChain',
+      seoTitle: '本地RAG工具对比指南',
+      intro: 'RAG（检索增强生成）让你的本地LLM能够回答关于自己文档的问题。截至2026年4月，Open WebUI提供最简单的内置RAG功能（上传文档，提出问题），而LlamaIndex和LangChain是用于构建RAG管道的专业级框架。本指南涵盖8种工具，包括易用性、功能和生产就绪性。',
+      metaDescription: '最佳本地RAG工具：Open WebUI、LlamaIndex、LangChain。文档问答、检索、分块处理。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**RAG（检索增强生成）让你的本地LLM能够回答关于自己文档的问题。截至2026年4月，Open WebUI提供最简单的内置RAG功能，而LlamaIndex和LangChain是用于构建RAG管道的专业级框架。**',
+      audience: '在消费者硬件上首次运行本地LLM的初学者',
+      readTime: '阅读约12分钟',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'local RAG',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: 'RAG（检索增强生成）是什么？', anchor: '#what-is-rag' },
+        { label: '2026年排名前8的本地RAG工具', anchor: '#top-8-rag-tools' },
+        { label: '最简单：Open WebUI RAG', anchor: '#easiest-open-webui' },
+        { label: '最灵活：LlamaIndex', anchor: '#flexible-llamaindex' },
+        { label: '最专业：LangChain', anchor: '#professional-langchain' },
+        { label: '开源替代方案', anchor: '#open-source-alternatives' },
+        { label: 'RAG与微调对比', anchor: '#rag-vs-finetuning' },
+        { label: '常见错误', anchor: '#common-mistakes' },
+        { label: '常见问题', anchor: '#common-questions' },
+        { label: '相关文章', anchor: '#related-reading' },
+        { label: '参考资料', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'RAG = 上传文档，让模型回答问题并引用来源。',
+            '**Open WebUI**提供最简单的内置RAG。上传PDF，提出问题。5分钟设置。',
+            '**LlamaIndex**是构建RAG管道最灵活的框架。',
+            '**LangChain**是最广泛使用的专业框架。拥有庞大的生态系统。',
+            '**Chroma**和**Qdrant**是存储文档分块的领先向量数据库。',
+            '截至2026年4月，本地RAG已成熟，生产就绪。',
+          ],
+        },
+        whatIsRAG: {
+          title: 'RAG（检索增强生成）是什么？',
+          content: [
+            '**RAG是一种技术，让LLM能够在不微调模型的情况下回答关于自己文档的问题。**',
+            '流程：(1)上传文档（PDF、文本文件），(2)将其分割成块，(3)将块转换为嵌入（数值向量），(4)将嵌入存储在向量数据库中，(5)当提出问题时，从数据库检索相关块，(6)将块+问题传递给LLM，(7)LLM基于块提供答案。',
+            'RAG优于微调的场景：文档频繁变化（微调是一次性训练），需要来源归属（显示使用了哪些文档）。',
+          ],
+        },
+        top8Tools: {
+          title: '2026年排名前8的本地RAG工具',
+          rows: [
+            { '工具': 'Open WebUI', '类型': '网络应用（Docker）', '最适合': '初学者，最简单的设置', '向量数据库': '内置', '学习曲线': '无' },
+            { '工具': 'LlamaIndex', '类型': 'Python框架', '最适合': '灵活的管道', '向量数据库': '任意（Chroma、Qdrant、Pinecone）', '学习曲线': '中等' },
+            { '工具': 'LangChain', '类型': 'Python框架', '最适合': '生产系统', '向量数据库': '任意', '学习曲线': '中等' },
+            { '工具': 'Chroma', '类型': '向量数据库', '最适合': '简单RAG', '向量数据库': 'Chroma（嵌入式）', '学习曲线': '低' },
+            { '工具': 'Qdrant', '类型': '向量数据库', '最适合': '可扩展的RAG', '向量数据库': 'Qdrant（分布式）', '学习曲线': '中等' },
+            { '工具': 'Weaviate', '类型': '向量数据库', '最适合': 'GraphQL查询', '向量数据库': 'Weaviate', '学习曲线': '中等' },
+            { '工具': 'Milvus', '类型': '向量数据库', '最适合': '大规模部署', '向量数据库': 'Milvus', '学习曲线': '高' },
+            { '工具': 'Text-Generation-WebUI RAG', '类型': '扩展', '最适合': '与模型集成', '向量数据库': '内置', '学习曲线': '低' },
+          ],
+          columns: ['工具', '类型', '最适合', '向量数据库', '学习曲线'],
+        },
+        openWebUIRAG: {
+          title: '如何使用Open WebUI RAG（最简单）',
+          content: [
+            '**Open WebUI内置RAG功能。** 除了Docker设置，无需其他配置。上传文档，提出问题。',
+          ],
+          codeBlock: '# 1. 使用Docker运行Open WebUI\ndocker run -d -p 3000:8080 \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  ghcr.io/open-webui/open-webui:latest\n\n# 2. 打开 http://localhost:3000\n# 3. 点击消息输入旁的 "+" → "上传文件"\n# 4. 选择PDF或文本文件\n# 5. 提出问题 -- Open WebUI检索相关分块\n# 6. 模型基于文档回答并显示引用',
+          codeLanguage: 'bash',
+        },
+        llamaindex: {
+          title: '如何使用LlamaIndex构建RAG',
+          content: [
+            '**LlamaIndex是处理文档加载、分块、嵌入和检索的框架。** 灵活，支持任何向量数据库。',
+          ],
+          codeBlock: '# 1. 安装\npip install llama-index\npip install llama-index-embeddings-ollama  # 使用本地Ollama嵌入\npip install llama-index-vector-stores-chroma  # 使用Chroma存储\n\n# 2. 简单的RAG管道\nfrom llama_index.core import SimpleDirectoryReader, VectorStoreIndex\nfrom llama_index.embeddings.ollama import OllamaEmbedding\n\n# 加载文档\ndocuments = SimpleDirectoryReader("./documents").load_data()\n\n# 使用本地嵌入创建索引\nembedding_model = OllamaEmbedding(model_name="nomic-embed-text")\nindex = VectorStoreIndex.from_documents(\n  documents,\n  embed_model=embedding_model\n)\n\n# 查询\nquery_engine = index.as_query_engine()\nresponse = query_engine.query("文档中关于X说了什么？")\nprint(response)',
+          codeLanguage: 'python',
+        },
+        langchain: {
+          title: '如何使用LangChain构建RAG',
+          content: [
+            '**LangChain是用于生产RAG系统最广泛使用的框架。** 支持所有向量数据库和LLM提供商。',
+          ],
+          codeBlock: '# pip install langchain langchain-community langchain-chroma\n\nfrom langchain.document_loaders import DirectoryLoader\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.embeddings import OllamaEmbeddings\nfrom langchain.vectorstores import Chroma\nfrom langchain.chat_models import ChatOllama\nfrom langchain.chains import RetrievalQA\n\n# 加载文档\nloader = DirectoryLoader("./documents")\ndocs = loader.load()\n\n# 分割成块\nsplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\nchunks = splitter.split_documents(docs)\n\n# 创建嵌入和向量存储\nembeddings = OllamaEmbeddings(model="nomic-embed-text")\nvectorstore = Chroma.from_documents(chunks, embeddings)\n\n# 创建QA链\nllm = ChatOllama(model="llama3.2:8b")\nqa = RetrievalQA.from_chain_type(\n  llm=llm,\n  chain_type="stuff",\n  retriever=vectorstore.as_retriever()\n)\n\n# 回答问题\nresult = qa.run("文档中关于X说了什么？")\nprint(result)',
+          codeLanguage: 'python',
+        },
+        vectors: {
+          title: '本地RAG最适合的向量数据库',
+          content: [
+            '**Chroma**（最简单）：进程内向量数据库。无需服务器设置。适合小型RAG项目（<100万文档）。',
+            '**Qdrant**（可扩展）：分布式向量数据库。推荐用于大型RAG项目。',
+            '**Weaviate**（企业级）：支持GraphQL查询。需要复杂过滤时使用。',
+            '**Milvus**（大规模）：高级扩展。适合数百万文档。',
+          ],
+        },
+        ragVsFinetuning: {
+          title: 'RAG与微调对比',
+          content: [
+            '**使用RAG的场景**：文档频繁变化、需要显示来源、提供事实信息。',
+            '**使用微调的场景**：改变模型的性格或文体、教授推理模式或推理技能。',
+            '最佳实践：许多生产系统结合RAG + 微调。RAG用于事实检索，微调用于推理。',
+          ],
+        },
+        commonMistakes: {
+          title: '常见错误',
+          items: [
+            '**块大小过大**。超过1000个token的块容易包含无关信息。建议512-1000个token。',
+            '**嵌入模型不适合**。事实信息使用nomic-embed-text，文本分类使用jina-embeddings-v3。',
+            '**向量搜索结果不足**。通常建议每个问题检索前5-10个块。',
+            '**忽视LLM上下文长度**。需要匹配RAG检索的块与LLM的上下文长度。',
+          ],
+        },
+        faqSection: {
+          id: 'common-questions',
+          title: '常见问题',
+          faqs: [
+            {
+              q: '本地RAG需要多少GB的VRAM？',
+              a: '本地LLM模型（7B-13B）需要8GB，大型模型（34B+）需要16GB+。向量数据库本身几乎不使用VRAM。',
+            },
+            {
+              q: 'RAG应该使用哪个向量嵌入模型？',
+              a: 'nomic-embed-text广泛推荐。小型嵌入（384维）内存占用少。大型语料库考虑jina-embeddings-v3（1024维）。',
+            },
+            {
+              q: 'RAG能用于生产环境吗？',
+              a: '可以。Open WebUI、LlamaIndex、LangChain都生产就绪。取决于文档质量、嵌入模型、向量数据库设置。',
+            },
+            {
+              q: '本地RAG安全吗？',
+              a: '本地运行的数据保留在你的机器上。但要限制向量数据库访问，生产环境建议加防火墙保护。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关文章',
+          items: [
+            '[本地LLM完整指南](/local-llms/what-are-local-llms?lang=zh) -- 本地LLM基础和设置。',
+            '[Ollama命令指南](/local-llms/ollama-command-guide?lang=zh) -- Ollama设置和使用。',
+            '[2026年本地LLM硬件指南](/local-llms/local-llm-hardware-guide-2026?lang=zh) -- GPU选择和生产部署。',
+            '[LM Studio高级功能](/local-llms/lm-studio-advanced-features?lang=zh) -- 高级LLM实验和提示工程。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '参考资料',
+          items: [
+            'Open WebUI GitHub -- github.com/open-webui/open-webui',
+            'LlamaIndex文档 -- docs.llamaindex.ai',
+            'LangChain文档 -- python.langchain.com',
+            'Chroma文档 -- docs.trychroma.com',
+            'Qdrant文档 -- qdrant.tech/documentation',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '2026年最佳本地RAG工具：Open WebUI、LlamaIndex和LangChain',
+        description: '最佳本地RAG工具：Open WebUI、LlamaIndex、LangChain。文档问答、检索、分块处理。',
+        datePublished: '2026-04-04',
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        inLanguage: 'zh',
+        url: 'https://www.promptquorum.com/local-llms/best-local-rag-tools?lang=zh',
+        about: [
+          { '@type': 'Thing', name: 'RAG（检索增强生成）' },
+          { '@type': 'SoftwareApplication', name: 'Open WebUI' },
+          { '@type': 'SoftwareApplication', name: 'LlamaIndex' },
+          { '@type': 'SoftwareApplication', name: 'LangChain' },
+          { '@type': 'SoftwareApplication', name: 'Chroma' },
+          { '@type': 'SoftwareApplication', name: 'Qdrant' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Ollama' },
+          { '@type': 'SoftwareApplication', name: 'Weaviate' },
+          { '@type': 'SoftwareApplication', name: 'Milvus' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '#key-takeaways'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '本地RAG需要多少GB的VRAM？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '本地LLM模型（7B-13B）需要8GB，大型模型（34B+）需要16GB+。向量数据库本身几乎不使用VRAM。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RAG应该使用哪个向量嵌入模型？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'nomic-embed-text广泛推荐。小型嵌入（384维）内存占用少。大型语料库考虑jina-embeddings-v3（1024维）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RAG能用于生产环境吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '可以。Open WebUI、LlamaIndex、LangChain都生产就绪。取决于文档质量、嵌入模型、向量数据库设置。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '本地RAG安全吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '本地运行的数据保留在你的机器上。但要限制向量数据库访问，生产环境建议加防火墙保护。',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'zh',
+        name: '2026年顶级本地RAG工具',
+        numberOfItems: 8,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Open WebUI — 最简单', description: '网络应用（Docker）。初学者友好。5分钟设置。' },
+          { '@type': 'ListItem', position: 2, name: 'LlamaIndex — 最灵活', description: 'Python框架。支持任何向量数据库。' },
+          { '@type': 'ListItem', position: 3, name: 'LangChain — 使用最广泛', description: 'Python框架。适用于生产RAG系统。' },
+          { '@type': 'ListItem', position: 4, name: 'Chroma — 最简单的向量数据库', description: '进程内向量数据库。无需服务器设置。' },
+          { '@type': 'ListItem', position: 5, name: 'Qdrant — 可扩展', description: '分布式向量数据库。适合大型项目。' },
+          { '@type': 'ListItem', position: 6, name: 'Weaviate — 企业级', description: '支持GraphQL查询。适合复杂过滤。' },
+          { '@type': 'ListItem', position: 7, name: 'Milvus — 大规模', description: '高级扩展。适合数百万文档。' },
+          { '@type': 'ListItem', position: 8, name: 'Text-Generation-WebUI RAG', description: '扩展功能。与模型集成。' },
+        ],
+      },
+    },
   };
