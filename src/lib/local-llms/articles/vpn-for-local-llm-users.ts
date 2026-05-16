@@ -239,4 +239,254 @@ schema: {
         ],
       },
     },
+    de: {
+      freshness_tier: 'annual',
+      theme: 'Privacy & Business',
+      title: 'VPNs und lokale KI: Was du wissen musst',
+      seoTitle: 'VPN für lokale LLM-Teams: Remote-Zugriff, Sicherheit, Split-Tunneling',
+      intro: '**Remote-Mitarbeiter können über ein Corporate-VPN auf den lokalen LLM-Server zugreifen, ohne ihn im öffentlichen Internet zu exponieren.** Im April 2026 ersetzen VPN + Firewall-Regeln die Cloud-API-Abonnements für verteilte Teams. Dieser Leitfaden behandelt Setup, Leistungsauswirkungen und Sicherheitsaspekte.',
+      metaDescription: 'VPN für lokalen LLM-Serverzugriff: WireGuard, OpenVPN Setup. Remote-Team-Zugriff, Sicherheit. Split-Tunneling-Anleitung.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**Remote-Mitarbeiter können über ein Corporate-VPN auf den lokalen LLM-Server zugreifen, ohne ihn im öffentlichen Internet zu exponieren. Im April 2026 ersetzen VPN + Firewall-Regeln die Cloud-API-Abonnements für verteilte Teams.**',
+      audience: 'Entwickler, die mit Ollama oder LM Studio vertraut sind und lokale LLM-Workflows optimieren',
+      readTime: '7 Min. Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'VPN',
+      toc: [
+        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'VPN-Protokolle: WireGuard vs OpenVPN', anchor: '#protocols' },
+        { label: 'Setup: VPN-Server im LLM-Netzwerk', anchor: '#setup' },
+        { label: 'Leistungsauswirkungen', anchor: '#perf' },
+        { label: 'Split-Tunneling (Zugriff nur auf LLM, nicht Internet)', anchor: '#split' },
+        { label: 'Sicherheitshärtung', anchor: '#hardening' },
+        { label: 'Fehlerbehebung für Remote-Zugriff', anchor: '#troubleshooting' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**VPN-Protokoll:** WireGuard (schnell, modern) empfohlen. OpenVPN (langsamer, breiter kompatibel) Fallback.',
+            '**Setup:** VPN-Server im gleichen Netzwerk wie LLM-Server. Remote-Benutzer tunneln sich über WireGuard ein.',
+            '**Latenz:** +5-10ms pro Verbindung (typischerweise unmerklich). Durchsatz = begrenzt durch Internet-Bandbreite.',
+            '**Setup-Zeit:** 30 Min. (WireGuard) bis 2 Stunden (OpenVPN + Auth-Integration).',
+            '**Kosten:** Kostenlos (Open-Source) oder €50-200/Jahr (verwalteter VPN-Service, wenn du nicht selbst hosten möchtest).',
+            '**Sicherheit:** WireGuard hat 4.000 LOC (geringe Angriffsfläche). OpenVPN ist 400K+ LOC (komplex).',
+            '**Verschlüsselung:** Beide unterstützen AES-256. End-to-End-Sicherheit (Remote-Benutzer → VPN → LLM-Server).',
+            '**Kein Split-Tunneling = Unternehmen kontrolliert den gesamten Internet-Verkehr. Split-Tunneling = Benutzer leitet Nicht-LLM-Verkehr außerhalb des VPN.**',
+          ],
+        },
+        protocols: {
+          id: 'protocols',
+          title: 'VPN-Protokolle: WireGuard vs OpenVPN',
+          rows: [
+            { Merkmal: 'Merkmal', WireGuard: 'WireGuard', OpenVPN: 'OpenVPN' },
+            { Merkmal: 'Latenz', WireGuard: '~5ms Overhead', OpenVPN: '~15ms Overhead' },
+            { Merkmal: 'Setup-Komplexität', WireGuard: 'Einfach (30 Min.)', OpenVPN: 'Komplex (2 Stunden)' },
+            { Merkmal: 'Code-Größe', WireGuard: '4.000 LOC (überprüfbar)', OpenVPN: '400K+ LOC (komplex)' },
+            { Merkmal: 'Authentifizierung', WireGuard: 'Public-Key', OpenVPN: 'Zertifikate + Schlüssel' },
+            { Merkmal: 'Split-Tunneling', WireGuard: '✓ Eingebaut', OpenVPN: '✓ Erfordert Konfiguration' },
+            { Merkmal: 'Corporate-VPN (AD/SAML)', WireGuard: 'Begrenzt (manuelle Auth)', OpenVPN: 'Besser (RADIUS-Unterstützung)' },
+            { Merkmal: 'Empfehlung', WireGuard: '**Nutze das**', OpenVPN: 'Fallback, falls kein WireGuard' },
+          ],
+          columns: ['Merkmal', 'WireGuard', 'OpenVPN'],
+        },
+        setup: {
+          id: 'setup',
+          title: 'Setup: VPN-Server im LLM-Netzwerk',
+          numberedItems: [
+            '**Installiere WireGuard** auf dem VPN-Server (Linux-VM im gleichen LAN wie LLM-Server).',
+            '**Generiere Schlüssel:** Privater Schlüssel (serverseitiges Geheimnis), Öffentliche Schlüssel (an Clients verteilen).',
+            '**Firewall-Regel:** Erlaube UDP 51820 (WireGuard Standard-Port) eingehend vom Internet.',
+            '**Client-Konfiguration:** Jeder Benutzer erhält eine .conf-Datei mit privatem Schlüssel, Server-Endpunkt, zulässigen IPs.',
+            '**Client-Software:** WireGuard Desktop-App (Mac, Windows, Linux) oder Mobile (iOS, Android).',
+            '**Test:** Benutzer verbindet sich mit VPN, Ping zum LLM-Server (sollte antworten), führt Inferenz über API aus.',
+          ],
+        },
+        perf: {
+          id: 'perf',
+          title: 'Leistungsauswirkungen',
+          content: [
+            '**Latenz:** WireGuard fügt 5-10ms hinzu. LLM-Inferenz dauert bereits 10-100ms/Token, also Auswirkung <5 % merkbar.',
+            '**Durchsatz:** Begrenzt durch deine Internet-Verbindung (z.B. 100Mbps Heiminternet = 12 MB/sec = OK für LLM).',
+            '**Beispiel:** 10KB Prompt senden + 5KB Antwort empfangen = 15KB insgesamt. Bei 100Mbps = ~1ms Netzwerk-Latenz (vernachlässigbar).',
+            '**Verschlüsselung-Overhead:** Moderne CPUs haben AES-NI Befehle. Verschlüsselung/Entschlüsselung bei 500Mbps+ pro Kern.',
+          ],
+        },
+        split: {
+          id: 'split',
+          title: 'Split-Tunneling (Zugriff nur auf LLM, nicht Internet)',
+          content: [
+            '**Standardmäßig leitet VPN den GESAMTEN Verkehr (Internet + LLM) durch den Corporate-Tunnel weiter.**',
+            'Dies kann langsam sein, wenn Benutzer möchten, dass das Internet gleichzeitig mit LLM genutzt wird.',
+            '**Split-Tunneling** = nur LLM-Verkehr geht durch VPN, Internet-Verkehr geht direkt.',
+            'WireGuard Split-Tunneling Beispiel: `AllowedIPs = 10.0.0.0/24` (nur LLM-Netzwerk).',
+            '**Kompromiss:** Schnelleres Internet, aber weniger Sicherheitsüberwachung (Benutzer kann Daten außerhalb des VPN exfiltrieren).',
+            '**Empfehlung:** Split-Tunneling für Benutzer (bessere UX). Überwache mit Endpoint-Erkennung (CrowdStrike, Sentinel One).',
+          ],
+        },
+        hardening: {
+          id: 'hardening',
+          title: 'Sicherheitshärtung',
+          items: [
+            '**Firewall:** Erlaube nur dem VPN-Server, mit dem LLM-Server zu sprechen. Verwerfe den gesamten anderen Verkehr.',
+            '**Schlüssel rotieren:** Alle 6 Monate Client-Schlüssel neu generieren. Benutzer abmelden: Schlüssel sofort widerrufen.',
+            '**Protokollierung:** Protokolliere VPN-Verbindungen (wer, wann, wie lange). Vierteljährlich überprüfen.',
+            '**Passwörter:** VPN-Server sollte nur SSH-Schlüssel verwenden (keine Passwort-Auth). Passwortlose SSH über Schlüsselpaar.',
+            '**Fail Closed:** Falls VPN getrennt wird, kann Client nicht auf das Internet zugreifen (es sei denn, Split-Tunneling ist aktiviert).',
+          ],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: 'Fehlerbehebung für Remote-Zugriff',
+          content: [
+            '**Kann keine Verbindung herstellen:** Überprüfe Firewall-Regeln auf dem Router (UDP 51820 offen?). Überprüfe, ob WireGuard-Dienst läuft (`wg show`).',
+            '**Langsame Inferenz:** Überprüfe Latenz (`ping 10.0.0.1` innerhalb VPN, sollte <20ms sein). Überprüfe Internet-Bandbreite (`iperf3`).',
+            '**API Timeout:** VPN-Verbindung ist getrennt. Überprüfe Protokolle (`journalctl -u wg-quick@wg0`). Starte WireGuard neu.',
+            '**Ein Benutzer kann nicht zugreifen, andere können:** Überprüfe den öffentlichen Schlüssel des Benutzers in der Server-Konfiguration. Regeneriere Schlüsselpaar.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            { q: 'Sollte ich ein VPN verwenden oder die LLM-API dem Internet exponieren?', a: 'Verwende immer ein VPN. Exponiere LLM niemals direkt dem Internet (DDoS, nicht autorisierter Zugriff). VPN + Firewall ist sicher.' },
+            { q: 'Können Benutzer auf die LLM-API ohne VPN zugreifen?', a: 'Nur vom LAN (gleiches Netzwerk). Remote-Benutzer MÜSSEN VPN verwenden. Oder verwende SSH-Reverse-Tunnel (weniger sicher).' },
+            { q: 'Verlangsamt VPN-Verschlüsselung die Inferenz?', a: 'Vernachlässigbar (<5 % Auswirkung). Moderne CPUs können Verschlüsselung/Entschlüsselung mit Gbps-Geschwindigkeit durchführen.' },
+            { q: 'Sollte ich Split-Tunneling verwenden?', a: 'Ja, für bessere UX. Überwache mit EDR (Endpoint-Erkennung) auf Datenexfiltration.' },
+            { q: 'Was ist, wenn ein VPN-Schlüssel kompromittiert ist?', a: 'Regeneriere sofort den Schlüssel des Benutzers. Alter Schlüssel wird ungültig. Kein rückwirkender Zugriff.' },
+            { q: 'Kann ich Corporate-VPN (Okta, Azure) verwenden?', a: 'Ja, besser für große Teams. Erfordert aber Integration (RADIUS, SAML). WireGuard ist einfacher für <20 Benutzer.' },
+            { q: 'Ist VPN mit DSGVO-Anforderungen konform?', a: 'Ja. VPN + Verschlüsselung erfüllen Artikel 32 (Sicherheit der Verarbeitung). Lokale Speicherung von Modellen erfüllt Artikel 5 (Datensparsamkeit). Dokumentiere Sicherheitsmaßnahmen für DSGVO-Audit.' },
+            { q: 'Kann ich VPN mit BSI-Grundschutz für Mittelstand verwenden?', a: 'Ja, vollständig konform. WireGuard erfüllt BSI-Anforderungen: Verschlüsselung (AES-256), Zugriffskontrolle (Public-Key-Auth), Protokollierung. Weitere Maßnahmen: Firewall-Segmentierung, regelmäßige Schlüsselrotation, Audit-Logging.' },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Lektüre',
+          items: [
+            '[Lokales LLM-Setup für Teams](/local-llms/local-llm-setup-for-teams?lang=de)',
+            '[Privates lokales LLM für sensible Daten](/local-llms/private-local-llm-sensitive-data?lang=de)',
+            '[Bester lokaler LLM-Stack für Entwickler](/local-llms/local-llm-developer-stack?lang=de)',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Quellen',
+          items: [
+            'WireGuard offizielle Dokumentation und Schnellstartanleitung',
+            'OpenVPN Community-Dokumentation und OpenVPN Access Server',
+            'NIST Cybersecurity Framework: VPN Best Practices',
+            'BSI Grundschutz-Kataloge: Netzwerk-Sicherheit und VPN',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'VPN für lokale LLM-Teams: Remote-Zugriff, Sicherheit, Split-Tunneling',
+        description: 'VPN für lokalen LLM-Serverzugriff: WireGuard, OpenVPN Setup. Remote-Team-Zugriff, Sicherheit. Split-Tunneling-Anleitung.',
+        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=de',
+        inLanguage: 'de',
+        datePublished: '2026-04-05',
+        dateModified: '2026-04-19',
+        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', 'name': 'VPN-Setup' },
+          { '@type': 'Thing', 'name': 'WireGuard' },
+          { '@type': 'Thing', 'name': 'Remote-Zugriff' },
+          { '@type': 'Thing', 'name': 'lokale LLM-Inferenz' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
+        },
+        educationalLevel: 'Intermediate',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'de',
+        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=de',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich ein VPN verwenden oder die LLM-API dem Internet exponieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verwende immer ein VPN. Exponiere LLM niemals direkt dem Internet (DDoS, nicht autorisierter Zugriff). VPN + Firewall ist sicher.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Können Benutzer auf die LLM-API ohne VPN zugreifen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur vom LAN (gleiches Netzwerk). Remote-Benutzer MÜSSEN VPN verwenden. Oder verwende SSH-Reverse-Tunnel (weniger sicher).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Verlangsamt VPN-Verschlüsselung die Inferenz?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vernachlässigbar (<5 % Auswirkung). Moderne CPUs können Verschlüsselung/Entschlüsselung mit Gbps-Geschwindigkeit durchführen.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich Split-Tunneling verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, für bessere UX. Überwache mit EDR (Endpoint-Erkennung) auf Datenexfiltration.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist, wenn ein VPN-Schlüssel kompromittiert ist?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Regeneriere sofort den Schlüssel des Benutzers. Alter Schlüssel wird ungültig. Kein rückwirkender Zugriff.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Corporate-VPN (Okta, Azure) verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, besser für große Teams. Erfordert aber Integration (RADIUS, SAML). WireGuard ist einfacher für <20 Benutzer.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist VPN mit DSGVO-Anforderungen konform?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. VPN + Verschlüsselung erfüllen Artikel 32 (Sicherheit der Verarbeitung). Lokale Speicherung von Modellen erfüllt Artikel 5 (Datensparsamkeit). Dokumentiere Sicherheitsmaßnahmen für DSGVO-Audit.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich VPN mit BSI-Grundschutz für Mittelstand verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, vollständig konform. WireGuard erfüllt BSI-Anforderungen: Verschlüsselung (AES-256), Zugriffskontrolle (Public-Key-Auth), Protokollierung. Weitere Maßnahmen: Firewall-Segmentierung, regelmäßige Schlüsselrotation, Audit-Logging.'
+            }
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=de',
+        inLanguage: 'de',
+        name: 'VPN-Setup-Optionen für lokalen LLM Remote-Zugriff',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'WireGuard: 5-10ms Latenz, 30 Min. Setup, 4.000 LOC (überprüfbar), Public-Key-Authentifizierung. Empfohlen.' },
+          { '@type': 'ListItem', position: 2, name: 'OpenVPN: 15ms Latenz, 2-Stunden-Setup, 400K+ LOC (komplex), zertifikatbasiert. Fallback-Option.' },
+          { '@type': 'ListItem', position: 3, name: 'Cloudflare Tunnel: Einfachstes Setup, keine öffentliche IP-Exposition, integrierter DDoS-Schutz, aber Vendor Lock-in.' },
+        ],
+      },
+    },
   };
