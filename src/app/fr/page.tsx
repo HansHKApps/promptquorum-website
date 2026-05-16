@@ -31,7 +31,7 @@ export default async function FrHome() {
   return (
     <>
       <ConfirmedToast />
-      <LandingPageServer initialLang="ja" />
+      <LandingPageServer initialLang="fr" />
 
       {/* FAQPage Schema — 8 core questions for homepage rich snippets */}
       <script

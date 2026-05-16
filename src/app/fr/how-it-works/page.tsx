@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.howItWorksMetaTitle,
     description: t.howItWorksMetaDescription,
-    alternates: generateAlternates('/how-it-works', lang, true, undefined, ['de', 'zh', 'de']),
+    alternates: generateAlternates('/how-it-works', lang, true, undefined, ['ja', 'zh', 'de', 'fr']),
     openGraph: {
       title: t.howItWorksMetaTitle,
       description: t.howItWorksMetaDescription,
@@ -32,8 +32,8 @@ export default async function FrHowItWorksPage() {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       'name': 'How PromptQuorum Works — Write, Optimize, Dispatch, Quorum',
-      'url': 'https://www.promptquorum.com/ja/how-it-works',
-      'inLanguage': 'de',
+      'url': 'https://www.promptquorum.com/fr/how-it-works',
+      'inLanguage': 'fr',
       'description': 'A complete guide to the PromptQuorum 4-stage workflow: structured prompt writing with 9 frameworks, LLM-powered optimization, one-click dispatch to 25+ AI services, and multi-model Quorum analysis.',
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
     },
@@ -41,15 +41,15 @@ export default async function FrHowItWorksPage() {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'How It Works', 'item': 'https://www.promptquorum.com/ja/how-it-works' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/fr' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'How It Works', 'item': 'https://www.promptquorum.com/fr/how-it-works' },
       ],
     },
   ]
 
   return (
     <>
-      <HowItWorksPageClient initialLang="ja" />
+      <HowItWorksPageClient initialLang="fr" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

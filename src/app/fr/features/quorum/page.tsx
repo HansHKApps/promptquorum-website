@@ -52,7 +52,7 @@ export default function FrQuorumPage() {
 
           <div className="mt-8 flex justify-center">
             <Link
-              href="/ja/features"
+              href="/fr/features"
               className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-purple-600 hover:text-purple-700 border border-purple-200 rounded-lg hover:bg-purple-50 transition-colors"
             >
               ← Back to Features

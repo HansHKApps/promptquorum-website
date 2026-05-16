@@ -63,7 +63,7 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
               'headline': `${fw.name} Prompt Framework — Fields, Examples & When To Use It`,
               'description': fw.tagline,
               'url': `https://www.promptquorum.com/de/frameworks/${fw.slug}`,
-              'inLanguage': 'ja',
+              'inLanguage': 'fr',
               'author': {
                 '@type': 'Person',
                 'name': 'Hans Kuepper',
@@ -91,7 +91,7 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
               '@type': 'BreadcrumbList',
               'itemListElement': [
                 { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Frameworks', 'item': 'https://www.promptquorum.com/ja/frameworks' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'Frameworks', 'item': 'https://www.promptquorum.com/fr/frameworks' },
                 { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/de/frameworks/${fw.slug}` },
               ],
             },
@@ -106,7 +106,7 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
           <nav className="flex items-center gap-2 text-xs text-text-muted mb-8">
             <Link href="/ja" className="hover:text-primary transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/ja/frameworks" className="hover:text-primary transition-colors">Frameworks</Link>
+            <Link href="/fr/frameworks" className="hover:text-primary transition-colors">Frameworks</Link>
             <span>/</span>
             <span className="text-text-primary">{fw.name}</span>
           </nav>
@@ -236,7 +236,7 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
             <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
-            <Link href="/ja/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
+            <Link href="/fr/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
           </div>
 
         </div>

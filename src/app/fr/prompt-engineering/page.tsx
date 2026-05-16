@@ -38,5 +38,5 @@ export default async function FrPromptEngineeringPage() {
     ])
   )
 
-  return <PromptEngineeringHub initialLang="ja" titlesMap={titlesMap} />
+  return <PromptEngineeringHub initialLang="fr" titlesMap={titlesMap} />
 }

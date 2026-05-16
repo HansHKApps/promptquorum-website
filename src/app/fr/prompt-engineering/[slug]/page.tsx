@@ -72,7 +72,7 @@ export default async function FrPromptEngineeringArticlePage({ params }: PagePro
     <>
       <PromptEngineeringPostClient
         slug={slug}
-        initialLang="ja"
+        initialLang="fr"
       />
     </>
   )
