@@ -544,7 +544,6 @@ schema: {
           },
         ],
       },
-      },
     },
     fr: {
       freshness_tier: 'semi_annual',
