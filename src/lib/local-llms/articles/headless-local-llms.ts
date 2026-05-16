@@ -172,4 +172,180 @@ schema: {
         ]
       },
     },
+    de: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'Headless Local LLMs: Modelle ohne Benutzeroberfläche ausführen (2026)',
+      seoTitle: 'Headless-LLM-Deployment: Ollama und vLLM ohne UI',
+      intro: 'Ein Headless Local LLM ist ein Modell, das als Dienst (API) ohne Chat-Oberfläche oder UI läuft. Sie interagieren über REST API aus Python, Node.js oder curl. Headless-Deployments eignen sich ideal für Produktionsserver, Batch-Verarbeitung und Automatisierung. Ab April 2026 ist dies der Standard für Produktionsdeployments.',
+      metaDescription: 'Headless-LLM-Deployment mit Ollama und vLLM: Produktionssetup für Server und Microservices ohne UI. Skalierung, Überwachung und DSGVO-Compliance.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Ein Headless Local LLM ist ein Modell, das als Dienst (API) ohne Chat-Oberfläche oder UI läuft. Sie interagieren über REST API aus Python, Node.js oder curl.**',
+      audience: 'Anfänger, die ihr erstes Local LLM auf Consumer-Hardware ausführen',
+      readTime: '12 Min. Lesezeit',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'headless LLM',
+      toc: [
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+        { label: 'Was ist Headless?', anchor: '#what-is-headless' },
+        { label: 'Ollama Headless', anchor: '#headless-ollama' },
+        { label: 'vLLM Headless', anchor: '#headless-vllm' },
+        { label: 'Produktionsdeployment', anchor: '#production-deployment' },
+        { label: 'Überwachung und Skalierung', anchor: '#monitoring' },
+        { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+        { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
+        { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
+        { label: 'Quellen', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Headless = keine Chat-UI, nur API. Ollama, vLLM und LM Studio können alle Headless-Betrieb unterstützen.',
+            '**Ollama Headless**: `ollama serve` startet die API auf localhost:11434. Keine UI.',
+            '**vLLM Headless**: `vllm serve` startet die API auf Port 8000. Besserer Durchsatz als Ollama.',
+            '**Produktion**: Nutzen Sie vLLM für hohen Durchsatz, Ollama für Einfachheit, nginx für Lastverteilung und Sicherheit.',
+            'Ab April 2026 ist vLLM der Produktionsstandard für hochdurchsätzige Services.',
+          ],
+        },
+        whatIsHeadless: {
+          title: 'Was bedeutet Headless?',
+          content: [
+            '**Headless bedeutet, dass die Software als Dienst ohne grafische Benutzeroberfläche läuft.** Sie interagieren über API-Aufrufe (REST, gRPC) statt durch Klicks auf Buttons.',
+            'Vorteile: geringerer Ressourcenverbrauch (keine UI-Overhead), einfachere Automatisierung, für Server geeignet, leichter skalierbar.',
+            'Nachteile: kein visuelles Feedback, erfordert API-Kenntnisse, schwieriger zu debuggen ohne Logs.',
+          ],
+        },
+        ollama: {
+          title: 'Wie führe ich Ollama Headless aus?',
+          content: 'Ollama kann als reiner API-Dienst laufen:',
+          codeBlock: '# Run Ollama headless\nollama serve\n\n# This starts the API at http://localhost:11434/v1\n# No chat UI, just a background service\n\n# Use the API from Python\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)\n\n# Or from curl\ncurl http://localhost:11434/v1/chat/completions \\\n  -H "Content-Type: application/json" \\\n  -d \'{{"model": "llama3.2:3b", "messages": [{{"role": "user", "content": "Hello"}}]}}\'',
+          codeLanguage: 'bash',
+        },
+        vllm: {
+          title: 'Wie führe ich vLLM Headless aus?',
+          content: 'vLLM ist optimiert für Headless-, hochdurchsätzige Deployments:',
+          codeBlock: '# Install vLLM\npip install vllm\n\n# Run headless with API\nvllm serve llama-3.1-8b-instruct \\\n  --host 0.0.0.0 \\\n  --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Access at http://localhost:8000/v1\n# Supports 50+ concurrent requests\n\n# Use from Python (same as Ollama)\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:8000/v1", api_key="anything")\nresponse = client.chat.completions.create(\n  model="meta-llama/Llama-2-7b-chat-hf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'bash',
+        },
+        production: {
+          title: 'Wie stelle ich für Produktion bereit?',
+          content: [
+            '**1. Nutzen Sie vLLM** für hohen Durchsatz (50+ gleichzeitige Nutzer).',
+            '2. **Nutzen Sie Ollama** für Einfachheit (Einzelnutzer oder kleine Teams).',
+            '3. **Fügen Sie nginx Reverse Proxy hinzu** für Lastverteilung und Authentifizierung.',
+            '4. **Überwachen Sie GPU-Speicher** -- Modelle sollten nicht mehr als 80 % VRAM verbrauchen.',
+            '5. **Richten Sie Logging ein** -- verfolgen Sie Fehler und Leistung.',
+            '6. **Nutzen Sie systemd oder Docker** für Service-Management (Auto-Neustart bei Absturz).',
+            '7. **Beachten Sie DSGVO und BSI-Grundschutz-Kataloge** -- bei datenschutzsensitiven Anwendungen ist On-Premise-Deployment entscheidend.',
+          ],
+          codeBlock: '# Example: Deploy vLLM on a server via Docker\ndocker run --gpus all -p 8000:8000 \\\n  --env VLLM_API_KEY="your-secret-key" \\\n  vllm/vllm-openai:latest \\\n  --model meta-llama/Llama-2-13b-chat-hf \\\n  --tensor-parallel-size 2  # Use 2 GPUs\n\n# Nginx reverse proxy config (optional)\n# server {\n#   listen 80;\n#   location / {\n#     proxy_pass http://localhost:8000;\n#     proxy_set_header Authorization "Bearer $http_authorization";\n#   }\n# }',
+          codeLanguage: 'bash',
+        },
+        monitoring: {
+          title: 'Wie überwache ich Headless-Deployments?',
+          content: [
+            '**Überwachen Sie GPU-Speicher, Request-Latenz und Fehlerquoten:**',
+          ],
+          codeBlock: '# Monitor GPU usage (nvidia-smi)\nwatch nvidia-smi  # Updates every 2 seconds\n\n# Monitor request latency\n# Add logging to your client code\nimport time\nstart = time.time()\nresponse = client.chat.completions.create(...)\nlatency = time.time() - start\nprint(f"Request took {latency:.2f} seconds")\n\n# Monitor vLLM logs\ndocker logs -f <container_id>\n\n# Check error rates\n# Parse logs for errors or use a monitoring tool (Prometheus + Grafana)',
+          codeLanguage: 'python',
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler bei Headless-Deployments',
+          items: [
+            '**VRAM nicht überwachen.** Modelle können stillschweigend keinen Speicher mehr haben. Überwachen Sie die GPU vor dem Produktionsdeployment.',
+            '**API ohne Authentifizierung freigeben.** Headless-Services werden häufig in Netzwerken freigegeben. Immer Authentifizierung hinzufügen (API-Schlüssel, Firewall).',
+            '**Ressourcenlimits nicht setzen.** Ein Modell kann 100 % GPU verbrauchen und andere Aufgaben blockieren. Nutzen Sie `--gpu-memory-utilization` in vLLM.',
+            '**Erwarten Sie nicht, dass Ollama zu 100+ Nutzern skaliert.** Nutzen Sie vLLM für hohe Parallelität. Ollama kann einstellige gleichzeitige Nutzer verwalten.',
+            '**Failover nicht testen.** Wenn Ihr Modell-Server ausfällt, bleiben Requests hängen. Nutzen Sie einen Lastverteiler und Health Checks.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Häufig gestellte Fragen zu Headless-Deployments',
+          faqs: [
+            {
+              q: 'Können Ollama und vLLM auf der gleichen GPU laufen?',
+              a: 'Nicht gleichzeitig. Sie konkurrieren um VRAM. Betreiben Sie eins oder das andere, oder nutzen Sie mehrere GPUs.',
+            },
+            {
+              q: 'Ist es sicher, die API ins Internet freizugeben?',
+              a: 'Nein, nicht ohne Authentifizierung. Immer einen API-Schlüssel, eine Firewall oder einen Reverse Proxy davor setzen. Geben Sie localhost:11434 niemals direkt frei.',
+            },
+            {
+              q: 'Wie viele gleichzeitige Nutzer kann Ollama verwalten?',
+              a: 'Typischerweise 1-3 ohne Warteschlange. Für mehr nutzen Sie vLLM oder fügen Sie Request-Queueing hinzu.',
+            },
+            {
+              q: 'Was ist der Unterschied in der Leistung zwischen Ollama und vLLM?',
+              a: 'Einzelne Request: ähnliche Geschwindigkeit. Mehrere gleichzeitige Requests: vLLM ist 5-10× besser, weil es Requests batched.',
+            },
+            {
+              q: 'Muss ich bei der Verwendung von Ollama und vLLM die DSGVO beachten?',
+              a: 'Ja, wenn Sie personenbezogene Daten verarbeiten. Headless Local LLMs bieten einen großen Vorteil: Die Daten bleiben auf Ihrer Hardware. Sie müssen nicht mit externen APIs wie OpenAI kommunizieren. Dies erfüllt DSGVO Artikel 28 (Datenverarbeitung vor Ort). Nutzen Sie BSI-Grundschutz-Kataloge für zusätzliche Sicherheit und Compliance-Anforderungen.',
+            },
+            {
+              q: 'Sind Ollama und vLLM für deutsche Mittelständler geeignet?',
+              a: 'Absolut. Viele deutsche Mittelständler setzen auf lokale KI-Deployment wegen Datenschutz und Kosteneffizienz. Ollama ist einfach zu installieren und zu verwalten, vLLM ist ideal für Unternehmensanwendungen mit höherem Durchsatz. Beide unterstützen die BSI-Grundschutz-Standards und ermöglichen IT-Sicherheit ohne Abhängigkeit von Cloud-Anbietern.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Ressourcen',
+          items: [
+            '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) -- Ollama-Setup.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=de) -- Engine-Vergleich.',
+            '[Local LLM OpenAI-kompatible API](/local-llms/local-llm-openai-compatible-api?lang=de) -- API-Dokumentation.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide-2026?lang=de) -- Hardware-Anforderungen.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Quellen',
+          items: [
+            'Ollama GitHub -- github.com/ollama/ollama',
+            'vLLM GitHub -- github.com/vllm-project/vllm',
+            'vLLM Deployment Guide -- docs.vllm.ai/en/serving/deploying_with_docker.html',
+            'Ollama API Docs -- github.com/ollama/ollama/blob/main/docs/api.md',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Headless Local LLMs: Modelle ohne Benutzeroberfläche ausführen (2026)',
+        'description': 'Headless-LLM-Deployment mit Ollama und vLLM: Produktionssetup für Server und Microservices ohne UI. Skalierung, Überwachung und DSGVO-Compliance.',
+        'url': 'https://www.promptquorum.com/local-llms/headless-local-llms?lang=de',
+        'inLanguage': 'de',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'de',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Können Ollama und vLLM auf der gleichen GPU laufen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht gleichzeitig. Sie konkurrieren um VRAM. Betreiben Sie eins oder das andere, oder nutzen Sie mehrere GPUs.' } },
+          { '@type': 'Question', 'name': 'Ist es sicher, die API ins Internet freizugeben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein, nicht ohne Authentifizierung. Immer einen API-Schlüssel, eine Firewall oder einen Reverse Proxy davor setzen. Geben Sie localhost:11434 niemals direkt frei.' } },
+          { '@type': 'Question', 'name': 'Wie viele gleichzeitige Nutzer kann Ollama verwalten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Typischerweise 1-3 ohne Warteschlange. Für mehr nutzen Sie vLLM oder fügen Sie Request-Queueing hinzu.' } },
+          { '@type': 'Question', 'name': 'Was ist der Unterschied in der Leistung zwischen Ollama und vLLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Einzelne Request: ähnliche Geschwindigkeit. Mehrere gleichzeitige Requests: vLLM ist 5-10× besser, weil es Requests batched.' } },
+          { '@type': 'Question', 'name': 'Muss ich bei der Verwendung von Ollama und vLLM die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, wenn Sie personenbezogene Daten verarbeiten. Headless Local LLMs bieten einen großen Vorteil: Die Daten bleiben auf Ihrer Hardware. Sie müssen nicht mit externen APIs wie OpenAI kommunizieren. Dies erfüllt DSGVO Artikel 28 (Datenverarbeitung vor Ort). Nutzen Sie BSI-Grundschutz-Kataloge für zusätzliche Sicherheit und Compliance-Anforderungen.' } },
+          { '@type': 'Question', 'name': 'Sind Ollama und vLLM für deutsche Mittelständler geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Absolut. Viele deutsche Mittelständler setzen auf lokale KI-Deployment wegen Datenschutz und Kosteneffizienz. Ollama ist einfach zu installieren und zu verwalten, vLLM ist ideal für Unternehmensanwendungen mit höherem Durchsatz. Beide unterstützen die BSI-Grundschutz-Standards und ermöglichen IT-Sicherheit ohne Abhängigkeit von Cloud-Anbietern.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Headless-LLM-Deployment',
+        'inLanguage': 'de',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Starten Sie Ollama im Headless-Modus', 'description': 'Führen Sie ollama serve aus, um die REST API auf localhost:11434 freizugeben. Nutzen Sie die Umgebungsvariable OLLAMA_HOST für benutzerdefinierte Ports.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Interagieren Sie über REST API', 'description': 'Rufen Sie die API aus Python, Node.js oder curl auf. Ollama ist OpenAI-kompatibel für einfache Integration.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Batch-Verarbeitung und Produktion', 'description': 'Headless-Deployments skalieren besser als UI-basierte Ansätze. Nutzen Sie vLLM oder Ollama für gleichzeitige Requests.' },
+        ]
+      },
+    },
   };
