@@ -514,4 +514,174 @@ schema: {
         ]
       },
     },
+    ja: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'Headless Local LLMs: UIなしでモデルを実行する (2026)',
+      seoTitle: 'Headless LLMデプロイメント: OllamaとvLLMをUIなしで実行',
+      intro: 'Headless Local LLMは、チャットインターフェースやUIなしでサービス (API) として実行されるモデルです。Python、Node.js、curlからREST APIを介して対話します。Headlessデプロイメントは、本番環境のサーバー、バッチ処理、自動化に最適です。2026年4月時点で、これが本番環境デプロイメントの標準です。',
+      metaDescription: 'Headless LLMデプロイメント: OllamaやvLLMをUIなしで実行。本番環境向けサーバーおよびマイクロサービス構成のセットアップと監視。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Headless Local LLMは、チャットインターフェースやUIなしでサービス (API) として実行されるモデルです。Python、Node.js、curlからREST APIを介して対話します。**',
+      audience: 'コンシューマーグレードのハードウェアで初めてのLocal LLMを実行する初心者向け',
+      readTime: '9分で読める',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'headless LLM',
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: 'Headlessとは?', anchor: '#what-is-headless' },
+        { label: 'Ollama Headless', anchor: '#headless-ollama' },
+        { label: 'vLLM Headless', anchor: '#headless-vllm' },
+        { label: '本番環境へのデプロイ', anchor: '#production-deployment' },
+        { label: '監視とスケーリング', anchor: '#monitoring' },
+        { label: '一般的なミス', anchor: '#common-mistakes' },
+        { label: 'よくある質問', anchor: '#common-questions' },
+        { label: '関連情報', anchor: '#related-reading' },
+        { label: '参考資料', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Headless = チャットUI不要、API只。Ollama、vLLM、LM Studioはすべてheadlessモードをサポート。',
+            '**Ollama headless**: `ollama serve`でlocalhost:11434でAPIを起動。UIなし。',
+            '**vLLM headless**: `vllm serve`でポート8000でAPIを起動。Ollamaより高スループット。',
+            '**本番環境**: 高スループットはvLLM、シンプルさはOllama、負荷分散・セキュリティはnginxを使用。',
+            '2026年4月時点で、vLLMは高スループットサービスの本番環境標準。',
+          ],
+        },
+        whatIsHeadless: {
+          title: 'Headlessとは何か?',
+          content: [
+            '**Headlessはグラフィカルユーザーインターフェースなしでソフトウェアがサービスとして実行されることを意味します。** ボタンをクリックする代わりに、APIコール (REST、gRPC) で対話します。',
+            '利点: リソース使用量削減 (UI開発オーバーヘッド不要)、自動化が容易、サーバーに適切、スケーリングがシンプル。',
+            '欠点: ビジュアルフィードバック不要、API知識が必要、ログなしではデバッグが難しい。',
+          ],
+        },
+        ollama: {
+          title: 'Ollamaをheadlessで実行する方法',
+          content: 'Ollamaは純粋なAPIサービスとして実行できます:',
+          codeBlock: '# Run Ollama headless\nollama serve\n\n# This starts the API at http://localhost:11434/v1\n# No chat UI, just a background service\n\n# Use the API from Python\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)\n\n# Or from curl\ncurl http://localhost:11434/v1/chat/completions \\\n  -H "Content-Type: application/json" \\\n  -d \'{{"model": "llama3.2:3b", "messages": [{{"role": "user", "content": "Hello"}}]}}\'',
+          codeLanguage: 'bash',
+        },
+        vllm: {
+          title: 'vLLMをheadlessで実行する方法',
+          content: 'vLLMはheadless高スループットデプロイメント向けに最適化されています:',
+          codeBlock: '# Install vLLM\npip install vllm\n\n# Run headless with API\nvllm serve llama-3.1-8b-instruct \\\n  --host 0.0.0.0 \\\n  --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Access at http://localhost:8000/v1\n# Supports 50+ concurrent requests\n\n# Use from Python (same as Ollama)\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:8000/v1", api_key="anything")\nresponse = client.chat.completions.create(\n  model="meta-llama/Llama-2-7b-chat-hf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'bash',
+        },
+        production: {
+          title: '本番環境へのデプロイ方法',
+          content: [
+            '**1. 高スループット向けにvLLMを使用** (50+同時ユーザー)。',
+            '2. **シンプルさ向けにOllamaを使用** (シングルユーザーまたは小規模チーム)。',
+            '3. **nginx逆プロキシを追加** (負荷分散と認証)。',
+            '4. **GPUメモリを監視** -- モデルはVRAMの80%を超えないようにしてください。',
+            '5. **ロギングを設定** -- エラーと パフォーマンスを追跡。',
+            '6. **systemdまたはDocker使用** (サービス管理、クラッシュ時の自動再起動)。',
+          ],
+          codeBlock: '# Example: Deploy vLLM on a server via Docker\ndocker run --gpus all -p 8000:8000 \\\n  --env VLLM_API_KEY="your-secret-key" \\\n  vllm/vllm-openai:latest \\\n  --model meta-llama/Llama-2-13b-chat-hf \\\n  --tensor-parallel-size 2  # Use 2 GPUs\n\n# Nginx reverse proxy config (optional)\n# server {\n#   listen 80;\n#   location / {\n#     proxy_pass http://localhost:8000;\n#     proxy_set_header Authorization "Bearer $http_authorization";\n#   }\n# }',
+          codeLanguage: 'bash',
+        },
+        monitoring: {
+          title: 'Headlessデプロイメントを監視する方法',
+          content: [
+            '**GPUメモリ、リクエストレイテンシ、エラー率を監視してください:**',
+          ],
+          codeBlock: '# Monitor GPU usage (nvidia-smi)\nwatch nvidia-smi  # Updates every 2 seconds\n\n# Monitor request latency\n# Add logging to your client code\nimport time\nstart = time.time()\nresponse = client.chat.completions.create(...)\nlatency = time.time() - start\nprint(f"Request took {latency:.2f} seconds")\n\n# Monitor vLLM logs\ndocker logs -f <container_id>\n\n# Check error rates\n# Parse logs for errors or use a monitoring tool (Prometheus + Grafana)',
+          codeLanguage: 'python',
+        },
+        commonMistakes: {
+          title: 'Headlessデプロイメント時の一般的なミス',
+          items: [
+            '**VRAMを監視しない。** モデルはメモリ不足に自動的になることがあります。本番環境デプロイ前にGPUを監視してください。',
+            '**認証なしでAPIを公開。** Headlessサービスはネットワークに公開されることが多いです。常に認証を追加 (APIキー、ファイアウォール)。',
+            '**リソース制限を設定しない。** モデルはGPUの100%を消費し、他のタスクをブロックできます。vLLMで`--gpu-memory-utilization`を使用。',
+            '**OllamaがScaleすると期待。** 100+ユーザーにはvLLMを使用。Ollamaは1-3同時ユーザーを処理可能。',
+            '**フェイルオーバーをテストしない。** モデルサーバーがクラッシュするとリクエストがハング。ロードバランサーと健全チェックを使用。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Headlessデプロイメントについてのよくある質問',
+          faqs: [
+            {
+              q: 'OllamaとvLLMは同じGPUで実行できますか?',
+              a: 'いいえ、同時には実行できません。VRAMを競合します。片方だけを実行するか、複数のGPUを使用してください。',
+            },
+            {
+              q: 'APIをインターネットに公開するのは安全ですか?',
+              a: 'いいえ、認証なしではありません。常にAPIキー、ファイアウォール、または逆プロキシを前に配置してください。localhost:11434を直接公開しないでください。',
+            },
+            {
+              q: 'Ollamaは何人の同時ユーザーを処理できますか?',
+              a: 'キューイングなしで通常は1-3人。それ以上の場合はvLLMを使用するか、リクエストキューイングを追加してください。',
+            },
+            {
+              q: 'OllamaとvLLMのパフォーマンス差は?',
+              a: 'シングルリクエスト: 同様のスピード。複数同時リクエスト: vLLMはリクエストをバッチ処理するため5-10倍良好。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連情報',
+          items: [
+            '[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja) -- Ollamaセットアップ。',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=ja) -- エンジン比較。',
+            '[Local LLM OpenAI互換API](/local-llms/local-llm-openai-compatible-api?lang=ja) -- API ドキュメント。',
+            '[Local LLMハードウェアガイド](/local-llms/local-llm-hardware-guide-2026?lang=ja) -- ハードウェア要件。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '参考資料',
+          items: [
+            'Ollama GitHub -- github.com/ollama/ollama',
+            'vLLM GitHub -- github.com/vllm-project/vllm',
+            'vLLM Deployment Guide -- docs.vllm.ai/en/serving/deploying_with_docker.html',
+            'Ollama API Docs -- github.com/ollama/ollama/blob/main/docs/api.md',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Headless Local LLMs: UIなしでモデルを実行する (2026)',
+        'description': 'Headless LLMデプロイメント: OllamaやvLLMをUIなしで実行。本番環境向けサーバーおよびマイクロサービス構成のセットアップと監視。',
+        'url': 'https://www.promptquorum.com/local-llms/headless-local-llms?lang=ja',
+        'inLanguage': 'ja',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'vLLM' },
+          { '@type': 'Thing', 'name': 'Local LLM' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'OllamaとvLLMは同じGPUで実行できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ、同時には実行できません。VRAMを競合します。片方だけを実行するか、複数のGPUを使用してください。' } },
+          { '@type': 'Question', 'name': 'APIをインターネットに公開するのは安全ですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ、認証なしではありません。常にAPIキー、ファイアウォール、または逆プロキシを前に配置してください。localhost:11434を直接公開しないでください。' } },
+          { '@type': 'Question', 'name': 'Ollamaは何人の同時ユーザーを処理できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'キューイングなしで通常は1-3人。それ以上の場合はvLLMを使用するか、リクエストキューイングを追加してください。' } },
+          { '@type': 'Question', 'name': 'OllamaとvLLMのパフォーマンス差は?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'シングルリクエスト: 同様のスピード。複数同時リクエスト: vLLMはリクエストをバッチ処理するため5-10倍良好。' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Headless LLMデプロイメント',
+        'inLanguage': 'ja',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Ollamaをheadlessモードで起動', 'description': 'ollama serveを実行して、localhost:11434でREST APIを公開。OLLAMA_HOST環境変数でカスタムポートを使用可能。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'REST API経由で対話', 'description': 'Python、Node.js、またはcurlからAPIを呼び出し。OllamaはOpenAI互換で統合が容易。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'バッチ処理と本番環境', 'description': 'HeadlessデプロイメントはUI ベースのアプローチより優れたスケーリング。同時リクエスト向けにvLLMまたはOllamaを使用。' },
+        ]
+      },
+    },
   };
