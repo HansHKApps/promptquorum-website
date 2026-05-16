@@ -4,17 +4,20 @@ import { translations } from '@/translations'
 import { FRAMEWORKS } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
 
-export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
-  const t = translations[selectedLang as keyof typeof translations]
+const COMPLEXITY_COLOR: Record<string, string> = {
+  Low: 'text-green-400 bg-green-400/10 border-green-400/30',
+  Medium: 'text-yellow-400 bg-yellow-400/10 border-yellow-400/30',
+  High: 'text-orange-400 bg-orange-400/10 border-orange-400/30',
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const lang = 'ja'
+  const t = translations[lang]
 
   return {
     title: t.frameworksMetaTitle,
     description: t.frameworksMetaDescription,
-    alternates: generateAlternates('/frameworks', selectedLang, true, undefined, ['ja']),
+    alternates: generateAlternates('/frameworks', lang, true, undefined, ['ja']),
     openGraph: {
       title: t.frameworksMetaTitle,
       description: t.frameworksMetaDescription,
@@ -30,22 +33,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   }
 }
 
-interface PageProps {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-const COMPLEXITY_COLOR: Record<string, string> = {
-  Low: 'text-green-400 bg-green-400/10 border-green-400/30',
-  Medium: 'text-yellow-400 bg-yellow-400/10 border-yellow-400/30',
-  High: 'text-orange-400 bg-orange-400/10 border-orange-400/30',
-}
-
-export default async function FrameworksIndexPage({ searchParams }: PageProps) {
-  // Extract language from searchParams
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+export default async function JaFrameworksPage() {
   return (
     <>
       <script
@@ -56,11 +44,11 @@ export default async function FrameworksIndexPage({ searchParams }: PageProps) {
             '@type': 'CollectionPage',
             'name': 'Prompt Engineering Frameworks',
             'description': 'Complete guides to 9 prompt engineering frameworks: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF, Google Prompt, and Single Prompt Line.',
-            'url': 'https://www.promptquorum.com/frameworks',
+            'url': 'https://www.promptquorum.com/ja/frameworks',
             'hasPart': FRAMEWORKS.map(fw => ({
               '@type': 'Article',
               'name': `${fw.name} Prompt Framework`,
-              'url': `https://www.promptquorum.com/frameworks/${fw.slug}`,
+              'url': `https://www.promptquorum.com/ja/frameworks/${fw.slug}`,
               'description': fw.tagline,
             })),
           }),
@@ -98,7 +86,7 @@ export default async function FrameworksIndexPage({ searchParams }: PageProps) {
                   {FRAMEWORKS.map(fw => (
                     <tr key={fw.slug} className="border-b border-primary/10 hover:bg-card transition-colors">
                       <td className="py-3 pr-6">
-                        <Link href={`/frameworks/${fw.slug}`} className="font-bold text-primary hover:underline">
+                        <Link href={`/ja/frameworks/${fw.slug}`} className="font-bold text-primary hover:underline">
                           {fw.name}
                         </Link>
                         {fw.badge && (
@@ -126,7 +114,7 @@ export default async function FrameworksIndexPage({ searchParams }: PageProps) {
               {FRAMEWORKS.map(fw => (
                 <Link
                   key={fw.slug}
-                  href={`/frameworks/${fw.slug}`}
+                  href={`/ja/frameworks/${fw.slug}`}
                   className="bg-card border border-primary/20 rounded-2xl p-6 hover:border-primary/50 transition-colors group"
                 >
                   <div className="flex items-start justify-between mb-3">
@@ -137,29 +125,10 @@ export default async function FrameworksIndexPage({ searchParams }: PageProps) {
                   </div>
                   <p className="text-xs text-text-muted font-mono mb-3">{fw.expansion}</p>
                   <p className="text-text-secondary text-sm leading-relaxed">{fw.tagline}</p>
-                  {fw.badge && (
-                    <div className="mt-3 text-xs font-medium text-primary">★ {fw.badge}</div>
-                  )}
                 </Link>
               ))}
             </div>
           </section>
-
-          {/* CTA */}
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
-            <h2 className="text-xl font-bold text-text-primary mb-3">All 9 frameworks built into PromptQuorum</h2>
-            <p className="text-text-secondary text-sm mb-6">
-              A Framework Wizard helps you choose. Then optimize, dispatch to 25+ AI models, and run consensus analysis — free.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/#waitlist" className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-                Join the Waitlist
-              </Link>
-              <Link href="/blog/prompt-frameworks" className="px-8 py-3 border border-primary/30 text-primary rounded-lg font-semibold hover:bg-primary/5 transition-colors">
-                Framework Comparison Guide
-              </Link>
-            </div>
-          </div>
 
         </div>
       </div>

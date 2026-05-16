@@ -1,12 +1,37 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// Clusters routed via path-prefix locales (separate src/app/{de,fr,ja,zh}/<cluster>/ trees).
+// Clusters routed via path-prefix locales for ALL non-EN langs (separate src/app/{de,fr,ja,zh}/<cluster>/ trees).
 // Keep in sync with PATH_LOCALE_CLUSTERS in src/components/LanguageSwitcher.tsx,
 // NOINDEX_PATH_PREFIXES in src/app/layout.tsx, and EXCLUDED_PATH_PREFIXES in src/app/sitemap.ts.
 const PATH_LOCALE_CLUSTERS = ['power-local-llm']
+
+// Clusters routed via /ja/ path-prefix for Japanese ONLY.
+// DE/FR/ZH continue to use ?lang= on these paths.
+// Keep in sync with JA_ONLY_LOCALE_CLUSTERS in src/components/LanguageSwitcher.tsx.
+const JA_ONLY_LOCALE_CLUSTERS = [
+  'prompt-engineering',
+  'local-llms',
+  'blog',
+  'frameworks',
+  'compare',
+  'features',
+  'how-it-works',
+  'faq',
+  'about',
+  'privacy',
+]
+
 const PATH_LOCALE_RE = new RegExp(`^/(de|fr|ja|zh)(/|$)`)
 const CLUSTER_PATH_RE = new RegExp(
   `^(?:/(de|fr|ja|zh))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/|$)`
+)
+// Matches /ja/<jaOnlyCluster>/... or /<jaOnlyCluster>/... (without a locale prefix)
+const JA_CLUSTER_PATH_RE = new RegExp(
+  `^(?:/ja)?/(${JA_ONLY_LOCALE_CLUSTERS.join('|')})(/|$)`
+)
+// Matches /ja/<jaOnlyCluster>/... (already prefixed — used to detect already-migrated URLs)
+const JA_PREFIXED_CLUSTER_RE = new RegExp(
+  `^/ja/(${JA_ONLY_LOCALE_CLUSTERS.join('|')})(/|$)`
 )
 
 export function middleware(request: NextRequest) {
@@ -43,8 +68,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(redirectUrl, 301)
   }
 
-  // Path-prefix cluster + ?lang=<non-en>: rewrite legacy/shared links from
-  // /power-local-llm/foo?lang=de to /de/power-local-llm/foo (and strip the query).
+  // PATH_LOCALE_CLUSTERS (all langs): rewrite legacy ?lang= links to path prefix.
+  // /power-local-llm/foo?lang=de → /de/power-local-llm/foo
   // Only fires when the path is NOT already locale-prefixed.
   const clusterMatch = url.pathname.match(CLUSTER_PATH_RE)
   const onClusterPath = !!clusterMatch
@@ -62,6 +87,36 @@ export function middleware(request: NextRequest) {
     redirectUrl.searchParams.delete('lang')
     console.log(`[Middleware] 301 redirect (cluster ?lang=→/lang/): ${url.toString()} -> ${redirectUrl.toString()}`)
     return NextResponse.redirect(redirectUrl, 301)
+  }
+
+  // JA_ONLY_LOCALE_CLUSTERS: redirect ?lang=ja to /ja/ path prefix.
+  // Only JA — DE/FR/ZH stay on ?lang= for these clusters.
+  // Handles:
+  //   /blog/slug?lang=ja          → /ja/blog/slug
+  //   /compare?lang=ja            → /ja/compare
+  //   /?lang=ja                   → /ja  (home page special case)
+  if (langParam === 'ja' && !isApiRoute && !isCronRoute) {
+    const alreadyJaPrefixed = JA_PREFIXED_CLUSTER_RE.test(url.pathname)
+    const isHome = url.pathname === '/' || url.pathname === ''
+
+    if (isHome) {
+      // Home: /?lang=ja → /ja
+      const redirectUrl = url.clone()
+      redirectUrl.pathname = '/ja'
+      redirectUrl.searchParams.delete('lang')
+      console.log(`[Middleware] 301 redirect (home ?lang=ja→/ja): ${url.toString()} -> ${redirectUrl.toString()}`)
+      return NextResponse.redirect(redirectUrl, 301)
+    }
+
+    const onJaOnlyCluster = JA_CLUSTER_PATH_RE.test(url.pathname)
+    if (onJaOnlyCluster && !alreadyJaPrefixed) {
+      // Cluster path: /blog/slug?lang=ja → /ja/blog/slug
+      const redirectUrl = url.clone()
+      redirectUrl.pathname = `/ja${url.pathname}`
+      redirectUrl.searchParams.delete('lang')
+      console.log(`[Middleware] 301 redirect (ja-only cluster ?lang=ja→/ja/): ${url.toString()} -> ${redirectUrl.toString()}`)
+      return NextResponse.redirect(redirectUrl, 301)
+    }
   }
 
   // FIX 1 & 2: 301-redirect ?lang=en, ?lang= (empty), or other invalid langs to the bare URL.

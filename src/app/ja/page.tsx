@@ -4,17 +4,14 @@ import { generateAlternates } from '@/lib/hreflang'
 import { LandingPageServer } from '@/components/LandingPageServer'
 import { ConfirmedToast } from '@/components/ConfirmedToast'
 
-export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
-  const t = translations[selectedLang as keyof typeof translations]
+export async function generateMetadata(): Promise<Metadata> {
+  const lang = 'ja'
+  const t = translations[lang as keyof typeof translations]
 
   return {
     title: t.homeMetaTitle,
     description: t.homeMetaDescription,
-    alternates: generateAlternates('/', selectedLang, true, undefined, ['ja']),
+    alternates: generateAlternates('/', lang, true, undefined, ['ja']),
     openGraph: {
       title: t.homeMetaTitle,
       description: t.homeMetaDescription,
@@ -30,21 +27,11 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   }
 }
 
-interface PageProps {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-export default async function Home({ searchParams }: PageProps) {
-  // Extract language from searchParams
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
-
+export default async function JaHome() {
   return (
     <>
       <ConfirmedToast />
-      <LandingPageServer initialLang={selectedLang as any} />
+      <LandingPageServer initialLang="ja" />
 
       {/* FAQPage Schema — 8 core questions for homepage rich snippets */}
       <script
@@ -151,44 +138,18 @@ export default async function Home({ searchParams }: PageProps) {
               {
                 '@type': 'HowToStep',
                 'position': 3,
-                'name': 'Dispatch to 25+ AI Services',
-                'text': 'Send your optimized prompt to ChatGPT, Claude, Gemini, Grok, Mistral, Llama and 25+ other providers in one click. Tabs open in parallel — collect all responses in under a minute.',
+                'name': 'Dispatch to Multiple AI Models',
+                'text': 'Send the optimized prompt to 25+ AI services simultaneously in one click. Responses return in parallel — no waiting for one model to finish before starting the next.',
                 'image': 'https://www.promptquorum.com/og-image.png',
               },
               {
                 '@type': 'HowToStep',
                 'position': 4,
-                'name': 'Quorum Analysis',
-                'text': 'Paste all AI responses into the Quorum tab. Choose from 13 analysis types: Consensus Summary, Hallucination Detection, Contradiction Detection, Best Answer Selection, and more. Export results in TXT, MD, JSON, CSV, HTML, or PDF.',
+                'name': 'Analyze Consensus Across Models',
+                'text': 'Paste all responses into the analysis tab and choose from 13 analysis types: Consensus Summary, Hallucination Detection, Contradiction Detection, Best Answer Selection, and more. Get a verified verdict instead of trusting one model.',
                 'image': 'https://www.promptquorum.com/og-image.png',
-              },
-            ],
-          }),
-        }}
-      />
-      {/* VideoObject Schema — tells Google how to index the demo video */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'VideoObject',
-            'name': 'PromptQuorum Demo — One Prompt to 25+ AI Models',
-            'description': 'Watch how PromptQuorum works: write a structured prompt using 9 frameworks, optimize it with your own LLM, dispatch to ChatGPT, Claude, Gemini and 25+ AI models simultaneously, then run Quorum consensus analysis across all responses.',
-            'thumbnailUrl': 'https://img.youtube.com/vi/R-bDPhT5EMo/maxresdefault.jpg',
-            'embedUrl': 'https://www.youtube.com/embed/R-bDPhT5EMo',
-            'url': 'https://www.youtube.com/watch?v=R-bDPhT5EMo',
-            'uploadDate': '2026-03-13',
-            'duration': 'PT2M',
-            'publisher': {
-              '@type': 'Organization',
-              'name': 'PromptQuorum',
-              'url': 'https://www.promptquorum.com',
-              'logo': {
-                '@type': 'ImageObject',
-                'url': 'https://www.promptquorum.com/logo.svg',
-              },
-            },
+              }
+            ]
           }),
         }}
       />

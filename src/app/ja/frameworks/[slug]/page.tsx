@@ -4,30 +4,31 @@ import { notFound } from 'next/navigation'
 import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
 
+const COMPLEXITY_COLOR: Record<string, string> = {
+  Low: 'text-green-400 bg-green-400/10 border-green-400/30',
+  Medium: 'text-yellow-400 bg-yellow-400/10 border-yellow-400/30',
+  High: 'text-orange-400 bg-orange-400/10 border-orange-400/30',
+}
+
 export function generateStaticParams() {
   return FRAMEWORK_SLUGS.map(slug => ({ slug }))
 }
 
-export async function generateMetadata({ params, searchParams }: { params: Promise<{ slug: string }>; searchParams?: Promise<{ [key: string]: string | string[] | undefined }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const fw = getFramework(slug)
   if (!fw) return {}
 
-  // Read language from searchParams, default to 'en'
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
-
+  const lang = 'ja'
   const fwTitle = (fw as any).seoTitle ?? `${fw.name} Prompt Framework — Fields, Examples & When To Use It | PromptQuorum`
   const fwDesc = (fw as any).metaDescription ?? `${fw.expansion}. ${fw.tagline} See all fields, a real example, and when to use ${fw.name} vs other prompt frameworks.`
   return {
     title: fwTitle,
     description: fwDesc,
-    alternates: generateAlternates(`/frameworks/${fw.slug}`, selectedLang, true, undefined, ['ja']),
+    alternates: generateAlternates(`/frameworks/${fw.slug}`, lang, true, undefined, ['ja']),
     openGraph: {
       type: 'article',
-      url: `https://www.promptquorum.com/frameworks/${fw.slug}`,
+      url: `https://www.promptquorum.com/ja/frameworks/${fw.slug}`,
       siteName: 'PromptQuorum',
       title: `${fw.name} Prompt Framework — Complete Guide`,
       description: `${fw.tagline}`,
@@ -43,13 +44,7 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   }
 }
 
-const COMPLEXITY_COLOR: Record<string, string> = {
-  Low: 'text-green-400 bg-green-400/10 border-green-400/30',
-  Medium: 'text-yellow-400 bg-yellow-400/10 border-yellow-400/30',
-  High: 'text-orange-400 bg-orange-400/10 border-orange-400/30',
-}
-
-export default async function FrameworkPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function JaFrameworkPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const fw = getFramework(slug)
   if (!fw) notFound()
@@ -67,7 +62,8 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
               '@type': 'Article',
               'headline': `${fw.name} Prompt Framework — Fields, Examples & When To Use It`,
               'description': fw.tagline,
-              'url': `https://www.promptquorum.com/frameworks/${fw.slug}`,
+              'url': `https://www.promptquorum.com/ja/frameworks/${fw.slug}`,
+              'inLanguage': 'ja',
               'author': {
                 '@type': 'Person',
                 'name': 'Hans Kuepper',
@@ -92,23 +88,11 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
             },
             {
               '@context': 'https://schema.org',
-              '@type': 'HowTo',
-              'name': `How to use the ${fw.name} prompt framework`,
-              'description': `A step-by-step guide to using the ${fw.name} framework for AI prompt engineering.`,
-              'step': fw.fields.map((field, i) => ({
-                '@type': 'HowToStep',
-                'position': i + 1,
-                'name': `Fill in ${field.name}`,
-                'text': field.description,
-              })),
-            },
-            {
-              '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Frameworks', 'item': 'https://www.promptquorum.com/frameworks' },
-                { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/frameworks/${fw.slug}` },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'Frameworks', 'item': 'https://www.promptquorum.com/ja/frameworks' },
+                { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/ja/frameworks/${fw.slug}` },
               ],
             },
           ]),
@@ -120,9 +104,9 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
 
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs text-text-muted mb-8">
-            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <Link href="/ja" className="hover:text-primary transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/frameworks" className="hover:text-primary transition-colors">Frameworks</Link>
+            <Link href="/ja/frameworks" className="hover:text-primary transition-colors">Frameworks</Link>
             <span>/</span>
             <span className="text-text-primary">{fw.name}</span>
           </nav>
@@ -146,7 +130,7 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
             <p className="text-xl text-text-secondary leading-relaxed">{fw.tagline}</p>
           </div>
 
-          {/* Definition block — GEO anchor */}
+          {/* Definition block */}
           <section className="mb-12">
             <div className="bg-card border border-primary/20 rounded-xl p-6">
               <dl>
@@ -238,7 +222,7 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
                 {related.map(r => (
                   <Link
                     key={r.slug}
-                    href={`/frameworks/${r.slug}`}
+                    href={`/ja/frameworks/${r.slug}`}
                     className="bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/50 transition-colors"
                   >
                     <div className="font-bold text-primary mb-1">{r.name}</div>
@@ -249,27 +233,10 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
             </section>
           )}
 
-          {/* CTA */}
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center mb-10">
-            <h2 className="text-xl font-bold text-text-primary mb-3">
-              Use {fw.name} inside PromptQuorum
-            </h2>
-            <p className="text-text-secondary text-sm mb-6">
-              All 9 frameworks are built in. Write, optimize with your own LLM, dispatch to 25+ AI models, and run consensus analysis — free, no account required.
-            </p>
-            <Link
-              href="/#waitlist"
-              className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-            >
-              Join the Waitlist
-            </Link>
-          </div>
-
           {/* Nav */}
-          <div className="flex flex-wrap gap-4 pt-6 border-t border-primary/20">
-            <Link href="/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">← All Frameworks</Link>
-            <Link href="/blog/prompt-frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">Framework Comparison Guide</Link>
-            <Link href="/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How PromptQuorum Works</Link>
+          <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
+            <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
+            <Link href="/ja/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
           </div>
 
         </div>

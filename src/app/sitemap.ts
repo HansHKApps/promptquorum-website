@@ -26,6 +26,17 @@ const EXCLUDED_PATH_PREFIXES = [
   '/fr/power-local-llm',
   '/ja/power-local-llm',
   '/zh/power-local-llm',
+  // JA-only clusters — /ja/<cluster> entries are excluded and instead handled as hreflang alternates on EN entries
+  '/ja/prompt-engineering',
+  '/ja/local-llms',
+  '/ja/blog',
+  '/ja/frameworks',
+  '/ja/compare',
+  '/ja/features',
+  '/ja/how-it-works',
+  '/ja/faq',
+  '/ja/about',
+  '/ja/privacy',
 ]
 
 // Check if a content entry has real sections (not a stub)
@@ -171,16 +182,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // All other clusters: emit a <loc> entry for each language variant so Google
       // keeps all 5 language URLs in its crawl queue. Each entry carries full hreflang
       // alternates pointing to all 5 variants.
+      // JA uses /ja/ path prefix; DE/FR/ZH use ?lang= query params
+      const getJaUrl = (p: string) => p === '' ? '/ja' : `/ja${p}`
       const alternates = {
         'en': `${BASE}${path}`,
         'de': `${BASE}${path}?lang=de`,
         'fr': `${BASE}${path}?lang=fr`,
-        'ja': `${BASE}${path}?lang=ja`,
+        'ja': `${BASE}${getJaUrl(path)}`,
         'zh': `${BASE}${path}?lang=zh`,
         'x-default': `${BASE}${path}`,
       }
       LANGS.forEach(lang => {
-        const url = lang === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${lang}`
+        let url: string
+        if (lang === 'en') {
+          url = `${BASE}${path}`
+        } else if (lang === 'ja') {
+          url = alternates.ja
+        } else {
+          url = `${BASE}${path}?lang=${lang}`
+        }
         entries.push({
           url,
           lastModified: lastmod,

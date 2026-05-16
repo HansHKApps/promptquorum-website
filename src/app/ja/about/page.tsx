@@ -3,21 +3,14 @@ import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
 import Link from 'next/link'
 
-interface PageProps {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
-  const t = translations[selectedLang as keyof typeof translations]
+export async function generateMetadata(): Promise<Metadata> {
+  const lang = 'ja'
+  const t = translations[lang]
 
   return {
     title: t.aboutMetaTitle,
     description: t.aboutMetaDescription,
-    alternates: generateAlternates('/about', selectedLang, true, undefined, ['ja']),
+    alternates: generateAlternates('/about', lang, true, undefined, ['ja']),
     openGraph: {
       title: t.aboutMetaTitle,
       description: t.aboutMetaDescription,
@@ -33,7 +26,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   }
 }
 
-export default function AboutPage() {
+export default function JaAboutPage() {
   return (
     <>
       <script
@@ -43,17 +36,18 @@ export default function AboutPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'AboutPage',
-              'url': 'https://www.promptquorum.com/about',
+              'url': 'https://www.promptquorum.com/ja/about',
               'name': 'About PromptQuorum',
               'description': 'PromptQuorum is a privacy-first, multi-model AI dispatch and consensus tool built by Hans Kuepper.',
+              'inLanguage': 'ja',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
             },
             {
               '@context': 'https://schema.org',
               '@type': 'Person',
-              '@id': 'https://www.promptquorum.com/about#founder',
+              '@id': 'https://www.promptquorum.com/ja/about#founder',
               'name': 'Hans Kuepper',
-              'url': 'https://www.promptquorum.com/about',
+              'url': 'https://www.promptquorum.com/ja/about',
               'jobTitle': 'Founder & Developer',
               'worksFor': {
                 '@type': 'Organization',
@@ -70,8 +64,8 @@ export default function AboutPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'About', 'item': 'https://www.promptquorum.com/about' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'About', 'item': 'https://www.promptquorum.com/ja/about' },
               ],
             },
           ]),
@@ -233,10 +227,10 @@ export default function AboutPage() {
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
-            <Link href="/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
-            <Link href="/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
-            <Link href="/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
+            <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
+            <Link href="/ja/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
+            <Link href="/ja/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
+            <Link href="/ja/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           </div>
 
         </div>

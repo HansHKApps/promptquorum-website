@@ -4,21 +4,14 @@ import { generateAlternates } from '@/lib/hreflang'
 import { QuorumShowcase } from '@/components/QuorumShowcase'
 import Link from 'next/link'
 
-interface PageProps {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
-  const t = translations[selectedLang as keyof typeof translations]
+export async function generateMetadata(): Promise<Metadata> {
+  const lang = 'ja'
+  const t = translations[lang]
 
   return {
     title: t.featuresQuorumMetaTitle,
     description: t.featuresQuorumMetaDescription,
-    alternates: generateAlternates('/features/quorum', selectedLang, true, undefined, ['ja']),
+    alternates: generateAlternates('/features/quorum', lang, true, undefined, ['ja']),
     openGraph: {
       title: t.featuresQuorumMetaTitle,
       description: t.featuresQuorumMetaDescription,
@@ -34,7 +27,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   }
 }
 
-export default function QuorumPage() {
+export default function JaQuorumPage() {
   return (
     <main className="min-h-screen pt-20 pb-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +52,7 @@ export default function QuorumPage() {
 
           <div className="mt-8 flex justify-center">
             <Link
-              href="/features"
+              href="/ja/features"
               className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-purple-600 hover:text-purple-700 border border-purple-200 rounded-lg hover:bg-purple-50 transition-colors"
             >
               ← Back to Features
