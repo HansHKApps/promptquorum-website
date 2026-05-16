@@ -684,4 +684,174 @@ schema: {
         ]
       },
     },
+    zh: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'Headless本地LLMs: 无界面运行模型 (2026)',
+      seoTitle: 'Headless LLM部署: 使用Ollama和vLLM运行无界面模型',
+      intro: 'Headless本地LLM是作为服务(API)运行的模型,没有聊天界面或用户界面。您通过Python、Node.js或curl中的REST API进行交互。Headless部署非常适合生产服务器、批处理和自动化。截至2026年4月,这是生产部署的标准。',
+      metaDescription: 'Headless LLM部署: 无界面运行Ollama和vLLM。面向服务器和微服务的生产环境配置、监视和扩展。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Headless本地LLM是作为服务(API)运行的模型,没有聊天界面或用户界面。您通过Python、Node.js或curl中的REST API进行交互。**',
+      audience: '在消费级硬件上运行首个本地LLM的初学者',
+      readTime: '阅读约9分钟',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'headless LLM',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '什么是Headless?', anchor: '#what-is-headless' },
+        { label: 'Ollama Headless', anchor: '#headless-ollama' },
+        { label: 'vLLM Headless', anchor: '#headless-vllm' },
+        { label: '生产部署', anchor: '#production-deployment' },
+        { label: '监视和扩展', anchor: '#monitoring' },
+        { label: '常见错误', anchor: '#common-mistakes' },
+        { label: '常见问题', anchor: '#common-questions' },
+        { label: '相关阅读', anchor: '#related-reading' },
+        { label: '参考资源', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Headless = 无聊天UI,仅API。Ollama、vLLM和LM Studio都支持headless运行。',
+            '**Ollama Headless**: `ollama serve`在localhost:11434启动API。无UI。',
+            '**vLLM Headless**: `vllm serve`在端口8000启动API。比Ollama吞吐量更高。',
+            '**生产环境**: 高吞吐量使用vLLM,简单性使用Ollama,负载均衡和安全性使用nginx。',
+            '截至2026年4月,vLLM是高吞吐量服务的生产标准。',
+          ],
+        },
+        whatIsHeadless: {
+          title: 'Headless是什么意思?',
+          content: [
+            '**Headless意味着软件作为服务运行,没有图形用户界面。** 您通过API调用(REST、gRPC)而不是点击按钮进行交互。',
+            '优势: 更低的资源使用(无UI开销)、更易于自动化、适合服务器、更容易扩展。',
+            '劣势: 无视觉反馈、需要API知识、没有日志时难以调试。',
+          ],
+        },
+        ollama: {
+          title: '如何运行Ollama Headless?',
+          content: 'Ollama可以作为纯API服务运行:',
+          codeBlock: '# Run Ollama headless\nollama serve\n\n# This starts the API at http://localhost:11434/v1\n# No chat UI, just a background service\n\n# Use the API from Python\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)\n\n# Or from curl\ncurl http://localhost:11434/v1/chat/completions \\\n  -H "Content-Type: application/json" \\\n  -d \'{{"model": "llama3.2:3b", "messages": [{{"role": "user", "content": "Hello"}}]}}\'',
+          codeLanguage: 'bash',
+        },
+        vllm: {
+          title: '如何运行vLLM Headless?',
+          content: 'vLLM针对headless高吞吐量部署进行了优化:',
+          codeBlock: '# Install vLLM\npip install vllm\n\n# Run headless with API\nvllm serve llama-3.1-8b-instruct \\\n  --host 0.0.0.0 \\\n  --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Access at http://localhost:8000/v1\n# Supports 50+ concurrent requests\n\n# Use from Python (same as Ollama)\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:8000/v1", api_key="anything")\nresponse = client.chat.completions.create(\n  model="meta-llama/Llama-2-7b-chat-hf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'bash',
+        },
+        production: {
+          title: '如何部署到生产环境?',
+          content: [
+            '**1. 高吞吐量使用vLLM** (50+并发用户)。',
+            '2. **简单性使用Ollama** (单用户或小团队)。',
+            '3. **添加nginx反向代理** (负载均衡和身份验证)。',
+            '4. **监视GPU内存** -- 模型不应超过80% VRAM。',
+            '5. **设置日志** -- 跟踪错误和性能。',
+            '6. **使用systemd或Docker** (服务管理、崩溃时自动重启)。',
+          ],
+          codeBlock: '# Example: Deploy vLLM on a server via Docker\ndocker run --gpus all -p 8000:8000 \\\n  --env VLLM_API_KEY="your-secret-key" \\\n  vllm/vllm-openai:latest \\\n  --model meta-llama/Llama-2-13b-chat-hf \\\n  --tensor-parallel-size 2  # Use 2 GPUs\n\n# Nginx reverse proxy config (optional)\n# server {\n#   listen 80;\n#   location / {\n#     proxy_pass http://localhost:8000;\n#     proxy_set_header Authorization "Bearer $http_authorization";\n#   }\n# }',
+          codeLanguage: 'bash',
+        },
+        monitoring: {
+          title: '如何监视Headless部署?',
+          content: [
+            '**监视GPU内存、请求延迟和错误率:**',
+          ],
+          codeBlock: '# Monitor GPU usage (nvidia-smi)\nwatch nvidia-smi  # Updates every 2 seconds\n\n# Monitor request latency\n# Add logging to your client code\nimport time\nstart = time.time()\nresponse = client.chat.completions.create(...)\nlatency = time.time() - start\nprint(f"Request took {latency:.2f} seconds")\n\n# Monitor vLLM logs\ndocker logs -f <container_id>\n\n# Check error rates\n# Parse logs for errors or use a monitoring tool (Prometheus + Grafana)',
+          codeLanguage: 'python',
+        },
+        commonMistakes: {
+          title: 'Headless部署的常见错误',
+          items: [
+            '**不监视VRAM。** 模型可能无声地内存不足。在部署到生产前监视GPU。',
+            '**在没有身份验证的情况下公开API。** Headless服务通常暴露在网络上。始终添加身份验证(API密钥、防火墙)。',
+            '**不设置资源限制。** 模型可能消耗100% GPU,阻断其他任务。在vLLM中使用`--gpu-memory-utilization`。',
+            '**预期Ollama扩展到100+用户。** 高并发使用vLLM。Ollama可处理1-3个并发用户。',
+            '**不测试故障转移。** 模型服务器崩溃时请求挂起。使用负载均衡器和健康检查。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '关于Headless部署的常见问题',
+          faqs: [
+            {
+              q: 'Ollama和vLLM可以在同一GPU上运行吗?',
+              a: '不能,不能同时运行。它们会竞争VRAM。运行其中一个或使用多个GPU。',
+            },
+            {
+              q: '在互联网上公开API安全吗?',
+              a: '不,没有身份验证则不安全。始终在前面放置API密钥、防火墙或反向代理。永远不要直接公开localhost:11434。',
+            },
+            {
+              q: 'Ollama可以处理多少并发用户?',
+              a: '通常1-3个不排队。更多的使用vLLM或添加请求队列。',
+            },
+            {
+              q: 'Ollama和vLLM的性能差异是什么?',
+              a: '单个请求: 速度相似。多个并发请求: vLLM因为批处理请求而好5-10倍。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh) -- Ollama设置。',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=zh) -- 引擎比较。',
+            '[本地LLM OpenAI兼容API](/local-llms/local-llm-openai-compatible-api?lang=zh) -- API文档。',
+            '[本地LLM硬件指南](/local-llms/local-llm-hardware-guide-2026?lang=zh) -- 硬件要求。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '参考资源',
+          items: [
+            'Ollama GitHub -- github.com/ollama/ollama',
+            'vLLM GitHub -- github.com/vllm-project/vllm',
+            'vLLM Deployment Guide -- docs.vllm.ai/en/serving/deploying_with_docker.html',
+            'Ollama API Docs -- github.com/ollama/ollama/blob/main/docs/api.md',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Headless本地LLMs: 无界面运行模型 (2026)',
+        'description': 'Headless LLM部署: 无界面运行Ollama和vLLM。面向服务器和微服务的生产环境配置、监视和扩展。',
+        'url': 'https://www.promptquorum.com/local-llms/headless-local-llms?lang=zh',
+        'inLanguage': 'zh',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'vLLM' },
+          { '@type': 'Thing', 'name': '本地LLM' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Ollama和vLLM可以在同一GPU上运行吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不能,不能同时运行。它们会竞争VRAM。运行其中一个或使用多个GPU。' } },
+          { '@type': 'Question', 'name': '在互联网上公开API安全吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不,没有身份验证则不安全。始终在前面放置API密钥、防火墙或反向代理。永远不要直接公开localhost:11434。' } },
+          { '@type': 'Question', 'name': 'Ollama可以处理多少并发用户?', 'acceptedAnswer': { '@type': 'Answer', 'text': '通常1-3个不排队。更多的使用vLLM或添加请求队列。' } },
+          { '@type': 'Question', 'name': 'Ollama和vLLM的性能差异是什么?', 'acceptedAnswer': { '@type': 'Answer', 'text': '单个请求: 速度相似。多个并发请求: vLLM因为批处理请求而好5-10倍。' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Headless LLM部署',
+        'inLanguage': 'zh',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '以headless模式启动Ollama', 'description': '运行ollama serve以在localhost:11434上公开REST API。使用OLLAMA_HOST环境变量进行自定义端口。' },
+          { '@type': 'ListItem', 'position': 2, 'name': '通过REST API交互', 'description': '从Python、Node.js或curl调用API。Ollama与OpenAI兼容,易于集成。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '批处理和生产', 'description': 'Headless部署比基于UI的方法扩展性更好。为并发请求使用vLLM或Ollama。' },
+        ]
+      },
+    },
   };
