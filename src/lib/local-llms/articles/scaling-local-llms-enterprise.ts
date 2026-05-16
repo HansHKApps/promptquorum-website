@@ -546,4 +546,260 @@ schema: {
       },
       },
     },
+    fr: {
+      freshness_tier: 'semi_annual',
+      theme: 'Enterprise',
+      title: 'Mettre à l\'échelle les LLM locaux en entreprise : Déploiement multi-utilisateurs et multi-GPU en production',
+      seoTitle: 'LLM locaux en entreprise à l\'échelle',
+      intro: 'Passer à l\'échelle de la machine unique à la production signifie : équilibrage de charge multi-utilisateurs, redondance, surveillance et récupération après sinistre. En avril 2026, les déploiements d\'entreprise utilisent Kubernetes pour orchestrer 5-50 GPU sur des pods d\'inférence, desservant 50-500 utilisateurs simultanés avec 99,9 % de disponibilité.',
+      metaDescription: 'Mettez à l\'échelle les LLM locaux : Kubernetes, équilibrage de charge, redondance, surveillance. Déploiement multi-GPU en production.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Passer à l\'échelle de la machine unique à la production signifie : équilibrage de charge multi-utilisateurs, redondance, surveillance et récupération après sinistre. En avril 2026, les déploiements d\'entreprise utilisent Kubernetes pour orchestrer 5-50 GPU sur des pods d\'inférence, desservant 50-500 utilisateurs simultanés avec 99,9 % de disponibilité.**',
+      audience: 'Ingénieurs déployant des LLM locaux en environnements de production ou d\'entreprise',
+      readTime: '12 min de lecture',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'enterprise scaling',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Architecture : de la machine unique au système distribué', anchor: '#architecture' },
+        { label: 'Équilibrage de charge et routage', anchor: '#load-balancing' },
+        { label: 'Redondance et basculement', anchor: '#redundancy' },
+        { label: 'Surveillance et observabilité', anchor: '#monitoring' },
+        { label: 'Optimisation des coûts à l\'échelle', anchor: '#cost' },
+        { label: 'Erreurs courantes en matière de mise à l\'échelle d\'entreprise', anchor: '#common-mistakes' },
+        { label: 'Lectures connexes', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**Machine unique :** 1 GPU, 10-50 utilisateurs simultanés, configuration simple.',
+            '**Multi-GPU :** 2-8 GPU, 50-200 utilisateurs, orchestration Kubernetes.',
+            '**Entreprise :** 5-50 GPU, 500+ utilisateurs, distribué, hautement disponible.',
+            '**Équilibrage de charge :** Round-robin distribue les requêtes sur les pods GPU.',
+            '**Surveillance :** Suivez la latence, la profondeur de la file d\'attente, l\'utilisation des GPU, les taux d\'erreur.',
+            'En avril 2026, Kubernetes est la norme pour les déploiements d\'entreprise d\'LLM.',
+          ],
+        },
+        architecture: {
+          title: 'Comment passer à l\'échelle d\'une machine unique à un système distribué ?',
+          content: [
+            '**Progression de la machine unique à la production :**',
+          ],
+          rows: [
+            { 'Étape': 'Prototype', 'GPU': '1', 'Utilisateurs': '1-10', 'Disponibilité': 'Non requise', 'Configuration': 'Ollama sur ordinateur portable' },
+            { 'Étape': 'Petite production', 'GPU': '2-4', 'Utilisateurs': '10-50', 'Disponibilité': '95 %', 'Configuration': 'Docker, surveillance basique' },
+            { 'Étape': 'Entreprise moyenne', 'GPU': '5-16', 'Utilisateurs': '50-200', 'Disponibilité': '99 %', 'Configuration': 'Kubernetes, équilibreur de charge' },
+            { 'Étape': 'Grande entreprise', 'GPU': '20-100', 'Utilisateurs': '200-1000', 'Disponibilité': '99.9 %', 'Configuration': 'Kubernetes multi-zones, auto-scaling' },
+          ],
+          columns: ['Étape de déploiement', 'Nombre de GPU', 'Utilisateurs simultanés', 'Disponibilité SLA', 'Configuration d\'infrastructure'],
+        },
+        loadBalancing: {
+          title: 'Comment implémenter l\'équilibrage de charge ?',
+          content: [
+            '**L\'équilibreur de charge achemine les requêtes vers le pod d\'inférence le moins occupé.**',
+            '**Round-robin :** Distribuez équitablement sur les pods (plus simple).',
+            '**Moins chargé :** Envoyez vers le pod avec la queue la plus courte (meilleure latence).',
+            '**Sessions persistantes :** Le même utilisateur utilise toujours le même pod (pour le contexte, mais risqué si le pod échoue).',
+          ],
+          codeBlock: '# Service Kubernetes avec équilibrage de charge\napiVersion: v1\nkind: Service\nmetadata:\n  name: llm-inference\nspec:\n  selector:\n    app: vllm-inference\n  ports:\n  - port: 8000\n    targetPort: 8000\n  type: LoadBalancer\n  sessionAffinity: None  # Round-robin sur les pods',
+          codeLanguage: 'yaml',
+        },
+        redundancy: {
+          title: 'Comment implémenter la redondance et le basculement ?',
+          content: [
+            '**La haute disponibilité nécessite des composants redondants :**',
+            '**Réplicas de pods :** Plusieurs pods d\'inférence. Si l\'un échoue, les autres traitent les requêtes.',
+            '**Contrôles de santé :** Kubernetes supprime automatiquement les pods non sains.',
+            '**Redondance de stockage :** Fichiers modèles répliqués sur les nœuds.',
+            '**Basculement DNS :** Si tout un centre de données échoue, routez vers une installation de secours.',
+          ],
+        },
+        monitoring: {
+          title: 'Que devez-vous surveiller ?',
+          content: [
+            '**Les déploiements d\'entreprise doivent surveiller :**',
+          ],
+          items: [
+            '**Latence :** Temps par requête (centiles p50, p95, p99).',
+            '**Profondeur de la file d\'attente :** Nombre de requêtes en attente. >10 = surchargé.',
+            '**Utilisation des GPU :** Devrait être 70-90 %. <50 % = surdimensionné. >95 % = sous-dimensionné.',
+            '**Taux d\'erreur :** % de requêtes échouées. Devrait être <0.1 %.',
+            '**Débit :** Tokens/sec sur tous les pods.',
+            '**Disponibilité :** % de temps où le service est disponible (cible 99.9 %).',
+            '**Coût par requête :** €/requête (matériel amorti).',
+          ],
+        },
+        cost: {
+          title: 'Comment optimiser les coûts à l\'échelle ?',
+          content: [
+            'À l\'échelle, concentrez-vous sur :',
+          ],
+          items: [
+            '**Utilisation des GPU :** Plus élevé est moins cher par requête. Cible 80-90 %.',
+            '**Quantification de modèles :** Q4 vs FP16 utilise 4× moins de VRAM, même vitesse. Réduit les GPU requis.',
+            '**Taille de lot :** Les plus grands lots = coût inférieur par requête (mais latence plus élevée).',
+            '**Auto-scaling :** Descendez la nuit, montez pendant la journée (économisez 30-50 % des coûts cloud).',
+            '**Multi-tenancy :** Exécutez 2-3 modèles par GPU (si la VRAM le permet). Utilisation plus élevée.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes en matière de mise à l\'échelle d\'entreprise',
+          items: [
+            '**Ignorer les exigences de latence.** Accordez-vous sur la SLA de latence p99 avant le déploiement. Une latence de 2 secondes peut sembler correcte jusqu\'à ce que les utilisateurs se plaignent.',
+            '**Sur-approvisionnement pour la charge maximale.** Si la charge maximale est 100 utilisateurs pendant 2 heures/jour, n\'achetez pas de matériel pour 100 utilisateurs simultanés toute la journée. Utilisez l\'auto-scaling.',
+            '**Mauvaise isolation des défaillances.** Si un crash de pod fait tomber l\'équilibreur de charge, l\'architecture est mauvaise. Testez les scénarios d\'défaillance.',
+            '**Surveillance des mauvaises métriques.** Surveiller l\'utilisation des GPU mais pas la latence est à l\'envers. La latence impacte les utilisateurs.',
+            '**Supposer que les outils open-source se mettent à l\'échelle en entreprise.** Ollama fonctionne super bien pour 1 utilisateur. Pour 500 utilisateurs simultanés, vous avez besoin de surveillance et d\'orchestration d\'entreprise.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Quelles sont les questions courantes sur la mise à l\'échelle des LLM locaux ?',
+          faqs: [
+            {
+              q: 'De combien de GPU avons-nous besoin pour le déploiement en entreprise ?',
+              a: 'Dépend des exigences de concurrence et de latence. 100 utilisateurs simultanés sur modèle 7B : ~5-8 GPU. 500 utilisateurs simultanés : 20-30 GPU. Formule : (utilisateurs simultanés × latence attendue) / (tokens/sec par GPU).',
+            },
+            {
+              q: 'Quelle est la différence entre l\'équilibrage de charge et l\'auto-scaling ?',
+              a: '**L\'équilibrage de charge** distribue les requêtes sur les pods existants. **L\'auto-scaling** ajoute/supprime des pods en fonction de la charge. Les deux sont nécessaires : l\'équilibrage de charge répartit le travail maintenant, l\'auto-scaling ajuste la capacité.',
+            },
+            {
+              q: 'Comment gérez-nous les défaillances de GPU ?',
+              a: 'Kubernetes replanifie automatiquement les pods vers des GPU sains. Si un GPU échoue, Kubernetes le marque comme indisponible et route le trafic vers d\'autres pods. Ayez de la redondance : si vous avez besoin de 8 GPU, approvisionnez 10.',
+            },
+            {
+              q: 'Quel SLA de latence devons-nous viser ?',
+              a: 'La latence p99 <2 secondes est standard pour les chatbots. p99 <500ms pour l\'autocomplétion en temps réel. Définissez la SLA en fonction de l\'expérience utilisateur, puis choisissez le matériel/taille de lot pour la satisfaire.',
+            },
+            {
+              q: 'Comment surveiller un cluster d\'inférence distribué ?',
+              a: 'Surveillez par pod et au niveau du cluster : utilisation des GPU, profondeur de la file d\'attente, latence (p50/p95/p99), taux d\'erreur, débit et disponibilité. Utilisez Prometheus + Grafana ou équivalent.',
+            },
+            {
+              q: 'La mise à l\'échelle locale est-elle moins chère que le cloud ?',
+              a: 'Oui, à l\'échelle. Le point d\'équilibre est ~500k tokens/mois. Locale : coût initial élevé (€400k-1,5M matériel), puis faible coût par requête. Cloud : pas de coût initial, coût élevé par requête (€0,15-60/1M tokens).',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectures connexes',
+          items: [
+            '[LLM locaux multi-GPU](/local-llms/multi-gpu-local-llms?lang=fr) -- Configuration multi-GPU sur une seule machine.',
+            '[Consommation d\'énergie des LLM locaux](/local-llms/local-llm-power-consumption?lang=fr) -- Coûts matériels et d\'infrastructure.',
+            '[LLM locaux pour RAG d\'entreprise](/local-llms/corporate-rag-local-llms?lang=fr) -- Q&A sur documents à l\'échelle.',
+            '[Conformité en entreprise pour LLM locaux](/local-llms/enterprise-compliance-local-llms?lang=fr) -- Contrôles de conformité en déploiement à l\'échelle.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            'Documentation Kubernetes -- kubernetes.io/docs',
+            'Guide de déploiement vLLM -- docs.vllm.ai/en/serving/distributed_serving.html',
+            'Surveillance Prometheus -- prometheus.io',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'LLM locaux en entreprise à l\'échelle',
+        description: 'Mettez à l\'échelle les LLM locaux : Kubernetes, équilibrage de charge, redondance, surveillance. Déploiement multi-GPU en production.',
+        url: 'https://www.promptquorum.com/local-llms/scaling-local-llms-enterprise?lang=fr',
+        inLanguage: 'fr',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-19',
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Advanced',
+        speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'fr',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'De combien de GPU avons-nous besoin pour le déploiement en entreprise ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Dépend des exigences de concurrence et de latence. 100 utilisateurs simultanés sur modèle 7B : ~5-8 GPU. 500 utilisateurs simultanés : 20-30 GPU. Formule : (utilisateurs simultanés × latence attendue) / (tokens/sec par GPU).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre l\'équilibrage de charge et l\'auto-scaling ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '**L\'équilibrage de charge** distribue les requêtes sur les pods existants. **L\'auto-scaling** ajoute/supprime des pods en fonction de la charge. Les deux sont nécessaires : l\'équilibrage de charge répartit le travail maintenant, l\'auto-scaling ajuste la capacité.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment gérez-nous les défaillances de GPU ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Kubernetes replanifie automatiquement les pods vers des GPU sains. Si un GPU échoue, Kubernetes le marque comme indisponible et route le trafic vers d\'autres pods. Ayez de la redondance : si vous avez besoin de 8 GPU, approvisionnez 10.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel SLA de latence devons-nous viser ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La latence p99 <2 secondes est standard pour les chatbots. p99 <500ms pour l\'autocomplétion en temps réel. Définissez la SLA en fonction de l\'expérience utilisateur, puis choisissez le matériel/taille de lot pour la satisfaire.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment surveiller un cluster d\'inférence distribué ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Surveillez par pod et au niveau du cluster : utilisation des GPU, profondeur de la file d\'attente, latence (p50/p95/p99), taux d\'erreur, débit et disponibilité. Utilisez Prometheus + Grafana ou équivalent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La mise à l\'échelle locale est-elle moins chère que le cloud ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, à l\'échelle. Le point d\'équilibre est ~500k tokens/mois. Locale : coût initial élevé (€400k-1,5M matériel), puis faible coût par requête. Cloud : pas de coût initial, coût élevé par requête (€0,15-60/1M tokens).',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'LLM locaux en entreprise à l\'échelle',
+        inLanguage: 'fr',
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Orchestration multi-GPU',
+            description: 'Les déploiements d\'entreprise utilisent Kubernetes pour orchestrer 5-50 GPU sur des pods d\'inférence, desservant 50-500 utilisateurs simultanés.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Équilibrage de charge et basculement',
+            description: 'Distribuez les requêtes sur les pods et implémentez la redondance avec basculement automatique pour une haute disponibilité.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Surveillance et optimisation des coûts',
+            description: 'Surveillez les métriques par pod, optimisez l\'utilisation des GPU et implémentez l\'auto-scaling pour réduire les coûts.',
+          },
+        ],
+      },
+    },
   };
