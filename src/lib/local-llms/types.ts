@@ -84,4 +84,6 @@ export interface LLMArticle {
   archive_after?: string
   specific_year?: number
   ctaText?: string
+  ctaButton?: string
+  ctaHref?: string
 }
