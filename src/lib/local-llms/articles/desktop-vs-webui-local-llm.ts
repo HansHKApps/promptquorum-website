@@ -529,4 +529,178 @@ schema: {
         ],
       },
     },
+    ja: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'デスクトップ対Webインターフェース: ローカルLLMに最適なインターフェースを選択',
+      seoTitle: 'デスクトップ対Webインターフェース',
+      intro: 'ローカルLLMツールは2つのインターフェーススタイルで提供されます: デスクトップアプリケーション (LM Studio、Jan AI) とWebUI (Open WebUI、Enchanted UI)。デスクトップアプリはコンシューマー向けでシンプル; WebUIはより強力で共有可能です。2026年4月現在、両方のアプローチは成熟しており、選択はワークフローに完全に依存します。',
+      metaDescription: 'デスクトップ対Webインターフェース 2026: インターフェース、機能、共有、スケーラビリティの比較。本番展開に各を使用する時期。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**ローカルLLMツールは2つのインターフェーススタイルで提供されます: デスクトップアプリケーション (LM Studio、Jan AI) とWebUI (Open WebUI、Enchanted UI)。デスクトップアプリはコンシューマー向けでシンプル; WebUIはより強力で共有可能です。**',
+      audience: 'コンシューマーハードウェアで初めてのローカルLLMを実行する初心者',
+      readTime: '9分の読了',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'ローカルLLMインターフェース',
+      toc: [
+        { label: '重要なポイント', anchor: '#key-takeaways' },
+        { label: 'デスクトップアプリケーション', anchor: '#desktop-apps' },
+        { label: 'Web UI', anchor: '#web-uis' },
+        { label: '機能比較', anchor: '#feature-comparison' },
+        { label: 'どちらを選ぶべきか', anchor: '#when-to-choose' },
+        { label: '両方を実行できますか?', anchor: '#use-both' },
+        { label: 'よくある間違い', anchor: '#common-mistakes' },
+        { label: '一般的な質問', anchor: '#faq' },
+        { label: '関連記事', anchor: '#related-reading' },
+        { label: 'ソース', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+
+          isTldr: true,
+          items: [
+            '**デスクトップアプリ** (LM Studio、Jan AI): シンプル、シングルユーザー、サーバー設定不要。コンシューマー向けベスト。',
+            '**Web UI** (Open WebUI、Enchanted): ブラウザベース、共有可能、マルチユーザー対応。チームとパワーユーザー向けベスト。',
+            '両方のタイプは同じ基盤モデル (Ollama、vLLM) に接続します。それらの間で切り替え可能。',
+            'デスクトップアプリは初心者向けが簡単; WebUIはプロ向けがより柔軟。',
+            '2026年4月現在、両方は成熟し本番対応。',
+          ],
+        },
+        desktopApps: {
+          title: 'デスクトップアプリケーションとは?',
+          content: [
+            '**デスクトップアプリはオペレーティングシステム上で直接実行するネイティブアプリケーションです。** 例: LM Studio、Jan AI。',
+            '**利点:** セットアップシンプル、サーバー知識不要、シングルユーザー、スタンドアロン実行、GUIでGPU設定。',
+            '**欠点:** 主にWindows/macOS、単一マシン、マルチユーザーアクセスなし、共有が困難。',
+          ],
+        },
+        webUIs: {
+          title: 'Web UIとは?',
+          content: [
+            '**Web UIはブラウザを通じてアクセスするインターフェースです。** Webサーバー (通常Docker内) を実行し、ブラウザベースのインターフェースを提供。例: Open WebUI、Enchanted UI。',
+            '**利点:** ブラウザベース (あらゆるOS上で動作)、URLで共有可能、マルチユーザー対応、ネットワーク内の他デバイスからアクセス、より強力な機能。',
+            '**欠点:** DockerまたはPort理解が必要、セットアップやや複雑、実行中のWebサーバー必要。',
+          ],
+        },
+        featureComp: {
+          title: '機能比較: デスクトップ対Webインターフェース',
+          rows: [
+            { '機能': 'セットアップ複雑さ', 'デスクトップ': 'とてもシンプル', 'Web UI': '中程度' },
+            { '機能': 'GPU設定用GUI', 'デスクトップ': 'はい', 'Web UI': '時々' },
+            { '機能': 'マルチユーザーアクセス', 'デスクトップ': 'いいえ', 'Web UI': 'はい' },
+            { '機能': '他デバイスからのアクセス', 'デスクトップ': 'いいえ', 'Web UI': 'はい (設定時)' },
+            { '機能': '組み込みチャット', 'デスクトップ': 'はい', 'Web UI': 'はい' },
+            { '機能': 'RAGサポート', 'デスクトップ': '限定的', 'Web UI': '完全 (Open WebUI)' },
+            { '機能': 'API露出', 'デスクトップ': '時々', 'Web UI': 'はい' },
+            { '機能': 'オペレーティングシステム', 'デスクトップ': 'macOS、Windows', 'Web UI': 'すべて (Docker)' },
+            { '機能': 'リソースオーバーヘッド', 'デスクトップ': '低い', 'Web UI': '中程度 (Docker)' },
+          ],
+          columns: ['機能', 'デスクトップ', 'Web UI'],
+        },
+        whenToChoose: {
+          title: 'デスクトップアプリをいつ選ぶか?',
+          content: 'デスクトップアプリを選択する場合:',
+          items: [
+            'コンシューマー / 非技術ユーザーである。',
+            '最もシンプルなセットアップを望む。',
+            '1つのデバイスのみを使用している。',
+            'ネイティブOS統合 (通知、システムメニュー) を望む。',
+            'macOSまたはWindows上にいる。',
+          ],
+        },
+        choosWebUI: {
+          title: 'Web UIをいつ選ぶか?',
+          content: 'Web UIを選択する場合:',
+          items: [
+            'Linux上にいる (最適なサポート)。',
+            '複数ユーザーが同じモデルにアクセスしたい。',
+            'ネットワーク上の他デバイスからアクセスしたい。',
+            'RAGまたは高度な機能が必要 (Open WebUI)。',
+            'サーバーまたはクラウドVMに展開したい。',
+            'APIを公開したい。',
+          ],
+        },
+        useBoth: {
+          title: 'デスクトップとWeb UIを同時に実行できますか?',
+          content: [
+            '**はい、ただし注意があります。** 両方は同じGPUとモデルを使用しようとします。同じOllamaバックエンド (モデル共有) を使って両方を実行できますが、推論パフォーマンスは分割されます。',
+            'より良いアプローチ: Ollamaをバックグラウンドで実行、次にLM StudioまたはOpen WebUIをインターフェースとして使用。それら間での切り替えは即座です。',
+          ],
+        },
+        commonMistakes: {
+          title: 'デスクトップ対Web UIの一般的な間違い',
+          items: [
+            '**デスクトップは常にシンプルだと思う。** デスクトップは最初シンプルですが、Web UIはより良い機能。学習用にはデスクトップがシンプル。',
+            '**両方を使用できることに気づかない。** LM StudioとOpen WebUIを同じOllamaインスタンスにポイントして切り替え可能。',
+            '**Web UIはサーバー知識が必要だと仮定。** モダンWeb UI (Open WebUI Docker) はサーバー複雑性を処理。Dockerコマンドを実行するだけ。',
+            '**デスクトップアプリをサーバーに展開。** デスクトップアプリ (LM Studio、Jan) はシングルユーザー。サーバー展開はWeb UIまたはAPIを使用。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'デスクトップ対Web UIについての一般的な質問',
+          faqs: [
+            {
+              q: 'Open WebUIとLM Studioを同時に実行できますか?',
+              a: 'はい。Open WebUI (ブラウザ) とLM Studio (デスクトップ) は両方同じOllamaバックエンドに接続可能。モデルを共有します。',
+            },
+            {
+              q: 'デスクトップとWeb UIどちらが速いですか?',
+              a: 'デスクトップアプリはオーバーヘッド少ない (Webサーバーなし)、わずかに速い。推論速度への違いは認識できません。',
+            },
+            {
+              q: '携帯からローカルLLMにアクセスできますか?',
+              a: 'はい、Web UIで可能。Open WebUIをDockerで実行し`OLLAMA_HOST=0.0.0.0:11434`を設定。同ネットワーク上の携帯からアクセス。',
+            },
+            {
+              q: 'Web UIをネットワーク上で使用することにセキュリティリスクがありますか?',
+              a: 'はい。Ollamaはデフォルトで認証なし。ネットワーク公開時はファイアウォールまたはリバースプロキシ (nginx) と認証使用。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連記事',
+          items: [
+            '[最適なローカルLLMフロントエンド](/local-llms/best-local-llm-frontends?lang=ja) -- インターフェース完全リスト。',
+            '[LM Studioをインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) -- デスクトップアプリセットアップ。',
+            '[Ollama対LM Studio](/local-llms/ollama-vs-lm-studio?lang=ja) -- 2つのツール比較。',
+            '[最適なローカルLLMフロントエンド](/local-llms/best-local-llm-frontends?lang=ja) -- Open WebUIとWeb代替。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'ソース',
+          items: [
+            'LM Studio -- lmstudio.ai',
+            'Jan AI -- jan.ai',
+            'Open WebUI -- github.com/open-webui/open-webui',
+            'Enchanted UI -- enchanted.div.ai',
+          ],
+        },
+      },
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'デスクトップ対Webインターフェース: ローカルLLMに最適なインターフェースを選択',
+        'description': 'デスクトップ対Webインターフェース 2026: インターフェース、機能、共有、スケーラビリティの比較。本番展開に各を使用する時期。',
+        'url': 'https://www.promptquorum.com/local-llms/desktop-vs-webui-local-llm?lang=ja',
+        'inLanguage': 'ja',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Open WebUIとLM Studioを同時に実行できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Open WebUI (ブラウザ) とLM Studio (デスクトップ) は両方同じOllamaバックエンドに接続可能。モデルを共有します。' } },
+          { '@type': 'Question', 'name': 'デスクトップとWeb UIどちらが速いですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'デスクトップアプリはオーバーヘッド少ない (Webサーバーなし)、わずかに速い。推論速度への違いは認識できません。' } },
+          { '@type': 'Question', 'name': '携帯からローカルLLMにアクセスできますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Web UIで可能。Open WebUIをDockerで実行し`OLLAMA_HOST=0.0.0.0:11434`を設定。同ネットワーク上の携帯からアクセス。' } },
+          { '@type': 'Question', 'name': 'Web UIをネットワーク上で使用することにセキュリティリスクがありますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Ollamaはデフォルトで認証なし。ネットワーク公開時はファイアウォールまたはリバースプロキシ (nginx) と認証使用。' } },
+        ],
+      },
+    },
   };
