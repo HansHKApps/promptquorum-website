@@ -255,11 +255,11 @@ DEEPSEEK_MODEL=deepseek-coder-v3
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          JSON.stringify({ title: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Full 2026 Comparison', url: '/local-llms/qwen-vs-claude-vs-deepseek-local-2026' }),
-          JSON.stringify({ title: 'How to Run Qwen 3 Locally — Ollama + LM Studio Guide', url: '/local-llms/run-qwen-locally-guide-2026' }),
-          JSON.stringify({ title: 'Compare Models on PromptQuorum', url: '/compare' }),
-          JSON.stringify({ title: 'Best Local LLMs for Coding 2026', url: '/local-llms/best-local-llms-for-coding' }),
-          JSON.stringify({ title: 'Join the PromptQuorum Waitlist', url: '/waitlist' }),
+          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Full 2026 Comparison](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[How to Run Qwen 3 Locally — Ollama + LM Studio Guide](/local-llms/run-qwen-locally-guide-2026)',
+          '[Compare Models on PromptQuorum](/compare)',
+          '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding)',
+          '[Join the PromptQuorum Waitlist](/waitlist)',
         ],
       },
       faq: {

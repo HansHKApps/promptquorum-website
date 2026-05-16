@@ -207,11 +207,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          JSON.stringify({ title: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026 Comparison', url: '/local-llms/qwen-vs-claude-vs-deepseek-local-2026' }),
-          JSON.stringify({ title: 'Why EU Companies Are Switching to Local Qwen', url: '/blog/eu-companies-local-qwen-gdpr-shift' }),
-          JSON.stringify({ title: 'How to Run Qwen 3 Locally — Ollama + LM Studio Guide', url: '/local-llms/run-qwen-locally-guide-2026' }),
-          JSON.stringify({ title: 'Enterprise Compliance with Local LLMs', url: '/local-llms/enterprise-compliance-local-llms' }),
-          JSON.stringify({ title: 'PromptQuorum for Teams', url: '/local-llms' }),
+          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026 Comparison](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Why EU Companies Are Switching to Local Qwen](/blog/eu-companies-local-qwen-gdpr-shift)',
+          '[How to Run Qwen 3 Locally — Ollama + LM Studio Guide](/local-llms/run-qwen-locally-guide-2026)',
+          '[Enterprise Compliance with Local LLMs](/local-llms/enterprise-compliance-local-llms)',
+          '[PromptQuorum for Teams](/local-llms)',
         ],
       },
       faq: {
