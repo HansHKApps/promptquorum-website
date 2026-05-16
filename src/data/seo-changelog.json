@@ -121,5 +121,29 @@
       "clicks": 0,
       "ctr": 0
     }
+  },
+  {
+    "id": "07787655-fffc-435c-9773-cc0e78ec90d4",
+    "slug": "/prompt-engineering/geopolitics-and-ai",
+    "date": "2026-05-16T18:53:59.614Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "EU vs US vs China 2026: AI Regulatory Comparison",
+        "new": "AI Geopolitics Analysis 2026: US, EU & China Guide"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compare EU AI Act enforcement, US sectoral approach, and China CAC control: frameworks, compliance deadlines, and geopolitical risks for AI.",
+        "new": "How AI reshapes geopolitics: analyze US sectoral, EU AI Act, and China CAC strategies. Compare regulatory frameworks, compliance risks, and global implications."
+      }
+    ],
+    "reason": "geo-meta-optimizer: shift from narrow regulatory comparison to broader geopolitics analysis angle matching real queries (ai geopolitics, geopolitics analysis). Add schema.url?lang=en suffix. Expand JA/ZH metaDescription lengths.",
+    "baseline": {
+      "position": 5.9,
+      "impressions": 408,
+      "clicks": 0,
+      "ctr": 0
+    }
   }
 ]
