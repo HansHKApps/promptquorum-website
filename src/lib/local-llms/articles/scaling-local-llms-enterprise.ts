@@ -1057,4 +1057,261 @@ schema: {
         ],
       },
     },
+    zh: {
+      freshness_tier: 'semi_annual',
+      theme: 'Enterprise',
+      title: '企业级本地LLM扩展：多用户、多GPU生产部署',
+      seoTitle: '企业级本地LLM扩展',
+      intro: '从单机到生产环境的扩展涉及：多用户负载均衡、冗余性、监控和灾难恢复。截至2026年4月，企业级部署使用Kubernetes在推理Pod中调度5-50个GPU，为50-500名并发用户提供99.9%的可用性。',
+      metaDescription: '扩展本地LLM：Kubernetes、负载均衡、冗余性、监控。多GPU生产部署。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**从单机到生产环境的扩展涉及：多用户负载均衡、冗余性、监控和灾难恢复。截至2026年4月，企业级部署使用Kubernetes在推理Pod中调度5-50个GPU，为50-500名并发用户提供99.9%的可用性。**',
+      audience: '在生产或企业环境中部署本地LLM的工程师',
+      readTime: '阅读约12分钟',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'enterprise scaling',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '架构：从单机到分布式系统', anchor: '#architecture' },
+        { label: '负载均衡和路由', anchor: '#load-balancing' },
+        { label: '冗余性和故障转移', anchor: '#redundancy' },
+        { label: '监控和可观测性', anchor: '#monitoring' },
+        { label: '大规模成本优化', anchor: '#cost' },
+        { label: '企业级扩展的常见错误', anchor: '#common-mistakes' },
+        { label: '相关阅读', anchor: '#related-reading' },
+        { label: '来源', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**单机：** 1个GPU、10-50名并发用户、简单设置。',
+            '**多GPU：** 2-8个GPU、50-200名用户、Kubernetes编排。',
+            '**企业级：** 5-50个GPU、500+名用户、分布式、高可用性。',
+            '**负载均衡：** 轮询在GPU Pod间分配请求。',
+            '**监控：** 跟踪延迟、队列深度、GPU使用率、错误率。',
+            '截至2026年4月，Kubernetes是企业级LLM部署的标准。',
+          ],
+        },
+        architecture: {
+          title: '如何从单机扩展到分布式系统？',
+          content: [
+            '**从单机到生产环境的演进：**',
+          ],
+          rows: [
+            { 阶段: '原型', GPU: '1', 用户: '1-10', 可用性: '无要求', 设置: '笔记本电脑上的Ollama' },
+            { 阶段: '小规模生产', GPU: '2-4', 用户: '10-50', 可用性: '95%', 设置: 'Docker、基础监控' },
+            { 阶段: '中等企业', GPU: '5-16', 用户: '50-200', 可用性: '99%', 设置: 'Kubernetes、负载均衡器' },
+            { 阶段: '大型企业', GPU: '20-100', 用户: '200-1000', 可用性: '99.9%', 设置: 'Kubernetes多区域、自动扩展' },
+          ],
+          columns: ['部署阶段', 'GPU数量', '并发用户', 'SLA可用性', '基础设施设置'],
+        },
+        loadBalancing: {
+          title: '如何实现负载均衡？',
+          content: [
+            '**负载均衡器将请求路由到负载最低的推理Pod。**',
+            '**轮询：** 在Pod间均匀分配（最简单）。',
+            '**最小负载：** 发送到队列最短的Pod（低延迟）。',
+            '**粘性会话：** 同一用户始终使用同一Pod（用于上下文，但Pod失败时有风险）。',
+          ],
+          codeBlock: '# 具有负载均衡的Kubernetes服务\napiVersion: v1\nkind: Service\nmetadata:\n  name: llm-inference\nspec:\n  selector:\n    app: vllm-inference\n  ports:\n  - port: 8000\n    targetPort: 8000\n  type: LoadBalancer\n  sessionAffinity: None  # Pod间的轮询',
+          codeLanguage: 'yaml',
+        },
+        redundancy: {
+          title: '如何实现冗余性和故障转移？',
+          content: [
+            '**高可用性需要冗余组件：**',
+            '**Pod副本：** 多个推理Pod。一个失败时，其他处理请求。',
+            '**健康检查：** Kubernetes自动删除不健康的Pod。',
+            '**存储冗余：** 模型文件在节点间复制。',
+            '**DNS故障转移：** 整个数据中心失败时，路由到备用设施。',
+          ],
+        },
+        monitoring: {
+          title: '需要监控什么？',
+          content: [
+            '**企业级部署必须监控：**',
+          ],
+          items: [
+            '**延迟：** 每个请求的时间（p50、p95、p99百分位数）。',
+            '**队列深度：** 等待中的请求数。>10 =过载。',
+            '**GPU使用率：** 应为70-90%。<50% =过度配置。>95% =配置不足。',
+            '**错误率：** 失败请求的百分比。应<0.1%。',
+            '**吞吐量：** 所有Pod的令牌/秒。',
+            '**可用性：** 服务可用的时间百分比（目标99.9%）。',
+            '**每个查询的成本：** 每个请求的¥（硬件分摊）。',
+          ],
+        },
+        cost: {
+          title: '如何大规模优化成本？',
+          content: [
+            '大规模时，关注：',
+          ],
+          items: [
+            '**GPU使用率：** 更高意味着每个请求成本更低。目标80-90%。',
+            '**模型量化：** Q4与FP16使用少4倍VRAM、相同速度。减少所需GPU。',
+            '**批大小：** 更大的批次 = 每个请求成本更低（但延迟更高）。',
+            '**自动扩展：** 夜间缩减、白天扩展（节省30-50%云成本）。',
+            '**多租户：** 每个GPU运行2-3个模型（如果VRAM允许）。更高利用率。',
+          ],
+        },
+        commonMistakes: {
+          title: '企业级扩展的常见错误',
+          items: [
+            '**忽视延迟要求。** 部署前同意p99延迟SLA。2秒延迟看似可以，直到用户抱怨。',
+            '**为峰值过度配置。** 如果峰值是每天2小时100名用户，不要为100名并发用户全天购买硬件。使用自动扩展。',
+            '**故障隔离不当。** 一个Pod崩溃导致负载均衡器宕机意味着架构有误。测试故障场景。',
+            '**监控错误指标。** 监控GPU使用率但不监控延迟是倒退。延迟影响用户。',
+            '**假设开源工具能扩展到企业。** Ollama对1个用户很好用。对500名并发用户，需要企业监控和编排。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '关于扩展本地LLM的常见问题',
+          faqs: [
+            {
+              q: '企业级部署需要多少GPU？',
+              a: '取决于并发性和延迟要求。7B模型的100名并发用户：约5-8个GPU。500名并发用户：20-30个GPU。公式：（并发用户数×预期延迟）/（每个GPU的令牌/秒）。',
+            },
+            {
+              q: '负载均衡和自动扩展有什么区别？',
+              a: '**负载均衡**在现有Pod间分配请求。**自动扩展**基于负载添加/删除Pod。两者都需要：负载均衡立即分散工作，自动扩展调整容量。',
+            },
+            {
+              q: '如何处理GPU故障？',
+              a: 'Kubernetes自动将Pod重新调度到健康GPU。GPU失败时，Kubernetes标记为不可用并将流量路由到其他Pod。具有冗余性：需要8个GPU时，配置10个。',
+            },
+            {
+              q: '应该瞄准什么延迟SLA？',
+              a: 'p99延迟<2秒是聊天机器人的标准。p99 <实时自动完成的500ms。根据用户体验定义SLA，然后选择硬件/批大小以满足它。',
+            },
+            {
+              q: '如何监控分布式推理集群？',
+              a: '按Pod和集群范围监控：GPU使用率、队列深度、延迟（p50/p95/p99）、错误率、吞吐量、可用性。使用Prometheus+Grafana或等效工具。',
+            },
+            {
+              q: '本地扩展比云更便宜吗？',
+              a: '是的，规模上。损益平衡点约为500k令牌/月。本地：高初期成本（400k-1.5M¥硬件），之后每个请求成本低。云：无初期成本，高每个请求成本（0.15-60¥/1M令牌）。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[多GPU本地LLM](/local-llms/multi-gpu-local-llms?lang=zh) -- 单机多GPU设置。',
+            '[本地LLM功耗](/local-llms/local-llm-power-consumption?lang=zh) -- 硬件和基础设施成本。',
+            '[企业RAG本地LLM](/local-llms/corporate-rag-local-llms?lang=zh) -- 规模文档问答。',
+            '[企业合规本地LLM](/local-llms/enterprise-compliance-local-llms?lang=zh) -- 大规模部署的合规控制。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '来源',
+          items: [
+            'Kubernetes官方文档 -- kubernetes.io/docs',
+            'vLLM部署指南 -- docs.vllm.ai/en/serving/distributed_serving.html',
+            'Prometheus监控 -- prometheus.io',
+            '中国数据安全法 -- 信息安全保护要求',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '企业级本地LLM扩展',
+        description: '扩展本地LLM：Kubernetes、负载均衡、冗余性、监控。多GPU生产部署。',
+        url: 'https://www.promptquorum.com/local-llms/scaling-local-llms-enterprise?lang=zh',
+        inLanguage: 'zh',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-19',
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Advanced',
+        speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            'name': '企业级部署需要多少GPU？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '取决于并发性和延迟要求。7B模型的100名并发用户：约5-8个GPU。500名并发用户：20-30个GPU。公式：（并发用户数×预期延迟）/（每个GPU的令牌/秒）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '负载均衡和自动扩展有什么区别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '**负载均衡**在现有Pod间分配请求。**自动扩展**基于负荷添加/删除Pod。两者都需要：负载均衡立即分散工作，自动扩展调整容量。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何处理GPU故障？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Kubernetes自动将Pod重新调度到健康GPU。GPU失败时，Kubernetes标记为不可用并将流量路由到其他Pod。具有冗余性：需要8个GPU时，配置10个。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '应该瞄准什么延迟SLA？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'p99延迟<2秒是聊天机器人的标准。p99 <实时自动完成的500ms。根据用户体验定义SLA，然后选择硬件/批大小以满足它。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何监控分布式推理集群？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '按Pod和集群范围监控：GPU使用率、队列深度、延迟（p50/p95/p99）、错误率、吞吐量、可用性。使用Prometheus+Grafana或等效工具。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地扩展比云更便宜吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的，规模上。损益平衡点约为500k令牌/月。本地：高初期成本（400k-1.5M¥硬件），之后每个请求成本低。云：无初期成本，高每个请求成本（0.15-60¥/1M令牌）。',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '企业级本地LLM扩展',
+        inLanguage: 'zh',
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '多GPU编排',
+            description: '企业级部署使用Kubernetes在推理Pod中调度5-50个GPU，为50-500名并发用户提供服务。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: '负载均衡和故障转移',
+            description: '在Pod间分配请求并使用自动故障转移实现冗余，以实现高可用性。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: '监控和成本优化',
+            description: '监控每Pod指标、优化GPU使用率并实现自动扩展以降低成本。',
+          },
+        ],
+      },
+    },
   };
