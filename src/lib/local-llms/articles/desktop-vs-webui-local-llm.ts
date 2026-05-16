@@ -355,4 +355,178 @@ schema: {
         ],
       },
     },
+    fr: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'Bureau vs Interface Web pour LLM locaux : quelle interface choisir ?',
+      seoTitle: 'Bureau vs interface Web pour LLM locaux',
+      intro: 'Les outils LLM locaux se présentent sous deux styles d\'interface : les applications de bureau (LM Studio, Jan AI) et les interfaces Web (Open WebUI, Enchanted UI). Les apps de bureau sont plus simples pour les consommateurs ; les interfaces Web sont plus puissantes et partageables. Depuis avril 2026, les deux approches sont matures, et le choix dépend entièrement de votre workflow.',
+      metaDescription: 'Bureau vs interface Web pour LLM locaux 2026: comparaison d\'interfaces, fonctionnalités, partage, scalabilité. Quand utiliser chacun pour production.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Les outils LLM locaux se présentent sous deux styles d\'interface : les applications de bureau (LM Studio, Jan AI) et les interfaces Web (Open WebUI, Enchanted UI). Les apps de bureau sont plus simples pour les consommateurs ; les interfaces Web sont plus puissantes et partageables.**',
+      audience: 'Débutants exécutant leur premier LLM local sur matériel grand public',
+      readTime: '9 min de lecture',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'interface LLM locale',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Applications de bureau', anchor: '#desktop-apps' },
+        { label: 'Interfaces Web', anchor: '#web-uis' },
+        { label: 'Comparaison des fonctionnalités', anchor: '#feature-comparison' },
+        { label: 'Quand choisir chacun', anchor: '#when-to-choose' },
+        { label: 'Pouvez-vous utiliser les deux ?', anchor: '#use-both' },
+        { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+        { label: 'Questions courantes', anchor: '#faq' },
+        { label: 'Lectures complémentaires', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+
+          isTldr: true,
+          items: [
+            '**Apps de bureau** (LM Studio, Jan AI): Simple, mono-utilisateur, sans configuration serveur. Idéal pour les consommateurs.',
+            '**Interfaces Web** (Open WebUI, Enchanted): Basées sur navigateur, partageables, multi-utilisateur. Idéal pour équipes et utilisateurs avancés.',
+            'Les deux types se connectent aux mêmes modèles sous-jacents (Ollama, vLLM). Vous pouvez basculer entre eux.',
+            'Apps de bureau plus faciles pour débutants; interfaces Web plus flexibles pour professionnels.',
+            'Depuis avril 2026, les deux sont matures et prêtes pour production.',
+          ],
+        },
+        desktopApps: {
+          title: 'Que sont les applications de bureau ?',
+          content: [
+            '**Les apps de bureau sont des applications natives qui s\'exécutent directement sur votre système d\'exploitation.** Exemples: LM Studio, Jan AI.',
+            '**Avantages:** Configuration simple, aucune connaissance serveur requise, mono-utilisateur, s\'exécute en tant qu\'application autonome, paramètres GPU en GUI.',
+            '**Inconvénients:** Principalement Windows/macOS, une seule machine, pas d\'accès multi-utilisateur, partage difficile.',
+          ],
+        },
+        webUIs: {
+          title: 'Que sont les interfaces Web ?',
+          content: [
+            '**Les interfaces Web sont des interfaces accessibles via votre navigateur.** Elles exécutent un serveur Web (généralement dans Docker) et proposent une interface basée sur navigateur. Exemples: Open WebUI, Enchanted UI.',
+            '**Avantages:** Basées sur navigateur (fonctionnent sur n\'importe quel système d\'exploitation), partageables par URL, multi-utilisateur, accès depuis autres appareils sur le réseau, fonctionnalités plus puissantes.',
+            '**Inconvénients:** Exige compréhension Docker ou ports, configuration un peu plus complexe, nécessite serveur Web actif.',
+          ],
+        },
+        featureComp: {
+          title: 'Comparaison des fonctionnalités : Bureau vs Interface Web',
+          rows: [
+            { 'Fonctionnalité': 'Complexité setup', 'Bureau': 'Très simple', 'Interface Web': 'Moyen' },
+            { 'Fonctionnalité': 'GUI paramètres GPU', 'Bureau': 'Oui', 'Interface Web': 'Parfois' },
+            { 'Fonctionnalité': 'Accès multi-utilisateur', 'Bureau': 'Non', 'Interface Web': 'Oui' },
+            { 'Fonctionnalité': 'Accès depuis autres appareils', 'Bureau': 'Non', 'Interface Web': 'Oui (si configuré)' },
+            { 'Fonctionnalité': 'Chat intégré', 'Bureau': 'Oui', 'Interface Web': 'Oui' },
+            { 'Fonctionnalité': 'Support RAG', 'Bureau': 'Limité', 'Interface Web': 'Complet (Open WebUI)' },
+            { 'Fonctionnalité': 'Exposition API', 'Bureau': 'Parfois', 'Interface Web': 'Oui' },
+            { 'Fonctionnalité': 'Systèmes d\'exploitation', 'Bureau': 'macOS, Windows', 'Interface Web': 'Tous (Docker)' },
+            { 'Fonctionnalité': 'Surcharge ressources', 'Bureau': 'Faible', 'Interface Web': 'Moyen (Docker)' },
+          ],
+          columns: ['Fonctionnalité', 'Bureau', 'Interface Web'],
+        },
+        whenToChoose: {
+          title: 'Quand choisir une app de bureau ?',
+          content: 'Choisissez app de bureau si:',
+          items: [
+            'Vous êtes consommateur / utilisateur non-technique.',
+            'Vous voulez la configuration la plus simple possible.',
+            'Vous n\'utilisez qu\'un seul appareil.',
+            'Vous voulez intégration native au système d\'exploitation (notifications, menu système).',
+            'Vous êtes sur macOS ou Windows.',
+          ],
+        },
+        choosWebUI: {
+          title: 'Quand choisir une interface Web ?',
+          content: 'Choisissez interface Web si:',
+          items: [
+            'Vous êtes sur Linux (meilleur support).',
+            'Vous voulez que plusieurs utilisateurs accèdent au même modèle.',
+            'Vous voulez accéder depuis autres appareils sur votre réseau.',
+            'Vous avez besoin RAG ou fonctionnalités avancées (Open WebUI).',
+            'Vous voulez déployer sur un serveur ou cloud VM.',
+            'Vous voulez exposer une API.',
+          ],
+        },
+        useBoth: {
+          title: 'Pouvez-vous exécuter Bureau et Interface Web simultanément ?',
+          content: [
+            '**Oui, mais avec réserves.** Les deux essaient d\'utiliser les mêmes GPU et modèles. Vous pouvez les exécuter tous deux en utilisant le même backend Ollama (ils partagent le modèle), mais la performance d\'inférence sera divisée.',
+            'Meilleure approche: Exécutez Ollama en arrière-plan, puis utilisez soit LM Studio SOIT Open WebUI comme votre interface. Basculer entre eux est instantané.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes avec Bureau vs Interface Web',
+          items: [
+            '**Penser que bureau est toujours plus simple.** Bureau est plus simple initialement, mais interfaces Web ont meilleures fonctionnalités. Pour apprendre, bureau est plus simple.',
+            '**Ne pas réaliser que vous pouvez utiliser les deux.** Vous pouvez basculer entre LM Studio et Open WebUI en les pointant vers la même instance Ollama.',
+            '**Supposer interface Web demande connaissances serveur.** Interfaces Web modernes (Open WebUI Docker) gèrent complexité serveur pour vous. Lancez simplement la commande Docker.',
+            '**Déployer une app de bureau sur un serveur.** Apps de bureau (LM Studio, Jan) sont mono-utilisateur. Pour déploiements serveur, utilisez interfaces Web ou APIs.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Questions courantes sur Bureau vs Interface Web',
+          faqs: [
+            {
+              q: 'Peux-je exécuter Open WebUI et LM Studio en même temps ?',
+              a: 'Oui. Open WebUI (navigateur) et LM Studio (bureau) peuvent tous deux se connecter au même backend Ollama. Ils partagent le modèle.',
+            },
+            {
+              q: 'Lequel est plus rapide, bureau ou interface Web ?',
+              a: 'Apps de bureau ont moins de surcharge (pas de serveur Web), donc marginalement plus rapides. La différence est imperceptible pour la vitesse d\'inférence.',
+            },
+            {
+              q: 'Peux-je accéder à mon LLM local depuis mon téléphone ?',
+              a: 'Oui, avec interface Web. Exécutez Open WebUI dans Docker et configurez `OLLAMA_HOST=0.0.0.0:11434`. Puis accédez depuis votre téléphone sur le même réseau.',
+            },
+            {
+              q: 'Y a-t-il un risque de sécurité avec interface Web sur réseau ?',
+              a: 'Oui. Ollama n\'a pas d\'authentification par défaut. Utilisez un pare-feu ou proxy inverse (nginx) avec authentification si exposé à un réseau.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectures complémentaires',
+          items: [
+            '[Meilleurs frontends LLM locaux](/local-llms/best-local-llm-frontends?lang=fr) -- Liste complète d\'interfaces.',
+            '[Comment installer LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) -- Configuration app de bureau.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=fr) -- Comparaison de deux outils.',
+            '[Meilleurs frontends LLM locaux](/local-llms/best-local-llm-frontends?lang=fr) -- Open WebUI et alternatives Web.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            'LM Studio -- lmstudio.ai',
+            'Jan AI -- jan.ai',
+            'Open WebUI -- github.com/open-webui/open-webui',
+            'Enchanted UI -- enchanted.div.ai',
+          ],
+        },
+      },
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Bureau vs Interface Web pour LLM locaux : quelle interface choisir ?',
+        'description': 'Bureau vs interface Web pour LLM locaux 2026: comparaison d\'interfaces, fonctionnalités, partage, scalabilité. Quand utiliser chacun pour production.',
+        'url': 'https://www.promptquorum.com/local-llms/desktop-vs-webui-local-llm?lang=fr',
+        'inLanguage': 'fr',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'fr',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Peux-je exécuter Open WebUI et LM Studio en même temps ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Open WebUI (navigateur) et LM Studio (bureau) peuvent tous deux se connecter au même backend Ollama. Ils partagent le modèle.' } },
+          { '@type': 'Question', 'name': 'Lequel est plus rapide, bureau ou interface Web ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Apps de bureau ont moins de surcharge (pas de serveur Web), donc marginalement plus rapides. La différence est imperceptible pour la vitesse d\'inférence.' } },
+          { '@type': 'Question', 'name': 'Peux-je accéder à mon LLM local depuis mon téléphone ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, avec interface Web. Exécutez Open WebUI dans Docker et configurez OLLAMA_HOST=0.0.0.0:11434. Puis accédez depuis votre téléphone sur le même réseau.' } },
+          { '@type': 'Question', 'name': 'Y a-t-il un risque de sécurité avec interface Web sur réseau ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Ollama n\'a pas d\'authentification par défaut. Utilisez un pare-feu ou proxy inverse (nginx) avec authentification si exposé à un réseau.' } },
+        ],
+      },
+    },
   };
