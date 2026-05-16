@@ -15,7 +15,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.promptEngineeringHubTitle,
     description: t.promptEngineeringHubDescription,
-    alternates: generateAlternates('/prompt-engineering', selectedLang, true, undefined, ['ja', 'zh']),
+    alternates: generateAlternates('/prompt-engineering', selectedLang, true, undefined, ['ja', 'zh', 'de']),
     openGraph: {
       title: t.promptEngineeringHubTitle,
       description: t.promptEngineeringHubOgDescription ?? t.promptEngineeringHubDescription,

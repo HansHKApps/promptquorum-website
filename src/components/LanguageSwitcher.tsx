@@ -35,8 +35,8 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
     // Keep in sync with PATH_LOCALE_CLUSTERS in src/middleware.ts.
     const PATH_LOCALE_CLUSTERS = ['power-local-llm']
 
-    // Path-prefix-routed clusters for Japanese and Chinese.
-    // DE/FR continue to use ?lang= on these paths.
+    // Path-prefix-routed clusters for Japanese, Chinese, and German.
+    // FR continues to use ?lang= on these paths.
     // Keep in sync with PATH_PREFIX_LANG_CLUSTERS in src/middleware.ts.
     const PATH_PREFIX_LANG_CLUSTERS = [
       'prompt-engineering',
@@ -69,14 +69,14 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
       return
     }
 
-    // --- Check 2: Path-prefix-lang cluster (JA/ZH) ---
+    // --- Check 2: Path-prefix-lang cluster (JA/ZH/DE) ---
     // Two sub-cases:
-    //   A. Currently at /ja/<cluster>/... or /zh/<cluster>/... → handle all language switches from a path-prefix path
-    //   B. Currently at /<cluster>/... → handle switch TO JA/ZH
+    //   A. Currently at /ja/<cluster>/..., /zh/<cluster>/..., or /de/<cluster>/... → handle all language switches from a path-prefix path
+    //   B. Currently at /<cluster>/... → handle switch TO JA/ZH/DE
     const pathPrefixLangClusterMatch = pathname.match(
-      new RegExp(`^(?:/(ja|zh))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/.*)?$`)
+      new RegExp(`^(?:/(de|ja|zh))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/.*)?$`)
     )
-    const isAtPathPrefixLangPrefixedPath = pathname.startsWith('/ja/') || pathname.startsWith('/zh/')
+    const isAtPathPrefixLangPrefixedPath = pathname.startsWith('/ja/') || pathname.startsWith('/zh/') || pathname.startsWith('/de/')
 
     if (pathPrefixLangClusterMatch) {
       const cluster = pathPrefixLangClusterMatch[1]
@@ -91,8 +91,8 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
         return
       }
 
-      if (lang === 'ja' || lang === 'zh') {
-        // Any origin → JA/ZH: path-navigate to /<lang>/<cluster>/<rest>
+      if (lang === 'de' || lang === 'ja' || lang === 'zh') {
+        // Any origin → JA/ZH/DE: path-navigate to /<lang>/<cluster>/<rest>
         const target = new URL(`/${lang}/${cluster}${rest}`, window.location.origin)
         target.search = ''
         target.hash = window.location.hash
@@ -100,9 +100,9 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
         return
       }
 
-      // lang is de/fr:
+      // lang is fr:
       if (isAtPathPrefixLangPrefixedPath) {
-        // Currently at /ja/<cluster>/slug?... or /zh/<cluster>/slug?... → navigate to /<cluster>/slug?lang=de
+        // Currently at /ja/<cluster>/slug?..., /zh/<cluster>/slug?..., or /de/<cluster>/slug?... → navigate to /<cluster>/slug?lang=fr
         const target = new URL(`/${cluster}${rest}`, window.location.origin)
         target.search = ''
         target.searchParams.set('lang', lang)
@@ -111,7 +111,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
         return
       }
 
-      // Currently at /<cluster>/slug (no locale prefix), switching to DE/FR:
+      // Currently at /<cluster>/slug (no locale prefix), switching to FR:
       // Use pushState to mutate ?lang= (same as query-string-routed clusters below).
       const url = new URL(window.location.href)
       url.searchParams.set('lang', lang)
@@ -121,19 +121,19 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
       return
     }
 
-    // --- Check 3: Home page (/ja, /ja/, /zh, /zh/, or /) ---
-    // Handle home page path-prefix for JA/ZH.
-    const isHome = pathname === '/' || pathname === '/ja' || pathname === '/ja/' || pathname === '/zh' || pathname === '/zh/'
+    // --- Check 3: Home page (/de, /de/, /ja, /ja/, /zh, /zh/, or /) ---
+    // Handle home page path-prefix for JA/ZH/DE.
+    const isHome = pathname === '/' || pathname === '/de' || pathname === '/de/' || pathname === '/ja' || pathname === '/ja/' || pathname === '/zh' || pathname === '/zh/'
     if (isHome) {
       if (lang === 'en') {
         window.location.href = window.location.origin + '/'
         return
       }
-      if (lang === 'ja' || lang === 'zh') {
+      if (lang === 'de' || lang === 'ja' || lang === 'zh') {
         window.location.href = window.location.origin + `/${lang}`
         return
       }
-      // DE/FR from home: /?lang=de
+      // FR from home: /?lang=fr
       const target = new URL('/', window.location.origin)
       target.searchParams.set('lang', lang)
       window.location.href = target.toString()

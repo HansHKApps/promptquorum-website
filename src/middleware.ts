@@ -5,8 +5,8 @@ import { NextRequest, NextResponse } from 'next/server'
 // NOINDEX_PATH_PREFIXES in src/app/layout.tsx, and EXCLUDED_PATH_PREFIXES in src/app/sitemap.ts.
 const PATH_LOCALE_CLUSTERS = ['power-local-llm']
 
-// Clusters routed via /ja/ and /zh/ path-prefixes for Japanese and Chinese ONLY.
-// DE/FR continue to use ?lang= on these paths.
+// Clusters routed via /ja/, /zh/, and /de/ path-prefixes for Japanese, Chinese, and German.
+// FR continues to use ?lang= on these paths.
 // Keep in sync with PATH_PREFIX_LANG_CLUSTERS in src/components/LanguageSwitcher.tsx.
 const PATH_PREFIX_LANG_CLUSTERS = [
   'prompt-engineering',
@@ -25,13 +25,13 @@ const PATH_LOCALE_RE = new RegExp(`^/(de|fr|ja|zh)(/|$)`)
 const CLUSTER_PATH_RE = new RegExp(
   `^(?:/(de|fr|ja|zh))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/|$)`
 )
-// Matches /ja/<pathPrefixLangCluster>/... or /zh/<pathPrefixLangCluster>/... or /<pathPrefixLangCluster>/... (without a locale prefix)
+// Matches /ja/, /zh/, or /de/ <pathPrefixLangCluster>/... or /<pathPrefixLangCluster>/... (without a locale prefix)
 const PATH_PREFIX_LANG_CLUSTER_RE = new RegExp(
-  `^(?:/(ja|zh))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
+  `^(?:/(de|ja|zh))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
 )
-// Matches /ja/<pathPrefixLangCluster>/... or /zh/<pathPrefixLangCluster>/... (already prefixed — used to detect already-migrated URLs)
+// Matches /ja/, /zh/, or /de/ <pathPrefixLangCluster>/... (already prefixed — used to detect already-migrated URLs)
 const PATH_PREFIX_LANG_PREFIXED_RE = new RegExp(
-  `^/(ja|zh)/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
+  `^/(de|ja|zh)/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
 )
 
 export function middleware(request: NextRequest) {
@@ -89,13 +89,13 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(redirectUrl, 301)
   }
 
-  // PATH_PREFIX_LANG_CLUSTERS: redirect ?lang=ja and ?lang=zh to /ja/ and /zh/ path prefixes.
-  // Only JA/ZH — DE/FR stay on ?lang= for these clusters.
+  // PATH_PREFIX_LANG_CLUSTERS: redirect ?lang=ja, ?lang=zh, and ?lang=de to /ja/, /zh/, and /de/ path prefixes.
+  // Only JA/ZH/DE — FR stays on ?lang= for these clusters.
   // Handles:
   //   /blog/slug?lang=ja          → /ja/blog/slug
-  //   /compare?lang=zh            → /zh/compare
+  //   /compare?lang=de            → /de/compare
   //   /?lang=zh                   → /zh  (home page special case)
-  if ((langParam === 'ja' || langParam === 'zh') && !isApiRoute && !isCronRoute) {
+  if ((langParam === 'ja' || langParam === 'zh' || langParam === 'de') && !isApiRoute && !isCronRoute) {
     const alreadyPrefixed = PATH_PREFIX_LANG_PREFIXED_RE.test(url.pathname)
     const isHome = url.pathname === '/' || url.pathname === ''
 

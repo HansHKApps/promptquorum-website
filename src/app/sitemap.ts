@@ -25,7 +25,7 @@ const EXCLUDED_PATH_PREFIXES = [
   '/fr/power-local-llm',
   '/ja/power-local-llm',
   '/zh/power-local-llm',
-  // JA/ZH path-prefix clusters — /ja/<cluster> and /zh/<cluster> entries are excluded and instead handled as hreflang alternates on EN entries
+  // JA/ZH/DE path-prefix clusters — /ja/<cluster>, /zh/<cluster>, and /de/<cluster> entries are excluded and instead handled as hreflang alternates on EN entries
   '/ja/prompt-engineering',
   '/ja/local-llms',
   '/ja/blog',
@@ -46,6 +46,16 @@ const EXCLUDED_PATH_PREFIXES = [
   '/zh/faq',
   '/zh/about',
   '/zh/privacy',
+  '/de/prompt-engineering',
+  '/de/local-llms',
+  '/de/blog',
+  '/de/frameworks',
+  '/de/compare',
+  '/de/features',
+  '/de/how-it-works',
+  '/de/faq',
+  '/de/about',
+  '/de/privacy',
 ]
 
 // Check if a content entry has real sections (not a stub)
@@ -189,12 +199,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
     } else {
       // All other clusters: emit EN <loc> with full hreflang alternates.
-      // JA/ZH use /ja/ and /zh/ path prefixes; DE/FR use ?lang= query params.
+      // JA/ZH/DE use /ja/, /zh/, /de/ path prefixes; FR uses ?lang= query param.
       // This prevents duplication and ensures all language variants are discoverable.
       const getPathPrefixUrl = (p: string, lang: string) => p === '' ? `/${lang}` : `/${lang}${p}`
       const alternates = {
         'en': `${BASE}${path}`,
-        'de': `${BASE}${path}?lang=de`,
+        'de': `${BASE}${getPathPrefixUrl(path, 'de')}`,
         'fr': `${BASE}${path}?lang=fr`,
         'ja': `${BASE}${getPathPrefixUrl(path, 'ja')}`,
         'zh': `${BASE}${getPathPrefixUrl(path, 'zh')}`,

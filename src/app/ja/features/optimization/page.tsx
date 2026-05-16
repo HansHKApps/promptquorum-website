@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.featuresOptimizationMetaTitle,
     description: t.featuresOptimizationMetaDescription,
-    alternates: generateAlternates('/features/optimization', lang, true, undefined, ['ja', 'zh']),
+    alternates: generateAlternates('/features/optimization', lang, true, undefined, ['ja', 'zh', 'de']),
     openGraph: {
       title: t.featuresOptimizationMetaTitle,
       description: t.featuresOptimizationMetaDescription,

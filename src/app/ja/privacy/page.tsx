@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.privacyPageTitle,
     description: t.privacyMetaDescription || 'Privacy Policy for PromptQuorum',
-    alternates: generateAlternates('/privacy', lang, true, undefined, ['ja', 'zh']),
+    alternates: generateAlternates('/privacy', lang, true, undefined, ['ja', 'zh', 'de']),
     openGraph: {
       title: t.privacyPageTitle,
       description: t.privacyMetaDescription || 'Privacy Policy for PromptQuorum',

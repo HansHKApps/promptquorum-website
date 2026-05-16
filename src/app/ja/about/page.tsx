@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.aboutMetaTitle,
     description: t.aboutMetaDescription,
-    alternates: generateAlternates('/about', lang, true, undefined, ['ja', 'zh']),
+    alternates: generateAlternates('/about', lang, true, undefined, ['ja', 'zh', 'de']),
     openGraph: {
       title: t.aboutMetaTitle,
       description: t.aboutMetaDescription,

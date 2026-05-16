@@ -18,7 +18,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.featuresQuorumMetaTitle,
     description: t.featuresQuorumMetaDescription,
-    alternates: generateAlternates('/features/quorum', selectedLang, true, undefined, ['ja', 'zh']),
+    alternates: generateAlternates('/features/quorum', selectedLang, true, undefined, ['ja', 'zh', 'de']),
     openGraph: {
       title: t.featuresQuorumMetaTitle,
       description: t.featuresQuorumMetaDescription,

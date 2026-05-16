@@ -24,7 +24,7 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   return {
     title: fwTitle,
     description: fwDesc,
-    alternates: generateAlternates(`/frameworks/${fw.slug}`, selectedLang, true, undefined, ['ja', 'zh']),
+    alternates: generateAlternates(`/frameworks/${fw.slug}`, selectedLang, true, undefined, ['ja', 'zh', 'de']),
     openGraph: {
       type: 'article',
       url: `https://www.promptquorum.com/frameworks/${fw.slug}`,
