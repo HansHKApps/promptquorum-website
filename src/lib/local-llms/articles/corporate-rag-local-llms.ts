@@ -1047,4 +1047,255 @@ schema: {
         ],
       },
     },
+    zh: {
+      freshness_tier: 'annual',
+      theme: 'Enterprise',
+      title: '企业RAG与本地LLM：面向组织的文档问答',
+      seoTitle: '企业RAG本地LLM',
+      intro: 'RAG（检索增强生成）应用于企业文档：政策、合同、内部Wiki、研究论文。本地RAG将专有文档保留在现场，消除API成本，提供完整的审计跟踪。截至2026年4月，企业RAG是本地LLM的#1企业用例。',
+      metaDescription: '企业RAG与本地LLM：安全文档问答、专有知识库、审计跟踪、多用户访问控制、企业级。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**RAG（检索增强生成）应用于企业文档：政策、合同、内部Wiki、研究论文。本地RAG将专有文档保留在现场，消除API成本，提供完整的审计跟踪。**',
+      audience: '在生产或企业环境中部署本地LLM的工程师',
+      readTime: '阅读约12分钟',
+      educationalLevel: 'Advanced',
+      primaryTerm: '企业知识库',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '企业RAG用例', anchor: '#use-cases' },
+        { label: '大规模文档摄取', anchor: '#ingestion' },
+        { label: '多用户RAG架构', anchor: '#architecture' },
+        { label: '检索质量和排名', anchor: '#retrieval-quality' },
+        { label: '治理和访问控制', anchor: '#governance' },
+        { label: '企业RAG常见错误', anchor: '#common-mistakes' },
+        { label: '相关阅读', anchor: '#related-reading' },
+        { label: '来源', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**企业RAG=内部知识库。**上传所有企业文档，让员工提出问题。',
+            '**用例：**政策查询、合同Q&A、研究发现、入职、合规培训。',
+            '**规模：**10,000-100,000文档、100-500并发用户、<2秒延迟。',
+            '**本地优势：**专有文档永远不会离开您的网络。完整的审计跟踪，了解谁访问了什么。',
+            '截至2026年4月，企业RAG每年为公司节省$500k-5M的员工生产力。',
+          ],
+        },
+        useCases: {
+          title: '企业RAG可以处理哪些文档？',
+          rows: [
+            { '文档类型': '员工手册', 'RAG用途': '政策查询（"我有多少假期？"）', '典型用户': '所有员工' },
+            { '文档类型': '合同', 'RAG用途': '条款搜索（"解除条款是什么？"）', '典型用户': '法律、采购' },
+            { '文档类型': '技术文档', 'RAG用途': 'API参考、代码示例', '典型用户': '工程师' },
+            { '文档类型': '研究论文', 'RAG用途': '知识发现（"关于量子ML的论文？"）', '典型用户': 'R&D团队' },
+            { '文档类型': '合规文档', 'RAG用途': '监管查询（"GDPR数据保留要求？"）', '典型用户': '合规、法律' },
+            { '文档类型': '客户文档', 'RAG用途': '产品文档、FAQ', '典型用户': '支持、销售' },
+          ],
+          columns: ['文档类型', 'RAG用途', '典型用户'],
+        },
+        ingestion: {
+          title: '如何大规模摄取文档？',
+          content: [
+            '**摄取管道将文档转换为嵌入并存储在向量数据库中。**',
+          ],
+          numberedItems: [
+            '**提取文档：**来自文件服务器、SharePoint、Jira、Confluence等。',
+            '**解析：**将PDF、Word文档、HTML转换为文本。处理表格、图像。',
+            '**分块：**分成500-1,000令牌块，重叠20%。',
+            '**嵌入：**使用本地嵌入模型（nomic-embed-text）将块转换为向量。',
+            '**索引：**使用元数据（来源、日期、作者）将向量存储在Qdrant、Milvus或Weaviate中。',
+            '**刷新：**每周或每月重新摄取以捕获更新。',
+          ],
+        },
+        architecture: {
+          title: '如何设计多用户企业RAG？',
+          content: [
+            '典型堆栈：',
+            '- **前端：**Web界面或Slack机器人。',
+            '- **API：**RAG查询的REST端点。',
+            '- **LLM：**本地Llama 13B（质量）或7B（速度）。',
+            '- **嵌入：**本地nomic-embed-text（或云以获得速度）。',
+            '- **向量DB：**用于10,000+文档的Qdrant（分布式）。',
+            '- **文档存储：**用于PDF和来源的加密文件服务器。',
+            '- **访问控制：**用于用户权限的LDAP/AD集成。',
+          ],
+        },
+        retrievalQuality: {
+          title: '如何确保检索质量？',
+          content: [
+            '**检索差=答案差。**质量取决于：',
+          ],
+          items: [
+            '**分块策略：**语义块（按主题）优于固定大小块。',
+            '**嵌入模型：**如果可用，使用特定领域的嵌入。通用嵌入可能会错过领域术语。',
+            '**检索参数：**k=5-10（检索多少块）。太低=缺少上下文。太高=噪声。',
+            '**重新排名：**使用交叉编码器按相关性重新排名块（小质量提升）。',
+            '**用户反馈：**答案上的"反馈"按钮。用于调整检索参数。',
+          ],
+        },
+        governance: {
+          title: '如何实施治理和访问控制？',
+          content: [
+            '**企业RAG必须跟踪访问以实现合规性。中国2021年《数据安全法》规定了本地推理对跨境数据流的合规要求。**',
+          ],
+          items: [
+            '**访问日志：**谁在何时从何处查询了哪些文档。',
+            '**保留：**将日志保留3-7年（监管要求）。',
+            '**访问控制：**按角色限制文档（例如，仅法律部门查看合同）。',
+            '**审计：**对异常活动的访问日志进行季度审查。',
+            '**数据分类：**将文档标记为公开、内部、机密、受限。',
+          ],
+        },
+        commonMistakes: {
+          title: '企业RAG常见错误',
+          items: [
+            '**无清理摄取。**旧文档、重复项、测试文件=检索噪声。摄取前清理。',
+            '**无智能分块。**固定大小块在句子中间分割主题。使用语义分块。',
+            '**无访问控制。**如果所有文档对所有员工可见，机密信息会泄露。',
+            '**忽视检索质量。**在大范围推出前使用真实员工测试。50%的问题=检索，不是生成。',
+            '**无重新摄取更新。**文档数据库变得陈旧。安排每周/每月重新摄取。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '关于企业RAG的常见问题',
+          faqs: [
+            {
+              q: '企业RAG可以处理多少个文档？',
+              a: '取决于平均文档大小和延迟。典型范围：10,000-100,000文档。检索延迟应<1秒。如果较慢，优化分块或嵌入。用实际文档集测试。',
+            },
+            {
+              q: '我们应该使用哪个嵌入模型？',
+              a: '开源选项：all-MiniLM-L6-v2（快速、良好）、BAAI/bge-base-en-v1.5（更好质量）。专有：OpenAI text-embedding-3-small。对于本地部署，使用开源。质量差异很重要：更好的嵌入=更好的检索。',
+            },
+            {
+              q: '我们如何在不失去聊天历史的情况下更新文档？',
+              a: '将聊天历史与文档嵌入分开存储。按计划（每周/每月）更新嵌入。旧聊天仍然引用旧文档版本，这没关系——只需记录版本日期。',
+            },
+            {
+              q: '我们可以将RAG用于机密文档吗？',
+              a: '是的——本地RAG是理想的。文档保留在场所内，查询不在外部记录，您可以通过基于角色的权限控制访问。满足HIPAA和GDPR。',
+            },
+            {
+              q: '什么是语义与固定大小分块？',
+              a: '固定大小（例如512令牌）更简单但在句子中间分割主题。语义分块使用句子/段落边界，保留含义。语义对RAG质量更好，但设置较慢。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[本地RAG 2026](/local-llms/local-rag-2026?lang=zh) -- 完整RAG实现指南。',
+            '[扩展本地LLM企业](/local-llms/scaling-local-llms-enterprise?lang=zh) -- 多用户基础设施。',
+            '[企业为什么使用本地LLM](/local-llms/why-enterprises-use-local-llms?lang=zh) -- 业务案例。',
+            '[企业合规本地LLM](/local-llms/enterprise-compliance-local-llms?lang=zh) -- 文档处理合规性。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '来源',
+          items: [
+            'LlamaIndex文档 -- docs.llamaindex.ai',
+            'Qdrant向量数据库 -- qdrant.tech',
+            '检索评估 -- arxiv.org（搜索"RAG evaluation metrics"）',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '企业RAG本地LLM',
+        'description': '企业RAG与本地LLM：安全文档问答、专有知识库、审计跟踪、多用户访问控制、企业级。',
+        'url': 'https://www.promptquorum.com/local-llms/corporate-rag-local-llms?lang=zh',
+        'inLanguage': 'zh',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'about': [
+          { '@type': 'Thing', 'name': 'RAG（检索增强生成）' },
+          { '@type': 'Thing', 'name': '本地LLM' },
+          { '@type': 'Thing', 'name': '企业知识库' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '企业RAG可以处理多少个文档？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '取决于平均文档大小和延迟。典型范围：10,000-100,000文档。检索延迟应<1秒。如果较慢，优化分块或嵌入。用实际文档集测试。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我们应该使用哪个嵌入模型？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '开源选项：all-MiniLM-L6-v2（快速、良好）、BAAI/bge-base-en-v1.5（更好质量）。专有：OpenAI text-embedding-3-small。对于本地部署，使用开源。质量差异很重要：更好的嵌入=更好的检索。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我们如何在不失去聊天历史的情况下更新文档？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '将聊天历史与文档嵌入分开存储。按计划（每周/每月）更新嵌入。旧聊天仍然引用旧文档版本，这没关系——只需记录版本日期。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我们可以将RAG用于机密文档吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的——本地RAG是理想的。文档保留在场所内，查询不在外部记录，您可以通过基于角色的权限控制访问。满足HIPAA和GDPR。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '什么是语义与固定大小分块？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '固定大小（例如512令牌）更简单但在句子中间分割主题。语义分块使用句子/段落边界，保留含义。语义对RAG质量更好，但设置较慢。',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '企业RAG本地LLM',
+        'inLanguage': 'zh',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '大规模文档摄取',
+            'description': '上传10,000-100,000文档，解析PDF/Word/HTML，智能分块，使用本地模型嵌入。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '多用户RAG架构',
+            'description': '使用负载平衡、检索质量优化、<2秒延迟为100-500并发用户服务。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': '治理和合规性',
+            'description': '实施访问控制、审计跟踪、数据保留策略、基于角色的文档访问。',
+          },
+        ],
+      },
+    },
   };
