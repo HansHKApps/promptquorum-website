@@ -145,5 +145,29 @@
       "clicks": 0,
       "ctr": 0
     }
+  },
+  {
+    "id": "b654884e-0151-4658-8069-4b45e2e36a78",
+    "slug": "/prompt-engineering/ai-limitations-what-llms-cant-do",
+    "date": "2026-05-16T19:00:51.889Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLM Limitations in 2026: 8 Structural Constraints",
+        "new": "LLM Limitations & Workarounds 2026: 8 Key Constraints"
+      },
+      {
+        "field": "metaDescription",
+        "old": "8 hard limits all local LLMs share: no real-time data, hallucination, reasoning gaps, context caps, no memory, no actions, bias, no verification.",
+        "new": "All local LLMs share 8 structural limits: no real-time data, hallucinations, context caps, no memory. Learn workarounds for each constraint and when to use cloud."
+      }
+    ],
+    "reason": "geo-meta-optimizer: shift from limitations-only to limitations+workarounds angle matching real queries (advantages/disadvantages, practical context). Pad EN metaDescription to 152 chars. Fix JA/ZH metaDescription lengths. Add EN schema.url?lang=en suffix.",
+    "baseline": {
+      "position": 5.2,
+      "impressions": 1159,
+      "clicks": 1,
+      "ctr": 0.0008628127696289905
+    }
   }
 ]
