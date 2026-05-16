@@ -181,4 +181,178 @@ schema: {
         ],
       },
     },
+    de: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'Desktop vs Web-UI für lokale LLMs: Welche Oberfläche sollten Sie wählen?',
+      seoTitle: 'Desktop vs Web-UI für lokale LLMs',
+      intro: 'Lokale LLM-Tools gibt es in zwei Oberflächenstilen: Desktop-Anwendungen (LM Studio, Jan AI) und Web-UIs (Open WebUI, Enchanted UI). Desktop-Apps sind für Verbraucher einfacher; Web-UIs sind leistungsstarker und teilbar. Ab April 2026 sind beide Ansätze reif, und die Wahl hängt ganz von Ihrem Workflow ab.',
+      metaDescription: 'Desktop vs Web-UI für lokale LLMs 2026: Vergleich von Oberflächen, Funktionen, Freigabe, Skalierbarkeit. Wann welche für Produktionsbereitstellung wählen.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Lokale LLM-Tools gibt es in zwei Oberflächenstilen: Desktop-Anwendungen (LM Studio, Jan AI) und Web-UIs (Open WebUI, Enchanted UI). Desktop-Apps sind für Verbraucher einfacher; Web-UIs sind leistungsstarker und teilbar.**',
+      audience: 'Anfänger, die ihr erstes lokales LLM auf Consumer-Hardware ausführen',
+      readTime: '9 Min. Lesezeit',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'lokale LLM-Oberfläche',
+      toc: [
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+        { label: 'Desktop-Anwendungen', anchor: '#desktop-apps' },
+        { label: 'Web-UIs', anchor: '#web-uis' },
+        { label: 'Funktionsvergleich', anchor: '#feature-comparison' },
+        { label: 'Wann sollte ich welche wählen?', anchor: '#when-to-choose' },
+        { label: 'Kann ich beide verwenden?', anchor: '#use-both' },
+        { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+        { label: 'Häufige Fragen', anchor: '#faq' },
+        { label: 'Weiterführende Literatur', anchor: '#related-reading' },
+        { label: 'Quellen', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+
+          isTldr: true,
+          items: [
+            '**Desktop-Apps** (LM Studio, Jan AI): Einfach, Einzelbenutzer, kein Server-Setup erforderlich. Best für Verbraucher.',
+            '**Web-UIs** (Open WebUI, Enchanted): Browser-basiert, teilbar, Multi-User-fähig. Best für Teams und Power-User.',
+            'Beide Typen verbinden sich mit denselben zugrunde liegenden Modellen (Ollama, vLLM). Sie können zwischen ihnen wechseln.',
+            'Desktop-Apps sind für Anfänger einfacher; Web-UIs sind flexibler für Profis.',
+            'Ab April 2026 sind beide reif und produktionsbereit.',
+          ],
+        },
+        desktopApps: {
+          title: 'Was sind Desktop-Anwendungen?',
+          content: [
+            '**Desktop-Apps sind native Anwendungen, die direkt auf Ihrem Betriebssystem ausgeführt werden.** Beispiele: LM Studio, Jan AI.',
+            '**Vorteile:** Einfaches Setup, keine Server-Kenntnisse erforderlich, Einzelbenutzer, läuft als eigenständige Anwendung, GPU-Einstellungen in GUI.',
+            '**Nachteile:** Hauptsächlich Windows/macOS, nur eine Maschine, kein Multi-User-Zugriff, keine einfache Freigabe.',
+          ],
+        },
+        webUIs: {
+          title: 'Was sind Web-UIs?',
+          content: [
+            '**Web-UIs sind Oberflächen, auf die über Ihren Browser zugegriffen wird.** Sie führen einen Webserver (normalerweise in Docker) aus und servieren eine Browser-basierte Oberfläche. Beispiele: Open WebUI, Enchanted UI.',
+            '**Vorteile:** Browser-basiert (funktioniert auf jedem Betriebssystem), teilbar per URL, Multi-User-fähig, Zugriff von anderen Geräten im Netzwerk, leistungsstärkere Funktionen.',
+            '**Nachteile:** Erfordert Docker- oder Port-Verständnis, etwas mehr Setup, erfordert einen laufenden Webserver.',
+          ],
+        },
+        featureComp: {
+          title: 'Funktionsvergleich: Desktop vs Web-UI',
+          rows: [
+            { 'Merkmal': 'Setup-Komplexität', 'Desktop': 'Sehr einfach', 'Web-UI': 'Mittel' },
+            { 'Merkmal': 'GUI für GPU-Einstellungen', 'Desktop': 'Ja', 'Web-UI': 'Manchmal' },
+            { 'Merkmal': 'Multi-User-Zugriff', 'Desktop': 'Nein', 'Web-UI': 'Ja' },
+            { 'Merkmal': 'Zugriff von anderen Geräten', 'Desktop': 'Nein', 'Web-UI': 'Ja (falls konfiguriert)' },
+            { 'Merkmal': 'Integrierter Chat', 'Desktop': 'Ja', 'Web-UI': 'Ja' },
+            { 'Merkmal': 'RAG-Unterstützung', 'Desktop': 'Begrenzt', 'Web-UI': 'Vollständig (Open WebUI)' },
+            { 'Merkmal': 'API-Exposition', 'Desktop': 'Manchmal', 'Web-UI': 'Ja' },
+            { 'Merkmal': 'Betriebssysteme', 'Desktop': 'macOS, Windows', 'Web-UI': 'Alle (Docker)' },
+            { 'Merkmal': 'Ressourcen-Overhead', 'Desktop': 'Niedrig', 'Web-UI': 'Mittel (Docker)' },
+          ],
+          columns: ['Merkmal', 'Desktop', 'Web-UI'],
+        },
+        whenToChoose: {
+          title: 'Wann sollten Sie Desktop-App wählen?',
+          content: 'Wählen Sie Desktop-App, wenn:',
+          items: [
+            'Sie ein Verbraucher / nicht-technischer Benutzer sind.',
+            'Sie das einfachstmögliche Setup mögen.',
+            'Sie nur ein Gerät verwenden.',
+            'Sie native Betriebssystem-Integration mögen (Benachrichtigungen, Systemmenü).',
+            'Sie auf macOS oder Windows sind.',
+          ],
+        },
+        choosWebUI: {
+          title: 'Wann sollten Sie Web-UI wählen?',
+          content: 'Wählen Sie Web-UI, wenn:',
+          items: [
+            'Sie auf Linux sind (beste Unterstützung).',
+            'Sie mehrere Benutzer auf dasselbe Modell zugreifen lassen mögen.',
+            'Sie von anderen Geräten in Ihrem Netzwerk zugreifen mögen.',
+            'Sie RAG oder erweiterte Funktionen benötigen (Open WebUI).',
+            'Sie auf einem Server oder Cloud-VM bereitstellen mögen.',
+            'Sie eine API bereitstellen mögen.',
+          ],
+        },
+        useBoth: {
+          title: 'Können Sie Desktop und Web-UI gleichzeitig ausführen?',
+          content: [
+            '**Ja, aber mit Vorbehalten.** Beide versuchen, dieselbe GPU und Modelle zu nutzen. Sie können beide mit demselben Ollama-Backend ausführen (sie teilen sich das Modell), aber die Inferenzleistung wird aufgeteilt.',
+            'Besserer Ansatz: Führen Sie Ollama im Hintergrund aus, dann verwenden Sie entweder LM Studio ODER Open WebUI als Ihre Oberfläche. Wechsel zwischen ihnen ist sofort.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler bei Desktop vs Web-UI',
+          items: [
+            '**Denken, Desktop ist immer einfacher.** Desktop ist anfangs einfacher, aber Web-UIs haben bessere Funktionen. Zum Lernen ist Desktop einfacher.',
+            '**Nicht erkennen, dass Sie beide verwenden können.** Sie können zwischen LM Studio und Open WebUI wechseln, indem Sie sie auf dieselbe Ollama-Instanz verweisen.',
+            '**Annahme, Web-UI erfordert Server-Kenntnisse.** Moderne Web-UIs (Open WebUI Docker) handhaben die Server-Komplexität für Sie. Führen Sie einfach den Docker-Befehl aus.',
+            '**Bereitstellen einer Desktop-App auf einem Server.** Desktop-Apps (LM Studio, Jan) sind Einzelbenutzer. Für Server-Bereitstellungen verwenden Sie Web-UIs oder APIs.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Häufig gestellte Fragen zu Desktop vs Web-UI',
+          faqs: [
+            {
+              q: 'Kann ich Open WebUI und LM Studio gleichzeitig ausführen?',
+              a: 'Ja. Open WebUI (Browser) und LM Studio (Desktop) können beide mit demselben Ollama-Backend verbunden werden. Sie teilen sich das Modell.',
+            },
+            {
+              q: 'Welche ist schneller, Desktop oder Web-UI?',
+              a: 'Desktop-Apps haben weniger Overhead (kein Webserver), also marginal schneller. Der Unterschied ist für Inferenzgeschwindigkeit nicht wahrnehmbar.',
+            },
+            {
+              q: 'Kann ich von meinem Telefon auf mein lokales LLM zugreifen?',
+              a: 'Ja, mit Web-UI. Führen Sie Open WebUI in Docker aus und konfigurieren Sie `OLLAMA_HOST=0.0.0.0:11434`. Greifen Sie dann von Ihrem Telefon im selben Netzwerk zu.',
+            },
+            {
+              q: 'Gibt es ein Sicherheitsrisiko bei Web-UI in einem Netzwerk?',
+              a: 'Ja. Ollama hat standardmäßig keine Authentifizierung. Verwenden Sie eine Firewall oder umgekehrten Proxy (nginx) mit Authentifizierung bei Exposition in einem Netzwerk.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Beste lokale LLM-Frontends](/local-llms/best-local-llm-frontends?lang=de) -- Vollständige Liste von Oberflächen.',
+            '[So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de) -- Desktop-App-Setup.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=de) -- Vergleich von zwei Tools.',
+            '[Beste lokale LLM-Frontends](/local-llms/best-local-llm-frontends?lang=de) -- Open WebUI und Web-Alternativen.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Quellen',
+          items: [
+            'LM Studio -- lmstudio.ai',
+            'Jan AI -- jan.ai',
+            'Open WebUI -- github.com/open-webui/open-webui',
+            'Enchanted UI -- enchanted.div.ai',
+          ],
+        },
+      },
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Desktop vs Web-UI für lokale LLMs: Welche Oberfläche sollten Sie wählen?',
+        'description': 'Desktop vs Web-UI für lokale LLMs 2026: Vergleich von Oberflächen, Funktionen, Freigabe, Skalierbarkeit. Wann welche für Produktionsbereitschaft wählen.',
+        'url': 'https://www.promptquorum.com/local-llms/desktop-vs-webui-local-llm?lang=de',
+        'inLanguage': 'de',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'de',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Kann ich Open WebUI und LM Studio gleichzeitig ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Open WebUI (Browser) und LM Studio (Desktop) können beide mit demselben Ollama-Backend verbunden werden. Sie teilen sich das Modell.' } },
+          { '@type': 'Question', 'name': 'Welche ist schneller, Desktop oder Web-UI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Desktop-Apps haben weniger Overhead (kein Webserver), also marginal schneller. Der Unterschied ist für Inferenzgeschwindigkeit nicht wahrnehmbar.' } },
+          { '@type': 'Question', 'name': 'Kann ich von meinem Telefon auf mein lokales LLM zugreifen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, mit Web-UI. Führen Sie Open WebUI in Docker aus und konfigurieren Sie OLLAMA_HOST=0.0.0.0:11434. Greifen Sie dann von Ihrem Telefon im selben Netzwerk zu.' } },
+          { '@type': 'Question', 'name': 'Gibt es ein Sicherheitsrisiko bei Web-UI in einem Netzwerk?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Ollama hat standardmäßig keine Authentifizierung. Verwenden Sie eine Firewall oder umgekehrten Proxy (nginx) mit Authentifizierung bei Exposition in einem Netzwerk.' } },
+        ],
+      },
+    },
   };
