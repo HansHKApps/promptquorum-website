@@ -159,6 +159,158 @@ schema: {
         ]
       },
     },
+    de: {
+      freshness_tier: 'semi_annual',
+      theme: 'GPU Buying Guides',
+      title: 'RTX 5090 vs RTX 4090 für lokale LLM-Inferenz',
+      seoTitle: 'RTX 5090 vs RTX 4090: Welche GPU für lokale LLMs 2026?',
+      intro: '**Für lokale LLMs ist RTX 5090 20–25% schneller als RTX 4090, kostet aber 1.000€ mehr.** Im April 2026 hängt die Wahl davon ab, ob Sie 70B-Modelle (5090 gewinnt) oder 7B-13B-Modelle (4090 ist ohnehin Overkill) ausführen. Falls Sie bereits eine 4090 besitzen, lohnt sich ein Upgrade nicht. Wenn Sie neu kaufen, bietet die RTX 5080 eine bessere Performance-pro-Euro.',
+      metaDescription: 'RTX 5090 vs RTX 4090 für lokale LLMs: Geschwindigkeitsvergleich, VRAM-Analyse, Kosten-pro-Performance, Upgrade-Leitfaden.',
+      publishDate: '2026-04-05',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '**Für lokale LLMs ist RTX 5090 20–25% schneller als RTX 4090, kostet aber 1.000€ mehr. Im April 2026 hängt die Wahl davon ab, ob Sie 70B-Modelle (5090 gewinnt) oder 7B-13B-Modelle (4090 ist ohnehin Overkill) ausführen.**',
+      audience: 'Entwickler, die mit Ollama oder LM Studio vertraut sind und lokale LLM-Workflows optimieren',
+      readTime: '6 Min. Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'RTX GPU-Vergleich',
+      toc: [
+        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Was sind die Geschwindigkeitsunterschiede?', anchor: '#speed-diff' },
+        { label: 'Spielt VRAM zwischen 4090 und 5090 eine Rolle?', anchor: '#vram-diff' },
+        { label: 'Kosten pro Token: Welche ist tatsächlich günstiger?', anchor: '#cost-per-token' },
+        { label: 'Wann sollten Sie tatsächlich upgraden?', anchor: '#when-upgrade' },
+        { label: 'Häufige Annahmen über die 5090', anchor: '#mistakes' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'RTX 5090 ist ~20–25% schneller als RTX 4090 bei lokaler LLM-Inferenz (gemessen in Token/s).',
+            'Beide Karten haben 24GB VRAM―identisch für LLM-Arbeit. Der Geschwindigkeitsvorteil der 5090 ergibt sich aus besserer Speicherbandbreite und Shader-Effizienz.',
+            'RTX 5090 kostet 1.000€ mehr (€2.500 neu vs. €1.500 für gebrauchte 4090). Der Preis-zu-Leistungs-Gewinn rechtfertigt kein Upgrade, falls Sie bereits eine 4090 haben.',
+            'Für 7B–13B-Modelle: 4090 ist Overkill. Sie treffen CPU/Kühlungs-Limits bevor Sie GPU-Auslastung maximieren.',
+            'Für 70B-Modelle: 5090 glänzt. Kann 2–3 kleinere 70B-Modelle parallel ausführen oder einzelne 70B bei höheren Batch-Größen.',
+            'RTX 5080 (€999) bietet oft besseren Wert als 5090 für lokale LLMs, außer Sie benötigen Dual-GPU-Setups.',
+          ],
+        },
+        'speed-diff': {
+          id: 'speed-diff',
+          title: 'Was sind die Geschwindigkeitsunterschiede?',
+          content: [
+            '**RTX 5090: 14.080 CUDA-Kerne, 568 TFLOPS, ~1.500 GB/s Speicherbandbreite.**',
+            'RTX 4090: 16.384 CUDA-Kerne, 410 TFLOPS, ~936 GB/s Speicherbandbreite.',
+            'Real-World LLM-Inferenz (Llama 3 70B, Q4, Batch=1): RTX 5090 erreicht ~45 Token/s, RTX 4090 erreicht ~36 Token/s. **25% schneller.**',
+            'Für 7B-Modelle (speichergebunden, nicht rechengebunden): RTX 5090 erreicht ~80 Token/s, RTX 4090 erreicht ~75 Token/s. **Nur 6,5% schneller.** Der Vorteil verschwindet fast völlig.',
+          ],
+        },
+        'vram-diff': {
+          id: 'vram-diff',
+          title: 'Spielt VRAM zwischen 4090 und 5090 eine Rolle?',
+          content: [
+            '**Beide haben 24GB GDDR7 (5090) / GDDR6X (4090).** Identische VRAM-Kapazität. Kein Vorteil.',
+            'GDDR7 auf 5090 ist schneller pro Byte. Dies ist Teil des Grundes, warum 5090 20–25% schneller ist. Aber für die LLM-Workloads, die wir ausführen, ist GDDR6X (4090) ausreichend.',
+          ],
+        },
+        'cost-per-token': {
+          id: 'cost-per-token',
+          title: 'Kosten pro Token: Welche ist tatsächlich günstiger?',
+          items: [
+            '**Gebrauchte RTX 4090: ~€1.500–1.800**. Erreicht 36 Token/s auf Llama 70B. Kosten pro Token: €42–50 pro M Token.',
+            '**RTX 5090 neu: €2.500**. Erreicht 45 Token/s auf Llama 70B. Kosten pro Token: €55 pro M Token.',
+            '**Fazit: 4090 ist günstiger pro erzeugten Token,** nicht weil sie schneller ist, sondern weil sie billiger ist im Ankauf.',
+          ],
+        },
+        'when-upgrade': {
+          id: 'when-upgrade',
+          title: 'Wann sollten Sie tatsächlich von 4090 auf 5090 upgraden?',
+          content: [
+            '**Niemals upgraden für 7B–13B-Inferenz.** 4090 ist für diese Overkill. Sie werden CPU-gebunden oder Kühlungs-limitiert sein.',
+            '**Upgraden wenn:** Sie Dual-GPU 70B-Inferenz ausführen (2× 4090 = €3.500 vs. 2× 5090 = €5.600), Sie >45 Token/s auf 70B-Modellen benötigen, oder Sie von Speicherbandbreite bei Multi-Batch-Workloads begrenzt sind.',
+            '**Bessere Alternative:** Fügen Sie eine zweite RTX 4090 für €1.700 hinzu statt auf 5090 zu wechseln. Zwei 4090er parallel geben Ihnen ~72 Token/s (nicht 90, aber nahe genug zu halben Kosten).',
+          ],
+        },
+        'mistakes': {
+          id: 'mistakes',
+          title: 'Häufige Annahmen über die 5090',
+          items: [
+            'Denken, 5090 ist 2× schneller als 4090―sie ist nur 20–25% schneller, und sogar weniger für 7B-Modelle.',
+            'Annehmen, VRAM-Unterschied existiert―beide sind 24GB. Gleiche Kapazität, ähnliche Performance für LLMs.',
+            'Glauben, Sie benötigen 5090 um 70B-Modelle auszuführen―4090 führt sie gut aus mit 36 Token/s. Das ist „ausreichend" für die meisten Nutzer.',
+          ],
+        },
+        'faqSection': {
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            { q: 'Lohnt sich RTX 5090 zum Ausführen von Llama 3 70B?', a: 'Nur wenn Sie >45 Token/s benötigen. 4090 gibt Ihnen 36, was „ausreichend" für die meisten ist. Die zusätzlichen 9 Token/s kosten €1.000.' },
+            { q: 'Sollte ich RTX 5090 oder zwei RTX 4090er kaufen?', a: 'Zwei 4090er (~€3.500 gebraucht) schlagen 5090 (€2.500) bei Geschwindigkeit und Flexibilität. Sie können mehrere Modelle parallel ausführen. 5090 hat einfacheres Setup, aber teurer.' },
+            { q: 'Hat RTX 5090 besseres VRAM als 4090?', a: 'Nein. Beide 24GB. GDDR7 ist schneller pro Byte, aber für LLMs ist GDDR6X (4090) ausreichend.' },
+            { q: 'Werden 5090-Preise wie 4090 fallen?', a: 'Ja, irgendwann. 4090 war €1.499 beim Launch (2022), jetzt €1.500 gebraucht (2026). Erwarten Sie 5090 bei €1.700–2.000 gebraucht in 2–3 Jahren.' },
+            { q: 'Kann ich RTX 5090 mit 750W Stromversorgung nutzen?', a: 'Kaum. RTX 5090 verbraucht allein 575W. Kombinieren Sie mit 850W oder 1000W PSU, um Spannungsabfälle unter Last zu vermeiden.' },
+            { q: 'Ist RTX 5080 besser als 5090?', a: 'Ja, für die meisten. 5080 (€999) ist 80% der 5090-Geschwindigkeit zu halben Kosten. Für lokale LLMs ist 5080 der Sweet Spot.' },
+            { q: 'Wie viel schneller ist 5090 auf Multimodal-Modellen wie Qwen-VL 70B?', a: 'Ähnliche 20–25% Steigerung. Multimodal-Compute ist noch speichergebunden, daher hilft der Bandbreiten-Vorteil der 5090, aber nicht dramatisch.' },
+          ],
+        },
+        'relatedReading': {
+          id: 'related-reading',
+          title: 'Weiterführende Lektüre',
+          items: [
+            '[Beste GPUs für lokale LLMs](/local-llms/best-gpus-for-local-llms?lang=de)',
+            '[Beste Budget-GPUs](/local-llms/best-budget-gpus-local-llm?lang=de)',
+            '[Wie viel VRAM benötigen Sie?](/local-llms/how-much-vram-local-llm?lang=de)',
+            '[70B-Modelle auf Consumer-Hardware](/local-llms/70b-models-consumer-hardware?lang=de)',
+          ],
+        },
+        'sources': {
+          id: 'sources',
+          title: 'Quellen',
+          items: [
+            'NVIDIA RTX 5090 und 4090 offizielle Spezifikationen: CUDA-Kerne, TFLOPS, Speicherbandbreite',
+            'MLCommons MLPerf Inference Benchmark: Token-Generierungsgeschwindigkeit auf LLaMA 70B und Mistral-Modellen',
+            'TechPowerUp GPU-Datenbank: RTX 5090 vs. 4090 Stromverbrauch und Speicherbandbreiten-Vergleich',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'RTX 5090 vs RTX 4090: Welche GPU für lokale LLMs 2026?',
+        'description': 'RTX 5090 vs RTX 4090 für lokale LLMs: Geschwindigkeitsvergleich, VRAM-Analyse, Kosten-pro-Performance, Upgrade-Leitfaden.',
+        'url': 'https://www.promptquorum.com/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=de',
+        'inLanguage': 'de',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'de',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Lohnt sich RTX 5090 zum Ausführen von Llama 3 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nur wenn Sie >45 Token/s benötigen. 4090 gibt Ihnen 36, was „ausreichend" für die meisten ist. Die zusätzlichen 9 Token/s kosten €1.000.' } },
+          { '@type': 'Question', 'name': 'Sollte ich RTX 5090 oder zwei RTX 4090er kaufen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Zwei 4090er (~€3.500 gebraucht) schlagen 5090 (€2.500) bei Geschwindigkeit und Flexibilität. Sie können mehrere Modelle parallel ausführen. 5090 hat einfacheres Setup, aber teurer.' } },
+          { '@type': 'Question', 'name': 'Hat RTX 5090 besseres VRAM als 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Beide 24GB. GDDR7 ist schneller pro Byte, aber für LLMs ist GDDR6X (4090) ausreichend.' } },
+          { '@type': 'Question', 'name': 'Werden 5090-Preise wie 4090 fallen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, irgendwann. 4090 war €1.499 beim Launch (2022), jetzt €1.500 gebraucht (2026). Erwarten Sie 5090 bei €1.700–2.000 gebraucht in 2–3 Jahren.' } },
+          { '@type': 'Question', 'name': 'Kann ich RTX 5090 mit 750W Stromversorgung nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kaum. RTX 5090 verbraucht allein 575W. Kombinieren Sie mit 850W oder 1000W PSU, um Spannungsabfälle unter Last zu vermeiden.' } },
+          { '@type': 'Question', 'name': 'Ist RTX 5080 besser als 5090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, für die meisten. 5080 (€999) ist 80% der 5090-Geschwindigkeit zu halben Kosten. Für lokale LLMs ist 5080 der Sweet Spot.' } },
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'RTX 5090 vs RTX 4090-Vergleich',
+        'numberOfItems': 3,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Geschwindigkeitsunterschiede', 'description': 'RTX 5090 ist 20–25% schneller als RTX 4090 bei lokaler LLM-Inferenz (gemessen in Token/s).' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'VRAM und Spezifikationen', 'description': 'Beide Karten haben 24GB VRAM (identisch für LLM-Arbeit). Der Geschwindigkeitsvorteil der 5090 ergibt sich aus besserer Speicherbandbreite und Shader-Effizienz.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Kosteneffizienz', 'description': 'RTX 5090 kostet €1.000 mehr (€2.500 neu vs. €1.500 für gebrauchte 4090). Der Preis-zu-Leistungs-Gewinn rechtfertigt kein Upgrade, falls Sie bereits eine 4090 haben.' },
+        ]
+      },
+    },
     fr: {
       theme: 'GPU Buying Guides',
       title: 'Meilleurs GPU Budget pour LLMs Locaux',
