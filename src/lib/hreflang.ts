@@ -35,6 +35,8 @@ export function generateAlternates(
   // Build the URL for a given lang alternate.
   // If the lang is in pathPrefixLangs, use /{lang}{path} instead of {path}?lang={lang}.
   // Special case: path === '/' → /{lang}  (not /ja/, which would be a trailing-slash variant)
+  // Note: Next.js strips query parameters from root URLs in alternates metadata, so
+  // for path='/', we return base URLs without query params to avoid Next.js normalization issues.
   function langUrl(lang: string): string {
     if (lang === 'en') return `${BASE}${path}`
     if (pathPrefixLangs && pathPrefixLangs.includes(lang)) {
@@ -42,6 +44,8 @@ export function generateAlternates(
       const suffix = path === '/' ? '' : path
       return `${BASE}/${lang}${suffix}`
     }
+    // For root path, Next.js normalizes away query params, so return just the base URL
+    if (path === '/') return `${BASE}`
     return `${BASE}${path}?lang=${lang}`
   }
 
