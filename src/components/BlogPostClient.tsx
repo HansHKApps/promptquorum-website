@@ -153,8 +153,8 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                   />
                 )}
 
-                {/* Items: bullet list */}
-                {section.items && section.items.length > 0 && (
+                {/* Items: bullet list (skip if this is a TL;DR section - it will be rendered below) */}
+                {section.items && section.items.length > 0 && !section.isTldr && (
                   <ul className="space-y-2 my-4">
                     {section.items.map((item, idx) => (
                       <li key={idx} className="text-text-secondary flex gap-3">
@@ -237,10 +237,10 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                 {section.faqs && section.faqs.length > 0 && (
                   <div className="my-8 space-y-4">
                     {section.faqs.map((faq, idx) => (
-                      <details key={idx} className="p-4 border border-text-tertiary rounded-lg cursor-pointer hover:bg-primary/5 transition-colors">
-                        <summary className="font-bold text-text-primary flex justify-between items-center">
-                          {faq.q}
-                          <span className="text-primary text-lg ml-2">+</span>
+                      <details key={idx} className="p-4 border border-text-tertiary rounded-lg cursor-pointer hover:bg-primary/5 transition-colors group [&_summary::-webkit-details-marker]:hidden">
+                        <summary className="font-bold text-text-primary flex justify-between items-center list-none">
+                          <span>{faq.q}</span>
+                          <span className="text-primary text-lg flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                         </summary>
                         <p className="text-text-secondary mt-3 text-sm leading-relaxed">{faq.a}</p>
                       </details>
@@ -254,15 +254,18 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
 
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-text-tertiary">
-          <p className="text-center text-text-secondary mb-6">
-            Ready to optimize your prompts?
+          <h3 className="text-center text-2xl font-bold text-text-primary mb-2">
+            Build your GDPR-compliant AI stack on EU hardware
+          </h3>
+          <p className="text-center text-text-secondary mb-6 max-w-2xl mx-auto">
+            PromptQuorum dispatches between local Qwen and cloud models — keeping personal data on EU infrastructure while preserving access to frontier reasoning when needed.
           </p>
           <div className="text-center">
             <a
-              href={lang === 'en' ? '/' : `/?lang=${lang}`}
+              href={lang === 'en' ? '/waitlist' : `/waitlist?lang=${lang}`}
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
-              Get Started
+              Join the PromptQuorum Waitlist
             </a>
           </div>
         </div>

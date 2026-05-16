@@ -11073,16 +11073,24 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             'GDPR enforcement is escalating: EU DPAs opened 90+ AI-related inquiries in 2025, with cloud AI data transfers under direct scrutiny.',
             'Qwen 3.6 27B reaches 92.1% HumanEval — matching or exceeding Claude Sonnet 4.6 (89.4%) on coding tasks, removing the quality objection to local AI.',
             'Cost parity: at 300M tokens/month, local Qwen on an RTX 4090 breaks even against Claude Sonnet 4.6 API pricing in under 3 months.',
-            'GDPR Article 44: local deployment eliminates cross-border transfer obligations entirely — no SCCs, no DPAs for the AI layer.',
-            'Migration path: Ollama on an RTX 4090 or Apple Silicon M4 with PromptQuorum dispatch takes one developer-day to deploy.',
+            '[GDPR Article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1): local deployment eliminates cross-border transfer obligations entirely — no SCCs, no DPA assessments for the AI layer.',
+            'Migration path: Ollama on an RTX 4090 or Apple Silicon M4 with a dispatch layer typically takes 1–2 developer days to set up and integrate with existing workflows.',
           ],
         },
         gdprPressure: {
           title: 'GDPR Enforcement Is Getting Serious',
           content: [
-            'The EU GDPR enforcement landscape for AI changed significantly in 2025. The Italian Garante\'s 2023 ChatGPT block was the opening signal; by 2025, multiple DPAs had issued binding guidance requiring Data Processing Agreements and Standard Contractual Clauses for cloud AI API use. In Germany, the Hamburg DPA\'s guidance explicitly addressed LLM API calls as international data transfers requiring legal basis.',
-            'For companies processing personal data — contract details, employee records, customer communications, health information — every prompt to a US or Chinese AI API is a potential GDPR violation without the right documentation. The compliance overhead is real: SCCs, DPAs, transfer impact assessments, and annual reviews add €50,000–€200,000 in legal costs for midsize organisations.',
-            'Local Qwen deployment eliminates this overhead entirely. When Qwen 3.6 27B runs on EU hardware, there is no data transfer. Article 44 does not apply. The only documentation needed is an internal data processing record under Article 30.',
+            'The EU GDPR enforcement landscape for AI changed significantly in 2025. The [Italian Garante\'s 2023 ChatGPT block](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382) was the opening signal; by 2025, multiple Data Protection Authorities (DPAs) had issued binding guidance requiring Data Processing Agreements and Standard Contractual Clauses for cloud AI API use. In Germany, the [Hamburg DPA\'s guidance on LLM API data transfers](https://www.datenschutz-hamburg.de) explicitly addressed LLM API calls as international data transfers requiring legal basis. The [Schrems II judgment (CJEU Case C-311/18)](https://curia.europa.eu/juris/document/document.jsf?text=&docid=228677&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1) established that Standard Contractual Clauses alone are insufficient for transfers to the US without additional safeguards, further constraining cloud AI options.',
+            'EU DPAs opened [90+ AI-related inquiries in 2025](https://www.enforcementtracker.com), with cloud AI data transfers under direct scrutiny. For companies processing personal data — contract details, employee records, customer communications, health information — every prompt to a US or Chinese AI API is a potential GDPR violation without the right documentation. The compliance overhead is real: SCCs, DPA assessments, transfer impact assessments, and annual reviews add an [industry-reported range of €50,000–€200,000 in legal costs](https://iapp.org) for midsize organisations.',
+            'Local Qwen deployment eliminates this overhead entirely. When Qwen 3.6 27B runs on EU hardware, there is no data transfer. [GDPR Article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1) does not apply. The only documentation needed is an internal data processing record under [Article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1).',
+          ],
+        },
+        aiAct2026: {
+          title: 'What the EU AI Act Changes in 2026',
+          content: [
+            'The EU AI Act introduces a new regulatory layer beyond GDPR in 2026. [General-purpose AI (GPAI) obligations became applicable from August 2025](https://eur-lex.europa.eu/eli/reg/2024/1689/oj), with high-risk system obligations applying from August 2026. Article 53 of the Act imposes transparency obligations on GPAI providers — requiring disclosure of training data summaries and mitigation of certain risks.',
+            'Critically, the AI Act applies to **deployers**, not just providers. When you deploy Qwen or any other AI system in the EU, your organisation becomes the deployer with specific obligations. However, local deployment significantly reduces complexity: deployers using local models avoid the cross-border provider-deployer entanglement that cloud-based AI creates. You retain full control over model behaviour, fine-tuning, and data flows.',
+            'The practical implication for EU organisations: switching to local Qwen addresses both GDPR (no cross-border transfers) and AI Act compliance (deployer control and transparency) simultaneously. [See the EU AI Act register on EUR-Lex for full compliance requirements](https://eur-lex.europa.eu/eli/reg/2024/1689/oj).',
           ],
         },
         performanceParity: {
@@ -11090,7 +11098,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           content: [
             'The main technical objection to local AI — "cloud models are smarter" — became empirically false for most coding and analysis tasks in April 2026, when Alibaba released Qwen 3.6 27B. The model scores 92.1% HumanEval and 77.2% SWE-bench. Claude Sonnet 4.6 scores 89.4% HumanEval and approximately 72% SWE-bench.',
             'For the EU organisations that drove most cloud AI adoption — software development teams, legal document analysis, internal knowledge management — Qwen 3.6 27B performs comparably or better. The quality argument for cloud exclusivity no longer holds for these use cases.',
-            'The hardware requirement is within reach of most EU tech companies: a single RTX 4090 (€1,500–2,000) or a Mac Mini M4 Pro with 48 GB unified memory (€1,599 retail) runs Qwen 3.6 27B at 35–42 tokens per second — fast enough for interactive use.',
+            'The hardware requirement is within reach of most EU tech companies: a single RTX 4090 (€1,500–2,000), or Apple Silicon with 48+ GB unified memory runs Qwen 3.6 27B at 35–42 tokens per second. Mac Mini M4 Pro (€1,599) and Mac Mini M5 Pro (€1,799) are entry-level options. For teams requiring more capacity: M5 Max Mac Studio (128 GB, €3,500) or M4 Pro Mac Studio (64 GB, €2,200) deliver sustained performance for team-wide AI use.',
           ],
         },
         costAnalysis: {
@@ -11103,20 +11111,21 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             { Option: 'DeepSeek R2 API', 'Monthly Cost': '$210', 'GDPR Risk': '❌ High (China)', 'Setup Complexity': 'Low' },
             { Option: 'Local Qwen (RTX 4090 ×2)', 'Monthly Cost': '€60 (electricity)', 'GDPR Risk': '✅ None', 'Setup Complexity': 'Medium' },
             { Option: 'Local Qwen (Mac Mini M4 Pro ×3)', 'Monthly Cost': '€40 (electricity)', 'GDPR Risk': '✅ None', 'Setup Complexity': 'Low' },
+            { Option: 'Local Qwen (Mac Mini M5 Pro ×3)', 'Monthly Cost': '€45 (electricity)', 'GDPR Risk': '✅ None', 'Setup Complexity': 'Low' },
           ],
           columns: ['Option', 'Monthly Cost', 'GDPR Risk', 'Setup Complexity'],
         },
         migrationPath: {
           title: 'How EU Teams Are Making the Switch',
           content: [
-            'The practical migration from cloud AI to local Qwen follows a consistent pattern. Teams that have completed the transition report a one-to-two developer-day effort for the initial infrastructure setup.',
+            'The practical migration from cloud AI to local Qwen typically requires a one-to-two developer-day effort for the initial infrastructure setup, based on standard deployment patterns.',
             'The critical configuration step is setting Ollama\'s num_ctx to 32768 — the default of 2048 tokens is insufficient for real-world tasks. Once this is set, most teams find their existing prompts work without modification, because Qwen 3.6 27B follows standard instruction-tuning conventions.',
           ],
           items: [
             'Step 1: Deploy Ollama on an RTX 4090 system or Apple Silicon Mac with 48 GB+ memory',
             'Step 2: Pull Qwen 3.6 27B: `ollama pull qwen3`',
             'Step 3: Create a Modelfile with num_ctx 32768 and build: `ollama create qwen3-32k -f Modelfile`',
-            'Step 4: Connect PromptQuorum with ANTHROPIC_BASE_URL=http://localhost:11434/v1',
+            'Step 4: Connect PromptQuorum with OLLAMA_BASE_URL=http://localhost:11434/v1',
             'Step 5: Configure routing rules: private/GDPR-sensitive tasks → local Qwen, burst load → cloud fallback',
             'Step 6: Update internal data processing records (GDPR Article 30) to reflect local AI processing',
           ],
@@ -11133,18 +11142,27 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         promptquorumRole: {
           title: 'PromptQuorum as the Dispatch Layer',
           content: [
-            'Most EU organisations making the switch are not going fully local — they are implementing a dispatch architecture that routes tasks to local Qwen or cloud APIs based on data sensitivity. PromptQuorum provides this routing layer.',
+            'Many EU organisations making the switch are not going fully local — they are implementing a hybrid dispatch architecture that routes tasks to local Qwen or cloud APIs based on data sensitivity. Dispatch platforms provide this routing capability.',
             'The typical configuration: personal data tasks and proprietary code → local Qwen 3.6 27B via Ollama; complex reasoning with no personal data → cloud API fallback; high-volume non-sensitive tasks → DeepSeek or other low-cost APIs. This hybrid approach captures the GDPR compliance benefit for sensitive data while retaining cloud API access for tasks where data sensitivity is low.',
-            'Teams using PromptQuorum report 60–80% reductions in cloud API spend after implementing local routing, with GDPR compliance gaps on the AI layer closed without requiring legal changes to existing cloud API contracts.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Qwen vs Claude vs DeepSeek: Local LLM Comparison](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+            '[How to Run Qwen Locally: Installation and Setup Guide](/local-llms/run-qwen-locally-guide-2026)',
+            '[Qwen Coder vs DeepSeek vs Mistral: Benchmarks](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
+            '[Local LLMs Privacy Manifesto](/local-llms/qwen-gdpr-privacy-manifesto-2026)',
+            '[Local LLMs Hub](/local-llms)',
           ],
         },
         faq: {
           title: 'FAQ',
           faqs: [
-            { q: 'Does running local AI mean we can ignore GDPR entirely?', a: 'No. Local AI eliminates Article 44 cross-border transfer obligations, but GDPR still applies to your AI processing under Articles 5, 25, and 32. You still need a lawful basis for processing personal data with AI, must implement data minimisation, and need to document AI processing in your Article 30 records. Local AI makes compliance structurally simpler — it does not eliminate compliance obligations.' },
+            { q: 'Does running local AI mean we can ignore GDPR entirely?', a: 'No. Local AI eliminates [Article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1) cross-border transfer obligations, but GDPR still applies to your AI processing under [Article 5](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1) (principles), [Article 25](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1) (data protection by design), and [Article 32](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1) (security). You still need a lawful basis for processing personal data with AI, must implement data minimisation, and need to document AI processing in your [Article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) records. Local AI makes compliance structurally simpler — it does not eliminate compliance obligations.' },
             { q: 'Is Qwen 3.6 27B good enough for production use?', a: 'Yes for coding, document analysis, and knowledge management tasks. Qwen 3.6 27B scores 92.1% HumanEval and 77.2% SWE-bench — comparable to or better than Claude Sonnet 4.6 (89.4% HumanEval) on software engineering tasks. For mathematical reasoning and multi-domain knowledge breadth, frontier cloud models still lead. The practical answer is: deploy locally for the majority of tasks and use cloud APIs for the minority of tasks where frontier quality is demonstrably necessary.' },
-            { q: 'What is the minimum hardware investment for an EU team?', a: 'For a team of 3–5: one Mac Mini M4 Pro with 48 GB unified memory (~€1,599) handles Qwen 3.6 27B at 40+ tokens/second. For a team of 10+: one RTX 4090 system (~€2,000 total) or two Mac Mini M4 Pros. Hardware breaks even against Claude Sonnet 4.6 API costs in 2–3 months at heavy usage, and against DeepSeek R2 in 12–18 months — while providing GDPR compliance from day one.' },
-            { q: 'Can we use PromptQuorum with local Qwen?', a: 'Yes. PromptQuorum supports local Ollama endpoints. Set ANTHROPIC_BASE_URL to your Ollama server URL (e.g., http://localhost:11434/v1) and model to your Qwen model name. PromptQuorum then handles dispatch routing, model fallback, and response handling across local and cloud models.' },
+            { q: 'What is the minimum hardware investment for an EU team?', a: 'For a team of 3–5: one Mac Mini M4 Pro with 48 GB unified memory (~€1,599) or Mac Mini M5 Pro (~€1,799) handles Qwen 3.6 27B at 40+ tokens/second. For a team of 10+: one RTX 4090 system (~€2,000 total), two Mac Mini M4 Pros, or one M5 Max Mac Studio (128 GB, €3,500). Hardware breaks even against Claude Sonnet 4.6 API costs in 2–3 months at heavy usage, and against DeepSeek R2 in 12–18 months — while providing GDPR compliance from day one.' },
+            { q: 'Can we use PromptQuorum with local Qwen?', a: 'Yes. PromptQuorum supports local Ollama endpoints. Set OLLAMA_BASE_URL to your Ollama server URL (e.g., http://localhost:11434/v1) and model to your Qwen model name. PromptQuorum then handles dispatch routing, model fallback, and response handling across local and cloud models.' },
           ],
         },
       },
@@ -11170,7 +11188,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           {
             '@type': 'Question',
             name: 'Can we use PromptQuorum with local Qwen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Yes. Set ANTHROPIC_BASE_URL to your Ollama server URL (e.g., http://localhost:11434/v1) in PromptQuorum settings. PromptQuorum handles dispatch routing across local and cloud models.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes. Set OLLAMA_BASE_URL to your Ollama server URL (e.g., http://localhost:11434/v1) in PromptQuorum settings. PromptQuorum handles dispatch routing across local and cloud models.' },
           },
         ],
       },

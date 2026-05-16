@@ -136,7 +136,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://www.promptquorum.com/#blog',
+        item: 'https://www.promptquorum.com/blog',
       },
       {
         '@type': 'ListItem',
