@@ -1190,7 +1190,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh') {
 
           {/* Themed sections — one per category */}
           {HUB_THEMES.map((theme, idx) => {
-            const themeText = lang === 'de' ? HUB_THEME_TEXT_DE[idx] : lang === 'fr' ? HUB_THEME_TEXT_FR[idx] : lang === 'ja' ? HUB_THEME_TEXT_JA[idx] : theme
+            const themeText = lang === 'de' ? HUB_THEME_TEXT_DE[idx] : lang === 'fr' ? HUB_THEME_TEXT_FR[idx] : lang === 'ja' ? HUB_THEME_TEXT_JA[idx] : lang === 'zh' ? HUB_THEME_TEXT_ZH[idx] : theme
             return (
               <section key={theme.id} id={theme.id} className="mb-16">
                 <div className="flex items-center gap-3 mb-2">
