@@ -293,11 +293,10 @@ schema: {
         'Die beste Wahl ist Kontext-abhängig: Ein Startup mit unsicherer Produkto-Markt-Passung sollte Cloud wählen. Ein etabliertes Mittelstand-Unternehmen mit stabiler KI-Workload sollte Local evaluieren. Viele Unternehmen profitieren von einem Hybrid-Ansatz, der Kosteneffizienz mit Elastizität balanciert.',
       ],
     },
-  },
-  faqSection: {
-    id: 'faq',
-    title: 'Häufig gestellte Fragen',
-    faqs: [
+    'faqSection': {
+      id: 'faq',
+      title: 'Häufig gestellte Fragen',
+      faqs: [
       {
         q: 'Wann ist Cloud wirtschaftlich sinnvoller als Local?',
         a: 'Cloud ist sinnvoller bei: (1) variablem Workload (z.B. saisonale Nachfrage), (2) kurzen Projekten (<6 Monate), (3) wenn Sie GPU-Hardware-Management vermeiden wollen, (4) limitiertem Kapitalbudget, oder (5) Bedarf für häufige Modell-Upgrades. Cloud vermeidet Abschreibungsrisiken.',
@@ -323,6 +322,7 @@ schema: {
         a: 'Wenn Sie Local wählen, amortisiert sich Ihre Investition bereits nach 18–24 Monaten unabhängig von zukünftigen Preisen. Sollten Preise fallen, spart Local dennoch im Jahr 3–5 mehr. Cloud-Preise sind stabiler, aber langfristig teurer. Local ist zukunftsicherer, wenn Ihre Workload 3+ Jahre laufen wird.',
       },
     ],
+    },
   },
   schema: {
     '@context': 'https://schema.org',
