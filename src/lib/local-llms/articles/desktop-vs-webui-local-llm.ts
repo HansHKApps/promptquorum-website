@@ -703,4 +703,178 @@ schema: {
         ],
       },
     },
+    zh: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: '桌面应用对Web界面：本地LLM的最佳界面选择',
+      seoTitle: '桌面应用对Web界面',
+      intro: '本地LLM工具有两种界面风格：桌面应用（LM Studio、Jan AI）和Web UI（Open WebUI、Enchanted UI）。桌面应用对消费者更简单；Web UI更强大且可共享。截至2026年4月，两种方法都已成熟，选择完全取决于您的工作流程。',
+      metaDescription: '桌面应用对Web界面 2026: 界面、功能、共享、可扩展性比较。何时在本地LLM生产部署中使用各种。',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**本地LLM工具有两种界面风格：桌面应用（LM Studio、Jan AI）和Web UI（Open WebUI、Enchanted UI）。桌面应用对消费者更简单；Web UI更强大且可共享。**',
+      audience: '在消费级硬件上运行首个本地LLM的初学者',
+      readTime: '9分钟阅读',
+      educationalLevel: 'Beginner',
+      primaryTerm: '本地LLM界面',
+      toc: [
+        { label: '关键要点', anchor: '#key-takeaways' },
+        { label: '桌面应用', anchor: '#desktop-apps' },
+        { label: 'Web UI', anchor: '#web-uis' },
+        { label: '功能比较', anchor: '#feature-comparison' },
+        { label: '何时选择各个', anchor: '#when-to-choose' },
+        { label: '可以同时运行吗？', anchor: '#use-both' },
+        { label: '常见错误', anchor: '#common-mistakes' },
+        { label: '常见问题', anchor: '#faq' },
+        { label: '相关阅读', anchor: '#related-reading' },
+        { label: '来源', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+
+          isTldr: true,
+          items: [
+            '**桌面应用** (LM Studio、Jan AI): 简单、单用户、无需服务器设置。最适合消费者。',
+            '**Web UI** (Open WebUI、Enchanted): 基于浏览器、可共享、多用户支持。最适合团队和高级用户。',
+            '两种类型连接到相同的基础模型 (Ollama、vLLM)。可在它们之间切换。',
+            '桌面应用对初学者更容易；Web UI对专业人士更灵活。',
+            '截至2026年4月，两者都已成熟并可用于生产。',
+          ],
+        },
+        desktopApps: {
+          title: '什么是桌面应用？',
+          content: [
+            '**桌面应用是直接在操作系统上运行的本机应用程序。** 示例：LM Studio、Jan AI。',
+            '**优势：** 设置简单，无需服务器知识，单用户，作为独立应用程序运行，GUI中的GPU设置。',
+            '**劣势：** 主要是Windows/macOS，单机，无多用户访问，无易于共享。',
+          ],
+        },
+        webUIs: {
+          title: '什么是Web UI？',
+          content: [
+            '**Web UI是通过浏览器访问的界面。** 它们运行Web服务器（通常在Docker中）并提供基于浏览器的界面。示例：Open WebUI、Enchanted UI。',
+            '**优势：** 基于浏览器（在任何OS上工作），可通过URL共享，多用户支持，从网络上的其他设备访问，更强大的功能。',
+            '**劣势：** 需要Docker或端口知识，设置略复杂，需要运行Web服务器。',
+          ],
+        },
+        featureComp: {
+          title: '功能比较：桌面应用对Web UI',
+          rows: [
+            { '功能': '设置复杂度', '桌面': '非常简单', 'Web UI': '中等' },
+            { '功能': 'GPU设置GUI', '桌面': '是', 'Web UI': '有时' },
+            { '功能': '多用户访问', '桌面': '否', 'Web UI': '是' },
+            { '功能': '从其他设备访问', '桌面': '否', 'Web UI': '是（如果配置）' },
+            { '功能': '内置聊天', '桌面': '是', 'Web UI': '是' },
+            { '功能': 'RAG支持', '桌面': '有限', 'Web UI': '完全（Open WebUI）' },
+            { '功能': 'API公开', '桌面': '有时', 'Web UI': '是' },
+            { '功能': '操作系统', '桌面': 'macOS、Windows', 'Web UI': '任何（Docker）' },
+            { '功能': '资源开销', '桌面': '低', 'Web UI': '中等（Docker）' },
+          ],
+          columns: ['功能', '桌面', 'Web UI'],
+        },
+        whenToChoose: {
+          title: '何时选择桌面应用？',
+          content: '选择桌面应用如果：',
+          items: [
+            '您是消费者/非技术用户。',
+            '您希望最简单的设置。',
+            '您只使用一个设备。',
+            '您希望本机操作系统集成（通知、系统菜单）。',
+            '您使用macOS或Windows。',
+          ],
+        },
+        choosWebUI: {
+          title: '何时选择Web UI？',
+          content: '选择Web UI如果：',
+          items: [
+            '您使用Linux（最佳支持）。',
+            '您希望多个用户访问同一个模型。',
+            '您希望从网络上的其他设备访问。',
+            '您需要RAG或高级功能（Open WebUI）。',
+            '您希望在服务器或云VM上部署。',
+            '您希望公开API。',
+          ],
+        },
+        useBoth: {
+          title: '可以同时运行桌面应用和Web UI吗？',
+          content: [
+            '**是的，但有注意事项。** 两者都会尝试使用相同的GPU和模型。您可以使用相同的Ollama后端运行两者（它们共享模型），但推论性能会被分割。',
+            '更好的方法：在后台运行Ollama，然后将LM Studio或Open WebUI用作您的界面。在它们之间切换是即时的。',
+          ],
+        },
+        commonMistakes: {
+          title: '桌面应用对Web UI的常见错误',
+          items: [
+            '**认为桌面始终更简单。** 桌面最初更简单，但Web UI功能更好。对于学习，桌面更简单。',
+            '**没有意识到可以使用两者。** 您可以通过将它们指向相同的Ollama实例在LM Studio和Open WebUI之间切换。',
+            '**假设Web UI需要服务器知识。** 现代Web UI（Open WebUI Docker）为您处理服务器复杂性。只需运行Docker命令。',
+            '**将桌面应用部署到服务器。** 桌面应用（LM Studio、Jan）是单用户。对于服务器部署，使用Web UI或API。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '桌面应用对Web UI的常见问题',
+          faqs: [
+            {
+              q: '我可以同时运行Open WebUI和LM Studio吗？',
+              a: '可以。Open WebUI（浏览器）和LM Studio（桌面）都可以连接到相同的Ollama后端。他们共享模型。',
+            },
+            {
+              q: '桌面应用和Web UI哪个更快？',
+              a: '桌面应用开销更少（无Web服务器），略快一点。对推论速度的影响不明显。',
+            },
+            {
+              q: '我可以从手机访问我的本地LLM吗？',
+              a: '可以，使用Web UI。在Docker中运行Open WebUI并配置`OLLAMA_HOST=0.0.0.0:11434`。然后从同一网络上的手机访问。',
+            },
+            {
+              q: 'Web UI在网络上使用有安全风险吗？',
+              a: '有。Ollama默认没有身份验证。如果暴露到网络，请使用防火墙或反向代理（nginx）进行身份验证。',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[最佳本地LLM前端](/local-llms/best-local-llm-frontends?lang=zh) -- 完整的界面列表。',
+            '[如何安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) -- 桌面应用设置。',
+            '[Ollama对LM Studio](/local-llms/ollama-vs-lm-studio?lang=zh) -- 两种工具的比较。',
+            '[最佳本地LLM前端](/local-llms/best-local-llm-frontends?lang=zh) -- Open WebUI和Web替代品。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '来源',
+          items: [
+            'LM Studio -- lmstudio.ai',
+            'Jan AI -- jan.ai',
+            'Open WebUI -- github.com/open-webui/open-webui',
+            'Enchanted UI -- enchanted.div.ai',
+          ],
+        },
+      },
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '桌面应用对Web界面：本地LLM的最佳界面选择',
+        'description': '桌面应用对Web界面 2026: 界面、功能、共享、可扩展性比较。何时在本地LLM生产部署中使用各种。',
+        'url': 'https://www.promptquorum.com/local-llms/desktop-vs-webui-local-llm?lang=zh',
+        'inLanguage': 'zh',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': [
+          { '@type': 'Question', 'name': '我可以同时运行Open WebUI和LM Studio吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。Open WebUI（浏览器）和LM Studio（桌面）都可以连接到相同的Ollama后端。他们共享模型。' } },
+          { '@type': 'Question', 'name': '桌面应用和Web UI哪个更快？', 'acceptedAnswer': { '@type': 'Answer', 'text': '桌面应用开销更少（无Web服务器），略快一点。对推论速度的影响不明显。' } },
+          { '@type': 'Question', 'name': '我可以从手机访问我的本地LLM吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，使用Web UI。在Docker中运行Open WebUI并配置`OLLAMA_HOST=0.0.0.0:11434`。然后从同一网络上的手机访问。' } },
+          { '@type': 'Question', 'name': 'Web UI在网络上使用有安全风险吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '有。Ollama默认没有身份验证。如果暴露到网络，请使用防火墙或反向代理（nginx）进行身份验证。' } },
+        ],
+      },
+    },
   };
