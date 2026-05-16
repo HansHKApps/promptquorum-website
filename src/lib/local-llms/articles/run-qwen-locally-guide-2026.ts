@@ -12,8 +12,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Run Qwen 3 Locally in 2026: Ollama & LM Studio Full Setup Guide',
     intro: 'Qwen 3.6 27B runs on a single consumer GPU (16 GB VRAM) via Ollama or LM Studio. Setup takes under 10 minutes. This guide covers model selection, hardware requirements, Ollama CLI installation, LM Studio GUI setup, the critical num_ctx fix, and how to connect local Qwen to PromptQuorum for multi-model dispatch.',
     metaDescription: 'How to run Qwen 3 locally in 2026: step-by-step Ollama and LM Studio setup, hardware requirements, num_ctx fix, and PromptQuorum integration. Updated May 2026.',
-    ogTitle: 'How to Run Qwen 3 Locally in 2026 — Ollama + LM Studio Setup',
-    ogDescription: 'Complete 2026 guide: run Qwen 3.6 27B locally with Ollama or LM Studio, fix num_ctx, and connect to PromptQuorum. Works on 16 GB VRAM or Apple Silicon.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '8 min read',

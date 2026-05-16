@@ -125,4 +125,10 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'apple-silicon-vs-nvidia-gpu-local-llm':      'apple-silicon-vs-nvidia-gpu-local-llm',
   'apple-silicon-whisper-metal-benchmark':      'apple-silicon-whisper-metal-benchmark',
   'running-70b-models-apple-silicon-m5-max':    'running-70b-models-apple-silicon-m5-max',
+
+  // Qwen Ambassador Push
+  'qwen-vs-claude-vs-deepseek-local-2026':      'qwen-vs-claude-vs-deepseek-local-2026',
+  'run-qwen-locally-guide-2026':                'run-qwen-locally-guide-2026',
+  'qwen-coder-vs-deepseek-mistral-local-2026':  'qwen-coder-vs-deepseek-mistral-local-2026',
+  'qwen-gdpr-privacy-manifesto-2026':           'qwen-gdpr-privacy-manifesto-2026',
 }

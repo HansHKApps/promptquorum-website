@@ -12,8 +12,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Local LLM Privacy Manifesto 2026: Open Weights and EU GDPR Compliance',
     intro: 'Every prompt sent to a cloud AI is a data transfer. Every data transfer to a non-EU server requires a legal basis under GDPR Article 44. Local LLMs with open weights — Qwen 3.6 27B chief among them — eliminate this category of compliance risk entirely. This manifesto makes the case for open-weight local LLMs as the foundational AI layer for GDPR-governed organisations, and walks through each relevant GDPR article, the EU AI Act 2026 obligations, and the counter-arguments worth taking seriously.',
     metaDescription: 'Local LLM Privacy Manifesto 2026: why open-weight models like Qwen 3.6 27B are the only GDPR-compliant AI architecture for EU organisations. GDPR Article 44, EU AI Act 2026 analysis.',
-    ogTitle: 'The Local LLM Privacy Manifesto 2026 — Open Weights & EU GDPR Compliance',
-    ogDescription: 'The case for open-weight local LLMs as the GDPR-compliant AI layer: GDPR Article 44, data minimisation, EU AI Act 2026, Qwen 3.6 licence analysis.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '11 min read',

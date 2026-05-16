@@ -12,8 +12,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2: Local vs Cloud 2026 Benchmark',
     intro: 'Qwen 3.6 27B reaches 77.2% SWE-bench and 92.1% HumanEval locally on 16 GB VRAM. Claude Sonnet 4.6 scores 89.4% HumanEval with no hardware requirement. DeepSeek R2 delivers frontier reasoning at $0.14/1M input tokens. This comparison covers benchmark data, EU GDPR jurisdiction, per-token cost math, and the dispatch layer problem that makes single-model choices obsolete in 2026.',
     metaDescription: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2: HumanEval, SWE-bench, cost per 1M tokens, GDPR fit, and hardware requirements compared for 2026. Updated May 2026.',
-    ogTitle: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026 Benchmark Comparison',
-    ogDescription: 'Benchmark scores, GDPR compliance, cost per 1M tokens, and hardware requirements for Qwen 3.6, Claude Sonnet 4.6, and DeepSeek R2. Updated May 2026.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '10 min read',
