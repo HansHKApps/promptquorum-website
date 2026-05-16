@@ -152,7 +152,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     ...(isGlossary && {
       keywords: ['prompt engineering glossary', 'AI terms', 'LLM glossary', 'Chain-of-Thought', 'RAG definition', 'prompt injection', 'function calling', 'few-shot prompting', 'temperature AI', 'context window'],
     }),
-    alternates: generateAlternates(canonicalPath, selectedLang, hasTranslation, availableLangsForMeta, ['ja']),
+    alternates: generateAlternates(canonicalPath, selectedLang, hasTranslation, availableLangsForMeta, ['ja', 'zh']),
     openGraph: {
       title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : ogTitle,
       description: isGlossary ? 'Essential glossary: 100 prompt engineering terms with definitions, real-world examples, and 400+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.' : ogDesc,

@@ -78,7 +78,7 @@ function t(key: string, lang: string) {
 }
 
 function navHref(path: string, lang: string) {
-  if (lang === 'ja') return path === '/' ? '/ja' : `/ja${path}`
+  if (lang === 'ja' || lang === 'zh') return path === '/' ? `/${lang}` : `/${lang}${path}`
   return lang === 'en' ? path : `${path}?lang=${lang}`
 }
 

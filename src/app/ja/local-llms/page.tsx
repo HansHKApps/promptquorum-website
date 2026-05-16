@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.localLlmsHubTitle,
     description: t.localLlmsHubDescription,
-    alternates: generateAlternates('/local-llms', lang, true, undefined, ['ja']),
+    alternates: generateAlternates('/local-llms', lang, true, undefined, ['ja', 'zh']),
     openGraph: {
       title: t.localLlmsHubTitle,
       description: t.localLlmsHubDescription,

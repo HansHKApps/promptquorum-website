@@ -9,7 +9,6 @@ import { POWER_LLM_PUBLISHED_SLUGS, POWER_LLM_HUB_PUBLISHED } from '@/lib/power-
 export const dynamic = 'force-static'
 
 const BASE = 'https://www.promptquorum.com'
-const LANGS = ['en', 'de', 'fr', 'ja', 'zh'] as const
 
 // Placeholder pages that should be noindexed and excluded from sitemap
 const NOINDEX_PAGES = new Set([
@@ -26,7 +25,7 @@ const EXCLUDED_PATH_PREFIXES = [
   '/fr/power-local-llm',
   '/ja/power-local-llm',
   '/zh/power-local-llm',
-  // JA-only clusters — /ja/<cluster> entries are excluded and instead handled as hreflang alternates on EN entries
+  // JA/ZH path-prefix clusters — /ja/<cluster> and /zh/<cluster> entries are excluded and instead handled as hreflang alternates on EN entries
   '/ja/prompt-engineering',
   '/ja/local-llms',
   '/ja/blog',
@@ -37,6 +36,16 @@ const EXCLUDED_PATH_PREFIXES = [
   '/ja/faq',
   '/ja/about',
   '/ja/privacy',
+  '/zh/prompt-engineering',
+  '/zh/local-llms',
+  '/zh/blog',
+  '/zh/frameworks',
+  '/zh/compare',
+  '/zh/features',
+  '/zh/how-it-works',
+  '/zh/faq',
+  '/zh/about',
+  '/zh/privacy',
 ]
 
 // Check if a content entry has real sections (not a stub)
@@ -179,35 +188,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       })
     } else {
-      // All other clusters: emit a <loc> entry for each language variant so Google
-      // keeps all 5 language URLs in its crawl queue. Each entry carries full hreflang
-      // alternates pointing to all 5 variants.
-      // JA uses /ja/ path prefix; DE/FR/ZH use ?lang= query params
-      const getJaUrl = (p: string) => p === '' ? '/ja' : `/ja${p}`
+      // All other clusters: emit EN <loc> with full hreflang alternates.
+      // JA/ZH use /ja/ and /zh/ path prefixes; DE/FR use ?lang= query params.
+      // This prevents duplication and ensures all language variants are discoverable.
+      const getPathPrefixUrl = (p: string, lang: string) => p === '' ? `/${lang}` : `/${lang}${p}`
       const alternates = {
         'en': `${BASE}${path}`,
         'de': `${BASE}${path}?lang=de`,
         'fr': `${BASE}${path}?lang=fr`,
-        'ja': `${BASE}${getJaUrl(path)}`,
-        'zh': `${BASE}${path}?lang=zh`,
+        'ja': `${BASE}${getPathPrefixUrl(path, 'ja')}`,
+        'zh': `${BASE}${getPathPrefixUrl(path, 'zh')}`,
         'x-default': `${BASE}${path}`,
       }
-      LANGS.forEach(lang => {
-        let url: string
-        if (lang === 'en') {
-          url = `${BASE}${path}`
-        } else if (lang === 'ja') {
-          url = alternates.ja
-        } else {
-          url = `${BASE}${path}?lang=${lang}`
-        }
-        entries.push({
-          url,
-          lastModified: lastmod,
-          changeFrequency: changefreq,
-          priority,
-          alternates: { languages: alternates },
-        })
+      entries.push({
+        url: `${BASE}${path}`,
+        lastModified: lastmod,
+        changeFrequency: changefreq,
+        priority,
+        alternates: { languages: alternates },
       })
     }
   })

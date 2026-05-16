@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.homeMetaTitle,
     description: t.homeMetaDescription,
-    alternates: generateAlternates('/', lang, true, undefined, ['ja']),
+    alternates: generateAlternates('/', lang, true, undefined, ['ja', 'zh']),
     openGraph: {
       title: t.homeMetaTitle,
       description: t.homeMetaDescription,

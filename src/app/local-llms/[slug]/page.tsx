@@ -120,7 +120,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   return {
     title: pageTitle.length <= 45 ? `${pageTitle} | PromptQuorum` : pageTitle,
     description: metaDesc,
-    alternates: generateAlternates(`/local-llms/${slug}`, selectedLang, hasTranslation, availableLangsForMeta, ['ja']),
+    alternates: generateAlternates(`/local-llms/${slug}`, selectedLang, hasTranslation, availableLangsForMeta, ['ja', 'zh']),
     openGraph: {
       title: pageTitle,
       description: metaDesc,

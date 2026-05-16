@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.frameworksMetaTitle,
     description: t.frameworksMetaDescription,
-    alternates: generateAlternates('/frameworks', lang, true, undefined, ['ja']),
+    alternates: generateAlternates('/frameworks', lang, true, undefined, ['ja', 'zh']),
     openGraph: {
       title: t.frameworksMetaTitle,
       description: t.frameworksMetaDescription,

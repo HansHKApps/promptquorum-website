@@ -32,7 +32,7 @@ export async function buildArticleMetadata(slug: string, lang: Language): Promis
   return {
     title: pageTitle.length <= 43 ? `${pageTitle} | PromptQuorum Blog` : pageTitle,
     description: metaDesc,
-    alternates: generateAlternates(`/blog/${slug}`, lang, hasTranslation, undefined, ['ja']),
+    alternates: generateAlternates(`/blog/${slug}`, lang, hasTranslation, undefined, ['ja', 'zh']),
     openGraph: {
       title: pageTitle,
       description: metaDesc,
@@ -55,7 +55,7 @@ export async function buildHubMetadata(lang: Language): Promise<Metadata> {
   return {
     title: `${t.blogTitle} | PromptQuorum`,
     description: t.blogSubtitle,
-    alternates: generateAlternates('/blog', lang, true, undefined, ['ja']),
+    alternates: generateAlternates('/blog', lang, true, undefined, ['ja', 'zh']),
     openGraph: {
       title: `${t.blogTitle} | PromptQuorum`,
       description: t.blogSubtitle,
