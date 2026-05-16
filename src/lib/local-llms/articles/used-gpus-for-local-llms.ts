@@ -672,7 +672,7 @@ schema: {
         'name': 'GPU utilisées pour LLMs locaux : Comparaison coûts & fiabilité',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'Comparaison coûts : RTX 3060 (€160-190 utilisée) vs RTX 3080 (€300-330) vs RTX 4090 (€850-1 050) – 30-50% économies sur neuf.' },
-          { '@type': 'ListItem', position: 2, name': 'Données fiabilité : RTX 3060 12GB et RTX 3080 10GB ont volume revente élevé et santé VRAM éprouvée. Cartes minières portent risque défaillance 10-20%.' },
+          { '@type': 'ListItem', position: 2, name: 'Données fiabilité : RTX 3060 12GB et RTX 3080 10GB ont volume revente élevé et santé VRAM éprouvée. Cartes minières portent risque défaillance 10-20%.' },
           { '@type': 'ListItem', position: 3, name: 'Modèles GPU recommandés : RTX 3060 12GB (entrée safest), RTX 3080 10GB (VRAM solide), RTX 4090 24GB (premium, défaillances rares).' },
         ],
       },
