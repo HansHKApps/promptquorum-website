@@ -59,20 +59,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompts-to-repeatable-workflows', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        { '@type': 'Question', name: 'What is a repeatable prompt workflow?', acceptedAnswer: { '@type': 'Answer', text: 'A repeatable prompt workflow is a prompt-based process that runs automatically when a defined triggering condition is met, routes output to the next step, and handles errors without manual intervention. Unlike a one-off prompt, a workflow does not require a human to decide when to run it or what to do with the result.' } },
-        { '@type': 'Question', name: 'What tools are best for building prompt workflows?', acceptedAnswer: { '@type': 'Answer', text: 'n8n is best for self-hosted, open-source workflows at $0 cost. Make (formerly Integromat) is best for visual, no-code workflows at $0–$16/month. LangChain is best for Python or JavaScript code-based pipelines with full control. PromptQuorum adds multi-model dispatch and comparison across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.' } },
-        { '@type': 'Question', name: 'When should I automate a prompt versus run it manually?', acceptedAnswer: { '@type': 'Answer', text: 'Automate if you run the same prompt more than 5 times per week, inputs are structured and predictable, and output routes to a defined next step. Stay manual if inputs vary unpredictably, human judgment is required in every instance, or volume is below 5 runs per week.' } },
-        { '@type': 'Question', name: 'How do I manage state between workflow steps?', acceptedAnswer: { '@type': 'Answer', text: 'Pass structured output (JSON, markdown with headers) from one step as the input to the next. Use a shared variable store (e.g., n8n workflow data, LangChain memory) to carry context across steps. Avoid passing raw model output as unstructured text — always define an output schema at each step boundary.' } },
-        { '@type': 'Question', name: 'What is the minimum viable workflow structure?', acceptedAnswer: { '@type': 'Answer', text: 'A minimum viable workflow has 4 components: a trigger (scheduled, event-driven, or API call), a prompt execution step (calls the LLM API with the formatted prompt), an output validation step (checks format and quality requirements), and a routing step (sends output to the next system or flags for human review). Add state management and error handling as complexity grows.' } },
-        { '@type': 'Question', name: 'How do I choose between Make, n8n, and LangChain for prompt workflows?', acceptedAnswer: { '@type': 'Answer', text: 'Use Make (formerly Integromat) for teams that need a visual no-code interface with 1,000+ app integrations — best for business automation without coding. Use n8n for teams that want no-code with self-hosted control and source access — better privacy, more flexibility. Use LangChain for developers building complex multi-step chains with memory, retrieval, and tool use in Python or JavaScript.' } },
-        { '@type': 'Question', name: 'When should I automate a prompt workflow vs keep it manual?', acceptedAnswer: { '@type': 'Answer', text: 'Automate when: the prompt runs more than 10 times per day, the inputs follow a predictable format, the output feeds directly into another system, and the pass rate on a test set exceeds 90%. Keep manual when: the inputs are highly varied, the task requires judgment that cannot be scored automatically, or the output affects irreversible decisions (legal, financial, medical).' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -242,20 +228,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompts-to-repeatable-workflows', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        { '@type': 'Question', name: 'Was ist ein wiederholbarer Prompt-Workflow?', acceptedAnswer: { '@type': 'Answer', text: 'Ein wiederholbarer Prompt-Workflow ist ein promptbasierter Prozess, der automatisch ausgelöst wird, wenn eine definierte Bedingung erfüllt ist, die Ausgabe an den nächsten Schritt weiterleitet und Fehler ohne manuellen Eingriff behandelt.' } },
-        { '@type': 'Question', name: 'Wann sollte ich einen Prompt automatisieren?', acceptedAnswer: { '@type': 'Answer', text: 'Automatisieren Sie, wenn Sie denselben Prompt mehr als 5-mal pro Woche mit demselben Auslöser ausführen und die Ausgabe immer zum selben nächsten Schritt weitergeleitet wird.' } },
-        { '@type': 'Question', name: 'Welche Tools eignen sich für Prompt-Workflows?', acceptedAnswer: { '@type': 'Answer', text: 'n8n ist am besten für selbst gehostete Open-Source-Workflows geeignet (kostenlos). Make eignet sich für visuelle No-Code-Workflows (0–16 $/Monat). LangChain ist ideal für codebasierte Pipelines in Python oder JavaScript. PromptQuorum ergänzt um Multi-Modell-Dispatch zwischen GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro.' } },
-        { '@type': 'Question', name: 'Was ist die minimale Workflow-Struktur?', acceptedAnswer: { '@type': 'Answer', text: 'Ein minimaler Workflow hat 4 Komponenten: einen Auslöser, einen Prompt-Ausführungsschritt, einen Ausgabevalidierungsschritt und einen Routing-Schritt. State Management und Fehlerbehandlung ergänzen Sie je nach Komplexität.' } },
-        { '@type': 'Question', name: 'Wie wähle ich zwischen Make, n8n und LangChain?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie Make für Teams, die eine visuelle No-Code-Oberfläche mit 1.000+ App-Integrationen benötigen. Verwenden Sie n8n für Teams, die No-Code mit selbst gehostetem Zugriff wünschen. Verwenden Sie LangChain für Entwickler, die komplexe mehrstufige Ketten mit Memory, Retrieval und Tool-Nutzung in Python oder JavaScript aufbauen.' } },
-        { '@type': 'Question', name: 'Wann automatisieren vs. manuell halten?', acceptedAnswer: { '@type': 'Answer', text: 'Automatisieren Sie, wenn der Prompt mehr als 10-mal täglich ausgeführt wird, die Eingaben einem vorhersehbaren Format folgen, die Ausgabe direkt in ein anderes System fließt und die Bestehensrate auf einem Testset 90 % übersteigt. Halten Sie manuell, wenn die Eingaben sehr variabel sind oder die Ausgabe unwiderrufliche Entscheidungen betrifft.' } },
-        { '@type': 'Question', name: 'Wie verwalte ich den State zwischen Workflow-Schritten?', acceptedAnswer: { '@type': 'Answer', text: 'Übergeben Sie strukturierte Ausgaben (JSON, Markdown) von einem Schritt als Eingabe zum nächsten. Verwenden Sie einen Variablenspeicher für den Kontext zwischen den Schritten. Definieren Sie an jeder Schrittgrenze ein Ausgabeschema.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -422,17 +394,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompts-to-repeatable-workflows', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        { '@type': 'Question', name: 'Qu\'est-ce qu\'un workflow de prompts répétable ?', acceptedAnswer: { '@type': 'Answer', text: 'Un workflow de prompts répétable est un processus basé sur des prompts qui s\'exécute automatiquement lorsqu\'une condition de déclenchement définie est remplie, achemine la sortie vers l\'étape suivante et gère les erreurs sans intervention manuelle.' } },
-        { '@type': 'Question', name: 'Quelle est la structure minimale d\'un workflow ?', acceptedAnswer: { '@type': 'Answer', text: 'Un workflow minimal comprend 4 composants : un déclencheur, une étape d\'exécution du prompt, une étape de validation de la sortie, et une étape de routage. Ajoutez la gestion d\'état et la gestion des erreurs selon la complexité.' } },
-        { '@type': 'Question', name: 'Comment choisir entre Make, n8n et LangChain ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez Make pour les équipes qui ont besoin d\'une interface visuelle sans code avec 1 000+ intégrations d\'applications. Utilisez n8n pour les équipes qui veulent un contrôle auto-hébergé. Utilisez LangChain pour les développeurs qui construisent des chaînes complexes en Python ou JavaScript.' } },
-        { '@type': 'Question', name: 'Quand automatiser vs garder manuel ?', acceptedAnswer: { '@type': 'Answer', text: 'Automatisez quand le prompt s\'exécute plus de 10 fois par jour, les entrées suivent un format prévisible et la sortie alimente directement un autre système. Gardez manuel quand les entrées sont très variées ou que la sortie affecte des décisions irréversibles.' } },
-      ],
     },
     sections: {
       tldr: {
@@ -601,17 +562,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompts-to-repeatable-workflows', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: '繰り返し可能なプロンプトワークフローとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '繰り返し可能なプロンプトワークフローとは、定義されたトリガー条件が満たされると自動的に実行され、出力を次のステップにルーティングし、手動介入なしにエラーを処理するプロンプトベースのプロセスです。' } },
-        { '@type': 'Question', name: '最小限のワークフロー構造とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '最小限のワークフローには4つのコンポーネントがあります：トリガー、プロンプト実行ステップ、出力検証ステップ、ルーティングステップ。複雑さに応じて状態管理とエラー処理を追加します。' } },
-        { '@type': 'Question', name: 'Make、n8n、LangChainの選択方法は？', acceptedAnswer: { '@type': 'Answer', text: '1,000以上のアプリ統合を持つビジュアルなノーコードインターフェースが必要なチームにはMakeを使用します。自己ホストコントロールを求めるチームにはn8nを使用します。PythonまたはJavaScriptで複雑なマルチステップチェーンを構築する開発者にはLangChainを使用します。' } },
-        { '@type': 'Question', name: 'いつ自動化してどのような場合に手動で行うべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトが1日10回以上実行され、入力が予測可能なフォーマットに従い、出力が別のシステムに直接フィードされ、テストセットの合格率が90%を超える場合に自動化します。入力が非常に多様な場合や出力が取り消せない決定に影響する場合は手動のままにします。' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -778,17 +728,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompts-to-repeatable-workflows', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: '什么是可重复的Prompt工作流？', acceptedAnswer: { '@type': 'Answer', text: '可重复的Prompt工作流是一个基于Prompt的流程，当定义的触发条件满足时自动运行，将输出路由到下一步，并在无需人工干预的情况下处理错误。' } },
-        { '@type': 'Question', name: '最小可行工作流结构是什么？', acceptedAnswer: { '@type': 'Answer', text: '最小可行工作流有4个组件：触发器、Prompt执行步骤、输出验证步骤和路由步骤。随着复杂性增长添加状态管理和错误处理。' } },
-        { '@type': 'Question', name: '如何在Make、n8n和LangChain之间选择？', acceptedAnswer: { '@type': 'Answer', text: '对需要1,000+应用集成的可视化无代码界面的团队使用Make。对想要自托管控制的团队使用n8n。对在Python或JavaScript中构建复杂多步骤链的开发者使用LangChain。' } },
-        { '@type': 'Question', name: '何时应该自动化Prompt工作流vs保持手动？', acceptedAnswer: { '@type': 'Answer', text: '当Prompt每天运行超过10次、输入遵循可预测格式、输出直接进入另一个系统且测试集通过率超过90%时自动化。当输入高度变化或输出影响不可撤销的决定时保持手动。' } },
-      ],
     },
     sections: {
       tldr: {

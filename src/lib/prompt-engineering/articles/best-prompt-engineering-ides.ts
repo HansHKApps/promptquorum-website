@@ -71,53 +71,6 @@ export const article: Record<Language, PEArticle> = {
       audience: { '@type': 'Audience', audienceType: 'Developers building LLM applications' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is a prompt engineering IDE?',
-          acceptedAnswer: { '@type': 'Answer', text: 'A prompt engineering IDE is a specialized editor for writing, testing, and iterating on prompts. It provides model switching, playground execution, prompt history, export to code, and rapid feedback loops. Examples: Cursor, OpenAI Playground, Claude Console.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Should I use a cloud playground or local IDE?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Cloud playgrounds (OpenAI, Claude Console, Google AI Studio) are fastest to start and require no setup. Local IDEs (VS Code + Continue, LM Studio) give you control and cost savings at the expense of setup time.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I use Cursor for prompt engineering?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Cursor is an AI-native IDE that excels at prompt composition integrated with code development. It is ideal if you are writing both prompts and the application code that uses them.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is LM Studio used for?',
-          acceptedAnswer: { '@type': 'Answer', text: 'LM Studio is a local playground for downloading and running open-source LLMs (Llama, Mistral, etc.) without an API key. No internet required after initial model download. Cost: $0 after hardware investment.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is the OpenAI Playground free?',
-          acceptedAnswer: { '@type': 'Answer', text: 'The OpenAI Playground itself is free to use, but API calls are metered by token usage. You pay for tokens consumed during playground exploration, same as production API usage.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which IDE supports the most models?',
-          acceptedAnswer: { '@type': 'Answer', text: 'VS Code + Continue.dev supports GPT-4o, Claude, Gemini, Ollama (local), and dozens more. Most cloud playgrounds support only their own models (OpenAI → GPT, Anthropic → Claude, Google → Gemini).' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I export prompts from a playground to code?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. All cloud playgrounds (OpenAI, Claude Console) and local IDEs provide "Export to code" buttons that convert your playground prompt into Python, JavaScript, or curl format.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the best IDE for beginners?',
-          acceptedAnswer: { '@type': 'Answer', text: 'OpenAI Playground or Claude Console are best for beginners: zero setup, intuitive UI, immediate feedback. Start there, then move to VS Code or Cursor as you build more complex workflows.' },
-        },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -417,63 +370,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       audience: { '@type': 'Audience', audienceType: 'Entwickler, die LLM-Anwendungen erstellen' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Was ist eine Prompt-Engineering-IDE?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Eine Prompt-Engineering-IDE ist ein spezialisierter Editor zum Schreiben, Testen und Iterieren von Prompts. Kernfunktionen: Modellwechsel, sofortiges Feedback, Token-Zählung, Prompt-Verlauf und Code-Export. Beispiele: Cursor, OpenAI Playground, Claude Console.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Soll ich eine Cloud-Playground-Umgebung oder eine lokale IDE verwenden?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Cloud-Playground-Umgebungen (OpenAI, Claude Console, Google AI Studio) sind am schnellsten einsetzbar und erfordern keine Einrichtung. Lokale IDEs (VS Code + Continue, LM Studio) bieten mehr Kontrolle und Kostenersparnis auf Kosten der Einrichtungszeit.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kann ich Cursor für Prompt-Engineering verwenden?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ja. Cursor ist eine KI-native IDE, die sich für die in die Code-Entwicklung integrierte Prompt-Erstellung eignet. Sie ist ideal, wenn Sie sowohl Prompts als auch den Anwendungscode schreiben, der diese nutzt.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wofür wird LM Studio verwendet?',
-          acceptedAnswer: { '@type': 'Answer', text: 'LM Studio ist eine lokale Playground-Umgebung zum Herunterladen und Ausführen von Open-Source-LLMs (Llama, Mistral usw.) ohne API-Schlüssel. Nach dem ersten Modell-Download ist keine Internetverbindung erforderlich. Kosten: 0 € nach der Hardware-Investition.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist die OpenAI Playground-Umgebung kostenlos?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Die OpenAI Playground-Umgebung selbst ist kostenlos zugänglich, API-Aufrufe werden jedoch nach Token-Verbrauch abgerechnet (gleiche Preisgestaltung wie bei der Produktions-API). Sie zahlen für Tokens bei der Erkundung genauso wie bei der Bereitstellung.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Welche IDE unterstützt die meisten Modelle?',
-          acceptedAnswer: { '@type': 'Answer', text: 'VS Code + Continue.dev unterstützt GPT-4o, Claude, Gemini, Ollama (lokal) und Dutzende weitere. Die meisten Cloud-Playground-Umgebungen unterstützen nur ihre eigenen Modelle (OpenAI → GPT, Anthropic → Claude, Google → Gemini).' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kann ich Prompts aus einer Playground-Umgebung in Code exportieren?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ja. Alle Cloud-Playground-Umgebungen (OpenAI, Claude Console) und lokale IDEs bieten „Export"-Schaltflächen, die Ihren Prompt in Python, JavaScript oder Curl-Format konvertieren.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Was ist die beste IDE für Einsteiger?',
-          acceptedAnswer: { '@type': 'Answer', text: 'OpenAI Playground oder Claude Console sind die beste Wahl für Einsteiger: keine Einrichtung erforderlich, intuitive Benutzeroberfläche, sofortiges Feedback. Beginnen Sie dort, bevor Sie zu VS Code oder Cursor für komplexere Workflows wechseln.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Muss ich bei der Verwendung von Cursor oder Cloud-IDEs die DSGVO beachten?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ja. Cloud-IDEs (Cursor, OpenAI Playground, Claude Console, Google AI Studio) übertragen Prompts an US-amerikanische Server. Gemäß DSGVO Artikel 28 benötigen Sie für die Verarbeitung personenbezogener Daten einen Auftragsverarbeitungsvertrag (AVV) mit dem jeweiligen Anbieter. Für datenschutzkritische Daten empfiehlt das BSI die Verwendung lokaler Lösungen wie LM Studio oder VS Code + Ollama, bei denen keine externe Datenübertragung stattfindet.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist eine Prompt-Engineering-IDE für den deutschen Mittelstand geeignet?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ja, mit der richtigen Auswahl. Für mittelständische Unternehmen ohne eigene KI-Infrastruktur bieten sich LM Studio und VS Code + Ollama an: Daten verlassen das Unternehmen nicht, es entstehen keine laufenden API-Kosten, und die Lösungen sind mit den BSI-Grundschutz-Katalogen kompatibel. Cloud-IDEs sind geeignet, wenn ein AVV vorliegt und keine besonders schützenswerten Daten verarbeitet werden.' },
-        },
-      ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -778,53 +674,6 @@ export const article: Record<Language, PEArticle> = {
       audience: { '@type': 'Audience', audienceType: 'Développeurs créant des applications LLM' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qu\'est-ce qu\'un IDE de prompt engineering ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Un IDE de prompt engineering est un éditeur spécialisé pour écrire, tester et affiner des prompts. Fonctions clés : sélection de modèle, retour immédiat, comptage de tokens, historique des prompts et export en code. Exemples : Cursor, OpenAI Playground, Claude Console.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Faut-il utiliser un playground cloud ou un IDE local ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Les playgrounds cloud (OpenAI, Claude Console, Google AI Studio) sont les plus rapides à démarrer et ne nécessitent aucune configuration. Les IDE locaux (VS Code + Continue, LM Studio) offrent plus de contrôle et des économies, au prix d\'un temps de configuration plus long.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Peut-on utiliser Cursor pour le prompt engineering ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Oui. Cursor est un IDE natif IA qui excelle dans la composition de prompts intégrée au développement de code. Il est idéal si vous écrivez à la fois des prompts et le code applicatif qui les utilise.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'À quoi sert LM Studio ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'LM Studio est un playground local pour télécharger et exécuter des LLM open source (Llama, Mistral, etc.) sans clé API. Aucune connexion internet requise après le téléchargement initial du modèle. Coût : 0 € après investissement matériel.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenAI Playground est-il gratuit ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'L\'accès au Playground est gratuit, mais chaque appel API est facturé à la consommation de tokens (mêmes tarifs que l\'API de production). Les tokens d\'exploration sont facturés comme les tokens de déploiement.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quel IDE supporte le plus de modèles ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'VS Code + Continue.dev supporte GPT-4o, Claude, Gemini, Ollama (local) et des dizaines d\'autres. La plupart des playgrounds cloud ne supportent que leurs propres modèles (OpenAI → GPT, Anthropic → Claude, Google → Gemini).' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Peut-on exporter un prompt d\'un playground vers du code ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Oui. Tous les playgrounds cloud (OpenAI, Claude Console) et IDE locaux proposent des boutons « Exporter » qui convertissent votre prompt en Python, JavaScript ou format curl.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quel est le meilleur IDE pour les débutants ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'OpenAI Playground ou Claude Console sont idéaux pour les débutants : zéro configuration, interface intuitive, retour immédiat. Commencez là, puis passez à VS Code ou Cursor pour des workflows plus complexes.' },
-        },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1126,53 +975,6 @@ export const article: Record<Language, PEArticle> = {
       audience: { '@type': 'Audience', audienceType: 'LLMアプリケーションを開発するエンジニア' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'プロンプトエンジニアリングIDEとは何ですか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'プロンプトエンジニアリングIDEとは、プロンプトの作成・テスト・改善に特化した専用エディタです。主な機能：モデルの切り替え、即時フィードバック、トークンカウント、プロンプト履歴、コードエクスポート。代表例：Cursor、OpenAI Playground、Claude Console。' },
-        },
-        {
-          '@type': 'Question',
-          name: 'クラウドPlaygroundとローカルIDEはどちらを選ぶべきですか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'クラウドPlayground（OpenAI、Claude Console、Google AI Studio）はセットアップ不要で最速で始められます。ローカルIDE（VS Code + Continue、LM Studio）は、セットアップに時間がかかりますが、より高い制御性とコスト削減を実現できます。' },
-        },
-        {
-          '@type': 'Question',
-          name: 'CursorはプロンプトエンジニアリングのIDEとして使えますか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'はい。Cursorはコード開発と統合されたプロンプト作成に優れたAIネイティブIDEです。プロンプトとそれを使用するアプリケーションコードを同時に書く場合に最適です。' },
-        },
-        {
-          '@type': 'Question',
-          name: 'LM Studioはどのような用途に使いますか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'LM StudioはAPIキーなしでオープンソースLLM（Llama、Mistralなど）をダウンロードしてローカルで実行できるPlayground環境です。初回モデルダウンロード後はインターネット不要。コスト：ハードウェア投資後はゼロ。' },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenAI Playgroundは無料ですか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'Playground自体は無料で利用できますが、APIコールはトークン消費量に応じて課金されます（本番APIと同じ料金体系）。探索中のトークンも本番デプロイ時と同様に課金されます。' },
-        },
-        {
-          '@type': 'Question',
-          name: '最も多くのモデルをサポートしているIDEはどれですか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'VS Code + Continue.devはGPT-4o、Claude、Gemini、Ollama（ローカル）など数十種類のモデルをサポートしています。ほとんどのクラウドPlaygroundは自社モデルのみ対応しています（OpenAI→GPT、Anthropic→Claude、Google→Gemini）。' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Playgroundのプロンプトをコードにエクスポートできますか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'はい。すべてのクラウドPlayground（OpenAI、Claude Console）とローカルIDEには「エクスポート」ボタンがあり、プロンプトをPython、JavaScript、またはcurl形式に変換できます。' },
-        },
-        {
-          '@type': 'Question',
-          name: '初心者に最適なIDEはどれですか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'OpenAI PlaygroundまたはClaude Consoleが初心者に最適です。セットアップ不要、直感的なUI、即時フィードバックが得られます。まずここから始めて、より複雑なワークフローに移行したらVS CodeやCursorに進みましょう。' },
-        },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1473,53 +1275,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       audience: { '@type': 'Audience', audienceType: '开发LLM应用的工程师' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: '什么是Prompt工程IDE？',
-          acceptedAnswer: { '@type': 'Answer', text: 'Prompt工程IDE是专为编写、测试和改进提示词设计的专用编辑器。核心功能：模型切换、即时反馈、Token计数、Prompt历史和代码导出。代表产品：Cursor、OpenAI Playground、Claude Console。' },
-        },
-        {
-          '@type': 'Question',
-          name: '应该选云端Playground还是本地IDE？',
-          acceptedAnswer: { '@type': 'Answer', text: '云端Playground（OpenAI、Claude Console、Google AI Studio）启动最快，无需配置。本地IDE（VS Code + Continue、LM Studio）提供更强的控制能力和成本节省，代价是更长的配置时间。' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Cursor可以用于Prompt工程吗？',
-          acceptedAnswer: { '@type': 'Answer', text: '可以。Cursor是一款AI原生IDE，擅长将Prompt创作与代码开发相结合。如果你同时编写Prompt和使用它的应用代码，Cursor是理想选择。' },
-        },
-        {
-          '@type': 'Question',
-          name: 'LM Studio有什么用途？',
-          acceptedAnswer: { '@type': 'Answer', text: 'LM Studio是一个本地Playground，无需API密钥即可下载并运行开源LLM（Llama、Mistral等）。初次下载模型后无需联网。成本：硬件投入后为零。' },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenAI Playground是免费的吗？',
-          acceptedAnswer: { '@type': 'Answer', text: 'Playground本身免费使用，但每次API调用按Token消耗计费（与生产API相同定价）。探索阶段的Token费用与生产部署相同。' },
-        },
-        {
-          '@type': 'Question',
-          name: '哪款IDE支持最多模型？',
-          acceptedAnswer: { '@type': 'Answer', text: 'VS Code + Continue.dev支持GPT-4o、Claude、Gemini、Ollama（本地）等数十种模型。大多数云端Playground只支持自家模型（OpenAI→GPT、Anthropic→Claude、Google→Gemini）。' },
-        },
-        {
-          '@type': 'Question',
-          name: '可以将Playground中的Prompt导出为代码吗？',
-          acceptedAnswer: { '@type': 'Answer', text: '可以。所有云端Playground（OpenAI、Claude Console）和本地IDE都提供"导出"按钮，可将Prompt转换为Python、JavaScript或curl格式。' },
-        },
-        {
-          '@type': 'Question',
-          name: '适合初学者的最佳IDE是哪个？',
-          acceptedAnswer: { '@type': 'Answer', text: 'OpenAI Playground或Claude Console最适合初学者：零配置、界面直观、即时反馈。从这里开始，等需要更复杂工作流时再迁移到VS Code或Cursor。' },
-        },
-      ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

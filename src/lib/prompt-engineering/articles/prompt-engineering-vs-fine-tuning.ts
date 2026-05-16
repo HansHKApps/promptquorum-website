@@ -48,20 +48,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'Model Fine-Tuning Techniques', url: 'https://huggingface.co' },
       ],
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'Which approach should I try first?', acceptedAnswer: { '@type': 'Answer', text: 'Always start with prompt engineering. It is free, instant, and reversible. Only move to fine-tuning if prompt engineering fails on repeated attempts.' } },
-        { '@type': 'Question', name: 'How do I get training data for fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Collect your own examples, use existing datasets, or hire annotators. Data quality matters more than quantity.' } },
-        { '@type': 'Question', name: 'Can I fine-tune a fine-tuned model?', acceptedAnswer: { '@type': 'Answer', text: 'Technically yes, but it is rarely needed. Usually, fine-tune once on your best data.' } },
-        { '@type': 'Question', name: 'What is LoRA fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Low-Rank Adaptation is a technique that fine-tunes only a portion of the model, reducing resource requirements and cost.' } },
-        { '@type': 'Question', name: 'Should I fine-tune locally or in the cloud?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-based fine-tuning is easier and faster. Local fine-tuning gives you control over data privacy and infrastructure.' } },
-        { '@type': 'Question', name: 'How long does fine-tuning take?', acceptedAnswer: { '@type': 'Answer', text: 'Fine-tuning takes substantial time—weeks to months depending on data size, model size, and hardware.' } },
-        { '@type': 'Question', name: 'What if fine-tuning does not help?', acceptedAnswer: { '@type': 'Answer', text: 'You may have the wrong base model, insufficient training data, or unrealistic expectations. Try a larger model or more data first.' } },
-        { '@type': 'Question', name: 'Can I combine prompt engineering with fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, this is best practice. Use fine-tuning for core competence, prompt engineering for flexibility and routing logic.' } },
-      ],
-    },
     sections: {
       keyTakeaways: {
         isTldr: true,
@@ -318,23 +304,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'Model Fine-Tuning Techniques', url: 'https://huggingface.co' },
       ],
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        { '@type': 'Question', name: 'Welcher Ansatz sollte ich zuerst versuchen?', acceptedAnswer: { '@type': 'Answer', text: 'Versuchen Sie immer zuerst Prompt Engineering. Es ist kostenlos, sofort und rückgängig machbar. Wechseln Sie zu Fine-Tuning nur, wenn Prompt Engineering nach wiederholten Versuchen fehlschlägt.' } },
-        { '@type': 'Question', name: 'Wie erhalte ich Trainingsdaten für Fine-Tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Sammeln Sie Ihre eigenen Beispiele, verwenden Sie vorhandene Datensätze oder stellen Sie Annotatoren ein. Datenqualität ist wichtiger als Quantität.' } },
-        { '@type': 'Question', name: 'Kann ich ein Fine-Tuned-Modell erneut fine-tunen?', acceptedAnswer: { '@type': 'Answer', text: 'Technisch ja, aber es ist selten notwendig. Normalerweise fine-tunen Sie einmal auf Ihren besten Daten.' } },
-        { '@type': 'Question', name: 'Was ist LoRA Fine-Tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Low-Rank Adaptation ist eine Technik, die nur einen Teil des Modells fine-tuned und damit die Ressourcenanforderungen und Kosten reduziert.' } },
-        { '@type': 'Question', name: 'Sollte ich lokal oder in der Cloud fine-tunen?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-basiertes Fine-Tuning ist einfacher und schneller. Lokales Fine-Tuning gibt Ihnen Kontrolle über Datenschutz und Infrastruktur.' } },
-        { '@type': 'Question', name: 'Wie lange dauert Fine-Tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Fine-Tuning dauert beträchtliche Zeit—Wochen bis Monate je nach Datengröße, Modellgröße und Hardware.' } },
-        { '@type': 'Question', name: 'Was, wenn Fine-Tuning nicht hilft?', acceptedAnswer: { '@type': 'Answer', text: 'Sie haben möglicherweise das falsche Basismodell, unzureichende Trainingsdaten oder unrealistische Erwartungen. Versuchen Sie zunächst ein größeres Modell oder mehr Daten.' } },
-        { '@type': 'Question', name: 'Kann ich Prompt Engineering und Fine-Tuning kombinieren?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, dies ist Best Practice. Verwenden Sie Fine-Tuning für Kernkompetenz und Prompt Engineering für Flexibilität und Routing-Logik.' } },
-        { '@type': 'Question', name: 'Muss ich bei der Verwendung von Fine-Tuning die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Nach DSGVO Artikel 28 erfordert die Verwendung von Large Language Models und deren Fine-Tuning besondere Aufmerksamkeit auf Datenverarbeitung und Compliance. Lokales Fine-Tuning mit BSI-Grundschutz-Konformität kann DSGVO-Anforderungen erfüllen, da Trainingsdaten nicht an externe APIs übertragen werden.' } },
-        { '@type': 'Question', name: 'Ist Fine-Tuning für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, besonders für Unternehmen, die BSI-Grundschutz einhalten müssen. Fine-Tuning ermöglicht lokale Kontrolle, Datenschutz und Compliance gemäß DSGVO und BSI-Sicherheitskatalogen. Viele deutsche Mittelstandsunternehmen in Finance, Engineering und Healthcare können von lokaler Modellkontrolle profitieren.' } },
-      ],
-    },
     sections: {
       keyTakeaways: {
         isTldr: true,
@@ -589,23 +558,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'Open Source Language Models', url: 'https://huggingface.co' },
         { '@type': 'SoftwareApplication', name: 'Local Model Deployment', url: 'https://ollama.com' },
         { '@type': 'SoftwareApplication', name: 'Model Fine-Tuning Techniques', url: 'https://huggingface.co' },
-      ],
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        { '@type': 'Question', name: 'Par quel approche dois-je commencer ?', acceptedAnswer: { '@type': 'Answer', text: 'Commencez toujours par le prompt engineering. C\'est gratuit, instantané et réversible. Ne passez au fine-tuning que si le prompt engineering échoue après plusieurs tentatives.' } },
-        { '@type': 'Question', name: 'Comment obtenir les données d\'entraînement pour le fine-tuning ?', acceptedAnswer: { '@type': 'Answer', text: 'Collectez vos propres exemples, utilisez des jeux de données existants ou engagez des annotateurs. La qualité des données importe plus que la quantité.' } },
-        { '@type': 'Question', name: 'Puis-je réentraîner un modèle fine-tuné ?', acceptedAnswer: { '@type': 'Answer', text: 'Techniquement oui, mais c\'est rarement nécessaire. Généralement, on fine-tune une fois sur les meilleures données disponibles.' } },
-        { '@type': 'Question', name: 'Qu\'est-ce que le fine-tuning LoRA ?', acceptedAnswer: { '@type': 'Answer', text: 'Low-Rank Adaptation est une technique qui fine-tune seulement une partie du modèle, réduisant les coûts et les données requises.' } },
-        { '@type': 'Question', name: 'Devrais-je faire le fine-tuning localement ou en cloud ?', acceptedAnswer: { '@type': 'Answer', text: 'Le cloud (OpenAI, Google) est plus simple et rapide. Local (Ollama, PEFT) offre plus de contrôle et de confidentialité.' } },
-        { '@type': 'Question', name: 'Combien de temps prend le fine-tuning ?', acceptedAnswer: { '@type': 'Answer', text: 'Le fine-tuning prend du temps—généralement 1 à 7 jours selon la taille des données, du modèle et du matériel.' } },
-        { '@type': 'Question', name: 'Que faire si le fine-tuning ne fonctionne pas ?', acceptedAnswer: { '@type': 'Answer', text: 'Vous avez peut-être le mauvais modèle de base, des données insuffisantes ou des attentes irréalistes. Essayez d\'abord un modèle plus grand ou plus de données.' } },
-        { '@type': 'Question', name: 'Puis-je combiner prompt engineering et fine-tuning ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, c\'est une bonne pratique. Utilisez le fine-tuning pour les tâches spécialisées et le prompt engineering pour la flexibilité et le routage.' } },
-        { '@type': 'Question', name: 'Le fine-tuning de Claude est-il disponible ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Depuis 2026, Anthropic n\'offre pas le fine-tuning de Claude. Utilisez le prompt engineering.' } },
-        { '@type': 'Question', name: 'Quels sont les pièges courants à éviter ?', acceptedAnswer: { '@type': 'Answer', text: 'Le plus courant : fine-tuner avant d\'avoir testé le prompt engineering à fond. Collectez 100+ exemples pour le fine-tuning, pas 20. Oubliez pas les coûts d\'inférence du modèle fine-tuné.' } },
       ],
     },
     sections: {
@@ -866,23 +818,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'Model Fine-Tuning Techniques', url: 'https://huggingface.co' },
       ],
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: 'どちらを最初に試すべきですか？', acceptedAnswer: { '@type': 'Answer', text: '常にプロンプトエンジニアリングから始めてください。無料で即座です。何度も失敗した場合のみファインチューニングしてください。' } },
-        { '@type': 'Question', name: 'ファインチューニングのトレーニングデータをどう取得しますか？', acceptedAnswer: { '@type': 'Answer', text: '独自の例を収集、既存データセットを使用、またはアノテーターを雇用します。量より質が重要です。' } },
-        { '@type': 'Question', name: 'ファインチューニング済みモデルを再度ファインチューニングできますか？', acceptedAnswer: { '@type': 'Answer', text: '技術的には可能ですが、めったに必要ありません。通常は最良のデータに対して一度だけファインチューニングします。' } },
-        { '@type': 'Question', name: 'LoRA ファインチューニングとは？', acceptedAnswer: { '@type': 'Answer', text: 'Low-Rank Adaptation は、モデルの一部のみを調整し、コストとデータ要件を削減する技術です。' } },
-        { '@type': 'Question', name: 'ローカルまたはクラウドでファインチューニングすべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'クラウド (OpenAI、Google) は簡単で速い。ローカル (Ollama、PEFT) はコントロールとプライバシーを提供します。' } },
-        { '@type': 'Question', name: 'ファインチューニングにどのくらい時間がかかりますか？', acceptedAnswer: { '@type': 'Answer', text: 'ファインチューニングはかなりの時間がかかります—データサイズ、モデルサイズ、ハードウェアに応じて数週間から数ヶ月。' } },
-        { '@type': 'Question', name: 'ファインチューニングが役に立たない場合はどうしますか？', acceptedAnswer: { '@type': 'Answer', text: 'モデルが間違っているか、データが不十分か、期待が非現実的な可能性があります。まず大きいモデルまたはより多くのデータを試してください。' } },
-        { '@type': 'Question', name: 'プロンプトエンジニアリングとファインチューニングを組み合わせられますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、これはベストプラクティスです。ファインチューニングは基本的な能力に、プロンプトエンジニアリングは柔軟性とルーティングロジックに使用します。' } },
-        { '@type': 'Question', name: 'Claude ファインチューニングは利用可能ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年の時点では利用できません。Anthropic はこの機能を提供していません。プロンプトエンジニアリングを使用してください。' } },
-        { '@type': 'Question', name: 'よくある間違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトエンジニアリングを十分にテストせずにファインチューニングに進むこと。100+ 個の例を収集してください (20 個ではなく)。ファインチューニング済みモデルの推論コストを忘れないでください。' } },
-      ],
-    },
     sections: {
       keyTakeaways: {
         isTldr: true,
@@ -1136,23 +1071,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: '应该用Prompt工程还是微调？', acceptedAnswer: { '@type': 'Answer', text: '从Prompt工程开始。成本为零，结果秒速生效。只有在Prompt工程在10个以上案例中持续失败时，才考虑微调。' } },
-        { '@type': 'Question', name: '2026年微调的真实成本是多少？', acceptedAnswer: { '@type': 'Answer', text: '单次微调运行成本$500-$5000+，取决于模型、数据集规模和选择的基础设施提供商。' } },
-        { '@type': 'Question', name: '微调需要多长时间？', acceptedAnswer: { '@type': 'Answer', text: '通常1-7天，取决于训练数据量、模型基础大小和可用的计算资源。' } },
-        { '@type': 'Question', name: '微调可以撤销吗？', acceptedAnswer: { '@type': 'Answer', text: '实际上不能。微调永久改变模型的神经网络权重。如果结果不满意，您必须回到原始模型或尝试另一个微调周期。' } },
-        { '@type': 'Question', name: '什么是LoRA？它如何降低微调成本？', acceptedAnswer: { '@type': 'Answer', text: '低秩适应（LoRA）仅调整模型权重的一小部分，而不是全部参数。这降低了内存需求、加快了训练速度，并减少了标记数据的需求。' } },
-        { '@type': 'Question', name: '我应该在本地还是云端微调？', acceptedAnswer: { '@type': 'Answer', text: '云端（OpenAI、Google Vertex AI）更简单快速，但费用随数据规模增长。本地（Ollama、Hugging Face PEFT）给您更多控制，但需要ML工程师和GPU基础设施。' } },
-        { '@type': 'Question', name: 'Prompt工程和微调可以组合使用吗？', acceptedAnswer: { '@type': 'Answer', text: '完全可以，这是最佳实践。先用Prompt工程处理通用任务，再用微调处理特定领域需求。微调后的模型仍可通过进一步的Prompt优化来改进。' } },
-        { '@type': 'Question', name: '中国企业微调时，数据安全法有哪些要求？', acceptedAnswer: { '@type': 'Answer', text: '《数据安全法》要求个人数据和关键数据必须保留在中国。为合规，使用位于中国的模型（如Qwen、ChatGLM）和基础设施（阿里云、腾讯云）进行微调。' } },
-        { '@type': 'Question', name: '微调后模型与新版本基础模型有什么关系？', acceptedAnswer: { '@type': 'Answer', text: '微调与特定版本绑定。当发布新的基础模型版本（如GPT-4o Turbo）时，您的微调模型不会更新。要利用改进，需要在新版本上重新微调。' } },
-        { '@type': 'Question', name: '如果微调不起作用怎么办？', acceptedAnswer: { '@type': 'Answer', text: '评估三个因素：（1）模型是否足够大，（2）训练数据是否足够且有代表性，（3）目标是否过于雄心勃勃。通常，更大的模型 + 更多数据 + 调整期望会解决问题。' } },
-      ],
     },
     sections: {
       keyTakeaways: {

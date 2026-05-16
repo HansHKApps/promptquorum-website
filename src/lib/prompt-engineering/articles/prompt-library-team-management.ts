@@ -56,20 +56,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-library-team-management', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        { '@type': 'Question', name: 'What is a prompt library?', acceptedAnswer: { '@type': 'Answer', text: 'A prompt library is a shared, versioned repository where a team stores, searches, and reuses prompts. It typically includes a folder structure organized by theme or use case, named and versioned files, access control rules, and a review or approval process. Without a library, teams duplicate effort and lose the knowledge embedded in previous prompt versions.' } },
-        { '@type': 'Question', name: 'Should I use Git or PromptHub to version prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Use Git if your team is already comfortable with version control and treats prompts as code. Git tags mark production versions and branching handles concurrent editing. Use PromptHub if your team needs a structured review workflow with role-based access and comment threads on prompt changes. Many teams use Git for storage and PromptHub for review workflow.' } },
-        { '@type': 'Question', name: 'When should I deprecate a prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Deprecate a prompt when: it has had no usage in 90 days, a better version has replaced it, or the model it was written for is no longer in production. The process: mark the file as deprecated in the frontmatter, archive it to a /deprecated folder, and retain it for at least 1 year for audit purposes.' } },
-        { '@type': 'Question', name: 'Who should be allowed to modify prompts in a team library?', acceptedAnswer: { '@type': 'Answer', text: 'A three-role model works for most teams: any contributor can add a new prompt (open contribution), only the designated owner and assigned reviewers can modify an existing prompt (controlled modification), and only an approver (e.g., a team lead) can merge changes to the production branch (gated deployment). Implement this via Git branch protection rules or PromptHub role settings.' } },
-        { '@type': 'Question', name: 'What is the minimum prompt library structure for a 3-person team?', acceptedAnswer: { '@type': 'Answer', text: 'A 3-person team needs: a single /prompts/ directory in the Git repo, folders by theme (up to 5 themes), a naming convention (slug + version), and a README.md per folder with a one-line description of each prompt. Add a review requirement on the main branch. This takes under 30 minutes to set up and prevents the most common failure modes: duplicated prompts, undiscoverable versions, unreviewed production changes.' } },
-        { '@type': 'Question', name: 'How do I search across a Git-based prompt library?', acceptedAnswer: { '@type': 'Answer', text: 'Use grep -r "keyword" /prompts/ to search across all prompt files by content. Add a metadata header block (YAML frontmatter) to each prompt file with fields like: description, primaryTerm, theme, version, author, dateModified. For larger libraries, use PromptHub\'s search, which indexes all metadata fields.' } },
-        { '@type': 'Question', name: 'When should I use PromptHub vs Git for prompt management?', acceptedAnswer: { '@type': 'Answer', text: 'Use Git if: your team is primarily developers, prompts are code-adjacent, you want prompts reviewed in standard code review tools (GitHub PRs), and you want free, self-hosted storage. Use PromptHub if: your team includes non-developers, you need a UI for prompt discovery and comparison, you want built-in diff visualization, or you need to share prompts across multiple codebases.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -247,20 +233,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-library-team-management', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        { '@type': 'Question', name: 'Was ist eine Prompt-Bibliothek?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Prompt-Bibliothek ist ein gemeinsames, versioniertes Repository, in dem ein Team Prompts speichert, sucht und wiederverwendet. Sie umfasst typischerweise eine nach Thema oder Anwendungsfall organisierte Ordnerstruktur, benannte und versionierte Dateien, Zugriffssteuerungsregeln und einen Review- oder Genehmigungsprozess.' } },
-        { '@type': 'Question', name: 'Sollte ich Git oder PromptHub zur Versionierung von Prompts verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie Git, wenn Ihr Team bereits mit Versionskontrolle vertraut ist und Prompts wie Code behandelt. Verwenden Sie PromptHub, wenn Ihr Team einen strukturierten Review-Workflow mit rollenbasiertem Zugriff und Kommentar-Threads benötigt.' } },
-        { '@type': 'Question', name: 'Was ist die minimale Prompt-Bibliotheksstruktur für ein 3-Personen-Team?', acceptedAnswer: { '@type': 'Answer', text: 'Ein 3-Personen-Team benötigt: ein /prompts/-Verzeichnis im Git-Repo, Ordner nach Thema (bis zu 5 Themen), eine Namenskonvention (Slug + Version) und eine README.md pro Ordner. Das Einrichten dauert unter 30 Minuten.' } },
-        { '@type': 'Question', name: 'Wie durchsuche ich eine Git-basierte Prompt-Bibliothek?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie grep -r "Stichwort" /prompts/ zur Suche nach Inhalt. Fügen Sie YAML-Frontmatter zu jeder Prompt-Datei mit Feldern wie Beschreibung, Thema, Version, Autor und Änderungsdatum hinzu. Für größere Bibliotheken verwenden Sie PromptHubs Suche.' } },
-        { '@type': 'Question', name: 'Wann sollte ich einen Prompt deprecaten?', acceptedAnswer: { '@type': 'Answer', text: 'Deprecaten Sie einen Prompt, wenn: er in den letzten 90 Tagen keine Nutzung hatte, eine bessere Version ihn ersetzt hat oder das Modell, für das er geschrieben wurde, nicht mehr in Produktion ist.' } },
-        { '@type': 'Question', name: 'Wann PromptHub vs Git für Prompt-Management verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie Git, wenn Ihr Team hauptsächlich aus Entwicklern besteht und Prompts in GitHub PRs reviewt werden sollen. Verwenden Sie PromptHub, wenn Ihr Team Nicht-Entwickler umfasst oder eine UI für Erkennung und Vergleich benötigt.' } },
-        { '@type': 'Question', name: 'Wer darf Prompts in einer Team-Bibliothek ändern?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Drei-Rollen-Modell: Jeder Mitwirkende kann einen neuen Prompt hinzufügen, nur der designierte Eigentümer und zugewiesene Reviewer können vorhandene Prompts ändern, und nur ein Genehmiger kann Änderungen in den Produktionsbranch mergen.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -424,17 +396,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-library-team-management', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        { '@type': 'Question', name: 'Qu\'est-ce qu\'une bibliothèque de prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Une bibliothèque de prompts est un dépôt partagé et versionné où l\'équipe stocke, recherche et réutilise des prompts. Elle comprend généralement une structure de dossiers organisée par thème, des fichiers nommés et versionnés, des règles de contrôle d\'accès et un processus de révision.' } },
-        { '@type': 'Question', name: 'Quelle est la structure minimale pour une équipe de 3 personnes ?', acceptedAnswer: { '@type': 'Answer', text: 'Une équipe de 3 personnes a besoin : d\'un répertoire /prompts/ dans le dépôt Git, de dossiers par thème (jusqu\'à 5 thèmes), d\'une convention de nommage (slug + version) et d\'un README.md par dossier. Cela prend moins de 30 minutes à configurer.' } },
-        { '@type': 'Question', name: 'Comment rechercher dans une bibliothèque de prompts Git ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez grep -r "mot-clé" /prompts/ pour rechercher par contenu. Ajoutez un bloc de métadonnées YAML à chaque fichier de prompt avec des champs comme description, thème, version, auteur. Pour les bibliothèques plus grandes, utilisez la recherche de PromptHub.' } },
-        { '@type': 'Question', name: 'Quand utiliser PromptHub vs Git ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez Git si votre équipe est principalement composée de développeurs et veut des prompts révisés dans les outils de code review GitHub. Utilisez PromptHub si votre équipe inclut des non-développeurs ou a besoin d\'une interface pour la découverte et la comparaison.' } },
-      ],
     },
     sections: {
       tldr: {
@@ -600,17 +561,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-library-team-management', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: 'プロンプトライブラリとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトライブラリとは、チームがプロンプトを保存、検索、再利用する共有のバージョン管理されたリポジトリです。テーマやユースケースで整理されたフォルダ構造、命名とバージョン管理されたファイル、アクセス制御ルール、レビュープロセスが含まれます。' } },
-        { '@type': 'Question', name: '3人チームの最小限のプロンプトライブラリ構造とは？', acceptedAnswer: { '@type': 'Answer', text: '3人チームには：GitリポジトリのsingleのPromptディレクトリ、テーマ別フォルダ（最大5テーマ）、命名規則（スラッグ+バージョン）、フォルダごとのREADME.mdが必要です。設定に30分未満かかります。' } },
-        { '@type': 'Question', name: 'Gitベースのプロンプトライブラリで検索するには？', acceptedAnswer: { '@type': 'Answer', text: 'grep -r "キーワード" /prompts/ を使用してコンテンツ検索を行います。各プロンプトファイルにYAMLフロントマターを追加（説明、テーマ、バージョン、著者）。大きなライブラリにはPromptHubの検索を使用します。' } },
-        { '@type': 'Question', name: 'PromptHubとGitのどちらを使うべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'チームが主に開発者でGitHub PRでレビューしたい場合はGitを使用します。非開発者が含まれる場合やUI上での発見と比較が必要な場合はPromptHubを使用します。' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -774,17 +724,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-library-team-management', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: '什么是Prompt库？', acceptedAnswer: { '@type': 'Answer', text: 'Prompt库是一个共享的、受版本控制的仓库，团队在其中存储、搜索和重用Prompt。它通常包括按主题组织的文件夹结构、命名和版本控制的文件、访问控制规则以及审查流程。' } },
-        { '@type': 'Question', name: '3人团队的最小Prompt库结构是什么？', acceptedAnswer: { '@type': 'Answer', text: '3人团队需要：Git仓库中的/prompts/目录、按主题的文件夹（最多5个主题）、命名规范（标识符+版本）和每个文件夹的README.md。设置时间不到30分钟。' } },
-        { '@type': 'Question', name: '如何在基于Git的Prompt库中搜索？', acceptedAnswer: { '@type': 'Answer', text: '使用grep -r "关键词" /prompts/按内容搜索。为每个Prompt文件添加YAML前言元数据（描述、主题、版本、作者）。对于较大的库，使用PromptHub的搜索功能。' } },
-        { '@type': 'Question', name: '何时使用PromptHub vs Git？', acceptedAnswer: { '@type': 'Answer', text: '如果团队主要是开发者并希望在GitHub PR中审查Prompt，使用Git。如果团队包含非开发者或需要发现和比较的UI，使用PromptHub。' } },
-      ],
     },
     sections: {
       tldr: {

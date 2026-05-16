@@ -84,18 +84,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'ListItem', 'position': 4, 'name': 'Why Transparency Matters', 'description': 'How hidden system prompts prevent users and developers from debugging and optimizing output' },
       ],
     },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      'name': 'How to Write an Effective System Prompt in 5 Steps',
-      'step': [
-        { '@type': 'HowToStep', 'position': 1, 'name': 'Define the role explicitly with domain-specific language' },
-        { '@type': 'HowToStep', 'position': 2, 'name': 'Write constraints before capabilities' },
-        { '@type': 'HowToStep', 'position': 3, 'name': 'Specify the output format in the system prompt' },
-        { '@type': 'HowToStep', 'position': 4, 'name': 'Set scope boundaries with explicit decline rules' },
-        { '@type': 'HowToStep', 'position': 5, 'name': 'Test with at least 5 different user messages' },
-      ],
-    },
     gammaEmbedUrl: '/presentations/system-prompt-vs-user-prompt-static.html',
     gammaDescription: 'The slide deck below covers: system vs. user prompt architecture, where they live in API stacks, design principles for system prompts, and transparency for hidden prompts. Download the PDF as a System Prompt reference card.',
     sections: {
@@ -430,18 +418,6 @@ export const article: Record<Language, PEArticle> = {
         { "@type": "ListItem", position: 7, name: "Prompt-Engineering-Beitrag", description: "System Prompt: ca. 70 % der konsistenten Ausgabequalität. User Prompt: ca. 30 %" },
         { "@type": "ListItem", position: 8, name: "Override-Risiko", description: "System Prompt: schwer zu überschreiben, persistent, entwicklergesteuert. User Prompt: einfach zu anpassen, benutzergesteuert pro Anfrage" },
         { "@type": "ListItem", position: 9, name: "Beste Eignung", description: "System Prompt: Rollenkonsistenz, Sicherheits-Guardrails, Ausgabeformat. User Prompt: aufgabenspezifisches Detail, Kontext, Few-Shot-Beispiele" },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      'name': 'Wie man einen effektiven System Prompt in 5 Schritten schreibt',
-      'step': [
-        { '@type': 'HowToStep', 'position': 1, 'name': 'Definieren Sie die Rolle explizit mit domänenspezifischer Sprache' },
-        { '@type': 'HowToStep', 'position': 2, 'name': 'Schreiben Sie Constraints vor Möglichkeiten' },
-        { '@type': 'HowToStep', 'position': 3, 'name': 'Geben Sie das Ausgabeformat im System Prompt an' },
-        { '@type': 'HowToStep', 'position': 4, 'name': 'Legen Sie Scope-Grenzen mit expliziten Ablehnungsregeln fest' },
-        { '@type': 'HowToStep', 'position': 5, 'name': 'Testen Sie mit mindestens 5 verschiedenen Benutzernachrichten' },
       ],
     },
     sections: {

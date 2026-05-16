@@ -71,68 +71,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Why do you need to test prompts across multiple models?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Models differ in instruction parsing, JSON output reliability, refusal patterns, and context windows. A prompt that passes on GPT-4o may fail silently on Claude Opus 4.7. Multi-model testing reveals these compatibility gaps before production deployment.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the difference between GPT-4o and Claude Opus 4.7 in prompt handling?',
-          acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o is stricter with system prompts and enforces JSON schema directives (~95% valid JSON rate). Claude Opus 4.7 is more forgiving of informal phrasing but applies stricter refusal patterns for safety-adjacent tasks. For input-heavy tasks, Claude costs $3 vs $5 per 1M input tokens — 40% cheaper.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do you write a prompt that works on all models?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Use explicit output formats (JSON schema or XML), separate system prompt from user message, avoid model-specific phrasing, provide few-shot examples that cover edge cases, and validate JSON output programmatically against your schema.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the cost difference between GPT-4o and Claude Opus 4.7?',
-          acceptedAnswer: { '@type': 'Answer', text: 'As of April 2026: GPT-4o input $5/M tokens, output $15/M. Claude Opus 4.7 input $3/M, output $15/M. Claude saves 40% on input-heavy tasks. Gemini 1.5 Pro at $3.50/$10.50 is cheapest for long-document tasks.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do you test the same prompt on multiple models at once?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Build a test set with 10–20 inputs covering happy path, edge cases, and adversarial examples. Use PromptQuorum, LangSmith, or custom API code to dispatch to all models in parallel. Compare outputs side-by-side and score against a pass/fail rubric.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'What does PromptQuorum do for multi-model testing?',
-          acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum accepts a prompt and test set, dispatches to GPT-4o, Claude Opus 4.7, Gemini 1.5 Pro, and Llama in parallel, then returns side-by-side output comparison with pass rates per model — no separate API integrations needed.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which model is most reliable for JSON output?',
-          acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o produces valid JSON ~95% of the time with an explicit schema. Gemini 1.5 Pro follows at ~92%, Claude Opus 4.7 at ~90%. Llama 2 70B drops to ~70%. For pipelines requiring structured JSON output, GPT-4o or Gemini 1.5 Pro are safest.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'When should you use Gemini 1.5 Pro instead of GPT-4o?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Use Gemini 1.5 Pro when your prompt requires a context window larger than 128K tokens. Gemini\'s 1M-token window handles full documents, codebases, and long conversation histories. It is also cheaper on output at $10.50 vs $15 per 1M tokens.' },
-        },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'How To Test Prompts Across Models',
-      inLanguage: 'en',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Define your test inputs and expected outputs', text: 'Create a test set with 10–20 representative inputs (happy path, edge cases, adversarial examples). For each input, define the expected output format and content.' },
-        { '@type': 'HowToStep', position: 2, name: 'Create a scoring rubric', text: 'Define pass/fail criteria for each test case: "Does output match JSON schema?", "Does output mention the key fact?", "Does output refuse unsafe requests?"' },
-        { '@type': 'HowToStep', position: 3, name: 'Write a model-agnostic prompt', text: 'Write a system prompt + user message with explicit JSON schema or XML tags. Avoid model-specific phrasing. Separate role and constraints from the actual request.' },
-        { '@type': 'HowToStep', position: 4, name: 'Dispatch to multiple models in parallel', text: 'Use PromptQuorum, LangSmith, or custom code to send the same test set to GPT-4o, Claude Opus 4.7, Gemini 1.5 Pro, and Llama simultaneously.' },
-        { '@type': 'HowToStep', position: 5, name: 'Compare outputs side-by-side', text: 'Review raw outputs from each model. Look for format differences, content divergences, and refusal patterns. One model\'s JSON may be malformed; another may refuse the request.' },
-        { '@type': 'HowToStep', position: 6, name: 'Score each output against your rubric', text: 'Mark pass/fail for each model on each test case. Calculate pass rate per model. A model with 90%+ pass rate is a candidate for production.' },
-        { '@type': 'HowToStep', position: 7, name: 'Choose the model that best matches your criteria', text: 'Select models based on accuracy, cost, latency, and safety requirements. You may route different prompt types to different models to optimize cost and quality.' },
-      ],
-    },
     sections: {
       keyTakeaways: {
         id: 'key-takeaways',
@@ -382,38 +320,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        { '@type': 'Question', name: 'Warum müssen Prompts über mehrere Modelle hinweg getestet werden?', acceptedAnswer: { '@type': 'Answer', text: 'Modelle unterscheiden sich in der Instruktionsverarbeitung, JSON-Ausgabezuverlässigkeit, Refusal-Mustern und Kontextfenstern. Ein Prompt, der bei GPT-4o erfolgreich ist, kann bei Claude Opus 4.7 lautlos scheitern. Multi-Modell-Testing deckt diese Kompatibilitätslücken vor dem Produktiveinsatz auf.' } },
-        { '@type': 'Question', name: 'Was ist der Unterschied zwischen GPT-4o und Claude Opus 4.7 bei der Prompt-Verarbeitung?', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o ist strenger mit System-Prompts und setzt JSON-Schema-Direktiven durch (~95 % gültige JSON-Rate). Claude Opus 4.7 ist toleranter gegenüber informeller Formulierung, wendet aber strengere Refusal-Muster für sicherheitsrelevante Aufgaben an. Bei eingabelastigen Aufgaben kostet Claude 3 $ vs. 5 $ pro 1 Mio. Eingabe-Tokens – 40 % günstiger.' } },
-        { '@type': 'Question', name: 'Wie schreibt man einen Prompt, der bei allen Modellen funktioniert?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie explizite Ausgabeformate (JSON-Schema oder XML), trennen Sie System-Prompt von User-Message, vermeiden Sie modellspezifische Formulierungen, stellen Sie Few-Shot-Beispiele für Randfälle bereit und validieren Sie JSON-Ausgaben programmatisch.' } },
-        { '@type': 'Question', name: 'Was ist der Kostenunterschied zwischen GPT-4o und Claude Opus 4.7?', acceptedAnswer: { '@type': 'Answer', text: 'Stand April 2026: GPT-4o Eingabe 5 $/1 Mio. Tokens, Ausgabe 15 $/1 Mio. Claude Opus 4.7 Eingabe 3 $/1 Mio., Ausgabe 15 $/1 Mio. Claude spart 40 % bei eingabelastigen Aufgaben. Gemini 1.5 Pro ist mit 3,50 $/10,50 $ am günstigsten für Langdokument-Aufgaben.' } },
-        { '@type': 'Question', name: 'Wie testet man denselben Prompt gleichzeitig auf mehreren Modellen?', acceptedAnswer: { '@type': 'Answer', text: 'Erstellen Sie einen Test-Set mit 10–20 Eingaben (Happy Path, Randfälle, adversarielle Beispiele). Nutzen Sie PromptQuorum, LangSmith oder eigenen API-Code, um alle Modelle parallel anzusprechen. Vergleichen Sie Ausgaben nebeneinander und bewerten Sie nach Pass/Fail-Rubrik.' } },
-        { '@type': 'Question', name: 'Was macht PromptQuorum für Multi-Modell-Testing?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum nimmt Prompt und Test-Set entgegen, sendet diese parallel an GPT-4o, Claude Opus 4.7, Gemini 1.5 Pro und Llama und liefert einen Nebeneinander-Ausgabe-Vergleich mit Pass-Raten pro Modell – ohne separate API-Integrationen.' } },
-        { '@type': 'Question', name: 'Welches Modell ist am zuverlässigsten für JSON-Ausgaben?', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o erzeugt mit explizitem Schema ~95 % gültiges JSON. Gemini 1.5 Pro folgt mit ~92 %, Claude Opus 4.7 mit ~90 %. Llama 2 70B sinkt auf ~70 %. Für Pipelines mit strukturierten JSON-Anforderungen sind GPT-4o oder Gemini 1.5 Pro die sichersten Optionen.' } },
-        { '@type': 'Question', name: 'Wann sollte man Gemini 1.5 Pro statt GPT-4o verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Gemini 1.5 Pro empfiehlt sich, wenn der Prompt ein Kontextfenster über 128.000 Tokens benötigt. Geminis 1-Mio.-Token-Fenster verarbeitet vollständige Dokumente, Codebasen und lange Konversationsverläufe. Es ist zudem günstiger bei Ausgaben: 10,50 $ vs. 15 $ pro 1 Mio. Tokens.' } },
-        { '@type': 'Question', name: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Da PromptQuorum Anfragen an OpenAI, Anthropic und Google weiterleitet, ist für jeden Anbieter ein Auftragsverarbeitungsvertrag (AVV) nach DSGVO Art. 28 erforderlich. Alle drei Anbieter stellen AVV für Unternehmenskunden bereit. Das BSI-Grundschutz-Kompendium gibt ergänzende Leitlinien. Bei Prompts mit personenbezogenen Daten AVV-Abdeckung vor dem Einsatz prüfen.' } },
-        { '@type': 'Question', name: 'Ist Multi-Modell-Testing für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Multi-Modell-Testing erhöht die Ausfallsicherheit (kein Single-Point-of-Failure bei einem Anbieter), ermöglicht Kostenoptimierung durch Tier-Routing und dokumentiert Modellentscheidungen nach BSI-Grundschutz-Katalogen. Für Unternehmen mit DSGVO-Pflichten bieten lokale Modelle wie Llama einen datenschutzkonformen Fallback für personenbezogene Daten.' } },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'Prompts über mehrere Modelle testen',
-      inLanguage: 'de',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Test-Eingaben und erwartete Ausgaben definieren', text: 'Erstellen Sie einen Test-Set mit 10–20 repräsentativen Eingaben (Happy Path, Randfälle, adversarielle Beispiele). Definieren Sie für jede Eingabe das erwartete Ausgabeformat und den Inhalt.' },
-        { '@type': 'HowToStep', position: 2, name: 'Bewertungsrubrik erstellen', text: 'Definieren Sie Pass/Fail-Kriterien für jeden Testfall: „Entspricht die Ausgabe dem JSON-Schema?", „Enthält die Ausgabe die Schlüsselinformation?", „Lehnt die Ausgabe unsichere Anfragen ab?"' },
-        { '@type': 'HowToStep', position: 3, name: 'Modellunabhängigen Prompt schreiben', text: 'Schreiben Sie einen System-Prompt mit explizitem JSON-Schema oder XML-Tags. Trennen Sie Rolle und Einschränkungen von der eigentlichen Anfrage. Modellspezifische Formulierungen vermeiden.' },
-        { '@type': 'HowToStep', position: 4, name: 'Parallel an mehrere Modelle senden', text: 'Nutzen Sie PromptQuorum, LangSmith oder eigenen Code, um denselben Test-Set gleichzeitig an GPT-4o, Claude Opus 4.7, Gemini 1.5 Pro und Llama zu senden.' },
-        { '@type': 'HowToStep', position: 5, name: 'Ausgaben nebeneinander vergleichen', text: 'Analysieren Sie die Rohdaten jedes Modells. Suchen Sie nach Formatunterschieden, inhaltlichen Abweichungen und Refusal-Mustern. Ein Modell kann malformiertes JSON liefern, ein anderes die Anfrage ablehnen.' },
-        { '@type': 'HowToStep', position: 6, name: 'Ausgaben nach Rubrik bewerten', text: 'Markieren Sie Pass/Fail für jedes Modell bei jedem Testfall. Berechnen Sie die Pass-Rate pro Modell. Ein Modell mit ≥90 % Pass-Rate ist ein Kandidat für den Produktiveinsatz.' },
-        { '@type': 'HowToStep', position: 7, name: 'Das beste Modell auswählen', text: 'Wählen Sie Modelle nach Genauigkeit, Kosten, Latenz und Sicherheitsanforderungen. Verschiedene Prompt-Typen können auf verschiedene Modelle geroutet werden, um Kosten und Qualität zu optimieren.' },
-      ],
-    },
     sections: {
       keyTakeaways: {
         id: 'key-takeaways',
@@ -649,36 +555,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        { '@type': 'Question', name: 'Pourquoi faut-il tester les prompts sur plusieurs modèles ?', acceptedAnswer: { '@type': 'Answer', text: 'Les modèles diffèrent dans l\'analyse des instructions, la fiabilité JSON, les patterns de refus et les fenêtres de contexte. Un prompt valide sur GPT-4o peut échouer silencieusement sur Claude Opus 4.7. Les tests multi-modèles révèlent ces incompatibilités avant le déploiement.' } },
-        { '@type': 'Question', name: 'Quelle est la différence entre GPT-4o et Claude Opus 4.7 ?', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o est plus strict avec les system prompts et applique les directives JSON (~95 % de JSON valide). Claude Opus 4.7 est plus tolérant envers les formulations informelles mais applique des patterns de refus plus stricts. Pour les tâches à forte entrée, Claude coûte 3 $ contre 5 $ par million de tokens — 40 % moins cher.' } },
-        { '@type': 'Question', name: 'Comment écrire un prompt qui fonctionne sur tous les modèles ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez des formats de sortie explicites (schéma JSON ou XML), séparez le system prompt du message utilisateur, évitez les formulations spécifiques à un modèle, fournissez des exemples few-shot couvrant les cas limites et validez la sortie JSON de façon programmatique.' } },
-        { '@type': 'Question', name: 'Quelle est la différence de coût entre GPT-4o et Claude Opus 4.7 ?', acceptedAnswer: { '@type': 'Answer', text: 'En avril 2026 : GPT-4o entrée 5 $/M tokens, sortie 15 $/M. Claude Opus 4.7 entrée 3 $/M, sortie 15 $/M. Claude économise 40 % sur les tâches à forte entrée. Gemini 1.5 Pro à 3,50 $/10,50 $ est le plus économique pour les longs documents.' } },
-        { '@type': 'Question', name: 'Comment tester le même prompt sur plusieurs modèles simultanément ?', acceptedAnswer: { '@type': 'Answer', text: 'Créez un jeu de tests avec 10 à 20 entrées (chemin nominal, cas limites, exemples adversariaux). Utilisez PromptQuorum, LangSmith ou du code API personnalisé pour distribuer en parallèle. Comparez les sorties côte à côte et évaluez selon une grille pass/fail.' } },
-        { '@type': 'Question', name: 'Que fait PromptQuorum pour les tests multi-modèles ?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum accepte un prompt et un jeu de tests, les envoie en parallèle à GPT-4o, Claude Opus 4.7, Gemini 1.5 Pro et Llama, puis retourne une comparaison des sorties côte à côte avec les taux de réussite par modèle — sans intégrations API séparées.' } },
-        { '@type': 'Question', name: 'Quel modèle est le plus fiable pour les sorties JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o produit du JSON valide ~95 % du temps avec un schéma explicite. Gemini 1.5 Pro suit à ~92 %, Claude Opus 4.7 à ~90 %. Llama 2 70B descend à ~70 %. Pour les pipelines nécessitant du JSON structuré, GPT-4o ou Gemini 1.5 Pro sont les plus sûrs.' } },
-        { '@type': 'Question', name: 'Quand utiliser Gemini 1.5 Pro plutôt que GPT-4o ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez Gemini 1.5 Pro quand votre prompt nécessite une fenêtre de contexte supérieure à 128 K tokens. La fenêtre d\'1 M tokens de Gemini traite des documents complets, des bases de code et de longues conversations. Il est aussi moins coûteux en sortie : 10,50 $ contre 15 $ par million de tokens.' } },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'Tester des prompts sur plusieurs modèles',
-      inLanguage: 'fr',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Définir les entrées de test et les sorties attendues', text: 'Créez un jeu de tests avec 10 à 20 entrées représentatives (chemin nominal, cas limites, exemples adversariaux). Pour chaque entrée, définissez le format de sortie attendu.' },
-        { '@type': 'HowToStep', position: 2, name: 'Créer une grille d\'évaluation', text: 'Définissez des critères pass/fail pour chaque cas de test : « La sortie correspond-elle au schéma JSON ? », « La sortie mentionne-t-elle le fait clé ? », « La sortie refuse-t-elle les requêtes non sûres ? »' },
-        { '@type': 'HowToStep', position: 3, name: 'Écrire un prompt indépendant du modèle', text: 'Rédigez un system prompt avec un schéma JSON ou des balises XML explicites. Séparez le rôle et les contraintes de la requête. Évitez les formulations spécifiques à un modèle.' },
-        { '@type': 'HowToStep', position: 4, name: 'Distribuer en parallèle à plusieurs modèles', text: 'Utilisez PromptQuorum, LangSmith ou du code personnalisé pour envoyer le même jeu de tests simultanément à GPT-4o, Claude Opus 4.7, Gemini 1.5 Pro et Llama.' },
-        { '@type': 'HowToStep', position: 5, name: 'Comparer les sorties côte à côte', text: 'Examinez les sorties brutes de chaque modèle. Repérez les différences de format, les divergences de contenu et les patterns de refus.' },
-        { '@type': 'HowToStep', position: 6, name: 'Évaluer chaque sortie selon la grille', text: 'Marquez pass/fail pour chaque modèle sur chaque cas. Calculez le taux de réussite par modèle. Un modèle à ≥90 % est candidat pour la production.' },
-        { '@type': 'HowToStep', position: 7, name: 'Choisir le(s) modèle(s) correspondant à vos critères', text: 'Sélectionnez les modèles selon la précision, le coût, la latence et les exigences de sécurité. Vous pouvez router différents types de prompts vers différents modèles.' },
-      ],
-    },
     sections: {
       keyTakeaways: {
         id: 'key-takeaways',
@@ -912,36 +788,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: 'なぜ複数モデルでプロンプトをテストする必要があるのか？', acceptedAnswer: { '@type': 'Answer', text: 'モデルによって指示の解析方法、JSON出力信頼性、リファザルパターン、コンテキストウィンドウが異なります。GPT-4oで通過したプロンプトがClaude Opus 4.7では無音で失敗することがあります。マルチモデルテストにより、本番デプロイ前にこれらの互換性の欠陥を特定できます。' } },
-        { '@type': 'Question', name: 'GPT-4oとClaude Opus 4.7のプロンプト処理の違いは何か？', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4oはシステムプロンプトに厳格でJSONスキーマ指示を適用します（JSON有効率~95%）。Claude Opus 4.7はカジュアルな表現に寛容ですが、安全性に関連するタスクには厳格なリファザルパターンを適用します。入力量の多いタスクでは、Claudeは1Mトークンあたり$3対$5——40%安価です。' } },
-        { '@type': 'Question', name: '全モデルで機能するプロンプトの書き方は？', acceptedAnswer: { '@type': 'Answer', text: '明示的な出力フォーマット（JSONスキーマまたはXML）を使用し、システムプロンプトとユーザーメッセージを分離し、モデル固有の表現を避け、エッジケースをカバーするfew-shotの例を提供し、JSONの出力をプログラム的にスキーマに対して検証します。' } },
-        { '@type': 'Question', name: 'GPT-4oとClaude Opus 4.7のコスト差は？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月時点：GPT-4o 入力$5/1Mトークン、出力$15/1M。Claude Opus 4.7 入力$3/1M、出力$15/1M。Claudeは入力量の多いタスクで40%節約。Gemini 1.5 Proは$3.50/$10.50で長文書タスクに最もコスト効率が高い。' } },
-        { '@type': 'Question', name: '複数モデルに同じプロンプトを同時にテストする方法は？', acceptedAnswer: { '@type': 'Answer', text: '10〜20の入力（ハッピーパス、エッジケース、敵対的な例）でテストセットを作成します。PromptQuorum、LangSmith、またはカスタムAPIコードを使用して全モデルに並列ディスパッチします。出力を並べて比較し、pass/failルーブリックで評価します。' } },
-        { '@type': 'Question', name: 'PromptQuorumはマルチモデルテストで何をするのか？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorumはプロンプトとテストセットを受け取り、GPT-4o・Claude Opus 4.7・Gemini 1.5 Pro・Llamaに並列送信し、モデルごとのpass率を含む並列出力比較を返します——別途APIインテグレーションは不要です。' } },
-        { '@type': 'Question', name: 'JSON出力で最も信頼性が高いモデルは？', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4oは明示的なスキーマで~95%の有効なJSONを生成します。Gemini 1.5 Proが~92%、Claude Opus 4.7が~90%と続きます。Llama 2 70Bは~70%まで低下します。構造化されたJSON出力が必要なパイプラインでは、GPT-4oまたはGemini 1.5 Proが最も安全です。' } },
-        { '@type': 'Question', name: 'GPT-4oの代わりにGemini 1.5 Proを使うべき状況は？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトが128Kトークンを超えるコンテキストウィンドウを必要とする場合にGemini 1.5 Proを使用します。Geminiの1Mトークンウィンドウは完全なドキュメント、コードベース、長い会話履歴を処理できます。出力コストも安価で、1Mトークンあたり$10.50対$15です。' } },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'プロンプトを複数モデルでテストする方法',
-      inLanguage: 'ja',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'テスト入力と期待する出力を定義する', text: '10〜20の代表的な入力（ハッピーパス、エッジケース、敵対的な例）でテストセットを作成します。各入力に対して、期待する出力フォーマットと内容を定義します。' },
-        { '@type': 'HowToStep', position: 2, name: 'スコアリングルーブリックを作成する', text: '各テストケースのpass/fail基準を定義します：「出力はJSONスキーマと一致しているか？」「出力は重要な事実を含んでいるか？」「出力は危険なリクエストを拒否するか？」' },
-        { '@type': 'HowToStep', position: 3, name: 'モデル非依存のプロンプトを書く', text: '明示的なJSONスキーマまたはXMLタグを含むシステムプロンプトを作成します。役割と制約を実際のリクエストから分離します。モデル固有の表現を避けます。' },
-        { '@type': 'HowToStep', position: 4, name: '複数モデルに並列ディスパッチする', text: 'PromptQuorum、LangSmith、またはカスタムコードを使用して、同じテストセットをGPT-4o・Claude Opus 4.7・Gemini 1.5 Pro・Llamaに同時送信します。' },
-        { '@type': 'HowToStep', position: 5, name: '出力を並べて比較する', text: '各モデルの生の出力を確認します。フォーマットの違い、コンテンツの乖離、リファザルパターンを探します。' },
-        { '@type': 'HowToStep', position: 6, name: 'ルーブリックで各出力を評価する', text: '各テストケースで各モデルにpass/failを付けます。モデルごとのpass率を計算します。pass率90%以上のモデルが本番候補です。' },
-        { '@type': 'HowToStep', position: 7, name: '最適なモデルを選択する', text: '精度・コスト・レイテンシ・安全要件に基づいてモデルを選択します。コストと品質を最適化するために、異なるプロンプトタイプを異なるモデルにルーティングすることも可能です。' },
-      ],
-    },
     sections: {
       keyTakeaways: {
         id: 'key-takeaways',
@@ -1174,36 +1020,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: '为什么需要跨多个模型测试提示词？', acceptedAnswer: { '@type': 'Answer', text: '不同模型在指令解析、JSON输出可靠性、拒绝模式和上下文窗口方面存在差异。在GPT-4o上通过的提示词可能在Claude Opus 4.7上无声失败。多模型测试在生产部署前揭示这些兼容性缺陷。' } },
-        { '@type': 'Question', name: 'GPT-4o和Claude Opus 4.7在提示词处理上有何不同？', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o对系统提示词更严格，执行JSON模式指令（JSON有效率~95%）。Claude Opus 4.7对非正式措辞更宽容，但对安全相关任务应用更严格的拒绝模式。对于输入密集型任务，Claude每百万token输入费$3对$5——便宜40%。' } },
-        { '@type': 'Question', name: '如何编写在所有模型上都能运行的提示词？', acceptedAnswer: { '@type': 'Answer', text: '使用明确的输出格式（JSON模式或XML），将系统提示词与用户消息分离，避免特定模型的措辞，提供涵盖边缘案例的少样本示例，并以编程方式对照模式验证JSON输出。' } },
-        { '@type': 'Question', name: 'GPT-4o和Claude Opus 4.7的成本差异是多少？', acceptedAnswer: { '@type': 'Answer', text: '截至2026年4月：GPT-4o输入$5/百万token，输出$15/百万。Claude Opus 4.7输入$3/百万，输出$15/百万。Claude在输入密集型任务上节省40%。Gemini 1.5 Pro以$3.50/$10.50的价格是长文档任务最具成本效益的选择。' } },
-        { '@type': 'Question', name: '如何同时在多个模型上测试同一提示词？', acceptedAnswer: { '@type': 'Answer', text: '构建包含10-20个输入（正常路径、边缘案例、对抗性示例）的测试集。使用PromptQuorum、LangSmith或自定义API代码并行向所有模型调度。并排比较输出，并根据通过/失败评分标准进行评分。' } },
-        { '@type': 'Question', name: 'PromptQuorum如何进行多模型测试？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum接受提示词和测试集，并行分发给GPT-4o、Claude Opus 4.7、Gemini 1.5 Pro和Llama，然后返回每个模型的并排输出比较和通过率——无需单独的API集成。' } },
-        { '@type': 'Question', name: '哪个模型对JSON输出最可靠？', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o在明确模式下生成~95%有效的JSON。Gemini 1.5 Pro紧随其后~92%，Claude Opus 4.7~90%。Llama 2 70B降至~70%。对于需要结构化JSON输出的管道，GPT-4o或Gemini 1.5 Pro最安全。' } },
-        { '@type': 'Question', name: '何时应该使用Gemini 1.5 Pro而非GPT-4o？', acceptedAnswer: { '@type': 'Answer', text: '当提示词需要超过12.8万token的上下文窗口时使用Gemini 1.5 Pro。Gemini的100万token窗口可处理完整文档、代码库和长对话历史。其输出成本也更低：每百万token $10.50对$15。' } },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: '如何跨模型测试提示词',
-      inLanguage: 'zh',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: '定义测试输入和预期输出', text: '创建包含10-20个代表性输入（正常路径、边缘案例、对抗性示例）的测试集。为每个输入定义预期的输出格式和内容。' },
-        { '@type': 'HowToStep', position: 2, name: '创建评分标准', text: '为每个测试用例定义通过/失败标准："输出是否符合JSON模式？"、"输出是否包含关键信息？"、"输出是否拒绝不安全请求？"' },
-        { '@type': 'HowToStep', position: 3, name: '编写模型无关的提示词', text: '编写带有明确JSON模式或XML标签的系统提示词。将角色和约束与实际请求分离。避免特定模型的措辞。' },
-        { '@type': 'HowToStep', position: 4, name: '并行向多个模型调度', text: '使用PromptQuorum、LangSmith或自定义代码同时向GPT-4o、Claude Opus 4.7、Gemini 1.5 Pro和Llama发送相同的测试集。' },
-        { '@type': 'HowToStep', position: 5, name: '并排比较输出', text: '检查每个模型的原始输出。寻找格式差异、内容分歧和拒绝模式。一个模型的JSON可能格式错误；另一个可能拒绝请求。' },
-        { '@type': 'HowToStep', position: 6, name: '根据标准对每个输出评分', text: '为每个测试用例的每个模型标记通过/失败。计算每个模型的通过率。通过率≥90%的模型是生产候选者。' },
-        { '@type': 'HowToStep', position: 7, name: '选择最符合标准的模型', text: '根据准确性、成本、延迟和安全要求选择模型。可以将不同类型的提示词路由到不同的模型以优化成本和质量。' },
-      ],
     },
     sections: {
       keyTakeaways: {

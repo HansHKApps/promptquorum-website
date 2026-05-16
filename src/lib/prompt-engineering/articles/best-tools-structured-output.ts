@@ -82,36 +82,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'ListItem', position: 6, name: 'PromptQuorum', description: 'Cross-model testing platform to validate structured output consistency across GPT, Claude, and Gemini.' }
       ]
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'What is structured output in LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Structured output is the practice of constraining LLM responses to a specific schema — JSON format, defined fields, type constraints. Instead of free-text replies, structured output returns data your code can directly parse and validate without error handling.' } },
-        { '@type': 'Question', name: 'Which tool is best for Python developers?', acceptedAnswer: { '@type': 'Answer', text: 'Instructor is the most popular Python choice. It uses Pydantic models to define schemas, automatically handles retries and validation, and supports any LLM API (OpenAI, Anthropic, Google, Ollama). Pydantic AI is an alternative if you also want type-safe agent multi-turn conversations.' } },
-        { '@type': 'Question', name: 'Can I use structured output with local models like Llama?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Outlines specializes in local model constrained decoding — it works with llama.cpp, vLLM, and transformers libraries. Outlines guarantees schema compliance at token generation time with zero hallucination risk. Instructor also supports Ollama if you run it as an API.' } },
-        { '@type': 'Question', name: 'What is the difference between Instructor and Marvin?', acceptedAnswer: { '@type': 'Answer', text: 'Instructor uses Pydantic models to define schemas and handles extraction with error recovery. Marvin uses Python decorators — you decorate a function signature and Marvin auto-generates the LLM prompt. Instructor is more explicit (better for complex validations), Marvin is more concise (better for rapid prototyping).' } },
-        { '@type': 'Question', name: 'Does LangChain support structured output?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. LangChain 0.1+ includes `with_structured_output()` method on ChatOpenAI, ChatAnthropic, ChatGoogle, etc. It automatically converts LangChain tools to structured output schemas. Use this if you already use LangChain agents and want to add schema enforcement without switching libraries.' } },
-        { '@type': 'Question', name: 'How do I test if structured output is reliable?', acceptedAnswer: { '@type': 'Answer', text: 'Use PromptQuorum to run the same prompt across multiple models and measure schema compliance. Different models (GPT-4.5, Claude 4.7, Gemini 3.1) have different structured output reliability. Test before deploying to production. Unit test with Instructor/Pydantic validation locally.' } },
-        { '@type': 'Question', name: 'What does "constrained decoding" mean?', acceptedAnswer: { '@type': 'Answer', text: 'Constrained decoding limits token generation to only valid values according to your schema. Outlines does this by computing the set of valid next tokens at each step. This guarantees schema compliance without post-generation validation or retries, making it faster and more reliable than API-level JSON mode.' } },
-        { '@type': 'Question', name: 'Can I use structured output without any library?', acceptedAnswer: { '@type': 'Answer', text: 'Technically, yes — you can prompt the model to return JSON and then parse it yourself. But validation will fail on hallucinations. All six tools solve this by either validating with retries (Instructor, Marvin), enforcing at decode time (Outlines), or wrapping provider APIs (LangChain, Pydantic AI).' } },
-        { '@type': 'Question', name: 'Which tool has the best documentation?', acceptedAnswer: { '@type': 'Answer', text: 'LangChain and Pydantic AI have the most comprehensive docs due to their corporate backing. Instructor has excellent tutorials and examples despite being community-maintained. Outlines docs are technical but thorough. Marvin has quick-start guides.' } },
-        { '@type': 'Question', name: 'Do I need all six tools or just one?', acceptedAnswer: { '@type': 'Answer', text: 'Start with one. Python developers should try Instructor or Pydantic AI. Local model teams should try Outlines. LangChain users should try LangChain\'s with_structured_output(). Use PromptQuorum to validate consistency across all models. Most teams use one tool + PromptQuorum for testing.' } }
-      ]
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      inLanguage: 'en',
-      name: 'How to Add Structured Output to Your LLM Workflow',
-      totalTime: 'PT10M',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Choose your runtime', text: 'Determine whether you\'re using Python, TypeScript, or a local model. Python developers should start with Instructor. Local model users should try Outlines. LangChain users should use with_structured_output().' },
-        { '@type': 'HowToStep', position: 2, name: 'Define your schema', text: 'Create a Pydantic model (Python) or TypeScript interface for your desired output. Include field types, optional fields, and descriptions. Example: class Person(BaseModel): name: str; age: int; is_verified: bool.' },
-        { '@type': 'HowToStep', position: 3, name: 'Install the library', text: 'Run `pip install instructor` (Python), `npm install @instructor-ai/instructor` (TypeScript), or `pip install pydantic-ai` for async agents. Verify installation with a test import.' },
-        { '@type': 'HowToStep', position: 4, name: 'Wrap your LLM call', text: 'Use the library\'s API to pass your schema. Instructor example: response = client.chat.completions.create(model="gpt-4o", messages=[...], response_model=Person). The library handles validation and retry logic.' },
-        { '@type': 'HowToStep', position: 5, name: 'Test across models with PromptQuorum', text: 'Deploy to PromptQuorum, run the same request against GPT-4.5, Claude 4.7 Opus, and Gemini 3.1 Pro. Compare structured output success rate and latency. Fix schema definitions or prompts based on weak models.' }
-      ]
-    },
     sections: {
       keyTakeaways: {
         isTldr: true,
@@ -405,23 +375,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'Marvin' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' }
       ],
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'Was ist Structured Output in LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Structured Output beschränkt LLM-Ausgaben auf ein spezifisches Schema — JSON-Format, definierte Felder, Typbeschränkungen. Anstelle von Freitext-Antworten gibt Structured Output Daten zurück, die Ihr Code direkt parsen und validieren kann, ohne Fehlerbehandlung.' } },
-        { '@type': 'Question', name: 'Welches Tool ist am besten für Python-Entwickler?', acceptedAnswer: { '@type': 'Answer', text: 'Instructor ist die beliebteste Python-Wahl. Es verwendet Pydantic-Modelle zur Schema-Definition, behandelt Wiederholungen und Validierung automatisch und unterstützt jede LLM-API (OpenAI, Anthropic, Google, Ollama). Pydantic AI ist eine Alternative, wenn Sie auch typsichere mehrteilige Agent-Gespräche benötigen.' } },
-        { '@type': 'Question', name: 'Kann ich Structured Output mit lokalen Modellen wie Llama verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Outlines spezialisiert sich auf lokales Constrained Decoding — es funktioniert mit llama.cpp, vLLM und transformers-Bibliotheken. Outlines garantiert Schema-Conformität bei der Token-Generierung mit null Halluzinations-Risiko. Instructor unterstützt auch Ollama, wenn Sie es als API ausführen.' } },
-        { '@type': 'Question', name: 'Was ist der Unterschied zwischen Instructor und Marvin?', acceptedAnswer: { '@type': 'Answer', text: 'Instructor verwendet Pydantic-Modelle zur Schema-Definition und handhabt Extraktion mit Fehlerwiederherstellung. Marvin verwendet Python-Dekoratoren — Sie dekorieren eine Funktionssignatur und Marvin generiert automatisch den LLM-Prompt. Instructor ist expliziter (besser für komplexe Validierungen), Marvin ist prägnanter (besser für schnelle Prototypen).' } },
-        { '@type': 'Question', name: 'Unterstützt LangChain Structured Output?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. LangChain 0.1+ enthält with_structured_output()-Methode auf ChatOpenAI, ChatAnthropic, ChatGoogle, etc. Es konvertiert automatisch LangChain-Tools in Structured Output-Schemas. Verwenden Sie dies, wenn Sie bereits LangChain Agents nutzen und Schema-Durchsetzung hinzufügen möchten, ohne Bibliotheken zu wechseln.' } },
-        { '@type': 'Question', name: 'Wie teste ich, ob Structured Output zuverlässig ist?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie PromptQuorum, um denselben Prompt über mehrere Modelle hinweg auszuführen und die Schema-Konformität zu messen. Verschiedene Modelle (GPT-4.5, Claude 4.7, Gemini 3.1) haben unterschiedliche Structured Output-Zuverlässigkeit. Testen Sie vor der Bereitstellung in der Produktion.' } },
-        { '@type': 'Question', name: 'Was bedeutet "Constrained Decoding"?', acceptedAnswer: { '@type': 'Answer', text: 'Constrained Decoding begrenzt die Token-Generierung auf nur gültige Werte gemäß Ihrem Schema. Outlines tut dies, indem es in jedem Schritt die Menge gültiger nächster Tokens berechnet. Dies garantiert Schema-Konformität ohne Nachgenerierungsvalidierung oder Wiederholungen, was es schneller und zuverlässiger macht als API-JSON-Modus.' } },
-        { '@type': 'Question', name: 'Kann ich Structured Output ohne Bibliotheken verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Technisch ja — Sie können das Modell auffordern, JSON zurückzugeben, und es dann selbst parsen. Aber die Validierung schlägt bei Halluzinationen fehl. Alle sechs Tools lösen dies durch Validierung mit Wiederholungen (Instructor, Marvin), Durchsetzung bei der Dekodierung (Outlines) oder Umwicklung von Provider-APIs (LangChain, Pydantic AI).' } },
-        { '@type': 'Question', name: 'Welches Tool hat die beste Dokumentation?', acceptedAnswer: { '@type': 'Answer', text: 'LangChain und Pydantic AI haben die umfangreichste Dokumentation wegen ihrer Unternehmensmittel. Instructor hat hervorragende Tutorials und Beispiele trotz Community-Wartung. Outlines-Dokumentation ist technisch, aber gründlich. Marvin hat Schnellstart-Leitfäden.' } },
-        { '@type': 'Question', name: 'Brauche ich alle sechs Tools oder nur einen?', acceptedAnswer: { '@type': 'Answer', text: 'Beginnen Sie mit einem. Python-Entwickler sollten Instructor oder Pydantic AI ausprobieren. Teams mit lokalen Modellen sollten Outlines versuchen. LangChain-Benutzer sollten LangChain\'s with_structured_output() versuchen. Verwenden Sie PromptQuorum, um die Konsistenz über alle Modelle hinweg zu überprüfen. Die meisten Teams verwenden ein Tool + PromptQuorum zum Testen.' } },
-        { '@type': 'Question', name: 'Müssen wir Structured Output für DSGVO-Compliance verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Structured Output hilft bei DSGVO, indem es unerwartete Datenextraktion verhindert. Mit definierten Schemas kann ein LLM keine nicht geplanten Datenfelder generieren. Dies reduziert das Risiko unerwarteter Datenverarbeitung. Verwenden Sie Instructor oder Outlines mit strikten Schemas für Datenschutz-kritische Workflows.' } }
-      ]
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -752,22 +705,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' }
       ],
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'Qu\'est-ce que Structured Output dans les LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Structured Output contraint les réponses des LLM à un schéma spécifique — format JSON, champs définis, contraintes de type. Au lieu de réponses en texte libre, Structured Output retourne des données que votre code peut analyser et valider directement sans gestion d\'erreurs.' } },
-        { '@type': 'Question', name: 'Quel outil est le meilleur pour les développeurs Python?', acceptedAnswer: { '@type': 'Answer', text: 'Instructor est le choix Python le plus populaire. Il utilise des modèles Pydantic pour définir les schémas, gère automatiquement les tentatives et la validation, et supporte n\'importe quelle API LLM (OpenAI, Anthropic, Google, Ollama). Pydantic AI est une alternative si vous avez également besoin de conversations multi-tours type-safe.' } },
-        { '@type': 'Question', name: 'Puis-je utiliser Structured Output avec des modèles locaux comme Llama?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Outlines se spécialise dans le décodage contraint des modèles locaux — il fonctionne avec llama.cpp, vLLM et les bibliothèques transformers. Outlines garantit la conformité du schéma au moment de la génération de tokens sans risque d\'hallucination. Instructor supporte aussi Ollama si vous l\'exécutez en tant qu\'API.' } },
-        { '@type': 'Question', name: 'Quelle est la différence entre Instructor et Marvin?', acceptedAnswer: { '@type': 'Answer', text: 'Instructor utilise des modèles Pydantic pour définir les schémas et gère l\'extraction avec récupération d\'erreurs. Marvin utilise des décorateurs Python — vous décorez une signature de fonction et Marvin génère automatiquement le prompt LLM. Instructor est plus explicite (meilleur pour les validations complexes), Marvin est plus concis (meilleur pour les prototypes rapides).' } },
-        { '@type': 'Question', name: 'LangChain supporte-t-il Structured Output?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. LangChain 0.1+ inclut la méthode with_structured_output() sur ChatOpenAI, ChatAnthropic, ChatGoogle, etc. Il convertit automatiquement les outils LangChain en schémas Structured Output. Utilisez ceci si vous utilisez déjà les agents LangChain et souhaitez ajouter l\'application de schéma sans changer de bibliothèques.' } },
-        { '@type': 'Question', name: 'Comment tester si Structured Output est fiable?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez PromptQuorum pour exécuter le même prompt sur plusieurs modèles et mesurer la conformité du schéma. Les modèles différents (GPT-4.5, Claude 4.7, Gemini 3.1) ont une fiabilité Structured Output différente. Testez avant de déployer en production. Testez les unités avec validation Instructor/Pydantic localement.' } },
-        { '@type': 'Question', name: 'Qu\'entend-on par "décodage contraint"?', acceptedAnswer: { '@type': 'Answer', text: 'Le décodage contraint limite la génération de tokens aux seules valeurs valides selon votre schéma. Outlines le fait en calculant l\'ensemble des tokens suivants valides à chaque étape. Cela garantit la conformité du schéma sans validation post-génération ou nouvelles tentatives, ce qui le rend plus rapide et plus fiable que le mode JSON au niveau de l\'API.' } },
-        { '@type': 'Question', name: 'Puis-je utiliser Structured Output sans bibliothèques?', acceptedAnswer: { '@type': 'Answer', text: 'Techniquement oui — vous pouvez inviter le modèle à retourner du JSON et l\'analyser vous-même. Mais la validation échouera sur les hallucinations. Les six outils résolvent ceci par validation avec tentatives (Instructor, Marvin), application au moment du décodage (Outlines), ou enveloppe des APIs de fournisseurs (LangChain, Pydantic AI).' } },
-        { '@type': 'Question', name: 'Quel outil a la meilleure documentation?', acceptedAnswer: { '@type': 'Answer', text: 'LangChain et Pydantic AI ont la documentation la plus complète en raison de leurs ressources d\'entreprise. Instructor a d\'excellents tutoriels et exemples malgré la maintenance communautaire. La documentation Outlines est technique mais approfondie. Marvin a des guides de démarrage rapide.' } },
-        { '@type': 'Question', name: 'Ai-je besoin des six outils ou juste un?', acceptedAnswer: { '@type': 'Answer', text: 'Commencez par un. Les développeurs Python devraient essayer Instructor ou Pydantic AI. Les équipes avec modèles locaux devraient essayer Outlines. Les utilisateurs de LangChain devraient essayer with_structured_output() de LangChain. Utilisez PromptQuorum pour valider la cohérence sur tous les modèles. La plupart des équipes utilisent un outil + PromptQuorum pour les tests.' } }
-      ]
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1084,22 +1021,6 @@ export const article: Record<Language, PEArticle> = {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
       },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'LLMのStructured Outputとは何か？', acceptedAnswer: { '@type': 'Answer', text: 'Structured OutputはLLM応答を特定スキーマ（JSON形式、定義されたフィールド、型制約）に制限します。自由形式のテキストではなく、コードが直接解析・検証できるデータを返します。' } },
-        { '@type': 'Question', name: 'Python開発者に最適なツールは？', acceptedAnswer: { '@type': 'Answer', text: 'Instructorが最も人気のあるPython選択肢です。Pydanticモデルでスキーマを定義し、自動的に再試行と検証を処理し、あらゆるLLM API（OpenAI、Anthropic、Google、Ollama）をサポートします。' } },
-        { '@type': 'Question', name: 'Llamaなどのローカルモデルで使えるか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Outlinesはローカルモデルの制約付きデコーディングに特化しており、llama.cpp、vLLM、transformersライブラリと互換です。トークン生成時にスキーマ準拠を保証します。' } },
-        { '@type': 'Question', name: 'InstructorとMarvinの違いは？', acceptedAnswer: { '@type': 'Answer', text: 'Instructorはスキーマ定義にPydanticモデルを使用し、エラー復旧で抽出を処理します。Marvinはデコレータを使用します。Instructorはより明示的で複雑な検証向け、Marvinはより簡潔でプロトタイプ向けです。' } },
-        { '@type': 'Question', name: 'LangChainはStructured Outputをサポート？', acceptedAnswer: { '@type': 'Answer', text: 'はい。LangChain 0.1+はChatOpenAI、ChatAnthropic、ChatGoogle等にwith_structured_output()メソッドを含みます。LangChainツールを自動的にスキーマに変換します。' } },
-        { '@type': 'Question', name: 'Structured Outputの信頼性をテストするには？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorumを使用して、複数モデルで同じプロンプトを実行し、スキーマ準拠を測定します。異なるモデルは異なる信頼性を持つため、本番前にテストしてください。' } },
-        { '@type': 'Question', name: '"制約付きデコーディング"とは？', acceptedAnswer: { '@type': 'Answer', text: 'トークン生成をスキーマに従う値のみに制限します。Outlinesはステップごとに有効な次トークンセットを計算します。これはAPI JSON-Modeより高速で信頼性が高いです。' } },
-        { '@type': 'Question', name: 'ライブラリなしで使用できる？', acceptedAnswer: { '@type': 'Answer', text: '技術的には可能ですが、検証は幻覚で失敗します。6つのツールすべてが再試行検証、デコード時強制、またはAPI-Wrapで解決します。' } },
-        { '@type': 'Question', name: 'ドキュメントが最も充実しているツールは？', acceptedAnswer: { '@type': 'Answer', text: 'LangChainとPydantic AIが企業支援のため最も充実しています。Instructorはコミュニティ保守ながら優れたチュートリアルがあります。Outlinesは技術的で徹底しています。' } },
-        { '@type': 'Question', name: '6つすべて必要か、1つでいい？', acceptedAnswer: { '@type': 'Answer', text: '1つから始めてください。Python開発者はInstructorかPydantic AIを試してください。ローカルモデルはOutlinesを試してください。LangChainユーザーはwith_structured_output()を試してください。PromptQuorumで全モデル検証を。' } }
-      ]
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1425,22 +1346,6 @@ export const article: Record<Language, PEArticle> = {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
       },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'LLM中的Structured Output是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Structured Output将LLM响应限制为特定模式——JSON格式、定义的字段、类型约束。不是自由文本，而是返回代码可以直接解析和验证的数据。' } },
-        { '@type': 'Question', name: 'Python开发者最好的工具是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Instructor是最受欢迎的Python选择。它使用Pydantic模型定义模式，自动处理重试和验证，支持任何LLM API（OpenAI、Anthropic、Google、Ollama）。' } },
-        { '@type': 'Question', name: '我可以与Llama等本地模型一起使用吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。Outlines专门用于本地模型约束解码——与llama.cpp、vLLM和transformers库兼容。保证令牌生成时的模式合规性。' } },
-        { '@type': 'Question', name: 'Instructor和Marvin有什么区别？', acceptedAnswer: { '@type': 'Answer', text: 'Instructor使用Pydantic模型定义模式，用错误恢复处理提取。Marvin使用Python装饰器。Instructor更明确（适合复杂验证），Marvin更简洁（适合快速原型）。' } },
-        { '@type': 'Question', name: 'LangChain支持Structured Output吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。LangChain 0.1+在ChatOpenAI、ChatAnthropic、ChatGoogle等上包含with_structured_output()方法。自动将LangChain工具转换为模式。' } },
-        { '@type': 'Question', name: '如何测试Structured Output的可靠性？', acceptedAnswer: { '@type': 'Answer', text: '使用PromptQuorum在多个模型上运行相同的提示并测量模式合规性。不同的模型有不同的可靠性。在生产前进行测试。' } },
-        { '@type': 'Question', name: '"约束解码"是什么意思？', acceptedAnswer: { '@type': 'Answer', text: '将令牌生成限制为仅符合您的模式的有效值。Outlines通过计算每一步的有效下一个令牌集来实现。这保证了比API JSON模式更快、更可靠的模式合规性。' } },
-        { '@type': 'Question', name: '我可以不用任何库使用Structured Output吗？', acceptedAnswer: { '@type': 'Answer', text: '从技术上讲可以，但验证会因幻觉而失败。6个工具都通过重试验证、解码强制或API包装来解决。' } },
-        { '@type': 'Question', name: '哪个工具的文档最好？', acceptedAnswer: { '@type': 'Answer', text: 'LangChain和Pydantic AI因为企业支持有最全面的文档。Instructor虽然是社区维护但有很好的教程。Outlines的文档很技术性但很全面。' } },
-        { '@type': 'Question', name: '我需要全部6个工具还是只需要一个？', acceptedAnswer: { '@type': 'Answer', text: '从一个开始。Python开发者试试Instructor或Pydantic AI。本地模型团队试试Outlines。LangChain用户试试LangChain的with_structured_output()。用PromptQuorum验证跨模型一致性。' } }
-      ]
     },
     itemListSchema: {
       '@context': 'https://schema.org',

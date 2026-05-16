@@ -438,102 +438,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Local LLM on low-end PC' },
       ],
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'Can I run local AI on 4 GB RAM?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'Yes, but only with sub-2B models like Llama 3.2 1B Q4_0 (about 0.7 GB on disk) or SmolLM 2 360M (about 0.25 GB on disk). GPT4All is the only one of the four apps that lists 4 GB as the official minimum. Expect 3–8 tokens per second on a modern CPU and noticeably more sluggish UI behavior because the operating system has almost no headroom.',
-          },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Does an old Intel CPU work for local AI?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'Anything with AVX2 (Haswell, 2013, or newer) works in 2026. The practical floor is an Intel Core i5-8250U or older Ryzen 5 2500U, where Phi-4 Mini Q4 runs at 4–6 tokens per second. CPUs without AVX2 (pre-2013 Intel, original AMD Bulldozer) will load but run at 1–2 tokens per second, which is unusable for chat.',
-          },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Will local AI brick my laptop?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'No. Local inference is a normal user-space process — it cannot damage hardware. The worst-case outcome is the laptop running hot (90–100°C on ultraportables) and throttling, which the firmware protects against automatically. To avoid this, use a cooling pad on prolonged sessions, keep the room under 25°C, and stop inference if the chassis is uncomfortable to touch.',
-          },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Is integrated graphics enough?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'On Apple Silicon (M1 and later) it is more than enough — unified memory makes the iGPU effectively a low-end discrete GPU. On Intel Core Ultra (Meteor Lake / Arrow Lake) it can give 30–60% extra speed if you set up SYCL. On older Intel UHD / Iris Plus / AMD Vega, integrated graphics is slower than the CPU and not worth using.',
-          },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Which model is fastest on CPU only?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'Llama 3.2 1B Q4_0 and SmolLM 2 1.7B Q4_K_M are the fastest usable models. Llama 3.2 1B reaches 25–50 tokens per second on Apple M1 and 12–25 tokens per second on a modern Ryzen or Intel CPU. SmolLM 2 is similar speed with slightly more polished writing. Anything larger than 4B parameters is unlikely to feel fast on CPU-only systems.',
-          },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Does adding RAM help more than upgrading the CPU?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'On 8 GB systems, going to 16 GB is the single biggest practical upgrade because it unlocks 7B–8B models like Mistral 7B Q4 and Llama 3.1 8B Q4. CPU upgrades give 20–50% more tokens per second; the RAM upgrade gives 2–4× quality (jumping from 1B–4B to 7B–8B). If you can do only one, add RAM.',
-          },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Can I run local AI on a Chromebook?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'Only if Linux dev mode (Crostini) is available. The four apps in this guide all run in the Linux container — llama.cpp compiled from source is the most reliable on ARM Chromebooks, while x86 Chromebooks (Intel-based) work with Ollama or GPT4All. Performance maps to the underlying CPU; an Intel Core i3 / i5 Chromebook behaves like the equivalent Windows laptop.',
-          },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Does Windows 10 still work for local AI in 2026?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'Yes. All four apps support Windows 10 22H2. Ollama, GPT4All, and Jan ship signed Windows installers; llama.cpp ships prebuilt Windows binaries on its GitHub releases. The end of Windows 10 mainstream support in October 2025 does not prevent installation, but security updates have ended, so consider a Linux dual-boot or Windows 11 upgrade for long-term use.',
-          },
-        },
-        {
-          '@type': 'Question',
-          'name': "What's the cheapest laptop that runs local AI well?",
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'A used 2021–2022 ThinkPad T14 or Dell Latitude 5430 with 16 GB RAM and a Ryzen 5 5500U or Intel i5-1235U costs €350–450 in 2026 and runs Phi-4 Mini Q4 at 8–14 tokens per second. Cheaper still: any 8 GB Apple M1 MacBook Air at €450–550 used, which beats most x86 laptops on tokens per second thanks to unified memory.',
-          },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Can I use a Raspberry Pi for local AI?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text':
-              'A Raspberry Pi 5 with 8 GB RAM runs Llama 3.2 1B Q4 at 4–7 tokens per second — usable but slow. A Pi 4 4 GB caps out at around 2 tokens per second on TinyLlama 1B. For real chat use, an 8 GB x86 laptop or M1 MacBook Air is faster, cheaper used, and easier to set up. Pi makes sense only for embedded, edge, or always-on workloads.',
-          },
-        },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -968,25 +872,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'cssSelector': ['.article-intro', '.key-takeaways'],
       },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'inLanguage': 'de',
-      'mainEntity': [
-        { '@type': 'Question', 'name': 'Kann ich lokale KI auf 4 GB RAM ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, aber nur mit Sub-2B-Modellen wie Llama 3.2 1B Q4_0 (etwa 0,7 GB auf der Festplatte) oder SmolLM 2 360M (etwa 0,25 GB auf der Festplatte). GPT4All ist die einzige der vier Apps, die 4 GB als offizielles Minimum auflistet. Erwarten Sie 3–8 Tokens pro Sekunde auf einer modernen CPU und merklich trägeres UI-Verhalten, weil das OS fast keinen Spielraum hat.' } },
-        { '@type': 'Question', 'name': 'Funktioniert eine alte Intel-CPU für lokale KI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Alles mit AVX2 (Haswell, 2013, oder neuer) funktioniert in 2026. Die praktische Untergrenze ist eine Intel Core i5-8250U oder ein älterer Ryzen 5 2500U, wo Phi-4 Mini Q4 bei 4–6 Tokens pro Sekunde läuft. CPUs ohne AVX2 (vor 2013 Intel, Original-AMD-Bulldozer) laden zwar, laufen aber bei 1–2 Tokens pro Sekunde, was für Chat unbrauchbar ist.' } },
-        { '@type': 'Question', 'name': 'Beschädigt lokale KI meinen Laptop?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Lokale Inferenz ist ein normaler User-Space-Prozess — sie kann keine Hardware beschädigen. Das Worst-Case-Szenario ist, dass der Laptop heiß wird (90–100 °C auf Ultraportables) und drosselt, wovor die Firmware automatisch schützt.' } },
-        { '@type': 'Question', 'name': 'Reicht integrierte Grafik aus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Auf Apple Silicon (M1 und neuer) ist sie mehr als ausreichend — Unified Memory macht die iGPU effektiv zu einer Low-End-Diskret-GPU. Auf Intel Core Ultra (Meteor Lake / Arrow Lake) kann sie 30–60 % zusätzliche Geschwindigkeit bringen. Auf älteren Intel UHD / Iris Plus / AMD Vega ist integrierte Grafik langsamer als die CPU.' } },
-        { '@type': 'Question', 'name': 'Welches Modell ist am schnellsten auf reiner CPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 1B Q4_0 und SmolLM 2 1.7B Q4_K_M sind die schnellsten nutzbaren Modelle. Llama 3.2 1B erreicht 25–50 Tokens pro Sekunde auf Apple M1 und 12–25 Tokens pro Sekunde auf einer modernen Ryzen- oder Intel-CPU.' } },
-        { '@type': 'Question', 'name': 'Hilft mehr RAM mehr als ein CPU-Upgrade?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Auf 8-GB-Systemen ist der Wechsel zu 16 GB das größte praktische Upgrade, weil es 7B–8B-Modelle wie Mistral 7B Q4 und Llama 3.1 8B Q4 freischaltet. CPU-Upgrades bringen 20–50 % mehr Tokens pro Sekunde; das RAM-Upgrade bringt 2–4× Qualität.' } },
-        { '@type': 'Question', 'name': 'Kann ich lokale KI auf einem Chromebook ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nur wenn der Linux-Dev-Modus (Crostini) verfügbar ist. Die vier Apps in dieser Anleitung laufen alle im Linux-Container — llama.cpp aus dem Quellcode kompiliert ist auf ARM-Chromebooks am zuverlässigsten, während x86-Chromebooks mit Ollama oder GPT4All funktionieren.' } },
-        { '@type': 'Question', 'name': 'Funktioniert Windows 10 noch für lokale KI in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Alle vier Apps unterstützen Windows 10 22H2. Ollama, GPT4All und Jan liefern signierte Windows-Installer; llama.cpp liefert vorgefertigte Windows-Binärdateien. Das Ende des Windows-10-Mainstream-Supports im Oktober 2025 verhindert die Installation nicht, aber Sicherheitsupdates sind eingestellt.' } },
-        { '@type': 'Question', 'name': 'Was ist der günstigste Laptop, der lokale KI gut ausführt?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ein gebrauchtes 2021–2022 ThinkPad T14 oder Dell Latitude 5430 mit 16 GB RAM und einem Ryzen 5 5500U oder Intel i5-1235U kostet 350–450 € in 2026 und läuft Phi-4 Mini Q4 bei 8–14 Tokens pro Sekunde. Noch günstiger: jedes 8-GB-Apple-M1-MacBook-Air zu 450–550 € gebraucht.' } },
-        { '@type': 'Question', 'name': 'Kann ich einen Raspberry Pi für lokale KI verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ein Raspberry Pi 5 mit 8 GB RAM läuft Llama 3.2 1B Q4 bei 4–7 Tokens pro Sekunde — nutzbar, aber langsam. Ein Pi 4 4 GB ist bei rund 2 Tokens pro Sekunde auf TinyLlama 1B begrenzt. Für echte Chat-Nutzung ist ein 8-GB-x86-Laptop oder ein M1 MacBook Air schneller, gebraucht günstiger und einfacher einzurichten.' } },
-        { '@type': 'Question', 'name': 'Muss ich bei der Verwendung lokaler KI-Apps die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei rein lokaler Inferenz auf Ihrem Gerät verlassen die verarbeiteten Daten Ihren Endpunkt nicht — das erfüllt die Anforderungen an Datenresidenz und Auftragsverarbeitung (Art. 28 DSGVO) ohne zusätzliche Auftragsverarbeitungsverträge mit Cloud-Anbietern. Beachten Sie für den geschäftlichen Einsatz dennoch die BSI-Grundschutz-Kataloge für die Konfiguration der Endgeräte. Wenn Sie sensible Kategorien (Art. 9 DSGVO) verarbeiten, dokumentieren Sie die Verarbeitung im Verzeichnis von Verarbeitungstätigkeiten.' } },
-        { '@type': 'Question', 'name': 'Sind lokale KI-Apps für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja — und besonders dort, wo Cloud-KI an Compliance-Hürden scheitert. Mittelständische Unternehmen in Maschinenbau, Steuerkanzleien, Arztpraxen und Anwaltskanzleien setzen 2026 zunehmend auf lokale Modelle, um Mandantendaten, Patientendaten und Konstruktionsdaten DSGVO-konform mit KI zu verarbeiten. Empfohlene Konfiguration: Ollama oder GPT4All auf einem dedizierten Workstation-PC (16 GB RAM minimum), BSI-konformer Festplattenverschlüsselung, und einem internen Netzwerksegment ohne Internetzugang während der Inferenz.' } },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1257,23 +1142,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'LLM local sur PC modeste' },
       ],
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'inLanguage': 'fr',
-      'mainEntity': [
-        { '@type': 'Question', 'name': 'Puis-je faire tourner de l\'IA locale sur 4 Go RAM ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, mais uniquement avec des modèles sub-2B comme Llama 3.2 1B Q4_0 (environ 0.7 Go sur disque) ou SmolLM 2 360M (environ 0.25 Go sur disque). GPT4All est la seule des quatre apps qui liste 4 Go comme minimum officiel.' } },
-        { '@type': 'Question', 'name': 'Un ancien CPU Intel fonctionne-t-il pour l\'IA locale ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Tout ce qui dispose d\'AVX2 (Haswell, 2013, ou plus récent) fonctionne en 2026. Le plancher pratique est un Intel Core i5-8250U ou un Ryzen 5 2500U plus ancien, où Phi-4 Mini Q4 tourne à 4–6 tokens par seconde.' } },
-        { '@type': 'Question', 'name': 'L\'IA locale va-t-elle abîmer mon portable ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. L\'inférence locale est un processus utilisateur normal — il ne peut pas endommager le matériel. Le pire scénario est un portable qui chauffe (90–100 °C sur ultraportables) et bride, contre quoi le firmware protège automatiquement.' } },
-        { '@type': 'Question', 'name': 'Les graphiques intégrés sont-ils suffisants ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sur Apple Silicon (M1 et plus récent) ils sont plus que suffisants — la mémoire unifiée fait de l\'iGPU effectivement un GPU dédié bas de gamme. Sur Intel Core Ultra ils peuvent apporter 30–60 % de vitesse en plus si vous configurez SYCL.' } },
-        { '@type': 'Question', 'name': 'Quel modèle est le plus rapide en CPU seul ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 1B Q4_0 et SmolLM 2 1.7B Q4_K_M sont les modèles utilisables les plus rapides. Llama 3.2 1B atteint 25–50 tokens par seconde sur Apple M1 et 12–25 tokens par seconde sur un CPU Ryzen ou Intel moderne.' } },
-        { '@type': 'Question', 'name': 'Ajouter de la RAM aide-t-il plus qu\'un upgrade CPU ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sur les systèmes 8 Go, passer à 16 Go est l\'upgrade pratique le plus important parce qu\'il débloque les modèles 7B–8B. Les upgrades CPU apportent 20–50 % de tokens par seconde en plus ; l\'upgrade RAM apporte 2–4× de qualité.' } },
-        { '@type': 'Question', 'name': 'Puis-je faire tourner de l\'IA locale sur un Chromebook ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Uniquement si le mode dev Linux (Crostini) est disponible. Les quatre apps de ce guide tournent toutes dans le conteneur Linux — llama.cpp compilé depuis les sources est le plus fiable sur les Chromebooks ARM, tandis que les Chromebooks x86 fonctionnent avec Ollama ou GPT4All.' } },
-        { '@type': 'Question', 'name': 'Windows 10 fonctionne-t-il toujours pour l\'IA locale en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Les quatre apps supportent Windows 10 22H2. Ollama, GPT4All et Jan livrent des installeurs Windows signés ; llama.cpp livre des binaires Windows précompilés. La fin du support grand public de Windows 10 en octobre 2025 n\'empêche pas l\'installation.' } },
-        { '@type': 'Question', 'name': 'Quel est le portable le moins cher qui fait tourner l\'IA locale convenablement ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Un ThinkPad T14 ou Dell Latitude 5430 d\'occasion 2021–2022 avec 16 Go RAM et un Ryzen 5 5500U ou Intel i5-1235U coûte 350–450 € en 2026 et fait tourner Phi-4 Mini Q4 à 8–14 tokens par seconde. Encore moins cher : tout MacBook Air Apple M1 8 Go d\'occasion à 450–550 €.' } },
-        { '@type': 'Question', 'name': 'Puis-je utiliser un Raspberry Pi pour l\'IA locale ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Un Raspberry Pi 5 avec 8 Go RAM fait tourner Llama 3.2 1B Q4 à 4–7 tokens par seconde — utilisable mais lent. Un Pi 4 4 Go plafonne autour de 2 tokens par seconde sur TinyLlama 1B. Pour un usage chat réel, un portable x86 8 Go ou un MacBook Air M1 est plus rapide.' } },
-      ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1550,23 +1418,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'inLanguage': 'ja',
-      'mainEntity': [
-        { '@type': 'Question', 'name': '4 GB RAMでローカルAIを実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、ただしLlama 3.2 1B Q4_0（ディスク上約0.7 GB）やSmolLM 2 360M（ディスク上約0.25 GB）のような2B未満のモデルに限ります。4 GBを公式最低要件としているのは4アプリ中GPT4Allのみです。' } },
-        { '@type': 'Question', 'name': '古いIntel CPUはローカルAIで使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'AVX2搭載（Haswell、2013年以降）のものは2026年でも動作します。実用的な下限はIntel Core i5-8250Uや旧Ryzen 5 2500Uで、Phi-4 Mini Q4が4〜6トークン/秒で動作します。' } },
-        { '@type': 'Question', 'name': 'ローカルAIでノートPCが壊れますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。ローカル推論は通常のユーザー空間プロセスです — ハードウェアを破損させることはできません。最悪のケースはノートPCが熱くなり（ウルトラポータブルで90〜100°C）スロットルすることで、ファームウェアが自動的に保護します。' } },
-        { '@type': 'Question', 'name': '統合グラフィックスで十分ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Apple Silicon（M1以降）では十分以上です — ユニファイドメモリによりiGPUが事実上低価格専用GPUとして機能します。Intel Core Ultraでは30〜60％の追加速度が得られます。' } },
-        { '@type': 'Question', 'name': 'CPU専用で最速のモデルは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 1B Q4_0とSmolLM 2 1.7B Q4_K_Mが最速の使用可能モデルです。Llama 3.2 1BはApple M1で25〜50トークン/秒、最新RyzenまたはIntel CPUで12〜25トークン/秒に達します。' } },
-        { '@type': 'Question', 'name': 'RAM追加はCPUアップグレードより効果的ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '8GBシステムでは、16GBへの移行が最大の実用アップグレードです。CPUアップグレードは20〜50％多くのトークン/秒、RAMアップグレードは2〜4倍の品質を提供します。' } },
-        { '@type': 'Question', 'name': 'Chromebookでローカルaiを実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Linux dev mode（Crostini）が利用可能な場合のみ。このガイドの4アプリはすべてLinuxコンテナで動作します — ARM Chromebookではソースからコンパイルしたllama.cppが最も信頼性が高く、x86 ChromebookはOllamaやGPT4Allで動作します。' } },
-        { '@type': 'Question', 'name': '2026年でもWindows 10はローカルAIに使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。4アプリすべてがWindows 10 22H2をサポートします。Ollama、GPT4All、Janは署名付きWindowsインストーラーを提供し、llama.cppはGitHubリリースにプリビルドWindowsバイナリを提供します。' } },
-        { '@type': 'Question', 'name': 'ローカルAIをまともに動かせる最安ノートPCは？', 'acceptedAnswer': { '@type': 'Answer', 'text': '中古2021〜2022年のThinkPad T14またはDell Latitude 5430（16 GB RAM、Ryzen 5 5500UまたはIntel i5-1235U）は2026年に約60,000〜80,000円で、Phi-4 Mini Q4を8〜14トークン/秒で動作させます。さらに安価：8 GB Apple M1 MacBook Air中古は約80,000〜100,000円。' } },
-        { '@type': 'Question', 'name': 'Raspberry PiをローカルAIに使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '8 GB RAM搭載のRaspberry Pi 5はLlama 3.2 1B Q4を4〜7トークン/秒で動作 — 使用可能だが遅い。Pi 4 4 GBはTinyLlama 1Bで約2トークン/秒が上限。実際のチャット使用には、8 GB x86ノートPCやM1 MacBook Airの方が高速、中古で安価、セットアップが簡単です。' } },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1841,23 +1692,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': '低配PC本地LLM' },
       ],
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'inLanguage': 'zh',
-      'mainEntity': [
-        { '@type': 'Question', 'name': '能在4GB内存上运行本地AI吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，但仅限于Llama 3.2 1B Q4_0（磁盘上约0.7 GB）或SmolLM 2 360M（磁盘上约0.25 GB）等2B以下模型。GPT4All是4个应用中唯一将4GB列为官方最低要求的。' } },
-        { '@type': 'Question', 'name': '老旧Intel CPU能用于本地AI吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '任何带AVX2的（Haswell，2013年或更新）在2026年都可用。实用底线是Intel Core i5-8250U或老旧Ryzen 5 2500U，Phi-4 Mini Q4在其上以4–6 tokens/秒运行。' } },
-        { '@type': 'Question', 'name': '本地AI会损坏我的笔记本吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不会。本地推理是普通用户空间进程 — 它无法损害硬件。最坏情况是笔记本运行温度高（超便携上90–100°C）和降频，固件自动保护。' } },
-        { '@type': 'Question', 'name': '集成显卡足够吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在Apple Silicon（M1及以后）上绰绰有余 — 统一内存使iGPU实际上是低端独立GPU。在Intel Core Ultra上设置SYCL可获得30–60%额外速度。' } },
-        { '@type': 'Question', 'name': 'CPU专用最快的模型是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 1B Q4_0和SmolLM 2 1.7B Q4_K_M是最快可用模型。Llama 3.2 1B在Apple M1上达到25–50 tokens/秒，在现代Ryzen或Intel CPU上达到12–25 tokens/秒。' } },
-        { '@type': 'Question', 'name': '加内存是否比升级CPU更有帮助？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在8GB系统上，升级到16GB是最大的实用升级，因为它解锁了7B–8B模型。CPU升级提供20–50%更多tokens/秒；内存升级提供2–4倍质量。' } },
-        { '@type': 'Question', 'name': '能在Chromebook上运行本地AI吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '仅当Linux开发模式（Crostini）可用。本指南的4个应用都在Linux容器中运行 — 从源码编译的llama.cpp在ARM Chromebook上最可靠，而x86 Chromebook使用Ollama或GPT4All。' } },
-        { '@type': 'Question', 'name': '2026年Windows 10还能用于本地AI吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。所有4个应用都支持Windows 10 22H2。Ollama、GPT4All和Jan提供签名的Windows安装程序；llama.cpp提供预构建Windows二进制文件。2025年10月Windows 10主流支持结束并不阻止安装。' } },
-        { '@type': 'Question', 'name': '能良好运行本地AI的最便宜笔记本是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': '二手2021–2022 ThinkPad T14或Dell Latitude 5430（16 GB内存，Ryzen 5 5500U或Intel i5-1235U）在2026年售价350–450欧元，运行Phi-4 Mini Q4达8–14 tokens/秒。更便宜：任何8 GB Apple M1 MacBook Air二手450–550欧元。' } },
-        { '@type': 'Question', 'name': '能用Raspberry Pi做本地AI吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '8 GB内存的Raspberry Pi 5以4–7 tokens/秒运行Llama 3.2 1B Q4 — 可用但慢。Pi 4 4 GB在TinyLlama 1B上限约2 tokens/秒。对于真实聊天使用，8 GB x86笔记本或M1 MacBook Air更快、二手更便宜、设置更简单。' } },
-      ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

@@ -622,23 +622,6 @@ schema: {
         { '@type': 'ListItem', 'position': 3, 'name': 'Text-Generation-WebUI', 'description': 'Python-App mit integrierter Web-UI. CPU und GPU. 1-100 Tokens/Sek. GGUF, safetensors, fp16. LoRA Fine-Tuning integriert. Beste für Forschung und Experimente.' },
       ],
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'inLanguage': 'de',
-      'mainEntity': [
-        { '@type': 'Question', 'name': 'Kann ich Inference-Engines wechseln, ohne mein Modell zu ändern?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Größtenteils ja. Modelldateien im GGUF-Format funktionieren mit llama.cpp (Ollama) und Text-Generation-WebUI. vLLM erfordert vollständige Präzision oder spezifische Quantisierungsformate. HuggingFace safetensors-Modelle funktionieren mit allen drei.' } },
-        { '@type': 'Question', 'name': 'Welche Engine ist beste für Mac?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp über Ollama. Es hat ausgezeichnete Apple Silicon (M-Serie) Optimierung. vLLM unterstützt Metal (Apple GPU) nicht, daher ist CPU-Performance schlecht. Text-Generation-WebUI funktioniert auf Mac, ist aber langsamer als Ollama.' } },
-        { '@type': 'Question', 'name': 'Ist vLLM Teil von Ollama?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Ollama verwendet llama.cpp intern. vLLM ist eine separate Inference-Engine der UC Berkeley. Sie dienen unterschiedlichen Zwecken: Ollama ist für Einfachheit; vLLM ist für Production-Durchsatz.' } },
-        { '@type': 'Question', 'name': 'Kann ich vLLM ohne GPU verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Technisch ja, aber es ist unbrauchbar langsam. vLLM ist für GPU konzipiert. Für CPU-only-Deployments verwenden Sie llama.cpp (Ollama).' } },
-        { '@type': 'Question', 'name': 'Skaliert Text-Generation-WebUI zu Production?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht empfohlen. Text-Generation-WebUI ist ein Forschungs-Tool, kein Production-Server. Es fehlen Features wie Load-Balancing, Monitoring und verteilte Inferenz, die Production-Services benötigen. Verwenden Sie vLLM für Production.' } },
-        { '@type': 'Question', 'name': 'Was ist Paged Attention und warum ist es wichtig?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Paged Attention ist vLLMs Speicherverwaltungssystem, das Konzepte des virtuellen Speichers von Betriebssystemen borgt. Anstatt einen festen zusammenhängenden Block von GPU-Speicher pro Anfrage zuzuweisen, weist es Speicher in Seiten zu, die über mehrere Anfragen hinweg geteilt und wiederverwendet werden können. Dies verbessert die GPU-Speicherauslastung von ~20 % auf ~70 %.' } },
-        { '@type': 'Question', 'name': 'Welche Engine sollte ich verwenden, wenn ich nur 8 GB RAM habe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp über Ollama. Bei 8 GB Gesamt-RAM verbraucht ein 7B-Modell bei Q4_K_M ~4,7 GB. llama.cpp funktioniert gut damit bei ~5 Tokens/Sek. auf CPU oder ~80 Tokens/Sek. auf einer dedizierten GPU. vLLM benötigt deutlich mehr Overhead.' } },
-        { '@type': 'Question', 'name': 'Kann ich vLLM und Ollama auf demselben Computer ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, wenn genug VRAM vorhanden ist. Führen Sie sie auf verschiedenen Ports aus (vLLM Standard: 8000, Ollama Standard: 11434). Eine typische Konfiguration: Ollama bearbeitet schnelle Single-User-Chat-Anfragen, vLLM bearbeitet Batch-API-Anfragen. Beide können nicht das gleiche Modell gleichzeitig laden, ohne VRAM zu verdoppeln.' } },
-        { '@type': 'Question', 'name': 'Muss ich bei vLLM/llama.cpp die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, definitiv. Artikel 28 der DSGVO (Auftragsverarbeitung) verlangt Datenschutzverträge. llama.cpp und vLLM auf lokalen deutschen Servern erfüllen dies durch Datenresidenz. vLLM bietet bessere Audit-Protokollierung (Prometheus /metrics) für BSI IT-Grundschutz-Kataloge Compliance-Nachweise.' } },
-        { '@type': 'Question', 'name': 'Ist vLLM/llama.cpp für Mittelstand-Deployment geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, beide sind. llama.cpp via Ollama ist für kleinere Mittelstand-Unternehmen (bis 100 Mitarbeiter) mit begrenztem IT-Budget geeignet. vLLM ist für größere Mittelstand (100-500 Mitarbeiter) mit Production-Anforderungen besser -- es skaliert zu 50+ gleichzeitigen Benutzern. Deutsche Mittelstand-Unternehmen sollten vLLM für regulatorische Compliance wählen.' } },
-      ],
-    },
   },
     fr: {
       theme: 'Outils & Interfaces',

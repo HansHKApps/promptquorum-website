@@ -789,19 +789,6 @@ schema: {
         { '@type': 'SoftwareApplication', 'name': 'llama.cpp' },
       ],
     },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'Comment exécuter des modèles 70B sur du matériel grand public',
-      inLanguage: 'fr',
-      step: [
-        { '@type': 'HowToStep', 'position': 1, 'name': 'Vérifiez vos besoins matériels', 'text': 'Assurez-vous que votre système peut fournir 40-48 Go de mémoire accessibles au moteur d\'inférence. Les Mac Apple Silicon avec 64 Go, les machines NVIDIA RTX 4090 avec 32 Go RAM, ou les systèmes CPU seul avec 64 Go sont viables.' },
-        { '@type': 'HowToStep', 'position': 2, 'name': 'Choisissez votre modèle 70B', 'text': 'Décidez entre Llama 3.3 70B pour l\'anglais ou Qwen2.5 72B pour multilingue et code.' },
-        { '@type': 'HowToStep', 'position': 3, 'name': 'Installez Ollama ou llama.cpp', 'text': 'Téléchargez Ollama depuis ollama.com ou compilez llama.cpp avec support de déchargement de couches.' },
-        { '@type': 'HowToStep', 'position': 4, 'name': 'Téléchargez le modèle', 'text': 'Exécutez `ollama pull llama3.3:70b`. Ce téléchargement nécessite 30-40 Go d\'espace et 10-30 minutes.' },
-        { '@type': 'HowToStep', 'position': 5, 'name': 'Testez', 'text': 'Exécutez `ollama run llama3.3:70b` et vérifiez la vitesse d\'inférence et la qualité de sortie.' },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -813,61 +800,6 @@ schema: {
         { '@type': 'ListItem', 'position': 3, 'name': 'NVIDIA RTX 4090 (24 Go) + 32 Go RAM', 'description': 'Peut exécuter 70B avec déchargement, 10-18 tok/sec' },
         { '@type': 'ListItem', 'position': 4, 'name': 'NVIDIA RTX 4080 (16 Go) + 32 Go RAM', 'description': 'Déchargement partiel uniquement, 5-10 tok/sec' },
         { '@type': 'ListItem', 'position': 5, 'name': '64 Go RAM, CPU seul', 'description': 'Peut exécuter 70B, 1-3 tok/sec -- impratique pour usage interactif' },
-      ],
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'inLanguage': 'fr',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          'name': 'Quel est le matériel le moins cher qui peut exécuter un modèle 70B de manière utilisable ?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'En avril 2026, un Mac Studio M2 Ultra d\'occasion (64 Go mémoire unifiée) à ~2 000 euros est le chemin le moins cher vers une inférence 70B à 25+ tok/sec. Une machine neuve équivalente serait le MacBook Pro M5 Max 64 Go (~3 500 euros). Un assemblage de bureau NVIDIA RTX 4090 (24 Go VRAM + 32 Go RAM) coûte ~3 000-4 000 euros mais produit une inférence plus lente.',
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Puis-je exécuter un modèle 70B sur deux GPU ?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Oui -- llama.cpp et Ollama supportent l\'inférence multi-GPU sur matériel NVIDIA. Deux RTX 4090 (48 Go VRAM total) rentrent entièrement dans VRAM un modèle 70B Q4_K_M. Ollama gère multi-GPU automatiquement quand plusieurs GPU sont présents.',
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Comment la qualité 70B locale se compare-t-elle à GPT-4o ?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Sur les benchmarks MMLU et HumanEval, Llama 3.3 70B (82 %, 88 %) et Qwen2.5 72B (84 %, 87 %) égalent ou dépassent légèrement les scores GPT-4 (2023). GPT-4o (2024) obtient des scores plus élevés sur les tâches lourdes en raisonnement.',
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Ollama supporte-t-il l\'exécution automatique de modèles 70B ?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Oui. Exécuter `ollama run llama3.3:70b` télécharge et exécute le modèle avec déchargement automatique de couches GPU. Aucune configuration manuelle requise pour l\'usage basique.',
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Combien d\'électricité consomme l\'exécution d\'un modèle 70B ?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Un Mac Studio M2 Ultra exécutant l\'inférence 70B consomme environ 30-50 W. Un ordinateur de bureau NVIDIA RTX 4090 sous charge consomme 350-450 W. À 0,15 euro par kWh, l\'inférence 70B continue sur un RTX 4090 coûte environ 0,05-0,07 euro par heure.',
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Les modèles 70B en valent-ils la peine par rapport aux modèles 13B pour les tâches quotidiennes ?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Pour le raisonnement complexe, l\'analyse de documents longs et l\'écriture nuancée, oui -- la différence de qualité est notable. Pour la résumé simple, les questions-réponses et la classification, un modèle 13B ou même 7B produit une sortie quasi-identique.',
-          }
-        },
       ],
     },
 },

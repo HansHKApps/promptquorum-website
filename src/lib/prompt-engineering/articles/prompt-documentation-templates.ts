@@ -55,21 +55,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        { '@type': 'Question', name: 'Why do prompts need documentation?', acceptedAnswer: { '@type': 'Answer', text: 'Prompts without documentation can\'t be reviewed, audited, or reproduced. When the author changes the prompt and leaves no record, the team can\'t diagnose regressions, can\'t roll back to a known-good version, and can\'t onboard new members who need to understand the prompt\'s purpose. Documentation is the minimum requirement for any prompt used in production.' } },
-        { '@type': 'Question', name: 'What is the minimum documentation a prompt needs?', acceptedAnswer: { '@type': 'Answer', text: 'The minimum is a one-liner card: prompt purpose (one sentence), target model, date created, and author. This takes 2 minutes to write and prevents the most common documentation failure — prompts whose purpose is unknown 6 months later.' } },
-        { '@type': 'Question', name: 'Where should prompt documentation be stored?', acceptedAnswer: { '@type': 'Answer', text: 'Store prompt documentation in the same location as the prompt itself. Git works for prompts stored as code files — the commit message serves as the change log. PromptHub provides structured storage with version history, reviewer signatures, and test results built in. Notion works for teams that manage prompts as documents, but lacks version control and test integration.' } },
-        { '@type': 'Question', name: 'How detailed does a prompt\'s change rationale need to be?', acceptedAnswer: { '@type': 'Answer', text: 'A change rationale needs three lines: what changed (one sentence), why (the problem the change solves), and what test confirmed it worked. Teams that skip the "why" invariably revert to the previous pattern after the author who made the change leaves the team.' } },
-        { '@type': 'Question', name: 'Which documentation template should I use for a new prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Start with the One-Liner Card for any new prompt. If the prompt goes to production, upgrade to a Version Block. If it has multiple test cases, add a Test Suite Header. If it required a non-obvious design decision, add a Decision Log. Use the full set only for prompts with complex history or compliance requirements.' } },
-        { '@type': 'Question', name: 'How often should I update prompt documentation?', acceptedAnswer: { '@type': 'Answer', text: 'Update whenever the prompt text changes. Add a version bump and a Change Rationale entry for every substantive edit. Do not update documentation retroactively — if you can\'t recall why a change was made, note the current state and mark the gap explicitly.' } },
-        { '@type': 'Question', name: 'Where should I store prompt documentation?', acceptedAnswer: { '@type': 'Answer', text: 'Store documentation alongside the prompt — in the same file, the same directory, or the same Git commit. Never store it in a separate system (e.g., Notion or Confluence) without a reference link in the prompt file itself. Separated documentation goes stale in days.' } },
-        { '@type': 'Question', name: 'Can I use these templates in PromptHub?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. PromptHub stores prompt metadata fields that map directly to the Version Block and API Config Block templates. Use the template as your draft, then copy fields into PromptHub when you\'re ready to share the prompt with your team.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -247,18 +232,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        { '@type': 'Question', name: 'Warum brauchen Prompts eine Dokumentation?', acceptedAnswer: { '@type': 'Answer', text: 'Prompts ohne Dokumentation können nicht geprüft, auditiert oder reproduziert werden. Wenn der Autor den Prompt ändert und keine Aufzeichnung hinterlässt, kann das Team keine Regressionen diagnostizieren, nicht auf eine funktionierende Version zurückrollen und keine neuen Mitglieder einarbeiten.' } },
-        { '@type': 'Question', name: 'Wo sollte Prompt-Dokumentation gespeichert werden?', acceptedAnswer: { '@type': 'Answer', text: 'Speichern Sie die Prompt-Dokumentation am selben Ort wie den Prompt selbst. Git eignet sich für Prompts als Code-Dateien. PromptHub bietet strukturierte Speicherung mit Versionsverlauf und Reviewer-Signaturen. Notion eignet sich für Teams, die Prompts als Dokumente verwalten.' } },
-        { '@type': 'Question', name: 'Welche Vorlage soll ich für einen neuen Prompt verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Beginnen Sie mit der Einzeiler-Karte für jeden neuen Prompt. Wenn der Prompt in die Produktion geht, aktualisieren Sie auf einen Versionsblock. Wenn er mehrere Testfälle hat, fügen Sie einen Testsuite-Header hinzu. Wenn eine nicht offensichtliche Designentscheidung getroffen wurde, fügen Sie ein Entscheidungsprotokoll hinzu.' } },
-        { '@type': 'Question', name: 'Wie oft soll die Prompt-Dokumentation aktualisiert werden?', acceptedAnswer: { '@type': 'Answer', text: 'Aktualisieren Sie immer, wenn sich der Prompt-Text ändert. Fügen Sie bei jeder wesentlichen Bearbeitung einen Versions-Bump und einen Änderungsbegründungs-Eintrag hinzu. Dokumentation nicht rückwirkend aktualisieren.' } },
-        { '@type': 'Question', name: 'Kann ich diese Vorlagen in PromptHub verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. PromptHub speichert Prompt-Metadatenfelder, die direkt auf die Versionsblock- und API-Konfigurationsblock-Vorlagen abgebildet werden. Verwenden Sie die Vorlage als Entwurf und kopieren Sie die Felder dann in PromptHub.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -434,18 +407,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        { '@type': 'Question', name: 'Pourquoi les prompts ont-ils besoin de documentation ?', acceptedAnswer: { '@type': 'Answer', text: 'Les prompts sans documentation ne peuvent être ni révisés, ni audités, ni reproduits. Quand l\'auteur modifie le prompt sans laisser de trace, l\'équipe ne peut pas diagnostiquer les régressions ni revenir à une version fonctionnelle.' } },
-        { '@type': 'Question', name: 'Quelle est la documentation minimale nécessaire pour un prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'Le minimum est une fiche one-liner : objectif du prompt (une phrase), modèle cible, date de création et auteur. Cela prend 2 minutes et prévient l\'échec de documentation le plus courant.' } },
-        { '@type': 'Question', name: 'Quel modèle utiliser pour un nouveau prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'Commencez par la fiche one-liner. Si le prompt passe en production, passez au bloc de version. S\'il a plusieurs cas de test, ajoutez un en-tête de suite de tests. Si une décision de conception non évidente a été prise, ajoutez un journal de décision.' } },
-        { '@type': 'Question', name: 'À quelle fréquence mettre à jour la documentation des prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Mettez à jour chaque fois que le texte du prompt change. Ajoutez une incrémentation de version et une entrée de justification de changement pour chaque modification substantielle. Ne mettez pas à jour la documentation rétroactivement.' } },
-        { '@type': 'Question', name: 'Puis-je utiliser ces modèles dans PromptHub ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. PromptHub stocke des champs de métadonnées de prompts qui correspondent directement aux modèles Bloc de version et Bloc de config API. Utilisez le modèle comme brouillon, puis copiez les champs dans PromptHub.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -620,18 +581,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: 'なぜPromptには文書化が必要ですか？', acceptedAnswer: { '@type': 'Answer', text: '文書化されていないPromptはレビュー、監査、再現ができません。作成者がPromptを変更して記録を残さないと、チームは回帰を診断できず、既知の良い状態にロールバックできません。' } },
-        { '@type': 'Question', name: 'Promptに必要な最低限の文書化は何ですか？', acceptedAnswer: { '@type': 'Answer', text: '最低限はワンライナーカードです：Promptの目的（1文）、対象モデル、作成日、作成者。2分で書け、最も一般的な文書化の失敗を防ぎます。' } },
-        { '@type': 'Question', name: '新しいPromptにはどのテンプレートを使うべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'まずワンライナーカードから始めます。本番に行く場合はバージョンブロックにアップグレード。複数のテストケースがある場合はテストスイートヘッダーを追加。非明白な設計決定があった場合は決定ログを追加します。' } },
-        { '@type': 'Question', name: 'Prompt文書化の更新頻度は？', acceptedAnswer: { '@type': 'Answer', text: 'Promptテキストが変更されるたびに更新します。すべての実質的な編集にバージョンバンプと変更理由のエントリを追加します。遡って文書化を更新しないでください。' } },
-        { '@type': 'Question', name: 'これらのテンプレートをPromptHubで使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。PromptHubはバージョンブロックとAPIコンフィグブロックのテンプレートに直接マッピングされるPromptメタデータフィールドを保存します。' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -805,19 +754,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: '为什么Prompt需要文档化？', acceptedAnswer: { '@type': 'Answer', text: '没有文档的Prompt无法被审查、审计或重现。当作者修改Prompt却没有留下记录时，团队无法诊断回归问题，无法回滚到已知可用的版本。' } },
-        { '@type': 'Question', name: 'Prompt需要的最少文档是什么？', acceptedAnswer: { '@type': 'Answer', text: '最低要求是单行卡片：Prompt用途（一句话）、目标模型、创建日期和作者。填写只需2分钟，可以防止最常见的文档化失败。' } },
-        { '@type': 'Question', name: 'Prompt文档应该存储在哪里？', acceptedAnswer: { '@type': 'Answer', text: '将Prompt文档存储在与Prompt本身相同的位置。Git适用于代码文件存储的Prompt。PromptHub提供内置版本历史和审查者签名的结构化存储。' } },
-        { '@type': 'Question', name: '新Prompt应该使用哪个文档模板？', acceptedAnswer: { '@type': 'Answer', text: '从单行卡片开始。如果Prompt进入生产，升级到版本块。如果有多个测试用例，添加测试套件头。如果需要非显而易见的设计决策，添加决策日志。' } },
-        { '@type': 'Question', name: '应该多久更新一次Prompt文档？', acceptedAnswer: { '@type': 'Answer', text: '每次Prompt文本更改时更新。每次实质性编辑都要添加版本号递增和变更理由条目。不要追溯更新文档。' } },
-        { '@type': 'Question', name: '可以在PromptHub中使用这些模板吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。PromptHub存储的Prompt元数据字段直接映射到版本块和API配置块模板。以模板为草稿，准备好与团队分享时将字段复制到PromptHub。' } },
-      ],
     },
     sections: {
       tldr: {

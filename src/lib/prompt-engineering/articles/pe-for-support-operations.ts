@@ -54,61 +54,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Why do support prompts need extra constraints compared to other prompt types?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Support prompts are customer-facing, policy-sensitive, and often legally significant. A wrong answer in support is not an aesthetic problem — it can be a policy violation, a liability, or the loss of a customer relationship. This means that accuracy, consistency, and correct escalation must be designed into the prompt structure, not left to model defaults.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What escalation triggers should always be in a support prompt?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Every support prompt should include at least 5 escalation triggers: legal language (threats, litigation references), account cancellation requests, data exposure mentions, repeated P1 tickets for the same issue, and explicit customer requests for a human agent. When any of these conditions are detected, the AI should acknowledge, summarize context, flag the ticket, and route — not attempt to resolve the issue itself.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do you test a support prompt for policy compliance?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Test a support prompt by running it against 10 difficult ticket examples that include edge cases: a customer using legal language, a request for pricing that your policy prohibits, a medical question, and a repeated P1 issue. Score each output on whether it triggers the correct escalation or topic constraint. Any output that responds to a restricted topic or fails to escalate a trigger condition is a policy failure.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Should the AI apologize when handing off to a human agent?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. A handoff apology implies the AI failed the customer, which frames the handoff negatively. The correct handoff pattern is: acknowledge the issue, summarize context for the human agent, flag the ticket with the reason for escalation, and route to the correct team. The message to the customer should be neutral and professional — not apologetic.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'When should a support AI hand off to a human agent?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Five conditions require immediate human escalation: (1) Legal language (attorney, lawsuit, etc.); (2) Account cancellation requests; (3) Data exposure or security concerns; (4) Repeated P1 issues on the same ticket; (5) Explicit customer request for a human. Define these triggers explicitly in the prompt and train support teams to recognize the AI\'s handoff signals.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do I test a support prompt before rolling it out to the team?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Run the prompt on at least 15 real support tickets covering normal cases, edge cases, and escalation triggers. Score each response on accuracy (factual correctness), compliance (policy adherence), tone (empathy and brand fit), and escalation (correct routing). Deploy only if the average score is 1.5+ on a 0–2 scale. Test the same prompt across 2–3 models to verify consistency.',
-          },
-        },
-      ],
-    },
     sections: {
       key_takeaways: {
         title: 'Key Takeaways',
@@ -297,45 +242,6 @@ export const article: Record<Language, PEArticle> = {
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Warum brauchen Support-Prompts mehr Einschränkungen als andere Prompt-Typen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Support-Prompts sind kundenseitig, richtliniensensitiv und oft rechtlich bedeutsam. Eine falsche Antwort im Support ist kein ästhetisches Problem — sie kann eine Richtlinienverletzung, eine Haftung oder den Verlust einer Kundenbeziehung bedeuten.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Welche Eskalationsauslöser sollten immer in einem Support-Prompt enthalten sein?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Jeder Support-Prompt sollte mindestens 5 Eskalationsauslöser enthalten: juristische Sprache, Kontokündigungsanfragen, Datenleckerwähnungen, wiederholte P1-Tickets zum selben Problem und ausdrückliche Kundenanfragen nach einem menschlichen Agenten.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wie testet man einen Support-Prompt auf Richtlinien-Compliance?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Testen Sie einen Support-Prompt, indem Sie ihn gegen 10 schwierige Ticket-Beispiele laufen lassen, die Edge Cases enthalten: ein Kunde mit juristischer Sprache, eine Preisanfrage, die Ihre Richtlinie verbietet, und eine wiederholte P1-Meldung.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Sollte die KI sich entschuldigen, wenn sie an einen menschlichen Agenten übergibt?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nein. Eine Entschuldigungs-Übergabe impliziert, dass die KI den Kunden enttäuscht hat. Das korrekte Übergabemuster ist: Problem bestätigen, Kontext zusammenfassen, Ticket markieren und weiterleiten — ohne Entschuldigung.',
-          },
-        },
-      ],
-    },
     sections: {
       key_takeaways: {
         title: 'Zusammenfassung',
@@ -510,45 +416,6 @@ export const article: Record<Language, PEArticle> = {
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: "Pourquoi les prompts support nécessitent-ils des contraintes supplémentaires ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Les prompts support sont visibles par les clients, sensibles sur le plan des politiques et souvent juridiquement significatifs. Une mauvaise réponse dans le support n'est pas un problème esthétique — cela peut être une violation de politique, une responsabilité ou la perte d'une relation client.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Quels déclencheurs d'escalade doivent toujours figurer dans un prompt support ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Chaque prompt support doit inclure au moins 5 déclencheurs d'escalade : langage juridique, demandes d'annulation de compte, mentions d'exposition de données, tickets P1 répétés pour le même problème, et demandes explicites de clients pour un agent humain.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Comment tester un prompt support pour la conformité politique ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Testez un prompt support en l'exécutant contre 10 exemples de tickets difficiles incluant des cas limites : un client utilisant un langage juridique, une demande de prix que votre politique interdit, et un problème P1 répété.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "L'IA doit-elle s'excuser lors d'un transfert à un agent humain ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Non. Une excuse lors du transfert implique que l'IA a failli au client, ce qui cadre le transfert négativement. Le bon pattern est : reconnaître le problème, résumer le contexte, marquer le ticket avec la raison de l'escalade et router vers l'équipe correcte.",
-          },
-        },
-      ],
-    },
     sections: {
       key_takeaways: {
         title: 'Points clés',
@@ -713,45 +580,6 @@ export const article: Record<Language, PEArticle> = {
       keywords: ['プロンプトエンジニアリング', 'サポートオペレーション', 'カスタマーサポート', 'トリアージテンプレート', 'エスカレーションロジック'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'なぜサポートプロンプトは他のプロンプトタイプより追加の制約が必要なのですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'サポートプロンプトは顧客向けで、ポリシーに敏感で、法的に重要です。サポートでの誤った回答は審美的な問題ではなく、ポリシー違反、法的責任、または顧客関係の損失になる可能性があります。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'サポートプロンプトに常に含めるべきエスカレーショントリガーは何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '各サポートプロンプトには少なくとも5つのエスカレーショントリガーが含まれる必要があります：法的な言葉、アカウントキャンセル要求、データ漏洩の言及、同じ問題への繰り返しP1チケット、人間のエージェントへの明示的な顧客要求。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'サポートプロンプトをポリシーコンプライアンスでテストするにはどうすればいいですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '法的な言葉を使う顧客、ポリシーが禁じる価格リクエスト、繰り返しP1問題など10の難しいチケット例に対してプロンプトを実行してテストします。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'AIは人間のエージェントに引き渡す際に謝罪すべきですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'いいえ。ハンドオフの謝罪はAIが顧客を失望させたことを示唆し、ハンドオフを否定的に位置付けます。正しいパターンは：問題を認識し、コンテキストを要約し、エスカレーション理由でチケットにフラグを立て、正しいチームにルーティングすることです。',
-          },
-        },
-      ],
     },
     sections: {
       key_takeaways: {
@@ -938,45 +766,6 @@ export const article: Record<Language, PEArticle> = {
       keywords: ['提示词工程', '支持运营', '客户支持', '分诊模板', '升级逻辑', '策略合规'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: '为什么支持提示词需要比其他提示词类型更多的约束？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '支持提示词面向客户、对策略敏感且具有法律意义。支持中的错误答案不是审美问题——它可能是策略违规、法律责任或失去客户关系。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '支持提示词中应始终包含哪些升级触发器？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '每个支持提示词应包含至少5个升级触发器：法律语言、账户取消请求、数据暴露提及、同一问题的重复P1工单和客户明确要求人工代理。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '如何测试支持提示词的策略合规性？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '通过针对10个包含边缘案例的困难工单示例运行提示词来测试：使用法律语言的客户、策略禁止的定价请求以及重复的P1问题。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '移交给人工代理时AI应该道歉吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '不应该。移交道歉暗示AI使客户失望，这将移交定性为负面。正确的移交模式是：确认问题、总结背景、用升级原因标记工单并路由到正确团队。',
-          },
-        },
-      ],
     },
     sections: {
       key_takeaways: {

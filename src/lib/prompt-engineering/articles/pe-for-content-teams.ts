@@ -53,61 +53,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How do content teams reduce AI review cycles with prompt engineering?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Content teams reduce review cycles by encoding quality criteria — tone, format, word count, brand vocabulary, and anti-lists — directly into the prompt before generation. When the output requirements are explicit, AI-generated content arrives closer to the target and requires fewer revision rounds.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the CRAFT framework and when should content teams use it?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CRAFT stands for Context, Role, Action, Format, and Tone. It is a structured prompt framework suited for creative and content work because it organizes the five dimensions most relevant to content outputs. Use it as the base structure for any content prompt that involves brand voice, format requirements, or multi-stakeholder review.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How many on-brand examples do I need in a brand voice prompt?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Include 2 to 3 approved content samples in the prompt. Fewer than 2 gives the model insufficient pattern signal. More than 3 can dilute the context window available for the actual task. The examples should represent the target channel and content type — do not use a LinkedIn example for an email brief.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'When should a content team skip the factual accuracy review stage?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Skip the factual accuracy stage only for low-stakes content that contains no factual claims — social media captions announcing an event, short CTAs, or format-only outputs like subject line options. Any content that makes claims about products, pricing, performance, or third parties requires a factual accuracy check before publication.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do I set up a content template that works consistently across multiple models?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Test the same template on 2–3 models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Flash) with 10+ test runs each. Use the 5-point quality scoring rubric to evaluate consistency. If all models score 1.5+, the template is portable. If one model falls below 1.5, revise the prompt rather than adopting a model-specific version.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the deployment threshold for a content prompt?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Deploy the prompt if the average score across all 5 criteria (task complete, format compliance, brand voice match, factual accuracy, CTA alignment) is 1.5 or higher (on a 0–2 scale) across 10 test runs. A score below 1.5 indicates too many partial or failing outputs for production use without review overhead.',
-          },
-        },
-      ],
-    },
     sections: {
       key_takeaways: {
         title: 'Key Takeaways',
@@ -287,45 +232,6 @@ export const article: Record<Language, PEArticle> = {
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Wie reduzieren Content-Teams KI-Review-Zyklen mit Prompt Engineering?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Content-Teams reduzieren Review-Zyklen, indem sie Qualitätskriterien — Ton, Format, Wortzahl, Brand-Vokabular und Anti-Listen — direkt in den Prompt kodieren, bevor die Generierung beginnt.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Was ist das CRAFT-Framework und wann sollten Content-Teams es verwenden?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CRAFT steht für Context, Role, Action, Format und Tone. Es ist ein strukturiertes Prompt-Framework, das für kreative und Content-Arbeit geeignet ist, weil es die fünf für Content-Ausgaben relevantesten Dimensionen organisiert.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wie viele markenkonforme Beispiele brauche ich in einem Brand-Voice-Prompt?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Fügen Sie 2 bis 3 genehmigte Content-Beispiele in den Prompt ein. Weniger als 2 liefert dem Modell zu wenig Mustersignal. Mehr als 3 kann das für die eigentliche Aufgabe verfügbare Kontextfenster verdünnen.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wann sollte ein Content-Team die Faktüberprüfungs-Review-Stufe überspringen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Überspringen Sie die Faktüberprüfungsstufe nur für risikoarmen Content ohne Faktenbehauptungen — Social-Media-Captions, kurze CTAs oder Betreffzeilenoptionen. Jeder Content mit Produktbehauptungen erfordert vor der Veröffentlichung eine Faktüberprüfung.',
-          },
-        },
-      ],
-    },
     sections: {
       key_takeaways: {
         title: 'Zusammenfassung',
@@ -441,45 +347,6 @@ export const article: Record<Language, PEArticle> = {
       keywords: ['prompt engineering', 'équipes contenu', 'voix de marque', 'templates contenu', 'workflow éditorial'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: "Comment les équipes contenu réduisent-elles les cycles de révision avec le prompt engineering ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Les équipes contenu réduisent les cycles de révision en encodant les critères qualité — ton, format, nombre de mots, vocabulaire de marque et listes d'exclusion — directement dans le prompt avant la génération.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Qu'est-ce que le framework CRAFT et quand les équipes contenu doivent-elles l'utiliser ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "CRAFT signifie Contexte, Rôle, Action, Format et Ton. C'est un framework structuré adapté au travail créatif et contenu car il organise les cinq dimensions les plus pertinentes pour les sorties contenu.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Combien d'exemples conformes à la marque faut-il dans un prompt de voix de marque ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Incluez 2 à 3 exemples de contenu approuvés directement dans le prompt. Moins de 2 donne au modèle un signal de motif insuffisant. Plus de 3 peut diluer la fenêtre de contexte disponible pour la tâche réelle.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Quand une équipe contenu peut-elle ignorer l'étape de vérification de l'exactitude factuelle ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Ignorez l'étape de vérification factuelle uniquement pour le contenu à faible enjeu sans affirmations factuelles — légendes social media, CTAs courts ou options de lignes d'objet. Tout contenu avec des affirmations sur des produits ou des performances nécessite une vérification factuelle.",
-          },
-        },
-      ],
     },
     sections: {
       key_takeaways: {
@@ -629,45 +496,6 @@ export const article: Record<Language, PEArticle> = {
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'コンテンツチームはプロンプトエンジニアリングでAIレビューサイクルをどう削減しますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'コンテンツチームは、品質基準（トーン、フォーマット、文字数、ブランドボキャブラリー、禁止リスト）を生成前にプロンプトに直接エンコードすることでレビューサイクルを削減します。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'CRAFTフレームワークとは何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CRAFTはContext（文脈）、Role（役割）、Action（行動）、Format（フォーマット）、Tone（トーン）の略です。コンテンツ出力に最も関連する5つの次元を整理する構造化されたプロンプトフレームワークです。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'ブランドボイスプロンプトに何個のブランド準拠サンプルが必要ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '承認済みのコンテンツサンプルを2〜3個プロンプトに直接含めてください。2個未満ではモデルへのパターンシグナルが不十分です。3個を超えると実際のタスクに使えるコンテキストウィンドウが圧迫されます。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'コンテンツチームはいつ事実確認レビューステージをスキップできますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '事実的な主張を含まないリスクの低いコンテンツ（SNSキャプション、短いCTA、件名オプション）のみ事実確認ステージをスキップできます。製品、パフォーマンス、第三者に関する主張を含むコンテンツは事実確認が必要です。',
-          },
-        },
-      ],
-    },
     sections: {
       key_takeaways: {
         title: 'まとめ',
@@ -814,45 +642,6 @@ export const article: Record<Language, PEArticle> = {
       keywords: ['提示词工程', '内容团队', '品牌声音', '内容模板', '编辑工作流'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: '内容团队如何通过提示词工程减少AI审核周期？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '内容团队通过在生成前将质量标准——语气、格式、字数、品牌词汇和禁用词列表——直接编入提示词来减少审核周期。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'CRAFT框架是什么，内容团队何时应使用它？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CRAFT代表Context（背景）、Role（角色）、Action（行动）、Format（格式）和Tone（语气）。这是一个适合创意和内容工作的结构化提示词框架，因为它组织了与内容输出最相关的五个维度。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '品牌声音提示词中需要多少个品牌合规示例？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '在提示词中直接包含2至3个已批准的内容样本。少于2个给模型的模式信号不足。超过3个可能稀释实际任务的可用上下文窗口。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '内容团队何时可以跳过事实准确性审核阶段？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '仅对不包含事实性主张的低风险内容跳过事实准确性阶段——社交媒体标题、短CTA或主题行选项。任何包含产品、性能或第三方主张的内容在发布前都需要事实核查。',
-          },
-        },
-      ],
     },
     sections: {
       key_takeaways: {

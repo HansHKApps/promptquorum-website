@@ -469,79 +469,6 @@ tests:
         cssSelector: ['.article-intro', '.key-takeaways'],
       },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is prompt optimization for teams?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Prompt optimization for teams is the practice of systematically improving LLM prompts using structured A/B testing, output scoring, and collaborative review. Unlike solo prompt writing, team optimization requires shared tooling with versioning, role-based access, and reproducible test suites.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does a prompt optimization stack cost for a 5-person team?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Budget $0–$700/month depending on tool selection. Free stacks (DSPy + Promptfoo + Helicone free tier) cover most use cases. SaaS stacks with Vellum or Braintrust run $200–700/month. Cost scales with API call volume and team size.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Helicone work with all LLM providers?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Helicone supports OpenAI, Anthropic (Claude), Groq, Mistral, Gemini, Azure OpenAI, and any OpenAI-compatible endpoint. Integration requires only a one-line URL change in the API client — no SDK dependency.',
-          },
-        },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'How to Choose a Prompt Optimization Stack for Teams',
-      step: [
-        {
-          '@type': 'HowToStep',
-          position: 1,
-          name: 'Define your primary bottleneck',
-          text: 'Is it output quality, cost, latency, or team velocity?',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 2,
-          name: 'Assess technical depth',
-          text: 'Engineers-only team → DSPy or Promptfoo; mixed team → Vellum or Braintrust.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 3,
-          name: 'Build a labeled evaluation dataset',
-          text: '20–50 input/output pairs are needed before evaluating any tool.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Start with one free tool',
-          text: 'Use Promptfoo or Helicone to establish baseline metrics.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Run a 2-week trial',
-          text: 'Use the team\'s actual prompts before paying for a SaaS platform.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 6,
-          name: 'Plan for two tools',
-          text: 'One for evaluation (Braintrust, Promptfoo) + one for deployment/versioning (Vellum, PromptHub).',
-        },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -973,67 +900,6 @@ tests:
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=de', width: 1200, height: 630 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Was ist Prompt-Optimierung für Teams?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Prompt-Optimierung für Teams ist die Praxis, LLM-Prompts systematisch durch strukturierte A/B-Tests, Output-Bewertung und gemeinsame Überprüfung zu verbessern. Im Gegensatz zum Solo-Prompt-Schreiben erfordert Team-Optimierung gemeinsame Tools mit Versionierung, rollenbasiertem Zugriff und reproduzierbaren Test-Suites.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wie unterscheidet sich Prompt-Optimierung von Prompt-Management?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Prompt-Management umfasst das Speichern, Versionieren und Bereitstellen von Prompts (PromptHub, Vellum). Prompt-Optimierung verbessert aktiv die Prompt-Qualität durch Varianten-Tests und Bewertung. Die meisten Teams benötigen beide: Management zum Organisieren von Prompts, Optimierung zur Verbesserung über die Zeit.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wie viel kostet ein Prompt-Optimierungs-Stack für ein 5-Person-Team?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Budget 0–700 USD/Monat, je nach Tool-Auswahl. Kostenlose Stacks (DSPy + Promptfoo + Helicone Free Tier) decken die meisten Anwendungsfälle ab. SaaS-Stacks mit Vellum oder Braintrust kosten 200–700 USD/Monat. Die Kosten skalieren mit API-Aufrufvolumen und Team-Größe.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Muss ich bei der Verwendung von Cloud-Optimierungs-Tools die DSGVO beachten?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja. DSGVO Artikel 28 erfordert einen unterzeichneten Datenverarbeitungsvertrag (AV) mit SaaS-Anbietern wie Braintrust, Vellum und Helicone, wenn Sie Prompt-Input/Outputs in der Cloud verarbeiten. Alle großen Optimierungs-Tools unterstützen AV-Klauseln. Open-Source-Tools wie DSPy und Promptfoo erfüllen DSGVO auf Lokalverarbeitung automatisch.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist Prompt-Optimierung für den deutschen Mittelstand geeignet?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja, besonders wenn lokale Inference (DSPy, Promptfoo) oder Tools mit BSI-Grundschutz-Compliance (Braintrust, Vellum) verwendet wird. Viele Mittelstand-Unternehmen sehen regelmäßig Anforderungen zur IT-Sicherheitskonformität. Wählen Sie ein Tool mit SOC 2 Type II Audit und dokumentierten Sicherheitsstandards.',
-          },
-        },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      inLanguage: 'de',
-      name: 'So wählen Sie einen Prompt-Optimierungs-Stack für Teams',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Definieren Sie Ihren primären Bottleneck', text: 'Ist es Output-Qualität, Kosten, Latenz oder Team-Geschwindigkeit?' },
-        { '@type': 'HowToStep', position: 2, name: 'Bewerten Sie technische Tiefe', text: 'Nur-Ingenieur-Team → DSPy oder Promptfoo; Gemischtes Team → Vellum oder Braintrust' },
-        { '@type': 'HowToStep', position: 3, name: 'Erstellen Sie einen beschrifteten Bewertungs-Datensatz', text: '20–50 Input/Output-Paare, bevor Sie ein Tool bewerten' },
-        { '@type': 'HowToStep', position: 4, name: 'Starten Sie mit einem kostenlosen Tool', text: 'Promptfoo oder Helicone Free, um Baseline-Metriken zu etablieren' },
-        { '@type': 'HowToStep', position: 5, name: 'Führen Sie einen 2-wöchigen Pilottest durch', text: 'mit tatsächlichen Prompts Ihres Teams, bevor Sie für eine SaaS-Plattform zahlen' },
-        { '@type': 'HowToStep', position: 6, name: 'Planen Sie zwei Tools', text: 'eines für Bewertung (Braintrust, Promptfoo) + eines für Bereitstellung/Versionierung (Vellum, PromptHub)' },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1410,51 +1276,6 @@ tests:
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=fr', width: 1200, height: 630 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qu\'est-ce que l\'optimisation d\'invites pour équipes?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Optimisation d\'invites équipes est pratique améliorer invites LLM systématiquement via test A/B structuré, notation output, révision collaborative. Contrairement écriture-solo, optimisation équipe requiert outils partagés : versioning, accès rôle-basé, suites test reproductibles.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Comment optimisation invites diffère gestion invites?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Gestion invites couvre stockage, versioning, déploiement (PromptHub, Vellum). Optimisation améliore activement qualité invites via test variantes et notation. Plupart équipes besoin deux : gestion organiser invites, optimisation améliorer temps.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Combien coûte pile optimisation pour équipe 5-personnes?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Budget 0–700 USD/mois selon sélection outil. Piles gratuites (DSPy + Promptfoo + Helicone gratuit) couvrent plupart cas. Piles SaaS Vellum/Braintrust coûtent 200–700 USD/mois. Coûts évoluent volume appels API et taille équipe.',
-          },
-        },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      inLanguage: 'fr',
-      name: 'Comment choisir une pile d\'optimisation d\'invites pour équipes',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Définissez goulot étranglement primaire', text: 'C\'est qualité output, coûts, latence ou vélocité équipe?' },
-        { '@type': 'HowToStep', position: 2, name: 'Évaluez profondeur technique', text: 'Équipe ingénieurs-uniquement → DSPy/Promptfoo; équipe mixte → Vellum/Braintrust' },
-        { '@type': 'HowToStep', position: 3, name: 'Construisez dataset évaluation labellisé', text: '20–50 paires input/output avant évaluer outil' },
-        { '@type': 'HowToStep', position: 4, name: 'Démarrez outil gratuit', text: 'Promptfoo/Helicone gratuit établir métriques baseline' },
-        { '@type': 'HowToStep', position: 5, name: 'Exécutez pilote 2-semaines', text: 'Avec invites-réelles équipe avant payer SaaS' },
-        { '@type': 'HowToStep', position: 6, name: 'Planifiez deux outils', text: 'Un évaluation (Braintrust/Promptfoo) + un déploiement/versioning (Vellum/PromptHub)' },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1830,51 +1651,6 @@ tests:
       ],
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=ja', width: 1200, height: 630 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'チーム向けプロンプト最適化とは?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'チーム向けプロンプト最適化は、構造化A/Bテスト、出力スコアリング、協調レビューによりLLMプロンプト体系改善実践。単独作成と異なり、チーム最適化はバージョン管理、ロール基盤アクセス、再現可能テストスイート共有ツール要求。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'プロンプト最適化とプロンプト管理の違い?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'プロンプト管理はストレージ、バージョン管理、デプロイカバー(PromptHub、Vellum)。最適化はバリアント検証とスコアリング経由プロンプト品質活発改善。多くチーム両方必要: 管理はプロンプト組織化、最適化は時間改善。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '5人チーム対最適化スタックコスト?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ツール選択によって0〜700 USD/月予算。無料スタック(DSPy + Promptfoo + Helicone無料)多くケースカバー。Vellum/Braintrust SaaSスタック200〜700 USD/月。コストはAPIコール量とチームサイズで拡大。',
-          },
-        },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      inLanguage: 'ja',
-      name: 'プロンプト最適化スタック選択方法',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: '主要課題定義', text: '出力品質、コスト、レイテンシ、チーム速度?' },
-        { '@type': 'HowToStep', position: 2, name: '技術深さ評価', text: 'エンジニアのみ → DSPy/Promptfoo; 混合 → Vellum/Braintrust' },
-        { '@type': 'HowToStep', position: 3, name: 'ラベル付き評価データセット構築', text: 'ツール評価前20〜50入力/出力ペア' },
-        { '@type': 'HowToStep', position: 4, name: '無料ツール始動', text: 'Promptfoo/Helicone フリーベースラインメトリクス確立' },
-        { '@type': 'HowToStep', position: 5, name: '2週間パイロット実行', text: 'SaaS支払前チーム実際プロンプト対' },
-        { '@type': 'HowToStep', position: 6, name: '2ツール計画', text: '1つ評価(Braintrust/Promptfoo) + 1つデプロイ/バージョン管理(Vellum/PromptHub)' },
-      ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2336,51 +2112,6 @@ tests:
       ],
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=zh', width: 1200, height: 630 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: '什么是团队提示优化?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '团队提示优化是通过结构化A/B测试、输出评分、协作审查系统性改进LLM提示的实践。不同于单独提示编写，团队优化需要版本化共享工具、基于角色的访问、可重现测试套件。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '提示优化和提示管理的区别?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '提示管理涵盖存储、版本化、部署提示(PromptHub、Vellum)。提示优化通过变体测试和评分主动改进提示质量。大多数团队需要两者：管理用于组织提示，优化用于逐时间改进。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '5人团队的提示优化堆栈成本多少?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '根据工具选择预算$0–$700/月。免费堆栈(DSPy+Promptfoo+Helicone免费层)覆盖大多数用例。带Vellum或Braintrust的SaaS堆栈运行$200–700/月。成本随API调用量和团队规模扩展。',
-          },
-        },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      inLanguage: 'zh',
-      name: '如何选择提示优化堆栈',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: '定义主要瓶颈', text: '是输出质量、成本、延迟还是团队速度?' },
-        { '@type': 'HowToStep', position: 2, name: '评估技术深度', text: '仅工程师 → DSPy/Promptfoo；混合 → Vellum/Braintrust' },
-        { '@type': 'HowToStep', position: 3, name: '构建标记评估数据集', text: '评估工具前20–50输入/输出对' },
-        { '@type': 'HowToStep', position: 4, name: '从免费工具开始', text: 'Promptfoo/Helicone建立基线指标' },
-        { '@type': 'HowToStep', position: 5, name: '运行2周试用', text: '付费SaaS前对团队实际提示' },
-        { '@type': 'HowToStep', position: 6, name: '规划两个工具', text: '1个用于评估(Braintrust/Promptfoo)+1个用于部署(Vellum/PromptHub)' },
-      ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

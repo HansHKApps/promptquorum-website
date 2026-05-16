@@ -447,76 +447,6 @@ tests:
         cssSelector: ['.article-intro', '.key-takeaways'],
       },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the main difference between Braintrust and PromptHub?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust is an evaluation platform: you log API calls, define custom scoring functions, and run A/B experiments to measure output quality. PromptHub is a version control system: you store prompts in a library, tag versions, and share across the team. Use Braintrust when your bottleneck is measuring quality; use PromptHub when your bottleneck is organizing prompts.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Promptfoo really free?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Promptfoo is open-source (MIT license) and has no paid tier. You run it as a CLI tool on your own infrastructure or in GitHub Actions. There are no monthly fees, API call limits, or freemium restrictions.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Should I choose Braintrust or Vellum?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Choose Braintrust if your primary goal is measuring and improving output quality with custom metrics. Choose Vellum if your primary goal is A/B testing on real production traffic. Braintrust works best pre-production; Vellum works best with live users.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much more expensive is Vellum than Braintrust?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust Pro is $249/month (free tier also available with 1M spans + 10K scores). Vellum Starter is $200/month; Growth is $500/month. At the Pro level, Braintrust is slightly more expensive than Vellum Starter but includes significantly more evaluation capacity. Both have free or low-cost entry points. Promptfoo is free; PromptHub is $50–200/month.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do I integrate Promptfoo with GitHub Actions?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Promptfoo provides a GitHub Actions template. Define your test cases in YAML, commit the config to Git, and use the official promptfoo-github-action in your workflow file. On every PR, Promptfoo runs your tests against all configured models and reports pass/fail status.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can PromptHub replace Braintrust?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. PromptHub stores and versions prompts. Braintrust evaluates and scores prompts. You can use PromptHub alone if your only need is organizing prompts; you cannot use it alone if you need to measure output quality or run experiments.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Vellum the same as a prompt management platform?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. Vellum is a deployment and A/B testing platform. It does include basic version control, but its primary strength is splitting production traffic between prompt variants and measuring real-world impact. True prompt management tools (PromptHub) focus on organizing and sharing prompts, not testing.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Are there alternatives beyond these 4 tools in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. The prompt evaluation market expanded significantly in 2025-2026. Confident AI offers 50+ built-in evaluation metrics at $19.99–49.99/seat/month with lower tracing costs than Braintrust ($1/GB vs $3/GB). Galileo AI provides runtime guardrails via their Luna-2 evaluation models. Arize Phoenix is a free, open-source LLM observability platform. For most teams, the four tools in this comparison plus Confident AI cover all practical needs.',
-          },
-        },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -556,44 +486,6 @@ tests:
       ],
       inLanguage: 'en',
       url: 'https://www.promptquorum.com/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo',
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'How to Choose Between Braintrust, PromptHub, Vellum, and Promptfoo',
-      inLanguage: 'en',
-      step: [
-        {
-          '@type': 'HowToStep',
-          position: 1,
-          name: 'Identify your primary bottleneck',
-          text: 'Is it output quality, cost, latency, or team velocity?',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 2,
-          name: 'Assess technical depth',
-          text: 'Non-technical team → PromptHub; mixed → Braintrust + Vellum; engineering-heavy → Promptfoo.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 3,
-          name: 'Build evaluation dataset',
-          text: 'Create 20–50 labeled input/output pairs before evaluating any paid tool.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Start with a free tool',
-          text: 'Run Promptfoo or PromptQuorum first to establish baseline metrics.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Plan a two-tool stack',
-          text: 'One for evaluation (Braintrust or Promptfoo) and one for deployment (Vellum or PromptHub).',
-        },
-      ],
     },
   },
   de: {
@@ -988,93 +880,6 @@ tests:
       ],
       speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Was ist der Hauptunterschied zwischen Braintrust und PromptHub?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust ist für Evaluierung und Experimente. PromptHub ist für Versionskontrolle. Braintrust antwortet auf „Welche Prompt ist am besten?" PromptHub antwortet auf „Welche Version habe ich vorher verwendet?" Sie können beide zusammen verwenden.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist Promptfoo wirklich kostenlos?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja, Promptfoo ist Open-Source (MIT-Lizenz) und vollständig kostenlos. Sie können es lokal oder auf Ihrem Server ausführen. Die einzigen Kosten sind Ihre eigenen API-Aufrufe zu OpenAI, Anthropic, etc.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Sollte ich Braintrust oder Vellum wählen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust ist für Evaluierung (Sie wissen nicht, welche Prompt besser ist). Vellum ist für Production (Sie wissen nicht, welcher Split-Traffic am besten ist). Sie sind unterschiedlich — ideal ist beides zusammen.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wie viel teurer ist Vellum als Braintrust?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust Pro kostet €249/Monat (kostenlose Stufe mit 1M Spans + 10K Scores auch verfügbar). Vellum Starter kostet €200/Monat; Growth €500/Monat. Auf Pro-Ebene ist Braintrust etwas teurer als Vellum Starter, beinhaltet aber deutlich mehr Evaluierungskapazität. Beide haben kostenlose oder kostengünstige Einstiegspunkte. Promptfoo ist kostenlos; PromptHub €50–200/Monat.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wie integriere ich Promptfoo mit GitHub Actions?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Erstellen Sie eine `.github/workflows/test.yml` Datei, die `npx promptfoo eval` aufruft. Promptfoo liest Ihre YAML-Tests, führt sie aus, und zeigt Regressions. GitHub Actions wird automatisch bei jedem Push ausgelöst.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kann PromptHub Braintrust ersetzen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nein. PromptHub speichert Versionen. Braintrust bewertet Qualität. PromptHub kann nicht messen, welche Version besser ist. Aber Sie können beide zusammen verwenden.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist Vellum dasselbe wie eine Prompt-Management-Plattform?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nein, Vellum ist ein Production-Deployment-Tool, nicht Versionskontrolle. Wenn Sie nur Prompts speichern möchten, verwenden Sie PromptHub. Vellum ist für Live A/B-Tests mit echtem Traffic.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Muss ich bei der Verwendung von Braintrust, Vellum, PromptHub oder Promptfoo die DSGVO beachten?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja, wenn Sie Kundendaten verarbeiten. Braintrust und Vellum bieten Datenverarbeitungsverträge (DPA). Promptfoo (lokal) und PromptHub (mit DPA) erfüllen DSGVO-Anforderungen, wenn Sie einen Vertrag unterzeichnen. Stellen Sie sicher, dass Sie ein DPA haben, bevor Sie Kundendaten hochladen.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Sind diese Tools für den deutschen Mittelstand geeignet?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja, besonders Promptfoo (kostenlos, lokal) und PromptHub (günstig, einfach). Für größere Mittelstände ist Vellum eine gute Production-Wahl. Braintrust ist eher für große Unternehmen. Beginnen Sie mit Promptfoo und skalieren Sie je nachdem.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Gibt es Alternativen zu diesen 4 Tools 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja. Der Prompt-Evaluierungsmarkt expandierte 2025–2026 erheblich. Confident AI bietet 50+ integrierte Evaluierungsmetriken für €19,99–49,99/Benutzer/Monat mit niedrigeren Tracing-Kosten als Braintrust. Galileo AI bietet Runtime-Guardrails über ihre Luna-2-Evaluierungsmodelle. Arize Phoenix ist kostenlos und Open-Source. Für die meisten Teams decken die vier Tools in diesem Vergleich plus Confident AI alle praktischen Anforderungen ab.',
-          },
-        },
-      ],
-      inLanguage: 'de',
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1088,44 +893,6 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'Vellum', description: 'Production A/B-Testing mit Live-Traffic-Splitting' },
         { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'Open-Source Regressions-Testing mit GitHub Actions Integration' },
         { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: 'Cross-Modell-Vergleich über 25+ Modelle für Modellauswahl' },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'Wie man zwischen Braintrust, PromptHub, Vellum und Promptfoo wählt',
-      inLanguage: 'de',
-      step: [
-        {
-          '@type': 'HowToStep',
-          position: 1,
-          name: 'Ihre Hauptprobleme identifizieren',
-          text: 'Listen Sie die drei Main Pains Ihres Teams auf: (a) Evaluierung, (b) Versionskontrolle, (c) Production-Deployment.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 2,
-          name: 'Das beste Tool für jede Pain wählen',
-          text: 'Braintrust für (a), PromptHub für (b), Vellum für (c). Wenn Ihre Pain ist „Wir wissen nicht, welches Modell", beginnen Sie mit PromptQuorum.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 3,
-          name: 'Maximal 2 Tools wählen',
-          text: 'Kombinieren Sie zwei Tools, die zu Ihrem Workflow passen. Vier Tools ist immer zu viel und kostet über 700 €/Mo.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Eine Baseline-Kosten für 90 Tage planen',
-          text: 'Evaluieren Sie nach 90 Tagen, welches Tool den besten ROI hat, und skalieren Sie entsprechend.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Bei Bedarf kombinieren oder wechseln',
-          text: 'Wenn Sie Production-Scale erreichen, können Sie zu Braintrust oder Vellum wechseln. Für kleine Teams bleibt Promptfoo + PromptHub optimal.',
-        },
       ],
     },
   },
@@ -1513,77 +1280,6 @@ tests:
       ],
       speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Différence principale Braintrust et PromptHub ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust pour évaluation et expériences. PromptHub pour versioning. Braintrust répond « quelle prompt meilleure ? » PromptHub « version utilisée avant ? » Combinez les deux.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Promptfoo vraiment gratuit ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Oui, Promptfoo open-source (MIT) totalement gratuit. Local ou serveur perso. Seuls coûts : appels API vos services OpenAI, Anthropic, etc.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Choisir Braintrust ou Vellum ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust pour évaluation (savez pas quelle prompt meilleure). Vellum pour production (savez pas quel split-traffic meilleur). Différents — idéal les deux ensemble.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Vellum combien plus cher Braintrust ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust ~500 €/mois. Vellum 200–500 €/mois volume. Vellum peut égal ou moins cher dépend trafic production.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Intégrer Promptfoo GitHub Actions ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Créez `.github/workflows/test.yml` appelant `npx promptfoo eval`. Promptfoo lit tests YAML, exécute, montre régressions. Actions triggers automatiquement à push.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptHub remplacer Braintrust ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Non. PromptHub stocke versions. Braintrust évalue qualité. PromptHub peut pas mesurer quelle version meilleure. Combinez.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Vellum outil management prompts identique ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Non, Vellum outil déploiement production, pas versioning. Simplement stocker prompts ? Utilisez PromptHub. A/B tests trafic live ? Vellum.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Alternatives à Braintrust, PromptHub, Vellum, Promptfoo ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'En 2026, émergents include Confident AI (évaluation LLM-driven fine-grained), Galileo AI (debuggage patterns-recognition), Arize Phoenix (monitoring production). Mais quatre outils de cette comparaison restent dominants. Vérifiez cas d\'usage spécifique — alternatives peuvent mieux fit, mais prix ou features plus limités.',
-          },
-        },
-      ],
-      inLanguage: 'fr',
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1597,44 +1293,6 @@ tests:
         { '@type': 'ListItem', position: 3, name: 'Vellum', description: 'A/B tests production avec trafic-splitting live' },
         { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'Tests régression open-source avec intégration GitHub Actions' },
         { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: 'Comparaison cross-modèles 25+ pour sélection modèle' },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'Comment choisir entre Braintrust, PromptHub, Vellum et Promptfoo',
-      inLanguage: 'fr',
-      step: [
-        {
-          '@type': 'HowToStep',
-          position: 1,
-          name: 'Identifier pains principaux',
-          text: 'Listez trois main pains équipe : (a) évaluation, (b) versioning, (c) déploiement production.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 2,
-          name: 'Meilleur tool pour chaque pain',
-          text: 'Braintrust (a), PromptHub (b), Vellum (c). Pain « savons pas quel modèle » ? Commencez PromptQuorum.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 3,
-          name: 'Maximal 2 tools',
-          text: 'Combinez deux outils fit votre workflow. Quatre outils toujours trop et coûtent 700+ €/mois.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Baseline coûts 90 jours',
-          text: 'Évaluez après 90 jours quel tool meilleur ROI, puis scalez en conséquence.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Combiner ou basculer si nécessaire',
-          text: 'Scale production ? Basculez Braintrust ou Vellum. Petites équipes ? Promptfoo + PromptHub optimal.',
-        },
       ],
     },
   },
@@ -1695,9 +1353,7 @@ tests:
       'sources': { title: 'ソース', items: ['[Braintrust — AI Evaluation Platform](https://braintrust.dev) — 公式ドキュメント；スコアリング関数、実験ダッシュボード、月 500€ Team プラン要求の基礎', '[PromptHub — Prompt Version Control](https://prompthub.ai) — 製品ホームページ；バージョン管理、Web UI、月 50～200€ 価格設定要求の基礎', '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — 製品概要と価格設定ページ；トラフィック分割、承認ワークフロー、月 200～500€ 要求の基礎', '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub リポジトリとドキュメント；MIT ライセンス、YAML 設定、GitHub Actions 統合要求の基礎', '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — マルチモデル比較ツール；25+ モデルディスパッチと cross-モデル比較要求の基礎'] },
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 2026', description: 'ブレイントラスト（評価プラットフォーム）、ベルム（本番A/Bテスト）、PromptHub（バージョン管理）、Promptfoo（オープンソースCI/CD）の4つを5つの軸で比較。日本企業向けMETI対応。', datePublished: '2026-04-10', dateModified: '2026-05-01', author: { '@type': 'Organization', 'name': 'PromptQuorum' }, publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, url: 'https://www.promptquorum.com/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=ja', inLanguage: 'ja', about: [{ '@type': 'Thing', 'name': 'Braintrust' }, { '@type': 'Thing', 'name': 'PromptHub' }, { '@type': 'Thing', 'name': 'Vellum' }, { '@type': 'Thing', 'name': 'Promptfoo' }, { '@type': 'Thing', 'name': 'PromptQuorum' }, { '@type': 'Thing', 'name': 'LLM 評価' }], speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] } },
-    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: 'Braintrust と PromptHub の主な違いは？', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust は評価と実験向け。PromptHub はバージョン管理向け。Braintrust は「どのプロンプトが最良か」に答え、PromptHub は「以前使用したバージョンは」に答えます。両者を組み合わせ可能。' } }, { '@type': 'Question', name: 'Promptfoo は本当に無料？', acceptedAnswer: { '@type': 'Answer', text: 'はい、Promptfoo はオープンソース（MIT）で完全無料。ローカルまたは独自サーバーで実行。唯一のコスト：OpenAI、Anthropic などへの API 呼び出し。' } }, { '@type': 'Question', name: 'Braintrust または Vellum を選択すべき？', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust は評価向け（どのプロンプトが最良かわかりません）。Vellum は本番向け（どのトラフィック分割が最良かわかりません）。異なる — 両者一緒が理想的。' } }, { '@type': 'Question', name: 'Vellum は Braintrust より高額？', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust 月 500€ 程度。Vellum 月 200～500€（ボリューム依存）。つまり、Vellum は同じかもしくはより安いコスト本番トラフィックによります。' } }, { '@type': 'Question', name: 'Promptfoo を GitHub Actions に統合？', acceptedAnswer: { '@type': 'Answer', text: '`.github/workflows/test.yml` ファイルを作成し、`npx promptfoo eval` を呼び出し。Promptfoo は YAML テスト読み込み、実行、回帰表示。Actions は自動的に各プッシュで起動。' } }, { '@type': 'Question', name: 'PromptHub が Braintrust を置き換えられる？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。PromptHub はバージョン保存。Braintrust は品質評価。PromptHub はどのバージョンが最高かを測定できません。組み合わせ可能。' } }, { '@type': 'Question', name: 'Vellum はプロンプト管理プラットフォームと同じ？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ、Vellum は本番デプロイメントツール、バージョン管理ではない。プロンプト保存のみ？PromptHub 使用。ライブトラフィック A/B テスト？Vellum。' } }], inLanguage: 'ja' },
     itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'プロンプト管理ツール（比較）', inLanguage: 'ja', url: 'https://www.promptquorum.com/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=ja', numberOfItems: 5, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Braintrust', description: '詳細メトリクスと自動評価による評価と実験' }, { '@type': 'ListItem', position: 2, name: 'PromptHub', description: 'チーム協力付きプロンプトバージョン管理' }, { '@type': 'ListItem', position: 3, name: 'Vellum', description: 'ライブトラフィック分割付き本番 A/B テスト' }, { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'GitHub Actions 統合付きオープンソース回帰テスト' }, { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: 'モデル選択用 25+ モデル cross-比較' }] },
-    howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'Braintrust、PromptHub、Vellum、Promptfoo 間での選択方法', inLanguage: 'ja', step: [{ '@type': 'HowToStep', position: 1, name: '主要な課題を特定', text: 'チームの 3 つの主な課題をリストアップ：(a) 評価、(b) バージョン管理、(c) 本番デプロイメント。' }, { '@type': 'HowToStep', position: 2, name: '各課題に対して最高のツール', text: '(a) Braintrust、(b) PromptHub、(c) Vellum。課題が「どのモデル」の場合は、PromptQuorum から開始。' }, { '@type': 'HowToStep', position: 3, name: '最大 2 つのツール', text: 'ワークフローに適した 2 つのツール。4 つはいつも多すぎ、月 700€ 以上かかります。' }, { '@type': 'HowToStep', position: 4, name: '90 日間のコスト ベースライン', text: '90 日後、最高の ROI 達成するツール評価し、スケール。' }, { '@type': 'HowToStep', position: 5, name: '必要に応じて組み合わせまたは切り替え', text: '本番スケール？Braintrust または Vellum に切り替え。小さいチーム？Promptfoo + PromptHub が最適。' }] },
   },
   zh: {
     freshness_tier: 'semi_annual',
@@ -1756,8 +1412,6 @@ tests:
       'sources': { title: '来源', items: ['[Braintrust — AI Evaluation Platform](https://braintrust.dev) — 官方文档；评分函数、实验仪表板、$500/月 Team 计划声明基础', '[PromptHub — Prompt Version Control](https://prompthub.ai) — 产品首页；版本控制、Web UI、$50-200/月 定价声明基础', '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — 产品概览和定价页；流量分割、批准工作流、$200-500/月 声明基础', '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub 仓库和文档；MIT 许可、YAML 配置、GitHub Actions 集成声明基础', '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — 多模型比较工具；25+ 模型分发和跨模型比较声明基础'] },
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 2026', description: '4款提示词管理工具对比：Braintrust评估、Vellum A/B测试、PromptHub版本管理、Promptfoo开源CI/CD。含中国企业《数据安全法》合规指南。', datePublished: '2026-04-10', dateModified: '2026-05-01', author: { '@type': 'Organization', 'name': 'PromptQuorum' }, publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, url: 'https://www.promptquorum.com/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=zh', inLanguage: 'zh', about: [{ '@type': 'Thing', 'name': 'Braintrust' }, { '@type': 'Thing', 'name': 'PromptHub' }, { '@type': 'Thing', 'name': 'Vellum' }, { '@type': 'Thing', 'name': 'Promptfoo' }, { '@type': 'Thing', 'name': 'PromptQuorum' }, { '@type': 'Thing', 'name': 'LLM 评估' }], speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] } },
-    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: 'Braintrust 和 PromptHub 主要区别？', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust 用于评估和实验。PromptHub 用于版本控制。Braintrust 回答"哪个提示词最优？"PromptHub 回答"之前用的版本是？"可结合使用。' } }, { '@type': 'Question', name: 'Promptfoo 真的免费？', acceptedAnswer: { '@type': 'Answer', text: '是的，Promptfoo 开源（MIT）完全免费。本地或自有服务器运行。唯一成本：OpenAI、Anthropic 等 API 调用。' } }, { '@type': 'Question', name: '应选 Braintrust 还是 Vellum？', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust 用于评估（不知哪个提示词最优）。Vellum 用于生产（不知哪个流量分割最优）。不同的——两个结合最优。' } }, { '@type': 'Question', name: 'Vellum 比 Braintrust 贵多少？', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust 约 $500/月。Vellum $200-500/月（按量）。即 Vellum 可能同价或更便宜，取决生产流量。' } }, { '@type': 'Question', name: 'Promptfoo 怎样与 GitHub Actions 集成？', acceptedAnswer: { '@type': 'Answer', text: '创建 `.github/workflows/test.yml` 文件，调用 `npx promptfoo eval`。Promptfoo 读 YAML 测试、运行、显示回归。Actions 自动在每次推送触发。' } }, { '@type': 'Question', name: 'PromptHub 能替代 Braintrust？', acceptedAnswer: { '@type': 'Answer', text: '不能。PromptHub 保存版本。Braintrust 评估质量。PromptHub 无法测量哪个版本最优。可结合使用。' } }, { '@type': 'Question', name: 'Vellum 与提示词管理平台相同？', acceptedAnswer: { '@type': 'Answer', text: '不是，Vellum 是生产部署工具，不是版本控制。只想存提示词？PromptHub。实时流量 A/B 测试？Vellum。' } }], inLanguage: 'zh' },
     itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: '提示词管理工具（比较）', inLanguage: 'zh', url: 'https://www.promptquorum.com/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=zh', numberOfItems: 5, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Braintrust', description: '包含详细指标和自动评估的评估和实验' }, { '@type': 'ListItem', position: 2, name: 'PromptHub', description: '团队协作的提示词版本控制' }, { '@type': 'ListItem', position: 3, name: 'Vellum', description: '实时流量分割的生产 A/B 测试' }, { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'GitHub Actions 集成的开源回归测试' }, { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: '模型选择的 25+ 模型跨模型比较' }] },
-    howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: '如何在 Braintrust、PromptHub、Vellum 和 Promptfoo 间选择', inLanguage: 'zh', step: [{ '@type': 'HowToStep', position: 1, name: '识别主要难题', text: '列出团队的 3 个主要难题：(a) 评估、(b) 版本控制、(c) 生产部署。' }, { '@type': 'HowToStep', position: 2, name: '每个难题选最优工具', text: '(a) Braintrust、(b) PromptHub、(c) Vellum。难题是"不知道哪个模型"？PromptQuorum 开始。' }, { '@type': 'HowToStep', position: 3, name: '最多 2 个工具', text: '选适合工作流的 2 个工具。4 个总是太多，花费 $700+/月。' }, { '@type': 'HowToStep', position: 4, name: '90 天成本基线', text: '90 天后，评估哪个工具最优 ROI，据此扩展。' }, { '@type': 'HowToStep', position: 5, name: '按需结合或切换', text: '生产规模？切换 Braintrust 或 Vellum。小团队？Promptfoo + PromptHub 最优。' }] },
   },
 };

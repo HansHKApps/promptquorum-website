@@ -61,17 +61,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-framework-for-teams', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        { '@type': 'Question', name: 'Which prompt framework should a team use?', acceptedAnswer: { '@type': 'Answer', text: 'Use CO-STAR for complex multi-step tasks with defined audience and style constraints (research, analysis, compliance). Use CRAFT for content, marketing, and creative work. Use RISEN for instructional, training, or educational material. Use RTF for technical documentation and structured data output. If your team modifies the same framework consistently in 3+ ways, build a custom framework instead.' } },
-        { '@type': 'Question', name: 'Do small teams need a prompt framework?', acceptedAnswer: { '@type': 'Answer', text: 'Teams with 1–2 people writing simple, one-off prompts typically do not need a formal framework. Teams with 3 or more people, multiple use cases, or inconsistent output quality benefit from standardizing on one framework. The onboarding cost of no framework is that new members take roughly twice as long to write acceptable prompts.' } },
-        { '@type': 'Question', name: 'What is the difference between CO-STAR and CRAFT?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR (Context, Objective, Style, Tone, Audience, Response) is designed for complex tasks with multiple constraints — it explicitly requires you to define who the output is for (Audience) and what stylistic qualities it should have (Style, Tone). CRAFT (Context, Role, Action, Format, Target) is designed for content and creative tasks — it focuses on the writer\'s role and the target, making it faster to apply when audience and style are fixed.' } },
-        { '@type': 'Question', name: 'When should a team build a custom prompt framework instead of using an existing one?', acceptedAnswer: { '@type': 'Answer', text: 'Build a custom framework when: you apply the same 3+ modifications to a standard framework for every prompt in a workflow; output requires a domain-specific component no standard framework covers; or team compliance with the current framework is below 80% because members skip sections. Full guidance is in the build-your-own-framework article.' } },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -249,17 +238,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-framework-for-teams', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        { '@type': 'Question', name: 'Welches Prompt-Framework sollte ein Team verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie CO-STAR für komplexe mehrstufige Aufgaben mit definierter Zielgruppe und Stilanforderungen. Verwenden Sie CRAFT für Content, Marketing und kreative Arbeit. Verwenden Sie RISEN für Anleitungen, Schulungsmaterial und Lerninhalt. Verwenden Sie RTF für technische Dokumentation und strukturierte Datenausgabe. Wenn Ihr Team dasselbe Framework konsistent auf 3+ Arten anpasst, erstellen Sie ein eigenes.' } },
-        { '@type': 'Question', name: 'Benötigen kleine Teams ein Prompt-Framework?', acceptedAnswer: { '@type': 'Answer', text: 'Teams mit 1–2 Personen, die einfache, einmalige Prompts schreiben, benötigen in der Regel kein formales Framework. Teams mit 3 oder mehr Personen, mehreren Anwendungsfällen oder inkonsistenter Ausgabequalität profitieren von der Standardisierung auf ein Framework. Ohne Framework dauert das Onboarding neuer Mitglieder etwa doppelt so lange.' } },
-        { '@type': 'Question', name: 'Was ist der Unterschied zwischen CO-STAR und CRAFT?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR (Kontext, Ziel, Stil, Ton, Zielgruppe, Antwort) ist für komplexe Aufgaben mit mehreren Einschränkungen konzipiert. CRAFT (Kontext, Rolle, Aktion, Format, Ziel) ist für Inhalte und kreative Aufgaben konzipiert — es konzentriert sich auf die Rolle des Schreibers und das Ziel, was die Anwendung bei fester Zielgruppe und festem Stil schneller macht.' } },
-        { '@type': 'Question', name: 'Wann sollte ein Team ein eigenes Framework entwickeln?', acceptedAnswer: { '@type': 'Answer', text: 'Entwickeln Sie ein eigenes Framework, wenn: Sie für jeden Prompt in einem Workflow dieselben 3+ Modifikationen an einem Standard-Framework vornehmen; die Ausgabe eine domänenspezifische Komponente erfordert, die kein Standard-Framework abdeckt; oder die Team-Compliance mit dem aktuellen Framework unter 80% liegt.' } },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -429,17 +407,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-framework-for-teams', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        { '@type': 'Question', name: 'Quel framework de prompts une équipe devrait-elle utiliser ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez CO-STAR pour les tâches complexes multi-étapes avec un public défini et des contraintes de style. Utilisez CRAFT pour le contenu, le marketing et le travail créatif. Utilisez RISEN pour l\'écriture instructionnelle et le matériel de formation. Utilisez RTF pour la documentation technique et la sortie de données structurées. Si votre équipe modifie le même framework de manière cohérente en 3+ façons, créez un framework personnalisé.' } },
-        { '@type': 'Question', name: 'Les petites équipes ont-elles besoin d\'un framework de prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Les équipes de 1 à 2 personnes écrivant des prompts simples et ponctuels n\'ont généralement pas besoin d\'un framework formel. Les équipes de 3 personnes ou plus, avec plusieurs cas d\'usage ou une qualité de sortie incohérente, bénéficient d\'une standardisation sur un framework. Sans framework, le temps d\'intégration est environ deux fois plus long.' } },
-        { '@type': 'Question', name: 'Quelle est la différence entre CO-STAR et CRAFT ?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR (Contexte, Objectif, Style, Ton, Audience, Réponse) est conçu pour les tâches complexes avec plusieurs contraintes — il exige explicitement de définir pour qui est la sortie et ses qualités stylistiques. CRAFT (Contexte, Rôle, Action, Format, Cible) est conçu pour le contenu et les tâches créatives — il se concentre sur le rôle du rédacteur et la cible, ce qui le rend plus rapide lorsque le public et le style sont fixes.' } },
-        { '@type': 'Question', name: 'Quand une équipe devrait-elle créer un framework personnalisé ?', acceptedAnswer: { '@type': 'Answer', text: 'Créez un framework personnalisé lorsque : vous appliquez les mêmes 3+ modifications à un framework standard pour chaque prompt d\'un workflow ; la sortie nécessite un composant spécifique à un domaine qu\'aucun framework standard ne couvre ; ou la conformité de l\'équipe au framework est inférieure à 80%.' } },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -608,21 +575,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-framework-for-teams', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: 'チームはどのプロンプトフレームワークを使うべきですか？', acceptedAnswer: { '@type': 'Answer', text: '定義されたオーディエンスとスタイル制約を持つ複雑な多段階タスクにはCO-STARを使用します。コンテンツ、マーケティング、クリエイティブな作業にはCRAFTを使用します。指示的な文章、トレーニング素材、教育コンテンツにはRISENを使用します。技術ドキュメント、構造化データ出力にはRTFを使用します。チームが同じフレームワークを3つ以上の方法で一貫して変更する場合は、カスタムフレームワークを構築します。' } },
-        { '@type': 'Question', name: '小さなチームはプロンプトフレームワークが必要ですか？', acceptedAnswer: { '@type': 'Answer', text: '単純な一回限りのPromptを書く1～2人のチームは通常、正式なフレームワークを必要としません。3人以上のチーム、複数のユースケース、または一貫性のない出力品質を持つチームは、一つのフレームワークへの標準化から恩恵を受けます。' } },
-        { '@type': 'Question', name: 'CO-STARとCRAFTの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR（コンテキスト、目標、スタイル、トーン、オーディエンス、レスポンス）は複数の制約を持つ複雑なタスク向けに設計されています。CRAFT（コンテキスト、役割、アクション、フォーマット、ターゲット）はコンテンツとクリエイティブなタスク向けに設計されています——役割とターゲットに焦点を当て、オーディエンスとスタイルが固定されている場合に速く適用できます。' } },
-        { '@type': 'Question', name: 'チームはいつカスタムフレームワークを構築すべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'カスタムフレームワークを構築するのは：ワークフロー内の各Promptで標準フレームワークに同じ3つ以上の変更を加える場合、出力に標準フレームワークがカバーしないドメイン固有コンポーネントが必要な場合、またはチームのフレームワーク準拠率が80%未満の場合です。' } },
-        { '@type': 'Question', name: 'フレームワークのオンボーディングにはどのくらい時間がかかりますか？', acceptedAnswer: { '@type': 'Answer', text: 'オンボーディング時間は1時間（CRAFT、RTF）から2時間（CO-STAR）の学習期間に加えて、1週間の監督下での実践期間です。カスタムフレームワークは構築に4～8時間、チームの習熟に2週間かかります。' } },
-        { '@type': 'Question', name: '複数のフレームワークのコンポーネントを組み合わせることはできますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。CO-STAR、CRAFT、RISENのコンポーネントを組み合わせることはできますが、その結果は、既存のハイブリッドではなく、カスタムフレームワークとして命名、文書化、テストする必要があります。' } },
-        { '@type': 'Question', name: '日本の企業がチームフレームワークを導入するときのMETI/規制上の考慮事項は何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'METI AI Governance 2024では、エンタープライズデプロイメント向けにPromptフレームワークの透明性と説明可能性を推奨しています。フレームワークに規制引用、監査ログ、コンプライアンスチェックポイントを含める場合、企業は金融機関、医療機関、法律事務所（銀行、保険、医療）での使用が認可されます。' } },
-        { '@type': 'Question', name: 'アジア太平洋地域での多言語Promptフレームワークの実装に関するベストプラクティスは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'アジア太平洋地域では、データ主権とロケーション要件が厳格です。フレームワークに言語固有のコンポーネント（METI規制、データ保持ポリシー、出力形式の地域適応）を含めてください。Promptをローカライズする際、各言語でのコンポーネント定義を一貫性のために中央で管理し、モデル（GPT-4o、Claude 4.6 Sonnet、Gemini）全体でテストしてください。' } },
-      ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -794,21 +746,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-framework-for-teams', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: '团队应该使用哪个Prompt框架？', acceptedAnswer: { '@type': 'Answer', text: '对于具有定义受众和风格约束的复杂多步骤任务使用CO-STAR。对于内容、营销和创意工作使用CRAFT。对于指导性写作、培训材料和教育内容使用RISEN。对于技术文档和结构化数据输出使用RTF。如果团队以一贯的方式对框架进行3种以上修改，则构建自定义框架。' } },
-        { '@type': 'Question', name: '小团队需要Prompt框架吗？', acceptedAnswer: { '@type': 'Answer', text: '编写简单一次性Prompt的1到2人团队通常不需要正式框架。拥有3人或以上、多个用例或输出质量不一致的团队可以从标准化到一个框架中受益。' } },
-        { '@type': 'Question', name: 'CO-STAR和CRAFT有什么区别？', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR（背景、目标、风格、语气、受众、回复）设计用于具有多种约束的复杂任务。CRAFT（背景、角色、行动、格式、目标）设计用于内容和创意任务——它关注写作者的角色和目标，当受众和风格固定时应用更快。' } },
-        { '@type': 'Question', name: '团队何时应该构建自定义框架而非使用现有框架？', acceptedAnswer: { '@type': 'Answer', text: '当出现以下情况时构建自定义框架：你为工作流中的每个Prompt以相同方式对标准框架进行3种以上修改；输出需要标准框架未涵盖的特定领域组件；或团队对当前框架的遵守率低于80%。' } },
-        { '@type': 'Question', name: '框架入职需要多长时间？', acceptedAnswer: { '@type': 'Answer', text: '入职时间从1小时（CRAFT、RTF）到2小时（CO-STAR）的学习阶段，加上1周的监督实践。自定义框架需要4～8小时构建，加上2周的团队熟悉期。' } },
-        { '@type': 'Question', name: '我可以组合多个框架的组件吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，你可以组合CO-STAR、CRAFT和RISEN的组件，但结果应该被命名、记录和测试为自定义框架，而不是作为现有框架的混合体。' } },
-        { '@type': 'Question', name: '中国企业部署Prompt框架时需要考虑哪些数据安全法律因素？', acceptedAnswer: { '@type': 'Answer', text: '中国《数据安全法》（2021）和《个人信息保护法》（PIPL）要求本地推理和数据驻留。在构建框架时，包括数据分类、处理限制、跨境传输控制和审计日志。Prompt框架应该指定哪些信息可以发送给云API、哪些必须在本地处理。金融、医疗、法律和政府部门特别需要这一点。' } },
-        { '@type': 'Question', name: '亚太地区多语言Prompt框架实现的最佳实践是什么？', acceptedAnswer: { '@type': 'Answer', text: '亚太地区（ASEAN、日本、韩国、印度）有严格的数据主权要求。框架应包含特定于语言的组件（METI指导、PDPA要求、地区数据保留政策）。在本地化Prompt时，在中央位置维护每种语言的组件定义以确保一致性，并在所有模型（GPT-4o、Claude 4.6 Sonnet、Gemini）上测试。对于受监管的行业（金融、医疗），保持与本地云提供商（阿里云、腾讯云、Azure、AWS本地区域）的合规性。' } },
-      ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

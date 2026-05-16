@@ -72,21 +72,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        { '@type': 'Question', name: 'Is Google\'s Prompting Guide limited to Gemini?', acceptedAnswer: { '@type': 'Answer', text: 'No. The principles are universal and work equally well with GPT-4o, Claude Opus 4.7, and all modern models. Gemini is the primary example, but the underlying ideas are model-agnostic.' } },
-        { '@type': 'Question', name: 'Can I combine Google\'s Guide with other frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely, and it\'s recommended. Use a high-level framework like CO-STAR or SPECS to define overall structure, then apply Google\'s prompting principles (clarity, constraints, examples, roles) within that structure.' } },
-        { '@type': 'Question', name: 'Does Google\'s Guide work for all types of tasks?', acceptedAnswer: { '@type': 'Answer', text: 'The guide suits most tasks except very simple ones that don\'t need structure. For complex multi-step workflows, combine it with more comprehensive frameworks like RISE or TRACE.' } },
-        { '@type': 'Question', name: 'Do I always need to include an example in my prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Not mandatory, but strongly recommended for complex or creative tasks. For simple queries (factual questions, basic summaries), a clear description often suffices.' } },
-        { '@type': 'Question', name: 'What\'s the difference between "role" and "persona" in the guide?', acceptedAnswer: { '@type': 'Answer', text: 'They\'re closely related. The guide\'s "role" is a specific persona with expertise—e.g., "You are a financial advisor" or "You are a data analyst"—that you assign to the model to guide tone and detail level.' } },
-        { '@type': 'Question', name: 'How does Google\'s Guide reduce hallucinations?', acceptedAnswer: { '@type': 'Answer', text: 'By enforcing explicit constraints (citation requirements, banned phrases, format rules) and step-by-step reasoning, the guide reduces the model\'s tendency to invent unsourced information. Structure and clarity are hallucination-reduction tools.' } },
-        { '@type': 'Question', name: 'Can I use Google\'s Guide with local models like Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The principles apply to all models. Local models (Ollama, llama.cpp, LM Studio) often respond even better to structured, constraint-rich prompts because they have less instruction-following capacity and benefit from clarity.' } },
-        { '@type': 'Question', name: 'What\'s the token cost of using Google\'s prompting principles?', acceptedAnswer: { '@type': 'Answer', text: 'Well-structured prompts following Google\'s guide typically add 10–20% to your input token count (more explicit detail, examples, constraints), but they reduce error rates by 40–60%, resulting in fewer retries and lower overall cost.' } },
-      ],
-    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -350,22 +335,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        { '@type': 'Question', name: 'Ist der Google Guide nur auf Gemini beschränkt?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Die Prinzipien sind universell und funktionieren gleich gut mit GPT-4o, Claude Opus 4,7 und allen modernen Modellen. Gemini ist das primäre Beispiel, aber die Ideen sind modellunabhängig.' } },
-        { '@type': 'Question', name: 'Kann ich den Google Guide mit anderen Frameworks kombinieren?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, und das ist empfohlen. Nutze ein hochrangiges Framework wie CO-STAR oder SPECS, um die Struktur zu definieren, dann wende Googles Prompting-Prinzipien darin an.' } },
-        { '@type': 'Question', name: 'Funktioniert der Google Guide für alle Aufgabentypen?', acceptedAnswer: { '@type': 'Answer', text: 'Der Guide passt zu den meisten Aufgaben, außer sehr einfachen, die keine Struktur brauchen. Für komplexe, mehrstufige Workflows kombiniere ihn mit umfassenderen Frameworks.' } },
-        { '@type': 'Question', name: 'Muss ich immer ein Beispiel in meinem Prompt zeigen?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht obligatorisch, aber stark empfohlen für komplexe oder kreative Aufgaben. Für einfache Anfragen reicht eine klare Beschreibung oft aus.' } },
-        { '@type': 'Question', name: 'Wie unterscheiden sich „Rollen" und „Personas" im Guide?', acceptedAnswer: { '@type': 'Answer', text: 'Sie sind verwandt. Die „Rolle" des Google Guide ist eine spezifische Persona mit Expertise—z.B. „Du bist ein Finanzberater"—die du dem Modell zuweist, um Ton und Detaillevel zu steuern.' } },
-        { '@type': 'Question', name: 'Wie reduziert der Google Guide Halluzinationen?', acceptedAnswer: { '@type': 'Answer', text: 'Durch explizite Beschränkungen (Zitieranforderungen, verbotene Phrasen, Format-Regeln) und schrittweise Begründung reduziert der Guide die Tendenz des Modells, nicht belegte Informationen zu erfinden.' } },
-        { '@type': 'Question', name: 'Kann ich den Google Guide mit lokalen Modellen wie Ollama nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die Prinzipien gelten für alle Modelle. Lokale Modelle profitieren oft noch stärker von strukturierten, beschränkungsreichen Prompts, da sie geringere Instruktionsbefolgungsfähigkeit haben.' } },
-        { '@type': 'Question', name: 'Welche Token-Kosten entstehen bei Googles Prompting-Prinzipien?', acceptedAnswer: { '@type': 'Answer', text: 'Gut strukturierte Prompts nach Googles Guide fügen 10–20% zu den Input-Tokens hinzu, reduzieren aber Fehlerquoten um 40–60%, was zu weniger Wiederholungen und niedrigeren Gesamtkosten führt.' } },
-        { '@type': 'Question', name: 'Wo finde ich die offizielle Google-Dokumentation?', acceptedAnswer: { '@type': 'Answer', text: 'Die offizielle Dokumentation ist verfügbar auf der Gemini API-Website unter „Prompting Strategies". Sie wird kontinuierlich aktualisiert und enthält die neuesten Techniken für Gemini 3,1 Pro.' } },
-      ],
     },
     sections: {
       tldr: {
@@ -631,21 +600,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        { '@type': 'Question', name: 'Le Guide Google est-il limité à Gemini ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Les principes sont universels et fonctionnent aussi bien avec GPT-4o, Claude Opus 4.7 et tous les modèles modernes. Gemini est l\'exemple principal, mais les idées sous-jacentes sont universelles.' } },
-        { '@type': 'Question', name: 'Puis-je combiner le Guide Google avec d\'autres frameworks ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, c\'est recommandé. Utilisez un framework haut-niveau comme CO-STAR ou SPECS pour définir la structure, puis appliquez les principes Google de prompting à l\'intérieur.' } },
-        { '@type': 'Question', name: 'Le Guide Google fonctionne-t-il pour tous les types de tâches ?', acceptedAnswer: { '@type': 'Answer', text: 'Le guide convient à la plupart des tâches sauf les très simples qui ne nécessitent pas de structure. Pour les workflows complexes multi-étapes, combinez-le avec des frameworks plus complets comme RISE ou TRACE.' } },
-        { '@type': 'Question', name: 'Faut-il toujours inclure un exemple dans mon prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'Non obligatoire, mais fortement recommandé pour les tâches complexes ou créatives. Pour les requêtes simples (questions de faits, résumés basiques), une description claire suffit souvent.' } },
-        { '@type': 'Question', name: 'Quelle est la différence entre « rôle » et « persona » ?', acceptedAnswer: { '@type': 'Answer', text: 'Ils sont proches. Le « rôle » du Guide Google est une persona spécifique avec expertise—par exemple, « Vous êtes un conseiller financier » ou « Vous êtes un analyste de données »—que vous assignez au modèle pour guider le ton et le niveau de détail.' } },
-        { '@type': 'Question', name: 'Comment le Guide Google réduit-il les hallucinations ?', acceptedAnswer: { '@type': 'Answer', text: 'En imposant des contraintes explicites (exigences de citation, phrases interdites, règles de format) et un raisonnement étape par étape, le guide réduit la tendance du modèle à inventer des informations non sourcées. Structure et clarté sont des outils de réduction d\'hallucination.' } },
-        { '@type': 'Question', name: 'Puis-je utiliser le Guide Google avec des modèles locaux comme Ollama ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Les principes s\'appliquent à tous les modèles. Les modèles locaux (Ollama, llama.cpp, LM Studio) répondent souvent encore mieux aux prompts structurés et aux contraintes explicites en raison de leur capacité de suivi d\'instructions inférieure.' } },
-        { '@type': 'Question', name: 'Quel est le coût en tokens des principes de prompting Google ?', acceptedAnswer: { '@type': 'Answer', text: 'Les prompts bien structurés suivant le Guide Google ajoutent généralement 10–20% au nombre de tokens d\'entrée (plus de détails explicites, d\'exemples, de contraintes), mais ils réduisent les taux d\'erreur de 40–60%, entraînant moins de retentatives et un coût global inférieur.' } },
-      ],
-    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -910,21 +864,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: 'GoogleガイドはGemini限定か？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。原則は普遍的で、GPT-4o、Claude、すべてのモダンモデルで機能します。Geminiは主な例ですが、考え方は共通です。' } },
-        { '@type': 'Question', name: 'Googleガイドを他のフレームワークと組み合わせられるか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、推奨。高レベルのフレームワーク（CO-STAR、SPECS等）で全体構造を定め、その中でGoogleガイドの原則を適用します。' } },
-        { '@type': 'Question', name: 'すべてのタスクに適用できるか？', acceptedAnswer: { '@type': 'Answer', text: 'ほぼ。ただし単純な質問にはオーバーエンジニアリング。複雑で多段階のワークフローには、より完全なフレームワークとの組み合わせが有効。' } },
-        { '@type': 'Question', name: 'プロンプトに必ず例を含める必要があるか？', acceptedAnswer: { '@type': 'Answer', text: '必須ではありませんが、複雑・創造的なタスクでは強く推奨。単純なタスク（事実質問など）には説明だけで十分な場合も。' } },
-        { '@type': 'Question', name: '「ロール」と「ペルソナ」の違いは何か？', acceptedAnswer: { '@type': 'Answer', text: '類似。Googleガイドの「ロール」は専門知識を持つペルソナ（例：財務顧問）で、モデルのトーンと詳細度を導きます。' } },
-        { '@type': 'Question', name: 'Googleガイドは幻覚をどう減らすのか？', acceptedAnswer: { '@type': 'Answer', text: '明示的な制約（引用要件、禁止表現、形式ルール）と段階的推論により、根拠なき情報生成を減らします。構造と明確さが幻覚低減ツール。' } },
-        { '@type': 'Question', name: 'OllamaなどのローカルモデルでGoogleガイドを使えるか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。原則は全モデルに適用。ローカルモデルは指示追従能力が低いため、構造化・制約豊富なプロンプトで特に効果的。' } },
-        { '@type': 'Question', name: 'Googleガイドの利用におけるトークンコストは？', acceptedAnswer: { '@type': 'Answer', text: 'よく構造化されたプロンプトは入力トークンが10～20%増えますが、エラー率が40～60%減り、再試行が減り、全体コストが下がります。' } },
-      ],
-    },
     sections: {
       tldr: { id: 'key-takeaways', isTldr: true, title: '重要ポイント', items: ['**Googleガイドは明確さ、構造、明示的な制約を優先します。**タスク、オーディエンス、出力フォーマット、安全ルールを定めます。', '**5つの中核原則は: 明確さ（正確に求めること）、例（説明より実例）、ロール（専門知識を割り当て）、制約（境界を設定）、構造（タスク分解）です。**', '**これらの原則は全モダンモデル—Gemini 3.1 Pro、GPT-4o、Claude Opus 4.7、ローカルモデル（Ollama、LM Studio）で機能します。** モデル非依存です。', '**Googleガイドは低レベルの技術フレームワークで、CO-STAR、SPECS、RISEN、TRACEなどの高レベルフレームワークと組み合わせて使う設計です。** その代わりではなく、中に使用してください。', '**Googleガイドの構造化プロンプトは入力トークンの10–20%を追加しますが、エラー率を40–60%削減し、全体コストを低下させます。**', '**PromptQuorumはGoogleガイドを再利用可能フレームワークとして統合。フィールドを一度埋めて、Gemini、GPT-4o、Claude、ローカルモデルへ並列送信。**', '**Googleガイドをfew-shot例、段階的推論、明示的な出力フォーマットと組み合わせ、モデル動作を最大コントロール。**'] },
       whatIsGoogle: { id: 'what-is-google', title: 'Googleプロンプト作成ガイドとは', content: ['**Googleプロンプト作成ガイドはGeminiと他の大規模言語モデルをpromptするパターンと最良実践の集合です。巧さではなく、明確さ、構造、安全性に焦点を合わせます。** ガイドはGoogle DeepMindの研究を、専門家以外でも従えるルールに翻訳します。ロール定義、コンテキスト提供、出力制約、推論・コーディング・データ抽出などのタスク処理をカバー。', '実務では、ガイドはpromptレシピの検索ツール。各レシピは指示の言い方、避けるべきことを示し、例を追加してモデル動作を予測可能にします。これらパターンはGemini 3.1 Proだけでなく、[GPT-4o](https://openai.com)、Claude Opus 4.7、[Ollama](https://ollama.com)などのローカルモデルでも有効です。基礎となる考え方が一般的だから。'] },
@@ -1038,21 +977,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: 'Google指南只适用于Gemini吗？', acceptedAnswer: { '@type': 'Answer', text: '不是。原则是通用的，对GPT-4o、Claude和所有现代模型都同样有效。Gemini是主要例子，但核心思想是普遍的。' } },
-        { '@type': 'Question', name: '能把Google指南和其他框架结合吗？', acceptedAnswer: { '@type': 'Answer', text: '完全可以，而且推荐。用高层框架（CO-STAR、SPECS）定义整体结构，在其中应用Google的提示词原则。' } },
-        { '@type': 'Question', name: 'Google指南适合所有任务吗？', acceptedAnswer: { '@type': 'Answer', text: '几乎所有任务。除了极其简单的问题可能不需要。复杂多步骤流程建议和更全面的框架结合使用。' } },
-        { '@type': 'Question', name: '提示词里必须包含例子吗？', acceptedAnswer: { '@type': 'Answer', text: '不是必需，但对复杂或创意任务强烈推荐。简单查询通常用文字描述就足够了。' } },
-        { '@type': 'Question', name: '「角色」和「人物角色」有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '它们相近。Google指南的「角色」是具有特定专业知识的人物角色—例如「你是财务顾问」—可以引导语气和细节程度。' } },
-        { '@type': 'Question', name: 'Google指南如何减少幻觉？', acceptedAnswer: { '@type': 'Answer', text: '通过明确约束（引用要求、禁止短语、格式规则）和逐步推理，指南减少了模型编造无根据信息的倾向。结构和明确性是减少幻觉的工具。' } },
-        { '@type': 'Question', name: '能用本地模型（如Ollama）应用Google指南吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。原则适用于所有模型。本地模型因指令跟随能力较弱，往往对结构化、约束丰富的提示词反应更好。' } },
-        { '@type': 'Question', name: 'Google指南的token成本如何？', acceptedAnswer: { '@type': 'Answer', text: '按Google指南写的提示词通常增加10～20%的输入token，但错误率减少40～60%，导致重试减少、总体成本降低。' } },
-      ],
     },
     sections: {
       tldr: { id: 'key-takeaways', title: '核心要点', isTldr: true, items: ['Google指南将重点放在清晰性而非技巧上：明确定义任务、受众和约束。', '5大中核原则（清晰性、结构、例子、角色、约束）在所有现代模型（Gemini 3.1 Pro、GPT-4o、Claude Opus 4.7）上一致有效。', '明确的约束和示例比冗长说明更有力。写得好的例子值得10行说明。', '角色提示词（"你是…"）引导语气和细节程度，对创意任务特别有用。', '逐步推理（"step-by-step think"）强制结构化思维，减少错误，但增加token使用。', '对于高风险决策多样化输入和模型测试；一个提示词在一个例子上有效不等于在所有情况下有效。', '在PromptQuorum中并排测试所有框架，比较Gemini 3.1 Pro、GPT-4o和Claude Opus 4.7的输出。'] },

@@ -70,76 +70,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is Tree-of-Thought prompting?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Tree-of-Thought instructs a model to explore multiple reasoning paths, evaluate each one, and then select the best path before giving a final answer.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is ReAct prompting?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ReAct (Reason + Act) is where the model alternates between reasoning steps and actions (tool calls, searches, lookups), observing the result and updating its reasoning.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How is Tree-of-Thought different from chain-of-thought?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Chain-of-thought follows a single linear reasoning path. Tree-of-Thought branches into multiple paths, evaluates them, and selects the best one.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do I still need to format ReAct manually in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'For frontier models with native tool use (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro), no. These models implement the loop automatically. Manual formatting is still useful for open-weights models or educational contexts.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I combine Tree-of-Thought and ReAct?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Use ToT at the strategic level to explore and compare multiple approaches, then use ReAct within the chosen branch to execute steps requiring tool interactions.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which models handle Tree-of-Thought best?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Claude Opus 4.7 (extended thinking), GPT-4o (reasoning mode), and Gemini 3.1 Pro (Deep Think) handle ToT most naturally.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What are real-world applications of ReAct?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Every modern AI agent is a ReAct loop: Claude Code, research assistants, customer support bots. The pattern scales from simple lookups to multi-hour autonomous sessions.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How does Tree-of-Thought affect token cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ToT uses significantly more tokens because the model generates multiple branches before selecting one. Expect 2-5× the output tokens of a standard CoT prompt.',
-          },
-        },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -153,19 +83,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'ListItem', position: 5, name: 'Best for', description: 'Math, logic, explanations vs Strategy, planning vs Research, debugging' },
         { '@type': 'ListItem', position: 6, name: '2026 model support', description: 'All models vs Reasoning models vs Built into all frontier models' },
         { '@type': 'ListItem', position: 7, name: 'Manual prompting', description: 'Yes (on non-reasoning models) vs Yes (helps) vs No (native tool use), unless on open-weights' },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'How to Write a Tree-of-Thought Prompt',
-      totalTime: 'PT10M',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'State the problem and number of branches', text: 'Generate exactly 3 approaches to [problem]. Be explicit about how many branches to explore.' },
-        { '@type': 'HowToStep', position: 2, name: 'Specify evaluation criteria', text: 'Compare on [feasibility / cost / risk / time-to-market]. Define what makes one branch better than another.' },
-        { '@type': 'HowToStep', position: 3, name: 'Have the model evaluate and score each branch', text: 'Let the model work through the pros and cons of each approach.' },
-        { '@type': 'HowToStep', position: 4, name: 'Add selection instruction', text: 'Select the approach that best balances [your criteria]. Require explicit reasoning for the choice.' },
-        { '@type': 'HowToStep', position: 5, name: 'Complete the task with the selected branch', text: 'Proceed with full reasoning and execution of the chosen approach.' },
       ],
     },
     sections: {
@@ -544,22 +461,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'Was ist Tree-of-Thought Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Tree-of-Thought (ToT) Prompting instruiert ein Sprachmodell, mehrere mögliche Reasoning-Pfade — wie Zweige eines Entscheidungsbaums — zu erkunden, jeden zu evaluieren und dann den besten Pfad auszuwählen, bevor eine endgültige Antwort gegeben wird.' } },
-        { '@type': 'Question', name: 'Was ist ReAct Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'ReAct (Reason + Act) ist ein Prompting-Rahmenwerk, bei dem das Modell zwischen Reasoning-Schritten und Aktionen (Tool-Aufrufe, Suchen, Lookups) wechselt und nach jeder Aktion das Ergebnis beobachtet und sein Reasoning aktualisiert.' } },
-        { '@type': 'Question', name: 'Wie unterscheidet sich Tree-of-Thought von Chain-of-Thought?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thought folgt einem einzelnen linearen Reasoning-Pfad. Tree-of-Thought verzweigt sich in mehrere Pfade, evaluiert diese und wählt den besten aus.' } },
-        { '@type': 'Question', name: 'Muss ich ReAct 2026 noch manuell formatieren?', acceptedAnswer: { '@type': 'Answer', text: 'Bei frontier-Modellen mit native Tool Use (GPT-4o, Claude Opus 4,7, Gemini 3,1 Pro) nicht. Diese Modelle implementieren die Schleife automatisch. Manuelle Formatierung ist noch sinnvoll für Open-Weights-Modelle oder Lernkontexte.' } },
-        { '@type': 'Question', name: 'Kann ich Tree-of-Thought und ReAct kombinieren?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Nutzen Sie ToT auf strategischer Ebene, um mehrere Ansätze zu erkunden und zu vergleichen, dann nutzen Sie ReAct innerhalb des ausgewählten Astes für Schritte, die Tool-Interaktionen erfordern.' } },
-        { '@type': 'Question', name: 'Welche Modelle handhaben Tree-of-Thought am besten?', acceptedAnswer: { '@type': 'Answer', text: 'Claude Opus 4,7 (extended thinking), GPT-4o (reasoning mode) und Gemini 3,1 Pro (Deep Think) handhaben ToT am natürlichsten.' } },
-        { '@type': 'Question', name: 'Was sind praktische Anwendungen von ReAct?', acceptedAnswer: { '@type': 'Answer', text: 'Jeder moderne KI-Agent ist eine ReAct-Schleife: Claude Code, Research-Assistenten, Support-Bots. Das Muster skaliert von einfachen Lookups bis zu mehrstündigen autonomen Sitzungen.' } },
-        { '@type': 'Question', name: 'Wie beeinflusst Tree-of-Thought die Token-Kosten?', acceptedAnswer: { '@type': 'Answer', text: 'ToT nutzt deutlich mehr Token, da das Modell mehrere Branches generiert, bevor es eine auswählt. Rechnen Sie mit 2-5× der Output-Token eines Standard-CoT-Prompts.' } },
-        { '@type': 'Question', name: 'Muss ich bei der Verwendung von ReAct und Tree-of-Thought die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, besonders bei sensiblen Daten. Bei lokalen Modellen (selbstgehostet) erfüllen Sie DSGVO Artikel 28 zur Datenverarbeitung automatisch. ReAct mit externen Tools (APIs) kann Daten offenlegen — nutzen Sie nur DSGVO-konforme APIs oder lokale Inference. Tree-of-Thought selbst ist ein Prompting-Pattern und hat keine direkten Datenschutzimplikationen, aber beachten Sie, welche Daten Sie in den Prompts verwenden.' } },
-        { '@type': 'Question', name: 'Sind Tree-of-Thought und ReAct für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, besonders für KMUs, die Automatisierung brauchen, ohne externe APIs zu nutzen. Setzen Sie lokale Modelle (LLaMA 4 Scout, DeepSeek-R1) mit Tree-of-Thought für strategische Planung und ReAct für Datenabfragen ein. Dies erfüllt auch BSI-Grundschutz-Anforderungen und DSGVO für Compliance-kritische Workflows. PromptQuorum ermöglicht es, Prompts über mehrere Modelle zu testen, ohne Daten zu offenbaren.' } },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -573,19 +474,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'ListItem', position: 5, name: 'Best für', description: 'Mathe, Logik, Erklärungen vs Strategie, Planung vs Forschung, Debugging' },
         { '@type': 'ListItem', position: 6, name: '2026 Modell-Support', description: 'Alle Modelle vs Reasoning-Modelle vs Built-in in allen Frontier-Modellen' },
         { '@type': 'ListItem', position: 7, name: 'Manuelle Formatierung?', description: 'Ja (auf Non-Reasoning) vs Ja (hilft) vs Nein (native Tool Use), außer Open-Weights' },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'Wie man einen Tree-of-Thought-Prompt schreibt',
-      totalTime: 'PT10M',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Problem und Anzahl der Branches definieren', text: 'Generieren Sie genau 3 Ansätze zu [Problem]. Seien Sie explizit über die Anzahl der zu explorierenden Branches.' },
-        { '@type': 'HowToStep', position: 2, name: 'Evaluierungskriterien spezifizieren', text: 'Vergleichen Sie auf [Machbarkeit / Kosten / Risiko / Zeit]. Definieren Sie, was einen Branch besser macht als einen anderen.' },
-        { '@type': 'HowToStep', position: 3, name: 'Jede Branch evaluieren und bewerten', text: 'Lassen Sie das Modell die Vor- und Nachteile jedes Ansatzes durcharbeiten.' },
-        { '@type': 'HowToStep', position: 4, name: 'Auswahlweisung hinzufügen', text: 'Wählen Sie den Ansatz, der [Ihre Kriterien] am besten ausbalanciert. Verlangen Sie explizites Reasoning für die Wahl.' },
-        { '@type': 'HowToStep', position: 5, name: 'Aufgabe mit ausgewähltem Branch ausführen', text: 'Sobald das Modell sich festlegt, lassen Sie es mit vollständigem Reasoning ausführen: "Geben Sie jetzt Schritt-für-Schritt-Anweisungen für [ausgewählter Ansatz]."' },
       ],
     },
     sections: {
@@ -883,92 +771,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qu\'est-ce que Tree-of-Thought prompting ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Tree-of-Thought demande au modèle d\'explorer plusieurs chemins de raisonnement, d\'évaluer chacun, puis de sélectionner le meilleur chemin avant de donner une réponse finale.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qu\'est-ce que ReAct prompting ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ReAct (Reason + Act) est où le modèle alterne entre les étapes de raisonnement et les actions (appels d\'outils, recherches, lookups), en observant le résultat et en mettant à jour son raisonnement.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'En quoi Tree-of-Thought diffère-t-il de Chain-of-Thought ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Chain-of-Thought suit un seul chemin de raisonnement linéaire. Tree-of-Thought se divise en plusieurs chemins, les évalue, et sélectionne le meilleur.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Dois-je encore formater ReAct manuellement en 2026 ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sur les modèles frontière avec utilisation native d\'outils (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro), non. Ces modèles implémentent la boucle automatiquement. Le formatage manuel reste utile pour les modèles open-weights ou les contextes d\'apprentissage.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Puis-je combiner Tree-of-Thought et ReAct ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Oui. Utilisez ToT au niveau stratégique pour explorer et comparer plusieurs approches, puis utilisez ReAct dans la branche sélectionnée pour les étapes qui nécessitent des interactions d\'outils.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quels modèles gèrent le mieux Tree-of-Thought ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Claude Opus 4.7 (extended thinking), GPT-4o (reasoning mode) et Gemini 3.1 Pro (Deep Think) gèrent ToT de manière plus naturelle.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quelles sont les applications pratiques de ReAct ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Chaque agent IA moderne est une boucle ReAct : Claude Code, assistants de recherche, bots d\'assistance. Le pattern s\'étend des simples recherches aux sessions autonomes de plusieurs heures.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Comment Tree-of-Thought affecte-t-il le coût en tokens ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ToT utilise nettement plus de tokens car le modèle génère plusieurs branches avant d\'en sélectionner une. Comptez 2-5× les tokens de sortie d\'un prompt CoT standard.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quelle est la pertinence de ToT et ReAct pour les données sensibles ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'La CNIL recommande l\'utilisation d\'IA locale lorsque vous traitez des données sensibles (financières, médicales, juridiques). Tree-of-Thought et ReAct sur des modèles auto-hébergés satisfont à ces exigences de confidentialité.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Puis-je utiliser Tree-of-Thought et ReAct en production ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Oui. ReAct est le pattern fondamental des agents IA en production (Claude Code, OpenAI Codex). ToT est utilisé pour les décisions stratégiques complexes ; budget pour le coût en tokens supplémentaires.',
-          },
-        },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -983,20 +785,6 @@ export const article: Record<Language, PEArticle> = {
         { '@type': 'ListItem', position: 6, name: 'Support des modèles 2026', description: 'Tous les modèles vs Modèles de raisonnement vs Intégré dans tous les modèles frontière' },
         { '@type': 'ListItem', position: 7, name: 'Formatage manuel ?', description: 'Oui (non-raisonnement) vs Oui (aide) vs Non (utilisation native), sauf open-weights' },
       ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'Comment rédiger un prompt Tree-of-Thought',
-      totalTime: 'PT10M',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Énoncez le problème et le nombre de branches', text: 'Générez exactement 3 approches pour [problème]' },
-        { '@type': 'HowToStep', position: 2, name: 'Spécifiez les critères d\'évaluation', text: 'Comparez sur [faisabilité / coût / risque / temps]' },
-        { '@type': 'HowToStep', position: 3, name: 'Demandez au modèle d\'évaluer chaque branche', text: 'Evaluez chaque branche et classez-les' },
-        { '@type': 'HowToStep', position: 4, name: 'Ajoutez une instruction de sélection', text: 'Sélectionnez l\'approche qui équilibre le mieux [critères]' },
-        { '@type': 'HowToStep', position: 5, name: 'Complétez la tâche', text: 'Exécutez avec un raisonnement complet pour la branche sélectionnée' },
-      ],
-      inLanguage: 'fr',
     },
     sections: {
       tldr: {
@@ -1300,23 +1088,6 @@ Réponse finale : [conclusion synthétisée]`,
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: 'Tree-of-Thoughtプロンプティングとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Tree-of-Thoughtは、モデルに複数の推論経路を探索させ、それぞれを評価してから最良の経路を選択して最終回答を与えるよう指示します。' } },
-        { '@type': 'Question', name: 'ReActプロンプティングとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'ReAct (Reason + Act) は、モデルが推論ステップとアクション（ツール呼び出し、検索、ルックアップ）を交互に実行し、結果を観察して推論を更新するパターンです。' } },
-        { '@type': 'Question', name: 'Tree-of-ThoughtはChain-of-Thoughtとどう違いますか？', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thoughtは単一の線形推論経路に従います。Tree-of-Thoughtは複数の経路に分岐し、評価して最適なものを選択します。' } },
-        { '@type': 'Question', name: '2026年でもReActを手動でフォーマットする必要がありますか？', acceptedAnswer: { '@type': 'Answer', text: 'ネイティブツール使用を持つ frontier モデル (GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro) では不要です。これらのモデルはループを自動的に実装します。手動フォーマットは open-weights モデルや学習コンテキストで有用です。' } },
-        { '@type': 'Question', name: 'Tree-of-ThoughtとReActを組み合わせられますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。戦略レベルで ToT を使用して複数アプローチを探索・比較し、選択したブランチ内で ReAct をツール相互作用が必要なステップに使用します。' } },
-        { '@type': 'Question', name: 'どのモデルがTree-of-Thoughtに最適ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Claude Opus 4.7 (extended thinking)、GPT-4o (reasoning mode)、Gemini 3.1 Pro (Deep Think) は ToT を最も自然に処理します。' } },
-        { '@type': 'Question', name: 'ReActの実践的な応用は何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'すべての現代的 AIエージェントは ReAct ループです：Claude Code、Research Assistant、Support Bots。パターンは単純なルックアップから数時間の自律セッションまでスケールします。' } },
-        { '@type': 'Question', name: 'Tree-of-Thoughtはトークンコストにどう影響しますか？', acceptedAnswer: { '@type': 'Answer', text: 'ToT はモデルが複数ブランチを生成してから選択するため、線形 CoT より大幅に多くのトークンを使用します。標準 CoT プロンプトの出力トークンの 2–5倍を計画してください。' } },
-        { '@type': 'Question', name: 'Tree-of-ThoughtとReActを本番環境で使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。ReAct は本番 AIエージェント (Claude Code、OpenAI Codex) の基本パターンです。ToT は複雑な戦略的決定に使用されます。追加のトークンコストに予算を立ててください。' } },
-        { '@type': 'Question', name: 'エンタープライズAI導入でのMETI準拠はどうなっていますか？', acceptedAnswer: { '@type': 'Answer', text: '日本の METI AI ガバナンス 2024 ガイドラインでは、Tree-of-Thought と ReAct は説明可能性（透明な推論）と信頼性（反復的検証）の要件を満たします。地域展開時の監査サポートを考慮してください。' } },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1331,20 +1102,6 @@ Réponse finale : [conclusion synthétisée]`,
         { '@type': 'ListItem', position: 5, name: '最適な用途', description: '数学、ロジック、説明 vs 戦略、計画 vs 調査、デバッグ' },
         { '@type': 'ListItem', position: 6, name: '2026年モデルサポート', description: 'すべてのモデル vs reasoning モデル vs すべての frontier モデルに組み込み' },
         { '@type': 'ListItem', position: 7, name: '手動フォーマット必須？', description: 'はい vs はい（助けになる）vs いいえ（native tool use）、open-weights 除く' },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'Tree-of-Thoughtプロンプトの書き方',
-      totalTime: 'PT10M',
-      inLanguage: 'ja',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: '問題とブランチ数を述べる', text: '「[問題] に対して正確に 3 つのアプローチを生成してください」' },
-        { '@type': 'HowToStep', position: 2, name: '評価基準を指定する', text: '「[実行可能性/コスト/リスク/時間] に基づいて比較してください」' },
-        { '@type': 'HowToStep', position: 3, name: 'モデルに各ブランチを評価させる', text: '各ブランチを評価し、スコアまたはランクをつけさせます' },
-        { '@type': 'HowToStep', position: 4, name: '選択指示を追加する', text: '「[基準] のバランスを最もよく取る方法を選択してください」' },
-        { '@type': 'HowToStep', position: 5, name: 'タスクを完了する', text: '選択したブランチについて完全な推論で実行' },
       ],
     },
     sections: {
@@ -1649,23 +1406,6 @@ Final Answer: [総合結論]`,
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: '树思考提示是什么？', acceptedAnswer: { '@type': 'Answer', text: '树思考指示模型探索多条推理路径，评估每条路径，然后在给出最终答案前选择最佳路径。与线性的 Chain-of-Thought 不同，树思考明确创建和比较多个备选方案。' } },
-        { '@type': 'Question', name: 'ReAct 提示是什么？', acceptedAnswer: { '@type': 'Answer', text: 'ReAct（推理+行动）是一种提示框架，其中模型在推理步骤和行动（工具调用、搜索、查找）之间交替。每次行动后，模型观察结果并更新其推理。这个模式是现代 AI 代理的基础。' } },
-        { '@type': 'Question', name: '树思考与 Chain-of-Thought 有何不同？', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thought 遵循单一线性推理路径。树思考分支为多条路径、评估并选择最优路径。可以这样想：CoT 是走一条路，ToT 是探索分岔口后再选择要走的路。' } },
-        { '@type': 'Question', name: '2026 年还需要手动格式化 ReAct 吗？', acceptedAnswer: { '@type': 'Answer', text: '在具有原生工具使用的前沿模型（GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro）上不需要。这些模型自动实现循环。手动格式化对于没有工具使用的开源权重模型或教学目的仍然有用。' } },
-        { '@type': 'Question', name: '我可以结合树思考和 ReAct 吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。在战略层面使用 ToT 来探索和比较多个方法，然后在选定分支内使用 ReAct 处理需要工具交互的步骤。这在复杂的规划任务中很常见。' } },
-        { '@type': 'Question', name: '哪些模型最适合树思考？', acceptedAnswer: { '@type': 'Answer', text: '具有扩展思维/推理模式的模型最自然地处理 ToT：Claude Opus 4.7（扩展思维）、GPT-4o（推理模式）和 Gemini 3.1 Pro（深度思维）。这些模型可以在内部探索多个分支。' } },
-        { '@type': 'Question', name: 'ReAct 的实际应用是什么？', acceptedAnswer: { '@type': 'Answer', text: '所有现代 AI 代理都是 ReAct 循环：Claude Code（推理代码→编辑→运行测试→观察→迭代）、研究助手（思考问题→Web 搜索→阅读结果→综合）、支持机器人。模式从简单查找扩展到数小时的自主会话。' } },
-        { '@type': 'Question', name: '树思考如何影响 Token 成本？', acceptedAnswer: { '@type': 'Answer', text: 'ToT 使用明显更多的 token，因为模型生成多个分支后再选择。计划使用标准 CoT 提示输出 token 的 2-5 倍。在 $0.025/1M 输出 token（Claude Opus 4.7），生成 5,000 token 的复杂 ToT 每次运行成本约为 $0.125。' } },
-        { '@type': 'Question', name: '中国企业如何确保树思考和 ReAct 的合规性？', acceptedAnswer: { '@type': 'Answer', text: '根据中国 2021 年《数据安全法》，本地推理满足数据驻留和处理合规要求。树思考和 ReAct 在本地部署模型上支持金融、医疗和法律部门的法规要求，无需将敏感数据发送到外部 API。' } },
-        { '@type': 'Question', name: '我可以在生产环境中使用树思考和 ReAct 吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。ReAct 是生产 AI 代理（Claude Code、OpenAI Codex）的基本模式。树思考用于复杂的战略决策。为额外的 token 成本进行预算，并在生产案例中测试模型行为。' } },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -1680,20 +1420,6 @@ Final Answer: [総合結論]`,
         { '@type': 'ListItem', position: 5, name: '最适用于', description: '数学、逻辑、解释 vs 战略、计划 vs 研究、调试' },
         { '@type': 'ListItem', position: 6, name: '2026 模型支持', description: '所有模型 vs 推理模型 vs 内置于所有前沿模型' },
         { '@type': 'ListItem', position: 7, name: '需要手动格式化？', description: '是 vs 是（有帮助）vs 否（原生工具使用），开源权重除外' },
-      ],
-    },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: '如何编写树思考提示',
-      totalTime: 'PT10M',
-      inLanguage: 'zh',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: '说明问题和分支数量', text: '"为 [问题] 生成正好 3 个方法"' },
-        { '@type': 'HowToStep', position: 2, name: '指定评估标准', text: '"按 [可行性/成本/风险/时间] 比较"' },
-        { '@type': 'HowToStep', position: 3, name: '让模型评估每个分支', text: '评估每个分支并评分或排名' },
-        { '@type': 'HowToStep', position: 4, name: '添加选择指示', text: '"选择在 [标准] 上平衡最好的方法"' },
-        { '@type': 'HowToStep', position: 5, name: '用完整推理完成任务', text: '为选定分支执行完整推理' },
       ],
     },
     sections: {

@@ -56,33 +56,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-your-own-framework', width: 1200, height: 630 },
     },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'How to Build a Custom Prompt Framework in 5 Steps',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Define the goal', text: 'Write one sentence describing the output this framework must reliably produce. Anchor the entire design to this goal.' },
-        { '@type': 'HowToStep', position: 2, name: 'Identify required components', text: 'List the 3–6 input elements every prompt in this workflow needs: role, context, task, constraints, output format, and domain-specific data.' },
-        { '@type': 'HowToStep', position: 3, name: 'Test on 10 real prompts', text: 'Apply the draft framework to 10 actual prompts from your workflow. Score each output against your goal. Identify which components are missing or redundant.' },
-        { '@type': 'HowToStep', position: 4, name: 'Refine the component list', text: 'Remove components that appear in fewer than 7 of 10 prompts. Add components that were added ad hoc in 5+ cases. Retest.' },
-        { '@type': 'HowToStep', position: 5, name: 'Document and standardize', text: 'Write a one-page spec: framework name, component definitions, fill-in template, and 3 example prompts. Store in version control.' },
-      ],
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        { '@type': 'Question', name: 'What is a prompt framework?', acceptedAnswer: { '@type': 'Answer', text: 'A prompt framework is a structural template that defines which components to include in a prompt and in what order. Examples include CO-STAR (Context, Objective, Style, Tone, Audience, Response) and CRAFT (Context, Role, Action, Format, Target). Frameworks improve consistency and reduce the time spent writing prompts from scratch.' } },
-        { '@type': 'Question', name: 'When should I build a custom framework instead of using CO-STAR or CRAFT?', acceptedAnswer: { '@type': 'Answer', text: 'Build a custom framework when you modify an existing one in the same 3+ ways for every prompt in a workflow. If you always add a policy constraint, a persona anchor, and a domain vocabulary list to CO-STAR — those additions should become first-class components of your own framework, not manual additions.' } },
-        { '@type': 'Question', name: 'How many components should a custom prompt framework have?', acceptedAnswer: { '@type': 'Answer', text: 'Use 3–6 components. Fewer than 3 is a technique, not a framework. More than 6 creates friction — prompt writers skip sections, defeating the purpose. If you need more than 6, split into two specialized frameworks for different task types.' } },
-        { '@type': 'Question', name: 'How do I test if my custom framework is working?', acceptedAnswer: { '@type': 'Answer', text: 'Apply the framework to 10 representative prompts and score outputs against 3 criteria: task completion, format compliance, and quality consistency. A working framework should score 8/10 or better on all three. Use PromptQuorum to test the same framework prompt across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to confirm it works across models.' } },
-        { '@type': 'Question', name: 'Can a custom framework work across different AI models?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, if designed correctly. Model-agnostic frameworks avoid model-specific syntax and rely on universal components (task definition, constraints, output format). Test your framework on at least GPT-4o and Claude 4.6 Sonnet before finalizing — if it needs significant rewording per model, simplify the component definitions.' } },
-        { '@type': 'Question', name: 'How do I name a custom prompt framework?', acceptedAnswer: { '@type': 'Answer', text: 'Naming with an acronym (like REPAIR) makes it memorable and helps onboarding. Choose letters that map to the 3-6 components in order. The acronym test: can a new team member remember all components from the name alone? If not, simplify the component list.' } },
-        { '@type': 'Question', name: 'How do I version a custom framework?', acceptedAnswer: { '@type': 'Answer', text: 'Store each framework version in a dated file (e.g., repair-v1-2026-05.md) in your prompt library directory. Tag breaking changes (component added/removed) as major versions. Tag refinements (definition updates) as minor versions. Document the reason for each change alongside the version file.' } },
-        { '@type': 'Question', name: 'Can I combine multiple existing frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'You can combine components from CO-STAR, CRAFT, and RISEN — but treat the result as a new custom framework, not a hybrid. Name it, document it, and test it as if it were original. Combining without formalizing just creates an undocumented ad-hoc pattern.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -319,20 +292,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-your-own-framework', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        { '@type': 'Question', name: 'Was ist ein Prompt-Framework?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Prompt-Framework ist eine strukturierte Vorlage, die festlegt, welche Komponenten ein Prompt enthalten soll und in welcher Reihenfolge. Beispiele sind CO-STAR (Context, Objective, Style, Tone, Audience, Response) und CRAFT (Context, Role, Action, Format, Target). Frameworks verbessern die Konsistenz und reduzieren den Aufwand beim Erstellen neuer Prompts.' } },
-        { '@type': 'Question', name: 'Wann sollte ich ein eigenes Framework statt CO-STAR oder CRAFT entwickeln?', acceptedAnswer: { '@type': 'Answer', text: 'Entwickeln Sie ein eigenes Framework, wenn Sie für jeden Prompt in einem Workflow dieselben 3+ Modifikationen an einem Standardframework vornehmen. Wenn Sie immer einen Compliance-Anker, eine Domänen-Terminologie und eine Ausgabe-Schema-Vorgabe hinzufügen, sollten diese zu festen Komponenten Ihres eigenen Frameworks werden.' } },
-        { '@type': 'Question', name: 'Wie viele Komponenten sollte ein eigenes Prompt-Framework haben?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie 3–6 Komponenten. Weniger als 3 ist eine Technik, kein Framework. Mehr als 6 erzeugt Reibung — Autoren überspringen Abschnitte unter Zeitdruck, was die Konsistenz untergräbt.' } },
-        { '@type': 'Question', name: 'Wie teste ich, ob mein eigenes Framework funktioniert?', acceptedAnswer: { '@type': 'Answer', text: 'Wenden Sie das Framework auf 10 repräsentative Prompts an und bewerten Sie die Ausgaben nach drei Kriterien: Aufgabenerfüllung, Format-Compliance und Qualitätskonsistenz. Ein funktionierendes Framework sollte bei allen drei Kriterien 8/10 oder besser erreichen.' } },
-        { '@type': 'Question', name: 'Wie benenne ich ein eigenes Prompt-Framework?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Akronym (wie REPAIR) macht das Framework einprägsam und erleichtert das Onboarding. Wählen Sie Buchstaben, die den 3–6 Komponenten in der richtigen Reihenfolge zugeordnet sind. Der Akronym-Test: Kann ein neues Teammitglied alle Komponenten allein aus dem Namen ableiten? Wenn nicht, vereinfachen Sie die Komponentenliste.' } },
-        { '@type': 'Question', name: 'Wie versioniere ich ein eigenes Framework?', acceptedAnswer: { '@type': 'Answer', text: 'Speichern Sie jede Framework-Version in einer datierten Datei (z. B. repair-v1-2026-05.md) in Ihrem Prompt-Library-Verzeichnis. Kennzeichnen Sie grundlegende Änderungen (Komponente hinzugefügt/entfernt) als Hauptversionen und Verfeinerungen als Nebenversionen.' } },
-        { '@type': 'Question', name: 'Kann ich mehrere Frameworks kombinieren?', acceptedAnswer: { '@type': 'Answer', text: 'Sie können Komponenten aus CO-STAR, CRAFT und RISEN kombinieren — behandeln Sie das Ergebnis aber als neues eigenes Framework, nicht als Hybrid. Benennen, dokumentieren und testen Sie es wie ein Original.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -508,19 +467,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-your-own-framework', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        { '@type': 'Question', name: 'Qu\'est-ce qu\'un framework de prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Un framework de prompts est un modèle structurel qui définit quels composants inclure dans un prompt et dans quel ordre. Des exemples incluent CO-STAR et CRAFT. Les frameworks améliorent la cohérence et réduisent le temps de rédaction de prompts.' } },
-        { '@type': 'Question', name: 'Quand créer un framework personnalisé ?', acceptedAnswer: { '@type': 'Answer', text: 'Créez un framework personnalisé lorsque vous appliquez les mêmes 3+ modifications à un framework standard pour chaque prompt d\'un workflow.' } },
-        { '@type': 'Question', name: 'Combien de composants doit avoir un framework ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez 3 à 6 composants. Moins de 3 est une technique. Plus de 6 crée de la friction.' } },
-        { '@type': 'Question', name: 'Comment nommer un framework personnalisé ?', acceptedAnswer: { '@type': 'Answer', text: 'Un acronyme (comme REPAIR) le rend mémorable. Choisissez des lettres correspondant aux 3–6 composants dans l\'ordre. Test : un nouveau membre peut-il se souvenir de tous les composants rien qu\'avec le nom ?' } },
-        { '@type': 'Question', name: 'Comment versionner un framework personnalisé ?', acceptedAnswer: { '@type': 'Answer', text: 'Stockez chaque version dans un fichier daté (ex. repair-v1-2026-05.md). Changements majeurs = version principale, raffinements = version mineure. Documentez la raison de chaque changement.' } },
-        { '@type': 'Question', name: 'Peut-on combiner plusieurs frameworks ?', acceptedAnswer: { '@type': 'Answer', text: 'Vous pouvez combiner des composants de CO-STAR, CRAFT et RISEN — mais traitez le résultat comme un nouveau framework personnalisé. Nommez-le, documentez-le et testez-le comme s\'il était original.' } },
-      ],
     },
     sections: {
       tldr: {
@@ -707,19 +653,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-your-own-framework', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: 'プロンプトフレームワークとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトフレームワークとは、プロンプトにどのコンポーネントをどの順序で含めるかを定義する構造化テンプレートです。CO-STARやCRAFTなどがあります。フレームワークは一貫性を高め、プロンプト作成時間を短縮します。' } },
-        { '@type': 'Question', name: 'カスタムフレームワークを構築すべき状況は？', acceptedAnswer: { '@type': 'Answer', text: 'ワークフロー内の各プロンプトで標準フレームワークに同じ3つ以上の修正を加える場合にカスタムフレームワークを構築します。' } },
-        { '@type': 'Question', name: 'フレームワークのコンポーネント数は？', acceptedAnswer: { '@type': 'Answer', text: '3〜6個のコンポーネントを使用します。3個未満はテクニック、6個超は摩擦を生みます。' } },
-        { '@type': 'Question', name: 'カスタムフレームワークの命名方法は？', acceptedAnswer: { '@type': 'Answer', text: 'REPAIR のようなアクロニムで記憶しやすくします。3〜6コンポーネントを順番にマッピングする文字を選んでください。テスト：新しいチームメンバーが名前だけで全コンポーネントを思い出せますか？' } },
-        { '@type': 'Question', name: 'カスタムフレームワークのバージョン管理方法は？', acceptedAnswer: { '@type': 'Answer', text: '各バージョンを日付付きファイル（例：repair-v1-2026-05.md）に保存します。重大な変更はメジャーバージョン、改善はマイナーバージョンとします。' } },
-        { '@type': 'Question', name: '複数のフレームワークを組み合わせられますか？', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR、CRAFT、RISENのコンポーネントを組み合わせられますが、結果は新しいカスタムフレームワークとして扱ってください。名前を付け、文書化し、オリジナルとして扱います。' } },
-      ],
     },
     sections: {
       tldr: {
@@ -918,19 +851,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-your-own-framework', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: '什么是Prompt框架？', acceptedAnswer: { '@type': 'Answer', text: 'Prompt框架是一种结构化模板，定义了Prompt中应包含哪些组件及其顺序。CO-STAR和CRAFT是常见示例。框架提高了一致性，减少了从零开始编写Prompt的时间。' } },
-        { '@type': 'Question', name: '何时应该构建自定义框架？', acceptedAnswer: { '@type': 'Answer', text: '当您为工作流中的每条Prompt对标准框架进行相同的3项以上修改时，请构建自定义框架。' } },
-        { '@type': 'Question', name: '自定义框架应该有多少个组件？', acceptedAnswer: { '@type': 'Answer', text: '使用3至6个组件。少于3个是技术方法，超过6个会产生阻力。' } },
-        { '@type': 'Question', name: '如何命名自定义Prompt框架？', acceptedAnswer: { '@type': 'Answer', text: '用首字母缩略词（如REPAIR）使其易于记忆。测试：新团队成员仅凭名称能记住所有组件吗？如果不能，简化组件列表。' } },
-        { '@type': 'Question', name: '如何对自定义框架进行版本控制？', acceptedAnswer: { '@type': 'Answer', text: '将每个框架版本存储在带日期的文件中（如repair-v1-2026-05.md）。重大变更为主版本，细化调整为次版本。记录每次变更的原因。' } },
-        { '@type': 'Question', name: '可以组合多个现有框架吗？', acceptedAnswer: { '@type': 'Answer', text: '可以组合CO-STAR、CRAFT和RISEN的组件，但将结果视为新的自定义框架。命名、记录并测试它，就像它是原创的一样。' } },
-      ],
     },
     sections: {
       tldr: {

@@ -58,21 +58,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        { '@type': 'Question', name: 'What is prompt governance?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt governance is the system of roles, review processes, and deployment rules that controls which prompts reach production and how they are monitored. It includes who can author prompts, who must approve them, what tests must pass before deployment, and what happens when a prompt fails in production.' } },
-        { '@type': 'Question', name: 'Why does prompt governance matter in production?', acceptedAnswer: { '@type': 'Answer', text: 'Prompts fail silently — no error log, no exception, no alert. Output quality degrades without any visible signal. Governance adds visibility: every change is tracked, every version is reviewable, every deployment can be rolled back. Without it, a single poorly-tested prompt change can degrade thousands of user interactions before anyone notices.' } },
-        { '@type': 'Question', name: 'What roles are needed for prompt governance?', acceptedAnswer: { '@type': 'Answer', text: 'Three roles cover most teams: Author (writes the prompt, runs initial tests), Reviewer (domain or safety expert who checks for quality and compliance), and Approver (approves deployment to production). Large teams add a Prompt Owner role — a single person accountable for a prompt\'s live performance across all model versions.' } },
-        { '@type': 'Question', name: 'How do I roll back a bad prompt in production?', acceptedAnswer: { '@type': 'Answer', text: 'Store every deployed prompt with a version tag in Git or PromptHub. When a regression is detected, revert to the previous version in your deployment config and redeploy. This takes under 5 minutes if version control is set up in advance. Teams without version control typically take hours to diagnose and fix the same incident.' } },
-        { '@type': 'Question', name: 'Does the NIST AI Risk Management Framework require prompt governance?', acceptedAnswer: { '@type': 'Answer', text: 'The NIST AI Risk Management Framework (AI RMF, 2023) recommends governance controls for AI system components including prompts. Specific requirements include traceability (who changed what and when), risk assessment before deployment, and incident response procedures. Prompt version control and review gates address all three.' } },
-        { '@type': 'Question', name: 'Does the EU AI Act require prompt governance?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act (effective 2026) classifies high-risk AI systems as requiring human oversight, documentation, and traceability. Prompts used in high-risk categories (medical, legal, hiring, credit) must have documented change control. Prompt governance — specifically version control, review gates, and audit trails — directly satisfies the traceability requirement.' } },
-        { '@type': 'Question', name: 'How is prompt governance different from model governance?', acceptedAnswer: { '@type': 'Answer', text: 'Model governance covers model selection, training, bias testing, and deployment policies. Prompt governance covers what instructions are given to a deployed model and whether those instructions are controlled, tested, and auditable. Both are required in regulated environments; they are complementary but distinct.' } },
-        { '@type': 'Question', name: 'What should an audit trail for prompts contain?', acceptedAnswer: { '@type': 'Answer', text: 'A prompt audit trail must record: prompt text at each version, who changed it, when, why (change rationale), which tests it passed, who approved deployment, and any incidents attributed to it. Store this in Git commit history or a purpose-built tool like PromptHub. The trail must be queryable — if an auditor asks "what prompt was live at 2:00pm on date X?", you should be able to answer in under 5 minutes.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -283,19 +268,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        { '@type': 'Question', name: 'Was ist Prompt-Governance?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt-Governance ist das System aus Rollen, Reviewprozessen und Deployment-Regeln, das kontrolliert, welche Prompts in die Produktion gelangen und wie sie überwacht werden. Es umfasst, wer Prompts erstellen darf, wer sie genehmigen muss, welche Tests vor dem Deployment bestanden werden müssen und was bei einem Prompt-Ausfall in der Produktion passiert.' } },
-        { '@type': 'Question', name: 'Warum ist Prompt-Governance in der Produktion wichtig?', acceptedAnswer: { '@type': 'Answer', text: 'Prompts scheitern lautlos — kein Fehlerprotokoll, keine Ausnahme, kein Alert. Die Ausgabequalität verschlechtert sich ohne sichtbares Signal. Governance fügt Sichtbarkeit hinzu: Jede Änderung wird verfolgt, jede Version ist überprüfbar, jedes Deployment kann zurückgerollt werden.' } },
-        { '@type': 'Question', name: 'Wie stelle ich ein Rollback für einen fehlerhaften Prompt durch?', acceptedAnswer: { '@type': 'Answer', text: 'Speichern Sie jeden deployten Prompt mit einem Versions-Tag in Git oder PromptHub. Wenn eine Regression erkannt wird, setzen Sie die Deployment-Konfiguration auf den vorherigen Versions-Tag zurück und deployen Sie erneut. Bei vorbereiteter Versionskontrolle dauert dies unter 5 Minuten.' } },
-        { '@type': 'Question', name: 'Fordert der EU AI Act Prompt-Governance?', acceptedAnswer: { '@type': 'Answer', text: 'Der EU AI Act (ab 2026) klassifiziert Hochrisiko-KI-Systeme als solche, die menschliche Aufsicht, Dokumentation und Rückverfolgbarkeit erfordern. Prompts in Hochrisiko-Kategorien (Medizin, Recht, Einstellung, Kredit) müssen dokumentierte Änderungskontrolle haben. Prompt-Governance — insbesondere Versionskontrolle, Review-Gates und Audit-Trails — erfüllt direkt die Rückverfolgbarkeitsanforderung.' } },
-        { '@type': 'Question', name: 'Wie unterscheidet sich Prompt-Governance von Modell-Governance?', acceptedAnswer: { '@type': 'Answer', text: 'Modell-Governance umfasst Modellauswahl, Training, Bias-Tests und Deployment-Richtlinien. Prompt-Governance umfasst, welche Anweisungen einem deployten Modell gegeben werden und ob diese Anweisungen kontrolliert, getestet und auditierbar sind. Beide sind in regulierten Umgebungen erforderlich; sie ergänzen sich, sind aber unterschiedlich.' } },
-        { '@type': 'Question', name: 'Was muss ein Audit-Trail für Prompts enthalten?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Prompt-Audit-Trail muss erfassen: Prompt-Text in jeder Version, wer ihn geändert hat, wann, warum (Änderungsbegründung), welche Tests bestanden wurden, wer das Deployment genehmigt hat und etwaige Vorfälle. Wenn ein Prüfer fragt, welcher Prompt zu einem bestimmten Zeitpunkt live war, sollten Sie in unter 5 Minuten antworten können.' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -486,18 +458,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        { '@type': 'Question', name: 'Qu\'est-ce que la gouvernance des prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'La gouvernance des prompts est le système de rôles, de processus de révision et de règles de déploiement qui contrôle quels prompts atteignent la production. Elle couvre qui peut créer des prompts, qui doit les approuver, quels tests doivent être réussis avant le déploiement, et que faire en cas d\'échec en production.' } },
-        { '@type': 'Question', name: 'Comment annuler un prompt défaillant en production ?', acceptedAnswer: { '@type': 'Answer', text: 'Stockez chaque prompt déployé avec un tag de version dans Git ou PromptHub. Quand une régression est détectée, revenez au tag de version précédent dans la config de déploiement et redéployez. Si le contrôle de version est configuré à l\'avance, cela prend moins de 5 minutes.' } },
-        { '@type': 'Question', name: 'L\'EU AI Act exige-t-il la gouvernance des prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'L\'EU AI Act (en vigueur 2026) classe les systèmes IA à haut risque comme nécessitant la supervision humaine, la documentation et la traçabilité. Les prompts utilisés dans des catégories à haut risque (médical, juridique, recrutement, crédit) doivent avoir un contrôle des modifications documenté. La gouvernance des prompts satisfait directement l\'exigence de traçabilité.' } },
-        { '@type': 'Question', name: 'Quelle est la différence entre gouvernance des prompts et gouvernance des modèles ?', acceptedAnswer: { '@type': 'Answer', text: 'La gouvernance des modèles couvre la sélection, l\'entraînement, les tests de biais et les politiques de déploiement des modèles. La gouvernance des prompts couvre les instructions données à un modèle déployé. Les deux sont complémentaires mais distincts.' } },
-        { '@type': 'Question', name: 'Que doit contenir une piste d\'audit pour les prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Une piste d\'audit de prompt doit enregistrer : le texte du prompt à chaque version, qui l\'a modifié, quand, pourquoi, quels tests ont été réussis, qui a approuvé le déploiement, et tout incident attribué à ce prompt. La piste doit être interrogeable en moins de 5 minutes.' } },
-      ],
     },
     sections: {
       tldr: {
@@ -690,18 +650,6 @@ export const article: Record<Language, PEArticle> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 630 },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        { '@type': 'Question', name: 'Promptガバナンスとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Promptガバナンスとは、どのPromptが本番環境に到達し、どのように監視されるかを制御する役割・プロセス・ルールのシステムです。誰がPromptを作成できるか、誰が承認しなければならないか、デプロイ前にどのテストに合格する必要があるか、本番でPromptが失敗した場合に何が起こるかを定義します。' } },
-        { '@type': 'Question', name: '本番環境で失敗したPromptをロールバックするには？', acceptedAnswer: { '@type': 'Answer', text: 'デプロイしたすべてのPromptをGitまたはPromptHubにバージョンタグ付きで保存します。回帰が検出されたら、デプロイ設定を前のバージョンタグに戻し、再デプロイします。バージョン管理が事前に設定されていれば5分未満で完了します。' } },
-        { '@type': 'Question', name: 'EU AI ActはPromptガバナンスを要求していますか？', acceptedAnswer: { '@type': 'Answer', text: 'EU AI Act（2026年施行）は、高リスクAIシステムに人間の監督、文書化、追跡可能性を要求します。高リスクカテゴリ（医療、法律、採用、信用）で使用するPromptは文書化された変更管理が必要です。Promptガバナンス — 特にバージョン管理、レビューゲート、監査証跡 — は追跡可能性要件を直接満たします。' } },
-        { '@type': 'Question', name: 'Promptガバナンスとモデルガバナンスの違いは？', acceptedAnswer: { '@type': 'Answer', text: 'モデルガバナンスはモデルの選択、トレーニング、バイアステスト、デプロイポリシーをカバーします。Promptガバナンスはデプロイされたモデルへの指示をカバーします。規制環境では両方が必要で、補完的ですが異なります。' } },
-        { '@type': 'Question', name: 'Promptの監査証跡には何が含まれる必要がありますか？', acceptedAnswer: { '@type': 'Answer', text: 'Promptの監査証跡には、各バージョンのPromptテキスト、誰が変更したか、いつ、なぜ（変更理由）、どのテストに合格したか、誰がデプロイを承認したか、起因するインシデントを記録する必要があります。監査員が特定の時刻にどのPromptが稼働していたかを尋ねた場合、5分未満で回答できる必要があります。' } },
-      ],
-    },
     sections: {
       tldr: {
         isTldr: true,
@@ -892,19 +840,6 @@ export const article: Record<Language, PEArticle> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 630 },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        { '@type': 'Question', name: '什么是Prompt治理？', acceptedAnswer: { '@type': 'Answer', text: 'Prompt治理是控制哪些Prompt进入生产环境及如何监控的角色、流程和规则体系。它涵盖谁可以编写Prompt、谁必须审批、部署前必须通过哪些测试，以及Prompt在生产环境中失败时如何处理。' } },
-        { '@type': 'Question', name: '如何回滚生产环境中的问题Prompt？', acceptedAnswer: { '@type': 'Answer', text: '在Git或PromptHub中为每个部署的Prompt存储版本标签。当检测到回归时，将部署配置还原到之前的版本标签并重新部署。如果版本控制提前配置好，整个过程不到5分钟。' } },
-        { '@type': 'Question', name: 'NIST AI风险管理框架是否要求Prompt治理？', acceptedAnswer: { '@type': 'Answer', text: 'NIST AI风险管理框架（AI RMF，2023年）建议对包括Prompt在内的AI系统组件实施治理控制措施，包括可追溯性、部署前风险评估和事件响应程序。Prompt版本控制和审查门控可满足这三项要求。' } },
-        { '@type': 'Question', name: 'EU AI Act是否要求Prompt治理？', acceptedAnswer: { '@type': 'Answer', text: 'EU AI Act（2026年生效）将高风险AI系统归类为需要人工监督、文档记录和可追溯性的系统。高风险类别（医疗、法律、招聘、信用）中使用的Prompt必须有文档化的变更控制。Prompt治理——尤其是版本控制、审查门控和审计记录——直接满足可追溯性要求。' } },
-        { '@type': 'Question', name: 'Prompt治理与模型治理有何不同？', acceptedAnswer: { '@type': 'Answer', text: '模型治理涵盖模型选择、训练、偏见测试和部署政策。Prompt治理涵盖给已部署模型的指令是否受控、经过测试和可审计。两者在受监管环境中都是必要的，互补但不同。' } },
-        { '@type': 'Question', name: 'Prompt的审计记录应该包含什么？', acceptedAnswer: { '@type': 'Answer', text: 'Prompt审计记录必须包括：每个版本的Prompt文本、谁修改了它、何时、为何（变更理由）、通过了哪些测试、谁批准了部署以及任何归因于它的事件。如果审计员询问特定时间点正在运行哪个Prompt，应该能在5分钟内回答。' } },
-      ],
     },
     sections: {
       tldr: {

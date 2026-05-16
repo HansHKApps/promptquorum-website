@@ -58,61 +58,6 @@ export const article: Record<Language, PEArticle> = {
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'en',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is multi-model prompt testing?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Multi-model prompt testing is the practice of running the same prompt on two or more AI models — such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Flash — and comparing outputs on defined quality criteria like format compliance, verbosity, accuracy, and instruction-following.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Why do the same prompts produce different outputs on different models?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Each model is trained on different data distributions with different RLHF preferences, which means they have different defaults for verbosity, tone, format compliance, and instruction-following. A prompt that produces a concise JSON object on GPT-4o may produce a markdown explanation with embedded JSON on Claude, and a verbose paragraph with the JSON buried inside on Gemini.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How many test cases do I need for a multi-model test matrix?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A minimum of 10 test cases is needed for reliable signal. Aim for 15–20 test cases that cover your expected input range: typical inputs, edge cases, ambiguous inputs, and adversarial inputs. Fewer than 10 test cases produce results that are too noisy to trust for model selection decisions.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What tools support multi-model prompt testing?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptQuorum dispatches one prompt to all models simultaneously and shows side-by-side comparisons at no cost. Promptfoo is an open-source config-file-based tool that supports GPT-4o, Claude, Gemini, and local models including Llama 3.2. Braintrust offers dataset-driven evaluation with scoring workflows.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Should I test the same models that my competitors use?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Your model selection should be driven by your quality criteria and use case, not by what competitors use. Test the models that your infrastructure can support and that meet your latency and cost requirements. GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Flash are the most cost-effective trio for most production use cases.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I use multi-model testing to reduce hallucination?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes, partially. Multi-model testing reveals which models hallucinate more frequently on your specific domain. Consensus scoring (running a prompt on multiple models and voting on the output) can reduce hallucination by using the most frequently correct answer across models, at the cost of added latency and expense.',
-          },
-        },
-      ],
-    },
     sections: {
       key_takeaways: {
         title: 'Key Takeaways',
@@ -348,61 +293,6 @@ export const article: Record<Language, PEArticle> = {
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'de',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Was ist Multi-Modell-Prompt-Testing?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Multi-Modell-Prompt-Testing bezeichnet die Praxis, denselben Prompt auf zwei oder mehr KI-Modellen — etwa GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Flash — auszuführen und die Ausgaben anhand definierter Qualitätskriterien wie Formatkonformität, Ausführlichkeit, Genauigkeit und Instruktionsbefolgung zu vergleichen.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Warum erzeugen dieselben Prompts bei verschiedenen Modellen unterschiedliche Ergebnisse?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Jedes Modell wird auf unterschiedlichen Datenverteilungen mit unterschiedlichen RLHF-Präferenzen trainiert. Ein Prompt, der auf GPT-4o ein sauberes JSON-Objekt liefert, kann bei Claude eine Markdown-Erklärung mit eingebettetem JSON erzeugen.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wie viele Testfälle brauche ich für eine Multi-Modell-Testmatrix?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Mindestens 10 Testfälle sind für ein verlässliches Signal erforderlich. Optimal sind 15–20 Testfälle, die den erwarteten Eingabebereich abdecken: typische Eingaben, Randfälle und adversarielle Eingaben.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Welche Tools unterstützen Multi-Modell-Prompt-Testing?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptQuorum sendet einen Prompt gleichzeitig an alle Modelle und zeigt Nebeneinandervergleiche kostenlos an. Promptfoo ist ein Open-Source-Tool auf Konfigurationsdateibasis, das GPT-4o, Claude, Gemini und lokale Modelle wie Llama 3.2 unterstützt.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Sollte ich die gleichen Modelle testen wie meine Konkurrenz?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ihre Modellauswahl sollte von Ihren Qualitätsanforderungen und Ihrem Anwendungsfall bestimmt werden, nicht von der Konkurrenz. Testen Sie die Modelle, die Ihre Infrastruktur unterstützen kann und die Ihre Latenz- und Kostenanforderungen erfüllen. GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Flash sind das kostengünstigste Trio für die meisten Anwendungsfälle.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kann ich Multi-Modell-Testing zur Reduktion von Halluzinationen nutzen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja, teilweise. Multi-Modell-Testing zeigt, welche Modelle in Ihrem spezifischen Bereich häufiger halluzinieren. Konsens-Scoring (mehrere Modelle ausführen und auf Ausgaben abstimmen) kann Halluzinationen reduzieren, kostet aber zusätzliche Latenz und Kosten.',
-          },
-        },
-      ],
-    },
     sections: {
       key_takeaways: {
         title: 'Zusammenfassung',
@@ -566,61 +456,6 @@ export const article: Record<Language, PEArticle> = {
       keywords: ['test multi-modèles', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'fr',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: "Qu'est-ce que le test de prompts multi-modèles ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Le test de prompts multi-modèles consiste à exécuter le même prompt sur deux modèles ou plus — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Flash — et à comparer les sorties sur des critères définis : conformité au format, verbosité, précision factuelle et suivi des instructions.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Pourquoi les mêmes prompts produisent-ils des sorties différentes selon les modèles ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Chaque modèle est entraîné sur des distributions de données différentes avec des préférences RLHF différentes. Un prompt qui retourne un objet JSON propre sur GPT-4o peut retourner une explication Markdown avec JSON imbriqué sur Claude.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Combien de cas de test faut-il pour une matrice multi-modèles ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Un minimum de 10 cas de test est nécessaire pour un signal fiable. Visez 15 à 20 cas couvrant les entrées typiques, les cas limites et les entrées adversariales.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Quels outils supportent le test de prompts multi-modèles ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "PromptQuorum envoie un prompt à tous les modèles simultanément et affiche des comparaisons côte à côte gratuitement. Promptfoo est un outil open source basé sur des fichiers de configuration supportant GPT-4o, Claude, Gemini et des modèles locaux comme Llama 3.2.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Dois-je tester les mêmes modèles que mes concurrents ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Non. Votre sélection dépend de vos critères de qualité et votre cas d'usage, pas de la concurrence. Testez les modèles que votre infrastructure supporte et qui répondent vos contraintes de latence et coût. GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Flash sont le trio le plus rentable pour la plupart des cas.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Puis-je utiliser le test multi-modèles pour réduire les hallucinations ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Partiellement. Le test révèle quels modèles hallucinent plus dans votre domaine. Le scoring par consensus (voter sur les sorties) réduit les hallucinations en utilisant la réponse la plus souvent correcte entre modèles, au coût d'une latence et d'un coût supplémentaires.",
-          },
-        },
-      ],
     },
     sections: {
       key_takeaways: {
@@ -786,45 +621,6 @@ export const article: Record<Language, PEArticle> = {
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'ja',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'マルチモデルプロンプトテストとは何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'マルチモデルプロンプトテストとは、同じプロンプトをGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Flashなど2つ以上のAIモデルで実行し、フォーマット準拠、冗長性、精度、指示の遵守などの品質基準で出力を比較する手法です。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'なぜ同じプロンプトがモデルによって異なる出力を生成するのですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '各モデルは異なるデータ分布と異なるRLHF設定で学習されており、冗長性、トーン、フォーマット準拠、指示の遵守に異なるデフォルトがあります。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'マルチモデルテストマトリクスに必要なテストケース数は？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '信頼できるシグナルには最低10のテストケースが必要です。典型的な入力、エッジケース、敵対的入力をカバーする15〜20のテストケースを目指してください。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'マルチモデルプロンプトテストをサポートするツールは？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptQuorumは1つのプロンプトを全モデルに同時送信し、無料で並べて比較を表示します。PromptfooはGPT-4o、Claude、Gemini、Llama 3.2などのローカルモデルをサポートするオープンソースツールです。',
-          },
-        },
-      ],
-    },
     sections: {
       key_takeaways: {
         title: 'まとめ',
@@ -970,61 +766,6 @@ export const article: Record<Language, PEArticle> = {
       keywords: ['多模型提示词测试', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      inLanguage: 'zh',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: '什么是多模型提示词测试？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '多模型提示词测试是在GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Flash等两个或更多AI模型上运行相同提示词，并根据格式合规性、详细程度、事实准确性和指令遵守等定义标准比较输出的实践方法。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '为什么相同提示词在不同模型上产生不同输出？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '每个模型在不同的数据分布上训练，具有不同的RLHF偏好，导致详细程度、语气、格式合规性和指令遵守方面有不同的默认值。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '多模型测试矩阵需要多少测试用例？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '获得可靠信号至少需要10个测试用例。建议15至20个，覆盖典型输入、边缘情况和对抗性输入。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '哪些工具支持多模型提示词测试？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptQuorum可同时将一个提示词发送到所有模型，免费显示并排比较。Promptfoo是开源的基于配置文件的工具，支持GPT-4o、Claude、Gemini和Llama 3.2等本地模型。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '中国《数据安全法》对多模型测试有什么要求？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '中国《数据安全法》（2021年）要求敏感数据处理和跨境传输必须获得许可。在多模型选择时，验证每个模型是否支持本地化部署、数据不出境，或是否需要与国内云供应商（阿里、腾讯、华为）的本地API对接。Qwen 2.5等国产大模型自动符合中国数据驻留要求。',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '亚太地区（东南亚、日本、印度）多模型部署的最佳实践是什么？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '亚太地区有严格的数据主权要求。日本METI AI治理框架2024要求模型审计日志和可解释性文档。东南亚PDPA标准（泰国、新加坡、越南、印度尼西亚）要求数据驻留验证。在多模型测试中，为每个目标市场验证合规性：日本选择支持日语和METI合规性的模型；东南亚确认本地化部署选项；印度验证数据驻留政策。',
-          },
-        },
-      ],
     },
     sections: {
       key_takeaways: {
