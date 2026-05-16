@@ -550,4 +550,250 @@ schema: {
         ],
       },
     },
+    fr: {
+      freshness_tier: 'annual',
+      theme: 'Enterprise',
+      title: 'RAG d\'entreprise avec LLMs locaux : Q&A documentaire pour organisations',
+      seoTitle: 'RAG d\'entreprise LLMs locaux',
+      intro: 'RAG (Retrieval-Augmented Generation) appliquée aux documents d\'entreprise : politiques, contrats, wikis internes, articles de recherche. La RAG locale conserve les documents propriétaires sur site, élimine les coûts API et fournit des pistes d\'audit complètes. En avril 2026, la RAG d\'entreprise est le cas d\'usage n°1 pour les LLMs locaux en entreprise.',
+      metaDescription: 'RAG d\'entreprise avec LLMs locaux : Q&A documentaire sécurisé, bases de connaissances propriétaires, audit trails, contrôle d\'accès multi-utilisateurs, entreprise.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**RAG (Retrieval-Augmented Generation) appliquée aux documents d\'entreprise : politiques, contrats, wikis internes, articles de recherche. La RAG locale conserve les documents propriétaires sur site, élimine les coûts API et fournit des pistes d\'audit complètes.**',
+      audience: 'Ingénieurs déployant des LLMs locaux en environnements production ou entreprise',
+      readTime: '12 min de lecture',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'base de connaissances d\'entreprise',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Cas d\'usage RAG d\'entreprise', anchor: '#use-cases' },
+        { label: 'Ingestion de documents à l\'échelle', anchor: '#ingestion' },
+        { label: 'Architecture RAG multi-utilisateurs', anchor: '#architecture' },
+        { label: 'Qualité et classement de la récupération', anchor: '#retrieval-quality' },
+        { label: 'Gouvernance et contrôle d\'accès', anchor: '#governance' },
+        { label: 'Erreurs courantes en RAG d\'entreprise', anchor: '#common-mistakes' },
+        { label: 'Lectures connexes', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**RAG d\'entreprise = base de connaissances interne.** Téléchargez tous les documents d\'entreprise, laissez les employés poser des questions.',
+            '**Cas d\'usage :** Lookup de politique, Q&A sur contrats, découverte de recherche, intégration, formation conformité.',
+            '**Échelle :** 10 000–100 000 documents, 100–500 utilisateurs simultanés, <2 sec latence.',
+            '**Avantage local :** Les documents propriétaires ne quittent jamais votre réseau. Piste d\'audit complète de qui a accédé à quoi.',
+            'En avril 2026, la RAG d\'entreprise économise aux entreprises 500T–5M EUR annuellement en productivité des employés.',
+          ],
+        },
+        useCases: {
+          title: 'Quels documents la RAG d\'entreprise peut-elle traiter ?',
+          rows: [
+            { 'Type de document': 'Manuel des employés', 'Utilisation RAG': 'Lookup de politique (« Combien de congés ai-je ? »)', 'Utilisateurs typiques': 'Tous les employés' },
+            { 'Type de document': 'Contrats', 'Utilisation RAG': 'Recherche de clause (« Quelle est la clause de résiliation ? »)', 'Utilisateurs typiques': 'Juridique, approvisionnement' },
+            { 'Type de document': 'Documentation technique', 'Utilisation RAG': 'Référence API, exemples de code', 'Utilisateurs typiques': 'Ingénieurs' },
+            { 'Type de document': 'Articles de recherche', 'Utilisation RAG': 'Découverte de connaissances (« Articles sur ML quantique ? »)', 'Utilisateurs typiques': 'Équipes R&D' },
+            { 'Type de document': 'Documents de conformité', 'Utilisation RAG': 'Lookup réglementaire (« Exigences RGPD pour la conservation des données ? »)', 'Utilisateurs typiques': 'Conformité, juridique' },
+            { 'Type de document': 'Documentation client', 'Utilisation RAG': 'Documentation produit, FAQ', 'Utilisateurs typiques': 'Support, ventes' },
+          ],
+          columns: ['Type de document', 'Utilisation RAG', 'Utilisateurs typiques'],
+        },
+        ingestion: {
+          title: 'Comment ingérer des documents à l\'échelle ?',
+          content: [
+            '**Pipeline d\'ingestion convertit les documents en embeddings et les stocke dans une base de données vectorielle.**',
+          ],
+          numberedItems: [
+            '**Extraire les documents :** Depuis serveurs de fichiers, SharePoint, Jira, Confluence, etc.',
+            '**Analyser :** Convertir PDFs, documents Word, HTML en texte. Gérer les tableaux, images.',
+            '**Découper :** Diviser en chunks 500–1 000 tokens avec 20% chevauchement.',
+            '**Incorporer :** Convertir chunks en vecteurs avec modèle embedding local (nomic-embed-text).',
+            '**Indexer :** Stocker vecteurs dans Qdrant, Milvus ou Weaviate avec métadonnées (source, date, auteur).',
+            '**Actualiser :** Réingestion hebdomadaire ou mensuelle pour capturer les mises à jour.',
+          ],
+        },
+        architecture: {
+          title: 'Comment concevoir une RAG multi-utilisateurs d\'entreprise ?',
+          content: [
+            'Pile typique :',
+            '- **Frontend :** Interface web ou bot Slack.',
+            '- **API :** Endpoint REST pour requêtes RAG.',
+            '- **LLM :** Llama 13B local (qualité) ou 7B (vitesse).',
+            '- **Embeddings :** nomic-embed-text local (ou cloud pour vitesse).',
+            '- **Base vectorielle :** Qdrant (distribuée) pour 10 000+ documents.',
+            '- **Stockage documentaire :** Serveur de fichiers chiffré pour PDFs et sources.',
+            '- **Contrôle d\'accès :** Intégration LDAP/AD pour permissions utilisateurs.',
+          ],
+        },
+        retrievalQuality: {
+          title: 'Comment assurer la qualité de la récupération ?',
+          content: [
+            '**Mauvaise récupération = mauvaises réponses.** La qualité dépend de :',
+          ],
+          items: [
+            '**Stratégie de découpage :** Chunks sémantiques (par sujet) surpassent chunks de taille fixe.',
+            '**Modèle d\'embedding :** Utilisez embeddings spécifiques au domaine si disponibles. Les embeddings génériques peuvent manquer la terminologie domaine.',
+            '**Paramètres de récupération :** k=5–10 (combien de chunks récupérer). Trop bas = contexte manquant. Trop haut = bruit.',
+            '**Reclassement :** Utilisez cross-encoder pour reclasser chunks par pertinence (petit gain de qualité).',
+            '**Retours utilisateurs :** Bouton « Feedback » sur réponses. Utilisez pour ajuster paramètres récupération.',
+          ],
+        },
+        governance: {
+          title: 'Comment implémenter la gouvernance et le contrôle d\'accès ?',
+          content: [
+            '**La RAG d\'entreprise doit tracker l\'accès pour conformité. La CNIL recommande l\'IA locale pour les données sensibles professionnelles (données financières, médicales, juridiques).**',
+          ],
+          items: [
+            '**Journaux d\'accès :** Qui a interrogé quels documents, quand, depuis où.',
+            '**Rétention :** Conservez journaux 3–7 ans (obligation réglementaire).',
+            '**Contrôle d\'accès :** Restreindre documents par rôle (ex., seul juridique voit contrats).',
+            '**Audit :** Examen trimestriel journaux d\'accès pour activité inhabituelle.',
+            '**Classification données :** Marquer documents comme public, interne, confidentiel, restreint.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes en RAG d\'entreprise',
+          items: [
+            '**Ingestion sans nettoyage.** Anciens documents, doublons, fichiers test = bruit récupération. Nettoyer avant ingestion.',
+            '**Découpage non intelligent.** Chunks taille fixe coupent sujets mi-phrase. Utiliser découpage sémantique.',
+            '**Pas de contrôle d\'accès.** Si tous documents visibles à tous employés, fuites info confidentielle.',
+            '**Ignorer qualité récupération.** Tester avec vrais employés avant large déploiement. 50% problèmes = récupération, pas génération.',
+            '**Pas de réingestion mises à jour.** Base documentaire devient obsolète. Planifier réingestion hebdomadaire/mensuelle.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Questions courantes sur la RAG d\'entreprise ?',
+          faqs: [
+            {
+              q: 'Combien de documents la RAG d\'entreprise peut-elle traiter ?',
+              a: 'Dépend taille document moyen et latence. Plage typique : 10 000–100 000 documents. Latence récupération doit être <1 seconde. Si plus lent, optimiser découpage ou embeddings. Tester avec vos documents réels.',
+            },
+            {
+              q: 'Quel modèle d\'embedding devrions-nous utiliser ?',
+              a: 'Options open-source : all-MiniLM-L6-v2 (rapide, bon), BAAI/bge-base-en-v1.5 (meilleure qualité). Propriétaire : OpenAI text-embedding-3-small. Pour déploiement local, utiliser open-source. Différences qualité importent : meilleurs embeddings = meilleure récupération.',
+            },
+            {
+              q: 'Comment mettre à jour documents sans perdre historique chat ?',
+              a: 'Stocker historique chat séparé des embeddings documents. Mettre à jour embeddings selon horaire (hebdomadaire/mensuel). Anciens chats référencent encore anciennes versions documents, ce qui va bien -- documentez juste la date version.',
+            },
+            {
+              q: 'Pouvons-nous utiliser RAG pour documents confidentiels ?',
+              a: 'Oui -- RAG locale est idéale. Documents restent sur site, requêtes non enregistrées externement, contrôlez accès via permissions basées rôles. Cela satisfait HIPAA et RGPD.',
+            },
+            {
+              q: 'Qu\'est-ce que découpage sémantique vs. taille fixe ?',
+              a: 'Taille fixe (ex., 512 tokens) plus simple mais coupe sujets mi-phrase. Découpage sémantique utilise limites phrase/paragraphe, préserve sens. Sémantique mieux pour qualité RAG mais plus lent à configurer.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectures connexes',
+          items: [
+            '[RAG local 2026](/local-llms/local-rag-2026?lang=fr) -- Guide complet implémentation RAG.',
+            '[Mise à l\'échelle LLMs locaux entreprise](/local-llms/scaling-local-llms-enterprise?lang=fr) -- Infrastructure multi-utilisateurs.',
+            '[Pourquoi entreprises utilisent LLMs locaux](/local-llms/why-enterprises-use-local-llms?lang=fr) -- Cas commercial.',
+            '[Conformité entreprise LLMs locaux](/local-llms/enterprise-compliance-local-llms?lang=fr) -- Conformité traitement documentaire.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            'Documentation LlamaIndex -- docs.llamaindex.ai',
+            'Base de données vectorielle Qdrant -- qdrant.tech',
+            'Évaluation récupération -- arxiv.org (chercher « RAG evaluation metrics »)',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'RAG d\'entreprise LLMs locaux',
+        'description': 'RAG d\'entreprise avec LLMs locaux : Q&A documentaire sécurisé, bases de connaissances propriétaires, audit trails, contrôle d\'accès multi-utilisateurs, entreprise.',
+        'url': 'https://www.promptquorum.com/local-llms/corporate-rag-local-llms?lang=fr',
+        'inLanguage': 'fr',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'fr',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Combien de documents la RAG d\'entreprise peut-elle traiter ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Dépend taille document moyen et latence. Plage typique : 10 000–100 000 documents. Latence récupération doit être <1 seconde. Si plus lent, optimiser découpage ou embeddings. Tester avec vos documents réels.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel modèle d\'embedding devrions-nous utiliser ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Options open-source : all-MiniLM-L6-v2 (rapide, bon), BAAI/bge-base-en-v1.5 (meilleure qualité). Propriétaire : OpenAI text-embedding-3-small. Pour déploiement local, utiliser open-source. Différences qualité importent : meilleurs embeddings = meilleure récupération.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment mettre à jour documents sans perdre historique chat ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Stocker historique chat séparé des embeddings documents. Mettre à jour embeddings selon horaire (hebdomadaire/mensuel). Anciens chats référencent encore anciennes versions documents, ce qui va bien -- documentez juste la date version.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pouvons-nous utiliser RAG pour documents confidentiels ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui -- RAG locale est idéale. Documents restent sur site, requêtes non enregistrées externement, contrôlez accès via permissions basées rôles. Cela satisfait HIPAA et RGPD.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que découpage sémantique vs. taille fixe ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Taille fixe (ex., 512 tokens) plus simple mais coupe sujets mi-phrase. Découpage sémantique utilise limites phrase/paragraphe, préserve sens. Sémantique mieux pour qualité RAG mais plus lent à configurer.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'RAG d\'entreprise LLMs locaux',
+        'inLanguage': 'fr',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Ingestion de documents à l\'échelle',
+            'description': 'Téléchargez 10 000–100 000 documents, analysez PDFs/Word/HTML, découpez intelligemment, incorporez avec modèles locaux.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Architecture RAG multi-utilisateurs',
+            'description': 'Servez 100–500 utilisateurs simultanés avec load balancing, optimisation qualité récupération, <2 sec latence.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Gouvernance et conformité',
+            'description': 'Implémentez contrôle d\'accès, audit trails, politiques rétention données, accès documents basé rôles.',
+          },
+        ],
+      },
+    },
   };
