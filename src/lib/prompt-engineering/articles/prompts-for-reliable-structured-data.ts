@@ -853,7 +853,387 @@ export const article: Record<Language, PEArticle> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-30',
     theme: 'Techniques',
-    sections: {},
+    title: 'Données structurées fiables avec Prompts: 3 Techniques',
+    seoTitle: 'Données structurées fiables avec Prompts: 3 Techniques',
+    metaDescription: 'JSON-mode impose la syntaxe, pas la complétude des champs. Intégration du schéma, exemples de sortie et instructions de champ atteignent 95%+ de fiabilité sans changements API.',
+    ogDescription: 'JSON-mode empêche le JSON malformé, pas les champs manquants ou les mauvais types. Trois techniques de prompt — schéma intégré, exemples de sortie, instructions de champ — atteignent 95%+ de fiabilité sans changements API.',
+    twitterDescription: 'JSON-mode corrige la syntaxe, pas la conformité du schéma. Schéma dans le prompt + un exemple de sortie + instructions de champ → 95%+ de fiabilité. Pas de changements API.',
+    intro: '**La plupart des défaillances de sortie structurée surviennent dans du JSON valide — champs manquants, dates formatées en simples strings, valeurs enum mal orthographiées, champs nullable renvoyant des strings vides au lieu de null.** Les APIs avec JSON-mode et tool_use éliminent les sorties non analysables mais ne résolvent pas les défaillances de conformité de schéma. Trois techniques de prompt résolvent ce que JSON-mode laisse de côté.**',
+    leadAnswerBlock: '**Trois modèles de prompt atteignent 95% ou plus de fiabilité sans changements API: intégrer le schéma dans le prompt, montrer au modèle un exemple de sortie valide, et ajouter des instructions au niveau du champ pour le type, format et traitement null.** Ces modèles fonctionnent sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro, avec ou sans JSON-mode natif.',
+    publishDate: '2026-04-30',
+    dateModified: '2026-04-30',
+    readTime: '9 min de lecture',
+    educationalLevel: 'Intermediate',
+    audience: 'Développeurs créant des workflows de production avec les APIs LLM',
+    primaryTerm: 'prompts pour données structurées fiables',
+    aboutTopics: ['Prompting de Sortie Structurée', 'Conception de Schéma JSON', 'Tests de Fiabilité des Prompts'],
+    quickFacts: [
+      'Les APIs avec JSON-mode (OpenAI response_format, Anthropic tool_use) imposent du JSON analysable mais ne garantissent pas la présence des champs, les types de données corrects ou les valeurs enum valides — les défaillances de conformité du schéma exigent des contrôles au niveau du prompt',
+      'Les modèles sans JSON-mode imposé par API atteignent 80–85% de fiabilité avec schéma seul; ajouter un exemple de sortie valide monte cela à 90–92%',
+      'Les champs enum avec plus de 5 valeurs ont besoin que toutes les valeurs permises soient listées explicitement dans le prompt — les modèles inventent des valeurs plausibles hors de portée quand la liste enum manque',
+      'Un ensemble de test de 20 cas (10 happy-path, 5 cas limites, 5 adversariaux) suffit à identifier les défaillances les plus courantes avant le déploiement en production',
+    ],
+    toc: [
+      { label: 'Points clés',                                                          anchor: '#key-takeaways' },
+      { label: 'Le Design du Prompt Détermine la Fiabilité de la Sortie Structurée',  anchor: '#what-makes-reliable' },
+      { label: 'Intégrer le Schéma Directement dans le Prompt',                       anchor: '#schema-in-prompt' },
+      { label: 'Montrer au Modèle un Exemple de Sortie Valide',                       anchor: '#example-anchoring' },
+      { label: 'Instructions au Niveau du Champ, pas Seulement un Schéma',            anchor: '#field-instructions' },
+      { label: 'Choisir JSON, YAML ou CSV selon la Tâche et l\'Imposition',           anchor: '#format-selection' },
+      { label: 'Laisser le Modèle Corriger sa Propre Sortie Malformée',               anchor: '#failure-recovery' },
+      { label: 'Modèles de Prompt pour les Tableaux, Énumérations et Champs Nullables', anchor: '#data-type-patterns' },
+      { label: 'Mesurer la Fiabilité de la Sortie Structurée',                        anchor: '#testing-reliability' },
+      { label: '5 Erreurs Courantes des Prompts de Sortie Structurée',                anchor: '#common-mistakes' },
+      { label: 'Questions Fréquemment Posées',                                        anchor: '#faq' },
+      { label: 'Lectures Supplémentaires',                                             anchor: '#related-reading' },
+      { label: 'Sources',                                                              anchor: '#sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Données structurées fiables avec Prompts: 3 Techniques',
+      description: 'JSON-mode impose la syntaxe, pas la complétude des champs. Intégration du schéma, exemples de sortie et instructions de champ atteignent 95%+ de fiabilité sans changements API.',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-04-30',
+      dateModified: '2026-04-30',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompts-for-reliable-structured-data?lang=fr',
+      inLanguage: 'fr',
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: 'Prompting de Sortie Structurée' },
+        { '@type': 'Thing', name: 'Conception de Schéma JSON' },
+        { '@type': 'Thing', name: 'Tests de Fiabilité des Prompts' },
+      ],
+      audience: { '@type': 'Audience', audienceType: 'Développeurs créant des workflows de production avec les APIs LLM' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Comment Mesurer et Améliorer la Fiabilité de la Sortie Structurée',
+      inLanguage: 'fr',
+      totalTime: 'PT2H',
+      step: [
+        {
+          '@type': 'HowToStep',
+          name: 'Définir les critères de réussite/échec pour chaque champ du schéma',
+          text: 'Pour chaque champ dans votre schéma, écrivez une vérification binaire qui s\'exécute programmatiquement: le type est correct, le champ requis est présent, la valeur enum est dans la liste permise, le format de date correspond au motif attendu. Ces vérifications sont votre oracle de test.',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Construire un ensemble de test de 20 cas',
+          text: 'Créez 20 entrées de test: 10 happy-path (typiques, bien formées), 5 cas limites (champs optionnels manquants, texte long, valeurs inhabituelles), 5 adversariaux (instructions intégrées dans les valeurs de champs, dates extrêmes, types ambigus).',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Exécuter à la température 0 et enregistrer les taux de réussite par champ',
+          text: 'Exécutez les 20 cas contre votre prompt à la température 0 pour des résultats déterministes. Enregistrez réussite/échec par champ, pas seulement au total. Les défaillances par champ identifient exactement quelle instruction manque ou est ambiguë.',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Corriger le champ avec le taux de réussite le plus faible et retester',
+          text: 'Identifiez le champ avec le plus de défaillances. Ajoutez ou renforcez son instruction: type, valeurs permises, format, traitement null. Réexécutez les 20 cas. Répétez jusqu\'à ce que le taux global atteigne 95% ou plus.',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Valider le prompt sur un second modèle',
+          text: 'Exécutez le même ensemble de 20 cas sur un second modèle. Un prompt à 95%+ sur GPT-4o mais 70% sur Claude 4.6 Sonnet est dépendant du modèle. Soit rendez les instructions plus explicites pour réussir sur les deux, soit documentez pour quel modèle le prompt est validé.',
+        },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'fr',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'JSON-mode rend le schéma dans le prompt inutile?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Non. JSON-mode impose du JSON analysable, pas la conformité du schéma. Un modèle avec JSON-mode peut toujours retourner du JSON valide avec champs manquants, mauvais types de données ou valeurs enum invalides. Schéma dans le prompt et instructions de champ traitent les défaillances de conformité du schéma; JSON-mode empêche seulement les sorties non analysables. Les deux approches sont complémentaires, pas alternatives.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Combien d\'exemples de sortie dois-je inclure dans le prompt?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Un exemple est généralement suffisant et offre le plus grand gain de fiabilité. Un deuxième exemple a de la valeur seulement si vos données ont une structure sensiblement différente selon les conditions d\'entrée — par exemple, quand certains champs sont conditionnellement requis selon le type d\'entrée. Au-delà de deux exemples, le coût de la longueur du prompt dépasse le bénéfice de fiabilité pour la plupart des tâches.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Les instructions au niveau du champ peuvent-elles porter la fiabilité au-delà de 95%?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Oui, mais avec des rendements décroissants. Chaque instruction de champ supplémentaire pour un champ déjà fiable (95%+ individuellement) élève rarement le taux global de plus de 1–2 points de pourcentage. Concentrez-vous sur les champs avec <85% de taux de réussite; là vous verrez 5–15 points d\'amélioration par instruction. Après 95% globalement, le bénéfice est marginal; utilisez un prompt de correction pour les cas limites restants.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Dois-je tester le même prompt à des températures différentes?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Oui. Testez d\'abord à la température 0 pour des résultats déterministes et répétables. Seulement quand le prompt atteint 95%+ à la température 0, augmentez la température et retestez. Un prompt à 95% et température 0, mais 60% à température 1 est sensible à la température — vous devez ajouter des instructions plus explicites ou rester à température 0.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Est-ce que 95% de taux de réussite est «assez bon» pour la production?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Pour la plupart des systèmes de production oui, avec réserves. À 95% de fiabilité sur 100 demandes de sortie structurée par jour, vous obtenez ~5 erreurs quotidiennes; à 1000/jour c\'est ~50. Sous 95% — environ 85% — un loop de correction est obligatoire pour éviter la gestion des erreurs. Au-delà de 99% est inutile pour les données non critiques. Cible: 95–97% selon la tolérance d\'erreur en aval.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'L\'ordre des champs dans le schéma affecte-t-il la fiabilité?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Oui. Placez les champs requis en premier et les champs optionnels ou nullables en dernier. Les modèles pondèrent plus fortement les premiers éléments du schéma quand ils décident quoi inclure. Un champ nullable listé en premier est plus susceptible d\'être omis qu\'un champ requis listé plus tard, quand le modèle est incertain sur la valeur. Cet effet d\'ordre est cohérent sur GPT-4o et Claude 4.6 Sonnet.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Dois-je ajouter des FAQs spécifiques à la France?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Non. Cet article couvre des principes de prompt engineering universels applicables sur tous les marchés. Il n\'y a pas de variantes régionales en France pour la conception de prompts de sortie structurée. Les meilleures pratiques et techniques décrites s\'appliquent de la même façon aux développeurs français et internationaux.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Peut-on tester des prompts de sortie structurée sans écrire du code?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Techniquement oui mais c\'est laborieux. Vous pouvez tester manuellement 20 cas, enregistrer les résultats dans une feuille de calcul et compter les réussites par champ. Mais l\'automatisation — un script Python ou Node.js — vous permet d\'itérer plus rapidement et de suivre les changements entre les révisions de prompt. Commencez avec l\'automatisation si possible.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Que faire si mon prompt échoue plus de 15% du temps?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Diagnostiquez le motif: quel champ échoue, dans quelles conditions d\'entrée. Ajoutez ou renforcez l\'instruction de ce champ spécifique. Retestez. N\'utilisez pas de loops de correction en production — cela double le coût. Fixez le prompt à la source. Si vous ne pouvez pas identifier le motif, envisagez une approche complètement différente: API JSON-mode imposé, un LLM différent ou une tâche légèrement modifiée.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Comment PromptQuorum aide-t-il pour ce workflow?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PromptQuorum teste automatiquement votre ensemble de 20 cas sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro simultanément et affiche les taux de réussite par champ côte à côte. Cela identifie les défaillances dépendantes du modèle en une exécution au lieu de trois. Vous voyez immédiatement quel modèle a quel problème et quel champ a besoin d\'une instruction renforcée.',
+          },
+        },
+      ],
+    },
+    sections: {
+      keyTakeaways: {
+        id: 'key-takeaways',
+        title: 'Points clés',
+        content: [
+          '**JSON-mode au niveau API arrête la syntaxe JSON malformée, pas les défaillances de conformité du schéma.** Du JSON valide peut manquer de champs, utiliser les mauvais types et contenir des valeurs enum invalides qui échouent toutes à la validation en aval.',
+          '**Intégrer le schéma dans le prompt est le fondement.** Un template JSON structuré directement dans le prompt montre au modèle les noms de champs, la profondeur d\'imbrication et les types par la structure, pas la prose.',
+          '**Un exemple de sortie valide augmente la fiabilité de 5–10 points.** Le modèle voit à quoi ressemble une sortie réussie et suit mieux.',
+          '**Les instructions au niveau du champ pour le type, format et traitement null sont critiques.** «Champ enum» est ambigu; «status (exactement l\'un de: \'active\', \'inactive\', \'pending\' — pas d\'abréviations)» ne l\'est pas.',
+          '**95% de taux de réussite sur un ensemble de test de 20 cas est le gate de production.** Sous 95%, les défaillances en production surviennent assez souvent pour exiger un loop de correction qui double le coût et la latence.',
+        ],
+      },
+      whatMakesReliable: {
+        id: 'what-makes-reliable',
+        title: 'Le Design du Prompt Détermine la Fiabilité de la Sortie Structurée',
+        content: '**Les APIs JSON-mode (OpenAI response_format, Anthropic tool_use, Google Gemini responseMimeType) imposent du JSON analysable, mais ne font rien pour la conformité du schéma — champs requis présents, types de données corrects, valeurs enum valides. Ces erreurs surviennent malgré l\'enforcement au niveau API et exigent des contrôles de design de prompt.**',
+        callouts: [
+          { type: 'key-point', label: 'JSON-mode ne suffit pas', text: 'JSON-mode imposé par API empêche les sorties non analysables (espaces dans JSON, guillemets non échappés). Il n\'empêche pas la conformité du schéma: un modèle avec JSON-mode activé peut toujours retourner du JSON valide avec champs manquants, mauvais type et valeurs invalides. La conformité du schéma est un problème de prompt, pas un problème d\'API.' },
+          { type: 'pro-tip', label: 'Testez d\'abord avec schéma dans le prompt seul', text: 'Les modèles sans JSON-mode imposé par API (APIs anciennes, LLMs locaux) atteignent 80–85% de fiabilité avec schéma seul dans le prompt. Cela établit la baseline et montre où les 15–20 points restants ajoutent utilement.' },
+        ],
+      },
+      schemaInPrompt: {
+        id: 'schema-in-prompt',
+        title: 'Intégrer le Schéma Directement dans le Prompt',
+        content: '**Montrer le schéma comme un template JSON directement dans le prompt est la technique de plus haute valeur.** Les prompts qui décrivent le schéma seulement en prose («une liste de champs») sont ambigus. Le modèle ne voit pas clairement les noms de champs, la profondeur d\'imbrication ou le type et devine.',
+        promptExamples: [
+          {
+            bad: 'Retournez une liste de données client.',
+            good: 'Retournez les données client dans ce format JSON exact:\n{\n  "customer_id": "string",\n  "name": "string",\n  "email": "string",\n  "purchases": ["item1", "item2"],\n  "total_spent": 0.00,\n  "is_premium": true\n}\n\nIncluez tous les champs. Jamais null.',
+            badLabel: 'Ambigu — pas de structure',
+            goodLabel: 'Template de schéma avec types montrés par la structure',
+          },
+        ],
+        callouts: [
+          { type: 'key-point', label: 'Distribuer les objets imbriqués sur plusieurs lignes', text: 'Presser les structures imbriquées sur une ligne rend difficile pour les modèles de voir la profondeur. Les templates multi-lignes avec indentation sont beaucoup plus faciles à suivre.' },
+          { type: 'pro-tip', label: 'Montrer explicitement null et les arrays vides', text: 'Utilisez le template pour montrer à quoi null ressemble (pas «nil», pas «N/A», juste null) et à quoi un array vide ressemble ([] pas null). Si ce n\'est pas dans votre template, ces choses se font mal.' },
+        ],
+      },
+      exampleAnchoring: {
+        id: 'example-anchoring',
+        title: 'Montrer au Modèle un Exemple de Sortie Valide',
+        content: '**Un exemple de sortie augmente la fiabilité de 5–10 points et coûte peu de tokens.** Le modèle voit un motif de sortie réussi et suit mieux, particulièrement pour les champs avec types ambigus (une liste de dates est-elle un array ou séparé par virgules?) ou valeurs enum (est-ce \'ACTIVE\' ou \'active\'?).',
+        promptExamples: [
+          {
+            bad: 'Retournez les détails client en JSON. Champs: customer_id, status.\n\nInput: {{ data }}',
+            good: 'Retournez les détails client en JSON. Champs: customer_id (string), status (enum: \'active\', \'inactive\', \'pending\').\n\nExemple:\n{"customer_id": "CUST-12345", "status": "active"}\n\nInput: {{ data }}',
+            badLabel: 'Pas d\'exemples — le modèle devine sur enum',
+            goodLabel: 'L\'exemple montre format, type, orthographe de valeur enum',
+          },
+        ],
+        callouts: [
+          { type: 'key-point', label: 'Un exemple suffit pour la plupart des cas', text: 'Deux ou plus d\'exemples aident seulement quand vos types de données varient significativement selon les conditions d\'entrée. Pour la plupart des tâches, un second exemple double le coût des tokens sans bénéfice de fiabilité.' },
+          { type: 'pro-tip', label: 'Choisir un exemple pour les cas limites, pas juste happy path', text: 'Un exemple avec tous les champs remplis est moins utile qu\'un avec un champ optionnel vide montrant null, ou un array avec un seul élément. Cela montre au modèle comment gérer les cas limites.' },
+        ],
+      },
+      fieldInstructions: {
+        id: 'field-instructions',
+        title: 'Instructions au Niveau du Champ, pas Seulement un Schéma',
+        content: '**Les instructions au niveau du champ pour type, format, valeurs permises et traitement null élèvent la fiabilité de 90% à 95%+.** Ces instructions sont la couche finale qui élimine l\'ambiguïté.',
+        columns: ['Type de champ', 'Erreur courante', 'Instruction de champ qui la prévient'],
+        rows: [
+          { 'Type de champ': 'Integer vs. Float', 'Erreur courante': 'Le modèle retourne float quand integer est attendu', 'Instruction de champ qui la prévient': '"score (integer — pas de décimales, ex. 4 pas 4.0)"' },
+          { 'Type de champ': 'Énumération (5+ valeurs)', 'Erreur courante': 'Le modèle invente des valeurs pas sur la liste', 'Instruction de champ qui la prévient': 'Toutes les valeurs listées: «Utilisez seulement les valeurs de la liste. Pas d\'abréviations.»' },
+          { 'Type de champ': 'Champ nullable', 'Erreur courante': 'Le modèle retourne "" au lieu de null', 'Instruction de champ qui la prévient': '"Retournez null si la valeur est inconnue. Retournez \"\" seulement si le champ est connu vide."' },
+          { 'Type de champ': 'String de date', 'Erreur courante': 'Le modèle utilise différents formats', 'Instruction de champ qui la prévient': '"date_created (ISO 8601: \'2026-05-15\')"' },
+          { 'Type de champ': 'Array', 'Erreur courante': 'Le modèle retourne null pour array vide', 'Instruction de champ qui la prévient': '"Toujours retourner un array, même si vide. [] pas null."' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'key-point', label: 'Les instructions doivent être spécifiques et testables', text: 'Une instruction de champ comme «bonne qualité» n\'est pas testable. «Exactement ISO 8601 ou erreur» l\'est. Les instructions testables soutiennent l\'automatisation des tests plus tard.' },
+          { type: 'pro-tip', label: 'Utiliser regex ou exemples pour les formats', text: 'Pour les champs date, téléphone ou format, donnez un regex ou 2–3 exemples, pas seulement de la prose: «format: /^\\d{3}-\\d{3}-\\d{4}$/ (ex. 555-123-4567)»' },
+        ],
+      },
+      formatSelection: {
+        id: 'format-selection',
+        title: 'Choisir JSON, YAML ou CSV selon la Tâche et l\'Imposition',
+        content: '**La plupart des tâches de sortie structurée nécessitent JSON. YAML et CSV sont plus rapides à écrire pour les humains, mais les modèles y sont moins fiables sans imposition au niveau API.** JSON avec API-mode a le sol de fiabilité le plus élevé.',
+        columns: ['Format', 'Sol sans API', 'Sol avec API', 'Meilleur pour'],
+        rows: [
+          { 'Format': 'JSON', 'Sol sans API': '80–85%', 'Sol avec API': '95%+', 'Meilleur pour': 'Structures imbriquées, APIs, logging' },
+          { 'Format': 'YAML', 'Sol sans API': '70–75%', 'Sol avec API': '85–90%', 'Meilleur pour': 'Lisible humain, pas d\'imbrication' },
+          { 'Format': 'CSV', 'Sol sans API': '65–70%', 'Sol avec API': '80–85%', 'Meilleur pour': 'Tableaux plats, capture de données batch' },
+          { 'Format': 'XML', 'Sol sans API': '75–80%', 'Sol avec API': '90–95%', 'Meilleur pour': 'Systèmes legacy qui en ont besoin' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'key-point', label: 'JSON est le choix par défaut', text: 'Utilisez JSON si vous avez des structures imbriquées ou pouvez utiliser imposition au niveau API. Cela donne le sol de fiabilité le plus élevé.' },
+          { type: 'pro-tip', label: 'Tester CSV pour structures tabulaires plates', text: 'CSV est plus rapide pour les données tabulaires simples (une ligne = un enregistrement) et moins cher en tokens. Si vous avez seulement 3–5 colonnes, testez CSV avec schéma; si l\'imbrication apparaît, basculer à JSON.' },
+        ],
+      },
+      failureRecovery: {
+        id: 'failure-recovery',
+        title: 'Laisser le Modèle Corriger sa Propre Sortie Malformée',
+        content: [
+          '**Quand un prompt de sortie structurée échoue, envoyez un prompt de correction contenant l\'instruction originale, la sortie malformée et l\'erreur de validation spécifique. Les modèles récupèrent une sortie valide de leur propre réponse malformée dans 60–75% des cas sans réécriture de prompt.**',
+          'Un prompt de correction a trois parties requises: (1) une réaffirmation de ce que la sortie doit ressembler (le schéma ou format), (2) la sortie malformée exactement comme le modèle l\'a retournée, (3) l\'erreur de validation spécifique — «le champ requis \'invoice_id\' manque», «amount est une string, attendu float». Cette structure en trois parties donne au modèle assez de contexte pour corriger le problème spécifique plutôt que de générer une réponse différente avec des erreurs différentes.',
+        ],
+        promptExamples: [
+          {
+            bad: 'Vous avez retourné une sortie invalide. Essayez à nouveau et retournez du JSON valide.\n\n{{original_prompt}}',
+            good: 'Votre réponse précédente a échoué la validation. Corriger seulement les erreurs listées ci-dessous et retourner du JSON corrigé.\n\nSchéma attendu:\n{\n  "invoice_id": "string",\n  "amount": 0.00,\n  "status": "string"\n}\n\nVotre réponse précédente:\n{\n  "invoice_id": null,\n  "amount": "150.00",\n  "status": "PAID"\n}\n\nErreurs de validation:\n- invoice_id est null mais doit être un champ string requis — l\'extraire de l\'input\n- amount est un string ("150.00") mais doit être un float (150.00)\n- status doit être minuscule: utilisez \'paid\', pas \'PAID\'\n\nRetourner seulement l\'objet JSON corrigé.',
+            badLabel: 'Retry vague — pas de contexte d\'erreur',
+            goodLabel: 'Prompt de correction avec schéma, sortie et erreurs spécifiques',
+          },
+        ],
+        callouts: [
+          { type: 'key-point', label: 'Si correction échoue deux fois, corriger le prompt de base', text: 'Si le prompt de correction ne produit pas une sortie valide à la deuxième tentative, le problème est dans le prompt de base, pas les données d\'input. Arrêter la réitération et diagnostiquer le motif d\'échec: quel champ échoue, sous quelles conditions d\'input. Ajouter une instruction de champ ou changement de schéma pour prévenir l\'échec à la source.' },
+          { type: 'warning', label: 'Les prompts de correction ajoutent latence et coût', text: 'Chaque prompt de correction double le coût API et la latence pour cet appel. Utiliser les prompts de correction seulement pour les échecs de cas limites (<10% des sorties). Si votre prompt échoue plus de 10% du temps, corriger le prompt de base plutôt que de construire un loop de correction en production.' },
+        ],
+      },
+      dataTypePatterns: {
+        id: 'data-type-patterns',
+        title: 'Modèles de Prompt pour les Tableaux, Énumérations et Champs Nullables',
+        content: '**Les arrays, énumérations et champs nullable sont les trois sources courantes d\'erreurs de sortie structurée que schéma seul n\'empêche pas. Chacun nécessite un motif d\'instruction spécifique dans le prompt.**',
+        columns: ['Type de données', 'Erreur courante', 'Motif de prompt qui l\'empêche'],
+        rows: [
+          { 'Type de données': 'Array (0 éléments)', 'Erreur courante': 'Le modèle retourne null au lieu de []', 'Motif de prompt qui l\'empêche': '"Retournez un array vide [] s\'il n\'y a pas d\'éléments. Ne retournez jamais null pour les champs array."' },
+          { 'Type de données': 'Array (1+ éléments)', 'Erreur courante': 'Le modèle retourne objet seul au lieu d\'array avec un élément', 'Motif de prompt qui l\'empêche': '"Toujours retourner un array, même avec un seul élément. Éléments uniques doivent être enrobés: [{...}]"' },
+          { 'Type de données': 'Énumération (2–5 valeurs)', 'Erreur courante': 'Le modèle abrège ou invente des valeurs similaires', 'Motif de prompt qui l\'empêche': '"status: exactement l\'un de: \'active\', \'inactive\', \'pending\' — pas d\'abréviations ou variantes"' },
+          { 'Type de données': 'Énumération (6+ valeurs)', 'Erreur courante': 'Le modèle invente des valeurs pas sur la liste', 'Motif de prompt qui l\'empêche': 'Lister toutes les valeurs dans une liste numérotée, puis: «Utilisez seulement les valeurs de la liste ci-dessus. Pas d\'abréviations ou combinaisons.»' },
+          { 'Type de données': 'Champ nullable', 'Erreur courante': 'Le modèle retourne "" au lieu de null, ou omet le champ', 'Motif de prompt qui l\'empêche': '"Retournez null si la valeur est inconnue. Retournez \"\" seulement si le champ est connu vide. Toujours inclure le champ — ne l\'omettez pas."' },
+          { 'Type de données': 'Integer vs float', 'Erreur courante': 'Le modèle retourne float si integer attendu, ou string pour les deux', 'Motif de prompt qui l\'empêche': '"score (integer — pas de décimales, ex. 4 pas 4.0)" ou "price (float — exactement 2 décimales, ex. 12.99 pas 13)"' },
+          { 'Type de données': 'Objet imbriqué', 'Erreur courante': 'Le modèle aplatit l\'objet imbriqué en clés plates (ex. "address.city" au lieu de {"address": {"city": ...}})', 'Motif de prompt qui l\'empêche': 'Montrer la structure imbriquée complète dans le template de schéma avec indentation propre. La description en prose seule d\'imbrication s\'aplatit souvent.' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'warning', label: 'null vs. undefined vs. omis', text: 'JSON n\'a pas de valeur undefined, mais les modèles se comportent parfois comme si — omettant un champ entièrement quand ils pensent que la valeur est inconnue, plutôt que de retourner null. Si du code en aval utilise des vérifications hasOwnProperty(), un champ omis est différent d\'un champ null. Ajoutez: «Toujours inclure chaque champ du schéma, même si la valeur est null.»' },
+          { type: 'pro-tip', label: 'Les énumérations imbriquées ont besoin d\'extra-spécificité', text: 'Les énumérations dans les objets imbriqués sont plus susceptibles à des fautes de frappe ou abréviations que les énumérations de top-level. Si vous avez une énumération dans un objet imbriqué, répétez l\'instruction près de là où le champ apparaît dans le template de schéma, pas seulement dans une section générale de règles de champ.' },
+        ],
+      },
+      testingReliability: {
+        id: 'testing-reliability',
+        title: 'Mesurer la Fiabilité de la Sortie Structurée',
+        content: [
+          '**Ciblez 95%+ de taux de réussite sur un ensemble de test de 20 cas avant de déployer un prompt de sortie structurée en production. Sous 95%, les défaillances surviennent assez souvent pour exiger un loop de correction — qui ajoute latence et double le coût API pour chaque appel échoué.**',
+          'Mesurez la fiabilité au niveau du champ, pas seulement au total. Un prompt à 95% de taux global mais 60% sur un champ enum est un prompt avec un mode d\'défaillance de production connu. La mesure au niveau du champ vous dit exactement quelle instruction ajouter ou renforcer.',
+        ],
+        numberedItems: [
+          '**Définir les critères de réussite/échec pour chaque champ du schéma.** Pour chaque champ: type est correct, champ requis est présent, valeur enum est sur la liste permise, format de date correspond au motif requis. Écrivez-les comme des vérifications programmatiques — pas d\'inspection visuelle. Cette étape produit votre oracle de test.',
+          '**Construire un ensemble de test de 20 cas.** Dix happy-path (typiques, bien formées), cinq cas limites (champs optionnels manquants, texte long, valeurs inhabituelles, contenu multilingue), cinq adversariaux (instructions intégrées dans les valeurs de champs, dates extrêmes, types ambigus). Utilisez des inputs réalistes de votre domaine réel.',
+          '**Exécuter à la température 0 et enregistrer réussite/échec par champ.** Exécutez les 20 cas à la température 0 pour des résultats déterministes et répétables. Enregistrez si chaque champ réussit ou échoue dans chaque test — pas seulement le résultat global. Les motifs d\'échec au niveau du champ identifient quelle instruction manque.',
+          '**Corriger le champ avec le taux de réussite le plus faible et retester.** Ajouter ou renforcer une instruction de champ: type, format, traitement null ou valeurs enum. Réexécuter les 20 cas. Une instruction unique ciblée élève typiquement le taux global de 5–15 points. Répétez jusqu\'à atteindre 95% ou plus.',
+          '**Valider le prompt sur un second modèle.** Exécuter l\'ensemble complet de 20 cas sur un second modèle avec le même prompt. Un prompt à 95%+ sur GPT-4o mais 70% sur Claude 4.6 Sonnet est dépendant du modèle. Soit ajouter des instructions assez explicites pour réussir sur les deux, soit documenter quel modèle le prompt est validé pour et ne pas changer sans retesting.',
+        ],
+        callouts: [
+          { type: 'key-point', label: 'Exécuter les tests à la température 0', text: 'Exécuter les ensembles de test de sortie structurée à la température 0 pour obtenir des résultats déterministes et répétables. Un prompt qui passe à la température 0 est fiable par design — pas lucky. Seulement augmenter la température après que le prompt passe 95%+ déterministement, puis retester l\'ensemble à la nouvelle température pour confirmer que la fiabilité tient.' },
+          { type: 'pro-tip', label: 'Utiliser PromptQuorum pour comparaison multi-modèle', text: 'PromptQuorum exécute votre ensemble de test de 20 cas sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro simultanément et affiche les taux de réussite par champ côte à côte. Cela identifie les défaillances dépendantes du modèle en un run au lieu de trois.' },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '5 Erreurs Courantes des Prompts de Sortie Structurée',
+        content: '**Les cinq erreurs courantes du prompting de sortie structurée produisent toutes le même symptôme — défaillances intermittentes ou systématiques — mais exigent des correctifs différents. Diagnostiquer quelle erreur vous avez avant d\'ajouter des instructions économise du temps.**',
+        mistakes: [
+          {
+            mistake: 'Décrire le schéma en prose au lieu de l\'intégrer',
+            problem: 'Les descriptions en prose sont ambiguës — «une liste d\'éléments» pourrait être un array, une string séparé par virgules ou une liste numérotée; «le total» pourrait être string ou float',
+            fix: 'Intégrer le schéma attendu comme template JSON directement dans le prompt. Le template montre noms de champs, profondeur d\'imbrication et types de valeurs par la structure plutôt que la description en prose.',
+          },
+          {
+            mistake: 'Ne pas spécifier comment gérer les valeurs manquantes ou inconnues',
+            problem: 'Les modèles inventent des valeurs plausibles pour champs inconnus plutôt que de retourner null — dates deviennent «unknown», montants deviennent 0, IDs manquantes deviennent «N/A» — rien ne passe la validation de type',
+            fix: 'Ajouter un traitement explicit null pour chaque champ nullable: «Retournez null si la valeur ne peut pas être déterminée de l\'input. Ne devinez ou n\'inventez pas de valeurs. Ne retournez pas de string vide.»',
+          },
+          {
+            mistake: 'Tester seulement contre le modèle sur lequel vous avez développé le prompt',
+            problem: 'La fiabilité de sortie structurée varie significativement entre les modèles — un prompt à 95% sur GPT-4o peut échouer à 70% sur Claude 4.6 Sonnet à cause du suivi d\'instruction différent sur les contraintes de schéma',
+            fix: 'Exécuter chaque prompt de sortie structurée contre au minimum 2 modèles avant de le traiter comme agnostique au modèle. Utiliser PromptQuorum ou des appels API directs pour [tester les prompts sur les modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) en une étape.',
+          },
+          {
+            mistake: 'Réessayer une sortie échouée avec le même prompt',
+            problem: 'Un prompt échouant réessayé à la température 0 produit la même erreur à chaque fois. À température plus élevée, il produit une sortie variée mais toujours échouée — erreurs différentes, cause racine identique',
+            fix: 'Utiliser un prompt de correction avec l\'erreur de validation spécifique et la sortie malformée, ou diagnostiquer le motif d\'échec (quel champ, quel type d\'input) et ajouter une instruction de champ ciblée au prompt de base.',
+          },
+          {
+            mistake: 'Traiter JSON-mode comme une solution complète de sortie structurée',
+            problem: 'JSON-mode empêche la sortie non analysable mais pas les défaillances de conformité du schéma — un modèle avec JSON-mode peut toujours retourner du JSON valide avec champs manquants, mauvais types et valeurs enum invalides, tous échouant à la validation en aval',
+            fix: 'Toujours inclure schéma-dans-le-prompt et instructions de champ même quand utilisant JSON-mode imposé par API. Voir [Sortie Structurée et JSON-mode](/prompt-engineering/structured-output-json-mode?lang=fr) pour configuration API — ce guide couvre le complément au niveau prompt.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures Supplémentaires',
+        items: [
+          '[Sortie Structurée et JSON-mode: Quand et Comment l\'Utiliser](/prompt-engineering/structured-output-json-mode?lang=fr) — Configuration JSON-mode au niveau API pour GPT-4o, Claude et Gemini avec tableau de conformité du modèle',
+          '[Meilleurs Outils pour Sortie Structurée (2026)](/prompt-engineering/best-tools-structured-output?lang=fr) — Instructor, Outlines, Pydantic AI et LangChain comparés pour workflows d\'extraction structurée',
+          '[Comment Contrôler la Sortie: Format, Température et Décodage Contraint](/prompt-engineering/control-the-output?lang=fr) — Mécanique de décodage contraint, température et top-p pour tâches structurées, séquences d\'arrêt',
+          '[Comment Évaluer la Qualité du Prompt: Métriques, Tests et Checklist](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) — Construction d\'ensemble de test de 20 cas, scoring réussite/échec binaire et rubriques LLM-as-judge',
+          '[Comment Tester les Prompts sur les Modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) — Exécution du même prompt sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro pour trouver les défaillances dépendantes du modèle',
+          '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — Quand ajouter des exemples à un prompt et combien en inclure pour différents types de tâches',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Documentation OpenAI Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) — Spécification technique pour response_format et JSON-mode dans l\'API OpenAI',
+          '[Documentation Anthropic tool use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) — Comment le paramètre tool_use de Claude impose la sortie structurée au niveau API',
+          '[Documentation Google Gemini GenerationConfig](https://ai.google.dev/api/generate-content#v1beta.GenerationConfig) — Configuration responseMimeType de Gemini pour sortie JSON native',
+          '[Benchmark BAML: compromis de précision de sortie structurée](https://docs.boundaryml.com/benchmarks) — Preuve sur les différences de fiabilité entre génération contraint et sans contrainte sur les modèles',
+          '[Framework de Gestion des Risques AI du NIST](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Principes de gouvernance pour la validation des sorties AI dans les systèmes de production',
+        ],
+      },
+    },
   },
   ja: {
     freshness_tier: 'semi_annual',
