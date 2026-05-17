@@ -10,10 +10,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
-      title: 'Mistral 24B vs Qwen 2.5 vs Llama 3.1: Tool Calling & Reasoning Benchmarks',
-      seoTitle: 'Mistral 24B vs Qwen 2.5 vs Llama 3.1: Tool Calling & Reasoning',
+      title: 'Qwen 3 vs Llama 4 vs Mistral Small 24B: 2026 Benchmark Comparison',
+      seoTitle: 'Qwen 3 vs Llama 4 vs Mistral 24B: 2026 Benchmarks',
       intro: 'Qwen 3.6 27B leads coding benchmarks at 77.2% SWE-bench (best dense model); Llama 4 Scout 17B (MoE, 10M context) is the most versatile on 12 GB VRAM; Mistral Small 3.1 24B still delivers the best quality-per-RAM ratio at 14 GB. Qwen3 excels at coding and 29 languages; Llama 4 dominates context length and efficiency via MoE; Mistral maximizes quality on constrained hardware. All three run on consumer hardware via Ollama. Updated: May 2026.',
-      metaDescription: 'Mistral 24B vs Qwen 2.5 14B vs Llama 3.1 8B: tool calling capability, reasoning benchmarks, SWE-bench scores, MMLU, real-world performance.',
+      metaDescription: 'Mistral 24B vs Qwen 3 vs Llama 4 (2026): SWE-bench, MMLU, RAM benchmarks. Includes legacy Qwen 2.5 14B and Llama 3.1 8B comparison.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
       next_refresh_due: '2026-11-06',
