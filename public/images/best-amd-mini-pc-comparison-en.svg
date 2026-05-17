@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Metadata -->
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">Copyright 2026 PromptQuorum</dc:rights>
+  </metadata>
+
+  <!-- Title -->
+  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">AMD Ryzen AI Max+ Mini PC Comparison 2026</text>
+
+  <!-- Legend labels -->
+  <text x="50" y="80" font-size="14" font-weight="bold" fill="#333">Price</text>
+  <text x="250" y="80" font-size="14" font-weight="bold" fill="#333">RAM</text>
+  <text x="450" y="80" font-size="14" font-weight="bold" fill="#333">NPU TOPS</text>
+  <text x="650" y="80" font-size="14" font-weight="bold" fill="#333">Performance</text>
+
+  <!-- Minisforum -->
+  <text x="50" y="120" font-size="13" font-weight="bold" fill="#000">Minisforum MS-A2</text>
+  <rect x="50" y="130" width="180" height="25" fill="#4CAF50" opacity="0.8"/>
+  <text x="60" y="151" font-size="12" fill="#fff">$1,599</text>
+
+  <rect x="250" y="130" width="180" height="25" fill="#2196F3" opacity="0.8"/>
+  <text x="260" y="151" font-size="12" fill="#fff">96GB</text>
+
+  <rect x="450" y="130" width="180" height="25" fill="#FF9800" opacity="0.8"/>
+  <text x="460" y="151" font-size="12" fill="#fff">50 TOPS</text>
+
+  <rect x="650" y="130" width="180" height="25" fill="#9C27B0" opacity="0.8"/>
+  <text x="660" y="151" font-size="12" fill="#fff">18-22 tok/s (70B)</text>
+
+  <!-- Beelink -->
+  <text x="50" y="200" font-size="13" font-weight="bold" fill="#000">Beelink GTR9 Pro</text>
+  <rect x="50" y="210" width="195" height="25" fill="#4CAF50" opacity="0.8"/>
+  <text x="60" y="231" font-size="12" fill="#fff">$1,899</text>
+
+  <rect x="250" y="210" width="220" height="25" fill="#2196F3" opacity="0.8"/>
+  <text x="260" y="231" font-size="12" fill="#fff">128GB (Max)</text>
+
+  <rect x="450" y="210" width="180" height="25" fill="#FF9800" opacity="0.8"/>
+  <text x="460" y="231" font-size="12" fill="#fff">50 TOPS</text>
+
+  <rect x="650" y="210" width="180" height="25" fill="#9C27B0" opacity="0.8"/>
+  <text x="660" y="231" font-size="12" fill="#fff">18-22 tok/s (70B)</text>
+
+  <!-- AOOSTAR -->
+  <text x="50" y="280" font-size="13" font-weight="bold" fill="#000">AOOSTAR GEM12 Pro</text>
+  <rect x="50" y="290" width="188" height="25" fill="#4CAF50" opacity="0.8"/>
+  <text x="60" y="311" font-size="12" fill="#fff">$1,799</text>
+
+  <rect x="250" y="290" width="180" height="25" fill="#2196F3" opacity="0.8"/>
+  <text x="260" y="311" font-size="12" fill="#fff">96GB</text>
+
+  <rect x="450" y="290" width="180" height="25" fill="#FF9800" opacity="0.8"/>
+  <text x="460" y="311" font-size="12" fill="#fff">50 TOPS</text>
+
+  <rect x="650" y="290" width="180" height="25" fill="#9C27B0" opacity="0.8"/>
+  <text x="660" y="311" font-size="12" fill="#fff">18-22 tok/s (70B)</text>
+
+  <!-- GMKtec -->
+  <text x="50" y="360" font-size="13" font-weight="bold" fill="#000">GMKtec EVO-X2</text>
+  <rect x="50" y="370" width="158" height="25" fill="#4CAF50" opacity="0.8"/>
+  <text x="60" y="391" font-size="12" fill="#fff">$1,199</text>
+
+  <rect x="250" y="370" width="160" height="25" fill="#2196F3" opacity="0.8"/>
+  <text x="260" y="391" font-size="12" fill="#fff">64GB</text>
+
+  <rect x="450" y="370" width="170" height="25" fill="#FF9800" opacity="0.8"/>
+  <text x="460" y="391" font-size="12" fill="#fff">45 TOPS</text>
+
+  <rect x="650" y="370" width="160" height="25" fill="#9C27B0" opacity="0.8"/>
+  <text x="660" y="391" font-size="12" fill="#fff">14-16 tok/s (70B)</text>
+
+  <!-- Key insights -->
+  <rect x="50" y="470" width="900" height="100" fill="#f5f5f5" stroke="#ddd" stroke-width="1" rx="4"/>
+  <text x="70" y="495" font-size="12" font-weight="bold" fill="#333">Key Insights:</text>
+  <text x="70" y="520" font-size="11" fill="#555">• Minisforum: Best value, €1,599, 96GB | Beelink: Max RAM at €1,899, 128GB | AOOSTAR: Premium build, €1,799 | GMKtec: Budget entry, €1,199</text>
+  <text x="70" y="545" font-size="11" fill="#555">• All handle 70B Q4 at 18-22 tok/s except GMKtec (14-16 tok/s) | Linux ROCm 6.2+ required | Unified memory eliminates VRAM constraints</text>
+
+  <!-- Credit -->
+  <text x="970" y="595" font-size="10" fill="#999" text-anchor="end">PromptQuorum • May 2026</text>
+</svg>

@@ -321,6 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Verify provider\'s privacy policy explicitly covers GDPR Article 32 (security) and Article 28 (processor obligations)',
           'Ask provider: "Can you guarantee all data remains in [country] and never flows to US?" Get written answer.',
         ],
+        callout: 'For EU customers comparing GDPR-compliant options in depth, see our dedicated [EU GDPR-compliant cloud GPU comparison →](/local-llms/eu-cloud-gpu-gdpr-2026) covering Hetzner, Scaleway, OVHcloud, Nebius, and others with detailed Schrems II analysis.',
       },
       contrarian: {
         id: 'when-not-cloud',

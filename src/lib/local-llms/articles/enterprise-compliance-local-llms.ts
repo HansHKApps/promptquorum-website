@@ -148,6 +148,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: 'Do we need separate insurance for local AI deployment?',
               a: 'Check with your cyber insurance provider. Some policies distinguish on-premises vs. cloud. Local LLMs may actually reduce premiums because they eliminate third-party vendor risk.',
             },
+            {
+              q: 'What if we need cloud scale but must satisfy GDPR?',
+              a: 'For cloud workloads requiring GDPR compliance, see our [EU cloud GPU comparison →](/local-llms/eu-cloud-gpu-gdpr-2026) covering Hetzner, Scaleway, OVHcloud, Nebius, and other GDPR-compliant providers with full Schrems II analysis.',
+            },
           ],
         },
         relatedReading: {

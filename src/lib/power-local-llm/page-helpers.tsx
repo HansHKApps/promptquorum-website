@@ -213,13 +213,18 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   }
 
   const faqEntries = Object.values(article.sections).flatMap((s) => s.faqs ?? [])
+  const quickAnswerTopEntry = (article as any).quickAnswerTop?.[lang]
+  const allFaqEntries = [
+    ...(quickAnswerTopEntry ? [{ q: quickAnswerTopEntry.question, a: quickAnswerTopEntry.answer }] : []),
+    ...faqEntries,
+  ]
   const faqSchema =
     article.faqSchema ??
-    (faqEntries.length > 0
+    (allFaqEntries.length > 0
       ? {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: faqEntries.map((f) => ({
+          mainEntity: allFaqEntries.map((f) => ({
             '@type': 'Question',
             name: f.q,
             acceptedAnswer: { '@type': 'Answer', text: f.a },

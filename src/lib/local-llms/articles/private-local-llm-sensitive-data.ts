@@ -167,6 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Factor': 'Breach Liability', 'Local LLM': '$0 (data never leaves your control). Insurance not required.', 'Cloud API': '$50K-5M+ (vendor breach = you are liable to affected parties under HIPAA/GDPR).' },
           ],
           columns: ['Factor', 'Local LLM', 'Cloud API'],
+          callout: 'If on-premises is too restrictive, [EU GDPR-compliant cloud GPU providers →](/local-llms/eu-cloud-gpu-gdpr-2026) offer a middle path for scenarios requiring cloud scale but with full compliance.',
         },
         'audit': {
           title: 'Audit Logging & Data Governance',

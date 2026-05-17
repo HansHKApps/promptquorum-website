@@ -157,6 +157,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: 'Can we use standard tools (Ollama, vLLM) in air-gapped environments?',
               a: 'Yes. Both tools work without internet. Deploy once, then no internet connectivity needed. Ensure all dependencies are installed offline.',
             },
+            {
+              q: 'What if we need GDPR compliance but don\'t need full air-gapping?',
+              a: 'For workloads where air-gapping isn\'t required but GDPR is, [EU-compliant cloud GPU options →](/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) offer EU data residency without isolation complexity.',
+            },
           ],
         },
         relatedReading: {

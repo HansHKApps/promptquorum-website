@@ -430,7 +430,8 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     : null
 
   // Only auto-generate faqSchema from sections if article doesn't already define faqSchema
-  const faqSectionData = !article.faqSchema && Object.values(article.sections).find((s) => s.faqs && s.faqs.length > 0)
+  // AND if it's not the glossary (which has FAQPage in definedTermSetSchema)
+  const faqSectionData = !article.faqSchema && slug !== 'prompt-engineering-glossary' && Object.values(article.sections).find((s) => s.faqs && s.faqs.length > 0)
   const faqSchema = faqSectionData
     ? {
         '@context': 'https://schema.org',

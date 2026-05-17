@@ -104,6 +104,7 @@ import { article as a_secure_offline_local_llm_workflow } from "./articles/secur
 import { article as a_local_llms_vs_chatgpt_plus } from "./articles/local-llms-vs-chatgpt-plus";
 import { article as a_local_llms_vs_claude_pro } from "./articles/local-llms-vs-claude-pro";
 import { article as a_cloud_gpu_rental_comparison_2026 } from "./articles/cloud-gpu-rental-comparison-2026";
+import { article as a_eu_cloud_gpu_gdpr_2026 } from "./articles/eu-cloud-gpu-gdpr-2026";
 import { article as a_local_llm_vs_cloud_gpu_cost } from "./articles/local-llm-vs-cloud-gpu-cost";
 import { article as a_mac_vs_windows_vs_linux_local_llm } from "./articles/mac-vs-windows-vs-linux-local-llm";
 import { article as a_gpu_vs_ai_subscription_roi } from "./articles/gpu-vs-ai-subscription-roi";
@@ -194,6 +195,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "local-llms-vs-chatgpt-plus": a_local_llms_vs_chatgpt_plus,
   "local-llms-vs-claude-pro": a_local_llms_vs_claude_pro,
   "cloud-gpu-rental-comparison-2026": a_cloud_gpu_rental_comparison_2026,
+  "eu-cloud-gpu-gdpr-2026": a_eu_cloud_gpu_gdpr_2026,
   "local-llm-vs-cloud-gpu-cost": a_local_llm_vs_cloud_gpu_cost,
   "mac-vs-windows-vs-linux-local-llm": a_mac_vs_windows_vs_linux_local_llm,
   "gpu-vs-ai-subscription-roi": a_gpu_vs_ai_subscription_roi,

@@ -115,6 +115,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: 'Can I use cloud GPUs for fine-tuning instead of just inference?',
               a: 'Yes. Fine-tuning is more cost-effective on cloud (better cooling for training stability). Cloud fine-tuning then deploy on local for inference is a common pattern.',
             },
+            {
+              q: 'What about cost for EU customers who need GDPR compliance?',
+              a: 'EU customers comparing cloud options need to factor in compliance: [EU GDPR cloud GPU comparison →](/local-llms/eu-cloud-gpu-gdpr-2026) covers Hetzner (€0.40/hr), Scaleway, OVHcloud, and GDPR-compliant alternatives with full cost breakdowns.',
+            },
           ],
         },
         'commonMistakes': {

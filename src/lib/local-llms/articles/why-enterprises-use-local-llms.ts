@@ -148,6 +148,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               a: 'Depends on industry: SOC2 Type II (general enterprise), HIPAA (healthcare), GDPR compliance (EU operations), ISO 27001 (security best practice).',
             },
             {
+              q: 'What if we need cloud scale but GDPR compliance?',
+              a: 'When cloud is necessary, [EU GDPR-compliant providers →](/local-llms/eu-cloud-gpu-gdpr-2026) remain an option: Hetzner, Scaleway, OVHcloud, Nebius offer full GDPR compliance with EU data residency.',
+            },
+            {
               q: 'Can we use cloud embeddings with local LLMs?',
               a: 'Technically yes, but violates data sovereignty. If data is sensitive, use local embeddings (nomic-embed-text) instead.',
             },
