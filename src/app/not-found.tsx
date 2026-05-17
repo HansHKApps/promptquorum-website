@@ -61,7 +61,7 @@ export default function NotFound() {
               Waiting for PromptQuorum?
             </h2>
             <p className="text-text-secondary mb-6">
-              Beta launches April 2026. Join the waitlist and be the first to know.
+              Beta launches July 2026. Join the waitlist and be the first to know.
             </p>
             <Link
               href="/waitlist"

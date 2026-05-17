@@ -24,7 +24,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   title: 'PromptQuorum — One Prompt. 25+ AI Models. Consensus Scoring.',
-  description: 'Run one prompt across ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Compare responses, detect hallucinations, and get a Quorum consensus verdict. Free beta — April 2026.',
+  description: 'Run one prompt across ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Compare responses, detect hallucinations, and get a Quorum consensus verdict. Free beta — July 2026.',
   metadataBase: new URL('https://www.promptquorum.com'),
   authors: [{ name: 'Hans Kuepper' }],
   // Site-wide default. Cluster pages override via generateMetadata in
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: 'PromptQuorum',
     locale: 'en_US',
     title: 'PromptQuorum — One Prompt. 25+ AI Models. Consensus Scoring.',
-    description: 'Run one prompt across ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Compare responses, detect hallucinations, and get a Quorum consensus verdict. Free beta — April 2026.',
+    description: 'Run one prompt across ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Compare responses, detect hallucinations, and get a Quorum consensus verdict. Free beta — July 2026.',
     images: [{
       url: 'https://www.promptquorum.com/og-image.png',
       width: 1200,
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@promptquorum',
     title: 'PromptQuorum — One Prompt. 25+ AI Models. Consensus Scoring.',
-    description: 'Run one prompt across ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Compare responses, detect hallucinations, and get a Quorum consensus verdict. Free beta — April 2026.',
+    description: 'Run one prompt across ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Compare responses, detect hallucinations, and get a Quorum consensus verdict. Free beta — July 2026.',
     images: ['https://www.promptquorum.com/og-image.png'],
   },
   verification: {
@@ -202,7 +202,7 @@ export default async function RootLayout({
                     "price": "0",
                     "priceCurrency": "USD",
                     "availability": "https://schema.org/PreOrder",
-                    "description": "Free. Bring your own API key (BYOM) or connect a local LLM. No account required. Beta launch April 2026.",
+                    "description": "Free. Bring your own API key (BYOM) or connect a local LLM. No account required. Beta launch July 2026.",
                     "seller": { "@id": "https://www.promptquorum.com/#organization" }
                   }
                 }

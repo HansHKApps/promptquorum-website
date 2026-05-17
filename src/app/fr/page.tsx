@@ -103,7 +103,7 @@ export default async function FrHome() {
                 'name': 'How do I get beta access to PromptQuorum?',
                 'acceptedAnswer': {
                   '@type': 'Answer',
-                  'text': 'Enter your email in the waitlist form on the PromptQuorum homepage. Beta launches in April 2026. Early access members receive lifetime premium features, priority support, and direct input into the product roadmap. The desktop app (macOS and Windows) and web version will be available simultaneously at launch.'
+                  'text': 'Enter your email in the waitlist form on the PromptQuorum homepage. Beta launches in July 2026. Early access members receive lifetime premium features, priority support, and direct input into the product roadmap. The desktop app (macOS and Windows) and web version will be available simultaneously at launch.'
                 }
               }
             ]

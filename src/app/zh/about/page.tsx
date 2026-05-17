@@ -194,7 +194,7 @@ export default function ZhAboutPage() {
             <h2 className="text-2xl font-bold text-text-primary mb-6">The Product</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { label: 'Launched', value: 'Beta — April 2026' },
+                { label: 'Launched', value: 'Beta — July 2026' },
                 { label: 'Pricing', value: 'Free. Bring your own API key.' },
                 { label: 'Privacy model', value: 'BYOM — zero server transmission' },
                 { label: 'AI models supported', value: '25+ cloud + unlimited local via Ollama' },

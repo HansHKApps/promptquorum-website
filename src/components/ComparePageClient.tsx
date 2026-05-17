@@ -162,7 +162,7 @@ const content: Record<Lang, CompareText> = {
 
     pqH2: 'What makes PromptQuorum different from competitors?',
     pqBestFor: 'Best for: developers & power users',
-    pqTags: ['Beta · April 2026', 'promptquorum.com', 'API keys required', 'Ollama + LM Studio'],
+    pqTags: ['Beta · July 2026', 'promptquorum.com', 'API keys required', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum is the only tool among those reviewed that combines simultaneous prompt dispatch with automated consensus scoring.** You write one prompt, select your models — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, and locally-running models — and PromptQuorum dispatches to all of them in parallel. The Quorum Verdict then analyses where the models agree, where they diverge, and what those patterns mean for the reliability of the answer.',
     pqPara2: 'The defining feature is local LLM support. Via Ollama and LM Studio integration, PromptQuorum includes locally-running models — LLaMA 3.1 7B requires 8 GB RAM; 13B requires 16 GB — in the dispatch, so sensitive prompts never leave your machine. For legal professionals, healthcare workers, financial analysts, and developers working with proprietary code, this is not optional.',
     pqPara3: 'PromptQuorum requires users to bring their own API keys from OpenAI, Anthropic, Google, and Mistral. This keeps data under your control, costs transparent, and usage tied to your own commercial terms with each provider.',
@@ -234,12 +234,12 @@ const content: Record<Lang, CompareText> = {
       },
       {
         q: 'Is PromptQuorum free to use?',
-        a: 'Yes. PromptQuorum is in free beta as of April 2026. All features—simultaneous dispatch, consensus scoring, hallucination detection, and export in multiple formats—are free. After beta, pricing will scale with your API usage on a pay-as-you-go model. You bring your own API keys, so you control costs directly with each provider.',
+        a: 'Yes. PromptQuorum is in free beta as of July 2026. All features—simultaneous dispatch, consensus scoring, hallucination detection, and export in multiple formats—are free. After beta, pricing will scale with your API usage on a pay-as-you-go model. You bring your own API keys, so you control costs directly with each provider.',
       },
     ],
 
     ctaH2: 'Join the PromptQuorum waitlist',
-    ctaSubtext: 'Beta launching April 2026. Early access users get priority onboarding, direct access to the developer, and a free power tool!',
+    ctaSubtext: 'Beta launching July 2026. Early access users get priority onboarding, direct access to the developer, and a free power tool!',
     ctaButton: 'Join the waitlist →',
   },
 
@@ -307,7 +307,7 @@ const content: Record<Lang, CompareText> = {
 
     pqH2: 'Was unterscheidet PromptQuorum von Konkurrenten?',
     pqBestFor: 'Beste Wahl für: Entwickler & Power-User',
-    pqTags: ['Beta · April 2026', 'promptquorum.com', 'API-Keys erforderlich', 'Ollama + LM Studio'],
+    pqTags: ['Beta · July 2026', 'promptquorum.com', 'API-Keys erforderlich', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum ist das einzige Tool unter den hier geprüften, das simultanes Prompt-Dispatching mit automatischem Konsens-Scoring kombiniert.** Du schreibst einen Prompt, wählst deine Modelle — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large und lokal laufende Modelle — und PromptQuorum dispatcht an alle parallel. Das Quorum Verdict analysiert dann, wo die Modelle übereinstimmen, wo sie divergieren und was diese Muster für die Verlässlichkeit der Antwort bedeuten.',
     pqPara2: 'Das entscheidende Feature ist die lokale LLM-Unterstützung. Über Ollama- und LM Studio-Integration bindet PromptQuorum lokal laufende Modelle ein — LLaMA 3.1 7B benötigt 8 GB RAM, 13B 16 GB — sodass sensible Prompts das Gerät nie verlassen. Für Juristen, Mediziner, Finanzanalysten und Entwickler mit proprietärem Code ist das keine Option, sondern Pflicht.',
     pqPara3: 'PromptQuorum erfordert eigene API-Keys von OpenAI, Anthropic, Google und Mistral. Das hält Daten unter deiner Kontrolle, Kosten transparent und die Nutzung an deine eigenen Vertragskonditionen mit jedem Anbieter gebunden.',
@@ -379,12 +379,12 @@ const content: Record<Lang, CompareText> = {
       },
       {
         q: 'Ist PromptQuorum kostenlos zu nutzen?',
-        a: 'Ja. PromptQuorum ist ab April 2026 kostenlos im Beta. Alle Features – simultanes Dispatching, Konsens-Scoring, Halluzinations-Erkennung und Export in mehreren Formaten – sind kostenlos. Nach Beta wird die Preisgestaltung mit deiner API-Nutzung nach dem Pay-as-you-go-Modell skaliert. Du bringst deine eigenen API-Keys mit, daher kontrollierst du Kosten direkt mit jedem Anbieter.',
+        a: 'Ja. PromptQuorum ist ab July 2026 kostenlos im Beta. Alle Features – simultanes Dispatching, Konsens-Scoring, Halluzinations-Erkennung und Export in mehreren Formaten – sind kostenlos. Nach Beta wird die Preisgestaltung mit deiner API-Nutzung nach dem Pay-as-you-go-Modell skaliert. Du bringst deine eigenen API-Keys mit, daher kontrollierst du Kosten direkt mit jedem Anbieter.',
       },
     ],
 
     ctaH2: 'Jetzt auf die PromptQuorum-Warteliste eintragen',
-    ctaSubtext: 'Beta-Start April 2026. Frühzugangnutzer erhalten bevorzugtes Onboarding, direkten Zugang zum Entwickler und ein kostenloses Power-Tool!',
+    ctaSubtext: 'Beta-Start July 2026. Frühzugangnutzer erhalten bevorzugtes Onboarding, direkten Zugang zum Entwickler und ein kostenloses Power-Tool!',
     ctaButton: 'Zur Warteliste →',
   },
 

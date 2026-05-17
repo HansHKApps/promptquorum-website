@@ -46,7 +46,7 @@ export const FRAMEWORKS: Framework[] = [
     ],
     example: {
       scenario: 'Writing a product launch email for a SaaS tool targeting CTOs',
-      prompt: 'Context: PromptQuorum is a multi-model AI tool launching in April 2026. Objective: Write a product launch email that drives signups. Style: Clear and direct, no fluff. Tone: Confident and professional. Audience: CTOs at mid-size tech companies. Response: 200-word email with subject line.',
+      prompt: 'Context: PromptQuorum is a multi-model AI tool launching in July 2026. Objective: Write a product launch email that drives signups. Style: Clear and direct, no fluff. Tone: Confident and professional. Audience: CTOs at mid-size tech companies. Response: 200-word email with subject line.',
     },
     related: ['craft', 'specs', 'rtf'],
     faq: [
