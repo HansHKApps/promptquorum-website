@@ -247,6 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLMs vs ChatGPT Plus: Cost Comparison](/local-llms/local-llms-vs-chatgpt-plus)',
             '[Local LLMs vs Claude Pro: Privacy and Cost](/local-llms/local-llms-vs-claude-pro)',
             '[Local LLM vs Cloud GPU: What Is Cheaper?](/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[Cloud GPU Rental Comparison: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026)',
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
             '[How Much VRAM Do Local LLMs Need?](/local-llms/how-much-vram-local-llm)',
             '[Local LLM Hardware Guide 2026: GPUs, CPUs, RAM](/local-llms/local-llm-hardware-guide-2026)',

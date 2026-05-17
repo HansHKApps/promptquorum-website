@@ -220,6 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLMs vs Claude Pro](/local-llms/local-llms-vs-claude-pro) — Privacy, cost, and quality comparison with Anthropic Claude Pro ($20/month)',
             '[How to Install Ollama on Any OS](/local-llms/how-to-install-ollama) — Free, open-source inference engine setup for running Llama 3.1 locally in 5 minutes',
             '[Local LLM vs Cloud GPU: Cost Comparison](/local-llms/local-llm-vs-cloud-gpu-cost) — Breakeven analysis: local RTX 4070 vs Lambda Labs, Paperspace, AWS GPUs',
+            '[Cloud GPU Rental Comparison: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026) — Spot prices, per-provider features, and decision matrix for quick GPU bursts',
             '[Is Buying a GPU Worth It vs Paying for AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi) — ROI calculator for GPU purchase vs ChatGPT Plus, Claude Pro, and API subscriptions',
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — Top affordable options: RTX 4060, RTX 3060, RX 6700, ranked by performance-per-dollar',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Comprehensive GPU and RAM recommendations for every model size and budget',

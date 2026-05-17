@@ -194,6 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[Best Local LLM PC Build Under $2,000](/local-llms/local-llm-pc-build-2000) — Mid-range single-GPU setup for small teams.',
             '[Best Local LLM PC Build Under $1,000](/local-llms/local-llm-pc-build-1000) — Budget-friendly 7B-13B inference.',
+            '[Cloud GPU Rental vs Buying: When to Rent](/local-llms/cloud-gpu-rental-comparison-2026) — RunPod, Vast.ai, Lambda Labs pricing and decision matrix.',
             '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm) — Single-GPU comparison for workstation upgrades.',
             '[Fine-Tuning Local LLMs with LoRA](/local-llms/fine-tuning-local-llms-lora) — Techniques for parallel fine-tuning on dual GPUs.',
             '[How Much VRAM for Local LLMs?](/local-llms/how-much-vram-local-llm) — VRAM scaling from 8GB to 128GB.',

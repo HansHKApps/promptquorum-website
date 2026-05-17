@@ -131,6 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'relatedReading': {
           title: 'Related Reading',
           items: [
+            '[Cloud GPU Rental Comparison: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026)',
             '[Is Buying a GPU Worth It vs AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi)',
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
             '[Local LLM vs ChatGPT Plus Cost Comparison](/local-llms/local-llms-vs-chatgpt-plus)',

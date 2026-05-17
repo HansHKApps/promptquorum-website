@@ -110,6 +110,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   // Cost & Comparisons (NEW THEME)
   'local-llms-vs-chatgpt-plus':           'local-llms-vs-chatgpt-plus',
   'local-llms-vs-claude-pro':             'local-llms-vs-claude-pro',
+  'cloud-gpu-rental-comparison-2026':     'cloud-gpu-rental-comparison-2026',
   'local-llm-vs-cloud-gpu-cost':          'local-llm-vs-cloud-gpu-cost',
   'mac-vs-windows-vs-linux-local-llm':    'mac-vs-windows-vs-linux-local-llm',
   'gpu-vs-ai-subscription-roi':           'gpu-vs-ai-subscription-roi',

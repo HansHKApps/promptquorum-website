@@ -157,6 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Complete hardware setup guide.',
             '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) -- Scaling with multiple GPUs.',
             '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) -- Power and cooling.',
+            '[Cloud GPU Rental Comparison: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026) -- Rent GPUs instead of buying: pricing, uptime, decision matrix.',
             '[Apple Silicon vs NVIDIA GPU for Local LLMs](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm) -- Mac vs GPU: 24GB unified-memory threshold, 3-year TCO, and power draw comparison.',
             '[M5 Pro vs M5 Max LLM Benchmarks 2026](/local-llms/m5-pro-max-llm-benchmarks-2026) -- Tokens/sec and power measurements across every Apple Silicon chip tier.',
             '[Apple Silicon for Local LLMs: Complete Guide](/local-llms/apple-silicon-local-llm-guide-2026) -- M1 to M5 Max: unified memory vs VRAM, Metal GPU, framework selection.',
