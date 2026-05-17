@@ -10,48 +10,50 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'AMD Ryzen AI Max+ 395 mini PCs compared for local LLM: AOOSTAR GEM12 Pro, Minisforum MS-A2, Beelink GTR9 Pro, GMKtec EVO-X2. Performance, VRAM, price, Linux. May 2026.',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
-    supplementalSchema: [
-      {
-        '@type': 'Product',
-        'name': 'Minisforum MS-A2',
-        'description': 'AMD Ryzen AI Max+ 395 mini PC with 96GB DDR5X-8000 RAM for local LLM inference. 16-core CPU, Radeon 8060S iGPU, 50 TOPS NPU. Best overall balance for 70B model inference.',
-        'brand': { '@type': 'Brand', 'name': 'Minisforum' },
-        'offers': [
-          { '@type': 'Offer', 'price': '1599', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://store.minisforum.com' }
-        ],
-        'category': 'Mini PC for Local LLM Inference',
-      },
-      {
-        '@type': 'Product',
-        'name': 'Beelink GTR9 Pro',
-        'description': 'AMD Ryzen AI Max+ 395 mini PC with 128GB DDR5X-8000 RAM for local LLM inference. 16-core CPU, Radeon 8060S iGPU, 50 TOPS NPU. Maximum RAM for power users and researchers.',
-        'brand': { '@type': 'Brand', 'name': 'Beelink' },
-        'offers': [
-          { '@type': 'Offer', 'price': '1899', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://www.bee-link.com' }
-        ],
-        'category': 'Mini PC for Local LLM Inference',
-      },
-      {
-        '@type': 'Product',
-        'name': 'AOOSTAR GEM12 Pro',
-        'description': 'AMD Ryzen AI Max+ 395 mini PC with 96GB DDR5X-8000 RAM and OCuLink eGPU support. 16-core CPU, Radeon 8060S iGPU, 50 TOPS NPU. Premium build quality with expansion capabilities.',
-        'brand': { '@type': 'Brand', 'name': 'AOOSTAR' },
-        'offers': [
-          { '@type': 'Offer', 'price': '1799', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://aoostar.com' }
-        ],
-        'category': 'Mini PC for Local LLM Inference',
-      },
-      {
-        '@type': 'Product',
-        'name': 'GMKtec EVO-X2',
-        'description': 'AMD Ryzen AI Max 385 mini PC with 64GB DDR5X-7500 RAM for local LLM inference. 16-core CPU, Radeon 8050S iGPU, 45 TOPS NPU. Best budget entry point for 30-40B models.',
-        'brand': { '@type': 'Brand', 'name': 'GMKtec' },
-        'offers': [
-          { '@type': 'Offer', 'price': '1199', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://www.gmktec.com' }
-        ],
-        'category': 'Mini PC for Local LLM Inference',
-      },
-    ],
+    supplementalSchema: {
+      'products': [
+        {
+          '@type': 'Product',
+          'name': 'Minisforum MS-A2',
+          'description': 'AMD Ryzen AI Max+ 395 mini PC with 96GB DDR5X-8000 RAM for local LLM inference. 16-core CPU, Radeon 8060S iGPU, 50 TOPS NPU. Best overall balance for 70B model inference.',
+          'brand': { '@type': 'Brand', 'name': 'Minisforum' },
+          'offers': [
+            { '@type': 'Offer', 'price': '1599', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://store.minisforum.com' }
+          ],
+          'category': 'Mini PC for Local LLM Inference',
+        },
+        {
+          '@type': 'Product',
+          'name': 'Beelink GTR9 Pro',
+          'description': 'AMD Ryzen AI Max+ 395 mini PC with 128GB DDR5X-8000 RAM for local LLM inference. 16-core CPU, Radeon 8060S iGPU, 50 TOPS NPU. Maximum RAM for power users and researchers.',
+          'brand': { '@type': 'Brand', 'name': 'Beelink' },
+          'offers': [
+            { '@type': 'Offer', 'price': '1899', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://www.bee-link.com' }
+          ],
+          'category': 'Mini PC for Local LLM Inference',
+        },
+        {
+          '@type': 'Product',
+          'name': 'AOOSTAR GEM12 Pro',
+          'description': 'AMD Ryzen AI Max+ 395 mini PC with 96GB DDR5X-8000 RAM and OCuLink eGPU support. 16-core CPU, Radeon 8060S iGPU, 50 TOPS NPU. Premium build quality with expansion capabilities.',
+          'brand': { '@type': 'Brand', 'name': 'AOOSTAR' },
+          'offers': [
+            { '@type': 'Offer', 'price': '1799', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://aoostar.com' }
+          ],
+          'category': 'Mini PC for Local LLM Inference',
+        },
+        {
+          '@type': 'Product',
+          'name': 'GMKtec EVO-X2',
+          'description': 'AMD Ryzen AI Max 385 mini PC with 64GB DDR5X-7500 RAM for local LLM inference. 16-core CPU, Radeon 8050S iGPU, 45 TOPS NPU. Best budget entry point for 30-40B models.',
+          'brand': { '@type': 'Brand', 'name': 'GMKtec' },
+          'offers': [
+            { '@type': 'Offer', 'price': '1199', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://www.gmktec.com' }
+          ],
+          'category': 'Mini PC for Local LLM Inference',
+        },
+      ],
+    },
     intro: '**AMD Ryzen AI Max+ 395 mini PCs with 64–128GB unified memory can run 30–70B models offline at workstation-class performance for $1,200–2,500.** The new Chinese OEM mini PC category (AOOSTAR, Minisforum, Beelink, GMKtec) captures buyers upgrading from laptops or avoiding $3,000+ Mac Studio costs. These machines combine Zen 5 CPU + Radeon 8060S iGPU + 50 TOPS NPU in a footprint smaller than a desktop tower, with ROCm Linux support maturing rapidly.',
     leadAnswerBlock: '**AMD Ryzen AI Max+ 395 mini PCs offer 64–128GB unified memory, 50 TOPS NPU, and iGPU performance rivaling RTX 4070 — ideal for offline 30–70B model inference at $1,200–2,500.**',
     audience: 'Local LLM users comparing $1,200–2,500 mini PC options for 70B model capability; buyers evaluating AMD vs Mac Studio; Linux-first developers.',
