@@ -213,6 +213,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   }
 
   const faqEntries = Object.values(article.sections).flatMap((s) => s.faqs ?? [])
+  console.log(`[FAQ DEBUG] slug=${slug}, lang=${lang}, faqEntries.length=${faqEntries.length}, article.faqSchema=${!!article.faqSchema}`)
   const faqSchema =
     article.faqSchema ??
     (faqEntries.length > 0
