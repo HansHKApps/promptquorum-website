@@ -11,10 +11,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',
       theme: 'Best Models',
-      title: 'Best Local LLMs for Coding 2026: Kimi K2.6 vs Qwen vs Devstral',
-      seoTitle: 'Best Coding LLMs 2026: Kimi K2.6 (87/100) vs Qwen 3.6 vs Devstral',
+      title: 'Best Coding LLMs 2026: Qwen vs DeepSeek vs Llama Performance',
+      seoTitle: 'Best Coding LLMs 2026: Qwen vs DeepSeek vs Llama Performance',
       intro: 'The best local LLMs for coding in May 2026 are Kimi K2.6 (87/100 real-world, MoE, MIT license), Qwen 3.6 27B (77.2% SWE-bench, best dense model), and Devstral Small 24B (best agentic coding). For 8 GB machines, Qwen3 8B replaces the previous Qwen3 8B recommendation. All run locally via Ollama.',
-      metaDescription: 'May 2026: Kimi K2.6 (87/100 real-world) is the best local coding LLM. Compare with Qwen 3.6 27B (77.2% SWE-bench) and Devstral 24B. SWE-bench replaces HumanEval.',
+      metaDescription: 'Compare Qwen 3.6 (77.2% SWE-bench) vs DeepSeek-Coder-V3 vs Llama 3.1 coding performance. Benchmark scores, VRAM, speed, best models 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**In May 2026, the best local coding models are Kimi K2.6 (87/100 real-world, MoE, MIT license) for maximum quality, Qwen 3.6 27B (77.2% SWE-bench, best dense model) for balanced performance, and Devstral Small 24B (best for agentic workflows). For 8 GB RAM: Qwen3 8B. All run via Ollama locally for offline, private code generation without cloud API costs.** Unlike HumanEval which tests single functions, SWE-bench (solving real GitHub issues) is now the primary benchmark for practical coding in 2026.',
       quickAnswerTop: {
