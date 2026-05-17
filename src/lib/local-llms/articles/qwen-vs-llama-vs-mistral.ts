@@ -10,10 +10,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
-      title: 'Qwen 3 vs Llama 4 vs Mistral Small 24B: 2026 Benchmark Comparison',
-      seoTitle: 'Qwen 3 vs Llama 4 vs Mistral 24B: 2026 Benchmarks',
+      title: 'Mistral 24B vs Qwen 2.5 vs Llama 3.1: Tool Calling & Reasoning Benchmarks',
+      seoTitle: 'Mistral 24B vs Qwen 2.5 vs Llama 3.1: Tool Calling & Reasoning',
       intro: 'Qwen 3.6 27B leads coding benchmarks at 77.2% SWE-bench (best dense model); Llama 4 Scout 17B (MoE, 10M context) is the most versatile on 12 GB VRAM; Mistral Small 3.1 24B still delivers the best quality-per-RAM ratio at 14 GB. Qwen3 excels at coding and 29 languages; Llama 4 dominates context length and efficiency via MoE; Mistral maximizes quality on constrained hardware. All three run on consumer hardware via Ollama. Updated: May 2026.',
-      metaDescription: 'Mistral 24B vs Qwen 3 vs Llama 4 (2026): SWE-bench, MMLU, RAM benchmarks. Includes legacy Qwen 2.5 14B and Llama 3.1 8B comparison.',
+      metaDescription: 'Mistral 24B vs Qwen 2.5 14B vs Llama 3.1 8B: tool calling capability, reasoning benchmarks, SWE-bench scores, MMLU, real-world performance.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
       next_refresh_due: '2026-11-06',
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     de: {
       theme: 'Best Models',
       title: 'Qwen 3 vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich',
-      seoTitle: 'Qwen 3 vs Llama 4 vs Mistral 24B: 2026 Benchmarks',
+      seoTitle: 'Mistral 24B vs Qwen 2.5 vs Llama 3.1: Tool Calling & Reasoning',
       intro: 'Qwen3, Meta Llama 3.3 und Mistral sind die drei dominantesten Open-Weight-Modellfamilien für lokale Inferenz. April 2026: Qwen3 72B führt bei Coding (87% HumanEval) und Mathematik (83% MATH). Llama 3.3 70B führt bei englischem Instruction-Following (88% HumanEval). Mistral Small 3.1 24B liefert nahezu 70B-Qualität bei nur 14 GB RAM -- das beste Qualitäts-zu-RAM-Verhältnis im Vergleich. Vollständige Benchmark-Tabelle mit MMLU, HumanEval, MATH, RAM und Tool-Calling-Unterstützung.',
       metaDescription: 'Mistral 24B vs Qwen 3 vs Llama 4 (2026): SWE-bench, MMLU, RAM-Benchmarks. Enthält Vergleich mit Legacy-Modellen Qwen 2.5 14B und Llama 3.1 8B.',
       publishDate: '2026-04-04',
