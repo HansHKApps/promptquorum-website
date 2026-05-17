@@ -32,6 +32,13 @@ export interface LLMSection {
   component?: string
   youtubeUrl?: string
   costNote?: string
+  strengths?: string[]
+  weaknesses?: string[]
+  bestFor?: string
+  avoidIf?: string
+  callout?: string
+  subsections?: Array<{ title?: string; text?: string; content?: string; steps?: string[]; details?: { [key: string]: string }; providers?: string[]; list?: string[] }>
+  links?: Array<{ url: string; title: string; description: string }>
 }
 
 export interface LLMArticle {
