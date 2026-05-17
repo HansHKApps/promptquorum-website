@@ -169,5 +169,24 @@
       "clicks": 1,
       "ctr": 0.0008628127696289905
     }
+  },
+  {
+    "id": "38f70551-be85-4e9e-a772-3b464d1ae51b",
+    "slug": "/local-llms/top-open-source-models-ollama",
+    "date": "2026-05-17T11:55:03.900Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "New Ollama Models May 2026: Latest Releases & Updates",
+        "new": "Top Ollama Models & June 2026 Updates: New Releases"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Looking for new Ollama models? See the latest May 2026 releases, what's new, and which models are worth using for chat, coding, and reasoning.",
+        "new": "Top Ollama models in June 2026: Llama 4 Scout, Qwen 3.6, Kimi K2.6, Gemma 4. Latest updates, May-June releases, and which models work best for your use case."
+      }
+    ],
+    "reason": "coherence-fix-diagnosis-C: added What's New section to answer changelog/version queries (4,825 imps with 0% CTR). Title rewrite to address both intent groups (models + updates)",
+    "baseline": null
   }
 ]
