@@ -188,5 +188,55 @@
     ],
     "reason": "coherence-fix-diagnosis-C: added What's New section to answer changelog/version queries (4,825 imps with 0% CTR). Title rewrite to address both intent groups (models + updates)",
     "baseline": null
+  },
+  {
+    "id": "45a3528f-aacb-4e46-9c74-41fd3a7fed01",
+    "slug": "/local-llms/llm-quantization-explained",
+    "date": "2026-05-17T13:10:13.495Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Choose Quantization by VRAM: 6GB Q4_K_M, 16GB Q5_K_M (2026)",
+        "new": "Which LLM Quantization: Q4_K_M vs Q5_K_M vs Q8_0 (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Choose quantization by VRAM: 6GB VRAM → Q4_K_M (run 7B), 8GB → Q4_K_M (7B-13B), 16GB → Q5_K_M, 24GB+ → Q8_0. Decision matrix + models for each tier.",
+        "new": "Choose the right LLM quantization for your hardware. Q4_K_M for 6-8GB VRAM, Q5_K_M for 16GB, Q8_0 for 24GB+. 2026 guide with RAM tables."
+      }
+    ],
+    "reason": "geo-meta-optimizer: decision-focused intent alignment, CTR optimization",
+    "baseline": {
+      "position": 2.9,
+      "impressions": 6736,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "2026-04-17 to 2026-05-15"
+    }
+  },
+  {
+    "id": "e3cfd636-403a-4392-aea8-7430b9d77d54",
+    "slug": "/local-llms/qwen-vs-llama-vs-mistral",
+    "date": "2026-05-17T13:10:18.815Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mistral 24B vs Qwen 2.5 vs Llama 3.1: Tool Calling & Reasoning",
+        "new": "Qwen 3 vs Llama 4 vs Mistral 24B: 2026 Benchmarks"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mistral 24B vs Qwen 2.5 14B vs Llama 3.1 8B: tool calling capability, reasoning benchmarks, SWE-bench scores, MMLU, real-world performance.",
+        "new": "Mistral 24B vs Qwen 3 vs Llama 4 (2026): SWE-bench, MMLU, RAM benchmarks. Includes legacy Qwen 2.5 14B and Llama 3.1 8B comparison."
+      }
+    ],
+    "reason": "geo-meta-optimizer: title bridges current + legacy queries, legacy section added",
+    "baseline": {
+      "position": 8.2,
+      "impressions": 9351,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "2026-04-17 to 2026-05-15"
+    }
   }
 ]
