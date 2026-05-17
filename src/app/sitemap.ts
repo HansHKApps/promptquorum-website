@@ -18,54 +18,10 @@ const NOINDEX_PAGES = new Set([
 ])
 
 // Path prefixes excluded from sitemap entirely (every URL beneath these paths is dropped).
-// Use for whole clusters that ship behind noindex pre-launch — e.g. Power Local LLM.
+// Base /power-local-llm blocks unpublished articles, briefs, and stubs.
+// Language variants (/de/, /fr/, /ja/, /zh/) are now emitted per-language via POWER_LLM_PUBLISHED_PATHS check.
 const EXCLUDED_PATH_PREFIXES = [
   '/power-local-llm',
-  '/de/power-local-llm',
-  '/fr/power-local-llm',
-  '/ja/power-local-llm',
-  '/zh/power-local-llm',
-  // JA/ZH/DE/FR path-prefix clusters — /ja/<cluster>, /zh/<cluster>, /de/<cluster>, /fr/<cluster> entries are excluded and instead handled as hreflang alternates on EN entries
-  '/ja/prompt-engineering',
-  '/ja/local-llms',
-  '/ja/blog',
-  '/ja/frameworks',
-  '/ja/compare',
-  '/ja/features',
-  '/ja/how-it-works',
-  '/ja/faq',
-  '/ja/about',
-  '/ja/privacy',
-  '/zh/prompt-engineering',
-  '/zh/local-llms',
-  '/zh/blog',
-  '/zh/frameworks',
-  '/zh/compare',
-  '/zh/features',
-  '/zh/how-it-works',
-  '/zh/faq',
-  '/zh/about',
-  '/zh/privacy',
-  '/de/prompt-engineering',
-  '/de/local-llms',
-  '/de/blog',
-  '/de/frameworks',
-  '/de/compare',
-  '/de/features',
-  '/de/how-it-works',
-  '/de/faq',
-  '/de/about',
-  '/de/privacy',
-  '/fr/prompt-engineering',
-  '/fr/local-llms',
-  '/fr/blog',
-  '/fr/frameworks',
-  '/fr/compare',
-  '/fr/features',
-  '/fr/how-it-works',
-  '/fr/faq',
-  '/fr/about',
-  '/fr/privacy',
 ]
 
 // Check if a content entry has real sections (not a stub)
@@ -186,46 +142,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
   PAGES.forEach(({ path, priority, changefreq, lastmod }) => {
     if (isExcluded(path)) return
 
-    const isPowerLLM = path.startsWith('/power-local-llm')
+    // All sections now use multi-language pattern:
+    // Emit separate <loc> for EN + DE/FR/JA/ZH, each with hreflang alternates.
+    // For PLL articles: publish gate (isExcluded check above) ensures only published
+    // EN articles generate entries; their language variants follow automatically.
+    {
+      // Emit separate <loc> for each language (EN + DE + FR + JA + ZH).
+      // Each <loc> includes hreflang annotations pointing to other language versions.
+      // This ensures AI crawlers discover language URLs as primary entries, not just alternates.
+      const languages = ['en', 'de', 'fr', 'ja', 'zh'] as const
 
-    if (isPowerLLM) {
-      // Power LLM locale variants (/de/power-local-llm/...) are excluded until content is ready.
-      // Emit EN-only <loc> with hreflang alternates.
-      entries.push({
-        url: `${BASE}${path}`,
-        lastModified: lastmod,
-        changeFrequency: changefreq,
-        priority,
-        alternates: {
-          languages: {
-            'en': `${BASE}${path}`,
-            'de': `${BASE}/de${path}`,
-            'fr': `${BASE}/fr${path}`,
-            'ja': `${BASE}/ja${path}`,
-            'zh': `${BASE}/zh${path}`,
-            'x-default': `${BASE}${path}`,
-          },
-        },
-      })
-    } else {
-      // All other clusters: emit EN <loc> with full hreflang alternates.
-      // All non-EN languages use /<lang>/ path-prefix routing.
-      // This prevents duplication and ensures all language variants are discoverable.
-      const getPathPrefixUrl = (p: string, lang: string) => p === '' ? `/${lang}` : `/${lang}${p}`
-      const alternates = {
-        'en': `${BASE}${path}`,
-        'de': `${BASE}${getPathPrefixUrl(path, 'de')}`,
-        'fr': `${BASE}${getPathPrefixUrl(path, 'fr')}`,
-        'ja': `${BASE}${getPathPrefixUrl(path, 'ja')}`,
-        'zh': `${BASE}${getPathPrefixUrl(path, 'zh')}`,
-        'x-default': `${BASE}${path}`,
-      }
-      entries.push({
-        url: `${BASE}${path}`,
-        lastModified: lastmod,
-        changeFrequency: changefreq,
-        priority,
-        alternates: { languages: alternates },
+      languages.forEach((lang) => {
+        const langPath = lang === 'en' ? path : (path === '' ? `/${lang}` : `/${lang}${path}`)
+
+        // Build hreflang alternates for this language version
+        const alternates: Record<string, string> = {}
+        languages.forEach((otherLang) => {
+          const otherPath = otherLang === 'en' ? path : (path === '' ? `/${otherLang}` : `/${otherLang}${path}`)
+          alternates[otherLang] = `${BASE}${otherPath}`
+        })
+        alternates['x-default'] = `${BASE}${path}`
+
+        entries.push({
+          url: `${BASE}${langPath}`,
+          lastModified: lastmod,
+          changeFrequency: changefreq,
+          priority,
+          alternates: { languages: alternates },
+        })
       })
     }
   })
