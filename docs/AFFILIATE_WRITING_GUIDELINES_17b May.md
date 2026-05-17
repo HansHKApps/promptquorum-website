@@ -1157,6 +1157,132 @@ contrarian_take: {
 
 ---
 
+## RULE AFF-21: MOBILE-FIRST DESIGN (Selective — Per-Article)
+
+Not every affiliate article needs mobile-first treatment. Cloud GPU rental, 
+Mac buying guides, AI dev tools comparison are desktop-research decisions. 
+Phone hardware, mobile apps, on-the-go buying decisions are mobile-first.
+
+Each affiliate article declares its primary device target. Mobile-first 
+rules apply only when target = 'mobile'.
+
+### Device target field (mandatory in content.ts)
+
+```typescript
+affiliate_meta: {
+  // ... other fields
+  primary_device_target: 'mobile' | 'desktop' | 'mixed',
+}
+```
+
+### When to use each setting
+
+**`mobile`** — Use when the buying decision typically happens on a phone:
+- Phone hardware reviews (best Android phones for local AI)
+- Mobile app comparisons (best local LLM apps for Android/iOS)
+- Mobile accessories (phone-compatible hardware)
+- On-the-go decision content (point-of-purchase research)
+- Articles where mobile traffic share exceeds 40% in GSC data
+
+**`desktop`** — Use when buying decision typically happens at a computer:
+- Cloud GPU rental (RunPod, Vast.ai, Lambda Labs)
+- Hardware comparisons over $500 (workstations, servers, GPUs)
+- Developer tool comparisons (Cursor, Claude Code, dev environments)
+- B2B SaaS comparisons
+- Articles where desktop traffic share exceeds 70% in GSC data
+
+**`mixed`** — Use when traffic is roughly split or topic spans both contexts:
+- General "best of" guides not tied to a specific device context
+- Software available on both desktop and mobile
+- Content where audience research happens on mobile but purchase on desktop
+
+### Mobile-first rules (apply when target = 'mobile')
+
+When `primary_device_target: 'mobile'` is set:
+
+1. **Design and test at 375px viewport first.** Open at 375×812 in Chrome 
+   DevTools BEFORE checking desktop layout.
+
+2. **First mobile screen (812px) must contain:**
+   - H1 title (max 2 lines)
+   - Affiliate disclosure (collapsed/abbreviated)
+   - Voice register disclosure (1 line)
+   - Lead Answer Block (max 30 words)
+   - Top Pick from Verdict Box visible
+   - "Check current price" CTA visible
+
+3. **Tap targets minimum 48×48px** for all interactive elements.
+
+4. **Affiliate link spacing minimum 24px** between adjacent links 
+   to prevent mistapping.
+
+5. **Comparison Table:** maximum 3 columns visible on mobile. 
+   "Best For" column hides under 480px. Use card-based layout or 
+   horizontal swipe — never pinch-zoom-required tables.
+
+6. **Decision Matrix:** each "If X" condition gets its own card, 
+   vertically stacked. CTAs are full-width buttons, not inline links.
+
+7. **FAQ:** accordion-style (tap to expand) by default on mobile.
+
+8. **Pricing format:** short — `$0.39/hr` not `$0.39 per hour for RTX 4090`.
+
+9. **CTA button:** full-width on mobile, max 320px on desktop.
+
+10. **Required mobile tests before publish:**
+    - [ ] 375×812 viewport: top pick visible without scrolling
+    - [ ] All tap targets minimum 48×48px verified in browser inspector
+    - [ ] No horizontal scroll required
+    - [ ] Comparison table readable without zoom
+    - [ ] Page loads under 2.5s on slow 3G simulation
+    - [ ] Lighthouse mobile score 90+
+
+### Rules for desktop-target articles
+
+When `primary_device_target: 'desktop'` is set:
+- Standard AFF-2 structure rules apply
+- AFF-21 mobile-specific rules do NOT apply
+- Verdict Box can use wider layout (3 picks visible side by side)
+- Comparison tables can use up to 6 columns
+- Pricing breakdown tables OK (don't need to convert to lists)
+- Standard responsive design suffices (no special mobile-first treatment)
+
+### Why this rule is selective
+
+GSC data Q2 2026 shows mobile CTR is 40-70× desktop CTR overall. But that 
+average hides huge variation by topic:
+- Android/phone articles: mobile share 60-80%
+- Cloud GPU articles: mobile share 5-15%
+- Apple Silicon articles: mobile share 20-30%
+
+Forcing mobile-first on desktop-target articles is over-engineering. 
+Forcing desktop-first on mobile-target articles loses 40-70× CTR multiplier. 
+The rule must be applied selectively per article.
+
+### Default for unknown targets
+
+If you can't decide which target an article fits, default to `mixed`. 
+Apply mobile-first rules 1-4 (viewport testing, first screen content, tap 
+targets, link spacing) which improve UX without harming desktop. Skip rules 
+5-9 which require mobile-specific layout decisions.
+
+### Documentation in content.ts
+
+```typescript
+affiliate_meta: {
+  primary_device_target: 'mobile',
+  mobile_tested: true,
+  mobile_lighthouse_score: 92,
+  mobile_first_screen_verified: '2026-05-17',
+  
+  // Optional: justify the target if not obvious
+  device_target_rationale: 'Article topic (best Android local LLM apps) 
+    is inherently mobile. GSC data on similar pages shows 65% mobile share.',
+}
+```
+
+---
+
 ## How to use this guide
 
 ### When writing a NEW affiliate article
