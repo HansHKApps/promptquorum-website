@@ -60,6 +60,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**The inference engine** reads the model file and performs the matrix calculations needed to generate tokens. The most popular engines are [Ollama](/local-llms/how-to-install-ollama) (runs as a background service with an OpenAI-compatible API), [LM Studio](/local-llms/how-to-install-lm-studio) (a desktop app with a built-in chat UI), and llama.cpp (the underlying C++ library that most other tools build on).',
             '**The interface** is where you interact with the model -- a terminal, a web UI, or an API endpoint. Many tools like Ollama expose a REST API at `http://localhost:11434` so you can connect any OpenAI-compatible application to your local model.',
           ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2p2xMKpz7wM',
         },
         hardware: {
           id: 'what-hardware-do-you-need',
