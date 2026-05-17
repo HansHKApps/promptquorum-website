@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Mistral 7B — fastest on 8 GB VRAM, best speed/quality ratio',
             '→Phi-4 Mini — runs on 4 GB VRAM, surprisingly capable for its size',
           ],
-          updatedDate: '2026-05-01',
+          updatedDate: '2026-05-17',
         },
         de: {
           question: 'Was sind die besten Open-Source-Modelle fuer Ollama im Mai 2026?',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Mistral 7B — schnellstes Modell fuer 8 GB VRAM',
             '→Phi-4 Mini — laeuft auf 4 GB VRAM',
           ],
-          updatedDate: '2026-05-01',
+          updatedDate: '2026-05-17',
         },
         fr: {
           question: 'Quels sont les meilleurs modeles open source pour Ollama en mai 2026 ?',
@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Mistral 7B — le plus rapide sur 8 Go VRAM',
             '→Phi-4 Mini — fonctionne sur 4 Go VRAM',
           ],
-          updatedDate: '2026-05-01',
+          updatedDate: '2026-05-17',
         },
         ja: {
           question: '2026年5月のOllama向け最高のオープンソースモデルは？',
@@ -67,7 +67,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Mistral 7B — 8GB VRAMで最速',
             '→Phi-4 Mini — 4GB VRAMで動作',
           ],
-          updatedDate: '2026-05-01',
+          updatedDate: '2026-05-17',
         },
         zh: {
           question: '2026年5月Ollama最佳开源模型有哪些？',
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Mistral 7B — 8GB显存最快',
             '→Phi-4 Mini — 4GB显存可运行',
           ],
-          updatedDate: '2026-05-01',
+          updatedDate: '2026-05-17',
         },
       },
       audience: 'Beginners running their first local LLM on consumer hardware',
