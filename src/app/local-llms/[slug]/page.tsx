@@ -277,8 +277,9 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
   }
 
   // Auto-generate FAQPage schema from sections with faqs, plus quickAnswerTop if present
-  const faqEntries = Object.values(article.sections).flatMap(s => s.faqs ?? [])
-  const quickAnswerTopEntry = (article as any).quickAnswerTop?.[selectedLang]
+  // Only collect FAQ entries if there's no explicit faqSchema (single source of truth)
+  const faqEntries = !article.faqSchema ? Object.values(article.sections).flatMap(s => s.faqs ?? []) : []
+  const quickAnswerTopEntry = !article.faqSchema ? (article as any).quickAnswerTop?.[selectedLang] : undefined
   const allFaqEntries = [
     ...(quickAnswerTopEntry ? [{ q: quickAnswerTopEntry.question, a: quickAnswerTopEntry.answer }] : []),
     ...faqEntries,
