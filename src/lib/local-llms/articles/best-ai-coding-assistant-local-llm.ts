@@ -1206,6 +1206,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[VS Code et Cursor avec LLMs locaux](/local-llms/local-llms-with-vscode-cursor?lang=fr) — Guide de setup étape par étape pour Cursor + Ollama',
           '[Stack de développeur LLM local 2026](/local-llms/local-llm-developer-stack?lang=fr) — Setup complet: IDE + modèles + backend + RAG',
           '[Meilleurs LLMs locaux pour le codage](/local-llms/best-local-llms-for-coding?lang=fr) — Guide de sélection modèle (Qwen vs Mistral vs Deepseek)',
+          '[Workflows LLM locaux pour le codage](/local-llms/local-llms-for-coding-workflows?lang=fr) — Patterns de workflow et bonnes pratiques',
+          '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=fr) — Choix backend pour LLMs locaux',
+          '[Meilleurs LLMs locaux pour la révision de code](/local-llms/best-local-llms-code-review?lang=fr) — Modèles spécialisés pour la révision',
+          '[LLM local pour données sensibles](/local-llms/private-local-llm-sensitive-data?lang=fr) — Guide setup Privacy-First',
+          '[Local vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=fr) — Comparaison coûts et capacités',
         ],
       },
     },
@@ -1251,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       privacySection: { id: 'privacy-enterprise', title: 'プライバシー＆エンタープライズの考慮', image: '/images/ai-coding-assistant-privacy-flow-en.svg', content: 'それぞれのツールがサーバーに何を送信するか理解することは規制された作業に重要。**日本でのエンタープライズ展開：** 金融機関、医療、防衛、法務など規制業界では、企業秘密とお客様データの保護のためにローカル推論が推奨されています。Continue.dev＋OllamaまたはTabnine自己ホスティングは、日本のデータレジデンシー要件を満たし、企業が日本国内インフラ内でコード補完を維持できるようにします。', items: ['**Continue.dev（ローカルモード）。** 100%ローカル。ネットワーク呼び出しなし。完全にオフラインで動作。', '**Continue.dev（クラウドモード）。** チャット/補完で明示的に送信したもののみ。テレメトリはオプション。', '**Cursor。** Cursorクラウドモデル使用時、コードコンテキスト、クエリ、セレクションがCursorサーバーに送信。プライバシーモードで削減可能。', '**Cody。** クラウドモード時、コードコンテキストおよびリクエストはSourcegraphに送信。', '**Tabnine。** クラウドモード送信コンテキスト。セルフホスティング展開でエンタープライズ対応。', '**GitHub Copilot。** コードコンテキストはMicrosoftに送信。Enterprise Cloud オプション利用可。'] },
       contrarySection: { id: 'contrarian-take', title: '相反する見方：ローカルLLMコーディング代理人が間違った選択のとき', content: 'ローカルLLMコーディング代理人は常に正解ではない。代わりにクラウドを使用する時機：\n\n**GPUハードウェアがないあなた。** ローカルLLMはミニマム8GB VRAM必須。基本ラップトップで8GB RAM、専用GPU無しなら、クラウドツール はあなたの唯一のオプション。\n\n**あなたのコードはパブリックまたはオープンソース。** FOSSプロジェクトではプライバシーは無関係。無料または安価クラウドツール（GitHub Copilot教育経由、Codeium無料ティア）はハードウェア投資より意味あります。\n\n**あなたは最先端品質が必要。** 2026年最高のコーディングモデル（Claude Sonnet 4.5、GPT-5）はローカル選択肢を複雑な問題で10–25%アウトパフォーム。困難なアルゴリズム作業の場合、クラウドが勝ちます。', items: [] },
       faqSection: { id: 'faq', title: 'よくある質問', faqs: [{ q: 'どのAIコーディング代理人がローカルLLM対応が最高ですか？', a: 'Continue.dev。ローカルLLM（Ollama、LM Studio、llama.cpp）をプライマリターゲットとして構築。セットアップはシンプル、すべての機能ローカルで機能。' }, { q: 'Continue.devは本当に無料ですか？', a: 'Continue.devは本当に無料でオープンソース（Apache 2.0）。創業者はオプション企画サービス・エンタープライズ契約経由で開発資金。' }, { q: '私はCursorでOllamaを使用できますか？', a: 'はい、カスタムOpenAI APIエンドポイント設定経由。OllamaのURLをCursorに指し示し、補完がローカルへルート。' }, { q: 'どのローカルLLMはコード補完向けに最高ですか？', a: 'Qwen 2.5 Coder 14Bはコーディング向けに優秀で12GB VRAMに装着。' }, { q: 'GitHub CopilotはローカルLLMをサポートしますか？', a: 'いいえ。GitHub Copilotはクラウドのみ。あなたのコードはMicrosoftサーバーに送信。' }, { q: 'CursorとContinue.devの違いは何ですか？', a: 'Cursorは$20/月VS Code フォーク。Continue.devは無料、オープンソース、ローカルLLM向けに設計。' }, { q: 'Tabnineセルフホスティングはエンタープライズコスト価値ありですか？', a: 'あなたに厳密なコンプライアンス要件あり、インフラコスト正当化できる場合のみ。' }, { q: 'ラップトップでローカルLLM補完を使用できますか？', a: 'はい、12GB+ RAM（またはMacで16GB+統合メモリ）を持つなら。' }, { q: 'ローカルAIコード補完向けに何GBのVRAMが必要ですか？', a: 'ミニマム8GB（7Bモデル）。快適12GB（14Bモデル）。最適24GB（33Bモデル）。' }, { q: 'Continue.devはJetBrains IDEで機能しますか？', a: 'はい、公式JetBrains プラグイン有。インストールはVS Codeと同じ。' }] },
-      relatedGuides: { id: 'related-guides', title: '関連ガイド', content: 'あなたのローカルLLM開発ワークフローを深める。', items: ['[VS Code + Cursor（ローカルLLM）](/local-llms/local-llms-with-vscode-cursor?lang=ja)', '[ローカルLLM開発者スタック2026](/local-llms/local-llm-developer-stack?lang=ja)', '[コーディング向け最高ローカルLLM](/local-llms/best-local-llms-for-coding?lang=ja)'] }
+      relatedGuides: { id: 'related-guides', title: '関連ガイド', content: 'ローカルLLM開発ワークフローを深める。', items: ['[VS Code + Cursor（ローカルLLM）](/local-llms/local-llms-with-vscode-cursor?lang=ja) — Cursor + Ollamaのステップバイステップガイド', '[ローカルLLM開発者スタック2026](/local-llms/local-llm-developer-stack?lang=ja) — 完全セットアップ：IDE + モデル + バックエンド + RAG', '[コーディング向け最高ローカルLLM](/local-llms/best-local-llms-for-coding?lang=ja) — モデル選択ガイド (Qwen vs Mistral vs Deepseek)', '[コーディングワークフロー向けローカルLLM](/local-llms/local-llms-for-coding-workflows?lang=ja) — ワークフローパターンとベストプラクティス', '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=ja) — ローカルLLM向けバックエンド選択', '[コード審査向け最高ローカルLLM](/local-llms/best-local-llms-code-review?lang=ja) — コード審査専門モデル', '[機密データ向けローカルLLM](/local-llms/private-local-llm-sensitive-data?lang=ja) — プライバシーファーストセットアップガイド', '[Local vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=ja) — コストと能力の比較'] }
     },
   },
   zh: {
@@ -1682,6 +1687,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           q: '如何在企业网络中部署本地LLM工具？',
           a: '步骤：(1)选择Tabnine或Continue.dev。(2)在内网GPU服务器上部署本地LLM。(3)通过企业VPN连接所有开发人员。(4)配置工具指向内网端点。(5)监控数据流（确保零云端传输）。(6)获取IT支持的文档。需要1-2周的设置时间，但一次性成本。',
         },
+      ],
+    },
+    relatedGuides: {
+      id: 'related-guides',
+      title: '相关指南',
+      content: '深化您的本地LLM开发工作流。',
+      items: [
+        '[VS Code和Cursor与本地LLM](/local-llms/local-llms-with-vscode-cursor?lang=zh) — Cursor + Ollama的分步设置指南',
+        '[本地LLM开发者栈2026](/local-llms/local-llm-developer-stack?lang=zh) — 完整设置：IDE + 模型 + 后端 + RAG',
+        '[编程最佳本地LLM](/local-llms/best-local-llms-for-coding?lang=zh) — 模型选择指南 (Qwen vs Mistral vs Deepseek)',
+        '[编程工作流本地LLM](/local-llms/local-llms-for-coding-workflows?lang=zh) — 工作流模式和最佳实践',
+        '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=zh) — 本地LLM的后端选择',
+        '[代码审查最佳本地LLM](/local-llms/best-local-llms-code-review?lang=zh) — 专门用于代码审查的模型',
+        '[敏感数据本地LLM](/local-llms/private-local-llm-sensitive-data?lang=zh) — 隐私优先设置指南',
+        '[本地 vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=zh) — 成本和能力对比',
       ],
     },
     relatedReading: {
