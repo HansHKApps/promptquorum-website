@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { LandingPageServer } from '@/components/LandingPageServer'
 import { ConfirmedToast } from '@/components/ConfirmedToast'
 
@@ -11,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.homeMetaTitle,
     description: t.homeMetaDescription,
-    alternates: generateAlternates('/', lang, true, undefined, ['de', 'zh', 'de']),
+    alternates: generateAlternates('/', lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.homeMetaTitle,
       description: t.homeMetaDescription,

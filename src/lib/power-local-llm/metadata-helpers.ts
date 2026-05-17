@@ -10,9 +10,9 @@
  *   - languages: full set of 5 language URLs + x-default (always EN)
  */
 
-const BASE = 'https://www.promptquorum.com'
+import { ALL_LANGS, type Lang } from '@/lib/i18n/constants'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+const BASE = 'https://www.promptquorum.com'
 
 function pathFor(lang: Lang, slug?: string): string {
   const suffix = slug ? `/${slug}` : ''
@@ -22,7 +22,7 @@ function pathFor(lang: Lang, slug?: string): string {
 }
 
 export function powerLLMAlternates(selectedLang: Lang, slug?: string) {
-  const langs: Lang[] = ['en', 'de', 'fr', 'ja', 'zh']
+  const langs: typeof ALL_LANGS = ALL_LANGS
   return {
     canonical: `${BASE}${pathFor(selectedLang, slug)}`,
     languages: {

@@ -5,6 +5,7 @@ import { BlogIndexClient } from '@/components/BlogIndexClient'
 import { blogContent, type Language } from '@/lib/blog/blogContent'
 import { SLUG_TO_POST_ID, type BlogSlug } from '@/lib/blogSlugs'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { translations } from '@/translations'
 
 export function getArticleStaticParams() {
@@ -32,7 +33,7 @@ export async function buildArticleMetadata(slug: string, lang: Language): Promis
   return {
     title: pageTitle.length <= 43 ? `${pageTitle} | PromptQuorum Blog` : pageTitle,
     description: metaDesc,
-    alternates: generateAlternates(`/blog/${slug}`, lang, hasTranslation, undefined, ['ja', 'zh']),
+    alternates: generateAlternates(`/blog/${slug}`, lang, hasTranslation, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: pageTitle,
       description: metaDesc,
@@ -55,7 +56,7 @@ export async function buildHubMetadata(lang: Language): Promise<Metadata> {
   return {
     title: `${t.blogTitle} | PromptQuorum`,
     description: t.blogSubtitle,
-    alternates: generateAlternates('/blog', lang, true, undefined, ['ja', 'zh']),
+    alternates: generateAlternates('/blog', lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: `${t.blogTitle} | PromptQuorum`,
       description: t.blogSubtitle,

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { FAQPageClient } from '@/components/FAQPageClient'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'fr'
@@ -10,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.faqMetaTitle,
     description: t.faqMetaDescription,
-    alternates: generateAlternates('/faq', lang, true, undefined, ['de', 'zh', 'de']),
+    alternates: generateAlternates('/faq', lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.faqMetaTitle,
       description: t.faqMetaDescription,

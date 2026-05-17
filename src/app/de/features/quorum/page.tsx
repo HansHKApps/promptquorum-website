@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { QuorumShowcase } from '@/components/QuorumShowcase'
 import Link from 'next/link'
 
@@ -11,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.featuresQuorumMetaTitle,
     description: t.featuresQuorumMetaDescription,
-    alternates: generateAlternates('/features/quorum', lang, true, undefined, ['de', 'zh', 'de']),
+    alternates: generateAlternates('/features/quorum', lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.featuresQuorumMetaTitle,
       description: t.featuresQuorumMetaDescription,
