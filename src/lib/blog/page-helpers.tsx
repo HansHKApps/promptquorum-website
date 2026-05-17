@@ -163,7 +163,7 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
         .map((s: any) => ({
           '@type': 'ImageObject' as const,
           url: toAbsImageUrl(s.image),
-          ...(s.imageCaption && { name: (s.imageCaption as string).substring(0, 120), description: s.imageCaption }),
+          ...(s.imageCaption && { name: (s.imageCaption as string).substring(0, 125), description: s.imageCaption }),
           creator: { '@type': 'Person', name: 'Hans Kuepper' },
           copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           license: 'https://www.promptquorum.com/image-license',

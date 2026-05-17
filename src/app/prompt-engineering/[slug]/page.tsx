@@ -283,7 +283,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     .map(s => ({
       '@type': 'ImageObject' as const,
       url: toAbsImageUrl((s as any).image),
-      ...((s as any).imageCaption && { name: ((s as any).imageCaption as string).substring(0, 120), description: (s as any).imageCaption }),
+      ...((s as any).imageCaption && { name: ((s as any).imageCaption as string).substring(0, 125), description: (s as any).imageCaption }),
       creator: { '@type': 'Person', name: 'Hans Kuepper' },
       copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       license: 'https://www.promptquorum.com/image-license',
