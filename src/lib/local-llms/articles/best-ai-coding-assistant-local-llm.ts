@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Intermediate',
-    leadAnswerBlock: '**Choisissez Continue.dev pour gratuit, open source, meilleure intégration Ollama/LM Studio. Choisissez Cursor (20 €/mois) pour l\'autocomplétion la plus polie et les workflows hybrides cloud+local. Choisissez Sourcegraph Cody (9 €/utilisateur/mois) pour les équipes nécessitant le contexte de la base de code. Choisissez Tabnine (12 €/mois) pour l\'entraînement Privacy-First. Choisissez Windsurf (0–15 €/mois) pour l\'alternative montante avec workflow Cascade.** Tous vérifiés mai 2026. Mis à jour mensuellement.',
+    leadAnswerBlock: '**Choisissez Continue.dev pour gratuit, open source, meilleure intégration Ollama/LM Studio. Choisissez Cursor (20 €/mois) pour l\'autocomplétion la plus polie et les workflows hybrides cloud+local. Choisissez Sourcegraph Cody (59 €/utilisateur/mois, enterprise-only) pour les équipes nécessitant le contexte de la base de code. Choisissez Tabnine (39 €/utilisateur/mois) pour l\'entraînement Privacy-First. Choisissez Windsurf (0–15 €/mois) pour l\'alternative montante avec workflow Cascade.** Tous vérifiés mai 2026. Mis à jour mensuellement.',
     quickAnswerTop: {
       fr: {
         question: 'Quel assistant IA de code fonctionne le mieux avec les LLM locaux ?',
@@ -880,8 +880,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: Gratuit, open source, support natif Ollama/LM Studio',
           'Cursor: 20 €/mois, UX polie, LLM local via point de terminaison OpenAI personnalisé',
-          'Sourcegraph Cody: 9 €/utilisateur/mois, contexte codebase, fonctionnalités d\'équipe',
-          'Tabnine: 12 €/mois, formation axée sur la confidentialité, option auto-hébergée',
+          'Sourcegraph Cody: 59 €/utilisateur/mois (enterprise-only), contexte codebase, fonctionnalités d\'équipe',
+          'Tabnine: 39 €/utilisateur/mois, formation axée sur la confidentialité, option auto-hébergée',
           'Windsurf: Gratuit + 15 €/mois Pro, workflow Cascade, support local plus récent',
         ],
       },
@@ -915,11 +915,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: '👥 MEILLEUR POUR LES ÉQUIPES: Sourcegraph Cody',
-            text: 'Pourquoi: 9 €/utilisateur/mois. Contexte au niveau du codebase pour les tâches de refonte. Fonctionnalités admin et conformité d\'équipe. Support LLM local via Ollama. Solution de qualité enterprise.',
+            text: 'Pourquoi: 59 €/utilisateur/mois (enterprise-only). Contexte au niveau du codebase pour les tâches de refonte. Fonctionnalités admin et conformité d\'équipe. Support LLM local via Ollama. Solution de qualité enterprise.',
           },
           {
             type: '🔒 MEILLEUR POUR LA CONFIDENTIALITÉ: Tabnine',
-            text: 'Pourquoi: 12 €/mois ou option auto-hébergée. Entraîné uniquement sur code open source permissif. Certifié SOC 2 Type 2. Excellent argument de confidentialité d\'entreprise. Meilleur si la conformité est non négociable.',
+            text: 'Pourquoi: 39 €/utilisateur/mois ou option auto-hébergée. Entraîné uniquement sur code open source permissif. Certifié SOC 2 Type 2. Excellent argument de confidentialité d\'entreprise. Meilleur si la conformité est non négociable.',
           },
           {
             type: '🚀 ÉTOILE MONTANTE: Windsurf (Codeium)',
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Sourcegraph Cody',
-            'Tarif': '9 €/user/mo',
+            'Tarif': '59 €/user/mo (enterprise-only)',
             'LLM local': '✅ Via config Ollama',
             'IDEs': 'VS Code, JetBrains, Neovim',
             'Open Source': 'Partial (CLI)',
@@ -975,7 +975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Tabnine',
-            'Tarif': '12 €/mo (Pro)',
+            'Tarif': '39 €/user/mo',
             'LLM local': '✅ Auto-hébergé (enterprise)',
             'IDEs': 'VS Code, JetBrains, Sublime, plus',
             'Open Source': '❌ Closed',
