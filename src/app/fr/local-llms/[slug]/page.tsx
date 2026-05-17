@@ -127,8 +127,20 @@ export default async function FrLocalLLMsArticlePage({ params }: PageProps) {
   const article = llmContent[key]['fr'] ?? llmContent[key]['en']
   if (!article) notFound()
 
+  // Schema for French breadcrumbs
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.promptquorum.com' },
+      { '@type': 'ListItem', position: 2, name: 'LLMs locaux', item: 'https://www.promptquorum.com/local-llms' },
+      { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
+    ],
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <LocalLLMsPostClient
         slug={slug}
         initialLang="fr"

@@ -268,12 +268,22 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     ;(articleSchema as any).image = sectionImageObjects[0].url
   }
 
+  // Translate breadcrumb labels per language
+  const breadcrumbLabels: Record<string, { home: string; hub: string }> = {
+    en: { home: 'Home', hub: 'Local LLMs' },
+    de: { home: 'Startseite', hub: 'Lokale LLMs' },
+    fr: { home: 'Accueil', hub: 'LLMs locaux' },
+    ja: { home: 'ホーム', hub: 'ローカルLLM' },
+    zh: { home: '首页', hub: '本地LLM' },
+  }
+  const labels = breadcrumbLabels[selectedLang] || breadcrumbLabels['en']
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home',       item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'Local LLMs', item: 'https://www.promptquorum.com/local-llms' },
+      { '@type': 'ListItem', position: 1, name: labels.home, item: 'https://www.promptquorum.com' },
+      { '@type': 'ListItem', position: 2, name: labels.hub, item: 'https://www.promptquorum.com/local-llms' },
       { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
     ],
   }
