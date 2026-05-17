@@ -1,0 +1,113 @@
+<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: bold; fill: #1f2937; }
+      .question { font-size: 13px; fill: #111827; font-weight: 600; }
+      .answer { font-size: 12px; fill: #374151; }
+      .box-q { fill: #fef3c7; stroke: #f59e0b; stroke-width: 2; }
+      .box-a { fill: #dbeafe; stroke: #3b82f6; stroke-width: 2; }
+      .connector { fill: none; stroke: #d1d5db; stroke-width: 2; }
+      .label-yes { fill: #059669; font-size: 11px; font-weight: 600; }
+      .label-no { fill: #dc2626; font-size: 11px; font-weight: 600; }
+      .credit { font-size: 10px; fill: #9ca3af; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" fill="#ffffff"/>
+
+  <text x="600" y="35" class="title" text-anchor="middle">Decision Tree: Which AI Coding Assistant?</text>
+
+  <!-- Root Question -->
+  <rect class="box-q" x="450" y="60" width="300" height="50" rx="6"/>
+  <text class="question" x="600" y="82" text-anchor="middle">Budget: Free vs Paid?</text>
+  <text class="answer" x="600" y="100" text-anchor="middle" font-size="11">Must you use free tools?</text>
+
+  <!-- Yes - Free path -->
+  <line class="connector" x1="530" y1="110" x2="330" y2="150"/>
+  <text class="label-yes" x="420" y="130">YES (Free)</text>
+
+  <rect class="box-q" x="180" y="150" width="300" height="50" rx="6"/>
+  <text class="question" x="330" y="172" text-anchor="middle">Privacy Critical?</text>
+  <text class="answer" x="330" y="190" text-anchor="middle" font-size="11">Sensitive code? Air-gapped?</text>
+
+  <!-- Continue.dev -->
+  <line class="connector" x1="280" y1="200" x2="180" y2="240"/>
+  <text class="label-yes" x="220" y="225">YES</text>
+
+  <rect class="box-a" x="80" y="240" width="200" height="60" rx="6"/>
+  <text class="question" x="180" y="265" text-anchor="middle">→ Continue.dev</text>
+  <text class="answer" x="180" y="280" text-anchor="middle" font-size="10">Free, Open Source</text>
+  <text class="answer" x="180" y="295" text-anchor="middle" font-size="10">Local-first, 100% offline</text>
+
+  <!-- Windsurf Free -->
+  <line class="connector" x1="350" y1="200" x2="450" y2="240"/>
+  <text class="label-no" x="390" y="225">NO</text>
+
+  <rect class="box-a" x="350" y="240" width="200" height="60" rx="6"/>
+  <text class="question" x="450" y="265" text-anchor="middle">→ Windsurf (Free)</text>
+  <text class="answer" x="450" y="280" text-anchor="middle" font-size="10">Free tier available</text>
+  <text class="answer" x="450" y="295" text-anchor="middle" font-size="10">New, improving rapidly</text>
+
+  <!-- No - Paid path -->
+  <line class="connector" x1="670" y1="110" x2="870" y2="150"/>
+  <text class="label-no" x="750" y="130">NO ($)</text>
+
+  <rect class="box-q" x="720" y="150" width="300" height="50" rx="6"/>
+  <text class="question" x="870" y="172" text-anchor="middle">Solo Dev vs Team?</text>
+  <text class="answer" x="870" y="190" text-anchor="middle" font-size="11">Will 5+ people use this?</text>
+
+  <!-- Solo Dev -->
+  <line class="connector" x1="800" y1="200" x2="700" y2="240"/>
+  <text class="label-no" x="740" y="225">Solo</text>
+
+  <rect class="box-q" x="580" y="240" width="240" height="50" rx="6"/>
+  <text class="question" x="700" y="262" text-anchor="middle">Local LLM Critical?</text>
+
+  <!-- Yes Local -->
+  <line class="connector" x1="650" y1="290" x2="580" y2="330"/>
+  <text class="label-yes" x="610" y="315">YES</text>
+
+  <rect class="box-a" x="480" y="330" width="200" height="60" rx="6"/>
+  <text class="question" x="580" y="355" text-anchor="middle">→ Cursor</text>
+  <text class="answer" x="580" y="370" text-anchor="middle" font-size="10">$20/month</text>
+  <text class="answer" x="580" y="385" text-anchor="middle" font-size="10">Best UX, local mode available</text>
+
+  <!-- No Local, Quality focused -->
+  <line class="connector" x1="780" y1="290" x2="850" y2="330"/>
+  <text class="label-no" x="800" y="315">NO</text>
+
+  <rect class="box-a" x="750" y="330" width="200" height="60" rx="6"/>
+  <text class="question" x="850" y="355" text-anchor="middle">→ Tabnine</text>
+  <text class="answer" x="850" y="370" text-anchor="middle" font-size="10">$12/month</text>
+  <text class="answer" x="850" y="385" text-anchor="middle" font-size="10">Privacy-first, multiple IDEs</text>
+
+  <!-- Team -->
+  <line class="connector" x1="950" y1="200" x2="1050" y2="240"/>
+  <text class="label-yes" x="990" y="225">Team</text>
+
+  <rect class="box-a" x="950" y="240" width="200" height="60" rx="6"/>
+  <text class="question" x="1050" y="265" text-anchor="middle">→ Cody</text>
+  <text class="answer" x="1050" y="280" text-anchor="middle" font-size="10">$9/user/month</text>
+  <text class="answer" x="1050" y="295" text-anchor="middle" font-size="10">Team features, codebase context</text>
+
+  <!-- Summary Box -->
+  <rect x="50" y="450" width="1100" height="220" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2" rx="6"/>
+
+  <text x="70" y="475" class="question" font-size="14">Quick Summary</text>
+
+  <g transform="translate(70, 495)">
+    <text class="answer" x="0" y="0">• Free & Local-First: Continue.dev (open source, native Ollama)</text>
+    <text class="answer" x="0" y="20">• Best Solo Dev UX: Cursor ($20/mo, hybrid cloud+local option)</text>
+    <text class="answer" x="0" y="40">• Best Teams: Sourcegraph Cody ($9/user/mo, codebase context)</text>
+    <text class="answer" x="0" y="60">• Privacy Enterprise: Tabnine ($12/mo, self-hosted available)</text>
+    <text class="answer" x="0" y="80">• Free Alternative: Windsurf (new, improving local LLM support)</text>
+    <text class="answer" x="0" y="110" fill="#0c4a6e">No perfect tool — choose based on: budget, privacy needs, team size, and local LLM requirements.</text>
+  </g>
+
+  <text class="credit" x="1150" y="690" text-anchor="end">© PromptQuorum | May 2026</text>
+
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">CC-BY-SA-4.0</dc:rights>
+  </metadata>
+</svg>

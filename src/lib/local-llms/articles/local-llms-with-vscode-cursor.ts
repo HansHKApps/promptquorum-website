@@ -124,6 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
+            '[Best AI Coding Assistant for Local LLM](/local-llms/best-ai-coding-assistant-local-llm) -- Comprehensive comparison of Cursor, Continue.dev, Cody, Tabnine, and Windsurf with local LLM support.',
             '[Local LLM Developer Stack](/local-llms/local-llm-developer-stack) -- The complete stack including API server setup and production monitoring beyond IDE integration.',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Setup Ollama for code completions.',
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) -- Detailed coding model benchmark.',

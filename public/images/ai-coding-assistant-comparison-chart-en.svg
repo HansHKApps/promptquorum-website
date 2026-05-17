@@ -1,0 +1,104 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-size: 24px; font-weight: bold; fill: #1f2937; }
+      .label { font-size: 12px; fill: #6b7280; }
+      .tool-name { font-size: 14px; font-weight: 600; fill: #1f2937; }
+      .score { font-size: 13px; fill: #2563eb; font-weight: 500; }
+      .bar-bg { fill: #e5e7eb; }
+      .bar-fill { fill: #3b82f6; }
+      .credit { font-size: 10px; fill: #9ca3af; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="600" y="40" class="title" text-anchor="middle">AI Coding Assistant Comparison (May 2026)</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="65" class="label" text-anchor="middle" font-size="14">Local LLM Support, Price, IDE Coverage, Team Features</text>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 85)">
+    <text class="label" x="0" y="0">Dimensions: </text>
+    <circle cx="120" cy="-5" r="4" class="bar-fill"/>
+    <text class="label" x="130" y="0">Local LLM Support</text>
+
+    <circle cx="350" cy="-5" r="4" fill="#10b981"/>
+    <text class="label" x="360" y="0">IDE Coverage</text>
+
+    <circle cx="550" cy="-5" r="4" fill="#f59e0b"/>
+    <text class="label" x="560" y="0">Price Value</text>
+
+    <circle cx="750" cy="-5" r="4" fill="#8b5cf6"/>
+    <text class="label" x="760" y="0">Team Features</text>
+  </g>
+
+  <!-- Tool Rows -->
+  <!-- Continue.dev -->
+  <g id="continue" transform="translate(50, 140)">
+    <text class="tool-name" x="0" y="0">Continue.dev</text>
+    <text class="score" x="150" y="0">★★★★★</text>
+    <rect class="bar-fill" x="250" y="-8" width="140" height="14"/>
+    <rect class="bar-fill" x="250" y="8" width="130" height="14" fill="#10b981"/>
+    <rect class="bar-fill" x="250" y="24" width="160" height="14" fill="#f59e0b"/>
+    <rect class="bar-fill" x="250" y="40" width="80" height="14" fill="#8b5cf6"/>
+    <text class="label" x="400" y="5">Free, Open Source</text>
+  </g>
+
+  <!-- Cursor -->
+  <g id="cursor" transform="translate(50, 230)">
+    <text class="tool-name" x="0" y="0">Cursor</text>
+    <text class="score" x="150" y="0">★★★★☆</text>
+    <rect class="bar-fill" x="250" y="-8" width="110" height="14"/>
+    <rect class="bar-fill" x="250" y="8" width="100" height="14" fill="#10b981"/>
+    <rect class="bar-fill" x="250" y="24" width="80" height="14" fill="#f59e0b"/>
+    <rect class="bar-fill" x="250" y="40" width="50" height="14" fill="#8b5cf6"/>
+    <text class="label" x="400" y="5">$20/month, Best UX</text>
+  </g>
+
+  <!-- Sourcegraph Cody -->
+  <g id="cody" transform="translate(50, 320)">
+    <text class="tool-name" x="0" y="0">Cody</text>
+    <text class="score" x="150" y="0">★★★☆☆</text>
+    <rect class="bar-fill" x="250" y="-8" width="100" height="14"/>
+    <rect class="bar-fill" x="250" y="8" width="120" height="14" fill="#10b981"/>
+    <rect class="bar-fill" x="250" y="24" width="90" height="14" fill="#f59e0b"/>
+    <rect class="bar-fill" x="250" y="40" width="140" height="14" fill="#8b5cf6"/>
+    <text class="label" x="400" y="5">$9/user/month, Best Teams</text>
+  </g>
+
+  <!-- Tabnine -->
+  <g id="tabnine" transform="translate(50, 410)">
+    <text class="tool-name" x="0" y="0">Tabnine</text>
+    <text class="score" x="150" y="0">★★★★☆</text>
+    <rect class="bar-fill" x="250" y="-8" width="80" height="14"/>
+    <rect class="bar-fill" x="250" y="8" width="110" height="14" fill="#10b981"/>
+    <rect class="bar-fill" x="250" y="24" width="75" height="14" fill="#f59e0b"/>
+    <rect class="bar-fill" x="250" y="40" width="130" height="14" fill="#8b5cf6"/>
+    <text class="label" x="400" y="5">$12/month, Privacy First</text>
+  </g>
+
+  <!-- Windsurf -->
+  <g id="windsurf" transform="translate(50, 500)">
+    <text class="tool-name" x="0" y="0">Windsurf</text>
+    <text class="score" x="150" y="0">★★★☆☆</text>
+    <rect class="bar-fill" x="250" y="-8" width="95" height="14"/>
+    <rect class="bar-fill" x="250" y="8" width="100" height="14" fill="#10b981"/>
+    <rect class="bar-fill" x="250" y="24" width="85" height="14" fill="#f59e0b"/>
+    <rect class="bar-fill" x="250" y="40" width="70" height="14" fill="#8b5cf6"/>
+    <text class="label" x="400" y="5">Free/15€/month, Rising Star</text>
+  </g>
+
+  <!-- Attribution -->
+  <text class="credit" x="1150" y="590" text-anchor="end">© PromptQuorum | May 2026</text>
+
+  <!-- Metadata -->
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">CC-BY-SA-4.0</dc:rights>
+    <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">https://promptquorum.com/local-llms/best-ai-coding-assistant-local-llm</dc:source>
+  </metadata>
+</svg>

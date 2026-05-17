@@ -1,0 +1,117 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-size: 22px; font-weight: bold; fill: #1f2937; }
+      .label { font-size: 11px; fill: #6b7280; }
+      .tool { font-size: 13px; font-weight: 600; }
+      .native { fill: #10b981; }
+      .config { fill: #f59e0b; }
+      .limited { fill: #ef4444; }
+      .credit { font-size: 10px; fill: #9ca3af; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="600" fill="#ffffff"/>
+
+  <text x="500" y="35" class="title" text-anchor="middle">Local LLM Integration: Deep Dive</text>
+  <text x="500" y="55" class="label" text-anchor="middle" font-size="12">Native vs Configuration vs Enterprise-only Support</text>
+
+  <!-- Legend -->
+  <g transform="translate(50, 75)">
+    <rect class="native" x="0" y="0" width="15" height="15"/>
+    <text class="label" x="25" y="12">Native First-Class Support</text>
+
+    <rect class="config" x="280" y="0" width="15" height="15"/>
+    <text class="label" x="300" y="12">Configuration Required</text>
+
+    <rect class="limited" x="580" y="0" width="15" height="15"/>
+    <text class="label" x="600" y="12">Limited / Enterprise Only</text>
+  </g>
+
+  <!-- Continue.dev -->
+  <g transform="translate(50, 130)">
+    <rect class="native" x="0" y="0" width="300" height="60"/>
+    <text class="tool" x="150" y="20" text-anchor="middle" fill="white">Continue.dev</text>
+    <text class="label" x="150" y="38" text-anchor="middle" fill="white" font-size="11">Native Ollama, LM Studio, llama.cpp</text>
+    <text class="label" x="150" y="52" text-anchor="middle" fill="white" font-size="11">Setup: 5 minutes | All features work local</text>
+  </g>
+
+  <!-- Cursor -->
+  <g transform="translate(400, 130)">
+    <rect class="config" x="0" y="0" width="300" height="60"/>
+    <text class="tool" x="150" y="20" text-anchor="middle" fill="#92400e">Cursor</text>
+    <text class="label" x="150" y="38" text-anchor="middle" fill="#92400e" font-size="11">Custom OpenAI API Configuration</text>
+    <text class="label" x="150" y="52" text-anchor="middle" fill="#92400e" font-size="11">Setup: 15 min | Some features prefer cloud</text>
+  </g>
+
+  <!-- Windsurf -->
+  <g transform="translate(750, 130)">
+    <rect class="config" x="0" y="0" width="200" height="60"/>
+    <text class="tool" x="100" y="20" text-anchor="middle" fill="#92400e">Windsurf</text>
+    <text class="label" x="100" y="38" text-anchor="middle" fill="#92400e" font-size="11">Ollama (newer)</text>
+    <text class="label" x="100" y="52" text-anchor="middle" fill="#92400e" font-size="11">Setup: 10 min | Rough edges</text>
+  </g>
+
+  <!-- Sourcegraph Cody -->
+  <g transform="translate(50, 230)">
+    <rect class="config" x="0" y="0" width="450" height="60"/>
+    <text class="tool" x="225" y="20" text-anchor="middle" fill="#92400e">Sourcegraph Cody</text>
+    <text class="label" x="225" y="38" text-anchor="middle" fill="#92400e" font-size="11">Ollama Config Available | Cloud-First Design</text>
+    <text class="label" x="225" y="52" text-anchor="middle" fill="#92400e" font-size="11">Setup: 15 min | Inline completions default to cloud</text>
+  </g>
+
+  <!-- Tabnine -->
+  <g transform="translate(550, 230)">
+    <rect class="limited" x="0" y="0" width="400" height="60"/>
+    <text class="tool" x="200" y="20" text-anchor="middle" fill="white">Tabnine</text>
+    <text class="label" x="200" y="38" text-anchor="middle" fill="white" font-size="11">Self-Hosted: Enterprise-Only</text>
+    <text class="label" x="200" y="52" text-anchor="middle" fill="white" font-size="11">Setup: Days | Requires Infrastructure</text>
+  </g>
+
+  <!-- Comparison Section -->
+  <text x="50" y="350" class="title" font-size="18">Setup Difficulty & Feature Completeness</text>
+
+  <!-- Chart -->
+  <g transform="translate(50, 380)">
+    <!-- Y-axis -->
+    <line x1="60" y1="0" x2="60" y2="150" stroke="#d1d5db" stroke-width="2"/>
+    <!-- X-axis -->
+    <line x1="60" y1="150" x2="900" y2="150" stroke="#d1d5db" stroke-width="2"/>
+
+    <!-- Y labels -->
+    <text class="label" x="55" y="15" text-anchor="end">High</text>
+    <text class="label" x="55" y="95" text-anchor="end">Medium</text>
+    <text class="label" x="55" y="155" text-anchor="end">Low</text>
+
+    <!-- X labels -->
+    <text class="label" x="140" y="170" text-anchor="middle">Setup Difficulty →</text>
+
+    <!-- Dots -->
+    <circle cx="100" cy="30" r="6" class="native" stroke="white" stroke-width="2"/>
+    <text class="label" x="100" y="190" text-anchor="middle">Continue.dev</text>
+
+    <circle cx="250" cy="80" r="6" class="config" stroke="white" stroke-width="2"/>
+    <text class="label" x="250" y="190" text-anchor="middle">Cursor</text>
+
+    <circle cx="350" cy="85" r="6" class="config" stroke="white" stroke-width="2"/>
+    <text class="label" x="350" y="190" text-anchor="middle">Cody</text>
+
+    <circle cx="450" cy="70" r="6" class="config" stroke="white" stroke-width="2"/>
+    <text class="label" x="450" y="190" text-anchor="middle">Windsurf</text>
+
+    <circle cx="600" cy="140" r="6" class="limited" stroke="white" stroke-width="2"/>
+    <text class="label" x="600" y="190" text-anchor="middle">Tabnine</text>
+  </g>
+
+  <!-- Bottom conclusion -->
+  <rect x="50" y="520" width="900" height="60" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" rx="4"/>
+  <text x="70" y="545" class="tool" font-size="13" fill="#0c4a6e">Verdict:</text>
+  <text x="70" y="565" class="label" fill="#0c4a6e" font-size="12">Continue.dev is the clear winner for native local LLM support. Cursor requires config but works well. Cody is cloud-first. Tabnine requires enterprise deployment. Windsurf is newer but improving.</text>
+
+  <text class="credit" x="950" y="595" text-anchor="end">© PromptQuorum | May 2026</text>
+
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">CC-BY-SA-4.0</dc:rights>
+  </metadata>
+</svg>

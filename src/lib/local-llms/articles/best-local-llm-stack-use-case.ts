@@ -203,6 +203,7 @@ for filename, review in reviews:
         'relatedReading': {
           title: 'Related Reading',
           items: [
+            '[Best AI Coding Assistant for Local LLM](/local-llms/best-ai-coding-assistant-local-llm) — IDE choice for your coding stack (Cursor, Continue.dev, Cody).',
             '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek-Coder HumanEval rankings.',
             '[Local RAG Setup 2026](/local-llms/local-rag-2026) — Complete LlamaIndex + Qdrant + Ollama implementation guide.',
             '[Local LLM Agents with LangGraph](/local-llms/local-llm-agents-with-langgraph) — Agent workflow framework with step-by-step examples.',

@@ -425,6 +425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
+            '[Best AI Coding Assistant for Local LLM](/local-llms/best-ai-coding-assistant-local-llm) — Choose the right IDE tool (Cursor, Continue.dev, Cody) to use your coding model.',
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — improves debugging output quality on Kimi K2.6 and Qwen3',
             '[Constrained Prompting](/prompt-engineering/constrained-prompting) — JSON mode and structured output for code generation pipelines',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) — build extract → generate → test → fix coding chains',

@@ -1,0 +1,102 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-size: 22px; font-weight: bold; fill: #1f2937; }
+      .label { font-size: 12px; fill: #6b7280; }
+      .local-box { fill: #d1fae5; stroke: #10b981; stroke-width: 2; }
+      .cloud-box { fill: #dbeafe; stroke: #3b82f6; stroke-width: 2; }
+      .text-local { fill: #047857; font-weight: 600; font-size: 13px; }
+      .text-cloud { fill: #1e40af; font-weight: 600; font-size: 13px; }
+      .arrow { fill: none; stroke: #9ca3af; stroke-width: 2; marker-end: url(#arrowhead); }
+      .credit { font-size: 10px; fill: #9ca3af; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="600" fill="#ffffff"/>
+
+  <text x="500" y="35" class="title" text-anchor="middle">Data Privacy: Where Does Your Code Go?</text>
+  <text x="500" y="55" class="label" text-anchor="middle" font-size="13">Comparison of data flow for each AI coding assistant (May 2026)</text>
+
+  <!-- Continue.dev + Local LLM -->
+  <g id="continue-local">
+    <rect class="local-box" x="30" y="90" width="180" height="100" rx="8"/>
+    <text class="text-local" x="120" y="115" text-anchor="middle" font-weight="bold">Continue.dev</text>
+    <text class="text-local" x="120" y="135" text-anchor="middle" font-size="12">+ Ollama (Local)</text>
+    <text class="label" x="120" y="160" text-anchor="middle" font-size="11">✓ Code stays local</text>
+    <text class="label" x="120" y="175" text-anchor="middle" font-size="11">✓ Zero data sharing</text>
+  </g>
+
+  <!-- Cursor + Local -->
+  <g id="cursor-local">
+    <rect class="local-box" x="250" y="90" width="180" height="100" rx="8"/>
+    <text class="text-local" x="340" y="115" text-anchor="middle" font-weight="bold">Cursor</text>
+    <text class="text-local" x="340" y="135" text-anchor="middle" font-size="12">+ Local Config</text>
+    <text class="label" x="340" y="160" text-anchor="middle" font-size="11">✓ Code local</text>
+    <text class="label" x="340" y="175" text-anchor="middle" font-size="11">⚠ Some features prefer cloud</text>
+  </g>
+
+  <!-- Cody + Local -->
+  <g id="cody-local">
+    <rect class="local-box" x="470" y="90" width="180" height="100" rx="8"/>
+    <text class="text-local" x="560" y="115" text-anchor="middle" font-weight="bold">Cody</text>
+    <text class="text-local" x="560" y="135" text-anchor="middle" font-size="12">+ Ollama Config</text>
+    <text class="label" x="560" y="160" text-anchor="middle" font-size="11">✓ Code local</text>
+    <text class="label" x="560" y="175" text-anchor="middle" font-size="11">⚠ Cloud-first design</text>
+  </g>
+
+  <!-- Tabnine Enterprise -->
+  <g id="tabnine-self">
+    <rect class="local-box" x="690" y="90" width="180" height="100" rx="8"/>
+    <text class="text-local" x="780" y="115" text-anchor="middle" font-weight="bold">Tabnine</text>
+    <text class="text-local" x="780" y="135" text-anchor="middle" font-size="12">Self-Hosted</text>
+    <text class="label" x="780" y="160" text-anchor="middle" font-size="11">✓ 100% local</text>
+    <text class="label" x="780" y="175" text-anchor="middle" font-size="11">(Enterprise only)</text>
+  </g>
+
+  <!-- Cloud Options -->
+  <text x="500" y="240" class="title" text-anchor="middle" font-size="18">Cloud Mode: Data Sent to Servers</text>
+
+  <!-- Cursor Cloud -->
+  <g id="cursor-cloud">
+    <rect class="cloud-box" x="80" y="280" width="200" height="100" rx="8"/>
+    <text class="text-cloud" x="180" y="310" text-anchor="middle" font-weight="bold">Cursor (Cloud)</text>
+    <text class="label" x="180" y="335" text-anchor="middle" font-size="11">→ Cursor servers</text>
+    <text class="label" x="180" y="350" text-anchor="middle" font-size="11">Code context sent</text>
+    <text class="label" x="180" y="365" text-anchor="middle" font-size="11">Privacy Mode: reduced sharing</text>
+  </g>
+
+  <!-- Cody Cloud -->
+  <g id="cody-cloud">
+    <rect class="cloud-box" x="330" y="280" width="200" height="100" rx="8"/>
+    <text class="text-cloud" x="430" y="310" text-anchor="middle" font-weight="bold">Cody (Cloud)</text>
+    <text class="label" x="430" y="335" text-anchor="middle" font-size="11">→ Sourcegraph servers</text>
+    <text class="label" x="430" y="350" text-anchor="middle" font-size="11">Code context sent</text>
+    <text class="label" x="430" y="365" text-anchor="middle" font-size="11">Audit logs available</text>
+  </g>
+
+  <!-- GitHub Copilot -->
+  <g id="copilot">
+    <rect class="cloud-box" x="580" y="280" width="200" height="100" rx="8"/>
+    <text class="text-cloud" x="680" y="310" text-anchor="middle" font-weight="bold">GitHub Copilot</text>
+    <text class="label" x="680" y="335" text-anchor="middle" font-size="11">→ Microsoft/OpenAI</text>
+    <text class="label" x="680" y="350" text-anchor="middle" font-size="11">All code context sent</text>
+    <text class="label" x="680" y="365" text-anchor="middle" font-size="11">Enterprise option available</text>
+  </g>
+
+  <!-- Verdict -->
+  <rect x="30" y="450" width="940" height="110" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="8"/>
+  <text x="50" y="475" class="text-cloud" font-size="14">✓ For Sensitive Code (Healthcare, Finance, Defense):</text>
+  <text x="50" y="500" class="label" font-size="12">Use Continue.dev + Local Ollama or Tabnine Self-Hosted. Code never leaves your machine.</text>
+  <text x="50" y="530" class="text-cloud" font-size="14">⚠ Privacy Trade-off for Cloud Models:</text>
+  <text x="50" y="555" class="label" font-size="12">Cloud tools send code to third-party servers. Acceptable for open-source or public projects. Not suitable for proprietary work.</text>
+
+  <text class="credit" x="970" y="590" text-anchor="end">© PromptQuorum | May 2026</text>
+
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">CC-BY-SA-4.0</dc:rights>
+  </metadata>
+</svg>

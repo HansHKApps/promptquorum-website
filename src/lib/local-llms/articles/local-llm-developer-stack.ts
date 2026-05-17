@@ -208,6 +208,7 @@ schema: {
           id: 'related',
           title: 'Related Reading',
           items: [
+            '[Best AI Coding Assistant for Local LLM](/local-llms/best-ai-coding-assistant-local-llm) -- Choose your IDE: Cursor, Continue.dev, Cody, Tabnine with local LLM support.',
             '[OpenAI-Compatible API with Local LLMs](/local-llms/local-llm-openai-compatible-api)',
             '[Ollama installation and setup guide](/local-llms/how-to-install-ollama)',
             '[Local LLMs with VS Code & Cursor](/local-llms/local-llms-with-vscode-cursor)',
