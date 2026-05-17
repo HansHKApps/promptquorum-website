@@ -17,6 +17,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'AMD Ryzen AI Max Mini PC',
     toc: [
+      { label: 'Update', anchor: '#update-notice' },
+      { label: 'Our Picks', anchor: '#verdict-picks' },
       { label: 'TL;DR', anchor: '#tldr' },
       { label: 'Why AMD Ryzen AI Max+ Matters for Local LLM', anchor: '#why-amd' },
       { label: 'Comparison Table', anchor: '#comparison-table' },
@@ -33,6 +35,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
     ],
     sections: {
+      updateNotice: {
+        id: 'update-notice',
+        content: '🔄 May 2026 update: Initial publication. Prices verified across all 4 brands. GMKtec EVO-X2 added (just launched). Performance benchmarks are estimates based on Ryzen AI Max+ 395 reference data — real-world test data update scheduled for June 2026. Next update: June 2026.',
+      },
+      verdictBox: {
+        id: 'verdict-picks',
+        title: 'Our Picks — May 2026',
+        content: 'Four distinct winners for four buyer profiles.',
+        callouts: [
+          { type: '🥇 BEST OVERALL: Minisforum MS-A2', text: '$1,599 · 96GB · Best balance of RAM, build quality, and price. Runs Llama 4 70B comfortably. [View on Minisforum →](https://store.minisforum.com)' },
+          { type: '💰 BEST BUDGET: GMKtec EVO-X2', text: '$1,199 · 64GB · Entry point to AMD Ryzen AI Max territory. Handles 30–40B models. [View on GMKtec →](https://www.gmktec.com)' },
+          { type: '🏆 BEST FOR POWER USERS: Beelink GTR9 Pro', text: '$1,899 · 128GB · Maximum RAM in any mini PC. Handles 70B + huge context windows. [View on Beelink →](https://www.bee-link.com)' },
+          { type: '🔧 BEST BUILD QUALITY: AOOSTAR GEM12 Pro', text: '$1,799 · 96GB · Premium thermal design, OCuLink port for eGPU. For enthusiasts. [View on AOOSTAR →](https://aoostar.com)' },
+        ],
+      },
       tldr: {
         id: 'tldr',
         isTldr: true,
