@@ -77,8 +77,8 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
     )
 
     if (pathPrefixLangClusterMatch) {
-      const cluster = pathPrefixLangClusterMatch[1]
-      const rest = pathPrefixLangClusterMatch[2] ?? ''
+      const cluster = pathPrefixLangClusterMatch[2]
+      const rest = pathPrefixLangClusterMatch[3] ?? ''
 
       if (lang === 'en') {
         // Any origin → English: strip language prefix if present, drop ?lang=
