@@ -37,8 +37,11 @@ export interface LLMSection {
   bestFor?: string
   avoidIf?: string
   callout?: string
+  linuxCompatibility?: string
+  whereToBuy?: string
   subsections?: Array<{ title?: string; text?: string; content?: string; steps?: string[]; details?: { [key: string]: string }; providers?: string[]; list?: string[] }>
   links?: Array<{ url: string; title: string; description: string }>
+  [key: string]: unknown
 }
 
 export interface LLMArticle {
