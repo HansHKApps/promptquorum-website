@@ -72,7 +72,7 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
       url: canonicalUrl,
       'inLanguage': selectedLang,
       datePublished: '2026-04-01',
-      dateModified: '2026-05-03',
+      dateModified: '2026-05-17',
       description: 'As of May 2026: 88 guides on local LLMs covering Ollama, LM Studio, hardware requirements, model benchmarks, fine-tuning, local RAG, and enterprise deployment.',
       isPartOf: { '@type': 'WebSite', url: 'https://www.promptquorum.com' },
       speakable: {
