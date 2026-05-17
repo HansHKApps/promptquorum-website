@@ -260,6 +260,8 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
       copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       license: 'https://www.promptquorum.com/image-license',
       acquireLicensePage: 'https://www.promptquorum.com/image-license',
+      creditText: 'PromptQuorum',
+      copyrightNotice: '© 2026 PromptQuorum. All rights reserved.',
     }))
 
   if (sectionImageObjects.length > 0 && !(articleSchema as any).image) {

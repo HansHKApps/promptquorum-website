@@ -333,6 +333,56 @@ The `imageCaption` is used as the `alt` attribute. Ensure captions:
 
 ---
 
+## JSON-LD / ImageObject Schema Requirements
+
+All images embedded in articles are automatically wrapped in JSON-LD `ImageObject` schemas for Google Rich Results eligibility. These schemas are generated dynamically by the page rendering routes and include attribution and copyright metadata.
+
+### Required Fields
+
+Every ImageObject schema includes:
+
+| Field | Value | Purpose |
+|---|---|---|
+| `@type` | `"ImageObject"` | Schema type identifier |
+| `url` | Image absolute URL (HTTP) | Direct link to image file |
+| `name` | Image caption (max 120 chars) | Alt text and title for search engines |
+| `description` | Image caption (full) | Detailed description for accessibility |
+| `creator` | `{ "@type": "Person", "name": "Hans Kuepper" }` | Human creator attribution |
+| `copyrightHolder` | `{ "@type": "Organization", "name": "PromptQuorum", "url": "https://www.promptquorum.com" }` | Copyright owner |
+| `license` | `"https://www.promptquorum.com/image-license"` | License URL (public reuse terms) |
+| `acquireLicensePage` | `"https://www.promptquorum.com/image-license"` | Where to acquire a license |
+| `creditText` | `"PromptQuorum"` | Plain-text creator credit (AI-readable) |
+| `copyrightNotice` | `"© 2026 PromptQuorum. All rights reserved."` | Copyright statement (AI-readable) |
+
+### Where These Fields Come From
+
+**Dynamic injection:** The 3 page rendering routes automatically generate ImageObject schemas from article section images:
+- `src/app/local-llms/[slug]/page.tsx` — Local LLM articles
+- `src/app/prompt-engineering/[slug]/page.tsx` — Prompt Engineering articles
+- `src/lib/blog/page-helpers.tsx` — Blog posts
+
+The page reads `section.image` and `section.imageCaption` from the article data, then injects all required fields automatically. Writers do not manually define these fields — they are system-generated.
+
+### Year Update Reminder
+
+On **January 1 each year**, the copyright notice year must be updated from `"© 2026"` to `"© 2027"`, etc. This is a 1-line change in each of the 3 page rendering files above. Set a calendar reminder to update:
+
+```typescript
+copyrightNotice: '© 2027 PromptQuorum. All rights reserved.',  // Update on Jan 1
+```
+
+The year must be **explicit and hardcoded** — dynamic year generation (`new Date().getFullYear()`) is legally weak and not recommended for copyright notices.
+
+### Google Rich Results Impact
+
+These fields enable:
+- **Licensable badge eligibility:** Images qualify for the "Licensable" badge in Google Image Search results
+- **AI training attribution:** ChatGPT, Claude, Perplexity, and other AI systems can read machine-readable copyright and attribution information
+- **Image Rights in AI Overviews:** Images may be selected for AI Overviews with proper attribution
+- **Better image SEO:** Richer structured data improves image discoverability
+
+---
+
 ## Changelog
 
 | Version | Date | Changes |
