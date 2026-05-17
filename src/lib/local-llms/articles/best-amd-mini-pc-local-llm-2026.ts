@@ -81,12 +81,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparison-table': {
         id: 'comparison-table',
         title: 'AMD Mini PC Comparison Table (May 2026)',
-        content: 'All pricing verified directly from official brand stores. Current rates may vary.',
-        items: [
-          'Minisforum MS-A2 | Ryzen AI Max+ 395 | Radeon 8060S | 96GB DDR5X-8000 | 50 TOPS | $1,599 | Production-ready',
-          'Beelink GTR9 Pro | Ryzen AI Max+ 395 | Radeon 8060S | 128GB DDR5X-8000 | 50 TOPS | $1,899 | Production-ready',
-          'AOOSTAR GEM12 Pro | Ryzen AI Max+ 395 | Radeon 8060S | 96GB DDR5X-8000 | 50 TOPS | $1,799 | Production-ready',
-          'GMKtec EVO-X2 | Ryzen AI Max 385 | Radeon 8050S | 64GB DDR5X-7500 | 45 TOPS | $1,199 | Entry option',
+        note: 'Pricing verified from official brand stores May 2026. Current rates may differ.',
+        columns: ['Mini PC', 'CPU', 'iGPU', 'RAM', 'NPU', 'Price', 'Status'],
+        rows: [
+          { 'Mini PC': 'Minisforum MS-A2', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96GB DDR5X-8000', 'NPU': '50 TOPS', 'Price': '$1,599', 'Status': 'Production-ready' },
+          { 'Mini PC': 'Beelink GTR9 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '128GB DDR5X-8000', 'NPU': '50 TOPS', 'Price': '$1,899', 'Status': 'Production-ready' },
+          { 'Mini PC': 'AOOSTAR GEM12 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96GB DDR5X-8000', 'NPU': '50 TOPS', 'Price': '$1,799', 'Status': 'Production-ready' },
+          { 'Mini PC': 'GMKtec EVO-X2', 'CPU': 'Ryzen AI Max 385', 'iGPU': 'Radeon 8050S', 'RAM': '64GB DDR5X-7500', 'NPU': '45 TOPS', 'Price': '$1,199', 'Status': 'Entry option' },
         ],
       },
       'minisforum-ms-a2': {
@@ -388,6 +389,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Linux-Status: ROCm 6.2+ stabil. Ollama, vLLM, MLX alle funktionsfähig. Weniger Polish als CUDA, aber produktionsbereit.',
         ],
       },
+      'comparison-table': {
+        id: 'comparison-table',
+        title: 'AMD Mini-PC Vergleichstabelle (Mai 2026)',
+        note: 'Preise von offiziellen Brand-Shops Mai 2026 verifiziert. Aktuelle Preise können abweichen.',
+        columns: ['Mini PC', 'CPU', 'iGPU', 'RAM', 'NPU', 'Preis', 'Status'],
+        rows: [
+          { 'Mini PC': 'Minisforum MS-A2', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96GB DDR5X-8000', 'NPU': '50 TOPS', 'Preis': '€1.599', 'Status': 'Produktionsbereit' },
+          { 'Mini PC': 'Beelink GTR9 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '128GB DDR5X-8000', 'NPU': '50 TOPS', 'Preis': '€1.999', 'Status': 'Produktionsbereit' },
+          { 'Mini PC': 'AOOSTAR GEM12 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96GB DDR5X-8000', 'NPU': '50 TOPS', 'Preis': '€1.899', 'Status': 'Produktionsbereit' },
+          { 'Mini PC': 'GMKtec EVO-X2', 'CPU': 'Ryzen AI Max 385', 'iGPU': 'Radeon 8050S', 'RAM': '64GB DDR5X-7500', 'NPU': '45 TOPS', 'Preis': '€1.299', 'Status': 'Einstiegsoption' },
+        ],
+      },
     },
   },
   fr: {
@@ -417,6 +430,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Meilleur équilibre: Minisforum MS-A2 (€1.599, 96 Go RAM). Exécute Llama 4 70B Q4 confortablement. Meilleur rapport prix-performance.',
         ],
       },
+      'comparison-table': {
+        id: 'comparison-table',
+        title: 'Tableau de Comparaison AMD Mini PC (Mai 2026)',
+        note: 'Prix vérifiés auprès des magasins officiels Mai 2026. Les tarifs actuels peuvent différer.',
+        columns: ['Mini PC', 'CPU', 'iGPU', 'RAM', 'NPU', 'Prix', 'Statut'],
+        rows: [
+          { 'Mini PC': 'Minisforum MS-A2', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96 Go DDR5X-8000', 'NPU': '50 TOPS', 'Prix': '€1.599', 'Statut': 'Prêt pour production' },
+          { 'Mini PC': 'Beelink GTR9 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '128 Go DDR5X-8000', 'NPU': '50 TOPS', 'Prix': '€1.999', 'Statut': 'Prêt pour production' },
+          { 'Mini PC': 'AOOSTAR GEM12 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96 Go DDR5X-8000', 'NPU': '50 TOPS', 'Prix': '€1.899', 'Statut': 'Prêt pour production' },
+          { 'Mini PC': 'GMKtec EVO-X2', 'CPU': 'Ryzen AI Max 385', 'iGPU': 'Radeon 8050S', 'RAM': '64 Go DDR5X-7500', 'NPU': '45 TOPS', 'Prix': '€1.299', 'Statut': 'Option d\'entrée' },
+        ],
+      },
     },
   },
   ja: {
@@ -444,6 +469,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ベストバランス:Minisforum MS-A2(¥165,000、96GB RAM)。Llama 4 70B Q4を快適に実行。最高コスパ。',
         ],
       },
+      'comparison-table': {
+        id: 'comparison-table',
+        title: 'AMD ミニPC比較表(2026年5月)',
+        note: '2026年5月公式ブランドストアから価格確認済み。現在のレートと異なる場合があります。',
+        columns: ['ミニPC', 'CPU', 'iGPU', 'RAM', 'NPU', '価格', 'ステータス'],
+        rows: [
+          { 'ミニPC': 'Minisforum MS-A2', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96GB DDR5X-8000', 'NPU': '50 TOPS', '価格': '¥172,000', 'ステータス': '本番対応' },
+          { 'ミニPC': 'Beelink GTR9 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '128GB DDR5X-8000', 'NPU': '50 TOPS', '価格': '¥205,000', 'ステータス': '本番対応' },
+          { 'ミニPC': 'AOOSTAR GEM12 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96GB DDR5X-8000', 'NPU': '50 TOPS', '価格': '¥189,000', 'ステータス': '本番対応' },
+          { 'ミニPC': 'GMKtec EVO-X2', 'CPU': 'Ryzen AI Max 385', 'iGPU': 'Radeon 8050S', 'RAM': '64GB DDR5X-7500', 'NPU': '45 TOPS', '価格': '¥130,000', 'ステータス': 'エントリーオプション' },
+        ],
+      },
     },
   },
   zh: {
@@ -469,6 +506,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '综合最优:Minisforum MS-A2(¥10500、96GB内存)。Llama 4 70B Q4运行流畅。性价比最高。',
+        ],
+      },
+      'comparison-table': {
+        id: 'comparison-table',
+        title: 'AMD迷你PC对比表(2026年5月)',
+        note: '价格已从官方品牌店验证(2026年5月)。当前价格可能有所不同。',
+        columns: ['迷你PC', 'CPU', 'iGPU', '内存', 'NPU', '价格', '状态'],
+        rows: [
+          { '迷你PC': 'Minisforum MS-A2', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', '内存': '96GB DDR5X-8000', 'NPU': '50 TOPS', '价格': '¥10500', '状态': '生产就绪' },
+          { '迷你PC': 'Beelink GTR9 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', '内存': '128GB DDR5X-8000', 'NPU': '50 TOPS', '价格': '¥13700', '状态': '生产就绪' },
+          { '迷你PC': 'AOOSTAR GEM12 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', '内存': '96GB DDR5X-8000', 'NPU': '50 TOPS', '价格': '¥13000', '状态': '生产就绪' },
+          { '迷你PC': 'GMKtec EVO-X2', 'CPU': 'Ryzen AI Max 385', 'iGPU': 'Radeon 8050S', '内存': '64GB DDR5X-7500', 'NPU': '45 TOPS', '价格': '¥8600', '状态': '入门选项' },
         ],
       },
     },
