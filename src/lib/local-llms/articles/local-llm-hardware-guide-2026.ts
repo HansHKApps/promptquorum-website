@@ -712,7 +712,6 @@ schema: {
             '**Budget**: RTX 4070 Ti ist das beste Preis-Leistungs-Verhältnis (ca. 600-700 €, verarbeitet 7-14B Modelle). RTX 4090 für jedes Single-GPU-Modell (ca. 1.800-2.100 €).',
           ],
         },
-        vramMath: {
         bestGPUs: {
           id: 'best-gpus-to-buy',
           title: 'Beste GPUs zum Kaufen — 2026 Empfehlungen',
@@ -725,6 +724,7 @@ schema: {
             '**Mac M5 Max 128GB — 70B Modelle:** ~6000€. Bestes Preis-Leistung für Laptops.',
           ],
         },
+        vramMath: {
           title: 'Wie berechnen Sie VRAM-Anforderungen?',
           content: [
             '**VRAM-Anforderungen hängen von drei Faktoren ab: Modellgröße (Parameter), Quantisierung (Bits pro Gewicht) und Inferenzmodus.**',
@@ -1010,7 +1010,6 @@ schema: {
             '**Budget**: RTX 4070 Ti meilleur rapport qualité-prix (~650-750 €, gère 7-14B). RTX 4090 pour tout modèle mono-GPU (~2000-2400 €).',
           ],
         },
-        vramMath: {
         bestGPUs: {
           id: 'best-gpus-to-buy',
           title: 'Meilleures GPUs à Acheter — Recommandations 2026',
@@ -1023,6 +1022,7 @@ schema: {
             '**Mac M5 Max 128Go — Modèles 70B:** ~6000€. Meilleur rapport qualité-prix pour portables.',
           ],
         },
+        vramMath: {
           title: 'Comment calculer les exigences VRAM?',
           content: [
             '**Les exigences VRAM dépendent de trois facteurs: taille du modèle (paramètres), quantisation (bits par poids) et mode d\'inférence.**',
@@ -1305,7 +1305,6 @@ schema: {
             '**予算**: RTX 4070 Ti最高のバリュー (~¥150,000、7-14Bモデル処理)。RTX 4090シングルGPUモデル用 (~¥500,000)。',
           ],
         },
-        vramMath: {
         bestGPUs: {
           id: 'best-gpus-to-buy',
           title: '購入すべき最高のGPU — 2026年のおすすめ',
@@ -1318,6 +1317,7 @@ schema: {
             '**Mac M5 Max 128GB — 70B モデル:** ~6000€。ノートパソコン向け最高のコストパフォーマンス。',
           ],
         },
+        vramMath: {
           title: 'VRAM要件をどのように計算しますか?',
           content: [
             '**VRAM要件は3つの要因に依存します: モデルサイズ (パラメータ)、量子化 (ウェイトごとのビット数)、推論モード。**',
@@ -1597,7 +1597,6 @@ schema: {
             '截至2026年5月，GPU价格已稳定。在LLM速度方面，GPU VRAM比CPU/RAM关键10倍以上。',
           ],
         },
-        vramMath: {
         bestGPUs: {
           id: 'best-gpus-to-buy',
           title: '购买最佳GPU — 2026年推荐',
@@ -1610,6 +1609,7 @@ schema: {
             '**Mac M5 Max 128GB — 70B模型:** ~6000€。笔记本电脑最佳性价比。',
           ],
         },
+        vramMath: {
           title: '如何计算VRAM要求？',
           content: [
             '**VRAM要求取决于三个因素：模型大小（参数）、量化（每个权重的位数）和推理模式。**',
