@@ -1296,6 +1296,5 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faqSection: { id: 'faq', title: '常见问题', faqs: [{ q: '最好的本地支持？', a: 'Continue.dev。以本地为主要目标。简单，全功能本地工作。' }, { q: '真的免费？', a: '是的。Apache 2.0开源。无陷阱。' }, { q: 'Cursor + Ollama？', a: '是的。自定义OpenAI API端点。10-15分钟设置。' }, { q: '最好的本地LLM？', a: 'Qwen 2.5 Coder 14B。小系统7B。大系统33B。' }, { q: 'Copilot本地？', a: '否。仅云。用Continue.dev。' }, { q: '区别？', a: 'Cursor $20/月。Continue免费开源。' }, { q: 'Tabnine值得？', a: '严格合规时。多数情况Cody更好。' }, { q: '笔记本可用？', a: '可以。12GB+ RAM。M芯片很好。' }, { q: '需多少VRAM？', a: '最少8GB。舒适12GB。最优24GB。' }, { q: 'JetBrains？', a: '是的。官方插件。' }] },
       relatedGuides: { id: 'related-guides', title: '相关指南', content: '深化本地工作流。', items: ['[VS Code + Cursor](/local-llms/local-llms-with-vscode-cursor?lang=zh)', '[本地栈2026](/local-llms/local-llm-developer-stack?lang=zh)', '[最佳本地LLM](/local-llms/best-local-llms-for-coding?lang=zh)'] },
     },
-    },
   },
 }
