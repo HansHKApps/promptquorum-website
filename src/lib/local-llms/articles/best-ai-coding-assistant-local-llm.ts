@@ -1272,13 +1272,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     isTldr: true,
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
-    leadAnswerBlock: '**选择Continue.dev获得完全免费、开源、最佳的Ollama和LM Studio集成。选择Cursor（$20/月）获得最流畅的自动补全和混合云+本地工作流。选择Sourcegraph Cody（$9/用户/月）供需要代码库范围上下文的团队使用。选择Tabnine（$12/月）获得最高数据安全和隐私优先培训。选择Windsurf（免费/$15/月）获得具有Cascade工作流和原生Ollama支持的新兴替代方案。** 全部于2026年5月验证。每月更新。',
+    leadAnswerBlock: '**选择Continue.dev获得完全免费、开源、最佳的Ollama和LM Studio集成。选择Cursor（$20/月）获得最流畅的自动补全和混合云+本地工作流。选择Cody（$59/用户/月，企业版专属）供需要代码库范围上下文的团队使用。选择Tabnine自托管（$39/用户/月）获得最高数据安全和SOC 2认证。选择Windsurf（免费/$15/月）获得具有快速迭代和原生Ollama支持的新兴替代方案。** 全部于2026年5月验证。每月更新。',
     quickAnswerTop: {
-      title: '三步快速决策',
-      items: [
-        { icon: '🔒', label: '第一步：评估隐私需求', content: '代码是否涉及企业机密？是否需要满足GDPR、HIPAA、中国数据安全法？选择"是"→ Continue.dev或Tabnine自托管。' },
-        { icon: '💰', label: '第二步：确定预算', content: '免费工具：Continue.dev。个人$20/月：Cursor。团队/企业：Cody($59/用户/月)或Tabnine($39/用户/月)。' },
-        { icon: '⚙️', label: '第三步：匹配功能', content: '需要本地推理？所有工具都支持。需要团队代码库上下文？选择Cody。需要自托管数据中心？选择Tabnine。' },
+      question: '哪个AI编程助手最适合本地LLM？',
+      answer: 'Continue.dev是面向本地开发人员的明确赢家——它是以Ollama和LM Studio为主要目标而构建的。Cursor最适合混合工作流（云+偶尔本地）。Cody和Tabnine提供本地支持，但都是云优先。Windsurf是具有较新本地LLM集成的新兴替代方案。',
+      bullets: [
+        'Continue.dev：免费、开源、原生Ollama/LM Studio支持',
+        'Cursor：$20/月、精致的UX、通过自定义OpenAI端点进行本地LLM',
+        'Sourcegraph Cody：$59/用户/月（企业版专属）、代码库上下文、团队功能',
+        'Tabnine：$39/用户/月、最高数据安全、自托管选项',
+        'Windsurf：免费 + $15/月Pro、Cascade工作流、较新的本地支持',
       ],
     },
     updateNotice: {
