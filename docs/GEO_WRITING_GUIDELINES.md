@@ -10,10 +10,14 @@ These rules are mandatory for all content written for this site. GEO ensures tha
 
 ### Content writers & editors at PromptQuorum
 
-- **Prompt Engineering articles:** All writers must follow Rules 1–33 before publishing
-- **Hub pages (Local LLMs, Compare Models):** Follow Rules 1–26 + schema requirements (Rule 5)
+- **Prompt Engineering articles (`/prompt-engineering/[slug]`):** All writers must follow Rules 1–33 before publishing
+- **Local LLMs articles (`/local-llms/[slug]`):** Follow Rules 1–33 + Rule 4b (entity naming) + Regional Context rule (mandatory VRAM/hardware specificity)
+- **Power Local LLM articles (`/power-local-llm/[slug]`):** Follow Rules 1–33 + `quickAnswerTop` requirement (see Rule 43 below) + `mobileAngle` field mandatory for mobile/edge categories
+- **Hub pages (`/local-llms`, `/power-local-llm`, `/compare`):** Follow Rules 1–26 + schema requirements (Rule 5); hub-specific FAQ schema required
+- **Framework detail pages (`/frameworks/[slug]`):** Follow Rules 1, 3, 4, 5, 8a, 22, 22a, 31, 33; `bestFor`/`notFor` fields required; `faq[]` required (min 4 Q&As); `example.prompt` must include a filled-in real-world scenario
 - **Blog posts & announcements:** Follow Rules 1–14, 21, 26 (core SEO/GEO only; Rules 19–25 are optional)
 - **Glossary entries:** Follow Rules 1, 3, 4–4b, 8a, 11 (compact format; skip Rules 17, 19, 25)
+- **Author profile pages (`/author/[slug]`):** Person schema required; `sameAs[]` URLs for social/professional profiles; 2–3 sentence bio with verifiable credentials; no marketing language
 
 ### Who This Is NOT For
 
@@ -647,8 +651,34 @@ Links should be embedded in article body where relevant concepts are discussed, 
 | Hub Page | WebPage + BreadcrumbList + FAQPage + ItemList | Hub/category pages | /prompt-engineering |
 | How-to Article | HowTo (step-by-step) | Numbered steps or ordered process | how-to-build-rag |
 | FAQ Section | FAQPage (with mainEntity array) | Articles with Q&A sections | Most PE articles include |
+| Framework Page | WebPage + FAQPage + HowTo (if steps) | Prompt framework detail pages | /frameworks/co-star |
 | Glossary Entry | DefinedTerm + Definition | Glossary pages only | term-definition pages |
 | Learning Path | LearningResource + hasPart | Multi-article learning sequences | (future) |
+
+#### Framework Detail Pages (`/frameworks/[slug]`)
+
+Framework pages use a fixed data shape in `src/lib/frameworksData.ts`. GEO requirements:
+
+- **`bestFor[]`**: 3–5 items, each a specific use-case sentence (not vague descriptors like "works for writing")
+  - ✅ "Chain-of-thought reasoning for multi-step logical problems"
+  - ❌ "Good for writing"
+- **`notFor[]`**: 2–4 items stating concrete failure modes, not just "limitations"
+  - ✅ "Not suitable for zero-shot tasks with no structure"
+  - ❌ "Doesn't work well in some cases"
+- **`faq[]`**: Minimum 4 Q&As. Each should cover: (1) what it is, (2) when to use it, (3) comparison to an adjacent framework, (4) a common mistake
+- **`example.prompt`**: Must include a real filled-in scenario the reader can copy-paste, not a template placeholder
+  - ✅ "**Context**: Analyzing a customer support ticket about billing. **Task**: Categorize the issue and suggest a response."
+  - ❌ "[DESCRIBE_YOUR_TASK_HERE]"
+- **`complexity`**: Must be one of `beginner | intermediate | advanced` — set based on the Step 0 audience matrix
+- **Schema**: Inject `FAQPage` from `faq[]` and `HowTo` if the example has multiple steps
+
+**Compliance checklist for framework pages:**
+- `[ ]` `bestFor[]` has 3–5 specific use cases, each ≤ 15 words
+- `[ ]` `notFor[]` has 2–4 concrete failure scenarios
+- `[ ]` `faq[]` has minimum 4 questions, each addressing one of the four themes above
+- `[ ]` `example.prompt` includes a real filled-in scenario, not a placeholder
+- `[ ]` `complexity` is set to beginner/intermediate/advanced
+- `[ ]` FAQPage schema injected from `faq[]`
 
 **Mandatory fields for Article schema:**
 - `headline` (H1 title)
@@ -2690,6 +2720,59 @@ const sectionId = section.isTldr
 - [ ] After adding `id:` fields, `npm run build` passes with 0 TypeScript errors
 
 ---
+
+### Rule 43: `quickAnswerTop` Block — Mandatory for Power Local LLM Articles
+
+The `quickAnswerTop` field renders a per-language structured Q&A box at the very top of the article, above all body content. It is mandatory for all `power-local-llm` articles and recommended for `local-llms` articles with a strong how-to or decision intent.
+
+#### Required Structure (All 5 Languages)
+
+```ts
+quickAnswerTop: {
+  en: {
+    question: 'Can you replace GitHub Copilot with a local LLM?',
+    // ≤ 12 words, exact user search query — not a heading rephrasing
+    answer: 'Yes — Continue.dev + Ollama + Qwen3-Coder reaches 90–95% of Copilot quality for TypeScript and Python, with full privacy and no per-token cost.',
+    // 25–60 words, direct answer, no preamble, standalone-readable for AI citation
+    bullets: [
+      'RTX 3060 12 GB or M3 Pro minimum',
+      'Continue.dev is the VS Code / JetBrains extension',
+      'Qwen3-Coder outperforms Codestral on HumanEval benchmarks',
+    ],
+    // 3–5 concrete facts, each ≤ 15 words; all contain specific numbers or named tools
+    updatedDate: '2026-05',
+    // YYYY-MM format, update whenever the article's core recommendation changes
+  },
+  de: { ... },
+  fr: { ... },
+  ja: { ... },
+  zh: { ... },
+}
+```
+
+#### Field Rules
+
+**`question`**: Must be the exact phrase a user would type into Google or Perplexity. Not a heading rephrasing. Examples:
+- ✅ "Can you replace GitHub Copilot with a local LLM?"
+- ❌ "GitHub Copilot Replacement with Local LLMs"
+
+**`answer`**: Must be standalone-readable — AI systems extract this field verbatim for citations. No preamble ("In this guide..."), no forward references ("See below"). Direct, complete answer only.
+
+**`bullets`**: Must be concrete numbers, model names, or hardware specs. No vague statements ("works well", "very fast", "highly recommended").
+- ✅ "RTX 3060 12 GB or M3 Pro minimum"
+- ❌ "Powerful GPU needed"
+
+**All 5 language blocks required before publishing**. Translation is mandatory per the multi-language process (use `/geo-translation` skill or manual translation).
+
+**`updatedDate`**: YYYY-MM format. Update whenever the core recommendation changes (model versions shift, pricing changes, performance benchmarks are invalidated).
+
+#### Compliance Checklist
+
+- `[ ]` `question` ≤ 12 words and matches actual search query
+- `[ ]` `answer` 25–60 words, direct, no preamble
+- `[ ]` `bullets` 3–5 items, all contain specific numbers or named tools
+- `[ ]` All 5 language blocks present
+- `[ ]` `updatedDate` set to current month (YYYY-MM)
 
 ---
 
