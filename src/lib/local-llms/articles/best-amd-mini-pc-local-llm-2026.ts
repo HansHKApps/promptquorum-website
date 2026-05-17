@@ -89,6 +89,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Mini PC': 'AOOSTAR GEM12 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96GB DDR5X-8000', 'NPU': '50 TOPS', 'Price': '$1,799', 'Status': 'Production-ready' },
           { 'Mini PC': 'GMKtec EVO-X2', 'CPU': 'Ryzen AI Max 385', 'iGPU': 'Radeon 8050S', 'RAM': '64GB DDR5X-7500', 'NPU': '45 TOPS', 'Price': '$1,199', 'Status': 'Entry option' },
         ],
+        image: '/public/images/best-amd-mini-pc-comparison-en.svg',
+        imageCaption: 'Price, RAM, NPU power, and performance across all four mini PC models. Minisforum offers the best balance, Beelink maximum memory, GMKtec the entry point.',
       },
       'minisforum-ms-a2': {
         id: 'minisforum-ms-a2',
