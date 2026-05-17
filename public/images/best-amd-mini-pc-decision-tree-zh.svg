@@ -1,0 +1,110 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Metadata -->
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">Copyright 2026 PromptQuorum</dc:rights>
+  </metadata>
+
+  <!-- Title -->
+  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">AMD迷你PC购买决策树</text>
+
+  <!-- Root node -->
+  <rect x="400" y="60" width="200" height="50" fill="#4CAF50" rx="4"/>
+  <text x="500" y="92" font-size="13" font-weight="bold" text-anchor="middle" fill="#fff">预算≤¥8600?</text>
+
+  <!-- Left path - YES -->
+  <line x1="450" y1="110" x2="300" y2="150" stroke="#666" stroke-width="2"/>
+  <text x="360" y="140" font-size="11" font-weight="bold" fill="#333">是</text>
+
+  <!-- GMKtec node -->
+  <rect x="200" y="150" width="200" height="50" fill="#FF9800" rx="4"/>
+  <text x="300" y="182" font-size="13" font-weight="bold" text-anchor="middle" fill="#fff">GMKtec EVO-X2</text>
+
+  <!-- GMKtec details -->
+  <rect x="150" y="220" width="300" height="80" fill="#fff8e1" stroke="#FF9800" stroke-width="1" rx="3"/>
+  <text x="165" y="240" font-size="11" font-weight="bold" fill="#333">最佳预算选项</text>
+  <text x="165" y="260" font-size="10" fill="#666">¥8600 · 64GB内存</text>
+  <text x="165" y="280" font-size="10" fill="#666">30–40B模型舒适运行</text>
+  <text x="165" y="295" font-size="10" fill="#666">Ryzen AI Max入门</text>
+
+  <!-- Right path - NO -->
+  <line x1="550" y1="110" x2="700" y2="150" stroke="#666" stroke-width="2"/>
+  <text x="635" y="140" font-size="11" font-weight="bold" fill="#333">否</text>
+
+  <!-- Second question -->
+  <rect x="600" y="150" width="200" height="50" fill="#2196F3" rx="4"/>
+  <text x="700" y="182" font-size="13" font-weight="bold" text-anchor="middle" fill="#fff">需要128GB内存?</text>
+
+  <!-- Left sub-path -->
+  <line x1="650" y1="200" x2="480" y2="240" stroke="#666" stroke-width="2"/>
+  <text x="550" y="225" font-size="11" font-weight="bold" fill="#333">否</text>
+
+  <!-- Minisforum node -->
+  <rect x="380" y="240" width="200" height="50" fill="#9C27B0" rx="4"/>
+  <text x="480" y="272" font-size="13" font-weight="bold" text-anchor="middle" fill="#fff">Minisforum MS-A2</text>
+
+  <!-- Minisforum details -->
+  <rect x="330" y="310" width="300" height="80" fill="#f3e5f5" stroke="#9C27B0" stroke-width="1" rx="3"/>
+  <text x="345" y="330" font-size="11" font-weight="bold" fill="#333">最佳综合平衡</text>
+  <text x="345" y="350" font-size="10" fill="#666">¥10500 · 96GB内存</text>
+  <text x="345" y="370" font-size="10" fill="#666">均衡型性能</text>
+  <text x="345" y="385" font-size="10" fill="#666">德国仓库发货</text>
+
+  <!-- Right sub-path -->
+  <line x1="750" y1="200" x2="780" y2="240" stroke="#666" stroke-width="2"/>
+  <text x="780" y="225" font-size="11" font-weight="bold" fill="#333">是</text>
+
+  <!-- Beelink node -->
+  <rect x="680" y="240" width="200" height="50" fill="#673AB7" rx="4"/>
+  <text x="780" y="272" font-size="13" font-weight="bold" text-anchor="middle" fill="#fff">Beelink GTR9 Pro</text>
+
+  <!-- Beelink details -->
+  <rect x="630" y="310" width="300" height="80" fill="#ede7f6" stroke="#673AB7" stroke-width="1" rx="3"/>
+  <text x="645" y="330" font-size="11" font-weight="bold" fill="#333">最大内存高端用户</text>
+  <text x="645" y="350" font-size="10" fill="#666">¥13700 · 128GB内存</text>
+  <text x="645" y="370" font-size="10" fill="#666">70B Q5 + 大上下文</text>
+  <text x="645" y="385" font-size="10" fill="#666">最佳并行模型</text>
+
+  <!-- Alternative -->
+  <line x1="700" y1="200" x2="500" y2="240" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="580" y="225" font-size="10" fill="#999">或</text>
+
+  <!-- AOOSTAR node -->
+  <rect x="400" y="240" width="200" height="50" fill="#FF6F00" rx="4"/>
+  <text x="500" y="272" font-size="13" font-weight="bold" text-anchor="middle" fill="#fff">AOOSTAR GEM12 Pro</text>
+
+  <!-- AOOSTAR details -->
+  <rect x="350" y="310" width="300" height="80" fill="#ffe0b2" stroke="#FF6F00" stroke-width="1" rx="3"/>
+  <text x="365" y="330" font-size="11" font-weight="bold" fill="#333">高级构建品质</text>
+  <text x="365" y="350" font-size="10" fill="#666">¥13000 · 96GB内存</text>
+  <text x="365" y="370" font-size="10" fill="#666">热优化设计</text>
+  <text x="365" y="385" font-size="10" fill="#666">eGPU扩展接口</text>
+
+  <!-- Summary box -->
+  <rect x="50" y="420" width="900" height="260" fill="#f5f5f5" stroke="#ddd" stroke-width="1" rx="4"/>
+  <text x="70" y="445" font-size="13" font-weight="bold" fill="#333">总结: 全部四款共享的优势</text>
+
+  <text x="70" y="475" font-size="11" font-weight="bold" fill="#333">CPU:</text>
+  <text x="180" y="475" font-size="11" fill="#666">Ryzen AI Max+ 395(Minisforum/Beelink/AOOSTAR)或Max 385(GMKtec)</text>
+
+  <text x="70" y="500" font-size="11" font-weight="bold" fill="#333">GPU:</text>
+  <text x="180" y="500" font-size="11" fill="#666">Radeon 8060S iGPU RTX 4070级性能</text>
+
+  <text x="70" y="525" font-size="11" font-weight="bold" fill="#333">NPU:</text>
+  <text x="180" y="525" font-size="11" fill="#666">50 TOPS(GMKtec Max 385为45 TOPS)</text>
+
+  <text x="70" y="550" font-size="11" font-weight="bold" fill="#333">内存:</text>
+  <text x="180" y="550" font-size="11" fill="#666">统一DDR5X: 64GB(GMKtec) → 128GB(Beelink)</text>
+
+  <text x="70" y="575" font-size="11" font-weight="bold" fill="#333">OS:</text>
+  <text x="180" y="575" font-size="11" fill="#666">Linux(内核6.11+)ROCm 6.2+ · Ollama/vLLM可用</text>
+
+  <text x="70" y="600" font-size="11" font-weight="bold" fill="#333">功耗:</text>
+  <text x="180" y="600" font-size="11" fill="#666">65–120W TDP · 静音或被动冷却</text>
+
+  <text x="70" y="625" font-size="11" font-weight="bold" fill="#333">保修:</text>
+  <text x="180" y="625" font-size="11" fill="#666">2–3年国际保修;EU配送2周</text>
+
+  <!-- Footer -->
+  <text x="970" y="695" font-size="10" fill="#999" text-anchor="end">PromptQuorum • 2026年5月</text>
+</svg>

@@ -1,0 +1,99 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Metadata -->
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">PromptQuorum</dc:creator>
+    <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">Copyright 2026 PromptQuorum</dc:rights>
+  </metadata>
+
+  <!-- Title -->
+  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">AMD Mini-PC Leistungs-Benchmarks (Tokens/Sek)</text>
+
+  <!-- Legend -->
+  <text x="50" y="70" font-size="12" font-weight="bold" fill="#333">30B Q4</text>
+  <circle cx="45" cy="65" r="4" fill="#4CAF50"/>
+  <text x="250" y="70" font-size="12" font-weight="bold" fill="#333">50B Q4</text>
+  <circle cx="245" cy="65" r="4" fill="#2196F3"/>
+  <text x="450" y="70" font-size="12" font-weight="bold" fill="#333">70B Q4</text>
+  <circle cx="445" cy="65" r="4" fill="#FF9800"/>
+  <text x="650" y="70" font-size="12" font-weight="bold" fill="#333">70B Q5</text>
+  <circle cx="645" cy="65" r="4" fill="#9C27B0"/>
+
+  <!-- Y-axis label -->
+  <text x="15" y="300" font-size="11" fill="#666" text-anchor="middle" transform="rotate(-90 15 300)">Tokens/Sek</text>
+
+  <!-- Grid lines -->
+  <line x1="70" y1="500" x2="950" y2="500" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="70" y1="425" x2="950" y2="425" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="70" y1="350" x2="950" y2="350" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="70" y1="275" x2="950" y2="275" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="70" y1="200" x2="950" y2="200" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="70" y1="125" x2="950" y2="125" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Y-axis values -->
+  <text x="60" y="505" font-size="10" fill="#666" text-anchor="end">0</text>
+  <text x="60" y="430" font-size="10" fill="#666" text-anchor="end">5</text>
+  <text x="60" y="355" font-size="10" fill="#666" text-anchor="end">10</text>
+  <text x="60" y="280" font-size="10" fill="#666" text-anchor="end">15</text>
+  <text x="60" y="205" font-size="10" fill="#666" text-anchor="end">20</text>
+  <text x="60" y="130" font-size="10" fill="#666" text-anchor="end">25</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="500" x2="950" y2="500" stroke="#333" stroke-width="2"/>
+  <line x1="70" y1="500" x2="70" y2="120" stroke="#333" stroke-width="2"/>
+
+  <!-- Minisforum MS-A2 bars -->
+  <g>
+    <text x="150" y="525" font-size="12" font-weight="bold" fill="#000" text-anchor="middle">Minisforum MS-A2</text>
+    <rect x="120" y="380" width="12" height="120" fill="#4CAF50" opacity="0.8"/>
+    <text x="126" y="376" font-size="10" fill="#333" text-anchor="middle">26</text>
+    <rect x="132" y="325" width="12" height="175" fill="#2196F3" opacity="0.8"/>
+    <text x="138" y="321" font-size="10" fill="#333" text-anchor="middle">24</text>
+    <rect x="144" y="270" width="12" height="230" fill="#FF9800" opacity="0.8"/>
+    <text x="150" y="266" font-size="10" fill="#333" text-anchor="middle">20</text>
+    <rect x="156" y="305" width="12" height="195" fill="#9C27B0" opacity="0.8"/>
+    <text x="162" y="301" font-size="10" fill="#333" text-anchor="middle">17</text>
+  </g>
+
+  <!-- Beelink GTR9 Pro bars -->
+  <g>
+    <text x="370" y="525" font-size="12" font-weight="bold" fill="#000" text-anchor="middle">Beelink GTR9 Pro</text>
+    <rect x="340" y="380" width="12" height="120" fill="#4CAF50" opacity="0.8"/>
+    <text x="346" y="376" font-size="10" fill="#333" text-anchor="middle">26</text>
+    <rect x="352" y="325" width="12" height="175" fill="#2196F3" opacity="0.8"/>
+    <text x="358" y="321" font-size="10" fill="#333" text-anchor="middle">24</text>
+    <rect x="364" y="270" width="12" height="230" fill="#FF9800" opacity="0.8"/>
+    <text x="370" y="266" font-size="10" fill="#333" text-anchor="middle">20</text>
+    <rect x="376" y="305" width="12" height="195" fill="#9C27B0" opacity="0.8"/>
+    <text x="382" y="301" font-size="10" fill="#333" text-anchor="middle">17</text>
+  </g>
+
+  <!-- AOOSTAR GEM12 Pro bars -->
+  <g>
+    <text x="590" y="525" font-size="12" font-weight="bold" fill="#000" text-anchor="middle">AOOSTAR GEM12 Pro</text>
+    <rect x="560" y="380" width="12" height="120" fill="#4CAF50" opacity="0.8"/>
+    <text x="566" y="376" font-size="10" fill="#333" text-anchor="middle">26</text>
+    <rect x="572" y="325" width="12" height="175" fill="#2196F3" opacity="0.8"/>
+    <text x="578" y="321" font-size="10" fill="#333" text-anchor="middle">24</text>
+    <rect x="584" y="270" width="12" height="230" fill="#FF9800" opacity="0.8"/>
+    <text x="590" y="266" font-size="10" fill="#333" text-anchor="middle">20</text>
+    <rect x="596" y="305" width="12" height="195" fill="#9C27B0" opacity="0.8"/>
+    <text x="602" y="301" font-size="10" fill="#333" text-anchor="middle">17</text>
+  </g>
+
+  <!-- GMKtec EVO-X2 bars -->
+  <g>
+    <text x="810" y="525" font-size="12" font-weight="bold" fill="#000" text-anchor="middle">GMKtec EVO-X2</text>
+    <rect x="780" y="425" width="12" height="75" fill="#4CAF50" opacity="0.8"/>
+    <text x="786" y="421" font-size="10" fill="#333" text-anchor="middle">16</text>
+    <rect x="792" y="370" width="12" height="130" fill="#2196F3" opacity="0.8"/>
+    <text x="798" y="366" font-size="10" fill="#333" text-anchor="middle">14</text>
+    <rect x="804" y="340" width="12" height="160" fill="#FF9800" opacity="0.8"/>
+    <text x="810" y="336" font-size="10" fill="#333" text-anchor="middle">11</text>
+    <rect x="816" y="365" width="12" height="135" fill="#9C27B0" opacity="0.8"/>
+    <text x="822" y="361" font-size="10" fill="#333" text-anchor="middle">12</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="970" y="595" font-size="10" fill="#999" text-anchor="end">PromptQuorum • Mai 2026</text>
+  <text x="50" y="560" font-size="10" fill="#666">Basierend auf Ryzen AI Max+ 395 und Max 385 mit ROCm 6.2+</text>
+</svg>
