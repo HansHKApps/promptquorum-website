@@ -124,14 +124,14 @@ export default async function DeLocalLLMsArticlePage({ params }: PageProps) {
     )
   }
 
-  const article = llmContent[key]['ja'] ?? llmContent[key]['en']
+  const article = llmContent[key]['de'] ?? llmContent[key]['en']
   if (!article) notFound()
 
   return (
     <>
       <LocalLLMsPostClient
         slug={slug}
-        initialLang="ja"
+        initialLang="de"
       />
     </>
   )

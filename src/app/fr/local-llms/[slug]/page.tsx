@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
   })
 
-  const canonicalUrl = `https://www.promptquorum.com/de/local-llms/${slug}`
+  const canonicalUrl = `https://www.promptquorum.com/fr/local-llms/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${lang}`
   const hasTranslation = Boolean(article) && Object.keys(article.sections ?? {}).length > 0
 
@@ -124,7 +124,7 @@ export default async function FrLocalLLMsArticlePage({ params }: PageProps) {
     )
   }
 
-  const article = llmContent[key]['ja'] ?? llmContent[key]['en']
+  const article = llmContent[key]['fr'] ?? llmContent[key]['en']
   if (!article) notFound()
 
   return (
