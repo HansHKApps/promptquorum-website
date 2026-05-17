@@ -150,6 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'relatedReading': {
           title: 'Related Reading',
           items: [
+            '[AMD Ryzen AI Max+ Mini PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026) — Alternative to discrete GPUs: iGPU + 50 TOPS NPU at $1,200–2,500.',
             '[How Much VRAM for Local LLMs](/local-llms/how-much-vram-local-llm)',
             '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Used GPUs for Local LLMs](/local-llms/used-gpus-for-local-llms)',

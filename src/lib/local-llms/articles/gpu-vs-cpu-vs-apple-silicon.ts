@@ -219,6 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
+            '[AMD Ryzen AI Max+ Mini PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026) — Fourth hardware category: iGPU + NPU in compact form factor.',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations for every budget tier.',
             '[Best GPUs For Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection guide with VRAM benchmarks.',
             '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Power draw and cooling requirements by hardware.',

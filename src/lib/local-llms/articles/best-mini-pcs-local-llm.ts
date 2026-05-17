@@ -198,6 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
+            '[AMD Ryzen AI Max+ Mini PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026) — unified memory 64–128GB, 50 TOPS NPU, Linux ROCm support for $1,200–2,500',
             '[Best Laptops for Running Local LLMs](/local-llms/best-laptops-local-llm) — GPU requirements, thermal throttling, and battery limits for portable inference',
             '[Local LLM PC Build Under $1,000](/local-llms/local-llm-pc-build-1000) — full tower ATX builds with maximum VRAM and multi-GPU support',
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs used Quadro cards compared by VRAM and price',

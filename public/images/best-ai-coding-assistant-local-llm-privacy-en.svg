@@ -1,0 +1,124 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-size: 22px; font-weight: 700; fill: #1C1B1F; }
+      .tool-label { font-size: 13px; font-weight: 700; fill: #1C1B1F; }
+      .data-label { font-size: 12px; font-weight: 600; fill: #FFFFFF; }
+      .desc { font-size: 11px; font-weight: 400; fill: #49454F; }
+      .good { fill: #34A853; }
+      .partial { fill: #F4B400; }
+      .risky { fill: #EA4335; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="400" y="30" class="title" text-anchor="middle">Data Flow: Where Does Your Code Go?</text>
+
+  <!-- Continue.dev - LOCAL -->
+  <g>
+    <text x="80" y="65" class="tool-label" text-anchor="middle">Continue.dev</text>
+    <text x="80" y="85" class="desc" text-anchor="middle">(Local Mode)</text>
+    <rect x="30" y="100" width="100" height="80" rx="6" class="good" fill-opacity="0.1" stroke="#34A853" stroke-width="2"/>
+    <rect x="40" y="110" width="80" height="25" rx="4" class="good"/>
+    <text x="80" y="128" class="data-label" text-anchor="middle">YOUR CODE</text>
+    <text x="80" y="155" class="desc" text-anchor="middle">Stays 100%</text>
+    <text x="80" y="170" class="desc" text-anchor="middle">Local</text>
+  </g>
+
+  <!-- Cursor - HYBRID -->
+  <g>
+    <text x="200" y="65" class="tool-label" text-anchor="middle">Cursor</text>
+    <text x="200" y="85" class="desc" text-anchor="middle">(Hybrid)</text>
+    <rect x="150" y="100" width="100" height="80" rx="6" class="partial" fill-opacity="0.1" stroke="#F4B400" stroke-width="2"/>
+    <rect x="160" y="110" width="40" height="25" rx="4" class="partial"/>
+    <text x="180" y="128" class="data-label" text-anchor="middle" font-size="10">YOUR CODE</text>
+    <path d="M 200 140 L 220 140" stroke="#F4B400" stroke-width="2" marker-end="url(#arrowOrange)"/>
+    <rect x="225" y="125" width="20" height="30" rx="2" class="partial" opacity="0.6"/>
+    <text x="235" y="155" class="desc" text-anchor="middle" font-size="9">Queries</text>
+    <text x="235" y="168" class="desc" text-anchor="middle" font-size="9">→ Cursor</text>
+  </g>
+
+  <!-- Sourcegraph Cody - CLOUD -->
+  <g>
+    <text x="320" y="65" class="tool-label" text-anchor="middle">Cody</text>
+    <text x="320" y="85" class="desc" text-anchor="middle">(Cloud)</text>
+    <rect x="270" y="100" width="100" height="80" rx="6" class="risky" fill-opacity="0.1" stroke="#EA4335" stroke-width="2"/>
+    <rect x="280" y="110" width="80" height="25" rx="4" class="risky"/>
+    <text x="320" y="128" class="data-label" text-anchor="middle" font-size="11">CODE</text>
+    <path d="M 320 140 L 320 160" stroke="#EA4335" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <rect x="300" y="165" width="40" height="20" rx="2" class="risky" opacity="0.6"/>
+    <text x="320" y="177" class="desc" text-anchor="middle" font-size="9">→ Sourcegraph</text>
+  </g>
+
+  <!-- Tabnine - ENTERPRISE -->
+  <g>
+    <text x="440" y="65" class="tool-label" text-anchor="middle">Tabnine</text>
+    <text x="440" y="85" class="desc" text-anchor="middle">(Self-Hosted)</text>
+    <rect x="390" y="100" width="100" height="80" rx="6" class="good" fill-opacity="0.1" stroke="#34A853" stroke-width="2"/>
+    <rect x="400" y="110" width="80" height="25" rx="4" class="good"/>
+    <text x="440" y="128" class="data-label" text-anchor="middle">YOUR CODE</text>
+    <text x="440" y="155" class="desc" text-anchor="middle">On Your</text>
+    <text x="440" y="170" class="desc" text-anchor="middle">Infrastructure</text>
+  </g>
+
+  <!-- GitHub Copilot - CLOUD -->
+  <g>
+    <text x="560" y="65" class="tool-label" text-anchor="middle">GitHub Copilot</text>
+    <text x="560" y="85" class="desc" text-anchor="middle">(Cloud)</text>
+    <rect x="510" y="100" width="100" height="80" rx="6" class="risky" fill-opacity="0.1" stroke="#EA4335" stroke-width="2"/>
+    <rect x="520" y="110" width="80" height="25" rx="4" class="risky"/>
+    <text x="560" y="128" class="data-label" text-anchor="middle" font-size="11">CODE</text>
+    <path d="M 560 140 L 560 160" stroke="#EA4335" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <rect x="540" y="165" width="40" height="20" rx="2" class="risky" opacity="0.6"/>
+    <text x="560" y="177" class="desc" text-anchor="middle" font-size="9">→ Microsoft</text>
+  </g>
+
+  <!-- Windsurf - HYBRID -->
+  <g>
+    <text x="680" y="65" class="tool-label" text-anchor="middle">Windsurf</text>
+    <text x="680" y="85" class="desc" text-anchor="middle">(Hybrid)</text>
+    <rect x="630" y="100" width="100" height="80" rx="6" class="partial" fill-opacity="0.1" stroke="#F4B400" stroke-width="2"/>
+    <rect x="640" y="110" width="40" height="25" rx="4" class="partial"/>
+    <text x="660" y="128" class="data-label" text-anchor="middle" font-size="10">YOURS</text>
+    <path d="M 680 140 L 700 140" stroke="#F4B400" stroke-width="2" marker-end="url(#arrowOrange)"/>
+    <rect x="705" y="125" width="15" height="30" rx="2" class="partial" opacity="0.6"/>
+    <text x="712" y="165" class="desc" text-anchor="middle" font-size="8">Opt-in</text>
+  </g>
+
+  <!-- Legend -->
+  <line x1="30" y1="220" x2="770" y2="220" stroke="#E8DEF8" stroke-width="1"/>
+
+  <text x="40" y="250" class="tool-label">Privacy Comparison:</text>
+
+  <circle cx="50" cy="280" r="8" class="good"/>
+  <text x="70" y="285" class="desc">✅ Maximum Privacy — Code stays local or on your infra</text>
+
+  <circle cx="50" cy="310" r="8" class="partial"/>
+  <text x="70" y="315" class="desc">⚠️ Partial Privacy — Queries/explicit code sent, not full context</text>
+
+  <circle cx="50" cy="340" r="8" class="risky"/>
+  <text x="70" y="345" class="desc">❌ High Risk — Full code context sent to third-party servers</text>
+
+  <!-- Compliance Note -->
+  <rect x="30" y="380" width="740" height="90" rx="6" fill="#F5F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="50" y="405" class="tool-label">Compliance & GDPR Implications:</text>
+  <text x="50" y="430" class="desc">🔒 For healthcare, finance, or defense: Use Continue.dev (local) or Tabnine (self-hosted) only.</text>
+  <text x="50" y="450" class="desc">⚖️ GDPR: EU customers processing personal data should avoid Copilot, Cursor cloud, and Cody cloud unless DPA covers it.</text>
+  <text x="50" y="470" class="desc">🏥 HIPAA: Requires Continue.dev local or Tabnine self-hosted for full compliance.</text>
+
+  <!-- SVG Markers for arrows -->
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#EA4335"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#F4B400"/>
+    </marker>
+  </defs>
+
+  <!-- Watermark -->
+  <text x="750" y="495" class="desc" text-anchor="end">© 2026 PromptQuorum</text>
+</svg>

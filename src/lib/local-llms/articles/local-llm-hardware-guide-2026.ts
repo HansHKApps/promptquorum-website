@@ -543,6 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm) -- Interactive calculator: exact VRAM for any model, quantization, and GPU.',
             '[Laptop vs Desktop for Local LLMs 2026](/local-llms/laptop-vs-desktop-local-llm) -- Performance, cost per tok/sec, and hardware buying guide.',
+            '[AMD Ryzen AI Max+ Mini PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026) -- Compact systems: 64–128GB unified memory, 50 TOPS NPU for 30–70B models.',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) -- Q4_K_M vs Q8_0 VRAM tables and quality trade-offs',
             '[How to Run 70B Models on Consumer Hardware](/local-llms/70b-models-consumer-hardware) -- layer offloading, dual-GPU setup, and performance expectations',
             '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) -- top-ranked models at each size tier with MMLU and HumanEval benchmarks',

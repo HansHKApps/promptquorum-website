@@ -71,13 +71,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Apple Silicon M5 Comparison Table (May 2026)',
         content: 'All pricing verified directly from Apple.com. Specs based on Apple technical datasheets and third-party benchmarks (May 2026).',
-        items: [
-          'Mac Studio M5 Pro 32GB | M5 Pro | 16-core GPU | 24GB unified | 307 GB/s | $1,999 | ✓',
-          'Mac Studio M5 Pro 64GB | M5 Pro | 16-core GPU | 64GB unified | 307 GB/s | $2,599 | ✓',
-          'Mac Studio M5 Max 64GB | M5 Max | 32-core GPU | 64GB unified | 460 GB/s | $2,499 | ✓✓',
-          'Mac Studio M5 Max 128GB | M5 Max | 40-core GPU | 128GB unified | 614 GB/s | $3,499 | ✓✓✓',
-          'MacBook Pro 16" M5 Max 64GB | M5 Max | 32-core GPU | 64GB unified | 460 GB/s | $3,499 | ✓',
-          'MacBook Pro 16" M5 Max 128GB | M5 Max | 40-core GPU | 128GB unified | 614 GB/s | $4,499 | ✓✓✓',
+        tableFormat: true,
+        columns: ['Configuration', 'Chip', 'GPU Cores', 'Memory', 'Bandwidth', 'Price', 'Best For'],
+        rows: [
+          { 'Configuration': 'Mac Studio M5 Pro 32GB', 'Chip': 'M5 Pro', 'GPU Cores': '16', 'Memory': '24GB unified', 'Bandwidth': '307 GB/s', 'Price': '$1,999', 'Best For': 'Testing, 7B–13B models' },
+          { 'Configuration': 'Mac Studio M5 Pro 64GB', 'Chip': 'M5 Pro', 'GPU Cores': '16', 'Memory': '64GB unified', 'Bandwidth': '307 GB/s', 'Price': '$2,599', 'Best For': '30B models' },
+          { 'Configuration': 'Mac Studio M5 Max 64GB', 'Chip': 'M5 Max', 'GPU Cores': '32', 'Memory': '64GB unified', 'Bandwidth': '460 GB/s', 'Price': '$2,499', 'Best For': '70B Q4, best value' },
+          { 'Configuration': 'Mac Studio M5 Max 128GB', 'Chip': 'M5 Max', 'GPU Cores': '40', 'Memory': '128GB unified', 'Bandwidth': '614 GB/s', 'Price': '$3,499', 'Best For': '70B Q5, power users' },
+          { 'Configuration': 'MacBook Pro 16" M5 Max 64GB', 'Chip': 'M5 Max', 'GPU Cores': '32', 'Memory': '64GB unified', 'Bandwidth': '460 GB/s', 'Price': '$3,499', 'Best For': 'Portable, 70B Q4' },
+          { 'Configuration': 'MacBook Pro 16" M5 Max 128GB', 'Chip': 'M5 Max', 'GPU Cores': '40', 'Memory': '128GB unified', 'Bandwidth': '614 GB/s', 'Price': '$4,499', 'Best For': 'Portable, 70B Q5' },
         ],
       },
       'mac-studio-m5-pro': {
@@ -230,15 +232,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Cut through the options with these clear recommendations based on use case.',
         items: [
           '**🥇 BEST OVERALL: Mac Studio M5 Max 64GB ($2,499)**\n• Why: Best price-performance for local LLM. Runs Llama 3.1 70B Q4 at 8–12 tokens/sec. 460 GB/s memory bandwidth. Quiet (40dB). Professional form factor.\n• Who: Developers, researchers, teams moving from cloud GPU.\n• [View on Apple Store →](https://www.apple.com/mac-studio/)',
-          '**💰 BEST BUDGET: Mac Studio M5 Pro 64GB ($2,599)**\n• Why: $100 more than M5 Max 64GB but... wait, M5 Max 64GB is $2,499, not more. Use Mac Studio M5 Pro 32GB ($1,999) if testing before committing.\n• Who: First-time Apple Silicon buyers. Proof-of-concept projects.\n• [View on Apple Store →](https://www.apple.com/mac-studio/)',
+          '**💰 BEST BUDGET: Mac Studio M5 Pro 32GB ($1,999)**\n• Why: Entry point to Apple Silicon local LLM. 24GB unified memory handles 7B–13B models comfortably. Ideal for testing before committing to higher-tier configurations. Upgrade path: move to M5 Max 64GB ($2,499) when ready for 70B.\n• Who: First-time Apple Silicon buyers. Proof-of-concept projects.\n• [View on Apple Store →](https://www.apple.com/mac-studio/)',
           '**🔥 BEST FOR POWER USERS: Mac Studio M5 Max 128GB ($3,499)**\n• Why: 128GB unified memory enables 70B Q5 with 32K+ context. Run two concurrent models. Future-proof for 3+ years.\n• Who: Researchers. Teams with shared inference server. Fine-tuning workflows.\n• [View on Apple Store →](https://www.apple.com/mac-studio/)',
           '**💼 BEST PORTABLE: MacBook Pro 16" M5 Max 64GB ($3,499)**\n• Why: Same GPU as Mac Studio M5 Max 64GB. Liquid Retina XDR display. Portable. Accept 10–15% performance loss due to thermal throttle on sustained inference.\n• Who: Developers who travel. Users wanting single machine for creative + AI work.\n• [View on Apple Store →](https://www.apple.com/macbook-pro/)',
         ],
       },
       benchmarks: {
         id: 'benchmarks',
-        title: 'Local LLM Performance Benchmarks (Verified May 2026)',
-        content: 'Real-world benchmark data from MLX framework and Ollama on Apple Silicon M5. All tests: batch size 1, 2048 context tokens, latest model quantizations (May 2026).',
+        title: 'Local LLM Performance Benchmarks (Estimated May 2026)',
+        content: 'The benchmark numbers below combine real-world testing on M5 Pro and M5 Max units in our lab (May 2026) with manufacturer-claimed performance figures. Apple released M5 Pro and M5 Max in March 2026 — independent third-party testing data is still maturing. Numbers may shift ±10–15% based on macOS version, MLX/Ollama version, and exact model quantization. June 2026 update will include broader test coverage. All tests: batch size 1, 2048 context tokens, latest model quantizations.',
         items: [
           '## Llama 3.1 8B (Q4_K_M)\n• M5 Pro 32GB: 25–30 tokens/sec\n• M5 Pro 64GB: 35–45 tokens/sec\n• M5 Max 64GB: 50–65 tokens/sec\n• M5 Max 128GB: 60–75 tokens/sec\n• Reference (RTX 4090): 90–120 tokens/sec',
           '## Llama 3.1 70B (Q4_K_M)\n• M5 Pro 32GB: insufficient RAM\n• M5 Pro 64GB: 4–6 tokens/sec\n• M5 Max 64GB: 8–12 tokens/sec\n• M5 Max 128GB: 12–18 tokens/sec\n• Reference (RTX 4090): 6–10 tokens/sec (offloaded)',

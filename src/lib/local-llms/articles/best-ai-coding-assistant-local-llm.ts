@@ -126,6 +126,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTableSection: {
         id: 'comparison-table-main',
         title: 'AI Coding Assistants Comparison Table (May 2026)',
+        image: '/images/best-ai-coding-assistant-local-llm-comparison-en.svg',
+        imageCaption: 'AI coding assistants comparison: Continue.dev (best overall, free), Cursor ($20/mo, best UX), Sourcegraph Cody ($9/user/mo, best teams), Tabnine ($12/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. May 2026.',
         content: 'Head-to-head feature and pricing comparison. Prices verified on provider websites May 2026 and updated monthly. Local LLM support ranges from native integration (Continue.dev) to vendor-specific configuration (Cursor, Cody) to enterprise-only (Tabnine self-hosted).\n\n| Tool | Price | Local LLM | IDEs | Open Source | Team Features | Best For |\n|------|-------|-----------|------|-------------|---------------|----------|\n| Continue.dev | Free | ✅ Native (Ollama, LM Studio, llama.cpp) | VS Code, JetBrains, Vim | ✅ Apache 2.0 | Limited | Local-first developers |\n| Cursor | $20/mo (Pro) | ✅ Via config (OpenAI endpoint) | Fork of VS Code | ❌ Closed | No | Individual developers (best UX) |\n| Sourcegraph Cody | $9/user/mo | ✅ Via Ollama config | VS Code, JetBrains, Neovim | Partial (CLI) | ✅ Yes | Teams, codebase refactoring |\n| Tabnine | $12/mo (Pro) | ✅ Self-hosted (enterprise) | VS Code, JetBrains, Sublime, more | ❌ Closed | ✅ Yes | Privacy-conscious teams |\n| Windsurf (Codeium) | Free / $15/mo | ✅ Via Ollama (new) | Windsurf IDE, VS Code | ❌ Closed | Limited | Early adopters, Cascade workflow |\n| GitHub Copilot | $10/mo | ❌ Cloud only | VS Code, JetBrains, Vim | ❌ Closed | ✅ Yes | GitHub ecosystem integration |\n| Codeium (free) | Free | ⚠️ Limited | VS Code, JetBrains, Sublime | ❌ Closed | No | Best free tier |\n\nAll pricing verified directly from official provider websites. Subscribe now to stay in the loop of latest May 2026 updates.',
         columns: ['Tool', 'Price', 'Local LLM', 'IDEs', 'Open Source', 'Team Features', 'Best For'],
         tableFormat: true,
@@ -268,6 +270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localLlmIntegration: {
         id: 'local-llm-integration',
         title: 'Local LLM Integration Depth: The Moat',
+        image: '/images/best-ai-coding-assistant-local-llm-integration-en.svg',
+        imageCaption: 'Local LLM integration depth comparison: Continue.dev (top right = easy setup + full feature support locally), Cursor (moderate difficulty, cloud-first with local fallback), Sourcegraph Cody (balanced but cloud-first), Tabnine (bottom left = complex enterprise-only), Windsurf (rising support). Chart shows setup ease vs feature completeness.',
         content: 'Not all "local LLM support" is equal. Here\'s the honest comparison:\n\n**Continue.dev: Native, first-class support**\nContinue.dev was designed with local LLM as a primary goal. Configuration is in a config.json file. Point it to your Ollama URL, select a model, and go. All features—chat, inline completions, edit mode—work locally. No special handling needed. This is the gold standard.\n\n**Cursor: Custom endpoint configuration**\nCursor supports local LLMs via the "Custom OpenAI API" feature. You configure your Ollama endpoint (with CORS headers) as a base URL. Completions route to your local model. This works, but some Cursor features (like Composer agentic mode) may fall back to cloud silently. Setup is fiddlier than Continue.dev (15 minutes vs 5 minutes).\n\n**Sourcegraph Cody: Ollama config available**\nCody supports Ollama via configuration. Chat and completions work locally. But Cody was built cloud-first—the product experience assumes cloud. Inline completions default to cloud and you must manually select your local model.\n\n**Tabnine: Enterprise deployment only**\nTabnine\'s self-hosted option is enterprise-only and requires dedicated infrastructure. Standard plan has limited local LLM support. Not for individual developers.\n\n**Windsurf: Newer Ollama integration**\nWindsurf added Ollama support late 2025. It works, but it\'s newer than Continue.dev. Expect occasional rough edges. The integration will improve over time.',
         items: [
           'Continue.dev: 5-minute setup, all features work locally, true local-first',
@@ -280,6 +284,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decisionMatrix: {
         id: 'decision-matrix',
         title: 'Decision Matrix: Which Tool for You?',
+        image: '/images/best-ai-coding-assistant-local-llm-decision-tree-en.svg',
+        imageCaption: 'Decision tree flowchart for choosing AI coding assistants: Start → Budget (Free/Paid) → Free path: Local support? (Yes=Continue.dev, No=Windsurf) → Paid path: Solo/Team? (Solo=Cursor, Team=Cody/Tabnine). Recommendations show advantages of each choice.',
         content: 'Use this matrix to find your best fit.',
         items: [
           '**1. Free, fully local, privacy-first → Continue.dev + Ollama.** Zero cost, open source, no config friction. This is the clear winner for privacy-conscious developers.',
@@ -314,6 +320,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       privacySection: {
         id: 'privacy-enterprise',
         title: 'Privacy & Enterprise Considerations',
+        image: '/images/best-ai-coding-assistant-local-llm-privacy-en.svg',
+        imageCaption: 'Data flow comparison: Continue.dev local (100% stays on machine), Cursor hybrid (queries to Cursor), Sourcegraph Cody cloud (code context to Sourcegraph), Tabnine self-hosted (your infrastructure), GitHub Copilot (code to Microsoft), Windsurf hybrid (optional). GDPR/HIPAA compliance requires local or self-hosted only.',
         content: 'Understanding what each tool sends to servers is critical for regulated work.',
         items: [
           '**Continue.dev (cloud models mode).** Only what you explicitly send in chat/completion. Telemetry is optional and disclosed. When using local models, nothing leaves your machine.',
