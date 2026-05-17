@@ -10,10 +10,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
-      title: 'Local LLM Hardware Guide 2026: What GPU Do You Need?',
-      seoTitle: 'Local LLM Hardware Guide 2026: What GPU Do You Need?',
+      title: 'Best GPUs for Local LLMs 2026: VRAM Requirements & Recommendations',
+      seoTitle: 'Best GPUs for Local LLMs 2026: VRAM Requirements & Recommendations',
       intro: 'Running local LLMs requires matching your GPU\'s VRAM to the model you want to run. As of May 2026, a 7B model needs 8-9 GB VRAM at Q8, a 14B model needs 15 GB, and most 70B models need 39 GB at Q4_K_M -- more than a single RTX 4090 holds. This guide covers specific model recommendations for 12 GB, 16 GB, and 24 GB VRAM tiers, CPU-only inference on 16 GB system RAM, llama.cpp speed settings for RTX 4070 Ti, and full hardware build configurations.',
-      metaDescription: 'What GPU do you need for local LLMs? See exact requirements for 7B–70B models, real RTX 4070–5090 benchmarks, and avoid wasting money.',
+      metaDescription: 'Best GPUs for local LLMs 2026: RTX 4090 for 70B, RTX 4070 Ti for 14B, RTX 4060 for 7B. VRAM requirements, benchmarks, and hardware recommendations.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
@@ -92,6 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       lastUpdated: '2026-05-04',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Best GPUs to Buy — 2026 Recommendations', anchor: '#best-gpus-to-buy' },
         { label: 'VRAM Math for Any Model', anchor: '#vram-math' },
         { label: 'KV Cache: The Hidden VRAM Cost', anchor: '#kv-cache' },
         { label: 'GPU Tier Overview', anchor: '#gpu-recommendations' },
@@ -127,6 +128,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**llama.cpp speed tip**: Always set `--n-gpu-layers 99`. This alone doubles speed on RTX 4070 Ti from ~40 to ~85 tok/sec.',
             '**Quick reference:** 7B@Q4_K_M = 4.7 GB | 70B@Q4_K_M = 40 GB | RTX 4070 Ti = ~80 tok/s | RTX 4090 = ~150 tok/s | CPU-only 16 GB = 12-28 tok/s',
           ],
+        },
+        bestGPUs: {
+          id: 'best-gpus-to-buy',
+          title: 'Best GPUs to Buy — 2026 Recommendations',
+          content: [
+            '**Choosing a GPU depends on your budget and the model size you want to run.** The NVIDIA RTX 40-series (4060, 4070 Ti, 4090) and RTX 50-series (5060 Ti, 5080) dominate for local LLMs in 2026. Here are the top recommendations by use case:',
+          ],
+          items: [
+            '**For 7B Models (Mistral, Phi-4, Llama 3.2) — Budget:** RTX 4060 (8 GB VRAM, ~$180–220). Runs any 7B model at Q4_K_M. Speed: 40–60 tok/sec. Tier: Budget enthusiasts.',
+            '**For 14B Models (Llama 3.1, DeepSeek-R1) — Mainstream:** RTX 4070 Ti (12 GB VRAM, ~$500–600). Best price-to-performance. Llama 4 Scout 17B Q4 runs well. Speed: 85–120 tok/sec. Tier: Most popular.',
+            '**For 33B Models (Qwen2.5, Mistral Small) — Mid-Range:** RTX 4080 or RTX 5080 (16 GB VRAM, ~$1000–1200). Runs Devstral Small 24B Q4_K_M. Speed: 110–140 tok/sec. Tier: Professional developers.',
+            '**For 70B Models (Llama 3.3, Qwen 3.6) — High-End:** RTX 4090 (24 GB VRAM, ~$1700–2000). Runs 70B at Q3_K_M (~25 GB). For Q4_K_M (40 GB), use dual RTX 4090. Speed: 150–180 tok/sec single GPU. Tier: Research + production.',
+            '**Best Value 2026:** RTX 4070 Ti + RTX 5060 Ti 12GB combo (~$750 total) — runs 70B at Q3 and 14B at Q4 simultaneously.',
+            '**For Apple Users:** Mac M5 Max (128 GB unified memory) first Mac running true 70B models. ~$6000. Equivalent performance to dual RTX 4090 setup.',
+          ],
+          rows: [
+            { 'GPU': 'RTX 4060 (8 GB)', 'Best For': '7B models', 'Price': '~$180–220', 'Speed': '40–60 tok/s', 'Tier': 'Budget' },
+            { 'GPU': 'RTX 4070 Ti (12 GB)', 'Best For': '14B models', 'Price': '~$500–600', 'Speed': '85–120 tok/s', 'Tier': 'Mainstream' },
+            { 'GPU': 'RTX 4080 / RTX 5080 (16 GB)', 'Best For': '33B models', 'Price': '~$1000–1200', 'Speed': '110–140 tok/s', 'Tier': 'Professional' },
+            { 'GPU': 'RTX 4090 (24 GB)', 'Best For': '70B (Q3)', 'Price': '~$1700–2000', 'Speed': '150–180 tok/s', 'Tier': 'High-end' },
+            { 'GPU': 'Dual RTX 4090', 'Best For': '70B (Q4)', 'Price': '~$3400–4000', 'Speed': '280–360 tok/s', 'Tier': 'Enterprise' },
+            { 'GPU': 'Mac M5 Max 128GB', 'Best For': '70B (Q4)', 'Price': '~$6000', 'Speed': '120–160 tok/s', 'Tier': 'Pro laptop' },
+          ],
+          columns: ['GPU', 'Best For', 'Price', 'Speed', 'Tier'],
         },
         vramMath: {
           id: 'vram-math',
@@ -640,10 +665,10 @@ schema: {
     },
     de: {
       theme: 'Hardware & Performance',
-      title: 'Lokale LLM Hardware-Anforderungen 2026: GPU, CPU und RAM erklärt',
-      seoTitle: 'Lokale LLM Hardware 2026: Beste GPU für 8-48 GB VRAM',
+      title: 'Beste GPUs für lokale LLMs 2026: VRAM-Anforderungen & Empfehlungen',
+      seoTitle: 'Beste GPUs für lokale LLMs 2026: VRAM-Anforderungen & Empfehlungen',
       intro: 'Um lokale LLMs auszuführen, müssen Sie drei Komponenten verstehen: GPU (optional, aber empfohlen), CPU und RAM. Im Mai 2026 benötigt ein 7B-Parameter-Modell mindestens 8 GB RAM, während ein 70B-Modell 40+ GB benötigt. Dieser Leitfaden behandelt echte Hardware-Empfehlungen für RTX 5090, 4090, Apple Silicon und Budget-Builds sowie VRAM-Mathematik zur Berechnung der Anforderungen für jede Modellgröße.',
-      metaDescription: 'RTX 4070 Ti (12 GB): 7-13B-Modelle mit 80 Tok/s. RTX 4090 (24 GB): alle 70B-Modelle. VRAM-Formel, Q4-Kalkulator, Apple Silicon, RTX 5090 - Mai 2026.',
+      metaDescription: 'Beste GPUs für lokale LLMs 2026: RTX 4090 für 70B, RTX 4070 Ti für 14B, RTX 4060 für 7B. VRAM-Anforderungen, Benchmarks und Hardware-Empfehlungen.',
       publishDate: '2026-04-04',
       readTime: '13 Min. Lesezeit',
       educationalLevel: 'Intermediate',
@@ -688,6 +713,18 @@ schema: {
           ],
         },
         vramMath: {
+        bestGPUs: {
+          id: 'best-gpus-to-buy',
+          title: 'Beste GPUs zum Kaufen — 2026 Empfehlungen',
+          content: ['**Die Wahl einer GPU hängt von Ihrem Budget und der Modellgröße ab.** Die NVIDIA RTX 40er und 50er-Serie dominieren 2026 für lokale LLMs:'],
+          items: [
+            '**RTX 4060 (8 GB) — 7B Modelle:** ~180–220€. 40–60 tok/s.',
+            '**RTX 4070 Ti (12 GB) — 14B Modelle:** ~500–600€. 85–120 tok/s. Mainstream.',
+            '**RTX 4080/5080 (16 GB) — 33B Modelle:** ~1000–1200€. 110–140 tok/s.',
+            '**RTX 4090 (24 GB) — 70B Modelle:** ~1700–2000€. 150–180 tok/s.',
+            '**Mac M5 Max 128GB — 70B Modelle:** ~6000€. Bestes Preis-Leistung für Laptops.',
+          ],
+        },
           title: 'Wie berechnen Sie VRAM-Anforderungen?',
           content: [
             '**VRAM-Anforderungen hängen von drei Faktoren ab: Modellgröße (Parameter), Quantisierung (Bits pro Gewicht) und Inferenzmodus.**',
@@ -974,6 +1011,18 @@ schema: {
           ],
         },
         vramMath: {
+        bestGPUs: {
+          id: 'best-gpus-to-buy',
+          title: 'Meilleures GPUs à Acheter — Recommandations 2026',
+          content: ['**Choisir une GPU dépend de votre budget et de la taille du modèle.** Les séries NVIDIA RTX 40 et 50 dominent 2026 pour les LLMs locaux:'],
+          items: [
+            '**RTX 4060 (8 Go) — Modèles 7B:** ~180–220€. 40–60 tok/s.',
+            '**RTX 4070 Ti (12 Go) — Modèles 14B:** ~500–600€. 85–120 tok/s. Mainstream.',
+            '**RTX 4080/5080 (16 Go) — Modèles 33B:** ~1000–1200€. 110–140 tok/s.',
+            '**RTX 4090 (24 Go) — Modèles 70B:** ~1700–2000€. 150–180 tok/s.',
+            '**Mac M5 Max 128Go — Modèles 70B:** ~6000€. Meilleur rapport qualité-prix pour portables.',
+          ],
+        },
           title: 'Comment calculer les exigences VRAM?',
           content: [
             '**Les exigences VRAM dépendent de trois facteurs: taille du modèle (paramètres), quantisation (bits par poids) et mode d\'inférence.**',
@@ -1257,6 +1306,18 @@ schema: {
           ],
         },
         vramMath: {
+        bestGPUs: {
+          id: 'best-gpus-to-buy',
+          title: '購入すべき最高のGPU — 2026年のおすすめ',
+          content: ['**GPU を選ぶことはあなたの予算と実行したいモデルサイズに依存します。** 2026年のローカル LLM では NVIDIA RTX 40 シリーズと RTX 50 シリーズが支配的です:'],
+          items: [
+            '**RTX 4060 (8 GB) — 7B モデル:** ~180–220€。40–60 tok/s。',
+            '**RTX 4070 Ti (12 GB) — 14B モデル:** ~500–600€。85–120 tok/s。主流。',
+            '**RTX 4080/5080 (16 GB) — 33B モデル:** ~1000–1200€。110–140 tok/s。',
+            '**RTX 4090 (24 GB) — 70B モデル:** ~1700–2000€。150–180 tok/s。',
+            '**Mac M5 Max 128GB — 70B モデル:** ~6000€。ノートパソコン向け最高のコストパフォーマンス。',
+          ],
+        },
           title: 'VRAM要件をどのように計算しますか?',
           content: [
             '**VRAM要件は3つの要因に依存します: モデルサイズ (パラメータ)、量子化 (ウェイトごとのビット数)、推論モード。**',
@@ -1537,6 +1598,18 @@ schema: {
           ],
         },
         vramMath: {
+        bestGPUs: {
+          id: 'best-gpus-to-buy',
+          title: '购买最佳GPU — 2026年推荐',
+          content: ['**选择GPU取决于您的预算和想要运行的模型大小。** 2026年本地LLM中NVIDIA RTX 40和50系列占主导地位:'],
+          items: [
+            '**RTX 4060 (8GB) — 7B模型:** ~180–220€。40–60 tok/s。',
+            '**RTX 4070 Ti (12GB) — 14B模型:** ~500–600€。85–120 tok/s。主流。',
+            '**RTX 4080/5080 (16GB) — 33B模型:** ~1000–1200€。110–140 tok/s。',
+            '**RTX 4090 (24GB) — 70B模型:** ~1700–2000€。150–180 tok/s。',
+            '**Mac M5 Max 128GB — 70B模型:** ~6000€。笔记本电脑最佳性价比。',
+          ],
+        },
           title: '如何计算VRAM要求？',
           content: [
             '**VRAM要求取决于三个因素：模型大小（参数）、量化（每个权重的位数）和推理模式。**',
