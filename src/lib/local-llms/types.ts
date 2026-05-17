@@ -70,7 +70,12 @@ export interface LLMArticle {
     answer: string
     bullets: string[]
     updatedDate?: string
-  }
+  } | Record<string, {
+    question: string
+    answer: string
+    bullets: string[]
+    updatedDate?: string
+  }>
   lastUpdated?: string
   toc?: { label: string; anchor: string }[]
   heroComponent?: string
