@@ -107,4 +107,4 @@
 
   <!-- Footer -->
   <text x="970" y="695" font-size="10" fill="#999" text-anchor="end">PromptQuorum • May 2026</text>
-</svg>
+<text x="992" y="695" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

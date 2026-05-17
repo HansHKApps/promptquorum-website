@@ -17,69 +17,69 @@
 
   <!-- Unified Memory -->
   <rect x="50" y="110" width="400" height="70" fill="#fff8e1" stroke="#FF9800" stroke-width="1" rx="3"/>
-  <text x="70" y="130" font-size="12" font-weight="bold" fill="#333">統一メモリ</text>
+  <text x="70" y="130" font-size="12" font-weight="bold" fill="#333">统一内存</text>
   <text x="70" y="150" font-size="11" fill="#666">64–128GB DDR5X-8000</text>
-  <text x="70" y="165" font-size="11" fill="#666">VRAMボトルネックなし</text>
+  <text x="70" y="165" font-size="11" fill="#666">无VRAM瓶颈</text>
 
   <rect x="500" y="110" width="400" height="70" fill="#fff8e1" stroke="#FF9800" stroke-width="1" rx="3"/>
-  <text x="520" y="130" font-size="12" font-weight="bold" fill="#333">統一メモリ</text>
+  <text x="520" y="130" font-size="12" font-weight="bold" fill="#333">统一内存</text>
   <text x="520" y="150" font-size="11" fill="#666">36–192GB LPDDR5X</text>
-  <text x="520" y="165" font-size="11" fill="#666">同一アーキテクチャ</text>
+  <text x="520" y="165" font-size="11" fill="#666">相同架构</text>
 
   <!-- GPU -->
   <rect x="50" y="200" width="400" height="70" fill="#e3f2fd" stroke="#2196F3" stroke-width="1" rx="3"/>
   <text x="70" y="220" font-size="12" font-weight="bold" fill="#333">GPU (iGPU)</text>
   <text x="70" y="240" font-size="11" fill="#666">Radeon 8060S (RDNA 3.5)</text>
-  <text x="70" y="255" font-size="11" fill="#666">RTX 4070相当性能</text>
+  <text x="70" y="255" font-size="11" fill="#666">RTX 4070级性能</text>
 
   <rect x="500" y="200" width="400" height="70" fill="#e3f2fd" stroke="#2196F3" stroke-width="1" rx="3"/>
   <text x="520" y="220" font-size="12" font-weight="bold" fill="#333">GPU (iGPU)</text>
-  <text x="520" y="240" font-size="11" fill="#666">M4 Max GPU (10–12コア)</text>
-  <text x="520" y="255" font-size="11" fill="#666">RTX 4070互換性能</text>
+  <text x="520" y="240" font-size="11" fill="#666">M4 Max GPU (10–12核)</text>
+  <text x="520" y="255" font-size="11" fill="#666">RTX 4070可比性能</text>
 
   <!-- NPU -->
   <rect x="50" y="290" width="400" height="70" fill="#f3e5f5" stroke="#9C27B0" stroke-width="1" rx="3"/>
-  <text x="70" y="310" font-size="12" font-weight="bold" fill="#333">ニューラルエンジン</text>
-  <text x="70" y="330" font-size="11" fill="#666">50 TOPS NPU (専用)</text>
-  <text x="70" y="345" font-size="11" fill="#666">INT8/Q4加速</text>
+  <text x="70" y="310" font-size="12" font-weight="bold" fill="#333">神经引擎</text>
+  <text x="70" y="330" font-size="11" fill="#666">50 TOPS NPU(专用)</text>
+  <text x="70" y="345" font-size="11" fill="#666">加速INT8/Q4</text>
 
   <rect x="500" y="290" width="400" height="70" fill="#f3e5f5" stroke="#9C27B0" stroke-width="1" rx="3"/>
-  <text x="520" y="310" font-size="12" font-weight="bold" fill="#333">ニューラルエンジン</text>
-  <text x="520" y="330" font-size="11" fill="#666">38 TOPS ML演算</text>
-  <text x="520" y="345" font-size="11" fill="#666">統合型、専用でない</text>
+  <text x="520" y="310" font-size="12" font-weight="bold" fill="#333">神经引擎</text>
+  <text x="520" y="330" font-size="11" fill="#666">38 TOPS ML计算</text>
+  <text x="520" y="345" font-size="11" fill="#666">集成型,非专用</text>
 
   <!-- Price -->
   <rect x="50" y="380" width="400" height="70" fill="#c8e6c9" stroke="#4CAF50" stroke-width="1" rx="3"/>
-  <text x="70" y="400" font-size="12" font-weight="bold" fill="#333">価格</text>
-  <text x="70" y="420" font-size="11" fill="#666">¥130,000–205,000 JPY</text>
-  <text x="70" y="435" font-size="11" fill="#666">40–60%安い</text>
+  <text x="70" y="400" font-size="12" font-weight="bold" fill="#333">价格</text>
+  <text x="70" y="420" font-size="11" fill="#666">¥8500–18000 CNY</text>
+  <text x="70" y="435" font-size="11" fill="#666">便宜40–60%</text>
 
   <rect x="500" y="380" width="400" height="70" fill="#ffccbc" stroke="#FF5722" stroke-width="1" rx="3"/>
-  <text x="520" y="400" font-size="12" font-weight="bold" fill="#333">価格</text>
-  <text x="520" y="420" font-size="11" fill="#666">¥465,000–930,000 JPY</text>
-  <text x="520" y="435" font-size="11" fill="#666">フラッグシッププレミアム</text>
+  <text x="520" y="400" font-size="12" font-weight="bold" fill="#333">价格</text>
+  <text x="520" y="420" font-size="11" fill="#666">¥20000+ CNY</text>
+  <text x="520" y="435" font-size="11" fill="#666">旗舰级溢价</text>
 
   <!-- OS & Software -->
   <rect x="50" y="470" width="400" height="70" fill="#e0f2f1" stroke="#009688" stroke-width="1" rx="3"/>
-  <text x="70" y="490" font-size="12" font-weight="bold" fill="#333">オペレーティングシステム</text>
+  <text x="70" y="490" font-size="12" font-weight="bold" fill="#333">操作系统</text>
   <text x="70" y="510" font-size="11" fill="#666">Linux (ROCm 6.2+)</text>
   <text x="70" y="525" font-size="11" fill="#666">Ollama/vLLM/LM Studio</text>
 
   <rect x="500" y="470" width="400" height="70" fill="#e0f2f1" stroke="#009688" stroke-width="1" rx="3"/>
-  <text x="520" y="490" font-size="12" font-weight="bold" fill="#333">オペレーティングシステム</text>
+  <text x="520" y="490" font-size="12" font-weight="bold" fill="#333">操作系统</text>
   <text x="520" y="510" font-size="11" fill="#666">macOS (MLX/Ollama)</text>
-  <text x="520" y="525" font-size="11" fill="#666">広いアプリエコシステム</text>
+  <text x="520" y="525" font-size="11" fill="#666">更广的应用生态</text>
 
   <!-- Power -->
   <rect x="50" y="560" width="400" height="70" fill="#fce4ec" stroke="#E91E63" stroke-width="1" rx="3"/>
-  <text x="70" y="580" font-size="12" font-weight="bold" fill="#333">消費電力</text>
-  <text x="70" y="600" font-size="11" fill="#666">65–120W (全システム)</text>
-  <text x="70" y="615" font-size="11" fill="#666">静音パッシブ/小型ファン</text>
+  <text x="70" y="580" font-size="12" font-weight="bold" fill="#333">功耗</text>
+  <text x="70" y="600" font-size="11" fill="#666">65–120W (整个系统)</text>
+  <text x="70" y="615" font-size="11" fill="#666">静音被动/小风扇</text>
 
   <rect x="500" y="560" width="400" height="70" fill="#fce4ec" stroke="#E91E63" stroke-width="1" rx="3"/>
-  <text x="520" y="580" font-size="12" font-weight="bold" fill="#333">消費電力</text>
-  <text x="520" y="600" font-size="11" fill="#666">150–200W (システム)</text>
-  <text x="520" y="615" font-size="11" fill="#666">アクティブ冷却必須</text>
+  <text x="520" y="580" font-size="12" font-weight="bold" fill="#333">功耗</text>
+  <text x="520" y="600" font-size="11" fill="#666">150–200W (系统)</text>
+  <text x="520" y="615" font-size="11" fill="#666">需要主动冷却</text>
 
   <!-- Footer -->
   <text x="970" y="645" font-size="10" fill="#999" text-anchor="end">PromptQuorum • 2026年5月</text>
