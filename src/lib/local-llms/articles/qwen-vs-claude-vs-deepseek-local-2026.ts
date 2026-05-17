@@ -256,6 +256,7 @@ dispatch_rules:
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '**[YouTube: Why Google Gave Away Gemma 4 (6:02)](https://www.youtube.com/watch?v=sXgZhGzqPmU&t=176s)** — Decode the market split into closed (GPT-4, Claude) and open-weight tiers (Gemma, Qwen, DeepSeek). This explainer breaks down Google\'s strategic positioning, why the gap between closed and open frontier models opened/closed/opened again, and how to ask the right question about your own AI stack allocation. Essential context for understanding why single-model strategies are obsolete in 2026.',
           '[How to Run Qwen 3 Locally — Full Setup Guide 2026](/local-llms/run-qwen-locally-guide-2026)',
           '[Qwen Coder vs DeepSeek vs Mistral: Local Coding Benchmark 2026](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[The Local LLM Privacy Manifesto 2026](/local-llms/qwen-gdpr-privacy-manifesto-2026)',
