@@ -65,12 +65,12 @@ export interface LLMArticle {
     bullets: string[]
     footer?: string
   }
-  quickAnswerTop?: Record<string, {
+  quickAnswerTop?: {
     question: string
     answer: string
     bullets: string[]
     updatedDate?: string
-  }>
+  }
   lastUpdated?: string
   toc?: { label: string; anchor: string }[]
   heroComponent?: string

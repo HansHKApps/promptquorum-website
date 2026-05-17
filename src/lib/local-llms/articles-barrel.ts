@@ -84,6 +84,7 @@ import { article as a_how_much_vram_local_llm } from "./articles/how-much-vram-l
 import { article as a_best_amd_gpus_local_llm } from "./articles/best-amd-gpus-local-llm";
 import { article as a_local_llm_workstation_build } from "./articles/local-llm-workstation-build";
 import { article as a_best_mini_pcs_local_llm } from "./articles/best-mini-pcs-local-llm";
+import { article as a_best_amd_mini_pc_local_llm_2026 } from "./articles/best-amd-mini-pc-local-llm-2026";
 import { article as a_best_laptops_local_llm } from "./articles/best-laptops-local-llm";
 import { article as a_best_local_llm_stack_use_case } from "./articles/best-local-llm-stack-use-case";
 import { article as a_lm_studio_vs_jan_ai } from "./articles/lm-studio-vs-jan-ai";
@@ -173,6 +174,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "best-amd-gpus-local-llm": a_best_amd_gpus_local_llm,
   "local-llm-workstation-build": a_local_llm_workstation_build,
   "best-mini-pcs-local-llm": a_best_mini_pcs_local_llm,
+  "best-amd-mini-pc-local-llm-2026": a_best_amd_mini_pc_local_llm_2026,
   "best-laptops-local-llm": a_best_laptops_local_llm,
   "best-local-llm-stack-use-case": a_best_local_llm_stack_use_case,
   "lm-studio-vs-jan-ai": a_lm_studio_vs_jan_ai,

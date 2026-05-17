@@ -84,6 +84,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-llm-pc-build-2000':              'local-llm-pc-build-2000',
   'local-llm-workstation-build':          'local-llm-workstation-build',
   'best-mini-pcs-local-llm':              'best-mini-pcs-local-llm',
+  'best-amd-mini-pc-local-llm-2026':      'best-amd-mini-pc-local-llm-2026',
   'best-laptops-local-llm':               'best-laptops-local-llm',
 
   // Tools & Interfaces (EXPANDED)
