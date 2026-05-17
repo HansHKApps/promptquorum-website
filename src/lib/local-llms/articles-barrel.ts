@@ -53,7 +53,6 @@ import { article as a_qwen_vs_claude_vs_deepseek_local_2026 } from "./articles/q
 import { article as a_run_qwen_locally_guide_2026 } from "./articles/run-qwen-locally-guide-2026";
 import { article as a_qwen_coder_vs_deepseek_mistral_local_2026 } from "./articles/qwen-coder-vs-deepseek-mistral-local-2026";
 import { article as a_qwen_gdpr_privacy_manifesto_2026 } from "./articles/qwen-gdpr-privacy-manifesto-2026";
-import { article as a_best_ai_coding_assistant_local_llm } from "./articles/best-ai-coding-assistant-local-llm";
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
@@ -93,6 +92,7 @@ import { article as a_lm_studio_vs_jan_ai } from "./articles/lm-studio-vs-jan-ai
 import { article as a_open_webui_vs_sillytavern } from "./articles/open-webui-vs-sillytavern";
 import { article as a_llamacpp_vs_ollama_vs_vllm } from "./articles/llamacpp-vs-ollama-vs-vllm";
 import { article as a_local_llm_developer_stack } from "./articles/local-llm-developer-stack";
+import { article as a_best_ai_coding_assistant_local_llm } from "./articles/best-ai-coding-assistant-local-llm";
 import { article as a_best_local_llms_code_review } from "./articles/best-local-llms-code-review";
 import { article as a_best_local_llms_business_writing } from "./articles/best-local-llms-business-writing";
 import { article as a_best_7b_models_consumer_hardware } from "./articles/best-7b-models-consumer-hardware";
@@ -184,6 +184,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "open-webui-vs-sillytavern": a_open_webui_vs_sillytavern,
   "llamacpp-vs-ollama-vs-vllm": a_llamacpp_vs_ollama_vs_vllm,
   "local-llm-developer-stack": a_local_llm_developer_stack,
+  "best-ai-coding-assistant-local-llm": a_best_ai_coding_assistant_local_llm,
   "best-local-llms-code-review": a_best_local_llms_code_review,
   "best-local-llms-business-writing": a_best_local_llms_business_writing,
   "best-7b-models-consumer-hardware": a_best_7b_models_consumer_hardware,
@@ -216,5 +217,4 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "run-qwen-locally-guide-2026": a_run_qwen_locally_guide_2026,
   "qwen-coder-vs-deepseek-mistral-local-2026": a_qwen_coder_vs_deepseek_mistral_local_2026,
   "qwen-gdpr-privacy-manifesto-2026": a_qwen_gdpr_privacy_manifesto_2026,
-  "best-ai-coding-assistant-local-llm": a_best_ai_coding_assistant_local_llm,
 };
