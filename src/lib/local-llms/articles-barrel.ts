@@ -48,10 +48,12 @@ import { article as a_mac_mini_m5_local_ai_server } from "./articles/mac-mini-m5
 import { article as a_apple_silicon_vs_nvidia_gpu_local_llm } from "./articles/apple-silicon-vs-nvidia-gpu-local-llm";
 import { article as a_apple_silicon_whisper_metal_benchmark } from "./articles/apple-silicon-whisper-metal-benchmark";
 import { article as a_running_70b_models_apple_silicon_m5_max } from "./articles/running-70b-models-apple-silicon-m5-max";
+import { article as a_apple_silicon_m5_local_llm } from "./articles/apple-silicon-m5-local-llm";
 import { article as a_qwen_vs_claude_vs_deepseek_local_2026 } from "./articles/qwen-vs-claude-vs-deepseek-local-2026";
 import { article as a_run_qwen_locally_guide_2026 } from "./articles/run-qwen-locally-guide-2026";
 import { article as a_qwen_coder_vs_deepseek_mistral_local_2026 } from "./articles/qwen-coder-vs-deepseek-mistral-local-2026";
 import { article as a_qwen_gdpr_privacy_manifesto_2026 } from "./articles/qwen-gdpr-privacy-manifesto-2026";
+import { article as a_best_ai_coding_assistant_local_llm } from "./articles/best-ai-coding-assistant-local-llm";
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
@@ -199,6 +201,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "local-llm-vs-cloud-gpu-cost": a_local_llm_vs_cloud_gpu_cost,
   "mac-vs-windows-vs-linux-local-llm": a_mac_vs_windows_vs_linux_local_llm,
   "gpu-vs-ai-subscription-roi": a_gpu_vs_ai_subscription_roi,
+  "apple-silicon-m5-local-llm": a_apple_silicon_m5_local_llm,
   "apple-silicon-local-llm-guide-2026": a_apple_silicon_local_llm_guide_2026,
   "m5-pro-max-llm-benchmarks-2026": a_m5_pro_max_llm_benchmarks_2026,
   "how-much-unified-memory-for-local-llm": a_how_much_unified_memory_for_local_llm,
@@ -213,4 +216,5 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "run-qwen-locally-guide-2026": a_run_qwen_locally_guide_2026,
   "qwen-coder-vs-deepseek-mistral-local-2026": a_qwen_coder_vs_deepseek_mistral_local_2026,
   "qwen-gdpr-privacy-manifesto-2026": a_qwen_gdpr_privacy_manifesto_2026,
+  "best-ai-coding-assistant-local-llm": a_best_ai_coding_assistant_local_llm,
 };

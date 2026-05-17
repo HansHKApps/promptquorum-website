@@ -129,6 +129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm)',
             '[Local LLM PC Build Under $2,000](/local-llms/local-llm-pc-build-2000)',
             '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm)',
+            '[MacBook Pro M5 Max Deep Dive: Apple Silicon Local LLM Comparison](/local-llms/apple-silicon-m5-local-llm) — Performance benchmarks for MacBook Pro 16" M5 Max 64GB and 128GB models.',
           ],
         },
         'sources': {

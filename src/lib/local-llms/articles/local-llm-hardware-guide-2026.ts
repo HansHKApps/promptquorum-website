@@ -554,6 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) -- improve reasoning quality on DeepSeek-R1 and Qwen3',
             '[Apple Silicon for Local LLMs: Complete Guide](/local-llms/apple-silicon-local-llm-guide-2026) -- M1 to M5 Max: unified memory, Metal GPU, and framework selection by chip tier.',
             '[Ollama on Mac: Apple Silicon Setup Guide 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Zero to running in 2 minutes: one-command install with Metal GPU auto-verification.',
+            '[Apple Silicon M5 for Local LLM 2026](/local-llms/apple-silicon-m5-local-llm) -- Deep dive on M5 Pro vs M5 Max: 307–614 GB/s bandwidth, real benchmarks, Mac Studio vs MacBook Pro.',
             '[Whisper on Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark) -- STT benchmarks via Metal and Core ML across M1–M5: large-v3 at 10× real-time.',
           ],
         },

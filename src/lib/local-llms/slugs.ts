@@ -88,6 +88,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-laptops-local-llm':               'best-laptops-local-llm',
 
   // Tools & Interfaces (EXPANDED)
+  'best-ai-coding-assistant-local-llm':   'best-ai-coding-assistant-local-llm',
   'best-local-llm-stack-use-case':        'best-local-llm-stack-use-case',
   'lm-studio-vs-jan-ai':                  'lm-studio-vs-jan-ai',
   'open-webui-vs-sillytavern':            'open-webui-vs-sillytavern',
@@ -118,6 +119,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'gpu-vs-ai-subscription-roi':           'gpu-vs-ai-subscription-roi',
 
   // Apple Silicon for Local LLMs (NEW)
+  'apple-silicon-m5-local-llm':                 'apple-silicon-m5-local-llm',
   'apple-silicon-local-llm-guide-2026':         'apple-silicon-local-llm-guide-2026',
   'm5-pro-max-llm-benchmarks-2026':             'm5-pro-max-llm-benchmarks-2026',
   'how-much-unified-memory-for-local-llm':      'how-much-unified-memory-for-local-llm',

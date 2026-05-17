@@ -102,6 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '- **Limitation for GPU**: Shared memory means no discrete VRAM upgrade. Model size ≤ system RAM.',
             '**Mac Studio M2 Ultra (192 GB)**: 60 tok/sec on 8B, 35 tok/sec on 70B — only consumer hardware with this capability. Research teams running 70B+ should consider Mac Studio.',
             '**MacBook Pro**: M4 Max (128 GB) at 35 tok/sec for 8B is solid for mobile. M5 Max (96 GB) at 25 tok/sec works for lighter needs.',
+            '**For specific M5 Pro and M5 Max benchmarks for local LLM, see our [dedicated Apple Silicon M5 comparison →](/local-llms/apple-silicon-m5-local-llm).**',
           ],
         },
         memoryBandwidth: {

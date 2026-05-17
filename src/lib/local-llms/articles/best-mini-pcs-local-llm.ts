@@ -76,6 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Pros:** Silent (no fan noise at inference), 5.1×5.1×1.5 inches, 30 W power draw, macOS + Linux via Asahi, Ollama Metal GPU acceleration works out of the box.',
             '**Cons:** RAM cannot be upgraded. M4 Pro Max not available in mini form factor (Mac Studio only). 70B at 10–15 tok/s is slower than RTX 4090 (60–80 tok/s) but fits in a 1.5-inch tall case.',
             '**Command:** `ollama run llama3.3:70b-instruct-q4_K_M` — works natively on Apple Silicon via Metal.',
+            '**For M5 Pro and M5 Max focused comparison (Mac Studio, MacBook Pro), see our [Apple Silicon M5 local LLM guide →](/local-llms/apple-silicon-m5-local-llm).**',
           ],
         },
         'framework-desktop': {
