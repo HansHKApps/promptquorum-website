@@ -139,6 +139,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       title: pageTitle,
       description: (article as any).twitterDescription ?? metaDesc,
       images: [ogImageUrl],
+      images: [ogImageUrl],
     },
   }
 }
@@ -229,6 +230,12 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     author: {
       '@type': 'Person',
       name: 'Hans Kuepper',
+      sameAs: [
+        'https://www.linkedin.com/in/hanskuepper/',
+        'https://x.com/HansKuepperAPPs',
+        'https://github.com/HansHKApps',
+        'https://bsky.app/profile/hhkbluesky.bsky.social',
+      ],
       url: 'https://www.promptquorum.com/about',
       sameAs: [
         'https://www.linkedin.com/in/hanskuepper/',
