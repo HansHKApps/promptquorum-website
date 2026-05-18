@@ -700,6 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related',
         content: '',
         items: [
+          '[AMD Ryzen AI Max+ Mini-PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026?lang=de) — Unified Memory 64–128GB, 50 TOPS NPU für €1.200–2.600.',
           '[Apple Silicon vs. NVIDIA GPU für lokale LLMs](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=de) — Tief Vergleich Memory Architektur, Leistung, Stromeffizienz, Gebrauchtsicherheit.',
           '[Beste Mini-PCs für lokale LLMs 2026](/local-llms/best-mini-pcs-local-llm?lang=de) — Mac Mini, Intel NUC, AMD Mini Alternativen zu Mac Studio.',
           '[Lokale LLM Hardware Anleitung 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — Komplett Hardware Rahmenwerk: GPU Vergleich, CPU, Memory, Power, Pricing über Alle Plattformen.',

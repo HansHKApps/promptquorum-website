@@ -561,6 +561,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
+            '[AMD Ryzen AI Max+ Mini-PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026?lang=de) — Unified Memory 64–128GB, 50 TOPS NPU für €1.200–2.600.',
             '[Bester lokaler LLM PC Build unter €2.000](/local-llms/local-llm-pc-build-2000?lang=de) — Mid-Range Single-GPU Setup für kleine Teams.',
             '[Bester lokaler LLM PC Build unter €1.000](/local-llms/local-llm-pc-build-1000?lang=de) — Budget-Friendly 7B-13B Inferenz.',
             '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=de) — Single-GPU Vergleich für Workstation-Upgrades.',
@@ -943,6 +944,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecture Complémentaire',
           items: [
+            '[Mini-PC AMD Ryzen AI Max+ (2026)](/local-llms/best-amd-mini-pc-local-llm-2026?lang=fr) — Mémoire unifiée 64–128 Go, 50 TOPS NPU pour €1.200–2.600.',
             '[Meilleur Local LLM PC Build Sous €2 000](/local-llms/local-llm-pc-build-2000?lang=fr) — Setup single-GPU gamme-moyenne petites équipes.',
             '[Meilleur Local LLM PC Build Sous €1 000](/local-llms/local-llm-pc-build-1000?lang=fr) — Inférence 7B–13B budget.',
             '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=fr) — Comparaison single-GPU upgrades station.',
@@ -1309,6 +1311,7 @@ schema: {
           id: 'related-reading',
           title: '関連リーディング',
           items: [
+            '[AMD Ryzen AI Max+ ミニPC (2026)](/local-llms/best-amd-mini-pc-local-llm-2026?lang=ja) — ユニファイドメモリ 64–128GB、50 TOPS NPU、¥172,000–205,000。',
             '[¥220,000以下最高ローカルLLM PCビルド](/local-llms/local-llm-pc-build-2000?lang=ja) — 小チーム向けミッドレンジシングルGPUセットアップ。',
             '[¥110,000以下最高ローカルLLM PCビルド](/local-llms/local-llm-pc-build-1000?lang=ja) — バジェット向け7B–13B推論。',
             '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=ja) — ワークステーションアップグレード向けシングルGPU比較。',
@@ -1673,6 +1676,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
+            '[AMD Ryzen AI Max+迷你PC (2026)](/local-llms/best-amd-mini-pc-local-llm-2026?lang=zh) — 统一内存 64–128GB、50 TOPS NPU、¥10500–13700。',
             '[最佳$2,000本地LLM PC构建](/local-llms/local-llm-pc-build-2000?lang=zh) — 小型团队的中端单GPU设置。',
             '[最佳$1,000本地LLM PC构建](/local-llms/local-llm-pc-build-1000?lang=zh) — 经济型7B–13B推理。',
             '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=zh) — 工作站升级的单GPU对比。',
