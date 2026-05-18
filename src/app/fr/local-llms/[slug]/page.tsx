@@ -127,6 +127,8 @@ export default async function FrLocalLLMsArticlePage({ params }: PageProps) {
   const article = llmContent[key]['fr'] ?? llmContent[key]['en']
   if (!article) notFound()
 
+  const canonicalUrl = `https://www.promptquorum.com/fr/local-llms/${slug}`
+
   // Schema for French breadcrumbs
   const breadcrumbSchema = {
     '@context': 'https://schema.org',

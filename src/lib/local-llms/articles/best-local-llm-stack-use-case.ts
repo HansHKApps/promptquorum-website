@@ -484,6 +484,7 @@ for filename, review in reviews:
         'relatedReading': {
           title: 'Weiterführende Artikel',
           items: [
+            '[Beste KI-Coding-Assistenten für lokale LLM](/local-llms/best-ai-coding-assistant-local-llm?lang=de) — IDE-Wahl für Ihren Coding-Stack (Cursor, Continue.dev, Cody).',
             '[Beste lokale LLMs für Coding 2026](/local-llms/best-local-llms-for-coding?lang=de) — Qwen2.5-Coder vs. DeepSeek-Coder HumanEval-Rankings.',
             '[Lokales RAG einrichten 2026](/local-llms/local-rag-2026?lang=de) — Vollständige Implementierungsanleitung: LlamaIndex + Qdrant + Ollama.',
             '[Lokale LLM-Agenten mit LangGraph](/local-llms/local-llm-agents-with-langgraph?lang=de) — Agenten-Workflow-Framework mit Schritt-für-Schritt-Beispielen.',
@@ -764,6 +765,7 @@ for filename, review in reviews:
         'relatedReading': {
           title: 'Pour aller plus loin',
           items: [
+            '[Meilleur assistant IA de code pour LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=fr) — Choix IDE pour votre stack de codage (Cursor, Continue.dev, Cody).',
             '[Meilleurs LLM locaux pour le coding 2026](/local-llms/best-local-llms-for-coding?lang=fr) — Classements HumanEval : Qwen2.5-Coder vs DeepSeek-Coder.',
             '[Configuration RAG local 2026](/local-llms/local-rag-2026?lang=fr) — Guide complet LlamaIndex + Qdrant + Ollama.',
             '[Agents LLM locaux avec LangGraph](/local-llms/local-llm-agents-with-langgraph?lang=fr) — Framework de workflows agents avec exemples étape par étape.',
@@ -1042,6 +1044,7 @@ for filename, review in reviews:
         'relatedReading': {
           title: '関連記事',
           items: [
+            '[ローカルLLM向け最高のAIコーディングアシスタント](/local-llms/best-ai-coding-assistant-local-llm?lang=ja) — コーディングスタック用IDE選択（Cursor、Continue.dev、Cody）。',
             '[コーディング向きローカルLLM 2026](/local-llms/best-local-llms-for-coding?lang=ja) — Qwen2.5-Coder vs DeepSeek-CoderのHumanEvalランキング。',
             '[ローカルRAG設定 2026](/local-llms/local-rag-2026?lang=ja) — LlamaIndex + Qdrant + Ollamaの完全実装ガイド。',
             '[ローカルLLMエージェント（LangGraph）](/local-llms/local-llm-agents-with-langgraph?lang=ja) — ステップごとのエージェントワークフローフレームワーク。',
@@ -1320,6 +1323,7 @@ for filename, review in reviews:
         'relatedReading': {
           title: '相关阅读',
           items: [
+            '[本地LLM最佳AI编码助手](/local-llms/best-ai-coding-assistant-local-llm?lang=zh) — 编码栈的IDE选择（Cursor、Continue.dev、Cody）。',
             '[编程最佳本地LLM 2026](/local-llms/best-local-llms-for-coding?lang=zh) — Qwen2.5-Coder vs DeepSeek-Coder HumanEval排名。',
             '[本地RAG配置 2026](/local-llms/local-rag-2026?lang=zh) — LlamaIndex + Qdrant + Ollama完整实现指南。',
             '[LangGraph本地LLM智能体](/local-llms/local-llm-agents-with-langgraph?lang=zh) — 逐步示例的智能体工作流框架。',

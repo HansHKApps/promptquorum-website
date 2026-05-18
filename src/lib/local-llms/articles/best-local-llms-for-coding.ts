@@ -843,6 +843,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
+            '[Beste KI-Coding-Assistenten für lokale LLM](/local-llms/best-ai-coding-assistant-local-llm?lang=de) -- Wähle das richtige IDE-Tool (Cursor, Continue.dev, Cody), um dein Programmiermodell zu verwenden.',
             '[Lokaler LLM-Entwickler-Stack](/local-llms/local-llm-developer-stack?lang=de) -- Der komplette CLI → API → Produktions-Setup für Entwicklungs-Workflows.',
             '[Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) -- vollständige Modellrangierungen einschließlich aller Programmiermodelle bei jedem Größentier',
             '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de) -- RAM-Anforderungen für Qwen2.5-Coder 32B und DeepSeek-Coder V2 bei verschiedenen Quantisierungsstufen',
@@ -1255,6 +1256,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
+            '[Meilleur assistant IA de code pour LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=fr) — Choisissez le bon outil IDE (Cursor, Continue.dev, Cody) pour utiliser votre modèle de code.',
             '[Stack LLM Développeur Local](/local-llms/local-llm-developer-stack?lang=fr) — La configuration complète CLI → API → production pour les flux de travail de développement.',
             '[Meilleurs LLMs locaux 2026](/local-llms/best-local-llms-2026?lang=fr) — classements complets de modèles incluant tous les modèles de programmation à chaque niveau de taille',
             '[Quantification LLM expliquée](/local-llms/llm-quantization-explained?lang=fr) — exigences RAM pour Qwen2.5-Coder 32B et DeepSeek-Coder V2 à différents niveaux de quantification',
@@ -1608,6 +1610,7 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
+            '[ローカルLLM向け最高のAIコーディングアシスタント](/local-llms/best-ai-coding-assistant-local-llm?lang=ja) — 適切なIDEツール（Cursor、Continue.dev、Cody）を選択',
             '[ローカルLLM開発スタック](/local-llms/local-llm-developer-stack?lang=ja) — CLI → API → 本番環境の完全セットアップ',
             '[VS Code用ローカルLLM：Continue.devインストール](/local-llms/how-to-install-continue-dev?lang=ja) — IDE統合ガイド',
             '[ローカルLLM量子化解説](/local-llms/llm-quantization-explained?lang=ja) — Q4 vs Q5 vs Q8',
@@ -1947,6 +1950,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
+            '[本地LLM最佳AI编码助手](/local-llms/best-ai-coding-assistant-local-llm?lang=zh) ——选择正确的IDE工具（Cursor、Continue.dev、Cody）来使用您的代码模型。',
             '[本地LLM开发栈](/local-llms/local-llm-developer-stack?lang=zh) ——CLI → API → 生产的完整设置。',
             '[VS Code本地LLM：Continue.dev安装](/local-llms/how-to-install-continue-dev?lang=zh) ——IDE集成指南',
             '[本地LLM量化解释](/local-llms/llm-quantization-explained?lang=zh) ——Q4 vs Q5 vs Q8',

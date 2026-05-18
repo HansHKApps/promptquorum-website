@@ -372,6 +372,7 @@ schema: {
         relatedReading: {
           title: 'Weiterführende Lektüre',
           items: [
+            '[Beste KI-Coding-Assistenten für lokale LLM](/local-llms/best-ai-coding-assistant-local-llm?lang=de) -- Umfassender Vergleich von Cursor, Continue.dev, Cody, Tabnine und Windsurf mit Unterstützung für lokale LLMs.',
             '[Lokaler LLM-Entwickler-Stack](/local-llms/local-llm-developer-stack?lang=de) -- Vollständiger Stack mit API-Server und Produktions-Monitoring über die IDE-Integration hinaus.',
             '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) -- Ollama für Code-Vervollständigungen einrichten.',
             '[Beste lokale LLMs für Programmierung](/local-llms/best-local-llms-for-coding?lang=de) -- Detaillierter Programmierungs-Modell-Benchmark.',
@@ -548,6 +549,7 @@ schema: {
         relatedReading: {
           title: 'Lectures connexes',
           items: [
+            '[Meilleur assistant IA de code pour LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=fr) -- Comparaison complète de Cursor, Continue.dev, Cody, Tabnine et Windsurf avec support LLM local.',
             '[Stack LLM Développeur Local](/local-llms/local-llm-developer-stack?lang=fr) -- Stack complet avec serveur API et monitoring de production au-delà de l\'intégration IDE.',
             '[Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) -- Configurer Ollama pour les complétions de code.',
             '[Meilleurs LLM locaux pour le codage](/local-llms/best-local-llms-for-coding?lang=fr) -- Benchmark détaillé du modèle de codage.',
@@ -723,6 +725,7 @@ schema: {
         relatedReading: {
           title: '関連情報',
           items: [
+            '[ローカルLLM向け最高のAIコーディングアシスタント](/local-llms/best-ai-coding-assistant-local-llm?lang=ja) -- Cursor、Continue.dev、Cody、Tabnine、Windsurfの包括的な比較とローカルLLMサポート。',
             '[ローカルLLM開発スタック](/local-llms/local-llm-developer-stack?lang=ja) -- IDE統合を超えたAPIサーバーと本番モニタリングを含む完全スタック。',
             '[Ollama をインストール](/local-llms/how-to-install-ollama?lang=ja) -- コード補完用 Ollama セットアップ。',
             '[コーディング用の最高のローカル LLM](/local-llms/best-local-llms-for-coding?lang=ja) -- 詳細なコーディングモデルベンチマーク。',
@@ -898,6 +901,7 @@ schema: {
         relatedReading: {
           title: '相关阅读',
           items: [
+            '[本地LLM最佳AI编码助手](/local-llms/best-ai-coding-assistant-local-llm?lang=zh) -- Cursor、Continue.dev、Cody、Tabnine和Windsurf与本地LLM支持的全面对比。',
             '[本地LLM开发栈](/local-llms/local-llm-developer-stack?lang=zh) -- 超越IDE集成的完整栈，包含API服务器搭建和生产监控。',
             '[安装Ollama](/local-llms/how-to-install-ollama?lang=zh) -- 代码补全Ollama设置。',
             '[编码的最佳本地LLM](/local-llms/best-local-llms-for-coding?lang=zh) -- 详细编码模型基准。',

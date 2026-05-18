@@ -429,6 +429,7 @@ schema: {
           id: 'related-reading',
           title: 'Verwandte Ressourcen',
           items: [
+            '[Beste KI-Coding-Assistenten für lokale LLM](/local-llms/best-ai-coding-assistant-local-llm?lang=de) — Umfassender Vergleich von Cursor, Continue.dev, Cody, Tabnine und Windsurf mit Unterstützung für lokale LLMs.',
             '[Lokale LLMs mit VS Code und Cursor](/local-llms/local-llms-with-vscode-cursor?lang=de) — Detaillierte Setup-Anleitung für beide IDEs',
             '[Prompt-Engineering-Anleitung](/prompt-engineering?lang=de) — Beherrschen Sie Prompt-Techniken, um die Code-Generierung zu verbessern',
             '[Beste lokale LLMs für Programmieren](/local-llms/best-local-llms-for-coding?lang=de) — Detaillierte Benchmarks und Modellvergleiche',
@@ -669,6 +670,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecture associée',
           items: [
+            '[Meilleur assistant IA de code pour LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=fr) — Comparaison complète de Cursor, Continue.dev, Cody, Tabnine et Windsurf avec support LLM local.',
             '[LLMs locaux avec VS Code et Cursor](/local-llms/local-llms-with-vscode-cursor?lang=fr) — Guide de configuration détaillé pour les deux IDEs',
             '[Guide du Prompt Engineering](/prompt-engineering?lang=fr) — Maîtrisez les techniques de prompting pour améliorer la génération de code',
             '[Meilleurs LLMs locaux pour la programmation](/local-llms/best-local-llms-for-coding?lang=fr) — Benchmarks détaillés et comparaisons de modèles',
@@ -907,6 +909,7 @@ schema: {
           id: 'related-reading',
           title: '関連リソース',
           items: [
+            '[ローカルLLM向け最高のAIコーディングアシスタント](/local-llms/best-ai-coding-assistant-local-llm?lang=ja) -- Cursor、Continue.dev、Cody、Tabnine、Windsurfの包括的な比較とローカルLLMサポート。',
             '[VS CodeとCursorでローカルLLM](/local-llms/local-llms-with-vscode-cursor?lang=ja) — 両IDE向けの詳細セットアップガイド',
             '[Prompt Engineering Guide](/prompt-engineering?lang=ja) — コード生成を改善するプロンプト技法をマスター',
             '[プログラミング向けベストローカルLLM](/local-llms/best-local-llms-for-coding?lang=ja) — 詳細なベンチマークとモデル比較',
@@ -1145,6 +1148,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
+            '[本地LLM最佳AI编码助手](/local-llms/best-ai-coding-assistant-local-llm?lang=zh) -- Cursor、Continue.dev、Cody、Tabnine和Windsurf与本地LLM支持的全面对比。',
             '[使用VS Code和Cursor的本地LLM](/local-llms/local-llms-with-vscode-cursor?lang=zh) — 两个IDE的详细设置指南',
             '[Prompt Engineering指南](/prompt-engineering?lang=zh) — 掌握提示技巧以改进代码生成',
             '[编程最佳本地LLM](/local-llms/best-local-llms-for-coding?lang=zh) — 详细的基准和模型比较',

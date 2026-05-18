@@ -434,6 +434,7 @@ schema: {
         'relatedReading': {
           title: 'Weiterführende Lektüre',
           items: [
+            '[Beste KI-Coding-Assistenten für lokale LLM](/local-llms/best-ai-coding-assistant-local-llm?lang=de) -- Wählen Sie Ihre IDE: Cursor, Continue.dev, Cody, Tabnine mit Unterstützung für lokale LLMs.',
             '[OpenAI-kompatible API mit lokalen LLMs](/local-llms/local-llm-openai-compatible-api?lang=de)',
             '[Ollama-Installations- und Einrichtungsanleitung](/local-llms/how-to-install-ollama?lang=de)',
             '[Lokale LLMs mit VS Code & Cursor](/local-llms/local-llms-with-vscode-cursor?lang=de)',
@@ -638,6 +639,7 @@ schema: {
         'relatedReading': {
           title: 'Lectures complémentaires',
           items: [
+            '[Meilleur assistant IA de code pour LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=fr) -- Choisissez votre IDE : Cursor, Continue.dev, Cody, Tabnine avec support LLM local.',
             '[API compatible OpenAI avec LLMs locaux](/local-llms/local-llm-openai-compatible-api?lang=fr)',
             '[Guide d\'installation et de configuration d\'Ollama](/local-llms/how-to-install-ollama?lang=fr)',
             '[LLMs locaux avec VS Code & Cursor](/local-llms/local-llms-with-vscode-cursor?lang=fr)',
@@ -841,6 +843,7 @@ schema: {
         'relatedReading': {
           title: '関連記事',
           items: [
+            '[ローカルLLM向け最高のAIコーディングアシスタント](/local-llms/best-ai-coding-assistant-local-llm?lang=ja) -- IDE選択：Cursor、Continue.dev、Cody、TabnineはローカルLLMをサポートしています。',
             '[ローカルLLMとOpenAI互換API](/local-llms/local-llm-openai-compatible-api?lang=ja)',
             '[Ollamaのインストールとセットアップガイド](/local-llms/how-to-install-ollama?lang=ja)',
             '[VS Code＆CursorでローカルLLMを使う](/local-llms/local-llms-with-vscode-cursor?lang=ja)',
@@ -1044,6 +1047,7 @@ schema: {
         'relatedReading': {
           title: '延伸阅读',
           items: [
+            '[本地LLM最佳AI编码助手](/local-llms/best-ai-coding-assistant-local-llm?lang=zh) -- 选择您的IDE：Cursor、Continue.dev、Cody、Tabnine支持本地LLM。',
             '[本地LLM与OpenAI兼容API](/local-llms/local-llm-openai-compatible-api?lang=zh)',
             '[Ollama安装与配置指南](/local-llms/how-to-install-ollama?lang=zh)',
             '[在VS Code和Cursor中使用本地LLM](/local-llms/local-llms-with-vscode-cursor?lang=zh)',
