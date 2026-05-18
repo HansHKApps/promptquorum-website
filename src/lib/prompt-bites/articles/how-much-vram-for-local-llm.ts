@@ -57,12 +57,57 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
-        items: ['TBD'],
+        items: [
+          '4 GB VRAM runs Phi-4 Mini Q4 and Gemma 2 2B comfortably',
+          '6 GB is the entry point for Llama 3 8B at Q4_K_M — the most popular local model',
+          '12 GB unlocks Qwen 14B Q4, the best quality-per-dollar tier',
+          '70B models require 40+ GB — plan for dual RTX 3090 or Apple M-series with large unified memory',
+        ],
+      },
+      body1: {
+        title: 'VRAM Requirements by Model Size',
+        content: [
+          'As of May 2026, each VRAM tier maps to a specific model size. <strong>4 GB handles small models like Phi-4 Mini. 6 GB runs the popular 7–8B tier. 12 GB is the sweet spot for 13–14B models. 40+ GB is required for 70B.</strong>',
+          'Use the table below as a quick decision reference. The "Speed" column assumes Ollama on a desktop GPU running at default context (2048 tokens).',
+        ],
+        columns: ['VRAM', 'Best Model at Q4_K_M', 'Speed'],
+        rows: [
+          { 'VRAM': '4 GB', 'Best Model at Q4_K_M': 'Phi-4 Mini Q4', 'Speed': '~25 tok/s' },
+          { 'VRAM': '6 GB', 'Best Model at Q4_K_M': 'Llama 3 8B Q4_K_M', 'Speed': '~20 tok/s' },
+          { 'VRAM': '8 GB', 'Best Model at Q4_K_M': 'Mistral 7B Q5_K_M', 'Speed': '~18 tok/s' },
+          { 'VRAM': '12 GB', 'Best Model at Q4_K_M': 'Qwen 14B Q4_K_M', 'Speed': '~15 tok/s' },
+          { 'VRAM': '16+ GB', 'Best Model at Q4_K_M': 'Qwen 32B Q4 or Llama 70B partial', 'Speed': '~8 tok/s' },
+        ],
+      },
+      body2: {
+        title: 'When Your VRAM Is Not Enough',
+        content: [
+          'If a model exceeds your VRAM, you have three options: lower the quantization (Q4_K_M instead of Q5), reduce the context window with <code>--num-ctx 2048</code>, or let Ollama offload layers to system RAM.',
+          'CPU offload works but is slow — each layer moved to RAM adds latency. For interactive use, stay within your GPU\'s VRAM limit. Reducing context from 4096 to 2048 tokens saves approximately 2 GB on a 7B model.',
+          'For a full breakdown of model sizes and the math behind VRAM estimates, see the <a href="/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">complete VRAM guide for local LLMs</a>. For the 7B tier specifically, see <a href="/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">how much RAM a 7B model needs</a>.',
+        ],
       },
       faq: {
         id: 'faq',
         title: 'Quick Answers About VRAM',
-        faqs: [],
+        faqs: [
+          {
+            q: 'Is 8 GB VRAM enough for local LLMs?',
+            a: 'Yes. 8 GB runs Llama 3 8B at Q5_K_M at around 18 tokens per second, or Mistral 7B at Q5_K_M with headroom to spare. Most day-to-day chat and coding tasks are well-covered at this tier.',
+          },
+          {
+            q: 'Can I run a 7B model on 4 GB VRAM?',
+            a: 'No. A 7B model at Q4 needs 5–6 GB of VRAM. The smallest usable quantization still exceeds 4 GB. See <a href="/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">how much RAM a 7B model needs</a> for the full breakdown.',
+          },
+          {
+            q: 'Does context window size affect VRAM usage?',
+            a: 'Yes. Each additional 1,000 context tokens uses approximately 250 MB of VRAM on a 7B model. The default 2048-token context uses ~0.5 GB; 16,384 tokens uses ~4 GB on top of the model weight.',
+          },
+          {
+            q: 'What should I do if my model uses more VRAM than expected?',
+            a: 'Set <code>--num-ctx 2048</code> in your Ollama model run command to cap the context window. This reduces VRAM by up to 2 GB on 7B models and is the fastest fix without changing the model file.',
+          },
+        ],
       },
     },
   },
