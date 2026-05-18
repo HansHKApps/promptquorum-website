@@ -28,18 +28,405 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
-      ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
-      zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: {
+        question: 'Qwen 14B vs. Llama 3 8B: Welches läuft lokal besser?',
+        answer: 'Llama 3 8B passt in 6 GB VRAM und läuft schneller. Qwen 2.5 14B benötigt 10+ GB, erzielt aber höhere Benchmark-Werte. Mit 12 GB VRAM gewinnt Qwen 14B bei der Qualität.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: 6 GB VRAM, ~25 tok/s auf RTX 3060',
+          'Qwen 2.5 14B Q4_K_M: 10 GB VRAM, ~15 tok/s auf RTX 3060',
+          'Qwen 14B hat bessere Qualität; Llama 8B ist schneller',
+        ],
+        updatedDate: '2026-05',
+      },
+      fr: {
+        question: 'Qwen 14B vs Llama 3 8B : lequel tourne mieux en local ?',
+        answer: 'Llama 3 8B tient en 6 Go de VRAM et tourne plus vite. Qwen 2.5 14B nécessite 10+ Go mais obtient de meilleurs scores sur les benchmarks. Avec 12 Go de VRAM, Qwen 14B gagne en qualité.',
+        bullets: [
+          'Llama 3 8B Q4_K_M : 6 Go de VRAM, ~25 tok/s sur RTX 3060',
+          'Qwen 2.5 14B Q4_K_M : 10 Go de VRAM, ~15 tok/s sur RTX 3060',
+          'Qwen 14B offre une meilleure qualité ; Llama 8B est plus rapide',
+        ],
+        updatedDate: '2026-05',
+      },
+      ja: {
+        question: 'Qwen 14B対Llama 3 8B：ローカルでどちらが優れているか？',
+        answer: 'Llama 3 8Bは6 GB VRAMに収まり高速に動作します。Qwen 2.5 14Bは10 GB以上が必要ですがベンチマークスコアが高いです。12 GB VRAMがあればQwen 14Bが品質で勝ります。',
+        bullets: [
+          'Llama 3 8B Q4_K_M：6 GB VRAM、RTX 3060で~25 tok/s',
+          'Qwen 2.5 14B Q4_K_M：10 GB VRAM、RTX 3060で~15 tok/s',
+          'Qwen 14Bは品質が高く、Llama 8Bは高速',
+        ],
+        updatedDate: '2026-05',
+      },
+      zh: {
+        question: 'Qwen 14B 对比 Llama 3 8B：哪款本地运行更好？',
+        answer: 'Llama 3 8B 仅需6 GB VRAM 且运行更快。Qwen 2.5 14B 需要10 GB 以上但基准分数更高。拥有12 GB VRAM 时，Qwen 14B 在质量上更胜一筹。',
+        bullets: [
+          'Llama 3 8B Q4_K_M：6 GB VRAM，RTX 3060 上约25 tok/s',
+          'Qwen 2.5 14B Q4_K_M：10 GB VRAM，RTX 3060 上约15 tok/s',
+          'Qwen 14B 质量更好；Llama 8B 速度更快',
+        ],
+        updatedDate: '2026-05',
+      },
     },
     sections: {
-      tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] },
-      faq: { id: 'faq', title: 'Quick Answers About Qwen 14B vs Llama 8B', faqs: [] },
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3 8B Q4_K_M needs only 6 GB VRAM and delivers ~25 tok/s on RTX 3060 — the right pick for interactive speed',
+          'Qwen 2.5 14B Q4_K_M needs 10 GB VRAM and runs at ~15 tok/s — but scores 8–10 points higher on MMLU and reasoning benchmarks',
+          'The VRAM crossover point is 12 GB: below that, Llama 8B is the only option; at 12 GB, Qwen 14B wins on quality',
+          'For coding tasks specifically, the gap widens further in Qwen 14B\'s favor — Qwen Coder variants add additional code-benchmark advantage',
+        ],
+      },
+      body1: {
+        title: 'Llama 3 8B Wins on Speed and VRAM Fit',
+        content: [
+          '<strong>Llama 3 8B at Q4_K_M quantization uses 6 GB VRAM and runs at ~25 tokens per second on an RTX 3060 12 GB — making it the default choice for any setup with under 10 GB VRAM.</strong> Its 8B parameter count translates into snappy, interactive-speed responses that feel natural for chat and short code sessions.',
+          'Qwen 2.5 14B at Q4_K_M requires approximately 10 GB VRAM and produces ~15 tok/s on the same card. The lower throughput is noticeable in real-time conversations but acceptable for batch summarization or longer document processing where quality matters more than latency.',
+          'The speed difference (25 vs 15 tok/s) means Llama 3 8B generates a 200-token answer in about 8 seconds, while Qwen 2.5 14B takes about 13 seconds. For single-turn queries this gap is minor; for multi-turn chat sessions it compounds.',
+        ],
+        columns: ['Model', 'VRAM (Q4_K_M)', 'Speed (RTX 3060)', 'MMLU Score'],
+        rows: [
+          { 'Model': 'Llama 3 8B', 'VRAM (Q4_K_M)': '6 GB', 'Speed (RTX 3060)': '~25 tok/s', 'MMLU Score': '66.6%' },
+          { 'Model': 'Qwen 2.5 14B', 'VRAM (Q4_K_M)': '10 GB', 'Speed (RTX 3060)': '~15 tok/s', 'MMLU Score': '74.8%' },
+        ],
+      },
+      body2: {
+        title: 'Qwen 2.5 14B Wins on Quality When VRAM Allows',
+        content: [
+          '<strong>Qwen 2.5 14B scores 74.8% on MMLU versus 66.6% for Llama 3 8B — an 8-point gap that reflects in noticeably better multi-step reasoning, instruction following, and structured output consistency.</strong> The difference is particularly visible on tasks that require holding and applying context across multiple paragraphs.',
+          'If your primary use case is code completion, the quality gap grows. Qwen 2.5 Coder 14B (the code-tuned variant of the same base) scores 78.4% on HumanEval. Llama 3 8B generic scores around 55% on the same benchmark — a 23-point difference on coding tasks.',
+          'For a deeper look at coding model performance including benchmark tables, see the <a href="/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">best 14B models for coding</a> comparison.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Quick Answers About Qwen 14B vs Llama 8B',
+        faqs: [
+          {
+            q: 'Can Qwen 2.5 14B run on a 6 GB VRAM GPU?',
+            a: 'No. Qwen 2.5 14B at Q4_K_M requires approximately 10 GB VRAM. On a 6 GB card you would need to drop to Q2_K quantization, which causes significant quality degradation. Llama 3 8B is the correct model for 6 GB VRAM.',
+          },
+          {
+            q: 'Is Qwen 2.5 14B or Llama 3 8B better for coding?',
+            a: 'Qwen 2.5 14B is substantially better for coding. Qwen Coder 14B (the code-tuned variant) scores 78.4% on HumanEval versus ~55% for Llama 3 8B. Use Llama 3 8B only when VRAM prevents running Qwen.',
+          },
+          {
+            q: 'Does Qwen 2.5 14B support longer context than Llama 3 8B?',
+            a: 'Qwen 2.5 14B supports a 128k context window natively. Llama 3 8B supports 8k by default, though RoPE-extended variants can reach 128k with some quality loss. For long-document tasks, Qwen 2.5 14B has a clear advantage even before accounting for its larger parameter count.',
+          },
+          {
+            q: 'What if I have exactly 8 GB VRAM?',
+            a: 'At 8 GB VRAM you can run Llama 3 8B Q4_K_M comfortably with ~2 GB headroom. Qwen 2.5 14B will not fit reliably. Consider Qwen 2.5 7B Q4_K_M as a middle ground — it uses ~5 GB VRAM and scores higher than Llama 3 8B on most benchmarks. See <a href="/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">best local LLM for coding with 12 GB VRAM</a> for context on how VRAM constraints affect model choice.',
+          },
+        ],
+      },
     },
   },
-  de: { theme: 'Model Comparisons', title: '[DE translation pending]', seoTitle: '[DE translation pending]', metaDescription: '[DE translation pending]', publishDate: '2026-05-18', freshness_tier: 'semi_annual', next_refresh_due: '2026-11-18', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] }, faq: { id: 'faq', title: 'FAQ', faqs: [] } } },
-  fr: { theme: 'Model Comparisons', title: '[FR translation pending]', seoTitle: '[FR translation pending]', metaDescription: '[FR translation pending]', publishDate: '2026-05-18', freshness_tier: 'semi_annual', next_refresh_due: '2026-11-18', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] }, faq: { id: 'faq', title: 'FAQ', faqs: [] } } },
-  ja: { theme: 'Model Comparisons', title: '[JA translation pending]', seoTitle: '[JA translation pending]', metaDescription: '[JA translation pending]', publishDate: '2026-05-18', freshness_tier: 'semi_annual', next_refresh_due: '2026-11-18', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] }, faq: { id: 'faq', title: 'FAQ', faqs: [] } } },
-  zh: { theme: 'Model Comparisons', title: '[ZH translation pending]', seoTitle: '[ZH translation pending]', metaDescription: '[ZH translation pending]', publishDate: '2026-05-18', freshness_tier: 'semi_annual', next_refresh_due: '2026-11-18', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] }, faq: { id: 'faq', title: 'FAQ', faqs: [] } } },
+  de: {
+    theme: 'Model Comparisons',
+    title: 'Qwen 14B vs. Llama 3 8B: Welches läuft lokal besser?',
+    seoTitle: 'Qwen 14B vs. Llama 3 8B lokal? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3 8B benötigt nur 6 GB VRAM und läuft schneller. Qwen 2.5 14B braucht 10+ GB, erzielt aber bessere Benchmark-Werte. Mit 12 GB VRAM gewinnt Qwen 14B bei der Qualität. Kurze Antwort von PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      de: {
+        question: 'Qwen 14B vs. Llama 3 8B: Welches läuft lokal besser?',
+        answer: 'Llama 3 8B passt in 6 GB VRAM und läuft schneller. Qwen 2.5 14B benötigt 10+ GB, erzielt aber höhere Benchmark-Werte. Mit 12 GB VRAM gewinnt Qwen 14B bei der Qualität.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: 6 GB VRAM, ~25 tok/s auf RTX 3060',
+          'Qwen 2.5 14B Q4_K_M: 10 GB VRAM, ~15 tok/s auf RTX 3060',
+          'Qwen 14B hat bessere Qualität; Llama 8B ist schneller',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3 8B Q4_K_M benötigt nur 6 GB VRAM und liefert ~25 tok/s auf RTX 3060 — die richtige Wahl für interaktive Geschwindigkeit',
+          'Qwen 2.5 14B Q4_K_M benötigt 10 GB VRAM und läuft mit ~15 tok/s — erzielt aber 8–10 Punkte mehr auf MMLU und Reasoning-Benchmarks',
+          'Der VRAM-Schwellenwert liegt bei 12 GB: Darunter ist Llama 8B die einzige Option; bei 12 GB gewinnt Qwen 14B bei der Qualität',
+          'Bei Coding-Aufgaben wächst der Vorsprung von Qwen 14B noch weiter — Qwen-Coder-Varianten bieten zusätzlichen Vorteil auf Code-Benchmarks',
+        ],
+      },
+      body1: {
+        title: 'Llama 3 8B gewinnt bei Geschwindigkeit und VRAM-Bedarf',
+        content: [
+          '<strong>Llama 3 8B in der Q4_K_M-Quantisierung verwendet 6 GB VRAM und läuft auf einer RTX 3060 12 GB mit ~25 Tokens pro Sekunde — damit ist es die Standardwahl für jedes System mit weniger als 10 GB VRAM.</strong> Die 8B-Parameter-Anzahl übersetzt sich in schnelle, interaktionsfähige Antworten, die sich für Chat und kurze Code-Sitzungen natürlich anfühlen.',
+          'Qwen 2.5 14B benötigt bei Q4_K_M etwa 10 GB VRAM und erzeugt auf derselben Karte ~15 tok/s. Der geringere Durchsatz ist bei Echtzeit-Konversationen spürbar, aber akzeptabel für Batch-Zusammenfassungen oder längere Dokumentenverarbeitung, bei der Qualität wichtiger ist als Latenz.',
+          'Der Geschwindigkeitsunterschied (25 vs. 15 tok/s) bedeutet, dass Llama 3 8B eine 200-Token-Antwort in etwa 8 Sekunden generiert, während Qwen 2.5 14B etwa 13 Sekunden benötigt. Bei einzelnen Anfragen ist der Unterschied gering; bei mehrteiligen Chat-Sitzungen summiert er sich.',
+        ],
+        columns: ['Modell', 'VRAM (Q4_K_M)', 'Geschwindigkeit (RTX 3060)', 'MMLU-Score'],
+        rows: [
+          { 'Modell': 'Llama 3 8B', 'VRAM (Q4_K_M)': '6 GB', 'Geschwindigkeit (RTX 3060)': '~25 tok/s', 'MMLU-Score': '66,6 %' },
+          { 'Modell': 'Qwen 2.5 14B', 'VRAM (Q4_K_M)': '10 GB', 'Geschwindigkeit (RTX 3060)': '~15 tok/s', 'MMLU-Score': '74,8 %' },
+        ],
+      },
+      body2: {
+        title: 'Qwen 2.5 14B gewinnt bei Qualität, wenn VRAM ausreicht',
+        content: [
+          '<strong>Qwen 2.5 14B erzielt 74,8 % auf MMLU gegenüber 66,6 % für Llama 3 8B — ein 8-Punkte-Vorsprung, der sich in spürbar besserem mehrstufigen Reasoning, Instruktionsbefolgung und konsistenter strukturierter Ausgabe niederschlägt.</strong> Der Unterschied zeigt sich besonders bei Aufgaben, die das Halten und Anwenden von Kontext über mehrere Absätze hinweg erfordern.',
+          'Bei Code-Vervollständigung wächst der Qualitätsunterschied noch weiter. Qwen 2.5 Coder 14B (die code-optimierte Variante derselben Basis) erzielt 78,4 % auf HumanEval. Llama 3 8B generic erreicht auf demselben Benchmark etwa 55 % — ein Unterschied von 23 Punkten bei Coding-Aufgaben.',
+          'Einen detaillierteren Blick auf die Coding-Modell-Performance einschließlich Benchmark-Tabellen finden Sie im Vergleich <a href="/de/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">beste 14B-Modelle für Coding</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Schnelle Antworten zu Qwen 14B vs. Llama 8B',
+        faqs: [
+          {
+            q: 'Kann Qwen 2.5 14B auf einer GPU mit 6 GB VRAM laufen?',
+            a: 'Nein. Qwen 2.5 14B bei Q4_K_M benötigt etwa 10 GB VRAM. Auf einer 6-GB-Karte müssten Sie auf Q2_K-Quantisierung zurückgreifen, was zu erheblichem Qualitätsverlust führt. Llama 3 8B ist das richtige Modell für 6 GB VRAM.',
+          },
+          {
+            q: 'Ist Qwen 2.5 14B oder Llama 3 8B besser für Coding?',
+            a: 'Qwen 2.5 14B ist für Coding deutlich besser. Qwen Coder 14B (die code-optimierte Variante) erzielt 78,4 % auf HumanEval gegenüber ~55 % für Llama 3 8B. Verwenden Sie Llama 3 8B für Coding nur, wenn VRAM den Betrieb von Qwen verhindert.',
+          },
+          {
+            q: 'Unterstützt Qwen 2.5 14B einen längeren Kontext als Llama 3 8B?',
+            a: 'Qwen 2.5 14B unterstützt nativ ein 128k-Kontextfenster. Llama 3 8B unterstützt standardmäßig 8k, obwohl RoPE-erweiterte Varianten mit gewissem Qualitätsverlust 128k erreichen können. Bei Aufgaben mit langen Dokumenten hat Qwen 2.5 14B selbst vor Berücksichtigung seiner größeren Parameteranzahl einen klaren Vorteil.',
+          },
+          {
+            q: 'Was ist, wenn ich genau 8 GB VRAM habe?',
+            a: 'Mit 8 GB VRAM können Sie Llama 3 8B Q4_K_M bequem mit ~2 GB Puffer ausführen. Qwen 2.5 14B wird nicht zuverlässig passen. Erwägen Sie Qwen 2.5 7B Q4_K_M als Mittelweg — es verwendet ~5 GB VRAM und erzielt auf den meisten Benchmarks höhere Werte als Llama 3 8B. Den Leitfaden <a href="/de/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">bestes lokales LLM für Coding mit 12 GB VRAM</a> finden Sie für Kontext zu VRAM-Einschränkungen.',
+          },
+        ],
+      },
+    },
+  },
+  fr: {
+    theme: 'Model Comparisons',
+    title: 'Qwen 14B vs Llama 3 8B : lequel tourne mieux en local ?',
+    seoTitle: 'Qwen 14B vs Llama 3 8B en local ? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3 8B tient en 6 Go de VRAM et tourne plus vite. Qwen 2.5 14B nécessite 10+ Go mais obtient de meilleurs scores. Avec 12 Go de VRAM, Qwen 14B gagne en qualité. Réponse rapide par PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      fr: {
+        question: 'Qwen 14B vs Llama 3 8B : lequel tourne mieux en local ?',
+        answer: 'Llama 3 8B tient en 6 Go de VRAM et tourne plus vite. Qwen 2.5 14B nécessite 10+ Go mais obtient de meilleurs scores sur les benchmarks. Avec 12 Go de VRAM, Qwen 14B gagne en qualité.',
+        bullets: [
+          'Llama 3 8B Q4_K_M : 6 Go de VRAM, ~25 tok/s sur RTX 3060',
+          'Qwen 2.5 14B Q4_K_M : 10 Go de VRAM, ~15 tok/s sur RTX 3060',
+          'Qwen 14B offre une meilleure qualité ; Llama 8B est plus rapide',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3 8B Q4_K_M ne nécessite que 6 Go de VRAM et délivre ~25 tok/s sur RTX 3060 — le bon choix pour une vitesse interactive',
+          'Qwen 2.5 14B Q4_K_M nécessite 10 Go de VRAM et tourne à ~15 tok/s — mais obtient 8 à 10 points de plus sur MMLU et les benchmarks de raisonnement',
+          'Le seuil VRAM est à 12 Go : en dessous, Llama 8B est la seule option ; à 12 Go, Qwen 14B gagne en qualité',
+          'Pour les tâches de coding, l\'écart s\'élargit encore en faveur de Qwen 14B — les variantes Qwen Coder ajoutent un avantage supplémentaire sur les benchmarks de code',
+        ],
+      },
+      body1: {
+        title: 'Llama 3 8B gagne en vitesse et en empreinte VRAM',
+        content: [
+          '<strong>Llama 3 8B en quantification Q4_K_M utilise 6 Go de VRAM et tourne à ~25 tokens par seconde sur une RTX 3060 12 Go — ce qui en fait le choix par défaut pour tout système disposant de moins de 10 Go de VRAM.</strong> Ses 8 milliards de paramètres se traduisent par des réponses rapides et interactives, naturelles pour le chat et les sessions de code courtes.',
+          'Qwen 2.5 14B en Q4_K_M nécessite environ 10 Go de VRAM et produit ~15 tok/s sur la même carte. Le débit inférieur est perceptible en conversation en temps réel, mais acceptable pour la synthèse par lots ou le traitement de longs documents où la qualité prime sur la latence.',
+          'La différence de vitesse (25 vs 15 tok/s) signifie que Llama 3 8B génère une réponse de 200 tokens en environ 8 secondes, contre 13 secondes pour Qwen 2.5 14B. Pour les requêtes uniques, cet écart est mineur ; il s\'accumule sur les sessions de chat multi-tours.',
+        ],
+        columns: ['Modèle', 'VRAM (Q4_K_M)', 'Vitesse (RTX 3060)', 'Score MMLU'],
+        rows: [
+          { 'Modèle': 'Llama 3 8B', 'VRAM (Q4_K_M)': '6 Go', 'Vitesse (RTX 3060)': '~25 tok/s', 'Score MMLU': '66,6 %' },
+          { 'Modèle': 'Qwen 2.5 14B', 'VRAM (Q4_K_M)': '10 Go', 'Vitesse (RTX 3060)': '~15 tok/s', 'Score MMLU': '74,8 %' },
+        ],
+      },
+      body2: {
+        title: 'Qwen 2.5 14B gagne en qualité quand le VRAM le permet',
+        content: [
+          '<strong>Qwen 2.5 14B obtient 74,8 % sur MMLU contre 66,6 % pour Llama 3 8B — un écart de 8 points qui se traduit par un raisonnement multi-étapes, un suivi d\'instructions et une cohérence des sorties structurées nettement meilleurs.</strong> La différence est particulièrement visible sur les tâches nécessitant de retenir et d\'appliquer le contexte sur plusieurs paragraphes.',
+          'Pour la complétion de code, l\'écart de qualité se creuse encore davantage. Qwen 2.5 Coder 14B (la variante optimisée pour le code de la même base) obtient 78,4 % sur HumanEval. Llama 3 8B générique atteint environ 55 % sur le même benchmark — soit 23 points d\'écart sur les tâches de coding.',
+          'Pour une analyse approfondie des performances des modèles de coding, incluant des tableaux de benchmarks, consultez la comparaison <a href="/fr/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">meilleurs modèles 14B pour le coding</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Réponses rapides sur Qwen 14B vs Llama 8B',
+        faqs: [
+          {
+            q: 'Qwen 2.5 14B peut-il fonctionner sur un GPU avec 6 Go de VRAM ?',
+            a: 'Non. Qwen 2.5 14B en Q4_K_M nécessite environ 10 Go de VRAM. Sur une carte 6 Go, vous devriez descendre à la quantification Q2_K, ce qui entraîne une dégradation significative de la qualité. Llama 3 8B est le modèle approprié pour 6 Go de VRAM.',
+          },
+          {
+            q: 'Qwen 2.5 14B ou Llama 3 8B est-il meilleur pour le coding ?',
+            a: 'Qwen 2.5 14B est nettement meilleur pour le coding. Qwen Coder 14B (la variante optimisée pour le code) obtient 78,4 % sur HumanEval contre ~55 % pour Llama 3 8B. Utilisez Llama 3 8B pour le coding uniquement quand le VRAM empêche de faire tourner Qwen.',
+          },
+          {
+            q: 'Qwen 2.5 14B supporte-t-il un contexte plus long que Llama 3 8B ?',
+            a: 'Qwen 2.5 14B supporte nativement une fenêtre de contexte de 128k. Llama 3 8B supporte 8k par défaut, bien que des variantes étendues par RoPE puissent atteindre 128k avec une légère perte de qualité. Pour les tâches sur longs documents, Qwen 2.5 14B a un avantage clair même avant de tenir compte de son plus grand nombre de paramètres.',
+          },
+          {
+            q: 'Que faire si j\'ai exactement 8 Go de VRAM ?',
+            a: 'Avec 8 Go de VRAM, vous pouvez faire tourner Llama 3 8B Q4_K_M confortablement avec ~2 Go de marge. Qwen 2.5 14B ne rentrera pas de manière fiable. Envisagez Qwen 2.5 7B Q4_K_M comme compromis — il utilise ~5 Go de VRAM et obtient de meilleurs scores que Llama 3 8B sur la plupart des benchmarks. Consultez le <a href="/fr/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">meilleur LLM de coding pour 12 Go de VRAM</a> pour le contexte sur les contraintes VRAM.',
+          },
+        ],
+      },
+    },
+  },
+  ja: {
+    theme: 'Model Comparisons',
+    title: 'Qwen 14B対Llama 3 8B：ローカルでどちらが優れているか？',
+    seoTitle: 'Qwen 14B対Llama 3 8Bローカル比較 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3 8Bは6 GB VRAMに収まり高速。Qwen 2.5 14Bは10 GB以上が必要だがベンチマーク得点が高い。12 GB VRAMがあればQwen 14Bが品質で優位。PromptQuorumによる簡潔な回答。',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ja: {
+        question: 'Qwen 14B対Llama 3 8B：ローカルでどちらが優れているか？',
+        answer: 'Llama 3 8Bは6 GB VRAMに収まり高速に動作します。Qwen 2.5 14Bは10 GB以上が必要ですがベンチマークスコアが高いです。12 GB VRAMがあればQwen 14Bが品質で勝ります。',
+        bullets: [
+          'Llama 3 8B Q4_K_M：6 GB VRAM、RTX 3060で~25 tok/s',
+          'Qwen 2.5 14B Q4_K_M：10 GB VRAM、RTX 3060で~15 tok/s',
+          'Qwen 14Bは品質が高く、Llama 8Bは高速',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3 8B Q4_K_Mは6 GB VRAMのみ必要でRTX 3060上で~25 tok/sを提供 — 対話的な速度を求める際の正しい選択',
+          'Qwen 2.5 14B Q4_K_Mは10 GB VRAMが必要で~15 tok/sで動作 — ただしMMLUと推論ベンチマークで8〜10ポイント高得点',
+          'VRAMの分岐点は12 GB：それ以下ではLlama 8Bのみが選択肢。12 GBではQwen 14Bが品質で勝る',
+          'コーディングタスクでは差がさらに広がりQwen 14Bに有利 — Qwen Coderバリアントはコードベンチマークで追加の優位性を持つ',
+        ],
+      },
+      body1: {
+        title: 'Llama 3 8Bは速度とVRAM使用量で勝る',
+        content: [
+          '<strong>Q4_K_M量子化のLlama 3 8BはRTX 3060 12 GBで6 GB VRAMを使用し毎秒約25トークンで動作 — 10 GB VRAM未満のシステムのデフォルト選択肢です。</strong> 80億パラメータにより、チャットや短いコードセッションに自然に感じられる素早い対話的な応答が実現します。',
+          'Q4_K_MのQwen 2.5 14Bは同じカードで約10 GB VRAMが必要で~15 tok/sを生成します。低いスループットはリアルタイム会話では目立ちますが、レイテンシより品質が重要なバッチ要約や長文書処理には許容できます。',
+          '速度差（25対15 tok/s）により、Llama 3 8Bは200トークンの回答を約8秒で生成し、Qwen 2.5 14Bは約13秒かかります。単発クエリではこの差は小さいですが、複数ターンのチャットセッションでは積み重なります。',
+        ],
+        columns: ['モデル', 'VRAM (Q4_K_M)', '速度 (RTX 3060)', 'MMLUスコア'],
+        rows: [
+          { 'モデル': 'Llama 3 8B', 'VRAM (Q4_K_M)': '6 GB', '速度 (RTX 3060)': '~25 tok/s', 'MMLUスコア': '66.6%' },
+          { 'モデル': 'Qwen 2.5 14B', 'VRAM (Q4_K_M)': '10 GB', '速度 (RTX 3060)': '~15 tok/s', 'MMLUスコア': '74.8%' },
+        ],
+      },
+      body2: {
+        title: 'VRAMが許せばQwen 2.5 14Bが品質で勝る',
+        content: [
+          '<strong>Qwen 2.5 14BはMMLUで74.8%に対してLlama 3 8Bは66.6% — 8ポイントの差が、多段階推論、指示への従い方、構造化出力の一貫性で明確に現れます。</strong> 複数段落にまたがるコンテキストの保持と適用が必要なタスクで差が特に顕著です。',
+          'コード補完ではさらに品質の差が広がります。Qwen 2.5 Coder 14B（同じベースのコード最適化バリアント）はHumanEvalで78.4%を記録します。Llama 3 8Bの汎用版は同じベンチマークで約55% — コーディングタスクで23ポイントの差です。',
+          'ベンチマーク表を含むコーディングモデルのパフォーマンスの詳細な分析については、<a href="/ja/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">コーディング用最適14Bモデル</a>の比較をご覧ください。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Qwen 14B対Llama 8Bに関するよくある質問',
+        faqs: [
+          {
+            q: 'Qwen 2.5 14Bは6 GB VRAMのGPUで動作しますか？',
+            a: '動作しません。Q4_K_MのQwen 2.5 14Bには約10 GB VRAMが必要です。6 GBカードではQ2_K量子化に下げる必要があり、品質が大幅に低下します。6 GB VRAMにはLlama 3 8Bが適切なモデルです。',
+          },
+          {
+            q: 'Qwen 2.5 14BとLlama 3 8Bはコーディングにどちらがよいですか？',
+            a: 'Qwen 2.5 14Bはコーディングに大幅に優れています。Qwen Coder 14B（コード最適化バリアント）はHumanEvalで78.4%に対してLlama 3 8Bは約55%です。VRAMがQwenの実行を妨げる場合のみLlama 3 8Bをコーディングに使用してください。',
+          },
+          {
+            q: 'Qwen 2.5 14BはLlama 3 8Bより長いコンテキストをサポートしていますか？',
+            a: 'Qwen 2.5 14Bはネイティブで128kのコンテキストウィンドウをサポートします。Llama 3 8Bはデフォルトで8kをサポートしますが、RoPE拡張バリアントは品質をいくらか低下させながら128kに達することができます。長文書タスクでは、パラメータ数が多いこと以前にQwen 2.5 14Bが明確な優位性を持ちます。',
+          },
+          {
+            q: 'ちょうど8 GB VRAMがある場合はどうすればよいですか？',
+            a: '8 GB VRAMではLlama 3 8B Q4_K_Mを~2 GBの余裕を持って快適に実行できます。Qwen 2.5 14Bは確実には収まりません。中間として Qwen 2.5 7B Q4_K_Mを検討してください — ~5 GB VRAMを使用し、ほとんどのベンチマークでLlama 3 8Bより高いスコアを記録します。VRAMの制約がモデル選択に与える影響については<a href="/ja/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">12 GB VRAM向けコーディング最適ローカルLLM</a>をご覧ください。',
+          },
+        ],
+      },
+    },
+  },
+  zh: {
+    theme: 'Model Comparisons',
+    title: 'Qwen 14B 对比 Llama 3 8B：哪款本地运行更好？',
+    seoTitle: 'Qwen 14B 对比 Llama 3 8B 本地运行？ | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3 8B 仅需6 GB VRAM 且运行更快。Qwen 2.5 14B 需要10 GB 以上但基准分数更高。12 GB VRAM 时 Qwen 14B 质量更佳。PromptQuorum 快速解答。',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      zh: {
+        question: 'Qwen 14B 对比 Llama 3 8B：哪款本地运行更好？',
+        answer: 'Llama 3 8B 仅需6 GB VRAM 且运行更快。Qwen 2.5 14B 需要10 GB 以上但基准分数更高。拥有12 GB VRAM 时，Qwen 14B 在质量上更胜一筹。',
+        bullets: [
+          'Llama 3 8B Q4_K_M：6 GB VRAM，RTX 3060 上约25 tok/s',
+          'Qwen 2.5 14B Q4_K_M：10 GB VRAM，RTX 3060 上约15 tok/s',
+          'Qwen 14B 质量更好；Llama 8B 速度更快',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3 8B Q4_K_M 仅需6 GB VRAM，在 RTX 3060 上提供约25 tok/s——追求交互速度时的正确选择',
+          'Qwen 2.5 14B Q4_K_M 需要10 GB VRAM，运行约15 tok/s——但在 MMLU 和推理基准测试上高出8–10分',
+          'VRAM 分界点是12 GB：低于此值 Llama 8B 是唯一选择；达到12 GB 时 Qwen 14B 质量更优',
+          '编程任务中差距进一步扩大，有利于 Qwen 14B——Qwen Coder 变体在代码基准测试上额外领先',
+        ],
+      },
+      body1: {
+        title: 'Llama 3 8B 在速度和 VRAM 使用上占优',
+        content: [
+          '<strong>Llama 3 8B 在 Q4_K_M 量化下使用6 GB VRAM，在 RTX 3060 12 GB 上运行速度约为每秒25个 token——是所有 VRAM 低于10 GB 系统的默认选择。</strong>80亿参数带来的快速交互式响应，非常适合聊天和短代码会话。',
+          'Qwen 2.5 14B 在 Q4_K_M 下需要约10 GB VRAM，在相同显卡上生成约15 tok/s。较低的吞吐量在实时对话中能感知到，但对于批量摘要或质量重于延迟的长文档处理来说是可以接受的。',
+          '速度差（25对15 tok/s）意味着 Llama 3 8B 约8秒生成200 token 的回答，而 Qwen 2.5 14B 约需13秒。单次查询时差距不大，但在多轮聊天会话中会不断累积。',
+        ],
+        columns: ['模型', 'VRAM (Q4_K_M)', '速度 (RTX 3060)', 'MMLU 得分'],
+        rows: [
+          { '模型': 'Llama 3 8B', 'VRAM (Q4_K_M)': '6 GB', '速度 (RTX 3060)': '~25 tok/s', 'MMLU 得分': '66.6%' },
+          { '模型': 'Qwen 2.5 14B', 'VRAM (Q4_K_M)': '10 GB', '速度 (RTX 3060)': '~15 tok/s', 'MMLU 得分': '74.8%' },
+        ],
+      },
+      body2: {
+        title: 'VRAM 足够时 Qwen 2.5 14B 质量更优',
+        content: [
+          '<strong>Qwen 2.5 14B 在 MMLU 上得74.8%，Llama 3 8B 得66.6%——8分差距体现在多步推理、指令遵循和结构化输出一致性上的明显提升。</strong>在需要跨多个段落保留和应用上下文的任务中差异尤为显著。',
+          '代码补全任务中质量差距进一步扩大。Qwen 2.5 Coder 14B（同一基础模型的代码优化变体）在 HumanEval 上得78.4%。Llama 3 8B 通用版在相同基准测试上约55%——编程任务上相差23分。',
+          '有关编程模型性能的深入分析（包括基准测试表），请参阅<a href="/zh/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">编程最佳14B模型</a>对比。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '关于 Qwen 14B 对比 Llama 8B 的快速解答',
+        faqs: [
+          {
+            q: 'Qwen 2.5 14B 能在6 GB VRAM 的 GPU 上运行吗？',
+            a: '不能。Q4_K_M 下 Qwen 2.5 14B 需要约10 GB VRAM。6 GB 显卡上需降至 Q2_K 量化，会导致显著的质量下降。6 GB VRAM 应选择 Llama 3 8B。',
+          },
+          {
+            q: 'Qwen 2.5 14B 还是 Llama 3 8B 更适合编程？',
+            a: 'Qwen 2.5 14B 在编程上明显更好。Qwen Coder 14B（代码优化变体）HumanEval 得78.4%，而 Llama 3 8B 约55%。只有在 VRAM 不足以运行 Qwen 时才使用 Llama 3 8B 编程。',
+          },
+          {
+            q: 'Qwen 2.5 14B 比 Llama 3 8B 支持更长的上下文吗？',
+            a: 'Qwen 2.5 14B 原生支持128k 上下文窗口。Llama 3 8B 默认支持8k，RoPE 扩展变体可达128k 但有一定质量损失。长文档任务中，即使不考虑更大的参数量，Qwen 2.5 14B 也有明显优势。',
+          },
+          {
+            q: '如果恰好有8 GB VRAM 怎么办？',
+            a: '8 GB VRAM 下可以留有约2 GB 余量舒适运行 Llama 3 8B Q4_K_M。Qwen 2.5 14B 无法可靠运行。可考虑 Qwen 2.5 7B Q4_K_M 作为折中——使用约5 GB VRAM，且在大多数基准测试上优于 Llama 3 8B。VRAM 约束对模型选择的影响请参阅<a href="/zh/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">12 GB VRAM 最佳编程本地 LLM</a>。',
+          },
+        ],
+      },
+    },
+  },
 }
