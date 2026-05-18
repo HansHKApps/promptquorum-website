@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         llama318: {
           title: '#5 Qwen3 8B — Best Coding Model for 8 GB RAM',
-          content: 'Qwen3 8B replaces Qwen3 8B as the 8 GB tier recommendation. Improved coding performance, multilingual, uses only 5 GB VRAM. `ollama run qwen3:8b`. For the absolute minimum, DeepSeek V4 Flash is a viable budget option.',
+          content: 'Qwen3 8B replaces Qwen3 8B as the 8 GB tier recommendation. Improved coding performance, multilingual, uses only 5 GB VRAM. For detailed guidance on VRAM requirements for other coding models, see the [VRAM requirements guide →](/local-llms/how-much-vram-local-llm). `ollama run qwen3:8b`. For the absolute minimum, DeepSeek V4 Flash is a viable budget option.',
           callouts: [
             { type: 'insight', text: 'Qwen3 8B improves over Qwen3 8B: better multilingual support, faster inference, improved code quality on real-world tasks. For 8 GB machines, this is now the recommended starting point.' },
           ],
@@ -705,7 +705,7 @@ schema: {
         },
         llama318: {
           title: '#5 Llama 3.1 8B -- Bestes General-Purpose-Ausweichmodell für Programmierung',
-          content: 'Wenn du Llama 3.1 8B bereits installiert hast und kein separates Codierungsmodell herunterladen möchtest, erreicht es 72% auf HumanEval -- identisch mit Qwen3 8B. Für Alltagsprogrammierungsaufgaben (Funktionen schreiben, Code erklären, debuggen) ist der Qualitätsunterschied zwischen Llama 3.1 8B und einem dedizierten Codierungsmodell marginal. Wechsle zu einem Codierungsmodell spezialisiert auf komplexe Algorithmierungsaufgaben oder großflächiges Codebase-Refactoring.',
+          content: 'Wenn du Llama 3.1 8B bereits installiert hast und kein separates Codierungsmodell herunterladen möchtest, erreicht es 72% auf HumanEval -- identisch mit Qwen3 8B. Für Alltagsprogrammierungsaufgaben (Funktionen schreiben, Code erklären, debuggen) ist der Qualitätsunterschied zwischen Llama 3.1 8B und einem dedizierten Codierungsmodell marginal. Detaillierte Anleitungen zu VRAM-Anforderungen für diese Modelle finden Sie im [VRAM-Anforderungsleitfaden →](/local-llms/how-much-vram-local-llm?lang=de). Wechsle zu einem Codierungsmodell spezialisiert auf komplexe Algorithmierungsaufgaben oder großflächiges Codebase-Refactoring.',
           callouts: [
             { type: 'insight', text: 'Llama 3.1 8B entspricht Qwen3 8B auf HumanEval (72%), aber dem Mangel an FIM (Fill-in-the-Middle)-Unterstützung. Dies macht es besser für Chat-Style-Codegenerierung (Fragen stellen), aber schlechter für IDE-Autovervollständigung (was FIM benötigt). Wähle basierend auf deinem Workflow, nicht nur auf dem Benchmark.' },
           ],
@@ -1122,7 +1122,7 @@ schema: {
         },
         llama318: {
           title: '#5 Llama 3.1 8B — Meilleur modèle polyvalent de secours pour la programmation',
-          content: 'Si vous avez déjà Llama 3.1 8B installé et ne voulez pas télécharger un modèle de codage séparé, il obtient 72% sur HumanEval — identique à Qwen3 8B. Pour les tâches de programmation quotidiennes (écrire des fonctions, expliquer du code, déboguer), la différence de qualité entre Llama 3.1 8B et un modèle de codage dédié est marginale. Basculez vers un modèle de codage spécialisé pour les tâches d\'algorithmes complexes ou les refactorisations de grandes codebases.',
+          content: 'Si vous avez déjà Llama 3.1 8B installé et ne voulez pas télécharger un modèle de codage séparé, il obtient 72% sur HumanEval — identique à Qwen3 8B. Pour les tâches de programmation quotidiennes (écrire des fonctions, expliquer du code, déboguer), la différence de qualité entre Llama 3.1 8B et un modèle de codage dédié est marginale. Pour des conseils détaillés sur les exigences VRAM pour ces modèles, consultez le [guide des exigences VRAM →](/local-llms/how-much-vram-local-llm?lang=fr). Basculez vers un modèle de codage spécialisé pour les tâches d\'algorithmes complexes ou les refactorisations de grandes codebases.',
           callouts: [
             { type: 'insight', text: 'Llama 3.1 8B égale Qwen3 8B sur HumanEval (72%) mais manque le support FIM (Fill-in-the-Middle). Cela le rend meilleur pour la génération de code de style chat (poser des questions) mais pire pour l\'autocomplétion IDE (qui nécessite FIM). Choisissez en fonction de votre workflow, pas seulement du benchmark.' },
           ],
@@ -1466,6 +1466,7 @@ schema: {
             '**FIM：サポート無し** — IDE補完向きでない',
             '**コード品質**：コード固有モデルではなく、汎用で訓練。意図の複雑さに弱い。',
             '**使用ケース**：コーディングLLMが利用不可な場合のフォールバック。',
+            'これらのモデルのVRAM要件について詳しくは、[VRAM要件ガイド →](/local-llms/how-much-vram-local-llm?lang=ja)をご参照ください。',
             '**セットアップ**：`ollama run llama3.2`',
           ],
         },
@@ -1806,6 +1807,7 @@ schema: {
             '**FIM：不支持** ——不适IDE补全',
             '**代码质量**：通用模型训练，非代码专向。意图复杂性处理较弱。',
             '**使用场景**：编码LLM不可用时的备选。',
+            '关于这些模型的VRAM需求详情，见[VRAM需求指南 →](/local-llms/how-much-vram-local-llm?lang=zh)。',
             '**设置**：`ollama run llama3.2`',
           ],
         },
