@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding',
         'inLanguage': 'en',
         'headline': 'Best Coding LLMs 2026: Kimi K2.6 (87/100) vs Qwen 3.6 vs Devstral',
@@ -885,7 +885,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=de',
         'inLanguage': 'de',
         'headline': 'Beste lokale LLMs für Programmierung 2026: Kimi K2.6 (87/100) vs Qwen 3.6',
@@ -1293,7 +1293,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=fr',
         'inLanguage': 'fr',
         'headline': 'Meilleurs LLMs locaux pour la programmation 2026 : Kimi K2.6 (87/100) vs Qwen 3.6',
@@ -1632,7 +1632,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         headline: '2026年最高のコーディング用ローカルLLM：Kimi K2.6（87/100）vs Qwen 3.6',
         description: '2026年5月：Kimi K2.6（87/100実際応用）はコーディング用最高のローカルLLM。Qwen 3.6 27B（77.2% SWE基準）とDevstral 24Bとの比較。SWE基準がHumanEvalに取って代わります。',
         datePublished: '2026-04-04',
@@ -1972,7 +1972,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         headline: '2026年最佳本地编码LLM：Kimi K2.6（87/100）vs Qwen 3.6',
         description: '2026年5月：Kimi K2.6（87/100实际应用）是最佳本地编码LLM。与Qwen 3.6 27B（77.2% SWE基准）和Devstral 24B对比。SWE基准取代HumanEval。',
         datePublished: '2026-04-04',

@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         'headline': 'New Ollama Models May 2026: Latest Releases & Updates',
         'description': 'Looking for new Ollama models? See the latest May 2026 releases, what is new, and which models are worth using for chat, coding, and reasoning.',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=en',
@@ -727,7 +727,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         'headline': 'Die besten Open-Source-Modelle auf Ollama 2026',
         'description': 'Die beliebtesten Open-Source-Modelle auf Ollama im April 2026: Llama am meisten heruntergeladen, Qwen2.5 am schnellsten wachsend, DeepSeek-R1 für Reasoning.',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=de',
@@ -1099,7 +1099,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         'headline': 'Les meilleurs modèles open source sur Ollama 2026',
         'description': 'Les modèles open source Ollama les plus populaires en avril 2026 : Llama le plus téléchargé, Qwen2.5 en plus forte croissance, DeepSeek-R1 pour le raisonnement.',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=fr',
@@ -1471,7 +1471,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         'headline': '2026年Ollama最高のオープンソースモデル',
         'description': '2026年4月のOllama最人気オープンソースモデル：Llamaが最多DL、Qwen2.5が急成長、DeepSeek-R1が推論最強。',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=ja',
@@ -1823,7 +1823,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         'headline': '2026年Ollama最佳开源模型：下载量排行前十',
         'description': '2026年4月，Ollama最受欢迎的开源模型包括Llama 3.1（下载最多）、Qwen2.5（增长最快）、DeepSeek-R1（推理最强）。',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=zh',

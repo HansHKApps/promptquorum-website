@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       primaryTerm: 'AMD GPU',
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'NewsArticle',
         'headline': 'Best AMD GPUs for Local LLMs 2026: RX 7900 XTX',
         'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. ROCm setup, vLLM performance, cost-per-TFLOP analysis. When to buy AMD over CUDA. April 2026.',
         'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm',
