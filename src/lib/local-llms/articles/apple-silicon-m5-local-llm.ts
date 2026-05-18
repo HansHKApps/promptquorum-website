@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-18',
     next_refresh_due: '2026-11-18',
     intro: '**配备64-128GB统一内存的Apple M5 Pro和M5 Max芯片可以以工作站级性能运行30-70B本地LLM模型,与NVIDIA RTX GPU直接竞争,同时仅消耗65-100W而非350W+的功率。** M5系列(2026年3月推出M5 Pro,2026年3月推出M5 Max)比M4提高4倍LLM提示处理速度。Mac Studio M5 Max(¥16,000-22,500)和MacBook Pro 16" M5 Max(¥22,500-28,800)是选择Apple Silicon而非PC GPU工作站的研究人员和开发人员的最佳选择。',
-    leadAnswerBlock: '**Apple M5 Pro和M5 Max提供307-614 GB/s统一内存带宽,Mac Studio M5 Max 64GB以¥16,000运行Llama 3.1 70B Q4速度为8-12标记/秒—与RTX 4090设置竞争力相当,功耗仅为其三分之一。**',
+    leadAnswerBlock: '**Apple M5 Pro和M5 Max提供307-614 GB/s统一内存带宽,Mac Studio M5 Max 64GB以¥16,000运行Llama 3.1 70B Q4速度为8-12标记/秒—与RTX 4090设置竞争力相当,功耗仅为其三分之一。Mac Studio M5 Max尚未发布（预计2026年10月上市，售价待定）。**',
     audience: 'Mac用户比较M5 Pro对M5 Max本地LLM;开发人员评估Mac Studio对MacBook Pro;从云GPU迁移到本地推理的研究人员;比较Apple Silicon和PC替代品的购买者。',
     readTime: '14 分钟',
     educationalLevel: 'Intermediate',
