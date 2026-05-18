@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-app',
         title: 'Which App Should You Choose?',
         content:
-          '**The right app depends on your device chipset and how much you value customization over simplicity.** Android users split sharply between those who want a polished native experience (PocketPal AI, Layla) and those who want maximum control (Ollama via Termux, Maid). Unlike iPhone, Android allows both.',
+          '**The right app depends on your device chipset and how much you value customization over simplicity.** Android users split sharply between those who want a polished native experience (PocketPal AI, Layla) and those who want maximum control (Ollama via Termux, Maid). Unlike iPhone, Android allows both. For a deeper understanding of how model sizes map to RAM requirements across different devices, see the [VRAM requirements guide →](/local-llms/how-much-vram-local-llm).',
         snippetBlocks: [
           {
             type: 'plain-terms',
