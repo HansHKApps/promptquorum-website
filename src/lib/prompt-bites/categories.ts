@@ -1,0 +1,98 @@
+// Prompt Bites — 7 cluster definitions used by the hub page.
+
+export interface PromptBiteCategory {
+  id: string
+  label: string
+  titleEn: string
+  descriptionEn: string
+  articleSlugs: string[]
+}
+
+export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
+  {
+    id: 'quantization-vram',
+    label: 'A',
+    titleEn: 'Quantization & VRAM',
+    descriptionEn: 'How much memory you need, which quantization format to pick, and VRAM decision trees.',
+    articleSlugs: [
+      'how-much-vram-for-local-llm',
+      'what-is-q4-k-m-quantization',
+      'q4-k-m-vs-q8-0',
+      'best-ollama-models-rtx-3060-12gb',
+      'best-ollama-models-4gb-vram',
+      'how-much-ram-for-7b-model',
+      'vram-for-70b-model',
+      'best-local-llm-6gb-vram',
+    ],
+  },
+  {
+    id: 'ollama',
+    label: 'B',
+    titleEn: 'Ollama',
+    descriptionEn: 'Latest versions, best models, context windows, vision, and CPU-only use.',
+    articleSlugs: [
+      'ollama-latest-version',
+      'best-ollama-models-right-now',
+      'best-ollama-models-cpu-only',
+      'can-you-run-qwen3-on-ollama',
+      'which-ollama-models-support-vision',
+      'ollama-128k-context-models',
+    ],
+  },
+  {
+    id: 'tool-comparisons',
+    label: 'C',
+    titleEn: 'Tool Comparisons',
+    descriptionEn: 'Two-way comparisons: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
+    articleSlugs: [
+      'qwen-coder-vs-deepseek-coder',
+      'ollama-vs-lm-studio',
+      'jan-vs-lm-studio',
+      'best-local-llm-apps-android',
+      'best-frontend-for-ollama',
+    ],
+  },
+  {
+    id: 'model-comparisons',
+    label: 'D',
+    titleEn: 'Model Comparisons',
+    descriptionEn: 'Best 14B models, MoE models, mini PCs, and head-to-head model matchups.',
+    articleSlugs: [
+      'qwen-14b-vs-llama-8b',
+      'best-14b-models-coding',
+      'best-mini-pc-for-local-llm',
+      'best-moe-models-local-coding',
+    ],
+  },
+  {
+    id: 'hardware-specific',
+    label: 'E',
+    titleEn: 'Hardware-Specific',
+    descriptionEn: 'Best models for your exact GPU: RTX 3060, RTX 3070 Ti, Radeon RX 6800M.',
+    articleSlugs: [
+      'best-local-llm-coding-12gb-vram',
+      'best-models-amd-5700x-3070ti',
+      'radeon-6800m-local-llm',
+    ],
+  },
+  {
+    id: 'quick-answers',
+    label: 'F',
+    titleEn: 'Quick Answers',
+    descriptionEn: 'Yes/no and one-number answers: RAM limits, laptop recommendations.',
+    articleSlugs: [
+      'can-you-run-rag-on-2gb-ram',
+      'best-local-llm-16gb-ram-laptop',
+    ],
+  },
+  {
+    id: 'prompt-engineering',
+    label: 'G',
+    titleEn: 'Prompt Engineering',
+    descriptionEn: 'Quick definitions and best-of lists for prompt engineering concepts.',
+    articleSlugs: [
+      'co-star-prompt-framework',
+      'best-llm-right-now',
+    ],
+  },
+]

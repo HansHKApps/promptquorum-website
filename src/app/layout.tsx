@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     canonical: 'https://www.promptquorum.com',
     languages: {
       'en': 'https://www.promptquorum.com',
-      'de': 'https://www.promptquorum.com?lang=de',
-      'fr': 'https://www.promptquorum.com?lang=fr',
-      'ja': 'https://www.promptquorum.com?lang=ja',
-      'zh': 'https://www.promptquorum.com?lang=zh',
+      'de': 'https://www.promptquorum.com/de',
+      'fr': 'https://www.promptquorum.com/fr',
+      'ja': 'https://www.promptquorum.com/ja',
+      'zh': 'https://www.promptquorum.com/zh',
       'x-default': 'https://www.promptquorum.com',
     }
   },
@@ -233,7 +233,7 @@ gtag('config', 'G-8DQ4B3DXBS', {
           <HeaderClient />
           {children}
           <CookieBanner />
-          <Analytics />
+          <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
           <SpeedInsights />
         </Providers>
       </body>

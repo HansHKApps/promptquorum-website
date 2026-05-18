@@ -22,6 +22,7 @@ const NOINDEX_PAGES = new Set([
 // Language variants (/de/, /fr/, /ja/, /zh/) are now emitted per-language via POWER_LLM_PUBLISHED_PATHS check.
 const EXCLUDED_PATH_PREFIXES = [
   '/power-local-llm',
+  '/prompt-bites',
 ]
 
 // Check if a content entry has real sections (not a stub)

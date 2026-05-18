@@ -62,6 +62,14 @@ const nextConfig: NextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/data/:match*',
+        destination: 'https://www.promptquorum.com/_vercel/insights/:match*',
+      },
+    ]
+  },
   async headers() {
     const cspHeader = [
       "default-src 'self'",
