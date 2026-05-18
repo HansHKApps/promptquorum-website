@@ -101,4 +101,5 @@ export interface LLMArticle {
   ctaText?: string
   ctaButton?: string
   ctaHref?: string
+  [key: string]: unknown
 }
