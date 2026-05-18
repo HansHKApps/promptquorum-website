@@ -23,7 +23,8 @@ export function useLang(initialLang?: Lang): Lang {
       // Path-prefix wins: /de/foo → 'de' regardless of query string
       const pathMatch = window.location.pathname.match(PATH_LOCALE_RE)
       if (pathMatch) {
-        setLang(pathMatch[1] as Lang)
+        const pathLang = pathMatch[1] as Lang
+        setLang(pathLang)
         return
       }
 
@@ -48,7 +49,7 @@ export function useLang(initialLang?: Lang): Lang {
     read()
     window.addEventListener('popstate', read)
     return () => window.removeEventListener('popstate', read)
-  }, [initialLang])
+  }, [])
 
   return lang
 }
