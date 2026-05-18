@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     title: 'EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud (Tested May 2026)',
     seoTitle: 'EU GDPR Cloud GPU 2026: Hetzner, Scaleway, OVHcloud',
-    metaDescription: 'EU GDPR-compliant cloud GPU providers: Hetzner (€184/month flat, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius, Mistral. Data residency, DPA, Schrems II compliant.',
+    metaDescription: 'Compare EU GDPR-compliant cloud GPU providers in 2026: Hetzner, Scaleway, OVHcloud. Pricing, data residency, AI Act compliance verified.',
     intro: 'EU customers processing personal data must use GDPR-compliant cloud GPU providers. This guide compares seven GDPR-native options (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) tested May 2026 by pricing, compliance posture, and Schrems II risk. All featured providers guarantee EU data residency and offer proper DPAs.',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',
@@ -717,9 +717,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Alle Preise und Verfügbarkeitsinformationen wurden im Mai 2026 überprüft und sind direkte Zitate von Anbieter-Websites:',
         items: [
           'Hetzner GPU: https://www.hetzner.cloud/de/gpu-cloud/ (€184/Mo RTX 4000 SFF Ada verifiziert 15. Mai 2026; Affiliate-Programm endet 15. Juni 2026)',
-          'Scaleway: https://www.scaleway.com/en/pricing/compute/ (H100 €0,50–€2,50/h verifiziert 14. Mai 2026)',
+          'Scaleway: https://www.scaleway.com/pricing/ (H100 €0,50–€2,50/h verifiziert 14. Mai 2026)',
           'OVHcloud: https://www.ovhcloud.com/en/public-cloud/gpu/ (RTX 6000 Ada €1,45/h verifiziert 13. Mai 2026)',
-          'Nebius: https://nebius.com/services/gpu-cloud (H100 €1,55–€2,95/h, B200 €5,50/h verifiziert 12. Mai 2026)',
+          'Nebius: https://nebius.com/services (H100 €1,55–€2,95/h, B200 €5,50/h verifiziert 12. Mai 2026)',
           'STACKIT: https://www.stackit.cloud/de/ (TISAX-zertifiziert; Custom-Preise auf Anfrage; verifiziert über Datenschutz-Dokumentation 10. Mai 2026)',
           'IONOS: https://www.ionos.de/server/gpu-server (RTX 4090 €0,60–€1,50/h verifiziert 11. Mai 2026)',
           'Mistral La Plateforme: https://mistral.ai/products/la-plateforme (Pay-per-Token; verifiziert 16. Mai 2026)',
