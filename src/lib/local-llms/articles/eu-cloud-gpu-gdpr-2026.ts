@@ -4,8 +4,8 @@ import type { Language } from '@/lib/blog/blogContent'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     title: 'EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud (Tested May 2026)',
-    seoTitle: 'EU GDPR Cloud GPU Comparison 2026 | Hetzner, Scaleway, OVHcloud Tested',
-    metaDescription: 'GDPR-compliant cloud GPU providers for EU customers: Hetzner (€184/month flat, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius, Mistral. Data residency, DPA, Schrems II compliance. Tested May 2026.',
+    seoTitle: 'EU GDPR Cloud GPU 2026: Hetzner, Scaleway, OVHcloud',
+    metaDescription: 'EU GDPR-compliant cloud GPU providers: Hetzner (€184/month flat, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius, Mistral. Data residency, DPA, Schrems II compliant.',
     intro: 'EU customers processing personal data must use GDPR-compliant cloud GPU providers. This guide compares seven GDPR-native options (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) tested May 2026 by pricing, compliance posture, and Schrems II risk. All featured providers guarantee EU data residency and offer proper DPAs.',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',
@@ -416,8 +416,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     title: 'EU-Cloud-GPU mit DSGVO 2026: Hetzner vs Scaleway vs OVHcloud',
-    seoTitle: 'EU Cloud-GPU DSGVO-Vergleich 2026 | Hetzner, Scaleway, OVHcloud',
-    metaDescription: 'DSGVO-konforme Cloud-GPU-Anbieter für EU-Kunden: Hetzner (€184/Monat pauschal, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius, Mistral. Datenresidenz, AVV, Schrems-II-Konformität. Mai 2026.',
+    seoTitle: 'EU Cloud-GPU DSGVO 2026: Hetzner, Scaleway, OVHcloud',
+    metaDescription: 'DSGVO-konforme Cloud-GPU-Anbieter für EU-Kunden: Hetzner (€184/Monat pauschal, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius. Datenresidenz, AVV, Schrems-II-konform.',
     intro: 'EU-Unternehmen, die personenbezogene Daten verarbeiten, müssen DSGVO-konforme Cloud-GPU-Anbieter nutzen. Dieser Leitfaden vergleicht sieben DSGVO-native Optionen (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) getestet im Mai 2026 nach Preisgestaltung, Konformitätsposition und Schrems-II-Risiko.',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',
@@ -718,11 +718,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Hetzner GPU: https://www.hetzner.cloud/de/gpu-cloud/ (€184/Mo RTX 4000 SFF Ada verifiziert 15. Mai 2026; Affiliate-Programm endet 15. Juni 2026)',
           'Scaleway: https://www.scaleway.com/en/pricing/compute/ (H100 €0,50–€2,50/h verifiziert 14. Mai 2026)',
-          'OVHcloud: https://www.ovhcloud.com/de/bare-metal/gpu/ (RTX 6000 Ada €1,45/h verifiziert 13. Mai 2026)',
-          'Nebius: https://nebius.ai/pricing (H100 €1,55–€2,95/h, B200 €5,50/h verifiziert 12. Mai 2026)',
+          'OVHcloud: https://www.ovhcloud.com/en/public-cloud/gpu/ (RTX 6000 Ada €1,45/h verifiziert 13. Mai 2026)',
+          'Nebius: https://nebius.com/services/gpu-cloud (H100 €1,55–€2,95/h, B200 €5,50/h verifiziert 12. Mai 2026)',
           'STACKIT: https://www.stackit.cloud/de/ (TISAX-zertifiziert; Custom-Preise auf Anfrage; verifiziert über Datenschutz-Dokumentation 10. Mai 2026)',
-          'IONOS: https://www.ionos.de/hosting/gpu-server (RTX 4090 €0,60–€1,50/h verifiziert 11. Mai 2026)',
-          'Mistral La Plateforme: https://mistral.ai/la-plateforme (Pay-per-Token; verifiziert 16. Mai 2026)',
+          'IONOS: https://www.ionos.de/server/gpu-server (RTX 4090 €0,60–€1,50/h verifiziert 11. Mai 2026)',
+          'Mistral La Plateforme: https://mistral.ai/products/la-plateforme (Pay-per-Token; verifiziert 16. Mai 2026)',
         ],
         linksHeader: 'Weitere Compliance-Ressourcen:',
         links: [
@@ -798,8 +798,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     title: 'GPU Cloud RGPD UE 2026 : Hetzner vs Scaleway vs OVHcloud',
-    seoTitle: 'Comparaison GPU Cloud RGPD 2026 | Hetzner, Scaleway, OVHcloud',
-    metaDescription: 'Fournisseurs GPU cloud conformes au RGPD pour clients UE : Hetzner (€184/mois forfaitaire, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius, Mistral. Résidence données, DPA, Schrems II. Mai 2026.',
+    seoTitle: 'GPU Cloud RGPD 2026 : Hetzner, Scaleway, OVHcloud Comparés',
+    metaDescription: 'Fournisseurs GPU cloud conformes RGPD pour UE : Hetzner (€184/mois forfaitaire, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius, Mistral. Résidence UE, DPA, Schrems II.',
     intro: 'Les organisations de l\'UE traitant des données personnelles doivent utiliser des fournisseurs GPU cloud conformes au RGPD. Ce guide compare sept options natives du RGPD (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) testées en mai 2026 par tarification, posture de conformité et risque Schrems II. Tous les fournisseurs proposent la résidence des données au sein de l\'UE et des contrats de traitement des données (DPA) appropriés.',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',
