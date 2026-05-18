@@ -92,6 +92,7 @@ export interface LLMArticle {
   gammaEmbedUrl?: string
   gammaDescription?: string
   twitterDescription?: string
+  heroImage?: string
   freshness_tier?: 'evergreen' | 'semi_annual' | 'annual'
   next_refresh_due?: string
   current_models_mentioned?: string[]
