@@ -395,6 +395,133 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'en',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Can AMD Ryzen AI Max+ mini PCs run Llama 3.3 70B?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, all four can. Minisforum/Beelink/AOOSTAR run 70B Q4 at 18–22 tok/s. Beelink with 128GB also handles 70B Q5. GMKtec is slower and limited to 40B models.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How does AMD Ryzen AI Max+ compare to Apple M4 Max?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nearly identical performance (within 5–10%). AMD is 30–40% cheaper. Trade-off: you lose macOS, Xcode, Final Cut ecosystem.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do I need Linux or can I use Windows?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'All four ship with Linux. Windows drivers are being developed but not production-ready yet.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the difference between Minisforum MS-A2 and Beelink GTR9 Pro?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum has 96GB RAM ($1,599). Beelink has 128GB RAM ($1,899) and comes pre-configured with Ubuntu plus ROCm.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I add a discrete GPU to these mini PCs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'AOOSTAR GEM12 Pro supports external GPU via OCuLink (requires $500+ eGPU enclosure).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How much electricity do these mini PCs use?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A full month at 100W equals about 72 kWh, around $8–12 in US electricity costs.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Will these be obsolete when AMD releases the next generation?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'AMD Ryzen AI Max Gen 2 is likely late 2026. These machines will stay relevant 3–4 years.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I run multiple models simultaneously?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, with enough RAM. 96GB allows two 32B models or one 70B plus one 13B. 128GB gives more headroom.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the noise level under load?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum 42dB, Beelink 44dB, AOOSTAR 40dB, GMKtec 38dB. All comparable to laptop cooling fans.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Are these mini PCs good for fine-tuning?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, but with caveats. Fine-tuning with LoRA works well. Full weight fine-tuning is slower than desktop GPU setups.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I run Stable Diffusion on these mini PCs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Stable Diffusion XL runs at 8–12 sec/image (slow vs RTX 4070 ~3 sec/image).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How does ROCm compare to CUDA for inference?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'ROCm is 90% feature-complete vs CUDA. Main gap: some proprietary fine-tuning frameworks lack ROCm.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the warranty period?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum 2 years, AOOSTAR 1 year, Beelink 1 year (EU statutory adds 2 years). GMKtec varies by region.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I upgrade the RAM later?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum/AOOSTAR yes (up to 192GB). Beelink/GMKtec no (soldered). Buy the RAM you need upfront.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Which mini PC has the best build quality?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'AOOSTAR GEM12 Pro (premium aluminum, thermal optimization). Minisforum is close second.'
+          }
+        },
+      ],
+    },
   },
   de: {
     freshness_tier: 'semi_annual',
