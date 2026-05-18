@@ -10,6 +10,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
 import { powerLLMContent } from '@/lib/power-local-llm/content'
 import type { LLMSection } from '@/lib/local-llms/types'
@@ -781,7 +782,7 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
           <figure className="mb-8 rounded-xl overflow-hidden">
             <Image
               src={(article as any).heroImage}
-              alt={article.title}
+              alt={article.title || 'Article hero image'}
               width={1200}
               height={630}
               priority
