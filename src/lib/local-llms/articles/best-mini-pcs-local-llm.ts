@@ -471,6 +471,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterlesen',
           items: [
+            '[AMD Ryzen AI Max+ Mini-PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026?lang=de) — Unified Memory 64–128GB, 50 TOPS NPU, Linux-ROCm-Unterstützung für €1.200–2.600',
             '[Beste Laptops für lokale LLMs](/local-llms/best-laptops-local-llm?lang=de) — GPU-Anforderungen, thermisches Throttling und Akkugrenzen für mobile Inferenz',
             '[Lokaler LLM-PC-Build unter 900 €](/local-llms/local-llm-pc-build-1000?lang=de) — Full-Tower-ATX-Builds mit maximalem VRAM und Multi-GPU-Unterstützung',
             '[Beste Budget-GPUs für lokale LLMs](/local-llms/best-budget-gpus-local-llm?lang=de) — RTX 5060 Ti vs. RTX A4000 vs. gebrauchte Quadro-Karten nach VRAM und Preis verglichen',
@@ -734,7 +735,8 @@ schema: {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Meilleurs laptops pour LLM locaux](/local-llms/best-laptops-local-llm?lang=fr) — exigences GPU, bride thermique et limites de batterie pour l’inférence portable',
+            ‘[Mini-PC AMD Ryzen AI Max+ (2026)](/local-llms/best-amd-mini-pc-local-llm-2026?lang=fr) — Mémoire unifiée 64–128 Go, 50 TOPS NPU, support Linux ROCm pour €1.200–2.600’,
+            ‘[Meilleurs laptops pour LLM locaux](/local-llms/best-laptops-local-llm?lang=fr) — exigences GPU, bride thermique et limites de batterie pour l’inférence portable’,
             '[Build PC LLM local sous 900 €](/local-llms/local-llm-pc-build-1000?lang=fr) — builds ATX pleine tour avec VRAM maximale et support multi-GPU',
             '[Meilleurs GPU abordables pour LLM locaux](/local-llms/best-budget-gpus-local-llm?lang=fr) — RTX 5060 Ti vs RTX A4000 vs cartes Quadro d’occasion comparés par VRAM et prix',
             '[Guide LLM local sur laptop](/local-llms/local-llm-on-laptop?lang=fr) — gestion thermique et autonomie sur matériel à puissance limitée',
@@ -993,6 +995,7 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
+            '[AMD Ryzen AI Max+ミニPC (2026)](/local-llms/best-amd-mini-pc-local-llm-2026?lang=ja) — ユニファイドメモリ 64–128GB、50 TOPS NPU、Linux ROCm対応 ¥172,000–205,000',
             '[ローカルLLM向けノートPCベスト](/local-llms/best-laptops-local-llm?lang=ja) — ポータブル推論のGPU要件、サーマルスロットリング、バッテリー制限',
             '[約¥150,000以下でのローカルLLM PCビルド](/local-llms/local-llm-pc-build-1000?lang=ja) — 最大VRAMとマルチGPUサポートのフルタワーATXビルド',
             '[ローカルLLM向けコスパGPUベスト](/local-llms/best-budget-gpus-local-llm?lang=ja) — RTX 5060 Ti vs RTX A4000 vs 中古QuadroをVRAMと価格で比較',
@@ -1253,6 +1256,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
+            '[AMD Ryzen AI Max+迷你PC (2026)](/local-llms/best-amd-mini-pc-local-llm-2026?lang=zh) — 统一内存 64–128GB、50 TOPS NPU、Linux ROCm支持 ¥10500–13700',
             '[本地LLM最佳笔记本推荐](/local-llms/best-laptops-local-llm?lang=zh) — GPU要求、散热降速和便携推理的电池限制',
             '[$1,000以下本地LLM PC构建](/local-llms/local-llm-pc-build-1000?lang=zh) — 最大VRAM和多GPU支持的全尺寸ATX塔式构建',
             '[本地LLM最佳预算GPU推荐](/local-llms/best-budget-gpus-local-llm?lang=zh) — RTX 5060 Ti vs RTX A4000 vs 二手Quadro按VRAM和价格对比',
