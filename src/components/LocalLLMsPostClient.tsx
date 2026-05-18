@@ -765,6 +765,20 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           <LLMImageSelector />
         )}
 
+        {/* Static Hero Image for Discover */}
+        {(article as any).heroImage && (
+          <figure className="mb-8 rounded-xl overflow-hidden">
+            <Image
+              src={(article as any).heroImage}
+              alt={article.title}
+              width={1200}
+              height={630}
+              priority
+              className="w-full"
+            />
+          </figure>
+        )}
+
         {/* Table of Contents */}
         {(article as any).toc && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">

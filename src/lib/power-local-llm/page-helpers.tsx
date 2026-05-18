@@ -109,7 +109,9 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
       siteName: 'PromptQuorum',
       images: [
         {
-          url: `${BASE}/api/og/${slug}?lang=${lang}`,
+          url: (article as any).heroImage
+            ? `${BASE}${(article as any).heroImage}`
+            : `${BASE}/api/og/${slug}?lang=${lang}`,
           width: 1200,
           height: 630,
           alt: article?.title ?? fallbackTitle,
@@ -207,6 +209,16 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       name: 'Power Local LLM Guide',
       url: `${BASE}${powerLLMHubPath(lang)}`,
     },
+  }
+
+  // Prefer heroImage when available, fall back to OG API route
+  if ((article as any).heroImage) {
+    ;(articleSchema as any).image = {
+      '@type': 'ImageObject',
+      url: `${BASE}${(article as any).heroImage}`,
+      width: 1200,
+      height: 630,
+    }
   }
 
   const breadcrumbSchema = {
