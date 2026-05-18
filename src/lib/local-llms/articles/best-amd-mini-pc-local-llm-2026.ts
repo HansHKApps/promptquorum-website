@@ -88,7 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Our Picks — May 2026',
         content: 'Four distinct winners for four buyer profiles.',
         callouts: [
-          { type: '🥇 BEST OVERALL: Minisforum MS-A2', text: '$1,599 · 96GB · Best balance of RAM, build quality, and price. Runs Llama 4 70B comfortably. [View on Minisforum →](https://store.minisforum.com)' },
+          { type: '🥇 BEST OVERALL: Minisforum MS-A2', text: '$1,599 · 96GB · Best balance of RAM, build quality, and price. Runs Llama 3.3 70B comfortably. [View on Minisforum →](https://store.minisforum.com)' },
           { type: '💰 BEST BUDGET: GMKtec EVO-X2', text: '$1,199 · 64GB · Entry point to AMD Ryzen AI Max territory. Handles 30–40B models. [View on GMKtec →](https://www.gmktec.com)' },
           { type: '🏆 BEST FOR POWER USERS: Beelink GTR9 Pro', text: '$1,899 · 128GB · Maximum RAM in any mini PC. Handles 70B + huge context windows. [View on Beelink →](https://www.bee-link.com)' },
           { type: '🔧 BEST BUILD QUALITY: AOOSTAR GEM12 Pro', text: '$1,799 · 96GB · Premium thermal design, OCuLink port for eGPU. For enthusiasts. [View on AOOSTAR →](https://aoostar.com)' },
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          'Best overall: Minisforum MS-A2 ($1,599, 96GB RAM). Runs Llama 4 70B Q4 comfortably. Best price-to-performance.',
+          'Best overall: Minisforum MS-A2 ($1,599, 96GB RAM). Runs Llama 3.3 70B Q4 comfortably. Best price-to-performance.',
           'Maximum RAM: Beelink GTR9 Pro ($1,899, 128GB). Runs 70B Q5 with massive context windows. Best for power users.',
           'Best budget: GMKtec EVO-X2 ($1,199, 64GB). Ryzen AI Max 385, good for 30–40B models. Entry point to this category.',
           'Premium option: AOOSTAR GEM12 Pro ($1,799, 96GB). OCuLink port for eGPU expansion. Enthusiast-focused.',
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Price:** $1,899 USD, €1,999 EU, ¥218,000 Japan estimate',
         ],
         strengths: [
-          'Maximum RAM: 128GB unified memory is the highest available in any mini PC. Handles Llama 4 70B Q5 plus 32K context without swapping.',
+          'Maximum RAM: 128GB unified memory is the highest available in any mini PC. Handles Llama 3.3 70B Q5 plus 32K context without swapping.',
           'Dual-bay NVMe: 2TB storage allows storing multiple 70B models simultaneously.',
           'Thermals tuned: Larger chassis with optimized fan curves. Runs cooler than compact designs.',
           'Concurrent model support: 128GB allows running two 32B models or one 70B plus one 13B side-by-side.',
@@ -353,7 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'You need CUDA-only workflows: PyTorch fine-tuning with torch.cuda, vLLM CUDA kernels, or proprietary CUDA research code. ROCm covers 85% but gaps remain.',
           'You want macOS without compromise: If your entire workflow is macOS (Xcode, Final Cut, Figma), Mac Studio M4 Max is the natural choice.',
-          'You need >70B models: Even 128GB unified memory caps at 70B Q5. Llama 4 Behemoth (405B) requires multi-GPU setup.',
+          'You need >70B models: Even 128GB unified memory caps at 70B Q5. Llama 4 Maverick (400B total) requires multi-GPU setup.',
           'You demand warranty service in hours: Chinese OEMs require shipping units back to Asia in some cases.',
           'You are running production inference for paying customers: If 99.9% uptime SLA is required, enterprise support beats consumer mini PCs.',
           'You want passive cooling: All four mini PCs need active fans under sustained load.',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         items: [
-          'Q: Can AMD Ryzen AI Max+ mini PCs run Llama 4 70B? | A: Yes, all four can. Minisforum/Beelink/AOOSTAR run 70B Q4 at 18–22 tok/s. Beelink with 128GB also handles 70B Q5. GMKtec is slower and limited to 40B models.',
+          'Q: Can AMD Ryzen AI Max+ mini PCs run Llama 3.3 70B? | A: Yes, all four can. Minisforum/Beelink/AOOSTAR run 70B Q4 at 18–22 tok/s. Beelink with 128GB also handles 70B Q5. GMKtec is slower and limited to 40B models.',
           'Q: How does AMD Ryzen AI Max+ compare to Apple M4 Max? | A: Nearly identical performance (within 5–10%). AMD is 30–40% cheaper. Trade-off: you lose macOS, Xcode, Final Cut ecosystem.',
           'Q: Do I need Linux or can I use Windows? | A: All four ship with Linux. Windows drivers are being developed but not production-ready yet.',
           'Q: What is the difference between Minisforum MS-A2 and Beelink GTR9 Pro? | A: Minisforum has 96GB RAM ($1,599). Beelink has 128GB RAM ($1,899) and comes pre-configured with Ubuntu plus ROCm.',
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Unsere Top-Picks – Mai 2026',
         content: 'Vier Gewinner für vier Käufer-Profile.',
         callouts: [
-          { type: '🥇 BESTER ALLROUNDER: Minisforum MS-A2', text: '€1.599 · 96GB · Beste Balance aus RAM, Verarbeitung und Preis. Läuft Llama 4 70B komfortabel. [Bei Minisforum ansehen →](https://store.minisforum.com)' },
+          { type: '🥇 BESTER ALLROUNDER: Minisforum MS-A2', text: '€1.599 · 96GB · Beste Balance aus RAM, Verarbeitung und Preis. Läuft Llama 3.3 70B komfortabel. [Bei Minisforum ansehen →](https://store.minisforum.com)' },
           { type: '💰 BESTE BUDGET-OPTION: GMKtec EVO-X2', text: '€1.299 · 64GB · Einstiegspunkt zu AMD Ryzen AI Max. Bewältigt 30–40B Modelle. [Bei GMKtec ansehen →](https://www.gmktec.com)' },
           { type: '🏆 BESTE FÜR POWER-USER: Beelink GTR9 Pro', text: '€1.999 · 128GB · Maximales RAM in jedem Mini-PC. Bewältigt 70B + riesige Context-Fenster. [Bei Beelink ansehen →](https://www.bee-link.com)' },
           { type: '🔧 BESTE VERARBEITUNG: AOOSTAR GEM12 Pro', text: '€1.899 · 96GB · Premium-Thermik, OCuLink Port für eGPU. Für Enthusiasten. [Bei AOOSTAR ansehen →](https://aoostar.com)' },
@@ -446,7 +446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          'Beste Gesamtbalance: Minisforum MS-A2 (€1.599, 96GB RAM). Läuft Llama 4 70B Q4 komfortabel. Bestes Preis-Leistungs-Verhältnis.',
+          'Beste Gesamtbalance: Minisforum MS-A2 (€1.599, 96GB RAM). Läuft Llama 3.3 70B Q4 komfortabel. Bestes Preis-Leistungs-Verhältnis.',
           'Maximale RAM: Beelink GTR9 Pro (€1.999, 128GB). Läuft 70B Q5 mit massiven Context-Fenstern. Best für Power-User.',
           'Beste Budget-Option: GMKtec EVO-X2 (€1.299, 64GB). Ryzen AI Max 385, gut für 30–40B Modelle. Einstiegspunkt.',
           'Premium-Option: AOOSTAR GEM12 Pro (€1.899, 96GB). OCuLink-Port für eGPU-Erweiterung. Für Enthusiasten.',
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Nos Choix – Mai 2026',
         content: 'Quatre gagnants pour quatre profils d\'acheteurs.',
         callouts: [
-          { type: '🥇 MEILLEUR GLOBAL: Minisforum MS-A2', text: '€1.599 · 96 Go · Meilleur équilibre RAM, qualité et prix. Exécute Llama 4 70B confortablement. [Voir chez Minisforum →](https://store.minisforum.com)' },
+          { type: '🥇 MEILLEUR GLOBAL: Minisforum MS-A2', text: '€1.599 · 96 Go · Meilleur équilibre RAM, qualité et prix. Exécute Llama 3.3 70B confortablement. [Voir chez Minisforum →](https://store.minisforum.com)' },
           { type: '💰 MEILLEUR BUDGET: GMKtec EVO-X2', text: '€1.299 · 64 Go · Point d\'entrée AMD Ryzen AI Max. Gère modèles 30–40B. [Voir chez GMKtec →](https://www.gmktec.com)' },
           { type: '🏆 MEILLEUR POUR POWER USERS: Beelink GTR9 Pro', text: '€1.999 · 128 Go · RAM max dans tout mini PC. Gère 70B + contextes massifs. [Voir chez Beelink →](https://www.bee-link.com)' },
           { type: '🔧 MEILLEURE QUALITÉ: AOOSTAR GEM12 Pro', text: '€1.899 · 96 Go · Design thermique premium, port OCuLink pour eGPU. Pour passionnés. [Voir chez AOOSTAR →](https://aoostar.com)' },
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          'Meilleur équilibre: Minisforum MS-A2 (€1.599, 96 Go RAM). Exécute Llama 4 70B Q4 confortablement. Meilleur rapport prix-performance.',
+          'Meilleur équilibre: Minisforum MS-A2 (€1.599, 96 Go RAM). Exécute Llama 3.3 70B Q4 confortablement. Meilleur rapport prix-performance.',
           'RAM maximum: Beelink GTR9 Pro (€1.999, 128 Go). Exécute 70B Q5 avec contextes massifs. Meilleur pour power users.',
           'Meilleur budget: GMKtec EVO-X2 (€1.299, 64 Go). Ryzen AI Max 385, bon pour modèles 30–40B. Point d\'entrée.',
           'Option premium: AOOSTAR GEM12 Pro (€1.899, 96 Go). Port OCuLink pour eGPU. Pour enthousiastes.',
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'おすすめ商品 – 2026年5月',
         content: '4つの購入者タイプに対応した4つの優選商品。',
         callouts: [
-          { type: '🥇 総合ベスト: Minisforum MS-A2', text: '¥172,000 · 96GB · RAMと品質と価格の最高バランス。Llama 4 70Bを快適実行。[Minisforumで確認 →](https://store.minisforum.com)' },
+          { type: '🥇 総合ベスト: Minisforum MS-A2', text: '¥172,000 · 96GB · RAMと品質と価格の最高バランス。Llama 3.3 70Bを快適実行。[Minisforumで確認 →](https://store.minisforum.com)' },
           { type: '💰 ベストバジェット: GMKtec EVO-X2', text: '¥130,000 · 64GB · AMD Ryzen AI Maxへの入門。30~40Bモデル対応。[GMKtecで確認 →](https://www.gmktec.com)' },
           { type: '🏆 パワーユーザーベスト: Beelink GTR9 Pro', text: '¥205,000 · 128GB · ミニPCの最大メモリ。70B+巨大コンテキスト対応。[Beelinkで確認 →](https://www.bee-link.com)' },
           { type: '🔧 最高ビルド品質: AOOSTAR GEM12 Pro', text: '¥189,000 · 96GB · プレミアム冷却設計、eGPU用OCuLinkポート。エンスージアスト向け。[AOOSTARで確認 →](https://aoostar.com)' },
@@ -676,7 +676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          'ベストバランス:Minisforum MS-A2(¥172,000、96GB RAM)。Llama 4 70B Q4を快適に実行。最高コスパ。',
+          'ベストバランス:Minisforum MS-A2(¥172,000、96GB RAM)。Llama 3.3 70B Q4を快適に実行。最高コスパ。',
           '最大メモリ:Beelink GTR9 Pro(¥205,000、128GB)。70B Q5を巨大コンテキストで実行。パワーユーザー向け。',
           'ベストバジェット:GMKtec EVO-X2(¥130,000、64GB)。Ryzen AI Max 385、30~40Bモデル向け。入門オプション。',
           'プレミアムオプション:AOOSTAR GEM12 Pro(¥189,000、96GB)。OCuLinkポート搭載。エンスージアスト向け。',
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '推荐之选 – 2026年5月',
         content: '四类购买者的四个最佳选择。',
         callouts: [
-          { type: '🥇 综合最优:Minisforum MS-A2', text: '¥10500 · 96GB · 内存、品质、价格的最佳平衡。运行Llama 4 70B流畅。[查看Minisforum →](https://store.minisforum.com)' },
+          { type: '🥇 综合最优:Minisforum MS-A2', text: '¥10500 · 96GB · 内存、品质、价格的最佳平衡。运行Llama 3.3 70B流畅。[查看Minisforum →](https://store.minisforum.com)' },
           { type: '💰 最优入门:GMKtec EVO-X2', text: '¥8600 · 64GB · AMD Ryzen AI Max的入门产品。支持30~40B模型。[查看GMKtec →](https://www.gmktec.com)' },
           { type: '🏆 专业用户最佳:Beelink GTR9 Pro', text: '¥13700 · 128GB · 迷你PC最大内存。支持70B+超大上下文。[查看Beelink →](https://www.bee-link.com)' },
           { type: '🔧 品质最佳:AOOSTAR GEM12 Pro', text: '¥13000 · 96GB · 优质散热设计、eGPU OCuLink接口。面向发烧友。[查看AOOSTAR →](https://aoostar.com)' },
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '综合最优:Minisforum MS-A2(¥10500、96GB内存)。Llama 4 70B Q4运行流畅。性价比最高。',
+          '综合最优:Minisforum MS-A2(¥10500、96GB内存)。Llama 3.3 70B Q4运行流畅。性价比最高。',
           '最大内存:Beelink GTR9 Pro(¥13700、128GB)。运行70B Q5且支持超大上下文。专业用户首选。',
           '最优入门:GMKtec EVO-X2(¥8600、64GB)。Ryzen AI Max 385、适合30~40B模型。入门选项。',
           '高端选项:AOOSTAR GEM12 Pro(¥13000、96GB)。支持eGPU扩展。发烧友向。',
