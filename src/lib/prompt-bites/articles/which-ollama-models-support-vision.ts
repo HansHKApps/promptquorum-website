@@ -34,8 +34,60 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
     },
     sections: {
-      tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] },
-      faq: { id: 'faq', title: 'Quick Answers About Ollama Vision Models', faqs: [] },
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Four Ollama vision models are production-ready: LLaVA, Llama 3.2 Vision, Qwen-VL, and Gemma 3',
+          'Vision models need 1–3 GB more VRAM than their text-only equivalents — the image encoder runs alongside the LLM',
+          'LLaVA 7B is the safest starting point (~7 GB VRAM, broad client compatibility)',
+          'Use Qwen-VL for chart and diagram analysis; use Llama 3.2 Vision 11B for OCR and multi-step reasoning',
+        ],
+      },
+      body1: {
+        title: 'The Top Vision Models on Ollama',
+        content: [
+          '<strong>As of May 2026, Ollama supports four production-ready vision models: LLaVA, Llama 3.2 Vision, Qwen-VL, and Gemma 3.</strong> Each has a distinct strength and VRAM profile.',
+          'LLaVA is the safest starting point — it has the broadest client compatibility and works with any image format Ollama accepts. Llama 3.2 Vision 11B is the best choice for OCR and multi-step visual reasoning. Qwen-VL leads on charts, diagrams, and structured documents. Gemma 3\'s vision variant adds strong multilingual image understanding.',
+          'All vision models load an image encoder alongside the LLM weights. This encoder adds 1–3 GB of VRAM above what the base text-only model needs — plan for that overhead when checking your VRAM budget.',
+        ],
+      },
+      body2: {
+        title: 'VRAM Requirements for Vision',
+        content: [
+          '<strong>Every vision model needs more VRAM than its text-only equivalent.</strong> A 7B vision model typically requires 7–9 GB VRAM, not the ~6 GB you would budget for a 7B text model.',
+          'For chart and document analysis, Qwen-VL 7B and Gemma 3 offer the most VRAM-efficient options with strong diagram understanding. For OCR and complex reasoning on images, Llama 3.2 Vision 11B justifies the extra VRAM. For the full guide on multimodal local models and use-case matching, see the <a href="/local-llms/multimodal-local-llms" class="text-primary hover:underline">multimodal local LLMs guide</a>.',
+        ],
+        columns: ['Model', 'VRAM at Q4', 'Image Capability'],
+        rows: [
+          { 'Model': 'LLaVA 7B', 'VRAM at Q4': '~7 GB', 'Image Capability': 'General image Q&A, broad compatibility' },
+          { 'Model': 'Llama 3.2 Vision 11B', 'VRAM at Q4': '~10 GB', 'Image Capability': 'OCR, multi-step visual reasoning' },
+          { 'Model': 'Qwen-VL 7B', 'VRAM at Q4': '~7 GB', 'Image Capability': 'Charts, diagrams, document analysis' },
+          { 'Model': 'Gemma 3 (vision)', 'VRAM at Q4': '~6 GB', 'Image Capability': 'Multilingual image understanding' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Quick Answers About Ollama Vision Models',
+        faqs: [
+          {
+            q: 'How do I send an image to Ollama via the API?',
+            a: 'Use the <code>/api/chat</code> endpoint and include the image as a base64-encoded string in the <code>images</code> field of the message body. See <a href="/prompt-bites/can-you-run-qwen3-on-ollama" class="text-primary hover:underline">Qwen 3 on Ollama</a> for another multimodal-capable option with strong tool calling support.',
+          },
+          {
+            q: 'Can vision models do OCR (read text from images)?',
+            a: 'Yes, but quality varies. Llama 3.2 Vision 11B is the strongest for OCR among Ollama-supported models. LLaVA 7B can read clearly printed text but struggles with handwriting or small fonts.',
+          },
+          {
+            q: 'Which Ollama vision model is best for charts and diagrams?',
+            a: 'Qwen-VL 7B. It was fine-tuned on structured visual data including charts, tables, and diagrams, and outperforms LLaVA and Gemma 3 on document understanding benchmarks.',
+          },
+          {
+            q: 'Do vision models support multiple images in one prompt?',
+            a: 'Support varies by model. LLaVA and Qwen-VL currently process one image per turn in Ollama. Llama 3.2 Vision supports multi-image inputs depending on the Ollama version and client implementation.',
+          },
+        ],
+      },
     },
   },
   de: { theme: 'Ollama', title: '[DE translation pending]', seoTitle: '[DE translation pending]', metaDescription: '[DE translation pending]', publishDate: '2026-05-18', freshness_tier: 'semi_annual', next_refresh_due: '2026-11-18', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] }, faq: { id: 'faq', title: 'FAQ', faqs: [] } } },
