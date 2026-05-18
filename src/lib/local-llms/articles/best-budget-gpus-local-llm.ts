@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'rtx-3060-12gb',
           title: 'What Can You Run on RTX 3060 12GB?',
           content: [
-            '**The RTX 3060 12GB is the best budget GPU for local LLMs in 2026.** 12GB VRAM fits every 7B model at Q4/Q5 quantization, and most 13B models at Q4. Here are the exact models and speeds you can expect:',
+            '**The RTX 3060 12GB is the best budget GPU for local LLMs in 2026.** 12GB VRAM fits every 7B model at Q4/Q5 quantization, and most 13B models at Q4. For detailed guidance on VRAM requirements across model sizes, see the [VRAM requirements guide →](/local-llms/how-much-vram-local-llm). Here are the exact models and speeds you can expect:',
           ],
           columns: ['Model', 'Size', 'Quantization', 'VRAM Used', 'Speed', 'Best For'],
           rows: [
@@ -360,7 +360,7 @@ schema: {
           id: 'rtx-3060-12gb',
           title: 'Was kann man auf RTX 3060 12GB ausführen?',
           content: [
-            '**Die RTX 3060 12GB ist die beste Budget-GPU für lokale LLMs 2026.** 12 GB VRAM passt für jedes 7B-Modell bei Q4/Q5 und die meisten 13B-Modelle bei Q4:',
+            '**Die RTX 3060 12GB ist die beste Budget-GPU für lokale LLMs 2026.** 12 GB VRAM passt für jedes 7B-Modell bei Q4/Q5 und die meisten 13B-Modelle bei Q4. Für detaillierte Anleitung zu VRAM-Anforderungen bei verschiedenen Modellgrößen siehe den [VRAM-Anforderungsleitfaden →](/local-llms/how-much-vram-local-llm?lang=de). Hier sind die genauen Modelle und Geschwindigkeiten, die Sie erwarten können:',
           ],
           columns: ['Modell', 'Größe', 'Quantisierung', 'VRAM', 'Geschwindigkeit', 'Ideal für'],
           rows: [
@@ -605,7 +605,7 @@ schema: {
           id: 'rtx-3060-12gb',
           title: 'Que peut-on exécuter sur RTX 3060 12 Go ?',
           content: [
-            '**La RTX 3060 12 Go est le meilleur GPU budget pour les LLM locaux en 2026.** 12 Go de VRAM accueille tous les modèles 7B en Q4/Q5 et la plupart des 13B en Q4 :',
+            '**La RTX 3060 12 Go est le meilleur GPU budget pour les LLM locaux en 2026.** 12 Go de VRAM accueille tous les modèles 7B en Q4/Q5 et la plupart des 13B en Q4. Pour des conseils détaillés sur les exigences VRAM selon les tailles de modèles, consultez le [guide des exigences VRAM →](/local-llms/how-much-vram-local-llm?lang=fr). Voici les modèles exacts et les vitesses attendues :',
           ],
           columns: ['Modèle', 'Taille', 'Quantification', 'VRAM', 'Vitesse', 'Idéal pour'],
           rows: [
@@ -713,7 +713,7 @@ schema: {
       sections: {
         tldr: { id: 'key-takeaways',
  isTldr: true, items: ['**RTX 3060 12GB**（中古$200–250）：すべての7Bモデルとほとんどの13BをQ4で実行。プラスLlama 4 Scout（MoE）~10GB — 最良の全体品質。', '**RTX 3060 6GB**：3Bモデルのみ（Phi-4 Mini、Llama 3.2 3B）。7Bには不足。', '**12GBでの最良総合モデル：** Llama 4 Scout 17B（MoE）~10GB VRAM、12–16トークン/秒。稠密30Bモデルに匹敵する品質。', '**12GBでの最良コーディングモデル：** Qwen3 8B、16–20トークン/秒。Qwen3より改善。', '**12GBでの最良推論モデル：** DeepSeek-R1 7B、10–12トークン/秒。', '**対象外：** 70Bモデルや13B Q8が必要な場合は24GB（RTX 4090）が必要。'] },
-        'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'RTX 3060 12GBで何が動く？', content: ['**RTX 3060 12GBは2026年のローカルLLM用最良バジェットGPUです。** 12GB VRAMはQ4/Q5のすべての7Bモデルと、Q4のほとんどの13Bモデルに対応：'], columns: ['モデル', 'サイズ', '量子化', 'VRAM使用', '速度', '最適用途'], rows: [{ 'モデル': 'Llama 4 Scout 17B', 'サイズ': '17B活性（109B MoE）', '量子化': 'Q4_K_M', 'VRAM使用': '~10 GB', '速度': '12–16トークン/秒', '最適用途': '最良総合品質（MoE）' }, { 'モデル': 'Llama 3.2 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '15–20トークン/秒', '最適用途': 'チャット、Q&A（レガシー）' }, { 'モデル': 'Mistral 7B v0.3', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '18トークン/秒', '最適用途': '指示従行' }, { 'モデル': 'Qwen3 8B', 'サイズ': '8B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '16–20トークン/秒', '最適用途': 'コーディング（Qwen2.5より改善）' }, { 'モデル': 'DeepSeek-R1 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '10–12トークン/秒', '最適用途': '推論、数学' }, { 'モデル': 'Gemma 4 9B', 'サイズ': '9B', '量子化': 'Q4_K_M', 'VRAM使用': '~8 GB', '速度': '12–15トークン/秒', '最適用途': 'ビジョン、マルチモーダル' }, { 'モデル': 'Llama 3.2 13B', 'サイズ': '13B', '量子化': 'Q4_K_M', 'VRAM使用': '~11 GB', '速度': '8–10トークン/秒', '最適用途': '高品質チャット（Q4のみ）' }], note: 'Llama 4 Scoutは2026年RTX 3060 12GB所有者向けの最大アップグレード。MoE アーキテクチャはトークンあたり17Bパラメータのみアクティブ（109B合計）、稠密7B-8Bモデルを大きく上回る品質を同等VRAM使用量で提供。`ollama pull llama4:scout`。すべての速度はOllama、RTX 3060 12GB、16GBシステムRAM、Ryzen 7 7700Xで計測。Q4_K_M量子化。速度は±15%変動。' },
+        'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'RTX 3060 12GBで何が動く？', content: ['**RTX 3060 12GBは2026年のローカルLLM用最良バジェットGPUです。** 12GB VRAMはQ4/Q5のすべての7Bモデルと、Q4のほとんどの13Bモデルに対応。モデルサイズ別のVRAM要件について詳しくは、[VRAM要件ガイド →](/local-llms/how-much-vram-local-llm?lang=ja)をご参照ください。期待できる正確なモデルと速度は次の通りです：'], columns: ['モデル', 'サイズ', '量子化', 'VRAM使用', '速度', '最適用途'], rows: [{ 'モデル': 'Llama 4 Scout 17B', 'サイズ': '17B活性（109B MoE）', '量子化': 'Q4_K_M', 'VRAM使用': '~10 GB', '速度': '12–16トークン/秒', '最適用途': '最良総合品質（MoE）' }, { 'モデル': 'Llama 3.2 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '15–20トークン/秒', '最適用途': 'チャット、Q&A（レガシー）' }, { 'モデル': 'Mistral 7B v0.3', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '18トークン/秒', '最適用途': '指示従行' }, { 'モデル': 'Qwen3 8B', 'サイズ': '8B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '16–20トークン/秒', '最適用途': 'コーディング（Qwen2.5より改善）' }, { 'モデル': 'DeepSeek-R1 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '10–12トークン/秒', '最適用途': '推論、数学' }, { 'モデル': 'Gemma 4 9B', 'サイズ': '9B', '量子化': 'Q4_K_M', 'VRAM使用': '~8 GB', '速度': '12–15トークン/秒', '最適用途': 'ビジョン、マルチモーダル' }, { 'モデル': 'Llama 3.2 13B', 'サイズ': '13B', '量子化': 'Q4_K_M', 'VRAM使用': '~11 GB', '速度': '8–10トークン/秒', '最適用途': '高品質チャット（Q4のみ）' }], note: 'Llama 4 Scoutは2026年RTX 3060 12GB所有者向けの最大アップグレード。MoE アーキテクチャはトークンあたり17Bパラメータのみアクティブ（109B合計）、稠密7B-8Bモデルを大きく上回る品質を同等VRAM使用量で提供。`ollama pull llama4:scout`。すべての速度はOllama、RTX 3060 12GB、16GBシステムRAM、Ryzen 7 7700Xで計測。Q4_K_M量子化。速度は±15%変動。' },
         'rtx-3060-6gb': { id: 'rtx-3060-6gb', title: 'RTX 3060 6GBで何が動く？', content: ['**6GB版は大幅に制限されています。** 3Bモデルのみ快適に動作。7BモデルのQ4は~7GB必要で、容量不足です。'], items: ['**Phi-4 Mini 3.8B（Q4）：** ~3GB VRAM、20–25トークン/秒。このサイズでの最良推論。', '**Llama 3.2 3B（Q4）：** ~2.5GB VRAM、25–35トークン/秒。最速オプション。', '**Gemma 2 2B（Q4）：** ~1.7GB VRAM、35–45トークン/秒。最軽量モデル。', '**7Bオフローディング：** 可能だが遅い。Llama 7BのCPUオフロード = ~5–8トークン/秒。', '**推奨：** 6GBカードをお持ちなら、12GB中古（$200–250）にアップグレードを。'] },
         'which-budget-gpus': { title: 'RTX 3060 vs 他のバジェットGPU', columns: ['GPU', 'VRAM', '価格（中古）', '7B速度', '最大モデル', '評価'], rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '¥30,000–38,000', '7B速度': '15–20トークン/秒', '最大モデル': '13B（Q4）', '評価': '最良バジェット' }, { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', '価格（中古）': '¥38,000–45,000', '7B速度': '20–25トークン/秒', '最大モデル': '7B（Q5最大）', '評価': '高速だがVRAM少' }, { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '価格（中古）': '¥27,000–35,000', '7B速度': '12–15トークン/秒', '最大モデル': '13B（Q5）', '評価': 'VRAM/円最良' }, { 'GPU': 'RTX 4070 Super', 'VRAM': '12 GB', '価格（中古）': '¥60,000–68,000', '7B速度': '25–30トークン/秒', '最大モデル': '13B（Q5）', '評価': '高速だが2倍の価格' }, { 'GPU': 'RX 6700 XT', 'VRAM': '12 GB', '価格（中古）': '¥23,000–30,000', '7B速度': '10–14トークン/秒', '最大モデル': '13B（Q4）', '評価': '最安、AMDの手間' }], note: 'RTX 3060 12GBが価格性能比で勝利：¥30,000–38,000の12GB VRAMですべての7Bとほとんどの13Bを実行。' },
         'vram-7b': { title: '7Bモデルに必要なVRAMは？', content: ['Q4（4ビット）で量子化された7Bモデルは**6～8GB VRAM**を必要とし、Q5（5ビット）は**8～10GB**、Q8（8ビット）は**14～16GB**を必要とします。', '実際には：**8GBは最低限**で、Q4で7Bモデルでの快適な推論とバッチ処理用のスペースがあります。', '6GBカード（RTX 2060）は技術的に機能しますがアグレッシブな最適化が必要で、より高いバッチに余裕がありません。', 'GPUコストは経済性の一面であり、トークンコストはもう一面です。ローカル推論はAPIのトークン課金を排除しますが、プロンプト長は依然としてレイテンシとスループットに影響します。トークン、価格体系、最適化戦略を含むコスト全体像については、[トークン、コスト、制限：AIプロンプティングの経済学](https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja)をご覧ください。'] },
@@ -779,7 +779,7 @@ schema: {
           id: 'rtx-3060-12gb',
           title: 'RTX 3060 12GB能运行什么？',
           content: [
-            '**RTX 3060 12GB是2026年本地LLM最佳预算GPU。** 12GB VRAM适配所有7B模型的Q4/Q5和大多数13B模型的Q4：',
+            '**RTX 3060 12GB是2026年本地LLM最佳预算GPU。** 12GB VRAM适配所有7B模型的Q4/Q5和大多数13B模型的Q4。关于不同模型大小的VRAM要求详情，见[VRAM需求指南 →](/local-llms/how-much-vram-local-llm?lang=zh)。以下是您可以期待的确切模型和速度：',
           ],
           columns: ['模型', '大小', '量化', 'VRAM占用', '速度', '最适合'],
           rows: [
