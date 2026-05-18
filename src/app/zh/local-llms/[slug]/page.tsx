@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = llmContent[key][lang] ?? llmContent[key]['en']
   if (!article) return notFound()
 
-  const VALID_LANGS_META = ['en', 'de', 'fr', 'zh', 'zh'] as const
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh'] as const
   const availableLangsForMeta = VALID_LANGS_META.filter(l => {
     const c = llmContent[key]?.[l]
     return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
@@ -87,7 +87,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: pageTitle.length <= 45 ? `${pageTitle} | PromptQuorum` : pageTitle,
     description: metaDesc,
-    alternates: generateAlternates(`/local-llms/${slug}`, lang, hasTranslation, availableLangsForMeta, ['zh']),
+    alternates: generateAlternates(`/local-llms/${slug}`, lang, hasTranslation, availableLangsForMeta, ['ja', 'zh', 'de', 'fr']),
     openGraph: {
       title: pageTitle,
       description: metaDesc,
