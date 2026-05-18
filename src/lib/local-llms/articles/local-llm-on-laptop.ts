@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestModels: {
           id: 'best-models',
           title: 'Which Local LLM Models Run Best on a Laptop?',
-          content: 'These models are specifically selected for laptop constraints -- balancing quality, RAM use, and sustained generation speed. Install [Ollama](/local-llms/how-to-install-ollama) to run any of these with a single command:',
+          content: 'These models are specifically selected for laptop constraints -- balancing quality, RAM use, and sustained generation speed. For detailed guidance on VRAM requirements across different models and laptop configurations, see the [VRAM requirements guide →](/local-llms/how-much-vram-local-llm). Install [Ollama](/local-llms/how-to-install-ollama) to run any of these with a single command:',
           rows: [
             { 'Model': 'Llama 3.2 3B', 'RAM': '2.5 GB', 'Speed (CPU)': '25-45 tok/s', 'Quality': 'Medium', 'Best For': '8 GB laptops, quick tasks' },
             { 'Model': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Speed (CPU)': '20-35 tok/s', 'Quality': 'Medium-High', 'Best For': '8 GB laptops, reasoning/coding' },
@@ -582,7 +582,7 @@ schema: {
         },
         bestModels: {
           title: 'Was sind die besten Local LLM-Modelle für Laptops?',
-          content: 'Diese Modelle sind speziell für Laptop-Beschränkungen ausgewählt -- Qualität, RAM-Verbrauch und kontinuierliche Generierungsgeschwindigkeit im Gleichgewicht. Installieren Sie [Ollama](/local-llms/how-to-install-ollama) um jedes dieser Modelle mit einem einzigen Befehl auszuführen:',
+          content: 'Diese Modelle sind speziell für Laptop-Beschränkungen ausgewählt -- Qualität, RAM-Verbrauch und kontinuierliche Generierungsgeschwindigkeit im Gleichgewicht. Für detaillierte Anleitungen zu VRAM-Anforderungen in verschiedenen Laptop-Konfigurationen siehe den [VRAM-Anforderungsleitfaden →](/local-llms/how-much-vram-local-llm?lang=de). Installieren Sie [Ollama](/local-llms/how-to-install-ollama) um jedes dieser Modelle mit einem einzigen Befehl auszuführen:',
           rows: [
             { 'Modell': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Geschwindigkeit (CPU)': '25-45 Token/s', 'Qualität': 'Mittel', 'Beste für': '8 GB Laptops, schnelle Aufgaben' },
             { 'Modell': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Geschwindigkeit (CPU)': '20-35 Token/s', 'Qualität': 'Mittel-Hoch', 'Beste für': '8 GB Laptops, Reasoning/Coding' },
@@ -946,7 +946,7 @@ schema: {
         },
         bestModels: {
           title: 'Quels sont les meilleurs modèles Local LLM pour ordinateurs portables?',
-          content: 'Ces modèles sont spécifiquement sélectionnés pour les contraintes d\'ordinateur portable -- équilibrant la qualité, l\'utilisation de RAM et la vitesse de génération continue. Installez [Ollama](/local-llms/how-to-install-ollama) pour exécuter l\'un de ces modèles avec une seule commande:',
+          content: 'Ces modèles sont spécifiquement sélectionnés pour les contraintes d\'ordinateur portable -- équilibrant la qualité, l\'utilisation de RAM et la vitesse de génération continue. Pour des conseils détaillés sur les exigences VRAM selon les configurations portables, consultez le [guide des exigences VRAM →](/local-llms/how-much-vram-local-llm?lang=fr). Installez [Ollama](/local-llms/how-to-install-ollama) pour exécuter l\'un de ces modèles avec une seule commande:',
           rows: [
             { 'Modèle': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Vitesse (CPU)': '25-45 token/s', 'Qualité': 'Moyenne', 'Meilleur pour': 'Ordinateurs portables 8 GB, tâches rapides' },
             { 'Modèle': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Vitesse (CPU)': '20-35 token/s', 'Qualité': 'Moyenne-Haute', 'Meilleur pour': 'Ordinateurs portables 8 GB, reasoning/coding' },
@@ -1308,7 +1308,7 @@ schema: {
         },
         bestModels: {
           title: 'ノートパソコン向けのベストローカルLLMモデルは何ですか？',
-          content: 'これらのモデルはノートパソコンの制約用に特別に選択されています--品質、RAM使用量、および継続的な生成速度のバランスをとっています。[Ollama](/local-llms/how-to-install-ollama)をインストールして、これらのいずれかを単一のコマンドで実行します：',
+          content: 'これらのモデルはノートパソコンの制約用に特別に選択されています--品質、RAM使用量、および継続的な生成速度のバランスをとっています。異なるノートパソコン構成でのVRAM要件についての詳細ガイドは、[VRAM要件ガイド →](/local-llms/how-much-vram-local-llm?lang=ja)をご参照ください。[Ollama](/local-llms/how-to-install-ollama)をインストールして、これらのいずれかを単一のコマンドで実行します：',
           rows: [
             { 'モデル': 'Llama 3.2 3B', 'RAM': '2.5GB', 'Speed (CPU)': '25-45トークン/秒', '品質': '中', '最適な用途': '8GBノートパソコン、クイックタスク' },
             { 'モデル': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20-35トークン/秒', '品質': '中〜高', '最適な用途': '8GBノートパソコン、推論/コーディング' },
@@ -1670,7 +1670,7 @@ schema: {
         },
         bestModels: {
           title: '笔记本电脑最佳本地LLM模型是什么？',
-          content: '这些模型专门为笔记本电脑限制而选择 -- 平衡质量、RAM使用和持续生成速度。安装[Ollama](/local-llms/how-to-install-ollama)以使用单个命令运行这些模型中的任何一个：',
+          content: '这些模型专门为笔记本电脑限制而选择 -- 平衡质量、RAM使用和持续生成速度。关于不同笔记本电脑配置中VRAM要求的详细指南，见[VRAM需求指南 →](/local-llms/how-much-vram-local-llm?lang=zh)。安装[Ollama](/local-llms/how-to-install-ollama)以使用单个命令运行这些模型中的任何一个：',
           rows: [
             { '模型': 'Llama 3.2 3B', 'RAM': '2.5GB', '速度（CPU）': '25-45令牌/秒', '质量': '中等', '最佳适配': '8GB笔记本电脑，快速任务' },
             { '模型': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', '速度（CPU）': '20-35令牌/秒', '质量': '中高', '最佳适配': '8GB笔记本电脑，推理/编码' },
