@@ -250,7 +250,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     path.startsWith('/') ? `https://www.promptquorum.com${path}` :
     `https://www.promptquorum.com/images/${path}`
 
-  const sectionImageObjects = Object.values(article.sections)
+  const sectionImageObjects = Object.values(article.sections ?? {})
     .filter(s => !!s.image)
     .map(s => ({
       '@type': 'ImageObject' as const,

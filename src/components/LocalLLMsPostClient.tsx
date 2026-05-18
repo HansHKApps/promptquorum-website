@@ -652,7 +652,19 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
-              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {(() => { const d = article.dateModified ?? article.publishDate; return d ? new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : '' })()}
+              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {(() => {
+                const d = article.dateModified ?? article.publishDate
+                if (!d) return ''
+                const localeMap: Record<Language, string> = {
+                  en: 'en-US',
+                  de: 'de-DE',
+                  fr: 'fr-FR',
+                  ja: 'ja-JP',
+                  zh: 'zh-CN'
+                }
+                const isoDate = d.match(/^\d{4}-\d{2}-\d{2}/) ? d : d
+                return new Date(isoDate).toLocaleDateString(localeMap[lang], { month: 'long', year: 'numeric' })
+              })()}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>

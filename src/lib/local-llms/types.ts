@@ -54,7 +54,25 @@ export interface LLMArticle {
   dateModified?: string
   readTime?: string
   comparisonTable?: { columns: string[]; rows: Array<{ [key: string]: string }> }
-  sections: Record<string, LLMSection>
+  sections?: Record<string, LLMSection>
+  relatedGuides?: LLMSection
+  relatedReading?: LLMSection
+  updateNotice?: LLMSection
+  whyLocalLlmMatters?: LLMSection
+  comparisonTableSection?: LLMSection
+  continueSection?: LLMSection
+  cursorSection?: LLMSection
+  codySection?: LLMSection
+  tabnineSection?: LLMSection
+  windsurfSection?: LLMSection
+  localLlmIntegration?: LLMSection
+  decisionMatrix?: LLMSection
+  quickStartSection?: LLMSection
+  privacySection?: LLMSection
+  contrarySection?: LLMSection
+  faqSection?: LLMSection
+  verifiedSources?: LLMSection
+  verdictBox?: LLMSection
   schema?: Record<string, unknown>
   supplementalSchema?: Record<string, unknown>
   howToSchema?: Record<string, unknown>
