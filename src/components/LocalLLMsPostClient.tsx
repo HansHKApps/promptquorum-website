@@ -662,8 +662,13 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
                   ja: 'ja-JP',
                   zh: 'zh-CN'
                 }
-                const isoDate = d.match(/^\d{4}-\d{2}-\d{2}/) ? d : d
-                return new Date(isoDate).toLocaleDateString(localeMap[lang], { month: 'long', year: 'numeric' })
+                try {
+                  const dateObj = new Date(d)
+                  if (isNaN(dateObj.getTime())) return ''
+                  return dateObj.toLocaleDateString(localeMap[lang], { month: 'long', year: 'numeric' })
+                } catch {
+                  return ''
+                }
               })()}
             </time>
             <span>·</span>
