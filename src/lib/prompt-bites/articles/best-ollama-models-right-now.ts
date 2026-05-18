@@ -28,10 +28,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
-      ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
-      zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: { question: 'Die besten Ollama-Modelle im Moment?', answer: 'Stand Mai 2026 ist Llama 3 8B das beste Allzweck-Ollama-Modell. Für Code empfiehlt sich Qwen 2.5 Coder 14B. Für kompakten Einsatz überzeugt Phi-4 Mini. Diese Seite wird monatlich aktualisiert.', bullets: ['Bestes Allzweck: Llama 3 8B Q4_K_M', 'Bestes Coding: Qwen 2.5 Coder 14B Q4', 'Bestes Kompaktmodell: Phi-4 Mini Q4'], updatedDate: '2026-05' },
+      fr: { question: 'Les meilleurs modèles Ollama en ce moment ?', answer: 'En mai 2026, Llama 3 8B est le meilleur modèle Ollama général. Pour le code, Qwen 2.5 Coder 14B est en tête. Pour un usage compact, Phi-4 Mini est excellent. Cette page est mise à jour chaque mois.', bullets: ['Meilleur général : Llama 3 8B Q4_K_M', 'Meilleur code : Qwen 2.5 Coder 14B Q4', 'Meilleur compact : Phi-4 Mini Q4'], updatedDate: '2026-05' },
+      ja: { question: '現在最もよいOllamaモデルは？', answer: '2026年5月時点で、汎用OllamaモデルのトップはLlama 3 8Bです。コード生成にはQwen 2.5 Coder 14Bが最高位。軽量用途にはPhi-4 Miniが優秀です。このページは毎月更新されます。', bullets: ['最高汎用：Llama 3 8B Q4_K_M', '最高コーディング：Qwen 2.5 Coder 14B Q4', '最高軽量：Phi-4 Mini Q4'], updatedDate: '2026-05' },
+      zh: { question: '目前最佳的Ollama模型是什么？', answer: '截至2026年5月，最佳通用Ollama模型是Llama 3 8B。代码生成首选Qwen 2.5 Coder 14B。轻量场景首选Phi-4 Mini。本页面每月更新。', bullets: ['最佳通用：Llama 3 8B Q4_K_M', '最佳代码：Qwen 2.5 Coder 14B Q4', '最佳轻量：Phi-4 Mini Q4'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {

@@ -28,10 +28,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
-      ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
-      zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: { question: 'Welche Ollama-Modelle unterstützen Vision?', answer: 'Ollama unterstützt mehrere Vision-Modelle: LLaVA, Gemma 3 multimodal und Qwen-VL. Mit ollama run llava starten Sie am einfachsten. Alle nehmen Bilder über die Ollama API entgegen.', bullets: ['llava: Original-Vision-Modell, beste Kompatibilität', 'gemma3: Googles Multimodal-Modell, gute Qualität', 'qwen-vl: stark bei der Dokumentenanalyse'], updatedDate: '2026-05' },
+      fr: { question: 'Quels modèles Ollama prennent en charge la vision ?', answer: 'Ollama supporte plusieurs modèles de vision : LLaVA, Gemma 3 multimodal et Qwen-VL. Lancez ollama run llava pour le démarrage le plus simple. Tous acceptent des images via l\'API Ollama.', bullets: ['llava : modèle de vision original, meilleure compatibilité', 'gemma3 : modèle multimodal de Google, bonne qualité', 'qwen-vl : efficace pour la compréhension de documents'], updatedDate: '2026-05' },
+      ja: { question: 'Ollamaのビジョン対応モデルは？', answer: 'OllamaはLLaVA、Gemma 3マルチモーダル、Qwen-VLなど複数のビジョンモデルに対応しています。ollama run llavaが最も手軽なスタートです。すべてOllama API経由で画像入力に対応しています。', bullets: ['llava：オリジナルビジョンモデル、互換性最高', 'gemma3：Googleのマルチモーダルモデル、高品質', 'qwen-vl：文書理解に強み'], updatedDate: '2026-05' },
+      zh: { question: 'Ollama哪些模型支持视觉功能？', answer: 'Ollama支持多个视觉模型：LLaVA、Gemma 3多模态和Qwen-VL。运行ollama run llava是最简单的入门方式。所有模型均可通过Ollama API接收图像输入。', bullets: ['llava：原始视觉模型，兼容性最佳', 'gemma3：谷歌多模态模型，质量优良', 'qwen-vl：文档理解能力强'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {

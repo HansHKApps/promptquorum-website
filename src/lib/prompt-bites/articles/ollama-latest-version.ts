@@ -28,10 +28,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
-      ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
-      zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: { question: 'Was ist die neueste Ollama-Version?', answer: 'Die aktuelle Version finden Sie auf ollama.com oder der Ollama GitHub-Release-Seite. Unter Linux aktualisieren Sie mit dem Installationsskript. Unter Mac/Windows laden Sie den neuesten Installer herunter.', bullets: ['Prüfen: github.com/ollama/ollama/releases für die neueste Version', 'Linux-Update: curl -fsSL https://ollama.com/install.sh | sh', 'Mac/Windows: Installer von ollama.com erneut herunterladen'], updatedDate: '2026-05' },
+      fr: { question: 'Quelle est la dernière version d\'Ollama ?', answer: 'Consultez ollama.com ou la page des releases GitHub d\'Ollama pour la version actuelle. Sur Linux, utilisez le script d\'installation pour mettre à jour. Sur Mac/Windows, téléchargez le dernier installateur.', bullets: ['Vérifier : github.com/ollama/ollama/releases pour la dernière version', 'Mise à jour Linux : curl -fsSL https://ollama.com/install.sh | sh', 'Mac/Windows : re-télécharger l\'installateur depuis ollama.com'], updatedDate: '2026-05' },
+      ja: { question: 'Ollamaの最新バージョンは何ですか？', answer: '現在のバージョンはollama.comまたはOllama GitHubリリースページで確認できます。Linuxはインストールスクリプトで更新します。Mac/Windowsは最新インストーラーをダウンロードしてください。', bullets: ['確認先：github.com/ollama/ollama/releases', 'Linuxアップデート：curl -fsSL https://ollama.com/install.sh | sh', 'Mac/Windows：ollama.comからインストーラーを再ダウンロード'], updatedDate: '2026-05' },
+      zh: { question: 'Ollama的最新版本是什么？', answer: '请访问ollama.com或Ollama GitHub发布页面查看当前版本。Linux用户运行安装脚本即可更新。Mac/Windows用户重新下载最新安装程序即可。', bullets: ['查看：github.com/ollama/ollama/releases获取最新版本', 'Linux更新：curl -fsSL https://ollama.com/install.sh | sh', 'Mac/Windows：从ollama.com重新下载安装程序'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {

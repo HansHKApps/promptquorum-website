@@ -28,10 +28,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
-      ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
-      zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: { question: 'Welche Ollama-Modelle unterstützen 128K-Kontext?', answer: 'Llama 3.1 8B unterstützt 128K-Kontext in Ollama. Qwen 2.5 14B erreicht 1M Token. Hinweis: Das Ausführen mit vollem Kontext erhöht den VRAM drastisch — ein 128K-Fenster benötigt 3–4× mehr VRAM als das Standard-4K-Fenster.', bullets: ['Llama 3.1 8B: 128K-Kontext, ~16 GB VRAM bei vollem Kontext', 'Qwen 2.5 14B: bis zu 1M Token, 24+ GB VRAM bei vollem Kontext', 'Für normalen Einsatz --num-ctx 4096 setzen, um VRAM zu sparen'], updatedDate: '2026-05' },
+      fr: { question: 'Quels modèles Ollama supportent le contexte 128K ?', answer: 'Llama 3.1 8B prend en charge un contexte de 128K sur Ollama. Qwen 2.5 14B atteint 1M de tokens. Attention : exécuter le contexte complet augmente fortement la VRAM — une fenêtre de 128K nécessite 3 à 4× plus de VRAM que la fenêtre par défaut de 4K.', bullets: ['Llama 3.1 8B : contexte 128K, ~16 Go de VRAM au contexte complet', 'Qwen 2.5 14B : jusqu\'à 1M de tokens, 24+ Go de VRAM au contexte complet', 'Utiliser --num-ctx 4096 pour un usage normal et économiser la VRAM'], updatedDate: '2026-05' },
+      ja: { question: 'Ollamaで128Kコンテキスト対応モデルは？', answer: 'Llama 3.1 8BはOllamaで128Kコンテキストに対応しています。Qwen 2.5 14Bは1Mトークンに達します。注意：フルコンテキストで実行するとVRAMが大幅に増加します — 128Kウィンドウはデフォルト4Kの3〜4倍のVRAMが必要です。', bullets: ['Llama 3.1 8B：128Kコンテキスト、フルコンテキストで~16 GB VRAM', 'Qwen 2.5 14B：最大1Mトークン、フルコンテキストで24+ GB VRAM', '通常使用は--num-ctx 4096でVRAMを節約'], updatedDate: '2026-05' },
+      zh: { question: 'Ollama上哪些模型支持128K上下文？', answer: 'Llama 3.1 8B在Ollama上支持128K上下文。Qwen 2.5 14B可达1M token。注意：运行完整上下文会大幅增加显存占用——128K窗口比默认4K窗口需要多3–4倍显存。', bullets: ['Llama 3.1 8B：128K上下文，完整上下文需~16 GB显存', 'Qwen 2.5 14B：最多1M token，完整上下文需24+ GB显存', '日常使用设置--num-ctx 4096以节省显存'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {

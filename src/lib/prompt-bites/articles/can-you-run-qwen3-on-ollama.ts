@@ -28,10 +28,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
-      ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
-      zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: { question: 'Kann man Qwen 3 mit Ollama ausführen?', answer: 'Ja — Ollama unterstützt alle Qwen 3-Modellgrößen von 0,6B bis 72B. Starten Sie eine beliebige Größe mit ollama run qwen3:8b. Das 8B-Modell benötigt ~6 GB VRAM bei Q4.', bullets: ['ollama run qwen3:0.6b — benötigt 1 GB VRAM', 'ollama run qwen3:8b — benötigt ~6 GB VRAM', 'ollama run qwen3:72b — benötigt ~40 GB VRAM'], updatedDate: '2026-05' },
+      fr: { question: 'Peut-on faire tourner Qwen 3 sur Ollama ?', answer: 'Oui — Ollama prend en charge toutes les tailles de modèle Qwen 3, de 0,6B à 72B. Lancez n\'importe quelle taille avec ollama run qwen3:8b. Le modèle 8B nécessite ~6 Go de VRAM en Q4.', bullets: ['ollama run qwen3:0.6b — nécessite 1 Go de VRAM', 'ollama run qwen3:8b — nécessite ~6 Go de VRAM', 'ollama run qwen3:72b — nécessite ~40 Go de VRAM'], updatedDate: '2026-05' },
+      ja: { question: 'OllamaでQwen 3を動かせますか？', answer: 'はい — OllamaはQwen 3の全サイズ（0.6Bから72B）に対応しています。ollama run qwen3:8bで任意のサイズを起動できます。8BモデルはQ4で~6 GB VRAMが必要です。', bullets: ['ollama run qwen3:0.6b — 1 GB VRAMで動作', 'ollama run qwen3:8b — ~6 GB VRAM必要', 'ollama run qwen3:72b — ~40 GB VRAM必要'], updatedDate: '2026-05' },
+      zh: { question: '可以在Ollama上运行Qwen 3吗？', answer: '可以——Ollama支持所有Qwen 3型号，从0.6B到72B均可运行。使用ollama run qwen3:8b启动任意规格。8B模型Q4量化需要约6 GB显存。', bullets: ['ollama run qwen3:0.6b — 需要1 GB显存', 'ollama run qwen3:8b — 需要约6 GB显存', 'ollama run qwen3:72b — 需要约40 GB显存'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {
