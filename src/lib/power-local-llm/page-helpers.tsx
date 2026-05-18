@@ -123,6 +123,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
       site: '@promptquorum',
       title: article?.title ?? fallbackTitle,
       description: (article as any)?.twitterDescription ?? desc,
+      images: [`${BASE}/api/og/${slug}?lang=${lang}`],
     },
     ...(isPublished
       ? {}
@@ -188,6 +189,12 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       '@type': 'Person',
       name: 'Hans Kuepper',
       url: 'https://www.promptquorum.com/about',
+      sameAs: [
+        'https://www.linkedin.com/in/hanskuepper/',
+        'https://x.com/HansKuepperAPPs',
+        'https://github.com/HansHKApps',
+        'https://bsky.app/profile/hhkbluesky.bsky.social',
+      ],
     },
     publisher: {
       '@type': 'Organization',

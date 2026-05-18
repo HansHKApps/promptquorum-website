@@ -168,6 +168,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       site: '@promptquorum',
       title: isGlossary ? 'Prompt Engineering Glossary (100 Terms)' : twTitle,
       description: isGlossary ? 'Chain-of-Thought • RAG • Few-shot • Agents • Temperature • Token Limits. 100 searchable, cited, expert definitions.' : twDesc,
+      images: [finalOgImage],
     },
   }
 }
@@ -243,6 +244,12 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       '@type': 'Person',
       name: 'Hans Kuepper',
       url: 'https://www.promptquorum.com/about',
+      sameAs: [
+        'https://www.linkedin.com/in/hanskuepper/',
+        'https://x.com/HansKuepperAPPs',
+        'https://github.com/HansHKApps',
+        'https://bsky.app/profile/hhkbluesky.bsky.social',
+      ],
     },
     publisher: {
       '@type': 'Organization',

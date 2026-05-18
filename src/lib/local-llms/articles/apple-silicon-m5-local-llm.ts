@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparison-table': {
         id: 'comparison-table',
         title: 'Apple Silicon M5 Comparison Table (May 2026)',
-        content: '⚠️ MacBook Pro 16" M5 Max models are currently available. Mac Studio M5 configurations shown are projected specs for October 2026 release. All specs based on Apple technical announcements and third-party benchmarks.',
+        content: '⚠️ MacBook Pro 16" M5 Max models are currently available. Mac Studio M5 configurations shown are projected specs for October 2026 release. All specs based on Apple technical announcements and third-party benchmarks. **Pricing:** USD prices verified May 2026 from Apple Store. EUR prices include 19% German VAT. JPY prices include 10% Japanese consumption tax. CNY prices indicative. Exchange rates: €0.92/$ (May 2026), ¥155/$ (May 2026), ¥7.2/$ (May 2026).',
         tableFormat: true,
         columns: ['Configuration', 'Chip', 'GPU Cores', 'Memory', 'Bandwidth', 'Price', 'Best For'],
         rows: [

@@ -138,6 +138,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       site: '@promptquorum',
       title: pageTitle,
       description: (article as any).twitterDescription ?? metaDesc,
+      images: [ogImageUrl],
     },
   }
 }
@@ -205,6 +206,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
   const translationObj = llmContent[key][selectedLang] as any
   const hasTranslation = Boolean(translationObj) && Object.keys(translationObj.sections ?? {}).length > 0
   const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
+  const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
 
   // Map educationalLevel → TechArticle proficiencyLevel
   const llmEdLevel = (article as any).educationalLevel ?? (llmContent[key]['en'] as any)?.educationalLevel
@@ -228,6 +230,12 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
       '@type': 'Person',
       name: 'Hans Kuepper',
       url: 'https://www.promptquorum.com/about',
+      sameAs: [
+        'https://www.linkedin.com/in/hanskuepper/',
+        'https://x.com/HansKuepperAPPs',
+        'https://github.com/HansHKApps',
+        'https://bsky.app/profile/hhkbluesky.bsky.social',
+      ],
     },
     publisher: {
       '@type': 'Organization',
@@ -266,8 +274,10 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
       copyrightNotice: '© 2026 PromptQuorum. All rights reserved.',
     }))
 
-  if (sectionImageObjects.length > 0 && !(articleSchema as any).image) {
-    ;(articleSchema as any).image = sectionImageObjects[0].url
+  if (!(articleSchema as any).image) {
+    ;(articleSchema as any).image = sectionImageObjects.length > 0
+      ? sectionImageObjects[0].url
+      : ogImageUrl
   }
 
   // Translate breadcrumb labels per language
