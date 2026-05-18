@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Welcher EU-DSGVO-Cloud-GPU-Anbieter ist am besten?',
-        answer: 'Hetzner GPU ist am günstigsten (€0,40–€1,20/h für RTX 4090, deutsche Rechenzentren), aber das Affiliate-Programm endet am 15. Juni 2026. Scaleway (€0,50–€2,50/h, Französisch) ist am besten für AI mit starker H100-Verfügbarkeit. OVHcloud (€0,60–€3,00/h, Multi-Region, Französisch) ist am besten für Enterprise. Mistral La Plateforme (Pay-per-Token, Französisch) ist am besten für nur Inferenz.',
+        answer: 'Hetzner GPU ist kostenvorhersagbarer (€184/Monat pauschal für RTX 4000 SFF Ada, 20GB VRAM, deutsche Rechenzentren). Pauschalabrechnung nur monatlich — keine Stundenbilanzoptionen. Scaleway (€0,50–€2,50/h H100, Französisch) ist am besten für flexible KI-Workloads mit Stundenabrechnung. OVHcloud (€0,60–€3,00/h, Multi-Region, Französisch) ist am besten für Enterprise. Mistral La Plateforme (Pay-per-Token, Französisch) ist am besten für nur Inferenz.',
         bullets: [
           'Hetzner GPU: €184/Monat pauschal (RTX 4000 SFF Ada, 20GB), deutsches Recht, nur Monatsabrechnung',
           'Scaleway: KI-fokussiert, französisches Recht, starkes H100, reifer AVV',
