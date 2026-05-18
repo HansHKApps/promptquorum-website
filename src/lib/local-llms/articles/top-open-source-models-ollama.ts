@@ -10,10 +10,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
-      title: 'Top Ollama Models & June 2026 Updates: New Releases',
-      seoTitle: 'Top Ollama Models & June 2026 Updates: New Releases',
+      title: '10 Best Open Source LLMs for Ollama in 2026 (Ranked & Tested)',
+      seoTitle: '10 Best Open Source LLMs for Ollama in 2026 (Ranked & Tested)',
       intro: 'The most downloaded models on Ollama in 2026 are Llama 4 Scout and Llama 3.x (most popular overall), Qwen3 (fastest growing, best coding), Gemma 4 (best for agents and tool calling), Mistral (most efficient), and DeepSeek-R1 (best reasoning). New in May 2026: Kimi K2.6 (MoE, MIT licensed, top-tier coding), Qwen 3.6 (77.2% SWE-bench), and GLM-5.1.',
-      metaDescription: 'Top Ollama models in June 2026: Llama 4 Scout, Qwen 3.6, Kimi K2.6, Gemma 4. Latest updates, May-June releases, and which models work best for your use case.',
+      metaDescription: 'Compare 10 best open-source LLMs for Ollama in 2026: Llama 3.3 70B, Qwen 2.5, Mistral, DeepSeek. Verified benchmarks, RAM requirements, setup time.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**The most downloaded models on Ollama in 2026 are Llama 4 Scout (best overall, MoE), Qwen3 (fastest growing, best coding), Gemma 4 (tool calling, vision), Mistral (most efficient), and DeepSeek-R1 (best reasoning). New in May 2026: Kimi K2.6 (top-tier coding), Qwen 3.6 27B (77.2% SWE-bench), and GLM-5.1.**',
       quickAnswerTop: {
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         byCategory: {
           id: 'top-models-by-category',
           title: 'Which Ollama Models Work Best for Your Use Case?',
-          content: 'The quality of a model\'s output depends heavily on how you prompt it. For structured techniques that work across all local models — including chain-of-thought, few-shot examples, and output formatting — see the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering). For reasoning tasks, [chain-of-thought prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting) significantly improves DeepSeek-R1 and Qwen3 output quality. For agent workflows with Gemma 4, see [Tree-of-Thought and ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react). Once a tool-calling model from this list is wired into a multi-step loop with file and database access, see [Local AI Agents With MCP](/power-local-llm/local-ai-agents-with-mcp-2026) for the open-source orchestration pattern.',
+          content: 'The quality of a model\'s output depends heavily on how you prompt it. For structured techniques that work across all local models — including chain-of-thought, few-shot examples, and output formatting — see the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering). For reasoning tasks, [chain-of-thought prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting) significantly improves DeepSeek-R1 and Qwen3 output quality. To understand quantization tradeoffs for these models, see the [quantization guide →](/local-llms/llm-quantization-explained). For agent workflows with Gemma 4, see [Tree-of-Thought and ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react). For hardware requirements to run these models, see the [hardware guide →](/local-llms/local-llm-hardware-guide-2026). Once a tool-calling model from this list is wired into a multi-step loop with file and database access, see [Local AI Agents With MCP](/power-local-llm/local-ai-agents-with-mcp-2026) for the open-source orchestration pattern.',
           items: [
             '**General chat (beginner)**: `ollama run llama3.2:3b` -- most documentation, best-supported first model.',
             '**General chat (quality)**: `ollama run llama4:scout` -- MoE architecture, ~10 GB VRAM. For 8 GB machines, keep `ollama run llama3.2:3b`.',

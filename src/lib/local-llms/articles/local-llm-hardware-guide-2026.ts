@@ -10,10 +10,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
-      title: '70B LLM Hardware Requirements 2026: VRAM, GPU & Build Recommendations',
-      seoTitle: 'LLM Hardware Requirements by Model: 70B, 13B, 7B VRAM Guide 2026',
+      title: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
+      seoTitle: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
       intro: 'Running local LLMs requires matching your GPU\'s VRAM to the model you want to run. As of May 2026, a 7B model needs 8-9 GB VRAM at Q8, a 14B model needs 15 GB, and most 70B models need 39 GB at Q4_K_M -- more than a single RTX 4090 holds. This guide covers specific model recommendations for 12 GB, 16 GB, and 24 GB VRAM tiers, CPU-only inference on 16 GB system RAM, llama.cpp speed settings for RTX 4070 Ti, and full hardware build configurations.',
-      metaDescription: 'Best GPUs for local LLMs 2026: RTX 4090 for 70B, RTX 4070 Ti for 14B, RTX 4060 for 7B. VRAM requirements, benchmarks, and hardware recommendations.',
+      metaDescription: 'Build or buy local LLM hardware in 2026: NVIDIA GPUs, AMD Ryzen AI Max+ mini PCs, Apple Silicon Macs compared with prices, benchmarks, power use.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
