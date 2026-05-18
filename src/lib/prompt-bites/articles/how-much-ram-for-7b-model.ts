@@ -28,8 +28,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: {
+        question: 'Wie viel RAM braucht ein 7B-Modell?',
+        answer: 'Ein 7B-Modell bei Q4-Quantisierung benötigt 5–6 GB VRAM oder RAM. Daumenregel: Modellparameter in Milliarden × 0,7 = ungefähre GB bei Q4.',
+        bullets: [
+          '7B Q4: 5–6 GB VRAM oder Unified Memory',
+          '7B Q5: 6–7 GB VRAM',
+          '7B Q8: 8–9 GB VRAM',
+        ],
+        updatedDate: '2026-05',
+      },
+      fr: {
+        question: 'De combien de RAM a besoin un modèle 7B ?',
+        answer: 'Un modèle 7B en quantisation Q4 nécessite 5–6 Go de VRAM ou de RAM. Règle de calcul : paramètres en milliards × 0,7 = Go approximatifs en Q4.',
+        bullets: [
+          '7B Q4 : 5–6 Go de VRAM ou de mémoire unifiée',
+          '7B Q5 : 6–7 Go de VRAM',
+          '7B Q8 : 8–9 Go de VRAM',
+        ],
+        updatedDate: '2026-05',
+      },
       ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
       zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
     },

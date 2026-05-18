@@ -28,8 +28,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: {
+        question: 'Beste Ollama-Modelle für RTX 3060 12 GB?',
+        answer: 'Mit 12 GB VRAM ist das beste Allzweckmodell Llama 3 8B bei Q5_K_M. Für Coding verwenden Sie Qwen 2.5 Coder 14B bei Q4_K_M. Beide laufen mit 20–30 Token pro Sekunde.',
+        bullets: [
+          'Llama 3 8B Q5_K_M: bestes Allzweckmodell für RTX 3060',
+          'Qwen 2.5 Coder 14B Q4_K_M: beste Wahl für Coding',
+          'Mistral 7B Q6_K: schnelle Alternative für Chat',
+        ],
+        updatedDate: '2026-05',
+      },
+      fr: {
+        question: 'Meilleurs modèles Ollama pour RTX 3060 12 Go ?',
+        answer: 'Avec 12 Go de VRAM, le meilleur modèle général est Llama 3 8B en Q5_K_M. Pour le code, utilisez Qwen 2.5 Coder 14B en Q4_K_M. Les deux tournent à 20–30 tokens par seconde.',
+        bullets: [
+          'Llama 3 8B Q5_K_M : meilleur usage général sur RTX 3060',
+          'Qwen 2.5 Coder 14B Q4_K_M : meilleur pour le code',
+          'Mistral 7B Q6_K : alternative rapide pour le chat',
+        ],
+        updatedDate: '2026-05',
+      },
       ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
       zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
     },

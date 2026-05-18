@@ -28,8 +28,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: {
+        question: 'Q4_K_M vs. Q8_0: Was sollten Sie wählen?',
+        answer: 'Verwenden Sie Q4_K_M bei 8 GB VRAM oder weniger. Verwenden Sie Q8_0 bei 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei ungefähr halbem Dateivolumen.',
+        bullets: [
+          'Q4_K_M: ~5–6 GB für 7B-Modelle, ideal für 8 GB VRAM',
+          'Q8_0: ~8–9 GB für 7B-Modelle, benötigt 12+ GB VRAM',
+          'Qualitätsunterschied unter 5 % im realen Einsatz',
+        ],
+        updatedDate: '2026-05',
+      },
+      fr: {
+        question: 'Q4_K_M ou Q8_0 : lequel choisir ?',
+        answer: 'Utilisez Q4_K_M avec 8 Go de VRAM ou moins. Utilisez Q8_0 avec 12+ Go. Q4_K_M offre 95 % de la qualité de Q8_0 à environ la moitié de la taille.',
+        bullets: [
+          'Q4_K_M : ~5–6 Go pour les modèles 7B, idéal pour 8 Go de VRAM',
+          'Q8_0 : ~8–9 Go pour les modèles 7B, nécessite 12+ Go de VRAM',
+          'Différence de qualité inférieure à 5 % en usage réel',
+        ],
+        updatedDate: '2026-05',
+      },
       ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
       zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
     },

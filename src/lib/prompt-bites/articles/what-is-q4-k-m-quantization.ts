@@ -28,8 +28,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: {
+        question: 'Was bedeutet Q4_K_M-Quantisierung?',
+        answer: 'Q4_K_M = 4-Bit-Quantisierung mit K-Quant-Kompression auf mittlerem Qualitätsniveau. Besser als Q4_0 bei gleicher Dateigröße, kleiner als Q8_0. Verwenden Sie es als Standard.',
+        bullets: [
+          'Q = quantisiert, 4 = 4 Bit, K = K-Quant, M = mittel',
+          'Bessere Qualität als Q4_0 bei gleicher Dateigröße',
+          'Q4_K_M als Standard-Quantisierung verwenden',
+        ],
+        updatedDate: '2026-05',
+      },
+      fr: {
+        question: 'Qu\'est-ce que la quantisation Q4_K_M ?',
+        answer: 'Q4_K_M signifie quantisation 4 bits avec compression k-quant à qualité moyenne. Meilleure que Q4_0 à taille égale, plus petite que Q8_0. À utiliser comme standard.',
+        bullets: [
+          'Q = quantisé, 4 = 4 bits, K = k-quant, M = moyen',
+          'Meilleure qualité que Q4_0 à la même taille de fichier',
+          'Utiliser Q4_K_M comme quantisation par défaut',
+        ],
+        updatedDate: '2026-05',
+      },
       ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
       zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
     },

@@ -28,8 +28,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
-      fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: {
+        question: 'Beste Ollama-Modelle für 4 GB VRAM?',
+        answer: '4 GB VRAM ist eng, aber nutzbar. Beste Optionen: Phi-4 Mini bei Q4 (~3,2 GB), Gemma 2 2B (~1,5 GB) und SmolLM 1.7B (~1,0 GB). Llama 3 8B passt nicht.',
+        bullets: [
+          'Phi-4 Mini Q4: beste Qualität bei 4 GB (3,2 GB VRAM)',
+          'Gemma 2 2B: schnell und leichtgewichtig (1,5 GB)',
+          'SmolLM 1.7B: kleinstes Modell, 1,0 GB VRAM',
+        ],
+        updatedDate: '2026-05',
+      },
+      fr: {
+        question: 'Meilleurs modèles Ollama pour 4 Go de VRAM ?',
+        answer: '4 Go de VRAM est serré mais utilisable. Meilleures options : Phi-4 Mini en Q4 (~3,2 Go), Gemma 2 2B (~1,5 Go) et SmolLM 1.7B (~1,0 Go). Llama 3 8B ne rentrera pas.',
+        bullets: [
+          'Phi-4 Mini Q4 : meilleure qualité en 4 Go (3,2 Go de VRAM)',
+          'Gemma 2 2B : rapide et léger (1,5 Go)',
+          'SmolLM 1.7B : empreinte VRAM minimale, 1,0 Go',
+        ],
+        updatedDate: '2026-05',
+      },
       ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
       zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
     },

@@ -28,7 +28,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: {
+        question: 'Wie viel VRAM braucht ein 70B-Modell?',
+        answer: 'Ein 70B-Modell bei Q4_K_M benötigt ca. 40 GB VRAM. Consumer-Optionen: zwei RTX 3090 (48 GB gesamt), M5 Max mit 128 GB Unified Memory oder Cloud-GPU-Miete.',
+        bullets: [
+          'Q4_K_M 70B: ~40 GB VRAM erforderlich',
+          'Dual RTX 3090 (48 GB gesamt): Consumer-Desktop-Option',
+          'M5 Max 128 GB Unified Memory: beste Einzelsystem-Erfahrung',
+        ],
+        updatedDate: '2026-05',
+      },
       fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
       ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
       zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },

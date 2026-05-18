@@ -91,8 +91,316 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
-  de: { theme: 'Ollama', title: '[DE translation pending]', seoTitle: '[DE translation pending]', metaDescription: '[DE translation pending]', publishDate: '2026-05-18', freshness_tier: 'semi_annual', next_refresh_due: '2026-06-18', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] }, faq: { id: 'faq', title: 'FAQ', faqs: [] } } },
-  fr: { theme: 'Ollama', title: '[FR translation pending]', seoTitle: '[FR translation pending]', metaDescription: '[FR translation pending]', publishDate: '2026-05-18', freshness_tier: 'semi_annual', next_refresh_due: '2026-06-18', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] }, faq: { id: 'faq', title: 'FAQ', faqs: [] } } },
-  ja: { theme: 'Ollama', title: '[JA translation pending]', seoTitle: '[JA translation pending]', metaDescription: '[JA translation pending]', publishDate: '2026-05-18', freshness_tier: 'semi_annual', next_refresh_due: '2026-06-18', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] }, faq: { id: 'faq', title: 'FAQ', faqs: [] } } },
-  zh: { theme: 'Ollama', title: '[ZH translation pending]', seoTitle: '[ZH translation pending]', metaDescription: '[ZH translation pending]', publishDate: '2026-05-18', freshness_tier: 'semi_annual', next_refresh_due: '2026-06-18', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['TBD'] }, faq: { id: 'faq', title: 'FAQ', faqs: [] } } },
+  de: {
+    theme: 'Ollama',
+    title: 'Die besten Ollama-Modelle im Moment?',
+    seoTitle: 'Beste Ollama-Modelle aktuell? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Bestes allgemeines Ollama-Modell: Llama 3 8B Q4. Bestes Coding-Modell: Qwen 2.5 Coder 14B Q4. Bestes kompaktes Modell: Phi-4 Mini Q4. Monatlich aktualisiert. Schnelle Antwort von PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    is_living_page: true,
+    quickAnswerTop: {
+      de: {
+        question: 'Die besten Ollama-Modelle im Moment?',
+        answer: 'Stand Mai 2026: Das beste allgemeine Ollama-Modell ist Llama 3 8B. Für Coding führt Qwen 2.5 Coder 14B. Für kompakte Nutzung ist Phi-4 Mini ausgezeichnet. Diese Seite wird monatlich aktualisiert.',
+        bullets: [
+          'Bestes allgemeines Modell: Llama 3 8B Q4_K_M',
+          'Bestes Coding-Modell: Qwen 2.5 Coder 14B Q4',
+          'Bestes kompaktes Modell: Phi-4 Mini Q4',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Beste Allzwecknutzung: Llama 3 8B Q4_K_M — passt in 6 GB VRAM, ~20 tok/s, ausgezeichnetes Instruction-Following',
+          'Bestes Coding: Qwen 2.5 Coder 14B Q4_K_M — bester HumanEval-Score in der 14B-Klasse, benötigt 10 GB VRAM',
+          'Bestes kompaktes Modell: Phi-4 Mini Q4 — läuft auf 4 GB VRAM oder nur CPU, starkes Reasoning für seine Größe',
+          'Ein Modell von vor 6 Monaten mit ausgereifter Quantisierung übertrifft oft ein brandneues Release mit begrenzter Community-Unterstützung',
+        ],
+      },
+      body1: {
+        title: 'Die drei Tier-Spitzenreiter',
+        content: [
+          '<strong>Stand Mai 2026: Das beste Ollama-Modell für den allgemeinen Gebrauch ist Llama 3 8B Q4_K_M. Diese Seite wird monatlich aktualisiert — zuletzt überprüft im Mai 2026.</strong>',
+          '"Bestes" bedeutet in der Praxis die höchste Balance aus Ausgabequalität, Inferenzgeschwindigkeit und VRAM-Effizienz — nicht allein ein roher Benchmark-Score. Ein 7B-Modell mit 20 tok/s ist für die tägliche Arbeit nützlicher als ein 14B-Modell, das 10 GB benötigt und bei 12 tok/s läuft.',
+          'Die folgende Tabelle zeigt den aktuellen Spitzenreiter in jedem VRAM-Tier. Alle drei laufen mit Ollama out of the box via einem einzigen <code>ollama pull</code>-Befehl.',
+        ],
+        columns: ['Tier', 'Modell', 'Warum führend'],
+        rows: [
+          { 'Tier': 'Kompakt (≤4 GB)', 'Modell': 'Phi-4 Mini Q4', 'Warum führend': 'Bestes Reasoning-pro-GB in diesem Tier' },
+          { 'Tier': 'Allgemein (6–8 GB)', 'Modell': 'Llama 3 8B Q4_K_M', 'Warum führend': 'Beste Qualität-pro-GB in der 8B-Klasse' },
+          { 'Tier': 'Coding (10–12 GB)', 'Modell': 'Qwen 2.5 Coder 14B Q4', 'Warum führend': 'Bester HumanEval-Score im 14B-Tier' },
+        ],
+      },
+      body2: {
+        title: 'Wenn Neuer Nicht Besser Ist',
+        content: [
+          'Ein neues Modell-Release wird nicht automatisch zur besten Ollama-Wahl. <strong>Quantisierungsqualität, Community-Fine-Tunes und Ollama-Integrationsreife brauchen 4–8 Wochen, um mit einem frischen Release Schritt zu halten.</strong>',
+          'Llama 3 8B und Mistral 7B bleiben Top-Empfehlungen nicht weil sie die neuesten sind, sondern weil ihre Q4_K_M-Quantisierungen gut optimiert sind, ihre System-Prompts gut verstanden werden und ihre Performance über verschiedene Hardware hinweg vorhersagbar ist.',
+          'Warten Sie, bis ein Modell seine Spitzenposition 6+ Wochen gehalten hat, bevor Sie es für den Produktionseinsatz nutzen. Für einen tieferen Einblick, wie Sie Modelle für Ihre spezifische Arbeitslast evaluieren, lesen Sie die <a href="/de/local-llms/top-open-source-models-ollama" class="text-primary hover:underline">Top-Open-Source-Modelle für Ollama</a>.',
+        ],
+        callouts: [{ type: 'info', text: 'Zuletzt überprüft: Mai 2026. Wenn die Daten oben veraltet aussehen, prüfen Sie die offizielle Ollama GitHub-Release-Seite oder die Modell-Bibliothek.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Schnelle Antworten zu Ollama-Modellen',
+        faqs: [
+          {
+            q: 'Sollte ich immer das neueste Ollama-Modell verwenden?',
+            a: 'Nicht automatisch. Neue Releases brauchen 4–8 Wochen, bis Community-Quantisierungen, Fine-Tunes und Ollama-Integration ausgereift sind. Schauen Sie in die obige Tabelle für die aktuell geprüften Top-Empfehlungen. Für reine CPU-Setups lesen Sie <a href="/de/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">beste Ollama-Modelle für CPU-only-Nutzung</a>.',
+          },
+          {
+            q: 'Wie oft wechselt das "beste" Ollama-Modell?',
+            a: 'Allgemeine Top-Empfehlungen ändern sich alle 2–3 Monate. Coding-Modelle aktualisieren sich häufiger, da sich Benchmark-Spitzenreiter wechseln. Diese Seite wird monatlich überprüft.',
+          },
+          {
+            q: 'Welches Ollama-Modell ist derzeit das beste für Coding?',
+            a: 'Qwen 2.5 Coder 14B bei Q4_K_M. Es führt HumanEval-Benchmarks in der 14B-Klasse und bearbeitet Python, TypeScript und Go ohne spezielles Prompting. Benötigt 10 GB VRAM.',
+          },
+          {
+            q: 'Sind Qwen-Modelle im Jahr 2026 besser als Llama-Modelle?',
+            a: 'Für Coding: ja, Qwen 2.5 Coder führt. Für allgemeine Konversation und Instruction-Following im 8B-Tier: Llama 3 8B bleibt wettbewerbsfähig und läuft aufgrund seiner kleineren Größe auf gleicher Hardware schneller.',
+          },
+        ],
+      },
+    },
+  },
+  fr: {
+    theme: 'Ollama',
+    title: 'Les meilleurs modèles Ollama en ce moment ?',
+    seoTitle: 'Meilleurs modèles Ollama en ce moment ? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Meilleur modèle Ollama général : Llama 3 8B Q4. Meilleur pour le code : Qwen 2.5 Coder 14B Q4. Meilleur compact : Phi-4 Mini Q4. Mis à jour mensuellement. Réponse rapide de PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    is_living_page: true,
+    quickAnswerTop: {
+      fr: {
+        question: 'Les meilleurs modèles Ollama en ce moment ?',
+        answer: 'En mai 2026, le meilleur modèle Ollama polyvalent est Llama 3 8B. Pour le code, Qwen 2.5 Coder 14B est en tête. Pour une utilisation compacte, Phi-4 Mini est excellent. Cette page est mise à jour mensuellement.',
+        bullets: [
+          'Meilleur polyvalent : Llama 3 8B Q4_K_M',
+          'Meilleur pour le code : Qwen 2.5 Coder 14B Q4',
+          'Meilleur compact : Phi-4 Mini Q4',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Meilleur usage polyvalent : Llama 3 8B Q4_K_M — tient dans 6 GB VRAM, ~20 tok/s, excellent suivi d\'instructions',
+          'Meilleur code : Qwen 2.5 Coder 14B Q4_K_M — meilleur score HumanEval dans la classe 14B, nécessite 10 GB VRAM',
+          'Meilleur compact : Phi-4 Mini Q4 — fonctionne avec 4 GB VRAM ou CPU uniquement, raisonnement solide pour sa taille',
+          'Un modèle de 6 mois avec une quantization mature surpasse souvent une toute nouvelle release avec un support communautaire limité',
+        ],
+      },
+      body1: {
+        title: 'Les trois leaders par tier',
+        content: [
+          '<strong>En mai 2026, le meilleur modèle Ollama pour un usage général est Llama 3 8B Q4_K_M. Cette page est mise à jour mensuellement — dernière vérification mai 2026.</strong>',
+          '"Meilleur" en pratique signifie le meilleur équilibre entre qualité de sortie, vitesse d\'inférence et efficacité VRAM — pas uniquement un score de benchmark brut. Un modèle 7B à 20 tok/s est plus utile au quotidien qu\'un modèle 14B nécessitant 10 GB et tournant à 12 tok/s.',
+          'Le tableau ci-dessous montre le leader actuel dans chaque tier VRAM. Les trois fonctionnent avec Ollama dès l\'installation via une simple commande <code>ollama pull</code>.',
+        ],
+        columns: ['Tier', 'Modèle', 'Pourquoi il est en tête'],
+        rows: [
+          { 'Tier': 'Compact (≤4 GB)', 'Modèle': 'Phi-4 Mini Q4', 'Pourquoi il est en tête': 'Meilleur raisonnement/GB dans ce tier' },
+          { 'Tier': 'Polyvalent (6–8 GB)', 'Modèle': 'Llama 3 8B Q4_K_M', 'Pourquoi il est en tête': 'Meilleure qualité/GB dans la classe 8B' },
+          { 'Tier': 'Code (10–12 GB)', 'Modèle': 'Qwen 2.5 Coder 14B Q4', 'Pourquoi il est en tête': 'Meilleur score HumanEval au tier 14B' },
+        ],
+      },
+      body2: {
+        title: 'Quand le plus récent n\'est pas le meilleur',
+        content: [
+          'Une nouvelle release de modèle ne devient pas automatiquement le meilleur choix Ollama. <strong>La qualité de quantization, les fine-tunes communautaires et la maturité d\'intégration Ollama mettent 4–8 semaines à rattraper une nouvelle release.</strong>',
+          'Llama 3 8B et Mistral 7B restent des choix de référence non pas parce qu\'ils sont les plus récents, mais parce que leurs quantizations Q4_K_M sont bien optimisées, leurs prompts système sont bien compris et leurs performances sont prévisibles sur différents matériels.',
+          'Attendez qu\'un modèle maintienne sa position de tête pendant 6+ semaines avant de l\'utiliser en production. Pour une analyse approfondie de l\'évaluation de modèles selon votre charge de travail, consultez les <a href="/fr/local-llms/top-open-source-models-ollama" class="text-primary hover:underline">meilleurs modèles open-source pour Ollama</a>.',
+        ],
+        callouts: [{ type: 'info', text: 'Dernière vérification : mai 2026. Si les données ci-dessus semblent obsolètes, consultez la page officielle des releases GitHub d\'Ollama ou la bibliothèque de modèles.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Réponses rapides sur les modèles Ollama',
+        faqs: [
+          {
+            q: 'Faut-il toujours utiliser le modèle Ollama le plus récent ?',
+            a: 'Pas automatiquement. Les nouvelles releases ont besoin de 4–8 semaines pour que les quantizations communautaires, les fine-tunes et l\'intégration Ollama arrivent à maturité. Consultez le tableau ci-dessus pour les meilleures sélections vérifiées. Pour les configurations CPU uniquement, voir <a href="/fr/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">meilleurs modèles Ollama pour usage CPU uniquement</a>.',
+          },
+          {
+            q: 'À quelle fréquence le "meilleur" modèle Ollama change-t-il ?',
+            a: 'Les meilleures recommandations polyvalentes changent tous les 2–3 mois. Les modèles de code se mettent à jour plus fréquemment au gré des changements de leaders de benchmark. Cette page est révisée mensuellement.',
+          },
+          {
+            q: 'Quel modèle Ollama est actuellement le meilleur pour le code ?',
+            a: 'Qwen 2.5 Coder 14B à Q4_K_M. Il mène les benchmarks HumanEval dans la classe 14B et gère Python, TypeScript et Go sans prompting spécial. Nécessite 10 GB VRAM.',
+          },
+          {
+            q: 'Les modèles Qwen sont-ils meilleurs que les modèles Llama en 2026 ?',
+            a: 'Pour le code : oui, Qwen 2.5 Coder est en tête. Pour la conversation générale et le suivi d\'instructions dans le tier 8B : Llama 3 8B reste compétitif et tourne plus vite sur le même matériel grâce à sa taille plus petite.',
+          },
+        ],
+      },
+    },
+  },
+  ja: {
+    theme: 'Ollama',
+    title: '今おすすめのOllamaモデルは？',
+    seoTitle: '今おすすめのOllamaモデルは？ | Prompt Bites | PromptQuorum',
+    metaDescription: '最良の汎用Ollamaモデル: Llama 3 8B Q4。最良のコーディング: Qwen 2.5 Coder 14B Q4。最良のコンパクトモデル: Phi-4 Mini Q4。毎月更新。PromptQuorumによるクイックアンサー。',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    is_living_page: true,
+    quickAnswerTop: {
+      ja: {
+        question: '今おすすめのOllamaモデルは？',
+        answer: '2026年5月現在、汎用に最適なOllamaモデルはLlama 3 8Bです。コーディングではQwen 2.5 Coder 14Bが最高。コンパクト用途にはPhi-4 Miniが優秀です。このページは毎月更新されます。',
+        bullets: [
+          '汎用最良: Llama 3 8B Q4_K_M',
+          'コーディング最良: Qwen 2.5 Coder 14B Q4',
+          'コンパクト最良: Phi-4 Mini Q4',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '汎用最良: Llama 3 8B Q4_K_M — 6 GB VRAMで動作、~20 tok/s、優秀な命令追従性',
+          'コーディング最良: Qwen 2.5 Coder 14B Q4_K_M — 14Bクラスでトップのスコア、10 GB VRAMが必要',
+          'コンパクト最良: Phi-4 Mini Q4 — 4 GB VRAMまたはCPUのみで動作、サイズに対して強力な推論力',
+          '6ヶ月前のモデルでも成熟した量子化があれば、コミュニティサポートが限られた最新リリースを上回ることが多い',
+        ],
+      },
+      body1: {
+        title: '3つのティアのリーダー',
+        content: [
+          '<strong>2026年5月現在、汎用に最適なOllamaモデルはLlama 3 8B Q4_K_Mです。このページは毎月更新されています — 最終確認: 2026年5月。</strong>',
+          '実際の「最良」とは、出力品質・推論速度・VRAM効率の最高バランスを意味します — 生のベンチマークスコアだけではありません。20 tok/sで動く7Bモデルは、10 GBを必要として12 tok/sで動く14Bモデルより日常業務で有用です。',
+          '下の表は各VRAMティアの現在のリーダーを示しています。3つすべて、単一の <code>ollama pull</code> コマンドでOllamaからすぐに利用できます。',
+        ],
+        columns: ['ティア', 'モデル', 'リードの理由'],
+        rows: [
+          { 'ティア': 'コンパクト (≤4 GB)', 'モデル': 'Phi-4 Mini Q4', 'リードの理由': 'このティアで最高のGB当たり推論力' },
+          { 'ティア': '汎用 (6–8 GB)', 'モデル': 'Llama 3 8B Q4_K_M', 'リードの理由': '8Bクラスで最高のGB当たり品質' },
+          { 'ティア': 'コーディング (10–12 GB)', 'モデル': 'Qwen 2.5 Coder 14B Q4', 'リードの理由': '14BティアでトップのHumanEvalスコア' },
+        ],
+      },
+      body2: {
+        title: '新しいモデルが必ずしも優れているわけではない',
+        content: [
+          '新しいモデルのリリースが自動的に最良のOllamaの選択になるわけではありません。<strong>量子化の品質、コミュニティのファインチューン、Ollama統合の成熟には、新しいリリースから4〜8週間かかります。</strong>',
+          'Llama 3 8BとMistral 7Bがトップの選択であり続けるのは、最新だからではなく、Q4_K_Mの量子化が十分に最適化されており、システムプロンプトが広く理解されており、ハードウェアをまたいだパフォーマンスが予測可能だからです。',
+          'モデルを本番用途に使用する前に、6週間以上トップポジションを維持していることを確認してください。特定のワークロードに対してモデルを評価する方法の詳細については、<a href="/ja/local-llms/top-open-source-models-ollama" class="text-primary hover:underline">Ollama向けトップオープンソースモデル</a>をご覧ください。',
+        ],
+        callouts: [{ type: 'info', text: '最終確認: 2026年5月。上記のデータが古くなっている場合は、公式のOllama GitHubリリースページまたはモデルライブラリを確認してください。' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Ollamaモデルに関するクイックアンサー',
+        faqs: [
+          {
+            q: '常に最新のOllamaモデルを使うべきですか？',
+            a: '自動的にそうとは言えません。新しいリリースはコミュニティの量子化、ファインチューン、Ollama統合が成熟するまで4〜8週間かかります。現在の検証済みトップピックは上記の表を確認してください。CPU専用セットアップの場合は、<a href="/ja/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">CPU専用のベストOllamaモデル</a>をご覧ください。',
+          },
+          {
+            q: '「最良」のOllamaモデルはどのくらいの頻度で変わりますか？',
+            a: '汎用のトップピックは2〜3ヶ月ごとに変わります。コーディングモデルはベンチマークリーダーが変わるにつれてより頻繁に更新されます。このページは毎月レビューされます。',
+          },
+          {
+            q: '現在コーディングに最適なOllamaモデルはどれですか？',
+            a: 'Q4_K_MのQwen 2.5 Coder 14Bです。14BクラスのHumanEvalベンチマークをリードし、特別なプロンプトなしでPython、TypeScript、Goを処理します。10 GB VRAMが必要です。',
+          },
+          {
+            q: '2026年においてQwenモデルはLlamaモデルより優れていますか？',
+            a: 'コーディングについて: はい、Qwen 2.5 Coderがリードしています。8Bティアでの一般的な会話と命令追従については: Llama 3 8Bは依然として競争力があり、サイズが小さいため同じハードウェアでより速く動作します。',
+          },
+        ],
+      },
+    },
+  },
+  zh: {
+    theme: 'Ollama',
+    title: '目前最佳的Ollama模型是什么？',
+    seoTitle: '目前最佳Ollama模型？| Prompt Bites | PromptQuorum',
+    metaDescription: '当前最佳通用Ollama模型：Llama 3 8B Q4。最佳代码模型：Qwen 2.5 Coder 14B Q4。最佳轻量模型：Phi-4 Mini Q4。每月更新。PromptQuorum快速解答。',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    is_living_page: true,
+    quickAnswerTop: {
+      zh: {
+        question: '目前最佳的Ollama模型是什么？',
+        answer: '截至2026年5月，最佳通用Ollama模型是Llama 3 8B。代码生成首选Qwen 2.5 Coder 14B。轻量场景首选Phi-4 Mini。本页面每月更新。',
+        bullets: ['最佳通用：Llama 3 8B Q4_K_M', '最佳代码：Qwen 2.5 Coder 14B Q4', '最佳轻量：Phi-4 Mini Q4'],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '最佳通用模型：Llama 3 8B Q4_K_M — 占用6 GB VRAM，约20 tok/s，指令跟随能力优秀',
+          '最佳代码模型：Qwen 2.5 Coder 14B Q4_K_M — 14B级别HumanEval最高分，需要10 GB VRAM',
+          '最佳轻量模型：Phi-4 Mini Q4 — 4 GB VRAM或纯CPU运行，推理能力强',
+          '经过6个月量化优化的成熟模型，往往优于社区支持不足的全新发布模型',
+        ],
+      },
+      body1: {
+        title: '三个层级的领先模型',
+        content: [
+          '<strong>截至2026年5月，最佳通用Ollama模型是Llama 3 8B Q4_K_M。本页面每月更新——最后核实于2026年5月。</strong>',
+          '"最佳"的实际含义是输出质量、推理速度和VRAM效率的最优平衡——而非单纯的基准分数。在相同硬件上，以20 tok/s运行的7B模型比需要10 GB且只有12 tok/s的14B模型更实用。',
+          '下表展示各VRAM层级的当前领先模型。三款模型均可通过单条<code>ollama pull</code>命令直接下载使用。',
+        ],
+        columns: ['层级', '模型', '领先原因'],
+        rows: [
+          { '层级': '轻量（≤4 GB）', '模型': 'Phi-4 Mini Q4', '领先原因': '该层级每GB推理质量最佳' },
+          { '层级': '通用（6–8 GB）', '模型': 'Llama 3 8B Q4_K_M', '领先原因': '8B级别每GB质量最高' },
+          { '层级': '代码（10–12 GB）', '模型': 'Qwen 2.5 Coder 14B Q4', '领先原因': '14B层级HumanEval最高分' },
+        ],
+      },
+      body2: {
+        title: '新发布不代表更好',
+        content: [
+          '新模型发布不会自动成为最佳Ollama选择。<strong>量化质量、社区微调和Ollama集成成熟度通常需要4–8周才能赶上新发布版本。</strong>',
+          'Llama 3 8B和Mistral 7B持续保持领先，不是因为最新，而是因为其Q4_K_M量化经过充分优化，系统提示词行为可预测，跨硬件性能稳定。',
+          '建议等待模型在顶位稳定6周以上再用于生产环境。深入了解如何评估适合您工作负载的模型，请参阅<a href="/zh/local-llms/top-open-source-models-ollama" class="text-primary hover:underline">Ollama顶级开源模型指南</a>。',
+          '最后核实: 2026年5月。如果上述数据已过时,请查看Ollama的官方GitHub发布页面或模型库。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Ollama模型常见问题',
+        faqs: [
+          {
+            q: '应该总是使用最新的Ollama模型吗？',
+            a: '不需要。新发布的模型需要4–8周让社区量化版本、微调和Ollama集成趋于成熟。请参考上方表格中经过验证的当前推荐模型。纯CPU使用建议参阅<a href="/zh/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">最佳CPU专用Ollama模型</a>。',
+          },
+          {
+            q: '"最佳"Ollama模型多久会变化一次？',
+            a: '通用模型的领先者每2–3个月更换一次。代码模型随基准排名变化更频繁。本页面每月审查更新。',
+          },
+          {
+            q: '目前最佳代码Ollama模型是哪个？',
+            a: 'Qwen 2.5 Coder 14B Q4_K_M。它在14B级别HumanEval基准中领先，无需特殊提示即可处理Python、TypeScript和Go。需要10 GB VRAM。',
+          },
+          {
+            q: '2026年Qwen模型比Llama模型更好吗？',
+            a: '代码任务：是的，Qwen 2.5 Coder领先。通用对话和8B层级的指令跟随：Llama 3 8B仍具竞争力，且因体积更小在相同硬件上运行更快。',
+          },
+        ],
+      },
+    },
+  },
 }

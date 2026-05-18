@@ -28,7 +28,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: '[DE translation pending]', answer: '[DE translation pending]', bullets: [], updatedDate: '2026-05' },
+      de: {
+        question: 'Bestes lokales LLM für 6 GB VRAM?',
+        answer: 'Mit 6 GB VRAM ist Llama 3 8B Q4_K_M die erste Wahl mit ~5,5 GB. Phi-4 Q4_K_M und Mistral 7B Q4_K_S sind solide Alternativen.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: beste Gesamtwahl für 6 GB (5,5 GB VRAM)',
+          'Phi-4 Q4_K_M: beste Wahl für Instruction Following',
+          'Mistral 7B Q4_K_S: schnellste Option bei 6 GB',
+        ],
+        updatedDate: '2026-05',
+      },
       fr: { question: '[FR translation pending]', answer: '[FR translation pending]', bullets: [], updatedDate: '2026-05' },
       ja: { question: '[JA translation pending]', answer: '[JA translation pending]', bullets: [], updatedDate: '2026-05' },
       zh: { question: '[ZH translation pending]', answer: '[ZH translation pending]', bullets: [], updatedDate: '2026-05' },
