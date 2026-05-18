@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'The Top Vision Models on Ollama',
         content: [
           '<strong>As of May 2026, Ollama supports four production-ready vision models: LLaVA, Llama 3.2 Vision, Qwen-VL, and Gemma 3.</strong> Each has a distinct strength and VRAM profile.',
-          'LLaVA is the safest starting point — it has the broadest client compatibility and works with any image format Ollama accepts. Llama 3.2 Vision 11B is the best choice for OCR and multi-step visual reasoning. Qwen-VL leads on charts, diagrams, and structured documents. Gemma 3\'s vision variant adds strong multilingual image understanding.',
+          'LLaVA is the safest starting point — it has the broadest client compatibility and works with any image format Ollama accepts. Llama 3.2 Vision 11B is the best choice for OCR and multi-step visual reasoning. Qwen-VL leads on charts, diagrams, and structured documents. Gemma 3\'s vision variant handles 35+ languages — useful when images contain non-English text like signage, foreign-language documents, or charts with localized labels. LLaVA and Qwen-VL are strongest on English text.',
           'All vision models load an image encoder alongside the LLM weights. This encoder adds 1–3 GB of VRAM above what the base text-only model needs — plan for that overhead when checking your VRAM budget.',
         ],
       },
@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'How do I send an image to Ollama via the API?',
-            a: 'Use the <code>/api/chat</code> endpoint and include the image as a base64-encoded string in the <code>images</code> field of the message body. See <a href="/prompt-bites/can-you-run-qwen3-on-ollama" class="text-primary hover:underline">Qwen 3 on Ollama</a> for another multimodal-capable option with strong tool calling support.',
+            a: 'POST to the <code>/api/chat</code> endpoint with the image as a base64 string in the <code>images</code> array. Minimum working JSON body: <code>{"model":"llava","messages":[{"role":"user","content":"What is in this image?","images":["&lt;base64&gt;"]}]}</code> See <a href="/prompt-bites/can-you-run-qwen3-on-ollama" class="text-primary hover:underline">Qwen 3 on Ollama</a> for a multimodal-capable option with strong tool calling support.',
           },
           {
             q: 'Can vision models do OCR (read text from images)?',

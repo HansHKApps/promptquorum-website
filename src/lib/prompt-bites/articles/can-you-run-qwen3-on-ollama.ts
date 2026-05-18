@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Is Qwen 3 better than Llama 3 for coding?',
-            a: 'For coding: yes, Qwen 3 14B outperforms Llama 3 8B on HumanEval benchmarks. For general conversation at the 8B tier: Llama 3 8B remains competitive. See <a href="/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">Ollama vision models</a> if you also need image understanding.',
+            a: 'For coding: yes, Qwen 3 14B outperforms Llama 3 8B on HumanEval benchmarks. For general conversation at the 8B tier: Llama 3 8B remains competitive. For the current top Ollama picks across all tasks, see <a href="/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">the best Ollama models right now</a>.',
           },
           {
             q: 'Does Qwen 3 support tool calling on Ollama?',

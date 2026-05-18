@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>As of May 2026, the latest stable Ollama release is listed at github.com/ollama/ollama/releases — that page shows the exact version number and release notes. This page is updated monthly — last verified May 2026.</strong>',
           'Run <code>ollama --version</code> in a terminal to see your installed build. The output is one line. If the GitHub releases page shows a higher version number, your install is behind.',
-          'New model families — including Llama 3.1 and Qwen 3 — require a minimum Ollama version to load correctly. Recent releases also include measurable inference speed improvements for GGUF loading and multi-GPU context handling.',
+          'New model families — including Llama 3.1 and Qwen 3 — require a minimum Ollama version to load correctly. Recent releases also include faster GGUF loading and better multi-GPU context handling — improvements that compound across daily use.',
         ],
       },
       body2: {
@@ -58,7 +58,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Updating is safe: your downloaded models are stored in a separate directory and are never removed by an Ollama update.</strong> The user-facing REST API has maintained backwards compatibility since version 0.1.',
           'If you are several versions behind, run <code>ollama list</code> before updating to note your current models. Nothing will break, but this 30-second step eliminates uncertainty before a major version jump.',
           'For a complete changelog of what each Ollama release changed and which model families benefit, see the <a href="/local-llms/local-llm-model-updates-2026" class="text-primary hover:underline">local LLM model updates guide for 2026</a>.',
-          'Last verified: May 2026. If the data above looks stale, check the official Ollama GitHub releases page or model library.',
         ],
         columns: ['Platform', 'Update Method', 'Notes'],
         rows: [
@@ -67,6 +66,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Platform': 'Windows', 'Update Method': 'Re-download .exe from ollama.com', 'Notes': 'Run installer, models kept' },
         ],
         codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+        callouts: [{ type: 'info', text: 'Last verified: May 2026. If the data above looks stale, check the official Ollama GitHub releases page or model library.' }],
       },
       faq: {
         id: 'faq',
