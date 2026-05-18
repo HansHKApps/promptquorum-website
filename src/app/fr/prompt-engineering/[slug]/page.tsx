@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = peContent[key][lang] ?? peContent[key]['en']
   if (!article) return notFound()
 
-  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja'] as const
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh'] as const
   const availableLangsForMeta = VALID_LANGS_META.filter(l => {
     const c = peContent[key]?.[l]
     return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
   })
 
-  const canonicalUrl = `https://www.promptquorum.com/de/prompt-engineering/${slug}`
+  const canonicalUrl = `https://www.promptquorum.com/fr/prompt-engineering/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${lang}`
   const hasTranslation = Boolean(article) && Object.keys(article.sections ?? {}).length > 0
 
@@ -65,7 +65,7 @@ export default async function FrPromptEngineeringArticlePage({ params }: PagePro
 
   if (!key) notFound()
 
-  const article = peContent[key]['ja'] ?? peContent[key]['en']
+  const article = peContent[key]['fr'] ?? peContent[key]['en']
   if (!article) notFound()
 
   return (

@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = peContent[key][lang] ?? peContent[key]['en']
   if (!article) return notFound()
 
-  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja'] as const
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh'] as const
   const availableLangsForMeta = VALID_LANGS_META.filter(l => {
     const c = peContent[key]?.[l]
     return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: pageTitle.length <= 45 ? `${pageTitle} | PromptQuorum` : pageTitle,
     description: metaDesc,
-    alternates: generateAlternates(`/prompt-engineering/${slug}`, lang, hasTranslation, availableLangsForMeta, ['ja']),
+    alternates: generateAlternates(`/prompt-engineering/${slug}`, lang, hasTranslation, availableLangsForMeta, ['ja', 'zh', 'de', 'fr']),
     openGraph: {
       title: pageTitle,
       description: metaDesc,
