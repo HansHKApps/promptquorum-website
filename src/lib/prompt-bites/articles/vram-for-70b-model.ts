@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Hardware Options for Running a 70B Model',
         content: [
-          'As of May 2026, a 70B model at Q4_K_M requires approximately 40 GB of VRAM. <strong>Single consumer cards top out at 24 GB (RTX 3090/4090), so running 70B locally requires dual GPUs, Apple Silicon with large unified memory, or cloud rental.</strong>',
+          'As of May 2026, <strong>a 70B model at Q4_K_M is approximately 40 GB of compressed weights — 1.7× a single RTX 4090 and 1.6× a single RTX 3090.</strong> This is why 70B is the hardest tier to run locally: it crosses the boundary between consumer GPUs (max 24 GB) and workstation hardware. Three paths exist, each with different trade-offs.',
           'Apple M5 Max with 128 GB unified memory is the smoothest single-machine option — no PCIe transfer bottleneck between CPU and GPU memory, and macOS manages allocation automatically. Dual RTX 3090s work but require a workstation-class desktop and careful driver configuration.',
         ],
         columns: ['Hardware', 'Total VRAM', 'Speed'],
@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'When Cloud Makes More Sense Than Local',
         content: [
           'Cloud GPU rental for 70B inference runs $0.50–$1.50 per hour on RunPod and Lambda Labs as of May 2026. A dual RTX 3090 setup costs $1,500–$2,500 in hardware, which amortizes to cloud costs only after 1,500–3,000 hours of use.',
-          'For teams or individuals using 70B models fewer than 5 hours per week, cloud rental is both cheaper and easier to maintain. Local 70B is justified for privacy-sensitive use cases (no data leaving your hardware) or sustained high-frequency inference where cloud costs compound quickly.',
+          'For teams or individuals using 70B models fewer than 5 hours per week, cloud rental is both cheaper and easier to maintain. Local 70B is justified for privacy-sensitive use cases (no data leaving your hardware) or sustained high-frequency inference where cloud costs compound quickly. For smaller models that fit on consumer GPUs, see <a href="/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">the VRAM tier guide</a>.',
           'For a full breakdown of 70B deployment strategies, see <a href="/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">how to run 70B models with 24 GB VRAM</a>.',
         ],
       },

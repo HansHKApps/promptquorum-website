@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Top 5 Ollama Models for RTX 3060 12 GB',
         content: [
-          'As of May 2026, the RTX 3060 12 GB is the best-value GPU for local LLMs. Its 12 GB VRAM matches cards costing 2–3× more, enabling 14B models at Q4. <strong>Llama 3 8B at Q5_K_M is the top general pick. Qwen 2.5 Coder 14B at Q4_K_M leads for coding.</strong>',
+          'As of May 2026, <strong>the RTX 3060 12 GB is the cheapest path to running 14B models locally.</strong> Its 12 GB VRAM matches the RTX 4070 Ti (~$800) and RTX 4080 (~$1,100) at a fraction of the cost. For a $280–$350 used card, you get the same model capacity as cards costing 3× more — limited only by raw speed, not what you can load.',
           'All five models below run with Ollama out of the box. Speed figures are at default 2048-token context on a desktop PC with no CPU offload.',
         ],
         columns: ['Model', 'VRAM Used', 'Speed'],
@@ -63,9 +63,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'For the general-use pick, run Llama 3 8B at Q5_K_M with a 4096-token context window. This uses ~8 GB VRAM total and leaves 4 GB of headroom — enough to avoid VRAM overflow when switching between models.',
           'For coding, Qwen 2.5 Coder 14B at Q4_K_M is the clear choice: it outperforms Llama 3 8B on HumanEval, fits in 10 GB VRAM, and handles Python, TypeScript, and Go without fine-tuning.',
-          'Leave at least 1.5–2 GB of VRAM free at all times. Loading two models back-to-back without unloading the first triggers VRAM overflow and forces slow CPU offload. For the full GPU benchmark context, see the <a href="/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">best GPUs for local LLMs</a>.',
+          'Leave at least 1.5–2 GB of VRAM free at all times. Loading two models back-to-back without unloading the first triggers VRAM overflow and forces slow CPU offload. For the full GPU benchmark context, see the <a href="/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">best GPUs for local LLMs</a>. If your GPU has less than 12 GB, see the <a href="/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">best models for 6 GB VRAM</a>. To run the top general-purpose pick on your RTX 3060:',
         ],
-        codeBlock: 'ollama run llama3:8b-instruct-q5_K_M',
+        codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
+        callouts: [{ type: 'tip', text: 'Pull downloads ~7 GB on first run. Subsequent runs start instantly from cache. Use <code>--num-ctx 4096</code> if you need a larger context window.' }],
       },
       faq: {
         id: 'faq',

@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Top 3 Models for 6 GB VRAM',
         content: [
-          'As of May 2026, 6 GB VRAM unlocks the best-value tier for local LLMs. <strong>Llama 3 8B at Q4_K_M (5.5 GB) is the top pick for general use. Phi-4 at Q4_K_M (5.0 GB) leads on instruction following. Mistral 7B at Q4_K_S (4.5 GB) is the fastest option.</strong>',
+          'As of May 2026, <strong>6 GB VRAM covers two very different hardware classes: budget Windows laptops (RTX 3050/4050) and any MacBook with 16 GB unified memory.</strong> Performance differs by 30–50% between them — the Mac runs Llama 3 8B Q4_K_M at ~25 tok/s thanks to unified memory bandwidth, while the Windows discrete GPU runs it at ~18 tok/s due to PCIe transfer overhead.',
           'All three models run with Ollama out of the box. Speed figures below assume a 2048-token context window. Extending to 4096 tokens adds ~1 GB — still within 6 GB for Phi-4 and Mistral.',
         ],
         columns: ['Model', 'VRAM', 'Best For'],
@@ -62,6 +62,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'On Windows, the RTX 3050 6 GB and RTX 4050 6 GB are the two main GPUs at this tier. Both run Ollama via CUDA with nearly identical performance — the newer RTX 4050 is about 10% faster per watt but not meaningfully faster in practice.',
           'On macOS, any MacBook with 16 GB unified memory has approximately 6 GB available for the GPU workload. Unified memory eliminates the PCIe bandwidth bottleneck that limits discrete GPU cards, so macOS performance is often equal to or better than a discrete RTX 3050.',
           'Upgrading from 6 GB to 8 GB unlocks Q5_K_M quantization on 7–8B models (+3% quality) and faster context windows. For 12 GB options and 14B models, see <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">best Ollama models for RTX 3060 12 GB</a>. For the full VRAM reference, see <a href="/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">how much VRAM a local LLM needs</a>.',
+          '<strong>6 GB is the smallest VRAM where a local LLM competes with cloud models on everyday tasks.</strong> Below 6 GB, you are limited to small models that struggle on coding or long-form reasoning. At 6 GB, Llama 3 8B Q4_K_M is fully unlocked — the same model that powers many production AI features. To step up to 14B models, see the <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">12 GB tier picks</a>.',
         ],
       },
       faq: {

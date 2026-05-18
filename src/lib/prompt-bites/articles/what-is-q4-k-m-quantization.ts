@@ -46,9 +46,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Each Letter in Q4_K_M Means',
         content: [
-          'As of May 2026, Q4_K_M is the recommended default quantization for local LLMs. <strong>Q = quantized (reduced precision), 4 = 4 bits per weight, K = k-quant compression method, M = medium quality tier.</strong>',
+          'As of May 2026, <strong>Q4_K_M exists because old 4-bit formats (Q4_0) lost too much quality on critical weights.</strong> K-quant compression solves this by allocating more bits to weights that affect output most, and fewer bits to weights with minimal impact. The result: 5–8% better quality than Q4_0 at the same file size.',
           'The "K" is the key differentiator. K-quant compression applies non-uniform bit allocation — critical weights get more bits, less important ones get fewer. This recovers 5–8% quality compared to the older Q4_0 format at the same file size.',
           'The "M" is the quality setting within k-quant. Q4_K_S (small) is slightly smaller with lower quality. Q4_K_M (medium) is the best balance. Q4_K_L (large) is marginally better but rarely worth the extra size.',
+          '<strong>K-quant works by clustering weights and assigning bits based on importance.</strong> Top-importance clusters get 6 bits per weight. Mid-tier clusters get 4 bits. Low-importance clusters get 3 bits. The "M" tier averages 4.5 bits per weight across the model — explaining why Q4_K_M sits between Q4_K_S and Q5_K_M in both size and quality. For when the M tier is not enough, see <a href="/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
         ],
       },
       body2: {
@@ -82,8 +83,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: "Medium — it refers to the quality tier within k-quant compression. Q4_K_S is the small (lower quality) variant, Q4_K_M is medium (recommended), and Q4_K_L is large (marginal gain over M).",
           },
           {
-            q: 'Does Q4_K_M work with Ollama?',
-            a: 'Yes. Ollama downloads Q4_K_M automatically for most models when you run <code>ollama pull modelname</code>. It is the default quantization for the majority of models in the Ollama library.',
+            q: 'Which models on Ollama use Q4_K_M by default?',
+            a: 'Most of them — Llama 3, Mistral, Qwen, Phi, and Gemma all default to Q4_K_M tags. Specify <code>:q5_K_M</code> or <code>:q8_0</code> in the model tag to switch quantization.',
           },
         ],
       },

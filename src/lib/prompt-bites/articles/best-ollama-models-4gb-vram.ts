@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Fits in 4 GB VRAM',
         content: [
-          'As of May 2026, 4 GB VRAM is a real constraint. <strong>Three models run well: Phi-4 Mini at Q4 (~3.2 GB), Gemma 2 2B (~1.5 GB), and SmolLM 1.7B (~1.0 GB). Llama 3 8B and Mistral 7B do not fit at any quantization.</strong>',
+          'As of May 2026, <strong>at 4 GB VRAM you are limited to models with 3 billion parameters or fewer at Q4 quantization.</strong> This rules out every mainstream local model — Llama 3 8B, Mistral 7B, Qwen 14B. Three modern small models perform surprisingly well: Phi-4 Mini matches GPT-3.5 on instruction following, Gemma 2 2B handles fast chat, and SmolLM 1.7B runs on integrated graphics.',
           'Phi-4 Mini is the top pick at this tier. Despite its small size, it handles general Q&A, light coding, and document summarization at ~25 tokens per second. Gemma 2 2B is faster for single-turn chat. SmolLM 1.7B is the fallback if even Phi-4 Mini pushes your VRAM too close to the limit.',
         ],
         columns: ['Model', 'VRAM', 'Best For'],
@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body2: {
-        title: 'Models That Will Not Run at 4 GB VRAM',
+        title: 'What Won\'t Fit in 4 GB',
         content: [
           'These models are commonly requested but require more than 4 GB VRAM at every quantization level:',
           'Upgrading to 6 GB unlocks Llama 3 8B and Mistral 7B — the two most popular local models. See the <a href="/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">best local LLMs for 6 GB VRAM</a>. For a full hardware comparison, see <a href="/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">fastest local LLMs for low-end PCs</a>.',

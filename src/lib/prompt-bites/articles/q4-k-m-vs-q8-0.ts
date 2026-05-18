@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'The Quick Verdict',
         content: [
-          'As of May 2026, use Q4_K_M if you have 8 GB VRAM or less. Use Q8_0 if you have 12 GB or more and want near-full-precision quality. <strong>The real-world quality difference is under 5% for chat, coding, and summarization tasks — most users cannot detect it.</strong>',
+          'As of May 2026, <strong>Q8_0 is ~99% of full-precision quality. Q4_K_M is ~92%.</strong> The 7-point gap is invisible in chat, coding, and summarization — three tasks that cover 95% of local LLM use. Q8_0 only pulls ahead on long-form factual recall, multi-step math, and code requiring exact syntax over 500+ lines.',
           'Q4_K_M is the right default because the extra quality from Q8_0 only shows up in edge cases: long-form generation with exact factual recall, or mathematical reasoning that requires higher precision. For everything else, Q4_K_M matches Q8_0 in practice.',
           'If you are already using Q4_K_M and your results feel wrong, the issue is almost never the quantization — it is the model size or prompt structure.',
         ],
@@ -56,6 +56,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'The table below compares Q4_K_M and Q8_0 for a 7B model. Both formats work with Ollama, LM Studio, and llama.cpp without any special configuration.',
           'For context on what Q4_K_M means and how k-quant compression works, see the <a href="/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M explained guide</a>. For the full quantization reference, see <a href="/local-llms/quantization-levels-comparison" class="text-primary hover:underline">quantization levels compared</a>.',
+          '<strong>Three tasks reveal Q4_K_M\'s quality gap: long-document recall (50+ pages), multi-step math with intermediate state, and code generation over 300+ lines.</strong> For these, Q8_0\'s extra precision prevents the small drift errors that compound across long outputs. For everything else — chat, code under 200 lines, Q&A, summarization — the gap is invisible. For a refresher before deciding, see <a href="/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">what Q4_K_M means</a>.',
         ],
         columns: ['Metric', 'Q4_K_M', 'Q8_0'],
         rows: [
