@@ -15,6 +15,14 @@ function promptBitesHubHref(lang: Language): string {
   return lang === 'en' ? '/prompt-bites' : `/${lang}/prompt-bites`
 }
 
+const BACK_LABEL: Record<Language, string> = {
+  en: '← Back to Prompt Bites',
+  de: '← Zurück zu Prompt Bites',
+  fr: '← Retour aux Prompt Bites',
+  ja: '← Prompt Bites に戻る',
+  zh: '← 返回 Prompt Bites',
+}
+
 function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; columns: string[] }) {
   return (
     <div className="overflow-x-auto my-4">
@@ -242,7 +250,7 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
             href={promptBitesHubHref(lang)}
             className="text-sm text-primary hover:underline"
           >
-            ← Back to Prompt Bites
+            {BACK_LABEL[lang] ?? BACK_LABEL['en']}
           </Link>
         </div>
       </div>
