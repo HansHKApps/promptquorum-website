@@ -885,6 +885,7 @@ schema: {
             '[本地LLM的最佳GPU](/local-llms/best-gpus-for-local-llms?lang=zh)',
             '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm?lang=zh)',
             '[Mac Mini M5作为本地AI服务器](/local-llms/mac-mini-m5-local-ai-server?lang=zh)',
+            '[Apple Silicon M5本地LLM](/local-llms/apple-silicon-m5-local-llm?lang=zh) — M5 Pro/Max完整指南：基准测试、Mac配置、内存层级，以及购买哪款Mac进行本地推理。',
             '[本地LLM的Apple Silicon对比NVIDIA GPU](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=zh)',
             '[Apple Silicon 2026最佳模型](/local-llms/best-models-apple-silicon-2026?lang=zh)',
           ],
