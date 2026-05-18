@@ -128,8 +128,6 @@ export default async function DeLocalLLMsArticlePage({ params }: PageProps) {
   if (!article) notFound()
 
   const canonicalUrl = `https://www.promptquorum.com/de/local-llms/${slug}`
-
-  // Schema for German breadcrumbs
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
