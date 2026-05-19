@@ -4,7 +4,10 @@ import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { peContent } from '@/lib/prompt-engineering/content'
 import { llmContent } from '@/lib/local-llms/content'
+import { powerLLMContent } from '@/lib/power-local-llm/content'
+import { blogContent } from '@/lib/blog/blogContent'
 import { POWER_LLM_PUBLISHED_SLUGS, POWER_LLM_HUB_PUBLISHED } from '@/lib/power-local-llm/published'
+import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
 
 export const dynamic = 'force-static'
 
@@ -31,11 +34,126 @@ function hasRealContent(contentMap: Record<string, any>, key: string): boolean {
   return !!en && Object.keys(en.sections ?? {}).length > 0
 }
 
+// Extract images from article sections (EN version)
+function extractImagesFromArticle(
+  contentMap: Record<string, any>,
+  key: string
+): Array<{ url: string; title?: string }> {
+  const en = contentMap[key]?.['en']
+  if (!en || !en.sections) return []
+
+  const images: Array<{ url: string; title?: string }> = []
+  const sections = en.sections
+
+  // Iterate through all sections
+  Object.values(sections).forEach((section: any) => {
+    if (section && typeof section === 'object') {
+      // Check for image + imageCaption in section
+      if (section.image) {
+        const imageUrl = section.image.startsWith('/')
+          ? section.image
+          : `/${section.image}`
+        images.push({
+          url: imageUrl,
+          title: section.imageCaption || undefined,
+        })
+      }
+
+      // Check for nested items with images
+      if (Array.isArray(section.items)) {
+        section.items.forEach((item: any) => {
+          if (item && item.image) {
+            const imageUrl = item.image.startsWith('/') ? item.image : `/${item.image}`
+            images.push({
+              url: imageUrl,
+              title: item.imageCaption || undefined,
+            })
+          }
+        })
+      }
+
+      // Check for numbered items with images
+      if (Array.isArray(section.numberedItems)) {
+        section.numberedItems.forEach((item: any) => {
+          if (item && item.image) {
+            const imageUrl = item.image.startsWith('/') ? item.image : `/${item.image}`
+            images.push({
+              url: imageUrl,
+              title: item.imageCaption || undefined,
+            })
+          }
+        })
+      }
+    }
+  })
+
+  return images
+}
+
 type Page = {
   path: string
   priority: number
   changefreq: 'weekly' | 'monthly'
   lastmod: string
+}
+
+// Get images for a page path
+function getImagesForPage(
+  path: string
+): Array<{ url: string; title?: string }> {
+  // Local LLM articles
+  if (path.startsWith('/local-llms/')) {
+    const slug = path.replace('/local-llms/', '')
+    const key = LLM_SLUG_TO_KEY[slug]
+    if (key) {
+      return extractImagesFromArticle(llmContent, key)
+    }
+  }
+
+  // Prompt Engineering articles
+  if (path.startsWith('/prompt-engineering/')) {
+    const slug = path.replace('/prompt-engineering/', '')
+    const key = PE_SLUG_TO_KEY[slug]
+    if (key) {
+      return extractImagesFromArticle(peContent, key)
+    }
+  }
+
+  // Power Local LLM articles
+  if (path.startsWith('/power-local-llm/')) {
+    const slug = path.replace('/power-local-llm/', '')
+    const key = POWER_LLM_SLUG_TO_KEY[slug]
+    if (key) {
+      return extractImagesFromArticle(powerLLMContent, key)
+    }
+  }
+
+  // Blog articles
+  if (path.startsWith('/blog/')) {
+    const slug = path.replace('/blog/', '')
+    const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]
+    if (postId && blogContent[postId as keyof typeof blogContent]) {
+      const post = blogContent[postId as keyof typeof blogContent] as any
+      const en = post?.en || post?.['en']
+      if (en && en.sections) {
+        const images: Array<{ url: string; title?: string }> = []
+        Object.values(en.sections).forEach((section: any) => {
+          if (section && section.image) {
+            const imageUrl = section.image.startsWith('/')
+              ? section.image
+              : `/${section.image}`
+            images.push({
+              url: imageUrl,
+              title: section.imageCaption || undefined,
+            })
+          }
+        })
+        return images
+      }
+    }
+  }
+
+  return []
 }
 
 const STATIC_PAGES: Page[] = [
@@ -153,6 +271,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // This ensures AI crawlers discover language URLs as primary entries, not just alternates.
       const languages = ['en', 'de', 'fr', 'ja', 'zh'] as const
 
+      // Extract images for this page (from EN content only, will be per-language in URLs)
+      const pageImages = getImagesForPage(path)
+
       languages.forEach((lang) => {
         const langPath = lang === 'en' ? path : (path === '' ? `/${lang}` : `/${lang}${path}`)
 
@@ -164,13 +285,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
         alternates['x-default'] = `${BASE}${path}`
 
-        entries.push({
+        // Build images array first (Google image sitemap format)
+        const imagesArray =
+          pageImages.length > 0
+            ? pageImages.map((img) => {
+                const imageUrl = `${BASE}${img.url}`
+                return {
+                  url: imageUrl,
+                  ...(img.title ? { title: img.title } : {}),
+                }
+              })
+            : undefined
+
+        const entry: any = {
           url: `${BASE}${langPath}`,
           lastModified: lastmod,
           changeFrequency: changefreq,
           priority,
           alternates: { languages: alternates },
-        })
+          ...(imagesArray ? { images: imagesArray } : {}),
+        }
+
+        entries.push(entry)
       })
     }
   })
