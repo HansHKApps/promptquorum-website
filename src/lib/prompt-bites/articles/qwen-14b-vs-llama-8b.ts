@@ -178,6 +178,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Qwen 2.5 14B erzielt 74,8 % auf MMLU gegenüber 66,6 % für Llama 3 8B — ein 8-Punkte-Vorsprung, der sich in spürbar besserem mehrstufigen Reasoning, Instruktionsbefolgung und konsistenter strukturierter Ausgabe niederschlägt.</strong> Der Unterschied zeigt sich besonders bei Aufgaben, die das Halten und Anwenden von Kontext über mehrere Absätze hinweg erfordern.',
           'Bei Code-Vervollständigung wächst der Qualitätsunterschied noch weiter. Qwen 2.5 Coder 14B (die code-optimierte Variante derselben Basis) erzielt 78,4 % auf HumanEval. Llama 3 8B generic erreicht auf demselben Benchmark etwa 55 % — ein Unterschied von 23 Punkten bei Coding-Aufgaben.',
+          '≤8 GB VRAM: Llama 3 8B Q4_K_M passt mit ~2 GB Puffer — Qwen 14B ist keine Option. 10–12 GB VRAM: Qwen 2.5 14B Q4_K_M passt am Wendepunkt. 16+ GB VRAM: beide Modelle funktionieren; Qwen 2.5 14B Q5 wird praktikabel.',
           'Einen detaillierteren Blick auf die Coding-Modell-Performance einschließlich Benchmark-Tabellen finden Sie im Vergleich <a href="/de/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">beste 14B-Modelle für Coding</a>.',
         ],
       },
@@ -198,8 +199,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Qwen 2.5 14B unterstützt nativ ein 128k-Kontextfenster. Llama 3 8B unterstützt standardmäßig 8k, obwohl RoPE-erweiterte Varianten mit gewissem Qualitätsverlust 128k erreichen können. Bei Aufgaben mit langen Dokumenten hat Qwen 2.5 14B selbst vor Berücksichtigung seiner größeren Parameteranzahl einen klaren Vorteil.',
           },
           {
-            q: 'Was ist, wenn ich genau 8 GB VRAM habe?',
-            a: 'Mit 8 GB VRAM können Sie Llama 3 8B Q4_K_M bequem mit ~2 GB Puffer ausführen. Qwen 2.5 14B wird nicht zuverlässig passen. Erwägen Sie Qwen 2.5 7B Q4_K_M als Mittelweg — es verwendet ~5 GB VRAM und erzielt auf den meisten Benchmarks höhere Werte als Llama 3 8B. Den Leitfaden <a href="/de/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">bestes lokales LLM für Coding mit 12 GB VRAM</a> finden Sie für Kontext zu VRAM-Einschränkungen.',
+            q: 'Beeinflusst die Kontextlänge die Modellwahl für Chat?',
+            a: 'Ja. Bei typischem Single-Turn- oder kurz-mehrstufigem Chat (unter 4k Tokens) sind beide Modelle in Ordnung — wählen Sie basierend auf VRAM. Bei langen Konversationen oder dokumentenzentrierten Sitzungen ist Qwen 2.5 14B\'s natives 128k-Kontextfenster ein sinnvoller Vorteil gegenüber Llama 3 8B\'s Standard-8k-Limit.',
           },
         ],
       },
@@ -254,6 +255,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Qwen 2.5 14B obtient 74,8 % sur MMLU contre 66,6 % pour Llama 3 8B — un écart de 8 points qui se traduit par un raisonnement multi-étapes, un suivi d\'instructions et une cohérence des sorties structurées nettement meilleurs.</strong> La différence est particulièrement visible sur les tâches nécessitant de retenir et d\'appliquer le contexte sur plusieurs paragraphes.',
           'Pour la complétion de code, l\'écart de qualité se creuse encore davantage. Qwen 2.5 Coder 14B (la variante optimisée pour le code de la même base) obtient 78,4 % sur HumanEval. Llama 3 8B générique atteint environ 55 % sur le même benchmark — soit 23 points d\'écart sur les tâches de coding.',
+          '≤8 Go VRAM : Llama 3 8B Q4_K_M s\'ajuste avec ~2 Go de marge — Qwen 14B n\'est pas une option. 10–12 Go VRAM : Qwen 2.5 14B Q4_K_M s\'ajuste au point critique. 16+ Go VRAM : l\'un ou l\'autre fonctionne ; Qwen 2.5 14B Q5 devient pratique.',
           'Pour une analyse approfondie des performances des modèles de coding, incluant des tableaux de benchmarks, consultez la comparaison <a href="/fr/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">meilleurs modèles 14B pour le coding</a>.',
         ],
       },
@@ -274,8 +276,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Qwen 2.5 14B supporte nativement une fenêtre de contexte de 128k. Llama 3 8B supporte 8k par défaut, bien que des variantes étendues par RoPE puissent atteindre 128k avec une légère perte de qualité. Pour les tâches sur longs documents, Qwen 2.5 14B a un avantage clair même avant de tenir compte de son plus grand nombre de paramètres.',
           },
           {
-            q: 'Que faire si j\'ai exactement 8 Go de VRAM ?',
-            a: 'Avec 8 Go de VRAM, vous pouvez faire tourner Llama 3 8B Q4_K_M confortablement avec ~2 Go de marge. Qwen 2.5 14B ne rentrera pas de manière fiable. Envisagez Qwen 2.5 7B Q4_K_M comme compromis — il utilise ~5 Go de VRAM et obtient de meilleurs scores que Llama 3 8B sur la plupart des benchmarks. Consultez le <a href="/fr/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">meilleur LLM de coding pour 12 Go de VRAM</a> pour le contexte sur les contraintes VRAM.',
+            q: 'La longueur du contexte affecte-t-elle le choix du modèle pour le chat ?',
+            a: 'Oui. Pour le chat typique en single-turn ou courtes sessions multi-tour (moins de 4k tokens), les deux modèles conviennent — choisissez en fonction du VRAM. Pour les conversations longues ou les sessions axées sur les documents, la fenêtre de contexte native de 128k de Qwen 2.5 14B est un avantage significatif par rapport à la limite de 8k standard de Llama 3 8B.',
           },
         ],
       },
@@ -330,6 +332,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Qwen 2.5 14BはMMLUで74.8%に対してLlama 3 8Bは66.6% — 8ポイントの差が、多段階推論、指示への従い方、構造化出力の一貫性で明確に現れます。</strong> 複数段落にまたがるコンテキストの保持と適用が必要なタスクで差が特に顕著です。',
           'コード補完ではさらに品質の差が広がります。Qwen 2.5 Coder 14B（同じベースのコード最適化バリアント）はHumanEvalで78.4%を記録します。Llama 3 8Bの汎用版は同じベンチマークで約55% — コーディングタスクで23ポイントの差です。',
+          '8 GB以下 VRAM：Llama 3 8B Q4_K_Mは~2 GBの余裕で収まります — Qwen 14Bは選択肢ではありません。10–12 GB VRAM：Qwen 2.5 14B Q4_K_Mが転換点で収まります。16+ GB VRAM：いずれのモデルも動作します；Qwen 2.5 14B Q5が実用的になります。',
           'ベンチマーク表を含むコーディングモデルのパフォーマンスの詳細な分析については、<a href="/ja/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">コーディング用最適14Bモデル</a>の比較をご覧ください。',
         ],
       },
@@ -350,8 +353,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Qwen 2.5 14Bはネイティブで128kのコンテキストウィンドウをサポートします。Llama 3 8Bはデフォルトで8kをサポートしますが、RoPE拡張バリアントは品質をいくらか低下させながら128kに達することができます。長文書タスクでは、パラメータ数が多いこと以前にQwen 2.5 14Bが明確な優位性を持ちます。',
           },
           {
-            q: 'ちょうど8 GB VRAMがある場合はどうすればよいですか？',
-            a: '8 GB VRAMではLlama 3 8B Q4_K_Mを~2 GBの余裕を持って快適に実行できます。Qwen 2.5 14Bは確実には収まりません。中間として Qwen 2.5 7B Q4_K_Mを検討してください — ~5 GB VRAMを使用し、ほとんどのベンチマークでLlama 3 8Bより高いスコアを記録します。VRAMの制約がモデル選択に与える影響については<a href="/ja/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">12 GB VRAM向けコーディング最適ローカルLLM</a>をご覧ください。',
+            q: 'コンテキスト長はチャットのモデル選択に影響しますか？',
+            a: 'はい。典型的なシングルターンまたは短い複数ターンのチャット（4k トークン未満）では、両方のモデルが適切です — VRAMに基づいて選択します。長い会話またはドキュメント中心のセッションでは、Qwen 2.5 14Bのネイティブ128kコンテキストウィンドウはLlama 3 8Bのデフォルト8k制限に対して有意な利点です。',
           },
         ],
       },
@@ -406,6 +409,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Qwen 2.5 14B 在 MMLU 上得74.8%，Llama 3 8B 得66.6%——8分差距体现在多步推理、指令遵循和结构化输出一致性上的明显提升。</strong>在需要跨多个段落保留和应用上下文的任务中差异尤为显著。',
           '代码补全任务中质量差距进一步扩大。Qwen 2.5 Coder 14B（同一基础模型的代码优化变体）在 HumanEval 上得78.4%。Llama 3 8B 通用版在相同基准测试上约55%——编程任务上相差23分。',
+          '≤8 GB VRAM：Llama 3 8B Q4_K_M 在约2 GB 余量下可以容纳——Qwen 14B 不是一个选项。10–12 GB VRAM：Qwen 2.5 14B Q4_K_M 在临界点可以容纳。16+ GB VRAM：任一模型都可以工作；Qwen 2.5 14B Q5 变得实用。',
           '有关编程模型性能的深入分析（包括基准测试表），请参阅<a href="/zh/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">编程最佳14B模型</a>对比。',
         ],
       },
@@ -426,8 +430,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Qwen 2.5 14B 原生支持128k 上下文窗口。Llama 3 8B 默认支持8k，RoPE 扩展变体可达128k 但有一定质量损失。长文档任务中，即使不考虑更大的参数量，Qwen 2.5 14B 也有明显优势。',
           },
           {
-            q: '如果恰好有8 GB VRAM 怎么办？',
-            a: '8 GB VRAM 下可以留有约2 GB 余量舒适运行 Llama 3 8B Q4_K_M。Qwen 2.5 14B 无法可靠运行。可考虑 Qwen 2.5 7B Q4_K_M 作为折中——使用约5 GB VRAM，且在大多数基准测试上优于 Llama 3 8B。VRAM 约束对模型选择的影响请参阅<a href="/zh/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">12 GB VRAM 最佳编程本地 LLM</a>。',
+            q: '上下文长度会影响聊天模型的选择吗？',
+            a: '会的。对于典型的单轮或短多轮聊天（少于4k token），两个模型都可以——根据 VRAM 选择。对于长对话或文档中心的会话，Qwen 2.5 14B 的原生128k 上下文窗口相对于 Llama 3 8B 的默认8k 限制是一个重大优势。',
           },
         ],
       },

@@ -162,20 +162,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Stand Mai 2026 erzielt Qwen 2.5 Coder 14B in der Q4_K_M-Quantisierung 78,4 % auf HumanEval — der höchste Wert aller 14B-Modelle, die über Ollama oder llama.cpp verfügbar sind.</strong> Das Modell wurde auf über 5 Billionen Code-fokussierten Tokens feinabgestimmt, was seine Leistung bei mehrstufiger Vervollständigung und Testfall-Generierung erklärt.',
           'DeepSeek Coder 14B erzielt unter identischen Q4_K_M-Bedingungen 75,1 % auf HumanEval. Der Unterschied ist gering genug, dass DeepSeek Coder eine valide Wahl ist — insbesondere wenn das Modell bereits gecacht ist oder Sie mit seinem Ausgabestil vertraut sind.',
-          'Generische 14B-Modelle wie Llama 3 14B oder Mistral 12B erzielen auf HumanEval Werte im Bereich von 56–62 %. Das coding-spezifische Pretraining von Qwen 2.5 Coder und DeepSeek Coder stellt bei realen Coding-Aufgaben einen erheblichen Qualitätsunterschied dar.',
+          'StarCoder2 15B ist die dritte Wahl für spezialisierte Open-Source-Coding-Arbeiten. Mit Training auf The Stack v2 erreicht es etwa 73 % auf HumanEval bei ~10 GB VRAM Q4_K_M. Seine Stärken liegen bei Open-Source-Beitragstasks, Code-Suche über große Repositories und strukturiertem Refactoring — Use Cases, bei denen sein Trainings-Corpus ihm einen Vorteil gegenüber allgemein instruierter Modelle gibt.',
         ],
         columns: ['Modell', 'HumanEval', 'VRAM (Q4_K_M)'],
         rows: [
           { 'Modell': 'Qwen 2.5 Coder 14B', 'HumanEval': '78,4 %', 'VRAM (Q4_K_M)': '~10 GB' },
           { 'Modell': 'DeepSeek Coder 14B', 'HumanEval': '75,1 %', 'VRAM (Q4_K_M)': '~10 GB' },
-          { 'Modell': 'Mistral 12B (generisch)', 'HumanEval': '60,3 %', 'VRAM (Q4_K_M)': '~8 GB' },
+          { 'Modell': 'StarCoder2 15B', 'HumanEval': '~73 %', 'VRAM (Q4_K_M)': '~10 GB' },
         ],
       },
       body2: {
         title: 'VRAM-Puffer bestimmt die Modellwahl',
         content: [
           'Beide Modelle — Qwen 2.5 Coder 14B und DeepSeek Coder 14B — benötigen bei Q4_K_M ungefähr 10 GB VRAM und lassen auf einer 12-GB-Karte nur 2 GB Puffer. <strong>Dieser Spielraum ist bei langen Kontextsitzungen eng: Bei 8k-Kontext steigt der VRAM-Verbrauch auf ~11,5 GB.</strong> Bei Workflows mit großen Dateien empfiehlt sich eine Karte mit 16+ GB.',
-          'Für Kontextfenster unter 4k Tokens — der übliche Fall bei der Vervollständigung einzelner Dateien — laufen beide Modelle problemlos auf einer RTX 3060 12 GB oder RTX 3080 Ti 12 GB. Die Geschwindigkeit auf diesen Karten beträgt für beide Modelle etwa 14–18 tok/s.',
+          'Für Kontextfenster unter 4k Tokens — der übliche Fall bei der Vervollständigung einzelner Dateien — laufen alle drei Modelle problemlos auf einer RTX 3060 12 GB oder RTX 3080 Ti 12 GB. Die Geschwindigkeit bei Qwen und DeepSeek Coder beträgt etwa 14–18 tok/s; StarCoder2 15B läuft bei ähnlichem Durchsatz angesichts des vergleichbaren VRAM-Fußabdrucks. Bevorzugen Sie StarCoder2, wenn Ihr Workflow auf Repository-Suchvorgänge oder Open-Source-Beitragsmuster ausgerichtet ist.',
           'Einen umfassenderen Vergleich von Coding-Modellen bei anderen Größen und VRAM-Tiers finden Sie im <a href="/de/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">Leitfaden für das beste Coding-LLM mit 12 GB VRAM</a>.',
         ],
       },
@@ -239,20 +239,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>En mai 2026, Qwen 2.5 Coder 14B en quantification Q4_K_M obtient 78,4 % sur HumanEval — le meilleur score de tout modèle 14B disponible via Ollama ou llama.cpp.</strong> Le modèle a été affiné sur plus de 5 000 milliards de tokens de données axées sur le code, ce qui explique ses performances sur la complétion multi-étapes et la génération de cas de test.',
           'DeepSeek Coder 14B obtient 75,1 % sur HumanEval dans des conditions Q4_K_M identiques. L\'écart est suffisamment faible pour que DeepSeek Coder reste un choix valide, notamment si vous l\'avez déjà en cache ou que vous êtes habitué à son style de sortie.',
-          'Les modèles 14B génériques comme Llama 3 14B ou Mistral 12B se situent dans la fourchette 56–62 % sur HumanEval. Le préentraînement spécialisé en code de Qwen 2.5 Coder et DeepSeek Coder représente un écart de qualité significatif pour les tâches impliquant du code réel.',
+          'StarCoder2 15B est le troisième choix pour le travail de coding open-source spécialisé. Entraîné sur The Stack v2, il obtient environ 73 % sur HumanEval à ~10 Go de VRAM Q4_K_M. Ses points forts sont les tâches de contribution open-source, la recherche de code dans les grands référentiels et le refactoring structuré — les cas d\'usage où son corpus d\'entraînement lui confère un avantage sur les modèles d\'instruction générale.',
         ],
         columns: ['Modèle', 'HumanEval', 'VRAM (Q4_K_M)'],
         rows: [
           { 'Modèle': 'Qwen 2.5 Coder 14B', 'HumanEval': '78,4 %', 'VRAM (Q4_K_M)': '~10 Go' },
           { 'Modèle': 'DeepSeek Coder 14B', 'HumanEval': '75,1 %', 'VRAM (Q4_K_M)': '~10 Go' },
-          { 'Modèle': 'Mistral 12B (générique)', 'HumanEval': '60,3 %', 'VRAM (Q4_K_M)': '~8 Go' },
+          { 'Modèle': 'StarCoder2 15B', 'HumanEval': '~73 %', 'VRAM (Q4_K_M)': '~10 Go' },
         ],
       },
       body2: {
         title: 'La marge VRAM détermine le choix',
         content: [
           'Qwen 2.5 Coder 14B et DeepSeek Coder 14B nécessitent tous deux environ 10 Go de VRAM en Q4_K_M, ne laissant que 2 Go de marge sur une carte 12 Go. <strong>Cette marge est serrée pour les sessions à long contexte : à 8k de contexte, l\'utilisation VRAM monte à ~11,5 Go.</strong> Si votre flux de travail implique de grands fichiers, préférez une carte de 16+ Go.',
-          'Pour des fenêtres de contexte inférieures à 4k tokens — le cas courant pour la complétion de fichier unique — les deux modèles fonctionnent confortablement sur une RTX 3060 12 Go ou RTX 3080 Ti 12 Go. La vitesse sur ces cartes est d\'environ 14 à 18 tok/s pour les deux modèles.',
+          'Pour des fenêtres de contexte inférieures à 4k tokens — le cas courant pour la complétion de fichier unique — les trois modèles fonctionnent confortablement sur une RTX 3060 12 Go ou RTX 3080 Ti 12 Go. La vitesse pour Qwen et DeepSeek Coder est d\'environ 14 à 18 tok/s ; StarCoder2 15B s\'exécute à un débit similaire compte tenu de son empreinte VRAM comparable. Préférez StarCoder2 quand votre flux de travail porte sur la recherche au niveau du référentiel ou les modèles de contributions open-source.',
           'Pour une comparaison plus complète des modèles de coding à différentes tailles et niveaux de VRAM, consultez le <a href="/fr/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">guide du meilleur LLM de coding pour 12 Go de VRAM</a>.',
         ],
       },
@@ -316,20 +316,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>2026年5月時点で、Qwen 2.5 Coder 14BはQ4_K_M量子化でHumanEval 78.4%を記録 — OllamaまたはLlama.cpp経由で利用可能な14Bモデル中で最高のスコアです。</strong> このモデルは5兆トークン以上のコード重視データでファインチューニングされており、多段階補完とテストケース生成における性能の高さはそこに由来します。',
           'DeepSeek Coder 14Bは同一のQ4_K_M条件でHumanEval 75.1%を記録します。差は小さく、特にすでにキャッシュ済みだったり出力スタイルに慣れている場合はDeepSeek Coderも有効な選択肢です。',
-          'Llama 3 14BやMistral 12Bのような汎用14BモデルはHumanEvalで56〜62%の範囲に留まります。Qwen 2.5 CoderとDeepSeek Coderのコード特化事前学習は、実際のコード作業において大きな品質差をもたらします。',
+          'StarCoder2 15Bはオープンソース特化コーディング作業の3番目の選択肢です。The Stack v2で学習され、~10 GB VRAM Q4_K_MでHumanEvalで約73%を達成します。その強みはオープンソース貢献タスク、大規模リポジトリにわたるコード検索、および構造化リファクタリングです — その学習コーパスが汎用命令調整モデルに対して優位性をもたらすユースケースです。',
         ],
         columns: ['モデル', 'HumanEval', 'VRAM (Q4_K_M)'],
         rows: [
           { 'モデル': 'Qwen 2.5 Coder 14B', 'HumanEval': '78.4%', 'VRAM (Q4_K_M)': '~10 GB' },
           { 'モデル': 'DeepSeek Coder 14B', 'HumanEval': '75.1%', 'VRAM (Q4_K_M)': '~10 GB' },
-          { 'モデル': 'Mistral 12B（汎用）', 'HumanEval': '60.3%', 'VRAM (Q4_K_M)': '~8 GB' },
+          { 'モデル': 'StarCoder2 15B', 'HumanEval': '~73%', 'VRAM (Q4_K_M)': '~10 GB' },
         ],
       },
       body2: {
         title: 'VRAMの余裕が選択を決める',
         content: [
           'Qwen 2.5 Coder 14BとDeepSeek Coder 14Bはいずれも Q4_K_Mで約10 GB VRAMが必要で、12 GBカードでは2 GBしか余裕がありません。<strong>この余裕は長いコンテキストセッションでは不十分です：8kコンテキストではVRAM使用量は~11.5 GBに達します。</strong>大きなファイルを扱うワークフローでは16 GB以上のカードを推奨します。',
-          '4kトークン未満のコンテキストウィンドウ（単一ファイル補完の一般的なケース）では、両モデルともRTX 3060 12 GBやRTX 3080 Ti 12 GB上で快適に動作します。これらのカードでの速度は両モデルとも約14〜18 tok/sです。',
+          '4kトークン未満のコンテキストウィンドウ（単一ファイル補完の一般的なケース）では、3つのモデルすべてがRTX 3060 12 GBやRTX 3080 Ti 12 GB上で快適に動作します。QwenとDeepSeek Coderでの速度は約14〜18 tok/sです；StarCoder2 15Bは同等のVRAM消費量を考えると同様のスループットで動作します。リポジトリ規模の検索やオープンソース貢献パターンに焦点を当てるワークフローではStarCoder2を優先します。',
           '他のサイズとVRAMティアにおけるコーディングモデルの包括的な比較については、<a href="/ja/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">12 GB VRAM向け最適コーディングLLMガイド</a>をご覧ください。',
         ],
       },
@@ -393,20 +393,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>截至2026年5月，Qwen 2.5 Coder 14B 在 Q4_K_M 量化下 HumanEval 得分78.4%——是 Ollama 或 llama.cpp 上所有可用14B模型中的最高分。</strong>该模型在超过5万亿条以代码为核心的 token 上进行了微调，这正是其在多步骤补全和测试用例生成上表现突出的原因。',
           'DeepSeek Coder 14B 在相同的 Q4_K_M 条件下 HumanEval 得分75.1%。差距足够小，DeepSeek Coder 仍是合理选择——尤其是当你已有缓存或熟悉其输出风格时。',
-          'Llama 3 14B、Mistral 12B 等通用14B模型的 HumanEval 得分在56%–62%区间。Qwen 2.5 Coder 和 DeepSeek Coder 的代码专项预训练在实际编程任务中形成了显著的质量差距。',
+          'StarCoder2 15B 是开源专项代码工作的第三选择。在 The Stack v2 上训练，~10 GB VRAM Q4_K_M 下 HumanEval 得分约73%。其优势在于开源贡献任务、跨大型代码库的代码搜索以及结构化重构——在这些用例中其训练语料库相比通用指令调优模型提供优势。',
         ],
         columns: ['模型', 'HumanEval', 'VRAM (Q4_K_M)'],
         rows: [
           { '模型': 'Qwen 2.5 Coder 14B', 'HumanEval': '78.4%', 'VRAM (Q4_K_M)': '~10 GB' },
           { '模型': 'DeepSeek Coder 14B', 'HumanEval': '75.1%', 'VRAM (Q4_K_M)': '~10 GB' },
-          { '模型': 'Mistral 12B（通用）', 'HumanEval': '60.3%', 'VRAM (Q4_K_M)': '~8 GB' },
+          { '模型': 'StarCoder2 15B', 'HumanEval': '~73%', 'VRAM (Q4_K_M)': '~10 GB' },
         ],
       },
       body2: {
         title: 'VRAM 余量决定选择',
         content: [
           'Qwen 2.5 Coder 14B 和 DeepSeek Coder 14B 在 Q4_K_M 下均需约10 GB VRAM，在12 GB 显卡上只剩2 GB 余量。<strong>长上下文会话中余量非常紧张：8k 上下文时 VRAM 使用量升至约11.5 GB。</strong>如果工作流涉及大型文件，建议使用16 GB 以上的显卡。',
-          '对于4k token 以下的上下文窗口（单文件补全的常见场景），两款模型都能在 RTX 3060 12 GB 或 RTX 3080 Ti 12 GB 上稳定运行。这些显卡上两款模型的速度约为14–18 tok/s。',
+          '对于4k token 以下的上下文窗口（单文件补全的常见场景），三款模型都能在 RTX 3060 12 GB 或 RTX 3080 Ti 12 GB 上稳定运行。Qwen 和 DeepSeek Coder 的速度约为14–18 tok/s；StarCoder2 15B 考虑到其 VRAM 消耗量相近，运行速度相似。当你的工作流集中于代码库级别搜索或开源贡献模式时，优先选择 StarCoder2。',
           '有关不同尺寸和VRAM层级编程模型的全面对比，请参阅<a href="/zh/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">12 GB VRAM 最佳编程 LLM 指南</a>。',
         ],
       },

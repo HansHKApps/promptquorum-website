@@ -175,6 +175,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Mixtral 8x7B ist auf Ollama via <code>ollama pull mixtral:8x7b</code> verfügbar, was das Q4_K_M GGUF automatisch herunterlädt.</strong> Ollama übernimmt die Layer-Zuteilung über den verfügbaren VRAM und lagert bei unzureichendem VRAM partiell auf den CPU-RAM aus, was jedoch die Geschwindigkeit deutlich reduziert.',
           'Wenn Sie nur 16 GB VRAM haben, ist DeepSeek V2 Q4 die bessere MoE-Wahl. Es passt vollständig auf eine 16-GB-Karte und liefert einen Coding-Durchsatz von ca. 15–20 tok/s auf einer RTX 4080 oder ähnlichem. Unter 16 GB VRAM sollten Sie auf Dense-Modelle wechseln — MoE-Vorteile verschwinden bei starkem CPU-Offloading.',
+          'Ein verbreiteter Missverständnis: MoE-Modelle müssen beim Start ALLE Experten-Gewichte in den VRAM laden, nicht nur die aktiven Teilmengen. Die VRAM-Kosten spiegeln Gesamtparameter wider, nicht aktive. Für Aufgaben einer Sprache (z.B. nur Python-Arbeit) outperformt ein Dense-Modell wie Qwen 2.5 Coder 14B oft Mixtral 8x7B, da seine Gewichte vollständig auf Code spezialisiert sind, nicht über allgemeine Experten verteilt.',
           'Für einen vollständigen Vergleich der besten Coding-Modelle bei jedem VRAM-Niveau einschließlich Dense-Alternativen lesen Sie den <a href="/de/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">Leitfaden zu den besten lokalen LLMs für Coding</a>.',
         ],
       },
@@ -251,6 +252,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Mixtral 8x7B est disponible sur Ollama via <code>ollama pull mixtral:8x7b</code>, qui télécharge automatiquement le GGUF Q4_K_M.</strong> Ollama gère l\'allocation des couches sur la VRAM disponible et déchargera partiellement vers la RAM CPU si la VRAM est insuffisante, mais cela réduit significativement la vitesse.',
           'Si vous disposez de seulement 16 Go de VRAM, DeepSeek V2 Q4 est le meilleur choix MoE. Il tient entièrement sur un GPU 16 Go et délivre un débit de codage d\'environ 15–20 tok/s sur une RTX 4080 ou équivalent. Sous 16 Go de VRAM, passez aux modèles denses — les avantages MoE disparaissent avec un déchargement CPU important.',
+          'Une idée fausse courante : les modèles MoE doivent charger TOUS les poids des experts en VRAM au démarrage, pas seulement le sous-ensemble actif. Le coût VRAM reflète les paramètres totaux, pas les paramètres actifs. Pour les tâches single-langue (par exemple, travail Python uniquement), un modèle dense comme Qwen 2.5 Coder 14B surpasse souvent Mixtral 8x7B car ses poids sont entièrement spécialisés dans le code plutôt que répartis entre des experts génériques.',
           'Pour une comparaison complète des meilleurs modèles de codage à chaque niveau de VRAM incluant les alternatives denses, consultez le <a href="/fr/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">guide des meilleurs LLMs locaux pour le codage</a>.',
         ],
       },
@@ -327,6 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Mixtral 8x7B は Ollama の <code>ollama pull mixtral:8x7b</code> コマンドで利用可能で、Q4_K_M GGUF を自動ダウンロードします。</strong> Ollama は利用可能な VRAM にレイヤーを割り当て、VRAM が不足している場合はパーシャルオフロードで CPU RAM に溢れさせますが、速度は大幅に低下します。',
           '16 GB VRAM しかない場合、DeepSeek V2 Q4 が優れた MoE の選択肢です。16 GB カード 1 枚に完全に収まり、RTX 4080 相当の環境で約 15〜20 tok/s のコーディングスループットを発揮します。16 GB VRAM 未満では Dense モデルに切り替えてください — 大幅な CPU オフロードが必要になると MoE の利点がなくなります。',
+          'よくある誤解：MoE モデルはスタートアップ時にアクティブなサブセットではなく、全エキスパート重みを VRAM に読み込む必要があります。VRAM コストはアクティブパラメータではなく総パラメータを反映します。単一言語コーディングタスク（例：Python のみ）の場合、Qwen 2.5 Coder 14B のような Dense モデルは、重みが汎用エキスパート全体に分散されているのではなく完全にコードに特化しているため、Mixtral 8x7B を上回ることが多いです。',
           '各 VRAM レベルでの最適なコーディングモデルの完全な比較（Dense モデルの代替案を含む）については、<a href="/ja/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">コーディング向け最適ローカル LLM ガイド</a>をご覧ください。',
         ],
       },
@@ -403,6 +406,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Mixtral 8x7B 可通过 Ollama 的 <code>ollama pull mixtral:8x7b</code> 命令获取，会自动下载 Q4_K_M GGUF。</strong> Ollama 处理跨可用 VRAM 的层分配，若 VRAM 不足会部分卸载至 CPU 内存，但这会显著降低速度。',
           '如果只有 16 GB VRAM，DeepSeek V2 Q4 是更好的 MoE 选择。它完全适配 16 GB 显卡，在 RTX 4080 或同等设备上编程吞吐量约 15~20 tok/s。低于 16 GB VRAM 时请切换至稠密模型——大量 CPU 卸载时 MoE 的优势会消失。',
+          '常见误解：MoE 模型必须在启动时将全部专家权重加载到 VRAM 中，而不仅仅是活跃子集。VRAM 成本反映的是总参数，而非活跃参数。对于单一语言编程任务（如纯 Python 工作），Qwen 2.5 Coder 14B 等稠密模型通常优于 Mixtral 8x7B，因为其权重完全专门化于代码，而不是分散在多个通用专家中。',
           '关于各 VRAM 层级最佳编程模型的完整对比（包括稠密模型替代方案），请参阅<a href="/zh/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">本地编程最佳 LLM 指南</a>。',
         ],
       },
