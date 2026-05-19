@@ -8,6 +8,9 @@ import { powerLLMContent } from '@/lib/power-local-llm/content'
 import { blogContent } from '@/lib/blog/blogContent'
 import { POWER_LLM_PUBLISHED_SLUGS, POWER_LLM_HUB_PUBLISHED } from '@/lib/power-local-llm/published'
 import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
+import { PROMPT_BITES_PUBLISHED_SLUGS, PROMPT_BITES_HUB_PUBLISHED } from '@/lib/prompt-bites/published'
+import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
+import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 
 export const dynamic = 'force-static'
 
@@ -22,7 +25,8 @@ const NOINDEX_PAGES = new Set([
 
 // Path prefixes excluded from sitemap entirely (every URL beneath these paths is dropped).
 // Base /power-local-llm blocks unpublished articles, briefs, and stubs.
-// Language variants (/de/, /fr/, /ja/, /zh/) are now emitted per-language via POWER_LLM_PUBLISHED_PATHS check.
+// Base /prompt-bites blocks unpublished articles until they pass editorial review.
+// Language variants (/de/, /fr/, /ja/, /zh/) are now emitted per-language via published paths check.
 const EXCLUDED_PATH_PREFIXES = [
   '/power-local-llm',
   '/prompt-bites',
@@ -125,6 +129,15 @@ function getImagesForPage(
     const key = POWER_LLM_SLUG_TO_KEY[slug]
     if (key) {
       return extractImagesFromArticle(powerLLMContent, key)
+    }
+  }
+
+  // Prompt Bites articles
+  if (path.startsWith('/prompt-bites/')) {
+    const slug = path.replace('/prompt-bites/', '')
+    const key = PROMPT_BITES_SLUG_TO_KEY[slug]
+    if (key) {
+      return extractImagesFromArticle(promptBitesContent, key)
     }
   }
 
@@ -234,6 +247,21 @@ const POWER_LOCAL_LLM_PAGES: Page[] = [
   })),
 ]
 
+// Prompt Bites — published-article allowlist. Only slugs in
+// PROMPT_BITES_PUBLISHED_SLUGS are emitted here; unpublished articles stay
+// excluded via EXCLUDED_PATH_PREFIXES below until ready for indexing.
+const PROMPT_BITES_PAGES: Page[] = [
+  ...(PROMPT_BITES_HUB_PUBLISHED
+    ? [{ path: '/prompt-bites', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-05-19' }]
+    : []),
+  ...Array.from(PROMPT_BITES_PUBLISHED_SLUGS).map(slug => ({
+    path: `/prompt-bites/${slug}`,
+    priority: 0.8,
+    changefreq: 'monthly' as const,
+    lastmod: '2026-05-19',
+  })),
+]
+
 const PAGES: Page[] = [
   ...STATIC_PAGES,
   ...PE_PAGES,
@@ -241,6 +269,7 @@ const PAGES: Page[] = [
   ...FRAMEWORK_PAGES,
   ...LOCAL_LLM_PAGES,
   ...POWER_LOCAL_LLM_PAGES,
+  ...PROMPT_BITES_PAGES,
 ]
 
 // Power Local LLM published paths override the prefix exclusion. Anything else
@@ -250,8 +279,16 @@ const POWER_LLM_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
   ...Array.from(POWER_LLM_PUBLISHED_SLUGS).map(slug => `/power-local-llm/${slug}`),
 ])
 
+// Prompt Bites published paths override the prefix exclusion. Anything else
+// under /prompt-bites stays excluded (unpublished articles, locale variants).
+const PROMPT_BITES_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
+  ...(PROMPT_BITES_HUB_PUBLISHED ? ['/prompt-bites'] : []),
+  ...Array.from(PROMPT_BITES_PUBLISHED_SLUGS).map(slug => `/prompt-bites/${slug}`),
+])
+
 function isExcluded(path: string): boolean {
   if (POWER_LLM_PUBLISHED_PATHS.has(path)) return false
+  if (PROMPT_BITES_PUBLISHED_PATHS.has(path)) return false
   return EXCLUDED_PATH_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`))
 }
 
