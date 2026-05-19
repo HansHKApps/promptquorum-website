@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'Best Local LLM Apps for Android?',
-    seoTitle: 'Best Local LLM Apps for Android? | Prompt Bites | PromptQuorum',
+    seoTitle: 'Best Android LLM Apps 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Top Android apps for local LLMs: MLC Chat (easiest), Pocketpal (flexible), Termux + Ollama (full control). All run offline. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -131,8 +131,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Tool Comparisons',
     title: 'Die besten lokalen LLM-Apps für Android?',
-    seoTitle: 'Beste lokale LLM-Apps für Android? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Die besten Android-Apps für lokale LLMs: MLC Chat (einfachste), Pocketpal (flexibel), Termux + Ollama (volle Kontrolle). Alle offline. Kurze Antwort von PromptQuorum.',
+    seoTitle: 'Android LLM-Apps 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Beste Android-LLM-Apps: MLC Chat (einfachste), Pocketpal (flexibel), Termux + Ollama (volle Kontrolle). Alle offline. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -210,8 +210,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Tool Comparisons',
     title: 'Meilleures applications LLM locales pour Android ?',
-    seoTitle: 'Meilleures applis LLM locales Android ? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Meilleures applis Android pour LLM locaux : MLC Chat (plus facile), Pocketpal (flexible), Termux + Ollama (contrôle total). Tout hors ligne. Réponse rapide par PromptQuorum.',
+    seoTitle: 'Meilleures apps LLM Android | Prompt Bites | PromptQuorum',
+    metaDescription: 'Apps Android pour LLM locaux : MLC Chat (plus facile), Pocketpal (flexible), Termux + Ollama. Toutes hors ligne. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

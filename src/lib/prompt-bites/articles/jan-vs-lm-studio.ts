@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'Jan vs LM Studio: Which Is Better?',
-    seoTitle: 'Jan vs LM Studio: Which Is Better? | Prompt Bites',
-    metaDescription: 'Jan is fully open source with extensions. LM Studio has a more polished UI and bigger model library. For customization pick Jan; for ease of use pick LM Studio. Quick answer from PromptQuorum.',
+    seoTitle: 'Jan vs LM Studio: Which to Use | Prompt Bites | PromptQuorum',
+    metaDescription: 'Jan: open source, ~30 extensions. LM Studio: polished UI, larger library. For customization pick Jan; for ease, LM Studio. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -131,8 +131,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Tool Comparisons',
     title: 'Jan vs LM Studio: Welches ist besser?',
-    seoTitle: 'Jan vs LM Studio: Welches ist besser? | Prompt Bites',
-    metaDescription: 'Jan ist vollständig Open Source mit Erweiterungen. LM Studio bietet eine ausgefeiltere Oberfläche und eine größere Modellbibliothek. Für Anpassbarkeit Jan, für Benutzerfreundlichkeit LM Studio. Schnelle Antwort von PromptQuorum.',
+    seoTitle: 'Jan vs LM Studio: Was wählen? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Jan: Open Source, ~30 Erweiterungen. LM Studio: ausgefeiltere UI, mehr Modelle. Anpassung: Jan, einfache Nutzung: LM Studio. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -210,8 +210,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Tool Comparisons',
     title: 'Jan vs LM Studio : lequel est le meilleur ?',
-    seoTitle: 'Jan vs LM Studio : lequel est le meilleur ? | Prompt Bites',
-    metaDescription: 'Jan est entièrement open source avec des extensions. LM Studio a une interface plus soignée et une plus grande bibliothèque de modèles. Pour la personnalisation, choisissez Jan ; pour la facilité, LM Studio. Réponse rapide par PromptQuorum.',
+    seoTitle: 'Jan ou LM Studio 2026 ? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Jan : open source, ~30 extensions. LM Studio : interface soignée, plus de modèles. Personnalisation : Jan. Facilité : LM Studio. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Tool Comparisons',
     title: 'Jan vs LM Studio：どちらが優れていますか？',
-    seoTitle: 'Jan vs LM Studio：どちらが優れている？ | Prompt Bites',
+    seoTitle: 'Jan vs LM Studio：どちらを使う？ | Prompt Bites | PromptQuorum',
     metaDescription: 'Janは拡張機能付きの完全オープンソースです。LM Studioはより洗練されたUIと大規模なモデルライブラリを持ちます。カスタマイズにはJan、使いやすさにはLM Studio。PromptQuorumによる簡潔な回答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Tool Comparisons',
     title: 'Jan vs LM Studio：哪个更好？',
-    seoTitle: 'Jan vs LM Studio：哪个更好？| Prompt Bites',
+    seoTitle: 'Jan vs LM Studio：哪个更好？ | Prompt Bites | PromptQuorum',
     metaDescription: 'Jan 是完全开源的，支持扩展。LM Studio 界面更精致，模型库更大。需要自定义选 Jan；追求易用性选 LM Studio。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
