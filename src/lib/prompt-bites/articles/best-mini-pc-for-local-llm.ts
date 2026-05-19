@@ -20,11 +20,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best mini PC for local LLM?',
-        answer: 'The Minisforum UM790 Pro and Mac Mini M4 are the top mini PCs for running LLMs locally. The UM790 Pro uses an AMD iGPU with unified memory. The Mac Mini M4 is faster and more power-efficient. Both run 7–13B models without a discrete GPU.',
+        answer: 'Three mini PCs stand out for local LLM inference: the Mac Mini M4 (fastest, ~18 tok/s), the Minisforum UM790 Pro (most RAM, 64 GB DDR5), and the Beelink SER8 (best value, Ryzen 9 8845HS CPU). All three run 7–13B Q4 models without a discrete GPU.',
         bullets: [
           'Mac Mini M4: fastest for LLMs, ~18 tok/s on Llama 3 8B, power-efficient',
           'Minisforum UM790 Pro: AMD Radeon 780M iGPU, up to 64 GB unified RAM',
-          'Both run 7B–13B models at Q4 without a dedicated GPU',
+          'Beelink SER8: Ryzen 9 8845HS, ~8 tok/s, budget-friendly alternative',
         ],
         updatedDate: '2026-05',
       },
@@ -77,14 +77,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Mac Mini M4 starts at ~599 USD, uses Apple Metal for GPU acceleration, and reaches ~18 tok/s on a 7B Q4 model using only ~30 W under load',
           'Minisforum UM790 Pro (AMD Ryzen 9 7940HS) supports up to 64 GB DDR5 RAM and ~8 tok/s on a 7B model via ROCm on Linux',
           'Apple Silicon\'s unified memory architecture is the key advantage — the M4\'s RAM is shared between CPU and GPU with no VRAM bottleneck',
-          'For users on Windows or Linux who need more than 32 GB of accessible unified memory, the UM790 Pro is the only mini PC option that scales to 64 GB',
+          'Beelink SER8 (Ryzen 9 8845HS) is the budget pick: same ~8 tok/s as the UM790 Pro but CPU-based inference, lower power draw, and no Linux ROCm setup required',
         ],
       },
       body1: {
         title: 'Mac Mini M4 Leads on Speed and Efficiency',
         content: [
-          '<strong>The Mac Mini M4 achieves ~18 tokens per second on a 7B Q4 model, consumes ~30 W under load, and starts at approximately 599 USD — making it the fastest and most power-efficient mini PC for local LLM inference.</strong> The M4 chip uses unified memory architecture, meaning the same physical RAM is shared between CPU and GPU with no memory copy overhead.',
-          'The Minisforum UM790 Pro offers the best non-Apple alternative. Its AMD Ryzen 9 7940HS includes a Radeon 780M iGPU, and the system supports up to 64 GB of DDR5 RAM configured as unified memory. On Linux with ROCm, it achieves approximately 8 tokens per second on the same 7B Q4 model.',
+          '<strong>The Mac Mini M4 achieves ~18 tokens per second on a 7B Q4 model, consumes ~30 W under load, and starts at approximately 599 USD — making it the fastest mini PC for local LLM inference.</strong> The M4 chip uses unified memory architecture, meaning the same physical RAM is shared between CPU and GPU with no memory copy overhead. For users prioritizing speed, the M4 is the top choice.',
+          'The Minisforum UM790 Pro is the scaling option: AMD Ryzen 9 7940HS with Radeon 780M iGPU, up to 64 GB DDR5 configured as unified memory, and ~8 tok/s on Linux with ROCm. The Beelink SER8 (Ryzen 9 8845HS) matches the UM790 Pro on throughput but uses CPU-only inference — no discrete GPU required — making it the budget-friendly choice for users on Windows or Linux who want to avoid ROCm setup.',
           'The table below compares the three mini PCs across CPU/GPU, best memory configuration, and measured LLM speed.',
         ],
         columns: ['Mini PC', 'CPU/GPU', 'Best Config', 'LLM Speed (7B Q4)'],
@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Unified Memory Is the Key Differentiator for LLM Performance',
         content: [
-          'Standard mini PCs with discrete GPU slots are not useful for LLM inference because the GPU VRAM is fixed at the factory — typically 4–8 GB — and cannot be expanded. Both the Mac Mini M4 and the UM790 Pro solve this by using the system\'s main RAM as unified GPU memory.',
+          'Standard mini PCs with discrete GPU slots are not useful for LLM inference because the GPU VRAM is fixed at the factory — typically 4–8 GB — and cannot be expanded. The Mac Mini M4 and UM790 Pro solve this via GPU-based inference with unified memory. The Beelink SER8 takes a different approach: its Ryzen 9 8845HS uses CPU-only inference, which is slower but requires no GPU setup.',
           'The Mac Mini M4 with 16 GB unified memory outperforms the UM790 Pro with 32 GB DDR5 on raw inference speed because Apple\'s memory bandwidth (~68 GB/s) and Metal GPU acceleration are more efficient than the Radeon 780M iGPU. The UM790 Pro\'s advantage is the ability to expand to 64 GB, which allows running larger models such as 13B and 30B Q4 that do not fit in 16 GB.',
           'For a full guide to hardware selection for local LLM, see the <a href="/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">best Ollama frontend overview</a> which covers the software side of local LLM setup.',
         ],
@@ -121,6 +121,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'What is the maximum model size the UM790 Pro can run at full speed?',
             a: 'With 64 GB DDR5 configured as unified memory on Linux with ROCm, the UM790 Pro can run a 30B Q4 model (~18 GB) at approximately 3–4 tok/s. A 13B Q4 model (~8 GB) runs at ~6 tok/s. See the <a href="/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">Ollama frontend guide</a> for software setup to run these models.',
+          },
+          {
+            q: 'When should I pick the Beelink SER8 over the Mac Mini M4 or UM790 Pro?',
+            a: 'Choose Beelink SER8 if you: (1) want to avoid GPU drivers and ROCm on Linux; (2) prioritize budget over speed (it\'s cheaper than both); (3) run Windows and don\'t want to use DirectML; (4) do occasional inference at ~8 tok/s and prefer CPU-based inference simplicity. It won\'t beat the Mac Mini M4 on speed or the UM790 Pro on scalability, but it\'s the easiest CPU-only option.',
           },
         ],
       },
