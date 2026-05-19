@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-11-18',
     current_models_mentioned: ['Llama 3 70B'],
     current_hardware_mentioned: ['RTX 3090', 'M5 Max'],
-    educationalLevel: 'Intermediate',
+    educationalLevel: 'Advanced',
     audience: 'Developers planning to run 70B models locally',
     parentArticle: '/local-llms/run-70b-models-24gb-vram',
     siblingBites: ['how-much-ram-for-7b-model', 'how-much-vram-for-local-llm'],

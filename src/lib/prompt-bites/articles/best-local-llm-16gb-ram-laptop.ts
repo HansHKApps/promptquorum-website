@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-11-18',
     current_models_mentioned: ['Llama 3 8B', 'Mistral 7B'],
     current_hardware_mentioned: [],
-    educationalLevel: 'Intermediate',
+    educationalLevel: 'Beginner',
     audience: 'Laptop users with 16 GB RAM wanting to run a local LLM on CPU',
     parentArticle: '/local-llms/local-llm-on-laptop',
     siblingBites: ['can-you-run-rag-on-2gb-ram'],

@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-11-18',
     current_models_mentioned: ['Phi-4 Mini', 'Llama 3 8B', 'Mistral 7B', 'Qwen 14B'],
     current_hardware_mentioned: ['RTX 3060', 'RTX 3050'],
-    educationalLevel: 'Intermediate',
+    educationalLevel: 'Beginner',
     audience: 'Developers and enthusiasts running local LLMs',
     parentArticle: '/local-llms/how-much-vram-local-llm',
     siblingBites: ['how-much-ram-for-7b-model', 'best-local-llm-6gb-vram'],

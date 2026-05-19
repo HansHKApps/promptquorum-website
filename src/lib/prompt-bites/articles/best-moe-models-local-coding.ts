@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-11-18',
     current_models_mentioned: ['Mixtral 8x7B', 'DeepSeek V2'],
     current_hardware_mentioned: [],
-    educationalLevel: 'Intermediate',
+    educationalLevel: 'Advanced',
     audience: 'Developers evaluating MoE models for local coding tasks',
     parentArticle: '/local-llms/best-local-llms-for-coding',
     siblingBites: ['best-14b-models-coding', 'qwen-14b-vs-llama-8b'],

@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    educationalLevel: 'Intermediate',
+    educationalLevel: 'Beginner',
     audience: 'Android users running LLMs on their phone',
     parentArticle: '/power-local-llm/best-local-llm-apps-android-2026',
     siblingBites: ['best-frontend-for-ollama', 'jan-vs-lm-studio'],

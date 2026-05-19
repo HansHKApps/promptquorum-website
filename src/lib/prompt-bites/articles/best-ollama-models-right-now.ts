@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-06-18',
     current_models_mentioned: ['Llama 3 8B', 'Qwen 2.5 Coder 14B', 'Phi-4 Mini'],
     current_hardware_mentioned: [],
-    educationalLevel: 'Intermediate',
+    educationalLevel: 'Beginner',
     audience: 'Developers choosing Ollama models for everyday use',
     parentArticle: '/local-llms/top-open-source-models-ollama',
     siblingBites: ['ollama-latest-version', 'best-ollama-models-cpu-only'],

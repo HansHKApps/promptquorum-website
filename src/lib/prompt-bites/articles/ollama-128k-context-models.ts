@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-11-18',
     current_models_mentioned: ['Llama 3.1 8B', 'Qwen 2.5 14B'],
     current_hardware_mentioned: [],
-    educationalLevel: 'Intermediate',
+    educationalLevel: 'Advanced',
     audience: 'Developers needing long context windows for local LLMs',
     parentArticle: '/local-llms/long-context-local-llms',
     siblingBites: ['which-ollama-models-support-vision', 'can-you-run-qwen3-on-ollama'],

@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-11-18',
     current_models_mentioned: ['Phi-2', 'TinyLlama'],
     current_hardware_mentioned: [],
-    educationalLevel: 'Intermediate',
+    educationalLevel: 'Beginner',
     audience: 'Developers asking whether RAG is feasible on very low-memory systems',
     parentArticle: '/local-llms/local-rag-2026',
     siblingBites: ['best-local-llm-16gb-ram-laptop'],

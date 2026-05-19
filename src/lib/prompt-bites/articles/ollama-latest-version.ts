@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-06-18',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
-    educationalLevel: 'Intermediate',
+    educationalLevel: 'Beginner',
     audience: 'Developers keeping Ollama up to date',
     parentArticle: '/local-llms/local-llm-model-updates-2026',
     siblingBites: ['best-ollama-models-right-now', 'can-you-run-qwen3-on-ollama'],
