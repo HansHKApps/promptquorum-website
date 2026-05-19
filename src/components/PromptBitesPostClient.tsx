@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import type { Language } from '@/lib/blog/blogContent'
@@ -21,6 +22,36 @@ const BACK_LABEL: Record<Language, string> = {
   fr: '← Retour aux Prompt Bites',
   ja: '← Prompt Bites に戻る',
   zh: '← 返回 Prompt Bites',
+}
+
+const QUICK_ANSWER_LABEL: Record<Language, string> = {
+  en: 'Quick Answer',
+  de: 'Schnelle Antwort',
+  fr: 'Réponse rapide',
+  ja: 'クイック回答',
+  zh: '快速回答',
+}
+
+const UPDATED_LABEL: Record<Language, string> = {
+  en: 'Updated:',
+  de: 'Aktualisiert:',
+  fr: 'Mis à jour :',
+  ja: '更新:',
+  zh: '更新于:',
+}
+
+const KEY_TAKEAWAYS_LABEL: Record<Language, string> = {
+  en: 'Key Takeaways',
+  de: 'Wichtigste Punkte',
+  fr: 'Points clés',
+  ja: '重要なポイント',
+  zh: '关键要点',
+}
+
+const EDUCATIONAL_LEVEL: Record<string, Record<Language, string>> = {
+  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级' },
+  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级' },
 }
 
 function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; columns: string[] }) {
@@ -104,10 +135,10 @@ function BodySection({ section }: { section: LLMSection }) {
   )
 }
 
-function TldrSection({ items }: { items: string[] }) {
+function TldrSection({ items, lang }: { items: string[]; lang: Language }) {
   return (
     <div className="rounded-xl bg-primary/5 border border-primary/20 p-5 mb-8">
-      <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Key Takeaways</p>
+      <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">{KEY_TAKEAWAYS_LABEL[lang]}</p>
       <ul className="space-y-2">
         {items.map((item, i) => (
           <li key={i} className="flex gap-2 text-sm text-text-secondary">
@@ -120,7 +151,7 @@ function TldrSection({ items }: { items: string[] }) {
   )
 }
 
-function FaqSection({ title, faqs }: { title?: string; faqs: Array<{ q: string; a: string }> }) {
+function FaqSection({ title, faqs, lang: _lang }: { title?: string; faqs: Array<{ q: string; a: string }>; lang: Language }) {
   if (!faqs || faqs.length === 0) return null
   return (
     <section className="mt-10">
@@ -174,14 +205,19 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
     <div className="min-h-screen bg-surface pt-24 pb-20 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
 
-        {/* Breadcrumb */}
-        <nav className="mb-6 text-sm text-text-secondary">
-          <Link href={promptBitesHubHref(lang)} className="hover:text-primary transition-colors">
-            Prompt Bites
-          </Link>
-          <span className="mx-2">›</span>
-          <span className="text-text-primary">{article.title}</span>
-        </nav>
+        {/* Breadcrumb + language switcher */}
+        <div className="flex items-start justify-between gap-4 mb-6">
+          <nav className="text-sm text-text-secondary min-w-0">
+            <Link href={promptBitesHubHref(lang)} className="hover:text-primary transition-colors shrink-0">
+              Prompt Bites
+            </Link>
+            <span className="mx-2">›</span>
+            <span className="text-text-primary break-words">{article.title}</span>
+          </nav>
+          <div className="shrink-0">
+            <LanguageSwitcher initialLang={lang} />
+          </div>
+        </div>
 
         {/* Title */}
         <h1 className="prompt-bite-h1 text-3xl sm:text-4xl font-bold text-text-primary mb-8 leading-tight">
@@ -192,7 +228,7 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
         {quickAnswer && (
           <div className="rounded-xl border-2 border-primary/20 bg-primary/5 p-6 mb-8">
             <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
-              Quick Answer
+              {QUICK_ANSWER_LABEL[lang]}
             </p>
             <p className="prompt-bite-answer text-text-primary leading-relaxed mb-4">
               {quickAnswer.answer}
@@ -209,7 +245,7 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
             )}
             {quickAnswer.updatedDate && (
               <p className="text-xs text-text-secondary mt-4">
-                Updated: {quickAnswer.updatedDate}
+                {UPDATED_LABEL[lang]} {quickAnswer.updatedDate}
               </p>
             )}
           </div>
@@ -224,14 +260,14 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
           )}
           {(article as any).educationalLevel && (
             <span className="inline-block px-2 py-0.5 text-xs rounded-full bg-surface border border-primary/20 text-text-secondary">
-              {(article as any).educationalLevel}
+              {EDUCATIONAL_LEVEL[(article as any).educationalLevel]?.[lang] ?? (article as any).educationalLevel}
             </span>
           )}
         </div>
 
         {/* TLDR */}
         {tldrSection?.isTldr && tldrSection.items && tldrSection.items.length > 0 && tldrSection.items[0] !== 'TBD' && (
-          <TldrSection items={tldrSection.items} />
+          <TldrSection items={tldrSection.items} lang={lang} />
         )}
 
         {/* Body sections */}
@@ -241,7 +277,7 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
 
         {/* FAQ */}
         {faqSection?.faqs && faqSection.faqs.length > 0 && (
-          <FaqSection title={faqSection.title} faqs={faqSection.faqs} />
+          <FaqSection title={faqSection.title} faqs={faqSection.faqs} lang={lang} />
         )}
 
         {/* Back to hub */}
