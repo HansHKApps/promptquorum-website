@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { LanguageSwitcherWrapper } from './LanguageSwitcherWrapper'
+import { SearchTrigger } from './search/SearchTrigger'
 import { useWaitlist } from '@/context/WaitlistContext'
 import { useState } from 'react'
 import { useLang } from '@/hooks/useLang'
@@ -137,8 +138,10 @@ function HeaderInner() {
           </a>
         </nav>
 
-        {/* Language Switcher + Mobile Menu */}
+        {/* Search + Language Switcher + Mobile Menu */}
         <div className="flex items-center gap-3">
+          <SearchTrigger />
+
           {/* Hide language switcher on screens below sm (640px), show on sm+ */}
           <div className="hidden sm:block">
             <LanguageSwitcherWrapper initialLang={lang as Language} />
