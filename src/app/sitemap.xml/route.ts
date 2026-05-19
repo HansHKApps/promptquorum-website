@@ -1,4 +1,3 @@
-import type { MetadataRoute } from 'next'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
@@ -23,22 +22,26 @@ const NOINDEX_PAGES = new Set([
   '/prompt-engineering/the-single-step-prompt-method',
 ])
 
-// Path prefixes excluded from sitemap entirely (every URL beneath these paths is dropped).
-// Base /power-local-llm blocks unpublished articles, briefs, and stubs.
-// Base /prompt-bites blocks unpublished articles until they pass editorial review.
-// Language variants (/de/, /fr/, /ja/, /zh/) are now emitted per-language via published paths check.
+// Path prefixes excluded from sitemap entirely
 const EXCLUDED_PATH_PREFIXES = [
   '/power-local-llm',
   '/prompt-bites',
 ]
 
-// Check if a content entry has real sections (not a stub)
 function hasRealContent(contentMap: Record<string, any>, key: string): boolean {
   const en = contentMap[key]?.['en']
   return !!en && Object.keys(en.sections ?? {}).length > 0
 }
 
-// Extract images from article sections (EN version)
+function escapeXml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+}
+
 function extractImagesFromArticle(
   contentMap: Record<string, any>,
   key: string
@@ -49,21 +52,16 @@ function extractImagesFromArticle(
   const images: Array<{ url: string; title?: string }> = []
   const sections = en.sections
 
-  // Iterate through all sections
   Object.values(sections).forEach((section: any) => {
     if (section && typeof section === 'object') {
-      // Check for image + imageCaption in section
       if (section.image) {
-        const imageUrl = section.image.startsWith('/')
-          ? section.image
-          : `/${section.image}`
+        const imageUrl = section.image.startsWith('/') ? section.image : `/${section.image}`
         images.push({
           url: imageUrl,
           title: section.imageCaption || undefined,
         })
       }
 
-      // Check for nested items with images
       if (Array.isArray(section.items)) {
         section.items.forEach((item: any) => {
           if (item && item.image) {
@@ -76,7 +74,6 @@ function extractImagesFromArticle(
         })
       }
 
-      // Check for numbered items with images
       if (Array.isArray(section.numberedItems)) {
         section.numberedItems.forEach((item: any) => {
           if (item && item.image) {
@@ -94,54 +91,31 @@ function extractImagesFromArticle(
   return images
 }
 
-type Page = {
-  path: string
-  priority: number
-  changefreq: 'weekly' | 'monthly'
-  lastmod: string
-}
-
-// Get images for a page path
-function getImagesForPage(
-  path: string
-): Array<{ url: string; title?: string }> {
-  // Local LLM articles
+function getImagesForPage(path: string): Array<{ url: string; title?: string }> {
   if (path.startsWith('/local-llms/')) {
     const slug = path.replace('/local-llms/', '')
     const key = LLM_SLUG_TO_KEY[slug]
-    if (key) {
-      return extractImagesFromArticle(llmContent, key)
-    }
+    if (key) return extractImagesFromArticle(llmContent, key)
   }
 
-  // Prompt Engineering articles
   if (path.startsWith('/prompt-engineering/')) {
     const slug = path.replace('/prompt-engineering/', '')
     const key = PE_SLUG_TO_KEY[slug]
-    if (key) {
-      return extractImagesFromArticle(peContent, key)
-    }
+    if (key) return extractImagesFromArticle(peContent, key)
   }
 
-  // Power Local LLM articles
   if (path.startsWith('/power-local-llm/')) {
     const slug = path.replace('/power-local-llm/', '')
     const key = POWER_LLM_SLUG_TO_KEY[slug]
-    if (key) {
-      return extractImagesFromArticle(powerLLMContent, key)
-    }
+    if (key) return extractImagesFromArticle(powerLLMContent, key)
   }
 
-  // Prompt Bites articles
   if (path.startsWith('/prompt-bites/')) {
     const slug = path.replace('/prompt-bites/', '')
     const key = PROMPT_BITES_SLUG_TO_KEY[slug]
-    if (key) {
-      return extractImagesFromArticle(promptBitesContent, key)
-    }
+    if (key) return extractImagesFromArticle(promptBitesContent, key)
   }
 
-  // Blog articles
   if (path.startsWith('/blog/')) {
     const slug = path.replace('/blog/', '')
     const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]
@@ -152,9 +126,7 @@ function getImagesForPage(
         const images: Array<{ url: string; title?: string }> = []
         Object.values(en.sections).forEach((section: any) => {
           if (section && section.image) {
-            const imageUrl = section.image.startsWith('/')
-              ? section.image
-              : `/${section.image}`
+            const imageUrl = section.image.startsWith('/') ? section.image : `/${section.image}`
             images.push({
               url: imageUrl,
               title: section.imageCaption || undefined,
@@ -169,19 +141,25 @@ function getImagesForPage(
   return []
 }
 
+type Page = {
+  path: string
+  priority: number
+  changefreq: 'weekly' | 'monthly'
+  lastmod: string
+}
+
 const STATIC_PAGES: Page[] = [
-  { path: '',                      priority: 1.0, changefreq: 'weekly',  lastmod: '2026-03-16' },
-  { path: '/compare',              priority: 0.9, changefreq: 'weekly',  lastmod: '2026-03-14' },
-  { path: '/features',             priority: 0.8, changefreq: 'weekly',  lastmod: '2026-03-14' },
-  { path: '/features/optimization', priority: 0.8, changefreq: 'weekly',  lastmod: '2026-03-14' },
-  { path: '/features/quorum',      priority: 0.8, changefreq: 'weekly',  lastmod: '2026-03-14' },
-  { path: '/how-it-works',         priority: 0.8, changefreq: 'weekly',  lastmod: '2026-03-16' },
-  { path: '/faq',                  priority: 0.7, changefreq: 'weekly',  lastmod: '2026-03-14' },
-  { path: '/about',                priority: 0.5, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/waitlist',             priority: 0.6, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/privacy',              priority: 0.3, changefreq: 'monthly', lastmod: '2026-03-15' },
-  { path: '/image-license',        priority: 0.3, changefreq: 'monthly', lastmod: '2026-04-20' },
-  // Note: /download removed from sitemap (noindex placeholder page)
+  { path: '', priority: 1.0, changefreq: 'weekly', lastmod: '2026-03-16' },
+  { path: '/compare', priority: 0.9, changefreq: 'weekly', lastmod: '2026-03-14' },
+  { path: '/features', priority: 0.8, changefreq: 'weekly', lastmod: '2026-03-14' },
+  { path: '/features/optimization', priority: 0.8, changefreq: 'weekly', lastmod: '2026-03-14' },
+  { path: '/features/quorum', priority: 0.8, changefreq: 'weekly', lastmod: '2026-03-14' },
+  { path: '/how-it-works', priority: 0.8, changefreq: 'weekly', lastmod: '2026-03-16' },
+  { path: '/faq', priority: 0.7, changefreq: 'weekly', lastmod: '2026-03-14' },
+  { path: '/about', priority: 0.5, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/waitlist', priority: 0.6, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/privacy', priority: 0.3, changefreq: 'monthly', lastmod: '2026-03-15' },
+  { path: '/image-license', priority: 0.3, changefreq: 'monthly', lastmod: '2026-04-20' },
 ]
 
 const PE_PAGES: Page[] = [
@@ -209,15 +187,15 @@ const BLOG_PAGES: Page[] = [
 
 const FRAMEWORK_PAGES: Page[] = [
   { path: '/frameworks', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/frameworks/co-star',                 priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/frameworks/craft',                   priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/frameworks/risen',                   priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/frameworks/trace',                   priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/frameworks/ape',                     priority: 0.7, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/frameworks/specs',                   priority: 0.7, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/frameworks/rtf',                     priority: 0.7, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/frameworks/google-prompt',           priority: 0.7, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/frameworks/single-prompt-line',      priority: 0.6, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/frameworks/co-star', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/frameworks/craft', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/frameworks/risen', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/frameworks/trace', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/frameworks/ape', priority: 0.7, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/frameworks/specs', priority: 0.7, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/frameworks/rtf', priority: 0.7, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/frameworks/google-prompt', priority: 0.7, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/frameworks/single-prompt-line', priority: 0.6, changefreq: 'monthly', lastmod: '2026-03-16' },
 ]
 
 const LOCAL_LLM_PAGES: Page[] = [
@@ -232,9 +210,6 @@ const LOCAL_LLM_PAGES: Page[] = [
     })),
 ]
 
-// Power Local LLM — partial-launch allowlist. Only slugs in
-// POWER_LLM_PUBLISHED_SLUGS are emitted here; the rest of the cluster stays
-// excluded via EXCLUDED_PATH_PREFIXES below until they pass audit.
 const POWER_LOCAL_LLM_PAGES: Page[] = [
   ...(POWER_LLM_HUB_PUBLISHED
     ? [{ path: '/power-local-llm', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-05-08' }]
@@ -247,9 +222,6 @@ const POWER_LOCAL_LLM_PAGES: Page[] = [
   })),
 ]
 
-// Prompt Bites — published-article allowlist. Only slugs in
-// PROMPT_BITES_PUBLISHED_SLUGS are emitted here; unpublished articles stay
-// excluded via EXCLUDED_PATH_PREFIXES below until ready for indexing.
 const PROMPT_BITES_PAGES: Page[] = [
   ...(PROMPT_BITES_HUB_PUBLISHED
     ? [{ path: '/prompt-bites', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-05-19' }]
@@ -272,15 +244,11 @@ const PAGES: Page[] = [
   ...PROMPT_BITES_PAGES,
 ]
 
-// Power Local LLM published paths override the prefix exclusion. Anything else
-// under /power-local-llm stays excluded (briefs, unwritten slugs, locale variants).
 const POWER_LLM_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
   ...(POWER_LLM_HUB_PUBLISHED ? ['/power-local-llm'] : []),
   ...Array.from(POWER_LLM_PUBLISHED_SLUGS).map(slug => `/power-local-llm/${slug}`),
 ])
 
-// Prompt Bites published paths override the prefix exclusion. Anything else
-// under /prompt-bites stays excluded (unpublished articles, locale variants).
 const PROMPT_BITES_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
   ...(PROMPT_BITES_HUB_PUBLISHED ? ['/prompt-bites'] : []),
   ...Array.from(PROMPT_BITES_PUBLISHED_SLUGS).map(slug => `/prompt-bites/${slug}`),
@@ -292,61 +260,54 @@ function isExcluded(path: string): boolean {
   return EXCLUDED_PATH_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`))
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const entries: MetadataRoute.Sitemap = []
+export async function GET() {
+  const languages = ['en', 'de', 'fr', 'ja', 'zh'] as const
+
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
 
   PAGES.forEach(({ path, priority, changefreq, lastmod }) => {
     if (isExcluded(path)) return
 
-    // All sections now use multi-language pattern:
-    // Emit separate <loc> for EN + DE/FR/JA/ZH, each with hreflang alternates.
-    // For PLL articles: publish gate (isExcluded check above) ensures only published
-    // EN articles generate entries; their language variants follow automatically.
-    {
-      // Emit separate <loc> for each language (EN + DE + FR + JA + ZH).
-      // Each <loc> includes hreflang annotations pointing to other language versions.
-      // This ensures AI crawlers discover language URLs as primary entries, not just alternates.
-      const languages = ['en', 'de', 'fr', 'ja', 'zh'] as const
+    const pageImages = getImagesForPage(path)
 
-      // Extract images for this page (from EN content only, will be per-language in URLs)
-      const pageImages = getImagesForPage(path)
+    languages.forEach((lang) => {
+      const langPath = lang === 'en' ? path : (path === '' ? `/${lang}` : `/${lang}${path}`)
 
-      languages.forEach((lang) => {
-        const langPath = lang === 'en' ? path : (path === '' ? `/${lang}` : `/${lang}${path}`)
+      xml += '  <url>\n'
+      xml += `    <loc>${escapeXml(`${BASE}${langPath}`)}</loc>\n`
 
-        // Build hreflang alternates for this language version
-        const alternates: Record<string, string> = {}
-        languages.forEach((otherLang) => {
-          const otherPath = otherLang === 'en' ? path : (path === '' ? `/${otherLang}` : `/${otherLang}${path}`)
-          alternates[otherLang] = `${BASE}${otherPath}`
-        })
-        alternates['x-default'] = `${BASE}${path}`
-
-        // Build images array first (Google image sitemap format)
-        const imagesArray =
-          pageImages.length > 0
-            ? pageImages.map((img) => {
-                const imageUrl = `${BASE}${img.url}`
-                return {
-                  url: imageUrl,
-                  ...(img.title ? { title: img.title } : {}),
-                }
-              })
-            : undefined
-
-        const entry: any = {
-          url: `${BASE}${langPath}`,
-          lastModified: lastmod,
-          changeFrequency: changefreq,
-          priority,
-          alternates: { languages: alternates },
-          ...(imagesArray ? { images: imagesArray } : {}),
-        }
-
-        entries.push(entry)
+      // Add hreflang alternates
+      languages.forEach((otherLang) => {
+        const otherPath = otherLang === 'en' ? path : (path === '' ? `/${otherLang}` : `/${otherLang}${path}`)
+        xml += `    <xhtml:link rel="alternate" hreflang="${otherLang}" href="${escapeXml(`${BASE}${otherPath}`)}" />\n`
       })
-    }
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(`${BASE}${path}`)}" />\n`
+
+      // Add images with proper serialization
+      pageImages.forEach((img) => {
+        const fullImageUrl = `${BASE}${img.url}`
+        xml += '    <image:image>\n'
+        xml += `      <image:loc>${escapeXml(fullImageUrl)}</image:loc>\n`
+        if (img.title) {
+          xml += `      <image:title>${escapeXml(img.title)}</image:title>\n`
+        }
+        xml += '    </image:image>\n'
+      })
+
+      xml += `    <lastmod>${lastmod}</lastmod>\n`
+      xml += `    <changefreq>${changefreq}</changefreq>\n`
+      xml += `    <priority>${priority}</priority>\n`
+      xml += '  </url>\n'
+    })
   })
 
-  return entries
+  xml += '</urlset>\n'
+
+  return new Response(xml, {
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+    },
+  })
 }
