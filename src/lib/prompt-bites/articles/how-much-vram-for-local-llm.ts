@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Quantization & VRAM',
     title: 'Wie viel VRAM brauchen Sie für ein lokales LLM?',
-    seoTitle: 'VRAM-Stufen für lokale LLMs 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'VRAM-Stufen lokale LLMs 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB für Phi-4 Mini Q4. 6 GB für Llama 3 8B Q4_K_M. 12 GB für Qwen 14B. Formel: Parameter × 0,7 = GB bei Q4. VRAM-Stufenführer von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Quantization & VRAM',
     title: 'De combien de VRAM avez-vous besoin pour un LLM local ?',
-    seoTitle: 'Paliers VRAM pour LLM local 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Paliers VRAM LLM local 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 Go pour Phi-4 Mini Q4. 6 Go pour Llama 3 8B Q4_K_M. 12 Go pour Qwen 14B. Formule : params × 0,7 = Go en Q4. Paliers VRAM par PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Quantization & VRAM',
     title: '运行本地LLM需要多少显存？',
-    seoTitle: '本地LLM显存层级 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: '本地LLM显存 VRAM 层级 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB运行Phi-4 Mini，6 GB运行Llama 3 8B Q4，12 GB运行Qwen 14B Q4。PromptQuorum显存快速决策指南。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

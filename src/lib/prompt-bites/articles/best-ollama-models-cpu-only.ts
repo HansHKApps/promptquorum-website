@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'Best Ollama Models for CPU Only?',
     seoTitle: 'Ollama CPU-Only Models 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'No GPU? Phi-4 Mini Q4 is the best CPU-only Ollama model. Llama 3 8B Q4 works with 8+ GB RAM. Gemma 2B is the fastest. Updated May 2026.',
+    metaDescription: 'No GPU? Phi-4 Mini Q4 is the best CPU-only Ollama model. Llama 3 8B Q4 works with 8+ GB RAM. Gemma 2B is the fastest. Expect ~3–5 tok/s. Updated May 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

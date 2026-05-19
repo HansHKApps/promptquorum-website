@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Best MoE Models for Local Coding?',
-    seoTitle: 'Best MoE Models for Local Coding? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Best MoE models for local coding: Mixtral 8x7B (needs 26 GB VRAM) and DeepSeek V2 (needs 16 GB at Q4). MoE models activate only a subset of parameters for speed. Quick answer from PromptQuorum.',
+    seoTitle: 'Best MoE for Local Coding 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Best MoE models for local coding: Mixtral 8x7B (needs 26 GB VRAM) and DeepSeek V2 (needs 16 GB at Q4). MoE models activate only a subset of parameters.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -128,8 +128,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     title: 'Beste MoE-Modelle für lokales Coding?',
-    seoTitle: 'Beste MoE-Modelle für lokales Coding? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Beste MoE-Modelle für lokales Coding: Mixtral 8x7B (benötigt 26 GB VRAM) und DeepSeek V2 (16 GB bei Q4). MoE-Modelle aktivieren nur eine Teilmenge der Parameter. Kurze Antwort von PromptQuorum.',
+    seoTitle: 'Beste MoE-Modelle Coding 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Beste MoE-Modelle für lokales Coding: Mixtral 8x7B (benötigt 26 GB VRAM) und DeepSeek V2 (16 GB bei Q4). MoE-Modelle aktivieren nur einen Teil der Parameter.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -204,8 +204,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Model Comparisons',
     title: 'Meilleurs modèles MoE pour le codage local ?',
-    seoTitle: 'Meilleurs modèles MoE pour le codage local ? | Prompt Bites',
-    metaDescription: 'Meilleurs modèles MoE pour codage local : Mixtral 8x7B (26 Go VRAM) et DeepSeek V2 (16 Go en Q4). Les MoE activent uniquement un sous-ensemble de paramètres. Réponse rapide par PromptQuorum.',
+    seoTitle: 'Meilleurs MoE codage 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Meilleurs modèles MoE pour codage local : Mixtral 8x7B (26 Go VRAM) et DeepSeek V2 (16 Go en Q4). Les MoE activent uniquement un sous-ensemble de paramètres.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Model Comparisons',
     title: '本地编程最佳 MoE 模型是什么？',
-    seoTitle: '本地编程最佳 MoE 模型？| Prompt Bites | PromptQuorum',
+    seoTitle: '2026年本地编程最佳MoE模型推荐 | Prompt Bites | PromptQuorum',
     metaDescription: '本地编程最佳 MoE 模型：Mixtral 8x7B（需 26 GB VRAM）和 DeepSeek V2（Q4 需 16 GB）。MoE 模型每次只激活部分参数。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

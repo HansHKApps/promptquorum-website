@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'Best Ollama Models for RTX 3060 12 GB?',
-    seoTitle: 'RTX 3060 12 GB: Ollama Picks 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'RTX 3060: Ollama Picks 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M for chat (20 tok/s), Qwen 2.5 Coder 14B Q4 for code. Both fit in 12 GB VRAM. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Quantization & VRAM',
     title: 'Beste Ollama-Modelle für RTX 3060 12 GB?',
-    seoTitle: 'RTX 3060 12 GB: Ollama-Picks 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'RTX 3060: Ollama-Picks 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M für Chat, Qwen 2.5 Coder 14B Q4 für Code. Beide laufen mit 20–30 Tok/s. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

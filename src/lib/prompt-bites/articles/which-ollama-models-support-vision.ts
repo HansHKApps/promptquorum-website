@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Ollama',
     title: 'Quels modèles Ollama supportent la vision ?',
-    seoTitle: 'Modèles Ollama avec vision 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Ollama modèles vision 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal et Qwen-VL supportent la vision sur Ollama. Démarrez : ollama run llava. Images acceptées via l\'API Ollama. Vérifié mai 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

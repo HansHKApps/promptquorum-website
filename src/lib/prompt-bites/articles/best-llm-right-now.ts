@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     title: 'Best LLM Right Now?',
     seoTitle: 'Best LLM Right Now? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Best LLM right now: GPT-4o for general use, Claude 3.7 Sonnet for long documents, Gemini 2.5 Pro for multimodal. For local: Llama 3.1 70B or Qwen 2.5 72B. Updated monthly. Quick answer from PromptQuorum.',
+    metaDescription: 'GPT-4o for general tasks, Claude 3.7 Sonnet for long docs, Gemini 2.5 Pro for multimodal. Local: Llama 3.1 70B or Qwen 2.5 72B. Updated monthly.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
@@ -130,8 +130,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Prompt Engineering',
     title: 'Welches LLM ist aktuell das beste?',
-    seoTitle: 'Welches LLM ist aktuell das beste? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Bestes LLM aktuell: GPT-4o für allgemeine Aufgaben, Claude 3.7 Sonnet für lange Dokumente, Gemini 2.5 Pro für multimodale Aufgaben. Lokal: Llama 3.1 70B oder Qwen 2.5 72B. Kurze Antwort von PromptQuorum.',
+    seoTitle: 'Bestes LLM gerade jetzt 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'GPT-4o für allgemeine Aufgaben, Claude 3.7 Sonnet für Dokumente, Gemini 2.5 Pro multimodal. Lokal: Llama 3.1 70B oder Qwen 2.5 72B. Monatlich aktualisiert.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
@@ -208,8 +208,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Prompt Engineering',
     title: 'Quel est le meilleur LLM en ce moment ?',
-    seoTitle: 'Quel est le meilleur LLM en ce moment ? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Meilleur LLM en ce moment : GPT-4o pour l\'usage général, Claude 3.7 Sonnet pour les longs documents, Gemini 2.5 Pro pour le multimodal. En local : Llama 3.1 70B ou Qwen 2.5 72B. Réponse rapide par PromptQuorum.',
+    seoTitle: 'Meilleur LLM en ce moment 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'GPT-4o pour l\'usage général, Claude 3.7 Sonnet pour les longs docs, Gemini 2.5 Pro multimodal. En local : Llama 3.1 70B ou Qwen 2.5 72B. Mis à jour chaque mois.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Prompt Engineering',
     title: '現在最良のLLMは何ですか？',
-    seoTitle: '現在最良のLLMは？ | Prompt Bites | PromptQuorum',
+    seoTitle: '2026年現在最良のLLMランキング | Prompt Bites | PromptQuorum',
     metaDescription: '現在最良のLLM：汎用ならGPT-4o、長文書・コーディングはClaude 3.7 Sonnet、マルチモーダルはGemini 2.5 Pro。ローカル：Llama 3.1 70BまたはQwen 2.5 72B。PromptQuorumによる簡潔な回答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Prompt Engineering',
     title: '当前最好的 LLM 是什么？',
-    seoTitle: '当前最好的 LLM 是什么？ | Prompt Bites | PromptQuorum',
+    seoTitle: '2026年最佳LLM推荐：通用与本地 | Prompt Bites | PromptQuorum',
     metaDescription: '当前最好的 LLM：通用任务选 GPT-4o，长文档和编程选 Claude 3.7 Sonnet，多模态选 Gemini 2.5 Pro。本地：Llama 3.1 70B 或 Qwen 2.5 72B。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

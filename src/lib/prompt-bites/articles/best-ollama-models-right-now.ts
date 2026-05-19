@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Ollama',
     title: '目前最佳的Ollama模型是什么？',
-    seoTitle: '2026年最佳Ollama模型推荐 | Prompt Bites | PromptQuorum',
+    seoTitle: '2026年最佳Ollama本地模型推荐 | Prompt Bites | PromptQuorum',
     metaDescription: '2026年5月推荐：通用首选Llama 3 8B Q4，代码首选Qwen 2.5 Coder 14B Q4，轻量首选Phi-4 Mini Q4。每月更新。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

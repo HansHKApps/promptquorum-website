@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'What Is the Latest Ollama Version?',
     seoTitle: 'Latest Ollama Version 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Latest release on GitHub. Run ollama --version to check your build. Linux: re-run the install script. Mac/Windows: re-download installer from ollama.com. Updated May 2026.',
+    metaDescription: 'Latest Ollama release on GitHub. Run ollama --version to check. Linux: rerun install script. Mac/Windows: download from ollama.com. Updated May 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

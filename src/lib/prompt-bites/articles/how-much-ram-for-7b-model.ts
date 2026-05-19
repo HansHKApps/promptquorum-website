@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'How Much RAM Does a 7B Model Need?',
-    seoTitle: 'How Much RAM for 7B Models 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'RAM for 7B Local Models 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'A 7B model at Q4 needs 5–6 GB RAM or VRAM. CPU gives ~5 tok/s; GPU gives ~25 tok/s on the same memory. Rule: params × 0.7 = GB at Q4. PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -128,8 +128,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Quantization & VRAM',
     title: 'Wie viel RAM braucht ein 7B-Modell?',
-    seoTitle: 'Wie viel RAM für 7B-Modelle 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ein 7B-Modell bei Q4 benötigt 5–6 GB RAM oder VRAM. CPU ~5 Tok/s, GPU ~25 Tok/s. Faustregel: Parameter × 0,7 = GB bei Q4. PromptQuorum.',
+    seoTitle: 'RAM für 7B-Modelle 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Ein 7B-Modell bei Q4 benötigt 5–6 GB RAM oder VRAM. CPU ~5 Tok/s, GPU ~25 Tok/s. Faustregel: Parameter × 0,7 = GB bei Q4. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Quantization & VRAM',
     title: 'De combien de RAM a besoin un modèle 7B ?',
-    seoTitle: 'RAM nécessaire pour modèle 7B 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'RAM pour modèle 7B local 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Un modèle 7B en Q4 nécessite 5–6 Go de RAM ou VRAM. CPU : ~5 tok/s ; GPU : ~25 tok/s. Règle : params × 0,7 = Go en Q4. Réponse PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
