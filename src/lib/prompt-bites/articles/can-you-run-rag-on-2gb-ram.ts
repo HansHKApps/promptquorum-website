@@ -70,57 +70,50 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
     sections: {
-      tldr: {
-        id: 'key-takeaways',
-        isTldr: true,
-        items: [
-          'A full RAG stack (LLM + embeddings + vector store) needs at least 8 GB RAM; 2 GB leaves no room for all three components',
-          'TinyLlama (1.1B, ~1.5 GB) and Phi-2 (2.7B, ~2.0 GB) are the only LLMs that fit in 2 GB, but neither leaves room for an embedding model',
-          'A practical workaround: use a remote embeddings API (e.g., OpenAI ada-002) and store vectors locally, saving ~0.5 GB of RAM',
-          'For good RAG quality, 8 GB RAM runs Llama 3 8B + all-MiniLM embeddings + ChromaDB comfortably',
-        ],
-      },
       body1: {
-        title: 'What a RAG Pipeline Actually Needs in RAM',
+        title: 'Yes — But Only Tiny Setups Work',
         content: [
-          '<strong>A complete RAG pipeline has three memory consumers: the LLM (1.5–5 GB depending on model size), an embedding model (~0.5 GB for all-MiniLM), and a vector store like ChromaDB (0.1–0.5 GB depending on index size).</strong> At 2 GB total RAM, you can load only one of these components at a useful quality level.',
-          'TinyLlama at 1.1B parameters uses approximately 1.5 GB at Q4 quantization, and Phi-2 at 2.7B uses approximately 2.0 GB. Both models leave almost no memory for an embedding model — and without embeddings, you cannot perform semantic similarity search, which is the core of any RAG system.',
-          'Attempting RAG on 2 GB RAM results in either out-of-memory crashes or extreme performance degradation. The operating system itself consumes 0.3–0.6 GB before any ML workload starts.',
+          'At 2 GB RAM, the only viable RAG pipeline uses a 1B-class LLM (Llama 3.2 1B or Phi-3 Mini) with a lightweight embedding model (MiniLM-L6-v2 at ~80 MB) and a flat-file or in-memory vector store. As of May 2026, this works — but only for small personal document sets (under ~200 pages).',
+          'The table below shows the RAM footprint of each RAG component at minimum viable settings.',
         ],
-        columns: ['RAM Available', 'What Fits', 'RAG Quality'],
+        columns: ['Component', 'Memory Use', 'Notes'],
         rows: [
-          { 'RAM Available': '2 GB', 'What Fits': 'TinyLlama only, no embeddings', 'RAG Quality': 'Poor' },
-          { 'RAM Available': '8 GB', 'What Fits': 'Llama 3 8B + embeddings + ChromaDB', 'RAG Quality': 'Good' },
-          { 'RAM Available': '16 GB', 'What Fits': '13B LLM + full RAG stack', 'RAG Quality': 'Excellent' },
+          { 'Component': 'LLM (Llama 3.2 1B Q4_K_M)', 'Memory Use': '~750 MB', 'Notes': 'Smallest usable instruction-tuned model' },
+          { 'Component': 'Embedding model (MiniLM-L6-v2)', 'Memory Use': '~80 MB', 'Notes': 'Runs on CPU; no GPU required' },
+          { 'Component': 'Vector store (Chroma in-memory)', 'Memory Use': '~150 MB', 'Notes': 'Scales with corpus size' },
+          { 'Component': 'Python runtime + framework overhead', 'Memory Use': '~300 MB', 'Notes': 'LangChain or bare llama-index' },
+          { 'Component': 'Total minimum', 'Memory Use': '~1.3–1.5 GB', 'Notes': 'Leaves ~500 MB for OS on a 2 GB device' },
+        ],
+        content2: [
+          'This configuration fits a Raspberry Pi 4 (2 GB variant) or any low-power device with 2 GB RAM. Retrieval quality is limited by MiniLM-L6\'s 384-dim embeddings, which are effective for short-passage matching but degrade on multi-page documents.',
         ],
       },
       body2: {
-        title: 'The Practical Workaround for Low-RAM Devices',
+        title: 'What Breaks at 2 GB',
         content: [
-          'If you must use a low-memory device, the most effective workaround is to offload the embedding step to a remote API. Services like OpenAI\'s ada-002 generate embeddings via API call — you send text, receive a vector, and store it locally in a lightweight vector store. This eliminates the ~0.5 GB local embedding model cost.',
-          '<strong>With remote embeddings, a 2 GB device can run TinyLlama locally for generation while using cloud embeddings for retrieval.</strong> The quality remains limited by TinyLlama\'s reasoning capabilities, but the pipeline becomes technically functional. Note that remote embeddings incur API costs and require an internet connection.',
-          'For a full guide on setting up a local RAG system that actually works well, see the <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">local RAG setup guide</a> covering minimum hardware and model selection.',
+          '<strong>The most common failure is the LLM exceeding available RAM during context window expansion.</strong> At 2 GB, a 1B model context is capped at roughly 2k tokens before the OS starts swapping. Loading a 7B or larger model fails immediately — Llama 3 8B Q4_K_M requires ~5 GB alone.',
+          'The second failure mode is vector store growth. A Chroma database for 500 PDF pages uses approximately 400–600 MB depending on chunk size. Combined with the LLM and embedding model, total RAM exceeds 2 GB. The fix: limit ingestion to under 150 pages, use 256-token chunks, and prune the store after each session.',
         ],
       },
       faq: {
         id: 'faq',
-        title: 'Quick Answers About RAG on Low RAM',
+        title: 'Quick Answers About RAG on 2 GB RAM',
         faqs: [
           {
-            q: 'What is the minimum RAM for a working RAG system?',
-            a: 'The practical minimum is 8 GB RAM. This fits Llama 3 8B at Q4 quantization (~5 GB), the all-MiniLM-L6-v2 embedding model (~0.5 GB), and ChromaDB with a moderate-sized index (~0.2–0.5 GB).',
+            q: 'What\'s the smallest LLM that works for RAG?',
+            a: 'Llama 3.2 1B Q4_K_M (~750 MB) is the smallest instruction-tuned model that produces coherent answers for retrieval-augmented tasks. Phi-3 Mini (3.8B) is a better choice if you have 3–4 GB available — its 4k context handles longer retrieved passages. Below 1B parameters, output quality degrades sharply for RAG-style question answering.',
           },
           {
-            q: 'Can I use ChromaDB with only 2 GB RAM?',
-            a: 'ChromaDB itself is lightweight — 0.1–0.3 GB for small indexes. The problem is not the vector store; it is that the LLM and embedding model together exceed 2 GB, leaving no space for ChromaDB alongside them.',
+            q: 'Can I use Ollama on 2 GB RAM?',
+            a: 'Ollama\'s minimum recommended RAM is 8 GB. On 2 GB, Ollama itself loads but model serving fails or swaps heavily. For 2 GB devices, use llama.cpp directly via CLI or the llama-cpp-python bindings — these have a smaller resident memory footprint than the Ollama server process.',
           },
           {
-            q: 'Does using Q4 quantization help fit a RAG stack into 2 GB?',
-            a: 'Q4 quantization reduces LLM memory by roughly 4× compared to full precision. Even so, a 7B model at Q4 still needs ~5 GB. Only 1–2B models at Q4 fit below 2 GB, and those are too small for quality RAG responses.',
+            q: 'Will Raspberry Pi 5 (8 GB) run proper RAG?',
+            a: 'Yes. A Raspberry Pi 5 with 8 GB RAM runs Llama 3 8B Q4_K_M (~5 GB) alongside a full embedding + vector store stack with room to spare. Speed is ~1–2 tok/s on the Pi 5 CPU — slow but functional for offline personal search use cases. See the <a href="/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">best Ollama models for CPU-only inference</a> for speed benchmarks.',
           },
           {
-            q: 'Which embedding model is most memory-efficient for local RAG?',
-            a: 'all-MiniLM-L6-v2 is the standard choice — it uses approximately 0.5 GB RAM and provides solid semantic search quality. For tighter memory budgets, see our <a href="/prompt-bites/can-you-run-rag-on-2gb-ram" class="text-primary hover:underline">RAG RAM requirements breakdown</a> or consider a remote embedding API to save local RAM.',
+            q: 'Is local RAG worth doing on 2 GB RAM?',
+            a: 'For small personal document sets (notes, a few PDFs), yes — the 1B + MiniLM pipeline is genuinely useful. For anything requiring precise retrieval over large corpora or complex multi-hop reasoning, 2 GB RAM is a hard constraint. Upgrade to at least 8 GB before expecting production-grade RAG quality.',
           },
         ],
       },

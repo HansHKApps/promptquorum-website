@@ -70,36 +70,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
     sections: {
-      tldr: {
-        id: 'key-takeaways',
-        isTldr: true,
-        items: [
-          'Llama 3 8B Q4_K_M uses ~5 GB RAM and runs at 3–5 tok/s on x86 laptop CPUs — practical for batch tasks',
-          'Mistral 7B Q4_K_M is marginally faster at ~4–6 tok/s and uses similar RAM to Llama 3 8B',
-          'Apple M-series laptops with 16 GB unified memory reach 15–20 tok/s via Metal — the same 16 GB stretches much further',
-          'CPU inference at 3–5 tok/s is usable for single-query lookups and document processing, but too slow for interactive chat',
-        ],
-      },
       body1: {
-        title: 'What 16 GB RAM Can Run on a Laptop CPU',
+        title: 'Llama 3 8B Q4_K_M Is the 16 GB Laptop Pick',
         content: [
-          '<strong>With 16 GB of system RAM and no dedicated GPU, Llama 3 8B Q4_K_M is the practical ceiling — it uses approximately 5 GB RAM and runs at 3–5 tokens per second on a modern x86 laptop CPU.</strong> After the OS and other processes, a 16 GB laptop typically has 10–12 GB free, leaving room for the model and a generous context window.',
-          'Mistral 7B Q4_K_M uses a similar 5 GB of RAM and typically runs 10–20% faster than Llama 3 8B on the same hardware, reaching ~4–6 tok/s. The speed difference comes from Mistral\'s architectural choices that favor faster prefill. For instruction-following and coding tasks, both models perform comparably at this quantization level.',
-          'Intel Core Ultra and AMD Ryzen 7000 series CPUs run slightly faster than older laptop CPUs due to higher memory bandwidth and improved AVX-512 support. On these platforms, 5–6 tok/s is achievable on Llama 3 8B Q4_K_M.',
+          'As of May 2026, on a 16 GB RAM laptop without a discrete GPU, Llama 3 8B at Q4_K_M quantization is the best local LLM for general use. It uses approximately 5 GB of RAM, leaves 11 GB for the OS and other applications, and runs at ~5 tokens per second on a modern x86 CPU. It handles coding, writing, and summarization tasks without quality loss from quantization.',
+          'The table below shows the four models worth considering on a 16 GB laptop, ranked by use-case fit.',
         ],
-        columns: ['Model', 'RAM Used', 'Speed on x86 CPU'],
+        columns: ['Model', 'RAM Use (Q4_K_M)', 'Speed (best for)'],
         rows: [
-          { 'Model': 'Llama 3 8B Q4_K_M', 'RAM Used': '~5 GB', 'Speed on x86 CPU': '~3–5 tok/s' },
-          { 'Model': 'Mistral 7B Q4_K_M', 'RAM Used': '~5 GB', 'Speed on x86 CPU': '~4–6 tok/s' },
-          { 'Model': 'Llama 3 8B Q4_K_M (Apple M3)', 'RAM Used': '~5 GB', 'Speed on x86 CPU': '~15–20 tok/s' },
+          { 'Model': 'Llama 3 8B', 'RAM Use (Q4_K_M)': '~5 GB', 'Speed (best for)': '~5 tok/s — general use, best balance' },
+          { 'Model': 'Qwen 2.5 Coder 7B', 'RAM Use (Q4_K_M)': '~5 GB', 'Speed (best for)': '~5 tok/s — coding-specific tasks' },
+          { 'Model': 'Phi-4 Mini', 'RAM Use (Q4_K_M)': '~3 GB', 'Speed (best for)': '~12 tok/s — speed-first' },
+          { 'Model': 'Qwen 2.5 14B', 'RAM Use (Q4_K_M)': '~9 GB', 'Speed (best for)': '~3 tok/s — reasoning, long context' },
+        ],
+        content2: [
+          'Qwen 2.5 14B is the ceiling for 16 GB: it fits at Q4_K_M with ~7 GB remaining, but speed drops to ~3 tok/s on CPU — slow enough to be frustrating for interactive use. Run it for non-interactive tasks (batch summarization, document analysis) where speed matters less than output quality.',
         ],
       },
       body2: {
-        title: 'Apple Silicon Changes the Equation',
+        title: 'RAM vs VRAM — What Matters',
         content: [
-          '<strong>Apple M-series laptops treat the 16 GB as unified memory shared between CPU and GPU, enabling Metal-accelerated inference at 15–20 tok/s on Llama 3 8B Q4_K_M — three to five times faster than x86 CPU-only inference.</strong> This makes interactive chat viable on Apple Silicon where it is not on x86 at the same RAM level.',
-          'On x86 laptops, CPU inference at 3–5 tok/s is best suited for two tasks: overnight batch processing such as summarizing or classifying large document sets, and single-query lookups where the user can wait 15–30 seconds for a high-quality response.',
-          'To get started, install Ollama and run <code>ollama pull llama3:8b</code>. For the full comparison of laptop configurations and runtime optimization tips, see the <a href="/local-llms/local-llm-on-laptop" class="text-primary hover:underline">local LLM on laptop guide</a>.',
+          '<strong>On a laptop without a discrete GPU, RAM and VRAM are the same pool.</strong> The CPU reads model weights directly from system RAM. This means 16 GB RAM gives you 16 GB of addressable memory for the model — no VRAM bottleneck. By contrast, a laptop with a 4 GB discrete GPU (e.g., RTX 4050 4 GB laptop variant) has a fixed VRAM ceiling: a 5 GB model cannot fit in GPU VRAM and falls back to slow CPU execution.',
+          'Apple Silicon (M1/M2/M3/M4) is a different case. On Apple laptops, RAM is unified — the same physical memory is shared between CPU and GPU at hardware level with high bandwidth. A 16 GB M3 MacBook Pro runs Llama 3 8B at ~18 tok/s, roughly 3× faster than an x86 Intel or AMD CPU at the same RAM. If you are choosing between a 16 GB Intel laptop and a 16 GB Apple Silicon laptop for local LLM use, the Apple Silicon option is meaningfully faster for inference.',
         ],
       },
       faq: {
@@ -107,20 +99,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quick Answers About LLMs for 16 GB RAM Laptops',
         faqs: [
           {
-            q: 'Can I run a 13B model on a 16 GB RAM laptop?',
-            a: 'Barely. Llama 3 13B at Q4_K_M uses approximately 8.5 GB RAM. On a 16 GB laptop you will have limited headroom for context and the OS. Use Q3_K_M to reduce RAM usage to ~7 GB, at the cost of lower output quality. Expect 1–2 tok/s on CPU.',
+            q: 'Will 16 GB RAM run a 13B model?',
+            a: 'A 13B model at Q4_K_M requires approximately 8–9 GB RAM. On 16 GB it fits, but leaves only 7 GB for the OS and other processes. On x86, speed is ~2–3 tok/s — noticeably slow for chat. Stick to 8B models for interactive use; run 13B only if you need the quality jump and can tolerate the speed.',
           },
           {
-            q: 'How do I install a local LLM on a laptop with no GPU?',
-            a: 'Install Ollama from ollama.com. It automatically uses CPU when no compatible GPU is detected. Run <code>ollama pull llama3:8b</code> to download the model, then <code>ollama run llama3:8b</code> to start it. No configuration required.',
+            q: 'Apple M-series vs Intel i7 for local LLM on 16 GB?',
+            a: 'Apple Silicon wins by a wide margin. A 16 GB M3 runs Llama 3 8B at ~18 tok/s. A 16 GB Intel Core i7 (13th gen) runs the same model at ~4–5 tok/s. The gap is architectural: Apple\'s unified memory bandwidth (~100 GB/s) is 5–6× higher than typical x86 DDR5 laptop memory bandwidth.',
           },
           {
-            q: 'Is 16 GB RAM enough for local AI on a laptop in 2026?',
-            a: 'It depends on the hardware. On x86, 16 GB is enough for 7B–8B models at Q4, which are capable but slow. On Apple Silicon, 16 GB unified memory supports the same models at 3–5× higher speed due to Metal GPU acceleration. For heavy use, 32 GB RAM is a meaningful upgrade.',
+            q: 'Should I close apps to free RAM for the LLM?',
+            a: 'Only if you are running a model near the RAM ceiling. For Llama 3 8B (~5 GB) on 16 GB, there is no need — the OS manages memory efficiently. For Qwen 2.5 14B (~9 GB), closing Chrome and other RAM-heavy apps prevents disk swapping and keeps speed consistent. Use Activity Monitor (macOS) or Task Manager (Windows) to verify free RAM before loading the model.',
           },
           {
-            q: 'Which is better for a 16 GB laptop — Llama 3 8B or Mistral 7B?',
-            a: 'Mistral 7B Q4_K_M is marginally faster (~4–6 tok/s vs ~3–5 tok/s) and uses similar RAM. Llama 3 8B has stronger multi-step reasoning. For general use and coding, start with Mistral 7B for speed; switch to Llama 3 8B for complex tasks. See <a href="/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">best Ollama models for CPU-only</a> for a broader comparison.',
+            q: 'Is 32 GB RAM worth the upgrade for local LLMs?',
+            a: 'Yes, if you run 14B+ models regularly or want to keep the model loaded while running other heavy applications. At 32 GB, Qwen 2.5 14B runs comfortably with no memory pressure. You also unlock 70B models at very aggressive quantization (Q2_K at ~24 GB), though quality degrades significantly below Q4. For most users running 7–8B models, 16 GB is sufficient.',
           },
         ],
       },
