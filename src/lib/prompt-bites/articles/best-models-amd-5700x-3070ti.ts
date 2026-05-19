@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 3070 Ti has 8 GB GDDR6X VRAM — Llama 3 8B and Mistral 7B Q4_K_M run fully in VRAM at ~25 tok/s',
+          'RTX 3070 Ti has 8 GB GDDR6X VRAM — Llama 3 8B Q4_K_M and Mistral 7B Q5_K_M run fully in VRAM at ~22–25 tok/s',
           '14B models at Q4_K_M need ~10 GB and do not fit; Q3_K_M (~7 GB) fits but quality drops noticeably',
           'The 5700X\'s 8-core Zen 3 design makes partial CPU offload viable for occasional 14B use at ~8 tok/s',
           'This rig handles most chat, Python, and TypeScript work — GPU is the bottleneck, not the CPU',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Runs Well on This Rig',
         content: [
-          'As of May 2026, <strong>the RTX 3070 Ti (8 GB GDDR6X, 608 GB/s bandwidth) runs Llama 3 8B and Mistral 7B at Q4_K_M fully in VRAM — approximately 6 GB each — at ~25 tok/s.</strong> The 14B model class is the hard ceiling: it needs ~10 GB at Q4, which exceeds the 8 GB limit.',
+          'As of May 2026, <strong>the RTX 3070 Ti (8 GB GDDR6X, 608 GB/s bandwidth) runs Llama 3 8B Q4_K_M and Mistral 7B Q5_K_M fully in VRAM — approximately 6 GB each — at ~22–25 tok/s.</strong> The 14B model class is the hard ceiling: it needs ~10 GB at Q4, which exceeds the 8 GB limit.',
           'If a 14B model is required, three paths exist: Q3_K_M drops the footprint to ~7 GB and fits entirely in VRAM, but degrades output quality on reasoning and code tasks. Partial CPU offload via llama.cpp (splitting layers between VRAM and RAM) is viable at ~8 tok/s — the 5700X\'s 8 Zen 3 cores handle this better than a 4-core CPU. Running a 70B model at Q2_K is technically possible at ~1 tok/s but not practical for interactive use.',
           'If 14B coding models at full quality are the goal, see the <a href="/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">best coding LLMs for 12 GB VRAM</a> for the hardware upgrade path.',
         ],
