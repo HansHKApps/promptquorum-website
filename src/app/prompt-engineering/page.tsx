@@ -179,6 +179,14 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
     ])
   )
 
+  // Educational level per content key — used by hub personalization signals
+  const articleLevels: Record<string, string> = Object.fromEntries(
+    Object.entries(peContent).map(([key, langMap]) => [
+      key,
+      (langMap.en?.educationalLevel ?? '').toLowerCase(),
+    ])
+  )
+
   const BREADCRUMB_LABELS: Record<string, string> = {
     en: 'Prompt Engineering', de: 'Prompt Engineering', fr: 'Ingénierie de prompts',
     ja: 'プロンプトエンジニアリング', zh: '提示词工程',
@@ -333,7 +341,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
           __html: JSON.stringify(jsonLdSchemas),
         }}
       />
-      <PromptEngineeringHub initialLang={selectedLang as Language} titlesMap={titlesMap} />
+      <PromptEngineeringHub initialLang={selectedLang as Language} titlesMap={titlesMap} articleLevels={articleLevels} />
     </>
   )
 }

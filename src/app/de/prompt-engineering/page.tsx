@@ -38,5 +38,12 @@ export default async function DePromptEngineeringPage() {
     ])
   )
 
-  return <PromptEngineeringHub initialLang="ja" titlesMap={titlesMap} />
+  const articleLevels: Record<string, string> = Object.fromEntries(
+    Object.entries(peContent).map(([key, langMap]) => [
+      key,
+      (langMap.en?.educationalLevel ?? '').toLowerCase(),
+    ])
+  )
+
+  return <PromptEngineeringHub initialLang="de" titlesMap={titlesMap} articleLevels={articleLevels} />
 }

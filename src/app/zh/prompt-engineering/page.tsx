@@ -38,5 +38,12 @@ export default async function ZhPromptEngineeringPage() {
     ])
   )
 
-  return <PromptEngineeringHub initialLang="zh" titlesMap={titlesMap} />
+  const articleLevels: Record<string, string> = Object.fromEntries(
+    Object.entries(peContent).map(([key, langMap]) => [
+      key,
+      (langMap.en?.educationalLevel ?? '').toLowerCase(),
+    ])
+  )
+
+  return <PromptEngineeringHub initialLang="zh" titlesMap={titlesMap} articleLevels={articleLevels} />
 }

@@ -38,5 +38,12 @@ export default async function JaPromptEngineeringPage() {
     ])
   )
 
-  return <PromptEngineeringHub initialLang="ja" titlesMap={titlesMap} />
+  const articleLevels: Record<string, string> = Object.fromEntries(
+    Object.entries(peContent).map(([key, langMap]) => [
+      key,
+      (langMap.en?.educationalLevel ?? '').toLowerCase(),
+    ])
+  )
+
+  return <PromptEngineeringHub initialLang="ja" titlesMap={titlesMap} articleLevels={articleLevels} />
 }

@@ -1,10 +1,16 @@
 'use client'
 
 import Link from 'next/link'
+import { useMemo } from 'react'
 import { themes, type PETheme } from '@/lib/prompt-engineering/themes'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
+import { useHubSignals } from './hub/useHubSignals'
+import { getArticleHighlight, type ArticleHighlight } from './hub/hub-utils'
+import { LevelBar } from './hub/LevelBar'
+import { HubArticleCard } from './hub/HubArticleCard'
+import { GuideStarWidget, type RecommendedArticle } from './hub/GuideStarWidget'
 
 function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
@@ -578,6 +584,14 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   'workflows-automation': { badge: 'bg-green-50 text-green-700 border-green-200', dot: 'bg-green-400' },
 }
 
+// Precomputed slug → theme ID map (derived from themes data)
+const SLUG_TO_THEME_ID: Record<string, string> = Object.fromEntries(
+  themes.flatMap(theme => {
+    const keys = theme.articleKeys ?? theme.subSections?.flatMap(s => s.articleKeys) ?? []
+    return keys.map(key => [key, theme.id])
+  })
+)
+
 // Get translated article title — checks titles map, then fallback titles, then formats slug
 function getArticleTitle(articleKey: string, lang: Language, titlesMap: Record<string, Partial<Record<Language, string>>>): string {
   const contentKey = PE_SLUG_TO_KEY[articleKey]
@@ -612,8 +626,44 @@ function ArticleCard({ articleKey, dot, lang, titlesMap }: { articleKey: string;
   )
 }
 
-function PromptEngineeringHubContent({ initialLang, titlesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>> }) {
+function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>>; articleLevels: Record<string, string> }) {
   const lang = useLang(initialLang)
+  const { signal, setLevel, clearLevel } = useHubSignals(SLUG_TO_THEME_ID)
+
+  const highlights = useMemo<Record<string, ArticleHighlight>>(() => {
+    const map: Record<string, ArticleHighlight> = {}
+    for (const theme of themes) {
+      const keys = theme.articleKeys ?? theme.subSections?.flatMap(s => s.articleKeys) ?? []
+      for (const key of keys) {
+        const contentKey = PE_SLUG_TO_KEY[key]
+        const level = contentKey ? (articleLevels[contentKey] ?? '') : ''
+        const themeId = SLUG_TO_THEME_ID[key] ?? ''
+        map[key] = getArticleHighlight(signal, level, themeId, [])
+      }
+    }
+    return map
+  }, [signal, articleLevels])
+
+  const recommendations = useMemo<RecommendedArticle[]>(() => {
+    const recs: RecommendedArticle[] = []
+    for (const theme of themes) {
+      const keys = theme.articleKeys ?? theme.subSections?.flatMap(s => s.articleKeys) ?? []
+      for (const key of keys) {
+        if (highlights[key]?.isHighlighted) {
+          const themeId = SLUG_TO_THEME_ID[key] ?? ''
+          recs.push({
+            title: getArticleTitle(key, lang, titlesMap),
+            url: navHref(`/prompt-engineering/${key}`, lang),
+            theme: THEME_LABELS[themeId]?.[lang] ?? themeId,
+            level: '',
+          })
+        }
+      }
+    }
+    return recs.slice(0, 5)
+  }, [highlights, lang, titlesMap])
+
+  const activeLevel = signal.type === 'level' ? signal.level : undefined
 
   return (
     <div className="min-h-screen bg-surface pt-24 pb-20">
@@ -681,6 +731,9 @@ function PromptEngineeringHubContent({ initialLang, titlesMap }: { initialLang?:
           </div>
         </div>
 
+        {/* Level self-selection bar — Mechanism A */}
+        <LevelBar activeLevel={activeLevel} onSelect={setLevel} onClear={clearLevel} />
+
         {/* Theme sections */}
         <div className="space-y-20">
           {themes.map((theme) => {
@@ -720,7 +773,9 @@ function PromptEngineeringHubContent({ initialLang, titlesMap }: { initialLang?:
                 {theme.articleKeys && (
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {theme.articleKeys.map((key) => (
-                      <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
+                      <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }}>
+                        <ArticleCard articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
+                      </HubArticleCard>
                     ))}
                   </div>
                 )}
@@ -735,7 +790,9 @@ function PromptEngineeringHubContent({ initialLang, titlesMap }: { initialLang?:
                         </h3>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                           {sub.articleKeys.map((key) => (
-                            <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
+                            <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }}>
+                              <ArticleCard articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
+                            </HubArticleCard>
                           ))}
                         </div>
                       </div>
@@ -833,10 +890,13 @@ function PromptEngineeringHubContent({ initialLang, titlesMap }: { initialLang?:
         </div>
 
       </div>
+
+      {/* Guide Star recommendation widget — Mechanism C */}
+      <GuideStarWidget signal={signal} recommendations={recommendations} />
     </div>
   )
 }
 
-export function PromptEngineeringHub({ initialLang, titlesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>> }) {
-  return <PromptEngineeringHubContent initialLang={initialLang} titlesMap={titlesMap} />
+export function PromptEngineeringHub({ initialLang, titlesMap, articleLevels }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>>; articleLevels: Record<string, string> }) {
+  return <PromptEngineeringHubContent initialLang={initialLang} titlesMap={titlesMap} articleLevels={articleLevels} />
 }

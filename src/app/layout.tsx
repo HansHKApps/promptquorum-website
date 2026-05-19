@@ -19,6 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { CookieBanner } from '@/components/CookieBanner'
+import { PageTracker } from '@/components/PageTracker'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
@@ -231,6 +232,7 @@ gtag('config', 'G-8DQ4B3DXBS', {
       <body>
         <Providers>
           <HeaderClient />
+          <PageTracker />
           {children}
           <CookieBanner />
           <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
