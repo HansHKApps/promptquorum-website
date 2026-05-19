@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'How Much VRAM Do You Need for a Local LLM?',
-    seoTitle: 'How Much VRAM for a Local LLM? | Prompt Bites | PromptQuorum',
-    metaDescription: '4 GB runs Phi-4 Mini. 6 GB runs Llama 3 8B Q4. 12 GB fits Qwen 14B Q4. Quick VRAM decision tree from PromptQuorum.',
+    seoTitle: 'VRAM Tiers for Local LLMs 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: '4 GB runs Phi-4 Mini at Q4. 6 GB handles Llama 3 8B Q4_K_M. 12 GB unlocks Qwen 14B. Formula: params × 0.7 = GB at Q4. VRAM tier guide from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -131,8 +131,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Quantization & VRAM',
     title: 'Wie viel VRAM brauchen Sie für ein lokales LLM?',
-    seoTitle: 'Wie viel VRAM für ein lokales LLM? | Prompt Bites | PromptQuorum',
-    metaDescription: '4 GB reichen für Phi-4 Mini. 6 GB betreibt Llama 3 8B Q4. 12 GB fasst Qwen 14B Q4. Schnelle VRAM-Entscheidungshilfe von PromptQuorum.',
+    seoTitle: 'VRAM-Stufen für lokale LLMs 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: '4 GB für Phi-4 Mini Q4. 6 GB für Llama 3 8B Q4_K_M. 12 GB für Qwen 14B. Formel: Parameter × 0,7 = GB bei Q4. VRAM-Stufenführer von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -198,8 +198,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Quantization & VRAM',
     title: 'De combien de VRAM avez-vous besoin pour un LLM local ?',
-    seoTitle: 'Quelle VRAM pour un LLM local ? | Prompt Bites | PromptQuorum',
-    metaDescription: '4 Go pour Phi-4 Mini. 6 Go pour Llama 3 8B Q4. 12 Go pour Qwen 14B Q4. Aide à la décision VRAM par PromptQuorum.',
+    seoTitle: 'Paliers VRAM pour LLM local 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: '4 Go pour Phi-4 Mini Q4. 6 Go pour Llama 3 8B Q4_K_M. 12 Go pour Qwen 14B. Formule : params × 0,7 = Go en Q4. Paliers VRAM par PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Quantization & VRAM',
     title: 'ローカルLLMに必要なVRAM量は？',
-    seoTitle: 'ローカルLLMに必要なVRAMは？ | Prompt Bites | PromptQuorum',
+    seoTitle: 'ローカルLLM VRAMティア 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GBでPhi-4 Miniが動作。6 GBでLlama 3 8B Q4が動作。12 GBでQwen 14B Q4が収まります。PromptQuorumによるVRAM選択ガイド。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Quantization & VRAM',
     title: '运行本地LLM需要多少显存？',
-    seoTitle: '本地LLM需要多少显存？| Prompt Bites | PromptQuorum',
+    seoTitle: '本地LLM显存层级 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB运行Phi-4 Mini，6 GB运行Llama 3 8B Q4，12 GB运行Qwen 14B Q4。PromptQuorum显存快速决策指南。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

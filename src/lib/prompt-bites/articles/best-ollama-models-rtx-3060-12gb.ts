@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'Best Ollama Models for RTX 3060 12 GB?',
-    seoTitle: 'Best Ollama Models for RTX 3060 12 GB? | Prompt Bites | PromptQuorum',
-    metaDescription: 'RTX 3060 12 GB runs Llama 3 8B Q5_K_M for chat and Qwen 2.5 Coder 14B Q4 for code at 20–30 tok/s. Quick answer from PromptQuorum.',
+    seoTitle: 'RTX 3060 12 GB: Ollama Picks 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M for chat (20 tok/s), Qwen 2.5 Coder 14B Q4 for code. Both fit in 12 GB VRAM. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -131,8 +131,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Quantization & VRAM',
     title: 'Beste Ollama-Modelle für RTX 3060 12 GB?',
-    seoTitle: 'Beste Ollama-Modelle für RTX 3060 12 GB? | Prompt Bites | PromptQuorum',
-    metaDescription: 'RTX 3060 12 GB läuft Llama 3 8B Q5_K_M für Chat und Qwen 2.5 Coder 14B Q4 für Code mit 20–30 Tok/s. Schnelle Antwort von PromptQuorum.',
+    seoTitle: 'RTX 3060 12 GB: Ollama-Picks 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M für Chat, Qwen 2.5 Coder 14B Q4 für Code. Beide laufen mit 20–30 Tok/s. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -198,8 +198,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Quantization & VRAM',
     title: 'Meilleurs modèles Ollama pour RTX 3060 12 Go ?',
-    seoTitle: 'Meilleurs modèles Ollama pour RTX 3060 12 Go ? | Prompt Bites | PromptQuorum',
-    metaDescription: 'RTX 3060 12 Go : Llama 3 8B Q5_K_M pour le chat et Qwen 2.5 Coder 14B Q4 pour le code à 20–30 tok/s. Réponse rapide par PromptQuorum.',
+    seoTitle: 'Ollama sur RTX 3060 12 Go 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'RTX 3060 12 Go : Llama 3 8B Q5_K_M pour le chat, Qwen 2.5 Coder 14B Q4 pour le code. Les deux à 20–30 tok/s. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Quantization & VRAM',
     title: 'RTX 3060 12 GB向け最良Ollamaモデルは？',
-    seoTitle: 'RTX 3060 12 GB最良Ollamaモデル | Prompt Bites | PromptQuorum',
+    seoTitle: 'RTX 3060 12 GB最良Ollamaモデル 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'RTX 3060 12 GBはLlama 3 8B Q5_K_Mでチャット、Qwen 2.5 Coder 14B Q4でコーディングを20–30トークン/秒で実行します。PromptQuorumの解説。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Quantization & VRAM',
     title: 'RTX 3060 12 GB最佳Ollama模型？',
-    seoTitle: 'RTX 3060 12 GB最佳Ollama模型 | Prompt Bites | PromptQuorum',
+    seoTitle: 'RTX 3060 12 GB最佳Ollama模型 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB：Llama 3 8B Q5_K_M用于聊天，Qwen 2.5 Coder 14B Q4用于编程，速度20–30 tok/s。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

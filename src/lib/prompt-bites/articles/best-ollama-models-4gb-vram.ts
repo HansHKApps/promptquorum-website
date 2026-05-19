@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'Best Ollama Models for 4 GB VRAM?',
-    seoTitle: 'Best Ollama Models for 4 GB VRAM? | Prompt Bites | PromptQuorum',
+    seoTitle: 'Ollama Models for 4 GB VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB VRAM is tight. Phi-4 Mini Q4 (3.2 GB), Gemma 2 2B (1.5 GB), SmolLM 1.7B (1.0 GB). Llama 3 8B will not fit. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Quantization & VRAM',
     title: 'Beste Ollama-Modelle für 4 GB VRAM?',
-    seoTitle: 'Beste Ollama-Modelle für 4 GB VRAM? | Prompt Bites | PromptQuorum',
+    seoTitle: 'Ollama-Modelle für 4 GB VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB VRAM ist eng. Phi-4 Mini Q4 (3,2 GB), Gemma 2 2B (1,5 GB), SmolLM 1.7B (1,0 GB). Llama 3 8B passt nicht. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Quantization & VRAM',
     title: 'Meilleurs modèles Ollama pour 4 Go de VRAM ?',
-    seoTitle: 'Meilleurs modèles Ollama pour 4 Go de VRAM ? | Prompt Bites | PromptQuorum',
+    seoTitle: 'Modèles Ollama pour 4 Go VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 Go de VRAM est serré. Phi-4 Mini Q4 (3,2 Go), Gemma 2 2B (1,5 Go), SmolLM 1.7B (1,0 Go). Llama 3 8B ne rentrera pas. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Quantization & VRAM',
     title: '4 GB VRAM向け最良Ollamaモデルは？',
-    seoTitle: '4 GB VRAM最良Ollamaモデル | Prompt Bites | PromptQuorum',
+    seoTitle: '4 GB VRAM最良Ollamaモデル 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB VRAMは制限がありますが使えます。Phi-4 Mini Q4（3.2 GB）、Gemma 2 2B（1.5 GB）、SmolLM 1.7B（1.0 GB）。Llama 3 8Bは収まりません。PromptQuorumの解説。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Quantization & VRAM',
     title: '4 GB显存最佳Ollama模型？',
-    seoTitle: '4 GB显存最佳Ollama模型 | Prompt Bites | PromptQuorum',
+    seoTitle: '4 GB显存最佳Ollama模型 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB显存很紧张。Phi-4 Mini Q4（3.2 GB）、Gemma 2 2B（1.5 GB）、SmolLM 1.7B（1.0 GB）。Llama 3 8B不适合。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

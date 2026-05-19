@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'What Is Q4_K_M Quantization?',
-    seoTitle: 'What Is Q4_K_M Quantization? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Q4_K_M means 4-bit k-quant at medium quality. Better than Q4_0, smaller than Q8_0. Use it as your default. Quick answer from PromptQuorum.',
+    seoTitle: 'Q4_K_M Quantization Explained 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Q4_K_M means 4-bit k-quant at medium quality. Better than Q4_0, smaller than Q8_0. Use Q4_K_M as your default for Ollama. Quick guide from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Quantization & VRAM',
     title: 'Was ist Q4_K_M-Quantisierung?',
-    seoTitle: 'Was ist Q4_K_M-Quantisierung? | Prompt Bites | PromptQuorum',
+    seoTitle: 'Q4_K_M-Quantisierung erklärt 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M = 4-Bit-K-Quant auf mittlerem Qualitätsniveau. Besser als Q4_0, kleiner als Q8_0. Verwenden Sie es als Standard. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Quantization & VRAM',
     title: 'Qu\'est-ce que la quantisation Q4_K_M ?',
-    seoTitle: 'Qu\'est-ce que la quantisation Q4_K_M ? | Prompt Bites | PromptQuorum',
+    seoTitle: 'Q4_K_M : quantisation k-quant 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M = k-quant 4 bits à qualité moyenne. Meilleure que Q4_0, plus petite que Q8_0. À utiliser comme standard. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M量化とは何ですか？',
-    seoTitle: 'Q4_K_M量化とは？ | Prompt Bites | PromptQuorum',
+    seoTitle: 'Q4_K_M量化の解説 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_Mは中品質のK-Quant 4ビット量化です。Q4_0より優れ、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M量化是什么？',
-    seoTitle: 'Q4_K_M量化是什么？| Prompt Bites | PromptQuorum',
+    seoTitle: 'Q4_K_M量化格式详解 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M是中等质量的K-Quant 4位量化格式。优于Q4_0，体积小于Q8_0。将其作为默认格式使用。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

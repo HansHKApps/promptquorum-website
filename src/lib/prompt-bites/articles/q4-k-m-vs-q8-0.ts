@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M vs Q8_0: Which Should You Pick?',
-    seoTitle: 'Q4_K_M vs Q8_0: Which Should You Pick? | Prompt Bites | PromptQuorum',
+    seoTitle: 'Q4_K_M vs Q8_0: Which to Use 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Use Q4_K_M with 8 GB VRAM or less. Use Q8_0 with 12+ GB. Q4_K_M delivers 95% of Q8_0 quality at half the size. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -129,8 +129,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M vs. Q8_0: Was sollten Sie wählen?',
-    seoTitle: 'Q4_K_M vs. Q8_0: Was sollten Sie wählen? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Verwenden Sie Q4_K_M mit 8 GB VRAM oder weniger. Verwenden Sie Q8_0 mit 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei halbem Dateivolumen. Schnelle Antwort.',
+    seoTitle: 'Q4_K_M vs. Q8_0: Was wählen 2026? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Q4_K_M bei 8 GB VRAM oder weniger, Q8_0 ab 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei halbem Dateivolumen. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M ou Q8_0 : lequel choisir ?',
-    seoTitle: 'Q4_K_M ou Q8_0 : lequel choisir ? | Prompt Bites | PromptQuorum',
+    seoTitle: 'Q4_K_M ou Q8_0 2026 : lequel ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Utilisez Q4_K_M avec 8 Go de VRAM ou moins. Utilisez Q8_0 avec 12+ Go. Q4_K_M offre 95 % de la qualité de Q8_0 à la moitié de la taille. Réponse rapide.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M vs Q8_0：どちらを選ぶべきですか？',
-    seoTitle: 'Q4_K_M vs Q8_0：どちらを選ぶべき？ | Prompt Bites | PromptQuorum',
+    seoTitle: 'Q4_K_M vs Q8_0：2026年の選び方 | Prompt Bites | PromptQuorum',
     metaDescription: 'VRAMが8 GB以下ならQ4_K_Mを使用。12 GB以上ならQ8_0を使用。Q4_K_MはQ8_0の95%の品質を約半分のサイズで提供します。PromptQuorumの解説。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M与Q8_0：该如何选择？',
-    seoTitle: 'Q4_K_M与Q8_0：该如何选择？| Prompt Bites | PromptQuorum',
+    seoTitle: 'Q4_K_M与Q8_0：2026年选择指南 | Prompt Bites | PromptQuorum',
     metaDescription: '显存8 GB或更少时使用Q4_K_M。12 GB以上时使用Q8_0。Q4_K_M以约一半的文件大小提供Q8_0 95%的质量。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
