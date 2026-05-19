@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body1: {
-        title: 'Three Ways to Run a Local LLM on Android',
+        title: 'The Three Working Options',
         content: [
           '<strong>As of May 2026, there are three practical ways to run a local LLM on Android: MLC Chat (Machine Learning Compilation), Pocketpal AI, and Termux with Ollama.</strong> All three run 100% offline after initial model download — no API key or internet connection required.',
           'MLC Chat uses the MLC-LLM compilation framework to pre-optimize model weights for mobile hardware. You download it from Google Play, select a supported model (Llama 3, Gemma, Phi), and the model downloads and runs directly on the device. Setup takes under 10 minutes.',
@@ -95,11 +95,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body2: {
-        title: 'Hardware Requirements and Which App to Choose',
+        title: 'Which to Install First',
         content: [
-          'Android device RAM is the binding constraint for local LLM inference. You need at least 8 GB RAM to run a 7B model comfortably — this rules out most budget phones. For 2–4B models, 4 GB RAM is sufficient. Do not attempt to run a 7B model on a device with 4 GB RAM — the OS will kill the process.',
+          'A flagship Android phone with 8+ GB RAM handles a 2-3B model at 4-8 tok/s on CPU. Mid-range phones from 2023-2024 are slower (1-3 tok/s) — usable for batch tasks, frustrating for chat. Do not attempt 7B models on any device with less than 8 GB RAM.',
           '<strong>Termux + Ollama is the most powerful option but has the steepest setup curve.</strong> You install Termux from F-Droid, then run <code>pkg install ollama</code> inside the terminal. Once installed, all standard Ollama commands work including <code>ollama pull</code> and <code>ollama run</code>. This approach is best for developers who already use Ollama on desktop.',
-          'For a side-by-side comparison of desktop and mobile local LLM setups, see the <a href="/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">best Ollama models for CPU-only guide</a>.',
+          'For a full guide to running LLMs on Android including hardware requirements and model recommendations, see the <a href="/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">best local LLM apps for Android guide</a>.',
         ],
       },
       faq: {
@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Which Android LLM app is best for beginners?',
-            a: 'MLC Chat is the best starting point. It installs from Google Play in under a minute, offers a curated list of preoptimized models, and requires no command-line experience. See our <a href="/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">CPU-only Ollama guide</a> for model size recommendations that also apply to Android.',
+            a: 'MLC Chat is the best starting point. It installs from Google Play in under a minute, offers a curated list of preoptimized models, and requires no command-line experience. See the <a href="/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">best Ollama frontend guide</a> for options if you want a richer chat interface.',
           },
         ],
       },

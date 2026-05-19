@@ -81,9 +81,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body1: {
-        title: 'Open WebUI Is the Best General-Purpose Ollama Frontend',
+        title: 'Three Frontends, Three Use Cases',
         content: [
-          '<strong>Open WebUI is the most capable Ollama frontend — it provides a ChatGPT-like chat interface, RAG document upload, user management, and support for connecting to multiple Ollama instances, all free and self-hosted.</strong> It runs as a Docker container and is accessible in any browser at localhost:3000.',
+          '<strong>As of May 2026, Open WebUI is the recommended Ollama frontend for general use. This page is updated monthly — last verified May 2026.</strong> Open WebUI provides a ChatGPT-like chat interface, RAG document upload, user management, and support for connecting to multiple Ollama instances — all free and self-hosted as a Docker container accessible at localhost:3000.',
           'SillyTavern is the right choice when the primary use case is roleplay or collaborative fiction. It supports character cards (PNG files with embedded persona definitions), story branching, and lorebook context injection — features that Open WebUI and Jan do not have.',
           'The table below compares setup method and best use case for the three most popular Ollama frontends.',
         ],
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Jan is the only frontend in this comparison that does not require Docker or a package manager to install. It is a native desktop application for Mac, Windows, and Linux that combines model download management with a chat interface.',
           'Open WebUI requires Docker and an already-running Ollama instance. SillyTavern requires Node.js and npm. Jan is standalone — install it as a desktop app and it handles model downloads and the chat interface in a single window.',
-          'For the decision between Ollama and LM Studio as the model backend, see the <a href="/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio comparison</a>.',
+          'For a full breakdown of local LLM frontends including installation guides, see the <a href="/local-llms/best-local-llm-frontends" class="text-primary hover:underline">best local LLM frontends guide</a>. Last verified: May 2026. If the data above looks stale, check the official project repositories on GitHub.',
         ],
       },
       faq: {
