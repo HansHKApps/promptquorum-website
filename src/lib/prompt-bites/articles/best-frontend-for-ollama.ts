@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body1: {
-        title: 'Three Frontends, Three Use Cases',
+        title: 'Open WebUI Is the Default Pick',
         content: [
           '<strong>As of May 2026, Open WebUI is the recommended Ollama frontend for general use. This page is updated monthly — last verified May 2026.</strong> Open WebUI provides a ChatGPT-like chat interface, RAG document upload, user management, and support for connecting to multiple Ollama instances — all free and self-hosted as a Docker container accessible at localhost:3000.',
           'SillyTavern is the right choice when the primary use case is roleplay or collaborative fiction. It supports character cards (PNG files with embedded persona definitions), story branching, and lorebook context injection — features that Open WebUI and Jan do not have.',
@@ -99,8 +99,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Jan is the only frontend in this comparison that does not require Docker or a package manager to install. It is a native desktop application for Mac, Windows, and Linux that combines model download management with a chat interface.',
           'Open WebUI requires Docker and an already-running Ollama instance. SillyTavern requires Node.js and npm. Jan is standalone — install it as a desktop app and it handles model downloads and the chat interface in a single window.',
-          'For a full breakdown of local LLM frontends including installation guides, see the <a href="/local-llms/best-local-llm-frontends" class="text-primary hover:underline">best local LLM frontends guide</a>. Last verified: May 2026. If the data above looks stale, check the official project repositories on GitHub.',
+          'For a full breakdown of local LLM frontends including installation guides, see the <a href="/local-llms/best-local-llm-frontends" class="text-primary hover:underline">best local LLM frontends guide</a>.',
         ],
+        callouts: [{ type: 'info', text: 'Last verified: May 2026. If the data above looks stale, check the official project repositories on GitHub.' }],
       },
       faq: {
         id: 'faq',

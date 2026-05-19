@@ -75,7 +75,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Jan is MIT-licensed and open source; LM Studio is proprietary but free to use for personal and commercial projects',
-          'Jan supports Linux natively and runs GPU acceleration on both NVIDIA and AMD; LM Studio on Linux supports NVIDIA only',
+          'Jan supports all three OSes natively with both NVIDIA and AMD GPU acceleration; LM Studio is Mac and Windows only (Linux support is beta-only as of May 2026)',
           'LM Studio has a built-in model store with one-click downloads; Jan relies on third-party model sources like Hugging Face',
           'Both apps use GGUF format, include a local API server, and work fully offline — the choice is customization vs. polish',
         ],
@@ -84,6 +84,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'The Open Source vs Polish Trade-off',
         content: [
           '<strong>Jan (github.com/janhq/jan) is MIT-licensed and fully open source — you can read, fork, and modify the code.</strong> LM Studio (lmstudio.ai) is proprietary software that is free to use but closed source. Jan ships an extension system that lets developers add custom functionality, a feature LM Studio does not offer.',
+          'Real extension use cases include: connecting Jan to cloud APIs (OpenAI, Anthropic, Groq) for hybrid local/cloud workflows, adding custom prompt templates and chat presets, and integrating with external tools like Obsidian for note-taking. Around 30 community extensions exist as of May 2026.',
           'LM Studio\'s main advantage is its built-in model store. You can browse, preview, and download hundreds of GGUF models without leaving the app. Jan requires you to find models on Hugging Face or import them manually — more friction for users who just want to get started quickly.',
           'For developers who want to build on top of the application, Jan\'s open-source codebase and extension API are meaningful advantages. For everyone else, the choice comes down to which workflow matches your daily use.',
         ],
@@ -117,7 +118,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Can both Jan and LM Studio use AMD GPUs?',
-            a: 'Jan supports AMD GPU acceleration via ROCm on Linux. LM Studio supports NVIDIA only on Windows and Linux. Neither requires AMD GPU work on macOS — Apple Metal handles it for both apps. See <a href="/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a> for a terminal-based alternative that works on all GPU types.',
+            a: 'Jan supports AMD GPU acceleration via ROCm on Linux. LM Studio supports NVIDIA only on Windows (no stable Linux release). On macOS, Apple Metal handles GPU acceleration for both apps regardless of GPU brand. For a terminal-based alternative on any OS, see <a href="/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a>.',
           },
           {
             q: 'Which app has a larger model library?',

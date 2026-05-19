@@ -97,8 +97,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Which to Install First',
         content: [
-          'A flagship Android phone with 8+ GB RAM handles a 2-3B model at 4-8 tok/s on CPU. Mid-range phones from 2023-2024 are slower (1-3 tok/s) — usable for batch tasks, frustrating for chat. Do not attempt 7B models on any device with less than 8 GB RAM.',
+          '<strong>Start with MLC Chat if this is your first Android LLM setup — it has the fastest time to first token and the least configuration.</strong> Pocketpal is the upgrade path for users who want to swap models frequently. Termux + Ollama is for developers who already know Ollama and want the exact same CLI workflow on mobile.',
+          'A flagship Android phone with 8+ GB RAM handles a 2–3B model at 4–8 tok/s on CPU. Mid-range phones from 2023–2024 are slower (1–3 tok/s) — usable for batch tasks, frustrating for live chat. Do not attempt 7B models on any device with less than 8 GB RAM.',
           '<strong>Termux + Ollama is the most powerful option but has the steepest setup curve.</strong> You install Termux from F-Droid, then run <code>pkg install ollama</code> inside the terminal. Once installed, all standard Ollama commands work including <code>ollama pull</code> and <code>ollama run</code>. This approach is best for developers who already use Ollama on desktop.',
+          'Battery drain matters at the 7B tier and above. A 30-minute chat session with Llama 3 8B Q4 on a flagship phone uses 8–12% battery on average. For frequent use, plug in or stick to 2–3B models like Phi-3 Mini and Gemma 2B that draw less power.',
           'For a full guide to running LLMs on Android including hardware requirements and model recommendations, see the <a href="/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">best local LLM apps for Android guide</a>.',
         ],
       },

@@ -83,13 +83,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Where Each Tool Wins',
         content: [
           '<strong>Ollama wins for developers: it has no GUI overhead, integrates with Python and JavaScript apps via its OpenAI-compatible REST API, and runs headless on Linux servers.</strong> LM Studio wins for beginners: its built-in model store lets you download and run a model in under three minutes without touching a terminal.',
-          'The table below maps five practical dimensions to the tool that handles each better.',
+          'Both tools use llama.cpp under the hood, so the model itself runs identically. The choice is workflow: command line vs visual interface. The table below maps five practical dimensions to the tool that handles each better.',
         ],
         columns: ['Feature', 'Ollama', 'LM Studio'],
         rows: [
           { 'Feature': 'Install method', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'GUI installer' },
           { 'Feature': 'Chat interface', 'Ollama': 'None (API only)', 'LM Studio': 'Built-in' },
-          { 'Feature': 'API server', 'Ollama': 'OpenAI-compatible REST', 'LM Studio': 'OpenAI-compatible REST' },
+          { 'Feature': 'API server', 'Ollama': 'REST, port 11434', 'LM Studio': 'REST, port 1234' },
           { 'Feature': 'Model management', 'Ollama': '`ollama pull <model>`', 'LM Studio': 'Browse + click' },
           { 'Feature': 'Best for', 'Ollama': 'Developers + servers', 'LM Studio': 'Beginners + chat use' },
         ],
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'When to Use Both',
         content: [
           'You can run Ollama and LM Studio simultaneously. Use LM Studio to browse and test new models, then switch to Ollama once you know which model you want to integrate into a Python or JavaScript app.',
-          'Both default to port 11434 for their local API. If you run both at the same time, set the OLLAMA_HOST environment variable to a different port for one of them to avoid conflicts.',
+          'Ollama defaults to port 11434, LM Studio defaults to port 1234 — they don\'t conflict by default. If you\'ve customized either port, set the OLLAMA_HOST environment variable or change LM Studio\'s server port in Settings.',
           'For the full guide covering installation, model selection, and performance tuning, see the <a href="/local-llms/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio in-depth comparison</a>.',
         ],
       },
@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Can Ollama and LM Studio run at the same time?',
-            a: 'Yes, but both default to port 11434 for their local API. If you run both simultaneously, change one of the port numbers to avoid conflicts. Ollama\'s port is set via the OLLAMA_HOST environment variable.',
+            a: 'Yes. Ollama defaults to port 11434, LM Studio defaults to port 1234, so they don\'t conflict by default. You only need to change a port if you\'ve customized one of them.',
           },
           {
             q: 'Which is faster — Ollama or LM Studio?',
