@@ -40,11 +40,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleur mini PC pour LLM local ?',
-        answer: 'Le Minisforum UM790 Pro et le Mac Mini M4 sont les meilleurs mini PC pour exécuter des LLMs localement. L\'UM790 Pro utilise un iGPU AMD avec mémoire unifiée. Le Mac Mini M4 est plus rapide et plus économe en énergie. Les deux exécutent des modèles 7–13B sans GPU dédié.',
+        answer: 'Trois mini PC se distinguent pour l\'inférence LLM locale : le Mac Mini M4 (le plus rapide, ~18 tok/s), le Minisforum UM790 Pro (plus de RAM, 64 Go DDR5) et le Beelink SER8 (meilleur rapport qualité-prix, CPU Ryzen 9 8845HS). Les trois exécutent des modèles 7–13B Q4 sans GPU dédié.',
         bullets: [
           'Mac Mini M4 : le plus rapide pour les LLMs, ~18 tok/s sur Llama 3 8B, économe en énergie',
           'Minisforum UM790 Pro : iGPU AMD Radeon 780M, jusqu\'à 64 Go de RAM unifiée',
-          'Les deux exécutent des modèles 7B–13B en Q4 sans GPU dédié',
+          'Beelink SER8 : Ryzen 9 8845HS, ~8 tok/s, alternative économique',
         ],
         updatedDate: '2026-05',
       },
