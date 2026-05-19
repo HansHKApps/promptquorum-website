@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'For a full breakdown of which 12 GB GPUs deliver the best coding inference and which models to pair with each, see the <a href="/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">best local LLMs for coding guide</a>.',
         ],
         codeBlock: 'ollama pull qwen2.5-coder:14b-instruct-q4_K_M\nollama run qwen2.5-coder:14b-instruct-q4_K_M',
-        callouts: [{ type: 'tip', text: 'AMD Radeon 12 GB cards with ROCm run these models at ~16 tok/s — roughly 30% slower than CUDA on an equivalent NVIDIA 12 GB card. Always run plugged in; AMD mobile GPUs throttle on battery and inference drops 40–50%.' }],
+        callouts: [{ type: 'tip', text: 'AMD Radeon 12 GB cards (RX 6800 XT, RX 6700 XT) with ROCm run these models at ~16 tok/s — roughly 30% slower than CUDA on an equivalent NVIDIA 12 GB card. For mobile AMD GPUs (e.g., Radeon 6800M), see the dedicated mobile guide for thermal and battery considerations.' }],
       },
       faq: {
         id: 'faq',

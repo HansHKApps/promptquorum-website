@@ -20,10 +20,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best LLM for AMD 5700X + RTX 3070 Ti?',
-        answer: 'With an RTX 3070 Ti (8 GB VRAM), Llama 3 8B and Mistral 7B at Q4_K_M are the best local LLMs. Both use ~6 GB VRAM and run at ~25 tok/s. The AMD Ryzen 7 5700X handles fast tokenization as a CPU fallback.',
+        answer: 'With an RTX 3070 Ti (8 GB VRAM), Llama 3 8B Q4_K_M and Mistral 7B Q5_K_M are the best local LLMs. Both use ~6 GB VRAM and run at ~22–25 tok/s. The AMD Ryzen 7 5700X handles fast tokenization as a CPU fallback.',
         bullets: [
           'Llama 3 8B Q4_K_M: ~6 GB VRAM, ~25 tok/s on RTX 3070 Ti',
-          'Mistral 7B Q4_K_M: ~6 GB VRAM, strong reasoning per VRAM used',
+          'Mistral 7B Q5_K_M: ~6 GB VRAM, strong reasoning per VRAM used',
           'RTX 3070 Ti has 8 GB VRAM — 13B models at Q4 may be too large',
         ],
         updatedDate: '2026-05',
