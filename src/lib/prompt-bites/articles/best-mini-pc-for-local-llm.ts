@@ -85,12 +85,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>The Mac Mini M4 achieves ~18 tokens per second on a 7B Q4 model, consumes ~30 W under load, and starts at approximately 599 USD — making it the fastest and most power-efficient mini PC for local LLM inference.</strong> The M4 chip uses unified memory architecture, meaning the same physical RAM is shared between CPU and GPU with no memory copy overhead.',
           'The Minisforum UM790 Pro offers the best non-Apple alternative. Its AMD Ryzen 9 7940HS includes a Radeon 780M iGPU, and the system supports up to 64 GB of DDR5 RAM configured as unified memory. On Linux with ROCm, it achieves approximately 8 tokens per second on the same 7B Q4 model.',
-          'The table below compares the two mini PCs across CPU/GPU, best memory configuration, and measured LLM speed.',
+          'The table below compares the three mini PCs across CPU/GPU, best memory configuration, and measured LLM speed.',
         ],
         columns: ['Mini PC', 'CPU/GPU', 'Best Config', 'LLM Speed (7B Q4)'],
         rows: [
           { 'Mini PC': 'Mac Mini M4', 'CPU/GPU': 'Apple M4', 'Best Config': '16 GB unified', 'LLM Speed (7B Q4)': '~18 tok/s' },
           { 'Mini PC': 'Minisforum UM790 Pro', 'CPU/GPU': 'Ryzen 9 7940HS', 'Best Config': '64 GB DDR5', 'LLM Speed (7B Q4)': '~8 tok/s' },
+          { 'Mini PC': 'Beelink SER8', 'CPU/GPU': 'Ryzen 9 8845HS', 'Best Config': '64 GB DDR5', 'LLM Speed (7B Q4)': '~8 tok/s' },
         ],
       },
       body2: {

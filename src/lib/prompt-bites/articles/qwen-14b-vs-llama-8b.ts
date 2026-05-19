@@ -87,10 +87,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 2.5 14B at Q4_K_M requires approximately 10 GB VRAM and produces ~15 tok/s on the same card. The lower throughput is noticeable in real-time conversations but acceptable for batch summarization or longer document processing where quality matters more than latency.',
           'The speed difference (25 vs 15 tok/s) means Llama 3 8B generates a 200-token answer in about 8 seconds, while Qwen 2.5 14B takes about 13 seconds. For single-turn queries this gap is minor; for multi-turn chat sessions it compounds.',
         ],
-        columns: ['Model', 'VRAM (Q4_K_M)', 'Speed (RTX 3060)', 'MMLU Score'],
+        columns: ['Use Case', 'Winner', 'Why'],
         rows: [
-          { 'Model': 'Llama 3 8B', 'VRAM (Q4_K_M)': '6 GB', 'Speed (RTX 3060)': '~25 tok/s', 'MMLU Score': '66.6%' },
-          { 'Model': 'Qwen 2.5 14B', 'VRAM (Q4_K_M)': '10 GB', 'Speed (RTX 3060)': '~15 tok/s', 'MMLU Score': '74.8%' },
+          { 'Use Case': 'Coding & reasoning', 'Winner': 'Qwen 2.5 14B', 'Why': 'Higher parameter count improves multi-step logic' },
+          { 'Use Case': 'Chat & instruction', 'Winner': 'Llama 3 8B', 'Why': 'Optimized for fast interactive responses' },
+          { 'Use Case': 'Multilingual', 'Winner': 'Tied', 'Why': 'Both strong on European and East Asian languages' },
+          { 'Use Case': 'RAM-constrained (≤8 GB)', 'Winner': 'Llama 3 8B', 'Why': 'Fits in 6 GB; Qwen 14B needs 10 GB' },
+          { 'Use Case': 'Long context (16K+)', 'Winner': 'Qwen 2.5 14B', 'Why': 'Better recall at extended context lengths' },
         ],
       },
       body2: {
@@ -98,6 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Qwen 2.5 14B scores 74.8% on MMLU versus 66.6% for Llama 3 8B — an 8-point gap that reflects in noticeably better multi-step reasoning, instruction following, and structured output consistency.</strong> The difference is particularly visible on tasks that require holding and applying context across multiple paragraphs.',
           'If your primary use case is code completion, the quality gap grows. Qwen 2.5 Coder 14B (the code-tuned variant of the same base) scores 78.4% on HumanEval. Llama 3 8B generic scores around 55% on the same benchmark — a 23-point difference on coding tasks.',
+          '≤8 GB VRAM: Llama 3 8B Q4_K_M fits with ~2 GB headroom — Qwen 14B is not an option. 10–12 GB VRAM: Qwen 2.5 14B Q4_K_M fits at the tipping point. 16+ GB VRAM: either model works; Qwen 2.5 14B Q5 becomes practical.',
           'For a deeper look at coding model performance including benchmark tables, see the <a href="/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">best 14B models for coding</a> comparison.',
         ],
       },
@@ -118,8 +122,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Qwen 2.5 14B supports a 128k context window natively. Llama 3 8B supports 8k by default, though RoPE-extended variants can reach 128k with some quality loss. For long-document tasks, Qwen 2.5 14B has a clear advantage even before accounting for its larger parameter count.',
           },
           {
-            q: 'What if I have exactly 8 GB VRAM?',
-            a: 'At 8 GB VRAM you can run Llama 3 8B Q4_K_M comfortably with ~2 GB headroom. Qwen 2.5 14B will not fit reliably. Consider Qwen 2.5 7B Q4_K_M as a middle ground — it uses ~5 GB VRAM and scores higher than Llama 3 8B on most benchmarks. See <a href="/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">best local LLM for coding with 12 GB VRAM</a> for context on how VRAM constraints affect model choice.',
+            q: 'Does context length affect which model to choose for chat?',
+            a: 'Yes. For typical single-turn or short multi-turn chat (under 4k tokens), both models are fine — choose based on VRAM. For long conversations or document-heavy sessions, Qwen 2.5 14B\'s 128k native context window is a meaningful advantage over Llama 3 8B\'s default 8k limit.',
           },
         ],
       },
