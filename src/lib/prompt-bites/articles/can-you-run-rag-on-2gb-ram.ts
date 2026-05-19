@@ -20,11 +20,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Can you run RAG on 2 GB RAM?',
-        answer: 'A full RAG pipeline requires at least 8 GB RAM. With only 2 GB, you can run a tiny LLM like TinyLlama or Phi-2 (both need ~1.5 GB), but the embedding model adds another 0.5–1 GB, leaving almost no room for the vector store or context. Results will be limited.',
+        answer: 'Yes — but only for small personal document sets. At 2 GB RAM, a viable RAG pipeline uses Llama 3.2 1B (~750 MB) with MiniLM-L6-v2 embeddings (~80 MB) and an in-memory vector store. Total ~1.3–1.5 GB fits on a 2 GB device. Larger models (7B+) and larger document sets (200+ pages) need 8 GB minimum.',
         bullets: [
-          '2 GB RAM: only tiny models (TinyLlama, Phi-2) — poor RAG quality',
-          'Minimum for decent RAG: 8 GB RAM (7B LLM + embeddings + vector store)',
-          'Alternative: run embeddings remotely, only the LLM locally',
+          'Llama 3.2 1B Q4_K_M (~750 MB) + MiniLM-L6-v2 embeddings (~80 MB) fits 2 GB',
+          'Document set must be under ~200 pages to stay within RAM',
+          '7B+ models or larger corpora need at least 8 GB RAM',
         ],
         updatedDate: '2026-05',
       },
