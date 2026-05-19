@@ -20,10 +20,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best LLM right now?',
-        answer: 'For cloud use: GPT-4o leads on general tasks, Claude 3.7 Sonnet on long documents and coding, Gemini 2.5 Pro on multimodal tasks. For local use: Llama 3.1 70B or Qwen 2.5 72B at Q4 if you have 40+ GB VRAM; Qwen 2.5 14B for 12 GB VRAM.',
+        answer: 'For cloud use: Claude Opus 4.7 leads on coding and long documents, GPT-5.5 Instant on general chat, Gemini 2.5 Pro on multimodal tasks. For local use: Llama 4 Scout if you have 24 GB VRAM; Qwen 2.5 14B for 12 GB VRAM.',
         bullets: [
-          'Cloud general: GPT-4o — best reasoning and instruction following',
-          'Cloud coding: Claude 3.7 Sonnet — top on SWE-bench',
+          'Cloud general: GPT-5.5 Instant — ChatGPT default, 52.5% fewer hallucinations',
+          'Cloud coding: Claude Opus 4.7 — 87.6% SWE-Bench Verified',
           'Local 12 GB VRAM: Qwen 2.5 14B Q4_K_M — best quality-per-VRAM',
         ],
         updatedDate: '2026-05',
@@ -60,10 +60,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '当前最好的 LLM 是什么？',
-        answer: '云端：GPT-4o 在通用任务上领先，Claude 3.7 Sonnet 适合长文档和编码，Gemini 2.5 Pro 适合多模态任务。本地：40GB 以上 VRAM 选 Llama 3.1 70B 或 Qwen 2.5 72B（Q4）；12 GB VRAM 选 Qwen 2.5 14B。',
+        answer: '云端：Claude Opus 4.7 在编程和长文档领先，GPT-5.5 Instant 适合通用对话，Gemini 2.5 Pro 适合多模态任务。本地：24GB VRAM 选 Llama 4 Scout；12 GB VRAM 选 Qwen 2.5 14B。',
         bullets: [
-          '云端通用：GPT-4o — 最佳推理与指令遵循',
-          '云端编程：Claude 3.7 Sonnet — SWE-bench 榜首',
+          '云端通用：GPT-5.5 Instant — ChatGPT 默认（2026 年 5 月起），幻觉减少 52.5%',
+          '云端编程：Claude Opus 4.7 — SWE-Bench Verified 87.6%',
           '本地 12 GB VRAM：Qwen 2.5 14B Q4_K_M — 最佳质量/VRAM 比',
         ],
         updatedDate: '2026-05',
@@ -142,10 +142,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Welches LLM ist aktuell das beste?',
-        answer: 'Für Cloud-Nutzung: GPT-4o führt bei allgemeinen Aufgaben, Claude 3.7 Sonnet bei langen Dokumenten und Coding, Gemini 2.5 Pro bei multimodalen Aufgaben. Lokal: Llama 3.1 70B oder Qwen 2.5 72B bei Q4 mit 40+ GB VRAM; Qwen 2.5 14B für 12 GB VRAM.',
+        answer: 'Für Cloud-Nutzung: Claude Opus 4.7 führt bei Coding und langen Dokumenten, GPT-5.5 Instant bei allgemeinen Aufgaben, Gemini 2.5 Pro bei multimodalen Aufgaben. Lokal: Llama 4 Scout bei 24 GB VRAM; Qwen 2.5 14B für 12 GB VRAM.',
         bullets: [
-          'Cloud allgemein: GPT-4o — bestes Reasoning und Instruction Following',
-          'Cloud Coding: Claude 3.7 Sonnet — führend im SWE-bench',
+          'Cloud allgemein: GPT-5.5 Instant — ChatGPT Standard seit Mai 2026, 52,5% weniger Halluzinationen',
+          'Cloud Coding: Claude Opus 4.7 — 87,6% SWE-Bench Verified',
           'Lokal 12 GB VRAM: Qwen 2.5 14B Q4_K_M — bestes Qualitäts-/VRAM-Verhältnis',
         ],
         updatedDate: '2026-05',
@@ -220,10 +220,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Quel est le meilleur LLM en ce moment ?',
-        answer: 'Pour le cloud : GPT-4o domine les tâches générales, Claude 3.7 Sonnet sur les longs documents et le code, Gemini 2.5 Pro sur les tâches multimodales. En local : Llama 3.1 70B ou Qwen 2.5 72B en Q4 avec 40+ Go de VRAM ; Qwen 2.5 14B pour 12 Go de VRAM.',
+        answer: 'Pour le cloud : Claude Opus 4.7 domine le code et les longs documents, GPT-5.5 Instant la conversation générale, Gemini 2.5 Pro les tâches multimodales. En local : Llama 4 Scout avec 24 Go de VRAM ; Qwen 2.5 14B pour 12 Go de VRAM.',
         bullets: [
-          'Cloud général : GPT-4o — meilleur raisonnement et suivi d\'instructions',
-          'Cloud code : Claude 3.7 Sonnet — leader sur SWE-bench',
+          'Cloud général : GPT-5.5 Instant — ChatGPT standard depuis mai 2026, 52,5% moins d\'hallucinations',
+          'Cloud code : Claude Opus 4.7 — 87,6% SWE-Bench Verified',
           'Local 12 Go VRAM : Qwen 2.5 14B Q4_K_M — meilleur rapport qualité/VRAM',
         ],
         updatedDate: '2026-05',
@@ -298,10 +298,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: '現在最良のLLMは何ですか？',
-        answer: 'クラウド利用では：GPT-4oが一般タスクをリード、Claude 3.7 Sonnetが長文書とコーディング、Gemini 2.5 Proがマルチモーダルタスクを担当。ローカルでは：40GB以上のVRAMがあればLlama 3.1 70BまたはQwen 2.5 72B（Q4）、12GB VRAMならQwen 2.5 14B。',
+        answer: 'クラウド利用では：Claude Opus 4.7がコーディングと長文書をリード、GPT-5.5 Instantが汎用チャット、Gemini 2.5 Proがマルチモーダルタスクを担当。ローカルでは：24GB VRAMあればLlama 4 Scout、12GB VRAMならQwen 2.5 14B。',
         bullets: [
-          'クラウド汎用：GPT-4o — 最高のReasoning・命令追従',
-          'クラウドコーディング：Claude 3.7 Sonnet — SWE-benchトップ',
+          'クラウド汎用：GPT-5.5 Instant — ChatGPT標準（2026年5月〜）、幻覚を52.5%削減',
+          'クラウドコーディング：Claude Opus 4.7 — SWE-Bench Verified 87.6%',
           'ローカル12GB VRAM：Qwen 2.5 14B Q4_K_M — 最高の品質/VRAM比',
         ],
         updatedDate: '2026-05',
@@ -376,10 +376,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '当前最好的 LLM 是什么？',
-        answer: '云端：GPT-4o 在通用任务上领先，Claude 3.7 Sonnet 适合长文档和编码，Gemini 2.5 Pro 适合多模态任务。本地：40GB 以上 VRAM 选 Llama 3.1 70B 或 Qwen 2.5 72B（Q4）；12 GB VRAM 选 Qwen 2.5 14B。',
+        answer: '云端：Claude Opus 4.7 在编程和长文档领先，GPT-5.5 Instant 适合通用对话，Gemini 2.5 Pro 适合多模态任务。本地：24GB VRAM 选 Llama 4 Scout；12 GB VRAM 选 Qwen 2.5 14B。',
         bullets: [
-          '云端通用：GPT-4o — 最佳推理与指令遵循',
-          '云端编程：Claude 3.7 Sonnet — SWE-bench 榜首',
+          '云端通用：GPT-5.5 Instant — ChatGPT 默认（2026 年 5 月起），幻觉减少 52.5%',
+          '云端编程：Claude Opus 4.7 — SWE-Bench Verified 87.6%',
           '本地 12 GB VRAM：Qwen 2.5 14B Q4_K_M — 最佳质量/VRAM 比',
         ],
         updatedDate: '2026-05',
