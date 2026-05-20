@@ -208,7 +208,10 @@ export function PromptBitesHubClient({ lang }: Props) {
                     const langAnswer = qaData?.[lang]?.answer
                     const enAnswer = qaData?.['en']?.answer
                     const rawAnswer = langAnswer && !langAnswer.includes('translation pending') ? langAnswer : enAnswer
-                    const previewText = rawAnswer ? rawAnswer.split('.')[0] + '.' : null
+                    const firstSentence = rawAnswer?.match(/^.+?[.!?](?=\s|$)/)?.[0]
+                    const previewText = rawAnswer
+                      ? (firstSentence ?? rawAnswer.split('.')[0] + '.')
+                      : null
                     const levelKey = (article as any).educationalLevel
                     const levelLabel = EDUCATIONAL_LEVEL[levelKey]?.[lang] ?? levelKey
                     return (
