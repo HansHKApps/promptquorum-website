@@ -178,7 +178,7 @@ const PRESENTATION_UI: Record<Language, { heading: string; description: string; 
 
 // Render inline link placeholders and markdown links [text](url)
 // Injects ?lang= query parameter for internal links when lang is not 'en'
-function renderUrlsAndBold(text: string, keyOffset: number) {
+function renderUrlsAndBold(text: string, keyOffset: number, slug = '') {
   const URL_PATTERN = /(https?:\/\/[^\s,;)\]"]+)/g
   const segments = text.split(URL_PATTERN)
   return (
@@ -212,7 +212,11 @@ function renderUrlsAndBold(text: string, keyOffset: number) {
   )
 }
 
-function renderInlineLinks(text: string, lang: Language = 'en') {
+function renderInlineLinks(
+  text: string,
+  lang: Language = 'en',
+  slug = ''
+) {
   const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\[[^\]]+\])/g)
   return parts.map((part, i) => {
     // Handle markdown links: [text](url)
@@ -263,14 +267,14 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
                 </code>
               )
             }
-            return renderUrlsAndBold(cp, j)
+            return renderUrlsAndBold(cp, j, slug)
           })}
         </span>
       )
     }
 
     // Handle bare URLs and **bold** markers (no backticks in this part)
-    return renderUrlsAndBold(part, i)
+    return renderUrlsAndBold(part, i, slug)
   })
 }
 
@@ -278,7 +282,7 @@ function isMarkdownTable(lines: string[]): boolean {
   return lines.length >= 2 && lines[0].includes('|') && lines[1].includes('|') && lines[1].includes('-')
 }
 
-function renderMarkdownTable(lines: string[], lang: Language): JSX.Element {
+function renderMarkdownTable(lines: string[], renderLinks: (text: string) => React.ReactNode): JSX.Element {
   const rows = lines.filter(line => line.trim()).map(line =>
     line.split('|').map(cell => cell.trim()).filter(Boolean)
   ).filter(row => row.length > 0)
@@ -305,7 +309,7 @@ function renderMarkdownTable(lines: string[], lang: Language): JSX.Element {
             <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
               {row.map((cell, j) => (
                 <td key={j} className="border border-gray-300 px-4 py-2 text-text-secondary">
-                  {renderInlineLinks(cell, lang)}
+                  {renderLinks(cell)}
                 </td>
               ))}
             </tr>
@@ -322,7 +326,7 @@ interface LightboxImage {
   caption?: string
 }
 
-function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language }) {
+function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
 
   return (
@@ -366,11 +370,11 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
           {(() => {
             const contentArray = Array.isArray(section.content) ? section.content : [section.content]
             if (isMarkdownTable(contentArray)) {
-              return renderMarkdownTable(contentArray, lang)
+              return renderMarkdownTable(contentArray, renderLinks)
             }
             return contentArray.map((para, i) => (
               <p key={i} className="text-text-secondary leading-relaxed">
-                {renderInlineLinks(para, lang)}
+                {renderLinks(para)}
               </p>
             ))
           })()}
@@ -655,6 +659,10 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
   const article = (langData ?? enData)
   const colors = THEME_COLORS[article.theme] ?? FALLBACK_THEME_COLOR
 
+  // Bound helper for rendering links
+  const renderLinks = (text: string) =>
+    renderInlineLinks(text, lang, slug)
+
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
       <div className="max-w-3xl mx-auto">
@@ -816,7 +824,7 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
           {Object.entries(article.sections).map(([key, section]) => {
             const sectionId = section.isTldr ? (section.id ?? 'key-takeaways') : (section.id ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined))
             return (
-              <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} />
+              <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
             )
           })}
         </article>

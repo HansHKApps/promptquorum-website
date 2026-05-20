@@ -7,7 +7,6 @@ import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { llmContent, type LLMSection } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
-import { trackOutboundClick, type OutboundPosition } from '@/lib/tracking/outbound'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
@@ -153,8 +152,7 @@ const PRESENTATION_UI: Record<Language, { heading: string; description: string; 
 function renderInlineLinks(
   text: string,
   lang: Language = 'en',
-  slug = '',
-  position: OutboundPosition = 'in-body'
+  slug = ''
 ) {
   const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\[[^\]]+\])/g)
   return parts.map((part, i) => {
@@ -169,11 +167,8 @@ function renderInlineLinks(
             key={i}
             href={url}
             target="_blank"
-            rel="nofollow noopener noreferrer"
+            rel="noopener noreferrer"
             className="text-primary font-medium hover:underline"
-            onClick={() => {
-              if (slug) trackOutboundClick({ url, article: slug, cluster: 'local-llms', lang, position })
-            }}
           >
             {label}
           </a>
@@ -209,11 +204,8 @@ function renderInlineLinks(
                 key={j}
                 href={seg}
                 target="_blank"
-                rel="nofollow noopener noreferrer"
+                rel="noopener noreferrer"
                 className="text-primary font-medium hover:underline break-all"
-                onClick={() => {
-                  if (slug) trackOutboundClick({ url: seg, article: slug, cluster: 'local-llms', lang, position })
-                }}
               >
                 {seg}
               </a>
@@ -639,9 +631,9 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
   const article = (langData ?? enData)
   const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Getting Started']
 
-  // Bound helper for rendering links with tracking
-  const renderLinks = (text: string, position: OutboundPosition = 'in-body') =>
-    renderInlineLinks(text, lang, slug, position)
+  // Bound helper for rendering links
+  const renderLinks = (text: string) =>
+    renderInlineLinks(text, lang, slug)
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
