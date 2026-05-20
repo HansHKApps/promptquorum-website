@@ -31,6 +31,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
   const current = languageCodes.find(l => l.code === currentLang) || languageCodes[0]
 
   const handleLanguageChange = (lang: Language) => {
+    window.umami?.track('language_switch', { from_lang: currentLang, to_lang: lang })
     // Path-prefix-routed clusters for ALL non-EN langs (e.g. power-local-llm).
     // Keep in sync with PATH_LOCALE_CLUSTERS in src/middleware.ts.
     const PATH_LOCALE_CLUSTERS = ['power-local-llm', 'prompt-bites']

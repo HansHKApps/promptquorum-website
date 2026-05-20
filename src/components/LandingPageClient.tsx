@@ -153,6 +153,7 @@ function WaitlistForm({ lang }: { lang: Lang }) {
         body: JSON.stringify({ email, consent: true, lang }),
       })
       if (!response.ok) throw new Error('Failed to submit')
+      window.umami?.track('waitlist_signup', { source_page: window.location.pathname })
       setStatus('confirming')
     } catch {
       setErrorMsg(w.errorMsg)
