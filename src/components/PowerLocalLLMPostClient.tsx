@@ -20,6 +20,7 @@ import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
+import { CopyButton } from '@/components/CopyButton'
 
 interface Props {
   slug: string
@@ -542,11 +543,14 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
       {section.codeBlock && (
         <div className="my-6">
           {section.codeLanguage && (
-            <div className="flex items-center gap-2 bg-gray-800 rounded-t-lg px-4 py-2 text-xs text-gray-400 font-mono">
-              <span className="w-2 h-2 rounded-full bg-red-400" />
-              <span className="w-2 h-2 rounded-full bg-yellow-400" />
-              <span className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="ml-2">{section.codeLanguage}</span>
+            <div className="flex items-center justify-between bg-gray-800 rounded-t-lg px-4 py-2 text-xs text-gray-400 font-mono">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-red-400" />
+                <span className="w-2 h-2 rounded-full bg-yellow-400" />
+                <span className="w-2 h-2 rounded-full bg-green-400" />
+                <span className="ml-2">{section.codeLanguage}</span>
+              </div>
+              <CopyButton text={section.codeBlock} />
             </div>
           )}
           <pre className={`bg-gray-900 text-gray-100 text-xs leading-relaxed p-5 overflow-x-auto ${section.codeLanguage ? 'rounded-b-lg' : 'rounded-lg'}`}>

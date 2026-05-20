@@ -7,12 +7,14 @@ import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { llmContent, type LLMSection } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
+import { trackOutboundClick, type OutboundPosition } from '@/lib/tracking/outbound'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
+import { CopyButton } from '@/components/CopyButton'
 
 interface Props {
   slug: string
@@ -148,7 +150,12 @@ const PRESENTATION_UI: Record<Language, { heading: string; description: string; 
 
 // Render inline link placeholders and markdown links [text](url)
 // Injects ?lang= query parameter for internal links when lang is not 'en'
-function renderInlineLinks(text: string, lang: Language = 'en') {
+function renderInlineLinks(
+  text: string,
+  lang: Language = 'en',
+  slug = '',
+  position: OutboundPosition = 'in-body'
+) {
   const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\[[^\]]+\])/g)
   return parts.map((part, i) => {
     // Handle markdown links: [text](url)
@@ -162,8 +169,11 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
             key={i}
             href={url}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="text-primary font-medium hover:underline"
+            onClick={() => {
+              if (slug) trackOutboundClick({ url, article: slug, cluster: 'local-llms', lang, position })
+            }}
           >
             {label}
           </a>
@@ -199,8 +209,11 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
                 key={j}
                 href={seg}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="text-primary font-medium hover:underline break-all"
+                onClick={() => {
+                  if (slug) trackOutboundClick({ url: seg, article: slug, cluster: 'local-llms', lang, position })
+                }}
               >
                 {seg}
               </a>
@@ -227,7 +240,7 @@ function isMarkdownTable(lines: string[]): boolean {
   return lines.length >= 2 && lines[0].includes('|') && lines[1].includes('|') && lines[1].includes('-')
 }
 
-function renderMarkdownTable(lines: string[], lang: Language): JSX.Element {
+function renderMarkdownTable(lines: string[], lang: Language, renderLinks: (text: string) => React.ReactNode): JSX.Element {
   const rows = lines.filter(line => line.trim()).map(line =>
     line.split('|').map(cell => cell.trim()).filter(Boolean)
   ).filter(row => row.length > 0)
@@ -254,7 +267,7 @@ function renderMarkdownTable(lines: string[], lang: Language): JSX.Element {
             <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
               {row.map((cell, j) => (
                 <td key={j} className="border border-gray-300 px-4 py-2 text-text-secondary">
-                  {renderInlineLinks(cell, lang)}
+                  {renderLinks(cell)}
                 </td>
               ))}
             </tr>
@@ -271,14 +284,14 @@ interface LightboxImage {
   caption?: string
 }
 
-function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language }) {
+function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
 
   return (
     <div className="mt-8" id={id}>
       {section.title && !section.isTldr && (
         <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
-          {renderInlineLinks(section.title, lang)}
+          {renderLinks(section.title)}
         </h2>
       )}
 
@@ -290,7 +303,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
             {section.items.map((item, i) => (
               <li key={i} className="flex gap-3 text-text-secondary text-sm">
                 <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-1.5 ${colors.dot}`} />
-                <span>{renderInlineLinks(item, lang)}</span>
+                <span>{renderLinks(item)}</span>
               </li>
             ))}
           </ul>
@@ -300,10 +313,10 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
       {/* Blockquote content */}
       {section.blockquote && (
         <blockquote className="border-l-4 border-primary/40 bg-primary/5 pl-5 py-3 my-6 text-text-secondary">
-          <p className="italic leading-relaxed">{renderInlineLinks(section.blockquote, lang)}</p>
+          <p className="italic leading-relaxed">{renderLinks(section.blockquote)}</p>
           {section.blockquoteSource && (
             <footer className="mt-2 text-xs font-semibold text-text-secondary not-italic opacity-75">
-              — {renderInlineLinks(section.blockquoteSource, lang)}
+              — {renderLinks(section.blockquoteSource)}
             </footer>
           )}
         </blockquote>
@@ -315,11 +328,11 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
           {(() => {
             const contentArray = Array.isArray(section.content) ? section.content : [section.content]
             if (isMarkdownTable(contentArray)) {
-              return renderMarkdownTable(contentArray, lang)
+              return renderMarkdownTable(contentArray, lang, renderLinks)
             }
             return contentArray.map((para, i) => (
               <p key={i} className="text-text-secondary leading-relaxed">
-                {renderInlineLinks(para, lang)}
+                {renderLinks(para)}
               </p>
             ))
           })()}
@@ -335,7 +348,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
                 {snippet.type === 'one-sentence' ? POST_UI.snippetOneSentence[lang] : POST_UI.snippetPlainTerms[lang]}
               </p>
               <p className="text-text-secondary text-sm leading-relaxed">
-                {renderInlineLinks(snippet.text, lang)}
+                {renderLinks(snippet.text)}
               </p>
             </div>
           ))}
@@ -353,7 +366,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
                   {example.label}
                 </p>
                 <blockquote className={`text-sm leading-relaxed italic ${isBad ? 'text-red-900' : 'text-green-900'}`}>
-                  &ldquo;{renderInlineLinks(example.text, lang)}&rdquo;
+                  &ldquo;{renderLinks(example.text)}&rdquo;
                 </blockquote>
               </div>
             )
@@ -382,7 +395,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
                 {section.decisionBlock.localIf.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-text-secondary">
                     <span className="flex-shrink-0 text-green-500 mt-0.5">•</span>
-                    <span>{renderInlineLinks(item, lang)}</span>
+                    <span>{renderLinks(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -394,7 +407,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
                 {section.decisionBlock.cloudIf.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-text-secondary">
                     <span className="flex-shrink-0 text-orange-500 mt-0.5">•</span>
-                    <span>{renderInlineLinks(item, lang)}</span>
+                    <span>{renderLinks(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -406,7 +419,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
                 {section.decisionBlock.quick.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-text-secondary">
                     <span className="flex-shrink-0 text-primary mt-0.5">→</span>
-                    <span>{renderInlineLinks(item, lang)}</span>
+                    <span>{renderLinks(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -421,7 +434,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
           {section.items.map((item, i) => (
             <li key={i} className="flex gap-3 text-text-secondary">
               <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
-              <span className="leading-relaxed">{renderInlineLinks(item, lang)}</span>
+              <span className="leading-relaxed">{renderLinks(item)}</span>
             </li>
           ))}
         </ul>
@@ -440,7 +453,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
                   {i + 1}
                 </span>
                 <div className="leading-relaxed pt-0.5">
-                  <span className="font-semibold">{renderInlineLinks(title, lang)}</span>
+                  <span className="font-semibold">{renderLinks(title)}</span>
                   {whyItMatters && (
                     <>
                       <br />
@@ -475,7 +488,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
                     const value = row[key] ?? row[col] ?? '—'
                     return (
                       <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
-                        {renderInlineLinks(value, lang)}
+                        {renderLinks(value)}
                       </td>
                     )
                   })}
@@ -486,7 +499,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
           <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
           {section.note && (
             <p className="text-sm text-text-secondary leading-relaxed mt-4 italic">
-              {renderInlineLinks(section.note, lang)}
+              {renderLinks(section.note)}
             </p>
           )}
         </div>
@@ -512,11 +525,14 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
       {section.codeBlock && (
         <div className="my-6">
           {section.codeLanguage && (
-            <div className="flex items-center gap-2 bg-gray-800 rounded-t-lg px-4 py-2 text-xs text-gray-400 font-mono">
-              <span className="w-2 h-2 rounded-full bg-red-400" />
-              <span className="w-2 h-2 rounded-full bg-yellow-400" />
-              <span className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="ml-2">{section.codeLanguage}</span>
+            <div className="flex items-center justify-between bg-gray-800 rounded-t-lg px-4 py-2 text-xs text-gray-400 font-mono">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-red-400" />
+                <span className="w-2 h-2 rounded-full bg-yellow-400" />
+                <span className="w-2 h-2 rounded-full bg-green-400" />
+                <span className="ml-2">{section.codeLanguage}</span>
+              </div>
+              <CopyButton text={section.codeBlock} />
             </div>
           )}
           <pre className={`bg-gray-900 text-gray-100 text-xs leading-relaxed p-5 overflow-x-auto ${section.codeLanguage ? 'rounded-b-lg' : 'rounded-lg'}`}>
@@ -584,7 +600,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
                 <p className="text-text-secondary text-sm">
                   <span className="mr-2">{icon}</span>
                   <span className="font-semibold">{callout.type.charAt(0).toUpperCase() + callout.type.slice(1)}:</span>{' '}
-                  {renderInlineLinks(callout.text, lang)}
+                  {renderLinks(callout.text)}
                 </p>
               </div>
             )
@@ -598,7 +614,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
           {section.faqs.map((faq, i) => (
             <div key={i} className="border border-primary/15 rounded-xl p-5">
               <h3 className="font-bold text-text-primary mb-2">{faq.q}</h3>
-              <p className="text-text-secondary leading-relaxed text-sm">{renderInlineLinks(faq.a, lang)}</p>
+              <p className="text-text-secondary leading-relaxed text-sm">{renderLinks(faq.a)}</p>
             </div>
           ))}
         </div>
@@ -622,6 +638,10 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
   const enData = articleData['en']!
   const article = (langData ?? enData)
   const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Getting Started']
+
+  // Bound helper for rendering links with tracking
+  const renderLinks = (text: string, position: OutboundPosition = 'in-body') =>
+    renderInlineLinks(text, lang, slug, position)
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
@@ -675,7 +695,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
             <span>·</span>
             <span>{article.readTime}</span>
             <span>·</span>
-            <span>{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
+            <span>{renderLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'])}</span>
           </div>
         </div>
 
@@ -683,7 +703,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         {article.leadAnswerBlock && (
           <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl px-5 py-4 mb-6">
             <p className="text-text-primary font-semibold leading-relaxed">
-              {renderInlineLinks(article.leadAnswerBlock, lang)}
+              {renderLinks(article.leadAnswerBlock)}
             </p>
           </div>
         )}
@@ -691,7 +711,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         {/* Article intro paragraph */}
         {article.intro && (
           <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
-            {renderInlineLinks(article.intro, lang)}
+            {renderLinks(article.intro)}
           </p>
         )}
 
@@ -719,7 +739,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
               {article.quickAnswer.bullets.map((bullet, i) => (
                 <li key={i} className="flex gap-3 text-sm text-text-secondary">
                   <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-1.5 ${colors.dot}`} />
-                  <span>{renderInlineLinks(bullet, lang)}</span>
+                  <span>{renderLinks(bullet)}</span>
                 </li>
               ))}
             </ul>
@@ -801,7 +821,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           {Object.entries(article.sections).map(([key, section]) => {
             const sectionId = section.isTldr ? (section.id ?? 'key-takeaways') : (section.id ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined))
             return (
-              <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} />
+              <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
             )
           })}
         </article>
