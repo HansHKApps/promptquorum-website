@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best LLM for AMD 5700X + RTX 3070 Ti?',
-        answer: 'With an RTX 3070 Ti (8 GB VRAM), Llama 3 8B Q4_K_M and Mistral 7B Q5_K_M are the best local LLMs. Both use ~6 GB VRAM and run at ~22–25 tok/s. The AMD Ryzen 7 5700X handles fast tokenization as a CPU fallback.',
+        answer: 'With an RTX 3070 Ti (8 GB VRAM), Llama 3 8B Q4_K_M and Mistral 7B Q5_K_M are the best local LLMs, both using ~6 GB VRAM and running at ~22-25 tok/s for fast inference. The AMD Ryzen 7 5700X handles fast tokenization as a CPU fallback.',
         bullets: [
           'Llama 3 8B Q4_K_M: ~6 GB VRAM, ~25 tok/s on RTX 3070 Ti',
           'Mistral 7B Q5_K_M: ~6 GB VRAM, strong reasoning per VRAM used',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Bestes LLM für AMD 5700X + RTX 3070 Ti?',
-        answer: 'Mit einer RTX 3070 Ti (8 GB VRAM) sind Llama 3 8B und Mistral 7B bei Q4_K_M die besten lokalen LLMs. Beide benötigen ~6 GB VRAM und laufen mit ~25 tok/s. Der AMD Ryzen 7 5700X übernimmt die schnelle Tokenisierung als CPU-Fallback.',
+        answer: 'Mit einer RTX 3070 Ti (8 GB VRAM) sind Llama 3 8B Q4_K_M und Mistral 7B Q5_K_M die besten lokalen LLMs, beide verwenden ~6 GB VRAM und laufen mit ~22-25 tok/s für schnelle Inferenz. Der AMD Ryzen 7 5700X übernimmt die schnelle Tokenisierung als CPU-Fallback.',
         bullets: [
           'Llama 3 8B Q4_K_M: ~6 GB VRAM, ~25 tok/s auf der RTX 3070 Ti',
           'Mistral 7B Q4_K_M: ~6 GB VRAM, starkes Reasoning pro genutztem VRAM',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleur LLM pour AMD 5700X + RTX 3070 Ti ?',
-        answer: 'Avec une RTX 3070 Ti (8 Go de VRAM), Llama 3 8B et Mistral 7B en Q4_K_M sont les meilleurs LLMs locaux. Les deux utilisent ~6 Go de VRAM et tournent à ~25 tok/s. Le AMD Ryzen 7 5700X assure une tokenisation rapide en fallback CPU.',
+        answer: 'Avec une RTX 3070 Ti (8 Go de VRAM), Llama 3 8B Q4_K_M et Mistral 7B Q5_K_M sont les meilleurs LLMs locaux, utilisant tous deux ~6 Go VRAM et tournant à ~22-25 tok/s pour inférence rapide. Le AMD Ryzen 7 5700X assure une tokenisation rapide en fallback CPU.',
         bullets: [
           'Llama 3 8B Q4_K_M : ~6 Go de VRAM, ~25 tok/s sur RTX 3070 Ti',
           'Mistral 7B Q4_K_M : ~6 Go de VRAM, excellent raisonnement par Go de VRAM',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'AMD 5700X + RTX 3070 Ti に最適な LLM は？',
-        answer: 'RTX 3070 Ti（8 GB VRAM）では、Q4_K_M の Llama 3 8B と Mistral 7B が最適なローカル LLM です。どちらも VRAM を約 6 GB 使用し、約 25 tok/s で動作します。AMD Ryzen 7 5700X は CPU フォールバックとして高速なトークン化を担います。',
+        answer: 'RTX 3070 Ti（8 GB VRAM）では、Llama 3 8B Q4_K_M と Mistral 7B Q5_K_M が最適なローカル LLM で、両者とも約6 GB VRAM で ~22-25 tok/s の高速推論を実現。AMD Ryzen 7 5700X は CPU フォールバックとして高速なトークン化を担います。',
         bullets: [
           'Llama 3 8B Q4_K_M：~6 GB VRAM、RTX 3070 Ti で ~25 tok/s',
           'Mistral 7B Q4_K_M：~6 GB VRAM、使用 VRAM あたりの推論品質が高い',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: 'AMD 5700X + RTX 3070 Ti 最适合哪款 LLM？',
-        answer: '搭配 RTX 3070 Ti（8 GB VRAM），Q4_K_M 量化的 Llama 3 8B 和 Mistral 7B 是最佳本地 LLM。两者均使用约 6 GB VRAM，运行速度约 25 tok/s。AMD Ryzen 7 5700X 作为 CPU 后备负责快速 tokenization。',
+        answer: '搭配 RTX 3070 Ti（8 GB VRAM），Llama 3 8B Q4_K_M 和 Mistral 7B Q5_K_M 是最佳本地 LLM，两者均使用约 6 GB VRAM，运行速度约 22-25 tok/s 实现快速推理。AMD Ryzen 7 5700X 作为 CPU 后备负责快速 tokenization。',
         bullets: [
           'Llama 3 8B Q4_K_M：~6 GB VRAM，RTX 3070 Ti 上约 25 tok/s',
           'Mistral 7B Q4_K_M：~6 GB VRAM，每 GB VRAM 推理能力出色',

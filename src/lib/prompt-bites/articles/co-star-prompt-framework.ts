@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What is the CO-STAR prompt framework?',
-        answer: 'CO-STAR is a six-part prompt structure: Context (background), Objective (task), Style (writing style), Tone (emotional register), Audience (who reads it), Response (output format). It helps produce consistent, targeted LLM output by making every constraint explicit.',
+        answer: 'CO-STAR is a six-part prompt structure for consistent LLM output: Context (background), Objective (task), Style (writing style), Tone (emotional register), Audience (who reads it), Response (output format). It helps produce targeted outputs by making every constraint explicit and reduces ambiguity in instructions.',
         bullets: [
           'C = Context: background information the LLM needs',
           'O = Objective: the specific task to complete',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Was ist das CO-STAR-Prompt-Framework?',
-        answer: 'CO-STAR ist eine sechsteilige Prompt-Struktur: Context (Hintergrund), Objective (Aufgabe), Style (Schreibstil), Tone (emotionaler Register), Audience (Leserschaft), Response (Ausgabeformat). Es hilft, konsistente, zielgerichtete LLM-Ausgaben zu erzeugen, indem jede Einschränkung explizit gemacht wird.',
+        answer: 'CO-STAR ist eine sechsteilige Prompt-Struktur für konsistente LLM-Ausgabe: Context (Hintergrund), Objective (Aufgabe), Style (Schreibstil), Tone (emotionaler Register), Audience (Leserschaft), Response (Ausgabeformat). Es produziert zielgerichtete Ausgaben, indem jede Einschränkung explizit gemacht wird und Mehrdeutigkeit in Anweisungen reduziert wird.',
         bullets: [
           'C = Context: Hintergrundinformationen, die das LLM benötigt',
           'O = Objective: die spezifische zu erledigende Aufgabe',
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Qu\'est-ce que le framework de prompt CO-STAR ?',
-        answer: 'CO-STAR est une structure de prompt en six parties : Context (contexte), Objective (objectif), Style (style d\'écriture), Tone (registre émotionnel), Audience (lecteurs cibles), Response (format de sortie). Il aide à produire des sorties LLM cohérentes et ciblées en rendant chaque contrainte explicite.',
+        answer: 'CO-STAR est une structure de prompt en six parties pour sorties LLM cohérentes : Context (contexte), Objective (objectif), Style (style d\'écriture), Tone (registre émotionnel), Audience (lecteurs cibles), Response (format de sortie). Elle produit des sorties ciblées en rendant chaque contrainte explicite et en réduisant l\'ambiguïté des instructions.',
         bullets: [
           'C = Context : informations de contexte dont le LLM a besoin',
           'O = Objective : la tâche spécifique à accomplir',
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'CO-STARプロンプトフレームワークとは何ですか？',
-        answer: 'CO-STARは6つの部分からなるプロンプト構造です：Context（背景）、Objective（目標）、Style（文体）、Tone（感情的な調子）、Audience（読者）、Response（出力形式）。すべての制約を明示することで、一貫した目的に合ったLLM出力を生み出すのに役立ちます。',
+        answer: 'CO-STARは一貫したLLM出力のための6部構成プロンプト構造です：Context（背景）、Objective（目標）、Style（文体）、Tone（感情的調子）、Audience（読者）、Response（出力形式）。すべての制約を明示してターゲット出力を生成し、指示の曖昧性を低減します。',
         bullets: [
           'C = Context：LLMが必要とする背景情報',
           'O = Objective：完了すべき具体的なタスク',
@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: 'CO-STAR 提示框架是什么？',
-        answer: 'CO-STAR 是一个六部分的提示结构：Context（背景）、Objective（目标）、Style（写作风格）、Tone（情感基调）、Audience（受众）、Response（输出格式）。它通过明确所有约束来帮助产生一致的、有针对性的 LLM 输出。',
+        answer: 'CO-STAR 是六部分提示结构，用于一致的 LLM 输出：Context（背景）、Objective（目标）、Style（写作风格）、Tone（情感基调）、Audience（受众）、Response（输出格式）。通过明确所有约束来产生有针对性的输出，减少指示中的歧义。',
         bullets: [
           'C = Context：LLM 需要的背景信息',
           'O = Objective：要完成的具体任务',

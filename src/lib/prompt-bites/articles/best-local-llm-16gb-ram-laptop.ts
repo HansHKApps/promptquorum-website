@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best local LLM for a 16 GB RAM laptop?',
-        answer: 'Llama 3 8B Q4_K_M is the best local LLM for a 16 GB RAM laptop without a dedicated GPU. It uses ~5 GB RAM and runs at ~5 tok/s on a modern CPU. Qwen 2.5 Coder 7B is the preferred alternative for Coding tasks. Apple Silicon laptops (M-series) are 3–4× faster via Unified Memory.',
+        answer: 'Llama 3 8B Q4_K_M is the best local LLM for a 16 GB RAM laptop without a dedicated GPU, using ~5 GB RAM and running ~5 tok/s on modern CPUs. It uses ~5 GB RAM and runs at ~5 tok/s on a modern CPU. Qwen 2.5 Coder 7B is the preferred alternative for Coding tasks. Apple Silicon laptops (M-series) are 3–4× faster via Unified Memory.',
         bullets: [
           'Llama 3 8B Q4_K_M: ~5 GB RAM, ~5 tok/s on CPU, balanced general purpose',
           'Qwen 2.5 Coder 7B Q4_K_M: ~5 GB RAM, ~5 tok/s on CPU, optimal for Coding',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop?',
-        answer: 'Llama 3 8B Q4_K_M ist das beste lokale LLM für einen 16-GB-RAM-Laptop ohne dedizierte GPU. Es benötigt ~5 GB RAM und läuft mit ~5 tok/s auf einem modernen CPU. Qwen 2.5 Coder 7B ist die bevorzugte Alternative für Coding-Aufgaben. Apple-Silicon-Laptops (M-Serie) sind durch Unified Memory bis zu 3–4× schneller.',
+        answer: 'Llama 3 8B Q4_K_M ist das beste lokale LLM für einen 16-GB-RAM-Laptop ohne dedizierte GPU und benötigt ~5 GB RAM mit ~5 tok/s auf modernen CPUs. Es benötigt ~5 GB RAM und läuft mit ~5 tok/s auf einem modernen CPU. Qwen 2.5 Coder 7B ist die bevorzugte Alternative für Coding-Aufgaben. Apple-Silicon-Laptops (M-Serie) sind durch Unified Memory bis zu 3–4× schneller.',
         bullets: [
           'Llama 3 8B Q4_K_M: ~5 GB RAM, ~5 tok/s auf CPU, ausgewogene Gesamtleistung',
           'Qwen 2.5 Coder 7B Q4_K_M: ~5 GB RAM, ~5 tok/s auf CPU, optimal für Coding',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM ?',
-        answer: 'Llama 3 8B Q4_K_M est le meilleur LLM local pour un laptop avec 16 Go de RAM sans GPU dédié. Il utilise ~5 Go de RAM et tourne à ~5 tok/s sur un CPU moderne. Qwen 2.5 Coder 7B est l\'alternative privilégiée pour les tâches de Coding. Les laptops Apple Silicon (série M) sont 3 à 4 fois plus rapides via la mémoire unifiée.',
+        answer: 'Llama 3 8B Q4_K_M est le meilleur LLM local pour un laptop avec 16 Go de RAM sans GPU dédié, utilisant ~5 Go de RAM et tournant à ~5 tok/s sur CPU moderne. Il utilise ~5 Go de RAM et tourne à ~5 tok/s sur un CPU moderne. Qwen 2.5 Coder 7B est l\'alternative privilégiée pour les tâches de Coding. Les laptops Apple Silicon (série M) sont 3 à 4 fois plus rapides via la mémoire unifiée.',
         bullets: [
           'Llama 3 8B Q4_K_M : ~5 Go de RAM, ~5 tok/s sur CPU, meilleur équilibre général',
           'Qwen 2.5 Coder 7B Q4_K_M : ~5 Go de RAM, ~5 tok/s sur CPU, optimal pour le Coding',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: '16 GB RAM ラップトップに最適なローカル LLM は？',
-        answer: '専用 GPU のない 16 GB RAM ラップトップでは、Llama 3 8B Q4_K_M が汎用ローカル LLM として最適です。~5 GB RAM を使用し、最新 x86 CPU で ~5 tok/s で動作します。Coding タスクには Qwen 2.5 Coder 7B が優先候補です。Apple Silicon ラップトップ（M シリーズ）はユニファイドメモリにより 3～4 倍高速です。',
+        answer: '専用 GPU のない 16 GB RAM ラップトップでは、Llama 3 8B Q4_K_M が汎用ローカル LLM として最適で、~5 GB RAM を使用し現代 CPU で ~5 tok/s で動作します。~5 GB RAM を使用し、最新 x86 CPU で ~5 tok/s で動作します。Coding タスクには Qwen 2.5 Coder 7B が優先候補です。Apple Silicon ラップトップ（M シリーズ）はユニファイドメモリにより 3～4 倍高速です。',
         bullets: [
           'Llama 3 8B Q4_K_M：~5 GB RAM、CPU で ~5 tok/s、汎用で最良バランス',
           'Qwen 2.5 Coder 7B Q4_K_M：~5 GB RAM、CPU で ~5 tok/s、Coding に最適',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '16 GB 内存笔记本最适合哪款本地 LLM？',
-        answer: '对于没有独立 GPU 的 16 GB 内存笔记本，Llama 3 8B Q4_K_M 是最佳本地 LLM。占用约 5 GB 内存，在现代 CPU 上约 5 tok/s。编程任务优先选择 Qwen 2.5 Coder 7B。Apple Silicon 笔记本（M 系列）通过统一内存快 3~4 倍。',
+        answer: '对于没有独立 GPU 的 16 GB 内存笔记本，Llama 3 8B Q4_K_M 是最佳本地 LLM，占用约 5 GB 内存且在现代 CPU 上约 5 tok/s。占用约 5 GB 内存，在现代 CPU 上约 5 tok/s。编程任务优先选择 Qwen 2.5 Coder 7B。Apple Silicon 笔记本（M 系列）通过统一内存快 3~4 倍。',
         bullets: [
           'Llama 3 8B Q4_K_M：~5 GB 内存，CPU 约 5 tok/s，综合最佳平衡',
           'Qwen 2.5 Coder 7B Q4_K_M：~5 GB 内存，CPU 约 5 tok/s，编程任务最优',

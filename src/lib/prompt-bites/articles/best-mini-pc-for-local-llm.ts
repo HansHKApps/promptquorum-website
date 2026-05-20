@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best mini PC for local LLM?',
-        answer: 'Three mini PCs stand out for local LLM inference: the Mac Mini M4 (fastest, ~18 tok/s), the Minisforum UM790 Pro (most RAM, 64 GB DDR5), and the Beelink SER8 (best value, Ryzen 9 8845HS CPU). All three run 7–13B Q4 models without a discrete GPU.',
+        answer: 'Three mini PCs stand out for local LLM inference: Mac Mini M4 delivers ~18 tok/s with unified memory and zero VRAM bottleneck, Minisforum UM790 Pro scales to 64 GB DDR5 for larger models, and Beelink SER8 offers value at ~8 tok/s with Ryzen 9 8845HS. All three run 7–13B Q4 models without a discrete GPU.',
         bullets: [
           'Mac Mini M4: fastest for LLMs, ~18 tok/s on Llama 3 8B, power-efficient',
           'Minisforum UM790 Pro: AMD Radeon 780M iGPU, up to 64 GB unified RAM',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Bester Mini-PC für lokale LLMs?',
-        answer: 'Drei Mini-PCs zeichnen sich für lokale LLM-Inferenz aus: der Mac Mini M4 (schnellster, ~18 tok/s), der Minisforum UM790 Pro (meister RAM, 64 GB DDR5) und der Beelink SER8 (bestes Preis-Leistungs-Verhältnis, Ryzen 9 8845HS CPU). Alle drei laufen 7–13B Q4-Modelle ohne diskrete GPU aus.',
+        answer: 'Drei Mini-PCs zeichnen sich aus: Mac Mini M4 liefert ~18 tok/s mit einheitlichem Speicher und ohne VRAM-Engpass, Minisforum UM790 Pro skaliert auf 64 GB DDR5 für größere Modelle, Beelink SER8 bietet Wert mit ~8 tok/s und Ryzen 9 8845HS. Alle drei laufen 7–13B Q4-Modelle ohne diskrete GPU aus.',
         bullets: [
           'Mac Mini M4: am schnellsten für LLMs, ~18 tok/s auf Llama 3 8B, energieeffizient',
           'Minisforum UM790 Pro: AMD Radeon 780M iGPU, bis zu 64 GB Unified RAM',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleur mini PC pour LLM local ?',
-        answer: 'Trois mini PC se distinguent pour l\'inférence LLM locale : le Mac Mini M4 (le plus rapide, ~18 tok/s), le Minisforum UM790 Pro (plus de RAM, 64 Go DDR5) et le Beelink SER8 (meilleur rapport qualité-prix, CPU Ryzen 9 8845HS). Les trois exécutent des modèles 7–13B Q4 sans GPU dédié.',
+        answer: 'Trois mini PC se distinguent : Mac Mini M4 délivre ~18 tok/s avec mémoire unifiée sans goulot VRAM, Minisforum UM790 Pro monte jusqu\'à 64 Go DDR5 pour modèles plus grands, Beelink SER8 offre valeur avec ~8 tok/s et Ryzen 9 8845HS. Les trois exécutent des modèles 7–13B Q4 sans GPU dédié.',
         bullets: [
           'Mac Mini M4 : le plus rapide pour les LLMs, ~18 tok/s sur Llama 3 8B, économe en énergie',
           'Minisforum UM790 Pro : iGPU AMD Radeon 780M, jusqu\'à 64 Go de RAM unifiée',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'ローカルLLMに最適なミニPCは？',
-        answer: 'ローカルLLM推論で3つのミニPCが目立ちます：Mac Mini M4（最速、~18 tok/s）、Minisforum UM790 Pro（最大RAM、64 GB DDR5）、Beelink SER8（最高コスパ、Ryzen 9 8845HS CPU）。3つすべて専用GPUなしで7–13B Q4モデルを実行可能です。',
+        answer: 'Mac Mini M4は統合メモリで~18 tok/sを提供し、VRAMボトルネックなし、Minisforum UM790 Proは大規模モデル向けに64 GB DDR5スケーリング、Beelink SER8はRyzen 9 8845HSで~8 tok/sの価値を提供。3つすべて専用GPUなしで7–13B Q4モデルを実行可能です。',
         bullets: [
           'Mac Mini M4：LLMに最速、Llama 3 8Bで~18 tok/s、省電力',
           'Minisforum UM790 Pro：AMD Radeon 780M iGPU、最大64 GBユニファイドRAM',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '本地 LLM 最佳迷你电脑是什么？',
-        answer: '三款迷你电脑在本地 LLM 推理中表现突出：Mac Mini M4（最快，~18 tok/s）、Minisforum UM790 Pro（最大内存，64 GB DDR5）和 Beelink SER8（最佳性价比，Ryzen 9 8845HS CPU）。三者均可无独立 GPU 运行 7–13B Q4 模型。',
+        answer: 'Mac Mini M4 以统一内存提供 ~18 tok/s，无 VRAM 瓶颈，Minisforum UM790 Pro 可扩展至 64 GB DDR5 运行更大模型，Beelink SER8 用 Ryzen 9 8845HS 提供 ~8 tok/s 的性价比。三者均可无独立 GPU 运行 7–13B Q4 模型。',
         bullets: [
           'Mac Mini M4：LLM 速度最快，Llama 3 8B 约 18 tok/s，节能',
           'Minisforum UM790 Pro：AMD Radeon 780M iGPU，最高 64 GB 统一内存',

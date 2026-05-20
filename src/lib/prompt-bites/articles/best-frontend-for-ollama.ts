@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best frontend for Ollama?',
-        answer: 'Open WebUI is the best Ollama frontend for most users. It is free, feature-rich, and runs as a Docker container. SillyTavern is better for roleplay. Jan adds a local model manager.',
+        answer: 'Open WebUI is the best Ollama frontend for most users, offering free access to a feature-rich interface with Docker deployment and RAG support. It is free, feature-rich, and runs as a Docker container. SillyTavern is better for roleplay. Jan adds a local model manager.',
         bullets: [
           'Open WebUI: best overall, Docker-based, ChatGPT-like UI',
           'SillyTavern: best for creative writing and roleplay',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Bestes Frontend für Ollama?',
-        answer: 'Open WebUI ist das beste Ollama-Frontend für die meisten Nutzer. Es ist kostenlos, funktionsreich und läuft als Docker-Container. SillyTavern eignet sich besser für Rollenspiele. Jan ergänzt einen lokalen Modell-Manager.',
+        answer: 'Open WebUI ist das beste Ollama-Frontend für die meisten Nutzer, mit kostenlosem Zugriff auf eine funktionsreiche Oberfläche, Docker-Unterstützung und RAG-Funktionen. Es ist kostenlos, funktionsreich und läuft als Docker-Container. SillyTavern eignet sich besser für Rollenspiele. Jan ergänzt einen lokalen Modell-Manager.',
         bullets: [
           'Open WebUI: insgesamt am besten, Docker-basiert, ChatGPT-ähnliche Oberfläche',
           'SillyTavern: am besten für kreatives Schreiben und Rollenspiele',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleur frontend pour Ollama ?',
-        answer: 'Open WebUI est le meilleur frontend Ollama pour la plupart des utilisateurs. Il est gratuit, riche en fonctionnalités et fonctionne comme un conteneur Docker. SillyTavern est préférable pour le jeu de rôle. Jan ajoute un gestionnaire de modèles local.',
+        answer: 'Open WebUI est le meilleur frontend Ollama pour la plupart des utilisateurs, avec accès gratuit à une interface riche, déploiement Docker et support RAG intégré. Il est gratuit, riche en fonctionnalités et fonctionne comme un conteneur Docker. SillyTavern est préférable pour le jeu de rôle. Jan ajoute un gestionnaire de modèles local.',
         bullets: [
           'Open WebUI : meilleur en général, basé sur Docker, interface similaire à ChatGPT',
           'SillyTavern : meilleur pour l\'écriture créative et le jeu de rôle',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'Ollamaに最適なフロントエンドは？',
-        answer: 'Open WebUIはほとんどのユーザーにとって最適なOllamaフロントエンドです。無料で機能豊富でDockerコンテナとして動作します。SillyTavernはロールプレイに最適です。Janはローカルモデルマネージャーを追加します。',
+        answer: 'Open WebUIはほとんどのユーザーにとって最適なOllamaフロントエンドで、無料で機能豊富な Docker ベースのインターフェースと RAG サポートを提供します。無料で機能豊富でDockerコンテナとして動作します。SillyTavernはロールプレイに最適です。Janはローカルモデルマネージャーを追加します。',
         bullets: [
           'Open WebUI：総合的に最優秀、Docker ベース、ChatGPT 風 UI',
           'SillyTavern：クリエイティブライティングとロールプレイに最適',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: 'Ollama 最佳前端是什么？',
-        answer: 'Open WebUI 是大多数用户的最佳 Ollama 前端。它免费、功能丰富，作为 Docker 容器运行。SillyTavern 更适合角色扮演。Jan 提供本地模型管理器。',
+        answer: 'Open WebUI 是大多数用户的最佳 Ollama 前端，提供免费的功能丰富的界面，Docker 部署以及内置 RAG 支持。它免费、功能丰富，作为 Docker 容器运行。SillyTavern 更适合角色扮演。Jan 提供本地模型管理器。',
         bullets: [
           'Open WebUI：综合最佳，基于 Docker，类似 ChatGPT 的界面',
           'SillyTavern：最适合创意写作和角色扮演',

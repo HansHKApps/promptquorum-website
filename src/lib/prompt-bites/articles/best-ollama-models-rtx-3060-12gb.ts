@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best Ollama models for RTX 3060 12 GB?',
-        answer: 'With 12 GB VRAM, the best general model is Llama 3 8B at Q5_K_M. For coding, use Qwen 2.5 Coder 14B at Q4_K_M. Both run at 20–30 tokens per second.',
+        answer: 'With 12 GB VRAM, the best general model is Llama 3 8B at Q5_K_M, delivering 20-30 tokens per second with balanced quality. For coding, use Qwen 2.5 Coder 14B at Q4_K_M. Both run at 20–30 tokens per second.',
         bullets: [
           'Llama 3 8B Q5_K_M: best general purpose on RTX 3060',
           'Qwen 2.5 Coder 14B Q4_K_M: best for coding',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Beste Ollama-Modelle für RTX 3060 12 GB?',
-        answer: 'Mit 12 GB VRAM ist das beste Allzweckmodell Llama 3 8B bei Q5_K_M. Für Coding verwenden Sie Qwen 2.5 Coder 14B bei Q4_K_M. Beide laufen mit 20–30 Token pro Sekunde.',
+        answer: 'Mit 12 GB VRAM ist das beste Allzweckmodell Llama 3 8B bei Q5_K_M, liefert 20-30 Tokens pro Sekunde mit ausgewogener Qualität. Für Coding verwenden Sie Qwen 2.5 Coder 14B bei Q4_K_M. Beide laufen mit 20–30 Token pro Sekunde.',
         bullets: [
           'Llama 3 8B Q5_K_M: bestes Allzweckmodell für RTX 3060',
           'Qwen 2.5 Coder 14B Q4_K_M: beste Wahl für Coding',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleurs modèles Ollama pour RTX 3060 12 Go ?',
-        answer: 'Avec 12 Go de VRAM, le meilleur modèle général est Llama 3 8B en Q5_K_M. Pour le code, utilisez Qwen 2.5 Coder 14B en Q4_K_M. Les deux tournent à 20–30 tokens par seconde.',
+        answer: 'Avec 12 Go de VRAM, le meilleur modèle général est Llama 3 8B en Q5_K_M, délivrant 20-30 tokens par seconde avec qualité équilibrée. Pour le code, utilisez Qwen 2.5 Coder 14B en Q4_K_M. Les deux tournent à 20–30 tokens par seconde.',
         bullets: [
           'Llama 3 8B Q5_K_M : meilleur usage général sur RTX 3060',
           'Qwen 2.5 Coder 14B Q4_K_M : meilleur pour le code',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'RTX 3060 12 GB向け最良Ollamaモデルは？',
-        answer: '12 GB VRAMでは、汎用最良モデルはQ5_K_MのLlama 3 8Bです。コーディングにはQ4_K_MのQwen 2.5 Coder 14Bを使用してください。どちらも20–30トークン/秒で動作します。',
+        answer: '12 GB VRAMでは、汎用最良モデルはQ5_K_MのLlama 3 8Bで、バランスの取れた品質で20-30トークン/秒を配信。コーディングにはQ4_K_MのQwen 2.5 Coder 14Bを使用してください。どちらも20–30トークン/秒で動作します。',
         bullets: [
           'Llama 3 8B Q5_K_M：RTX 3060での最良汎用モデル',
           'Qwen 2.5 Coder 14B Q4_K_M：コーディングに最適',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: 'RTX 3060 12 GB最佳Ollama模型？',
-        answer: '12 GB显存下，最佳通用模型是Q5_K_M的Llama 3 8B。编程用途选择Q4_K_M的Qwen 2.5 Coder 14B。两者均可达到20–30 tok/s。',
+        answer: '12 GB显存下，最佳通用模型是Q5_K_M的Llama 3 8B，提供20-30 tok/s平衡质量。编程用途选择Q4_K_M的Qwen 2.5 Coder 14B。两者均可达到20–30 tok/s。',
         bullets: [
           'Llama 3 8B Q5_K_M：RTX 3060最佳通用模型',
           'Qwen 2.5 Coder 14B Q4_K_M：编程最佳选择',

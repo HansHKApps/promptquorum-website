@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best LLM right now?',
-        answer: 'For cloud use: Claude Opus 4.7 leads on coding and long documents, GPT-5.5 Instant on general chat, Gemini 2.5 Pro on multimodal tasks. For local use: Llama 4 Scout if you have 24 GB VRAM; Qwen 2.5 14B for 12 GB VRAM.',
+        answer: 'For cloud coding tasks, Claude Opus 4.7 achieves 87.6% on SWE-Bench, while GPT-5.5 Instant leads general chat with 52.5% fewer hallucinations than prior versions. For cloud use: Claude Opus 4.7 leads on coding and long documents, GPT-5.5 Instant on general chat, Gemini 2.5 Pro on multimodal tasks. For local use: Llama 4 Scout if you have 24 GB VRAM; Qwen 2.5 14B for 12 GB VRAM.',
         bullets: [
           'Cloud general: GPT-5.5 Instant — ChatGPT default, 52.5% fewer hallucinations',
           'Cloud coding: Claude Opus 4.7 — 87.6% SWE-Bench Verified',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Welches LLM ist aktuell das beste?',
-        answer: 'Für Cloud-Nutzung: Claude Opus 4.7 führt bei Coding und langen Dokumenten, GPT-5.5 Instant bei allgemeinen Aufgaben, Gemini 2.5 Pro bei multimodalen Aufgaben. Lokal: Llama 4 Scout bei 24 GB VRAM; Qwen 2.5 14B für 12 GB VRAM.',
+        answer: 'Für Cloud-Coding-Aufgaben erreicht Claude Opus 4.7 87,6% auf SWE-Bench, während GPT-5.5 Instant bei allgemeinen Chats 52,5% weniger Halluzinationen als frühere Versionen aufweist. Für Cloud-Nutzung: Claude Opus 4.7 führt bei Coding und langen Dokumenten, GPT-5.5 Instant bei allgemeinen Aufgaben, Gemini 2.5 Pro bei multimodalen Aufgaben. Lokal: Llama 4 Scout bei 24 GB VRAM; Qwen 2.5 14B für 12 GB VRAM.',
         bullets: [
           'Cloud allgemein: GPT-5.5 Instant — ChatGPT Standard seit Mai 2026, 52,5% weniger Halluzinationen',
           'Cloud Coding: Claude Opus 4.7 — 87,6% SWE-Bench Verified',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM en ce moment ?',
-        answer: 'Pour le cloud : Claude Opus 4.7 domine le code et les longs documents, GPT-5.5 Instant la conversation générale, Gemini 2.5 Pro les tâches multimodales. En local : Llama 4 Scout avec 24 Go de VRAM ; Qwen 2.5 14B pour 12 Go de VRAM.',
+        answer: 'Pour le codage en cloud, Claude Opus 4.7 atteint 87,6% sur SWE-Bench, tandis que GPT-5.5 Instant réduit les hallucinations de 52,5% par rapport aux versions antérieures. Pour le cloud : Claude Opus 4.7 domine le code et les longs documents, GPT-5.5 Instant la conversation générale, Gemini 2.5 Pro les tâches multimodales. En local : Llama 4 Scout avec 24 Go de VRAM ; Qwen 2.5 14B pour 12 Go de VRAM.',
         bullets: [
           'Cloud général : GPT-5.5 Instant — ChatGPT standard depuis mai 2026, 52,5% moins d\'hallucinations',
           'Cloud code : Claude Opus 4.7 — 87,6% SWE-Bench Verified',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: '現在最良のLLMは何ですか？',
-        answer: 'クラウド利用では：Claude Opus 4.7がコーディングと長文書をリード、GPT-5.5 Instantが汎用チャット、Gemini 2.5 Proがマルチモーダルタスクを担当。ローカルでは：24GB VRAMあればLlama 4 Scout、12GB VRAMならQwen 2.5 14B。',
+        answer: 'クラウドコーディングタスクではClaude Opus 4.7がSWE-Benchで87.6%を達成し、GPT-5.5 Instantは前バージョンより52.5%幻覚を削減しています。クラウド利用では：Claude Opus 4.7がコーディングと長文書をリード、GPT-5.5 Instantが汎用チャット、Gemini 2.5 Proがマルチモーダルタスクを担当。ローカルでは：24GB VRAMあればLlama 4 Scout、12GB VRAMならQwen 2.5 14B。',
         bullets: [
           'クラウド汎用：GPT-5.5 Instant — ChatGPT標準（2026年5月〜）、幻覚を52.5%削減',
           'クラウドコーディング：Claude Opus 4.7 — SWE-Bench Verified 87.6%',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '当前最好的 LLM 是什么？',
-        answer: '云端：Claude Opus 4.7 在编程和长文档领先，GPT-5.5 Instant 适合通用对话，Gemini 2.5 Pro 适合多模态任务。本地：24GB VRAM 选 Llama 4 Scout；12 GB VRAM 选 Qwen 2.5 14B。',
+        answer: '云编程任务中，Claude Opus 4.7 在 SWE-Bench 上达成 87.6% 成绩，GPT-5.5 Instant 则在通用对话中降低幻觉 52.5%。云端：Claude Opus 4.7 在编程和长文档领先，GPT-5.5 Instant 适合通用对话，Gemini 2.5 Pro 适合多模态任务。本地：24GB VRAM 选 Llama 4 Scout；12 GB VRAM 选 Qwen 2.5 14B。',
         bullets: [
           '云端通用：GPT-5.5 Instant — ChatGPT 默认（2026 年 5 月起），幻觉减少 52.5%',
           '云端编程：Claude Opus 4.7 — SWE-Bench Verified 87.6%',

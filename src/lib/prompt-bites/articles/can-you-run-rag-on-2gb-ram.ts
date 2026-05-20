@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Can you run RAG on 2 GB RAM?',
-        answer: 'Yes — but only for small personal document sets. At 2 GB RAM, a viable RAG pipeline uses Llama 3.2 1B (~750 MB) with MiniLM-L6-v2 embeddings (~80 MB) and an in-memory vector store. Total ~1.3–1.5 GB fits on a 2 GB device. Larger models (7B+) and larger document sets (200+ pages) need 8 GB minimum.',
+        answer: 'Yes — but only for small personal document sets using Llama 3.2 1B (~750 MB) with MiniLM-L6-v2 embeddings (~80 MB) and an in-memory vector store fitting ~1.3–1.5 GB total on a 2 GB device. Larger models (7B+) and larger document sets (200+ pages) need 8 GB minimum.',
         bullets: [
           'Llama 3.2 1B Q4_K_M (~750 MB) + MiniLM-L6-v2 embeddings (~80 MB) fits 2 GB',
           'Document set must be under ~200 pages to stay within RAM',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Kann man RAG mit 2 GB RAM betreiben?',
-        answer: 'Ja — aber nur für kleine persönliche Dokumentensammlungen. Mit 2 GB RAM verwendet eine funktionsfähige RAG-Pipeline Llama 3.2 1B (~750 MB) mit MiniLM-L6-v2-Embeddings (~80 MB) und einem In-Memory-Vektorspeicher. Insgesamt ~1,3–1,5 GB passt auf ein 2-GB-Gerät. Größere Modelle (7B+) und größere Dokumentensammlungen (200+ Seiten) benötigen mindestens 8 GB.',
+        answer: 'Ja — aber nur für kleine persönliche Dokumentsammlungen mit Llama 3.2 1B (~750 MB), MiniLM-L6-v2-Embeddings (~80 MB) und Speichervektorstore insgesamt ~1,3–1,5 GB auf 2-GB-Gerät. Größere Modelle (7B+) und größere Dokumentsammlungen (200+ Seiten) benötigen mindestens 8 GB.',
         bullets: [
           'Llama 3.2 1B Q4_K_M (~750 MB) + MiniLM-L6-v2-Embeddings (~80 MB) passen in 2 GB',
           'Dokumentensammlung muss unter ~200 Seiten bleiben, um im RAM zu bleiben',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Peut-on exécuter RAG avec 2 Go de RAM ?',
-        answer: 'Oui — mais uniquement pour de petites collections de documents personnels. Avec 2 Go de RAM, un pipeline RAG viable utilise Llama 3.2 1B (~750 Mo) avec les embeddings MiniLM-L6-v2 (~80 Mo) et un vector store en mémoire. Au total ~1,3–1,5 Go tient sur un appareil de 2 Go. Les modèles plus grands (7B+) et les collections de documents plus importantes (200+ pages) nécessitent 8 Go minimum.',
+        answer: 'Oui — mais uniquement petites collections documents personnels avec Llama 3.2 1B (~750 Mo), embeddings MiniLM-L6-v2 (~80 Mo) et vector store mémoire total ~1,3–1,5 Go sur appareil 2 Go. Modèles plus grands (7B+) et collections plus importantes (200+ pages) nécessitent 8 Go minimum.',
         bullets: [
           'Llama 3.2 1B Q4_K_M (~750 Mo) + embeddings MiniLM-L6-v2 (~80 Mo) tient dans 2 Go',
           'La collection de documents doit faire moins de ~200 pages pour rester en RAM',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: '2 GB RAMでRAGを実行できますか？',
-        answer: 'はい — ただし小規模な個人ドキュメントセット限定です。2 GB RAMでは、Llama 3.2 1B（~750 MB）にMiniLM-L6-v2 Embeddings（~80 MB）とインメモリベクターストアを組み合わせた実用的なRAGパイプラインが可能です。合計~1.3–1.5 GBは2 GBデバイスに収まります。大型モデル（7B+）や大きなドキュメントセット（200ページ以上）には最低8 GBが必要です。',
+        answer: 'はい — ただしLlama 3.2 1B（~750 MB）とMiniLM-L6-v2 Embeddings（~80 MB）およびメモリベクターストアで合計~1.3–1.5 GBが2 GBデバイスに収まる小規模個人ドキュメント限定です。大型モデル（7B+）や大きなドキュメントセット（200ページ以上）には最低8 GBが必要です。',
         bullets: [
           'Llama 3.2 1B Q4_K_M（~750 MB）+ MiniLM-L6-v2 Embeddings（~80 MB）が2 GBに収まる',
           'ドキュメントセットはRAM内に収めるために~200ページ未満に制限する必要がある',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '2 GB 内存能运行 RAG 吗？',
-        answer: '可以 — 但仅限小型个人文档集。2 GB 内存下，可行的 RAG 管道使用 Llama 3.2 1B（~750 MB）配合 MiniLM-L6-v2 Embeddings（~80 MB）和内存向量数据库。总计 ~1.3–1.5 GB 可放入 2 GB 设备。更大的模型（7B+）和更大的文档集（200+ 页）至少需要 8 GB。',
+        answer: '可以 — 但仅限用 Llama 3.2 1B（~750 MB）、MiniLM-L6-v2 Embeddings（~80 MB）和内存向量存储合计 ~1.3–1.5 GB 放入 2 GB 设备的小型个人文档集。更大的模型（7B+）和更大的文档集（200+ 页）至少需要 8 GB。',
         bullets: [
           'Llama 3.2 1B Q4_K_M（~750 MB）+ MiniLM-L6-v2 Embeddings（~80 MB）可放入 2 GB',
           '文档集必须低于 ~200 页才能保持在 RAM 内',

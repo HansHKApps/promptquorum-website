@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .header { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; color: #FFFFFF; }
+      .row-alt { fill: #F7F2FA; }
+      .text-primary { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 13px; }
+      .text-code { fill: #1C1B1F; font-family: 'SF Mono', 'Monaco', monospace; font-size: 12px; }
+      .border { stroke: #E8DEF8; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="400"/>
+
+  <!-- Title -->
+  <text x="20" y="30" class="text-primary" style="font-size: 18px; font-weight: 600;">Référence rapide VRAM — Mai 2026</text>
+
+  <!-- Table header row -->
+  <rect x="20" y="45" width="760" height="28" class="header" rx="4"/>
+  <text x="30" y="63" class="header">Niveau VRAM</text>
+  <text x="140" y="63" class="header">Meilleur modèle</text>
+  <text x="380" y="63" class="header">Quantification</text>
+  <text x="570" y="63" class="header">Cas d'utilisation</text>
+
+  <!-- Row 1: 4GB -->
+  <rect x="20" y="73" width="760" height="26" class="row-alt" class="border"/>
+  <text x="30" y="91" class="text-primary" style="font-weight: 600;">4 GB</text>
+  <text x="140" y="91" class="text-code">Phi-4 Mini, Gemma 2B</text>
+  <text x="380" y="91" class="text-code">Q4_K_M</text>
+  <text x="570" y="91" class="text-primary">Tâches légères, inférence CPU</text>
+
+  <!-- Row 2: 6GB -->
+  <rect x="20" y="99" width="760" height="26" style="fill: #FFFFFF;" class="border"/>
+  <text x="30" y="117" class="text-primary" style="font-weight: 600;">6 GB</text>
+  <text x="140" y="117" class="text-code">Llama 3 8B, Mistral 7B</text>
+  <text x="380" y="117" class="text-code">Q4_K_M</text>
+  <text x="570" y="117" class="text-primary">Usage général, pipelines RAG</text>
+
+  <!-- Row 3: 8GB -->
+  <rect x="20" y="125" width="760" height="26" class="row-alt" class="border"/>
+  <text x="30" y="143" class="text-primary" style="font-weight: 600;">8 GB</text>
+  <text x="140" y="143" class="text-code">Llama 3 8B, Qwen 7B</text>
+  <text x="380" y="143" class="text-code">Q5_K_M, Q8_0</text>
+  <text x="570" y="143" class="text-primary">Inférence rapide, qualité prioritaire</text>
+
+  <!-- Row 4: 12GB -->
+  <rect x="20" y="151" width="760" height="26" style="fill: #FFFFFF;" class="border"/>
+  <text x="30" y="169" class="text-primary" style="font-weight: 600;">12 GB</text>
+  <text x="140" y="169" class="text-code">Llama 3 70B (Q4), Mixtral</text>
+  <text x="380" y="169" class="text-code">Q4_K_M</text>
+  <text x="570" y="169" class="text-primary">Grands modèles, traitement par lot</text>
+
+  <!-- Row 5: 16GB -->
+  <rect x="20" y="177" width="760" height="26" class="row-alt" class="border"/>
+  <text x="30" y="195" class="text-primary" style="font-weight: 600;">16 GB</text>
+  <text x="140" y="195" class="text-code">Llama 3 70B (Q5), Claude</text>
+  <text x="380" y="195" class="text-code">Q5_K_M, Q8_0</text>
+  <text x="570" y="195" class="text-primary">Inférence haute qualité</text>
+
+  <!-- Row 6: 24GB -->
+  <rect x="20" y="203" width="760" height="26" style="fill: #FFFFFF;" class="border"/>
+  <text x="30" y="221" class="text-primary" style="font-weight: 600;">24 GB</text>
+  <text x="140" y="221" class="text-code">Modèles en précision complète</text>
+  <text x="380" y="221" class="text-code">Q8_0, FP16</text>
+  <text x="570" y="221" class="text-primary">Déploiements en production</text>
+
+  <!-- Row 7: 48GB+ -->
+  <rect x="20" y="229" width="760" height="26" class="row-alt" class="border"/>
+  <text x="30" y="247" class="text-primary" style="font-weight: 600;">48 GB+</text>
+  <text x="140" y="247" class="text-code">Tous les modèles, plusieurs instances</text>
+  <text x="380" y="247" class="text-code">FP32, Multi-GPU</text>
+  <text x="570" y="247" class="text-primary">Entreprise, recherche</text>
+
+  <!-- Footer note -->
+  <text x="20" y="380" class="text-primary" style="font-size: 11px; fill: #79747E;">Remarque : Q4_K_M pour le meilleur équilibre vitesse/qualité. Q5_K_M/Q8_0 pour qualité prioritaire, Q3_K_M pour VRAM ultra-bas.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

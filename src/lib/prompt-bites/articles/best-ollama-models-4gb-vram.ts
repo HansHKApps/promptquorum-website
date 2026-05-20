@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best Ollama models for 4 GB VRAM?',
-        answer: '4 GB VRAM is tight but usable. Best options: Phi-4 Mini at Q4 (~3.2 GB), Gemma 2 2B (~1.5 GB), and SmolLM 1.7B (~1.0 GB). Llama 3 8B will not fit.',
+        answer: '4 GB VRAM is tight but usable with small models like Phi-4 Mini Q4 at ~3.2 GB, Gemma 2 2B at ~1.5 GB, and SmolLM 1.7B at ~1.0 GB for flexible allocation. Llama 3 8B will not fit.',
         bullets: [
           'Phi-4 Mini Q4: best quality in 4 GB (3.2 GB VRAM)',
           'Gemma 2 2B: fast and lightweight (1.5 GB)',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Beste Ollama-Modelle für 4 GB VRAM?',
-        answer: '4 GB VRAM ist eng, aber nutzbar. Beste Optionen: Phi-4 Mini bei Q4 (~3,2 GB), Gemma 2 2B (~1,5 GB) und SmolLM 1.7B (~1,0 GB). Llama 3 8B passt nicht.',
+        answer: '4 GB VRAM ist eng, aber mit kleinen Modellen wie Phi-4 Mini Q4 (~3,2 GB), Gemma 2 2B (~1,5 GB) und SmolLM 1.7B (~1,0 GB) für flexible Allokation nutzbar. Llama 3 8B passt nicht.',
         bullets: [
           'Phi-4 Mini Q4: beste Qualität bei 4 GB (3,2 GB VRAM)',
           'Gemma 2 2B: schnell und leichtgewichtig (1,5 GB)',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleurs modèles Ollama pour 4 Go de VRAM ?',
-        answer: '4 Go de VRAM est serré mais utilisable. Meilleures options : Phi-4 Mini en Q4 (~3,2 Go), Gemma 2 2B (~1,5 Go) et SmolLM 1.7B (~1,0 Go). Llama 3 8B ne rentrera pas.',
+        answer: '4 Go de VRAM est serré mais utilisable avec petits modèles comme Phi-4 Mini Q4 (~3,2 Go), Gemma 2 2B (~1,5 Go) et SmolLM 1.7B (~1,0 Go) pour allocation flexible. Llama 3 8B ne rentrera pas.',
         bullets: [
           'Phi-4 Mini Q4 : meilleure qualité en 4 Go (3,2 Go de VRAM)',
           'Gemma 2 2B : rapide et léger (1,5 Go)',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: '4 GB VRAM向け最良Ollamaモデルは？',
-        answer: '4 GB VRAMは制限がありますが使えます。最良の選択肢：Q4のPhi-4 Mini（~3.2 GB）、Gemma 2 2B（~1.5 GB）、SmolLM 1.7B（~1.0 GB）。Llama 3 8Bは収まりません。',
+        answer: '4 GB VRAMは制限がありますがPhi-4 Mini Q4（~3.2 GB）、Gemma 2 2B（~1.5 GB）、SmolLM 1.7B（~1.0 GB）など小型モデルで柔軟配分して使えます。Llama 3 8Bは収まりません。',
         bullets: [
           'Phi-4 Mini Q4: 4 GBで最高品質（3.2 GB VRAM）',
           'Gemma 2 2B: 高速で軽量（1.5 GB）',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '4 GB显存最佳Ollama模型？',
-        answer: '4 GB显存很紧张但可用。最佳选择：Q4的Phi-4 Mini（约3.2 GB）、Gemma 2 2B（约1.5 GB）、SmolLM 1.7B（约1.0 GB）。Llama 3 8B不适合。',
+        answer: '4 GB显存很紧张但可用小型模型如Phi-4 Mini Q4（约3.2 GB）、Gemma 2 2B（约1.5 GB）、SmolLM 1.7B（约1.0 GB）实现灵活分配。Llama 3 8B不适合。',
         bullets: [
           'Phi-4 Mini Q4: 4 GB下最高质量（3.2 GB显存）',
           'Gemma 2 2B: 快速轻量（1.5 GB）',

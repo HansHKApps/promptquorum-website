@@ -1,0 +1,87 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .title { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 22px; font-weight: 600; }
+      .subtitle { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; }
+      .text-body { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 13px; }
+      .text-secondary { fill: #79747E; font-family: system-ui, sans-serif; font-size: 12px; }
+      .icon-circle { fill: #EAE1FF; stroke: #6750A4; stroke-width: 2; }
+      .icon-text { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .topic-box { fill: #F7F2FA; stroke: #6750A4; stroke-width: 1.5; }
+      .topic-title { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 12px; font-weight: 600; }
+      .topic-count { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="400"/>
+
+  <!-- Hero Section -->
+  <text x="400" y="40" class="title" text-anchor="middle">Prompt Bites 中心</text>
+  <text x="400" y="60" class="subtitle" text-anchor="middle">30个本地LLM用户快速参考指南</text>
+
+  <!-- Icon circles for main topics -->
+  <circle class="icon-circle" cx="100" cy="110" r="28"/>
+  <text x="100" y="115" class="icon-text" text-anchor="middle">显存</text>
+
+  <circle class="icon-circle" cx="220" cy="110" r="28"/>
+  <text x="220" y="115" class="icon-text" text-anchor="middle">量化</text>
+
+  <circle class="icon-circle" cx="340" cy="110" r="28"/>
+  <text x="340" y="115" class="icon-text" text-anchor="middle">模型</text>
+
+  <circle class="icon-circle" cx="460" cy="110" r="28"/>
+  <text x="460" y="115" class="icon-text" text-anchor="middle">工具</text>
+
+  <circle class="icon-circle" cx="580" cy="110" r="28"/>
+  <text x="580" y="115" class="icon-text" text-anchor="middle">硬件</text>
+
+  <circle class="icon-circle" cx="700" cy="110" r="28"/>
+  <text x="700" y="115" class="icon-text" text-anchor="middle">配置</text>
+
+  <!-- Topic boxes -->
+  <!-- Row 1 -->
+  <rect x="30" y="160" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="45" y="180" class="topic-title">显存分配</text>
+  <text x="45" y="198" class="topic-count">8篇关于内存分配的文章</text>
+  <text x="45" y="213" class="text-secondary">不同模型大小需要多少显存?</text>
+  <text x="45" y="228" class="text-secondary">显存分级、预算级vs企业级、</text>
+  <text x="45" y="243" class="text-secondary">RAM vs 显存</text>
+
+  <rect x="290" y="160" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="305" y="180" class="topic-title">量化</text>
+  <text x="305" y="198" class="topic-count">6篇关于压缩的文章</text>
+  <text x="305" y="213" class="text-secondary">Q3_K_M、Q4_K_M、Q5_K_M、Q8_0</text>
+  <text x="305" y="228" class="text-secondary">质量与大小的权衡、</text>
+  <text x="305" y="243" class="text-secondary">量化基础与格式</text>
+
+  <rect x="550" y="160" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="565" y="180" class="topic-title">Ollama 模型</text>
+  <text x="565" y="198" class="topic-count">6篇关于模型选择的文章</text>
+  <text x="565" y="213" class="text-secondary">按分级的顶级Ollama模型、</text>
+  <text x="565" y="228" class="text-secondary">最佳开源LLM、</text>
+  <text x="565" y="243" class="text-secondary">2026年模型推荐</text>
+
+  <!-- Row 2 -->
+  <rect x="30" y="270" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="45" y="290" class="topic-title">工具对比</text>
+  <text x="45" y="308" class="topic-count">5篇关于软件的文章</text>
+  <text x="45" y="323" class="text-secondary">Ollama vs LM Studio vs Jan、</text>
+  <text x="45" y="338" class="text-secondary">本地LLM对比、选择适合</text>
+  <text x="45" y="353" class="text-secondary">您的使用场景的工具</text>
+
+  <rect x="290" y="270" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="305" y="290" class="topic-title">模型对比</text>
+  <text x="305" y="308" class="topic-count">4篇关于模型对比的文章</text>
+  <text x="305" y="323" class="text-secondary">Qwen vs Llama vs Mistral、</text>
+  <text x="305" y="338" class="text-secondary">Qwen Coder vs DeepSeek、</text>
+  <text x="305" y="353" class="text-secondary">代码生成模型2026</text>
+
+  <rect x="550" y="270" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="565" y="290" class="topic-title">硬件 &amp; 配置</text>
+  <text x="565" y="308" class="topic-count">5篇关于基础设施的文章</text>
+  <text x="565" y="323" class="text-secondary">最佳预算GPU、RTX vs A100、</text>
+  <text x="565" y="338" class="text-secondary">CPU推理、Docker配置、</text>
+  <text x="565" y="353" class="text-secondary">多GPU配置</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best local LLM for coding with 12 GB VRAM?',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_M is the best coding model for 12 GB VRAM GPUs like the RTX 3060. It uses ~10 GB VRAM and scores highest on HumanEval among models that fit this constraint. DeepSeek Coder 14B is a strong alternative.',
+        answer: 'Qwen 2.5 Coder 14B Q4_K_M is the best coding model for 12 GB VRAM GPUs, achieving the highest HumanEval scores among 14B models while using ~10 GB VRAM on RTX 3060 and RTX 3080 Ti. It uses ~10 GB VRAM and scores highest on HumanEval among models that fit this constraint. DeepSeek Coder 14B is a strong alternative.',
         bullets: [
           'Qwen 2.5 Coder 14B Q4_K_M: ~10 GB VRAM, top coding benchmark for this size',
           'DeepSeek Coder 14B Q4_K_M: similar VRAM, competitive on code completion',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Bestes lokales LLM für Coding mit 12 GB VRAM?',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_M ist das beste Coding-Modell für 12-GB-VRAM-GPUs wie die RTX 3060. Es benötigt ~10 GB VRAM und erzielt den höchsten HumanEval-Score unter Modellen, die in dieses Limit passen. DeepSeek Coder 14B ist eine starke Alternative.',
+        answer: 'Qwen 2.5 Coder 14B Q4_K_M ist das beste Coding-Modell für 12-GB-VRAM-GPUs, erreicht die höchsten HumanEval-Scores unter 14B-Modellen und benötigt ~10 GB VRAM auf RTX 3060 und RTX 3080 Ti. Es benötigt ~10 GB VRAM und erzielt den höchsten HumanEval-Score unter Modellen, die in dieses Limit passen. DeepSeek Coder 14B ist eine starke Alternative.',
         bullets: [
           'Qwen 2.5 Coder 14B Q4_K_M: ~10 GB VRAM, bester Coding-Benchmark für diese Größe',
           'DeepSeek Coder 14B Q4_K_M: ähnlicher VRAM, wettbewerbsfähig bei Code-Vervollständigung',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleur LLM local pour le coding avec 12 Go de VRAM ?',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_M est le meilleur modèle de coding pour les GPU 12 Go de VRAM comme la RTX 3060. Il utilise ~10 Go de VRAM et obtient le meilleur score HumanEval parmi les modèles qui tiennent dans cette contrainte. DeepSeek Coder 14B est une alternative solide.',
+        answer: 'Qwen 2.5 Coder 14B Q4_K_M est le meilleur modèle de coding pour les GPU 12 Go, obtient les meilleurs scores HumanEval parmi les modèles 14B tout en utilisant ~10 Go de VRAM sur RTX 3060 et RTX 3080 Ti. Il utilise ~10 Go de VRAM et obtient le meilleur score HumanEval parmi les modèles qui tiennent dans cette contrainte. DeepSeek Coder 14B est une alternative solide.',
         bullets: [
           'Qwen 2.5 Coder 14B Q4_K_M : ~10 Go de VRAM, meilleur benchmark de coding pour cette taille',
           'DeepSeek Coder 14B Q4_K_M : VRAM similaire, compétitif sur la complétion de code',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: '12 GB VRAMでコーディングに最適なローカルLLMは？',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_MはRTX 3060などの12 GB VRAM GPUに最適なコーディングモデルです。~10 GB VRAMを使用し、この制約に収まるモデルの中でHumanEvalスコアが最高です。DeepSeek Coder 14Bは強力な代替です。',
+        answer: 'Qwen 2.5 Coder 14B Q4_K_MはRTX 3060とRTX 3080 Ti上で12 GB VRAMの最良コーディングモデルで、14Bモデル中で最高のHumanEvalスコアを達成しながら~10 GB VRAMを使用します。~10 GB VRAMを使用し、この制約に収まるモデルの中でHumanEvalスコアが最高です。DeepSeek Coder 14Bは強力な代替です。',
         bullets: [
           'Qwen 2.5 Coder 14B Q4_K_M：~10 GB VRAM、このサイズでコーディングベンチマーク最高',
           'DeepSeek Coder 14B Q4_K_M：同様のVRAM、コード補完で競争力あり',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '12 GB VRAM 编程最佳本地 LLM 是哪款？',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_M 是 RTX 3060 等12 GB VRAM 显卡的最佳编程模型。使用约10 GB VRAM，在符合此约束的模型中 HumanEval 得分最高。DeepSeek Coder 14B 是有力替代。',
+        answer: 'Qwen 2.5 Coder 14B Q4_K_M 是12 GB VRAM显卡的最佳编程模型，在14B模型中 HumanEval 得分最高，RTX 3060和RTX 3080 Ti上仅占约10 GB VRAM。使用约10 GB VRAM，在符合此约束的模型中 HumanEval 得分最高。DeepSeek Coder 14B 是有力替代。',
         bullets: [
           'Qwen 2.5 Coder 14B Q4_K_M：~10 GB VRAM，该尺寸编程基准最高分',
           'DeepSeek Coder 14B Q4_K_M：VRAM 相近，代码补全竞争力强',

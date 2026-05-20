@@ -1,0 +1,76 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .title { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 18px; font-weight: 600; }
+      .box-start { fill: #6750A4; }
+      .box-decision { fill: #EAE1FF; stroke: #6750A4; stroke-width: 2; }
+      .box-result { fill: #F7F2FA; stroke: #6750A4; stroke-width: 2; }
+      .text-white { fill: #FFFFFF; font-family: system-ui, sans-serif; font-size: 12px; font-weight: 600; text-anchor: middle; }
+      .text-dark { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 12px; text-anchor: middle; }
+      .text-label { fill: #79747E; font-family: system-ui, sans-serif; font-size: 11px; }
+      .line { stroke: #6750A4; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="400"/>
+
+  <!-- Title -->
+  <text x="400" y="30" class="title" text-anchor="middle">Quantization Decision Tree</text>
+
+  <!-- Start: Do you need high quality? -->
+  <rect x="300" y="50" width="200" height="50" class="box-start" rx="8"/>
+  <text x="400" y="82" class="text-white">Quality important?</text>
+
+  <!-- Branch YES - left -->
+  <line class="line" x1="350" y1="100" x2="250" y2="140"/>
+  <text x="280" y="130" class="text-label">YES</text>
+
+  <!-- Decision: VRAM >= 8GB? -->
+  <rect x="150" y="140" width="200" height="50" class="box-decision" rx="8"/>
+  <text x="250" y="172" class="text-dark">VRAM ≥ 8 GB?</text>
+
+  <!-- YES -> Q8_0 or Q5_K_M -->
+  <line class="line" x1="225" y1="190" x2="150" y2="230"/>
+  <text x="180" y="220" class="text-label">YES</text>
+  <rect x="80" y="230" width="140" height="45" class="box-result" rx="6"/>
+  <text x="150" y="250" class="text-dark" style="font-weight: 600;">Q8_0</text>
+  <text x="150" y="265" class="text-dark" style="font-size: 10px;">Best quality output</text>
+
+  <!-- NO -> Q5_K_M -->
+  <line class="line" x1="225" y1="190" x2="280" y2="230"/>
+  <text x="240" y="220" class="text-label">NO</text>
+  <rect x="210" y="230" width="140" height="45" class="box-result" rx="6"/>
+  <text x="280" y="250" class="text-dark" style="font-weight: 600;">Q5_K_M</text>
+  <text x="280" y="265" class="text-dark" style="font-size: 10px;">Good balance</text>
+
+  <!-- Branch NO - right -->
+  <line class="line" x1="450" y1="100" x2="550" y2="140"/>
+  <text x="510" y="130" class="text-label">NO</text>
+
+  <!-- Decision: VRAM <= 4GB? -->
+  <rect x="450" y="140" width="200" height="50" class="box-decision" rx="8"/>
+  <text x="550" y="172" class="text-dark">VRAM ≤ 4 GB?</text>
+
+  <!-- YES -> Q3_K_M -->
+  <line class="line" x1="525" y1="190" x2="450" y2="230"/>
+  <text x="475" y="220" class="text-label">YES</text>
+  <rect x="380" y="230" width="140" height="45" class="box-result" rx="6"/>
+  <text x="450" y="250" class="text-dark" style="font-weight: 600;">Q3_K_M</text>
+  <text x="450" y="265" class="text-dark" style="font-size: 10px;">Ultra-low VRAM</text>
+
+  <!-- NO -> Q4_K_M -->
+  <line class="line" x1="575" y1="190" x2="650" y2="230"/>
+  <text x="600" y="220" class="text-label">NO</text>
+  <rect x="580" y="230" width="140" height="45" class="box-result" rx="6"/>
+  <text x="650" y="250" class="text-dark" style="font-weight: 600;">Q4_K_M</text>
+  <text x="650" y="265" class="text-dark" style="font-size: 10px;">Best default</text>
+
+  <!-- Footer key -->
+  <rect x="20" y="310" width="760" height="70" style="fill: #F7F2FA; stroke: #E8DEF8; stroke-width: 1;" rx="4"/>
+  <text x="30" y="328" class="text-dark" style="font-weight: 600;">Quantization Guide:</text>
+  <text x="30" y="345" class="text-dark" style="font-size: 11px;">• Q3_K_M: Extreme compression (2-3 GB), lower quality for large models</text>
+  <text x="30" y="360" class="text-dark" style="font-size: 11px;">• Q4_K_M: Recommended default — 4-8 GB, excellent quality trade-off</text>
+  <text x="30" y="375" class="text-dark" style="font-size: 11px;">• Q5_K_M: 8-12 GB, near-original quality  •  Q8_0: 12+ GB, maximum quality</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

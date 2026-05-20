@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best local LLM for 6 GB VRAM?',
-        answer: 'With 6 GB VRAM, Llama 3 8B Q4_K_M is the top pick at ~5.5 GB. Phi-4 Q4_K_M and Mistral 7B Q4_K_S are solid alternatives.',
+        answer: 'With 6 GB VRAM, Llama 3 8B Q4_K_M is the top pick at ~5.5 GB with excellent chat and coding capabilities at ~20 tok/s. Phi-4 Q4_K_M and Mistral 7B Q4_K_S are solid alternatives.',
         bullets: [
           'Llama 3 8B Q4_K_M: best overall for 6 GB (5.5 GB VRAM)',
           'Phi-4 Q4_K_M: best for instruction following',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Bestes lokales LLM für 6 GB VRAM?',
-        answer: 'Mit 6 GB VRAM ist Llama 3 8B Q4_K_M die erste Wahl mit ~5,5 GB. Phi-4 Q4_K_M und Mistral 7B Q4_K_S sind solide Alternativen.',
+        answer: 'Mit 6 GB VRAM ist Llama 3 8B Q4_K_M die erste Wahl mit ~5,5 GB, bietet hervorragende Chat- und Coding-Fähigkeiten bei ~20 tok/s. Phi-4 Q4_K_M und Mistral 7B Q4_K_S sind solide Alternativen.',
         bullets: [
           'Llama 3 8B Q4_K_M: beste Gesamtwahl für 6 GB (5,5 GB VRAM)',
           'Phi-4 Q4_K_M: beste Wahl für Instruction Following',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local pour 6 Go de VRAM ?',
-        answer: 'Avec 6 Go de VRAM, Llama 3 8B Q4_K_M est le meilleur choix à ~5,5 Go. Phi-4 Q4_K_M et Mistral 7B Q4_K_S sont de bonnes alternatives.',
+        answer: 'Avec 6 Go de VRAM, Llama 3 8B Q4_K_M est le meilleur choix à ~5,5 Go avec des capacités excellentes pour chat et code à ~20 tok/s. Phi-4 Q4_K_M et Mistral 7B Q4_K_S sont de bonnes alternatives.',
         bullets: [
           'Llama 3 8B Q4_K_M : meilleur choix global pour 6 Go (5,5 Go VRAM)',
           'Phi-4 Q4_K_M : meilleur pour le suivi d\'instructions',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: '6 GB VRAMに最適なローカルLLMは？',
-        answer: '6 GB VRAMでは、Llama 3 8B Q4_K_M（約5.5 GB）が最もおすすめです。Phi-4 Q4_K_MとMistral 7B Q4_K_Sも優れた選択肢です。',
+        answer: '6 GB VRAMでは、Llama 3 8B Q4_K_M（約5.5 GB）が最もおすすめで、~20 tok/sのチャットとコーディング性能に優れています。Phi-4 Q4_K_MとMistral 7B Q4_K_Sも優れた選択肢です。',
         bullets: [
           'Llama 3 8B Q4_K_M：6 GBで最高の総合性能（5.5 GB VRAM）',
           'Phi-4 Q4_K_M：指示追従タスクに最適',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '6 GB显存最佳本地LLM是什么？',
-        answer: '6 GB显存首选Llama 3 8B Q4_K_M（约5.5 GB）。Phi-4 Q4_K_M和Mistral 7B Q4_K_S也是可靠的备选方案。',
+        answer: '6 GB显存首选Llama 3 8B Q4_K_M（约5.5 GB），在~20 tok/s速度下提供卓越的聊天和编码能力。Phi-4 Q4_K_M和Mistral 7B Q4_K_S也是可靠的备选方案。',
         bullets: [
           'Llama 3 8B Q4_K_M：6 GB下综合表现最佳（5.5 GB显存）',
           'Phi-4 Q4_K_M：指令执行任务最佳',

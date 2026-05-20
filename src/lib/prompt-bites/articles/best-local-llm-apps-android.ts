@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best local LLM apps for Android?',
-        answer: 'The top Android apps for running LLMs locally are MLC Chat, Pocketpal, and Termux with Ollama. MLC Chat is the easiest for beginners. All run fully offline.',
+        answer: 'The top Android apps for running LLMs locally are MLC Chat for easy setup with preoptimized models, Pocketpal for flexible GGUF loading, and Termux with Ollama for full control. All run fully offline.',
         bullets: [
           'MLC Chat: easiest setup, preoptimized models for Android',
           'Pocketpal: flexible GGUF model loading',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Die besten lokalen LLM-Apps für Android?',
-        answer: 'Die besten Android-Apps für den lokalen LLM-Betrieb sind MLC Chat, Pocketpal und Termux mit Ollama. MLC Chat ist am einfachsten für Einsteiger. Alle laufen vollständig offline.',
+        answer: 'Die besten Android-Apps für lokale LLM sind MLC Chat für einfache Einrichtung mit voroptimiertem Modellen, Pocketpal für flexibles GGUF-Laden und Termux mit Ollama für vollständige Kontrolle. Alle laufen vollständig offline.',
         bullets: [
           'MLC Chat: einfachste Einrichtung, voroptimierte Modelle für Android',
           'Pocketpal: flexibles GGUF-Modell-Laden',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleures applications LLM locales pour Android ?',
-        answer: 'Les meilleures applications Android pour exécuter des LLMs localement sont MLC Chat, Pocketpal et Termux avec Ollama. MLC Chat est la plus facile pour les débutants. Toutes fonctionnent entièrement hors ligne.',
+        answer: 'Les meilleures applications Android pour LLMs locaux sont MLC Chat pour configuration facile avec modèles préoptimisés, Pocketpal pour chargement flexible GGUF, et Termux avec Ollama pour contrôle total. Toutes fonctionnent entièrement hors ligne.',
         bullets: [
           'MLC Chat : configuration la plus simple, modèles préoptimisés pour Android',
           'Pocketpal : chargement de modèles GGUF flexible',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'Androidで最良のローカルLLMアプリは？',
-        answer: 'ローカルLLMを実行するAndroidの最良アプリはMLC Chat、Pocketpal、Termux + Ollamaです。MLC Chatは初心者に最も簡単です。すべて完全オフラインで動作します。',
+        answer: 'Android向けローカルLLM実行アプリの最良選択肢はMLC Chat（簡単セットアップと最適化済みモデル）、Pocketpal（柔軟なGGUF読み込み）、Termux + Ollama（フル制御）です。すべて完全オフラインで動作します。',
         bullets: [
           'MLC Chat：最も簡単なセットアップ、Android向け最適化済みモデル',
           'Pocketpal：柔軟なGGUFモデル読み込み',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: 'Android 上最好的本地 LLM 应用？',
-        answer: '在 Android 上运行本地 LLM 的最佳应用是 MLC Chat、Pocketpal 和 Termux + Ollama。MLC Chat 对初学者最简单。所有应用均可完全离线运行。',
+        answer: 'Android 上运行本地 LLM 的最佳应用是 MLC Chat（简便设置和预优化模型）、Pocketpal（灵活 GGUF 加载）和 Termux + Ollama（完全控制）。所有应用均可完全离线运行。',
         bullets: [
           'MLC Chat：最简单的安装，Android 预优化模型',
           'Pocketpal：灵活的 GGUF 模型加载',

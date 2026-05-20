@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'How much RAM does a 7B model need?',
-        answer: 'A 7B model at Q4 quantization needs 5–6 GB of VRAM or RAM. Rule of thumb: model parameters in billions × 0.7 = approximate GB needed at Q4.',
+        answer: 'A 7B model at Q4 quantization needs 5–6 GB of VRAM or RAM for efficient inference performance. Rule of thumb: model parameters in billions × 0.7 = approximate GB needed at Q4. GPU delivers ~25 tok/s; CPU delivers ~5 tok/s on same memory.',
         bullets: [
           '7B Q4: 5–6 GB VRAM or unified memory',
           '7B Q5: 6–7 GB VRAM',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Wie viel RAM braucht ein 7B-Modell?',
-        answer: 'Ein 7B-Modell bei Q4-Quantisierung benötigt 5–6 GB VRAM oder RAM. Daumenregel: Modellparameter in Milliarden × 0,7 = ungefähre GB bei Q4.',
+        answer: 'Ein 7B-Modell bei Q4-Quantisierung benötigt 5–6 GB VRAM oder RAM für effiziente Inferenzleistung. Daumenregel: Modellparameter in Milliarden × 0,7 = ungefähre GB bei Q4. GPU liefert ~25 tok/s; CPU liefert ~5 tok/s bei gleichem Speicher.',
         bullets: [
           '7B Q4: 5–6 GB VRAM oder Unified Memory',
           '7B Q5: 6–7 GB VRAM',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'De combien de RAM a besoin un modèle 7B ?',
-        answer: 'Un modèle 7B en quantisation Q4 nécessite 5–6 Go de VRAM ou de RAM. Règle de calcul : paramètres en milliards × 0,7 = Go approximatifs en Q4.',
+        answer: 'Un modèle 7B en quantisation Q4 nécessite 5–6 Go VRAM ou RAM pour performance inférence efficace. Règle calcul : paramètres milliards × 0,7 = Go approx en Q4. GPU donne ~25 tok/s; CPU donne ~5 tok/s même mémoire.',
         bullets: [
           '7B Q4 : 5–6 Go de VRAM ou de mémoire unifiée',
           '7B Q5 : 6–7 Go de VRAM',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: '7Bモデルにはどれくらいのメモリが必要ですか？',
-        answer: 'Q4量化の7Bモデルには5–6 GBのVRAMまたはRAMが必要です。目安：モデルパラメータ数（十億単位）× 0.7 = Q4での概算GB。',
+        answer: 'Q4量化の7Bモデルは効率的推論のため5–6 GBのVRAMまたはRAMが必要。目安：モデルパラメータ（十億単位）× 0.7 = Q4での概算GB。GPUは~25 tok/s、CPUは同じメモリで~5 tok/s。',
         bullets: [
           '7B Q4: 5–6 GB VRAMまたは統合メモリ',
           '7B Q5: 6–7 GB VRAM',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '7B模型需要多少内存？',
-        answer: 'Q4量化的7B模型需要5–6 GB的显存或内存。经验法则：模型参数量（以十亿为单位）× 0.7 = Q4所需的近似GB数。',
+        answer: 'Q4量化7B模型需5–6 GB显存或内存实现高效推理。经验法则：模型参数（十亿）× 0.7 = Q4所需近似GB。GPU ~25 tok/s，CPU同等内存~5 tok/s。',
         bullets: [
           '7B Q4: 5–6 GB显存或统一内存',
           '7B Q5: 6–7 GB显存',

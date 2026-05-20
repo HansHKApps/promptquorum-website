@@ -165,18 +165,18 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
 
 export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
   const titleByLang: Record<Lang, string> = {
-    en: 'Prompt Bites: Quick Answers to Local LLM Questions | PromptQuorum',
-    de: 'Prompt Bites: Schnelle Antworten zu lokalen LLMs | PromptQuorum',
-    fr: 'Prompt Bites: Réponses rapides aux questions LLM locales | PromptQuorum',
-    ja: 'Prompt Bites: ローカルLLMに関するクイック回答 | PromptQuorum',
-    zh: 'Prompt Bites: 本地LLM问题快速解答 | PromptQuorum',
+    en: 'Local LLM Quick Reference: VRAM, Ollama Models & GPU Picks — 30 Answers | PromptQuorum',
+    de: 'Lokale LLM Kurzreferenz: VRAM, Ollama-Modelle & GPU-Empfehlungen — 30 Antworten | PromptQuorum',
+    fr: 'Référence rapide LLM local : VRAM, modèles Ollama et choix GPU — 30 réponses | PromptQuorum',
+    ja: 'ローカルLLMクイックリファレンス：VRAM・Ollamaモデル・GPU選び — 30の回答 | PromptQuorum',
+    zh: '本地LLM快速参考：VRAM、Ollama模型与GPU选择 — 30个解答 | PromptQuorum',
   }
   const descByLang: Record<Lang, string> = {
-    en: '30 short-answer guides for local LLM users. VRAM requirements, Ollama model picks, hardware comparisons, and tool setup tips — answered in 60 seconds or less.',
-    de: '30 Kurz-Antworten für lokale LLM-Nutzer. VRAM-Anforderungen, Ollama-Modellauswahl, Hardware-Vergleiche und Tool-Setup-Tipps.',
-    fr: '30 guides de réponses courtes pour les utilisateurs de LLM locaux. Exigences VRAM, sélection de modèles Ollama, comparaisons matérielles et conseils de configuration.',
-    ja: 'ローカルLLMユーザー向け30本のショートアンサーガイド。VRAM要件、Ollamaモデル選択、ハードウェア比較、ツールセットアップのヒント。',
-    zh: '本地LLM用户的30个短答案指南。VRAM要求、Ollama模型选择、硬件比较和工具设置技巧。',
+    en: 'Local LLM quick reference guide: VRAM tiers for 30 models (2026), quantization basics, Ollama vs LM Studio, hardware picks, and setup tips. Complete answers for running models locally.',
+    de: 'Lokale LLM Kurzreferenzanleitung: VRAM-Stufen für 30 Modelle (2026), Quantisierungsgrundlagen, Ollama gegen LM Studio, Hardware-Empfehlungen und Setup-Tipps.',
+    fr: 'Guide de référence rapide LLM local : niveaux VRAM pour 30 modèles (2026), bases de quantification, Ollama vs LM Studio, choix matériels et conseils de configuration.',
+    ja: 'ローカルLLMクイックリファレンスガイド：30モデルのVRAMティア（2026年）、量化の基礎、OllamaとLM Studio、ハードウェア選択、セットアップのコツ。',
+    zh: '本地LLM快速参考指南：30款模型的显存级别（2026年）、量化基础、Ollama与LM Studio对比、硬件推荐和设置技巧。',
   }
 
   const isPublished = isPromptBitesHubPublished(lang)
@@ -222,10 +222,35 @@ export async function buildHubPageElement(lang: Lang) {
     ],
   }
 
+  // Build FAQPage schema from all 30 prompt bites
+  const faqEntries: Array<{ q: string; a: string }> = []
+  Object.entries(promptBitesContent).forEach(([, articleData]) => {
+    const article = articleData?.[lang] ?? articleData?.['en']
+    const quickAnswer = (article as any)?.quickAnswerTop?.[lang] ?? (article as any)?.quickAnswerTop?.['en']
+    if (quickAnswer?.question && quickAnswer?.answer) {
+      faqEntries.push({ q: quickAnswer.question, a: quickAnswer.answer })
+    }
+  })
+
+  const faqSchema = faqEntries.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqEntries.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      }
+    : null
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
       <PromptBitesHubClient lang={lang} />
     </>
   )

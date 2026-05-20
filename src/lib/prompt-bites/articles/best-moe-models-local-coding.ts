@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best MoE models for local coding?',
-        answer: 'Mixtral 8x7B and DeepSeek V2 are the top MoE coding models for local use. MoE models activate only a fraction of parameters per token, giving better quality-per-VRAM than dense models of similar total size. Both require at least 16 GB VRAM at Q4.',
+        answer: 'Mixtral 8x7B and DeepSeek V2 are the top MoE coding models for local use, activating only a fraction of total parameters per token to deliver better quality per VRAM than dense models. Both require at least 16 GB VRAM at Q4, with Mixtral at ~26 GB and DeepSeek V2 at ~16 GB.',
         bullets: [
           'Mixtral 8x7B Q4_K_M: ~26 GB VRAM, strong coding, available on Ollama',
           'DeepSeek V2 Q4: ~16 GB VRAM, top coding benchmark scores',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Beste MoE-Modelle für lokales Coding?',
-        answer: 'Mixtral 8x7B und DeepSeek V2 sind die führenden MoE-Coding-Modelle für den lokalen Einsatz. MoE-Modelle aktivieren pro Token nur einen Bruchteil der Parameter, was eine bessere Qualität pro VRAM als vergleichbar große Dense-Modelle ergibt. Beide benötigen mindestens 16 GB VRAM bei Q4.',
+        answer: 'Mixtral 8x7B und DeepSeek V2 sind die führenden MoE-Coding-Modelle für lokalen Einsatz, aktivieren pro Token nur einen Bruchteil der Gesamtparameter für bessere Qualität pro VRAM als Dense-Modelle. Beide benötigen mindestens 16 GB VRAM bei Q4, Mixtral ~26 GB, DeepSeek V2 ~16 GB.',
         bullets: [
           'Mixtral 8x7B Q4_K_M: ~26 GB VRAM, starkes Coding, auf Ollama verfügbar',
           'DeepSeek V2 Q4: ~16 GB VRAM, führende Coding-Benchmark-Werte',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleurs modèles MoE pour le codage local ?',
-        answer: 'Mixtral 8x7B et DeepSeek V2 sont les meilleurs modèles MoE de codage pour un usage local. Les modèles MoE n\'activent qu\'une fraction des paramètres par token, offrant une meilleure qualité par Go de VRAM que les modèles denses de taille totale similaire. Les deux nécessitent au moins 16 Go de VRAM en Q4.',
+        answer: 'Mixtral 8x7B et DeepSeek V2 sont les meilleurs modèles MoE de codage pour un usage local, activant seulement une fraction des paramètres totaux par token pour offrir meilleure qualité par VRAM que modèles denses. Les deux nécessitent au moins 16 Go VRAM en Q4, Mixtral ~26 Go, DeepSeek V2 ~16 Go.',
         bullets: [
           'Mixtral 8x7B Q4_K_M : ~26 Go de VRAM, codage solide, disponible sur Ollama',
           'DeepSeek V2 Q4 : ~16 Go de VRAM, meilleures performances sur les benchmarks de codage',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'ローカルコーディングに最適な MoE モデルは？',
-        answer: 'Mixtral 8x7B と DeepSeek V2 がローカル使用に最適な MoE コーディングモデルです。MoE モデルはトークンごとにパラメータの一部のみをアクティブにするため、同じ総サイズの Dense モデルより VRAM あたりの品質が高くなります。Q4 では両方とも最低 16 GB VRAM が必要です。',
+        answer: 'Mixtral 8x7B と DeepSeek V2 がローカル使用に最適な MoE コーディングモデルで、トークンごとに総パラメータの一部のみをアクティブにしDense モデルより VRAM あたり品質が高い。Q4 では両方とも最低 16 GB VRAM、Mixtral ~26 GB、DeepSeek V2 ~16 GB。',
         bullets: [
           'Mixtral 8x7B Q4_K_M：~26 GB VRAM、強力なコーディング、Ollama で利用可能',
           'DeepSeek V2 Q4：~16 GB VRAM、コーディングベンチマーク最高スコア',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '本地编程最佳 MoE 模型是什么？',
-        answer: 'Mixtral 8x7B 和 DeepSeek V2 是本地使用的顶级 MoE 编程模型。MoE 模型每个 token 只激活一部分参数，相比总参数量相近的稠密模型，每 GB VRAM 能获得更高质量。两者 Q4 量化都需要至少 16 GB VRAM。',
+        answer: 'Mixtral 8x7B 和 DeepSeek V2 是本地编程的顶级 MoE 模型，每个 token 只激活总参数的一部分，相比稠密模型每 GB VRAM 质量更高。两者 Q4 都需至少 16 GB VRAM，Mixtral ~26 GB，DeepSeek V2 ~16 GB。',
         bullets: [
           'Mixtral 8x7B Q4_K_M：~26 GB VRAM，编程能力强，Ollama 可用',
           'DeepSeek V2 Q4：~16 GB VRAM，编程基准测试顶级成绩',

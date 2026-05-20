@@ -1,0 +1,117 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .title { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 18px; font-weight: 600; }
+      .header { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 12px; font-weight: 600; color: #FFFFFF; }
+      .feature { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 12px; font-weight: 500; }
+      .cell-yes { fill: #E8F5E9; stroke: #4CAF50; stroke-width: 1; }
+      .cell-no { fill: #FFEBEE; stroke: #F44336; stroke-width: 1; }
+      .cell-partial { fill: #FFF3E0; stroke: #FF9800; stroke-width: 1; }
+      .cell-text { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 11px; text-anchor: middle; }
+      .check { fill: #4CAF50; font-weight: 600; font-size: 12px; }
+      .x { fill: #F44336; font-weight: 600; font-size: 12px; }
+      .partial { fill: #FF9800; font-weight: 600; font-size: 12px; }
+      .border { stroke: #E0E0E0; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="400"/>
+
+  <!-- Title -->
+  <text x="400" y="28" class="title" text-anchor="middle">Comparaison des outils LLM locaux — Mai 2026</text>
+
+  <!-- Headers -->
+  <rect x="20" y="40" width="180" height="30" class="border"/>
+  <text x="110" y="60" class="feature" text-anchor="middle">Fonctionnalité</text>
+
+  <rect x="200" y="40" width="180" height="30" class="header" rx="4"/>
+  <text x="290" y="60" class="header" text-anchor="middle">Ollama</text>
+
+  <rect x="380" y="40" width="180" height="30" class="header" rx="4"/>
+  <text x="470" y="60" class="header" text-anchor="middle">LM Studio</text>
+
+  <rect x="560" y="40" width="220" height="30" class="header" rx="4"/>
+  <text x="670" y="60" class="header" text-anchor="middle">Jan</text>
+
+  <!-- Row 1: CLI Interface -->
+  <rect x="20" y="70" width="180" height="25" class="border"/>
+  <text x="110" y="87" class="feature" text-anchor="middle">Interface CLI</text>
+  <rect x="200" y="70" width="180" height="25" class="cell-yes"/>
+  <text x="290" y="87" class="check" text-anchor="middle">✓</text>
+  <rect x="380" y="70" width="180" height="25" class="cell-no"/>
+  <text x="470" y="87" class="x" text-anchor="middle">✗</text>
+  <rect x="560" y="70" width="220" height="25" class="cell-no"/>
+  <text x="670" y="87" class="x" text-anchor="middle">✗</text>
+
+  <!-- Row 2: GUI Interface -->
+  <rect x="20" y="95" width="180" height="25" class="border"/>
+  <text x="110" y="112" class="feature" text-anchor="middle">Interface GUI</text>
+  <rect x="200" y="95" width="180" height="25" class="cell-no"/>
+  <text x="290" y="112" class="x" text-anchor="middle">✗</text>
+  <rect x="380" y="95" width="180" height="25" class="cell-yes"/>
+  <text x="470" y="112" class="check" text-anchor="middle">✓</text>
+  <rect x="560" y="95" width="220" height="25" class="cell-yes"/>
+  <text x="670" y="112" class="check" text-anchor="middle">✓</text>
+
+  <!-- Row 3: Model Management -->
+  <rect x="20" y="120" width="180" height="25" class="border"/>
+  <text x="110" y="137" class="feature" text-anchor="middle">Navigateur de modèles</text>
+  <rect x="200" y="120" width="180" height="25" class="cell-yes"/>
+  <text x="290" y="137" class="check" text-anchor="middle">✓</text>
+  <rect x="380" y="120" width="180" height="25" class="cell-yes"/>
+  <text x="470" y="137" class="check" text-anchor="middle">✓</text>
+  <rect x="560" y="120" width="220" height="25" class="cell-yes"/>
+  <text x="670" y="137" class="check" text-anchor="middle">✓</text>
+
+  <!-- Row 4: API Server -->
+  <rect x="20" y="145" width="180" height="25" class="border"/>
+  <text x="110" y="162" class="feature" text-anchor="middle">Serveur API</text>
+  <rect x="200" y="145" width="180" height="25" class="cell-yes"/>
+  <text x="290" y="162" class="check" text-anchor="middle">✓</text>
+  <rect x="380" y="145" width="180" height="25" class="cell-partial"/>
+  <text x="470" y="162" class="partial" text-anchor="middle">~</text>
+  <rect x="560" y="145" width="220" height="25" class="cell-yes"/>
+  <text x="670" y="162" class="check" text-anchor="middle">✓</text>
+
+  <!-- Row 5: Multi-GPU -->
+  <rect x="20" y="170" width="180" height="25" class="border"/>
+  <text x="110" y="187" class="feature" text-anchor="middle">Multi-GPU</text>
+  <rect x="200" y="170" width="180" height="25" class="cell-no"/>
+  <text x="290" y="187" class="x" text-anchor="middle">✗</text>
+  <rect x="380" y="170" width="180" height="25" class="cell-no"/>
+  <text x="470" y="187" class="x" text-anchor="middle">✗</text>
+  <rect x="560" y="170" width="220" height="25" class="cell-partial"/>
+  <text x="670" y="187" class="partial" text-anchor="middle">~</text>
+
+  <!-- Row 6: Ease of Use -->
+  <rect x="20" y="195" width="180" height="25" class="border"/>
+  <text x="110" y="212" class="feature" text-anchor="middle">Facilité de configuration</text>
+  <rect x="200" y="195" width="180" height="25" class="cell-yes"/>
+  <text x="290" y="212" class="check" text-anchor="middle">✓✓</text>
+  <rect x="380" y="195" width="180" height="25" class="cell-yes"/>
+  <text x="470" y="212" class="check" text-anchor="middle">✓</text>
+  <rect x="560" y="195" width="220" height="25" class="cell-yes"/>
+  <text x="670" y="212" class="check" text-anchor="middle">✓</text>
+
+  <!-- Row 7: Community -->
+  <rect x="20" y="220" width="180" height="25" class="border"/>
+  <text x="110" y="237" class="feature" text-anchor="middle">Taille de communauté</text>
+  <rect x="200" y="220" width="180" height="25" class="cell-yes"/>
+  <text x="290" y="237" class="check" text-anchor="middle">✓✓</text>
+  <rect x="380" y="220" width="180" height="25" class="cell-yes"/>
+  <text x="470" y="237" class="check" text-anchor="middle">✓</text>
+  <rect x="560" y="220" width="220" height="25" class="cell-partial"/>
+  <text x="670" y="237" class="partial" text-anchor="middle">~</text>
+
+  <!-- Legend -->
+  <rect x="20" y="260" width="760" height="120" style="fill: #F7F2FA; stroke: #E8DEF8; stroke-width: 1;" rx="4"/>
+
+  <text x="30" y="278" class="feature">Meilleur pour :</text>
+
+  <text x="30" y="300" class="cell-text" style="text-anchor: start;">• Ollama : Développeurs, automatisation, serveurs sans écran (priorité CLI, excellente API)</text>
+  <text x="30" y="320" class="cell-text" style="text-anchor: start;">• LM Studio : Utilisateurs de bureau préférant GUI, débutants, sans codage</text>
+  <text x="30" y="340" class="cell-text" style="text-anchor: start;">• Jan : All-in-one avec CLI + GUI, multi-plateforme, le plus convivial</text>
+  <text x="30" y="360" class="cell-text" style="text-anchor: start;">Recommandation : Commencez par Ollama (power user) ou Jan (simplicité). LM Studio pour préférence GUI Windows/macOS.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

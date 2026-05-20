@@ -26,6 +26,110 @@ const HUB_SUBTITLE: Record<Language, string> = {
   zh: '30篇简答指南。显存要求、Ollama推荐、硬件对比和设置技巧 — 60秒内解答。',
 }
 
+const VRAM_TABLE_HEADERS: Record<Language, { vram: string; model: string; quant: string; useCase: string }> = {
+  en: { vram: 'VRAM', model: 'Best Model (May 2026)', quant: 'Quantization', useCase: 'Use Case' },
+  de: { vram: 'VRAM', model: 'Bestes Modell (Mai 2026)', quant: 'Quantisierung', useCase: 'Anwendungsfall' },
+  fr: { vram: 'VRAM', model: 'Meilleur modèle (mai 2026)', quant: 'Quantisation', useCase: 'Cas d\'usage' },
+  ja: { vram: 'VRAM', model: 'ベストモデル（2026年5月）', quant: '量化', useCase: 'ユースケース' },
+  zh: { vram: 'VRAM', model: '最佳模型（2026年5月）', quant: '量化', useCase: '使用场景' },
+}
+
+const VRAM_TABLE_ROWS: Record<Language, Array<{ vram: string; model: string; quant: string; useCase: string }>> = {
+  en: [
+    { vram: '4 GB', model: 'Phi-4 Mini', quant: 'Q4', useCase: 'Basic chat, small tasks' },
+    { vram: '6 GB', model: 'Llama 3 8B', quant: 'Q4_K_M', useCase: 'Daily chat and coding' },
+    { vram: '8 GB', model: 'Mistral 7B', quant: 'Q5_K_M', useCase: 'Quality + speed balance' },
+    { vram: '12 GB', model: 'Qwen 14B', quant: 'Q4_K_M', useCase: 'Coding and reasoning' },
+    { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: 'Complex multi-step tasks' },
+    { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (partial)', useCase: 'Near-production quality' },
+    { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M or higher', useCase: 'Full precision models' },
+  ],
+  de: [
+    { vram: '4 GB', model: 'Phi-4 Mini', quant: 'Q4', useCase: 'Einfacher Chat, kleine Aufgaben' },
+    { vram: '6 GB', model: 'Llama 3 8B', quant: 'Q4_K_M', useCase: 'Täglicher Chat und Coding' },
+    { vram: '8 GB', model: 'Mistral 7B', quant: 'Q5_K_M', useCase: 'Qualitäts- und Geschwindigkeitsausgleich' },
+    { vram: '12 GB', model: 'Qwen 14B', quant: 'Q4_K_M', useCase: 'Coding und Reasoning' },
+    { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: 'Komplexe mehrstufige Aufgaben' },
+    { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (partiell)', useCase: 'Qualität nahe Produktion' },
+    { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M oder höher', useCase: 'Vollpräzisions-Modelle' },
+  ],
+  fr: [
+    { vram: '4 Go', model: 'Phi-4 Mini', quant: 'Q4', useCase: 'Chat simple, petites tâches' },
+    { vram: '6 Go', model: 'Llama 3 8B', quant: 'Q4_K_M', useCase: 'Chat et code au quotidien' },
+    { vram: '8 Go', model: 'Mistral 7B', quant: 'Q5_K_M', useCase: 'Équilibre qualité + vitesse' },
+    { vram: '12 Go', model: 'Qwen 14B', quant: 'Q4_K_M', useCase: 'Code et raisonnement' },
+    { vram: '16 Go', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: 'Tâches multi-étapes complexes' },
+    { vram: '24 Go', model: 'Llama 70B', quant: 'Q4_K_M (partiel)', useCase: 'Qualité quasi-production' },
+    { vram: '48+ Go', model: 'Llama 70B', quant: 'Q5_K_M ou plus', useCase: 'Modèles pleine précision' },
+  ],
+  ja: [
+    { vram: '4 GB', model: 'Phi-4 Mini', quant: 'Q4', useCase: '基本的なチャット、小さなタスク' },
+    { vram: '6 GB', model: 'Llama 3 8B', quant: 'Q4_K_M', useCase: '日常のチャットとコーディング' },
+    { vram: '8 GB', model: 'Mistral 7B', quant: 'Q5_K_M', useCase: '品質と速度のバランス' },
+    { vram: '12 GB', model: 'Qwen 14B', quant: 'Q4_K_M', useCase: 'コーディングと推論' },
+    { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: '複雑な複数ステップタスク' },
+    { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (部分)', useCase: '本番に近い品質' },
+    { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M以上', useCase: '完全精度モデル' },
+  ],
+  zh: [
+    { vram: '4 GB', model: 'Phi-4 Mini', quant: 'Q4', useCase: '基础聊天、小型任务' },
+    { vram: '6 GB', model: 'Llama 3 8B', quant: 'Q4_K_M', useCase: '日常聊天和编程' },
+    { vram: '8 GB', model: 'Mistral 7B', quant: 'Q5_K_M', useCase: '质量与速度均衡' },
+    { vram: '12 GB', model: 'Qwen 14B', quant: 'Q4_K_M', useCase: '编程和推理' },
+    { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: '复杂多步任务' },
+    { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (部分)', useCase: '接近生产质量' },
+    { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M或更高', useCase: '完整精度模型' },
+  ],
+}
+
+const DEEPDIVE_LINKS: Record<Language, Record<string, { text: string; href: string }>> = {
+  en: {
+    'Quantization & VRAM': { text: 'Deep dive: Quantization Explained', href: '/local-llms/llm-quantization-explained' },
+    'Ollama': { text: 'Deep dive: Top Open-Source Models with Ollama', href: '/local-llms/top-open-source-models-ollama' },
+    'Tool Comparisons': { text: 'Deep dive: Ollama vs LM Studio', href: '/local-llms/ollama-vs-lm-studio' },
+    'Model Comparisons': { text: 'Deep dive: Qwen vs Llama vs Mistral', href: '/local-llms/qwen-vs-llama-vs-mistral' },
+    'Hardware-Specific': { text: 'Deep dive: Best Budget GPUs for Local LLM', href: '/local-llms/best-budget-gpus-local-llm' },
+    'Quick Answers': { text: 'Deep dive: How Much VRAM for Local LLM', href: '/local-llms/how-much-vram-local-llm' },
+    'Prompt Engineering': { text: 'Deep dive: CO-STAR Prompt Framework', href: '/prompt-engineering/co-star-framework' },
+  },
+  de: {
+    'Quantization & VRAM': { text: 'Vertiefung: Quantisierung erklärt', href: '/de/local-llms/llm-quantization-explained' },
+    'Ollama': { text: 'Vertiefung: Top Open-Source-Modelle mit Ollama', href: '/de/local-llms/top-open-source-models-ollama' },
+    'Tool Comparisons': { text: 'Vertiefung: Ollama vs LM Studio', href: '/de/local-llms/ollama-vs-lm-studio' },
+    'Model Comparisons': { text: 'Vertiefung: Qwen vs Llama vs Mistral', href: '/de/local-llms/qwen-vs-llama-vs-mistral' },
+    'Hardware-Specific': { text: 'Vertiefung: Beste Budget-GPUs für lokale LLM', href: '/de/local-llms/best-budget-gpus-local-llm' },
+    'Quick Answers': { text: 'Vertiefung: Wie viel VRAM für lokale LLM', href: '/de/local-llms/how-much-vram-local-llm' },
+    'Prompt Engineering': { text: 'Vertiefung: CO-STAR-Prompt-Framework', href: '/de/prompt-engineering/co-star-framework' },
+  },
+  fr: {
+    'Quantization & VRAM': { text: 'Approfondissement : Quantisation expliquée', href: '/fr/local-llms/llm-quantization-explained' },
+    'Ollama': { text: 'Approfondissement : Top modèles open-source avec Ollama', href: '/fr/local-llms/top-open-source-models-ollama' },
+    'Tool Comparisons': { text: 'Approfondissement : Ollama vs LM Studio', href: '/fr/local-llms/ollama-vs-lm-studio' },
+    'Model Comparisons': { text: 'Approfondissement : Qwen vs Llama vs Mistral', href: '/fr/local-llms/qwen-vs-llama-vs-mistral' },
+    'Hardware-Specific': { text: 'Approfondissement : Meilleures GPU budget pour LLM local', href: '/fr/local-llms/best-budget-gpus-local-llm' },
+    'Quick Answers': { text: 'Approfondissement : Combien de VRAM pour LLM local', href: '/fr/local-llms/how-much-vram-local-llm' },
+    'Prompt Engineering': { text: 'Approfondissement : Framework de prompts CO-STAR', href: '/fr/prompt-engineering/co-star-framework' },
+  },
+  ja: {
+    'Quantization & VRAM': { text: '深掘り：量化の説明', href: '/ja/local-llms/llm-quantization-explained' },
+    'Ollama': { text: '深掘り：Ollamaでトップのオープンソースモデル', href: '/ja/local-llms/top-open-source-models-ollama' },
+    'Tool Comparisons': { text: '深掘り：OllamaとLM Studio', href: '/ja/local-llms/ollama-vs-lm-studio' },
+    'Model Comparisons': { text: '深掘り：QwenとLlamaとMistral', href: '/ja/local-llms/qwen-vs-llama-vs-mistral' },
+    'Hardware-Specific': { text: '深掘り：ローカルLLM向けベストバジェットGPU', href: '/ja/local-llms/best-budget-gpus-local-llm' },
+    'Quick Answers': { text: '深掘り：ローカルLLMに必要なVRAM', href: '/ja/local-llms/how-much-vram-local-llm' },
+    'Prompt Engineering': { text: '深掘り：CO-STARプロンプトフレームワーク', href: '/ja/prompt-engineering/co-star-framework' },
+  },
+  zh: {
+    'Quantization & VRAM': { text: '深入：量化解释', href: '/zh/local-llms/llm-quantization-explained' },
+    'Ollama': { text: '深入：Ollama顶级开源模型', href: '/zh/local-llms/top-open-source-models-ollama' },
+    'Tool Comparisons': { text: '深入：Ollama对比LM Studio', href: '/zh/local-llms/ollama-vs-lm-studio' },
+    'Model Comparisons': { text: '深入：Qwen对比Llama对比Mistral', href: '/zh/local-llms/qwen-vs-llama-vs-mistral' },
+    'Hardware-Specific': { text: '深入：本地LLM最佳预算GPU', href: '/zh/local-llms/best-budget-gpus-local-llm' },
+    'Quick Answers': { text: '深入：本地LLM需要多少显存', href: '/zh/local-llms/how-much-vram-local-llm' },
+    'Prompt Engineering': { text: '深入：CO-STAR提示框架', href: '/zh/prompt-engineering/co-star-framework' },
+  },
+}
+
 const EDUCATIONAL_LEVEL: Record<string, Record<Language, string>> = {
   Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级' },
   Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级' },
@@ -57,6 +161,30 @@ export function PromptBitesHubClient({ lang }: Props) {
           </p>
         </header>
 
+        {/* VRAM Reference Table */}
+        <div className="mb-12 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-primary/5 border-b border-primary/20">
+                <th className="px-4 py-3 text-left font-semibold text-text-primary">{VRAM_TABLE_HEADERS[lang].vram}</th>
+                <th className="px-4 py-3 text-left font-semibold text-text-primary">{VRAM_TABLE_HEADERS[lang].model}</th>
+                <th className="px-4 py-3 text-left font-semibold text-text-primary">{VRAM_TABLE_HEADERS[lang].quant}</th>
+                <th className="px-4 py-3 text-left font-semibold text-text-primary">{VRAM_TABLE_HEADERS[lang].useCase}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {VRAM_TABLE_ROWS[lang].map((row, idx) => (
+                <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-surface'}>
+                  <td className="px-4 py-2 text-text-primary font-medium border-b border-primary/10">{row.vram}</td>
+                  <td className="px-4 py-2 text-text-primary border-b border-primary/10">{row.model}</td>
+                  <td className="px-4 py-2 text-text-secondary border-b border-primary/10">{row.quant}</td>
+                  <td className="px-4 py-2 text-text-secondary border-b border-primary/10">{row.useCase}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         <div className="space-y-12">
           {slugsByCategory.map((cat) => (
             cat.slugs.length > 0 && (
@@ -70,7 +198,7 @@ export function PromptBitesHubClient({ lang }: Props) {
                   </h2>
                   <p className="text-sm text-text-secondary mt-1 ml-8">{cat.descriptionEn}</p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
                   {cat.slugs.map((slug) => {
                     const key = PROMPT_BITES_SLUG_TO_KEY[slug]
                     const article = promptBitesContent[key]?.[lang] ?? promptBitesContent[key]?.['en']
@@ -108,6 +236,16 @@ export function PromptBitesHubClient({ lang }: Props) {
                     )
                   })}
                 </div>
+                {DEEPDIVE_LINKS[lang][cat.titleEn] && (
+                  <div>
+                    <Link
+                      href={DEEPDIVE_LINKS[lang][cat.titleEn].href}
+                      className="inline-block text-sm font-medium text-primary hover:text-primary/80 hover:underline transition-colors"
+                    >
+                      → {DEEPDIVE_LINKS[lang][cat.titleEn].text}
+                    </Link>
+                  </div>
+                )}
               </section>
             )
           ))}

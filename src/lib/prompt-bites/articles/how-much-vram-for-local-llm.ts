@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'How much VRAM do you need for a local LLM?',
-        answer: '4 GB handles Phi-4 Mini and Gemma 2B. 6 GB runs Llama 3 8B at Q4. 8 GB handles Mistral 7B at Q5. 12 GB fits Qwen 14B Q4. 16+ GB is needed for 70B models at Q4.',
+        answer: '4 GB VRAM handles Phi-4 Mini and Gemma 2B comfortably with safe headroom for context expansion. 6 GB runs Llama 3 8B at Q4. 12 GB fits Qwen 14B Q4 efficiently. 16+ GB is needed for 70B models at Q4.',
         bullets: [
           '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
           '6 GB: Llama 3 8B Q4_K_M',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Wie viel VRAM benötigen Sie für ein lokales LLM?',
-        answer: '4 GB reichen für Phi-4 Mini und Gemma 2B. 6 GB betreibt Llama 3 8B bei Q4. 8 GB verarbeitet Mistral 7B bei Q5. 12 GB fasst Qwen 14B Q4. Für 70B-Modelle bei Q4 werden 16+ GB benötigt.',
+        answer: '4 GB VRAM reichen für Phi-4 Mini und Gemma 2B mit sicherer Pufferzone für Kontexterweiterung. 6 GB betreiben Llama 3 8B bei Q4. 12 GB fassen Qwen 14B Q4 effizient. Für 70B-Modelle bei Q4 werden 16+ GB benötigt.',
         bullets: [
           '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
           '6 GB: Llama 3 8B Q4_K_M',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'De combien de VRAM avez-vous besoin pour un LLM local ?',
-        answer: '4 Go suffisent pour Phi-4 Mini et Gemma 2B. 6 Go fait tourner Llama 3 8B en Q4. 8 Go gère Mistral 7B en Q5. 12 Go accueille Qwen 14B Q4. Les modèles 70B en Q4 nécessitent 16+ Go.',
+        answer: '4 Go VRAM suffisent pour Phi-4 Mini et Gemma 2B avec marge sûre pour expansion contexte. 6 Go font tourner Llama 3 8B en Q4. 12 Go accueillent Qwen 14B Q4 efficacement. Les modèles 70B Q4 nécessitent 16+ Go.',
         bullets: [
           '4 Go : Phi-4 Mini Q4, Gemma 2 2B',
           '6 Go : Llama 3 8B Q4_K_M',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'ローカルLLMにはどれくらいのVRAMが必要ですか？',
-        answer: '4 GBでPhi-4 MiniとGemma 2Bが動作します。6 GBではQ4でLlama 3 8Bが動作します。8 GBではQ5でMistral 7Bが動作します。12 GBでQwen 14B Q4が収まります。70BモデルのQ4には16+ GBが必要です。',
+        answer: '4 GB VRAMでPhi-4 MiniとGemma 2Bがコンテキスト拡張用安全余裕で動作します。6 GBではQ4でLlama 3 8Bが動作します。12 GBでQwen 14B Q4を効率的に収納できます。70BモデルのQ4には16+ GBが必要です。',
         bullets: [
           '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
           '6 GB: Llama 3 8B Q4_K_M',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '运行本地LLM需要多少显存？',
-        answer: '4 GB可运行Phi-4 Mini和Gemma 2B。6 GB可在Q4下运行Llama 3 8B。8 GB可在Q5下处理Mistral 7B。12 GB可容纳Qwen 14B Q4。70B模型的Q4需要16+ GB。',
+        answer: '4 GB显存可安全运行Phi-4 Mini和Gemma 2B并具有上下文扩展足够余量。6 GB可Q4运行Llama 3 8B。12 GB有效容纳Qwen 14B Q4。70B模型Q4需16+ GB。',
         bullets: [
           '4 GB：Phi-4 Mini Q4，Gemma 2 2B',
           '6 GB：Llama 3 8B Q4_K_M',

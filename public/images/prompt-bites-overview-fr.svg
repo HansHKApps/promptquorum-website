@@ -1,0 +1,87 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .title { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 22px; font-weight: 600; }
+      .subtitle { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; }
+      .text-body { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 13px; }
+      .text-secondary { fill: #79747E; font-family: system-ui, sans-serif; font-size: 12px; }
+      .icon-circle { fill: #EAE1FF; stroke: #6750A4; stroke-width: 2; }
+      .icon-text { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .topic-box { fill: #F7F2FA; stroke: #6750A4; stroke-width: 1.5; }
+      .topic-title { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 12px; font-weight: 600; }
+      .topic-count { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="400"/>
+
+  <!-- Hero Section -->
+  <text x="400" y="40" class="title" text-anchor="middle">Hub Prompt Bites</text>
+  <text x="400" y="60" class="subtitle" text-anchor="middle">30 guides rapides pour utilisateurs LLM locaux</text>
+
+  <!-- Icon circles for main topics -->
+  <circle class="icon-circle" cx="100" cy="110" r="28"/>
+  <text x="100" y="115" class="icon-text" text-anchor="middle">VRAM</text>
+
+  <circle class="icon-circle" cx="220" cy="110" r="28"/>
+  <text x="220" y="115" class="icon-text" text-anchor="middle">QUANT</text>
+
+  <circle class="icon-circle" cx="340" cy="110" r="28"/>
+  <text x="340" y="115" class="icon-text" text-anchor="middle">MODÈLES</text>
+
+  <circle class="icon-circle" cx="460" cy="110" r="28"/>
+  <text x="460" y="115" class="icon-text" text-anchor="middle">OUTILS</text>
+
+  <circle class="icon-circle" cx="580" cy="110" r="28"/>
+  <text x="580" y="115" class="icon-text" text-anchor="middle">MATÉRIEL</text>
+
+  <circle class="icon-circle" cx="700" cy="110" r="28"/>
+  <text x="700" y="115" class="icon-text" text-anchor="middle">CONFIG</text>
+
+  <!-- Topic boxes -->
+  <!-- Row 1 -->
+  <rect x="30" y="160" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="45" y="180" class="topic-title">Allocation VRAM</text>
+  <text x="45" y="198" class="topic-count">8 articles sur mémoire</text>
+  <text x="45" y="213" class="text-secondary">Combien de VRAM pour différentes</text>
+  <text x="45" y="228" class="text-secondary">tailles de modèle? Niveaux VRAM,</text>
+  <text x="45" y="243" class="text-secondary">budget vs entreprise, RAM vs VRAM</text>
+
+  <rect x="290" y="160" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="305" y="180" class="topic-title">Quantification</text>
+  <text x="305" y="198" class="topic-count">6 articles sur compression</text>
+  <text x="305" y="213" class="text-secondary">Q3_K_M, Q4_K_M, Q5_K_M, Q8_0</text>
+  <text x="305" y="228" class="text-secondary">Compromis qualité/taille,</text>
+  <text x="305" y="243" class="text-secondary">principes quantification</text>
+
+  <rect x="550" y="160" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="565" y="180" class="topic-title">Modèles Ollama</text>
+  <text x="565" y="198" class="topic-count">6 articles sélection modèles</text>
+  <text x="565" y="213" class="text-secondary">Top modèles Ollama par niveau,</text>
+  <text x="565" y="228" class="text-secondary">meilleurs LLMs open-source,</text>
+  <text x="565" y="243" class="text-secondary">recommandations modèles 2026</text>
+
+  <!-- Row 2 -->
+  <rect x="30" y="270" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="45" y="290" class="topic-title">Comparaisons outils</text>
+  <text x="45" y="308" class="topic-count">5 articles sur logiciels</text>
+  <text x="45" y="323" class="text-secondary">Ollama vs LM Studio vs Jan,</text>
+  <text x="45" y="338" class="text-secondary">comparaison LLM locaux, quel</text>
+  <text x="45" y="353" class="text-secondary">outil pour votre cas d'usage</text>
+
+  <rect x="290" y="270" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="305" y="290" class="topic-title">Comparaisons modèles</text>
+  <text x="305" y="308" class="topic-count">4 articles matchups modèles</text>
+  <text x="305" y="323" class="text-secondary">Qwen vs Llama vs Mistral,</text>
+  <text x="305" y="338" class="text-secondary">Qwen Coder vs DeepSeek, modèles</text>
+  <text x="305" y="353" class="text-secondary">génération code 2026</text>
+
+  <rect x="550" y="270" width="220" height="90" class="topic-box" rx="6"/>
+  <text x="565" y="290" class="topic-title">Matériel &amp; Config</text>
+  <text x="565" y="308" class="topic-count">5 articles infrastructure</text>
+  <text x="565" y="323" class="text-secondary">Meilleurs GPU budget, RTX vs A100,</text>
+  <text x="565" y="338" class="text-secondary">inférence CPU, setup Docker,</text>
+  <text x="565" y="353" class="text-secondary">configurations multi-GPU</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
