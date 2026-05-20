@@ -68,6 +68,10 @@ const nextConfig: NextConfig = {
         source: '/api/data/:match*',
         destination: 'https://www.promptquorum.com/_vercel/insights/:match*',
       },
+      {
+        source: '/api/stats/:match*',
+        destination: 'https://cloud.umami.is/:match*',
+      },
     ]
   },
   async headers() {

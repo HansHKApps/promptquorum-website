@@ -228,6 +228,13 @@ gtag('config', 'G-8DQ4B3DXBS', {
 });`,
           }}
         />
+
+        {/* Umami Analytics — proxied through /api/stats to avoid ad blockers */}
+        <script
+          defer
+          src="/api/stats/script.js"
+          data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
+        />
       </head>
       <body>
         <Providers>
