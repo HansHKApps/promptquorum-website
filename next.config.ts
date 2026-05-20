@@ -133,6 +133,25 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: '/presentations/:path*',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline'",
+              "style-src 'self' 'unsafe-inline'",
+              "font-src 'self' data:",
+              "img-src 'self' data: https:",
+              "connect-src 'none'",
+              "frame-ancestors 'self'",
+              "base-uri 'self'",
+              "form-action 'none'",
+            ].join('; '),
+          },
+        ],
+      },
     ]
   },
 }
