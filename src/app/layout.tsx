@@ -234,6 +234,7 @@ gtag('config', 'G-8DQ4B3DXBS', {
           defer
           src="/api/stats/script.js"
           data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
+          data-host-url="/api/stats"
         />
       </head>
       <body>
