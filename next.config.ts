@@ -72,6 +72,10 @@ const nextConfig: NextConfig = {
         source: '/api/stats/:match*',
         destination: 'https://cloud.umami.is/:match*',
       },
+      {
+        source: '/api/clarity/:match*',
+        destination: 'https://www.clarity.ms/:match*',
+      },
     ]
   },
   async headers() {

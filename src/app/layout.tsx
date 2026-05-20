@@ -236,6 +236,14 @@ gtag('config', 'G-8DQ4B3DXBS', {
           data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
           data-host-url="/api/stats"
         />
+
+        {/* Microsoft Clarity — proxied through /api/clarity to avoid ad blockers */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="/api/clarity/tag/wtwpeavhum";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wtwpeavhum");`,
+          }}
+        />
       </head>
       <body>
         <Providers>
