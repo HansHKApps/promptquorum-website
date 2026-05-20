@@ -262,11 +262,22 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
           '@type': 'HowTo',
           name: article.title,
           description: article.intro,
-          step: howToSection.numberedItems!.map((step, i) => ({
-            '@type': 'HowToStep',
-            position: i + 1,
-            text: step,
-          })),
+          step: howToSection.numberedItems!.map((step, i) => {
+            const rawText = typeof step === 'string' ? step : `${step.title}: ${step.whyItMatters}`
+            const cleanText = rawText.replace(/\*\*/g, '')
+            const colonIdx = cleanText.indexOf(':')
+            const name = typeof step !== 'string'
+              ? step.title
+              : colonIdx > 0 && colonIdx < 80
+                ? cleanText.slice(0, colonIdx).trim()
+                : cleanText.slice(0, 80).trim()
+            return {
+              '@type': 'HowToStep',
+              position: i + 1,
+              name,
+              text: cleanText,
+            }
+          }),
         }
       : null)
 
