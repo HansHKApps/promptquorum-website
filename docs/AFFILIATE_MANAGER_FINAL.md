@@ -652,6 +652,71 @@ Native-language pitches close better than English pitches in non-English markets
 
 ---
 
+## Affiliate Page Localization Rules
+
+Every affiliate page is produced in all five languages (EN, DE, FR, JA, ZH).
+Non-English versions are **localized, not merely translated**. These rules are
+mandatory for every affiliate page.
+
+### Pricing — research local prices, never convert from USD
+
+- **Do NOT convert prices from USD.** Each language version uses real prices
+  researched on that market's retailers.
+- **EN:** USD, as found on Amazon.com.
+- **DE:** EUR incl. 19% VAT — research Amazon.de and Mindfactory.de; used
+  prices from eBay Kleinanzeigen. German GPU pricing typically runs 10-20%
+  above the US.
+- **FR:** EUR incl. 20% TVA — research Amazon.fr and LDLC.com; used market on
+  Leboncoin.
+- **JA:** JPY incl. 10% consumption tax — research Amazon.co.jp, Kakaku.com,
+  Dospara, Tsukumo; used market on Mercari and Janpara.
+- **ZH:** CNY — research JD.com and Taobao/Tmall; used market on Xianyu. Some
+  hardware is cheaper in China (large used market), some dearer (import
+  restrictions on high-end GPUs).
+- Web-search "[product] price [retailer]" for current pricing. If a price
+  cannot be confirmed, use the retailer search URL with the label
+  "check current price" — never guess a number.
+
+### Retailers and affiliate links per language
+
+Outbound product links use real retailer **search URLs** localized per region:
+
+- **EN:** Amazon.com
+- **DE:** Amazon.de, Mindfactory.de, alternate.de
+- **FR:** Amazon.fr, LDLC.com
+- **JA:** Amazon.co.jp, Kakaku.com, Dospara
+- **ZH:** JD.com, Taobao
+
+The `affiliate_click` tracking (Umami + Vercel) fires on every link with the
+`language` property set to that page's language.
+
+### Content localization (beyond translation)
+
+- **DE:** Mindfactory and alternate.de as primary GPU retailers (often cheaper
+  than Amazon.de); German electricity ~EUR 0.35/kWh for running-cost math;
+  strong used market via eBay Kleinanzeigen.
+- **FR:** LDLC as the major French retailer; electricity ~EUR 0.25/kWh; used
+  market on Leboncoin.
+- **JA:** Dospara, Tsukumo, Sofmap as primary retailers; Akihabara walk-in
+  pricing; Kakaku.com as the price-comparison standard; Mercari and Janpara
+  for used; note limited availability of the newest GPUs.
+- **ZH:** JD.com as the primary (trusted) retailer; Xianyu for the large used
+  market; note import duties and export-restriction effects on high-end GPU
+  availability and pricing.
+
+### Disclosure, images, indexing
+
+- **Disclosure:** each version carries the notice translated into its language
+  (see `AFFILIATE_DISCLOSURE` in `src/lib/tracking/affiliate.ts`).
+- **Images:** SVG charts are generated per language with translated labels and
+  local-currency prices (EUR on DE/FR, JPY on JA, CNY on ZH) using researched
+  local prices — not conversions. File suffix `-en`/`-de`/`-fr`/`-ja`/`-zh`.
+- **Indexing:** all five language versions of a published affiliate page are
+  `index, follow`. Non-English versions must have real localized content
+  before publishing — never index a "Coming Soon" stub.
+
+---
+
 ## Annual Review
 
 Every 6 months review:
