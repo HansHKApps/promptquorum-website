@@ -36,6 +36,11 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'best-local-llm-coding-12gb-vram':      'bestLocalLlmCoding12gbVram',
   'best-models-amd-5700x-3070ti':         'bestModelsAmd5700x3070ti',
   'radeon-6800m-local-llm':               'radeon6800mLocalLlm',
+  'best-gpu-under-300-local-llm':         'bestGpuUnder300LocalLlm',
+  'best-gpu-under-600-local-llm':         'bestGpuUnder600LocalLlm',
+  'best-ssd-fast-model-loading':          'bestSsdFastModelLoading',
+  'mac-mini-m4-local-llm':               'macMiniM4LocalLlm',
+  'runpod-vs-vastai-pricing':             'runpodVsVastaiPricing',
 
   // Cluster F — Quick Answers
   'can-you-run-rag-on-2gb-ram':           'canYouRunRagOn2gbRam',

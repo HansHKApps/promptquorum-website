@@ -34,6 +34,11 @@ import { article as bestLlmRightNow } from './articles/best-llm-right-now'
 import { article as isQwenGdprCompliant } from './articles/is-qwen-gdpr-compliant'
 import { article as isDeepseekGdprSafe } from './articles/is-deepseek-gdpr-safe'
 import { article as canLocalLlmHelpGdpr } from './articles/can-local-llm-help-gdpr'
+import { article as bestGpuUnder300LocalLlm } from './articles/best-gpu-under-300-local-llm'
+import { article as bestGpuUnder600LocalLlm } from './articles/best-gpu-under-600-local-llm'
+import { article as bestSsdFastModelLoading } from './articles/best-ssd-fast-model-loading'
+import { article as macMiniM4LocalLlm } from './articles/mac-mini-m4-local-llm'
+import { article as runpodVsVastaiPricing } from './articles/runpod-vs-vastai-pricing'
 
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
@@ -69,4 +74,9 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   isQwenGdprCompliant,
   isDeepseekGdprSafe,
   canLocalLlmHelpGdpr,
+  bestGpuUnder300LocalLlm,
+  bestGpuUnder600LocalLlm,
+  bestSsdFastModelLoading,
+  macMiniM4LocalLlm,
+  runpodVsVastaiPricing,
 }

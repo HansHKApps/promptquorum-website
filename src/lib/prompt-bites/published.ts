@@ -35,6 +35,11 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-local-llm-coding-12gb-vram',
   'best-models-amd-5700x-3070ti',
   'radeon-6800m-local-llm',
+  'best-gpu-under-300-local-llm',
+  'best-gpu-under-600-local-llm',
+  'best-ssd-fast-model-loading',
+  'mac-mini-m4-local-llm',
+  'runpod-vs-vastai-pricing',
   // Cluster F — Quick Answers
   'can-you-run-rag-on-2gb-ram',
   'best-local-llm-16gb-ram-laptop',
