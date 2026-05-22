@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
+import { CopyButton } from '@/components/CopyButton'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import type { Language } from '@/lib/blog/blogContent'
@@ -125,9 +126,14 @@ function BodySection({ section }: { section: LLMSection }) {
         </ul>
       )}
       {section.codeBlock && (
-        <pre className="bg-surface border border-primary/10 rounded-lg p-4 text-sm text-text-primary overflow-x-auto mt-3">
-          <code>{section.codeBlock}</code>
-        </pre>
+        <div className="mt-3">
+          <div className="flex items-center justify-end bg-gray-800 rounded-t-lg px-4 py-2 text-xs text-gray-400 font-mono">
+            <CopyButton text={section.codeBlock} />
+          </div>
+          <pre className="bg-surface border border-primary/10 rounded-b-lg p-4 text-sm text-text-primary overflow-x-auto">
+            <code>{section.codeBlock}</code>
+          </pre>
+        </div>
       )}
       {section.callouts && section.callouts.length > 0 && section.callouts.map((c, i) => (
         <div
