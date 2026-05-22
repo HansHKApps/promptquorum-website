@@ -95,22 +95,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Not all LLM deployments carry the same GDPR risk. The legal and operational risk of using an LLM is determined by four independent factors:',
         ],
-        items: [
+        subsections: [
           {
             title: 'Data Residency',
-            content: 'Where the model servers physically live. If servers are in the EU and the model provider commits to keeping your data in the EU (contractually), data residency risk is low. If servers are outside the EU with no SCC, data residency risk is high.',
+            text: 'Where the model servers physically live. If servers are in the EU and the model provider commits to keeping your data in the EU (contractually), data residency risk is low. If servers are outside the EU with no SCC, data residency risk is high.',
           },
           {
             title: 'Training-Data Jurisdiction',
-            content: 'Which country\'s laws govern the training data and the provider\'s right to retain it. US data law (CFAA, SCA) allows law enforcement access. Chinese data law (PIPL) mandates far broader state access rights. EU data stays protected under GDPR and ePrivacy Directive.',
+            text: 'Which country\'s laws govern the training data and the provider\'s right to retain it. US data law (CFAA, SCA) allows law enforcement access. Chinese data law (PIPL) mandates far broader state access rights. EU data stays protected under GDPR and ePrivacy Directive.',
           },
           {
             title: 'ToS Data Retention',
-            content: 'What does the Terms of Service say about keeping your data after inference completes? OpenAI and DeepSeek have said (in different forums) that they may retain user prompts for model improvement or legally mandated disclosure. Qwen and Llama run locally have no ToS — you control retention.',
+            text: 'What does the Terms of Service say about keeping your data after inference completes? OpenAI and DeepSeek have said (in different forums) that they may retain user prompts for model improvement or legally mandated disclosure. Qwen and Llama run locally have no ToS — you control retention.',
           },
           {
             title: 'SCC / TIA Requirement',
-            content: 'Post-Schrems II, any transfer of EU personal data outside the EU requires Standard Contractual Clauses (SCCs) plus a Transfer Impact Assessment (TIA) to confirm the destination jurisdiction provides adequate protection. Cloud APIs require this; local models do not.',
+            text: 'Post-Schrems II, any transfer of EU personal data outside the EU requires Standard Contractual Clauses (SCCs) plus a Transfer Impact Assessment (TIA) to confirm the destination jurisdiction provides adequate protection. Cloud APIs require this; local models do not.',
           },
         ],
       },
@@ -150,30 +150,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Use this section to understand when each deployment is appropriate for your GDPR compliance posture.',
         ],
-        items: [
+        subsections: [
           {
             title: 'DeepSeek API — Avoid for GDPR workflows',
-            content: 'DeepSeek API presents the highest risk of any major LLM because: (1) servers are in mainland China, subject to PIPL data-access mandates; (2) there is no EU-China adequacy decision (Schrems II renders SCCs insufficient); (3) the ToS explicitly reserves the right to share data with Chinese authorities. If your prompts contain personal data of EU residents, DeepSeek API violates GDPR Article 44 unless you have explicit consent from each data subject and a documented legal basis for the transfer. For non-sensitive tasks (competitive analysis, brainstorming), risk is lower, but contract review is mandatory before any use.',
+            text: 'DeepSeek API presents the highest risk of any major LLM because: (1) servers are in mainland China, subject to PIPL data-access mandates; (2) there is no EU-China adequacy decision (Schrems II renders SCCs insufficient); (3) the ToS explicitly reserves the right to share data with Chinese authorities. If your prompts contain personal data of EU residents, DeepSeek API violates GDPR Article 44 unless you have explicit consent from each data subject and a documented legal basis for the transfer. For non-sensitive tasks (competitive analysis, brainstorming), risk is lower, but contract review is mandatory before any use.',
           },
           {
             title: 'Claude API (US) — Medium risk, manageable with SCC + TIA',
-            content: 'Claude API requires Standard Contractual Clauses and a Transfer Impact Assessment, but is more compliant than GPT-4o because: (1) Anthropic has a clearer commitment to deletion on request; (2) Anthropic has published Data Processing Addenda (DPA) that explicitly reference GDPR Articles 28 and 32; (3) US law, while allowing law-enforcement access, does not mandate commercial data retention. For non-sensitive personal data (job titles, generic business context), Claude API with SCC + TIA is acceptable. For high-sensitivity data (health, financial, biometric), local deployment is required.',
+            text: 'Claude API requires Standard Contractual Clauses and a Transfer Impact Assessment, but is more compliant than GPT-4o because: (1) Anthropic has a clearer commitment to deletion on request; (2) Anthropic has published Data Processing Addenda (DPA) that explicitly reference GDPR Articles 28 and 32; (3) US law, while allowing law-enforcement access, does not mandate commercial data retention. For non-sensitive personal data (job titles, generic business context), Claude API with SCC + TIA is acceptable. For high-sensitivity data (health, financial, biometric), local deployment is required.',
           },
           {
             title: 'Claude (EU data residency) — Medium risk, lower due to EU processing',
-            content: 'Anthropic offers an EU data residency option where prompts are processed in Ireland or Germany. This reduces risk because: (1) data stays within the EU during processing; (2) data is deleted after 30 days; (3) Anthropic commits to GDPR compliance. However, the training data behind Claude models is still US-trained, and Anthropic is a US company, so full Article 44 compliance still requires SCCs. Better than US Claude for GDPR, but not equivalent to local deployment.',
+            text: 'Anthropic offers an EU data residency option where prompts are processed in Ireland or Germany. This reduces risk because: (1) data stays within the EU during processing; (2) data is deleted after 30 days; (3) Anthropic commits to GDPR compliance. However, the training data behind Claude models is still US-trained, and Anthropic is a US company, so full Article 44 compliance still requires SCCs. Better than US Claude for GDPR, but not equivalent to local deployment.',
           },
           {
             title: 'GPT-4o / GPT-5.5 Instant — Medium-high risk',
-            content: 'OpenAI APIs carry higher risk than Claude because: (1) OpenAI\'s data retention policy is opaque — the company has said it may retain user data for "research and safety improvements"; (2) no published DPA; (3) no EU data residency option. If you choose OpenAI, require explicit SCC + comprehensive TIA, and avoid sending high-sensitivity data (health, financial, biometric, genetic). For low-sensitivity tasks, acceptable with SCC.',
+            text: 'OpenAI APIs carry higher risk than Claude because: (1) OpenAI\'s data retention policy is opaque — the company has said it may retain user data for "research and safety improvements"; (2) no published DPA; (3) no EU data residency option. If you choose OpenAI, require explicit SCC + comprehensive TIA, and avoid sending high-sensitivity data (health, financial, biometric, genetic). For low-sensitivity tasks, acceptable with SCC.',
           },
           {
             title: 'Llama 4 Scout (local) — Lowest risk, no transfer',
-            content: 'Llama weights are open-source under a commercial-use-friendly license. Running Llama locally on your own hardware means: (1) zero Article 44 transfer; (2) you control all data retention; (3) no SCC or TIA required; (4) full Article 25 (privacy by design) compliance. Suitable for all data sensitivity levels. Llama 4 Scout at 8 GB or Llama 3.2 70B at 48 GB covers most enterprise use cases.',
+            text: 'Llama weights are open-source under a commercial-use-friendly license. Running Llama locally on your own hardware means: (1) zero Article 44 transfer; (2) you control all data retention; (3) no SCC or TIA required; (4) full Article 25 (privacy by design) compliance. Suitable for all data sensitivity levels. Llama 4 Scout at 8 GB or Llama 3.2 70B at 48 GB covers most enterprise use cases.',
           },
           {
             title: 'Qwen 2.5 / 3 (local) — Lowest risk, no transfer',
-            content: 'Qwen weights are open-source under Apache 2.0. Like Llama, running Qwen locally means: (1) zero Article 44 transfer; (2) you control retention; (3) no legal basis required (no transfer = no transfer risk). Qwen 2.5 14B is the most widely deployed in Europe due to excellent multilingual performance and a smaller VRAM footprint (12–16 GB vs Llama 3.2 70B\'s 48 GB). Suitable for all sensitivity levels.',
+            text: 'Qwen weights are open-source under Apache 2.0. Like Llama, running Qwen locally means: (1) zero Article 44 transfer; (2) you control retention; (3) no legal basis required (no transfer = no transfer risk). Qwen 2.5 14B is the most widely deployed in Europe due to excellent multilingual performance and a smaller VRAM footprint (12–16 GB vs Llama 3.2 70B\'s 48 GB). Suitable for all sensitivity levels.',
           },
         ],
       },
@@ -183,28 +183,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'The right LLM stack depends on your organization\'s data sensitivity, budget, and regulatory posture. Use these recommendations as a starting point for procurement decisions.',
         ],
-        items: [
+        subsections: [
           {
             title: 'Early-stage startup (low regulatory pressure)',
-            content: 'Use Claude API with SCC. Rationale: Claude is high-quality, production-ready, managed overhead is low, and SCCs are standard for US-based AI vendors. Cost is ~$3–5/month for experimental use. Risk is acceptable because: startup data is typically low-sensitivity (anonymous usage patterns, generic business logic). If you grow into healthcare or fintech, migrate to local Qwen.',
+            text: 'Use Claude API with SCC. Rationale: Claude is high-quality, production-ready, managed overhead is low, and SCCs are standard for US-based AI vendors. Cost is ~$3–5/month for experimental use. Risk is acceptable because: startup data is typically low-sensitivity (anonymous usage patterns, generic business logic). If you grow into healthcare or fintech, migrate to local Qwen.',
           },
           {
             title: 'SME with employee/customer data (medium regulatory pressure)',
-            content: 'Use Qwen 2.5 14B or Llama 3.2 32B locally. Rationale: You handle personal data (employee roster, customer contact info, transaction history), so zero-transfer architecture is required. Deploy on a single on-prem GPU (RTX 4070 Ti, 12 GB VRAM for Qwen 2.5 at Q4 quantization). Cost is ~$500 one-time hardware + ~$100/year electricity. Setup time: <1 hour (Ollama is trivial). Compliance burden: zero (no SCC, no TIA, no DPA negotiation).',
+            text: 'Use Qwen 2.5 14B or Llama 3.2 32B locally. Rationale: You handle personal data (employee roster, customer contact info, transaction history), so zero-transfer architecture is required. Deploy on a single on-prem GPU (RTX 4070 Ti, 12 GB VRAM for Qwen 2.5 at Q4 quantization). Cost is ~$500 one-time hardware + ~$100/year electricity. Setup time: <1 hour (Ollama is trivial). Compliance burden: zero (no SCC, no TIA, no DPA negotiation).',
           },
           {
             title: 'Enterprise (high regulatory pressure: healthcare, fintech, law)',
-            content: 'Use multi-GPU Qwen 3 33B with air-gap deployment. Rationale: High sensitivity data requires the strongest possible architecture. Multi-GPU (2× RTX 3090 or 4× RTX 4090) allows you to run larger, more capable models with lower latency. Air-gap means the inference cluster has no outbound internet access — prompts cannot leak, even if a vulnerability is discovered. Cost is ~$5–15K hardware, setup 1–2 weeks by your infrastructure team. Compliance: Full GDPR Article 32 (security) satisfaction, Article 30 audit trail with full access logs.',
+            text: 'Use multi-GPU Qwen 3 33B with air-gap deployment. Rationale: High sensitivity data requires the strongest possible architecture. Multi-GPU (2× RTX 3090 or 4× RTX 4090) allows you to run larger, more capable models with lower latency. Air-gap means the inference cluster has no outbound internet access — prompts cannot leak, even if a vulnerability is discovered. Cost is ~$5–15K hardware, setup 1–2 weeks by your infrastructure team. Compliance: Full GDPR Article 32 (security) satisfaction, Article 30 audit trail with full access logs.',
           },
           {
             title: 'Organization with existing legal agreement (special case)',
-            content: 'If you already have a Data Processing Addendum (DPA) with Claude or OpenAI, use those. The switching cost of migrating to local is often lower than renegotiating your DPA, and if the existing agreement is recent (2024–2026) and includes SCC + TIA, the risk is manageable. Review with your legal team before deciding.',
+            text: 'If you already have a Data Processing Addendum (DPA) with Claude or OpenAI, use those. The switching cost of migrating to local is often lower than renegotiating your DPA, and if the existing agreement is recent (2024–2026) and includes SCC + TIA, the risk is manageable. Review with your legal team before deciding.',
           },
         ],
       },
       faq: {
         id: 'faq',
-        items: [
+        faqs: [
           {
             q: 'Is DeepSeek GDPR compliant if I use it with an SCC?',
             a: 'No. SCCs alone do not satisfy GDPR Article 44 transfers to mainland China because: (1) there is no EU-China adequacy decision post-Schrems II; (2) Chinese law (PIPL) mandates that companies share data with state authorities on request, which SCCs cannot override; (3) Anthropic, OpenAI, and other major vendors do not offer SCC enforcement in China—they refuse to operate there. For any personal data of EU residents, do not use DeepSeek API. If you need DeepSeek, use the local weights (run `ollama run deepseek-coder:latest` on your hardware).',
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        items: [
+        faqs: [
           {
             q: 'Ist DeepSeek DSGVO-konform, wenn ich es mit einer SVK verwende?',
             a: 'Nein. SVKs allein sind nicht ausreichend für DSGVO-Transfers nach Artikel 44 nach China, weil: (1) es keine EU-China-Angemessenheitsentscheidung nach Schrems II gibt; (2) chinesisches Gesetz (PIPL) Unternehmen verpflichtet, Daten mit staatlichen Behörden zu teilen; (3) große Anbieter weigern sich, mit SVKs in China zu operieren. Verwenden Sie DeepSeek API nicht für personenbezogene Daten von EU-Bewohnern. Für nicht-sensible Aufgaben ist das lokale Gewichtsmodell sicherer.',
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        items: [
+        faqs: [
           {
             q: 'DeepSeek est-il conforme au RGPD si je l\'utilise avec une CCT ?',
             a: 'Non. Les CCT seules ne satisfont pas les transferts RGPD Article 44 vers la Chine continentale car : (1) il n\'y a pas de décision d\'adéquation UE-Chine post-Schrems II ; (2) la loi chinoise (PIPL) mandate que les entreprises partagent les données avec les autorités gouvernementales ; (3) les principaux fournisseurs refusent d\'opérer avec des CCT en Chine. Pour les données personnelles des résidents de l\'UE, n\'utilisez pas DeepSeek API. Si vous avez besoin de DeepSeek, utilisez les poids locaux.',
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        items: [
+        faqs: [
           {
             q: 'SCCを使用する場合、DeepSeekはGDPR準拠ですか？',
             a: 'いいえ。SCC単独では、次の理由からGDPR第44条の中国への転送を満たしていません：（1）EU-中国の妥当性決定がSchrems II以降存在しない; （2）中国法（PIPL）は企業が政府機関とデータを共有することを義務付けている; （3）主要ベンダーはSCCで中国で操業することを拒否しています。EUの住民の個人データについては、DeepSeek APIを使用しないでください。DeepSeekが必要な場合は、ローカルウェイトを使用してください。',
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        items: [
+        faqs: [
           {
             q: '如果我使用SCC，DeepSeek是否符合GDPR？',
             a: '不是。仅凭SCC无法满足GDPR第44条到中国大陆的转移，因为：（1）Schrems II后不存在欧盟-中国充分性决定；（2）中国法律（PIPL）要求公司与政府部门共享数据；（3）主要供应商拒绝在中国以SCC方式运营。对于欧盟居民的个人数据，请勿使用DeepSeek API。如果需要DeepSeek，请使用本地权重。',
