@@ -104,9 +104,9 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
 
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs text-text-muted mb-8">
-            <Link href="/ja" className="hover:text-primary transition-colors">Home</Link>
+            <Link href="/de" className="hover:text-primary transition-colors">Startseite</Link>
             <span>/</span>
-            <Link href="/ja/frameworks" className="hover:text-primary transition-colors">Frameworks</Link>
+            <Link href="/de/frameworks" className="hover:text-primary transition-colors">Frameworks</Link>
             <span>/</span>
             <span className="text-text-primary">{fw.name}</span>
           </nav>

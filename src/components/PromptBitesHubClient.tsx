@@ -91,6 +91,7 @@ const DEEPDIVE_LINKS: Record<Language, Record<string, { text: string; href: stri
     'Hardware-Specific': { text: 'Deep dive: Best Budget GPUs for Local LLM', href: '/local-llms/best-budget-gpus-local-llm' },
     'Quick Answers': { text: 'Deep dive: How Much VRAM for Local LLM', href: '/local-llms/how-much-vram-local-llm' },
     'Prompt Engineering': { text: 'Deep dive: CO-STAR Prompt Framework', href: '/prompt-engineering/co-star-framework' },
+    'Privacy & Compliance': { text: 'Deep dive: GDPR & Privacy Manifesto', href: '/local-llms/qwen-gdpr-privacy-manifesto-2026' },
   },
   de: {
     'Quantization & VRAM': { text: 'Vertiefung: Quantisierung erklärt', href: '/de/local-llms/llm-quantization-explained' },
@@ -100,6 +101,7 @@ const DEEPDIVE_LINKS: Record<Language, Record<string, { text: string; href: stri
     'Hardware-Specific': { text: 'Vertiefung: Beste Budget-GPUs für lokale LLM', href: '/de/local-llms/best-budget-gpus-local-llm' },
     'Quick Answers': { text: 'Vertiefung: Wie viel VRAM für lokale LLM', href: '/de/local-llms/how-much-vram-local-llm' },
     'Prompt Engineering': { text: 'Vertiefung: CO-STAR-Prompt-Framework', href: '/de/prompt-engineering/co-star-framework' },
+    'Privacy & Compliance': { text: 'Vertiefung: DSGVO & Datenschutz-Manifest', href: '/de/local-llms/qwen-gdpr-privacy-manifesto-2026' },
   },
   fr: {
     'Quantization & VRAM': { text: 'Approfondissement : Quantisation expliquée', href: '/fr/local-llms/llm-quantization-explained' },
@@ -109,6 +111,7 @@ const DEEPDIVE_LINKS: Record<Language, Record<string, { text: string; href: stri
     'Hardware-Specific': { text: 'Approfondissement : Meilleures GPU budget pour LLM local', href: '/fr/local-llms/best-budget-gpus-local-llm' },
     'Quick Answers': { text: 'Approfondissement : Combien de VRAM pour LLM local', href: '/fr/local-llms/how-much-vram-local-llm' },
     'Prompt Engineering': { text: 'Approfondissement : Framework de prompts CO-STAR', href: '/fr/prompt-engineering/co-star-framework' },
+    'Privacy & Compliance': { text: 'Approfondissement : Manifeste RGPD et confidentialité', href: '/fr/local-llms/qwen-gdpr-privacy-manifesto-2026' },
   },
   ja: {
     'Quantization & VRAM': { text: '深掘り：量化の説明', href: '/ja/local-llms/llm-quantization-explained' },
@@ -118,6 +121,7 @@ const DEEPDIVE_LINKS: Record<Language, Record<string, { text: string; href: stri
     'Hardware-Specific': { text: '深掘り：ローカルLLM向けベストバジェットGPU', href: '/ja/local-llms/best-budget-gpus-local-llm' },
     'Quick Answers': { text: '深掘り：ローカルLLMに必要なVRAM', href: '/ja/local-llms/how-much-vram-local-llm' },
     'Prompt Engineering': { text: '深掘り：CO-STARプロンプトフレームワーク', href: '/ja/prompt-engineering/co-star-framework' },
+    'Privacy & Compliance': { text: '深掘り：GDPR・プライバシーマニフェスト', href: '/ja/local-llms/qwen-gdpr-privacy-manifesto-2026' },
   },
   zh: {
     'Quantization & VRAM': { text: '深入：量化解释', href: '/zh/local-llms/llm-quantization-explained' },
@@ -127,6 +131,7 @@ const DEEPDIVE_LINKS: Record<Language, Record<string, { text: string; href: stri
     'Hardware-Specific': { text: '深入：本地LLM最佳预算GPU', href: '/zh/local-llms/best-budget-gpus-local-llm' },
     'Quick Answers': { text: '深入：本地LLM需要多少显存', href: '/zh/local-llms/how-much-vram-local-llm' },
     'Prompt Engineering': { text: '深入：CO-STAR提示框架', href: '/zh/prompt-engineering/co-star-framework' },
+    'Privacy & Compliance': { text: '深入：GDPR 与隐私宣言', href: '/zh/local-llms/qwen-gdpr-privacy-manifesto-2026' },
   },
 }
 

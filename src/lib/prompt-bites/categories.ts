@@ -95,4 +95,15 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-llm-right-now',
     ],
   },
+  {
+    id: 'privacy-compliance',
+    label: 'H',
+    titleEn: 'Privacy & Compliance',
+    descriptionEn: 'GDPR compliance, data sovereignty, and privacy-safe local AI deployment.',
+    articleSlugs: [
+      'is-qwen-gdpr-compliant',
+      'is-deepseek-gdpr-safe',
+      'can-local-llm-help-gdpr',
+    ],
+  },
 ]

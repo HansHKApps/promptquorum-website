@@ -12,10 +12,19 @@ import { POWER_LLM_CATEGORIES } from './categories'
 import { powerLLMAlternates, powerLLMHubPath, powerLLMArticlePath } from './metadata-helpers'
 import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
 import { isPowerLLMArticlePublished, isPowerLLMHubPublished } from './published'
+import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
 
 const BASE = 'https://www.promptquorum.com'
 
 type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+
+const HOME_LABEL: Record<Lang, string> = {
+  en: 'Home',
+  de: 'Startseite',
+  fr: 'Accueil',
+  ja: 'ホーム',
+  zh: '主页',
+}
 
 const SLUG_ACRONYMS: Record<string, string> = {
   llms: 'LLMs',
@@ -221,11 +230,18 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     }
   }
 
+  // Inject GEO Schema Matrix entities
+  const geoAbout = getPowerLLMGeoEntities((article as any).theme ?? '', lang)
+  if (geoAbout.length > 0) {
+    (articleSchema as any).about = geoAbout
+  }
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: lang,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
       { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: `${BASE}${powerLLMHubPath(lang)}` },
       { '@type': 'ListItem', position: 3, name: article.title ?? slugToTitle(slug), item: canonicalUrl },
     ],
@@ -1184,8 +1200,9 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh') {
   const hubBreadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: lang,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
       { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: `${BASE}${powerLLMHubPath(lang)}` },
     ],
   }

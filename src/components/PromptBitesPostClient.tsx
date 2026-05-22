@@ -16,6 +16,14 @@ function promptBitesHubHref(lang: Language): string {
   return lang === 'en' ? '/prompt-bites' : `/${lang}/prompt-bites`
 }
 
+const BREADCRUMB_LABELS: Record<Language, Record<string, string>> = {
+  en: { home: 'Home', hub: 'Prompt Bites' },
+  de: { home: 'Startseite', hub: 'Prompt Bites' },
+  fr: { home: 'Accueil', hub: 'Prompt Bites' },
+  ja: { home: 'ホーム', hub: 'Prompt Bites' },
+  zh: { home: '主页', hub: 'Prompt Bites' },
+}
+
 const BACK_LABEL: Record<Language, string> = {
   en: '← Back to Prompt Bites',
   de: '← Zurück zu Prompt Bites',
@@ -208,8 +216,12 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
         {/* Breadcrumb + language switcher */}
         <div className="flex items-start justify-between gap-4 mb-6">
           <nav className="text-sm text-text-secondary min-w-0">
+            <Link href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary transition-colors shrink-0">
+              {BREADCRUMB_LABELS[lang].home}
+            </Link>
+            <span className="mx-2">›</span>
             <Link href={promptBitesHubHref(lang)} className="hover:text-primary transition-colors shrink-0">
-              Prompt Bites
+              {BREADCRUMB_LABELS[lang].hub}
             </Link>
             <span className="mx-2">›</span>
             <span className="text-text-primary break-words">{article.title}</span>

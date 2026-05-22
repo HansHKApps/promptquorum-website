@@ -16,6 +16,7 @@ import { powerLLMContent } from '@/lib/power-local-llm/content'
 import type { LLMSection } from '@/lib/local-llms/types'
 import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
 import { powerLLMHubPath, powerLLMArticlePath } from '@/lib/power-local-llm/metadata-helpers'
+import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
@@ -701,6 +702,9 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
             <span>{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
           </div>
         </div>
+
+        {/* Cross-language links */}
+        <LangLinksBar cluster="power-local-llm" slug={slug} availableLangs={Object.keys(articleData)} />
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {article.leadAnswerBlock && (

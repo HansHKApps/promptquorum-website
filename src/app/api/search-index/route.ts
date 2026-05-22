@@ -49,6 +49,7 @@ export function GET() {
       const a = article as { aboutTopics?: string[] }
       entries.push({
         id: `pe-${lang}-${key}`,
+        articleKey: `pe-${key}`,
         title: article.title ?? '',
         description: article.metaDescription ?? article.intro ?? '',
         section: article.theme ?? '',
@@ -69,6 +70,7 @@ export function GET() {
       if (!article) continue
       entries.push({
         id: `llm-${lang}-${key}`,
+        articleKey: `llm-${key}`,
         title: article.title ?? '',
         description: article.metaDescription ?? article.intro ?? '',
         section: article.theme ?? '',
@@ -89,6 +91,7 @@ export function GET() {
       if (!article) continue
       entries.push({
         id: `plm-${lang}-${key}`,
+        articleKey: `plm-${key}`,
         title: article.title ?? '',
         description: article.metaDescription ?? article.intro ?? '',
         section: article.theme ?? '',
@@ -109,6 +112,7 @@ export function GET() {
       if (!article) continue
       entries.push({
         id: `pb-${lang}-${key}`,
+        articleKey: `pb-${key}`,
         title: article.title ?? '',
         description: article.metaDescription ?? article.intro ?? '',
         section: article.theme ?? '',
@@ -129,6 +133,7 @@ export function GET() {
       if (!article) continue
       entries.push({
         id: `blog-${lang}-${key}`,
+        articleKey: `blog-${key}`,
         title: article.title ?? '',
         description: article.metaDescription ?? article.intro ?? '',
         section: article.category ?? '',

@@ -34,28 +34,36 @@ export function useSearch(lang: string) {
       ])
       const data: SearchEntry[] = await res.json()
       setAllEntries(data)
-      const filtered = data.filter((e) => e.lang === lang)
-      fuseRef.current = new Fuse(filtered, FUSE_OPTIONS)
+      fuseRef.current = new Fuse(data, FUSE_OPTIONS)
       setIsLoaded(true)
     } catch {
       setIsLoaded(true)
     }
-  }, [allEntries, lang])
+  }, [allEntries])
 
   useEffect(() => {
     if (!allEntries) return
     import('fuse.js').then(({ default: Fuse }) => {
-      const filtered = allEntries.filter((e) => e.lang === lang)
-      fuseRef.current = new Fuse(filtered, FUSE_OPTIONS)
+      fuseRef.current = new Fuse(allEntries, FUSE_OPTIONS)
     })
-  }, [lang, allEntries])
+  }, [allEntries])
 
   const search = useCallback(
     (query: string): FuseResult[] => {
       if (!fuseRef.current || query.length < 2) return []
-      return fuseRef.current.search(query).slice(0, 20)
+      const raw = fuseRef.current.search(query)
+      const seen = new Map<string, FuseResult>()
+      for (const result of raw) {
+        const key = result.item.articleKey
+        if (!seen.has(key)) {
+          seen.set(key, result)
+        } else if (result.item.lang === lang && seen.get(key)!.item.lang !== lang) {
+          seen.set(key, result)
+        }
+      }
+      return Array.from(seen.values()).slice(0, 20)
     },
-    [],
+    [lang],
   )
 
   const getPopular = useCallback((): SearchEntry[] => {

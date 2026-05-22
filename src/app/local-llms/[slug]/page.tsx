@@ -7,6 +7,7 @@ import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { llmThemes } from '@/lib/local-llms/themes'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
+import { getLocalLLMGeoEntities, type Language } from '@/lib/geo-schema'
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
 const SLUG_ACRONYMS: Record<string, string> = {
@@ -252,6 +253,12 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
       name: 'Local LLMs Guide',
       url: 'https://www.promptquorum.com/local-llms',
     },
+  }
+
+  // Inject GEO Schema Matrix entities
+  const geoAbout = getLocalLLMGeoEntities(article.theme ?? '', selectedLang as Language, slug)
+  if (geoAbout.length > 0) {
+    (articleSchema as any).about = [...(Array.isArray((articleSchema as any).about) ? (articleSchema as any).about : []), ...geoAbout]
   }
 
   // Collect section images for ImageObject JSON-LD attribution

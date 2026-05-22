@@ -136,4 +136,8 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'run-qwen-locally-guide-2026':                'run-qwen-locally-guide-2026',
   'qwen-coder-vs-deepseek-mistral-local-2026':  'qwen-coder-vs-deepseek-mistral-local-2026',
   'qwen-gdpr-privacy-manifesto-2026':           'qwen-gdpr-privacy-manifesto-2026',
+
+  // Qwen × GDPR Privacy Series
+  'qwen-local-gdpr-setup-guide-2026':           'qwen-local-gdpr-setup-guide-2026',
+  'gdpr-llm-risk-comparison-2026':              'gdpr-llm-risk-comparison-2026',
 }

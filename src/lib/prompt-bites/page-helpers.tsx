@@ -15,6 +15,14 @@ const BASE = 'https://www.promptquorum.com'
 
 type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
+const HOME_LABEL: Record<Lang, string> = {
+  en: 'Home',
+  de: 'Startseite',
+  fr: 'Accueil',
+  ja: 'ホーム',
+  zh: '主页',
+}
+
 const SLUG_ACRONYMS: Record<string, string> = {
   llms: 'LLMs', llm: 'LLM', ai: 'AI', api: 'API', apis: 'APIs',
   gpu: 'GPU', cpu: 'CPU', vram: 'VRAM', ram: 'RAM', rag: 'RAG',
@@ -114,8 +122,9 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: lang,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
       { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: `${BASE}${promptBitesHubPath(lang)}` },
       { '@type': 'ListItem', position: 3, name: article.title ?? slugToTitle(slug), item: canonicalUrl },
     ],
@@ -216,8 +225,9 @@ export async function buildHubPageElement(lang: Lang) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: lang,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
       { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: `${BASE}${promptBitesHubPath(lang)}` },
     ],
   }

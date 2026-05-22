@@ -104,9 +104,9 @@ export default async function ZhFrameworkPage({ params }: { params: Promise<{ sl
 
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs text-text-muted mb-8">
-            <Link href="/ja" className="hover:text-primary transition-colors">Home</Link>
+            <Link href="/zh" className="hover:text-primary transition-colors">主页</Link>
             <span>/</span>
-            <Link href="/ja/frameworks" className="hover:text-primary transition-colors">Frameworks</Link>
+            <Link href="/zh/frameworks" className="hover:text-primary transition-colors">框架</Link>
             <span>/</span>
             <span className="text-text-primary">{fw.name}</span>
           </nav>

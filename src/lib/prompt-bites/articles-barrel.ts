@@ -31,6 +31,9 @@ import { article as canYouRunRagOn2gbRam } from './articles/can-you-run-rag-on-2
 import { article as bestLocalLlm16gbRamLaptop } from './articles/best-local-llm-16gb-ram-laptop'
 import { article as coStarPromptFramework } from './articles/co-star-prompt-framework'
 import { article as bestLlmRightNow } from './articles/best-llm-right-now'
+import { article as isQwenGdprCompliant } from './articles/is-qwen-gdpr-compliant'
+import { article as isDeepseekGdprSafe } from './articles/is-deepseek-gdpr-safe'
+import { article as canLocalLlmHelpGdpr } from './articles/can-local-llm-help-gdpr'
 
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
@@ -63,4 +66,7 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestLocalLlm16gbRamLaptop,
   coStarPromptFramework,
   bestLlmRightNow,
+  isQwenGdprCompliant,
+  isDeepseekGdprSafe,
+  canLocalLlmHelpGdpr,
 }

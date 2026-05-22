@@ -1,5 +1,6 @@
 export interface SearchEntry {
   id: string
+  articleKey: string
   title: string
   description: string
   section: string

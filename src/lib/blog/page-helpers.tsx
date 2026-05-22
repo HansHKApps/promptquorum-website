@@ -72,6 +72,14 @@ export async function buildHubMetadata(lang: Language): Promise<Metadata> {
   }
 }
 
+const BLOG_BREADCRUMB_LABELS = {
+  en: { home: 'Home', blog: 'Blog' },
+  de: { home: 'Startseite', blog: 'Blog' },
+  fr: { home: 'Accueil', blog: 'Blog' },
+  ja: { home: 'ホーム', blog: 'ブログ' },
+  zh: { home: '主页', blog: '博客' },
+}
+
 export async function buildArticlePageElement(slug: string, lang: Language) {
   const postId = SLUG_TO_POST_ID[slug as BlogSlug]
 
@@ -126,20 +134,22 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
   }
 
   // JSON-LD: BreadcrumbList schema
+  const labels = BLOG_BREADCRUMB_LABELS[lang]
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: lang,
     itemListElement: [
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'Home',
+        name: labels.home,
         item: 'https://www.promptquorum.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Blog',
+        name: labels.blog,
         item: 'https://www.promptquorum.com/blog',
       },
       {
@@ -335,9 +345,10 @@ export async function buildHubPageElement(lang: Language) {
       },
       {
         '@type': 'BreadcrumbList',
+        inLanguage: lang,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
-          { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.promptquorum.com/blog' },
+          { '@type': 'ListItem', position: 1, name: BLOG_BREADCRUMB_LABELS[lang].home, item: 'https://www.promptquorum.com' },
+          { '@type': 'ListItem', position: 2, name: BLOG_BREADCRUMB_LABELS[lang].blog, item: 'https://www.promptquorum.com/blog' },
         ],
       },
     ],

@@ -8,6 +8,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import { llmContent, type LLMSection } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
@@ -690,6 +691,9 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
             <span>{renderLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'])}</span>
           </div>
         </div>
+
+        {/* Cross-language links */}
+        <LangLinksBar cluster="local-llms" slug={slug} availableLangs={Object.keys(articleData)} />
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {article.leadAnswerBlock && (

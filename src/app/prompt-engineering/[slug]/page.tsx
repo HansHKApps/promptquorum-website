@@ -7,6 +7,7 @@ import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { themes } from '@/lib/prompt-engineering/themes'
 import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
 import { generateAlternates } from '@/lib/hreflang'
+import { getPEGeoEntities, type Language } from '@/lib/geo-schema'
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
 const SLUG_ACRONYMS: Record<string, string> = {
@@ -277,6 +278,12 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
         { '@type': 'WebPageElement', name: 'Metrics & Production', cssSelector: '#metrics-production' },
       ],
     }),
+  }
+
+  // Inject GEO Schema Matrix entities
+  const geoAbout = getPEGeoEntities(article.theme ?? '', selectedLang as Language)
+  if (geoAbout.length > 0) {
+    (articleSchema as any).about = [...(Array.isArray((articleSchema as any).about) ? (articleSchema as any).about : []), ...geoAbout]
   }
 
   // Collect section images for ImageObject JSON-LD attribution

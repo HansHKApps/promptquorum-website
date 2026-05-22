@@ -4,7 +4,9 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
+import { blogContent } from '@/lib/blog/blogContent'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
+import { LangLinksBar } from '@/components/LangLinksBar'
 import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { FrameworkWheel } from '@/components/FrameworkWheel'
@@ -36,6 +38,23 @@ interface LightboxImage {
   caption?: string
 }
 
+const BLOG_UI = {
+  breadcrumbHome: {
+    en: 'Home',
+    de: 'Startseite',
+    fr: 'Accueil',
+    ja: 'ホーム',
+    zh: '主页',
+  },
+  breadcrumbHub: {
+    en: 'Blog',
+    de: 'Blog',
+    fr: 'Blog',
+    ja: 'ブログ',
+    zh: '博客',
+  },
+}
+
 function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps) {
   const lang = useLang(initialLang) as Language
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
@@ -50,9 +69,9 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
         {/* Breadcrumb + Language Switcher */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2 text-sm text-text-secondary">
-            <a href={lang === 'en' ? '/' : `/?lang=${lang}`} className="hover:text-primary">Home</a>
+            <a href={lang === 'en' ? '/' : `/?lang=${lang}`} className="hover:text-primary">{BLOG_UI.breadcrumbHome[lang]}</a>
             <span>/</span>
-            <a href={lang === 'en' ? '/#blog' : `/?lang=${lang}#blog`} className="hover:text-primary">Blog</a>
+            <a href={lang === 'en' ? '/#blog' : `/?lang=${lang}#blog`} className="hover:text-primary">{BLOG_UI.breadcrumbHub[lang]}</a>
             <span>/</span>
             <span className="text-text-primary font-medium">{metadata?.title || post.title}</span>
           </div>
@@ -79,6 +98,11 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
               <span>By <Link href="/author/hans-kuepper" className="text-primary hover:text-primary/80 font-medium">Hans Kuepper</Link> · PromptQuorum</span>
             </div>
           </div>
+
+          {/* Cross-language links */}
+          {postId && blogContent[postId] && (
+            <LangLinksBar cluster="blog" slug={slug} availableLangs={Object.keys(blogContent[postId])} />
+          )}
 
           {/* Hero Component or Image */}
           {post.heroComponent === 'FrameworkWheel' ? (

@@ -8,6 +8,7 @@ import { peContent, type PESection } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { LEARNING_PATHS, TRENDING_TERMS_2026, getTermPaths, DOMAIN_TO_PATH, LEVEL_TO_PATHS, type LearningPath } from '@/lib/prompt-engineering/learningPaths'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { LangLinksBar } from '@/components/LangLinksBar'
 import { GlossaryComparisonTable } from '@/components/GlossaryComparisonTable'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
@@ -1062,6 +1063,9 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             <span>{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
           </div>
         </div>
+
+        {/* Cross-language links */}
+        <LangLinksBar cluster="prompt-engineering" slug={slug} availableLangs={Object.keys(articleData)} />
 
         {/* Article intro paragraph */}
         {article.intro && (

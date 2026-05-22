@@ -44,4 +44,9 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   // Cluster G — Prompt Engineering & General
   'co-star-prompt-framework':             'coStarPromptFramework',
   'best-llm-right-now':                   'bestLlmRightNow',
+
+  // Cluster H — Privacy & Compliance
+  'is-qwen-gdpr-compliant':               'isQwenGdprCompliant',
+  'is-deepseek-gdpr-safe':                'isDeepseekGdprSafe',
+  'can-local-llm-help-gdpr':              'canLocalLlmHelpGdpr',
 }
