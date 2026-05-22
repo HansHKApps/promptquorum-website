@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <text x="400" y="36" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Pick Your GPU in 4 Questions</text>
+
+  <!-- Arrows between steps -->
+  <text x="205" y="106" font-size="22" fill="#6750A4" text-anchor="middle">&#8594;</text>
+  <text x="390" y="106" font-size="22" fill="#6750A4" text-anchor="middle">&#8594;</text>
+  <text x="575" y="106" font-size="22" fill="#6750A4" text-anchor="middle">&#8594;</text>
+
+  <!-- Step 1 -->
+  <circle cx="120" cy="98" r="26" fill="#6750A4"/>
+  <text x="120" y="106" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="120" y="152" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Largest model?</text>
+  <text x="120" y="176" font-size="11" fill="#49454F" text-anchor="middle">7B &#8594; Budget tier</text>
+  <text x="120" y="193" font-size="11" fill="#49454F" text-anchor="middle">14B &#8594; Mid tier</text>
+  <text x="120" y="210" font-size="11" fill="#49454F" text-anchor="middle">22B &#8594; High tier</text>
+  <text x="120" y="227" font-size="11" fill="#49454F" text-anchor="middle">33B &#8594; 4090 / 70B &#8594; 5090</text>
+
+  <!-- Step 2 -->
+  <circle cx="305" cy="98" r="26" fill="#6750A4"/>
+  <text x="305" y="106" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="305" y="152" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Budget ceiling?</text>
+  <text x="305" y="176" font-size="11" fill="#49454F" text-anchor="middle">Under $250: RTX 3060</text>
+  <text x="305" y="193" font-size="11" fill="#49454F" text-anchor="middle">Under $520: 4060 Ti 16GB</text>
+  <text x="305" y="210" font-size="11" fill="#49454F" text-anchor="middle">~$1,150: RTX 4080 Super</text>
+  <text x="305" y="227" font-size="11" fill="#49454F" text-anchor="middle">$2,480+: 4090 or 5090</text>
+
+  <!-- Step 3 -->
+  <circle cx="490" cy="98" r="26" fill="#6750A4"/>
+  <text x="490" y="106" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="490" y="152" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">NVIDIA or AMD?</text>
+  <text x="490" y="176" font-size="11" fill="#49454F" text-anchor="middle">Default to NVIDIA —</text>
+  <text x="490" y="193" font-size="11" fill="#49454F" text-anchor="middle">CUDA works instantly.</text>
+  <text x="490" y="210" font-size="11" fill="#49454F" text-anchor="middle">Pick AMD only if you</text>
+  <text x="490" y="227" font-size="11" fill="#49454F" text-anchor="middle">accept ROCm setup time.</text>
+
+  <!-- Step 4 -->
+  <circle cx="675" cy="98" r="26" fill="#6750A4"/>
+  <text x="675" y="106" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="675" y="152" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">PSU headroom?</text>
+  <text x="675" y="176" font-size="11" fill="#49454F" text-anchor="middle">Mid tier and up:</text>
+  <text x="675" y="193" font-size="11" fill="#49454F" text-anchor="middle">285–575 W cards.</text>
+  <text x="675" y="210" font-size="11" fill="#49454F" text-anchor="middle">RTX 5090 needs an</text>
+  <text x="675" y="227" font-size="11" fill="#49454F" text-anchor="middle">850–1000 W PSU.</text>
+
+  <line x1="18" y1="266" x2="782" y2="266" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="296" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">If unsure: buy the smallest card that fits your target model.</text>
+  <text x="400" y="320" font-size="11" fill="#79747E" text-anchor="middle">VRAM decides which models run; everything else is optimization. Prices: May 2026 US snapshot.</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
