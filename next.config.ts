@@ -81,11 +81,12 @@ const nextConfig: NextConfig = {
   async headers() {
     const cspHeader = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com",
+      "worker-src 'self'",
       "style-src 'self' 'unsafe-inline'",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: https:",
-      "connect-src 'self' https://vitals.vercel-insights.com https://api.vercel.com",
+      "connect-src 'self' https://vitals.vercel-insights.com https://api.vercel.com https://onesignal.com https://*.onesignal.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
