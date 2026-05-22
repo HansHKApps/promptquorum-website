@@ -2,6 +2,7 @@
 
 import { useLang } from '@/hooks/useLang'
 import Link from 'next/link'
+import { LangLinksBar } from '@/components/LangLinksBar'
 
 // ---------------------------------------------------------------------------
 // Content data — all 5 languages
@@ -851,6 +852,10 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
             {t.h1}{' '}
             <span className="text-primary">{t.h1Highlight}</span>
           </h1>
+
+          {/* Cross-language links */}
+          <LangLinksBar cluster="compare" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
+
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             {t.introPara}
           </p>

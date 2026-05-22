@@ -90,8 +90,8 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Frameworks', 'item': 'https://www.promptquorum.com/ja/frameworks' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'ホーム', 'item': 'https://www.promptquorum.com/ja' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'フレームワーク', 'item': 'https://www.promptquorum.com/ja/frameworks' },
                 { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/ja/frameworks/${fw.slug}` },
               ],
             },

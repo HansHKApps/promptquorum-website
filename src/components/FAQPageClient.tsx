@@ -2,6 +2,7 @@
 
 import { useLang } from '@/hooks/useLang'
 import type { Lang } from '@/hooks/useLang'
+import { LangLinksBar } from '@/components/LangLinksBar'
 import Link from 'next/link'
 import { FAQAccordion } from './FAQAccordion'
 
@@ -74,6 +75,9 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
           <h1 className="text-5xl font-bold text-gray-900 mb-4">{t.h1}</h1>
           <p className="text-lg text-gray-600">{t.subtitle}</p>
         </div>
+
+        {/* Cross-language links */}
+        <LangLinksBar cluster="faq" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
 
         <FAQAccordion lang={lang} />
 

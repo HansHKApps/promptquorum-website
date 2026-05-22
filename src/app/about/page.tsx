@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
 import Link from 'next/link'
+import { AboutHeroClient } from '@/components/AboutHeroClient'
 
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
@@ -81,17 +82,7 @@ export default function AboutPage() {
       <div className="min-h-screen bg-surface pt-24 pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
 
-          {/* Hero */}
-          <div className="py-16 border-b border-primary/20 mb-16">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">About</p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
-              Built for people who need to trust their AI answers.
-            </h1>
-            <p className="text-xl text-text-secondary leading-relaxed">
-              PromptQuorum is a multi-model AI dispatch and consensus tool. One prompt to every model.
-              One verdict you can actually trust.
-            </p>
-          </div>
+          <AboutHeroClient />
 
           {/* Founder */}
           <section className="mb-16">

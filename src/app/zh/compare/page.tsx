@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ZhComparePage() {
   return (
     <>
-      <ComparePageClient initialLang="ja" />
+      <ComparePageClient initialLang="zh" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -48,8 +48,8 @@ export default async function ZhComparePage() {
               {
                 '@type': 'BreadcrumbList',
                 'itemListElement': [
-                  { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/zh' },
-                  { '@type': 'ListItem', 'position': 2, 'name': 'Compare', 'item': 'https://www.promptquorum.com/zh/compare' },
+                  { '@type': 'ListItem', 'position': 1, 'name': '主页', 'item': 'https://www.promptquorum.com/zh' },
+                  { '@type': 'ListItem', 'position': 2, 'name': '比较', 'item': 'https://www.promptquorum.com/zh/compare' },
                 ],
               },
             ],

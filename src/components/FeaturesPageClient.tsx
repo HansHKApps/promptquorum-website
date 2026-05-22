@@ -1,6 +1,7 @@
 'use client'
 
 import { useLang } from '@/hooks/useLang'
+import { LangLinksBar } from '@/components/LangLinksBar'
 import { PromptOptimizerShowcase } from '@/components/PromptOptimizerShowcase'
 import { OptimizationShowcase } from '@/components/OptimizationShowcase'
 import { QuorumShowcase } from '@/components/QuorumShowcase'
@@ -254,6 +255,11 @@ function FeaturesContent({ initialLang }: { initialLang?: import("@/hooks/useLan
         <div className="text-center mb-20">
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4">{t.h1}</h1>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">{t.subtitle}</p>
+        </div>
+
+        {/* Cross-language links */}
+        <div className="flex justify-center mb-20">
+          <LangLinksBar cluster="features" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
         </div>
 
         {/* TLDR Section */}

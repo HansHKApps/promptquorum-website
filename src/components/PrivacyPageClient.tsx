@@ -3,6 +3,7 @@
 import type { ReactNode } from 'react'
 import { useLang } from '@/hooks/useLang'
 import { translations, type Language } from '@/translations'
+import { LangLinksBar } from '@/components/LangLinksBar'
 
 const EFFECTIVE_DATE = '15 March 2026'
 const CONTROLLER = 'PromptQuorum'
@@ -54,6 +55,9 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             {t.privacyEffectiveDate} <time dateTime="2026-03-15">{EFFECTIVE_DATE}</time> &nbsp;·&nbsp; {t.privacyController} {CONTROLLER} &nbsp;·&nbsp; {t.privacyContact} {CONTROLLER_EMAIL}
           </p>
         </div>
+
+        {/* Cross-language links */}
+        <LangLinksBar cluster="privacy" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
 
         {/* GDPR notice banner */}
         <div className="bg-primary/5 border border-primary/20 rounded-lg px-5 py-4 mb-10 text-sm text-text-secondary leading-relaxed">

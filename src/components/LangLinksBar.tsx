@@ -22,12 +22,13 @@ export function LangLinksBar({ cluster, slug, availableLangs }: LangLinksBarProp
 
   const buildHref = (lang: Language): string => {
     const isAvailable = availableLangs.includes(lang)
+    const basePath = slug ? `${cluster}/${slug}` : cluster
 
     if (lang === 'en') {
-      return isAvailable ? `/${cluster}/${slug}` : `/${cluster}`
+      return isAvailable ? `/${basePath}` : `/${cluster}`
     }
 
-    return isAvailable ? `/${lang}/${cluster}/${slug}` : `/${lang}/${cluster}`
+    return isAvailable ? `/${lang}/${basePath}` : `/${lang}/${cluster}`
   }
 
   return (

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { LangLinksBar } from '@/components/LangLinksBar'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import type { Language } from '@/lib/blog/blogContent'
@@ -235,6 +236,9 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
         <h1 className="prompt-bite-h1 text-3xl sm:text-4xl font-bold text-text-primary mb-8 leading-tight">
           {article.title}
         </h1>
+
+        {/* Cross-language links */}
+        <LangLinksBar cluster="prompt-bites" slug={slug} availableLangs={Object.keys(articleData ?? {})} />
 
         {/* Quick Answer block */}
         {quickAnswer && (

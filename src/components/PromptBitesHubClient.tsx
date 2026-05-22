@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { LangLinksBar } from '@/components/LangLinksBar'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { PROMPT_BITES_CATEGORIES } from '@/lib/prompt-bites/categories'
@@ -165,6 +166,11 @@ export function PromptBitesHubClient({ lang }: Props) {
             {HUB_SUBTITLE[lang]}
           </p>
         </header>
+
+        {/* Cross-language links */}
+        <div className="flex justify-center mb-12">
+          <LangLinksBar cluster="prompt-bites" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
+        </div>
 
         {/* VRAM Reference Table */}
         <div className="mb-12 overflow-x-auto">

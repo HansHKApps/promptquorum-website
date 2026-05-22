@@ -2,6 +2,7 @@
 
 import { useLang } from '@/hooks/useLang'
 import Link from 'next/link'
+import { LangLinksBar } from '@/components/LangLinksBar'
 
 const T = {
   en: {
@@ -552,6 +553,11 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
         <p className="text-xl text-text-secondary max-w-2xl mx-auto">{t.subtitle}</p>
         <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
           {t.badge}
+        </div>
+
+        {/* Cross-language links */}
+        <div className="mt-8">
+          <LangLinksBar cluster="how-it-works" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
         </div>
       </div>
 
