@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Advanced Techniques',
       title: 'Create Custom Local LLMs 2026: Fine-Tuning vs Pre-Training with Unsloth and Ollama',
       seoTitle: 'Create Custom Local LLMs 2026: Fine-Tune for $500 vs $50K Pre-Train',
-      intro: 'Creating custom local LLMs means fine-tuning an existing model or pre-training from scratch. As of April 2026, fine-tuning with LoRA is practical on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training costs $50K–500K and requires 10B+ tokens — justified only for rare proprietary needs. This guide covers both approaches: the 7-step fine-tuning path with Unsloth, the decision matrix for fine-tuning vs pre-training vs RAG, and deployment to Ollama.',
+      intro: 'Creating custom local LLMs means fine-tuning an existing model or pre-training from scratch. As of April 2026, fine-tuning with LoRA is practical on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training costs $50K–500K and requires 10B+ tokens — justified only for rare proprietary needs. This guide covers both approaches: the 7-step fine-tuning path with Unsloth, the decision matrix for fine-tuning vs pre-training vs RAG, and deployment to [Ollama](https://ollama.com/).',
       metaDescription: 'Fine-tune Llama 3.1 8B with LoRA: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training: 10B+ tokens, weeks, $50K–500K. Decision matrix and Ollama deployment guide.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-24',

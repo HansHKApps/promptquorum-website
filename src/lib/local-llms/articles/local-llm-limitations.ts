@@ -336,7 +336,7 @@ schema: {
         setup: {
           title: 'How Hard Is It to Set Up and Maintain a Local LLM?',
           content: [
-            '**A cloud API requires creating an account, generating an API key, and making an HTTP call -- typically 5-10 minutes total.** A local LLM requires installing an inference engine (like [Ollama](/local-llms/run-first-local-llm) or LM Studio), downloading a model file (2-50 GB), configuring GPU offloading, and troubleshooting driver issues.',
+            '**A cloud API requires creating an account, generating an API key, and making an HTTP call -- typically 5-10 minutes total.** A local LLM requires installing an inference engine (like [Ollama](/local-llms/run-first-local-llm) or LM Studio), downloading a model file (2-50 GB), configuring GPU offloading, and troubleshooting driver issues. [Ollama](https://ollama.com/) reduces this to a single binary installation, simplifying the process compared to manual setup.',
             'Maintenance adds ongoing complexity: new model releases must be manually downloaded, inference tools require updates, and hardware compatibility issues arise with OS updates. For a user who wants to focus on using AI rather than managing infrastructure, cloud APIs have a dramatically lower operational burden.',
             'See [how to install Ollama](/local-llms/run-first-local-llm) for step-by-step instructions and [Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) for fixes to the most common errors. For a full setup time comparison, see [Setup Time: Local vs Cloud](/local-llms/local-llm-limitations-setup-time-en.svg).',
           ],

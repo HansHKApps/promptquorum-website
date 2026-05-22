@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'GDPR: What Does Compliance Mean for AI?',
           content: [
             '**GDPR (General Data Protection Regulation) applies to any processing of EU residents\' personal data, regardless of where your company is located.**',
-            '**Article 44 (Data Transfers):** Personal data cannot be transferred outside the EU unless specific safeguards apply. Cloud APIs to US servers violate this.',
+            '**Article 44 (Data Transfers):** Personal data cannot be transferred outside the EU unless specific safeguards apply. Cloud APIs to US servers violate this. EU-based infrastructure options like [Hetzner Cloud GPU](https://www.hetzner.com/cloud/gpu/) provide GDPR-compliant deployment.',
             '**Article 12-22 (Data Subject Rights):** Individuals can request access, deletion ("right to be forgotten"), or portability of their data. You must respond within 30 days.',
             '**Article 5 (Principles):** Data must be minimized, accurate, and processed lawfully. Purpose limitation: data cannot be used for new purpose without consent.',
             '**Penalties:** Up to €20 million or 4% of annual global revenue, whichever is higher.',

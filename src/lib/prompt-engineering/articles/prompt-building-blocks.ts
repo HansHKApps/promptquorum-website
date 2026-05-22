@@ -387,7 +387,7 @@ export const article: Record<Language, PEArticle> = {
             '**Write the Task / Instruction:** State exactly what you want produced — specific and testable. "Summarise the key VAT obligations in 200 words" is better than "tell me about VAT."',
             '**Add Input & Examples:** Provide the raw data and at least one example of the correct output format. A single well-chosen example reduces inconsistency more than any other single technique.',
             '**Define Constraints:** List what the model must not do, the length limit, and the tone rules. Example: "Do not give advice for jurisdictions outside Germany. Maximum 200 words. Formal tone."',
-            '**Specify Output Format:** State the exact shape of the answer — JSON object, 3-bullet summary, table, or prose paragraph. Omitting this is the most common cause of unusable AI output.',
+            '**Specify Output Format:** State the exact shape of the answer — JSON object, 3-bullet summary, table, or prose paragraph. Omitting this is the most common cause of unusable AI output. Test your completed 5-block prompt in [Anthropic\'s Console](https://docs.anthropic.com/) or [OpenAI\'s Playground](https://platform.openai.com/playground) before deploying to production.',
           ],
         },
 

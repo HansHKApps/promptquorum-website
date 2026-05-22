@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         compliance: {
           title: 'What Compliance Requirements Drive Local AI?',
           content: [
-            '**GDPR (EU):** Article 32 requires data processing within the EU. Cloud APIs to US servers violate GDPR.',
+            '**GDPR (EU):** Article 32 requires data processing within the EU. Cloud APIs to US servers violate GDPR. EU options include [Hetzner Cloud GPU](https://www.hetzner.com/cloud/gpu/), Scaleway, and OVHcloud.',
             '**HIPAA (Healthcare):** 164.306 requires patient data stored and processed on secure, audited infrastructure. No third-party API access.',
             '**SOC2 Type II (Enterprise):** Type II audit requires 6+ months of audit logs, encryption, access controls. On-premises provides full control.',
             '**Data Residency Laws (China, Russia, India, Brazil):** Many countries mandate data stay within borders. Local AI ensures compliance.',
@@ -87,7 +87,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open-source local LLMs (Meta Llama, Qwen, Mistral) let you:',
           ],
           items: [
-            'Switch models without code changes (same OpenAI-compatible API interface).',
+            'Switch models without code changes (same OpenAI-compatible API interface). Tools like [Ollama](https://ollama.com/) and [LM Studio](https://lmstudio.ai/) simplify this switching.',
             'Avoid sudden price increases.',
             'Use models forever (no deprecation risk).',
             'Customize models via fine-tuning.',

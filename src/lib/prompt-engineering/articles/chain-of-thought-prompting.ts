@@ -204,7 +204,7 @@ export const article: Record<Language, PEArticle> = {
           content: [
             '**In 2026, the frontier models—Claude Opus 4.7, OpenAI o3, Gemini Deep Think—have built-in reasoning modes that internalize chain-of-thought automatically.** You do not need to add "think step by step" instructions on these models.',
             '**When to use prompt-level CoT:** Non-reasoning models (Claude Haiku 4.5, GPT-4o mini, Gemini Flash, Llama 4), local LLMs, or when you want to avoid the extra cost of reasoning token budgets.',
-            '**When to use built-in reasoning modes:** Maximum accuracy on frontier models, math-heavy tasks, complex analysis. These models bill reasoning tokens separately (usually higher rate than output tokens).',
+            '**When to use built-in reasoning modes:** Maximum accuracy on frontier models, math-heavy tasks, complex analysis. These models bill reasoning tokens separately (usually higher rate than output tokens). Test your CoT prompts in [Anthropic\'s Console](https://docs.anthropic.com/) or [OpenAI\'s Playground](https://platform.openai.com/playground) before deploying to production.',
           ],
           columns: ['Approach', 'Best For', 'Cost', 'Transparency', 'Models'],
           rows: [

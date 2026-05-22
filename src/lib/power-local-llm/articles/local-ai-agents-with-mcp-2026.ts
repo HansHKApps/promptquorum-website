@@ -175,9 +175,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'setup',
         title: 'Setup: Ollama + Goose in 15 Minutes',
         content:
-          '**Goose is the simplest path to a working local MCP agent in 2026.** It is an open-source CLI from Block with native Ollama support, an interactive chat surface, and one config file for all your MCP servers. Continue.dev, Cline, and LM Studio work too — Goose has the lowest setup tax for a first run.',
+          '**Goose is the simplest path to a working local MCP agent in 2026.** It is an open-source CLI from Block with native [Ollama](https://ollama.com/) support, an interactive chat surface, and one config file for all your [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) servers. Continue.dev, Cline, and LM Studio work too — Goose has the lowest setup tax for a first run.',
         items: [
-          '**Step 1 — install Ollama.** Download from `ollama.com/download` (macOS/Windows/Linux). Confirm the service is running with `curl http://127.0.0.1:11434/api/tags`.',
+          '**Step 1 — install Ollama.** Download from [ollama.com/download](https://ollama.com/) (macOS/Windows/Linux). Confirm the service is running with `curl http://127.0.0.1:11434/api/tags`.',
           '**Step 2 — pull a tool-calling model.** Pick from Gemma 4 27B (`gemma4:27b`), GLM-5.1 32B (`glm5:32b`), Qwen3 32B (`qwen3:32b`), or Llama 3.3 70B (`llama3.3:70b`). 16 GB unified memory or 12 GB VRAM handles 27B–32B at Q4_K_M comfortably.',
           '**Step 3 — install Goose.** `pipx install goose-ai` (macOS, Linux) or download the installer from the Goose releases page. The CLI installs as `goose`.',
           '**Step 4 — configure Ollama as the provider.** Run `goose configure`, pick `ollama` as the provider, set the model to the one you pulled, and set the host to `http://127.0.0.1:11434`. Goose writes this to `~/.config/goose/config.yaml`.',

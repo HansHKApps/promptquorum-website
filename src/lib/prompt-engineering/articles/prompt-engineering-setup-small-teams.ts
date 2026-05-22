@@ -186,7 +186,7 @@ export const article: Record<Language, PEArticle> = {
         title: 'Choose GPT-4o for Structured Output, Claude 4.6 Sonnet for Nuance',
         content: [
           '**Start with GPT-4o and Claude 4.6 Sonnet for most tasks — run both and compare pass rates on your specific use case before committing to one model.** The right model depends on task type, not general leaderboard rankings.',
-          'GPT-4o (OpenAI) and Claude 4.6 Sonnet (Anthropic) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-gemini-which-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-4o mini.',
+          '[GPT-4o from OpenAI](https://platform.openai.com/playground) and [Claude 4.6 Sonnet from Anthropic](https://docs.anthropic.com/) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-gemini-which-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-4o mini.',
         ],
         columns: ['Task type', 'Recommended model', 'Why'],
         rows: [

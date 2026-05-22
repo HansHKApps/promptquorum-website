@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: '💰 BEST BUDGET: Hetzner GEX44',
-            text: '€184/month flat for RTX 4000 SFF Ada (20GB). German company, German law, EU data centers. Predictable cost — no hourly surprise bills. Trade-off: flat monthly only, no spot savings, manual 1–2 day provisioning.',
+            text: '€184/month flat for RTX 4000 SFF Ada (20GB) on [Hetzner Cloud GPU](https://www.hetzner.com/cloud/gpu/). German company, German law, EU data centers. Predictable cost — no hourly surprise bills. Trade-off: flat monthly only, no spot savings, manual 1–2 day provisioning.',
           },
           {
             type: '🏢 BEST FOR ENTERPRISE: OVHcloud',

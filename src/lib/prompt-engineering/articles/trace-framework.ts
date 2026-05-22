@@ -167,7 +167,7 @@ export const article: Record<Language, PEArticle> = {
             '**Writing a TRACE prompt is straightforward if you explicitly reference the five stages and define expectations for each.** You can start from a simple template and adapt it to your domain.',
             'A generic pattern looks like this:',
             '"You are [role]. Use the TRACE process. Think: [how to restate and clarify the problem]. Reason: [how to explore solution paths]. Analyze: [how to apply reasoning to the specific data or context]. Conclude: [how to present the final answer]. Explain: [how to justify the answer for a human reader]. Context/Data: [insert here]."',
-            'Once saved as a template, you only need to change the role and context for each new task.',
+            'Once saved as a template, you only need to change the role and context for each new task. Test TRACE prompts before integrating them into your workflow in [Anthropic\'s Console](https://docs.anthropic.com/) or [OpenAI\'s Playground](https://platform.openai.com/playground) to verify the model produces clear, auditable reasoning traces.',
           ],
         },
         howPQImplements: {
