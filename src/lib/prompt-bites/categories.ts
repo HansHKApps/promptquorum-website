@@ -50,6 +50,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'jan-vs-lm-studio',
       'best-local-llm-apps-android',
       'best-frontend-for-ollama',
+      'cursor-pro-vs-continue-dev',
     ],
   },
   {
@@ -68,11 +69,18 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     id: 'hardware-specific',
     label: 'E',
     titleEn: 'Hardware-Specific',
-    descriptionEn: 'Best models for your exact GPU: RTX 3060, RTX 3070 Ti, Radeon RX 6800M.',
+    descriptionEn: 'Hardware picks and buying-guide bites: GPU recommendations by budget, mini-PCs, SSDs, cloud GPUs, and eGPUs.',
     articleSlugs: [
       'best-local-llm-coding-12gb-vram',
       'best-models-amd-5700x-3070ti',
       'radeon-6800m-local-llm',
+      'best-gpu-under-300-local-llm',
+      'best-gpu-under-600-local-llm',
+      'best-ssd-fast-model-loading',
+      'mac-mini-m4-local-llm',
+      'runpod-vs-vastai-pricing',
+      'cloud-gpu-cost-per-hour',
+      'best-egpu-ollama-macbook',
     ],
   },
   {
@@ -83,6 +91,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     articleSlugs: [
       'can-you-run-rag-on-2gb-ram',
       'best-local-llm-16gb-ram-laptop',
+      'best-budget-ai-laptop-under-1000',
     ],
   },
   {
@@ -104,6 +113,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'is-qwen-gdpr-compliant',
       'is-deepseek-gdpr-safe',
       'can-local-llm-help-gdpr',
+      'best-vpn-downloading-ai-models',
     ],
   },
 ]

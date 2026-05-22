@@ -39,6 +39,11 @@ import { article as bestGpuUnder600LocalLlm } from './articles/best-gpu-under-60
 import { article as bestSsdFastModelLoading } from './articles/best-ssd-fast-model-loading'
 import { article as macMiniM4LocalLlm } from './articles/mac-mini-m4-local-llm'
 import { article as runpodVsVastaiPricing } from './articles/runpod-vs-vastai-pricing'
+import { article as cursorProVsContinueDev } from './articles/cursor-pro-vs-continue-dev'
+import { article as cloudGpuCostPerHour } from './articles/cloud-gpu-cost-per-hour'
+import { article as bestEgpuOllamaMacbook } from './articles/best-egpu-ollama-macbook'
+import { article as bestBudgetAiLaptopUnder1000 } from './articles/best-budget-ai-laptop-under-1000'
+import { article as bestVpnDownloadingAiModels } from './articles/best-vpn-downloading-ai-models'
 
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
@@ -79,4 +84,9 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestSsdFastModelLoading,
   macMiniM4LocalLlm,
   runpodVsVastaiPricing,
+  cursorProVsContinueDev,
+  cloudGpuCostPerHour,
+  bestEgpuOllamaMacbook,
+  bestBudgetAiLaptopUnder1000,
+  bestVpnDownloadingAiModels,
 }

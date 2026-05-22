@@ -26,6 +26,7 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'jan-vs-lm-studio',
   'best-local-llm-apps-android',
   'best-frontend-for-ollama',
+  'cursor-pro-vs-continue-dev',
   // Cluster D — Model Comparisons
   'qwen-14b-vs-llama-8b',
   'best-14b-models-coding',
@@ -40,12 +41,17 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-ssd-fast-model-loading',
   'mac-mini-m4-local-llm',
   'runpod-vs-vastai-pricing',
+  'cloud-gpu-cost-per-hour',
+  'best-egpu-ollama-macbook',
   // Cluster F — Quick Answers
   'can-you-run-rag-on-2gb-ram',
   'best-local-llm-16gb-ram-laptop',
+  'best-budget-ai-laptop-under-1000',
   // Cluster G — Prompt Engineering & General
   'co-star-prompt-framework',
   'best-llm-right-now',
+  // Cluster H — Privacy & Compliance
+  'best-vpn-downloading-ai-models',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true

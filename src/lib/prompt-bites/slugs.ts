@@ -25,6 +25,7 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'jan-vs-lm-studio':                     'janVsLmStudio',
   'best-local-llm-apps-android':          'bestLocalLlmAppsAndroid',
   'best-frontend-for-ollama':             'bestFrontendForOllama',
+  'cursor-pro-vs-continue-dev':           'cursorProVsContinueDev',
 
   // Cluster D — Model Comparisons
   'qwen-14b-vs-llama-8b':                 'qwen14bVsLlama8b',
@@ -41,10 +42,13 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'best-ssd-fast-model-loading':          'bestSsdFastModelLoading',
   'mac-mini-m4-local-llm':               'macMiniM4LocalLlm',
   'runpod-vs-vastai-pricing':             'runpodVsVastaiPricing',
+  'cloud-gpu-cost-per-hour':              'cloudGpuCostPerHour',
+  'best-egpu-ollama-macbook':             'bestEgpuOllamaMacbook',
 
   // Cluster F — Quick Answers
   'can-you-run-rag-on-2gb-ram':           'canYouRunRagOn2gbRam',
   'best-local-llm-16gb-ram-laptop':       'bestLocalLlm16gbRamLaptop',
+  'best-budget-ai-laptop-under-1000':     'bestBudgetAiLaptopUnder1000',
 
   // Cluster G — Prompt Engineering & General
   'co-star-prompt-framework':             'coStarPromptFramework',
@@ -54,4 +58,5 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'is-qwen-gdpr-compliant':               'isQwenGdprCompliant',
   'is-deepseek-gdpr-safe':                'isDeepseekGdprSafe',
   'can-local-llm-help-gdpr':              'canLocalLlmHelpGdpr',
+  'best-vpn-downloading-ai-models':       'bestVpnDownloadingAiModels',
 }
