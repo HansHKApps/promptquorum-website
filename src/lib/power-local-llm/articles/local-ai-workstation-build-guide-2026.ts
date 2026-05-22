@@ -2057,4 +2057,513 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: '2026 本地 AI 工作站装机指南：三档预算配置',
+    seoTitle: '2026 本地 AI PC 装机：从入门到 70B 工作站',
+    intro:
+      '大多数本地 AI 装机指南都从 CPU 讲起，但真正决定这台机器能跑哪些模型的是 GPU 及其显存——其他每个部件都是为支撑这块 GPU 而选定的。本指南为本地 LLM PC 提供三套完整配置清单：面向 7B-13B 模型的入门配置、面向 14B-33B 模型的中端配置，以及面向 70B 工作负载的发烧配置。每一档都列出确切部件、预期性能和总成本。关于价格有一点提醒：2026 年的存储芯片短缺将 GPU 价格推高至建议零售价的 1.5-2 倍，使本指南中每套配置的成本都高于一年前同样部件的价格——请把每个数字当作 2026 年 5 月的快照，并在可行时尽量利用二手 GPU 市场。',
+    metaDescription:
+      '2026 年三套完整的本地 AI PC 配置：入门 7B-13B、中端 14B-33B、发烧 70B。确切部件清单、预期每秒 token 数和 2026 年 5 月总成本。',
+    twitterDescription:
+      '本地 AI PC 装机指南：三档预算配置，附 7B 到 70B 模型的完整部件清单。2026 年 GPU 价格上涨抬高了每套配置的成本——这里是 2026 年 5 月的总价。',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.1 8B',
+      'Qwen3 8B',
+      'Mistral 7B',
+      'Llama 3.1 33B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4060 Ti 16 GB',
+      'NVIDIA RTX 4070 Ti Super 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'NVIDIA RTX 5090 32 GB',
+      'AMD Ryzen 7 7700',
+      'AMD Ryzen 9 7900X',
+    ],
+    audience:
+      '专门为运行本地 LLM 装机的购买者，他们按预算档位和目标模型规模做决策。假定读者熟悉量化、把显存视为约束条件以及基本的装机术语，但不熟悉具体的当前部件型号。',
+    readTime: '阅读约14分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'local AI workstation build',
+    targetKeywords: [
+      '2026 本地 ai pc 装机',
+      '本地 llm 工作站装机指南',
+      '运行 llm 最佳 pc 配置',
+      'ai 工作站部件清单',
+      '如何为本地 ai 装一台 pc',
+    ],
+    leadAnswerBlock:
+      '**最佳的本地 AI PC 配置，是 GPU 显存与你目标模型相匹配的那一档。约 1,100 美元的入门配置可跑 7B-13B 模型，约 2,400 美元的中端配置可跑 14B-33B 模型，约 5,000 美元的发烧配置可跑 70B 模型——2026 年的 GPU 价格使每套总价都高于去年。**',
+    quickAnswerTop: {
+      zh: {
+        question: '2026 年如何装一台运行本地 LLM 的 PC？',
+        answer:
+          '按你想运行的最大模型选择档位，然后围绕 GPU 来组装。入门配置（约 1,100 美元）将 RTX 4060 Ti 16 GB 与一颗 Ryzen 7 CPU 搭配，可跑 7B-13B 模型。中端配置（约 2,400 美元）使用 RTX 4070 Ti Super 16 GB，可跑 14B-33B 模型。发烧配置（约 5,000 美元）使用 RTX 5090 32 GB，用于 70B 工作负载。2026 年的存储短缺把 GPU 价格推高至远超建议零售价，因此每套总价都是 2026 年 5 月的快照。',
+        bullets: [
+          '入门配置约 1,100 美元：RTX 4060 Ti 16 GB，可跑 7B-13B 模型',
+          '中端配置约 2,400 美元：RTX 4070 Ti Super 16 GB，可跑 14B-33B 模型',
+          '发烧配置约 5,000 美元：RTX 5090 32 GB，以 Q4 跑 70B 模型',
+          '2026 年 GPU 价格为建议零售价的 1.5-2 倍——可行时尽量买二手 GPU',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '关键要点', anchor: '#key-takeaways' },
+      { label: '速览要点', anchor: '#quick-facts' },
+      { label: '编辑推荐', anchor: '#editors-choice' },
+      { label: '三档配置对比', anchor: '#comparison-table' },
+      { label: '你该选哪套配置？', anchor: '#which-build' },
+      { label: '入门配置（约 1,100 美元）', anchor: '#budget-build' },
+      { label: '中端配置（约 2,400 美元）', anchor: '#mid-build' },
+      { label: '发烧配置（约 5,000 美元）', anchor: '#enthusiast-build' },
+      { label: '2026 年价格上涨如何改变装机', anchor: '#price-surge' },
+      { label: '决策流程图', anchor: '#decision-flowchart' },
+      { label: '在哪里购买部件', anchor: '#where-to-buy' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '资料来源', anchor: '#sources' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**GPU 决定档位，配置的其余部分支撑它。** 本地 AI PC 之所以以 GPU 为先来选，是因为显存决定能跑哪些模型。选择 GPU 显存与目标模型相匹配的档位，再围绕它来确定 CPU、内存和电源的规格。',
+          '**2026 年的 GPU 价格抬高了每套配置成本。** 存储芯片短缺把 GPU 价格推高至建议零售价的 1.5-2 倍。这里的配置总价是 2026 年 5 月的快照，高于一年前同样部件的价格——请利用二手 GPU 市场。',
+          '**入门配置（约 1,100 美元）：** RTX 4060 Ti 16 GB、Ryzen 7 7700、32 GB 内存、1 TB SSD、650 W 电源——以可用速度运行 7B-13B 模型。这是本地 AI 最便宜的完整整机。',
+          '**中端配置（约 2,400 美元）：** RTX 4070 Ti Super 16 GB、Ryzen 9 7900X、64 GB 内存、2 TB SSD、850 W 电源——可跑 14B-33B 模型，并让 7B-14B 模型即时响应。',
+          '**发烧配置（约 5,000 美元）：** RTX 5090 32 GB、Ryzen 9 7950X、128 GB 内存、4 TB SSD、1000 W 电源——唯一能以 Q4 容纳 70B 模型的单 GPU 配置。',
+          '**内存不能替代显存。** 系统内存能让模型溢出显存，但从内存运行的模型对交互式使用来说太慢。为模型买足显存,为操作系统和工具链买内存。',
+          '**电源随 GPU 等比例提升。** 入门配置需要 650 W,中端配置 850 W,发烧配置 1000 W,因为单是 RTX 5090 就需 575 W。请把电源与显卡一并纳入预算。',
+          '**2026 年二手 GPU 是性价比之选。** 一块二手 RTX 4090 或 RTX 4060 Ti 可避开大部分涨价——购买一块经过验证可用的二手卡,把配置总价压低。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '速览要点',
+        items: [
+          '**入门配置（约 1,100 美元）：** GPU RTX 4060 Ti 16 GB——可跑 7B 及大多数 13B 模型。',
+          '**中端配置（约 2,400 美元）：** GPU RTX 4070 Ti Super 16 GB——从容运行 14B,可做轻量 22B-33B 工作。',
+          '**发烧配置（约 5,000 美元）：** GPU RTX 5090 32 GB——从容运行 33B,以 Q4 运行 70B。',
+          '**Q4_K_M 下的显存经验法则：** 每十亿参数约 0.6 GB,另加 2-4 GB 用于上下文和工具链。',
+          '**系统内存建议：** 入门配置 32 GB,中端配置 64 GB,发烧配置 128 GB。',
+          '**各档电源：** 入门 650 W、中端 850 W、发烧 1000 W——RTX 5090 单卡就需 575 W。',
+          '**2026 年价格现实：** 受存储短缺影响,GPU 价格为建议零售价的 1.5-2 倍——请确认实时价格并考虑二手卡。',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: '编辑推荐：中端配置（约 2,400 美元）',
+        sponsoredSlot: true,
+        content:
+          '**对大多数为本地 AI 装机的购买者来说,中端配置是在能力、成本和余量之间取得平衡的那一档。** 它围绕 RTX 4070 Ti Super 16 GB 构建,能在保有上下文空间的情况下运行每个 14B 模型,可应付轻量 22B-33B 工作,并让 7B-14B 模型即时响应——整机约 2,400 美元。这套配置不会在几个月内让你失望,也不需要在一年内更换。只有当你的上限明确停留在 7B-13B 模型时,才降到入门配置;只有当你确实需要 70B 工作负载时,才升到发烧配置。中端配置是一台你想长期保留的机器的稳妥默认选择。',
+        callouts: [
+          {
+            type: 'note',
+            text: '本编辑推荐仅反映价格与能力之比。PromptQuorum 未加入任何联盟营销计划,以下链接不带任何联盟标签——它们只是普通的参考链接,不产生佣金。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4070+Ti+Super+16GB',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'pc-component',
+            priceRange: '1150-1200',
+            label: '在 Amazon 查看 RTX 4070 Ti Super 价格',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti+Super',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'pc-component',
+            priceRange: '1150-1200',
+            label: '在 Newegg 查看 RTX 4070 Ti Super 价格',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026 年三档配置如何对比',
+        content:
+          'GPU 显存和功耗数字为厂商规格。推理速度是基于 PromptQuorum 对各档 GPU 的测试所得的模型族级别估计值。配置总价为 2026 年 5 月的美国快照——2026 年 GPU 价格上涨把显卡推高至建议零售价的 1.5-2 倍,因此 GPU 这一项主导每套总价,且逐周变动。买二手 GPU 会拉低每套总价。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '对于本地 AI PC 配置,GPU 的显存决定这台机器能跑哪些模型,部件清单的其余部分按支撑这块 GPU 来确定规格——先按模型规模选档位。',
+          },
+          {
+            type: 'plain-terms',
+            text: '把这套配置想象成一支围绕一位明星球员——GPU——组建的球队。CPU、内存和电源是辅助阵容:有用,但它们的存在是为了让 GPU 持续得到供给。先选你的模型所需的 GPU,再围绕它组装其余部分。',
+          },
+        ],
+        columns: ['配置档位', 'GPU', '显存', '可运行', '电源', '总价（2026 年 5 月）'],
+        rows: [
+          {
+            '配置档位': '入门',
+            'GPU': 'RTX 4060 Ti 16 GB',
+            '显存': '16 GB',
+            '可运行': '7B-13B 模型',
+            '电源': '650 W',
+            '总价（2026 年 5 月）': '约 1,100 美元',
+          },
+          {
+            '配置档位': '中端',
+            'GPU': 'RTX 4070 Ti Super 16 GB',
+            '显存': '16 GB',
+            '可运行': '从容跑 14B,轻量 22B-33B',
+            '电源': '850 W',
+            '总价（2026 年 5 月）': '约 2,400 美元',
+          },
+          {
+            '配置档位': '发烧',
+            'GPU': 'RTX 5090 32 GB',
+            '显存': '32 GB',
+            '可运行': '从容跑 33B,以 Q4 跑 70B',
+            '电源': '1000 W',
+            '总价（2026 年 5 月）': '约 5,000 美元',
+          },
+        ],
+      },
+      whichBuild: {
+        id: 'which-build',
+        title: '你该选哪套配置？',
+        content:
+          '**你目标中最大的模型决定档位,你的预算予以确认。** 找到与你情况相符的那一行。',
+        columns: ['你的情况', '装这套'],
+        rows: [
+          { '你的情况': '我跑 7B-13B 模型,想要最便宜的完整整机', '装这套': '入门配置（约 1,100 美元）' },
+          { '你的情况': '我想要第一台本地 AI PC,不确定会走多远', '装这套': '入门配置,或为留余量选中端配置' },
+          { '你的情况': '我持续运行 14B 模型,希望它们即时响应', '装这套': '中端配置（约 2,400 美元）' },
+          { '你的情况': '我做轻量 22B-33B 工作,想要一台耐用的机器', '装这套': '中端配置（约 2,400 美元）' },
+          { '你的情况': '我大量运行 33B 模型,或想要充裕的未来余量', '装这套': '发烧配置（约 5,000 美元）' },
+          { '你的情况': '我需要一台能以 Q4 跑 70B 模型的单 GPU 机器', '装这套': '发烧配置（约 5,000 美元）' },
+          { '你的情况': '尽管有 2026 年涨价,我仍想压低总价', '装这套': '任意档位——买二手 GPU' },
+          { '你的情况': '我拿不定主意,想要最稳妥、能用多年的配置', '装这套': '中端配置——编辑推荐' },
+        ],
+      },
+      budgetBuild: {
+        id: 'budget-build',
+        title: '入门配置（约 1,100 美元）：RTX 4060 Ti 16 GB',
+        content:
+          '**入门配置是最便宜的完整本地 AI PC,可运行每个 7B 模型以及大多数 13B 模型——对大多数首次使用者来说能力足够。** 它围绕 RTX 4060 Ti 16 GB 构建,这是受 2026 年涨价影响最小的 GPU,从而把总价控制在合理范围。',
+        items: [
+          '**GPU——RTX 4060 Ti 16 GB（约 420-450 美元）：** 16 GB 显存,165 W。以约 20-25 tok/s 运行 7B 模型,并能在保有上下文余量的情况下容纳 14B 模型。16 GB 容量正是选它而不选 8 GB 版的理由。',
+          '**CPU——AMD Ryzen 7 7700（约 250-280 美元）：** 8 核心,功耗适中。GPU 推理期间 CPU 工作量很小,因此这一档用中端芯片是正确的——不要在这一档的 CPU 上超额花钱。',
+          '**主板——B650 芯片组（约 130-160 美元）：** 支持 Ryzen 7 和一块 PCIe 全尺寸 GPU。这一档不需要高端供电。',
+          '**内存——32 GB DDR5（约 90-120 美元）：** 足以应付操作系统、工具链和一个在显存中运行的 7B-13B 模型。内存不能替代显存——这一档 32 GB 足够。',
+          '**存储——1 TB NVMe SSD（约 70-90 美元）：** 可容纳操作系统和数个模型（一个 7B Q4 模型约 4-5 GB）。',
+          '**电源——650 W 80+ 金牌（约 80-100 美元）：** 为一块 165 W 的 GPU 和一颗 8 核 CPU 提供从容余量。',
+          '**机箱与散热——配塔式风冷散热器的中塔机箱（约 80-120 美元）：** 入门档发热很少,风冷已足够。',
+          '**为何装这一档:** 最低的入门成本、低功耗,以及涵盖通用对话、编程辅助和摘要的 7B-13B 模型所需的足够能力。**为何跳过它:** 如果你已经想要 14B 或更大的模型,请从中端配置起步。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '请专门购买 RTX 4060 Ti 的 16 GB 版本。8 GB 版使用相同的 GPU 核心、运行速度相近,但 8 GB 容纳不下 14B 模型——多出来的显存正是此选择的全部意义。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'pc-component',
+            priceRange: '420-450',
+            label: '在 Amazon 查看 RTX 4060 Ti 16GB 价格',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=AMD+Ryzen+7+7700',
+            productName: 'AMD Ryzen 7 7700',
+            productCategory: 'pc-component',
+            priceRange: '250-280',
+            label: '在 Amazon 查看 Ryzen 7 7700 价格',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=32GB+DDR5+RAM',
+            productName: '32GB DDR5 RAM kit',
+            productCategory: 'pc-component',
+            priceRange: '90-120',
+            label: '在 Amazon 查看 32GB DDR5 内存价格',
+          },
+        ],
+      },
+      midBuild: {
+        id: 'mid-build',
+        title: '中端配置（约 2,400 美元）：RTX 4070 Ti Super 16 GB',
+        content:
+          '**中端配置是编辑推荐——它即时运行 14B 模型,可应付轻量 22B-33B 工作,是你为长期保留而装的那一档。** 它围绕 RTX 4070 Ti Super 16 GB 构建,速度足够快,以至于在 14B 级别模型上响应延迟不再被察觉。',
+        items: [
+          '**GPU——RTX 4070 Ti Super 16 GB（约 1,150-1,200 美元）：** 16 GB 显存,285 W。与入门档相同的模型容量,但快得多——7B-14B 模型即时响应,轻量 22B-33B 工作可用。',
+          '**CPU——AMD Ryzen 9 7900X（约 330-370 美元）：** 12 核心。在数据准备和推理同时运行工具链方面,比入门 CPU 有更多余量。',
+          '**主板——B650 或 X670 芯片组（约 180-240 美元）：** 为 12 核 CPU 和一块 285 W GPU 提供稳固供电。',
+          '**内存——64 GB DDR5（约 180-230 美元）：** 为操作系统、更大的上下文窗口以及在模型旁运行的 RAG 流水线等工具链留出空间。',
+          '**存储——2 TB NVMe SSD（约 130-170 美元）：** 可容纳相当规模的模型库——一个 33B Q4 模型约 18-20 GB。',
+          '**电源——850 W 80+ 金牌（约 120-150 美元）：** 在持续负载下为 285 W GPU 和 12 核 CPU 提供从容余量。',
+          '**机箱与散热——配 240-280 mm 一体式水冷或高端风冷散热器的中塔机箱（约 150-220 美元）：** 中端档发热中等,优质散热器在长时间推理中保持 CPU 稳定。',
+          '**为何装这一档:** 你持续运行 14B 模型且希望即时响应,或你做轻量 22B-33B 工作且想要余量。**为何跳过它:** 若 7B-13B 已足够,入门配置可省下 1,000 多美元;若你需要 70B,没有 16 GB 的 GPU 装得下它——请上发烧配置。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '中端配置容纳的模型与入门配置相同——你付的是速度,而非容量。如果 14B 模型将成为日常工作负载且等待它会让你恼火,就装这一档。',
+          },
+          {
+            type: 'note',
+            text: '在 2026 年涨价之后,一块二手 RTX 4090 24 GB 有时售价接近一块全新 RTX 4070 Ti Super。如果你能找到一块经验证可用的,它会多出 8 GB 显存并能跑到 33B 模型——在买 4070 Ti Super 之前值得查看。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4070+Ti+Super+16GB',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'pc-component',
+            priceRange: '1150-1200',
+            label: '在 Amazon 查看 RTX 4070 Ti Super 价格',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=AMD+Ryzen+9+7900X',
+            productName: 'AMD Ryzen 9 7900X',
+            productCategory: 'pc-component',
+            priceRange: '330-370',
+            label: '在 Amazon 查看 Ryzen 9 7900X 价格',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=64GB+DDR5+RAM',
+            productName: '64GB DDR5 RAM kit',
+            productCategory: 'pc-component',
+            priceRange: '180-230',
+            label: '在 Amazon 查看 64GB DDR5 内存价格',
+          },
+        ],
+      },
+      enthusiastBuild: {
+        id: 'enthusiast-build',
+        title: '发烧配置（约 5,000 美元）：RTX 5090 32 GB',
+        content:
+          '**发烧配置是唯一能以 Q4 容纳 70B 模型的单 GPU 机器——它的 RTX 5090 32 GB 是核心部件。** 装这一档是为了显存容量,而非纯粹的速度;速度只是副产物。2026 年涨价对这一档冲击最重,因此 GPU 这一项占主导且逐周变动。',
+        items: [
+          '**GPU——RTX 5090 32 GB（约 3,650-3,900 美元）：** 32 GB GDDR7 显存,575 W。这是唯一一块无需双 GPU 配置即可以 Q4 跑 70B 模型的消费级单卡。它从容运行 33B 模型,还有富余。',
+          '**CPU——AMD Ryzen 9 7950X（约 450-520 美元）：** 16 核心。足以在繁重推理之外运行数据准备、微调实验和工具链。',
+          '**主板——X670E 芯片组（约 280-380 美元）：** 强劲供电和 PCIe 5.0,按一块 575 W GPU 和 16 核 CPU 来定规格。',
+          '**内存——128 GB DDR5（约 380-480 美元）：** 为大上下文窗口、同时加载多个模型和工具链留出空间——并在需要时留有把模型部分溢出到内存的余量。',
+          '**存储——4 TB NVMe SSD（约 260-340 美元）：** 一个 70B Q4 模型约 40 GB;一块 4 TB 硬盘可容纳一个大型模型的大库。',
+          '**电源——1000 W 80+ 白金（约 180-240 美元）：** 必需,因为单是 RTX 5090 就需 575 W——一只 750 W 的电源会在负载下塌陷。不要把这个部件选小。',
+          '**机箱与散热——配 360 mm 一体式水冷的全尺寸机箱（约 280-380 美元）：** 575 W GPU 加 16 核 CPU 产生真实的热量;360 mm 液冷在持续 70B 推理中保持 CPU 稳定。',
+          '**为何装这一档:** 你需要 33B 或 70B 模型、你运行繁重的批量推理,或你想要一台多年无需更换的机器。**为何跳过它:** 对 7B-14B 模型来说它属于过度配置——中端配置在这些规模上以不到一半的成本提供即时响应。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'RTX 5090 单卡就需 575 W。请把它与本部件清单中的 1000 W 电源搭配——更小的电源会在负载下出现电压骤降。装机前请确认你的墙面电路能够供给全部功耗。',
+          },
+          {
+            type: 'note',
+            text: '一个 70B Q4 模型约需 39-42 GB 显存,因此即便是 RTX 5090 32 GB,也只能在采用激进量化或部分溢出到系统内存的情况下以 Q4 跑 70B。本配置中的 128 GB 内存为这种溢出提供了所需的空间。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+5090',
+            productName: 'NVIDIA RTX 5090 32GB',
+            productCategory: 'pc-component',
+            priceRange: '3650-3900',
+            label: '在 Amazon 查看 RTX 5090 价格',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=AMD+Ryzen+9+7950X',
+            productName: 'AMD Ryzen 9 7950X',
+            productCategory: 'pc-component',
+            priceRange: '450-520',
+            label: '在 Amazon 查看 Ryzen 9 7950X 价格',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=1000W+Platinum+power+supply',
+            productName: '1000W 80+ Platinum power supply',
+            productCategory: 'pc-component',
+            priceRange: '180-240',
+            label: '在 Amazon 查看 1000W 电源价格',
+          },
+        ],
+      },
+      priceSurge: {
+        id: 'price-surge',
+        title: '2026 年价格上涨如何改变装机的算账方式',
+        content:
+          '**2026 年的存储芯片短缺把 GPU 价格推高至建议零售价的 1.5-2 倍,而由于 GPU 是每套配置中最大的一项,它把每套总价都抬到了高于去年的水平。** 请围绕当前价格而非发布时价格来规划装机。',
+        items: [
+          '**GPU 主导总价。** 在三档配置中,GPU 都是单项最大的成本——涨价对配置总价的影响超过任何其他部件。',
+          '**根源是存储,而非 GPU 本身。** GDDR 和 HBM 的供应短缺抬高了每块配备高速显存的卡的成本;显存越大,卡受冲击越重。RTX 5090 从 1,999 美元的发布价涨到约 3,650-3,900 美元。',
+          '**低端 GPU 更扛得住。** RTX 4060 Ti 16 GB 接近其建议零售价,这正是入门配置总价变动最小的原因。',
+          '**二手 GPU 是性价比之选。** 一块二手 RTX 4060 Ti 或 RTX 4090 可避开大部分涨价——买一块经验证可用的二手卡,是压低配置总价最简单的办法。',
+          '**非 GPU 部件变动较小。** CPU、主板和电源价格涨幅温和;DDR5 内存和 NVMe SSD 也随存储短缺而走紧,但 GPU 仍是要盯紧的一项。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026 年的存储短缺把 GPU 价格推高至建议零售价的 1.5-2 倍,抬高了每套本地 AI 配置的总价,因为 GPU 是部件清单中单项最大的一项。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'GPU 是这台机器最贵的部件,而 2026 年 GPU 正是变贵的那个部件。在存储短缺缓解之前,请把发布时价格当作历史,可行时买二手 GPU,并且不要买超过你模型所需的显存。',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: '决策流程图:用四个问题选定你的配置',
+        content:
+          '**按顺序回答的四个问题,会把大多数装机者引向某一档。**',
+        items: [
+          '**1. 你想运行的最大模型是多大？** 7B-13B:入门配置。14B-33B:中端配置。70B:发烧配置。',
+          '**2. 你的硬性预算上限是多少？** 约 1,100 美元:入门配置。约 2,400 美元:中端配置。约 5,000 美元:发烧配置。',
+          '**3. 全新还是二手 GPU？** 一块经验证可用的二手 GPU 可避开 2026 年的大部分涨价——选二手以拉低任意档位的总价。',
+          '**4. 你的电力和空间计划站得住脚吗？** 在订购部件之前,确认电源与档位匹配（650 W／850 W／1000 W）、机箱能容纳 GPU 和散热器。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '选择本地 AI PC 配置时,先回答最大模型规模,其次预算上限,第三 GPU 是新还是二手,最后是电力与空间规划。',
+          },
+          {
+            type: 'plain-terms',
+            text: '从你真正想运行的最大模型入手,让它来决定你的档位。然后核对预算,决定是否买二手 GPU,并确认电源和机箱与部件匹配。按这个顺序来,可以避免装出一台跑不了你模型的机器。',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '在哪里购买部件',
+        content:
+          '**大型零售商备有这些配置中的每个部件;二手市场是专门针对 GPU 的性价比来源。** 下方链接为普通的产品搜索链接,不带任何联盟标签,也不产生佣金。',
+        items: [
+          '**Amazon 和 Newegg：** CPU、内存、SSD、电源和机箱的库存最齐全。全新 GPU 库存较少,且按 2026 年涨价水平定价。',
+          '**二手 GPU 市场：** GPU 这一项性价比最高——一块经验证可用的二手 RTX 4060 Ti、RTX 4070 Ti Super 或 RTX 4090 可避开大部分涨价。',
+          '**Micro Center（美国,实体店）：** 若有门店可达,通常是全新 GPU 和 CPU 价格最优的去处;也适合购买 CPU 加主板的套装。',
+          '**先买 GPU。** 它是最大、最易波动的一项——以你能接受的价格锁定 GPU,再围绕它购买辅助部件。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '由于 2026 年 GPU 价格上涨,本指南中每套总价都是变动迅速的 2026 年 5 月快照。装机前请务必打开 GPU 当前的零售商商品页——它的价格逐周变动,且主导着配置成本。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+AI',
+            productName: 'GPUs for local AI builds',
+            productCategory: 'pc-component',
+            priceRange: '420-3900',
+            label: '在 Amazon 浏览 GPU',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=CPU+AMD+Ryzen',
+            productName: 'AMD Ryzen CPUs',
+            productCategory: 'pc-component',
+            priceRange: '250-520',
+            label: '在 Newegg 浏览 Ryzen CPU',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=DDR5+RAM+kit',
+            productName: 'DDR5 RAM kits',
+            productCategory: 'pc-component',
+            priceRange: '90-480',
+            label: '在 Amazon 浏览 DDR5 内存',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=NVMe+SSD+2TB',
+            productName: 'NVMe SSDs',
+            productCategory: 'pc-component',
+            priceRange: '70-340',
+            label: '在 Amazon 浏览 NVMe SSD',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=850W+power+supply',
+            productName: 'ATX power supplies',
+            productCategory: 'pc-component',
+            priceRange: '80-240',
+            label: '在 Amazon 浏览电源',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '装本地 AI PC 时的常见错误',
+        items: [
+          '**在选 GPU 之前先选 CPU。** GPU 决定这台机器跑哪些模型;推理期间 CPU 工作量很小。先选 GPU,再按支撑它来定 CPU 规格。',
+          '**用系统内存代替显存。** 内存能让模型溢出显存,但从内存运行的模型对交互式使用来说太慢。为模型买足显存;内存只为操作系统和工具链而买。',
+          '**电源选小了。** 单是 RTX 5090 就需 575 W。一只在负载下塌陷的电源,比一块更慢但运行稳定的 GPU 更糟——把电源与档位匹配。',
+          '**死盯 GPU 的建议零售价。** 2026 年的涨价意味着发布时价格不再反映现实。请按 GPU 的实时零售价做预算,并考虑二手市场。',
+          '**为入门配置买了 8 GB 版 RTX 4060 Ti。** 它与 16 GB 版同名,却容纳不下 14B 模型。请在商品页确认是 16 GB 版本。',
+          '**为 7B 模型过度配置。** 如果 7B 模型已覆盖你的用例,发烧配置会浪费数千美元和数百瓦。把档位与模型匹配,而非与你恰好手头的预算匹配。',
+          '**略过机箱与散热的规划。** 一块 575 W GPU 加一颗 16 核 CPU 会产生真实的热量。订购部件前,确认机箱能容纳 GPU 和散热器并具备风道。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '资料来源',
+        items: [
+          '[2026 本地 LLM 最佳 GPU 购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=zh) — PromptQuorum：用于本指南配置总价的 2026 年 5 月 GPU 价格,以及高于建议零售价 1.5-2 倍的涨幅。',
+          '[搭建本地 LLM 工作站](/local-llms/local-llm-workstation-build?lang=zh) — PromptQuorum：发烧档之外的双 GPU 70B 工作站部件清单、散热和电源指南。',
+          '[NVIDIA GeForce RTX 40 与 50 系列规格](https://www.nvidia.com/en-us/geforce/graphics-cards/) — RTX 4060 Ti、4070 Ti Super 和 5090 的官方显存容量与功耗（TGP）数据。',
+          '[PCPartPicker](https://pcpartpicker.com) — 截至 2026 年 5 月,AMD Ryzen CPU、DDR5 内存、NVMe SSD 和电源的实时部件价格。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '2026 年装一台本地 AI PC 要花多少钱？',
+            a: '一台入门本地 AI PC 约 1,100 美元,中端配置约 2,400 美元,发烧级 70B 配置约 5,000 美元。这些是 2026 年 5 月的快照——2026 年的存储芯片短缺把 GPU 价格推高至建议零售价的 1.5-2 倍,而由于 GPU 是每套配置中最大的一项,它把每套总价都抬到了高于一年前同样部件的水平。',
+          },
+          {
+            q: '本地 AI PC 配置该用哪块 GPU？',
+            a: '按你目标中最大的模型来选 GPU。RTX 4060 Ti 16 GB 适合面向 7B-13B 模型的入门配置,RTX 4070 Ti Super 16 GB 适合面向 14B-33B 模型的中端配置,RTX 5090 32 GB 适合面向 70B 工作负载的发烧配置。GPU 决定这台机器能跑哪些模型,因此它最先选定,部件清单的其余部分围绕它来构建。',
+          },
+          {
+            q: '本地 AI PC 需要多少内存？',
+            a: '入门配置规划 32 GB,中端配置 64 GB,发烧配置 128 GB。系统内存不能替代显存——从内存运行的模型对交互式使用来说太慢。内存用于操作系统、上下文和工具链;模型本身则需在 GPU 上买足显存。',
+          },
+          {
+            q: '本地 AI PC 需要什么样的电源？',
+            a: '把电源与档位匹配:入门配置 650 W,中端配置 850 W,发烧配置 1000 W。发烧档需要 1000 W,因为 RTX 5090 单卡就需 575 W。电源选小会在负载下导致不稳定,所以不要削减这个部件。',
+          },
+          {
+            q: '2026 年 GPU 部件该买全新还是二手？',
+            a: '可行时买二手 GPU,其他部件买全新。2026 年的涨价把全新 GPU 价格推高至建议零售价的 1.5-2 倍,但二手市场避开了其中大部分——一块经验证可用的二手 RTX 4060 Ti、RTX 4070 Ti Super 或 RTX 4090 能显著拉低配置总价。CPU、内存、SSD 和电源则最好买全新。',
+          },
+          {
+            q: '单 GPU 配置能跑 70B 模型吗？',
+            a: '能,发烧配置可以。RTX 5090 32 GB 是唯一一块能以 Q4 容纳 70B 模型的消费级单卡,该模型约需 39-42 GB 显存——因此它在采用激进量化或部分溢出到系统内存的情况下运行 70B。发烧配置中的 128 GB 内存为这种溢出提供了所需空间。',
+          },
+          {
+            q: '中端配置相比入门配置,多花的钱值得吗？',
+            a: '值得,如果你经常运行 14B 级别的模型。入门配置和中端配置容纳的模型相近,但中端配置的 RTX 4070 Ti Super 快得多——14B 模型从迟缓变为即时响应,轻量 22B-33B 工作变得可用。如果你的上限明确停留在 7B-13B 模型,入门配置能省下 1,000 多美元,性价比更高。',
+          },
+          {
+            q: '本地 AI PC 需要 Threadripper CPU 吗？',
+            a: '不需要。本指南三套配置用消费级 Ryzen CPU 都已足够——入门档用 Ryzen 7,中端和发烧档用 Ryzen 9。Threadripper 只有在一台同时运行微调和推理的双 GPU 机器上才值得它的成本,而这超出了单 GPU 配置的范围。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[用完整购买指南为你的配置选 GPU](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=zh) — 横跨四个预算档位的八块 GPU,附 2026 年 5 月价格和涨价算账。',
+          '[查看面向生产用途的双 GPU 70B 工作站配置](/local-llms/local-llm-workstation-build?lang=zh) — 本指南发烧配置之外、4,000-6,000 美元的多用户档位。',
+          '[把自己装 PC 与租用云 GPU 做对比](/power-local-llm/cloud-gpu-rental-guide-2026?lang=zh) — 在偶尔需要算力时,租用何时优于自购硬件。',
+          '[装机前算清每个模型规模所需的显存](/local-llms/how-much-vram-local-llm?lang=zh) — 这里档位选择背后、按模型规模算显存的完整方法。',
+          '[把 Mac 作为 PC 装机的替代方案来考虑](/power-local-llm/best-mac-for-local-ai-2026?lang=zh) — 统一内存的 Apple Silicon 何时在本地 AI 上胜过独立 GPU 的 PC。',
+        ],
+      },
+    },
+  },
 }
