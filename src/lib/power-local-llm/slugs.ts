@@ -55,6 +55,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-llm-email-and-calendar-automation':     'local-llm-email-and-calendar-automation',
   'replace-grammarly-notion-ai-with-local':      'replace-grammarly-notion-ai-with-local',
 
+  // Category 10 — Hardware Buying Guides
+  'best-gpu-buying-guide-local-llm-2026':        'best-gpu-buying-guide-local-llm-2026',
+
   // Category 9 — Voice, Speech & Multimodal
   'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',
   'local-vision-models-llava-ollama-2026':        'local-vision-models-llava-ollama-2026',

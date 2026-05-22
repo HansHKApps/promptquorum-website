@@ -41,6 +41,15 @@ export interface LLMSection {
   whereToBuy?: string
   subsections?: Array<{ title?: string; text?: string; content?: string; steps?: string[]; details?: { [key: string]: string }; providers?: string[]; list?: string[] }>
   links?: Array<{ url: string; title: string; description: string }>
+  // Affiliate buying-guide fields
+  affiliateLinks?: Array<{
+    url: string
+    productName: string
+    productCategory: string
+    priceRange?: string
+    label?: string
+  }>
+  sponsoredSlot?: boolean
   [key: string]: unknown
 }
 
@@ -102,5 +111,8 @@ export interface LLMArticle {
   ctaText?: string
   ctaButton?: string
   ctaHref?: string
+  // When true, the post-client renders the neutral third-party-link notice
+  // (AFFILIATE_DISCLOSURE) near the top of the article.
+  affiliateDisclosure?: boolean
   [key: string]: unknown
 }

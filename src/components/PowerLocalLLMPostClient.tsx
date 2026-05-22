@@ -18,6 +18,8 @@ import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
 import { powerLLMHubPath, powerLLMArticlePath } from '@/lib/power-local-llm/metadata-helpers'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
+import { AffiliateLink } from '@/components/AffiliateLink'
+import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
 import { VramCalculator } from '@/components/VramCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
@@ -331,7 +333,10 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
 
   return (
-    <div className="mt-8" id={id}>
+    <div
+      className={section.sponsoredSlot ? 'mt-8 sponsored-slot rounded-xl border border-primary/30 bg-primary/5 p-5' : 'mt-8'}
+      id={id}
+    >
       {section.title && !section.isTldr && (
         <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
           {renderInlineLinks(section.title, lang)}
@@ -631,6 +636,24 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
         </div>
       )}
 
+      {/* Affiliate product links */}
+      {section.affiliateLinks && section.affiliateLinks.length > 0 && (
+        <div className="flex flex-wrap gap-2.5 my-5">
+          {section.affiliateLinks.map((link, i) => (
+            <AffiliateLink
+              key={i}
+              url={link.url}
+              productName={link.productName}
+              productCategory={link.productCategory}
+              priceRange={link.priceRange}
+              lang={lang}
+              label={link.label}
+              variant="button"
+            />
+          ))}
+        </div>
+      )}
+
       {/* FAQ */}
       {section.faqs && (
         <div className="space-y-6 mt-4">
@@ -719,6 +742,13 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
         {article.intro && (
           <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
             {renderInlineLinks(article.intro, lang)}
+          </p>
+        )}
+
+        {/* Affiliate disclosure — neutral third-party-link notice */}
+        {article.affiliateDisclosure && (
+          <p className="affiliate-disclosure text-xs text-text-secondary bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 mb-6">
+            {AFFILIATE_DISCLOSURE[lang] ?? AFFILIATE_DISCLOSURE['en']}
           </p>
         )}
 
