@@ -70,8 +70,17 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'build-local-voice-assistant-2026',
   'local-multimodal-pipeline-voice-vision-text',
 
-  // Cat 10 — Hardware Buying Guides
+  // Cat 10 — Hardware Buying Guides & Affiliate
   'best-gpu-buying-guide-local-llm-2026',
+  'best-mac-for-local-ai-2026',
+  'cloud-gpu-rental-guide-2026',
+  'local-ai-workstation-build-guide-2026',
+  'best-vpn-ai-privacy-local-llm-2026',
+  'best-nas-storage-local-ai-models-2026',
+  'best-ai-coding-tools-comparison-2026',
+  'best-monitors-ai-development-2026',
+  'best-laptops-local-llm-2026',
+  'best-ai-courses-certifications-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

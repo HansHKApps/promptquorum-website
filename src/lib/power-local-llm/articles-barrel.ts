@@ -17,6 +17,7 @@ import { article as a_best_nas_storage_local_ai_models_2026 } from './articles/b
 import { article as a_best_ai_coding_tools_comparison_2026 } from './articles/best-ai-coding-tools-comparison-2026'
 import { article as a_best_monitors_ai_development_2026 } from './articles/best-monitors-ai-development-2026'
 import { article as a_best_laptops_local_llm_2026 } from './articles/best-laptops-local-llm-2026'
+import { article as a_best_ai_courses_certifications_2026 } from './articles/best-ai-courses-certifications-2026'
 import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local-ai-app-low-end-pc'
 import { article as a_best_local_coding_models_2026 } from './articles/best-local-coding-models-2026'
 import { article as a_best_local_llm_apps_android_2026 } from './articles/best-local-llm-apps-android-2026'
@@ -69,6 +70,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-ai-coding-tools-comparison-2026':   a_best_ai_coding_tools_comparison_2026,
   'best-monitors-ai-development-2026':      a_best_monitors_ai_development_2026,
   'best-laptops-local-llm-2026':            a_best_laptops_local_llm_2026,
+  'best-ai-courses-certifications-2026':    a_best_ai_courses_certifications_2026,
   'best-local-ai-app-low-end-pc':           a_best_local_ai_app_low_end_pc,
   'best-local-coding-models-2026':          a_best_local_coding_models_2026,
   'best-local-llm-apps-android-2026':       a_best_local_llm_apps_android_2026,
