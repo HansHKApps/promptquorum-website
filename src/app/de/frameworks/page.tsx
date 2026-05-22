@@ -44,11 +44,11 @@ export default async function DeFrameworksPage() {
             '@type': 'CollectionPage',
             'name': 'Prompt Engineering Frameworks',
             'description': 'Complete guides to 9 prompt engineering frameworks: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF, Google Prompt, and Single Prompt Line.',
-            'url': 'https://www.promptquorum.com/ja/frameworks',
+            'url': 'https://www.promptquorum.com/de/frameworks',
             'hasPart': FRAMEWORKS.map(fw => ({
               '@type': 'Article',
               'name': `${fw.name} Prompt Framework`,
-              'url': `https://www.promptquorum.com/ja/frameworks/${fw.slug}`,
+              'url': `https://www.promptquorum.com/de/frameworks/${fw.slug}`,
               'description': fw.tagline,
             })),
           }),

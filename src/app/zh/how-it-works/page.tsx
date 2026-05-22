@@ -32,7 +32,7 @@ export default async function ZhHowItWorksPage() {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       'name': 'How PromptQuorum Works — Write, Optimize, Dispatch, Quorum',
-      'url': 'https://www.promptquorum.com/ja/how-it-works',
+      'url': 'https://www.promptquorum.com/zh/how-it-works',
       'inLanguage': 'zh',
       'description': 'A complete guide to the PromptQuorum 4-stage workflow: structured prompt writing with 9 frameworks, LLM-powered optimization, one-click dispatch to 25+ AI services, and multi-model Quorum analysis.',
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
@@ -41,8 +41,8 @@ export default async function ZhHowItWorksPage() {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'How It Works', 'item': 'https://www.promptquorum.com/ja/how-it-works' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/zh' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'How It Works', 'item': 'https://www.promptquorum.com/zh/how-it-works' },
       ],
     },
   ]

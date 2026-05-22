@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function DeComparePage() {
   return (
     <>
-      <ComparePageClient initialLang="ja" />
+      <ComparePageClient initialLang="de" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -39,8 +39,8 @@ export default async function DeComparePage() {
             '@graph': [
               {
                 '@type': 'WebPage',
-                '@id': 'https://www.promptquorum.com/ja/compare',
-                'url': 'https://www.promptquorum.com/ja/compare',
+                '@id': 'https://www.promptquorum.com/de/compare',
+                'url': 'https://www.promptquorum.com/de/compare',
                 'name': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Multi-LLM Tools Compared (2026)',
                 'description': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo: compare simultaneous dispatch, consensus scoring, local LLM support, and API key control in 2026.',
                 'inLanguage': 'de',
@@ -49,8 +49,8 @@ export default async function DeComparePage() {
               {
                 '@type': 'BreadcrumbList',
                 'itemListElement': [
-                  { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
-                  { '@type': 'ListItem', 'position': 2, 'name': 'Compare', 'item': 'https://www.promptquorum.com/ja/compare' },
+                  { '@type': 'ListItem', 'position': 1, 'name': 'Startseite', 'item': 'https://www.promptquorum.com/de' },
+                  { '@type': 'ListItem', 'position': 2, 'name': 'Vergleich', 'item': 'https://www.promptquorum.com/de/compare' },
                 ],
               },
             ],

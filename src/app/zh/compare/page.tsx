@@ -38,8 +38,8 @@ export default async function ZhComparePage() {
             '@graph': [
               {
                 '@type': 'WebPage',
-                '@id': 'https://www.promptquorum.com/ja/compare',
-                'url': 'https://www.promptquorum.com/ja/compare',
+                '@id': 'https://www.promptquorum.com/zh/compare',
+                'url': 'https://www.promptquorum.com/zh/compare',
                 'name': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Multi-LLM Tools Compared (2026)',
                 'description': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo: compare simultaneous dispatch, consensus scoring, local LLM support, and API key control in 2026.',
                 'inLanguage': 'zh',
@@ -48,8 +48,8 @@ export default async function ZhComparePage() {
               {
                 '@type': 'BreadcrumbList',
                 'itemListElement': [
-                  { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
-                  { '@type': 'ListItem', 'position': 2, 'name': 'Compare', 'item': 'https://www.promptquorum.com/ja/compare' },
+                  { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/zh' },
+                  { '@type': 'ListItem', 'position': 2, 'name': 'Compare', 'item': 'https://www.promptquorum.com/zh/compare' },
                 ],
               },
             ],

@@ -36,7 +36,7 @@ export default function ZhAboutPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'AboutPage',
-              'url': 'https://www.promptquorum.com/ja/about',
+              'url': 'https://www.promptquorum.com/zh/about',
               'name': 'About PromptQuorum',
               'description': 'PromptQuorum is a privacy-first, multi-model AI dispatch and consensus tool built by Hans Kuepper.',
               'inLanguage': 'zh',
@@ -45,9 +45,9 @@ export default function ZhAboutPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'Person',
-              '@id': 'https://www.promptquorum.com/ja/about#founder',
+              '@id': 'https://www.promptquorum.com/zh/about#founder',
               'name': 'Hans Kuepper',
-              'url': 'https://www.promptquorum.com/ja/about',
+              'url': 'https://www.promptquorum.com/zh/about',
               'jobTitle': 'Founder & Developer',
               'worksFor': {
                 '@type': 'Organization',
@@ -64,8 +64,8 @@ export default function ZhAboutPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'About', 'item': 'https://www.promptquorum.com/ja/about' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/zh' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'About', 'item': 'https://www.promptquorum.com/zh/about' },
               ],
             },
           ]),
@@ -227,10 +227,10 @@ export default function ZhAboutPage() {
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
-            <Link href="/ja/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
-            <Link href="/ja/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
-            <Link href="/ja/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
+            <Link href="/zh" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
+            <Link href="/zh/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
+            <Link href="/zh/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
+            <Link href="/zh/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           </div>
 
         </div>
