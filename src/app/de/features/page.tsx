@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function DeFeaturesPage() {
   return (
     <>
-      <FeaturesPageClient initialLang="ja" />
+      <FeaturesPageClient initialLang="de" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -39,7 +39,7 @@ export default async function DeFeaturesPage() {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
               'name': 'PromptQuorum Features — Prompt Engineering, Multi-Model Dispatch, Quorum Analysis',
-              'url': 'https://www.promptquorum.com/ja/features',
+              'url': 'https://www.promptquorum.com/de/features',
               'description': 'Explore PromptQuorum features: 9 prompt frameworks, AI optimization, dispatch to 25+ AI services, multi-model consensus analysis, hallucination detection, local LLM support, and full privacy.',
               'inLanguage': 'de',
               'datePublished': '2026-04-05',
@@ -55,8 +55,8 @@ export default async function DeFeaturesPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/ja' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Features', 'item': 'https://www.promptquorum.com/ja/features' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Startseite', 'item': 'https://www.promptquorum.com/de' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'Features', 'item': 'https://www.promptquorum.com/de/features' },
               ],
             },
           ]),

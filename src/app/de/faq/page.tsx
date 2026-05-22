@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function JaFAQPage() {
   return (
     <>
-      <FAQPageClient initialLang="ja" />
+      <FAQPageClient initialLang="de" />
 
       <script
         type="application/ld+json"
@@ -52,9 +52,10 @@ export default async function JaFAQPage() {
             ],
             breadcrumb: {
               '@type': 'BreadcrumbList',
+              inLanguage: 'de',
               itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com/ja' },
-                { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.promptquorum.com/ja/faq' },
+                { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://www.promptquorum.com/de' },
+                { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.promptquorum.com/de/faq' },
               ],
             },
           }),
