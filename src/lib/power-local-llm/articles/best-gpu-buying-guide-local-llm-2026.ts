@@ -755,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '12 GB',
             'Tempo (7B Q4)': '10–14 Token/s',
             'Leistungsaufnahme': '230 W',
-            'Preis (Mai 2026)': 'gebraucht — Preis prüfen',
+            'Preis (Mai 2026)': '530–550 € neu',
             'Am besten für': 'Günstigster VRAM, AMD-Einrichtung nötig',
           },
           {
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Tempo (7B Q4)': '~20–25 Token/s',
             'Leistungsaufnahme': '165 W',
-            'Preis (Mai 2026)': 'ca. 450–500 €',
+            'Preis (Mai 2026)': '~800 €',
             'Am besten für': 'Mittelklasse — 14B-Modelle, sparsam',
           },
           {
@@ -771,7 +771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Tempo (7B Q4)': '~18–24 Token/s (geschätzt)',
             'Leistungsaufnahme': '263 W',
-            'Preis (Mai 2026)': 'ca. 500–560 €',
+            'Preis (Mai 2026)': '~550 € neu',
             'Am besten für': '16 GB bei AMD, ROCm-Einrichtung nötig',
           },
           {
@@ -787,7 +787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Tempo (7B Q4)': '~120 Token/s',
             'Leistungsaufnahme': '320 W',
-            'Preis (Mai 2026)': 'Preis prüfen',
+            'Preis (Mai 2026)': '~1.500 €',
             'Am besten für': 'Schnellste 16-GB-Karte',
           },
           {
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '24 GB',
             'Tempo (7B Q4)': '~150 Token/s',
             'Leistungsaufnahme': '450 W',
-            'Preis (Mai 2026)': 'knapp verfügbar — Preis prüfen',
+            'Preis (Mai 2026)': '~2.990–3.190 €',
             'Am besten für': '33B-Modelle, Dual-GPU für 70B',
           },
           {
