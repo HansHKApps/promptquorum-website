@@ -69,6 +69,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-tts-voice-cloning-piper-coqui-xtts',
   'build-local-voice-assistant-2026',
   'local-multimodal-pipeline-voice-vision-text',
+
+  // Cat 10 — Hardware Buying Guides
+  'best-gpu-buying-guide-local-llm-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
