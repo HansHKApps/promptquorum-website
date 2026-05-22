@@ -235,8 +235,8 @@ export default async function ZhFrameworkPage({ params }: { params: Promise<{ sl
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
-            <Link href="/ja/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
+            <Link href="/zh" className="text-primary hover:text-primary/80 font-medium text-sm">← 主页</Link>
+            <Link href="/zh/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
           </div>
 
         </div>

@@ -65,8 +65,8 @@ export default function FrAboutPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/fr' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'About', 'item': 'https://www.promptquorum.com/fr/about' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': 'https://www.promptquorum.com/fr' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'À propos', 'item': 'https://www.promptquorum.com/fr/about' },
               ],
             },
           ]),
@@ -228,7 +228,7 @@ export default function FrAboutPage() {
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
+            <Link href="/fr" className="text-primary hover:text-primary/80 font-medium text-sm">← Accueil</Link>
             <Link href="/fr/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
             <Link href="/fr/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
             <Link href="/fr/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>

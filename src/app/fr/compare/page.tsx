@@ -49,8 +49,8 @@ export default async function FrComparePage() {
               {
                 '@type': 'BreadcrumbList',
                 'itemListElement': [
-                  { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/fr' },
-                  { '@type': 'ListItem', 'position': 2, 'name': 'Compare', 'item': 'https://www.promptquorum.com/fr/compare' },
+                  { '@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': 'https://www.promptquorum.com/fr' },
+                  { '@type': 'ListItem', 'position': 2, 'name': 'Comparer', 'item': 'https://www.promptquorum.com/fr/compare' },
                 ],
               },
             ],

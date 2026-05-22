@@ -13,7 +13,7 @@ const FUSE_OPTIONS: import('fuse.js').IFuseOptions<SearchEntry> = {
     { name: 'tags', weight: 2 },
     { name: 'section', weight: 1 },
   ],
-  threshold: 0.35,
+  threshold: 0.50,
   includeMatches: true,
   ignoreLocation: true,
   minMatchCharLength: 2,

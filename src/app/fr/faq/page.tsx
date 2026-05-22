@@ -53,7 +53,7 @@ export default async function JaFAQPage() {
             breadcrumb: {
               '@type': 'BreadcrumbList',
               itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com/fr' },
+                { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.promptquorum.com/fr' },
                 { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.promptquorum.com/fr/faq' },
               ],
             },

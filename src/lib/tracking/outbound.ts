@@ -61,7 +61,7 @@ export function trackOutboundClick(p: OutboundClickParams): void {
     target_domain: extractDomain(p.url),
   }
 
-  // Umami
+  // Umami — fire and forget, no await needed
   try {
     window.umami?.track('outbound_click', payload)
   } catch {
@@ -80,5 +80,28 @@ export function trackOutboundClick(p: OutboundClickParams): void {
     ;(window as any).gtag?.('event', 'outbound_click', payload)
   } catch {
     // silent
+  }
+}
+
+// Alternative: use sendBeacon for guaranteed delivery when page unloads
+export function trackOutboundClickBeacon(p: OutboundClickParams): void {
+  const payload = {
+    vendor: extractVendor(p.url),
+    article: p.article,
+    cluster: p.cluster,
+    lang: p.lang,
+    position: p.position,
+    target_domain: extractDomain(p.url),
+  }
+
+  // Send to Umami via beacon (survives page unload)
+  if (window.navigator?.sendBeacon) {
+    try {
+      const umamiEndpoint = '/api/stats'
+      window.navigator.sendBeacon(umamiEndpoint, JSON.stringify({ name: 'outbound_click', data: payload }))
+    } catch {
+      // fallback to regular track
+      window.umami?.track('outbound_click', payload)
+    }
   }
 }

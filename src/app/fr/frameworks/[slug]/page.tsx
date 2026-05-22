@@ -235,7 +235,7 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
+            <Link href="/fr" className="text-primary hover:text-primary/80 font-medium text-sm">← Accueil</Link>
             <Link href="/fr/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
           </div>
 
