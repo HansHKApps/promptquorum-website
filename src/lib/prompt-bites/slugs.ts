@@ -26,6 +26,9 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'best-local-llm-apps-android':          'bestLocalLlmAppsAndroid',
   'best-frontend-for-ollama':             'bestFrontendForOllama',
   'cursor-pro-vs-continue-dev':           'cursorProVsContinueDev',
+  'mlx-vs-ollama-vs-llamacpp':            'mlxVsOllamaVsLlamacpp',
+  'convert-ollama-model-to-mlx':          'convertOllamaModelToMlx',
+  'ollama-mlx-apple-silicon':             'ollamaMlxAppleSilicon',
 
   // Cluster D — Model Comparisons
   'qwen-14b-vs-llama-8b':                 'qwen14bVsLlama8b',

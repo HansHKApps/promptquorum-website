@@ -51,6 +51,9 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-local-llm-apps-android',
       'best-frontend-for-ollama',
       'cursor-pro-vs-continue-dev',
+      'mlx-vs-ollama-vs-llamacpp',
+      'convert-ollama-model-to-mlx',
+      'ollama-mlx-apple-silicon',
     ],
   },
   {

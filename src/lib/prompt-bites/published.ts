@@ -27,6 +27,9 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-local-llm-apps-android',
   'best-frontend-for-ollama',
   'cursor-pro-vs-continue-dev',
+  'mlx-vs-ollama-vs-llamacpp',
+  'convert-ollama-model-to-mlx',
+  'ollama-mlx-apple-silicon',
   // Cluster D — Model Comparisons
   'qwen-14b-vs-llama-8b',
   'best-14b-models-coding',

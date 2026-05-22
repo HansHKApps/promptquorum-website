@@ -44,6 +44,9 @@ import { article as cloudGpuCostPerHour } from './articles/cloud-gpu-cost-per-ho
 import { article as bestEgpuOllamaMacbook } from './articles/best-egpu-ollama-macbook'
 import { article as bestBudgetAiLaptopUnder1000 } from './articles/best-budget-ai-laptop-under-1000'
 import { article as bestVpnDownloadingAiModels } from './articles/best-vpn-downloading-ai-models'
+import { article as mlxVsOllamaVsLlamacpp } from './articles/mlx-vs-ollama-vs-llamacpp'
+import { article as convertOllamaModelToMlx } from './articles/convert-ollama-model-to-mlx'
+import { article as ollamaMlxAppleSilicon } from './articles/ollama-mlx-apple-silicon'
 
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
@@ -89,4 +92,7 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestEgpuOllamaMacbook,
   bestBudgetAiLaptopUnder1000,
   bestVpnDownloadingAiModels,
+  mlxVsOllamaVsLlamacpp,
+  convertOllamaModelToMlx,
+  ollamaMlxAppleSilicon,
 }
