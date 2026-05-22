@@ -100,9 +100,23 @@ export function trackAffiliateClick(p: AffiliateClickParams): void {
   }
 }
 
-// Affiliate disclosure shown near the top of each affiliate page. Commission
-// wording per the affiliate-page localization rules in AFFILIATE_MANAGER_FINAL.md.
+// Affiliate disclosure shown near the top of each affiliate page.
+//
+// AFFILIATE_DISCLOSURE is the neutral, currently-accurate notice: PromptQuorum
+// is not enrolled in any affiliate program, so outbound links carry no
+// affiliate tags and earn no commission. AFFILIATE_DISCLOSURE_COMMISSION holds
+// the commission wording — switch the PowerLocalLLMPostClient lookup to it once
+// real affiliate programs go live (see the HONESTY NOTE at the top of this file).
 export const AFFILIATE_DISCLOSURE: Record<string, string> = {
+  en: 'This page contains links to third-party products for reference. PromptQuorum is not enrolled in any affiliate program — these are plain links that earn no commission.',
+  de: 'Diese Seite enthält Verweislinks zu Produkten von Drittanbietern. PromptQuorum ist an keinem Partnerprogramm beteiligt — es sind reine Referenzlinks, die keine Provision erzielen.',
+  fr: 'Cette page contient des liens de référence vers des produits tiers. PromptQuorum n\'est inscrit à aucun programme d\'affiliation — ce sont de simples liens qui ne génèrent aucune commission.',
+  ja: 'このページには参考用の第三者製品へのリンクが含まれています。PromptQuorumはいかなるアフィリエイトプログラムにも参加しておらず、これらはコミッションを得ない単なる参照リンクです。',
+  zh: '本页包含指向第三方产品的参考链接。PromptQuorum 未加入任何联盟计划——这些是不产生佣金的普通链接。',
+}
+
+// Commission wording — use only once real affiliate programs go live.
+export const AFFILIATE_DISCLOSURE_COMMISSION: Record<string, string> = {
   en: 'This page contains product links. We may earn a commission if you purchase through these links, at no extra cost to you.',
   de: 'Diese Seite enthält Produktlinks. Wir erhalten möglicherweise eine Provision, wenn Sie über diese Links kaufen — ohne Mehrkosten für Sie.',
   fr: 'Cette page contient des liens produits. Nous pouvons recevoir une commission si vous achetez via ces liens, sans frais supplémentaires pour vous.',

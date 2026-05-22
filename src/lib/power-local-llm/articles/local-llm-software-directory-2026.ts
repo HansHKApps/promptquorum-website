@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     title: 'The Complete Local LLM Software Directory: 70+ Tools to Run AI on Your Own Hardware (2026)',
     seoTitle: 'Local LLM Software Directory 2026: 70+ Tools to Run AI Locally',
+    affiliateDisclosure: true,
     intro:
       'The local-LLM ecosystem in 2026 is large enough that picking the wrong tool first costs hours, not minutes. This directory catalogues 87 actively-maintained projects across nine layers — runtimes, desktop apps, web UIs, coding assistants, RAG systems, agent frameworks, voice and multimodal, mobile clients, and specialized productivity plugins — with the description, licence, and primary URL for each. Use it as the "what exists" map before you commit to a stack; every category ends with a link to the deeper PromptQuorum comparison guide for that layer.',
     metaDescription:
@@ -105,6 +106,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', 'Description': 'Apple Silicon-native runtime by Apple research', 'License': 'MIT' },
         ],
         note: 'Deeper guide: [llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm)',
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/console/signup',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-2.69/hr',
+            label: 'Check RunPod pricing and sign up',
+          },
+          {
+            url: 'https://vast.ai/',
+            productName: 'Vast.ai cloud GPU marketplace',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.09-1.87/hr',
+            label: 'Check Vast.ai pricing and sign up',
+          },
+          {
+            url: 'https://lambdalabs.com/service/gpu-cloud',
+            productName: 'Lambda Labs GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '1.79-2.99/hr',
+            label: 'Check Lambda Labs pricing and sign up',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-runtimes-comparison-en.svg',
         imageCaption: 'Ollama vs llama.cpp vs vLLM: Ollama is MIT-licensed with one-command install and OpenAI-compatible API; llama.cpp is the foundational MIT-licensed C++ engine; vLLM is the Apache 2.0 multi-user serving choice for GPU deployments.',
       },
@@ -127,6 +151,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Lets local LLM control your computer and execute code', 'License': 'AGPL 3.0' },
         ],
         note: 'Deeper guide: [LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
+        affiliateLinks: [
+          {
+            url: 'https://msty.app/pricing',
+            productName: 'Msty Aurum',
+            productCategory: 'software',
+            priceRange: '149/yr',
+            label: 'Check Msty pricing',
+          },
+          {
+            url: 'https://anythingllm.com/cloud',
+            productName: 'AnythingLLM Cloud',
+            productCategory: 'software',
+            priceRange: '25-99/mo',
+            label: 'Check AnythingLLM Cloud pricing',
+          },
+        ],
       },
       webUis: {
         id: 'web-uis',
@@ -164,6 +204,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', 'Description': 'Free Copilot alternative for VS Code', 'License': 'MIT' },
         ],
         note: 'Deeper guide: [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local)',
+        affiliateLinks: [
+          {
+            url: 'https://www.cursor.com/pricing',
+            productName: 'Cursor Pro',
+            productCategory: 'software',
+            priceRange: '20/mo',
+            label: 'Check Cursor pricing',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-en.svg',
         imageCaption: '3 local LLM coding patterns: Continue.dev for inline autocomplete in VS Code and JetBrains, Cline for autonomous agent file edits, and Aider for git-native terminal diffs — all connect to Ollama via the OpenAI-compatible API.',
       },
@@ -375,6 +424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     title: 'Das vollständige lokale LLM Software-Verzeichnis: 70+ Tools für KI auf eigener Hardware (2026)',
     seoTitle: 'Lokales LLM Software-Verzeichnis 2026: 70+ Tools',
+    affiliateDisclosure: true,
     intro:
       'Das lokale LLM-Ökosystem ist 2026 so groß geworden, dass die falsche Tool-Wahl am Anfang Stunden, nicht Minuten kostet. Dieses Verzeichnis katalogisiert 87 aktiv gepflegte Projekte in neun Schichten — Laufzeitumgebungen, Desktop-Apps, Web-UIs, Coding-Assistenten, RAG-Systeme, Agenten-Frameworks, Sprache und Multimodal, Mobile-Clients und spezialisierte Produktivitäts-Plugins — jeweils mit Beschreibung, Lizenz und primärer URL. Verwenden Sie es als Übersichtskarte des Ist-Zustands, bevor Sie sich für einen Stack entscheiden; jede Kategorie endet mit einem Link zum vertiefenden PromptQuorum-Vergleichsartikel für diese Schicht.',
     metaDescription:
@@ -466,6 +516,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', 'Beschreibung': 'Apple-Silicon-native Laufzeitumgebung von Apple Research', 'Lizenz': 'MIT' },
         ],
         note: 'Vertiefender Vergleich: [llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=de)',
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/console/signup',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-2.69/hr',
+            label: 'RunPod-Preise prüfen und registrieren',
+          },
+          {
+            url: 'https://vast.ai/',
+            productName: 'Vast.ai cloud GPU marketplace',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.09-1.87/hr',
+            label: 'Vast.ai-Preise prüfen und registrieren',
+          },
+          {
+            url: 'https://lambdalabs.com/service/gpu-cloud',
+            productName: 'Lambda Labs GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '1.79-2.99/hr',
+            label: 'Lambda-Labs-Preise prüfen und registrieren',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-runtimes-comparison-de.svg',
         imageCaption: 'Ollama vs llama.cpp vs vLLM im Vergleich: Ollama mit MIT-Lizenz und Ein-Befehl-Installation sowie OpenAI-kompatibler API; llama.cpp als grundlegender MIT-lizenzierter C++-Motor; vLLM als Apache-2.0-Option für GPU-Mehrbenutzer-Deployments.',
       },
@@ -488,6 +561,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Beschreibung': 'Erlaubt einem lokalen LLM, Ihren Computer zu steuern und Code auszuführen', 'Lizenz': 'AGPL 3.0' },
         ],
         note: 'Vertiefender Vergleich: [LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=de)',
+        affiliateLinks: [
+          {
+            url: 'https://msty.app/pricing',
+            productName: 'Msty Aurum',
+            productCategory: 'software',
+            priceRange: '149/yr',
+            label: 'Msty-Preise prüfen',
+          },
+          {
+            url: 'https://anythingllm.com/cloud',
+            productName: 'AnythingLLM Cloud',
+            productCategory: 'software',
+            priceRange: '25-99/mo',
+            label: 'AnythingLLM-Cloud-Preise prüfen',
+          },
+        ],
       },
       webUis: {
         id: 'web-uis',
@@ -525,6 +614,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', 'Beschreibung': 'Kostenlose Copilot-Alternative für VS Code', 'Lizenz': 'MIT' },
         ],
         note: 'Vertiefender Vergleich: [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=de)',
+        affiliateLinks: [
+          {
+            url: 'https://www.cursor.com/pricing',
+            productName: 'Cursor Pro',
+            productCategory: 'software',
+            priceRange: '20/mo',
+            label: 'Cursor-Preise prüfen',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-de.svg',
         imageCaption: '3 lokale LLM Coding-Muster: Continue.dev für Inline-Autovervollständigung in VS Code und JetBrains, Cline für autonome Agenten-Dateibearbeitung, Aider für Git-native Terminal-Diffs — alle verbinden sich über die OpenAI-kompatible API mit Ollama.',
       },
@@ -744,6 +842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     title: 'Le répertoire complet des logiciels LLM locaux : 70+ outils pour faire tourner l\'IA sur votre propre matériel (2026)',
     seoTitle: 'Répertoire de logiciels LLM locaux 2026 : 70+ outils',
+    affiliateDisclosure: true,
     intro:
       'L\'écosystème LLM local en 2026 est assez vaste pour que le mauvais choix initial coûte des heures. Ce répertoire recense 87 projets activement maintenus en neuf couches — runtimes, applications bureau, interfaces web, assistants de codage, systèmes RAG, frameworks d\'agents, voix et multimodal, clients mobiles, plugins de productivité — avec description, licence et URL pour chacun. Utilisez-le comme carte d\'orientation avant de vous engager dans une stack.',
     metaDescription:
@@ -835,6 +934,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', 'Description': 'Runtime natif Apple Silicon par Apple Research', 'Licence': 'MIT' },
         ],
         note: 'Comparatif approfondi : [llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=fr)',
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/console/signup',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-2.69/hr',
+            label: 'Vérifier les tarifs RunPod et s\'inscrire',
+          },
+          {
+            url: 'https://vast.ai/',
+            productName: 'Vast.ai cloud GPU marketplace',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.09-1.87/hr',
+            label: 'Vérifier les tarifs Vast.ai et s\'inscrire',
+          },
+          {
+            url: 'https://lambdalabs.com/service/gpu-cloud',
+            productName: 'Lambda Labs GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '1.79-2.99/hr',
+            label: 'Vérifier les tarifs Lambda Labs et s\'inscrire',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-runtimes-comparison-fr.svg',
         imageCaption: 'Ollama vs llama.cpp vs vLLM : Ollama (licence MIT, installation en une commande, API compatible OpenAI) ; llama.cpp (moteur C++ fondamental, MIT) ; vLLM (Apache 2.0, service multi-utilisateurs sur GPU).',
       },
@@ -857,6 +979,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Permet à un LLM local de contrôler votre ordinateur et d\'exécuter du code', 'Licence': 'AGPL 3.0' },
         ],
         note: 'Comparatif approfondi : [LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=fr)',
+        affiliateLinks: [
+          {
+            url: 'https://msty.app/pricing',
+            productName: 'Msty Aurum',
+            productCategory: 'software',
+            priceRange: '149/yr',
+            label: 'Vérifier les tarifs Msty',
+          },
+          {
+            url: 'https://anythingllm.com/cloud',
+            productName: 'AnythingLLM Cloud',
+            productCategory: 'software',
+            priceRange: '25-99/mo',
+            label: 'Vérifier les tarifs AnythingLLM Cloud',
+          },
+        ],
       },
       webUis: {
         id: 'web-uis',
@@ -894,6 +1032,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', 'Description': 'Alternative Copilot gratuite pour VS Code', 'Licence': 'MIT' },
         ],
         note: 'Comparatif approfondi : [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr)',
+        affiliateLinks: [
+          {
+            url: 'https://www.cursor.com/pricing',
+            productName: 'Cursor Pro',
+            productCategory: 'software',
+            priceRange: '20/mo',
+            label: 'Vérifier les tarifs Cursor',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-fr.svg',
         imageCaption: '3 modes d\'assistance au code avec LLM local : Continue.dev pour l\'autocomplétion inline dans VS Code et JetBrains, Cline pour les modifications autonomes par agent, Aider pour les diffs git en terminal — tous connectés à Ollama via l\'API compatible OpenAI.',
       },
@@ -1105,6 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     title: 'ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす70以上のツール（2026年版）',
     seoTitle: 'ローカルLLMソフトウェア一覧2026：70以上のツールを網羅',
+    affiliateDisclosure: true,
     intro:
       '2026年のローカルLLMエコシステムは、最初に間違ったツールを選ぶだけで数時間を無駄にするほど広大です。このディレクトリでは、ランタイム・デスクトップアプリ・Web UI・コーディングアシスタント・RAGシステム・エージェントフレームワーク・音声/マルチモーダル・モバイルクライアント・専門プラグインの9層にわたる87のプロジェクトを、説明・ライセンス・URLとともに掲載しています。スタックを決める前の「何が存在するか」を把握するための地図としてご活用ください。',
     metaDescription:
@@ -1196,6 +1344,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', '概要': 'Apple Research製のApple Siliconネイティブランタイム', 'ライセンス': 'MIT' },
         ],
         note: '詳細比較：[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=ja)',
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/console/signup',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-2.69/hr',
+            label: 'RunPodの料金を確認して登録する',
+          },
+          {
+            url: 'https://vast.ai/',
+            productName: 'Vast.ai cloud GPU marketplace',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.09-1.87/hr',
+            label: 'Vast.aiの料金を確認して登録する',
+          },
+          {
+            url: 'https://lambdalabs.com/service/gpu-cloud',
+            productName: 'Lambda Labs GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '1.79-2.99/hr',
+            label: 'Lambda Labsの料金を確認して登録する',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-runtimes-comparison-ja.svg',
         imageCaption: 'Ollama vs llama.cpp vs vLLM比較：OllamaはMITライセンスで1コマンドインストール・OpenAI互換API、llama.cppは基盤となるMIT C++エンジン、vLLMはApache 2.0のマルチユーザーGPU配信向け選択肢。',
       },
@@ -1218,6 +1389,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '概要': 'ローカルLLMがコンピュータを操作しコードを実行できる', 'ライセンス': 'AGPL 3.0' },
         ],
         note: '詳細比較：[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=ja)',
+        affiliateLinks: [
+          {
+            url: 'https://msty.app/pricing',
+            productName: 'Msty Aurum',
+            productCategory: 'software',
+            priceRange: '149/yr',
+            label: 'Mstyの料金を確認する',
+          },
+          {
+            url: 'https://anythingllm.com/cloud',
+            productName: 'AnythingLLM Cloud',
+            productCategory: 'software',
+            priceRange: '25-99/mo',
+            label: 'AnythingLLM Cloudの料金を確認する',
+          },
+        ],
       },
       webUis: {
         id: 'web-uis',
@@ -1255,6 +1442,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', '概要': 'VS Code向け無料Copilot代替', 'ライセンス': 'MIT' },
         ],
         note: '詳細比較：[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=ja)',
+        affiliateLinks: [
+          {
+            url: 'https://www.cursor.com/pricing',
+            productName: 'Cursor Pro',
+            productCategory: 'software',
+            priceRange: '20/mo',
+            label: 'Cursorの料金を確認する',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-ja.svg',
         imageCaption: 'ローカルLLMコーディングの3パターン：Continue.devはVS Code・JetBrainsでのインライン補完、Clineは自律エージェントによるファイル編集、AiderはGitネイティブのターミナルdiff編集 — すべてOllamaのOpenAI互換APIで接続。',
       },
@@ -1466,6 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     title: '本地LLM软件完整目录：70+款工具，在自有硬件上运行AI（2026）',
     seoTitle: '本地LLM软件目录2026：70+工具一览',
+    affiliateDisclosure: true,
     intro:
       '2026年本地LLM生态系统已足够庞大，选错工具会浪费数小时而不只是几分钟。本目录整理了87个活跃维护的项目，覆盖九个层级——运行时、桌面应用、Web界面、编程助手、RAG系统、智能体框架、语音与多模态、移动端客户端以及专业化生产力插件——每项附有描述、许可证和主要链接。在确定技术栈之前，将其作为"现有工具"全景图使用；每个类别末尾附有PromptQuorum该层详细对比指南的链接。',
     metaDescription:
@@ -1557,6 +1754,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', '描述': 'Apple研究院出品的Apple Silicon原生运行时', '许可证': 'MIT' },
         ],
         note: '深度指南：[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=zh)',
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/console/signup',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-2.69/hr',
+            label: '查看RunPod价格并注册',
+          },
+          {
+            url: 'https://vast.ai/',
+            productName: 'Vast.ai cloud GPU marketplace',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.09-1.87/hr',
+            label: '查看Vast.ai价格并注册',
+          },
+          {
+            url: 'https://lambdalabs.com/service/gpu-cloud',
+            productName: 'Lambda Labs GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '1.79-2.99/hr',
+            label: '查看Lambda Labs价格并注册',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-runtimes-comparison-zh.svg',
         imageCaption: 'Ollama vs llama.cpp vs vLLM对比：Ollama（MIT许可、一条命令安装、OpenAI兼容API）；llama.cpp（基础MIT C++引擎）；vLLM（Apache 2.0，适合多用户GPU推理服务）。',
       },
@@ -1579,6 +1799,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '描述': '允许本地LLM操控电脑并执行代码', '许可证': 'AGPL 3.0' },
         ],
         note: '深度指南：[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=zh)',
+        affiliateLinks: [
+          {
+            url: 'https://msty.app/pricing',
+            productName: 'Msty Aurum',
+            productCategory: 'software',
+            priceRange: '149/yr',
+            label: '查看Msty价格',
+          },
+          {
+            url: 'https://anythingllm.com/cloud',
+            productName: 'AnythingLLM Cloud',
+            productCategory: 'software',
+            priceRange: '25-99/mo',
+            label: '查看AnythingLLM Cloud价格',
+          },
+        ],
       },
       webUis: {
         id: 'web-uis',
@@ -1616,6 +1852,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', '描述': 'VS Code的免费Copilot替代插件', '许可证': 'MIT' },
         ],
         note: '深度指南：[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=zh)',
+        affiliateLinks: [
+          {
+            url: 'https://www.cursor.com/pricing',
+            productName: 'Cursor Pro',
+            productCategory: 'software',
+            priceRange: '20/mo',
+            label: '查看Cursor价格',
+          },
+        ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-zh.svg',
         imageCaption: '本地LLM编程辅助的3种模式：Continue.dev用于VS Code和JetBrains行内自动补全，Cline用于自主智能体文件编辑，Aider用于Git原生终端差异编辑 — 均通过OpenAI兼容API连接Ollama。',
       },
