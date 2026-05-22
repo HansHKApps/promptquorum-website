@@ -1964,4 +1964,490 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: '运行本地大语言模型的最佳笔记本电脑：2026 购买指南',
+    seoTitle: '2026 本地大语言模型最佳笔记本：从 MacBook 到 ThinkPad',
+    intro:
+      '大多数关于本地大语言模型笔记本的建议都从 GPU 说起，也止于 GPU。真正决定哪个模型能装下的数字是内存：Windows 游戏本上的 VRAM，或 Apple Silicon 上的统一内存——装不进内存的模型要么加载失败，要么靠交换分区慢得像爬。本指南按三种购买取向对比四个笔记本系列：追求便携机身中最大内存的 Apple MacBook Pro，追求 NVIDIA GPU 速度的 Lenovo ThinkPad 或 ASUS ROG 游戏本，以及追求可维修与可升级的 Framework Laptop 16。受散热限制，便携机型的运行速度通常比搭载同款芯片的台式机慢 20-30%。这里的价格是 2026 年 5 月的快照——笔记本定价会随机型周期和促销变动，请在购买前确认当前价格。',
+    metaDescription:
+      '对比四个笔记本系列运行本地大语言模型的表现：MacBook Pro、Lenovo ThinkPad、ASUS ROG 和 Framework 16。先按内存选购——VRAM 或统一内存决定哪个模型能装下。',
+    twitterDescription:
+      'MacBook Pro、ThinkPad、ASUS ROG、Framework 16——四个运行本地大语言模型的笔记本系列，一条准则：按内存选购。决定能装下哪个模型的是 VRAM 或统一内存，而非 GPU 名称。',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Mistral 7B v0.3',
+      'Qwen2.5 7B',
+      'Llama 3.1 8B',
+      'Llama 3.1 13B',
+    ],
+    current_hardware_mentioned: [
+      'Apple MacBook Pro (Apple Silicon)',
+      'Lenovo ThinkPad with NVIDIA RTX GPU',
+      'ASUS ROG gaming laptop with NVIDIA RTX GPU',
+      'Framework Laptop 16',
+    ],
+    audience:
+      '专门为运行本地大语言模型而挑选笔记本的买家，按购买取向（便携机身中最大内存、NVIDIA GPU 速度，或可维修硬件）以及需要运行的最大模型来做决定。',
+    readTime: '阅读约 13 分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'laptop for local LLMs',
+    targetKeywords: [
+      '本地大语言模型最佳笔记本 2026',
+      'macbook pro 与游戏本 本地大语言模型',
+      '本地大语言模型笔记本需要多少内存',
+      'ai 最佳游戏本',
+      'framework laptop 16 本地大语言模型',
+    ],
+    leadAnswerBlock:
+      '**运行本地大语言模型的最佳笔记本，是拥有足够内存装下你目标模型的那一台，而不是 GPU 最快的那一台。配备大容量统一内存的 MacBook Pro 能便携地运行最大的模型，高 VRAM 的游戏本运行它们最快，而 Framework Laptop 16 是可维修的选择。**',
+    quickAnswerTop: {
+      zh: {
+        question: '2026 年运行本地大语言模型应该买哪台笔记本？',
+        answer:
+          '先按内存、再按速度选购。配备大容量统一内存的 Apple MacBook Pro 能在便携高效的机身中装下最大的模型。配备高 VRAM NVIDIA RTX GPU 的 Lenovo ThinkPad 或 ASUS ROG 游戏本在接通电源时运行 7B-13B 模型最快。Framework Laptop 16 是追求可维修与可升级的选择。预计速度比台式机慢 20-30%。笔记本价格会随机型周期变动，请查看当前价格。',
+        bullets: [
+          '便携内存最大：配备大容量统一内存的 Apple MacBook Pro——最大的模型、最佳的续航',
+          '7B-13B 最快：配备高 VRAM NVIDIA RTX GPU 的游戏本（ThinkPad 或 ASUS ROG）',
+          '可维修之选：Framework Laptop 16——可升级的 RAM 与存储',
+          '至少按 8 GB 规划，推荐 16 GB 以上；预计速度比台式机慢 20-30%',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '要点总结', anchor: '#key-takeaways' },
+      { label: '速览要点', anchor: '#quick-facts' },
+      { label: '编辑之选', anchor: '#editors-choice' },
+      { label: '笔记本系列对比', anchor: '#comparison-table' },
+      { label: '你该买哪台笔记本？', anchor: '#which-laptop' },
+      { label: 'Apple MacBook Pro', anchor: '#family-macbook' },
+      { label: 'Lenovo ThinkPad 与工作站笔记本', anchor: '#family-thinkpad' },
+      { label: 'ASUS ROG 与游戏本', anchor: '#family-rog' },
+      { label: 'Framework Laptop 16', anchor: '#family-framework' },
+      { label: '你需要多少内存？', anchor: '#memory-needs' },
+      { label: '决策流程图', anchor: '#decision-flowchart' },
+      { label: '在哪里购买', anchor: '#where-to-buy' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '来源', anchor: '#sources' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**内存是约束性的瓶颈，而非 GPU 名称。** 装不进 VRAM 或统一内存的模型，要么加载失败，要么溢出到交换分区，慢得无法用于交互。先按目标模型所需的内存选购，再优化速度。',
+          '**便携内存最大：Apple MacBook Pro。** Apple Silicon 在 CPU 与 GPU 之间共享同一个统一内存池，因此大容量内存配置能装下比同级游戏本更大的模型——同时拥有最佳的能效。',
+          '**7B-13B 最快：高 VRAM 的 NVIDIA 游戏本。** 配备 RTX GPU 的 Lenovo ThinkPad 工作站或 ASUS ROG 笔记本在接通电源时运行 7B-13B 模型最快。RTX 4060（8 GB）笔记本运行 7B 模型约 60-90 tok/s；RTX 4070（12 GB）笔记本可从容应对 13B。',
+          '**可维修之选：Framework Laptop 16。** 它拥有可升级的 RAM 与存储以及模块化设计，因此可以日后增加内存，而无需更换整台机器——是对首次配置不够用的一种对冲。',
+          '**内存下限：** 8 GB 可在 Q4_K_M 下运行 7B 模型，16 GB 可从容运行 13B，而大容量 MacBook Pro 配置可达到大得多的模型。始终为操作系统留出 2-4 GB 余量。',
+          '**预期与台式机存在差距。** 笔记本的运行速度比搭载同款芯片的台式机大约慢 20-30%，因为散热限制会在持续负载下压低主频。',
+          '**在 Windows 上电池改变一切。** 游戏本在电池供电时通常会禁用或限制独立 GPU，使推理慢得像爬——请规划在接通电源下运行。Apple Silicon 在电池供电时仍可使用，且能效高得多。',
+          '**价格是 2026 年 5 月的快照。** 笔记本定价会随机型更新周期和促销变动——把这里的每个数字都视为一个区间，并在购买前确认实时价格。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '速览要点',
+        items: [
+          '**Apple MacBook Pro：** CPU 与 GPU 共享的统一内存——大容量配置能便携地装下最大的模型。',
+          '**Lenovo ThinkPad / 工作站：** 坚固的做工，可选 NVIDIA RTX GPU——在接通电源的 7B-13B 推理中表现出色。',
+          '**ASUS ROG 游戏本：** 高 VRAM RTX GPU，配游戏级散热——交流供电时最快的 7B-13B 选择。',
+          '**Framework Laptop 16：** 模块化、可维修的设计，配可升级的 RAM 与存储——买下日后可增加的内存。',
+          '**Q4_K_M 下的内存准则：** 8 GB 运行 7B 模型，16 GB 运行 13B；始终为操作系统留出 2-4 GB。',
+          '**速度参考：** 7B 模型在笔记本 CPU 上为 10-25 tok/s，在 Apple Silicon 上为 30-80 tok/s，在 RTX 4060 笔记本 GPU 上为 60-90 tok/s。',
+          '**与台式机的差距：** 由于热降频，笔记本的持续速度预计比搭载同款芯片的台式机大约低 20-30%。',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: '编辑之选：配备大容量统一内存的 Apple MacBook Pro',
+        sponsoredSlot: true,
+        content:
+          '**对大多数想要一台既能良好运行本地大语言模型又保持便携的笔记本的买家来说，配备大容量统一内存的 Apple MacBook Pro 是均衡之选。** Apple Silicon 在 CPU 与 GPU 之间共享同一个内存池，因此高内存配置能装下比将同等内存拆分为 VRAM 与系统 RAM 的游戏本更大的模型。它在电池供电时仍可使用，且能效高得多——M 系列 MacBook Pro 在 7B 推理时约消耗 12-18 W，而 Windows 笔记本为 25-45 W。如果你特别需要最快的 7B-13B 推理，并会让笔记本接通电源,那么高 VRAM 的 NVIDIA 游戏本更快。如果你想要可自行维修和升级的硬件,请选择 Framework Laptop 16。请在预算允许范围内为 MacBook Pro 配置尽可能多的统一内存——内存在购买后无法升级。价格跨度很大，请在购买前查看当前价格。',
+        callouts: [
+          {
+            type: 'note',
+            text: '此编辑之选仅反映对用途的适配性。PromptQuorum 未加入任何联盟营销计划，下方链接不带任何联盟标记——它们是不产生任何佣金的普通参考链接。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: '在亚马逊查看 MacBook Pro 价格',
+          },
+          {
+            url: 'https://www.apple.com/shop/buy-mac/macbook-pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: '在 Apple 查看 MacBook Pro 配置',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '四个笔记本系列在本地大语言模型上的对比',
+        content:
+          '速度数据取自 PromptQuorum 自有的笔记本测试——7B 模型在笔记本 CPU 上为 10-25 tok/s，在 Apple Silicon 上为 30-80 tok/s，在 RTX 4060 笔记本 GPU 上为 60-90 tok/s。「最适合」一列反映的是购买取向，而非单一型号。价格是以区间表示的 2026 年 5 月快照——笔记本定价会随机型周期和促销变动，请在购买前确认。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '对于本地大语言模型笔记本，内存池——Windows 上的 VRAM 或 Apple Silicon 上的统一内存——决定哪些模型能装下，而散热决定它们在热降频之前能跑多快。',
+          },
+          {
+            type: 'plain-terms',
+            text: '把内存想成工作台的大小，把模型想成台面上的项目。更快的芯片能更早完成工作，但如果项目根本放不上工作台，速度就永远无关紧要。笔记本的散热系统也比台式机小，因此在长任务下会变慢。',
+          },
+        ],
+        columns: ['笔记本系列', '内存模型', '7B 速度（引用数据）', '最适合', '价格（2026 年 5 月）'],
+        rows: [
+          {
+            '笔记本系列': 'Apple MacBook Pro',
+            '内存模型': '统一内存（CPU + GPU 共享）',
+            '7B 速度（引用数据）': 'Apple Silicon 上 30-80 tok/s',
+            '最适合': '便携运行最大的模型，最佳续航',
+            '价格（2026 年 5 月）': '中端至高端；查看当前价格',
+          },
+          {
+            '笔记本系列': 'Lenovo ThinkPad / 工作站',
+            '内存模型': 'NVIDIA RTX VRAM + 系统 RAM',
+            '7B 速度（引用数据）': 'RTX 4060 GPU 上 60-90 tok/s',
+            '最适合': '坚固做工，接通电源的 7B-13B 工作',
+            '价格（2026 年 5 月）': '中端至高端；查看当前价格',
+          },
+          {
+            '笔记本系列': 'ASUS ROG 游戏本',
+            '内存模型': 'NVIDIA RTX VRAM + 系统 RAM',
+            '7B 速度（引用数据）': 'RTX 4060 GPU 上 60-90 tok/s',
+            '最适合': '交流供电下最快的 7B-13B',
+            '价格（2026 年 5 月）': '中端价位；查看当前价格',
+          },
+          {
+            '笔记本系列': 'Framework Laptop 16',
+            '内存模型': '可升级系统 RAM + GPU 模块',
+            '7B 速度（引用数据）': '交流供电下与 RTX 笔记本相当',
+            '最适合': '可维修性，日后升级内存',
+            '价格（2026 年 5 月）': '中端价位；查看当前价格',
+          },
+        ],
+      },
+      whichLaptop: {
+        id: 'which-laptop',
+        title: '你该买哪台笔记本？',
+        content:
+          '**你的购买取向决定系列；你的最大目标模型决定内存配置。** 找到与你情况相符的那一行。',
+        columns: ['你的情况', '买这台'],
+        rows: [
+          { '你的情况': '我想在便携机身中运行最大的模型，并有出色的续航', '买这台': '配备大容量统一内存的 Apple MacBook Pro' },
+          { '你的情况': '我想要最快的 7B-13B 推理，并会让它接通电源', '买这台': '配备高 VRAM NVIDIA RTX GPU 的 ASUS ROG 笔记本' },
+          { '你的情况': '我想要坚固的商务级做工，并配 RTX GPU', '买这台': '配备 RTX GPU 的 Lenovo ThinkPad 工作站' },
+          { '你的情况': '我想随时间自行维修和升级笔记本', '买这台': 'Framework Laptop 16' },
+          { '你的情况': '我主要运行 7B 模型，想要一台均衡的日常笔记本', '买这台': '配备中等统一内存的 MacBook Pro' },
+          { '你的情况': '我拿不定主意，想要最稳妥的第一台笔记本', '买这台': 'Apple MacBook Pro——内存、能效与续航的最佳平衡' },
+        ],
+      },
+      familyMacbook: {
+        id: 'family-macbook',
+        title: 'Apple MacBook Pro：最便携的内存',
+        content:
+          '**Apple MacBook Pro 是在便携机身中装下最大本地大语言模型的选择，因为 Apple Silicon 在 CPU 与 GPU 之间共享同一个统一内存池。** 这意味着，大容量内存配置能运行比将同等总内存拆分为独立 VRAM 与系统 RAM 的游戏本更大的模型。',
+        items: [
+          '**为何购买：** 统一内存能装下比同级 VRAM 拆分更大的模型，Apple Silicon 在电池供电时仍可使用，且是能效最高的选择——7B 推理时约 12-18 W，而 Windows 笔记本为 25-45 W。',
+          '**适合使用 MacBook Pro 的情况：** 你想要一台便携笔记本运行最大的模型，看重续航，并偏好一台无需接通电源即可推理的安静机器。',
+          '**引用的速度数据：** 7B 模型在 Apple Silicon 上视芯片档次和内存为 30-80 tok/s；配备大容量统一内存的配置能将 13B 模型完整装入快速内存。',
+          '**谨慎配置：** 统一内存在购买后无法升级。请在预算允许范围内尽量多买内存——它是永久决定你最大模型的规格。',
+          '**为何跳过：** 对交流供电下尽可能最快的 7B-13B 推理而言，高 VRAM 的 NVIDIA 游戏本更快；而且 MacBook Pro 不可由用户维修。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '在 MacBook Pro 上，统一内存是你日后无法更改的唯一规格。请将其优先于存储——外置 SSD 可以容纳你的模型库，但没有任何外置部件能增加统一内存。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: '在亚马逊查看 MacBook Pro 价格',
+          },
+          {
+            url: 'https://www.apple.com/shop/buy-mac/macbook-pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: '在 Apple 查看 MacBook Pro 配置',
+          },
+        ],
+      },
+      familyThinkpad: {
+        id: 'family-thinkpad',
+        title: 'Lenovo ThinkPad 与工作站笔记本：坚固的 NVIDIA 之选',
+        content:
+          '**配备 NVIDIA RTX GPU 的 Lenovo ThinkPad 移动工作站，是想在坚固的商务级做工中获得 NVIDIA 推理速度的买家的选择。** ThinkPad 工作站机型将 RTX GPU 与坚固的机身和可维护的内部结构相结合。',
+        items: [
+          '**为何购买：** NVIDIA RTX GPU 在 Ollama 与 LM Studio 中开箱即可运行 CUDA 加速的推理，机身则为多年日常使用而打造，配可更换部件。',
+          '**适合使用 ThinkPad 工作站的情况：** 你想要 NVIDIA GPU 速度，看重坚固做工和出色的键盘，且这台笔记本也兼作工作机。',
+          '**引用的速度数据：** RTX 4060（8 GB）笔记本 GPU 运行 7B 模型约 60-90 tok/s；RTX 4070（12 GB）笔记本可从容应对 13B 模型。速度比同等台式机 GPU 约低 20-30%。',
+          '**面向内存配置：** 如果你想要 13B 的余量，请至少选 16 GB 系统 RAM 和 12 GB VRAM 的 GPU；GPU 是焊死的，因此购买时要选对 VRAM。',
+          '**为何跳过：** 独立 GPU 在电池供电时通常会被限制，因此请规划接通电源运行；而就纯粹的性价比而言，ASUS ROG 游戏本往往更便宜。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '笔记本 GPU 焊接在主板上，无法升级。请按你打算运行的最大模型选择 VRAM 容量——8 GB GPU 可从容装下 7B，12 GB GPU 是 13B 更稳妥的下限。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Lenovo+ThinkPad+RTX+workstation',
+            productName: 'Lenovo ThinkPad RTX workstation laptop',
+            productCategory: 'laptop',
+            label: '在亚马逊查看 Lenovo ThinkPad 工作站价格',
+          },
+          {
+            url: 'https://www.lenovo.com/us/en/d/laptops/thinkpad/',
+            productName: 'Lenovo ThinkPad workstation laptop',
+            productCategory: 'laptop',
+            label: '在 Lenovo 查看 ThinkPad 配置',
+          },
+        ],
+      },
+      familyRog: {
+        id: 'family-rog',
+        title: 'ASUS ROG 与游戏本：交流供电下最快的 7B-13B',
+        content:
+          '**配备高 VRAM NVIDIA RTX GPU 的 ASUS ROG 游戏本，是笔记本保持交流供电时运行 7B-13B 本地大语言模型最快的选择。** 游戏本将 RTX GPU 与为持续负载设计的散热相结合，比轻薄机身能更长时间维持主频。',
+        items: [
+          '**为何购买：** 高 VRAM RTX GPU 加游戏级散热，在 Windows 选项中提供最快的持续 7B-13B 推理，且往往比工作站笔记本价格更低。',
+          '**适合使用 ASUS ROG 笔记本的情况：** 你想要最高的 7B-13B 速度，会让笔记本接通电源，并能接受更响的风扇和游戏化外观。',
+          '**引用的速度数据：** RTX 4060（8 GB）笔记本运行 7B 模型为 60-90 tok/s；RTX 4070（12 GB）笔记本可从容运行 13B。更好的散热会推迟热降频，而热降频通常在持续生成 10-15 分钟后开始。',
+          '**面向内存配置：** 为 13B 余量选择至少 16 GB 系统 RAM 和 12 GB VRAM 的 GPU；如果 7B 是你的上限，8 GB VRAM 的型号即可。',
+          '**为何跳过：** 独立 GPU 在电池供电时会被禁用或限制，使推理慢得像爬；而且风扇噪音和电量消耗都明显高于 MacBook Pro。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Windows 游戏本通常会在电池供电时禁用独立 GPU 以省电，使推理跌至仅 CPU 的速度。如果你需要在远离电源插座的地方运行模型，Apple MacBook Pro 更合适。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=ASUS+ROG+RTX+gaming+laptop',
+            productName: 'ASUS ROG gaming laptop with NVIDIA RTX GPU',
+            productCategory: 'laptop',
+            label: '在亚马逊查看 ASUS ROG 笔记本价格',
+          },
+          {
+            url: 'https://www.asus.com/us/laptops/for-gaming/rog/',
+            productName: 'ASUS ROG gaming laptop',
+            productCategory: 'laptop',
+            label: '在 ASUS 查看 ASUS ROG 配置',
+          },
+        ],
+      },
+      familyFramework: {
+        id: 'family-framework',
+        title: 'Framework Laptop 16：可维修、可升级之选',
+        content:
+          '**Framework Laptop 16 是想要一台能随时间自行维修和升级的笔记本的买家的选择。** 它的模块化设计采用可升级的 RAM 与存储以及可更换部件，因此首次内存配置不够用时，不必购买一整台新机器。',
+        items: [
+          '**为何购买：** 用户可升级的 RAM 与存储，以及模块化、可维修的设计——是对 MacBook Pro 或游戏本焊死内存这一限制的对冲。',
+          '**适合使用 Framework Laptop 16 的情况：** 你看重可维修性以及日后增加内存的选项，并希望在需求增长时避免更换整台笔记本。',
+          '**内存优势：** 由于 RAM 可升级，你可以先以较小配置起步运行 7B 模型，日后再为 13B 工作增加内存——这是这里唯一能做到这一点的系列。',
+          '**为当下配置，为日后规划：** 在知道日后可增加的前提下，为你当前的目标模型购买足够的内存。购买前请在厂商网站确认当前的 GPU 模块选项和支持的 RAM 容量。',
+          '**为何跳过：** 如果你想在便携机身中获得绝对最大的统一内存，大容量内存的 MacBook Pro 能装下更大的模型；而游戏本每美元可能提供更高的纯 GPU 速度。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Framework Laptop 16 是本指南中唯一 RAM 可升级的系列。如果你不确定自己的模型会变得多大，它让你可以低配起步、日后再加内存，而不必前期过度花费。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Framework+Laptop+16',
+            productName: 'Framework Laptop 16',
+            productCategory: 'laptop',
+            label: '在亚马逊查看 Framework Laptop 16 价格',
+          },
+          {
+            url: 'https://frame.work/laptop16',
+            productName: 'Framework Laptop 16',
+            productCategory: 'laptop',
+            label: '在 Framework 查看 Framework Laptop 16 配置',
+          },
+        ],
+      },
+      memoryNeeds: {
+        id: 'memory-needs',
+        title: '笔记本需要多少内存？',
+        content:
+          '**在 Q4_K_M 量化下，本地大语言模型每十亿参数大约需要 0.6 GB 内存，外加 2-4 GB 供操作系统和工具使用。** 在笔记本上，「内存」在 Windows 上指 VRAM 加系统 RAM，在 Apple Silicon 上指统一内存。',
+        items: [
+          '**8 GB——3B 与 7B 模型：** Q4_K_M 下的 7B 模型约需 4.5 GB，为操作系统留出空间。8 GB 是实用下限；加载 7B 模型前请关闭浏览器。',
+          '**16 GB——7B 与 13B 模型：** Q4_K_M 下的 13B 模型约需 9 GB，在正常多任务下可装进 16 GB。16 GB 是推荐的起点。',
+          '**32 GB 以上——多任务繁重的 13B，或更大的模型：** 在运行其他应用的同时从容应对 13B，也是迈过 13B 的入门点。',
+          '**大容量 MacBook Pro 统一内存——最大的便携模型：** 由于 GPU 共享整个内存池，大容量内存的 MacBook Pro 能装下远超 16 GB Windows 笔记本的模型。',
+          '**适合用 8 GB 的情况：** 7B 模型能覆盖你的工作；**应选 16 GB 以上的情况：** 你想要 13B 模型，或在推理的同时运行浏览器和编辑器。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '对于本地大语言模型笔记本，请按模型每十亿参数约 0.6 GB 内存外加 2-4 GB 开销来规划——8 GB 可覆盖 7B 模型，16 GB 可覆盖 13B。',
+          },
+          {
+            type: 'plain-terms',
+            text: '每个模型加载都需要一定量的内存，操作系统在此之上还需要自己的份额。如果模型装不下，笔记本就会退而依赖基于磁盘的交换分区，慢得像爬。请为你最大的模型购买足够的内存，并留出几个 GB 的余量。',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: '决策流程图：用三个问题选定你的笔记本',
+        content:
+          '**按顺序回答三个问题，能把大多数买家引向某一个系列。**',
+        items: [
+          '**1. 你需要自行维修和升级笔记本吗？** 是：Framework Laptop 16。否：继续。',
+          '**2. 你需要在电池供电下运行模型，或想要最大的便携内存吗？** 是：配备大容量统一内存的 Apple MacBook Pro。否：继续。',
+          '**3. 你想要交流供电下最快的 7B-13B 速度，并配坚固做工吗？** 坚固做工最重要：Lenovo ThinkPad 工作站。每美元的纯速度最重要：ASUS ROG 游戏本。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '选择本地大语言模型笔记本时，先回答可维修性需求，再回答电池与便携内存需求，最后在坚固做工与每美元纯速度之间取舍。',
+          },
+          {
+            type: 'plain-terms',
+            text: '先从你是否想自行升级笔记本开始——若是，就选 Framework。如果你需要不接电源运行模型，或想要最多的内存，就选 MacBook Pro。否则，根据更看重耐用性还是性价比，在游戏本与工作站笔记本之间选择。',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '在哪里购买运行本地大语言模型的笔记本',
+        content:
+          '**笔记本价格会随机型更新周期和促销变动——美国价格通常最低，欧盟价格含增值税。** 下方链接是按地区划分的普通产品搜索链接和厂商链接；它们不带任何联盟标记，也不产生任何佣金。',
+        items: [
+          '**美国：** 亚马逊和厂商商店（Apple、Lenovo、ASUS、Framework）提供最广泛的配置选择。厂商商店可让你挑选精确的内存。',
+          '**德国：** Amazon.de 和厂商的德国商店；标价中预计含约 19% 的增值税。',
+          '**法国：** Amazon.fr 和厂商的法国商店；定价与德国相近，含 20% 的增值税。',
+          '**日本：** Amazon.co.jp 和厂商的日本商店；配置选项与美国一致。',
+          '**适合在机型更新前后购买的情况：** 如果你能等——新一代发布时上一代往往会降价，而二手或翻新的游戏本能避开新机型的大部分溢价。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '本指南中的每个价格区间都是 2026 年 5 月的快照。笔记本定价会随机型周期和促销活动变动——购买前请务必打开当前的零售商或厂商页面。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=laptop+for+local+LLM',
+            productName: 'Local-LLM laptops (US)',
+            productCategory: 'laptop',
+            label: '在亚马逊美国浏览本地大语言模型笔记本',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Laptop+RTX+KI',
+            productName: 'Local-LLM laptops (Germany)',
+            productCategory: 'laptop',
+            label: '在 Amazon.de 浏览笔记本',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=ordinateur+portable+RTX+IA',
+            productName: 'Local-LLM laptops (France)',
+            productCategory: 'laptop',
+            label: '在 Amazon.fr 浏览笔记本',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+laptop+AI',
+            productName: 'Local-LLM laptops (Japan)',
+            productCategory: 'laptop',
+            label: '在 Amazon.co.jp 浏览笔记本',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '购买运行本地大语言模型的笔记本时的常见错误',
+        items: [
+          '**按 GPU 名称而非内存选购。** 一块缺少装下你模型所需 VRAM 的快速 GPU 毫无用处。请先确认模型能在留出 2-4 GB 余量的情况下装进内存，再比较速度。',
+          '**买一台轻薄超极本却指望它良好运行 7B 模型。** 配集成显卡、热容量小的超极本只能处理轻量的 3B-7B CPU 推理。请改选 MacBook Pro 或一台散热到位的笔记本。',
+          '**指望笔记本达到台式机的速度。** 散热限制会在持续负载下压低主频——笔记本的运行速度比搭载同款芯片的台式机大约慢 20-30%。',
+          '**打算用电池运行游戏本。** Windows 游戏本会在电池供电时限制或禁用独立 GPU，使推理跌至仅 CPU 的速度。请规划接通电源运行，或购买 MacBook Pro。',
+          '**焊死内存配得太低。** 在 MacBook Pro 或游戏本上，内存日后无法升级。请在购买时为你最大的目标模型买够内存。',
+          '**忽视散热管理。** 在合拢的包里、或没有支架辅助气流的情况下运行推理，会迫使 GPU 在数分钟内剧烈降频。请使用支架并保持通风口畅通。',
+          '**为 7B 模型买得过多。** 如果 7B 模型能覆盖你的工作，顶级配置就是浪费金钱和电量。请让内存匹配模型，而不是匹配你恰好拥有的预算。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          '[运行本地大语言模型的最佳笔记本电脑](/local-llms/best-laptops-local-llm?lang=zh) — PromptQuorum 自有笔记本指南：GPU 档次、模型大小上限，以及这里引用的台式机与笔记本速度差距。',
+          '[在笔记本上运行本地大语言模型：RAM、速度与散热](/local-llms/local-llm-on-laptop?lang=zh) — 这里引用的 7B 速度数据（CPU、Apple Silicon、RTX 笔记本 GPU）以及电池和散热数据的 PromptQuorum 自有来源。',
+          '[Apple MacBook Pro 技术规格](https://www.apple.com/macbook-pro/specs/) — Apple Silicon 统一内存配置的官方参考。',
+          '[Framework Laptop 16](https://frame.work/laptop16) — 可升级 RAM 与 GPU 模块的模块化设计的官方参考。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '2026 年运行本地大语言模型的最佳笔记本是什么？',
+            a: '不存在唯一的最佳笔记本——这取决于你的购买取向。配备大容量统一内存的 Apple MacBook Pro 能在便携高效的机身中装下最大的模型，是最佳的全能之选。高 VRAM 的 NVIDIA 游戏本，例如 ASUS ROG 或 Lenovo ThinkPad 工作站，在接通电源时运行 7B-13B 模型最快。如果你想要可维修、可升级的硬件，Framework Laptop 16 是你的选择。先按内存、再按速度选购。',
+          },
+          {
+            q: '运行本地大语言模型的笔记本需要多少 RAM？',
+            a: '请按 8 GB 作为实用下限、16 GB 作为推荐起点来规划。在 Q4_K_M 量化下，7B 模型约需 4.5 GB，若你保持其他应用轻量，可在 8 GB 笔记本上运行。13B 模型约需 9 GB，可从容装进 16 GB。始终为操作系统留出 2-4 GB 余量。',
+          },
+          {
+            q: 'MacBook Pro 和游戏本哪个更适合本地大语言模型？',
+            a: '这取决于你的优先项。MacBook Pro 在 CPU 与 GPU 之间共享同一个统一内存池，因此能装下更大的模型，运行能效高得多，并在电池供电时仍可使用。配备高 VRAM NVIDIA RTX GPU 的游戏本在接通电源时运行 7B-13B 模型更快。看重便携性和大模型就选 MacBook Pro，看重接通电源下的纯速度就选游戏本。',
+          },
+          {
+            q: '笔记本运行本地大语言模型能和台式机一样快吗？',
+            a: '不能。笔记本的运行速度比搭载同款芯片的台式机大约慢 20-30%，因为更小的散热系统会在持续负载下压低主频。热降频通常在持续生成 10-15 分钟后开始。笔记本是便携性的正确选择；台式机在持续负载或大模型工作负载下更快。',
+          },
+          {
+            q: 'Framework Laptop 16 适合运行本地大语言模型吗？',
+            a: '如果可维修性和升级对你重要，那么适合。Framework Laptop 16 拥有可升级的 RAM 与存储以及模块化设计，因此你可以先以面向 7B 模型的内存配置起步，日后再为 13B 工作扩容。它是本指南中唯一内存可由用户升级的系列。若想在便携机身中获得最多的统一内存，大容量内存的 MacBook Pro 仍能装下更大的模型。',
+          },
+          {
+            q: '我能用电池供电在笔记本上运行本地大语言模型吗？',
+            a: '这取决于笔记本。Apple Silicon 的 MacBook 在电池供电时仍可使用且运行高效——7B 推理时约 12-18 W。Windows 游戏本通常会在电池供电时禁用或限制独立 GPU，使推理跌至缓慢的仅 CPU 速度。如果在远离电源插座处运行模型对你重要，请选择 MacBook Pro。',
+          },
+          {
+            q: '7B 模型在笔记本上跑得有多快？',
+            a: '速度取决于硬件。Q4_K_M 下的 7B 模型在笔记本 CPU 上约为每秒 10-25 个 token，在使用统一内存的 Apple Silicon 上为每秒 30-80 个 token，在 NVIDIA RTX 4060 笔记本 GPU 上为每秒 60-90 个 token。这些数据来自 PromptQuorum 自有的笔记本测试。',
+          },
+          {
+            q: '我以后能升级笔记本里的 GPU 吗？',
+            a: '在几乎所有笔记本上都不能——GPU 焊接在主板上，无法更换。这使 VRAM 成为你必须在购买时选对的永久性选择：8 GB GPU 装得下 7B 模型，12 GB GPU 是 13B 更稳妥的下限。Framework Laptop 16 在 RAM 和部分组件上是模块化的，但 GPU 仍在配置时选定。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[阅读关于本地大语言模型笔记本的完整自有指南](/local-llms/best-laptops-local-llm?lang=zh) — 本购买指南背后更广泛的笔记本指南，含 GPU 档次和电池细节。',
+          '[一步步在笔记本上设置并运行本地大语言模型](/local-llms/local-llm-on-laptop?lang=zh) — 针对你所选笔记本的 RAM、热降频与量化指引。',
+          '[在本地大语言模型工作中对比笔记本与台式机](/local-llms/laptop-vs-desktop-local-llm?lang=zh) — 本指南背后的平台抉择，含完整的成本与速度拆解。',
+          '[若无需便携性则选择台式机 GPU](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=zh) — 面向更快的固定位置装机的配套 GPU 购买指南。',
+          '[挑选一台与你笔记本对接的显示器](/power-local-llm/best-monitors-ai-development-2026?lang=zh) — 让本地大语言模型笔记本变成完整开发工位的屏幕。',
+        ],
+      },
+    },
+  },
 }
