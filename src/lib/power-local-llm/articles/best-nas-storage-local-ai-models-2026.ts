@@ -1889,4 +1889,471 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: '本地 AI 模型的最佳 NAS 与存储 2026：选购指南',
+    seoTitle: '本地 AI 模型最佳 NAS 与 SSD 2026：选购指南',
+    intro:
+      '大多数针对本地 AI 的存储建议只优化一个数字——容量——却忽视了其中涉及两项存储任务。快速的 NVMe SSD 是推理时模型加载的来源；NAS 则是模型库的所在地，负责保持备份并在多台机器之间共享。两者不可互换，在需要其中一个时却买了另一个，是最常见的存储错误。本指南就左右购买决策的几项数据——容量、冗余、传输速度和价格——比较了承担模型库角色的 Synology 与 QNAP NAS 设备，以及承担加载角色的 Samsung 与 Western Digital SSD。关于价格有一点提醒：2026 年的内存芯片短缺把 SSD 价格推到了远高于以往的水平，因此本文每个价格都是 2026 年 5 月的快照——购买前请确认当前价格。',
+    metaDescription:
+      '面向本地 AI 模型比较 Synology 与 QNAP NAS 设备以及 Samsung 与 WD SSD：RAID 6 冗余、快速模型加载、容量和 2026 年 5 月价格。',
+    twitterDescription:
+      'NAS 用于模型库，NVMe SSD 用于快速加载——两项任务，而非一项。就本地 AI 存储以 2026 年 5 月价格比较 Synology、QNAP、Samsung、WD。',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen2.5 7B',
+      'Mistral 7B',
+    ],
+    current_hardware_mentioned: [
+      'Synology DS423+',
+      'Synology DS923+',
+      'QNAP TS-464',
+      'Samsung 990 Pro NVMe SSD',
+      'Western Digital Black SN850X NVMe SSD',
+    ],
+    audience:
+      '正在构建本地 AI 模型库的开发者和小型团队，需要在 NAS、SSD 或两者之间做出选择，并确定品牌和容量。假定读者熟悉 GGUF 模型文件和量化，但不熟悉具体的 NAS 或 SSD 型号。',
+    readTime: '阅读约 13 分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'NAS and storage for local AI models',
+    targetKeywords: [
+      '本地 ai 模型最佳 nas 2026',
+      '本地 llm nas 还是 ssd',
+      'ai 模型 synology 还是 qnap',
+      '加载本地 llm 的快速 ssd',
+      '本地 llm 模型库存储',
+    ],
+    leadAnswerBlock:
+      '**本地 AI 模型的最佳存储是一块快速的 NVMe SSD（用于推理时加载模型）加上一台 NAS（用于共享、已备份的模型库）——它们承担不同的任务。购买 Samsung 990 Pro 或 WD Black SN850X 以获得加载速度，购买带 RAID 6 的 Synology 或 QNAP NAS 用于模型库。**',
+    quickAnswerTop: {
+      zh: {
+        question: '2026 年应为本地 AI 模型购买什么 NAS 和存储？',
+        answer:
+          '按任务划分预算。要在推理时快速加载模型，购买高端 NVMe SSD——Samsung 990 Pro 或 WD Black SN850X。对于多台机器共享且需要备份的模型库，购买 4 盘位 NAS——软件最简单选 Synology，每美元硬件更多选 QNAP——并以 RAID 6 运行。单人开发者可以跳过 NAS，使用一块 SSD 加一块外置备份硬盘。',
+        bullets: [
+          '快速加载：推理机上的 Samsung 990 Pro 或 WD Black SN850X NVMe SSD',
+          '共享模型库：Synology 4 盘位 NAS——软件最简单，最适合非专业团队',
+          '每美元硬件更多：QNAP 4 盘位 NAS——相近价格下更强的 CPU 和更多端口',
+          '以 RAID 6 运行 NAS：可承受两块硬盘同时故障',
+          'SSD 价格在 2026 年内存短缺中上涨——将每个价格都视为 2026 年 5 月的快照',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '要点总结', anchor: '#key-takeaways' },
+      { label: '速览事实', anchor: '#quick-facts' },
+      { label: '编辑推荐', anchor: '#editors-choice' },
+      { label: '存储对比表', anchor: '#comparison-table' },
+      { label: '应该购买哪种存储？', anchor: '#which-storage' },
+      { label: 'Synology NAS', anchor: '#synology' },
+      { label: 'QNAP NAS', anchor: '#qnap' },
+      { label: '用于模型加载的快速 SSD', anchor: '#ssds' },
+      { label: 'RAID 与备份', anchor: '#raid-backup' },
+      { label: '决策流程图', anchor: '#decision-flowchart' },
+      { label: '购买渠道与价格', anchor: '#where-to-buy' },
+      { label: '常见错误', anchor: '#common-mistakes' },
+      { label: '来源', anchor: '#sources' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**本地 AI 的存储是两项任务，而非一项。** 推理机上快速的 NVMe SSD 把模型权重迅速加载到内存；NAS 存储共享、已备份的模型库。按你实际拥有的任务来购买——买错那一个是最常见的错误。',
+          '**NAS 不运行推理。** 切勿为推理通过网络加载模型——太慢了。NAS 保存模型库；GPU 机器上的 SSD 负责加载。让这两个角色保持分离。',
+          '**快速加载之选：Samsung 990 Pro 或 WD Black SN850X。** 高端 PCIe 4.0 NVMe SSD 缩短模型从硬盘加载到显存时的等待。70B 模型在 Q4 下约为 35-42 GB，因此每次切换模型都能感受到加载速度。',
+          '**共享模型库之选（最简单）：Synology 4 盘位 NAS。** Synology 的 DSM 软件对非专业团队最为简单——备份、快照和用户管理都是点击即可完成。',
+          '**共享模型库之选（每美元硬件更多）：QNAP 4 盘位 NAS。** QNAP 通常以相近价格提供更强的 CPU 和更多端口，代价是学习曲线略陡。',
+          '**以 RAID 6 运行 NAS。** RAID 6 可承受两块硬盘同时故障，是生产环境的默认选择；大容量硬盘上的 RAID 5 有在 24-48 小时重建期间发生第二次故障的风险。',
+          '**RAID 不是备份。** RAID 防止硬盘故障，但不防勒索软件、盗窃或误删。遵循 3-2-1 原则：3 份副本、2 种介质、1 份异地。',
+          '**价格在 2026 年上涨。** 内存芯片短缺推高了 NAND 和 SSD 价格。将本文每个价格都视为 2026 年 5 月的快照，并在购买前重新核对。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '速览事实',
+        items: [
+          '**两个角色：** NVMe SSD = GPU 机器上的快速模型加载；NAS = 共享、已备份的模型库。',
+          '**模型大小参考：** 7B 模型在 Q4 下约为 4-5 GB；70B 模型在 Q4 下约为 35-42 GB。',
+          '**RAID 6：** 可承受 2 块硬盘同时故障；可用容量约为原始容量的 50%（4x 4 TB = 约 8 TB 可用）。',
+          '**网络速度：** 同一千兆 LAN 上的 NAS 足以传输 35 GB 的模型（约 1 小时）；10 GbE 仅对约 20 名用户以上的团队有意义。',
+          '**备份原则：** 3-2-1——3 份副本、2 种介质、1 份异地。仅靠 RAID 不是备份。',
+          '**单人开发者：** 一块快速的内置 SSD 加一块外置备份硬盘通常胜过购买 NAS。',
+          '**2026 年价格现实：** 内存芯片短缺推高了 SSD 价格；请将数字视为 2026 年 5 月的快照。',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: '编辑推荐：Synology 4 盘位 NAS + Samsung 990 Pro SSD',
+        sponsoredSlot: true,
+        content:
+          '**对于构建本地 AI 模型库的小型团队，能很好地完成两项存储任务的组合是：用于模型库的 Synology 4 盘位 NAS，加上推理机上的 Samsung 990 Pro NVMe SSD。** Synology 的 DSM 软件让 RAID 6、计划快照和备份配置无需存储专家也能上手，4 盘位设备在 RAID 6 下提供约 8 TB 可用容量——足以容纳大型的量化模型库。Samsung 990 Pro 承担另一项任务：在每次切换模型时把模型权重从硬盘快速加载到显存。单人开发者可以完全跳过 NAS，把 SSD 与单块外置备份硬盘搭配使用。仅当你明确需要每美元更多的 CPU 和端口并接受更陡的设置时，才选择 QNAP 而非 Synology。',
+        callouts: [
+          {
+            type: 'note',
+            text: '本编辑推荐仅反映性能与价格之比。PromptQuorum 未加入任何联盟计划，下方链接不含联盟标记——它们是不赚取任何佣金的普通参考链接。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Synology+4-bay+NAS',
+            productName: 'Synology 4-Bay NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: '在 Amazon 查看 Synology 4 盘位 NAS 价格',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Samsung+990+Pro+2TB',
+            productName: 'Samsung 990 Pro 2TB NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-250',
+            label: '在 Amazon 查看 Samsung 990 Pro 价格',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026 年 NAS 与 SSD 存储在本地 AI 上的对比',
+        content:
+          '本表将两项存储任务分开。NAS 各行涵盖共享模型库角色；SSD 各行涵盖快速加载角色。容量和 RAID 数据基于标准的 4 盘位配置。价格为 2026 年 5 月的快照——2026 年的内存芯片短缺推高了 SSD 定价，因此购买前请确认当前数字。NAS 价格仅含硬件，不含硬盘。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '对于本地 AI 模型，NVMe SSD 负责推理时的快速加载，NAS 保存共享、已备份的模型库——为各自的任务分别购买，不要用一个去承担两者。',
+          },
+          {
+            type: 'plain-terms',
+            text: '把 SSD 想象成你实际下厨的厨房台面，把 NAS 想象成存放一切的储藏室。你在台面上快速烹饪；你把存货安全地放在储藏室里。在储藏室里做饭很慢，而没有储藏室的台面很快就会没地方放。',
+          },
+        ],
+        columns: ['存储', '角色', '容量', '冗余', '价格（2026 年 5 月）', '最适合'],
+        rows: [
+          {
+            '存储': 'Synology 4 盘位 NAS',
+            '角色': '共享模型库',
+            '容量': 'RAID 6 下约 8 TB 可用（4x 4 TB）',
+            '冗余': 'RAID 6——可承受 2 块硬盘故障',
+            '价格（2026 年 5 月）': '约 $450-650，仅硬件',
+            '最适合': '想要最简单软件的团队',
+          },
+          {
+            '存储': 'QNAP 4 盘位 NAS',
+            '角色': '共享模型库',
+            '容量': 'RAID 6 下约 8 TB 可用（4x 4 TB）',
+            '冗余': 'RAID 6——可承受 2 块硬盘故障',
+            '价格（2026 年 5 月）': '约 $450-650，仅硬件',
+            '最适合': '想要更强 CPU 和更多端口的团队',
+          },
+          {
+            '存储': 'Samsung 990 Pro NVMe SSD',
+            '角色': '快速模型加载',
+            '容量': '每块 1-4 TB',
+            '冗余': '无——需搭配备份',
+            '价格（2026 年 5 月）': '2 TB 约 $150-250',
+            '最适合': '最快加载，单台机器',
+          },
+          {
+            '存储': 'WD Black SN850X NVMe SSD',
+            '角色': '快速模型加载',
+            '容量': '每块 1-4 TB',
+            '冗余': '无——需搭配备份',
+            '价格（2026 年 5 月）': '2 TB 约 $150-250',
+            '最适合': '快速加载，性价比替代方案',
+          },
+          {
+            '存储': '外置 USB 硬盘',
+            '角色': '离线备份',
+            '容量': '2-8 TB',
+            '冗余': '无——它本身就是备份',
+            '价格（2026 年 5 月）': '约 $80-200',
+            '最适合': '单人开发者，异地副本',
+          },
+        ],
+      },
+      whichStorage: {
+        id: 'which-storage',
+        title: '应该购买哪种存储？',
+        content:
+          '**团队规模决定你是否需要 NAS；推理机始终需要一块快速 SSD。** 找到与你情况相符的那一行。',
+        columns: ['你的情况', '购买这个'],
+        rows: [
+          { '你的情况': '我是单人开发者，只有一台机器', '购买这个': '快速 NVMe SSD + 一块外置备份硬盘——跳过 NAS' },
+          { '你的情况': '我想要尽可能最快的模型加载', '购买这个': 'GPU 机器上的 Samsung 990 Pro NVMe SSD' },
+          { '你的情况': '我想要快速加载且价格略低', '购买这个': 'WD Black SN850X NVMe SSD' },
+          { '你的情况': '我们 3-10 人的团队共享一个模型库', '购买这个': 'RAID 6 下的 Synology 4 盘位 NAS' },
+          { '你的情况': '我想要每美元更多的 CPU 和端口，并接受更陡的设置', '购买这个': 'RAID 6 下的 QNAP 4 盘位 NAS' },
+          { '你的情况': '我需要最简单的备份和快照软件', '购买这个': 'Synology——DSM 最为点击即用' },
+          { '你的情况': '我不确定，想要一个稳妥的默认选择', '购买这个': '现在买 Samsung 990 Pro SSD；团队扩大时再加一台 Synology NAS' },
+        ],
+      },
+      synologySection: {
+        id: 'synology',
+        title: 'Synology NAS：最简单的共享模型库',
+        content:
+          '**当你想要一个非专业人员也能搭建和维护的共享模型库时，Synology 4 盘位 NAS 就是首选——其 DSM 软件让 RAID 6、快照和备份点击即可完成。** 模型库角色正是 NAS 的用途所在：多台机器访问同一组 GGUF 模型文件，NAS 让它们保持冗余并已备份。',
+        items: [
+          '**软件：** Synology DSM 是最易上手的 NAS 操作系统——RAID 配置、计划快照和云备份都是引导式向导，而非配置文件。',
+          '**容量：** 装有四块 4 TB 硬盘的 4 盘位设备在 RAID 6 下提供约 8 TB 可用容量——足以容纳大型的量化模型库（70B Q4 模型约为 35-42 GB）。',
+          '**网络：** 同一千兆 LAN 上的 NAS 在约一小时内传输 35 GB 的模型；这对模型库角色已经足够。10 GbE 仅在约 20 名用户以上时才有意义。',
+          '**价格：** 2026 年 5 月快照下约为 $450-650，仅含硬件；NAS 专用硬盘需另行预算。',
+          '**为何选择 Synology：** 你想要共享、已备份的模型库，并希望搭建和维护的工作量最小。',
+          '**为何跳过 Synology：** 只有一台机器的单人开发者不需要 NAS——一块 SSD 加一块外置硬盘更便宜也更简单。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'NAS 里要用 NAS 专用硬盘，而非桌面硬盘。NAS 硬盘专为多盘位机箱中的连续运行和抗振而设计。硬盘要单独预算——NAS 标价仅含硬件。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Synology+DS923+NAS',
+            productName: 'Synology DS923+ 4-Bay NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: '在 Amazon 查看 Synology NAS 价格',
+          },
+        ],
+      },
+      qnapSection: {
+        id: 'qnap',
+        title: 'QNAP NAS：每美元更多硬件',
+        content:
+          '**当你想要比 Synology 每美元更强的 CPU 和更多连接性，并接受略陡的设置时，QNAP 4 盘位 NAS 就是首选。** 它承担相同的共享模型库角色——可跨机器访问的冗余、已备份的 GGUF 存储——并为额外服务留有更多余量。',
+        items: [
+          '**硬件：** QNAP 设备通常以与同档 Synology 型号相近的价格搭载更快的 CPU 和更多端口（包括更快的网络选项）。',
+          '**软件：** QTS 功能强大，但不如 Synology DSM 那样有引导——预期会有更多菜单和更陡的首次设置。',
+          '**容量：** 装有四块 4 TB 硬盘的 4 盘位设备在 RAID 6 下提供约 8 TB 可用容量——与 Synology 同类产品相同的模型库余量。',
+          '**价格：** 2026 年 5 月快照下约为 $450-650，仅含硬件，硬盘另计。',
+          '**为何选择 QNAP：** 你想要每美元更多的 CPU 和更快的网络选项，并能从容应对引导较少的设置。',
+          '**为何跳过 QNAP：** 如果团队没有存储专家且想要尽可能简单的软件，Synology DSM 是更轻松的路径。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '在本地 AI 模型库上，Synology 和 QNAP 承担完全相同的角色。每美元更多硬件选 QNAP，软件学习曲线更平缓选 Synology——存储结果是一样的。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=QNAP+TS-464+NAS',
+            productName: 'QNAP TS-464 4-Bay NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: '在 Amazon 查看 QNAP NAS 价格',
+          },
+        ],
+      },
+      ssdsSection: {
+        id: 'ssds',
+        title: '用于模型加载的快速 SSD：Samsung 990 Pro 和 WD Black SN850X',
+        content:
+          '**推理机上的高端 PCIe 4.0 NVMe SSD 才是缩短模型从硬盘加载到显存时等待的关键——Samsung 990 Pro 和 WD Black SN850X 是这两个之选。** 这是另一项存储任务：不是模型库，而是 GPU 机器在每次切换模型时读取权重的那块硬盘。',
+        items: [
+          '**Samsung 990 Pro：** 一块高端 PCIe 4.0 NVMe SSD；最快模型加载的推荐之选。70B Q4 模型约为 35-42 GB，因此每次切换模型都能感受到读取速度。',
+          '**WD Black SN850X：** 一块同级的高端 PCIe 4.0 NVMe SSD；当 Samsung 当下定价更高时的性价比替代方案。',
+          '**容量：** 对于机器上的工作集，2 TB 是实用的甜点容量；如果你在本地而非 NAS 上保留许多大型模型，则选 4 TB。',
+          '**价格：** 2026 年 5 月快照下,2 TB 硬盘约为 $150-250——内存芯片短缺推高了 NAND 定价,因此购买前请确认。',
+          '**为何购买高端 NVMe SSD：** 每次切换都能感受到模型加载时间，而快速 SSD 为每次切换省下数秒。',
+          '**为何跳过顶级档：** 如果你只加载一个模型且很少切换，一块中端 NVMe SSD 就够了——顶级档的读取速度在频繁切换时最为重要。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'SSD 用于把模型加载到显存，而非用于推理本身——模型加载完成后，推理在显存中运行。快速 SSD 缩短加载等待；模型运行起来后，它不会改变每秒令牌数。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Samsung+990+Pro+2TB+NVMe',
+            productName: 'Samsung 990 Pro 2TB NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-250',
+            label: '在 Amazon 查看 Samsung 990 Pro 价格',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=WD+Black+SN850X+2TB',
+            productName: 'WD Black SN850X 2TB NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-250',
+            label: '在 Amazon 查看 WD Black SN850X 价格',
+          },
+        ],
+      },
+      raidBackup: {
+        id: 'raid-backup',
+        title: 'RAID 与备份：为何选 RAID 6 与 3-2-1 原则',
+        content:
+          '**以 RAID 6 运行 NAS，并把 RAID 视为对硬盘故障的保护——绝不要当作备份。** RAID 6 在两块硬盘同时故障的情况下仍能保证数据安全；真正的备份则防护 RAID 无法应对的那些情况。',
+        items: [
+          '**RAID 6 是生产环境的默认选择。** 它可承受 2 块硬盘同时故障，并提供约 50% 的可用容量（4x 4 TB = 约 8 TB 可用）。',
+          '**避免在大容量硬盘上用 RAID 5。** 大容量硬盘上的 RAID 5 重建需要 24-48 小时，若在此期间第二块硬盘故障，将丢失全部数据。RAID 6 能吸收这第二次故障。',
+          '**RAID 不是备份。** RAID 对勒索软件、误删、盗窃或机箱故障毫无作用。你仍然需要真正的备份。',
+          '**遵循 3-2-1 原则。** 保留模型库的 3 份副本、存于 2 种介质、其中 1 份异地——例如 NAS 加外置 USB 硬盘再加一份云副本。',
+          '**用校验和验证。** 为每个模型文件存储一个 SHA-256 哈希，并在下载和恢复时验证——大型 GGUF 文件可能悄无声息地损坏。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'RAID 6 保护本地 AI 模型库免受两块硬盘同时故障的影响，但它不是备份——3-2-1 原则依然适用，因为 RAID 无法阻止勒索软件、误删或盗窃。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'RAID 就像车上备有备胎：爆胎不会让你抛锚。但整辆车被偷时，备胎帮不上忙。备份是另存于别处的那份独立副本，两者你都需要。',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: '决策流程图：用四个问题选定你的存储',
+        content:
+          '**按顺序排列的四个问题，把大多数购买者引向正确的存储。**',
+        items: [
+          '**1. 是否有多台机器或多人共享模型库？** 否：一块快速 SSD 加一块外置备份硬盘就够了。是：你需要 NAS——继续。',
+          '**2. Synology 还是 QNAP？** 非专业团队的最简单软件：Synology。每美元更多 CPU 和端口：QNAP。',
+          '**3. 推理机用哪块 SSD？** 最快加载：Samsung 990 Pro。降价时同档次而价格更低：WD Black SN850X。',
+          '**4. NAS 是否有异地备份？** 若没有，添加第三份副本——RAID 6 不是备份；上线前先落实 3-2-1 原则。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '选择本地 AI 存储时，先判断模型库是否共享，其次判断 Synology 还是 QNAP，第三判断用哪块 SSD，最后判断 NAS 是否有异地备份。',
+          },
+          {
+            type: 'plain-terms',
+            text: '先从是否有不止一台机器接触模型库开始。若没有，一块 SSD 加一块外置硬盘就能应付。若有，你就需要 NAS，剩下的问题只是选哪个品牌、GPU 机器用哪块 SSD，以及你是否拥有一份真正的异地备份。',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '购买渠道与价格',
+        content:
+          '**NAS 设备和 SSD 在各大零售商处均有充足库存——请向退货政策明确的卖家购买，因为存储是少数几个安装前无法测试的部件之一。** 下方链接是普通的产品搜索链接；不含联盟标记，也不赚取佣金。',
+        items: [
+          '**购买渠道：** Amazon 和 Newegg 均销售 Synology、QNAP、Samsung 和 WD 存储产品。NAS 设备通常仅售硬件——硬盘需另行预算。',
+          '**NAS 要买 NAS 专用硬盘：** 桌面硬盘并非为多盘位连续运行而设计。让硬盘数量与你的 RAID 6 方案相匹配。',
+          '**SSD 价格在 2026 年有所波动：** 内存芯片短缺推高了 NAND 定价——请当天比较 Samsung 990 Pro 与 WD Black SN850X，因为更便宜的那一个会变。',
+          '**核对保修：** 高端 NVMe SSD 通常提供 5 年保修并标注耐久度（TBW）。请就你选定的型号确认这两项。',
+          '**容量留余：** 模型库会增长。购买的 NAS 容量要多于你今天认为所需的——日后重新调整 RAID 阵列容量会带来中断。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '由于 2026 年的内存芯片短缺使 SSD 价格波动，本指南中的每个数字都是 2026 年 5 月的快照。购买前请打开当前的零售商页面，并当天比较 Samsung 与 WD 硬盘——更划算的那一个会交替变化。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Synology+NAS',
+            productName: 'Synology NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: '在 Amazon 浏览 Synology NAS 设备',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=QNAP+NAS',
+            productName: 'QNAP NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: '在 Amazon 浏览 QNAP NAS 设备',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Samsung+990+Pro+NVMe+SSD',
+            productName: 'Samsung 990 Pro NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-400',
+            label: '在 Amazon 浏览 Samsung 990 Pro SSD',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=WD+Black+SN850X+NVMe+SSD',
+            productName: 'WD Black SN850X NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-400',
+            label: '在 Amazon 浏览 WD Black SN850X SSD',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '为本地 AI 模型购买存储时的常见错误',
+        items: [
+          '**为推理通过网络加载模型。** NAS 保存模型库；它不为推理供数据。网络延迟使推理时通过 LAN 加载权重太慢。请从本地 SSD 加载;模型库则放在 NAS 上。',
+          '**该买 SSD 时却买了 NAS。** 只有一台机器的单人开发者很少需要 NAS。所需的是快速加载和备份——那就是一块好 SSD 加一块外置硬盘。',
+          '**在大容量硬盘上使用 RAID 5。** 大容量硬盘上的 RAID 5 重建需 24-48 小时，期间发生第二次故障是致命的。任何生产模型库都应使用 RAID 6。',
+          '**把 RAID 当作备份。** RAID 仅防护硬盘故障——不防勒索软件、误删或盗窃。遵循 3-2-1 原则：3 份副本、2 种介质、1 份异地。',
+          '**在 NAS 里装桌面硬盘。** NAS 专用硬盘专为多盘位连续运行而设计。桌面硬盘在该环境下更早故障。',
+          '**容量预估过小。** 模型库会稳步增长。购买的 NAS 容量要多于今天模型库所需——日后扩展 RAID 阵列会带来中断。',
+          '**固守单一 SSD 品牌。** 2026 年的内存短缺使价格波动，因此 Samsung 990 Pro 与 WD Black SN850X 中更便宜的那一个会交替变化。购买当天请比较两者。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        items: [
+          '[本地 AI 模型的最佳 NAS 与存储](/local-llms/best-nas-storage-local-llm?lang=zh) — PromptQuorum 关于本地 LLM 模型库的 NAS 容量规划、RAID 级别和 3-2-1 备份原则的指南。',
+          '[Synology——NAS 产品文档](https://www.synology.com/en-us/products) — Synology 关于盘位数量、支持的 RAID 级别和 DSM 软件的官方规格。',
+          '[QNAP——NAS 产品文档](https://www.qnap.com/en/product/) — QNAP 关于 CPU、网络和 QTS 软件的官方规格。',
+          '[Samsung——990 Pro NVMe SSD 规格](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/) — Samsung 关于 NVMe SSD 容量、接口和耐久度的官方数据。',
+          '[Western Digital——WD Black SN850X 规格](https://www.westerndigital.com/products/internal-drives/wd-black-sn850x-nvme-ssd) — WD 关于 NVMe SSD 容量、接口和保修的官方数据。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '本地 AI 模型需要 NAS，还是只要 SSD 就够？',
+            a: '这取决于模型库是否共享。只有一台机器的单人开发者通常只需要一块用于加载模型的快速 NVMe SSD，加上一块用于备份的外置硬盘——NAS 增加成本却无益处。多人共享同一模型库的团队则需要 NAS，以获得冗余、已备份且可经网络访问的存储。SSD 和 NAS 承担不同的任务。',
+          },
+          {
+            q: '我可以直接从 NAS 运行推理吗？',
+            a: '不可以——NAS 用于存储，而非推理。通过网络把模型权重加载到显存对于实时使用来说太慢。请把模型库放在 NAS 上，把所需模型复制或加载到推理机的本地 SSD，再从那里运行推理。模型加载完成后，推理本身在 GPU 显存中运行。',
+          },
+          {
+            q: '本地 AI 模型库该选 Synology 还是 QNAP？',
+            a: '两者承担相同的共享模型库角色。如果你想要最简单的软件，选 Synology——其 DSM 操作系统让 RAID 6、快照和备份点击即可完成，适合没有存储专家的团队。如果你想要每美元更强的 CPU 和更多端口，并接受更陡的设置，选 QNAP。存储结果是相同的。',
+          },
+          {
+            q: '加载本地 LLM 最快的 SSD 是哪款？',
+            a: '一块高端 PCIe 4.0 NVMe SSD——Samsung 990 Pro 或 WD Black SN850X。两者都提供高顺序读取速度，而这正是缩短大型模型从硬盘加载到显存时等待的关键。70B 模型在 Q4 下约为 35-42 GB，因此每次切换模型都能感受到读取速度。Samsung 是默认之选；WD 是性价比替代方案。',
+          },
+          {
+            q: 'NAS 为何要用 RAID 6 而非 RAID 5？',
+            a: 'RAID 6 可承受两块硬盘同时故障；RAID 5 只能承受一块。大容量硬盘上的 RAID 5 重建需要 24-48 小时，若期间第二块硬盘故障，整个阵列将丢失。RAID 6 能吸收这第二次故障，因此它是你输不起的模型库在生产环境中的默认选择。',
+          },
+          {
+            q: 'RAID 是备份吗？',
+            a: '不是。RAID 仅防护硬盘故障。它对勒索软件、误删、盗窃或机箱故障毫无作用。你仍然需要真正的备份。遵循 3-2-1 原则：保留模型库的 3 份副本、存于 2 种不同介质、其中 1 份存于异地。',
+          },
+          {
+            q: '本地 AI 模型库需要多少存储空间？',
+            a: '按你的模型大小来估算。7B 模型在 Q4 下约为 4-5 GB；70B 模型在 Q4 下约为 35-42 GB。装有四块 4 TB 硬盘的 RAID 6 4 盘位 NAS 提供约 8 TB 可用容量，足以容纳大型的量化模型库。模型库会增长，因此购买的容量要多于今天这一组所需。',
+          },
+          {
+            q: 'SSD 价格在 2026 年变了吗？',
+            a: '变了。2026 年的内存芯片短缺把 NAND 和 SSD 价格推到高于以往的水平。本指南中的每个价格都是 2026 年 5 月的快照。购买前请在零售商页面确认当前价格，并当天比较 Samsung 990 Pro 与 WD Black SN850X——两者中更便宜的那一个会随市场交替变化。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[为本地 LLM 模型库规划 NAS 容量与备份](/local-llms/best-nas-storage-local-llm?lang=zh) — 本指南背后的 RAID 级别与 3-2-1 备份细节。',
+          '[为分布式团队搭建本地 LLM 技术栈](/local-llms/local-llm-setup-for-teams?lang=zh) — 共享存储在多用户本地 LLM 部署中的位置。',
+          '[构建安全的离线本地 LLM 工作流](/local-llms/secure-offline-local-llm-workflow?lang=zh) — 气隙隔离的存储与模型处理模式。',
+          '[理解量化如何决定模型文件大小](/local-llms/llm-quantization-explained?lang=zh) — 为何 Q4 模型是它那样的大小，以及这如何左右你的存储计算。',
+        ],
+      },
+    },
+  },
 }
