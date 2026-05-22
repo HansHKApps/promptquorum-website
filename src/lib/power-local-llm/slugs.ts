@@ -57,6 +57,14 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Category 10 — Hardware Buying Guides
   'best-gpu-buying-guide-local-llm-2026':        'best-gpu-buying-guide-local-llm-2026',
+  'best-mac-for-local-ai-2026':                  'best-mac-for-local-ai-2026',
+  'cloud-gpu-rental-guide-2026':                 'cloud-gpu-rental-guide-2026',
+  'local-ai-workstation-build-guide-2026':       'local-ai-workstation-build-guide-2026',
+  'best-vpn-ai-privacy-local-llm-2026':          'best-vpn-ai-privacy-local-llm-2026',
+  'best-nas-storage-local-ai-models-2026':       'best-nas-storage-local-ai-models-2026',
+  'best-ai-coding-tools-comparison-2026':        'best-ai-coding-tools-comparison-2026',
+  'best-monitors-ai-development-2026':           'best-monitors-ai-development-2026',
+  'best-laptops-local-llm-2026':                 'best-laptops-local-llm-2026',
 
   // Category 9 — Voice, Speech & Multimodal
   'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',

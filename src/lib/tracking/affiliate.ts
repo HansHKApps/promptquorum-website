@@ -100,24 +100,12 @@ export function trackAffiliateClick(p: AffiliateClickParams): void {
   }
 }
 
-// Neutral third-party-link notice — accurate while no affiliate programs are
-// joined and no commission is earned. Render via article.affiliateDisclosure.
+// Affiliate disclosure shown near the top of each affiliate page. Commission
+// wording per the affiliate-page localization rules in AFFILIATE_MANAGER_FINAL.md.
 export const AFFILIATE_DISCLOSURE: Record<string, string> = {
-  en: 'This page links to third-party products and retailers for reference. PromptQuorum is independent and these links are not paid placements.',
-  de: 'Diese Seite verweist zu Referenzzwecken auf Produkte und Händler von Drittanbietern. PromptQuorum ist unabhängig; diese Links sind keine bezahlten Platzierungen.',
-  fr: 'Cette page renvoie à des produits et revendeurs tiers à titre de référence. PromptQuorum est indépendant et ces liens ne sont pas des placements rémunérés.',
-  ja: 'このページは参考として第三者の製品および販売店へのリンクを含みます。PromptQuorumは独立しており、これらのリンクは有料掲載ではありません。',
-  zh: '本页面包含指向第三方产品和零售商的链接，仅供参考。PromptQuorum 保持独立，这些链接并非付费推广。',
-}
-
-// Commission-disclosure variant — DO NOT USE until PromptQuorum is enrolled in
-// affiliate programs and outbound links carry affiliate tags. At that point,
-// replace AFFILIATE_DISCLOSURE usage with this and switch AffiliateLink's rel
-// attribute to "nofollow sponsored".
-export const AFFILIATE_DISCLOSURE_COMMISSION: Record<string, string> = {
   en: 'This page contains product links. We may earn a commission if you purchase through these links, at no extra cost to you.',
   de: 'Diese Seite enthält Produktlinks. Wir erhalten möglicherweise eine Provision, wenn Sie über diese Links kaufen — ohne Mehrkosten für Sie.',
-  fr: 'Cette page contient des liens vers des produits. Nous pouvons percevoir une commission si vous achetez via ces liens, sans coût supplémentaire pour vous.',
-  ja: 'このページには製品リンクが含まれています。これらのリンクから購入された場合、追加費用なしで当社が手数料を得ることがあります。',
-  zh: '本页面包含产品链接。如果您通过这些链接购买，我们可能会获得佣金，您无需支付额外费用。',
+  fr: 'Cette page contient des liens produits. Nous pouvons recevoir une commission si vous achetez via ces liens, sans frais supplémentaires pour vous.',
+  ja: 'このページには製品リンクが含まれています。これらのリンクを通じてご購入いただいた場合、追加費用なしでコミッションを受け取る場合があります。',
+  zh: '本页包含产品链接。如果您通过这些链接购买，我们可能会获得佣金，不会产生额外费用。',
 }

@@ -9,6 +9,14 @@ import { article as a_anythingllm_vs_privategpt_vs_openwebui_rag } from './artic
 import { article as a_autonomous_local_agents_actually_work } from './articles/autonomous-local-agents-actually-work'
 import { article as a_best_embedding_models_local_rag_2026 } from './articles/best-embedding-models-local-rag-2026'
 import { article as a_best_gpu_buying_guide_local_llm_2026 } from './articles/best-gpu-buying-guide-local-llm-2026'
+import { article as a_best_mac_for_local_ai_2026 } from './articles/best-mac-for-local-ai-2026'
+import { article as a_cloud_gpu_rental_guide_2026 } from './articles/cloud-gpu-rental-guide-2026'
+import { article as a_local_ai_workstation_build_guide_2026 } from './articles/local-ai-workstation-build-guide-2026'
+import { article as a_best_vpn_ai_privacy_local_llm_2026 } from './articles/best-vpn-ai-privacy-local-llm-2026'
+import { article as a_best_nas_storage_local_ai_models_2026 } from './articles/best-nas-storage-local-ai-models-2026'
+import { article as a_best_ai_coding_tools_comparison_2026 } from './articles/best-ai-coding-tools-comparison-2026'
+import { article as a_best_monitors_ai_development_2026 } from './articles/best-monitors-ai-development-2026'
+import { article as a_best_laptops_local_llm_2026 } from './articles/best-laptops-local-llm-2026'
 import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local-ai-app-low-end-pc'
 import { article as a_best_local_coding_models_2026 } from './articles/best-local-coding-models-2026'
 import { article as a_best_local_llm_apps_android_2026 } from './articles/best-local-llm-apps-android-2026'
@@ -53,6 +61,14 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'autonomous-local-agents-actually-work':  a_autonomous_local_agents_actually_work,
   'best-embedding-models-local-rag-2026':   a_best_embedding_models_local_rag_2026,
   'best-gpu-buying-guide-local-llm-2026':   a_best_gpu_buying_guide_local_llm_2026,
+  'best-mac-for-local-ai-2026':             a_best_mac_for_local_ai_2026,
+  'cloud-gpu-rental-guide-2026':            a_cloud_gpu_rental_guide_2026,
+  'local-ai-workstation-build-guide-2026':  a_local_ai_workstation_build_guide_2026,
+  'best-vpn-ai-privacy-local-llm-2026':     a_best_vpn_ai_privacy_local_llm_2026,
+  'best-nas-storage-local-ai-models-2026':  a_best_nas_storage_local_ai_models_2026,
+  'best-ai-coding-tools-comparison-2026':   a_best_ai_coding_tools_comparison_2026,
+  'best-monitors-ai-development-2026':      a_best_monitors_ai_development_2026,
+  'best-laptops-local-llm-2026':            a_best_laptops_local_llm_2026,
   'best-local-ai-app-low-end-pc':           a_best_local_ai_app_low_end_pc,
   'best-local-coding-models-2026':          a_best_local_coding_models_2026,
   'best-local-llm-apps-android-2026':       a_best_local_llm_apps_android_2026,
