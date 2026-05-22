@@ -631,7 +631,7 @@ interface LightboxImage {
   caption?: string
 }
 
-function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language; isGlossary?: boolean; termPathMap?: Map<string, string[]> }) {
+function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language; slug?: string; isGlossary?: boolean; termPathMap?: Map<string, string[]> }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
 
   return (
@@ -1471,7 +1471,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               const sectionId = glossaryIdMap[key]
                 ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined)
               return (
-                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} isGlossary={slug === 'prompt-engineering-glossary'} termPathMap={slug === 'prompt-engineering-glossary' ? termPathMap : undefined} />
+                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} slug={slug} isGlossary={slug === 'prompt-engineering-glossary'} termPathMap={slug === 'prompt-engineering-glossary' ? termPathMap : undefined} />
               )
             })
           })()}

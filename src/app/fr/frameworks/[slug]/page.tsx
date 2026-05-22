@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: generateAlternates(`/frameworks/${fw.slug}`, lang, true, undefined, ['ja', 'zh', 'de', 'fr']),
     openGraph: {
       type: 'article',
-      url: `https://www.promptquorum.com/de/frameworks/${fw.slug}`,
+      url: `https://www.promptquorum.com/fr/frameworks/${fw.slug}`,
       siteName: 'PromptQuorum',
       title: `${fw.name} Prompt Framework — Complete Guide`,
       description: `${fw.tagline}`,
@@ -62,7 +62,7 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
               '@type': 'Article',
               'headline': `${fw.name} Prompt Framework — Fields, Examples & When To Use It`,
               'description': fw.tagline,
-              'url': `https://www.promptquorum.com/de/frameworks/${fw.slug}`,
+              'url': `https://www.promptquorum.com/fr/frameworks/${fw.slug}`,
               'inLanguage': 'fr',
               'author': {
                 '@type': 'Person',
@@ -90,9 +90,9 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/fr' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': 'https://www.promptquorum.com/fr' },
                 { '@type': 'ListItem', 'position': 2, 'name': 'Frameworks', 'item': 'https://www.promptquorum.com/fr/frameworks' },
-                { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/de/frameworks/${fw.slug}` },
+                { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/fr/frameworks/${fw.slug}` },
               ],
             },
           ]),

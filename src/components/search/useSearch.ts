@@ -61,7 +61,9 @@ export function useSearch(lang: string) {
           seen.set(key, result)
         }
       }
-      return Array.from(seen.values()).slice(0, 20)
+      return Array.from(seen.values())
+        .sort((a, b) => (a.score ?? Infinity) - (b.score ?? Infinity))
+        .slice(0, 20)
     },
     [lang],
   )

@@ -90,7 +90,7 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com/de' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Startseite', 'item': 'https://www.promptquorum.com/de' },
                 { '@type': 'ListItem', 'position': 2, 'name': 'Frameworks', 'item': 'https://www.promptquorum.com/de/frameworks' },
                 { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/de/frameworks/${fw.slug}` },
               ],
@@ -235,8 +235,8 @@ export default async function JaFrameworkPage({ params }: { params: Promise<{ sl
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
-            <Link href="/ja/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
+            <Link href="/de" className="text-primary hover:text-primary/80 font-medium text-sm">← Startseite</Link>
+            <Link href="/de/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
           </div>
 
         </div>
