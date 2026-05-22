@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "PromptQuorum Outbound Tracker",
+  "version": "1.0.0",
+  "description": "Real-time visualization of outbound_click events (Umami, GA4, Vercel)",
+  "icons": {
+    "16": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect fill='%233b82f6' width='16' height='16' rx='2'/><text x='8' y='12' font-size='10' font-weight='bold' text-anchor='middle' fill='white'>PQ</text></svg>"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.promptquorum.com/*",
+        "*://localhost:3000/*",
+        "*://localhost:3001/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PromptQuorum Outbound Tracker"
+  }
+}
