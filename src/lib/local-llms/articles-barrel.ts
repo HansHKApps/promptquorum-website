@@ -55,6 +55,7 @@ import { article as a_qwen_coder_vs_deepseek_mistral_local_2026 } from "./articl
 import { article as a_qwen_gdpr_privacy_manifesto_2026 } from "./articles/qwen-gdpr-privacy-manifesto-2026";
 import { article as a_qwen_local_gdpr_setup_guide_2026 } from "./articles/qwen-local-gdpr-setup-guide-2026";
 import { article as a_gdpr_llm_risk_comparison_2026 } from "./articles/gdpr-llm-risk-comparison-2026";
+import { article as a_run_qwen_vl_locally_2026 } from "./articles/run-qwen-vl-locally-2026";
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
@@ -221,4 +222,5 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "qwen-gdpr-privacy-manifesto-2026": a_qwen_gdpr_privacy_manifesto_2026,
   "qwen-local-gdpr-setup-guide-2026": a_qwen_local_gdpr_setup_guide_2026,
   "gdpr-llm-risk-comparison-2026": a_gdpr_llm_risk_comparison_2026,
+  "run-qwen-vl-locally-2026": a_run_qwen_vl_locally_2026,
 };
