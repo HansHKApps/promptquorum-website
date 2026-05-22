@@ -227,7 +227,7 @@ export default function ZhAboutPage() {
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/zh" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
+            <Link href="/zh" className="text-primary hover:text-primary/80 font-medium text-sm">← 主页</Link>
             <Link href="/zh/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
             <Link href="/zh/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
             <Link href="/zh/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>

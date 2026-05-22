@@ -929,8 +929,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'ListItem',
           'position': 1,
-          'name': 'Home',
-          'item': 'https://www.promptquorum.com',
+          'name': 'Startseite',
+          'item': 'https://www.promptquorum.com/de',
         },
         {
           '@type': 'ListItem',
@@ -1402,8 +1402,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'ListItem',
           'position': 1,
-          'name': 'Home',
-          'item': 'https://www.promptquorum.com',
+          'name': 'Accueil',
+          'item': 'https://www.promptquorum.com/fr',
         },
         {
           '@type': 'ListItem',
@@ -1879,8 +1879,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'ListItem',
           'position': 1,
-          'name': 'Home',
-          'item': 'https://www.promptquorum.com',
+          'name': 'ホーム',
+          'item': 'https://www.promptquorum.com/ja',
         },
         {
           '@type': 'ListItem',
@@ -2341,7 +2341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'ListItem',
           'position': 1,
-          'name': 'Home',
+          'name': '主页',
           'item': 'https://www.promptquorum.com',
         },
         {

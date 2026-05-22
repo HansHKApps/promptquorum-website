@@ -1012,8 +1012,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'ListItem',
           'position': 1,
-          'name': 'Home',
-          'item': 'https://www.promptquorum.com',
+          'name': 'Startseite',
+          'item': 'https://www.promptquorum.com/de',
         },
         {
           '@type': 'ListItem',
