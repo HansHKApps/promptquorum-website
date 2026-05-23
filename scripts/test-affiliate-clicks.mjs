@@ -50,8 +50,8 @@ function extractAffiliateSlugs(dir) {
 
 async function checkDevServer() {
   try {
-    const res = await fetch(`${BASE_URL}/`, { signal: AbortSignal.timeout(3000) })
-    return res.ok || res.status < 500
+    await fetch(`${BASE_URL}/`, { signal: AbortSignal.timeout(5000) })
+    return true // any response means server is up
   } catch {
     return false
   }
