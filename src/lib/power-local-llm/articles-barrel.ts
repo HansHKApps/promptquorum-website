@@ -56,6 +56,7 @@ import { article as a_local_vision_models_llava_ollama_2026 } from './articles/l
 import { article as a_local_tts_voice_cloning_piper_coqui_xtts } from './articles/local-tts-voice-cloning-piper-coqui-xtts'
 import { article as a_build_local_voice_assistant_2026 } from './articles/build-local-voice-assistant-2026'
 import { article as a_local_multimodal_pipeline_voice_vision_text } from './articles/local-multimodal-pipeline-voice-vision-text'
+import { article as a_best_affiliate_tools_ai_developers_2026 } from './articles/best-affiliate-tools-ai-developers-2026'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
@@ -109,4 +110,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-tts-voice-cloning-piper-coqui-xtts':          a_local_tts_voice_cloning_piper_coqui_xtts,
   'build-local-voice-assistant-2026':                  a_build_local_voice_assistant_2026,
   'local-multimodal-pipeline-voice-vision-text':       a_local_multimodal_pipeline_voice_vision_text,
+  'best-affiliate-tools-ai-developers-2026':           a_best_affiliate_tools_ai_developers_2026,
 }

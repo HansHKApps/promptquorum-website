@@ -81,6 +81,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-monitors-ai-development-2026',
   'best-laptops-local-llm-2026',
   'best-ai-courses-certifications-2026',
+  'best-affiliate-tools-ai-developers-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
