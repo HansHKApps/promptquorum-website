@@ -130,4 +130,520 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  de: {
+    theme: 'Hardware-Specific',
+    title: 'Bestes Budget-KI-Notebook unter 1.000 € im Jahr 2026?',
+    seoTitle: 'Bestes Budget-KI-Notebook unter 1.000 € 2026 | Prompt Bites',
+    metaDescription:
+      'Bestes Budget-KI-Notebook unter 1.000 €: ein Ryzen 7 mit 16 GB RAM betreibt kleine LLMs auf der CPU. Für GPU-Inferenz lieber für ein MacBook Air sparen.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Ryzen-7-Notebooks', 'MacBook Air'],
+    educationalLevel: 'Intermediate',
+    audience: 'Sparsame Käufer, die ein Notebook für lokale LLM-Experimente suchen',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-laptops-local-llm',
+    siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
+    is_living_page: false,
+    leadAnswerBlock:
+      'Das beste Budget-KI-Notebook unter 1.000 € ist ein Ryzen 7 mit 16 GB RAM — kleine LLMs (3B-8B bei Q4) laufen auf der CPU brauchbar. Für GPU-beschleunigte Inferenz ist die Klasse unter 1.000 € zu knapp; spare lieber für ein MacBook Air M-Serie, das mit Unified Memory deutlich schneller arbeitet.',
+    toc: [
+      { label: 'Top-Tipp: Ryzen 7 + 16 GB RAM Notebook', anchor: '#best-pick' },
+      { label: 'Budget-Notebook-Optionen im Vergleich', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related' },
+    ],
+    intro:
+      'Unter 1.000 € ist ein Notebook mit dedizierter LLM-fähiger GPU selten. Die realistische Budget-Wahl ist ein Ryzen 7 mit 16 GB RAM und CPU-Inferenz. Wer GPU-Beschleunigung braucht, sollte auf das MacBook Air warten — es liegt knapp über dieser Klasse und ist das bessere Sparziel.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Top-Tipp unter 1.000 €: Ryzen 7 + 16 GB RAM Notebook — 3B-8B-Modelle laufen auf der CPU brauchbar',
+          'CPU-Inferenz in dieser Klasse liefert ~3-7 Tokens pro Sekunde bei 7B Q4 — okay für kurze Aufgaben, langsam für lange Generierungen',
+          'Für GPU-Inferenz in Echtzeit ist die Klasse unter 1.000 € zu knapp — spare lieber für ein MacBook Air M-Serie mit Unified Memory',
+          'Notebooks mit 8 GB RAM meiden — ein 7B-Modell lässt sich neben Betriebssystem und Apps nicht bequem laden',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Top-Tipp: Ryzen 7 Notebook mit 16 GB RAM',
+        content: [
+          '<strong>Das beste Budget-KI-Notebook unter 1.000 € ist ein Ryzen 7 (oder vergleichbarer Intel Core i7) mit 16 GB RAM — 3B- und 7-8B-Modelle laufen auf der CPU brauchbar.</strong> Modelle wie Mistral 7B, Llama 3.2 3B und Phi-3 Mini erreichen 3-7 Tokens pro Sekunde auf der CPU — langsam, aber für kurze Prompts akzeptabel.',
+          'Der Haken: In dieser Klasse läuft alles auf der CPU. Die meisten Notebooks unter 1.000 € haben keine dedizierte GPU oder nur eine 4-GB-GPU, die für ernsthafte LLM-Arbeit zu klein ist. CPU-Inferenz reicht zum Lernen und Experimentieren; für lange Generierungen ist sie langsam.',
+          'Wenn GPU-Beschleunigung Priorität hat, ist die Klasse unter 1.000 € zu knapp. Spare lieber für ein MacBook Air M-Serie — die Unified-Memory-Architektur macht den RAM zu nutzbarem LLM-Speicher und liefert deutlich mehr Tokens pro Sekunde als jedes Windows-Notebook in der Klasse darunter. Aktuelle Preise direkt prüfen.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.de/s?k=Ryzen+7+Notebook+16GB+RAM',
+            productName: 'Ryzen 7 + 16 GB RAM Notebook',
+            productCategory: 'laptop',
+            label: 'Ryzen 7 + 16 GB Notebooks auf Amazon.de prüfen',
+          },
+          {
+            url: 'https://www.mediamarkt.de/de/search.html?query=Ryzen+7+Notebook+16GB',
+            productName: 'Ryzen 7 + 16 GB RAM Notebook',
+            productCategory: 'laptop',
+            label: 'Ryzen 7 + 16 GB Notebooks bei MediaMarkt prüfen',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=MacBook+Air+M-Serie',
+            productName: 'MacBook Air M-Serie',
+            productCategory: 'laptop',
+            label: 'MacBook Air Preis prüfen (nächsthöhere Klasse)',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Budget-KI-Notebooks im Vergleich',
+        content: [
+          '<strong>Die Entscheidung lautet: CPU-Inferenz akzeptieren (langsam, aber günstig) oder für Unified-Memory-Beschleunigung sparen (schnell, knapp über 1.000 €).</strong> Konkrete Modellpreise schwanken — aktuelle Angebote prüfen.',
+        ],
+        columns: ['Option', 'Inferenz-Typ', 'Tempo (7B Q4)', 'Fazit'],
+        rows: [
+          {
+            'Option': 'Ryzen 7 + 16 GB RAM Notebook (~700-1.000 €)',
+            'Inferenz-Typ': 'Nur CPU',
+            'Tempo (7B Q4)': '~3-7 Tok/s',
+            'Fazit': 'Beste Wahl unter 1.000 €',
+          },
+          {
+            'Option': '8 GB RAM Budget-Notebook (unter 600 €)',
+            'Inferenz-Typ': 'Nur CPU, zu eng',
+            'Tempo (7B Q4)': 'Passt nicht bequem',
+            'Fazit': 'Meiden — zu wenig RAM',
+          },
+          {
+            'Option': 'MacBook Air M-Serie (knapp über 1.000 €)',
+            'Inferenz-Typ': 'Apple Metal GPU',
+            'Tempo (7B Q4)': '~15-20 Tok/s',
+            'Fazit': 'Sparen — das Warten lohnt',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Kurze Antworten zu Budget-KI-Notebooks',
+        faqs: [
+          {
+            q: 'Kann ein 700-1.000 €-Notebook lokale LLMs ausführen?',
+            a: 'Ja, aber auf der CPU. Ein Ryzen 7 (oder Intel Core i7) mit 16 GB RAM betreibt 3B- und 7-8B-Modelle bei 3-7 Tokens pro Sekunde via llama.cpp oder Ollama im CPU-Modus. Langsam für lange Generierungen, brauchbar für kurze Prompts.',
+          },
+          {
+            q: 'Reichen 8 GB RAM für ein Budget-KI-Notebook?',
+            a: 'Nein. Ein 7B-Modell bei Q4 braucht rund 5-6 GB RAM, danach bleibt fast nichts mehr für Betriebssystem und andere Apps. 16 GB sind das praktische Minimum für lokale LLM-Arbeit.',
+          },
+          {
+            q: 'Warum ist das MacBook Air der nächste Schritt nach oben?',
+            a: 'Apple Silicon nutzt Unified Memory, sodass System-RAM gleichzeitig GPU-Speicher ist. Ein MacBook Air M-Serie betreibt 7B-Modelle via Metal bei 15-20 Tokens pro Sekunde — 3-5× schneller als CPU-Inferenz auf einem vergleichbar teuren Windows-Notebook.',
+          },
+          {
+            q: 'Kann ich eine externe GPU an ein Budget-Notebook hängen?',
+            a: 'Meistens nein. Den meisten Budget-Notebooks fehlen Thunderbolt 4 oder OCuLink, die einzigen praktikablen eGPU-Schnittstellen. Selbst mit Anschluss bremst die PCIe-Bandbreite die eGPU-Inferenz. Ein Desktop oder ein Unified-Memory-Notebook ist der bessere Weg.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Bestes lokales LLM für ein Notebook mit 16 GB RAM](/prompt-bites/best-local-llm-16gb-ram-laptop?lang=de) — Modellempfehlungen für die 16-GB-Klasse',
+          '[Ist der Mac Mini M4 gut für lokale LLMs?](/prompt-bites/mac-mini-m4-local-llm?lang=de) — das Desktop-Pendant zum MacBook Air',
+          '[Beste eGPU für Ollama auf einem MacBook](/prompt-bites/best-egpu-ollama-macbook?lang=de) — warum eine eGPU nicht die Budget-Lösung ist',
+        ],
+      },
+    },
+  },
+  fr: {
+    theme: 'Hardware-Specific',
+    title: 'Meilleur ordinateur portable IA à moins de 1 000 € en 2026 ?',
+    seoTitle: 'Meilleur PC portable IA à moins de 1 000 € 2026 | Prompt Bites',
+    metaDescription:
+      'Meilleur PC portable IA à moins de 1 000 € : un Ryzen 7 avec 16 Go de RAM fait tourner les petits LLM sur CPU. Pour le GPU, économiser pour un MacBook Air.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Portables Ryzen 7', 'MacBook Air'],
+    educationalLevel: 'Intermediate',
+    audience: 'Acheteurs à budget serré qui veulent un portable pour expérimenter les LLM locaux',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-laptops-local-llm',
+    siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
+    is_living_page: false,
+    leadAnswerBlock:
+      "Le meilleur PC portable IA à moins de 1 000 € est un Ryzen 7 avec 16 Go de RAM — il fait tourner les petits LLM (3B-8B en Q4) sur CPU de façon acceptable. Pour l'inférence accélérée par GPU, le palier sous 1 000 € est trop juste ; économisez plutôt pour un MacBook Air série M, dont la mémoire unifiée rend le travail LLM local bien plus rapide.",
+    toc: [
+      { label: 'Meilleur choix : portable Ryzen 7 + 16 Go', anchor: '#best-pick' },
+      { label: 'Comparatif des options budget', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Pour aller plus loin', anchor: '#related' },
+    ],
+    intro:
+      "Sous 1 000 €, un portable doté d'un GPU dédié capable de tenir un LLM est rare. Le choix réaliste est un Ryzen 7 avec 16 Go de RAM, en inférence CPU. Si l'accélération GPU compte, le MacBook Air se trouve juste au-dessus de ce palier et constitue le bon objectif d'épargne.",
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Meilleur choix sous 1 000 € : un portable Ryzen 7 + 16 Go de RAM — fait tourner les modèles 3B-8B sur CPU à vitesse utilisable',
+          "L'inférence CPU dans cette gamme atteint ~3-7 tokens/s sur les modèles 7B Q4 — acceptable pour des tâches courtes, lent pour les générations longues",
+          "Pour de l'inférence GPU temps réel, le palier sous 1 000 € est trop juste — économisez pour un MacBook Air série M avec mémoire unifiée",
+          'Évitez les portables 8 Go de RAM — impossible de charger confortablement un 7B avec OS et applications',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Meilleur choix : un portable Ryzen 7 avec 16 Go de RAM',
+        content: [
+          '<strong>Le meilleur PC portable IA à moins de 1 000 € est un Ryzen 7 (ou Intel Core i7 équivalent) avec 16 Go de RAM — il fait tourner les modèles 3B et 7-8B sur CPU à des vitesses exploitables.</strong> Des modèles comme Mistral 7B, Llama 3.2 3B et Phi-3 Mini tournent à 3-7 tokens par seconde en inférence CPU, lent mais acceptable pour des prompts courts.',
+          "Le piège : dans cette gamme, l'inférence est uniquement CPU. La plupart des portables sous 1 000 € n'ont pas de GPU dédié, ou seulement un GPU de 4 Go trop petit pour un usage LLM sérieux. L'inférence CPU convient à l'apprentissage et à l'expérimentation ; elle reste lente pour les générations longues.",
+          "Si l'accélération GPU est prioritaire, le palier sous 1 000 € est trop juste. Économisez pour un MacBook Air série M — sa mémoire unifiée transforme la RAM système en mémoire LLM utilisable et délivre bien plus de tokens par seconde que n'importe quel portable Windows à moins de 1 000 €. Vérifiez les prix actuels.",
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.fr/s?k=Ryzen+7+ordinateur+portable+16GB',
+            productName: 'PC portable Ryzen 7 + 16 Go RAM',
+            productCategory: 'laptop',
+            label: 'Voir les portables Ryzen 7 + 16 Go sur Amazon.fr',
+          },
+          {
+            url: 'https://www.ldlc.com/recherche/Ryzen+7+16GB+portable/',
+            productName: 'PC portable Ryzen 7 + 16 Go RAM',
+            productCategory: 'laptop',
+            label: 'Voir les portables Ryzen 7 + 16 Go sur LDLC',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=MacBook+Air+M',
+            productName: 'MacBook Air série M',
+            productCategory: 'laptop',
+            label: 'Voir le prix MacBook Air (gamme supérieure)',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Comparatif des PC portables IA à petit budget',
+        content: [
+          "<strong>Le critère décisif : accepter l'inférence CPU (lente mais peu coûteuse) ou économiser pour l'accélération en mémoire unifiée (rapide, juste au-dessus de 1 000 €).</strong> Les prix par modèle varient — vérifiez les offres actuelles.",
+        ],
+        columns: ['Option', "Type d'inférence", 'Vitesse (7B Q4)', 'Verdict'],
+        rows: [
+          {
+            'Option': 'PC portable Ryzen 7 + 16 Go (~700-1 000 €)',
+            "Type d'inférence": 'CPU uniquement',
+            'Vitesse (7B Q4)': '~3-7 tok/s',
+            'Verdict': 'Meilleur choix sous 1 000 €',
+          },
+          {
+            'Option': 'PC portable budget 8 Go RAM (moins de 600 €)',
+            "Type d'inférence": 'CPU, trop serré',
+            'Vitesse (7B Q4)': 'Ne tient pas confortablement',
+            'Verdict': 'À éviter — RAM insuffisante',
+          },
+          {
+            'Option': 'MacBook Air série M (juste au-dessus de 1 000 €)',
+            "Type d'inférence": 'GPU Apple Metal',
+            'Vitesse (7B Q4)': '~15-20 tok/s',
+            'Verdict': "Économisez — l'attente vaut le coup",
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Réponses rapides sur les PC portables IA à petit budget',
+        faqs: [
+          {
+            q: 'Un portable à 700-1 000 € peut-il faire tourner des LLM locaux ?',
+            a: "Oui, mais sur CPU. Un Ryzen 7 (ou Intel Core i7) avec 16 Go de RAM fait tourner les modèles 3B et 7-8B à 3-7 tokens par seconde avec llama.cpp ou Ollama en mode CPU. Lent pour des générations longues, acceptable pour des prompts courts.",
+          },
+          {
+            q: '8 Go de RAM suffisent-ils pour un portable IA petit budget ?',
+            a: "Non. Un modèle 7B en Q4 demande environ 5-6 Go de RAM, ce qui ne laisse presque rien à l'OS et aux autres applications. 16 Go sont le minimum pratique pour le travail LLM local.",
+          },
+          {
+            q: 'Pourquoi le MacBook Air est-il la gamme supérieure pour les portables IA ?',
+            a: "Apple Silicon utilise une mémoire unifiée : la RAM système est aussi la mémoire GPU. Un MacBook Air série M fait tourner les modèles 7B à 15-20 tokens par seconde via Metal — 3 à 5 fois plus rapide que l'inférence CPU sur un portable Windows de prix équivalent.",
+          },
+          {
+            q: 'Puis-je ajouter un GPU externe à un portable budget pour des LLM ?',
+            a: "En général non. La plupart des portables budget n'ont ni Thunderbolt 4 ni OCuLink, les seules interfaces eGPU pratiques. Même supportée, l'inférence eGPU est plombée par la bande passante PCIe. Acheter un desktop ou économiser pour un portable à mémoire unifiée est la meilleure voie.",
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Pour aller plus loin',
+        items: [
+          '[Meilleur LLM local pour un portable 16 Go de RAM](/prompt-bites/best-local-llm-16gb-ram-laptop?lang=fr) — choix de modèles pour la gamme 16 Go',
+          '[Le Mac Mini M4 est-il bon pour les LLM locaux ?](/prompt-bites/mac-mini-m4-local-llm?lang=fr) — la version desktop du MacBook Air',
+          "[Meilleur eGPU pour Ollama sur MacBook](/prompt-bites/best-egpu-ollama-macbook?lang=fr) — pourquoi l'eGPU n'est pas la solution budget",
+        ],
+      },
+    },
+  },
+  ja: {
+    theme: 'Hardware-Specific',
+    title: '2026年、15万円以下で買えるベストAIノートPCは？',
+    seoTitle: '15万円以下ベストAIノートPC 2026 | Prompt Bites',
+    metaDescription:
+      '15万円以下のベストAIノートPC：Ryzen 7 + 16GBメモリ機ならCPUで小型LLMが動く。GPU推論が必要ならMacBook Airへ予算を積む方が現実的。',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Ryzen 7ノートPC', 'MacBook Air'],
+    educationalLevel: 'Intermediate',
+    audience: 'ローカルLLMを試したい予算重視のノートPC購入者',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-laptops-local-llm',
+    siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
+    is_living_page: false,
+    leadAnswerBlock:
+      '15万円以下のベストAIノートPCはRyzen 7 + 16GBメモリ機 — 3B〜8B（Q4）の小型LLMがCPUで実用速度で動きます。GPUによる高速推論が欲しい場合、15万円以下の枠は厳しいので、ユニファイドメモリでローカルLLMが格段に速いMacBook Air Mシリーズへ予算を積むのが現実的です。',
+    toc: [
+      { label: 'ベスト：Ryzen 7 + 16GBメモリ機', anchor: '#best-pick' },
+      { label: '予算別ノートPC比較', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連記事', anchor: '#related' },
+    ],
+    intro:
+      '15万円以下で、LLMが動かせる独立GPU搭載のノートPCは稀です。現実的な選択は、Ryzen 7 + 16GBメモリ機でCPU推論を行う構成。GPU加速が必要なら、ひとつ上のクラスにあるMacBook Airへの貯金が正しい方向です。',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '15万円以下のベスト：Ryzen 7 + 16GBメモリ機 — 3B〜8BモデルをCPUで実用速度で実行',
+          'このクラスのCPU推論は7B Q4で約3〜7トークン/秒 — 短いタスクは実用、長文生成は遅い',
+          'リアルタイムGPU推論には15万円以下は厳しい — MacBook Air Mシリーズ（ユニファイドメモリ）まで貯める',
+          'メモリ8GB機は避ける — 7BモデルとOS・アプリを同時に載せると窮屈',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'ベスト：Ryzen 7 + 16GBメモリ機',
+        content: [
+          '<strong>15万円以下のベストAIノートPCはRyzen 7（または同等のIntel Core i7）+ 16GBメモリ機 — 3Bや7-8BモデルをCPUで実用速度で実行できます。</strong>Mistral 7B、Llama 3.2 3B、Phi-3 MiniなどがCPU推論で3〜7トークン/秒。長文生成には遅いが、短いプロンプトには十分です。',
+          '注意点はCPU推論限定であること。15万円以下の多くのノートPCは独立GPU非搭載、または4GB GPUしか積んでおらず本格的なLLMには小さすぎます。CPU推論は学習・実験には十分ですが、長文生成は遅くなります。',
+          'GPU加速が最優先なら15万円以下では厳しいです。MacBook Air Mシリーズまで貯めましょう — ユニファイドメモリがシステムRAMをそのままLLMメモリに使い、同価格帯のWindowsノートよりはるかに高速。具体的な価格はその時点の販売店で確認してください。',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.co.jp/s?k=Ryzen+7+ノートパソコン+16GB',
+            productName: 'Ryzen 7 + 16GBメモリ ノートPC',
+            productCategory: 'laptop',
+            label: 'Amazon.co.jpでRyzen 7 + 16GBノートPCを見る',
+          },
+          {
+            url: 'https://kakaku.com/search_results/Ryzen+7+16GB+ノート/',
+            productName: 'Ryzen 7 + 16GBメモリ ノートPC',
+            productCategory: 'laptop',
+            label: '価格.comでRyzen 7 + 16GBノートPCを見る',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=MacBook+Air+M',
+            productName: 'MacBook Air Mシリーズ',
+            productCategory: 'laptop',
+            label: 'MacBook Airの価格を確認（ひとつ上のクラス）',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '予算別AIノートPCの比較',
+        content: [
+          '<strong>判断基準は、CPU推論で妥協する（安いが遅い）か、ユニファイドメモリの高速化に予算を積む（15万円超だが速い）か。</strong>具体的な価格は時期で変動するため販売店で要確認です。',
+        ],
+        columns: ['選択肢', '推論タイプ', '速度（7B Q4）', '結論'],
+        rows: [
+          {
+            '選択肢': 'Ryzen 7 + 16GB ノートPC（約10〜15万円）',
+            '推論タイプ': 'CPUのみ',
+            '速度（7B Q4）': '約3〜7トークン/秒',
+            '結論': '15万円以下の最良',
+          },
+          {
+            '選択肢': '8GBメモリ 格安ノート（10万円未満）',
+            '推論タイプ': 'CPUのみ・窮屈',
+            '速度（7B Q4）': '快適に載らない',
+            '結論': '回避 — メモリ不足',
+          },
+          {
+            '選択肢': 'MacBook Air Mシリーズ（15万円超）',
+            '推論タイプ': 'Apple Metal GPU',
+            '速度（7B Q4）': '約15〜20トークン/秒',
+            '結論': '貯金 — 待つ価値あり',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '予算別AIノートPCのよくある質問',
+        faqs: [
+          {
+            q: '10〜15万円のノートPCでローカルLLMは動きますか？',
+            a: 'はい、CPU推論なら動きます。Ryzen 7（またはIntel Core i7）+ 16GBメモリ機なら、llama.cppまたはOllamaのCPUモードで3B・7-8Bモデルが3〜7トークン/秒で動きます。長文生成は遅く、短いプロンプトには実用的です。',
+          },
+          {
+            q: '予算重視のAIノートPCで8GBメモリは足りますか？',
+            a: 'いいえ。7B Q4モデルにはおよそ5〜6GBのRAMが必要で、OSと他アプリの余地がほぼ残りません。ローカルLLM作業の現実的な最小は16GBです。',
+          },
+          {
+            q: 'AIノートPCで一段上が MacBook Air な理由は？',
+            a: 'Apple Siliconはユニファイドメモリ方式で、システムRAMがそのままGPUメモリになります。MacBook Air MシリーズはMetal経由で7Bモデルを15〜20トークン/秒で動かし、同価格帯のWindowsノートのCPU推論より3〜5倍速いです。',
+          },
+          {
+            q: '予算重視ノートPCにeGPUを追加してLLMを動かせますか？',
+            a: '基本的に難しいです。多くの格安ノートにはThunderbolt 4やOCuLinkがなく、これらが現実的に使える唯一のeGPUインターフェースです。対応していてもPCIe帯域がボトルネックになりeGPU推論は伸びません。デスクトップ購入かユニファイドメモリ機への貯金の方が確実です。',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '関連記事',
+        items: [
+          '[16GBメモリ ノートPCに最適なローカルLLM](/prompt-bites/best-local-llm-16gb-ram-laptop?lang=ja) — 16GBクラス向けモデル選び',
+          '[Mac Mini M4はローカルLLMに向いていますか？](/prompt-bites/mac-mini-m4-local-llm?lang=ja) — MacBook Airのデスクトップ版',
+          '[MacBookでOllamaに最適なeGPU](/prompt-bites/best-egpu-ollama-macbook?lang=ja) — eGPUが予算解にならない理由',
+        ],
+      },
+    },
+  },
+  zh: {
+    theme: 'Hardware-Specific',
+    title: '2026年7,000元以下最佳AI笔记本电脑？',
+    seoTitle: '7,000元以下最佳AI笔记本2026 | Prompt Bites',
+    metaDescription:
+      '7,000元以下最佳AI笔记本：Ryzen 7 + 16GB内存机型可用CPU运行小型LLM。需要GPU推理则建议加预算选MacBook Air。',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Ryzen 7笔记本', 'MacBook Air'],
+    educationalLevel: 'Intermediate',
+    audience: '想买笔记本玩本地LLM的预算型买家',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-laptops-local-llm',
+    siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
+    is_living_page: false,
+    leadAnswerBlock:
+      '7,000元以下最佳AI笔记本是Ryzen 7 + 16GB内存机型 — 小型LLM（3B-8B Q4量化）能在CPU上跑出可用速度。如果要GPU加速推理，7,000元以下这一档太紧，建议加预算买MacBook Air M系列，统一内存让本地LLM快得多。',
+    toc: [
+      { label: '最佳推荐：Ryzen 7 + 16GB内存机型', anchor: '#best-pick' },
+      { label: '预算笔记本对比', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '相关阅读', anchor: '#related' },
+    ],
+    intro:
+      '7,000元以下，配独立LLM级GPU的笔记本很少见。现实的预算选择是Ryzen 7 + 16GB内存机型，走CPU推理。如果GPU加速重要，MacBook Air就在这一档之上，是更合理的存钱目标。',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '7,000元以下最佳：Ryzen 7 + 16GB内存机型 — 3B-8B模型能在CPU上跑出可用速度',
+          'CPU推理在这一档约3-7 tokens/秒（7B Q4） — 短任务可用，长文生成偏慢',
+          '想要实时GPU推理，7,000元以下不够 — 攒钱上MacBook Air M系列（统一内存）',
+          '避开8GB内存笔记本 — 同时跑7B模型、系统与其他应用会很挤',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: '最佳推荐：Ryzen 7 + 16GB内存笔记本',
+        content: [
+          '<strong>7,000元以下最佳AI笔记本是Ryzen 7（或同级Intel Core i7）+ 16GB内存机型 — 3B和7-8B模型在CPU上能跑出可用速度。</strong>Mistral 7B、Llama 3.2 3B、Phi-3 Mini等模型在CPU推理下可达3-7 tokens/秒，长文偏慢，但短prompt够用。',
+          '注意点：这一档基本只能CPU推理。7,000元以下的笔记本大多没有独立GPU，或只有4GB GPU，对认真的LLM工作来说太小。CPU推理适合学习和实验，长文生成会慢。',
+          '如果GPU加速优先，7,000元以下太紧。建议攒到MacBook Air M系列 — 统一内存架构让系统RAM同时充当GPU内存，每秒token数远高于同价位Windows笔记本。具体价格请查阅当时的销售页面。',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://search.jd.com/Search?keyword=Ryzen+7+16GB+笔记本',
+            productName: 'Ryzen 7 + 16GB内存笔记本',
+            productCategory: 'laptop',
+            label: '京东查看Ryzen 7 + 16GB笔记本',
+          },
+          {
+            url: 'https://s.taobao.com/search?q=Ryzen+7+16GB+笔记本',
+            productName: 'Ryzen 7 + 16GB内存笔记本',
+            productCategory: 'laptop',
+            label: '淘宝查看Ryzen 7 + 16GB笔记本',
+          },
+          {
+            url: 'https://search.jd.com/Search?keyword=MacBook+Air+M',
+            productName: 'MacBook Air M系列',
+            productCategory: 'laptop',
+            label: '查看MacBook Air价格（上一档）',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '预算AI笔记本对比',
+        content: [
+          '<strong>关键取舍：要么接受CPU推理（便宜但慢），要么攒钱上统一内存机型（快，但要超过7,000元）。</strong>具体机型价格随时间变化，建议以当时售价为准。',
+        ],
+        columns: ['选项', '推理方式', '速度（7B Q4）', '结论'],
+        rows: [
+          {
+            '选项': 'Ryzen 7 + 16GB笔记本（约5,000-7,000元）',
+            '推理方式': '仅CPU',
+            '速度（7B Q4）': '约3-7 tok/s',
+            '结论': '7,000元以下最佳',
+          },
+          {
+            '选项': '8GB内存预算笔记本（4,000元以下）',
+            '推理方式': '仅CPU，吃紧',
+            '速度（7B Q4）': '装不下',
+            '结论': '避开 — 内存不足',
+          },
+          {
+            '选项': 'MacBook Air M系列（7,000元以上）',
+            '推理方式': 'Apple Metal GPU',
+            '速度（7B Q4）': '约15-20 tok/s',
+            '结论': '攒钱 — 值得等',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '预算AI笔记本常见问题',
+        faqs: [
+          {
+            q: '5,000-7,000元的笔记本能跑本地LLM吗？',
+            a: '能，但只能CPU推理。Ryzen 7（或Intel Core i7）+ 16GB内存机型用llama.cpp或Ollama的CPU模式可跑3B和7-8B模型，速度3-7 tokens/秒。长文偏慢，短prompt够用。',
+          },
+          {
+            q: '预算AI笔记本，8GB内存够吗？',
+            a: '不够。Q4量化的7B模型大约需要5-6GB内存，剩下几乎装不下系统和其他应用。本地LLM工作16GB是实用底线。',
+          },
+          {
+            q: '为什么MacBook Air是AI笔记本的上一档？',
+            a: 'Apple Silicon用统一内存，系统RAM同时就是GPU内存。MacBook Air M系列通过Metal跑7B模型可达15-20 tokens/秒 — 比同价位Windows笔记本的CPU推理快3-5倍。',
+          },
+          {
+            q: '预算笔记本能接外置GPU跑LLM吗？',
+            a: '一般不行。多数预算笔记本没有Thunderbolt 4或OCuLink，这两个才是可用的eGPU接口。即便支持，eGPU推理也会被PCIe带宽拖慢。买台式机或攒钱上统一内存笔记本才是更稳的方向。',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '相关阅读',
+        items: [
+          '[16GB内存笔记本最佳本地LLM](/prompt-bites/best-local-llm-16gb-ram-laptop?lang=zh) — 16GB档位的模型选择',
+          '[Mac Mini M4适合跑本地LLM吗？](/prompt-bites/mac-mini-m4-local-llm?lang=zh) — MacBook Air的桌面版',
+          '[MacBook跑Ollama的最佳eGPU](/prompt-bites/best-egpu-ollama-macbook?lang=zh) — 为什么eGPU不是预算解',
+        ],
+      },
+    },
+  },
 }
