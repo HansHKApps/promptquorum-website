@@ -222,8 +222,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modell': 'Llama 3.3 70B', 'VRAM bei Q4_K_M': '~41 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~3 tok/s', 'Passt in 96 GB?': '✓' },
           { 'Modell': 'Qwen 2.5 72B', 'VRAM bei Q4_K_M': '~43 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~3 tok/s', 'Passt in 96 GB?': '✓' },
         ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.de/s?k=Minisforum+AI370+Ryzen+AI+Max+395',
+            productName: 'Minisforum AI370-G (Ryzen AI Max 395, 96 GB)',
+            productCategory: 'mini-pc',
+            label: 'Minisforum AI370-G Preis bei Amazon.de prüfen',
+          },
+          {
+            url: 'https://www.mindfactory.de/search_result.php?string=Ryzen+AI+Max+395+Mini+PC',
+            productName: 'Mini-PC mit Ryzen AI Max 395',
+            productCategory: 'mini-pc',
+            label: 'Ryzen AI Max 395 Mini-PC bei Mindfactory.de',
+          },
+        ],
       },
       body2: {
+        id: 'comparison',
         title: 'Strix Halo vs. RTX 4090: Speicher gewinnt, Geschwindigkeit verliert',
         content: [
           '<strong>Der Ryzen AI Max 395 tauscht GPU-Geschwindigkeit gegen Speicherkapazität.</strong> Eine RTX 4090 führt Llama 3.1 8B mit ~45 tok/s aus, gegenüber ~22 tok/s auf Strix Halo Vulkan. Für 7B- und 14B-Modelle ist die RTX 4090 schneller. Aber die RTX 4090 ist auf 24 GB VRAM begrenzt — Strix Halo MAX 395 hält 96 GB, was Modellgrößen ermöglicht, die auf einer Desktop-GPU schlicht unmöglich sind.',
@@ -254,6 +269,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      related: {
+        id: 'related',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Mac Mini M4 für lokale LLMs](/de/prompt-bites/mac-mini-m4-local-llm) — Apple-Unified-Memory-Alternative zu Strix Halo',
+          '[Bester Mini-PC für lokale LLMs](/de/prompt-bites/best-mini-pc-for-local-llm) — Mini-PC-Vergleich mit AMD- und Apple-Optionen',
+          '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — diskrete GPU-Optionen für Linux-Desktop-Builds',
+        ],
+      },
     },
   },
   fr: {
@@ -264,6 +288,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    affiliateDisclosure: true,
+    audience: 'Utilisateurs Linux disposant d\'un Ryzen AI Max 395 (Strix Halo) souhaitant configurer l\'inférence LLM locale accélérée GPU via Ollama Vulkan',
+    readTime: '4 min de lecture',
+    leadAnswerBlock: 'Oui — Ryzen AI Max 395 (Strix Halo) fait tourner Ollama avec accélération GPU via le backend Vulkan sous Linux. Installez le binaire Ollama standard, vérifiez la détection GPU avec ollama ps et définissez OLLAMA_FLASH_ATTENTION=1 pour les grands modèles. Le pool de 96 Go de mémoire unifiée permet de faire tourner des modèles 70B impossibles sur tout GPU de bureau unique.',
+    intro: 'Strix Halo (Ryzen AI Max 395) est un APU haute mémoire présent dans les mini PC et laptops. Son GPU RDNA 3.5 fait tourner Ollama via Vulkan sous Linux sans pilotes supplémentaires — et ses 96 Go de mémoire unifiée sont l\'avantage matériel qui rend les modèles de classe 70B viables sur un seul appareil.',
+    toc: [
+      { label: 'Comment configurer Ollama avec Vulkan', anchor: '#setup' },
+      { label: 'Strix Halo vs RTX 4090', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectures complémentaires', anchor: '#related' },
+    ],
     quickAnswerTop: {
       fr: {
         question: 'Strix Halo (Ryzen AI Max) fonctionne-t-il avec Ollama via Vulkan ?',
@@ -288,6 +323,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body1: {
+        id: 'setup',
         title: 'Comment faire tourner Ollama avec Vulkan sur Strix Halo',
         content: [
           'Sous Linux, l\'installation du binaire Ollama standard suffit — il utilise llama.cpp avec le backend Vulkan, qui prend en charge RDNA 3.5 (gfx1150) nativement. Aucune installation ROCm supplémentaire n\'est requise pour le chemin Vulkan. Exécutez `curl -fsSL https://ollama.com/install.sh | sh` comme d\'habitude.',
@@ -302,8 +338,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modèle': 'Llama 3.3 70B', 'VRAM à Q4_K_M': '~41 Go', 'Vitesse (MAX 395 Vulkan)': '~3 tok/s', 'Entre dans 96 Go ?': '✓' },
           { 'Modèle': 'Qwen 2.5 72B', 'VRAM à Q4_K_M': '~43 Go', 'Vitesse (MAX 395 Vulkan)': '~3 tok/s', 'Entre dans 96 Go ?': '✓' },
         ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.fr/s?k=Minisforum+AI370+Ryzen+AI+Max+395',
+            productName: 'Minisforum AI370-G (Ryzen AI Max 395, 96 Go)',
+            productCategory: 'mini-pc',
+            label: 'Vérifier le prix du Minisforum AI370-G sur Amazon.fr',
+          },
+          {
+            url: 'https://www.ldlc.com/recherche/Ryzen+AI+Max+395/',
+            productName: 'Mini PC Ryzen AI Max 395',
+            productCategory: 'mini-pc',
+            label: 'Ryzen AI Max 395 mini PC sur LDLC',
+          },
+        ],
       },
       body2: {
+        id: 'comparison',
         title: 'Strix Halo vs RTX 4090 : la mémoire gagne, la vitesse perd',
         content: [
           '<strong>Le Ryzen AI Max 395 échange la vitesse GPU contre la capacité mémoire.</strong> Une RTX 4090 fait tourner Llama 3.1 8B à ~45 tok/s contre ~22 tok/s sur Strix Halo Vulkan. Pour les modèles 7B et 14B, la RTX 4090 est plus rapide. Mais la RTX 4090 est limitée à 24 Go de VRAM — Strix Halo MAX 395 dispose de 96 Go, permettant des tailles de modèles tout simplement impossibles sur un GPU de bureau.',
@@ -334,6 +385,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      related: {
+        id: 'related',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Mac Mini M4 pour les LLMs locaux](/fr/prompt-bites/mac-mini-m4-local-llm) — alternative Apple à mémoire unifiée pour Strix Halo',
+          '[Meilleur mini PC pour LLM local](/fr/prompt-bites/best-mini-pc-for-local-llm) — comparatif mini PC avec options AMD et Apple',
+          '[Meilleures GPU budget pour LLMs locaux](/fr/local-llms/best-budget-gpus-local-llm) — options GPU discrètes pour PC Linux',
+        ],
+      },
     },
   },
   ja: {
@@ -344,6 +404,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    affiliateDisclosure: true,
+    audience: 'Ryzen AI Max 395（Strix Halo）搭載デバイスでOllama VulkanによるGPU加速LLM推論を設定したいLinuxユーザー',
+    readTime: '4分で読める',
+    leadAnswerBlock: 'はい — Ryzen AI Max 395（Strix Halo）はLinux上でVulkanバックエンド経由のGPU加速でOllamaを動作させます。標準のOllamaバイナリをインストールし、ollama psでGPU検出を確認し、大型モデルにはOLLAMA_FLASH_ATTENTION=1を設定してください。96 GBのユニファイドメモリプールにより、デスクトップGPU単体では不可能な70Bモデルが実行できます。',
+    intro: 'Strix Halo（Ryzen AI Max 395）はミニPCやノートPCに搭載される大容量メモリAPUです。RDNA 3.5 GPUは追加ドライバなしでLinux上のOllama VulkanをサポートしてくれているものKの、96 GBユニファイドメモリが1台のデバイスで70Bクラスモデルを可能にするハードウェア上の優位点です。',
+    toc: [
+      { label: 'Ollama with Vulkanの設定方法', anchor: '#setup' },
+      { label: 'Strix Halo対RTX 4090', anchor: '#comparison' },
+      { label: 'よくある質問', anchor: '#faq' },
+      { label: '関連記事', anchor: '#related' },
+    ],
     quickAnswerTop: {
       ja: {
         question: 'Strix Halo（Ryzen AI Max）はVulkan経由でOllamaと動作しますか？',
@@ -368,6 +439,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body1: {
+        id: 'setup',
         title: 'Strix HaloでOllama with Vulkanを実行する方法',
         content: [
           'Linux上では、標準のOllamaバイナリをインストールするだけで十分です — RDNA 3.5（gfx1150）をすぐにサポートするVulkanバックエンドを使ったllama.cppを使用します。Vulkanパスに追加のROCmインストールは不要です。通常通り`curl -fsSL https://ollama.com/install.sh | sh`を実行してください。',
@@ -382,8 +454,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'モデル': 'Llama 3.3 70B', 'Q4_K_M時のVRAM': '~41 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '96 GBに収まるか？': '✓' },
           { 'モデル': 'Qwen 2.5 72B', 'Q4_K_M時のVRAM': '~43 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '96 GBに収まるか？': '✓' },
         ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.co.jp/s?k=Minisforum+AI370+Ryzen+AI+Max+395',
+            productName: 'Minisforum AI370-G（Ryzen AI Max 395、96 GB）',
+            productCategory: 'mini-pc',
+            label: 'Amazon.co.jpでMinisforum AI370-Gの価格を確認',
+          },
+          {
+            url: 'https://www.dospara.co.jp/search/?category=mini-pc&keyword=Ryzen+AI+Max',
+            productName: 'Ryzen AI Max 395搭載ミニPC',
+            productCategory: 'mini-pc',
+            label: 'ドスパラでRyzen AI Max 395ミニPCを確認',
+          },
+        ],
       },
       body2: {
+        id: 'comparison',
         title: 'Strix Halo対RTX 4090：メモリで勝り、速度で劣る',
         content: [
           '<strong>Ryzen AI Max 395はGPU速度をメモリ容量と交換します。</strong>RTX 4090はLlama 3.1 8Bを~45 tok/sで実行するのに対し、Strix Halo Vulkanでは~22 tok/sです。7Bおよび14BモデルではRTX 4090の方が高速です。しかしRTX 4090は24 GB VRAMに制限されており、Strix Halo MAX 395は96 GBを保有し、デスクトップGPUでは不可能なモデルサイズを実現します。',
@@ -414,6 +501,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      related: {
+        id: 'related',
+        title: '関連記事',
+        items: [
+          '[ローカルLLM向けMac Mini M4](/ja/prompt-bites/mac-mini-m4-local-llm) — Strix Haloに代わるAppleユニファイドメモリの選択肢',
+          '[ローカルLLMに最適なミニPC](/ja/prompt-bites/best-mini-pc-for-local-llm) — AMDとAppleオプションのミニPC比較',
+          '[ローカルLLM向け予算GPUのベスト](/ja/local-llms/best-budget-gpus-local-llm) — Linuxデスクトップ向けの独立GPU選択肢',
+        ],
+      },
     },
   },
   zh: {
@@ -424,6 +520,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    affiliateDisclosure: true,
+    audience: '希望通过 Ollama Vulkan 在 Linux 上配置 GPU 加速本地 LLM 推理的 Ryzen AI Max 395（Strix Halo）设备用户',
+    readTime: '4 分钟阅读',
+    leadAnswerBlock: '可以——Ryzen AI Max 395（Strix Halo）在 Linux 上通过 Vulkan 后端以 GPU 加速运行 Ollama。安装标准 Ollama 二进制文件，用 ollama ps 验证 GPU 检测，并为大型模型设置 OLLAMA_FLASH_ATTENTION=1。96 GB 统一内存池让您可以运行任何单块桌面显卡都无法支持的 70B 模型。',
+    intro: 'Strix Halo（Ryzen AI Max 395）是一款搭载于迷你电脑和笔记本中的高内存 APU。其 RDNA 3.5 GPU 无需额外驱动即可在 Linux 上通过 Vulkan 运行 Ollama——96 GB 统一内存是让 70B 级别模型在单台设备上成为可能的硬件优势。',
+    toc: [
+      { label: '如何使用 Vulkan 运行 Ollama', anchor: '#setup' },
+      { label: 'Strix Halo 对比 RTX 4090', anchor: '#comparison' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '相关阅读', anchor: '#related' },
+    ],
     quickAnswerTop: {
       zh: {
         question: 'Strix Halo（Ryzen AI Max）能通过 Vulkan 使用 Ollama 吗？',
@@ -448,6 +555,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body1: {
+        id: 'setup',
         title: '如何在 Strix Halo 上使用 Vulkan 运行 Ollama',
         content: [
           '在 Linux 上，安装标准 Ollama 二进制文件即可——它使用带有 Vulkan 后端的 llama.cpp，开箱即用支持 RDNA 3.5（gfx1150）。Vulkan 路径无需额外安装 ROCm。像往常一样运行 `curl -fsSL https://ollama.com/install.sh | sh`。',
@@ -462,8 +570,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '模型': 'Llama 3.3 70B', 'Q4_K_M 时 VRAM': '~41 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '能否放入 96 GB？': '✓' },
           { '模型': 'Qwen 2.5 72B', 'Q4_K_M 时 VRAM': '~43 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '能否放入 96 GB？': '✓' },
         ],
+        affiliateLinks: [
+          {
+            url: 'https://search.jd.com/Search?keyword=Minisforum+AI370+Ryzen+AI+Max',
+            productName: 'Minisforum AI370-G（Ryzen AI Max 395，96 GB）',
+            productCategory: 'mini-pc',
+            label: '在京东查看 Minisforum AI370-G 价格',
+          },
+          {
+            url: 'https://search.jd.com/Search?keyword=Ryzen+AI+Max+395+迷你电脑',
+            productName: 'Ryzen AI Max 395 迷你电脑',
+            productCategory: 'mini-pc',
+            label: '在京东搜索 Ryzen AI Max 395 迷你电脑',
+          },
+        ],
       },
       body2: {
+        id: 'comparison',
         title: 'Strix Halo 对比 RTX 4090：内存胜，速度败',
         content: [
           '<strong>Ryzen AI Max 395 以 GPU 速度换取内存容量。</strong>RTX 4090 运行 Llama 3.1 8B 约 45 tok/s，而 Strix Halo Vulkan 约 22 tok/s。对于 7B 和 14B 模型，RTX 4090 更快。但 RTX 4090 受限于 24 GB VRAM——Strix Halo MAX 395 拥有 96 GB，可支持桌面 GPU 上根本无法运行的模型规模。',
@@ -492,6 +615,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Strix Halo 与 Mac Studio M4 Ultra 在 Ollama 上如何比较？',
             a: 'Mac Studio M4 Ultra 拥有 192 GB 统一内存，通过 llama.cpp 使用 Metal 加速——每 token 速度显著快于 Strix Halo Vulkan（70B Q4_K_M 约 12 tok/s 对比 Strix Halo 的约 3 tok/s）。在大型模型推理质量和速度方面，M4 Ultra 占优。Strix Halo 仅在 8B–32B 范围内具有竞争力，并运行标准 Linux 工作流。',
           },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '相关阅读',
+        items: [
+          '[用于本地 LLM 的 Mac Mini M4](/zh/prompt-bites/mac-mini-m4-local-llm) — Strix Halo 的苹果统一内存替代方案',
+          '[本地 LLM 最佳迷你电脑](/zh/prompt-bites/best-mini-pc-for-local-llm) — AMD 和苹果迷你电脑对比',
+          '[本地 LLM 最佳预算 GPU](/zh/local-llms/best-budget-gpus-local-llm) — Linux 桌面构建的独立 GPU 选择',
         ],
       },
     },

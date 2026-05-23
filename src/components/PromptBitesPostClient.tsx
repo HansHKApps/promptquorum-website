@@ -65,6 +65,13 @@ const EDUCATIONAL_LEVEL: Record<string, Record<Language, string>> = {
   Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级' },
 }
 
+function mdLinksToHtml(text: string): string {
+  return text.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    '<a href="$2" class="text-primary hover:underline">$1</a>'
+  )
+}
+
 function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; columns: string[] }) {
   return (
     <div className="overflow-x-auto my-4">
@@ -121,7 +128,7 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
           {section.items.map((item, i) => (
             <li key={i} className="flex gap-2 text-sm text-text-secondary">
               <span className="text-primary mt-0.5 flex-shrink-0">▸</span>
-              <span dangerouslySetInnerHTML={{ __html: item }} />
+              <span dangerouslySetInnerHTML={{ __html: mdLinksToHtml(item) }} />
             </li>
           ))}
         </ul>
