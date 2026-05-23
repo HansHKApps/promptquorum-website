@@ -5,7 +5,7 @@
       .title { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 18px; font-weight: 600; }
       .tier-label { fill: #FFFFFF; font-family: system-ui, sans-serif; font-size: 12px; font-weight: 600; }
       .tier-budget { fill: #6750A4; }
-      .tier-entry { fill: #entry; }
+      .tier-entry { fill: #7E57C2; }
       .tier-mid { fill: #9575CD; }
       .tier-high { fill: #CE93D8; }
       .gpu-card { fill: #F7F2FA; stroke: #6750A4; stroke-width: 1.5; }

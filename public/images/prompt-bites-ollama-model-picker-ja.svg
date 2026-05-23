@@ -20,7 +20,7 @@
 
   <!-- SMALL TIER (2-4GB) -->
   <rect x="20" y="45" width="240" height="22" class="category" rx="3"/>
-  <text x="140" y="60" class="category" text-anchor="middle">小 (2-4 GB)</text>
+  <text x="140" y="60" style="fill: #FFFFFF;" class="category" text-anchor="middle">小 (2-4 GB)</text>
 
   <!-- Gemma 2B -->
   <rect x="20" y="75" width="240" height="75" class="card-bg" rx="4"/>
@@ -42,7 +42,7 @@
 
   <!-- MEDIUM TIER (4-8GB) -->
   <rect x="280" y="45" width="240" height="22" class="category" rx="3"/>
-  <text x="400" y="60" class="category" text-anchor="middle">中 (4-8 GB)</text>
+  <text x="400" y="60" style="fill: #FFFFFF;" class="category" text-anchor="middle">中 (4-8 GB)</text>
 
   <!-- Llama 3 8B -->
   <rect x="280" y="75" width="240" height="75" class="card-bg" rx="4"/>
@@ -64,7 +64,7 @@
 
   <!-- LARGE TIER (12GB+) -->
   <rect x="540" y="45" width="240" height="22" class="category" rx="3"/>
-  <text x="660" y="60" class="category" text-anchor="middle">大 (12+ GB)</text>
+  <text x="660" y="60" style="fill: #FFFFFF;" class="category" text-anchor="middle">大 (12+ GB)</text>
 
   <!-- Llama 3 70B -->
   <rect x="540" y="75" width="240" height="75" class="card-bg" rx="4"/>
