@@ -143,4 +143,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Qwen Vision
   'run-qwen-vl-locally-2026':                   'run-qwen-vl-locally-2026',
+
+  // Inference Frameworks
+  'xinference-llama-qwen-chatglm-mistral':       'xinference-llama-qwen-chatglm-mistral',
 }
