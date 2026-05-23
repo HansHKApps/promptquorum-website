@@ -170,6 +170,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       'Die Cloud-GPU-Preise 2026 spreizen sich über mehr als das Zehnfache zwischen den günstigsten unterbrechbaren Consumer-Karten und On-Demand-Datacenter-Karten. Die richtige Klasse zu wählen, hängt von Workload-Größe, Laufzeit und Unterbrechungstoleranz ab.',
+    quickAnswerTop: {
+      de: {
+        question: 'Wie viel kostet eine Cloud-GPU pro Stunde 2026?',
+        answer: 'RTX 4090: $0,30-0,80/h. A100 80 GB: $0,90-1,90/h. H100: $2,20-4,00/h. Am günstigsten für Inferenz: Vast.ai Spot.',
+        bullets: [
+          'Vast.ai Spot RTX 4090 ist am günstigsten bei ~$0,30/h, kann aber mitten im Job unterbrochen werden.',
+          'RunPod Secure Cloud berechnet ~$0,80/h für RTX 4090 mit garantierter Verfügbarkeit.',
+          'H100 80 GB bei Lambda Labs: ~$2,49/h — nur für Modelle ab 70B oder große Batch-Jobs nutzen.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -299,6 +311,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       'Les prix GPU cloud 2026 s\'étalent sur plus de 10x entre les cartes grand public spot les moins chères et les cartes datacenter on-demand. Choisir la bonne classe dépend de la taille de la charge, sa durée et de la tolérance aux interruptions.',
+    quickAnswerTop: {
+      fr: {
+        question: 'Combien coûte un GPU cloud par heure en 2026 ?',
+        answer: 'RTX 4090 : 0,30-0,80 $/h. A100 80 GB : 0,90-1,90 $/h. H100 : 2,20-4,00 $/h. Moins cher pour l\'inférence : Vast.ai spot.',
+        bullets: [
+          'Vast.ai spot RTX 4090 est le moins cher à ~0,30 $/h mais peut être préempté en cours de job.',
+          'RunPod Secure Cloud facture ~0,80 $/h pour RTX 4090 avec disponibilité garantie.',
+          'H100 80 GB sur Lambda Labs : ~2,49 $/h — à réserver aux modèles 70B+ ou aux gros jobs batch.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -428,6 +452,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       '2026年のクラウドGPU価格は、最安の中断可能コンシューマカードからオンデマンドのデータセンターカードまで10倍以上の幅があります。適切な階層の選択はワークロード規模、実行時間、中断許容度によります。',
+    quickAnswerTop: {
+      ja: {
+        question: '2026年、クラウドGPUの時間料金はいくら？',
+        answer: 'RTX 4090: $0.30-0.80/h。A100 80 GB: $0.90-1.90/h。H100: $2.20-4.00/h。推論に最安: Vast.aiスポット。',
+        bullets: [
+          'Vast.aiスポットRTX 4090は~$0.30/hで最安だが、ジョブ途中で中断される可能性がある。',
+          'RunPodセキュアクラウドはRTX 4090に稼働保証付きで~$0.80/h。',
+          'Lambda LabsのH100 80 GB: ~$2.49/h — 70B以上のモデルか大規模バッチジョブのみで使用を。',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -557,6 +593,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       '2026年云GPU价格在最廉价的可中断消费卡与按需数据中心卡之间跨10倍以上。选对档位取决于负载规模、运行时长与中断容忍度。',
+    quickAnswerTop: {
+      zh: {
+        question: '2026年云GPU每小时多少钱？',
+        answer: 'RTX 4090: $0.30-0.80/h。A100 80 GB: $0.90-1.90/h。H100: $2.20-4.00/h。推理最便宜: Vast.ai竞价实例。',
+        bullets: [
+          'Vast.ai竞价RTX 4090最便宜约$0.30/h,但可能在任务中途被抢占。',
+          'RunPod安全云RTX 4090约$0.80/h,保证可用性。',
+          'Lambda Labs H100 80 GB: 约$2.49/h — 仅在70B+模型或大批量任务时使用。',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

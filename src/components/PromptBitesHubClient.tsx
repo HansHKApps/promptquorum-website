@@ -5,6 +5,7 @@ import { LangLinksBar } from '@/components/LangLinksBar'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { PROMPT_BITES_CATEGORIES } from '@/lib/prompt-bites/categories'
+import { PROMPT_BITES_PUBLISHED_SLUGS } from '@/lib/prompt-bites/published'
 import type { Language } from '@/lib/blog/blogContent'
 
 interface Props {
@@ -19,12 +20,14 @@ const HUB_HEADLINE: Record<Language, string> = {
   zh: '本地LLM问题的快速解答',
 }
 
+const COUNT = PROMPT_BITES_PUBLISHED_SLUGS.size
+
 const HUB_SUBTITLE: Record<Language, string> = {
-  en: '30 short-answer guides. VRAM requirements, Ollama picks, hardware comparisons, and setup tips — answered in 60 seconds or less.',
-  de: '30 Kurzantwort-Leitfäden. VRAM-Anforderungen, Ollama-Empfehlungen, Hardware-Vergleiche und Setup-Tipps — in 60 Sekunden beantwortet.',
-  fr: '30 guides à réponse rapide. Besoins en VRAM, choix Ollama, comparaisons matérielles et conseils de configuration — répondus en 60 secondes.',
-  ja: '30の短答ガイド。VRAM要件、Ollamaのおすすめ、ハードウェア比較、セットアップのヒント — 60秒以内に回答。',
-  zh: '30篇简答指南。显存要求、Ollama推荐、硬件对比和设置技巧 — 60秒内解答。',
+  en: `${COUNT} short-answer guides. VRAM requirements, Ollama picks, hardware comparisons, and setup tips — answered in 60 seconds or less.`,
+  de: `${COUNT} Kurzantwort-Leitfäden. VRAM-Anforderungen, Ollama-Empfehlungen, Hardware-Vergleiche und Setup-Tipps — in 60 Sekunden beantwortet.`,
+  fr: `${COUNT} guides à réponse rapide. Besoins en VRAM, choix Ollama, comparaisons matérielles et conseils de configuration — répondus en 60 secondes.`,
+  ja: `${COUNT}の短答ガイド。VRAM要件、Ollamaのおすすめ、ハードウェア比較、セットアップのヒント — 60秒以内に回答。`,
+  zh: `${COUNT}篇简答指南。显存要求、Ollama推荐、硬件对比和设置技巧 — 60秒内解答。`,
 }
 
 const VRAM_TABLE_HEADERS: Record<Language, { vram: string; model: string; quant: string; useCase: string }> = {
@@ -146,6 +149,76 @@ function promptBitesArticleHref(lang: Language, slug: string): string {
   return lang === 'en' ? `/prompt-bites/${slug}` : `/${lang}/prompt-bites/${slug}`
 }
 
+const CATEGORY_SVG: Partial<Record<string, string>> = {
+  'quantization-vram':  'prompt-bites-quantization-decision-tree',
+  'ollama':             'prompt-bites-ollama-model-picker',
+  'tool-comparisons':   'prompt-bites-tool-comparison-matrix',
+  'model-comparisons':  'prompt-bites-model-size-comparison',
+  'hardware-specific':  'prompt-bites-gpu-vram-tier-guide',
+  'quick-answers':      'prompt-bites-vram-reference-table',
+  'prompt-engineering': 'prompt-bites-overview',
+  'privacy-compliance': 'prompt-bites-gpu-vram-tier-guide',
+}
+
+const CATEGORY_SVG_ALT: Record<string, Record<Language, string>> = {
+  'quantization-vram': {
+    en: 'VRAM and quantization decision tree for local LLMs',
+    de: 'VRAM- und Quantisierungs-Entscheidungsbaum für lokale LLMs',
+    fr: 'Arbre de décision VRAM et quantisation pour les LLM locaux',
+    ja: 'ローカルLLM向けVRAMと量化の決定木',
+    zh: '本地LLM显存与量化决策树',
+  },
+  'ollama': {
+    en: 'Ollama model picker guide for local LLM selection',
+    de: 'Ollama-Modellauswahlführer für lokale LLM-Auswahl',
+    fr: 'Guide de sélection de modèle Ollama pour les LLM locaux',
+    ja: 'ローカルLLM選択のためのOllamaモデルピッカーガイド',
+    zh: 'Ollama本地LLM模型选择指南',
+  },
+  'tool-comparisons': {
+    en: 'Local LLM tool comparison matrix: Ollama, LM Studio, Jan',
+    de: 'Lokale LLM-Tool-Vergleichsmatrix: Ollama, LM Studio, Jan',
+    fr: 'Matrice de comparaison des outils LLM locaux : Ollama, LM Studio, Jan',
+    ja: 'ローカルLLMツール比較マトリクス：Ollama、LM Studio、Jan',
+    zh: '本地LLM工具对比矩阵：Ollama、LM Studio、Jan',
+  },
+  'model-comparisons': {
+    en: 'Local LLM model size comparison chart',
+    de: 'Vergleichsdiagramm der lokalen LLM-Modellgrößen',
+    fr: 'Diagramme de comparaison des tailles de modèles LLM locaux',
+    ja: 'ローカルLLMモデルサイズ比較チャート',
+    zh: '本地LLM模型规模对比图',
+  },
+  'hardware-specific': {
+    en: 'GPU VRAM tier guide for local LLM hardware selection',
+    de: 'GPU-VRAM-Tier-Leitfaden für lokale LLM-Hardwareauswahl',
+    fr: 'Guide des niveaux GPU VRAM pour la sélection de matériel LLM local',
+    ja: 'ローカルLLMハードウェア選択のためのGPU VRAMティアガイド',
+    zh: '本地LLM硬件选择GPU显存档位指南',
+  },
+  'quick-answers': {
+    en: 'VRAM quick reference table for local LLMs',
+    de: 'VRAM-Schnellreferenztabelle für lokale LLMs',
+    fr: 'Tableau de référence rapide VRAM pour les LLM locaux',
+    ja: 'ローカルLLM向けVRAMクイックリファレンステーブル',
+    zh: '本地LLM显存快速参考表',
+  },
+  'prompt-engineering': {
+    en: 'Prompt Bites overview — quick answers to local LLM questions',
+    de: 'Prompt Bites Übersicht — schnelle Antworten auf lokale LLM-Fragen',
+    fr: 'Aperçu de Prompt Bites — réponses rapides aux questions sur les LLM locaux',
+    ja: 'Prompt Bites概要 — ローカルLLMの質問への迅速な回答',
+    zh: 'Prompt Bites概览 — 本地LLM问题快速解答',
+  },
+  'privacy-compliance': {
+    en: 'GPU and VRAM guide for privacy-first local LLM deployment',
+    de: 'GPU- und VRAM-Leitfaden für datenschutzorientierte lokale LLM-Bereitstellung',
+    fr: 'Guide GPU et VRAM pour le déploiement LLM local axé sur la confidentialité',
+    ja: 'プライバシー優先のローカルLLM展開のためのGPU・VRAMガイド',
+    zh: '隐私优先本地LLM部署的GPU和显存指南',
+  },
+}
+
 export function PromptBitesHubClient({ lang }: Props) {
   const slugsByCategory = PROMPT_BITES_CATEGORIES.map((cat) => ({
     ...cat,
@@ -200,6 +273,16 @@ export function PromptBitesHubClient({ lang }: Props) {
           {slugsByCategory.map((cat) => (
             cat.slugs.length > 0 && (
               <section key={cat.id}>
+                {CATEGORY_SVG[cat.id] && (
+                  <img
+                    src={`/images/${CATEGORY_SVG[cat.id]}-${lang}.svg`}
+                    alt={CATEGORY_SVG_ALT[cat.id]?.[lang] ?? ''}
+                    className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm mb-4"
+                    loading="lazy"
+                    width={800}
+                    height={350}
+                  />
+                )}
                 <div className="mb-4">
                   <h2 className="text-xl font-bold text-text-primary flex items-center gap-2">
                     <span className="inline-flex items-center justify-center w-6 h-6 text-xs font-bold rounded-full bg-primary/10 text-primary shrink-0">

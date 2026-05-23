@@ -510,6 +510,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       'モデル読み込みのボトルネックはシーケンシャルリード速度です。14B Q4モデルはディスク上約9 GBで、RAMへのコピー時間がモデル切り替えの待ち時間そのものです。高速NVMe SSDがその待ち時間を消します。',
+    quickAnswerTop: {
+      ja: {
+        question: 'ローカルLLMモデルの最速読み込みに最適なSSDは？',
+        answer: 'Samsung 990 Pro 2TBが7,450 MB/sで7B Q4モデルを2秒以内にロード。AIモデルストレージで最高のコスパ。',
+        bullets: [
+          '7B Q4_K_Mモデル（~4.1 GB）は990 Proで~0.8秒、SATA SSDで~3.5秒でロード。',
+          'NVMe Gen4ドライブならどれでも可 — WD Black SN850XとSeagate FireCuda 530が近い代替品。',
+          'Ollamaモデルキャッシュ（~/ollama/models）はOSドライブではなくNVMeに置く。',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -645,6 +657,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       '模型加载受顺序读取速度制约:14B Q4模型在盘上约9 GB,复制到RAM的时间就是切换模型的等待时间。高速NVMe SSD让等待消失。',
+    quickAnswerTop: {
+      zh: {
+        question: '哪款SSD能实现最快的本地LLM模型加载？',
+        answer: 'Samsung 990 Pro 2TB读速7,450 MB/s，可在2秒内加载7B Q4模型。AI模型存储性价比最佳。',
+        bullets: [
+          '7B Q4_K_M模型（~4.1 GB）在990 Pro上约0.8秒加载，SATA SSD需~3.5秒。',
+          '任意NVMe Gen4均可 — WD Black SN850X和Seagate FireCuda 530是近似替代品。',
+          '将Ollama模型缓存（~/ollama/models）放在NVMe上而非系统盘，加载最快。',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

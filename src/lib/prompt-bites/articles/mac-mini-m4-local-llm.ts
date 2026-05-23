@@ -492,6 +492,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       'Mac Mini M4は、Apple Siliconのユニファイドメモリ(CPUとGPUが同じRAMを共有)により、ローカルLLMで実用的なマシンです。これにより、ディスクリートGPU搭載ミニPCにあるVRAM固定上限がなくなります。問題はどの構成を買うかです。',
+    quickAnswerTop: {
+      ja: {
+        question: 'Mac Mini M4はローカルLLMに適していますか？',
+        answer: 'はい — Mac Mini M4 Pro（24 GBユニファイドメモリ）はMLX経由でLlama 3 8Bを~36 tok/sで実行。約22万円でAppleの最高コスパ選択肢。',
+        bullets: [
+          'ベースM4（16 GB）は7Bモデルを快適に動かすが、14Bをフル品質では収まらない。',
+          'M4 Pro 24 GBはQwen 14B Q4を~20 tok/sで処理 — 実用的なスイートスポット。',
+          'M4 Pro 48 GBはQwen 32B Q4を~12 tok/sで実行 — ほとんどのタスクでRTX 4090に匹敵。',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -621,6 +633,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       'Mac Mini M4借助Apple Silicon统一内存(CPU与GPU共享同一RAM)成为本地LLM的可用机器。这去除了独立GPU迷你PC的固定VRAM上限。问题在于选哪个配置。',
+    quickAnswerTop: {
+      zh: {
+        question: 'Mac Mini M4适合运行本地LLM吗？',
+        answer: '是的 — Mac Mini M4 Pro配24 GB统一内存可通过MLX以~36 tok/s运行Llama 3 8B。约11,000元人民币，苹果产品中性价比最高。',
+        bullets: [
+          '基础M4（16 GB）可舒适运行7B模型，但无法以完整质量加载14B。',
+          'M4 Pro 24 GB处理Qwen 14B Q4约20 tok/s — 实用的甜蜜点。',
+          'M4 Pro 48 GB运行Qwen 32B Q4约12 tok/s — 对大多数任务相当于独立RTX 4090。',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

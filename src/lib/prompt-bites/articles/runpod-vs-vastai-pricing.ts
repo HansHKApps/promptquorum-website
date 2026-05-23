@@ -474,6 +474,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       'RunPodとVast.aiはどちらもGPUを時間単位で貸しますが、モデルが異なります。RunPodは固定料金のマネージドクラウドです。Vast.aiはピアツーピアのマーケットで個人ホストが価格を決めます — しばしば安く、時に中断可能です。選択はワークロードの長さと信頼性要件に依存します。',
+    quickAnswerTop: {
+      ja: {
+        question: 'RunPodとVast.ai — クラウドGPUレンタルはどちらが安い？',
+        answer: 'Vast.aiはスポットインスタンスが安い（RTX 4090約20円/h対RunPod約60円/h）。RunPodは保証された稼働時間でより信頼性が高い。',
+        bullets: [
+          'Vast.aiスポットRTX 4090：15-35円/h；オンデマンド：70-110円/h。',
+          'RunPodセキュアクラウドRTX 4090：~60円/h — コールドスタートなし、稼働保証。',
+          'バッチ推論ジョブにVast.ai；インタラクティブセッションや本番APIにRunPod。',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -597,6 +609,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     intro:
       'RunPod与Vast.ai均按小时租GPU,但模型不同。RunPod是固定价的托管云。Vast.ai是P2P市场,由主机定价 — 通常更便宜,有时可中断。选择取决于工作负载时长与可靠性要求。',
+    quickAnswerTop: {
+      zh: {
+        question: 'RunPod与Vast.ai — 哪个云GPU租用更便宜？',
+        answer: 'Vast.ai竞价实例更便宜（RTX 4090约1元/h对RunPod约3元/h）。RunPod以保证可用性更可靠。',
+        bullets: [
+          'Vast.ai竞价RTX 4090：0.7-1.8元/h；按需：3.6-5.8元/h。',
+          'RunPod安全云RTX 4090：~3元/h — 无冷启动，保证可用性。',
+          '批量推理任务用Vast.ai；交互式会话或生产API用RunPod。',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
