@@ -41,7 +41,7 @@ const RETAILER_DOMAINS: ReadonlySet<string> = new Set([
   'dell.com', 'lg.com', 'benq.com', 'minisforum.com', 'aoostar.com',
   'bee-link.com', 'gmktec.com',
   // VPN providers
-  'protonvpn.com', 'nordvpn.com', 'mullvad.net', 'surfshark.com',
+  'protonvpn.com', 'nordvpn.com', 'mullvad.net', 'surfshark.com', 'expressvpn.com',
   // Developer tools (SaaS)
   'cursor.com', 'continue.dev', 'sourcegraph.com', 'tabnine.com',
   // Course platforms
@@ -79,14 +79,14 @@ export function trackAffiliateClick(p: AffiliateClickParams): void {
 
   try {
     window.umami?.track('affiliate_click', payload)
-  } catch {
-    // silent — umami may be blocked
+  } catch (err) {
+    if (process.env.NODE_ENV === 'development') console.warn('[affiliate] umami track failed:', err)
   }
 
   try {
     track('affiliate_click', payload)
-  } catch {
-    // silent
+  } catch (err) {
+    if (process.env.NODE_ENV === 'development') console.warn('[affiliate] vercel track failed:', err)
   }
 
   try {
@@ -95,8 +95,8 @@ export function trackAffiliateClick(p: AffiliateClickParams): void {
       'affiliate_click',
       payload,
     )
-  } catch {
-    // silent
+  } catch (err) {
+    if (process.env.NODE_ENV === 'development') console.warn('[affiliate] gtag failed:', err)
   }
 }
 

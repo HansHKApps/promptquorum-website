@@ -16,6 +16,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
     siblingBites: ['radeon-6800m-local-llm', 'mac-mini-m4-local-llm'],
     is_living_page: false,
+    affiliateDisclosure: true,
+    audience: 'Linux users with a Ryzen AI Max 395 (Strix Halo) device wanting GPU-accelerated local LLM inference via Ollama Vulkan',
+    readTime: '4 min read',
+    leadAnswerBlock: 'Yes — Ryzen AI Max 395 (Strix Halo) runs Ollama with GPU acceleration via the Vulkan backend on Linux. Install the standard Ollama binary, verify GPU detection with ollama ps, and set OLLAMA_FLASH_ATTENTION=1 for large-model sessions. The 96 GB unified memory pool lets you run 70B models that are impossible on any single desktop GPU.',
+    intro: 'Strix Halo (Ryzen AI Max 395) is a high-memory APU found in mini PCs and laptops. Its RDNA 3.5 GPU runs Ollama via Vulkan on Linux with no extra drivers — and its 96 GB unified memory is the hardware advantage that makes 70B-class models viable on a single device.',
+    toc: [
+      { label: 'How to Run Ollama with Vulkan', anchor: '#setup' },
+      { label: 'Strix Halo vs RTX 4090', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Related Reading', anchor: '#related' },
+    ],
     quickAnswerTop: {
       en: {
         question: 'Does Strix Halo (Ryzen AI Max) work with Ollama via Vulkan?',
@@ -80,6 +91,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body1: {
+        id: 'setup',
         title: 'How to Run Ollama with Vulkan on Strix Halo',
         content: [
           'On Linux, installing the standard Ollama binary is sufficient — it uses llama.cpp with the Vulkan backend, which supports RDNA 3.5 (gfx1150) out of the box. No additional ROCm installation is required for the Vulkan path. Run `curl -fsSL https://ollama.com/install.sh | sh` as usual.',
@@ -94,8 +106,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Model': 'Llama 3.3 70B', 'VRAM at Q4_K_M': '~41 GB', 'Speed (MAX 395 Vulkan)': '~3 tok/s', 'Fits 96 GB?': '✓' },
           { 'Model': 'Qwen 2.5 72B', 'VRAM at Q4_K_M': '~43 GB', 'Speed (MAX 395 Vulkan)': '~3 tok/s', 'Fits 96 GB?': '✓' },
         ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Minisforum+AI370+Ryzen+AI+Max+395',
+            productName: 'Minisforum AI370-G (Ryzen AI Max 395, 96 GB)',
+            productCategory: 'mini-pc',
+            label: 'Check Minisforum AI370-G price on Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=ASUS+ROG+NUC+Ryzen+AI+Max',
+            productName: 'ASUS ROG NUC (Ryzen AI Max 395)',
+            productCategory: 'mini-pc',
+            label: 'Check ASUS ROG NUC price on Amazon',
+          },
+        ],
       },
       body2: {
+        id: 'comparison',
         title: 'Strix Halo vs RTX 4090: Memory Wins, Speed Loses',
         content: [
           '<strong>The Ryzen AI Max 395 trades GPU speed for memory capacity.</strong> An RTX 4090 runs Llama 3.1 8B at ~45 tok/s versus ~22 tok/s on Strix Halo Vulkan. For 7B and 14B models, the RTX 4090 is faster. But the RTX 4090 is capped at 24 GB VRAM — Strix Halo MAX 395 holds 96 GB, enabling model sizes that are simply impossible on a desktop GPU.',
@@ -126,6 +153,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      related: {
+        id: 'related',
+        title: 'Related Reading',
+        items: [
+          '[Mac Mini M4 for Local LLMs](/prompt-bites/mac-mini-m4-local-llm) — Apple unified-memory alternative to Strix Halo',
+          '[Best Mini PC for Local LLM](/prompt-bites/best-mini-pc-for-local-llm) — mini PC comparison with AMD and Apple options',
+          '[Best Budget GPUs for Local LLM](/local-llms/best-budget-gpus-local-llm) — discrete GPU options for Linux desktop builds',
+        ],
+      },
     },
   },
   de: {
@@ -136,6 +172,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    affiliateDisclosure: true,
+    audience: 'Linux-Nutzer mit einem Ryzen AI Max 395 (Strix Halo) Gerät, die GPU-beschleunigte lokale LLM-Inferenz über Ollama Vulkan einrichten wollen',
+    readTime: '4 Min. Lesezeit',
+    leadAnswerBlock: 'Ja — Ryzen AI Max 395 (Strix Halo) betreibt Ollama mit GPU-Beschleunigung über das Vulkan-Backend unter Linux. Installieren Sie das Standard-Ollama-Binärprogramm, überprüfen Sie die GPU-Erkennung mit ollama ps und setzen Sie optional OLLAMA_FLASH_ATTENTION=1 für große Modelle. Der 96-GB-Unified-Memory-Pool ermöglicht 70B-Modelle, die auf keiner einzelnen Desktop-GPU möglich sind.',
+    intro: 'Strix Halo (Ryzen AI Max 395) ist ein hochspeicheriger APU in Mini-PCs und Laptops. Sein RDNA-3.5-GPU betreibt Ollama über Vulkan unter Linux ohne zusätzliche Treiber — und seine 96 GB Unified Memory sind der Hardware-Vorteil, der 70B-Klasse-Modelle auf einem einzelnen Gerät ermöglicht.',
+    toc: [
+      { label: 'Ollama mit Vulkan einrichten', anchor: '#setup' },
+      { label: 'Strix Halo vs. RTX 4090', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related' },
+    ],
     quickAnswerTop: {
       de: {
         question: 'Funktioniert Strix Halo (Ryzen AI Max) mit Ollama über Vulkan?',
@@ -160,6 +207,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       body1: {
+        id: 'setup',
         title: 'Ollama mit Vulkan auf Strix Halo einrichten',
         content: [
           'Unter Linux reicht die Installation des Standard-Ollama-Binärprogramms aus — es verwendet llama.cpp mit dem Vulkan-Backend, das RDNA 3.5 (gfx1150) von Haus aus unterstützt. Für den Vulkan-Pfad ist keine zusätzliche ROCm-Installation erforderlich. Führen Sie wie gewohnt `curl -fsSL https://ollama.com/install.sh | sh` aus.',

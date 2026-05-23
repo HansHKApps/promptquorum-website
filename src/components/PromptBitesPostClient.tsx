@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { CopyButton } from '@/components/CopyButton'
+import { AffiliateLink } from '@/components/AffiliateLink'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import type { Language } from '@/lib/blog/blogContent'
@@ -93,7 +94,7 @@ function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; 
   )
 }
 
-function BodySection({ section }: { section: LLMSection }) {
+function BodySection({ section, lang }: { section: LLMSection; lang: Language }) {
   const paragraphs = Array.isArray(section.content)
     ? section.content
     : section.content
@@ -146,6 +147,22 @@ function BodySection({ section }: { section: LLMSection }) {
           dangerouslySetInnerHTML={{ __html: c.text }}
         />
       ))}
+      {section.affiliateLinks && section.affiliateLinks.length > 0 && (
+        <div className="flex flex-wrap gap-2.5 my-5">
+          {section.affiliateLinks.map((link, i) => (
+            <AffiliateLink
+              key={i}
+              url={link.url}
+              productName={link.productName}
+              productCategory={link.productCategory}
+              priceRange={link.priceRange}
+              lang={lang}
+              label={link.label}
+              variant="button"
+            />
+          ))}
+        </div>
+      )}
     </section>
   )
 }
@@ -294,7 +311,7 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
 
         {/* Body sections */}
         {bodySections.map(([sectionKey, section]) => (
-          <BodySection key={sectionKey} section={section} />
+          <BodySection key={sectionKey} section={section} lang={lang} />
         ))}
 
         {/* FAQ */}

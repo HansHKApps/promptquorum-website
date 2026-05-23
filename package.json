@@ -14,7 +14,9 @@
     "brand-images": "node scripts/brand-images.mjs",
     "generate:seo-registry": "node scripts/generate-seo-registry.mjs",
     "seo:log": "node scripts/seo-log-change.mjs",
-    "test:cluster-noindex": "node scripts/test-cluster-noindex.mjs"
+    "test:cluster-noindex": "node scripts/test-cluster-noindex.mjs",
+    "check:affiliate-links": "node scripts/check-affiliate-links.mjs",
+    "test:affiliate-clicks": "node scripts/test-affiliate-clicks.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

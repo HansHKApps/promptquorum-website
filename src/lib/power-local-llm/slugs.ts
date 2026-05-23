@@ -66,6 +66,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-monitors-ai-development-2026':           'best-monitors-ai-development-2026',
   'best-laptops-local-llm-2026':                 'best-laptops-local-llm-2026',
   'best-ai-courses-certifications-2026':         'best-ai-courses-certifications-2026',
+  'best-affiliate-tools-ai-developers-2026':     'best-affiliate-tools-ai-developers-2026',
 
   // Category 9 — Voice, Speech & Multimodal
   'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',
@@ -73,5 +74,4 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-tts-voice-cloning-piper-coqui-xtts':    'local-tts-voice-cloning-piper-coqui-xtts',
   'build-local-voice-assistant-2026':             'build-local-voice-assistant-2026',
   'local-multimodal-pipeline-voice-vision-text':  'local-multimodal-pipeline-voice-vision-text',
-  'best-affiliate-tools-ai-developers-2026':      'best-affiliate-tools-ai-developers-2026',
 }

@@ -55,6 +55,9 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-llm-right-now',
   // Cluster H — Privacy & Compliance
   'best-vpn-downloading-ai-models',
+  'is-deepseek-gdpr-safe',
+  'is-qwen-gdpr-compliant',
+  'can-local-llm-help-gdpr',
   // New bites — zero-click gap coverage
   'best-quantization-6gb-vram',
   'mistral-small-24b-vs-qwen-14b-vs-llama-8b',
