@@ -55,6 +55,10 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-llm-right-now',
   // Cluster H — Privacy & Compliance
   'best-vpn-downloading-ai-models',
+  // New bites — zero-click gap coverage
+  'best-quantization-6gb-vram',
+  'mistral-small-24b-vs-qwen-14b-vs-llama-8b',
+  'strix-halo-ollama-vulkan',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true

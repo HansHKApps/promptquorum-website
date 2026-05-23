@@ -23,6 +23,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'how-much-ram-for-7b-model',
       'vram-for-70b-model',
       'best-local-llm-6gb-vram',
+      'best-quantization-6gb-vram',
     ],
   },
   {
@@ -66,6 +67,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-14b-models-coding',
       'best-mini-pc-for-local-llm',
       'best-moe-models-local-coding',
+      'mistral-small-24b-vs-qwen-14b-vs-llama-8b',
     ],
   },
   {
@@ -84,6 +86,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'runpod-vs-vastai-pricing',
       'cloud-gpu-cost-per-hour',
       'best-egpu-ollama-macbook',
+      'strix-halo-ollama-vulkan',
     ],
   },
   {

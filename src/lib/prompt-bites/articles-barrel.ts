@@ -47,6 +47,9 @@ import { article as bestVpnDownloadingAiModels } from './articles/best-vpn-downl
 import { article as mlxVsOllamaVsLlamacpp } from './articles/mlx-vs-ollama-vs-llamacpp'
 import { article as convertOllamaModelToMlx } from './articles/convert-ollama-model-to-mlx'
 import { article as ollamaMlxAppleSilicon } from './articles/ollama-mlx-apple-silicon'
+import { article as bestQuantization6gbVram } from './articles/best-quantization-6gb-vram'
+import { article as mistralSmall24bVsQwen14bVsLlama8b } from './articles/mistral-small-24b-vs-qwen-14b-vs-llama-8b'
+import { article as strixHaloOllamaVulkan } from './articles/strix-halo-ollama-vulkan'
 
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
@@ -95,4 +98,7 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   mlxVsOllamaVsLlamacpp,
   convertOllamaModelToMlx,
   ollamaMlxAppleSilicon,
+  bestQuantization6gbVram,
+  mistralSmall24bVsQwen14bVsLlama8b,
+  strixHaloOllamaVulkan,
 }

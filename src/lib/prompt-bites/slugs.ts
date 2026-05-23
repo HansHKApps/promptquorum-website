@@ -62,4 +62,9 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'is-deepseek-gdpr-safe':                'isDeepseekGdprSafe',
   'can-local-llm-help-gdpr':              'canLocalLlmHelpGdpr',
   'best-vpn-downloading-ai-models':       'bestVpnDownloadingAiModels',
+
+  // New bites — zero-click gap coverage
+  'best-quantization-6gb-vram':           'bestQuantization6gbVram',
+  'mistral-small-24b-vs-qwen-14b-vs-llama-8b': 'mistralSmall24bVsQwen14bVsLlama8b',
+  'strix-halo-ollama-vulkan':             'strixHaloOllamaVulkan',
 }
