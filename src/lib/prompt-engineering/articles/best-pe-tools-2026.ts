@@ -10,7 +10,7 @@ export const article: Record<Language, PEArticle> = {
     en: {
       theme: 'Tools & Platforms',
       title: 'Best Prompt Engineering Tools 2026: Ranked by Use Case',
-      seoTitle: 'Best Prompt Engineering Tools 2026: 6 Tools Ranked',
+      seoTitle: 'Best Prompt Engineering Tools 2026: Ranked by Problem Type',
       metaDescription: 'Promptfoo is free. Braintrust starts at $249/mo. Vellum at $500. Side-by-side comparison of 6 PE tools ranked by the problem they solve in 2026.',
       ogTitle: '6 Prompt Engineering Tools Ranked — Which Solves Your Bottleneck?',
       ogDescription: 'Evaluation, testing, versioning, production, multi-model dispatch. One tool per job. Side-by-side comparison table inside.',

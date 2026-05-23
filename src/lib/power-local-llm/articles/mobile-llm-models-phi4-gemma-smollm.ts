@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: 'Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
-    seoTitle: 'Best Mobile LLM Models 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
+    seoTitle: 'Best Mobile LLM 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
     intro:
       'Six small language models cover almost every mobile use case in 2026: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 2.5 1.5B, and Llama 3.2 3B. They differ on tokens-per-second, memory footprint, and quality on chat, summarisation, translation, and short-form drafting. This guide ranks them on iPhone 17 Pro and Galaxy S25 Ultra, gives a per-tier verdict (flagship / mid-range / budget), and explains why Q4_K_M quantisation is the default for mobile.',
     metaDescription:
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Sechs kleine Sprachmodelle decken 2026 nahezu jeden mobilen Anwendungsfall ab: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 2.5 1.5B und Llama 3.2 3B. Sie unterscheiden sich in Tokens pro Sekunde, Speicherbedarf und Qualität bei Chat, Zusammenfassung, Übersetzung und kurzem Texterstellen. Dieser Leitfaden vergleicht die Modelle auf iPhone 17 Pro und Galaxy S25 Ultra, liefert ein Urteil je Geräteklasse (Flaggschiff / Mittelklasse / Budget) und erklärt, warum Q4_K_M-Quantisierung der Standard für Mobilgeräte ist.',
     metaDescription:
-      'Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1,7B, Qwen 2,5 1,5B und Llama 3.2 3B für Smartphones 2026 benchmarkt: Geschwindigkeit, RAM und Qualität im direkten Vergleich.',
+      'Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 2.5 1.5B und Llama 3.2 3B: Smartphone-Benchmark 2026. Geschwindigkeit, RAM und Qualität im Vergleich.',
     twitterDescription:
       'Beste mobile LLMs 2026: Phi-4 Mini (klügster), SmolLM 2 (schnellster), Qwen 2,5 (mehrsprachig), Gemma 3 1B (ältere Geräte), Gemma 3 4B (ausgewogen), Llama 3.2 3B (Allrounder).',
     current_models_mentioned: [

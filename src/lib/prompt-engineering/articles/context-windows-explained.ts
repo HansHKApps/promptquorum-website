@@ -14,7 +14,7 @@ export const article: Record<Language, PEArticle> = {
       title: 'Context Windows Explained: Why AI Forgets (and What to Do)',
       intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.',
       publishDate: '2026-03-22',
-      seoTitle: 'Context Windows 2026: Why AI Forgets & How to Fix It',
+      seoTitle: 'LLM Context Window Sizes 2026: GPT-4o 128k, Claude 200k',
       metaDescription: 'Context windows cap LLM input — exceed the limit and older messages drop silently. Here\'s how to stay in control for GPT-4o, Claude Opus 4.7, and Ollama.',
       readTime: '11 min read',
       educationalLevel: 'Beginner',
@@ -58,7 +58,7 @@ export const article: Record<Language, PEArticle> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets',
+        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=en',
         inLanguage: 'en',
         headline: 'Context Windows Explained: Why AI Forgets (and What to Do)',
         description: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts, and practical strategies to manage context windows across models.',
@@ -324,7 +324,7 @@ export const article: Record<Language, PEArticle> = {
       intro: 'LLMは長期記憶を持たず、最近のトークンのスライディングウィンドウのみを「見て」います。AIがコンテキストを忘れる理由、制限内にとどまるようにプロンプトを構成する方法、クラウドおよびローカルモデル間でコンテキストウィンドウを管理する方法を学びます。',
       publishDate: '2026-03-22',
       seoTitle: 'コンテキストウィンドウ2026：AIが忘れる理由と対処法',
-      metaDescription: 'コンテキストウィンドウがLLM処理を制限。AIが忘れる理由、最大化方法、Claude・GPT-4o・Ollamaのトークン数える技能を学びます。',
+      metaDescription: 'コンテキストウィンドウがLLM処理を制限。GPT-4oは128kトークン、Claude Opus 4.7は200kトークン。AIが忘れる理由、最大化方法、トークン管理を解説します。',
       readTime: '11分で読める',
       educationalLevel: 'Beginner',
       schema: {
@@ -395,7 +395,7 @@ export const article: Record<Language, PEArticle> = {
       intro: 'LLM没有长期记忆——它们只能"看到"最近令牌的滑动窗口。了解AI为什么会忘记上下文，如何结构化提示以保持在限制内，以及如何在云和本地模型之间管理上下文窗口。',
       publishDate: '2026-03-22',
       seoTitle: '上下文窗口2026：AI遗忘成因、Token限制与优化方法',
-      metaDescription: '上下文窗口限制LLM文本处理量。了解AI为什么忘记，最大化上下文窗口，学习Claude、GPT-4o、Ollama令牌计数技能。',
+      metaDescription: '上下文窗口限制LLM输入量：GPT-4o支持128k令牌，Claude Opus 4.7支持200k令牌。了解AI遗忘原因，掌握GPT-4o和Ollama的令牌管理技巧。',
       readTime: '阅读约11分钟',
       educationalLevel: 'Beginner',
       schema: {
