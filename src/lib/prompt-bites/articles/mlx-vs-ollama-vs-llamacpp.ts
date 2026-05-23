@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['Apple M5 Pro', 'Apple Silicon', 'NVIDIA GPU'],
     educationalLevel: 'Intermediate',
     audience: 'Developers choosing between MLX, Ollama, and llama.cpp for local inference',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
     siblingBites: ['ollama-vs-lm-studio', 'convert-ollama-model-to-mlx', 'ollama-mlx-apple-silicon'],
     is_living_page: false,
     quickAnswerTop: {

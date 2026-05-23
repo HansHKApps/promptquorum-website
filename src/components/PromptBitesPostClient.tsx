@@ -59,10 +59,86 @@ const KEY_TAKEAWAYS_LABEL: Record<Language, string> = {
   zh: '关键要点',
 }
 
+const GO_DEEPER_HEADING: Record<Language, string> = {
+  en: 'Want the full breakdown?',
+  de: 'Den vollständigen Überblick?',
+  fr: 'Vous voulez les détails complets ?',
+  ja: '詳しく読みたいですか？',
+  zh: '想了解完整详情？',
+}
+
+const READ_FULL_GUIDE: Record<Language, string> = {
+  en: 'Read the complete guide →',
+  de: 'Die vollständige Anleitung lesen →',
+  fr: 'Lire le guide complet →',
+  ja: 'コンプリートガイドを読む →',
+  zh: '阅读完整指南 →',
+}
+
+const RELATED_BITES_LABEL: Record<Language, string> = {
+  en: 'Related Prompt Bites',
+  de: 'Verwandte Prompt Bites',
+  fr: 'Prompt Bites associés',
+  ja: '関連する Prompt Bites',
+  zh: '相关 Prompt Bites',
+}
+
 const EDUCATIONAL_LEVEL: Record<string, Record<Language, string>> = {
   Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级' },
   Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级' },
   Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级' },
+}
+
+function GoDeeper({ parentArticle, siblingBites, lang }: {
+  parentArticle?: string
+  siblingBites?: string[]
+  lang: Language
+}) {
+  if (!parentArticle && (!siblingBites || siblingBites.length === 0)) return null
+  const langSuffix = lang !== 'en' ? `?lang=${lang}` : ''
+  return (
+    <div className="mt-10 border-t border-primary/10 pt-8 space-y-6">
+      {parentArticle && (
+        <div className="rounded-xl border border-primary/20 bg-primary/5 p-5">
+          <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
+            {GO_DEEPER_HEADING[lang]}
+          </p>
+          <Link
+            href={`${parentArticle}${langSuffix}`}
+            className="text-sm font-semibold text-primary hover:underline"
+          >
+            {READ_FULL_GUIDE[lang]}
+          </Link>
+        </div>
+      )}
+      {siblingBites && siblingBites.length > 0 && (
+        <div>
+          <p className="text-xs font-bold uppercase tracking-widest text-text-secondary mb-3">
+            {RELATED_BITES_LABEL[lang]}
+          </p>
+          <ul className="space-y-2">
+            {siblingBites.map((slug) => {
+              const key = PROMPT_BITES_SLUG_TO_KEY[slug]
+              const sibArticle = key ? promptBitesContent[key] : undefined
+              const sibData = sibArticle?.[lang] ?? sibArticle?.['en']
+              const title = sibData?.title ?? slug
+              return (
+                <li key={slug}>
+                  <Link
+                    href={`/prompt-bites/${slug}${langSuffix}`}
+                    className="flex gap-2 text-sm text-text-secondary hover:text-primary transition-colors"
+                  >
+                    <span className="text-primary mt-0.5 flex-shrink-0">▸</span>
+                    <span>{title}</span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      )}
+    </div>
+  )
 }
 
 function mdLinksToHtml(text: string): string {
@@ -233,6 +309,8 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
   const quickAnswer = (article as any).quickAnswerTop?.[lang] ?? (article as any).quickAnswerTop?.['en']
   const bullets: string[] = quickAnswer?.bullets ?? []
   const sections = article.sections ?? {}
+  const parentArticle = (article as any).parentArticle as string | undefined
+  const siblingBites = (article as any).siblingBites as string[] | undefined
 
   const tldrSection = sections['tldr']
   const faqSection = sections['faq']
@@ -326,8 +404,11 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
           <FaqSection title={faqSection.title} faqs={faqSection.faqs} lang={lang} />
         )}
 
+        {/* Go deeper */}
+        <GoDeeper parentArticle={parentArticle} siblingBites={siblingBites} lang={lang} />
+
         {/* Back to hub */}
-        <div className="mt-12 pt-8 border-t border-primary/10">
+        <div className="mt-8 pt-8 border-t border-primary/10">
           <Link
             href={promptBitesHubHref(lang)}
             className="text-sm text-primary hover:underline"

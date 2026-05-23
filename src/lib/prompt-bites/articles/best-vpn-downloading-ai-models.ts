@@ -16,6 +16,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Privacy-conscious users downloading large open-weight LLMs',
     affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/best-vpn-ai-privacy-local-llm-2026',
     siblingBites: ['is-deepseek-gdpr-safe', 'is-qwen-gdpr-compliant'],
     is_living_page: false,
     leadAnswerBlock:

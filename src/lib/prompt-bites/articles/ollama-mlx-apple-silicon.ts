@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['Apple Silicon', 'Apple M1', 'Apple M2', 'Apple M3', 'Apple M4'],
     educationalLevel: 'Beginner',
     audience: 'Mac users wondering whether Ollama uses MLX for acceleration',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
     siblingBites: ['mlx-vs-ollama-vs-llamacpp', 'convert-ollama-model-to-mlx', 'ollama-vs-lm-studio'],
     is_living_page: false,
     quickAnswerTop: {

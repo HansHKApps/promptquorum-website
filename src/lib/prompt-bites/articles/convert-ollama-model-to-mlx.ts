@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['Apple Silicon'],
     educationalLevel: 'Intermediate',
     audience: 'Mac developers wanting MLX-format models from the Ollama ecosystem',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
     siblingBites: ['mlx-vs-ollama-vs-llamacpp', 'ollama-mlx-apple-silicon', 'ollama-vs-lm-studio'],
     is_living_page: false,
     quickAnswerTop: {

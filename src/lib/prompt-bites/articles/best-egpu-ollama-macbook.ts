@@ -16,6 +16,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'MacBook owners considering an eGPU to accelerate Ollama',
     affiliateDisclosure: true,
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
     siblingBites: ['mac-mini-m4-local-llm', 'best-budget-ai-laptop-under-1000'],
     is_living_page: false,
     leadAnswerBlock:

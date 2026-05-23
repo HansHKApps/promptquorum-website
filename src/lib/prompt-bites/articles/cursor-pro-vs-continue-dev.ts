@@ -16,6 +16,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Developers choosing an AI coding assistant for VS Code-class workflows',
     affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/replace-github-copilot-with-local-llm',
     siblingBites: ['best-frontend-for-ollama', 'jan-vs-lm-studio'],
     is_living_page: false,
     leadAnswerBlock:
