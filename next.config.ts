@@ -60,6 +60,23 @@ const nextConfig: NextConfig = {
         destination: '/prompt-engineering/rag-explained',
         permanent: true,
       },
+      // Slug fix: short apple-silicon slug missing -m5-max suffix
+      {
+        source: '/local-llms/running-70b-models-apple-silicon',
+        destination: '/local-llms/running-70b-models-apple-silicon-m5-max',
+        permanent: true,
+      },
+      // English-only pages: no /{lang}/* routes exist; sitemap bug caused Google to crawl these
+      {
+        source: '/:lang(de|fr|ja|zh)/waitlist',
+        destination: '/waitlist?lang=:lang',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh)/image-license',
+        destination: '/image-license',
+        permanent: true,
+      },
     ]
   },
   async rewrites() {

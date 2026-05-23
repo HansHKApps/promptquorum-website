@@ -148,6 +148,11 @@ type Page = {
   lastmod: string
 }
 
+// Pages that exist only at the English canonical URL — no /{lang}/path routes.
+// Listing these with path-prefix alternates in the sitemap causes Google to crawl
+// non-existent URLs (e.g. /de/waitlist) and receive 404s.
+const ENGLISH_ONLY_PATHS = new Set(['/waitlist', '/image-license'])
+
 const STATIC_PAGES: Page[] = [
   { path: '', priority: 1.0, changefreq: 'weekly', lastmod: '2026-03-16' },
   { path: '/compare', priority: 0.9, changefreq: 'weekly', lastmod: '2026-03-14' },
@@ -270,6 +275,18 @@ export async function GET() {
     if (isExcluded(path)) return
 
     const pageImages = getImagesForPage(path)
+
+    // English-only pages: emit a single entry without lang-prefix variants so
+    // Google doesn't crawl /{lang}/path URLs that don't exist.
+    if (ENGLISH_ONLY_PATHS.has(path)) {
+      xml += '  <url>\n'
+      xml += `    <loc>${escapeXml(`${BASE}${path}`)}</loc>\n`
+      xml += `    <lastmod>${lastmod}</lastmod>\n`
+      xml += `    <changefreq>${changefreq}</changefreq>\n`
+      xml += `    <priority>${priority}</priority>\n`
+      xml += '  </url>\n'
+      return
+    }
 
     languages.forEach((lang) => {
       const langPath = lang === 'en' ? path : (path === '' ? `/${lang}` : `/${lang}${path}`)
