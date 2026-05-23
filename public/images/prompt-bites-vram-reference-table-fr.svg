@@ -18,10 +18,10 @@
 
   <!-- Table header row -->
   <rect x="20" y="45" width="760" height="28" class="header" rx="4"/>
-  <text x="30" y="63" class="header">Niveau VRAM</text>
-  <text x="140" y="63" class="header">Meilleur modèle</text>
-  <text x="380" y="63" class="header">Quantification</text>
-  <text x="570" y="63" class="header">Cas d'utilisation</text>
+  <text x="30" y="63" style="fill: #FFFFFF;" class="header">Niveau VRAM</text>
+  <text x="140" y="63" style="fill: #FFFFFF;" class="header">Meilleur modèle</text>
+  <text x="380" y="63" style="fill: #FFFFFF;" class="header">Quantification</text>
+  <text x="570" y="63" style="fill: #FFFFFF;" class="header">Cas d'utilisation</text>
 
   <!-- Row 1: 4GB -->
   <rect x="20" y="73" width="760" height="26" class="row-alt" class="border"/>

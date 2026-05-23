@@ -12,7 +12,7 @@
       .check { fill: #4CAF50; font-weight: 600; font-size: 12px; }
       .x { fill: #F44336; font-weight: 600; font-size: 12px; }
       .partial { fill: #FF9800; font-weight: 600; font-size: 12px; }
-      .border { stroke: #E0E0E0; stroke-width: 1; }
+      .border { stroke: #E0E0E0; stroke-width: 1; fill: #FFFFFF; }
     </style>
   </defs>
 
@@ -27,13 +27,13 @@
   <text x="110" y="60" class="feature" text-anchor="middle">功能</text>
 
   <rect x="200" y="40" width="180" height="30" class="header" rx="4"/>
-  <text x="290" y="60" class="header" text-anchor="middle">Ollama</text>
+  <text x="290" y="60" style="fill: #FFFFFF;" class="header" text-anchor="middle">Ollama</text>
 
   <rect x="380" y="40" width="180" height="30" class="header" rx="4"/>
-  <text x="470" y="60" class="header" text-anchor="middle">LM Studio</text>
+  <text x="470" y="60" style="fill: #FFFFFF;" class="header" text-anchor="middle">LM Studio</text>
 
   <rect x="560" y="40" width="220" height="30" class="header" rx="4"/>
-  <text x="670" y="60" class="header" text-anchor="middle">Jan</text>
+  <text x="670" y="60" style="fill: #FFFFFF;" class="header" text-anchor="middle">Jan</text>
 
   <!-- Row 1: CLI Interface -->
   <rect x="20" y="70" width="180" height="25" class="border"/>
