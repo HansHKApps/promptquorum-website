@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'annual',
     specific_year: 2026,
-    theme: 'Hardware Comparison',
+    theme: 'Overview & Reference',
     affiliateDisclosure: true,
     publishDate: '2026-05-24',
     dateModified: '2026-05-24',
