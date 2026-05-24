@@ -2,6 +2,8 @@ node_modules/
 out/
 .next/
 /app/
+.env
+.env.local
 public/data/seo-registry.json
 tsconfig.tsbuildinfo
 

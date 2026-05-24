@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { createHmac } from 'crypto'
+import { Ratelimit } from '@upstash/ratelimit'
+import { Redis } from '@upstash/redis'
+import { makeToken } from '@/lib/token'
 
 type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
@@ -60,14 +62,36 @@ const EMAIL_CONTENT: Record<Lang, {
   },
 }
 
-function makeToken(email: string): string {
-  return createHmac('sha256', process.env.RESEND_API_KEY!)
-    .update(email.toLowerCase().trim())
-    .digest('hex')
-}
+const redis = new Redis({
+  url: process.env.UPSTASH_REDIS_REST_URL!,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
+})
+
+const ipLimiter = new Ratelimit({
+  redis,
+  limiter: Ratelimit.slidingWindow(10, '1 h'),
+  prefix: 'rl:waitlist:ip',
+})
+
+const emailLimiter = new Ratelimit({
+  redis,
+  limiter: Ratelimit.slidingWindow(3, '1 h'),
+  prefix: 'rl:waitlist:email',
+})
 
 export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY)
+
+  // IP rate limit: 10 req/hour
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? '127.0.0.1'
+  const ipResult = await ipLimiter.limit(ip)
+  if (!ipResult.success) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      { status: 429, headers: { 'Retry-After': '3600' } }
+    )
+  }
+
   try {
     const body = await req.json()
     const email: string = (body.email ?? '').toLowerCase().trim()
@@ -82,6 +106,15 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Consent required.' }, { status: 400 })
     }
 
+    // Per-email rate limit: 3 req/hour
+    const emailResult = await emailLimiter.limit(email)
+    if (!emailResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests for this email. Please try again later.' },
+        { status: 429, headers: { 'Retry-After': '3600' } }
+      )
+    }
+
     // Add to Resend Audience — unsubscribed until they confirm (double opt-in)
     const contactResult = await resend.contacts.create({
       audienceId: process.env.RESEND_AUDIENCE_ID!,
@@ -90,6 +123,10 @@ export async function POST(req: NextRequest) {
     })
     if (contactResult.error) {
       console.error('[waitlist] contacts.create error:', contactResult.error)
+      return NextResponse.json(
+        { error: 'Could not register email. Please try again.' },
+        { status: 500 }
+      )
     }
 
     // Build confirmation link

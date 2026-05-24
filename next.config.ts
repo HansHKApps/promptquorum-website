@@ -127,23 +127,18 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // OG images are fetched cross-origin by social crawlers and link previewers
+        source: '/api/og/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+        ],
+      },
+      {
         source: '/:path*',
         headers: [
           {
             key: 'Content-Security-Policy',
             value: cspHeader,
-          },
-          {
-            key: 'Access-Control-Allow-Origin',
-            value: '*',
-          },
-          {
-            key: 'Access-Control-Allow-Methods',
-            value: 'GET, HEAD, OPTIONS, PUT',
-          },
-          {
-            key: 'Access-Control-Allow-Headers',
-            value: 'Content-Type',
           },
           {
             key: 'Cache-Control',

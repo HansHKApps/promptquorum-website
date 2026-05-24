@@ -1,14 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { createHmac, timingSafeEqual } from 'crypto'
+import { timingSafeEqual } from 'crypto'
+import { makeToken } from '@/lib/token'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.promptquorum.com'
-
-function makeToken(email: string): string {
-  return createHmac('sha256', process.env.RESEND_API_KEY!)
-    .update(email.toLowerCase().trim())
-    .digest('hex')
-}
 
 function safeCompare(a: string, b: string): boolean {
   try {

@@ -1,18 +1,24 @@
 import { submitToBingIndexNow } from '@/lib/indexnow'
 import { NextRequest, NextResponse } from 'next/server'
+import { timingSafeEqual } from 'crypto'
 
-/**
- * API endpoint for submitting URLs to Bing IndexNow
- *
- * POST /api/indexnow
- * Body: { urls: string[] }
- *
- * Example:
- * curl -X POST http://localhost:3000/api/indexnow \
- *   -H "Content-Type: application/json" \
- *   -d '{"urls": ["https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt"]}'
- */
 export async function POST(request: NextRequest) {
+  // Auth gate: caller must supply X-IndexNow-Secret matching INDEXNOW_SECRET env var
+  const provided = request.headers.get('x-indexnow-secret') ?? ''
+  const expected = process.env.INDEXNOW_SECRET ?? ''
+  let authorized = false
+  try {
+    authorized =
+      provided.length > 0 &&
+      provided.length === expected.length &&
+      timingSafeEqual(Buffer.from(provided), Buffer.from(expected))
+  } catch {
+    authorized = false
+  }
+  if (!authorized) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   try {
     const body = await request.json()
     const { urls } = body
