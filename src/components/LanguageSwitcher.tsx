@@ -32,6 +32,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
 
   const handleLanguageChange = (lang: Language) => {
     window.umami?.track('language_switch', { from_lang: currentLang, to_lang: lang })
+    document.cookie = `pq_lang=${lang}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`
     // Path-prefix-routed clusters for ALL non-EN langs (e.g. power-local-llm).
     // Keep in sync with PATH_LOCALE_CLUSTERS in src/middleware.ts.
     const PATH_LOCALE_CLUSTERS = ['power-local-llm', 'prompt-bites']

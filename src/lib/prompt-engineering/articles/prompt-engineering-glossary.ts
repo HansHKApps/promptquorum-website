@@ -76,7 +76,7 @@ export const article: Record<Language, PEArticle> = {
             { 'Term': 'Context engineering', 'What it means': 'Discipline of deciding *what* fills the context window (system prompt, memory, retrieved docs, tool outputs, history), not just *how* the instructions are written; crucial for agents and RAG.', 'Sources & references': '[Firecrawl Blog](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings), [KeepMyPrompts 2026](https://www.keepmyprompts.com/blog/en/prompt-engineering-guide-2026)', 'wikidataId': ''},
           ],
           image: '/images/glossary-prompting-taxonomy-en.svg',
-          imageCaption: 'Image for corePrompting',
+          imageCaption: 'Core prompt engineering concepts: zero-shot, few-shot, chain-of-thought, and system prompts illustrated with example structures.',
         },
         agentsOrchestration: {
           title: 'Agents & Orchestration',
@@ -104,7 +104,7 @@ export const article: Record<Language, PEArticle> = {
             { 'Term': 'Producer-reviewer loop', 'What it means': 'Orchestration pattern where one agent produces a draft (code, text, plan) and another agent reviews, critiques, and requests revisions until quality or safety thresholds are met.', 'Sources & references': '[Multi-agent patterns video](https://www.youtube.com/watch?v=l_i7icCA56c), [GetStream – Orchestration](https://getstream.io/glossary/ai-agent-orchestration/), [IBM – Orchestration tutorial](https://www.ibm.com/think/tutorials/llm-agent-orchestration-with-langchain-and-granite)', 'wikidataId': ''},
           ],
           image: '/images/glossary-agent-diagram-en.svg',
-          imageCaption: 'Image for agentsOrchestration',
+          imageCaption: 'LLM agent orchestration overview: tool use, ReAct loops, planner-executor patterns and multi-agent coordination.',
         },
         safetyAlignment: {
           title: 'Safety & Alignment',
@@ -122,7 +122,7 @@ export const article: Record<Language, PEArticle> = {
             { 'Term': 'Constitutional AI', 'What it means': 'Alignment method where the model follows an explicit "constitution" of written principles, critiques its own outputs against them, and revises responses to better follow those principles.', 'Sources & references': '[Anthropic – Constitutional AI](https://www.anthropic.com/news/constitutional-ai), [Anthropic – Research paper](https://www.anthropic.com/research), [Zendesk – AI glossary](https://www.zendesk.com/blog/generative-ai-glossary/)', 'wikidataId': ''},
           ],
           image: '/images/glossary-alignment-terms-en.svg',
-          imageCaption: 'Image for safetyAlignment',
+          imageCaption: 'LLM safety and alignment glossary: RLHF, constitutional AI, jailbreak defenses and red-teaming workflows.',
         },
         evalsTesting: {
           title: 'Evaluation & Testing',

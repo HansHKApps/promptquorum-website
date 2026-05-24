@@ -51,7 +51,7 @@ export const article: Record<Language, PEArticle> = {
             'Each step has a clear input, a clear output format, and a narrow responsibility. The chain as a whole behaves more like a pipeline or workflow than a chat, which makes it easier to debug, maintain, and reuse.',
           ],
                   image: '/images/prompt-chaining-basic-flow-en.svg',
-          imageCaption: 'Image for whatIsPromptChaining',
+          imageCaption: 'Diagram showing how prompt chaining splits a complex task into sequential LLM calls with intermediate outputs feeding the next step.',
           },
         whyItMatters: {
           title: 'Why Prompt Chaining Matters',
@@ -70,7 +70,7 @@ export const article: Record<Language, PEArticle> = {
             'For teams, prompt chains become building blocks in larger AI systems rather than one-off conversations.',
           ],
                   image: '/images/prompt-chaining-patterns-en.svg',
-          imageCaption: 'Image for typicalPatterns',
+          imageCaption: 'Typical prompt chaining patterns: sequential, branching, and map-reduce workflows used in production LLM pipelines.',
           },
         keyTakeaways: {
           title: 'Key Takeaways',
@@ -113,7 +113,7 @@ export const article: Record<Language, PEArticle> = {
             'You can implement these chains synchronously (step by step in a single session) or as separate jobs orchestrated by your application.',
           ],
           image: '/images/prompt-chaining-example-en.svg',
-          imageCaption: 'Image for example',
+          imageCaption: 'Worked example of a prompt chain: extract entities, classify intent, then generate a structured response in three LLM steps.',
         },
         example: {
           title: 'Example: Single Prompt vs Prompt Chain',
@@ -389,7 +389,7 @@ export const article: Record<Language, PEArticle> = {
             'Jeder Schritt hat eine klare Eingabe, ein klares Ausgabeformat und eine eng begrenzte Verantwortung. Die Kette insgesamt verhält sich mehr wie eine Pipeline oder ein Workflow als ein Chat, was Debugging, Wartung und Wiederverwendung erleichtert.',
           ],
           image: '/images/prompt-chaining-basic-flow-en.svg',
-          imageCaption: 'Image for whatIsPromptChaining',
+          imageCaption: 'Diagram showing how prompt chaining splits a complex task into sequential LLM calls with intermediate outputs feeding the next step.',
         },
         whyItMatters: {
           title: 'Warum Prompt Chaining Wichtig ist',
@@ -408,7 +408,7 @@ export const article: Record<Language, PEArticle> = {
             'Für Teams werden Prompt Chains zu Bausteinen in größeren AI-Systemen, statt zu einmaligen Gesprächen.',
           ],
           image: '/images/prompt-chaining-patterns-en.svg',
-          imageCaption: 'Image for typicalPatterns',
+          imageCaption: 'Typical prompt chaining patterns: sequential, branching, and map-reduce workflows used in production LLM pipelines.',
         },
         keyTakeaways: {
           title: 'Zusammenfassung: Die Wichtigsten Erkenntnisse',
@@ -451,7 +451,7 @@ export const article: Record<Language, PEArticle> = {
             'Sie können diese Ketten synchron implementieren (Schritt für Schritt in einer einzigen Sitzung) oder als separate Jobs, die von Ihrer Anwendung orchestriert werden.',
           ],
           image: '/images/prompt-chaining-example-en.svg',
-          imageCaption: 'Image for example',
+          imageCaption: 'Worked example of a prompt chain: extract entities, classify intent, then generate a structured response in three LLM steps.',
         },
         example: {
           title: 'Beispiel: Einzelner Prompt vs. Prompt Chain',

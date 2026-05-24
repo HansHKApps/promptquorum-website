@@ -855,6 +855,7 @@ schema: {
           title: 'Grenze 2: Qualitätslücke — Lokale Modelle erreichen GPT-4o nicht',
           content: ['Lokale 7B-Modelle liegen bei Standard-Benchmarks (MMLU, HumanEval) 10–20 Punkte unter GPT-4o. Das klingt nicht viel, bedeutet in der Praxis aber: schwächeres Reasoning, häufigere Fehler bei Code und Mathe, weniger Nuancenverständnis.', 'Einschränkungen lokaler Modelle überschneiden sich mit allgemeinen LLM-Grenzen — Halluzinationen, Reasoning-Fehler und Wissens-Cutoffs betreffen alle Modelle unabhängig vom Deployment. Das vollständige Bild über das, was LLMs noch immer nicht zuverlässig können, bietet [KI-Einschränkungen: Was LLMs nicht können](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).'],
           image: '/images/local-llm-limitations-quality-benchmarks-de.svg',
+          imageCaption: 'Benchmark-Vergleich: Lokale LLMs wie Llama 3 8B vs. GPT-4 auf MMLU und HumanEval — Qualitätsunterschiede in Prozent.',
           columns: ['Modell', 'MMLU (allgemeines Wissen)', 'HumanEval (Python-Coding)'],
           rows: [
             { 'Modell': 'Lokal 7B', 'MMLU (allgemeines Wissen)': '62–68%', 'HumanEval (Python-Coding)': '45–55%' },
@@ -884,6 +885,7 @@ schema: {
           title: 'Grenze 1: Geschwindigkeit — Lokale CPU ist 4–10× langsamer',
           content: 'Dies ist die größte praktische Limitation. Lokale CPUs erzeugen 10–25 Token pro Sekunde. Cloud APIs liefern 80–150 Token/s. Für Nutzer fühlt sich das wie: lokal = mehrere Sekunden Wartezeit pro Antwort; Cloud = sofortige Antwort < 1 Sekunde.',
           image: '/images/local-llm-limitations-speed-comparison-de.svg'
+          imageCaption: 'Geschwindigkeitsvergleich: Tokens pro Sekunde bei lokalen LLMs auf CPU, Apple Silicon und NVIDIA-GPU.',
         },
         whenSpeedMatters: {
           title: 'Wann ist Geschwindigkeit kritisch?',
@@ -907,6 +909,7 @@ schema: {
           title: 'Grenze 3: Hardware — 16–40 GB RAM minimum',
           content: 'Lokale Modelle brauchen RAM. Eine 7B-Quantisierung (Q4_K_M) benötigt ~4 GB; eine 70B benötigt ~40 GB. Dazu kommt OS, Systemspeicher, Kontextfenster = mindestens 16 GB RAM sind praktisches Minimum. Das ist teuer (GPU: 2.310 €+, Mac Studio: 2.299 €+).',
           image: '/images/local-llm-limitations-hardware-requirements-de.svg'
+          imageCaption: 'Hardware-Anforderungen für lokale LLMs: RAM, VRAM und Speicherbedarf je Modellgröße (7B bis 70B).',
         },
         whenHardwareMatters: {
           title: 'Wann ist Hardware limitierend?',
@@ -977,6 +980,7 @@ schema: {
           title: 'Grenze 4: Einrichtungszeit — 20–40 Minuten lokal vs. 5 Minuten Cloud',
           content: 'Lokales Setup braucht Zeit: Ollama installieren (3 Min), Modell herunterladen (5–60 Min je nach Größe), GPU konfigurieren (5–10 Min). Cloud APIs: Email-Anmeldung (1 Min), API-Key kopieren (1 Min), erster API-Call (3 Min). Cloud gewinnt deutlich.',
           image: '/images/local-llm-limitations-setup-time-de.svg'
+          imageCaption: 'Setup-Zeit lokaler LLMs: Vom Modell-Download über Quantisierung bis zur ersten Inferenz in Minuten.',
         },
         whenSetupMatters: {
           title: 'Wann ist schnelle Einrichtung wichtig?',
@@ -1489,6 +1493,7 @@ schema: {
           title: 'Limitation 2 : écart de qualité — modèles locaux n\'atteignent pas GPT-4o',
           content: ['Modèles locaux 7B score 10–20 points sous GPT-4o sur benchmarks standard (MMLU, HumanEval). Cela semble peu, mais en pratique : raisonnement plus faible, erreurs plus fréquentes code et maths, compréhension moins nuancée.', 'Les limitations des modèles locaux recoupent les contraintes générales des LLM — hallucinations, échecs de raisonnement et coupures de connaissances affectent tous les modèles quel que soit le déploiement. Pour le tableau complet de ce que les LLM ne peuvent toujours pas faire de manière fiable, voir [limites de l\'IA : ce que les LLM ne peuvent pas faire](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).'],
           image: '/images/local-llm-limitations-quality-benchmarks-fr.svg',
+          imageCaption: 'Comparatif de benchmarks : LLM locaux (Llama 3 8B) face à GPT-4 sur MMLU et HumanEval — écart de qualité en pourcentage.',
           columns: ['Modèle', 'MMLU (connaissance générale)', 'HumanEval (code Python)'],
           rows: [
             { 'Modèle': 'Local 7B', 'MMLU (connaissance générale)': '62–68%', 'HumanEval (code Python)': '45–55%' },
@@ -1519,6 +1524,7 @@ schema: {
           title: 'Limitation 1 : vitesse — CPU local 4–10 fois plus lent',
           content: 'C\'est la plus grande limitation pratique. CPUs locaux génèrent 10–25 tokens par sec. Cloud APIs livrent 80–150 tokens/s. Pour utilisateurs : local = plusieurs secondes attente par réponse ; cloud = réponse immédiate < 1 sec.',
           image: '/images/local-llm-limitations-speed-comparison-fr.svg'
+          imageCaption: 'Comparaison de vitesse : tokens par seconde des LLM locaux sur CPU, Apple Silicon et GPU NVIDIA.',
         },
         whenSpeedMatters: {
           title: 'Quand la vitesse compte ?',
@@ -1542,6 +1548,7 @@ schema: {
           title: 'Limitation 3 : matériel — 16–40 GB RAM minimum',
           content: 'Modèles locaux exigent RAM. Quantisation 7B (Q4_K_M) needs ~4 GB ; 70B en needs ~40 GB. Ajoutez OS, mémoire système, fenêtre contexte = minimum 16 GB RAM est pratique. C\'est cher (GPU : 2 310 €+, Mac Studio : 2 499 €+).',
           image: '/images/local-llm-limitations-hardware-requirements-fr.svg'
+          imageCaption: 'Configuration matérielle pour les LLM locaux : RAM, VRAM et stockage selon la taille du modèle (7B à 70B).',
         },
         whenHardwareMatters: {
           title: 'Quand matériel est limitant ?',
@@ -1612,6 +1619,7 @@ schema: {
           title: 'Limitation 4 : temps config — 20–40 min local vs. 5 min cloud',
           content: 'Setup local prend temps : installer Ollama (3 min), télécharger modèle (5–60 min selon taille), configurer GPU (5–10 min). Cloud APIs : email signup (1 min), copier API key (1 min), premier appel API (3 min). Cloud gagne nettement.',
           image: '/images/local-llm-limitations-setup-time-fr.svg'
+          imageCaption: 'Temps d\'installation des LLM locaux : du téléchargement à la quantification jusqu\'à la première inférence.',
         },
         whenSetupMatters: {
           title: 'Quand setup rapide important ?',
@@ -2124,6 +2132,7 @@ schema: {
           title: '限界2：品質ギャップ — ローカルモデルは GPT-4o に及びません',
           content: ['ローカルの 7Bモデルは標準ベンチマーク（MMLU、HumanEval）で GPT-4o から10–20ポイント低い。少なく見えますが実際は ： 弱い推論、コード・数学エラー多い、微妙さの理解不足。', 'ローカルモデルの制約はより広いLLMの限界と重なります——ハルシネーション、推論の失敗、知識カットオフはデプロイ方法に関わらずすべてのモデルに影響します。LLMがいまだに確実にできないことの全体像は[AI制限：LLMにできないこと](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)をご覧ください。'],
           image: '/images/local-llm-limitations-quality-benchmarks-ja.svg',
+          imageCaption: 'ベンチマーク比較:ローカルLLM(Llama 3 8B)とGPT-4のMMLUおよびHumanEvalスコアの品質差。',
           columns: ['モデル', 'MMLU（一般知識）', 'HumanEval（Python コード）'],
           rows: [
             { 'モデル': 'Local 7B', 'MMLU（一般知識）': '62–68%', 'HumanEval（Python コード）': '45–55%' },
@@ -2154,6 +2163,7 @@ schema: {
           title: '限界1：速度 — ローカルCPUは4–10倍遅い',
           content: 'これが最大の実用的制約。ローカルCPU毎秒10–25トークン生成。Cloud API は80–150トークン/秒。ユーザー感覚 ： ローカル = 複数秒待機；クラウド = 即座 < 1秒。',
           image: '/images/local-llm-limitations-speed-comparison-ja.svg'
+          imageCaption: '速度比較:ローカルLLMのCPU、Apple Silicon、NVIDIA GPU上での1秒あたりトークン数。',
         },
         whenSpeedMatters: {
           title: '速度が重要な場合',
@@ -2177,6 +2187,7 @@ schema: {
           title: '限界3：ハードウェア — 16–40 GB RAM 最小',
           content: 'ローカルモデルは RAM 必要。7B 量子化（Q4_K_M）は約4GB；70Bは約40GB。OS、システムメモリ、コンテキスト追加 = 最低16 GB RAM が実用的。高い（GPU ： ¥270,000+、Mac Studio ： ¥348,800+）。',
           image: '/images/local-llm-limitations-hardware-requirements-ja.svg'
+          imageCaption: 'ローカルLLMのハードウェア要件:モデルサイズ(7B〜70B)別のRAM、VRAM、ストレージ容量。',
         },
         whenHardwareMatters: {
           title: 'ハードウェアが制限要因の場合',
@@ -2247,6 +2258,7 @@ schema: {
           title: '限界4：セットアップ時間 — 20–40分ローカル vs. 5分クラウド',
           content: 'ローカルセットアップに時間要 ： Ollama インストール（3分）、モデルダウンロード（5–60分、サイズによる）、GPU 設定（5–10分）。Cloud API ： メール登録（1分）、API キーコピー（1分）、最初の API 呼び出し（3分）。クラウド明らかに勝ち。',
           image: '/images/local-llm-limitations-setup-time-ja.svg'
+          imageCaption: 'ローカルLLMのセットアップ時間:モデルダウンロード、量子化、初回推論までの所要分数。',
         },
         whenSetupMatters: {
           title: 'セットアップ速度が重要な場合',
@@ -2659,6 +2671,7 @@ schema: {
           title: '限制2：质量差距——本地模型赶不上GPT-4o',
           content: ['本地7B模型在标准基准（MMLU、HumanEval）上比GPT-4o低10–20分。听起来不多，但实际上：推理弱、代码和数学错误多、细微理解不足。', '本地模型的限制与更广泛的LLM约束重叠——幻觉、推理失败和知识截止影响所有模型，无论如何部署。了解LLM至今仍无法可靠完成的完整内容，请参阅[AI局限性：LLM不能做什么](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)。'],
           image: '/images/local-llm-limitations-quality-benchmarks-zh.svg',
+          imageCaption: '基准测试对比:本地大模型(Llama 3 8B)与 GPT-4 在 MMLU 和 HumanEval 上的质量差距。',
           columns: ['模型', 'MMLU（一般知识）', 'HumanEval（Python编码）'],
           rows: [
             { '模型': '本地7B', 'MMLU（一般知识）': '62–68%', 'HumanEval（Python编码）': '45–55%' },
@@ -2689,6 +2702,7 @@ schema: {
           title: '限制1：速度——本地CPU慢4–10倍',
           content: '这是最大的实际限制。本地CPU每秒生成10–25个token。Cloud API每秒80–150。用户感觉：本地=多秒等待；云=即刻< 1秒。',
           image: '/images/local-llm-limitations-speed-comparison-zh.svg'
+          imageCaption: '速度对比:本地大模型在 CPU、Apple Silicon 与 NVIDIA GPU 上的每秒 token 数。',
         },
         whenSpeedMatters: {
           title: '速度重要的时候',
@@ -2712,6 +2726,7 @@ schema: {
           title: '限制3：硬件——最低16–40 GB RAM',
           content: '本地模型需要RAM。7B量子化（Q4_K_M）约4GB；70B约40GB。加上OS、系统内存、上下文=最低16 GB RAM是可用。成本高（GPU：$1,600+、Mac Studio：$2,000+）。',
           image: '/images/local-llm-limitations-hardware-requirements-zh.svg'
+          imageCaption: '本地大模型硬件需求:不同模型规模(7B 至 70B)所需的 RAM、显存与存储空间。',
         },
         whenHardwareMatters: {
           title: '硬件成为限制因素的时候',
@@ -2782,6 +2797,7 @@ schema: {
           title: '限制4：设置时间——本地20–40分钟vs云5分钟',
           content: '本地设置费时：安装Ollama（3分钟）、下载模型（5–60分钟，取决于大小）、配置GPU（5–10分钟）。Cloud API：邮件注册（1分钟）、复制API密钥（1分钟）、首次API调用（3分钟）。云明显赢。',
           image: '/images/local-llm-limitations-setup-time-zh.svg'
+          imageCaption: '本地大模型部署时间:从模型下载、量化到首次推理所需的分钟数。',
         },
         whenSetupMatters: {
           title: '快速设置重要的时候',

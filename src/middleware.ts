@@ -1,5 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+function detectLangFromHeader(acceptLanguage: string, supported: string[]): string | null {
+  return acceptLanguage
+    .split(',')
+    .map(p => { const [tag, q] = p.trim().split(';q='); return { lang: tag.split('-')[0].toLowerCase(), q: q ? parseFloat(q) : 1.0 } })
+    .sort((a, b) => b.q - a.q)
+    .map(p => p.lang)
+    .find(l => supported.includes(l)) ?? null
+}
+
 // Clusters routed via path-prefix locales for ALL non-EN langs (separate src/app/{de,fr,ja,zh}/<cluster>/ trees).
 // Keep in sync with PATH_LOCALE_CLUSTERS in src/components/LanguageSwitcher.tsx,
 // NOINDEX_PATH_PREFIXES in src/app/layout.tsx, and EXCLUDED_PATH_PREFIXES in src/app/sitemap.ts.
@@ -66,6 +75,24 @@ export function middleware(request: NextRequest) {
     redirectUrl.searchParams.set('lang', 'ja')
     console.log(`[Middleware] 301 redirect (jp→ja): ${url.toString()} -> ${redirectUrl.toString()}`)
     return NextResponse.redirect(redirectUrl, 301)
+  }
+
+  // Auto-detect browser language on first visit (no cookie, no explicit lang selection).
+  const pqLangCookie = request.cookies.get('pq_lang')?.value
+  const pathLocaleEarly = url.pathname.match(PATH_LOCALE_RE)?.[1]
+  const isStaticAsset = url.pathname.startsWith('/_next/') || url.pathname === '/favicon.ico'
+  if (!pathLocaleEarly && !langParam && !pqLangCookie && !isApiRoute && !isCronRoute && !isStaticAsset) {
+    const acceptLang = request.headers.get('accept-language') || ''
+    const detected = detectLangFromHeader(acceptLang, VALID_NON_EN_LANGS)
+    if (detected) {
+      const redirectUrl = url.clone()
+      redirectUrl.pathname = url.pathname === '/' ? `/${detected}` : `/${detected}${url.pathname}`
+      redirectUrl.searchParams.delete('lang')
+      const res = NextResponse.redirect(redirectUrl, 302)
+      res.cookies.set('pq_lang', detected, { path: '/', maxAge: 60 * 60 * 24 * 365, sameSite: 'lax' })
+      console.log(`[Middleware] 302 redirect (Accept-Language auto-detect ${detected}): ${url.toString()} -> ${redirectUrl.toString()}`)
+      return res
+    }
   }
 
   // PATH_LOCALE_CLUSTERS (all langs): rewrite legacy ?lang= links to path prefix.
@@ -139,6 +166,12 @@ export function middleware(request: NextRequest) {
   const lang = url.searchParams.get('lang') || 'en'
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
   const selectedLang = pathLocale ?? (validLangs.includes(lang) ? lang : 'en')
+
+  // Persist language choice in cookie so auto-detection only runs on first visit.
+  const cookieLang = request.cookies.get('pq_lang')?.value
+  if (selectedLang !== 'en' || !cookieLang) {
+    response.cookies.set('pq_lang', selectedLang, { path: '/', maxAge: 60 * 60 * 24 * 365, sameSite: 'lax' })
+  }
 
   // Add lang as header for layout.tsx to read
   response.headers.set('x-selected-lang', selectedLang)
