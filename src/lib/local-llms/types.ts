@@ -39,7 +39,7 @@ export interface LLMSection {
   callout?: string
   linuxCompatibility?: string
   whereToBuy?: string
-  subsections?: Array<{ title?: string; text?: string; content?: string; steps?: string[]; details?: { [key: string]: string }; providers?: string[]; list?: string[] }>
+  subsections?: Array<{ title?: string; text?: string; content?: string; steps?: string[]; details?: { [key: string]: string }; providers?: string[]; list?: string[]; columns?: string[]; rows?: Array<{ [key: string]: string }> }>
   links?: Array<{ url: string; title: string; description: string }>
   // Affiliate buying-guide fields
   affiliateLinks?: Array<{
