@@ -67,6 +67,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-laptops-local-llm-2026':                 'best-laptops-local-llm-2026',
   'best-ai-courses-certifications-2026':         'best-ai-courses-certifications-2026',
   'best-affiliate-tools-ai-developers-2026':     'best-affiliate-tools-ai-developers-2026',
+  'apple-mlx-vs-nvidia-cuda-local-llm-2026':     'apple-mlx-vs-nvidia-cuda-local-llm-2026',
 
   // Category 9 — Voice, Speech & Multimodal
   'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',
