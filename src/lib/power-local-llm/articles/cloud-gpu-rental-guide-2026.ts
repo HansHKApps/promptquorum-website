@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Sign up for RunPod',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs signup',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         items: [
           '[RunPod Pricing](https://www.runpod.io/pricing) — Official RunPod Secure Cloud and On-Demand hourly rates for RTX 4090, A100, and H100, used for the May 2026 snapshot.',
-          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/service/gpu-cloud) — Official Lambda Labs A100 and H100 on-demand rates and uptime SLA.',
+          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/instances) — Official Lambda Labs A100 and H100 on-demand rates and uptime SLA.',
           '[Vast.ai Pricing and Marketplace](https://vast.ai/pricing) — Vast.ai spot and on-demand marketplace rates, used for the May 2026 RTX 4090, A100, and H100 ranges.',
           '[Cloud GPU Rental Comparison 2026](/local-llms/cloud-gpu-rental-comparison-2026) — PromptQuorum testing: provider pricing, uptime, setup time, and GDPR data-residency analysis, verified monthly.',
         ],
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Bei RunPod registrieren',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs signup',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -812,7 +812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quellen',
         items: [
           '[RunPod Pricing](https://www.runpod.io/pricing) — Offizielle RunPod-Stundensätze für Secure Cloud und On-Demand für RTX 4090, A100 und H100, verwendet für die Momentaufnahme vom Mai 2026.',
-          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/service/gpu-cloud) — Offizielle On-Demand-Sätze von Lambda Labs für A100 und H100 sowie das Verfügbarkeits-SLA.',
+          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/instances) — Offizielle On-Demand-Sätze von Lambda Labs für A100 und H100 sowie das Verfügbarkeits-SLA.',
           '[Vast.ai Pricing and Marketplace](https://vast.ai/pricing) — Spot- und On-Demand-Marktplatzsätze von Vast.ai, verwendet für die Bereiche von RTX 4090, A100 und H100 vom Mai 2026.',
           '[Cloud GPU Rental Comparison 2026](/local-llms/cloud-gpu-rental-comparison-2026?lang=de) — PromptQuorum-Tests: Anbieterpreise, Verfügbarkeit, Einrichtungszeit und Analyse der DSGVO-Datenresidenz, monatlich verifiziert.',
         ],
@@ -1109,7 +1109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -1215,7 +1215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'S\'inscrire sur RunPod',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs signup',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         items: [
           '[RunPod Pricing](https://www.runpod.io/pricing) — Tarifs horaires officiels RunPod Secure Cloud et On-Demand pour RTX 4090, A100 et H100, utilisés pour l\'instantané de mai 2026.',
-          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/service/gpu-cloud) — Tarifs à la demande officiels de Lambda Labs pour A100 et H100 et SLA de disponibilité.',
+          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/instances) — Tarifs à la demande officiels de Lambda Labs pour A100 et H100 et SLA de disponibilité.',
           '[Vast.ai Pricing and Marketplace](https://vast.ai/pricing) — Tarifs spot et à la demande de la place de marché Vast.ai, utilisés pour les plages RTX 4090, A100 et H100 de mai 2026.',
           '[Cloud GPU Rental Comparison 2026](/local-llms/cloud-gpu-rental-comparison-2026?lang=fr) — Tests PromptQuorum : tarification des fournisseurs, disponibilité, temps de configuration et analyse de la résidence des données RGPD, vérifiés chaque mois.',
         ],
@@ -1537,7 +1537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'RunPodに登録する',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs signup',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -1676,7 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '出典',
         items: [
           '[RunPod Pricing](https://www.runpod.io/pricing) — RTX 4090、A100、H100に対するRunPod Secure CloudおよびOn-Demandの公式時間料金。2026年5月時点のスナップショットに使用。',
-          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/service/gpu-cloud) — Lambda LabsのA100およびH100のオンデマンド公式料金と稼働率SLA。',
+          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/instances) — Lambda LabsのA100およびH100のオンデマンド公式料金と稼働率SLA。',
           '[Vast.ai Pricing and Marketplace](https://vast.ai/pricing) — Vast.aiのスポットおよびオンデマンドのマーケットプレイス料金。2026年5月のRTX 4090、A100、H100の範囲に使用。',
           '[Cloud GPU Rental Comparison 2026](/local-llms/cloud-gpu-rental-comparison-2026?lang=ja) — PromptQuorumのテスト：プロバイダーの価格、稼働率、セットアップ時間、GDPRデータレジデンシー分析。毎月検証。',
         ],
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -2071,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: '注册RunPod',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs signup',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -2104,7 +2104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '来源',
         items: [
           '[RunPod Pricing](https://www.runpod.io/pricing) — RunPod Secure Cloud和On-Demand针对RTX 4090、A100和H100的官方小时费率，用于2026年5月快照。',
-          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/service/gpu-cloud) — Lambda Labs针对A100和H100的官方按需费率与可用性SLA。',
+          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/instances) — Lambda Labs针对A100和H100的官方按需费率与可用性SLA。',
           '[Vast.ai Pricing and Marketplace](https://vast.ai/pricing) — Vast.ai的现货和按需市场费率，用于2026年5月的RTX 4090、A100和H100区间。',
           '[Cloud GPU Rental Comparison 2026](/local-llms/cloud-gpu-rental-comparison-2026?lang=zh) — PromptQuorum测试：提供商价格、可用性、配置时间和GDPR数据驻留分析，每月验证。',
         ],

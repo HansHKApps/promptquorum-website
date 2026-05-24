@@ -443,7 +443,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             label: 'Amazon.co.jpでRyzen 7 + 16GBノートPCを見る',
           },
           {
-            url: 'https://kakaku.com/search_results/Ryzen+7+16GB+ノート/',
+            url: 'https://kakaku.com/search_results/Ryzen+7+16GB/',
             productName: 'Ryzen 7 + 16GBメモリ ノートPC',
             productCategory: 'laptop',
             label: '価格.comでRyzen 7 + 16GBノートPCを見る',

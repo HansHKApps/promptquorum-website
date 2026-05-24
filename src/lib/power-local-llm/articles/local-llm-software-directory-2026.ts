@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Check Vast.ai pricing and sign up',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Vast.ai-Preise prüfen und registrieren',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Vérifier les tarifs Vast.ai et s\'inscrire',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -1360,7 +1360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Vast.aiの料金を確認して登録する',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: '查看Vast.ai价格并注册',
           },
           {
-            url: 'https://lambdalabs.com/service/gpu-cloud',
+            url: 'https://lambdalabs.com/instances',
             productName: 'Lambda Labs GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '1.79-2.99/hr',
