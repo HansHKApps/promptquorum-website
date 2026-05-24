@@ -5,7 +5,8 @@ import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
 
 const STORAGE_KEY = 'push_prompt_dismissed_until'
-const DISMISS_DURATION_MS = 30 * 24 * 60 * 60 * 1000 // 30 days
+const OPTED_IN_KEY = 'push_prompt_opted_in'
+const DISMISS_DURATION_MS = 60 * 24 * 60 * 60 * 1000 // 60 days (~2 months)
 const SHOW_DELAY_MS = 10_000 // 10 seconds
 
 interface OneSignalType {
@@ -85,8 +86,8 @@ function PushPromptBannerInner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    // Don't show if already dismissed within 30-day window
     try {
+      if (localStorage.getItem(OPTED_IN_KEY)) return
       const until = localStorage.getItem(STORAGE_KEY)
       if (until && Date.now() < parseInt(until, 10)) return
     } catch {
@@ -123,6 +124,11 @@ function PushPromptBannerInner() {
   }, [])
 
   const allow = useCallback(() => {
+    try {
+      localStorage.setItem(OPTED_IN_KEY, '1')
+    } catch {
+      /* ignore */
+    }
     setVisible(false)
     window.OneSignalDeferred = window.OneSignalDeferred || []
     window.OneSignalDeferred.push(async (OneSignal: OneSignalType) => {
