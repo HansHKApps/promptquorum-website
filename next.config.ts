@@ -66,6 +66,12 @@ const nextConfig: NextConfig = {
         destination: '/local-llms/running-70b-models-apple-silicon-m5-max',
         permanent: true,
       },
+      // Cannibalization fix: redirect weaker page to definitive MLX vs CUDA comparison
+      {
+        source: '/local-llms/apple-silicon-vs-nvidia-gpu-local-llm',
+        destination: '/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026',
+        permanent: true,
+      },
       // English-only pages: no /{lang}/* routes exist; sitemap bug caused Google to crawl these
       {
         source: '/:lang(de|fr|ja|zh)/waitlist',

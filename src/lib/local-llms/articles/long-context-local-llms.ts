@@ -16,6 +16,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Configure Ollama context windows on Strix Halo, RTX 4090, Apple Silicon: 64K, 128K, 256K, 1M tokens. num_ctx settings, VRAM per platform, Vulkan limits.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Llama 4 Scout supports up to 10M token context (practical: 256K-1M on consumer hardware). DeepSeek V4-Flash delivers 1M tokens. Qwen 3.6 supports 256K natively (extendable to 1M via YaRN). While 7B-8B models stay reliable at 16K-32K tokens, new MoE models and 70B+ variants extend practical limits to 256K-1M. Ollama defaults to 2048 -- set num_ctx explicitly to use long context.**',
+      nextStep: {
+        text: 'Need the hardware to run 128K+ context models? Start with the hardware guide.',
+        label: 'Local LLM Hardware Guide 2026 →',
+        href: '/local-llms/local-llm-hardware-guide-2026',
+      },
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       dateModified: '2026-05-17',
       readTime: '8 min read',

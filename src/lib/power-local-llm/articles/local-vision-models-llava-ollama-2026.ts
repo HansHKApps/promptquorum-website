@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     title: 'Local Vision Models 2026: LLaVA, Llama 3.2 Vision, Qwen2-VL & Ollama Multimodal Setup',
-    seoTitle: 'Local Vision Models 2026: LLaVA, Llama 3.2 Vision, Qwen2-VL & Ollama Setup',
+    seoTitle: 'Best Local Vision Models 2026: LLaVA, Qwen2-VL & Ollama',
     intro:
       'Vision-language models (VLMs) accept image input alongside text and return text output — enabling document OCR, image Q&A, screenshot analysis, and chart reading locally. In 2026, the easiest path to running VLMs is through Ollama: pull a model, send an image, get a description or answer. This guide compares the leading local vision models (LLaVA 1.6, Llama 3.2 Vision, MiniCPM-V 2.6, Moondream 2, Qwen2-VL, InternVL 2.5), covers Ollama setup step-by-step, and maps each model to its best use case based on VRAM requirements and quality benchmarks.',
     metaDescription:
-      'Run vision-language models locally with Ollama in 2026: LLaVA 1.6, Llama 3.2 Vision, MiniCPM-V 2.6. Document OCR, image Q&A, screenshot analysis — all offline with VRAM requirements and quality benchmarks.',
+      'Image Q&A, OCR, and screenshot analysis offline in 2026. Benchmark: LLaVA 1.6, Llama 3.2 Vision, Qwen2-VL, MiniCPM-V. VRAM guide + Ollama setup steps.',
     twitterDescription:
       'Local vision models 2026: LLaVA, Llama 3.2 Vision, MiniCPM-V via Ollama. Image Q&A, OCR, screenshot analysis — 100% offline. VRAM guide and setup steps.',
     audience:

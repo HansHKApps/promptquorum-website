@@ -22,6 +22,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Mac mini local AI server',
     targetKeywords: ['Mac mini AI server', 'always-on LLM', 'home AI infrastructure', 'Ollama always-on', 'Mac mini M5 server'],
     leadAnswerBlock: '**Mac mini M5 Pro 64GB at $1,199 is the best-value always-on AI server in 2026. Silent (near-fanless), 25-55W power draw, $26-39/year electricity. Runs Ollama 34B models, Whisper STT, RAG pipeline, and voice assistant simultaneously. Pays back vs 4× ChatGPT Plus subscriptions in 15 months.**',
+    nextStep: {
+      text: 'Ready to set up Ollama on your Mac Mini M5? Here\'s the full installation guide.',
+      label: 'Ollama on Mac — Setup Guide 2026 →',
+      href: '/local-llms/ollama-on-mac-apple-silicon-setup-2026',
+    },
     quickAnswerTop: {
       en: {
         question: 'Why use Mac mini M5 as a local AI server?',

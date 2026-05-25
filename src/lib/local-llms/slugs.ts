@@ -127,7 +127,6 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'ollama-on-mac-apple-silicon-setup-2026':     'ollama-on-mac-apple-silicon-setup-2026',
   'best-models-apple-silicon-2026':             'best-models-apple-silicon-2026',
   'mac-mini-m5-local-ai-server':                'mac-mini-m5-local-ai-server',
-  'apple-silicon-vs-nvidia-gpu-local-llm':      'apple-silicon-vs-nvidia-gpu-local-llm',
   'apple-silicon-whisper-metal-benchmark':      'apple-silicon-whisper-metal-benchmark',
   'running-70b-models-apple-silicon-m5-max':    'running-70b-models-apple-silicon-m5-max',
 

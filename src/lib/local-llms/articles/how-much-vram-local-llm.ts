@@ -17,6 +17,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Exact VRAM needed for local LLM: 7B needs 6-8GB, 13B needs 10-14GB, 70B needs 40-48GB at Q4. Charts for Q2-Q8 quantization, batch size, context.',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**For 7B models, you need 8GB VRAM; for 13B-22B, 12-16GB; for 70B, 24GB minimum. As of April 2026, these numbers assume Q4 (4-bit) quantization.**',
+      nextStep: {
+        text: 'You know your VRAM budget. Now pick the right GPU for it.',
+        label: 'Best Budget GPUs for Local LLMs →',
+        href: '/local-llms/best-budget-gpus-local-llm',
+      },
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '7 min',
       educationalLevel: 'Beginner',
@@ -52,6 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'VRAM Rule of Thumb — Quick Reference',
           content: [
             '**Don\'t have time for the formula? Use these simple rules:**',
+            'Once you know your VRAM budget, [see which GPUs fit each tier →](/local-llms/best-budget-gpus-local-llm)',
           ],
           items: [
             '**3B models** (Phi, StableLM): 4 GB VRAM minimum',

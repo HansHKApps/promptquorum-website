@@ -45,7 +45,6 @@ import { article as a_mlx_vs_ollama_vs_llama_cpp_mac } from "./articles/mlx-vs-o
 import { article as a_ollama_on_mac_apple_silicon_setup_2026 } from "./articles/ollama-on-mac-apple-silicon-setup-2026";
 import { article as a_best_models_apple_silicon_2026 } from "./articles/best-models-apple-silicon-2026";
 import { article as a_mac_mini_m5_local_ai_server } from "./articles/mac-mini-m5-local-ai-server";
-import { article as a_apple_silicon_vs_nvidia_gpu_local_llm } from "./articles/apple-silicon-vs-nvidia-gpu-local-llm";
 import { article as a_apple_silicon_whisper_metal_benchmark } from "./articles/apple-silicon-whisper-metal-benchmark";
 import { article as a_running_70b_models_apple_silicon_m5_max } from "./articles/running-70b-models-apple-silicon-m5-max";
 import { article as a_apple_silicon_m5_local_llm } from "./articles/apple-silicon-m5-local-llm";
@@ -214,7 +213,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "ollama-on-mac-apple-silicon-setup-2026": a_ollama_on_mac_apple_silicon_setup_2026,
   "best-models-apple-silicon-2026": a_best_models_apple_silicon_2026,
   "mac-mini-m5-local-ai-server": a_mac_mini_m5_local_ai_server,
-  "apple-silicon-vs-nvidia-gpu-local-llm": a_apple_silicon_vs_nvidia_gpu_local_llm,
   "apple-silicon-whisper-metal-benchmark": a_apple_silicon_whisper_metal_benchmark,
   "running-70b-models-apple-silicon-m5-max": a_running_70b_models_apple_silicon_m5_max,
   "qwen-vs-claude-vs-deepseek-local-2026": a_qwen_vs_claude_vs_deepseek_local_2026,

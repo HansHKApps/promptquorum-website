@@ -27,6 +27,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       primaryTerm: 'LLM hardware requirements',
       leadAnswerBlock: '**Local LLM hardware requirements depend primarily on VRAM: 7B models need 8 GB, 13B models need 12-16 GB, and 70B models need 35-48 GB depending on quantization. GPU choice matters 10× more than CPU for inference speed.**',
+      nextStep: {
+        text: 'Know your hardware needs? Find the best budget GPU for local LLMs.',
+        label: 'Best Budget GPUs for Local LLMs →',
+        href: '/local-llms/best-budget-gpus-local-llm',
+      },
       quickAnswerTop: {
         en: {
           question: 'What hardware do I need to run a local LLM in 2026?',

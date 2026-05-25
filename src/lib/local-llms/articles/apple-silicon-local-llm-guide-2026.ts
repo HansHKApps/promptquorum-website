@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How does M5 Pro compare to RTX 4090 for LLMs?',
-            a: 'On models that fit in 24GB VRAM, RTX 4090 is 20–30% faster. On 70B models, M5 Pro wins decisively because RTX 4090 cannot load them (24GB limit). See [Apple Silicon vs NVIDIA GPU for LLMs](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm).',
+            a: 'On models that fit in 24GB VRAM, RTX 4090 is 20–30% faster. On 70B models, M5 Pro wins decisively because RTX 4090 cannot load them (24GB limit). See [Apple Silicon vs NVIDIA GPU for LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026).',
           },
           {
             q: 'Do I need Ollama, MLX, or llama.cpp?',
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama on Mac: Complete Setup Guide](/local-llms/ollama-on-mac-apple-silicon-setup-2026) — step-by-step Ollama installation',
           '[Best LLM Models for Apple Silicon](/local-llms/best-models-apple-silicon-2026) — model recommendations per Mac configuration',
           '[Mac Mini M5 as Local AI Server](/local-llms/mac-mini-m5-local-ai-server) — always-on AI server guide',
-          '[Apple Silicon vs NVIDIA GPU for LLMs](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm) — cross-platform hardware comparison',
+          '[Apple Silicon vs NVIDIA GPU for LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — cross-platform hardware comparison',
           '[Whisper on Apple Silicon: Metal Benchmarks](/local-llms/apple-silicon-whisper-metal-benchmark) — speech-to-text performance on Apple Silicon',
           '[Running 70B Models on Apple Silicon](/local-llms/running-70b-models-apple-silicon-m5-max) — advanced 70B quantization and quality guide',
         ],
@@ -888,7 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'ローカルLLM用ってM5 ProとM5 Maxどっち？', a: 'M5 Pro（64GB）がベスト value——34Bモデル実行良好で¥132,000～165,000。M5 Max（¥330,000+）は70Bモデル定期必要時のみ。ほとんどユーザーがM5 Proに満足。' },
           { q: '購入後Macのメモリをアップグレードできる？', a: 'いいえ。Apple Siliconメモリははんだ付けで非アップグレード。購入時に最大メモリを買える範囲で購入。' },
-          { q: 'M5 Proでは RTX 4090に競争可能？', a: '24GB VRAM適合モデルではRTX 4090は20～30%高速。70BモデルではM5 Pro決定的に勝つ、RTX 4090は読み込めない（24GB上限）。参照：[Apple Silicon vs NVIDIA GPU for LLMs](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=ja)。' },
+          { q: 'M5 Proでは RTX 4090に競争可能？', a: '24GB VRAM適合モデルではRTX 4090は20～30%高速。70BモデルではM5 Pro決定的に勝つ、RTX 4090は読み込めない（24GB上限）。参照：[Apple Silicon vs NVIDIA GPU for LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=ja)。' },
           { q: 'OllamaとMLXとllama.cppどれ使う？', a: 'Ollama（最簡単）から開始。高速推論またはファインチューニング必要ならMLXに切り替え。クロスプラットフォーム互換性必要ならllama.cpp。すべてApple Siliconで動作。' },
           { q: 'M5 Ultraが256GBメモリで何変わる？', a: 'はい。M5 Ultra（2026年中盤予想）は70BモデルをFP16（品質損失ゼロ）で実行可能、民生ハードウェア初の120B+モデル対応。価格¥550万～800万予想。' },
           { q: '2026年にApple Siliconはローカルに価値？', a: 'はい、特に34B+モデルなら。Apple Siliconは複雑マルチGPUセットアップなしで70Bモデル実行可能な唯一の民生ハードウェア。24GB NVIDIAに収まる8Bモデルではマシン高速ですが、運用費高。ほぼユーザーはM5 Pro 64GB（¥165,000）をベスト value-performanceとして落ち着く。' },
@@ -917,7 +917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Macの上のOllama：完全セットアップガイド](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=ja) — ステップバイステップOllama導入',
           '[Apple Siliconに最適なLLMモデル](/local-llms/best-models-apple-silicon-2026?lang=ja) — Mac構成ごとのモデル推奨',
           '[Mac miniローカルAIサーバーとして](/local-llms/mac-mini-m5-local-ai-server?lang=ja) — 常時稼働AIサーバーガイド',
-          '[Apple Silicon vs NVIDIAでのLLMs](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=ja) — クロスプラットフォームハードウェア比較',
+          '[Apple Silicon vs NVIDIAでのLLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=ja) — クロスプラットフォームハードウェア比較',
           '[Apple SiliconでのWhisper：Metalベンチマーク](/local-llms/apple-silicon-whisper-metal-benchmark?lang=ja) — Apple Siliconでの音声テキスト化パフォーマンス',
           '[Apple SiliconでのM5 Max 70Bモデル実行](/local-llms/running-70b-models-apple-silicon-m5-max?lang=ja) — 高度な70B量子化と品質ガイド',
         ],
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'M5 Pro或M5 Max哪个更适合本地LLM？', a: 'M5 Pro（64GB）提供最佳价值——运行34B模型良好且成本¥14,999-16,999。M5 Max（¥29,999+）仅在定期需要70B模型时才值得。大多数用户对M5 Pro满意。' },
           { q: '购买Mac后可升级内存吗？', a: '不可以。Apple Silicon内存焊接，无法升级。购买时在预算范围内选择最大内存。' },
-          { q: 'M5 Pro能与RTX 4090竞争吗？', a: '在适合24GB VRAM的模型上，RTX 4090快20-30%。在70B模型上，M5 Pro决定性胜出，因为RTX 4090无法加载它们（24GB限制）。参见：[Apple Silicon vs NVIDIA GPU for LLMs](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=zh)。' },
+          { q: 'M5 Pro能与RTX 4090竞争吗？', a: '在适合24GB VRAM的模型上，RTX 4090快20-30%。在70B模型上，M5 Pro决定性胜出，因为RTX 4090无法加载它们（24GB限制）。参见：[Apple Silicon vs NVIDIA GPU for LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=zh)。' },
           { q: '需要Ollama、MLX还是llama.cpp？', a: '从Ollama（最简单）开始。如需更快推理或微调，切换至MLX。如需跨平台兼容性，使用llama.cpp。三者均可在Apple Silicon上运行。' },
           { q: 'M5 Ultra配256GB内存会改变什么？', a: '是的。M5 Ultra（2026年中期预期）将以FP16（零质量损失）运行70B模型，并首次在消费级硬件上启用120B+模型。预期价格¥550万-800万。' },
           { q: '2026年Apple Silicon对本地LLM值得投资吗？', a: '值得，特别是34B+模型。Apple Silicon是唯一能在无多GPU复杂性前提下运行70B模型的消费级硬件。对于适配24GB NVIDIA VRAM的8B模型，RTX 4090更快但运营成本高。大多数本地LLM用户倾向于M5 Pro 64GB（¥16,999）作为性价比最优选择。' },
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Mac上的Ollama完整设置指南](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=zh) — 分步Ollama安装',
           '[Apple Silicon最佳LLM模型](/local-llms/best-models-apple-silicon-2026?lang=zh) — 按Mac配置的模型推荐',
           '[Mac mini M5作为本地AI服务器](/local-llms/mac-mini-m5-local-ai-server?lang=zh) — 24/7 AI服务器指南',
-          '[Apple Silicon vs NVIDIA GPU for LLMs](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=zh) — 跨平台硬件对比',
+          '[Apple Silicon vs NVIDIA GPU for LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=zh) — 跨平台硬件对比',
           '[Apple Silicon上的Whisper：Metal基准测试](/local-llms/apple-silicon-whisper-metal-benchmark?lang=zh) — Apple Silicon上的语音转文字性能',
           '[Apple Silicon上运行70B模型](/local-llms/running-70b-models-apple-silicon-m5-max?lang=zh) — 高级70B量化和质量指南',
         ],

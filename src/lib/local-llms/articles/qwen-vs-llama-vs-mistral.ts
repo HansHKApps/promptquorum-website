@@ -18,6 +18,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-17',
       next_refresh_due: '2026-11-06',
       leadAnswerBlock: '**Qwen 3.6 27B leads dense model coding (77.2% SWE-bench). Llama 4 Scout is the most versatile (17B active, MoE, 10M context). Mistral Small 3.1 24B offers the best quality per VRAM at 14 GB.**',
+      nextStep: {
+        text: 'Decided on a model? Here\'s how to run Qwen locally, step by step.',
+        label: 'Run Qwen Locally — Full Setup Guide →',
+        href: '/local-llms/run-qwen-locally-guide-2026',
+      },
       quickAnswerTop: {
         en: {
           question: 'Qwen vs Llama vs Mistral — which local LLM should I use in 2026?',
@@ -132,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Family': 'Mistral', 'Developer': 'Mistral AI', 'Current Releases': 'Small 3.1 (24B), Devstral Small 24B (agentic), Codestral 22B (FIM/IDE)', 'Licence': 'Apache 2.0 (most sizes)' },
           ],
           columns: ['Family', 'Developer', 'Current Releases', 'Licence'],
-          content: 'Previous generation models (Qwen3, Llama 3.3) remain available on Ollama and are still widely used. This comparison focuses on current-generation models.',
+          content: 'Previous generation models (Qwen3, Llama 3.3) remain available on Ollama and are still widely used. This comparison focuses on current-generation models. Ready to run one? [Full Qwen local setup guide →](/local-llms/run-qwen-locally-guide-2026)',
         },
         benchmarks: {
           id: 'benchmark-comparison',

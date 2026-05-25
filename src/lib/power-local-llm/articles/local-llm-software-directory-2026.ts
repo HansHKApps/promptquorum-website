@@ -13,12 +13,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'The Complete Local LLM Software Directory: 70+ Tools to Run AI on Your Own Hardware (2026)',
-    seoTitle: 'Local LLM Software Directory 2026: 70+ Tools to Run AI Locally',
+    seoTitle: 'Best Local LLM Tools 2026: 87 Apps Across 9 Categories',
     affiliateDisclosure: true,
     intro:
       'The local-LLM ecosystem in 2026 is large enough that picking the wrong tool first costs hours, not minutes. This directory catalogues 87 actively-maintained projects across nine layers — runtimes, desktop apps, web UIs, coding assistants, RAG systems, agent frameworks, voice and multimodal, mobile clients, and specialized productivity plugins — with the description, licence, and primary URL for each. Use it as the "what exists" map before you commit to a stack; every category ends with a link to the deeper PromptQuorum comparison guide for that layer.',
     metaDescription:
-      '87 local-LLM tools across 9 categories: runtimes, desktop apps, web UIs, coding agents, RAG, multi-agent, voice, mobile. With licences and links. 2026.',
+      '87 tools for running LLMs locally: Ollama, LM Studio, GPT4All, Jan.ai, plus mobile, RAG, voice & agent frameworks. Licences and links, May 2026.',
     twitterDescription:
       '87 local-LLM tools across 9 categories — runtimes, desktop apps, web UIs, coding agents, RAG, multi-agent frameworks, voice, mobile. Licences and links. The "what exists" map before you commit to a stack.',
     current_models_mentioned: [],

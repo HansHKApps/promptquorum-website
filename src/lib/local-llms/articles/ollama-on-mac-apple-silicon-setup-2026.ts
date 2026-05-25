@@ -22,6 +22,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ollama setup Mac',
     targetKeywords: ['Ollama install Mac', 'Apple Silicon Ollama', 'Metal GPU acceleration'],
     leadAnswerBlock: '**Install Ollama: `brew install ollama`. Metal GPU is automatic. Pull models: `ollama pull llama2`. Run: `ollama run llama2`. REST API available at `localhost:11434`.**',
+    nextStep: {
+      text: 'Ollama is running. Now pick the best open-source models to load into it.',
+      label: 'Top Open-Source Models for Ollama →',
+      href: '/local-llms/top-open-source-models-ollama',
+    },
     quickAnswerTop: {
       en: {
         question: 'How do I install Ollama on Mac?',

@@ -20,6 +20,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: 'Join the PromptQuorum Waitlist →',
     leadAnswerBlock: '**Run `ollama pull qwen3:27b` on any machine with 16 GB VRAM or Apple Silicon with 32+ GB unified memory. For GUI access, use LM Studio. Both run Qwen 3.6 27B fully offline. Critical: set `num_ctx` to 32768 or higher — Ollama\'s default of 2048 tokens truncates most real-world tasks.**',
+    nextStep: {
+      text: 'Qwen is running locally. Now explore the best UIs that make it usable.',
+      label: 'Best Local LLM Frontends 2026 →',
+      href: '/local-llms/best-local-llm-frontends',
+    },
     quickAnswerTop: {
       en: {
         question: 'How do I run Qwen 3 locally in 2026?',

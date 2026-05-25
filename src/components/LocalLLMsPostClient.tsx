@@ -15,6 +15,8 @@ import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
 import { CopyButton } from '@/components/CopyButton'
+import { NextStepBlock } from '@/components/NextStepBlock'
+import { StickyNextStepBar } from '@/components/StickyNextStepBar'
 
 interface Props {
   slug: string
@@ -824,7 +826,18 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           })}
         </article>
 
-        <FactsDisclaimer />
+        {(article as any)?.nextStep?.text && (
+          <NextStepBlock
+            text={(article as any).nextStep.text}
+            label={(article as any).nextStep.label}
+            href={(article as any).nextStep.href}
+            lang={lang}
+          />
+        )}
+
+        <div id="facts-disclaimer">
+          <FactsDisclaimer />
+        </div>
 
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-primary/20 text-center">
@@ -846,6 +859,15 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         </p>
 
       </div>
+
+      {(article as any)?.nextStep?.text && (
+        <StickyNextStepBar
+          label={(article as any).nextStep.label}
+          href={(article as any).nextStep.href}
+          lang={lang}
+          triggerElementId="facts-disclaimer"
+        />
+      )}
     </div>
   )
 }

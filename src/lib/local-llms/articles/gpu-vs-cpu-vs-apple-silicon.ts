@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[How Much VRAM Do You Need for Local LLMs?](/local-llms/how-much-vram-local-llm) — VRAM requirements by model size and quantization level.',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — How Q4, Q5, Q8 quantization affects speed and quality.',
             '[Fastest Local LLMs for Low-End PCs](/local-llms/fastest-local-llms-low-end-pcs) — Speed-optimized model selection for budget hardware.',
-            '[Apple Silicon vs NVIDIA GPU for Local LLMs 2026](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm) — Deep-dive Mac vs NVIDIA binary comparison: TCO, power costs, and per-persona decision matrix. Does not cover CPU inference.',
+            '[Apple Silicon vs NVIDIA GPU for Local LLMs 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — Deep-dive Mac vs NVIDIA binary comparison: TCO, power costs, and per-persona decision matrix. Does not cover CPU inference.',
           ],
         },
         sources: {
@@ -516,7 +516,7 @@ schema: {
             '[Wie viel VRAM benötigen Sie für lokale LLMs?](/local-llms/how-much-vram-local-llm?lang=de) — VRAM-Anforderungen nach Modellgröße und Quantisierungslevel.',
             '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de) — Wie Q4, Q5, Q8 Quantisierung Geschwindigkeit und Qualität beeinflussen.',
             '[Schnellste lokale LLMs für PCs mit niedriger Leistung](/local-llms/fastest-local-llms-low-end-pcs?lang=de) — Geschwindigkeitsoptimierte Modellauswahl für Budget-Hardware.',
-            '[Apple Silicon vs NVIDIA GPU für lokale LLMs 2026](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=de) — Mac vs NVIDIA im Direktvergleich: TCO, Stromkosten und nutzertyp-basierte Entscheidungsmatrix. Ohne CPU-only-Inferenz.',
+            '[Apple Silicon vs NVIDIA GPU für lokale LLMs 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=de) — Mac vs NVIDIA im Direktvergleich: TCO, Stromkosten und nutzertyp-basierte Entscheidungsmatrix. Ohne CPU-only-Inferenz.',
           ],
         },
         sources: {
@@ -799,7 +799,7 @@ schema: {
             '[Combien de VRAM Avez-vous Besoin pour les LLM Locaux ?](/local-llms/how-much-vram-local-llm?lang=fr) — Exigences VRAM par taille de modèle et niveau de quantification.',
             '[Quantification LLM Expliquée](/local-llms/llm-quantization-explained?lang=fr) — Comment la quantification Q4, Q5, Q8 affecte la vitesse et la qualité.',
             '[LLM Locaux les Plus Rapides pour les PC Bas de Gamme](/local-llms/fastest-local-llms-low-end-pcs?lang=fr) — Sélection de modèles optimisée en vitesse pour le matériel budget.',
-            '[Apple Silicon vs NVIDIA GPU pour les LLM Locaux 2026](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=fr) — Comparaison Mac vs NVIDIA en profondeur : TCO, coûts énergétiques et matrice de décision par profil. Sans inférence CPU.',
+            '[Apple Silicon vs NVIDIA GPU pour les LLM Locaux 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=fr) — Comparaison Mac vs NVIDIA en profondeur : TCO, coûts énergétiques et matrice de décision par profil. Sans inférence CPU.',
           ],
         },
         sources: {
@@ -1046,7 +1046,7 @@ schema: {
             '[LM Studio ダウンロード・セットアップ](/local-llms/lm-studio?lang=ja) — GUI ベース LLM 実行',
             '[ローカル LLM に必要な VRAM は](/local-llms/how-much-vram-local-llm?lang=ja) — モデルサイズ別 VRAM 計算',
             '[ベストバリュー GPU ローカル LLM 向け](/local-llms/best-budget-gpus-local-llm?lang=ja) — 2026 GPU 比較',
-            '[ローカルLLM向けApple Silicon対NVIDIA GPU 2026](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=ja) — TCO、電力コスト、ユーザータイプ別決定マトリクスによるMac対NVIDIAの詳細比較。CPU推論は対象外。',
+            '[ローカルLLM向けApple Silicon対NVIDIA GPU 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=ja) — TCO、電力コスト、ユーザータイプ別決定マトリクスによるMac対NVIDIAの詳細比較。CPU推論は対象外。',
           ],
         },
         sources: {
@@ -1293,7 +1293,7 @@ schema: {
             '[LM Studio 下载和设置](/local-llms/lm-studio?lang=zh) ——基于 GUI 的大模型运行',
             '[本地大模型需要多少 VRAM](/local-llms/how-much-vram-local-llm?lang=zh) ——按模型大小的 VRAM 计算',
             '[本地大模型最佳预算 GPU](/local-llms/best-budget-gpus-local-llm?lang=zh) ——2026 GPU 对比',
-            '[本地LLM的Apple Silicon对比NVIDIA GPU 2026](/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=zh) ——TCO、电力成本和用户类型决策矩阵的Mac对NVIDIA深度对比。不含CPU推理。',
+            '[本地LLM的Apple Silicon对比NVIDIA GPU 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=zh) ——TCO、电力成本和用户类型决策矩阵的Mac对NVIDIA深度对比。不含CPU推理。',
           ],
         },
         sources: {
