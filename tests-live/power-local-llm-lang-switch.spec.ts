@@ -1,18 +1,18 @@
-import { test, expect } from '@playwright/test'
+import { test, expect, type Page } from '@playwright/test'
 
 // Tests A, B, D from the verification matrix for path-prefix language routing
 // on the /power-local-llm cluster. Runs against live production.
 
 const CLUSTER_ARTICLE = '/power-local-llm/best-local-ai-app-low-end-pc'
 
-async function openSwitcherAndPickGerman(page) {
+async function openSwitcherAndPickGerman(page: Page) {
   // Header banner houses the language switcher (top-right, label "EN")
   const langButton = page.getByRole('banner').getByRole('button', { name: /EN/ })
   await langButton.click()
   await page.locator('button:has-text("Deutsch")').click()
 }
 
-async function openSwitcherAndPickEnglish(page, currentLangLabel: RegExp) {
+async function openSwitcherAndPickEnglish(page: Page, currentLangLabel: RegExp) {
   const langButton = page.getByRole('banner').getByRole('button', { name: currentLangLabel })
   await langButton.click()
   await page.locator('button:has-text("English")').click()
