@@ -152,6 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[How Much Unified Memory for Local LLMs?](/local-llms/how-much-unified-memory-for-local-llm)',
           '[M5 Pro vs M5 Max Benchmarks](/local-llms/m5-pro-max-llm-benchmarks-2026)',
           '[Mac Mini M5 as Local AI Server](/local-llms/mac-mini-m5-local-ai-server)',
+          '[Apple MLX vs NVIDIA CUDA 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — for deciding between Apple Silicon and NVIDIA GPU hardware.',
         ],
       },
       faq: {
@@ -318,6 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Wie viel vereinigter Speicher für lokale LLMs?](/local-llms/how-much-unified-memory-for-local-llm?lang=de)',
           '[M5 Pro vs M5 Max Benchmarks](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=de)',
           '[Mac Mini M5 als lokaler KI-Server](/local-llms/mac-mini-m5-local-ai-server?lang=de)',
+          '[Apple MLX vs NVIDIA CUDA 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=de) — für die Entscheidung zwischen Apple Silicon und NVIDIA GPU.',
         ],
       },
       faq: {
@@ -484,6 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Quelle quantité de mémoire unifiée pour les LLM locaux ?](/local-llms/how-much-unified-memory-for-local-llm?lang=fr)',
           '[Benchmarks M5 Pro vs M5 Max](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=fr)',
           '[Mac Mini M5 comme serveur IA local](/local-llms/mac-mini-m5-local-ai-server?lang=fr)',
+          '[Apple MLX vs NVIDIA CUDA 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=fr) — pour choisir entre Apple Silicon et GPU NVIDIA.',
         ],
       },
       faq: {
@@ -650,6 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルLLMに必要なユニファイドメモリ量](/local-llms/how-much-unified-memory-for-local-llm?lang=ja)',
           '[M5 Pro vs M5 Maxベンチマーク](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=ja)',
           '[ローカルAIサーバーとしてのMac Mini M5](/local-llms/mac-mini-m5-local-ai-server?lang=ja)',
+          '[Apple MLX vs NVIDIA CUDA 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=ja) — Apple SiliconとNVIDIA GPUの選択のために。',
         ],
       },
       faq: {
@@ -816,6 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[本地LLM需要多少统一内存？](/local-llms/how-much-unified-memory-for-local-llm?lang=zh)',
           '[M5 Pro vs M5 Max基准测试](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=zh)',
           '[Mac Mini M5作为本地AI服务器](/local-llms/mac-mini-m5-local-ai-server?lang=zh)',
+          '[Apple MLX vs NVIDIA CUDA 2026](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=zh) — 用于在Apple Silicon和NVIDIA GPU之间做选择。',
         ],
       },
       faq: {

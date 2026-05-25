@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     title: 'Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline',
-    seoTitle: 'Local Multimodal AI Pipeline 2026: Voice + Vision + Text Models Offline',
+    seoTitle: 'Local Multimodal Pipeline 2026: Whisper + LLaVA + Piper',
     intro:
       'A local multimodal AI pipeline combines separate specialized models for each modality — whisper.cpp for voice input, LLaVA or Llama 3.2 Vision for image understanding, an Ollama LLM for text reasoning, and Piper TTS for voice output — orchestrated into a single coherent system that runs 100% offline. This is the local equivalent of GPT-4o\'s multimodal capabilities: no single model understands everything, but the orchestrator routes each input type to the right model and combines the outputs. This guide shows how to build local multimodal pipeline capabilities from these open-source components — covering the architecture, component stack, hardware tiers, five practical use cases, and a Python async orchestrator that processes voice and vision inputs in parallel.',
     metaDescription:
-      'Build a local multimodal AI pipeline in 2026: whisper.cpp for voice input, LLaVA 1.6 for vision, Ollama for text reasoning, Piper TTS for voice output. Architecture, hardware tiers, use cases, and Python orchestrator code. All offline.',
+      'Run voice + vision + text AI locally in 2026. Combine whisper.cpp, LLaVA 1.6, Ollama, and Piper TTS. Full Python orchestrator — no cloud, no API keys.',
     twitterDescription:
       'Local multimodal AI in 2026: combine Whisper STT + LLaVA vision + Ollama LLM + Piper TTS into one offline pipeline. Architecture guide, hardware tiers, and Python code.',
     audience:

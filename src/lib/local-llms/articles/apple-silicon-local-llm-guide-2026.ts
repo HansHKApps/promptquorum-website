@@ -507,6 +507,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Kann das M5 Pro mit RTX 4090 konkurrieren?', a: 'Bei Modellen, die in 24GB VRAM passen, ist RTX 4090 20–30% schneller. Bei 70B-Modellen gewinnt M5 Pro deutlich, weil RTX 4090 sie nicht laden kann (24GB-Grenze).' },
         ],
       },
+      relatedArticles: {
+        id: 'related-articles',
+        title: 'Verwandte Artikel',
+        items: [
+          '[M5 Pro vs M5 Max LLM-Benchmarks 2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=de) — detaillierte tok/s-Zahlen für alle M-Series-Chips',
+          '[Wie viel vereinigten Speicher für lokale LLMs?](/local-llms/how-much-unified-memory-for-local-llm?lang=de) — Speicherdimensionierungshandbuch',
+          '[MLX vs Ollama vs llama.cpp auf Mac](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=de) — Framework-Geschwindigkeitsvergleich',
+          '[Apple Silicon vs NVIDIA GPU für LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=de) — plattformübergreifender Hardware-Vergleich',
+        ],
+      },
     },
   },
   fr: {
@@ -702,6 +712,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Puis-je upgrader mémoire après achat Mac ?', a: 'Non. Mémoire Apple Silicon est soudée, non-upgradable. Achetez mémoire maximum vous pouvez vous permettre à achat.' },
           { q: 'Quelles obligations conformité françaises dois-je considérer ?', a: 'Pour traitement données sensibles, respectez CNIL et recommandations IA. Les LLMs locaux Apple Silicon éliminent problèmes transfert données, simplifiant conformité.' },
           { q: 'M5 Pro peut concurrencer RTX 4090 ?', a: 'Sur modèles rentrant 24GB VRAM, RTX 4090 est 20–30% plus rapide. Sur modèles 70B, M5 Pro gagne décisivement car RTX 4090 ne peut pas les charger (limite 24GB).' },
+        ],
+      },
+      relatedArticles: {
+        id: 'related-articles',
+        title: 'Articles associés',
+        items: [
+          '[Benchmarks M5 Pro vs M5 Max LLM 2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=fr) — chiffres tok/s détaillés pour tous les chips M-series',
+          '[Quelle mémoire unifiée pour les LLM locaux ?](/local-llms/how-much-unified-memory-for-local-llm?lang=fr) — guide de dimensionnement mémoire',
+          '[MLX vs Ollama vs llama.cpp sur Mac](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=fr) — comparaison vitesse frameworks',
+          '[Apple Silicon vs GPU NVIDIA pour LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=fr) — comparaison matérielle multiplateforme',
         ],
       },
     },
