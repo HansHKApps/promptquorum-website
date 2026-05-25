@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: {
         id: 'intro',
         title: 'Why This Comparison Matters in 2026',
-        content: 'Apple Silicon M5 series shipped with up to 128GB unified memory — making large model inference viable on a Mac for the first time at consumer prices. NVIDIA\'s RTX 5090 arrived with 32GB GDDR7 VRAM at $3,949. Two fundamentally different architectures now compete to run the same open-source models.',
+        content: '[Apple Silicon](/local-llms/apple-silicon-local-llm-guide-2026) M5 series shipped with up to 128GB unified memory — making large model inference viable on a Mac for the first time at consumer prices. NVIDIA\'s RTX 5090 arrived with 32GB GDDR7 VRAM at $3,949. Two fundamentally different architectures now compete to run the same open-source models.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'In 2026, Apple Silicon and NVIDIA discrete GPUs represent two completely different hardware philosophies for running large language models locally.' },
           { type: 'plain-terms', text: 'With Apple, your CPU, GPU, and RAM share the same memory pool — a 128GB Mac Studio can load a 70B model in one shot. NVIDIA uses separate VRAM; a single RTX 4090 (24GB) cannot fit a 70B model at all.' },
@@ -84,8 +84,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Apple M5 Max: up to 128GB unified memory shared by CPU and GPU',
           'NVIDIA RTX 5090: 32GB GDDR7 at $3,949 — fastest consumer discrete GPU',
-          'Llama 3 70B at Q4_K_M needs ~38GB of memory',
-          'On Apple: one device handles it. On NVIDIA: 2× RTX 4090s or CPU offloading required',
+          'Llama 3 70B at [Q4_K_M quantization](/local-llms/llm-quantization-explained) needs ~38GB of memory',
+          'On Apple: one device handles it. On NVIDIA: 2× RTX 4090s or [CPU offloading](/local-llms/gpu-vs-cpu-vs-apple-silicon) required',
         ],
         callouts: [
           { type: 'tip', text: 'Choose Apple MLX if your target models are 40B+ parameters. Choose NVIDIA CUDA for maximum tokens-per-second on 7–14B models or if you need to fine-tune.' },
@@ -148,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Performance Benchmarks: Tokens Per Second by Model',
         image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-en.svg',
         imageCaption: 'Inference speed comparison across hardware: RTX 4090 delivers ~150 tok/s on Llama 3 8B but cannot load 70B; M5 Max 128GB delivers ~75 tok/s on 8B and ~18 tok/s on 70B.',
-        content: 'Inference speed is measured in tokens per second (tok/s) — higher is better for interactive use. NVIDIA dominates small model speed; Apple wins when models exceed VRAM capacity.',
+        content: 'Inference speed is measured in tokens per second (tok/s) — higher is better for interactive use. NVIDIA dominates small model speed; Apple wins when models exceed [VRAM capacity](/local-llms/how-much-vram-local-llm).',
         snippetBlocks: [
           { type: 'one-sentence', text: 'RTX 4090 reaches ~150 tok/s on Llama 3 8B Q4_K_M; Apple M5 Max 128GB runs ~75 tok/s on the same model but also runs Llama 3 70B at ~18 tok/s, which the RTX 4090 cannot fit.' },
           { type: 'plain-terms', text: 'The RTX 4090 is twice as fast for a 7B model but physically cannot load a 70B model. The M5 Max is slower on small models but can run large ones no single NVIDIA card can handle.' },
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         callouts: [
-          { type: 'warning', text: 'If you plan to fine-tune or train models, NVIDIA CUDA is the only practical choice. Apple MLX supports LoRA fine-tuning via mlx-lm, but full parameter fine-tuning, RLHF, and DPO are not yet mature on Apple Silicon.' },
+          { type: 'warning', text: 'If you plan to fine-tune or train models, NVIDIA CUDA is the only practical choice. Apple MLX supports [LoRA fine-tuning](/local-llms/fine-tuning-local-llms-lora) via mlx-lm, but full parameter fine-tuning, RLHF, and DPO are not yet mature on Apple Silicon.' },
           { type: 'tip', text: 'Most models on Hugging Face now have both GGUF (cross-platform) and MLX-format variants. The mlx-community org provides pre-quantized models so no manual conversion is needed.' },
         ],
         faqs: [
