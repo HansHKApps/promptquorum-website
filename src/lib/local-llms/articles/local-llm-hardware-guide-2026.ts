@@ -689,6 +689,11 @@ schema: {
       ],
       primaryTerm: 'LLM Hardware-Anforderungen',
       leadAnswerBlock: '**Die lokalen LLM-Hardware-Anforderungen hängen hauptsächlich vom VRAM ab: 7B-Modelle benötigen 8 GB, 13B-Modelle benötigen 12-16 GB und 70B-Modelle benötigen 35-48 GB je nach Quantisierung. Die GPU-Wahl ist 10-mal wichtiger als CPU für Inferenzgeschwindigkeit.**',
+      nextStep: {
+        text: 'Hardware-Anforderungen bekannt? Finden Sie die beste Budget-GPU für lokale LLMs.',
+        label: 'Beste Budget-GPUs für lokale LLMs →',
+        href: '/local-llms/best-budget-gpus-local-llm',
+      },
       lastUpdated: '2026-05-04',
       toc: [
         { label: 'Wichtige Erkenntnisse', anchor: '#key-takeaways' },

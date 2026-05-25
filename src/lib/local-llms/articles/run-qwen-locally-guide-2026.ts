@@ -358,6 +358,11 @@ LOCAL_LLM_MODEL=qwen3:27b
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: 'Zur PromptQuorum-Warteliste anmelden →',
     leadAnswerBlock: '**Führen Sie `ollama pull qwen3:27b` auf jedem Rechner mit 16 GB VRAM oder Apple Silicon mit 32+ GB Unified Memory aus. Für den GUI-Zugriff verwenden Sie LM Studio. Beide führen Qwen 3.6 27B vollständig offline aus. Wichtig: Setzen Sie `num_ctx` auf 32768 oder höher — Ollamas Standard von 2048 Token kürzt die meisten realen Aufgaben ab.**',
+    nextStep: {
+      text: 'Qwen läuft lokal. Entdecken Sie jetzt die besten Benutzeroberflächen.',
+      label: 'Beste lokale LLM-Frontends 2026 →',
+      href: '/local-llms/best-local-llm-frontends',
+    },
     quickAnswerTop: {
       de: {
         question: 'Wie führe ich Qwen 3 lokal in 2026 aus?',
@@ -634,6 +639,11 @@ LOCAL_LLM_MODEL=qwen3:27b
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: 'Rejoindre la liste d\'attente PromptQuorum →',
     leadAnswerBlock: '**Exécutez `ollama pull qwen3:27b` sur n\'importe quelle machine avec 16 Go VRAM ou Apple Silicon avec 32+ Go de mémoire unifiée. Pour un accès GUI, utilisez LM Studio. Les deux exécutent Qwen 3.6 27B entièrement hors ligne. Important : définissez `num_ctx` à 32 768 ou supérieur — la valeur par défaut d\'Ollama de 2 048 tokens tronque la plupart des tâches réelles.**',
+    nextStep: {
+      text: 'Qwen fonctionne en local. Découvrez maintenant les meilleures interfaces.',
+      label: 'Meilleures interfaces LLM locales 2026 →',
+      href: '/local-llms/best-local-llm-frontends',
+    },
     quickAnswerTop: {
       fr: {
         question: 'Comment exécuter Qwen 3 localement en 2026 ?',
@@ -908,6 +918,11 @@ LOCAL_LLM_MODEL=qwen3:27b
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: 'PromptQuorumウェイトリストに登録 →',
     leadAnswerBlock: '**16 GB VRAMまたはApple Silicon（32 GB以上の統合メモリ）を搭載したマシンで`ollama pull qwen3:27b`を実行してください。GUIアクセスにはLM Studioを使用します。どちらもQwen 3.6 27Bを完全オフラインで実行できます。重要：`num_ctx`を32768以上に設定してください — Ollamaのデフォルトは2048トークンで、ほとんどの実際のタスクを切り捨ててしまいます。**',
+    nextStep: {
+      text: 'Qwenがローカルで動いています。次は使いやすくする最良のUIを探しましょう。',
+      label: 'おすすめローカルLLMフロントエンド2026 →',
+      href: '/local-llms/best-local-llm-frontends',
+    },
     quickAnswerTop: {
       ja: {
         question: '2026年にQwen 3をローカルで実行するには？',
@@ -1182,6 +1197,11 @@ LOCAL_LLM_MODEL=qwen3:27b
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: '加入PromptQuorum候补名单 →',
     leadAnswerBlock: '**在任何配备16 GB显存或32 GB以上统一内存Apple Silicon的机器上运行`ollama pull qwen3:27b`。GUI访问推荐使用LM Studio。两者均可完全离线运行Qwen 3.6 27B。重要：将`num_ctx`设置为32768或更高——Ollama默认的2048 token会截断大多数实际任务。**',
+    nextStep: {
+      text: 'Qwen已在本地运行。现在探索最好的UI界面。',
+      label: '2026年最佳本地LLM前端 →',
+      href: '/local-llms/best-local-llm-frontends',
+    },
     quickAnswerTop: {
       zh: {
         question: '2026年如何在本地运行Qwen 3？',

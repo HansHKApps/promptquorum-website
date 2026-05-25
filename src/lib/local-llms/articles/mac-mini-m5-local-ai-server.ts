@@ -406,6 +406,11 @@ uptime`,
     primaryTerm: 'Mac Mini lokaler KI-Server',
     targetKeywords: ['Mac Mini KI-Server', 'Always-On LLM', 'lokale KI-Infrastruktur', 'Ollama dauerhaft', 'Mac Mini M5 Server'],
     leadAnswerBlock: '**Mac Mini M5 Pro 64 GB für ca. 1.349 € ist der beste preiswerte Always-On-KI-Server 2026. Geräuschlos (annähernd lüfterlos), 25–55 W Stromverbrauch, ca. 53 €/Jahr Strom. Betreibt Ollama 34B-Modelle, Whisper STT, RAG-Pipeline und Sprachassistenten gleichzeitig. Amortisiert sich gegenüber 4× ChatGPT Plus in ca. 15 Monaten.**',
+    nextStep: {
+      text: 'Bereit, Ollama auf Ihrem Mac Mini M5 einzurichten? Hier ist der vollständige Installationsleitfaden.',
+      label: 'Ollama auf Mac — Einrichtungsanleitung 2026 →',
+      href: '/local-llms/ollama-on-mac-apple-silicon-setup-2026',
+    },
     quickAnswerTop: {
       de: {
         question: 'Warum den Mac Mini M5 als lokalen KI-Server nutzen?',
@@ -781,6 +786,11 @@ uptime`,
     primaryTerm: 'Mac Mini serveur IA local',
     targetKeywords: ['Mac Mini serveur IA', 'LLM always-on', 'infrastructure IA locale', 'Ollama permanent', 'Mac Mini M5 serveur'],
     leadAnswerBlock: '**Mac Mini M5 Pro 64 Go à env. 1 349 € est le meilleur rapport qualité-prix pour un serveur IA always-on en 2026. Silencieux (quasi sans ventilateur), 25–55 W, env. 44 €/an d\'électricité. Fait tourner Ollama 34B, Whisper STT, RAG et assistant vocal simultanément. Rentabilisé face à 4× ChatGPT Plus en 15 mois environ.**',
+    nextStep: {
+      text: 'Prêt à installer Ollama sur votre Mac Mini M5 ? Voici le guide d\'installation complet.',
+      label: 'Ollama sur Mac — Guide d\'installation 2026 →',
+      href: '/local-llms/ollama-on-mac-apple-silicon-setup-2026',
+    },
     quickAnswerTop: {
       fr: {
         question: 'Pourquoi utiliser un Mac Mini M5 comme serveur IA local ?',
@@ -1154,6 +1164,11 @@ uptime`,
     primaryTerm: 'Mac Mini ローカルAIサーバー',
     targetKeywords: ['Mac Mini AIサーバー', '常時稼働LLM', 'ローカルAIインフラ', 'Ollama常時稼働', 'Mac Mini M5 サーバー'],
     leadAnswerBlock: '**約¥179,800のMac Mini M5 Pro 64GBは、2026年に最もコストパフォーマンスの高い常時稼働AIサーバーです。静音（ほぼファンレス）、25〜55Wの消費電力、年間電気代約5,400円。Ollama 34Bモデル・Whisper STT・RAGパイプライン・音声アシスタントを同時実行可能。4名分のChatGPT Plusに対して約15か月で回収できます。**',
+    nextStep: {
+      text: 'Mac Mini M5にOllamaをセットアップする準備はできましたか？完全インストールガイドをご紹介します。',
+      label: 'Mac上のOllama — セットアップガイド2026 →',
+      href: '/local-llms/ollama-on-mac-apple-silicon-setup-2026',
+    },
     quickAnswerTop: {
       ja: {
         question: 'なぜMac Mini M5をローカルAIサーバーとして使うのか？',
@@ -1527,6 +1542,11 @@ uptime`,
     primaryTerm: 'Mac Mini本地AI服务器',
     targetKeywords: ['Mac Mini AI服务器', '全天候LLM', '本地AI基础设施', 'Ollama常驻', 'Mac Mini M5服务器'],
     leadAnswerBlock: '**Mac Mini M5 Pro 64GB售价$1,199，是2026年性价比最高的全天候AI服务器。近无声（准无风扇），25–55W功耗，年电费$26–39。可同时运行Ollama 34B模型、Whisper STT、RAG管道和语音助手。对比4份ChatGPT Plus约15个月回本。**',
+    nextStep: {
+      text: '准备好在Mac Mini M5上设置Ollama了吗？这是完整的安装指南。',
+      label: 'Mac上的Ollama — 设置指南2026 →',
+      href: '/local-llms/ollama-on-mac-apple-silicon-setup-2026',
+    },
     quickAnswerTop: {
       zh: {
         question: '为什么选择Mac Mini M5作为本地AI服务器？',

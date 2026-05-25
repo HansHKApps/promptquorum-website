@@ -188,6 +188,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ollama Setup Mac',
     targetKeywords: ['Ollama installieren Mac', 'Apple Silicon Ollama', 'Metal GPU Beschleunigung'],
     leadAnswerBlock: '**Ollama installieren: `brew install ollama`. Metal GPU automatisch. Modelle herunterladen: `ollama pull llama2`. Ausführen: `ollama run llama2`. REST API verfügbar unter `localhost:11434`.**',
+    nextStep: {
+      text: 'Ollama läuft. Wählen Sie jetzt die besten Open-Source-Modelle, die Sie laden möchten.',
+      label: 'Top Open-Source-Modelle für Ollama →',
+      href: '/local-llms/top-open-source-models-ollama',
+    },
     quickAnswerTop: {
       en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       de: {
@@ -349,6 +354,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Installation Ollama Mac',
     targetKeywords: ['Ollama installer Mac', 'Apple Silicon Ollama', 'accélération GPU Metal'],
     leadAnswerBlock: '**Installer Ollama : `brew install ollama`. GPU Metal automatique. Télécharger des modèles : `ollama pull llama2`. Exécuter : `ollama run llama2`. REST API disponible sur `localhost:11434`.**',
+    nextStep: {
+      text: 'Ollama fonctionne. Choisissez maintenant les meilleurs modèles open source à charger.',
+      label: 'Meilleurs modèles open source pour Ollama →',
+      href: '/local-llms/top-open-source-models-ollama',
+    },
     quickAnswerTop: {
       en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
@@ -510,6 +520,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ollamaセットアップ Mac',
     targetKeywords: ['Ollama インストール Mac', 'Apple Silicon Ollama', 'Metal GPU加速'],
     leadAnswerBlock: '**Ollamaインストール：`brew install ollama`。Metal GPU自動。モデルダウンロード：`ollama pull llama2`。実行：`ollama run llama2`。REST APIは`localhost:11434`で利用可能。**',
+    nextStep: {
+      text: 'Ollamaが動いています。次はロードする最良のオープンソースモデルを選びましょう。',
+      label: 'Ollama向けトップオープンソースモデル →',
+      href: '/local-llms/top-open-source-models-ollama',
+    },
     quickAnswerTop: {
       en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
@@ -671,6 +686,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ollama安装Mac',
     targetKeywords: ['Ollama安装Mac', 'Apple Silicon Ollama', 'Metal GPU加速'],
     leadAnswerBlock: '**安装Ollama：`brew install ollama`。Metal GPU自动。下载模型：`ollama pull llama2`。运行：`ollama run llama2`。REST API在`localhost:11434`可用。**',
+    nextStep: {
+      text: 'Ollama已运行。现在选择最好的开源模型加载进去。',
+      label: 'Ollama最佳开源模型 →',
+      href: '/local-llms/top-open-source-models-ollama',
+    },
     quickAnswerTop: {
       en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },

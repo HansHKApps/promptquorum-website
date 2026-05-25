@@ -777,6 +777,11 @@ schema: {
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
       leadAnswerBlock: '**Qwen 3.6 27B domine le codage dense (77.2% SWE-bench). Llama 4 Scout est le plus polyvalent (17B actif, MoE, contexte 10M). Mistral Small 3.1 24B offre le meilleur qualité par VRAM à 14 GB.**',
+      nextStep: {
+        text: 'Vous avez choisi un modèle ? Voici comment exécuter Qwen en local, étape par étape.',
+        label: 'Exécuter Qwen en local — Guide complet →',
+        href: '/local-llms/run-qwen-locally-guide-2026',
+      },
       readTime: '13 min de lecture',
       educationalLevel: 'Advanced',
       primaryTerm: 'Qwen vs Llama vs Mistral',
