@@ -189,7 +189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Target Model': '120B+ models', 'Apple Option': 'Mac Studio M5 Ultra 192GB', 'Apple Cost': '$8,999', 'NVIDIA Option': '4× A100 40GB server', 'NVIDIA Cost': '~$40,000+', 'Cheaper': 'Apple (4.4×)' },
         ],
         callouts: [
-          { type: 'tip', text: 'The 32B breakpoint is key: RTX 5090 at 32GB costs ~$3,949 for the card alone plus $1,500+ for the system. Mac Mini M4 Pro 48GB handles 32B for $2,199 total.' },
+          { type: 'tip', text: 'The 32B breakpoint is key: RTX 5090 at 32GB costs ~$3,949 for the card alone plus $1,500+ for the system. Mac Mini M4 Pro 48GB handles 32B for $2,199 total. For budget builds, see [best budget GPUs for local LLMs](/local-llms/best-budget-gpus-local-llm).' },
           { type: 'note', text: 'Prices are approximate as of May 2026. NVIDIA GPU prices fluctuate with availability. Apple pricing is fixed.' },
         ],
       },
@@ -300,14 +300,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       hybrid: {
         id: 'hybrid',
         title: 'The Hybrid Approach: Running Both',
-        content: 'Many power users run both: a MacBook for portable inference and a NVIDIA desktop for training. Ollama\'s cross-platform support makes this practical — same commands, same model files on both systems.',
+        content: 'Many power users run both: a MacBook for portable inference and a NVIDIA desktop for training. [Ollama](/local-llms/ollama-vs-lm-studio)\'s cross-platform support makes this practical — same commands, same model files on both systems.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'A common power-user setup is MacBook Pro M5 for portable 14B inference plus a Linux workstation with RTX 4090 for LoRA fine-tuning and high-throughput batch jobs.' },
           { type: 'plain-terms', text: 'Use the Mac when mobile. Use the desktop GPU for overnight fine-tuning runs and high-volume serving.' },
         ],
         items: [
           'Ollama runs identical commands on Apple and NVIDIA — `ollama run llama3.2` works on both',
-          'LM Studio supports both MLX (macOS) and CUDA backends from the same interface',
+          '[LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) supports both MLX (macOS) and CUDA backends from the same interface',
           'GGUF model files (llama.cpp format) are cross-platform; MLX models are Apple-only',
           'Typical workflow split: Mac for private inference, NVIDIA for training and batch processing',
           'LAN serving: run Ollama on the NVIDIA server, access it from the Mac over the local network',
