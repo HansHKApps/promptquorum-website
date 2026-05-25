@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Run Local LLMs on a Laptop: RAM, Speed & Thermals 2026',
       seoTitle: 'Llama & Phi on 8-16GB Laptops: Speed & Thermals 2026',
       intro: 'Running a local LLM on a laptop is possible — even on 8 GB RAM — but performance depends heavily on model size, RAM, and thermals. A 7B model runs at 10–25 tokens/sec on CPU or 50–80 tok/sec on Apple Silicon, making laptops viable for development, testing, and lightweight AI workflows.',
-      metaDescription: 'Run Llama 3.2 7B, Phi-4 Mini, Gemma 2B on 8GB-16GB laptops. Thermal throttling cuts speed 20–40%. Apple Silicon vs Intel Iris Xe benchmarks. Q4_K_M guide.',
+      metaDescription: 'Run Llama 3.2 7B, Phi-4 Mini, Gemma 2B on 8–16 GB laptops. Throttling cuts speed 20–40%. Apple Silicon vs Intel Iris Xe benchmarks. Q4_K_M settings.',
       twitterDescription: '7B models run on 8 GB laptops at 10–25 tok/sec. Apple Silicon M3: 50–80 tok/sec. Thermal throttling fix: use a stand + disable Turbo Boost. Q4_K_M guide.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-18',
