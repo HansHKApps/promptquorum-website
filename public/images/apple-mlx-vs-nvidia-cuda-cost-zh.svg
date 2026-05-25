@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350" role="img" aria-label="总系统成本对比：Apple Silicon vs NVIDIA本地LLM各模型大小"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <title>Apple MLX vs NVIDIA CUDA成本：各模型大小总系统成本 2026</title>
+  <rect width="800" height="350" fill="#F6F5FA"/>
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#1C1B1F">目标模型大小的总系统成本（人民币）</text>
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#555">Apple = 仅Mac · NVIDIA = 显卡 + PC整机 · 2026年5月近似价格</text>
+  <rect x="60" y="58" width="14" height="14" fill="#6750A4" rx="2"/>
+  <text x="80" y="70" font-family="system-ui,sans-serif" font-size="11" fill="#1C1B1F">Apple Silicon</text>
+  <rect x="200" y="58" width="14" height="14" fill="#34A853" rx="2"/>
+  <text x="220" y="70" font-family="system-ui,sans-serif" font-size="11" fill="#1C1B1F">NVIDIA系统</text>
+  <line x1="60" y1="300" x2="760" y2="300" stroke="#ddd" stroke-width="1"/>
+  <line x1="60" y1="245" x2="760" y2="245" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="190" x2="760" y2="190" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="135" x2="760" y2="135" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="80" x2="760" y2="80" stroke="#ddd" stroke-width="0.5"/>
+  <text x="55" y="304" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">0元</text>
+  <text x="55" y="249" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">2万元</text>
+  <text x="55" y="194" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">4万元</text>
+  <text x="55" y="139" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">6万元</text>
+  <text x="55" y="84" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">8万元</text>
+  <rect x="80" y="256" width="40" height="44" fill="#6750A4" rx="3"/>
+  <text x="100" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">~10,000元</text>
+  <rect x="128" y="278" width="40" height="22" fill="#34A853" rx="3"/>
+  <text x="148" y="272" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">~6,000元</text>
+  <text x="114" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#1C1B1F">7B</text>
+  <text x="114" y="333" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">NVIDIA 1.7×</text>
+  <rect x="210" y="240" width="40" height="60" fill="#6750A4" rx="3"/>
+  <text x="230" y="234" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">~16,000元</text>
+  <rect x="258" y="267" width="40" height="33" fill="#34A853" rx="3"/>
+  <text x="278" y="261" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">~9,000元</text>
+  <text x="244" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#1C1B1F">14B</text>
+  <text x="244" y="333" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">NVIDIA 1.8×</text>
+  <rect x="340" y="240" width="40" height="60" fill="#6750A4" rx="3" opacity="0.6"/>
+  <text x="360" y="234" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">~16,000元</text>
+  <rect x="388" y="149" width="40" height="151" fill="#34A853" rx="3" opacity="0.6"/>
+  <text x="408" y="143" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">~42,000元</text>
+  <text x="374" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#1C1B1F">32B</text>
+  <text x="374" y="333" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">Apple 2.6×</text>
+  <rect x="472" y="135" width="40" height="165" fill="#6750A4" rx="3"/>
+  <text x="492" y="129" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">~45,000元</text>
+  <rect x="520" y="107" width="40" height="193" fill="#34A853" rx="3"/>
+  <text x="540" y="101" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">~55,000元</text>
+  <text x="506" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#1C1B1F">70B</text>
+  <text x="506" y="333" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">Apple便宜18%</text>
+  <line x1="450" y1="80" x2="450" y2="310" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="453" y="96" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">交叉点</text>
+  <text x="453" y="108" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">~32B模型</text>
+  <rect x="605" y="80" width="40" height="220" fill="#6750A4" rx="3" opacity="0.8"/>
+  <text x="625" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">~68,000元</text>
+  <rect x="653" y="80" width="40" height="220" fill="#34A853" rx="3" opacity="0.3"/>
+  <text x="673" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">30万元+</text>
+  <text x="635" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#1C1B1F">120B+</text>
+  <text x="635" y="333" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">Apple 4.4×</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

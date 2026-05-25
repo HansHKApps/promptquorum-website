@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350" role="img" aria-label="Apple MLX vs NVIDIA CUDA：本地LLM 11项评判 2026"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <title>Apple MLX vs NVIDIA CUDA评判：逐项对比评分表 2026</title>
+  <rect width="800" height="350" fill="#F6F5FA"/>
+  <text x="400" y="17" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">Apple MLX vs NVIDIA CUDA — 11项评判 2026</text>
+  <rect x="60" y="22" width="188" height="20" fill="#6750A4" rx="2"/>
+  <text x="154" y="36" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="white">Apple Silicon</text>
+  <text x="400" y="36" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#555">评估项目</text>
+  <rect x="552" y="22" width="188" height="20" fill="#34A853" rx="2"/>
+  <text x="646" y="36" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="white">NVIDIA系统</text>
+  <!-- Winner highlights -->
+  <rect x="552" y="44" width="188" height="20" fill="#34A853" fill-opacity="0.1"/>
+  <rect x="60" y="64" width="188" height="20" fill="#6750A4" fill-opacity="0.1"/>
+  <rect x="552" y="84" width="188" height="20" fill="#34A853" fill-opacity="0.1"/>
+  <rect x="60" y="104" width="188" height="20" fill="#6750A4" fill-opacity="0.1"/>
+  <rect x="60" y="124" width="188" height="20" fill="#6750A4" fill-opacity="0.1"/>
+  <rect x="60" y="144" width="188" height="20" fill="#6750A4" fill-opacity="0.1"/>
+  <rect x="60" y="164" width="188" height="20" fill="#6750A4" fill-opacity="0.1"/>
+  <rect x="552" y="184" width="188" height="20" fill="#34A853" fill-opacity="0.1"/>
+  <rect x="552" y="204" width="188" height="20" fill="#34A853" fill-opacity="0.1"/>
+  <rect x="552" y="224" width="188" height="20" fill="#34A853" fill-opacity="0.1"/>
+  <rect x="60" y="244" width="680" height="20" fill="#888" fill-opacity="0.07"/>
+  <!-- Row separators -->
+  <line x1="60" y1="44" x2="740" y2="44" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="64" x2="740" y2="64" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="84" x2="740" y2="84" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="104" x2="740" y2="104" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="124" x2="740" y2="124" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="144" x2="740" y2="144" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="164" x2="740" y2="164" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="184" x2="740" y2="184" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="204" x2="740" y2="204" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="224" x2="740" y2="224" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="244" x2="740" y2="244" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="60" y1="264" x2="740" y2="264" stroke="#ccc" stroke-width="1"/>
+  <!-- Column separators -->
+  <line x1="250" y1="44" x2="250" y2="264" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="550" y1="44" x2="550" y2="264" stroke="#ddd" stroke-width="0.5"/>
+  <!-- Row 1: 速度 7-14B → NVIDIA -->
+  <text x="154" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">—</text>
+  <text x="400" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">速度（7–14B模型）</text>
+  <text x="646" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">✓ 约快2倍 tok/s</text>
+  <!-- Row 2: 速度 70B+ → Apple -->
+  <text x="154" y="78" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">✓ 唯一可行方案</text>
+  <text x="400" y="78" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">速度（70B+模型）</text>
+  <text x="646" y="78" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">24GB装不下70B</text>
+  <!-- Row 3: 入门价格 → NVIDIA -->
+  <text x="154" y="98" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">~10,000元起</text>
+  <text x="400" y="98" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">入门价格</text>
+  <text x="646" y="98" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">✓ 显卡+PC约6,000元</text>
+  <!-- Row 4: 70B成本 → Apple -->
+  <text x="154" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">✓ 约45,000元</text>
+  <text x="400" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">70B能力成本</text>
+  <text x="646" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">约55,000元 多显卡</text>
+  <!-- Row 5: 功耗 → Apple -->
+  <text x="154" y="138" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">✓ 系统30–60W</text>
+  <text x="400" y="138" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">功耗</text>
+  <text x="646" y="138" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">负载时300–600W</text>
+  <!-- Row 6: 噪音 → Apple -->
+  <text x="154" y="158" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">✓ 近乎无声</text>
+  <text x="400" y="158" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">噪音</text>
+  <text x="646" y="158" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">GPU风扇明显</text>
+  <!-- Row 7: 便携性 → Apple -->
+  <text x="154" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#6750A4">✓ 有笔记本选项</text>
+  <text x="400" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">便携性</text>
+  <text x="646" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">仅桌面版</text>
+  <!-- Row 8: 软件生态 → NVIDIA -->
+  <text x="154" y="198" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">MLX（快速增长）</text>
+  <text x="400" y="198" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">软件生态</text>
+  <text x="646" y="198" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">✓ CUDA——行业标准</text>
+  <!-- Row 9: 训练与微调 → NVIDIA -->
+  <text x="154" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">微调支持有限</text>
+  <text x="400" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">训练与微调</text>
+  <text x="646" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">✓ 完整支持</text>
+  <!-- Row 10: 跨平台 → NVIDIA -->
+  <text x="154" y="238" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">仅限macOS</text>
+  <text x="400" y="238" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">跨平台</text>
+  <text x="646" y="238" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#1A6B33">✓ Linux + Windows</text>
+  <!-- Row 11: 未来前景 → 平局 -->
+  <text x="154" y="258" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#666">生态系统持续增长</text>
+  <text x="400" y="258" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#1C1B1F">未来前景·平局</text>
+  <text x="646" y="258" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#666">庞大安装基础</text>
+  <!-- Score boxes -->
+  <rect x="120" y="272" width="200" height="36" fill="#6750A4" rx="4"/>
+  <text x="220" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="white">Apple胜</text>
+  <text x="220" y="302" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="800" fill="white">5</text>
+  <rect x="335" y="272" width="130" height="36" fill="#888" rx="4"/>
+  <text x="400" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="white">平局</text>
+  <text x="400" y="302" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="800" fill="white">1</text>
+  <rect x="480" y="272" width="200" height="36" fill="#34A853" rx="4"/>
+  <text x="580" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="white">NVIDIA胜</text>
+  <text x="580" y="302" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="800" fill="white">5</text>
+  <!-- Decision rule -->
+  <text x="400" y="326" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#555">→ 主力模型 70B+ → Apple · 7–30B + 预算2万元以下 → NVIDIA</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

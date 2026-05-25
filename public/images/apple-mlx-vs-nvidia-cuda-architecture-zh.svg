@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350" role="img" aria-label="Apple Silicon统一内存 vs NVIDIA独立GPU架构对比"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <title>Apple MLX vs NVIDIA CUDA架构：统一内存 vs 专用VRAM</title>
+  <rect width="800" height="350" fill="#F6F5FA"/>
+  <rect x="20" y="20" width="360" height="310" rx="12" fill="#EAE6F8" stroke="#6750A4" stroke-width="2"/>
+  <rect x="420" y="20" width="360" height="310" rx="12" fill="#E8F5E9" stroke="#34A853" stroke-width="2"/>
+  <text x="200" y="50" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F">Apple Silicon (MLX)</text>
+  <text x="600" y="50" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F">NVIDIA CUDA</text>
+  <rect x="40" y="60" width="320" height="220" rx="8" fill="#6750A4" opacity="0.12" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="200" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#4A3F99">统一内存池 — 128GB</text>
+  <text x="200" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#4A3F99">带宽 614 GB/s</text>
+  <rect x="55" y="110" width="90" height="50" rx="6" fill="#6750A4"/>
+  <text x="100" y="131" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">CPU</text>
+  <text x="100" y="147" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#ddd">10核心</text>
+  <rect x="155" y="110" width="90" height="50" rx="6" fill="#6750A4"/>
+  <text x="200" y="131" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">GPU</text>
+  <text x="200" y="147" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#ddd">40核心</text>
+  <rect x="255" y="110" width="90" height="50" rx="6" fill="#6750A4"/>
+  <text x="300" y="131" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">神经引擎</text>
+  <text x="300" y="147" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#ddd">38 TOPS</text>
+  <text x="200" y="190" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#4A3F99">⟷ 零拷贝访问 — 无总线传输</text>
+  <text x="200" y="210" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#4A3F99">Llama 3 70B Q4 (~38GB) ✓ 可放入</text>
+  <rect x="55" y="255" width="310" height="30" rx="6" fill="#6750A4" opacity="0.2"/>
+  <text x="210" y="275" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#4A3F99">18 tok/s @ 70B — 单设备约45,000元</text>
+  <rect x="440" y="65" width="140" height="70" rx="6" fill="#fff" stroke="#888" stroke-width="1.5"/>
+  <text x="510" y="88" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#333">系统RAM</text>
+  <text x="510" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#666">64–128GB DDR5</text>
+  <text x="510" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">~60 GB/s</text>
+  <rect x="600" y="65" width="160" height="70" rx="6" fill="#1C1B1F" opacity="0.85"/>
+  <text x="680" y="88" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">CPU</text>
+  <text x="680" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#ccc">Ryzen/Core</text>
+  <text x="680" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#ccc">通过PCIe连接</text>
+  <line x1="510" y1="135" x2="510" y2="165" stroke="#EA4335" stroke-width="2.5" marker-end="url(#arrowzh)"/>
+  <text x="535" y="157" font-family="system-ui,sans-serif" font-size="9" fill="#EA4335">PCIe 4.0 ×16</text>
+  <text x="535" y="169" font-family="system-ui,sans-serif" font-size="9" fill="#EA4335">~32 GB/s 瓶颈</text>
+  <rect x="440" y="175" width="320" height="75" rx="6" fill="#34A853" opacity="0.15" stroke="#34A853" stroke-width="1.5"/>
+  <text x="600" y="197" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#1A6B33">GPU VRAM — 24GB GDDR6X</text>
+  <text x="600" y="213" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#1A6B33">带宽 1,008 GB/s</text>
+  <text x="600" y="232" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#EA4335">✗ 70B (~38GB) 超出VRAM 14GB</text>
+  <rect x="440" y="265" width="320" height="30" rx="6" fill="#EA4335" opacity="0.15"/>
+  <text x="600" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#B71C1C">150 tok/s @ 8B — 70B需要两张卡</text>
+  <defs>
+    <marker id="arrowzh" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#EA4335"/>
+    </marker>
+  </defs>
+  <circle cx="400" cy="175" r="18" fill="#1C1B1F"/>
+  <text x="400" y="181" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">VS</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
