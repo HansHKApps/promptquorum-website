@@ -80,7 +80,10 @@ export function middleware(request: NextRequest) {
   // Auto-detect browser language on first visit (no cookie, no explicit lang selection).
   const pqLangCookie = request.cookies.get('pq_lang')?.value
   const pathLocaleEarly = url.pathname.match(PATH_LOCALE_RE)?.[1]
-  const isStaticAsset = url.pathname.startsWith('/_next/') || url.pathname === '/favicon.ico'
+  // Also exclude any root-level file (*.txt, *.xml, *.json, *.html, etc.) so that
+  // bot verification requests (Bing IndexNow key, BingSiteAuth.xml, robots.txt, etc.)
+  // are never redirected by the Accept-Language auto-detect logic.
+  const isStaticAsset = url.pathname.startsWith('/_next/') || url.pathname === '/favicon.ico' || /\.\w{1,10}$/.test(url.pathname)
   if (!pathLocaleEarly && !langParam && !pqLangCookie && !isApiRoute && !isCronRoute && !isStaticAsset) {
     const acceptLang = request.headers.get('accept-language') || ''
     const detected = detectLangFromHeader(acceptLang, VALID_NON_EN_LANGS)

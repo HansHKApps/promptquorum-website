@@ -6,7 +6,7 @@
 const BING_INDEXNOW_ENDPOINT = 'https://api.indexnow.org/IndexNow'
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || 'eb7d1cdb86c44057b4ae4694d5c4ba7e'
 const SITE_HOST = 'www.promptquorum.com'
-const KEY_LOCATION = 'https://www.promptquorum.com/indexnow.json'
+const KEY_LOCATION = 'https://www.promptquorum.com/eb7d1cdb86c44057b4ae4694d5c4ba7e.txt'
 
 export interface IndexNowRequest {
   host: string
