@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     title: 'Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)',
-    seoTitle: 'Build Offline Voice Assistant 2026: Whisper + Local LLM + Piper TTS',
+    seoTitle: 'Build Your Local Voice Assistant 2026: Whisper + Piper',
     intro:
       'A fully offline voice assistant in 2026 combines three components: whisper.cpp for speech-to-text, a local LLM (Llama 3.1 8B, Phi-4, or Mistral 7B via Ollama) for reasoning, and Piper TTS for speech output. The end-to-end latency on a desktop GPU setup is 1–2 seconds, comparable to Alexa or Google Assistant. On a Mac Mini M5, it is under 1.5 seconds. On a Raspberry Pi 5, it is 5–8 seconds — usable for hands-free queries, not conversational. This guide walks through each layer step by step, with hardware tables, code for the Python orchestrator, wake word setup, and latency optimization techniques.',
     metaDescription:
-      'Build a fully offline voice assistant in 2026 with whisper.cpp for STT, Ollama + Llama 3.1 8B for reasoning, and Piper TTS for speech. Step-by-step guide with hardware requirements, Python code, wake word setup, and latency optimization.',
+      'whisper.cpp for STT, Ollama + Llama 3.1 8B for reasoning, Piper TTS for speech. 1–2 sec GPU latency. Python orchestrator + wake word setup. 2026.',
     twitterDescription:
       'DIY offline voice assistant in 2026: Whisper STT + local LLM + Piper TTS. No cloud, no subscription. Full build guide with hardware specs, Python code, and wake word setup.',
     audience:
