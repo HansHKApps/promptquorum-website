@@ -104,7 +104,7 @@ const nextConfig: NextConfig = {
   async headers() {
     const cspHeader = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com https://www.googletagmanager.com https://www.google-analytics.com https://scripts.clarity.ms https://*.vercel-analytics.com https://*.vercel-insights.com https://cloud.umami.is",
       "worker-src 'self'",
       "style-src 'self' 'unsafe-inline'",
       "font-src 'self' https://fonts.gstatic.com",
