@@ -14,31 +14,40 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Submit all pages to Bing IndexNow
-        env:
-          INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
         run: |
-          # Fetch sitemap and extract all URLs
-          echo "📥 Fetching sitemap from https://www.promptquorum.com/sitemap.xml..."
-          SITEMAP=$(curl -s https://www.promptquorum.com/sitemap.xml)
+          INDEXNOW_KEY="2fd43c75367b4c029c9ea4eef7ad34f8"
+          HOST="www.promptquorum.com"
+          KEY_LOCATION="https://www.promptquorum.com/${INDEXNOW_KEY}.txt"
 
-          # Extract all <loc> URLs and build JSON array
-          URLS=$(echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+' | jq -R . | jq -s .)
+          # Fetch sitemap and extract all URLs
+          echo "📥 Fetching sitemap from https://${HOST}/sitemap.xml..."
+          SITEMAP=$(curl -s "https://${HOST}/sitemap.xml")
+
+          # Extract all <loc> URLs (English canonical only — no /de/ /fr/ /ja/ /zh/ variants)
+          URLS=$(echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+' | grep -v "/${HOST}/[a-z][a-z]/" | jq -R . | jq -s .)
           TOTAL_URLS=$(echo "$URLS" | jq 'length')
 
           echo "📢 Submitting $TOTAL_URLS URLs to Bing IndexNow..."
 
-          # Submit to IndexNow API
+          PAYLOAD=$(jq -n \
+            --arg host "$HOST" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "$KEY_LOCATION" \
+            --argjson urlList "$URLS" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+
           RESPONSE=$(curl -s -o /tmp/indexnow_response.txt -w "%{http_code}" \
-            -X POST https://www.promptquorum.com/api/indexnow \
+            -X POST https://api.indexnow.org/IndexNow \
             -H "Content-Type: application/json" \
-            -H "X-IndexNow-Secret: $INDEXNOW_SECRET" \
-            -d "{\"urls\": $URLS}")
+            -d "$PAYLOAD")
           echo "Status: $RESPONSE"
           cat /tmp/indexnow_response.txt
-          if [ "$RESPONSE" != "200" ]; then
+          # 200 = OK, 202 = Accepted (both are success for IndexNow)
+          if [ "$RESPONSE" != "200" ] && [ "$RESPONSE" != "202" ]; then
             echo "❌ Submission failed with status $RESPONSE"
             exit 1
           fi
+          echo "✅ Successfully submitted $TOTAL_URLS URLs to Bing IndexNow"
 
       - name: Notify on failure
         if: failure()
