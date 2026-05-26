@@ -138,6 +138,10 @@ async function checkUrl(url, expect) {
 }
 
 async function main() {
+  if (process.env.VERCEL) {
+    console.log('⏭ Skipping noindex test on Vercel (runs locally and in CI only).')
+    return
+  }
   if (!existsSync('.next')) {
     console.error('✗ .next directory missing — run `npm run build` first.')
     process.exit(1)
