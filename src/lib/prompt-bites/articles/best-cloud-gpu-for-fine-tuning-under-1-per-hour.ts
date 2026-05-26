@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: 'Fine-tuning adapts a pre-trained AI model to your specific data using a process called QLoRA — which freezes most of the model in compressed form and only trains small adapter layers, cutting VRAM use by 4–8×. This makes it affordable to fine-tune on rented GPUs for a few dollars.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RunPod — Best Overall (Spot + On-Demand)',
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: 'Fine-Tuning passt ein vortrainiertes KI-Modell mit QLoRA an deine spezifischen Daten an — der größte Teil des Modells bleibt komprimiert gespeichert und nur kleine Adapter-Schichten werden trainiert. Dadurch sinkt der VRAM-Bedarf um das 4–8-Fache und das Training wird erschwinglich.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RunPod — Bestes Gesamtpaket (Spot + On-Demand)',
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: 'Le fine-tuning adapte un modèle IA pré-entraîné à vos données spécifiques avec QLoRA — la majorité du modèle reste compressée, seuls des adaptateurs légers sont entraînés, réduisant le besoin en VRAM de 4–8×. Cela rend le fine-tuning abordable pour quelques dollars.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RunPod — Meilleur global (spot + à la demande)',
@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: 'ファインチューニングはQLoRAという手法で事前学習済みAIモデルを自分のデータに適応させます。モデルの大部分は圧縮された形で凍結され、小さなアダプタ層だけが学習されます。これによりVRAM消費が4〜8倍削減され、数ドルでの学習が可能になります。',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RunPod — 総合最良（スポット + オンデマンド）',
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: 'QLoRA微调将预训练AI模型适配到你的特定数据——大部分模型以压缩形式冻结，只有小型适配器层被训练，显存需求减少4–8倍。这使得在几美元内完成微调成为可能。',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RunPod — 综合最佳（竞价+按需）',

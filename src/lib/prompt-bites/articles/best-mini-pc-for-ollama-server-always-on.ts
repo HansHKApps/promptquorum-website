@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: 'A mini PC running Ollama can serve AI responses to your whole home network around the clock, using less power than a lightbulb. More RAM = larger models. OCuLink = add a real GPU without a full desktop.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — Best Overall',
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: 'Ein Mini-PC mit Ollama kann rund um die Uhr KI-Antworten ans Heimnetzwerk liefern, mit weniger Strom als eine Glühbirne. Mehr RAM = größere Modelle. OCuLink = echte GPU ohne Desktop-PC.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — Bestes Gesamtpaket',
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: 'Un mini PC avec Ollama peut servir des réponses IA à tout votre réseau domestique en continu, avec moins de consommation qu\'une ampoule. Plus de RAM = modèles plus grands. OCuLink = vraie GPU sans PC de bureau.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — Meilleur choix global',
@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: 'Ollamaを搭載したミニPCは電球より少ない電力でホームネットワーク全体にAI応答を提供できます。RAM容量が多いほど大きなモデルが動きます。OCuLinkは本格的なGPUをデスクトップPCなしで追加できます。',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — 総合1位',
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             text: '装有Ollama的迷你PC可以用不到一个灯泡的电量全天候向家庭局域网提供AI服务。内存越大能运行的模型越大。OCuLink能在不买台式PC的情况下接入真正的独立显卡。',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: '铭凡UM890 Pro — 综合最佳',

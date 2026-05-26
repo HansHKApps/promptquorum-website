@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'An IDE plugin for local LLMs connects your code editor (VS Code, IntelliJ) to a model running on your own machine (via Ollama, LM Studio, or llama.cpp). The model sees your code and responds — no code leaves your computer, no API fees, no usage limits.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'Continue — Best Overall (Free, Open-Source)',
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ein IDE-Plugin für lokale LLMs verbindet deinen Code-Editor (VS Code, IntelliJ) mit einem Modell auf deinem eigenen Rechner (über Ollama oder LM Studio). Das Modell sieht deinen Code und antwortet — kein Code verlässt deinen Computer, keine API-Gebühren.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'Continue — Bestes Gesamtpaket (kostenlos, Open-Source)',
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Un plugin IDE pour LLMs locaux connecte votre éditeur de code (VS Code, IntelliJ) à un modèle tournant sur votre propre machine (via Ollama ou LM Studio). Le modèle voit votre code et répond — aucun code ne quitte votre ordinateur, pas de frais d\'API, pas de limites d\'utilisation.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'Continue — Meilleur global (gratuit, open-source)',
@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ローカルLLM用IDEプラグインはコードエディタ（VS Code、IntelliJ）を自分のマシンで動くモデル（Ollama、LM Studio経由）に接続します。モデルはコードを見て応答——コードは一切コンピュータ外に出ない、API料金なし、使用制限なし。',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'Continue — 総合最良（無料・オープンソース）',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '本地LLM的IDE插件将你的代码编辑器（VS Code、IntelliJ）连接到在本机运行的模型（通过Ollama或LM Studio）。模型看到你的代码并响应——代码不离开你的电脑，无API费用，无使用限制。',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'Continue — 综合最佳（免费开源）',
