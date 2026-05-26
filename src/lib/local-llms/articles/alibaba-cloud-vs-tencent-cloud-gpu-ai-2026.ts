@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs Tencent Cloud GPU for AI 2026: Full Comparison',
-    seoTitle: 'Alibaba Cloud vs Tencent Cloud GPU AI 2026: Price, Qwen Speed, Setup',
+    seoTitle: 'Alibaba vs Tencent Cloud GPU 2026: Qwen Speed Test',
     metaDescription:
       'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL for AI GPU rental in 2026: pricing, Qwen performance, data residency, and setup guide. Chinese cloud comparison.',
     twitterDescription:
@@ -307,6 +307,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=en',
+      inLanguage: 'en',
       about: [
         { '@type': 'Thing', name: 'Alibaba Cloud PAI' },
         { '@type': 'Thing', name: 'Tencent Cloud TI Platform' },
@@ -322,7 +324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs Tencent Cloud GPU für KI 2026: Vollständiger Vergleich',
-    seoTitle: 'Alibaba Cloud vs Tencent Cloud GPU KI 2026: Preis, Qwen-Speed, Setup',
+    seoTitle: 'Alibaba vs Tencent Cloud GPU KI 2026: Preisvergleich',
     metaDescription:
       'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL für KI-GPU-Miete 2026: Preise, Qwen-Performance, Datenspeicherung in China und Setup-Anleitung. Werbung enthält Affiliate-Links.',
     affiliateDisclosure: true,
@@ -391,6 +393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=de',
     },
   },
   fr: {
@@ -400,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs Tencent Cloud GPU pour l\'IA 2026 : Comparaison Complète',
-    seoTitle: 'Alibaba Cloud vs Tencent Cloud GPU IA 2026 : Prix, Qwen, Setup',
+    seoTitle: 'Alibaba vs Tencent Cloud GPU IA 2026 : Prix et Qwen',
     metaDescription:
       'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL pour la location GPU en Chine 2026 : tarifs, performance Qwen, résidence des données et tutoriels. Liens affiliés.',
     affiliateDisclosure: true,
@@ -469,6 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=fr',
     },
   },
   ja: {
@@ -547,6 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=ja',
     },
   },
   zh: {
@@ -645,6 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=zh',
     },
   },
 }
