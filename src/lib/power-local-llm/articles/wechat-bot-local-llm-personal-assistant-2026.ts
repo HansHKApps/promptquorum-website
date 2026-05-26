@@ -66,32 +66,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         heading: 'Step-by-Step Installation',
         numberedItems: [
           {
-            step: 'Install Ollama and pull Qwen2.5 7B',
-            detail: 'Download Ollama from ollama.com and run: `ollama pull qwen2.5:7b`',
+            title: 'Install Ollama and pull Qwen2.5 7B',
+            whyItMatters: 'Download Ollama from ollama.com and run: `ollama pull qwen2.5:7b`',
           },
           {
-            step: 'Log in to WeChat PC',
-            detail: 'Open WeChat on Windows and scan the QR code to log in. Keep it logged in and running in the background.',
+            title: 'Log in to WeChat PC',
+            whyItMatters: 'Open WeChat on Windows and scan the QR code to log in. Keep it logged in and running in the background.',
           },
           {
-            step: 'Install WeChatFerry',
-            detail: 'Install via pip: `pip install wcferry`. WeChatFerry injects into the WeChat process to expose a message API.',
+            title: 'Install WeChatFerry',
+            whyItMatters: 'Install via pip: `pip install wcferry`. WeChatFerry injects into the WeChat process to expose a message API.',
           },
           {
-            step: 'Create the Python message handler',
-            detail: 'Create `wechat_bot.py` with WeChatFerry client, Ollama HTTP API calls, and message routing logic.',
+            title: 'Create the Python message handler',
+            whyItMatters: 'Create `wechat_bot.py` with WeChatFerry client, Ollama HTTP API calls, and message routing logic.',
           },
           {
-            step: 'Test with a self-message',
-            detail: 'Send a WeChat message to yourself starting with "@ai" and verify the bot responds within 10 seconds.',
+            title: 'Test with a self-message',
+            whyItMatters: 'Send a WeChat message to yourself starting with "@ai" and verify the bot responds within 10 seconds.',
           },
           {
-            step: 'Add conversation history',
-            detail: 'Store the last 10 messages per contact in a dict to enable multi-turn conversation context.',
+            title: 'Add conversation history',
+            whyItMatters: 'Store the last 10 messages per contact in a dict to enable multi-turn conversation context.',
           },
           {
-            step: 'Run as a background service',
-            detail: 'Use NSSM (Non-Sucking Service Manager) to run the Python script as a Windows service that starts automatically.',
+            title: 'Run as a background service',
+            whyItMatters: 'Use NSSM (Non-Sucking Service Manager) to run the Python script as a Windows service that starts automatically.',
           },
         ],
       },
