@@ -143,6 +143,14 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   // Qwen Vision
   'run-qwen-vl-locally-2026':                   'run-qwen-vl-locally-2026',
 
+  // Qwen China Sprint
+  'qwen-local-deployment-guide-2026':            'qwen-local-deployment-guide-2026',
+
   // Inference Frameworks
   'xinference-llama-qwen-chatglm-mistral':       'xinference-llama-qwen-chatglm-mistral',
+
+  // Commercial Sprint 2026-05-26 — 3 new revenue pages
+  'alibaba-cloud-vs-tencent-cloud-gpu-ai-2026':  'alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
+  'best-gpu-for-llm-inference-under-500-2026':   'best-gpu-for-llm-inference-under-500-2026',
+  'local-llm-cost-calculator-build-vs-rent-2026': 'local-llm-cost-calculator-build-vs-rent-2026',
 }

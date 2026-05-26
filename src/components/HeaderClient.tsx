@@ -79,6 +79,13 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ja: '順番待ちリスト',
     zh: '候补名单',
   },
+  skipToMain: {
+    en: 'Skip to main content',
+    de: 'Zum Hauptinhalt springen',
+    fr: 'Aller au contenu principal',
+    ja: 'メインコンテンツへスキップ',
+    zh: '跳转到主要内容',
+  },
 }
 
 function t(key: string, lang: string) {
@@ -112,6 +119,12 @@ function HeaderInner() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-3 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded focus:shadow focus:outline focus:outline-2 focus:outline-purple-600"
+      >
+        {t('skipToMain', lang)}
+      </a>
       <div className="px-4 sm:px-6 h-16 flex items-center justify-between">
         <Link href={navHref('/', lang)} className="flex items-center gap-2 flex-shrink-0">
           <img src="/logo.svg" alt="PromptQuorum" className="w-9 h-9 flex-shrink-0" width={36} height={36} />

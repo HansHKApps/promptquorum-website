@@ -1,20 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { timingSafeEqual } from 'crypto'
-import { makeToken } from '@/lib/token'
+import { verifyToken } from '@/lib/token'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.promptquorum.com'
-
-function safeCompare(a: string, b: string): boolean {
-  try {
-    const ab = Buffer.from(a, 'hex')
-    const bb = Buffer.from(b, 'hex')
-    if (ab.length !== bb.length) return false
-    return timingSafeEqual(ab, bb)
-  } catch {
-    return false
-  }
-}
 
 export async function GET(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY)
@@ -22,17 +10,11 @@ export async function GET(req: NextRequest) {
   const email = (searchParams.get('email') ?? '').toLowerCase().trim()
   const token = searchParams.get('token') ?? ''
 
-  if (!email || !token) {
-    return NextResponse.redirect(`${BASE}/?confirmed=invalid`)
-  }
-
-  const expected = makeToken(email)
-  if (!safeCompare(token, expected)) {
+  if (!email || !token || !verifyToken(email, token, 'confirm')) {
     return NextResponse.redirect(`${BASE}/?confirmed=invalid`)
   }
 
   try {
-    // Upsert contact as confirmed (create or update by email)
     await resend.contacts.create({
       audienceId: process.env.RESEND_AUDIENCE_ID!,
       email,

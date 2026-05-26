@@ -147,11 +147,35 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS4Row1Data}</Td>
                     <Td>{t.privacyS4Row1Loc}</Td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-gray-100">
                     <Td><strong>{t.privacyS4Row2Proc}</strong></Td>
                     <Td>{t.privacyS4Row2Role}</Td>
                     <Td>{t.privacyS4Row2Data}</Td>
                     <Td>{t.privacyS4Row2Loc}</Td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><strong>{t.privacyS4Row3Proc}</strong></Td>
+                    <Td>{t.privacyS4Row3Role}</Td>
+                    <Td>{t.privacyS4Row3Data}</Td>
+                    <Td>{t.privacyS4Row3Loc}</Td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><strong>{t.privacyS4Row4Proc}</strong></Td>
+                    <Td>{t.privacyS4Row4Role}</Td>
+                    <Td>{t.privacyS4Row4Data}</Td>
+                    <Td>{t.privacyS4Row4Loc}</Td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><strong>{t.privacyS4Row5Proc}</strong></Td>
+                    <Td>{t.privacyS4Row5Role}</Td>
+                    <Td>{t.privacyS4Row5Data}</Td>
+                    <Td>{t.privacyS4Row5Loc}</Td>
+                  </tr>
+                  <tr>
+                    <Td><strong>{t.privacyS4Row6Proc}</strong></Td>
+                    <Td>{t.privacyS4Row6Role}</Td>
+                    <Td>{t.privacyS4Row6Data}</Td>
+                    <Td>{t.privacyS4Row6Loc}</Td>
                   </tr>
                 </tbody>
               </table>
@@ -210,16 +234,23 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS7Row2Purpose}</Td>
                     <Td>{t.privacyS7Row2Duration}</Td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-gray-100">
                     <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row3Cookie}</code></Td>
                     <Td>{t.privacyS7Row3SetBy}</Td>
                     <Td>{t.privacyS7Row3Purpose}</Td>
                     <Td>{t.privacyS7Row3Duration}</Td>
                   </tr>
+                  <tr>
+                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row4Cookie}</code></Td>
+                    <Td>{t.privacyS7Row4SetBy}</Td>
+                    <Td>{t.privacyS7Row4Purpose}</Td>
+                    <Td>{t.privacyS7Row4Duration}</Td>
+                  </tr>
                 </tbody>
               </table>
             </div>
             <P>{t.privacyS7Para2}</P>
+            <P>{t.privacyS7Para3}</P>
           </section>
 
           {/* Section 8 */}

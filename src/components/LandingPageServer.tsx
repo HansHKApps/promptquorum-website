@@ -8,6 +8,7 @@ import { BlogSectionClient } from './BlogSectionClient'
 import { Suspense } from 'react'
 import { useLang } from '@/hooks/useLang'
 import { translations } from '@/translations'
+import { CookieSettingsLink } from './CookieSettingsLink'
 
 // Icons
 const Shield = () => (
@@ -551,6 +552,8 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
               <a href="/frameworks" className="hover:text-primary transition-colors">Frameworks</a>
               <span aria-hidden="true">•</span>
               <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <span aria-hidden="true">•</span>
+              <CookieSettingsLink lang={lang} />
               <span aria-hidden="true">•</span>
               <a href="mailto:hello@promptquorum.com" className="hover:text-primary transition-colors">hello@promptquorum.com</a>
             </div>

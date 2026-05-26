@@ -22,8 +22,7 @@ import { CookieBanner } from '@/components/CookieBanner'
 import { PageTracker } from '@/components/PageTracker'
 import { OneSignalInit } from '@/components/OneSignalInit'
 import { PushPromptBanner } from '@/components/PushPromptBanner'
-import { Analytics } from '@vercel/analytics/next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { ConsentedAnalytics } from '@/components/ConsentedAnalytics'
 
 export const metadata: Metadata = {
   title: 'PromptQuorum — One Prompt. 25+ AI Models. Consensus Scoring.',
@@ -223,6 +222,13 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'wait_for_update': 500
+});
 gtag('js', new Date());
 gtag('config', 'G-8DQ4B3DXBS', {
   'anonymize_ip': true,
@@ -231,19 +237,11 @@ gtag('config', 'G-8DQ4B3DXBS', {
           }}
         />
 
-        {/* Umami Analytics — proxied through /api/stats to avoid ad blockers */}
-        <script
-          defer
-          src="/api/stats/script.js"
-          data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
-          data-host-url="/api/stats"
-        />
-
-        {/* Microsoft Clarity — proxied through /api/clarity to avoid ad blockers */}
+        {/* Microsoft Clarity — cookieless via consentv2 (GDPR-compliant, runs for all visitors) */}
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="/api/clarity/tag/wtwpeavhum";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wtwpeavhum");`,
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="/api/clarity/tag/wtwpeavhum";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wtwpeavhum");window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});`,
           }}
         />
       </head>
@@ -252,11 +250,10 @@ gtag('config', 'G-8DQ4B3DXBS', {
           <HeaderClient />
           <PageTracker />
           <OneSignalInit />
-          {children}
+          <main id="main">{children}</main>
           <CookieBanner />
           <PushPromptBanner />
-          <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
-          <SpeedInsights />
+          <ConsentedAnalytics />
         </Providers>
       </body>
     </html>

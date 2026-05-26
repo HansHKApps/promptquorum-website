@@ -69,6 +69,14 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-affiliate-tools-ai-developers-2026':     'best-affiliate-tools-ai-developers-2026',
   'apple-mlx-vs-nvidia-cuda-local-llm-2026':     'apple-mlx-vs-nvidia-cuda-local-llm-2026',
 
+  // Commercial Sprint 2026-05-26 — 6 new revenue pages
+  'qwen-local-deployment-complete-guide-2026':   'qwen-local-deployment-complete-guide-2026',
+  'deepseek-vs-qwen-coding-local-2026':          'deepseek-vs-qwen-coding-local-2026',
+  'best-workstation-build-local-ai-2026':        'best-workstation-build-local-ai-2026',
+  'best-local-llm-ide-plugins-2026':             'best-local-llm-ide-plugins-2026',
+  'best-rag-tools-for-business-documents-2026':  'best-rag-tools-for-business-documents-2026',
+  'wechat-bot-local-llm-personal-assistant-2026': 'wechat-bot-local-llm-personal-assistant-2026',
+
   // Category 9 — Voice, Speech & Multimodal
   'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',
   'local-vision-models-llava-ollama-2026':        'local-vision-models-llava-ollama-2026',

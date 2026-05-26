@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qwen Local Deployment Guide 2026 | PromptQuorum</title>
+    <meta name="description" content="How to deploy the full Qwen2.5 family locally. Hardware tiers, VRAM requirements, benchmark scores, and Ollama commands for 7B through 72B." />
+    <meta property="og:title" content="Qwen Local Deployment Guide 2026 — PromptQuorum" />
+    <meta property="og:description" content="Qwen2.5 7B–72B, Coder, and VL models. Hardware tier table, benchmarks, Ollama setup." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026" />
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+            position: relative;
+        }
+
+        .slide.active { display: flex; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+        .slide.title p { font-size: clamp(15px, 1.6vw, 20px); color: #6750a4; font-weight: 500; margin-top: 12px; }
+        .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; }
+
+        .slide h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+        .slide h2 { font-size: clamp(20px, 2.8vw, 32px); font-weight: 700; margin-bottom: 16px; color: #1c1b1f; }
+        .slide p  { font-size: clamp(14px, 1.5vw, 18px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+        .slide strong { color: #1c1b1f; font-weight: 700; }
+        .logo { width: 56px; height: 56px; margin-bottom: 20px; }
+
+        .slide ul, .slide ol { text-align: left; margin: 12px auto; max-width: 660px; }
+        .slide ul li, .slide ol li { font-size: clamp(13px, 1.35vw, 16px); margin-bottom: 10px; line-height: 1.5; }
+
+        table { margin: 12px auto; border-collapse: collapse; font-size: clamp(11px, 1.1vw, 13px); text-align: left; max-width: 96%; }
+        th { background: #6750a4; color: white; padding: 8px 12px; font-weight: 700; }
+        td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover td { background: #f7f2fa; }
+
+        .faq-list { text-align: left; max-width: 680px; margin: 0 auto; }
+        .faq-list dt { font-weight: 700; font-size: clamp(13px, 1.3vw, 15px); color: #6750a4; margin-top: 12px; }
+        .faq-list dd { font-size: clamp(12px, 1.2vw, 14px); color: #49454f; margin-left: 0; margin-top: 4px; }
+
+        .header { padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; background: white; flex-shrink: 0; }
+        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+        .header-left img { width: 28px; height: 28px; }
+        .header-links { display: flex; gap: 16px; }
+        .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; }
+        .header-links a:hover { color: #7d5260; }
+
+        .content-area { flex: 1; overflow: hidden; }
+
+        .controls { display: flex; gap: 12px; align-items: center; justify-content: center; padding: 12px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0; }
+        button { background: #6750a4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+        button:hover { background: #7d5260; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 60px; text-align: center; }
+
+        @page { size: A4 landscape; margin: 0; }
+
+        @media (max-width: 640px) {
+            .slide { padding: 20px 16px; }
+            .slide h1 { font-size: clamp(18px, 5vw, 26px); }
+            .slide h2 { font-size: clamp(15px, 4vw, 20px); }
+            .slide p  { font-size: 14px; }
+            .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.82em; }
+            .slide table th, .slide table td { padding: 5px 7px; white-space: nowrap; }
+            .header { padding: 10px 12px; }
+            .controls { padding: 10px 12px; }
+            .controls button { padding: 6px 12px; font-size: 12px; }
+        }
+
+        @media print {
+            html, body { overflow: visible !important; height: auto !important; background: white !important; }
+            .header, .controls { display: none !important; }
+            .content-area { overflow: visible !important; height: auto !important; }
+            .slide { display: flex !important; height: 100vh; page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Qwen Local Deployment Guide 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides dynamically injected -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">8</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const ARTICLE_SLUG = 'qwen-local-deployment-guide-2026';
+        const ARTICLE_BASE = 'https://www.promptquorum.com/local-llms/' + ARTICLE_SLUG;
+
+        const CONTENT = {
+            en: {
+                title: 'Qwen Local Deployment Guide 2026',
+                backLabel: '← Back to Article',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Qwen Local Deployment Guide 2026',
+                        subtitle: 'Qwen2.5 7B–72B · Coder · Vision-Language — hardware tiers, benchmarks, Ollama setup',
+                        link: ARTICLE_BASE
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            '<strong>Qwen2.5 7B at Q4_K_M needs only 5.5 GB VRAM</strong> — runs on any RTX 3060 or newer',
+                            '<strong>Qwen2.5 32B tops HumanEval at 91.5%</strong> — best coding model under 24 GB VRAM',
+                            '<strong>Qwen2.5 72B achieves 86.1% MMLU and 97% HumanEval</strong> — near-GPT-4 class locally',
+                            '<strong>Qwen2-VL handles Chinese OCR and mixed CJK/image tasks</strong> — best multimodal in its class',
+                            '<strong>All models install with one Ollama command</strong> — OpenAI-compatible API at localhost:11434',
+                            '<strong>China CAC Data Security Law makes local Qwen the compliant default</strong> for on-prem deployments'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Hardware Requirements by Model',
+                        columns: ['Model', 'Params', 'VRAM (Q4_K_M)', 'Min Hardware', 'Speed (tok/s)'],
+                        rows: [
+                            { 'Model': 'Qwen2.5 7B',   'Params': '7B',  'VRAM (Q4_K_M)': '5.5 GB', 'Min Hardware': 'RTX 3060 / M2 16 GB',       'Speed (tok/s)': '50–80' },
+                            { 'Model': 'Qwen2.5 14B',  'Params': '14B', 'VRAM (Q4_K_M)': '9.5 GB', 'Min Hardware': 'RTX 3080 / M2 Pro 24 GB',   'Speed (tok/s)': '30–50' },
+                            { 'Model': 'Qwen2.5 32B',  'Params': '32B', 'VRAM (Q4_K_M)': '20.5 GB','Min Hardware': 'RTX 4090 / M3 Max 40 GB',   'Speed (tok/s)': '15–30' },
+                            { 'Model': 'Qwen2.5 72B',  'Params': '72B', 'VRAM (Q4_K_M)': '46 GB',  'Min Hardware': '2× RTX 4090 / M2 Ultra 64 GB','Speed (tok/s)': '8–15' },
+                            { 'Model': 'Coder 7B',     'Params': '7B',  'VRAM (Q4_K_M)': '5.5 GB', 'Min Hardware': 'RTX 3060 / M2 16 GB',       'Speed (tok/s)': '50–80' },
+                            { 'Model': 'Coder 32B',    'Params': '32B', 'VRAM (Q4_K_M)': '20.5 GB','Min Hardware': 'RTX 4090 / M3 Max 40 GB',   'Speed (tok/s)': '15–30' },
+                            { 'Model': 'VL 7B',        'Params': '7B',  'VRAM (Q4_K_M)': '6 GB',   'Min Hardware': 'RTX 3060 12 GB / M2 16 GB', 'Speed (tok/s)': '20–40' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Benchmark Scores vs Llama & Mistral',
+                        columns: ['Model', 'MMLU (%)', 'MATH-500 (%)', 'HumanEval (%)'],
+                        rows: [
+                            { 'Model': 'Qwen2.5 7B',    'MMLU (%)': '72.5', 'MATH-500 (%)': '62.5', 'HumanEval (%)': '74.6' },
+                            { 'Model': 'Qwen2.5 14B',   'MMLU (%)': '79.2', 'MATH-500 (%)': '76.1', 'HumanEval (%)': '82.1' },
+                            { 'Model': 'Qwen2.5 32B',   'MMLU (%)': '83.4', 'MATH-500 (%)': '90.3', 'HumanEval (%)': '91.5 ✓' },
+                            { 'Model': 'Qwen2.5 72B',   'MMLU (%)': '86.1 ✓','MATH-500 (%)': '92.9 ✓','HumanEval (%)': '97.0 ✓' },
+                            { 'Model': 'Llama 3.3 70B', 'MMLU (%)': '80.7', 'MATH-500 (%)': '68.0', 'HumanEval (%)': '77.7' },
+                            { 'Model': 'Mistral 7B',    'MMLU (%)': '56.0', 'MATH-500 (%)': '35.9', 'HumanEval (%)': '48.9' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Which Qwen2.5 Model Should You Run?',
+                        items: [
+                            '<strong>Daily chat / RAG on 8 GB VRAM</strong> → Qwen2.5 7B (Q4_K_M, 5.5 GB)',
+                            '<strong>Balanced quality on 12 GB VRAM</strong> → Qwen2.5 14B (Q4_K_M, 9.5 GB)',
+                            '<strong>Best coding &lt; 24 GB VRAM</strong> → Qwen2.5-Coder 32B (91.5% HumanEval)',
+                            '<strong>Research / near-GPT-4 quality</strong> → Qwen2.5 72B (needs 48 GB VRAM or multi-GPU)',
+                            '<strong>Chinese OCR, image understanding</strong> → Qwen2-VL 7B (6 GB VRAM)',
+                            '<strong>Apple Silicon (M3 Max / M2 Ultra)</strong> → unified memory means 72B is accessible at 64 GB RAM'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Ollama Quick Start — 3 Commands',
+                        items: [
+                            '<strong>Install Ollama:</strong> <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">curl -fsSL https://ollama.com/install.sh | sh</code>',
+                            '<strong>Pull model:</strong> <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama pull qwen2.5:14b-instruct-q4_K_M</code>',
+                            '<strong>Run it:</strong> <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:14b-instruct-q4_K_M</code>',
+                            'Coder: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5-coder:32b-instruct-q4_K_M</code>',
+                            'VL: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2-vl:7b-instruct-q4_K_M</code>',
+                            'API at <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">http://localhost:11434</code> — OpenAI-compatible drop-in'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Frequently Asked Questions',
+                        faqs: [
+                            { q: 'What is the minimum VRAM for Qwen2.5?', a: 'Qwen2.5 7B at Q4_K_M quantization needs 5.5 GB VRAM. An RTX 3060 8 GB or any M-series Mac with 16 GB unified memory is sufficient.' },
+                            { q: 'Is Qwen2.5 better than Llama 3.3 for coding?', a: 'Yes. Qwen2.5 32B scores 91.5% HumanEval vs 77.7% for Llama 3.3 70B — despite using half the VRAM.' },
+                            { q: 'Can I use Qwen locally for Chinese-language tasks?', a: 'Yes. All Qwen2.5 models have native Chinese tokenization, 30–40% more efficient than Llama on Chinese text. Qwen2-VL also handles Chinese OCR.' },
+                            { q: 'Does running Qwen locally comply with China data law?', a: 'Local-only inference ensures data never leaves your hardware, which satisfies the data residency requirements of China\'s Data Security Law and CAC regulations.' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Deploy Your First Qwen2.5 Model Today',
+                        body: 'All models are free, open-weight, and run entirely on your hardware. No account needed — install Ollama, run one command.',
+                        cta: 'Read the Full Guide',
+                        href: ARTICLE_BASE
+                    }
+                ]
+            },
+            de: {
+                title: 'Qwen Lokal Deployment Guide 2026',
+                backLabel: '← Zurück zum Artikel',
+                slides: [
+                    { type: 'title', h1: 'Qwen Lokal Deployment Guide 2026', subtitle: 'Qwen2.5 7B–72B · Coder · Vision-Language — Hardware-Anforderungen, Benchmarks, Ollama-Setup', link: ARTICLE_BASE + '?lang=de' },
+                    { type: 'list', h2: 'Kernaussagen', items: ['<strong>Qwen2.5 7B (Q4_K_M) benötigt nur 5,5 GB VRAM</strong> — läuft auf RTX 3060 oder neuerer GPU', '<strong>Qwen2.5 32B erreicht 91,5 % HumanEval</strong> — bestes Coding-Modell unter 24 GB VRAM', '<strong>Qwen2.5 72B: 86,1 % MMLU und 97 % HumanEval</strong> — nahe GPT-4-Klasse, lokal ausgeführt', '<strong>Qwen2-VL verarbeitet chinesische OCR und CJK/Bild-Aufgaben</strong> — beste multimodale Option', '<strong>Alle Modelle per Ollama-Befehl installierbar</strong> — OpenAI-kompatible API unter localhost:11434', '<strong>DSGVO-konform:</strong> Daten verlassen die Hardware nicht; lokale Inferenz vereinfacht Verarbeitungsverzeichnisse'] },
+                    { type: 'table', h2: 'Hardware-Anforderungen nach Modell', columns: ['Modell', 'VRAM (Q4_K_M)', 'Min. Hardware', 'Geschwindigkeit'], rows: [{ 'Modell': 'Qwen2.5 7B', 'VRAM (Q4_K_M)': '5,5 GB', 'Min. Hardware': 'RTX 3060 / M2 16 GB', 'Geschwindigkeit': '50–80 Tok/s' }, { 'Modell': 'Qwen2.5 14B', 'VRAM (Q4_K_M)': '9,5 GB', 'Min. Hardware': 'RTX 3080 / M2 Pro 24 GB', 'Geschwindigkeit': '30–50 Tok/s' }, { 'Modell': 'Qwen2.5 32B', 'VRAM (Q4_K_M)': '20,5 GB', 'Min. Hardware': 'RTX 4090 / M3 Max 40 GB', 'Geschwindigkeit': '15–30 Tok/s' }, { 'Modell': 'Coder 32B', 'VRAM (Q4_K_M)': '20,5 GB', 'Min. Hardware': 'RTX 4090 / M3 Max 40 GB', 'Geschwindigkeit': '15–30 Tok/s' }, { 'Modell': 'VL 7B', 'VRAM (Q4_K_M)': '6 GB', 'Min. Hardware': 'RTX 3060 12 GB / M2 16 GB', 'Geschwindigkeit': '20–40 Tok/s' }] },
+                    { type: 'cta', h2: 'Jetzt das erste Qwen2.5-Modell starten', body: 'Alle Modelle sind kostenlos, quelloffen und laufen vollständig auf Ihrer Hardware. Kein Konto erforderlich — Ollama installieren, einen Befehl ausführen.', cta: 'Vollständigen Artikel lesen', href: ARTICLE_BASE + '?lang=de' }
+                ]
+            },
+            fr: {
+                title: 'Guide de déploiement local Qwen 2026',
+                backLabel: '← Retour à l\'article',
+                slides: [
+                    { type: 'title', h1: 'Guide de déploiement local Qwen 2026', subtitle: 'Qwen2.5 7B–72B · Coder · Vision-Language — niveaux matériels, benchmarks, configuration Ollama', link: ARTICLE_BASE + '?lang=fr' },
+                    { type: 'list', h2: 'Points clés', items: ['<strong>Qwen2.5 7B (Q4_K_M) ne nécessite que 5,5 Go de VRAM</strong> — fonctionne sur toute RTX 3060 ou plus récente', '<strong>Qwen2.5 32B atteint 91,5 % sur HumanEval</strong> — meilleur modèle de code sous 24 Go de VRAM', '<strong>Qwen2.5 72B : 86,1 % MMLU et 97 % HumanEval</strong> — niveau quasi-GPT-4 en local', '<strong>Conformité RGPD :</strong> les données ne quittent pas votre matériel', '<strong>API compatible OpenAI</strong> disponible sur localhost:11434'] },
+                    { type: 'cta', h2: 'Déployez votre premier modèle Qwen2.5', body: 'Tous les modèles sont gratuits, open-weight et tournent entièrement sur votre matériel. Installez Ollama, lancez une commande.', cta: 'Lire le guide complet', href: ARTICLE_BASE + '?lang=fr' }
+                ]
+            },
+            ja: {
+                title: 'Qwen ローカル展開ガイド 2026',
+                backLabel: '← 記事に戻る',
+                slides: [
+                    { type: 'title', h1: 'Qwen ローカル展開ガイド 2026', subtitle: 'Qwen2.5 7B〜72B · Coder · Vision-Language — ハードウェア要件・ベンチマーク・Ollamaセットアップ', link: ARTICLE_BASE + '?lang=ja' },
+                    { type: 'list', h2: '主なポイント', items: ['<strong>Qwen2.5 7B（Q4_K_M）はVRAM 5.5 GBのみ必要</strong> — RTX 3060以上で動作', '<strong>Qwen2.5 32BはHumanEval 91.5%を達成</strong> — 24 GB VRAM以下で最高のコーディングモデル', '<strong>Qwen2.5 72BはMMU 86.1%・HumanEval 97%</strong> — GPT-4クラスに迫るローカル性能', '<strong>METI AIガイドライン対応</strong>：ローカル推論でデータが外部に出ない', '<strong>Ollama経由でOpenAI互換API</strong>（localhost:11434）'] },
+                    { type: 'cta', h2: '今すぐQwen2.5を展開する', body: 'すべてのモデルは無料・オープンウェイトで、お使いのハードウェア上でのみ動作します。アカウント不要 — Ollamaをインストールしてコマンド一つで完了。', cta: '完全ガイドを読む', href: ARTICLE_BASE + '?lang=ja' }
+                ]
+            },
+            zh: {
+                title: 'Qwen 本地部署指南 2026',
+                backLabel: '← 返回文章',
+                slides: [
+                    { type: 'title', h1: 'Qwen 本地部署指南 2026', subtitle: 'Qwen2.5 7B–72B · Coder · Vision-Language — 硬件配置、基准测试、Ollama 安装', link: ARTICLE_BASE + '?lang=zh' },
+                    { type: 'list', h2: '核心要点', items: ['<strong>Qwen2.5 7B（Q4_K_M）仅需 5.5 GB 显存</strong>——RTX 3060 或更新显卡均可运行', '<strong>Qwen2.5 32B HumanEval 达 91.5%</strong>——24 GB 显存以下最佳编程模型', '<strong>Qwen2.5 72B MMLU 86.1%、HumanEval 97%</strong>——接近 GPT-4 级别的本地性能', '<strong>符合中国《数据安全法》和 CAC 法规</strong>：本地推理，数据不出设备', '<strong>Ollama 提供 OpenAI 兼容 API</strong>（localhost:11434），一键集成'] },
+                    { type: 'table', h2: '各模型显存需求', columns: ['模型', '显存 (Q4_K_M)', '最低硬件', '速度（词元/秒）'], rows: [{ '模型': 'Qwen2.5 7B', '显存 (Q4_K_M)': '5.5 GB', '最低硬件': 'RTX 3060 / M2 16 GB 统一内存', '速度（词元/秒）': '50–80' }, { '模型': 'Qwen2.5 14B', '显存 (Q4_K_M)': '9.5 GB', '最低硬件': 'RTX 3080 / M2 Pro 24 GB', '速度（词元/秒）': '30–50' }, { '模型': 'Qwen2.5 32B', '显存 (Q4_K_M)': '20.5 GB', '最低硬件': 'RTX 4090 / M3 Max 40 GB', '速度（词元/秒）': '15–30' }, { '模型': 'Coder 32B', '显存 (Q4_K_M)': '20.5 GB', '最低硬件': 'RTX 4090 / M3 Max 40 GB', '速度（词元/秒）': '15–30' }, { '模型': 'VL 7B', '显存 (Q4_K_M)': '6 GB', '最低硬件': 'RTX 3060 12 GB / M2 16 GB', '速度（词元/秒）': '20–40' }] },
+                    { type: 'cta', h2: '立即部署您的第一个 Qwen2.5 模型', body: '所有模型均免费、开放权重，完全运行于本地硬件。无需账号——安装 Ollama，执行一条命令即可。', cta: '阅读完整指南', href: ARTICLE_BASE + '?lang=zh' }
+                ]
+            }
+        };
+
+        function renderSlide(slide, lang) {
+            const articleUrl = ARTICLE_BASE + (lang !== 'en' ? '?lang=' + lang : '');
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+            let html = '';
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 32px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}" target="_blank" rel="noopener">${slide.link}</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p style="max-width:640px;">${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1em; margin-top: 16px;">';
+                    slide.items.forEach(item => { html += `<li>${item}</li>`; });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p style="max-width:640px;">${slide.intro}</p>`;
+                    html += '<ol style="font-size: 1em; margin-top: 16px;">';
+                    slide.items.forEach(item => { html += `<li>${item}</li>`; });
+                    html += '</ol>';
+                    html += footerLink;
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2><table><tr>`;
+                    slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2><dl class="faq-list">`;
+                    slide.faqs.forEach(faq => {
+                        html += `<dt>${faq.q}</dt><dd>${faq.a}</dd>`;
+                    });
+                    html += '</dl>';
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="max-width: 560px;">${slide.body}</p>
+                        <a href="${slide.href}" target="_blank" rel="noopener" style="display:inline-block;margin-top:28px;padding:14px 28px;background:#6750a4;color:white;border-radius:8px;text-decoration:none;font-size:1.1em;font-weight:600;">${slide.cta}</a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" style="position:relative;">${html}</div>`;
+        }
+
+        // Language detection
+        const params = new URLSearchParams(window.location.search);
+        const lang = (['en','de','fr','ja','zh'].includes(params.get('lang'))) ? params.get('lang') : 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.textContent = content.backLabel;
+        backLink.target = '_blank';
+        backLink.rel = 'noopener';
+        if (lang !== 'en') backLink.href = ARTICLE_BASE + '?lang=' + lang;
+
+        // Render all slides
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide, lang);
+        });
+
+        // Navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+            else currentSlide = n;
+            slides.forEach(s => s.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) { showSlide(currentSlide + n); }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp')   changeSlide(-1);
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => { slides.forEach(s => { s.style.display = 'flex'; }); });
+        window.addEventListener('afterprint',  () => { slides.forEach(s => { s.style.removeProperty('display'); }); showSlide(currentSlide); });
+
+        if (isPrint) { window.addEventListener('load', () => { window.print(); }); }
+
+        showSlide(0);
+    </script>
+</body>
+</html>

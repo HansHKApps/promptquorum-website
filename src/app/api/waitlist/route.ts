@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { Ratelimit } from '@upstash/ratelimit'
-import { Redis } from '@upstash/redis'
+import { redis } from '@/lib/redis'
 import { makeToken } from '@/lib/token'
 
 type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
@@ -14,6 +14,7 @@ const EMAIL_CONTENT: Record<Lang, {
   cta: string
   ignore: string
   expires: string
+  unsubscribe: string
 }> = {
   en: {
     subject: 'Please confirm your PromptQuorum waitlist spot',
@@ -23,6 +24,7 @@ const EMAIL_CONTENT: Record<Lang, {
     cta: 'Confirm my spot',
     ignore: "If you didn't sign up for PromptQuorum, you can safely ignore this email.",
     expires: 'This link expires in 7 days.',
+    unsubscribe: 'Unsubscribe',
   },
   de: {
     subject: 'Bitte bestätigen Sie Ihren PromptQuorum-Wartelistenplatz',
@@ -32,6 +34,7 @@ const EMAIL_CONTENT: Record<Lang, {
     cta: 'Meinen Platz bestätigen',
     ignore: 'Falls Sie sich nicht bei PromptQuorum angemeldet haben, können Sie diese E-Mail ignorieren.',
     expires: 'Dieser Link läuft in 7 Tagen ab.',
+    unsubscribe: 'Abmelden',
   },
   fr: {
     subject: 'Veuillez confirmer votre place sur la liste d\'attente PromptQuorum',
@@ -41,6 +44,7 @@ const EMAIL_CONTENT: Record<Lang, {
     cta: 'Confirmer ma place',
     ignore: 'Si vous ne vous êtes pas inscrit à PromptQuorum, vous pouvez ignorer cet e-mail.',
     expires: 'Ce lien expire dans 7 jours.',
+    unsubscribe: 'Se désabonner',
   },
   ja: {
     subject: 'PromptQuorumのウェイトリスト登録を確認してください',
@@ -50,6 +54,7 @@ const EMAIL_CONTENT: Record<Lang, {
     cta: '席を確認する',
     ignore: 'PromptQuorumに登録していない場合は、このメールを無視してください。',
     expires: 'このリンクは7日後に期限切れになります。',
+    unsubscribe: '配信停止',
   },
   zh: {
     subject: '请确认您的 PromptQuorum 候补名单席位',
@@ -59,13 +64,9 @@ const EMAIL_CONTENT: Record<Lang, {
     cta: '确认我的席位',
     ignore: '如果您没有注册 PromptQuorum，请忽略此邮件。',
     expires: '此链接将在 7 天后过期。',
+    unsubscribe: '取消订阅',
   },
 }
-
-const redis = new Redis({
-  url: process.env.UPSTASH_REDIS_REST_URL!,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
-})
 
 const ipLimiter = new Ratelimit({
   redis,
@@ -129,15 +130,22 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // Build confirmation link
-    const token = makeToken(email)
-    const confirmUrl = `${process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.promptquorum.com'}/api/confirm?email=${encodeURIComponent(email)}&token=${token}`
+    // Build confirmation + unsubscribe links
+    const base = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.promptquorum.com'
+    const confirmToken = makeToken(email, 'confirm')
+    const unsubToken = makeToken(email, 'unsub')
+    const confirmUrl = `${base}/api/confirm?email=${encodeURIComponent(email)}&token=${confirmToken}`
+    const unsubUrl = `${base}/api/unsubscribe?email=${encodeURIComponent(email)}&token=${unsubToken}&lang=${lang}`
 
     // Send double opt-in confirmation email in user's language
     await resend.emails.send({
       from: 'PromptQuorum <noreply@promptquorum.com>',
       to: email,
       subject: c.subject,
+      headers: {
+        'List-Unsubscribe': `<mailto:hello@promptquorum.com?subject=unsubscribe>, <${unsubUrl}>`,
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+      },
       html: `<!DOCTYPE html>
 <html lang="${lang}">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
@@ -164,8 +172,9 @@ export async function POST(req: NextRequest) {
         </tr>
         <tr>
           <td style="padding:20px 40px;border-top:1px solid #2B2930;text-align:center">
-            <p style="margin:0;font-size:11px;color:#49454F">
-              PromptQuorum &middot; <a href="https://www.promptquorum.com/privacy" style="color:#938F99;text-decoration:underline">Privacy Policy</a> &middot; You are receiving this because you signed up at promptquorum.com
+            <p style="margin:0;font-size:11px;color:#49454F;line-height:1.6">
+              PromptQuorum &middot; <a href="${base}/privacy" style="color:#938F99;text-decoration:underline">Privacy Policy</a> &middot; <a href="${unsubUrl}" style="color:#938F99;text-decoration:underline">${c.unsubscribe}</a><br>
+              You are receiving this because you signed up at promptquorum.com
             </p>
           </td>
         </tr>

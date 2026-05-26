@@ -70,6 +70,14 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'build-local-voice-assistant-2026',
   'local-multimodal-pipeline-voice-vision-text',
 
+  // Commercial Sprint 2026-05-26 — 6 new revenue pages
+  'qwen-local-deployment-complete-guide-2026',
+  'deepseek-vs-qwen-coding-local-2026',
+  'best-workstation-build-local-ai-2026',
+  'best-local-llm-ide-plugins-2026',
+  'best-rag-tools-for-business-documents-2026',
+  'wechat-bot-local-llm-personal-assistant-2026',
+
   // Cat 10 — Hardware Buying Guides & Affiliate
   'best-gpu-buying-guide-local-llm-2026',
   'best-mac-for-local-ai-2026',

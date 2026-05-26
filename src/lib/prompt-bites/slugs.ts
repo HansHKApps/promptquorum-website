@@ -67,4 +67,13 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'best-quantization-6gb-vram':           'bestQuantization6gbVram',
   'mistral-small-24b-vs-qwen-14b-vs-llama-8b': 'mistralSmall24bVsQwen14bVsLlama8b',
   'strix-halo-ollama-vulkan':             'strixHaloOllamaVulkan',
+
+  // Commercial Sprint 2026-05-26
+  'best-vpn-for-ai-development-china-2026':    'bestVpnForAiDevelopmentChina2026',
+  'best-mini-pc-for-ollama-server-always-on':  'bestMiniPcForOllamaServerAlwaysOn',
+  'best-egpu-setup-for-macbook-local-llm-2026': 'bestEgpuSetupForMacbookLocalLlm2026',
+  'best-cloud-gpu-for-fine-tuning-under-1-per-hour': 'bestCloudGpuForFineTuningUnder1PerHour',
+  'best-ai-text-to-speech-for-content-creators': 'bestAiTextToSpeechForContentCreators',
+  'best-open-source-alternatives-to-chatgpt-plus': 'bestOpenSourceAlternativesToChatgptPlus',
+  'cheapest-way-to-run-70b-model-locally':     'cheapestWayToRun70bModelLocally',
 }

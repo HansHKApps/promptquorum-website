@@ -55,7 +55,12 @@ import { article as a_qwen_gdpr_privacy_manifesto_2026 } from "./articles/qwen-g
 import { article as a_qwen_local_gdpr_setup_guide_2026 } from "./articles/qwen-local-gdpr-setup-guide-2026";
 import { article as a_gdpr_llm_risk_comparison_2026 } from "./articles/gdpr-llm-risk-comparison-2026";
 import { article as a_run_qwen_vl_locally_2026 } from "./articles/run-qwen-vl-locally-2026";
+import { article as a_qwen_local_deployment_guide_2026 } from "./articles/qwen-local-deployment-guide-2026";
 import { article as a_xinference_llama_qwen_chatglm_mistral } from "./articles/xinference-llama-qwen-chatglm-mistral";
+// Commercial Sprint 2026-05-26
+import { article as a_alibaba_cloud_vs_tencent_cloud_gpu_ai_2026 } from "./articles/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026";
+import { article as a_best_gpu_for_llm_inference_under_500_2026 } from "./articles/best-gpu-for-llm-inference-under-500-2026";
+import { article as a_local_llm_cost_calculator_build_vs_rent_2026 } from "./articles/local-llm-cost-calculator-build-vs-rent-2026";
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
@@ -223,4 +228,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "gdpr-llm-risk-comparison-2026": a_gdpr_llm_risk_comparison_2026,
   "run-qwen-vl-locally-2026": a_run_qwen_vl_locally_2026,
   "xinference-llama-qwen-chatglm-mistral": a_xinference_llama_qwen_chatglm_mistral,
+  "qwen-local-deployment-guide-2026": a_qwen_local_deployment_guide_2026,
+  // Commercial Sprint 2026-05-26
+  "alibaba-cloud-vs-tencent-cloud-gpu-ai-2026": a_alibaba_cloud_vs_tencent_cloud_gpu_ai_2026,
+  "best-gpu-for-llm-inference-under-500-2026": a_best_gpu_for_llm_inference_under_500_2026,
+  "local-llm-cost-calculator-build-vs-rent-2026": a_local_llm_cost_calculator_build_vs_rent_2026,
 };

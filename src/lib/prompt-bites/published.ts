@@ -62,6 +62,14 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-quantization-6gb-vram',
   'mistral-small-24b-vs-qwen-14b-vs-llama-8b',
   'strix-halo-ollama-vulkan',
+  // Commercial Sprint 2026-05-26
+  'best-vpn-for-ai-development-china-2026',
+  'best-mini-pc-for-ollama-server-always-on',
+  'best-egpu-setup-for-macbook-local-llm-2026',
+  'best-cloud-gpu-for-fine-tuning-under-1-per-hour',
+  'best-ai-text-to-speech-for-content-creators',
+  'best-open-source-alternatives-to-chatgpt-plus',
+  'cheapest-way-to-run-70b-model-locally',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true

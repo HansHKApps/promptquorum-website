@@ -50,6 +50,14 @@ import { article as ollamaMlxAppleSilicon } from './articles/ollama-mlx-apple-si
 import { article as bestQuantization6gbVram } from './articles/best-quantization-6gb-vram'
 import { article as mistralSmall24bVsQwen14bVsLlama8b } from './articles/mistral-small-24b-vs-qwen-14b-vs-llama-8b'
 import { article as strixHaloOllamaVulkan } from './articles/strix-halo-ollama-vulkan'
+// Commercial Sprint 2026-05-26
+import { article as bestVpnForAiDevelopmentChina2026 } from './articles/best-vpn-for-ai-development-china-2026'
+import { article as bestMiniPcForOllamaServerAlwaysOn } from './articles/best-mini-pc-for-ollama-server-always-on'
+import { article as bestEgpuSetupForMacbookLocalLlm2026 } from './articles/best-egpu-setup-for-macbook-local-llm-2026'
+import { article as bestCloudGpuForFineTuningUnder1PerHour } from './articles/best-cloud-gpu-for-fine-tuning-under-1-per-hour'
+import { article as bestAiTextToSpeechForContentCreators } from './articles/best-ai-text-to-speech-for-content-creators'
+import { article as bestOpenSourceAlternativesToChatgptPlus } from './articles/best-open-source-alternatives-to-chatgpt-plus'
+import { article as cheapestWayToRun70bModelLocally } from './articles/cheapest-way-to-run-70b-model-locally'
 
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
@@ -101,4 +109,12 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestQuantization6gbVram,
   mistralSmall24bVsQwen14bVsLlama8b,
   strixHaloOllamaVulkan,
+  // Commercial Sprint 2026-05-26
+  bestVpnForAiDevelopmentChina2026,
+  bestMiniPcForOllamaServerAlwaysOn,
+  bestEgpuSetupForMacbookLocalLlm2026,
+  bestCloudGpuForFineTuningUnder1PerHour,
+  bestAiTextToSpeechForContentCreators,
+  bestOpenSourceAlternativesToChatgptPlus,
+  cheapestWayToRun70bModelLocally,
 }
