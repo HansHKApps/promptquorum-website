@@ -917,7 +917,7 @@ docker run --gpus all \\
     title: 'Qwen本地部署完整指南2026：Docker、API服务器、多GPU配置',
     seoTitle: 'Qwen生产环境完整部署指南2026：Docker Compose、API服务器、多GPU配置方案',
     metaDescription:
-      '在生产环境中部署Qwen 7B至72B：Docker Compose API服务器、多GPU配置、硬件性能基准，以及与阿里云的成本对比（2026年5月）。',
+      '在生产环境中部署通义千问大模型：七十亿至七百二十亿参数均可通过Docker Compose搭建持久API服务器、配置多GPU分布式推理，附硬件性能基准数据及与阿里云的每小时成本对比分析（2026年5月）。',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
