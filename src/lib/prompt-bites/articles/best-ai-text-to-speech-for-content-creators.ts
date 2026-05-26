@@ -146,6 +146,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       headline: 'Best AI Text-to-Speech for Content Creators 2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
+      url: 'https://www.promptquorum.com/prompt-bites/best-ai-text-to-speech-for-content-creators?lang=en',
+      inLanguage: 'en',
     },
   },
   de: {
@@ -211,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Beste KI Text-to-Speech für Content Creator 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Beste KI Text-to-Speech für Content Creator 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-ai-text-to-speech-for-content-creators?lang=de', inLanguage: 'de' },
   },
   fr: {
     freshness_tier: 'semi_annual',
@@ -272,7 +274,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleurs outils TTS IA pour créateurs de contenu 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleurs outils TTS IA pour créateurs de contenu 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-ai-text-to-speech-for-content-creators?lang=fr', inLanguage: 'fr' },
   },
   ja: {
     freshness_tier: 'semi_annual',
@@ -333,7 +335,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'コンテンツクリエイター向けAI TTS比較 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'コンテンツクリエイター向けAI TTS比較 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-ai-text-to-speech-for-content-creators?lang=ja', inLanguage: 'ja' },
   },
   zh: {
     freshness_tier: 'semi_annual',
@@ -398,6 +400,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年内容创作者最佳AI TTS工具对比', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年内容创作者最佳AI TTS工具对比', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-ai-text-to-speech-for-content-creators?lang=zh', inLanguage: 'zh' },
   },
 }
