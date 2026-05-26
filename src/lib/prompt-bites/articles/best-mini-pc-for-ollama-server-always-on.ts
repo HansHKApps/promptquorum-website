@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Best macOS — 48 GB unified memory, 32B models, ~$1399' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best Mini PC for an Always-On Ollama Server (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Best Mini PC for an Always-On Ollama Server (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=en', inLanguage: 'en' },
   },
 
   de: {
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Bester macOS-Mini-PC — 48 GB Unified Memory, ~1399 €' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Bester Mini-PC für Ollama-Server im Dauerbetrieb (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Bester Mini-PC für Ollama-Server im Dauerbetrieb (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=de', inLanguage: 'de' },
   },
 
   fr: {
@@ -394,7 +394,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Meilleur macOS — 48 Go mémoire unifiée, ~1399 €' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleur mini PC pour un serveur Ollama en continu (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleur mini PC pour un serveur Ollama en continu (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=fr', inLanguage: 'fr' },
   },
 
   ja: {
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'macOS最良 — 48GB統合メモリ、約18万円' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '常時稼働Ollamaサーバー向けミニPC最おすすめ（2026年）', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: '常時稼働Ollamaサーバー向けミニPC最おすすめ（2026年）', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=ja', inLanguage: 'ja' },
   },
 
   zh: {
@@ -648,6 +648,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: '最佳macOS — 48GB统一内存、约9800元' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=zh', inLanguage: 'zh' },
   },
 }
