@@ -5,6 +5,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { truncateTitle } from '@/lib/utils'
 import { PowerLocalLLMPostClient } from '@/components/PowerLocalLLMPostClient'
 import { powerLLMContent } from './content'
 import { POWER_LLM_SLUG_TO_KEY } from './slugs'

@@ -4,6 +4,7 @@
 
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { truncateTitle } from '@/lib/utils'
 import { PromptBitesPostClient } from '@/components/PromptBitesPostClient'
 import { PromptBitesHubClient } from '@/components/PromptBitesHubClient'
 import { promptBitesContent } from './articles-barrel'
