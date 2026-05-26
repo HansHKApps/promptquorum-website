@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       alternatives: {
         title: 'What to Do Instead: Real Alternatives',
-        items: [
+        productItems: [
           {
             title: 'Mac Mini M4 Pro (48 GB) — Best macOS Option',
             content: 'The Mac Mini M4 Pro with 48 GB of unified memory runs Qwen2.5 32B Q4 at 20–30 tok/s via Ollama Metal backend. The 24-core GPU handles larger models than a MacBook M4 Pro (which maxes at 64 GB). Price: ~$1399. If you want to stay in the macOS ecosystem and need 32B+ model capability, this is the upgrade path — not an eGPU.',
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       alternatives: {
         title: 'Echte Alternativen für GPU-beschleunigtes LLM auf Mac',
-        items: [
+        productItems: [
           {
             title: 'Mac Mini M4 Pro (48 GB) — Beste macOS-Option',
             content: 'Der Mac Mini M4 Pro mit 48 GB Unified Memory läuft Qwen2.5 32B Q4 mit 20–30 Tok/s über Ollamas Metal-Backend. Preis: ~1399 €. Wenn macOS Voraussetzung ist und 32B+-Modelle benötigt werden, ist dies der Upgrade-Pfad — nicht eine eGPU.',
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       alternatives: {
         title: 'Vraies alternatives pour l\'inférence GPU sur Mac',
-        items: [
+        productItems: [
           {
             title: 'Mac Mini M4 Pro (48 Go) — Meilleure option macOS',
             content: 'Le Mac Mini M4 Pro avec 48 Go de mémoire unifiée fait tourner Qwen2.5 32B Q4 à 20–30 tok/s via le backend Metal d\'Ollama. Prix : ~1399 €. Si macOS est requis et que vous avez besoin de modèles 32B+, c\'est la bonne mise à niveau — pas une eGPU.',
@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       alternatives: {
         title: 'Mac上のGPU推論のための実際の代替案',
-        items: [
+        productItems: [
           {
             title: 'Mac Mini M4 Pro（48GB）——最良macOS選択肢',
             content: 'Mac Mini M4 Pro（48GB統合メモリ、約18万円）はOllamaのMetalバックエンドを通じてQwen2.5 32B Q4を20〜30 tok/sで実行できます。macOS環境が必要で32B以上のモデル能力が求められる場合、eGPUではなくこれがアップグレードパスです。',
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       alternatives: {
         title: 'Mac上GPU推理的真实替代方案',
-        items: [
+        productItems: [
           {
             title: 'Mac Mini M4 Pro（48GB）——最佳macOS选择',
             content: 'Mac Mini M4 Pro（48GB统一内存，约9800元）通过Ollama的Metal后端以20–30 tok/s运行Qwen2.5 32B Q4。如果需要在macOS环境中运行32B以上模型，这是正确的升级路径——而非eGPU。',
