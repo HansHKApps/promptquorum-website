@@ -23,8 +23,8 @@ jobs:
           echo "📥 Fetching sitemap from https://${HOST}/sitemap.xml..."
           SITEMAP=$(curl -s "https://${HOST}/sitemap.xml")
 
-          # Extract all <loc> URLs (English canonical only — no /de/ /fr/ /ja/ /zh/ variants)
-          URLS=$(echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+' | grep -v "/${HOST}/[a-z][a-z]/" | jq -R . | jq -s .)
+          # Extract all <loc> URLs (English canonical only — no /de /fr /ja /zh variants)
+          URLS=$(echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+' | grep -vP "/${HOST}/[a-z]{2}(/|$)" | jq -R . | jq -s .)
           TOTAL_URLS=$(echo "$URLS" | jq 'length')
 
           echo "📢 Submitting $TOTAL_URLS URLs to Bing IndexNow..."
