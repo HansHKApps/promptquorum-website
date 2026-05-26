@@ -32,7 +32,7 @@ export default async function DeHome() {
   return (
     <>
       <ConfirmedToast />
-      <LandingPageServer initialLang="de" />
+      <LandingPageServer initialLang="ja" />
 
       {/* FAQPage Schema — 8 core questions for homepage rich snippets */}
       <script

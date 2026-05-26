@@ -329,6 +329,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Small Local LLM Models Under 4 GB](/local-llms/small-local-llm-models) -- 3B models for 8 GB laptops',
             '[Laptop vs Desktop for Local LLMs 2026](/local-llms/laptop-vs-desktop-local-llm) -- Buying guide: performance comparison, cost analysis, and which platform to buy.',
             '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Framework comparison for Apple Silicon: speed, setup time, and ecosystem trade-offs.',
+            '[Cheapest Way to Run a 70B Model Locally](/prompt-bites/cheapest-way-to-run-70b-model-locally) -- When a laptop can handle 70B: Q3_K_S on M3 Max vs CPU offloading.',
+            '[Best GPU for Local LLM Inference Under $500 (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026) -- eGPU upgrade path for MacBook and Windows laptops.',
           ],
         },
       },
@@ -692,6 +694,8 @@ schema: {
             '[Lokale LLMs vs Cloud-APIs](/local-llms/local-llms-vs-cloud-apis) -- Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann Laptop-Inferenz die richtige Wahl ist',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Vollständiger Leitfaden zu Q4/Q5/Q8-Quantisierungs-Kompromissen für speicherbegrenzte Laptop-Umgebungen',
             '[MLX vs Ollama vs llama.cpp auf Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=de) -- Framework-Vergleich für Apple Silicon: Geschwindigkeit, Setup-Zeit und Ökosystem-Überlegungen.',
+            '[Günstigste Methode zum lokalen Ausführen eines 70B-Modells](/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=de) -- Wann ein Laptop 70B verarbeiten kann: Q3_K_S auf M3 Max vs CPU-Offloading.',
+            '[Beste GPU für LLM-Inferenz unter 500 $ (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=de) -- eGPU-Upgrade-Pfad für MacBook und Windows-Laptops.',
           ],
         },
         faqSection: {
@@ -1055,6 +1059,8 @@ schema: {
             '[Local LLMs vs API cloud](/local-llms/local-llms-vs-cloud-apis) -- comparaison des coûts et de la vitesse pour vous aider à décider quand l\'inférence d\'ordinateur portable est le bon choix',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- guide complet des compromis de quantification Q4/Q5/Q8 pour les environnements d\'ordinateur portable à mémoire limitée',
             '[MLX vs Ollama vs llama.cpp sur Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=fr) -- Comparaison des frameworks pour Apple Silicon: vitesse, temps de configuration et compromis d\'écosystème.',
+            '[Moyen le moins cher d\'exécuter un modèle 70B localement](/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=fr) -- Quand un ordinateur portable peut gérer 70B : Q3_K_S sur M3 Max vs déchargement CPU.',
+            '[Meilleur GPU pour l\'inférence LLM sous 500 $ (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=fr) -- Chemin de mise à niveau eGPU pour MacBook et ordinateurs portables Windows.',
           ],
         },
         faqSection: {
@@ -1417,6 +1423,8 @@ schema: {
             '[ローカルLLMs vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis)--ノートパソコン推論がいつ正しい選択であるかを決定するのに役立つコストと速度の比較',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)--メモリ制約のあるノートパソコン環境向けのQ4/Q5/Q8量子化トレードオフの完全なガイド',
             '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=ja) -- Apple Silicon フレームワーク比較: スピード、セットアップ時間、エコシステムトレードオフ',
+            '[70Bモデルをローカルで実行する最安値の方法](/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=ja) -- ノートパソコンが70Bを処理できるとき：M3 MaxでのQ3_K_S vs CPUオフローディング。',
+            '[500ドル以下のローカルLLM推論向けベストGPU (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=ja) -- MacBookとWindowsラップトップ向けeGPUアップグレードパス。',
           ],
         },
         faqSection: {
@@ -1779,6 +1787,8 @@ schema: {
             '[本地LLM与云API](/local-llms/local-llms-vs-cloud-apis) -- 成本和速度比较，可帮助您决定何时笔记本电脑推理是正确的选择',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- 关于内存受限笔记本电脑环境的Q4/Q5/Q8量化权衡的完整指南',
             '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=zh) -- Apple Silicon 框架对比：速度、设置时间和生态系统权衡',
+            '[本地运行70B模型的最低成本方案](/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=zh) -- 笔记本电脑处理70B的时机：M3 Max上的Q3_K_S vs CPU卸载。',
+            '[500美元以下本地LLM推理最佳GPU (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=zh) -- MacBook和Windows笔记本的eGPU升级路径。',
           ],
         },
         faqSection: {

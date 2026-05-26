@@ -28,5 +28,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function DePrivacyPage() {
-  return <PrivacyPageClient initialLang="de" />
+  return <PrivacyPageClient initialLang="ja" />
 }

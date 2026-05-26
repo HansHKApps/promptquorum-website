@@ -244,6 +244,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) -- Debugging common issues',
             '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) -- full benchmark comparison of all three model families at 7B, 13B, and 70B',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- GPU and RAM requirements to move from 3B to 7B to 13B models as your hardware allows',
+            '[Qwen Local Deployment Guide (2026)](/local-llms/qwen-local-deployment-guide-2026) -- Beginner-friendly Qwen2.5 7B setup via Ollama: one command to running.',
+            '[Best Open-Source Alternatives to ChatGPT Plus](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- No-code frontends for first-time local LLM users.',
           ],
         },
         faqSection: {
@@ -610,6 +612,8 @@ schema: {
             '[Probleme bei der lokalen LLM-Einrichtung beheben](/local-llms/troubleshooting-local-llm-setup?lang=de) – Häufige Probleme debuggen',
             '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de) – Vollständiger Benchmark-Vergleich aller drei Modellfamilien bei 7B, 13B und 70B',
             '[Lokaler LLM Hardware-Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) – GPU- und RAM-Anforderungen für den Aufstieg von 3B auf 7B auf 13B-Modelle',
+            '[Qwen Lokaler Deployment-Guide (2026)](/local-llms/qwen-local-deployment-guide-2026?lang=de) -- Einsteigerfreundliches Qwen2.5 7B-Setup via Ollama: ein Befehl bis zum Laufen.',
+            '[Beste Open-Source-Alternativen zu ChatGPT Plus](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=de) -- No-Code-Frontends für Erstnutzer lokaler LLMs.',
           ],
         },
         faqSection: {
@@ -985,6 +989,8 @@ schema: {
             '[Dépanner la configuration LLM locale](/local-llms/troubleshooting-local-llm-setup?lang=fr) — Résoudre les problèmes courants',
             '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) — comparaison complète des benchmarks des trois familles de modèles',
             '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Exigences GPU et RAM pour passer de 3B à 7B à 13B',
+            '[Guide de déploiement local Qwen (2026)](/local-llms/qwen-local-deployment-guide-2026?lang=fr) -- Configuration Qwen2.5 7B pour débutants via Ollama : une commande pour démarrer.',
+            '[Meilleures alternatives open-source à ChatGPT Plus](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=fr) -- Interfaces sans code pour les premiers utilisateurs de LLM locaux.',
           ],
         },
         faqSection: {

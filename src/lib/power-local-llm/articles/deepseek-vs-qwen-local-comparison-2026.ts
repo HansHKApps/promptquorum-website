@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'DeepSeek vs Qwen: Local LLM Comparison 2026',
       description:
         'DeepSeek-R1 distilled vs Qwen2.5 local LLMs: side-by-side VRAM, MMLU, MATH-500, HumanEval benchmarks. Which model to run at each hardware tier in 2026.',
-      url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
+      url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=en',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen: Lokaler LLM-Vergleich 2026',
-    seoTitle: 'DeepSeek vs Qwen lokal 2026: Benchmarks & VRAM',
+    seoTitle: 'DeepSeek vs Qwen lokal 2026: Benchmarks & VRAM-Vergleich',
     intro:
       'DeepSeek-R1-destillierte Modelle und Qwen2.5 sind 2026 die zwei dominanten Familien für lokale Bereitstellung. Beide benötigen bei gleicher Parameterzahl denselben VRAM – 5,5 GB bei 7B mit Q4_K_M – sind aber für unterschiedliche Stärken optimiert. DeepSeek-R1-Destillate führen bei Mathematik und Schritt-für-Schritt-Schlussfolgerung; Qwen2.5 führt bei Programmierung und chinesischsprachigen Aufgaben.',
     metaDescription:
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen : Comparaison LLM local 2026',
-    seoTitle: 'DeepSeek vs Qwen local 2026 : Benchmarks & VRAM',
+    seoTitle: 'DeepSeek vs Qwen local 2026 : Benchmarks & comparatif VRAM',
     intro:
       'Les modèles distillés DeepSeek-R1 et Qwen2.5 sont les deux familles dominantes pour le déploiement local en 2026. Les deux nécessitent la même VRAM à nombre de paramètres équivalent — 5,5 Go pour 7B en Q4_K_M — mais sont optimisées pour des points forts opposés. Les distillats DeepSeek-R1 dominent en mathématiques et raisonnement pas à pas ; Qwen2.5 domine en code et en traitement du texte chinois.',
     metaDescription:
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen：ローカルLLM比較 2026',
-    seoTitle: 'DeepSeek vs Qwen ローカル 2026：ベンチマーク & VRAM',
+    seoTitle: 'DeepSeek vs Qwen ローカルLLM 2026：ベンチマーク & VRAM比較ガイド',
     intro:
       'DeepSeek-R1蒸留モデルとQwen2.5は、2026年のローカル展開における2大主要ファミリーです。同じパラメータ数では同一のVRAMを必要とし——7BのQ4_K_Mで5.5 GB——しかし最適化されている強みは正反対です。DeepSeek-R1蒸留は数学とステップバイステップ推論で優位；Qwen2.5はコーディングと中国語テキストで優位です。',
     metaDescription:
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen：本地LLM对比 2026',
-    seoTitle: 'DeepSeek vs Qwen 本地 2026：基准测试与显存对比',
+    seoTitle: 'DeepSeek vs Qwen 本地LLM 2026：VRAM、MMLU基准测试与模型推荐对比',
     intro:
       'DeepSeek-R1蒸馏模型和Qwen2.5是2026年本地部署的两大主流系列。两者在同等参数规模下所需显存相同——7B Q4_K_M格式仅需5.5 GB——但各有专长。DeepSeek-R1蒸馏模型在数学和逐步推理方面占优；Qwen2.5在编程和中文文本处理方面占优。本文提供直接基准对比表、硬件配置建议和每种常见使用场景的一句话结论。',
     metaDescription:

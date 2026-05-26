@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'DeepSeek V3 Local Hardware Requirements?',
-    seoTitle: 'DeepSeek V3 Local Hardware Requirements 2026: Can You Run It?',
+    seoTitle: 'DeepSeek V3 Local 2026: 400 GB Reality + Alternatives',
     metaDescription: 'DeepSeek V3 is 671B MoE — impractical on consumer hardware. Q4_K_M needs ~400 GB RAM. Practical alternatives at every VRAM tier with exact numbers.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'TechArticle',
       headline: 'DeepSeek V3 Local Hardware Requirements: Can You Run It?',
       description: 'DeepSeek V3 (671B MoE) needs ~400 GB RAM locally at Q4_K_M — not viable on consumer hardware. Practical distilled alternatives at every VRAM tier.',
-      url: 'https://www.promptquorum.com/prompt-bites/deepseek-v3-local-hardware-requirements',
+      url: 'https://www.promptquorum.com/prompt-bites/deepseek-v3-local-hardware-requirements?lang=en',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     title: 'DeepSeek V3 lokale Hardware-Anforderungen?',
-    seoTitle: 'DeepSeek V3 lokale Hardware-Anforderungen 2026: Machbar?',
+    seoTitle: 'DeepSeek V3 Hardware 2026: 400 GB Realität + Alternativen',
     metaDescription: 'DeepSeek V3 ist ein 671B-MoE-Modell — nicht machbar auf Consumer-Hardware. Q4_K_M benötigt ~400 GB RAM. Praktische Alternativen mit genauen Zahlen.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Model Comparisons',
     title: 'DeepSeek V3のローカル実行ハードウェア要件は？',
-    seoTitle: 'DeepSeek V3ローカル実行ハードウェア要件 2026：実現可能？',
+    seoTitle: 'DeepSeek V3 ローカル実行 2026：400GB RAMの現実とVRAMティア別代替モデル',
     metaDescription: 'DeepSeek V3は671B MoE——コンシューマーハードウェアでは不可能。Q4_K_Mに約400 GB RAM必要。各VRAMティアの実用的な代替案を具体的な数値で。',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
@@ -441,8 +441,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Model Comparisons',
     title: 'DeepSeek V3本地运行硬件要求？',
-    seoTitle: 'DeepSeek V3本地运行硬件要求 2026：能实现吗？',
-    metaDescription: 'DeepSeek V3是671B MoE模型——消费级硬件无法运行。Q4_K_M需约400 GB内存。各显存层级的实用替代方案与具体数据。',
+    seoTitle: 'DeepSeek V3本地运行硬件要求 2026：400GB现实与各显存层级实用替代方案完整指南',
+    metaDescription: 'DeepSeek V3是六百七十一亿参数的专家混合模型，消费级硬件完全无法运行。Q4_K_M量化版需约四百GB内存。本文按显存层级提供实用替代方案，并附蒸馏版DS-R1-Distill-Qwen系列的具体基准测试数据。',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

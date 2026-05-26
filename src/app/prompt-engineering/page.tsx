@@ -4,6 +4,7 @@ import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
 import { generateAlternates } from '@/lib/hreflang'
 import { peContent } from '@/lib/prompt-engineering/content'
 import type { Language } from '@/translations'
+import { truncateTitle } from '@/lib/utils'
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
@@ -13,7 +14,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   const t = translations[selectedLang as keyof typeof translations]
 
   return {
-    title: t.promptEngineeringHubTitle,
+    title: truncateTitle(t.promptEngineeringHubTitle),
     description: t.promptEngineeringHubDescription,
     alternates: generateAlternates('/prompt-engineering', selectedLang, true, undefined, ['ja', 'zh', 'de', 'fr']),
     openGraph: {

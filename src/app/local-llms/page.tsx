@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
+import { truncateTitle } from '@/lib/utils'
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
@@ -11,7 +12,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   const t = translations[selectedLang as keyof typeof translations]
 
   return {
-    title: t.localLlmsHubTitle,
+    title: truncateTitle(t.localLlmsHubTitle),
     description: t.localLlmsHubDescription,
     alternates: generateAlternates('/local-llms', selectedLang, true, undefined, ['ja', 'zh', 'de', 'fr']),
     openGraph: {

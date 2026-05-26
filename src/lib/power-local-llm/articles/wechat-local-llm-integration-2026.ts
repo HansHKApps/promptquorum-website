@@ -9,11 +9,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
     title: 'WeChat + Local LLM Integration: Developer Guide 2026',
-    seoTitle: 'WeChat Local LLM Integration Guide 2026 | Ollama API Bridge',
+    seoTitle: 'WeChat Local LLM Integration 2026: Ollama API Setup',
     intro:
       'Connecting WeChat to a local LLM gives you a private AI assistant that replies in the world\'s most-used messaging app — without sending a single message to a cloud API. This guide covers three integration patterns (WeChatFerry on Windows, HTTP webhook bridge, always-on mini PC server), helps you choose the right Qwen model for Chinese chat, and shows how local inference satisfies China\'s Data Security Law.',
     metaDescription:
-      'Connect WeChat to a local LLM in 2026. Three integration patterns: WeChatFerry (Windows), HTTP webhook bridge, mini PC Ollama server. Qwen2.5 7B recommended for Chinese. Privacy-first setup.',
+      'Connect WeChat to a local LLM in 2026. Three patterns: WeChatFerry, HTTP webhook, mini PC Ollama server. Qwen2.5 7B for Chinese. No cloud API.',
     twitterDescription:
       'Build a WeChat + local LLM bridge: WeChatFerry, HTTP webhook, or mini PC server. Qwen2.5 7B for Chinese. No cloud API required.',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
@@ -271,7 +271,7 @@ while True:
       '@type': 'TechArticle',
       headline: 'WeChat + Local LLM Integration: Developer Guide 2026',
       description: 'Connect WeChat to a local LLM using WeChatFerry and Ollama. Three integration patterns, model recommendations, mini PC server setup, and China DSL compliance.',
-      url: 'https://www.promptquorum.com/power-local-llm/wechat-local-llm-integration-2026',
+      url: 'https://www.promptquorum.com/power-local-llm/wechat-local-llm-integration-2026?lang=en',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -313,7 +313,7 @@ while True:
     intro:
       'WeChat mit einem lokalen LLM zu verbinden ermöglicht einen privaten KI-Assistenten in der meistgenutzten Messaging-App weltweit – ohne eine einzige Nachricht an eine Cloud-API zu senden. Dieser Leitfaden behandelt drei Integrationsmuster, die Modellauswahl für chinesischen Text und wie lokale Inferenz DSGVO- und China-DSL-Anforderungen erfüllt.',
     metaDescription:
-      'WeChat mit lokalem LLM verbinden 2026: WeChatFerry (Windows), HTTP-Webhook-Brücke und Mini-PC-Ollama-Server. Qwen2.5 7B für Chinesisch. Datenschutzkonform, keine Cloud-API.',
+      'WeChat mit lokalem LLM verbinden 2026: WeChatFerry (Windows), HTTP-Webhook-Brücke, Mini-PC-Ollama-Server. Qwen2.5 7B für Chinesisch. Keine Cloud-API.',
     twitterDescription:
       'WeChat + lokales LLM: WeChatFerry, HTTP-Webhook oder Mini-PC-Server. Qwen2.5 7B für Chinesisch. Keine Cloud-API erforderlich.',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
@@ -520,7 +520,7 @@ while True:
     intro:
       'Connecter WeChat à un LLM local offre un assistant IA privé dans l\'application de messagerie la plus utilisée au monde, sans envoyer un seul message à une API cloud. Ce guide couvre trois patterns d\'intégration, le choix du modèle pour le texte chinois, et la conformité RGPD et DSL chinoise.',
     metaDescription:
-      'Connecter WeChat à un LLM local en 2026 : WeChatFerry (Windows), pont HTTP webhook, serveur Ollama mini PC. Qwen2.5 7B recommandé pour le chinois. Aucune API cloud.',
+      'Connecter WeChat à un LLM local en 2026 : WeChatFerry (Windows), pont HTTP webhook, serveur mini PC Ollama. Qwen2.5 7B pour le chinois. Sans API cloud.',
     twitterDescription:
       'WeChat + LLM local : WeChatFerry, webhook HTTP ou serveur mini PC. Qwen2.5 7B pour le chinois. Aucune API cloud.',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
@@ -707,11 +707,11 @@ while True:
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
     title: 'WeChat + ローカルLLM統合：開発者ガイド 2026',
-    seoTitle: 'WeChat ローカルLLM統合 2026 | Ollama APIブリッジ',
+    seoTitle: 'WeChat × ローカルLLM統合開発ガイド 2026：WeChatFerry & Ollama API連携',
     intro:
       'WeChatをローカルLLMに接続することで、世界最大のメッセージングアプリでプライベートなAIアシスタントが利用可能になります。クラウドAPIへのデータ送信は一切不要です。このガイドでは3つの統合パターン、中国語テキスト向けモデル選択、個人情報保護法対応について解説します。',
     metaDescription:
-      'WeChatをローカルLLMに接続する方法 2026：WeChatFerry（Windows）、HTTPウェブフックブリッジ、ミニPCサーバー。中国語にはQwen2.5 7B推奨。クラウドAPI不要。',
+      '2026年版WeChat統合ガイド：WeChatFerry（Windows専用）、HTTPウェブフックブリッジ、ミニPCサーバーという三つのローカルLLM接続パターンを詳解。中国語チャットにはQwen2.5 7B推奨。クラウドAPI不要で会話データを完全ローカル保持。',
     twitterDescription:
       'WeChat + ローカルLLM：WeChatFerry、HTTPウェブフック、ミニPCサーバー。Qwen2.5 7B中国語対応。クラウドAPI不要。',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
@@ -904,11 +904,11 @@ while True:
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
     title: '微信 + 本地LLM集成：开发者指南 2026',
-    seoTitle: '微信本地LLM集成指南 2026 | Ollama API桥接',
+    seoTitle: '微信接入本地LLM开发指南 2026：WeChatFerry、Webhook与Ollama服务器配置',
     intro:
       '将微信与本地LLM连接，让你在全球最常用的即时通讯应用中拥有私密AI助手——无需向任何云端API发送一条消息。本指南涵盖三种集成方案、中文文本的模型选择，以及如何通过本地推理满足《数据安全法》要求。',
     metaDescription:
-      '2026年微信接入本地LLM：WeChatFerry（Windows）、HTTP Webhook桥接、迷你主机Ollama服务器。中文推荐Qwen2.5 7B。符合《数据安全法》，无需云端API。',
+      '2026年微信接入本地大模型三种集成方案：一、WeChatFerry（Windows钩子）、二、HTTP Webhook桥接、三、迷你主机Ollama服务器。中文对话优先推荐Qwen2.5 7B，完全符合《数据安全法》要求，所有推理数据不出本地设备。',
     twitterDescription:
       '微信 + 本地LLM：WeChatFerry、HTTP Webhook或迷你主机服务器。Qwen2.5 7B中文最优。无需云端API。',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
