@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Privacy & Security',
     title: 'Best VPN for AI Development in China 2026',
-    seoTitle: 'Best VPN for AI Dev in China 2026: HuggingFace, GitHub, Docker',
+    seoTitle: 'Best VPN for AI Dev China 2026: GitHub + HuggingFace',
     metaDescription:
       'Top 5 VPNs for AI developers in China: access HuggingFace, GitHub, Docker Hub, and PyPI. Speed tests, prices, and which actually work in 2026.',
     publishDate: '2026-05-26',
@@ -237,12 +237,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/prompt-bites/best-vpn-for-ai-development-china-2026?lang=en',
+      inLanguage: 'en',
     },
   },
   de: {
     theme: 'Privacy & Security',
     title: 'Bestes VPN für KI-Entwicklung in China 2026',
-    seoTitle: 'Bestes VPN für KI-Entwicklung in China 2026: HuggingFace, GitHub, Docker',
+    seoTitle: 'Bestes VPN für KI-Entwickler China 2026 (Getestet)',
     metaDescription:
       'Top 5 VPNs für KI-Entwickler in China: Zugriff auf HuggingFace, GitHub, Docker Hub, PyPI. Geschwindigkeitstests, Preise und welche in 2026 wirklich funktionieren. Werbung.',
     publishDate: '2026-05-26',
@@ -318,12 +320,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/prompt-bites/best-vpn-for-ai-development-china-2026?lang=de',
     },
   },
   fr: {
     theme: 'Privacy & Security',
     title: 'Meilleur VPN pour le Développement IA en Chine 2026',
-    seoTitle: 'Meilleur VPN Développement IA Chine 2026 : HuggingFace, GitHub, Docker',
+    seoTitle: 'Meilleur VPN IA Chine 2026 : GitHub et HuggingFace',
     metaDescription:
       'Top 5 VPNs pour les développeurs IA en Chine : accéder à HuggingFace, GitHub, Docker Hub, PyPI. Tests de vitesse, prix et ceux qui fonctionnent vraiment en 2026. Liens affiliés.',
     publishDate: '2026-05-26',
@@ -382,6 +385,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/prompt-bites/best-vpn-for-ai-development-china-2026?lang=fr',
     },
   },
   ja: {
@@ -446,6 +450,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/prompt-bites/best-vpn-for-ai-development-china-2026?lang=ja',
     },
   },
   zh: {
@@ -543,6 +548,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/prompt-bites/best-vpn-for-ai-development-china-2026?lang=zh',
     },
   },
 }
