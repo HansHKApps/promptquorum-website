@@ -39,8 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       {
         productName: 'Minisforum UM890 Pro (local AI server)',
         url: '[AFFILIATE_LINK_PLACEHOLDER:minisforum_jd]',
-        program: '京东联盟',
-        disclosure: 'affiliate',
+        productCategory: 'hardware',
       },
     ],
     sections: {

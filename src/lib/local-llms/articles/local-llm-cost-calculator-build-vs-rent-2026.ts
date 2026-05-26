@@ -39,20 +39,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       {
         productName: 'RunPod GPU Rental',
         url: '[AFFILIATE_LINK_PLACEHOLDER:runpod]',
-        program: 'RunPod Affiliate',
-        disclosure: 'affiliate',
+        productCategory: 'cloud-gpu',
       },
       {
         productName: 'RTX 4090 (Amazon)',
         url: '[AFFILIATE_LINK_PLACEHOLDER:rtx4090_amazon]',
-        program: 'Amazon Associates',
-        disclosure: 'affiliate',
+        productCategory: 'gpu',
       },
       {
         productName: 'Mac Mini M4 Pro',
         url: '[AFFILIATE_LINK_PLACEHOLDER:mac_mini_m4_pro]',
-        program: 'Apple Affiliate',
-        disclosure: 'affiliate',
+        productCategory: 'hardware',
       },
     ],
     sections: {
@@ -130,8 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             productName: 'Mac Mini M4 Pro',
             url: '[AFFILIATE_LINK_PLACEHOLDER:mac_mini_m4_pro]',
-            program: 'Apple Affiliate',
-            disclosure: 'affiliate',
+            productCategory: 'hardware',
           },
         ],
       },

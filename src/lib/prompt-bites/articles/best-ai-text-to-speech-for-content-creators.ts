@@ -40,14 +40,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       {
         productName: 'ElevenLabs',
         url: '[AFFILIATE_LINK_PLACEHOLDER:elevenlabs]',
-        program: 'ElevenLabs Affiliate',
-        disclosure: 'affiliate',
+        productCategory: 'ai-service',
       },
       {
         productName: 'PlayHT',
         url: '[AFFILIATE_LINK_PLACEHOLDER:playht]',
-        program: 'PlayHT Affiliate',
-        disclosure: 'affiliate',
+        productCategory: 'ai-service',
       },
     ],
     parentArticle: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
@@ -83,8 +81,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             productName: 'ElevenLabs Starter',
             url: '[AFFILIATE_LINK_PLACEHOLDER:elevenlabs]',
-            program: 'ElevenLabs Affiliate',
-            disclosure: 'affiliate',
+            productCategory: 'ai-service',
           },
         ],
         pros: ['Best voice naturalness in 2026', 'Instant voice cloning from 1 minute of audio', '29 languages supported', 'API for automation'],

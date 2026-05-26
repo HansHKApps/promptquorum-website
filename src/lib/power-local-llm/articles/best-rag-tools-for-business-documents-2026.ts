@@ -39,14 +39,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       {
         productName: 'AnythingLLM',
         url: '[AFFILIATE_LINK_PLACEHOLDER:anythingllm]',
-        program: 'AnythingLLM',
-        disclosure: 'affiliate',
+        productCategory: 'software',
       },
       {
         productName: 'Minisforum UM890 Pro (local RAG server)',
         url: '[AFFILIATE_LINK_PLACEHOLDER:minisforum_amazon]',
-        program: 'Amazon Associates',
-        disclosure: 'affiliate',
+        productCategory: 'hardware',
       },
     ],
     sections: {
@@ -92,8 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             productName: 'AnythingLLM',
             url: '[AFFILIATE_LINK_PLACEHOLDER:anythingllm]',
-            program: 'AnythingLLM',
-            disclosure: 'affiliate',
+            productCategory: 'software',
           },
         ],
         pros: ['No coding required', 'Multi-user workspaces', 'Supports 25+ document types', 'Desktop app + Docker options', 'Built-in agent tools (web search, SQL)'],

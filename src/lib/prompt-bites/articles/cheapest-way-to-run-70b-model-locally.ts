@@ -40,14 +40,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       {
         productName: 'Mac Mini M4 Pro',
         url: '[AFFILIATE_LINK_PLACEHOLDER:mac_mini_m4_pro]',
-        program: 'Apple Affiliate',
-        disclosure: 'affiliate',
+        productCategory: 'hardware',
       },
       {
         productName: 'RTX 3090 (used, eBay)',
         url: '[AFFILIATE_LINK_PLACEHOLDER:rtx3090_ebay]',
-        program: 'eBay Partner Network',
-        disclosure: 'affiliate',
+        productCategory: 'gpu',
       },
     ],
     parentArticle: '/power-local-llm/best-workstation-build-local-ai-2026',
@@ -99,8 +97,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             productName: 'Mac Mini M4 Pro 48GB',
             url: '[AFFILIATE_LINK_PLACEHOLDER:mac_mini_m4_pro]',
-            program: 'Apple Affiliate',
-            disclosure: 'affiliate',
+            productCategory: 'hardware',
           },
         ],
         pros: ['Complete system for $2,000', 'Only 45W power consumption', 'No GPU fragmentation or multi-GPU complexity', 'Silent operation'],
