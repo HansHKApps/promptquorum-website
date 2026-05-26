@@ -1129,6 +1129,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[中英文提示词对比](/prompt-bites/chinese-prompting-vs-english-prompting?lang=zh) — 用Qwen3本地部署进行中英文提示词效果对比实测。',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',

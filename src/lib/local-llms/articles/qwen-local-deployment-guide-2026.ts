@@ -1540,6 +1540,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { url: '/local-llms/qwen-vs-llama-vs-mistral?lang=zh', title: 'Qwen vs Llama vs Mistral 2026', description: 'Qwen 3.6 27B、Llama 4 Scout和Mistral Small 3.1在MMLU、SWE-bench和MATH上的基准对比。' },
           { url: '/local-llms/llm-quantization-explained?lang=zh', title: 'LLM量化解析', description: 'Q4_K_M、Q8_0和IQ4_XS的含义——对显存、速度和输出质量的影响。' },
           { url: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=zh', title: 'DeepSeek vs Qwen本地对比2026', description: '完整对比：DeepSeek-V2.5 vs Qwen2.5在代码、推理、中文和创意写作上的表现——含Mac vs NVIDIA详细分析。' },
+          { url: '/prompt-bites/best-qwen-model-for-coding?lang=zh', title: '最佳Qwen编码模型', description: 'Qwen2.5-Coder 7B vs 32B：本地自动补全与代码审查的选择指南。' },
         ],
       },
     },

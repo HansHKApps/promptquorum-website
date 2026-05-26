@@ -515,6 +515,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: 'DeepSeek V3和R1有什么区别？', a: 'V3是通用聊天模型（671B MoE）。R1是通过强化学习训练的推理模型。蒸馏版本是保留R1推理能力的小型稠密模型。' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[DeepSeek vs Qwen本地对比2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=zh) — 本地运行DeepSeek v3与Qwen3的硬件需求与性能对比。',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',

@@ -501,6 +501,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: '应该使用哪种量化级别？', a: 'Q4_K_M：质量与显存节省（~35%）的最佳平衡。' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[Qwen本地部署指南2026](/local-llms/qwen-local-deployment-guide-2026?lang=zh) — 初学者友好的Qwen2.5 7B Ollama一键部署教程。',
+          '[微信本地LLM集成2026](/power-local-llm/wechat-local-llm-integration-2026?lang=zh) — Qwen2.5-Coder驱动微信机器人：实现个人AI编程助手。',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',

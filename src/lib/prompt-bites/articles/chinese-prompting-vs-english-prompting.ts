@@ -591,6 +591,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: '繁体字和简体字有什么区别？', a: 'Qwen2.5两者都支持。指定"请使用繁体中文回答"使用繁体，"请使用简体中文回答"使用简体。' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[SillyTavern中文角色扮演设置](/prompt-bites/sillytavern-chinese-roleplay-setup?lang=zh) — Qwen3 + SillyTavern：中文角色卡配置与提示词优化。',
+          '[Qwen本地部署指南2026](/local-llms/qwen-local-deployment-guide-2026?lang=zh) — 为中文创作场景优化本地Qwen2.5部署的完整指南。',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',

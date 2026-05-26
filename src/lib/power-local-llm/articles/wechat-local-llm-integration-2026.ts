@@ -1077,6 +1077,8 @@ while True:
           '[本地LLM最佳迷你主机](/prompt-bites/best-mini-pc-for-local-llm?lang=zh) — 常驻LLM服务器硬件对比',
           '[本地AI智能体与MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh) — 为微信机器人添加工具调用能力',
           '[用本地AI智能体替代Zapier](/power-local-llm/replace-zapier-with-local-ai-agents?lang=zh) — 由微信事件触发的自动化工作流',
+          '[本地AI防火墙/离线部署2026](/power-local-llm/local-ai-behind-firewall-offline-2026?lang=zh) — 气隙Ollama：网络隔离、审计日志与无互联网设置。',
+          '[最佳Qwen编码模型](/prompt-bites/best-qwen-model-for-coding?lang=zh) — Qwen2.5-Coder集成微信机器人的最优规格选择。',
         ],
       },
     },
