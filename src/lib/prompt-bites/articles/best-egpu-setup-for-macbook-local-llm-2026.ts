@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best eGPU Setup for MacBook Local LLM Inference (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Best eGPU Setup for MacBook Local LLM Inference (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026?lang=en', inLanguage: 'en' },
   },
 
   de: {
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU für MacBook und lokale KI: Was 2026 funktioniert', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU für MacBook und lokale KI: Was 2026 funktioniert', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026?lang=de', inLanguage: 'de' },
   },
 
   fr: {
@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU pour MacBook et IA locale : ce qui marche en 2026', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU pour MacBook et IA locale : ce qui marche en 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026?lang=fr', inLanguage: 'fr' },
   },
 
   ja: {
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'MacBook eGPUとローカルAI：2026年に動作するもの', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPUとローカルAI：2026年に動作するもの', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026?lang=ja', inLanguage: 'ja' },
   },
 
   zh: {
@@ -553,6 +553,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU与本地AI：2026年什么有效', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU与本地AI：2026年什么有效', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026?lang=zh', inLanguage: 'zh' },
   },
 }
