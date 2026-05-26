@@ -7,6 +7,7 @@ import { SLUG_TO_POST_ID, type BlogSlug } from '@/lib/blogSlugs'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { translations } from '@/translations'
+import { truncateTitle } from '@/lib/utils'
 
 export function getArticleStaticParams() {
   return Object.keys(SLUG_TO_POST_ID).map((slug) => ({
@@ -31,7 +32,7 @@ export async function buildArticleMetadata(slug: string, lang: Language): Promis
   const metaDesc = (post as any).metaDescription ?? post.intro
 
   return {
-    title: pageTitle.length <= 43 ? `${pageTitle} | PromptQuorum Blog` : pageTitle,
+    title: truncateTitle(pageTitle.length <= 43 ? `${pageTitle} | PromptQuorum Blog` : pageTitle),
     description: metaDesc,
     alternates: generateAlternates(`/blog/${slug}`, lang, hasTranslation, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {

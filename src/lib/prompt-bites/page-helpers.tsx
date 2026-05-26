@@ -58,7 +58,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
   const isPublished = isPromptBitePublished(slug, lang)
 
   return {
-    title: baseTitle,
+    title: truncateTitle(baseTitle),
     description: desc,
     alternates: promptBitesAlternates(lang, slug),
     robots: isPublished
@@ -192,7 +192,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
   const isPublished = isPromptBitesHubPublished(lang)
 
   return {
-    title: titleByLang[lang],
+    title: truncateTitle(titleByLang[lang]),
     description: descByLang[lang],
     alternates: promptBitesAlternates(lang),
     robots: isPublished

@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 export default function robots(): MetadataRoute.Robots {
   const baseDisallow = [
     '/_next/static/',
-    '/api/og/',
+    '/api/',
     '/presentations/',
     '/download',
     '/image-license',

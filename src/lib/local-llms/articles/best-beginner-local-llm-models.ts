@@ -1356,6 +1356,8 @@ schema: {
             '[ローカルLLMセットアップのトラブルシューティング](/local-llms/troubleshooting-local-llm-setup?lang=ja) — よくある問題のデバッグ',
             '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=ja) — 7B・13B・70Bの3モデルファミリー全体の詳細ベンチマーク比較',
             '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — 3Bから7B・13Bモデルへのアップグレードに必要なGPUとRAM要件',
+            '[Qwenローカルデプロイガイド (2026)](/local-llms/qwen-local-deployment-guide-2026?lang=ja) -- Ollamaを使った初心者向けQwen2.5 7Bセットアップ：一コマンドで起動。',
+            '[ChatGPT Plusのベストオープンソース代替品](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=ja) -- 初めてのローカルLLMユーザー向けノーコードフロントエンド。',
           ],
         },
         faqSection: {
@@ -1721,6 +1723,8 @@ schema: {
             '[本地LLM设置故障排查](/local-llms/troubleshooting-local-llm-setup?lang=zh) — 调试常见问题',
             '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=zh) — 三大模型系列在7B、13B和70B的完整基准对比',
             '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — 从3B升级到7B再到13B模型所需的GPU和内存要求',
+            '[Qwen本地部署指南 (2026)](/local-llms/qwen-local-deployment-guide-2026?lang=zh) -- 通过Ollama的初学者友好型Qwen2.5 7B设置：一条命令即可运行。',
+            '[ChatGPT Plus最佳开源替代品](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=zh) -- 首次使用本地LLM用户的无代码前端。',
           ],
         },
         faqSection: {

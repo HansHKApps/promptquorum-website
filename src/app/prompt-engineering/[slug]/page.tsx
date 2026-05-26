@@ -8,6 +8,7 @@ import { themes } from '@/lib/prompt-engineering/themes'
 import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
 import { generateAlternates } from '@/lib/hreflang'
 import { getPEGeoEntities, type Language } from '@/lib/geo-schema'
+import { truncateTitle } from '@/lib/utils'
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
 const SLUG_ACRONYMS: Record<string, string> = {
@@ -148,7 +149,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   })
 
   return {
-    title: finalTitle.length <= 45 ? `${finalTitle} | PromptQuorum` : finalTitle,
+    title: truncateTitle(finalTitle.length <= 45 ? `${finalTitle} | PromptQuorum` : finalTitle),
     description: finalDesc,
     ...(isGlossary && {
       keywords: ['prompt engineering glossary', 'AI terms', 'LLM glossary', 'Chain-of-Thought', 'RAG definition', 'prompt injection', 'function calling', 'few-shot prompting', 'temperature AI', 'context window'],

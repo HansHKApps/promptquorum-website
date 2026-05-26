@@ -687,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'DeepSeek-R1蒸馏模型和Qwen2.5是2026年本地部署的两大主流系列。两者在同等参数规模下所需显存相同——7B Q4_K_M格式仅需5.5 GB——但各有专长。DeepSeek-R1蒸馏模型在数学和逐步推理方面占优；Qwen2.5在编程和中文文本处理方面占优。本文提供直接基准对比表、硬件配置建议和每种常见使用场景的一句话结论。',
     metaDescription:
-      'DeepSeek-R1蒸馏 vs Qwen2.5本地部署：显存、MMLU、MATH-500、HumanEval基准直接对比。2026年各硬件配置下的最优模型选择指南。',
+      '通义千问与幻方深度求索本地大模型对比：二者在相同显存占用下性能各异——深度求索蒸馏版在数学推理上领先，通义千问在代码生成和中文任务上领先。含完整基准测试表格与硬件选型建议，2026年更新。',
     twitterDescription:
       'DeepSeek-R1蒸馏 vs Qwen2.5：显存相同，强项不同。数学→DeepSeek。编程→Qwen。',
     readTime: '11分钟阅读',

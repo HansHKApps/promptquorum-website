@@ -428,6 +428,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — VRAM, GPU, and RAM recommendations',
           '[Private Local LLM for Sensitive Data](/local-llms/private-local-llm-sensitive-data) — HIPAA/SOX/GDPR on-premises setup',
           '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Q4_K_M vs Q5_K_M vs Q8_0',
+          '[Alibaba Cloud vs Tencent Cloud GPU for AI (2026)](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — Price/performance for Chinese-market GPU cloud: PAI-DSW vs TI Platform.',
+          '[Best Cloud GPU for Fine-Tuning Under $1/hr](/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour) — RunPod, Vast.ai, Lambda: cheapest A100/H100 hourly slots for LoRA fine-tuning.',
         ],
       },
       faq: {
@@ -848,6 +850,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLMs vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=de) — Funktions- und Kostenvergleich (Datenschutz enthalten)',
           '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build?lang=de) — Schritt-für-Schritt-Hardware-Setup-Anleitung (1.000–5.000 €)',
           '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms?lang=de) — 2026 Rankings nach Leistung pro Dollar',
+          '[Alibaba Cloud vs Tencent Cloud GPU für KI (2026)](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=de) — Preis-Leistungs-Vergleich für den chinesischen GPU-Cloud-Markt: PAI-DSW vs TI Platform.',
+          '[Bestes Cloud-GPU für Fine-Tuning unter 1 $/Std.](/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=de) — RunPod, Vast.ai, Lambda: günstigste A100/H100-Slots für LoRA Fine-Tuning.',
         ],
       },
       faq: {
@@ -1208,6 +1212,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLMs vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=fr) — Comparaison des fonctionnalités et des coûts (confidentialité incluse)',
           '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build?lang=fr) — Guide de configuration matérielle étape par étape (1 000–5 000 €)',
           '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms?lang=fr) — Classements 2026 par performance-par-euro',
+          '[Alibaba Cloud vs Tencent Cloud GPU pour l'IA (2026)](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=fr) — Prix/performance pour le cloud GPU chinois : PAI-DSW vs TI Platform.',
+          '[Meilleur Cloud GPU pour le fine-tuning à moins de 1 $/h](/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=fr) — RunPod, Vast.ai, Lambda : créneaux A100/H100 les moins chers pour LoRA.',
         ],
       },
       faq: {
@@ -1568,6 +1574,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLMs vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=ja) — 機能とコスト比較(プライバシー含む)',
           '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build?lang=ja) — ステップバイステップハードウェアセットアップガイド($1,000–$5,000)',
           '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms?lang=ja) — 2026年のドル当たりパフォーマンスランキング',
+          '[Alibaba Cloud vs Tencent Cloud GPU for AI (2026)](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=ja) — 中国市場向けGPUクラウドの価格性能比：PAI-DSW vs TI Platform。',
+          '[1時間1ドル未満でファインチューニングできるクラウドGPU](/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=ja) — RunPod、Vast.ai、Lambda：LoRAファインチューニング向け最安A100/H100スロット。',
         ],
       },
       faq: {
@@ -1928,6 +1936,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLMs vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=zh) — 功能和成本对比(包括隐私)',
           '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build?lang=zh) — 逐步硬件设置指南($1,000–$5,000)',
           '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms?lang=zh) — 2026年每美元性能排名',
+          '[阿里云vs腾讯云GPU AI对比（2026）](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=zh) — 中国市场GPU云价格性能对比：PAI-DSW vs TI Platform。',
+          '[1美元/小时以下最佳微调云GPU](/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=zh) — RunPod、Vast.ai、Lambda：LoRA微调最便宜的A100/H100时段。',
         ],
       },
       faq: {

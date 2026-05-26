@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: 'DeepSeek V3のローカル実行ハードウェア要件は？',
     seoTitle: 'DeepSeek V3 ローカル実行 2026：400GB RAMの現実とVRAMティア別代替モデル',
-    metaDescription: 'DeepSeek V3は671B MoE——コンシューマーハードウェアでは不可能。Q4_K_Mに約400 GB RAM必要。各VRAMティアの実用的な代替案を具体的な数値で。',
+    metaDescription: 'DeepSeek V3は六百七十一億パラメーターのMoEモデル——コンシューマーハードウェアでは実行不可能。Q4_K_Mで約四百GBのRAMが必要。本記事では各VRAMティアの実用的代替案とDS-R1-Distill-Qwen系列の詳細ベンチマーク数値を提供します。',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

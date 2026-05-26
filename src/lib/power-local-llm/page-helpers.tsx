@@ -104,7 +104,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
   const isPublished = isPowerLLMArticlePublished(slug, lang)
 
   return {
-    title: baseTitle.length <= 45 ? `${baseTitle} | PromptQuorum` : baseTitle,
+    title: truncateTitle(baseTitle.length <= 45 ? `${baseTitle} | PromptQuorum` : baseTitle),
     description: desc,
     alternates: powerLLMAlternates(lang, slug),
     robots: isPublished
@@ -358,7 +358,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
   const isPublished = isPowerLLMHubPublished(lang)
 
   return {
-    title: titleByLang[lang],
+    title: truncateTitle(titleByLang[lang]),
     description: descByLang[lang],
     alternates: powerLLMAlternates(lang),
     robots: isPublished

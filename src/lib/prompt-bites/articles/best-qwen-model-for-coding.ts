@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Best Qwen Model for Coding?',
-    seoTitle: 'Best Qwen2.5 Coder Model for Coding 2026 | 7B vs 14B vs 32B',
+    seoTitle: 'Qwen2.5-Coder 2026: 7B vs 14B vs 32B by VRAM Tier',
     metaDescription: 'Qwen2.5-Coder 32B leads at 24 GB VRAM with 91.5% HumanEval. At 8 GB, 7B hits 79.7%. 14B is the sweet spot at 12 GB. Size guide for every tier.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'TechArticle',
       headline: 'Best Qwen Model for Coding? 7B vs 14B vs 32B Guide 2026',
       description: 'Qwen2.5-Coder size comparison: 7B at 5.5 GB VRAM (79.7% HumanEval), 14B at 9.5 GB (88.0%), 32B at 20.5 GB (91.5%). Pick the right size for your hardware.',
-      url: 'https://www.promptquorum.com/prompt-bites/best-qwen-model-for-coding',
+      url: 'https://www.promptquorum.com/prompt-bites/best-qwen-model-for-coding?lang=en',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     title: 'Bestes Qwen-Modell für Coding?',
-    seoTitle: 'Bestes Qwen2.5 Coder-Modell für Coding 2026 | 7B vs 14B vs 32B',
+    seoTitle: 'Qwen2.5-Coder 2026: 7B vs 14B vs 32B nach VRAM-Tier',
     metaDescription: 'Qwen2.5-Coder 32B führt mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB: 7B mit 79,7 %. 14B ist der Sweet Spot bei 12 GB. Größenleitfaden für jede Tier.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
@@ -237,8 +237,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Model Comparisons',
     title: 'Meilleur modèle Qwen pour le codage ?',
-    seoTitle: 'Meilleur modèle Qwen2.5-Coder pour coder 2026 | 7B vs 14B vs 32B',
-    metaDescription: 'Qwen2.5-Coder 32B en tête à 24 Go VRAM (91,5 % HumanEval). À 8 Go : 7B à 79,7 %. 14B est le sweet spot à 12 Go. Guide par niveau de VRAM.',
+    seoTitle: 'Qwen2.5-Coder 2026 : 7B vs 14B vs 32B par niveau VRAM',
+    metaDescription: 'Qwen2.5-Coder 32B en tête à 24 Go VRAM (91,5 % HumanEval). À 8 Go : 7B atteint 79,7 %. Le 14B est le sweet spot à 12 Go. Guide par niveau de VRAM.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
@@ -431,7 +431,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Model Comparisons',
     title: '编程最佳Qwen模型是哪个？',
-    seoTitle: '2026年编程最佳Qwen2.5-Coder模型 | 7B vs 14B vs 32B',
+    seoTitle: 'Qwen2.5-Coder 2026编程对比：7B vs 14B vs 32B各显存层级完整指南',
     metaDescription: 'Qwen2.5-Coder 32B以24 GB显存领先（HumanEval 91.5%）。8 GB选7B（79.7%）；14B是12 GB显存的最优选择。各硬件层级指南。',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',

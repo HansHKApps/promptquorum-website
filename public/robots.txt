@@ -5,7 +5,7 @@
 User-Agent: *
 Allow: /
 Disallow: /_next/static/
-Disallow: /api/og/
+Disallow: /api/
 Disallow: /presentations/
 Disallow: /download
 Disallow: /image-license
@@ -36,7 +36,7 @@ User-Agent: ImagesiftBot
 User-Agent: Valerian
 Allow: /
 Disallow: /_next/static/
-Disallow: /api/og/
+Disallow: /api/
 Disallow: /presentations/
 Disallow: /download
 Disallow: /image-license
@@ -45,7 +45,7 @@ Disallow: /image-license
 User-Agent: Bingbot
 Allow: /
 Disallow: /_next/static/
-Disallow: /api/og/
+Disallow: /api/
 Disallow: /presentations/
 Disallow: /download
 Disallow: /image-license
