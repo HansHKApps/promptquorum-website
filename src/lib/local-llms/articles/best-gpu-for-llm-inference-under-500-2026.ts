@@ -248,6 +248,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Ranked comparison of GPUs under $500 for local AI inference: RTX 4060 Ti 16GB, RTX 3090, RX 7800 XT, RTX 4070, Arc B580. Includes benchmarks, VRAM guide, and buying recommendations.',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=en',
+      inLanguage: 'en',
     },
   },
 
@@ -382,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'Intel Arc B580 12GB', description: 'Beste Budget-Option — 12 GB, ~280 €' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Beste GPU für LLM-Inferenz unter 500 € (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Beste GPU für LLM-Inferenz unter 500 € (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=de', inLanguage: 'de' },
   },
 
   fr: {
@@ -516,7 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'Intel Arc B580 12 Go', description: 'Meilleur budget — 12 Go, ~280 €' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleure GPU pour l\'inférence LLM à moins de 500 € (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleure GPU pour l\'inférence LLM à moins de 500 € (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=fr', inLanguage: 'fr' },
   },
 
   ja: {
@@ -650,7 +652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'Intel Arc B580 12GB', description: '最安バジェット — 12GB、約2万8000円' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '500ドル以下のLLM推論向けGPUおすすめランキング（2026年）', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: '500ドル以下のLLM推論向けGPUおすすめランキング（2026年）', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=ja', inLanguage: 'ja' },
   },
 
   zh: {
@@ -794,6 +796,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'Intel Arc B580 12GB', description: '最佳预算 — 12GB、约1900元' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年500美元以下LLM推理最佳GPU排行', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: '2026年500美元以下LLM推理最佳GPU排行', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=zh', inLanguage: 'zh' },
   },
 }
