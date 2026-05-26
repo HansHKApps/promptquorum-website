@@ -18,7 +18,7 @@ export const article: Record<Language, PEArticle> = {
     educationalLevel: 'Beginner',
     primaryTerm: 'System Prompt',
     seoTitle: 'System vs User Prompt 2026: What Each One Controls',
-    metaDescription: 'System prompts set AI behavior for the entire session; user prompts define each task. Covers structural differences, API usage, and Claude examples.',
+    metaDescription: 'System prompt vs user prompt: one controls AI behavior for the entire session, one drives each turn. Includes API examples and debug patterns.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',

@@ -16,7 +16,7 @@ export const article: Record<Language, PEArticle> = {
       readTime: '7 min read',
       educationalLevel: 'Intermediate',
       seoTitle: 'The CRAFT Framework: Context, Role, Audience 2026',
-      metaDescription: 'The CRAFT prompt framework breaks creative tasks into Context, Role, Audience, Format, Tone for consistent, on-brand outputs. Works with GPT-4o, Claude.',
+      metaDescription: 'CRAFT framework (Context, Role, Audience, Format, Tone): write on-brand AI copy with 5 structured fields. Templates, examples, and vs CO-STAR.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

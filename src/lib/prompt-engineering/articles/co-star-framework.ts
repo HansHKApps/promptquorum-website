@@ -12,7 +12,7 @@ export const article: Record<Language, PEArticle> = {
       theme: 'Frameworks',
       title: 'CO-STAR Prompt Framework: Context, Objective, Style, Tone, Audience, Response — Complete Guide',
       seoTitle: 'CO-STAR Framework: Structure Complex Prompts in 6 Steps',
-      metaDescription: 'CO-STAR gives you full 6-component control over voice, tone, and audience in AI prompts. Why this framework beats alternatives for professional outputs.',
+      metaDescription: 'CO-STAR\'s 6 fields give you control over every output variable: voice, tone, audience, format. Full templates and a comparison table vs CRAFT, RISEN.',
       ogDescription: 'CO-STAR: 6-component prompt framework. Master voice and tone control.',
       twitterDescription: 'CO-STAR: Context, Objective, Style, Tone, Audience, Response. Control every aspect of AI output quality and voice.',
       intro: 'The CO-STAR Framework is a structured prompt format that helps you design clear, multi-step instructions for complex tasks by defining Context, Objective, Style, Tone, Audience, and Response in one coherent message. In PromptQuorum, the CO-STAR Framework is available as a built-in option that any user can select and apply across all supported models.',

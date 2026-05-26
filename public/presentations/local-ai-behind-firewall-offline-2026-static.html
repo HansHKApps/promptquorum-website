@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Run AI Behind a Firewall — Offline Setup 2026 | PromptQuorum</title>
+    <meta name="description" content="Complete checklist for running local LLMs offline or behind an air-gapped firewall. Models, RAG, TTS/STT — no internet required." />
+    <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/local-ai-behind-firewall-offline-2026" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: #f6f4f4; color: #1c1b1f; overflow: hidden; }
+        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+        .slide { width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 32px 48px; text-align: center; overflow: hidden; animation: fadeIn 0.5s ease-in; position: relative; }
+        .slide.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+        .slide h1 { font-size: clamp(26px, 3.8vw, 42px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+        .slide h2 { font-size: clamp(20px, 2.8vw, 32px); font-weight: 700; margin-bottom: 16px; color: #1c1b1f; }
+        .slide p  { font-size: clamp(14px, 1.5vw, 18px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+        .slide strong { color: #1c1b1f; font-weight: 700; }
+        .logo { width: 56px; height: 56px; margin-bottom: 20px; }
+        .slide ul, .slide ol { text-align: left; margin: 12px auto; max-width: 660px; }
+        .slide ul li, .slide ol li { font-size: clamp(13px, 1.35vw, 16px); margin-bottom: 10px; line-height: 1.5; }
+        table { margin: 12px auto; border-collapse: collapse; font-size: clamp(11px, 1.1vw, 13px); text-align: left; max-width: 96%; }
+        th { background: #6750a4; color: white; padding: 8px 12px; font-weight: 700; }
+        td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover td { background: #f7f2fa; }
+        .faq-list { text-align: left; max-width: 680px; margin: 0 auto; }
+        .faq-list dt { font-weight: 700; font-size: clamp(13px, 1.3vw, 15px); color: #6750a4; margin-top: 12px; }
+        .faq-list dd { font-size: clamp(12px, 1.2vw, 14px); color: #49454f; margin-left: 0; margin-top: 4px; }
+        .header { padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; background: white; flex-shrink: 0; }
+        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+        .header-left img { width: 28px; height: 28px; }
+        .header-links { display: flex; gap: 16px; }
+        .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; }
+        .content-area { flex: 1; overflow: hidden; }
+        .controls { display: flex; gap: 12px; align-items: center; justify-content: center; padding: 12px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0; }
+        button { background: #6750a4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+        button:hover { background: #7d5260; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 60px; text-align: center; }
+        @page { size: A4 landscape; margin: 0; }
+        @media print { html, body { overflow: visible !important; height: auto !important; background: white !important; } .header, .controls { display: none !important; } .content-area { overflow: visible !important; height: auto !important; } .slide { display: flex !important; height: 100vh; page-break-after: always; } }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Run AI Offline / Behind Firewall 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/power-local-llm/local-ai-behind-firewall-offline-2026" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+        <div class="content-area" id="slides-container"></div>
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">8</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+    <script>
+        const ARTICLE_SLUG = 'local-ai-behind-firewall-offline-2026';
+        const ARTICLE_BASE = 'https://www.promptquorum.com/power-local-llm/' + ARTICLE_SLUG;
+        const CONTENT = {
+            en: {
+                title: 'Run AI Offline / Behind Firewall 2026',
+                backLabel: '← Back to Article',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Run AI Behind a Firewall — Offline Setup 2026',
+                        subtitle: 'Complete checklist: models, RAG, TTS/STT, and compliance — zero internet required',
+                        link: ARTICLE_BASE
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            '<strong>Fully offline is possible today</strong> — Ollama, llama.cpp, LocalAI all run without any outbound connection',
+                            '<strong>Pre-flight checklist matters</strong> — download models, embeddings, and configs before disconnecting',
+                            '<strong>NAS as model store</strong> — 2 TB NAS ($120–$200) holds your entire local model library',
+                            '<strong>Offline RAG works</strong> — AnythingLLM + Ollama + nomic-embed-text runs fully air-gapped',
+                            '<strong>China DSL / CAC compliance</strong> — local inference keeps all data inside the perimeter'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Pre-Flight Checklist (Before Going Offline)',
+                        items: [
+                            '<strong>Pull all required models</strong> — <code>ollama pull qwen2.5:14b</code> and any others you need',
+                            '<strong>Download embedding model</strong> — <code>ollama pull nomic-embed-text</code> for offline RAG',
+                            '<strong>Copy model directory</strong> — <code>~/.ollama/models/</code> to external NAS or USB SSD',
+                            '<strong>Install AnythingLLM or Open WebUI</strong> — while still online; saves plugin updates',
+                            '<strong>Export vector DB snapshot</strong> — if migrating an existing RAG collection',
+                            '<strong>Verify OLLAMA_MODELS env var</strong> — point it to your NAS mount path'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Model Storage Requirements (Q4_K_M)',
+                        columns: ['Model', 'File Size', 'Min RAM/VRAM', 'Speed (CPU)'],
+                        rows: [
+                            { 'Model': 'Qwen2.5 7B',             'File Size': '5.5 GB',   'Min RAM/VRAM': '8 GB',   'Speed (CPU)': '8–15 tok/s' },
+                            { 'Model': 'Qwen2.5 14B',            'File Size': '9.5 GB',   'Min RAM/VRAM': '12 GB',  'Speed (CPU)': '4–8 tok/s' },
+                            { 'Model': 'Qwen2.5 32B',            'File Size': '20.5 GB',  'Min RAM/VRAM': '24 GB',  'Speed (CPU)': '2–4 tok/s' },
+                            { 'Model': 'Qwen2.5 72B',            'File Size': '46 GB',    'Min RAM/VRAM': '64 GB',  'Speed (CPU)': '0.8–1.5 tok/s' },
+                            { 'Model': 'Qwen2.5-Coder 7B',       'File Size': '5.5 GB',   'Min RAM/VRAM': '8 GB',   'Speed (CPU)': '8–15 tok/s' },
+                            { 'Model': 'nomic-embed-text',        'File Size': '0.27 GB',  'Min RAM/VRAM': '1 GB',   'Speed (CPU)': 'Fast' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Ollama Air-Gap Deployment',
+                        items: [
+                            '<strong>Copy ~/.ollama/ to offline machine</strong> — USB SSD or internal NAS share',
+                            '<strong>Set env var:</strong> <code>export OLLAMA_MODELS=/mnt/nas/ollama</code>',
+                            '<strong>Start Ollama server:</strong> <code>ollama serve</code> — no internet check performed',
+                            '<strong>Verify:</strong> <code>ollama list</code> — all models visible without connection',
+                            '<strong>Configure apps</strong> — point Open WebUI or AnythingLLM to <code>http://localhost:11434</code>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Offline RAG Setup',
+                        items: [
+                            '<strong>Stack:</strong> AnythingLLM + Ollama + nomic-embed-text — all run locally',
+                            '<strong>Documents:</strong> PDF, DOCX, TXT — all processed on-device; no cloud API calls',
+                            '<strong>Vector store:</strong> LanceDB (bundled with AnythingLLM) — persistent on-disk',
+                            '<strong>Query flow:</strong> Question → embed → vector search → context injection → local LLM',
+                            '<strong>No phone-home:</strong> Block outbound traffic at firewall; stack continues to function'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Frequently Asked Questions',
+                        faqs: [
+                            { q: 'Does Ollama check the internet when serving?', a: 'No. Once models are pulled, ollama serve runs entirely offline. No telemetry or update checks occur during inference.' },
+                            { q: 'Can I run offline RAG on a laptop?', a: 'Yes. 16 GB RAM is sufficient for nomic-embed-text + Qwen2.5 7B Q4_K_M with AnythingLLM.' },
+                            { q: 'How do I move models to another machine without internet?', a: 'Copy the entire ~/.ollama/models/ directory. Set OLLAMA_MODELS to the new path on the target machine.' },
+                            { q: 'Does this satisfy China Data Security Law requirements?', a: 'Local inference keeps all data inside your network perimeter. No personal data or prompts are transmitted to foreign servers — meeting key DSL Article 31 and Cybersecurity Law Article 37 requirements for specific data categories.' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Deploy Your Air-Gapped LLM Stack Today',
+                        body: 'Full step-by-step guide including NAS setup, llama.cpp configs, and offline RAG integration.',
+                        cta: 'Read the Full Guide',
+                        href: ARTICLE_BASE
+                    }
+                ]
+            },
+            de: {
+                title: 'KI hinter Firewall betreiben 2026',
+                backLabel: '← Zurück zum Artikel',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'KI hinter einer Firewall betreiben – Offline-Setup 2026',
+                        subtitle: 'Vollständige Checkliste: Modelle, RAG, TTS/STT und DSGVO-Compliance – ohne Internetverbindung',
+                        link: ARTICLE_BASE + '?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wichtigste Erkenntnisse',
+                        items: [
+                            '<strong>Vollständig offline möglich</strong> — Ollama, llama.cpp und LocalAI benötigen keine ausgehende Verbindung',
+                            '<strong>Checkliste vor dem Offline-Betrieb</strong> — Modelle, Embeddings und Konfigurationen vorher herunterladen',
+                            '<strong>NAS als Modell-Speicher</strong> — 2-TB-NAS (ca. 120–200 €) fasst die gesamte Modell-Bibliothek',
+                            '<strong>Offline-RAG funktioniert</strong> — AnythingLLM + Ollama + nomic-embed-text läuft vollständig air-gapped',
+                            '<strong>DSGVO Art. 28 / BSI-Grundschutz</strong> — lokale Inferenz hält alle Daten im eigenen Perimeter'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Speicherbedarf der Modelle (Q4_K_M)',
+                        columns: ['Modell', 'Dateigröße', 'Min. RAM/VRAM', 'Geschwindigkeit (CPU)'],
+                        rows: [
+                            { 'Modell': 'Qwen2.5 7B',       'Dateigröße': '5,5 GB',  'Min. RAM/VRAM': '8 GB',  'Geschwindigkeit (CPU)': '8–15 Tok/s' },
+                            { 'Modell': 'Qwen2.5 14B',      'Dateigröße': '9,5 GB',  'Min. RAM/VRAM': '12 GB', 'Geschwindigkeit (CPU)': '4–8 Tok/s' },
+                            { 'Modell': 'Qwen2.5 32B',      'Dateigröße': '20,5 GB', 'Min. RAM/VRAM': '24 GB', 'Geschwindigkeit (CPU)': '2–4 Tok/s' },
+                            { 'Modell': 'nomic-embed-text', 'Dateigröße': '0,27 GB', 'Min. RAM/VRAM': '1 GB',  'Geschwindigkeit (CPU)': 'Schnell' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Ihr Air-Gapped-KI-Stack – jetzt einrichten',
+                        body: 'Vollständige Schritt-für-Schritt-Anleitung mit NAS-Setup, llama.cpp-Konfiguration und Offline-RAG-Integration.',
+                        cta: 'Zum vollständigen Leitfaden',
+                        href: ARTICLE_BASE + '?lang=de'
+                    }
+                ]
+            },
+            fr: {
+                title: 'IA derrière un pare-feu — hors ligne 2026',
+                backLabel: '← Retour à l\'article',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'IA derrière un pare-feu — Configuration hors ligne 2026',
+                        subtitle: 'Liste complète : modèles, RAG, TTS/STT et conformité RGPD — sans connexion internet',
+                        link: ARTICLE_BASE + '?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Points clés',
+                        items: [
+                            '<strong>Fonctionnement 100% hors ligne possible</strong> — Ollama, llama.cpp et LocalAI ne nécessitent aucune connexion sortante',
+                            '<strong>Liste de vérification avant déconnexion</strong> — télécharger modèles, embeddings et configurations en avance',
+                            '<strong>NAS comme stockage de modèles</strong> — un NAS 2 To (120–200 €) contient toute la bibliothèque locale',
+                            '<strong>RAG hors ligne opérationnel</strong> — AnythingLLM + Ollama + nomic-embed-text en mode air-gapped',
+                            '<strong>Conformité RGPD / CNIL</strong> — l\'inférence locale maintient toutes les données dans le périmètre'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Besoins de stockage des modèles (Q4_K_M)',
+                        columns: ['Modèle', 'Taille fichier', 'RAM/VRAM min.', 'Vitesse (CPU)'],
+                        rows: [
+                            { 'Modèle': 'Qwen2.5 7B',       'Taille fichier': '5,5 Go',  'RAM/VRAM min.': '8 Go',  'Vitesse (CPU)': '8–15 tok/s' },
+                            { 'Modèle': 'Qwen2.5 14B',      'Taille fichier': '9,5 Go',  'RAM/VRAM min.': '12 Go', 'Vitesse (CPU)': '4–8 tok/s' },
+                            { 'Modèle': 'Qwen2.5 32B',      'Taille fichier': '20,5 Go', 'RAM/VRAM min.': '24 Go', 'Vitesse (CPU)': '2–4 tok/s' },
+                            { 'Modèle': 'nomic-embed-text', 'Taille fichier': '0,27 Go', 'RAM/VRAM min.': '1 Go',  'Vitesse (CPU)': 'Rapide' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Déployez votre stack IA air-gapped dès aujourd\'hui',
+                        body: 'Guide complet étape par étape : configuration NAS, llama.cpp, et intégration RAG hors ligne.',
+                        cta: 'Lire le guide complet',
+                        href: ARTICLE_BASE + '?lang=fr'
+                    }
+                ]
+            },
+            ja: {
+                title: 'ファイアウォール後方・オフラインAI運用 2026',
+                backLabel: '← 記事に戻る',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'ファイアウォール後方でのAI運用 — オフラインセットアップ 2026',
+                        subtitle: '完全チェックリスト：モデル・RAG・TTS/STT・法令遵守 — インターネット不要',
+                        link: ARTICLE_BASE + '?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'ポイントまとめ',
+                        items: [
+                            '<strong>完全オフライン運用が可能</strong> — Ollama・llama.cpp・LocalAIはアウトバウンド接続不要',
+                            '<strong>オフライン前チェックリスト必須</strong> — モデル・埋め込み・設定を事前にダウンロード',
+                            '<strong>NASをモデルストレージとして活用</strong> — 2TB NAS（約2.0〜3.0万円）でモデルライブラリ全体を保管',
+                            '<strong>オフラインRAG動作確認済み</strong> — AnythingLLM + Ollama + nomic-embed-textで完全エアギャップ運用',
+                            '<strong>個人情報保護法・METI準拠</strong> — ローカル推論により全データを組織内に保持'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'モデルストレージ要件（Q4_K_M）',
+                        columns: ['モデル', 'ファイルサイズ', '最小RAM/VRAM', 'CPU速度'],
+                        rows: [
+                            { 'モデル': 'Qwen2.5 7B',       'ファイルサイズ': '5.5 GB',  '最小RAM/VRAM': '8 GB',  'CPU速度': '8–15 トークン/秒' },
+                            { 'モデル': 'Qwen2.5 14B',      'ファイルサイズ': '9.5 GB',  '最小RAM/VRAM': '12 GB', 'CPU速度': '4–8 トークン/秒' },
+                            { 'モデル': 'Qwen2.5 32B',      'ファイルサイズ': '20.5 GB', '最小RAM/VRAM': '24 GB', 'CPU速度': '2–4 トークン/秒' },
+                            { 'モデル': 'nomic-embed-text', 'ファイルサイズ': '0.27 GB', '最小RAM/VRAM': '1 GB',  'CPU速度': '高速' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'エアギャップLLMスタックを今日構築する',
+                        body: 'NASセットアップ・llama.cpp設定・オフラインRAG統合を含む完全ステップバイステップガイド。',
+                        cta: '完全ガイドを読む',
+                        href: ARTICLE_BASE + '?lang=ja'
+                    }
+                ]
+            },
+            zh: {
+                title: '防火墙后/离线运行AI 2026',
+                backLabel: '← 返回文章',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '防火墙后运行AI — 离线部署完整指南 2026',
+                        subtitle: '完整清单：模型、RAG、TTS/STT与合规——无需联网',
+                        link: ARTICLE_BASE + '?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '核心要点',
+                        items: [
+                            '<strong>完全离线运行已成现实</strong> — Ollama、llama.cpp、LocalAI均无需出站连接',
+                            '<strong>离线前清单至关重要</strong> — 断网前下载好所有模型、嵌入模型和配置文件',
+                            '<strong>NAS作为模型存储</strong> — 2TB NAS（约800–1400元）可存储全部本地模型库',
+                            '<strong>离线RAG完全可用</strong> — AnythingLLM + Ollama + nomic-embed-text实现全气隙运行',
+                            '<strong>符合《数据安全法》/ CAC要求</strong> — 本地推理确保所有数据不出境、不离开网络边界'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '离线前准备清单',
+                        items: [
+                            '<strong>拉取所需模型：</strong> <code>ollama pull qwen2.5:14b</code>（以及其他所需模型）',
+                            '<strong>下载嵌入模型：</strong> <code>ollama pull nomic-embed-text</code>（离线RAG必备）',
+                            '<strong>复制模型目录：</strong> 将 <code>~/.ollama/models/</code> 复制到NAS或USB SSD',
+                            '<strong>联网状态下安装AnythingLLM或Open WebUI</strong>（节省插件更新流量）',
+                            '<strong>设置环境变量：</strong> <code>export OLLAMA_MODELS=/mnt/nas/ollama</code>',
+                            '<strong>验证：</strong> <code>ollama list</code> — 断网后仍可看到所有模型'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '模型存储需求（Q4_K_M量化）',
+                        columns: ['模型', '文件大小', '最低显存/内存', 'CPU推理速度'],
+                        rows: [
+                            { '模型': 'Qwen2.5 7B',       '文件大小': '5.5 GB',  '最低显存/内存': '8 GB',  'CPU推理速度': '8–15 tok/s' },
+                            { '模型': 'Qwen2.5 14B',      '文件大小': '9.5 GB',  '最低显存/内存': '12 GB', 'CPU推理速度': '4–8 tok/s' },
+                            { '模型': 'Qwen2.5 32B',      '文件大小': '20.5 GB', '最低显存/内存': '24 GB', 'CPU推理速度': '2–4 tok/s' },
+                            { '模型': 'Qwen2.5 72B',      '文件大小': '46 GB',   '最低显存/内存': '64 GB', 'CPU推理速度': '0.8–1.5 tok/s' },
+                            { '模型': 'nomic-embed-text', '文件大小': '0.27 GB', '最低显存/内存': '1 GB',  'CPU推理速度': '极快' }
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题解答',
+                        faqs: [
+                            { q: 'Ollama推理时会检查互联网吗？', a: '不会。模型拉取完成后，ollama serve完全离线运行，推理过程中不发起任何外部连接或遥测。' },
+                            { q: '本地离线部署如何满足《数据安全法》要求？', a: '本地推理确保所有提示词和数据均不传输至境外服务器，符合《数据安全法》第31条及《网络安全法》第37条对特定数据类别的要求。' },
+                            { q: '如何在没有互联网的情况下将模型迁移到另一台机器？', a: '完整复制 ~/.ollama/models/ 目录至目标机器，并在目标机器上将 OLLAMA_MODELS 环境变量指向新路径即可。' }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '立即部署您的气隙AI推理栈',
+                        body: '完整指南涵盖NAS配置、llama.cpp参数设置及离线RAG集成全流程。',
+                        cta: '阅读完整部署指南',
+                        href: ARTICLE_BASE + '?lang=zh'
+                    }
+                ]
+            }
+        };
+        function renderSlide(slide, lang) {
+            const articleUrl = ARTICLE_BASE + (lang !== 'en' ? '?lang=' + lang : '');
+            const footerLink = `<p style="position:absolute;bottom:16px;right:16px;font-size:11px;color:#999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color:#999;text-decoration:none;border-bottom:1px solid #ddd;">← Article</a></p>`;
+            let html = '';
+            switch (slide.type) {
+                case 'title':
+                    html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top:32px;font-size:18px;color:#79747e;"><a href="${slide.link}" target="_blank" rel="noopener">${slide.link}</a></p>${footerLink}`;
+                    break;
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p style="max-width:640px;">${slide.intro}</p>`;
+                    html += '<ul style="font-size:1em;margin-top:16px;">';
+                    slide.items.forEach(i => { html += `<li>${i}</li>`; });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size:1em;margin-top:16px;">';
+                    slide.items.forEach(i => { html += `<li>${i}</li>`; });
+                    html += '</ol>';
+                    html += footerLink;
+                    break;
+                case 'table':
+                    html = `<h2>${slide.h2}</h2><table><tr>`;
+                    slide.columns.forEach(c => { html += `<th>${c}</th>`; });
+                    html += '</tr>';
+                    slide.rows.forEach(r => {
+                        html += '<tr>';
+                        slide.columns.forEach(c => { html += `<td>${r[c]}</td>`; });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2><dl class="faq-list">`;
+                    slide.faqs.forEach(f => { html += `<dt>${f.q}</dt><dd>${f.a}</dd>`; });
+                    html += '</dl>';
+                    html += footerLink;
+                    break;
+                case 'cta':
+                    html = `<h2>${slide.h2}</h2><p style="max-width:560px;">${slide.body}</p><a href="${slide.href}" target="_blank" rel="noopener" style="display:inline-block;margin-top:28px;padding:14px 28px;background:#6750a4;color:white;border-radius:8px;text-decoration:none;font-size:1.1em;font-weight:600;">${slide.cta}</a>${footerLink}`;
+                    break;
+            }
+            return `<div class="slide ${slide.type}" style="position:relative;">${html}</div>`;
+        }
+        const params = new URLSearchParams(window.location.search);
+        const lang = (['en','de','fr','ja','zh'].includes(params.get('lang'))) ? params.get('lang') : 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.textContent = content.backLabel;
+        if (lang !== 'en') backLink.href = ARTICLE_BASE + '?lang=' + lang;
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => { container.innerHTML += renderSlide(slide, lang); });
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+            else currentSlide = n;
+            slides.forEach(s => s.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+        function changeSlide(n) { showSlide(currentSlide + n); }
+        document.addEventListener('keydown', e => {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changeSlide(-1);
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') changeSlide(1);
+        });
+        window.addEventListener('beforeprint', () => { slides.forEach(s => { s.style.display = 'flex'; }); });
+        window.addEventListener('afterprint',  () => { slides.forEach(s => { s.style.removeProperty('display'); }); showSlide(currentSlide); });
+        if (isPrint) window.addEventListener('load', () => window.print());
+        showSlide(0);
+    </script>
+</body>
+</html>

@@ -16,7 +16,7 @@ export const article: Record<Language, PEArticle> = {
       dateModified: '2026-05-04',
       readTime: '6 min read',
       seoTitle: 'RTF Framework: Role, Task, Format Prompt Structure',
-      metaDescription: 'RTF (Role, Task, Format)—the minimal 3-component framework for routine tasks. Why teams are abandoning complex prompts for this lightweight approach.',
+      metaDescription: 'RTF = Role + Task + Format. The 3-field prompt structure that beats verbose approaches on routine tasks. Templates, examples, and upgrade guide.',
       ogDescription: 'RTF: 3-component prompt framework. Role, Task, Format. Learn why.',
       twitterDescription: 'RTF = Role + Task + Format. Simplest prompt structure for routine tasks. Why teams choose this over complex frameworks.',
       leadAnswerBlock: '**RTF = Role, Task, Format. Three components, zero overhead. Define who the model is, what it should do, and how the answer should look. Use it as your default for routine tasks — summaries, code reviews, emails, meeting notes. Switch to CO-STAR when tone/audience matter, SPECS when schema matters, TRACE when reasoning matters. RTF is the lightest framework that still enforces structure.**',

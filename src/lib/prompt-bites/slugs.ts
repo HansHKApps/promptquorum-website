@@ -68,6 +68,12 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'mistral-small-24b-vs-qwen-14b-vs-llama-8b': 'mistralSmall24bVsQwen14bVsLlama8b',
   'strix-halo-ollama-vulkan':             'strixHaloOllamaVulkan',
 
+  // China Sprint 2026-05-26
+  'best-qwen-model-for-coding':                'bestQwenModelForCoding',
+  'deepseek-v3-local-hardware-requirements':   'deepseekV3LocalHardwareRequirements',
+  'chinese-prompting-vs-english-prompting':    'chinesePromptingVsEnglishPrompting',
+  'sillytavern-chinese-roleplay-setup':        'sillyTavernChineseRoleplaySetup',
+
   // Commercial Sprint 2026-05-26
   'best-vpn-for-ai-development-china-2026':    'bestVpnForAiDevelopmentChina2026',
   'best-mini-pc-for-ollama-server-always-on':  'bestMiniPcForOllamaServerAlwaysOn',

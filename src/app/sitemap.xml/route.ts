@@ -168,7 +168,7 @@ const STATIC_PAGES: Page[] = [
 ]
 
 const PE_PAGES: Page[] = [
-  { path: '/prompt-engineering', priority: 0.9, changefreq: 'weekly', lastmod: '2026-04-30' },
+  { path: '/prompt-engineering', priority: 0.9, changefreq: 'weekly', lastmod: '2026-05-26' },
   ...Object.keys(PE_SLUG_TO_KEY)
     .filter(slug => hasRealContent(peContent, PE_SLUG_TO_KEY[slug]))
     .filter(slug => !NOINDEX_PAGES.has(`/prompt-engineering/${slug}`))
@@ -176,7 +176,7 @@ const PE_PAGES: Page[] = [
       path: `/prompt-engineering/${slug}`,
       priority: 0.8,
       changefreq: 'monthly' as const,
-      lastmod: '2026-04-30',
+      lastmod: '2026-05-26',
     })),
 ]
 
@@ -204,38 +204,38 @@ const FRAMEWORK_PAGES: Page[] = [
 ]
 
 const LOCAL_LLM_PAGES: Page[] = [
-  { path: '/local-llms', priority: 0.9, changefreq: 'weekly', lastmod: '2026-05-06' },
+  { path: '/local-llms', priority: 0.9, changefreq: 'weekly', lastmod: '2026-05-26' },
   ...Object.keys(LLM_SLUG_TO_KEY)
     .filter(slug => hasRealContent(llmContent, LLM_SLUG_TO_KEY[slug]))
     .map(slug => ({
       path: `/local-llms/${slug}`,
       priority: 0.8,
       changefreq: 'monthly' as const,
-      lastmod: '2026-05-06',
+      lastmod: '2026-05-26',
     })),
 ]
 
 const POWER_LOCAL_LLM_PAGES: Page[] = [
   ...(POWER_LLM_HUB_PUBLISHED
-    ? [{ path: '/power-local-llm', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-05-08' }]
+    ? [{ path: '/power-local-llm', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-05-26' }]
     : []),
   ...Array.from(POWER_LLM_PUBLISHED_SLUGS).map(slug => ({
     path: `/power-local-llm/${slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
-    lastmod: '2026-05-08',
+    lastmod: '2026-05-26',
   })),
 ]
 
 const PROMPT_BITES_PAGES: Page[] = [
   ...(PROMPT_BITES_HUB_PUBLISHED
-    ? [{ path: '/prompt-bites', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-05-19' }]
+    ? [{ path: '/prompt-bites', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-05-26' }]
     : []),
   ...Array.from(PROMPT_BITES_PUBLISHED_SLUGS).map(slug => ({
     path: `/prompt-bites/${slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
-    lastmod: '2026-05-19',
+    lastmod: '2026-05-26',
   })),
 ]
 

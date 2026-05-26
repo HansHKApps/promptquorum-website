@@ -78,6 +78,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-local-llm-ide-plugins-2026':             'best-local-llm-ide-plugins-2026',
   'best-rag-tools-for-business-documents-2026':  'best-rag-tools-for-business-documents-2026',
   'wechat-bot-local-llm-personal-assistant-2026': 'wechat-bot-local-llm-personal-assistant-2026',
+  'local-ai-behind-firewall-offline-2026':        'local-ai-behind-firewall-offline-2026',
+  'wechat-local-llm-integration-2026':            'wechat-local-llm-integration-2026',
 
   // Category 9 — Voice, Speech & Multimodal
   'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',

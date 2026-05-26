@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
+        uses: actions/checkout@v4
 
       - name: Submit all pages to Bing IndexNow
+        env:
+          INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
         run: |
           # Fetch sitemap and extract all URLs
           echo "📥 Fetching sitemap from https://www.promptquorum.com/sitemap.xml..."
@@ -28,10 +28,17 @@ jobs:
           echo "📢 Submitting $TOTAL_URLS URLs to Bing IndexNow..."
 
           # Submit to IndexNow API
-          curl -X POST https://www.promptquorum.com/api/indexnow \
+          RESPONSE=$(curl -s -o /tmp/indexnow_response.txt -w "%{http_code}" \
+            -X POST https://www.promptquorum.com/api/indexnow \
             -H "Content-Type: application/json" \
-            -d "{\"urls\": $URLS}" \
-            -w "\nStatus: %{http_code}\n"
+            -H "X-IndexNow-Secret: $INDEXNOW_SECRET" \
+            -d "{\"urls\": $URLS}")
+          echo "Status: $RESPONSE"
+          cat /tmp/indexnow_response.txt
+          if [ "$RESPONSE" != "200" ]; then
+            echo "❌ Submission failed with status $RESPONSE"
+            exit 1
+          fi
 
       - name: Notify on failure
         if: failure()

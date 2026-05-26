@@ -50,6 +50,11 @@ import { article as ollamaMlxAppleSilicon } from './articles/ollama-mlx-apple-si
 import { article as bestQuantization6gbVram } from './articles/best-quantization-6gb-vram'
 import { article as mistralSmall24bVsQwen14bVsLlama8b } from './articles/mistral-small-24b-vs-qwen-14b-vs-llama-8b'
 import { article as strixHaloOllamaVulkan } from './articles/strix-halo-ollama-vulkan'
+// China Sprint 2026-05-26
+import { article as bestQwenModelForCoding } from './articles/best-qwen-model-for-coding'
+import { article as deepseekV3LocalHardwareRequirements } from './articles/deepseek-v3-local-hardware-requirements'
+import { article as chinesePromptingVsEnglishPrompting } from './articles/chinese-prompting-vs-english-prompting'
+import { article as sillyTavernChineseRoleplaySetup } from './articles/sillytavern-chinese-roleplay-setup'
 // Commercial Sprint 2026-05-26
 import { article as bestVpnForAiDevelopmentChina2026 } from './articles/best-vpn-for-ai-development-china-2026'
 import { article as bestMiniPcForOllamaServerAlwaysOn } from './articles/best-mini-pc-for-ollama-server-always-on'
@@ -109,6 +114,11 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestQuantization6gbVram,
   mistralSmall24bVsQwen14bVsLlama8b,
   strixHaloOllamaVulkan,
+  // China Sprint 2026-05-26
+  bestQwenModelForCoding,
+  deepseekV3LocalHardwareRequirements,
+  chinesePromptingVsEnglishPrompting,
+  sillyTavernChineseRoleplaySetup,
   // Commercial Sprint 2026-05-26
   bestVpnForAiDevelopmentChina2026,
   bestMiniPcForOllamaServerAlwaysOn,

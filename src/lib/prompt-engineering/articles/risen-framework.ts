@@ -18,7 +18,7 @@ export const article: Record<Language, PEArticle> = {
       lastFactChecked: '2026-05-04 — RISEN framework original paper (Yao et al., 2023), PromptQuorum native RISEN implementation',
       readTime: '13 min read',
       seoTitle: 'RISEN: 5-Step Framework for Iterative Prompt Refinement (2026)',
-      metaDescription: 'RISEN iteratively refines prompts via Refine, Inspect, Summarize, Evaluate, Next Steps. Build audit trails, compare refinements across GPT, Claude, Gemini.',
+      metaDescription: 'RISEN\'s Narrowing field is why it beats other frameworks for complex tasks — it constrains scope so AI stays on-track. Templates and enterprise examples.',
       educationalLevel: 'Intermediate',
       audience: 'Developers building prompt workflows, product teams iterating on content, teams doing multi-stage reviews, researchers',
       primaryTerm: 'RISEN Framework',

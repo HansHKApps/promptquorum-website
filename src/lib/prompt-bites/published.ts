@@ -62,6 +62,11 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-quantization-6gb-vram',
   'mistral-small-24b-vs-qwen-14b-vs-llama-8b',
   'strix-halo-ollama-vulkan',
+  // China Sprint 2026-05-26
+  'best-qwen-model-for-coding',
+  'deepseek-v3-local-hardware-requirements',
+  'chinese-prompting-vs-english-prompting',
+  'sillytavern-chinese-roleplay-setup',
   // Commercial Sprint 2026-05-26
   'best-vpn-for-ai-development-china-2026',
   'best-mini-pc-for-ollama-server-always-on',

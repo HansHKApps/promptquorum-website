@@ -44,34 +44,34 @@ const COPY: Record<
   }
 > = {
   en: {
-    title: 'Stay ahead of AI news',
-    body: 'Get notified when we publish new prompt engineering guides and PromptQuorum updates.',
-    allow: 'Notify me',
-    dismiss: 'No thanks',
+    title: 'Make AI do what you actually want',
+    body: 'Real techniques. Tested prompts. Zero fluff. Land in your browser the moment we publish.',
+    allow: "I'm in",
+    dismiss: 'Maybe later',
   },
   de: {
-    title: 'Bleib auf dem Laufenden',
-    body: 'Erhalte Benachrichtigungen zu neuen Prompt-Engineering-Guides und PromptQuorum-Updates.',
-    allow: 'Benachrichtigen',
-    dismiss: 'Nein danke',
+    title: 'KI die wirklich funktioniert',
+    body: 'Echte Techniken. Getestete Prompts. Kein Bullshit. Direkt in deinen Browser, sobald wir veröffentlichen.',
+    allow: 'Dabei sein',
+    dismiss: 'Vielleicht später',
   },
   fr: {
-    title: 'Restez informé',
-    body: 'Recevez une notification pour nos nouveaux guides de prompt engineering et les mises à jour PromptQuorum.',
-    allow: "M'avertir",
-    dismiss: 'Non merci',
+    title: "L'IA qui fait enfin ce que vous voulez",
+    body: 'Techniques testées, prompts concrets, zéro théorie creuse. Livré dès la publication.',
+    allow: 'Je suis partant',
+    dismiss: 'Peut-être plus tard',
   },
   ja: {
-    title: 'AI情報をいち早く',
-    body: 'プロンプトエンジニアリングの新ガイドとPromptQuorumのアップデートをお知らせします。',
-    allow: '通知を受け取る',
-    dismiss: 'いいえ',
+    title: 'AIを本当に使いこなす',
+    body: '実証済みのプロンプト技術。理論ではなく実践。公開と同時に通知。',
+    allow: '参加する',
+    dismiss: '後で',
   },
   zh: {
-    title: '抢先获取 AI 资讯',
-    body: '新的提示词工程指南和 PromptQuorum 更新发布时，第一时间收到通知。',
-    allow: '订阅通知',
-    dismiss: '不了，谢谢',
+    title: '让 AI 真正听你的',
+    body: '实测提示词技巧，零废话，零理论。发布即推送。',
+    allow: '加入',
+    dismiss: '暂不',
   },
 }
 
@@ -152,36 +152,39 @@ function PushPromptBannerInner() {
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 9997,
-        background: '#1C1B1F',
-        border: '1px solid #49454F',
+        background: 'linear-gradient(145deg, #1C1B1F 0%, #211F28 100%)',
+        border: '1px solid #5B4B8A',
         borderRadius: '16px',
         padding: '20px 24px',
         maxWidth: '520px',
         width: 'calc(100vw - 48px)',
-        boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+        boxShadow: '0 0 0 1px rgba(103,80,164,0.15), 0 8px 40px rgba(103,80,164,0.25), 0 2px 8px rgba(0,0,0,0.5)',
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         display: 'flex',
         flexDirection: 'column',
         gap: '12px',
       }}
     >
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-        <p style={{ margin: 0, fontSize: '14px', fontWeight: 600, color: '#E6E1E5' }}>
-          {c.title}
-        </p>
-        <p style={{ margin: 0, fontSize: '13px', color: '#CAC4D0', lineHeight: 1.6 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span style={{ fontSize: '16px', lineHeight: 1 }}>⚡</span>
+          <p style={{ margin: 0, fontSize: '14px', fontWeight: 700, color: '#EDE8F5', letterSpacing: '-0.01em' }}>
+            {c.title}
+          </p>
+        </div>
+        <p style={{ margin: 0, fontSize: '13px', color: '#B8B0C8', lineHeight: 1.6 }}>
           {c.body}
         </p>
       </div>
-      <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end' }}>
+      <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
         <button
           onClick={dismiss}
           style={{
-            padding: '8px 20px',
+            padding: '8px 18px',
             borderRadius: '100px',
-            border: '1px solid #49454F',
+            border: '1px solid #3A3545',
             background: 'transparent',
-            color: '#CAC4D0',
+            color: '#8A8499',
             fontSize: '13px',
             fontWeight: 500,
             cursor: 'pointer',
@@ -194,16 +197,18 @@ function PushPromptBannerInner() {
         <button
           onClick={allow}
           style={{
-            padding: '8px 20px',
+            padding: '8px 22px',
             borderRadius: '100px',
             border: 'none',
-            background: '#6750A4',
+            background: 'linear-gradient(135deg, #7C5CBF 0%, #5B3FA0 100%)',
             color: '#FFFFFF',
             fontSize: '13px',
-            fontWeight: 600,
+            fontWeight: 700,
             cursor: 'pointer',
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             whiteSpace: 'nowrap',
+            letterSpacing: '0.01em',
+            boxShadow: '0 2px 12px rgba(103,80,164,0.4)',
           }}
         >
           {c.allow}

@@ -22,7 +22,7 @@ export const FRAMEWORKS: Framework[] = [
     expansion: 'Context · Objective · Style · Tone · Audience · Response',
     tagline: 'The Singapore GPT-4 competition winner. Maximum control over voice, audience, and output format.',
     seoTitle: 'CO-STAR Prompt Framework: Full Guide with Templates 2026',
-    metaDescription: 'Master the CO-STAR framework with practical templates and real-world examples for better AI outputs.',
+    metaDescription: 'CO-STAR: 6 fields (Context, Objective, Style, Tone, Audience, Response) that give you precise control over voice and output. Full template + examples.',
     complexity: 'Medium',
     badge: 'Won Singapore GPT-4 Competition',
     fields: [
@@ -61,7 +61,7 @@ export const FRAMEWORKS: Framework[] = [
     expansion: 'Context · Role · Action · Format · Target',
     tagline: 'Role-based framing with a clear target audience. Great for marketing, copywriting, and creative work.',
     seoTitle: 'CRAFT Prompt Framework: Complete Guide with Examples 2026',
-    metaDescription: 'The 5-field CRAFT framework for marketing copy and creative work: Context, Role, Action, Format, Target. Learn when you need CO-STAR instead.',
+    metaDescription: 'CRAFT prompt framework (Context, Role, Action, Format, Target): built for on-brand marketing copy. Templates, real examples, and vs CO-STAR.',
     complexity: 'Medium',
     fields: [
       { name: 'Context', description: 'Background the AI needs — what project, product, or situation this relates to.' },
@@ -98,7 +98,7 @@ export const FRAMEWORKS: Framework[] = [
     expansion: 'Role · Instructions · Steps · End Goal · Narrowing',
     tagline: 'Built for multi-step enterprise tasks. The Narrowing field keeps AI output on-track and within constraints.',
     seoTitle: 'RISEN Framework: Multi-Step Enterprise Workflows — Complete Guide',
-    metaDescription: 'RISEN (Role, Instructions, Steps, End Goal, Narrowing) for enterprise workflows. Why the Narrowing field prevents AI hallucinations and scope drift.',
+    metaDescription: 'RISEN (Role, Instructions, Steps, End Goal, Narrowing): the 5-field framework that prevents AI scope drift on complex enterprise tasks. With templates.',
     complexity: 'High',
     fields: [
       { name: 'Role', description: 'The expert persona the AI should adopt for this task.' },
@@ -237,6 +237,7 @@ export const FRAMEWORKS: Framework[] = [
     name: 'RTF',
     expansion: 'Role · Task · Format',
     tagline: 'Minimum viable prompt structure. Three fields that cover the three most impactful variables in any prompt.',
+    metaDescription: 'RTF (Role, Task, Format): the 3-field prompt structure that outperforms verbose prompts on routine tasks. Templates, examples, and when to upgrade.',
     complexity: 'Low',
     fields: [
       { name: 'Role', description: 'The expert persona the AI should adopt — what specialist knowledge to draw on.' },

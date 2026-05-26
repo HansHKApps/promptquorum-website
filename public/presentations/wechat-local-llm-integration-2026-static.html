@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeChat + Local LLM Integration 2026 | PromptQuorum</title>
+    <meta name="description" content="Connect WeChat to a local LLM using WeChatFerry and Ollama. Three integration patterns, model recommendations, mini PC server setup." />
+    <link rel="canonical" href="https://www.promptquorum.com/power-local-llm/wechat-local-llm-integration-2026" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: #f6f4f4; color: #1c1b1f; overflow: hidden; }
+        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+        .slide { width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 32px 48px; text-align: center; overflow: hidden; animation: fadeIn 0.5s ease-in; position: relative; }
+        .slide.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+        .slide h1 { font-size: clamp(26px, 3.8vw, 42px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+        .slide h2 { font-size: clamp(20px, 2.8vw, 32px); font-weight: 700; margin-bottom: 16px; color: #1c1b1f; }
+        .slide p  { font-size: clamp(14px, 1.5vw, 18px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+        .slide strong { color: #1c1b1f; font-weight: 700; }
+        .logo { width: 56px; height: 56px; margin-bottom: 20px; }
+        .slide ul, .slide ol { text-align: left; margin: 12px auto; max-width: 660px; }
+        .slide ul li, .slide ol li { font-size: clamp(13px, 1.35vw, 16px); margin-bottom: 10px; line-height: 1.5; }
+        pre { background: #1c1b1f; color: #d4d4d4; padding: 16px 20px; border-radius: 8px; font-size: clamp(11px, 1vw, 13px); text-align: left; max-width: 700px; margin: 12px auto; overflow-x: auto; white-space: pre; }
+        table { margin: 12px auto; border-collapse: collapse; font-size: clamp(11px, 1.1vw, 13px); text-align: left; max-width: 96%; }
+        th { background: #6750a4; color: white; padding: 8px 12px; font-weight: 700; }
+        td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover td { background: #f7f2fa; }
+        .faq-list { text-align: left; max-width: 680px; margin: 0 auto; }
+        .faq-list dt { font-weight: 700; font-size: clamp(13px, 1.3vw, 15px); color: #6750a4; margin-top: 12px; }
+        .faq-list dd { font-size: clamp(12px, 1.2vw, 14px); color: #49454f; margin-left: 0; margin-top: 4px; }
+        .header { padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; background: white; flex-shrink: 0; }
+        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+        .header-left img { width: 28px; height: 28px; }
+        .header-links { display: flex; gap: 16px; }
+        .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; }
+        .content-area { flex: 1; overflow: hidden; }
+        .controls { display: flex; gap: 12px; align-items: center; justify-content: center; padding: 12px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0; }
+        button { background: #6750a4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+        button:hover { background: #7d5260; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 60px; text-align: center; }
+        @page { size: A4 landscape; margin: 0; }
+        @media print { html, body { overflow: visible !important; height: auto !important; background: white !important; } .header, .controls { display: none !important; } .content-area { overflow: visible !important; height: auto !important; } .slide { display: flex !important; height: 100vh; page-break-after: always; } }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">WeChat + Local LLM Integration 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/power-local-llm/wechat-local-llm-integration-2026" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
+            </div>
+        </div>
+        <div class="content-area" id="slides-container"></div>
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">7</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+    <script>
+        const ARTICLE_SLUG = 'wechat-local-llm-integration-2026';
+        const ARTICLE_BASE = 'https://www.promptquorum.com/power-local-llm/' + ARTICLE_SLUG;
+        const CODE_SAMPLE = `import requests
+from wcferry import Wcf
+
+wcf = Wcf()
+wcf.enable_receiving_msg()
+
+while True:
+    msg = wcf.get_msg()
+    if msg and msg.from_self() is False:
+        resp = requests.post(
+            "http://localhost:11434/api/generate",
+            json={"model": "qwen2.5:7b",
+                  "prompt": msg.content,
+                  "stream": False}
+        ).json()
+        wcf.send_text(resp["response"],
+                      msg.roomid or msg.sender)`;
+        const CONTENT = {
+            en: {
+                title: 'WeChat + Local LLM Integration 2026',
+                backLabel: '← Back to Article',
+                slides: [
+                    { type: 'title', h1: 'WeChat + Local LLM Integration 2026', subtitle: 'WeChatFerry + Ollama: private AI assistant inside WeChat — no cloud API required', link: ARTICLE_BASE },
+                    { type: 'list', h2: 'Key Takeaways', items: [
+                        '<strong>WeChatFerry (Windows)</strong> — most reliable WeChat PC hook in 2026; runs alongside WeChat without modifying binary',
+                        '<strong>Ollama HTTP API on port 11434</strong> — 10 lines of Python route WeChat messages to any local model',
+                        '<strong>Qwen2.5 7B Q4_K_M</strong> — best for Chinese chat: 5.5 GB VRAM, native CJK tokenisation, 8–15 tok/s',
+                        '<strong>Always-on mini PC</strong> — Minisforum UM890 Pro keeps the bot live 24/7 at ~35 W',
+                        '<strong>China DSL / Privacy</strong> — local inference keeps prompts and responses on your hardware'
+                    ]},
+                    { type: 'list', h2: 'Three Integration Patterns', items: [
+                        '<strong>Pattern 1 — WeChatFerry + Ollama (Windows):</strong> Hook WeChat PC client, Python SDK, personal and group chats — most stable',
+                        '<strong>Pattern 2 — HTTP Webhook Bridge:</strong> Cross-platform, but more complex; for businesses with WeChat Official Account',
+                        '<strong>Pattern 3 — Ollama + Open WebUI:</strong> Simplest one-way notifications; no hook required',
+                        'For most users in China on personal accounts → <strong>Pattern 1 is the right choice</strong>'
+                    ]},
+                    { type: 'code', h2: 'WeChatFerry + Ollama: Minimal Python Bridge', code: CODE_SAMPLE },
+                    { type: 'table', h2: 'Mini PC Server Comparison', columns: ['Device', 'RAM', 'Speed (7B)', 'Power', 'Price (USD)'], rows: [
+                        { 'Device': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', 'Speed (7B)': '~8 tok/s',  'Power': '35–65 W', 'Price (USD)': '$350–$450' },
+                        { 'Device': 'Mac Mini M4',          'RAM': '16–32 GB', 'Speed (7B)': '~18 tok/s', 'Power': '20–40 W', 'Price (USD)': '$599+' },
+                        { 'Device': 'Beelink SER8',         'RAM': '32 GB',    'Speed (7B)': '~8 tok/s',  'Power': '30–55 W', 'Price (USD)': '$280–$330' }
+                    ]},
+                    { type: 'faq', h2: 'Frequently Asked Questions', faqs: [
+                        { q: 'Does WeChatFerry work with WeChat for Mac?', a: 'No. Windows only — hooks the PC client DLLs. Use a Windows VM on Mac.' },
+                        { q: 'Best model for Chinese WeChat chat?', a: 'Qwen2.5 7B Q4_K_M — native CJK tokenisation, 30–40% more efficient on Chinese text than Llama or Mistral.' },
+                        { q: 'Will Tencent ban my account?', a: 'Personal bots at 1–5 messages/min rarely trigger bans. Avoid bulk messaging or commercial outreach.' }
+                    ]},
+                    { type: 'cta', h2: 'Build Your Private WeChat AI Assistant', body: 'Step-by-step guide: WeChatFerry setup, Ollama API bridge, mini PC server config, China DSL compliance.', cta: 'Read the Full Guide', href: ARTICLE_BASE }
+                ]
+            },
+            zh: {
+                title: '微信 + 本地LLM集成 2026',
+                backLabel: '← 返回文章',
+                slides: [
+                    { type: 'title', h1: '微信 + 本地LLM集成 2026', subtitle: 'WeChatFerry + Ollama：微信内置私密AI助手——无需任何云端API', link: ARTICLE_BASE + '?lang=zh' },
+                    { type: 'list', h2: '核心要点', items: [
+                        '<strong>WeChatFerry（Windows）</strong> — 2026年最稳定的微信PC客户端钩子',
+                        '<strong>Ollama HTTP API（11434端口）</strong> — 10行Python实现消息路由',
+                        '<strong>Qwen2.5 7B Q4_K_M</strong> — 中文聊天最佳选择：5.5 GB显存，原生中文分词，8–15 tok/s',
+                        '<strong>常驻迷你主机</strong> — 铭凡UM890 Pro约35 W功耗24/7在线',
+                        '<strong>符合《数据安全法》</strong> — 推理内容不离开本地设备'
+                    ]},
+                    { type: 'code', h2: 'WeChatFerry + Ollama：最简Python桥接代码', code: CODE_SAMPLE },
+                    { type: 'table', h2: '迷你主机服务器对比', columns: ['设备', '内存', '速度(7B)', '功耗', '参考价格'], rows: [
+                        { '设备': '铭凡UM890 Pro', '内存': '32–64 GB', '速度(7B)': '~8 tok/s',  '功耗': '35–65 W', '参考价格': '2500–3200元' },
+                        { '设备': 'Mac Mini M4',   '内存': '16–32 GB', '速度(7B)': '~18 tok/s', '功耗': '20–40 W', '参考价格': '约4399元起' },
+                        { '设备': '零刻SER8',      '内存': '32 GB',    '速度(7B)': '~8 tok/s',  '功耗': '30–55 W', '参考价格': '1800–2200元' }
+                    ]},
+                    { type: 'faq', h2: '常见问题', faqs: [
+                        { q: 'WeChatFerry支持Mac版微信吗？', a: '不支持。仅限Windows微信PC客户端。Mac用户可使用Windows虚拟机。' },
+                        { q: '微信中文聊天推荐哪个模型？', a: 'Qwen2.5 7B Q4_K_M——原生中文分词，比Llama或Mistral处理中文效率高30–40%。' },
+                        { q: '会被腾讯封号吗？', a: '每分钟1–5条消息的个人机器人极少触发封号。避免批量发送。' }
+                    ]},
+                    { type: 'cta', h2: '立即构建您的私密微信AI助手', body: '完整指南：WeChatFerry配置、Ollama API桥接、迷你主机服务器设置、数据安全法合规。', cta: '阅读完整指南', href: ARTICLE_BASE + '?lang=zh' }
+                ]
+            },
+            de: {
+                title: 'WeChat + Lokales LLM 2026',
+                backLabel: '← Zurück zum Artikel',
+                slides: [
+                    { type: 'title', h1: 'WeChat + Lokales LLM Integration 2026', subtitle: 'WeChatFerry + Ollama: privater KI-Assistent in WeChat ohne Cloud-API', link: ARTICLE_BASE + '?lang=de' },
+                    { type: 'list', h2: 'Wichtigste Erkenntnisse', items: [
+                        '<strong>WeChatFerry (Windows)</strong> — zuverlässigster WeChat-Hook 2026',
+                        '<strong>Ollama HTTP API Port 11434</strong> — 10 Zeilen Python für Message-Routing',
+                        '<strong>Qwen2.5 7B Q4_K_M</strong> — beste Wahl für chinesischen Chat, 5,5 GB VRAM',
+                        '<strong>Mini-PC-Server</strong> — Minisforum UM890 Pro, 24/7, ~35 W',
+                        '<strong>DSGVO Art. 28</strong> — keine DPA mit LLM-Anbieter nötig'
+                    ]},
+                    { type: 'cta', h2: 'Ihren WeChat-KI-Assistenten aufbauen', body: 'Schritt-für-Schritt: WeChatFerry, Ollama API, Mini-PC-Server, DSGVO-Compliance.', cta: 'Zum vollständigen Leitfaden', href: ARTICLE_BASE + '?lang=de' }
+                ]
+            },
+            fr: {
+                title: 'WeChat + LLM local 2026',
+                backLabel: '← Retour à l\'article',
+                slides: [
+                    { type: 'title', h1: 'WeChat + LLM local 2026', subtitle: 'WeChatFerry + Ollama : assistant IA privé dans WeChat sans API cloud', link: ARTICLE_BASE + '?lang=fr' },
+                    { type: 'list', h2: 'Points clés', items: [
+                        '<strong>WeChatFerry (Windows)</strong> — hook WeChat le plus fiable en 2026',
+                        '<strong>API HTTP Ollama port 11434</strong> — 10 lignes de Python pour le routage',
+                        '<strong>Qwen2.5 7B Q4_K_M</strong> — meilleur pour le chinois, 5,5 Go VRAM',
+                        '<strong>Mini PC always-on</strong> — Minisforum UM890 Pro, ~35 W',
+                        '<strong>RGPD Art. 28</strong> — pas de DPA avec un fournisseur LLM nécessaire'
+                    ]},
+                    { type: 'cta', h2: 'Construire votre assistant WeChat IA privé', body: 'Guide complet : WeChatFerry, pont API Ollama, serveur mini PC, conformité RGPD.', cta: 'Lire le guide complet', href: ARTICLE_BASE + '?lang=fr' }
+                ]
+            },
+            ja: {
+                title: 'WeChat + ローカルLLM 2026',
+                backLabel: '← 記事に戻る',
+                slides: [
+                    { type: 'title', h1: 'WeChat + ローカルLLM統合 2026', subtitle: 'WeChatFerry + Ollama: クラウドAPI不要の WeChat プライベートAIアシスタント', link: ARTICLE_BASE + '?lang=ja' },
+                    { type: 'list', h2: 'ポイントまとめ', items: [
+                        '<strong>WeChatFerry（Windows）</strong> — 2026年最も信頼性の高いWeChat PCフック',
+                        '<strong>Ollama HTTP APIポート11434</strong> — 10行のPythonでルーティング',
+                        '<strong>Qwen2.5 7B Q4_K_M</strong> — 中国語チャットに最適、5.5 GB VRAM',
+                        '<strong>Always-onミニPC</strong> — Minisforum UM890 Pro、~35 W',
+                        '<strong>個人情報保護法対応</strong> — データはデバイス外に出ない'
+                    ]},
+                    { type: 'cta', h2: 'WeChat プライベートAIアシスタントを構築', body: '完全ガイド：WeChatFerry設定、Ollama APIブリッジ、ミニPCサーバー。', cta: '完全ガイドを読む', href: ARTICLE_BASE + '?lang=ja' }
+                ]
+            }
+        };
+        function renderSlide(slide, lang) {
+            const articleUrl = ARTICLE_BASE + (lang !== 'en' ? '?lang=' + lang : '');
+            const footerLink = `<p style="position:absolute;bottom:16px;right:16px;font-size:11px;color:#999;"><a href="${articleUrl}" target="_blank" rel="noopener" style="color:#999;text-decoration:none;border-bottom:1px solid #ddd;">← Article</a></p>`;
+            let html = '';
+            switch (slide.type) {
+                case 'title':
+                    html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top:32px;font-size:18px;color:#79747e;"><a href="${slide.link}" target="_blank" rel="noopener">${slide.link}</a></p>${footerLink}`;
+                    break;
+                case 'list':
+                    html = `<h2>${slide.h2}</h2><ul style="font-size:1em;margin-top:16px;">`;
+                    slide.items.forEach(i => { html += `<li>${i}</li>`; });
+                    html += `</ul>${footerLink}`;
+                    break;
+                case 'code':
+                    html = `<h2>${slide.h2}</h2><pre>${slide.code}</pre>${footerLink}`;
+                    break;
+                case 'table':
+                    html = `<h2>${slide.h2}</h2><table><tr>`;
+                    slide.columns.forEach(c => { html += `<th>${c}</th>`; });
+                    html += '</tr>';
+                    slide.rows.forEach(r => {
+                        html += '<tr>';
+                        slide.columns.forEach(c => { html += `<td>${r[c]}</td>`; });
+                        html += '</tr>';
+                    });
+                    html += `</table>${footerLink}`;
+                    break;
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2><dl class="faq-list">`;
+                    slide.faqs.forEach(f => { html += `<dt>${f.q}</dt><dd>${f.a}</dd>`; });
+                    html += `</dl>${footerLink}`;
+                    break;
+                case 'cta':
+                    html = `<h2>${slide.h2}</h2><p style="max-width:560px;">${slide.body}</p><a href="${slide.href}" target="_blank" rel="noopener" style="display:inline-block;margin-top:28px;padding:14px 28px;background:#6750a4;color:white;border-radius:8px;text-decoration:none;font-size:1.1em;font-weight:600;">${slide.cta}</a>${footerLink}`;
+                    break;
+            }
+            return `<div class="slide ${slide.type}" style="position:relative;">${html}</div>`;
+        }
+        const params = new URLSearchParams(window.location.search);
+        const lang = (['en','de','fr','ja','zh'].includes(params.get('lang'))) ? params.get('lang') : 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.textContent = content.backLabel;
+        if (lang !== 'en') backLink.href = ARTICLE_BASE + '?lang=' + lang;
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => { container.innerHTML += renderSlide(slide, lang); });
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+            else currentSlide = n;
+            slides.forEach(s => s.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+        function changeSlide(n) { showSlide(currentSlide + n); }
+        document.addEventListener('keydown', e => {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changeSlide(-1);
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') changeSlide(1);
+        });
+        window.addEventListener('beforeprint', () => { slides.forEach(s => { s.style.display = 'flex'; }); });
+        window.addEventListener('afterprint',  () => { slides.forEach(s => { s.style.removeProperty('display'); }); showSlide(currentSlide); });
+        if (isPrint) window.addEventListener('load', () => window.print());
+        showSlide(0);
+    </script>
+</body>
+</html>
