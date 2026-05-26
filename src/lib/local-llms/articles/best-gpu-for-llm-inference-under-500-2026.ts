@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'GPU VRAM determines which AI models you can run. A 16 GB GPU runs 14B models at high quality. A 24 GB GPU (like a used RTX 3090) runs 30B+ models. Under 12 GB limits you to 7B models or smaller.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — Best Overall',

@@ -60,6 +60,8 @@ import { article as a_best_affiliate_tools_ai_developers_2026 } from './articles
 import { article as a_apple_mlx_vs_nvidia_cuda_local_llm_2026 } from './articles/apple-mlx-vs-nvidia-cuda-local-llm-2026'
 // Commercial Sprint 2026-05-26
 import { article as a_qwen_local_deployment_complete_guide_2026 } from './articles/qwen-local-deployment-complete-guide-2026'
+// China Sprint 2026-05-26
+import { article as a_deepseek_vs_qwen_local_comparison_2026 } from './articles/deepseek-vs-qwen-local-comparison-2026'
 import { article as a_deepseek_vs_qwen_coding_local_2026 } from './articles/deepseek-vs-qwen-coding-local-2026'
 import { article as a_best_workstation_build_local_ai_2026 } from './articles/best-workstation-build-local-ai-2026'
 import { article as a_best_local_llm_ide_plugins_2026 } from './articles/best-local-llm-ide-plugins-2026'
@@ -127,4 +129,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-local-llm-ide-plugins-2026':                   a_best_local_llm_ide_plugins_2026,
   'best-rag-tools-for-business-documents-2026':        a_best_rag_tools_for_business_documents_2026,
   'wechat-bot-local-llm-personal-assistant-2026':      a_wechat_bot_local_llm_personal_assistant_2026,
+  // China Sprint 2026-05-26
+  'deepseek-vs-qwen-local-comparison-2026':            a_deepseek_vs_qwen_local_comparison_2026,
 }

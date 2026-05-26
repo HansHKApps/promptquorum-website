@@ -72,6 +72,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Commercial Sprint 2026-05-26 — 6 new revenue pages
   'qwen-local-deployment-complete-guide-2026',
+  // China Sprint 2026-05-26
+  'deepseek-vs-qwen-local-comparison-2026',
   'deepseek-vs-qwen-coding-local-2026',
   'best-workstation-build-local-ai-2026',
   'best-local-llm-ide-plugins-2026',
