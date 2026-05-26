@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'VRAM bestimmt, welche KI-Modelle du lokal ausführen kannst. 16 GB reichen für 14B-Modelle. 24 GB (gebrauchte RTX 3090) ermöglichen 30B-Modelle. Unter 12 GB bist du auf 7B-Modelle beschränkt.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — Bestes Gesamtpaket',
@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Le VRAM de la GPU détermine quels modèles d\'IA vous pouvez faire tourner. 16 Go suffisent pour les modèles 14B. 24 Go (RTX 3090 occasion) permettent les modèles 30B. En dessous de 12 Go, vous êtes limité aux modèles 7B.',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RTX 4060 Ti 16 Go — Meilleur choix global',
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'GPU VRAMはどのAIモデルをローカルで実行できるかを決定します。16GBで14Bモデル対応。24GB（中古RTX 3090）で30Bモデル対応。12GB未満だと7Bモデルのみです。',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — 総合1位',
@@ -700,7 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'GPU显存决定了你能在本地运行哪些AI模型。16GB显存支持14B模型。24GB（二手RTX 3090）支持30B模型。12GB以下只能运行7B或更小的模型。',
           },
         ],
-        items: [
+        rankedItems: [
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — 综合最佳',
