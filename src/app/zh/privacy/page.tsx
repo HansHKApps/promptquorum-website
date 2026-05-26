@@ -27,5 +27,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ZhPrivacyPage() {
-  return <PrivacyPageClient initialLang="ja" />
+  return <PrivacyPageClient initialLang="zh" />
 }
