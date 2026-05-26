@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: 'Most reliable on-demand — A10G 24GB $0.60/hr' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best Cloud GPU for LLM Fine-Tuning Under $1/Hour (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Best Cloud GPU for LLM Fine-Tuning Under $1/Hour (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=en', inLanguage: 'en' },
   },
 
   de: {
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: 'Zuverlässigstes On-Demand — A10G 24GB 0,60 $/Stunde' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Günstigste Cloud-GPU für LLM-Fine-Tuning unter 1 $/Stunde (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Günstigste Cloud-GPU für LLM-Fine-Tuning unter 1 $/Stunde (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=de', inLanguage: 'de' },
   },
 
   fr: {
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: 'Plus fiable à la demande — A10G 24 Go 0,60 $/h' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleur GPU cloud pour fine-tuner un LLM à moins de 1 $/heure (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleur GPU cloud pour fine-tuner un LLM à moins de 1 $/heure (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=fr', inLanguage: 'fr' },
   },
 
   ja: {
@@ -479,7 +479,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: '最高信頼性オンデマンド — A10G 24GB 0.60ドル/時' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'LLMファインチューニングに最安クラウドGPU（時間1ドル以下、2026年）', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'LLMファインチューニングに最安クラウドGPU（時間1ドル以下、2026年）', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=ja', inLanguage: 'ja' },
   },
 
   zh: {
@@ -600,6 +600,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: '最可靠按需 — A10G 24GB 0.60美元/小时' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年最便宜LLM微调云GPU（每小时不到1美元）', datePublished: '2026-05-26', dateModified: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: '2026年最便宜LLM微调云GPU（每小时不到1美元）', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=zh', inLanguage: 'zh' },
   },
 }
