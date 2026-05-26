@@ -1212,7 +1212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLMs vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=fr) — Comparaison des fonctionnalités et des coûts (confidentialité incluse)',
           '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build?lang=fr) — Guide de configuration matérielle étape par étape (1 000–5 000 €)',
           '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms?lang=fr) — Classements 2026 par performance-par-euro',
-          '[Alibaba Cloud vs Tencent Cloud GPU pour l'IA (2026)](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=fr) — Prix/performance pour le cloud GPU chinois : PAI-DSW vs TI Platform.',
+          '[Alibaba Cloud vs Tencent Cloud GPU pour l\'IA (2026)](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=fr) — Prix/performance pour le cloud GPU chinois : PAI-DSW vs TI Platform.',
           '[Meilleur Cloud GPU pour le fine-tuning à moins de 1 $/h](/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=fr) — RunPod, Vast.ai, Lambda : créneaux A100/H100 les moins chers pour LoRA.',
         ],
       },
