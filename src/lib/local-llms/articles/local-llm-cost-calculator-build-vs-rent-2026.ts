@@ -193,6 +193,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=en',
+      inLanguage: 'en',
     },
   },
   de: {
@@ -265,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'LLM Kostenrechner: GPU kaufen vs. Cloud mieten 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'LLM Kostenrechner: GPU kaufen vs. Cloud mieten 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=de', inLanguage: 'de' },
   },
   fr: {
     freshness_tier: 'semi_annual',
@@ -333,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Calculateur de coût LLM : construire vs louer 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Calculateur de coût LLM : construire vs louer 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=fr', inLanguage: 'fr' },
   },
   ja: {
     freshness_tier: 'semi_annual',
@@ -401,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'LLMコスト計算：GPU購入 vs クラウドGPU 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'LLMコスト計算：GPU購入 vs クラウドGPU 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=ja', inLanguage: 'ja' },
   },
   zh: {
     freshness_tier: 'semi_annual',
@@ -473,6 +475,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '本地LLM成本计算器：自建 vs 云租GPU 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '本地LLM成本计算器：自建 vs 云租GPU 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=zh', inLanguage: 'zh' },
   },
 }
