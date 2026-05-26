@@ -180,9 +180,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     schema: {
+      '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'WeChat Bot with Local LLM: Personal Assistant 2026',
       description: 'Build a WeChat personal assistant bot with WeChatFerry and Ollama on Windows — fully local, no cloud API.',
+      url: 'https://www.promptquorum.com/power-local-llm/wechat-bot-local-llm-personal-assistant-2026?lang=en',
+      inLanguage: 'en',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
@@ -254,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Wie baue ich einen WeChat-Bot mit einem lokalen LLM?', acceptedAnswer: { '@type': 'Answer', text: 'WeChatFerry (Windows) zum Einhaken in den WeChat-PC-Client nutzen, mit Ollama über HTTP-API verbinden und Nachrichten weiterleiten. Einrichtungszeit: 30–60 Minuten.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'WeChat-Bot mit lokalem LLM: Persönlicher Assistent 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'de' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'WeChat-Bot mit lokalem LLM: Persönlicher Assistent 2026', url: 'https://www.promptquorum.com/power-local-llm/wechat-bot-local-llm-personal-assistant-2026?lang=de', inLanguage: 'de', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26' },
     relatedReading: {
       items: [
         '[WeChat Lokale LLM Integration — 3 Integrationsmuster](/power-local-llm/wechat-local-llm-integration-2026?lang=de) — Webhook-, WeChatFerry- und Mini-PC-Server-Muster für Entwickler',
@@ -318,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Comment créer un bot WeChat avec un LLM local ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez WeChatFerry (Windows) connecté à Ollama via HTTP API. Temps de configuration : 30–60 minutes avec Python.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Bot WeChat avec LLM local : assistant personnel 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'fr' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Bot WeChat avec LLM local : assistant personnel 2026', url: 'https://www.promptquorum.com/power-local-llm/wechat-bot-local-llm-personal-assistant-2026?lang=fr', inLanguage: 'fr', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26' },
     relatedReading: {
       items: [
         "[Guide d'intégration WeChat + LLM local — 3 patterns](/power-local-llm/wechat-local-llm-integration-2026?lang=fr) — webhook, WeChatFerry et serveur mini PC pour développeurs",
@@ -386,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'ローカルLLMでWeChatボットを構築する方法は？', acceptedAnswer: { '@type': 'Answer', text: 'WeChatFerry（Windows）でWeChatにフックし、OllamaにHTTP APIで接続します。セットアップ時間：30〜60分。' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'ローカルLLMでWeChatボット：個人アシスタント 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'ja' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'ローカルLLMでWeChatボット：個人アシスタント 2026年版', url: 'https://www.promptquorum.com/power-local-llm/wechat-bot-local-llm-personal-assistant-2026?lang=ja', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26' },
     relatedReading: {
       items: [
         '[WeChat ローカルLLM統合ガイド — 3つの統合パターン](/power-local-llm/wechat-local-llm-integration-2026?lang=ja) — 開発者向けWebhook、WeChatFerry、ミニPCサーバーパターン',
@@ -495,11 +498,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     schema: {
+      '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '用本地大模型搭建微信机器人：私人助理 2026',
+      url: 'https://www.promptquorum.com/power-local-llm/wechat-bot-local-llm-personal-assistant-2026?lang=zh',
+      inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      inLanguage: 'zh',
     },
   },
 }
