@@ -55,8 +55,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: 'Used RTX 3090 on eBay', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_rtx_3090]' },
-          { label: 'AMD Ryzen 7 7700X on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_ryzen_7700x]' },
+          { label: 'Used RTX 3090 on eBay', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_rtx_3090]', productName: 'NVIDIA RTX 3090', productCategory: 'GPU' },
+          { label: 'AMD Ryzen 7 7700X on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_ryzen_7700x]', productName: 'AMD Ryzen 7 7700X', productCategory: 'CPU' },
         ],
         items: [
           '**Models supported at full GPU speed:** 7B (any quant), 13B (Q4/Q8), 14B (Q4/Q8), 30B (Q4)',
@@ -83,9 +83,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: 'RTX 4090 on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_rtx_4090]' },
-          { label: 'Ryzen 9 9950X on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_ryzen_9950x]' },
-          { label: 'ASUS ProArt X870E on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_asus_proart_x870e]' },
+          { label: 'RTX 4090 on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_rtx_4090]', productName: 'NVIDIA RTX 4090', productCategory: 'GPU' },
+          { label: 'Ryzen 9 9950X on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_ryzen_9950x]', productName: 'AMD Ryzen 9 9950X', productCategory: 'CPU' },
+          { label: 'ASUS ProArt X870E on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_asus_proart_x870e]', productName: 'ASUS ProArt X870E-Creator WiFi', productCategory: 'Motherboard' },
         ],
         items: [
           '**Models supported at full GPU speed:** 7B–30B (any quant), 32B (Q4 fits in 24 GB)',
@@ -115,9 +115,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: '2× RTX 3090 on eBay', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_rtx_3090]' },
-          { label: 'Ryzen Threadripper 7960X on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_threadripper_7960x]' },
-          { label: 'ASUS TRX50-SAGE on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_asus_trx50_sage]' },
+          { label: '2× RTX 3090 on eBay', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_rtx_3090]', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'GPU' },
+          { label: 'Ryzen Threadripper 7960X on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_threadripper_7960x]', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'CPU' },
+          { label: 'ASUS TRX50-SAGE on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_asus_trx50_sage]', productName: 'ASUS Pro WS TRX50-SAGE WiFi', productCategory: 'Motherboard' },
         ],
         items: [
           '**Models supported at full GPU speed (48 GB total VRAM):** 7B–70B Q4, 30B Q8',
@@ -282,8 +282,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: 'Gebrauchte RTX 3090 bei eBay.de', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_de_rtx_3090]' },
-          { label: 'AMD Ryzen 7 7700X bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_ryzen_7700x]' },
+          { label: 'Gebrauchte RTX 3090 bei eBay.de', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_de_rtx_3090]', productName: 'NVIDIA RTX 3090', productCategory: 'GPU' },
+          { label: 'AMD Ryzen 7 7700X bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_ryzen_7700x]', productName: 'AMD Ryzen 7 7700X', productCategory: 'CPU' },
         ],
         items: [
           '**Vollständig auf GPU unterstützte Modelle:** 7B (alle Quants), 13B, 14B Q4/Q8, 30B Q4',
@@ -309,8 +309,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: 'RTX 4090 bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_rtx_4090]' },
-          { label: 'Ryzen 9 9950X bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_ryzen_9950x]' },
+          { label: 'RTX 4090 bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_rtx_4090]', productName: 'NVIDIA RTX 4090', productCategory: 'GPU' },
+          { label: 'Ryzen 9 9950X bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_ryzen_9950x]', productName: 'AMD Ryzen 9 9950X', productCategory: 'CPU' },
         ],
         items: [
           '**7B Q4 Geschwindigkeit:** ~105–125 Tok/s',
@@ -338,8 +338,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: '2× RTX 3090 bei eBay.de', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_de_rtx_3090]' },
-          { label: 'Ryzen Threadripper 7960X bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_threadripper_7960x]' },
+          { label: '2× RTX 3090 bei eBay.de', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_de_rtx_3090]', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'GPU' },
+          { label: 'Ryzen Threadripper 7960X bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_threadripper_7960x]', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'CPU' },
         ],
         items: [
           '**70B Q4 Geschwindigkeit:** 25–40 Tok/s (beide RTX 3090s via Tensor-Parallelismus)',
@@ -440,8 +440,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: 'RTX 3090 occasion sur eBay.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_fr_rtx_3090]' },
-          { label: 'AMD Ryzen 7 7700X sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_ryzen_7700x]' },
+          { label: 'RTX 3090 occasion sur eBay.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_fr_rtx_3090]', productName: 'NVIDIA RTX 3090', productCategory: 'GPU' },
+          { label: 'AMD Ryzen 7 7700X sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_ryzen_7700x]', productName: 'AMD Ryzen 7 7700X', productCategory: 'CPU' },
         ],
         items: [
           '**Modèles supportés à pleine vitesse GPU :** 7B, 13B, 14B Q4/Q8, 30B Q4',
@@ -467,8 +467,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: 'RTX 4090 sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_rtx_4090]' },
-          { label: 'Ryzen 9 9950X sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_ryzen_9950x]' },
+          { label: 'RTX 4090 sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_rtx_4090]', productName: 'NVIDIA RTX 4090', productCategory: 'GPU' },
+          { label: 'Ryzen 9 9950X sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_ryzen_9950x]', productName: 'AMD Ryzen 9 9950X', productCategory: 'CPU' },
         ],
         items: [
           '**7B Q4 :** ~105–125 tok/s',
@@ -495,8 +495,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: '2× RTX 3090 sur eBay.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_fr_rtx_3090]' },
-          { label: 'Ryzen Threadripper 7960X sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_threadripper_7960x]' },
+          { label: '2× RTX 3090 sur eBay.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_fr_rtx_3090]', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'GPU' },
+          { label: 'Ryzen Threadripper 7960X sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_threadripper_7960x]', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'CPU' },
         ],
         items: [
           '**70B Q4 :** 25–40 tok/s (les deux RTX 3090 via parallélisme tensoriel)',
@@ -593,8 +593,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: 'RTX 3090中古品をeBayで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_rtx_3090]' },
-          { label: 'AMD Ryzen 7 7700X をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_ryzen_7700x]' },
+          { label: 'RTX 3090中古品をeBayで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_rtx_3090]', productName: 'NVIDIA RTX 3090', productCategory: 'GPU' },
+          { label: 'AMD Ryzen 7 7700X をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_ryzen_7700x]', productName: 'AMD Ryzen 7 7700X', productCategory: 'CPU' },
         ],
         items: [
           '**フルGPU速度対応モデル：** 7B（全量子化）、13B、14B Q4/Q8、30B Q4',
@@ -620,8 +620,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: 'RTX 4090 をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_rtx_4090]' },
-          { label: 'Ryzen 9 9950X をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_ryzen_9950x]' },
+          { label: 'RTX 4090 をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_rtx_4090]', productName: 'NVIDIA RTX 4090', productCategory: 'GPU' },
+          { label: 'Ryzen 9 9950X をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_ryzen_9950x]', productName: 'AMD Ryzen 9 9950X', productCategory: 'CPU' },
         ],
         items: [
           '**7B Q4速度：** 約105〜125 tok/s',
@@ -649,8 +649,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: 'RTX 3090中古品をeBayで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_rtx_3090]' },
-          { label: 'Ryzen Threadripper 7960X をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_threadripper_7960x]' },
+          { label: 'RTX 3090中古品をeBayで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:ebay_rtx_3090]', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'GPU' },
+          { label: 'Ryzen Threadripper 7960X をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_threadripper_7960x]', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'CPU' },
         ],
         items: [
           '**70B Q4速度：** 25〜40 tok/s（両RTX 3090でテンソル並列処理）',
@@ -751,8 +751,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: '在闲鱼查看RTX 3090二手', url: '[AFFILIATE_LINK_PLACEHOLDER:xianyu_rtx_3090]' },
-          { label: '在京东查看AMD Ryzen 7 7700X', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_ryzen_7700x]' },
+          { label: '在闲鱼查看RTX 3090二手', url: '[AFFILIATE_LINK_PLACEHOLDER:xianyu_rtx_3090]', productName: 'NVIDIA RTX 3090', productCategory: 'GPU' },
+          { label: '在京东查看AMD Ryzen 7 7700X', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_ryzen_7700x]', productName: 'AMD Ryzen 7 7700X', productCategory: 'CPU' },
         ],
         items: [
           '**全GPU速度支持的模型：** 7B（任意量化）、13B、14B Q4/Q8、30B Q4',
@@ -778,8 +778,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: '在京东查看RTX 4090', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_rtx_4090]' },
-          { label: '在京东查看Ryzen 9 9950X', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_ryzen_9950x]' },
+          { label: '在京东查看RTX 4090', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_rtx_4090]', productName: 'NVIDIA RTX 4090', productCategory: 'GPU' },
+          { label: '在京东查看Ryzen 9 9950X', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_ryzen_9950x]', productName: 'AMD Ryzen 9 9950X', productCategory: 'CPU' },
         ],
         items: [
           '**7B Q4速度：** 约105–125 tok/s',
@@ -807,8 +807,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         affiliateLinks: [
-          { label: '在闲鱼查看RTX 3090二手', url: '[AFFILIATE_LINK_PLACEHOLDER:xianyu_rtx_3090]' },
-          { label: '在京东查看Ryzen Threadripper 7960X', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_threadripper_7960x]' },
+          { label: '在闲鱼查看RTX 3090二手', url: '[AFFILIATE_LINK_PLACEHOLDER:xianyu_rtx_3090]', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'GPU' },
+          { label: '在京东查看Ryzen Threadripper 7960X', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_threadripper_7960x]', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'CPU' },
         ],
         items: [
           '**70B Q4速度：** 25–40 tok/s（双RTX 3090通过张量并行）',
