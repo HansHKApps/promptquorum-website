@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen for Local Coding 2026: Which Wins?',
-    seoTitle: 'DeepSeek vs Qwen Coding 2026: Benchmarks, Speed, Best for Python/Rust/JS',
+    seoTitle: 'DeepSeek vs Qwen for Coding 2026: Speed Benchmarks',
     metaDescription:
       'DeepSeek-V3 vs Qwen3-Coder for local coding: side-by-side benchmarks in Python, JavaScript, Rust, and C++. VRAM, speed, and winner by language. May 2026.',
     twitterDescription:
@@ -379,6 +379,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=en',
+      inLanguage: 'en',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },
         { '@type': 'Thing', name: 'Qwen2.5-Coder' },
@@ -393,7 +395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen für lokales Coding 2026: Wer gewinnt?',
-    seoTitle: 'DeepSeek vs Qwen Coding 2026: Benchmarks, Geschwindigkeit, Python/Rust/JS',
+    seoTitle: 'DeepSeek vs Qwen Coding 2026: Python & Rust Vergleich',
     metaDescription:
       'DeepSeek-V3 vs Qwen2.5-Coder im direkten Vergleich: Benchmarks in Python, JavaScript, Rust und C++. VRAM, Geschwindigkeit und Sieger nach Sprache. Mai 2026.',
     affiliateDisclosure: true,
@@ -465,6 +467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=de',
     },
   },
   fr: {
@@ -474,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen pour le Coding Local 2026 : Lequel Gagne ?',
-    seoTitle: 'DeepSeek vs Qwen Coding 2026 : Benchmarks Python, Rust, JS, C++',
+    seoTitle: 'DeepSeek vs Qwen 2026 : Benchmark Python, Rust, JS',
     metaDescription:
       'DeepSeek-V3 vs Qwen2.5-Coder pour le coding local : benchmarks en Python, JavaScript, Rust et C++. VRAM, vitesse et gagnant par langage. Mai 2026.',
     affiliateDisclosure: true,
@@ -543,6 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=fr',
     },
   },
   ja: {
@@ -621,6 +625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=ja',
     },
   },
   zh: {
@@ -714,6 +719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=zh',
     },
   },
 }
