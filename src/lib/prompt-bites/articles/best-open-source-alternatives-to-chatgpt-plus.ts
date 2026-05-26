@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'AnythingLLM', description: 'Best for teams and document Q&A' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best Open-Source Alternatives to ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26' },
+    schema: { '@type': 'TechArticle', headline: 'Best Open-Source Alternatives to ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=en', inLanguage: 'en' },
   },
   de: {
     freshness_tier: 'semi_annual',
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'Was ist die beste kostenlose Alternative zu ChatGPT Plus?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI für lokales Self-Hosting; Jan für die einfachste Desktop-App ohne Abo.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Beste Open-Source-Alternativen zu ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Beste Open-Source-Alternativen zu ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=de', inLanguage: 'de' },
   },
   fr: {
     freshness_tier: 'semi_annual',
@@ -239,7 +239,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'Quelle est la meilleure alternative gratuite à ChatGPT Plus ?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI pour l\'hébergement local ; Jan pour l\'application la plus simple sans abonnement.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleures alternatives open source à ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleures alternatives open source à ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=fr', inLanguage: 'fr' },
   },
   ja: {
     freshness_tier: 'semi_annual',
@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'ChatGPT Plusの最良の無料代替は何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'ローカルには Ollama + Open WebUI、最もシンプルなデスクトップアプリにはJan——どちらも完全無料です。' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'ChatGPT Plusの代替オープンソース 2026年ベスト', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'ChatGPT Plusの代替オープンソース 2026年ベスト', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=ja', inLanguage: 'ja' },
   },
   zh: {
     freshness_tier: 'semi_annual',
@@ -359,6 +359,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'ChatGPT Plus最好的免费替代是什么？', acceptedAnswer: { '@type': 'Answer', text: '本地自托管选Ollama + Open WebUI；最简单的桌面应用选Jan。两者均完全免费无需订阅。' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年ChatGPT Plus最佳开源替代方案', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年ChatGPT Plus最佳开源替代方案', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=zh', inLanguage: 'zh' },
   },
 }
