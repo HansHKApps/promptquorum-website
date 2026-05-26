@@ -39,12 +39,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateLinks: [
       {
         productName: 'Mac Mini M4 Pro',
-        url: '[AFFILIATE_LINK_PLACEHOLDER:mac_mini_m4_pro]',
+        url: 'https://www.apple.com/shop/buy-mac/mac-mini',
         productCategory: 'hardware',
       },
       {
         productName: 'RTX 3090 (used, eBay)',
-        url: '[AFFILIATE_LINK_PLACEHOLDER:rtx3090_ebay]',
+        url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090',
         productCategory: 'gpu',
       },
     ],
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         affiliateLinks: [
           {
             productName: 'Mac Mini M4 Pro 48GB',
-            url: '[AFFILIATE_LINK_PLACEHOLDER:mac_mini_m4_pro]',
+            url: 'https://www.apple.com/shop/buy-mac/mac-mini',
             productCategory: 'hardware',
           },
         ],

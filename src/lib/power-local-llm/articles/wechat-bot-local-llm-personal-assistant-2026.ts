@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateLinks: [
       {
         productName: 'Minisforum UM890 Pro (local AI server)',
-        url: '[AFFILIATE_LINK_PLACEHOLDER:minisforum_jd]',
+        url: 'https://search.jd.com/Search?keyword=Minisforum+UM890+Pro',
         productCategory: 'hardware',
       },
     ],
@@ -187,6 +187,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
     },
+    relatedReading: {
+      items: [
+        '[WeChat Local LLM Integration Guide — 3 Integration Patterns](/power-local-llm/wechat-local-llm-integration-2026) — webhook, WeChatFerry, and mini-PC server patterns for developers',
+        '[Local AI Agents with MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — extend your local LLM with tool-calling and automation beyond WeChat',
+        '[Best Mini PC for Always-On Ollama Server](/prompt-bites/best-mini-pc-for-ollama-server-always-on) — hardware options for running a 24/7 WeChat bot server',
+      ],
+    },
   },
   de: {
     freshness_tier: 'semi_annual',
@@ -248,6 +255,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     schema: { '@type': 'TechArticle', headline: 'WeChat-Bot mit lokalem LLM: Persönlicher Assistent 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'de' },
+    relatedReading: {
+      items: [
+        '[WeChat Lokale LLM Integration — 3 Integrationsmuster](/power-local-llm/wechat-local-llm-integration-2026?lang=de) — Webhook-, WeChatFerry- und Mini-PC-Server-Muster für Entwickler',
+        '[Lokale KI-Agenten mit MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de) — lokales LLM mit Tool-Calling und Automatisierung erweitern',
+        '[Bester Mini-PC für Always-On-Ollama-Server](/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=de) — Hardware für einen 24/7-WeChat-Bot-Server',
+      ],
+    },
   },
   fr: {
     freshness_tier: 'semi_annual',
@@ -305,6 +319,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     schema: { '@type': 'TechArticle', headline: 'Bot WeChat avec LLM local : assistant personnel 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'fr' },
+    relatedReading: {
+      items: [
+        "[Guide d'intégration WeChat + LLM local — 3 patterns](/power-local-llm/wechat-local-llm-integration-2026?lang=fr) — webhook, WeChatFerry et serveur mini PC pour développeurs",
+        "[Agents IA locaux avec MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr) — étendre votre LLM local avec des outils et de l'automatisation",
+        '[Meilleur mini PC pour serveur Ollama toujours actif](/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=fr) — options matérielles pour un bot WeChat 24h/24',
+      ],
+    },
   },
   ja: {
     freshness_tier: 'semi_annual',
@@ -366,6 +387,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     schema: { '@type': 'TechArticle', headline: 'ローカルLLMでWeChatボット：個人アシスタント 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', inLanguage: 'ja' },
+    relatedReading: {
+      items: [
+        '[WeChat ローカルLLM統合ガイド — 3つの統合パターン](/power-local-llm/wechat-local-llm-integration-2026?lang=ja) — 開発者向けWebhook、WeChatFerry、ミニPCサーバーパターン',
+        '[MCP対応ローカルAIエージェント2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja) — ツール呼び出しと自動化でローカルLLMをWeChat以外にも拡張',
+        '[Ollamaサーバー向けベストミニPC（常時稼働）](/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=ja) — 24時間WeChatボットサーバーのハードウェア選択',
+      ],
+    },
   },
   zh: {
     freshness_tier: 'semi_annual',

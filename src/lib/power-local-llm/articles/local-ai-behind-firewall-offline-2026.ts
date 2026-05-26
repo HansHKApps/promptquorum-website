@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-26',
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
-    theme: 'Coding Assistants',
+    theme: 'Overview & Reference',
     title: 'Run Local AI Behind a Firewall: Offline Deployment Guide 2026',
     seoTitle: 'Local AI Behind Firewall 2026: Offline Setup Guide',
     intro:
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-26',
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
-    theme: 'Coding Assistants',
+    theme: 'Overview & Reference',
     title: 'Lokale KI hinter der Firewall: Offline-Deployment-Guide 2026',
     seoTitle: 'Lokale KI offline hinter Firewall 2026: Deployment-Guide',
     intro: 'Lokale KI hinter einer Unternehmens-Firewall oder in einer Air-Gap-Umgebung zu betreiben erfordert, dass alle Abhängigkeiten vor dem Verlust des Internetzugangs heruntergeladen werden. Dieser Leitfaden bietet eine vollständige Vorab-Checkliste, einen Schritt-für-Schritt-Offline-Workflow für Ollama und llama.cpp sowie Hardware-Empfehlungen für Organisationen in Deutschland und im Bereich DSGVO-konformer Datenverarbeitung.',
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   fr: {
     freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-05-26', next_refresh_due: '2026-11-26',
-    theme: 'Coding Assistants',
+    theme: 'Overview & Reference',
     title: 'IA locale derrière un pare-feu : Guide de déploiement hors ligne 2026',
     seoTitle: 'IA locale hors ligne derrière pare-feu 2026 : Guide',
     intro: 'Exécuter une IA locale derrière un pare-feu d\'entreprise nécessite de télécharger toutes les dépendances avant de perdre l\'accès à Internet. Ce guide fournit une liste de contrôle complète, un workflow hors ligne pour Ollama et llama.cpp, et des recommandations matérielles pour les organisations soumises aux lois sur la résidence des données.',
@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ja: {
     freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-05-26', next_refresh_due: '2026-11-26',
-    theme: 'Coding Assistants',
+    theme: 'Overview & Reference',
     title: 'ファイアウォール背後でのローカルAI：オフライン展開ガイド 2026',
     seoTitle: 'ファイアウォール背後のローカルAI 2026：オフライン展開',
     intro: '企業ファイアウォールの背後やエアギャップ環境でローカルAIを運用するには、インターネット接続を失う前にすべての依存関係をダウンロードする必要があります。このガイドでは、完全な事前チェックリスト、OllamaとLlama.cppのオフラインワークフロー、そして日本のMETIガイドラインやデータ居住要件に対応する組織向けのハードウェア推奨事項を提供します。',
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   zh: {
     freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-05-26', next_refresh_due: '2026-11-26',
-    theme: 'Coding Assistants',
+    theme: 'Overview & Reference',
     title: '防火墙后的本地AI：离线部署指南 2026',
     seoTitle: '防火墙后本地AI离线部署 2026：完整指南',
     intro: '在企业防火墙或隔离网络环境中运行本地AI，需要在断网前下载所有依赖文件。一个遗漏的文件——分词器配置、提示模板或量化模型分片——就会导致无声失败。本指南提供完整的部署前检查清单、Ollama和llama.cpp的离线工作流程，以及针对中国《数据安全法》和CAC法规的合规说明。',

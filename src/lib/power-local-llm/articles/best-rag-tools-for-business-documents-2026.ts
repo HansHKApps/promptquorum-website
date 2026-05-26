@@ -38,12 +38,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateLinks: [
       {
         productName: 'AnythingLLM',
-        url: '[AFFILIATE_LINK_PLACEHOLDER:anythingllm]',
+        url: 'https://anythingllm.com',
         productCategory: 'software',
       },
       {
         productName: 'Minisforum UM890 Pro (local RAG server)',
-        url: '[AFFILIATE_LINK_PLACEHOLDER:minisforum_amazon]',
+        url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro',
         productCategory: 'hardware',
       },
     ],
@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             productName: 'AnythingLLM',
-            url: '[AFFILIATE_LINK_PLACEHOLDER:anythingllm]',
+            url: 'https://anythingllm.com',
             productCategory: 'software',
           },
         ],

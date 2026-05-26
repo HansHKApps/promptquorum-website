@@ -317,14 +317,14 @@ docker run --gpus all \\
         ],
         affiliateLinks: [
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:runpod]',
+            url: 'https://www.runpod.io',
             productName: 'RunPod GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: 'From $0.20/hr',
             label: 'Start on RunPod (free credits for new accounts) →',
           },
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:vast_ai]',
+            url: 'https://vast.ai',
             productName: 'Vast.ai Spot GPUs',
             productCategory: 'cloud-gpu',
             priceRange: 'From $0.20/hr spot',
@@ -344,14 +344,14 @@ docker run --gpus all \\
         ],
         affiliateLinks: [
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:minisforum]',
+            url: 'https://minisforum.com/products/UM890-Pro.html',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             priceRange: '$429',
             label: 'Buy Minisforum UM890 Pro (Qwen3 7B CPU server) →',
           },
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:aoostar]',
+            url: 'https://aoostar.com/products/aoostar-gem12-pro',
             productName: 'AOOSTAR GEM12 Pro OCuLink',
             productCategory: 'mini-pc',
             priceRange: 'From $359',
@@ -525,6 +525,13 @@ docker run --gpus all \\
         { '@type': 'HowToStep', name: 'Set restart policy to unless-stopped', position: 6 },
       ],
     },
+    relatedReading: {
+      items: [
+        '[Qwen Local Deployment Guide — Beginner Setup with Ollama & LM Studio](/local-llms/qwen-local-deployment-guide-2026) — hardware-tier guide for Qwen2.5 7B through 72B on consumer hardware',
+        '[Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU recommendations for Qwen2.5-72B and multi-GPU production setups',
+        '[Run Qwen Locally — Quick Start Guide](/local-llms/run-qwen-locally-guide-2026) — single-model beginner install in under 5 minutes',
+      ],
+    },
   },
   de: {
     freshness_tier: 'semi_annual',
@@ -661,6 +668,13 @@ docker run --gpus all \\
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
     },
+    relatedReading: {
+      items: [
+        '[Qwen Lokales Deployment Guide — Beginner-Setup mit Ollama & LM Studio](/local-llms/qwen-local-deployment-guide-2026?lang=de) — Hardware-Tier-Leitfaden für Qwen2.5 7B bis 72B auf Consumer-Hardware',
+        '[Bester GPU-Kaufratgeber für lokale LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=de) — GPU-Empfehlungen für Qwen2.5-72B und Multi-GPU-Produktionssetups',
+        '[Qwen lokal ausführen — Schnellstart-Leitfaden](/local-llms/run-qwen-locally-guide-2026?lang=de) — Einzelmodell-Beginner-Installation in unter 5 Minuten',
+      ],
+    },
   },
   fr: {
     freshness_tier: 'semi_annual',
@@ -764,6 +778,13 @@ docker run --gpus all \\
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+    },
+    relatedReading: {
+      items: [
+        "[Guide de déploiement Qwen en local — Configuration débutant avec Ollama & LM Studio](/local-llms/qwen-local-deployment-guide-2026?lang=fr) — guide par niveau matériel pour Qwen2.5 7B à 72B sur hardware grand public",
+        "[Guide d'achat GPU 2026 pour LLM locaux](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=fr) — recommandations GPU pour Qwen2.5-72B et configurations multi-GPU en production",
+        '[Exécuter Qwen en local — Guide de démarrage rapide](/local-llms/run-qwen-locally-guide-2026?lang=fr) — installation débutant en moins de 5 minutes',
+      ],
     },
   },
   ja: {
@@ -873,6 +894,13 @@ docker run --gpus all \\
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+    },
+    relatedReading: {
+      items: [
+        '[Qwenローカルデプロイガイド — OllamaとLM Studioによる入門セットアップ](/local-llms/qwen-local-deployment-guide-2026?lang=ja) — 消費者向けハードウェアのQwen2.5 7Bから72Bのハードウェア階層ガイド',
+        '[ローカルLLM向けGPU購入ガイド2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=ja) — Qwen2.5-72BおよびマルチGPU本番セットアップのGPU推奨',
+        '[Qwenをローカルで実行 — クイックスタートガイド](/local-llms/run-qwen-locally-guide-2026?lang=ja) — 5分以内の単一モデル入門インストール',
+      ],
     },
   },
   zh: {
@@ -1000,6 +1028,13 @@ docker run --gpus all \\
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+    },
+    relatedReading: {
+      items: [
+        '[Qwen 本地部署指南——使用 Ollama 和 LM Studio 的入门配置](/local-llms/qwen-local-deployment-guide-2026?lang=zh) — 覆盖 Qwen2.5 7B 至 72B 的消费级硬件分层指南',
+        '[本地 LLM 显卡购买指南 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=zh) — 运行 Qwen2.5-72B 或多卡生产配置的 GPU 选购建议',
+        '[本地运行 Qwen——快速入门指南](/local-llms/run-qwen-locally-guide-2026?lang=zh) — 5 分钟完成单模型初学者安装',
+      ],
     },
   },
 }

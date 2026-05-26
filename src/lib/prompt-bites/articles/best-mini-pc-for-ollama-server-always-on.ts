@@ -56,8 +56,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Minisforum UM890 Pro — Best Overall',
             content: 'The Minisforum UM890 Pro runs the AMD Ryzen 9 8945HS (8-core, up to 5.2 GHz) and supports up to 96 GB DDR5-5600 dual-channel RAM — enough to load Llama 3.1 70B at Q4 entirely in RAM. The Radeon 780M iGPU (12 RDNA3 CUs) accelerates 7B and 13B models at 8–14 tok/s via ROCm. CPU-only 7B Q4 speed: ~12–18 tok/s. Idle power: ~15 W. Load (GPU active): ~35–45 W. Price: ~$450 (32 GB) to $550 (64 GB).',
             affiliateLinks: [
-              { label: 'Minisforum UM890 Pro on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_minisforum_um890_pro]' },
-              { label: 'Minisforum UM890 Pro on Minisforum.com', url: '[AFFILIATE_LINK_PLACEHOLDER:minisforum_um890_pro_official]' },
+              { label: 'Minisforum UM890 Pro on Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
+              { label: 'Minisforum UM890 Pro on Minisforum.com', url: 'https://minisforum.com/products/UM890-Pro.html' },
             ],
           },
           {
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'AOOSTAR GEM12 Pro OCuLink — Best for eGPU',
             content: 'The AOOSTAR GEM12 Pro OCuLink adds an OCuLink port that connects to an external GPU at PCIe 4.0 x4 bandwidth (64 Gbps) — enough to run an RTX 3090 at full speed for Ollama. Without eGPU: same as other mini PCs, 13–18 tok/s CPU-only. With RTX 3090 eGPU: 60–80 tok/s on 7B Q4. The mini PC itself is an AMD Ryzen 9 8945HS with 32–96 GB DDR5. OCuLink to PCIe adapter required (~$30). Price: ~$480.',
             affiliateLinks: [
-              { label: 'AOOSTAR GEM12 Pro OCuLink on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_aoostar_gem12_pro]' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink on Amazon', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
             ],
           },
           {
@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Beelink SER8 — Best Budget Pick',
             content: 'The Beelink SER8 runs the AMD Ryzen 7 8745H (8-core) with 32 GB DDR5 and 500 GB NVMe SSD for ~$350. CPU-only Ollama speed: ~10–15 tok/s on 7B Q4. Idle power: 10–15 W. Not upgradeable to 64 GB (RAM soldered). If you want a low-cost entry into always-on Ollama without spending $450+, the SER8 covers 7B and 13B models well.',
             affiliateLinks: [
-              { label: 'Beelink SER8 on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_beelink_ser8]' },
+              { label: 'Beelink SER8 on Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8' },
             ],
           },
           {
@@ -81,8 +81,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Apple Mac Mini M4 Pro — Best for macOS',
             content: 'The Mac Mini M4 Pro (24-core GPU, 48 GB unified memory, ~$1399) is the only mini PC that runs 32B models at GPU speed out of the box. Ollama on Apple Silicon uses Metal, not CUDA — the 48 GB unified memory loads Qwen2.5 32B Q4 (~18 GB) and runs at 20–30 tok/s. Power: 18–30 W under Ollama load. Ideal for macOS users who want a silent, always-on home server that doubles as a desk machine. The price premium is real but justified if 32B performance matters.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_mac_mini_m4_pro]' },
-              { label: 'Apple Mac Mini M4 Pro on Apple.com', url: '[AFFILIATE_LINK_PLACEHOLDER:apple_mac_mini_m4_pro]' },
+              { label: 'Apple Mac Mini M4 Pro on Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M4 Pro on Apple.com', url: 'https://www.apple.com/shop/buy-mac/mac-mini' },
             ],
           },
         ],
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Minisforum UM890 Pro — Bestes Gesamtpaket',
             content: 'Der Minisforum UM890 Pro läuft mit dem AMD Ryzen 9 8945HS (8-Kerne, bis 5,2 GHz) und unterstützt bis zu 96 GB DDR5-5600 Dual-Channel-RAM — genug, um Llama 3.1 70B bei Q4 vollständig in RAM zu laden. Die Radeon 780M iGPU (12 RDNA3-CUs) beschleunigt 7B- und 13B-Modelle auf 8–14 Tok/s via ROCm. CPU-only 7B Q4: ~12–18 Tok/s. Idle: ~15 W. Last (GPU aktiv): ~35–45 W. Preis: ~450 € (32 GB) bis 550 € (64 GB).',
             affiliateLinks: [
-              { label: 'Minisforum UM890 Pro bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_minisforum_um890_pro]' },
+              { label: 'Minisforum UM890 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Minisforum+UM890+Pro' },
             ],
           },
           {
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'AOOSTAR GEM12 Pro OCuLink — Beste eGPU-Option',
             content: 'Der AOOSTAR GEM12 Pro OCuLink hat einen OCuLink-Port, der eine externe GPU mit PCIe 4.0 x4-Bandbreite (64 Gbps) verbindet — genug für volle RTX-3090-Geschwindigkeit in Ollama. Ohne eGPU: wie andere Mini-PCs, 13–18 Tok/s CPU-only. Mit RTX 3090 eGPU: 60–80 Tok/s bei 7B Q4. OCuLink-auf-PCIe-Adapter benötigt (~30 €). Preis: ~480 €.',
             affiliateLinks: [
-              { label: 'AOOSTAR GEM12 Pro OCuLink bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_aoostar_gem12_pro]' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink bei Amazon.de', url: 'https://www.amazon.de/s?k=AOOSTAR+GEM12+Pro' },
             ],
           },
           {
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Beelink SER8 — Bestes Budget-Angebot',
             content: 'Der Beelink SER8 läuft mit dem AMD Ryzen 7 8745H (8-Kerne), 32 GB DDR5 und 500 GB NVMe-SSD für ~350 €. Ollama-Geschwindigkeit: ~10–15 Tok/s bei 7B Q4. Idle: 10–15 W. Kein Upgrade auf 64 GB möglich (RAM verlötet). Als günstiger Einstieg in Always-On-Ollama ohne 450+ € Investition deckt der SER8 7B- und 13B-Modelle gut ab.',
             affiliateLinks: [
-              { label: 'Beelink SER8 bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_beelink_ser8]' },
+              { label: 'Beelink SER8 bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+SER8' },
             ],
           },
           {
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Apple Mac Mini M4 Pro — Bester macOS-Mini-PC',
             content: 'Der Mac Mini M4 Pro (24-Kerne-GPU, 48 GB Unified Memory, ~1399 €) ist der einzige Mini-PC, der 32B-Modelle mit GPU-Geschwindigkeit von Haus aus ausführt. Ollama auf Apple Silicon nutzt Metal — die 48 GB Unified Memory lädt Qwen2.5 32B Q4 (~18 GB) und läuft mit 20–30 Tok/s. Stromaufnahme: 18–30 W unter Ollama-Last. Ideal für macOS-Nutzer, die einen stillen, dauerhaft laufenden Heimserver möchten.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_mac_mini_m4_pro]' },
+              { label: 'Apple Mac Mini M4 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Mac+Mini+M4+Pro' },
             ],
           },
         ],
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Minisforum UM890 Pro — Meilleur choix global',
             content: 'Le Minisforum UM890 Pro tourne avec l\'AMD Ryzen 9 8945HS (8 cœurs, jusqu\'à 5,2 GHz) et supporte jusqu\'à 96 Go de DDR5-5600 double canal — assez pour charger Llama 3.1 70B en Q4 entièrement en RAM. L\'iGPU Radeon 780M (12 CU RDNA3) accélère les modèles 7B et 13B à 8–14 tok/s via ROCm. CPU seul 7B Q4 : ~12–18 tok/s. Consommation au repos : ~15 W. Sous charge (GPU actif) : ~35–45 W. Prix : ~450 € (32 Go) à 550 € (64 Go).',
             affiliateLinks: [
-              { label: 'Minisforum UM890 Pro sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_minisforum_um890_pro]' },
+              { label: 'Minisforum UM890 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Minisforum+UM890+Pro' },
             ],
           },
           {
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'AOOSTAR GEM12 Pro OCuLink — Meilleur pour eGPU',
             content: 'L\'AOOSTAR GEM12 Pro OCuLink ajoute un port OCuLink qui connecte une GPU externe en PCIe 4.0 x4 (64 Gbps) — assez pour faire tourner une RTX 3090 à pleine vitesse avec Ollama. Sans eGPU : comme les autres mini PC, 13–18 tok/s en CPU seul. Avec eGPU RTX 3090 : 60–80 tok/s sur 7B Q4. Adaptateur OCuLink vers PCIe requis (~30 €). Prix : ~480 €.',
             affiliateLinks: [
-              { label: 'AOOSTAR GEM12 Pro OCuLink sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_aoostar_gem12_pro]' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink sur Amazon.fr', url: 'https://www.amazon.fr/s?k=AOOSTAR+GEM12+Pro' },
             ],
           },
           {
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Beelink SER8 — Meilleur choix budget',
             content: 'Le Beelink SER8 tourne avec l\'AMD Ryzen 7 8745H (8 cœurs), 32 Go de DDR5 et 500 Go de NVMe pour ~350 €. Vitesse Ollama : ~10–15 tok/s sur 7B Q4. Consommation au repos : 10–15 W. RAM non évolutive (soudée). Idéal pour débuter avec Ollama always-on sans dépenser 450+ €.',
             affiliateLinks: [
-              { label: 'Beelink SER8 sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_beelink_ser8]' },
+              { label: 'Beelink SER8 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+SER8' },
             ],
           },
           {
@@ -353,7 +353,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Apple Mac Mini M4 Pro — Meilleur pour macOS',
             content: 'Le Mac Mini M4 Pro (GPU 24 cœurs, 48 Go de mémoire unifiée, ~1399 €) est le seul mini PC à faire tourner les modèles 32B à vitesse GPU de série. Ollama sur Apple Silicon utilise Metal — les 48 Go de mémoire unifiée chargent Qwen2.5 32B Q4 (~18 Go) à 20–30 tok/s. Consommation : 18–30 W sous Ollama. Idéal pour les utilisateurs macOS qui veulent un serveur maison silencieux.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_mac_mini_m4_pro]' },
+              { label: 'Apple Mac Mini M4 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Mac+Mini+M4+Pro' },
             ],
           },
         ],
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Minisforum UM890 Pro — 総合1位',
             content: 'Minisforum UM890 ProはAMD Ryzen 9 8945HS（8コア、最大5.2GHz）を搭載し、最大96GB DDR5-5600デュアルチャンネルRAMに対応—Llama 3.1 70B Q4をRAMに完全収容できます。Radeon 780M内蔵GPU（12 RDNA3 CU）がROCm経由で7B・13Bモデルを8〜14トークン/秒に加速。CPUのみ7B Q4：12〜18トークン/秒。アイドル時：約15W。負荷時（GPU稼働）：35〜45W。価格：約4万5000円（32GB）〜5万5000円（64GB）。',
             affiliateLinks: [
-              { label: 'Minisforum UM890 Pro をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_minisforum_um890_pro]' },
+              { label: 'Minisforum UM890 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Minisforum+UM890+Pro' },
             ],
           },
           {
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'AOOSTAR GEM12 Pro OCuLink — eGPU最良',
             content: 'AOOSTAR GEM12 Pro OCuLinkにはPCIe 4.0 x4帯域幅（64Gbps）で外部GPU接続できるOCuLinkポートがあります—OllamaでRTX 3090をフル速度で動かすのに十分です。eGPUなし：他のミニPCと同様13〜18トークン/秒。RTX 3090 eGPUあり：7B Q4で60〜80トークン/秒。OCuLink→PCIeアダプター必要（約3000円）。価格：約4万8000円。',
             affiliateLinks: [
-              { label: 'AOOSTAR GEM12 Pro OCuLink をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_aoostar_gem12_pro]' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=AOOSTAR+GEM12+Pro' },
             ],
           },
           {
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Beelink SER8 — バジェット最良',
             content: 'Beelink SER8はAMD Ryzen 7 8745H（8コア）、32GB DDR5、500GB NVMe SSDで約3万5000円。Ollama速度：7B Q4で10〜15トークン/秒。アイドル時：10〜15W。RAM増設不可（ハンダ付け）。常時稼働Ollamaへの低コスト入門として7Bと13Bモデルを十分にカバーします。',
             affiliateLinks: [
-              { label: 'Beelink SER8 をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_beelink_ser8]' },
+              { label: 'Beelink SER8 をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8' },
             ],
           },
           {
@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Apple Mac Mini M4 Pro — macOS最良',
             content: 'Mac Mini M4 Pro（24コアGPU、48GB統合メモリ、約18万円）は箱から出してすぐGPUスピードで32Bモデルを動かせる唯一のミニPCです。Apple SiliconのOllamaはMetalを使用—48GB統合メモリがQwen2.5 32B Q4（約18GB）を20〜30トークン/秒で実行。消費電力：Ollama負荷時18〜30W。静音・常時稼働のホームサーバーを求めるmacOSユーザーに最適。',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_mac_mini_m4_pro]' },
+              { label: 'Apple Mac Mini M4 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M4+Pro' },
             ],
           },
         ],
@@ -573,8 +573,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: '铭凡UM890 Pro — 综合最佳',
             content: '铭凡UM890 Pro搭载AMD Ryzen 9 8945HS（8核、最高5.2GHz），支持最高96GB DDR5-5600双通道内存——足以将Llama 3.1 70B Q4完整加载到内存。Radeon 780M核显（12个RDNA3 CU）通过ROCm将7B和13B模型加速至8–14 tok/s。纯CPU 7B Q4：约12–18 tok/s。闲置功耗：约15W。负载（GPU激活）：约35–45W。价格：约3100元（32GB）至3800元（64GB）。',
             affiliateLinks: [
-              { label: '在京东查看铭凡UM890 Pro', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_minisforum_um890_pro]' },
-              { label: '在铭凡官网查看UM890 Pro', url: '[AFFILIATE_LINK_PLACEHOLDER:minisforum_cn_um890_pro]' },
+              { label: '在京东查看铭凡UM890 Pro', url: 'https://search.jd.com/Search?keyword=Minisforum+UM890+Pro' },
+              { label: '在铭凡官网查看UM890 Pro', url: 'https://minisforum.com.cn' },
             ],
           },
           {
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'AOOSTAR GEM12 Pro OCuLink — 最佳eGPU选择',
             content: 'AOOSTAR GEM12 Pro OCuLink配备OCuLink接口，以PCIe 4.0 x4带宽（64Gbps）连接外部显卡——足以让Ollama中的RTX 3090以全速运行。无eGPU：与其他迷你PC相同，纯CPU 13–18 tok/s。配RTX 3090 eGPU：7B Q4达60–80 tok/s。需要OCuLink转PCIe适配器（约200元）。价格：约3300元。',
             affiliateLinks: [
-              { label: '在京东查看AOOSTAR GEM12 Pro OCuLink', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_aoostar_gem12_pro]' },
+              { label: '在京东查看AOOSTAR GEM12 Pro OCuLink', url: 'https://search.jd.com/Search?keyword=AOOSTAR+GEM12+Pro' },
             ],
           },
           {
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: '倍控SER8 — 最佳预算选择',
             content: '倍控SER8搭载AMD Ryzen 7 8745H（8核）、32GB DDR5和500GB NVMe SSD，售价约2400元。Ollama速度：7B Q4约10–15 tok/s。闲置功耗：10–15W。内存不可升级（焊接）。作为低成本进入常驻Ollama的选择，SER8能很好处理7B和13B模型。',
             affiliateLinks: [
-              { label: '在京东查看倍控SER8', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_beelink_ser8]' },
+              { label: '在京东查看倍控SER8', url: 'https://search.jd.com/Search?keyword=Beelink+SER8' },
             ],
           },
           {
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Apple Mac Mini M4 Pro — 最佳macOS选择',
             content: 'Mac Mini M4 Pro（24核GPU、48GB统一内存、约9800元）是唯一能开箱即用以GPU速度运行32B模型的迷你PC。Apple Silicon上的Ollama使用Metal——48GB统一内存加载Qwen2.5 32B Q4（约18GB）并以20–30 tok/s运行。功耗：Ollama负载时18–30W。适合希望拥有静音常驻家庭服务器的macOS用户。',
             affiliateLinks: [
-              { label: '在京东查看Apple Mac Mini M4 Pro', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_mac_mini_m4_pro]' },
+              { label: '在京东查看Apple Mac Mini M4 Pro', url: 'https://search.jd.com/Search?keyword=Mac+Mini+M4+Pro' },
             ],
           },
         ],

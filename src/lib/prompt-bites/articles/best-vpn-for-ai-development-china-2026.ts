@@ -117,21 +117,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:nordvpn]',
+            url: 'https://nordvpn.com',
             productName: 'NordVPN',
             productCategory: 'vpn',
             priceRange: '$3.99/month (2-year plan)',
             label: 'Get NordVPN — Most reliable China bypass ($3.99/mo) →',
           },
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:expressvpn]',
+            url: 'https://expressvpn.com',
             productName: 'ExpressVPN',
             productCategory: 'vpn',
             priceRange: '$6.67/month (1-year plan)',
             label: 'Get ExpressVPN — Fastest for model downloads ($6.67/mo) →',
           },
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:surfshark]',
+            url: 'https://surfshark.com',
             productName: 'Surfshark',
             productCategory: 'vpn',
             priceRange: '$2.19/month (2-year plan)',
@@ -286,8 +286,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**PIA — Günstigste Langzeit-Option.** Shadowsocks-Unterstützung. Preis: ~$2,03/Monat (3-Jahres-Plan). App muss in China möglicherweise manuell installiert werden.',
         ],
         affiliateLinks: [
-          { url: '[AFFILIATE_LINK_PLACEHOLDER:nordvpn]', productName: 'NordVPN', productCategory: 'vpn', priceRange: '$3.99/Monat', label: 'NordVPN kaufen — Zuverlässigster China-Bypass ($3,99/Mo.) →' },
-          { url: '[AFFILIATE_LINK_PLACEHOLDER:surfshark]', productName: 'Surfshark', productCategory: 'vpn', priceRange: '$2.19/Monat', label: 'Surfshark kaufen — Bestes Preis-Leistungs-VPN für China ($2,19/Mo.) →' },
+          { url: 'https://nordvpn.com', productName: 'NordVPN', productCategory: 'vpn', priceRange: '$3.99/Monat', label: 'NordVPN kaufen — Zuverlässigster China-Bypass ($3,99/Mo.) →' },
+          { url: 'https://surfshark.com', productName: 'Surfshark', productCategory: 'vpn', priceRange: '$2.19/Monat', label: 'Surfshark kaufen — Bestes Preis-Leistungs-VPN für China ($2,19/Mo.) →' },
         ],
       },
       faq: {
@@ -495,9 +495,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**PIA — 长期最低价。** 支持Shadowsocks协议。价格：约$2.03/月（三年套餐）。中国应用商店可能无法下载APP，需要侧载安装。',
         ],
         affiliateLinks: [
-          { url: '[AFFILIATE_LINK_PLACEHOLDER:nordvpn]', productName: 'NordVPN', productCategory: 'vpn', priceRange: '$3.99/月', label: '购买NordVPN——中国穿透最稳定（$3.99/月）→' },
-          { url: '[AFFILIATE_LINK_PLACEHOLDER:expressvpn]', productName: 'ExpressVPN', productCategory: 'vpn', priceRange: '$6.67/月', label: '购买ExpressVPN——模型下载最快（$6.67/月）→' },
-          { url: '[AFFILIATE_LINK_PLACEHOLDER:surfshark]', productName: 'Surfshark', productCategory: 'vpn', priceRange: '$2.19/月', label: '购买Surfshark——最高性价比VPN（$2.19/月）→' },
+          { url: 'https://nordvpn.com', productName: 'NordVPN', productCategory: 'vpn', priceRange: '$3.99/月', label: '购买NordVPN——中国穿透最稳定（$3.99/月）→' },
+          { url: 'https://expressvpn.com', productName: 'ExpressVPN', productCategory: 'vpn', priceRange: '$6.67/月', label: '购买ExpressVPN——模型下载最快（$6.67/月）→' },
+          { url: 'https://surfshark.com', productName: 'Surfshark', productCategory: 'vpn', priceRange: '$2.19/月', label: '购买Surfshark——最高性价比VPN（$2.19/月）→' },
         ],
       },
       speedTests: {

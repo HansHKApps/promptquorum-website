@@ -182,14 +182,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_rtx4060ti]',
+            url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB',
             productName: 'NVIDIA RTX 4060 Ti 16 GB',
             productCategory: 'gpu',
             priceRange: '~$424',
             label: 'Buy RTX 4060 Ti 16 GB on Amazon → (runs Qwen2.5-Coder 14B)',
           },
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:minisforum]',
+            url: 'https://minisforum.com/products/UM890-Pro.html',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             priceRange: '$429',

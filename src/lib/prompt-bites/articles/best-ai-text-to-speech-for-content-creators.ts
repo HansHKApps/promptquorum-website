@@ -39,12 +39,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateLinks: [
       {
         productName: 'ElevenLabs',
-        url: '[AFFILIATE_LINK_PLACEHOLDER:elevenlabs]',
+        url: 'https://elevenlabs.io',
         productCategory: 'ai-service',
       },
       {
         productName: 'PlayHT',
-        url: '[AFFILIATE_LINK_PLACEHOLDER:playht]',
+        url: 'https://play.ht',
         productCategory: 'ai-service',
       },
     ],
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         affiliateLinks: [
           {
             productName: 'ElevenLabs Starter',
-            url: '[AFFILIATE_LINK_PLACEHOLDER:elevenlabs]',
+            url: 'https://elevenlabs.io',
             productCategory: 'ai-service',
           },
         ],

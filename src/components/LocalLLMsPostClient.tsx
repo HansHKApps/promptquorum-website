@@ -647,9 +647,9 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         {/* Breadcrumb + language */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
-            <a href={lang === 'en' ? '/' : `/?lang=${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
+            <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
             <span>/</span>
-            <a href={lang === 'en' ? '/local-llms' : `/local-llms?lang=${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Local LLMs'}</a>
+            <a href={lang === 'en' ? '/local-llms' : `/${lang}/local-llms`} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Local LLMs'}</a>
             <span>/</span>
             <span className="text-text-primary font-medium">{article.title}</span>
           </div>
@@ -853,7 +853,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         </div>
 
         <p className="text-center mt-8">
-          <a href={lang === 'en' ? '/local-llms' : `/local-llms?lang=${lang}`} className="text-primary hover:text-primary/80 text-sm">
+          <a href={lang === 'en' ? '/local-llms' : `/${lang}/local-llms`} className="text-primary hover:text-primary/80 text-sm">
             {POST_UI.backLink[lang] ?? POST_UI.backLink['en']}
           </a>
         </p>

@@ -128,14 +128,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'Prices sourced from provider consoles in May 2026. Spot prices fluctuate by time of day — cheapest between midnight and 6am Beijing time. AutoDL spot prices can be 40–60% below on-demand.',
         affiliateLinks: [
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:alibaba_cloud]',
+            url: 'https://www.aliyun.com',
             productName: 'Alibaba Cloud (International)',
             productCategory: 'cloud-gpu',
             priceRange: 'From ¥3.5/hr',
             label: 'Get ¥300 free credit on Alibaba Cloud →',
           },
           {
-            url: '[AFFILIATE_LINK_PLACEHOLDER:tencent_cloud]',
+            url: 'https://cloud.tencent.com/product/gpu',
             productName: 'Tencent Cloud',
             productCategory: 'cloud-gpu',
             priceRange: 'From ¥3.5/hr',

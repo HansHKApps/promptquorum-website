@@ -562,6 +562,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Ollama on Mac: Apple Silicon Setup Guide 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Zero to running in 2 minutes: one-command install with Metal GPU auto-verification.',
             '[Apple Silicon M5 for Local LLM 2026](/local-llms/apple-silicon-m5-local-llm) -- Deep dive on M5 Pro vs M5 Max: 307–614 GB/s bandwidth, real benchmarks, Mac Studio vs MacBook Pro.',
             '[Whisper on Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark) -- STT benchmarks via Metal and Core ML across M1–M5: large-v3 at 10× real-time.',
+            '[Best GPU for Local LLM Inference Under $500 (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026) -- RTX 4060 Ti 16 GB vs RX 7900 GRE: ranked by tok/sec per dollar.',
+            '[Best AI Workstation Build for Local LLM (2026)](/power-local-llm/best-workstation-build-local-ai-2026) -- Full component list for 70B inference: GPU, CPU, RAM, PSU.',
+            '[DeepSeek v3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) -- Minimum VRAM to run DeepSeek v3 full and quantized variants.',
           ],
         },
         sources: {
@@ -901,6 +904,9 @@ schema: {
             '[Apple Silicon für lokale LLMs: Vollständige Anleitung](/local-llms/apple-silicon-local-llm-guide-2026?lang=de) -- M1 bis M5 Max: Unified Memory, Metal GPU und Framework-Auswahl nach Chip-Klasse.',
             '[Ollama auf Mac: Apple Silicon Setup 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=de) -- Von null bis laufend in 2 Minuten: Ein-Befehl-Installation mit Metal GPU-Verifikation.',
             '[Whisper auf Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark?lang=de) -- STT-Benchmarks via Metal und Core ML über M1–M5: large-v3 mit 10-facher Echtzeit.',
+            '[Beste GPU für LLM-Inferenz unter 500 $ (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=de) -- RTX 4060 Ti 16 GB vs RX 7900 GRE: Ranking nach tok/s pro Dollar.',
+            '[Beste KI-Workstation für lokale LLMs (2026)](/power-local-llm/best-workstation-build-local-ai-2026?lang=de) -- Vollständige Komponentenliste für 70B-Inferenz: GPU, CPU, RAM, Netzteil.',
+            '[DeepSeek v3 lokale Hardware-Anforderungen](/prompt-bites/deepseek-v3-local-hardware-requirements?lang=de) -- Minimaler VRAM für DeepSeek v3 vollständig und quantisiert.',
           ],
         },
         sources: {
@@ -1201,6 +1207,9 @@ schema: {
             '[Apple Silicon pour les LLM locaux : Guide complet](/local-llms/apple-silicon-local-llm-guide-2026?lang=fr) -- M1 à M5 Max : mémoire unifiée, Metal GPU et sélection de framework par puce.',
             '[Ollama sur Mac : Guide Apple Silicon 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=fr) -- De zéro à fonctionnel en 2 minutes : installation en une commande avec vérification Metal GPU.',
             '[Whisper sur Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark?lang=fr) -- Benchmarks STT via Metal et Core ML sur M1–M5 : large-v3 à 10× temps réel.',
+            '[Meilleur GPU pour l\'inférence LLM sous 500 $ (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=fr) -- RTX 4060 Ti 16 Go vs RX 7900 GRE : classé par tok/s par dollar.',
+            '[Meilleure station de travail IA pour LLM local (2026)](/power-local-llm/best-workstation-build-local-ai-2026?lang=fr) -- Liste complète de composants pour l\'inférence 70B : GPU, CPU, RAM, alimentation.',
+            '[Exigences matérielles locales DeepSeek v3](/prompt-bites/deepseek-v3-local-hardware-requirements?lang=fr) -- VRAM minimum pour exécuter DeepSeek v3 complet et quantifié.',
           ],
         },
         sources: {
@@ -1498,6 +1507,9 @@ schema: {
             '[ローカルLLM向けApple Silicon：完全ガイド](/local-llms/apple-silicon-local-llm-guide-2026?lang=ja) -- M1からM5 Max：Unified Memory、Metal GPU、チップ別フレームワーク選択。',
             '[MacでOllama：Apple Siliconセットアップ2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=ja) -- 2分でゼロから動作まで：Metal GPU自動検証付き1コマンドインストール。',
             '[Apple Silicon 2026でのWhisper](/local-llms/apple-silicon-whisper-metal-benchmark?lang=ja) -- M1–M5でのMetalとCore ML経由のSTTベンチマーク：large-v3で10倍リアルタイム。',
+            '[500ドル以下のローカルLLM推論向けベストGPU (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=ja) -- RTX 4060 Ti 16 GB対RX 7900 GRE：1ドルあたりtok/sでランキング。',
+            '[ローカルLLM向けベストAIワークステーション構成 (2026)](/power-local-llm/best-workstation-build-local-ai-2026?lang=ja) -- 70B推論のための完全コンポーネントリスト：GPU、CPU、RAM、電源。',
+            '[DeepSeek v3ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements?lang=ja) -- DeepSeek v3をフルおよび量子化で実行するための最小VRAM。',
           ],
         },
         sources: {
@@ -1789,6 +1801,9 @@ schema: {
             '[本地LLM的Apple Silicon：完整指南](/local-llms/apple-silicon-local-llm-guide-2026?lang=zh) -- M1到M5 Max：统一内存、Metal GPU和按芯片级别的框架选择。',
             '[Mac上的Ollama：Apple Silicon设置2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=zh) -- 2分钟从零到运行：带Metal GPU自动验证的单命令安装。',
             '[Apple Silicon 2026上的Whisper](/local-llms/apple-silicon-whisper-metal-benchmark?lang=zh) -- M1–M5上Metal和Core ML的STT基准测试：large-v3实现10倍实时。',
+            '[500美元以下本地LLM推理最佳GPU (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=zh) -- RTX 4060 Ti 16 GB与RX 7900 GRE：按每美元tok/s排名。',
+            '[本地LLM最佳AI工作站配置 (2026)](/power-local-llm/best-workstation-build-local-ai-2026?lang=zh) -- 70B推理完整组件清单：GPU、CPU、内存、电源。',
+            '[DeepSeek v3本地硬件需求](/prompt-bites/deepseek-v3-local-hardware-requirements?lang=zh) -- 运行DeepSeek v3完整版和量化版所需最低显存。',
           ],
         },
         sources: {

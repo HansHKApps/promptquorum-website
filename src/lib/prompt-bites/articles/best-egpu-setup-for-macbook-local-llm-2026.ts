@@ -65,22 +65,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Mac Mini M4 Pro (48 GB) — Best macOS Option',
             content: 'The Mac Mini M4 Pro with 48 GB of unified memory runs Qwen2.5 32B Q4 at 20–30 tok/s via Ollama Metal backend. The 24-core GPU handles larger models than a MacBook M4 Pro (which maxes at 64 GB). Price: ~$1399. If you want to stay in the macOS ecosystem and need 32B+ model capability, this is the upgrade path — not an eGPU.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_mac_mini_m4_pro]' },
+              { label: 'Apple Mac Mini M4 Pro on Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
             ],
           },
           {
             title: 'AMD Mini PC + OCuLink eGPU (Best GPU/Portable Combo)',
             content: 'The AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS, ~$480) connects to an RTX 3090 or RTX 4090 via OCuLink (PCIe 4.0 x4, 64 Gbps — ~80% of x16 slot bandwidth). Ollama on Linux or Windows with CUDA runs 7B Q4 at 65–85 tok/s with an RTX 3090. The mini PC is small enough to put on a desk next to a MacBook and serve Ollama over LAN. You keep your MacBook for everything else; the mini PC handles inference.',
             affiliateLinks: [
-              { label: 'AOOSTAR GEM12 Pro OCuLink on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_aoostar_gem12_pro]' },
-              { label: 'Razer Core X eGPU Enclosure (for x86 laptops)', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_razer_core_x]' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink on Amazon', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'Razer Core X eGPU Enclosure (for x86 laptops)', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
           {
             title: 'Thunderbolt 4 eGPU on Windows/Linux Laptop (If Not on Mac)',
             content: 'On an x86 Windows or Linux laptop with Thunderbolt 4, eGPU does work for Ollama. The bandwidth penalty is ~35–45% vs a native PCIe x16 slot, but Ollama\'s inference is memory-bandwidth-limited (not PCIe-limited), so real-world speed drops are 10–20%. Recommended enclosure: Razer Core X (~$299) + RTX 3090. Expect 50–65 tok/s on 7B Q4 vs 65–80 tok/s for a native slot.',
             affiliateLinks: [
-              { label: 'Razer Core X eGPU Enclosure on Amazon', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_razer_core_x]' },
+              { label: 'Razer Core X eGPU Enclosure on Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -190,14 +190,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Mac Mini M4 Pro (48 GB) — Beste macOS-Option',
             content: 'Der Mac Mini M4 Pro mit 48 GB Unified Memory läuft Qwen2.5 32B Q4 mit 20–30 Tok/s über Ollamas Metal-Backend. Preis: ~1399 €. Wenn macOS Voraussetzung ist und 32B+-Modelle benötigt werden, ist dies der Upgrade-Pfad — nicht eine eGPU.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_mac_mini_m4_pro]' },
+              { label: 'Apple Mac Mini M4 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Mac+Mini+M4+Pro' },
             ],
           },
           {
             title: 'AMD Mini-PC + OCuLink-eGPU (Beste GPU/Portable-Kombination)',
             content: 'Der AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS, ~480 €) verbindet sich mit einer RTX 3090 oder RTX 4090 über OCuLink (PCIe 4.0 x4, 64 Gbps — ~80% x16-Slot-Bandbreite). Ollama auf Linux oder Windows mit CUDA läuft 7B Q4 mit 65–85 Tok/s mit einer RTX 3090. Der Mini-PC ist klein genug für den Schreibtisch neben einem MacBook und bedient Ollama über LAN.',
             affiliateLinks: [
-              { label: 'AOOSTAR GEM12 Pro OCuLink bei Amazon.de', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_de_aoostar_gem12_pro]' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink bei Amazon.de', url: 'https://www.amazon.de/s?k=AOOSTAR+GEM12+Pro' },
             ],
           },
         ],
@@ -294,14 +294,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Mac Mini M4 Pro (48 Go) — Meilleure option macOS',
             content: 'Le Mac Mini M4 Pro avec 48 Go de mémoire unifiée fait tourner Qwen2.5 32B Q4 à 20–30 tok/s via le backend Metal d\'Ollama. Prix : ~1399 €. Si macOS est requis et que vous avez besoin de modèles 32B+, c\'est la bonne mise à niveau — pas une eGPU.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_mac_mini_m4_pro]' },
+              { label: 'Apple Mac Mini M4 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Mac+Mini+M4+Pro' },
             ],
           },
           {
             title: 'Mini PC AMD + eGPU OCuLink (Meilleure combo GPU/portable)',
             content: 'L\'AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS, ~480 €) se connecte à une RTX 3090 via OCuLink (PCIe 4.0 x4, 64 Gbps — ~80% de la bande passante x16). Ollama sur Linux ou Windows avec CUDA tourne à 65–85 tok/s sur 7B Q4 avec une RTX 3090. Le mini PC est assez petit pour tenir sur un bureau à côté d\'un MacBook et sert Ollama via LAN.',
             affiliateLinks: [
-              { label: 'AOOSTAR GEM12 Pro OCuLink sur Amazon.fr', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_fr_aoostar_gem12_pro]' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink sur Amazon.fr', url: 'https://www.amazon.fr/s?k=AOOSTAR+GEM12+Pro' },
             ],
           },
         ],
@@ -398,14 +398,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Mac Mini M4 Pro（48GB）——最良macOS選択肢',
             content: 'Mac Mini M4 Pro（48GB統合メモリ、約18万円）はOllamaのMetalバックエンドを通じてQwen2.5 32B Q4を20〜30 tok/sで実行できます。macOS環境が必要で32B以上のモデル能力が求められる場合、eGPUではなくこれがアップグレードパスです。',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_mac_mini_m4_pro]' },
+              { label: 'Apple Mac Mini M4 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M4+Pro' },
             ],
           },
           {
             title: 'AMDミニPC + OCuLink eGPU（最良GPU/ポータブルコンボ）',
             content: 'AOOSTAR GEM12 Pro OCuLink（AMD Ryzen 9 8945HS、約4万8000円）はOCuLink（PCIe 4.0 x4、64Gbps——x16スロット帯域幅の約80%）経由でRTX 3090またはRTX 4090と接続できます。Linux/WindowsのOllamaはCUDAでRTX 3090使用時に7B Q4で65〜85 tok/sを実現。このミニPCはMacBookの隣に置けるサイズで、LAN越しにOllamaを提供します。',
             affiliateLinks: [
-              { label: 'AOOSTAR GEM12 Pro OCuLink をAmazonで確認', url: '[AFFILIATE_LINK_PLACEHOLDER:amazon_jp_aoostar_gem12_pro]' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=AOOSTAR+GEM12+Pro' },
             ],
           },
         ],
@@ -502,14 +502,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Mac Mini M4 Pro（48GB）——最佳macOS选择',
             content: 'Mac Mini M4 Pro（48GB统一内存，约9800元）通过Ollama的Metal后端以20–30 tok/s运行Qwen2.5 32B Q4。如果需要在macOS环境中运行32B以上模型，这是正确的升级路径——而非eGPU。',
             affiliateLinks: [
-              { label: '在京东查看Apple Mac Mini M4 Pro', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_mac_mini_m4_pro]' },
+              { label: '在京东查看Apple Mac Mini M4 Pro', url: 'https://search.jd.com/Search?keyword=Mac+Mini+M4+Pro' },
             ],
           },
           {
             title: 'AMD迷你PC + OCuLink eGPU（最佳GPU/便携组合）',
             content: 'AOOSTAR GEM12 Pro OCuLink（AMD Ryzen 9 8945HS，约3300元）通过OCuLink（PCIe 4.0 x4，64Gbps——约80%的x16插槽带宽）连接RTX 3090或RTX 4090。Linux/Windows上的Ollama通过CUDA在RTX 3090上运行7B Q4达65–85 tok/s。迷你PC体积小，可放在MacBook旁边的桌面上，通过局域网提供Ollama服务。',
             affiliateLinks: [
-              { label: '在京东查看AOOSTAR GEM12 Pro OCuLink', url: '[AFFILIATE_LINK_PLACEHOLDER:jd_aoostar_gem12_pro]' },
+              { label: '在京东查看AOOSTAR GEM12 Pro OCuLink', url: 'https://search.jd.com/Search?keyword=AOOSTAR+GEM12+Pro' },
             ],
           },
         ],
