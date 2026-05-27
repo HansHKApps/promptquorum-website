@@ -436,6 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Local LLMs for Code Review](/local-llms/best-local-llms-code-review) -- extend code generation to code review and refactoring with 70B models',
             '[Small Local LLM Models](/local-llms/small-local-llm-models) -- sub-4B coding models when 7B+ is too large for available hardware',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- set up any coding model from this page in under 5 minutes',
+            'For local LLMs optimized specifically for the Japanese language, including Rinna 3.6B, ELYZA-7B, and CyberAgent CALM3, see our <a href="/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">guide to the best local LLMs for Japanese</a>.',
           ],
         },
         faqSection: {
@@ -851,6 +852,7 @@ schema: {
             '[Beste lokale LLMs für Code-Review](/local-llms/best-local-llms-code-review?lang=de) -- erweitere Code-Generierung zu Code-Review und Refactoring mit 70B-Modellen',
             '[Kleine lokale LLM-Modelle](/local-llms/small-local-llm-models?lang=de) -- unter-4B-Programmiermodelle, wenn 7B+ für verfügbare Hardware zu groß ist',
             '[Wie man Ollama installiert](/local-llms/how-to-install-ollama?lang=de) -- richte jedes Programmiermodell von dieser Seite in unter 5 Minuten ein',
+            'Für lokale LLMs, die speziell für die japanische Sprache optimiert sind — darunter Rinna 3.6B, ELYZA-7B und CyberAgent CALM3 — lesen Sie unseren <a href="/de/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">Leitfaden zu den besten lokalen LLMs für Japanisch</a>.',
           ],
         },
         faqSection: {
@@ -1264,6 +1266,7 @@ schema: {
             '[Meilleurs LLMs locaux pour la revue de code](/local-llms/best-local-llms-code-review?lang=fr) — étendez la génération de code à la revue de code et la refactorisation avec les modèles 70B',
             '[Petits modèles LLM locaux](/local-llms/small-local-llm-models?lang=fr) — modèles de programmation sous 4B quand 7B+ est trop grand pour le matériel disponible',
             '[Comment installer Ollama](/local-llms/how-to-install-ollama?lang=fr) — configurez n\'importe quel modèle de programmation de cette page en moins de 5 minutes',
+            'Pour les LLMs locaux optimisés spécifiquement pour le japonais, notamment Rinna 3.6B, ELYZA-7B et CyberAgent CALM3, consultez notre <a href="/fr/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">guide des meilleurs LLMs locaux pour le japonais</a>.',
           ],
         },
         faqSection: {
@@ -1617,6 +1620,7 @@ schema: {
             '[ローカルLLM量子化解説](/local-llms/llm-quantization-explained?lang=ja) — Q4 vs Q5 vs Q8',
             '[Ollama完全インストールガイド](/local-llms/how-to-install-ollama?lang=ja) — Macbook/Linux/Windows',
             '[初心者向けベストモデル5選](/local-llms/best-beginner-local-llm-models?lang=ja) — 最初のモデル選択',
+            'Rinna 3.6B、ELYZA-7B、CyberAgent CALM3など、日本語専用に最適化されたローカルLLMについては、<a href="/ja/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">日本語ローカルLLMベストガイド</a>をご覧ください。',
           ],
         },
         sources: {
@@ -1958,6 +1962,7 @@ schema: {
             '[本地LLM量化解释](/local-llms/llm-quantization-explained?lang=zh) ——Q4 vs Q5 vs Q8',
             '[Ollama完整安装指南](/local-llms/how-to-install-ollama?lang=zh) ——Mac/Linux/Windows',
             '[初学者最佳模型5选](/local-llms/best-beginner-local-llm-models?lang=zh) ——首选模型决策',
+            '关于专为日语优化的本地LLM，包括Rinna 3.6B、ELYZA-7B和CyberAgent CALM3，请参阅我们的<a href="/zh/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">日语最佳本地LLM指南</a>。',
           ],
         },
         sources: {

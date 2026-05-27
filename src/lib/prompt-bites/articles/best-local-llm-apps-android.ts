@@ -102,6 +102,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Termux + Ollama is the most powerful option but has the steepest setup curve.</strong> You install Termux from F-Droid, then run <code>pkg install ollama</code> inside the terminal. Once installed, all standard Ollama commands work including <code>ollama pull</code> and <code>ollama run</code>. This approach is best for developers who already use Ollama on desktop.',
           'Battery drain matters at the 7B tier and above. A 30-minute chat session with Llama 3 8B Q4 on a flagship phone uses 8–12% battery on average. For frequent use, plug in or stick to 2–3B models like Phi-3 Mini and Gemma 2B that draw less power.',
           'For a full guide to running LLMs on Android including hardware requirements and model recommendations, see the <a href="/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">best local LLM apps for Android guide</a>.',
+          'For Japan-specific app options with Xperia and AQUOS device support, see our <a href="/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">best Android LLM apps for Japan guide</a>.',
         ],
       },
       faq: {
@@ -181,6 +182,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Termux + Ollama ist die leistungsstärkste Option, hat aber die steilste Einrichtungskurve.</strong> Sie installieren Termux von F-Droid und führen dann <code>pkg install ollama</code> im Terminal aus. Nach der Installation funktionieren alle Standard-Ollama-Befehle, einschließlich <code>ollama pull</code> und <code>ollama run</code>. Dieser Ansatz eignet sich am besten für Entwickler, die Ollama bereits auf dem Desktop verwenden.',
           'Der Akkuverbrauch spielt ab dem 7B-Bereich eine Rolle. Eine 30-minütige Chat-Session mit Llama 3 8B Q4 auf einem Flaggschiff-Handy verbraucht im Durchschnitt 8–12 % Akku. Für häufigen Einsatz am Ladekabel bleiben oder auf 2–3B-Modelle wie Phi-3 Mini und Gemma 2B wechseln, die weniger Strom benötigen.',
           'Einen vollständigen Leitfaden zum Ausführen von LLMs auf Android mit Hardware-Anforderungen und Modellempfehlungen finden Sie im <a href="/de/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Leitfaden für die besten lokalen LLM-Apps für Android</a>.',
+          'Für Japan-spezifische App-Optionen mit Xperia- und AQUOS-Geräteunterstützung, lesen Sie unseren <a href="/de/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">Leitfaden für die besten Android-LLM-Apps in Japan</a>.',
         ],
       },
       faq: {
@@ -260,6 +262,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Termux + Ollama est l\'option la plus puissante mais présente la courbe de configuration la plus abrupte.</strong> Vous installez Termux depuis F-Droid, puis exécutez <code>pkg install ollama</code> dans le terminal. Une fois installé, toutes les commandes Ollama standard fonctionnent, y compris <code>ollama pull</code> et <code>ollama run</code>. Cette approche convient mieux aux développeurs qui utilisent déjà Ollama sur desktop.',
           'La consommation de batterie est importante à partir du niveau 7B. Une session de chat de 30 minutes avec Llama 3 8B Q4 sur un téléphone haut de gamme utilise en moyenne 8–12 % de batterie. Pour une utilisation fréquente, branchez l\'appareil ou restez sur des modèles 2–3B comme Phi-3 Mini et Gemma 2B qui consomment moins.',
           'Pour un guide complet sur l\'exécution de LLMs sur Android incluant les exigences matérielles et les recommandations de modèles, consultez le <a href="/fr/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guide des meilleures applis LLM locales pour Android</a>.',
+          'Pour des options d\'applications spécifiques au Japon avec les appareils Xperia et AQUOS, consultez notre <a href="/fr/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">guide des meilleures apps LLM Android pour le Japon</a>.',
         ],
       },
       faq: {
@@ -339,6 +342,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Termux + Ollamaは最も強力な選択肢ですが、セットアップの難易度が最も高いです。</strong> F-DroidからTermuxをインストールし、ターミナル内で<code>pkg install ollama</code>を実行します。インストール後、<code>ollama pull</code>や<code>ollama run</code>を含むすべての標準Ollamaコマンドが動作します。このアプローチはデスクトップですでにOllamaを使用している開発者に最適です。',
           'バッテリー消費は7B以上のモデルで重要になります。フラッグシップスマートフォンでLlama 3 8B Q4を30分チャットすると、平均8–12%のバッテリーを消費します。頻繁に使用する場合は充電しながら使うか、Phi-3 MiniやGemma 2Bのような消費電力の少ない2–3Bモデルにとどめてください。',
           'ハードウェア要件とモデル推奨を含むAndroidでのLLM実行の完全ガイドについては、<a href="/ja/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Androidの最良ローカルLLMアプリガイド</a>をご覧ください。',
+          'XperiaやAQUOSデバイスへの日本固有のアプリについては、<a href="/ja/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">日本のAndroid向けベストLLMアプリガイド</a>をご覧ください。',
         ],
       },
       faq: {
@@ -418,6 +422,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Termux + Ollama 是最强大的选项，但安装难度最高。</strong> 您从 F-Droid 安装 Termux，然后在终端中运行 <code>pkg install ollama</code>。安装后，所有标准 Ollama 命令均可使用，包括 <code>ollama pull</code> 和 <code>ollama run</code>。这种方式最适合已在桌面使用 Ollama 的开发者。',
           '电池消耗在 7B 及以上模型时需要关注。在旗舰手机上使用 Llama 3 8B Q4 进行 30 分钟对话平均消耗 8–12% 电量。频繁使用时请插电，或选择 Phi-3 Mini 和 Gemma 2B 等耗电更少的 2–3B 模型。',
           '有关在 Android 上运行 LLM 的完整指南（包括硬件要求和模型推荐），请参阅<a href="/zh/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Android最佳本地LLM应用指南</a>。',
+          '如需Xperia和AQUOS设备的日本专用应用选项，请参阅我们的<a href="/zh/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">日本Android最佳LLM应用指南</a>。',
         ],
       },
       faq: {

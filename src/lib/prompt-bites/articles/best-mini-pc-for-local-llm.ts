@@ -100,6 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Standard mini PCs with discrete GPU slots are not useful for LLM inference because the GPU VRAM is fixed at the factory — typically 4–8 GB — and cannot be expanded. The Mac Mini M4 and UM790 Pro solve this via GPU-based inference with unified memory. The Beelink SER8 takes a different approach: its Ryzen 9 8845HS uses CPU-only inference, which is slower but requires no GPU setup.',
           'The Mac Mini M4 with 16 GB unified memory outperforms the UM790 Pro with 32 GB DDR5 on raw inference speed because Apple\'s memory bandwidth (~68 GB/s) and Metal GPU acceleration are more efficient than the Radeon 780M iGPU. The UM790 Pro\'s advantage is the ability to expand to 64 GB, which allows running larger models such as 13B and 30B Q4 that do not fit in 16 GB.',
           'For a full guide to hardware selection for local LLM, see the <a href="/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">best Ollama frontend overview</a> which covers the software side of local LLM setup.',
+          'For Japan-specific mini PC recommendations with Amazon.co.jp links and JPY prices, see our <a href="/prompt-bites/best-mini-pc-local-llm-japan" class="text-primary hover:underline">best mini PC for local LLMs in Japan guide</a>.',
         ],
       },
       faq: {
@@ -181,6 +182,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Standard-Mini-PCs mit diskreten GPU-Slots sind für LLM-Inferenz ungeeignet, da der GPU-VRAM ab Werk festgelegt ist — in der Regel 4–8 GB — und nicht erweitert werden kann. Der Mac Mini M4 und UM790 Pro lösen dies durch GPU-basierte Inferenz mit Unified Memory. Der Beelink SER8 verfolgt einen anderen Ansatz: sein Ryzen 9 8845HS nutzt CPU-basierte Inferenz, die langsamer ist, aber kein GPU-Setup erfordert.',
           'Der Mac Mini M4 mit 16 GB Unified Memory übertrifft den UM790 Pro mit 32 GB DDR5 bei der reinen Inferenzgeschwindigkeit, da die Speicherbandbreite von Apple (~68 GB/s) und die Metal-GPU-Beschleunigung effizienter sind als die Radeon 780M iGPU. Der Vorteil des UM790 Pro liegt in der Erweiterbarkeit auf 64 GB, was größere Modelle wie 13B und 30B Q4 ermöglicht, die nicht in 16 GB passen.',
           'Einen vollständigen Leitfaden zur Hardware-Auswahl für lokale LLMs finden Sie in der <a href="/de/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">besten Ollama-Frontend-Übersicht</a>, die die Software-Seite der lokalen LLM-Einrichtung abdeckt.',
+          'Für Japan-spezifische Mini-PC-Empfehlungen mit Amazon.co.jp-Links und JPY-Preisen, lesen Sie unseren <a href="/de/prompt-bites/best-mini-pc-local-llm-japan" class="text-primary hover:underline">Leitfaden für die besten Mini-PCs für LLMs in Japan</a>.',
         ],
       },
       faq: {
@@ -262,6 +264,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Les mini PC standard avec emplacements GPU discrets ne sont pas utiles pour l\'inférence LLM car la VRAM du GPU est fixée en usine — généralement 4–8 Go — et ne peut pas être étendue. Le Mac Mini M4 et UM790 Pro résolvent cela via l\'inférence basée sur GPU avec mémoire unifiée. Le Beelink SER8 adopte une approche différente : son Ryzen 9 8845HS utilise l\'inférence basée sur CPU, qui est plus lente mais ne nécessite pas de configuration GPU.',
           'Le Mac Mini M4 avec 16 Go de mémoire unifiée surpasse l\'UM790 Pro avec 32 Go DDR5 en vitesse d\'inférence pure car la bande passante mémoire d\'Apple (~68 GB/s) et l\'accélération Metal GPU sont plus efficaces que l\'iGPU Radeon 780M. L\'avantage de l\'UM790 Pro est sa capacité d\'extension à 64 Go, permettant d\'exécuter des modèles plus grands comme 13B et 30B Q4 qui ne tiennent pas dans 16 Go.',
           'Pour un guide complet de sélection matérielle pour LLM local, consultez l\'<a href="/fr/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">aperçu des meilleurs frontends Ollama</a> qui couvre la partie logicielle de la configuration LLM locale.',
+          'Pour des recommandations de mini PC spécifiques au Japon avec des liens Amazon.co.jp et les prix en JPY, consultez notre <a href="/fr/prompt-bites/best-mini-pc-local-llm-japan" class="text-primary hover:underline">guide des meilleurs mini PC pour LLMs au Japon</a>.',
         ],
       },
       faq: {
@@ -343,6 +346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '専用GPUスロットを持つ標準的なミニPCはLLM推論に適していません。なぜならGPUのVRAMは工場出荷時に固定（通常4–8 GB）され、拡張できないからです。Mac Mini M4とUM790 Proはユニファイドメモリ対応GPU推論でこの問題を解決しています。Beelink SER8は異なるアプローチ：Ryzen 9 8845HSはCPUベース推論を使用し、これは遅いですがGPUセットアップが不要です。',
           '16 GBユニファイドメモリのMac Mini M4は純粋な推論速度で32 GB DDR5のUM790 Proを上回ります。これはAppleのメモリ帯域幅（~68 GB/s）とMetalのGPUアクセラレーションがRadeon 780M iGPUより効率的なためです。UM790 Proの利点は64 GBへの拡張性で、16 GBに収まらない13Bや30B Q4などの大型モデルの実行を可能にします。',
           'ローカルLLMのハードウェア選択に関する完全なガイドについては、ローカルLLMセットアップのソフトウェア面をカバーする<a href="/ja/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">最適なOllamaフロントエンド概要</a>をご覧ください。',
+          'Amazon.co.jpリンクと日本円価格付きの日本市場向けミニPCおすすめについては、<a href="/ja/prompt-bites/best-mini-pc-local-llm-japan" class="text-primary hover:underline">日本のローカルLLM向けミニPCガイド</a>をご覧ください。',
         ],
       },
       faq: {
@@ -424,6 +428,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '配备独立 GPU 插槽的标准迷你电脑不适合 LLM 推理，因为 GPU VRAM 在出厂时固定——通常为 4–8 GB——无法扩展。Mac Mini M4 和 UM790 Pro 通过统一内存的基于 GPU 推理来解决此问题。Beelink SER8 采用不同方法：其 Ryzen 9 8845HS 使用仅 CPU 推理，速度更慢但无需 GPU 设置。',
           '配备 16 GB 统一内存的 Mac Mini M4 在纯推理速度上超越配备 32 GB DDR5 的 UM790 Pro，因为 Apple 的内存带宽（~68 GB/s）和 Metal GPU 加速比 Radeon 780M iGPU 更高效。UM790 Pro 的优势是可扩展到 64 GB，允许运行 16 GB 放不下的 13B 和 30B Q4 等更大模型。',
           '有关本地 LLM 硬件选择的完整指南，请参阅涵盖本地 LLM 配置软件方面的 <a href="/zh/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">最佳 Ollama 前端概览</a>。',
+          '如需带Amazon.co.jp链接和日元价格的日本专用迷你电脑推荐，请参阅我们的<a href="/zh/prompt-bites/best-mini-pc-local-llm-japan" class="text-primary hover:underline">日本本地LLM迷你电脑指南</a>。',
         ],
       },
       faq: {

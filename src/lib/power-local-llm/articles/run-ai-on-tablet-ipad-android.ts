@@ -179,6 +179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Snapdragon 8 Gen 3 and Dimensity 9300** are the fastest Android chips for on-device inference in 2026. Generation speed: ~15–25 tok/sec for 1.7B models; ~8–12 tok/sec for 3B models.',
           '**Model storage:** Android does not have unified memory — the model runs in system RAM without GPU acceleration in most Termux configurations. GPU acceleration requires Termux:NVIDIA or specific Vulkan builds; setup is more complex.',
           '**Alternative apps:** MNN LLM (Alibaba, free, Android app with on-device inference for select models) is an easier setup but has a more limited model selection than Ollama. AI Runner and llamafile also have Android builds with varying support.',
+          'For a Japan-specific Xperia setup guide with hardware compatibility table, see <a href="/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">how to run a local LLM on Xperia phones in Japan</a>.',
         ],
         callouts: [
           {
@@ -540,6 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Snapdragon 8 Gen 3 und Dimensity 9300** sind die schnellsten Android-Chips für On-Device-Inferenz 2026. Generierungsgeschwindigkeit: ~15–25 Token/Sek für 1.7B-Modelle; ~8–12 Token/Sek für 3B-Modelle.',
           '**Modellspeicher:** Android hat keinen einheitlichen Speicher — das Modell läuft in System-RAM ohne GPU-Beschleunigung in den meisten Termux-Konfigurationen. GPU-Beschleunigung erfordert Termux:NVIDIA oder spezifische Vulkan-Builds; Setup ist komplexer.',
           '**Alternative Apps:** MNN LLM (Alibaba, kostenlos, Android-App mit On-Device-Inferenz für ausgewählte Modelle) ist ein einfacheres Setup, hat aber eine begrenztere Model-Auswahl als Ollama. AI Runner und llamafile haben auch Android-Builds mit unterschiedlicher Unterstützung.',
+          'Einen Japan-spezifischen Xperia-Einrichtungsleitfaden mit Hardware-Kompatibilitätstabelle finden Sie unter <a href="/de/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Lokales LLM auf Xperia ausführen (Japan)</a>.',
         ],
         callouts: [
           {
@@ -970,6 +972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Snapdragon 8 Gen 3 et Dimensity 9300** puces Android les plus rapides 2026. ~15–25 tok/sec 1.7B ; ~8–12 tok/sec 3B.',
           '**Stockage modèle :** Android pas mémoire unifiée — RAM sans GPU plupart configs. GPU demande Termux:NVIDIA ou Vulkan spécifique.',
           '**Apps alternatives :** MNN LLM (Alibaba, gratuit, plus simple) sélection limitée. AI Runner, llamafile aussi disponibles.',
+          'Pour un guide de configuration Xperia spécifique au Japon avec tableau de compatibilité matérielle, consultez <a href="/fr/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">comment exécuter un LLM local sur Xperia au Japon</a>.',
         ],
         callouts: [
           {
@@ -1369,6 +1372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Snapdragon 8 Gen 3とDimensity 9300**は2026年のオンデバイス推論で最速のAndroidチップです。生成速度：1.7Bモデルで約15〜25トークン/秒；3Bモデルで約8〜12トークン/秒。',
           '**モデルストレージ：** Androidは統合メモリを持たないため、ほとんどのTermux設定ではGPUアクセラレーションなしでシステムRAM上でモデルが実行されます。GPUアクセラレーションにはTermux:NVIDIAまたは特定のVulkanビルドが必要；セットアップがより複雑です。',
           '**代替アプリ：** MNN LLM（Alibaba製、無料、選択されたモデルのオンデバイス推論Androidアプリ）はセットアップが簡単ですが、Ollamaよりモデル選択が限定的です。AI RunnerとllamafileもさまざまなサポートのAndroidビルドがあります。',
+          'ハードウェア互換性表付きの日本向けXperia設定ガイドについては、<a href="/ja/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">XperiaでローカルLLMを動かす方法</a>をご覧ください。',
         ],
         callouts: [
           {
@@ -1779,6 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**骁龙8 Gen 3和天玑9300**是2026年安卓本地推理最快的芯片。生成速度：1.7B模型约15至25词元/秒；3B模型约8至12词元/秒。',
           '**模型存储：** 安卓没有统一内存——大多数Termux配置下模型在系统RAM中运行，无GPU加速。GPU加速需要Termux:NVIDIA或特定Vulkan构建版本，设置更复杂。',
           '**替代应用：** MNN LLM（阿里巴巴，免费，安卓应用，支持精选模型的本地推理）设置更简便，但模型选择比Ollama有限。AI Runner和llamafile也有支持程度不同的安卓版本。',
+          '有关日本专用Xperia硬件兼容性表格和设置指南，请参阅<a href="/zh/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">在日本Xperia手机上运行本地LLM的方法</a>。',
         ],
         callouts: [
           {

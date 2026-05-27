@@ -63,6 +63,12 @@ import { article as bestCloudGpuForFineTuningUnder1PerHour } from './articles/be
 import { article as bestAiTextToSpeechForContentCreators } from './articles/best-ai-text-to-speech-for-content-creators'
 import { article as bestOpenSourceAlternativesToChatgptPlus } from './articles/best-open-source-alternatives-to-chatgpt-plus'
 import { article as cheapestWayToRun70bModelLocally } from './articles/cheapest-way-to-run-70b-model-locally'
+// Japan Sprint 2026-05-27
+import { article as bestLocalLlmAppsJapanAndroid } from './articles/best-local-llm-apps-japan-android'
+import { article as bestJapaneseLanguageModelsLocal } from './articles/best-japanese-language-models-local'
+import { article as runLocalLlmOnXperiaJapan } from './articles/run-local-llm-on-xperia-japan'
+import { article as bestMiniPcLocalLlmJapan } from './articles/best-mini-pc-local-llm-japan'
+import { article as bestGpuLocalLlmJapanPrice } from './articles/best-gpu-local-llm-japan-price'
 
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
@@ -127,4 +133,10 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestAiTextToSpeechForContentCreators,
   bestOpenSourceAlternativesToChatgptPlus,
   cheapestWayToRun70bModelLocally,
+  // Japan Sprint 2026-05-27
+  bestLocalLlmAppsJapanAndroid,
+  bestJapaneseLanguageModelsLocal,
+  runLocalLlmOnXperiaJapan,
+  bestMiniPcLocalLlmJapan,
+  bestGpuLocalLlmJapanPrice,
 }

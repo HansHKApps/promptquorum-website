@@ -82,4 +82,11 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'best-ai-text-to-speech-for-content-creators': 'bestAiTextToSpeechForContentCreators',
   'best-open-source-alternatives-to-chatgpt-plus': 'bestOpenSourceAlternativesToChatgptPlus',
   'cheapest-way-to-run-70b-model-locally':     'cheapestWayToRun70bModelLocally',
+
+  // Japan Sprint 2026-05-27
+  'best-local-llm-apps-japan-android':         'bestLocalLlmAppsJapanAndroid',
+  'best-japanese-language-models-local':       'bestJapaneseLanguageModelsLocal',
+  'run-local-llm-on-xperia-japan':             'runLocalLlmOnXperiaJapan',
+  'best-mini-pc-local-llm-japan':              'bestMiniPcLocalLlmJapan',
+  'best-gpu-local-llm-japan-price':            'bestGpuLocalLlmJapanPrice',
 }
