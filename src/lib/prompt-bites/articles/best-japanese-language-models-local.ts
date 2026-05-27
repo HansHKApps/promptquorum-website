@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Which Local LLM Models Support Japanese Best?',
-    seoTitle: 'Best Local LLMs for Japanese 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Rinna 3.6B runs on 4 GB RAM and is the lightest Japanese-native local LLM. ELYZA-7B leads on instruction following. Qwen2.5 7B covers JA/ZH/EN and coding. All run via Ollama. Updated May 2026.',
+    seoTitle: 'Best Local LLMs Japanese 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen2.5 7B (multilingual JA/ZH/EN), Phi-4 (10–12 GB): four local LLMs for Japanese tasks, all via Ollama in 2026.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
@@ -132,8 +132,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     title: 'Welche lokalen LLM-Modelle unterstützen Japanisch am besten?',
-    seoTitle: 'Beste lokale LLMs für Japanisch 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Rinna 3.6B läuft ab 4 GB RAM und ist das leichteste japanische Lokal-LLM. ELYZA-7B führt bei Instruktionsbefolgung. Qwen2.5 7B deckt JA/ZH/EN und Coding ab. Alle via Ollama. Stand Mai 2026.',
+    seoTitle: 'Lokale LLMs für Japanisch 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen2.5 7B (JA/ZH/EN), Phi-4 (10–12 GB): vier lokale LLMs für japanische Texte — alle über Ollama ausführbar.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
@@ -212,8 +212,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Model Comparisons',
     title: 'Quels modèles LLM locaux prennent le mieux en charge le japonais ?',
-    seoTitle: 'Meilleurs LLM locaux pour le japonais 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Rinna 3.6B fonctionne avec 4 Go de RAM et est le LLM local natif japonais le plus léger. ELYZA-7B mène sur le suivi d\'instructions. Qwen2.5 7B couvre JA/ZH/EN et le codage. Tous via Ollama. Mai 2026.',
+    seoTitle: 'LLMs locaux japonais 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Rinna 3.6B (4 Go), ELYZA-7B (6 Go), Qwen2.5 7B (JA/ZH/EN), Phi-4 (10–12 Go) : quatre LLM locaux pour le japonais, tous compatibles Ollama en 2026.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',

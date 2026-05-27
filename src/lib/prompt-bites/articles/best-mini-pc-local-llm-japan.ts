@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware Guides',
     title: 'What Is the Best Mini PC for Local LLMs Available in Japan?',
-    seoTitle: 'Best Mini PC for Local LLMs in Japan 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Best mini PC for local LLMs in Japan: Beelink SER7 (~¥70,000), MINISFORUM UM790 Pro (~¥85,000), GMKtec NucBox K6 (~¥65,000). All 32 GB DDR5, Vulkan-ready. May 2026.',
+    seoTitle: 'Mini PC for LLMs Japan 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Beelink SER7 (~¥70,000), MINISFORUM UM790 Pro (~¥85,000), GMKtec NucBox K6 (~¥65,000): top 3 mini PCs for local LLMs in Japan. 32 GB DDR5, Vulkan-ready.',
     publishDate: '2026-05-27',
     dateModified: '2026-05-27',
     freshness_tier: 'semi_annual',
@@ -123,8 +123,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Hardware Guides',
     title: 'Welcher Mini-PC für lokale LLMs ist in Japan am besten?',
-    seoTitle: 'Bester Mini-PC für lokale LLMs in Japan 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Bester Mini-PC für lokale LLMs in Japan: Beelink SER7 (~€580), MINISFORUM UM790 Pro (~€700), GMKtec NucBox K6 (~€540). Alle 32 GB DDR5, Vulkan-fähig. Mai 2026.',
+    seoTitle: 'Mini-PC LLMs Japan 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Beelink SER7 (~¥70.000), MINISFORUM UM790 Pro (~¥85.000), GMKtec NucBox K6 (~¥65.000): die 3 besten Mini-PCs für LLMs in Japan. Alle 32 GB DDR5, Vulkan.',
     publishDate: '2026-05-27',
     dateModified: '2026-05-27',
     freshness_tier: 'semi_annual',
@@ -241,8 +241,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Hardware Guides',
     title: 'Quel est le meilleur mini PC pour LLM locaux disponible au Japon ?',
-    seoTitle: 'Meilleur Mini PC pour LLM Locaux au Japon 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Meilleur mini PC pour LLM locaux au Japon : Beelink SER7 (~€580), MINISFORUM UM790 Pro (~€700), GMKtec NucBox K6 (~€540). Tous 32 Go DDR5, compatibles Vulkan. Mai 2026.',
+    seoTitle: 'Mini PC LLM local Japon 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Beelink SER7 (~¥70 000), MINISFORUM UM790 Pro (~¥85 000), GMKtec NucBox K6 (~¥65 000) : les 3 mini PC pour LLM local au Japon. DDR5 32 Go, Vulkan.',
     publishDate: '2026-05-27',
     dateModified: '2026-05-27',
     freshness_tier: 'semi_annual',

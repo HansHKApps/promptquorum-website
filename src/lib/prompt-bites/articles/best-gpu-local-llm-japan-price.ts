@@ -5,9 +5,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware Guides',
     title: 'What Is the Best Value GPU for Local LLMs in Japan?',
-    seoTitle: 'Best Value GPU for Local LLMs in Japan 2026 | Prompt Bites',
+    seoTitle: 'Best GPU for LLMs Japan 2026 | Prompt Bites | PromptQuorum',
     metaDescription:
-      'Best value GPU for local LLMs in Japan: RTX 3060 12GB at ~¥40,000 new / ¥25,000 used (May 2026). Buy at Tsukumo or Dospara in Akihabara. 7B models at 20-25 tok/s.',
+      'RTX 3060 12 GB is the best value GPU for local LLMs in Japan: ~¥40,000 new, ¥25,000 used. 7B models at 20–25 tok/s. Available at Tsukumo and Dospara.',
     publishDate: '2026-05-27',
     dateModified: '2026-05-27',
     freshness_tier: 'semi_annual',
@@ -273,9 +273,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Hardware Guides',
     title: 'Welche GPU bietet in Japan das beste Preis-Leistungs-Verhältnis für lokale LLMs?',
-    seoTitle: 'Beste GPU für lokale LLMs in Japan 2026 | Prompt Bites',
+    seoTitle: 'Beste GPU für LLMs Japan 2026 | Prompt Bites | PromptQuorum',
     metaDescription:
-      'Beste GPU für lokale LLMs in Japan: RTX 3060 12 GB für ~¥40.000 neu / ¥25.000 gebraucht (Mai 2026). Erhältlich bei Tsukumo und Dospara in Akihabara. 7B-Modelle bei 20–25 tok/s.',
+      'RTX 3060 12 GB ist die beste GPU für lokale LLMs in Japan: ~¥40.000 neu, ¥25.000 gebraucht. 7B-Modelle bei 20–25 tok/s. Erhältlich bei Tsukumo und Dospara.',
     publishDate: '2026-05-27',
     dateModified: '2026-05-27',
     freshness_tier: 'semi_annual',
@@ -484,9 +484,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Hardware Guides',
     title: 'Quel est le GPU au meilleur rapport qualité-prix pour LLM locaux au Japon ?',
-    seoTitle: 'Meilleur GPU rapport qualité-prix LLM local Japon 2026 | Prompt Bites',
+    seoTitle: 'Meilleur GPU LLM Japon 2026 | Prompt Bites | PromptQuorum',
     metaDescription:
-      'Meilleur GPU LLM local au Japon : RTX 3060 12 Go à ~¥40 000 neuve / ¥25 000 occasion (mai 2026). Disponible chez Tsukumo et Dospara à Akihabara. Modèles 7B à 20–25 tok/s.',
+      'RTX 3060 12 Go, le meilleur GPU pour LLM local au Japon : ~¥40 000 neuve, ¥25 000 occasion. Modèles 7B à 20–25 tok/s chez Tsukumo et Dospara en 2026.',
     publishDate: '2026-05-27',
     dateModified: '2026-05-27',
     freshness_tier: 'semi_annual',
@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Hardware Guides',
     title: '日本でコスパ最強のローカルLLM用GPUは？',
-    seoTitle: '日本のローカルLLM向けコスパ最強GPU 2026 | Prompt Bites',
+    seoTitle: '日本のローカルLLM向けコスパ最強GPU 2026 | Prompt Bites | PromptQuorum',
     metaDescription:
       '日本でローカルLLMに最強コスパのGPU：RTX 3060 12GB（新品~¥40,000、中古~¥25,000、2026年5月）。秋葉原のツクモ、ドスパラで購入可。7Bモデルを20~25 tok/sで実行。',
     publishDate: '2026-05-27',
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Hardware Guides',
     title: '在日本性价比最高的本地LLM显卡是什么？',
-    seoTitle: '日本本地LLM性价比最高显卡2026 | Prompt Bites',
+    seoTitle: '日本本地LLM性价比最高显卡2026 | Prompt Bites | PromptQuorum',
     metaDescription:
       '日本本地LLM性价比最高显卡：RTX 3060 12 GB（新品约¥40,000日元/二手约¥25,000，2026年5月）。秋叶原Tsukumo和Dospara有售。7B模型可达20-25 tok/s。',
     publishDate: '2026-05-27',
