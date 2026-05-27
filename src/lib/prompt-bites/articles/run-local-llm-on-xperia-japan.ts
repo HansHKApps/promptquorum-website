@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Xperia 5 V (8 GB RAM) handles 3B models including Rinna 3.6B and Gemma 2B Q4 without issues',
           'Xperia 10 VI (6 GB RAM) is limited to sub-2B models — TinyLlama 1.1B and Gemma 2B are the practical ceiling',
           'Sony does not ship on-device AI features — MLC Chat or PocketPal AI from Google Play is the practical replacement',
-          'Battery drain is approximately 15% per hour during continuous inference on the Xperia 1 VI; use airplane mode to reduce drain',
+          'Battery drain is approximately 15% per hour with screen on during continuous inference on the Xperia 1 VI; use airplane mode to reduce drain',
         ],
       },
       body1: {
@@ -106,9 +106,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Installing a local LLM on an Xperia takes three steps and under 30 minutes, including model download time.</strong> The process requires no root access, no developer mode, and no special Xperia settings — it runs entirely through standard Android app and file management.',
           'Step 1: Install MLC Chat or PocketPal AI from Google Play (Google Playストア). Both are free and available in Japan without a VPN or region workaround. MLC Chat is faster to first inference; PocketPal AI supports a broader range of GGUF model files from Hugging Face.',
-          'Step 2: Download your model over Wi-Fi. Model download sizes vary: TinyLlama 1.1B Q4 is approximately 0.7 GB, Rinna 3.6B Q4 is approximately 2 GB, Gemma 2B Q4 is approximately 1.5 GB, and Phi-4 Q4 is approximately 8 GB. Use a 128 GB or larger storage Xperia for Phi-4. Do not download over mobile data — the files are large and your carrier plan will not thank you.',
+          'Step 2: Download your model over Wi-Fi. Model download sizes vary: TinyLlama 1.1B Q4 is approximately 0.7 GB, Rinna 3.6B Q4 is approximately 2 GB, Gemma 2B Q4 is approximately 1.5 GB, and Phi-4 Q4 is approximately 8 GB. Use a 128 GB or larger storage Xperia for Phi-4. Close all other apps before loading Phi-4 Q4 — it uses approximately 8 GB of the Xperia 1 VI's 12 GB RAM and requires maximum available memory to load without crashing. Do not download over mobile data — the files are large and your carrier plan will not thank you.',
           'Step 3: Switch your keyboard to Japanese input. Gboard with Japanese enabled or ATOK (popular in Japan for business use) both work directly with MLC Chat and PocketPal AI — you type in Japanese, the model responds in Japanese. No extra configuration is required for Japanese language input to function.',
-          'Battery note: expect approximately 15% battery drain per hour during continuous inference on the Xperia 1 VI. Enable airplane mode (機内モード) during inference sessions to reduce background radio drain and extend session time. Power-saving mode further reduces drain but may throttle the Snapdragon\'s AI cores and slow inference speed.',
+          'Battery note: expect approximately 15% battery drain per hour with screen on during continuous inference on the Xperia 1 VI. Enable airplane mode (機内モード) during inference sessions to reduce background radio drain and extend session time. Power-saving mode further reduces drain but may throttle the Snapdragon\'s AI cores and slow inference speed.',
           'Sony Xperia AI Agent (currently in beta) connects to cloud AI services and does not run on-device. Local LLM via MLC Chat is the only way to run AI inference entirely on the Xperia without sending data to external servers — an important distinction for privacy under Japan\'s Act on the Protection of Personal Information (APPI / 個人情報保護法). For a full guide to Android LLM setup including hardware requirements, see <a href="/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">running AI on tablets and Android phones</a>.',
         ],
       },
@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'How much battery does running an LLM drain on Xperia?',
-            a: 'Approximately 15% battery per hour during continuous inference on the Xperia 1 VI at full performance. On the Xperia 5 V with Rinna 3.6B, expect similar drain. Enable airplane mode (機内モード) to cut background radio usage and reduce total drain by 2–4% per hour.',
+            a: 'Approximately 15% battery per hour with screen on during continuous inference on the Xperia 1 VI at full performance. On the Xperia 5 V with Rinna 3.6B, expect similar drain. Enable airplane mode (機内モード) to cut background radio usage and reduce total drain by 2–4% per hour.',
           },
           {
             q: 'Does it work offline on Xperia?',
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Das Xperia 5 V (8 GB RAM) unterstützt 3B-Modelle wie Rinna 3.6B und Gemma 2B Q4 problemlos',
           'Das Xperia 10 VI (6 GB RAM) ist auf Sub-2B-Modelle beschränkt — TinyLlama 1.1B und Gemma 2B sind die praktische Obergrenze',
           'Sony liefert keine On-Device-KI-Funktionen — MLC Chat oder PocketPal AI aus dem Google Play Store ist der praktische Ersatz',
-          'Akkuverbrauch liegt bei etwa 15 % pro Stunde bei kontinuierlicher Inferenz auf dem Xperia 1 VI; Flugmodus aktivieren reduziert den Verbrauch',
+          'Akkuverbrauch liegt bei etwa 15 % pro Stunde bei aktiviertem Bildschirm und kontinuierlicher Inferenz auf dem Xperia 1 VI; Flugmodus aktivieren reduziert den Verbrauch',
         ],
       },
       body1: {
@@ -193,9 +193,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Die Installation eines lokalen LLM auf einem Xperia dauert drei Schritte und unter 30 Minuten einschließlich Modell-Download-Zeit.</strong> Der Prozess erfordert keinen Root-Zugang, keinen Entwicklermodus und keine speziellen Xperia-Einstellungen — er läuft vollständig über Standard-Android-App- und Dateiverwaltung.',
           'Schritt 1: MLC Chat oder PocketPal AI aus dem Google Play Store installieren. Beide sind kostenlos und in Japan ohne VPN oder Region-Umgehung verfügbar. MLC Chat ist schneller bis zur ersten Inferenz; PocketPal AI unterstützt eine breitere Palette von GGUF-Modelldateien von Hugging Face.',
-          'Schritt 2: Modell über WLAN herunterladen. TinyLlama 1.1B Q4 ist ca. 0,7 GB, Rinna 3.6B Q4 ca. 2 GB, Gemma 2B Q4 ca. 1,5 GB und Phi-4 Q4 ca. 8 GB. Für Phi-4 ein Xperia mit 128 GB oder mehr Speicher verwenden. Download über mobile Daten vermeiden.',
+          'Schritt 2: Modell über WLAN herunterladen. TinyLlama 1.1B Q4 ist ca. 0,7 GB, Rinna 3.6B Q4 ca. 2 GB, Gemma 2B Q4 ca. 1,5 GB und Phi-4 Q4 ca. 8 GB. Für Phi-4 ein Xperia mit 128 GB oder mehr Speicher verwenden. Vor dem Start von Phi-4 Q4 alle anderen Apps schließen — es benötigt ca. 8 GB des verfügbaren 12 GB RAMs und braucht maximalen Arbeitsspeicher zum Laden. Download über mobile Daten vermeiden.',
           'Schritt 3: Tastatur auf japanische Eingabe umstellen. Gboard mit aktiviertem Japanisch oder ATOK funktionieren beide direkt mit MLC Chat und PocketPal AI — man tippt auf Japanisch, das Modell antwortet auf Japanisch. Keine zusätzliche Konfiguration für japanische Spracheingabe erforderlich.',
-          'Akkuhinweis: Beim Xperia 1 VI ist mit ca. 15 % Akkuverbrauch pro Stunde bei kontinuierlicher Inferenz zu rechnen. Flugmodus aktivieren reduziert den Hintergrundradio-Verbrauch. Sony Xperia AI Agent (aktuell in der Beta) verbindet sich mit Cloud-KI-Diensten — für vollständige On-Device-Verarbeitung ohne Datenweitergabe ist MLC Chat der einzige Weg. Vollständige Anleitung: <a href="/de/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">KI auf Tablets und Android-Geräten ausführen</a>.',
+          'Akkuhinweis: Beim Xperia 1 VI ist mit ca. 15 % Akkuverbrauch pro Stunde bei aktiviertem Display und kontinuierlicher Inferenz zu rechnen. Flugmodus aktivieren reduziert den Hintergrundradio-Verbrauch. Sony Xperia AI Agent (aktuell in der Beta) verbindet sich mit Cloud-KI-Diensten — für vollständige On-Device-Verarbeitung ohne Datenweitergabe ist MLC Chat der einzige Weg. Vollständige Anleitung: <a href="/de/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">KI auf Tablets und Android-Geräten ausführen</a>.',
         ],
       },
       faq: {
@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Wie viel Akku verbraucht ein LLM auf dem Xperia?',
-            a: 'Etwa 15 % Akku pro Stunde bei kontinuierlicher Inferenz auf dem Xperia 1 VI bei voller Leistung. Auf dem Xperia 5 V mit Rinna 3.6B ähnlicher Verbrauch zu erwarten. Flugmodus aktivieren reduziert den Hintergrundradio-Verbrauch um 2–4 % pro Stunde.',
+            a: 'Etwa 15 % Akku pro Stunde bei aktiviertem Bildschirm und kontinuierlicher Inferenz auf dem Xperia 1 VI bei voller Leistung. Auf dem Xperia 5 V mit Rinna 3.6B ähnlicher Verbrauch zu erwarten. Flugmodus aktivieren reduziert den Hintergrundradio-Verbrauch um 2–4 % pro Stunde.',
           },
           {
             q: 'Funktioniert es offline auf dem Xperia?',
@@ -256,7 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Le Xperia 5 V (8 Go de RAM) gère les modèles 3B dont Rinna 3.6B et Gemma 2B Q4 sans problème',
           'Le Xperia 10 VI (6 Go de RAM) est limité aux modèles sub-2B — TinyLlama 1.1B et Gemma 2B sont le plafond pratique',
           'Sony ne fournit pas de fonctionnalités IA embarquées — MLC Chat ou PocketPal AI depuis Google Play est le remplacement pratique',
-          'La consommation de batterie est d\'environ 15 % par heure en inférence continue sur le Xperia 1 VI ; le mode avion réduit la consommation',
+          'La consommation de batterie est d\'environ 15 % par heure écran allumé en inférence continue sur le Xperia 1 VI ; le mode avion réduit la consommation',
         ],
       },
       body1: {
@@ -279,9 +279,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>L\'installation d\'un LLM local sur un Xperia prend trois étapes et moins de 30 minutes, temps de téléchargement du modèle inclus.</strong> Le processus ne nécessite pas d\'accès root, ni de mode développeur, ni de paramètres Xperia spéciaux — il fonctionne entièrement via la gestion standard des applications et des fichiers Android.',
           'Étape 1 : Installer MLC Chat ou PocketPal AI depuis Google Play (Google Playストア). Les deux sont gratuits et disponibles au Japon sans VPN ni contournement de région. MLC Chat est plus rapide jusqu\'à la première inférence ; PocketPal AI prend en charge une gamme plus large de fichiers de modèles GGUF depuis Hugging Face.',
-          'Étape 2 : Télécharger votre modèle en Wi-Fi. TinyLlama 1.1B Q4 fait environ 0,7 Go, Rinna 3.6B Q4 environ 2 Go, Gemma 2B Q4 environ 1,5 Go et Phi-4 Q4 environ 8 Go. Utilisez un Xperia de 128 Go ou plus pour Phi-4. Évitez le téléchargement via les données mobiles — les fichiers sont volumineux.',
+          'Étape 2 : Télécharger votre modèle en Wi-Fi. TinyLlama 1.1B Q4 fait environ 0,7 Go, Rinna 3.6B Q4 environ 2 Go, Gemma 2B Q4 environ 1,5 Go et Phi-4 Q4 environ 8 Go. Utilisez un Xperia de 128 Go ou plus pour Phi-4. Fermez toutes les autres applications avant de charger Phi-4 Q4 — il utilise environ 8 Go des 12 Go de RAM disponibles et nécessite le maximum de mémoire pour se charger sans plantage. Évitez le téléchargement via les données mobiles — les fichiers sont volumineux.',
           'Étape 3 : Basculer le clavier en saisie japonaise. Gboard avec le japonais activé ou ATOK (populaire au Japon pour usage professionnel) fonctionnent tous deux directement avec MLC Chat et PocketPal AI — vous tapez en japonais, le modèle répond en japonais. Aucune configuration supplémentaire n\'est nécessaire pour la saisie en japonais.',
-          'Note batterie : attendez-vous à environ 15 % de consommation par heure en inférence continue sur le Xperia 1 VI. Activez le mode avion pour réduire la consommation radio en arrière-plan. Sony Xperia AI Agent (actuellement en bêta) se connecte à des services d\'IA cloud — pour un traitement entièrement embarqué sans transmission de données, MLC Chat est la seule solution. Guide complet : <a href="/fr/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">exécuter l\'IA sur tablettes et appareils Android</a>.',
+          'Note batterie : attendez-vous à environ 15 % de consommation par heure écran allumé en inférence continue sur le Xperia 1 VI. Activez le mode avion pour réduire la consommation radio en arrière-plan. Sony Xperia AI Agent (actuellement en bêta) se connecte à des services d\'IA cloud — pour un traitement entièrement embarqué sans transmission de données, MLC Chat est la seule solution. Guide complet : <a href="/fr/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">exécuter l\'IA sur tablettes et appareils Android</a>.',
         ],
       },
       faq: {
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Combien de batterie consomme un LLM sur Xperia ?',
-            a: 'Environ 15 % de batterie par heure en inférence continue sur le Xperia 1 VI à pleine performance. Sur le Xperia 5 V avec Rinna 3.6B, attendez une consommation similaire. Activer le mode avion réduit la consommation radio en arrière-plan de 2 à 4 % par heure.',
+            a: 'Environ 15 % de batterie par heure écran allumé en inférence continue sur le Xperia 1 VI à pleine performance. Sur le Xperia 5 V avec Rinna 3.6B, attendez une consommation similaire. Activer le mode avion réduit la consommation radio en arrière-plan de 2 à 4 % par heure.',
           },
           {
             q: 'Cela fonctionne-t-il hors ligne sur Xperia ?',
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Xperia 5 V（8 GB RAM）はRinna 3.6BやGemma 2B Q4を含む3Bモデルを問題なく処理できる',
           'Xperia 10 VI（6 GB RAM）はSub-2Bモデルに限定 — TinyLlama 1.1BとGemma 2Bが実用上の上限',
           'SonyはOn-Device AI機能を提供していない — Google PlayストアのMLC ChatまたはPocketPal AIが実用的な代替となる',
-          'Xperia 1 VIでの連続推論時のバッテリー消耗は約15%/時間；機内モードで消耗を軽減できる',
+          'Xperia 1 VIでの画面点灯・連続推論時のバッテリー消耗は約15%/時間；機内モードで消耗を軽減できる',
         ],
       },
       body1: {
@@ -365,9 +365,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>XperiaへのローカルLLMインストールは3ステップで、モデルダウンロード時間を含めて30分未満で完了します。</strong> ルートアクセス、開発者モード、特別なXperia設定は不要 — 標準のAndroidアプリ管理とファイル管理のみで完結します。',
           'ステップ1：Google PlayストアからMLC ChatまたはPocketPal AIをインストールします。両アプリとも無料で、VPNや地域回避なしで日本のPlayストアから入手できます。MLC Chatは最初の推論までが速く、PocketPal AIはHugging FaceからのGGUFモデルファイルを幅広くサポートしています。',
-          'ステップ2：Wi-Fiでモデルをダウンロードします。モデルサイズの目安：TinyLlama 1.1B Q4は約0.7 GB、Rinna 3.6B Q4は約2 GB、Gemma 2B Q4は約1.5 GB、Phi-4 Q4は約8 GBです。Phi-4には128 GB以上のストレージを持つXperiaが必要です。モバイルデータでのダウンロードは避けてください。',
+          'ステップ2：Wi-Fiでモデルをダウンロードします。モデルサイズの目安：TinyLlama 1.1B Q4は約0.7 GB、Rinna 3.6B Q4は約2 GB、Gemma 2B Q4は約1.5 GB、Phi-4 Q4は約8 GBです。Phi-4には128 GB以上のストレージを持つXperiaが必要です。Phi-4 Q4を起動する前にすべての他のアプリを閉じてください — 利用可能な12 GB RAMのうち約8 GBを使用するため、クラッシュなしにロードするには最大のメモリ空きが必要です。モバイルデータでのダウンロードは避けてください。',
           'ステップ3：キーボードを日本語入力に切り替えます。Gboard（日本語設定済み）またはATOK（日本のビジネスユーザーに人気）はいずれもMLC ChatとPocketPal AIで直接動作します — 日本語で入力するとモデルも日本語で応答します。日本語入力のための追加設定は不要です。',
-          'バッテリーについて：Xperia 1 VIでの連続推論時は約15%/時間のバッテリー消耗を想定してください。機内モード（機内モード）を有効にするとバックグラウンドの無線通信による消耗を抑えられます。省電力モードはさらに消耗を抑えますが、SnapdragonのAIコアをスロットリングして推論速度が低下する場合があります。Sony Xperia AIエージェント（ベータ版）はクラウドAIサービスに接続します — MLC Chat経由のローカルLLMは個人情報保護法（APPI）に基づいてデータを外部送信せずにAIを使う唯一の手段です。Androidタブレット・スマートフォンでのAI実行に関する完全ガイドは<a href="/ja/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">タブレット・AndroidでAIを動かす</a>をご参照ください。',
+          'バッテリーについて：Xperia 1 VIでの画面点灯・連続推論時は約15%/時間のバッテリー消耗を想定してください。機内モード（機内モード）を有効にするとバックグラウンドの無線通信による消耗を抑えられます。省電力モードはさらに消耗を抑えますが、SnapdragonのAIコアをスロットリングして推論速度が低下する場合があります。Sony Xperia AIエージェント（ベータ版）はクラウドAIサービスに接続します — MLC Chat経由のローカルLLMは個人情報保護法（APPI）に基づいてデータを外部送信せずにAIを使う唯一の手段です。Androidタブレット・スマートフォンでのAI実行に関する完全ガイドは<a href="/ja/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">タブレット・AndroidでAIを動かす</a>をご参照ください。',
         ],
       },
       faq: {
@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'XperiaでLLMを動かすとバッテリーはどのくらい消耗しますか？',
-            a: 'Xperia 1 VIでの連続推論時はフル性能で約15%/時間のバッテリー消耗です。Xperia 5 VでRinna 3.6Bを動かす場合も同様の消耗が見込まれます。機内モードを有効にするとバックグラウンドの無線通信消耗を2〜4%/時間削減できます。',
+            a: 'Xperia 1 VIでの画面点灯・フル性能・連続推論時は約15%/時間のバッテリー消耗です。Xperia 5 VでRinna 3.6Bを動かす場合も同様の消耗が見込まれます。機内モードを有効にするとバックグラウンドの無線通信消耗を2〜4%/時間削減できます。',
           },
           {
             q: 'Xperiaでオフライン動作しますか？',
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Xperia 5 V（8 GB内存）可流畅处理3B模型，包括Rinna 3.6B和Gemma 2B Q4',
           'Xperia 10 VI（6 GB内存）仅限Sub-2B模型——TinyLlama 1.1B和Gemma 2B是实际上限',
           'Sony不提供On-Device AI功能——Google Play上的MLC Chat或PocketPal AI是实用的替代方案',
-          'Xperia 1 VI持续推理时电池消耗约15%/小时；开启飞行模式可减少消耗',
+          'Xperia 1 VI屏幕开启持续推理时电池消耗约15%/小时；开启飞行模式可减少消耗',
         ],
       },
       body1: {
@@ -451,9 +451,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>在Xperia上安装本地LLM只需三步，包含模型下载时间在内不超过30分钟。</strong> 整个过程无需Root权限、无需开发者模式、无需特殊Xperia设置——完全通过标准Android应用和文件管理完成。',
           '第1步：从Google Play（Google Playストア）安装MLC Chat或PocketPal AI。两款应用均免费，在日本无需VPN或地区绕过即可获取。MLC Chat到首次推理速度更快；PocketPal AI支持从Hugging Face加载更广泛的GGUF模型文件。',
-          '第2步：通过Wi-Fi下载模型。模型大小参考：TinyLlama 1.1B Q4约0.7 GB，Rinna 3.6B Q4约2 GB，Gemma 2B Q4约1.5 GB，Phi-4 Q4约8 GB。Phi-4建议使用128 GB或更大存储的Xperia。避免使用移动数据下载——文件较大。',
+          '第2步：通过Wi-Fi下载模型。模型大小参考：TinyLlama 1.1B Q4约0.7 GB，Rinna 3.6B Q4约2 GB，Gemma 2B Q4约1.5 GB，Phi-4 Q4约8 GB。Phi-4建议使用128 GB或更大存储的Xperia。加载Phi-4 Q4前关闭所有其他应用——它需要使用Xperia 1 VI 12 GB内存中的约8 GB，需要最大可用内存才能不崩溃地加载。避免使用移动数据下载——文件较大。',
           '第3步：将键盘切换为日语输入。启用了日语的Gboard或ATOK（在日本商务用户中广受欢迎）均可直接与MLC Chat和PocketPal AI配合使用——用日语输入，模型也用日语回复。日语输入功能无需额外配置。',
-          '电池说明：Xperia 1 VI在全性能持续推理时预计每小时消耗约15%电量。开启飞行模式可减少后台无线通信消耗。Sony Xperia AI助手（目前处于测试阶段）连接云端AI服务——MLC Chat的本地LLM是在不向外部服务器发送数据的情况下使用AI的唯一方式，对于在个人信息保护法（APPI）约束下处理敏感数据的用户尤为重要。完整指南请参阅<a href="/zh/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">在平板和Android设备上运行AI</a>。',
+          '电池说明：Xperia 1 VI在屏幕开启、全性能持续推理时预计每小时消耗约15%电量。开启飞行模式可减少后台无线通信消耗。Sony Xperia AI助手（目前处于测试阶段）连接云端AI服务——MLC Chat的本地LLM是在不向外部服务器发送数据的情况下使用AI的唯一方式，对于在个人信息保护法（APPI）约束下处理敏感数据的用户尤为重要。完整指南请参阅<a href="/zh/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">在平板和Android设备上运行AI</a>。',
         ],
       },
       faq: {
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Xperia运行LLM会消耗多少电量？',
-            a: 'Xperia 1 VI在全性能持续推理时约每小时消耗15%电量。Xperia 5 V运行Rinna 3.6B时消耗相近。开启飞行模式可将后台无线通信消耗降低2至4%/小时。',
+            a: 'Xperia 1 VI在屏幕开启、全性能持续推理时约每小时消耗15%电量。Xperia 5 V运行Rinna 3.6B时消耗相近。开启飞行模式可将后台无线通信消耗降低2至4%/小时。',
           },
           {
             q: 'Xperia上能离线使用吗？',

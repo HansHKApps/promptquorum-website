@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Top 3 Mini PCs Available in Japan',
         content: [
           '<strong>As of May 2026, three AMD-based mini PCs with 32 GB DDR5 RAM are the best options for local LLM inference available through Amazon.co.jp and major Japanese retailers — all priced between ¥65,000 and ¥85,000.</strong> Each carries a Ryzen 7000-series APU with AMD Radeon 780M integrated graphics. Ollama supports Vulkan acceleration on the Radeon 780M, meaning all three run GPU-accelerated inference without a discrete GPU or special driver setup on Linux.',
-          'The table below compares the three models on CPU, RAM, Japan price, and measured inference speed on a 7B Q4 model.',
+          'The table below compares the three models on CPU, RAM, Japan price, and measured inference speed on a 7B Q4 model. Prices as of May 2026 — verify before purchase.',
         ],
         columns: ['Model', 'CPU + RAM', 'Japan Price', 'LLM Speed (7B Q4)'],
         rows: [
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Die 3 besten Mini-PCs (in Japan erhältlich)',
         content: [
           '<strong>Stand Mai 2026 sind drei AMD-basierte Mini-PCs mit 32 GB DDR5 RAM die besten Optionen für lokale LLM-Inferenz in Japan — erhältlich über Amazon.co.jp und japanische Großhändler zu Preisen zwischen ¥65.000 und ¥85.000 (€540–€700 auf Amazon.de).</strong> Alle drei verfügen über einen Ryzen-7000er-APU mit AMD Radeon 780M integrierter Grafik. Ollama unterstützt Vulkan-Beschleunigung auf dem Radeon 780M, das heißt alle drei laufen GPU-beschleunigte Inferenz ohne diskrete GPU.',
-          'Die folgende Tabelle vergleicht die drei Modelle nach CPU, RAM, Japan-Preis und gemessener Inferenzgeschwindigkeit bei einem 7B-Q4-Modell.',
+          'Die folgende Tabelle vergleicht die drei Modelle nach CPU, RAM, Japan-Preis und gemessener Inferenzgeschwindigkeit bei einem 7B-Q4-Modell. Preise Stand Mai 2026 — vor dem Kauf prüfen.',
         ],
         columns: ['Modell', 'CPU + RAM', 'Preis Japan', 'LLM-Geschwindigkeit (7B Q4)'],
         rows: [
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Les 3 meilleurs mini PC disponibles au Japon',
         content: [
           '<strong>En mai 2026, trois mini PC AMD avec 32 Go de RAM DDR5 sont les meilleures options pour l\'inférence LLM locale disponibles via Amazon.co.jp et les principaux distributeurs japonais — tous entre ¥65 000 et ¥85 000 (environ €540–€700).</strong> Chacun intègre un APU Ryzen série 7000 avec iGPU AMD Radeon 780M. Ollama supporte l\'accélération Vulkan sur le Radeon 780M, ce qui signifie que les trois exécutent l\'inférence accélérée par GPU sans GPU discret.',
-          'Le tableau ci-dessous compare les trois modèles sur CPU, RAM, prix au Japon et vitesse d\'inférence mesurée sur un modèle 7B Q4.',
+          'Le tableau ci-dessous compare les trois modèles sur CPU, RAM, prix au Japon et vitesse d\'inférence mesurée sur un modèle 7B Q4. Prix en mai 2026 — vérifiez avant achat.',
         ],
         columns: ['Modèle', 'CPU + RAM', 'Prix Japon', 'Vitesse LLM (7B Q4)'],
         rows: [
@@ -406,7 +406,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '日本で買えるおすすめミニPC 3選',
         content: [
           '<strong>2026年5月時点で、32 GB DDR5 RAMを搭載したAMDベースのミニPC 3機種が、Amazon.co.jpや主要な日本の小売店を通じて入手可能なローカルLLM推論向けの最良選択肢です — 価格はいずれも¥65,000〜¥85,000です。</strong>各機種はRyzen 7000シリーズAPUにAMD Radeon 780Mの統合グラフィックスを搭載しています。OllamaはRadeon 780MのVulkanアクセラレーションをサポートしており、専用GPUや特別なドライバーセットアップなしでGPUアクセラレーション推論を実行できます。',
-          '以下の表では、CPU、RAM、日本での価格、7B Q4モデルでの測定済み推論速度の観点で3機種を比較します。',
+          '以下の表では、CPU、RAM、日本での価格、7B Q4モデルでの測定済み推論速度の観点で3機種を比較します。価格は2026年5月時点 — 購入前に必ずご確認ください。',
         ],
         columns: ['モデル', 'CPU + RAM', '日本価格', 'LLM速度（7B Q4）'],
         rows: [
@@ -524,7 +524,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '日本可购买的前三名迷你电脑',
         content: [
           '<strong>截至2026年5月，三款搭载32 GB DDR5内存的AMD迷你电脑是通过亚马逊和主要日本零售商可获取的本地LLM推理最佳选择 — 价格在¥65,000至¥85,000日元（约¥2,900至¥3,800人民币）之间。</strong>三款均搭载Ryzen 7000系列APU与AMD Radeon 780M集成显卡。Ollama支持Radeon 780M的Vulkan加速，即三款均可在无独立GPU的情况下运行GPU加速推理。',
-          '下表从CPU、内存、日本价格和7B Q4模型测量推理速度四个维度比较三款产品。',
+          '下表从CPU、内存、日本价格和7B Q4模型测量推理速度四个维度比较三款产品。价格为2026年5月数据——购买前请核实最新价格。',
         ],
         columns: ['型号', 'CPU + 内存', '日本价格', 'LLM速度（7B Q4）'],
         rows: [
