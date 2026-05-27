@@ -16,6 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
   display: 'swap',
 })
+import Script from 'next/script'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { CookieBanner } from '@/components/CookieBanner'
@@ -252,6 +253,13 @@ gtag('config', 'G-8DQ4B3DXBS', {
           <main id="main">{children}</main>
           <CookieBanner />
           <PushPromptBanner />
+          <Script
+            id="umami-script"
+            strategy="afterInteractive"
+            src="/api/stats/script.js"
+            data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
+            data-host-url="/api/stats"
+          />
           <ConsentedAnalytics />
         </Providers>
       </body>

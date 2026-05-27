@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
@@ -44,13 +43,6 @@ export function ConsentedAnalytics() {
 
   return (
     <>
-      <Script
-        id="umami-script"
-        strategy="afterInteractive"
-        src="/api/stats/script.js"
-        data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
-        data-host-url="/api/stats"
-      />
       <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
       <SpeedInsights />
     </>
