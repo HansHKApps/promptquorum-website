@@ -1583,6 +1583,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      countrySpecific: {
+        id: 'country-specific-ja',
+        title: '日本のロールプレイコミュニティ：ビジュアルノベル文化とSillyTavernエコシステム',
+        content: [
+          '日本のロールプレイLLMシーンは、欧米と異なる独自の文脈を持っています。ビジュアルノベル（VN）文化との強い親和性があり、SillyTavernのキャラクターカードシステムはVNのヒロインやキャラクターと相性が良い。NovelAI（クラウドサービス）が日本のユーザーに普及しているため、ローカル代替としてSillyTavernへの移行需要があります。',
+          'GSCデータでは「/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay」が着実なトラフィックを得ており、日本語コミュニティの活発さが確認できます。Civitai、Pixiv、VCIなどで日本語キャラクターカードが多数配布されており、SillyTavernのエコシステムと自然に連携します。',
+        ],
+        items: [
+          '**日本語キャラクターカードの入手先：** Civitai（英語だが日本語カード多数）、Pixiv（ファンメイドキャラクター）、VCIコミュニティ（VRChat日本ユーザー）。SillyTavernのTavern v2形式は日本語テキストを完全サポート。',
+          '**NovelAIからSillyTavernへの移行：** NovelAIユーザーがローカルに移行する際、SillyTavernが最も自然な選択肢。NovelAIのシステムプロンプト形式（Instruct Mode）はSillyTavernで互換テンプレートが利用可能。Hermes 3 Llama 3.3がNovelAIの文体に最も近いローカルモデル。',
+          '**ビジュアルノベル×SillyTavern：** Fateシリーズ、Steins;Gate等のVNキャラクターをSillyTavernでロールプレイする日本語コミュニティが活発。二次創作としての利用はグレーゾーンだが、日本のガイドライン（同人誌文化）の文脈では一般的に容認されている。',
+          '**RisuAI日本語サポート：** RisuAI は繁体・簡体中文に加え、日本語UIにも対応（有志翻訳）。モバイル優先のロールプレイにはRisuAIのiOS/Androidアプリが有用。SillyTavernはモバイルでの操作性が低いため、スマートフォンユーザーにはRisuAIが現実的。',
+          '**日本のプライバシー文脈：** 個人情報保護法の観点から、AIへの個人情報送信を懸念するユーザーが増えています。ローカルLLM＋SillyTavernの構成は「完全オフライン、サーバー送信なし」を証明できるため、プライバシー意識の高いユーザーに訴求力があります。',
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: '関連情報',
@@ -1975,6 +1990,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '在本地后端上群组聊天稳定吗？',
             a: '是的，使用正确的模型时稳定。与3个以上角色的群组聊天需要具有强声音差异化的模型——Command R+ 104B是最佳选择，Llama 3.3 70B是实用的默认选择。在较小的模型（13B以下）上，角色在5到10次交流内向同一声音漂移。SillyTavern拥有最成熟的群组聊天实现；Agnai和RisuAI能干净地处理2到4角色场景，但对轮次动态的控制较少。',
           },
+        ],
+      },
+      countrySpecific: {
+        id: 'country-specific-zh',
+        title: '台灣與香港角色扮演社群：繁體中文支援與RisuAI本地化',
+        content: [
+          'GSC數據顯示「/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay」已有5.17%的CTR（3點擊、58印象），說明繁體中文用戶對角色扮演前端比較有強烈需求。台灣和香港的角色扮演社群以日本VN文化影響為主，對於SillyTavern的日系角色卡相容性有天然需求。',
+          'Qwen3是台港用戶進行中文角色扮演的首選模型——繁體字輸出自然流暢，對話風格適合小說寫作。RisuAI提供最完整的繁體中文UI本地化，是行動裝置用戶的首選前端。',
+        ],
+        items: [
+          '**RisuAI繁體中文支援：** RisuAI的UI已有繁體中文本地化版本（由社群貢獻），是三個前端中中文化最完整的選項。iOS和Android應用均可在台灣和香港的App Store下載，無需VPN。',
+          '**Qwen3與SillyTavern的中文角色扮演設定：** 系統提示詞中加入「請使用繁體中文回應，保持角色一致性」可顯著改善輸出品質。Qwen3-32B在24GB VRAM環境下提供最佳繁體中文角色扮演體驗。參考文章：[SillyTavern中文角色扮演設置](/prompt-bites/sillytavern-chinese-roleplay-setup?lang=zh)。',
+          '**台灣角色卡資源：** Civitai有大量日文和英文角色卡（部分附中文說明），巴哈姆特的創作同好區、Dcard的動漫版有台灣本地製作的角色卡分享。SillyTavern的Tavern v2格式支援繁體中文文本，不需額外設定。',
+          '**香港用戶的粵語考量：** 目前沒有本地LLM能可靠地用粵語進行角色扮演。建議在提示詞中指定「書面繁體中文」。SillyTavern的角色設定（Character Description）欄位可加入「永遠以書面繁體中文香港用語回應」來部分改善輸出。',
+          '**隱私與二創文化：** 台灣和香港均無針對AI角色扮演的特定法規。本地LLM確保對話完全不上傳至任何伺服器——對於涉及原創角色或未公開IP的創作來說，這是重要的隱私保障。',
         ],
       },
       relatedReading: {

@@ -369,6 +369,21 @@ schema: {
             },
           ],
         },
+        countrySpecific: {
+          id: 'country-specific-de',
+          title: 'Lokale LLMs für deutsche Entwickler: DSGVO, Cursor Pro und Privacy',
+          content: [
+            'Für deutsche Softwareentwickler ist Cursor Pro ein zweischneidiges Schwert: Leistungsstarke KI-Features, aber Code wird an US-Server übertragen. Bei Projekten mit personenbezogenen Daten, Kundendaten oder vertraulichem Quellcode ist dies nach DSGVO Art. 28 (Auftragsverarbeitung) problematisch ohne entsprechenden DPA mit Anthropic/OpenAI.',
+            'Die datenschutzkonforme Alternative: Continue.dev mit lokalem LLM (Ollama + DeepSeek Coder oder Qwen2.5-Coder). Kein Code verlässt das Gerät, kein DPA nötig, BSI Grundschutz-kompatibel. Abstriche bei der Modellqualität gegenüber Claude 3.5 Sonnet sind bei einigen Tasks spürbar, bei anderen nicht.',
+          ],
+          items: [
+            '**DSGVO und Cursor Pro:** Cursor überträgt Code-Snippets zur KI-Verarbeitung. Für Open-Source-Projekte unproblematisch. Für Projekte mit Gesundheits-, Finanz- oder personenbezogenen Daten: Cursor Business mit EU Data Residency-Option prüfen oder auf lokale Alternative wechseln.',
+            '**Continue.dev DE-Konfiguration:** Continue.dev lässt sich vollständig lokal betreiben. `~/.continue/config.json` mit Ollama-Backend: `"provider": "ollama"`, `"model": "qwen2.5-coder:7b"`. Deutsche VS Code Lokalisierung (de-DE) funktioniert problemlos mit Continue.',
+            '**Deutsche Entwickler-Community:** query „cursor ローカルllm" zeigt JA-Signal — DE-Äquivalent: Heise Developer, Golem.de, t3n.de als primäre News-Quellen. GitHub-Stars für Continue.dev (>20k) spiegeln globale Akzeptanz wider.',
+            '**Empfohlene Modelle für Code-Completion (DE-Kontext):** Qwen2.5-Coder-7B (beste Balance), DeepSeek Coder V2 (stärkste Reasoning-Leistung), Codestral Mamba (schnell auf CPU). Alle via Ollama verfügbar.',
+            '**JetBrains-Nutzer in DE:** Continue.dev unterstützt auch JetBrains IDEs (IntelliJ, WebStorm, PyCharm) — in Deutschland oft beliebter als VS Code, besonders in Java/Kotlin-Shops.',
+          ],
+        },
         relatedReading: {
           title: 'Weiterführende Lektüre',
           items: [
@@ -720,6 +735,21 @@ schema: {
               q: 'ローカルコード補完はオフラインで機能しますか？',
               a: 'はい。Ollamaでモデルを取得した場合、補完は完全にオフライン機能。',
             },
+          ],
+        },
+        countrySpecific: {
+          id: 'country-specific-ja',
+          title: '日本人開発者のためのローカルLLMコード補完：Cursor vs Continue.dev',
+          content: [
+            'GSCデータによると「cursor ローカルllm」というクエリは8.7% CTRを記録しており、日本の開発者コミュニティがこのトピックを積極的に検索しています。ZennとQiitaには日本語の詳細セットアップ記事が多数あり、Continue.devとOllamaの組み合わせが特に人気です。',
+            'VS Code自体は日本語UIに完全対応（Japanese Language Packプラグイン）。Cursor IDEも日本語UIをサポートしています。ローカルLLMとの組み合わせで、日本語コメント・日本語変数名を含むコードへの補完精度が高まります。',
+          ],
+          items: [
+            '**Zenn/Qiitaの日本語セットアップ記事：** 「Continue.dev Ollama 設定」「Cursor ローカル LLM」などで検索すると実践的な記事が多数ヒット。Zenn（zenn.dev）は技術記事品質が高く、GitHub連携で更新管理されている点が特徴。',
+            '**日本語コード用推奨モデル：** Qwen2.5-Coder-7B（日本語コメント・文書化に強い）、DeepSeek Coder V2（英語中心だが日本語コンテキストも理解）。日本語変数名やコメントを含むプロジェクトではQwen2.5-Coderが優位。',
+            '**Continue.dev 日本語設定：** `~/.continue/config.json`のシステムプロンプトに「日本語でコメントを生成してください」と追加すると日本語コード補完の品質が向上。',
+            '**Apple Silicon優位性（日本市場）：** 日本はMacBook M系列の普及率が高い。MLX経由でのコード補完はOllama比で1.5-2倍速い（M2 Pro基準）。ただしContinue.devとの直接MLX統合は未対応 — Ollama経由が現実的。',
+            '**日本語コミュニティ・Discordサーバー：** 「AI開発者JP」「Ollama日本語ユーザー会」などのDiscordサーバーでローカルLLMセットアップの日本語サポートが得られる。',
           ],
         },
         relatedReading: {

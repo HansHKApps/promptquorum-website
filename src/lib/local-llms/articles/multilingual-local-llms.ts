@@ -439,6 +439,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             }
           ]
         },
+        countrySpecific: {
+          id: 'country-specific-de',
+          title: 'Mehrsprachige LLMs in Deutschland, Österreich und der Schweiz',
+          content: [
+            'Der deutschsprachige Raum hat besondere Anforderungen an mehrsprachige KI-Systeme — von der DSGVO-Compliance in Deutschland bis zur Dialektvielfalt in der Schweiz. Die gute Nachricht: Lokale LLMs erfüllen diese Anforderungen ohne Kompromisse.',
+            'Für den deutschen Mittelstand (KMUs und Großunternehmen) ist die Offline-Fähigkeit entscheidend: Kein Datentransfer zu US-Servern, vollständige Kontrolle über Verarbeitungsprotokolle, BSI Grundschutz-konforme Implementierung möglich. Finanzdienstleister, Anwaltskanzleien und Gesundheitsdienstleister profitieren besonders.',
+          ],
+          items: [
+            '**Beste Modelle für Deutsch:** Qwen2.5-7B übertrifft Llama 3.1 bei deutschen Texten dank größerem Trainingskorpus. Mistral 7B zeigt starke Leistung bei EU-Rechtssprache. LeoLM (basierend auf Llama 2) wurde speziell auf deutschen Texten feinabgestimmt.',
+            '**Schweizerdeutsch und Österreichisch:** Dialekte werden von keinem lokalen LLM zuverlässig verstanden — für Hochdeutsch sind alle Topmodelle ausgezeichnet. Für Dialekterkennung: Whisper (Transkription) + Hochdeutsch-LLM ist die praktischste Pipeline.',
+            '**Deutsche Grammatikkomplexität:** Kasusdeklination, Genus, trennbare Verben — Qwen2.5 und Mistral 7B machen weniger grammatische Fehler als ältere Modelle. Für juristische oder akademische Texte: Q5_K_M-Quantisierung für bessere Präzision.',
+            '**DSGVO und DSGVO Art. 25:** Lokale LLMs erfüllen „Privacy by Design" ohne zusätzliche Konfiguration. Für Unternehmen: Dokumentieren Sie den Einsatz im Verzeichnis von Verarbeitungstätigkeiten. Hinweis: Modellgewichte selbst unterliegen keiner DSGVO-Meldepflicht.',
+            '**Community-Ressourcen:** Zend-Äquivalent für Deutschland: dev.to/t/german, Heise Developer, ct-Magazin Technik-Forum. Ollama-Installationsanleitungen auf Deutsch: ollama.com/blog (EN) — deutsche Übersetzungen auf GitHub verfügbar.',
+          ],
+        },
         relatedReading: {
           id: 'related-reading',
           title: 'Weiterführende Ressourcen',
@@ -944,6 +959,21 @@ schema: {
             }
           ]
         },
+        countrySpecific: {
+          id: 'country-specific-fr',
+          title: 'LLMs multilingues en France : Mistral et l\'avantage local',
+          content: [
+            'La France est le marché domestique de Mistral AI — l\'un des rares pays européens à disposer d\'un champion national du LLM de classe mondiale. Cette situation crée un avantage unique : les modèles Mistral sont optimisés pour le français européen et s\'exécutent parfaitement en local.',
+            'Pour les entreprises françaises, le RGPD (équivalent français du GDPR) impose les mêmes obligations qu\'en Allemagne. Les LLMs locaux simplifient la conformité : aucune transmission vers des serveurs américains, journaux d\'audit complets, traitement des données sensibles en toute légalité.',
+          ],
+          items: [
+            '**Meilleurs modèles pour le français :** Mistral 7B Instruct est le choix évident — conçu en France, entraîné sur des corpus français de haute qualité. Performances supérieures sur la syntaxe française complexe, le subjonctif, et les registres formels/informels. Qwen2.5-7B est une alternative solide pour les tâches multilingues.',
+            '**Français québécois vs européen :** Les modèles actuels distinguent mal les variantes. Pour un usage québécois, précisez explicitement dans votre prompt : « Réponds en français québécois informel » ou « Utilise le registre professionnel du Québec ». Mistral a tendance à produire du français européen par défaut.',
+            '**Ressources communautaires FR :** Le Bon Coin Tech, Zenika Blog, OCTO Technology Blog pour les retours d\'expérience LLM en entreprise. LeMonde.fr et Le Monde Informatique couvrent régulièrement les évolutions réglementaires IA.',
+            '**RGPD et IA générative :** La CNIL a publié des recommandations spécifiques sur l\'IA (2024). Les LLMs locaux satisfont par défaut au principe de minimisation des données — aucune donnée ne quitte vos serveurs. Pour les RH et la santé : exigence supplémentaire d\'une AIPD (Analyse d\'Impact).',
+            '**OVHcloud et hébergement souverain :** Pour les équipes sans GPU local, OVHcloud propose des instances GPU conformes RGPD en datacenter français — solution intermédiaire avant l\'investissement matériel.',
+          ],
+        },
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
@@ -1432,6 +1462,21 @@ schema: {
             }
           ]
         },
+        countrySpecific: {
+          id: 'country-specific-ja',
+          title: '日本語対応ローカルLLM — Apple SiliconとM系チップの優位性',
+          content: [
+            '日本は世界有数のApple Siliconユーザー市場です。MacBookのM1〜M4チップはMLXフレームワークと組み合わせることで、同価格帯のNVIDIA GPUを超えるローカルLLM推論性能を発揮します。日本語トークン処理においても、Appleのユニファイドメモリアーキテクチャが有利に働きます。',
+            '日本語の形態素解析と漢字・かな変換は、英語中心のLLMにとって課題になりがちです。しかし最新世代のQwen2.5とLlama 3.1は、日本語コーパスへの十分な学習により、実用レベルの日本語出力を実現しています。',
+          ],
+          items: [
+            '**日本語に最適なモデル：** Qwen2.5-7B（アリババ製）は日本語トークンの処理精度が高く、漢字・ひらがな・カタカナの混在文に強い。LLM-JP（国立情報学研究所製）は純粋な日本語特化モデル。Swallow（東工大製）はLlamaベースの日本語ファインチューン。',
+            '**MLX vs Ollama（日本市場視点）：** M系Mac（M1/M2/M3/M4）ではMLXが最速。OllamaはWindowsとの互換性も高く、開発チームでの導入に向く。ZennやQiitaの日本語ベンチマーク記事では一般にMLXが推論速度で優位とされている。',
+            '**日本語トークナイズの注意点：** 日本語は英語比で1トークン当たりの情報量が少ない（漢字1文字≒1トークン）。そのためコンテキストウィンドウの消費が英語より速い。Qwen2.5のような多言語モデルは日本語専用のサブワード辞書を持ち、この問題を緩和している。',
+            '**日本語コミュニティリソース：** Zenn（zenn.dev）とQiita（qiita.com）に豊富な日本語セットアップ記事がある。特に「ローカルLLM Ollama 日本語」「MLX Qwen Mac」などの検索が有効。日本語Discordサーバー「AI絵師コミュニティ」「Ollama日本語ユーザー会」も情報源として活用可能。',
+            '**プライバシーと日本の法規制：** 個人情報保護法（PIPA）の2022年改正により、海外への個人データ移転に同意要件が厳格化。医療・金融データにはローカルLLMが最も安全な選択肢。',
+          ],
+        },
         relatedReading: {
           title: '参考資料',
           items: [
@@ -1832,6 +1877,21 @@ schema: {
               a: '有GPU就必须用GPU。GPU推理比CPU快10-50倍。仅CPU配置：使用3B量化模型。推荐GPU：NVIDIA（CUDA）、AMD（ROCm）、苹果（M系列Metal）。'
             }
           ]
+        },
+        countrySpecific: {
+          id: 'country-specific-zh',
+          title: '繁體中文用戶指南：台灣與香港的本地LLM選擇',
+          content: [
+            '台灣和香港的繁體中文用戶面臨特殊挑戰：大多數中文LLM以簡體中文訓練，對繁體字的支援參差不齊。好消息是，Qwen2.5等頂尖模型已針對繁體中文做出顯著改善，而Apple Silicon在台灣的高普及率更帶來了MLX框架的天然優勢。',
+            '台灣是全球Apple Silicon最密集的市場之一（台積電製造M系列晶片，本地消費者對Apple生態系忠誠度極高）。MLX框架配合Qwen2.5或Llama 3.1，可在M1/M2/M3 MacBook上實現流暢的繁體中文推理。',
+          ],
+          items: [
+            '**繁體vs簡體的模型選擇：** Qwen2.5（阿里巴巴）同時支援繁體和簡體，是台港用戶首選。GLM-4（清華大學）偏重簡體但繁體可用。提示詞中明確指定「請使用繁體中文回答」可提升輸出質量。',
+            '**台灣市場的硬體生態：** MacBook M系列是台灣開發者主流選擇。MLX框架（Apple開源）充分利用統一記憶體架構，7B模型在16GB RAM的MacBook Pro上可流暢運行。台灣科技圈常用PTT Gossiping、Dcard科技版分享使用心得。',
+            '**香港用戶注意事項：** 粵語輸入和繁體中文書寫是兩個不同需求。目前本地LLM對粵語口語的支援有限；書面繁體中文則表現良好。建議提示詞使用「書面繁體中文」而非「粵語」。',
+            '**App Store可用性（台港）：** iOS和macOS App Store在台灣和香港均可正常存取，Ollama官方macOS客戶端、PocketPal AI均可下載。與中國大陸不同，台港用戶無需任何VPN即可使用全部開源模型資源。',
+            '**隱私與數據主權：** 台灣個人資料保護法（個資法）和香港《個人資料（私隱）條例》均要求對個人資料的處理有充分保障。本地LLM是合規最簡單的方案——資料完全不離開設備。',
+          ],
         },
         relatedReading: {
           title: '相关阅读',

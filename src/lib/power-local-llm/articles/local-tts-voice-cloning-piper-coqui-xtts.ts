@@ -847,6 +847,21 @@ tts.tts_to_file(
           '[F5-TTS auf GitHub](https://github.com/SWivid/F5-TTS) — Flow-Matching-TTS mit Zero-Shot-Voice-Cloning, Installationsanleitung und mehrsprachiger Unterstützung.',
         ],
       },
+      countrySpecific: {
+        id: 'country-specific-de',
+        title: 'TTS in Deutschland: DSGVO-konforme Sprachsynthese und deutsche Modelle',
+        content: [
+          'Deutschland hat mit 9,09% die höchste CTR aller lokalisierten Pfade auf dieser Seite — ein klares Signal, dass der deutschsprachige Markt nach offline-fähigen TTS-Lösungen sucht. Der Grund liegt in der DSGVO: Sprachsynthese für Kundenservice, Barrierefreiheit oder Content-Produktion darf keine Audio-Rohdaten an externe Server übermitteln.',
+          'Piper TTS bietet vollständige DSGVO-Compliance durch vollständige Offline-Verarbeitung. BSI Grundschutz-konforme Implementierungen sind mit lokalem TTS deutlich einfacher dokumentierbar als mit Cloud-APIs wie ElevenLabs oder Azure Speech.',
+        ],
+        items: [
+          '**Piper DE-Modelle:** Piper enthält mehrere deutsche Stimmen (de_DE-thorsten-low, de_DE-thorsten-medium, de_DE-eva_k-x_low). Thorsten-medium bietet das beste Verhältnis aus Natürlichkeit und Latenz auf Standard-Hardware (Intel Core i7, kein GPU nötig).',
+          '**XTTS v2 für Deutsch:** Coqui XTTS v2 unterstützt Deutsch mit Zero-Shot Voice Cloning. Besonders nützlich für Audiobook-Produktion und barrierefreie Dokumente. GPU-Anforderung: mindestens 6 GB VRAM (RTX 3060 oder besser).',
+          '**DSGVO-Implementierungshinweis:** Bei der Verarbeitung von Stimmdaten (Voice Cloning) gelten biometrische Datenschutzanforderungen nach DSGVO Art. 9. Reine Textsynthese (kein Cloning) ist datenschutzrechtlich unkritisch, sofern kein Personenbezug im Text besteht.',
+          '**NHK-Äquivalent für DE:** ARD und ZDF veröffentlichen keine Stimmdaten für TTS. Für professionelle deutsche Stimmen: Thorsten-Voice-Projekt (GitHub, Open Source, CC BY 4.0) als Community-Alternative zu proprietären Stimmpaketen.',
+          '**Österreich und Schweiz:** Standarddeutsch-Modelle funktionieren für beide Länder. Dialekte (Österreichisch, Schweizerdeutsch) werden von aktuellen Piper/XTTS-Modellen nicht unterstützt — Hochdeutsch-Ausgabe ist der Standardfall.',
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
@@ -1425,6 +1440,21 @@ tts.tts_to_file(
           '[F5-TTS on GitHub](https://github.com/SWivid/F5-TTS) — フローマッチング TTS、ゼロショットボイスクローニング、インストールガイド、多言語サポート。',
         ],
       },
+      countrySpecific: {
+        id: 'country-specific-ja',
+        title: '日本語TTS完全ガイド：VOICEVOX・Style-Bert-VITS2・XTTS v2',
+        content: [
+          'VOICEVOXは日本語TTS界のデファクトスタンダードです。完全無料・商用利用可・完全オフライン動作という三拍子が揃い、個人クリエイターからゲームスタジオまで幅広く採用されています。Piper TTS（英語中心）やCoqui XTTS v2（多言語）とは異なるエコシステムを形成しています。',
+          '日本語音声合成特有の課題は読み仮名処理（漢字→ひらがな変換）です。VOICEVOX、Style-Bert-VITS2などの日本語特化TTSはこれを内部処理しますが、XTTS v2では日本語テキストに対して事前のフリガナ付与（pyopenjtalk等）が推奨されます。',
+        ],
+        items: [
+          '**VOICEVOX（推奨）：** 完全無料・オフライン・商用可。四国めたん、ずんだもん等の個性的なキャラクター音声が特徴。Windows/Mac/Linux対応。APIモードで他アプリと連携可能。音声クローニング非対応だが日本語品質は最高水準。',
+          '**Style-Bert-VITS2：** VOICEVOXより自然な感情表現が可能な上位互換TTS。訓練データがあれば任意話者のクローニングも可能。GPU推奨（CUDA）だがCPUでも動作。日本語アニメ・ゲーム用途で特に人気。',
+          '**XTTS v2の日本語対応：** 多言語クローニングが強み。日本語テキストには事前処理が必要：`pip install pyopenjtalk`でフリガナ変換を追加すると品質が大幅改善。サンプル音声30秒あれば任意の話者に近似可能。',
+          '**個人情報保護とプライバシー：** 声紋データは生体情報に相当。個人情報保護法（PIPA）の2022年改正により、クラウドTTSサービスへの音声送信には利用者同意が必要。ローカルTTSはこの問題を根本的に回避。',
+          '**コミュニティリソース：** VOICEVOX公式サイト（voicevox.hiroshiba.jp）、Style-Bert-VITS2（GitHub）、日本語TTSの最新動向はZenn「#TTS」タグ、Qiita「音声合成」タグで追跡可能。',
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: '関連記事',
@@ -1712,6 +1742,21 @@ tts.tts_to_file(
           '[Coqui TTS on GitHub](https://github.com/coqui-ai/TTS) — 源代码、模型列表、声音克隆文档和Python API参考。',
           '[XTTS v2文档](https://docs.coqui.ai/en/latest/models/xtts.html) — XTTS v2模型卡、许可证（CPML）和声音克隆API。',
           '[F5-TTS on GitHub](https://github.com/SWivid/F5-TTS) — 流匹配TTS、零样本声音克隆、安装指南和多语言支持。',
+        ],
+      },
+      countrySpecific: {
+        id: 'country-specific-zh',
+        title: '繁體中文TTS指南：台灣與香港的本地語音合成選擇',
+        content: [
+          '普通話（Mandarin）文字轉語音是XTTS v2最成熟的非英語能力之一。對於台灣和香港用戶，選擇支援繁體中文輸入的TTS引擎至關重要——大多數中文TTS預設以簡體字訓練，繁體字處理需要額外設定。',
+          '台灣本地有幾個值得關注的TTS項目：由成功大學、交通大學等機構開發的中文語音合成研究成果，以及部分開源的台語（Taiwanese Hokkien）TTS實驗項目，這些都是雲端TTS服務無法替代的本地資源。',
+        ],
+        items: [
+          '**XTTS v2繁體中文設定：** 語言代碼使用`zh-cn`（XTTS v2目前不區分繁簡，但輸入繁體字可正確發音）。建議在提示詞中加入「請使用台灣國語腔調」以獲得更接近台灣口音的輸出。',
+          '**Coqui TTS中文模型：** Coqui提供`tts_models/zh-CN/baker/tacotron2-DDC`作為基礎中文TTS。Baker語料庫以女聲普通話為主，品質穩定但音色單一。適合需要穩定輸出的商業用途。',
+          '**聲音克隆（Voice Cloning）注意事項：** 台灣和香港均受個人資料保護法規管轄（台灣個資法、香港《個人資料（私隱）條例》）。使用他人聲音進行克隆需取得明確同意。用於教育、無障礙服務的自身聲音克隆不受此限制。',
+          '**台語（Taiwanese）TTS現況：** 目前無成熟的本地台語TTS方案。國立臺灣大學的TWNTTS研究項目持續進行中，但尚未有可直接部署的版本。普通話TTS是目前唯一實用選項。',
+          '**硬體建議（台灣市場）：** MacBook M系列（M1/M2/M3/M4）是台灣開發者主流。XTTS v2在M2 Pro 16GB RAM上可實時執行，無需GPU外接卡。NVIDIA GPU用戶（RTX 3060以上）可使用CUDA加速版本。',
         ],
       },
       relatedReading: {
