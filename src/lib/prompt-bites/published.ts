@@ -75,6 +75,12 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-ai-text-to-speech-for-content-creators',
   'best-open-source-alternatives-to-chatgpt-plus',
   'cheapest-way-to-run-70b-model-locally',
+  // Japan Sprint 2026-05-27
+  'best-local-llm-apps-japan-android',
+  'best-japanese-language-models-local',
+  'run-local-llm-on-xperia-japan',
+  'best-mini-pc-local-llm-japan',
+  'best-gpu-local-llm-japan-price',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true
