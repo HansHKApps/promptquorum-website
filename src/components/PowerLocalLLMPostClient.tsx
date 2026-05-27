@@ -533,7 +533,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
                 <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
                   {section.columns!.map((col, colIdx) => (
                     <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
-                      {renderInlineLinks(row[col] ?? '—', lang)}
+                      {renderInlineLinks(row[col] ?? row[String(colIdx)] ?? '—', lang)}
                     </td>
                   ))}
                 </tr>
