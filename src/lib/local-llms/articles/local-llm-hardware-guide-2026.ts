@@ -11,9 +11,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
-      seoTitle: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
+      seoTitle: 'Local LLM Hardware 2026: 7B to 70B VRAM & GPU Guide',
       intro: 'Running local LLMs requires matching your GPU\'s VRAM to the model you want to run. As of May 2026, a 7B model needs 8-9 GB VRAM at Q8, a 14B model needs 15 GB, and most 70B models need 39 GB at Q4_K_M -- more than a single RTX 4090 holds. This guide covers specific model recommendations for 12 GB, 16 GB, and 24 GB VRAM tiers, CPU-only inference on 16 GB system RAM, llama.cpp speed settings for RTX 4070 Ti, and full hardware build configurations.',
-      metaDescription: 'Build or buy local LLM hardware in 2026: NVIDIA GPUs, AMD Ryzen AI Max+ mini PCs, Apple Silicon Macs compared with prices, benchmarks, power use.',
+      metaDescription: '7B models need 8 GB VRAM, 13B need 16 GB, 70B need 40 GB at Q4. RTX 4070 Ti for 14B, RTX 4090 for 32B, M5 Max for 70B. GPU benchmarks, May 2026.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
@@ -584,7 +584,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Local LLM Hardware Guide 2026: What GPU Do You Need?',
         'description': 'What GPU do you need for local LLMs? See exact requirements for 7B–70B models, real RTX 4070–5090 benchmarks, and avoid wasting money.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
@@ -676,7 +676,7 @@ schema: {
     de: {
       theme: 'Hardware & Performance',
       title: '70B LLM Hardware-Anforderungen 2026: VRAM, GPU & Build Guide',
-      seoTitle: 'LLM-Hardware nach Modell: 70B, 13B, 7B VRAM-Anleitung 2026',
+      seoTitle: 'LLM Hardware 2026: VRAM-Anforderungen für 7B, 13B und 70B',
       intro: 'Um lokale LLMs auszuführen, müssen Sie drei Komponenten verstehen: GPU (optional, aber empfohlen), CPU und RAM. Im Mai 2026 benötigt ein 7B-Parameter-Modell mindestens 8 GB RAM, während ein 70B-Modell 40+ GB benötigt. Dieser Leitfaden behandelt echte Hardware-Empfehlungen für RTX 5090, 4090, Apple Silicon und Budget-Builds sowie VRAM-Mathematik zur Berechnung der Anforderungen für jede Modellgröße.',
       metaDescription: 'Beste GPUs für lokale LLMs 2026: RTX 4090 für 70B, RTX 4070 Ti für 14B, RTX 4060 für 7B. VRAM-Anforderungen, Benchmarks und Hardware-Empfehlungen.',
       publishDate: '2026-04-04',
@@ -993,9 +993,9 @@ schema: {
     fr: {
       theme: 'Hardware & Performance',
       title: 'Exigences Matériel 70B LLM 2026: VRAM, GPU & Guide Build',
-      seoTitle: 'Exigences Matériel LLM par Modèle: 70B, 13B, 7B Guide 2026',
+      seoTitle: 'Matériel LLM Local 2026: VRAM par Modèle (7B, 13B, 70B)',
       intro: 'Exécuter des LLM locaux nécessite de comprendre trois composants: GPU (facultatif mais recommandé), CPU et RAM. En avril 2026, un modèle 7B à paramètres a besoin d\'un minimum de 8 GB de RAM, tandis qu\'un modèle 70B a besoin de 40+ GB. Ce guide couvre les recommandations matérielles réelles pour RTX 5090, 4090, Apple Silicon et les builds économiques, ainsi que les mathématiques VRAM pour calculer les exigences pour n\'importe quelle taille de modèle.',
-      metaDescription: 'RTX 4070 Ti (12 Go) : modèles 7-13B à 80 tok/s. RTX 4090 (24 Go) : tout modèle 70B. Formule VRAM, calculateur Q4, Apple Silicon, RTX 5090. Avril 2026.',
+      metaDescription: 'RTX 4070 Ti (12 Go) : modèles 7-13B à 80 tok/s. RTX 4090 (24 Go) : tout modèle 70B. Formule VRAM, calculateur Q4, Apple Silicon, RTX 5090. Mai 2026.',
       nextStep: {
         text: 'Vous connaissez vos besoins matériels ? Trouvez maintenant le meilleur GPU budget pour les LLMs locaux.',
         label: 'Meilleures GPUs budget pour les LLMs locaux →',
@@ -1296,7 +1296,7 @@ schema: {
     ja: {
       theme: 'Hardware & Performance',
       title: '70B LLMハードウェア要件2026：VRAM、GPU & ビルドガイド',
-      seoTitle: 'LLMハードウェア（モデル別）：70B、13B、7B VRAM完全ガイド',
+      seoTitle: 'LLMハードウェア（モデル別）：70B・13B・7B VRAM目安 2026年',
       intro: 'ローカルLLMを実行するには、GPU（オプションですが推奨）、CPU、RAMの3つのコンポーネントを理解する必要があります。2026年5月現在、7Bパラメータモデルには最小8 GB RAMが必要で、70Bモデルには40+ GB必要です。このガイドでは、RTX 5090、4090、Apple Silicon、予算ビルドの実際のハードウェアレコメンデーション、およびあらゆるモデルサイズの要件を計算するためのVRAM数学をカバーしています。',
       metaDescription: 'RTX 4070 Ti（12 GB）：7～13Bモデル80tok/s。RTX 4090（24 GB）：70B対応。VRAM計算式、Q4_K_M目安、Apple Silicon、RTX 5090。2026年5月更新。',
       nextStep: {
@@ -1596,7 +1596,7 @@ schema: {
     zh: {
       theme: 'Hardware & Performance',
       title: '70B LLM硬件要求2026：VRAM、GPU及构建指南',
-      seoTitle: 'LLM硬件要求（按模型）：70B、13B、7B VRAM完全指南',
+      seoTitle: '2026年本地LLM硬件配置指南：7B、13B、70B模型VRAM需求对照',
       intro: '运行本地LLM需要理解三个组件：GPU（可选但推荐）、CPU和RAM。截至2026年5月，7B参数模型需要最少8 GB RAM，而70B模型需要40+ GB。本指南涵盖RTX 5090、4090、Apple Silicon和预算构建的实际硬件建议，以及用于计算任何模型大小的需求的VRAM数学。',
       metaDescription: 'RTX 4070 Ti（12 GB）：7-13B模型80词元/秒。RTX 4090（24 GB）：支持所有70B模型。VRAM公式、Q4量化、Apple Silicon、RTX 5090。2026年5月。',
       nextStep: {
