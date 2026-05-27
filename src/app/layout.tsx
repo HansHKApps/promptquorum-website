@@ -17,6 +17,8 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { CookieBanner } from '@/components/CookieBanner'
@@ -260,6 +262,8 @@ gtag('config', 'G-8DQ4B3DXBS', {
             data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
             data-host-url="/api/stats"
           />
+          <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
+          <SpeedInsights />
           <ConsentedAnalytics />
         </Providers>
       </body>
