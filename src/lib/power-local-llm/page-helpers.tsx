@@ -1265,7 +1265,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh') {
               en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新增',
             }
             const recentSlugs = Object.entries(powerLLMContent)
-              .filter(([slug, content]) => isNewArticle(content?.['en']?.publishDate) && isPowerLLMArticlePublished(slug))
+              .filter(([slug, content]) => isNewArticle(content?.['en']?.publishDate) && isPowerLLMArticlePublished(slug, 'en'))
               .map(([slug]) => slug)
             if (recentSlugs.length === 0) return null
             return (
