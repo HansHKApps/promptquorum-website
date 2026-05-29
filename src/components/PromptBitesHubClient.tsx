@@ -7,6 +7,18 @@ import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { PROMPT_BITES_CATEGORIES } from '@/lib/prompt-bites/categories'
 import { PROMPT_BITES_PUBLISHED_SLUGS } from '@/lib/prompt-bites/published'
 import type { Language } from '@/lib/blog/blogContent'
+import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
+
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新' }
+const RECENT_HEADING: Record<string, string> = { en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増' }
+const RECENT_SUB: Record<string, string> = {
+  en: 'Just published — disappears from this spot after 14 days',
+  de: 'Gerade veröffentlicht — verschwindet nach 14 Tagen',
+  fr: 'Vient de paraître — disparaît de cet emplacement après 14 jours',
+  ja: '公開されたばかり — 14日後にここから消えます',
+  zh: '刚刚发布 — 14天后从此处消失',
+}
 
 interface Props {
   lang: Language
@@ -269,6 +281,41 @@ export function PromptBitesHubClient({ lang }: Props) {
           </table>
         </div>
 
+        {/* Recently Published — auto-surfaced articles with publishDate within 14 days */}
+        {(() => {
+          const recentSlugs = Object.entries(PROMPT_BITES_SLUG_TO_KEY)
+            .filter(([slug, key]) => PROMPT_BITES_PUBLISHED_SLUGS.has(slug) && isNewArticle(promptBitesContent[key]?.['en']?.publishDate))
+            .map(([slug]) => slug)
+          if (recentSlugs.length === 0) return null
+          return (
+            <section className="mb-12 border-2 border-emerald-400/40 rounded-2xl p-6 bg-emerald-50/30">
+              <div className="flex items-center gap-3 mb-1">
+                <h2 className="text-2xl font-black text-emerald-800 tracking-tight">{RECENT_HEADING[lang] ?? RECENT_HEADING['en']}</h2>
+                <span className="text-xs font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-sm rounded px-2.5 py-1">{recentSlugs.length}</span>
+              </div>
+              <p className="text-xs text-emerald-700/70 mb-5">{RECENT_SUB[lang] ?? RECENT_SUB['en']}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {recentSlugs.map((slug) => {
+                  const key = PROMPT_BITES_SLUG_TO_KEY[slug]
+                  const article = promptBitesContent[key]?.[lang] ?? promptBitesContent[key]?.['en']
+                  if (!article) return null
+                  const href = promptBitesArticleHref(lang, slug)
+                  return (
+                    <div key={slug} className="relative h-full ring-2 ring-emerald-400/60 shadow-[0_0_12px_rgba(52,211,153,0.25)] rounded-xl">
+                      <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-md rounded px-2.5 py-0.5 z-10">
+                        {NEW_LABEL[lang] ?? NEW_LABEL['en']}
+                      </span>
+                      <Link href={href} className="flex flex-col rounded-xl border-2 border-emerald-400 bg-card p-4 h-full hover:border-emerald-500 hover:bg-primary/5 hover:shadow-sm transition-all">
+                        <p className="text-sm font-semibold text-text-primary leading-snug line-clamp-2">{article.title}</p>
+                      </Link>
+                    </div>
+                  )
+                })}
+              </div>
+            </section>
+          )
+        })()}
+
         <div className="space-y-12">
           {slugsByCategory.map((cat) => (
             cat.slugs.length > 0 && (
@@ -308,28 +355,43 @@ export function PromptBitesHubClient({ lang }: Props) {
                       : null
                     const levelKey = (article as any).educationalLevel
                     const levelLabel = EDUCATIONAL_LEVEL[levelKey]?.[lang] ?? levelKey
+                    const publishDate = promptBitesContent[key]?.['en']?.publishDate
+                    const dateModified = promptBitesContent[key]?.['en']?.dateModified
+                    const showNew = isNewArticle(publishDate)
+                    const showUpdated = !showNew && isUpdatedArticle(publishDate, dateModified)
                     return (
-                      <Link
-                        key={slug}
-                        href={href}
-                        className="flex flex-col rounded-xl border border-primary/15 bg-card p-4 hover:border-primary/40 hover:bg-primary/5 hover:shadow-sm transition-all"
-                      >
-                        <div className="flex items-start justify-between gap-2">
-                          <p className="text-sm font-semibold text-text-primary leading-snug line-clamp-2 flex-1">
-                            {article.title}
-                          </p>
-                          {levelKey && (
-                            <span className="shrink-0 text-xs px-1.5 py-0.5 rounded bg-primary/10 text-primary/80 font-medium">
-                              {levelLabel}
-                            </span>
-                          )}
-                        </div>
-                        {previewText && (
-                          <p className="text-xs text-text-secondary leading-relaxed line-clamp-2 mt-2">
-                            {previewText}
-                          </p>
+                      <div key={slug} className={`relative h-full transition-all rounded-xl ${showNew ? 'ring-2 ring-emerald-400/60 shadow-[0_0_12px_rgba(52,211,153,0.25)]' : showUpdated ? 'ring-2 ring-amber-400/60 shadow-[0_0_12px_rgba(251,191,36,0.25)]' : ''}`}>
+                        {showNew && (
+                          <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-md rounded px-2.5 py-0.5 z-10">
+                            {NEW_LABEL[lang] ?? NEW_LABEL['en']}
+                          </span>
                         )}
-                      </Link>
+                        {showUpdated && (
+                          <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-black uppercase tracking-widest text-white bg-amber-500 border-2 border-amber-300 shadow-md rounded px-2.5 py-0.5 z-10">
+                            {UPDATED_LABEL[lang] ?? UPDATED_LABEL['en']}
+                          </span>
+                        )}
+                        <Link
+                          href={href}
+                          className={`flex flex-col rounded-xl bg-card p-4 h-full hover:bg-primary/5 hover:shadow-sm transition-all ${showNew ? 'border-2 border-emerald-400 hover:border-emerald-500' : showUpdated ? 'border-2 border-amber-400 hover:border-amber-500' : 'border border-primary/15 hover:border-primary/40'}`}
+                        >
+                          <div className="flex items-start justify-between gap-2">
+                            <p className="text-sm font-semibold text-text-primary leading-snug line-clamp-2 flex-1">
+                              {article.title}
+                            </p>
+                            {levelKey && (
+                              <span className="shrink-0 text-xs px-1.5 py-0.5 rounded bg-primary/10 text-primary/80 font-medium">
+                                {levelLabel}
+                              </span>
+                            )}
+                          </div>
+                          {previewText && (
+                            <p className="text-xs text-text-secondary leading-relaxed line-clamp-2 mt-2">
+                              {previewText}
+                            </p>
+                          )}
+                        </Link>
+                      </div>
                     )
                   })}
                 </div>
