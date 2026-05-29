@@ -184,8 +184,8 @@ function promptBitesArticleHref(lang: Language, slug: string): string {
   return lang === 'en' ? `/prompt-bites/${slug}` : `/${lang}/prompt-bites/${slug}`
 }
 
-// Languages with hand-authored category SVGs. Others (es, pt, ar) fall back to the English asset.
-const SVG_LANGS = ['en', 'de', 'fr', 'ja', 'zh'] as const
+// Languages with hand-authored category SVGs. Others (pt, ar) fall back to the English asset.
+const SVG_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es'] as const
 function svgLang(lang: Language): string {
   return (SVG_LANGS as readonly string[]).includes(lang) ? lang : 'en'
 }
