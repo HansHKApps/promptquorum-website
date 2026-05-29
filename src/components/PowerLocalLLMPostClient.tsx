@@ -393,6 +393,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
                   ))}
                 </ul>
               )
+              if (block.type === 'table') return renderMarkdownTable(block.lines, renderLinks)
               return <p key={i} className="text-text-secondary leading-relaxed">{renderLinks(block.text)}</p>
             })
           })()}
