@@ -22,6 +22,7 @@ export const llmThemes: LLMTheme[] = [
       'local-llm-on-laptop',
       'local-llm-security-privacy-checklist',
       'local-llm-limitations',
+      'qwen-local-deployment-guide-2026',
     ],
   },
   {
@@ -124,6 +125,7 @@ export const llmThemes: LLMTheme[] = [
       'used-gpus-for-local-llms',
       'how-much-vram-local-llm',
       'best-amd-gpus-local-llm',
+      'best-gpu-for-llm-inference-under-500-2026',
     ],
   },
   {
@@ -160,6 +162,8 @@ export const llmThemes: LLMTheme[] = [
       'local-llm-vs-cloud-gpu-cost',
       'mac-vs-windows-vs-linux-local-llm',
       'gpu-vs-ai-subscription-roi',
+      'alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
+      'local-llm-cost-calculator-build-vs-rent-2026',
     ],
   },
 ]

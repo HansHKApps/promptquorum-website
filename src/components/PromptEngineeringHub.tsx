@@ -776,7 +776,7 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
                       const contentKey = PE_SLUG_TO_KEY[key]
                       const dates = contentKey ? datesMap?.[contentKey] : undefined
                       return (
-                        <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }} publishDate={dates?.publishDate} dateModified={dates?.dateModified}>
+                        <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }} publishDate={dates?.publishDate} dateModified={dates?.dateModified} lang={lang}>
                           <ArticleCard articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
                         </HubArticleCard>
                       )
@@ -797,7 +797,7 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
                             const contentKey = PE_SLUG_TO_KEY[key]
                             const dates = contentKey ? datesMap?.[contentKey] : undefined
                             return (
-                              <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }} publishDate={dates?.publishDate} dateModified={dates?.dateModified}>
+                              <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }} publishDate={dates?.publishDate} dateModified={dates?.dateModified} lang={lang}>
                                 <ArticleCard articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
                               </HubArticleCard>
                             )

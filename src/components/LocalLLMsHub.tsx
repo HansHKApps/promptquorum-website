@@ -9,6 +9,9 @@ import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新' }
+
 function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
 }
@@ -954,20 +957,20 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
   const showUpdated = !showNew && isUpdatedArticle(publishDate, dateModified)
 
   return (
-    <div className="relative">
+    <div className={`relative transition-all rounded-xl ${showNew ? 'ring-2 ring-emerald-400/60 shadow-[0_0_12px_rgba(52,211,153,0.25)]' : showUpdated ? 'ring-2 ring-amber-400/60 shadow-[0_0_12px_rgba(251,191,36,0.25)]' : ''}`}>
       {showNew && (
-        <span className="absolute -top-2.5 right-3 text-[10px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5 z-10">
-          New
+        <span className="absolute -top-3.5 right-3 text-[11px] font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-md rounded px-2.5 py-0.5 z-10">
+          {NEW_LABEL[lang] ?? NEW_LABEL['en']}
         </span>
       )}
       {showUpdated && (
-        <span className="absolute -top-2.5 right-3 text-[10px] font-semibold text-amber-700 bg-amber-50 border border-amber-100 rounded-full px-2 py-0.5 z-10">
-          Updated
+        <span className="absolute -top-3.5 right-3 text-[11px] font-black uppercase tracking-widest text-white bg-amber-500 border-2 border-amber-300 shadow-md rounded px-2.5 py-0.5 z-10">
+          {UPDATED_LABEL[lang] ?? UPDATED_LABEL['en']}
         </span>
       )}
       <Link
         href={href}
-        className="flex items-start gap-3 bg-card border border-primary/30 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+        className={`flex items-start gap-3 bg-card rounded-xl p-4 transition-colors group ${showNew ? 'border-2 border-emerald-400 hover:border-emerald-500' : showUpdated ? 'border-2 border-amber-400 hover:border-amber-500' : 'border border-primary/30 hover:border-primary/50 hover:bg-primary/5'}`}
       >
         <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
         <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">
@@ -1206,19 +1209,30 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           const RECENT_HEADING: Record<string, string> = {
             en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新增',
           }
+          const RECENT_SUB: Record<string, string> = {
+            en: 'Just published — disappears from this spot after 14 days',
+            de: 'Gerade veröffentlicht — verschwindet nach 14 Tagen',
+            fr: 'Vient de paraître — disparaît de cet emplacement après 14 jours',
+            ja: '公開されたばかり — 14日後にここから消えます',
+            zh: '刚刚发布 — 14天后从此处消失',
+          }
           const recentSlugs = Object.entries(LLM_SLUG_TO_KEY)
             .filter(([, key]) => isNewArticle(llmContent[key]?.en?.publishDate))
             .map(([slug]) => slug)
           if (recentSlugs.length === 0) return null
           const dotColor = 'bg-emerald-400'
           return (
-            <section className="mb-16">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+            <section className="mb-16 border-2 border-emerald-400/40 rounded-2xl p-6 bg-emerald-50/30">
+              <div className="flex items-center gap-3 mb-1">
+                <h2 className="text-2xl font-black text-emerald-800 tracking-tight">
                   {RECENT_HEADING[lang] ?? RECENT_HEADING['en']}
+                </h2>
+                <span className="text-xs font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-sm rounded px-2.5 py-1">
+                  {recentSlugs.length}
                 </span>
               </div>
-              <div className="grid sm:grid-cols-2 gap-5 mt-4">
+              <p className="text-xs text-emerald-700/70 mb-5">{RECENT_SUB[lang] ?? RECENT_SUB['en']}</p>
+              <div className="grid sm:grid-cols-2 gap-5">
                 {recentSlugs.map(slug => (
                   <ArticleCard key={slug} articleKey={slug} dot={dotColor} lang={lang} />
                 ))}

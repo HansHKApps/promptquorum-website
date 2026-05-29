@@ -14,6 +14,9 @@ import { powerLLMAlternates, powerLLMHubPath, powerLLMArticlePath } from './meta
 import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
 import { isPowerLLMArticlePublished, isPowerLLMHubPublished } from './published'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
+
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新' }
 import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
 
 const BASE = 'https://www.promptquorum.com'
@@ -624,6 +627,8 @@ const HUB_THEMES: Array<{
     colorDot: 'bg-slate-400',
     slugs: [
       'local-llm-software-directory-2026',
+      'apple-mlx-vs-nvidia-cuda-local-llm-2026',
+      'deepseek-vs-qwen-local-comparison-2026',
     ],
   },
   {
@@ -639,6 +644,8 @@ const HUB_THEMES: Array<{
       'local-ai-app-non-technical-users',
       'best-local-ai-app-low-end-pc',
       'local-ai-app-with-built-in-rag',
+      'qwen-local-deployment-complete-guide-2026',
+      'best-workstation-build-local-ai-2026',
     ],
   },
   {
@@ -654,6 +661,7 @@ const HUB_THEMES: Array<{
       'best-embedding-models-local-rag-2026',
       'chat-with-1000-pdfs-locally',
       'local-rag-for-private-business-data',
+      'best-rag-tools-for-business-documents-2026',
     ],
   },
   {
@@ -669,6 +677,8 @@ const HUB_THEMES: Array<{
       'best-local-coding-models-2026',
       'local-coding-llm-without-internet',
       'local-llm-code-review-ci-cd',
+      'best-local-llm-ide-plugins-2026',
+      'deepseek-vs-qwen-coding-local-2026',
     ],
   },
   {
@@ -684,6 +694,7 @@ const HUB_THEMES: Array<{
       'autonomous-local-agents-actually-work',
       'replace-zapier-with-local-ai-agents',
       'local-ai-agents-business-workflows-eu-compliance',
+      'local-ai-behind-firewall-offline-2026',
     ],
   },
   {
@@ -729,6 +740,8 @@ const HUB_THEMES: Array<{
       'local-llm-personal-knowledge-base-2026',
       'local-llm-email-and-calendar-automation',
       'replace-grammarly-notion-ai-with-local',
+      'wechat-bot-local-llm-personal-assistant-2026',
+      'wechat-local-llm-integration-2026',
     ],
   },
   {
@@ -1175,20 +1188,20 @@ function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang
   const showUpdated = !showNew && isUpdatedArticle(publishDate, dateModified)
 
   return (
-    <div className="relative">
+    <div className={`relative transition-all rounded-xl ${showNew ? 'ring-2 ring-emerald-400/60 shadow-[0_0_12px_rgba(52,211,153,0.25)]' : showUpdated ? 'ring-2 ring-amber-400/60 shadow-[0_0_12px_rgba(251,191,36,0.25)]' : ''}`}>
       {showNew && (
-        <span className="absolute -top-2.5 right-3 text-[10px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5 z-10">
-          New
+        <span className="absolute -top-3.5 right-3 text-[11px] font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-md rounded px-2.5 py-0.5 z-10">
+          {NEW_LABEL[lang] ?? NEW_LABEL['en']}
         </span>
       )}
       {showUpdated && (
-        <span className="absolute -top-2.5 right-3 text-[10px] font-semibold text-amber-700 bg-amber-50 border border-amber-100 rounded-full px-2 py-0.5 z-10">
-          Updated
+        <span className="absolute -top-3.5 right-3 text-[11px] font-black uppercase tracking-widest text-white bg-amber-500 border-2 border-amber-300 shadow-md rounded px-2.5 py-0.5 z-10">
+          {UPDATED_LABEL[lang] ?? UPDATED_LABEL['en']}
         </span>
       )}
       <Link
         href={powerLLMArticlePath(lang, slug)}
-        className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+        className={`flex items-start gap-3 bg-card rounded-xl p-4 transition-colors group ${showNew ? 'border-2 border-emerald-400 hover:border-emerald-500' : showUpdated ? 'border-2 border-amber-400 hover:border-amber-500' : 'border border-primary/15 hover:border-primary/50 hover:bg-primary/5'}`}
       >
         <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
         <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">
@@ -1262,20 +1275,31 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh') {
           {/* Recently Published — auto-surfaced articles with publishDate within 15 days */}
           {(() => {
             const RECENT_HEADING: Record<string, string> = {
-              en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新增',
+              en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増',
+            }
+            const RECENT_SUB: Record<string, string> = {
+              en: 'Just published — disappears from this spot after 14 days',
+              de: 'Gerade veröffentlicht — verschwindet nach 14 Tagen',
+              fr: 'Vient de paraître — disparaît de cet emplacement après 14 jours',
+              ja: '公開されたばかり — 14日後にここから消えます',
+              zh: '刚刚发布 — 14天后从此处消失',
             }
             const recentSlugs = Object.entries(powerLLMContent)
               .filter(([slug, content]) => isNewArticle(content?.['en']?.publishDate) && isPowerLLMArticlePublished(slug, 'en'))
               .map(([slug]) => slug)
             if (recentSlugs.length === 0) return null
             return (
-              <section className="mb-16">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+              <section className="mb-16 border-2 border-emerald-400/40 rounded-2xl p-6 bg-emerald-50/30">
+                <div className="flex items-center gap-3 mb-1">
+                  <h2 className="text-2xl font-black text-emerald-800 tracking-tight">
                     {RECENT_HEADING[lang] ?? RECENT_HEADING['en']}
+                  </h2>
+                  <span className="text-xs font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-sm rounded px-2.5 py-1">
+                    {recentSlugs.length}
                   </span>
                 </div>
-                <div className="grid sm:grid-cols-2 gap-5 mt-4">
+                <p className="text-xs text-emerald-700/70 mb-5">{RECENT_SUB[lang] ?? RECENT_SUB['en']}</p>
+                <div className="grid sm:grid-cols-2 gap-5">
                   {recentSlugs.map(slug => (
                     <PowerArticleCard key={slug} slug={slug} dot="bg-emerald-400" lang={lang} />
                   ))}

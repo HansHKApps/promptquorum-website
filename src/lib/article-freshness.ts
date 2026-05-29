@@ -1,4 +1,4 @@
-const NEW_BADGE_DAYS = 15
+const NEW_BADGE_DAYS = 14
 
 function daysSince(dateStr: string): number {
   const date = new Date(dateStr)
