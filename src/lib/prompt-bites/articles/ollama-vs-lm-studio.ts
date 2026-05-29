@@ -434,4 +434,88 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Tool Comparisons',
+    title: 'Ollama vs LM Studio: ¿Cuál deberías elegir?',
+    seoTitle: 'Ollama vs LM Studio | Prompt Bites | PromptQuorum',
+    metaDescription: 'Si usas terminal y desarrollas con APIs, elige Ollama. Si prefieres GUI y quieres chatear con modelos, usa LM Studio. Respuesta rápida de PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermedio',
+    audience: 'Desarrolladores eligiendo entre Ollama y LM Studio',
+    parentArticle: '/local-llms/ollama-vs-lm-studio',
+    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama'],
+    is_living_page: false,
+    quickAnswerTop: {
+      es: {
+        question: '¿Ollama vs LM Studio: cuál deberías elegir?',
+        answer: 'Si usas terminal y desarrollas con APIs, elige Ollama. Si prefieres una GUI y solo quieres chatear con modelos, usa LM Studio. Ambos son gratuitos y ejecutan modelos localmente.',
+        bullets: [
+          'Ollama: CLI-first, API compatible con OpenAI, herramienta para desarrolladores',
+          'LM Studio: GUI de escritorio, modelos de arrastrar y soltar, amigable para principiantes',
+          'Ambos funcionan en Mac, Windows y Linux',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ollama se ejecuta como servicio de fondo CLI en el puerto 11434 — inicia con `ollama serve`, descarga modelos con `ollama pull`, consulta con curl o cualquier cliente compatible con OpenAI',
+          'LM Studio es una aplicación GUI de escritorio — descarga desde lmstudio.ai, explora y carga modelos con un clic, ventana de chat integrada incluida',
+          'Ambos usan llama.cpp y GGUF bajo el capó, por lo que la velocidad de generación de tokens es casi idéntica para el mismo modelo y cuantización',
+        ],
+      },
+      body1: {
+        title: 'Dónde destaca cada herramienta',
+        content: [
+          '<strong>Ollama destaca para desarrolladores: sin sobrecarga de GUI, se integra con aplicaciones Python y JavaScript a través de su API REST compatible con OpenAI, y se ejecuta sin interfaz en servidores Linux.</strong> LM Studio destaca para principiantes: su tienda integrada de modelos te permite descargar y ejecutar un modelo en menos de tres minutos sin tocar la terminal.',
+          'Ambas herramientas usan llama.cpp bajo el capó, por lo que el modelo en sí se ejecuta de forma idéntica. La elección es cuestión de flujo de trabajo: línea de comandos vs interfaz visual. La siguiente tabla asigna cinco dimensiones prácticas a la herramienta que maneja cada una mejor.',
+        ],
+        columns: ['Característica', 'Ollama', 'LM Studio'],
+        rows: [
+          { 'Característica': 'Método de instalación', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'Instalador GUI' },
+          { 'Característica': 'Interfaz de chat', 'Ollama': 'Ninguna (solo API)', 'LM Studio': 'Integrada' },
+          { 'Característica': 'Servidor API', 'Ollama': 'REST, puerto 11434', 'LM Studio': 'REST, puerto 1234' },
+          { 'Característica': 'Gestión de modelos', 'Ollama': '`ollama pull <model>`', 'LM Studio': 'Explorar + clic' },
+          { 'Característica': 'Mejor para', 'Ollama': 'Desarrolladores + servidores', 'LM Studio': 'Principiantes + uso de chat' },
+        ],
+      },
+      body2: {
+        title: 'Cuándo usar ambos',
+        content: [
+          'Puedes ejecutar Ollama y LM Studio simultáneamente. Usa LM Studio para explorar y probar nuevos modelos, luego cambia a Ollama una vez que sepas qué modelo quieres integrar en una aplicación Python o JavaScript.',
+          'Ollama utiliza por defecto el puerto 11434, LM Studio utiliza por defecto el puerto 1234 — no entran en conflicto por defecto. Si has personalizado alguno de los puertos, establece la variable de entorno OLLAMA_HOST o cambia el puerto del servidor de LM Studio en Configuración.',
+          'Para la guía completa que cubre instalación, selección de modelos y ajuste del rendimiento, consulta la <a href="/es/local-llms/ollama-vs-lm-studio" class="text-primary hover:underline">comparación en profundidad de Ollama vs LM Studio</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre Ollama vs LM Studio',
+        faqs: [
+          {
+            q: '¿Pueden ejecutarse Ollama y LM Studio al mismo tiempo?',
+            a: 'Sí. Ollama utiliza por defecto el puerto 11434, LM Studio utiliza por defecto el puerto 1234, por lo que no entran en conflicto por defecto. Solo necesitas cambiar un puerto si has personalizado uno de ellos.',
+          },
+          {
+            q: '¿Cuál es más rápido — Ollama o LM Studio?',
+            a: 'El rendimiento es casi idéntico porque ambos usan llama.cpp bajo el capó para ejecutar modelos GGUF. La diferencia en la velocidad de generación de tokens entre los dos es inferior al 5% para el mismo modelo y nivel de cuantización.',
+          },
+          {
+            q: '¿Tiene LM Studio una interfaz de línea de comandos?',
+            a: 'LM Studio no tiene una CLI para ejecutar modelos. Es una aplicación solo de escritorio. Si necesitas acceso CLI o quieres integrar la inferencia de modelos en scripts, usa Ollama en su lugar.',
+          },
+          {
+            q: '¿Puedo usar Ollama completamente sin GUI?',
+            a: 'Sí. Ollama está diseñado para uso sin interfaz y en servidores. Se ejecuta como servicio systemd en Linux, no tiene dependencias de GUI, y puede combinarse con una interfaz de chat basada en navegador si es necesario. Consulta <a href="/es/prompt-bites/jan-vs-lm-studio" class="text-primary hover:underline">Jan vs LM Studio</a> para una comparación de opciones de GUI de escritorio.',
+          },
+        ],
+      },
+    },
+  },
 }
