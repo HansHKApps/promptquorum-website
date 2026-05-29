@@ -365,6 +365,95 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Prompt Engineering',
+    title: '¿Cuál es el mejor LLM ahora mismo?',
+    seoTitle: 'Mejor LLM 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Código: Claude Opus 4.7 (87.6% SWE-Bench). Chat: GPT-5.5 Instant (52.5% menos alucinaciones). Local: Llama 4 Scout o Qwen 2.5 14B. Actualizado mensualmente.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    current_models_mentioned: ['Claude Opus 4.7', 'GPT-5.5 Instant', 'Gemini 2.5 Pro', 'Llama 4 Scout', 'Qwen 2.5 14B'],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermediate',
+    audience: 'Usuarios comparando los mejores LLMs disponibles en cloud y local',
+    parentArticle: '/prompt-engineering/best-local-llms-2026',
+    siblingBites: ['co-star-prompt-framework'],
+    is_living_page: true,
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuál es el mejor LLM ahora mismo?',
+        answer: 'Para tareas de programación en cloud, Claude Opus 4.7 logra 87.6% en SWE-Bench, mientras GPT-5.5 Instant lidera chat general con 52.5% menos alucinaciones. Cloud: Claude Opus 4.7 para código y documentos largos, GPT-5.5 Instant para chat general, Gemini 2.5 Pro para tareas multimodales. Local: Llama 4 Scout si tienes 24 GB VRAM; Qwen 2.5 14B para 12 GB VRAM.',
+        bullets: [
+          'Cloud general: GPT-5.5 Instant — ChatGPT por defecto, 52.5% menos alucinaciones',
+          'Cloud código: Claude Opus 4.7 — 87.6% SWE-Bench Verified',
+          'Local 12 GB VRAM: Qwen 2.5 14B Q4_K_M — mejor relación calidad/VRAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ningún LLM gana en todas las tareas — Claude Opus 4.7 lidera en código (87.6% SWE-Bench), GPT-5.5 Instant en chat general',
+          'Para uso local con 12 GB VRAM, Qwen 2.5 14B Q4_K_M ofrece la mejor relación calidad/VRAM disponible',
+          'Los modelos cloud requieren claves API y cuestan por token; los modelos locales corren gratis después de la inversión en hardware',
+          'Para uso local, Llama 4 Scout (17B/16 expertos) cabe en un H100 único con contexto de 10M tokens; Qwen 2.5 14B Q4_K_M para 12 GB VRAM',
+        ],
+      },
+      body1: {
+        title: 'El mejor LLM depende de la tarea — aquí está el mapa',
+        content: [
+          '<strong>A mayo de 2026, tres familias de modelos lideran casos de uso diferentes. Esta página se actualiza mensualmente — última verificación mayo 2026. Para código y análisis técnico: Claude Opus 4.7 (Anthropic). Para chat general y ChatGPT: GPT-5.5 Instant (OpenAI). Para privacidad, trabajo offline y uso ilimitado: Llama 4 Scout corriendo localmente.</strong> Abajo: cuándo gana cada uno, y cuál elegir según tu flujo de trabajo.',
+          'Ningún modelo cloud único domina todos los benchmarks. Claude Opus 4.7 logra 87.6% en SWE-Bench Verified, lo que lo convierte en la opción clara para ingeniería de software. GPT-5.5 Instant (el nuevo ChatGPT por defecto desde mayo 2026) produce resultados más fiables en diversas tareas cotidianas con 52.5% menos alucinaciones que versiones previas.',
+          'Gemini 2.5 Pro sigue siendo el modelo multimodal nativo más fuerte para análisis de video e imágenes. Para tareas de texto o código puro, la diferencia de calidad entre Claude Opus 4.7 y GPT-5.5 es notable — elige según tu flujo de trabajo específico. Para uso local, Llama 4 Scout cabe en hardware de consumidor con una ventana de contexto de 10M tokens.',
+        ],
+        columns: ['Caso de Uso', 'Mejor LLM', 'Por qué'],
+        rows: [
+          { 'Caso de Uso': 'Código (Python, TypeScript)', 'Mejor LLM': 'Claude Opus 4.7', 'Por qué': '87.6% SWE-Bench Verified, lidera benchmarks de código' },
+          { 'Caso de Uso': 'Chat general', 'Mejor LLM': 'GPT-5.5 Instant', 'Por qué': 'ChatGPT por defecto desde mayo 2026, 52.5% menos alucinaciones' },
+          { 'Caso de Uso': 'Local / offline', 'Mejor LLM': 'Llama 4 Scout', 'Por qué': '17B/16 expertos, cabe en H100 único, contexto de 10M tokens' },
+          { 'Caso de Uso': 'Documentos largos', 'Mejor LLM': 'Claude Opus 4.7', 'Por qué': 'Ventana de contexto de 1M, retención fuerte' },
+          { 'Caso de Uso': 'Imagen+texto rápido', 'Mejor LLM': 'GPT-5.5 o Gemini 2.5 Pro', 'Por qué': 'Latencia multimodal' },
+          { 'Caso de Uso': 'Throughput barato', 'Mejor LLM': 'Claude Haiku o GPT-5.5 mini', 'Por qué': '$/M tokens' },
+          { 'Caso de Uso': 'Investigación / agentes', 'Mejor LLM': 'Claude Opus 4.7', 'Por qué': 'MCP-Atlas 77.3%, confiabilidad en function calling' },
+        ],
+      },
+      body2: {
+        title: 'Cómo elegir sin leer 50 reseñas',
+        content: [
+          '<strong>Comienza con la restricción.</strong> ¿Presupuesto, privacidad, latencia o benchmark? Elige el modelo que maneje tu restricción más difícil primero. Claude Opus 4.7 es mejor para código, GPT-5.5 Instant para chat general, Llama 4 Scout para offline.',
+          '<strong>Prueba 2 modelos en TU tarea real.</strong> Los benchmarks publicados no predicen tu caso de uso. Usa tiers API gratis para modelos cloud (Claude, OpenAI) y corre Llama 4 Scout localmente vía Ollama. La mayoría de usuarios descubren que prefieren uno en la práctica.',
+          '<strong>Monitorea mensualmente.</strong> Nuevos modelos se lanzan trimestralmente. Claude Opus 4.7 se lanzó el 16 de abril, GPT-5.5 el 23 de abril. La respuesta "ahora mismo" cambia. Revisa esta página mensualmente. <strong>Para usuarios locales,</strong> Llama 4 Scout es el techo en hardware de consumidor (contexto de 10M, H100 único). Para menor VRAM, usa modelos más viejos como Llama 3 8B o Phi-4.',
+        ],
+        callouts: [{ type: 'info', text: 'Última verificación: mayo 2026. El panorama del mejor LLM-ahora-mismo cambia rápidamente — Claude Opus 4.7 se lanzó el 16 de abril, GPT-5.5 el 23 de abril. Revisa esta página mensualmente. Los lanzamientos mayores (Claude 5, GPT-6, Llama 5) desencadenarán actualizaciones.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre el mejor LLM ahora',
+        faqs: [
+          {
+            q: '¿Claude Opus 4.7 o GPT-5.5 es mejor en mayo 2026?',
+            a: 'Claude Opus 4.7 lidera en SWE-Bench Verified (87.6%) para código y análisis técnico. GPT-5.5 Instant lidera para chat general e instruction following (52.5% menos alucinaciones que versiones previas). El mejor modelo depende de tu tarea específica.',
+          },
+          {
+            q: '¿Cuál es el mejor LLM local si solo tengo 8 GB VRAM?',
+            a: 'Con 8 GB VRAM, Llama 3 8B en Q4_K_M es todavía la mejor opción — cabe cómodamente con ~5 GB VRAM y deja espacio para contexto. Para hardware más nuevo, Llama 4 Scout (17B/16 expertos) requiere un H100 único o equivalente (24 GB VRAM).',
+          },
+          {
+            q: '¿Cómo se compara Gemini 2.5 Pro con Claude Opus 4.7 y GPT-5.5?',
+            a: 'Gemini 2.5 Pro lidera para tareas nativas multimodales como análisis de video e imágenes. Para puro razonamiento de texto y código, Claude Opus 4.7 y GPT-5.5 son las opciones más fuertes. Ve nuestra <a href="/prompt-bites/co-star-prompt-framework" class="text-primary hover:underline">guía del framework CO-STAR</a> para tips sobre mejorar output de cualquier modelo cloud.',
+          },
+          {
+            q: '¿Puede un LLM local igualar modelos cloud para tareas de código?',
+            a: 'Llama 4 Scout (17B) y Llama 4 Maverick (17B/128 expertos) proporcionan alternativas open-source fuertes pero no igualan Claude Opus 4.7 en SWE-Bench. Para la mayoría de tareas cotidianas de asistencia de código, la brecha es lo suficientemente pequeña como para ser práctica. Para refactoring complejo multi-archivo, los modelos cloud aún mantienen una ventaja clara.',
+          },
+        ],
+      },
+    },
+  },
   zh: {
     theme: 'Prompt Engineering',
     title: '当前最好的 LLM 是什么？',
