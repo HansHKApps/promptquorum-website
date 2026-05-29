@@ -176,7 +176,7 @@ export const article: Record<Language, PEArticle> = {
           'PromptHub: purpose-built prompt management with version history, reviewer workflows, and deployment tracking. $0–$49/month depending on team size.',
           'Braintrust: evaluation platform with CI/CD integration. Runs automated quality tests on every PR. Best for teams that already run automated prompt tests.',
           'Vellum: production prompt deployment with traffic management, A/B testing, and live evaluation. Best for high-traffic applications where partial rollouts reduce incident blast radius.',
-          'PromptQuorum: multi-model testing to confirm a prompt works across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro before deployment. Use during Gate 2 peer review.',
+          '[PromptQuorum](/features): multi-model testing to confirm a prompt works across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro before deployment. Use during Gate 2 peer review.',
         ],
       },
       faq: {

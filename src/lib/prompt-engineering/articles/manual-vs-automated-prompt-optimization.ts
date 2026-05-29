@@ -90,7 +90,7 @@ export const article: Record<Language, PEArticle> = {
 
       comparison: {
         title: 'Manual vs Automated: Quick Comparison',
-        content: '**Choose based on three factors: prompt count, evaluation data, and scaling needs.** Manual optimization is rewriting a prompt based on test failures — it is direct control but does not scale beyond ~50 production prompts. Automated optimization uses frameworks (DSPy, TextGrad) to rewrite prompts algorithmically — it scales to 100+ but requires labeled data and metrics.',
+        content: '**Choose based on three factors: prompt count, evaluation data, and scaling needs.** Manual optimization is rewriting a prompt based on test failures — it is direct control but does not scale beyond ~50 production prompts. Automated optimization uses frameworks (DSPy, TextGrad) to rewrite prompts algorithmically — it scales to 100+ but requires labeled data and metrics. A third validation step — running the same prompt across multiple models using a [prompt optimization platform](/features) — confirms which version generalizes best before committing to production.',
         columns: ['Factor', 'Manual Optimization', 'Automated Optimization'],
         rows: [
           { 'Factor': 'Best for N prompts', 'Manual Optimization': '<50 (full control focus)', 'Automated Optimization': '100+ (scaling focus)' },

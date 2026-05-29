@@ -865,6 +865,7 @@ Plain text dates alone are insufficient — the `<time>` element with valid ISO 
 - After substantive content changes (new stats, new FAQ entry, rewritten section, added examples)
 - NOT for minor typo fixes or formatting changes
 - Update `dateModified` in schema to match
+- **Update `dateModified` to today's ISO date in the article file** — this triggers the "Updated" badge on hub cards automatically for 15 days.
 
 ---
 

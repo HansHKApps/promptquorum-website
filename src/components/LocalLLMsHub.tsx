@@ -7,6 +7,7 @@ import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
+import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
 function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
@@ -939,23 +940,41 @@ function getArticleTitle(articleKey: string, lang: Language): string {
 function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: string; lang: Language }) {
   const title = getArticleTitle(articleKey, lang)
   const href = navHref(`/local-llms/${articleKey}`, lang)
-  const hasContent = !!(LLM_SLUG_TO_KEY[articleKey] && llmContent[LLM_SLUG_TO_KEY[articleKey]])
+  const contentKey = LLM_SLUG_TO_KEY[articleKey]
+  const hasContent = !!(contentKey && llmContent[contentKey])
 
   // Future-proof: if no content, don't render the card
   if (!hasContent) {
     return null
   }
 
+  const publishDate = llmContent[contentKey]?.en?.publishDate
+  const dateModified = llmContent[contentKey]?.en?.dateModified
+  const showNew = isNewArticle(publishDate)
+  const showUpdated = !showNew && isUpdatedArticle(publishDate, dateModified)
+
   return (
-    <Link
-      href={href}
-      className="flex items-start gap-3 bg-card border border-primary/30 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
-    >
-      <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
-      <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">
-        {title}
-      </span>
-    </Link>
+    <div className="relative">
+      {showNew && (
+        <span className="absolute -top-2.5 right-3 text-[10px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5 z-10">
+          New
+        </span>
+      )}
+      {showUpdated && (
+        <span className="absolute -top-2.5 right-3 text-[10px] font-semibold text-amber-700 bg-amber-50 border border-amber-100 rounded-full px-2 py-0.5 z-10">
+          Updated
+        </span>
+      )}
+      <Link
+        href={href}
+        className="flex items-start gap-3 bg-card border border-primary/30 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+      >
+        <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
+        <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">
+          {title}
+        </span>
+      </Link>
+    </div>
   )
 }
 

@@ -188,6 +188,13 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
     ])
   )
 
+  const datesMap: Record<string, { publishDate?: string; dateModified?: string }> = Object.fromEntries(
+    Object.entries(peContent).map(([key, langMap]) => [
+      key,
+      { publishDate: langMap.en?.publishDate, dateModified: langMap.en?.dateModified },
+    ])
+  )
+
   const BREADCRUMB_LABELS: Record<string, string> = {
     en: 'Prompt Engineering', de: 'Prompt Engineering', fr: 'Ingénierie de prompts',
     ja: 'プロンプトエンジニアリング', zh: '提示词工程',
@@ -342,7 +349,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
           __html: JSON.stringify(jsonLdSchemas),
         }}
       />
-      <PromptEngineeringHub initialLang={selectedLang as Language} titlesMap={titlesMap} articleLevels={articleLevels} />
+      <PromptEngineeringHub initialLang={selectedLang as Language} titlesMap={titlesMap} articleLevels={articleLevels} datesMap={datesMap} />
     </>
   )
 }

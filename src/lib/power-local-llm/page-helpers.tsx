@@ -13,6 +13,7 @@ import { POWER_LLM_CATEGORIES } from './categories'
 import { powerLLMAlternates, powerLLMHubPath, powerLLMArticlePath } from './metadata-helpers'
 import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
 import { isPowerLLMArticlePublished, isPowerLLMHubPublished } from './published'
+import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
 
 const BASE = 'https://www.promptquorum.com'
@@ -1168,16 +1169,33 @@ function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang
     )
   }
 
+  const publishDate = powerLLMContent[slug]?.['en']?.publishDate
+  const dateModified = powerLLMContent[slug]?.['en']?.dateModified
+  const showNew = isNewArticle(publishDate)
+  const showUpdated = !showNew && isUpdatedArticle(publishDate, dateModified)
+
   return (
-    <Link
-      href={powerLLMArticlePath(lang, slug)}
-      className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
-    >
-      <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
-      <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">
-        {title}
-      </span>
-    </Link>
+    <div className="relative">
+      {showNew && (
+        <span className="absolute -top-2.5 right-3 text-[10px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5 z-10">
+          New
+        </span>
+      )}
+      {showUpdated && (
+        <span className="absolute -top-2.5 right-3 text-[10px] font-semibold text-amber-700 bg-amber-50 border border-amber-100 rounded-full px-2 py-0.5 z-10">
+          Updated
+        </span>
+      )}
+      <Link
+        href={powerLLMArticlePath(lang, slug)}
+        className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+      >
+        <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
+        <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">
+          {title}
+        </span>
+      </Link>
+    </div>
   )
 }
 

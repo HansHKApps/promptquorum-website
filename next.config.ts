@@ -92,7 +92,7 @@ const nextConfig: NextConfig = {
         destination: 'https://www.promptquorum.com/_vercel/insights/:match*',
       },
       {
-        source: '/api/stats/:match*',
+        source: '/lib/s/:match*',
         destination: 'https://cloud.umami.is/:match*',
       },
       {
@@ -104,12 +104,12 @@ const nextConfig: NextConfig = {
   async headers() {
     const cspHeader = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com https://www.googletagmanager.com https://www.google-analytics.com https://scripts.clarity.ms https://*.vercel-analytics.com https://*.vercel-insights.com https://cloud.umami.is",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com https://www.googletagmanager.com https://www.google-analytics.com https://scripts.clarity.ms https://*.vercel-analytics.com https://*.vercel-insights.com",
       "worker-src 'self'",
       "style-src 'self' 'unsafe-inline'",
       "font-src 'self'",
       "img-src 'self' data: https:",
-      "connect-src 'self' https://region1.google-analytics.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://i.clarity.ms https://*.clarity.ms https://c.bing.com https://*.vercel-insights.com https://*.vercel-analytics.com https://cloud.umami.is https://vitals.vercel-insights.com https://api.vercel.com https://onesignal.com https://*.onesignal.com",
+      "connect-src 'self' https://region1.google-analytics.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://i.clarity.ms https://*.clarity.ms https://c.bing.com https://*.vercel-insights.com https://*.vercel-analytics.com https://vitals.vercel-insights.com https://api.vercel.com https://onesignal.com https://*.onesignal.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",

@@ -321,7 +321,7 @@ jobs:
           },
           {
             q: 'What tools support prompt version control natively?',
-            a: 'Braintrust, PromptLayer, and Vellum provide native prompt versioning with UI dashboards for comparing versions, running evaluations, and viewing diff history. LangSmith has prompt version tracking in its hub. For simpler setups, plain git with a /prompts/ directory works well — prompts are text files, and git handles diff, history, and rollback natively.',
+            a: 'Braintrust, PromptLayer, and Vellum provide native prompt versioning with UI dashboards for comparing versions, running evaluations, and viewing diff history. LangSmith has prompt version tracking in its hub. [PromptQuorum](/how-it-works) adds multi-model validation — run a versioned prompt across 25+ providers to confirm it works consistently before deployment. For simpler setups, plain git with a /prompts/ directory works well — prompts are text files, and git handles diff, history, and rollback natively.',
           },
           {
             q: 'How do I roll back a prompt if I don\'t use git?',

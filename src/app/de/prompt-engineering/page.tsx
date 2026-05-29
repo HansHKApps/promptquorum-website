@@ -45,5 +45,12 @@ export default async function DePromptEngineeringPage() {
     ])
   )
 
-  return <PromptEngineeringHub initialLang="de" titlesMap={titlesMap} articleLevels={articleLevels} />
+  const datesMap: Record<string, { publishDate?: string; dateModified?: string }> = Object.fromEntries(
+    Object.entries(peContent).map(([key, langMap]) => [
+      key,
+      { publishDate: langMap.en?.publishDate, dateModified: langMap.en?.dateModified },
+    ])
+  )
+
+  return <PromptEngineeringHub initialLang="de" titlesMap={titlesMap} articleLevels={articleLevels} datesMap={datesMap} />
 }

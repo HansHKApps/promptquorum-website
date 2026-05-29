@@ -626,7 +626,7 @@ function ArticleCard({ articleKey, dot, lang, titlesMap }: { articleKey: string;
   )
 }
 
-function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>>; articleLevels: Record<string, string> }) {
+function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, datesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>>; articleLevels: Record<string, string>; datesMap?: Record<string, { publishDate?: string; dateModified?: string }> }) {
   const lang = useLang(initialLang)
   const { signal, setLevel, clearLevel } = useHubSignals(SLUG_TO_THEME_ID)
 
@@ -772,11 +772,15 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels }: 
                 {/* Flat article grid (most themes) */}
                 {theme.articleKeys && (
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {theme.articleKeys.map((key) => (
-                      <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }}>
-                        <ArticleCard articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
-                      </HubArticleCard>
-                    ))}
+                    {theme.articleKeys.map((key) => {
+                      const contentKey = PE_SLUG_TO_KEY[key]
+                      const dates = contentKey ? datesMap?.[contentKey] : undefined
+                      return (
+                        <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }} publishDate={dates?.publishDate} dateModified={dates?.dateModified}>
+                          <ArticleCard articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
+                        </HubArticleCard>
+                      )
+                    })}
                   </div>
                 )}
 
@@ -789,11 +793,15 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels }: 
                           {SUBSECTION_LABELS[sub.title]?.[lang] ?? sub.title}
                         </h3>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                          {sub.articleKeys.map((key) => (
-                            <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }}>
-                              <ArticleCard articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
-                            </HubArticleCard>
-                          ))}
+                          {sub.articleKeys.map((key) => {
+                            const contentKey = PE_SLUG_TO_KEY[key]
+                            const dates = contentKey ? datesMap?.[contentKey] : undefined
+                            return (
+                              <HubArticleCard key={key} highlight={highlights[key] ?? { isHighlighted: false, isDimmed: false }} publishDate={dates?.publishDate} dateModified={dates?.dateModified}>
+                                <ArticleCard articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} />
+                              </HubArticleCard>
+                            )
+                          })}
                         </div>
                       </div>
                     ))}
@@ -897,6 +905,6 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels }: 
   )
 }
 
-export function PromptEngineeringHub({ initialLang, titlesMap, articleLevels }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>>; articleLevels: Record<string, string> }) {
-  return <PromptEngineeringHubContent initialLang={initialLang} titlesMap={titlesMap} articleLevels={articleLevels} />
+export function PromptEngineeringHub({ initialLang, titlesMap, articleLevels, datesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>>; articleLevels: Record<string, string>; datesMap?: Record<string, { publishDate?: string; dateModified?: string }> }) {
+  return <PromptEngineeringHubContent initialLang={initialLang} titlesMap={titlesMap} articleLevels={articleLevels} datesMap={datesMap} />
 }

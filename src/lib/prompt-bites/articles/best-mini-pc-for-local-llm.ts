@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Best Mini PC for Local LLM?',
-    seoTitle: 'Best Mini PC for Local LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Mac Mini M4: fastest, ~18 tok/s. Minisforum UM790 Pro: 64 GB RAM scaling. Beelink SER8: budget option. Three picks for local LLMs. Quick answer from PromptQuorum.',
+    seoTitle: 'Best Mini PC for Local LLM 2026 | PromptQuorum',
+    metaDescription: 'Mac Mini M4 hits ~18 tok/s on 7B Q4. Minisforum UM790 Pro scales to 64 GB DDR5. Beelink SER8: ~8 tok/s on a budget. Three mini PC picks for local LLM 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -134,8 +134,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     title: 'Bester Mini-PC für lokale LLMs?',
-    seoTitle: 'Beste Mini-PCs für lokale LLMs 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Mac Mini M4：schnellst, ~18 tok/s. Minisforum UM790 Pro：64 GB RAM Skalierung. Beelink SER8：Budgetoption. Drei Picks für lokale LLMs. Schnelle Antwort von PromptQuorum.',
+    seoTitle: 'Bester Mini-PC für lokale LLMs 2026 | PromptQuorum',
+    metaDescription: 'Mac Mini M4: ~18 tok/s bei 7B Q4. Minisforum UM790 Pro: bis 64 GB DDR5 skalierbar. Beelink SER8: ~8 tok/s günstig. Drei Mini-PC-Picks für lokale LLMs 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -216,8 +216,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Model Comparisons',
     title: 'Meilleur mini PC pour LLM local ?',
-    seoTitle: 'Meilleur Mini PC pour LLM Local 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Mac Mini M4 : rapide, ~18 tok/s. Minisforum UM790 Pro : 64 Go RAM. Beelink SER8 : option budgétaire. Trois choix pour LLM local. Réponse rapide de PromptQuorum.',
+    seoTitle: 'Meilleur mini PC pour LLM local 2026 | PromptQuorum',
+    metaDescription: 'Mac Mini M4 : ~18 tok/s, le plus rapide. UM790 Pro : 64 Go DDR5. Beelink SER8 : ~8 tok/s économique. Trois picks mini PC pour LLM local 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Model Comparisons',
     title: 'ローカルLLMに最適なミニPCは？',
-    seoTitle: 'ローカルLLM向け最適ミニPC 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'ローカルLLM向けミニPC 2026：Mac Mini M4・UM790 Pro・Beelink',
     metaDescription: 'Mac Mini M4：最速、~18 tok/s。Minisforum UM790 Pro：64 GB RAM スケーリング。Beelink SER8：予算オプション。ローカルLLM向け 3 選。PromptQuorum による簡潔な回答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Model Comparisons',
     title: '本地 LLM 最佳迷你电脑是什么？',
-    seoTitle: '本地 LLM 最佳迷你电脑 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: '本地LLM最佳迷你电脑 2026：Mac Mini M4・UM790 Pro・Beelink',
     metaDescription: 'Mac Mini M4：最快、约 18 tok/s。Minisforum UM790 Pro：64 GB 内存扩展。Beelink SER8：经济选择。本地 LLM 三大选择。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

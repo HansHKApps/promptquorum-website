@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
     title: 'Best Ollama Models for CPU Only?',
-    seoTitle: 'Ollama CPU-Only Models 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'No GPU? Phi-4 Mini Q4 is the best CPU-only Ollama model. Llama 3 8B Q4 works with 8+ GB RAM. Gemma 2B is the fastest. Expect ~3–5 tok/s. Updated May 2026.',
+    seoTitle: 'Best Ollama Models Without GPU 2026 | PromptQuorum',
+    metaDescription: 'Phi-4 Mini Q4 is the best CPU-only Ollama model: 4 GB RAM, ~5 tok/s. Llama 3 8B Q4 needs 8 GB RAM. Gemma 2B is fastest at ~6 tok/s. No GPU required.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
@@ -93,8 +93,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Ollama',
     title: 'Die besten Ollama-Modelle nur für die CPU?',
-    seoTitle: 'Ollama CPU-Modelle 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ohne GPU: Phi-4 Mini Q4 ist das beste CPU-only Ollama-Modell. Llama 3 8B Q4 läuft mit 8+ GB RAM. Gemma 2B ist am schnellsten. Stand Mai 2026.',
+    seoTitle: 'Beste Ollama-Modelle ohne GPU 2026 | PromptQuorum',
+    metaDescription: 'Phi-4 Mini Q4 ist das beste CPU-only Ollama-Modell: 4 GB RAM, ~5 tok/s. Llama 3 8B Q4 mit 8 GB RAM. Gemma 2B ~6 tok/s auf CPU. Alle ohne GPU. Mai 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
@@ -170,8 +170,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Ollama',
     title: 'Meilleurs modèles Ollama en mode CPU uniquement ?',
-    seoTitle: 'Ollama CPU-only 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Sans GPU : Phi-4 Mini Q4 est le meilleur Ollama CPU-only. Llama 3 8B Q4 tourne avec 8+ Go de RAM. Gemma 2B est le plus rapide. Vérifié mai 2026.',
+    seoTitle: 'Meilleurs modèles Ollama sans GPU 2026 | PromptQuorum',
+    metaDescription: 'Phi-4 Mini Q4 : meilleur Ollama CPU-only, 4 Go RAM, ~5 tok/s. Llama 3 8B Q4 : 8 Go RAM. Gemma 2B le plus rapide sur CPU (~6 tok/s). Vérifié mai 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Ollama',
     title: 'CPU専用で使えるOllamaの最適モデルは？',
-    seoTitle: 'CPU専用Ollamaモデル2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'GPU不要Ollamaモデル2026：CPU専用ベスト3選 | PromptQuorum',
     metaDescription: 'GPUなしの場合、Phi-4 Mini Q4がCPU専用の最適Ollamaモデルです。Llama 3 8B Q4は8GB以上のRAMで動作します。Gemma 2Bが最速。2026年5月確認済み。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Ollama',
     title: '仅用 CPU 运行 Ollama 的最佳模型？',
-    seoTitle: '2026年纯CPU运行Ollama最佳模型 | Prompt Bites | PromptQuorum',
+    seoTitle: '无GPU纯CPU运行Ollama 2026：最佳三款模型 | PromptQuorum',
     metaDescription: '无GPU：Phi-4 Mini Q4是最佳纯CPU Ollama模型。Llama 3 8B Q4需要8GB以上内存。Gemma 2B速度最快。2026年5月更新。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
