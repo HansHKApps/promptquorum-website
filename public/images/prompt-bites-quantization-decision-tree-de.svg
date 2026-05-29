@@ -69,8 +69,8 @@
 
   <!-- Footer key -->
   <rect x="20" y="310" width="760" height="70" style="fill: #F7F2FA; stroke: #E8DEF8; stroke-width: 1;" rx="4"/>
-  <text x="30" y="328" class="text-dark" style="font-weight: 600;">Quantisierungsleitfaden:</text>
-  <text x="30" y="345" class="text-dark" style="font-size: 11px;">• Q3_K_M: Extreme Kompression (2-3 GB), niedrigere Qualität für große Modelle</text>
-  <text x="30" y="360" class="text-dark" style="font-size: 11px;">• Q4_K_M: Empfohlener Standard — 4-8 GB, ausgezeichnete Qualität</text>
-  <text x="30" y="375" class="text-dark" style="font-size: 11px;">• Q5_K_M: 8-12 GB, nahezu Original-Qualität  •  Q8_0: 12+ GB, maximale Qualität</text>
+  <text x="30" y="328" class="text-dark" style="font-weight: 600; text-anchor: start;">Quantisierungsleitfaden:</text>
+  <text x="30" y="345" class="text-dark" style="font-size: 11px; text-anchor: start;">• Q3_K_M: Extreme Kompression (2-3 GB), niedrigere Qualität für große Modelle</text>
+  <text x="30" y="360" class="text-dark" style="font-size: 11px; text-anchor: start;">• Q4_K_M: Empfohlener Standard — 4-8 GB, ausgezeichnete Qualität</text>
+  <text x="30" y="375" class="text-dark" style="font-size: 11px; text-anchor: start;">• Q5_K_M: 8-12 GB, nahezu Original-Qualität  •  Q8_0: 12+ GB, maximale Qualität</text>
 <text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

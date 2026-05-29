@@ -69,8 +69,8 @@
 
   <!-- Footer key -->
   <rect x="20" y="310" width="760" height="70" style="fill: #F7F2FA; stroke: #E8DEF8; stroke-width: 1;" rx="4"/>
-  <text x="30" y="328" class="text-dark" style="font-weight: 600;">量化指南：</text>
-  <text x="30" y="345" class="text-dark" style="font-size: 11px;">• Q3_K_M: 极度压缩 (2-3 GB)，大型模型质量降低</text>
-  <text x="30" y="360" class="text-dark" style="font-size: 11px;">• Q4_K_M: 推荐默认 — 4-8 GB，优秀的质量平衡</text>
-  <text x="30" y="375" class="text-dark" style="font-size: 11px;">• Q5_K_M: 8-12 GB，接近原始质量  •  Q8_0: 12+ GB，最高质量</text>
+  <text x="30" y="328" class="text-dark" style="font-weight: 600; text-anchor: start;">量化指南：</text>
+  <text x="30" y="345" class="text-dark" style="font-size: 11px; text-anchor: start;">• Q3_K_M: 极度压缩 (2-3 GB)，大型模型质量降低</text>
+  <text x="30" y="360" class="text-dark" style="font-size: 11px; text-anchor: start;">• Q4_K_M: 推荐默认 — 4-8 GB，优秀的质量平衡</text>
+  <text x="30" y="375" class="text-dark" style="font-size: 11px; text-anchor: start;">• Q5_K_M: 8-12 GB，接近原始质量  •  Q8_0: 12+ GB，最高质量</text>
 <text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

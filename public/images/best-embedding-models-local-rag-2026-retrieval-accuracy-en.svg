@@ -27,7 +27,7 @@
   <circle cx="545" cy="49" r="5" fill="#EA4335"/>
 
   <!-- Y-axis label -->
-  <text x="25" y="210" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">retrieval@10 (%)</text>
+  <text x="25" y="210" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" transform="rotate(-90 25 210)">retrieval@10 (%)</text>
 
   <!-- Bar groups for each model -->
   <!-- nomic-embed-text-v2 -->

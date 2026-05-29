@@ -816,7 +816,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
             alt={section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram')}
             className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm hover:shadow-md transition-shadow"
             width={800}
-            height={450}
+            height={400}
             loading="lazy"
           />
           {section.imageCaption && (
