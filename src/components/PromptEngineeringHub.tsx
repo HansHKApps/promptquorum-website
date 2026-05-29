@@ -357,6 +357,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Fondamentaux',
     ja: '基礎',
     zh: '基础知识',
+    es: 'Fundamentos',
   },
   frameworks: {
     en: 'Frameworks',
@@ -364,6 +365,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Frameworks',
     ja: 'フレームワーク',
     zh: '框架',
+    es: 'Frameworks',
   },
   techniques: {
     en: 'Techniques',
@@ -371,6 +373,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Techniques',
     ja: 'テクニック',
     zh: '技术',
+    es: 'Técnicas',
   },
   'use-topics': {
     en: 'Use Cases & Output Engineering',
@@ -378,6 +381,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: "Cas d'usage et Ingénierie de sortie",
     ja: 'ユースケースと出力エンジニアリング',
     zh: '用例与输出工程',
+    es: 'Casos de uso e Ingeniería de salida',
   },
   policy: {
     en: 'Policy & Compliance',
@@ -385,6 +389,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Politique & Conformité',
     ja: 'ポリシーとコンプライアンス',
     zh: '政策与合规',
+    es: 'Política & Cumplimiento',
   },
   'tools-platforms': {
     en: 'Tools & Platforms',
@@ -392,6 +397,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Outils & Plateformes',
     ja: 'ツール＆プラットフォーム',
     zh: '工具与平台',
+    es: 'Herramientas & Plataformas',
   },
   'evaluation-reliability': {
     en: 'Evaluation & Reliability',
@@ -399,6 +405,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Évaluation & Fiabilité',
     ja: '評価と信頼性',
     zh: '评估与可靠性',
+    es: 'Evaluación & Fiabilidad',
   },
   'team-governance': {
     en: 'Team Governance',
@@ -406,6 +413,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: "Gouvernance d'équipe",
     ja: 'チームガバナンス',
     zh: '团队治理',
+    es: 'Gobernanza de equipo',
   },
   'workflows-automation': {
     en: 'Workflows & Automation',
@@ -413,6 +421,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Processus & Automatisation',
     ja: 'ワークフロー＆オートメーション',
     zh: '工作流程与自动化',
+    es: 'Flujos de trabajo & Automatización',
   },
 }
 
@@ -423,6 +432,7 @@ const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: strin
     fr: { icon: '🔍', title: 'Par où commencer', text: "Si vous ne lisez que 3 articles : « Qu'est-ce que le prompt engineering », « Chain-of-Thought Prompting » et « Évaluer la qualité des prompts ». Ces trois couvrent 80% de ce dont vous avez besoin." },
     ja: { icon: '🔍', title: 'どこから始めるか', text: '3記事だけ読むなら：「プロンプトエンジニアリングとは」「チェーン・オブ・ソートプロンプティング」「プロンプト品質の評価方法」。この3つで必要な知識の80%がカバーされます。' },
     zh: { icon: '🔍', title: '从哪里开始', text: '如果只读3篇文章：《什么是Prompt工程》《思维链提示》《如何评估Prompt质量》。这三篇涵盖了你所需知识的80%。' },
+    es: { icon: '🔍', title: 'Por dónde empezar', text: 'Si solo lees 3 artículos, lee: "Qué es el Prompt Engineering", "Chain-of-Thought Prompting" y "Cómo evaluar la calidad de prompts". Estos tres cubren el 80% de lo que necesitas.' },
   },
   'tools-platforms': {
     en: { icon: '🔍', title: 'Two-Tool Stack', text: 'Most teams waste money on 3-4 tools. The optimal stack: one for evaluation (Braintrust or Promptfoo) and one for deployment (Vellum or PromptHub). Start with free tools (Promptfoo + PromptQuorum) before paying.' },
@@ -430,6 +440,7 @@ const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: strin
     fr: { icon: '🔍', title: 'Stack deux outils', text: "La plupart des équipes gaspillent de l'argent sur 3-4 outils. Le stack optimal : un pour l'évaluation (Braintrust ou Promptfoo) et un pour le déploiement (Vellum ou PromptHub). Commencez avec des outils gratuits (Promptfoo + PromptQuorum) avant de payer." },
     ja: { icon: '🔍', title: '2ツールスタック', text: 'ほとんどのチームが3〜4つのツールに無駄なお金を使っています。最適なスタック：評価用（BraintrustまたはPromptfoo）とデプロイ用（VellumまたはPromptHub）の2つ。有料ツールを使う前に無料ツール（Promptfoo + PromptQuorum）から始めましょう。' },
     zh: { icon: '🔍', title: '双工具组合', text: '大多数团队在3-4个工具上浪费金钱。最优工具栈：一个用于评估（Braintrust或Promptfoo），一个用于部署（Vellum或PromptHub）。付费前先用免费工具（Promptfoo + PromptQuorum）。' },
+    es: { icon: '🔍', title: 'Stack de dos herramientas', text: 'La mayoría de equipos malgasta dinero en 3-4 herramientas. El stack óptimo: una para evaluación (Braintrust o Promptfoo) y una para despliegue (Vellum o PromptHub). Empieza con herramientas gratuitas (Promptfoo + PromptQuorum) antes de pagar.' },
   },
   'evaluation-reliability': {
     en: { icon: '🔍', title: 'Silent Failures', text: 'Prompts fail silently — no error log, no exception. Output quality degrades but nothing breaks visibly. Evaluation and regression testing are the only way to catch this.' },
@@ -437,11 +448,12 @@ const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: strin
     fr: { icon: '🔍', title: 'Échecs silencieux', text: "Les prompts échouent silencieusement — pas de log d'erreur, pas d'exception. La qualité des sorties se dégrade mais rien ne casse visiblement. L'évaluation et les tests de régression sont le seul moyen de détecter cela." },
     ja: { icon: '🔍', title: 'サイレント障害', text: 'プロンプトはサイレントに失敗します — エラーログも例外も出ません。出力品質は低下しますが、表面的には何も壊れません。評価と回帰テストだけがこれを検出する方法です。' },
     zh: { icon: '🔍', title: '静默失败', text: 'Prompt悄无声息地失败——没有错误日志，没有异常。输出质量下降，但表面上什么都没有断裂。评估和回归测试是唯一能发现这个问题的方法。' },
+    es: { icon: '🔍', title: 'Fallos silenciosos', text: 'Los prompts fallan sin hacer ruido — sin log de errores, sin excepciones. La calidad de la salida se degrada pero nada falla visiblemente. La evaluación y los tests de regresión son la única forma de detectarlo.' },
   },
 }
 
 const HUB_SOURCES_HEADER: Record<string, string> = {
-  en: 'Sources', de: 'Quellen', fr: 'Sources', ja: '出典', zh: '参考来源',
+  en: 'Sources', de: 'Quellen', fr: 'Sources', ja: '出典', zh: '参考来源', es: 'Fuentes',
 }
 
 const HUB_SOURCES_DATA: Array<{ title: string; url: string; desc: string }> = [
