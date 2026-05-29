@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Ollama Context Window Configuration: 64K–1M Tokens on Strix Halo, RTX, Mac 2026',
-      seoTitle: 'Ollama Context Configuration: Strix Halo, RTX, Mac — 64K–1M Tokens',
+      seoTitle: 'Local LLM Long Context 2026: 64K to 1M Tokens in Ollama',
       intro: 'The 2026 context window revolution is here. Llama 4 Scout supports up to 10M token context (practical: 256K-1M), DeepSeek V4-Flash delivers 1M tokens, and Qwen 3.6 natively supports 256K tokens (extendable to 1M via YaRN). While most 7B-8B models plateau at 16K-32K practical context, new MoE models push practical limits to 256K-1M tokens on consumer hardware. Ollama defaults to 2048 tokens -- this guide shows which models support what, RAM requirements at each tier, and how to configure long context.',
       metaDescription: 'Configure Ollama context windows on Strix Halo, RTX 4090, Apple Silicon: 64K, 128K, 256K, 1M tokens. num_ctx settings, VRAM per platform, Vulkan limits.',
       publishDate: '2026-04-04',
@@ -362,7 +362,7 @@ schema: {
     zh: {
       theme: '最佳模型',
       title: '长上下文本地LLM 2026：32K、128K 模型对比与RAM需求',
-      seoTitle: '128K上下文：Qwen vs Llama 2026',
+      seoTitle: '本地LLM长上下文2026：128K~1M Qwen vs Llama vs DeepSeek比',
       intro: '2026年大多数本地LLM模型理论上支持128K令牌上下文窗口，但实际可用的上下文----质量保持高水平的地方----通常为16K-32K令牌。Llama 3.1 8B、Qwen2.5和Mistral Small 3.1都支持128K上下文，但在32K以上质量会下降。本地处理全长文档需要理解RAM扩展和「中间迷失」效应。',
       metaDescription: '128K上下文模型对比：Llama 3.3、Qwen2.5、Mistral Small、DeepSeek V4。实用限制、RAM需求、您的硬件最适配的模型选择 2026年。',
       nextStep: {
@@ -670,9 +670,9 @@ schema: {
     de: {
       theme: 'Best Models',
       title: 'Lokalmodelle mit langem Kontext 2026: Welche Modelle bewältigen 32K, 128K Token lokal?',
-      seoTitle: '128K Kontext: Qwen vs Llama vs DeepSeek 2026',
+      seoTitle: '128K bis 1M Kontext 2026: Qwen vs Llama vs DeepSeek',
       intro: 'Die meisten lokalen LLM-Modelle im Jahr 2026 unterstützen auf dem Papier Kontextfenster von 128K Token, aber der praktisch nutzbare Kontext -- wo die Qualität hoch bleibt -- liegt typischerweise bei 16K-32K Token. Llama 3.1/3.2/3.3, Qwen2.5 und Mistral Small 3.1 unterstützen alle 128K Kontext. Die Verarbeitung längerer Dokumente oder Bücher erfordert Verständnis für RAM-Skalierung und Qualitätsverschlechterung bei großen Bereichen.',
-      metaDescription: 'Vergleich 128K-Kontext-Modelle: Llama 3.3, Qwen2.5, Mistral Small, DeepSeek V4. Praktische Grenzen, RAM-Anforderungen und welches Modell passt zu Ihrem Setup.',
+      metaDescription: 'Vergleich 128K-Kontext-Modelle: Llama 3.3, Qwen2.5, Mistral Small, DeepSeek V4. Grenzen, RAM-Anforderungen und welches Modell passt zu Ihrem Setup.',
       nextStep: {
         text: 'Benötigen Sie Hardware für 128K+-Kontext-Modelle? Beginnen Sie mit dem Hardware-Leitfaden.',
         label: 'Lokaler LLM Hardware-Leitfaden 2026 →',
@@ -701,7 +701,7 @@ schema: {
     fr: {
       theme: 'Best Models',
       title: 'LLMs locaux avec long contexte 2026 : Quels modèles gèrent 32K, 128K tokens localement ?',
-      seoTitle: '128K Contexte : Qwen vs Llama vs DeepSeek 2026',
+      seoTitle: '128K–1M Contexte 2026 : Qwen vs Llama vs DeepSeek',
       intro: 'La plupart des modèles LLM locaux en 2026 prennent en charge sur le papier des fenêtres de contexte de 128K tokens, mais le contexte utilisable pratique -- où la qualité reste élevée -- est généralement de 16K-32K tokens. Llama 3.1/3.2/3.3, Qwen2.5 et Mistral Small 3.1 prennent tous en charge le contexte 128K. Traiter des documents ou des livres longs localement nécessite de comprendre la mise à l\'échelle RAM et la dégradation de la qualité sur les longues plages.',
       metaDescription: 'Comparez les modèles 128K : Llama 3.3, Qwen2.5, Mistral Small, DeepSeek V4. Limites pratiques, RAM nécessaire, et quel modèle convient à votre matériel.',
       nextStep: {
@@ -732,7 +732,7 @@ schema: {
     ja: {
       theme: 'Best Models',
       title: '長コンテキスト対応ローカルLLM 2026：32K、128Kトークンをローカルで処理できるモデルはどれ？',
-      seoTitle: '128Kコンテキスト：Qwen vs Llama 2026',
+      seoTitle: 'ローカルLLM 128K〜1Mコンテキスト2026：Qwen vs Llama vs DeepSeek',
       intro: '2026年のほとんどのローカルLLMモデルは理論上128Kトークンのコンテキストウィンドウをサポートしていますが、実用的で使用可能なコンテキスト -- 品質が高い場所 -- は通常16K～32Kトークンです。Llama 3.1/3.2/3.3、Qwen2.5、Mistral Small 3.1はすべて128Kコンテキストをサポートしています。長いドキュメントや本をローカルで処理するには、RAM スケーリングと長い範囲での品質低下を理解する必要があります。',
       metaDescription: '128Kコンテキスト対応モデル比較：Llama 3.3、Qwen2.5、Mistral Small、DeepSeek V4。実用限界、RAM要件、あなたのハードウェアに最適なモデルはどれか 2026年。',
       nextStep: {
