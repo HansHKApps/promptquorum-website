@@ -468,7 +468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Qwen 3 vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich',
       seoTitle: 'Qwen 3.6 vs Llama 4 vs Mistral 2026: Wer gewinnt?',
       intro: 'Qwen3, Meta Llama 3.3 und Mistral sind die drei dominantesten Open-Weight-Modellfamilien für lokale Inferenz. April 2026: Qwen3 72B führt bei Coding (87% HumanEval) und Mathematik (83% MATH). Llama 3.3 70B führt bei englischem Instruction-Following (88% HumanEval). Mistral Small 3.1 24B liefert nahezu 70B-Qualität bei nur 14 GB RAM -- das beste Qualitäts-zu-RAM-Verhältnis im Vergleich. Vollständige Benchmark-Tabelle mit MMLU, HumanEval, MATH, RAM und Tool-Calling-Unterstützung.',
-      metaDescription: 'Qwen 3.6 27B: 77,2% SWE-bench (bestes Coding). Llama 4 Scout MoE: 10M-Kontext, ~10 GB VRAM. Mistral 3.1: 79% MMLU. Auch: Qwen 2.5 14B vs Llama 3.1 8B vs Mistral 24B.',
+      metaDescription: 'Qwen 3.6 27B: 77,2% SWE-bench. Llama 4 Scout MoE: 10M-Kontext, ~10 GB VRAM. Mistral 3.1: 79% MMLU. Qwen 2.5 14B vs Llama 3.1 8B vs Mistral 24B.',
       nextStep: {
         text: 'Modell ausgewählt? Hier erfahren Sie, wie Sie Qwen lokal ausführen, Schritt für Schritt.',
         label: 'Qwen lokal ausführen — Vollständiger Setup-Guide →',

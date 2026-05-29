@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'GPU Buying Guides',
       title: 'RTX 3060 12GB: Run Qwen 3 8B, Llama 4 Scout, Mistral 7B (2026 Guide)',
-      seoTitle: 'RTX 3060 12GB: Best Budget GPU Local LLMs 2026 (Models, Speeds)',
+      seoTitle: 'RTX 3060 12GB: Best Budget GPU for Local LLMs 2026',
       intro: '**RTX 3060 12GB runs Llama 4 Scout 17B (MoE) at 12–16 tok/sec, Qwen3 8B at 16–20 tok/sec, Mistral 7B at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec — all at Q4 quantization.** The 6GB variant is limited to 3B models only. As of May 2026, the RTX 3060 12GB ($200–250 used) remains the best budget GPU for local LLMs: 12GB VRAM fits every 7B model and most 13B models at Q4, plus Llama 4 Scout (MoE) which delivers quality well above dense 7B-8B models at similar VRAM. This guide covers exactly which models run on each VRAM tier, with real speeds and practical setups.',
       metaDescription: 'RTX 3060 12GB: Qwen 3 8B (16-20 tok/sec), Llama 4 Scout MoE (12-16 tok/sec), Mistral 7B, DeepSeek-R1. Full model table with VRAM + speed benchmarks.',
       publishDate: '2026-04-05',
@@ -329,7 +329,7 @@ schema: {
     de: {
       theme: 'GPU Buying Guides',
       title: 'Beste Budget-GPUs für lokale LLMs',
-      seoTitle: 'RTX 3060 bis RX 6800 XT: 5 Budget-GPUs für lokale LLMs 2026',
+      seoTitle: 'RTX 3060 bis RX 6800 XT: Budget-GPUs für lokale LLMs 2026',
       intro: '**RTX 3060 12GB führt Llama 4 Scout 17B (MoE) mit 12–16 Tok/Sek, Qwen3 8B mit 16–20 Tok/Sek, Mistral 7B mit 18 Tok/Sek und DeepSeek-R1 7B mit 10–12 Tok/Sek aus — alles bei Q4-Quantisierung.** Die 6-GB-Variante ist auf 3B-Modelle beschränkt. Stand Mai 2026 bleibt die RTX 3060 12GB (150–190 € gebraucht) die beste Budget-GPU für lokale LLMs: 12 GB VRAM passt für jedes 7B-Modell und die meisten 13B-Modelle bei Q4, plus Llama 4 Scout (MoE) die Qualität weit über dichten 7B-8B-Modellen bei ähnlichem VRAM liefert.',
       metaDescription: 'RTX 3060 12GB (150-190 € gebraucht) ist die beste Budget-GPU für 7B-Modelle 2026. 5 GPUs nach VRAM und Preis für Llama 4 Scout und Mistral 7B verglichen.',
       nextStep: {
