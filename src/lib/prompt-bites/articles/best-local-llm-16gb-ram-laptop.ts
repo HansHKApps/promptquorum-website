@@ -325,6 +325,75 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Quick Answers',
+    title: '¿Qué LLM Local es Mejor para un Laptop con 16 GB de RAM?',
+    seoTitle: 'Mejor LLM Local 16 GB de RAM 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3 8B Q4_K_M (~5 tok/s) para laptops con 16 GB de RAM sin GPU. Qwen 2.5 Coder 7B para programación. Apple Silicon ~3× más rápido. PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué LLM local es mejor para un laptop con 16 GB de RAM?',
+        answer: 'Llama 3 8B Q4_K_M es el mejor LLM local para un laptop con 16 GB de RAM sin GPU dedicada, usando ~5 GB de RAM y corriendo a ~5 tok/s en CPUs modernas. Para tareas de programación, Qwen 2.5 Coder 7B es la alternativa preferida. Los laptops Apple Silicon (serie M) son 3–4× más rápidos gracias a la Unified Memory.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: ~5 GB de RAM, ~5 tok/s en CPU, mejor equilibrio para uso general',
+          'Qwen 2.5 Coder 7B Q4_K_M: ~5 GB de RAM, ~5 tok/s en CPU, óptimo para programación',
+          'Laptops Apple Silicon (serie M): ~18 tok/s por Unified Memory — mucho más rápido',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      body1: {
+        title: 'Llama 3 8B Q4_K_M es la Elección para el Laptop de 16 GB',
+        content: [
+          'A mayo de 2026, en un laptop con 16 GB de RAM sin GPU discreta, Llama 3 8B con cuantización Q4_K_M es el mejor LLM local para uso general. Usa aproximadamente 5 GB de RAM, deja 11 GB para el SO y otras aplicaciones, y corre a ~5 tokens por segundo en un CPU x86 moderno. Maneja tareas de programación, escritura y resumen sin pérdida de calidad por la cuantización.',
+          'La tabla siguiente muestra los cuatro modelos a considerar en un laptop de 16 GB, ordenados por caso de uso recomendado.',
+        ],
+        columns: ['Modelo', 'Uso de RAM (Q4_K_M)', 'Velocidad (mejor para)'],
+        rows: [
+          { 'Modelo': 'Llama 3 8B', 'Uso de RAM (Q4_K_M)': '~5 GB', 'Velocidad (mejor para)': '~5 tok/s — uso general, mejor equilibrio' },
+          { 'Modelo': 'Qwen 2.5 Coder 7B', 'Uso de RAM (Q4_K_M)': '~5 GB', 'Velocidad (mejor para)': '~5 tok/s — tareas de programación' },
+          { 'Modelo': 'Phi-4 Mini', 'Uso de RAM (Q4_K_M)': '~3 GB', 'Velocidad (mejor para)': '~12 tok/s — prioridad de velocidad' },
+          { 'Modelo': 'Qwen 2.5 14B', 'Uso de RAM (Q4_K_M)': '~9 GB', 'Velocidad (mejor para)': '~3 tok/s — razonamiento, contexto largo' },
+        ],
+        content2: [
+          'Qwen 2.5 14B es el techo para 16 GB: cabe en Q4_K_M con ~7 GB sobrantes, pero la velocidad cae a ~3 tok/s en CPU — suficientemente lento para ser frustrante en uso interactivo. Úsalo para tareas no interactivas (resumen por lotes, análisis de documentos) donde la velocidad importa menos que la calidad de salida.',
+        ],
+      },
+      body2: {
+        title: 'RAM vs VRAM — Lo que Importa',
+        content: [
+          '<strong>En un laptop sin GPU discreta, la RAM y la VRAM son el mismo pool.</strong> El CPU lee los pesos del modelo directamente desde la RAM del sistema. Esto significa que 16 GB de RAM te dan 16 GB de memoria direccionable para el modelo — sin cuello de botella de VRAM. En cambio, un laptop con una GPU discreta de 4 GB (como la RTX 4050 4 GB variante laptop) tiene un techo de VRAM fijo: un modelo de 5 GB no cabe en la VRAM de la GPU y cae en ejecución CPU lenta.',
+          'Apple Silicon (M1/M2/M3/M4) es un caso diferente. En los laptops Apple, la RAM es unificada — la misma memoria física la comparten la CPU y la GPU a nivel hardware con alto ancho de banda. Un MacBook Pro M3 de 16 GB ejecuta Llama 3 8B a ~18 tok/s, aproximadamente 3× más rápido que un CPU x86 Intel o AMD con la misma RAM. Si eliges entre un laptop Intel de 16 GB y un laptop Apple Silicon de 16 GB para uso de LLM local, la opción Apple Silicon es significativamente más rápida para inferencia.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas Rápidas sobre LLMs para Laptops con 16 GB de RAM',
+        faqs: [
+          {
+            q: '¿16 GB de RAM pueden ejecutar un modelo de 13B?',
+            a: 'Un modelo de 13B en Q4_K_M requiere aproximadamente 8–9 GB de RAM. En 16 GB cabe, pero deja solo 7 GB para el SO y otros procesos. En x86, la velocidad es ~2–3 tok/s — notablemente lento para chat. Quédate con modelos de 8B para uso interactivo; usa 13B solo si necesitas el salto de calidad y puedes tolerar la velocidad.',
+          },
+          {
+            q: '¿Apple M-series vs Intel i7 para LLM local con 16 GB?',
+            a: 'Apple Silicon gana con claridad. Un M3 de 16 GB ejecuta Llama 3 8B a ~18 tok/s. Un Intel Core i7 (13a gen) de 16 GB ejecuta el mismo modelo a ~4–5 tok/s. La diferencia es arquitectónica: el ancho de banda de la Unified Memory de Apple (~100 GB/s) es 5–6× superior al del típico laptop x86 con DDR5.',
+          },
+          {
+            q: '¿Debo cerrar apps para liberar RAM para el LLM?',
+            a: 'Solo si ejecutas un modelo cerca del límite de RAM. Para Llama 3 8B (~5 GB) en 16 GB, no es necesario — el SO gestiona la memoria eficientemente. Para Qwen 2.5 14B (~9 GB), cerrar Chrome y otras apps con mucha RAM evita el swap en disco y mantiene la velocidad constante. Usa el Monitor de Actividad (macOS) o el Administrador de tareas (Windows) para verificar la RAM libre antes de cargar el modelo.',
+          },
+          {
+            q: '¿Vale la pena actualizar a 32 GB de RAM para LLMs locales?',
+            a: 'Sí, si ejecutas modelos de 14B+ con frecuencia o quieres mantener el modelo cargado mientras usas otras aplicaciones pesadas. Con 32 GB, Qwen 2.5 14B corre sin presión de memoria. También puedes usar modelos de 70B con cuantización muy agresiva (Q2_K a ~24 GB), aunque la calidad cae notablemente por debajo de Q4. Para la mayoría que ejecuta modelos de 7–8B, 16 GB es suficiente.',
+          },
+        ],
+      },
+    },
+  },
   zh: {
     theme: 'Quick Answers',
     title: '16 GB 内存笔记本最适合哪款本地 LLM？',

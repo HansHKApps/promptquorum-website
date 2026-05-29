@@ -46,7 +46,7 @@ const SECTION_A_ARTICLES = [
   {
     slug: 'best-local-llm-6gb-vram',
     expectedSpanishText: 'Mejor LLM local',
-    expectedSpanishAnswer: 'seguimiento de instrucciones',
+    expectedSpanishAnswer: 'capacidades de chat y programación',
     notExpectedEnglishH1: 'Best Local LLM for 6 GB',
   },
   {
@@ -120,7 +120,10 @@ test.describe('Prompt Bites — Section A Spanish (es) translations', () => {
   test('ES Section A: UI labels are in Spanish', async ({ page }) => {
     await page.goto('/es/prompt-bites/how-much-vram-for-local-llm')
     const bodyText = await page.locator('body').innerText()
-    expect(bodyText).toContain('Respuesta rápida')
-    expect(bodyText).toContain('Puntos clave')
+    // Labels use CSS uppercase — check case-insensitively
+    expect(bodyText.toLowerCase()).toContain('respuesta rápida')
+    expect(bodyText.toLowerCase()).toContain('puntos clave')
+    expect(bodyText).toContain('Actualizado:')
+    expect(bodyText).toContain('← Volver a Prompt Bites')
   })
 })

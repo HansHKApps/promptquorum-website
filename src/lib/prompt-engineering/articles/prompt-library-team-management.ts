@@ -344,6 +344,182 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  es: {
+    freshness_tier: 'evergreen',
+    theme: 'Workflows & Automatización',
+    title: 'Gestión de biblioteca de prompts: cómo organizar, versionar y gobernar los prompts del equipo',
+    seoTitle: 'Gestión de biblioteca de prompts: organiza y versiona prompts de equipo',
+    intro: 'Los equipos que dependen de prompts compartidos sin una biblioteca estructurada pasan tiempo significativo recreando prompts que ya existen, pierden el conocimiento integrado en versiones anteriores y no pueden aplicar estándares de calidad a escala. Esta guía cubre estructura de carpetas, convenciones de nombres, control de versiones con Git y PromptHub, control de acceso y flujo de trabajo de deprecación.',
+    metaDescription: 'Gestiona bibliotecas de prompts del equipo: estructura de carpetas, nombres, versionado Git, control de acceso, flujo de deprecación. Para equipos con 3+ autores de prompts.',
+    ogDescription: 'Gestión de biblioteca de prompts del equipo: estructura /prompts/tema/slug-v1.txt, etiquetado Git, revisión PR, control de acceso y deprecación. Prueba con PromptQuorum.',
+    twitterDescription: '¿3+ personas escribiendo prompts? Necesitas una biblioteca. Estructura de carpetas, nombres, versionado Git, control de acceso, flujo de deprecación.',
+    publishDate: '2026-05-02',
+    readTime: '10 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Gestión de biblioteca de prompts',
+    leadAnswerBlock: '**Una biblioteca de prompts es un repositorio compartido y versionado de prompts que un equipo puede buscar, reutilizar y construir sobre.** Sin una, los equipos recrean prompts desde cero, pierden el conocimiento institucional de versiones anteriores y no pueden aplicar estándares de calidad a escala.',
+    quickFacts: [
+      'Construye una biblioteca cuando 3+ personas escriben prompts o 20+ prompts están en rotación activa',
+      'Usa /prompts/[tema]/[slug]-v[N].[ext] — sufijo de versión requerido en el nombre del archivo',
+      'Git: etiqueta versiones de producción, usa ramas de funcionalidades, requiere revisión PR antes de hacer merge en main',
+      'Tres roles de acceso: contribuidor (añadir), propietario/revisor (modificar), aprobador (desplegar en producción)',
+      'Depreca los prompts sin uso en 90 días; conserva en /deprecated durante 1 año antes de eliminar',
+      'PromptHub proporciona flujo de revisión estructurado con acceso basado en roles e hilos de comentarios',
+    ],
+    toc: [
+      { label: '¿Qué es una biblioteca de prompts?', anchor: 'what_is_library' },
+      { label: 'Estructura de carpetas y convenciones de nombres', anchor: 'folder_structure' },
+      { label: 'Estrategias de control de versiones', anchor: 'version_control' },
+      { label: 'Control de acceso y propiedad', anchor: 'access_control' },
+      { label: 'Flujo de revisión y deprecación', anchor: 'deprecation' },
+      { label: 'Errores comunes', anchor: 'common_mistakes' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+      { label: 'Lecturas relacionadas', anchor: 'related_reading' },
+      { label: 'Fuentes', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-library-team-management?lang=es',
+      inLanguage: 'es',
+      headline: 'Gestión de biblioteca de prompts: cómo organizar, versionar y gobernar los prompts del equipo',
+      description: 'Gestiona bibliotecas de prompts del equipo: estructura de carpetas, convenciones de nombres, versionado Git, control de acceso y flujo de deprecación.',
+      datePublished: '2026-05-02',
+      dateModified: '2026-05-02',
+      keywords: ['biblioteca de prompts', 'gestión de prompts', 'prompts de equipo', 'control de versiones de prompts', 'PromptHub', 'gobernanza de prompts'],
+      mentions: [
+        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+        { '@type': 'Thing', name: 'PromptQuorum' },
+        { '@type': 'Thing', name: 'Braintrust' },
+      ],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-library-team-management', width: 1200, height: 630 },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        title: 'TL;DR',
+        content: 'Una biblioteca de prompts resuelve el descubrimiento, la duplicación y la línea base de calidad. Construye una cuando 3+ personas escriben prompts o 20+ prompts están en uso activo. Usa la estructura /prompts/[tema]/[slug]-v[N].[ext], etiquetas Git para versiones de producción y un modelo de acceso de tres roles. Depreca los prompts sin uso en 90 días.',
+      },
+      what_is_library: {
+        title: '¿Qué es una biblioteca de prompts?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Una biblioteca de prompts es un repositorio compartido, versionado y consultable de prompts que un equipo puede descubrir, reutilizar y mejorar a lo largo del tiempo.' },
+          { type: 'in-plain-terms', text: 'Piensa en una biblioteca de prompts como una biblioteca de código para instrucciones de IA: todo tiene nombre, versión, es descubrible y se revisa antes de ir a producción.' },
+        ],
+        content: [
+          '**Una biblioteca de prompts es una colección compartida y versionada de prompts que un equipo puede buscar, reutilizar y mejorar a lo largo del tiempo.** Resuelve tres problemas: descubrimiento (encontrar un prompt que ya hace lo que necesitas), duplicación (escribir el mismo prompt dos veces) y línea base de calidad (asegurarse de que todos los prompts cumplen un estándar mínimo antes de compartirse).',
+          'Sin una biblioteca, los prompts viven en notas individuales, mensajes de Slack e historial de ChatGPT — inaccesibles para el equipo, sin versionar y perdidos cuando alguien se va. Una biblioteca convierte los prompts en un activo del equipo en lugar de conocimiento individual.',
+          'Construye una biblioteca de prompts cuando 3 o más personas escriben prompts regularmente, cuando el equipo usa 20 o más prompts distintos en rotación activa, o cuando notas que el mismo prompt se recrea porque nadie podía encontrar la versión anterior.',
+        ],
+        callouts: [
+          { type: 'insight', label: 'Cuándo construir', text: 'El desencadenante para construir una biblioteca no es el tamaño — es cuando la recreación de prompts empieza a ocurrir. Si un miembro del equipo ha dicho alguna vez "creo que ya tenemos un prompt para esto", es momento de construir una biblioteca.' },
+        ],
+      },
+      folder_structure: {
+        title: 'Estructura de carpetas y convenciones de nombres',
+        content: [
+          '**Usa el patrón `/prompts/[tema]/[slug]-v[versión].[ext]` para todos los archivos de prompts.** Esta estructura permite filtrar por tema, ordenar por versión e identificar el formato (`.md` para markdown, `.txt` para texto plano, `.json` para prompts estructurados) de un vistazo.',
+          'Ejemplo de estructura de directorio para un equipo de 4 personas:',
+        ],
+        items: [
+          '/prompts/customer-support/ticket-triage-v2.md',
+          '/prompts/customer-support/first-response-draft-v1.md',
+          '/prompts/content/blog-outline-v3.md',
+          '/prompts/content/product-description-v1.md',
+          '/prompts/engineering/code-review-v2.md',
+          '/prompts/engineering/pr-summary-v1.md',
+          '/prompts/research/source-summarize-v2.md',
+          '/prompts/deprecated/ (prompts archivados, conservados durante 1 año)',
+        ],
+        callouts: [
+          { type: 'warning', label: 'Nunca uses estos nombres', text: 'Nunca uses "latest", "final", "new" o "copy" como identificadores de versión en los nombres de archivo. Estos identificadores pierden significado inmediatamente y hacen que el historial de versiones sea ilegible.' },
+        ],
+      },
+      folder_structure_part2: {
+        content: [
+          'Reglas de nombres: solo minúsculas, guiones en lugar de espacios, sin caracteres especiales. Incluye el sufijo de versión (`-v1`, `-v2`) en el nombre del archivo para que el historial de versiones sea visible en un listado de archivos sin abrir un log de control de versiones. Nunca uses `latest` o `final` como identificadores de versión.',
+        ],
+      },
+      version_control: {
+        title: 'Estrategias de control de versiones para bibliotecas de prompts',
+        content: [
+          '**Usa etiquetas Git para marcar las versiones de producción de los prompts: etiqueta `prompt/ticket-triage/v2` cuando esa versión se despliegue en producción.** Esto hace que el rollback sea determinista — revertir al commit etiquetado, no a un estado ambiguo de "último estable".',
+          'Para ediciones concurrentes, sigue la misma estrategia de ramas que para el código: crea una rama de funcionalidad (`prompt/ticket-triage-intent-detection`), abre un pull request, obtén una revisión, luego haz merge. Nunca edites prompts directamente en `main`. Las reglas de protección de ramas en `main` lo hacen cumplir a nivel de infraestructura.',
+          'PromptHub proporciona un flujo de revisión estructurado para equipos que quieren hilos de comentarios, casillas de verificación de aprobación y acceso basado en roles sin gestionar ramas Git manualmente. Antes de hacer merge de una nueva versión de prompt, PromptQuorum la valida en 25+ modelos simultáneamente.',
+        ],
+      },
+      access_control: {
+        title: 'Control de acceso y propiedad',
+        content: [
+          '**Un modelo de tres roles cubre la mayoría de los equipos: contribuidor (puede añadir), propietario/revisor (puede modificar), aprobador (puede desplegar en producción).** Fusionar estos roles — permitir que cualquiera edite y despliegue — es la principal causa de regresión de prompts en bibliotecas compartidas.',
+          'Implementación en Git: establece reglas de protección de ramas en `main` que requieran 1 aprobación de revisión antes del merge. Asigna un archivo CODEOWNERS que mapee cada carpeta de prompts a un revisor específico. Para PromptHub: usa la configuración de roles incorporada — contribuidor, revisor y administrador.',
+          'Cada prompt debe tener un propietario designado. El propietario es responsable de mantener el prompt actualizado, clasificar problemas y decidir cuándo deprecarlo. Cuando el propietario deja el equipo, el prompt debe reasignarse antes de su último día.',
+        ],
+        callouts: [
+          { type: 'tip', label: 'Transferencia de propiedad', text: 'Añade la reasignación de propiedad de prompts a tu checklist de offboarding del equipo. Un prompt huérfano sin propietario se degrada silenciosamente — nadie lo nota hasta que un sistema posterior falla.' },
+        ],
+      },
+      deprecation: {
+        title: 'Flujo de revisión y deprecación',
+        content: [
+          '**Ejecuta una revisión trimestral de la biblioteca de prompts: comprueba las métricas de uso, evalúa si las versiones actuales siguen cumpliendo los estándares de calidad e identifica los prompts listos para deprecar.** Un prompt que nadie usa en 90 días es una carga de mantenimiento, no un activo.',
+          'Criterios para deprecar un prompt: sin uso en los últimos 90 días; una versión mejor lo ha reemplazado y la versión antigua ya no es necesaria; el modelo para el que fue escrito y probado ya no está en producción. Si cualquiera de estos dos de los tres aplica, depreca.',
+          'Proceso de deprecación: (1) añade `status: deprecated` al frontmatter del prompt, (2) mueve el archivo a `/prompts/deprecated/`, (3) añade una nota que apunte al prompt de reemplazo si existe, (4) conserva en la carpeta deprecated durante al menos 1 año. Elimina después de 1 año si no se ha solicitado rollback.',
+        ],
+      },
+      common_mistakes: {
+        title: 'Errores comunes en la gestión de biblioteca de prompts',
+        mistakes: [
+          { mistake: 'Estructura de carpetas plana sin organización por tema', problem: 'Con 20+ prompts, los archivos se vuelven imposibles de buscar y los miembros del equipo duplican trabajo porque no pueden encontrar prompts existentes', fix: 'Organiza los prompts por tema: /prompts/[tema]/[slug]-v[N].txt. Máximo 20 prompts por carpeta de tema.' },
+          { mistake: 'Sin convención de nombres para archivos de prompts', problem: 'Los archivos llamados "prompt1.txt", "final.txt", "final-v2.txt" no pueden descubrirse ni compararse programáticamente', fix: 'Usa el formato: [slug]-v[mayor].[menor].txt. Ejemplo: classify-intent-v2.1.txt. Nunca uses "final", "copy" o "new".' },
+          { mistake: 'Sin proceso de deprecación', problem: 'Los prompts antiguos se acumulan, los miembros del equipo usan versiones desactualizadas sin saber que han sido superadas', fix: 'Añade un DEPRECATED.md a cada carpeta con una lista de slugs deprecados, la fecha de deprecación y el slug de reemplazo.' },
+          { mistake: 'Sin control de acceso en los prompts de producción', problem: 'Cualquier miembro del equipo puede modificar un prompt de producción sin revisión, causando regresiones silenciosas de calidad', fix: 'Añade reglas de protección de ramas: requiere revisión PR + paso CI/CD para cualquier cambio en /prompts/production/.' },
+        ],
+      },
+      key_takeaways: {
+        title: 'Puntos clave',
+        items: [
+          'Una biblioteca de prompts resuelve el descubrimiento, la duplicación y la línea base de calidad — construye una cuando 3+ personas escriben prompts o 20+ prompts están en uso activo',
+          'Estructura de carpetas: /prompts/[tema]/[slug]-v[versión].[ext] — minúsculas, guiones, versión en el nombre del archivo',
+          'Git: etiqueta versiones de producción, usa ramas de funcionalidades, requiere revisión PR antes del merge en main',
+          'PromptHub: usa para flujo de revisión estructurado con hilos de comentarios y aprobación basada en roles',
+          'Tres roles de acceso: contribuidor (añadir), propietario/revisor (modificar), aprobador (desplegar en producción)',
+          'Depreca los prompts sin uso en 90 días; archiva y conserva 1 año antes de eliminar',
+        ],
+      },
+      faq: {
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Qué es una biblioteca de prompts?', a: 'Una biblioteca de prompts es un repositorio compartido y versionado donde un equipo almacena, busca y reutiliza prompts. Típicamente incluye una estructura de carpetas organizada por tema o caso de uso, archivos nombrados y versionados, reglas de control de acceso y un proceso de revisión o aprobación.' },
+          { q: '¿Debo usar Git o PromptHub para versionar prompts?', a: 'Usa Git si tu equipo trata los prompts como código y se siente cómodo con el control de versiones. Usa PromptHub si tu equipo necesita un flujo de revisión estructurado con acceso basado en roles e hilos de comentarios. Muchos equipos usan Git para almacenamiento y PromptHub para la interfaz de revisión.' },
+          { q: '¿Cuál es la estructura mínima de biblioteca de prompts para un equipo de 3 personas?', a: 'Un equipo de 3 personas necesita: un directorio /prompts/ en Git, carpetas por tema (hasta 5 temas), una convención de nombres (slug + versión) y un README.md por carpeta. Añade un requisito de revisión en main. Esto tarda menos de 30 minutos en configurar.' },
+          { q: '¿Cuándo usar PromptHub vs Git para la gestión de prompts?', a: 'Usa Git si tu equipo es principalmente de desarrolladores y quiere revisar prompts en GitHub PRs. Usa PromptHub si el equipo incluye no desarrolladores, necesita una interfaz de usuario para el descubrimiento y comparación, o necesita compartir prompts en múltiples bases de código.' },
+        ],
+      },
+      related_reading: {
+        title: 'Lecturas relacionadas',
+        items: [
+          { title: 'Construye una biblioteca de prompts', url: '/prompt-engineering/build-a-prompt-library' },
+          { title: 'Plantillas de documentación de prompts', url: '/prompt-engineering/prompt-documentation-templates' },
+          { title: 'Control de versiones de prompts', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Gobernanza de prompts en producción', url: '/prompt-engineering/prompt-governance-in-production' },
+          { title: 'Configuración de prompt engineering para equipos pequeños', url: '/prompt-engineering/pe-setup-small-teams' },
+        ],
+      },
+      sources: {
+        title: 'Fuentes',
+        items: [
+          { title: 'Git Documentation: Branch Protection', url: 'https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches' },
+          { title: 'PromptHub Documentation', url: 'https://app.prompthub.us/docs' },
+          { title: 'Braintrust: Prompt Management', url: 'https://www.braintrust.dev/docs/guides/prompts' },
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisation',

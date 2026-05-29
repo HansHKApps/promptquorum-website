@@ -340,6 +340,173 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  es: {
+    freshness_tier: 'evergreen',
+    theme: 'Workflows & Automatización',
+    title: 'De prompts a flujos de trabajo repetibles: plantillas de automatización para equipos en producción',
+    seoTitle: 'Prompts a flujos de trabajo repetibles: plantillas de automatización',
+    intro: 'Un único prompt que se ejecuta cuando alguien recuerda ejecutarlo no es un sistema — es una tarea. Esta guía muestra cómo convertir prompts en flujos de trabajo repetibles con condiciones de activación definidas, gestión de estado y cuatro plantillas listas para producción que cubren procesamiento de documentos, pipelines de investigación, revisión de código y triage de clientes.',
+    metaDescription: 'Convierte prompts en flujos de trabajo automatizados: activadores, gestión de estado, manejo de errores. 4 plantillas: procesamiento de documentos, investigación, revisión de código, triage.',
+    ogDescription: '4 plantillas de flujos de trabajo de producción: procesamiento de documentos (n8n + GPT), investigación (LangChain), revisión de código (GitHub Actions + Claude), triage (Make + PromptQuorum).',
+    twitterDescription: 'Un prompt que ejecutas manualmente es una tarea. Un prompt con un activador, enrutamiento y manejo de errores es un flujo de trabajo. 4 plantillas de producción.',
+    publishDate: '2026-05-02',
+    readTime: '11 min de lectura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'Flujos de trabajo de prompts repetibles',
+    leadAnswerBlock: '**Un flujo de trabajo repetible es un proceso basado en prompts con condiciones de activación definidas, entradas, salidas y manejo de errores que se ejecuta de forma consistente sin intervención manual.** La diferencia entre un prompt y un flujo de trabajo es si necesitas estar presente para que se ejecute.',
+    quickFacts: [
+      'Automatiza cuando la frecuencia supera 5 ejecuciones por semana con entradas estructuradas',
+      '3 tipos de activadores: basado en eventos (webhook), basado en programación (cron), basado en umbrales (métrica)',
+      'Make cuesta $0–$16/mes para hasta 10.000 operaciones; n8n es gratuito y auto-alojable',
+      'Se requiere esquema de salida JSON en cada límite de paso — nunca pases texto sin estructura',
+      'La mayoría de los equipos de producción alcanzan el 70–80% de automatización con el 20–30% de revisión humana en casos límite',
+      '4 plantillas: procesamiento de documentos, pipeline de investigación, revisión de código, triage de clientes',
+    ],
+    toc: [
+      { label: 'La diferencia entre un prompt y un flujo de trabajo', anchor: 'prompt_vs_workflow' },
+      { label: 'Condiciones de activación y gestión de estado', anchor: 'triggering' },
+      { label: '4 plantillas de flujos de trabajo para equipos de producción', anchor: 'four_templates' },
+      { label: 'Herramientas para construir flujos de trabajo de prompts', anchor: 'tools' },
+      { label: 'Cuándo automatizar vs mantener manual', anchor: 'when_to_automate' },
+      { label: 'Errores comunes', anchor: 'common_mistakes' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+      { label: 'Lecturas relacionadas', anchor: 'related_reading' },
+      { label: 'Fuentes', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompts-to-repeatable-workflows?lang=es',
+      inLanguage: 'es',
+      headline: 'De prompts a flujos de trabajo repetibles: plantillas de automatización para equipos en producción',
+      description: 'Convierte prompts en flujos de trabajo automatizados con activadores, gestión de estado y manejo de errores. 4 plantillas: procesamiento de documentos, investigación, revisión de código, triage.',
+      datePublished: '2026-05-02',
+      dateModified: '2026-05-02',
+      keywords: ['flujos de trabajo de prompts', 'plantillas de automatización', 'prompts repetibles', 'LangChain workflow', 'n8n prompts', 'Make automatización'],
+      mentions: [
+        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+        { '@type': 'Thing', name: 'LangChain' },
+        { '@type': 'Thing', name: 'n8n' },
+        { '@type': 'Thing', name: 'Make' },
+        { '@type': 'Thing', name: 'PromptQuorum' },
+      ],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompts-to-repeatable-workflows', width: 1200, height: 630 },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        title: 'TL;DR',
+        content: 'Un flujo de trabajo es un prompt con un activador, enrutamiento de salida y manejo de errores — no solo un prompt ejecutado automáticamente. Automatiza cuando la frecuencia supera 5 ejecuciones por semana con entradas estructuradas. Cuatro plantillas de producción cubren los casos de uso más comunes.',
+      },
+      prompt_vs_workflow: {
+        title: 'La diferencia entre un prompt y un flujo de trabajo',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Un flujo de trabajo es un prompt que se ejecuta automáticamente cuando un activador se dispara y enruta su salida a un siguiente paso definido sin intervención humana.' },
+          { type: 'in-plain-terms', text: 'Piensa en un flujo de trabajo como un prompt al que se le ha dado un título de trabajo: sabe cuándo empezar, qué hacer con el resultado y qué hacer cuando algo sale mal.' },
+        ],
+        content: [
+          '**Un prompt requiere que un humano decida cuándo ejecutarlo y qué hacer con la salida; un flujo de trabajo se ejecuta automáticamente cuando se cumple una condición y enruta la salida al siguiente paso.** Esta es la distinción operacional — no una diferencia en el texto del prompt en sí.',
+          'Un prompt que extrae datos de facturas sigue siendo solo un prompt si alguien copia y pega cada factura manualmente en ChatGPT. La misma lógica de extracción se convierte en un flujo de trabajo cuando una carga de archivo lo activa, la salida se parsea en un registro estructurado y ese registro se enruta a un sistema de contabilidad.',
+          'Automatiza cuando ejecutas el mismo prompt más de 5 veces por semana con el mismo activador y la salida siempre va al mismo siguiente paso. Por debajo de esa frecuencia, o cuando las entradas varían significativamente, el prompting manual es más rápido que construir infraestructura de automatización.',
+        ],
+        callouts: [
+          { type: 'insight', label: 'Definición operacional', text: 'La diferencia entre un prompt y un flujo de trabajo no es el texto del prompt — es si el sistema decide cuándo ejecutarlo y qué pasa después.' },
+        ],
+      },
+      triggering: {
+        title: 'Condiciones de activación y gestión de estado',
+        content: [
+          '**Tres tipos de activadores cubren casi todos los flujos de trabajo de prompts de producción: basado en eventos, basado en programación y basado en umbrales.** Elegir el tipo de activador equivocado es una de las principales razones por las que los flujos de trabajo se ejecutan demasiado a menudo, no suficientemente o con datos obsoletos.',
+          'Los activadores basados en eventos se disparan en un evento específico: un webhook se dispara cuando se carga un archivo, se envía un formulario o llega una llamada a la API. Los activadores basados en programación se disparan según un cron. Los activadores basados en umbrales se disparan cuando una métrica cruza un valor — tasa de error superior al 5%, profundidad de cola de tickets superior a 100, puntuación de sentimiento inferior a 0.4.',
+          'La gestión de estado es cómo la salida de un paso se pasa al siguiente sin perder contexto. Define un esquema de salida JSON en cada límite de paso. Almacena los resultados intermedios en un almacén de variables. Nunca pases la salida del modelo sin estructura como entrada al siguiente paso — parsea primero.',
+        ],
+        callouts: [
+          { type: 'warning', label: 'Fallo de gestión de estado', text: 'Pasar la salida del modelo sin estructura entre pasos es la causa más común de fallos silenciosos en flujos de trabajo. Siempre define un esquema JSON en cada límite de paso y valida antes de enrutar.' },
+        ],
+      },
+      four_templates: {
+        title: '4 plantillas de flujos de trabajo para equipos de producción',
+        content: [
+          '**Cuatro plantillas cubren los casos de uso de producción más comunes: procesamiento de documentos, pipeline de investigación, revisión de código y triage de clientes.**',
+        ],
+        numberedItems: [
+          'Procesamiento de documentos — activador: nuevo PDF cargado → extraer datos clave (fechas, partes, importes) → clasificar tipo de documento → enrutar a la cola del revisor asignado. Herramientas: n8n para orquestación + GPT-4o para extracción y clasificación. Salida: registro JSON estructurado escrito en una base de datos compartida.',
+          'Pipeline de investigación — activador: lista de temas enviada → buscar fuentes web → resumir cada fuente → sintetizar en un informe estructurado. Herramientas: LangChain para orquestación multi-paso + API de Perplexity para búsqueda web. Salida: informe markdown con citas, almacenado en una carpeta compartida.',
+          'Bucle de revisión de código — activador: pull request abierto → analizar diff → generar comentarios de revisión inline categorizados por severidad → publicar comentarios en el PR. Herramientas: GitHub Actions para el activador + Claude 4.6 Sonnet para el análisis del diff. Salida: comentarios de PR publicados a través de la API de GitHub.',
+          'Triage de clientes — activador: nuevo ticket de soporte recibido → clasificar severidad (P1/P2/P3) → enrutar a la cola correcta → generar un borrador de primera respuesta. Herramientas: Make para orquestación + PromptQuorum para despacho multi-modelo (despacha a GPT-4o para clasificación, Claude 4.6 Sonnet para generación de borrador). Salida: ticket actualizado con etiqueta de severidad y respuesta borrador.',
+        ],
+      },
+      tools: {
+        title: 'Herramientas para construir flujos de trabajo de prompts',
+        content: [
+          '**La herramienta correcta depende de si tu equipo prefiere automatización visual, pipelines de código primero o despacho multi-modelo.**',
+          'Make (anteriormente Integromat) es un constructor de flujos de trabajo visual sin código. Coste: $0 para hasta 1.000 operaciones/mes, $16/mes para 10.000 operaciones. Mejor para: equipos no técnicos, integraciones de CRM y email, pipelines de acción-activador sencillos. n8n es de código abierto y auto-alojable a $0 de coste. LangChain (Python y JavaScript) es un framework de código primero para construir pipelines de prompts de múltiples pasos con memoria, agentes y uso de herramientas.',
+          'PromptQuorum añade despacho multi-modelo y comparación de salidas en paralelo entre GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro — úsalo en cualquier paso donde la selección del modelo afecte la calidad de la salida.',
+        ],
+        callouts: [
+          { type: 'tip', label: 'Regla de selección de herramienta', text: 'Comienza con Make o n8n para la orquestación y añade PromptQuorum en cualquier paso donde necesites comparar salidas de modelos o despachar al mejor modelo para ese tipo de paso.' },
+        ],
+      },
+      when_to_automate: {
+        title: 'Cuándo automatizar vs mantener manual',
+        content: [
+          '**Automatiza un flujo de trabajo de prompts cuando: la frecuencia supera 5 ejecuciones por semana, las entradas son estructuradas y predecibles, y la salida se enruta a un siguiente paso definido cada vez.** Las tres condiciones deben ser verdaderas para que la automatización sea rentable.',
+          'Mantén manual cuando las entradas varían de forma impredecible, cuando se requiere juicio humano en cada caso en lugar de solo en casos límite, o cuando el volumen actual está por debajo de 5 ejecuciones por semana.',
+          'Una tercera categoría es híbrida: automatiza los pasos estructurados (extracción de datos, clasificación, enrutamiento) y mantén el paso de juicio manual (aprobación final, decisión de escalación). La mayoría de los equipos de producción aterrizan aquí — 70–80% automatizado, 20–30% revisión humana en casos límite.',
+        ],
+      },
+      common_mistakes: {
+        title: 'Errores comunes al construir flujos de trabajo de prompts',
+        mistakes: [
+          { mistake: 'Construir flujos de trabajo antes de validar el prompt', problem: 'Si el prompt subyacente falla, el flujo de trabajo amplifica el fallo a escala', fix: 'Prueba y valida el prompt principal en 10+ ejemplos reales antes de conectarlo a un flujo de trabajo' },
+          { mistake: 'Sin manejo de errores ni ruta de fallback', problem: 'Cuando el modelo devuelve una salida inesperada, el flujo de trabajo falla silenciosamente o produce datos corruptos en los pasos siguientes', fix: 'Siempre añade un paso de validación de salida y una ruta de fallback (cola de revisión humana o reintento con modelo alternativo)' },
+          { mistake: 'Flujo de trabajo de un solo modelo sin failover', problem: 'Si la API del modelo principal está caída, todo el flujo de trabajo se detiene', fix: 'Diseña flujos de trabajo con una ruta de modelo de respaldo. El despacho multi-modelo de PromptQuorum lo hace sencillo.' },
+          { mistake: 'Sin monitoreo en flujos de trabajo automatizados', problem: 'Los flujos de trabajo se ejecutan silenciosamente — no sabes que la calidad de salida se está degradando hasta que el daño en los pasos siguientes se acumula', fix: 'Registra la tasa de aprobación por ejecución. Alerta sobre caídas de calidad >5% semana a semana.' },
+        ],
+      },
+      key_takeaways: {
+        title: 'Puntos clave',
+        items: [
+          'Un flujo de trabajo es un prompt con un activador, enrutamiento de salida y manejo de errores — no solo un prompt ejecutado automáticamente',
+          'Automatiza cuando la frecuencia >5/semana, las entradas son estructuradas y la salida siempre se enruta al mismo siguiente paso',
+          'Tres tipos de activadores: basado en eventos (webhook/carga), basado en programación (cron), basado en umbrales (métrica)',
+          'Define un esquema de salida JSON en cada límite de paso — nunca pases texto sin estructura entre pasos',
+          '4 plantillas de producción: procesamiento de documentos (n8n + GPT-4o), investigación (LangChain + Perplexity), revisión de código (GitHub Actions + Claude 4.6 Sonnet), triage de clientes (Make + PromptQuorum)',
+        ],
+      },
+      faq: {
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Qué es un flujo de trabajo de prompts repetible?', a: 'Un flujo de trabajo de prompts repetible es un proceso basado en prompts que se ejecuta automáticamente cuando se cumple una condición de activación definida, enruta la salida al siguiente paso y maneja los errores sin intervención manual. A diferencia de un prompt de una sola vez, un flujo de trabajo no requiere que un humano decida cuándo ejecutarlo o qué hacer con el resultado.' },
+          { q: '¿Cuál es la estructura mínima viable de un flujo de trabajo?', a: 'Un flujo de trabajo mínimo tiene 4 componentes: un activador (programado, dirigido por eventos o llamada a API), un paso de ejecución del prompt (llama a la API LLM con el prompt formateado), un paso de validación de salida (verifica los requisitos de formato y calidad) y un paso de enrutamiento (envía la salida al siguiente sistema o marca para revisión humana).' },
+          { q: '¿Cómo elijo entre Make, n8n y LangChain para flujos de trabajo de prompts?', a: 'Usa Make para equipos que necesitan una interfaz visual sin código con 1.000+ integraciones de apps. Usa n8n para equipos que quieren control auto-alojado y acceso al código fuente. Usa LangChain para desarrolladores que construyen cadenas complejas de múltiples pasos con memoria, recuperación y uso de herramientas en Python o JavaScript.' },
+          { q: '¿Cuándo debo automatizar un flujo de trabajo de prompts vs mantenerlo manual?', a: 'Automatiza cuando: el prompt se ejecuta más de 10 veces al día, las entradas siguen un formato predecible, la salida se alimenta directamente a otro sistema y la tasa de aprobación en un conjunto de pruebas supera el 90%. Mantén manual cuando: las entradas son muy variadas, la tarea requiere juicio que no puede puntuarse automáticamente, o la salida afecta decisiones irreversibles (legales, financieras, médicas).' },
+        ],
+      },
+      related_reading: {
+        title: 'Lecturas relacionadas',
+        items: [
+          { title: 'Encadenamiento de prompts: prompting multi-paso', url: '/prompt-engineering/prompt-chaining' },
+          { title: 'Flujo de trabajo de prompt engineering para desarrolladores', url: '/prompt-engineering/prompt-engineering-for-developers-workflow' },
+          { title: 'Prompt engineering para equipos de contenido', url: '/prompt-engineering/prompt-engineering-for-content-teams' },
+          { title: 'Prompt engineering para operaciones de soporte', url: '/prompt-engineering/prompt-engineering-for-support-operations' },
+          { title: 'Mejores herramientas para salida estructurada', url: '/prompt-engineering/best-tools-structured-output' },
+        ],
+      },
+      sources: {
+        title: 'Fuentes',
+        items: [
+          { title: 'n8n Documentation', url: 'https://docs.n8n.io' },
+          { title: 'Make (Integromat) Documentation', url: 'https://www.make.com/en/help' },
+          { title: 'LangChain Documentation', url: 'https://python.langchain.com/docs' },
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisation',

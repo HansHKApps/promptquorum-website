@@ -459,4 +459,86 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Model Comparisons',
+    title: '¿El mejor mini PC para LLM local?',
+    seoTitle: 'Mejor mini PC para LLM local 2026 | PromptQuorum',
+    metaDescription: 'Mac Mini M4 alcanza ~18 tok/s en 7B Q4. Minisforum UM790 Pro escala a 64 GB DDR5. Beelink SER8: ~8 tok/s a buen precio. Tres mini PCs para LLM local en 2026.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuál es el mejor mini PC para LLM local?',
+        answer: 'Tres mini PCs destacan para inferencia local de LLMs: Mac Mini M4 entrega ~18 tok/s con memoria unificada y sin cuello de botella de VRAM, Minisforum UM790 Pro escala a 64 GB DDR5 para modelos más grandes, y Beelink SER8 ofrece buena relación calidad-precio con ~8 tok/s y Ryzen 9 8845HS. Los tres ejecutan modelos Q4 de 7–13B sin GPU dedicada.',
+        bullets: [
+          'Mac Mini M4: el más rápido para LLMs, ~18 tok/s en Llama 3 8B, eficiente en energía',
+          'Minisforum UM790 Pro: iGPU AMD Radeon 780M, hasta 64 GB de RAM unificada',
+          'Beelink SER8: Ryzen 9 8845HS, ~8 tok/s, alternativa económica',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Mac Mini M4 parte desde ~599 USD (~699 € en España), usa Apple Metal para aceleración GPU y alcanza ~18 tok/s en un modelo 7B Q4 consumiendo solo ~30 W bajo carga',
+          'Minisforum UM790 Pro (AMD Ryzen 9 7940HS) soporta hasta 64 GB DDR5 y ~8 tok/s en un modelo 7B mediante ROCm en Linux',
+          'La arquitectura de memoria unificada de Apple Silicon es la ventaja clave — la RAM del M4 se comparte entre CPU y GPU sin cuello de botella de VRAM',
+          'Beelink SER8 (Ryzen 9 8845HS) es la opción económica: mismo ~8 tok/s que el UM790 Pro pero con inferencia basada en CPU, menor consumo eléctrico y sin necesidad de configurar ROCm en Linux',
+        ],
+      },
+      body1: {
+        title: 'Mac Mini M4 lidera en velocidad y eficiencia',
+        content: [
+          '<strong>El Mac Mini M4 alcanza ~18 tokens por segundo en un modelo 7B Q4, consume ~30 W bajo carga y parte desde aproximadamente 599 USD (~699 € en España) — lo que lo convierte en el mini PC más rápido para inferencia de LLMs locales.</strong> El chip M4 usa arquitectura de memoria unificada, lo que significa que la misma RAM física es compartida entre CPU y GPU sin sobrecarga por copia de datos. Para los usuarios que priorizan la velocidad, el M4 es la primera opción.',
+          'El Minisforum UM790 Pro es la opción escalable: AMD Ryzen 9 7940HS con iGPU Radeon 780M, hasta 64 GB DDR5 configurados como memoria unificada y ~8 tok/s en Linux con ROCm. El Beelink SER8 (Ryzen 9 8845HS) iguala al UM790 Pro en rendimiento pero usa inferencia solo por CPU — sin GPU dedicada — lo que lo convierte en la opción económica para usuarios en Windows o Linux que quieren evitar la configuración de ROCm.',
+          'La siguiente tabla compara los tres mini PCs en CPU/GPU, mejor configuración de memoria y velocidad medida de LLM.',
+        ],
+        columns: ['Mini PC', 'CPU/GPU', 'Mejor configuración', 'Velocidad LLM (7B Q4)'],
+        rows: [
+          { 'Mini PC': 'Mac Mini M4', 'CPU/GPU': 'Apple M4', 'Mejor configuración': '16 GB unificada', 'Velocidad LLM (7B Q4)': '~18 tok/s' },
+          { 'Mini PC': 'Minisforum UM790 Pro', 'CPU/GPU': 'Ryzen 9 7940HS', 'Mejor configuración': '64 GB DDR5', 'Velocidad LLM (7B Q4)': '~8 tok/s' },
+          { 'Mini PC': 'Beelink SER8', 'CPU/GPU': 'Ryzen 9 8845HS', 'Mejor configuración': '64 GB DDR5', 'Velocidad LLM (7B Q4)': '~8 tok/s' },
+        ],
+      },
+      body2: {
+        title: 'La memoria unificada es el diferenciador clave para el rendimiento de LLMs',
+        content: [
+          'Los mini PCs estándar con ranuras para GPU dedicada no son útiles para inferencia de LLMs porque el VRAM de la GPU está fijado de fábrica — típicamente 4–8 GB — y no puede expandirse. El Mac Mini M4 y el UM790 Pro resuelven esto mediante inferencia basada en GPU con memoria unificada. El Beelink SER8 adopta un enfoque diferente: su Ryzen 9 8845HS usa inferencia solo por CPU, que es más lenta pero no requiere configuración de GPU.',
+          'El Mac Mini M4 con 16 GB de memoria unificada supera al UM790 Pro con 32 GB DDR5 en velocidad de inferencia pura porque el ancho de banda de memoria de Apple (~68 GB/s) y la aceleración GPU Metal son más eficientes que la iGPU Radeon 780M. La ventaja del UM790 Pro es la posibilidad de expandirse a 64 GB, lo que permite ejecutar modelos más grandes como 13B y 30B Q4 que no caben en 16 GB.',
+          'Para una guía completa de selección de hardware para LLM local, consulta el <a href="/prompt-bites/best-frontend-for-ollama?lang=es" class="text-primary hover:underline">resumen de las mejores interfaces para Ollama</a>, que cubre el lado de software de la configuración local.',
+          'Para recomendaciones específicas de mini PCs en Japón con enlaces de Amazon.co.jp y precios en JPY, consulta nuestra <a href="/prompt-bites/best-mini-pc-local-llm-japan?lang=es" class="text-primary hover:underline">guía de mejores mini PCs para LLMs locales en Japón</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre mini PCs para LLMs locales',
+        faqs: [
+          {
+            q: '¿Puede el Mac Mini M4 ejecutar un modelo de 13B en local?',
+            a: 'Sí, con la versión de 16 GB en cuantización Q4 el modelo cabe con ~1 GB de margen. El Mac Mini M4 Pro de 32 GB puede ejecutar cómodamente modelos Q4 de 13B y 30B. La velocidad de inferencia baja a ~10 tok/s para 13B Q4 en el M4 base de 16 GB.',
+          },
+          {
+            q: '¿Necesita el Minisforum UM790 Pro ROCm para aceleración GPU?',
+            a: 'Sí. En Linux, Ollama y llama.cpp soportan la iGPU Radeon 780M mediante ROCm. En Windows, Ollama usa DirectML para la aceleración de iGPU AMD, que típicamente ofrece menor rendimiento que ROCm en Linux. Para la inferencia más rápida en el UM790 Pro, usa Linux con ROCm.',
+          },
+          {
+            q: '¿Es el Mac Mini M4 suficiente para coding con un modelo 7B?',
+            a: 'Sí. A ~18 tok/s con un modelo 7B Q4, el Mac Mini M4 produce tokens lo suficientemente rápido para finalización interactiva de código. La latencia de respuesta para una finalización de 200 tokens es aproximadamente 11 segundos — práctico para asistencia de coding no en tiempo real.',
+          },
+          {
+            q: '¿Cuál es el tamaño máximo de modelo que el UM790 Pro puede ejecutar a plena velocidad?',
+            a: 'Con 64 GB DDR5 configurados como memoria unificada en Linux con ROCm, el UM790 Pro puede ejecutar un modelo Q4 de 30B (~18 GB) a aproximadamente 3–4 tok/s. Un modelo Q4 de 13B (~8 GB) corre a ~6 tok/s. Consulta la <a href="/prompt-bites/best-frontend-for-ollama?lang=es" class="text-primary hover:underline">guía de interfaces Ollama</a> para la configuración de software.',
+          },
+          {
+            q: '¿Cuándo debo elegir el Beelink SER8 sobre el Mac Mini M4 o el UM790 Pro?',
+            a: 'Elige el Beelink SER8 si: (1) quieres evitar drivers de GPU y ROCm en Linux; (2) priorizas el presupuesto sobre la velocidad (es más barato que ambos); (3) usas Windows y no quieres usar DirectML; (4) haces inferencia ocasional a ~8 tok/s y prefieres la simplicidad de la inferencia por CPU. No superará al Mac Mini M4 en velocidad ni al UM790 Pro en escalabilidad, pero es la opción más sencilla solo por CPU.',
+          },
+        ],
+      },
+    },
+  },
 }
