@@ -38,9 +38,9 @@ export default async function EsFeaturesPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              'name': 'PromptQuorum Features — Prompt Engineering, Multi-Model Dispatch, Quorum Analysis',
+              'name': 'Características de PromptQuorum — Prompt Engineering, Envío Multi-Modelo, Análisis Quorum',
               'url': 'https://www.promptquorum.com/es/features',
-              'description': 'Explore PromptQuorum features: 9 prompt frameworks, AI optimization, dispatch to 25+ AI services, multi-model consensus analysis, hallucination detection, local LLM support, and full privacy.',
+              'description': 'Explora las características de PromptQuorum: 9 frameworks de prompt, optimización de IA, envío a 25+ servicios de IA, análisis de consenso multi-modelo, detección de alucinaciones, soporte de LLM local y privacidad total.',
               'inLanguage': 'es',
               'datePublished': '2026-04-05',
               'dateModified': '2026-04-05',
@@ -56,7 +56,7 @@ export default async function EsFeaturesPage() {
               '@type': 'BreadcrumbList',
               'itemListElement': [
                 { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/es' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Features', 'item': 'https://www.promptquorum.com/es/features' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'Características', 'item': 'https://www.promptquorum.com/es/features' },
               ],
             },
           ]),

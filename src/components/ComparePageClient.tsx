@@ -973,9 +973,27 @@ const content: Partial<Record<Lang, CompareText>> = {
 // Component
 // ---------------------------------------------------------------------------
 
+const TABLE_ROWS: Partial<Record<Lang, { pq: string[], poe: string[], lm: string[], om: string[], az: string[] }>> = {
+  es: {
+    pq:  ['✓ Sí', '✓ Quorum Verdict', '✓ Ollama + LM Studio', '✓ Tus claves', 'Beta gratuita'],
+    poe: ['~ Secuencial / limitado', '✗ No', '✗ Solo nube', '~ Limitado', 'Gratis / $19,99/mes'],
+    lm:  ['~ Solo 2 modelos', '~ Solo votación humana', '✗ Solo nube', '✗ No', 'Gratis'],
+    om:  ['✓ Paralelo', '~ Puntuación determinista', '✗ Solo nube', '✓ Sí', 'Nivel gratuito / créditos'],
+    az:  ['✓ Sí', '✗ No', '✗ Solo nube', '✓ Sí', 'Desde $9,90/mes'],
+  },
+}
+const DEFAULT_ROWS = {
+  pq:  ['✓ Yes', '✓ Quorum Verdict', '✓ Ollama + LM Studio', '✓ Your keys', 'Free beta'],
+  poe: ['~ Sequential / limited', '✗ No', '✗ Cloud only', '~ Limited', 'Free / $19.99/mo'],
+  lm:  ['~ 2 models only', '~ Human voting only', '✗ Cloud only', '✗ No', 'Free'],
+  om:  ['✓ Parallel', '~ Deterministic scoring', '✗ Cloud only', '✓ Yes', 'Free tier / credits'],
+  az:  ['✓ Yes', '✗ No', '✗ Cloud only', '✓ Yes', 'From $9.90/mo'],
+}
+
 function CompareContent({ initialLang }: { initialLang?: Lang }) {
   const lang = useLang(initialLang) as Lang
   const t = (content[lang] ?? content['en'])!
+  const rows = TABLE_ROWS[lang] ?? DEFAULT_ROWS
 
   return (
     <div className="min-h-screen bg-white pt-28 pb-20">
@@ -1062,43 +1080,43 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
               <tbody>
                 <tr className="bg-primary/5 border-b border-primary/10 group">
                   <td className="py-2 sm:py-3 px-2 sm:px-4 text-primary font-semibold sticky left-0 z-10 bg-primary/5 group-hover:bg-primary/5 transition-colors">PromptQuorum</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Quorum Verdict</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Ollama + LM Studio</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Your keys</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free beta</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">{rows.pq[0]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">{rows.pq[1]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">{rows.pq[2]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">{rows.pq[3]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">{rows.pq[4]}</td>
                 </tr>
                 <tr className="border-b border-gray-100 group">
                   <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-colors">Poe (Quora)</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Sequential / limited</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Limited</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free / $19.99/mo</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">{rows.poe[0]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">{rows.poe[1]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">{rows.poe[2]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">{rows.poe[3]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">{rows.poe[4]}</td>
                 </tr>
                 <tr className="border-b border-gray-100 group">
                   <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-colors">LM Arena</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ 2 models only</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Human voting only</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">{rows.lm[0]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">{rows.lm[1]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">{rows.lm[2]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">{rows.lm[3]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">{rows.lm[4]}</td>
                 </tr>
                 <tr className="border-b border-gray-100 group">
                   <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-colors">OpenMark</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Parallel</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Deterministic scoring</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free tier / credits</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">{rows.om[0]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">{rows.om[1]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">{rows.om[2]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">{rows.om[3]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">{rows.om[4]}</td>
                 </tr>
                 <tr className="group">
                   <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-colors">AiZolo</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
-                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">From $9.90/mo</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">{rows.az[0]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">{rows.az[1]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">{rows.az[2]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">{rows.az[3]}</td>
+                  <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">{rows.az[4]}</td>
                 </tr>
               </tbody>
             </table>

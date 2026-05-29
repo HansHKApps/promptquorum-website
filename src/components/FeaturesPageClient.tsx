@@ -230,6 +230,47 @@ const T = {
     ],
     back: '← 返回首页',
   },
+  es: {
+    h1: 'Características de PromptQuorum: 9 Frameworks, 25+ Modelos, 13 Tipos de Análisis',
+    subtitle: 'Escribe prompts estructurados con 9 frameworks integrados, envíalos a 25+ modelos de IA en paralelo y analiza las respuestas con 13 tipos de análisis de consenso — incluyendo detección de alucinaciones. A partir de abril de 2026.',
+    tldrTitle: 'Características principales de un vistazo',
+    tldrItems: [
+      '9 frameworks de prompt engineering (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
+      'Envío a 25+ modelos en la nube simultáneamente (GPT-4o, Claude, Gemini, DeepSeek y más)',
+      '13 tipos de análisis de consenso Quorum en 4 categorías (síntesis, comparación, calidad, selección)',
+      'La detección de alucinaciones marca afirmaciones que aparecen en un solo modelo o contradicen el consenso',
+      'Soporte de LLM local: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM y cualquier endpoint compatible con OpenAI',
+      'Privacidad ante todo: ejecución completamente sin conexión, sin registro requerido, nada sale de tu dispositivo',
+      'Comparación instantánea de respuestas en paralelo de todos los modelos en tiempo real',
+      'Optimización automática de prompts con 8 técnicas de refinamiento para mejores resultados de IA',
+    ],
+    features: [
+      { title: 'Optimización de prompts', description: 'Refina y optimiza tus prompts automáticamente con 8 técnicas de refinamiento probadas para mejores resultados de IA.' },
+      { title: 'Envío multi-modelo', description: 'Ejecuta prompts en ChatGPT, Claude, Gemini y 25+ modelos más simultáneamente en paralelo.' },
+      { title: 'Puntuación Quorum', description: 'Encuentra respuestas de consenso entre modelos con puntuación de confianza. La detección de alucinaciones marca afirmaciones que aparecen en un solo modelo.' },
+      { title: 'Comparación instantánea', description: 'Obtén respuestas en paralelo con un clic — sin copiar y pegar manualmente entre pestañas del navegador.' },
+      { title: 'Privacidad ante todo', description: 'Opción de ejecución local. Sin registro requerido. Control total sobre tus prompts.' },
+    ],
+    optimizationH2: '¿Cómo revisas los resultados de optimización?',
+    optimizationDesc: 'Revisa evaluaciones de calidad, historial de versiones y sugerencias de mejora para tus prompts optimizados.',
+    quorumH2: '¿Qué es Quorum — Consenso multi-modelo?',
+    quorumDesc: 'Recopila respuestas de 25+ modelos de IA, analiza patrones de consenso y sintetiza perspectivas de diferentes fuentes.',
+    howH2: '¿Cómo funciona PromptQuorum en 3 pasos?',
+    howDesc: 'Tres pasos simples para mejores prompts y decisiones de IA más inteligentes.',
+    relatedReadingH2: 'Lectura relacionada',
+    relatedReadingLinks: [
+      { title: 'Cómo funciona: Descripción completa del sistema', href: '/how-it-works' },
+      { title: 'Compara PromptQuorum con alternativas', href: '/compare' },
+      { title: 'Guías y frameworks de Prompt Engineering', href: '/prompt-engineering' },
+      { title: 'Preguntas frecuentes', href: '/faq' },
+    ],
+    steps: [
+      { title: 'Elige un framework', desc: 'Selecciona un framework de prompt engineering como Chain-of-Thought, Few-Shot o CRAFT.' },
+      { title: 'Ejecuta tu prompt', desc: 'Envía tu prompt a 25+ modelos. Observa cómo las respuestas llegan en paralelo en tiempo real.' },
+      { title: 'Compara y optimiza', desc: 'Encuentra respuestas de consenso, detecta alucinaciones y refina para mejor calidad de resultados.' },
+    ],
+    back: '← Volver al inicio',
+  },
 }
 
 function FeatureCard({ icon: Icon, title, description }: { icon: React.ElementType; title: string; description: string }) {
