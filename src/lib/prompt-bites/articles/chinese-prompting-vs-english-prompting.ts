@@ -625,4 +625,118 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       ],
     },
   },
+
+  es: {
+    theme: 'Model Comparisons',
+    title: 'Prompts en chino vs inglés: ¿cuál es mejor para LLMs locales?',
+    seoTitle: 'Prompts en chino vs inglés 2026: eficiencia de tokens en LLMs',
+    metaDescription: 'Los prompts en chino usan 30–50% menos tokens en Qwen2.5. El inglés produce cadenas de razonamiento más fuertes. Técnicas mixtas y guía por modelo.',
+    publishDate: '2026-05-26',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    educationalLevel: 'Intermediate',
+    audience: 'Usuarios bilingües chino-inglés que ejecutan LLMs locales',
+    parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
+    siblingBites: ['can-you-run-qwen3-on-ollama', 'qwen-coder-vs-deepseek-coder'],
+    is_living_page: false,
+    quickAnswerTop: {
+      en: { question: 'Chinese or English prompting?', answer: 'English instructions + Chinese reply directive is best on all models.', bullets: ['Chinese saves 30–50% tokens on Qwen2.5', 'English produces better reasoning chains'], updatedDate: '2026-05' },
+      de: { question: 'Chinesisch oder Englisch?', answer: 'Englische Anweisungen + Chinesisch-Direktive ist am besten.', bullets: ['Chinesisch spart 30–50% Tokens'], updatedDate: '2026-05' },
+      fr: { question: 'Prompting chinois ou anglais ?', answer: 'Instructions en anglais + directive chinoise est optimal.', bullets: ['Chinois économise 30–50% tokens'], updatedDate: '2026-05' },
+      ja: { question: '中国語か英語か？', answer: '英語指示+「中国語で返答」が最良。', bullets: ['中国語で30–50%トークン節約'], updatedDate: '2026-05' },
+      zh: { question: '中文还是英文提示更好？', answer: '英文指令+「请用中文回复」在所有模型上最优。', bullets: ['中文节省30–50% token'], updatedDate: '2026-05' },
+      es: {
+        question: '¿Es mejor hacer prompts a LLMs locales en chino o en inglés?',
+        answer: 'Instrucciones en inglés + directiva "responde en chino" es la mejor configuración en todos los modelos. Los prompts en chino ahorran 30–50% de tokens en Qwen2.5. Los prompts en inglés producen mejores cadenas de razonamiento.',
+        bullets: [
+          'Tokenización CJK: 30–50% menos tokens en Qwen2.5',
+          'System prompts en inglés → mejor razonamiento',
+          'Llama 3 / Mistral: prompting en inglés significativamente mejor',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Los prompts en chino ahorran 30–50% de tokens en Qwen2.5 y DeepSeek-R1-Distill — la tokenización CJK es inherentemente más densa',
+          'Los prompts en inglés producen cadenas de razonamiento lógico más fuertes en casi todos los modelos',
+          'Mejor práctica: "Por favor responde en chino. [Instrucciones en inglés]" — supera al chino puro en todos los modelos testeados',
+          'Evita prompts en chino con Llama 3 y Mistral — sus tokenizadores occidentales fragmentan los caracteres chinos',
+        ],
+      },
+      tokenEfficiency: {
+        id: 'token-efficiency',
+        title: 'Eficiencia de tokens: chino vs inglés',
+        content: [
+          'La tokenización CJK produce dramáticamente menos tokens por unidad de significado.',
+          '**Ejemplo:** Misma instrucción en inglés: ~25 tokens; en chino: ~16 tokens (36% menos)',
+          '**Eficiencia por familia de modelo:** Qwen2.5: 1 carácter chino ≈ 1–1.5 tokens; Llama 3: 1 carácter ≈ 3–5 tokens (ineficiente)',
+        ],
+      },
+      reasoning: {
+        id: 'reasoning-quality',
+        title: 'Calidad del razonamiento: el inglés tiene ventaja',
+        content: [
+          'A pesar de la capacidad nativa en chino de Qwen2.5, los system prompts en inglés producen consistentemente cadenas de razonamiento más fuertes.',
+          '**Mejor combinación:** System prompt en inglés + "responde en chino" en el prompt de usuario.',
+        ],
+      },
+      mixedTechnique: {
+        id: 'mixed-language',
+        title: 'Técnica de prompting en múltiples idiomas',
+        content: [
+          '**Plantilla de system prompt (funciona mejor):**',
+          '`You are a helpful assistant. Always respond in Simplified Chinese (简体中文). Think step by step before answering.`',
+          '**Para escritura creativa:** Los prompts solo en chino en Qwen2.5-72B producen los mejores resultados estilísticos.',
+          '**Para tareas técnicas (generación de código):** Usa prompts en inglés incluso con Qwen2.5-Coder.',
+        ],
+      },
+      modelGuide: {
+        id: 'model-guide',
+        title: 'Estrategia de prompting por modelo',
+        content: [
+          '**Qwen2.5 7B/14B/32B:** Mejor soporte nativo en chino. Usa system prompts en inglés para tareas de razonamiento intensivo.',
+          '**DeepSeek-R1-Distill (todos los tamaños):** Fuerte en ambos idiomas. System prompt en inglés + consulta de usuario en chino es la configuración óptima.',
+          '**Llama 3 8B/70B:** Evita prompts en chino. El tokenizador fragmenta los caracteres chinos en bytes.',
+          '**Mistral 7B:** Soporte en chino más débil. Mantente con prompts en inglés.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿El prompting en chino ahorra dinero en llamadas a la API?', a: 'Sí, significativamente. Los tokens en chino son 30–50% menos para el mismo contenido en modelos de la familia Qwen.' },
+          { q: '¿Puedo mezclar chino e inglés en el mismo prompt?', a: 'Sí. Los prompts en dos idiomas los maneja bien Qwen2.5 y DeepSeek-R1-Distill.' },
+          { q: '¿Qué idioma debo usar para los system prompts?', a: 'Inglés, incluso en modelos nativos en chino como Qwen2.5. Los system prompts en inglés producen consistentemente mejor seguimiento de instrucciones.' },
+          { q: '¿Qué hay del chino tradicional vs simplificado?', a: 'Qwen2.5 maneja ambos. Especifica "请使用繁体中文回答" para tradicional o "请使用简体中文回答" para simplificado.' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Prompts en chino vs inglés para LLMs locales 2026',
+      description: 'Tokenización CJK: 30–50% menos tokens en Qwen2.5. System prompts en inglés para mejor razonamiento. Técnica mixta recomendada.',
+      url: 'https://www.promptquorum.com/es/prompt-bites/chinese-prompting-vs-english-prompting',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      about: [{ '@type': 'Thing', name: 'Técnicas de prompting para LLMs' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen2.5' }, { '@type': 'SoftwareApplication', name: 'DeepSeek-R1' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'es',
+      mainEntity: [
+        { '@type': 'Question', name: '¿Es mejor el prompting en chino o en inglés para LLMs locales?', acceptedAnswer: { '@type': 'Answer', text: 'Instrucciones en inglés + directiva en chino es óptimo. El chino ahorra 30–50% de tokens; el inglés produce mejor razonamiento.' } },
+        { '@type': 'Question', name: '¿Qué idioma usar para los system prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Inglés, incluso en modelos nativos en chino como Qwen2.5. Los system prompts en inglés siempre producen mejor seguimiento de instrucciones.' } },
+      ],
+    },
+  },
 }

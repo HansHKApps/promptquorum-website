@@ -236,6 +236,188 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     ],
   },
+  es: {
+    theme: 'Privacy & Security',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    title: 'Comparación de riesgos RGPD: Qwen vs DeepSeek vs Llama vs Claude 2026',
+    seoTitle: 'Matriz de riesgo RGPD: Comparación de LLM Qwen DeepSeek Llama Claude | PromptQuorum',
+    metaDescription: 'Comparación de LLM conforme al RGPD: DeepSeek API (mayor riesgo), Qwen local (menor riesgo), Llama local, API Claude/GPT (riesgo medio). Matriz de riesgo por residencia de datos, jurisdicción, ToS y requisitos SCC. Actualizado mayo 2026.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    readTime: '8 min de lectura',
+    educationalLevel: 'Advanced',
+    audience: 'CISOs, equipos de adquisiciones y responsables de cumplimiento que eligen entre LLMs propietarios y de pesos abiertos',
+    primaryTerm: 'comparación de riesgo RGPD modelos LLM',
+    leadAnswerBlock: '**La API de DeepSeek presenta el mayor riesgo RGPD de cualquier LLM importante debido a la ley china de acceso a datos (PIPL); Qwen y Llama ejecutados localmente tienen un riesgo igualmente bajo; las API de Claude y GPT-4o con residencia EU tienen riesgo medio y requieren Cláusulas Contractuales Estándar (SCCs).**',
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 2.5 14B', 'Qwen local', 'Llama 4 Scout', 'Claude 3.5 Sonnet', 'GPT-5.5 Instant', 'Claude Opus 4.7'],
+    current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
+    toc: [
+      { label: 'Cuatro vectores de riesgo RGPD para LLMs', anchor: 'risk-vectors' },
+      { label: 'Matriz de riesgo: comparación modelo por modelo', anchor: 'risk-matrix' },
+      { label: 'Veredicto por modelo y uso recomendado', anchor: 'model-verdicts' },
+      { label: 'Stack recomendado según el tipo de organización', anchor: 'org-stacks' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'La API de DeepSeek tiene el mayor riesgo RGPD de todos los LLMs importantes: los servidores están sujetos a la ley china de acceso a datos (PIPL), no existe decisión de adecuación UE-China, y los ToS permiten explícitamente compartir datos con las autoridades chinas',
+          'Qwen 2.5 14B y Llama 4 Scout ejecutados localmente son los de menor riesgo: sin transferencia según el Artículo 44, sin SCC requerida, los datos permanecen en tu hardware',
+          'Las API de Claude y GPT-5.5 Instant tienen riesgo medio: la jurisdicción estadounidense requiere Cláusulas Contractuales Estándar más Evaluación de Impacto de Transferencia; las opciones de residencia de datos en la UE (Claude EU) reducen el riesgo',
+          'Stacks recomendados: startups (Claude + SCC), organizaciones con datos sensibles (Qwen 24 GB local), empresas (Qwen multi-GPU + air-gap)',
+          'La matriz de decisión de riesgo cubre cinco vectores: residencia de datos, jurisdicción de datos de entrenamiento, retención de datos en ToS, requisito SCC y veredicto legal',
+        ],
+      },
+      riskVectors: {
+        id: 'risk-vectors',
+        title: 'Cuatro vectores de riesgo RGPD para LLMs',
+        content: [
+          'No todos los despliegues de LLM conllevan el mismo riesgo RGPD. El riesgo legal y operativo de usar un LLM está determinado por cuatro factores independientes:',
+        ],
+        subsections: [
+          {
+            title: 'Residencia de datos',
+            text: 'Dónde se ubican físicamente los servidores del modelo. Si los servidores están en la UE y el proveedor se compromete contractualmente a mantener tus datos en la UE, el riesgo de residencia de datos es bajo. Si los servidores están fuera de la UE sin SCC, el riesgo de residencia de datos es alto. Para organizaciones en México (LFPDPPP), Argentina (Ley 25.326) o Colombia (Ley 1581 de 2012), aplican requisitos equivalentes de localización de datos.',
+          },
+          {
+            title: 'Jurisdicción de los datos de entrenamiento',
+            text: 'Qué leyes del país rigen los datos de entrenamiento y el derecho del proveedor a retenerlos. La ley de datos de EE. UU. (CFAA, SCA) permite el acceso de las autoridades. La ley de datos china (PIPL) impone derechos de acceso estatal mucho más amplios. Los datos de la UE permanecen protegidos bajo el RGPD y la Directiva ePrivacy; los datos latinoamericanos se rigen por sus respectivas leyes nacionales.',
+          },
+          {
+            title: 'Retención de datos en los ToS',
+            text: '¿Qué dice los Términos de Servicio sobre guardar tus datos tras completar la inferencia? OpenAI y DeepSeek han indicado (en distintos foros) que pueden retener los prompts de los usuarios para mejorar el modelo o por divulgación legalmente obligatoria. Qwen y Llama ejecutados localmente no tienen ToS: tú controlas la retención.',
+          },
+          {
+            title: 'Requisito de SCC / TIA',
+            text: 'Tras el caso Schrems II, cualquier transferencia de datos personales de la UE fuera de la UE requiere Cláusulas Contractuales Estándar (SCCs) más una Evaluación de Impacto de Transferencia (TIA) para confirmar que la jurisdicción de destino ofrece protección adecuada. Las API en la nube requieren esto; los modelos locales no.',
+          },
+        ],
+      },
+      riskMatrix: {
+        id: 'risk-matrix',
+        title: 'Matriz de riesgo: comparación modelo por modelo',
+        content: [
+          'La siguiente tabla resume el perfil de riesgo RGPD de cada opción de despliegue. Una puntuación más alta indica mayor riesgo legal y operativo.',
+        ],
+        tableData: {
+          headers: ['Despliegue', 'Residencia de datos', 'Jurisdicción de datos de entrenamiento', 'Riesgo de retención en ToS', '¿SCC / TIA requerida?', 'Nivel de riesgo global'],
+          rows: [
+            {
+              cells: ['DeepSeek API', 'China (Alibaba Cloud)', 'China (PIPL)', 'Se reserva explícitamente el derecho a compartir datos con las autoridades', 'Sí, pero ineficaz (sin adecuación UE-China)', '🔴 Mayor'],
+            },
+            {
+              cells: ['Claude API (EE. UU.)', 'EE. UU. (Virginia)', 'EE. UU.', 'Anthropic se compromete a eliminar los datos bajo petición; retención por defecto de 30 días', 'Sí, requiere SCC + TIA', '🟠 Medio-alto'],
+            },
+            {
+              cells: ['GPT-4o (EE. UU.)', 'EE. UU. (múltiples regiones)', 'EE. UU.', 'OpenAI puede retener datos para mejorar el modelo; política opaca', 'Sí, requiere SCC + TIA', '🟠 Medio-alto'],
+            },
+            {
+              cells: ['Claude (residencia de datos UE)', 'UE (Irlanda o Alemania)', 'EE. UU. (Anthropic), datos permanecen en la UE', 'Anthropic se compromete a residencia solo en la UE + cumplimiento RGPD', 'Sí, SCC adecuada por procesamiento en la UE', '🟡 Medio'],
+            },
+            {
+              cells: ['Llama 4 Scout (local)', 'Tu hardware (LAN)', 'Código abierto, sin retención comercial', 'Tú controlas la retención solo a través de logs locales', 'No', '🟢 Menor'],
+            },
+            {
+              cells: ['Qwen 2.5 14B (local)', 'Tu hardware (LAN)', 'Código abierto (Apache 2.0), sin retención comercial', 'Tú controlas la retención solo a través de logs locales', 'No', '🟢 Menor'],
+            },
+          ],
+        },
+      },
+      modelVerdicts: {
+        id: 'model-verdicts',
+        title: 'Veredicto por modelo y uso recomendado',
+        content: [
+          'Usa esta sección para entender cuándo es apropiado cada despliegue según tu postura de cumplimiento RGPD.',
+        ],
+        subsections: [
+          {
+            title: 'DeepSeek API — Evitar para flujos de trabajo RGPD',
+            text: 'La API de DeepSeek presenta el mayor riesgo de cualquier LLM importante porque: (1) los servidores están en China continental, sujetos a los mandatos de acceso a datos de la PIPL; (2) no existe decisión de adecuación UE-China (Schrems II hace que las SCCs sean insuficientes); (3) los ToS se reservan explícitamente el derecho a compartir datos con las autoridades chinas. Si tus prompts contienen datos personales de residentes en la UE o en países latinoamericanos con leyes de protección de datos (LFPDPPP en México, Ley 25.326 en Argentina, Ley 1581 en Colombia), la API de DeepSeek viola el marco de protección aplicable salvo que tengas consentimiento explícito de cada interesado y una base legal documentada para la transferencia. Para tareas no sensibles (análisis de competencia, lluvia de ideas), el riesgo es menor, pero la revisión del contrato es obligatoria antes de cualquier uso.',
+          },
+          {
+            title: 'Claude API (EE. UU.) — Riesgo medio, gestionable con SCC + TIA',
+            text: 'La API de Claude requiere Cláusulas Contractuales Estándar y una Evaluación de Impacto de Transferencia, pero es más conforme que GPT-4o porque: (1) Anthropic tiene un compromiso más claro de eliminación bajo petición; (2) Anthropic ha publicado Addendas de Procesamiento de Datos (DPA) que hacen referencia explícita a los Artículos 28 y 32 del RGPD; (3) la ley de EE. UU., aunque permite el acceso de las autoridades, no obliga a retener datos comerciales. Para datos personales no sensibles (cargos de trabajo, contexto empresarial genérico), la API de Claude con SCC + TIA es aceptable. Para datos de alta sensibilidad (salud, financieros, biométricos), se requiere despliegue local.',
+          },
+          {
+            title: 'Claude (residencia de datos UE) — Riesgo medio, reducido por procesamiento en la UE',
+            text: 'Anthropic ofrece una opción de residencia de datos en la UE donde los prompts se procesan en Irlanda o Alemania. Esto reduce el riesgo porque: (1) los datos permanecen dentro de la UE durante el procesamiento; (2) los datos se eliminan a los 30 días; (3) Anthropic se compromete al cumplimiento del RGPD. Sin embargo, los datos de entrenamiento detrás de los modelos Claude son de entrenamiento en EE. UU., y Anthropic es una empresa estadounidense, por lo que el cumplimiento total del Artículo 44 sigue requiriendo SCCs. Mejor que Claude EE. UU. para el RGPD, pero no equivalente al despliegue local.',
+          },
+          {
+            title: 'GPT-4o / GPT-5.5 Instant — Riesgo medio-alto',
+            text: 'Las API de OpenAI conllevan mayor riesgo que Claude porque: (1) la política de retención de datos de OpenAI es opaca — la empresa ha dicho que puede retener datos de usuarios para "mejoras de investigación y seguridad"; (2) no hay DPA publicada; (3) no hay opción de residencia de datos en la UE. Si eliges OpenAI, exige SCC explícita + TIA exhaustiva, y evita enviar datos de alta sensibilidad (salud, financieros, biométricos, genéticos). Para tareas de baja sensibilidad, es aceptable con SCC.',
+          },
+          {
+            title: 'Llama 4 Scout (local) — Menor riesgo, sin transferencia',
+            text: 'Los pesos de Llama son de código abierto bajo una licencia amigable para uso comercial. Ejecutar Llama localmente en tu propio hardware significa: (1) cero transferencia según el Artículo 44; (2) tú controlas toda la retención de datos; (3) no se requiere SCC ni TIA; (4) cumplimiento total del Artículo 25 (privacidad desde el diseño). Apto para todos los niveles de sensibilidad de datos. Llama 4 Scout a 8 GB o Llama 3.2 70B a 48 GB cubre la mayoría de los casos de uso empresarial.',
+          },
+          {
+            title: 'Qwen 2.5 / 3 (local) — Menor riesgo, sin transferencia',
+            text: 'Los pesos de Qwen son de código abierto bajo Apache 2.0. Al igual que Llama, ejecutar Qwen localmente significa: (1) cero transferencia según el Artículo 44; (2) tú controlas la retención; (3) no se requiere base legal (sin transferencia = sin riesgo de transferencia). Qwen 2.5 14B es el más ampliamente desplegado en Europa y en organizaciones latinoamericanas con requisitos de privacidad estrictos, gracias a su excelente rendimiento multilingüe y menor huella de VRAM (12–16 GB frente a los 48 GB de Llama 3.2 70B). Apto para todos los niveles de sensibilidad.',
+          },
+        ],
+      },
+      orgStacks: {
+        id: 'org-stacks',
+        title: 'Stack recomendado según el tipo de organización',
+        content: [
+          'El stack de LLM adecuado depende de la sensibilidad de datos de tu organización, el presupuesto y la postura regulatoria. Usa estas recomendaciones como punto de partida para las decisiones de adquisición.',
+        ],
+        subsections: [
+          {
+            title: 'Startup en etapa temprana (poca presión regulatoria)',
+            text: 'Usa la API de Claude con SCC. Justificación: Claude es de alta calidad, listo para producción, la carga de gestión es baja, y las SCCs son estándar para proveedores de IA con sede en EE. UU. El costo es de aproximadamente $3–5/mes para uso experimental. El riesgo es aceptable porque los datos de las startups son típicamente de baja sensibilidad (patrones de uso anónimos, lógica empresarial genérica). Si creces en salud o fintech, migra a Qwen local.',
+          },
+          {
+            title: 'PYME con datos de empleados/clientes (presión regulatoria media)',
+            text: 'Usa Qwen 2.5 14B o Llama 3.2 32B localmente. Justificación: Gestionas datos personales (nómina de empleados, información de contacto de clientes, historial de transacciones), por lo que se requiere arquitectura de cero transferencia. Aplica tanto para RGPD en la UE como para LFPDPPP en México, Ley 25.326 en Argentina y Ley 1581 en Colombia. Despliega en una GPU on-prem (RTX 4070 Ti, 12 GB VRAM para Qwen 2.5 en cuantización Q4). Costo: ~$500 hardware único + ~$100/año en electricidad. Tiempo de configuración: menos de 1 hora (Ollama es trivial). Carga de cumplimiento: cero (sin SCC, sin TIA, sin negociación de DPA).',
+          },
+          {
+            title: 'Empresa (alta presión regulatoria: salud, fintech, derecho)',
+            text: 'Usa Qwen 3 33B multi-GPU con despliegue air-gap. Justificación: Los datos de alta sensibilidad requieren la arquitectura más robusta posible. Multi-GPU (2× RTX 3090 o 4× RTX 4090) permite ejecutar modelos más grandes y capaces con menor latencia. Air-gap significa que el clúster de inferencia no tiene acceso saliente a internet — los prompts no pueden filtrarse, incluso si se descubre una vulnerabilidad. Costo: ~$5–15K en hardware, 1–2 semanas de configuración por el equipo de infraestructura. Cumplimiento: Satisfacción total del Artículo 32 del RGPD (seguridad), registro de auditoría del Artículo 30 con logs de acceso completos.',
+          },
+          {
+            title: 'Organización con acuerdo legal existente (caso especial)',
+            text: 'Si ya tienes un Addendum de Procesamiento de Datos (DPA) con Claude u OpenAI, úsalos. El costo de cambiar a local suele ser inferior al de renegociar tu DPA, y si el acuerdo existente es reciente (2024–2026) e incluye SCC + TIA, el riesgo es manejable. Revisa con tu equipo legal antes de decidir.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          {
+            q: '¿Es DeepSeek conforme al RGPD si lo uso con una SCC?',
+            a: 'No. Las SCCs por sí solas no satisfacen las transferencias del Artículo 44 del RGPD a China continental porque: (1) no existe decisión de adecuación UE-China tras Schrems II; (2) la ley china (PIPL) obliga a las empresas a compartir datos con las autoridades estatales bajo petición, lo que las SCCs no pueden anular; (3) Anthropic, OpenAI y otros grandes proveedores no ofrecen ejecución de SCCs en China y se niegan a operar allí. Para cualquier dato personal de residentes en la UE — o bajo leyes latinoamericanas equivalentes como la LFPDPPP (México), la Ley 25.326 (Argentina) o la Ley 1581 (Colombia) — no uses la API de DeepSeek. Si necesitas DeepSeek, usa los pesos locales (ejecuta `ollama run deepseek-coder:latest` en tu hardware).',
+          },
+          {
+            q: '¿El uso de Claude EU con SCC satisface el RGPD?',
+            a: 'En su mayor parte sí, con matices. Claude EU mantiene tus datos en Irlanda o Alemania durante el procesamiento y los elimina en 30 días. Anthropic ha publicado una DPA conforme al RGPD y SCCs. Sin embargo, los modelos Claude fueron entrenados con datos en EE. UU., y Anthropic es una empresa estadounidense, por lo que técnicamente sigue existiendo una "transferencia" en forma de entrenamiento del modelo y relación con el proveedor. Para el cumplimiento práctico, Claude EU + SCC es aceptable para la mayoría de las organizaciones. Para la postura más sólida (sin ningún riesgo de transferencia), usa Qwen o Llama local.',
+          },
+          {
+            q: '¿Puedo usar Llama 4 Scout como sustituto directo de Claude?',
+            a: 'Para el cumplimiento RGPD: sí. Llama 4 Scout es de código abierto y puede ejecutarse localmente, por lo que satisface plenamente los Artículos 44, 25 y 32. Para capacidad y rendimiento: quizás. Llama 4 Scout es más pequeño (8 GB VRAM) que Claude (que es propietario y muy grande), por lo que es más rápido y barato de ejecutar localmente, pero puede ser menos capaz en algunos benchmarks. Pruébalo en tu carga de trabajo primero. Para Q&A simple, resumen y tareas de código, Llama 4 Scout es competitivo. Para razonamiento muy complejo, Claude sigue siendo mejor, pero Qwen 2.5 14B local o Llama 3.2 70B pueden manejar la mayoría de las tareas empresariales.',
+          },
+          {
+            q: '¿Qué ocurre si registro mis prompts localmente con fines de auditoría?',
+            a: 'Se recomienda el registro para el cumplimiento del Artículo 30. Registra lo siguiente: nombre del modelo, marca de tiempo de la sesión, recuento de tokens de entrada, recuento de tokens de salida y un hash SHA-256 del prompt y la respuesta. NO registres el texto sin formato de los prompts que contengan datos personales. El registro basado en hash satisface el Artículo 30 (registros de procesamiento) y el Artículo 32 (seguridad) sin violar el Artículo 5(1)(e) (limitación del almacenamiento). Almacena los logs en un sistema cifrado con control de acceso (por ejemplo, servidor de agregación de logs con acceso basado en roles). Retén los logs durante 3 años según el estándar DPA.',
+          },
+          {
+            q: '¿Es más caro ejecutar un LLM on-prem que usar APIs en la nube?',
+            a: 'Por adelantado: sí. El hardware (RTX 4070 Ti) cuesta ~$500–1000. Mensualmente: no. La electricidad on-prem es de ~$5–10/mes. Las API en la nube cuestan $0,001–0,01 por 1K tokens, lo que para un uso intensivo (>1M tokens/mes) supera los $100. El punto de equilibrio suele ser de 6–12 meses para uso medio-alto. Si ejecutas <100K tokens/mes, las API en la nube son más baratas. Si ejecutas >1M tokens/mes, el on-prem es más barato. El cumplimiento RGPD es un argumento empresarial adicional: el on-prem elimina el costo legal de SCC/TIA.',
+          },
+        ],
+      },
+    },
+    snippetBlocks: [
+      {
+        sectionId: 'risk-vectors',
+        oneLineSentence: 'El riesgo RGPD para los LLMs está determinado por la residencia de datos, la jurisdicción de los datos de entrenamiento, las políticas de retención de los ToS y los requisitos de SCC/TIA.',
+        plainTerms: 'Tu elección de LLM importa para el RGPD por el lugar donde se almacenan tus datos, qué país es propietario del modelo, cuánto tiempo guarda el proveedor tus datos y si necesitas contratos legales para mover datos entre fronteras.',
+      },
+    ],
+  },
   de: {
     theme: 'Privacy & Security',
     freshness_tier: 'semi_annual',
