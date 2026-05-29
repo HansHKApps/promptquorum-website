@@ -532,4 +532,134 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Tool Comparisons',
+    title: 'Cursor Pro vs Continue.dev: ¿Valen $20/mes en 2026?',
+    seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
+    metaDescription: 'Cursor Pro ($20/mes) gana con modelos en la nube y UX pulida. Continue.dev es gratis y mejor para modelos locales de Ollama. Elige según dónde viva tu modelo.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermedio',
+    audience: 'Desarrolladores eligiendo un asistente de codificación IA para flujos de trabajo tipo VS Code',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/replace-github-copilot-with-local-llm',
+    siblingBites: ['best-frontend-for-ollama', 'jan-vs-lm-studio'],
+    is_living_page: false,
+    leadAnswerBlock: 'Cursor Pro a ~$20/mes vale la pena si usas principalmente modelos en la nube frontera (Claude, GPT) y quieres una experiencia de editor pulida. Continue.dev es gratuito y mejor si ejecutas principalmente modelos locales vía Ollama. Elige según dónde viva tu modelo: nube → Cursor Pro, local → Continue.dev.',
+    toc: [
+      { label: 'Mejor opción por flujo de trabajo', anchor: '#best-pick' },
+      { label: 'Cursor Pro vs Continue.dev', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related' },
+    ],
+    intro: 'Cursor Pro y Continue.dev son ambos asistentes de codificación IA pero con centros de gravedad diferentes. Cursor Pro es un fork pagado y completo de VS Code optimizado para modelos frontera en la nube. Continue.dev es una extensión gratuita de VS Code/JetBrains construida alrededor del concepto "traer tu propio modelo" — incluyendo Ollama local.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Mejor para modelos frontera en la nube: Cursor Pro a ~$20/mes — UX pulida, modo agente, cuota de modelo incluida',
+          'Mejor para modelos Ollama locales: Continue.dev — gratuito, código abierto, construido alrededor de "traer tu propio modelo"',
+          'El $20 de Cursor Pro compra experiencia de editor más acceso a modelos; Continue.dev es solo la capa de editor',
+          'Si ya pagas por acceso a API de Claude o OpenAI, Continue.dev puede igualar Cursor con un costo mucho menor usando tus propias claves',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Mejor opción: Cursor Pro para nube, Continue.dev para local',
+        content: [
+          '<strong>Cursor Pro es la mejor opción si usas principalmente modelos frontera en la nube (Claude 4.6 Sonnet, GPT) y quieres un IDE pulido; Continue.dev es la mejor opción si ejecutas principalmente modelos locales vía Ollama o ya pagas por una API.</strong> Elige según dónde viva tu modelo.',
+          'Cursor Pro a ~$20/mes agrupa uso de modelo con un editor estrechamente integrado — modo agente, contexto de repositorio, ediciones predictivas. Para desarrolladores que no pagan por APIs de Claude u OpenAI, ese $20 es competitivo con lo que solo el uso del modelo costaría.',
+          'Continue.dev es gratuito y código abierto. Se ejecuta como una extensión de VS Code o JetBrains y te permite apuntarlo a cualquier modelo: APIs en la nube (con tus propias claves), Ollama, LM Studio, o vLLM. Si tu flujo de trabajo principal es Ollama local, Continue.dev es la opción obvia. Si ya pagas por acceso a API de Claude en tasas de uso, Continue.dev con tu propia clave es típicamente más barato que Cursor Pro en uso intenso.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://cursor.com',
+            productName: 'Cursor Pro',
+            productCategory: 'ide',
+            priceRange: '~$20/mes',
+            label: 'Verifica los precios de Cursor Pro en cursor.com',
+          },
+          {
+            url: 'https://continue.dev',
+            productName: 'Continue.dev (gratuito)',
+            productCategory: 'ide-extension',
+            priceRange: 'Gratuito',
+            label: 'Descarga Continue.dev (gratuito)',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Cursor Pro vs Continue.dev',
+        content: [
+          '<strong>Las dos herramientas sirven flujos de trabajo superpuestos pero distintos.</strong> Los precios son aproximados en mayo 2026 — consulta los sitios de los proveedores para tasas actuales.',
+        ],
+        columns: ['Característica', 'Cursor Pro', 'Continue.dev'],
+        rows: [
+          {
+            'Característica': 'Precio (aprox)',
+            'Cursor Pro': '~$20/mes',
+            'Continue.dev': 'Gratuito',
+          },
+          {
+            'Característica': 'Licencia',
+            'Cursor Pro': 'Propietario',
+            'Continue.dev': 'Código abierto (Apache 2.0)',
+          },
+          {
+            'Característica': 'Modelo predeterminado',
+            'Cursor Pro': 'Claude 4.6 Sonnet (incluido)',
+            'Continue.dev': 'Trae tu propio (Ollama, OpenAI, etc.)',
+          },
+          {
+            'Característica': 'Soporte para Ollama local',
+            'Cursor Pro': 'No nativo',
+            'Continue.dev': 'Soporte completo',
+          },
+          {
+            'Característica': 'Modo agente',
+            'Cursor Pro': 'Sí',
+            'Continue.dev': 'Básico',
+          },
+          {
+            'Característica': 'Mejor para',
+            'Cursor Pro': 'Modelos en la nube, UX pulida',
+            'Continue.dev': 'Modelos locales, flexibilidad',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas rápidas: Cursor Pro vs Continue.dev',
+        faqs: [
+          {
+            q: '¿Vale la pena pagar $20/mes por Cursor Pro?',
+            a: 'Sí si usas principalmente Claude 4.6 o GPT y quieres el mejor IDE de IA. No si usas principalmente Ollama local — Continue.dev es gratuito y mejor para flujos de trabajo locales. Si pagas por acceso a API de Claude o OpenAI, Continue.dev con tus propias claves es típicamente más barato.',
+          },
+          {
+            q: '¿Continue.dev funciona con Ollama?',
+            a: 'Sí — ese es el caso de uso principal. Instala Ollama, descarga un modelo de codificación como Qwen 2.5 Coder, y apunta Continue.dev al endpoint local de Ollama. Sin necesidad de claves de API.',
+          },
+          {
+            q: '¿Cuál es más barato en uso diario intenso?',
+            a: 'Continue.dev con tus propias claves de API es típicamente más barato en uso intenso, pagando solo por tokens sin margen. La cuota incluida de Cursor Pro de ~$20 puede ser superada en uso intenso, disparando cargos por exceso.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Mejor frontend para Ollama](/es/prompt-bites/best-frontend-for-ollama) — Comparación de Continue.dev con otros clientes de Ollama',
+          '[Jan vs LM Studio](/es/prompt-bites/jan-vs-lm-studio) — Opciones comparables para flujos de trabajo de chat',
+          '[Qwen Coder vs DeepSeek Coder](/es/prompt-bites/qwen-coder-vs-deepseek-coder) — Modelos de codificación locales para usar con Continue.dev',
+        ],
+      },
+    },
+  },
 }

@@ -439,4 +439,86 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Tool Comparisons',
+    title: '¿Mejor frontend para Ollama?',
+    seoTitle: '¿Mejor frontend para Ollama? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Open WebUI es el mejor frontend para Ollama. SillyTavern para juego de rol, Jan para gestión de modelos. Los tres son gratuitos y código abierto. Actualizado en mayo 2026.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermedio',
+    audience: 'Desarrolladores agregando una interfaz de chat a su configuración de Ollama',
+    parentArticle: '/local-llms/best-local-llm-frontends',
+    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio'],
+    is_living_page: true,
+    quickAnswerTop: {
+      es: {
+        question: '¿Mejor frontend para Ollama?',
+        answer: 'Open WebUI es el mejor frontend para Ollama para la mayoría de usuarios, ofreciendo acceso gratuito a una interfaz rica en características con despliegue Docker y soporte RAG. Es gratuito, rico en características y se ejecuta como un contenedor Docker. SillyTavern es mejor para juego de rol. Jan agrega un gestor de modelos local.',
+        bullets: [
+          'Open WebUI: mejor en general, basado en Docker, interfaz tipo ChatGPT',
+          'SillyTavern: mejor para escritura creativa y juego de rol',
+          'Jan: descargador de modelos integrado y servidor API local',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Open WebUI es el mejor frontend de propósito general para Ollama — soporta RAG, gestión de usuarios e instancias múltiples de Ollama desde el inicio',
+          'SillyTavern está diseñado específicamente para juego de rol y ficción creativa; soporta tarjetas de personaje y ramificación de historias que Open WebUI no tiene',
+          'Jan se ejecuta sin Docker y agrega gestión de descarga de modelos junto con la interfaz de chat, lo que lo hace útil para flujos de trabajo de cambio de modelos',
+          'Los tres frontends se conectan a Ollama a través de la API REST local y son gratuitos de usar',
+        ],
+      },
+      body1: {
+        title: 'Comparación: Open WebUI vs SillyTavern vs Jan',
+        content: [
+          '<strong>Open WebUI</strong> (la mejor opción general) — Interfaz web basada en Docker que se parece a ChatGPT. Soporta RAG de dentro hacia afuera (sube PDFs, documentos TXT). Gestión de usuarios, historial de chat persistente, varias instancias de Ollama. La opción más completa si quieres más que un simple chat.',
+          '<strong>SillyTavern</strong> (mejor para juego de rol) — Diseñado para escritura creativa, juego de rol y construcción de historias. Soporta tarjetas de personaje, ramificación de diálogos y escenas complejas. Sin Docker, necesita Node.js. Mejor para usuarios no técnicos que quieren historias inmersivas.',
+          '<strong>Jan</strong> (gestor de modelos + chat) — Aplicación de escritorio nativa sin Docker. Incluye gestor de modelos integrado (descarga de Hugging Face), interfaz de chat, y servidor API local. Mejor si quieres cambiadores rápidos de modelos y no necesitas RAG avanzado.',
+        ],
+      },
+      body2: {
+        title: 'Cuál elegir',
+        content: [
+          'Usa <strong>Open WebUI</strong> si necesitas RAG, múltiples usuarios o instancias de Ollama.',
+          'Usa <strong>SillyTavern</strong> si quieres una experiencia inmersiva de juego de rol o narrativa.',
+          'Usa <strong>Jan</strong> si quieres un gestor de modelos integrado y una interfaz simple de chat.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas rápidas sobre frontends para Ollama',
+        faqs: [
+          {
+            q: '¿Necesito Docker para ejecutar Open WebUI?',
+            a: 'Sí, Open WebUI se despliega como un contenedor Docker. Si no tienes Docker instalado, puedes instalarlo desde docker.com o usar tu gestor de paquetes (Homebrew en Mac, apt en Linux).',
+          },
+          {
+            q: '¿Es Open WebUI compatible con Ollama?',
+            a: 'Sí. Open WebUI se conecta a Ollama apuntando a localhost:11434 (la dirección API predeterminada de Ollama). Ejecuta `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` para iniciar junto a una instancia de Ollama en ejecución.',
+          },
+          {
+            q: '¿Puedo usar SillyTavern con Ollama?',
+            a: 'Sí. SillyTavern soporta Ollama como backend a través de la configuración de API. En el panel de conexión de SillyTavern, establece el tipo de API en "Ollama" y el endpoint en http://localhost:11434.',
+          },
+          {
+            q: '¿Hay un frontend de Ollama que no necesite Docker?',
+            a: 'Jan es una aplicación de escritorio nativa que no necesita Docker. Se conecta directamente a ejecutores de modelos locales e incluye su propio gestor de descarga de modelos. SillyTavern tampoco necesita Docker pero requiere Node.js.',
+          },
+          {
+            q: '¿Open WebUI soporta RAG (Generación Aumentada por Recuperación)?',
+            a: 'Sí. Open WebUI tiene soporte RAG integrado — puedes subir documentos PDF, TXT y más directamente en el chat. El contenido incrustado se divide automáticamente y se recupera para fundamentar las respuestas del modelo. Para más información sobre opciones de configuración de Ollama, consulta la <a href="/es/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">respuesta rápida sobre Ollama vs LM Studio</a>.',
+          },
+        ],
+      },
+    },
+  },
 }

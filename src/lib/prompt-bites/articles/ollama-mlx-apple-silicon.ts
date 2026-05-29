@@ -419,4 +419,81 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Tool Comparisons',
+    title: '¿Ollama soporta MLX en Apple Silicon?',
+    seoTitle: 'Soporte de Ollama MLX en Apple Silicon 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'No — Ollama usa llama.cpp + Metal, no MLX. Para inferencia MLX nativa en Apple Silicon, usa mlx-lm o LM Studio. LM Studio soporta ambos backends.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Apple Silicon', 'Apple M1', 'Apple M2', 'Apple M3', 'Apple M4'],
+    educationalLevel: 'Principiante',
+    audience: 'Usuarios Mac preguntándose si Ollama usa MLX para aceleración',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
+    siblingBites: ['mlx-vs-ollama-vs-llamacpp', 'convert-ollama-model-to-mlx', 'ollama-vs-lm-studio'],
+    is_living_page: false,
+    quickAnswerTop: {
+      es: {
+        question: '¿Ollama soporta MLX en Apple Silicon?',
+        answer: 'No. Ollama usa llama.cpp con aceleración GPU Metal en Apple Silicon — no MLX. La aceleración Metal es rápida pero no tan optimizada como MLX nativo. Para inferencia a velocidad MLX, usa mlx-lm directamente o LM Studio, que soporta ambos backends.',
+        bullets: [
+          'Backend de Ollama en Mac: llama.cpp + Metal (no MLX)',
+          'Opciones MLX nativas: mlx-lm (CLI) o LM Studio (GUI con soporte MLX)',
+          'LM Studio es la forma más fácil de obtener velocidad MLX con una interfaz tipo Ollama',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ollama NO usa MLX en Mac — usa llama.cpp con aceleración Metal, que es ~2× más lento que MLX nativo',
+          'Para MLX nativo en Apple Silicon, usa mlx-lm (Python CLI) o LM Studio (GUI con selector de backend)',
+          'LM Studio es el más fácil porque tiene un toggle para cambiar entre backends MLX y llama.cpp sin cambiar modelos',
+        ],
+      },
+      body1: {
+        title: '¿Por qué Ollama no usa MLX?',
+        content: [
+          '<strong>Ollama está diseñado para ser multiplataforma.</strong> Usa llama.cpp como su backend por defecto porque llama.cpp funciona en Windows, Linux y Mac. MLX solo funciona en Apple Silicon, por lo que agregar soporte MLX haría que Ollama sea mucho más complejo.',
+          'En Mac, Ollama usa llama.cpp con aceleración Metal (GPU de Apple), que es rápido (~35 tok/s en M5 Pro con 8B) pero no es tan optimizado como MLX nativo (~65 tok/s).',
+          'Esta es una decisión de diseño, no una limitación técnica. Ollama prioriza simplicidad sobre optimización máxima en una plataforma específica.',
+        ],
+      },
+      body2: {
+        title: 'Cómo obtener velocidad MLX',
+        content: [
+          '<strong>Opción 1 (CLI): usa mlx-lm directamente.</strong> `pip install mlx-lm`, luego `python -m mlx_lm.generate --model mlx-community/model-4bit`. Rápido pero requiere línea de comandos.',
+          '<strong>Opción 2 (GUI): usa LM Studio.</strong> Descarga desde lmstudio.ai. En Settings, cambia "Inference Engine" de llama.cpp a MLX. Obtienes velocidad MLX con la interfaz Ollama-like de LM Studio.',
+          'Si necesitas Ollama específicamente, usa Ollama pero espera ~35 tok/s. Si necesitas MLX-speed (~65 tok/s), usa uno de los anteriores.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas rápidas: Ollama y MLX',
+        faqs: [
+          {
+            q: '¿LM Studio usa MLX o llama.cpp en Mac?',
+            a: 'LM Studio puede usar ambos. Por defecto, usa llama.cpp. Ve a Settings → Inference Engine y cambia a MLX para obtener velocidad MLX nativa.',
+          },
+          {
+            q: '¿Hay diferencia de velocidad entre Ollama Metal y MLX?',
+            a: 'Sí, ~2× más rápido. Ollama (llama.cpp + Metal) ~35 tok/s en M5 Pro. MLX nativo ~65 tok/s en el mismo chip con el mismo modelo.',
+          },
+          {
+            q: '¿Puedo forzar que Ollama use MLX?',
+            a: 'No. Ollama internamente solo usa llama.cpp. Para MLX necesitas cambiar a mlx-lm o LM Studio.',
+          },
+          {
+            q: '¿Debería esperar que Ollama agregue soporte MLX?',
+            a: 'No es probable. Ollama prioriza ser multiplataforma. MLX es específico de Apple Silicon. En su lugar, usa LM Studio que soporta ambos backends y tiene una interfaz similar.',
+          },
+        ],
+      },
+    },
+  },
 }
