@@ -311,6 +311,310 @@ schema: {
       gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
       gammaDescription: 'The following presentation covers: the 10 most common local LLM setup errors (out-of-memory, GPU not detected, slow inference, connection refused, garbled output), RAM requirements for 3B–14B models at Q4_K_M and Q8_0 quantization, a 5-step debug process, and Ollama commands for each fix. Download the PDF as a local LLM troubleshooting reference card.',
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Getting Started',
+      title: 'Corregir errores de LLM local en 2026: 10 problemas frecuentes en Ollama, LM Studio y vLLM',
+      seoTitle: 'Errores de LLM local: OOM, GPU no detectada, puerto 11434 rechazado',
+      intro: 'Los errores más comunes en los LLM locales son los cuelgues por falta de memoria, la GPU no detectada, la inferencia en CPU extremadamente lenta, la conexión rechazada por la API y la salida corrupta. A partir de abril de 2026, existen soluciones para los 10 errores — la mayoría requieren solo uno o dos comandos de terminal. Esta guía cubre Ollama (puerto 11434), LM Studio (puerto 1234) y vLLM con comandos exactos para cada error.',
+      metaDescription: '10 errores comunes de LLM local resueltos: cuelgues OOM, GPU no detectada, puerto 11434 rechazado, CPU lenta. Comandos de corrección para Ollama + LM Studio. Abril 2026.',
+      twitterDescription: '10 errores de LLM local resueltos: OOM, GPU no detectada, puerto 11434 rechazado, CPU lenta. Comandos para Ollama + LM Studio. Abril 2026.',
+      leadAnswerBlock: '**Los errores más comunes en los LLM locales son los cuelgues por falta de memoria, la GPU no detectada, la inferencia en CPU extremadamente lenta, la conexión rechazada por la API y la salida corrupta.**',
+      dateModified: '2026-04-16',
+      publishDate: '2026-04-04',
+      audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
+      readTime: '9 min de lectura',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'solución de problemas de LLM local',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: 'Error 1: Sin memoria', anchor: '#error-1-out-of-memory' },
+        { label: 'Error 2: GPU no detectada', anchor: '#error-2-gpu-not-detected' },
+        { label: 'Error 3: Inferencia muy lenta', anchor: '#error-3-very-slow-inference' },
+        { label: 'Error 4: Conexión rechazada', anchor: '#error-4-connection-refused' },
+        { label: 'Error 5: Modelo no encontrado', anchor: '#error-5-model-not-found' },
+        { label: 'Error 6: Archivo de modelo corrupto', anchor: '#error-6-corrupted-model-file' },
+        { label: 'Error 7: Errores de CUDA / ROCm', anchor: '#error-7-cuda-errors' },
+        { label: 'Error 8: Salida corrupta o repetitiva', anchor: '#error-8-garbled-output' },
+        { label: 'Error 9: Puerto en uso', anchor: '#error-9-port-already-in-use' },
+        { label: 'Error 10: El modelo se detiene a mitad de la respuesta', anchor: '#error-10-model-stops-mid-response' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Sin memoria: cambia a una cuantización más pequeña (Q4_K_M → Q3_K_S) o a un modelo más pequeño.',
+            'GPU no detectada en NVIDIA: actualiza el driver a 525+ en Linux, 452+ en Windows. Ejecuta `nvidia-smi` para confirmar.',
+            'Inferencia extremadamente lenta: estás ejecutando solo en CPU. Activa la descarga en GPU en Ollama con la variable de entorno `OLLAMA_GPU_LAYERS`.',
+            'Conexión rechazada: Ollama no está en ejecución. Inícialo con `ollama serve` o reinicia el servicio.',
+            'Salida corrupta: plantilla de prompt incorrecta. Usa la variante Instruct del modelo, no la variante base.',
+          ],
+          image: '/images/troubleshooting-error-symptoms-quick-ref-en.svg',
+          imageCaption: 'Los 10 errores más comunes de LLM local con síntomas y soluciones — referencia rápida para configuraciones de Ollama, LM Studio y vLLM (abril de 2026).',
+        },
+        error1: {
+          id: 'error-1-out-of-memory',
+          title: 'Error 1: "Sin memoria" / Cuelgue por falta de memoria',
+          content: '**Los errores de falta de memoria significan que el modelo necesita más RAM de la disponible — no es un fallo de hardware.** Este es el error más común para los usuarios nuevos. Consulta [Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) para entender cómo la cuantización reduce los requisitos de RAM.',
+          items: [
+            '**Verifica la RAM disponible**: ejecuta `free -h` en macOS/Linux, o abre el Administrador de tareas → Rendimiento → Memoria en Windows.',
+            '**Cambia a una cuantización más pequeña**: reemplaza `Q8_0` o `Q5_K_M` por `Q4_K_M`. Para Ollama: `ollama run llama3.2-instruct-q4_K_M`.',
+            '**Cierra las aplicaciones en segundo plano antes de cargar el modelo** — los navegadores y otras apps consumen RAM que el modelo necesita.',
+            '**Cambia a un modelo más pequeño**: si 8B falla con 8 GB de RAM, prueba `llama3.2:3b` (requiere solo ~2,5 GB).',
+          ],
+          image: '/images/troubleshooting-ram-by-model-size-en.svg',
+          imageCaption: 'Requisitos de RAM de LLM local por tamaño de modelo: llama3.2 1B–3B cabe en 8 GB, los modelos 7B–8B necesitan 16 GB, los modelos 70B necesitan 64 GB con cuantización Q4_K_M.',
+        },
+        error1Code: {
+          title: 'Verificar la RAM disponible en Linux / macOS',
+          codeBlock: '# Linux\nfree -h\n\n# macOS\nvm_stat | grep "Pages free"\n\n# Más legible en macOS\ntop -l 1 | grep "PhysMem"',
+          codeLanguage: 'bash',
+        },
+        error2: {
+          id: 'error-2-gpu-not-detected',
+          title: 'Error 2: GPU no usada (ejecutando solo en CPU)',
+          content: [
+            '**La GPU no usada significa que el LLM corre 5–10× más lento de lo esperado — verifica la instalación del driver antes que cualquier otra cosa.** Confirma que tu GPU es visible para el sistema:',
+          ],
+          codeBlock: '# NVIDIA — debe mostrar el nombre de la GPU y la versión del driver\nnvidia-smi\n\n# AMD en Linux\nrocm-smi\n\n# macOS — verificar si Metal está disponible\nsystem_profiler SPDisplaysDataType | grep "Metal"',
+          codeLanguage: 'bash',
+          image: '/images/troubleshooting-gpu-detection-en.svg',
+          imageCaption: 'Solo CPU vs GPU activa: Ollama en CPU da 2–8 tok/s; el modo GPU da 30–120 tok/s. Verifica con ollama ps o nvidia-smi.',
+        },
+        error2Fixes: {
+          title: '¿Cómo activar la GPU en Ollama?',
+          items: [
+            '**NVIDIA en Linux**: instala el driver NVIDIA 525+ y CUDA Toolkit 11.3+. Ollama detecta CUDA automáticamente al reiniciar.',
+            '**NVIDIA en Windows**: asegúrate de que la versión del driver sea 452.39 o superior. Ollama instala el soporte CUDA automáticamente mediante el instalador de Windows.',
+            '**AMD en Linux**: instala ROCm 5.7+. Si la detección falla, establece `HSA_OVERRIDE_GFX_VERSION=11.0.0` para tarjetas de la serie RX 6000.',
+            '**Apple Silicon**: Ollama usa Metal por defecto — no se necesita configuración. Confirma con `ollama ps` después de cargar un modelo; las capas de GPU aparecen en la salida.',
+          ],
+        },
+        error3: {
+          id: 'error-3-very-slow-inference',
+          title: 'Error 3: Inferencia extremadamente lenta (menos de 5 tokens por segundo)',
+          content: '**Menos de 5 tokens por segundo significa que el modelo corre solo en CPU o que el modelo es demasiado grande para la VRAM disponible.** Un modelo 7B en GPU genera 30–80 tok/s; el mismo modelo en CPU genera 3–10 tok/s.',
+          items: [
+            '**Confirma si la GPU está activa**: ejecuta `ollama ps` mientras un modelo está cargado. La salida muestra cuántas capas están en GPU vs CPU.',
+            '**Reduce el tamaño del modelo**: un modelo 13B en CPU genera 3–6 tok/s. Cambiar a 7B duplica la velocidad; cambiar a 3B la cuadruplica.',
+            '**Aumenta las capas de GPU en Ollama**: establece `OLLAMA_GPU_LAYERS=999` para mover todas las capas a la GPU (Ollama limitará al máximo que cabe en VRAM).',
+            '**Usa una cuantización más rápida**: Q4_K_M es la cuantización más rápida que mantiene una calidad aceptable. Q8_0 tiene mayor calidad pero es ~30% más lenta.',
+          ],
+        },
+        error3Code: {
+          title: 'Establecer capas de GPU en Ollama',
+          codeBlock: '# Establecer la variable de entorno antes de iniciar Ollama\nexport OLLAMA_GPU_LAYERS=999\nollama serve\n\n# O en un Modelfile\nFROM llama3.1:8b\nPARAMETER num_gpu 999',
+          codeLanguage: 'bash',
+        },
+        error4: {
+          id: 'error-4-connection-refused',
+          title: 'Error 4: "Conexión rechazada" al llamar a la API',
+          content: '**Conexión rechazada significa que Ollama no está en ejecución — la API en `localhost:11434` solo responde cuando el servicio está activo.** Inícialo antes de hacer llamadas a la API.',
+          codeBlock: '# Iniciar Ollama manualmente\nollama serve\n\n# En Linux — reiniciar el servicio systemd\nsystemctl restart ollama\n\n# Verificar que está en ejecución\ncurl http://localhost:11434\n# Esperado: "Ollama is running"',
+          codeLanguage: 'bash',
+        },
+        error5: {
+          id: 'error-5-model-not-found',
+          title: 'Error 5: Error "Modelo no encontrado"',
+          content: [
+            '**"Modelo no encontrado" significa que el nombre del modelo en tu comando no coincide con ningún modelo descargado.** Los nombres de modelos en Ollama distinguen mayúsculas de minúsculas e incluyen etiquetas de versión.',
+          ],
+          codeBlock: '# Listar todos los modelos descargados\nollama list\n\n# Descargar un modelo si falta\nollama pull llama3.2\n\n# Verifica el nombre exacto del modelo — las etiquetas importan\n# "llama3.2" y "llama3.2:3b" son entradas diferentes',
+          codeLanguage: 'bash',
+        },
+        error6: {
+          id: 'error-6-corrupted-model-file',
+          title: 'Error 6: Archivo de modelo corrupto',
+          content: '**Los archivos de modelo corruptos son causados por descargas interrumpidas — elimina y vuelve a descargar para solucionar.** Ollama no siempre detecta automáticamente las descargas parciales.',
+          codeBlock: '# Eliminar el modelo corrupto\nollama rm llama3.2\n\n# Volver a descargarlo\nollama pull llama3.2\n\n# Para LM Studio: eliminar archivos de modelo manualmente\n# Ubicación predeterminada: ~/.cache/lm-studio/models/',
+          codeLanguage: 'bash',
+        },
+        error6lmstudio: {
+          id: 'error-6b-lm-studio-model-resolution',
+          title: 'Error 6b: "Error al resolver el modelo" en LM Studio',
+          content: '**"Failed to resolve model lmstudio-community/..." significa que LM Studio no puede encontrar el modelo en su registro.** Esto ocurre normalmente cuando un modelo se descarga desde `lmstudio-community` en Hugging Face pero la referencia del registro ha cambiado. LM Studio usa una entrada de registro en caché que ya no coincide con los archivos de modelo disponibles.',
+          items: [
+            '**Abre LM Studio → pestaña My Models → haz clic en el menú de tres puntos del modelo fallido → selecciona "Delete model"** (conserva el archivo, elimina el registro)',
+            '**Busca el mismo modelo en el explorador de modelos y vuelve a descargarlo** — LM Studio lo volverá a registrar',
+            '**Alternativa: cierra LM Studio, navega a `~/.cache/lm-studio/models/`, elimina la carpeta del modelo específico y vuelve a descargarlo**',
+          ],
+          codeBlock: '# Limpiar manualmente la caché de modelos de LM Studio (macOS/Linux)\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
+          codeLanguage: 'bash',
+        },
+        error7: {
+          id: 'error-7-cuda-errors',
+          title: 'Error 7: Errores de inicialización de CUDA / ROCm',
+          content: '**Los errores de CUDA y ROCm indican una incompatibilidad de versión de driver/biblioteca — actualiza tu driver a la versión mínima requerida.**',
+          items: [
+            '**"Versión del driver CUDA insuficiente"**: actualiza el driver NVIDIA. El mínimo para llama.cpp es CUDA 11.3 / driver 450.80.',
+            '**"No hay imagen de kernel disponible para ejecución"**: la arquitectura de tu GPU no está soportada. La serie GTX 900 (Maxwell) y anteriores no están soportadas por las versiones recientes de CUDA.',
+            '**AMD ROCm "HSA_STATUS_ERROR_INVALID_ISA"**: establece `HSA_OVERRIDE_GFX_VERSION=10.3.0` (para RX 6000) o `11.0.0` (para RX 7000) antes de iniciar Ollama.',
+            '**Verifica la versión de CUDA**: ejecuta `nvcc --version` o `nvidia-smi | grep CUDA`.',
+          ],
+        },
+        error8: {
+          id: 'error-8-garbled-output',
+          title: 'Error 8: Salida corrupta, repetitiva o sin sentido',
+          content: [
+            '**La salida corrupta casi siempre significa que estás usando un modelo base en lugar de una variante instruct/chat.** Los modelos base generan completaciones de texto sin formato, no respuestas a preguntas.',
+            'Los modelos base (por ejemplo, `llama3.1:8b`) no están ajustados para conversación y, cuando se les hace una pregunta, generan completaciones sin formato que parecen incoherentes. Usa siempre la variante instruct: `llama3.1:8b-instruct`. Consulta [Cómo instalar LM Studio](/es/local-llms/how-to-install-lm-studio) para un método basado en GUI para cambiar variantes de modelo.',
+            'En Ollama, la etiqueta predeterminada para la mayoría de los modelos ya apunta a la variante instruct. Si descargaste manualmente desde Hugging Face, confirma que el nombre del archivo incluya "Instruct" o "chat".',
+          ],
+        },
+        error9: {
+          id: 'error-9-port-already-in-use',
+          title: 'Error 9: "Dirección ya en uso" — Conflicto de puerto',
+          content: '**"Dirección ya en uso" significa que otro proceso está ocupando el puerto 11434 (Ollama) o 1234 (LM Studio).** Encuentra y termina el proceso en conflicto.',
+          codeBlock: '# Encontrar qué usa el puerto 11434 (Ollama)\nlsof -i :11434\n\n# Terminar por PID\nkill -9 <PID>\n\n# O cambiar el puerto de Ollama\nexport OLLAMA_HOST=0.0.0.0:11435\nollama serve',
+          codeLanguage: 'bash',
+        },
+        error10: {
+          id: 'error-10-model-stops-mid-response',
+          title: 'Error 10: El modelo se detiene a mitad de la respuesta',
+          content: '**Detenerse a mitad de la respuesta es causado por alcanzar los límites de longitud de contexto o por tener `num_predict` demasiado bajo.** El `num_predict` predeterminado en muchas configuraciones es 128 tokens — suficiente para solo 1–2 oraciones.',
+          items: [
+            '**Aumenta num_predict**: este parámetro establece el máximo de tokens a generar. El valor predeterminado suele ser 128. Auméntalo: en Ollama, agrega `PARAMETER num_predict 2048` al Modelfile.',
+            '**Verifica la ventana de contexto**: si tu conversación es muy larga, el modelo puede haber alcanzado su límite de contexto. Inicia una nueva sesión o usa un modelo con una ventana de contexto más grande (Llama 3.2 3B soporta 128K).',
+            '**Verifica los tokens de parada**: algunos Modelfiles incluyen secuencias de parada que terminan la generación anticipadamente. Revisa el prompt del sistema y la plantilla para patrones de parada inesperados.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectura relacionada',
+          items: [
+            '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — Por qué Q4_K_M es el predeterminado y cómo la cuantización afecta la RAM',
+            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Requisitos de hardware para ejecutar modelos 7B–70B',
+            '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — Guía de instalación y configuración',
+            '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) — Comparación de las dos herramientas de LLM local más populares',
+            '[Cómo ejecutar LLM locales en un portátil](/es/local-llms/local-llm-on-laptop) — Optimización térmica y de batería específica para portátiles',
+            '[Mejores modelos de LLM local para principiantes](/es/local-llms/best-beginner-local-llm-models) — Recomendaciones de modelos para 8 GB de RAM',
+            '[Mejores LLM locales para programar 2026](/es/local-llms/best-local-llms-for-coding) — Comparativa Qwen2.5-Coder vs DeepSeek',
+          ],
+        },
+        moreTroubleshooting: {
+          title: 'Dónde encontrar más ayuda',
+          content: 'Para problemas específicos de hardware en portátiles (limitación térmica, consumo de batería), consulta [Cómo ejecutar LLM locales en un portátil](/es/local-llms/local-llm-on-laptop). Para preguntas de configuración de seguridad y privacidad, consulta [Lista de verificación de seguridad y privacidad de LLM local](/es/local-llms/local-llm-security-privacy-checklist). La página de issues de Ollama en GitHub (github.com/ollama/ollama/issues) y el subreddit r/LocalLLaMA son los recursos de comunidad más activos para bugs específicos de modelos.',
+        },
+        commonMistakes: {
+          title: 'Errores comunes en la resolución de problemas de LLM local',
+          items: [
+            '**Confundir errores OOM con fallos de hardware** — el error significa que la RAM es demasiado pequeña para el modelo, no que el hardware esté roto. Solución: usa cuantización Q4_K_M o un modelo más pequeño.',
+            '**No verificar la carga del sistema** — la velocidad de inferencia se degrada significativamente cuando otras aplicaciones consumen CPU/GPU. Cierra el navegador, el reproductor de video y los procesos en segundo plano antes de hacer benchmarks.',
+            '**Ignorar la incompatibilidad de versión del driver** — NVIDIA CUDA requiere versiones de driver específicas por versión de CUDA. Verifica la salida de `nvidia-smi`; la versión del driver debe ser ≥450.80 para CUDA 11.x.',
+            '**Usar el nombre de modelo incorrecto en Ollama** — `llama3.2` y `llama3.2:3b` son etiquetas de Ollama diferentes. Ejecuta `ollama list` para ver los nombres exactos de los modelos descargados.',
+            '**No reiniciar Ollama después de actualizar el driver** — Ollama detecta la GPU al arrancar. Después de actualizar los drivers de NVIDIA o ROCm, reinicia Ollama completamente (`ollama serve`) para volver a detectar la GPU.',
+          ],
+          image: '/images/troubleshooting-debug-steps-en.svg',
+          imageCaption: 'Proceso de depuración de LLM local en 5 pasos: verificar RAM → verificar GPU → verificar servidor → verificar modelo → verificar calidad de salida. Detente en el primer paso fallido.',
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            'NVIDIA. (2024). "CUDA Toolkit Release Notes." https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/ — Requisitos oficiales de versión de driver CUDA por versión.',
+            'Ollama. (2026). "Ollama Troubleshooting." https://github.com/ollama/ollama/blob/main/docs/troubleshooting.md — Documentación oficial de Ollama para errores comunes.',
+            'AMD. (2024). "ROCm Installation Guide." https://rocm.docs.amd.com/projects/install-on-linux/en/latest/ — Instalación oficial de AMD ROCm y soporte de GPU para Linux.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Corregir errores de LLM local en 2026: 10 problemas frecuentes en Ollama, LM Studio y vLLM',
+        'description': 'Soluciona cuelgues por falta de memoria, GPU no detectada, conexión rechazada y salida corrupta en Ollama y LM Studio. Comandos exactos: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
+        'url': 'https://www.promptquorum.com/es/local-llms/troubleshooting-local-llm-setup',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-16',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Solución de problemas de Ollama' },
+          { '@type': 'Thing', 'name': 'Errores de LM Studio' },
+          { '@type': 'Thing', 'name': 'LLM local sin memoria' },
+          { '@type': 'Thing', 'name': 'OLLAMA_GPU_LAYERS' },
+          { '@type': 'Thing', 'name': 'GPU no detectada LLM local' },
+        ],
+        'proficiencyLevel': 'Beginner',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Depurar errores de configuración de LLM local',
+        'inLanguage': 'es',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Corregir errores de falta de memoria', 'text': 'Cambia a una cuantización más pequeña (Q4_K_M) o a un modelo más pequeño. Verifica la RAM con free -h.' },
+          { '@type': 'HowToStep', 'name': 'Activar la detección de GPU', 'text': 'Actualiza los drivers (NVIDIA 525+), establece OLLAMA_GPU_LAYERS=999, verifica con nvidia-smi.' },
+          { '@type': 'HowToStep', 'name': 'Acelerar la inferencia lenta', 'text': 'Confirma la actividad de la GPU con ollama ps, reduce el tamaño del modelo o usa cuantización Q4_K_M.' },
+          { '@type': 'HowToStep', 'name': 'Corregir la conexión rechazada', 'text': 'Inicia Ollama con ollama serve o reinicia el servicio systemd. Verifica con curl localhost:11434.' },
+          { '@type': 'HowToStep', 'name': 'Resolver modelo no encontrado', 'text': 'Lista los modelos con ollama list, descarga los faltantes con ollama pull, verifica nombres y etiquetas exactos.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Qué causa los errores OOM en los LLM locales?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Los errores OOM (sin memoria) ocurren cuando el tamaño del modelo supera la RAM o VRAM disponible. Solución: cambia a un modelo más pequeño (`ollama run llama3.2:3b` requiere ~2,5 GB) o usa un nivel de cuantización más bajo. Ejecuta `free -h` (Linux/macOS) para verificar la RAM disponible antes de descargar modelos de más de 7B.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Por qué Ollama no detecta mi GPU?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'NVIDIA: instala el driver 525+ y CUDA Toolkit 11.3+, luego reinicia Ollama. AMD en Linux: instala ROCm 5.7+. Verifica la detección con `nvidia-smi` (NVIDIA) o `rocm-smi` (AMD). Apple Silicon: Ollama usa Metal por defecto — no se necesita configuración. Establece OLLAMA_GPU_LAYERS=999 para forzar la descarga completa en GPU.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Por qué se rechaza el puerto 11434 cuando ejecuto Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'El puerto 11434 se rechaza cuando el servidor Ollama no está en ejecución. Inícialo con `ollama serve`, luego verifica con `curl http://localhost:11434` — la respuesta esperada es "Ollama is running". En Linux, reinicia el servicio systemd: `systemctl restart ollama`.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Por qué mi LLM local corre en CPU en lugar de GPU?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama recurre a la CPU si no detecta la GPU o si la VRAM es insuficiente. Establece la variable de entorno `OLLAMA_GPU_LAYERS=999` antes de iniciar Ollama para forzar la máxima descarga en GPU. Verifica primero la visibilidad de la GPU con `nvidia-smi`. Si la VRAM es insuficiente para el modelo completo, Ollama divide automáticamente las capas entre GPU y CPU.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuáles son los errores más comunes en el despliegue de LLM local?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Los 10 errores más comunes de LLM local son: (1) OOM/sin memoria, (2) GPU no detectada, (3) puerto 11434 rechazado, (4) CPU lenta como alternativa, (5) modelo no encontrado, (6) descarga parcial corrupta, (7) generación se detiene pronto, (8) incompatibilidad de versión CUDA, (9) longitud de contexto superada, (10) etiqueta de modelo incorrecta. Cada uno tiene un comando de corrección específico en Ollama y LM Studio.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo reparo una descarga de modelo de Ollama corrupta?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Elimina el modelo en caché y vuelve a descargarlo: `ollama rm <nombre-del-modelo>` y luego `ollama pull <nombre-del-modelo>`. Las descargas corruptas ocurren cuando una descarga es interrumpida. Ollama no siempre detecta descargas parciales automáticamente.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo verifico si Ollama está usando mi GPU?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ejecuta `ollama ps` mientras un modelo está cargado — la salida muestra qué capas están en GPU vs CPU. Alternativamente, monitorea la utilización de GPU con `nvidia-smi -l 1` (se actualiza cada segundo). Si la utilización de GPU se mantiene en 0%, Ollama está corriendo solo en CPU — verifica la instalación del driver y la compatibilidad con CUDA.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Por qué se detiene la generación del LLM antes de tiempo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Las detenciones anticipadas generalmente son causadas por tokens de parada en el Modelfile. Verifica el prompt del sistema y la plantilla para secuencias de parada inesperadas. También verifica el parámetro `num_predict` — si está configurado muy bajo, Ollama truncará la salida en ese número de tokens. El valor predeterminado es -1 (ilimitado).' }
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Aspectos esenciales para resolver problemas de LLM local',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Errores OOM', 'description': 'Soluciona los cuelgues por falta de memoria cambiando a cuantización Q4_K_M o a modelos más pequeños. Verifica la RAM con free -h antes de descargar modelos.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Detección de GPU', 'description': 'Activa la GPU instalando drivers NVIDIA 525+, CUDA 11.3+, o ROCm 5.7+ para AMD. Establece OLLAMA_GPU_LAYERS=999 para la descarga completa en GPU.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Inferencia lenta', 'description': 'Confirma la actividad de la GPU con ollama ps. Si solo usa CPU, reduce el tamaño del modelo o usa cuantización Q4_K_M.' },
+        ],
+      },
+      gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
+      gammaDescription: 'La siguiente presentación cubre: los 10 errores más comunes en la configuración de LLM local (sin memoria, GPU no detectada, inferencia lenta, conexión rechazada, salida corrupta), los requisitos de RAM para modelos 3B–14B con cuantización Q4_K_M y Q8_0, un proceso de depuración en 5 pasos y los comandos de Ollama para cada corrección. Descarga el PDF como tarjeta de referencia para la resolución de problemas de LLM local.',
+    },
     de: {
   theme: 'Getting Started',
   title: 'Lokale LLM-Fehler 2026 beheben: 10 häufige Probleme in Ollama, LM Studio und vLLM',

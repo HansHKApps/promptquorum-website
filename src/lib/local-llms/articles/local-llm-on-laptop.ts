@@ -468,6 +468,473 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Getting Started',
+      title: 'Ejecutar LLMs Locales en un Portátil: RAM, Velocidad y Temperatura 2026',
+      seoTitle: 'Llama y Phi en Portátiles de 8-16GB: Velocidad y Temperatura 2026',
+      intro: 'Ejecutar un LLM local en un portátil es posible — incluso con 8 GB de RAM — pero el rendimiento depende en gran medida del tamaño del modelo, la RAM y la temperatura. Un modelo 7B funciona a 10–25 tokens/seg en CPU o 50–80 tok/seg en Apple Silicon, lo que hace que los portátiles sean viables para desarrollo, pruebas y flujos de trabajo de IA ligeros.',
+      metaDescription: 'Ejecuta Llama 3.2 7B, Phi-4 Mini, Gemma 2B en portátiles de 8–16 GB. El throttling térmico reduce la velocidad un 20–40%. Benchmarks de Apple Silicon vs Intel Iris Xe. Configuración Q4_K_M.',
+      twitterDescription: 'Los modelos 7B se ejecutan en portátiles de 8 GB a 10–25 tok/seg. Apple Silicon M3: 50–80 tok/seg. Solución al throttling térmico: usa un soporte y desactiva Turbo Boost. Guía Q4_K_M.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-18',
+      leadAnswerBlock: '**Ejecutar un LLM local en un portátil significa desplegar modelos de lenguaje directamente en tu ordenador sin APIs en la nube ni transmisión de datos externos.** El principal beneficio es la privacidad total y la capacidad de trabajar sin conexión; el rendimiento depende del hardware (mínimo 8 GB de RAM para modelos 7B, 16 GB para 13B).',
+      comparisonTable: {
+        columns: ['Configuración', 'Tamaño del modelo', 'Velocidad', 'Experiencia'],
+        rows: [
+          { 'Configuración': 'CPU 8 GB RAM', 'Tamaño del modelo': '3B–7B', 'Velocidad': '10–25 tok/seg', 'Experiencia': 'Útil para chat, resumen y código sencillo' },
+          { 'Configuración': 'CPU 16 GB RAM', 'Tamaño del modelo': '7B–13B', 'Velocidad': '5–15 tok/seg', 'Experiencia': 'Uso general, sin límites de multitarea' },
+          { 'Configuración': 'Apple Silicon (M2–M4)', 'Tamaño del modelo': '7B–13B', 'Velocidad': '30–80 tok/seg', 'Experiencia': 'Opción de consumo más rápida, mejor duración de batería' },
+          { 'Configuración': 'Portátil con GPU (RTX 4060, 8 GB VRAM)', 'Tamaño del modelo': '7B–13B', 'Velocidad': '60–90 tok/seg', 'Experiencia': 'Más rápido, pero con mucho calor y consumo de batería' },
+        ],
+      },
+      audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
+      readTime: '8 min de lectura',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM laptop',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: '¿Puedes ejecutar un LLM local en un portátil?', anchor: '#can-you-run' },
+        { label: '¿Qué configuración necesitas?', anchor: '#use-case' },
+        { label: '¿Qué modelos LLM locales funcionan mejor en un portátil?', anchor: '#best-models' },
+        { label: 'Apple Silicon vs portátil Windows', anchor: '#apple-vs-windows' },
+        { label: 'Portátil vs escritorio para LLMs locales', anchor: '#laptop-vs-desktop' },
+        { label: 'Cómo gestionar el throttling térmico', anchor: '#thermals' },
+        { label: '¿Cuánta batería consume ejecutar un LLM local?', anchor: '#battery-drain' },
+        { label: '¿Qué nivel de cuantización usar en un portátil?', anchor: '#quantization-tips' },
+        { label: '¿Qué leyes de privacidad aplican al ejecutar LLMs locales en un portátil?', anchor: '#regional-context' },
+        { label: '¿Cuáles son los errores comunes al ejecutar LLMs locales en portátiles?', anchor: '#common-mistakes' },
+        { label: 'Lectura relacionada', anchor: '#related-reading' },
+        { label: 'Preguntas frecuentes sobre LLMs locales en portátiles', anchor: '#faq' },
+        { label: 'Fuentes', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Un modelo 3B o 7B con cuantización Q4_K_M funciona de forma utilizable en cualquier portátil moderno con 8 GB de RAM.',
+            'Los MacBook con Apple Silicon (M1, M2, M3, M4) superan a la mayoría de portátiles Windows en inferencia local gracias a la memoria unificada y la aceleración GPU Metal -- un MacBook Pro M3 ejecuta un modelo 7B a 50–80 tok/seg.',
+            'El throttling térmico reduce la velocidad un 20–40% después de 10–15 minutos de generación sostenida. Usa un soporte para portátil y desactiva Turbo Boost para mantener una velocidad estable.',
+            'Consumo de batería: espera entre un 30–60% por hora durante la inferencia activa en la mayoría de portátiles. Conecta a la corriente para sesiones largas.',
+            'En portátiles Windows/Linux con 8 GB de RAM: usa modelos Q4_K_M hasta 7B. Con 16 GB: modelos Q4_K_M hasta 13B, o Q5_K_M para 7B.',
+          ],
+        },
+        inOneSentence: {
+          id: 'in-one-sentence',
+          title: 'En una frase',
+          content: ['Un LLM local puede ejecutarse en un portátil usando modelos cuantizados, reduciendo el uso de memoria hasta un 75% mientras se mantiene una calidad de salida utilizable.'],
+        },
+        plainTerms: {
+          id: 'in-plain-terms',
+          title: 'En términos sencillos',
+          content: ['Ejecutar un LLM localmente es como instalar ChatGPT en tu portátil — pero más lento y completamente privado.'],
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: '¿Cuándo deberías ejecutar un LLM en un portátil?',
+          items: [
+            '✅ **Usa LLMs locales si:** Necesitas privacidad total de los datos, Trabajas sin conexión, Quieres cero coste de API',
+            '❌ **NO uses si:** Necesitas alta precisión en razonamiento complejo, Requieres contexto largo (más de 100k tokens), Necesitas procesamiento por lotes rápido — ver [limitaciones de LLM local](/local-llms/local-llm-limitations)',
+          ],
+        },
+        canYouRun: {
+          id: 'can-you-run',
+          title: '¿Puedes ejecutar un LLM local en un portátil?',
+          content: [
+            '**Sí -- con el tamaño de modelo correcto.** Un portátil con 8 GB de RAM ejecutando un modelo 7B con cuantización Q4_K_M produce 10–25 tokens/seg en CPU y 50–80 tokens/seg en Apple Silicon. Esto es lento comparado con APIs en la nube, pero suficientemente rápido para uso interactivo.',
+            'El techo práctico en la mayoría de portátiles de 8 GB es un modelo 7B. Un modelo 13B en Q4_K_M requiere aproximadamente 9 GB de RAM -- técnicamente posible en máquinas de 16 GB, pero deja poco margen para el sistema operativo y otras aplicaciones.',
+            'Para conocer benchmarks de velocidad detallados por nivel de hardware (solo CPU hasta 16 GB de VRAM), consulta **[LLMs locales más rápidos para PCs de gama baja](/local-llms/fastest-local-llms-low-end-pcs)** — incluye los compromisos de cuantización y comandos de Ollama para cada nivel.',
+          ],
+          image: '/images/ollama-terminal.svg',
+          imageCaption: 'Ollama ejecutando Mistral 7B en un MacBook -- 22 tokens/seg en CPU con cuantización Q4_K_M.',
+        },
+        useCase: {
+          id: 'use-case',
+          title: '¿Qué configuración de portátil necesitas para tu caso de uso?',
+          items: [
+            '**Para principiantes** — 8 GB de RAM, modelos 3B–7B, solo CPU. Espera 10–20 tok/seg. Suficiente para chat, resumen y código sencillo.',
+            '**Para desarrolladores** — 16 GB de RAM, modelos 7B–13B, GPU opcional. Multitarea posible sin cerrar otras apps.',
+            '**Para usuarios avanzados** — Apple Silicon o portátil GPU (8 GB VRAM), modelos 13B. 50–90 tok/seg de inferencia sostenida.',
+          ],
+        },
+        whoCan: {
+          id: 'who-can-run',
+          title: '¿Quién puede ejecutar un LLM local en un portátil?',
+          items: [
+            '**Principiantes** → [LM Studio](/local-llms/how-to-install-lm-studio) + modelo 3B',
+            '**Intermedios** → [Ollama](/local-llms/how-to-install-ollama) + modelo 7B',
+            '**Usuarios avanzados** → 13B con [ajuste de cuantización](/local-llms/llm-quantization-explained)',
+            '❌ **NO uses un portátil si:** Necesitas APIs en tiempo real (usa servidor vLLM), Procesas grandes conjuntos de datos (usa GPUs en la nube)',
+          ],
+        },
+        modelComparison: {
+          id: 'model-comparison',
+          title: '¿Qué tamaño de modelo LLM local necesitas?',
+          content: 'Requisitos de RAM con cuantización Q4_K_M — aproximadamente un 75% menos de RAM que la precisión fp16 completa. Siempre añade 2–4 GB de margen para el SO y el navegador:',
+          rows: [
+            { 'Modelo': 'Llama 3.2 3B', 'RAM necesaria': '4–8 GB', 'Velocidad': 'Rápida (25–45 tok/s)', 'Calidad': 'Media', 'Mejor uso': 'Tareas básicas, chat, resumen' },
+            { 'Modelo': 'Mistral 7B', 'RAM necesaria': '8–16 GB', 'Velocidad': 'Media (10–20 tok/s)', 'Calidad': 'Alta', 'Mejor uso': 'Uso general, código, razonamiento' },
+            { 'Modelo': 'Llama 3.1 13B', 'RAM necesaria': '16+ GB', 'Velocidad': 'Lenta (5–10 tok/s)', 'Calidad': 'Más alta', 'Mejor uso': 'Tareas avanzadas, razonamiento complejo' },
+          ],
+          columns: ['Modelo', 'RAM necesaria', 'Velocidad', 'Calidad', 'Mejor uso'],
+          note: 'Ejemplo de memoria Q4_K_M: Mistral 7B fp16 = 14 GB; Q4_K_M = 4,5 GB (~68% de reducción). Latencia CPU en un portátil promedio: 1–3 tok/s para 13B, 10–25 tok/s para 7B, 25–45 tok/s para 3B. → [calculadora VRAM](/local-llms/vram-calculator-local-llm)',
+        },
+        ram8vs16: {
+          id: '8gb-vs-16gb',
+          title: 'Portátil con 8 GB de RAM vs 16 GB de RAM: ¿cuál es la diferencia práctica?',
+          rows: [
+            { 'Escenario': 'Tamaño máximo del modelo', '8 GB RAM': '7B en Q4_K_M (~4,5 GB)', '16 GB RAM': '13B en Q4_K_M (~9 GB)' },
+            { 'Escenario': 'Modelo con el navegador abierto', '8 GB RAM': '3B–7B (justo)', '16 GB RAM': '7B–13B cómodamente' },
+            { 'Escenario': 'Primer modelo recomendado', '8 GB RAM': 'llama3.2:3b o mistral:7b', '16 GB RAM': 'llama3.1:8b o qwen2.5:14b' },
+            { 'Escenario': 'Apps simultáneas', '8 GB RAM': 'Cierra el navegador antes de cargar el modelo 7B', '16 GB RAM': 'Multitarea normal + modelo 7B' },
+          ],
+          columns: ['Escenario', '8 GB RAM', '16 GB RAM'],
+        },
+        bestModels: {
+          id: 'best-models',
+          title: '¿Qué modelos LLM locales funcionan mejor en un portátil?',
+          content: 'Estos modelos se han seleccionado específicamente para las limitaciones de los portátiles -- equilibrando calidad, uso de RAM y velocidad de generación sostenida. Para una guía detallada sobre los requisitos de VRAM para diferentes modelos y configuraciones de portátil, consulta la [guía de requisitos VRAM →](/es/local-llms/how-much-vram-local-llm). Instala [Ollama](/local-llms/how-to-install-ollama) para ejecutar cualquiera de estos con un solo comando:',
+          rows: [
+            { 'Modelo': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Velocidad (CPU)': '25–45 tok/s', 'Calidad': 'Media', 'Mejor para': 'Portátiles de 8 GB, tareas rápidas' },
+            { 'Modelo': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Velocidad (CPU)': '20–35 tok/s', 'Calidad': 'Media-Alta', 'Mejor para': 'Portátiles de 8 GB, razonamiento/código' },
+            { 'Modelo': 'Mistral 7B v0.3', 'RAM': '4,5 GB', 'Velocidad (CPU)': '10–20 tok/s', 'Calidad': 'Alta', 'Mejor para': '8–16 GB, uso general' },
+            { 'Modelo': 'Qwen2.5 7B', 'RAM': '4,7 GB', 'Velocidad (CPU)': '10–18 tok/s', 'Calidad': 'Alta', 'Mejor para': '8–16 GB, multilingüe, código' },
+            { 'Modelo': 'Llama 3.1 8B', 'RAM': '5,5 GB', 'Velocidad (CPU)': '8–15 tok/s', 'Calidad': 'Alta+', 'Mejor para': 'Portátiles de 16 GB, mejor calidad en ese tamaño' },
+          ],
+          columns: ['Modelo', 'RAM', 'Velocidad (CPU)', 'Calidad', 'Mejor para'],
+        },
+        bestSetup: {
+          id: 'best-setup',
+          title: '🏆 Mejor configuración de LLM local para portátiles',
+          content: [
+            'El hardware del portátil limita el tamaño del modelo, pero la ingeniería de prompts elimina el techo de calidad de salida. Un modelo 7B con prompts estructurados supera consistentemente a un modelo 13B mal promoteado. Consulta la [guía de ingeniería de prompts](https://www.promptquorum.com/prompt-engineering) para técnicas optimizadas para modelos más pequeños.',
+          ],
+          items: [
+            '🥇 **Mejor en general:** [Ollama](/local-llms/how-to-install-ollama) — configuración más rápida, amplio soporte de modelos',
+            '🥈 **Mejor para principiantes:** [LM Studio](/local-llms/how-to-install-lm-studio) — interfaz gráfica, sin terminal',
+            '🥉 **Mejor para RAM bajo (8 GB):** Llama 3.2 3B (Q4)',
+            '⚡ **Mejor rendimiento:** Mistral 7B (Q5 o Q6)',
+            '💡 **Si no sabes por dónde empezar:** comienza con Ollama + Llama 3.2 3B Q4',
+          ],
+        },
+        appleSilicon: {
+          id: 'apple-vs-windows',
+          title: 'Apple Silicon vs portátil Windows: ¿cuál es mejor para LLMs locales?',
+          content: [
+            '**Los MacBook con Apple Silicon (M1 a M4) son los mejores portátiles de consumo para inferencia local de LLMs.** La arquitectura de memoria unificada significa que la GPU y la CPU comparten el mismo banco de memoria -- un MacBook Pro M3 con 18 GB de memoria puede ejecutar un modelo 13B íntegramente en memoria GPU, alcanzando 50–80 tok/seg.',
+            'Los portátiles Windows con GPUs NVIDIA discretas pueden ser más rápidos si el VRAM es suficiente (8 GB o más). Una GPU NVIDIA RTX 4060 para portátil (8 GB VRAM) ejecuta un modelo 7B a 60–90 tok/seg -- comparable al Apple M3 Pro. El inconveniente es un mayor consumo de batería y generación de calor.',
+            'Los portátiles Windows con gráficos integrados Intel Iris Xe o AMD Radeon usan solo inferencia por CPU, lo que resulta en 8–20 tok/seg para modelos 7B.',
+          ],
+          rows: [
+            { 'Tipo de portátil': 'Apple M3 Pro (18 GB)', 'Velocidad (7B)': '50–80 tok/s', 'Consumo batería': 'Moderado', 'Modelo máximo': '~13B' },
+            { 'Tipo de portátil': 'Apple M2 (8 GB)', 'Velocidad (7B)': '30–50 tok/s', 'Consumo batería': 'Moderado', 'Modelo máximo': '~7B' },
+            { 'Tipo de portátil': 'NVIDIA RTX 4060 portátil (8 GB VRAM)', 'Velocidad (7B)': '60–90 tok/s', 'Consumo batería': 'Alto', 'Modelo máximo': '~7B (GPU), ~13B (offload CPU)' },
+            { 'Tipo de portátil': 'Intel i7 + Iris Xe (16 GB RAM)', 'Velocidad (7B)': '8–15 tok/s', 'Consumo batería': 'Moderado', 'Modelo máximo': '~13B' },
+            { 'Tipo de portátil': 'AMD Ryzen 7 + GPU integrada (16 GB)', 'Velocidad (7B)': '10–18 tok/s', 'Consumo batería': 'Moderado', 'Modelo máximo': '~13B' },
+          ],
+          columns: ['Tipo de portátil', 'Velocidad (7B)', 'Consumo batería', 'Modelo máximo'],
+          image: '/images/apple-silicon-unified-memory.svg',
+          imageCaption: 'La memoria unificada de Apple Silicon permite a la GPU acceder a todo el banco de RAM -- un modelo 13B cabe íntegramente en la memoria GPU de un M3 Pro de 18 GB.',
+        },
+        laptopVsDesktop: {
+          id: 'laptop-vs-desktop',
+          title: '¿Es suficiente un portátil para LLMs locales frente a un escritorio?',
+          content: [
+            '**Los portátiles ejecutan modelos 3B–13B eficazmente, pero los escritorios los superan gracias a mejor refrigeración y GPUs dedicadas.** Un escritorio con RTX 4090 (24 GB VRAM) ejecuta un modelo 70B a 40–60 tok/seg; un portátil con la misma tarea requiere inferencia por CPU a 1–3 tok/seg.',
+            'Usa un portátil para la portabilidad y experimentación. Usa un escritorio para modelos grandes (13B+), cargas de trabajo sostenidas o inferencia en producción. ¿Dudas entre plataformas? Consulta la [guía de compra portátil vs escritorio para LLMs locales](/local-llms/laptop-vs-desktop-local-llm) para un análisis completo de coste y rendimiento.',
+          ],
+        },
+        thermals: {
+          id: 'thermals',
+          title: '¿Cómo gestionar el throttling térmico en un portátil?',
+          content: [
+            '**El throttling térmico ocurre cuando la CPU o GPU alcanza su límite de temperatura y reduce la velocidad de reloj para enfriarse.** En la inferencia local de LLMs, esto suele ocurrir después de 10–15 minutos de generación sostenida, reduciendo la velocidad un 20–40%.',
+          ],
+          items: [
+            '**Usa un soporte para portátil con espacio de ventilación** -- elevar el portátil 2–3 cm mejora el flujo de aire de escape y retrasa el inicio del throttling de 10 a más de 20 minutos.',
+            '**Desactiva Intel Turbo Boost / AMD Precision Boost** -- funcionar a velocidad de reloj base produce rendimiento estable sin picos térmicos. En macOS, instala `cpufreq` o usa el modo "Bajo consumo" en los ajustes de batería.',
+            '**Limita el tamaño del lote de generación** -- evita regenerar respuestas muy largas. Divide las tareas largas en prompts más cortos.',
+            '**Usa Q4_K_M en lugar de Q8_0** -- una cuantización menor requiere menos cómputo por token, generando menos calor a costa de una calidad marginal.',
+          ],
+          image: '/images/laptop-stand-airflow.svg',
+          imageCaption: 'Elevar el portátil 2–3 cm sobre un soporte mejora el flujo de aire de escape y retrasa el inicio del throttling de 10 a más de 20 minutos.',
+        },
+        battery: {
+          id: 'battery-drain',
+          title: '¿Cuánta batería consume ejecutar un LLM local?',
+          content: [
+            '**El consumo de batería durante la inferencia local es significativo.** La inferencia activa por CPU en un modelo 7B consume 15–25 W en una CPU de portátil típica, reduciendo la duración de la batería a 2–3 horas desde carga completa en una batería de 60 Wh.',
+            'Apple Silicon es notablemente más eficiente. Un MacBook Pro M3 ejecutando un modelo 7B consume aproximadamente 12–18 W durante la inferencia, ofreciendo 3–4 horas de generación activa desde carga completa.',
+            'Para sesiones largas, conecta a la corriente. Si necesitas inferencia local eficiente en batería, usa un modelo 3B en Q4_K_M -- consume 6–10 W y extiende la duración de la batería a 5–6 horas en la mayoría de portátiles.',
+          ],
+        },
+        quantization: {
+          id: 'quantization-tips',
+          title: '¿Qué nivel de cuantización deberías usar en un portátil?',
+          content: 'La [cuantización](/local-llms/llm-quantization-explained) reduce la precisión del modelo para bajar los requisitos de RAM y cómputo. Para portátiles, Q4_K_M es el valor predeterminado recomendado:',
+          rows: [
+            { 'Cuantización': 'Q2_K', 'RAM vs completo': '~25%', 'Pérdida de calidad': 'Alta -- degradación notable', 'Caso de uso': 'Solo con RAM extremadamente bajo' },
+            { 'Cuantización': 'Q3_K_S', 'RAM vs completo': '~35%', 'Pérdida de calidad': 'Moderada', 'Caso de uso': 'Menos de 4 GB de RAM' },
+            { 'Cuantización': 'Q4_K_M', 'RAM vs completo': '~45%', 'Pérdida de calidad': 'Baja -- predeterminado recomendado', 'Caso de uso': 'La mayoría de portátiles, mejor equilibrio' },
+            { 'Cuantización': 'Q5_K_M', 'RAM vs completo': '~55%', 'Pérdida de calidad': 'Mínima', 'Caso de uso': 'Portátiles con 16 GB de RAM' },
+            { 'Cuantización': 'Q8_0', 'RAM vs completo': '~80%', 'Pérdida de calidad': 'Insignificante', 'Caso de uso': '32 GB de RAM o GPU con 8+ GB de VRAM' },
+          ],
+          columns: ['Cuantización', 'RAM vs completo', 'Pérdida de calidad', 'Caso de uso'],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '¿Qué leyes de privacidad aplican al ejecutar LLMs locales en un portátil?',
+          content: [
+            '**Unión Europea (RGPD):** Ejecutar un LLM local en un portátil significa que toda la inferencia ocurre en el dispositivo -- no sale ningún dato del equipo. Esto cumple con el artículo 25 del RGPD (protección de datos desde el diseño) y elimina la necesidad de acuerdos de tratamiento de datos. Los profesionales del sector legal, médico y financiero en la UE pueden procesar datos sensibles de clientes localmente sin la sobrecarga de cumplimiento de las APIs en la nube.',
+            '**España (LOPDGDD / AEPD):** La Ley Orgánica de Protección de Datos y Garantía de los Derechos Digitales (LOPDGDD) exige garantías para el tratamiento de datos personales. La inferencia local en un portátil cumple con los principios de minimización de datos y privacidad por diseño, especialmente relevante para pymes y autónomos que manejan datos de clientes.',
+            '**Latinoamérica:** Países como México (LFPDPPP), Argentina (Ley 25.326) y Brasil (LGPD) tienen leyes de protección de datos que imponen restricciones a la transferencia internacional de datos. Ejecutar la inferencia de LLMs localmente en un portátil elimina el riesgo de transferencia transfronteriza, siendo adecuado para empresas que manejan datos de clientes bajo estas normativas.',
+            '**Estados Unidos:** No existe una ley federal de datos de IA a abril de 2026, pero se aplican normas sectoriales: HIPAA para sanidad (la inferencia local evita los requisitos de BAA), FERPA para educación y leyes de privacidad estatales (CCPA en California). La inferencia local en portátil es la opción más segura para sectores regulados.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Preguntas frecuentes sobre LLMs locales en portátiles',
+          faqs: [
+            {
+              q: '¿Ejecutar un LLM local dañará mi portátil con el tiempo?',
+              a: 'No -- las CPUs y GPUs modernas están diseñadas para manejar cargas altas sostenidas de forma segura mediante el throttling térmico. Ejecutar inferencia durante horas equivale a codificar vídeo o jugar. Un soporte para portátil y ventilación adecuada previenen la acumulación excesiva de calor. El número de ciclos de batería aumenta con la carga prolongada enchufada, lo que es un patrón de desgaste normal.',
+            },
+            {
+              q: '¿Puedo ejecutar un LLM local en un portátil con 4 GB de RAM?',
+              a: 'Apenas. Un modelo 2B como Gemma 2 2B requiere aproximadamente 1,7 GB de RAM para el modelo, pero el SO necesita 2–3 GB simultáneamente. Con 4 GB totales de RAM, es probable que experimentes uso de swap, lo que hace la inferencia 5–10 veces más lenta. El mínimo práctico para una experiencia utilizable es 8 GB.',
+            },
+            {
+              q: '¿Mi portátil necesita una GPU dedicada para ejecutar LLMs locales?',
+              a: 'No. Todas las herramientas principales de LLM local (Ollama, LM Studio, GPT4All) funcionan únicamente en CPU. Una GPU dedicada acelera significativamente la inferencia, pero los modelos 3B–7B son utilizables a 10–30 tok/seg solo con CPU. Consulta [Mejores modelos LLM locales para principiantes](/local-llms/best-beginner-local-llm-models) para recomendaciones de modelos optimizados para CPU.',
+            },
+            {
+              q: '¿Cuál es el LLM local más rápido que puedo ejecutar en un MacBook de 8 GB?',
+              a: 'En un MacBook de 8 GB con Apple Silicon (M1, M2, M3), el modelo práctico más rápido es llama3.2:3b en Q4_K_M -- espera 60–100 tok/seg vía Metal GPU. Para calidad a velocidad, mistral:7b funciona a 30–50 tok/seg en un M2 de 8 GB con el modelo completo en memoria unificada.',
+            },
+            {
+              q: '¿Cómo reduzco el throttling térmico en un portátil durante la inferencia de LLMs?',
+              a: 'Tres pasos: (1) Usa un soporte para portátil con 2–3 cm de espacio de ventilación bajo el equipo. (2) Desactiva Turbo Boost en Intel o AMD Precision Boost -- funcionar a velocidad de reloj base elimina los picos térmicos. (3) Usa cuantización Q4_K_M en lugar de Q8_0 para reducir el cómputo por token y la generación de calor.',
+            },
+            {
+              q: '¿Puedo ejecutar un LLM local en un Chromebook?',
+              a: 'Solo en Chromebooks con Linux (Crostini) habilitado. La mayoría de Chromebooks tienen 4–8 GB de RAM y CPUs débiles -- puedes ejecutar un modelo 2B–3B en Q4_K_M, pero espera 5–15 tok/seg. Los Chromebooks sin soporte de Linux no pueden ejecutar LLMs locales.',
+            },
+            {
+              q: '¿Es Apple Silicon mejor que una GPU NVIDIA para portátil en LLMs locales?',
+              a: 'Depende del VRAM. Un M3 Pro (18 GB de memoria unificada) supera a una NVIDIA RTX 4060 para portátil (8 GB VRAM) en modelos 13B porque el modelo completo cabe en memoria rápida. Para modelos 7B, ambos son comparables -- 50–80 tok/seg en M3 Pro vs 60–90 tok/seg en RTX 4060. Apple Silicon gana en eficiencia de batería (12–18 W vs 25–45 W).',
+            },
+            {
+              q: '¿Qué ocurre si el modelo es demasiado grande para la RAM del portátil?',
+              a: 'Ollama y LM Studio usarán memoria swap (RAM respaldada en disco). La inferencia se ralentiza a 1–5 tok/seg en lugar de 10–30 tok/seg, y el ventilador del portátil funciona a máxima velocidad por la presión de memoria constante. La solución: usa un modelo más pequeño o un nivel de cuantización menor (Q4_K_M en lugar de Q8_0).',
+            },
+            {
+              q: '¿Cuánto dura la batería ejecutando LLMs locales en un portátil?',
+              a: 'En una batería típica de 60 Wh: un modelo 7B en CPU consume 15–25 W -- dando 2–3 horas de inferencia activa. Apple Silicon es más eficiente (12–18 W), dando 3–4 horas. Un modelo 3B consume 6–10 W y extiende la batería a 5–6 horas. Para uso de día completo, conecta a la corriente.',
+            },
+            {
+              q: '¿Necesito conexión a internet para ejecutar un LLM local en un portátil?',
+              a: 'No. Después de descargar el modelo (lo que requiere internet), la inferencia es completamente offline. El modelo se ejecuta íntegramente en la CPU o GPU del portátil. Esto hace que los LLMs locales sean útiles para viajes, entornos seguros o lugares con conectividad poco fiable.',
+            },
+            {
+              q: '¿Puedo ejecutar un LLM local con 8 GB de RAM?',
+              a: 'Sí. Un portátil de 8 GB ejecuta modelos 7B con cuantización Q4_K_M (4,5 GB) a 10–25 tok/seg en CPU, o 30–80 tok/seg en Apple Silicon.',
+            },
+            {
+              q: '¿Cuál es el portátil más rápido para LLMs locales?',
+              a: 'Apple MacBook Pro M4 Pro/Max con 24–48 GB de memoria unificada alcanza 80–120 tok/seg en modelos 13B. En Windows, una GPU NVIDIA RTX 4070/4090 para portátil (8–16 GB VRAM) logra 60–130 tok/seg en modelos 7B.',
+            },
+            {
+              q: '¿Necesito una GPU para LLMs locales?',
+              a: 'No — Ollama y LM Studio funcionan solo en CPU. Una GPU acelera la inferencia de 10–25 tok/seg a 50–90 tok/seg en modelos 7B, pero no es obligatoria.',
+            },
+            {
+              q: '¿Qué tan lentos son los LLMs locales en CPU?',
+              a: 'Un modelo 7B en Q4_K_M funciona a 10–25 tok/seg en una CPU de portátil moderna — suficientemente lento para leer mientras se genera, pero suficientemente rápido para chat y resumen. Apple Silicon alcanza 30–80 tok/seg usando la memoria unificada como GPU.',
+            },
+            {
+              q: '¿Ejecutar LLMs daña el portátil?',
+              a: 'No. Las CPUs y GPUs están diseñadas para carga sostenida mediante throttling térmico. Un soporte para portátil con ventilación y descansos ocasionales previenen el calor excesivo; el ruido normal del ventilador no es señal de daño.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            '**Apple MLX Framework** -- Aceleración GPU para Macs con Apple Silicon. https://github.com/ml-explore/mlx',
+            '**Documentación de Ollama** -- Configuración de inferencia CPU/GPU y optimización en macOS. https://ollama.com',
+            '**LM Studio** -- Requisitos del sistema, compatibilidad de GPU y configuración de inferencia local. https://lmstudio.ai',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '¿Cuáles son los errores comunes al ejecutar LLMs locales en portátiles?',
+          items: [
+            '**Ejecutar un modelo demasiado grande para la RAM disponible** → se usa swap en disco, ralentizando la inferencia de 10–25 tok/seg a 1–3 tok/seg.',
+            '**Ignorar el throttling térmico** → la velocidad sostenida cae un 20–40% después de 10–15 minutos de inferencia.',
+            '**Usar Q8_0 en lugar de Q4_K_M** → duplica el uso de RAM sin ganancia de calidad perceptible en hardware de portátil.',
+            '**No habilitar la aceleración GPU en LM Studio** → el rendimiento de Apple Silicon cae de 50–80 tok/seg a 10–20 tok/seg.',
+            '**Usar la ventana de contexto predeterminada de 2.048 tokens en Ollama** → los documentos de varias páginas se truncan; establece `num_ctx 8192` en tu Modelfile.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectura relacionada',
+          items: [
+            '[Mejores modelos LLM locales para principiantes](/local-llms/best-beginner-local-llm-models) -- Modelos pequeños optimizados para portátiles',
+            '[Cómo instalar Ollama](/local-llms/how-to-install-ollama) -- Guía de instalación',
+            '[Cómo instalar LM Studio](/local-llms/how-to-install-lm-studio) -- Instalador con interfaz gráfica',
+            '[Solución de problemas de LLM local](/local-llms/troubleshooting-local-llm-setup) -- Correcciones de rendimiento y errores',
+            '[Cuantización de LLMs explicada](/local-llms/llm-quantization-explained) -- Q4_K_M vs Q8_0 vs Q5_K_M en profundidad',
+            '[Modelos LLM locales pequeños de menos de 4 GB](/local-llms/small-local-llm-models) -- Modelos 3B para portátiles de 8 GB',
+            '[Portátil vs escritorio para LLMs locales 2026](/local-llms/laptop-vs-desktop-local-llm) -- Guía de compra: comparación de rendimiento, análisis de costes y qué plataforma elegir.',
+            '[MLX vs Ollama vs llama.cpp en Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Comparación de frameworks para Apple Silicon: velocidad, tiempo de configuración y compromisos del ecosistema.',
+            '[La forma más barata de ejecutar un modelo 70B localmente](/prompt-bites/cheapest-way-to-run-70b-model-locally) -- Cuándo un portátil puede manejar 70B: Q3_K_S en M3 Max vs offloading en CPU.',
+            '[Mejor GPU para inferencia de LLM local por menos de 500 $ (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026) -- Ruta de actualización eGPU para MacBook y portátiles Windows.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Ejecutar LLMs Locales en un Portátil: RAM, Velocidad y Temperatura 2026',
+        'description': 'Ejecuta LLMs locales en portátiles con 8 GB de RAM. Cubre los mejores modelos (Llama 3.2 3B, Mistral 7B, Qwen2.5 7B), correcciones de throttling térmico, optimización de batería y configuración de cuantización Q4_K_M.',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-on-laptop',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-18',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'about': [
+          { '@type': 'Thing', 'name': 'LLM local en portátil' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'cuantización Q4_K_M' },
+          { '@type': 'Thing', 'name': 'Apple Silicon' },
+          { '@type': 'Thing', 'name': 'throttling térmico' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'GPT4All' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Mejores modelos LLM locales para portátiles 2026',
+        'inLanguage': 'es',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': 'Modelo 3B. 2,5 GB de RAM. 25–45 tok/seg en CPU, 60–100 tok/seg en Apple Silicon. Mejor modelo de inicio para portátiles de 8 GB.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': 'Modelo 3.8B. 3 GB de RAM. 20–35 tok/seg en CPU. Mejor razonamiento y código con menos de 4 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Mistral 7B v0.3', 'description': 'Modelo 7B. 4,5 GB de RAM. 10–20 tok/seg en CPU. Mejor modelo de propósito general para portátiles de 8–16 GB.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen2.5 7B', 'description': 'Modelo 7B. 4,7 GB de RAM. 10–18 tok/seg en CPU. Mejor para tareas multilingüe y código en portátiles de 8–16 GB.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': 'Modelo 8B. 5,5 GB de RAM. 8–15 tok/seg en CPU. Mejor calidad en ese tamaño para portátiles de 16 GB.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Ejecutar un LLM local dañará mi portátil con el tiempo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No -- las CPUs y GPUs modernas están diseñadas para manejar cargas altas sostenidas de forma segura mediante throttling térmico. Un soporte para portátil y ventilación adecuada previenen la acumulación excesiva de calor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar un LLM local en un portátil con 4 GB de RAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apenas. Un modelo 2B requiere aproximadamente 1,7 GB de RAM para el modelo, pero el SO necesita 2–3 GB simultáneamente. Con 4 GB totales, el uso de swap hace la inferencia 5–10 veces más lenta. El mínimo práctico es 8 GB.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Mi portátil necesita una GPU dedicada para ejecutar LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Todas las herramientas principales de LLM local (Ollama, LM Studio, GPT4All) funcionan únicamente en CPU. Una GPU dedicada acelera la inferencia, pero los modelos 3B–7B son utilizables a 10–30 tok/seg solo con CPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el LLM local más rápido que puedo ejecutar en un MacBook de 8 GB?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En un MacBook de 8 GB con Apple Silicon (M1, M2, M3), el modelo más rápido es llama3.2:3b en Q4_K_M -- espera 60–100 tok/seg vía Metal GPU. Para calidad a velocidad, mistral:7b funciona a 30–50 tok/seg en M2 de 8 GB.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo reduzco el throttling térmico en un portátil durante la inferencia de LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Tres pasos: (1) Usa un soporte con 2–3 cm de espacio de ventilación. (2) Desactiva Turbo Boost en Intel o AMD Precision Boost. (3) Usa Q4_K_M en lugar de Q8_0 para reducir el cómputo por token.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar un LLM local en un Chromebook?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo en Chromebooks con Linux (Crostini) habilitado. La mayoría tienen 4–8 GB de RAM y CPUs débiles -- puedes ejecutar un modelo 2B–3B en Q4_K_M, pero espera 5–15 tok/seg.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es Apple Silicon mejor que una GPU NVIDIA para portátil en LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende del VRAM. Un M3 Pro (18 GB de memoria unificada) supera a una RTX 4060 para portátil (8 GB VRAM) en modelos 13B. Para modelos 7B son comparables: 50–80 tok/seg en M3 Pro vs 60–90 tok/seg en RTX 4060. Apple Silicon gana en eficiencia de batería.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué ocurre si el modelo es demasiado grande para la RAM del portátil?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama y LM Studio usarán memoria swap. La inferencia se ralentiza a 1–5 tok/seg en lugar de 10–30 tok/seg. La solución: usa un modelo más pequeño o menor cuantización (Q4_K_M en lugar de Q8_0).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto dura la batería ejecutando LLMs locales en un portátil?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En una batería de 60 Wh: un modelo 7B en CPU consume 15–25 W -- dando 2–3 horas de inferencia activa. Apple Silicon (12–18 W) da 3–4 horas. Un modelo 3B (6–10 W) extiende la batería a 5–6 horas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito conexión a internet para ejecutar un LLM local en un portátil?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Después de descargar el modelo, la inferencia es completamente offline. El modelo se ejecuta íntegramente en la CPU o GPU del portátil.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Cómo reducir el throttling térmico en un portátil durante la inferencia de LLMs locales',
+        'inLanguage': 'es',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Usa un soporte para portátil con espacio de ventilación', 'text': 'Eleva el portátil 2–3 cm sobre un soporte para mejorar el flujo de aire de escape y retrasar el inicio del throttling de 10 a más de 20 minutos.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Desactiva Intel Turbo Boost o AMD Precision Boost', 'text': 'Funcionar a velocidad de reloj base produce rendimiento estable sin picos térmicos. En macOS, usa el modo Bajo consumo en los ajustes de batería.' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Limita el tamaño del lote de generación', 'text': 'Divide las tareas largas en prompts más cortos. Evita regenerar respuestas muy largas en un solo paso.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Usa cuantización Q4_K_M en lugar de Q8_0', 'text': 'Una cuantización menor requiere menos cómputo por token, reduciendo la generación de calor con un impacto de calidad mínimo en hardware de portátil.' },
+        ],
+      },
+    },
     // NOTE: When translating sections for de, fr, ja, zh -- include the same images from the English sections:
     // canYouRun: { ..., image: '/images/ollama-terminal.svg', imageCaption: '...' }
     // appleSilicon: { ..., image: '/images/apple-silicon-unified-memory.svg', imageCaption: '...' }

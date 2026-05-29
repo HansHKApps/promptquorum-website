@@ -272,6 +272,270 @@ schema: {
         ]
       },
     },
+    es: {
+      freshness_tier: 'annual',
+      theme: 'Getting Started',
+      title: 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
+      seoTitle: 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
+      intro: 'LM Studio es una aplicación de escritorio que te permite explorar, descargar y ejecutar LLMs locales a través de una interfaz gráfica, sin necesidad de comandos en la terminal. Funciona en macOS, Windows y Linux, e incluye una interfaz de chat integrada y un servidor local compatible con OpenAI. A partir de abril de 2026, LM Studio admite cualquier modelo GGUF cuantizado de Hugging Face.',
+      metaDescription: 'Instala LM Studio en macOS, Windows o Linux: descarga un modelo y empieza a chatear en 5 minutos. Sin terminal. Guía para principiantes 2026.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**LM Studio es una aplicación de escritorio que te permite explorar, descargar y ejecutar LLMs locales a través de una interfaz gráfica, sin necesidad de comandos en la terminal. Funciona en macOS, Windows y Linux, e incluye una interfaz de chat integrada y un servidor local compatible con OpenAI.**',
+      audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
+      readTime: '7 min de lectura',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'LM Studio',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: '¿Qué es LM Studio?', anchor: '#what-is-lm-studio' },
+        { label: 'Requisitos del sistema', anchor: '#system-requirements' },
+        { label: 'Descargar e instalar', anchor: '#download-and-install' },
+        { label: 'Buscar y descargar un modelo', anchor: '#find-and-download-a-model' },
+        { label: 'Empezar a chatear', anchor: '#start-chatting' },
+        { label: 'Activar el servidor local', anchor: '#enable-the-local-server' },
+        { label: 'LM Studio vs Ollama', anchor: '#lm-studio-vs-ollama' },
+        { label: 'Solución de problemas', anchor: '#troubleshooting' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Descarga LM Studio desde lmstudio.ai -- disponible para macOS (Apple Silicon + Intel), Windows y Linux (AppImage).',
+            'Mínimo: 8 GB de RAM. Recomendado: 16 GB de RAM para modelos 7B. Los Mac con Apple Silicon usan aceleración GPU por defecto.',
+            'El navegador de modelos integrado busca directamente en Hugging Face -- descarga modelos GGUF sin salir de la app.',
+            'LM Studio incluye una interfaz de chat integrada y un servidor local compatible con OpenAI en el puerto 1234.',
+            'Ideal para: principiantes que prefieren una interfaz gráfica, usuarios que quieren comparar varios modelos en paralelo y cualquiera que quiera un paquete completo sin comandos de terminal.',
+          ],
+        },
+        whatIsLmStudio: {
+          title: '¿Qué es LM Studio?',
+          content: [
+            '**LM Studio es una aplicación de escritorio para ejecutar LLMs locales.** Proporciona un navegador gráfico de modelos, una interfaz de chat integrada y un servidor de API local, todo en una sola app. Internamente usa llama.cpp para la inferencia, el mismo motor que impulsa [Ollama](/es/local-llms/how-to-install-ollama).',
+            'La diferencia clave con Ollama es que LM Studio es completamente visual. Exploras y descargas modelos desde la interfaz de la app, inicias chats con un clic y ajustas la configuración con controles deslizantes en lugar de archivos de configuración.',
+            'LM Studio es gratuito para uso personal. Lo desarrolla LM Studio, Inc. y fue lanzado en 2023. A partir de 2026, admite aceleración NVIDIA CUDA, AMD ROCm y Apple Metal.',
+          ],
+        },
+        requirements: {
+          id: 'system-requirements',
+          title: '¿Cuáles son los requisitos del sistema para LM Studio?',
+          rows: [
+            { 'Especificación': 'Sistema operativo', 'Mínimo': 'macOS 13.6, Windows 10, Ubuntu 22.04', 'Recomendado': 'macOS 14+, Windows 11, Ubuntu 24.04' },
+            { 'Especificación': 'RAM', 'Mínimo': '8 GB', 'Recomendado': '16 GB o más' },
+            { 'Especificación': 'Almacenamiento', 'Mínimo': '500 MB para la app + espacio para modelos', 'Recomendado': '50 GB+ libres para varios modelos' },
+            { 'Especificación': 'GPU (opcional)', 'Mínimo': 'NVIDIA GTX serie 10 o más reciente', 'Recomendado': 'NVIDIA RTX 40/50, AMD RX 7000+ o Apple M-series' },
+          ],
+          columns: ['Especificación', 'Mínimo', 'Recomendado'],
+        },
+        download: {
+          id: 'download-and-install',
+          title: '¿Cómo descargar e instalar LM Studio?',
+          numberedItems: [
+            'Ve a lmstudio.ai y haz clic en el botón de descarga para tu sistema operativo.',
+            'macOS: Abre el archivo .dmg y arrastra LM Studio a la carpeta Aplicaciones. En el primer inicio, aprueba el aviso de seguridad en Preferencias del Sistema → Privacidad y Seguridad.',
+            'Windows: Ejecuta el instalador LM-Studio-Setup.exe. LM Studio se instala en %LOCALAPPDATA%\\LM-Studio.',
+            'Linux: Descarga el archivo .AppImage. Hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo. No se requiere instalación en el sistema.',
+            'En el primer inicio, LM Studio muestra una pantalla de bienvenida y te pide descargar un modelo.',
+          ],
+        },
+        findModel: {
+          id: 'find-and-download-a-model',
+          title: '¿Cómo buscar y descargar un modelo en LM Studio?',
+          content: 'Usa la pestaña de búsqueda (icono de lupa en la barra lateral izquierda) para encontrar modelos:',
+          numberedItems: [
+            'Haz clic en la pestaña Search en la barra lateral izquierda.',
+            'Escribe el nombre de un modelo, por ejemplo "llama 3.1" o "phi-3 mini".',
+            'LM Studio muestra los modelos GGUF coincidentes de Hugging Face con tamaños de archivo y opciones de cuantización.',
+            'Selecciona un nivel de cuantización. Para 8 GB de RAM: elige Q4_K_M (~4,5 GB para un modelo 7B). Para 16 GB de RAM: Q5_K_M o Q6_K ofrecen mejor calidad.',
+            'Haz clic en la flecha de descarga. El progreso se muestra en la pestaña Downloads.',
+          ],
+        },
+        firstChat: {
+          id: 'start-chatting',
+          title: '¿Cómo empezar a chatear con un modelo en LM Studio?',
+          numberedItems: [
+            'Haz clic en la pestaña Chat (icono de bocadillo) en la barra lateral izquierda.',
+            'En la parte superior de la ventana de chat, haz clic en el menú desplegable del selector de modelo y elige el modelo descargado.',
+            'LM Studio carga el modelo en memoria -- esto tarda entre 5 y 30 segundos según el tamaño del modelo y el hardware.',
+            'Escribe tu mensaje en el campo de entrada de la parte inferior y pulsa Enter o haz clic en Enviar.',
+            'La respuesta del modelo se transmite token a token. La velocidad de generación aparece en la barra de estado en la parte inferior de la ventana.',
+          ],
+        },
+        modelSettings: {
+          title: '¿Cómo ajustar la configuración del modelo en LM Studio?',
+          content: 'El panel derecho de la pestaña Chat expone los parámetros de inferencia principales:',
+          items: [
+            '**Temperature** (por defecto 0.8): controla la aleatoriedad de las respuestas. Valores bajos (0.1-0.4) producen salidas más enfocadas y predecibles. Valores altos (0.8-1.2) producen salidas más variadas y creativas.',
+            '**Context Length** (por defecto 4096 tokens): el historial máximo de conversación que el modelo puede procesar. Un contexto más largo usa más RAM. La mayoría de los modelos 7B admiten entre 4096 y 8192 tokens.',
+            '**GPU Layers** (macOS/Linux/Windows con GPU): cuántas capas del modelo se descargan a la GPU. Establece el valor máximo para la inferencia más rápida si tu GPU tiene suficiente VRAM.',
+            '**System Prompt**: una instrucción persistente que se antepone a cada conversación. Úsala para definir el rol o el comportamiento del modelo.',
+          ],
+        },
+        localServer: {
+          id: 'enable-the-local-server',
+          title: '¿Cómo activar el servidor local de LM Studio?',
+          content: 'LM Studio incluye un servidor local que imita la API de OpenAI. Cualquier aplicación que funcione con OpenAI puede usar tu modelo local a través de este servidor:',
+          numberedItems: [
+            'Haz clic en la pestaña Local Server (el icono "<->") en la barra lateral izquierda.',
+            'Selecciona un modelo en el menú desplegable de la parte superior.',
+            'Haz clic en "Start Server". El servidor se inicia en http://localhost:1234.',
+            'Tu aplicación debe establecer `base_url = "http://localhost:1234/v1"` y cualquier cadena como clave de API (el servidor acepta cualquier valor).',
+          ],
+        },
+        localServerCode: {
+          title: 'Conectar con LM Studio mediante Python',
+          codeBlock: 'from openai import OpenAI\n\nclient = OpenAI(\n    base_url="http://localhost:1234/v1",\n    api_key="not-needed"\n)\n\nresponse = client.chat.completions.create(\n    model="local-model",\n    messages=[{"role": "user", "content": "What is a local LLM?"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        vsOllama: {
+          id: 'lm-studio-vs-ollama',
+          title: 'LM Studio vs Ollama: ¿cuál debes usar?',
+          rows: [
+            { 'Factor': 'Interfaz', 'LM Studio': 'Aplicación de escritorio gráfica', 'Ollama': 'Terminal + API' },
+            { 'Factor': 'Fuente de modelos', 'LM Studio': 'Hugging Face (cualquier modelo GGUF)', 'Ollama': 'Biblioteca de Ollama (curada, ~200 modelos)' },
+            { 'Factor': 'Puerto de API', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
+            { 'Factor': 'Gestión de modelos', 'LM Studio': 'Navegador GUI con info de tamaño de archivo', 'Ollama': 'Comandos CLI (ollama pull, list, rm)' },
+            { 'Factor': 'Automatización', 'LM Studio': 'Limitada (orientada a GUI)', 'Ollama': 'Potente (scripting, Docker, CI)' },
+            { 'Factor': 'Ideal para', 'LM Studio': 'Principiantes, usuarios de GUI, exploración de modelos', 'Ollama': 'Desarrolladores, automatización, despliegues en servidor' },
+          ],
+          columns: ['Factor', 'LM Studio', 'Ollama'],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: 'Solución de problemas comunes en LM Studio',
+          faqs: [
+            {
+              q: 'LM Studio muestra "Not enough memory to load model"',
+              a: 'El modelo requiere más RAM de la disponible. Cierra otras aplicaciones para liberar memoria o selecciona una cuantización menor (Q3_K_S en lugar de Q4_K_M). Como regla general: multiplica el tamaño del archivo del modelo por 1.2 para estimar la RAM necesaria. Un archivo de 4.5 GB necesita ~5.4 GB de RAM libre.',
+            },
+            {
+              q: 'El modelo genera texto muy lentamente (menos de 5 tokens/seg)',
+              a: 'El modelo está ejecutándose completamente en CPU. Comprueba GPU Layers en el panel derecho -- si muestra 0, tu GPU no se está usando. En macOS, LM Studio activa Metal (GPU) automáticamente para Apple Silicon. En Windows/Linux con NVIDIA, asegúrate de tener el driver actualizado y aumenta GPU Layers al valor máximo que se muestre.',
+            },
+            {
+              q: 'No encuentro un modelo específico en la búsqueda de LM Studio',
+              a: 'LM Studio busca archivos GGUF en Hugging Face. Si un modelo no aparece, intenta buscar directamente por el nombre del repositorio de Hugging Face (por ejemplo, "bartowski/Llama-3.1-8B-Instruct-GGUF"). Es posible que algunos modelos más recientes aún no estén indexados.',
+            },
+            {
+              q: 'El servidor local devuelve errores "model not found"',
+              a: 'Es necesario que haya un modelo cargado en la pestaña Local Server antes de que el servidor pueda responder. Abre la pestaña Local Server, selecciona un modelo en el menú desplegable y haz clic en Start Server. El nombre del modelo en las solicitudes de API puede ser cualquier cadena -- LM Studio usa el modelo que esté cargado en ese momento.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'Próximos pasos tras instalar LM Studio',
+          content: 'Con LM Studio funcionando, prueba [Ejecuta tu primer LLM local](/es/local-llms/run-first-local-llm) para entender qué calidad de respuesta y velocidad esperar. Para recomendaciones de modelos adaptadas a tu hardware, consulta [Mejores modelos LLM locales para principiantes](/es/local-llms/best-beginner-local-llm-models). Si quieres solucionar problemas de configuración, consulta [Solución de problemas de configuración de LLM local](/es/local-llms/troubleshooting-local-llm-setup).',
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            '**Sitio oficial de LM Studio** -- Descargas y documentación',
+            '**Hugging Face Model Hub** -- Amplia gama de modelos cuantizados GGUF',
+            '**GitHub de LM Studio** -- Código fuente y debates de la comunidad',
+          ],
+        },
+        commonMistakes: {
+          title: 'Errores comunes al instalar LM Studio',
+          items: [
+            'No asignar suficiente RAM del sistema para el modelo seleccionado en la configuración de LM Studio.',
+            'Usar un modelo pre-cuantizado que sigue siendo demasiado grande para la VRAM de tu GPU.',
+            'Esperar respuestas instantáneas de modelos grandes en sistemas solo CPU -- el tiempo de respuesta será de 10 a 30 segundos.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[¿Qué son los LLMs locales?](/es/local-llms/what-are-local-llms) -- Conceptos y componentes clave',
+            '[Ejecuta tu primer LLM local](/es/local-llms/run-first-local-llm) -- Próximos pasos tras la instalación',
+            '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- Alternativa basada en terminal a LM Studio',
+            '[Mejores modelos LLM locales para principiantes](/es/local-llms/best-beginner-local-llm-models) -- Recomendaciones de modelos por hardware',
+            '[Mejores LLMs locales para programación 2026](/es/local-llms/best-local-llms-for-coding) — Comparativa Qwen2.5-Coder vs DeepSeek',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/es/local-llms/how-to-install-lm-studio',
+        'inLanguage': 'es',
+        'headline': 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
+        'description': 'Instala LM Studio en macOS, Windows o Linux: descarga un modelo y empieza a chatear en 5 minutos. Sin terminal. Guía para principiantes 2026.',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-18',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'LM Studio' },
+          { '@type': 'Thing', 'name': 'instalación de LLM local' },
+          { '@type': 'Thing', 'name': 'modelo GGUF' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Cómo descargo LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ve a lmstudio.ai y haz clic en el botón de descarga para tu sistema operativo. Disponible para macOS (Apple Silicon + Intel), Windows 10/11 y Linux (AppImage).' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuáles son los requisitos mínimos para LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Mínimo: 8 GB de RAM, macOS 13.6, Windows 10 o Ubuntu 22.04. No se requiere GPU -- los Mac con Apple Silicon y las GPU NVIDIA/AMD son compatibles para acelerar la inferencia.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo busco y descargo modelos en LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Haz clic en la pestaña Search (lupa) en la barra lateral, busca el nombre del modelo (por ejemplo, "llama 3.1"), selecciona un nivel de cuantización (Q4_K_M para 8 GB de RAM) y haz clic en la flecha de descarga.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué cuantización debo usar en LM Studio con 8 GB de RAM?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M es la cuantización recomendada para sistemas con 8 GB de RAM. Ofrece el mejor equilibrio entre calidad del modelo y uso de memoria para modelos 7B (~4.5 GB de tamaño de archivo).' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿LM Studio incluye una API compatible con OpenAI?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Activa la pestaña Local Server en LM Studio para iniciar una API compatible con OpenAI en http://localhost:1234. Cualquier app con el SDK de OpenAI puede conectarse usando esta URL como base_url.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿En qué se diferencia LM Studio de Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio prioriza la interfaz gráfica: explora modelos, gestiona ajustes y chatea desde una interfaz visual. Ollama prioriza la línea de comandos: configuración más rápida para desarrolladores, pero requiere comandos de terminal. Ambos usan llama.cpp internamente.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar LM Studio en Linux?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Descarga el archivo .AppImage desde lmstudio.ai. Hazlo ejecutable: chmod +x LM-Studio-*.AppImage y ejecútalo. No se necesita instalación en el sistema -- funciona como app portátil.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿LM Studio es gratuito?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio es gratuito para uso personal. A partir de abril de 2026, lo desarrolla LM Studio, Inc. El uso comercial requiere una licencia de pago. Todos los modelos descargados son gratuitos según sus licencias individuales.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo activo la aceleración GPU en LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'En NVIDIA: asegúrate de tener los drivers CUDA instalados. En AMD: se requiere ROCm. En Apple Silicon: Metal se usa automáticamente. Ve a Configuración → GPU en LM Studio para verificar que la GPU está detectada y que las capas se están descargando.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre Q4_K_M y Q5_K_M en LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M usa cuantización de 4 bits (~4.5 GB para 7B) con una pérdida de calidad de ~1%. Q5_K_M usa 5 bits (~5.7 GB) con pérdida mínima. Usa Q4_K_M para 8 GB de RAM; Q5_K_M o Q6_K para sistemas con 16 GB de RAM.' }
+          }
+        ]
+      },
+    },
     de: {
       theme: 'Getting Started',
       title: 'LM Studio installieren: Desktop-App-Einrichtung für macOS, Windows und Linux',
