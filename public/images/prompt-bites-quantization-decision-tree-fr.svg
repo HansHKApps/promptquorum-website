@@ -25,7 +25,7 @@
 
   <!-- Branch YES - left -->
   <line class="line" x1="350" y1="100" x2="250" y2="140"/>
-  <text x="280" y="130" class="text-label">OUI</text>
+  <text x="265" y="118" class="text-label">OUI</text>
 
   <!-- Decision: VRAM >= 8GB? -->
   <rect x="150" y="140" width="200" height="50" class="box-decision" rx="8"/>
@@ -33,21 +33,21 @@
 
   <!-- YES -> Q8_0 or Q5_K_M -->
   <line class="line" x1="225" y1="190" x2="150" y2="230"/>
-  <text x="180" y="220" class="text-label">OUI</text>
+  <text x="162" y="210" class="text-label">OUI</text>
   <rect x="80" y="230" width="140" height="45" class="box-result" rx="6"/>
   <text x="150" y="250" class="text-dark" style="font-weight: 600;">Q8_0</text>
   <text x="150" y="265" class="text-dark" style="font-size: 10px;">Meilleure qualité</text>
 
   <!-- NO -> Q5_K_M -->
   <line class="line" x1="225" y1="190" x2="280" y2="230"/>
-  <text x="240" y="220" class="text-label">NON</text>
+  <text x="264" y="210" class="text-label">NON</text>
   <rect x="210" y="230" width="140" height="45" class="box-result" rx="6"/>
   <text x="280" y="250" class="text-dark" style="font-weight: 600;">Q5_K_M</text>
   <text x="280" y="265" class="text-dark" style="font-size: 10px;">Bon équilibre</text>
 
   <!-- Branch NO - right -->
   <line class="line" x1="450" y1="100" x2="550" y2="140"/>
-  <text x="510" y="130" class="text-label">NON</text>
+  <text x="518" y="118" class="text-label">NON</text>
 
   <!-- Decision: VRAM <= 4GB? -->
   <rect x="450" y="140" width="200" height="50" class="box-decision" rx="8"/>
@@ -55,14 +55,14 @@
 
   <!-- YES -> Q3_K_M -->
   <line class="line" x1="525" y1="190" x2="450" y2="230"/>
-  <text x="475" y="220" class="text-label">OUI</text>
+  <text x="462" y="210" class="text-label">OUI</text>
   <rect x="380" y="230" width="140" height="45" class="box-result" rx="6"/>
   <text x="450" y="250" class="text-dark" style="font-weight: 600;">Q3_K_M</text>
   <text x="450" y="265" class="text-dark" style="font-size: 10px;">VRAM ultra-bas</text>
 
   <!-- NO -> Q4_K_M -->
   <line class="line" x1="575" y1="190" x2="650" y2="230"/>
-  <text x="600" y="220" class="text-label">NON</text>
+  <text x="622" y="210" class="text-label">NON</text>
   <rect x="580" y="230" width="140" height="45" class="box-result" rx="6"/>
   <text x="650" y="250" class="text-dark" style="font-weight: 600;">Q4_K_M</text>
   <text x="650" y="265" class="text-dark" style="font-size: 10px;">Meilleur défaut</text>

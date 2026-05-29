@@ -156,6 +156,36 @@ code: "'SF Mono', Monaco, monospace"
 - Fix: purple text (accent color)
 - Rows separated by `#F7F2FA` subtle lines
 
+### 6. Decision Trees
+
+**Branch lines:** `stroke="#6750A4"`, `stroke-width="2"`, class `"line"`.
+
+**YES/NO (and all language equivalents) label positioning — critical rule:**  
+Labels must be placed **off the line**, offset perpendicularly toward the outside of the branch. Labels placed at or near the midpoint of a diagonal line will visually sit ON the line and become unreadable.
+
+**Correct offsets** for the standard 2-level tree (viewBox `0 0 800 400`):
+
+| Position | Correct x / y | Wrong x / y (on-line) |
+|---|---|---|
+| Top-left YES branch | `x="265" y="118"` | `x="280" y="130"` |
+| Top-right NO branch | `x="518" y="118"` | `x="510" y="130"` |
+| Left sub-tree YES | `x="162" y="210"` | `x="180" y="220"` |
+| Left sub-tree NO | `x="264" y="210"` | `x="240" y="220"` |
+| Right sub-tree YES | `x="462" y="210"` | `x="475" y="220"` |
+| Right sub-tree NO | `x="622" y="210"` | `x="600" y="220"` |
+
+**Rule of thumb:** For a diagonal line, find the line's x position at the desired y — then shift the label ≥ 10 px **away** from that x (left for left-going branches, right for right-going branches) and raise y by ~10 px above the midpoint. Labels use class `"text-label"` (11 px, `#79747E`, `text-anchor: start`).
+
+```svg
+<!-- YES branch going down-left: label sits LEFT of the line -->
+<line class="line" x1="350" y1="100" x2="250" y2="140"/>
+<text x="265" y="118" class="text-label">YES</text>
+
+<!-- NO branch going down-right: label sits RIGHT of the line -->
+<line class="line" x1="450" y1="100" x2="550" y2="140"/>
+<text x="518" y="118" class="text-label">NO</text>
+```
+
 ---
 
 ## Naming Convention
@@ -387,6 +417,7 @@ These fields enable:
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.1 | 2026-05-29 | Added section 6: Decision Trees — branch label offset rule with correct coordinate table. |
 | 1.0 | 2026-04-16 | Initial style guide. Covers 4 image types: error tables, RAM charts, GPU comparisons, debug flows. |
 
 ---
