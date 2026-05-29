@@ -68,6 +68,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
+      es: {
+        question: 'Q4_K_M vs Q8_0: ¿cuál elegir?',
+        answer: 'Usa Q4_K_M con 8 GB de VRAM o menos. Usa Q8_0 con 12+ GB. Q4_K_M ofrece el 95% de la calidad de Q8_0 aproximadamente a la mitad del tamaño de archivo.',
+        bullets: [
+          'Q4_K_M: ~5–6 GB para modelos 7B, ideal para 8 GB de VRAM',
+          'Q8_0: ~8–9 GB para modelos 7B, necesita 12+ GB de VRAM',
+          'La diferencia de calidad es inferior al 5% en uso real',
+        ],
+        updatedDate: '2026-05',
+      },
     },
     sections: {
       tldr: {
@@ -381,6 +391,71 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Q4_K_S怎么样——值得用它代替Q4_K_M吗？',
             a: 'Q4_K_S比Q4_K_M节省约300 MB，但质量更低。仅在显存非常紧张且Q4_K_M放不下时才使用Q4_K_S。几乎所有情况下，Q4_K_M是更好的选择。',
+          },
+        ],
+      },
+    },
+  },
+  es: {
+    theme: 'Quantization & VRAM',
+    title: 'Q4_K_M vs Q8_0: ¿cuál elegir?',
+    seoTitle: 'Q4_K_M vs Q8_0: ¿cuál? 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Usa Q4_K_M con 8 GB de VRAM o menos. Usa Q8_0 con 12+ GB. Q4_K_M ofrece el 95% de la calidad de Q8_0 a la mitad del tamaño. Respuesta rápida de PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '8 GB de VRAM o menos: usa Q4_K_M — ofrece el 95% de la calidad de Q8_0 aproximadamente a la mitad del tamaño de archivo',
+          '12+ GB de VRAM: Q8_0 vale la pena para calidad casi de plena precisión sin penalización de velocidad',
+          'Para la mayoría de usuarios que usan Ollama a diario, Q4_K_M es la elección correcta',
+        ],
+      },
+      body1: {
+        title: 'El veredicto rápido',
+        content: [
+          'A mayo de 2026, <strong>Q8_0 es ~99% de la calidad de plena precisión. Q4_K_M es ~92%.</strong> La diferencia de 7 puntos es invisible en chat, programación y resúmenes — tres tareas que cubren el 95% del uso de LLMs locales. Q8_0 solo aventaja en recuperación factual de documentos largos, matemáticas de múltiples pasos y código que requiere sintaxis exacta en más de 500 líneas.',
+          'Q4_K_M es la opción predeterminada correcta porque la calidad extra de Q8_0 solo aparece en casos extremos: generación larga con recuperación factual exacta, o razonamiento matemático que requiere mayor precisión. Para todo lo demás, Q4_K_M iguala a Q8_0 en la práctica.',
+          'Si ya usas Q4_K_M y los resultados parecen incorrectos, el problema casi nunca es la cuantización — es el tamaño del modelo o la estructura del prompt.',
+        ],
+      },
+      body2: {
+        title: 'Comparación lado a lado',
+        content: [
+          'La tabla siguiente compara Q4_K_M y Q8_0 para un modelo 7B. Ambos formatos funcionan con Ollama, LM Studio y llama.cpp sin configuración especial.',
+          'Para entender Q4_K_M y cómo funciona la compresión k-quant, consulta la <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=es" class="text-primary hover:underline">guía explicativa de Q4_K_M</a>. Para la referencia completa de cuantización, consulta <a href="/local-llms/quantization-levels-comparison?lang=es" class="text-primary hover:underline">niveles de cuantización comparados</a>.',
+          '<strong>Tres tareas revelan la brecha de calidad de Q4_K_M: recuperación de documentos largos (50+ páginas), matemáticas de múltiples pasos con estado intermedio, y generación de código en más de 300 líneas.</strong> Para estos casos, la precisión extra de Q8_0 previene los pequeños errores de deriva que se acumulan en salidas largas. Para todo lo demás — chat, código de menos de 200 líneas, preguntas y respuestas, resúmenes — la brecha es invisible. Para un repaso antes de decidir, consulta <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=es" class="text-primary hover:underline">qué significa Q4_K_M</a>.',
+        ],
+        columns: ['Métrica', 'Q4_K_M', 'Q8_0'],
+        rows: [
+          { 'Métrica': 'Tamaño de archivo (modelo 7B)', 'Q4_K_M': '~4,1 GB', 'Q8_0': '~7,7 GB' },
+          { 'Métrica': 'VRAM necesaria (7B)', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
+          { 'Métrica': 'Calidad vs plena precisión', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { 'Métrica': 'Mejor para', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre Q4_K_M vs Q8_0',
+        faqs: [
+          {
+            q: '¿Es Q8_0 notablemente mejor que Q4_K_M?',
+            a: 'Solo en casos extremos — matemáticas complejas de múltiples pasos, recuperación de citas exactas en documentos largos, o salidas muy largas. Para chat, programación y resúmenes (que cubren el 95% del uso), la mayoría de usuarios no nota la diferencia.',
+          },
+          {
+            q: '¿Es Q8_0 más rápido que Q4_K_M?',
+            a: 'No. Q8_0 es más grande y requiere más ancho de banda de memoria, lo que lo hace ligeramente más lento por token que Q4_K_M. Tanto la velocidad como la calidad favorecen a Q4_K_M en configuraciones con VRAM limitada. Consulta <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=es" class="text-primary hover:underline">qué significa Q4_K_M</a> para la razón subyacente.',
+          },
+          {
+            q: '¿Puedo alternar entre Q4_K_M y Q8_0 para diferentes tareas?',
+            a: 'Solo descargando y ejecutando diferentes etiquetas de modelo. En Ollama: <code>ollama pull llama3:8b-q4_K_M</code> y <code>ollama pull llama3:8b-q8_0</code> son descargas separadas. Cambias especificando la etiqueta en <code>ollama run</code>.',
+          },
+          {
+            q: '¿Y Q4_K_S — vale la pena usarlo en lugar de Q4_K_M?',
+            a: 'Q4_K_S ahorra unos 300 MB respecto a Q4_K_M pero ofrece menor calidad. Usa Q4_K_S solo si tu VRAM es muy limitada y Q4_K_M no cabe. En casi todos los casos, Q4_K_M es la mejor elección.',
           },
         ],
       },

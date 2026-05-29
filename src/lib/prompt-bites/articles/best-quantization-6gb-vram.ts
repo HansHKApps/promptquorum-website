@@ -65,6 +65,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
+      es: {
+        question: '¿Cuál es el mejor nivel de cuantización para 6 GB de VRAM?',
+        answer: 'Q4_K_M es el punto óptimo — los modelos 7B/8B en Q4_K_M usan 4,7–4,9 GB, dejando 1,1 GB para la caché KV. Q5_K_M cabe pero requiere limitar el contexto a 2k tokens. Evita Q6_K y superiores en tarjetas de 6 GB.',
+        bullets: [
+          'Llama 3.1 8B / Mistral 7B / Qwen 2.5 7B en Q4_K_M: 4,7–4,9 GB — cabe en 6 GB con contexto 4k',
+          'Q5_K_M usa ~5,7 GB — cabe, pero limita el contexto a 2k tokens para evitar OOM',
+          'Los modelos 14B en Q4_K_M necesitan 9,3 GB — ninguna cuantización es viable en 6 GB',
+        ],
+        updatedDate: '2026-05',
+      },
     },
     sections: {
       tldr: {
@@ -446,6 +456,87 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '模型超出 6 GB 显存会怎样？',
             a: 'Ollama 会将溢出层卸载到 CPU 内存（使用 llama.cpp 层卸载）。这会导致速度急剧下降——从纯 GPU 的约 25 tok/s 降至部分 CPU 卸载后的 3–5 tok/s。如果看到 "n_gpu_layers" 警告或每秒 token 数低于 5，说明所选量化下的模型对您的显存来说太大了。',
+          },
+        ],
+      },
+    },
+  },
+  es: {
+    theme: 'Quantization & VRAM',
+    title: '¿Mejor cuantización para 6 GB de VRAM: qué nivel cabe?',
+    seoTitle: 'Mejor cuantización para 6 GB VRAM 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Q4_K_M para modelos 7B: 4,9 GB, cabe en 6 GB VRAM con 1,1 GB para contexto. Q5_K_M cabe justo. Q6_K y superiores superan los 6 GB. Respuesta rápida de PromptQuorum.',
+    publishDate: '2026-05-23',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-23',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuál es el mejor nivel de cuantización para 6 GB de VRAM?',
+        answer: 'Q4_K_M es el punto óptimo — los modelos 7B/8B en Q4_K_M usan 4,7–4,9 GB, dejando 1,1 GB para la caché KV. Q5_K_M cabe pero requiere limitar el contexto a 2k tokens. Evita Q6_K y superiores en tarjetas de 6 GB.',
+        bullets: [
+          'Llama 3.1 8B / Mistral 7B / Qwen 2.5 7B en Q4_K_M: 4,7–4,9 GB — cabe en 6 GB con contexto 4k',
+          'Q5_K_M usa ~5,7 GB — cabe, pero limita el contexto a 2k tokens para evitar OOM',
+          'Los modelos 14B en Q4_K_M necesitan 9,3 GB — ninguna cuantización viable cabe en 6 GB',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Para tarjetas de 6 GB de VRAM (RTX 3060 6 GB, RTX 3050 6 GB, GTX 1660 Ti 6 GB): Q4_K_M es la cuantización correcta para modelos 7B y 8B',
+          'Q4_K_M deja 1,1 GB libre — suficiente para una caché KV de 4k tokens al tamaño de contexto predeterminado de Ollama de 2048',
+          'Q5_K_M mejora la perplejidad en ~1 punto pero usa 5,7 GB; reduce `--ctx-size` a 2048 para evitar errores de memoria insuficiente',
+          'Los modelos 14B (Qwen 2.5 14B, Llama 3.1 13B) requieren 9,3 GB en Q4_K_M — ningún nivel de cuantización los hace viables en 6 GB',
+        ],
+      },
+      body1: {
+        title: 'Uso de VRAM por nivel de cuantización para modelos 7B/8B en 6 GB',
+        content: [
+          'El nivel de cuantización controla directamente cuánta VRAM ocupa un modelo. Para modelos de 7.000 y 8.000 millones de parámetros — la clase más grande que cabe en una GPU de 6 GB — las opciones prácticas van de Q3_K_M a Q5_K_M. Q2_K cabe pero degrada la calidad por debajo de niveles útiles; Q6_K y superiores superan el techo de 6 GB.',
+          'Q4_K_M es el valor predeterminado recomendado: un modelo 7B usa aproximadamente 4,7 GB y un modelo 8B usa 4,9 GB en esta cuantización. Esto deja 1,1 GB para la caché KV que Ollama asigna para la ventana de contexto. Con el contexto predeterminado de 2048 tokens, esto es suficiente. Aumentar el contexto a 4096 tokens requiere aproximadamente 0,5 GB adicionales de caché KV en un modelo 7B — aún dentro del presupuesto en la mayoría de tarjetas de 6 GB.',
+          'Q5_K_M es el siguiente paso. Un modelo 8B en Q5_K_M usa aproximadamente 5,7 GB, dejando solo 300 MB libres. Esto es suficiente para contextos muy cortos (512–2048 tokens) pero causará errores OOM con conversaciones más largas o prompts de sistema. Usa Q5_K_M solo si mantienes `num_ctx` en 2048 o menos.',
+        ],
+        columns: ['Cuantización', 'VRAM 7B', 'VRAM 8B', '¿Cabe en 6 GB?', 'Contexto máx. (aprox.)'],
+        rows: [
+          { 'Cuantización': 'Q2_K', 'VRAM 7B': '~2,8 GB', 'VRAM 8B': '~3,0 GB', '¿Cabe en 6 GB?': '✓ (calidad baja)', 'Contexto máx. (aprox.)': '8k+' },
+          { 'Cuantización': 'Q3_K_M', 'VRAM 7B': '~3,5 GB', 'VRAM 8B': '~3,7 GB', '¿Cabe en 6 GB?': '✓ (aceptable)', 'Contexto máx. (aprox.)': '8k+' },
+          { 'Cuantización': 'Q4_K_M', 'VRAM 7B': '~4,7 GB', 'VRAM 8B': '~4,9 GB', '¿Cabe en 6 GB?': '✓ recomendado', 'Contexto máx. (aprox.)': '4k' },
+          { 'Cuantización': 'Q5_K_M', 'VRAM 7B': '~5,5 GB', 'VRAM 8B': '~5,7 GB', '¿Cabe en 6 GB?': '⚠ justo (solo ctx 2k)', 'Contexto máx. (aprox.)': '2k' },
+          { 'Cuantización': 'Q6_K', 'VRAM 7B': '~6,4 GB', 'VRAM 8B': '~6,6 GB', '¿Cabe en 6 GB?': '✗ OOM', 'Contexto máx. (aprox.)': '—' },
+          { 'Cuantización': 'Q8_0', 'VRAM 7B': '~7,5 GB', 'VRAM 8B': '~7,7 GB', '¿Cabe en 6 GB?': '✗ OOM', 'Contexto máx. (aprox.)': '—' },
+        ],
+      },
+      body2: {
+        title: 'Mejores modelos para ejecutar en Q4_K_M con 6 GB de VRAM',
+        content: [
+          'Tres modelos 7B/8B destacan en Q4_K_M en una tarjeta de 6 GB. Qwen 2.5 7B Instruct es el mejor equilibrado — excelente en código (HumanEval ~60%), soporte multilingüe y arquitectura de contexto 128k (aunque operarás a 4k por la VRAM). Ejecútalo con `ollama run qwen2.5:7b`.',
+          'Llama 3.1 8B es la opción más rápida. En Q4_K_M funciona a unos 25 tokens por segundo en una RTX 3060 6 GB y maneja chat general y seguimiento de instrucciones de forma fiable. Su puntuación MMLU de 66,6% es inferior a Qwen 2.5 7B, pero la ventaja en velocidad lo convierte en la mejor opción para sesiones interactivas.',
+          'Phi-4 Mini (3,8B) es la sorpresa. En Q8_0 ocupa unos 4,1 GB — cómodamente dentro de 6 GB — y supera su clase de tamaño en benchmarks de razonamiento. Úsalo cuando necesites una huella inferior a 5 GB con mejor razonamiento que los modelos 7B más antiguos. Ejecútalo con `ollama run phi4-mini`.',
+          'No intentes modelos 14B en 6 GB. Qwen 2.5 14B en Q4_K_M necesita 9,3 GB. Q2_K lo baja a unos 5,5 GB pero la penalidad de perplejidad es severa — el modelo produce salidas notablemente degradadas. Quédate con 7B/8B en Q4_K_M o 3B/4B en Q8_0.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre cuantización con 6 GB de VRAM',
+        faqs: [
+          {
+            q: '¿Se puede ejecutar un modelo 14B en 6 GB de VRAM?',
+            a: 'No existe ninguna solución viable. Qwen 2.5 14B en Q4_K_M necesita 9,3 GB. Bajarlo a Q2_K lo reduce a unos 5,5 GB, pero la degradación de calidad es severa — las salidas se vuelven notablemente incoherentes. El modelo correcto para 6 GB de VRAM es un modelo 7B u 8B en Q4_K_M.',
+          },
+          {
+            q: '¿Q4_K_M o Q4_K_S: cuál es mejor para 6 GB de VRAM?',
+            a: 'Q4_K_M. La variante Q4_K_S ahorra unos 200 MB respecto a Q4_K_M pero con una mayor penalidad de perplejidad. En una tarjeta de 6 GB, Q4_K_M ya deja 1,1 GB de margen — los 200 MB adicionales de Q4_K_S no son necesarios y el compromiso de calidad no vale la pena.',
+          },
+          {
+            q: '¿Debo usar Q5_K_M en lugar de Q4_K_M con 6 GB de VRAM?',
+            a: 'Solo si limitas estrictamente el contexto a 2k tokens. Q5_K_M mejora la perplejidad en unos 1–1,5 puntos respecto a Q4_K_M, pero usa 5,7 GB en un modelo 8B, dejando solo 300 MB para la caché KV. Establece `num_ctx 2048` en tu Modelfile o en los parámetros de Ollama para evitar OOM a mitad de sesión.',
+          },
+          {
+            q: '¿Qué ocurre si mi modelo supera los 6 GB de VRAM?',
+            a: 'Ollama descarga las capas sobrantes a la RAM de la CPU (usando el layer offloading de llama.cpp). Esto provoca una caída drástica de la velocidad — de ~25 tok/s solo en GPU a ~3–5 tok/s con offloading parcial a CPU. Si ves advertencias de "n_gpu_layers" o los tokens por segundo caen por debajo de 5, tu modelo es demasiado grande para tu VRAM con la cuantización seleccionada.',
           },
         ],
       },

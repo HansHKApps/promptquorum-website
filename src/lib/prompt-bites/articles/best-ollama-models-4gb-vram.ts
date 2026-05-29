@@ -68,6 +68,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
+      es: {
+        question: '¿Mejores modelos Ollama para 4 GB de VRAM?',
+        answer: '4 GB de VRAM es ajustado pero utilizable con modelos pequeños como Phi-4 Mini Q4 (~3,2 GB), Gemma 2 2B (~1,5 GB) y SmolLM 1.7B (~1,0 GB). Llama 3 8B no cabe.',
+        bullets: [
+          'Phi-4 Mini Q4: mejor calidad en 4 GB (3,2 GB VRAM)',
+          'Gemma 2 2B: rápido y ligero (1,5 GB)',
+          'SmolLM 1.7B: huella VRAM mínima (1,0 GB)',
+        ],
+        updatedDate: '2026-05',
+      },
     },
     sections: {
       tldr: {
@@ -396,6 +406,74 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '仅CPU模式能绕过4 GB显存限制吗？',
             a: '可以。不使用GPU时，Llama 3 8B Q4使用约6 GB系统内存，在现代8核CPU上以3–6 tok/s运行。速度较慢，但如果有足够内存则可用。',
+          },
+        ],
+      },
+    },
+  },
+  es: {
+    theme: 'Quantization & VRAM',
+    title: '¿Mejores modelos Ollama para 4 GB de VRAM?',
+    seoTitle: 'Modelos Ollama para 4 GB VRAM 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: '4 GB de VRAM es ajustado. Phi-4 Mini Q4 (3,2 GB), Gemma 2 2B (1,5 GB), SmolLM 1.7B (1,0 GB). Llama 3 8B no cabe. Respuesta rápida de PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Mejor para 4 GB VRAM: Phi-4 Mini Q4 con ~3,2 GB — la mayor calidad en este rango',
+          'Gemma 2 2B (1,5 GB) es la opción más rápida; SmolLM 1.7B (1,0 GB) es la más pequeña',
+          'Llama 3 8B no cabe en ninguna cuantización — necesita 5,5 GB como mínimo',
+        ],
+      },
+      body1: {
+        title: 'Qué cabe en 4 GB de VRAM',
+        content: [
+          'A mayo de 2026, <strong>con 4 GB de VRAM estás limitado a modelos con 3.000 millones de parámetros o menos en cuantización Q4.</strong> Esto descarta todos los modelos locales populares — Llama 3 8B, Mistral 7B, Qwen 14B. Tres modelos pequeños modernos rinden sorprendentemente bien: Phi-4 Mini iguala a GPT-3.5 en seguimiento de instrucciones, Gemma 2 2B gestiona chat rápido, y SmolLM 1.7B funciona en gráficos integrados.',
+          'Phi-4 Mini es la mejor opción en este rango. A pesar de su pequeño tamaño, maneja preguntas generales, código ligero y resumen de documentos a ~25 tokens por segundo. Gemma 2 2B es más rápido para chat de un solo turno. SmolLM 1.7B es la alternativa si incluso Phi-4 Mini acerca tu VRAM demasiado al límite.',
+        ],
+        columns: ['Modelo', 'VRAM', 'Mejor para'],
+        rows: [
+          { 'Modelo': 'Phi-4 Mini Q4', 'VRAM': '3,2 GB', 'Mejor para': 'Mejor calidad en 4 GB' },
+          { 'Modelo': 'Gemma 2 2B Q4', 'VRAM': '1,5 GB', 'Mejor para': 'Chat rápido de un turno' },
+          { 'Modelo': 'SmolLM 1.7B Q4', 'VRAM': '1,0 GB', 'Mejor para': 'Huella VRAM mínima' },
+        ],
+      },
+      body2: {
+        title: 'Qué no cabe en 4 GB',
+        content: [
+          'Estos modelos se solicitan frecuentemente pero requieren más de 4 GB de VRAM en todos los niveles de cuantización:',
+          'Actualizar a 6 GB desbloquea Llama 3 8B y Mistral 7B — los dos modelos locales más populares. Consulta <a href="/prompt-bites/best-local-llm-6gb-vram?lang=es" class="text-primary hover:underline">los mejores LLMs locales para 6 GB de VRAM</a>. Para una comparación completa de hardware, consulta <a href="/local-llms/fastest-local-llms-low-end-pcs?lang=es" class="text-primary hover:underline">los LLMs locales más rápidos para PCs de gama baja</a>.',
+        ],
+        items: [
+          'Llama 3 8B — necesita ~5,5 GB en Q4_K_M (mínimo)',
+          'Mistral 7B — necesita ~4,5 GB en Q4_K_M (marginal; arriesgado en 4 GB con sobrecarga de contexto)',
+          'Phi-4 (completo 14B) — necesita ~9,8 GB',
+          'Qwen 14B — necesita ~9,5 GB en Q4_K_M',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre modelos con 4 GB de VRAM',
+        faqs: [
+          {
+            q: '¿Son suficientes 4 GB de VRAM para un LLM útil?',
+            a: 'Sí, para tareas básicas. Phi-4 Mini maneja preguntas generales y código ligero a ~25 tok/s. Para contextos largos, agentes de código de múltiples pasos o análisis de documentos, 4 GB es un cuello de botella — actualiza a 6 GB o más.',
+          },
+          {
+            q: '¿Puedo ejecutar Llama 3 con 4 GB de VRAM?',
+            a: 'No. Llama 3 8B necesita ~5,5 GB en Q4_K_M como mínimo. Llama 3.2 3B cabe en ~2,5 GB si quieres específicamente una variante Llama. Consulta <a href="/prompt-bites/how-much-vram-for-local-llm?lang=es" class="text-primary hover:underline">la guía completa de requisitos de VRAM</a>.',
+          },
+          {
+            q: '¿Qué GPU tiene 4 GB de VRAM?',
+            a: 'RTX 3050 Ti (4 GB), GTX 1650 Super (4 GB) y AMD RX 6500 XT (4 GB) son las más comunes. Las tres funcionan con Ollama — NVIDIA vía CUDA, AMD vía ROCm o Vulkan.',
+          },
+          {
+            q: '¿Puede el modo solo-CPU superar el límite de 4 GB de VRAM?',
+            a: 'Sí. Sin GPU, Llama 3 8B Q4 usa ~6 GB de RAM del sistema y funciona a 3–6 tok/s en una CPU moderna de 8 núcleos. Es más lento, pero funciona si tienes suficiente RAM.',
           },
         ],
       },

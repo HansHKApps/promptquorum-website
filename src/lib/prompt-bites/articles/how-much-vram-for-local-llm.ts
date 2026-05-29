@@ -68,6 +68,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
+      es: {
+        question: '¿Cuánta VRAM necesitas para un LLM local?',
+        answer: '4 GB de VRAM soporta Phi-4 Mini y Gemma 2B cómodamente con margen para expansión de contexto. 6 GB ejecuta Llama 3 8B en Q4. 12 GB aloja Qwen 14B Q4 eficientemente. Los modelos 70B en Q4 requieren 16+ GB.',
+        bullets: [
+          '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
+          '6 GB: Llama 3 8B Q4_K_M',
+          '8–12 GB: Mistral 7B Q5, Qwen 14B Q4',
+        ],
+        updatedDate: '2026-05',
+      },
     },
     sections: {
       tldr: {
@@ -391,6 +401,73 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '如果模型占用的显存超出预期怎么办？',
             a: '在Ollama命令中设置<code>--num-ctx 2048</code>。这可以在不修改模型文件的情况下，将7B模型的显存使用减少最多2 GB。',
+          },
+        ],
+      },
+    },
+  },
+  es: {
+    theme: 'Quantization & VRAM',
+    title: '¿Cuánta VRAM necesitas para un LLM local?',
+    seoTitle: 'Requisitos de VRAM para LLMs locales 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: '4 GB para Phi-4 Mini Q4. 6 GB para Llama 3 8B Q4_K_M. 12 GB para Qwen 14B. Fórmula: params × 0,7 = GB en Q4. Guía de VRAM de PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '4 GB de VRAM ejecuta Phi-4 Mini Q4 y Gemma 2 2B sin problemas',
+          '6 GB es el punto de entrada para Llama 3 8B en Q4_K_M — el modelo local más popular',
+          '12 GB desbloquea Qwen 14B Q4, el mejor escalón de calidad por precio',
+          'Los modelos 70B requieren 40+ GB — planifica con dual RTX 3090 o Apple M-series con mucha memoria unificada',
+        ],
+      },
+      body1: {
+        title: 'Requisitos de VRAM por tamaño de modelo',
+        content: [
+          'A mayo de 2026, el consumo de VRAM de un modelo sigue una fórmula sencilla: parámetros en miles de millones × 0,7 = GB aproximados en cuantización Q4. <strong>Un modelo 7B necesita ~4,9 GB para los pesos, más 0,5–1 GB de sobrecarga de contexto.</strong> Por eso 6 GB es el mínimo para el rango 7–8B, y 12 GB desbloquea el rango 14B con margen.',
+          'Usa la tabla siguiente como referencia rápida. La columna "Velocidad" asume Ollama en una GPU de escritorio con contexto predeterminado (2048 tokens).',
+          '<strong>Deja siempre 1–2 GB de VRAM libres por encima de las necesidades declaradas del modelo.</strong> El sistema operativo, las pestañas del navegador y el runtime de Ollama consumen 500 MB–1 GB incluso sin modelo cargado. Una tarjeta de 6 GB ejecutando un modelo de 5,5 GB solo deja 500 MB de margen — tendrás errores de memoria en cuanto aumente <code>--num-ctx</code> más allá de 2048 tokens. Para el rango de 6 GB con margen seguro, consulta <a href="/prompt-bites/best-local-llm-6gb-vram?lang=es" class="text-primary hover:underline">los mejores LLMs locales para 6 GB de VRAM</a>.',
+        ],
+        columns: ['VRAM', 'Mejor modelo en Q4_K_M', 'Velocidad'],
+        rows: [
+          { 'VRAM': '4 GB', 'Mejor modelo en Q4_K_M': 'Phi-4 Mini Q4', 'Velocidad': '~25 tok/s' },
+          { 'VRAM': '6 GB', 'Mejor modelo en Q4_K_M': 'Llama 3 8B Q4_K_M', 'Velocidad': '~20 tok/s' },
+          { 'VRAM': '8 GB', 'Mejor modelo en Q4_K_M': 'Mistral 7B Q5_K_M', 'Velocidad': '~18 tok/s' },
+          { 'VRAM': '12 GB', 'Mejor modelo en Q4_K_M': 'Qwen 14B Q4_K_M', 'Velocidad': '~15 tok/s' },
+          { 'VRAM': '16+ GB', 'Mejor modelo en Q4_K_M': 'Qwen 32B Q4 o Llama 70B parcial', 'Velocidad': '~8 tok/s' },
+        ],
+      },
+      body2: {
+        title: 'Qué hacer cuando la VRAM no es suficiente',
+        content: [
+          'Si un modelo supera tu VRAM tienes tres opciones: reducir la cuantización (Q4_K_M en lugar de Q5), reducir la ventana de contexto con <code>--num-ctx 2048</code>, o dejar que Ollama descargue capas en la RAM del sistema.',
+          'El offloading a CPU funciona pero es lento — cada capa movida a RAM añade latencia. Para uso interactivo, mantente dentro del límite de VRAM de tu GPU. Reducir el contexto de 4096 a 2048 tokens ahorra aproximadamente 2 GB en un modelo 7B.',
+          'Para un desglose completo de tamaños de modelos y el cálculo de estimación de VRAM, consulta la <a href="/local-llms/how-much-vram-local-llm?lang=es" class="text-primary hover:underline">guía completa de VRAM para LLMs locales</a>. Para el rango 7B específicamente, consulta <a href="/prompt-bites/how-much-ram-for-7b-model?lang=es" class="text-primary hover:underline">cuánta RAM necesita un modelo 7B</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre la VRAM',
+        faqs: [
+          {
+            q: '¿Son suficientes 8 GB de VRAM para LLMs locales?',
+            a: 'Sí. Con 8 GB puedes ejecutar Llama 3 8B en Q5_K_M a unos 18 tokens por segundo, o Mistral 7B en Q5_K_M con margen de sobra. La mayoría de las tareas cotidianas de chat y programación están bien cubiertas en este rango.',
+          },
+          {
+            q: '¿Puedo ejecutar un modelo 7B con 4 GB de VRAM?',
+            a: 'No. Un modelo 7B en Q4 necesita 5–6 GB de VRAM. La cuantización más pequeña utilizable sigue superando los 4 GB. Consulta <a href="/prompt-bites/how-much-ram-for-7b-model?lang=es" class="text-primary hover:underline">cuánta RAM necesita un modelo 7B</a> para el desglose completo.',
+          },
+          {
+            q: '¿Afecta el tamaño de la ventana de contexto al uso de VRAM?',
+            a: 'Sí. Cada 1.000 tokens adicionales de contexto consume aproximadamente 250 MB de VRAM en un modelo 7B. El contexto predeterminado de 2048 tokens usa ~0,5 GB; 16.384 tokens usan ~4 GB adicionales sobre el peso del modelo.',
+          },
+          {
+            q: '¿Qué hago si mi modelo usa más VRAM de lo esperado?',
+            a: 'Establece <code>--num-ctx 2048</code> en tu comando de Ollama. Esto reduce el uso de VRAM hasta en 2 GB en modelos 7B sin modificar el archivo del modelo.',
           },
         ],
       },

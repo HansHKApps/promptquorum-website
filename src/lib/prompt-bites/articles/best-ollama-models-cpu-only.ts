@@ -32,6 +32,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       fr: { question: 'Meilleurs modèles Ollama en mode CPU uniquement ?', answer: 'Sans GPU, Phi-4 Mini en Q4 offre le meilleur équilibre qualité/vitesse sur CPU, avec qualité de raisonnement proche de Llama 3 8B en seulement 4 Go de RAM. Llama 3 8B Q4 fonctionne avec 8+ Go de RAM. Gemma 2B est l\'option CPU la plus rapide.', bullets: ['Phi-4 Mini Q4 : meilleur rapport qualité/vitesse sur CPU, nécessite 4 Go de RAM', 'Llama 3 8B Q4 : meilleure qualité, nécessite 8 Go de RAM (plus lent)', 'Gemma 2B : inférence CPU la plus rapide, 2 Go de RAM'], updatedDate: '2026-05' },
       ja: { question: 'CPUのみで動くOllamaモデルは？', answer: 'GPU非搭載環境では、Phi-4 Mini Q4はCPUでの品質と速度の最良バランスで、わずか4 GB RAMでLlama 3 8B近いReasoning品質を提供します。Llama 3 8B Q4は8 GB以上のRAMで動作します。Gemma 2BはCPU推論が最速です。', bullets: ['Phi-4 Mini Q4：CPUでの品質/速度バランス最良、4 GB RAM必要', 'Llama 3 8B Q4：最高品質、8 GB RAM必要（低速）', 'Gemma 2B：CPU推論が最速、2 GB RAM'], updatedDate: '2026-05' },
       zh: { question: '纯CPU运行最佳的Ollama模型是什么？', answer: '无GPU时，Phi-4 Mini Q4是CPU上质量与速度的最佳平衡，仅需4 GB内存即可提供接近Llama 3 8B的推理品质。Llama 3 8B Q4需要8 GB以上内存。Gemma 2B是CPU推理速度最快的选择。', bullets: ['Phi-4 Mini Q4：CPU上质量/速度最佳，需要4 GB内存', 'Llama 3 8B Q4：最高质量，需要8 GB内存（较慢）', 'Gemma 2B：CPU推理最快，2 GB内存'], updatedDate: '2026-05' },
+      es: { question: '¿Los mejores modelos de Ollama solo para CPU?', answer: 'Sin GPU, Phi-4 Mini en Q4 es el mejor equilibrio entre calidad y velocidad en CPU, ofreciendo una calidad de razonamiento cercana a Llama 3 8B con solo 4 GB de RAM. Llama 3 8B Q4 funciona con 8 GB de RAM o más. Gemma 2B es la opción CPU más rápida.', bullets: ['Phi-4 Mini Q4: mejor relación calidad/velocidad en CPU, requiere 4 GB de RAM', 'Llama 3 8B Q4: mejor calidad, requiere 8 GB de RAM (más lento)', 'Gemma 2B: inferencia CPU más rápida, 2 GB de RAM'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {
@@ -393,6 +394,83 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '哪些 CPU 在本地 LLM 推理中最快？',
             a: 'Apple M 系列芯片（M3、M4）采用统一内存架构，在 7B 模型上可达 15–30 tok/s——在纯 CPU 推理方面远超 x86 CPU。在 x86 CPU 中，内存带宽更高、L3 缓存更大的型号表现最佳。',
+          },
+        ],
+      },
+    },
+  },
+  es: {
+    theme: 'Ollama',
+    title: '¿Los mejores modelos de Ollama solo para CPU?',
+    seoTitle: 'Mejores modelos de Ollama sin GPU 2026 | PromptQuorum',
+    metaDescription: 'Phi-4 Mini Q4 es el mejor modelo de Ollama solo para CPU: 4 GB de RAM, ~5 tok/s. Llama 3 8B Q4 requiere 8 GB de RAM. Gemma 2B es el más rápido en CPU (~6 tok/s). Sin GPU. Mayo 2026.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Los mejores modelos de Ollama solo para CPU?',
+        answer: 'Sin GPU, Phi-4 Mini en Q4 ofrece el mejor equilibrio entre calidad y velocidad en CPU. Llama 3 8B Q4 funciona con 8 GB de RAM o más. Gemma 2B es la opción CPU más rápida.',
+        bullets: [
+          'Phi-4 Mini Q4: mejor relación calidad/velocidad en CPU, requiere 4 GB de RAM',
+          'Llama 3 8B Q4: mejor calidad, requiere 8 GB de RAM (más lento)',
+          'Gemma 2B: inferencia CPU más rápida, 2 GB de RAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'La inferencia en CPU es entre 5 y 10 veces más lenta que en GPU — espera entre 3 y 6 tok/s en una CPU de escritorio moderna de 8 núcleos',
+          'Phi-4 Mini Q4 es la mejor opción solo para CPU: 4 GB de RAM, ~5 tok/s, excelente calidad de razonamiento',
+          'Gemma 2B es el más rápido en CPU (~6 tok/s) pero ofrece menor calidad de razonamiento que Phi-4 Mini',
+          'La inferencia en CPU es práctica para trabajos por lotes y consultas individuales; demasiado lenta para chat interactivo',
+        ],
+      },
+      body1: {
+        title: 'La realidad de la velocidad en CPU',
+        content: [
+          '<strong>A mayo de 2026, la inferencia en CPU funciona a entre 3 y 6 tokens por segundo en una CPU de escritorio moderna de 8 núcleos — aproximadamente entre 5 y 10 veces más lenta que una GPU de gama media.</strong> Un modelo 7B en Q4 produce aproximadamente una palabra cada 200–300 milisegundos en CPU.',
+          'Esta velocidad es aceptable para dos casos de uso: procesamiento por lotes nocturno (como resumir documentos o clasificar datos) y consultas individuales donde una espera de 30 segundos es aceptable. Para chat interactivo o completado de código en tiempo real, la inferencia en CPU es demasiado lenta para ser práctica.',
+          'La restricción fundamental es el ancho de banda de memoria, no la velocidad de reloj de la CPU. Las CPUs de consumo leen la RAM a 40–80 GB/s. Una GPU dedicada lee la VRAM a 400–900 GB/s. La inferencia LLM escala directamente con el ancho de banda de memoria — por eso incluso una GPU de gama media produce una inferencia dramáticamente más rápida que una CPU de alta gama.',
+        ],
+      },
+      body2: {
+        title: 'Los 3 mejores modelos para uso solo con CPU',
+        content: [
+          'El modelo correcto solo para CPU depende de si priorizas calidad o velocidad. <strong>Phi-4 Mini Q4 ofrece el mejor equilibrio — proporciona una calidad de razonamiento cercana a Llama 3 8B necesitando solo 4 GB de RAM y funcionando notablemente más rápido.</strong>',
+          'Gemma 2B es la única opción viable cuando la RAM está limitada a 2 GB. Alcanza ~6 tok/s en CPU pero produce respuestas de calidad notablemente inferior en tareas de razonamiento de múltiples pasos comparado con Phi-4 Mini.',
+          'Para la comparativa completa de configuraciones solo con CPU incluyendo requisitos de RAM y optimizaciones a nivel del sistema operativo, consulta la <a href="/es/local-llms/best-cpu-only-llm" class="text-primary hover:underline">guía de los mejores LLM solo para CPU</a>.',
+        ],
+        columns: ['Modelo', 'RAM requerida', 'Velocidad en CPU'],
+        rows: [
+          { 'Modelo': 'Phi-4 Mini Q4', 'RAM requerida': '4 GB', 'Velocidad en CPU': '~4–5 tok/s' },
+          { 'Modelo': 'Llama 3 8B Q4', 'RAM requerida': '8 GB', 'Velocidad en CPU': '~3 tok/s' },
+          { 'Modelo': 'Gemma 2B', 'RAM requerida': '2 GB', 'Velocidad en CPU': '~6 tok/s' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre los LLM solo para CPU',
+        faqs: [
+          {
+            q: '¿Cuánta RAM necesito para Ollama solo con CPU?',
+            a: 'Mínimo 2 GB para Gemma 2B. 4 GB para Phi-4 Mini Q4. 8 GB para Llama 3 8B Q4. Añade entre 1 y 2 GB adicionales sobre el tamaño del modelo para la carga del sistema operativo y el tiempo de ejecución de Ollama.',
+          },
+          {
+            q: '¿Por qué la inferencia en CPU es tan lenta en comparación con la GPU?',
+            a: 'La inferencia LLM está limitada por el ancho de banda de memoria. Las CPUs de consumo leen la RAM a 40–80 GB/s. Una GPU de gama media lee la VRAM a 400–900 GB/s. Esa diferencia de ancho de banda de 10 veces se traduce directamente en una generación de tokens entre 5 y 10 veces más lenta.',
+          },
+          {
+            q: '¿Puedo usar Ollama en un portátil sin GPU dedicada?',
+            a: 'Sí. Ollama se ejecuta automáticamente en la CPU cuando no se detecta ninguna GPU. Espera entre 3 y 5 tok/s en una CPU moderna de portátil. Consulta <a href="/es/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">los mejores modelos de Ollama ahora mismo</a> para recomendaciones por nivel de GPU si más adelante haces una actualización.',
+          },
+          {
+            q: '¿Qué CPUs son más rápidas para la inferencia de LLM local?',
+            a: 'Los chips Apple M-series (M3, M4) utilizan arquitectura de memoria unificada y alcanzan entre 15 y 30 tok/s en modelos 7B — muy superiores a las CPUs x86 en inferencia solo con CPU. Entre las CPUs x86, las que tienen mayor ancho de banda de memoria y caché L3 grande rinden mejor.',
           },
         ],
       },

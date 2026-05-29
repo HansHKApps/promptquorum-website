@@ -68,6 +68,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
+      es: {
+        question: '¿Qué es la cuantización Q4_K_M?',
+        answer: 'Q4_K_M significa cuantización de 4 bits con compresión k-quant (K) a calidad media (M). Es la mejor opción por defecto para la mayoría de modelos: mejor calidad que Q4_0, menor tamaño que Q8_0.',
+        bullets: [
+          'Q = cuantizado, 4 = 4 bits, K = k-quant, M = medio',
+          'Mejor calidad que Q4_0 al mismo tamaño de archivo',
+          'Usa Q4_K_M como cuantización predeterminada',
+        ],
+        updatedDate: '2026-05',
+      },
     },
     sections: {
       tldr: {
@@ -381,6 +391,71 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Ollama上哪些模型默认使用Q4_K_M？',
             a: '大多数模型——Llama 3、Mistral、Qwen、Phi和Gemma都默认使用Q4_K_M标签。在模型标签中指定<code>:q5_K_M</code>或<code>:q8_0</code>可切换量化格式。',
+          },
+        ],
+      },
+    },
+  },
+  es: {
+    theme: 'Quantization & VRAM',
+    title: '¿Qué es la cuantización Q4_K_M?',
+    seoTitle: 'Guía de cuantización Q4_K_M 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Q4_K_M significa cuantización de 4 bits k-quant a calidad media. Mejor que Q4_0, más pequeño que Q8_0. Usa Q4_K_M como predeterminado para Ollama. Guía rápida de PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Q4_K_M = cuantización de 4 bits con compresión k-quant a calidad media — mejor que Q4_0 al mismo tamaño de archivo',
+          'Un modelo 7B en Q4_K_M ocupa ~4,1 GB en disco y necesita ~5,5 GB de VRAM para ejecutarse',
+          'Usa Q4_K_M como predeterminado — ofrece la mejor relación calidad/GB para la mayoría de presupuestos de VRAM',
+        ],
+      },
+      body1: {
+        title: 'Qué significa cada letra de Q4_K_M',
+        content: [
+          'A mayo de 2026, <strong>Q4_K_M existe porque los formatos antiguos de 4 bits (Q4_0) perdían demasiada calidad en los pesos críticos.</strong> La compresión k-quant resuelve esto asignando más bits a los pesos que más afectan a la salida, y menos bits a los de menor impacto. Resultado: 5–8% más calidad que Q4_0 al mismo tamaño de archivo.',
+          'La "K" es el diferenciador clave. La compresión k-quant aplica una asignación de bits no uniforme — los pesos críticos reciben más bits, los menos importantes reciben menos. Esto recupera 5–8% de calidad respecto al antiguo formato Q4_0 al mismo tamaño de archivo.',
+          'La "M" es el ajuste de calidad dentro de k-quant. Q4_K_S (small) es ligeramente más pequeño con menor calidad. Q4_K_M (medium) es el mejor equilibrio. Q4_K_L (large) es marginalmente mejor pero rara vez justifica el tamaño extra.',
+          '<strong>K-quant funciona agrupando pesos y asignando bits según su importancia.</strong> Los clusters de mayor importancia reciben 6 bits por peso. Los de nivel medio reciben 4 bits. Los de baja importancia reciben 3 bits. El nivel "M" promedia 4,5 bits por peso en todo el modelo — esto explica por qué Q4_K_M se sitúa entre Q4_K_S y Q5_K_M en tamaño y calidad. Para cuando el nivel M no es suficiente, consulta <a href="/prompt-bites/q4-k-m-vs-q8-0?lang=es" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
+        ],
+      },
+      body2: {
+        title: 'Cómo se compara Q4_K_M con otras cuantizaciones',
+        content: [
+          'La tabla siguiente muestra los compromisos para un modelo 7B. La calidad es relativa al baseline de plena precisión Q8_0. A menos que tengas 12+ GB de VRAM, Q4_K_M ofrece la mejor relación calidad/GB.',
+          'Para una comparación directa de Q4_K_M vs Q8_0, consulta la <a href="/prompt-bites/q4-k-m-vs-q8-0?lang=es" class="text-primary hover:underline">guía de decisión Q4_K_M vs Q8_0</a>. Para la referencia completa de cuantización, consulta la <a href="/local-llms/quantization-levels-comparison?lang=es" class="text-primary hover:underline">comparación de niveles de cuantización</a>.',
+        ],
+        columns: ['Formato', 'Tamaño de archivo (7B)', 'Calidad vs Q8_0'],
+        rows: [
+          { 'Formato': 'Q4_0', 'Tamaño de archivo (7B)': '3,8 GB', 'Calidad vs Q8_0': 'Base (~87%)' },
+          { 'Formato': 'Q4_K_M', 'Tamaño de archivo (7B)': '4,1 GB', 'Calidad vs Q8_0': '~92% (+5%)' },
+          { 'Formato': 'Q5_K_M', 'Tamaño de archivo (7B)': '5,0 GB', 'Calidad vs Q8_0': '~95% (+3%)' },
+          { 'Formato': 'Q8_0', 'Tamaño de archivo (7B)': '7,7 GB', 'Calidad vs Q8_0': '100% (referencia)' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre cuantización',
+        faqs: [
+          {
+            q: '¿Es Q4_K_M lo mismo que Q4_0?',
+            a: 'No. Q4_K_M usa compresión k-quant que recupera 5–8% de calidad sobre Q4_0 a la misma profundidad de bits. Siempre prefiere Q4_K_M sobre Q4_0. Consulta la <a href="/prompt-bites/q4-k-m-vs-q8-0?lang=es" class="text-primary hover:underline">guía Q4_K_M vs Q8_0</a> para saber cuándo subir de nivel.',
+          },
+          {
+            q: '¿Qué cuantización debo usar con 8 GB de VRAM?',
+            a: 'Q4_K_M para modelos 7B (5,5 GB VRAM). Si quieres mejor calidad y tienes margen, Q5_K_M usa 6,5 GB y añade ~3% de calidad. Ambas caben cómodamente en 8 GB.',
+          },
+          {
+            q: "¿Qué significa la 'M' en Q4_K_M?",
+            a: "Medium (medio) — se refiere al nivel de calidad dentro de la compresión k-quant. Q4_K_S es la variante pequeña (menor calidad), Q4_K_M es medium (recomendada), y Q4_K_L es large (mejora marginal respecto a M).",
+          },
+          {
+            q: '¿Qué modelos en Ollama usan Q4_K_M por defecto?',
+            a: 'La mayoría — Llama 3, Mistral, Qwen, Phi y Gemma usan etiquetas Q4_K_M por defecto. Especifica <code>:q5_K_M</code> o <code>:q8_0</code> en la etiqueta del modelo para cambiar la cuantización.',
           },
         ],
       },

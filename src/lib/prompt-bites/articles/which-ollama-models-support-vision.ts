@@ -32,6 +32,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       fr: { question: 'Quels modèles Ollama prennent en charge la vision ?', answer: 'Ollama supporte plusieurs modèles de vision : LLaVA, Gemma 3 multimodal et Qwen-VL. Lancez ollama run llava pour le démarrage le plus simple. Tous acceptent des images via l\'API Ollama.', bullets: ['llava : modèle de vision original, meilleure compatibilité', 'gemma3 : modèle multimodal de Google, bonne qualité', 'qwen-vl : efficace pour la compréhension de documents'], updatedDate: '2026-05' },
       ja: { question: 'Ollamaのビジョン対応モデルは？', answer: 'OllamaはLLaVA、Gemma 3マルチモーダル、Qwen-VLなど複数のビジョンモデルに対応しています。ollama run llavaが最も手軽なスタートです。すべてOllama API経由で画像入力に対応しています。', bullets: ['llava：オリジナルビジョンモデル、互換性最高', 'gemma3：Googleのマルチモーダルモデル、高品質', 'qwen-vl：文書理解に強み'], updatedDate: '2026-05' },
       zh: { question: 'Ollama哪些模型支持视觉功能？', answer: 'Ollama支持多个视觉模型：LLaVA、Gemma 3多模态和Qwen-VL。运行ollama run llava是最简单的入门方式。所有模型均可通过Ollama API接收图像输入。', bullets: ['llava：原始视觉模型，兼容性最佳', 'gemma3：谷歌多模态模型，质量优良', 'qwen-vl：文档理解能力强'], updatedDate: '2026-05' },
+      es: { question: '¿Qué modelos de Ollama son compatibles con visión?', answer: 'Ollama admite varios modelos de visión: LLaVA, Gemma 3 multimodal y Qwen-VL. Ejecuta ollama run llava para empezar fácilmente. Todos aceptan imágenes a través de la API de Ollama.', bullets: ['llava: modelo de visión original, mejor compatibilidad', 'gemma3: modelo multimodal de Google, buena calidad', 'qwen-vl: potente para la comprensión de documentos'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {
@@ -393,6 +394,83 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '视觉模型支持在单个提示中处理多张图片吗？',
             a: '支持情况因模型而异。LLaVA和Qwen-VL目前在Ollama中每轮处理一张图片。Llama 3.2 Vision根据Ollama版本和客户端实现支持多图片输入。',
+          },
+        ],
+      },
+    },
+  },
+  es: {
+    theme: 'Ollama',
+    title: '¿Qué modelos de Ollama son compatibles con visión?',
+    seoTitle: 'Modelos de visión de Ollama 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'LLaVA, Gemma 3 multimodal y Qwen-VL son compatibles con visión en Ollama. Empieza con: ollama run llava. Todos aceptan imágenes a través de la API de Ollama. Actualizado 2026.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué modelos de Ollama son compatibles con visión?',
+        answer: 'Ollama admite varios modelos de visión: LLaVA, Gemma 3 multimodal y Qwen-VL. Ejecuta ollama run llava para empezar fácilmente. Todos aceptan imágenes a través de la API de Ollama.',
+        bullets: [
+          'llava: modelo de visión original, mejor compatibilidad',
+          'gemma3: modelo multimodal de Google, buena calidad',
+          'qwen-vl: potente para la comprensión de documentos',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Cuatro modelos de visión de Ollama están listos para producción: LLaVA, Llama 3.2 Vision, Qwen-VL y Gemma 3',
+          'Los modelos de visión necesitan entre 1 y 3 GB más de VRAM que sus equivalentes solo de texto — el codificador de imagen se ejecuta junto al LLM',
+          'LLaVA 7B es el punto de partida más seguro (~7 GB de VRAM, amplia compatibilidad con clientes)',
+          'Usa Qwen-VL para análisis de gráficos y diagramas; usa Llama 3.2 Vision 11B para OCR y razonamiento visual de múltiples pasos',
+        ],
+      },
+      body1: {
+        title: 'Los principales modelos de visión en Ollama',
+        content: [
+          '<strong>A mayo de 2026, Ollama admite cuatro modelos de visión listos para producción: LLaVA, Llama 3.2 Vision, Qwen-VL y Gemma 3.</strong> Cada uno tiene una fortaleza distinta y un perfil de VRAM propio.',
+          'LLaVA es el punto de partida más seguro — tiene la mayor compatibilidad con clientes y funciona con cualquier formato de imagen que acepte Ollama. Llama 3.2 Vision 11B es la mejor opción para OCR y razonamiento visual de múltiples pasos. Qwen-VL lidera en gráficos, diagramas y documentos estructurados. La variante de visión de Gemma 3 maneja más de 35 idiomas — útil cuando las imágenes contienen texto que no está en inglés, como señales, documentos en idiomas extranjeros o gráficos con etiquetas localizadas. LLaVA y Qwen-VL son más potentes con texto en inglés.',
+          'Todos los modelos de visión cargan un codificador de imagen junto a los pesos del LLM. Este codificador añade entre 1 y 3 GB de VRAM sobre lo que necesita el modelo base solo de texto — ten en cuenta este overhead al revisar tu presupuesto de VRAM.',
+        ],
+      },
+      body2: {
+        title: 'Requisitos de VRAM para visión',
+        content: [
+          '<strong>Cada modelo de visión necesita más VRAM que su equivalente solo de texto.</strong> Un modelo de visión 7B normalmente requiere entre 7 y 9 GB de VRAM, no los ~6 GB que presupuestarías para un modelo de texto 7B.',
+          'Para análisis de gráficos y documentos, Qwen-VL 7B y Gemma 3 ofrecen las opciones más eficientes en VRAM con gran capacidad de comprensión de diagramas. Para OCR y razonamiento complejo sobre imágenes, Llama 3.2 Vision 11B justifica el VRAM adicional. Para la guía completa sobre modelos locales multimodales y la elección según el caso de uso, consulta la <a href="/es/local-llms/multimodal-local-llms" class="text-primary hover:underline">guía de LLM locales multimodales</a>.',
+        ],
+        columns: ['Modelo', 'VRAM en Q4', 'Capacidad de imagen'],
+        rows: [
+          { 'Modelo': 'LLaVA 7B', 'VRAM en Q4': '~7 GB', 'Capacidad de imagen': 'Preguntas y respuestas generales sobre imágenes, amplia compatibilidad' },
+          { 'Modelo': 'Llama 3.2 Vision 11B', 'VRAM en Q4': '~10 GB', 'Capacidad de imagen': 'OCR, razonamiento visual de múltiples pasos' },
+          { 'Modelo': 'Qwen-VL 7B', 'VRAM en Q4': '~7 GB', 'Capacidad de imagen': 'Gráficos, diagramas, análisis de documentos' },
+          { 'Modelo': 'Gemma 3 (visión)', 'VRAM en Q4': '~6 GB', 'Capacidad de imagen': 'Comprensión multilingüe de imágenes' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre los modelos de visión de Ollama',
+        faqs: [
+          {
+            q: '¿Cómo envío una imagen a Ollama a través de la API?',
+            a: 'Haz un POST al endpoint <code>/api/chat</code> con la imagen como cadena base64 en el array <code>images</code>. Cuerpo JSON mínimo funcional: <code>{"model":"llava","messages":[{"role":"user","content":"What is in this image?","images":["&lt;base64&gt;"]}]}</code> Consulta <a href="/es/prompt-bites/can-you-run-qwen3-on-ollama" class="text-primary hover:underline">Qwen 3 en Ollama</a> para una opción multimodal con soporte potente de llamadas a herramientas.',
+          },
+          {
+            q: '¿Pueden los modelos de visión hacer OCR (leer texto de imágenes)?',
+            a: 'Sí, pero la calidad varía. Llama 3.2 Vision 11B es el más potente para OCR entre los modelos admitidos por Ollama. LLaVA 7B puede leer texto impreso con claridad, pero tiene dificultades con la escritura a mano o las fuentes pequeñas.',
+          },
+          {
+            q: '¿Qué modelo de visión de Ollama es el mejor para gráficos y diagramas?',
+            a: 'Qwen-VL 7B. Fue ajustado con datos visuales estructurados, incluyendo gráficos, tablas y diagramas, y supera a LLaVA y Gemma 3 en los benchmarks de comprensión de documentos.',
+          },
+          {
+            q: '¿Los modelos de visión admiten múltiples imágenes en un solo prompt?',
+            a: 'El soporte varía según el modelo. LLaVA y Qwen-VL procesan actualmente una imagen por turno en Ollama. Llama 3.2 Vision admite entradas de múltiples imágenes según la versión de Ollama y la implementación del cliente.',
           },
         ],
       },
