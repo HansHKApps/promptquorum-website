@@ -742,7 +742,7 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="power-local-llm" slug={slug} availableLangs={Object.keys(articleData)} />
+        <LangLinksBar cluster="power-local-llm" slug={slug} availableLangs={Object.keys(articleData)} initialLang={lang} />
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {article.leadAnswerBlock && (

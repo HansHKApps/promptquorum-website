@@ -291,7 +291,7 @@ export function PromptBitesHubClient({ lang }: Props) {
 
         {/* Cross-language links */}
         <div className="flex justify-center mb-12">
-          <LangLinksBar cluster="prompt-bites" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
+          <LangLinksBar cluster="prompt-bites" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es"]} initialLang={lang} />
         </div>
 
         {/* VRAM Reference Table */}

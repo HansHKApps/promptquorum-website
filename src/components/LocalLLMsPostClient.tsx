@@ -710,7 +710,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="local-llms" slug={slug} availableLangs={Object.keys(articleData)} />
+        <LangLinksBar cluster="local-llms" slug={slug} availableLangs={Object.keys(articleData)} initialLang={lang} />
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {article.leadAnswerBlock && (

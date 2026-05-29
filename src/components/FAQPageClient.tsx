@@ -88,7 +88,7 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="faq" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh', 'es']} />
+        <LangLinksBar cluster="faq" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es"]} initialLang={initialLang} />
 
         <FAQAccordion lang={lang} />
 

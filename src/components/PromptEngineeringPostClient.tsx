@@ -1180,7 +1180,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="prompt-engineering" slug={slug} availableLangs={Object.keys(articleData)} />
+        <LangLinksBar cluster="prompt-engineering" slug={slug} availableLangs={Object.keys(articleData)} initialLang={lang} />
 
         {/* Article intro paragraph */}
         {article.intro && (

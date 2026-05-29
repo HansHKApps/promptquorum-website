@@ -57,7 +57,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="privacy" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
+        <LangLinksBar cluster="privacy" slug="" availableLangs={["en", "de", "fr", "ja", "zh"]} initialLang={initialLang} />
 
         {/* GDPR notice banner */}
         <div className="bg-primary/5 border border-primary/20 rounded-lg px-5 py-4 mb-10 text-sm text-text-secondary leading-relaxed">

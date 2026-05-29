@@ -300,7 +300,7 @@ function FeaturesContent({ initialLang }: { initialLang?: import("@/hooks/useLan
 
         {/* Cross-language links */}
         <div className="flex justify-center mb-20">
-          <LangLinksBar cluster="features" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
+          <LangLinksBar cluster="features" slug="" availableLangs={["en", "de", "fr", "ja", "zh"]} initialLang={initialLang} />
         </div>
 
         {/* TLDR Section */}

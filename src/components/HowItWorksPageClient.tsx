@@ -698,7 +698,7 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
 
         {/* Cross-language links */}
         <div className="mt-8">
-          <LangLinksBar cluster="how-it-works" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh', 'es']} />
+          <LangLinksBar cluster="how-it-works" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es"]} initialLang={initialLang} />
         </div>
       </div>
 

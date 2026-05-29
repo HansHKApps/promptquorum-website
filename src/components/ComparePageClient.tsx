@@ -1016,7 +1016,7 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
           </h1>
 
           {/* Cross-language links */}
-          <LangLinksBar cluster="compare" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh', 'es']} />
+          <LangLinksBar cluster="compare" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es"]} initialLang={initialLang} />
 
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             {t.introPara}

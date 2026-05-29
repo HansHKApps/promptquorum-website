@@ -107,7 +107,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
 
           {/* Cross-language links */}
           {postId && blogContent[postId] && (
-            <LangLinksBar cluster="blog" slug={slug} availableLangs={Object.keys(blogContent[postId])} />
+            <LangLinksBar cluster="blog" slug={slug} availableLangs={Object.keys(blogContent[postId])} initialLang={lang} />
           )}
 
           {/* Hero Component or Image */}
