@@ -266,6 +266,264 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'annual',
+      theme: 'Enterprise',
+      title: 'RAG Corporativo con LLMs Locales: Q&A Documental para Organizaciones',
+      seoTitle: 'RAG Corporativo LLMs Locales',
+      intro: 'RAG (Retrieval-Augmented Generation) aplicado a documentos corporativos: políticas, contratos, wikis internos, artículos de investigación. El RAG local mantiene los documentos propietarios en las instalaciones, elimina los costos de API y proporciona trazas de auditoría completas. A partir de abril de 2026, el RAG corporativo es el caso de uso empresarial #1 para LLMs locales.',
+      metaDescription: 'RAG corporativo con LLMs locales: Q&A documental seguro, bases de conocimiento propietarias, audit trails, control de acceso multiusuario, empresa.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**RAG (Retrieval-Augmented Generation) aplicado a documentos corporativos: políticas, contratos, wikis internos, artículos de investigación. El RAG local mantiene los documentos propietarios en las instalaciones, elimina los costos de API y proporciona trazas de auditoría completas.**',
+      audience: 'Ingenieros que despliegan LLMs locales en entornos de producción o empresariales',
+      readTime: '12 min de lectura',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'base de conocimiento corporativa',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: 'Casos de uso del RAG corporativo', anchor: '#use-cases' },
+        { label: 'Ingesta de documentos a escala', anchor: '#ingestion' },
+        { label: 'Arquitectura RAG multiusuario', anchor: '#architecture' },
+        { label: 'Calidad de recuperación y ranking', anchor: '#retrieval-quality' },
+        { label: 'Gobernanza y auditoría', anchor: '#governance' },
+        { label: 'Errores comunes', anchor: '#common-mistakes' },
+        { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+        { label: 'Fuentes', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**RAG corporativo = base de conocimiento interna.** Sube todos los documentos corporativos y deja que los empleados hagan preguntas.',
+            '**Casos de uso:** Consulta de políticas, Q&A de contratos, descubrimiento de investigación, onboarding, formación en cumplimiento.',
+            '**Escala:** 10.000-100.000 documentos, 100-500 usuarios concurrentes, <2 seg de latencia.',
+            '**Ventaja local:** Los documentos propietarios nunca salen de tu red. Traza de auditoría completa de quién accedió a qué.',
+            'A partir de abril de 2026, el RAG corporativo ahorra a las empresas entre $500k y $5M anuales en productividad de empleados.',
+          ],
+        },
+        useCases: {
+          title: '¿Qué documentos puede gestionar el RAG corporativo?',
+          rows: [
+            { 'Tipo de documento': 'Manual del empleado', 'Uso de RAG': 'Consulta de políticas ("¿Cuántos días de vacaciones tengo?")', 'Usuarios típicos': 'Todos los empleados' },
+            { 'Tipo de documento': 'Contratos', 'Uso de RAG': 'Búsqueda de cláusulas ("¿Cuál es la cláusula de rescisión?")', 'Usuarios típicos': 'Legal, compras' },
+            { 'Tipo de documento': 'Documentación técnica', 'Uso de RAG': 'Referencia de API, ejemplos de código', 'Usuarios típicos': 'Ingenieros' },
+            { 'Tipo de documento': 'Artículos de investigación', 'Uso de RAG': 'Descubrimiento de conocimiento ("¿Papers sobre ML cuántico?")', 'Usuarios típicos': 'Equipos de I+D' },
+            { 'Tipo de documento': 'Documentos de cumplimiento', 'Uso de RAG': 'Consulta regulatoria ("¿Requisitos GDPR para retención de datos?")', 'Usuarios típicos': 'Cumplimiento, legal' },
+            { 'Tipo de documento': 'Documentación de clientes', 'Uso de RAG': 'Documentación de producto, FAQ', 'Usuarios típicos': 'Soporte, ventas' },
+          ],
+          columns: ['Tipo de documento', 'Uso de RAG', 'Usuarios típicos'],
+        },
+        ingestion: {
+          title: '¿Cómo ingestas documentos a escala?',
+          content: [
+            '**El pipeline de ingesta convierte los documentos en embeddings y los almacena en la base de datos vectorial.**',
+          ],
+          numberedItems: [
+            '**Extrae los documentos:** Desde servidores de archivos, SharePoint, Jira, Confluence, etc.',
+            '**Parsea:** Convierte PDFs, documentos Word, HTML a texto. Gestiona tablas e imágenes.',
+            '**Fragmenta (chunk):** Divide en fragmentos de 500-1.000 tokens con un 20% de solapamiento.',
+            '**Embebe:** Convierte los fragmentos en vectores usando un modelo de embedding local (nomic-embed-text).',
+            '**Indexa:** Almacena los vectores en Qdrant, Milvus o Weaviate con metadatos (fuente, fecha, autor).',
+            '**Actualiza:** Re-ingesta semanal o mensual para capturar las actualizaciones.',
+          ],
+        },
+        architecture: {
+          title: '¿Cómo diseñas un RAG corporativo multiusuario?',
+          content: [
+            'Stack típico:',
+            '- **Frontend:** Interfaz web o bot de Slack.',
+            '- **API:** Endpoint REST para consultas RAG.',
+            '- **LLM:** Llama 13B local (calidad) o 7B (velocidad).',
+            '- **Embeddings:** nomic-embed-text local (o cloud para mayor velocidad).',
+            '- **Base vectorial:** Qdrant (distribuido) para 10.000+ documentos.',
+            '- **Almacenamiento de documentos:** Servidor de archivos cifrado para PDFs y fuentes.',
+            '- **Control de acceso:** Integración LDAP/AD para permisos de usuario.',
+          ],
+        },
+        retrievalQuality: {
+          title: '¿Cómo garantizas la calidad de recuperación?',
+          content: [
+            '**Recuperación deficiente = respuestas deficientes.** La calidad depende de:',
+          ],
+          items: [
+            '**Estrategia de fragmentación:** Los fragmentos semánticos (por tema) superan a los de tamaño fijo.',
+            '**Modelo de embedding:** Usa embeddings específicos del dominio si están disponibles. Los embeddings genéricos pueden no capturar la terminología del dominio.',
+            '**Parámetros de recuperación:** k=5-10 (cuántos fragmentos recuperar). Demasiado bajo = contexto insuficiente. Demasiado alto = ruido.',
+            '**Reranking:** Usa un cross-encoder para reordenar los fragmentos por relevancia (pequeña mejora de calidad).',
+            '**Feedback de usuarios:** Botón de "Feedback" en las respuestas. Úsalo para ajustar los parámetros de recuperación.',
+          ],
+        },
+        governance: {
+          title: '¿Cómo implementas la gobernanza y el control de acceso?',
+          content: [
+            '**El RAG corporativo debe registrar el acceso para cumplir con la normativa:**',
+          ],
+          items: [
+            '**Registros de acceso:** Quién consultó qué documentos, cuándo y desde dónde.',
+            '**Retención:** Conserva los registros durante 3-7 años (requisito regulatorio).',
+            '**Control de acceso:** Restringe los documentos por rol (p.ej., solo legal ve los contratos).',
+            '**Auditoría:** Revisión trimestral de los registros de acceso en busca de actividad inusual.',
+            '**Clasificación de datos:** Marca los documentos como público, interno, confidencial o restringido.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Errores comunes en el RAG corporativo',
+          items: [
+            '**Ingestar sin limpiar.** Documentos antiguos, duplicados, archivos de prueba = ruido en la recuperación. Limpia antes de ingestar.',
+            '**No fragmentar inteligentemente.** Los fragmentos de tamaño fijo cortan temas a mitad de frase. Usa fragmentación semántica.',
+            '**Sin control de acceso.** Si todos los documentos son visibles para todos los empleados, la información confidencial se filtra.',
+            '**Ignorar la calidad de recuperación.** Prueba con empleados reales antes del despliegue masivo. El 50% de los problemas son de recuperación, no de generación.',
+            '**No re-ingestar actualizaciones.** La base de documentos queda obsoleta. Programa una re-ingesta semanal/mensual.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '¿Cuáles son las preguntas frecuentes sobre el RAG corporativo?',
+          faqs: [
+            {
+              q: '¿Cuántos documentos puede gestionar el RAG corporativo?',
+              a: 'Depende del tamaño medio del documento y la latencia. Rango típico: 10.000-100.000 documentos. La latencia de recuperación debe ser <1 segundo. Si es más lenta, optimiza la fragmentación o los embeddings. Prueba con tu conjunto de documentos real.',
+            },
+            {
+              q: '¿Qué modelo de embedding debemos usar?',
+              a: 'Opciones open-source: all-MiniLM-L6-v2 (rápido, bueno), BAAI/bge-base-en-v1.5 (mejor calidad). Propietario: OpenAI text-embedding-3-small. Para despliegue local, usa open-source. La diferencia de calidad importa: mejores embeddings = mejor recuperación.',
+            },
+            {
+              q: '¿Cómo actualizamos documentos sin perder el historial de chat?',
+              a: 'Almacena el historial de chat separado de los embeddings de documentos. Actualiza los embeddings según un calendario (semanal/mensual). Los chats antiguos siguen referenciando versiones antiguas de los documentos, lo cual está bien — solo documenta la fecha de versión.',
+            },
+            {
+              q: '¿Podemos usar RAG para documentos confidenciales?',
+              a: 'Sí — el RAG local es ideal. Los documentos permanecen en las instalaciones, las consultas no se registran externamente, y tú controlas el acceso mediante permisos basados en roles. Esto cumple con HIPAA y GDPR.',
+            },
+            {
+              q: '¿Qué es la fragmentación semántica frente a la de tamaño fijo?',
+              a: 'La de tamaño fijo (p.ej., 512 tokens) es más sencilla pero corta temas a mitad de frase. La fragmentación semántica usa límites de frase/párrafo, preservando el significado. La semántica es mejor para la calidad del RAG, pero más lenta de configurar.',
+            },
+            {
+              q: '¿Cómo medimos la calidad del RAG?',
+              a: 'Métricas: retrieval@k (documento correcto en los top k resultados), latencia (debe ser <1 seg), satisfacción del usuario (encuesta a empleados). Prueba con expertos del dominio — ellos saben cómo son las respuestas "correctas".',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[RAG local 2026](/es/local-llms/local-rag-2026) -- Guía completa de implementación de RAG.',
+            '[Escalado de LLMs locales en empresas](/es/local-llms/scaling-local-llms-enterprise) -- Infraestructura multiusuario.',
+            '[Por qué las empresas usan LLMs locales](/es/local-llms/why-enterprises-use-local-llms) -- Caso de negocio.',
+            '[Cumplimiento empresarial con LLMs locales](/es/local-llms/enterprise-compliance-local-llms) -- Cumplimiento en la gestión de documentos.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            'Documentación de LlamaIndex -- docs.llamaindex.ai',
+            'Base de datos vectorial Qdrant -- qdrant.tech',
+            'Evaluación de recuperación -- arxiv.org (busca "RAG evaluation metrics")',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'RAG Corporativo LLMs Locales',
+        'description': 'RAG corporativo con LLMs locales: Q&A documental seguro, bases de conocimiento propietarias, audit trails, control de acceso multiusuario, empresa.',
+        'url': 'https://www.promptquorum.com/es/local-llms/corporate-rag-local-llms',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Cuántos documentos puede gestionar el RAG corporativo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende del tamaño medio del documento y la latencia. Rango típico: 10.000-100.000 documentos. La latencia de recuperación debe ser <1 segundo. Si es más lenta, optimiza la fragmentación o los embeddings. Prueba con tu conjunto de documentos real.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué modelo de embedding debemos usar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Opciones open-source: all-MiniLM-L6-v2 (rápido, bueno), BAAI/bge-base-en-v1.5 (mejor calidad). Propietario: OpenAI text-embedding-3-small. Para despliegue local, usa open-source. La diferencia de calidad importa: mejores embeddings = mejor recuperación.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo actualizamos documentos sin perder el historial de chat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Almacena el historial de chat separado de los embeddings de documentos. Actualiza los embeddings según un calendario (semanal/mensual). Los chats antiguos siguen referenciando versiones antiguas de los documentos, lo cual está bien — solo documenta la fecha de versión.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Podemos usar RAG para documentos confidenciales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí — el RAG local es ideal. Los documentos permanecen en las instalaciones, las consultas no se registran externamente, y tú controlas el acceso mediante permisos basados en roles. Esto cumple con HIPAA y GDPR.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es la fragmentación semántica frente a la de tamaño fijo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La de tamaño fijo (p.ej., 512 tokens) es más sencilla pero corta temas a mitad de frase. La fragmentación semántica usa límites de frase/párrafo, preservando el significado. La semántica es mejor para la calidad del RAG, pero más lenta de configurar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo medimos la calidad del RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Métricas: retrieval@k (documento correcto en los top k resultados), latencia (debe ser <1 seg), satisfacción del usuario (encuesta a empleados). Prueba con expertos del dominio — ellos saben cómo son las respuestas "correctas".',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'RAG Corporativo LLMs Locales',
+        'inLanguage': 'es',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Ingesta de documentos a escala',
+            'description': 'Sube 10.000-100.000 documentos, parsea PDFs/Word/HTML, fragmenta inteligentemente y embebe con modelos locales.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Arquitectura RAG multiusuario',
+            'description': 'Da servicio a 100-500 usuarios concurrentes con balanceo de carga, optimización de calidad de recuperación y <2 seg de latencia.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Gobernanza y cumplimiento',
+            'description': 'Implementa control de acceso, audit trails, políticas de retención de datos y acceso a documentos basado en roles.',
+          },
+        ],
+      },
+    },
     de: {
       freshness_tier: 'annual',
       theme: 'Enterprise',

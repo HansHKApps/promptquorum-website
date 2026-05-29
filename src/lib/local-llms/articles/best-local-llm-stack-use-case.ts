@@ -287,6 +287,294 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'Mejor stack de LLM local por caso de uso 2026: Escritura, Código, RAG, Agentes',
+      seoTitle: 'Mejor stack LLM local 2026: Código, RAG, Escritura y Agentes',
+      intro: '**El mejor stack de LLM local depende de tu flujo de trabajo: escritura → Ollama + OpenWebUI + Llama 3.3, desarrollo → vLLM + Qwen2.5-Coder + extensión IDE, investigación → LangGraph + vLLM. En abril de 2026, ninguna herramienta lo hace todo bien.** Esta guía mapea 7 casos de uso comunes a su stack óptimo (backend + UI + integraciones) y niveles de hardware (8–24 GB VRAM).',
+      metaDescription: 'Stack LLM local por caso de uso abril 2026: Código → vLLM + Qwen2.5-Coder. Escritura → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. VRAM 8–24 GB. Guía completa.',
+      twitterDescription: 'Stacks LLM local por caso de uso: Código → vLLM + Qwen2.5-Coder. Escritura → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. Agentes → LangGraph + vLLM. Guía abril 2026.',
+      publishDate: '2026-04-05',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '**El mejor stack de LLM local depende de tu flujo de trabajo: escritores necesitan OpenWebUI + Llama 3, desarrolladores necesitan vLLM + Python SDK, investigadores necesitan LangGraph + scripts personalizados. En abril de 2026, ninguna herramienta es líder en todo.**',
+      audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLM locales',
+      readTime: '10 min de lectura',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'LLM Stack',
+      toc: [
+        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Tabla de decisión por hardware', anchor: '#hardware' },
+        { label: 'Escritura y creación de contenido', anchor: '#writing' },
+        { label: 'Desarrollo de software y revisión de código', anchor: '#coding' },
+        { label: 'RAG local (preguntas sobre documentos)', anchor: '#rag' },
+        { label: 'Agentes IA y workflows', anchor: '#agents' },
+        { label: 'Servidor API multiusuario', anchor: '#api' },
+        { label: 'Fine-tuning e investigación', anchor: '#finetuning' },
+        { label: 'Chat en tiempo real (streaming)', anchor: '#streaming' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'tldr',
+          isTldr: true,
+          items: [
+            '**Escritura/creación de contenido:** Ollama + OpenWebUI. Sin configuración, UI de chat excelente, ventana de contexto ajustable.',
+            '**Código/revisión de código:** vLLM + FastAPI + extensión VS Code. Procesamiento por lotes, inferencia paralela, streaming.',
+            '**RAG local:** LlamaIndex + Ollama/vLLM + Qdrant vector DB. Chunking de documentos, embedding y recuperación integrados.',
+            '**Agentes IA:** LangGraph + backend vLLM. Uso de herramientas, memoria, bucle de planificación. Curva de aprendizaje más pronunciada.',
+            '**API multiusuario:** vLLM detrás de un load balancer (nginx). Gestiona 10+ solicitudes concurrentes. La opción más escalable.',
+            '**Fine-tuning:** HuggingFace Transformers + LoRA + Ollama para inferencia. Entrenamiento separado del serving.',
+            '**Streaming en tiempo real:** Ollama (streaming nativo) o vLLM + endpoint de streaming de tokens. Mejor UX para chatbots.',
+          ],
+        },
+        'hardware': {
+          id: 'hardware',
+          title: 'Decisión rápida: stack por nivel de hardware (abril 2026)',
+          content: 'Elige el stack según tu GPU/VRAM. Cada combinación está probada con benchmarks reales. Los flujos de código y agentes se benefician más de modelos grandes que la escritura; el RAG depende más de la calidad del embedding que del tamaño del LLM.',
+          columns: ['Tu hardware', 'Escritura', 'Código', 'RAG', 'Agentes'],
+          rows: [
+            { 'Tu hardware': '4–8 GB VRAM (GTX 1660, RTX 3050)', 'Escritura': 'Ollama + Phi-4 Mini', 'Código': 'Ollama + Qwen2.5-Coder-1.5B', 'RAG': 'LlamaIndex + Phi-4 Mini', 'Agentes': 'No recomendado' },
+            { 'Tu hardware': '12 GB VRAM (RTX 3060, RTX 4070)', 'Escritura': 'Ollama + Llama 3.2 8B', 'Código': 'vLLM + Qwen2.5-Coder-7B', 'RAG': 'LlamaIndex + Llama 3.2 8B', 'Agentes': 'LangGraph + Ollama (más lento)' },
+            { 'Tu hardware': '16 GB VRAM (RTX 4070 Ti, RTX 4080)', 'Escritura': 'Ollama + Mistral Small 3.1', 'Código': 'vLLM + Qwen2.5-Coder-14B', 'RAG': 'LlamaIndex + Mistral 3.1', 'Agentes': 'LangGraph + vLLM' },
+            { 'Tu hardware': '24 GB VRAM (RTX 3090, RTX 4090)', 'Escritura': 'Ollama + Llama 3.3 70B Q4', 'Código': 'vLLM + Qwen2.5-Coder-32B', 'RAG': 'LlamaIndex + Llama 3.3 70B', 'Agentes': 'LangGraph + vLLM (el más rápido)' },
+          ],
+        },
+        'writing': {
+          id: 'writing',
+          content: [
+            '**Mejor stack: [Ollama](/es/local-llms/how-to-install-ollama) + [OpenWebUI](/es/local-llms/open-webui-vs-sillytavern) + editor Markdown**',
+            'Por qué este stack: OpenWebUI tiene la mejor UX de chat. No requiere código. La flexibilidad de la ventana de contexto (4K–32K) supera a LM Studio para escritura de texto largo. Más económico que las API cloud para escritores.',
+          ],
+          numberedItems: [
+            'Para 24 GB VRAM: `ollama pull llama3.3:70b` — calidad máxima, equiparable a GPT-4 (2023) en benchmarks de escritura.',
+            'Para 16 GB VRAM: `ollama pull mistral-small3.1` — contexto de 128K, mejor calidad por debajo de 24 GB.',
+            'Para 8 GB VRAM: `ollama pull llama3.2:8b` — buena calidad de escritura, rápido en hardware de consumo.',
+            'Instala OpenWebUI via Docker: `docker run -d -p 3000:8080 ghcr.io/open-webui/open-webui:latest`.',
+            'Configura la ventana de contexto (8K–32K tokens) en la configuración de OpenWebUI según la longitud del documento.',
+          ],
+        },
+        'coding': {
+          id: 'coding',
+          content: [
+            '**Mejor stack: [vLLM](/es/local-llms/vllm-performance-guide) + Qwen2.5-Coder + extensión IDE**',
+            'Por qué este stack: Qwen2.5-Coder obtiene un 82% en HumanEval (mejor modelo de código open-source, abril 2026). vLLM es 3–5× más rápido que Ollama para inferencia por lotes. La compatibilidad nativa con la API de OpenAI encaja con las herramientas IDE existentes. Streaming habilitado para sugerencias en tiempo real.',
+            '',
+            '**Revisión de código con IA para múltiples archivos**',
+            'Para revisión automatizada de varios archivos, usa el procesamiento por lotes de vLLM:',
+          ],
+          numberedItems: [
+            'Instala vLLM: `pip install vllm`.',
+            'Inicia el servidor vLLM con Qwen2.5-Coder-7B: `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-Coder-7B-Instruct --port 8000`.',
+            'Para 16+ GB VRAM, usa el modelo 14B: `--model Qwen/Qwen2.5-Coder-14B-Instruct`.',
+            'Conecta la extensión IDE (VS Code Continue.dev, Cursor, etc.) a `http://localhost:8000/v1`.',
+            'Habilita el procesamiento por lotes para revisión de código: procesa 10 archivos en paralelo con una sola llamada API (`vllm` admite batch=10 por defecto).',
+          ],
+          codeBlock: `# Review 10 files in parallel using vLLM batch processing
+from openai import OpenAI
+
+client = OpenAI(base_url="http://localhost:8000/v1", api_key="not-needed")
+
+code_files = [
+    ("utils.py", open("utils.py").read()),
+    ("models.py", open("models.py").read()),
+    # ... up to 10 files
+]
+
+# vLLM processes all 10 in parallel (1 batch request)
+reviews = []
+for filename, code in code_files:
+    prompt = f"Review this code for bugs, style, and performance:\n\n{code}"
+    response = client.chat.completions.create(
+        model="Qwen2.5-Coder-7B-Instruct",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.2,  # Deterministic for review tasks
+    )
+    reviews.append((filename, response.choices[0].message.content))
+
+for filename, review in reviews:
+    print(f"=== {filename} ===\n{review}\n")`,
+          codeLanguage: 'python',
+        },
+        'rag': {
+          id: 'rag',
+          content: [
+            '**Mejor stack: LlamaIndex + Ollama/vLLM + Qdrant + FastAPI UI**',
+            'Por qué este stack: [LlamaIndex](/es/local-llms/local-rag-2026) gestiona el chunking y la recuperación. Qdrant es rápido, local y privado. Ollama proporciona embeddings (gratuito) o usa vLLM para la inferencia LLM.',
+          ],
+          numberedItems: [
+            'Instala LlamaIndex (`pip install llama-index`).',
+            'Carga documentos (PDF, TXT, markdown) en LlamaIndex.',
+            'Divide los documentos en chunks (1024 tokens por defecto), genera embeddings con un modelo local u OpenAI (respaldo).',
+            'Almacena los embeddings en la vector DB Qdrant (se ejecuta localmente via Docker).',
+            'Consulta via LlamaIndex: recupera los top-K documentos similares y envía el contexto al LLM.',
+            'Envuelve en un endpoint FastAPI para UI web o integración con IDE.',
+          ],
+        },
+        'agents': {
+          id: 'agents',
+          content: [
+            '**Mejor stack: LangGraph + vLLM + definiciones de herramientas**',
+            'Por qué este stack: [LangGraph](/es/local-llms/local-llm-agents-with-langgraph) proporciona un flujo de agente estructurado. vLLM es lo suficientemente rápido para 10+ llamadas LLM secuenciales. El uso de herramientas es explícito y fácil de depurar.',
+          ],
+          numberedItems: [
+            'Instala LangGraph (`pip install langchain langgraph`).',
+            'Define las herramientas (búsqueda web, calculadora, E/S de archivos) como firmas de funciones.',
+            'Crea el grafo del agente con el LLM como nodo de decisión y las herramientas como nodos de acción.',
+            'Usa el backend vLLM para llamadas LLM de baja latencia en bucles ajustados.',
+            'Ejecuta el bucle del agente: LLM → selección de herramienta → ejecución → repetir hasta completar.',
+          ],
+        },
+        'api': {
+          id: 'api',
+          content: [
+            '**Mejor stack: vLLM + load balancer nginx + monitoreo**',
+            'Por qué este stack: vLLM admite serving distribuido. Nginx multiplexa las solicitudes. Escala a 10+ usuarios concurrentes en un equipo con dual GPU. Monitorea el throughput de tokens por usuario.',
+          ],
+          numberedItems: [
+            'Despliega vLLM con `--served-model-name model-name` en un puerto fijo.',
+            'Configura nginx para balancear la carga entre 2+ instancias de vLLM (una por GPU si tienes múltiples GPUs).',
+            'Usa el endpoint `/v1/chat/completions` compatible con OpenAI para compatibilidad con clientes.',
+            'Monitorea mediante el endpoint de scrape de Prometheus (vLLM exporta latencia de solicitudes y métricas de throughput).',
+            'Configura el rate limiting por usuario con el algoritmo token bucket.',
+          ],
+        },
+        'finetuning': {
+          id: 'finetuning',
+          content: [
+            '**Mejor stack: HuggingFace Transformers + LoRA + Ollama (inferencia)**',
+            'Por qué este stack: LoRA reduce el uso de VRAM para fine-tuning 10×. Ollama carga modelos ajustados fácilmente. Modular: entrena en una máquina, sirve en otra.',
+            '',
+            '**Nota (abril 2026):** Meta deprecó Llama 2 para fine-tuning comercial. Haz fine-tuning en Llama 3.2 (`meta-llama/Llama-3.2-1B` o más grande) o Qwen2.5 (`Qwen/Qwen2.5-7B`) para términos de licencia Apache 2.0 / open-source. Ambos admiten LoRA y se cargan fácilmente en Ollama.',
+          ],
+          numberedItems: [
+            'Realiza fine-tuning con la librería `peft` (LoRA) para reducir el uso de VRAM.',
+            'Entrenamiento: se necesita 4× la VRAM del modelo (estado del optimizador, gradientes). Ejecuta por separado de la inferencia.',
+            'Exporta el adaptador LoRA a HuggingFace Hub o al sistema de archivos local.',
+            'Carga el modelo ajustado en Ollama: `ollama create mymodel -f Modelfile`.',
+            'O usa HuggingFace TRL (Transformers Reinforcement Learning) para RLHF.',
+          ],
+        },
+        'streaming': {
+          id: 'streaming',
+          content: [
+            '**Mejor stack: Ollama (streaming nativo) o vLLM + Server-Sent Events (SSE)**',
+            'Por qué este stack: El streaming mejora el rendimiento percibido (el usuario ve cómo aparecen los tokens). Ollama es el más sencillo. vLLM tiene el mayor throughput de tokens.',
+          ],
+          numberedItems: [
+            'Ollama: llama a `/api/generate` con `stream: true`. Los tokens llegan como JSON delimitado por saltos de línea.',
+            'vLLM: usa `/v1/chat/completions` con `stream: true`. Devuelve un stream SSE compatible con OpenAI.',
+            'Frontend: usa la API EventSource (JavaScript) para consumir el stream y actualizar la UI por token.',
+            'Deshabilita el procesamiento por lotes (batch=1) para la menor latencia posible.',
+          ],
+        },
+        'faqSection': {
+          id: 'faq',
+          faqs: [
+            { q: '¿Debo usar Ollama o vLLM?', a: 'Ollama para UI de chat + simplicidad. vLLM para servidor API + procesamiento por lotes + rendimiento. No son mutuamente excluyentes; puedes ejecutar ambos.' },
+            { q: '¿Puedo usar Ollama como API de producción?', a: 'Sí, pero vLLM es más rápido (3–5× mayor throughput). Ollama es adecuado para <10 req/seg. vLLM para 10+ req/seg.' },
+            { q: '¿Cuál es el mejor LLM local para revisión de código?', a: 'vLLM + Qwen2.5-Coder-7B-Instruct. Qwen2.5-Coder obtiene un 82% en HumanEval (el mejor open-source). vLLM procesa 10 archivos en paralelo. ~30–50 tok/seg en RTX 3060 12GB.' },
+            { q: '¿Necesito una vector DB para RAG simple?', a: 'Para <100 documentos: embeddings en memoria (np.ndarray) son suficientes. Para >100: usa Qdrant o Weaviate para evitar el exceso de memoria.' },
+            { q: '¿LangGraph es exagerado para chatbots simples?', a: 'Sí. Usa Ollama o vLLM directamente. LangGraph es para flujos de trabajo de múltiples pasos (bucles de agentes, planificación).' },
+            { q: '¿Puedo combinar backends de Ollama y vLLM?', a: 'Sí. Por ejemplo, Ollama para la UI de chat, vLLM para la API por lotes. Pueden ejecutarse en la misma máquina en puertos diferentes.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Lectura relacionada',
+          items: [
+            '[Mejor asistente de código IA para LLM local](/es/local-llms/best-ai-coding-assistant-local-llm) — Elección de IDE para tu stack de código (Cursor, Continue.dev, Cody).',
+            '[Mejores LLM locales para código 2026](/es/local-llms/best-local-llms-for-coding) — Rankings HumanEval: Qwen2.5-Coder vs DeepSeek-Coder.',
+            '[Configuración RAG local 2026](/es/local-llms/local-rag-2026) — Guía completa de implementación con LlamaIndex + Qdrant + Ollama.',
+            '[Agentes LLM locales con LangGraph](/es/local-llms/local-llm-agents-with-langgraph) — Framework de workflows de agentes con ejemplos paso a paso.',
+            '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) — Comparativa de backends: CLI vs GUI, velocidad, procesamiento por lotes.',
+            '[Open WebUI vs SillyTavern](/es/local-llms/open-webui-vs-sillytavern) — Comparativa de UI de chat: profesional vs roleplay.',
+            '[¿Cuánta VRAM necesitan los LLM locales?](/es/local-llms/how-much-vram-local-llm) — Requisitos de hardware por tamaño de modelo y caso de uso.',
+          ],
+        },
+        'commonMistakes': {
+          title: 'Errores comunes al elegir un stack de LLM',
+          items: [
+            '**Usar Ollama para API de producción sin vLLM:** Ollama tiene un límite de <10 req/seg. Para producción con 10+ usuarios concurrentes, vLLM es obligatorio. Prueba el throughput bajo carga antes de desplegar.',
+            '**Ejecutar LangGraph sin backend vLLM:** Los agentes de LangGraph realizan 10+ llamadas LLM secuenciales. Ollama introduce cuellos de botella de latencia. Combina siempre LangGraph con vLLM para tiempos de respuesta por debajo del segundo.',
+            '**Mezclar Ollama + vLLM en la misma GPU sin gestión de memoria:** Ambas herramientas cargan pesos en la VRAM. Dos instancias de un modelo 70B consumen 32 GB. Usa GPUs separadas o cuantiza fuertemente (Q2) para que ambos quepan.',
+            '**Elegir la ventana de contexto incorrecta para escribir:** El contexto por defecto de 4K limita las sesiones de brainstorming. Para escritura de texto largo, configura una ventana de 16K–32K tokens en OpenWebUI. Compromiso: inferencia más lenta (2–3× más lento por token).',
+            '**Asumir que todos los backends son igual de rápidos:** vLLM y Ollama usan kernels diferentes. En el mismo hardware, vLLM es 2–3× más rápido para inferencia. La diferencia de velocidad está en el backend, no en el frontend (OpenWebUI, LM Studio son solo UIs).',
+          ],
+        },
+        'sources': {
+          title: 'Fuentes',
+          items: [
+            '[Ollama GitHub](https://github.com/ollama/ollama) — Documentación oficial, especificación de la API de streaming y biblioteca de modelos.',
+            '[vLLM GitHub](https://github.com/lm-sys/vllm) — Compatibilidad con la API de OpenAI, procesamiento por lotes y documentación de continuous batching.',
+            '[Informe técnico de Qwen2.5-Coder](https://qwenlm.github.io/blog/qwen2.5-coder/) — Alibaba Qwen. Puntuación HumanEval del 82%, especializado en tareas de código. Licencia Apache 2.0.',
+            '[Documentación de LlamaIndex](https://docs.llamaindex.ai) — Framework de indexación de documentos, chunking y recuperación RAG.',
+            '[Documentación de LangGraph](https://langchain-ai.github.io/langgraph/) — Framework de workflows de agentes, máquinas de estado, patrones de uso de herramientas.',
+            '[Documentación de Qdrant](https://qdrant.tech/documentation/) — Base de datos vectorial para almacenamiento local de embeddings, lista para Docker, Apache 2.0.',
+            '[Documentación de Continue.dev](https://docs.continue.dev/) — Extensión IDE para VS Code y JetBrains usando backends LLM locales.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Mejor stack de LLM local por caso de uso 2026: Código, Escritura, RAG, Agentes',
+        'description': 'Mejor stack LLM local por caso de uso abril 2026: Código → vLLM + Qwen2.5-Coder. Escritura → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. VRAM 8–24 GB. Guía completa de configuración.',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-stack-use-case',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'vLLM' },
+          { '@type': 'Thing', 'name': 'OpenWebUI' },
+          { '@type': 'Thing', 'name': 'Qwen2.5-Coder' },
+          { '@type': 'Thing', 'name': 'LlamaIndex' },
+          { '@type': 'Thing', 'name': 'LangGraph' },
+        ],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'vLLM' },
+          { '@type': 'SoftwareApplication', 'name': 'OpenWebUI' },
+          { '@type': 'SoftwareApplication', 'name': 'Qwen2.5-Coder' },
+          { '@type': 'SoftwareApplication', 'name': 'LlamaIndex' },
+          { '@type': 'SoftwareApplication', 'name': 'LangGraph' },
+          { '@type': 'SoftwareApplication', 'name': 'Qdrant' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          { '@type': 'Question', 'name': '¿Debo usar Ollama o vLLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama para UI de chat + simplicidad. vLLM para servidor API + procesamiento por lotes + rendimiento. No son mutuamente excluyentes; puedes ejecutar ambos.' } },
+          { '@type': 'Question', 'name': '¿Puedo usar Ollama como API de producción?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, pero vLLM es más rápido (3–5× mayor throughput). Ollama es adecuado para <10 req/seg. vLLM para 10+ req/seg.' } },
+          { '@type': 'Question', 'name': '¿Cuál es el mejor LLM local para revisión de código?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'vLLM + Qwen2.5-Coder-7B-Instruct. Qwen2.5-Coder obtiene un 82% en HumanEval (el mejor open-source). vLLM procesa 10 archivos en paralelo. ~30–50 tok/seg en RTX 3060 12GB.' } },
+          { '@type': 'Question', 'name': '¿Necesito una vector DB para RAG simple?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para <100 documentos: embeddings en memoria (np.ndarray) son suficientes. Para >100: usa Qdrant o Weaviate para evitar el exceso de memoria.' } },
+          { '@type': 'Question', 'name': '¿LangGraph es exagerado para chatbots simples?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Usa Ollama o vLLM directamente. LangGraph es para flujos de trabajo de múltiples pasos (bucles de agentes, planificación).' } },
+          { '@type': 'Question', 'name': '¿Puedo combinar backends de Ollama y vLLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Por ejemplo, Ollama para la UI de chat, vLLM para la API por lotes. Pueden ejecutarse en la misma máquina en puertos diferentes.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Guía de stack de LLM local por caso de uso',
+        'inLanguage': 'es',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Escritura y creación de contenido', 'description': 'Ollama + OpenWebUI + Llama 3.3 (24 GB) o Llama 3.2 8B (8 GB). Ideal para escritura de texto largo con ventanas de contexto ajustables de 8K–32K. Configuración sencilla, sin necesidad de código. Mejor UX de chat entre los frontends de LLM locales.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Desarrollo de software y revisión de código', 'description': 'vLLM + Qwen2.5-Coder-7B-Instruct (RTX 3060 12 GB) o -14B (RTX 4070+). El más rápido para inferencia por lotes (3–5× más que Ollama). Puntuación HumanEval del 82%. API compatible con OpenAI, streaming de tokens para autocompletado en tiempo real. Procesamiento por lotes para revisión de múltiples archivos.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'RAG local (preguntas sobre documentos)', 'description': 'LlamaIndex + Ollama/vLLM + base de datos vectorial Qdrant + FastAPI UI. Chunking de documentos, embedding y recuperación integrados. Qdrant es autoalojado, privado y rápido. La calidad del modelo de embedding importa más que el tamaño del LLM para la calidad del RAG.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Agentes IA y workflows', 'description': 'LangGraph + vLLM (no Ollama) + definiciones de herramientas. Bucles de agentes estructurados con uso explícito de herramientas y memoria. vLLM es necesario para latencia por debajo del segundo en bucles ajustados. Mayor curva de aprendizaje pero listo para producción.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Servidor API multiusuario', 'description': 'vLLM + load balancer nginx + monitoreo Prometheus. Inferencia distribuida entre múltiples GPUs o instancias. Escala a 10+ usuarios concurrentes. Rate limiting de tokens por usuario. Observabilidad de nivel producción.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Fine-tuning e investigación', 'description': 'HuggingFace Transformers + LoRA + Ollama/vLLM para inferencia. LoRA reduce el uso de VRAM 10×. Entrena por separado en hardware dedicado, sirve en la máquina de inferencia. Se recomienda Llama 3.2 y Qwen2.5 (Llama 2 deprecated desde abril 2026).' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Streaming en tiempo real', 'description': 'Ollama (endpoint de streaming nativo) o vLLM + Server-Sent Events (SSE). El streaming de tokens mejora el rendimiento percibido y la UX. Ollama tiene la configuración más sencilla, vLLM el mayor throughput. Ambos admiten la API de streaming compatible con OpenAI.' },
+        ],
+      },
+    },
     de: {
       theme: 'Tools & Schnittstellen',
       title: 'Bester lokaler LLM-Stack nach Anwendungsfall 2026: Schreiben, Coding, RAG, Agenten',

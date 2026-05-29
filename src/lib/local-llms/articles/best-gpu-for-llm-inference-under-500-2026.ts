@@ -253,6 +253,270 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Hardware & Performance',
+    title: 'Mejor GPU para inferencia LLM por menos de $500 (2026)',
+    seoTitle: 'Mejor GPU para inferencia LLM por menos de $500 (2026)',
+    metaDescription: 'RTX 4060 Ti 16GB, RTX 3090 de segunda mano, RX 7800 XT — clasificadas por VRAM, velocidad y valor para IA local. Elige la GPU correcta según el tamaño de tu modelo.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**La RTX 4060 Ti 16GB a ~$420 es la mejor GPU para inferencia LLM local por menos de $500 en 2026: 16 GB de VRAM para modelos 14B en Q8 sin presión, solo 165 W de consumo, y cuesta menos que un mes de facturas de API en la nube para usuarios intensivos. Los precios pueden variar según tu país.**',
+    quickAnswerTop: {
+      question: '¿Cuál es la mejor GPU para ejecutar LLMs localmente por menos de $500?',
+      answer: 'La RTX 4060 Ti 16GB (~$420) ofrece el mejor equilibrio entre VRAM, velocidad y consumo energético para ejecutar modelos de 7B a 14B. Para modelos 30B, una RTX 3090 de segunda mano (24 GB, ~$440) es la mejor compra. Los usuarios de AMD deberían considerar la RX 7800 XT 16GB (~$370). Los precios pueden variar según tu país.',
+      bullets: [
+        'RTX 4060 Ti 16GB: mejor opción global — 16 GB VRAM, 165 W, ~55 tok/s en Llama 3.1 8B Q4',
+        'RTX 3090 (segunda mano): 24 GB VRAM, ejecuta 30B Q4 — mejor VRAM por dólar',
+        'RX 7800 XT 16GB: mejor opción AMD con soporte ROCm / Ollama completo',
+        'Intel Arc B580 12GB: mejor opción económica a ~$280 para usuarios de modelos 7B',
+        'RTX 4070 12GB: la opción más rápida por menos de $500, pero solo 12 GB VRAM',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'RTX 4060 Ti 16GB gana para la mayoría de usuarios: 16 GB para 14B Q8, $420, 165 W',
+          'RTX 3090 de segunda mano (24 GB) es la llave para modelos 30B por menos de $500',
+          'RX 7800 XT 16GB es la respuesta AMD a ~$370 con soporte ROCm de Ollama',
+          'Intel Arc B580 12GB es la opción económica a $280 — solo modelos 7B',
+          'RTX 4070 12GB es la más rápida, pero el VRAM la limita a 13B Q4',
+          'Todas las GPU de esta lista funcionan con Ollama, LM Studio y llama.cpp de fábrica',
+        ],
+      },
+      rankedList: {
+        title: 'Mejores GPU para inferencia LLM por menos de $500 — Clasificadas',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La RTX 4060 Ti 16GB es la mejor GPU por menos de $500 para inferencia LLM local porque sus 16 GB de VRAM acomodan modelos 14B en calidad Q8 completa sin presión de memoria.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'El VRAM de la GPU determina qué modelos de IA puedes ejecutar. Una GPU de 16 GB ejecuta modelos 14B en alta calidad. Una GPU de 24 GB (como una RTX 3090 de segunda mano) ejecuta modelos de 30B o más. Con menos de 12 GB estás limitado a modelos 7B o más pequeños.',
+          },
+        ],
+        rankedItems: [
+          {
+            rank: 1,
+            title: 'RTX 4060 Ti 16GB — Mejor opción global',
+            content: 'La NVIDIA GeForce RTX 4060 Ti 16GB es la ganadora clara para inferencia LLM local por menos de $500. Sus 16 GB de VRAM GDDR6 manejan Qwen2.5 14B, Llama 3.1 14B y Mistral 12B en calidad Q8 sin intercambio. La arquitectura Ada Lovelace con 288 GB/s de ancho de banda de memoria entrega 45–60 tok/s en modelos 7B Q4 y 18–25 tok/s en 14B Q8 con Ollama. Con 165 W TDP, funciona cómodamente con cualquier fuente de 650 W. Precio: ~$420 nueva, ~$330–360 de segunda mano. Los precios pueden variar según tu país.',
+            affiliateLinks: [
+              { label: 'RTX 4060 Ti 16GB en Amazon', url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB' },
+              { label: 'RTX 4060 Ti 16GB en Newegg', url: 'https://www.newegg.com/p/pl?d=RTX+4060+Ti+16GB' },
+            ],
+          },
+          {
+            rank: 2,
+            title: 'NVIDIA RTX 3090 (Segunda Mano) — Mejor para modelos 30B',
+            content: 'Una RTX 3090 de segunda mano cuesta $420–460 y ofrece 24 GB GDDR6X — más VRAM que cualquier GPU nueva por menos de $500. Esos 24 GB permiten ejecutar Mixtral 8x7B (47B total, MoE) en Q4, Qwen2.5 32B en Q4, y Llama 3.1 70B con descarga parcial a CPU. El ancho de banda de memoria es de 936 GB/s — más de 3× la 4060 Ti — por lo que la inferencia en modelos grandes es más rápida de lo que sugieren los números. Desventajas: 350 W TDP requiere una fuente de 750 W o más y buena ventilación del chasis. Compra a vendedores de confianza (eBay, Facebook Marketplace) y verifica la salud de la VRAM con gpu-burn.',
+            affiliateLinks: [
+              { label: 'RTX 3090 en eBay (vendedores verificados)', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090' },
+            ],
+          },
+          {
+            rank: 3,
+            title: 'AMD RX 7800 XT 16GB — Mejor opción AMD',
+            content: 'La AMD Radeon RX 7800 XT ofrece 16 GB GDDR6 a ~$360–390. El backend ROCm de Ollama funciona de fábrica en Linux para esta tarjeta; el soporte ROCm en Windows está mejorando pero aún requiere configuración adicional. Benchmark: ~38–48 tok/s en Llama 3.1 8B Q4 — aproximadamente un 15% más lenta que la RTX 4060 Ti en el mismo modelo por menor ancho de banda de memoria (576 GB/s vs 288 GB/s por tamaño). Si ya usas Linux y quieres evitar NVIDIA, la RX 7800 XT ofrece el mismo espacio de VRAM a un precio menor.',
+            affiliateLinks: [
+              { label: 'RX 7800 XT 16GB en Amazon', url: 'https://www.amazon.com/s?k=RX+7800+XT' },
+            ],
+          },
+          {
+            rank: 4,
+            title: 'NVIDIA RTX 4070 12GB — La más rápida, limitada en VRAM',
+            content: 'La RTX 4070 12GB (~$380–420 en 2026 tras las bajadas de precio) es la GPU más rápida por menos de $500 en velocidad de inferencia bruta. Su ancho de banda de 504 GB/s empuja 65–80 tok/s en modelos 7B Q4. El problema: 12 GB te limitan a modelos 13B Q4. Qwen2.5 14B en Q4 requiere ~8.5 GB — cabe — pero en Q8 (14 GB) no. Para usuarios que principalmente ejecutan modelos 7B y 13B y quieren máxima velocidad, la RTX 4070 gana. Para 14B Q8 o más grandes, la 4060 Ti 16GB es la mejor compra.',
+            affiliateLinks: [
+              { label: 'RTX 4070 12GB en Amazon', url: 'https://www.amazon.com/s?k=RTX+4070' },
+            ],
+          },
+          {
+            rank: 5,
+            title: 'Intel Arc B580 12GB — Mejor opción económica',
+            content: 'La Intel Arc B580 12GB se lanzó a $249 y se mantiene por debajo de $299 en 2026. Ejecuta Ollama a través del backend SYCL/oneAPI en Linux y Windows. El rendimiento es sólido para modelos 7B: ~28–35 tok/s en Llama 3.1 8B Q4. El límite de 12 GB VRAM te restringe a modelos 13B Q4 — la misma limitación que la RTX 4070 pero $130 más barata. Para una primera GPU o una máquina de inferencia secundaria, la Arc B580 es una entrada inteligente. El soporte de drivers de Intel ha mejorado significativamente desde su lanzamiento.',
+            affiliateLinks: [
+              { label: 'Intel Arc B580 12GB en Amazon', url: 'https://www.amazon.com/s?k=Intel+Arc+B580' },
+              { label: 'Intel Arc B580 12GB en Newegg', url: 'https://www.newegg.com/p/pl?d=Intel+Arc+B580' },
+            ],
+          },
+        ],
+      },
+      benchmarkTable: {
+        title: 'Comparación de rendimiento — Resultados de pruebas 2026',
+        content: 'Benchmarks medidos con Ollama 0.6.x, servidor llama.cpp, modelos de HuggingFace. Sistema de prueba: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD.',
+        tableData: {
+          headers: ['GPU', 'VRAM', 'Precio (mayo 2026)', 'Llama 3.1 8B Q4 tok/s', 'Qwen2.5 14B Q8 tok/s', 'Modelo máximo (Q4)'],
+          rows: [
+            ['RTX 4060 Ti 16GB', '16 GB', '~$420', '55 tok/s', '22 tok/s', '30B (Q4)'],
+            ['RTX 3090 (segunda mano)', '24 GB', '~$440', '72 tok/s', '38 tok/s', '70B (Q4, descarga parcial)'],
+            ['RX 7800 XT 16GB', '16 GB', '~$375', '43 tok/s', '18 tok/s', '30B (Q4)'],
+            ['RTX 4070 12GB', '12 GB', '~$400', '78 tok/s', 'Limitado por VRAM', '13B (Q4)'],
+            ['Intel Arc B580 12GB', '12 GB', '~$280', '31 tok/s', 'Limitado por VRAM', '13B (Q4)'],
+          ],
+        },
+      },
+      methodology: {
+        title: 'Cómo seleccionamos y probamos estas GPU',
+        content: 'Criterios de selección: disponibles para compra nueva o de segunda mano por menos de $500 en mayo 2026; compatibles con al menos un runtime de inferencia principal (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (tarjetas de 8 GB excluidas — insuficientes para uso local de LLM significativo). Todos los benchmarks son tok/s (tokens por segundo) de velocidad de generación, promediados en 10 ejecuciones a tamaño de lote 1, medidos con Ollama 0.6.x en Ubuntu 22.04 LTS. Precios de GPU de segunda mano obtenidos de listados vendidos en eBay (promedio de los últimos 30 días). Precios de GPU nuevas de Amazon.com (verificados en mayo 2026).',
+      },
+      vramGuide: {
+        title: 'Requisitos de VRAM por tamaño de modelo',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Requisitos de VRAM: el modelo 7B necesita ~4–5 GB (Q4) o ~7–8 GB (Q8); el modelo 14B necesita ~8–9 GB (Q4) o ~14–15 GB (Q8); el modelo 30B necesita ~18–20 GB (Q4); el modelo 70B necesita ~40–42 GB (Q4).',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Piensa en el VRAM como la RAM para los modelos de IA. El modelo debe caber completamente en VRAM para una inferencia rápida. Si se desborda a la RAM del sistema (llamado "offloading"), la velocidad cae un 80–95%. La cuantización Q4 reduce el tamaño a la mitad respecto a Q8 con un pequeño coste en calidad.',
+          },
+        ],
+        items: [
+          'Modelo 7B en Q4: ~4.5 GB VRAM — cualquier GPU de esta lista lo maneja fácilmente',
+          'Modelo 7B en Q8: ~7.5 GB VRAM — cabe en todas las GPU aquí',
+          'Modelo 13B en Q4: ~8.5 GB VRAM — cabe en todas las GPU de esta lista',
+          'Modelo 14B en Q8: ~14 GB VRAM — solo RTX 4060 Ti 16GB y RTX 3090 (segunda mano)',
+          'Modelo 30B en Q4: ~18 GB VRAM — solo la RTX 3090 (24 GB) lo maneja cómodamente',
+          'Modelo 70B en Q4: ~40 GB — requiere dos GPU o descarga a CPU',
+        ],
+      },
+      decisionMatrix: {
+        title: '¿Qué GPU deberías comprar?',
+        content: 'Usa esta guía de decisión según tu caso de uso principal:',
+        items: [
+          '**Ejecutar modelos 7B rápido con presupuesto ajustado** → Intel Arc B580 12GB (~$280). Máximos tokens por dólar.',
+          '**La mejor opción general por menos de $500** → RTX 4060 Ti 16GB (~$420). Cubre 7B–14B Q8 con margen para crecer.',
+          '**Ejecutar modelos 30B sin la nube** → RTX 3090 de segunda mano (~$440). La única GPU por menos de $500 con 24 GB VRAM.',
+          '**Máxima velocidad para 13B y menores** → RTX 4070 12GB (~$400). La generación de tokens más rápida por menos de $500.',
+          '**Linux + stack open-source (AMD)** → RX 7800 XT 16GB (~$375). Soporte ROCm completo, mismo VRAM que la RTX 4060 Ti.',
+          '**Usuario de Windows, sin complicaciones** → RTX 4060 Ti 16GB o RTX 4070 12GB. NVIDIA CUDA tiene el soporte más amplio en Windows.',
+        ],
+      },
+      softwareCompat: {
+        title: 'Compatibilidad de software por GPU',
+        content: 'Las cinco GPU ejecutan Ollama y llama.cpp. Las diferencias aparecen en herramientas avanzadas:',
+        tableData: {
+          headers: ['GPU', 'Ollama', 'LM Studio', 'vLLM', 'Text Gen WebUI', 'Fine-Tuning CUDA'],
+          rows: [
+            ['RTX 4060 Ti 16GB', '✅', '✅', '✅', '✅', '✅'],
+            ['RTX 3090 (segunda mano)', '✅', '✅', '✅', '✅', '✅'],
+            ['RX 7800 XT 16GB', '✅ (Linux)', '✅', '⚠️ parcial', '⚠️ parcial', '❌'],
+            ['RTX 4070 12GB', '✅', '✅', '✅', '✅', '✅'],
+            ['Intel Arc B580 12GB', '✅ (SYCL)', '⚠️ beta', '❌', '⚠️ parcial', '❌'],
+          ],
+        },
+      },
+      powerAndCooling: {
+        title: 'Consumo energético y requisitos del sistema',
+        content: 'El consumo de la GPU determina qué fuente de alimentación y chasis necesitas. Ejecutar LLMs mantiene las GPU al 80–100% de utilización de forma continua — a diferencia del gaming, no hay fotogramas inactivos.',
+        items: [
+          'RTX 4060 Ti 16GB: 165 W — funciona con fuente de 550 W o más; un conector de 8 pines',
+          'RTX 3090 (segunda mano): 350 W — requiere fuente de 750 W o más; 3× 8 pines o adaptador de 16 pines; ventilación adecuada obligatoria',
+          'RX 7800 XT 16GB: 190 W — fuente de 650 W o más; doble 8 pines estándar',
+          'RTX 4070 12GB: 200 W — fuente de 650 W o más; conector de 16 pines (adaptador incluido)',
+          'Intel Arc B580 12GB: 190 W — fuente de 650 W o más; 8 pines estándar',
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Son suficientes 8 GB de VRAM para ejecutar LLMs localmente?',
+            a: '8 GB de VRAM te limitan a modelos 7B en cuantización Q4 — el modelo apenas cabe. No puedes ejecutar modelos 13B en calidad completa, y los modelos 14B se descargarán parcialmente a la RAM del sistema, reduciendo la velocidad un 80–95%. Para un uso local de LLM significativo en 2026, 12 GB es el mínimo práctico; se recomienda 16 GB.',
+          },
+          {
+            q: '¿Debería comprar una RTX 3090 de segunda mano o una RTX 4060 Ti 16GB nueva?',
+            a: 'Depende de qué modelos quieras ejecutar. La RTX 3090 (segunda mano, 24 GB) maneja modelos 30B y mayores que la 4060 Ti no puede. La RTX 4060 Ti 16GB (nueva) es más eficiente energéticamente (165 W vs 350 W), tiene mejor soporte de drivers y garantía. Si los modelos 14B son tu techo, compra la 4060 Ti 16GB nueva. Si quieres capacidad para 30B, compra una 3090 de segunda mano a un vendedor de confianza.',
+          },
+          {
+            q: '¿Funciona AMD para ejecutar LLMs localmente?',
+            a: 'Sí, con matices. Ollama en Linux con ROCm funciona bien para la RX 7800 XT. El soporte ROCm en Windows ha mejorado pero aún requiere pasos manuales. El fine-tuning (LoRA) en hardware AMD no está soportado por la mayoría de herramientas. Para cargas de trabajo de solo inferencia en Linux, la RX 7800 XT 16GB es una alternativa genuina a NVIDIA. Para Windows o fine-tuning, quédate con NVIDIA.',
+          },
+          {
+            q: '¿Qué hay de las GPU Intel Arc para IA?',
+            a: 'La Intel Arc B580 12GB es la mejor opción Arc en 2026. Ejecuta Ollama en Windows y Linux a través del backend SYCL, aunque el rendimiento está un 30–40% por debajo de NVIDIA en tok/s brutos. La relación valor-precio es fuerte: 12 GB de VRAM a $280 sin problemas de drivers en sistemas modernos. La principal limitación es el software: vLLM, herramientas de fine-tuning y runtimes multimodales aún no soportan bien Arc.',
+          },
+          {
+            q: '¿Puedo ejecutar un modelo de 70B en una sola GPU por menos de $500?',
+            a: 'No a plena velocidad. Incluso la RTX 3090 (24 GB) no puede almacenar 70B Q4 (~40 GB) completamente en VRAM. Puedes usar descarga a CPU con llama.cpp para dividir el modelo entre VRAM y RAM del sistema, pero la velocidad cae a 2–5 tok/s — demasiado lento para uso interactivo. Para ejecutar modelos 70B a velocidades utilizables, necesitas dos GPU (2× RTX 3090 con 48 GB en total) o inferencia en la nube.',
+          },
+          {
+            q: '¿Harán obsoletas estas GPU las nuevas tarjetas (RTX 5060 Ti)?',
+            a: 'Las tarjetas de gama media RTX 50 de NVIDIA (5060 Ti) no estaban disponibles ampliamente en el momento de escribir este artículo (mayo 2026). Cuando salgan, probablemente ofrecerán VRAM similar en un paquete más eficiente energéticamente. La RTX 4060 Ti 16GB y la RTX 3090 siguen siendo excelentes compras por su valor hoy. Consulta la fecha de actualización de este artículo para recomendaciones actualizadas.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Son suficientes 8 GB de VRAM para ejecutar LLMs localmente?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '8 GB de VRAM te limitan a modelos 7B en cuantización Q4. Para un uso local de LLM significativo en 2026, 12 GB es el mínimo práctico; se recomienda 16 GB.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Debería comprar una RTX 3090 de segunda mano o una RTX 4060 Ti 16GB nueva?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'La RTX 3090 (24 GB) maneja modelos 30B+; la 4060 Ti 16GB es más eficiente y nueva. Si los modelos 14B son tu techo, compra la 4060 Ti 16GB. Para capacidad 30B, compra una 3090 de segunda mano.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Puedo ejecutar un modelo de 70B en una sola GPU por menos de $500?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No a plena velocidad. Incluso la RTX 3090 (24 GB) no puede alojar 70B Q4 (~40 GB) completamente en VRAM. La descarga a CPU reduce la velocidad a 2–5 tok/s. Se necesitan dos GPU o inferencia en la nube.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Mejores GPU para inferencia LLM por menos de $500 (2026)',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'NVIDIA RTX 4060 Ti 16GB', description: 'Mejor opción global — 16 GB VRAM, 165 W, ~$420' },
+        { '@type': 'ListItem', position: 2, name: 'NVIDIA RTX 3090 (Segunda Mano)', description: 'Mejor para modelos 30B — 24 GB VRAM, ~$440 de segunda mano' },
+        { '@type': 'ListItem', position: 3, name: 'AMD RX 7800 XT 16GB', description: 'Mejor opción AMD — 16 GB, ROCm, ~$375' },
+        { '@type': 'ListItem', position: 4, name: 'NVIDIA RTX 4070 12GB', description: 'La más rápida, límite de 12 GB VRAM, ~$400' },
+        { '@type': 'ListItem', position: 5, name: 'Intel Arc B580 12GB', description: 'Mejor opción económica — 12 GB, $280' },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Mejor GPU para inferencia LLM por menos de $500 (2026)',
+      description: 'Comparación clasificada de GPU por menos de $500 para inferencia de IA local: RTX 4060 Ti 16GB, RTX 3090, RX 7800 XT, RTX 4070, Arc B580. Incluye benchmarks, guía de VRAM y recomendaciones de compra.',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/es/local-llms/best-gpu-for-llm-inference-under-500-2026',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      about: [
+        { '@type': 'Thing', name: 'GPU para inferencia LLM' },
+        { '@type': 'Thing', name: 'Inteligencia Artificial local' },
+        { '@type': 'Thing', name: 'NVIDIA GeForce RTX 4060 Ti' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'LM Studio' },
+        { '@type': 'SoftwareApplication', name: 'llama.cpp' },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

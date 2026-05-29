@@ -326,6 +326,324 @@ schema: {
         ]
       },
     },
+    es: {
+      freshness_tier: 'annual',
+      theme: 'GPU Buying Guides',
+      title: 'RTX 3060 12GB: Ejecuta Qwen 3 8B, Llama 4 Scout, Mistral 7B (Guía 2026)',
+      seoTitle: 'RTX 3060 12GB: Mejor GPU económica para LLMs locales 2026',
+      intro: '**RTX 3060 12GB ejecuta Llama 4 Scout 17B (MoE) a 12–16 tok/seg, Qwen3 8B a 16–20 tok/seg, Mistral 7B a 18 tok/seg y DeepSeek-R1 7B a 10–12 tok/seg — todo a cuantización Q4.** La variante de 6GB está limitada solo a modelos de 3B. A mayo de 2026, la RTX 3060 12GB ($200–250 usada) sigue siendo la mejor GPU económica para LLMs locales: 12GB de VRAM cabe con todos los modelos 7B y la mayoría de los 13B en Q4, más Llama 4 Scout (MoE), que entrega calidad muy superior a los modelos densos 7B-8B con un uso de VRAM similar. Esta guía cubre exactamente qué modelos funcionan en cada nivel de VRAM, con velocidades reales y configuraciones prácticas. Los precios pueden variar según tu país.',
+      metaDescription: 'RTX 3060 12GB: Qwen 3 8B (16-20 tok/seg), Llama 4 Scout MoE (12-16 tok/seg), Mistral 7B, DeepSeek-R1. Tabla completa de modelos con benchmarks de VRAM y velocidad.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**RTX 3060 12GB ejecuta Llama 4 Scout 17B (MoE) a 12–16 tok/seg, Qwen3 8B a 16–20 tok/seg, Mistral 7B a 18 tok/seg y DeepSeek-R1 7B a 10–12 tok/seg. La variante de 6GB solo maneja modelos de 3B. Mejor GPU económica para LLMs locales en 2026 a $200–250 usada. Los precios pueden variar según tu país.**',
+      nextStep: {
+        text: '¿Ya tienes tu GPU? Ahora elige el software adecuado para ejecutar modelos en ella.',
+        label: 'Mejores frontends de LLM local 2026 →',
+        href: '/local-llms/best-local-llm-frontends',
+      },
+      audience: 'Principiantes ejecutando su primer LLM local en hardware de consumo',
+      readTime: '7 min de lectura',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Budget GPU',
+      toc: [
+        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: '¿Qué puedes ejecutar en RTX 3060 12GB?', anchor: '#rtx-3060-12gb' },
+        { label: '¿Qué puedes ejecutar en RTX 3060 6GB?', anchor: '#rtx-3060-6gb' },
+        { label: 'RTX 3060 vs otras GPUs económicas', anchor: '#which-budget-gpus' },
+        { label: '¿Cuánta VRAM necesitas para modelos 7B?', anchor: '#vram-7b' },
+        { label: 'Mejores modelos por caso de uso en RTX 3060', anchor: '#best-by-use-case' },
+        { label: 'Usada vs. nueva: ¿dónde comprar?', anchor: '#used-vs-new' },
+        { label: 'Errores comunes con GPUs económicas', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**RTX 3060 12GB** ($200–250 usada): Ejecuta todos los modelos 7B y la mayoría de 13B en Q4. Más Llama 4 Scout (MoE) a ~10 GB — mejor calidad general.',
+            '**RTX 3060 6GB**: Limitada a modelos 3B (Phi-4 Mini, Llama 3.2 3B). Insuficiente para 7B.',
+            '**Mejor modelo general en 12GB:** Llama 4 Scout 17B (MoE) a ~10 GB VRAM, 12–16 tok/seg. Entrega calidad comparable a modelos densos de 30B.',
+            '**Mejor modelo de código en 12GB:** Qwen3 8B a 16–20 tok/seg. Mejora sobre Qwen3.',
+            '**Mejor modelo de razonamiento en 12GB:** DeepSeek-R1 7B a 10–12 tok/seg. Chain-of-thought.',
+            '**Descártalo si:** quieres modelos de 70B o 13B en Q8 — necesitas 24GB (RTX 4090).',
+          ],
+        },
+        'rtx-3060-12gb': {
+          id: 'rtx-3060-12gb',
+          title: '¿Qué puedes ejecutar en RTX 3060 12GB?',
+          content: [
+            '**La RTX 3060 12GB es la mejor GPU económica para LLMs locales en 2026.** 12GB de VRAM cabe con todos los modelos 7B en cuantización Q4/Q5, y la mayoría de los 13B en Q4. Para orientación detallada sobre los requisitos de VRAM según el tamaño del modelo, consulta la [guía de requisitos de VRAM →](/es/local-llms/how-much-vram-local-llm). Aquí están los modelos exactos y las velocidades que puedes esperar:',
+          ],
+          columns: ['Modelo', 'Tamaño', 'Cuantización', 'VRAM usada', 'Velocidad', 'Ideal para'],
+          rows: [
+            { 'Modelo': 'Llama 4 Scout 17B', 'Tamaño': '17B activo (109B MoE)', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~10 GB', 'Velocidad': '12–16 tok/seg', 'Ideal para': 'Mejor calidad general (MoE)' },
+            { 'Modelo': 'Llama 3.2 7B', 'Tamaño': '7B', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~7 GB', 'Velocidad': '15–20 tok/seg', 'Ideal para': 'Chat general, Q&A (legacy)' },
+            { 'Modelo': 'Mistral 7B v0.3', 'Tamaño': '7B', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~7 GB', 'Velocidad': '18 tok/seg', 'Ideal para': 'Seguimiento de instrucciones' },
+            { 'Modelo': 'Qwen3 8B', 'Tamaño': '8B', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~7 GB', 'Velocidad': '16–20 tok/seg', 'Ideal para': 'Código (mejorado sobre Qwen2.5)' },
+            { 'Modelo': 'DeepSeek-R1 7B', 'Tamaño': '7B', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~7 GB', 'Velocidad': '10–12 tok/seg', 'Ideal para': 'Razonamiento, matemáticas' },
+            { 'Modelo': 'Gemma 4 9B', 'Tamaño': '9B', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~8 GB', 'Velocidad': '12–15 tok/seg', 'Ideal para': 'Visión, multimodal' },
+            { 'Modelo': 'Llama 3.2 13B', 'Tamaño': '13B', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~11 GB', 'Velocidad': '8–10 tok/seg', 'Ideal para': 'Chat de mayor calidad (solo Q4, ajustado)' },
+          ],
+          note: 'Llama 4 Scout es la mayor mejora para los propietarios de RTX 3060 12GB en 2026. Su arquitectura MoE significa que solo 17B parámetros están activos por token (de 109B en total), entregando calidad muy superior a los modelos densos 7B-8B con un uso de VRAM similar. `ollama pull llama4:scout`. Todas las velocidades medidas con Ollama en RTX 3060 12GB, 16GB de RAM del sistema, Ryzen 7 7700X. Cuantización Q4_K_M. Las velocidades varían ±15% según la longitud del prompt y la ventana de contexto.',
+        },
+        'rtx-3060-6gb': {
+          id: 'rtx-3060-6gb',
+          title: '¿Qué puedes ejecutar en RTX 3060 6GB?',
+          content: [
+            '**La variante de 6GB está muy limitada.** Solo los modelos de 3B caben cómodamente. Los modelos 7B en Q4 necesitan ~7GB — más de lo disponible. El offloading a CPU funciona pero reduce la velocidad un 50–70%.',
+          ],
+          items: [
+            '**Phi-4 Mini 3.8B (Q4):** ~3GB VRAM, 20–25 tok/seg. Mejor razonamiento en este tamaño. Potente para matemáticas y lógica.',
+            '**Llama 3.2 3B (Q4):** ~2.5GB VRAM, 25–35 tok/seg. Opción más rápida. Buena para chat simple y preguntas y respuestas.',
+            '**Gemma 2 2B (Q4):** ~1.7GB VRAM, 35–45 tok/seg. Modelo más ligero. Buena para probar configuraciones.',
+            '**7B con offloading:** Posible pero lento. Llama 7B con offload a CPU = ~5–8 tok/seg. Utilizable solo para trabajo por lotes no interactivo.',
+            '**Recomendación:** Si tienes una tarjeta de 6GB, actualiza a 12GB usada ($200–250) antes de invertir tiempo en soluciones alternativas. La mejora en velocidad y calidad del modelo vale la pena.',
+          ],
+        },
+        'which-budget-gpus': {
+          id: 'which-budget-gpus',
+          title: 'RTX 3060 vs otras GPUs económicas',
+          columns: ['GPU', 'VRAM', 'Precio (usada)', 'Velocidad 7B', 'Modelo máx.', 'Veredicto'],
+          rows: [
+            { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', 'Precio (usada)': '$200–250', 'Velocidad 7B': '15–20 tok/seg', 'Modelo máx.': '13B (Q4)', 'Veredicto': 'Mejor relación calidad-precio' },
+            { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', 'Precio (usada)': '$250–300', 'Velocidad 7B': '20–25 tok/seg', 'Modelo máx.': '7B (Q5 máx)', 'Veredicto': 'Más rápida pero menos VRAM' },
+            { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'Precio (usada)': '$180–230', 'Velocidad 7B': '12–15 tok/seg', 'Modelo máx.': '13B (Q5)', 'Veredicto': 'Mejor VRAM por dólar' },
+            { 'GPU': 'RTX 4070 Super', 'VRAM': '12 GB', 'Precio (usada)': '$400–450', 'Velocidad 7B': '25–30 tok/seg', 'Modelo máx.': '13B (Q5)', 'Veredicto': 'Más rápida, pero 2× el precio' },
+            { 'GPU': 'RX 6700 XT', 'VRAM': '12 GB', 'Precio (usada)': '$150–200', 'Velocidad 7B': '10–14 tok/seg', 'Modelo máx.': '13B (Q4)', 'Veredicto': 'La más barata, fricción con AMD' },
+          ],
+          note: 'RTX 3060 12GB gana en valor: 12GB de VRAM a $200–250 ejecuta todos los modelos 7B y la mayoría de los 13B. La RTX A4000 es una segunda opción cercana si encuentras una por menos de $230. Los precios pueden variar según tu país.',
+        },
+        'vram-7b': {
+          title: '¿Cuánta VRAM necesitas para modelos 7B?',
+          content: [
+            '**Los modelos 7B cuantizados a Q4 (4 bits) requieren 6-8GB de VRAM; Q5 (5 bits) requiere 8-10GB; Q8 (8 bits) requiere 14-16GB.**',
+            'En la práctica: **8GB es el mínimo absoluto** para una inferencia cómoda en modelos 7B a Q4 con margen para procesamiento por lotes.',
+            'Las tarjetas de 6GB (RTX 2060) funcionan técnicamente pero requieren una optimización agresiva y no dejan margen para lotes más grandes.',
+            'Si tienes menos de 8 GB de VRAM, aún puedes ejecutar LLMs locales eficazmente — **[consulta los modelos optimizados para hardware de 4–8 GB](/es/local-llms/fastest-local-llms-low-end-pcs)**.',
+            'El costo de la GPU es un lado de la economía; el costo por token es el otro. La inferencia local elimina las tarifas de API por token, pero la longitud del prompt sigue afectando la latencia y el rendimiento. Para ver el panorama completo de costos — tokens, niveles de precios y estrategias de optimización — consulta [tokens, costos y límites: la economía del prompting con IA](https://www.promptquorum.com/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting).',
+          ],
+        },
+        'best-by-use-case': {
+          id: 'best-by-use-case',
+          title: 'Mejores modelos por caso de uso en RTX 3060',
+          content: [
+            '**Elige tu modelo según lo que realmente necesitas, no según el número de parámetros.** Estas son las mejores opciones para cada caso de uso en RTX 3060 12GB:',
+            'El hardware económico ejecuta modelos más pequeños — pero un buen prompting cierra la brecha de calidad. La [guía de prompt engineering](https://www.promptquorum.com/es/prompt-engineering) cubre técnicas como chain-of-thought y salidas estructuradas que ayudan a los modelos pequeños a rendir por encima de su tamaño. Una carga de trabajo concreta que encaja en el nivel RTX 3060 12 GB es la revisión automatizada de pull requests — consulta [revisión de código con LLM local en CI/CD](/es/power-local-llm/local-llm-code-review-ci-cd) para ver el patrón de GitHub Actions que ejecuta Qwen3 8B contra PRs en exactamente este hardware.',
+          ],
+          items: [
+            '**Chat / Preguntas y respuestas:** `ollama run llama4:scout` — MoE, ~10 GB VRAM, mejor calidad en 12 GB. Para una opción más ligera: `ollama run llama3.2:3b` a 2.5 GB.',
+            '**Código:** `ollama run qwen3:8b` — Rendimiento de código mejorado sobre Qwen3. 5 GB VRAM. 16–20 tok/seg.',
+            '**Razonamiento / Matemáticas:** `ollama run deepseek-r1:7b` — Razonamiento chain-of-thought. 10–12 tok/seg. Más lento pero significativamente más preciso en problemas de varios pasos.',
+            '**Escritura / Creatividad:** `ollama run mistral:7b` — Mejor seguimiento de instrucciones. 18 tok/seg. Salida limpia y estructurada. Ideal para borradores y reescrituras.',
+            '**Visión / Imágenes:** `ollama run gemma4:9b` — Multimodal (acepta imágenes). 12–15 tok/seg. Usa ~8GB VRAM. Describe fotos, lee capturas de pantalla, analiza gráficos.',
+            '**Privacidad / Sin conexión:** Cualquiera de los anteriores. Todos se ejecutan 100% localmente. Ningún dato sale de tu equipo. No requiere internet después de descargar el modelo.',
+          ],
+        },
+        'used-vs-new': {
+          title: 'Usada vs. nueva: ¿dónde comprar?',
+          items: [
+            '**Usada ($50-100 más barata)**: eBay, Facebook Marketplace, Craigslist, tiendas locales de reparación de computadoras. Mayor riesgo de tarjetas defectuosas o VRAM dañada. Prueba siempre antes de comprometerte.',
+            '**Nueva ($280-400)**: Newegg, Amazon, Best Buy, Microcenter. Garantía incluida. Sin sorpresas. Precios estables. Ideal para compradores que prefieren evitar riesgos.',
+            '**Tarjetas de minería (cripto, muy baratas)**: Riesgo extremo. La degradación de la VRAM es habitual. Compra solo si puedes hacer pruebas de estrés completas en el lugar.',
+          ],
+        },
+        'mistakes': {
+          title: 'Errores comunes con GPUs económicas',
+          items: [
+            'Comprar una RTX 2060 de 4GB esperando una inferencia fluida de 7B — obtendrás errores de memoria constantemente.',
+            'Combinar una GPU de $250 con una fuente de alimentación de $30 — la caída de voltaje arruina la estabilidad. Presupuesta al menos 650W con certificación 80+ Gold.',
+            'Asumir que la RAM DDR5 y la CPU i9 aceleran la inferencia de LLMs — no lo hacen. El ancho de banda de la VRAM de la GPU es el único cuello de botella que importa para la velocidad de inferencia.',
+            'No probar Llama 4 Scout en 12 GB de VRAM. Muchos propietarios de RTX 3060 asumen que están limitados a modelos densos de 7B-8B. Llama 4 Scout (MoE, 17B activo / 109B total) cabe a ~10 GB y entrega calidad comparable a modelos densos de 30B. Si tienes 12 GB de VRAM y no has probado Scout, estás aprovechando significativamente menos tu hardware.',
+            'Comprar una tarjeta de 16 GB solo para modelos 13B. Con Llama 4 Scout disponible a ~10 GB, la actualización de 12→16 GB es menos necesaria que hace seis meses. Solo actualiza a 16 GB si necesitas específicamente Llama 3.1 70B, Mistral Small 3.1 u otros modelos densos de 20B+.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: '¿Sigue valiendo la pena comprar una RTX 3060 12GB en 2026?', a: 'Sí. Tiene más de 4 años, pero 12GB de VRAM sigue siendo muy relevante. Ejecuta Llama 4 Scout 17B (MoE), Qwen3 8B y Mistral 7B sin problemas. La arquitectura MoE de Llama 4 Scout significa que 12 GB de VRAM ahora son suficientes para una calidad de modelo que antes requería 16+ GB.' },
+            { q: '¿Debería comprar RTX 5060 Ti o RTX 4060 Ti para LLMs locales?', a: 'RTX 5060 Ti. La generación más nueva (2026) ofrece un 10-15% mejor rendimiento. Si tienes restricciones de presupuesto, RTX 4060 Ti sigue siendo sólida. Evita la base 4060/5060 (8GB) y la 4070 (12GB) — mala relación calidad-precio.' },
+            { q: '¿Puedo usar una AMD RX 7900 XT o RX 7900 XTX en su lugar?', a: 'Sí, pero el soporte de drivers de AMD es más débil que NVIDIA + CUDA. La configuración de HIP/ROCm requiere más esfuerzo. RTX es más segura para principiantes.' },
+            { q: '¿12GB de VRAM es suficiente para modelos de 13B?', a: 'Por muy poco, a cuantización Q4. Q5 o Q8 provocarán errores OOM. Si quieres un 13B cómodo, apunta a 16GB.' },
+            { q: '¿Debería comprar una GPU empresarial usada como RTX A4000?', a: 'Sí, si está disponible. 16GB de VRAM, refrigeración de calidad profesional, normalmente a $180-230 usada. Ligeramente más lenta que la RTX 3060, pero el margen adicional de VRAM lo vale.' },
+            { q: '¿Cuántos vatios de fuente de alimentación debo comprar con una GPU de $250?', a: '650W mínimo, con certificación 80+ Gold. Una GPU de $250 + CPU + placa base no supera los 400W de consumo, pero quieres margen para picos.' },
+            { q: '¿Puedo ejecutar Ollama con una GPU económica de $200?', a: 'Sí. Ollama es ligero. Una RTX 3060 de 4 años con Ollama ejecutará Llama 4 Scout a 12-16 tok/seg o Qwen3 8B a 16-20 tok/seg — completamente utilizable para chat interactivo y asistencia de código.' },
+            { q: '¿Puedo ejecutar Llama 4 Scout en una RTX 3060 12GB?', a: 'Sí. Llama 4 Scout usa arquitectura MoE — 17B parámetros activos de 109B en total. A Q4_K_M, usa ~10 GB de VRAM, encajando cómodamente en la memoria de la RTX 3060 12GB. Espera 12-16 tok/seg. Esta es la mejor actualización individual para los propietarios de RTX 3060 en 2026: `ollama pull llama4:scout`.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Lectura relacionada',
+          items: [
+            '[Mini PCs AMD Ryzen AI Max+ (2026)](/es/local-llms/best-amd-mini-pc-local-llm-2026) — Alternativa a las GPUs discretas: iGPU + NPU de 50 TOPS a $1.200–2.500.',
+            '[¿Cuánta VRAM para LLMs locales?](/es/local-llms/how-much-vram-local-llm)',
+            '[RTX 5090 vs RTX 4090](/es/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[GPUs usadas para LLMs locales](/es/local-llms/used-gpus-for-local-llms)',
+            '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms)',
+            '[Calculadora de VRAM](/es/local-llms/vram-calculator-local-llm)',
+            '[Laptop vs Desktop para LLMs locales](/es/local-llms/laptop-vs-desktop-local-llm) — Comparación completa de plataformas: GPU de escritorio vs MacBook para LLMs locales.',
+            '[Prompt Engineering para LLMs locales](/es/prompt-engineering/prompt-engineering-for-local-models) — Optimiza prompts para modelos que se ejecutan en hardware económico.',
+            '[Prompting Chain-of-Thought](/es/prompt-engineering/chain-of-thought-prompting) — Mejora significativamente la calidad de salida de DeepSeek-R1.',
+            '[Mac Mini M5 como servidor de IA local](/es/local-llms/mac-mini-m5-local-ai-server) — Alternativa económica a las builds de GPU: IA siempre activa a $599 de hardware + $35/año de electricidad.',
+            '[Apple Silicon M5 para LLMs locales](/es/local-llms/apple-silicon-m5-local-llm) — Guía completa de M5 Pro/Max: benchmarks, configuraciones de Mac, niveles de memoria y qué Mac comprar para inferencia local.',
+            '[Apple Silicon vs GPU NVIDIA para LLMs locales](/es/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — Comparación completa de costo y rendimiento: cuándo un Mac supera a una GPU económica.',
+            '[Mejores modelos para Apple Silicon 2026](/es/local-llms/best-models-apple-silicon-2026) — Recomendaciones de modelos para niveles de memoria unificada de 16GB–128GB.',
+            'Para precios de GPU en Japón, minoristas de Akihabara y opciones del mercado de segunda mano en Mercari y Yahoo Auctions, consulta nuestra <a href="/es/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">guía de las mejores GPUs para LLMs locales en Japón</a>.',
+          ],
+        },
+        'sources': {
+          title: 'Fuentes',
+          items: [
+            'Meta AI. (2025). "Llama 4 Model Card." — Arquitectura MoE de Scout, requisitos de VRAM',
+            'Qwen Team. (2026). "Qwen3 Technical Report." — Especificaciones de Qwen3 8B',
+            'Base de datos de GPUs TechPowerUp: especificaciones y consumo de energía de RTX 3060 / RTX 4060 Ti / RTX 4070 Super',
+            'Matriz de capacidades CUDA de NVIDIA: ancho de banda de memoria de GPU y rendimiento teórico para cargas de trabajo de inferencia',
+            'Requisitos de modelos de Ollama: recomendaciones de VRAM para niveles de cuantización de Llama 4 Scout, Qwen3 y Mistral 7B',
+            'El cumplimiento normativo requiere flujos de trabajo auditables. Establece estándares de gobernanza para la calidad y revisión de prompts de IA: [gobernanza de prompts en producción](https://www.promptquorum.com/es/prompt-engineering/prompt-governance-in-production) cubre políticas, control de versiones y procesos de aprobación.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'NewsArticle',
+        'headline': 'Guía de LLMs locales con RTX 3060 2026: qué modelos puedes ejecutar',
+        'description': '¿Qué LLMs locales puedes ejecutar en RTX 3060 12GB o 6GB? Consulta los mejores modelos para código, chat y razonamiento en 2026 con límites reales de VRAM y consejos de rendimiento.',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-budget-gpus-local-llm',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-05-17',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'GPU económica' },
+          { '@type': 'Thing', 'name': 'RTX 3060' },
+          { '@type': 'Thing', 'name': 'VRAM de GPU' },
+          { '@type': 'Thing', 'name': 'inferencia de LLM local' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Sigue valiendo la pena comprar una RTX 3060 12GB en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Tiene más de 4 años, pero 12GB de VRAM es atemporal para modelos de 7B-13B. Ejecuta Llama 3 8B y Mistral 7B sin problemas. Ideal si encuentras una usada por menos de $250.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debería comprar RTX 4060 o RTX 4060 Ti para LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4060 Ti. La RTX 4060 base (8GB) y la RTX 4070 (12GB) ofrecen mala relación calidad-precio para trabajo con LLMs. La Ti es la mejor tarjeta de la serie RTX 40 en precio para inferencia local.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar una AMD RX 6700 o 6800 XT en lugar de NVIDIA para LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, pero el soporte de drivers de AMD para ONNX Runtime es más débil que NVIDIA CUDA. Espera más fricción en la configuración. NVIDIA es más segura para builds económicas.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿12GB de VRAM es suficiente para modelos de 13B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Por muy poco, a cuantización Q4. Q5 o Q8 provocarán errores OOM. Si quieres un 13B cómodo, apunta a 16GB de VRAM.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debería comprar una GPU empresarial usada como RTX A4000?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, si está disponible. 16GB de VRAM, refrigeración de calidad profesional, normalmente a $180-230 usada. Ligeramente más lenta que la RTX 3060 en benchmarks, pero el margen adicional de VRAM lo vale.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuántos vatios de fuente de alimentación debo comprar con una GPU de $250?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '650W mínimo, con certificación 80+ Gold. Una GPU de $250 + CPU + placa base no supera los 400W de consumo, pero el margen previene problemas de estabilidad por picos.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar Ollama con una GPU económica de $200?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Ollama es ligero. Una RTX 3060 de 4 años con Ollama ejecutará Mistral 7B a 10-15 tokens/seg — completamente utilizable para inferencia personal.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la mejor GPU económica por menos de $200?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 2080 usada (8GB, ~$150) o RTX A2000 (12GB, ~$180-200). Ambas ejecutan modelos 7B a Q4. Se prefiere la A2000 por su margen de 12GB de VRAM.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo pruebo una GPU usada en busca de defectos de VRAM antes de comprar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ejecuta pruebas de estrés de VRAM: gpu-burn (Linux), prueba de estrés de memoria HWiNFO64 (Windows), o carga un modelo grande en Ollama y observa si hay errores OOM. Prueba antes de devolver la tarjeta.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo actualizar mi GPU para ejecutar modelos más grandes más adelante?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, las actualizaciones de GPU son sencillas en PCs de escritorio. Comienza con RTX 3060 12GB y luego actualiza a RTX 4090 o 5090 más adelante. El slot PCIe es retrocompatible entre generaciones.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar Llama 4 Scout en una RTX 3060 12GB?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Llama 4 Scout usa arquitectura MoE — 17B parámetros activos de 109B en total. A Q4_K_M, usa ~10 GB de VRAM, encajando cómodamente en la memoria de la RTX 3060 12GB. Espera 12-16 tok/seg. Esta es la mejor actualización individual para los propietarios de RTX 3060 en 2026: `ollama pull llama4:scout`.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la mejor GPU NVIDIA económica para inferencia de LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4060 Ti (8 GB, ~$250) para modelos 7B, o RTX 4070 Super (12 GB, ~$350-400) para modelos 13B. Usada: RTX 3060 12GB (~$150-200) ejecuta modelos 7-13B sin problemas a Q4. El mejor valor es RTX 3060 12GB usada, o RTX 4070 Super nueva.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo se compara la AMD 6800XT con la RTX 4070 para inferencia de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AMD RX 6800 XT (16 GB) supera a RTX 4070 (12 GB) en VRAM y rendimiento en juegos, pero es más lenta en inferencia de LLMs (15-20% menos). La configuración del driver ROCm para llama.cpp también es más compleja que CUDA. Para trabajo puro con LLMs, RTX 4070 es más fácil; para juegos + LLMs, 6800 XT ofrece mejor valor.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la GPU con mejor precio por GB de VRAM para LLMs locales en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 3090 usada (24 GB, ~$450-500) = $18-20 por GB. RTX 3060 usada (12 GB, ~$150-180) = $12-15 por GB. RTX 4070 Ti (12 GB, ~$600 nueva) = $50 por GB. Mejor valor: RTX 3060 12GB usada. Mayor capacidad por dólar: RTX 3090 24GB usada. Balance precio + rendimiento: RTX 4070 nueva.'
+            }
+          },
+        ]
+      },
+    },
     de: {
       theme: 'GPU Buying Guides',
       title: 'Beste Budget-GPUs für lokale LLMs',

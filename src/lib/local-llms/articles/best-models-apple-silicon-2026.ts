@@ -188,6 +188,187 @@ ollama pull aya-expanse:32b         # translation`,
     },
     ctaText: 'Picked a model for your Mac? Compare its responses against GPT-4, Claude, Gemini, and 22 other models side-by-side with PromptQuorum — verify your local Llama, Qwen, or Phi model matches cloud quality for your specific use cases.',
   },
+  es: {
+    freshness_tier: 'annual',
+    specific_year: 2026,
+    theme: 'Hardware & Performance',
+    title: 'Mejores modelos LLM para Apple Silicon 2026: Recomendaciones para 16 GB, 36 GB, 64 GB, 128 GB',
+    seoTitle: 'Mejores modelos Apple Silicon 2026: 16 GB–128 GB',
+    intro: 'Las mejores recomendaciones de modelos LLM locales para cada Mac con Apple Silicon. Selecciones concretas para 16 GB (Phi-4), 36 GB (Llama 3.1 8B), 64 GB (Qwen2 34B), 128 GB (Llama 3.1 70B) con datos de tok/s en M5 Pro/Max.',
+    metaDescription: 'Mejores modelos LLM para Apple Silicon: Phi-4 (16 GB), Llama 8B (36 GB), Qwen 34B (64 GB), Llama 70B (128 GB). Velocidad tok/s, cuantización y cuándo actualizar.',
+    twitterDescription: 'Mejores LLM para tu Mac: 16 GB→Phi-4, 36 GB→Llama 8B, 64 GB→Qwen 34B, 128 GB→Llama 70B. Probados en M5 2026.',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    current_models_mentioned: ['Phi-4', 'Llama 3.1 8B', 'Qwen2.5 14B', 'Qwen2.5 34B', 'Mistral 8x7B', 'Llama 3.1 70B'],
+    current_hardware_mentioned: ['M5 Pro', 'M5 Max'],
+    audience: 'Usuarios de Mac que buscan recomendaciones de modelos según su configuración.',
+    readTime: '10 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'mejores modelos Apple Silicon Mac',
+    targetKeywords: ['mejor LLM Mac', 'recomendaciones de modelos', 'rendimiento por configuración Mac'],
+    leadAnswerBlock: '**16 GB: Phi-4. 36 GB: Llama 3.1 8B Q8 (~38 tok/s). 64 GB: Qwen2.5 34B Q5 (~18 tok/s). 128 GB: Llama 3.1 70B Q5 (~14 tok/s M5 Pro, ~16 tok/s M5 Max). Todos funcionan mediante Ollama en Metal.**',
+    quickAnswerTop: {
+      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+    },
+    toc: [
+      { label: 'Mejor modelo por nivel de memoria', anchor: '#by-tier' },
+      { label: 'Benchmarks de calidad', anchor: '#quality-benchmarks' },
+      { label: 'Mejor modelo por caso de uso', anchor: '#by-usecase' },
+      { label: 'Escenarios de usuarios reales', anchor: '#scenarios' },
+      { label: 'Modelos que debes evitar', anchor: '#avoid' },
+      { label: 'Referencia de formatos de modelo', anchor: '#format-reference' },
+      { label: 'Descargar estos modelos', anchor: '#download-guide' },
+      { label: 'Artículos relacionados', anchor: '#related-articles' },
+      { label: 'FAQ', anchor: '#faq' },
+    ],
+    sections: {
+      byTier: {
+        id: 'by-tier',
+        title: 'Mejores recomendaciones de modelos por memoria del Mac',
+        content: 'Última verificación: 2026-05-15. Las recomendaciones pueden cambiar con nuevos lanzamientos. Actualizamos esta página trimestralmente.',
+        columns: ['Memoria', 'Elección principal', 'Cuantización', 'Tamaño', 'M5 Pro tok/s', 'M5 Max tok/s', 'Alternativa'],
+        rows: [
+          { 'Memoria': '16 GB', 'Elección principal': 'Phi-4', 'Cuantización': 'Q4_K_M', 'Tamaño': '2,5 GB', 'M5 Pro tok/s': '60–70', 'M5 Max tok/s': '110–130', 'Alternativa': 'Llama 3.1 8B Q4 (justo)' },
+          { 'Memoria': '36 GB', 'Elección principal': 'Llama 3.1 8B', 'Cuantización': 'Q8', 'Tamaño': '8,5 GB', 'M5 Pro tok/s': '38–45', 'M5 Max tok/s': '75–85', 'Alternativa': 'Qwen2.5 14B Q4 (8,5 GB)' },
+          { 'Memoria': '48 GB', 'Elección principal': 'Qwen2.5 14B', 'Cuantización': 'Q8', 'Tamaño': '16 GB', 'M5 Pro tok/s': '25–30', 'M5 Max tok/s': '50–60', 'Alternativa': 'Mixtral 8x7B Q4 (26 GB)' },
+          { 'Memoria': '64 GB', 'Elección principal': 'Qwen2.5 34B', 'Cuantización': 'Q5', 'Tamaño': '24 GB', 'M5 Pro tok/s': '18–22', 'M5 Max tok/s': '35–42', 'Alternativa': 'Mixtral 8x7B Q5 (32 GB)' },
+          { 'Memoria': '96 GB', 'Elección principal': 'Llama 3.1 70B', 'Cuantización': 'Q4', 'Tamaño': '42 GB', 'M5 Pro tok/s': '10–13', 'M5 Max tok/s': '20–25', 'Alternativa': 'Qwen2.5 72B Q4 (44 GB)' },
+          { 'Memoria': '128 GB', 'Elección principal': 'Llama 3.1 70B', 'Cuantización': 'Q5', 'Tamaño': '49 GB', 'M5 Pro tok/s': '8–11', 'M5 Max tok/s': '14–18', 'Alternativa': 'Qwen2.5 72B Q5 (51 GB)' },
+          { 'Memoria': '128 GB', 'Elección principal': 'Llama 3.1 70B', 'Cuantización': 'Q8', 'Tamaño': '74 GB', 'M5 Pro tok/s': 'N/A', 'M5 Max tok/s': '9–12', 'Alternativa': 'Mejor calidad, solo M5 Max' },
+        ],
+        note: 'Los tamaños son en formato GGUF. Los equivalentes MLX 4-bit son comparables. Los precios pueden variar según tu país.',
+      },
+      qualityBenchmarks: {
+        id: 'quality-benchmarks',
+        title: 'Benchmarks de calidad de modelos (pruebas estándar 2026)',
+        columns: ['Modelo', 'MMLU', 'HumanEval', 'GSM8K', 'Promedio', 'Notas'],
+        rows: [
+          { 'Modelo': 'Phi-4 (3,8B)', 'MMLU': '84,8', 'HumanEval': '82,6', 'GSM8K': '91,0', 'Promedio': '86,1', 'Notas': 'Mejor modelo pequeño' },
+          { 'Modelo': 'Llama 3.1 8B', 'MMLU': '73,0', 'HumanEval': '72,6', 'GSM8K': '84,5', 'Promedio': '76,7', 'Notas': 'Bueno para todo' },
+          { 'Modelo': 'Qwen2.5 14B', 'MMLU': '79,7', 'HumanEval': '83,5', 'GSM8K': '90,2', 'Promedio': '84,5', 'Notas': 'Razonamiento sólido' },
+          { 'Modelo': 'Mistral 7B', 'MMLU': '60,1', 'HumanEval': '30,5', 'GSM8K': '50,0', 'Promedio': '46,9', 'Notas': 'Antiguo pero rápido' },
+          { 'Modelo': 'Qwen2.5 34B', 'MMLU': '83,3', 'HumanEval': '88,4', 'GSM8K': '93,0', 'Promedio': '88,2', 'Notas': 'Mejor tamaño medio' },
+          { 'Modelo': 'Mixtral 8x7B', 'MMLU': '70,6', 'HumanEval': '40,2', 'GSM8K': '60,4', 'Promedio': '57,1', 'Notas': 'Arquitectura MoE' },
+          { 'Modelo': 'Llama 3.1 70B', 'MMLU': '86,0', 'HumanEval': '80,5', 'GSM8K': '95,1', 'Promedio': '87,2', 'Notas': 'Mejor general' },
+          { 'Modelo': 'Qwen2.5 72B', 'MMLU': '86,1', 'HumanEval': '86,6', 'GSM8K': '95,8', 'Promedio': '89,5', 'Notas': 'Razonamiento top' },
+          { 'Modelo': 'Llama 3.1 405B', 'MMLU': '88,6', 'HumanEval': '89,0', 'GSM8K': '96,8', 'Promedio': '91,5', 'Notas': 'No cabe localmente' },
+          { 'Modelo': 'GPT-4o (referencia)', 'MMLU': '88,7', 'HumanEval': '90,2', 'GSM8K': '95,8', 'Promedio': '91,6', 'Notas': 'Referencia en la nube' },
+        ],
+        note: 'Qwen2.5 72B en un Mac de 128 GB se acerca a la calidad de GPT-4o con costo continuo cero. Este es el avance más importante en IA local en 2026.',
+      },
+      byUsecase: {
+        id: 'by-usecase',
+        title: 'Mejores modelos por caso de uso (2026)',
+        columns: ['Caso de uso', 'Mejor para Mac 36 GB', 'Mejor para Mac 64 GB', 'Mejor para Mac 128 GB'],
+        rows: [
+          { 'Caso de uso': 'Programación (general)', 'Mejor para Mac 36 GB': 'Llama 3.1 8B', 'Mejor para Mac 64 GB': 'DeepSeek Coder V2 16B', 'Mejor para Mac 128 GB': 'Llama 3.1 70B' },
+          { 'Caso de uso': 'Programación (Python)', 'Mejor para Mac 36 GB': 'DeepSeek Coder V2 Lite', 'Mejor para Mac 64 GB': 'DeepSeek Coder V2 16B', 'Mejor para Mac 128 GB': 'DeepSeek Coder V2 236B' },
+          { 'Caso de uso': 'Escritura larga', 'Mejor para Mac 36 GB': 'Llama 3.1 8B Q8', 'Mejor para Mac 64 GB': 'Qwen2.5 34B Q5', 'Mejor para Mac 128 GB': 'Llama 3.1 70B Q5' },
+          { 'Caso de uso': 'Chat / conversación', 'Mejor para Mac 36 GB': 'Mistral 7B', 'Mejor para Mac 64 GB': 'Mixtral 8x7B', 'Mejor para Mac 128 GB': 'Llama 3.1 70B' },
+          { 'Caso de uso': 'Razonamiento / matemáticas', 'Mejor para Mac 36 GB': 'Qwen2.5 14B', 'Mejor para Mac 64 GB': 'Qwen2.5 34B', 'Mejor para Mac 128 GB': 'Qwen2.5 72B' },
+          { 'Caso de uso': 'RAG / preguntas y respuestas', 'Mejor para Mac 36 GB': 'Llama 3.1 8B + nomic-embed', 'Mejor para Mac 64 GB': '[Llama 3.1 8B](/es/local-llms/local-rag-for-private-business-data) + bge-large', 'Mejor para Mac 128 GB': 'Llama 3.1 70B + bge-large' },
+          { 'Caso de uso': 'Visión / multimodal', 'Mejor para Mac 36 GB': 'LLaVA 7B', 'Mejor para Mac 64 GB': '[Llama 3.2 Vision 11B](/es/power-local-llm/local-vision-models-llava-ollama-2026)', 'Mejor para Mac 128 GB': 'Llama 3.2 Vision 90B' },
+          { 'Caso de uso': 'Traducción', 'Mejor para Mac 36 GB': 'Qwen2.5 14B', 'Mejor para Mac 64 GB': 'Qwen2.5 34B', 'Mejor para Mac 128 GB': 'Aya Expanse 32B' },
+          { 'Caso de uso': 'Resumen', 'Mejor para Mac 36 GB': 'Llama 3.1 8B', 'Mejor para Mac 64 GB': 'Qwen2.5 34B', 'Mejor para Mac 128 GB': 'Llama 3.1 70B' },
+          { 'Caso de uso': 'Revisión de código', 'Mejor para Mac 36 GB': 'DeepSeek Coder V2 Lite', 'Mejor para Mac 64 GB': 'DeepSeek Coder V2 16B', 'Mejor para Mac 128 GB': 'Llama 3.1 70B' },
+        ],
+        note: 'Los modelos especializados suelen superar a los generales en tareas concretas. DeepSeek Coder supera a Llama 3.1 en código incluso cuando Llama es el modelo más grande.',
+      },
+      scenarios: {
+        id: 'scenarios',
+        title: 'Configuraciones reales por tipo de usuario',
+        callouts: [
+          { type: 'tip', text: '**Desarrollador independiente (Mac Mini M5 Pro 64 GB, $1,200)**\n- Programación: DeepSeek Coder V2 Lite (16B Q4, 10 GB)\n- Escritura: Llama 3.1 8B Q8 (8,5 GB) para documentación y correos\n- Siempre activo: ambos modelos en caliente con `OLLAMA_MAX_LOADED_MODELS=2`\n- Costo diario: $0 (vs $30–100/mes por Copilot + ChatGPT)\n- Los precios pueden variar según tu país.' },
+          { type: 'tip', text: '**Profesional con enfoque en privacidad (MacBook Pro M5 Pro 48 GB, $2,500)**\n- Principal: Llama 3.1 8B Q8 para trabajo general\n- Sensible: Qwen2.5 14B Q5 para documentos legales/médicos/financieros\n- Viajes: funciona sin conexión en aviones y entornos seguros\n- Ningún dato sale del ordenador\n- Los precios pueden variar según tu país.' },
+          { type: 'tip', text: '**Investigador / Ingeniero ML (Mac Studio M5 Max 128 GB, $4,000)**\n- Principal: Llama 3.1 70B Q5 (49 GB) para calidad\n- Especializado: Qwen2.5 72B Q4 para investigación en otros idiomas\n- Programación: DeepSeek Coder V2 16B\n- Visión: Llama 3.2 Vision 11B para figuras de artículos\n- Los cuatro modelos cargados simultáneamente\n- Los precios pueden variar según tu país.' },
+          { type: 'tip', text: '**Servidor de IA familiar (Mac Mini M5 Pro 64 GB, siempre encendido)**\n- Asistente de voz: Llama 3.1 8B + Whisper + Piper\n- RAG: preguntas y respuestas sobre documentos familiares con embeddings\n- Ayuda de programación para miembros de la familia vía REST API\n- Costo eléctrico: ~$35/año\n- Reemplaza: ChatGPT Plus para 4 personas = $1,000/año\n- Los precios pueden variar según tu país.' },
+        ],
+      },
+      avoid: {
+        id: 'avoid',
+        title: 'Modelos que debes evitar en 2026 (y por qué)',
+        callouts: [
+          { type: 'warning', text: '**Evita Llama 2 (de cualquier tamaño)** — Lanzado en 2023, reemplazado por Llama 3 y 3.1. Un 30–50% peor en calidad con el mismo número de parámetros. Sigue apareciendo en tutoriales antiguos — no los sigas. Reemplaza con: Llama 3.1 8B.' },
+          { type: 'warning', text: '**Evita Vicuna, Alpaca, WizardLM** — Fine-tunes comunitarios de 2023. Los modelos base modernos (Llama 3.1, Qwen2.5) igualan o superan su rendimiento. Reemplaza con: Qwen2.5 14B o Llama 3.1 8B.' },
+          { type: 'warning', text: '**Evita Falcon 180B** — No cabe en Apple Silicon de consumo. [Llama 3.1 70B](/es/local-llms/running-70b-models-apple-silicon-m5-max) (más pequeño) lo supera. Reemplaza con: Llama 3.1 70B Q5.' },
+          { type: 'warning', text: '**Evita la cuantización FP16 en hardware de consumo** — Llama 3.1 70B FP16 = 140 GB, no cabe en ningún Mac. La ganancia de calidad frente a Q5 es menor al 1%. Reemplaza con: [Q4_K_M o Q5_K_M](/es/local-llms/llm-quantization-explained).' },
+          { type: 'warning', text: '**Evita los modelos base puros (sin variante instruct)** — Los modelos base completan texto pero no siguen instrucciones. Busca el sufijo "-instruct" o "-chat". Reemplaza con: la variante instruct del mismo modelo.' },
+          { type: 'warning', text: '**Evita modelos sin desarrollo activo** — StableLM, RedPajama, MPT, Pythia: abandonados o desactualizados. Usa modelos de Meta, Alibaba, Mistral, Microsoft con actualizaciones regulares.' },
+        ],
+      },
+      formatReference: {
+        id: 'format-reference',
+        title: 'Referencia rápida de formatos de modelo',
+        columns: ['Formato', 'Usado por', 'Tamaño vs original'],
+        rows: [
+          { 'Formato': 'GGUF Q4_K_M', 'Usado por': '[Ollama](/es/local-llms/ollama-on-mac-apple-silicon-setup-2026), llama.cpp', 'Tamaño vs original': '~30% de FP16' },
+          { 'Formato': 'GGUF Q5_K_M', 'Usado por': '[Ollama](/es/local-llms/ollama-on-mac-apple-silicon-setup-2026), llama.cpp', 'Tamaño vs original': '~35% de FP16' },
+          { 'Formato': 'GGUF Q8_0', 'Usado por': '[Ollama](/es/local-llms/ollama-on-mac-apple-silicon-setup-2026), llama.cpp', 'Tamaño vs original': '~50% de FP16' },
+          { 'Formato': 'MLX 4-bit', 'Usado por': 'Framework MLX', 'Tamaño vs original': '~30% de FP16' },
+          { 'Formato': 'MLX 8-bit', 'Usado por': 'Framework MLX', 'Tamaño vs original': '~50% de FP16' },
+          { 'Formato': 'FP16 (original)', 'Usado por': 'Todos los frameworks', 'Tamaño vs original': '100%' },
+        ],
+        note: 'Los tamaños en este artículo son GGUF Q4_K_M salvo que se indique lo contrario. Los equivalentes MLX 4-bit son de tamaño similar. Para bytes exactos, consulta la ficha del modelo en HuggingFace.',
+      },
+      downloadGuide: {
+        id: 'download-guide',
+        title: 'Referencia rápida: descargar estos modelos',
+        codeBlock: `# Mac 16 GB
+ollama pull phi4
+
+# Mac 36 GB (elige uno)
+ollama pull llama3.1:8b
+ollama pull qwen2.5:14b
+ollama pull mistral:7b
+
+# Mac 64 GB
+ollama pull qwen2.5:34b
+ollama pull mixtral:8x7b
+
+# Mac 128 GB
+ollama pull llama3.1:70b
+ollama pull qwen2.5:72b
+
+# Modelos especializados
+ollama pull deepseek-coder-v2:16b   # programación
+ollama pull llama3.2-vision:11b     # visión
+ollama pull aya-expanse:32b         # traducción`,
+        codeLanguage: 'bash',
+        note: 'Cada modelo pesa varios GB. El espacio total en disco para varios modelos puede alcanzar los 50–100 GB. Comprueba el uso con `du -sh ~/.ollama/`.',
+      },
+      relatedArticles: {
+        id: 'related-articles',
+        title: 'Artículos relacionados',
+        items: [
+          '[Apple Silicon para LLMs locales: Guía completa](/es/local-llms/apple-silicon-local-llm-guide-2026)',
+          '[Benchmarks M5 Pro vs M5 Max 2026](/es/local-llms/m5-pro-max-llm-benchmarks-2026)',
+          '[¿Cuánta memoria unificada necesito para LLMs locales?](/es/local-llms/how-much-unified-memory-for-local-llm)',
+          '[Comparativa MLX vs Ollama vs llama.cpp](/es/local-llms/mlx-vs-ollama-vs-llama-cpp-mac)',
+          '[Guía de instalación de Ollama en Mac](/es/local-llms/ollama-on-mac-apple-silicon-setup-2026)',
+          '[Ejecutar modelos 70B en Apple Silicon](/es/local-llms/running-70b-models-apple-silicon-m5-max)',
+          '[Cuantización LLM explicada](/es/local-llms/llm-quantization-explained)',
+          '[Comparativa Qwen vs Llama vs Mistral](/es/local-llms/qwen-vs-llama-vs-mistral)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          { q: '¿Puedo ejecutar dos modelos diferentes a la vez?', a: 'Sí, establece `OLLAMA_MAX_LOADED_MODELS=2` en las variables de entorno. Con 64 GB puedes ejecutar 8B + 34B simultáneamente.' },
+          { q: '¿Qué modelo es mejor para principiantes?', a: 'Llama 3.1 8B. Ampliamente disponible, buena calidad de salida y trayectoria probada. Funciona en cualquier Mac M1+.' },
+          { q: '¿Mixtral 8x7B es más rápido que Llama 8B?', a: 'No, es ligeramente más lento (40–50 tok/s vs 50–60 tok/s en M5 Pro). Pero el razonamiento es superior.' },
+          { q: '¿Cuál es el mejor LLM local en 2026?', a: 'Para la mayoría de usuarios en Apple Silicon: Qwen2.5 (cualquier tamaño que quepa en tu Mac) lidera actualmente los benchmarks de calidad. Llama 3.1 70B es comparable en Macs de 128 GB. Por debajo de 16 GB: [Phi-4](/es/local-llms/llm-quantization-explained) supera su categoría con 3,8B parámetros, igualando modelos 8B de 2024.' },
+          { q: '¿Puedo ejecutar Llama 3.1 405B en un Mac?', a: 'No. Llama 3.1 405B requiere más de 200 GB incluso con cuantización Q4 — ningún Mac de consumo tiene suficiente memoria unificada. Espera al M5 Ultra (previsto para mediados de 2026, 256 GB) — será el primer hardware de consumo capaz de ejecutar 405B en Q3–Q4.' },
+          { q: '¿Es Qwen mejor que Llama para uso local?', a: 'En la mayoría de tareas, Qwen2.5 supera ligeramente a Llama 3.1 con el mismo número de parámetros en benchmarks (1–3 puntos en MMLU). Llama tiene una comunidad más amplia y más fine-tunes disponibles. La mayoría de usuarios no notarán la diferencia — elige según disponibilidad y ecosistema de fine-tunes.' },
+          { q: '¿Cuál es el modelo más pequeño que realmente es útil?', a: 'Phi-4 con 3,8B parámetros. Obtiene 84,8 en MMLU — igualando algunos modelos 8B de 2024. Para chat y preguntas y respuestas es sorprendentemente capaz. Para programación o razonamiento complejo, pasa a Llama 3.1 8B o [Qwen2.5 14B](/es/local-llms/qwen-vs-llama-vs-mistral).' },
+        ],
+      },
+    },
+    ctaText: '¿Ya elegiste un modelo para tu Mac? Compara sus respuestas con GPT-4, Claude, Gemini y 22 modelos más en paralelo con PromptQuorum — verifica si tu modelo local Llama, Qwen o Phi iguala la calidad en la nube para tus casos de uso específicos.',
+  },
   de: {
     freshness_tier: 'annual',
     specific_year: 2026,
