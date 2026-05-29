@@ -153,7 +153,7 @@ export const article: Record<Language, PEArticle> = {
         wherePromptQuorum: {
           id: 'where-promptquorum-fits',
           title: 'Where Does PromptQuorum Fit in This Stack?',
-          content: '**PromptQuorum solves a bottleneck none of the five tools above address: dispatching one prompt to multiple AI models simultaneously and comparing outputs side by side.** Braintrust evaluates one model\'s output against ground truth. Vellum deploys one model to production. Promptfoo tests one model in CI/CD. PromptQuorum lets you see how GPT-4o, Claude 4.7 Opus, Gemini 3 Pro, and local models via Ollama answer the same prompt — before you commit to a model or a prompt version.\n\nThis makes PromptQuorum the natural first step in the workflow: compare models → pick the best → then evaluate (Braintrust), test (Promptfoo), version (PromptHub), and deploy (Vellum).',
+          content: '**[PromptQuorum](/features) solves a bottleneck none of the five tools above address: dispatching one prompt to multiple AI models simultaneously and comparing outputs side by side.** Braintrust evaluates one model\'s output against ground truth. Vellum deploys one model to production. Promptfoo tests one model in CI/CD. PromptQuorum lets you see how GPT-4o, Claude 4.7 Opus, Gemini 3 Pro, and local models via Ollama answer the same prompt — before you commit to a model or a prompt version.\n\nThis makes PromptQuorum the natural first step in the workflow: compare models → pick the best → then evaluate (Braintrust), test (Promptfoo), version (PromptHub), and deploy (Vellum).',
           items: [
             'Dispatches to 25+ models including local LLMs via Ollama',
             '9 built-in prompt frameworks (TRACE, CO-STAR, CRAFT, RISEN, RTF, and more)',

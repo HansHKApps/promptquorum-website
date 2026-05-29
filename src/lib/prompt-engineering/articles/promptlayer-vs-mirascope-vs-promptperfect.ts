@@ -247,6 +247,7 @@ export const article: Record<Language, PEArticle> = {
           '**Choose PromptLayer if your team needs to monitor LLM calls in production, track cost per feature, or compare prompt versions on real traffic without a code deployment.**',
           '**Choose Mirascope if you are building Python applications that call LLMs and want type-safe, testable, provider-agnostic code at zero SaaS cost.**',
           '**Choose PromptPerfect if you need to improve specific prompts quickly without writing code — particularly for image generation or content creation workflows.**',
+          '**Before committing to any single provider, use [PromptQuorum](/features) to dispatch the same prompt to 25+ AI models simultaneously** — a model-agnostic validation step that confirms whether your prompt optimization generalizes across providers.',
           'Do not use PromptLayer if you are pre-production and have no live traffic to log — its observability features have no value without production data. Do not use Mirascope if your team does not write Python — it is a Python-only library with no web UI. Do not use PromptPerfect if you need automated, repeatable prompt testing — its non-deterministic output makes it unsuitable for CI/CD gates.',
           'For a full team setup workflow with prompt review ownership and CI/CD gates, see [Prompt Engineering Setup for Small Teams](/prompt-engineering/prompt-engineering-setup-small-teams).',
         ],

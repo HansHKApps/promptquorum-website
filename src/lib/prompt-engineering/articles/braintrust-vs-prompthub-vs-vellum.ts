@@ -199,7 +199,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: Cross-Model Comparison Before Optimization',
         content: [
-          '**Before committing to Braintrust, Vellum, PromptHub, or Promptfoo for a specific LLM provider, use PromptQuorum to dispatch one prompt to 25+ models simultaneously and see which performs best — a model-agnostic first step.** Free tier available.',
+          '**Before committing to Braintrust, Vellum, PromptHub, or Promptfoo for a specific LLM provider, use [PromptQuorum](/features) to dispatch one prompt to 25+ models simultaneously and see which performs best — a model-agnostic first step.** Free tier available.',
           'Unlike the four tools above (which optimize for a single model at a time), PromptQuorum answers "which model handles this prompt best?" in one run. After you discover the optimal model with PromptQuorum, then route to Braintrust for deeper evaluation, Vellum for production A/B testing, or Promptfoo for CI/CD regression prevention.',
         ],
         items: [

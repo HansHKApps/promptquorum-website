@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026',
-    seoTitle: 'AnythingLLM vs PrivateGPT vs Open WebUI: 5K-Page Local RAG Tested',
+    seoTitle: 'Local RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
     intro:
       'AnythingLLM, PrivateGPT, and Open WebUI are the three serious self-hosted RAG platforms in 2026. We loaded an identical 5,047-page corpus into each, ran 50 queries across 5 query types, and measured retrieval latency, hallucination rate, citation quality, and the hidden costs nobody talks about (re-embedding, vector DB storage, GPU spikes during indexing). The toy-demo champion is not the production champion.',
     metaDescription:
@@ -492,11 +492,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: Die beste lokale RAG 2026',
-    seoTitle: 'AnythingLLM vs PrivateGPT vs Open WebUI: 5.000-Seiten-Test',
+    seoTitle: 'Lokales RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
     intro:
       'AnythingLLM, PrivateGPT und Open WebUI sind die drei ernstzunehmenden lokalen RAG-Plattformen 2026. Wir haben ein identisches Korpus von 5.047 Seiten in jede Plattform geladen, 50 Abfragen über 5 Abfragetypen ausgeführt und Abruflatenz, Halluzinationsrate, Zitierqualität und die versteckten Kosten gemessen, über die niemand spricht (Neueinbettung, Vektor-DB-Speicher, GPU-Spitzen während der Indexierung). Der Toy-Demo-Champion ist nicht der Produktions-Champion.',
     metaDescription:
-      '3 lokale RAG-Plattformen auf 5.047 Seiten getestet. AnythingLLM, PrivateGPT, Open WebUI mit Benchmarks zu Genauigkeit, Latenz, Zitierqualität. Mai 2026 Testergebnis.',
+      '3 lokale RAG-Plattformen auf 5.047 Seiten getestet. AnythingLLM, PrivateGPT, Open WebUI: Genauigkeit, Latenz, Zitierqualität. Testergebnis Mai 2026.',
     twitterDescription:
       'Lokales RAG-Duell: AnythingLLM vs PrivateGPT vs Open WebUI auf 5.047 Seiten. Unterschiedliche Gewinner bei Genauigkeit, Latenz, Skalierung. Vollständige Benchmarks eingebunden.',
     current_models_mentioned: [
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI : La meilleure RAG locale 2026',
-    seoTitle: 'AnythingLLM vs PrivateGPT vs Open WebUI : RAG locale testée',
+    seoTitle: 'RAG local 2026 : AnythingLLM vs PrivateGPT vs Open WebUI',
     intro:
       'AnythingLLM, PrivateGPT et Open WebUI sont les trois plateformes RAG locales sérieuses en 2026. Nous avons chargé un corpus identique de 5 047 pages dans chacune, lancé 50 requêtes sur 5 types, et mesuré la latence d\'extraction, le taux d\'hallucination, la qualité des citations et les coûts cachés (réindexation, stockage vectoriel, pics GPU). Le champion des démos jouet n\'est pas le champion de production.',
     metaDescription:
@@ -1357,7 +1357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG',
-    seoTitle: 'AnythingLLM、PrivateGPT、Open WebUI比較：5000ページRAGテスト',
+    seoTitle: 'ローカルRAG 2026：AnythingLLM・PrivateGPT・Open WebUI比較',
     intro:
       'AnythingLLM、PrivateGPT、Open WebUIは2026年における3つの本格的な自己ホスト型RAGプラットフォームです。同じ5,047ページのコーパスをそれぞれに読み込み、5つのクエリタイプにわたって50クエリを実行し、検索レイテンシ、ハルシネーション率、引用品質、および隠れたコスト（再埋め込み、ベクトルDB保存、インデックス作成時のGPUスパイク）を測定しました。デモの優勝者は本番運用の優勝者ではありません。',
     metaDescription:
@@ -1956,7 +1956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台',
-    seoTitle: 'AnythingLLM、PrivateGPT、Open WebUI对比：5000页RAG测试',
+    seoTitle: '本地RAG 2026：AnythingLLM vs PrivateGPT vs Open WebUI',
     intro: 'AnythingLLM、PrivateGPT和Open WebUI是2026年三个成熟的自托管RAG平台。我们将相同的5,047页语料库加载到每个平台，运行了50个跨5种查询类型的查询，测量了检索延迟、幻想率、引用质量和隐性成本（重新嵌入、向量DB存储、索引时GPU峰值）。演示冠军不是生产冠军。',
     metaDescription: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年5月的测试结果。',
     twitterDescription: '本地RAG对决：AnythingLLM vs PrivateGPT vs Open WebUI（5,047页）。在准确性、延迟和扩展方面有不同的获胜者。完整基准。',
