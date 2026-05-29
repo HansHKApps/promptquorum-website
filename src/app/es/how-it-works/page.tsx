@@ -32,10 +32,10 @@ export default async function EsHowItWorksPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      'name': 'How PromptQuorum Works — Write, Optimize, Dispatch, Quorum',
+      'name': 'Cómo funciona PromptQuorum — Escribir, Optimizar, Enviar, Quorum',
       'url': 'https://www.promptquorum.com/es/how-it-works',
       'inLanguage': 'es',
-      'description': 'A complete guide to the PromptQuorum 4-stage workflow: structured prompt writing with 9 frameworks, LLM-powered optimization, one-click dispatch to 25+ AI services, and multi-model Quorum analysis.',
+      'description': 'Guía completa del flujo de trabajo de 4 etapas de PromptQuorum: escritura estructurada de prompts con 9 frameworks, optimización impulsada por LLM, envío con un clic a 25+ servicios de IA y análisis Quorum multi-modelo.',
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
     },
     {
@@ -43,7 +43,7 @@ export default async function EsHowItWorksPage() {
       '@type': 'BreadcrumbList',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/es' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'How It Works', 'item': 'https://www.promptquorum.com/es/how-it-works' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Cómo funciona', 'item': 'https://www.promptquorum.com/es/how-it-works' },
       ],
     },
   ]

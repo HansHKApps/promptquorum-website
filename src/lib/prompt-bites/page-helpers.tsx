@@ -22,6 +22,7 @@ const HOME_LABEL: Partial<Record<Lang, string>> = {
   fr: 'Accueil',
   ja: 'ホーム',
   zh: '主页',
+  es: 'Inicio',
 }
 
 const SLUG_ACRONYMS: Record<string, string> = {
@@ -181,6 +182,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
     fr: `Référence rapide LLM local : VRAM, modèles Ollama et choix GPU — ${count} réponses | PromptQuorum`,
     ja: `ローカルLLMクイックリファレンス：VRAM・Ollamaモデル・GPU選び — ${count}の回答 | PromptQuorum`,
     zh: `本地LLM快速参考：VRAM、Ollama模型与GPU选择 — ${count}个解答 | PromptQuorum`,
+    es: `Referencia rápida de LLM local: VRAM, modelos Ollama y GPU — ${count} respuestas | PromptQuorum`,
   }
   const descByLang: Partial<Record<Lang, string>> = {
     en: `Local LLM quick reference guide: VRAM tiers for ${count} models (2026), quantization basics, Ollama vs LM Studio, hardware picks, and setup tips. Complete answers for running models locally.`,
@@ -188,6 +190,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
     fr: `Guide de référence rapide LLM local : niveaux VRAM pour ${count} modèles (2026), bases de quantification, Ollama vs LM Studio, choix matériels et conseils de configuration.`,
     ja: `ローカルLLMクイックリファレンスガイド：${count}モデルのVRAMティア（2026年）、量化の基礎、OllamaとLM Studio、ハードウェア選択、セットアップのコツ。`,
     zh: `本地LLM快速参考指南：${count}款模型的显存级别（2026年）、量化基础、Ollama与LM Studio对比、硬件推荐和设置技巧。`,
+    es: `Guía de referencia rápida de LLM local: niveles de VRAM para ${count} modelos (2026), fundamentos de cuantización, Ollama vs LM Studio, recomendaciones de hardware y consejos de configuración. Respuestas completas para ejecutar modelos en local.`,
   }
 
   const isPublished = isPromptBitesHubPublished(lang)

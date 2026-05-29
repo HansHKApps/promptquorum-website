@@ -5,9 +5,9 @@ export const dynamic = 'force-static'
 export const revalidate = 86400
 
 export async function generateMetadata(): Promise<Metadata> {
-  return buildHubMetadata('de')
+  return buildHubMetadata('es')
 }
 
-export default async function PromptBitesHubDe() {
-  return buildHubPageElement('de')
+export default async function PromptBitesHubEs() {
+  return buildHubPageElement('es')
 }

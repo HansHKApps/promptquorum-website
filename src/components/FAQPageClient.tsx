@@ -62,6 +62,17 @@ const T = {
     ctaBtn: '加入候补名单',
     back: '← 返回首页',
   },
+  es: {
+    h1: 'FAQ de PromptQuorum: Frameworks, Privacidad, Modelos de IA y Primeros Pasos',
+    subtitle: 'Todo lo que necesitas saber sobre PromptQuorum, precios, privacidad y cómo empezar.',
+    founderH2: 'Sobre el fundador',
+    founderTitle: 'Fundador y desarrollador, PromptQuorum',
+    founderBio: 'Hans Kuepper es un desarrollador independiente con base en Baden-Württemberg, Alemania, que habla cuatro idiomas y ha trabajado en más de 20 países. Creó PromptQuorum porque los equipos necesitan una capa de verificación para las respuestas generadas por IA — una forma de detectar alucinaciones comparando los resultados de múltiples modelos. La privacidad no es negociable: tus prompts y claves de API nunca pasan por los servidores de PromptQuorum.',
+    ctaH2: 'Únete a la lista de espera para acceso anticipado',
+    ctaDesc: 'El acceso anticipado incluye funciones premium de por vida y soporte prioritario. Sé de los primeros en probar PromptQuorum cuando se lance.',
+    ctaBtn: 'Unirse a la lista de espera',
+    back: '← Volver al inicio',
+  },
 }
 
 function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
@@ -77,7 +88,7 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="faq" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
+        <LangLinksBar cluster="faq" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh', 'es']} />
 
         <FAQAccordion lang={lang} />
 
