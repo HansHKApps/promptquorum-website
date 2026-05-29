@@ -482,7 +482,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         comparison: {
           title: 'Welches Framework sollten Sie verwenden?',
-          content: 'Das vollständige Entscheidungs-Framework — wann CO-STAR vs CRAFT vs RTF vs APE verwenden — mit Seite-an-Seite-Bewertung für jeden Anwendungsfall finden Sie unter [Welches Prompt-Framework sollten Sie verwenden?](https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=de)',
+          content: 'Das vollständige Entscheidungs-Framework — wann CO-STAR vs CRAFT vs RTF vs APE verwenden — mit Seite-an-Seite-Bewertung für jeden Anwendungsfall finden Sie unter [Welches Prompt-Framework sollten Sie verwenden?](https://www.promptquorum.com/de/prompt-engineering/which-prompt-framework-should-you-use)',
           rows: [
             { Framework: 'APE', 'Best For': 'Schnelle, einfache Anfragen', Complexity: '⭐ Niedrig' },
             { Framework: 'CRAFT', 'Best For': 'Marketing, Copywriting', Complexity: '⭐⭐ Mittel' },
@@ -716,7 +716,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         comparison: {
           title: 'Quel framework devriez-vous utiliser ?',
-          content: 'Pour le cadre de décision complet — quand utiliser CO-STAR vs CRAFT vs RTF vs APE — avec une notation côte à côte pour chaque cas d\'usage, voir [quel framework de prompt devriez-vous utiliser ?](https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=fr)',
+          content: 'Pour le cadre de décision complet — quand utiliser CO-STAR vs CRAFT vs RTF vs APE — avec une notation côte à côte pour chaque cas d\'usage, voir [quel framework de prompt devriez-vous utiliser ?](https://www.promptquorum.com/fr/prompt-engineering/which-prompt-framework-should-you-use)',
           rows: [
             { Framework: 'APE', 'Best For': 'Demandes rapides et simples', Complexity: '⭐ Faible' },
             { Framework: 'CRAFT', 'Best For': 'Marketing, copywriting', Complexity: '⭐⭐ Moyen' },
@@ -950,7 +950,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         comparison: {
           title: 'どのフレームワークを使うべき？',
-          content: '完全な意思決定フレームワーク — CO-STAR vs CRAFT vs RTF vs APEをいつ使うか — 各ユースケースの並べて評価については、[どのプロンプトフレームワークを使うべきか](https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=ja)をご覧ください。',
+          content: '完全な意思決定フレームワーク — CO-STAR vs CRAFT vs RTF vs APEをいつ使うか — 各ユースケースの並べて評価については、[どのプロンプトフレームワークを使うべきか](https://www.promptquorum.com/ja/prompt-engineering/which-prompt-framework-should-you-use)をご覧ください。',
           rows: [
             { Framework: 'APE', 'Best For': 'クイックで簡単なリクエスト', Complexity: '⭐ 低' },
             { Framework: 'CRAFT', 'Best For': 'マーケティング、コピーライティング', Complexity: '⭐⭐ 中' },
@@ -1184,7 +1184,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         comparison: {
           title: '您应该使用哪个框架？',
-          content: '关于完整的决策框架——何时使用CO-STAR vs CRAFT vs RTF vs APE——以及每个用例的并排评分，请参阅[您应该使用哪个提示词框架？](https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=zh)',
+          content: '关于完整的决策框架——何时使用CO-STAR vs CRAFT vs RTF vs APE——以及每个用例的并排评分，请参阅[您应该使用哪个提示词框架？](https://www.promptquorum.com/zh/prompt-engineering/which-prompt-framework-should-you-use)',
           rows: [
             { Framework: 'APE', 'Best For': '快速、简单的请求', Complexity: '⭐ 低' },
             { Framework: 'CRAFT', 'Best For': '营销、文案写作', Complexity: '⭐⭐ 中等' },
@@ -2692,7 +2692,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@type': 'HowTo',
         'inLanguage': 'de',
         name: 'KI-Modelle direkt vergleichen — Schritt für Schritt',
-        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=de',
+        url: 'https://www.promptquorum.com/de/blog/ai-model-comparison',
         step: [
           {
             '@type': 'HowToStep',
@@ -2731,7 +2731,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@type': 'ItemList',
         'inLanguage': 'de',
         name: 'KI-Modellvergleich 2026: GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro',
-        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=de',
+        url: 'https://www.promptquorum.com/de/blog/ai-model-comparison',
         itemListElement: [
           {
             '@type': 'ListItem',
@@ -2790,7 +2790,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Kurzantwort:** GPT-4o führt bei Geschwindigkeit und kreativer Ausgabe. Claude Opus 4.7 führt bei Reasoning-Genauigkeit und Langdokumentenanalyse (1 Mio. Tokens Kontext). Gemini 3.1 Pro führt bei multimodalen Aufgaben und verfügt über das größte Kontextfenster (2 Mio. Tokens). Für kritische Aufgaben sollten Sie denselben Prompt an alle drei Modelle senden — wer sich auf ein einziges Modell verlässt, verschenkt Genauigkeit.',
             'Unterschiedliche KI-Modelle sind für unterschiedliche Aufgaben optimiert. ChatGPT (GPT-4o) ist das schnellste und vielseitigste Modell. Claude (Opus 4.7) erzielt die höchsten Werte bei Reasoning- und Code-Benchmarks. Gemini (3.1 Pro) ist bei multimodalen Aufgaben und dem Zugriff auf Echtzeitinformationen am stärksten. Wer weiß, welches Modell zu welcher Aufgabe passt, erzielt bessere Ergebnisse bei geringeren Kosten.',
             'Dieser Leitfaden vergleicht alle drei Frontier-Modelle Stand 2026: Stärken, Kontextfenster, Preise und die Aufgaben, bei denen jedes Modell gewinnt.',
-            'Für einen systematischen Ansatz zur Modellauswahl — einschließlich der Entscheidung zwischen Open-Source und kommerziellen Modellen — siehe [das richtige KI-Modell auswählen: GPT, Claude oder Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de).',
+            'Für einen systematischen Ansatz zur Modellauswahl — einschließlich der Entscheidung zwischen Open-Source und kommerziellen Modellen — siehe [das richtige KI-Modell auswählen: GPT, Claude oder Gemini](https://www.promptquorum.com/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
         },
         chatgptSection: {
@@ -2920,7 +2920,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'LLaMA 3.1 70B: Vergleichbar mit GPT-4o bei Reasoning-Benchmarks; benötigt ca. 40 GB VRAM oder quantisiert 8–16 GB',
             'Qwen2.5 14B: Stärkstes Open-Source-Modell für Code-Generierung (Stand 2025)',
             'Mistral 7B: Schnellste Inferenz auf Consumer-Hardware; ideal für latenzempfindliche Anwendungen',
-            '[Lokale LLMs — Übersicht und Einrichtungsanleitungen](/local-llms?lang=de) — Ollama, LM Studio und llama.cpp auf Mac, Windows und Linux',
+            '[Lokale LLMs — Übersicht und Einrichtungsanleitungen](/de/local-llms) — Ollama, LM Studio und llama.cpp auf Mac, Windows und Linux',
           ],
         },
         nextSteps: {
@@ -2988,10 +2988,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Wie LLMs wirklich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de) — Transformer-Architektur, Attention und warum Modelle halluzinieren',
-            '[KI-Grenzen: Was LLMs nicht können](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — die acht strukturellen Einschränkungen, die alle Modelle teilen',
-            '[Open-Source vs. proprietäre LLMs](/prompt-engineering/open-source-vs-proprietary-llms?lang=de) — wann lokale Modelle statt Cloud-APIs sinnvoll sind',
-            '[KI-Halluzinationen: Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — Halluzinationen erkennen und modellübergreifend reduzieren',
+            '[Wie LLMs wirklich funktionieren](/de/prompt-engineering/how-llms-actually-work) — Transformer-Architektur, Attention und warum Modelle halluzinieren',
+            '[KI-Grenzen: Was LLMs nicht können](/de/prompt-engineering/ai-limitations-what-llms-cant-do) — die acht strukturellen Einschränkungen, die alle Modelle teilen',
+            '[Open-Source vs. proprietäre LLMs](/de/prompt-engineering/open-source-vs-proprietary-llms) — wann lokale Modelle statt Cloud-APIs sinnvoll sind',
+            '[KI-Halluzinationen: Warum KI Dinge erfindet](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Halluzinationen erkennen und modellübergreifend reduzieren',
           ],
         },
         sources: {
@@ -3074,7 +3074,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@type': 'HowTo',
         'inLanguage': 'fr',
         name: 'Comparer les modèles d\'IA côte à côte',
-        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=fr',
+        url: 'https://www.promptquorum.com/fr/blog/ai-model-comparison',
         step: [
           {
             '@type': 'HowToStep',
@@ -3113,7 +3113,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@type': 'ItemList',
         'inLanguage': 'fr',
         name: 'Comparaison des modèles d\'IA 2026 : GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro',
-        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=fr',
+        url: 'https://www.promptquorum.com/fr/blog/ai-model-comparison',
         itemListElement: [
           {
             '@type': 'ListItem',
@@ -3172,7 +3172,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**En résumé :** GPT-4o domine en vitesse et en créativité. Claude Opus 4.7 domine en précision de raisonnement et en analyse de longs documents (contexte 1M tokens). Gemini 3.1 Pro domine sur les tâches multimodales avec la plus grande fenêtre de contexte (2M tokens). Pour les travaux critiques, envoyez le même prompt aux trois — se limiter à un seul modèle, c\'est laisser de la précision sur la table.',
             'Chaque modèle d\'IA excelle dans des domaines différents. ChatGPT (GPT-4o) est le plus rapide et le plus polyvalent. Claude (Opus 4.7) obtient les meilleurs scores sur les benchmarks de raisonnement et de code. Gemini (3.1 Pro) est le plus fort sur les tâches multimodales et l\'accès aux données en temps réel.',
             'Ce guide compare les trois modèles frontier en 2026 : points forts, fenêtres de contexte, tarifs et cas d\'usage où chacun s\'impose.',
-            'Pour une approche systématique de la sélection de modèle — y compris quand choisir open-source plutôt que commercial — voir [comment choisir le bon modèle d\'IA : GPT, Claude ou Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr).',
+            'Pour une approche systématique de la sélection de modèle — y compris quand choisir open-source plutôt que commercial — voir [comment choisir le bon modèle d\'IA : GPT, Claude ou Gemini](https://www.promptquorum.com/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
         },
         chatgptSection: {
@@ -3302,7 +3302,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'LLaMA 3.1 70B : comparable à GPT-4o sur les benchmarks de raisonnement ; requiert ~40 Go de VRAM ou quantisé à 8–16 Go',
             'Qwen2.5 14B : modèle open source le plus performant pour la génération de code (2025)',
             'Mistral 7B : inférence la plus rapide sur matériel grand public ; idéal pour les applications sensibles à la latence',
-            '[Hub LLMs locaux](/local-llms?lang=fr) — guides d\'installation pour Ollama, LM Studio et llama.cpp sur Mac, Windows et Linux',
+            '[Hub LLMs locaux](/fr/local-llms) — guides d\'installation pour Ollama, LM Studio et llama.cpp sur Mac, Windows et Linux',
           ],
         },
         nextSteps: {
@@ -3368,10 +3368,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Comment fonctionnent vraiment les LLMs](/prompt-engineering/how-llms-actually-work?lang=fr) — architecture transformer, attention et pourquoi les modèles hallucinent',
-            '[Limites de l\'IA : ce que les LLMs ne peuvent pas faire](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — les huit contraintes structurelles communes à tous les modèles',
-            '[LLMs open source vs propriétaires](/prompt-engineering/open-source-vs-proprietary-llms?lang=fr) — quand utiliser des modèles locaux plutôt que des API cloud',
-            '[Hallucinations IA : pourquoi l\'IA invente des informations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — détecter et réduire les hallucinations selon les modèles',
+            '[Comment fonctionnent vraiment les LLMs](/fr/prompt-engineering/how-llms-actually-work) — architecture transformer, attention et pourquoi les modèles hallucinent',
+            '[Limites de l\'IA : ce que les LLMs ne peuvent pas faire](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — les huit contraintes structurelles communes à tous les modèles',
+            '[LLMs open source vs propriétaires](/fr/prompt-engineering/open-source-vs-proprietary-llms) — quand utiliser des modèles locaux plutôt que des API cloud',
+            '[Hallucinations IA : pourquoi l\'IA invente des informations](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — détecter et réduire les hallucinations selon les modèles',
           ],
         },
         sources: {
@@ -3470,7 +3470,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@type': 'HowTo',
         'inLanguage': 'ja',
         name: 'AIモデルを並べて比較する方法',
-        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=ja',
+        url: 'https://www.promptquorum.com/ja/blog/ai-model-comparison',
         step: [
           {
             '@type': 'HowToStep',
@@ -3509,7 +3509,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@type': 'ItemList',
         'inLanguage': 'ja',
         name: 'AIモデル比較2026：GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro',
-        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=ja',
+        url: 'https://www.promptquorum.com/ja/blog/ai-model-comparison',
         itemListElement: [
           {
             '@type': 'ListItem',
@@ -3568,7 +3568,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**結論から言うと：** GPT-4oは速度とクリエイティブな出力でリード。Claude Opus 4.7は推論精度と長文書分析（1Mトークンコンテキスト）でリード。Gemini 3.1 Proはマルチモーダルタスクと最大のコンテキストウィンドウ（2Mトークン）でリード。重要な作業では3つすべてに同じプロンプトを送信してください — 1つのモデルだけに依存すると精度を犠牲にすることになります。',
             'AIモデルはそれぞれ異なるタスクで優れています。ChatGPT（GPT-4o）は最も速く汎用性が高いモデルです。Claude（Opus 4.7）は推論とコードのベンチマークで最高スコアを記録しています。Gemini（3.1 Pro）はマルチモーダルタスクとリアルタイムWebアクセスで最も優れています。',
             'このガイドでは2026年時点の3つのフロンティアモデルを比較します：強み、コンテキストウィンドウ、料金、そして各モデルが勝るタスクについて解説します。',
-            'モデル選択への体系的なアプローチ — オープンソースと商用モデルの選び方を含む — については、[適切なAIモデルの選び方：GPT、Claude、またはGemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja)をご覧ください。',
+            'モデル選択への体系的なアプローチ — オープンソースと商用モデルの選び方を含む — については、[適切なAIモデルの選び方：GPT、Claude、またはGemini](https://www.promptquorum.com/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)をご覧ください。',
           ],
         },
         chatgptSection: {
@@ -3698,7 +3698,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'LLaMA 3.1 70B：推論ベンチマークでGPT-4oと競合；約40GB VRAMまたは量子化で8〜16GB必要',
             'Qwen2.5 14B：2025年時点でコード生成で最も強力なオープンソースモデル',
             'Mistral 7B：コンシューマーハードウェアで最速の推論；レイテンシが重要なアプリケーションに最適',
-            '[ローカルLLMハブ](/local-llms?lang=ja) — Mac、Windows、LinuxでのOllama、LM Studio、llama.cppのセットアップガイド',
+            '[ローカルLLMハブ](/ja/local-llms) — Mac、Windows、LinuxでのOllama、LM Studio、llama.cppのセットアップガイド',
           ],
         },
         nextSteps: {
@@ -3766,10 +3766,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         relatedReading: {
           title: '関連資料',
           items: [
-            '[LLMの実際の仕組み](/prompt-engineering/how-llms-actually-work?lang=ja) — トランスフォーマーアーキテクチャ、アテンション、モデルが幻覚を起こす理由',
-            '[AIの限界：LLMができないこと](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — すべてのモデルが共有する8つの構造的制約',
-            '[オープンソース vs プロプライエタリLLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=ja) — ローカルモデルとクラウドAPIの使い分け',
-            '[AI幻覚：AIがなぜ事実を作り上げるのか](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) — モデル間で幻覚を検出・削減する方法',
+            '[LLMの実際の仕組み](/ja/prompt-engineering/how-llms-actually-work) — トランスフォーマーアーキテクチャ、アテンション、モデルが幻覚を起こす理由',
+            '[AIの限界：LLMができないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — すべてのモデルが共有する8つの構造的制約',
+            '[オープンソース vs プロプライエタリLLM](/ja/prompt-engineering/open-source-vs-proprietary-llms) — ローカルモデルとクラウドAPIの使い分け',
+            '[AI幻覚：AIがなぜ事実を作り上げるのか](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — モデル間で幻覚を検出・削減する方法',
           ],
         },
         sources: {
@@ -3868,7 +3868,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@type': 'HowTo',
         'inLanguage': 'zh',
         name: '如何并排比较AI模型',
-        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=zh',
+        url: 'https://www.promptquorum.com/zh/blog/ai-model-comparison',
         step: [
           {
             '@type': 'HowToStep',
@@ -3907,7 +3907,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@type': 'ItemList',
         'inLanguage': 'zh',
         name: '2026年AI模型对比：GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro',
-        url: 'https://www.promptquorum.com/blog/ai-model-comparison?lang=zh',
+        url: 'https://www.promptquorum.com/zh/blog/ai-model-comparison',
         itemListElement: [
           {
             '@type': 'ListItem',
@@ -3966,7 +3966,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**核心结论：** GPT-4o在速度和创意输出方面领先。Claude Opus 4.7在推理准确性和长文档分析（1M token上下文）方面领先。Gemini 3.1 Pro在多模态任务方面领先，且拥有最大的上下文窗口（2M token）。对于关键工作，建议将同一提示词发送给三款模型——依赖单一模型会损失准确性。',
             '不同的AI模型在不同任务上表现各异。ChatGPT（GPT-4o）速度最快、通用性最强。Claude（Opus 4.7）在推理和代码基准测试中得分最高。Gemini（3.1 Pro）在多模态任务和实时网络访问方面最为出色。了解哪个模型适合哪类任务，意味着更好的结果和更低的成本。',
             '本指南对比2026年三大前沿模型：优势、上下文窗口、定价，以及每款模型的适用场景。',
-            '关于模型选择的系统方法——包括何时选择开源与商业模型——请参阅[如何选择正确的AI模型：GPT、Claude还是Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)。',
+            '关于模型选择的系统方法——包括何时选择开源与商业模型——请参阅[如何选择正确的AI模型：GPT、Claude还是Gemini](https://www.promptquorum.com/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)。',
           ],
         },
         chatgptSection: {
@@ -4096,7 +4096,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'LLaMA 3.1 70B：在推理基准测试中与GPT-4o竞争；需要约40GB VRAM或量化后8-16GB',
             'Qwen2.5 14B：2025年代码生成能力最强的开源模型，对中文支持出色',
             'Mistral 7B：消费级硬件上推理最快；最适合延迟敏感型应用',
-            '[本地LLM中心](/local-llms?lang=zh) — Mac、Windows和Linux上的Ollama、LM Studio和llama.cpp安装指南',
+            '[本地LLM中心](/zh/local-llms) — Mac、Windows和Linux上的Ollama、LM Studio和llama.cpp安装指南',
           ],
         },
         nextSteps: {
@@ -4164,10 +4164,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[LLM的实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh) — Transformer架构、注意力机制及模型产生幻觉的原因',
-            '[AI的局限性：LLM做不到什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 所有模型共有的八项结构性限制',
-            '[开源vs专有LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh) — 何时使用本地模型vs云端API',
-            '[AI幻觉：为什么AI会编造信息](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh) — 如何在各模型间检测和减少幻觉',
+            '[LLM的实际工作原理](/zh/prompt-engineering/how-llms-actually-work) — Transformer架构、注意力机制及模型产生幻觉的原因',
+            '[AI的局限性：LLM做不到什么](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) — 所有模型共有的八项结构性限制',
+            '[开源vs专有LLM](/zh/prompt-engineering/open-source-vs-proprietary-llms) — 何时使用本地模型vs云端API',
+            '[AI幻觉：为什么AI会编造信息](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 如何在各模型间检测和减少幻觉',
           ],
         },
         sources: {
@@ -6450,7 +6450,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       sections: {
         theProblem: {
           title: 'Das Problem: Warum manuelle Optimierung scheitert',
-          content: ['Wie oft haben Sie einen Prompt geschrieben und ein mittelmäßiges Ergebnis erhalten?', 'Die Kosten für schlechte Prompts sind real: schlechte Ergebnisse, verschwendete Zeit.', 'Ein strukturierter Prompt funktioniert beim ersten Versuch. Ein schlechter braucht 5 Versuche.', 'Den vollständigen Optimierungsleitfaden — mit Kostensenkung, Latenztuning und Multi-Modell-Tests — finden Sie unter [Grundlagen der Prompt-Optimierung](https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=de).'],
+          content: ['Wie oft haben Sie einen Prompt geschrieben und ein mittelmäßiges Ergebnis erhalten?', 'Die Kosten für schlechte Prompts sind real: schlechte Ergebnisse, verschwendete Zeit.', 'Ein strukturierter Prompt funktioniert beim ersten Versuch. Ein schlechter braucht 5 Versuche.', 'Den vollständigen Optimierungsleitfaden — mit Kostensenkung, Latenztuning und Multi-Modell-Tests — finden Sie unter [Grundlagen der Prompt-Optimierung](https://www.promptquorum.com/de/prompt-engineering/fundamentals-of-prompt-optimization).'],
         },
         conclusion: {
           title: 'Zukunft',
@@ -6469,7 +6469,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       sections: {
         theProblem: {
           title: 'Le Problème',
-          content: ['Combien de fois avez-vous écrit un prompt et obtenu un résultat médiocre?', 'Le coût des mauvais prompts est réel : mauvais résultats, temps gaspillé.', 'Un prompt bien structuré fonctionne au premier essai. Un mauvais en a besoin de 5.', 'Pour le guide complet d\'optimisation couvrant la réduction des coûts, le réglage de latence et les tests multi-modèles, voir [fondamentaux de l\'optimisation des prompts](https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=fr).'],
+          content: ['Combien de fois avez-vous écrit un prompt et obtenu un résultat médiocre?', 'Le coût des mauvais prompts est réel : mauvais résultats, temps gaspillé.', 'Un prompt bien structuré fonctionne au premier essai. Un mauvais en a besoin de 5.', 'Pour le guide complet d\'optimisation couvrant la réduction des coûts, le réglage de latence et les tests multi-modèles, voir [fondamentaux de l\'optimisation des prompts](https://www.promptquorum.com/fr/prompt-engineering/fundamentals-of-prompt-optimization).'],
         },
         conclusion: {
           title: 'Avenir',
@@ -6488,7 +6488,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       sections: {
         theProblem: {
           title: '問題',
-          content: ['プロンプトを書いて平凡な結果を得たことがありますか?', '不十分なプロンプトのコストは実質的です：悪い結果、無駄な時間。', '構造化されたプロンプトは最初の試みで機能します。悪いものは5回必要です。', 'コスト削減、レイテンシ調整、マルチモデルテストを網羅した完全な最適化ガイドについては、[プロンプト最適化の基礎](https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=ja)をご覧ください。'],
+          content: ['プロンプトを書いて平凡な結果を得たことがありますか?', '不十分なプロンプトのコストは実質的です：悪い結果、無駄な時間。', '構造化されたプロンプトは最初の試みで機能します。悪いものは5回必要です。', 'コスト削減、レイテンシ調整、マルチモデルテストを網羅した完全な最適化ガイドについては、[プロンプト最適化の基礎](https://www.promptquorum.com/ja/prompt-engineering/fundamentals-of-prompt-optimization)をご覧ください。'],
         },
         conclusion: {
           title: '未来',
@@ -6507,7 +6507,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       sections: {
         theProblem: {
           title: '问题',
-          content: ['你写过提示词却得到平庸结果吗?', '不好的提示词成本很高：糟糕结果、浪费时间。', '结构化提示词第一次就能工作。糟糕的需要5次。', '关于涵盖降本、延迟调优和多模型测试的完整优化指南，请参阅[提示词优化基础](https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=zh)。'],
+          content: ['你写过提示词却得到平庸结果吗?', '不好的提示词成本很高：糟糕结果、浪费时间。', '结构化提示词第一次就能工作。糟糕的需要5次。', '关于涵盖降本、延迟调优和多模型测试的完整优化指南，请参阅[提示词优化基础](https://www.promptquorum.com/zh/prompt-engineering/fundamentals-of-prompt-optimization)。'],
         },
         conclusion: {
           title: '未来',
@@ -7266,7 +7266,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'KI-Konsens-Scoring ist eine Methode zur Bewertung der Zuverlässigkeit von KI-generierten Informationen, indem die Übereinstimmung mehrerer unabhängiger Sprachmodelle gemessen wird. Wenn Sie denselben Prompt an fünf oder mehr KI-Modelle senden und analysieren, wo ihre Antworten übereinstimmen und divergieren, erhalten Sie ein statistisches Signal darüber, welche Aussagen wahrscheinlich korrekt sind.',
             'Das zugrunde liegende Prinzip stammt aus Ensemble-Methoden der Statistik: Unabhängige Quellen, die zum gleichen Schluss kommen, sind wahrscheinlicher korrekt als eine einzelne Quelle — selbst wenn diese einzelne Quelle sehr leistungsfähig ist.',
             'Konsens-Scoring weist jeder Aussage in einem Satz von KI-Antworten ein Konfidenzniveau zu, basierend darauf, wie viele Modelle unabhängig voneinander zugestimmt haben. Hoher Konsens = hohe Zuverlässigkeit. Niedriger Konsens = genauer untersuchen.',
-            'Konsens-Scoring entfaltet die stärkste Wirkung in Kombination mit systematischer Prompt-Evaluation. Das Framework für Genauigkeits-, Konsistenz- und Instruction-Following-Metriken finden Sie unter [Wie man die Qualität von Prompts bewertet](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=de).',
+            'Konsens-Scoring entfaltet die stärkste Wirkung in Kombination mit systematischer Prompt-Evaluation. Das Framework für Genauigkeits-, Konsistenz- und Instruction-Following-Metriken finden Sie unter [Wie man die Qualität von Prompts bewertet](https://www.promptquorum.com/de/prompt-engineering/how-to-evaluate-prompt-quality).',
           ],
         },
         problem: {
@@ -7373,7 +7373,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Le score de consensus IA est une méthode d\'évaluation de la fiabilité des informations générées par l\'IA en mesurant l\'accord entre plusieurs modèles de langage indépendants. Lorsque vous envoyez le même prompt à cinq modèles ou plus et analysez où leurs réponses convergent et divergent, vous obtenez un signal statistique sur les affirmations probablement exactes.',
             'Le principe sous-jacent vient des méthodes d\'ensemble en statistique : des sources indépendantes qui arrivent à la même conclusion ont plus de chances d\'être correctes qu\'une seule source.',
-            'Le score de consensus est plus efficace combiné à une évaluation systématique des prompts. Pour le cadre couvrant précision, cohérence et suivi des instructions, voir [comment évaluer la qualité des prompts](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr).',
+            'Le score de consensus est plus efficace combiné à une évaluation systématique des prompts. Pour le cadre couvrant précision, cohérence et suivi des instructions, voir [comment évaluer la qualité des prompts](https://www.promptquorum.com/fr/prompt-engineering/how-to-evaluate-prompt-quality).',
           ],
         },
         problem: {
@@ -7480,7 +7480,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'AIコンセンサススコアリングは、複数の独立した言語モデル間の一致度を測定することで、AIが生成した情報の信頼性を評価する方法です。同じプロンプトを5つ以上のAIモデルに送信し、回答が収束する箇所と分岐する箇所を分析することで、どの主張が正確でどれが潜在的にハルシネートされているかについての統計的シグナルが得られます。',
             'コンセンサススコアリングは、同意したモデルの数に基づいて各主張に信頼度レベルを割り当てます。高いコンセンサス＝高い信頼性。低いコンセンサス＝さらに調査が必要。',
-            'コンセンサススコアリングは、体系的なプロンプト評価と組み合わせることで最大の効果を発揮します。精度・一貫性・指示追従メトリクスのフレームワークについては、[プロンプト品質の評価方法](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)をご覧ください。',
+            'コンセンサススコアリングは、体系的なプロンプト評価と組み合わせることで最大の効果を発揮します。精度・一貫性・指示追従メトリクスのフレームワークについては、[プロンプト品質の評価方法](https://www.promptquorum.com/ja/prompt-engineering/how-to-evaluate-prompt-quality)をご覧ください。',
           ],
         },
         problem: {
@@ -7587,7 +7587,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'AI共识评分是一种通过测量多个独立语言模型之间的一致性来评估AI生成信息可靠性的方法。当您将相同的提示词发送给五个或更多AI模型，并分析它们的回答在哪里收敛和发散时，您会获得关于哪些主张可能准确、哪些可能被幻觉的统计信号。',
             '共识评分基于每个声明有多少模型独立同意，为每个声明分配一个置信度级别。高共识=高可靠性。低共识=进一步调查。',
-            '共识评分与系统性提示词评估结合使用效果最佳。关于涵盖准确性、一致性和指令遵循指标的框架，请参阅[如何评估提示词质量](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)。',
+            '共识评分与系统性提示词评估结合使用效果最佳。关于涵盖准确性、一致性和指令遵循指标的框架，请参阅[如何评估提示词质量](https://www.promptquorum.com/zh/prompt-engineering/how-to-evaluate-prompt-quality)。',
           ],
         },
         problem: {
@@ -9567,7 +9567,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Frontier-KI-Modelle sind die fortschrittlichsten Large Language Models (LLMs), die Stand März 2026 verfügbar sind. Sie repräsentieren die technische Spitze in Bezug auf natürliches Sprachverständnis, Reasoning und Generierung — mit kontinuierlichen Verbesserungen in Leistung, Geschwindigkeit und Fähigkeit.',
             'Die wichtigsten Frontier-Modelle Stand März 2026 sind:',
-            'Einen praktischen Leitfaden zum Aufbau und zur Pflege einer Team-Prompt-Bibliothek — einschließlich Versionskontrolle, Ownership und Tests — finden Sie unter [Prompt-Bibliothek aufbauen, die Stunden spart](/prompt-engineering/build-a-prompt-library?lang=de).',
+            'Einen praktischen Leitfaden zum Aufbau und zur Pflege einer Team-Prompt-Bibliothek — einschließlich Versionskontrolle, Ownership und Tests — finden Sie unter [Prompt-Bibliothek aufbauen, die Stunden spart](/de/prompt-engineering/build-a-prompt-library).',
           ],
           items: [
             'GPT-5.x (OpenAI) — Multimodales Reasoning, Code und Analyse',
@@ -9798,11 +9798,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Setzen Sie Ihre Recherche zu KI-Modellen und Prompt-Optimierung fort:',
           ],
           items: [
-            '[KI-Modell-Vergleichsleitfaden](/prompt-engineering/gpt-claude-gemini-which-model?lang=de) — Multi-Modell-Vergleichsmethodik und Entscheidungsrahmen',
-            '[Was ist KI-Konsens-Scoring?](/blog/what-is-ai-consensus-scoring?lang=de) — Wie PromptQuorum Antworten über Modelle aggregiert',
-            '[Prompt-Optimierungs-Best-Practices](/prompt-engineering/fundamentals-of-prompt-optimization?lang=de) — Strukturierte Verfeinerungsmethoden, die Ausgaben über alle Modelle hinweg verbessern',
-            '[Prompt-Engineering-Hub](/prompt-engineering?lang=de) — 50+ Artikel zu Frameworks, Techniken und Optimierungsstrategien',
-            '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — Wann Beispiele vs. direkte Anweisungen verwendet werden',
+            '[KI-Modell-Vergleichsleitfaden](/de/prompt-engineering/gpt-claude-gemini-which-model) — Multi-Modell-Vergleichsmethodik und Entscheidungsrahmen',
+            '[Was ist KI-Konsens-Scoring?](/de/blog/what-is-ai-consensus-scoring) — Wie PromptQuorum Antworten über Modelle aggregiert',
+            '[Prompt-Optimierungs-Best-Practices](/de/prompt-engineering/fundamentals-of-prompt-optimization) — Strukturierte Verfeinerungsmethoden, die Ausgaben über alle Modelle hinweg verbessern',
+            '[Prompt-Engineering-Hub](/de/prompt-engineering) — 50+ Artikel zu Frameworks, Techniken und Optimierungsstrategien',
+            '[Zero-Shot vs. Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) — Wann Beispiele vs. direkte Anweisungen verwendet werden',
           ],
         },
         sources: {
@@ -9830,7 +9830,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Les modèles IA frontier sont les grands modèles de langage les plus avancés disponibles en mars 2026. Ils représentent la frontière technique de la compréhension du langage naturel, du raisonnement et de la génération — progressant continuellement en performance, vitesse et capacité.',
             'Les principaux modèles frontier en mars 2026 sont :',
-            'Pour un guide pratique sur la création et la maintenance d\'une bibliothèque de prompts d\'équipe — y compris le contrôle de version, la propriété et les tests — voir [Construire une bibliothèque de prompts qui fait gagner des heures](/prompt-engineering/build-a-prompt-library?lang=fr).',
+            'Pour un guide pratique sur la création et la maintenance d\'une bibliothèque de prompts d\'équipe — y compris le contrôle de version, la propriété et les tests — voir [Construire une bibliothèque de prompts qui fait gagner des heures](/fr/prompt-engineering/build-a-prompt-library).',
           ],
           items: [
             'GPT-5.x (OpenAI) — raisonnement multimodal, code et analyse',
@@ -10061,11 +10061,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Poursuivez vos recherches sur les modèles IA et l\'optimisation des prompts :',
           ],
           items: [
-            '[Guide de comparaison des modèles IA](/prompt-engineering/gpt-claude-gemini-which-model?lang=fr) — Méthodologie de comparaison multi-modèles et cadre de décision',
-            '[Qu\'est-ce que le scoring de consensus IA ?](/blog/what-is-ai-consensus-scoring?lang=fr) — Comment PromptQuorum agrège les réponses entre les modèles',
-            '[Bonnes pratiques d\'optimisation des prompts](/prompt-engineering/fundamentals-of-prompt-optimization?lang=fr) — Méthodes de raffinement structuré qui améliorent les sorties sur tous les modèles',
-            '[Hub d\'ingénierie des prompts](/prompt-engineering?lang=fr) — 50+ articles sur les frameworks, techniques et stratégies d\'optimisation',
-            '[Prompting zéro-shot vs few-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — Quand utiliser des exemples vs des instructions directes',
+            '[Guide de comparaison des modèles IA](/fr/prompt-engineering/gpt-claude-gemini-which-model) — Méthodologie de comparaison multi-modèles et cadre de décision',
+            '[Qu\'est-ce que le scoring de consensus IA ?](/fr/blog/what-is-ai-consensus-scoring) — Comment PromptQuorum agrège les réponses entre les modèles',
+            '[Bonnes pratiques d\'optimisation des prompts](/fr/prompt-engineering/fundamentals-of-prompt-optimization) — Méthodes de raffinement structuré qui améliorent les sorties sur tous les modèles',
+            '[Hub d\'ingénierie des prompts](/fr/prompt-engineering) — 50+ articles sur les frameworks, techniques et stratégies d\'optimisation',
+            '[Prompting zéro-shot vs few-shot](/fr/prompt-engineering/zero-shot-vs-few-shot) — Quand utiliser des exemples vs des instructions directes',
           ],
         },
         sources: {
@@ -10093,7 +10093,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'フロンティアAIモデルは、2026年3月時点で利用可能な最も高度な大規模言語モデルです。自然言語理解・推論・生成の技術的最前線を担い、パフォーマンス・速度・能力が継続的に向上しています。',
             '2026年3月時点の主なフロンティアモデルは以下の通りです：',
-            'チームのプロンプトライブラリ構築・維持に関する実践的なガイド（バージョン管理・所有権・テストを含む）は、[時間を節約するプロンプトライブラリの構築](/prompt-engineering/build-a-prompt-library?lang=ja)をご覧ください。',
+            'チームのプロンプトライブラリ構築・維持に関する実践的なガイド（バージョン管理・所有権・テストを含む）は、[時間を節約するプロンプトライブラリの構築](/ja/prompt-engineering/build-a-prompt-library)をご覧ください。',
           ],
           items: [
             'GPT-5.x（OpenAI）— マルチモーダル推論・コード・分析',
@@ -10324,11 +10324,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'AIモデルとプロンプト最適化の研究を続けてください：',
           ],
           items: [
-            '[AIモデル比較ガイド](/prompt-engineering/gpt-claude-gemini-which-model?lang=ja) — マルチモデル比較手法と意思決定フレームワーク',
-            '[AIコンセンサススコアリングとは？](/blog/what-is-ai-consensus-scoring?lang=ja) — PromptQuorumがモデル間で回答を集約する方法',
-            '[プロンプト最適化のベストプラクティス](/prompt-engineering/fundamentals-of-prompt-optimization?lang=ja) — すべてのモデルで出力を改善する構造化された改善方法',
-            '[プロンプトエンジニアリングハブ](/prompt-engineering?lang=ja) — フレームワーク・技術・最適化戦略に関する50以上の記事',
-            '[ゼロショットvs少数ショットプロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) — 例を使う場合と直接指示を使う場合',
+            '[AIモデル比較ガイド](/ja/prompt-engineering/gpt-claude-gemini-which-model) — マルチモデル比較手法と意思決定フレームワーク',
+            '[AIコンセンサススコアリングとは？](/ja/blog/what-is-ai-consensus-scoring) — PromptQuorumがモデル間で回答を集約する方法',
+            '[プロンプト最適化のベストプラクティス](/ja/prompt-engineering/fundamentals-of-prompt-optimization) — すべてのモデルで出力を改善する構造化された改善方法',
+            '[プロンプトエンジニアリングハブ](/ja/prompt-engineering) — フレームワーク・技術・最適化戦略に関する50以上の記事',
+            '[ゼロショットvs少数ショットプロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — 例を使う場合と直接指示を使う場合',
           ],
         },
         sources: {
@@ -10356,7 +10356,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '前沿AI模型是截至2026年3月可用的最先进大型语言模型，代表自然语言理解、推理和生成的技术最前沿，并在性能、速度和能力方面持续进步。',
             '2026年3月的主要前沿模型包括：',
-            '关于如何构建和维护团队提示词库（含版本控制、所有权和测试），请参阅[构建节省时间的提示词库](/prompt-engineering/build-a-prompt-library?lang=zh)。',
+            '关于如何构建和维护团队提示词库（含版本控制、所有权和测试），请参阅[构建节省时间的提示词库](/zh/prompt-engineering/build-a-prompt-library)。',
           ],
           items: [
             'GPT-5.x（OpenAI）— 多模态推理、代码与分析',
@@ -10587,11 +10587,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '继续深入研究AI模型和提示词优化：',
           ],
           items: [
-            '[AI模型比较指南](/prompt-engineering/gpt-claude-gemini-which-model?lang=zh) — 多模型比较方法论和决策框架',
-            '[什么是AI共识评分？](/blog/what-is-ai-consensus-scoring?lang=zh) — PromptQuorum如何跨模型聚合响应',
-            '[提示词优化最佳实践](/prompt-engineering/fundamentals-of-prompt-optimization?lang=zh) — 提升所有模型输出质量的结构化优化方法',
-            '[提示词工程中心](/prompt-engineering?lang=zh) — 50+篇关于框架、技术和优化策略的文章',
-            '[零样本vs少样本提示词](/prompt-engineering/zero-shot-vs-few-shot?lang=zh) — 何时使用示例，何时使用直接指令',
+            '[AI模型比较指南](/zh/prompt-engineering/gpt-claude-gemini-which-model) — 多模型比较方法论和决策框架',
+            '[什么是AI共识评分？](/zh/blog/what-is-ai-consensus-scoring) — PromptQuorum如何跨模型聚合响应',
+            '[提示词优化最佳实践](/zh/prompt-engineering/fundamentals-of-prompt-optimization) — 提升所有模型输出质量的结构化优化方法',
+            '[提示词工程中心](/zh/prompt-engineering) — 50+篇关于框架、技术和优化策略的文章',
+            '[零样本vs少样本提示词](/zh/prompt-engineering/zero-shot-vs-few-shot) — 何时使用示例，何时使用直接指令',
           ],
         },
         sources: {
@@ -11292,11 +11292,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         relatedReading: {
           title: 'Weiterführende Lektüre',
           items: [
-            '[Qwen vs. Claude vs. DeepSeek: Lokaler LLM-Vergleich](/local-llms/qwen-vs-claude-vs-deepseek-local-2026?lang=de)',
-            '[Qwen lokal betreiben: Installations- und Einrichtungsleitfaden](/local-llms/run-qwen-locally-guide-2026?lang=de)',
-            '[Qwen Coder vs. DeepSeek vs. Mistral: Benchmarks](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026?lang=de)',
-            '[Lokale LLMs Datenschutz-Manifest](/local-llms/qwen-gdpr-privacy-manifesto-2026?lang=de)',
-            '[Lokale LLMs Hub](/local-llms?lang=de)',
+            '[Qwen vs. Claude vs. DeepSeek: Lokaler LLM-Vergleich](/de/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+            '[Qwen lokal betreiben: Installations- und Einrichtungsleitfaden](/de/local-llms/run-qwen-locally-guide-2026)',
+            '[Qwen Coder vs. DeepSeek vs. Mistral: Benchmarks](/de/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
+            '[Lokale LLMs Datenschutz-Manifest](/de/local-llms/qwen-gdpr-privacy-manifesto-2026)',
+            '[Lokale LLMs Hub](/de/local-llms)',
           ],
         },
         faq: {
@@ -11315,7 +11315,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'de',
-        url: 'https://www.promptquorum.com/blog/eu-companies-local-qwen-gdpr-shift?lang=de',
+        url: 'https://www.promptquorum.com/de/blog/eu-companies-local-qwen-gdpr-shift',
         mainEntity: [
           {
             '@type': 'Question',
@@ -11443,11 +11443,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         relatedReading: {
           title: 'Pour aller plus loin',
           items: [
-            '[Qwen vs Claude vs DeepSeek : comparatif LLM local](/local-llms/qwen-vs-claude-vs-deepseek-local-2026?lang=fr)',
-            '[Exécuter Qwen en local : guide d\'installation et de configuration](/local-llms/run-qwen-locally-guide-2026?lang=fr)',
-            '[Qwen Coder vs DeepSeek vs Mistral : benchmarks](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026?lang=fr)',
-            '[Manifeste vie privée des LLM locaux](/local-llms/qwen-gdpr-privacy-manifesto-2026?lang=fr)',
-            '[Hub LLM locaux](/local-llms?lang=fr)',
+            '[Qwen vs Claude vs DeepSeek : comparatif LLM local](/fr/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+            '[Exécuter Qwen en local : guide d\'installation et de configuration](/fr/local-llms/run-qwen-locally-guide-2026)',
+            '[Qwen Coder vs DeepSeek vs Mistral : benchmarks](/fr/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
+            '[Manifeste vie privée des LLM locaux](/fr/local-llms/qwen-gdpr-privacy-manifesto-2026)',
+            '[Hub LLM locaux](/fr/local-llms)',
           ],
         },
         faq: {
@@ -11464,7 +11464,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'fr',
-        url: 'https://www.promptquorum.com/blog/eu-companies-local-qwen-gdpr-shift?lang=fr',
+        url: 'https://www.promptquorum.com/fr/blog/eu-companies-local-qwen-gdpr-shift',
         mainEntity: [
           {
             '@type': 'Question',
@@ -11582,11 +11582,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         relatedReading: {
           title: '関連記事',
           items: [
-            '[Qwen vs Claude vs DeepSeek：ローカルLLM比較](/local-llms/qwen-vs-claude-vs-deepseek-local-2026?lang=ja)',
-            '[Qwenをローカルで実行する：インストールと設定ガイド](/local-llms/run-qwen-locally-guide-2026?lang=ja)',
-            '[Qwen Coder vs DeepSeek vs Mistral：ベンチマーク](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026?lang=ja)',
-            '[ローカルLLMプライバシーマニフェスト](/local-llms/qwen-gdpr-privacy-manifesto-2026?lang=ja)',
-            '[ローカルLLMハブ](/local-llms?lang=ja)',
+            '[Qwen vs Claude vs DeepSeek：ローカルLLM比較](/ja/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+            '[Qwenをローカルで実行する：インストールと設定ガイド](/ja/local-llms/run-qwen-locally-guide-2026)',
+            '[Qwen Coder vs DeepSeek vs Mistral：ベンチマーク](/ja/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
+            '[ローカルLLMプライバシーマニフェスト](/ja/local-llms/qwen-gdpr-privacy-manifesto-2026)',
+            '[ローカルLLMハブ](/ja/local-llms)',
           ],
         },
         faq: {
@@ -11603,7 +11603,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'ja',
-        url: 'https://www.promptquorum.com/blog/eu-companies-local-qwen-gdpr-shift?lang=ja',
+        url: 'https://www.promptquorum.com/ja/blog/eu-companies-local-qwen-gdpr-shift',
         mainEntity: [
           {
             '@type': 'Question',
@@ -11721,11 +11721,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[Qwen vs Claude vs DeepSeek：本地LLM对比](/local-llms/qwen-vs-claude-vs-deepseek-local-2026?lang=zh)',
-            '[如何在本地运行Qwen：安装与配置指南](/local-llms/run-qwen-locally-guide-2026?lang=zh)',
-            '[Qwen Coder vs DeepSeek vs Mistral：基准测试](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026?lang=zh)',
-            '[本地LLM隐私宣言](/local-llms/qwen-gdpr-privacy-manifesto-2026?lang=zh)',
-            '[本地LLM中心](/local-llms?lang=zh)',
+            '[Qwen vs Claude vs DeepSeek：本地LLM对比](/zh/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+            '[如何在本地运行Qwen：安装与配置指南](/zh/local-llms/run-qwen-locally-guide-2026)',
+            '[Qwen Coder vs DeepSeek vs Mistral：基准测试](/zh/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
+            '[本地LLM隐私宣言](/zh/local-llms/qwen-gdpr-privacy-manifesto-2026)',
+            '[本地LLM中心](/zh/local-llms)',
           ],
         },
         faq: {
@@ -11742,7 +11742,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'zh',
-        url: 'https://www.promptquorum.com/blog/eu-companies-local-qwen-gdpr-shift?lang=zh',
+        url: 'https://www.promptquorum.com/zh/blog/eu-companies-local-qwen-gdpr-shift',
         mainEntity: [
           {
             '@type': 'Question',

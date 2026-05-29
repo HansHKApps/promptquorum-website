@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[VESA-Standards für DisplayPort und USB-C](https://www.vesa.org/) — Referenz für Monitor-Anschlussstandards einschließlich USB-C Power Delivery und der DisplayPort-Auflösungsunterstützung.',
           '[Berechnungsmethode der Pixeldichte (PPI)](https://en.wikipedia.org/wiki/Pixel_density) — die Formel, mit der die Werte ~163 ppi (4K mit 27 Zoll) und ~109 ppi (1440p mit 27 Zoll) in diesem Leitfaden hergeleitet wurden.',
-          '[Lokale LLMs auf einem Notebook ausführen: RAM, Geschwindigkeit & Thermik](/local-llms/local-llm-on-laptop?lang=de) — PromptQuorum-Leitfaden zur notebookbasierten lokalen LLM-Arbeit, dem Aufbau, mit dem ein externer Monitor zusammenpasst.',
+          '[Lokale LLMs auf einem Notebook ausführen: RAM, Geschwindigkeit & Thermik](/de/local-llms/local-llm-on-laptop) — PromptQuorum-Leitfaden zur notebookbasierten lokalen LLM-Arbeit, dem Aufbau, mit dem ein externer Monitor zusammenpasst.',
         ],
       },
       faq: {
@@ -969,10 +969,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Lokale LLMs auf einem Notebook ohne Desktop ausführen](/local-llms/local-llm-on-laptop?lang=de) — der Notebook-Aufbau, mit dem ein externer Entwickler-Monitor für KI-Arbeit zusammenpasst.',
-          '[Eine GPU für lokale LLMs über vier Budget-Stufen auswählen](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=de) — der begleitende Hardware-Kaufratgeber für die Maschine hinter dem Bildschirm.',
-          '[Notebooks für den Betrieb lokaler LLMs vergleichen](/local-llms/best-laptops-local-llm?lang=de) — Notebook-Optionen zum Andocken an einen Monitor für einen vollständigen KI-Entwicklungs-Schreibtisch.',
-          '[Notebook gegen Desktop für lokale LLM-Arbeit abwägen](/local-llms/laptop-vs-desktop-local-llm?lang=de) — die Plattform-Entscheidung, die prägt, welchen Monitor und welche Anschlüsse Sie brauchen.',
+          '[Lokale LLMs auf einem Notebook ohne Desktop ausführen](/de/local-llms/local-llm-on-laptop) — der Notebook-Aufbau, mit dem ein externer Entwickler-Monitor für KI-Arbeit zusammenpasst.',
+          '[Eine GPU für lokale LLMs über vier Budget-Stufen auswählen](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — der begleitende Hardware-Kaufratgeber für die Maschine hinter dem Bildschirm.',
+          '[Notebooks für den Betrieb lokaler LLMs vergleichen](/de/local-llms/best-laptops-local-llm) — Notebook-Optionen zum Andocken an einen Monitor für einen vollständigen KI-Entwicklungs-Schreibtisch.',
+          '[Notebook gegen Desktop für lokale LLM-Arbeit abwägen](/de/local-llms/laptop-vs-desktop-local-llm) — die Plattform-Entscheidung, die prägt, welchen Monitor und welche Anschlüsse Sie brauchen.',
         ],
       },
     },
@@ -1403,7 +1403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Normes VESA DisplayPort et USB-C](https://www.vesa.org/) — référence pour les normes de connectique des moniteurs, dont l\'USB-C Power Delivery et la prise en charge des résolutions DisplayPort.',
           '[Méthode de calcul de la densité de pixels (PPI)](https://en.wikipedia.org/wiki/Pixel_density) — la formule utilisée pour dériver les valeurs de ~163 ppi (4K 27 pouces) et ~109 ppi (1440p 27 pouces) de ce guide.',
-          '[Exécuter des LLM locaux sur un portable : RAM, vitesse et thermique](/local-llms/local-llm-on-laptop?lang=fr) — les conseils de PromptQuorum sur le travail LLM local depuis un portable, la configuration à laquelle un moniteur externe s\'associe.',
+          '[Exécuter des LLM locaux sur un portable : RAM, vitesse et thermique](/fr/local-llms/local-llm-on-laptop) — les conseils de PromptQuorum sur le travail LLM local depuis un portable, la configuration à laquelle un moniteur externe s\'associe.',
         ],
       },
       faq: {
@@ -1448,10 +1448,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Exécuter des LLM locaux sur un portable sans ordinateur de bureau](/local-llms/local-llm-on-laptop?lang=fr) — la configuration portable à laquelle un moniteur externe de développeur s\'associe pour le travail IA.',
-          '[Choisir un GPU pour les LLM locaux selon quatre paliers de budget](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=fr) — le guide d\'achat de matériel compagnon pour la machine derrière l\'écran.',
-          '[Comparer les portables pour exécuter des LLM locaux](/local-llms/best-laptops-local-llm?lang=fr) — les options de portables à docker à un moniteur pour un bureau de développement IA complet.',
-          '[Comparer un portable à un ordinateur de bureau pour le travail LLM local](/local-llms/laptop-vs-desktop-local-llm?lang=fr) — la décision de plateforme qui façonne le moniteur et la connectique dont vous avez besoin.',
+          '[Exécuter des LLM locaux sur un portable sans ordinateur de bureau](/fr/local-llms/local-llm-on-laptop) — la configuration portable à laquelle un moniteur externe de développeur s\'associe pour le travail IA.',
+          '[Choisir un GPU pour les LLM locaux selon quatre paliers de budget](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — le guide d\'achat de matériel compagnon pour la machine derrière l\'écran.',
+          '[Comparer les portables pour exécuter des LLM locaux](/fr/local-llms/best-laptops-local-llm) — les options de portables à docker à un moniteur pour un bureau de développement IA complet.',
+          '[Comparer un portable à un ordinateur de bureau pour le travail LLM local](/fr/local-llms/laptop-vs-desktop-local-llm) — la décision de plateforme qui façonne le moniteur et la connectique dont vous avez besoin.',
         ],
       },
     },
@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[VESA DisplayPortおよびUSB-C規格](https://www.vesa.org/) — USB-C Power DeliveryやDisplayPortの解像度サポートを含む、モニター接続規格の参照元。',
           '[ピクセル密度 (PPI) の計算方法](https://en.wikipedia.org/wiki/Pixel_density) — 本ガイドの約163 ppi (4K 27インチ) および約109 ppi (1440p 27インチ) の数値を導くために用いた計算式。',
-          '[ノートPCでローカルLLMを動かす: RAM、速度、発熱](/local-llms/local-llm-on-laptop?lang=ja) — ノートPCベースのローカルLLM作業に関するPromptQuorumのガイド。外部モニターと組み合わせる構成です。',
+          '[ノートPCでローカルLLMを動かす: RAM、速度、発熱](/ja/local-llms/local-llm-on-laptop) — ノートPCベースのローカルLLM作業に関するPromptQuorumのガイド。外部モニターと組み合わせる構成です。',
         ],
       },
       faq: {
@@ -1927,10 +1927,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[デスクトップなしでノートPCでローカルLLMを動かす](/local-llms/local-llm-on-laptop?lang=ja) — 外部の開発者向けモニターがAI作業のために組み合わさるノートPC構成。',
-          '[4つの予算帯でローカルLLM向けのGPUを選ぶ](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=ja) — 画面の背後のマシンに向けた、付随するハードウェア購入ガイド。',
-          '[ローカルLLMを動かすためのノートPCを比較する](/local-llms/best-laptops-local-llm?lang=ja) — 完全なAI開発デスクのためにモニターへドッキングするノートPCの選択肢。',
-          '[ローカルLLM作業でノートPCとデスクトップを比較検討する](/local-llms/laptop-vs-desktop-local-llm?lang=ja) — どのモニターと接続性が必要かを左右するプラットフォームの判断。',
+          '[デスクトップなしでノートPCでローカルLLMを動かす](/ja/local-llms/local-llm-on-laptop) — 外部の開発者向けモニターがAI作業のために組み合わさるノートPC構成。',
+          '[4つの予算帯でローカルLLM向けのGPUを選ぶ](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 画面の背後のマシンに向けた、付随するハードウェア購入ガイド。',
+          '[ローカルLLMを動かすためのノートPCを比較する](/ja/local-llms/best-laptops-local-llm) — 完全なAI開発デスクのためにモニターへドッキングするノートPCの選択肢。',
+          '[ローカルLLM作業でノートPCとデスクトップを比較検討する](/ja/local-llms/laptop-vs-desktop-local-llm) — どのモニターと接続性が必要かを左右するプラットフォームの判断。',
         ],
       },
     },
@@ -2361,7 +2361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[VESA DisplayPort 与 USB-C 标准](https://www.vesa.org/) — 显示器接口标准的参考，包括 USB-C 供电和 DisplayPort 分辨率支持。',
           '[像素密度（PPI）计算方法](https://en.wikipedia.org/wiki/Pixel_density) — 推导本指南中约 163 ppi（4K 27 英寸）和约 109 ppi（1440p 27 英寸）数值所用的公式。',
-          '[在笔记本上运行本地 LLM：内存、速度与散热](/local-llms/local-llm-on-laptop?lang=zh) — PromptQuorum 关于基于笔记本的本地 LLM 工作的指导，外接显示器与之搭配的配置。',
+          '[在笔记本上运行本地 LLM：内存、速度与散热](/zh/local-llms/local-llm-on-laptop) — PromptQuorum 关于基于笔记本的本地 LLM 工作的指导，外接显示器与之搭配的配置。',
         ],
       },
       faq: {
@@ -2406,10 +2406,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[在不用台式机的情况下用笔记本运行本地 LLM](/local-llms/local-llm-on-laptop?lang=zh) — 外接开发者显示器为 AI 工作搭配的笔记本配置。',
-          '[在四个预算档位中为本地 LLM 选择 GPU](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=zh) — 屏幕背后那台机器的配套硬件选购指南。',
-          '[比较用于运行本地 LLM 的笔记本](/local-llms/best-laptops-local-llm?lang=zh) — 可对接显示器以组成完整 AI 开发桌面的笔记本选项。',
-          '[权衡笔记本与台式机用于本地 LLM 工作](/local-llms/laptop-vs-desktop-local-llm?lang=zh) — 决定你需要哪种显示器和接口的平台选择。',
+          '[在不用台式机的情况下用笔记本运行本地 LLM](/zh/local-llms/local-llm-on-laptop) — 外接开发者显示器为 AI 工作搭配的笔记本配置。',
+          '[在四个预算档位中为本地 LLM 选择 GPU](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 屏幕背后那台机器的配套硬件选购指南。',
+          '[比较用于运行本地 LLM 的笔记本](/zh/local-llms/best-laptops-local-llm) — 可对接显示器以组成完整 AI 开发桌面的笔记本选项。',
+          '[权衡笔记本与台式机用于本地 LLM 工作](/zh/local-llms/laptop-vs-desktop-local-llm) — 决定你需要哪种显示器和接口的平台选择。',
         ],
       },
     },

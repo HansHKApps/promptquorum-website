@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/open-source-vs-proprietary-llms',
         'inLanguage': 'de',
         headline: 'Open Source vs. proprietäre LLMs',
         description: 'Open-Weights-Modelle wie LLaMA 3.1 und Mistral bieten Kontrolle und Kosteneinsparungen; proprietäre Modelle wie GPT-4o und Claude Opus 4.7 liefern Spitzenleistung.',
@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**"Open Source" und "Open Weights" sind nicht synonym.** Open-Source-Lizenzierung (Apache 2.0, MIT, GPL) gilt für Quellcode und erlaubt unbeschränkte kommerzielle und private Nutzung. Open-Weights bedeutet, dass die trainierten Modellgewichte herunterladbar sind, aber möglicherweise unter einer spezialisierten Lizenz beschränkt sind. LLaMA 3.1 ist Open-Weights, nicht Open Source — Meta veröffentlicht die Gewichte unter Llama Community License 2.1, die kommerzielle Nutzung erlaubt, aber Einschränkungen enthält, die das Aufrufen von Derivatmodellen als "LLaMA" verhindern und Attribution erfordern.',
             '**Proprietäre Modelle sind weder Open-Weights noch Open Source.** OpenAI (GPT-4o), Anthropic (Claude Opus 4.7) und Google (Gemini 3.1 Pro) veröffentlichen keine Modellgewichte. Sie greifen ausschließlich über API zu. Die Gewichte bleiben geschlossen; Sie können das Modell nicht sehen, herunterladen, ändern oder selbst bereitstellen.',
-            'Das Verständnis dieser Unterscheidung ist wichtig für Compliance, Anpassung und Datensouveränität. [Erfahren Sie, wie LLMs intern funktionieren, um zu verstehen, warum Gewichte wichtig sind](/prompt-engineering/how-llms-actually-work?lang=de).',
+            'Das Verständnis dieser Unterscheidung ist wichtig für Compliance, Anpassung und Datensouveränität. [Erfahren Sie, wie LLMs intern funktionieren, um zu verstehen, warum Gewichte wichtig sind](/de/prompt-engineering/how-llms-actually-work).',
           ],
         },
     
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Die proprietäre Landschaft in 2026',
           content: [
             '**Proprietäre LLMs werden ausschließlich über Vendor-kontrollierte APIs zugegriffen; Modellgewichte werden nie veröffentlicht und können nicht heruntergeladen, geändert oder lokal bereitgestellt werden.** Benutzer zahlen Pro-Token-API-Billing und akzeptieren Vendor-Kontrolle über Modell-Updates, Sicherheitsrichtlinien und Leistungsmerkmale.',
-            '**OpenAIs GPT-4o bleibt der Reasoning-Leiter.** GPT-4o unterstützt 128K Token-Kontextfenster mit Training-Cutoff Oktober 2024. Es zeichnet sich bei Tool-Use, Agent-Workflows, Multimodal-Input (Bilder, Text) und komplexem Multi-Step-Reasoning aus. API-Preisgestaltung: $5 pro 1 Million Input-Token, $15 pro 1 Million Output-Token (März 2026 Raten). GPT-4o ist nur API; Gewichte werden nie veröffentlicht. Siehe [wie Kontextfenster Ihr AI-System beeinflussen](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de), um Trade-Offs zu verstehen.',
+            '**OpenAIs GPT-4o bleibt der Reasoning-Leiter.** GPT-4o unterstützt 128K Token-Kontextfenster mit Training-Cutoff Oktober 2024. Es zeichnet sich bei Tool-Use, Agent-Workflows, Multimodal-Input (Bilder, Text) und komplexem Multi-Step-Reasoning aus. API-Preisgestaltung: $5 pro 1 Million Input-Token, $15 pro 1 Million Output-Token (März 2026 Raten). GPT-4o ist nur API; Gewichte werden nie veröffentlicht. Siehe [wie Kontextfenster Ihr AI-System beeinflussen](/de/prompt-engineering/context-windows-explained-why-ai-forgets), um Trade-Offs zu verstehen.',
             '**Anthropics Claude Opus 4.7 dominiert Schreib- und Code-Qualitäts-Benchmarks.** Claude unterstützt 200K Token-Kontext — 2× größer als GPT-4o — ermöglicht längere Dokumente und erweiterte Gespräche. Training-Datums-Cutoff: Anfang 2025. API-Preisgestaltung: $3 pro 1 Million Input-Token, $15 pro 1 Million Output-Token. Claude bietet kein öffentliches Fine-Tuning. Anthropic priorisiert Interpretierbarkeit und Safety-Alignment gegenüber Benchmark-Maximierung.',
             '**Googles Gemini 3.1 Pro bietet das größte Kontextfenster: 2M Token.** Dies ermöglicht vollständiges Buch-Längen-Dokument-Verarbeitung, erschöpfende Forschung und erweiterte Multi-Turn-Gespräche. Preisgestaltung: $1,25 pro 1 Million Input-Token (≤200K Kontext), $10 pro 1 Million Output-Token; höhere Raten für >200K Kontext. Gemini integriert sich tief mit Google Workspace, Calendar, Gmail und Web-Suche. Training-Datums-Cutoff: Oktober 2024. Fine-Tuning ist für Gemini-Modelle verfügbar.',
           ],
@@ -917,7 +917,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         performanceBenchmarks: {
           title: 'Benchmark-Leistung: Wo die Lücke in 2026 steht',
           content: [
-            '**Proprietäre Modelle führen immer noch bei allgemeinem Reasoning (MMLU), aber die Lücke hat sich auf 7–8 Prozentpunkte verengt.** MMLU (Massive Multitask Language Understanding) ist ein breiter Benchmark, der 57 akademische Disziplinen abdeckt. Um zu verstehen, warum [wie LLMs tatsächlich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de) wichtig für Reasoning-Fähigkeit ist, lesen Sie unseren tiefgehenden Bericht zur Transformer-Architektur. Aktuelle Scores:',
+            '**Proprietäre Modelle führen immer noch bei allgemeinem Reasoning (MMLU), aber die Lücke hat sich auf 7–8 Prozentpunkte verengt.** MMLU (Massive Multitask Language Understanding) ist ein breiter Benchmark, der 57 akademische Disziplinen abdeckt. Um zu verstehen, warum [wie LLMs tatsächlich funktionieren](/de/prompt-engineering/how-llms-actually-work) wichtig für Reasoning-Fähigkeit ist, lesen Sie unseren tiefgehenden Bericht zur Transformer-Architektur. Aktuelle Scores:',
             '',
             'GPT-4o: 88,7% (OpenAI, 2024)',
             'Claude 3.5 Sonnet: 88,3% (Anthropic, 2024)',
@@ -927,9 +927,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '',
             '**Die Leistungslücke zwischen Open-Weights- und proprietären Modellen hat sich von 15–20 Prozentpunkten in 2022 auf 7–8 Punkte bei Reasoning-Aufgaben in 2026 verengt.** Bei spezialisierten Aufgaben (Programmierung, Mathematik, Zusammenfassung, Klassifizierung) entsprechen Open-Weights-Modelle jetzt proprietären Pendants oder übertreffen sie.',
             '',
-            'Die verbleibende Lücke ist hauptsächlich bei abstraktem Reasoning und [Tool-Use-Orchestrierung](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de). — Touvron et al., "Llama 3 Herd of Models", 2024',
+            'Die verbleibende Lücke ist hauptsächlich bei abstraktem Reasoning und [Tool-Use-Orchestrierung](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). — Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
-            '**Wichtiger Vorbehalt:** Benchmarks messen enge Fähigkeiten. Task-spezifische Leistung variiert: bei Klassifizierung, Zusammenfassung und Extraktion entspricht LLaMA 3.1 70B oft oder übertrifft GPT-4o. Für komplexes Multi-Step-Reasoning (Algebra, lange Gedankenketten), behalten proprietäre Modelle einen Vorteil. Der einzige zuverlässige Benchmark ist das Testen bei Ihrer tatsächlichen Aufgabe — siehe [wie Sie das richtige Modell für Ihren Anwendungsfall wählen](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de).',
+            '**Wichtiger Vorbehalt:** Benchmarks messen enge Fähigkeiten. Task-spezifische Leistung variiert: bei Klassifizierung, Zusammenfassung und Extraktion entspricht LLaMA 3.1 70B oft oder übertrifft GPT-4o. Für komplexes Multi-Step-Reasoning (Algebra, lange Gedankenketten), behalten proprietäre Modelle einen Vorteil. Der einzige zuverlässige Benchmark ist das Testen bei Ihrer tatsächlichen Aufgabe — siehe [wie Sie das richtige Modell für Ihren Anwendungsfall wählen](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
         },
     
@@ -948,7 +948,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '',
             '**Bei 100M Token/Tag:** Benötigen 40 A100s = $100/Tag. API-Kosten: $1.800/Tag. Open-Weights ist 18× billiger.',
             '',
-            'Überprüfen Sie Preisgestaltung: [OpenAI Pricing](https://openai.com/pricing) · [Anthropic Pricing](https://www.anthropic.com/api) · [Google Pricing](https://ai.google.dev/pricing) — Raten ändern sich vierteljährlich. Siehe [Token, Kosten und Limits erklärt](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de) für detaillierter Token-Kosten-Aufschlüsselung.',
+            'Überprüfen Sie Preisgestaltung: [OpenAI Pricing](https://openai.com/pricing) · [Anthropic Pricing](https://www.anthropic.com/api) · [Google Pricing](https://ai.google.dev/pricing) — Raten ändern sich vierteljährlich. Siehe [Token, Kosten und Limits erklärt](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) für detaillierter Token-Kosten-Aufschlüsselung.',
           ],
           columns: ['Modell', 'Input (pro 1M Token)', 'Output (pro 1M Token)'],
           rows: [
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Open-Weights-Modelle erlauben vollständiges Fine-Tuning; proprietäre Modelle beschränken oder verbieten es.** Fine-Tuning bedeutet Umschulung der Modellgewichte auf Ihren eigenen Daten, um das Modell für Ihre Domain zu spezialisieren. Sie können LoRA (Low-Rank Adaptation) für effizientes Fine-Tuning, QLoRA für quantisiertes Training oder vollständiges Backpropagation-Training verwenden, wenn Sie die Compute haben. Nach Fine-Tuning gehört das Modell Ihnen — Sie besitzen die resultierenden Gewichte, können sie überall bereitstellen und können sie offline aktualisieren.',
             '**Proprietäre Fine-Tuning-Verfügbarkeit:** OpenAI Fine-Tuning-API funktioniert nur für GPT-4o mini, GPT-4 (ältere Modelle). Nicht verfügbar für GPT-4o Flagship. Anthropic bietet kein Fine-Tuning für Claude über API. Google bietet begrenzt Fine-Tuning für Gemini. Keine dieser Optionen erlaubt Besitz der Fine-Tuned-Gewichte — Sie mieten eine Fine-Tuned-Kopie des proprietären Modells.',
-            '**Sicherheitsüberlegung:** Bei Fine-Tuning auf proprietären APIs werden Ihre Trainingsdaten auf Vendor-Server hochgeladen. Für sensitive Domains verletzt dies Compliance-Regeln. Open-Weights Fine-Tuning bleibt On-Premises. Siehe [Prompt-Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) für zusätzliche Angriffsflächen-Überlegungen bei Verwendung externer APIs.',
+            '**Sicherheitsüberlegung:** Bei Fine-Tuning auf proprietären APIs werden Ihre Trainingsdaten auf Vendor-Server hochgeladen. Für sensitive Domains verletzt dies Compliance-Regeln. Open-Weights Fine-Tuning bleibt On-Premises. Siehe [Prompt-Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) für zusätzliche Angriffsflächen-Überlegungen bei Verwendung externer APIs.',
           ],
         },
     
@@ -1009,8 +1009,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wann Open-Source-Modelle zu verwenden',
           content: '**Wählen Sie Open-Weights, wenn Datenschutz, Kosten in großem Maßstab oder tiefe Anpassungsanforderungen Ihre Zwänge dominieren.** Open-Weights zeichnen sich aus in:',
           items: [
-            '**Sensitive Daten (Gesundheitswesen, Finanzen, Recht):** Patientenakten, Finanzdaten, Anwalt-Klient-Kommunikation können externe APIs nicht durchqueren. Open-Weights lokal bereitgestellt hält Daten in Ihrer Kontrolle und erreicht Compliance. Verwenden Sie LLaMA 3.1 oder Mistral für HIPAA-, GDPR- und Anwalt-Klient-Berechtigungs-Compliance. Kombinieren Sie mit [Sicherheitskontrollen gegen Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de), um Modell-Eingaben zu schützen.',
-            '**High-Volume-Automatisierung (50M+ Token/Tag):** Über ~10M Token/Tag wird Self-Hosting billiger als proprietäre APIs. Verwenden Sie Open-Weights für High-Volume-Klassifizierung, Extraktion, Zusammenfassung oder Datenverarbeitungs-Pipelines, wo [API-Kosten unerschwinglich wären](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de).',
+            '**Sensitive Daten (Gesundheitswesen, Finanzen, Recht):** Patientenakten, Finanzdaten, Anwalt-Klient-Kommunikation können externe APIs nicht durchqueren. Open-Weights lokal bereitgestellt hält Daten in Ihrer Kontrolle und erreicht Compliance. Verwenden Sie LLaMA 3.1 oder Mistral für HIPAA-, GDPR- und Anwalt-Klient-Berechtigungs-Compliance. Kombinieren Sie mit [Sicherheitskontrollen gegen Prompt-Injection](/de/prompt-engineering/prompt-injection-and-security), um Modell-Eingaben zu schützen.',
+            '**High-Volume-Automatisierung (50M+ Token/Tag):** Über ~10M Token/Tag wird Self-Hosting billiger als proprietäre APIs. Verwenden Sie Open-Weights für High-Volume-Klassifizierung, Extraktion, Zusammenfassung oder Datenverarbeitungs-Pipelines, wo [API-Kosten unerschwinglich wären](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting).',
             '**Domain-Anpassung und Fine-Tuning:** Sie haben gekennzeichnete Datensätze und müssen das Modell auf Ihre Terminologie, Schreibstil oder Task-Verteilung spezialisieren. Open-Weights erlauben LoRA, QLoRA oder vollständiges Fine-Tuning. Proprietäre APIs verbieten oder beschränken Anpassung.',
             '**Geografische oder Netzwerk-Zwänge:** Sie benötigen Inferenz ohne Internetverbindung (U-Boote, Flugzeuge, Remote-Standorte). Open-Weights läuft offline. Proprietäre APIs erfordern Netzwerkverbindung.',
             '**EU AI Act Compliance (High-Risk-Bereitstellungen):** Einstellungssysteme, Kreditentscheidungen, Vorteilsbestimmung. Audit-Trails, Risicodokumentation und On-Premises-Datenresidenz sind mit Open-Weights einfacher. Proprietäre APIs erschweren Compliance-Nachweis.',
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Datenschutz-sensitive Daten → lokal Open-Weights; komplexes Reasoning → proprietäre API.** Leiten Sie Patientenakten, Finanzdaten und Rechtsdokumente an LLaMA 3.1 lokal über Ollama weiter. Leiten Sie Multi-Step-Forschungs-Synthese, Code-Generierung und Agent-Orchestrierung an GPT-4o oder Claude Opus 4.7 weiter. Dieser Hybrid-Ansatz erreicht Compliance bei Aufrechterhaltung der Frontier-Leistung.',
             '**Kostenempfindliche Batch-Verarbeitung → lokal Open-Weights; interaktive Anfragen → proprietäre API.** Für Background-Aufgaben (Klassifizierung, Extraktion, Zusammenfassung) verwenden Sie Self-Hosted LLaMA 3.1 70B (~$2/Stunde auf A100). Für Real-Time-User-Anfragen, wo Latenz wichtig ist, verwenden Sie GPT-4o API ($5/$15 pro 1M Token). Hybrid reduziert Gesamtkosten und Latenz.',
-            '**Multi-Model-Vergleich und Consensus → PromptQuorum.** Verteilen Sie einen einzelnen [Prompt](/prompt-engineering/what-is-prompt-engineering?lang=de) gleichzeitig an lokal Ollama, GPT-4o, Claude 4.6 und Gemini 3.1 Pro über PromptQuorum. Vergleichen Sie Outputs nebeneinander auf Qualität, Latenz und Kosten. Wählen Sie den Gewinner für Produktion oder kombinieren Sie Outputs für Ensemble-Reasoning.',
+            '**Multi-Model-Vergleich und Consensus → PromptQuorum.** Verteilen Sie einen einzelnen [Prompt](/de/prompt-engineering/what-is-prompt-engineering) gleichzeitig an lokal Ollama, GPT-4o, Claude 4.6 und Gemini 3.1 Pro über PromptQuorum. Vergleichen Sie Outputs nebeneinander auf Qualität, Latenz und Kosten. Wählen Sie den Gewinner für Produktion oder kombinieren Sie Outputs für Ensemble-Reasoning.',
             '**Testing und Staging → Open-Weights; Produktions-Serving → proprietär.** Verwenden Sie LLaMA 3.1 8B lokal für schnelle Prototypen und Entwicklung. Sobald Prompt und Pipeline validiert sind, upgraden Sie zu GPT-4o oder Claude für Production-Traffic, wo Zuverlässigkeit, Tool-Integration und Safety-Garantien am meisten wichtig sind.',
           ],
         },
@@ -1048,19 +1048,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Die Leistungslücke ist task-spezifisch, nicht universell.** Proprietäre Modelle führen bei MMLU (Reasoning) um 7–8 Punkte. Aber bei Klassifizierung, Zusammenfassung, Extraktion und vielen Domain-Aufgaben entspricht LLaMA 3.1 70B proprietären Modellen oder übertrifft sie. "Proprietär ist besser" ist zu breit. Benchmark Ihre tatsächliche Aufgabe.',
             '**"Open Source" Lizenzierung ist komplex und oft nicht wirklich Open Source.** LLaMA, Mistral und Qwen sind nicht OSI-konform Open Source — sie sind "Open Weights" unter nicht-Standard-Lizenzen. Sie "Open Source" zu nennen ist irreführend und lädt zu Rechtsverwirung ein. Klären Sie Lizenzierung mit Rat bevor Sie sich auf legale Schutzmaßnahmen verlassen.',
-            '**Proprietär ist nicht immer sicherer oder besser aligned.** [Alle Modelle halluzinieren](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de). Proprietäres Training-Data, Cutoffs und Constitutional AI verhindern nicht Jailbreaking, [Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de) oder Missbrauch. Open-Weights können Fine-Tuned werden, um proprietäres Alignment zu entsprechen oder zu übertreffen. Safety ist eine Eigenschaft der Bereitstellung und Schutzmaßnahmen, nicht der Modellklasse.',
+            '**Proprietär ist nicht immer sicherer oder besser aligned.** [Alle Modelle halluzinieren](/de/prompt-engineering/ai-limitations-what-llms-cant-do). Proprietäres Training-Data, Cutoffs und Constitutional AI verhindern nicht Jailbreaking, [Prompt-Injection](/de/prompt-engineering/prompt-injection-and-security) oder Missbrauch. Open-Weights können Fine-Tuned werden, um proprietäres Alignment zu entsprechen oder zu übertreffen. Safety ist eine Eigenschaft der Bereitstellung und Schutzmaßnahmen, nicht der Modellklasse.',
           ],
         },
     
         keyTerms: {
           title: 'Schlüsselbegriffe',
           items: [
-            '[Open Weights](/prompt-engineering/prompt-engineering-glossary?lang=de#open-weights) — Modellgewichte sind herunterladbar, aber möglicherweise unter Lizenz beschränkt',
-            '[Fine-Tuning](/prompt-engineering/prompt-engineering-glossary?lang=de#fine-tuning) — Umschulung von Modellgewichten auf Domain-spezifischen Daten',
-            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=de#lora) — Effizientes Fine-Tuning über Low-Rank-Adaptation (5–10% von vollständigen Trainingskosten)',
-            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=de#rag) — Retrieval-Augmented Generation; Verankerung von LLM-Ausgaben in externen Dokumenten',
-            '[Context Window](/prompt-engineering/prompt-engineering-glossary?lang=de#context-window) — Maximale Token-Kapazität für Input + Output kombiniert',
-            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=de#vram) — GPU-Speicher erforderlich für Modell-Inferenz',
+            '[Open Weights](/de/prompt-engineering/prompt-engineering-glossary#open-weights) — Modellgewichte sind herunterladbar, aber möglicherweise unter Lizenz beschränkt',
+            '[Fine-Tuning](/de/prompt-engineering/prompt-engineering-glossary#fine-tuning) — Umschulung von Modellgewichten auf Domain-spezifischen Daten',
+            '[LoRA](/de/prompt-engineering/prompt-engineering-glossary#lora) — Effizientes Fine-Tuning über Low-Rank-Adaptation (5–10% von vollständigen Trainingskosten)',
+            '[RAG](/de/prompt-engineering/prompt-engineering-glossary#rag) — Retrieval-Augmented Generation; Verankerung von LLM-Ausgaben in externen Dokumenten',
+            '[Context Window](/de/prompt-engineering/prompt-engineering-glossary#context-window) — Maximale Token-Kapazität für Input + Output kombiniert',
+            '[VRAM](/de/prompt-engineering/prompt-engineering-glossary#vram) — GPU-Speicher erforderlich für Modell-Inferenz',
           ],
         },
     
@@ -1075,12 +1075,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Fundamentals: AI Limitations and Structural Constraints](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — Warum sowohl proprietäre als auch Open-Weights-Modelle fundamentale Einschränkungen wie Halluzination und Kontextgrenzen teilen',
-            '[Fundamentals: How LLMs Actually Work](/prompt-engineering/how-llms-actually-work?lang=de) — Verstehen von Transformer-Architektur erklärt, warum Open-Weights- und proprietäre Modelle den gleichen Core-Mechanismen teilen',
-            '[Fundamentals: GPT-4o, Claude, or Gemini? How to Pick the Right Model](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de) — Detaillierter Vergleich von Frontier-proprietären Modellen',
-            '[Techniques: RAG Explained — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=de) — Wie man jedes Modell (proprietär oder Open-Weights) mit externem Wissen erweitert',
-            '[Fundamentals: Tokens, Costs & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de) — Detaillierte Kostenanalyse und Token-Ökonomie',
-            '[Fundamentals: Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security?lang=de) — Sicherheitsüberlegungen für beide Modellklassen',
+            '[Fundamentals: AI Limitations and Structural Constraints](/de/prompt-engineering/ai-limitations-what-llms-cant-do) — Warum sowohl proprietäre als auch Open-Weights-Modelle fundamentale Einschränkungen wie Halluzination und Kontextgrenzen teilen',
+            '[Fundamentals: How LLMs Actually Work](/de/prompt-engineering/how-llms-actually-work) — Verstehen von Transformer-Architektur erklärt, warum Open-Weights- und proprietäre Modelle den gleichen Core-Mechanismen teilen',
+            '[Fundamentals: GPT-4o, Claude, or Gemini? How to Pick the Right Model](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Detaillierter Vergleich von Frontier-proprietären Modellen',
+            '[Techniques: RAG Explained — Retrieval-Augmented Generation](/de/prompt-engineering/rag-explained) — Wie man jedes Modell (proprietär oder Open-Weights) mit externem Wissen erweitert',
+            '[Fundamentals: Tokens, Costs & Limits](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Detaillierte Kostenanalyse und Token-Ökonomie',
+            '[Fundamentals: Prompt Injection and Security](/de/prompt-engineering/prompt-injection-and-security) — Sicherheitsüberlegungen für beide Modellklassen',
           ],
         },
     
@@ -1172,7 +1172,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/prompt-engineering/open-source-vs-proprietary-llms',
         'inLanguage': 'es',
         headline: 'LLMs de código abierto vs propietarios',
         description: 'Los modelos open-weights como LLaMA 4 y Mistral ofrecen control y ahorro de costos; los modelos propietarios como GPT-4o y Claude Opus 4.7 ofrecen rendimiento de frontera.',
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms?lang=es', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/open-source-vs-proprietary-llms', width: 1200, height: 630 },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Open-Weights vs LLMs Propietarios — Comparación Completa',
         description: 'Comparación en 10 dimensiones de LLMs open-weights y propietarios que cubre costo, rendimiento, privacidad, fine-tuning, context window, soberanía, velocidad, soporte, actualizaciones y vendor lock-in.',
         numberOfItems: 10,
-        url: 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/open-source-vs-proprietary-llms',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Modelo de costos', description: 'Open-weights: $0,50–2,00/hr de infraestructura; gratis una vez desplegado, sin facturación por token. Propietarios: facturación por API $0,15–5,00 por 1M tokens de entrada; $0,30–15,00 por 1M tokens de salida.' },
           { '@type': 'ListItem', position: 2, name: 'Techo de rendimiento', description: 'Open-weights (LLaMA 70B, Mistral Large): MMLU 80–82 %, competitivos en tareas específicas. Propietarios (GPT-4o, Claude, Gemini): MMLU 88–90 %, mayor techo en razonamiento y multimodal.' },
@@ -1372,10 +1372,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Técnicas: RAG explicado — Generación Aumentada por Recuperación](/prompt-engineering/rag-explained?lang=es) — Cómo extender cualquier modelo (propietario u open-weights) con conocimiento externo',
-            '[Fundamentos: ¿GPT-4o, Claude o Gemini? Cómo elegir el modelo correcto](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=es) — Comparación detallada de modelos propietarios de frontera',
-            '[Fundamentos: Tokens, costos y límites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=es) — Análisis detallado de costos y economía de tokens',
-            '[Fundamentos: Prompt injection y seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — Consideraciones de seguridad para ambas clases de modelos',
+            '[Técnicas: RAG explicado — Generación Aumentada por Recuperación](/es/prompt-engineering/rag-explained) — Cómo extender cualquier modelo (propietario u open-weights) con conocimiento externo',
+            '[Fundamentos: ¿GPT-4o, Claude o Gemini? Cómo elegir el modelo correcto](/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Comparación detallada de modelos propietarios de frontera',
+            '[Fundamentos: Tokens, costos y límites](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Análisis detallado de costos y economía de tokens',
+            '[Fundamentos: Prompt injection y seguridad](/es/prompt-engineering/prompt-injection-and-security) — Consideraciones de seguridad para ambas clases de modelos',
           ],
         },
         faq: {
@@ -1432,7 +1432,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/open-source-vs-proprietary-llms',
         'inLanguage': 'fr',
         headline: 'Open-Weights vs LLMs propriétaires',
         description: 'LLMs open-weights (LLaMA 4, DeepSeek-R1) vs propriétaires (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) : prix, fenêtres contextuelles, architecture MoE, benchmarks agentic-coding.',
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**"Open source" et "open-weights" ne sont pas synonymes.** La licence open source (Apache 2.0, MIT, GPL) s\'applique au code source et autorise un usage commercial et privé sans restriction. Open-weights signifie que les poids du modèle entraîné sont téléchargeables, mais peuvent être restreints par une licence spécialisée. LLaMA 3.1 est open-weights, pas open source — Meta publie les poids sous la Llama Community License 2.1, qui autorise l\'usage commercial mais contient des restrictions empêchant d\'appeler les modèles dérivés "LLaMA" et exigeant une attribution.',
             '**Les modèles propriétaires ne sont ni open-weights ni open source.** OpenAI (GPT-4o), Anthropic (Claude Opus 4.7) et Google (Gemini 3.1 Pro) ne publient pas les poids des modèles. Vous y accédez exclusivement via API. Les poids restent fermés ; vous ne pouvez pas voir, télécharger, modifier ou déployer le modèle vous-même.',
-            'Comprendre cette distinction est essentiel pour la conformité, la personnalisation et la souveraineté des données. [Découvrez comment les LLMs fonctionnent en interne pour comprendre pourquoi les poids sont importants](/prompt-engineering/how-llms-actually-work?lang=fr).',
+            'Comprendre cette distinction est essentiel pour la conformité, la personnalisation et la souveraineté des données. [Découvrez comment les LLMs fonctionnent en interne pour comprendre pourquoi les poids sont importants](/fr/prompt-engineering/how-llms-actually-work).',
           ],
         },
 
@@ -1703,7 +1703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Le paysage propriétaire en 2026',
           content: [
             '**Les LLMs propriétaires sont accessibles exclusivement via des APIs contrôlées par le fournisseur ; les poids du modèle ne sont jamais publiés et ne peuvent être ni téléchargés, ni modifiés, ni déployés localement.** Les utilisateurs paient une facturation API par token et acceptent le contrôle du fournisseur sur les mises à jour du modèle, les politiques de sécurité et les caractéristiques de performance.',
-            '**GPT-4o d\'OpenAI reste le leader du raisonnement.** GPT-4o prend en charge un contexte de 128 K tokens avec une coupure d\'entraînement en octobre 2024. Il excelle dans l\'utilisation d\'outils, les workflows d\'agents, les entrées multimodales (images, texte) et le raisonnement multi-étapes complexe. Tarification API : 5 $ par million de tokens en entrée, 15 $ par million de tokens en sortie (tarifs mars 2026). GPT-4o est API uniquement ; les poids ne sont jamais publiés. Consultez [comment les fenêtres de contexte affectent votre système d\'IA](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) pour comprendre les compromis.',
+            '**GPT-4o d\'OpenAI reste le leader du raisonnement.** GPT-4o prend en charge un contexte de 128 K tokens avec une coupure d\'entraînement en octobre 2024. Il excelle dans l\'utilisation d\'outils, les workflows d\'agents, les entrées multimodales (images, texte) et le raisonnement multi-étapes complexe. Tarification API : 5 $ par million de tokens en entrée, 15 $ par million de tokens en sortie (tarifs mars 2026). GPT-4o est API uniquement ; les poids ne sont jamais publiés. Consultez [comment les fenêtres de contexte affectent votre système d\'IA](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) pour comprendre les compromis.',
             '**Claude Opus 4.7 d\'Anthropic domine les benchmarks de qualité rédactionnelle et de code.** Claude prend en charge un contexte de 200 K tokens — 2× plus grand que GPT-4o — permettant de traiter des documents plus longs et des conversations prolongées. Coupure des données d\'entraînement : début 2025. Tarification API : 3 $ par million de tokens en entrée, 15 $ par million de tokens en sortie. Claude ne propose pas de fine-tuning public. Anthropic privilégie l\'interprétabilité et l\'alignement de sécurité plutôt que la maximisation des benchmarks.',
             '**Gemini 3.1 Pro de Google offre la plus grande fenêtre de contexte : 2 M tokens.** Cela permet le traitement de documents de la longueur d\'un livre entier, de recherches exhaustives et de conversations multi-tours étendues. Tarification : 1,25 $ par million de tokens en entrée (≤200 K contexte), 10 $ par million de tokens en sortie ; tarifs plus élevés pour >200 K de contexte. Gemini s\'intègre profondément avec Google Workspace, Calendar, Gmail et la recherche web. Coupure des données d\'entraînement : octobre 2024. Le fine-tuning est disponible pour les modèles Gemini.',
           ],
@@ -1712,7 +1712,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         performanceBenchmarks: {
           title: 'Performance sur les benchmarks : où en est l\'écart en 2026',
           content: [
-            '**Les modèles propriétaires mènent encore sur le raisonnement général (MMLU), mais l\'écart s\'est réduit à 7–8 points de pourcentage.** MMLU (Massive Multitask Language Understanding) est un benchmark large couvrant 57 disciplines académiques. Pour comprendre pourquoi [le fonctionnement réel des LLMs](/prompt-engineering/how-llms-actually-work?lang=fr) importe pour la capacité de raisonnement, consultez notre analyse approfondie de l\'architecture transformer. Scores actuels :',
+            '**Les modèles propriétaires mènent encore sur le raisonnement général (MMLU), mais l\'écart s\'est réduit à 7–8 points de pourcentage.** MMLU (Massive Multitask Language Understanding) est un benchmark large couvrant 57 disciplines académiques. Pour comprendre pourquoi [le fonctionnement réel des LLMs](/fr/prompt-engineering/how-llms-actually-work) importe pour la capacité de raisonnement, consultez notre analyse approfondie de l\'architecture transformer. Scores actuels :',
             '',
             'GPT-4o : 88,7 % (OpenAI, 2024)',
             'Claude 3.5 Sonnet : 88,3 % (Anthropic, 2024)',
@@ -1722,9 +1722,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '',
             '**L\'écart de performance entre les modèles open-weights et propriétaires s\'est réduit de 15–20 points de pourcentage en 2022 à 7–8 points sur les tâches de raisonnement en 2026.** Sur les tâches spécialisées (code, mathématiques, résumé, classification), les modèles open-weights égalent ou dépassent désormais leurs homologues propriétaires.',
             '',
-            'L\'écart restant porte principalement sur le raisonnement abstrait et [l\'orchestration d\'outils](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr). — Touvron et al., "Llama 3 Herd of Models", 2024',
+            'L\'écart restant porte principalement sur le raisonnement abstrait et [l\'orchestration d\'outils](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). — Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
-            '**Mise en garde importante :** Les benchmarks mesurent des compétences étroites. Les performances spécifiques aux tâches varient : sur la classification, le résumé et l\'extraction, LLaMA 3.1 70B égale ou dépasse souvent GPT-4o. Pour le raisonnement multi-étapes complexe (algèbre, longues chaînes de pensée), les modèles propriétaires conservent un avantage. Le seul benchmark fiable est de tester sur votre tâche réelle — consultez [comment choisir le bon modèle pour votre cas d\'usage](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr).',
+            '**Mise en garde importante :** Les benchmarks mesurent des compétences étroites. Les performances spécifiques aux tâches varient : sur la classification, le résumé et l\'extraction, LLaMA 3.1 70B égale ou dépasse souvent GPT-4o. Pour le raisonnement multi-étapes complexe (algèbre, longues chaînes de pensée), les modèles propriétaires conservent un avantage. Le seul benchmark fiable est de tester sur votre tâche réelle — consultez [comment choisir le bon modèle pour votre cas d\'usage](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
         },
 
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '',
             '**À 100 M tokens/jour :** Besoin de 40 A100 = 100 $/jour. Coûts API : 1 800 $/jour. L\'open-weights est 18× moins cher.',
             '',
-            'Vérifiez les tarifs : [Tarification OpenAI](https://openai.com/pricing) · [Tarification Anthropic](https://www.anthropic.com/api) · [Tarification Google](https://ai.google.dev/pricing) — les tarifs changent trimestriellement. Consultez [tokens, coûts et limites expliqués](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr) pour une analyse détaillée des coûts par token.',
+            'Vérifiez les tarifs : [Tarification OpenAI](https://openai.com/pricing) · [Tarification Anthropic](https://www.anthropic.com/api) · [Tarification Google](https://ai.google.dev/pricing) — les tarifs changent trimestriellement. Consultez [tokens, coûts et limites expliqués](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) pour une analyse détaillée des coûts par token.',
           ],
           columns: ['Modèle', 'Entrée (par million de tokens)', 'Sortie (par million de tokens)'],
           rows: [
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Les modèles open-weights permettent un fine-tuning complet ; les modèles propriétaires le restreignent ou l\'interdisent.** Le fine-tuning consiste à réentraîner les poids du modèle sur vos propres données pour le spécialiser sur votre domaine. Vous pouvez utiliser LoRA (Low-Rank Adaptation) pour un fine-tuning efficace, QLoRA pour un entraînement quantifié, ou la rétropropagation complète si vous disposez des ressources de calcul. Après le fine-tuning, le modèle vous appartient — vous êtes propriétaire des poids résultants, pouvez les déployer partout et les mettre à jour hors ligne.',
             '**Disponibilité du fine-tuning propriétaire :** L\'API de fine-tuning OpenAI fonctionne uniquement pour GPT-4o mini et GPT-4 (anciens modèles). Non disponible pour GPT-4o phare. Anthropic ne propose pas de fine-tuning pour Claude via API. Google propose un fine-tuning limité pour Gemini. Aucun de ces fournisseurs ne permet la propriété des poids affinés — vous louez une copie affinée du modèle propriétaire.',
-            '**Considération de sécurité :** Lors du fine-tuning sur des APIs propriétaires, vos données d\'entraînement sont téléchargées sur les serveurs du fournisseur. Pour les domaines sensibles, cela viole les règles de conformité. Le fine-tuning open-weights reste sur site. Consultez [injection de prompt et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) pour des considérations supplémentaires sur la surface d\'attaque lors de l\'utilisation d\'APIs externes.',
+            '**Considération de sécurité :** Lors du fine-tuning sur des APIs propriétaires, vos données d\'entraînement sont téléchargées sur les serveurs du fournisseur. Pour les domaines sensibles, cela viole les règles de conformité. Le fine-tuning open-weights reste sur site. Consultez [injection de prompt et sécurité](/fr/prompt-engineering/prompt-injection-and-security) pour des considérations supplémentaires sur la surface d\'attaque lors de l\'utilisation d\'APIs externes.',
           ],
         },
 
@@ -1804,8 +1804,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Quand utiliser des modèles open source',
           content: '**Choisissez l\'open-weights quand la confidentialité des données, le coût à grande échelle ou les exigences de personnalisation approfondie dominent vos contraintes.** L\'open-weights excelle dans :',
           items: [
-            '**Données sensibles (santé, finance, juridique) :** Les dossiers patients, les données financières et les communications avocat-client ne peuvent pas transiter par des APIs externes. Les modèles open-weights déployés sur site gardent les données sous votre contrôle et assurent la conformité. Utilisez LLaMA 3.1 ou Mistral pour la conformité HIPAA, RGPD et le secret professionnel avocat-client. Associez avec des [contrôles de sécurité contre l\'injection de prompt](/prompt-engineering/prompt-injection-and-security?lang=fr) pour protéger les entrées du modèle.',
-            '**Automatisation à grand volume (50 M+ tokens/jour) :** Au-delà de ~10 M tokens/jour, l\'auto-hébergement devient moins cher que les APIs propriétaires. Utilisez l\'open-weights pour les pipelines de classification, extraction, résumé ou traitement de données à haut volume où [les coûts API seraient prohibitifs](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr).',
+            '**Données sensibles (santé, finance, juridique) :** Les dossiers patients, les données financières et les communications avocat-client ne peuvent pas transiter par des APIs externes. Les modèles open-weights déployés sur site gardent les données sous votre contrôle et assurent la conformité. Utilisez LLaMA 3.1 ou Mistral pour la conformité HIPAA, RGPD et le secret professionnel avocat-client. Associez avec des [contrôles de sécurité contre l\'injection de prompt](/fr/prompt-engineering/prompt-injection-and-security) pour protéger les entrées du modèle.',
+            '**Automatisation à grand volume (50 M+ tokens/jour) :** Au-delà de ~10 M tokens/jour, l\'auto-hébergement devient moins cher que les APIs propriétaires. Utilisez l\'open-weights pour les pipelines de classification, extraction, résumé ou traitement de données à haut volume où [les coûts API seraient prohibitifs](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting).',
             '**Personnalisation et fine-tuning de domaine :** Vous disposez de jeux de données étiquetés et avez besoin que le modèle se spécialise sur votre terminologie, style rédactionnel ou distribution de tâches. L\'open-weights permet LoRA, QLoRA ou le fine-tuning complet. Les APIs propriétaires l\'interdisent ou le restreignent.',
             '**Contraintes géographiques ou réseau :** Vous avez besoin d\'inférence sans accès internet (sous-marins, aéronefs, sites distants). L\'open-weights fonctionne hors ligne. Les APIs propriétaires nécessitent une connectivité réseau.',
             '**Conformité EU AI Act (déploiements à haut risque) :** Systèmes de recrutement, décisions de crédit, attribution de prestations. Les pistes d\'audit, la documentation des risques et la résidence des données sur site sont plus faciles à réaliser avec l\'open-weights. Les APIs propriétaires rendent la conformité plus difficile à démontrer.',
@@ -1832,7 +1832,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Données sensibles → open-weights local ; raisonnement complexe → API propriétaire.** Routez les dossiers patients, les données financières et les documents juridiques vers LLaMA 3.1 exécuté localement via Ollama. Routez la synthèse de recherche multi-étapes, la génération de code et l\'orchestration d\'agents vers GPT-4o ou Claude Opus 4.7. Cette approche hybride assure la conformité tout en maintenant des performances de pointe.',
             '**Traitement par lots sensible aux coûts → open-weights local ; requêtes interactives → API propriétaire.** Pour les tâches en arrière-plan (classification, extraction, résumé), utilisez LLaMA 3.1 70B auto-hébergé (~2 $/h sur A100). Pour les requêtes utilisateur en temps réel où la latence compte, utilisez l\'API GPT-4o (5 $/15 $ par million de tokens). Le mode hybride réduit les coûts totaux et la latence.',
-            '**Comparaison et consensus multi-modèles → PromptQuorum.** Envoyez un seul [prompt](/prompt-engineering/what-is-prompt-engineering?lang=fr) à Ollama local, GPT-4o, Claude 4.6 et Gemini 3.1 Pro simultanément via PromptQuorum. Comparez les sorties côte à côte sur la qualité, la latence et le coût. Choisissez le meilleur pour la production ou combinez les sorties pour un raisonnement en ensemble.',
+            '**Comparaison et consensus multi-modèles → PromptQuorum.** Envoyez un seul [prompt](/fr/prompt-engineering/what-is-prompt-engineering) à Ollama local, GPT-4o, Claude 4.6 et Gemini 3.1 Pro simultanément via PromptQuorum. Comparez les sorties côte à côte sur la qualité, la latence et le coût. Choisissez le meilleur pour la production ou combinez les sorties pour un raisonnement en ensemble.',
             '**Tests et préproduction → open-weights ; serving en production → propriétaire.** Utilisez LLaMA 3.1 8B exécuté localement pour le prototypage rapide et le développement. Une fois le prompt et le pipeline validés, passez à GPT-4o ou Claude pour le trafic de production où la fiabilité, l\'intégration d\'outils et les garanties de sécurité comptent le plus.',
           ],
         },
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**L\'écart de performance est spécifique à la tâche, pas universel.** Les modèles propriétaires mènent sur MMLU (raisonnement) de 7–8 points. Mais sur la classification, le résumé, l\'extraction et de nombreuses tâches de domaine, LLaMA 3.1 70B égale ou dépasse les modèles propriétaires. "Le propriétaire est meilleur" est trop large. Benchmarkez votre tâche réelle.',
             '**La licence "open source" est complexe et souvent pas vraiment open source.** LLaMA, Mistral et Qwen ne sont pas conformes à l\'OSI — ce sont des "open-weights" sous des licences non standard. Les appeler "open source" est trompeur et invite à la confusion juridique. Clarifiez les licences avec un conseil juridique avant de vous reposer sur des protections légales.',
-            '**Le propriétaire n\'est pas toujours plus sûr ou mieux aligné.** [Tous les modèles hallucinent](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr). Les données d\'entraînement propriétaires, les dates de coupure et l\'IA constitutionnelle ne préviennent pas le jailbreaking, [l\'injection de prompt](/prompt-engineering/prompt-injection-and-security?lang=fr) ou les abus. Les modèles open-weights peuvent être affinés pour égaler ou dépasser l\'alignement propriétaire. La sécurité est une propriété du déploiement et des garde-fous, pas de la classe de modèle.',
+            '**Le propriétaire n\'est pas toujours plus sûr ou mieux aligné.** [Tous les modèles hallucinent](/fr/prompt-engineering/ai-limitations-what-llms-cant-do). Les données d\'entraînement propriétaires, les dates de coupure et l\'IA constitutionnelle ne préviennent pas le jailbreaking, [l\'injection de prompt](/fr/prompt-engineering/prompt-injection-and-security) ou les abus. Les modèles open-weights peuvent être affinés pour égaler ou dépasser l\'alignement propriétaire. La sécurité est une propriété du déploiement et des garde-fous, pas de la classe de modèle.',
           ],
         },
 
@@ -1870,12 +1870,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Fondamentaux : Limitations de l\'IA et contraintes structurelles](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — Pourquoi les modèles propriétaires et open-weights partagent des limitations fondamentales comme l\'hallucination et les limites de contexte',
-            '[Fondamentaux : Comment les LLMs fonctionnent réellement](/prompt-engineering/how-llms-actually-work?lang=fr) — Comprendre l\'architecture transformer explique pourquoi les modèles open-weights et propriétaires partagent les mêmes mécaniques fondamentales',
-            '[Fondamentaux : GPT-4o, Claude ou Gemini ? Comment choisir le bon modèle](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr) — Comparaison détaillée des modèles propriétaires de pointe',
-            '[Techniques : RAG expliqué — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=fr) — Comment étendre n\'importe quel modèle (propriétaire ou open-weights) avec des connaissances externes',
-            '[Fondamentaux : Tokens, coûts et limites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr) — Analyse détaillée des coûts et économie des tokens',
-            '[Fondamentaux : Injection de prompt et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Considérations de sécurité pour les deux classes de modèles',
+            '[Fondamentaux : Limitations de l\'IA et contraintes structurelles](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — Pourquoi les modèles propriétaires et open-weights partagent des limitations fondamentales comme l\'hallucination et les limites de contexte',
+            '[Fondamentaux : Comment les LLMs fonctionnent réellement](/fr/prompt-engineering/how-llms-actually-work) — Comprendre l\'architecture transformer explique pourquoi les modèles open-weights et propriétaires partagent les mêmes mécaniques fondamentales',
+            '[Fondamentaux : GPT-4o, Claude ou Gemini ? Comment choisir le bon modèle](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Comparaison détaillée des modèles propriétaires de pointe',
+            '[Techniques : RAG expliqué — Retrieval-Augmented Generation](/fr/prompt-engineering/rag-explained) — Comment étendre n\'importe quel modèle (propriétaire ou open-weights) avec des connaissances externes',
+            '[Fondamentaux : Tokens, coûts et limites](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Analyse détaillée des coûts et économie des tokens',
+            '[Fondamentaux : Injection de prompt et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Considérations de sécurité pour les deux classes de modèles',
           ],
         },
 
@@ -1967,7 +1967,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms',
         'inLanguage': 'ja',
         headline: 'オープンウェイト vs 独占的LLM',
         description: 'オープンウェイト (LLaMA 4, DeepSeek-R1) vs 独占的 (GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro) : 価格、コンテキストウィンドウ、MoE、エージェントコーディングベンチマーク。',
@@ -2126,7 +2126,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**「オープンソース」と「オープンウェイト」は同義語ではありません。** オープンソースライセンス（Apache 2.0、MIT、GPL）はソースコードに適用され、無制限の商用・プライベート利用を許可します。オープンウェイトとは、学習済みモデルウェイトがダウンロード可能ですが、特殊なライセンスの下で制限される場合があることを意味します。LLaMA 3.1はオープンウェイトであり、オープンソースではありません — MetaはLlama Community License 2.1の下でウェイトをリリースしており、商用利用は許可されていますが、派生モデルを「LLaMA」と命名することを禁止し、帰属表示を要求する制限が含まれています。',
             '**独自モデルはオープンウェイトでもオープンソースでもありません。** OpenAI（GPT-4o）・Anthropic（Claude Opus 4.7）・Google（Gemini 3.1 Pro）はモデルウェイトをリリースしていません。APIを通じてのみアクセスできます。ウェイトはクローズドのままで、自分でモデルを確認・ダウンロード・修正・デプロイすることはできません。',
-            'この区別を理解することは、コンプライアンス・カスタマイズ・データ主権の面で重要です。[LLMが内部でどのように機能するかを学ぶ](/prompt-engineering/how-llms-actually-work?lang=ja)と、なぜウェイトが重要なのかが理解できます。',
+            'この区別を理解することは、コンプライアンス・カスタマイズ・データ主権の面で重要です。[LLMが内部でどのように機能するかを学ぶ](/ja/prompt-engineering/how-llms-actually-work)と、なぜウェイトが重要なのかが理解できます。',
           ],
         },
 
@@ -2240,7 +2240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '2026年の独自モデルの状況',
           content: [
             '**独自LLMはベンダー管理のAPIを通じてのみアクセスできます。モデルウェイトは決してリリースされず、ダウンロード・修正・ローカルデプロイはできません。** ユーザーはトークン単位のAPI課金を支払い、モデルの更新・安全ポリシー・パフォーマンス特性に関するベンダーの管理を受け入れます。',
-            '**OpenAIのGPT-4oは推論のリーダーとして地位を維持しています。** GPT-4oは2024年10月の学習カットオフで128Kトークンのコンテキストをサポートしています。ツール使用・エージェントワークフロー・マルチモーダル入力（画像・テキスト）・複雑な多段階推論で優れています。APIの価格：入力100万トークンあたり$5、出力100万トークンあたり$15（2026年3月現在）。GPT-4oはAPIのみです。[コンテキストウィンドウがAIシステムにどう影響するか](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja)を参照して、トレードオフを理解してください。',
+            '**OpenAIのGPT-4oは推論のリーダーとして地位を維持しています。** GPT-4oは2024年10月の学習カットオフで128Kトークンのコンテキストをサポートしています。ツール使用・エージェントワークフロー・マルチモーダル入力（画像・テキスト）・複雑な多段階推論で優れています。APIの価格：入力100万トークンあたり$5、出力100万トークンあたり$15（2026年3月現在）。GPT-4oはAPIのみです。[コンテキストウィンドウがAIシステムにどう影響するか](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を参照して、トレードオフを理解してください。',
             '**AnthropicのClaude Opus 4.7はライティングとコード品質ベンチマークで支配的です。** Claudeは200Kトークンのコンテキストをサポートしており、GPT-4oの2倍で、より長い文書と長い会話が可能です。学習データのカットオフ：2025年初頭。APIの価格：入力100万トークンあたり$3、出力100万トークンあたり$15。Claudeは公開のファインチューニングを提供していません。Anthropicはベンチマーク最大化よりも解釈可能性と安全アライメントを優先しています。',
             '**GoogleのGemini 3.1 Proは最大のコンテキストウィンドウを提供しています：200万トークン。** これにより、本の長さの文書処理・徹底的な調査・長い多ターンの会話が可能になります。価格：入力100万トークンあたり$1.25（200K以下のコンテキスト）、出力100万トークンあたり$10。200K超のコンテキストには高い料金が適用されます。GeminiはGoogle Workspace・Calendar・Gmail・Webサーチと深く統合されています。学習データのカットオフ：2024年10月。GeminiモデルのファインチューニングはGoogleが提供しています。',
           ],
@@ -2249,7 +2249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         performanceBenchmarks: {
           title: 'ベンチマークパフォーマンス：2026年の差の現状',
           content: [
-            '**独自モデルは一般推論（MMLU）でまだリードしていますが、差は7〜8ポイントに縮まっています。** MMLU（Massive Multitask Language Understanding）は57の学術分野を網羅する広範なベンチマークです。[LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja)が推論能力に関係する理由については、トランスフォーマーアーキテクチャに関する詳細解説をご覧ください。現在のスコア：',
+            '**独自モデルは一般推論（MMLU）でまだリードしていますが、差は7〜8ポイントに縮まっています。** MMLU（Massive Multitask Language Understanding）は57の学術分野を網羅する広範なベンチマークです。[LLMが実際にどのように機能するか](/ja/prompt-engineering/how-llms-actually-work)が推論能力に関係する理由については、トランスフォーマーアーキテクチャに関する詳細解説をご覧ください。現在のスコア：',
             '',
             'GPT-4o: 88.7%（OpenAI、2024年）',
             'Claude 3.5 Sonnet: 88.3%（Anthropic、2024年）',
@@ -2259,9 +2259,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '',
             '**オープンウェイトと独自モデルのパフォーマンスの差は、2022年の15〜20ポイントから2026年の推論タスクでの7〜8ポイントに縮まっています。** 特化タスク（コーディング・数学・要約・分類）では、オープンウェイトモデルが独自モデルと同等またはそれ以上のパフォーマンスを発揮しています。',
             '',
-            '残りの差は主に抽象推論と[ツール使用オーケストレーション](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja)にあります。— Touvron et al., "Llama 3 Herd of Models", 2024',
+            '残りの差は主に抽象推論と[ツール使用オーケストレーション](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)にあります。— Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
-            '**重要な注意点：** ベンチマークは狭いスキルを測定します。タスク固有のパフォーマンスは変動します：分類・要約・抽出では、LLaMA 3.1 70BがGPT-4oと同等またはそれ以上のパフォーマンスを示すことが多いです。複雑な多段階推論（代数、長い思考の連鎖）では、独自モデルが優位性を維持しています。唯一の信頼できるベンチマークは、実際のタスクでテストすることです — [ユースケースに最適なモデルの選び方](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja)を参照してください。',
+            '**重要な注意点：** ベンチマークは狭いスキルを測定します。タスク固有のパフォーマンスは変動します：分類・要約・抽出では、LLaMA 3.1 70BがGPT-4oと同等またはそれ以上のパフォーマンスを示すことが多いです。複雑な多段階推論（代数、長い思考の連鎖）では、独自モデルが優位性を維持しています。唯一の信頼できるベンチマークは、実際のタスクでテストすることです — [ユースケースに最適なモデルの選び方](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)を参照してください。',
           ],
         },
 
@@ -2280,7 +2280,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '',
             '**1日1億トークンの場合：** A100が40台必要 = $100/日。APIコスト：$1,800/日。オープンウェイトは18倍安価。',
             '',
-            '価格の確認：[OpenAI Pricing](https://openai.com/pricing) · [Anthropic Pricing](https://www.anthropic.com/api) · [Google Pricing](https://ai.google.dev/pricing) — 価格は四半期ごとに変更されます。詳細なトークンコストの内訳については[トークン・コスト・制限の解説](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja)を参照してください。',
+            '価格の確認：[OpenAI Pricing](https://openai.com/pricing) · [Anthropic Pricing](https://www.anthropic.com/api) · [Google Pricing](https://ai.google.dev/pricing) — 価格は四半期ごとに変更されます。詳細なトークンコストの内訳については[トークン・コスト・制限の解説](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)を参照してください。',
           ],
           columns: ['モデル', '入力（100万トークンあたり）', '出力（100万トークンあたり）'],
           rows: [
@@ -2305,7 +2305,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**オープンウェイトモデルはフルファインチューニングを許可します。独自モデルはこれを制限または禁止しています。** ファインチューニングとは、モデルのウェイトを自分のデータで再学習させて、特定のドメインに特化させることを意味します。効率的なファインチューニングにはLoRA（Low-Rank Adaptation）、量子化学習にはQLoRA、十分なコンピュートがある場合は完全なバックプロパゲーション学習を使用できます。ファインチューニング後、モデルはあなたのものになります — 生成されたウェイトを所有し、どこにでもデプロイでき、オフラインで更新できます。',
             '**独自のファインチューニング対応状況：** OpenAIのファインチューニングAPIはGPT-4o mini・GPT-4（旧モデル）のみ対応。GPT-4oフラッグシップには対応していません。AnthropicはAPIを通じたClaudeのファインチューニングを提供していません。GoogleはGeminiの限定的なファインチューニングを提供しています。これらのいずれもファインチューニングされたウェイトの所有権を許可しません — 独自モデルのファインチューニング済みコピーをレンタルするだけです。',
-            '**セキュリティ上の考慮事項：** 独自APIでファインチューニングを行う場合、学習データがベンダーサーバーにアップロードされます。機密ドメインでは、これがコンプライアンス規則に違反します。オープンウェイトのファインチューニングはオンプレミスで実施されます。外部APIを使用する際の追加の攻撃面の考慮事項については[プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja)を参照してください。',
+            '**セキュリティ上の考慮事項：** 独自APIでファインチューニングを行う場合、学習データがベンダーサーバーにアップロードされます。機密ドメインでは、これがコンプライアンス規則に違反します。オープンウェイトのファインチューニングはオンプレミスで実施されます。外部APIを使用する際の追加の攻撃面の考慮事項については[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security)を参照してください。',
           ],
         },
 
@@ -2341,8 +2341,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'オープンソースモデルをいつ使用するか',
           content: '**データプライバシー・大規模コスト・深いカスタマイズ要件が制約を支配する場合、オープンウェイトを選択してください。** オープンウェイトが優れているケース：',
           items: [
-            '**機密データ（医療・金融・法律）：** 患者記録・金融データ・弁護士-クライアント間のコミュニケーションは外部APIを経由できません。オンプレミスにデプロイされたオープンウェイトはデータを管理下に置き、コンプライアンスを達成できます。HIPAA・GDPR・弁護士秘密特権のコンプライアンスにはLLaMA 3.1またはMistralを使用してください。[プロンプトインジェクションに対するセキュリティ管理策](/prompt-engineering/prompt-injection-and-security?lang=ja)と組み合わせてモデル入力を保護してください。',
-            '**高量オートメーション（1日5000万+トークン）：** 1日約1000万トークンを超えると、セルフホスティングが独自APIより安価になります。[APIコストが法外になる](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja)高量の分類・抽出・要約・データ処理パイプラインにはオープンウェイトを使用してください。',
+            '**機密データ（医療・金融・法律）：** 患者記録・金融データ・弁護士-クライアント間のコミュニケーションは外部APIを経由できません。オンプレミスにデプロイされたオープンウェイトはデータを管理下に置き、コンプライアンスを達成できます。HIPAA・GDPR・弁護士秘密特権のコンプライアンスにはLLaMA 3.1またはMistralを使用してください。[プロンプトインジェクションに対するセキュリティ管理策](/ja/prompt-engineering/prompt-injection-and-security)と組み合わせてモデル入力を保護してください。',
+            '**高量オートメーション（1日5000万+トークン）：** 1日約1000万トークンを超えると、セルフホスティングが独自APIより安価になります。[APIコストが法外になる](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)高量の分類・抽出・要約・データ処理パイプラインにはオープンウェイトを使用してください。',
             '**ドメインカスタマイズとファインチューニング：** ラベル付きデータセットがあり、モデルを自分の用語・文体・タスク分布に特化させる必要がある場合。オープンウェイトはLoRA・QLoRA・フルファインチューニングを許可します。独自APIはカスタマイズを禁止または制限しています。',
             '**地理的またはネットワーク上の制約：** インターネットアクセスなしで推論が必要な場合（潜水艦・航空機・遠隔地）。オープンウェイトはオフラインで動作します。独自APIはネットワーク接続が必要です。',
             '**EU AI Actコンプライアンス（高リスクデプロイ）：** 採用システム・信用決定・給付金決定。監査証跡・リスク文書・オンプレミスのデータ所在地はオープンウェイトの方が容易です。独自APIはコンプライアンスの実証を困難にします。',
@@ -2369,7 +2369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**プライバシー敏感データ → ローカルのオープンウェイト、複雑な推論 → 独自API。** 患者記録・金融データ・法的文書をOllamaを通じてローカルで動作するLLaMA 3.1にルーティングします。多段階の研究合成・コード生成・エージェントオーケストレーションをGPT-4oまたはClaude Opus 4.7にルーティングします。このハイブリッドアプローチでコンプライアンスを達成しながらフロンティアパフォーマンスを維持できます。',
             '**コスト重視のバッチ処理 → ローカルのオープンウェイト、インタラクティブなリクエスト → 独自API。** バックグラウンドタスク（分類・抽出・要約）にはセルフホストのLLaMA 3.1 70Bを使用（A100で約$2/時間）。レイテンシーが重要なリアルタイムのユーザーリクエストにはGPT-4o API（100万トークンあたり$5/$15）を使用。ハイブリッドにより総コストとレイテンシーが削減されます。',
-            '**マルチモデル比較とコンセンサス → PromptQuorum。** PromptQuorumを使用して、単一の[プロンプト](/prompt-engineering/what-is-prompt-engineering?lang=ja)をローカルOllama・GPT-4o・Claude 4.6・Gemini 3.1 Proに同時にディスパッチします。品質・レイテンシー・コストを並べて比較してください。本番用のウィナーを選択するか、アンサンブル推論のために出力を組み合わせてください。',
+            '**マルチモデル比較とコンセンサス → PromptQuorum。** PromptQuorumを使用して、単一の[プロンプト](/ja/prompt-engineering/what-is-prompt-engineering)をローカルOllama・GPT-4o・Claude 4.6・Gemini 3.1 Proに同時にディスパッチします。品質・レイテンシー・コストを並べて比較してください。本番用のウィナーを選択するか、アンサンブル推論のために出力を組み合わせてください。',
             '**テストとステージング → オープンウェイト、本番サービング → 独自。** ローカルで動作するLLaMA 3.1 8Bを使用して迅���なプロトタイピングと開発を行います。プロンプトとパイプラインが検証されたら、信頼性・ツール統合・安全保証が重要な本番トラフィック用にGPT-4oまたはClaudeにアップグレードします。',
           ],
         },
@@ -2380,7 +2380,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**パフォーマンスの差はタスク固有であり、普遍的ではありません。** 独自モデルはMMUL（推論）で7〜8ポイントリードしています。しかし分類・要約・抽出・多くのドメインタスクでは、LLaMA 3.1 70Bが独自モデルと同等またはそれ以上のパフォーマンスを発揮します。「独自モデルの方が優れている」という言い方は広すぎます。実際のタスクでベンチマークを測定してください。',
             '**「オープンソース」のライセンスは複雑であり、実際にはオープンソースではないことが多いです。** LLaMA・Mistral・Qwenは OSI準拠のオープンソースではなく、非標準ライセンスの下での「オープンウェイト」です。これらを「オープンソース」と呼ぶのは誤解を招き、法的な混乱を招きます。法的保護に依存する前に、顧問と一緒にライセンスを確認してください。',
-            '**独自モデルが常により安全またはアライメントされているわけではありません。** [すべてのモデルはハルシネーションします](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja)。独自の学習データ・カットオフ・Constitutional AIは、ジェイルブレイク・[プロンプトインジェクション](/prompt-engineering/prompt-injection-and-security?lang=ja)・悪用を防ぐことができません。オープンウェイトは独自のアライメントと同等またはそれ以上になるようにファインチューニングできます。安全性はモデルクラスではなく、デプロイとガードレールの特性です。',
+            '**独自モデルが常により安全またはアライメントされているわけではありません。** [すべてのモデルはハルシネーションします](/ja/prompt-engineering/ai-limitations-what-llms-cant-do)。独自の学習データ・カットオフ・Constitutional AIは、ジェイルブレイク・[プロンプトインジェクション](/ja/prompt-engineering/prompt-injection-and-security)・悪用を防ぐことができません。オープンウェイトは独自のアライメントと同等またはそれ以上になるようにファインチューニングできます。安全性はモデルクラスではなく、デプロイとガードレールの特性です。',
           ],
         },
 
@@ -2407,12 +2407,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '関連資料',
           items: [
-            '[基礎：AIの限界と構造的制約](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — 独自モデルとオープンウェイトモデルの両方がハルシネーションやコンテキスト上限などの基本的な制限を共有する理由',
-            '[基礎：LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja) — トランスフォーマーアーキテクチャを理解することで、オープンウェイトと独自モデルが同じコアメカニズムを共有する理由がわかる',
-            '[基礎：GPT-4o、Claude、それともGemini？正しいモデルの選び方](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja) — フロンティア独自モデルの詳細比較',
-            '[テクニック：RAG解説 — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=ja) — 任意のモデル（独自またはオープンウェイト）を外部知識で拡張する方法',
-            '[基礎：トークン・コスト・制限](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja) — 詳細なコスト分析とトークンエコノミクス',
-            '[基礎：プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — 両モデルクラスのセキュリティ上の考慮事項',
+            '[基礎：AIの限界と構造的制約](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — 独自モデルとオープンウェイトモデルの両方がハルシネーションやコンテキスト上限などの基本的な制限を共有する理由',
+            '[基礎：LLMが実際にどのように機能するか](/ja/prompt-engineering/how-llms-actually-work) — トランスフォーマーアーキテクチャを理解することで、オープンウェイトと独自モデルが同じコアメカニズムを共有する理由がわかる',
+            '[基礎：GPT-4o、Claude、それともGemini？正しいモデルの選び方](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — フロンティア独自モデルの詳細比較',
+            '[テクニック：RAG解説 — Retrieval-Augmented Generation](/ja/prompt-engineering/rag-explained) — 任意のモデル（独自またはオープンウェイト）を外部知識で拡張する方法',
+            '[基礎：トークン・コスト・制限](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 詳細なコスト分析とトークンエコノミクス',
+            '[基礎：プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — 両モデルクラスのセキュリティ上の考慮事項',
           ],
         },
 
@@ -2520,7 +2520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/open-source-vs-proprietary-llms',
         'inLanguage': 'zh',
         headline: '开源与专有LLM：竞争格局',
         description: '开放权重模型（如LLaMA 4和Mistral）提供完全控制和规模化成本节省；专有模型（如GPT-4o和Claude Opus 4.7）则提供前沿性能。',
@@ -2678,7 +2678,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**"开源"与"开放权重"并不同义。** 开源许可证（Apache 2.0、MIT、GPL）适用于源代码，允许不受限制的商业和私人使用。开放权重意味着训练好的模型权重可以下载，但可能受专门许可证的限制。LLaMA 3.1是开放权重，而非开源——Meta在Llama Community License 2.1下发布权重，允许商业使用但包含限制，禁止将衍生模型命名为"LLaMA"且要求署名。',
             '**专有模型既非开放权重也非开源。** OpenAI（GPT-4o）、Anthropic（Claude Opus 4.7）和Google（Gemini 3.1 Pro）不发布模型权重。您只能通过API访问它们。权重保持封闭；您无法查看、下载、修改或自行部署模型。',
-            '理解这一区别对合规、定制化和数据主权至关重要。[了解LLM内部工作原理以理解权重的重要性](/prompt-engineering/how-llms-actually-work?lang=zh)。',
+            '理解这一区别对合规、定制化和数据主权至关重要。[了解LLM内部工作原理以理解权重的重要性](/zh/prompt-engineering/how-llms-actually-work)。',
           ],
         },
 
@@ -2792,7 +2792,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '2026年专有模型市场格局',
           content: [
             '**专有LLM完全通过供应商控制的API访问；模型权重从不发布，无法下载、修改或在本地部署。** 用户按token API计费，并接受供应商对模型更新、安全策略和性能特性的控制。',
-            '**OpenAI的GPT-4o仍然是推理领域的领导者。** GPT-4o支持128K token上下文，训练截止日期为2024年10月。它在工具使用、智能体工作流、多模态输入（图像、文本）和复杂多步骤推理方面表现出色。API定价：每百万输入token 5美元，每百万输出token 15美元（2026年3月价格）。GPT-4o仅限API；权重从不发布。参见[上下文窗口如何影响您的AI系统](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh)以了解权衡。',
+            '**OpenAI的GPT-4o仍然是推理领域的领导者。** GPT-4o支持128K token上下文，训练截止日期为2024年10月。它在工具使用、智能体工作流、多模态输入（图像、文本）和复杂多步骤推理方面表现出色。API定价：每百万输入token 5美元，每百万输出token 15美元（2026年3月价格）。GPT-4o仅限API；权重从不发布。参见[上下文窗口如何影响您的AI系统](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)以了解权衡。',
             '**Anthropic的Claude Opus 4.7在写作和代码质量基准上占据主导地位。** Claude支持200K token上下文——是GPT-4o的2倍——能够处理更长的文档和更长的对话。训练数据截止日期：2025年初。API定价：每百万输入token 3美元，每百万输出token 15美元。Claude不提供公开微调。Anthropic将可解释性和安全对齐置于基准最大化之上。',
             '**Google的Gemini 3.1 Pro提供最大的上下文窗口：200万token。** 这使得处理完整书籍长度的文档、详尽研究和扩展多轮对话成为可能。定价：每百万输入token 1.25美元（≤200K上下文），每百万输出token 10美元；超过200K上下文时价格更高。Gemini与Google Workspace、日历、Gmail和网络搜索深度集成。训练数据截止日期：2024年10月。Gemini模型可进行微调。',
           ],
@@ -2801,7 +2801,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         performanceBenchmarks: {
           title: '基准性能：2026年的差距现状',
           content: [
-            '**专有模型在通用推理（MMLU）上仍然领先，但差距已缩小至7–8个百分点。** MMLU（大规模多任务语言理解）是涵盖57个学术学科的广泛基准。要了解[LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh)对推理能力的重要性，请阅读我们关于transformer架构的深度解析。当前分数：',
+            '**专有模型在通用推理（MMLU）上仍然领先，但差距已缩小至7–8个百分点。** MMLU（大规模多任务语言理解）是涵盖57个学术学科的广泛基准。要了解[LLM实际工作原理](/zh/prompt-engineering/how-llms-actually-work)对推理能力的重要性，请阅读我们关于transformer架构的深度解析。当前分数：',
             '',
             'GPT-4o: 88.7%（OpenAI，2024年）',
             'Claude 3.5 Sonnet: 88.3%（Anthropic，2024年）',
@@ -2811,9 +2811,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '',
             '**2022年开放权重与专有模型之间的性能差距从15–20个百分点缩小到2026年推理任务的7–8个百分点。** 在专项任务（编程、数学、摘要、分类）上，开放权重模型现已与专有同类产品持平或超越。',
             '',
-            '剩余差距主要在抽象推理和[工具使用编排](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)上。——Touvron等，"LLaMA 3模型群"，2024年',
+            '剩余差距主要在抽象推理和[工具使用编排](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)上。——Touvron等，"LLaMA 3模型群"，2024年',
             '',
-            '**重要说明：** 基准测试衡量的是狭窄技能。特定任务性能各有不同：在分类、摘要和提取方面，LLaMA 3.1 70B经常与GPT-4o持平甚至超越。在复杂多步骤推理（代数、长思维链）方面，专有模型保持优势。唯一可靠的基准是在您的实际任务上测试——参见[如何为您的用例选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)。',
+            '**重要说明：** 基准测试衡量的是狭窄技能。特定任务性能各有不同：在分类、摘要和提取方面，LLaMA 3.1 70B经常与GPT-4o持平甚至超越。在复杂多步骤推理（代数、长思维链）方面，专有模型保持优势。唯一可靠的基准是在您的实际任务上测试——参见[如何为您的用例选择合适的模型](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)。',
           ],
         },
 
@@ -2832,7 +2832,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '',
             '**每天1亿token时：** 需要40台A100 = 每天100美元。API成本：每天1,800美元。开放权重便宜18倍。',
             '',
-            '验证定价：[OpenAI定价](https://openai.com/pricing) · [Anthropic定价](https://www.anthropic.com/api) · [Google定价](https://ai.google.dev/pricing)——价格每季度变化。参见[token、成本与限制详解](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh)获取详细的token成本分析。',
+            '验证定价：[OpenAI定价](https://openai.com/pricing) · [Anthropic定价](https://www.anthropic.com/api) · [Google定价](https://ai.google.dev/pricing)——价格每季度变化。参见[token、成本与限制详解](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)获取详细的token成本分析。',
           ],
           columns: ['模型', '输入（每百万token）', '输出（每百万token）'],
           rows: [
@@ -2857,7 +2857,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**开放权重模型允许完整微调；专有模型限制甚至禁止微调。** 微调意味着在您自己的数据上重新训练模型权重，以将其专业化于您的领域。您可以使用LoRA（低秩适应）进行高效微调，使用QLoRA进行量化训练，或者在有足够算力时进行全量反向传播训练。微调后，模型成为您的——您拥有生成的权重，可以在任何地方部署它们，并可以离线更新它们。',
             '**专有微调可用性：** OpenAI微调API仅适用于GPT-4o mini、GPT-4（旧版模型），不适用于GPT-4o旗舰版。Anthropic不通过API为Claude提供微调。Google为Gemini提供有限的微调。这些都不允许拥有微调后的权重——您只是租用专有模型的微调副本。',
-            '**安全考虑：** 在专有API上进行微调时，您的训练数据会上传到供应商服务器。对于敏感领域，这违反合规规定。开放权重微调保留在本地。参见[提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh)了解使用外部API时的其他攻击面考虑因素。',
+            '**安全考虑：** 在专有API上进行微调时，您的训练数据会上传到供应商服务器。对于敏感领域，这违反合规规定。开放权重微调保留在本地。参见[提示词注入与安全](/zh/prompt-engineering/prompt-injection-and-security)了解使用外部API时的其他攻击面考虑因素。',
           ],
         },
 
@@ -2893,8 +2893,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '何时使用开源模型',
           content: '**当数据隐私、规模化成本或深度定制需求主导您的约束时，选择开放权重。** 开放权重的优势场景：',
           items: [
-            '**敏感数据（医疗、金融、法律）：** 患者记录、金融数据、律师-客户通信不能经过外部API传输。本地部署的开放权重将数据保留在您的控制之下，实现合规性。使用LLaMA 3.1或Mistral满足HIPAA、GDPR和律师-客户特权合规要求。配合[提示词注入安全控制措施](/prompt-engineering/prompt-injection-and-security?lang=zh)保护模型输入。',
-            '**高量自动化（每天5000万+个token）：** 每天超过约1000万token时，自托管比专有API更便宜。对于[API成本会过高](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh)的高量分类、提取、摘要或数据处理管道，使用开放权重。',
+            '**敏感数据（医疗、金融、法律）：** 患者记录、金融数据、律师-客户通信不能经过外部API传输。本地部署的开放权重将数据保留在您的控制之下，实现合规性。使用LLaMA 3.1或Mistral满足HIPAA、GDPR和律师-客户特权合规要求。配合[提示词注入安全控制措施](/zh/prompt-engineering/prompt-injection-and-security)保护模型输入。',
+            '**高量自动化（每天5000万+个token）：** 每天超过约1000万token时，自托管比专有API更便宜。对于[API成本会过高](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)的高量分类、提取、摘要或数据处理管道，使用开放权重。',
             '**领域定制化和微调：** 您有标注数据集，需要模型在您的术语、写作风格或任务分布上进行专业化。开放权重支持LoRA、QLoRA或全量微调。专有API禁止或限制定制化。',
             '**地理或网络约束：** 您需要在没有互联网访问的情况下进行推理（潜艇、飞机、远程站点）。开放权重可离线运行。专有API需要网络连接。',
             '**欧盟AI法案合规（高风险部署）：** 招聘系统、信贷决策、福利确定。审计跟踪、风险文档和本地数据驻留通过开放权重更容易实现。专有API使合规性更难证明。',
@@ -2921,7 +2921,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**隐私敏感数据 → 本地开放权重；复杂推理 → 专有API。** 将患者记录、金融数据和法律文件路由到通过Ollama本地运行的LLaMA 3.1。将多步骤研究综合、代码生成和智能体编排路由到GPT-4o或Claude Opus 4.7。这种混合方式在保持前沿性能的同时实现合规性。',
             '**成本敏感的批处理 → 本地开放权重；交互式请求 → 专有API。** 对于后台任务（分类、提取、摘要），使用自托管的LLaMA 3.1 70B（在A100上约每小时2美元）。对于延迟重要的实时用户请求，使用GPT-4o API（每百万token 5/15美元）。混合方式降低总成本和延迟。',
-            '**多模型对比和共识 → PromptQuorum。** 通过PromptQuorum同时将单个[提示词](/prompt-engineering/what-is-prompt-engineering?lang=zh)分发到本地Ollama、GPT-4o、Claude 4.6和Gemini 3.1 Pro。并排比较质量、延迟和成本方面的输出。选择生产中的获胜者，或将输出组合用于集成推理。',
+            '**多模型对比和共识 → PromptQuorum。** 通过PromptQuorum同时将单个[提示词](/zh/prompt-engineering/what-is-prompt-engineering)分发到本地Ollama、GPT-4o、Claude 4.6和Gemini 3.1 Pro。并排比较质量、延迟和成本方面的输出。选择生产中的获胜者，或将输出组合用于集成推理。',
             '**测试和暂存 → 开放权重；生产服务 → 专有。** 使用本地运行的LLaMA 3.1 8B进行快速原型开发和开发工作。一旦提示词和管道经过验证，升级到GPT-4o或Claude用于生产流量，在可靠性、工具集成和安全保证最重要的地方使用。',
           ],
         },
@@ -2932,19 +2932,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**性能差距是特定任务的，并非普遍适用。** 专有模型在MMLU（推理）上领先7–8个百分点。但在分类、摘要、提取和许多领域任务上，LLaMA 3.1 70B与专有模型持平甚至超越。"专有模型更好"过于笼统。在您的实际任务上进行基准测试。',
             '**"开源"许可证复杂，通常并不真正是开源。** LLaMA、Mistral和Qwen不符合OSI的开源标准——它们是非标准许可证下的"开放权重"。将它们称为"开源"具有误导性，可能引起法律混淆。在依赖法律保护之前，请咨询法律顾问确认许可证要求。',
-            '**专有模型并不总是更安全或更对齐。** [所有模型都会产生幻觉](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh)。专有训练数据、截止日期和Constitutional AI无法防止越狱、[提示词注入](/prompt-engineering/prompt-injection-and-security?lang=zh)或滥用。开放权重可以微调以匹配或超越专有模型的对齐效果。安全是部署和护栏的属性，而非模型类别的属性。',
+            '**专有模型并不总是更安全或更对齐。** [所有模型都会产生幻觉](/zh/prompt-engineering/ai-limitations-what-llms-cant-do)。专有训练数据、截止日期和Constitutional AI无法防止越狱、[提示词注入](/zh/prompt-engineering/prompt-injection-and-security)或滥用。开放权重可以微调以匹配或超越专有模型的对齐效果。安全是部署和护栏的属性，而非模型类别的属性。',
           ],
         },
 
         keyTerms: {
           title: '关键术语',
           items: [
-            '[开放权重](/prompt-engineering/prompt-engineering-glossary?lang=zh#open-weights) — 模型权重可下载，但可能受许可证限制',
-            '[微调](/prompt-engineering/prompt-engineering-glossary?lang=zh#fine-tuning) — 在特定领域数据上重新训练模型权重',
-            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=zh#lora) — 通过低秩适应进行高效微调（全量训练成本的5–10%）',
-            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=zh#rag) — 检索增强生成；将LLM输出锚定于外部文档',
-            '[上下文窗口](/prompt-engineering/prompt-engineering-glossary?lang=zh#context-window) — 输入+输出合并的最大token容量',
-            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=zh#vram) — 模型推理所需的GPU显存',
+            '[开放权重](/zh/prompt-engineering/prompt-engineering-glossary#open-weights) — 模型权重可下载，但可能受许可证限制',
+            '[微调](/zh/prompt-engineering/prompt-engineering-glossary#fine-tuning) — 在特定领域数据上重新训练模型权重',
+            '[LoRA](/zh/prompt-engineering/prompt-engineering-glossary#lora) — 通过低秩适应进行高效微调（全量训练成本的5–10%）',
+            '[RAG](/zh/prompt-engineering/prompt-engineering-glossary#rag) — 检索增强生成；将LLM输出锚定于外部文档',
+            '[上下文窗口](/zh/prompt-engineering/prompt-engineering-glossary#context-window) — 输入+输出合并的最大token容量',
+            '[VRAM](/zh/prompt-engineering/prompt-engineering-glossary#vram) — 模型推理所需的GPU显存',
           ],
         },
 
@@ -2959,12 +2959,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[基础知识：AI的局限性与结构性约束](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 专有和开放权重模型为何共享幻觉和上下文限制等基本局限性',
-            '[基础知识：LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh) — 了解transformer架构有助于解释开放权重与专有模型共享相同核心机制',
-            '[基础知识：GPT-4o、Claude还是Gemini？如何选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh) — 前沿专有模型的详细对比',
-            '[技术：RAG详解——检索增强生成](/prompt-engineering/rag-explained?lang=zh) — 如何用外部知识扩展任意模型（专有或开放权重）',
-            '[基础知识：Token、成本与限制](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh) — 详细的成本分析和token经济学',
-            '[基础知识：提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 两类模型的安全注意事项',
+            '[基础知识：AI的局限性与结构性约束](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) — 专有和开放权重模型为何共享幻觉和上下文限制等基本局限性',
+            '[基础知识：LLM实际工作原理](/zh/prompt-engineering/how-llms-actually-work) — 了解transformer架构有助于解释开放权重与专有模型共享相同核心机制',
+            '[基础知识：GPT-4o、Claude还是Gemini？如何选择合适的模型](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 前沿专有模型的详细对比',
+            '[技术：RAG详解——检索增强生成](/zh/prompt-engineering/rag-explained) — 如何用外部知识扩展任意模型（专有或开放权重）',
+            '[基础知识：Token、成本与限制](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 详细的成本分析和token经济学',
+            '[基础知识：提示词注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — 两类模型的安全注意事项',
           ],
         },
 

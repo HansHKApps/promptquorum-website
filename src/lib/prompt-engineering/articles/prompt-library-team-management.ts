@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-library-team-management?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/prompt-library-team-management',
       inLanguage: 'de',
       headline: 'Prompt-Bibliothek für Teams: Organisieren, Versionieren & Verwalten',
       description: 'Team-Prompt-Bibliotheken verwalten: Ordnerstruktur, Namenskonventionen, Git-Versionierung, Zugriffssteuerung und Deprecation-Workflow.',
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-library-team-management?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-library-team-management',
       inLanguage: 'es',
       headline: 'Gestión de biblioteca de prompts: cómo organizar, versionar y gobernar los prompts del equipo',
       description: 'Gestiona bibliotecas de prompts del equipo: estructura de carpetas, convenciones de nombres, versionado Git, control de acceso y flujo de deprecación.',
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-library-team-management?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/prompt-library-team-management',
       inLanguage: 'fr',
       headline: 'Gestion de bibliothèque de prompts : organiser, versionner et gouverner les prompts d\'équipe',
       description: 'Gérer les bibliothèques de prompts d\'équipe : structure de dossiers, conventions de nommage, gestion de version Git, contrôle d\'accès et workflow de dépréciation.',
@@ -720,7 +720,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-library-team-management?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/prompt-library-team-management',
       inLanguage: 'ja',
       headline: 'プロンプトライブラリ管理：チームのプロンプトを整理、バージョン管理、統治する方法',
       description: 'チームのプロンプトライブラリを管理：フォルダ構造、命名規則、Gitバージョン管理、アクセス制御、廃止ワークフロー。',
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-library-team-management?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/prompt-library-team-management',
       inLanguage: 'zh',
       headline: 'Prompt库管理：如何组织、版本控制和治理团队Prompt',
       description: '管理团队Prompt库：文件夹结构、命名规范、Git版本控制、访问控制和弃用工作流。',

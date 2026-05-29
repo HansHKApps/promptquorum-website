@@ -883,9 +883,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lecturas relacionadas',
         items: [
-          '[Mejor mini PC para LLM local](/prompt-bites/best-mini-pc-for-local-llm?lang=es) — Mac Mini M4 comparado con mini PCs AMD',
-          '[Mejor eGPU para Ollama en un MacBook](/prompt-bites/best-egpu-ollama-macbook?lang=es) — por qué las eGPU no ayudan a la inferencia LLM en Apple Silicon',
-          '[Mejor LLM local para portátil con 16 GB de RAM](/prompt-bites/best-local-llm-16gb-ram-laptop?lang=es) — selección de modelos para el nivel de 16 GB',
+          '[Mejor mini PC para LLM local](/es/prompt-bites/best-mini-pc-for-local-llm) — Mac Mini M4 comparado con mini PCs AMD',
+          '[Mejor eGPU para Ollama en un MacBook](/es/prompt-bites/best-egpu-ollama-macbook) — por qué las eGPU no ayudan a la inferencia LLM en Apple Silicon',
+          '[Mejor LLM local para portátil con 16 GB de RAM](/es/prompt-bites/best-local-llm-16gb-ram-laptop) — selección de modelos para el nivel de 16 GB',
         ],
       },
     },

@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Eine Vertiefung der Plugin-Schicht dieser Architektur (welche 5 Plugins, Konfigurationsschritte, Vault-Skalierungswerte) finden Sie im [Obsidian + Local LLM Plugin-Guide](/power-local-llm/local-llm-with-obsidian-2026?lang=de). Diese Seite behandelt die Architektur; der Plugin-Guide behandelt die Konfiguration.',
+            text: 'Eine Vertiefung der Plugin-Schicht dieser Architektur (welche 5 Plugins, Konfigurationsschritte, Vault-Skalierungswerte) finden Sie im [Obsidian + Local LLM Plugin-Guide](/de/power-local-llm/local-llm-with-obsidian-2026). Diese Seite behandelt die Architektur; der Plugin-Guide behandelt die Konfiguration.',
           },
         ],
       },
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Eine Schritt-für-Schritt-Einrichtung der hier verwendeten RAG-Schicht (Ollama + AnythingLLM, Ingestion, Chunk-Tuning) finden Sie im Walkthrough [Local RAG on Your PDFs in 30 Minutes](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=de). Zur Skalierung von RAG über Spielzeugbeispiele hinaus auf 1.000+ PDFs siehe [Chat With 1000+ PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally?lang=de).',
+            text: 'Eine Schritt-für-Schritt-Einrichtung der hier verwendeten RAG-Schicht (Ollama + AnythingLLM, Ingestion, Chunk-Tuning) finden Sie im Walkthrough [Local RAG on Your PDFs in 30 Minutes](/de/power-local-llm/local-rag-on-your-pdfs-step-by-step). Zur Skalierung von RAG über Spielzeugbeispiele hinaus auf 1.000+ PDFs siehe [Chat With 1000+ PDFs Locally](/de/power-local-llm/chat-with-1000-pdfs-locally).',
           },
         ],
       },
@@ -923,14 +923,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Obsidian + Local LLM: 5 Plugins, die Ihren Vault zum Second Brain machen (2026)](/power-local-llm/local-llm-with-obsidian-2026?lang=de) — Vertiefung der Plugin-Schicht von Architektur A.',
-          '[Lokales LLM mit Logseq und Joplin](/power-local-llm/local-llm-with-logseq-and-joplin?lang=de) — alternative Speicherschichten für die PKB, falls Obsidian nicht Ihre Wahl ist.',
-          '[Chat mit 1000+ PDFs lokal: RAG über Spielzeugbeispiele hinaus skalieren](/power-local-llm/chat-with-1000-pdfs-locally?lang=de) — Skalierung der RAG-Schicht über 1.000 Elemente, gilt für alle drei Architekturen.',
-          '[Lokales RAG für Ihre PDFs in 30 Minuten (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=de) — RAG-Implementierungs-Walkthrough für die in Architektur B verwendete Retrieval-Schicht.',
-          '[Beste Embedding-Modelle für lokales RAG (2026)](/power-local-llm/best-embedding-models-local-rag-2026?lang=de) — Embedding-Modell-Auswahl (nomic-embed-text vs mxbai-embed-large vs bge-m3) für jede der drei Architekturen.',
-          '[RAG erklärt](/prompt-engineering/rag-explained?lang=de) — konzeptionelle Grundlage der Retrieval-Schicht.',
-          '[Lokales LLM Hardware-Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — Hardware-Sizing für 16-GB-Untergrenze, 32 GB ab 10K Elementen, Heimserver ab 100K.',
-          '[Lokales LLM Software-Verzeichnis 2026](/power-local-llm/local-llm-software-directory-2026?lang=de) — Verzeichnislisten für Ollama, ChromaDB, AnythingLLM, Obsidian und weitere Komponenten des Stacks.',
+          '[Obsidian + Local LLM: 5 Plugins, die Ihren Vault zum Second Brain machen (2026)](/de/power-local-llm/local-llm-with-obsidian-2026) — Vertiefung der Plugin-Schicht von Architektur A.',
+          '[Lokales LLM mit Logseq und Joplin](/de/power-local-llm/local-llm-with-logseq-and-joplin) — alternative Speicherschichten für die PKB, falls Obsidian nicht Ihre Wahl ist.',
+          '[Chat mit 1000+ PDFs lokal: RAG über Spielzeugbeispiele hinaus skalieren](/de/power-local-llm/chat-with-1000-pdfs-locally) — Skalierung der RAG-Schicht über 1.000 Elemente, gilt für alle drei Architekturen.',
+          '[Lokales RAG für Ihre PDFs in 30 Minuten (Ollama + AnythingLLM)](/de/power-local-llm/local-rag-on-your-pdfs-step-by-step) — RAG-Implementierungs-Walkthrough für die in Architektur B verwendete Retrieval-Schicht.',
+          '[Beste Embedding-Modelle für lokales RAG (2026)](/de/power-local-llm/best-embedding-models-local-rag-2026) — Embedding-Modell-Auswahl (nomic-embed-text vs mxbai-embed-large vs bge-m3) für jede der drei Architekturen.',
+          '[RAG erklärt](/de/prompt-engineering/rag-explained) — konzeptionelle Grundlage der Retrieval-Schicht.',
+          '[Lokales LLM Hardware-Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) — Hardware-Sizing für 16-GB-Untergrenze, 32 GB ab 10K Elementen, Heimserver ab 100K.',
+          '[Lokales LLM Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory-2026) — Verzeichnislisten für Ollama, ChromaDB, AnythingLLM, Obsidian und weitere Komponenten des Stacks.',
         ],
       },
     },
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pour un approfondissement de la couche plugin de cette architecture (quels 5 plugins, étapes de configuration, valeurs d\'échelle de vault), voir le [guide des plugins Obsidian + LLM local](/power-local-llm/local-llm-with-obsidian-2026?lang=fr). Cette page couvre l\'architecture ; le guide des plugins couvre la configuration.',
+            text: 'Pour un approfondissement de la couche plugin de cette architecture (quels 5 plugins, étapes de configuration, valeurs d\'échelle de vault), voir le [guide des plugins Obsidian + LLM local](/fr/power-local-llm/local-llm-with-obsidian-2026). Cette page couvre l\'architecture ; le guide des plugins couvre la configuration.',
           },
         ],
       },
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pour la mise en place pas-à-pas de la couche RAG utilisée ici (Ollama + AnythingLLM, ingestion, réglage du chunking), voir le tutoriel [RAG local sur vos PDF en 30 minutes](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=fr). Pour mettre à l\'échelle au-delà des exemples jouets jusqu\'à 1 000+ PDF, voir [Chatter avec 1000+ PDF localement](/power-local-llm/chat-with-1000-pdfs-locally?lang=fr).',
+            text: 'Pour la mise en place pas-à-pas de la couche RAG utilisée ici (Ollama + AnythingLLM, ingestion, réglage du chunking), voir le tutoriel [RAG local sur vos PDF en 30 minutes](/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step). Pour mettre à l\'échelle au-delà des exemples jouets jusqu\'à 1 000+ PDF, voir [Chatter avec 1000+ PDF localement](/fr/power-local-llm/chat-with-1000-pdfs-locally).',
           },
         ],
       },
@@ -1384,14 +1384,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Obsidian + LLM local : 5 plugins qui transforment votre vault en second cerveau (2026)](/power-local-llm/local-llm-with-obsidian-2026?lang=fr) — approfondissement de la couche plugin de l\'Architecture A.',
-          '[LLM local avec Logseq et Joplin](/power-local-llm/local-llm-with-logseq-and-joplin?lang=fr) — couches de stockage alternatives pour la PKB si Obsidian n\'est pas votre choix.',
-          '[Chatter avec 1000+ PDF localement : RAG au-delà des exemples jouets](/power-local-llm/chat-with-1000-pdfs-locally?lang=fr) — mise à l\'échelle de la couche RAG au-delà de 1 000 éléments, valable pour les trois architectures.',
-          '[RAG local sur vos PDF en 30 minutes (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=fr) — tutoriel d\'implémentation RAG pour la couche de récupération de l\'Architecture B.',
-          '[Meilleurs modèles d\'embedding pour le RAG local (2026)](/power-local-llm/best-embedding-models-local-rag-2026?lang=fr) — choix du modèle d\'embedding (nomic-embed-text vs mxbai-embed-large vs bge-m3) pour chacune des trois architectures.',
-          '[RAG expliqué](/prompt-engineering/rag-explained?lang=fr) — autorité conceptuelle pour la couche de récupération.',
-          '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — dimensionnement matériel pour seuil 16 Go, 32 Go au-delà de 10K, serveur domestique au-delà de 100K.',
-          '[Annuaire logiciels LLM local 2026](/power-local-llm/local-llm-software-directory-2026?lang=fr) — listes pour Ollama, ChromaDB, AnythingLLM, Obsidian et autres composants du stack.',
+          '[Obsidian + LLM local : 5 plugins qui transforment votre vault en second cerveau (2026)](/fr/power-local-llm/local-llm-with-obsidian-2026) — approfondissement de la couche plugin de l\'Architecture A.',
+          '[LLM local avec Logseq et Joplin](/fr/power-local-llm/local-llm-with-logseq-and-joplin) — couches de stockage alternatives pour la PKB si Obsidian n\'est pas votre choix.',
+          '[Chatter avec 1000+ PDF localement : RAG au-delà des exemples jouets](/fr/power-local-llm/chat-with-1000-pdfs-locally) — mise à l\'échelle de la couche RAG au-delà de 1 000 éléments, valable pour les trois architectures.',
+          '[RAG local sur vos PDF en 30 minutes (Ollama + AnythingLLM)](/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step) — tutoriel d\'implémentation RAG pour la couche de récupération de l\'Architecture B.',
+          '[Meilleurs modèles d\'embedding pour le RAG local (2026)](/fr/power-local-llm/best-embedding-models-local-rag-2026) — choix du modèle d\'embedding (nomic-embed-text vs mxbai-embed-large vs bge-m3) pour chacune des trois architectures.',
+          '[RAG expliqué](/fr/prompt-engineering/rag-explained) — autorité conceptuelle pour la couche de récupération.',
+          '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — dimensionnement matériel pour seuil 16 Go, 32 Go au-delà de 10K, serveur domestique au-delà de 100K.',
+          '[Annuaire logiciels LLM local 2026](/fr/power-local-llm/local-llm-software-directory-2026) — listes pour Ollama, ChromaDB, AnythingLLM, Obsidian et autres composants du stack.',
         ],
       },
     },
@@ -1625,7 +1625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'このアーキテクチャのプラグインレイヤーの詳細 (どの5つのプラグイン、設定手順、vault規模の数値) については、[Obsidian + ローカルLLMプラグインガイド](/power-local-llm/local-llm-with-obsidian-2026?lang=ja) を参照してください。このページはアーキテクチャをカバーし、プラグインガイドは設定をカバーします。',
+            text: 'このアーキテクチャのプラグインレイヤーの詳細 (どの5つのプラグイン、設定手順、vault規模の数値) については、[Obsidian + ローカルLLMプラグインガイド](/ja/power-local-llm/local-llm-with-obsidian-2026) を参照してください。このページはアーキテクチャをカバーし、プラグインガイドは設定をカバーします。',
           },
         ],
       },
@@ -1649,7 +1649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'ここで使用されるRAGレイヤーの段階的セットアップ (Ollama + AnythingLLM、取り込み、チャンク調整) については、[30分でのローカルRAG (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=ja) チュートリアルを参照してください。RAGをおもちゃの例を超えて1,000+ PDFに拡張するには、[1000+ PDFをローカルでチャット](/power-local-llm/chat-with-1000-pdfs-locally?lang=ja) を参照してください。',
+            text: 'ここで使用されるRAGレイヤーの段階的セットアップ (Ollama + AnythingLLM、取り込み、チャンク調整) については、[30分でのローカルRAG (Ollama + AnythingLLM)](/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step) チュートリアルを参照してください。RAGをおもちゃの例を超えて1,000+ PDFに拡張するには、[1000+ PDFをローカルでチャット](/ja/power-local-llm/chat-with-1000-pdfs-locally) を参照してください。',
           },
         ],
       },
@@ -1845,14 +1845,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Obsidian + ローカルLLM: vaultをセカンドブレインに変える5つのプラグイン (2026)](/power-local-llm/local-llm-with-obsidian-2026?lang=ja) — アーキテクチャAのプラグインレイヤーの詳細。',
-          '[LogseqとJoplinでのローカルLLM](/power-local-llm/local-llm-with-logseq-and-joplin?lang=ja) — Obsidianが選択でない場合のPKBの代替ストレージレイヤー。',
-          '[1000+ PDFをローカルでチャット: おもちゃの例を超えてRAGをスケーリング](/power-local-llm/chat-with-1000-pdfs-locally?lang=ja) — 1,000アイテムを超えるRAGレイヤーのスケーリング、3つすべてのアーキテクチャに適用。',
-          '[30分でPDFのローカルRAG (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=ja) — アーキテクチャBで使用される検索レイヤーのRAG実装ウォークスルー。',
-          '[ローカルRAGに最適なEmbeddingモデル (2026)](/power-local-llm/best-embedding-models-local-rag-2026?lang=ja) — 3つのアーキテクチャそれぞれのEmbeddingモデル選択 (nomic-embed-text vs mxbai-embed-large vs bge-m3)。',
-          '[RAG解説](/prompt-engineering/rag-explained?lang=ja) — 検索レイヤーの概念的な権威。',
-          '[ローカルLLMハードウェアガイド 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — 16 GB最低、10K以上で32 GB、100K以上でホームサーバーのハードウェアサイジング。',
-          '[ローカルLLMソフトウェアディレクトリ 2026](/power-local-llm/local-llm-software-directory-2026?lang=ja) — Ollama、ChromaDB、AnythingLLM、Obsidian、その他のスタックコンポーネントのディレクトリリスト。',
+          '[Obsidian + ローカルLLM: vaultをセカンドブレインに変える5つのプラグイン (2026)](/ja/power-local-llm/local-llm-with-obsidian-2026) — アーキテクチャAのプラグインレイヤーの詳細。',
+          '[LogseqとJoplinでのローカルLLM](/ja/power-local-llm/local-llm-with-logseq-and-joplin) — Obsidianが選択でない場合のPKBの代替ストレージレイヤー。',
+          '[1000+ PDFをローカルでチャット: おもちゃの例を超えてRAGをスケーリング](/ja/power-local-llm/chat-with-1000-pdfs-locally) — 1,000アイテムを超えるRAGレイヤーのスケーリング、3つすべてのアーキテクチャに適用。',
+          '[30分でPDFのローカルRAG (Ollama + AnythingLLM)](/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step) — アーキテクチャBで使用される検索レイヤーのRAG実装ウォークスルー。',
+          '[ローカルRAGに最適なEmbeddingモデル (2026)](/ja/power-local-llm/best-embedding-models-local-rag-2026) — 3つのアーキテクチャそれぞれのEmbeddingモデル選択 (nomic-embed-text vs mxbai-embed-large vs bge-m3)。',
+          '[RAG解説](/ja/prompt-engineering/rag-explained) — 検索レイヤーの概念的な権威。',
+          '[ローカルLLMハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) — 16 GB最低、10K以上で32 GB、100K以上でホームサーバーのハードウェアサイジング。',
+          '[ローカルLLMソフトウェアディレクトリ 2026](/ja/power-local-llm/local-llm-software-directory-2026) — Ollama、ChromaDB、AnythingLLM、Obsidian、その他のスタックコンポーネントのディレクトリリスト。',
         ],
       },
     },
@@ -2086,7 +2086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '关于此架构插件层的深入探讨 (哪 5 个插件、配置步骤、vault 规模数值),请参阅 [Obsidian + 本地 LLM 插件指南](/power-local-llm/local-llm-with-obsidian-2026?lang=zh)。本页面涵盖架构;插件指南涵盖配置。',
+            text: '关于此架构插件层的深入探讨 (哪 5 个插件、配置步骤、vault 规模数值),请参阅 [Obsidian + 本地 LLM 插件指南](/zh/power-local-llm/local-llm-with-obsidian-2026)。本页面涵盖架构;插件指南涵盖配置。',
           },
         ],
       },
@@ -2110,7 +2110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '关于此处使用的 RAG 层的逐步设置 (Ollama + AnythingLLM、摄取、块调优),请参阅 [30 分钟内为 PDF 构建本地 RAG](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh) 教程。要将 RAG 从玩具示例扩展到 1,000+ PDF,请参阅 [本地与 1000+ PDF 聊天](/power-local-llm/chat-with-1000-pdfs-locally?lang=zh)。',
+            text: '关于此处使用的 RAG 层的逐步设置 (Ollama + AnythingLLM、摄取、块调优),请参阅 [30 分钟内为 PDF 构建本地 RAG](/zh/power-local-llm/local-rag-on-your-pdfs-step-by-step) 教程。要将 RAG 从玩具示例扩展到 1,000+ PDF,请参阅 [本地与 1000+ PDF 聊天](/zh/power-local-llm/chat-with-1000-pdfs-locally)。',
           },
         ],
       },
@@ -2306,14 +2306,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Obsidian + 本地 LLM:将您的 vault 变成第二大脑的 5 个插件 (2026)](/power-local-llm/local-llm-with-obsidian-2026?lang=zh) — 架构 A 的插件层深入探讨。',
-          '[Logseq 和 Joplin 的本地 LLM](/power-local-llm/local-llm-with-logseq-and-joplin?lang=zh) — 如果 Obsidian 不是您的选择,PKB 的替代存储层。',
-          '[本地与 1000+ PDF 聊天:将 RAG 扩展到玩具示例之外](/power-local-llm/chat-with-1000-pdfs-locally?lang=zh) — 将 RAG 层扩展到 1,000 条目以上,适用于所有三种架构。',
-          '[30 分钟内为 PDF 构建本地 RAG (Ollama + AnythingLLM)](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh) — 架构 B 中使用的检索层 RAG 实现演练。',
-          '[本地 RAG 的最佳嵌入模型 (2026)](/power-local-llm/best-embedding-models-local-rag-2026?lang=zh) — 三种架构每种的嵌入模型选择 (nomic-embed-text vs mxbai-embed-large vs bge-m3)。',
-          '[RAG 解释](/prompt-engineering/rag-explained?lang=zh) — 检索层的概念权威。',
-          '[本地 LLM 硬件指南 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — 16 GB 门槛、10K 以上 32 GB、100K 以上家庭服务器的硬件规格。',
-          '[本地 LLM 软件目录 2026](/power-local-llm/local-llm-software-directory-2026?lang=zh) — Ollama、ChromaDB、AnythingLLM、Obsidian 和技术栈其他组件的目录列表。',
+          '[Obsidian + 本地 LLM:将您的 vault 变成第二大脑的 5 个插件 (2026)](/zh/power-local-llm/local-llm-with-obsidian-2026) — 架构 A 的插件层深入探讨。',
+          '[Logseq 和 Joplin 的本地 LLM](/zh/power-local-llm/local-llm-with-logseq-and-joplin) — 如果 Obsidian 不是您的选择,PKB 的替代存储层。',
+          '[本地与 1000+ PDF 聊天:将 RAG 扩展到玩具示例之外](/zh/power-local-llm/chat-with-1000-pdfs-locally) — 将 RAG 层扩展到 1,000 条目以上,适用于所有三种架构。',
+          '[30 分钟内为 PDF 构建本地 RAG (Ollama + AnythingLLM)](/zh/power-local-llm/local-rag-on-your-pdfs-step-by-step) — 架构 B 中使用的检索层 RAG 实现演练。',
+          '[本地 RAG 的最佳嵌入模型 (2026)](/zh/power-local-llm/best-embedding-models-local-rag-2026) — 三种架构每种的嵌入模型选择 (nomic-embed-text vs mxbai-embed-large vs bge-m3)。',
+          '[RAG 解释](/zh/prompt-engineering/rag-explained) — 检索层的概念权威。',
+          '[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026) — 16 GB 门槛、10K 以上 32 GB、100K 以上家庭服务器的硬件规格。',
+          '[本地 LLM 软件目录 2026](/zh/power-local-llm/local-llm-software-directory-2026) — Ollama、ChromaDB、AnythingLLM、Obsidian 和技术栈其他组件的目录列表。',
         ],
       },
     },

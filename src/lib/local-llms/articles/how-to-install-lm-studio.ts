@@ -318,7 +318,7 @@ schema: {
         whatIsLmStudio: {
           title: 'Was ist LM Studio?',
           content: [
-            '**LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs.** Es bietet einen grafischen Modellbrowser, eine integrierte Chat-Benutzeroberfläche und einen lokalen API-Server -- alles in einer App. Unter der Haube verwendet es llama.cpp für Inferenz, das gleiche Modul, das Ollama antreibt (/local-llms/how-to-install-ollama?lang=de).',
+            '**LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs.** Es bietet einen grafischen Modellbrowser, eine integrierte Chat-Benutzeroberfläche und einen lokalen API-Server -- alles in einer App. Unter der Haube verwendet es llama.cpp für Inferenz, das gleiche Modul, das Ollama antreibt (/de/local-llms/how-to-install-ollama).',
             'Der Hauptunterschied zu Ollama ist, dass LM Studio völlig GUI-gesteuert ist. Sie durchsuchen und laden Modelle über die App-Oberfläche herunter, starten Chats mit einem Klick und verwalten Modelleinstellungen mit Schiebereglern anstelle von Konfigurationsdateien.',
             'LM Studio ist kostenlos für die private Nutzung. Es wird von LM Studio, Inc. entwickelt und wurde 2023 veröffentlicht. Ab 2026 unterstützt es NVIDIA CUDA-, AMD ROCm- und Apple Metal-Beschleunigung.',
           ],
@@ -454,13 +454,13 @@ print(response.choices[0].message.content)`,
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Was sind lokale LLMs?](/local-llms/what-are-local-llms?lang=de) -- Kernkonzepte und Komponenten',
-            '[Führen Sie Ihr erstes lokales LLM aus](/local-llms/run-first-local-llm?lang=de) -- Nächste Schritte nach der Installation',
-            '[Wie installieren Sie Ollama](/local-llms/how-to-install-ollama?lang=de) -- Terminal-basierte Alternative zu LM Studio',
-            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=de) -- Modellempfehlungen nach Hardware',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) -- GPU- und RAM-Empfehlungen für beste Leistung mit LM Studio auf Ihrer Hardware',
-            '[Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis?lang=de) -- Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann lokale Inferenz in LM Studio die richtige Wahl ist',
-            '[Beste LLMs für Coding 2026](/local-llms/best-local-llms-for-coding?lang=de) — Qwen2.5-Coder vs DeepSeek Benchmark-Vergleich',
+            '[Was sind lokale LLMs?](/de/local-llms/what-are-local-llms) -- Kernkonzepte und Komponenten',
+            '[Führen Sie Ihr erstes lokales LLM aus](/de/local-llms/run-first-local-llm) -- Nächste Schritte nach der Installation',
+            '[Wie installieren Sie Ollama](/de/local-llms/how-to-install-ollama) -- Terminal-basierte Alternative zu LM Studio',
+            '[Best Beginner Local LLM Models](/de/local-llms/best-beginner-local-llm-models) -- Modellempfehlungen nach Hardware',
+            '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) -- GPU- und RAM-Empfehlungen für beste Leistung mit LM Studio auf Ihrer Hardware',
+            '[Local LLMs vs Cloud APIs](/de/local-llms/local-llms-vs-cloud-apis) -- Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann lokale Inferenz in LM Studio die richtige Wahl ist',
+            '[Beste LLMs für Coding 2026](/de/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek Benchmark-Vergleich',
           ],
         },
         faqSection: {
@@ -531,7 +531,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'LM Studio installieren: Desktop-App-Einrichtung für macOS, Windows und Linux',
         description: 'Schritt-für-Schritt LM Studio Installation und erstes Modell-Setup. GUI-gesteuerte lokale LLM-Runner mit Chat-UI und OpenAI-kompatiblem lokalem Server.',
-        url: 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/how-to-install-lm-studio',
         inLanguage: 'de',
         datePublished: '2026-04-04',
         dateModified: '2026-04-05',
@@ -683,7 +683,7 @@ schema: {
         whatIsLmStudio: {
           title: 'Qu\'est-ce que LM Studio ?',
           content: [
-            '**LM Studio est une application desktop pour exécuter des LLM locaux.** Elle fournit un navigateur de modèles graphique, une interface de chat intégrée et un serveur API local -- tout dans une seule application. Sous le capot, elle utilise llama.cpp pour l\'inférence, le même moteur qui alimente [Ollama](/local-llms/how-to-install-ollama?lang=fr).',
+            '**LM Studio est une application desktop pour exécuter des LLM locaux.** Elle fournit un navigateur de modèles graphique, une interface de chat intégrée et un serveur API local -- tout dans une seule application. Sous le capot, elle utilise llama.cpp pour l\'inférence, le même moteur qui alimente [Ollama](/fr/local-llms/how-to-install-ollama).',
             'La différence clé par rapport à Ollama est que LM Studio est entièrement piloté par l\'interface graphique. Vous parcourez et téléchargez des modèles via l\'interface de l\'application, lancez des discussions en un clic et gérez les paramètres du modèle avec des curseurs plutôt que des fichiers de configuration.',
             'LM Studio est gratuit pour un usage personnel. Elle a été développée par LM Studio, Inc. et lancée en 2023. En 2026, elle supporte l\'accélération NVIDIA CUDA, AMD ROCm et Apple Metal.',
           ],
@@ -808,13 +808,13 @@ schema: {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Qu\'est-ce que les LLM locaux ?](/local-llms/what-are-local-llms?lang=fr) -- Concepts et composants clés',
-            '[Exécuter votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) -- Prochaines étapes après l\'installation',
-            '[Comment installer Ollama](/local-llms/how-to-install-ollama?lang=fr) -- Alternative basée sur terminal à LM Studio',
-            '[Meilleurs modèles LLM locaux pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr) -- Recommandations de modèles par matériel',
-            '[Guide de matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) -- Recommandations GPU et RAM pour obtenir les meilleures performances de LM Studio',
-            '[LLM locaux vs APIs cloud](/local-llms/local-llms-vs-cloud-apis?lang=fr) -- Comparaison de coûts et de vitesse pour décider quand l\'inférence locale dans LM Studio est le bon choix',
-            '[Meilleurs LLMs pour le code 2026](/local-llms/best-local-llms-for-coding?lang=fr) — Comparatif Qwen2.5-Coder vs DeepSeek',
+            '[Qu\'est-ce que les LLM locaux ?](/fr/local-llms/what-are-local-llms) -- Concepts et composants clés',
+            '[Exécuter votre premier LLM local](/fr/local-llms/run-first-local-llm) -- Prochaines étapes après l\'installation',
+            '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) -- Alternative basée sur terminal à LM Studio',
+            '[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- Recommandations de modèles par matériel',
+            '[Guide de matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Recommandations GPU et RAM pour obtenir les meilleures performances de LM Studio',
+            '[LLM locaux vs APIs cloud](/fr/local-llms/local-llms-vs-cloud-apis) -- Comparaison de coûts et de vitesse pour décider quand l\'inférence locale dans LM Studio est le bon choix',
+            '[Meilleurs LLMs pour le code 2026](/fr/local-llms/best-local-llms-for-coding) — Comparatif Qwen2.5-Coder vs DeepSeek',
           ],
         },
         faqSection: {
@@ -876,7 +876,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Installer LM Studio : guide de configuration de l\'application desktop pour macOS, Windows et Linux',
         'description': 'Guide étape par étape d\'installation de LM Studio et configuration du premier modèle. Exécuteur de LLM local piloté par interface graphique avec interface de chat et serveur local compatible OpenAI.',
-        'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/how-to-install-lm-studio',
         'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
@@ -992,7 +992,7 @@ schema: {
         whatIsLmStudio: {
           title: 'LM Studio とは',
           content: [
-            '**LM Studioはローカルのメッセージングシステムを実行するためのデスクトップアプリケーション。** グラフィカルモデルブラウザ、組み込みのチャットインターフェース、およびローカルAPIサーバー--すべて1つのアプリケーションに含まれている。内部では、推論にllama.cppを使用。これはOllamaを操作するのと同じエンジン（[Ollama](/local-llms/how-to-install-ollama?lang=ja)）。',
+            '**LM Studioはローカルのメッセージングシステムを実行するためのデスクトップアプリケーション。** グラフィカルモデルブラウザ、組み込みのチャットインターフェース、およびローカルAPIサーバー--すべて1つのアプリケーションに含まれている。内部では、推論にllama.cppを使用。これはOllamaを操作するのと同じエンジン（[Ollama](/ja/local-llms/how-to-install-ollama)）。',
             'Ollamaとの主な違いは、LM StudioがGUIによって完全に駆動されていること。アプリケーションインターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャットを開始、構成ファイルではなくスライダーでモデル設定を管理。',
             'LM Studioは個人の利用に無料。LM Studio、Inc.によって開発され、2023年に発売。2026年現在、NVIDIA CUDA、AMD ROCm、およびApple Metal加速をサポート。',
           ],
@@ -1117,13 +1117,13 @@ schema: {
         relatedReading: {
           title: '関連読み物',
           items: [
-            '[ローカルLLMとは何ですか？](/local-llms/what-are-local-llms?lang=ja) -- コア概念とコンポーネント',
-            '[はじめてのローカルLLMを実行](/local-llms/run-first-local-llm?lang=ja) -- インストール後の次のステップ',
-            '[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja) -- LM Studioのターミナルベースの代替案',
-            '[初心者向けベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models?lang=ja) -- ハードウェアごとのモデル推奨',
-            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) -- LM StudioでNativeハードウェアから最高のパフォーマンスを取得するためのGPUおよびRAM推奨',
-            '[ローカルLLM対クラウドAPI](/local-llms/local-llms-vs-cloud-apis?lang=ja) -- ローカル推論がNativeハードウェアの正しい選択であるときを決定するためのコストと速度の比較',
-            '[2026年コーディング用ローカルLLM比較](/local-llms/best-local-llms-for-coding?lang=ja) — Qwen2.5-CoderとDeepSeekのベンチマーク',
+            '[ローカルLLMとは何ですか？](/ja/local-llms/what-are-local-llms) -- コア概念とコンポーネント',
+            '[はじめてのローカルLLMを実行](/ja/local-llms/run-first-local-llm) -- インストール後の次のステップ',
+            '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) -- LM Studioのターミナルベースの代替案',
+            '[初心者向けベストローカルLLMモデル](/ja/local-llms/best-beginner-local-llm-models) -- ハードウェアごとのモデル推奨',
+            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) -- LM StudioでNativeハードウェアから最高のパフォーマンスを取得するためのGPUおよびRAM推奨',
+            '[ローカルLLM対クラウドAPI](/ja/local-llms/local-llms-vs-cloud-apis) -- ローカル推論がNativeハードウェアの正しい選択であるときを決定するためのコストと速度の比較',
+            '[2026年コーディング用ローカルLLM比較](/ja/local-llms/best-local-llms-for-coding) — Qwen2.5-CoderとDeepSeekのベンチマーク',
           ],
         },
         faqSection: {
@@ -1155,7 +1155,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LM Studioのインストール：macOS、Windows、Linuxのためのデスクトップアプリセットアップガイド',
         'description': 'LM Studioのステップバイステップインストールおよびはじめてのモデルセットアップ。チャットUIおよびOpenAI互換ローカルサーバーを備えたGUI駆動ローカルLLMランナー。',
-        'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/how-to-install-lm-studio',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1256,7 +1256,7 @@ schema: {
         whatIsLmStudio: {
           title: 'LM Studio 是什么？',
           content: [
-            '**LM Studio 是运行本地 LLM 的桌面应用程序。** 它提供图形模型浏览器、内置聊天界面和本地 API 服务器 - 全部在一个应用中。在内部，它使用 llama.cpp 进行推理，这是与 Ollama（[Ollama](/local-llms/how-to-install-ollama?lang=zh)）相同的引擎。',
+            '**LM Studio 是运行本地 LLM 的桌面应用程序。** 它提供图形模型浏览器、内置聊天界面和本地 API 服务器 - 全部在一个应用中。在内部，它使用 llama.cpp 进行推理，这是与 Ollama（[Ollama](/zh/local-llms/how-to-install-ollama)）相同的引擎。',
             'LM Studio 与 Ollama 的主要区别是它完全由 GUI 驱动。您通过应用界面浏览和下载模型、通过一次单击启动聊天，并使用滑块而不是配置文件管理模型设置。',
             'LM Studio 可供个人使用免费。由 LM Studio，Inc. 开发，2023 年发布。截至 2026 年，它支持 NVIDIA CUDA、AMD ROCm 和 Apple Metal 加速。',
           ],
@@ -1381,13 +1381,13 @@ schema: {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[什么是本地 LLM？](/local-llms/what-are-local-llms?lang=zh) -- 核心概念和组件',
-            '[运行您的第一个本地 LLM](/local-llms/run-first-local-llm?lang=zh) -- 安装后的后续步骤',
-            '[如何安装 Ollama](/local-llms/how-to-install-ollama?lang=zh) -- LM Studio 的基于终端的替代方案',
-            '[初学者最佳本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh) -- 按硬件的模型建议',
-            '[本地 LLM 硬件指南 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) -- GPU 和 RAM 建议以从您的硬件获得 LM Studio 的最佳性能',
-            '[本地 LLM vs 云 API](/local-llms/local-llms-vs-cloud-apis?lang=zh) -- 成本和速度比较以决定何时本地 LM Studio 推理是正确的选择',
-            '[2026年最佳编程本地LLM对比](/local-llms/best-local-llms-for-coding?lang=zh) — Qwen2.5-Coder与DeepSeek基准测试',
+            '[什么是本地 LLM？](/zh/local-llms/what-are-local-llms) -- 核心概念和组件',
+            '[运行您的第一个本地 LLM](/zh/local-llms/run-first-local-llm) -- 安装后的后续步骤',
+            '[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) -- LM Studio 的基于终端的替代方案',
+            '[初学者最佳本地 LLM 模型](/zh/local-llms/best-beginner-local-llm-models) -- 按硬件的模型建议',
+            '[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026) -- GPU 和 RAM 建议以从您的硬件获得 LM Studio 的最佳性能',
+            '[本地 LLM vs 云 API](/zh/local-llms/local-llms-vs-cloud-apis) -- 成本和速度比较以决定何时本地 LM Studio 推理是正确的选择',
+            '[2026年最佳编程本地LLM对比](/zh/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder与DeepSeek基准测试',
           ],
         },
         faqSection: {
@@ -1419,7 +1419,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '如何安装 LM Studio：macOS、Windows 和 Linux 的桌面应用设置指南',
         'description': 'LM Studio 的分步安装和第一个模型设置。带有聊天 UI 和 OpenAI 兼容本地服务器的 GUI 驱动本地 LLM 运行器。',
-        'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/how-to-install-lm-studio',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },

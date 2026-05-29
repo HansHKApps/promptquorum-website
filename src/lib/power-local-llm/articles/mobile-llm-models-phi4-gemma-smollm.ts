@@ -725,7 +725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'SmolLM 2 1.7B ist die beste Kombination für einen Offline-Sprachassistenten auf dem Smartphone – weitere Informationen finden Sie unter [Lokalen Sprachassistenten auf dem Smartphone erstellen](/power-local-llm/voice-assistant-local-mobile-offline?lang=de) für die Whisper-+-LLM-+-TTS-Pipeline. Die hohen Tokens/Sek. halten die Sprachgesprächs-Wartezeit unter der ~1,5-Sekunden-Wahrnehmungsschwelle, selbst auf Mittelklasse-Hardware.',
+            text: 'SmolLM 2 1.7B ist die beste Kombination für einen Offline-Sprachassistenten auf dem Smartphone – weitere Informationen finden Sie unter [Lokalen Sprachassistenten auf dem Smartphone erstellen](/de/power-local-llm/voice-assistant-local-mobile-offline) für die Whisper-+-LLM-+-TTS-Pipeline. Die hohen Tokens/Sek. halten die Sprachgesprächs-Wartezeit unter der ~1,5-Sekunden-Wahrnehmungsschwelle, selbst auf Mittelklasse-Hardware.',
           },
         ],
         image: '/images/mobile-llm-models-speed-chart-de.svg',
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3B ist das einzige Modell in diesem Vergleich mit breiter Tool-Calling-Unterstützung, die für On-Device-Agent-Workflows zuverlässig genug ist – weitere Informationen unter [Lokale KI-Agenten mit MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de). Phi-4 Mini und SmolLM 2 können technisch Tool Calls ausführen, aber Llama 3.2 3B ist 2026 das einzige produktionsreife Modell dafür.',
+            text: 'Llama 3.2 3B ist das einzige Modell in diesem Vergleich mit breiter Tool-Calling-Unterstützung, die für On-Device-Agent-Workflows zuverlässig genug ist – weitere Informationen unter [Lokale KI-Agenten mit MCP 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026). Phi-4 Mini und SmolLM 2 können technisch Tool Calls ausführen, aber Llama 3.2 3B ist 2026 das einzige produktionsreife Modell dafür.',
           },
         ],
       },
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Funktionieren diese Modelle mit Spracheingabe?',
-            a: 'Ja, in Kombination mit einer Whisper-Sprache-zu-Text-Schicht. Der Standard-Offline-Sprachassistent-Stack für Mobilgeräte in 2026 ist: Whisper (kleines oder winziges Modell) für Sprache-zu-Text → Phi-4 Mini oder SmolLM 2 für Antwortgenerierung → Apple TTS oder Android TTS für Sprachsynthese. SmolLM 2 1.7B ist die beste LLM-Wahl für Sprachassistenz, weil die hohen Tokens/Sek. die Sprach-Turn-Wartezeit reaktionsschnell halten – siehe [Lokalen Sprachassistenten auf dem Smartphone erstellen](/power-local-llm/voice-assistant-local-mobile-offline?lang=de) für die vollständige Pipeline.',
+            a: 'Ja, in Kombination mit einer Whisper-Sprache-zu-Text-Schicht. Der Standard-Offline-Sprachassistent-Stack für Mobilgeräte in 2026 ist: Whisper (kleines oder winziges Modell) für Sprache-zu-Text → Phi-4 Mini oder SmolLM 2 für Antwortgenerierung → Apple TTS oder Android TTS für Sprachsynthese. SmolLM 2 1.7B ist die beste LLM-Wahl für Sprachassistenz, weil die hohen Tokens/Sek. die Sprach-Turn-Wartezeit reaktionsschnell halten – siehe [Lokalen Sprachassistenten auf dem Smartphone erstellen](/de/power-local-llm/voice-assistant-local-mobile-offline) für die vollständige Pipeline.',
           },
           {
             q: 'Welches ist am besten für die Offline-Nutzung auf Reisen?',
@@ -917,13 +917,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Beste lokale KI-Apps für iPhone in 2026 (KI ohne WLAN nutzen)](/power-local-llm/best-local-llm-apps-iphone-2026?lang=de) – Schwesterführer (Kat. 6) zu den iPhone-Apps, die diese Modelle laden.',
-          '[Beste lokale KI-Apps für Android in 2026: 6 Apps im Vergleich auf echten Geräten](/power-local-llm/best-local-llm-apps-android-2026?lang=de) – Schwesterführer (Kat. 6) zu den Android-Apps, die diese Modelle laden.',
-          '[Lokalen Sprachassistenten auf dem Smartphone erstellen: Whisper + Lokales LLM](/power-local-llm/voice-assistant-local-mobile-offline?lang=de) – Nischenanwendung dieser Mobilmodelle in einer Offline-Sprachpipeline.',
-          '[Lokale KI auf dem Tablet nutzen: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)](/power-local-llm/run-ai-on-tablet-ipad-android?lang=de) – benachbarter Plattformführer für Tablet-Nutzerinnen und -Nutzer mit denselben Modellen.',
-          '[LLM-Quantisierung erklärt: Q4_K_M, Q5_K_M, GGUF-Formate](/local-llms/llm-quantization-explained?lang=de) – Quantisierungsreferenz für den in diesem Artikel beschriebenen Q4_K_M-Standard.',
-          '[Beste lokale LLMs in 2026](/local-llms/best-local-llms-2026?lang=de) – breiter Modellführer für alle Hardware-Klassen, nicht nur Mobilgeräte.',
-          '[Lokales KI-Software-Verzeichnis 2026](/power-local-llm/local-llm-software-directory-2026?lang=de) – Verzeichnis aller relevanten lokalen KI-Tools plattformübergreifend.',
+          '[Beste lokale KI-Apps für iPhone in 2026 (KI ohne WLAN nutzen)](/de/power-local-llm/best-local-llm-apps-iphone-2026) – Schwesterführer (Kat. 6) zu den iPhone-Apps, die diese Modelle laden.',
+          '[Beste lokale KI-Apps für Android in 2026: 6 Apps im Vergleich auf echten Geräten](/de/power-local-llm/best-local-llm-apps-android-2026) – Schwesterführer (Kat. 6) zu den Android-Apps, die diese Modelle laden.',
+          '[Lokalen Sprachassistenten auf dem Smartphone erstellen: Whisper + Lokales LLM](/de/power-local-llm/voice-assistant-local-mobile-offline) – Nischenanwendung dieser Mobilmodelle in einer Offline-Sprachpipeline.',
+          '[Lokale KI auf dem Tablet nutzen: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)](/de/power-local-llm/run-ai-on-tablet-ipad-android) – benachbarter Plattformführer für Tablet-Nutzerinnen und -Nutzer mit denselben Modellen.',
+          '[LLM-Quantisierung erklärt: Q4_K_M, Q5_K_M, GGUF-Formate](/de/local-llms/llm-quantization-explained) – Quantisierungsreferenz für den in diesem Artikel beschriebenen Q4_K_M-Standard.',
+          '[Beste lokale LLMs in 2026](/de/local-llms/best-local-llms-2026) – breiter Modellführer für alle Hardware-Klassen, nicht nur Mobilgeräte.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory-2026) – Verzeichnis aller relevanten lokalen KI-Tools plattformübergreifend.',
         ],
       },
     },
@@ -1190,7 +1190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'SmolLM 2 1.7B est le meilleur choix pour un assistant vocal hors ligne sur mobile — voir [Créer un assistant vocal local sur votre téléphone](/power-local-llm/voice-assistant-local-mobile-offline?lang=fr) pour le pipeline Whisper + LLM + TTS. Les tokens/sec élevés maintiennent le temps de réponse vocale sous le seuil perceptif de ~1.5 seconde.',
+            text: 'SmolLM 2 1.7B est le meilleur choix pour un assistant vocal hors ligne sur mobile — voir [Créer un assistant vocal local sur votre téléphone](/fr/power-local-llm/voice-assistant-local-mobile-offline) pour le pipeline Whisper + LLM + TTS. Les tokens/sec élevés maintiennent le temps de réponse vocale sous le seuil perceptif de ~1.5 seconde.',
           },
         ],
         image: '/images/mobile-llm-models-speed-chart-fr.svg',
@@ -1232,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3B est le seul modèle de cette sélection avec un support du tool calling suffisamment fiable pour les workflows d\'agents on-device — voir [Agents IA locaux avec MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr). Phi-4 Mini et SmolLM 2 peuvent techniquement faire du tool calling mais Llama 3.2 3B est le seul prêt pour la production en 2026.',
+            text: 'Llama 3.2 3B est le seul modèle de cette sélection avec un support du tool calling suffisamment fiable pour les workflows d\'agents on-device — voir [Agents IA locaux avec MCP 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026). Phi-4 Mini et SmolLM 2 peuvent techniquement faire du tool calling mais Llama 3.2 3B est le seul prêt pour la production en 2026.',
           },
         ],
       },
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ces modèles fonctionnent-ils avec la saisie vocale ?',
-            a: 'Oui, couplés à une couche Whisper de speech-to-text. La stack vocale hors ligne standard en 2026 est : Whisper (modèle small ou tiny) pour la transcription → Phi-4 Mini ou SmolLM 2 pour la génération de réponse → Apple TTS ou Android TTS pour la synthèse vocale. SmolLM 2 1.7B est le meilleur choix LLM pour la voix car les tokens/sec élevés maintiennent le temps de réponse réactif — voir [Créer un assistant vocal local sur votre téléphone](/power-local-llm/voice-assistant-local-mobile-offline?lang=fr).',
+            a: 'Oui, couplés à une couche Whisper de speech-to-text. La stack vocale hors ligne standard en 2026 est : Whisper (modèle small ou tiny) pour la transcription → Phi-4 Mini ou SmolLM 2 pour la génération de réponse → Apple TTS ou Android TTS pour la synthèse vocale. SmolLM 2 1.7B est le meilleur choix LLM pour la voix car les tokens/sec élevés maintiennent le temps de réponse réactif — voir [Créer un assistant vocal local sur votre téléphone](/fr/power-local-llm/voice-assistant-local-mobile-offline).',
           },
           {
             q: 'Quel modèle est le meilleur pour un usage hors ligne en voyage ?',
@@ -1374,13 +1374,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Meilleures applications LLM locales pour iPhone en 2026](/power-local-llm/best-local-llm-apps-iphone-2026?lang=fr) — guide complémentaire sur les applications iPhone chargeant ces modèles.',
-          '[Meilleures applications LLM locales pour Android en 2026](/power-local-llm/best-local-llm-apps-android-2026?lang=fr) — guide complémentaire sur les applications Android chargeant ces modèles.',
-          '[Créer un assistant vocal local sur votre téléphone : Whisper + LLM local](/power-local-llm/voice-assistant-local-mobile-offline?lang=fr) — application de niche de ces modèles mobiles dans un pipeline vocal hors ligne.',
-          '[IA locale sur tablette : iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)](/power-local-llm/run-ai-on-tablet-ipad-android?lang=fr) — guide de plateforme adjacente pour les lecteurs utilisant les mêmes modèles sur tablette.',
-          '[Quantisation LLM expliquée : Q4_K_M, Q5_K_M, formats GGUF](/local-llms/llm-quantization-explained?lang=fr) — référence de quantisation pour le standard Q4_K_M décrit dans cet article.',
-          '[Meilleurs LLMs locaux en 2026](/local-llms/best-local-llms-2026?lang=fr) — guide plus large couvrant toutes les gammes matérielles, pas seulement mobile.',
-          '[Répertoire de logiciels LLM locaux 2026](/power-local-llm/local-llm-software-directory-2026?lang=fr) — répertoire de tous les outils LLM locaux pertinents sur toutes les plateformes.',
+          '[Meilleures applications LLM locales pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — guide complémentaire sur les applications iPhone chargeant ces modèles.',
+          '[Meilleures applications LLM locales pour Android en 2026](/fr/power-local-llm/best-local-llm-apps-android-2026) — guide complémentaire sur les applications Android chargeant ces modèles.',
+          '[Créer un assistant vocal local sur votre téléphone : Whisper + LLM local](/fr/power-local-llm/voice-assistant-local-mobile-offline) — application de niche de ces modèles mobiles dans un pipeline vocal hors ligne.',
+          '[IA locale sur tablette : iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)](/fr/power-local-llm/run-ai-on-tablet-ipad-android) — guide de plateforme adjacente pour les lecteurs utilisant les mêmes modèles sur tablette.',
+          '[Quantisation LLM expliquée : Q4_K_M, Q5_K_M, formats GGUF](/fr/local-llms/llm-quantization-explained) — référence de quantisation pour le standard Q4_K_M décrit dans cet article.',
+          '[Meilleurs LLMs locaux en 2026](/fr/local-llms/best-local-llms-2026) — guide plus large couvrant toutes les gammes matérielles, pas seulement mobile.',
+          '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory-2026) — répertoire de tous les outils LLM locaux pertinents sur toutes les plateformes.',
         ],
       },
     },
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'SmolLM 2 1.7Bはモバイルでのオフライン音声アシスタントスタック向けに最適です — Whisper + LLM + TTS パイプラインについては[スマートフォンでローカル音声アシスタントを構築する](/power-local-llm/voice-assistant-local-mobile-offline?lang=ja)を参照してください。高いtokens/secにより、ミッドレンジハードウェアでも音声ターンテイキングが~1.5秒の知覚しきい値を下回ります。',
+            text: 'SmolLM 2 1.7Bはモバイルでのオフライン音声アシスタントスタック向けに最適です — Whisper + LLM + TTS パイプラインについては[スマートフォンでローカル音声アシスタントを構築する](/ja/power-local-llm/voice-assistant-local-mobile-offline)を参照してください。高いtokens/secにより、ミッドレンジハードウェアでも音声ターンテイキングが~1.5秒の知覚しきい値を下回ります。',
           },
         ],
         image: '/images/mobile-llm-models-speed-chart-ja.svg',
@@ -1689,7 +1689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3Bはこのラインナップで唯一、オンデバイスエージェントワークフローに十分信頼性の高いtool callingをサポートするモデルです — [ローカルAIエージェントとMCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja)を参照してください。Phi-4 MiniとSmolLM 2は技術的にtool callが可能ですが、Llama 3.2 3Bのみが2026年で本番運用可能です。',
+            text: 'Llama 3.2 3Bはこのラインナップで唯一、オンデバイスエージェントワークフローに十分信頼性の高いtool callingをサポートするモデルです — [ローカルAIエージェントとMCP 2026](/ja/power-local-llm/local-ai-agents-with-mcp-2026)を参照してください。Phi-4 MiniとSmolLM 2は技術的にtool callが可能ですが、Llama 3.2 3Bのみが2026年で本番運用可能です。',
           },
         ],
       },
@@ -1815,7 +1815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'これらのモデルは音声入力で使えますか？',
-            a: 'はい、Whisperの音声テキスト変換レイヤーと組み合わせると使えます。2026年のモバイル向け標準オフライン音声スタックは：Whisper（smallまたはtinyモデル）による音声テキスト変換 → Phi-4 MiniまたはSmolLM 2による回答生成 → Apple TTSまたはAndroid TTSによる音声合成です。SmolLM 2 1.7Bは高いtokens/secにより音声ターンテイキングの応答性を維持するため、音声の最良のLLM選択です — 完全なパイプラインについては[スマートフォンでローカル音声アシスタントを構築する](/power-local-llm/voice-assistant-local-mobile-offline?lang=ja)を参照してください。',
+            a: 'はい、Whisperの音声テキスト変換レイヤーと組み合わせると使えます。2026年のモバイル向け標準オフライン音声スタックは：Whisper（smallまたはtinyモデル）による音声テキスト変換 → Phi-4 MiniまたはSmolLM 2による回答生成 → Apple TTSまたはAndroid TTSによる音声合成です。SmolLM 2 1.7Bは高いtokens/secにより音声ターンテイキングの応答性を維持するため、音声の最良のLLM選択です — 完全なパイプラインについては[スマートフォンでローカル音声アシスタントを構築する](/ja/power-local-llm/voice-assistant-local-mobile-offline)を参照してください。',
           },
           {
             q: '旅行でのオフライン使用に最適なモデルはどれですか？',
@@ -1831,13 +1831,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[2026年iPhoneのベストローカルLLMアプリ（WiFiなしでAIを動かす）](/power-local-llm/best-local-llm-apps-iphone-2026?lang=ja) — これらのモデルを読み込むiPhoneアプリについての姉妹ガイド。',
-          '[2026年Androidのベストローカルモデルアプリ：実端末で比較した6アプリ](/power-local-llm/best-local-llm-apps-android-2026?lang=ja) — これらのモデルを読み込むAndroidアプリについての姉妹ガイド。',
-          '[スマートフォンでローカル音声アシスタントを構築する：Whisper + ローカルLLM](/power-local-llm/voice-assistant-local-mobile-offline?lang=ja) — オフライン音声パイプラインでこれらのモバイルモデルを活用するニッチな用途。',
-          '[タブレットでローカルAIを動かす：iPad Pro M4、Galaxy Tab S10、OnePlus Pad 2（2026年）](/power-local-llm/run-ai-on-tablet-ipad-android?lang=ja) — 同じモデルラインナップを使うタブレット読者向けのプラットフォームガイド。',
-          '[LLM量子化解説：Q4_K_M、Q5_K_M、GGUFフォーマット](/local-llms/llm-quantization-explained?lang=ja) — この記事で言及されているQ4_K_Mデフォルトの量子化リファレンス。',
-          '[2026年のベストローカルLLM](/local-llms/best-local-llms-2026?lang=ja) — モバイルだけでなく、すべてのハードウェアクラスをカバーする広範なモデルリファレンス。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/power-local-llm/local-llm-software-directory-2026?lang=ja) — すべてのプラットフォームにわたる注目すべきローカルLLMツールのディレクトリ。',
+          '[2026年iPhoneのベストローカルLLMアプリ（WiFiなしでAIを動かす）](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — これらのモデルを読み込むiPhoneアプリについての姉妹ガイド。',
+          '[2026年Androidのベストローカルモデルアプリ：実端末で比較した6アプリ](/ja/power-local-llm/best-local-llm-apps-android-2026) — これらのモデルを読み込むAndroidアプリについての姉妹ガイド。',
+          '[スマートフォンでローカル音声アシスタントを構築する：Whisper + ローカルLLM](/ja/power-local-llm/voice-assistant-local-mobile-offline) — オフライン音声パイプラインでこれらのモバイルモデルを活用するニッチな用途。',
+          '[タブレットでローカルAIを動かす：iPad Pro M4、Galaxy Tab S10、OnePlus Pad 2（2026年）](/ja/power-local-llm/run-ai-on-tablet-ipad-android) — 同じモデルラインナップを使うタブレット読者向けのプラットフォームガイド。',
+          '[LLM量子化解説：Q4_K_M、Q5_K_M、GGUFフォーマット](/ja/local-llms/llm-quantization-explained) — この記事で言及されているQ4_K_Mデフォルトの量子化リファレンス。',
+          '[2026年のベストローカルLLM](/ja/local-llms/best-local-llms-2026) — モバイルだけでなく、すべてのハードウェアクラスをカバーする広範なモデルリファレンス。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory-2026) — すべてのプラットフォームにわたる注目すべきローカルLLMツールのディレクトリ。',
         ],
       },
     },
@@ -2104,7 +2104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'SmolLM 2 1.7B是手机端离线语音助手的最佳搭档——Whisper + LLM + TTS完整流程请参考[在手机上构建本地语音助手](/power-local-llm/voice-assistant-local-mobile-offline?lang=zh)。高tokens/sec让语音对话响应保持在约1.5秒的感知门槛以下，即便在中端硬件上也如此。',
+            text: 'SmolLM 2 1.7B是手机端离线语音助手的最佳搭档——Whisper + LLM + TTS完整流程请参考[在手机上构建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline)。高tokens/sec让语音对话响应保持在约1.5秒的感知门槛以下，即便在中端硬件上也如此。',
           },
         ],
         image: '/images/mobile-llm-models-speed-chart-zh.svg',
@@ -2146,7 +2146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.2 3B是此列表中唯一tool calling支持足够可靠，能用于端侧Agent工作流的模型——参考[本地AI Agent与MCP 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh)。Phi-4 Mini和SmolLM 2在技术上可以进行tool call，但Llama 3.2 3B是2026年唯一达到生产可用水平的。',
+            text: 'Llama 3.2 3B是此列表中唯一tool calling支持足够可靠，能用于端侧Agent工作流的模型——参考[本地AI Agent与MCP 2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026)。Phi-4 Mini和SmolLM 2在技术上可以进行tool call，但Llama 3.2 3B是2026年唯一达到生产可用水平的。',
           },
         ],
       },
@@ -2272,7 +2272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '这些模型支持语音输入吗？',
-            a: '支持，与Whisper语音转文字层结合使用。2026年移动端标准离线语音方案是：Whisper（small或tiny模型）语音转文字 → Phi-4 Mini或SmolLM 2生成回答 → Apple TTS或Android TTS语音合成。SmolLM 2 1.7B是语音的最佳LLM选择，因为高tokens/sec使语音对话响应保持在约1.5秒感知门槛以下——完整流程请参考[在手机上构建本地语音助手](/power-local-llm/voice-assistant-local-mobile-offline?lang=zh)。',
+            a: '支持，与Whisper语音转文字层结合使用。2026年移动端标准离线语音方案是：Whisper（small或tiny模型）语音转文字 → Phi-4 Mini或SmolLM 2生成回答 → Apple TTS或Android TTS语音合成。SmolLM 2 1.7B是语音的最佳LLM选择，因为高tokens/sec使语音对话响应保持在约1.5秒感知门槛以下——完整流程请参考[在手机上构建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline)。',
           },
           {
             q: '旅行离线使用哪款最好？',
@@ -2288,13 +2288,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026年iPhone最佳本地LLM应用（无需WiFi运行AI）](/power-local-llm/best-local-llm-apps-iphone-2026?lang=zh) — 加载这些模型的iPhone应用姐妹指南。',
-          '[2026年Android最佳本地模型应用：真实设备对比6款应用](/power-local-llm/best-local-llm-apps-android-2026?lang=zh) — 加载这些模型的Android应用姐妹指南。',
-          '[在手机上构建本地语音助手：Whisper + 本地LLM](/power-local-llm/voice-assistant-local-mobile-offline?lang=zh) — 在离线语音流程中应用这些移动模型的细分场景。',
-          '[在平板上运行本地AI：iPad Pro M4、Galaxy Tab S10、OnePlus Pad 2（2026年）](/power-local-llm/run-ai-on-tablet-ipad-android?lang=zh) — 使用相同模型阵容的平板读者的相邻平台指南。',
-          '[LLM量化详解：Q4_K_M、Q5_K_M、GGUF格式](/local-llms/llm-quantization-explained?lang=zh) — 本文中Q4_K_M默认的量化参考权威。',
-          '[2026年最佳本地LLM](/local-llms/best-local-llms-2026?lang=zh) — 覆盖所有硬件档次的更广泛模型参考，不限于移动端。',
-          '[本地LLM软件目录2026](/power-local-llm/local-llm-software-directory-2026?lang=zh) — 涵盖所有平台值得关注的本地LLM工具目录。',
+          '[2026年iPhone最佳本地LLM应用（无需WiFi运行AI）](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — 加载这些模型的iPhone应用姐妹指南。',
+          '[2026年Android最佳本地模型应用：真实设备对比6款应用](/zh/power-local-llm/best-local-llm-apps-android-2026) — 加载这些模型的Android应用姐妹指南。',
+          '[在手机上构建本地语音助手：Whisper + 本地LLM](/zh/power-local-llm/voice-assistant-local-mobile-offline) — 在离线语音流程中应用这些移动模型的细分场景。',
+          '[在平板上运行本地AI：iPad Pro M4、Galaxy Tab S10、OnePlus Pad 2（2026年）](/zh/power-local-llm/run-ai-on-tablet-ipad-android) — 使用相同模型阵容的平板读者的相邻平台指南。',
+          '[LLM量化详解：Q4_K_M、Q5_K_M、GGUF格式](/zh/local-llms/llm-quantization-explained) — 本文中Q4_K_M默认的量化参考权威。',
+          '[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026) — 覆盖所有硬件档次的更广泛模型参考，不限于移动端。',
+          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory-2026) — 涵盖所有平台值得关注的本地LLM工具目录。',
         ],
       },
     },

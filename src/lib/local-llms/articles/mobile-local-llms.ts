@@ -496,7 +496,7 @@ schema: {
           id: 'hardware',
           title: 'Welche mobile Hardware führt lokale LLMs 2026 aus?',
           content: [
-            '**iPhone 16 Pro (A18 Pro) ist das minimale praktische iPhone für lokale LLMs** — 12 GB gemeinsamer RAM führt [Llama 3.2 3B](/local-llms/top-open-source-models-ollama?lang=de) mit 4 Tok/Sek aus. Standard iPhone 16 (8 GB) bewältigt nur 1B-Modelle.',
+            '**iPhone 16 Pro (A18 Pro) ist das minimale praktische iPhone für lokale LLMs** — 12 GB gemeinsamer RAM führt [Llama 3.2 3B](/de/local-llms/top-open-source-models-ollama) mit 4 Tok/Sek aus. Standard iPhone 16 (8 GB) bewältigt nur 1B-Modelle.',
           ],
           columns: ['Gerät', 'Max. Modellgröße', 'Geschwindigkeit', 'Speicher'],
           rows: [
@@ -533,9 +533,9 @@ schema: {
           id: 'frameworks',
           title: 'Welche Frameworks unterstützen mobile LLM-Entwicklung?',
           content: [
-            '**iOS:** Core ML und Metal Performance Shaders übernehmen die Modelloptimierung. [llama.cpp](/local-llms/how-to-install-ollama?lang=de) stellt die zugrunde liegende Inferenz-Engine für die meisten iOS-LLM-Apps bereit.',
+            '**iOS:** Core ML und Metal Performance Shaders übernehmen die Modelloptimierung. [llama.cpp](/de/local-llms/how-to-install-ollama) stellt die zugrunde liegende Inferenz-Engine für die meisten iOS-LLM-Apps bereit.',
             '**Android:** TensorFlow Lite, ONNX Runtime und Snapdragon Neural Processing Engine. MLC LLM bietet plattformübergreifende mobile Inferenz.',
-            'Entwickler können [Llama-, Qwen- und Mistral-Modelle](/local-llms/top-open-source-models-ollama?lang=de) in mobiloptimierte GGUF- oder Core-ML-Formate konvertieren.',
+            'Entwickler können [Llama-, Qwen- und Mistral-Modelle](/de/local-llms/top-open-source-models-ollama) in mobiloptimierte GGUF- oder Core-ML-Formate konvertieren.',
           ],
         },
         mobileComparison: {
@@ -554,13 +554,13 @@ schema: {
             { 'Faktor': 'Kosten', 'Telefon': '0 € (vorhandenes Telefon)', 'Laptop (M4 Pro)': '1.999 €+', 'Mini-PC (M4 Pro)': '799 €+' },
             { 'Faktor': 'Ideal für', 'Telefon': 'Schnelle Offline-Fragen', 'Laptop (M4 Pro)': 'Portable Entwicklung', 'Mini-PC (M4 Pro)': 'Dauerbetrieb-Server' },
           ],
-          note: 'Für die meisten Nutzer: Telefon für schnelle Offline-Anfragen, Laptop für ernsthafte Arbeit und [Mini-PC](/local-llms/best-mini-pcs-local-llm?lang=de) als lokaler LLM-Server über WLAN.',
+          note: 'Für die meisten Nutzer: Telefon für schnelle Offline-Anfragen, Laptop für ernsthafte Arbeit und [Mini-PC](/de/local-llms/best-mini-pcs-local-llm) als lokaler LLM-Server über WLAN.',
         },
         performance: {
           id: 'performance',
           title: 'Wie schnell sind mobile LLMs im Vergleich zu Desktop?',
           content: [
-            '**Mobile ist 15–50× langsamer als Desktop aufgrund der Speicherbandbreite.** Ein iPhone A18 hat ~68 GB/Sek Bandbreite; eine [RTX 4090](/local-llms/local-llm-hardware-guide-2026?lang=de) hat 1.008 GB/Sek. Die LLM-Inferenzgeschwindigkeit skaliert direkt mit der Speicherbandbreite.',
+            '**Mobile ist 15–50× langsamer als Desktop aufgrund der Speicherbandbreite.** Ein iPhone A18 hat ~68 GB/Sek Bandbreite; eine [RTX 4090](/de/local-llms/local-llm-hardware-guide-2026) hat 1.008 GB/Sek. Die LLM-Inferenzgeschwindigkeit skaliert direkt mit der Speicherbandbreite.',
           ],
           image: '/images/mobile-local-llms-speed-comparison-de.svg',
           imageCaption: 'Mobile vs Desktop LLM-Geschwindigkeit: RTX 4090 mit 150 Tok/Sek ist 10× schneller als iPad M4 (15 Tok/Sek) und 37× schneller als iPhone 16 Pro (4 Tok/Sek).',
@@ -619,7 +619,7 @@ schema: {
             '**Ende 2027 ist der Wendepunkt.** Apple A19 Pro und Snapdragon X2 bringen 7–13B-Modelle mit 15–25 Tok/Sek auf Telefone.',
             '**2027er Telefone:** 7–13B-Modelle mit 15–25 Tok/Sek. Praktisch für die meisten Chat-Aufgaben.',
             '**2028+:** 13–24B-Modelle erwartet. Qualität nähert sich GPT-3.5-Niveau.',
-            '**Beste Option heute:** Telefon für Offline-Anfragen und einen [Mac mini M4 Pro](/local-llms/best-mini-pcs-local-llm?lang=de) oder [Desktop-GPU](/local-llms/local-llm-hardware-guide-2026?lang=de) als lokalen Server per WLAN.',
+            '**Beste Option heute:** Telefon für Offline-Anfragen und einen [Mac mini M4 Pro](/de/local-llms/best-mini-pcs-local-llm) oder [Desktop-GPU](/de/local-llms/local-llm-hardware-guide-2026) als lokalen Server per WLAN.',
           ],
         },
         faqSection: {
@@ -672,12 +672,12 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
-            '[Lokaler LLM Hardware-Leitfaden 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — GPU, Apple Silicon und CPU-Optionen für lokale Inferenz',
-            '[Beste lokale LLM-Frontends](/local-llms/best-local-llm-frontends?lang=de) — Web-UIs und Chat-Oberflächen für Desktop- und mobile LLM-Workflows',
-            '[Laptop vs Desktop lokale LLM](/local-llms/laptop-vs-desktop-local-llm?lang=de) — Leistungs-, Portabilitäts- und Kostenvergleich für portable KI',
-            '[Beste kleine lokale LLMs unter 4 GB](/local-llms/best-small-local-llms-under-4gb?lang=de) — 1–3B-Modelle ideal für Mobile- und Edge-Einsatz',
-            '[Wie man Ollama installiert](/local-llms/how-to-install-ollama?lang=de) — Installationsanleitung für die Inferenz-Engine hinter den meisten mobilen LLM-Apps',
-            '[Top Open-Source-Modelle für Ollama](/local-llms/top-open-source-models-ollama?lang=de) — Llama, Qwen, Mistral Modellrankings und Empfehlungen',
+            '[Lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) — GPU, Apple Silicon und CPU-Optionen für lokale Inferenz',
+            '[Beste lokale LLM-Frontends](/de/local-llms/best-local-llm-frontends) — Web-UIs und Chat-Oberflächen für Desktop- und mobile LLM-Workflows',
+            '[Laptop vs Desktop lokale LLM](/de/local-llms/laptop-vs-desktop-local-llm) — Leistungs-, Portabilitäts- und Kostenvergleich für portable KI',
+            '[Beste kleine lokale LLMs unter 4 GB](/de/local-llms/best-small-local-llms-under-4gb) — 1–3B-Modelle ideal für Mobile- und Edge-Einsatz',
+            '[Wie man Ollama installiert](/de/local-llms/how-to-install-ollama) — Installationsanleitung für die Inferenz-Engine hinter den meisten mobilen LLM-Apps',
+            '[Top Open-Source-Modelle für Ollama](/de/local-llms/top-open-source-models-ollama) — Llama, Qwen, Mistral Modellrankings und Empfehlungen',
           ],
         },
         sources: {
@@ -696,7 +696,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Mobile lokale LLMs 2026: KI-Modelle auf iPhone, Android und iPad ausführen',
         description: 'iPhone A18 führt 3B-Modelle mit 3 Tok/Sek aus. Snapdragon X Elite schafft 7B mit 5 Tok/Sek. iPad M4 läuft 13B mit 15 Tok/Sek. Beste Apps, Frameworks und Leistungsbenchmarks für mobile lokale LLMs 2026.',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/mobile-local-llms',
         inLanguage: 'de',
         datePublished: '2026-04-04',
         dateModified: '2026-04-16',
@@ -753,7 +753,7 @@ schema: {
         name: 'Mobilgeräte für lokale LLM-Inferenz 2026',
         description: 'Strukturierter Hardwarevergleich von 6 Mobilgeräten für lokale LLMs: iPad Pro M4 (15 Tok/Sek bei Llama 7B, bewältigt 13B), Snapdragon X Elite (5 Tok/Sek bei 7B), iPhone 16 Pro (4 Tok/Sek bei 3B), Galaxy S25 Ultra (4 Tok/Sek bei 7B), Pixel 9 Pro (3 Tok/Sek bei 3B), iPhone 16 (3 Tok/Sek bei 3B).',
         inLanguage: 'de',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/mobile-local-llms',
         variableMeasured: [
           {
             '@type': 'PropertyValue',
@@ -856,7 +856,7 @@ schema: {
           id: 'hardware',
           title: 'Quel matériel mobile pour les LLM locaux en 2026 ?',
           content: [
-            '**L\'iPhone 16 Pro (A18 Pro) est le minimum pratique pour les LLM locaux** — 12 Go de RAM partagée exécute [Llama 3.2 3B](/local-llms/top-open-source-models-ollama?lang=fr) à 4 tok/sec. L\'iPhone 16 standard (8 Go) ne gère que les modèles 1B.',
+            '**L\'iPhone 16 Pro (A18 Pro) est le minimum pratique pour les LLM locaux** — 12 Go de RAM partagée exécute [Llama 3.2 3B](/fr/local-llms/top-open-source-models-ollama) à 4 tok/sec. L\'iPhone 16 standard (8 Go) ne gère que les modèles 1B.',
           ],
           columns: ['Appareil', 'Taille max. modèle', 'Vitesse', 'Mémoire'],
           rows: [
@@ -893,9 +893,9 @@ schema: {
           id: 'frameworks',
           title: 'Quels frameworks pour le développement LLM mobile ?',
           content: [
-            '**iOS :** Core ML et Metal Performance Shaders gèrent l\'optimisation des modèles. [llama.cpp](/local-llms/how-to-install-ollama?lang=fr) fournit le moteur d\'inférence sous-jacent pour la plupart des apps LLM iOS.',
+            '**iOS :** Core ML et Metal Performance Shaders gèrent l\'optimisation des modèles. [llama.cpp](/fr/local-llms/how-to-install-ollama) fournit le moteur d\'inférence sous-jacent pour la plupart des apps LLM iOS.',
             '**Android :** TensorFlow Lite, ONNX Runtime et Snapdragon Neural Processing Engine. MLC LLM offre l\'inférence mobile multiplateforme.',
-            'Les développeurs peuvent convertir les [modèles Llama, Qwen et Mistral](/local-llms/top-open-source-models-ollama?lang=fr) aux formats GGUF ou Core ML optimisés pour mobile.',
+            'Les développeurs peuvent convertir les [modèles Llama, Qwen et Mistral](/fr/local-llms/top-open-source-models-ollama) aux formats GGUF ou Core ML optimisés pour mobile.',
           ],
         },
         mobileComparison: {
@@ -914,13 +914,13 @@ schema: {
             { 'Facteur': 'Coût', 'Téléphone': '0 € (téléphone existant)', 'Portable (M4 Pro)': '1 999 €+', 'Mini PC (M4 Pro)': '799 €+' },
             { 'Facteur': 'Idéal pour', 'Téléphone': 'Q&R rapides hors ligne', 'Portable (M4 Pro)': 'Développement portable', 'Mini PC (M4 Pro)': 'Serveur permanent' },
           ],
-          note: 'Pour la plupart : téléphone pour les requêtes rapides, portable pour le travail sérieux, [mini PC](/local-llms/best-mini-pcs-local-llm?lang=fr) comme serveur LLM local via Wi-Fi.',
+          note: 'Pour la plupart : téléphone pour les requêtes rapides, portable pour le travail sérieux, [mini PC](/fr/local-llms/best-mini-pcs-local-llm) comme serveur LLM local via Wi-Fi.',
         },
         performance: {
           id: 'performance',
           title: 'Quelle vitesse : LLM mobiles vs bureau ?',
           content: [
-            '**Le mobile est 15–50× plus lent que le bureau en raison de la bande passante mémoire.** Un iPhone A18 dispose de ~68 Go/sec ; une [RTX 4090](/local-llms/local-llm-hardware-guide-2026?lang=fr) atteint 1 008 Go/sec. La vitesse d\'inférence LLM est directement proportionnelle à la bande passante.',
+            '**Le mobile est 15–50× plus lent que le bureau en raison de la bande passante mémoire.** Un iPhone A18 dispose de ~68 Go/sec ; une [RTX 4090](/fr/local-llms/local-llm-hardware-guide-2026) atteint 1 008 Go/sec. La vitesse d\'inférence LLM est directement proportionnelle à la bande passante.',
           ],
           image: '/images/mobile-local-llms-speed-comparison-fr.svg',
           imageCaption: 'Vitesse LLM mobile vs bureau : RTX 4090 à 150 tok/sec est 10× plus rapide que iPad M4 (15 tok/sec) et 37× plus rapide que iPhone 16 Pro (4 tok/sec).',
@@ -979,7 +979,7 @@ schema: {
             '**Fin 2027 est le point d\'inflexion.** Apple A19 Pro et Snapdragon X2 apporteront les 7–13B à 15–25 tok/sec sur téléphones.',
             '**Téléphones 2027 :** 7–13B à 15–25 tok/sec. Pratique pour la plupart des tâches de chat.',
             '**2028+ :** Modèles 13–24B attendus. Qualité approchant GPT-3.5.',
-            '**Meilleure option aujourd\'hui :** Téléphone pour requêtes rapides et un [Mac mini M4 Pro](/local-llms/best-mini-pcs-local-llm?lang=fr) ou [GPU bureau](/local-llms/local-llm-hardware-guide-2026?lang=fr) comme serveur local via Wi-Fi.',
+            '**Meilleure option aujourd\'hui :** Téléphone pour requêtes rapides et un [Mac mini M4 Pro](/fr/local-llms/best-mini-pcs-local-llm) ou [GPU bureau](/fr/local-llms/local-llm-hardware-guide-2026) comme serveur local via Wi-Fi.',
           ],
         },
         faqSection: {
@@ -1024,12 +1024,12 @@ schema: {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Options GPU, Apple Silicon et CPU pour l\'inférence locale',
-            '[Meilleures interfaces LLM locaux](/local-llms/best-local-llm-frontends?lang=fr) — Interfaces web et chat pour workflows LLM desktop et mobile',
-            '[Laptop vs Desktop LLM local](/local-llms/laptop-vs-desktop-local-llm?lang=fr) — Comparaison performance, portabilité et coût',
-            '[Meilleurs petits LLM locaux sous 4 Go](/local-llms/best-small-local-llms-under-4gb?lang=fr) — Modèles 1–3B idéaux pour mobile et edge',
-            '[Comment installer Ollama](/local-llms/how-to-install-ollama?lang=fr) — Guide d\'installation du moteur d\'inférence derrière la plupart des apps LLM mobiles',
-            '[Meilleurs modèles open source pour Ollama](/local-llms/top-open-source-models-ollama?lang=fr) — Classements et recommandations Llama, Qwen, Mistral',
+            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Options GPU, Apple Silicon et CPU pour l\'inférence locale',
+            '[Meilleures interfaces LLM locaux](/fr/local-llms/best-local-llm-frontends) — Interfaces web et chat pour workflows LLM desktop et mobile',
+            '[Laptop vs Desktop LLM local](/fr/local-llms/laptop-vs-desktop-local-llm) — Comparaison performance, portabilité et coût',
+            '[Meilleurs petits LLM locaux sous 4 Go](/fr/local-llms/best-small-local-llms-under-4gb) — Modèles 1–3B idéaux pour mobile et edge',
+            '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) — Guide d\'installation du moteur d\'inférence derrière la plupart des apps LLM mobiles',
+            '[Meilleurs modèles open source pour Ollama](/fr/local-llms/top-open-source-models-ollama) — Classements et recommandations Llama, Qwen, Mistral',
           ],
         },
         sources: {
@@ -1048,7 +1048,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'LLM locaux mobiles 2026 : exécuter des modèles IA sur iPhone, Android et iPad',
         description: 'iPhone A18 : 3B à 3 tok/sec. Snapdragon X Elite : 7B à 5 tok/sec. iPad M4 : 13B à 15 tok/sec. Meilleures apps, frameworks et benchmarks pour LLM locaux mobiles en 2026.',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/mobile-local-llms',
         inLanguage: 'fr',
         datePublished: '2026-04-04',
         dateModified: '2026-04-16',
@@ -1103,7 +1103,7 @@ schema: {
         name: 'Appareils mobiles pour inférence LLM local 2026',
         description: 'Comparaison structurée de 6 appareils mobiles pour LLMs locaux : iPad Pro M4 (15 tok/sec sur Llama 7B, gère 13B), Snapdragon X Elite (5 tok/sec sur 7B), iPhone 16 Pro (4 tok/sec sur 3B), Galaxy S25 Ultra (4 tok/sec sur 7B), Pixel 9 Pro (3 tok/sec sur 3B), iPhone 16 (3 tok/sec sur 3B).',
         inLanguage: 'fr',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/mobile-local-llms',
         variableMeasured: [
           {
             '@type': 'PropertyValue',
@@ -1206,7 +1206,7 @@ schema: {
           id: 'hardware',
           title: '2026年にローカルLLMを実行できるモバイルハードウェアは？',
           content: [
-            '**iPhone 16 Pro (A18 Pro)がローカルLLMの最低実用iPhone** — 12 GB共有RAMで[Llama 3.2 3B](/local-llms/top-open-source-models-ollama?lang=ja)を4トークン/秒で実行。標準iPhone 16（8 GB）は1Bモデルのみ対応。',
+            '**iPhone 16 Pro (A18 Pro)がローカルLLMの最低実用iPhone** — 12 GB共有RAMで[Llama 3.2 3B](/ja/local-llms/top-open-source-models-ollama)を4トークン/秒で実行。標準iPhone 16（8 GB）は1Bモデルのみ対応。',
           ],
           columns: ['デバイス', '最大モデルサイズ', '速度', 'メモリ'],
           rows: [
@@ -1243,9 +1243,9 @@ schema: {
           id: 'frameworks',
           title: 'モバイルLLM開発を支援するフレームワークは？',
           content: [
-            '**iOS：** Core MLとMetal Performance Shadersがモデル最適化を担当。[llama.cpp](/local-llms/how-to-install-ollama?lang=ja)がほとんどのiOS LLMアプリの推論エンジンを提供。',
+            '**iOS：** Core MLとMetal Performance Shadersがモデル最適化を担当。[llama.cpp](/ja/local-llms/how-to-install-ollama)がほとんどのiOS LLMアプリの推論エンジンを提供。',
             '**Android：** TensorFlow Lite、ONNX Runtime、Snapdragon Neural Processing Engine。MLC LLMがクロスプラットフォームのモバイル推論を提供。',
-            '開発者は[Llama、Qwen、Mistralモデル](/local-llms/top-open-source-models-ollama?lang=ja)をモバイル最適化されたGGUFまたはCore MLフォーマットに変換可能。',
+            '開発者は[Llama、Qwen、Mistralモデル](/ja/local-llms/top-open-source-models-ollama)をモバイル最適化されたGGUFまたはCore MLフォーマットに変換可能。',
           ],
         },
         mobileComparison: {
@@ -1264,13 +1264,13 @@ schema: {
             { '要素': 'コスト', 'スマートフォン': '¥0（既存端末）', 'ノートPC (M4 Pro)': '¥299,800+', 'ミニPC (M4 Pro)': '¥119,800+' },
             { '要素': '最適用途', 'スマートフォン': 'オフラインQ&A', 'ノートPC (M4 Pro)': 'ポータブル開発', 'ミニPC (M4 Pro)': '常時稼働サーバー' },
           ],
-          note: 'ほとんどのユーザーに：スマートフォンでオフラインクエリ、ノートPCで本格作業、[ミニPC](/local-llms/best-mini-pcs-local-llm?lang=ja)をWi-Fi経由のローカルLLMサーバーとして使用。',
+          note: 'ほとんどのユーザーに：スマートフォンでオフラインクエリ、ノートPCで本格作業、[ミニPC](/ja/local-llms/best-mini-pcs-local-llm)をWi-Fi経由のローカルLLMサーバーとして使用。',
         },
         performance: {
           id: 'performance',
           title: 'モバイルLLMの速度 vs デスクトップ',
           content: [
-            '**モバイルはメモリ帯域幅の差でデスクトップより15–50倍遅い。** iPhone A18は約68 GB/秒の帯域幅、[RTX 4090](/local-llms/local-llm-hardware-guide-2026?lang=ja)は1,008 GB/秒。LLM推論速度はメモリ帯域幅に直接比例します。',
+            '**モバイルはメモリ帯域幅の差でデスクトップより15–50倍遅い。** iPhone A18は約68 GB/秒の帯域幅、[RTX 4090](/ja/local-llms/local-llm-hardware-guide-2026)は1,008 GB/秒。LLM推論速度はメモリ帯域幅に直接比例します。',
           ],
           image: '/images/mobile-local-llms-speed-comparison-ja.svg',
           imageCaption: 'モバイル vs デスクトップ LLM速度：RTX 4090は150トークン/秒でiPad M4（15トークン/秒）の10倍、iPhone 16 Pro（4トークン/秒）の37倍高速。',
@@ -1329,7 +1329,7 @@ schema: {
             '**2027年後半が転換点です。** Apple A19 ProとSnapdragon X2が7–13Bモデルを15–25トークン/秒でスマートフォンに提供。',
             '**2027年スマートフォン：** 7–13Bモデルを15–25トークン/秒。ほとんどのチャットタスクに実用的。',
             '**2028年以降：** 13–24Bモデルが期待。品質はGPT-3.5レベルに近づく。',
-            '**今日の最適オプション：** スマートフォンでオフラインクエリ、[Mac mini M4 Pro](/local-llms/best-mini-pcs-local-llm?lang=ja)または[デスクトップGPU](/local-llms/local-llm-hardware-guide-2026?lang=ja)をWi-Fi経由のローカルサーバーとして使用。',
+            '**今日の最適オプション：** スマートフォンでオフラインクエリ、[Mac mini M4 Pro](/ja/local-llms/best-mini-pcs-local-llm)または[デスクトップGPU](/ja/local-llms/local-llm-hardware-guide-2026)をWi-Fi経由のローカルサーバーとして使用。',
           ],
         },
         faqSection: {
@@ -1374,12 +1374,12 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — GPU、Apple Silicon、CPUのローカル推論オプション',
-            '[最良のローカルLLMフロントエンド](/local-llms/best-local-llm-frontends?lang=ja) — デスクトップ・モバイルLLMワークフロー向けWebUIとチャットインターフェース',
-            '[ラップトップ vs デスクトップ ローカルLLM](/local-llms/laptop-vs-desktop-local-llm?lang=ja) — パフォーマンス、携帯性、コスト比較',
-            '[4 GB以下の最良小型ローカルLLM](/local-llms/best-small-local-llms-under-4gb?lang=ja) — モバイル・エッジ展開に最適な1–3Bモデル',
-            '[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja) — モバイルLLMアプリの推論エンジンのセットアップガイド',
-            '[Ollama向けトップオープンソースモデル](/local-llms/top-open-source-models-ollama?lang=ja) — Llama、Qwen、Mistralのモデルランキングと推奨',
+            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — GPU、Apple Silicon、CPUのローカル推論オプション',
+            '[最良のローカルLLMフロントエンド](/ja/local-llms/best-local-llm-frontends) — デスクトップ・モバイルLLMワークフロー向けWebUIとチャットインターフェース',
+            '[ラップトップ vs デスクトップ ローカルLLM](/ja/local-llms/laptop-vs-desktop-local-llm) — パフォーマンス、携帯性、コスト比較',
+            '[4 GB以下の最良小型ローカルLLM](/ja/local-llms/best-small-local-llms-under-4gb) — モバイル・エッジ展開に最適な1–3Bモデル',
+            '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) — モバイルLLMアプリの推論エンジンのセットアップガイド',
+            '[Ollama向けトップオープンソースモデル](/ja/local-llms/top-open-source-models-ollama) — Llama、Qwen、Mistralのモデルランキングと推奨',
           ],
         },
         sources: {
@@ -1398,7 +1398,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'モバイルローカルLLM 2026：iPhone・Android・iPadでAIモデルを実行',
         description: 'iPhone A18は3Bモデルを3トークン/秒で実行。Snapdragon X Eliteは7Bを5トークン/秒。iPad M4は13Bを15トークン/秒。2026年モバイルローカルLLMのアプリ、フレームワーク、ベンチマーク。',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/mobile-local-llms',
         inLanguage: 'ja',
         datePublished: '2026-04-04',
         dateModified: '2026-04-16',
@@ -1453,7 +1453,7 @@ schema: {
         name: 'ローカルLLM推論向けモバイルデバイス2026',
         description: '6つのモバイルデバイスのローカルLLM実行能力の構造化比較：iPad Pro M4（Llama 7Bで15トークン/秒、13B対応）、Snapdragon X Elite（7Bで5トークン/秒）、iPhone 16 Pro（3Bで4トークン/秒）、Galaxy S25 Ultra（7Bで4トークン/秒）、Pixel 9 Pro（3Bで3トークン/秒）、iPhone 16（3Bで3トークン/秒）。',
         inLanguage: 'ja',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/mobile-local-llms',
         variableMeasured: [
           {
             '@type': 'PropertyValue',
@@ -1556,7 +1556,7 @@ schema: {
           id: 'hardware',
           title: '2026年哪些移动硬件可以运行本地LLM？',
           content: [
-            '**iPhone 16 Pro (A18 Pro)是运行本地LLM的最低实用iPhone** ——12 GB共享RAM以4令牌/秒运行[Llama 3.2 3B](/local-llms/top-open-source-models-ollama?lang=zh)。标准iPhone 16（8 GB）仅能处理1B模型。',
+            '**iPhone 16 Pro (A18 Pro)是运行本地LLM的最低实用iPhone** ——12 GB共享RAM以4令牌/秒运行[Llama 3.2 3B](/zh/local-llms/top-open-source-models-ollama)。标准iPhone 16（8 GB）仅能处理1B模型。',
           ],
           columns: ['设备', '最大模型', '速度', '内存'],
           rows: [
@@ -1593,9 +1593,9 @@ schema: {
           id: 'frameworks',
           title: '哪些框架支持移动端LLM开发？',
           content: [
-            '**iOS：** Core ML和Metal Performance Shaders负责模型优化。[llama.cpp](/local-llms/how-to-install-ollama?lang=zh)为大多数iOS LLM应用提供底层推理引擎。',
+            '**iOS：** Core ML和Metal Performance Shaders负责模型优化。[llama.cpp](/zh/local-llms/how-to-install-ollama)为大多数iOS LLM应用提供底层推理引擎。',
             '**Android：** TensorFlow Lite、ONNX Runtime和Snapdragon Neural Processing Engine。MLC LLM提供跨平台移动推理。',
-            '开发者可将[Llama、Qwen和Mistral模型](/local-llms/top-open-source-models-ollama?lang=zh)转换为移动优化的GGUF或Core ML格式。',
+            '开发者可将[Llama、Qwen和Mistral模型](/zh/local-llms/top-open-source-models-ollama)转换为移动优化的GGUF或Core ML格式。',
           ],
         },
         mobileComparison: {
@@ -1614,13 +1614,13 @@ schema: {
             { '因素': '成本', '手机': '¥0（现有手机）', '笔记本 (M4 Pro)': '¥14,999+', '迷你PC (M4 Pro)': '¥5,999+' },
             { '因素': '最适合', '手机': '快速离线问答', '笔记本 (M4 Pro)': '便携开发', '迷你PC (M4 Pro)': '常驻服务器' },
           ],
-          note: '大多数用户：手机用于快速离线查询，笔记本用于正式工作，[迷你PC](/local-llms/best-mini-pcs-local-llm?lang=zh)作为Wi-Fi局域网内的本地LLM服务器。',
+          note: '大多数用户：手机用于快速离线查询，笔记本用于正式工作，[迷你PC](/zh/local-llms/best-mini-pcs-local-llm)作为Wi-Fi局域网内的本地LLM服务器。',
         },
         performance: {
           id: 'performance',
           title: '移动端LLM vs 桌面速度对比',
           content: [
-            '**移动端因内存带宽差距比桌面慢15–50倍。** iPhone A18带宽约68 GB/秒；[RTX 4090](/local-llms/local-llm-hardware-guide-2026?lang=zh)达1,008 GB/秒。LLM推理速度与内存带宽成正比。',
+            '**移动端因内存带宽差距比桌面慢15–50倍。** iPhone A18带宽约68 GB/秒；[RTX 4090](/zh/local-llms/local-llm-hardware-guide-2026)达1,008 GB/秒。LLM推理速度与内存带宽成正比。',
           ],
           image: '/images/mobile-local-llms-speed-comparison-zh.svg',
           imageCaption: '移动端 vs 桌面端 LLM速度：RTX 4090以150令牌/秒比iPad M4（15令牌/秒）快10倍，比iPhone 16 Pro（4令牌/秒）快37倍。',
@@ -1679,7 +1679,7 @@ schema: {
             '**2027年底是转折点。** Apple A19 Pro和Snapdragon X2将在手机上实现7–13B模型15–25令牌/秒——足以进行实时聊天。在此之前，移动端LLM是特定场景的利基工具。',
             '**2027年手机：** 7–13B模型15–25令牌/秒。大多数聊天和问答任务可实用。仍无70B。',
             '**2028年及以后：** 预期13–24B模型。质量接近GPT-3.5级别。电池和散热仍是瓶颈。',
-            '**今天的最佳方案：** 手机用于快速离线查询，[Mac mini M4 Pro](/local-llms/best-mini-pcs-local-llm?lang=zh)或[桌面GPU](/local-llms/local-llm-hardware-guide-2026?lang=zh)作为Wi-Fi局域网内的本地服务器。',
+            '**今天的最佳方案：** 手机用于快速离线查询，[Mac mini M4 Pro](/zh/local-llms/best-mini-pcs-local-llm)或[桌面GPU](/zh/local-llms/local-llm-hardware-guide-2026)作为Wi-Fi局域网内的本地服务器。',
           ],
         },
         faqSection: {
@@ -1724,12 +1724,12 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — GPU、Apple Silicon和CPU本地推理选项',
-            '[最佳本地LLM前端](/local-llms/best-local-llm-frontends?lang=zh) — 桌面和移动LLM工作流的Web UI和聊天界面',
-            '[笔记本 vs 台式机本地LLM](/local-llms/laptop-vs-desktop-local-llm?lang=zh) — 性能、便携性和成本对比',
-            '[4 GB以下最佳小型本地LLM](/local-llms/best-small-local-llms-under-4gb?lang=zh) — 适合移动和边缘部署的1–3B模型',
-            '[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh) — 大多数移动LLM应用的推理引擎安装指南',
-            '[Ollama顶级开源模型](/local-llms/top-open-source-models-ollama?lang=zh) — Llama、Qwen、Mistral模型排名和推荐',
+            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — GPU、Apple Silicon和CPU本地推理选项',
+            '[最佳本地LLM前端](/zh/local-llms/best-local-llm-frontends) — 桌面和移动LLM工作流的Web UI和聊天界面',
+            '[笔记本 vs 台式机本地LLM](/zh/local-llms/laptop-vs-desktop-local-llm) — 性能、便携性和成本对比',
+            '[4 GB以下最佳小型本地LLM](/zh/local-llms/best-small-local-llms-under-4gb) — 适合移动和边缘部署的1–3B模型',
+            '[如何安装Ollama](/zh/local-llms/how-to-install-ollama) — 大多数移动LLM应用的推理引擎安装指南',
+            '[Ollama顶级开源模型](/zh/local-llms/top-open-source-models-ollama) — Llama、Qwen、Mistral模型排名和推荐',
           ],
         },
         sources: {
@@ -1748,7 +1748,7 @@ schema: {
         '@type': 'TechArticle',
         headline: '移动本地LLM 2026：iPhone 16 Pro、iPad M4与Snapdragon X对比',
         description: 'iPad Pro M4运行Llama 7B达15 tok/s，支持13B模型。iPhone 16 Pro：3B达4 tok/s。Snapdragon X Elite安卓：7B达5 tok/s。含应用、电池、基准测试数据。',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/mobile-local-llms',
         inLanguage: 'zh',
         datePublished: '2026-04-04',
         dateModified: '2026-04-16',
@@ -1803,7 +1803,7 @@ schema: {
         name: '2026年本地LLM推理移动设备',
         description: '6台移动设备运行本地LLM能力的结构化对比：iPad Pro M4（Llama 7B达15令牌/秒，支持13B）、Snapdragon X Elite（7B达5令牌/秒）、iPhone 16 Pro（3B达4令牌/秒）、Galaxy S25 Ultra（7B达4令牌/秒）、Pixel 9 Pro（3B达3令牌/秒）、iPhone 16（3B达3令牌/秒）。',
         inLanguage: 'zh',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/mobile-local-llms',
         variableMeasured: [
           {
             '@type': 'PropertyValue',
@@ -1906,7 +1906,7 @@ schema: {
           id: 'hardware',
           title: '¿Qué hardware móvil ejecuta LLMs locales en 2026?',
           content: [
-            '**El iPhone 16 Pro (A18 Pro) es el iPhone mínimo práctico para LLMs locales** — 12 GB de RAM compartida ejecuta [Llama 3.2 3B](/local-llms/top-open-source-models-ollama?lang=es) a 4 tok/seg. El iPhone 16 estándar (8 GB) solo maneja modelos 1B.',
+            '**El iPhone 16 Pro (A18 Pro) es el iPhone mínimo práctico para LLMs locales** — 12 GB de RAM compartida ejecuta [Llama 3.2 3B](/es/local-llms/top-open-source-models-ollama) a 4 tok/seg. El iPhone 16 estándar (8 GB) solo maneja modelos 1B.',
           ],
           columns: ['Dispositivo', 'Tamaño máximo de modelo', 'Velocidad', 'Memoria'],
           rows: [
@@ -1943,9 +1943,9 @@ schema: {
           id: 'frameworks',
           title: '¿Qué frameworks soportan el desarrollo de LLM móvil?',
           content: [
-            '**iOS:** Core ML y Metal Performance Shaders gestionan la optimización de modelos. [llama.cpp](/local-llms/how-to-install-ollama?lang=es) proporciona el motor de inferencia subyacente para la mayoría de las apps de LLM en iOS.',
+            '**iOS:** Core ML y Metal Performance Shaders gestionan la optimización de modelos. [llama.cpp](/es/local-llms/how-to-install-ollama) proporciona el motor de inferencia subyacente para la mayoría de las apps de LLM en iOS.',
             '**Android:** TensorFlow Lite, ONNX Runtime y Snapdragon Neural Processing Engine. MLC LLM ofrece inferencia móvil multiplataforma.',
-            'Los desarrolladores pueden convertir [modelos Llama, Qwen y Mistral](/local-llms/top-open-source-models-ollama?lang=es) a formatos GGUF o Core ML optimizados para móvil usando llama.cpp o coremltools.',
+            'Los desarrolladores pueden convertir [modelos Llama, Qwen y Mistral](/es/local-llms/top-open-source-models-ollama) a formatos GGUF o Core ML optimizados para móvil usando llama.cpp o coremltools.',
           ],
         },
         mobileComparison: {
@@ -1964,13 +1964,13 @@ schema: {
             { 'Factor': 'Costo', 'Teléfono': '0 $ (teléfono existente)', 'Portátil (M4 Pro)': '1.999 $+', 'Mini PC (M4 Pro)': '799 $+' },
             { 'Factor': 'Ideal para', 'Teléfono': 'Preguntas rápidas sin conexión', 'Portátil (M4 Pro)': 'Trabajo de desarrollo portátil', 'Mini PC (M4 Pro)': 'Servidor siempre activo' },
           ],
-          note: 'Para la mayoría de los usuarios: usa tu teléfono para consultas rápidas sin conexión, un portátil para trabajo serio y un [mini PC](/local-llms/best-mini-pcs-local-llm?lang=es) como servidor de LLM local accesible desde todos los dispositivos por Wi-Fi.',
+          note: 'Para la mayoría de los usuarios: usa tu teléfono para consultas rápidas sin conexión, un portátil para trabajo serio y un [mini PC](/es/local-llms/best-mini-pcs-local-llm) como servidor de LLM local accesible desde todos los dispositivos por Wi-Fi.',
         },
         performance: {
           id: 'performance',
           title: '¿Qué tan rápidos son los LLMs móviles vs escritorio?',
           content: [
-            '**El móvil es 15–50× más lento que el escritorio debido al ancho de banda de memoria.** Un iPhone A18 tiene ~68 GB/seg de ancho de banda; una [RTX 4090](/local-llms/local-llm-hardware-guide-2026?lang=es) tiene 1.008 GB/seg. La velocidad de inferencia de LLM escala directamente con el ancho de banda de memoria.',
+            '**El móvil es 15–50× más lento que el escritorio debido al ancho de banda de memoria.** Un iPhone A18 tiene ~68 GB/seg de ancho de banda; una [RTX 4090](/es/local-llms/local-llm-hardware-guide-2026) tiene 1.008 GB/seg. La velocidad de inferencia de LLM escala directamente con el ancho de banda de memoria.',
           ],
           image: '/images/mobile-local-llms-speed-comparison-en.svg',
           imageCaption: 'Velocidad de LLM móvil vs escritorio: RTX 4090 a 150 tok/seg es 10× más rápido que iPad M4 (15 tok/seg) y 37× más rápido que iPhone 16 Pro (4 tok/seg).',
@@ -2030,7 +2030,7 @@ schema: {
             '**Finales de 2027 es el punto de inflexión.** Apple A19 Pro y Snapdragon X2 llevarán modelos 7–13B a los teléfonos a 15–25 tok/seg — suficientemente rápido para chat en tiempo real. Hasta entonces, los LLMs móviles son una herramienta de nicho para casos de uso específicos.',
             '**Teléfonos 2027:** Modelos 7–13B a 15–25 tok/seg. Práctico para la mayoría de tareas de chat y preguntas. Sin 70B todavía.',
             '**Teléfonos 2028+:** Se esperan modelos 13–24B. Calidad acercándose al nivel de GPT-3.5 en dispositivo. Las limitaciones de batería y temperatura siguen siendo el cuello de botella.',
-            '**Mejor opción hoy:** Usa tu teléfono para consultas rápidas sin conexión y ejecuta un [Mac mini M4 Pro](/local-llms/best-mini-pcs-local-llm?lang=es) o [GPU de escritorio](/local-llms/local-llm-hardware-guide-2026?lang=es) como servidor local accesible desde tu teléfono por Wi-Fi. Esto te da comodidad móvil con inferencia de calidad de escritorio.',
+            '**Mejor opción hoy:** Usa tu teléfono para consultas rápidas sin conexión y ejecuta un [Mac mini M4 Pro](/es/local-llms/best-mini-pcs-local-llm) o [GPU de escritorio](/es/local-llms/local-llm-hardware-guide-2026) como servidor local accesible desde tu teléfono por Wi-Fi. Esto te da comodidad móvil con inferencia de calidad de escritorio.',
           ],
         },
         faqSection: {
@@ -2075,12 +2075,12 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Guía de hardware para LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=es) — Opciones de GPU, Apple Silicon y CPU para inferencia local en cada presupuesto',
-            '[Mejores interfaces para LLM local](/local-llms/best-local-llm-frontends?lang=es) — Interfaces web y de chat para flujos de trabajo de LLM en escritorio y móvil',
-            '[Portátil vs escritorio para LLM local](/local-llms/laptop-vs-desktop-local-llm?lang=es) — Comparación de rendimiento, portabilidad y costo para IA portátil',
-            '[Mejores LLMs locales pequeños de menos de 4 GB](/local-llms/best-small-local-llms-under-4gb?lang=es) — Modelos 1–3B ideales para despliegue en móvil y dispositivos de borde',
-            '[Cómo instalar Ollama](/local-llms/how-to-install-ollama?lang=es) — Guía de configuración del motor de inferencia que impulsa la mayoría de las apps de LLM móvil',
-            '[Top modelos de código abierto para Ollama](/local-llms/top-open-source-models-ollama?lang=es) — Rankings y recomendaciones de modelos Llama, Qwen y Mistral',
+            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Opciones de GPU, Apple Silicon y CPU para inferencia local en cada presupuesto',
+            '[Mejores interfaces para LLM local](/es/local-llms/best-local-llm-frontends) — Interfaces web y de chat para flujos de trabajo de LLM en escritorio y móvil',
+            '[Portátil vs escritorio para LLM local](/es/local-llms/laptop-vs-desktop-local-llm) — Comparación de rendimiento, portabilidad y costo para IA portátil',
+            '[Mejores LLMs locales pequeños de menos de 4 GB](/es/local-llms/best-small-local-llms-under-4gb) — Modelos 1–3B ideales para despliegue en móvil y dispositivos de borde',
+            '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — Guía de configuración del motor de inferencia que impulsa la mayoría de las apps de LLM móvil',
+            '[Top modelos de código abierto para Ollama](/es/local-llms/top-open-source-models-ollama) — Rankings y recomendaciones de modelos Llama, Qwen y Mistral',
           ],
         },
         sources: {
@@ -2091,7 +2091,7 @@ schema: {
             '[Plataforma Qualcomm Snapdragon X Elite](https://www.qualcomm.com/products/mobile/snapdragon/pcs/snapdragon-x-elite) — Capacidades de inferencia de IA para dispositivos Android y Windows',
             '[Ollama iOS (SwiftUI)](https://github.com/jmorello/Ollama-SwiftUI) — Cliente iOS de código abierto para ejecutar LLMs locales en iPhone e iPad',
             '[TensorFlow Lite](https://www.tensorflow.org/lite) — Framework de Google para inferencia de aprendizaje automático en dispositivo',
-            'Los modelos móviles son más pequeños y tienen limitaciones más allá de las restricciones de hardware. Incluso los modelos móviles más grandes tienen brechas fundamentales de razonamiento: [qué no pueden hacer los LLMs](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es) explica estos límites.',
+            'Los modelos móviles son más pequeños y tienen limitaciones más allá de las restricciones de hardware. Incluso los modelos móviles más grandes tienen brechas fundamentales de razonamiento: [qué no pueden hacer los LLMs](https://www.promptquorum.com/es/prompt-engineering/ai-limitations-what-llms-cant-do) explica estos límites.',
           ],
         },
       },
@@ -2100,7 +2100,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'LLMs locales en móviles 2026: iPhone 16 Pro, iPad M4 y Snapdragon X',
         description: 'iPad Pro M4 ejecuta Llama 7B a 15 tok/seg, admite modelos 13B. iPhone 16 Pro: 3B a 4 tok/seg. Android Snapdragon X Elite: 7B a 5 tok/seg. Apps, batería y benchmarks.',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=es',
+        url: 'https://www.promptquorum.com/es/local-llms/mobile-local-llms',
         inLanguage: 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-05-17',
@@ -2155,7 +2155,7 @@ schema: {
         name: 'Dispositivos móviles para inferencia de LLM local 2026',
         description: 'Comparación estructurada de hardware de 6 dispositivos móviles para ejecutar LLMs locales: iPad Pro M4 (15 tok/seg en Llama 7B, admite 13B), Snapdragon X Elite (5 tok/seg en 7B), iPhone 16 Pro (4 tok/seg en 3B), Galaxy S25 Ultra (4 tok/seg en 7B), Pixel 9 Pro (3 tok/seg en 3B), iPhone 16 (3 tok/seg en 3B).',
         inLanguage: 'es',
-        url: 'https://www.promptquorum.com/local-llms/mobile-local-llms?lang=es',
+        url: 'https://www.promptquorum.com/es/local-llms/mobile-local-llms',
         variableMeasured: [
           {
             '@type': 'PropertyValue',

@@ -330,8 +330,8 @@ schema: {
           title: 'Vor der Installation: Ist lokales LLM die richtige Wahl für Ihren Anwendungsfall?',
           content: [
             'Ollama-Installation dauert 5 Minuten, aber das optimale Ausführen Ihres ersten Modells kann 20–40 Minuten dauern, wenn Sie auf GPU-Erkennungsprobleme, Treiberabstimmungen oder RAM-Engpässe stoßen.',
-            'Wenn Sie unsicher sind, ob lokale Inferenz die richtige Wahl für Sie ist, **[vergleichen Sie zunächst den vollständigen Kompromiss zwischen lokal und Cloud](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=de)** — Sie könnten feststellen, dass der Start mit einer Cloud-API (in 5 Minuten einsatzbereit, keine Fehlerbehebung) der klügere Weg ist. Viele Benutzer entdecken dies nach der Installation; besser jetzt entscheiden.',
-            'Für Benutzer, die sich zum Lokalen verpflichtet haben, fahren Sie unten fort. Für Benutzer, die Cloud zuerst bewerten, [lesen Sie den vollständigen Vergleich](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=de).',
+            'Wenn Sie unsicher sind, ob lokale Inferenz die richtige Wahl für Sie ist, **[vergleichen Sie zunächst den vollständigen Kompromiss zwischen lokal und Cloud](https://www.promptquorum.com/de/local-llms/local-llm-limitations)** — Sie könnten feststellen, dass der Start mit einer Cloud-API (in 5 Minuten einsatzbereit, keine Fehlerbehebung) der klügere Weg ist. Viele Benutzer entdecken dies nach der Installation; besser jetzt entscheiden.',
+            'Für Benutzer, die sich zum Lokalen verpflichtet haben, fahren Sie unten fort. Für Benutzer, die Cloud zuerst bewerten, [lesen Sie den vollständigen Vergleich](https://www.promptquorum.com/de/local-llms/local-llm-limitations).',
           ],
         },
         whatIsOllama: {
@@ -340,7 +340,7 @@ schema: {
           content: [
             '**Ollama ist eine Open-Source-Inference-Engine, die große Sprachmodelle lokal ausführt.** Sie kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API in einer einzigen leichten Anwendung. Keine Python, keine Conda-Umgebung und kein CUDA-Setup erforderlich.',
             'Ollama betreut eine kuratierte Modellbibliothek (ollama.com/library) mit Ein-Befehl-Downloads für Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 und über 100 weitere Modelle. Ein Modell wird einmal heruntergeladen und auf der Festplatte zwischengespeichert -- nachfolgende Ausführungen starten in unter 5 Sekunden.',
-            'Für Alternativen zu Ollama siehe [Local-LLM-One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de). Zum Vergleich von Ollama und LM Studio siehe [So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de).',
+            'Für Alternativen zu Ollama siehe [Local-LLM-One-Click-Installer](/de/local-llms/local-llm-one-click-installers). Zum Vergleich von Ollama und LM Studio siehe [So installieren Sie LM Studio](/de/local-llms/how-to-install-lm-studio).',
           ],
           blockquote: 'In einem Satz: Ollama ist ein Tool zum Herunterladen und lokalen Ausführen von Open-Source-Sprachmodellen (wie Mistral oder Llama 3.1) auf Ihrem Computer mit nur einem Befehl.',
         },
@@ -442,7 +442,7 @@ schema: {
             },
             {
               q: 'Ich erhalte die Fehlermeldung „error: model requires more system memory" (Fehler: Modell benötigt mehr Systemspeicher)',
-              a: 'Das Modell ist zu groß für Ihren verfügbaren RAM. Versuchen Sie eine kleinere Quantisierung: `ollama run llama3.2-instruct-q4_0` statt der Standard-Q4_K_M. Oder wechseln Sie zu einem kleineren Modell wie `llama3.2:3b`. Siehe [Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de) für RAM-abgestimmte Empfehlungen.',
+              a: 'Das Modell ist zu groß für Ihren verfügbaren RAM. Versuchen Sie eine kleinere Quantisierung: `ollama run llama3.2-instruct-q4_0` statt der Standard-Q4_K_M. Oder wechseln Sie zu einem kleineren Modell wie `llama3.2:3b`. Siehe [Die besten anfänglichen Local-LLM-Modelle](/de/local-llms/best-beginner-local-llm-models) für RAM-abgestimmte Empfehlungen.',
             },
             {
               q: 'Ollama läuft, aber meine GPU wird nicht verwendet',
@@ -456,7 +456,7 @@ schema: {
         },
         nextSteps: {
           title: 'Was sollte ich nach der Installation von Ollama tun?',
-          content: 'Sobald Ollama ausgeführt wird, ist der nächste Schritt [Führen Sie Ihr erstes lokales LLM aus](/local-llms/run-first-local-llm?lang=de), um das Prompting, die Kontextlänge und die erwartete Geschwindigkeit der lokalen Inference zu verstehen. Um das beste Modell für Ihre Hardware auszuwählen, siehe [Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de). Wenn Sie eine grafische Chat-Schnittstelle dem Terminal vorziehen, wird in [So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de) die Desktop-App-Alternative behandelt.',
+          content: 'Sobald Ollama ausgeführt wird, ist der nächste Schritt [Führen Sie Ihr erstes lokales LLM aus](/de/local-llms/run-first-local-llm), um das Prompting, die Kontextlänge und die erwartete Geschwindigkeit der lokalen Inference zu verstehen. Um das beste Modell für Ihre Hardware auszuwählen, siehe [Die besten anfänglichen Local-LLM-Modelle](/de/local-llms/best-beginner-local-llm-models). Wenn Sie eine grafische Chat-Schnittstelle dem Terminal vorziehen, wird in [So installieren Sie LM Studio](/de/local-llms/how-to-install-lm-studio) die Desktop-App-Alternative behandelt.',
         },
         regionalContext: {
           id: 'regional-context',
@@ -491,14 +491,14 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
-            '[Lokaler LLM-Entwickler-Stack](/local-llms/local-llm-developer-stack?lang=de) -- Vollständige Entwicklungsumgebung: CLI → API-Server → Multi-GPU-Produktion.',
-            '[Was sind Local LLMs?](/local-llms/what-are-local-llms?lang=de) -- Definition und Kernkonzepte',
-            '[Führen Sie Ihr erstes lokales LLM aus](/local-llms/run-first-local-llm?lang=de) -- Nächster Schritt nach der Installation',
-            '[Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de) -- Modellempfehlungen nach Hardware',
-            '[Local-LLM-One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de) -- Alternative Tools zu Ollama',
-            '[So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de) -- GUI-Alternative für Anfänger',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=de) -- Detaillierter Vergleich von CLI vs. GUI-Ansätzen',
-            '[MLX vs Ollama vs llama.cpp auf Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=de) -- Framework-Vergleich für Apple Silicon: Geschwindigkeit, Setup-Zeit und Ökosystem-Kompromisse.',
+            '[Lokaler LLM-Entwickler-Stack](/de/local-llms/local-llm-developer-stack) -- Vollständige Entwicklungsumgebung: CLI → API-Server → Multi-GPU-Produktion.',
+            '[Was sind Local LLMs?](/de/local-llms/what-are-local-llms) -- Definition und Kernkonzepte',
+            '[Führen Sie Ihr erstes lokales LLM aus](/de/local-llms/run-first-local-llm) -- Nächster Schritt nach der Installation',
+            '[Die besten anfänglichen Local-LLM-Modelle](/de/local-llms/best-beginner-local-llm-models) -- Modellempfehlungen nach Hardware',
+            '[Local-LLM-One-Click-Installer](/de/local-llms/local-llm-one-click-installers) -- Alternative Tools zu Ollama',
+            '[So installieren Sie LM Studio](/de/local-llms/how-to-install-lm-studio) -- GUI-Alternative für Anfänger',
+            '[How to Install LM Studio](/de/local-llms/how-to-install-lm-studio) -- Detaillierter Vergleich von CLI vs. GUI-Ansätzen',
+            '[MLX vs Ollama vs llama.cpp auf Mac 2026](/de/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Framework-Vergleich für Apple Silicon: Geschwindigkeit, Setup-Zeit und Ökosystem-Kompromisse.',
           ],
         },
         faq: {
@@ -656,8 +656,8 @@ schema: {
           title: 'Avant d\'installer : L\'inférence locale convient-elle à votre cas d\'usage ?',
           content: [
             'L\'installation d\'Ollama prend 5 minutes, mais faire fonctionner correctement votre premier modèle peut prendre 20–40 minutes si vous rencontrez des problèmes de détection GPU, des incompatibilités de pilotes ou des contraintes de RAM.',
-            'Si vous hésitez sur le fait que l\'inférence locale soit le bon choix pour vous, **[comparez d\'abord le compromis complet entre local et cloud](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=fr)** — vous découvrirez peut-être que commencer par une API cloud (prête en 5 minutes, sans dépannage) est le chemin plus intelligent. De nombreux utilisateurs découvrent cela après l\'installation ; il est préférable de décider maintenant.',
-            'Pour les utilisateurs engagés dans le local, continuez ci-dessous. Pour les utilisateurs évaluant d\'abord le cloud, [consultez la comparaison complète](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=fr).',
+            'Si vous hésitez sur le fait que l\'inférence locale soit le bon choix pour vous, **[comparez d\'abord le compromis complet entre local et cloud](https://www.promptquorum.com/fr/local-llms/local-llm-limitations)** — vous découvrirez peut-être que commencer par une API cloud (prête en 5 minutes, sans dépannage) est le chemin plus intelligent. De nombreux utilisateurs découvrent cela après l\'installation ; il est préférable de décider maintenant.',
+            'Pour les utilisateurs engagés dans le local, continuez ci-dessous. Pour les utilisateurs évaluant d\'abord le cloud, [consultez la comparaison complète](https://www.promptquorum.com/fr/local-llms/local-llm-limitations).',
           ],
         },
         whatIsOllama: {
@@ -666,7 +666,7 @@ schema: {
           content: [
             '**Ollama est un moteur d\'inférence open-source qui exécute de grands modèles de langage localement.** Il combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST compatible OpenAI dans une seule application légère. Aucun Python, aucun environnement conda et aucune configuration CUDA requise.',
             'Ollama maintient une bibliothèque de modèles triée sur le volet (ollama.com/library) avec des téléchargements en une seule commande pour Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 et plus de 100 autres modèles. Un modèle est téléchargé une fois et mis en cache sur le disque -- les exécutions ultérieures démarrent en moins de 5 secondes.',
-            'Pour les alternatives à Ollama, voir [Installateurs Local LLM en un clic](/local-llms/local-llm-one-click-installers?lang=fr). Pour comparer Ollama avec LM Studio, voir [Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr).',
+            'Pour les alternatives à Ollama, voir [Installateurs Local LLM en un clic](/fr/local-llms/local-llm-one-click-installers). Pour comparer Ollama avec LM Studio, voir [Installation de LM Studio](/fr/local-llms/how-to-install-lm-studio).',
           ],
           blockquote: 'En une phrase : Ollama est un outil pour télécharger et exécuter localement des modèles de langage open-source (comme Mistral ou Llama 3.1) sur votre ordinateur avec une seule commande.',
         },
@@ -768,7 +768,7 @@ schema: {
             },
             {
               q: 'J\'obtiens l\'erreur « error: model requires more system memory » (le modèle nécessite plus de mémoire système)',
-              a: 'Le modèle est trop volumineux pour votre RAM disponible. Essayez une quantification plus petite : `ollama run llama3.2-instruct-q4_0` au lieu de la Q4_K_M par défaut. Ou passez à un modèle plus petit comme `llama3.2:3b`. Voir [Les meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr) pour des recommandations adaptées à la RAM.',
+              a: 'Le modèle est trop volumineux pour votre RAM disponible. Essayez une quantification plus petite : `ollama run llama3.2-instruct-q4_0` au lieu de la Q4_K_M par défaut. Ou passez à un modèle plus petit comme `llama3.2:3b`. Voir [Les meilleurs modèles Local LLM pour débutants](/fr/local-llms/best-beginner-local-llm-models) pour des recommandations adaptées à la RAM.',
             },
             {
               q: 'Ollama s\'exécute mais mon GPU n\'est pas utilisé',
@@ -782,7 +782,7 @@ schema: {
         },
         nextSteps: {
           title: 'Que faire après l\'installation d\'Ollama ?',
-          content: 'Une fois Ollama en cours d\'exécution, l\'étape suivante est [Exécuter votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) pour comprendre le prompting, la longueur du contexte et ce qu\'il faut attendre de la vitesse d\'inférence locale. Pour choisir le meilleur modèle pour votre matériel, consultez [Les meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr). Si vous préférez une interface de chat graphique au terminal, [Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) couvre l\'alternative de l\'application de bureau.',
+          content: 'Une fois Ollama en cours d\'exécution, l\'étape suivante est [Exécuter votre premier LLM local](/fr/local-llms/run-first-local-llm) pour comprendre le prompting, la longueur du contexte et ce qu\'il faut attendre de la vitesse d\'inférence locale. Pour choisir le meilleur modèle pour votre matériel, consultez [Les meilleurs modèles Local LLM pour débutants](/fr/local-llms/best-beginner-local-llm-models). Si vous préférez une interface de chat graphique au terminal, [Installation de LM Studio](/fr/local-llms/how-to-install-lm-studio) couvre l\'alternative de l\'application de bureau.',
         },
         regionalContext: {
           id: 'regional-context',
@@ -817,14 +817,14 @@ schema: {
           id: 'related-reading',
           title: 'Lectures recommandées',
           items: [
-            '[Stack LLM Développeur Local](/local-llms/local-llm-developer-stack?lang=fr) -- Environnement de développement complet : CLI → serveur API → multi-GPU production.',
-            '[Qu\'est-ce que les LLM locaux ?](/local-llms/what-are-local-llms?lang=fr) -- Définition et concepts fondamentaux',
-            '[Exécutez votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) -- Prochaine étape après l\'installation',
-            '[Les meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr) -- Recommandations de modèles par matériel',
-            '[Installateurs Local LLM en un clic](/local-llms/local-llm-one-click-installers?lang=fr) -- Outils alternatifs à Ollama',
-            '[Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) -- Alternative GUI pour les débutants',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) -- Comparaison détaillée des approches CLI vs GUI',
-            '[MLX vs Ollama vs llama.cpp sur Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=fr) -- Comparaison de framework pour Apple Silicon : vitesse, temps de setup, et compromis écosystème.',
+            '[Stack LLM Développeur Local](/fr/local-llms/local-llm-developer-stack) -- Environnement de développement complet : CLI → serveur API → multi-GPU production.',
+            '[Qu\'est-ce que les LLM locaux ?](/fr/local-llms/what-are-local-llms) -- Définition et concepts fondamentaux',
+            '[Exécutez votre premier LLM local](/fr/local-llms/run-first-local-llm) -- Prochaine étape après l\'installation',
+            '[Les meilleurs modèles Local LLM pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- Recommandations de modèles par matériel',
+            '[Installateurs Local LLM en un clic](/fr/local-llms/local-llm-one-click-installers) -- Outils alternatifs à Ollama',
+            '[Installation de LM Studio](/fr/local-llms/how-to-install-lm-studio) -- Alternative GUI pour les débutants',
+            '[How to Install LM Studio](/fr/local-llms/how-to-install-lm-studio) -- Comparaison détaillée des approches CLI vs GUI',
+            '[MLX vs Ollama vs llama.cpp sur Mac 2026](/fr/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Comparaison de framework pour Apple Silicon : vitesse, temps de setup, et compromis écosystème.',
           ],
         },
         faq: {
@@ -982,8 +982,8 @@ schema: {
           title: 'インストール前に：ローカルLLMはあなたのユースケースに適していますか？',
           content: [
             'Ollamaのインストールは5分かかりますが、GPU検出の問題、ドライバーの不一致、またはRAM制約に遭遇すると、最初のモデルを正しく実行するのに20～40分かかる可能性があります。',
-            'ローカル推論があなたにとって正しい選択かどうか不確かな場合は、**[ローカルとクラウドの完全な権衡分析を比較してください](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=ja)** — クラウドAPIで開始する方が賢いかもしれません（5分で準備完了、トラブルシューティング不要）。多くのユーザーはインストール後にこれを発見します；今決めるのが良いでしょう。',
-            'ローカルにコミットしたユーザーは下記をご覧ください。クラウドを最初に評価しているユーザーは、[完全な比較](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=ja)を参照してください。',
+            'ローカル推論があなたにとって正しい選択かどうか不確かな場合は、**[ローカルとクラウドの完全な権衡分析を比較してください](https://www.promptquorum.com/ja/local-llms/local-llm-limitations)** — クラウドAPIで開始する方が賢いかもしれません（5分で準備完了、トラブルシューティング不要）。多くのユーザーはインストール後にこれを発見します；今決めるのが良いでしょう。',
+            'ローカルにコミットしたユーザーは下記をご覧ください。クラウドを最初に評価しているユーザーは、[完全な比較](https://www.promptquorum.com/ja/local-llms/local-llm-limitations)を参照してください。',
           ],
         },
         whatIsOllama: {
@@ -992,7 +992,7 @@ schema: {
           content: [
             '**Ollama は大規模言語モデルをローカルで実行するオープンソースの推論エンジンです。** モデル管理、llama.cpp 推論バックエンド、OpenAI 互換 REST API を単一の軽量アプリケーションに結合します。Python なし、conda 環境なし、CUDA セットアップなし。',
             'Ollama は Meta Llama 3.1、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5、および 100 以上の他のモデル用にワンコマンド ダウンロード機能を備えたキュレーションされたモデル ライブラリ（ollama.com/library）を保持しています。モデルは 1 回ダウンロードされてディスクにキャッシュされ、以降の実行は 5 秒以内に開始します。',
-            'Ollama の代わりについては、[Local LLM ワンクリック インストーラー](/local-llms/local-llm-one-click-installers?lang=ja) を参照してください。Ollama と LM Studio を比較するには、[LM Studio のインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) を参照してください。',
+            'Ollama の代わりについては、[Local LLM ワンクリック インストーラー](/ja/local-llms/local-llm-one-click-installers) を参照してください。Ollama と LM Studio を比較するには、[LM Studio のインストール方法](/ja/local-llms/how-to-install-lm-studio) を参照してください。',
           ],
           blockquote: '一文で表すと、Ollama はオープンソース言語モデル（Mistral や Llama 2 など）をコンピュータにダウンロードしてローカルで実行するツールで、1 つのコマンドで実行できます。',
         },
@@ -1094,7 +1094,7 @@ schema: {
             },
             {
               q: '「error: model requires more system memory」（エラー：モデルにはシステム メモリが必要）エラーが表示',
-              a: 'モデルが利用可能な RAM に対して大きすぎます。より小さい量化を試す: デフォルトの Q4_K_M ではなく `ollama run llama3.2-instruct-q4_0`。または `llama3.2:3b` のような小さいモデルに切り替え。[初心者向けの最高のローカル LLM モデル](/local-llms/best-beginner-local-llm-models?lang=ja) を参照して RAM に対応した推奨事項。',
+              a: 'モデルが利用可能な RAM に対して大きすぎます。より小さい量化を試す: デフォルトの Q4_K_M ではなく `ollama run llama3.2-instruct-q4_0`。または `llama3.2:3b` のような小さいモデルに切り替え。[初心者向けの最高のローカル LLM モデル](/ja/local-llms/best-beginner-local-llm-models) を参照して RAM に対応した推奨事項。',
             },
             {
               q: 'Ollama は実行していますが、GPU が使用されていません',
@@ -1108,7 +1108,7 @@ schema: {
         },
         nextSteps: {
           title: 'Ollama インストール後は何をする必要がありますか？',
-          content: 'Ollama が実行され始めたら、次のステップは [最初のローカル LLM を実行](/local-llms/run-first-local-llm?lang=ja) してプロンプト作成、コンテキスト長、および予想されるローカル推論速度を理解。ハードウェアに最適なモデルを選択するには、[初心者向けの最高のローカル LLM モデル](/local-llms/best-beginner-local-llm-models?lang=ja) を参照。ターミナルよりグラフィカルなチャット インターフェースを優先する場合、[LM Studio のインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) はデスクトップ アプリの代替をカバー。',
+          content: 'Ollama が実行され始めたら、次のステップは [最初のローカル LLM を実行](/ja/local-llms/run-first-local-llm) してプロンプト作成、コンテキスト長、および予想されるローカル推論速度を理解。ハードウェアに最適なモデルを選択するには、[初心者向けの最高のローカル LLM モデル](/ja/local-llms/best-beginner-local-llm-models) を参照。ターミナルよりグラフィカルなチャット インターフェースを優先する場合、[LM Studio のインストール方法](/ja/local-llms/how-to-install-lm-studio) はデスクトップ アプリの代替をカバー。',
         },
         regionalContext: {
           id: 'regional-context',
@@ -1143,14 +1143,14 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLM開発スタック](/local-llms/local-llm-developer-stack?lang=ja) - 完全な開発環境構築：CLI → APIサーバー → 本番マルチGPU。',
-            '[ローカル LLM とは何ですか？](/local-llms/what-are-local-llms?lang=ja) - 定義とコア コンセプト',
-            '[最初のローカル LLM を実行](/local-llms/run-first-local-llm?lang=ja) - インストール後の次のステップ',
-            '[初心者向けの最高のローカル LLM モデル](/local-llms/best-beginner-local-llm-models?lang=ja) - ハードウェアごとのモデル推奨',
-            '[Local LLM ワンクリック インストーラー](/local-llms/local-llm-one-click-installers?lang=ja) - Ollama への代替ツール',
-            '[LM Studio のインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) - 初心者向けの GUI 代替',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=ja) - CLI vs GUI アプローチの詳細比較',
-            '[Mac 2026 での MLX vs Ollama vs llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=ja) - Apple Silicon フレームワーク比較：速度、セットアップ時間、エコシステムのトレードオフ。',
+            '[ローカルLLM開発スタック](/ja/local-llms/local-llm-developer-stack) - 完全な開発環境構築：CLI → APIサーバー → 本番マルチGPU。',
+            '[ローカル LLM とは何ですか？](/ja/local-llms/what-are-local-llms) - 定義とコア コンセプト',
+            '[最初のローカル LLM を実行](/ja/local-llms/run-first-local-llm) - インストール後の次のステップ',
+            '[初心者向けの最高のローカル LLM モデル](/ja/local-llms/best-beginner-local-llm-models) - ハードウェアごとのモデル推奨',
+            '[Local LLM ワンクリック インストーラー](/ja/local-llms/local-llm-one-click-installers) - Ollama への代替ツール',
+            '[LM Studio のインストール方法](/ja/local-llms/how-to-install-lm-studio) - 初心者向けの GUI 代替',
+            '[How to Install LM Studio](/ja/local-llms/how-to-install-lm-studio) - CLI vs GUI アプローチの詳細比較',
+            '[Mac 2026 での MLX vs Ollama vs llama.cpp](/ja/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) - Apple Silicon フレームワーク比較：速度、セットアップ時間、エコシステムのトレードオフ。',
           ],
         },
         faq: {
@@ -1308,8 +1308,8 @@ schema: {
           title: '安装前：本地LLM是否适合您的用例？',
           content: [
             'Ollama安装需要5分钟，但如果遇到GPU检测问题、驱动程序不匹配或RAM限制，第一个模型正常运行可能需要20～40分钟。',
-            '如果您不确定本地推理是否是正确的选择，**[先比较本地和云的完整权衡分析](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=zh)** — 您可能会发现使用云API开始更聪明（5分钟准备就绪，无需故障排除）。许多用户在安装后发现这一点；现在决定更好。',
-            '对于致力于本地的用户，请继续下面。对于首先评估云的用户，[查看完整比较](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=zh)。',
+            '如果您不确定本地推理是否是正确的选择，**[先比较本地和云的完整权衡分析](https://www.promptquorum.com/zh/local-llms/local-llm-limitations)** — 您可能会发现使用云API开始更聪明（5分钟准备就绪，无需故障排除）。许多用户在安装后发现这一点；现在决定更好。',
+            '对于致力于本地的用户，请继续下面。对于首先评估云的用户，[查看完整比较](https://www.promptquorum.com/zh/local-llms/local-llm-limitations)。',
           ],
         },
         whatIsOllama: {
@@ -1318,7 +1318,7 @@ schema: {
           content: [
             '**Ollama 是一个开源推理引擎，在本地运行大型语言模型。** 它将模型管理、llama.cpp 推理后端和 OpenAI 兼容的 REST API 整合到一个轻量级应用程序中。无需 Python、无需 conda 环境、无需 CUDA 设置。',
             'Ollama 维护一个精选的模型库（ollama.com/library），提供 Meta Llama 3.1、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5 等 100 多个模型的一键下载。模型下载一次并缓存在磁盘上 -- 后续运行在 5 秒内启动。',
-            '有关 Ollama 的替代品，请参阅 [Local LLM 一键安装程序](/local-llms/local-llm-one-click-installers?lang=zh)。要比较 Ollama 和 LM Studio，请参阅 [如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)。',
+            '有关 Ollama 的替代品，请参阅 [Local LLM 一键安装程序](/zh/local-llms/local-llm-one-click-installers)。要比较 Ollama 和 LM Studio，请参阅 [如何安装 LM Studio](/zh/local-llms/how-to-install-lm-studio)。',
           ],
           blockquote: '一句话来说，Ollama 是一个工具，用于在计算机上下载和本地运行开源语言模型（如 Mistral 或 Llama 2），只需一个命令。',
         },
@@ -1420,7 +1420,7 @@ schema: {
             },
             {
               q: '我收到"error: model requires more system memory"（错误：模型需要更多系统内存）',
-              a: '该模型对于可用 RAM 来说太大。尝试更小的量化：使用 `ollama run llama3.2-instruct-q4_0` 而不是默认的 Q4_K_M。或切换到 `llama3.2:3b` 等较小的模型。请参阅[初学者最佳本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh)获取 RAM 匹配的建议。',
+              a: '该模型对于可用 RAM 来说太大。尝试更小的量化：使用 `ollama run llama3.2-instruct-q4_0` 而不是默认的 Q4_K_M。或切换到 `llama3.2:3b` 等较小的模型。请参阅[初学者最佳本地 LLM 模型](/zh/local-llms/best-beginner-local-llm-models)获取 RAM 匹配的建议。',
             },
             {
               q: 'Ollama 正在运行，但我的 GPU 未被使用',
@@ -1434,7 +1434,7 @@ schema: {
         },
         nextSteps: {
           title: 'Ollama 安装后应该做什么？',
-          content: 'Ollama 运行后，下一步是[运行您的第一个本地 LLM](/local-llms/run-first-local-llm?lang=zh)以了解提示、上下文长度和本地推理速度的预期。要为您的硬件选择最佳模型，请参阅[初学者最佳本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh)。如果您更喜欢图形聊天界面而不是终端，[如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)涵盖了桌面应用程序的替代方案。',
+          content: 'Ollama 运行后，下一步是[运行您的第一个本地 LLM](/zh/local-llms/run-first-local-llm)以了解提示、上下文长度和本地推理速度的预期。要为您的硬件选择最佳模型，请参阅[初学者最佳本地 LLM 模型](/zh/local-llms/best-beginner-local-llm-models)。如果您更喜欢图形聊天界面而不是终端，[如何安装 LM Studio](/zh/local-llms/how-to-install-lm-studio)涵盖了桌面应用程序的替代方案。',
         },
         regionalContext: {
           id: 'regional-context',
@@ -1469,14 +1469,14 @@ schema: {
           id: 'related-reading',
           title: '推荐阅读',
           items: [
-            '[本地LLM开发栈](/local-llms/local-llm-developer-stack?lang=zh) - 构建完整开发环境：CLI → API服务器 → 生产多GPU。',
-            '[什么是本地 LLM？](/local-llms/what-are-local-llms?lang=zh) - 定义和核心概念',
-            '[运行您的第一个本地 LLM](/local-llms/run-first-local-llm?lang=zh) - 安装后的下一步',
-            '[初学者最佳本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh) - 按硬件推荐模型',
-            '[Local LLM 一键安装程序](/local-llms/local-llm-one-click-installers?lang=zh) - Ollama 的替代工具',
-            '[如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) - 初学者 GUI 替代方案',
-            '[Ollama 与 LM Studio 的对比](/local-llms/how-to-install-lm-studio?lang=zh) - CLI 与 GUI 方法的详细比较',
-            '[2026年Mac上的MLX对比Ollama对比llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=zh) - Apple Silicon框架比较：速度、设置时间和生态系统权衡。',
+            '[本地LLM开发栈](/zh/local-llms/local-llm-developer-stack) - 构建完整开发环境：CLI → API服务器 → 生产多GPU。',
+            '[什么是本地 LLM？](/zh/local-llms/what-are-local-llms) - 定义和核心概念',
+            '[运行您的第一个本地 LLM](/zh/local-llms/run-first-local-llm) - 安装后的下一步',
+            '[初学者最佳本地 LLM 模型](/zh/local-llms/best-beginner-local-llm-models) - 按硬件推荐模型',
+            '[Local LLM 一键安装程序](/zh/local-llms/local-llm-one-click-installers) - Ollama 的替代工具',
+            '[如何安装 LM Studio](/zh/local-llms/how-to-install-lm-studio) - 初学者 GUI 替代方案',
+            '[Ollama 与 LM Studio 的对比](/zh/local-llms/how-to-install-lm-studio) - CLI 与 GUI 方法的详细比较',
+            '[2026年Mac上的MLX对比Ollama对比llama.cpp](/zh/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) - Apple Silicon框架比较：速度、设置时间和生态系统权衡。',
           ],
         },
         faq: {

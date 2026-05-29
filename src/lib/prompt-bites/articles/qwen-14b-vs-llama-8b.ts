@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Qwen 2.5 14B obtiene 74.8% en MMLU frente al 66.6% de Llama 3 8B — una diferencia de 8 puntos que se refleja en un razonamiento de múltiples pasos, seguimiento de instrucciones y consistencia de salida estructurada notablemente mejores.</strong> La diferencia es especialmente visible en tareas que requieren mantener y aplicar contexto a través de múltiples párrafos.',
           'Si tu uso principal es la finalización de código, la diferencia de calidad crece. Qwen 2.5 Coder 14B (la variante optimizada para código de la misma base) obtiene 78.4% en HumanEval. Llama 3 8B genérico alcanza alrededor del 55% en el mismo benchmark — una diferencia de 23 puntos en tareas de coding.',
           '≤8 GB VRAM: Llama 3 8B Q4_K_M cabe con ~2 GB de margen — Qwen 14B no es una opción. 10–12 GB VRAM: Qwen 2.5 14B Q4_K_M cabe en el punto de inflexión. 16+ GB VRAM: cualquiera de los dos funciona; Qwen 2.5 14B Q5 se vuelve práctico.',
-          'Para un análisis más profundo del rendimiento en coding con tablas de benchmarks, consulta la comparativa de <a href="/prompt-bites/best-14b-models-coding?lang=es" class="text-primary hover:underline">mejores modelos 14B para coding</a>.',
+          'Para un análisis más profundo del rendimiento en coding con tablas de benchmarks, consulta la comparativa de <a href="/es/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">mejores modelos 14B para coding</a>.',
         ],
       },
       faq: {

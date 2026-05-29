@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-documentation-templates?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/prompt-documentation-templates',
       inLanguage: 'de',
       headline: 'Prompt-Dokumentationsvorlagen: 6 wiederverwendbare Formate (2026)',
       description: '6 Prompt-Dokumentationsvorlagen: Einzeiler-Karte, Versionsblock, Testsuite-Header, Entscheidungsprotokoll, Änderungsbegründung und API-Konfigurationsblock.',
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-documentation-templates?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-documentation-templates',
       inLanguage: 'es',
       headline: 'Plantillas de documentación de prompts: 6 formatos reutilizables para equipos',
       description: '6 plantillas de documentación de prompts: Tarjeta One-Liner, Bloque de Versión, Encabezado de Suite de Pruebas, Registro de Decisiones, Justificación de Cambio, Bloque de Config API.',
@@ -514,11 +514,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: 'Lectura relacionada',
         items: [
-          { title: 'Control de versiones de prompts', url: '/prompt-engineering/prompt-version-control?lang=es' },
-          { title: 'Governance de prompts en producción', url: '/prompt-engineering/prompt-governance-in-production?lang=es' },
-          { title: 'Gestión de biblioteca de prompts para equipos', url: '/prompt-engineering/prompt-library-management-for-teams?lang=es' },
-          { title: 'Construye una biblioteca de prompts', url: '/prompt-engineering/build-a-prompt-library?lang=es' },
-          { title: 'Flujo de revisión de prompts para equipos', url: '/prompt-engineering/prompt-review-workflow-for-teams?lang=es' },
+          { title: 'Control de versiones de prompts', url: '/es/prompt-engineering/prompt-version-control' },
+          { title: 'Governance de prompts en producción', url: '/es/prompt-engineering/prompt-governance-in-production' },
+          { title: 'Gestión de biblioteca de prompts para equipos', url: '/es/prompt-engineering/prompt-library-management-for-teams' },
+          { title: 'Construye una biblioteca de prompts', url: '/es/prompt-engineering/build-a-prompt-library' },
+          { title: 'Flujo de revisión de prompts para equipos', url: '/es/prompt-engineering/prompt-review-workflow-for-teams' },
         ],
       },
       sources: {
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-documentation-templates?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/prompt-documentation-templates',
       inLanguage: 'fr',
       headline: 'Modèles de documentation des prompts : 6 formats réutilisables pour les équipes',
       description: '6 modèles de documentation des prompts : Fiche one-liner, Bloc de version, En-tête de suite de tests, Journal de décision, Justification de changement, Bloc de config API.',
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-documentation-templates?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/prompt-documentation-templates',
       inLanguage: 'ja',
       headline: 'Prompt文書化テンプレート：チーム向け6つの再利用可能フォーマット',
       description: 'チーム向け6つのPrompt文書化テンプレート：ワンライナーカード、バージョンブロック、テストスイートヘッダー、決定ログ、変更理由、APIコンフィグブロック。',
@@ -914,7 +914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-documentation-templates?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/prompt-documentation-templates',
       inLanguage: 'zh',
       headline: 'Prompt文档化模板：团队可复用的6种格式',
       description: '6种Prompt文档化模板：单行卡片、版本块、测试套件头、决策日志、变更理由和API配置块。',

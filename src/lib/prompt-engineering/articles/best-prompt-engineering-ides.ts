@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/best-prompt-engineering-ides',
       inLanguage: 'de',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: 'Was macht eine gute Prompt-Engineering-IDE aus?',
-        content: '**Eine gute Prompt-IDE minimiert die Reibung zwischen Idee und Umsetzung.** Sie sollten in der Lage sein, Modelle in Sekunden zu wechseln, Ergebnisse sofort zu sehen, Token-Zahlen einzusehen, den Prompt-Verlauf zu speichern und in Code zu exportieren, ohne das Tool zu verlassen.\n\nWichtige Kriterien bei der Bewertung:\n\n- **Modellwechsel:** Können Sie denselben Prompt in einem Tool mit GPT-4o, Claude und Gemini testen?\n- **Playground-Modus:** Können Sie Prompts ohne Code ausführen?\n- **Token-Zähler:** Zeigt das Tool den Token-Verbrauch vor der Ausführung an? (Token-Kosten summieren sich — erfahren Sie, wie Sie [Prompts kostenoptimiert gestalten](/prompt-engineering/optimize-prompts-for-cost?lang=de).)\n- **Prompt-Verlauf:** Können Sie zu früheren Versionen zurückkehren, ohne manuelle Sicherungsdateien anlegen zu müssen?\n- **Code-Export:** Können Sie einen funktionierenden Prompt in das Python/JS/API-Format konvertieren?\n- **Kostentransparenz:** Können Sie die Kosten pro Anfrage während der Erkundung einsehen?\n\nStand April 2026 erfüllt keine einzelne IDE alle sechs Kriterien vollständig. Entwickler wählen je nach Workflow: Cursor für Entwicklungsgeschwindigkeit, Playground für API-Erkundung, Console für modellspezifischen Fokus, LM Studio für den Offline-Betrieb.',
+        content: '**Eine gute Prompt-IDE minimiert die Reibung zwischen Idee und Umsetzung.** Sie sollten in der Lage sein, Modelle in Sekunden zu wechseln, Ergebnisse sofort zu sehen, Token-Zahlen einzusehen, den Prompt-Verlauf zu speichern und in Code zu exportieren, ohne das Tool zu verlassen.\n\nWichtige Kriterien bei der Bewertung:\n\n- **Modellwechsel:** Können Sie denselben Prompt in einem Tool mit GPT-4o, Claude und Gemini testen?\n- **Playground-Modus:** Können Sie Prompts ohne Code ausführen?\n- **Token-Zähler:** Zeigt das Tool den Token-Verbrauch vor der Ausführung an? (Token-Kosten summieren sich — erfahren Sie, wie Sie [Prompts kostenoptimiert gestalten](/de/prompt-engineering/optimize-prompts-for-cost).)\n- **Prompt-Verlauf:** Können Sie zu früheren Versionen zurückkehren, ohne manuelle Sicherungsdateien anlegen zu müssen?\n- **Code-Export:** Können Sie einen funktionierenden Prompt in das Python/JS/API-Format konvertieren?\n- **Kostentransparenz:** Können Sie die Kosten pro Anfrage während der Erkundung einsehen?\n\nStand April 2026 erfüllt keine einzelne IDE alle sechs Kriterien vollständig. Entwickler wählen je nach Workflow: Cursor für Entwicklungsgeschwindigkeit, Playground für API-Erkundung, Console für modellspezifischen Fokus, LM Studio für den Offline-Betrieb.',
         snippets: [
           { type: 'in-one-sentence', text: 'Eine Prompt-Engineering-IDE ist jedes Tool, mit dem Sie Prompts schreiben, testen und iterieren können, ohne in ein Terminal oder einen separaten API-Client wechseln zu müssen.' },
         ],
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor: KI-native Code- und Prompt-IDE',
-        content: '**Cursor ist ein VS Code-Fork, der für KI-gestützte Entwicklung optimiert ist.** Der integrierte Chat ermöglicht es Ihnen, in der Seitenleiste Prompts zu erstellen, während Sie im Editor programmieren. Sie können einen Prompt schreiben, Code daraus generieren und beides gleichzeitig verfeinern. Erstklassige Unterstützung für GPT-4o, Claude, Gemini — Modelle können mitten in einer Konversation gewechselt werden. Kombinieren Sie Cursor mit einer [Prompt-Management-Plattform](/prompt-engineering/best-prompt-management-platforms?lang=de), um Prompts projektübergreifend zu versionieren.',
+        content: '**Cursor ist ein VS Code-Fork, der für KI-gestützte Entwicklung optimiert ist.** Der integrierte Chat ermöglicht es Ihnen, in der Seitenleiste Prompts zu erstellen, während Sie im Editor programmieren. Sie können einen Prompt schreiben, Code daraus generieren und beides gleichzeitig verfeinern. Erstklassige Unterstützung für GPT-4o, Claude, Gemini — Modelle können mitten in einer Konversation gewechselt werden. Kombinieren Sie Cursor mit einer [Prompt-Management-Plattform](/de/prompt-engineering/best-prompt-management-platforms), um Prompts projektübergreifend zu versionieren.',
         numberedItems: [
           'Bestens geeignet, wenn Sie sowohl Prompts als auch Anwendungscode schreiben',
           'Enthält codebasisbewussten Kontext (liest Ihre Projektdateien)',
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev: Open-Source, Multi-Modell',
-        content: '**Continue ist eine Open-Source-VS Code-Erweiterung, die jedes LLM in Ihren Code-Editor bringt.** Unterstützt GPT-4o, Claude, Gemini sowie lokale Modelle über Ollama. Schreiben Sie einen Prompt, drücken Sie Tab, und das Modell vervollständigt den Code automatisch. Kein Vendor-Lock-in. Community-gepflegt, vollständig transparent. Erstellen Sie parallel eine [Prompt-Bibliothek](/prompt-engineering/build-a-prompt-library?lang=de), um Ihre besten Prompts wiederzuverwenden und zu versionieren.',
+        content: '**Continue ist eine Open-Source-VS Code-Erweiterung, die jedes LLM in Ihren Code-Editor bringt.** Unterstützt GPT-4o, Claude, Gemini sowie lokale Modelle über Ollama. Schreiben Sie einen Prompt, drücken Sie Tab, und das Modell vervollständigt den Code automatisch. Kein Vendor-Lock-in. Community-gepflegt, vollständig transparent. Erstellen Sie parallel eine [Prompt-Bibliothek](/de/prompt-engineering/build-a-prompt-library), um Ihre besten Prompts wiederzuverwenden und zu versionieren.',
         numberedItems: [
           'Bestens geeignet für Entwickler, die Open-Source- und lokale Modellunterstützung benötigen',
           'Unterstützt lokales Ollama, vLLM und Cloud-APIs in einer einzigen IDE',
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howToChoose: {
         id: 'how-to-choose',
         title: 'Wie wählen Sie die richtige Prompt-Engineering-IDE?',
-        content: '**Beginnen Sie mit Ihrem Workflow und Ihren Anforderungen.** Entwickeln Sie Produktionscode (Cursor)? Erkunden Sie APIs (OpenAI Playground)? Testen Sie speziell Claude (Console)? Benötigen Sie Offline-Entwicklung (LM Studio)? Jedes Tool ist für einen anderen Anwendungsfall optimiert.\n\n**Nach Persona:**\n- **Entwickler, der App und Prompts erstellt:** Cursor oder VS Code + Continue (in den Code integriert)\n- **ML-Forscher / Akademiker:** Google AI Studio (multimodal, kostenlos) oder LM Studio (lokal, reproduzierbar). Kombinieren Sie dies mit [Prompt-Evaluierungsmethoden](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de), um die Ausgabequalität zu messen.\n- **Nicht-technischer Prompt-Ersteller:** OpenAI Playground oder Claude Console (keine Einrichtung erforderlich)\n- **Datenschutzbewusst / Offline erforderlich:** LM Studio (nur lokal, keine externe API)\n- **Kostenoptimiert bei hohem Volumen:** LM Studio (nach initialer Hardware) oder VS Code + lokales Ollama\n\nFür eine Coding-Harness, die mit einem lokalen LLM statt einem Cloud-Modell arbeitet, siehe [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=de) — drei Open-Source-Optionen, die das Cloud-Modell gegen ein Offline-Modell tauschen, ohne den Editor zu wechseln.',
+        content: '**Beginnen Sie mit Ihrem Workflow und Ihren Anforderungen.** Entwickeln Sie Produktionscode (Cursor)? Erkunden Sie APIs (OpenAI Playground)? Testen Sie speziell Claude (Console)? Benötigen Sie Offline-Entwicklung (LM Studio)? Jedes Tool ist für einen anderen Anwendungsfall optimiert.\n\n**Nach Persona:**\n- **Entwickler, der App und Prompts erstellt:** Cursor oder VS Code + Continue (in den Code integriert)\n- **ML-Forscher / Akademiker:** Google AI Studio (multimodal, kostenlos) oder LM Studio (lokal, reproduzierbar). Kombinieren Sie dies mit [Prompt-Evaluierungsmethoden](/de/prompt-engineering/how-to-evaluate-prompt-quality), um die Ausgabequalität zu messen.\n- **Nicht-technischer Prompt-Ersteller:** OpenAI Playground oder Claude Console (keine Einrichtung erforderlich)\n- **Datenschutzbewusst / Offline erforderlich:** LM Studio (nur lokal, keine externe API)\n- **Kostenoptimiert bei hohem Volumen:** LM Studio (nach initialer Hardware) oder VS Code + lokales Ollama\n\nFür eine Coding-Harness, die mit einem lokalen LLM statt einem Cloud-Modell arbeitet, siehe [Continue.dev vs Cline vs Aider](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — drei Open-Source-Optionen, die das Cloud-Modell gegen ein Offline-Modell tauschen, ohne den Editor zu wechseln.',
         snippets: [
           { type: 'in-plain-terms', text: 'Stellen Sie sich die Wahl wie bei einem Werkzeugschuppen vor: VS Code + Continue ist eine vollständig ausgestattete Werkstatt (eigene Werkzeuge mitbringen), OpenAI Playground ist ein gemieteter Arbeitsplatz (stundenweise Abrechnung), und LM Studio ist eine Heimgarage (Anfangsinvestition, danach kostenlos).' },
         ],
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Häufige Fehler beim Einsatz von Prompt-Engineering-IDEs',
-        content: 'Diese Fehler führen zu verschwendetem API-Budget, unzuverlässigen Ausgaben und fehlerhaften Produktionsbereitstellungen. Verwenden Sie [dedizierte Prompt-Test-Tools](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=de), bevor Sie einen Playground-Prompt in die Produktion überführen.',
+        content: 'Diese Fehler führen zu verschwendetem API-Budget, unzuverlässigen Ausgaben und fehlerhaften Produktionsbereitstellungen. Verwenden Sie [dedizierte Prompt-Test-Tools](/de/prompt-engineering/best-prompt-testing-evaluation-tools), bevor Sie einen Playground-Prompt in die Produktion überführen.',
         items: [
           'Playground für Produktionstests verwenden — Playground dient dem Prompt-Design, nicht der Bereitstellungsvalidierung. **Fix:** Rufen Sie für den Produktionseinsatz die API direkt auf — mit Fehlerbehandlung, Rate-Limiting, Wiederholungsversuchen und Fallback-Logik.',
           'Zu häufiger IDE-Wechsel — Jede IDE hat eine Lernkurve (Tastenkombinationen, Exportformate, Modellauswahl-Muster). **Fix:** Wählen Sie eine primäre IDE und nutzen Sie diese mindestens 2 Wochen, bevor Sie Alternativen evaluieren. Tastatur-Routine zählt mehr als Feature-Listen.',
@@ -572,12 +572,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Beste Prompt-Engineering-Tools 2026: Geordnet nach Anwendungsfall](/prompt-engineering/best-prompt-engineering-tools-2026?lang=de) — Vollständiges Ranking von 15+ Tools aus den Bereichen Management, Tests und Entwicklung',
-          '[Beste Prompt-Test- und Evaluierungstools 2026](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=de) — Tools für automatisierte Regressionstests, LLM-as-Judge und Erfolgsquoten-Scoring',
-          '[Beste Prompt-Management-Plattformen 2026](/prompt-engineering/best-prompt-management-platforms?lang=de) — Plattformen zur Versionierung, gemeinsamen Nutzung und Verwaltung von Prompts in Teams',
-          '[Prompts kostentechnisch optimieren: Praxistechniken 2026](/prompt-engineering/optimize-prompts-for-cost?lang=de) — Token-Reduzierung, Modell-Tiering und Caching-Strategien für Produktionsprompts',
-          '[Prompt Engineering vs. Fine-Tuning: Entscheidungshilfe](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=de) — Entscheidungsrahmen: Wann reicht Prompting, wann muss ein Modell trainiert werden?',
-          '[Prompt-Qualität evaluieren: Ein praktisches Framework](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) — Systematische Methoden zur Messung von Prompt-Zuverlässigkeit, Genauigkeit und Regression',
+          '[Beste Prompt-Engineering-Tools 2026: Geordnet nach Anwendungsfall](/de/prompt-engineering/best-prompt-engineering-tools-2026) — Vollständiges Ranking von 15+ Tools aus den Bereichen Management, Tests und Entwicklung',
+          '[Beste Prompt-Test- und Evaluierungstools 2026](/de/prompt-engineering/best-prompt-testing-evaluation-tools) — Tools für automatisierte Regressionstests, LLM-as-Judge und Erfolgsquoten-Scoring',
+          '[Beste Prompt-Management-Plattformen 2026](/de/prompt-engineering/best-prompt-management-platforms) — Plattformen zur Versionierung, gemeinsamen Nutzung und Verwaltung von Prompts in Teams',
+          '[Prompts kostentechnisch optimieren: Praxistechniken 2026](/de/prompt-engineering/optimize-prompts-for-cost) — Token-Reduzierung, Modell-Tiering und Caching-Strategien für Produktionsprompts',
+          '[Prompt Engineering vs. Fine-Tuning: Entscheidungshilfe](/de/prompt-engineering/prompt-engineering-vs-fine-tuning) — Entscheidungsrahmen: Wann reicht Prompting, wann muss ein Modell trainiert werden?',
+          '[Prompt-Qualität evaluieren: Ein praktisches Framework](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Systematische Methoden zur Messung von Prompt-Zuverlässigkeit, Genauigkeit und Regression',
         ],
       },
       faq: {
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-engineering-ides',
       inLanguage: 'es',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '¿Qué hace un buen IDE de prompt engineering?',
-        content: '**Un buen IDE de prompts minimiza la fricción entre la idea y la ejecución.** Deberías poder cambiar de modelo en segundos, ver los resultados inmediatamente, ver los conteos de tokens, guardar el historial de prompts y exportar a código sin salir de la herramienta.\n\nCaracterísticas clave a evaluar:\n\n- **Cambio de modelo:** ¿Puedes testear el mismo prompt en GPT-4o, Claude y Gemini en una sola herramienta?\n- **Modo playground:** ¿Puedes ejecutar prompts sin escribir código?\n- **Contador de tokens:** ¿Muestra los tokens consumidos antes de confirmar? (Los costes de tokens se acumulan — aprende a [optimizar prompts por coste](/prompt-engineering/optimize-prompts-for-cost?lang=es).)\n- **Historial de prompts:** ¿Puedes volver a versiones anteriores sin archivos de guardado manuales?\n- **Exportar a código:** ¿Puedes convertir un prompt que funciona al formato Python/JS/API?\n- **Visibilidad de coste:** ¿Puedes ver el coste por petición durante la exploración?\n\nA abril de 2026, ningún IDE único domina los seis criterios. Los desarrolladores eligen según el flujo de trabajo: Cursor para velocidad de desarrollo, Playground para exploración de API, Console para foco en un modelo específico, LM Studio para trabajo offline.',
+        content: '**Un buen IDE de prompts minimiza la fricción entre la idea y la ejecución.** Deberías poder cambiar de modelo en segundos, ver los resultados inmediatamente, ver los conteos de tokens, guardar el historial de prompts y exportar a código sin salir de la herramienta.\n\nCaracterísticas clave a evaluar:\n\n- **Cambio de modelo:** ¿Puedes testear el mismo prompt en GPT-4o, Claude y Gemini en una sola herramienta?\n- **Modo playground:** ¿Puedes ejecutar prompts sin escribir código?\n- **Contador de tokens:** ¿Muestra los tokens consumidos antes de confirmar? (Los costes de tokens se acumulan — aprende a [optimizar prompts por coste](/es/prompt-engineering/optimize-prompts-for-cost).)\n- **Historial de prompts:** ¿Puedes volver a versiones anteriores sin archivos de guardado manuales?\n- **Exportar a código:** ¿Puedes convertir un prompt que funciona al formato Python/JS/API?\n- **Visibilidad de coste:** ¿Puedes ver el coste por petición durante la exploración?\n\nA abril de 2026, ningún IDE único domina los seis criterios. Los desarrolladores eligen según el flujo de trabajo: Cursor para velocidad de desarrollo, Playground para exploración de API, Console para foco en un modelo específico, LM Studio para trabajo offline.',
         snippets: [
           { type: 'in-one-sentence', text: 'Un IDE de prompt engineering es cualquier herramienta donde puedes escribir, testear e iterar sobre prompts sin cambiar a un terminal o cliente API separado.' },
         ],
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor: IDE nativo de IA para código + prompts',
-        content: '**Cursor es un fork de VS Code optimizado para desarrollo asistido por IA.** El chat integrado te permite hacer prompts en la barra lateral mientras codificas en el editor. Puedes escribir un prompt, generar código a partir de él y refinar ambos simultáneamente. Soporte de primera clase para GPT-4o, Claude, Gemini — cambia de modelo a mitad de conversación. Combina Cursor con una [plataforma de gestión de prompts](/prompt-engineering/best-prompt-management-platforms?lang=es) para versionar prompts entre proyectos.',
+        content: '**Cursor es un fork de VS Code optimizado para desarrollo asistido por IA.** El chat integrado te permite hacer prompts en la barra lateral mientras codificas en el editor. Puedes escribir un prompt, generar código a partir de él y refinar ambos simultáneamente. Soporte de primera clase para GPT-4o, Claude, Gemini — cambia de modelo a mitad de conversación. Combina Cursor con una [plataforma de gestión de prompts](/es/prompt-engineering/best-prompt-management-platforms) para versionar prompts entre proyectos.',
         numberedItems: [
           'Ideal si escribes tanto prompts como código de aplicación',
           'Incluye contexto consciente del código base (lee los archivos de tu proyecto)',
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev: Open-source multi-modelo',
-        content: '**Continue es una extensión open-source de VS Code que lleva cualquier LLM a tu editor de código.** Soporta GPT-4o, Claude, Gemini, más modelos locales vía Ollama. Escribe un prompt, pulsa Tab y el modelo autocompleta el código. Sin vendor lock-in. Mantenido por la comunidad, completamente transparente. Construye una [biblioteca de prompts](/prompt-engineering/build-a-prompt-library?lang=es) junto a él para reutilizar y versionar tus mejores prompts.',
+        content: '**Continue es una extensión open-source de VS Code que lleva cualquier LLM a tu editor de código.** Soporta GPT-4o, Claude, Gemini, más modelos locales vía Ollama. Escribe un prompt, pulsa Tab y el modelo autocompleta el código. Sin vendor lock-in. Mantenido por la comunidad, completamente transparente. Construye una [biblioteca de prompts](/es/prompt-engineering/build-a-prompt-library) junto a él para reutilizar y versionar tus mejores prompts.',
         numberedItems: [
           'Ideal para desarrolladores que quieren soporte open-source y de modelos locales',
           'Soporta Ollama local, vLLM y APIs en la nube en un solo IDE',
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howToChoose: {
         id: 'how-to-choose',
         title: 'Cómo elegir tu IDE de prompt engineering',
-        content: '**Empieza con tu flujo de trabajo y tus restricciones.** ¿Construyes código de producción (Cursor)? ¿Exploras APIs (OpenAI Playground)? ¿Testeas Claude específicamente (Console)? ¿Quieres desarrollo offline (LM Studio)? Cada herramienta está optimizada para un caso de uso diferente.\n\n**Por perfil:**\n- **Desarrollador que construye app + prompts:** Cursor o VS Code + Continue (integrado con el código)\n- **Investigador ML / académico:** Google AI Studio (multimodal, gratuito) o LM Studio (local, reproducible). Combina con [métodos de evaluación de prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) para medir la calidad del output.\n- **Constructor de prompts no técnico:** OpenAI Playground o Claude Console (sin configuración)\n- **Consciente de privacidad / requiere offline:** LM Studio (solo local, sin API externa)\n- **Optimizado por coste a escala:** LM Studio (tras hardware inicial) o VS Code + Ollama local\n\nPara un harness de codificación que funciona contra un LLM local en lugar de un modelo en la nube, consulta [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=es) — tres opciones open-source que cambian el modelo en la nube por uno offline sin cambiar el editor. Para validar que un prompt se generaliza entre proveedores antes de comprometerte con un stack, [PromptQuorum](/features) despacha a 25+ modelos simultáneamente.',
+        content: '**Empieza con tu flujo de trabajo y tus restricciones.** ¿Construyes código de producción (Cursor)? ¿Exploras APIs (OpenAI Playground)? ¿Testeas Claude específicamente (Console)? ¿Quieres desarrollo offline (LM Studio)? Cada herramienta está optimizada para un caso de uso diferente.\n\n**Por perfil:**\n- **Desarrollador que construye app + prompts:** Cursor o VS Code + Continue (integrado con el código)\n- **Investigador ML / académico:** Google AI Studio (multimodal, gratuito) o LM Studio (local, reproducible). Combina con [métodos de evaluación de prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality) para medir la calidad del output.\n- **Constructor de prompts no técnico:** OpenAI Playground o Claude Console (sin configuración)\n- **Consciente de privacidad / requiere offline:** LM Studio (solo local, sin API externa)\n- **Optimizado por coste a escala:** LM Studio (tras hardware inicial) o VS Code + Ollama local\n\nPara un harness de codificación que funciona contra un LLM local en lugar de un modelo en la nube, consulta [Continue.dev vs Cline vs Aider](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) — tres opciones open-source que cambian el modelo en la nube por uno offline sin cambiar el editor. Para validar que un prompt se generaliza entre proveedores antes de comprometerte con un stack, [PromptQuorum](/features) despacha a 25+ modelos simultáneamente.',
         snippets: [
           { type: 'in-plain-terms', text: 'Piénsalo como elegir un taller: VS Code + Continue es un taller completamente equipado (trae tus propias herramientas), OpenAI Playground es un banco de trabajo alquilado (pago por hora) y LM Studio es un garaje propio (coste inicial, luego gratuito).' },
         ],
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       commonMistakes: {
         id: 'common-mistakes',
         title: '¿Cuáles son los errores más comunes al usar un IDE de prompt engineering?',
-        content: 'Estos errores causan gasto de API desperdiciado, outputs poco fiables y despliegues de producción rotos. Usa [herramientas de testing dedicadas](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=es) antes de mover cualquier prompt del playground a producción.',
+        content: 'Estos errores causan gasto de API desperdiciado, outputs poco fiables y despliegues de producción rotos. Usa [herramientas de testing dedicadas](/es/prompt-engineering/best-prompt-testing-evaluation-tools) antes de mover cualquier prompt del playground a producción.',
         items: [
           'Usar Playground para testing de producción — Playground es para diseño de prompts, no validación de despliegue. **Fix:** Llama a la API directamente con manejo de errores, rate limiting, reintentos y lógica de fallback para producción.',
           'Cambiar de IDE con demasiada frecuencia — Cada IDE tiene una curva de aprendizaje (atajos de teclado, formatos de exportación, patrones de selección de modelo). **Fix:** Elige un IDE principal y úsalo durante al menos 2 semanas antes de evaluar alternativas. La fluidez con el teclado importa más que las listas de características.',
@@ -875,12 +875,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso](/prompt-engineering/best-prompt-engineering-tools-2026?lang=es) — Ranking completo de 15+ herramientas en las categorías de gestión, testing y desarrollo',
-          '[Mejores herramientas de testing y evaluación de prompts 2026](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=es) — Herramientas para testing de regresión automatizado, LLM-as-judge y scoring de tasa de paso',
-          '[Mejores plataformas de gestión de prompts 2026](/prompt-engineering/best-prompt-management-platforms?lang=es) — Plataformas para versionar, compartir y gobernar prompts entre equipos',
-          '[Cómo optimizar prompts por coste: técnicas prácticas 2026](/prompt-engineering/optimize-prompts-for-cost?lang=es) — Reducción de tokens, tiering de modelos y estrategias de caching para prompts en producción',
-          '[Prompt engineering vs fine-tuning: cómo decidir](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=es) — Framework de decisión para cuándo el prompting es suficiente vs cuándo entrenar un modelo',
-          '[Cómo evaluar la calidad de prompts: un framework práctico](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — Métodos sistemáticos para medir la fiabilidad, precisión y regresión de prompts',
+          '[Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso](/es/prompt-engineering/best-prompt-engineering-tools-2026) — Ranking completo de 15+ herramientas en las categorías de gestión, testing y desarrollo',
+          '[Mejores herramientas de testing y evaluación de prompts 2026](/es/prompt-engineering/best-prompt-testing-evaluation-tools) — Herramientas para testing de regresión automatizado, LLM-as-judge y scoring de tasa de paso',
+          '[Mejores plataformas de gestión de prompts 2026](/es/prompt-engineering/best-prompt-management-platforms) — Plataformas para versionar, compartir y gobernar prompts entre equipos',
+          '[Cómo optimizar prompts por coste: técnicas prácticas 2026](/es/prompt-engineering/optimize-prompts-for-cost) — Reducción de tokens, tiering de modelos y estrategias de caching para prompts en producción',
+          '[Prompt engineering vs fine-tuning: cómo decidir](/es/prompt-engineering/prompt-engineering-vs-fine-tuning) — Framework de decisión para cuándo el prompting es suficiente vs cuándo entrenar un modelo',
+          '[Cómo evaluar la calidad de prompts: un framework práctico](/es/prompt-engineering/how-to-evaluate-prompt-quality) — Métodos sistemáticos para medir la fiabilidad, precisión y regresión de prompts',
         ],
       },
       faq: {
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/best-prompt-engineering-ides',
       inLanguage: 'fr',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: 'Ce qui fait un bon IDE de prompt engineering',
-        content: '**Un bon IDE de prompt engineering minimise la friction entre idée et exécution.** Vous devez pouvoir changer de modèle en quelques secondes, voir les résultats immédiatement, consulter le nombre de tokens, sauvegarder l\'historique des prompts et exporter en code sans quitter l\'outil.\n\nCritères clés à évaluer :\n\n- **Sélection de modèle :** Pouvez-vous tester le même prompt sur GPT-4o, Claude et Gemini dans un seul outil ?\n- **Mode playground :** Pouvez-vous exécuter des prompts sans écrire de code ?\n- **Compteur de tokens :** Affiche-t-il les tokens consommés avant l\'exécution ? (Les coûts s\'accumulent — découvrez comment [optimiser vos prompts pour réduire les coûts](/prompt-engineering/optimize-prompts-for-cost?lang=fr).)\n- **Historique des prompts :** Pouvez-vous revenir aux versions précédentes sans fichiers de sauvegarde manuels ?\n- **Export en code :** Pouvez-vous convertir un prompt fonctionnel en Python/JS/API ?\n- **Visibilité sur les coûts :** Pouvez-vous voir le coût par requête pendant l\'exploration ?\n\nEn avril 2026, aucun IDE ne remplit les six critères. Les développeurs choisissent selon leur workflow : Cursor pour la vitesse de développement, Playground pour l\'exploration d\'API, Console pour un focus mono-modèle, LM Studio pour le travail hors ligne.',
+        content: '**Un bon IDE de prompt engineering minimise la friction entre idée et exécution.** Vous devez pouvoir changer de modèle en quelques secondes, voir les résultats immédiatement, consulter le nombre de tokens, sauvegarder l\'historique des prompts et exporter en code sans quitter l\'outil.\n\nCritères clés à évaluer :\n\n- **Sélection de modèle :** Pouvez-vous tester le même prompt sur GPT-4o, Claude et Gemini dans un seul outil ?\n- **Mode playground :** Pouvez-vous exécuter des prompts sans écrire de code ?\n- **Compteur de tokens :** Affiche-t-il les tokens consommés avant l\'exécution ? (Les coûts s\'accumulent — découvrez comment [optimiser vos prompts pour réduire les coûts](/fr/prompt-engineering/optimize-prompts-for-cost).)\n- **Historique des prompts :** Pouvez-vous revenir aux versions précédentes sans fichiers de sauvegarde manuels ?\n- **Export en code :** Pouvez-vous convertir un prompt fonctionnel en Python/JS/API ?\n- **Visibilité sur les coûts :** Pouvez-vous voir le coût par requête pendant l\'exploration ?\n\nEn avril 2026, aucun IDE ne remplit les six critères. Les développeurs choisissent selon leur workflow : Cursor pour la vitesse de développement, Playground pour l\'exploration d\'API, Console pour un focus mono-modèle, LM Studio pour le travail hors ligne.',
         snippets: [
           { type: 'in-one-sentence', text: 'Un IDE de prompt engineering est tout outil permettant d\'écrire, tester et itérer sur des prompts sans passer par un terminal ou un client API séparé.' },
         ],
@@ -1052,7 +1052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor : IDE natif IA pour le code et les prompts',
-        content: '**Cursor est un fork de VS Code optimisé pour le développement assisté par IA.** Un chat intégré vous permet de rédiger des prompts dans la barre latérale tout en codant dans l\'éditeur. Vous pouvez écrire un prompt, générer du code et affiner les deux simultanément. Support natif pour GPT-4o, Claude, Gemini — changez de modèle en cours de conversation. Associez Cursor à une [plateforme de gestion de prompts](/prompt-engineering/best-prompt-management-platforms?lang=fr) pour versionner vos prompts entre projets.',
+        content: '**Cursor est un fork de VS Code optimisé pour le développement assisté par IA.** Un chat intégré vous permet de rédiger des prompts dans la barre latérale tout en codant dans l\'éditeur. Vous pouvez écrire un prompt, générer du code et affiner les deux simultanément. Support natif pour GPT-4o, Claude, Gemini — changez de modèle en cours de conversation. Associez Cursor à une [plateforme de gestion de prompts](/fr/prompt-engineering/best-prompt-management-platforms) pour versionner vos prompts entre projets.',
         numberedItems: [
           'Idéal si vous écrivez à la fois des prompts et le code applicatif qui les utilise',
           'Contexte aware de la base de code (lit vos fichiers de projet)',
@@ -1066,7 +1066,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev : open source, multi-modèle',
-        content: '**Continue est une extension VS Code open source qui intègre n\'importe quel LLM dans votre éditeur de code.** Supporte GPT-4o, Claude, Gemini et les modèles locaux via Ollama. Saisissez un prompt, appuyez sur Tab, et le modèle complète le code. Pas de vendor lock-in. Maintenu par la communauté, entièrement transparent. Constituez une [bibliothèque de prompts](/prompt-engineering/build-a-prompt-library?lang=fr) en parallèle pour réutiliser et versionner vos meilleurs prompts.',
+        content: '**Continue est une extension VS Code open source qui intègre n\'importe quel LLM dans votre éditeur de code.** Supporte GPT-4o, Claude, Gemini et les modèles locaux via Ollama. Saisissez un prompt, appuyez sur Tab, et le modèle complète le code. Pas de vendor lock-in. Maintenu par la communauté, entièrement transparent. Constituez une [bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library) en parallèle pour réutiliser et versionner vos meilleurs prompts.',
         numberedItems: [
           'Idéal pour les développeurs souhaitant un support open source et des modèles locaux',
           'Supporte Ollama local, vLLM et les API cloud dans un seul IDE',
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howToChoose: {
         id: 'how-to-choose',
         title: 'Comment choisir votre IDE de prompt engineering ?',
-        content: '**Commencez par votre workflow et vos contraintes.** Développez-vous du code de production (Cursor) ? Explorez-vous des API (OpenAI Playground) ? Testez-vous spécifiquement Claude (Console) ? Avez-vous besoin de travailler hors ligne (LM Studio) ? Chaque outil est optimisé pour un cas d\'usage différent.\n\n**Par persona :**\n- **Développeur combinant app et prompts :** Cursor ou VS Code + Continue (intégré au code)\n- **Chercheur ML / académique :** Google AI Studio (multimodal, gratuit) ou LM Studio (local, reproductible). Associez-le à des [méthodes d\'évaluation des prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) pour mesurer la qualité des sorties.\n- **Créateur de prompts non technique :** OpenAI Playground ou Claude Console (zéro configuration)\n- **Sensible à la confidentialité / besoin hors ligne :** LM Studio (local uniquement, pas d\'API externe)\n- **Optimisation des coûts à grande échelle :** LM Studio (après investissement matériel) ou VS Code + Ollama local\n\nPour un harnais de code qui fonctionne avec un LLM local plutôt qu\'avec un modèle cloud, voir [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr) — trois choix open source qui remplacent le modèle cloud par un modèle hors ligne sans changer d\'éditeur.',
+        content: '**Commencez par votre workflow et vos contraintes.** Développez-vous du code de production (Cursor) ? Explorez-vous des API (OpenAI Playground) ? Testez-vous spécifiquement Claude (Console) ? Avez-vous besoin de travailler hors ligne (LM Studio) ? Chaque outil est optimisé pour un cas d\'usage différent.\n\n**Par persona :**\n- **Développeur combinant app et prompts :** Cursor ou VS Code + Continue (intégré au code)\n- **Chercheur ML / académique :** Google AI Studio (multimodal, gratuit) ou LM Studio (local, reproductible). Associez-le à des [méthodes d\'évaluation des prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality) pour mesurer la qualité des sorties.\n- **Créateur de prompts non technique :** OpenAI Playground ou Claude Console (zéro configuration)\n- **Sensible à la confidentialité / besoin hors ligne :** LM Studio (local uniquement, pas d\'API externe)\n- **Optimisation des coûts à grande échelle :** LM Studio (après investissement matériel) ou VS Code + Ollama local\n\nPour un harnais de code qui fonctionne avec un LLM local plutôt qu\'avec un modèle cloud, voir [Continue.dev vs Cline vs Aider](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — trois choix open source qui remplacent le modèle cloud par un modèle hors ligne sans changer d\'éditeur.',
         snippets: [
           { type: 'in-plain-terms', text: 'Imaginez le choix comme celui d\'un atelier : VS Code + Continue est un atelier complet (apportez vos propres outils), OpenAI Playground est un poste loué (paiement à l\'heure) et LM Studio est un garage domestique (investissement initial, puis gratuit).' },
         ],
@@ -1155,7 +1155,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Erreurs fréquentes avec les IDE de prompt engineering',
-        content: 'Ces erreurs entraînent des dépenses API inutiles, des sorties non fiables et des déploiements en production défaillants. Utilisez des [outils de test de prompts dédiés](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=fr) avant de passer un prompt du playground en production.',
+        content: 'Ces erreurs entraînent des dépenses API inutiles, des sorties non fiables et des déploiements en production défaillants. Utilisez des [outils de test de prompts dédiés](/fr/prompt-engineering/best-prompt-testing-evaluation-tools) avant de passer un prompt du playground en production.',
         items: [
           'Utiliser le Playground pour les tests de production — le Playground est conçu pour la conception de prompts, pas la validation de déploiement. **Fix :** Appelez l\'API directement avec une gestion des erreurs, un rate limiting, des retries et une logique de fallback pour la production.',
           'Changer trop souvent d\'IDE — chaque IDE a une courbe d\'apprentissage (raccourcis, formats d\'export, patterns de sélection de modèle). **Fix :** Choisissez un IDE principal et utilisez-le au moins 2 semaines avant d\'évaluer des alternatives. La fluidité au clavier compte plus que les listes de fonctionnalités.',
@@ -1176,12 +1176,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Meilleurs outils de prompt engineering 2026 : classés par cas d\'usage](/prompt-engineering/best-prompt-engineering-tools-2026?lang=fr) — Classement complet de 15+ outils dans les catégories gestion, tests et développement',
-          '[Meilleurs outils de test et d\'évaluation de prompts 2026](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=fr) — Outils pour les tests de régression automatisés, LLM-as-judge et scoring de taux de réussite',
-          '[Meilleures plateformes de gestion de prompts 2026](/prompt-engineering/best-prompt-management-platforms?lang=fr) — Plateformes pour versionner, partager et gouverner les prompts en équipe',
-          '[Optimiser les prompts pour réduire les coûts : techniques pratiques 2026](/prompt-engineering/optimize-prompts-for-cost?lang=fr) — Réduction de tokens, tiering de modèles et stratégies de cache pour les prompts de production',
-          '[Prompt engineering vs. fine-tuning : comment décider](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=fr) — Cadre de décision : quand le prompting suffit et quand entraîner un modèle',
-          '[Évaluer la qualité des prompts : un cadre pratique](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) — Méthodes systématiques pour mesurer la fiabilité, la précision et la régression des prompts',
+          '[Meilleurs outils de prompt engineering 2026 : classés par cas d\'usage](/fr/prompt-engineering/best-prompt-engineering-tools-2026) — Classement complet de 15+ outils dans les catégories gestion, tests et développement',
+          '[Meilleurs outils de test et d\'évaluation de prompts 2026](/fr/prompt-engineering/best-prompt-testing-evaluation-tools) — Outils pour les tests de régression automatisés, LLM-as-judge et scoring de taux de réussite',
+          '[Meilleures plateformes de gestion de prompts 2026](/fr/prompt-engineering/best-prompt-management-platforms) — Plateformes pour versionner, partager et gouverner les prompts en équipe',
+          '[Optimiser les prompts pour réduire les coûts : techniques pratiques 2026](/fr/prompt-engineering/optimize-prompts-for-cost) — Réduction de tokens, tiering de modèles et stratégies de cache pour les prompts de production',
+          '[Prompt engineering vs. fine-tuning : comment décider](/fr/prompt-engineering/prompt-engineering-vs-fine-tuning) — Cadre de décision : quand le prompting suffit et quand entraîner un modèle',
+          '[Évaluer la qualité des prompts : un cadre pratique](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Méthodes systématiques pour mesurer la fiabilité, la précision et la régression des prompts',
         ],
       },
       faq: {
@@ -1265,7 +1265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/best-prompt-engineering-ides',
       inLanguage: 'ja',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1342,7 +1342,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '優れたプロンプトエンジニアリングIDEの条件',
-        content: '**優れたプロンプトIDEは、アイデアから実行までの摩擦を最小化します。** 数秒でモデルを切り替え、結果をすぐに確認し、トークン数を把握し、プロンプト履歴を保存し、ツールを離れずにコードとしてエクスポートできることが求められます。\n\n評価すべき主要機能：\n\n- **モデル切り替え：** 一つのツールでGPT-4o、Claude、Geminiを同じプロンプトでテストできますか？\n- **Playgroundモード：** コードを書かずにプロンプトを実行できますか？\n- **トークンカウンター：** 実行前に消費トークン数を確認できますか？（コストは積み重なります — [コスト最適化の手法](/prompt-engineering/optimize-prompts-for-cost?lang=ja)を参照してください。）\n- **プロンプト履歴：** 手動バックアップなしに以前のバージョンに戻せますか？\n- **コードエクスポート：** 動作するプロンプトをPython/JS/API形式に変換できますか？\n- **コスト可視化：** 探索中にリクエストごとのコストを確認できますか？\n\n2026年4月時点で、6つの基準すべてを満たすIDEはありません。開発者はワークフローに応じて選択します：Cursor（開発速度）、Playground（API探索）、Console（特定モデルへの集中）、LM Studio（オフライン作業）。',
+        content: '**優れたプロンプトIDEは、アイデアから実行までの摩擦を最小化します。** 数秒でモデルを切り替え、結果をすぐに確認し、トークン数を把握し、プロンプト履歴を保存し、ツールを離れずにコードとしてエクスポートできることが求められます。\n\n評価すべき主要機能：\n\n- **モデル切り替え：** 一つのツールでGPT-4o、Claude、Geminiを同じプロンプトでテストできますか？\n- **Playgroundモード：** コードを書かずにプロンプトを実行できますか？\n- **トークンカウンター：** 実行前に消費トークン数を確認できますか？（コストは積み重なります — [コスト最適化の手法](/ja/prompt-engineering/optimize-prompts-for-cost)を参照してください。）\n- **プロンプト履歴：** 手動バックアップなしに以前のバージョンに戻せますか？\n- **コードエクスポート：** 動作するプロンプトをPython/JS/API形式に変換できますか？\n- **コスト可視化：** 探索中にリクエストごとのコストを確認できますか？\n\n2026年4月時点で、6つの基準すべてを満たすIDEはありません。開発者はワークフローに応じて選択します：Cursor（開発速度）、Playground（API探索）、Console（特定モデルへの集中）、LM Studio（オフライン作業）。',
         snippets: [
           { type: 'in-one-sentence', text: 'プロンプトエンジニアリングIDEとは、ターミナルや別のAPIクライアントに切り替えることなく、プロンプトを書いて・テストして・改善できるツールです。' },
         ],
@@ -1353,7 +1353,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor：AIネイティブなコード＆プロンプトIDE',
-        content: '**CursorはAI支援開発に最適化されたVS Codeのフォークです。** 内蔵チャットにより、エディタでコードを書きながらサイドバーでプロンプトを作成できます。プロンプトを書き、コードを生成し、両方を同時に改善できます。GPT-4o、Claude、Geminiのファーストクラスサポート — 会話の途中でもモデルを切り替えられます。プロジェクト横断のプロンプト管理には[プロンプト管理プラットフォーム](/prompt-engineering/best-prompt-management-platforms?lang=ja)との組み合わせがおすすめです。',
+        content: '**CursorはAI支援開発に最適化されたVS Codeのフォークです。** 内蔵チャットにより、エディタでコードを書きながらサイドバーでプロンプトを作成できます。プロンプトを書き、コードを生成し、両方を同時に改善できます。GPT-4o、Claude、Geminiのファーストクラスサポート — 会話の途中でもモデルを切り替えられます。プロジェクト横断のプロンプト管理には[プロンプト管理プラットフォーム](/ja/prompt-engineering/best-prompt-management-platforms)との組み合わせがおすすめです。',
         numberedItems: [
           'プロンプトとアプリケーションコードの両方を書く場合に最適',
           'コードベース認識コンテキスト（プロジェクトファイルを読み込む）',
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev：オープンソース、マルチモデル',
-        content: '**ContinueはVS Codeに任意のLLMを組み込むオープンソース拡張機能です。** GPT-4o、Claude、Gemini、さらにOllamaによるローカルモデルをサポートします。プロンプトを入力してTabキーを押すと、モデルがコードを補完します。ベンダーロックインなし。コミュニティによるメンテナンスで完全に透明性があります。優れたプロンプトを再利用・バージョン管理するために[プロンプトライブラリ](/prompt-engineering/build-a-prompt-library?lang=ja)を並行して構築するのがおすすめです。',
+        content: '**ContinueはVS Codeに任意のLLMを組み込むオープンソース拡張機能です。** GPT-4o、Claude、Gemini、さらにOllamaによるローカルモデルをサポートします。プロンプトを入力してTabキーを押すと、モデルがコードを補完します。ベンダーロックインなし。コミュニティによるメンテナンスで完全に透明性があります。優れたプロンプトを再利用・バージョン管理するために[プロンプトライブラリ](/ja/prompt-engineering/build-a-prompt-library)を並行して構築するのがおすすめです。',
         numberedItems: [
           'オープンソースとローカルモデルサポートを求める開発者に最適',
           'ローカルOllama、vLLM、クラウドAPIを一つのIDEでサポート',
@@ -1445,7 +1445,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howToChoose: {
         id: 'how-to-choose',
         title: 'プロンプトエンジニアリングIDEの選び方',
-        content: '**ワークフローと制約から始めましょう。** プロダクションコードを書いていますか（Cursor）？APIを探索していますか（OpenAI Playground）？Claude専用のテストですか（Console）？オフライン開発が必要ですか（LM Studio）？各ツールは異なるユースケースに最適化されています。\n\n**ペルソナ別：**\n- **アプリとプロンプトを同時に開発する開発者：** CursorまたはVS Code + Continue（コードに統合）\n- **ML研究者・学術関係者：** Google AI Studio（マルチモーダル・無料）またはLM Studio（ローカル・再現性あり）。[プロンプト評価手法](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)と組み合わせて出力品質を測定しましょう。\n- **非技術者のプロンプト作成者：** OpenAI PlaygroundまたはClaude Console（セットアップ不要）\n- **プライバシー重視・オフライン必須：** LM Studio（ローカルのみ・外部API不要）\n- **大規模なコスト最適化：** LM Studio（初期ハードウェア投資後）またはVS Code + ローカルOllama\n\nクラウドモデルではなくローカル LLM に対して動くコーディングハーネスについては、[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=ja)を参照してください。エディタを変えずにクラウドモデルをオフラインモデルに差し替えられる、3 つのオープンソース候補です。',
+        content: '**ワークフローと制約から始めましょう。** プロダクションコードを書いていますか（Cursor）？APIを探索していますか（OpenAI Playground）？Claude専用のテストですか（Console）？オフライン開発が必要ですか（LM Studio）？各ツールは異なるユースケースに最適化されています。\n\n**ペルソナ別：**\n- **アプリとプロンプトを同時に開発する開発者：** CursorまたはVS Code + Continue（コードに統合）\n- **ML研究者・学術関係者：** Google AI Studio（マルチモーダル・無料）またはLM Studio（ローカル・再現性あり）。[プロンプト評価手法](/ja/prompt-engineering/how-to-evaluate-prompt-quality)と組み合わせて出力品質を測定しましょう。\n- **非技術者のプロンプト作成者：** OpenAI PlaygroundまたはClaude Console（セットアップ不要）\n- **プライバシー重視・オフライン必須：** LM Studio（ローカルのみ・外部API不要）\n- **大規模なコスト最適化：** LM Studio（初期ハードウェア投資後）またはVS Code + ローカルOllama\n\nクラウドモデルではなくローカル LLM に対して動くコーディングハーネスについては、[Continue.dev vs Cline vs Aider](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local)を参照してください。エディタを変えずにクラウドモデルをオフラインモデルに差し替えられる、3 つのオープンソース候補です。',
         snippets: [
           { type: 'in-plain-terms', text: '工房選びに例えると：VS Code + Continueは完備された工房（道具を持参）、OpenAI Playgroundは時間貸しの作業台（時間単位の課金）、LM Studioは自宅のガレージ（初期投資のみ、以降無料）です。' },
         ],
@@ -1456,7 +1456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       commonMistakes: {
         id: 'common-mistakes',
         title: 'よくある失敗と対処法',
-        content: 'これらの失敗はAPIコストの無駄遣い、不安定な出力、プロダクションデプロイの問題につながります。Playgroundのプロンプトをプロダクションにデプロイする前に、[専用のプロンプトテストツール](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=ja)を使用してください。',
+        content: 'これらの失敗はAPIコストの無駄遣い、不安定な出力、プロダクションデプロイの問題につながります。Playgroundのプロンプトをプロダクションにデプロイする前に、[専用のプロンプトテストツール](/ja/prompt-engineering/best-prompt-testing-evaluation-tools)を使用してください。',
         items: [
           'プロダクションテストにPlaygroundを使う — PlaygroundはプロンプトのDesignとExplorationのためのツールです。**Fix：** プロダクションではエラー処理、レート制限、リトライ、フォールバックロジックを持つAPIを直接呼び出してください。',
           'IDEを頻繁に変える — 各IDEには学習コスト（キーボードショートカット、エクスポート形式、モデル選択パターン）があります。**Fix：** 一つのメインIDEを選んで少なくとも2週間使い続けてから代替を検討してください。操作の流暢さはフィーチャーリストより重要です。',
@@ -1477,12 +1477,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[プロンプトエンジニアリングツール2026年版：ユースケース別ランキング](/prompt-engineering/best-prompt-engineering-tools-2026?lang=ja) — 管理・テスト・開発カテゴリにわたる15以上のツールの完全ランキング',
-          '[プロンプトテスト＆評価ツール2026年版](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=ja) — 自動回帰テスト、LLM-as-judge、合格率スコアリングのためのツール',
-          '[プロンプト管理プラットフォーム2026年版](/prompt-engineering/best-prompt-management-platforms?lang=ja) — チーム全体でプロンプトをバージョン管理・共有・ガバナンスするためのプラットフォーム',
-          '[プロンプトのコスト最適化：実践的テクニック2026年版](/prompt-engineering/optimize-prompts-for-cost?lang=ja) — プロダクションプロンプトのトークン削減・モデル階層化・キャッシング戦略',
-          '[プロンプトエンジニアリング vs ファインチューニング：判断の枠組み](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=ja) — プロンプティングで十分なケースとモデルをトレーニングすべきケースの判断基準',
-          '[プロンプト品質の評価：実践的フレームワーク](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja) — プロンプトの信頼性・精度・回帰を測定するための体系的な手法',
+          '[プロンプトエンジニアリングツール2026年版：ユースケース別ランキング](/ja/prompt-engineering/best-prompt-engineering-tools-2026) — 管理・テスト・開発カテゴリにわたる15以上のツールの完全ランキング',
+          '[プロンプトテスト＆評価ツール2026年版](/ja/prompt-engineering/best-prompt-testing-evaluation-tools) — 自動回帰テスト、LLM-as-judge、合格率スコアリングのためのツール',
+          '[プロンプト管理プラットフォーム2026年版](/ja/prompt-engineering/best-prompt-management-platforms) — チーム全体でプロンプトをバージョン管理・共有・ガバナンスするためのプラットフォーム',
+          '[プロンプトのコスト最適化：実践的テクニック2026年版](/ja/prompt-engineering/optimize-prompts-for-cost) — プロダクションプロンプトのトークン削減・モデル階層化・キャッシング戦略',
+          '[プロンプトエンジニアリング vs ファインチューニング：判断の枠組み](/ja/prompt-engineering/prompt-engineering-vs-fine-tuning) — プロンプティングで十分なケースとモデルをトレーニングすべきケースの判断基準',
+          '[プロンプト品質の評価：実践的フレームワーク](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — プロンプトの信頼性・精度・回帰を測定するための体系的な手法',
         ],
       },
       faq: {
@@ -1566,7 +1566,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/best-prompt-engineering-ides',
       inLanguage: 'zh',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '优秀Prompt工程IDE的评判标准',
-        content: '**优秀的Prompt IDE能最小化创意到执行的摩擦。** 你需要能在数秒内切换模型、立即查看结果、掌握Token用量、保存Prompt历史，并在不离开工具的情况下导出为代码。\n\n核心评估维度：\n\n- **模型切换：** 能否在一个工具里用GPT-4o、Claude和Gemini测试同一个Prompt？\n- **Playground模式：** 能否不写代码直接执行Prompt？\n- **Token计数器：** 执行前能看到Token消耗吗？（成本会累积——参考[Prompt成本优化方法](/prompt-engineering/optimize-prompts-for-cost?lang=zh)。）\n- **Prompt历史：** 能否在不手动保存文件的情况下回退到之前版本？\n- **代码导出：** 能否将可用Prompt转换为Python/JS/API格式？\n- **成本可视化：** 探索阶段能否实时查看每次请求的费用？\n\n截至2026年4月，没有任何一款IDE能同时满足全部六个标准。开发者根据工作流选择：Cursor（开发效率）、Playground（API探索）、Console（专注单模型）、LM Studio（离线场景）。',
+        content: '**优秀的Prompt IDE能最小化创意到执行的摩擦。** 你需要能在数秒内切换模型、立即查看结果、掌握Token用量、保存Prompt历史，并在不离开工具的情况下导出为代码。\n\n核心评估维度：\n\n- **模型切换：** 能否在一个工具里用GPT-4o、Claude和Gemini测试同一个Prompt？\n- **Playground模式：** 能否不写代码直接执行Prompt？\n- **Token计数器：** 执行前能看到Token消耗吗？（成本会累积——参考[Prompt成本优化方法](/zh/prompt-engineering/optimize-prompts-for-cost)。）\n- **Prompt历史：** 能否在不手动保存文件的情况下回退到之前版本？\n- **代码导出：** 能否将可用Prompt转换为Python/JS/API格式？\n- **成本可视化：** 探索阶段能否实时查看每次请求的费用？\n\n截至2026年4月，没有任何一款IDE能同时满足全部六个标准。开发者根据工作流选择：Cursor（开发效率）、Playground（API探索）、Console（专注单模型）、LM Studio（离线场景）。',
         snippets: [
           { type: 'in-one-sentence', text: 'Prompt工程IDE就是任何能让你无需切换到终端或独立API客户端，就能编写、测试和迭代Prompt的工具。' },
         ],
@@ -1654,7 +1654,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor：AI原生代码与Prompt IDE',
-        content: '**Cursor是为AI辅助开发优化的VS Code分支。** 内置聊天栏让你在编辑器写代码的同时在侧边栏编写Prompt。可以先写Prompt，再生成代码，两者同步迭代。原生支持GPT-4o、Claude、Gemini——对话中途即可切换模型。配合[Prompt管理平台](/prompt-engineering/best-prompt-management-platforms?lang=zh)可跨项目管理Prompt版本。',
+        content: '**Cursor是为AI辅助开发优化的VS Code分支。** 内置聊天栏让你在编辑器写代码的同时在侧边栏编写Prompt。可以先写Prompt，再生成代码，两者同步迭代。原生支持GPT-4o、Claude、Gemini——对话中途即可切换模型。配合[Prompt管理平台](/zh/prompt-engineering/best-prompt-management-platforms)可跨项目管理Prompt版本。',
         numberedItems: [
           '最适合同时编写Prompt和应用代码的开发者',
           '具备代码库感知上下文（读取项目文件）',
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev：开源多模型',
-        content: '**Continue是将任意LLM引入VS Code的开源插件。** 支持GPT-4o、Claude、Gemini以及通过Ollama使用的本地模型。输入Prompt按Tab键，模型自动补全代码。无厂商锁定，社区维护，完全透明。可同步构建[Prompt库](/prompt-engineering/build-a-prompt-library?lang=zh)，复用和版本管理你最好的Prompt。',
+        content: '**Continue是将任意LLM引入VS Code的开源插件。** 支持GPT-4o、Claude、Gemini以及通过Ollama使用的本地模型。输入Prompt按Tab键，模型自动补全代码。无厂商锁定，社区维护，完全透明。可同步构建[Prompt库](/zh/prompt-engineering/build-a-prompt-library)，复用和版本管理你最好的Prompt。',
         numberedItems: [
           '最适合需要开源和本地模型支持的开发者',
           '在一个IDE里支持本地Ollama、vLLM和云端API',
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howToChoose: {
         id: 'how-to-choose',
         title: '如何选择你的Prompt工程IDE',
-        content: '**从你的工作流和限制条件出发。** 你在开发生产代码（Cursor）？探索API（OpenAI Playground）？专门测试Claude（Console）？需要离线开发（LM Studio）？每款工具都针对不同场景优化。\n\n**按角色分类：**\n- **同时开发应用和Prompt的工程师：** Cursor或VS Code + Continue（与代码集成）\n- **ML研究员/学术人员：** Google AI Studio（多模态、免费）或LM Studio（本地、可复现）。配合[Prompt评估方法](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)衡量输出质量。\n- **非技术Prompt创作者：** OpenAI Playground或Claude Console（零配置）\n- **隐私敏感/需要离线：** LM Studio（纯本地，无外部API）\n- **大规模成本优化：** LM Studio（硬件投入后）或VS Code + 本地Ollama\n\n要使用面向本地 LLM（而非云端模型）的编码外壳，请参阅[Continue.dev、Cline 与 Aider 对比](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=zh) —— 三种开源方案在不更换编辑器的前提下，把云端模型替换为离线模型。',
+        content: '**从你的工作流和限制条件出发。** 你在开发生产代码（Cursor）？探索API（OpenAI Playground）？专门测试Claude（Console）？需要离线开发（LM Studio）？每款工具都针对不同场景优化。\n\n**按角色分类：**\n- **同时开发应用和Prompt的工程师：** Cursor或VS Code + Continue（与代码集成）\n- **ML研究员/学术人员：** Google AI Studio（多模态、免费）或LM Studio（本地、可复现）。配合[Prompt评估方法](/zh/prompt-engineering/how-to-evaluate-prompt-quality)衡量输出质量。\n- **非技术Prompt创作者：** OpenAI Playground或Claude Console（零配置）\n- **隐私敏感/需要离线：** LM Studio（纯本地，无外部API）\n- **大规模成本优化：** LM Studio（硬件投入后）或VS Code + 本地Ollama\n\n要使用面向本地 LLM（而非云端模型）的编码外壳，请参阅[Continue.dev、Cline 与 Aider 对比](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) —— 三种开源方案在不更换编辑器的前提下，把云端模型替换为离线模型。',
         snippets: [
           { type: 'in-plain-terms', text: '可以类比选工作室：VS Code + Continue是全套装备的工作室（自带工具），OpenAI Playground是按小时租的工位（按用量付费），LM Studio是自家车库（前期投入，之后免费）。' },
         ],
@@ -1757,7 +1757,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       commonMistakes: {
         id: 'common-mistakes',
         title: '常见错误与解决方法',
-        content: '这些错误会导致API费用浪费、输出不稳定和生产部署故障。将Playground中的Prompt投入生产前，请先使用[专用Prompt测试工具](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=zh)。',
+        content: '这些错误会导致API费用浪费、输出不稳定和生产部署故障。将Playground中的Prompt投入生产前，请先使用[专用Prompt测试工具](/zh/prompt-engineering/best-prompt-testing-evaluation-tools)。',
         items: [
           '用Playground做生产测试——Playground是用来设计Prompt的，不是验证部署的。**Fix：** 生产环境请直接调用API，并加入错误处理、速率限制、重试机制和降级逻辑。',
           '频繁切换IDE——每款IDE都有学习成本（快捷键、导出格式、模型选择模式）。**Fix：** 选定一款主力IDE，至少用2周再评估替代方案。操作熟练度比功能列表更重要。',
@@ -1778,12 +1778,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026年最佳Prompt工程工具：按使用场景排名](/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh) — 涵盖管理、测试和开发类别的15+款工具完整排名',
-          '[2026年最佳Prompt测试与评估工具](/prompt-engineering/best-prompt-testing-evaluation-tools?lang=zh) — 自动化回归测试、LLM-as-judge和通过率评分工具',
-          '[2026年最佳Prompt管理平台](/prompt-engineering/best-prompt-management-platforms?lang=zh) — 团队级Prompt版本管理、共享和治理平台',
-          '[Prompt成本优化实践技巧（2026）](/prompt-engineering/optimize-prompts-for-cost?lang=zh) — 生产Prompt的Token压缩、模型分级和缓存策略',
-          '[Prompt工程 vs 微调：如何决策](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=zh) — 何时用Prompt够用、何时需要训练模型的决策框架',
-          '[如何评估Prompt质量：实践框架](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh) — 系统化衡量Prompt可靠性、准确性和回归的方法',
+          '[2026年最佳Prompt工程工具：按使用场景排名](/zh/prompt-engineering/best-prompt-engineering-tools-2026) — 涵盖管理、测试和开发类别的15+款工具完整排名',
+          '[2026年最佳Prompt测试与评估工具](/zh/prompt-engineering/best-prompt-testing-evaluation-tools) — 自动化回归测试、LLM-as-judge和通过率评分工具',
+          '[2026年最佳Prompt管理平台](/zh/prompt-engineering/best-prompt-management-platforms) — 团队级Prompt版本管理、共享和治理平台',
+          '[Prompt成本优化实践技巧（2026）](/zh/prompt-engineering/optimize-prompts-for-cost) — 生产Prompt的Token压缩、模型分级和缓存策略',
+          '[Prompt工程 vs 微调：如何决策](/zh/prompt-engineering/prompt-engineering-vs-fine-tuning) — 何时用Prompt够用、何时需要训练模型的决策框架',
+          '[如何评估Prompt质量：实践框架](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 系统化衡量Prompt可靠性、准确性和回归的方法',
         ],
       },
       faq: {

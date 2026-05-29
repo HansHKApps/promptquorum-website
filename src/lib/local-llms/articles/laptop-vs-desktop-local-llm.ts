@@ -428,7 +428,7 @@ schema: {
           id: 'thermals',
           title: 'Machen thermische Einschränkungen Laptops unpraktisch?',
           content: [
-            '**Laptops haben eine begrenzte Kühlung.** CPU und GPU unter Volllast erzeugen hohe Temperaturen, die zu Throttling führen. MacBook Pro M5 Max: Thermisches Throttling nach 15–20 Minuten; M4 Max: nach 18–22 Minuten. Modellspezifische Anforderungen finden Sie unter [Wie viel VRAM benötigen lokale LLMs?](/local-llms/how-much-vram-local-llm?lang=de).',
+            '**Laptops haben eine begrenzte Kühlung.** CPU und GPU unter Volllast erzeugen hohe Temperaturen, die zu Throttling führen. MacBook Pro M5 Max: Thermisches Throttling nach 15–20 Minuten; M4 Max: nach 18–22 Minuten. Modellspezifische Anforderungen finden Sie unter [Wie viel VRAM benötigen lokale LLMs?](/de/local-llms/how-much-vram-local-llm).',
             'Gaming-Laptops: Bessere Kühlung, aber weiterhin Throttling nach 30–45 Minuten.',
             'Empfehlung: Nutzen Sie den Laptop für kurze Inferenzphasen (Chat, Experimente), nicht für 24/7-Dienste.',
           ],
@@ -456,7 +456,7 @@ schema: {
           items: [
             'Sie Mobilität benötigen und von mehreren Standorten aus arbeiten.',
             'Sie kurze Inferenzsitzungen durchführen (Chat, Experimente).',
-            'Sie bereits einen leistungsstarken MacBook oder Gaming-Laptop besitzen. Prüfen Sie den [Hardware-Leitfaden für lokale LLMs](/local-llms/local-llm-hardware-guide-2026?lang=de), um Ihr Gerät zu beurteilen.',
+            'Sie bereits einen leistungsstarken MacBook oder Gaming-Laptop besitzen. Prüfen Sie den [Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026), um Ihr Gerät zu beurteilen.',
           ],
         },
         desktopChoose: {
@@ -464,7 +464,7 @@ schema: {
           title: 'Wann sollte man einen Desktop wählen?',
           content: 'Wählen Sie einen Desktop, wenn:',
           items: [
-            'Sie 70B-Modelle ausführen oder 80+ Tok/Sek benötigen. Der [Leitfaden zu den besten GPUs für lokale LLMs](/local-llms/best-gpus-for-local-llms?lang=de) behandelt RTX 4070 Ti bis RTX 4090.',
+            'Sie 70B-Modelle ausführen oder 80+ Tok/Sek benötigen. Der [Leitfaden zu den besten GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms) behandelt RTX 4070 Ti bis RTX 4090.',
             'Sie Dienste rund um die Uhr betreiben (APIs, Batch-Verarbeitung).',
             'Ihnen Kosteneffizienz wichtig ist.',
             'Sie thermisches Throttling vermeiden möchten.',
@@ -568,12 +568,12 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Artikel',
           items: [
-            '[Hardware-Leitfaden für lokale LLMs 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — Vollständige Hardware-Empfehlungen für CPUs, GPUs und RAM.',
-            '[Beste GPUs für lokale LLMs](/local-llms/best-gpus-for-local-llms?lang=de) — GPU-Auswahl: RTX 4060 bis RTX 4090, AMD und Apple Silicon.',
-            '[Wie viel VRAM benötigen lokale LLMs?](/local-llms/how-much-vram-local-llm?lang=de) — VRAM-Anforderungen nach Modellgröße und Quantisierungsstufe.',
-            '[Energieverbrauch lokaler LLMs](/local-llms/local-llm-power-consumption?lang=de) — Thermische und Energieaspekte für Laptops und Desktops.',
-            '[Lokale LLMs quantisieren](/local-llms/how-to-quantize-local-llm?lang=de) — Größere Modelle mit Q4/Q8-Quantisierung auf begrenztem VRAM ausführen.',
-            '[Top Open-Source-Modelle für Ollama](/local-llms/top-open-source-models-ollama?lang=de) — Beste Llama-, Qwen- und Mistral-Modelle nach Hardware-Klasse.',
+            '[Hardware-Leitfaden für lokale LLMs 2026](/de/local-llms/local-llm-hardware-guide-2026) — Vollständige Hardware-Empfehlungen für CPUs, GPUs und RAM.',
+            '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms) — GPU-Auswahl: RTX 4060 bis RTX 4090, AMD und Apple Silicon.',
+            '[Wie viel VRAM benötigen lokale LLMs?](/de/local-llms/how-much-vram-local-llm) — VRAM-Anforderungen nach Modellgröße und Quantisierungsstufe.',
+            '[Energieverbrauch lokaler LLMs](/de/local-llms/local-llm-power-consumption) — Thermische und Energieaspekte für Laptops und Desktops.',
+            '[Lokale LLMs quantisieren](/de/local-llms/how-to-quantize-local-llm) — Größere Modelle mit Q4/Q8-Quantisierung auf begrenztem VRAM ausführen.',
+            '[Top Open-Source-Modelle für Ollama](/de/local-llms/top-open-source-models-ollama) — Beste Llama-, Qwen- und Mistral-Modelle nach Hardware-Klasse.',
           ],
         },
         sources: {
@@ -592,7 +592,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Laptop vs. Desktop für lokale LLMs 2026: Kosten, Geschwindigkeit & 70B-Fähigkeit',
         'description': 'RTX 4070 Ti: 80 Tok/Sek, 21 €/Tok/Sek. MacBook M4 Max: 35 Tok/Sek, Drosselung nach 18 Min. 70B-Modelle: Desktop oder Mac Studio. Kaufratgeber 2026.',
-        'url': 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/laptop-vs-desktop-local-llm',
         'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
@@ -751,7 +751,7 @@ schema: {
           id: 'thermals',
           title: 'Les contraintes thermiques rendent-elles les laptops impraticables ?',
           content: [
-            '**Les laptops ont un refroidissement limité.** CPU et GPU à pleine charge = températures élevées, throttling. MacBook Pro M5 Max : throttling thermique après 15–20 minutes ; M4 Max : après 18–22 minutes. Voir [Quelle VRAM pour les LLMs locaux ?](/local-llms/how-much-vram-local-llm?lang=fr) pour les exigences par modèle.',
+            '**Les laptops ont un refroidissement limité.** CPU et GPU à pleine charge = températures élevées, throttling. MacBook Pro M5 Max : throttling thermique après 15–20 minutes ; M4 Max : après 18–22 minutes. Voir [Quelle VRAM pour les LLMs locaux ?](/fr/local-llms/how-much-vram-local-llm) pour les exigences par modèle.',
             'Gaming laptops : meilleur refroidissement, mais throttling après 30–45 minutes.',
             'Recommandation : utilisez le laptop pour des sessions courtes (chat, expérimentation), pas pour des services 24h/24.',
           ],
@@ -779,7 +779,7 @@ schema: {
           items: [
             'Vous avez besoin de mobilité et travaillez depuis plusieurs endroits.',
             'Vous effectuez des sessions d\'inférence courtes (chat, expérimentation).',
-            'Vous possédez déjà un MacBook haut de gamme ou un gaming laptop. Consultez le [guide matériel pour LLMs locaux](/local-llms/local-llm-hardware-guide-2026?lang=fr) pour vérifier votre configuration.',
+            'Vous possédez déjà un MacBook haut de gamme ou un gaming laptop. Consultez le [guide matériel pour LLMs locaux](/fr/local-llms/local-llm-hardware-guide-2026) pour vérifier votre configuration.',
           ],
         },
         desktopChoose: {
@@ -787,7 +787,7 @@ schema: {
           title: 'Quand choisir un bureau ?',
           content: 'Choisissez un bureau si :',
           items: [
-            'Vous faites tourner des modèles 70B ou avez besoin de 80+ tok/s. Voir [meilleurs GPU pour LLMs locaux](/local-llms/best-gpus-for-local-llms?lang=fr) : RTX 4070 Ti à RTX 4090.',
+            'Vous faites tourner des modèles 70B ou avez besoin de 80+ tok/s. Voir [meilleurs GPU pour LLMs locaux](/fr/local-llms/best-gpus-for-local-llms) : RTX 4070 Ti à RTX 4090.',
             'Vous faites tourner des services 24h/24 (APIs, traitement par lots).',
             'Vous privilégiez l\'efficacité coût.',
             'Vous voulez éviter le throttling thermique.',
@@ -882,12 +882,12 @@ schema: {
           id: 'related-reading',
           title: 'Lecture complémentaire',
           items: [
-            '[Guide matériel pour LLMs locaux 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Recommandations complètes pour CPU, GPU et RAM.',
-            '[Meilleurs GPU pour les LLMs locaux](/local-llms/best-gpus-for-local-llms?lang=fr) — Sélection GPU : RTX 4060 à RTX 4090, AMD et Apple Silicon.',
-            '[Quelle VRAM pour les LLMs locaux ?](/local-llms/how-much-vram-local-llm?lang=fr) — Exigences VRAM par taille de modèle et niveau de quantification.',
-            '[Consommation électrique des LLMs locaux](/local-llms/local-llm-power-consumption?lang=fr) — Considérations thermiques et énergétiques pour laptops et bureaux.',
-            '[Quantifier les LLMs locaux](/local-llms/how-to-quantize-local-llm?lang=fr) — Faire tourner de plus grands modèles avec une VRAM limitée via quantification Q4/Q8.',
-            '[Meilleurs modèles open source pour Ollama](/local-llms/top-open-source-models-ollama?lang=fr) — Meilleurs modèles Llama, Qwen et Mistral par niveau matériel.',
+            '[Guide matériel pour LLMs locaux 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Recommandations complètes pour CPU, GPU et RAM.',
+            '[Meilleurs GPU pour les LLMs locaux](/fr/local-llms/best-gpus-for-local-llms) — Sélection GPU : RTX 4060 à RTX 4090, AMD et Apple Silicon.',
+            '[Quelle VRAM pour les LLMs locaux ?](/fr/local-llms/how-much-vram-local-llm) — Exigences VRAM par taille de modèle et niveau de quantification.',
+            '[Consommation électrique des LLMs locaux](/fr/local-llms/local-llm-power-consumption) — Considérations thermiques et énergétiques pour laptops et bureaux.',
+            '[Quantifier les LLMs locaux](/fr/local-llms/how-to-quantize-local-llm) — Faire tourner de plus grands modèles avec une VRAM limitée via quantification Q4/Q8.',
+            '[Meilleurs modèles open source pour Ollama](/fr/local-llms/top-open-source-models-ollama) — Meilleurs modèles Llama, Qwen et Mistral par niveau matériel.',
           ],
         },
         sources: {
@@ -906,7 +906,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Laptop vs bureau pour les LLMs locaux 2026 : coût, vitesse & capacité 70B',
         'description': 'RTX 4070 Ti : 80 tok/s, 21 €/tok/s. MacBook M4 Max : 35 tok/s, throttling après 18 min. Modèles 70B nécessitent un bureau. Guide d\'achat avril 2026.',
-        'url': 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/laptop-vs-desktop-local-llm',
         'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
@@ -1055,7 +1055,7 @@ schema: {
           id: 'thermals',
           title: '熱的制約はラップトップを非実用的にするか？',
           content: [
-            '**ラップトップの冷却能力は限られています。** CPU + GPU フル負荷 = 高温、スロットリング。MacBook Pro M5 Max：15〜20分後に熱的スロットリング；M4 Max：18〜22分後。モデル別要件は[ローカルLLMに必要なVRAM](/local-llms/how-much-vram-local-llm?lang=ja)を参照。',
+            '**ラップトップの冷却能力は限られています。** CPU + GPU フル負荷 = 高温、スロットリング。MacBook Pro M5 Max：15〜20分後に熱的スロットリング；M4 Max：18〜22分後。モデル別要件は[ローカルLLMに必要なVRAM](/ja/local-llms/how-much-vram-local-llm)を参照。',
             'ゲーミングラップトップ：冷却性能が高いが、30〜45分後にスロットリングが発生。',
             '解決策：ラップトップはチャットや実験などの短時間のバーストに使用し、24時間365日サービスには使用しない。',
           ],
@@ -1083,7 +1083,7 @@ schema: {
           items: [
             '複数の場所から作業する携帯性が必要な場合。',
             '短い推論セッション（チャット、実験）を実行する場合。',
-            'すでにハイエンドのMacBookやゲーミングラップトップを所有している場合。デバイスが要件を満たすか[ローカルLLMハードウェアガイド](/local-llms/local-llm-hardware-guide-2026?lang=ja)で確認してください。',
+            'すでにハイエンドのMacBookやゲーミングラップトップを所有している場合。デバイスが要件を満たすか[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)で確認してください。',
           ],
         },
         desktopChoose: {
@@ -1091,7 +1091,7 @@ schema: {
           title: 'デスクトップを選ぶ場合は？',
           content: 'デスクトップを選ぶ場合：',
           items: [
-            '70Bモデルを実行するか、80トークン/秒以上が必要な場合。[ローカルLLM向けベストGPUガイド](/local-llms/best-gpus-for-local-llms?lang=ja)でRTX 4070 TiからRTX 4090を解説。',
+            '70Bモデルを実行するか、80トークン/秒以上が必要な場合。[ローカルLLM向けベストGPUガイド](/ja/local-llms/best-gpus-for-local-llms)でRTX 4070 TiからRTX 4090を解説。',
             '24時間365日サービスを運用する場合（API、バッチ処理）。',
             'コスト効率を優先する場合。',
             '熱的スロットリングを回避したい場合。',
@@ -1186,12 +1186,12 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — CPU、GPU、RAMの完全なハードウェア推奨。',
-            '[ローカルLLM向けベストGPU](/local-llms/best-gpus-for-local-llms?lang=ja) — GPUセレクションガイド：RTX 4060〜RTX 4090、AMD、Apple Silicon。',
-            '[ローカルLLMに必要なVRAMは？](/local-llms/how-much-vram-local-llm?lang=ja) — モデルサイズと量子化レベル別のVRAM要件。',
-            '[ローカルLLMの消費電力](/local-llms/local-llm-power-consumption?lang=ja) — ラップトップとデスクトップの熱と電力の問題。',
-            '[ローカルLLMの量子化方法](/local-llms/how-to-quantize-local-llm?lang=ja) — Q4/Q8量子化で限られたVRAMで大きなモデルを実行。',
-            '[OllamaのトップオープンソースモデルTop5](/local-llms/top-open-source-models-ollama?lang=ja) — ハードウェアティア別のLlama、Qwen、Mistralモデル。',
+            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — CPU、GPU、RAMの完全なハードウェア推奨。',
+            '[ローカルLLM向けベストGPU](/ja/local-llms/best-gpus-for-local-llms) — GPUセレクションガイド：RTX 4060〜RTX 4090、AMD、Apple Silicon。',
+            '[ローカルLLMに必要なVRAMは？](/ja/local-llms/how-much-vram-local-llm) — モデルサイズと量子化レベル別のVRAM要件。',
+            '[ローカルLLMの消費電力](/ja/local-llms/local-llm-power-consumption) — ラップトップとデスクトップの熱と電力の問題。',
+            '[ローカルLLMの量子化方法](/ja/local-llms/how-to-quantize-local-llm) — Q4/Q8量子化で限られたVRAMで大きなモデルを実行。',
+            '[OllamaのトップオープンソースモデルTop5](/ja/local-llms/top-open-source-models-ollama) — ハードウェアティア別のLlama、Qwen、Mistralモデル。',
           ],
         },
         sources: {
@@ -1210,7 +1210,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'ローカルLLM向けラップトップ vs デスクトップ 2026：コスト・速度・70B対応能力',
         'description': 'RTX 4070 Ti：80トークン/秒、コスト19ドル/トークン/秒。MacBook M4 Max：35トークン/秒（18分後にスロットリング）、約100ドル/トークン/秒。70Bモデルの実行にはデスクトップまたはMac Studio M2 Ultraが必要。2026年4月購入ガイド。',
-        'url': 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/laptop-vs-desktop-local-llm',
         'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
@@ -1359,7 +1359,7 @@ schema: {
           id: 'thermals',
           title: '散热限制是否使笔记本不切实际？',
           content: [
-            '**笔记本散热能力有限。** CPU + GPU满负荷 = 高温、降频。MacBook Pro M5 Max：15~20分钟后热降频；M4 Max：18~22分钟后。模型特定要求参见[本地LLM所需VRAM](/local-llms/how-much-vram-local-llm?lang=zh)。',
+            '**笔记本散热能力有限。** CPU + GPU满负荷 = 高温、降频。MacBook Pro M5 Max：15~20分钟后热降频；M4 Max：18~22分钟后。模型特定要求参见[本地LLM所需VRAM](/zh/local-llms/how-much-vram-local-llm)。',
             '游戏笔记本：散热更好，但仍在30~45分钟后降频。',
             '解决方案：笔记本用于短时推理（聊天、实验），不适合全天候服务。',
           ],
@@ -1387,7 +1387,7 @@ schema: {
           items: [
             '需要在多个地点工作的便携性。',
             '运行短时推理会话（聊天、实验）。',
-            '已拥有高端MacBook或游戏笔记本。请通过[本地LLM硬件指南](/local-llms/local-llm-hardware-guide-2026?lang=zh)确认设备是否满足要求。',
+            '已拥有高端MacBook或游戏笔记本。请通过[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)确认设备是否满足要求。',
           ],
         },
         desktopChoose: {
@@ -1395,7 +1395,7 @@ schema: {
           title: '何时选择台式机？',
           content: '选择台式机的情况：',
           items: [
-            '需要运行70B模型或80令牌/秒以上。[本地LLM最佳GPU指南](/local-llms/best-gpus-for-local-llms?lang=zh)涵盖RTX 4070 Ti至RTX 4090。',
+            '需要运行70B模型或80令牌/秒以上。[本地LLM最佳GPU指南](/zh/local-llms/best-gpus-for-local-llms)涵盖RTX 4070 Ti至RTX 4090。',
             '需要全天候运行服务（API、批处理）。',
             '优先考虑成本效率。',
             '希望避免散热降频。',
@@ -1490,12 +1490,12 @@ schema: {
           id: 'related-reading',
           title: '延伸阅读',
           items: [
-            '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — CPU、GPU、RAM的完整硬件推荐。',
-            '[本地LLM最佳GPU](/local-llms/best-gpus-for-local-llms?lang=zh) — GPU选购指南：RTX 4060至RTX 4090、AMD和Apple Silicon。',
-            '[本地LLM需要多少VRAM？](/local-llms/how-much-vram-local-llm?lang=zh) — 按模型大小和量化级别的VRAM需求。',
-            '[本地LLM功耗](/local-llms/local-llm-power-consumption?lang=zh) — 笔记本和台式机的散热与功耗问题。',
-            '[如何量化本地LLM](/local-llms/how-to-quantize-local-llm?lang=zh) — 通过Q4/Q8量化在有限VRAM上运行更大模型。',
-            '[Ollama最佳开源模型](/local-llms/top-open-source-models-ollama?lang=zh) — 按硬件等级的Llama、Qwen和Mistral模型。',
+            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — CPU、GPU、RAM的完整硬件推荐。',
+            '[本地LLM最佳GPU](/zh/local-llms/best-gpus-for-local-llms) — GPU选购指南：RTX 4060至RTX 4090、AMD和Apple Silicon。',
+            '[本地LLM需要多少VRAM？](/zh/local-llms/how-much-vram-local-llm) — 按模型大小和量化级别的VRAM需求。',
+            '[本地LLM功耗](/zh/local-llms/local-llm-power-consumption) — 笔记本和台式机的散热与功耗问题。',
+            '[如何量化本地LLM](/zh/local-llms/how-to-quantize-local-llm) — 通过Q4/Q8量化在有限VRAM上运行更大模型。',
+            '[Ollama最佳开源模型](/zh/local-llms/top-open-source-models-ollama) — 按硬件等级的Llama、Qwen和Mistral模型。',
           ],
         },
         sources: {
@@ -1514,7 +1514,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '本地LLM笔记本 vs 台式机 2026：成本、速度与70B模型能力',
         'description': 'RTX 4070 Ti：80令牌/秒，成本19美元/令牌/秒。MacBook M4 Max：35令牌/秒（18分钟后降频），约100美元/令牌/秒。运行70B模型需要台式机或Mac Studio M2 Ultra。2026年4月购买指南。',
-        'url': 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/laptop-vs-desktop-local-llm',
         'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',

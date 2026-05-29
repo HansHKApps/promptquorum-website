@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=de',
+    url: 'https://www.promptquorum.com/de/prompt-engineering/chain-of-thought-prompting',
     inLanguage: 'de',
     headline: 'Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen',
     description: 'Was Chain-of-Thought Prompting ist, wann es hilft und wie Sie Prompts strukturieren, damit Modelle ihr Denken klar darstellen.',
@@ -525,7 +525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Wann Chain-of-Thought hilft (und wann nicht)',
       content: [
         '**Chain-of-Thought Prompting hilft am meisten bei Aufgaben, die sich natürlicherweise in klare Schritte unterteilen lassen, ist aber nicht für jeden Prompt notwendig.** Es glänzt überall dort, wo der Weg genauso wichtig ist wie das Ziel.',
-        'Chain-of-Thought-Reasoning ist es, was einen Tool-Calling-Agenten über mehrstufige Aufgaben hinweg zuverlässig macht. Für einen lokalen Agenten-Stack, der einem CoT-fähigen Modell den Zugriff auf Datenbanken und Dateien gibt, siehe [Lokale KI-Agenten mit MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de).',
+        'Chain-of-Thought-Reasoning ist es, was einen Tool-Calling-Agenten über mehrstufige Aufgaben hinweg zuverlässig macht. Für einen lokalen Agenten-Stack, der einem CoT-fähigen Modell den Zugriff auf Datenbanken und Dateien gibt, siehe [Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp-2026).',
         'Gute Anwendungsfälle sind:',
       ],
       items: [
@@ -663,12 +663,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: 'Weiterführende Literatur',
       items: [
-        '[Was ist Prompt Engineering? Ein kompletter Leitfaden 2026](/prompt-engineering/what-is-prompt-engineering?lang=de)',
-        '[Strukturierte Ausgaben & JSON Schema Prompting](/prompt-engineering/structured-output?lang=de)',
-        '[So reduzieren Sie AI Hallucination](/prompt-engineering/reducing-hallucination?lang=de)',
-        '[Constrained Prompting: Modellausgaben begrenzen](/prompt-engineering/constrained-prompting?lang=de)',
-        '[Wie Sie ein Multi-Model Dispatch System bauen](/prompt-engineering/multi-model-dispatch?lang=de)',
-        '[Prompt Testing & Evaluierungs-Framework](/prompt-engineering/prompt-testing?lang=de)',
+        '[Was ist Prompt Engineering? Ein kompletter Leitfaden 2026](/de/prompt-engineering/what-is-prompt-engineering)',
+        '[Strukturierte Ausgaben & JSON Schema Prompting](/de/prompt-engineering/structured-output)',
+        '[So reduzieren Sie AI Hallucination](/de/prompt-engineering/reducing-hallucination)',
+        '[Constrained Prompting: Modellausgaben begrenzen](/de/prompt-engineering/constrained-prompting)',
+        '[Wie Sie ein Multi-Model Dispatch System bauen](/de/prompt-engineering/multi-model-dispatch)',
+        '[Prompt Testing & Evaluierungs-Framework](/de/prompt-engineering/prompt-testing)',
       ],
     },
     faqSection: {
@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=es',
+    url: 'https://www.promptquorum.com/es/prompt-engineering/chain-of-thought-prompting',
     inLanguage: 'es',
     headline: 'Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento',
     description: 'Qué es el chain-of-thought prompting, cuándo ayuda y cómo estructurar prompts para que los modelos muestren su razonamiento con claridad.',
@@ -1073,12 +1073,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: 'Lecturas relacionadas',
       items: [
-        '[¿Qué es el prompt engineering? Guía completa 2026](/prompt-engineering/what-is-prompt-engineering?lang=es)',
-        '[Salida estructurada y JSON Schema prompting](/prompt-engineering/structured-output?lang=es)',
-        '[Cómo reducir las alucinaciones de IA](/prompt-engineering/reducing-hallucination?lang=es)',
-        '[Constrained prompting: limita las salidas del modelo](/prompt-engineering/constrained-prompting?lang=es)',
-        '[Cómo construir un sistema de despacho multi-modelo](/prompt-engineering/multi-model-dispatch?lang=es)',
-        '[Framework de testing y evaluación de prompts](/prompt-engineering/prompt-testing?lang=es)',
+        '[¿Qué es el prompt engineering? Guía completa 2026](/es/prompt-engineering/what-is-prompt-engineering)',
+        '[Salida estructurada y JSON Schema prompting](/es/prompt-engineering/structured-output)',
+        '[Cómo reducir las alucinaciones de IA](/es/prompt-engineering/reducing-hallucination)',
+        '[Constrained prompting: limita las salidas del modelo](/es/prompt-engineering/constrained-prompting)',
+        '[Cómo construir un sistema de despacho multi-modelo](/es/prompt-engineering/multi-model-dispatch)',
+        '[Framework de testing y evaluación de prompts](/es/prompt-engineering/prompt-testing)',
       ],
     },
     faqSection: {
@@ -1276,7 +1276,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=fr',
+    url: 'https://www.promptquorum.com/fr/prompt-engineering/chain-of-thought-prompting',
     inLanguage: 'fr',
     headline: 'Chain-of-Thought Prompting : Faites penser l\'IA à haute voix',
     description: 'Ce qu\'est le Chain-of-Thought Prompting, pourquoi cela importe, et comment structurer les prompts pour que les modèles affichent leur raisonnement clairement.',
@@ -1345,7 +1345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Quand le Chain-of-Thought aide',
       content: [
         '**Le Chain-of-Thought Prompting brille sur les tâches qui se divisent naturellement en étapes claires, mais n\'est pas nécessaire pour chaque prompt.** Il excelle quand le chemin est aussi important que la destination.',
-        'Le raisonnement en chaîne de pensée est ce qui permet à un agent à appel d\'outils de rester fiable sur des tâches multi-étapes. Pour une stack d\'agent local qui donne à un modèle compatible CoT la possibilité d\'interroger des bases de données et d\'éditer des fichiers, voir [Agents IA locaux avec MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr).',
+        'Le raisonnement en chaîne de pensée est ce qui permet à un agent à appel d\'outils de rester fiable sur des tâches multi-étapes. Pour une stack d\'agent local qui donne à un modèle compatible CoT la possibilité d\'interroger des bases de données et d\'éditer des fichiers, voir [Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026).',
         'Les bons cas d\'usage incluent:',
       ],
       items: [
@@ -1483,12 +1483,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: 'Ressources connexes',
       items: [
-        '[Qu\'est-ce que l\'ingénierie des prompts ? Un guide complet 2026](/prompt-engineering/what-is-prompt-engineering?lang=fr)',
-        '[Sorties structurées et prompting avec schéma JSON](/prompt-engineering/structured-output?lang=fr)',
-        '[Comment réduire les hallucinations de l\'IA](/prompt-engineering/reducing-hallucination?lang=fr)',
-        '[Constrained Prompting : limiter les sorties des modèles](/prompt-engineering/constrained-prompting?lang=fr)',
-        '[Comment construire un système de dispatch multi-modèles](/prompt-engineering/multi-model-dispatch?lang=fr)',
-        '[Tests et cadre d\'évaluation de prompts](/prompt-engineering/prompt-testing?lang=fr)',
+        '[Qu\'est-ce que l\'ingénierie des prompts ? Un guide complet 2026](/fr/prompt-engineering/what-is-prompt-engineering)',
+        '[Sorties structurées et prompting avec schéma JSON](/fr/prompt-engineering/structured-output)',
+        '[Comment réduire les hallucinations de l\'IA](/fr/prompt-engineering/reducing-hallucination)',
+        '[Constrained Prompting : limiter les sorties des modèles](/fr/prompt-engineering/constrained-prompting)',
+        '[Comment construire un système de dispatch multi-modèles](/fr/prompt-engineering/multi-model-dispatch)',
+        '[Tests et cadre d\'évaluation de prompts](/fr/prompt-engineering/prompt-testing)',
       ],
     },
     faqSection: {
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/chain-of-thought-prompting',
     inLanguage: 'ja',
     headline: 'Chain-of-Thoughtプロンプティング: AIに推論プロセスを見せさせる',
     description: 'Chain-of-Thoughtプロンプティングとは何か、いつ役立つのか、モデルに推論を明確に示させるプロンプトをどのように構成するか。',
@@ -1755,7 +1755,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Chain-of-Thoughtが役立つ場面',
       content: [
         '**Chain-of-Thoughtプロンプティングは、自然に明確なステップに分割されるタスクで最も役立ちますが、すべてのプロンプトに必要なわけではありません。** 目的地と同じくらいパスが重要な場所で輝きます。',
-        'Chain-of-Thought 推論こそが、ツール呼び出し型エージェントを複数ステップのタスクで安定させる仕組みです。CoT 対応モデルにデータベース照会やファイル編集の能力を与えるローカルエージェント構成については、[MCP を使ったローカル AI エージェント](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja)を参照してください。',
+        'Chain-of-Thought 推論こそが、ツール呼び出し型エージェントを複数ステップのタスクで安定させる仕組みです。CoT 対応モデルにデータベース照会やファイル編集の能力を与えるローカルエージェント構成については、[MCP を使ったローカル AI エージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026)を参照してください。',
         '適切なユースケースには次のようなものがあります:',
       ],
       items: [
@@ -1896,12 +1896,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: '関連リソース',
       items: [
-        '[プロンプトエンジニアリングとは? 完全ガイド2026](/prompt-engineering/what-is-prompt-engineering?lang=ja)',
-        '[構造化出力とJSONスキーマプロンプティング](/prompt-engineering/structured-output?lang=ja)',
-        '[AIハルシネーションの減らし方](/prompt-engineering/reducing-hallucination?lang=ja)',
-        '[制約付きプロンプティング: モデル出力を制限](/prompt-engineering/constrained-prompting?lang=ja)',
-        '[マルチモデルディスパッチシステムの構築方法](/prompt-engineering/multi-model-dispatch?lang=ja)',
-        '[プロンプトテスト&評価フレームワーク](/prompt-engineering/prompt-testing?lang=ja)',
+        '[プロンプトエンジニアリングとは? 完全ガイド2026](/ja/prompt-engineering/what-is-prompt-engineering)',
+        '[構造化出力とJSONスキーマプロンプティング](/ja/prompt-engineering/structured-output)',
+        '[AIハルシネーションの減らし方](/ja/prompt-engineering/reducing-hallucination)',
+        '[制約付きプロンプティング: モデル出力を制限](/ja/prompt-engineering/constrained-prompting)',
+        '[マルチモデルディスパッチシステムの構築方法](/ja/prompt-engineering/multi-model-dispatch)',
+        '[プロンプトテスト&評価フレームワーク](/ja/prompt-engineering/prompt-testing)',
       ],
     },
     faqSection: {
@@ -2099,7 +2099,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=zh',
+    url: 'https://www.promptquorum.com/zh/prompt-engineering/chain-of-thought-prompting',
     inLanguage: 'zh',
     headline: '链式思维提示词: 让AI展示其推理过程',
     description: '链式思维提示词的定义、使用场景，以及如何构建提示词使模型明确展示推理过程。',
@@ -2168,7 +2168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '链式思维何时有效',
       content: [
         '**链式思维提示词在能自然分解为清晰步骤的任务上最有效，但并非所有提示词都需要它。** 当过程本身和结果一样重要时，它表现最佳。',
-        'Chain-of-Thought 推理是工具调用型代理在多步骤任务中保持可靠性的关键。要搭建一套让具备 CoT 能力的模型可以查询数据库、编辑文件的本地代理，请参阅[使用 MCP 的本地 AI 代理](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh)。',
+        'Chain-of-Thought 推理是工具调用型代理在多步骤任务中保持可靠性的关键。要搭建一套让具备 CoT 能力的模型可以查询数据库、编辑文件的本地代理，请参阅[使用 MCP 的本地 AI 代理](/zh/power-local-llm/local-ai-agents-with-mcp-2026)。',
         '适用场景包括:',
       ],
       items: [
@@ -2309,12 +2309,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: '相关资源',
       items: [
-        '[什么是提示词工程? 完整指南2026](/prompt-engineering/what-is-prompt-engineering?lang=zh)',
-        '[结构化输出和JSON模式提示词](/prompt-engineering/structured-output?lang=zh)',
-        '[如何减少AI幻觉](/prompt-engineering/reducing-hallucination?lang=zh)',
-        '[约束提示词: 限制模型输出](/prompt-engineering/constrained-prompting?lang=zh)',
-        '[如何构建多模型分发系统](/prompt-engineering/multi-model-dispatch?lang=zh)',
-        '[提示词测试和评估框架](/prompt-engineering/prompt-testing?lang=zh)',
+        '[什么是提示词工程? 完整指南2026](/zh/prompt-engineering/what-is-prompt-engineering)',
+        '[结构化输出和JSON模式提示词](/zh/prompt-engineering/structured-output)',
+        '[如何减少AI幻觉](/zh/prompt-engineering/reducing-hallucination)',
+        '[约束提示词: 限制模型输出](/zh/prompt-engineering/constrained-prompting)',
+        '[如何构建多模型分发系统](/zh/prompt-engineering/multi-model-dispatch)',
+        '[提示词测试和评估框架](/zh/prompt-engineering/prompt-testing)',
       ],
     },
     faqSection: {

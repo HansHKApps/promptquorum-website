@@ -21,6 +21,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
+import { Footer } from '@/components/Footer'
 import { CookieBanner } from '@/components/CookieBanner'
 import { PageTracker } from '@/components/PageTracker'
 import { OneSignalInit } from '@/components/OneSignalInit'
@@ -257,6 +258,7 @@ gtag('config', 'G-8DQ4B3DXBS', {
           <PageTracker />
           <OneSignalInit />
           <main id="main">{children}</main>
+          <Footer lang={selectedLang as any} />
           <CookieBanner />
           <PushPromptBanner />
           <Script

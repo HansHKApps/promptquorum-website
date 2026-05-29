@@ -919,9 +919,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lectura relacionada',
         items: [
-          '[Mejor GPU por menos de $600 para LLMs locales](/prompt-bites/best-gpu-under-600-local-llm?lang=es) — combina un SSD rápido con la GPU adecuada',
-          '[Mejor mini PC para LLM local](/prompt-bites/best-mini-pc-for-local-llm?lang=es) — muchos mini PCs incluyen SSDs más lentos',
-          '[¿Cuánta RAM necesita un modelo 7B?](/prompt-bites/how-much-ram-for-7b-model?lang=es) — la RAM importa más que el SSD para la velocidad de inferencia',
+          '[Mejor GPU por menos de $600 para LLMs locales](/es/prompt-bites/best-gpu-under-600-local-llm) — combina un SSD rápido con la GPU adecuada',
+          '[Mejor mini PC para LLM local](/es/prompt-bites/best-mini-pc-for-local-llm) — muchos mini PCs incluyen SSDs más lentos',
+          '[¿Cuánta RAM necesita un modelo 7B?](/es/prompt-bites/how-much-ram-for-7b-model) — la RAM importa más que el SSD para la velocidad de inferencia',
         ],
       },
     },

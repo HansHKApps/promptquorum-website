@@ -738,7 +738,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         callouts: [
           {
             type: 'tip',
-            text: 'Genre und POV im System-Prompt für Mehrfach-Turn-Sessions setzen — siehe [System-Prompt vs User-Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=de) warum das besser verankert als User-Turn-Anweisungen. Genre und POV in die System-Message, nicht in den User-Turn. Jede Completion in der Session erbt die Einschränkung — sie muss nicht wiederholt werden.',
+            text: 'Genre und POV im System-Prompt für Mehrfach-Turn-Sessions setzen — siehe [System-Prompt vs User-Prompt](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) warum das besser verankert als User-Turn-Anweisungen. Genre und POV in die System-Message, nicht in den User-Turn. Jede Completion in der Session erbt die Einschränkung — sie muss nicht wiederholt werden.',
           },
         ],
       },
@@ -1007,7 +1007,7 @@ Describe the interior of a building used by this faction — only through the ob
         id: 'style-transfer',
         title: 'Stiltransfer-Vorlagen (Vorlagen 10–11)',
         content:
-          '**Stiltransfer funktioniert, wenn man die Technik benennt, nicht nur den Autor.** „Schreib wie Cormac McCarthy" erzeugt eine generische Annäherung. „Schreibe mit McCarthys Technik verschachtelter Nebensätze, nur konkrete Substantive, keine Dialog-Tags" erzeugt strukturelle Treue. Für ein umfassenderes Framework zur Strukturierung von Prompts, die spezifische kreative Ausgaben erzeugen, siehe das [CRAFT-Framework](/frameworks/craft?lang=de).',
+          '**Stiltransfer funktioniert, wenn man die Technik benennt, nicht nur den Autor.** „Schreib wie Cormac McCarthy" erzeugt eine generische Annäherung. „Schreibe mit McCarthys Technik verschachtelter Nebensätze, nur konkrete Substantive, keine Dialog-Tags" erzeugt strukturelle Treue. Für ein umfassenderes Framework zur Strukturierung von Prompts, die spezifische kreative Ausgaben erzeugen, siehe das [CRAFT-Framework](/de/frameworks/craft).',
         items: [
           '**Die Techniken spezifisch benennen** — „karge Prosa" ist vage; „kurze Hauptsätze, konkrete Substantive, keine Modifikatoren" ist umsetzbar.',
           '**Ein Sample einfügen** — 2–3 Sätze der tatsächlichen Autorenprosa aktivieren Pattern-Matching im Modell effektiver als Beschreibung allein.',
@@ -1215,7 +1215,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Was ist das beste lokale LLM für das Schreiben von dunkler oder reifer Belletristik?',
-            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral oder jedes Modell, das für weniger Inhaltsablehnungen feinabgestimmt ist. Bei lokalem Betrieb gibt es keine Cloud-Nutzungsbedingungen — das Basis-Fine-tune des Modells bestimmt, was es schreiben will und was nicht. Siehe [Beste lokale LLMs für kreatives Schreiben 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=de) für eine vollständige Übersicht über Uncensored-Modell-Optionen.',
+            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral oder jedes Modell, das für weniger Inhaltsablehnungen feinabgestimmt ist. Bei lokalem Betrieb gibt es keine Cloud-Nutzungsbedingungen — das Basis-Fine-tune des Modells bestimmt, was es schreiben will und was nicht. Siehe [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) für eine vollständige Übersicht über Uncensored-Modell-Optionen.',
           },
           {
             q: 'Kann ich diese Vorlagen in SillyTavern oder Agnai verwenden?',
@@ -1243,12 +1243,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[Beste lokale LLMs für kreatives Schreiben 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=de) — Modellvergleich für narrative Generierung, Sampling-Einstellungen und Uncensored-Optionen.',
-          '[SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=de) — Frontend-Vergleich für Charakterkarten-Roleplay und kollaborative Belletristik.',
-          '[Lokales LLM für Drehbuch- und Roman-Entwurf](/power-local-llm/local-llm-screenwriting-and-novel-drafting?lang=de) — Langform-Entwurfs-Workflows, Kapitel-Management und Kontextfenster-Strategien.',
-          '[Uncensored Local LLMs für kreatives Schreiben: Ethik und Einrichtung](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=de) — welche Modelle für reife Inhalte, Datenschutz-Implikationen und verantwortungsvoller Nutzungsrahmen.',
-          '[Chain-of-Thought Prompting erklärt](/prompt-engineering/chain-of-thought-prompting?lang=de) — strukturierte Reasoning-Prompts, die auf Belletristik-Plot-Konstruktion und Szenen-Planung anwendbar sind.',
-          '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=de) — wann Beispiele in Prompts eingeschlossen werden sollten und wann nicht für Belletristik-Aufgaben.',
+          '[Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) — Modellvergleich für narrative Generierung, Sampling-Einstellungen und Uncensored-Optionen.',
+          '[SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — Frontend-Vergleich für Charakterkarten-Roleplay und kollaborative Belletristik.',
+          '[Lokales LLM für Drehbuch- und Roman-Entwurf](/de/power-local-llm/local-llm-screenwriting-and-novel-drafting) — Langform-Entwurfs-Workflows, Kapitel-Management und Kontextfenster-Strategien.',
+          '[Uncensored Local LLMs für kreatives Schreiben: Ethik und Einrichtung](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — welche Modelle für reife Inhalte, Datenschutz-Implikationen und verantwortungsvoller Nutzungsrahmen.',
+          '[Chain-of-Thought Prompting erklärt](/de/prompt-engineering/chain-of-thought-prompting) — strukturierte Reasoning-Prompts, die auf Belletristik-Plot-Konstruktion und Szenen-Planung anwendbar sind.',
+          '[Zero-Shot vs Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot-prompting) — wann Beispiele in Prompts eingeschlossen werden sollten und wann nicht für Belletristik-Aufgaben.',
         ],
       },
     },
@@ -1366,7 +1366,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         callouts: [
           {
             type: 'tip',
-            text: 'Définir le genre et le PDV dans le prompt système pour les sessions multi-tours — voir [prompt système vs prompt utilisateur](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr) pour comprendre pourquoi cela ancre mieux que les instructions dans le tour utilisateur. Mettre le genre et le PDV dans le message système, pas dans le tour utilisateur. Chaque génération de la session hérite de la contrainte, donc pas besoin de la répéter. Exemple : "Tu es un assistant de fiction littéraire. Toute la prose que tu génères est écrite à la troisième personne rapprochée, au passé, avec un focus sur le détail sensoriel et le sous-texte."',
+            text: 'Définir le genre et le PDV dans le prompt système pour les sessions multi-tours — voir [prompt système vs prompt utilisateur](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) pour comprendre pourquoi cela ancre mieux que les instructions dans le tour utilisateur. Mettre le genre et le PDV dans le message système, pas dans le tour utilisateur. Chaque génération de la session hérite de la contrainte, donc pas besoin de la répéter. Exemple : "Tu es un assistant de fiction littéraire. Toute la prose que tu génères est écrite à la troisième personne rapprochée, au passé, avec un focus sur le détail sensoriel et le sous-texte."',
           },
         ],
       },
@@ -1635,7 +1635,7 @@ Describe the interior of a building used by this faction — only through the ob
         id: 'style-transfer',
         title: 'Modèles de transfert de style (Modèles 10–11)',
         content:
-          '**Le transfert de style fonctionne quand on nomme la technique, pas seulement l\'auteur.** "Écris comme Cormac McCarthy" produit une approximation générique — ponctuation rare et thèmes westerns. "Écris en utilisant la technique de McCarthy de propositions subordonnées imbriquées, noms concrets uniquement, pas de balises de dialogue" produit quelque chose avec une fidélité structurelle réelle. Pour un cadre plus complet sur la structuration des prompts qui produisent des sorties créatives spécifiques, voir [le cadre CRAFT](/frameworks/craft?lang=fr).',
+          '**Le transfert de style fonctionne quand on nomme la technique, pas seulement l\'auteur.** "Écris comme Cormac McCarthy" produit une approximation générique — ponctuation rare et thèmes westerns. "Écris en utilisant la technique de McCarthy de propositions subordonnées imbriquées, noms concrets uniquement, pas de balises de dialogue" produit quelque chose avec une fidélité structurelle réelle. Pour un cadre plus complet sur la structuration des prompts qui produisent des sorties créatives spécifiques, voir [le cadre CRAFT](/fr/frameworks/craft).',
         items: [
           '**Nommer les techniques spécifiquement** — "prose épurée" est vague ; "phrases déclaratives courtes, noms concrets, pas de modifieurs" est actionnable.',
           '**Coller un échantillon** — 2–3 phrases de la vraie prose de l\'auteur active la correspondance de schémas dans le modèle plus efficacement que la description seule.',
@@ -1843,7 +1843,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Quel est le meilleur LLM local pour écrire de la fiction sombre ou mature ?',
-            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral, ou tout modèle fine-tuné pour réduire les refus de contenu. Lors de l\'exécution en local, il n\'y a pas de restrictions des conditions d\'utilisation cloud — le fine-tune de base du modèle détermine ce qu\'il produira ou ne produira pas. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr) pour une analyse complète des options de modèles non censurés et du cadrage éthique.',
+            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral, ou tout modèle fine-tuné pour réduire les refus de contenu. Lors de l\'exécution en local, il n\'y a pas de restrictions des conditions d\'utilisation cloud — le fine-tune de base du modèle détermine ce qu\'il produira ou ne produira pas. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) pour une analyse complète des options de modèles non censurés et du cadrage éthique.',
           },
           {
             q: 'Puis-je utiliser ces modèles dans SillyTavern ou Agnai ?',
@@ -1871,12 +1871,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: 'Lecture complémentaire',
         items: [
-          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr) — comparatif de modèles pour la génération narrative, les paramètres de sampling et les options non censurées.',
-          '[SillyTavern vs Agnai vs RisuAI : meilleure interface locale de roleplay](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=fr) — comparatif d\'interfaces pour le roleplay avec fiches de personnages et la fiction collaborative.',
-          '[Comment utiliser un LLM local pour le scénario et la rédaction de roman](/power-local-llm/local-llm-screenwriting-and-novel-drafting?lang=fr) — workflows de rédaction long format, gestion des chapitres et stratégies de fenêtre de contexte.',
-          '[LLM locaux non censurés pour l\'écriture créative : éthique et configuration](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=fr) — quels modèles utiliser pour le contenu mature, implications de confidentialité et cadre d\'utilisation responsable.',
-          '[Chain-of-Thought Prompting expliqué](/prompt-engineering/chain-of-thought-prompting?lang=fr) — prompts de raisonnement structuré applicables à la construction d\'intrigue et à la planification de scènes.',
-          '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=fr) — quand inclure des exemples dans les prompts et quand les retenir pour les tâches de fiction.',
+          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) — comparatif de modèles pour la génération narrative, les paramètres de sampling et les options non censurées.',
+          '[SillyTavern vs Agnai vs RisuAI : meilleure interface locale de roleplay](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparatif d\'interfaces pour le roleplay avec fiches de personnages et la fiction collaborative.',
+          '[Comment utiliser un LLM local pour le scénario et la rédaction de roman](/fr/power-local-llm/local-llm-screenwriting-and-novel-drafting) — workflows de rédaction long format, gestion des chapitres et stratégies de fenêtre de contexte.',
+          '[LLM locaux non censurés pour l\'écriture créative : éthique et configuration](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics) — quels modèles utiliser pour le contenu mature, implications de confidentialité et cadre d\'utilisation responsable.',
+          '[Chain-of-Thought Prompting expliqué](/fr/prompt-engineering/chain-of-thought-prompting) — prompts de raisonnement structuré applicables à la construction d\'intrigue et à la planification de scènes.',
+          '[Zero-Shot vs Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot-prompting) — quand inclure des exemples dans les prompts et quand les retenir pour les tâches de fiction.',
         ],
       },
     },
@@ -1994,7 +1994,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         callouts: [
           {
             type: 'tip',
-            text: 'マルチターンセッションではシステムプロンプトにジャンルとPOVを設定してください——これがユーザーターンの命令よりもよく固定される理由については[システムプロンプト vs ユーザープロンプト](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja)をご覧ください。ジャンルとPOVをユーザーターンではなくシステムメッセージに置いてください。セッション内の全ての生成が制約を継承するので、それを繰り返す必要はありません。例：「あなたは文芸小説アシスタントです。生成する全ての散文は、感覚的詳細とサブテキストに重点を置き、過去時制の密着した三人称で書かれています。」',
+            text: 'マルチターンセッションではシステムプロンプトにジャンルとPOVを設定してください——これがユーザーターンの命令よりもよく固定される理由については[システムプロンプト vs ユーザープロンプト](/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)をご覧ください。ジャンルとPOVをユーザーターンではなくシステムメッセージに置いてください。セッション内の全ての生成が制約を継承するので、それを繰り返す必要はありません。例：「あなたは文芸小説アシスタントです。生成する全ての散文は、感覚的詳細とサブテキストに重点を置き、過去時制の密着した三人称で書かれています。」',
           },
         ],
       },
@@ -2263,7 +2263,7 @@ Describe the interior of a building used by this faction — only through the ob
         id: 'style-transfer',
         title: 'スタイル転換テンプレート（テンプレート10〜11）',
         content:
-          '**スタイル転換は著者名だけでなくテクニックを名付けるときに機能します。** 「コーマック・マッカーシーのように書いて」は一般的な近似を生成します——まばらな句読点と西部テーマ。「マッカーシーのネストされた従属節・具体的な名詞のみ・ダイアログタグなしのテクニックを使って書いて」は実際の構造的忠実性を持つものを生成します。特定のクリエイティブ出力を生成するプロンプト構造の完全なフレームワークについては、[CRAFTフレームワーク](/frameworks/craft?lang=ja)をご覧ください。',
+          '**スタイル転換は著者名だけでなくテクニックを名付けるときに機能します。** 「コーマック・マッカーシーのように書いて」は一般的な近似を生成します——まばらな句読点と西部テーマ。「マッカーシーのネストされた従属節・具体的な名詞のみ・ダイアログタグなしのテクニックを使って書いて」は実際の構造的忠実性を持つものを生成します。特定のクリエイティブ出力を生成するプロンプト構造の完全なフレームワークについては、[CRAFTフレームワーク](/ja/frameworks/craft)をご覧ください。',
         items: [
           '**テクニックを具体的に名付ける** — 「簡潔な散文」は漠然としています；「短い宣言文・具体的な名詞・修飾子なし」は実行可能です。',
           '**サンプルを貼り付ける** — 著者の実際の散文の2〜3文は、説明だけよりも効果的にモデルのパターンマッチングを活性化します。',
@@ -2471,7 +2471,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'ダークまたは成熟したフィクションを書くための最良のローカルLLMは何ですか？',
-            a: 'Hermes 3 Llama 3.3・Dolphin 3.0 Mistral、またはコンテンツ拒否を減らすためにファインチューニングされたモデル。ローカルで実行する場合、クラウドの利用規約制限はありません——モデルのベースファインチューンが何を生成するかを決定します。無検閲モデルオプションと倫理的フレームの完全な内訳については[クリエイティブライティングのためのベストローカルLLMs 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=ja)をご覧ください。',
+            a: 'Hermes 3 Llama 3.3・Dolphin 3.0 Mistral、またはコンテンツ拒否を減らすためにファインチューニングされたモデル。ローカルで実行する場合、クラウドの利用規約制限はありません——モデルのベースファインチューンが何を生成するかを決定します。無検閲モデルオプションと倫理的フレームの完全な内訳については[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing-2026)をご覧ください。',
           },
           {
             q: 'これらのテンプレートはSillyTavernやAgnaiで使用できますか？',
@@ -2499,12 +2499,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[クリエイティブライティングのためのベストローカルLLMs 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=ja) — 物語生成・サンプリング設定・無検閲オプションのためのモデル比較。',
-          '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=ja) — キャラクターカードロールプレイと協力的なフィクションのためのフロントエンド比較。',
-          '[脚本・小説起草のためのローカルLLMの使い方](/power-local-llm/local-llm-screenwriting-and-novel-drafting?lang=ja) — 長編起草ワークフロー・章管理・コンテキストウィンドウ戦略。',
-          '[クリエイティブライティングのための無検閲ローカルLLM：倫理と設定](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=ja) — 成熟したコンテンツに使用するモデル・プライバシーへの影響・責任ある使用フレーム。',
-          '[Chain-of-Thoughtプロンプティングの説明](/prompt-engineering/chain-of-thought-prompting?lang=ja) — フィクションのプロット構成とシーン計画に適用できる構造化推論プロンプト。',
-          '[Zero-Shot vs Few-Shot プロンプティング](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=ja) — フィクションタスクでプロンプトにサンプルを含めるべき時と保留すべき時。',
+          '[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing-2026) — 物語生成・サンプリング設定・無検閲オプションのためのモデル比較。',
+          '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — キャラクターカードロールプレイと協力的なフィクションのためのフロントエンド比較。',
+          '[脚本・小説起草のためのローカルLLMの使い方](/ja/power-local-llm/local-llm-screenwriting-and-novel-drafting) — 長編起草ワークフロー・章管理・コンテキストウィンドウ戦略。',
+          '[クリエイティブライティングのための無検閲ローカルLLM：倫理と設定](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 成熟したコンテンツに使用するモデル・プライバシーへの影響・責任ある使用フレーム。',
+          '[Chain-of-Thoughtプロンプティングの説明](/ja/prompt-engineering/chain-of-thought-prompting) — フィクションのプロット構成とシーン計画に適用できる構造化推論プロンプト。',
+          '[Zero-Shot vs Few-Shot プロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot-prompting) — フィクションタスクでプロンプトにサンプルを含めるべき時と保留すべき時。',
         ],
       },
     },
@@ -2622,7 +2622,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         callouts: [
           {
             type: 'tip',
-            text: '在多轮会话中，在系统提示词中设置类型和POV——参阅[系统提示词与用户提示词的区别](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=zh)了解为什么这比用户轮次指令锚定得更好。将类型和POV放在系统消息中，而非用户轮次。会话中的每次补全都会继承约束，所以你不需要重复它。示例："你是一个文学小说助手。你生成的所有散文以紧密第三人称、过去时写作，注重感官细节和潜台词。"',
+            text: '在多轮会话中，在系统提示词中设置类型和POV——参阅[系统提示词与用户提示词的区别](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)了解为什么这比用户轮次指令锚定得更好。将类型和POV放在系统消息中，而非用户轮次。会话中的每次补全都会继承约束，所以你不需要重复它。示例："你是一个文学小说助手。你生成的所有散文以紧密第三人称、过去时写作，注重感官细节和潜台词。"',
           },
         ],
       },
@@ -2891,7 +2891,7 @@ Describe the interior of a building used by this faction — only through the ob
         id: 'style-transfer',
         title: '风格转换模板（模板10–11）',
         content:
-          '**风格转换在你命名技巧而非仅命名作者时才有效。** "像科马克·麦卡锡那样写"产出通用近似——稀疏标点和西部主题。"使用麦卡锡的嵌套从句、只用具体名词、不用对话标签的技巧"产出真正有结构忠实度的东西。关于构建产出特定创意输出的提示词的更完整框架，请参阅[CRAFT框架](/frameworks/craft?lang=zh)。',
+          '**风格转换在你命名技巧而非仅命名作者时才有效。** "像科马克·麦卡锡那样写"产出通用近似——稀疏标点和西部主题。"使用麦卡锡的嵌套从句、只用具体名词、不用对话标签的技巧"产出真正有结构忠实度的东西。关于构建产出特定创意输出的提示词的更完整框架，请参阅[CRAFT框架](/zh/frameworks/craft)。',
         items: [
           '**具体命名技巧** — "简练散文"是模糊的；"短陈述句、具体名词、无修饰语"是可操作的。',
           '**粘贴样本** — 实际作者散文的2–3句话比单纯描述更有效地激活模型中的模式匹配。',
@@ -3099,7 +3099,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '写黑暗或成熟小说最好的本地LLM是什么？',
-            a: 'Hermes 3 Llama 3.3、Dolphin 3.0 Mistral，或任何针对减少内容拒绝进行微调的模型。在本地运行时，没有云端服务条款限制——模型的基础微调决定了它会和不会生成什么。关于无审查模型选项和伦理框架的完整细分，请参阅[2026年创意写作最佳本地LLMs](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh)。',
+            a: 'Hermes 3 Llama 3.3、Dolphin 3.0 Mistral，或任何针对减少内容拒绝进行微调的模型。在本地运行时，没有云端服务条款限制——模型的基础微调决定了它会和不会生成什么。关于无审查模型选项和伦理框架的完整细分，请参阅[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing-2026)。',
           },
           {
             q: '我可以在SillyTavern或Agnai中使用这些模板吗？',
@@ -3127,12 +3127,12 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026年创意写作最佳本地LLMs](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh) — 叙事生成、采样设置和无审查选项的模型对比。',
-          '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=zh) — 用于角色卡角色扮演和协作小说的前端对比。',
-          '[如何使用本地LLM进行剧本写作和长篇小说起草](/power-local-llm/local-llm-screenwriting-and-novel-drafting?lang=zh) — 长篇起草工作流、章节管理和上下文窗口策略。',
-          '[创意写作的无审查本地LLM：伦理与设置](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=zh) — 成熟内容使用哪些模型、隐私影响和负责任的使用框架。',
-          '[Chain-of-Thought提示词解析](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 适用于小说情节构建和场景规划的结构化推理提示词。',
-          '[Zero-Shot vs Few-Shot提示词](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=zh) — 小说任务中何时在提示词中包含示例，何时保留它们。',
+          '[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing-2026) — 叙事生成、采样设置和无审查选项的模型对比。',
+          '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 用于角色卡角色扮演和协作小说的前端对比。',
+          '[如何使用本地LLM进行剧本写作和长篇小说起草](/zh/power-local-llm/local-llm-screenwriting-and-novel-drafting) — 长篇起草工作流、章节管理和上下文窗口策略。',
+          '[创意写作的无审查本地LLM：伦理与设置](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 成熟内容使用哪些模型、隐私影响和负责任的使用框架。',
+          '[Chain-of-Thought提示词解析](/zh/prompt-engineering/chain-of-thought-prompting) — 适用于小说情节构建和场景规划的结构化推理提示词。',
+          '[Zero-Shot vs Few-Shot提示词](/zh/prompt-engineering/zero-shot-vs-few-shot-prompting) — 小说任务中何时在提示词中包含示例，何时保留它们。',
         ],
       },
     },

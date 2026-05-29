@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'de',
         headline: 'Kontextfenster erklärt: Warum KI vergisst (und was Sie tun können)',
         datePublished: '2026-03-22',
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Kontextfenster', 'Tokens', 'LLM-Speicher', 'Prompt-Design', 'KI vergisst', 'Kontextlimits'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=de', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'es',
         headline: 'Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)',
         description: 'Los LLM no tienen memoria a largo plazo — solo "ven" una ventana deslizante de tokens recientes. Aprende por qué la IA olvida el contexto, cómo estructurar los prompts y estrategias prácticas para gestionar las context windows en distintos modelos.',
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['context window', 'tokens', 'memoria LLM', 'diseño de prompts', 'la IA olvida', 'límites de contexto'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=es', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'fr',
         headline: 'Fenêtres de contexte expliquées : Pourquoi l\'IA oublie (et comment y remédier)',
         datePublished: '2026-03-22',
@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['fenêtre de contexte', 'tokens', 'mémoire LLM', 'conception de prompts', 'l\'IA oublie', 'limites de contexte'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=fr', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'ja',
         headline: 'コンテキストウィンドウの説明：AIが忘れる理由（と対処法）',
         datePublished: '2026-03-22',
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['コンテキストウィンドウ', 'トークン', 'LLMメモリ', 'プロンプト設計', 'AIが忘れる', 'コンテキスト制限'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=ja', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'zh',
         headline: '上下文窗口解释：为什么AI会忘记（以及如何处理）',
         datePublished: '2026-03-22',
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['上下文窗口', '令牌', 'LLM内存', '提示设计', 'AI忘记', '上下文限制'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=zh', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {

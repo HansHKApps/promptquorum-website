@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'de',
         headline: 'KI-Einschränkungen — Was LLMs nicht können',
         description: 'Die acht strukturellen Grenzen großer Sprachmodelle: Wissens-Cutoffs, Halluzination, keine Echtzeitdaten, Kontextfenster, kein dauerhaftes Gedächtnis, Bias und die Unfähigkeit, Ausgaben zu überprüfen.',
@@ -600,15 +600,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Jedes LLM hat ein Trainings-Cutoff-Datum, und das Modell hat kein Wissen über Ereignisse, Preise, Forschungsarbeiten oder Produktversionen, die nach diesem Datum veröffentlicht wurden, sofern kein externes Retrieval hinzugefügt wird.** OpenAI GPT-4o hat einen Cutoff von Oktober 2024. Anthropic Claude Opus 4.7 und Google Gemini 3.1 Pro haben Cutoffs Anfang 2025.',
             'Modelle haben auch spärliches Wissen über Ereignisse *nahe* ihres Cutoffs, da die Trainingsdatensammlung und -verarbeitung Wochen bis Monate nach dem Eintreten von Ereignissen dauert. Ein Modell, das bis Oktober 2024 trainiert wurde, kann dünne Abdeckung von Ereignissen September–Oktober 2024 haben.',
-            'Der primäre Workaround ist [Retrieval-Augmented Generation (RAG)](/prompt-engineering/rag-explained?lang=de), das aktuelle oder neuere Dokumente zur Abfragezeit in den Prompt einfügt. Ein sekundärer Workaround ist Prompt-Erdung: die relevanten aktuellen Fakten direkt in den Prompt einfügen und das Modell anweisen, nur aus diesem Kontext zu antworten.',
+            'Der primäre Workaround ist [Retrieval-Augmented Generation (RAG)](/de/prompt-engineering/rag-explained), das aktuelle oder neuere Dokumente zur Abfragezeit in den Prompt einfügt. Ein sekundärer Workaround ist Prompt-Erdung: die relevanten aktuellen Fakten direkt in den Prompt einfügen und das Modell anweisen, nur aus diesem Kontext zu antworten.',
           ],
         },
         hallucination: {
           title: 'Einschränkung 2 — Halluzination ist strukturell, kein Bug',
           content: [
-            '**LLMs generieren statistisch plausible Tokens, keine verifizierten Fakten — wenn das Trainings-Signal für einen spezifischen Fakt dünn ist, produziert das Modell eine selbstbewusst klingende Erfindung.** Dies gilt für jedes Modell, einschließlich GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro. Für einen tieferen Einblick siehe [KI-Halluzinationen — Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de).',
+            '**LLMs generieren statistisch plausible Tokens, keine verifizierten Fakten — wenn das Trainings-Signal für einen spezifischen Fakt dünn ist, produziert das Modell eine selbstbewusst klingende Erfindung.** Dies gilt für jedes Modell, einschließlich GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro. Für einen tieferen Einblick siehe [KI-Halluzinationen — Warum KI Dinge erfindet](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
             'Halluzination tritt am häufigsten auf bei: spezifischen numerischen Werten (Preise, Daten, Statistiken), Zitaten und Papierreferenzen, Nischen-Technikspezifikationen und Ereignissen nahe oder nach dem Trainings-Cutoff. Modelle signalisieren selten, wenn sie halluzinieren.',
-            'Workarounds: das Quellmaterial im Prompt bereitstellen und das Modell anweisen, nur daraus zu antworten; das Modell bitten, jede Behauptung zu markieren, die es nicht aus dem bereitgestellten Kontext bestätigen kann; [RAG](/prompt-engineering/rag-explained?lang=de) verwenden, um Antworten an verifizierten Dokumenten zu verankern; alle Schlüsselzahlen vor der Veröffentlichung gegen primäre Quellen validieren.',
+            'Workarounds: das Quellmaterial im Prompt bereitstellen und das Modell anweisen, nur daraus zu antworten; das Modell bitten, jede Behauptung zu markieren, die es nicht aus dem bereitgestellten Kontext bestätigen kann; [RAG](/de/prompt-engineering/rag-explained) verwenden, um Antworten an verifizierten Dokumenten zu verankern; alle Schlüsselzahlen vor der Veröffentlichung gegen primäre Quellen validieren.',
           ],
           blockquote: '„Das Modell weiß nicht, was es nicht weiß. Es füllt Lücken mit Mustern, nicht mit Stille."',
           blockquoteSource: 'Forschungsergebnis aus mehreren Halluzinations-Benchmarks, 2023–2024',
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         contextWindow: {
           title: 'Einschränkung 4 — Kontextfenster-Limits',
           content: [
-            '**Jede LLM-Sitzung hat ein hartes Token-Limit — GPT-4o bei 128.000 Tokens, Claude Opus 4.7 bei 200.000 Tokens, Gemini 3.1 Pro bei 2.000.000 Tokens — und die Leistung bei früheren Inhalten nimmt ab, wenn das Fenster sich füllt.** Siehe [Kontextfenster erklärt](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de) für eine vollständige Erklärung.',
+            '**Jede LLM-Sitzung hat ein hartes Token-Limit — GPT-4o bei 128.000 Tokens, Claude Opus 4.7 bei 200.000 Tokens, Gemini 3.1 Pro bei 2.000.000 Tokens — und die Leistung bei früheren Inhalten nimmt ab, wenn das Fenster sich füllt.** Siehe [Kontextfenster erklärt](/de/prompt-engineering/context-windows-explained-why-ai-forgets) für eine vollständige Erklärung.',
             'Das "Lost in the Middle"-Problem: mehrere Studien zeigen, dass die LLM-Genauigkeit beim Abrufen von Informationen aus der Mitte eines langen Kontexts deutlich geringer ist als vom Anfang oder Ende. Ein 1M-Token-Fenster bedeutet keine einheitliche Aufmerksamkeit über alle 1M Tokens.',
             'Workarounds: wichtige Informationen am Anfang oder Ende des Prompts strukturieren; RAG verwenden, um nur relevante Chunks abzurufen, anstatt vollständige Dokumente einzufügen; lange Dokumente in Chunk-Sitzungen mit Zusammenfassungsschritten aufteilen.',
           ],
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**LLMs generieren Text — sie können nicht im Web surfen, Code ausführen, E-Mails senden, Dateien ändern oder mit externen Systemen interagieren, sofern eine Tool-Use-Schicht diese Aktionen nicht explizit ermöglicht.** Das Modell produziert eine Textbeschreibung dessen, was es tun würde; die Gerüstschicht führt es aus.',
             'Tool-Use (auch Function Calling genannt) — verfügbar in GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro — lässt ein Modell strukturierte Funktionsaufrufe ausgeben, die eine Anwendung abfängt und ausführt. Das Modell kann immer noch keine Aktionen eigenständig durchführen; es kann nur strukturierten Text ausgeben, der externe Ausführung auslöst.',
-            'Autonome Agenten verpacken mehrere Tool-Aufrufe in einer Orchestrierungsschleife, was den Anschein unabhängiger Aktion erzeugt. Prompt-Injection und Sicherheitslücken sind erhebliche Bedenken in diesen Architekturen — siehe [Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de).',
+            'Autonome Agenten verpacken mehrere Tool-Aufrufe in einer Orchestrierungsschleife, was den Anschein unabhängiger Aktion erzeugt. Prompt-Injection und Sicherheitslücken sind erhebliche Bedenken in diesen Architekturen — siehe [Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security).',
           ],
         },
         bias: {
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         howToStart: {
           title: 'Wie man Prompts entwirft, die LLM-Einschränkungen berücksichtigen',
-          content: ['Zwei der effektivsten Techniken zur Kompensation dieser Einschränkungen sind Chain-of-Thought-Prompting — das Schlussfolgerungsschritte externalisiert und Fehler reduziert — und RAG, das Wissens-Cutoffs durch das Abrufen aktueller Kontexte kompensiert. Siehe [Chain-of-Thought-Prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=de) und [RAG erklärt](https://www.promptquorum.com/prompt-engineering/rag-explained?lang=de).'],
+          content: ['Zwei der effektivsten Techniken zur Kompensation dieser Einschränkungen sind Chain-of-Thought-Prompting — das Schlussfolgerungsschritte externalisiert und Fehler reduziert — und RAG, das Wissens-Cutoffs durch das Abrufen aktueller Kontexte kompensiert. Siehe [Chain-of-Thought-Prompting](https://www.promptquorum.com/de/prompt-engineering/chain-of-thought-prompting) und [RAG erklärt](https://www.promptquorum.com/de/prompt-engineering/rag-explained).'],
           numberedItems: [
             '**Identifizieren Sie, welche Einschränkung auf Ihre Aufgabe zutrifft, bevor Sie den Prompt schreiben.** Faktenabfragen → Wissens-Cutoff und Halluzination. Mehrstufige Probleme → Schlussfolgerungs-Einschränkung. Lange Dokumente → Kontextfenster. Sitzungsübergreifende Arbeit → Gedächtnis-Einschränkung.',
             '**Stellen Sie explizit Erdungskontext bereit.** Fügen Sie die relevanten Fakten, Dokumente oder Daten ein, die das Modell benötigt. Gehen Sie niemals davon aus, dass das Modell aktuelles, genaues oder domänenspezifisches Wissen hat.',
@@ -715,15 +715,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         keyTerms: {
           title: 'Schlüsselbegriffe',
-          content: ['Definitionen der Kernkonzepte, die in diesem Artikel verwendet werden. Jeder Begriff verlinkt zum vollständigen Eintrag im [Prompt Engineering Glossar](/prompt-engineering/prompt-engineering-glossary?lang=de).'],
+          content: ['Definitionen der Kernkonzepte, die in diesem Artikel verwendet werden. Jeder Begriff verlinkt zum vollständigen Eintrag im [Prompt Engineering Glossar](/de/prompt-engineering/prompt-engineering-glossary).'],
           items: [
-            '**[Wissens-Cutoff](/prompt-engineering/prompt-engineering-glossary?lang=de)** — Das Datum, nach dem ein Modell keine Trainingsdaten hat. Jedes Ereignis, jede Preisänderung oder jeder Release nach diesem Datum ist für das Modell unsichtbar, sofern er nicht in den Prompt eingefügt wird. GPT-4o: Oktober 2024; Claude Opus 4.7 und Gemini 3.1 Pro: Anfang 2025.',
-            '**[Halluzination](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Selbstbewusst klingende, aber faktisch falsche oder erfundene Ausgabe. Verursacht durch statistische Token-Vorhersage statt Wahrheitsabfrage. Das Erden von Prompts mit Quellmaterial reduziert, eliminiert sie aber nicht.',
-            '**[Kontextfenster](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Die maximale Anzahl von Tokens (Wörter + Interpunktion), die das Modell gleichzeitig verarbeiten kann, einschließlich System-Prompt, Gesprächsverlauf und abgerufener Dokumente. GPT-4o: 128K Tokens; Claude Opus 4.7: 1M; Gemini 3.1 Pro: 2M.',
-            '**[Tool-Use / Function Calling](/prompt-engineering/prompt-engineering-glossary?lang=de#agents-orchestration)** — Eine Fähigkeit, die es dem Modell ermöglicht, externe Funktionen (Websuche, Code-Ausführung, Datenbankabfragen) aufzurufen, anstatt Text-Antworten zu generieren. Erforderlich, um die Keine-Echtwelt-Aktion-Einschränkung zu umgehen.',
-            '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Eine Prompting-Technik, bei der Sie das Modell bitten, Schritt für Schritt zu schlussfolgen, bevor Sie eine endgültige Antwort geben. Verbessert die Genauigkeit bei mehrstufiger Arithmetik, Logik und Planungsaufgaben erheblich.',
-            '**[RAG (Retrieval-Augmented Generation)](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Architektur, bei der relevante Dokumente aus einer externen Wissensdatenbank abgerufen und zur Abfragezeit in den Prompt eingefügt werden. Der primäre Workaround für Wissens-Cutoffs.',
-            '**[Trainings-Bias](/prompt-engineering/prompt-engineering-glossary?lang=de#safety-alignment)** — Systematische Verzerrung in Modellausgaben, verursacht durch Ungleichgewichte in Trainingsdaten — primär englischsprachige, westliche und Pre-2025-Internetinhalte. Nicht-englische und Nischendomänen-Aufgaben sind strukturell schwächer bei allen großen Modellen.',
+            '**[Wissens-Cutoff](/de/prompt-engineering/prompt-engineering-glossary)** — Das Datum, nach dem ein Modell keine Trainingsdaten hat. Jedes Ereignis, jede Preisänderung oder jeder Release nach diesem Datum ist für das Modell unsichtbar, sofern er nicht in den Prompt eingefügt wird. GPT-4o: Oktober 2024; Claude Opus 4.7 und Gemini 3.1 Pro: Anfang 2025.',
+            '**[Halluzination](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Selbstbewusst klingende, aber faktisch falsche oder erfundene Ausgabe. Verursacht durch statistische Token-Vorhersage statt Wahrheitsabfrage. Das Erden von Prompts mit Quellmaterial reduziert, eliminiert sie aber nicht.',
+            '**[Kontextfenster](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Die maximale Anzahl von Tokens (Wörter + Interpunktion), die das Modell gleichzeitig verarbeiten kann, einschließlich System-Prompt, Gesprächsverlauf und abgerufener Dokumente. GPT-4o: 128K Tokens; Claude Opus 4.7: 1M; Gemini 3.1 Pro: 2M.',
+            '**[Tool-Use / Function Calling](/de/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — Eine Fähigkeit, die es dem Modell ermöglicht, externe Funktionen (Websuche, Code-Ausführung, Datenbankabfragen) aufzurufen, anstatt Text-Antworten zu generieren. Erforderlich, um die Keine-Echtwelt-Aktion-Einschränkung zu umgehen.',
+            '**[Chain-of-Thought (CoT)](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Eine Prompting-Technik, bei der Sie das Modell bitten, Schritt für Schritt zu schlussfolgen, bevor Sie eine endgültige Antwort geben. Verbessert die Genauigkeit bei mehrstufiger Arithmetik, Logik und Planungsaufgaben erheblich.',
+            '**[RAG (Retrieval-Augmented Generation)](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Architektur, bei der relevante Dokumente aus einer externen Wissensdatenbank abgerufen und zur Abfragezeit in den Prompt eingefügt werden. Der primäre Workaround für Wissens-Cutoffs.',
+            '**[Trainings-Bias](/de/prompt-engineering/prompt-engineering-glossary#safety-alignment)** — Systematische Verzerrung in Modellausgaben, verursacht durch Ungleichgewichte in Trainingsdaten — primär englischsprachige, westliche und Pre-2025-Internetinhalte. Nicht-englische und Nischendomänen-Aufgaben sind strukturell schwächer bei allen großen Modellen.',
           ],
         },
         regionalContext: {
@@ -737,12 +737,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[RAG erklärt](/prompt-engineering/rag-explained?lang=de) — Der primäre Workaround für Wissens-Cutoffs und Halluzinationen',
-            '[KI-Halluzinationen — Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — Tieferer Einblick in Einschränkung 2',
-            '[Kontextfenster erklärt — Warum KI vergisst](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de) — Detaillierte Aufschlüsselung der Token-Limits',
-            '[Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — Wie LLM-Einschränkungen Sicherheitsrisiken in Agenten- und Tool-Use-Architekturen schaffen',
-            '[Wie LLMs wirklich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de) — Die Transformer-Architektur, Tokenisierung und RLHF, die diese Grenzen erzeugen',
-            '[Self-Consistency-Prompting](/prompt-engineering/self-consistency-prompting?lang=de) — Verifikationstechnik, die teilweise die Selbstverifikations- und Schlussfolgerungslücken anspricht',
+            '[RAG erklärt](/de/prompt-engineering/rag-explained) — Der primäre Workaround für Wissens-Cutoffs und Halluzinationen',
+            '[KI-Halluzinationen — Warum KI Dinge erfindet](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Tieferer Einblick in Einschränkung 2',
+            '[Kontextfenster erklärt — Warum KI vergisst](/de/prompt-engineering/context-windows-explained-why-ai-forgets) — Detaillierte Aufschlüsselung der Token-Limits',
+            '[Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Wie LLM-Einschränkungen Sicherheitsrisiken in Agenten- und Tool-Use-Architekturen schaffen',
+            '[Wie LLMs wirklich funktionieren](/de/prompt-engineering/how-llms-actually-work) — Die Transformer-Architektur, Tokenisierung und RLHF, die diese Grenzen erzeugen',
+            '[Self-Consistency-Prompting](/de/prompt-engineering/self-consistency-prompting) — Verifikationstechnik, die teilweise die Selbstverifikations- und Schlussfolgerungslücken anspricht',
           ],
         },
         faq: {
@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'es',
         headline: 'Limitaciones de la IA — Lo que los LLMs no pueden hacer',
         description: 'Los ocho límites estructurales de los grandes modelos de lenguaje: cortes de conocimiento, alucinación, sin datos en tiempo real, context windows, sin memoria persistente, sesgo y la incapacidad de verificar outputs.',
@@ -941,10 +941,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[RAG explicado](/prompt-engineering/rag-explained?lang=es) — el workaround principal para los cortes de conocimiento y las alucinaciones',
-            '[Alucinaciones de IA — Por qué la IA inventa cosas](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=es) — análisis profundo de la limitación 2',
-            '[Context Windows explicados — Por qué la IA olvida](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=es) — desglose detallado de los límites de tokens',
-            '[Cómo funcionan realmente los LLMs](/prompt-engineering/how-llms-actually-work?lang=es) — la arquitectura transformer, la tokenización y el RLHF que generan estos límites',
+            '[RAG explicado](/es/prompt-engineering/rag-explained) — el workaround principal para los cortes de conocimiento y las alucinaciones',
+            '[Alucinaciones de IA — Por qué la IA inventa cosas](/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — análisis profundo de la limitación 2',
+            '[Context Windows explicados — Por qué la IA olvida](/es/prompt-engineering/context-windows-explained-why-ai-forgets) — desglose detallado de los límites de tokens',
+            '[Cómo funcionan realmente los LLMs](/es/prompt-engineering/how-llms-actually-work) — la arquitectura transformer, la tokenización y el RLHF que generan estos límites',
           ],
         },
         faq: {
@@ -985,7 +985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'fr',
         headline: 'Limitations de l\'IA — Ce que les LLMs ne peuvent pas faire',
         description: 'Les huit limites structurelles des grands modèles de langage : coupures de connaissance, hallucination, absence de données en temps réel, fenêtres de contexte, absence de mémoire persistante, biais et incapacité à vérifier les sorties.',
@@ -1182,15 +1182,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Chaque LLM a une date de coupure d\'entraînement, et le modèle n\'a aucune connaissance des événements, prix, articles ou versions de produits publiés après cette date sans récupération externe.** OpenAI GPT-4o a une coupure d\'octobre 2024. Anthropic Claude Opus 4.7 et Google Gemini 3.1 Pro ont des coupures début 2025.',
             'Les modèles ont également des connaissances clairsemées des événements *proches* de leur coupure, car la collecte et le traitement des données d\'entraînement prennent des semaines à des mois après que les événements se produisent. Un modèle entraîné jusqu\'en octobre 2024 peut avoir une couverture mince des événements de septembre–octobre 2024.',
-            'La solution principale est la [génération augmentée par récupération (RAG)](/prompt-engineering/rag-explained?lang=fr), qui injecte des documents actuels ou récents dans le prompt au moment de la requête. Une solution secondaire est l\'ancrage du prompt : coller les faits actuels pertinents directement dans le prompt et demander au modèle de répondre uniquement à partir de ce contexte.',
+            'La solution principale est la [génération augmentée par récupération (RAG)](/fr/prompt-engineering/rag-explained), qui injecte des documents actuels ou récents dans le prompt au moment de la requête. Une solution secondaire est l\'ancrage du prompt : coller les faits actuels pertinents directement dans le prompt et demander au modèle de répondre uniquement à partir de ce contexte.',
           ],
         },
         hallucination: {
           title: 'Limitation 2 — L\'hallucination est structurelle, pas un bug',
           content: [
-            '**Les LLMs génèrent des tokens statistiquement plausibles, pas des faits vérifiés — quand le signal d\'entraînement pour un fait spécifique est faible, le modèle produit une fabrication qui sonne assurée.** Cela s\'applique à chaque modèle, y compris GPT-4o, Claude Opus 4.7 et Gemini 3.1 Pro. Pour un approfondissement, voir [Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr).',
+            '**Les LLMs génèrent des tokens statistiquement plausibles, pas des faits vérifiés — quand le signal d\'entraînement pour un fait spécifique est faible, le modèle produit une fabrication qui sonne assurée.** Cela s\'applique à chaque modèle, y compris GPT-4o, Claude Opus 4.7 et Gemini 3.1 Pro. Pour un approfondissement, voir [Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
             'L\'hallucination se produit le plus fréquemment sur : les chiffres numériques spécifiques (prix, dates, statistiques), les citations et références d\'articles, les spécifications techniques de niche et les événements proches ou après la coupure d\'entraînement. Les modèles signalent rarement quand ils hallucinent.',
-            'Solutions : fournir le matériel source dans le prompt et demander au modèle de n\'y répondre qu\'à partir de celui-ci ; demander au modèle de signaler toute affirmation qu\'il ne peut pas confirmer à partir du contexte fourni ; utiliser [RAG](/prompt-engineering/rag-explained?lang=fr) pour ancrer les réponses sur des documents vérifiés ; valider tous les chiffres clés contre des sources primaires avant publication.',
+            'Solutions : fournir le matériel source dans le prompt et demander au modèle de n\'y répondre qu\'à partir de celui-ci ; demander au modèle de signaler toute affirmation qu\'il ne peut pas confirmer à partir du contexte fourni ; utiliser [RAG](/fr/prompt-engineering/rag-explained) pour ancrer les réponses sur des documents vérifiés ; valider tous les chiffres clés contre des sources primaires avant publication.',
           ],
           blockquote: '« Le modèle ne sait pas ce qu\'il ne sait pas. Il comble les lacunes avec des motifs, pas avec le silence. »',
           blockquoteSource: 'Résultat de recherche issu de plusieurs benchmarks d\'hallucination, 2023–2024',
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         contextWindow: {
           title: 'Limitation 4 — Limites de la fenêtre de contexte',
           content: [
-            '**Chaque session LLM a une limite stricte de tokens — GPT-4o à 128 000 tokens, Claude Opus 4.7 à 200 000 tokens, Gemini 3.1 Pro à 2 000 000 tokens — et les performances sur le contenu antérieur se dégradent à mesure que la fenêtre se remplit.** Voir [Fenêtres de contexte expliquées](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) pour une explication complète.',
+            '**Chaque session LLM a une limite stricte de tokens — GPT-4o à 128 000 tokens, Claude Opus 4.7 à 200 000 tokens, Gemini 3.1 Pro à 2 000 000 tokens — et les performances sur le contenu antérieur se dégradent à mesure que la fenêtre se remplit.** Voir [Fenêtres de contexte expliquées](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) pour une explication complète.',
             'Le problème « perdu au milieu » : plusieurs études montrent que la précision des LLMs pour récupérer des informations au milieu d\'un long contexte est significativement plus faible qu\'au début ou à la fin. Une fenêtre de 1M tokens ne signifie pas une attention uniforme sur tous les 1M tokens.',
             'Solutions : structurer les informations importantes au début ou à la fin du prompt ; utiliser RAG pour récupérer uniquement les morceaux pertinents plutôt que d\'insérer des documents complets ; découper les longs documents en sessions fragmentées avec des étapes de résumé.',
           ],
@@ -1226,7 +1226,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Les LLMs génèrent du texte — ils ne peuvent pas naviguer sur le web, exécuter du code, envoyer des e-mails, modifier des fichiers ou interagir avec des systèmes externes sauf si une couche d\'utilisation d\'outils active explicitement ces actions.** Le modèle produit une description textuelle de ce qu\'il ferait ; la couche d\'infrastructure l\'exécute.',
             'L\'utilisation d\'outils (aussi appelée appel de fonctions) — disponible dans GPT-4o, Claude Opus 4.7 et Gemini 3.1 Pro — permet à un modèle d\'émettre des appels de fonctions structurés qu\'une application intercepte et exécute. Le modèle ne peut toujours pas agir de manière autonome ; il peut seulement émettre du texte structuré qui déclenche une exécution externe.',
-            'Les agents autonomes encapsulent plusieurs appels d\'outils dans une boucle d\'orchestration, créant l\'apparence d\'une action indépendante. L\'injection de prompts et les vulnérabilités de sécurité sont des préoccupations importantes dans ces architectures — voir [Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr).',
+            'Les agents autonomes encapsulent plusieurs appels d\'outils dans une boucle d\'orchestration, créant l\'apparence d\'une action indépendante. L\'injection de prompts et les vulnérabilités de sécurité sont des préoccupations importantes dans ces architectures — voir [Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security).',
           ],
         },
         bias: {
@@ -1286,7 +1286,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         howToStart: {
           title: 'Comment concevoir des prompts tenant compte des limitations des LLMs',
-          content: ['Deux des techniques les plus efficaces pour compenser ces limitations sont le prompting chaîne-de-pensée — qui externalise les étapes de raisonnement et réduit les erreurs — et la RAG, qui compense les coupures de connaissances en récupérant du contexte frais. Voir [prompting chaîne-de-pensée](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=fr) et [RAG expliqué](https://www.promptquorum.com/prompt-engineering/rag-explained?lang=fr).'],
+          content: ['Deux des techniques les plus efficaces pour compenser ces limitations sont le prompting chaîne-de-pensée — qui externalise les étapes de raisonnement et réduit les erreurs — et la RAG, qui compense les coupures de connaissances en récupérant du contexte frais. Voir [prompting chaîne-de-pensée](https://www.promptquorum.com/fr/prompt-engineering/chain-of-thought-prompting) et [RAG expliqué](https://www.promptquorum.com/fr/prompt-engineering/rag-explained).'],
           numberedItems: [
             '**Identifiez quelle limitation s\'applique à votre tâche avant d\'écrire le prompt.** Recherches de faits → coupure de connaissance et hallucination. Problèmes multi-étapes → limitation du raisonnement. Longs documents → fenêtre de contexte. Travail inter-sessions → limitation de mémoire.',
             '**Fournissez explicitement un contexte d\'ancrage.** Collez les faits, documents ou données dont le modèle a besoin. Ne supposez jamais que le modèle dispose de connaissances actuelles, précises ou spécifiques au domaine.',
@@ -1297,15 +1297,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         keyTerms: {
           title: 'Termes clés',
-          content: ['Définitions des concepts fondamentaux utilisés tout au long de cet article. Chaque terme renvoie à l\'entrée complète dans le [Glossaire d\'ingénierie des prompts](/prompt-engineering/prompt-engineering-glossary?lang=fr).'],
+          content: ['Définitions des concepts fondamentaux utilisés tout au long de cet article. Chaque terme renvoie à l\'entrée complète dans le [Glossaire d\'ingénierie des prompts](/fr/prompt-engineering/prompt-engineering-glossary).'],
           items: [
-            '**[Coupure de connaissance](/prompt-engineering/prompt-engineering-glossary?lang=fr)** — La date au-delà de laquelle un modèle n\'a pas de données d\'entraînement. Tout événement, changement de prix ou publication après cette date est invisible pour le modèle sauf si vous le collez dans le prompt. GPT-4o : octobre 2024 ; Claude Opus 4.7 et Gemini 3.1 Pro : début 2025.',
-            '**[Hallucination](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Sortie qui sonne assurée mais factuellement incorrecte ou inventée. Causée par la prédiction statistique de tokens plutôt que la recherche de vérité. Ancrer les prompts avec des sources réduit mais n\'élimine pas ce phénomène.',
-            '**[Fenêtre de contexte](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Le nombre maximum de tokens (mots + ponctuation) que le modèle peut traiter en même temps, incluant le prompt système, l\'historique de conversation et les documents récupérés. GPT-4o : 128K tokens ; Claude Opus 4.7 : 1M ; Gemini 3.1 Pro : 2M.',
-            '**[Utilisation d\'outils / Appel de fonctions](/prompt-engineering/prompt-engineering-glossary?lang=fr#agents-orchestration)** — Une capacité permettant au modèle d\'invoquer des fonctions externes (recherche web, exécution de code, requêtes de base de données) au lieu de générer des réponses textuelles. Nécessaire pour contourner la limitation d\'absence d\'action réelle.',
-            '**[Chaîne-de-pensée (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Une technique de prompting où vous demandez au modèle de raisonner étape par étape avant de donner une réponse finale. Améliore significativement la précision sur l\'arithmétique multi-étapes, la logique et les tâches de planification.',
-            '**[RAG (Génération augmentée par récupération)](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Architecture où des documents pertinents sont récupérés depuis une base de connaissances externe et injectés dans le prompt au moment de la requête. La solution principale pour les coupures de connaissance.',
-            '**[Biais d\'entraînement](/prompt-engineering/prompt-engineering-glossary?lang=fr#safety-alignment)** — Distorsion systématique dans les sorties du modèle causée par des déséquilibres dans les données d\'entraînement — principalement du contenu internet anglophone, occidental et d\'avant 2025. Les tâches en langues non anglophones et dans des domaines de niche sont structurellement plus faibles pour tous les grands modèles.',
+            '**[Coupure de connaissance](/fr/prompt-engineering/prompt-engineering-glossary)** — La date au-delà de laquelle un modèle n\'a pas de données d\'entraînement. Tout événement, changement de prix ou publication après cette date est invisible pour le modèle sauf si vous le collez dans le prompt. GPT-4o : octobre 2024 ; Claude Opus 4.7 et Gemini 3.1 Pro : début 2025.',
+            '**[Hallucination](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Sortie qui sonne assurée mais factuellement incorrecte ou inventée. Causée par la prédiction statistique de tokens plutôt que la recherche de vérité. Ancrer les prompts avec des sources réduit mais n\'élimine pas ce phénomène.',
+            '**[Fenêtre de contexte](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Le nombre maximum de tokens (mots + ponctuation) que le modèle peut traiter en même temps, incluant le prompt système, l\'historique de conversation et les documents récupérés. GPT-4o : 128K tokens ; Claude Opus 4.7 : 1M ; Gemini 3.1 Pro : 2M.',
+            '**[Utilisation d\'outils / Appel de fonctions](/fr/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — Une capacité permettant au modèle d\'invoquer des fonctions externes (recherche web, exécution de code, requêtes de base de données) au lieu de générer des réponses textuelles. Nécessaire pour contourner la limitation d\'absence d\'action réelle.',
+            '**[Chaîne-de-pensée (CoT)](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Une technique de prompting où vous demandez au modèle de raisonner étape par étape avant de donner une réponse finale. Améliore significativement la précision sur l\'arithmétique multi-étapes, la logique et les tâches de planification.',
+            '**[RAG (Génération augmentée par récupération)](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Architecture où des documents pertinents sont récupérés depuis une base de connaissances externe et injectés dans le prompt au moment de la requête. La solution principale pour les coupures de connaissance.',
+            '**[Biais d\'entraînement](/fr/prompt-engineering/prompt-engineering-glossary#safety-alignment)** — Distorsion systématique dans les sorties du modèle causée par des déséquilibres dans les données d\'entraînement — principalement du contenu internet anglophone, occidental et d\'avant 2025. Les tâches en langues non anglophones et dans des domaines de niche sont structurellement plus faibles pour tous les grands modèles.',
           ],
         },
         regionalContext: {
@@ -1319,12 +1319,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[RAG expliqué](/prompt-engineering/rag-explained?lang=fr) — La solution principale pour les coupures de connaissance et les hallucinations',
-            '[Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — Approfondissement de la limitation 2',
-            '[Fenêtres de contexte expliquées — Pourquoi l\'IA oublie](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) — Analyse détaillée des limites de tokens',
-            '[Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Comment les limitations des LLM créent des risques de sécurité dans les architectures d\'agents et d\'utilisation d\'outils',
-            '[Comment les LLMs fonctionnent vraiment](/prompt-engineering/how-llms-actually-work?lang=fr) — L\'architecture transformer, la tokenisation et le RLHF qui produisent ces limites',
-            '[Prompting par cohérence automatique](/prompt-engineering/self-consistency-prompting?lang=fr) — Technique qui aborde partiellement les lacunes d\'auto-vérification et de raisonnement',
+            '[RAG expliqué](/fr/prompt-engineering/rag-explained) — La solution principale pour les coupures de connaissance et les hallucinations',
+            '[Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Approfondissement de la limitation 2',
+            '[Fenêtres de contexte expliquées — Pourquoi l\'IA oublie](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) — Analyse détaillée des limites de tokens',
+            '[Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Comment les limitations des LLM créent des risques de sécurité dans les architectures d\'agents et d\'utilisation d\'outils',
+            '[Comment les LLMs fonctionnent vraiment](/fr/prompt-engineering/how-llms-actually-work) — L\'architecture transformer, la tokenisation et le RLHF qui produisent ces limites',
+            '[Prompting par cohérence automatique](/fr/prompt-engineering/self-consistency-prompting) — Technique qui aborde partiellement les lacunes d\'auto-vérification et de raisonnement',
           ],
         },
         faq: {
@@ -1365,7 +1365,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/ai-limitations-what-llms-cant-do',
     inLanguage: 'ja',
     headline: 'AI制限 — LLMができないこと',
     description: '大規模言語モデルの8つの構造的な制限：知識カットオフ、幻覚、リアルタイムデータなし、コンテキストウィンドウ、永続的なメモリなし、バイアス、出力検証の不可能性。',
@@ -1562,15 +1562,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content: [
         '**すべてのLLMはトレーニングカットオフ日を持ち、外部検索が追加されない限り、モデルはその日付の後にリリースされたイベント、価格、論文、または製品バージョンについての知識を持ちません。** OpenAI GPT-4oは2024年10月のカットオフを持っています。Anthropic Claude Opus 4.7とGoogle Gemini 3.1 Proは2025年初頭のカットオフを持っています。',
         'モデルはまた、カットオフに*近い*イベントについて希薄な知識を持っています。トレーニングデータの収集と処理にはイベントの発生から数週間から数か月かかるため。2024年10月までトレーニングされたモデルは、2024年9月から10月のイベントについてのカバレッジが薄い可能性があります。',
-        '主要な回避方法は、[検索拡張生成（RAG）](/prompt-engineering/rag-explained?lang=ja)で、クエリ時にプロンプトにライブまたは最近のドキュメントを注入します。二次的な回避方法はプロンプトの接地です：関連する現在の事実をプロンプトに直接貼り付けて、モデルにそのコンテキストからのみ答えるよう指示する。',
+        '主要な回避方法は、[検索拡張生成（RAG）](/ja/prompt-engineering/rag-explained)で、クエリ時にプロンプトにライブまたは最近のドキュメントを注入します。二次的な回避方法はプロンプトの接地です：関連する現在の事実をプロンプトに直接貼り付けて、モデルにそのコンテキストからのみ答えるよう指示する。',
       ],
     },
     hallucination: {
       title: '制限2 — 幻覚は構造的で、バグではない',
       content: [
-        '**LLMは検証された事実ではなく、統計的にもっともらしいトークンを生成します — 特定の事実のトレーニング信号が薄いとき、モデルは確信を持った虚偽を生成します。** これはGPT-4o、Claude Opus 4.7、Gemini 3.1 Proを含むすべてのモデルに適用されます。詳細については、[AI幻覚 — AIが物事を作り出す理由](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja)を参照してください。',
+        '**LLMは検証された事実ではなく、統計的にもっともらしいトークンを生成します — 特定の事実のトレーニング信号が薄いとき、モデルは確信を持った虚偽を生成します。** これはGPT-4o、Claude Opus 4.7、Gemini 3.1 Proを含むすべてのモデルに適用されます。詳細については、[AI幻覚 — AIが物事を作り出す理由](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)を参照してください。',
         '幻覚は最も頻繁に発生します：特定の数値（価格、日付、統計）、引用と論文参考文献、ニッチな技術仕様、およびトレーニングカットオフに近いまたは後のイベント。モデルが幻覚を起こしているときは、ほとんど信号を送りません。',
-        '回避方法：ソース資料をプロンプトに提供し、モデルにそれからのみ回答するよう指示する；モデルに提供されたコンテキストから確認できない主張にフラグを立てるよう指示する；[RAG](/prompt-engineering/rag-explained?lang=ja)を使用して、確認されたドキュメントに回答を結合する；公開前にすべての重要な数字を一次資料に対して検証する。',
+        '回避方法：ソース資料をプロンプトに提供し、モデルにそれからのみ回答するよう指示する；モデルに提供されたコンテキストから確認できない主張にフラグを立てるよう指示する；[RAG](/ja/prompt-engineering/rag-explained)を使用して、確認されたドキュメントに回答を結合する；公開前にすべての重要な数字を一次資料に対して検証する。',
       ],
       blockquote: '「モデルは知らないことを知りません。ギャップを沈黙ではなくパターンで埋めます。」',
       blockquoteSource: '複数の幻覚ベンチマーク全体の研究結果、2023–2024',
@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     contextWindow: {
       title: '制限4 — コンテキストウィンドウの上限',
       content: [
-        '**すべてのLLMセッションにハードなトークン制限があります — GPT-4oは128,000トークン、Claude Opus 4.7は200,000トークン、Gemini 3.1 Proは2,000,000トークン — ウィンドウが満杯になると、前のコンテンツのパフォーマンスが低下します。** [コンテキストウィンドウの説明](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja)を参照して、完全な詳細を確認してください。',
+        '**すべてのLLMセッションにハードなトークン制限があります — GPT-4oは128,000トークン、Claude Opus 4.7は200,000トークン、Gemini 3.1 Proは2,000,000トークン — ウィンドウが満杯になると、前のコンテンツのパフォーマンスが低下します。** [コンテキストウィンドウの説明](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を参照して、完全な詳細を確認してください。',
         '「中間で失われる」問題：複数の研究によると、長いコンテキストの中間から情報を取得するLLM精度は、始まりまたは終わりから大幅に低くなっています。1Mトークンウィンドウは、すべての1Mトークンに対して均一な注意が広がることを意味しません。',
         '回避方法：重要な情報をプロンプトの開始または終了に配置する；RAGを使用して関連チャンクのみを取得し、完全なドキュメントをダンプしない；長いドキュメントを要約ステップで分割されたセッションに分割する。',
       ],
@@ -1606,7 +1606,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content: [
         '**LLMはテキストを生成します — ツール使用レイヤーが明示的にこれらのアクションを有効にしない限り、ウェブをブラウズしたり、コードを実行したり、メールを送信したり、ファイルを変更したり、外部システムと相互作用したりすることはできません。** モデルはそれが何をするかを説明するテキスト説明を生成します；スキャフォルディングレイヤーが実行します。',
         'ツール使用（関数呼び出しとも呼ばれる）— GPT-4o、Claude Opus 4.7、Gemini 3.1 Proで利用可能です — モデルがアプリケーションが傍受して実行する構造化関数呼び出しを出力できるようにします。モデルは独立してアクションを実行することはできず、外部実行をトリガーする構造化テキストのみを出力できます。',
-        '自律的なエージェントは、複数のツール呼び出しをオーケストレーションループで包みます。プロンプト注入とセキュリティの脆弱性はこれらのアーキテクチャの重大な懸念です — [プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja)を参照してください。',
+        '自律的なエージェントは、複数のツール呼び出しをオーケストレーションループで包みます。プロンプト注入とセキュリティの脆弱性はこれらのアーキテクチャの重大な懸念です — [プロンプト注入とセキュリティ](/ja/prompt-engineering/prompt-injection-and-security)を参照してください。',
       ],
     },
     bias: {
@@ -1666,7 +1666,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     howToStart: {
       title: 'LLM制限を考慮したプロンプトの設計方法',
-      content: ['これらの制限を補う最も効果的な2つの技術は、推論ステップを外部化してエラーを減らすchain-of-thoughtプロンプティングと、新鮮なコンテキストを取得して知識カットオフを補うRAGです。[chain-of-thoughtプロンプティング](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=ja)と[RAG解説](https://www.promptquorum.com/prompt-engineering/rag-explained?lang=ja)をご覧ください。'],
+      content: ['これらの制限を補う最も効果的な2つの技術は、推論ステップを外部化してエラーを減らすchain-of-thoughtプロンプティングと、新鮮なコンテキストを取得して知識カットオフを補うRAGです。[chain-of-thoughtプロンプティング](https://www.promptquorum.com/ja/prompt-engineering/chain-of-thought-prompting)と[RAG解説](https://www.promptquorum.com/ja/prompt-engineering/rag-explained)をご覧ください。'],
       numberedItems: [
         '**プロンプトを書く前に、タスクに適用される制限を特定します。** 事実検索 → 知識カットオフと幻覚。複数ステップの問題 → 推論制限。長いドキュメント → コンテキストウィンドウ。クロスセッションワーク → メモリ制限。',
         '**グラウンディングコンテキストを明示的に提供します。** モデルが必要とする関連する事実、ドキュメント、またはデータを貼り付けます。モデルが現在、正確、またはドメイン固有の知識を持っていると仮定しないこと。',
@@ -1677,15 +1677,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     keyTerms: {
       title: 'キーター',
-      content: ['この記事全体で使用されるコア概念の定義。各用語は、[プロンプトエンジニアリング用語集](/prompt-engineering/prompt-engineering-glossary?lang=ja)の完全なエントリにリンクしています。'],
+      content: ['この記事全体で使用されるコア概念の定義。各用語は、[プロンプトエンジニアリング用語集](/ja/prompt-engineering/prompt-engineering-glossary)の完全なエントリにリンクしています。'],
       items: [
-        '**[知識カットオフ](/prompt-engineering/prompt-engineering-glossary?lang=ja)** — モデルがトレーニングデータを持たない日付。この日付後の任何のイベント、価格変更、またはリリースは、プロンプトに貼り付けない限り、モデルに見えません。GPT-4o：2024年10月；Claude Opus 4.7およびGemini 3.1 Pro：2025年初頭。',
-        '**[幻覚](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — 事実的に不正確または捏造された、確信を持った音の出力。統計的なトークン予測ではなく、真実検索による。ソース資料でプロンプトを接地することで削減されますが、排除されません。',
-        '**[コンテキストウィンドウ](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — モデルが一度に処理できるトークンの最大数（単語 + 句読点）、システムプロンプト、会話履歴、取得ドキュメントを含む。GPT-4o：128Kトークン；Claude Opus 4.7：1M；Gemini 3.1 Pro：2M。',
-        '**[ツール使用/関数呼び出し](/prompt-engineering/prompt-engineering-glossary?lang=ja#agents-orchestration)** — モデルがテキスト答えを生成する代わりに、外部関数（ウェブ検索、コード実行、データベースクエリ）を呼び出すことができる機能。実世界のアクション制限を回避するために必要。',
-        '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — モデルに最終的な答えを与える前にステップバイステップで推論するよう指示するプロンプト技術。複数ステップの算術、ロジック、計画タスクの精度を大幅に改善します。',
-        '**[RAG (検索拡張生成)](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — 関連するドキュメントが外部知識ベースから取得され、クエリ時にプロンプトに注入されるアーキテクチャ。知識カットオフの主要な回避方法。',
-        '**[トレーニングバイアス](/prompt-engineering/prompt-engineering-glossary?lang=ja#safety-alignment)** — トレーニングデータのバランス不均衡によるモデル出力の体系的なスキュー — 主に英語、西洋、2025年前のインターネットコンテンツ。非英語とニッチドメインのタスクは、すべての主要なモデル間で構造的に弱い。',
+        '**[知識カットオフ](/ja/prompt-engineering/prompt-engineering-glossary)** — モデルがトレーニングデータを持たない日付。この日付後の任何のイベント、価格変更、またはリリースは、プロンプトに貼り付けない限り、モデルに見えません。GPT-4o：2024年10月；Claude Opus 4.7およびGemini 3.1 Pro：2025年初頭。',
+        '**[幻覚](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 事実的に不正確または捏造された、確信を持った音の出力。統計的なトークン予測ではなく、真実検索による。ソース資料でプロンプトを接地することで削減されますが、排除されません。',
+        '**[コンテキストウィンドウ](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — モデルが一度に処理できるトークンの最大数（単語 + 句読点）、システムプロンプト、会話履歴、取得ドキュメントを含む。GPT-4o：128Kトークン；Claude Opus 4.7：1M；Gemini 3.1 Pro：2M。',
+        '**[ツール使用/関数呼び出し](/ja/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — モデルがテキスト答えを生成する代わりに、外部関数（ウェブ検索、コード実行、データベースクエリ）を呼び出すことができる機能。実世界のアクション制限を回避するために必要。',
+        '**[Chain-of-Thought (CoT)](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — モデルに最終的な答えを与える前にステップバイステップで推論するよう指示するプロンプト技術。複数ステップの算術、ロジック、計画タスクの精度を大幅に改善します。',
+        '**[RAG (検索拡張生成)](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 関連するドキュメントが外部知識ベースから取得され、クエリ時にプロンプトに注入されるアーキテクチャ。知識カットオフの主要な回避方法。',
+        '**[トレーニングバイアス](/ja/prompt-engineering/prompt-engineering-glossary#safety-alignment)** — トレーニングデータのバランス不均衡によるモデル出力の体系的なスキュー — 主に英語、西洋、2025年前のインターネットコンテンツ。非英語とニッチドメインのタスクは、すべての主要なモデル間で構造的に弱い。',
       ],
     },
     regionalContext: {
@@ -1699,12 +1699,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: '関連資料',
       items: [
-        '[RAG説明](/prompt-engineering/rag-explained?lang=ja) — 知識カットオフと幻覚の主要な回避方法',
-        '[AI幻覚 — AIが物事を作り出す理由](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) — 制限2についての詳細な掘り下げ',
-        '[コンテキストウィンドウの説明 — AIが忘れる理由](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja) — トークン制限の詳細な分析',
-        '[プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — LLM制限がエージェントおよびツール使用アーキテクチャでセキュリティリスクを生成する方法',
-        '[LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja) — これらの制限が存在する理由を説明するトランスフォーマーアーキテクチャ、トークン化、RLHF',
-        '[自己一貫性プロンプティング](/prompt-engineering/self-consistency-prompting?lang=ja) — 自己検証および推論ギャップに部分的に対処するテクニック',
+        '[RAG説明](/ja/prompt-engineering/rag-explained) — 知識カットオフと幻覚の主要な回避方法',
+        '[AI幻覚 — AIが物事を作り出す理由](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 制限2についての詳細な掘り下げ',
+        '[コンテキストウィンドウの説明 — AIが忘れる理由](/ja/prompt-engineering/context-windows-explained-why-ai-forgets) — トークン制限の詳細な分析',
+        '[プロンプト注入とセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — LLM制限がエージェントおよびツール使用アーキテクチャでセキュリティリスクを生成する方法',
+        '[LLMが実際にどのように機能するか](/ja/prompt-engineering/how-llms-actually-work) — これらの制限が存在する理由を説明するトランスフォーマーアーキテクチャ、トークン化、RLHF',
+        '[自己一貫性プロンプティング](/ja/prompt-engineering/self-consistency-prompting) — 自己検証および推論ギャップに部分的に対処するテクニック',
       ],
     },
     faq: {
@@ -1745,7 +1745,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'zh',
         headline: 'AI 局限性 — 大语言模型无法做什么',
         description: '大语言模型的八个结构性限制：知识截断、幻觉、无法获取实时数据、上下文窗口、无持久内存、偏见和无法验证输出的能力。',
@@ -1942,15 +1942,15 @@ zh: {
           content: [
             '**每个大语言模型都有训练截断日期，除非添加外部检索，否则模型对该日期后发布的事件、价格、论文或产品版本一无所知。** OpenAI GPT-4o 的截断为 2024 年 10 月。Anthropic Claude Opus 4.7 和 Google Gemini 3.1 Pro 的截断为 2025 年初。',
             '模型对*接近*其截断的事件的了解也很少，因为训练数据收集和处理在事件发生后需要数周到数月。训练到 2024 年 10 月的模型可能对 2024 年 9 月-10 月的事件覆盖很少。',
-            '主要解决方案是[检索增强生成（RAG）](/prompt-engineering/rag-explained?lang=zh)，在查询时将实时或最近的文档注入提示词中。次要解决方案是提示词基础化：将相关当前事实直接粘贴到提示词中，并指示模型仅从该上下文回答。',
+            '主要解决方案是[检索增强生成（RAG）](/zh/prompt-engineering/rag-explained)，在查询时将实时或最近的文档注入提示词中。次要解决方案是提示词基础化：将相关当前事实直接粘贴到提示词中，并指示模型仅从该上下文回答。',
           ],
         },
         hallucination: {
           title: '限制 2 — 幻觉是结构性的，不是错误',
           content: [
-            '**大语言模型生成统计上合理的令牌，而非已验证的事实 — 当特定事实的训练信号很少时，模型生成有信心但虚假的说法。** 这适用于每个模型，包括 GPT-4o、Claude Opus 4.7 和 Gemini 3.1 Pro。深入了解，请参见[AI 幻觉 — 为什么 AI 编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh)。',
+            '**大语言模型生成统计上合理的令牌，而非已验证的事实 — 当特定事实的训练信号很少时，模型生成有信心但虚假的说法。** 这适用于每个模型，包括 GPT-4o、Claude Opus 4.7 和 Gemini 3.1 Pro。深入了解，请参见[AI 幻觉 — 为什么 AI 编造东西](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)。',
             '幻觉最常发生在：特定数值（价格、日期、统计数据）、引用和论文参考、利基技术规格和接近或超过训练截断的事件。模型很少在幻觉时发出信号。',
-            '解决方案：在提示词中提供源材料，指示模型仅从中回答；要求模型标记任何无法从提供的上下文确认的声明；使用[RAG](/prompt-engineering/rag-explained?lang=zh)将答案锚定到已验证文档；在发布前根据原始来源验证所有关键数字。',
+            '解决方案：在提示词中提供源材料，指示模型仅从中回答；要求模型标记任何无法从提供的上下文确认的声明；使用[RAG](/zh/prompt-engineering/rag-explained)将答案锚定到已验证文档；在发布前根据原始来源验证所有关键数字。',
           ],
           blockquote: '"模型不知道它不知道的东西。它用模式而非沉默填充空白。"',
           blockquoteSource: '2023-2024 年多个幻觉基准的研究发现',
@@ -1966,7 +1966,7 @@ zh: {
         contextWindow: {
           title: '限制 4 — 上下文窗口限制',
           content: [
-            '**每个大语言模型会话都有硬令牌限制 — GPT-4o 128,000 令牌、Claude Opus 4.7 200,000 令牌、Gemini 3.1 Pro 2,000,000 令牌 — 随着窗口填充，早期内容的性能会下降。** 请参见[上下文窗口详解](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh)获取完整分析。',
+            '**每个大语言模型会话都有硬令牌限制 — GPT-4o 128,000 令牌、Claude Opus 4.7 200,000 令牌、Gemini 3.1 Pro 2,000,000 令牌 — 随着窗口填充，早期内容的性能会下降。** 请参见[上下文窗口详解](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)获取完整分析。',
             '"中间遗忘"问题：多项研究表明大语言模型从长上下文中间检索信息的准确性明显低于从开始或结束。1M 令牌窗口不意味着对所有 1M 令牌的统一注意。',
             '解决方案：在提示词的开始或结束位置构造重要信息；使用 RAG 仅检索相关块而不是转储完整文档；将长文档分解为带摘要步骤的分块会话。',
           ],
@@ -1986,7 +1986,7 @@ zh: {
           content: [
             '**大语言模型生成文本 — 除非工具使用层明确启用这些操作，否则它们无法浏览网络、运行代码、发送电子邮件、修改文件或与外部系统交互。** 模型生成它会做什么的文本描述；支架层执行它。',
             '工具使用（也称函数调用） — 在 GPT-4o、Claude Opus 4.7 和 Gemini 3.1 Pro 中可用 — 让模型输出应用拦截和执行的结构化函数调用。模型仍然无法独立采取行动；它只能发出触发外部执行的结构化文本。',
-            '自主代理在编排循环中包装多个工具调用，创建独立操作的*表象*。提示词注入和安全漏洞在这些架构中是重大问题 — 请参见[提示词注入和安全性](/prompt-engineering/prompt-injection-and-security?lang=zh)。',
+            '自主代理在编排循环中包装多个工具调用，创建独立操作的*表象*。提示词注入和安全漏洞在这些架构中是重大问题 — 请参见[提示词注入和安全性](/zh/prompt-engineering/prompt-injection-and-security)。',
           ],
         },
         bias: {
@@ -2046,7 +2046,7 @@ zh: {
         },
         howToStart: {
           title: '如何设计考虑大语言模型限制的提示词',
-          content: ['补偿这些限制最有效的两种技术是思维链提示词——它将推理步骤外部化并减少错误——以及RAG，通过检索新鲜上下文来补偿知识截断。请参阅[思维链提示词](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=zh)和[RAG解析](https://www.promptquorum.com/prompt-engineering/rag-explained?lang=zh)。'],
+          content: ['补偿这些限制最有效的两种技术是思维链提示词——它将推理步骤外部化并减少错误——以及RAG，通过检索新鲜上下文来补偿知识截断。请参阅[思维链提示词](https://www.promptquorum.com/zh/prompt-engineering/chain-of-thought-prompting)和[RAG解析](https://www.promptquorum.com/zh/prompt-engineering/rag-explained)。'],
           numberedItems: [
             '**在编写提示词之前识别哪个限制适用于您的任务。** 事实查找 → 知识截断和幻觉。多步问题 → 推理限制。长文档 → 上下文窗口。跨会话工作 → 内存限制。',
             '**明确提供基础上下文。** 粘贴模型需要的相关事实、文档或数据。永远不要假设模型具有当前、准确或特定域知识。',
@@ -2057,15 +2057,15 @@ zh: {
         },
         keyTerms: {
           title: '关键术语',
-          content: ['本文中使用的核心概念定义。每个术语链接到[提示词工程词汇表](/prompt-engineering/prompt-engineering-glossary?lang=zh)中的完整条目。'],
+          content: ['本文中使用的核心概念定义。每个术语链接到[提示词工程词汇表](/zh/prompt-engineering/prompt-engineering-glossary)中的完整条目。'],
           items: [
-            '**[知识截断](/prompt-engineering/prompt-engineering-glossary?lang=zh)** — 模型之后没有训练数据的日期。此日期后的任何事件、价格变化或发布对模型是无形的，除非您将其粘贴到提示词中。GPT-4o：2024 年 10 月；Claude Opus 4.7 和 Gemini 3.1 Pro：2025 年初。',
-            '**[幻觉](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 有信心但事实不正确或虚构的输出。由统计令牌预测而非真实查找导致。用源材料基础化提示词减少但不消除它。',
-            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 模型一次可处理的最大令牌数（单词+标点），包括系统提示、对话历史和检索文档。GPT-4o：128K 令牌；Claude Opus 4.7：1M；Gemini 3.1 Pro：200 万。',
-            '**[工具使用/函数调用](/prompt-engineering/prompt-engineering-glossary?lang=zh#agents-orchestration)** — 让模型调用外部函数（网络搜索、代码执行、数据库查询）而非生成文本答案的能力。需要解决无现实世界操作限制。',
-            '**[思维链（CoT）](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 一种提示词技术，要求模型在给出最终答案前逐步推理。显著改善多步算术、逻辑和规划任务的准确性。',
-            '**[RAG（检索增强生成）](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 相关文档从外部知识库检索并在查询时注入提示词的架构。知识截断的主要解决方案。',
-            '**[训练偏见](/prompt-engineering/prompt-engineering-glossary?lang=zh#safety-alignment)** — 由训练数据中的不平衡导致的模型输出系统性偏斜 — 主要是英文、西方和 2025 年前的互联网内容。非英语和利基域任务在所有主要模型上结构上更弱。',
+            '**[知识截断](/zh/prompt-engineering/prompt-engineering-glossary)** — 模型之后没有训练数据的日期。此日期后的任何事件、价格变化或发布对模型是无形的，除非您将其粘贴到提示词中。GPT-4o：2024 年 10 月；Claude Opus 4.7 和 Gemini 3.1 Pro：2025 年初。',
+            '**[幻觉](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 有信心但事实不正确或虚构的输出。由统计令牌预测而非真实查找导致。用源材料基础化提示词减少但不消除它。',
+            '**[上下文窗口](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 模型一次可处理的最大令牌数（单词+标点），包括系统提示、对话历史和检索文档。GPT-4o：128K 令牌；Claude Opus 4.7：1M；Gemini 3.1 Pro：200 万。',
+            '**[工具使用/函数调用](/zh/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — 让模型调用外部函数（网络搜索、代码执行、数据库查询）而非生成文本答案的能力。需要解决无现实世界操作限制。',
+            '**[思维链（CoT）](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 一种提示词技术，要求模型在给出最终答案前逐步推理。显著改善多步算术、逻辑和规划任务的准确性。',
+            '**[RAG（检索增强生成）](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 相关文档从外部知识库检索并在查询时注入提示词的架构。知识截断的主要解决方案。',
+            '**[训练偏见](/zh/prompt-engineering/prompt-engineering-glossary#safety-alignment)** — 由训练数据中的不平衡导致的模型输出系统性偏斜 — 主要是英文、西方和 2025 年前的互联网内容。非英语和利基域任务在所有主要模型上结构上更弱。',
           ],
         },
         regionalContext: {
@@ -2079,12 +2079,12 @@ zh: {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[RAG 详解](/prompt-engineering/rag-explained?lang=zh) — 知识截断和幻觉的主要解决方案',
-            '[AI 幻觉 — 为什么 AI 编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh) — 限制 2 的深入探讨',
-            '[上下文窗口详解 — 为什么 AI 遗忘](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh) — 令牌限制的详细分析',
-            '[提示词注入和安全性](/prompt-engineering/prompt-injection-and-security?lang=zh) — LLM 限制如何在代理和工具使用架构中产生安全风险',
-            '[大语言模型如何实际工作](/prompt-engineering/how-llms-actually-work?lang=zh) — 解释这些限制存在的 transformer 架构、标记化和 RLHF',
-            '[自我一致性提示](/prompt-engineering/self-consistency-prompting?lang=zh) — 在一定程度上解决自我验证和推理差距的技术',
+            '[RAG 详解](/zh/prompt-engineering/rag-explained) — 知识截断和幻觉的主要解决方案',
+            '[AI 幻觉 — 为什么 AI 编造东西](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 限制 2 的深入探讨',
+            '[上下文窗口详解 — 为什么 AI 遗忘](/zh/prompt-engineering/context-windows-explained-why-ai-forgets) — 令牌限制的详细分析',
+            '[提示词注入和安全性](/zh/prompt-engineering/prompt-injection-and-security) — LLM 限制如何在代理和工具使用架构中产生安全风险',
+            '[大语言模型如何实际工作](/zh/prompt-engineering/how-llms-actually-work) — 解释这些限制存在的 transformer 架构、标记化和 RLHF',
+            '[自我一致性提示](/zh/prompt-engineering/self-consistency-prompting) — 在一定程度上解决自我验证和推理差距的技术',
           ],
         },
         faq: {

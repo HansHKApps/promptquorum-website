@@ -75,9 +75,9 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
         {/* Breadcrumb + Language Switcher */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2 text-sm text-text-secondary">
-            <a href={lang === 'en' ? '/' : `/?lang=${lang}`} className="hover:text-primary">{BLOG_UI.breadcrumbHome[lang]}</a>
+            <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{BLOG_UI.breadcrumbHome[lang]}</a>
             <span>/</span>
-            <a href={lang === 'en' ? '/#blog' : `/?lang=${lang}#blog`} className="hover:text-primary">{BLOG_UI.breadcrumbHub[lang]}</a>
+            <a href={lang === 'en' ? '/#blog' : `/${lang}#blog`} className="hover:text-primary">{BLOG_UI.breadcrumbHub[lang]}</a>
             <span>/</span>
             <span className="text-text-primary font-medium">{metadata?.title || post.title}</span>
           </div>
@@ -295,7 +295,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
           </p>
           <div className="text-center">
             <a
-              href={lang === 'en' ? '/waitlist' : `/waitlist?lang=${lang}`}
+              href={lang === 'en' ? '/waitlist' : `/${lang}/waitlist`}
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Join the PromptQuorum Waitlist
@@ -305,7 +305,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
 
         {/* Back to blog */}
         <p className="text-center mt-8">
-          <a href={lang === 'en' ? '/blog' : `/blog?lang=${lang}`} className="text-primary hover:text-primary/80">
+          <a href={lang === 'en' ? '/blog' : `/${lang}/blog`} className="text-primary hover:text-primary/80">
             ← Back to Blog
           </a>
         </p>

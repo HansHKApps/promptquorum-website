@@ -342,7 +342,7 @@ schema: {
         'writing': {
           id: 'writing',
           content: [
-            '**Bester Stack: [Ollama](/local-llms/how-to-install-ollama?lang=de) + [OpenWebUI](/local-llms/open-webui-vs-sillytavern?lang=de) + Markdown-Editor**',
+            '**Bester Stack: [Ollama](/de/local-llms/how-to-install-ollama) + [OpenWebUI](/de/local-llms/open-webui-vs-sillytavern) + Markdown-Editor**',
             'Warum dieser Stack: OpenWebUI bietet die beste Chat-UX. Kein Coding erforderlich. Flexible Kontextfenster (4K–32K) übertreffen LM Studio für langes Schreiben. Günstiger als Cloud-APIs für Autoren.',
           ],
           numberedItems: [
@@ -356,7 +356,7 @@ schema: {
         'coding': {
           id: 'coding',
           content: [
-            '**Bester Stack: [vLLM](/local-llms/vllm-performance-guide?lang=de) + Qwen2.5-Coder + IDE-Erweiterung**',
+            '**Bester Stack: [vLLM](/de/local-llms/vllm-performance-guide) + Qwen2.5-Coder + IDE-Erweiterung**',
             'Warum dieser Stack: Qwen2.5-Coder erzielt 82% auf HumanEval (bestes Open-Source-Coding-Modell, April 2026). vLLM ist 3–5-fach schneller als Ollama für Batch-Inferenz. Native OpenAI-API-Kompatibilität passt zu bestehenden IDE-Tools. Streaming für Echtzeit-Vorschläge aktiviert.',
             '',
             '**KI-gestützter Code-Review für mehrere Dateien**',
@@ -399,7 +399,7 @@ for filename, review in reviews:
           id: 'rag',
           content: [
             '**Bester Stack: LlamaIndex + Ollama/vLLM + Qdrant + FastAPI UI**',
-            'Warum dieser Stack: [LlamaIndex](/local-llms/local-rag-2026?lang=de) übernimmt Chunking + Retrieval. Qdrant ist schnell, lokal und privat. Ollama liefert Embeddings (kostenlos) oder vLLM für LLM-Inferenz nutzen.',
+            'Warum dieser Stack: [LlamaIndex](/de/local-llms/local-rag-2026) übernimmt Chunking + Retrieval. Qdrant ist schnell, lokal und privat. Ollama liefert Embeddings (kostenlos) oder vLLM für LLM-Inferenz nutzen.',
           ],
           numberedItems: [
             'LlamaIndex installieren (`pip install llama-index`).',
@@ -414,7 +414,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**Bester Stack: LangGraph + vLLM + Tool-Definitionen**',
-            'Warum dieser Stack: [LangGraph](/local-llms/local-llm-agents-with-langgraph?lang=de) bietet strukturierten Agenten-Flow. vLLM ist schnell genug für 10+ sequentielle LLM-Aufrufe. Tool-Nutzung ist explizit und debuggbar.',
+            'Warum dieser Stack: [LangGraph](/de/local-llms/local-llm-agents-with-langgraph) bietet strukturierten Agenten-Flow. vLLM ist schnell genug für 10+ sequentielle LLM-Aufrufe. Tool-Nutzung ist explizit und debuggbar.',
           ],
           numberedItems: [
             'LangGraph installieren (`pip install langchain langgraph`).',
@@ -484,13 +484,13 @@ for filename, review in reviews:
         'relatedReading': {
           title: 'Weiterführende Artikel',
           items: [
-            '[Beste KI-Coding-Assistenten für lokale LLM](/local-llms/best-ai-coding-assistant-local-llm?lang=de) — IDE-Wahl für Ihren Coding-Stack (Cursor, Continue.dev, Cody).',
-            '[Beste lokale LLMs für Coding 2026](/local-llms/best-local-llms-for-coding?lang=de) — Qwen2.5-Coder vs. DeepSeek-Coder HumanEval-Rankings.',
-            '[Lokales RAG einrichten 2026](/local-llms/local-rag-2026?lang=de) — Vollständige Implementierungsanleitung: LlamaIndex + Qdrant + Ollama.',
-            '[Lokale LLM-Agenten mit LangGraph](/local-llms/local-llm-agents-with-langgraph?lang=de) — Agenten-Workflow-Framework mit Schritt-für-Schritt-Beispielen.',
-            '[Ollama vs. LM Studio](/local-llms/ollama-vs-lm-studio?lang=de) — Backend-Vergleich: CLI vs. GUI, Geschwindigkeit, Batch-Verarbeitung.',
-            '[Open WebUI vs. SillyTavern](/local-llms/open-webui-vs-sillytavern?lang=de) — Chat-UI-Vergleich: professionell vs. Rollenspiel.',
-            '[Wie viel VRAM brauchen lokale LLMs?](/local-llms/how-much-vram-local-llm?lang=de) — Hardware-Anforderungen nach Modellgröße und Anwendungsfall.',
+            '[Beste KI-Coding-Assistenten für lokale LLM](/de/local-llms/best-ai-coding-assistant-local-llm) — IDE-Wahl für Ihren Coding-Stack (Cursor, Continue.dev, Cody).',
+            '[Beste lokale LLMs für Coding 2026](/de/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs. DeepSeek-Coder HumanEval-Rankings.',
+            '[Lokales RAG einrichten 2026](/de/local-llms/local-rag-2026) — Vollständige Implementierungsanleitung: LlamaIndex + Qdrant + Ollama.',
+            '[Lokale LLM-Agenten mit LangGraph](/de/local-llms/local-llm-agents-with-langgraph) — Agenten-Workflow-Framework mit Schritt-für-Schritt-Beispielen.',
+            '[Ollama vs. LM Studio](/de/local-llms/ollama-vs-lm-studio) — Backend-Vergleich: CLI vs. GUI, Geschwindigkeit, Batch-Verarbeitung.',
+            '[Open WebUI vs. SillyTavern](/de/local-llms/open-webui-vs-sillytavern) — Chat-UI-Vergleich: professionell vs. Rollenspiel.',
+            '[Wie viel VRAM brauchen lokale LLMs?](/de/local-llms/how-much-vram-local-llm) — Hardware-Anforderungen nach Modellgröße und Anwendungsfall.',
           ],
         },
         'commonMistakes': {
@@ -521,7 +521,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Bester lokaler LLM-Stack nach Anwendungsfall 2026: Coding, Schreiben, RAG, Agenten',
         'description': 'Lokaler LLM-Stack nach Anwendungsfall April 2026: Coding → vLLM + Qwen2.5-Coder. Schreiben → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. 8–24 GB VRAM.',
-        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-stack-use-case?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/best-local-llm-stack-use-case',
         'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -625,7 +625,7 @@ schema: {
         'writing': {
           id: 'writing',
           content: [
-            '**Stack recommandé : [Ollama](/local-llms/how-to-install-ollama?lang=fr) + [OpenWebUI](/local-llms/open-webui-vs-sillytavern?lang=fr) + éditeur Markdown**',
+            '**Stack recommandé : [Ollama](/fr/local-llms/how-to-install-ollama) + [OpenWebUI](/fr/local-llms/open-webui-vs-sillytavern) + éditeur Markdown**',
             'Pourquoi ce stack : OpenWebUI offre la meilleure UX de chat. Aucun code requis. La flexibilité de la fenêtre de contexte (4K–32K) surpasse LM Studio pour la rédaction longue. Moins coûteux que les API cloud pour les rédacteurs.',
           ],
           numberedItems: [
@@ -639,7 +639,7 @@ schema: {
         'coding': {
           id: 'coding',
           content: [
-            '**Stack recommandé : [vLLM](/local-llms/vllm-performance-guide?lang=fr) + Qwen2.5-Coder + extension IDE**',
+            '**Stack recommandé : [vLLM](/fr/local-llms/vllm-performance-guide) + Qwen2.5-Coder + extension IDE**',
             'Pourquoi ce stack : Qwen2.5-Coder obtient 82 % sur HumanEval (meilleur modèle de coding open-source, avril 2026). vLLM est 3–5× plus rapide qu\'Ollama pour l\'inférence par lots. Compatibilité OpenAI API native avec les outils IDE existants. Streaming activé pour les suggestions en temps réel.',
             '',
             '**Revue de code IA sur plusieurs fichiers**',
@@ -682,7 +682,7 @@ for filename, review in reviews:
           id: 'rag',
           content: [
             '**Stack recommandé : LlamaIndex + Ollama/vLLM + Qdrant + FastAPI UI**',
-            'Pourquoi ce stack : [LlamaIndex](/local-llms/local-rag-2026?lang=fr) gère le découpage et la récupération. Qdrant est rapide, local et privé. Ollama fournit les embeddings (gratuit) ou utilisez vLLM pour l\'inférence LLM.',
+            'Pourquoi ce stack : [LlamaIndex](/fr/local-llms/local-rag-2026) gère le découpage et la récupération. Qdrant est rapide, local et privé. Ollama fournit les embeddings (gratuit) ou utilisez vLLM pour l\'inférence LLM.',
           ],
           numberedItems: [
             'Installez LlamaIndex (`pip install llama-index`).',
@@ -697,7 +697,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**Stack recommandé : LangGraph + vLLM + définitions d\'outils**',
-            'Pourquoi ce stack : [LangGraph](/local-llms/local-llm-agents-with-langgraph?lang=fr) fournit un flux d\'agent structuré. vLLM est suffisamment rapide pour 10+ appels LLM séquentiels. L\'utilisation des outils est explicite et déboguable.',
+            'Pourquoi ce stack : [LangGraph](/fr/local-llms/local-llm-agents-with-langgraph) fournit un flux d\'agent structuré. vLLM est suffisamment rapide pour 10+ appels LLM séquentiels. L\'utilisation des outils est explicite et déboguable.',
           ],
           numberedItems: [
             'Installez LangGraph (`pip install langchain langgraph`).',
@@ -765,13 +765,13 @@ for filename, review in reviews:
         'relatedReading': {
           title: 'Pour aller plus loin',
           items: [
-            '[Meilleur assistant IA de code pour LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=fr) — Choix IDE pour votre stack de codage (Cursor, Continue.dev, Cody).',
-            '[Meilleurs LLM locaux pour le coding 2026](/local-llms/best-local-llms-for-coding?lang=fr) — Classements HumanEval : Qwen2.5-Coder vs DeepSeek-Coder.',
-            '[Configuration RAG local 2026](/local-llms/local-rag-2026?lang=fr) — Guide complet LlamaIndex + Qdrant + Ollama.',
-            '[Agents LLM locaux avec LangGraph](/local-llms/local-llm-agents-with-langgraph?lang=fr) — Framework de workflows agents avec exemples étape par étape.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=fr) — Comparaison des backends : CLI vs GUI, vitesse, traitement par lots.',
-            '[Open WebUI vs SillyTavern](/local-llms/open-webui-vs-sillytavern?lang=fr) — Comparaison d\'interfaces : professionnel vs roleplay.',
-            '[Quelle VRAM pour les LLM locaux ?](/local-llms/how-much-vram-local-llm?lang=fr) — Exigences matérielles par taille de modèle et cas d\'usage.',
+            '[Meilleur assistant IA de code pour LLM local](/fr/local-llms/best-ai-coding-assistant-local-llm) — Choix IDE pour votre stack de codage (Cursor, Continue.dev, Cody).',
+            '[Meilleurs LLM locaux pour le coding 2026](/fr/local-llms/best-local-llms-for-coding) — Classements HumanEval : Qwen2.5-Coder vs DeepSeek-Coder.',
+            '[Configuration RAG local 2026](/fr/local-llms/local-rag-2026) — Guide complet LlamaIndex + Qdrant + Ollama.',
+            '[Agents LLM locaux avec LangGraph](/fr/local-llms/local-llm-agents-with-langgraph) — Framework de workflows agents avec exemples étape par étape.',
+            '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) — Comparaison des backends : CLI vs GUI, vitesse, traitement par lots.',
+            '[Open WebUI vs SillyTavern](/fr/local-llms/open-webui-vs-sillytavern) — Comparaison d\'interfaces : professionnel vs roleplay.',
+            '[Quelle VRAM pour les LLM locaux ?](/fr/local-llms/how-much-vram-local-llm) — Exigences matérielles par taille de modèle et cas d\'usage.',
           ],
         },
         'commonMistakes': {
@@ -802,7 +802,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Stack LLM local 2026 : Coding, Rédaction, RAG, Agents',
         'description': 'Stack LLM local par cas d\'usage avril 2026 : Coding → vLLM + Qwen2.5-Coder. Rédaction → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. 8–24 Go VRAM. Guide complet.',
-        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-stack-use-case?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llm-stack-use-case',
         'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -904,7 +904,7 @@ schema: {
         'writing': {
           id: 'writing',
           content: [
-            '**推奨スタック： [Ollama](/local-llms/how-to-install-ollama?lang=ja) + [OpenWebUI](/local-llms/open-webui-vs-sillytavern?lang=ja) + Markdownエディター**',
+            '**推奨スタック： [Ollama](/ja/local-llms/how-to-install-ollama) + [OpenWebUI](/ja/local-llms/open-webui-vs-sillytavern) + Markdownエディター**',
             '次の理由からこのスタックを推奨：OpenWebUIは最高のチャットUX。コード不要。長文ライティング向けにコンテキストウィンドウ（4K–32K）の柔軟性がLM Studioを上回る。クラウドAPIよりコスト安。',
           ],
           numberedItems: [
@@ -918,7 +918,7 @@ schema: {
         'coding': {
           id: 'coding',
           content: [
-            '**推奨スタック： [vLLM](/local-llms/vllm-performance-guide?lang=ja) + Qwen2.5-Coder + IDE拡張**',
+            '**推奨スタック： [vLLM](/ja/local-llms/vllm-performance-guide) + Qwen2.5-Coder + IDE拡張**',
             'Qwen2.5-CoderはHumanEvalで82％（2026年4月現在最高のオープンソースコーディングモデル）。vLLMはバッチ推論でOllamaよ3–5倍高速。既存IDEツールとのネイティブOpenAI API互换性。リアルタイム潔歋候補のストリーミング有効。',
             '',
             '**複数ファイルの並列コードレビュー**',
@@ -961,7 +961,7 @@ for filename, review in reviews:
           id: 'rag',
           content: [
             '**推奨スタック： LlamaIndex + Ollama/vLLM + Qdrant + FastAPI UI**',
-            '[LlamaIndex](/local-llms/local-rag-2026?lang=ja)がチャンク分割・検索を歋当。Qdrantは高速・ローカル・プライベート。Ollamaで埋め込みを生成（無料）、またはvLLMでLLM推論。',
+            '[LlamaIndex](/ja/local-llms/local-rag-2026)がチャンク分割・検索を歋当。Qdrantは高速・ローカル・プライベート。Ollamaで埋め込みを生成（無料）、またはvLLMでLLM推論。',
           ],
           numberedItems: [
             'LlamaIndexをインストール：`pip install llama-index`',
@@ -976,7 +976,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**推奨スタック： LangGraph + vLLM + ツール定義**',
-            '[LangGraph](/local-llms/local-llm-agents-with-langgraph?lang=ja)が構造化されたエージェントフローを提供。vLLMは10+回の連続LLM呼び出しに十分な速度。ツール使用は明示的でデバッグ容易。',
+            '[LangGraph](/ja/local-llms/local-llm-agents-with-langgraph)が構造化されたエージェントフローを提供。vLLMは10+回の連続LLM呼び出しに十分な速度。ツール使用は明示的でデバッグ容易。',
           ],
           numberedItems: [
             'LangGraphをインストール：`pip install langchain langgraph`',
@@ -1044,13 +1044,13 @@ for filename, review in reviews:
         'relatedReading': {
           title: '関連記事',
           items: [
-            '[ローカルLLM向け最高のAIコーディングアシスタント](/local-llms/best-ai-coding-assistant-local-llm?lang=ja) — コーディングスタック用IDE選択（Cursor、Continue.dev、Cody）。',
-            '[コーディング向きローカルLLM 2026](/local-llms/best-local-llms-for-coding?lang=ja) — Qwen2.5-Coder vs DeepSeek-CoderのHumanEvalランキング。',
-            '[ローカルRAG設定 2026](/local-llms/local-rag-2026?lang=ja) — LlamaIndex + Qdrant + Ollamaの完全実装ガイド。',
-            '[ローカルLLMエージェント（LangGraph）](/local-llms/local-llm-agents-with-langgraph?lang=ja) — ステップごとのエージェントワークフローフレームワーク。',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=ja) — バックエンド比較：CLI vs GUI、速度、バッチ処理。',
-            '[Open WebUI vs SillyTavern](/local-llms/open-webui-vs-sillytavern?lang=ja) — チャットUI比較：プロフェッショナル vs ロールプレイ。',
-            '[ローカルLLMに必要なVRAMは？](/local-llms/how-much-vram-local-llm?lang=ja) — モデルサイズとユースケース別ハードウェア要件。',
+            '[ローカルLLM向け最高のAIコーディングアシスタント](/ja/local-llms/best-ai-coding-assistant-local-llm) — コーディングスタック用IDE選択（Cursor、Continue.dev、Cody）。',
+            '[コーディング向きローカルLLM 2026](/ja/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek-CoderのHumanEvalランキング。',
+            '[ローカルRAG設定 2026](/ja/local-llms/local-rag-2026) — LlamaIndex + Qdrant + Ollamaの完全実装ガイド。',
+            '[ローカルLLMエージェント（LangGraph）](/ja/local-llms/local-llm-agents-with-langgraph) — ステップごとのエージェントワークフローフレームワーク。',
+            '[Ollama vs LM Studio](/ja/local-llms/ollama-vs-lm-studio) — バックエンド比較：CLI vs GUI、速度、バッチ処理。',
+            '[Open WebUI vs SillyTavern](/ja/local-llms/open-webui-vs-sillytavern) — チャットUI比較：プロフェッショナル vs ロールプレイ。',
+            '[ローカルLLMに必要なVRAMは？](/ja/local-llms/how-much-vram-local-llm) — モデルサイズとユースケース別ハードウェア要件。',
           ],
         },
         'commonMistakes': {
@@ -1081,7 +1081,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'ユースケース別ローカルLLMスタック2026：コーディング、ライティング、RAG、エージェント',
         'description': 'ユースケース別ローカルLLMスタック2026年4月：コーディング→vLLM + Qwen2.5-Coder。ライティング→Ollama + Llama 3.3。RAG→LlamaIndex + Qdrant。VRAM 8–24 GB対応。',
-        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-stack-use-case?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llm-stack-use-case',
         'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -1183,7 +1183,7 @@ schema: {
         'writing': {
           id: 'writing',
           content: [
-            '**推荐堆栈： [Ollama](/local-llms/how-to-install-ollama?lang=zh) + [OpenWebUI](/local-llms/open-webui-vs-sillytavern?lang=zh) + Markdown编辑器**',
+            '**推荐堆栈： [Ollama](/zh/local-llms/how-to-install-ollama) + [OpenWebUI](/zh/local-llms/open-webui-vs-sillytavern) + Markdown编辑器**',
             '选择理由：OpenWebUI提供最佳聊天体验。无需编程。长文写作的上下文窗口灵活性（4K–32K）超过LM Studio。比云端API更经济实惠。',
           ],
           numberedItems: [
@@ -1197,7 +1197,7 @@ schema: {
         'coding': {
           id: 'coding',
           content: [
-            '**推荐堆栈： [vLLM](/local-llms/vllm-performance-guide?lang=zh) + Qwen2.5-Coder + IDE插件**',
+            '**推荐堆栈： [vLLM](/zh/local-llms/vllm-performance-guide) + Qwen2.5-Coder + IDE插件**',
             'Qwen2.5-Coder在HumanEval得劆8剸2%（2026年4月最佳开源代码模型）。vLLM批量推理比Ollama快3–5倍。原生OpenAI API兼容，完美适配现有IDE工具。实时补全流式传输已启用。',
             '',
             '**多文件并行代码审查**',
@@ -1240,7 +1240,7 @@ for filename, review in reviews:
           id: 'rag',
           content: [
             '**推荐堆栈： LlamaIndex + Ollama/vLLM + Qdrant + FastAPI UI**',
-            '[LlamaIndex](/local-llms/local-rag-2026?lang=zh)负责分块与检索。Qdrant高速、本地、隐私。Ollama免费生成Embedding，或用vLLM做LLM推理。',
+            '[LlamaIndex](/zh/local-llms/local-rag-2026)负责分块与检索。Qdrant高速、本地、隐私。Ollama免费生成Embedding，或用vLLM做LLM推理。',
           ],
           numberedItems: [
             '安装LlamaIndex：`pip install llama-index`',
@@ -1255,7 +1255,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**推荐堆栈： LangGraph + vLLM + 工具定义**',
-            '[LangGraph](/local-llms/local-llm-agents-with-langgraph?lang=zh)提供结构化的智能体流。vLLM足够快以支持连续10+次LLM调用。工具调用显式且易于调试。',
+            '[LangGraph](/zh/local-llms/local-llm-agents-with-langgraph)提供结构化的智能体流。vLLM足够快以支持连续10+次LLM调用。工具调用显式且易于调试。',
           ],
           numberedItems: [
             '安装LangGraph：`pip install langchain langgraph`',
@@ -1323,13 +1323,13 @@ for filename, review in reviews:
         'relatedReading': {
           title: '相关阅读',
           items: [
-            '[本地LLM最佳AI编码助手](/local-llms/best-ai-coding-assistant-local-llm?lang=zh) — 编码栈的IDE选择（Cursor、Continue.dev、Cody）。',
-            '[编程最佳本地LLM 2026](/local-llms/best-local-llms-for-coding?lang=zh) — Qwen2.5-Coder vs DeepSeek-Coder HumanEval排名。',
-            '[本地RAG配置 2026](/local-llms/local-rag-2026?lang=zh) — LlamaIndex + Qdrant + Ollama完整实现指南。',
-            '[LangGraph本地LLM智能体](/local-llms/local-llm-agents-with-langgraph?lang=zh) — 逐步示例的智能体工作流框架。',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=zh) — 后端对比：CLI vs GUI、速度、批量处理。',
-            '[Open WebUI vs SillyTavern](/local-llms/open-webui-vs-sillytavern?lang=zh) — 聊天界面对比：专业与角色扮演。',
-            '[本地LLM需要多少显存？](/local-llms/how-much-vram-local-llm?lang=zh) — 按模型大小和用途划分硬件需求。',
+            '[本地LLM最佳AI编码助手](/zh/local-llms/best-ai-coding-assistant-local-llm) — 编码栈的IDE选择（Cursor、Continue.dev、Cody）。',
+            '[编程最佳本地LLM 2026](/zh/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek-Coder HumanEval排名。',
+            '[本地RAG配置 2026](/zh/local-llms/local-rag-2026) — LlamaIndex + Qdrant + Ollama完整实现指南。',
+            '[LangGraph本地LLM智能体](/zh/local-llms/local-llm-agents-with-langgraph) — 逐步示例的智能体工作流框架。',
+            '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) — 后端对比：CLI vs GUI、速度、批量处理。',
+            '[Open WebUI vs SillyTavern](/zh/local-llms/open-webui-vs-sillytavern) — 聊天界面对比：专业与角色扮演。',
+            '[本地LLM需要多少显存？](/zh/local-llms/how-much-vram-local-llm) — 按模型大小和用途划分硬件需求。',
           ],
         },
         'commonMistakes': {
@@ -1360,7 +1360,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '按用途分类2026年最佳本地LLM堆栈：编程、写作、RAG、智能体',
         'description': '按用途本地LLM堆捨2026年4月：编程→vLLM+Qwen2.5-Coder，写作→Ollama+Llama 3.3，RAG→LlamaIndex+Qdrant。8-24 GB显存。完整配置指南。',
-        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-stack-use-case?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llm-stack-use-case',
         'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',

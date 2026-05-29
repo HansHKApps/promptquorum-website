@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Los prompts lentos de IA tienen una sola causa: la ambigüedad. Cinco decisiones de diseño dan respuestas precisas y rápidas en el primer intento.',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -665,9 +665,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         relatedReading: {
           content: [
-            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — la base de todo el diseño de prompts',
-            '[Los 5 bloques de construcción que todo prompt necesita](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — rol, tarea, ejemplos, restricciones, formato',
-            '[Tokens, costes y límites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=es) — cómo la longitud del output afecta directamente al coste de la API',
+            '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — la base de todo el diseño de prompts',
+            '[Los 5 bloques de construcción que todo prompt necesita](/es/prompt-engineering/5-building-blocks-every-prompt-needs) — rol, tarea, ejemplos, restricciones, formato',
+            '[Tokens, costes y límites](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — cómo la longitud del output afecta directamente al coste de la API',
           ],
         },
         sources: {

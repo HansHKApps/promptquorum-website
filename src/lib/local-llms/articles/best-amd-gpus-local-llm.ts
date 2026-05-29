@@ -345,10 +345,10 @@ schema: {
         'relatedReading': {
           title: 'Weiterführende Literatur',
           items: [
-            '[Beste Budget-GPUs für lokale LLMs](/local-llms/best-budget-gpus-local-llm?lang=de)',
-            '[Beste GPUs für lokale LLMs](/local-llms/best-gpus-for-local-llms?lang=de)',
-            '[GPU vs. CPU vs. Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=de)',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de)',
+            '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm)',
+            '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms)',
+            '[GPU vs. CPU vs. Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+            '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026)',
           ],
         },
         'sources': {
@@ -364,7 +364,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'de',
-        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/best-amd-gpus-local-llm',
         name: 'Beste AMD-GPUs für lokale LLMs',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT (16 GB, 300-350 € gebraucht) und RX 7900 XTX (24 GB, 400-500 € gebraucht) sind die einzigen praktikablen Optionen für lokale LLMs.' },
@@ -504,10 +504,10 @@ schema: {
         'relatedReading': {
           title: 'Lectures complémentaires',
           items: [
-            '[Meilleures GPU budget pour LLM locaux](/local-llms/best-budget-gpus-local-llm?lang=fr)',
-            '[Meilleures GPU pour LLM locaux](/local-llms/best-gpus-for-local-llms?lang=fr)',
-            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=fr)',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr)',
+            '[Meilleures GPU budget pour LLM locaux](/fr/local-llms/best-budget-gpus-local-llm)',
+            '[Meilleures GPU pour LLM locaux](/fr/local-llms/best-gpus-for-local-llms)',
+            '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+            '[Local LLM Hardware Guide 2026](/fr/local-llms/local-llm-hardware-guide-2026)',
           ],
         },
         'sources': {
@@ -523,7 +523,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'fr',
-        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/best-amd-gpus-local-llm',
         name: 'Meilleures GPU AMD pour les LLM locaux',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT (16 Go, 300-350 € occasion) et RX 7900 XTX (24 Go, 400-500 € occasion) sont les seules options viables pour les LLM locaux.' },
@@ -663,10 +663,10 @@ schema: {
         'relatedReading': {
           title: '関連資料',
           items: [
-            '[ローカル LLM 向けベスト予算 GPU](/local-llms/best-budget-gpus-local-llm?lang=ja)',
-            '[ローカル LLM 向けベスト GPU](/local-llms/best-gpus-for-local-llms?lang=ja)',
-            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=ja)',
-            '[Text Generation WebUI vs vLLM vs Llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=ja)',
+            '[ローカル LLM 向けベスト予算 GPU](/ja/local-llms/best-budget-gpus-local-llm)',
+            '[ローカル LLM 向けベスト GPU](/ja/local-llms/best-gpus-for-local-llms)',
+            '[GPU vs CPU vs Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+            '[Text Generation WebUI vs vLLM vs Llama.cpp](/ja/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
           ],
         },
         'sources': {
@@ -682,7 +682,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'ja',
-        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/best-amd-gpus-local-llm',
         name: 'ローカル LLM 向けベスト AMD GPU',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT（16GB、中古 ¥35,000-40,000）と RX 7900 XTX（24GB、中古 ¥50,000-65,000）は、ローカル LLM のための唯一の実用的なオプションです。' },
@@ -827,10 +827,10 @@ schema: {
         'relatedReading': {
           title: '延伸阅读',
           items: [
-            '[本地 LLM 最佳预算 GPU](/local-llms/best-budget-gpus-local-llm?lang=zh)',
-            '[本地 LLM 最佳 GPU](/local-llms/best-gpus-for-local-llms?lang=zh)',
-            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=zh)',
-            '[Text Generation WebUI vs vLLM vs Llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=zh)',
+            '[本地 LLM 最佳预算 GPU](/zh/local-llms/best-budget-gpus-local-llm)',
+            '[本地 LLM 最佳 GPU](/zh/local-llms/best-gpus-for-local-llms)',
+            '[GPU vs CPU vs Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+            '[Text Generation WebUI vs vLLM vs Llama.cpp](/zh/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
           ],
         },
         'sources': {
@@ -846,7 +846,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'zh',
-        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/best-amd-gpus-local-llm',
         about: [
           { '@type': 'Thing', name: 'AMD ROCm' },
           { '@type': 'Thing', name: 'NVIDIA CUDA' },

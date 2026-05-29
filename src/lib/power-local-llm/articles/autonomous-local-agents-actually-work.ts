@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cadence de test :** chaque tâche s\'est exécutée 3 fois par stack sur la fenêtre de 30 jours, avec un nouveau prompt chaque fois. Le résultat évalué comme « complet sans surveillance », « complet avec supervision », « partiel », ou « bloqué / échoué ».',
           '**Métrique de supervision :** nombre d\'approbations nécessaires par tâche et la part des approbations où nous avons rejeté l\'action proposée. Un taux de rejet élevé signale que le harness génère du bruit que l\'humain doit filtrer.',
           '**Contrainte d\'honnêteté :** des plages, pas des pourcentages exactement inventés. « Fiable sur les 5 tâches » signifie 13–15 des 15 exécutions atterrissent ; « échoue sur les longs horizons » signifie 3–6 des 15 exécutions atterrissent sans intervention. Les verdicts sont conservateurs — quand un stack fonctionnait mais seulement avec une intervention non-triviale, cela compte comme un échec pour les besoins de tâches sans surveillance.',
-          'La fiabilité des appels d\'outils est la couche sous-jacente à tout cela. Pour la comparaison côté modèle, voir [Meilleurs modèles locaux pour Tool Calling en 2026](/power-local-llm/best-local-models-tool-calling-2026?lang=fr) ; la couche de protocole est couverte dans [Connecter Ollama aux bases de données et API avec MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr).',
+          'La fiabilité des appels d\'outils est la couche sous-jacente à tout cela. Pour la comparaison côté modèle, voir [Meilleurs modèles locaux pour Tool Calling en 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) ; la couche de protocole est couverte dans [Connecter Ollama aux bases de données et API avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026).',
         ],
       },
       realityTable: {
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Où ça trébuche :** tâches non-codage qui nécessitent HTTP externe (pas de navigateur natif). Le triage de brouillons d\'e-mails fonctionne seulement si vous connectez un serveur MCP ou des outils shell — et à ce moment-là vous configurez trois choses pour faire ce qu\'un outil plus petit et limité ferait directement.',
           '**Coût de supervision :** ~5–12 approbations par tâche. La plupart sont des outils de lecture (bon marché, acceptation rapide). Les coûteux sont write_to_file et execute_command — réglez-les pour exiger une approbation manuelle et vous attraperez l\'appel rare mauvais avant qu\'il se produise.',
           '**Coût des tokens :** élevé. Les contenus de fichier complets entrent dans la conversation alors que l\'agent les lit. Une refonte de 12 fichiers sur Qwen3-Coder 30B à 32K context épuise la fenêtre rapidement — basculez vers un modèle 128K-context (DeepSeek Coder V3, Llama 3.3 70B) pour le travail non-trivial.',
-          'Pour la configuration Cline plus approfondie, y compris les listes d\'approbation automatique, voir [Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr).',
+          'Pour la configuration Cline plus approfondie, y compris les listes d\'approbation automatique, voir [Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
           {
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Le problème plus profond :** l\'abstraction multi-agents ajoute des tours sans ajouter de capacité. Un agent unique avec la même surface d\'outils et un scratchpad plus long fait la même tâche en moins de tokens avec moins de dérive. Le cadrage « équipe » est anthropomorphe, pas architectural.',
           '**Où ça pourrait fonctionner :** tâches étroitement définies avec des limites de remise dure — par exemple, un flux de travail d\'équipe d\'écriture (recherche → esquisse → brouillon → édition) où chaque étape a un livrable et l\'étape suivante ignore le raisonnement antérieur. Nous n\'avons pas trouvé un flux de travail réel où MetaGPT surpassait un harness d\'agent unique avec un prompt structuré.',
           '**Verdict :** échoué. Le bug est conceptuel, pas dans l\'implémentation. Les harnesses d\'agent unique avec des prompts structurés battent les harnesses multi-agents sur chaque tâche que nous avons testée.',
-          'Pour les techniques de prompting qui améliorent la fiabilité de n\'importe quelle boucle d\'agent unique, voir [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — le même schéma de raisonnement structuré qui aide un modèle à penser aide un agent unique à rester cohérent.',
+          'Pour les techniques de prompting qui améliorent la fiabilité de n\'importe quelle boucle d\'agent unique, voir [chain-of-thought prompting](/fr/prompt-engineering/chain-of-thought-prompting) — le même schéma de raisonnement structuré qui aide un modèle à penser aide un agent unique à rester cohérent.',
         ],
       },
       autogpt: {
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Schéma d\'approbation échouée :** fatigue d\'approbation. Au-delà de ~30 approbations en une session, les humains tamponnent. Le harness qui nécessite trop d\'approbations vous entraîne à en arrêter l\'examen, à quel point la porte de sécurité est fictive.',
           '**Le bon bouton : listes d\'approbation automatique.** Les outils de lecture (read_file, list_files, search_files, list_directory) sont sûrs à auto-approuver. Les outils d\'écriture (write_to_file, replace_in_file, execute_command, browser_action avec soumission de formulaire) ne le sont pas. Ce single setting est la différence entre un agent utile et un agent fastidieux.',
           '**La bonne unité : compte d\'approbation par tâche.** Quand vous évaluez un stack, comptez les approbations sur une tâche réelle représentative — pas sur une tâche de démo. Si le compte est supérieur à 20, le stack n\'économise pas réellement votre travail.',
-          'Pour les techniques de prompting qui réduisent le coût de supervision en améliorant la qualité de l\'appel d\'outils, voir [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr).',
+          'Pour les techniques de prompting qui réduisent le coût de supervision en améliorant la qualité de l\'appel d\'outils, voir [chain-of-thought prompting](/fr/prompt-engineering/chain-of-thought-prompting).',
         ],
         callouts: [
           {
@@ -888,11 +888,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Connecter Ollama aux bases de données et API avec MCP : Configuration locale des agents 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr) — ce qui active les agents sous le capot ; couche de protocole pour les outils système de fichiers, base de données, navigateur, et GitHub.',
-          '[Meilleurs modèles locaux pour Tool Calling en 2026](/power-local-llm/best-local-models-tool-calling-2026?lang=fr) — la couche modèle ; benchmarks tête-à-tête pour les outils de tool-calling recommandés ci-dessus (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
-          '[Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr) — comparaison de harness adjacent pour le travail de type codage.',
-          '[Agents IA locaux Workflows professionnels Conformité EU](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=fr) — contexte appliqué pour les entreprises opérant sous GDPR / EU AI Act.',
-          '[Meilleurs LLMs locaux en 2026](/local-llms/best-local-llms-2026?lang=fr) — autorité modèle pour le paysage des poids ouverts plus large.',
+          '[Connecter Ollama aux bases de données et API avec MCP : Configuration locale des agents 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — ce qui active les agents sous le capot ; couche de protocole pour les outils système de fichiers, base de données, navigateur, et GitHub.',
+          '[Meilleurs modèles locaux pour Tool Calling en 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — la couche modèle ; benchmarks tête-à-tête pour les outils de tool-calling recommandés ci-dessus (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
+          '[Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparaison de harness adjacent pour le travail de type codage.',
+          '[Agents IA locaux Workflows professionnels Conformité EU](/fr/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — contexte appliqué pour les entreprises opérant sous GDPR / EU AI Act.',
+          '[Meilleurs LLMs locaux en 2026](/fr/local-llms/best-local-llms-2026) — autorité modèle pour le paysage des poids ouverts plus large.',
           '[Power Local LLM Hub](/power-local-llm) — bibliothèque de guides complète.',
         ],
       },
@@ -1191,10 +1191,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: '関連リソース',
         items: [
-          '[ローカル LLM のベストプラクティス](/power-local-llm/local-llm-best-practices?lang=ja) — 本番環境で安全にローカルモデルを実行するためのチェックリスト。',
-          '[METI AI ガバナンスガイドライン](/power-local-llm/local-ai-governance-framework?lang=ja) — 日本の企業向けの AI エージェント規制フレームワーク。',
-          '[ローカル LLM ワークフロー：エンタープライズ対応](/power-local-llm/local-ai-agents-business-workflows-japan-meti-compliance?lang=ja) — 日本の金融・医療セクター向けのコンテキスト。',
-          '[2026 年の最高のオープンソース LLM](/local-llms/best-local-llms-2026?lang=ja) — モデル選定のための権威的ガイド。',
+          '[ローカル LLM のベストプラクティス](/ja/power-local-llm/local-llm-best-practices) — 本番環境で安全にローカルモデルを実行するためのチェックリスト。',
+          '[METI AI ガバナンスガイドライン](/ja/power-local-llm/local-ai-governance-framework) — 日本の企業向けの AI エージェント規制フレームワーク。',
+          '[ローカル LLM ワークフロー：エンタープライズ対応](/ja/power-local-llm/local-ai-agents-business-workflows-japan-meti-compliance) — 日本の金融・医療セクター向けのコンテキスト。',
+          '[2026 年の最高のオープンソース LLM](/ja/local-llms/best-local-llms-2026) — モデル選定のための権威的ガイド。',
           '[Power Local LLM ハブ](/power-local-llm) — ガイドとチュートリアルの完全なライブラリ。',
         ],
       },
@@ -1251,7 +1251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'ローカルAIエージェント2026年：実際に機能するもの（そして失敗するもの）',
       description:
         'ローカルAIエージェント6スタック（Cline、Continue.dev、LangGraph、AutoGPT、OpenInterpreter、MetaGPT）の正直なテスト。実務タスク5種類で実施。2つは確実に機能、3つは意外に失敗、1つは使用不可能。評決が名明確です。',
-      url: 'https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work?lang=ja',
+      url: 'https://www.promptquorum.com/ja/power-local-llm/autonomous-local-agents-actually-work',
       inLanguage: 'ja',
       image: 'https://www.promptquorum.com/og-images/autonomous-local-agents-actually-work.png',
       datePublished: '2026-05-07',
@@ -1436,7 +1436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Run-Kadenz:** jede Aufgabe lief 3 Mal pro Stack über das 30-Tage-Fenster, mit einem frischen Prompt jedes Mal. Ergebnis bewertet als „vollständig unbeaufsichtigt", „vollständig mit Überwachung", „teilweise" oder „stagniert/fehlgeschlagen".',
           '**Überwachungs-Metrik:** Anzahl der pro Aufgabe erforderlichen Approvals und der Anteil der Approvals, bei denen wir die vorgeschlagene Aktion abgelehnt haben. Eine hohe Reject-Rate signalisiert, dass der Harness Rauschen erzeugt, das der Mensch filtern muss.',
           '**Ehrlichkeitszwang:** Bereiche, keine erfundenen exakten Prozentsätze. „Zuverlässig über alle 5 Aufgaben" bedeutet 13–15 von 15 Durchläufen landen; „fehlschlagen über lange Horizonte" bedeutet 3–6 von 15 Durchläufen landen ohne Eingriff. Die Verdikt sind konservativ — wenn ein Stack funktionierte, aber nur mit nicht trivialem Eingriff, zählt es als Fehler für unbeaufsichtigte-Aufgabe-Zwecke.',
-          'Tool-Call-Zuverlässigkeit ist die Schicht darunter. Für die Modell-seitige Vergleich, siehe [Beste lokale Modelle für Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026?lang=de); die Protokoll-Schicht wird behandelt in [Ollama mit Datenbanken und APIs über MCP verbinden](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de).',
+          'Tool-Call-Zuverlässigkeit ist die Schicht darunter. Für die Modell-seitige Vergleich, siehe [Beste lokale Modelle für Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026); die Protokoll-Schicht wird behandelt in [Ollama mit Datenbanken und APIs über MCP verbinden](/de/power-local-llm/local-ai-agents-with-mcp-2026).',
         ],
       },
       realityTable: {
@@ -1512,7 +1512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wo es stolpert:** nicht-Code-Aufgaben, die externe HTTP erfordern (kein natives Browser). E-Mail-Draft-Triage funktioniert nur, wenn du einen MCP-Server oder Shell-Tools verdrahtest — und an diesem Punkt konfigurierst du drei Dinge, um das zu tun, was ein kleineres, scoped-Tool direkt tun würde.',
           '**Überwachungskosten:** ~5–12 Approvals pro Aufgabe. Die meisten sind Lese-Tools (billig, schnelles Akzeptieren). Die teuren sind write_to_file und execute_command — stelle diese auf manuelles Approval-Erfordernis und du wirst den seltenen schlechten Call vor dem Landen fangen.',
           '**Token-Kosten:** hoch. Vollständige Datei-Inhalte streamen in das Gespräch, während der Agent sie liest. Eine 12-Datei-Umstrukturierung auf Qwen3-Coder 30B bei 32K context brennt das Fenster schnell durch — wechsle zu einem 128K-Context-Modell (DeepSeek Coder V3, Llama 3.3 70B) für nicht-triviale Arbeit.',
-          'Für tiefere Cline-Konfiguration einschließlich auto-approve Allow-Lists, siehe [Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=de).',
+          'Für tiefere Cline-Konfiguration einschließlich auto-approve Allow-Lists, siehe [Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent in 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
           {
@@ -1582,7 +1582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Das tiefere Problem:** Multi-Agent-Abstraktion fügt Turns hinzu, ohne Fähigkeit hinzuzufügen. Ein einzelner Agent mit der gleichen Tool-Oberfläche und einem längeren Scratchpad macht die gleiche Aufgabe in weniger Tokens mit weniger Drift. Das „Team"-Framing ist anthropomorph, nicht architektonisch.',
           '**Wo es vielleicht funktioniert:** eng definierte Aufgaben mit harten Hand-Off-Grenzen — zum Beispiel, ein Writing-Team-Workflow (Recherche → Outline → Draft → Edit), wo jeder Schritt ein Deliverable hat und der nächste Schritt frühere Überlegung ignoriert. Wir fanden keine echte Workflow, wo MetaGPT einen Single-Agent-Harness mit einen Checklist-Prompt überlistet.',
           '**Verdikt:** fehlgeschlagen. Der Bug ist konzeptuell, nicht in der Implementierung. Single-Agent-Harnesses mit strukturierten Prompts schlagen Multi-Agent-Harnesses bei jeder Aufgabe, die wir durchführten, ab.',
-          'Für Prompting-Techniken, die die Zuverlässigkeit jeder Single-Agent-Schleife verbessern, siehe [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — das gleiche strukturierte-Reasoning-Muster, das einem Modell hilft zu denken, hilft einem einzelnen Agent, kohärent zu bleiben.',
+          'Für Prompting-Techniken, die die Zuverlässigkeit jeder Single-Agent-Schleife verbessern, siehe [Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — das gleiche strukturierte-Reasoning-Muster, das einem Modell hilft zu denken, hilft einem einzelnen Agent, kohärent zu bleiben.',
         ],
       },
       autogpt: {
@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Fehlgeschlagene Überwachungs-Muster:** Genehmigungsmüdigkeit. Über ~30 Approvals in einer Sitzung, Menschen Gummistempel. Das Harness, das zu viele Approvals erfordert, trainiert dich aus der Überprüfung, an welchem Punkt das Sicherheits-Gate fiktiv ist.',
           '**Der richtige Knopf: auto-approve Allow-Lists.** Lese-Tools (read_file, list_files, search_files, list_directory) sind sicher zu auto-approve. Schreib-Tools (write_to_file, replace_in_file, execute_command, browser_action mit Form-Submission) sind nicht. Diese einzelne Einstellung ist die Differenz zwischen einem nützlichen Agent und einem mühsamen.',
           '**Die richtige Unit: pro-Aufgabe Approval-Count.** Wenn du einen Stack evaluierst, zähle Approvals auf einer repräsentativen echten Aufgabe — nicht auf einer Demo-Aufgabe. Wenn die Anzahl über 20 ist, spart der Stack dir nicht wirklich Arbeit.',
-          'Für Prompting-Techniken, die die Überwachungs-Kosten durch Verbesserung der Tool-Call-Qualität reduzieren, siehe [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de).',
+          'Für Prompting-Techniken, die die Überwachungs-Kosten durch Verbesserung der Tool-Call-Qualität reduzieren, siehe [Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting).',
         ],
         callouts: [
           {
@@ -1751,11 +1751,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de) — was Agenten unter der Haube ermöglicht; Protokoll-Schicht für Dateisystem, Datenbank, Browser und GitHub-Tools.',
-          '[Beste lokale Modelle für Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026?lang=de) — die Modell-Schicht; Kopf-an-Kopf-Benchmarks für die oben empfohlenen Tool-Caller (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
-          '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=de) — angrenzender Harness-Vergleich für Code-formige Arbeit.',
-          '[Lokale KI-Agenten Business-Workflows EU-Compliance](/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=de) — angewendeter Kontext für Unternehmen, die unter GDPR/EU AI Act operieren.',
-          '[Beste lokale LLMs in 2026](/local-llms/best-local-llms-2026?lang=de) — Modell-Autorität für die breitere Open-Weights-Landschaft.',
+          '[Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026) — was Agenten unter der Haube ermöglicht; Protokoll-Schicht für Dateisystem, Datenbank, Browser und GitHub-Tools.',
+          '[Beste lokale Modelle für Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — die Modell-Schicht; Kopf-an-Kopf-Benchmarks für die oben empfohlenen Tool-Caller (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
+          '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent in 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — angrenzender Harness-Vergleich für Code-formige Arbeit.',
+          '[Lokale KI-Agenten Business-Workflows EU-Compliance](/de/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — angewendeter Kontext für Unternehmen, die unter GDPR/EU AI Act operieren.',
+          '[Beste lokale LLMs in 2026](/de/local-llms/best-local-llms-2026) — Modell-Autorität für die breitere Open-Weights-Landschaft.',
           '[Power Local LLM Hub](/power-local-llm) — volle Guide-Bibliothek.',
         ],
       },
@@ -2108,11 +2108,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: '相关阅读',
         items: [
-          '[连接Ollama到数据库和API：本地代理设置2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh) — 代理工作原理；数据库、文件系统、浏览器Tool的协议层。',
-          '[2026年最佳本地Tool-calling模型](/power-local-llm/best-local-models-tool-calling-2026?lang=zh) — 模型层；推荐Tool-caller基准测试。',
-          '[Continue.dev vs Cline vs Aider：2026年最佳本地代理](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=zh) — 代码工作比较。',
-          '[本地AI代理商业工作流和监管合规](/power-local-llm/local-ai-agents-business-workflows-compliance?lang=zh) — 企业部署指南。',
-          '[2026年最佳本地LLM](/local-llms/best-local-llms-2026?lang=zh) — 更广泛开放权重LLM概览。',
+          '[连接Ollama到数据库和API：本地代理设置2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 代理工作原理；数据库、文件系统、浏览器Tool的协议层。',
+          '[2026年最佳本地Tool-calling模型](/zh/power-local-llm/best-local-models-tool-calling-2026) — 模型层；推荐Tool-caller基准测试。',
+          '[Continue.dev vs Cline vs Aider：2026年最佳本地代理](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 代码工作比较。',
+          '[本地AI代理商业工作流和监管合规](/zh/power-local-llm/local-ai-agents-business-workflows-compliance) — 企业部署指南。',
+          '[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026) — 更广泛开放权重LLM概览。',
           '[Power Local LLM Hub](/power-local-llm) — 代码、RAG、代理、创意工作完整指南库。',
         ],
       },
@@ -2123,7 +2123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '本地AI代理2026：实际可行的方案（以及失败的原因）',
       description:
         '6个本地AI代理框架的诚实测试（Cline、Continue.dev、LangGraph、AutoGPT、OpenInterpreter、MetaGPT），针对5项真实任务。2个可靠运行，3个意外失败，1个无法使用。包括企业部署指南。',
-      url: 'https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work?lang=zh',
+      url: 'https://www.promptquorum.com/zh/power-local-llm/autonomous-local-agents-actually-work',
       inLanguage: 'zh',
       image: 'https://www.promptquorum.com/og-images/autonomous-local-agents-actually-work.png',
       datePublished: '2026-05-07',

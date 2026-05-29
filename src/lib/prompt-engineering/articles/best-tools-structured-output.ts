@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-tools-structured-output-json?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
       about: [
@@ -585,12 +585,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[Structured Output und JSON-Modus](/prompt-engineering/structured-output-json-mode?lang=de) — Wie JSON-Modus auf OpenAI-, Anthropic- und Google-APIs funktioniert; wann Format-Durchsetzung vs. Schema-Validierung.',
-          '[Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — Risiken bei der Akzeptierung von Benutzereingaben in strukturierten Prompts; Bereinigungsstrategien.',
-          '[Wie man Prompt-Qualität bewertet](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) — Genauigkeit, Konsistenz und Instruction-Following auf Structured Output-Schemas messen.',
-          '[Prompts über Modelle hinweg testen](/prompt-engineering/how-to-test-prompts-across-models?lang=de) — Denselben Test-Satz auf GPT, Claude und Gemini ausführen; Bestehensraten vergleichen.',
-          '[Prompt Engineering vs. Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=de) — Wann strukturiertes Prompting ausreicht vs. wann Model Fine-Tuning benötigt wird.',
-          '[Prompt Engineering Setup für kleine Teams](/prompt-engineering/prompt-engineering-setup-small-teams?lang=de) — Workflows mit strukturierter Datenausgabe für Teams von 2–15 Personen aufbauen.'
+          '[Structured Output und JSON-Modus](/de/prompt-engineering/structured-output-json-mode) — Wie JSON-Modus auf OpenAI-, Anthropic- und Google-APIs funktioniert; wann Format-Durchsetzung vs. Schema-Validierung.',
+          '[Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Risiken bei der Akzeptierung von Benutzereingaben in strukturierten Prompts; Bereinigungsstrategien.',
+          '[Wie man Prompt-Qualität bewertet](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Genauigkeit, Konsistenz und Instruction-Following auf Structured Output-Schemas messen.',
+          '[Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Denselben Test-Satz auf GPT, Claude und Gemini ausführen; Bestehensraten vergleichen.',
+          '[Prompt Engineering vs. Fine-Tuning](/de/prompt-engineering/prompt-engineering-vs-fine-tuning) — Wann strukturiertes Prompting ausreicht vs. wann Model Fine-Tuning benötigt wird.',
+          '[Prompt Engineering Setup für kleine Teams](/de/prompt-engineering/prompt-engineering-setup-small-teams) — Workflows mit strukturierter Datenausgabe für Teams von 2–15 Personen aufbauen.'
         ]
       },
       faq: {
@@ -711,7 +711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-tools-structured-output-json?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
       about: [
@@ -926,12 +926,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Structured Output y JSON Mode](/prompt-engineering/structured-output-json-mode?lang=es) — Cómo funciona el modo JSON en APIs de OpenAI, Anthropic y Google; cuándo usar cumplimiento de formato vs validación de esquema.',
-          '[Prompt Injection y seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — Riesgos al aceptar entrada de usuario en prompts estructurados; estrategias de sanitización.',
-          '[Cómo evaluar la calidad de prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — Mide precisión, consistencia y seguimiento de instrucciones en tus esquemas de structured output.',
-          '[Cómo testear prompts entre modelos](/prompt-engineering/how-to-test-prompts-across-models?lang=es) — Ejecuta el mismo conjunto de tests en GPT, Claude y Gemini; compara tasas de paso.',
-          '[Prompt Engineering vs Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=es) — Cuándo el prompting estructurado es suficiente vs cuándo necesitas fine-tuning del modelo.',
-          '[Configuración de prompt engineering para equipos pequeños](/prompt-engineering/prompt-engineering-setup-small-teams?lang=es) — Construir flujos de trabajo con salida de datos estructurada para equipos de 2–15.'
+          '[Structured Output y JSON Mode](/es/prompt-engineering/structured-output-json-mode) — Cómo funciona el modo JSON en APIs de OpenAI, Anthropic y Google; cuándo usar cumplimiento de formato vs validación de esquema.',
+          '[Prompt Injection y seguridad](/es/prompt-engineering/prompt-injection-and-security) — Riesgos al aceptar entrada de usuario en prompts estructurados; estrategias de sanitización.',
+          '[Cómo evaluar la calidad de prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality) — Mide precisión, consistencia y seguimiento de instrucciones en tus esquemas de structured output.',
+          '[Cómo testear prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Ejecuta el mismo conjunto de tests en GPT, Claude y Gemini; compara tasas de paso.',
+          '[Prompt Engineering vs Fine-Tuning](/es/prompt-engineering/prompt-engineering-vs-fine-tuning) — Cuándo el prompting estructurado es suficiente vs cuándo necesitas fine-tuning del modelo.',
+          '[Configuración de prompt engineering para equipos pequeños](/es/prompt-engineering/prompt-engineering-setup-small-teams) — Construir flujos de trabajo con salida de datos estructurada para equipos de 2–15.'
         ]
       },
       faq: {
@@ -1021,7 +1021,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-tools-structured-output-json?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
       about: [
@@ -1247,12 +1247,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Structured Output et mode JSON](/prompt-engineering/structured-output-json-mode?lang=fr) — Comment fonctionne le mode JSON sur les APIs OpenAI, Anthropic et Google ; quand utiliser l\'application de format vs la validation de schéma.',
-          '[Injection de prompt et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Risques lors de l\'acceptation de saisies utilisateur dans des prompts structurés ; stratégies d\'assainissement.',
-          '[Évaluer la qualité des prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) — Mesurer la précision, la cohérence et le suivi des instructions sur vos schémas Structured Output.',
-          '[Tester les prompts sur plusieurs modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) — Exécuter le même ensemble de tests sur GPT, Claude et Gemini ; comparer les taux de réussite.',
-          '[Prompt Engineering vs Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=fr) — Quand le prompt structuré suffit vs quand le fine-tuning de modèle est nécessaire.',
-          '[Configuration Prompt Engineering pour petites équipes](/prompt-engineering/prompt-engineering-setup-small-teams?lang=fr) — Construire des workflows avec sortie de données structurées pour des équipes de 2 à 15 personnes.'
+          '[Structured Output et mode JSON](/fr/prompt-engineering/structured-output-json-mode) — Comment fonctionne le mode JSON sur les APIs OpenAI, Anthropic et Google ; quand utiliser l\'application de format vs la validation de schéma.',
+          '[Injection de prompt et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Risques lors de l\'acceptation de saisies utilisateur dans des prompts structurés ; stratégies d\'assainissement.',
+          '[Évaluer la qualité des prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Mesurer la précision, la cohérence et le suivi des instructions sur vos schémas Structured Output.',
+          '[Tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécuter le même ensemble de tests sur GPT, Claude et Gemini ; comparer les taux de réussite.',
+          '[Prompt Engineering vs Fine-Tuning](/fr/prompt-engineering/prompt-engineering-vs-fine-tuning) — Quand le prompt structuré suffit vs quand le fine-tuning de modèle est nécessaire.',
+          '[Configuration Prompt Engineering pour petites équipes](/fr/prompt-engineering/prompt-engineering-setup-small-teams) — Construire des workflows avec sortie de données structurées pour des équipes de 2 à 15 personnes.'
         ]
       },
       faq: {
@@ -1342,7 +1342,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-tools-structured-output-json?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
       about: [
@@ -1564,12 +1564,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
-          '[Structured OutputとJSONモード](/prompt-engineering/structured-output-json-mode?lang=ja) — OpenAI、Anthropic、Google APIでのJSONモードの仕組み；フォーマット強制とスキーマバリデーションの使い分け。',
-          '[プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — 構造化プロンプトでユーザー入力を受け入れる際のリスク；サニタイズ戦略。',
-          '[プロンプト品質の評価方法](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja) — Structured Outputスキーマの精度、一貫性、指示遵守を測定。',
-          '[モデル間でプロンプトをテストする方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja) — GPT、Claude、Geminiで同じテストセットを実行；合格率を比較。',
-          '[プロンプトエンジニアリングとファインチューニング](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=ja) — 構造化プロンプティングで十分な場合とモデルファインチューニングが必要な場合。',
-          '[小チーム向けプロンプトエンジニアリング設定](/prompt-engineering/prompt-engineering-setup-small-teams?lang=ja) — 2〜15人のチーム向け構造化データ出力ワークフロー構築。'
+          '[Structured OutputとJSONモード](/ja/prompt-engineering/structured-output-json-mode) — OpenAI、Anthropic、Google APIでのJSONモードの仕組み；フォーマット強制とスキーマバリデーションの使い分け。',
+          '[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — 構造化プロンプトでユーザー入力を受け入れる際のリスク；サニタイズ戦略。',
+          '[プロンプト品質の評価方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — Structured Outputスキーマの精度、一貫性、指示遵守を測定。',
+          '[モデル間でプロンプトをテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT、Claude、Geminiで同じテストセットを実行；合格率を比較。',
+          '[プロンプトエンジニアリングとファインチューニング](/ja/prompt-engineering/prompt-engineering-vs-fine-tuning) — 構造化プロンプティングで十分な場合とモデルファインチューニングが必要な場合。',
+          '[小チーム向けプロンプトエンジニアリング設定](/ja/prompt-engineering/prompt-engineering-setup-small-teams) — 2〜15人のチーム向け構造化データ出力ワークフロー構築。'
         ]
       },
       faq: {
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-tools-structured-output-json?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
       about: [
@@ -1890,12 +1890,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[结构化输出与JSON模式](/prompt-engineering/structured-output-json-mode?lang=zh) — OpenAI、Anthropic、Google API的JSON模式工作原理；格式强制与模式验证的使用场景。',
-          '[Prompt注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 在结构化Prompt中接受用户输入的风险；净化策略。',
-          '[如何评估Prompt质量](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh) — 在结构化输出模式上测量准确性、一致性和指令遵循度。',
-          '[如何跨模型测试Prompt](/prompt-engineering/how-to-test-prompts-across-models?lang=zh) — 在GPT、Claude和Gemini上运行相同测试集；比较通过率。',
-          '[Prompt工程与微调对比](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=zh) — 结构化Prompt何时足够，何时需要模型微调。',
-          '[小团队的Prompt工程配置](/prompt-engineering/prompt-engineering-setup-small-teams?lang=zh) — 为2至15人团队构建结构化数据输出工作流。'
+          '[结构化输出与JSON模式](/zh/prompt-engineering/structured-output-json-mode) — OpenAI、Anthropic、Google API的JSON模式工作原理；格式强制与模式验证的使用场景。',
+          '[Prompt注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — 在结构化Prompt中接受用户输入的风险；净化策略。',
+          '[如何评估Prompt质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 在结构化输出模式上测量准确性、一致性和指令遵循度。',
+          '[如何跨模型测试Prompt](/zh/prompt-engineering/how-to-test-prompts-across-models) — 在GPT、Claude和Gemini上运行相同测试集；比较通过率。',
+          '[Prompt工程与微调对比](/zh/prompt-engineering/prompt-engineering-vs-fine-tuning) — 结构化Prompt何时足够，何时需要模型微调。',
+          '[小团队的Prompt工程配置](/zh/prompt-engineering/prompt-engineering-setup-small-teams) — 为2至15人团队构建结构化数据输出工作流。'
         ]
       },
       faq: {

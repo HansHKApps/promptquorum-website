@@ -383,7 +383,7 @@ schema: {
         },
         gpuSpeicher: {
           title: 'Wie konfigurieren Sie GPU-Speicher in LM Studio?',
-          content: 'LM Studio lässt Sie kontrollieren, wie viel GPU VRAM das Modell verwendet. Informationen zu VRAM-Anforderungen nach Modell finden Sie unter [How Much VRAM for Local LLMs](/local-llms/how-much-vram-local-llm?lang=de):',
+          content: 'LM Studio lässt Sie kontrollieren, wie viel GPU VRAM das Modell verwendet. Informationen zu VRAM-Anforderungen nach Modell finden Sie unter [How Much VRAM for Local LLMs](/de/local-llms/how-much-vram-local-llm):',
           items: [
             '1. Klicken Sie auf **Einstellungen** (Zahnradsymbol unten links).',
             '2. Finden Sie den **GPU-Beschleunigung**-Schieber (Standard: 100 %).',
@@ -394,7 +394,7 @@ schema: {
         },
         kontextFenster: {
           title: 'Wie erweitern Sie das Kontextfenster?',
-          content: 'Das Kontextfenster ist die maximale Anzahl der Token (Text), die das Modell lesen kann. Das Erweitern ermöglicht längere Konversationen, verbraucht aber mehr VRAM. Hinweise zu modellspezifischen Kontextgrenzen finden Sie in der [Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de) Vergleich.',
+          content: 'Das Kontextfenster ist die maximale Anzahl der Token (Text), die das Modell lesen kann. Das Erweitern ermöglicht längere Konversationen, verbraucht aber mehr VRAM. Hinweise zu modellspezifischen Kontextgrenzen finden Sie in der [Qwen vs Llama vs Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) Vergleich.',
           items: [
             '1. Öffnen Sie Einstellungen → Server.',
             '2. Suchen Sie nach **Kontextlänge** (Standard: integrierte Modellgrenze).',
@@ -405,7 +405,7 @@ schema: {
         },
         lokaleAPI: {
           title: 'Wie aktivieren Sie die lokale API von LM Studio (Beta)?',
-          content: 'Die lokale API von LM Studio (Beta seit April 2026) ahmt die API von OpenAI nach. Weitere Informationen zu lokalem API-Setup und Alternativen finden Sie unter [Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api?lang=de):',
+          content: 'Die lokale API von LM Studio (Beta seit April 2026) ahmt die API von OpenAI nach. Weitere Informationen zu lokalem API-Setup und Alternativen finden Sie unter [Local LLM OpenAI-Compatible API](/de/local-llms/local-llm-openai-compatible-api):',
           codeBlock: '# 1. Öffnen Sie LM Studio Einstellungen → Server\n# 2. Schalten Sie "Enable local API server" ein\n# 3. API läuft unter http://localhost:1234/v1\n\n# 4. Verwenden Sie es wie Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="nicht-erforderlich"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hallo"}]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
         },
@@ -492,14 +492,14 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
-            '[Wie man LM Studio installiert](/local-llms/how-to-install-lm-studio?lang=de) - Vollständige Installationsanleitung für macOS, Windows und Linux.',
-            '[Wie viel VRAM für lokale LLMs](/local-llms/how-much-vram-local-llm?lang=de) - Hardware-Anforderungen und VRAM-Planung für verschiedene Modellgrößen.',
-            '[Lokaler LLM Hardware-Leitfaden 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) - GPU-, CPU- und RAM-Empfehlungen für optimale Leistung.',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de) - Modellvergleich und Qualitäts-Benchmarks zur Auswahl helfen.',
-            '[Die besten lokalen LLMs zum Programmieren](/local-llms/best-local-llms-for-coding?lang=de) - Spezialisierte Modell-Rankings für Code-Vervollständigung.',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=de) - Feature-Vergleich zwischen den zwei beliebtesten Tools.',
-            '[Lokale LLM OpenAI-kompatible API](/local-llms/local-llm-openai-compatible-api?lang=de) - So stellen Sie Ihr lokales Modell als API zur Verfügung.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) - Alternative Inferenz-Engines und deren Abwägungen.',
+            '[Wie man LM Studio installiert](/de/local-llms/how-to-install-lm-studio) - Vollständige Installationsanleitung für macOS, Windows und Linux.',
+            '[Wie viel VRAM für lokale LLMs](/de/local-llms/how-much-vram-local-llm) - Hardware-Anforderungen und VRAM-Planung für verschiedene Modellgrößen.',
+            '[Lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) - GPU-, CPU- und RAM-Empfehlungen für optimale Leistung.',
+            '[Qwen vs Llama vs Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) - Modellvergleich und Qualitäts-Benchmarks zur Auswahl helfen.',
+            '[Die besten lokalen LLMs zum Programmieren](/de/local-llms/best-local-llms-for-coding) - Spezialisierte Modell-Rankings für Code-Vervollständigung.',
+            '[How to Install LM Studio](/de/local-llms/how-to-install-lm-studio) - Feature-Vergleich zwischen den zwei beliebtesten Tools.',
+            '[Lokale LLM OpenAI-kompatible API](/de/local-llms/local-llm-openai-compatible-api) - So stellen Sie Ihr lokales Modell als API zur Verfügung.',
+            '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) - Alternative Inferenz-Engines und deren Abwägungen.',
           ],
         },
         sources: {
@@ -757,7 +757,7 @@ schema: {
         },
         gpuMemoire: {
           title: 'Comment configurer mémoire GPU dans LM Studio ?',
-          content: 'LM Studio contrôle combien VRAM le modèle utilise. Pour besoins VRAM par modèle, voir [How Much VRAM for Local LLMs](/local-llms/how-much-vram-local-llm?lang=fr):',
+          content: 'LM Studio contrôle combien VRAM le modèle utilise. Pour besoins VRAM par modèle, voir [How Much VRAM for Local LLMs](/fr/local-llms/how-much-vram-local-llm):',
           items: [
             '1. Cliquez **Paramètres** (icône engrenage bas-gauche).',
             '2. Trouvez curseur **Accélération GPU** (défaut : 100 %).',
@@ -768,7 +768,7 @@ schema: {
         },
         fenetrContexte: {
           title: 'Comment étendre la fenêtre de contexte ?',
-          content: 'La fenêtre contexte est nombre maximum de tokens (texte) que le modèle lit. L\'étendre permet conversations plus longues mais utilise plus VRAM. Pour limites contexte par modèle, voir comparaison [Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr).',
+          content: 'La fenêtre contexte est nombre maximum de tokens (texte) que le modèle lit. L\'étendre permet conversations plus longues mais utilise plus VRAM. Pour limites contexte par modèle, voir comparaison [Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral).',
           items: [
             '1. Ouvrez Paramètres → Serveur.',
             '2. Cherchez **Longueur contexte** (défaut : limite modèle intégrée).',
@@ -779,7 +779,7 @@ schema: {
         },
         apiLocale: {
           title: 'Comment activer l\'API locale LM Studio (Beta) ?',
-          content: 'L\'API locale LM Studio (Beta depuis avril 2026) imite l\'API OpenAI. Pour plus sur setup API locale et alternatives, voir [Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api?lang=fr):',
+          content: 'L\'API locale LM Studio (Beta depuis avril 2026) imite l\'API OpenAI. Pour plus sur setup API locale et alternatives, voir [Local LLM OpenAI-Compatible API](/fr/local-llms/local-llm-openai-compatible-api):',
           codeBlock: '# 1. Ouvrez LM Studio Paramètres → Serveur\n# 2. Activez "Enable local API server"\n# 3. API tourne sur http://localhost:1234/v1\n\n# 4. Utilisez comme Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="pas-requis"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Bonjour"}]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
         },
@@ -857,14 +857,14 @@ schema: {
         relatedReading: {
           title: 'Ressources connexes',
           items: [
-            '[Comment installer LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) - Guide complet pour macOS, Windows et Linux.',
-            '[Combien VRAM pour LLMs locaux](/local-llms/how-much-vram-local-llm?lang=fr) - Besoins hardware et planification VRAM pour différentes tailles modèles.',
-            '[Guide hardware LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) - Recommandations GPU, CPU, RAM pour performance optimale.',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) - Comparaison modèles et benchmarks qualité pour choisir.',
-            '[Meilleurs LLMs locaux pour programmation](/local-llms/best-local-llms-for-coding?lang=fr) - Classements modèles spécialisés pour complétion code.',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) - Comparaison fonctionnalités entre deux outils populaires.',
-            '[API locale LLM compatible OpenAI](/local-llms/local-llm-openai-compatible-api?lang=fr) - Comment exposer votre modèle local en tant qu\'API.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) - Moteurs inférence alternatifs et compromis.',
+            '[Comment installer LM Studio](/fr/local-llms/how-to-install-lm-studio) - Guide complet pour macOS, Windows et Linux.',
+            '[Combien VRAM pour LLMs locaux](/fr/local-llms/how-much-vram-local-llm) - Besoins hardware et planification VRAM pour différentes tailles modèles.',
+            '[Guide hardware LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) - Recommandations GPU, CPU, RAM pour performance optimale.',
+            '[Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral) - Comparaison modèles et benchmarks qualité pour choisir.',
+            '[Meilleurs LLMs locaux pour programmation](/fr/local-llms/best-local-llms-for-coding) - Classements modèles spécialisés pour complétion code.',
+            '[How to Install LM Studio](/fr/local-llms/how-to-install-lm-studio) - Comparaison fonctionnalités entre deux outils populaires.',
+            '[API locale LLM compatible OpenAI](/fr/local-llms/local-llm-openai-compatible-api) - Comment exposer votre modèle local en tant qu\'API.',
+            '[Local LLM Hardware Guide 2026](/fr/local-llms/local-llm-hardware-guide-2026) - Moteurs inférence alternatifs et compromis.',
           ],
         },
         sources: {
@@ -984,7 +984,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/lm-studio-advanced-features',
         'inLanguage': 'ja',
         'headline': 'LM Studio高度な機能 2026: GPU、API、ファインチューニング',
         'description': 'LM Studio高度な機能：GPU最適化、コンテキストウィンドウ、API、LoRAファインチューニング、バッチ推論。デベロッパーガイド。無料--2026年4月。',
@@ -1110,10 +1110,10 @@ schema: {
           id: 'related-reading',
           title: '関連資料',
           items: [
-            '[LM Studioのインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) -- macOS、Windows、Linuxの完全インストールガイド。',
-            '[ローカルLLMに必要なVRAM量](/local-llms/how-much-vram-local-llm?lang=ja) -- 異なるモデルサイズのハードウェア要件とVRAM計画。',
-            '[Ollama vs LM Studio](/local-llms/lm-studio-vs-ollama?lang=ja) -- 詳細な比較。',
-            '[ローカルLLM OpenAI互換API](/local-llms/local-llm-openai-compatible-api?lang=ja) -- APIドキュメント。',
+            '[LM Studioのインストール方法](/ja/local-llms/how-to-install-lm-studio) -- macOS、Windows、Linuxの完全インストールガイド。',
+            '[ローカルLLMに必要なVRAM量](/ja/local-llms/how-much-vram-local-llm) -- 異なるモデルサイズのハードウェア要件とVRAM計画。',
+            '[Ollama vs LM Studio](/ja/local-llms/lm-studio-vs-ollama) -- 詳細な比較。',
+            '[ローカルLLM OpenAI互換API](/ja/local-llms/local-llm-openai-compatible-api) -- APIドキュメント。',
           ],
         },
         sources: {
@@ -1137,7 +1137,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/lm-studio-advanced-features',
         'inLanguage': 'zh',
         'headline': 'LM Studio高级功能 2026: GPU、API、微调',
         'description': 'LM Studio高级功能：GPU优化、上下文窗口、API、LoRA微调和批量推理。开发者指南。免费--2026年4月。',
@@ -1263,10 +1263,10 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[如何安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) -- macOS、Windows和Linux的完整安装指南。',
-            '[本地LLM需要多少VRAM](/local-llms/how-much-vram-local-llm?lang=zh) -- 不同模型大小的硬件要求和VRAM规划。',
-            '[Ollama vs LM Studio](/local-llms/lm-studio-vs-ollama?lang=zh) -- 详细比较。',
-            '[本地LLM OpenAI兼容API](/local-llms/local-llm-openai-compatible-api?lang=zh) -- API文档。',
+            '[如何安装LM Studio](/zh/local-llms/how-to-install-lm-studio) -- macOS、Windows和Linux的完整安装指南。',
+            '[本地LLM需要多少VRAM](/zh/local-llms/how-much-vram-local-llm) -- 不同模型大小的硬件要求和VRAM规划。',
+            '[Ollama vs LM Studio](/zh/local-llms/lm-studio-vs-ollama) -- 详细比较。',
+            '[本地LLM OpenAI兼容API](/zh/local-llms/local-llm-openai-compatible-api) -- API文档。',
           ],
         },
         sources: {

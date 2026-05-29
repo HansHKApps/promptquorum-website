@@ -507,11 +507,11 @@ DEEPSEEK_MODEL=deepseek-chat
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparaison complète 2026](/local-llms/qwen-vs-claude-vs-deepseek-local-2026?lang=fr)',
-          '[Comment faire tourner Qwen 3 en local — Guide Ollama + LM Studio](/local-llms/run-qwen-locally-guide-2026?lang=fr)',
-          '[Comparer les modèles sur PromptQuorum](/compare?lang=fr)',
-          '[Meilleurs LLM locaux pour le code en 2026](/local-llms/best-local-llms-for-coding?lang=fr)',
-          '[Rejoindre la liste d\'attente PromptQuorum](/waitlist?lang=fr)',
+          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparaison complète 2026](/fr/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Comment faire tourner Qwen 3 en local — Guide Ollama + LM Studio](/fr/local-llms/run-qwen-locally-guide-2026)',
+          '[Comparer les modèles sur PromptQuorum](/fr/compare)',
+          '[Meilleurs LLM locaux pour le code en 2026](/fr/local-llms/best-local-llms-for-coding)',
+          '[Rejoindre la liste d\'attente PromptQuorum](/fr/waitlist)',
         ],
       },
       faq: {
@@ -770,11 +770,11 @@ DEEPSEEK_MODEL=deepseek-chat
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparación completa 2026](/local-llms/qwen-vs-claude-vs-deepseek-local-2026?lang=es)',
-          '[Cómo ejecutar Qwen 3 localmente — Guía Ollama + LM Studio](/local-llms/run-qwen-locally-guide-2026?lang=es)',
-          '[Comparar modelos en PromptQuorum](/compare?lang=es)',
-          '[Los mejores LLMs locales para código en 2026](/local-llms/best-local-llms-for-coding?lang=es)',
-          '[Únete a la lista de espera de PromptQuorum](/waitlist?lang=es)',
+          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparación completa 2026](/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Cómo ejecutar Qwen 3 localmente — Guía Ollama + LM Studio](/es/local-llms/run-qwen-locally-guide-2026)',
+          '[Comparar modelos en PromptQuorum](/es/compare)',
+          '[Los mejores LLMs locales para código en 2026](/es/local-llms/best-local-llms-for-coding)',
+          '[Únete a la lista de espera de PromptQuorum](/es/waitlist)',
         ],
       },
       faq: {

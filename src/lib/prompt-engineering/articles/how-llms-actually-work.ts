@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/how-llms-actually-work',
         inLanguage: 'de',
         headline: 'Wie LLMs wirklich funktionieren: Tokens, Attention und Inferenz',
         description: 'Große Sprachmodelle sagen das nächste Token per Wahrscheinlichkeitsverteilung voraus — kein Verstehen, kein Abrufen. Lerne Tokenisierung, Attention, RLHF und Inferenzparameter.',
@@ -720,7 +720,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/how-llms-actually-work',
         inLanguage: 'es',
         headline: 'Cómo funcionan realmente los LLMs: tokens, attention e inferencia',
         description: 'Los grandes modelos de lenguaje predicen el siguiente token mediante distribuciones de probabilidad — no comprensión. Aprende tokenización, transformer attention, RLHF y parámetros de inferencia.',
@@ -882,11 +882,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — cómo aplicar el conocimiento de la arquitectura LLM al diseño sistemático de prompts',
-            '[Fundamentals: Context Windows Explained — Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=es) — análisis profundo de los límites del context window y las estrategias de recuperación',
-            '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=es) — precios de tokens, límites de tasa y optimización de costes en GPT-4o, Claude y Gemini',
-            '[Fundamentals: AI Hallucinations Explained — Why LLMs Make Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=es) — cómo la predicción de tokens y la falta de recuperación de hechos llevan a errores de confianza',
-            '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es) — las ocho restricciones estructurales que comparten todos los LLMs y el workaround de ingeniería para cada una',
+            '[Fundamentals: What Is Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — cómo aplicar el conocimiento de la arquitectura LLM al diseño sistemático de prompts',
+            '[Fundamentals: Context Windows Explained — Why AI Forgets](/es/prompt-engineering/context-windows-explained-why-ai-forgets) — análisis profundo de los límites del context window y las estrategias de recuperación',
+            '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — precios de tokens, límites de tasa y optimización de costes en GPT-4o, Claude y Gemini',
+            '[Fundamentals: AI Hallucinations Explained — Why LLMs Make Things Up](/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — cómo la predicción de tokens y la falta de recuperación de hechos llevan a errores de confianza',
+            '[AI Limitations: What LLMs Can\'t Do](/es/prompt-engineering/ai-limitations-what-llms-cant-do) — las ocho restricciones estructurales que comparten todos los LLMs y el workaround de ingeniería para cada una',
           ],
         },
         howToStart: {
@@ -976,7 +976,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/how-llms-actually-work',
         inLanguage: 'fr',
         headline: 'Comment fonctionnent vraiment les LLMs : tokens, attention et inférence',
         description: 'Les grands modèles de langage prédisent le prochain token par distribution de probabilités — sans comprendre ni récupérer. Apprenez la tokenisation, l\'attention, le RLHF et les paramètres d\'inférence.',
@@ -1221,7 +1221,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/how-llms-actually-work',
         inLanguage: 'ja',
         headline: 'LLMは実際にどのように機能するか：トークン、注意、推論',
         description: '大規模言語モデルは確率分布経由で次のトークンを予測します — 理解や取得ではなく。トークン化、注意、RLHF、推論パラメータを学んでください。',
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/how-llms-actually-work',
         inLanguage: 'zh',
         headline: '大型语言模型实际如何工作：令牌、注意力与推理',
         description: '大型语言模型通过概率分布预测下一个令牌——而非理解或检索。学习令牌化、注意力机制、RLHF和推理参数。',

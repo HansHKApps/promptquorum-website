@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=de',
+    url: 'https://www.promptquorum.com/de/prompt-engineering/prompt-engineering-glossary',
     inLanguage: 'de',
     headline: 'Prompt Engineering Glossar: 500 Essenzielle Begriffe für Entwickler & KI-Teams',
     datePublished: '2026-03-28',
@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=es',
+    url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-glossary',
     inLanguage: 'es',
     headline: 'Glosario de Prompt Engineering: 500 términos clave',
     datePublished: '2026-03-28',
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=fr',
+    url: 'https://www.promptquorum.com/fr/prompt-engineering/prompt-engineering-glossary',
     inLanguage: 'fr',
     headline: 'Glossaire de l\'ingénierie de prompt : 500 termes essentiels',
     datePublished: '2026-03-28',
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/prompt-engineering-glossary',
     inLanguage: 'ja',
     headline: 'プロンプトエンジニアリング用語集：500の必須用語',
     datePublished: '2026-03-28',
@@ -1010,7 +1010,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/prompt-engineering-glossary',
         inLanguage: 'zh',
         headline: '提示工程词汇表：500个必备术语',
         datePublished: '2026-03-28',

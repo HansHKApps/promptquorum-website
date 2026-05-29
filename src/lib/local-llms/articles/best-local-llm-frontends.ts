@@ -482,7 +482,7 @@ schema: {
             },
             {
               q: 'Welches Frontend ist am besten für RAG?',
-              a: 'Open WebUI hat die reifste RAG-Implementierung. Laden Sie Dokumente hoch, und das Modell wird Fragen basierend darauf beantworten. Für erweiterte RAG-Workflows, siehe [Beste lokale RAG-Tools](/local-llms/best-local-rag-tools?lang=de).',
+              a: 'Open WebUI hat die reifste RAG-Implementierung. Laden Sie Dokumente hoch, und das Modell wird Fragen basierend darauf beantworten. Für erweiterte RAG-Workflows, siehe [Beste lokale RAG-Tools](/de/local-llms/best-local-rag-tools).',
             },
             {
               q: 'Brauche ich überhaupt ein Frontend?',
@@ -521,11 +521,11 @@ schema: {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) -- Einrichtungsleitfaden für die zugrunde liegende Modell-Engine.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=de) -- Vergleich der zwei beliebtesten lokalen LLM-Tools.',
-            '[Beste lokale RAG-Tools](/local-llms/best-local-rag-tools?lang=de) -- Tiefgang in Open WebUI RAG und andere dokumentbasierte LLM-Tools.',
-            '[Lokale LLMs mit OpenAI-kompatibler API](/local-llms/local-llm-openai-compatible-api?lang=de) -- Wie man die API direkt aus Code verwendet.',
-            '[Lokale LLMs mit VS Code und Cursor](/local-llms/local-llms-with-vscode-cursor?lang=de) -- Continue.dev und VS Code Integrationen einrichten.',
+            '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- Einrichtungsleitfaden für die zugrunde liegende Modell-Engine.',
+            '[Ollama vs LM Studio](/de/local-llms/ollama-vs-lm-studio) -- Vergleich der zwei beliebtesten lokalen LLM-Tools.',
+            '[Beste lokale RAG-Tools](/de/local-llms/best-local-rag-tools) -- Tiefgang in Open WebUI RAG und andere dokumentbasierte LLM-Tools.',
+            '[Lokale LLMs mit OpenAI-kompatibler API](/de/local-llms/local-llm-openai-compatible-api) -- Wie man die API direkt aus Code verwendet.',
+            '[Lokale LLMs mit VS Code und Cursor](/de/local-llms/local-llms-with-vscode-cursor) -- Continue.dev und VS Code Integrationen einrichten.',
           ],
         },
         sources: {
@@ -544,7 +544,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Beste lokale LLM-Frontends 2026: Open WebUI, Enchanted UI und mehr',
         'description': 'Vergleich von 8 lokalen LLM-Frontends: Open WebUI (25k Sterne, RAG), Enchanted UI (schnell), Jan AI (Desktop), Continue.dev (Code) und weitere. Funktionsvergleich und Einrichtungsanleitung.',
-        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/best-local-llm-frontends',
         'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
@@ -839,11 +839,11 @@ schema: {
         },
         relatedReading: {
           items: [
-            '[Ollama vs LM Studio vs GPT4All : comparaison 2026](/local-llms/ollama-vs-lm-studio-vs-gpt4all?lang=fr) -- serveurs backend pour interfaces.',
-            '[Comment installer Ollama : guide complet](/local-llms/how-to-install-ollama?lang=fr) -- démarrage Ollama avant toute interface.',
-            '[Open WebUI RAG guide :](/local-llms/open-webui-rag-setup?lang=fr) -- configurer document upload + recherche.',
-            '[Modèles locaux meilleurs 2026 :](/local-llms/best-local-llm-models-2026?lang=fr) -- sélectionner bon modèle pour votre matériel.',
-            '[Continue.dev profond dive :](/local-llms/continue-dev-setup-guide?lang=fr) -- optimiser complétion code avec VS Code.',
+            '[Ollama vs LM Studio vs GPT4All : comparaison 2026](/fr/local-llms/ollama-vs-lm-studio-vs-gpt4all) -- serveurs backend pour interfaces.',
+            '[Comment installer Ollama : guide complet](/fr/local-llms/how-to-install-ollama) -- démarrage Ollama avant toute interface.',
+            '[Open WebUI RAG guide :](/fr/local-llms/open-webui-rag-setup) -- configurer document upload + recherche.',
+            '[Modèles locaux meilleurs 2026 :](/fr/local-llms/best-local-llm-models-2026) -- sélectionner bon modèle pour votre matériel.',
+            '[Continue.dev profond dive :](/fr/local-llms/continue-dev-setup-guide) -- optimiser complétion code avec VS Code.',
           ],
         },
         sources: {
@@ -861,7 +861,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llm-frontends',
         'inLanguage': 'fr',
         'headline': 'Meilleures interfaces locales LLM en 2026 : Open WebUI, Enchanted UI et autres',
         'description': 'Comparez 8 interfaces LLM locales : Open WebUI (25k étoiles, RAG), Enchanted UI (plus rapide), Jan AI (bureau), Continue.dev (code) et plus. Comparaison et guide de configuration.',
@@ -1164,11 +1164,11 @@ schema: {
         },
         relatedReading: {
           items: [
-            '[Ollama vs LM Studio vs GPT4All：2026比較](/local-llms/ollama-vs-lm-studio-vs-gpt4all?lang=ja) -- フロントエンド用バックエンドサーバー。',
-            '[Ollama インストール：完全ガイド](/local-llms/how-to-install-ollama?lang=ja) -- 任意フロントエンド前にOllama起動。',
-            '[Open WebUI RAG ガイド](/local-llms/open-webui-rag-setup?lang=ja) -- ドキュメントアップロード＋検索設定。',
-            '[ベストローカルLLM 2026](/local-llms/best-local-llm-models-2026?lang=ja) -- ハードウェア向け適切モデル選択。',
-            '[Continue.dev ディープダイブ](/local-llms/continue-dev-setup-guide?lang=ja) -- VS Codeコード補完最適化。',
+            '[Ollama vs LM Studio vs GPT4All：2026比較](/ja/local-llms/ollama-vs-lm-studio-vs-gpt4all) -- フロントエンド用バックエンドサーバー。',
+            '[Ollama インストール：完全ガイド](/ja/local-llms/how-to-install-ollama) -- 任意フロントエンド前にOllama起動。',
+            '[Open WebUI RAG ガイド](/ja/local-llms/open-webui-rag-setup) -- ドキュメントアップロード＋検索設定。',
+            '[ベストローカルLLM 2026](/ja/local-llms/best-local-llm-models-2026) -- ハードウェア向け適切モデル選択。',
+            '[Continue.dev ディープダイブ](/ja/local-llms/continue-dev-setup-guide) -- VS Codeコード補完最適化。',
           ],
         },
         sources: {
@@ -1185,7 +1185,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llm-frontends',
         'inLanguage': 'ja',
         'headline': '2026年最高のローカルLLMフロントエンド：Open WebUI、Enchanted UIなど',
         'description': '8つのローカルLLMインターフェース比較：Open WebUI（25kスター、RAG）、Enchanted UI（最速）、Jan AI（デスクトップ）、Continue.dev（コード）など。機能比較＆セットアップ。',
@@ -1491,11 +1491,11 @@ schema: {
         },
         relatedReading: {
           items: [
-            '[Ollama vs LM Studio vs GPT4All：2026对比](/local-llms/ollama-vs-lm-studio-vs-gpt4all?lang=zh) -- 前端的后端服务器。',
-            '[Ollama安装：完整指南](/local-llms/how-to-install-ollama?lang=zh) -- 任何前端之前启动Ollama。',
-            '[Open WebUI RAG指南](/local-llms/open-webui-rag-setup?lang=zh) -- 配置文档上传+搜索。',
-            '[最佳本地LLM 2026](/local-llms/best-local-llm-models-2026?lang=zh) -- 为您的硬件选合适模型。',
-            '[Continue.dev深入探讨](/local-llms/continue-dev-setup-guide?lang=zh) -- 使用VS Code优化代码补全。',
+            '[Ollama vs LM Studio vs GPT4All：2026对比](/zh/local-llms/ollama-vs-lm-studio-vs-gpt4all) -- 前端的后端服务器。',
+            '[Ollama安装：完整指南](/zh/local-llms/how-to-install-ollama) -- 任何前端之前启动Ollama。',
+            '[Open WebUI RAG指南](/zh/local-llms/open-webui-rag-setup) -- 配置文档上传+搜索。',
+            '[最佳本地LLM 2026](/zh/local-llms/best-local-llm-models-2026) -- 为您的硬件选合适模型。',
+            '[Continue.dev深入探讨](/zh/local-llms/continue-dev-setup-guide) -- 使用VS Code优化代码补全。',
           ],
         },
         sources: {
@@ -1512,7 +1512,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llm-frontends',
         'inLanguage': 'zh',
         'headline': '2026年最佳本地LLM前端：Open WebUI、Enchanted UI等',
         'description': '8个本地LLM界面对比：Open WebUI（25k星、RAG）、Enchanted UI（最速）、Jan AI（桌面）、Continue.dev（代码）等。功能对比和设置指南。',
@@ -1795,7 +1795,7 @@ schema: {
             },
             {
               q: '¿Qué frontend es mejor para RAG?',
-              a: 'Open WebUI tiene la implementación de RAG más madura. Sube documentos y el modelo responderá preguntas basándose en ellos. Para flujos de trabajo RAG avanzados, consulta [Mejores herramientas RAG locales](/local-llms/best-local-rag-tools?lang=es).',
+              a: 'Open WebUI tiene la implementación de RAG más madura. Sube documentos y el modelo responderá preguntas basándose en ellos. Para flujos de trabajo RAG avanzados, consulta [Mejores herramientas RAG locales](/es/local-llms/best-local-rag-tools).',
             },
             {
               q: '¿Necesito un frontend?',
@@ -1827,11 +1827,11 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Cómo instalar Ollama](/local-llms/how-to-install-ollama?lang=es) -- Guía de configuración del motor de modelos.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=es) -- Comparativa de las dos herramientas para LLMs locales más populares.',
-            '[Mejores herramientas RAG locales](/local-llms/best-local-rag-tools?lang=es) -- Análisis detallado del RAG de Open WebUI y otras herramientas de LLM basadas en documentos.',
-            '[API local compatible con OpenAI para LLMs](/local-llms/local-llm-openai-compatible-api?lang=es) -- Cómo usar la API directamente desde código.',
-            '[LLMs locales con VS Code y Cursor](/local-llms/local-llms-with-vscode-cursor?lang=es) -- Configuración de Continue.dev e integraciones con VS Code.',
+            '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- Guía de configuración del motor de modelos.',
+            '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) -- Comparativa de las dos herramientas para LLMs locales más populares.',
+            '[Mejores herramientas RAG locales](/es/local-llms/best-local-rag-tools) -- Análisis detallado del RAG de Open WebUI y otras herramientas de LLM basadas en documentos.',
+            '[API local compatible con OpenAI para LLMs](/es/local-llms/local-llm-openai-compatible-api) -- Cómo usar la API directamente desde código.',
+            '[LLMs locales con VS Code y Cursor](/es/local-llms/local-llms-with-vscode-cursor) -- Configuración de Continue.dev e integraciones con VS Code.',
           ],
         },
         sources: {
@@ -1842,7 +1842,7 @@ schema: {
             '[Jan AI. (2026). "Jan AI Official Site."](https://jan.ai) -- Documentación de la app de escritorio y guía de gestión de modelos.',
             '[Continue.dev. (2026). "Continue Documentation."](https://continue.dev/docs) -- Configuración de la extensión para VS Code y JetBrains para completado de código con LLMs locales.',
             '[Lobe Chat Contributors. (2024). "Lobe Chat GitHub."](https://github.com/lobehub/lobe-chat) -- Código fuente e instrucciones de despliegue de la interfaz de chat centrada en la privacidad.',
-            'La elección del frontend afecta a la experiencia del usuario, no a la salida del modelo. La calidad de la salida depende de los prompts, no de las interfaces: la [guía de ingeniería de prompts](https://www.promptquorum.com/prompt-engineering?lang=es) funciona con todos los frontends.',
+            'La elección del frontend afecta a la experiencia del usuario, no a la salida del modelo. La calidad de la salida depende de los prompts, no de las interfaces: la [guía de ingeniería de prompts](https://www.promptquorum.com/es/prompt-engineering) funciona con todos los frontends.',
           ],
         },
       },
@@ -1851,7 +1851,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Los mejores frontends para LLMs locales 2026',
         'description': 'Compara 8 frontends para LLMs locales: Open WebUI (25k estrellas, RAG), Enchanted UI (el más rápido), Jan AI (app de escritorio). Tabla de características y guía de configuración.',
-        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=es',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-frontends',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',

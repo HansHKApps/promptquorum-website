@@ -215,8 +215,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
-            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=de) -- Vision kann bei Code-Verständnis helfen.',
-            '[Local RAG 2026](/local-llms/local-rag-2026?lang=de) -- Kombinieren Sie Vision mit RAG für Dokumentenverarbeitung.',
+            '[Best Local LLMs for Coding](/de/local-llms/best-local-llms-for-coding) -- Vision kann bei Code-Verständnis helfen.',
+            '[Local RAG 2026](/de/local-llms/local-rag-2026) -- Kombinieren Sie Vision mit RAG für Dokumentenverarbeitung.',
           ],
         },
         sources: {
@@ -326,8 +326,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Meilleurs LLMs locaux pour coding](/local-llms/best-local-llms-for-coding?lang=fr) -- Vision peut aider compréhension code.',
-            '[RAG local 2026](/local-llms/local-rag-2026?lang=fr) -- Combinez vision avec RAG pour traitement documents.',
+            '[Meilleurs LLMs locaux pour coding](/fr/local-llms/best-local-llms-for-coding) -- Vision peut aider compréhension code.',
+            '[RAG local 2026](/fr/local-llms/local-rag-2026) -- Combinez vision avec RAG pour traitement documents.',
           ],
         },
         sources: {
@@ -437,8 +437,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[コーディング用最適なローカルLLM](/local-llms/best-local-llms-for-coding?lang=ja) -- ビジョンはコード理解に役立ちます。',
-            '[ローカルRAG 2026](/local-llms/local-rag-2026?lang=ja) -- ビジョンをRAGと組み合わせてドキュメント処理。',
+            '[コーディング用最適なローカルLLM](/ja/local-llms/best-local-llms-for-coding) -- ビジョンはコード理解に役立ちます。',
+            '[ローカルRAG 2026](/ja/local-llms/local-rag-2026) -- ビジョンをRAGと組み合わせてドキュメント処理。',
           ],
         },
         sources: {
@@ -548,8 +548,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[编码最佳本地LLM](/local-llms/best-local-llms-for-coding?lang=zh) -- 视觉可以帮助代码理解。',
-            '[本地RAG 2026](/local-llms/local-rag-2026?lang=zh) -- 将视觉与RAG结合进行文档处理。',
+            '[编码最佳本地LLM](/zh/local-llms/best-local-llms-for-coding) -- 视觉可以帮助代码理解。',
+            '[本地RAG 2026](/zh/local-llms/local-rag-2026) -- 将视觉与RAG结合进行文档处理。',
           ],
         },
         sources: {

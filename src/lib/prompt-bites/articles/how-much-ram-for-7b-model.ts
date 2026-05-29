@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Wählen Sie nur CPU, wenn Sie 16+ GB System-RAM haben und Ihre Aufgaben im Batch- oder Hintergrundmodus laufen (nächtliche Dokumentenanalyse, geplante Zusammenfassungen). Die ~5 tok/s sind für nicht-interaktive Arbeit akzeptabel und vermeiden GPU-Kosten vollständig.',
           'Wählen Sie die GPU, wenn Sie interaktiven Chat oder Coding benötigen. Der 5×-Geschwindigkeitsunterschied spielt bei Echtzeitnutzung eine wesentliche Rolle. Selbst eine Budget-RTX 3050 6 GB liefert ~22 tok/s bei Llama 3 8B Q4_K_M — schnell genug für Chat, der sich unmittelbar anfühlt.',
-          'Für die vollständige VRAM-Aufschlüsselung nach GPU-Tier, siehe <a href="/prompt-bites/how-much-vram-for-local-llm?lang=de" class="text-primary hover:underline">wie viel VRAM ein lokales LLM benötigt</a>. Für die vollständige Hardware-Referenz, siehe den <a href="/local-llms/how-much-vram-local-llm?lang=de" class="text-primary hover:underline">vollständigen VRAM-Leitfaden für lokale LLMs</a>.',
+          'Für die vollständige VRAM-Aufschlüsselung nach GPU-Tier, siehe <a href="/de/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">wie viel VRAM ein lokales LLM benötigt</a>. Für die vollständige Hardware-Referenz, siehe den <a href="/de/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">vollständigen VRAM-Leitfaden für lokale LLMs</a>.',
         ],
       },
       faq: {
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Reichen 8 GB System-RAM, um ein 7B-Modell ohne GPU zu betreiben?',
-            a: 'Ja. Bei reiner CPU-Nutzung verbraucht ein 7B-Modell bei Q4 ~5–6 GB System-RAM und läuft mit 3–6 tok/s auf einem modernen 8-Kern-Prozessor. Sehen Sie <a href="/prompt-bites/how-much-vram-for-local-llm?lang=de" class="text-primary hover:underline">den VRAM-Leitfaden</a> für GPU-beschleunigte Optionen.',
+            a: 'Ja. Bei reiner CPU-Nutzung verbraucht ein 7B-Modell bei Q4 ~5–6 GB System-RAM und läuft mit 3–6 tok/s auf einem modernen 8-Kern-Prozessor. Sehen Sie <a href="/de/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">den VRAM-Leitfaden</a> für GPU-beschleunigte Optionen.',
           },
           {
             q: 'Wie viel VRAM benötigt Llama 3 8B genau?',
@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Optez pour le CPU uniquement si vous disposez de 16+ Go de RAM système et que vos tâches sont par lot ou en arrière-plan (analyse de documents nocturne, résumés planifiés). La vitesse de ~5 tok/s est acceptable pour les travaux non interactifs et évite entièrement les coûts GPU.',
           'Choisissez le GPU pour le chat interactif ou le coding. L\'écart de vitesse de 5× est déterminant en temps réel. Même un RTX 3050 6 Go d\'entrée de gamme offre ~22 tok/s sur Llama 3 8B Q4_K_M — suffisamment rapide pour un chat qui paraît instantané.',
-          'Pour la répartition complète de la VRAM par tier GPU, consultez <a href="/prompt-bites/how-much-vram-for-local-llm?lang=fr" class="text-primary hover:underline">combien de VRAM nécessite un LLM local</a>. Pour la référence matérielle complète, consultez le <a href="/local-llms/how-much-vram-local-llm?lang=fr" class="text-primary hover:underline">guide VRAM complet pour LLMs locaux</a>.',
+          'Pour la répartition complète de la VRAM par tier GPU, consultez <a href="/fr/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">combien de VRAM nécessite un LLM local</a>. Pour la référence matérielle complète, consultez le <a href="/fr/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">guide VRAM complet pour LLMs locaux</a>.',
         ],
       },
       faq: {
@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '8 Go de RAM système suffisent-ils pour faire tourner un modèle 7B sans GPU ?',
-            a: 'Oui. En mode CPU uniquement, un modèle 7B en Q4 utilise ~5–6 Go de RAM système et tourne à 3–6 tok/s sur un processeur 8 cœurs moderne. Consultez <a href="/prompt-bites/how-much-vram-for-local-llm?lang=fr" class="text-primary hover:underline">le guide VRAM</a> pour les options accélérées par GPU.',
+            a: 'Oui. En mode CPU uniquement, un modèle 7B en Q4 utilise ~5–6 Go de RAM système et tourne à 3–6 tok/s sur un processeur 8 cœurs moderne. Consultez <a href="/fr/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">le guide VRAM</a> pour les options accélérées par GPU.',
           },
           {
             q: 'De combien de VRAM Llama 3 8B a-t-il précisément besoin ?',
@@ -300,7 +300,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'システムRAMが16 GB以上あり、タスクがバッチ処理やバックグラウンド処理（夜間の文書分析、スケジュール要約）の場合はCPUのみを選択してください。約5 tok/sの速度は非インタラクティブな作業では許容範囲であり、GPU費用を完全に節約できます。',
           'インタラクティブなチャットやコーディングが必要な場合はGPUを選択してください。5倍の速度差はリアルタイム利用において重要です。バジェットRTX 3050 6 GBでもLlama 3 8B Q4_K_Mで約22 tok/sを実現でき、即時に感じられるチャットに十分な速度です。',
-          'GPUのVRAMティア別の詳細な内訳については、<a href="/prompt-bites/how-much-vram-for-local-llm?lang=ja" class="text-primary hover:underline">ローカルLLMに必要なVRAM量</a>をご覧ください。完全なハードウェアリファレンスについては、<a href="/local-llms/how-much-vram-local-llm?lang=ja" class="text-primary hover:underline">ローカルLLMの完全VRAMガイド</a>をご参照ください。',
+          'GPUのVRAMティア別の詳細な内訳については、<a href="/ja/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">ローカルLLMに必要なVRAM量</a>をご覧ください。完全なハードウェアリファレンスについては、<a href="/ja/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">ローカルLLMの完全VRAMガイド</a>をご参照ください。',
         ],
       },
       faq: {
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'GPUなしで7BモデルをCPUのみで動かすのに8 GBのシステムRAMで十分ですか？',
-            a: 'はい。CPUのみでの動作時、Q4の7BモデルはシステムRAMを約5〜6 GB使用し、現代の8コアプロセッサで3〜6 tok/sで動作します。GPU加速オプションについては<a href="/prompt-bites/how-much-vram-for-local-llm?lang=ja" class="text-primary hover:underline">VRAMガイド</a>をご覧ください。',
+            a: 'はい。CPUのみでの動作時、Q4の7BモデルはシステムRAMを約5〜6 GB使用し、現代の8コアプロセッサで3〜6 tok/sで動作します。GPU加速オプションについては<a href="/ja/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">VRAMガイド</a>をご覧ください。',
           },
           {
             q: 'Llama 3 8Bに必要なVRAMは正確にはどれくらいですか？',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '当您拥有16 GB以上系统RAM且任务为批处理或后台模式（夜间文档分析、定时摘要）时，选择仅CPU方案。约5 tok/s的速度对于非交互式工作是可接受的，且完全避免了GPU成本。',
           '当您需要交互式对话或编程辅助时，选择GPU。5倍的速度差在实时使用中至关重要。即使是入门级RTX 3050 6 GB，在Llama 3 8B Q4_K_M上也能达到约22 tok/s——足以实现流畅自然的对话体验。',
-          '有关GPU各显存层级的完整分类，请参阅<a href="/prompt-bites/how-much-vram-for-local-llm?lang=zh" class="text-primary hover:underline">本地LLM所需显存量</a>。有关完整的硬件参考，请参阅<a href="/local-llms/how-much-vram-local-llm?lang=zh" class="text-primary hover:underline">本地LLM完整显存指南</a>。',
+          '有关GPU各显存层级的完整分类，请参阅<a href="/zh/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">本地LLM所需显存量</a>。有关完整的硬件参考，请参阅<a href="/zh/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">本地LLM完整显存指南</a>。',
         ],
       },
       faq: {
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '8 GB系统RAM在不使用GPU的情况下足以运行7B模型吗？',
-            a: '可以。仅使用CPU时，Q4的7B模型使用约5–6 GB系统RAM，在现代8核处理器上以3–6 tok/s运行。GPU加速选项请参阅<a href="/prompt-bites/how-much-vram-for-local-llm?lang=zh" class="text-primary hover:underline">显存指南</a>。',
+            a: '可以。仅使用CPU时，Q4的7B模型使用约5–6 GB系统RAM，在现代8核处理器上以3–6 tok/s运行。GPU加速选项请参阅<a href="/zh/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">显存指南</a>。',
           },
           {
             q: 'Llama 3 8B确切需要多少显存？',
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Elige solo CPU cuando tienes 16+ GB de RAM del sistema y tus tareas son por lotes o en segundo plano (análisis nocturno de documentos, resúmenes programados). La tasa de ~5 tok/s es aceptable para trabajo no interactivo y evita completamente los costes de GPU.',
           'Elige GPU cuando necesites chat o programación interactivos. La diferencia de velocidad de 5× importa en uso en tiempo real. Incluso una RTX 3050 de bajo coste con 6 GB ofrece ~22 tok/s en Llama 3 8B Q4_K_M — suficientemente rápido para un chat que se siente instantáneo.',
-          'Para el desglose completo de VRAM por nivel de GPU, consulta <a href="/prompt-bites/how-much-vram-for-local-llm?lang=es" class="text-primary hover:underline">cuánta VRAM necesita un LLM local</a>. Para la referencia de hardware completa, consulta la <a href="/local-llms/how-much-vram-local-llm?lang=es" class="text-primary hover:underline">guía completa de VRAM para LLMs locales</a>.',
+          'Para el desglose completo de VRAM por nivel de GPU, consulta <a href="/es/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">cuánta VRAM necesita un LLM local</a>. Para la referencia de hardware completa, consulta la <a href="/es/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">guía completa de VRAM para LLMs locales</a>.',
         ],
       },
       faq: {
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Son suficientes 8 GB de RAM del sistema para ejecutar un modelo 7B sin GPU?',
-            a: 'Sí. En modo solo-CPU, un modelo 7B en Q4 usa ~5–6 GB de RAM del sistema y funciona a 3–6 tok/s en un procesador moderno de 8 núcleos. Consulta <a href="/prompt-bites/how-much-vram-for-local-llm?lang=es" class="text-primary hover:underline">la guía de VRAM</a> para opciones con aceleración GPU.',
+            a: 'Sí. En modo solo-CPU, un modelo 7B en Q4 usa ~5–6 GB de RAM del sistema y funciona a 3–6 tok/s en un procesador moderno de 8 núcleos. Consulta <a href="/es/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">la guía de VRAM</a> para opciones con aceleración GPU.',
           },
           {
             q: '¿Cuánta VRAM necesita exactamente Llama 3 8B?',

@@ -449,7 +449,7 @@ schema: {
         'by-hardware': {
           id: 'by-hardware',
           title: 'Welches lokale LLM sollten Sie auf Ihrer Hardware ausführen?',
-          content: '**Wählen Sie das größte Modell, das Ihr [VRAM](/local-llms/how-much-vram-local-llm?lang=de) bei Q4 aufnehmen kann, und wechseln Sie dann auf kleinere Quantisierung, bevor Sie zu einem kleineren Modell wechseln. Quantisierung beeinträchtigt die Qualität weniger als ein Modellgrößenwechsel.**',
+          content: '**Wählen Sie das größte Modell, das Ihr [VRAM](/de/local-llms/how-much-vram-local-llm) bei Q4 aufnehmen kann, und wechseln Sie dann auf kleinere Quantisierung, bevor Sie zu einem kleineren Modell wechseln. Quantisierung beeinträchtigt die Qualität weniger als ein Modellgrößenwechsel.**',
           columns: ['Hardware', 'Bestes Modell', 'Geschwindigkeit', 'Qualität', 'Hinweise'],
           rows: [
             { 'Hardware': 'RTX 3060 8 GB', 'Bestes Modell': 'Mistral 7B Q4', 'Geschwindigkeit': '15 Tok/Sek', 'Qualität': 'Exzellent', 'Hinweise': 'Referenzwert für „Low-End-GPU"' },
@@ -463,7 +463,7 @@ schema: {
           id: 'gpu-vs-cpu',
           title: 'GPU vs. CPU für lokale LLMs: Was ist schneller auf Low-End-Hardware?',
           content: [
-            '**GPU-Inferenz:** 15–20 Tok/Sek auf RTX 3060. Erfordert CUDA-Setup. Schnell, beste Qualität. Weitere kostengünstige Optionen finden Sie im [Budget-GPU-Leitfaden](/local-llms/best-budget-gpus-local-llm?lang=de).',
+            '**GPU-Inferenz:** 15–20 Tok/Sek auf RTX 3060. Erfordert CUDA-Setup. Schnell, beste Qualität. Weitere kostengünstige Optionen finden Sie im [Budget-GPU-Leitfaden](/de/local-llms/best-budget-gpus-local-llm).',
             '**iGPU (integrierte Grafik):** 5–8 Tok/Sek auf Intel Iris. Kein Setup erforderlich. Langsamer als dedizierte GPU.',
             '**CPU-Inferenz:** 1–5 Tok/Sek auf modernem Multi-Core. Läuft überall. Am langsamsten.',
             '**Regel:** Wenn Sie eine GPU haben (auch integriert), verwenden Sie diese. CPU ist die letzte Option.',
@@ -498,7 +498,7 @@ schema: {
           id: 'quantization',
           title: 'Wie beeinflusst Quantisierung die Geschwindigkeit auf Low-End-PCs?',
           content: [
-            '**Q4 (4-Bit):** ~1 % Qualitätsverlust, 50 % VRAM-Einsparung. Standardauswahl. Details zu allen [Quantisierungsstufen](/local-llms/llm-quantization-explained?lang=de) finden Sie im vollständigen Leitfaden.',
+            '**Q4 (4-Bit):** ~1 % Qualitätsverlust, 50 % VRAM-Einsparung. Standardauswahl. Details zu allen [Quantisierungsstufen](/de/local-llms/llm-quantization-explained) finden Sie im vollständigen Leitfaden.',
             '**Q3 (3-Bit):** ~3 % Qualitätsverlust, 62 % VRAM-Einsparung. Akzeptabel für Chat.',
             '**Q2 (2-Bit):** ~10 % Qualitätsverlust, 75 % VRAM-Einsparung. Riskant; nur bei OOM verwenden.',
             '**Geschwindigkeitsauswirkung:** Q2 ist ~30 % schneller als Q4 durch geringere Speicherbandbreite, nicht durch Berechnung.',
@@ -513,7 +513,7 @@ schema: {
           items: [
             '**AVX-512 aktivieren:** Wenn die CPU dies unterstützt, verwenden Sie `LLAMACPP_AVX512=1 ollama run phi`. ~20 % Geschwindigkeitszuwachs.',
             '**Kontextfenster reduzieren:** Kürzerer Kontext = schneller. Verwenden Sie `--ctx-size 1024` statt 4096.',
-            '**[llama.cpp](/local-llms/how-to-install-ollama?lang=de) statt Ollama verwenden:** Auf CPU leicht schneller (~10 % Gewinn) durch weniger Overhead.',
+            '**[llama.cpp](/de/local-llms/how-to-install-ollama) statt Ollama verwenden:** Auf CPU leicht schneller (~10 % Gewinn) durch weniger Overhead.',
             '**Multithreading deaktivieren:** Kontraintuitiv, aber auf schwachen CPUs ist Single-Threaded schneller (kein Thread-Overhead).',
             '**Auf iGPU auslagern:** Selbst eine schwache integrierte GPU schlägt die CPU. Prüfen Sie mit `lspci` die GPU-Verfügbarkeit.',
           ],
@@ -583,12 +583,12 @@ schema: {
           id: 'related',
           title: 'Weiterführende Lektüre',
           items: [
-            '[Beste Budget-GPUs für lokale LLMs](/local-llms/best-budget-gpus-local-llm?lang=de) — GPU-Empfehlungen für Modelle von 13B–70B.',
-            '[Wie viel VRAM benötigen Sie?](/local-llms/how-much-vram-local-llm?lang=de) — Berechnen Sie den VRAM-Bedarf für jede Modellgröße und Quantisierung.',
-            '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de) — Detaillierte Analyse der Q4-, Q3-, Q2-Quantisierungskompromisse.',
-            '[Lokale LLMs auf Notebooks](/local-llms/local-llm-on-laptop?lang=de) — Inferenz auf MacBook Air, Windows-Notebook oder Chromebook optimieren.',
-            '[Beste Einsteiger-LLM-Modelle 2026](/local-llms/best-beginner-local-llm-models?lang=de) — Empfohlene Einstiegsmodelle für neue Nutzer auf jeder Hardware.',
-            '[Lokaler LLM-Hardware-Leitfaden 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — Vollständige Hardwareanforderungen nach Modellgröße für 2026.',
+            '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — GPU-Empfehlungen für Modelle von 13B–70B.',
+            '[Wie viel VRAM benötigen Sie?](/de/local-llms/how-much-vram-local-llm) — Berechnen Sie den VRAM-Bedarf für jede Modellgröße und Quantisierung.',
+            '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — Detaillierte Analyse der Q4-, Q3-, Q2-Quantisierungskompromisse.',
+            '[Lokale LLMs auf Notebooks](/de/local-llms/local-llm-on-laptop) — Inferenz auf MacBook Air, Windows-Notebook oder Chromebook optimieren.',
+            '[Beste Einsteiger-LLM-Modelle 2026](/de/local-llms/best-beginner-local-llm-models) — Empfohlene Einstiegsmodelle für neue Nutzer auf jeder Hardware.',
+            '[Lokaler LLM-Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) — Vollständige Hardwareanforderungen nach Modellgröße für 2026.',
           ],
         },
         'sources': {
@@ -605,7 +605,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Schnellste lokale LLMs für Low-End-PCs',
-        'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/fastest-local-llms-low-end-pcs',
         'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -718,7 +718,7 @@ schema: {
         '@type': 'ItemList',
         'name': 'Beste lokale LLM-Modelle nach Hardware-Einschränkung',
         'inLanguage': 'de',
-        'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Mistral 7B Q4', 'description': 'RTX 3060 8 GB: 15 Tok/Sek. Bestes Geschwindigkeits-/Qualitätsverhältnis auf Sub-8-GB-GPUs.' },
@@ -798,7 +798,7 @@ schema: {
         'by-hardware': {
           id: 'by-hardware',
           title: 'Quel LLM local faire tourner sur votre matériel ?',
-          content: '**Choisissez le plus grand modèle que votre [VRAM](/local-llms/how-much-vram-local-llm?lang=fr) peut tenir en Q4, puis revenez à une quantification plus faible avant de passer à un modèle plus petit. La quantification dégrade moins la qualité qu\'un changement de taille de modèle.**',
+          content: '**Choisissez le plus grand modèle que votre [VRAM](/fr/local-llms/how-much-vram-local-llm) peut tenir en Q4, puis revenez à une quantification plus faible avant de passer à un modèle plus petit. La quantification dégrade moins la qualité qu\'un changement de taille de modèle.**',
           columns: ['Matériel', 'Meilleur modèle', 'Vitesse', 'Qualité', 'Notes'],
           rows: [
             { 'Matériel': 'RTX 3060 8 Go', 'Meilleur modèle': 'Mistral 7B Q4', 'Vitesse': '15 tok/sec', 'Qualité': 'Excellente', 'Notes': 'Référence pour « GPU bas de gamme »' },
@@ -812,7 +812,7 @@ schema: {
           id: 'gpu-vs-cpu',
           title: 'GPU vs CPU pour les LLMs locaux : lequel est plus rapide sur matériel bas de gamme ?',
           content: [
-            '**Inférence GPU :** 15–20 tok/sec sur RTX 3060. Requiert la configuration CUDA. Rapide, meilleure qualité. Consultez le [guide GPU budget](/local-llms/best-budget-gpus-local-llm?lang=fr) pour des options économiques.',
+            '**Inférence GPU :** 15–20 tok/sec sur RTX 3060. Requiert la configuration CUDA. Rapide, meilleure qualité. Consultez le [guide GPU budget](/fr/local-llms/best-budget-gpus-local-llm) pour des options économiques.',
             '**iGPU (graphiques intégrés) :** 5–8 tok/sec sur Intel Iris. Aucune configuration requise. Plus lent que le GPU dédié.',
             '**Inférence CPU :** 1–5 tok/sec sur multi-cœur moderne. Fonctionne partout. Le plus lent.',
             '**Règle :** Si vous avez un GPU (même intégré), utilisez-le. Le CPU est le dernier recours.',
@@ -847,7 +847,7 @@ schema: {
           id: 'quantization',
           title: 'Comment la quantification affecte-t-elle la vitesse sur PC bas de gamme ?',
           content: [
-            '**Q4 (4 bits) :** ~1 % de perte qualité, 50 % d\'économie VRAM. Choix standard. Consultez le [guide quantification](/local-llms/llm-quantization-explained?lang=fr) pour tous les niveaux.',
+            '**Q4 (4 bits) :** ~1 % de perte qualité, 50 % d\'économie VRAM. Choix standard. Consultez le [guide quantification](/fr/local-llms/llm-quantization-explained) pour tous les niveaux.',
             '**Q3 (3 bits) :** ~3 % de perte qualité, 62 % d\'économie VRAM. Acceptable pour le chat.',
             '**Q2 (2 bits) :** ~10 % de perte qualité, 75 % d\'économie VRAM. Risqué ; à utiliser uniquement en cas d\'OOM.',
             '**Impact vitesse :** Q2 est ~30 % plus rapide que Q4 par réduction de la bande passante mémoire, pas des calculs.',
@@ -862,7 +862,7 @@ schema: {
           items: [
             '**Activer AVX-512 :** Si le CPU le supporte, utilisez `LLAMACPP_AVX512=1 ollama run phi`. ~20 % de gain de vitesse.',
             '**Réduire la fenêtre de contexte :** Contexte plus court = plus rapide. Utilisez `--ctx-size 1024` au lieu de 4096.',
-            '**Utiliser [llama.cpp](/local-llms/how-to-install-ollama?lang=fr) plutôt qu\'Ollama :** Légèrement plus rapide sur CPU (~10 % de gain) par réduction des surcharges.',
+            '**Utiliser [llama.cpp](/fr/local-llms/how-to-install-ollama) plutôt qu\'Ollama :** Légèrement plus rapide sur CPU (~10 % de gain) par réduction des surcharges.',
             '**Désactiver le multithreading :** Contre-intuitif, mais sur les CPU faibles, le mono-thread est plus rapide (pas de surcharge de threads).',
             '**Décharger sur l\'iGPU :** Même un GPU intégré faible surpasse le CPU. Vérifiez la disponibilité GPU avec `lspci`.',
           ],
@@ -930,12 +930,12 @@ schema: {
           id: 'related',
           title: 'Pour aller plus loin',
           items: [
-            '[Meilleurs GPU budget pour LLMs locaux](/local-llms/best-budget-gpus-local-llm?lang=fr) — Recommandations GPU pour les modèles 13B–70B.',
-            '[Combien de VRAM vous faut-il ?](/local-llms/how-much-vram-local-llm?lang=fr) — Calculez les besoins en VRAM pour toute taille de modèle et quantification.',
-            '[Quantification LLM expliquée](/local-llms/llm-quantization-explained?lang=fr) — Analyse approfondie des compromis Q4, Q3, Q2.',
-            '[LLM local sur portable](/local-llms/local-llm-on-laptop?lang=fr) — Optimiser l\'inférence sur MacBook Air, portable Windows ou Chromebook.',
-            '[Meilleurs modèles LLM locaux débutants 2026](/local-llms/best-beginner-local-llm-models?lang=fr) — Modèles recommandés pour les nouveaux utilisateurs sur tout matériel.',
-            '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Prérequis matériels complets par taille de modèle pour 2026.',
+            '[Meilleurs GPU budget pour LLMs locaux](/fr/local-llms/best-budget-gpus-local-llm) — Recommandations GPU pour les modèles 13B–70B.',
+            '[Combien de VRAM vous faut-il ?](/fr/local-llms/how-much-vram-local-llm) — Calculez les besoins en VRAM pour toute taille de modèle et quantification.',
+            '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) — Analyse approfondie des compromis Q4, Q3, Q2.',
+            '[LLM local sur portable](/fr/local-llms/local-llm-on-laptop) — Optimiser l\'inférence sur MacBook Air, portable Windows ou Chromebook.',
+            '[Meilleurs modèles LLM locaux débutants 2026](/fr/local-llms/best-beginner-local-llm-models) — Modèles recommandés pour les nouveaux utilisateurs sur tout matériel.',
+            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Prérequis matériels complets par taille de modèle pour 2026.',
           ],
         },
         'sources': {
@@ -952,7 +952,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'LLMs locaux les plus rapides pour PC bas de gamme',
-        'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/fastest-local-llms-low-end-pcs',
         'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -1073,7 +1073,7 @@ schema: {
         '@type': 'ItemList',
         'name': 'Meilleurs modèles LLM locaux par contrainte matérielle',
         'inLanguage': 'fr',
-        'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Mistral 7B Q4', 'description': 'RTX 3060 8 Go : 15 tok/sec. Meilleur rapport vitesse/qualité sur GPU sub-8 Go.' },
@@ -1153,7 +1153,7 @@ schema: {
         'by-hardware': {
           id: 'by-hardware',
           title: 'ハードウェア別おすすめローカルLLM',
-          content: '**Q4で[VRAM](/local-llms/how-much-vram-local-llm?lang=ja)に収まる最大モデルを選び、小型モデルに切り替える前にまず量子化を下げてください。量子化はモデルサイズダウンよりも品質低下が少ない。**',
+          content: '**Q4で[VRAM](/ja/local-llms/how-much-vram-local-llm)に収まる最大モデルを選び、小型モデルに切り替える前にまず量子化を下げてください。量子化はモデルサイズダウンよりも品質低下が少ない。**',
           columns: ['ハードウェア', '最適モデル', '速度', '品質', 'メモ'],
           rows: [
             { 'ハードウェア': 'RTX 3060 8GB', '最適モデル': 'Mistral 7B Q4', '速度': '15トークン/秒', '品質': '優秀', 'メモ': '「低スペックGPU」の基準値' },
@@ -1167,7 +1167,7 @@ schema: {
           id: 'gpu-vs-cpu',
           title: 'GPU vs CPU：低スペックハードウェアでどちらが速い？',
           content: [
-            '**GPU推論：** RTX 3060で15〜20トークン/秒。CUDAセットアップが必要。高速、最高品質。費用対効果の高い選択肢は[バジェットGPUガイド](/local-llms/best-budget-gpus-local-llm?lang=ja)を参照。',
+            '**GPU推論：** RTX 3060で15〜20トークン/秒。CUDAセットアップが必要。高速、最高品質。費用対効果の高い選択肢は[バジェットGPUガイド](/ja/local-llms/best-budget-gpus-local-llm)を参照。',
             '**iGPU（統合グラフィックス）：** Intel Irisで5〜8トークン/秒。セットアップ不要。専用GPUより低速。',
             '**CPU推論：** 最新マルチコアで1〜5トークン/秒。どこでも動作。最も低速。',
             '**ルール：** GPUがあれば（統合でも）使用する。CPUは最終手段。',
@@ -1202,7 +1202,7 @@ schema: {
           id: 'quantization',
           title: '量子化は低スペックPCの速度にどう影響する？',
           content: [
-            '**Q4（4ビット）：** 品質低下約1%、VRAM節約50%。標準選択。全[量子化](/local-llms/llm-quantization-explained?lang=ja)レベルの詳細はガイドを参照。',
+            '**Q4（4ビット）：** 品質低下約1%、VRAM節約50%。標準選択。全[量子化](/ja/local-llms/llm-quantization-explained)レベルの詳細はガイドを参照。',
             '**Q3（3ビット）：** 品質低下約3%、VRAM節約62%。チャットに許容範囲。',
             '**Q2（2ビット）：** 品質低下約10%、VRAM節約75%。リスクあり；OOM時のみ使用。',
             '**速度への影響：** Q2はメモリ帯域幅削減によりQ4より約30%速い（計算ではない）。',
@@ -1217,7 +1217,7 @@ schema: {
           items: [
             '**AVX-512を有効化：** CPUが対応していれば`LLAMACPP_AVX512=1 ollama run phi`を使用。約20%高速化。',
             '**コンテキストウィンドウを縮小：** 短いコンテキスト = 高速。4096の代わりに`--ctx-size 1024`を使用。',
-            '**Ollamaの代わりに[llama.cpp](/local-llms/how-to-install-ollama?lang=ja)を使用：** オーバーヘッドが少なくCPUでわずかに速い（約10%ゲイン）。',
+            '**Ollamaの代わりに[llama.cpp](/ja/local-llms/how-to-install-ollama)を使用：** オーバーヘッドが少なくCPUでわずかに速い（約10%ゲイン）。',
             '**マルチスレッドを無効化：** 直感に反するが、弱いCPUではシングルスレッドが速い（スレッドオーバーヘッドなし）。',
             '**iGPUにオフロード：** 弱い統合GPUでもCPUより速い。`lspci`でGPU利用可能性を確認。',
           ],
@@ -1285,12 +1285,12 @@ schema: {
           id: 'related',
           title: '関連記事',
           items: [
-            '[ローカルLLM向けバジェットGPU最新情報](/local-llms/best-budget-gpus-local-llm?lang=ja) — 13B〜70Bモデル向けGPU推奨。',
-            '[必要なVRAM量は？](/local-llms/how-much-vram-local-llm?lang=ja) — あらゆるモデルサイズと量子化のVRAM要件を計算。',
-            '[LLM量子化解説](/local-llms/llm-quantization-explained?lang=ja) — Q4、Q3、Q2量子化のトレードオフを詳しく解説。',
-            '[ノートPCでのローカルLLM](/local-llms/local-llm-on-laptop?lang=ja) — MacBook Air、Windowsノート、Chromebookでの推論最適化。',
-            '[初心者向けローカルLLMモデル2026](/local-llms/best-beginner-local-llm-models?lang=ja) — あらゆるハードウェアの新規ユーザー向け推奨モデル。',
-            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — 2026年のモデルサイズ別ハードウェア要件の完全版。',
+            '[ローカルLLM向けバジェットGPU最新情報](/ja/local-llms/best-budget-gpus-local-llm) — 13B〜70Bモデル向けGPU推奨。',
+            '[必要なVRAM量は？](/ja/local-llms/how-much-vram-local-llm) — あらゆるモデルサイズと量子化のVRAM要件を計算。',
+            '[LLM量子化解説](/ja/local-llms/llm-quantization-explained) — Q4、Q3、Q2量子化のトレードオフを詳しく解説。',
+            '[ノートPCでのローカルLLM](/ja/local-llms/local-llm-on-laptop) — MacBook Air、Windowsノート、Chromebookでの推論最適化。',
+            '[初心者向けローカルLLMモデル2026](/ja/local-llms/best-beginner-local-llm-models) — あらゆるハードウェアの新規ユーザー向け推奨モデル。',
+            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 2026年のモデルサイズ別ハードウェア要件の完全版。',
           ],
         },
         'sources': {
@@ -1307,7 +1307,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': '低スペックPCで動く最速ローカルLLM',
-        'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/fastest-local-llms-low-end-pcs',
         'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -1428,7 +1428,7 @@ schema: {
         '@type': 'ItemList',
         'name': 'ハードウェア制約別ベストローカルLLMモデル',
         'inLanguage': 'ja',
-        'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Mistral 7B Q4', 'description': 'RTX 3060 8GB：15トークン/秒。Sub-8GB GPUで最高の速度/品質バランス。' },
@@ -1508,7 +1508,7 @@ schema: {
         'by-hardware': {
           id: 'by-hardware',
           title: '您应在您的硬件上运行哪种本地LLM？',
-          content: '**选择您的[VRAM](/local-llms/how-much-vram-local-llm?lang=zh)在Q4下能容纳的最大模型，再降低量化级别，最后才考虑切换到更小的模型。量化对质量的影响小于缩小模型规模。**',
+          content: '**选择您的[VRAM](/zh/local-llms/how-much-vram-local-llm)在Q4下能容纳的最大模型，再降低量化级别，最后才考虑切换到更小的模型。量化对质量的影响小于缩小模型规模。**',
           rows: [
             { '硬件': 'RTX 3060 8GB', '最佳模型': 'Mistral 7B Q4', '速度': '15词元/秒', '质量': '优秀', '备注': '"低配GPU"的基准' },
             { '硬件': 'RTX 2060 4GB', '最佳模型': 'Mistral 7B Q2', '速度': '20词元/秒', '质量': '良好', '备注': '质量略降，速度提升' },
@@ -1522,7 +1522,7 @@ schema: {
           id: 'gpu-vs-cpu',
           title: 'GPU vs CPU：低配硬件上哪个更快？',
           content: [
-            '**GPU推理：** RTX 3060上15-20词元/秒。需要CUDA配置。速度快，质量最佳。参见[经济型GPU指南](/local-llms/best-budget-gpus-local-llm?lang=zh)。',
+            '**GPU推理：** RTX 3060上15-20词元/秒。需要CUDA配置。速度快，质量最佳。参见[经济型GPU指南](/zh/local-llms/best-budget-gpus-local-llm)。',
             '**集显（集成显卡）：** Intel Iris上5-8词元/秒。无需额外配置。比独显慢。',
             '**CPU推理：** 现代多核CPU上1-5词元/秒。可在任何地方运行。最慢。',
             '**规则：** 如果有任何GPU（即使是集显），就使用它。CPU是最后手段。',
@@ -1557,7 +1557,7 @@ schema: {
           id: 'quantization',
           title: '量化如何影响低配PC的速度？',
           content: [
-            '**Q4（4位）：** 约1%质量损失，50% VRAM节省。标准选择。所有[量化](/local-llms/llm-quantization-explained?lang=zh)级别的详细说明见完整指南。',
+            '**Q4（4位）：** 约1%质量损失，50% VRAM节省。标准选择。所有[量化](/zh/local-llms/llm-quantization-explained)级别的详细说明见完整指南。',
             '**Q3（3位）：** 约3%质量损失，62% VRAM节省。聊天可接受。',
             '**Q2（2位）：** 约10%质量损失，75% VRAM节省。有风险；仅在内存不足时使用。',
             '**速度影响：** Q2比Q4快约30%，因为内存带宽更少，而非计算量减少。',
@@ -1572,7 +1572,7 @@ schema: {
           items: [
             '**启用AVX-512：** 如果CPU支持，使用 `LLAMACPP_AVX512=1 ollama run phi`。约20%加速。',
             '**减少上下文窗口：** 上下文越短 = 越快。使用 `--ctx-size 1024` 代替4096。',
-            '**使用[llama.cpp](/local-llms/how-to-install-ollama?lang=zh)代替Ollama：** CPU上略快（约10%提升），开销更少。',
+            '**使用[llama.cpp](/zh/local-llms/how-to-install-ollama)代替Ollama：** CPU上略快（约10%提升），开销更少。',
             '**禁用多线程：** 反直觉，但在弱CPU上，单线程更快（无线程开销）。',
             '**卸载到集显：** 即使弱集显也优于CPU。通过 `lspci` 检查GPU可用性。',
           ],
@@ -1640,12 +1640,12 @@ schema: {
           id: 'related',
           title: '相关阅读',
           items: [
-            '[本地LLM最佳经济型GPU](/local-llms/best-budget-gpus-local-llm?lang=zh) — 13B至70B模型的GPU推荐。',
-            '[需要多少VRAM？](/local-llms/how-much-vram-local-llm?lang=zh) — 计算任何模型大小和量化的VRAM需求。',
-            '[LLM量化详解](/local-llms/llm-quantization-explained?lang=zh) — Q4、Q3、Q2量化权衡深度解析。',
-            '[笔记本上的本地LLM](/local-llms/local-llm-on-laptop?lang=zh) — 在MacBook Air、Windows笔记本或Chromebook上优化推理。',
-            '[2026年最佳入门本地LLM模型](/local-llms/best-beginner-local-llm-models?lang=zh) — 适合任何硬件新用户的推荐起始模型。',
-            '[2026年本地LLM硬件指南](/local-llms/local-llm-hardware-guide-2026?lang=zh) — 2026年按模型大小划分的完整硬件需求。',
+            '[本地LLM最佳经济型GPU](/zh/local-llms/best-budget-gpus-local-llm) — 13B至70B模型的GPU推荐。',
+            '[需要多少VRAM？](/zh/local-llms/how-much-vram-local-llm) — 计算任何模型大小和量化的VRAM需求。',
+            '[LLM量化详解](/zh/local-llms/llm-quantization-explained) — Q4、Q3、Q2量化权衡深度解析。',
+            '[笔记本上的本地LLM](/zh/local-llms/local-llm-on-laptop) — 在MacBook Air、Windows笔记本或Chromebook上优化推理。',
+            '[2026年最佳入门本地LLM模型](/zh/local-llms/best-beginner-local-llm-models) — 适合任何硬件新用户的推荐起始模型。',
+            '[2026年本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) — 2026年按模型大小划分的完整硬件需求。',
           ],
         },
         'sources': {
@@ -1662,7 +1662,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': '低配PC最快本地大语言模型',
-        'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/fastest-local-llms-low-end-pcs',
         'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -1783,7 +1783,7 @@ schema: {
         '@type': 'ItemList',
         'name': '按硬件限制分类的最佳本地LLM模型',
         'inLanguage': 'zh',
-        'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Mistral 7B Q4', 'description': 'RTX 3060 8GB：15词元/秒。Sub-8GB GPU上最佳速度/质量。' },

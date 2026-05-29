@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>El Ryzen AI Max 395 intercambia velocidad de GPU por capacidad de memoria.</strong> Una RTX 4090 ejecuta Llama 3.1 8B a ~45 tok/s frente a ~22 tok/s en Strix Halo Vulkan. Para modelos de 7B y 14B, la RTX 4090 es más rápida. Pero la RTX 4090 está limitada a 24 GB de VRAM — Strix Halo MAX 395 tiene 96 GB, lo que permite tamaños de modelo imposibles en cualquier GPU de escritorio.',
           'El caso de uso práctico para Strix Halo es ejecutar modelos de 32B–70B localmente sin APIs en la nube. Qwen 2.5 32B en Q4_K_M (~19 GB) corre a ~7 tok/s — lento para chat interactivo, pero válido para resúmenes en lote, procesamiento de documentos o trabajos de fine-tuning nocturnos. Llama 3.3 70B en Q4_K_M (~41 GB) es alcanzable a ~3 tok/s, adecuado para consultas individuales de alta calidad.',
           'En Windows, Ollama para Strix Halo vuelve por defecto a la inferencia por CPU a mediados de 2026, ya que el soporte ROCm iGPU para gfx1150 aún no está completo en la versión oficial de Ollama para Windows. La ruta Vulkan requiere compilar llama.cpp desde el código fuente con `-DGGML_VULKAN=ON`. Se recomienda Linux para inferencia Strix Halo con aceleración GPU hasta que la ruta ROCm de Windows madure.',
-          'Para comparar con otro hardware APU Apple Silicon, consulta el bite <a href="/prompt-bites/mac-mini-m4-local-llm?lang=es" class="text-primary hover:underline">Mac Mini M4 para LLMs locales</a>, que cubre el enfoque alternativo de memoria unificada en macOS.',
+          'Para comparar con otro hardware APU Apple Silicon, consulta el bite <a href="/es/prompt-bites/mac-mini-m4-local-llm" class="text-primary hover:underline">Mac Mini M4 para LLMs locales</a>, que cubre el enfoque alternativo de memoria unificada en macOS.',
         ],
       },
       faq: {
@@ -737,9 +737,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lecturas relacionadas',
         items: [
-          '[Mac Mini M4 para LLMs locales](/prompt-bites/mac-mini-m4-local-llm?lang=es) — alternativa Apple de memoria unificada a Strix Halo',
-          '[Mejor mini PC para LLM local](/prompt-bites/best-mini-pc-for-local-llm?lang=es) — comparativa de mini PCs con opciones AMD y Apple',
-          '[Mejores GPU económicas para LLMs locales](/local-llms/best-budget-gpus-local-llm?lang=es) — opciones de GPU discreta para builds Linux de escritorio',
+          '[Mac Mini M4 para LLMs locales](/es/prompt-bites/mac-mini-m4-local-llm) — alternativa Apple de memoria unificada a Strix Halo',
+          '[Mejor mini PC para LLM local](/es/prompt-bites/best-mini-pc-for-local-llm) — comparativa de mini PCs con opciones AMD y Apple',
+          '[Mejores GPU económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm) — opciones de GPU discreta para builds Linux de escritorio',
         ],
       },
     },

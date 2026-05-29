@@ -447,15 +447,15 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
           </a>
         )
       }
-      // Internal links: use Next.js Link with lang parameter injection
+      // Internal links: use Next.js Link with language path prefix
       let finalUrl = url
       if (lang !== 'en' && url.startsWith('/') && !url.includes('?lang=')) {
-        // Insert ?lang= before anchor fragment (#) if present
+        // Prepend language prefix before anchor fragment (#) if present
         if (url.includes('#')) {
           const [basePath, anchor] = url.split('#')
-          finalUrl = `${basePath}?lang=${lang}#${anchor}`
+          finalUrl = `/${lang}${basePath}#${anchor}`
         } else {
-          finalUrl = `${url}?lang=${lang}`
+          finalUrl = `/${lang}${url}`
         }
       }
       return (
@@ -474,7 +474,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
         let href = CATEGORY_ANCHORS[label]
         if (lang !== 'en') {
           const [basePath, anchor] = href.split('#')
-          href = `${basePath}?lang=${lang}${anchor ? '#' + anchor : ''}`
+          href = `/${lang}${basePath}${anchor ? '#' + anchor : ''}`
         }
         return (
           <Link key={i} href={href} className="text-primary font-medium hover:underline">
@@ -491,7 +491,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
         const slug = TITLE_TO_SLUG[title]
 
         if (slug) {
-          const href = lang !== 'en' ? `/prompt-engineering/${slug}?lang=${lang}` : `/prompt-engineering/${slug}`
+          const href = lang !== 'en' ? `/${lang}/prompt-engineering/${slug}` : `/prompt-engineering/${slug}`
           return (
             <Link key={i} href={href} className="text-primary font-medium hover:underline">
               {title}
@@ -503,7 +503,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
         let fallbackHref = CATEGORY_ANCHORS[category] ?? '/prompt-engineering'
         if (lang !== 'en' && !fallbackHref.includes('?lang=')) {
           const [basePath, anchor] = fallbackHref.split('#')
-          fallbackHref = `${basePath}?lang=${lang}${anchor ? '#' + anchor : ''}`
+          fallbackHref = `/${lang}${basePath}${anchor ? '#' + anchor : ''}`
         }
         return (
           <Link key={i} href={fallbackHref} className="text-primary font-medium hover:underline">
@@ -1141,9 +1141,9 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {/* Breadcrumb + language */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
-            <a href={lang === 'en' ? '/' : `/?lang=${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
+            <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
             <span>/</span>
-            <a href={lang === 'en' ? '/prompt-engineering' : `/prompt-engineering?lang=${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Prompt Engineering'}</a>
+            <a href={lang === 'en' ? '/prompt-engineering' : `/${lang}/prompt-engineering`} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Prompt Engineering'}</a>
             <span>/</span>
             <span className="text-text-primary font-medium">{article.title}</span>
           </div>
@@ -1359,7 +1359,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
                         <li key={rank} className="flex gap-4 items-start p-4 border border-border rounded-xl hover:border-primary/30 transition-colors">
                           <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">{rank}</span>
                           <div>
-                            <a href={lang === 'en' ? `/prompt-engineering/prompt-engineering-glossary#${anchor}` : `/prompt-engineering/prompt-engineering-glossary?lang=${lang}#${anchor}`} className="font-semibold text-text-primary hover:text-primary transition-colors">
+                            <a href={lang === 'en' ? `/prompt-engineering/prompt-engineering-glossary#${anchor}` : `/${lang}/prompt-engineering/prompt-engineering-glossary#${anchor}`} className="font-semibold text-text-primary hover:text-primary transition-colors">
                               {term}
                             </a>
                             <p className="text-sm text-text-secondary mt-0.5">{reason}</p>
@@ -1598,7 +1598,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             {POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
           </p>
           <a
-            href={lang === 'en' ? '/' : `/?lang=${lang}`}
+            href={lang === 'en' ? '/' : `/${lang}`}
             className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             {POST_UI.ctaButton[lang] ?? POST_UI.ctaButton['en']}
@@ -1606,7 +1606,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         </div>
 
         <p className="text-center mt-8">
-          <a href={lang === 'en' ? '/prompt-engineering' : `/prompt-engineering?lang=${lang}`} className="text-primary hover:text-primary/80 text-sm">
+          <a href={lang === 'en' ? '/prompt-engineering' : `/${lang}/prompt-engineering`} className="text-primary hover:text-primary/80 text-sm">
             {POST_UI.backLink[lang] ?? POST_UI.backLink['en']}
           </a>
         </p>

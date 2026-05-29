@@ -1157,9 +1157,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lectura relacionada',
         items: [
-          '[¿Es seguro DeepSeek para el RGPD?](/prompt-bites/is-deepseek-gdpr-safe?lang=es) — consideraciones de privacidad para familias de modelos específicas',
-          '[¿Es Qwen compatible con el RGPD?](/prompt-bites/is-qwen-gdpr-compliant?lang=es) — consideraciones de privacidad para los pesos de Qwen',
-          '[¿Pueden los LLM locales ayudar con el RGPD?](/prompt-bites/can-local-llm-help-gdpr?lang=es) — la inferencia local como estrategia de privacidad',
+          '[¿Es seguro DeepSeek para el RGPD?](/es/prompt-bites/is-deepseek-gdpr-safe) — consideraciones de privacidad para familias de modelos específicas',
+          '[¿Es Qwen compatible con el RGPD?](/es/prompt-bites/is-qwen-gdpr-compliant) — consideraciones de privacidad para los pesos de Qwen',
+          '[¿Pueden los LLM locales ayudar con el RGPD?](/es/prompt-bites/can-local-llm-help-gdpr) — la inferencia local como estrategia de privacidad',
         ],
       },
     },

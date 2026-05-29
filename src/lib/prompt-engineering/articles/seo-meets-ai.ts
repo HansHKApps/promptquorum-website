@@ -554,7 +554,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/seo-meets-ai?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/seo-meets-ai',
         inLanguage: 'de',
         headline: 'SEO trifft KI: Wie GEO den alten Spielplan ersetzt',
         description: 'Lerne Generative Engine Optimization (GEO) für ChatGPT, Perplexity und Gemini. Strategien für AI-Such-Traffic, Schema-Markup und Content-Struktur.',
@@ -881,9 +881,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai?lang=de) — Anwendung von GEO-konformer Struktur auf KI-gestützte Softwareentwicklung',
-            '[RAG Explained](/prompt-engineering/rag-explained?lang=de) — Verstehe Retrieval-Augmented Generation, das Fundament für KI-Suchmaschinen-Citation',
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — Kontext für, wie KI-Modelle (die Crawler betreiben) trainiert und abgefragt werden',
+            '[Write Better Code With AI](/de/prompt-engineering/write-better-code-with-ai) — Anwendung von GEO-konformer Struktur auf KI-gestützte Softwareentwicklung',
+            '[RAG Explained](/de/prompt-engineering/rag-explained) — Verstehe Retrieval-Augmented Generation, das Fundament für KI-Suchmaschinen-Citation',
+            '[What Is Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — Kontext für, wie KI-Modelle (die Crawler betreiben) trainiert und abgefragt werden',
           ],
         },
         howToStart: {
@@ -1024,7 +1024,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/seo-meets-ai?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/seo-meets-ai',
         inLanguage: 'es',
         headline: 'SEO y la IA: Cómo GEO Está Reemplazando el Manual Tradicional',
         description: 'Aprende la Optimización para Motores Generativos (GEO) para ChatGPT, Perplexity y Gemini. Estrategias para el tráfico de búsqueda de IA, marcado de esquema y estructura de contenido.',
@@ -1274,9 +1274,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectura relacionada',
           items: [
-            '[Escribe mejor código con IA](/prompt-engineering/write-better-code-with-ai?lang=es) — Aplicación de la estructura conforme a GEO al desarrollo de software asistido por IA',
-            '[RAG Explicado](/prompt-engineering/rag-explained?lang=es) — Comprende la Generación Aumentada por Recuperación, el fundamento de la cita en motores de búsqueda con IA',
-            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — Contexto sobre cómo los modelos de IA son entrenados y consultados',
+            '[Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai) — Aplicación de la estructura conforme a GEO al desarrollo de software asistido por IA',
+            '[RAG Explicado](/es/prompt-engineering/rag-explained) — Comprende la Generación Aumentada por Recuperación, el fundamento de la cita en motores de búsqueda con IA',
+            '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — Contexto sobre cómo los modelos de IA son entrenados y consultados',
           ],
         },
         howToStart: {
@@ -1359,7 +1359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/seo-meets-ai?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/seo-meets-ai',
         inLanguage: 'fr',
         headline: 'SEO rencontre l\'IA : comment GEO remplace la règle du jeu',
         description: 'Apprenez la Generative Engine Optimization (GEO) pour ChatGPT, Perplexity et Gemini. Stratégies de trafic IA, schéma-markup et structure de contenu.',
@@ -1686,9 +1686,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai?lang=fr) — application de la structure GEO-compatible à la génération de code assistée par IA',
-            '[RAG Explained](/prompt-engineering/rag-explained?lang=fr) — comprenez la génération augmentée par récupération, le fondement des citations des moteurs IA',
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — contexte sur comment les modèles IA (qui exploitent les crawlers) sont entraînés et interrogés',
+            '[Write Better Code With AI](/fr/prompt-engineering/write-better-code-with-ai) — application de la structure GEO-compatible à la génération de code assistée par IA',
+            '[RAG Explained](/fr/prompt-engineering/rag-explained) — comprenez la génération augmentée par récupération, le fondement des citations des moteurs IA',
+            '[What Is Prompt Engineering?](/fr/prompt-engineering/what-is-prompt-engineering) — contexte sur comment les modèles IA (qui exploitent les crawlers) sont entraînés et interrogés',
           ],
         },
         howToStart: {
@@ -1829,7 +1829,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/seo-meets-ai?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/seo-meets-ai',
         inLanguage: 'ja',
         headline: 'GEO完全ガイド：ChatGPT、Perplexity、Geminiの最適化',
         description: 'Generative Engine Optimization（GEO）について学びます：ChatGPT、Perplexity、Gemini、Claude向けのAIトラフィック戦略、スキーママークアップ、コンテンツ構造。',
@@ -2123,8 +2123,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '関連資料',
           items: [
             '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/abs/2311.09735?lang=ja) — GEOを規律として定義し、構造化コンテンツからの引用上昇度を測定する基礎的学術論文',
-            '[WebFX、2026。「AI トラフィックが796%成長＆有機検索を上回る」](https://www.webfx.com/blog/seo/gen-ai-search-trends/?lang=ja) — 23億セッションでのAI対有機コンバージョン率の分析',
-            '[xSeek / Milestone Research、2026。「AI検索用構造化データ：40%より多くの引用」](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility?lang=ja) — JSON-LDスキーマと AI 引用頻度に関する制御研究',
+            '[WebFX、2026。「AI トラフィックが796%成長＆有機検索を上回る」](https://www.webfx.com/ja/blog/seo/gen-ai-search-trends/) — 23億セッションでのAI対有機コンバージョン率の分析',
+            '[xSeek / Milestone Research、2026。「AI検索用構造化データ：40%より多くの引用」](https://www.xseek.io/ja/learnings/how-does-structured-data-boost-ai-search-visibility) — JSON-LDスキーマと AI 引用頻度に関する制御研究',
           ],
         },
         howToStart: {
@@ -2253,7 +2253,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/seo-meets-ai?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/seo-meets-ai',
         inLanguage: 'zh',
         headline: 'GEO完全指南：ChatGPT、Perplexity、Gemini优化',
         description: '学习生成式引擎优化（GEO）：ChatGPT、Perplexity、Gemini、Claude的AI流量策略、结构化数据、内容架构。中国企业完整指南。',
@@ -2547,8 +2547,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '相关阅读',
           items: [
             '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/abs/2311.09735?lang=zh) — 定义GEO为一门学科并测量结构化内容引用提升的基础学术论文',
-            '[WebFX、2026。「AI流量增长796%及超过有机搜索」](https://www.webfx.com/blog/seo/gen-ai-search-trends/?lang=zh) — 在23亿个会话中分析AI对有机转化率',
-            '[xSeek / Milestone Research、2026。「AI搜索结构化数据：40%更多引用」](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility?lang=zh) — 关于JSON-LD模式和AI引用频率的对照研究',
+            '[WebFX、2026。「AI流量增长796%及超过有机搜索」](https://www.webfx.com/zh/blog/seo/gen-ai-search-trends/) — 在23亿个会话中分析AI对有机转化率',
+            '[xSeek / Milestone Research、2026。「AI搜索结构化数据：40%更多引用」](https://www.xseek.io/zh/learnings/how-does-structured-data-boost-ai-search-visibility) — 关于JSON-LD模式和AI引用频率的对照研究',
           ],
         },
         howToStart: {

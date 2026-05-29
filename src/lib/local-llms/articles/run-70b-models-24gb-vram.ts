@@ -367,9 +367,9 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführendes Material',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) -- Kaufen Sie bessere Hardware.',
-            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms?lang=de) -- Verwenden Sie statt dessen Layer-Splitting.',
-            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=de) -- Kleinere Modelle sind oft ausreichend.',
+            '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) -- Kaufen Sie bessere Hardware.',
+            '[Multi-GPU Local LLMs](/de/local-llms/multi-gpu-local-llms) -- Verwenden Sie statt dessen Layer-Splitting.',
+            '[Best Local LLMs for Coding](/de/local-llms/best-local-llms-for-coding) -- Kleinere Modelle sind oft ausreichend.',
           ],
         },
         sources: {
@@ -384,7 +384,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/local-llms/run-70b-models-24gb-vram?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/run-70b-models-24gb-vram',
         inLanguage: 'de',
         headline: '70B-Modelle auf 24GB VRAM ausführen: Kompletter Setup-Guide 2026',
         description: '70B-Modelle auf 24GB VRAM 2026: Quantisierung (Q4_K_M), Offloading, Layer-Splitting. Techniken mit Trade-offs und Leistungsdaten.',
@@ -578,9 +578,9 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) -- Achetez du meilleur matériel.',
-            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms?lang=fr) -- Utilisez plutôt la division de couches.',
-            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=fr) -- Les modèles plus petits suffisent souvent.',
+            '[Local LLM Hardware Guide 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Achetez du meilleur matériel.',
+            '[Multi-GPU Local LLMs](/fr/local-llms/multi-gpu-local-llms) -- Utilisez plutôt la division de couches.',
+            '[Best Local LLMs for Coding](/fr/local-llms/best-local-llms-for-coding) -- Les modèles plus petits suffisent souvent.',
           ],
         },
         sources: {
@@ -595,7 +595,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/local-llms/run-70b-models-24gb-vram?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/run-70b-models-24gb-vram',
         inLanguage: 'fr',
         headline: 'Exécuter des modèles 70B sur 24 Go de VRAM : Guide complet 2026',
         description: 'Modèles 70B sur 24 Go de VRAM 2026 : quantification (Q4_K_M), déchargement, division de couches. Techniques avec compromis et données de performance.',
@@ -789,9 +789,9 @@ schema: {
           id: 'related-reading',
           title: '関連資料',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) -- より良いハードウェアを購入。',
-            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms?lang=ja) -- 代わりにレイヤー分割を使用。',
-            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=ja) -- より小さいモデルはしばしば十分。',
+            '[Local LLM Hardware Guide 2026](/ja/local-llms/local-llm-hardware-guide-2026) -- より良いハードウェアを購入。',
+            '[Multi-GPU Local LLMs](/ja/local-llms/multi-gpu-local-llms) -- 代わりにレイヤー分割を使用。',
+            '[Best Local LLMs for Coding](/ja/local-llms/best-local-llms-for-coding) -- より小さいモデルはしばしば十分。',
           ],
         },
         sources: {
@@ -806,7 +806,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/local-llms/run-70b-models-24gb-vram?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/run-70b-models-24gb-vram',
         inLanguage: 'ja',
         headline: '24GB VRAMで70Bモデルを実行: 完全セットアップガイド 2026',
         description: '24GB VRAMで70Bモデル 2026: 量子化（Q4_K_M）、オフロード、レイヤー分割。トレードオフとパフォーマンスデータを含むテクニック。',
@@ -1009,9 +1009,9 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) -- 购买更好硬件。',
-            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms?lang=zh) -- 改用层分割。',
-            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=zh) -- 较小模型通常足够。',
+            '[Local LLM Hardware Guide 2026](/zh/local-llms/local-llm-hardware-guide-2026) -- 购买更好硬件。',
+            '[Multi-GPU Local LLMs](/zh/local-llms/multi-gpu-local-llms) -- 改用层分割。',
+            '[Best Local LLMs for Coding](/zh/local-llms/best-local-llms-for-coding) -- 较小模型通常足够。',
           ],
         },
         sources: {
@@ -1026,7 +1026,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/local-llms/run-70b-models-24gb-vram?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/run-70b-models-24gb-vram',
         inLanguage: 'zh',
         headline: '在24GB VRAM上运行70B模型：完整设置指南2026',
         description: '24GB VRAM上的70B模型2026：量化（Q4_K_M）、卸载、层分割。含权衡和性能数据的技术。',

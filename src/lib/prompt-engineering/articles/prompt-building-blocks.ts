@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Die 5 Bausteine eines jeden Prompts: Rolle & Kontext, Aufgabe, Eingabe & Beispiele, Einschränkungen und Ausgabeformat. Mit diesen fünf Komponenten wird jeder KI-Prompt zuverlässig und wiederholbar.',
         datePublished: '2026-03-01',
         dateModified: '2026-04-28',
-        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'de',
         proficiencyLevel: 'Beginner',
         keywords: ['Prompt-Struktur', 'Prompt-Bausteine', 'Rolle und Kontext', 'Ausgabeformat', 'Prompt-Einschränkungen', 'Few-Shot-Beispiele', 'Prompt Engineering', 'Sprachmodelle'],
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block1Link: {
-          content: 'Um zu verstehen, wie sich Rollen-Prompting entwickelt hat, als Modelle immer besser darin wurden, Anweisungen zu befolgen, siehe [How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=de).',
+          content: 'Um zu verstehen, wie sich Rollen-Prompting entwickelt hat, als Modelle immer besser darin wurden, Anweisungen zu befolgen, siehe [How Prompt Engineering Evolved](/de/prompt-engineering/how-prompt-engineering-evolved).',
         },
 
         block2: {
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block2Link: {
-          content: 'Anweisungen interagieren direkt damit, ob Beispiele bereitgestellt werden – siehe [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) dafür, wann welcher Ansatz am besten funktioniert.',
+          content: 'Anweisungen interagieren direkt damit, ob Beispiele bereitgestellt werden – siehe [Zero-Shot vs. Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) dafür, wann welcher Ansatz am besten funktioniert.',
         },
 
         block3: {
@@ -702,7 +702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block3Link: {
-          content: 'Für eine vollständige Aufschlüsselung, wann Beispiele verwendet werden und wann sie weggelassen werden, siehe [Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/prompt-engineering/zero-shot-vs-few-shot?lang=de).',
+          content: 'Für eine vollständige Aufschlüsselung, wann Beispiele verwendet werden und wann sie weggelassen werden, siehe [Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/de/prompt-engineering/zero-shot-vs-few-shot).',
         },
 
         block4: {
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block4Links: {
-          content: 'Für die Technik, Ausschlüsse zur Gestaltung von Ausgaben zu verwenden, siehe [Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=de). Warum unkontrollierte Prompts mehr halluzinieren, erklärt [AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de).',
+          content: 'Für die Technik, Ausschlüsse zur Gestaltung von Ausgaben zu verwenden, siehe [Negative Prompting: Tell the AI What NOT to Do](/de/prompt-engineering/negative-prompting). Warum unkontrollierte Prompts mehr halluzinieren, erklärt [AI Hallucinations: Why AI Makes Things Up](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
         },
 
         block4ProTip: {
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block5Link: {
-          content: 'Für einen vollständigen Leitfaden zu JSON-Modus und strukturierter Ausgabe über verschiedene Modelle hinweg, siehe [Structured Output & JSON Mode: Get AI to Return Usable Data](/prompt-engineering/structured-output-and-json-mode?lang=de).',
+          content: 'Für einen vollständigen Leitfaden zu JSON-Modus und strukturierter Ausgabe über verschiedene Modelle hinweg, siehe [Structured Output & JSON Mode: Get AI to Return Usable Data](/de/prompt-engineering/structured-output-and-json-mode).',
         },
 
         template: {
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         templateLocalLLMLinks: {
           id: 'local-llm-cross-links',
-          content: 'Für Prompt-Techniken, die speziell für lokale Modelle mit kleineren Kontextfenstern optimiert sind, siehe [Prompt Engineering for Local LLMs](/prompt-engineering/prompt-engineering-for-local-models?lang=de). Um zu vergleichen, welches lokale Modell der 5-Block-Struktur am zuverlässigsten folgt, siehe [Comparing Open-Source Models](/prompt-engineering/comparing-open-source-models?lang=de).',
+          content: 'Für Prompt-Techniken, die speziell für lokale Modelle mit kleineren Kontextfenstern optimiert sind, siehe [Prompt Engineering for Local LLMs](/de/prompt-engineering/prompt-engineering-for-local-models). Um zu vergleichen, welches lokale Modell der 5-Block-Struktur am zuverlässigsten folgt, siehe [Comparing Open-Source Models](/de/prompt-engineering/comparing-open-source-models).',
         },
 
         systemVsUser: {
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         frameworksLinks: {
-          content: 'PromptQuorum enthält 9 eingebaute Frameworks, die diese Bausteine je nach Aufgabentyp in verschiedenen Konfigurationen vorausfüllen. Für framework-spezifische Leitfäden, siehe [Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=de), [CRAFT Framework](/prompt-engineering/craft-framework?lang=de) und [CO-STAR Framework](/prompt-engineering/co-star-framework?lang=de).',
+          content: 'PromptQuorum enthält 9 eingebaute Frameworks, die diese Bausteine je nach Aufgabentyp in verschiedenen Konfigurationen vorausfüllen. Für framework-spezifische Leitfäden, siehe [Which Prompt Framework Should You Use?](/de/prompt-engineering/which-prompt-framework-should-you-use), [CRAFT Framework](/de/prompt-engineering/craft-framework) und [CO-STAR Framework](/de/prompt-engineering/co-star-framework).',
         },
 
         frameworksDidYouKnow: {
@@ -892,15 +892,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
-            '[How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=de) — Von frühen Instruction-Following-Modellen zu heutigen Reasoning-fähigen Systemen: wie sich Prompting-Techniken mit Modell-Kapazitäten entwickelt haben.',
-            '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — Wann Beispiele verwendet werden und wann sie weggelassen werden: Auswahl des richtigen Prompting-Ansatzes für die Aufgabe.',
-            '[Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=de) — Einschränkungen in Aktion: wie Ausschlüsse Ausgaben zuverlässiger gestalten als Einschlüsse.',
-            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — Warum Einschränkungen und Beispiele wichtig sind: die Grundursachen von Halluzinationen und evidenzbasierte Abwehrmaßnahmen.',
-            '[Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode?lang=de) — Präzise Ausgabeformate angeben: JSON-Modus, Markdown-Tabellen und andere strukturierte Ansätze über Modelle hinweg.',
-            '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=de) — Vergleich von CRAFT, CO-STAR, SPECS und anderen: Wahl eines Frameworks, das zu Ihrem Anwendungsfall passt.',
-            '[Persona Prompting](/prompt-engineering/persona-prompting?lang=de) — Tiefere Erkundung von Baustein 1 (Rolle & Kontext) mit 7 Unterkategorien: wie die Persona-Auswahl die Ausgabequalität und Konsistenz beeinflusst.',
-            '[Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) — Tiefere Erkundung von Baustein 4 (Einschränkungen) einschließlich API-Level-Durchsetzung: harte Einschränkungen, die gültige Ausgaben garantieren.',
-            '[Prompt Chaining](/prompt-engineering/prompt-chaining?lang=de) — Wie die 5 Bausteine über mehrstufige Arbeitsabläufe hinweg angewendet werden: Aufteilung komplexer Aufgaben in sequenzielle Prompts.',
+            '[How Prompt Engineering Evolved](/de/prompt-engineering/how-prompt-engineering-evolved) — Von frühen Instruction-Following-Modellen zu heutigen Reasoning-fähigen Systemen: wie sich Prompting-Techniken mit Modell-Kapazitäten entwickelt haben.',
+            '[Zero-Shot vs. Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) — Wann Beispiele verwendet werden und wann sie weggelassen werden: Auswahl des richtigen Prompting-Ansatzes für die Aufgabe.',
+            '[Negative Prompting: Tell the AI What NOT to Do](/de/prompt-engineering/negative-prompting) — Einschränkungen in Aktion: wie Ausschlüsse Ausgaben zuverlässiger gestalten als Einschlüsse.',
+            '[AI Hallucinations: Why AI Makes Things Up](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Warum Einschränkungen und Beispiele wichtig sind: die Grundursachen von Halluzinationen und evidenzbasierte Abwehrmaßnahmen.',
+            '[Structured Output & JSON Mode](/de/prompt-engineering/structured-output-and-json-mode) — Präzise Ausgabeformate angeben: JSON-Modus, Markdown-Tabellen und andere strukturierte Ansätze über Modelle hinweg.',
+            '[Which Prompt Framework Should You Use?](/de/prompt-engineering/which-prompt-framework-should-you-use) — Vergleich von CRAFT, CO-STAR, SPECS und anderen: Wahl eines Frameworks, das zu Ihrem Anwendungsfall passt.',
+            '[Persona Prompting](/de/prompt-engineering/persona-prompting) — Tiefere Erkundung von Baustein 1 (Rolle & Kontext) mit 7 Unterkategorien: wie die Persona-Auswahl die Ausgabequalität und Konsistenz beeinflusst.',
+            '[Constrained Prompting](/de/prompt-engineering/constrained-prompting) — Tiefere Erkundung von Baustein 4 (Einschränkungen) einschließlich API-Level-Durchsetzung: harte Einschränkungen, die gültige Ausgaben garantieren.',
+            '[Prompt Chaining](/de/prompt-engineering/prompt-chaining) — Wie die 5 Bausteine über mehrstufige Arbeitsabläufe hinweg angewendet werden: Aufteilung komplexer Aufgaben in sequenzielle Prompts.',
           ],
         },
 
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Los 5 bloques de construcción de todo prompt: rol y contexto, tarea/instrucción, input y ejemplos, restricciones y formato de output. Con estos cinco componentes, cada prompt de IA se vuelve fiable y repetible.',
         datePublished: '2026-03-01',
         dateModified: '2026-05-04',
-        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'es',
         proficiencyLevel: 'Beginner',
         keywords: ['estructura del prompt', 'bloques de construcción del prompt', 'rol y contexto', 'formato de output', 'restricciones del prompt', 'ejemplos few-shot', 'prompt engineering', 'modelos de lenguaje'],
@@ -1089,7 +1089,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block1Link: {
-          content: 'Para entender cómo evolucionó el role prompting a medida que los modelos mejoraron en seguir instrucciones, consulta [How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=es).',
+          content: 'Para entender cómo evolucionó el role prompting a medida que los modelos mejoraron en seguir instrucciones, consulta [How Prompt Engineering Evolved](/es/prompt-engineering/how-prompt-engineering-evolved).',
         },
 
         block2: {
@@ -1241,10 +1241,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=es) — De los primeros modelos de seguimiento de instrucciones a los sistemas de razonamiento actuales: cómo evolucionaron las técnicas de prompting con las capacidades de los modelos.',
-            '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=es) — Cuándo usar ejemplos y cuándo omitirlos: elegir el enfoque de prompting correcto para la tarea.',
-            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=es) — Por qué las restricciones y los ejemplos importan: las causas raíz de las alucinaciones y las contramedidas basadas en evidencia.',
-            '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=es) — Comparación de CRAFT, CO-STAR, SPECS y otros: elegir un framework que se adapte a tu caso de uso.',
+            '[How Prompt Engineering Evolved](/es/prompt-engineering/how-prompt-engineering-evolved) — De los primeros modelos de seguimiento de instrucciones a los sistemas de razonamiento actuales: cómo evolucionaron las técnicas de prompting con las capacidades de los modelos.',
+            '[Zero-Shot vs. Few-Shot Prompting](/es/prompt-engineering/zero-shot-vs-few-shot) — Cuándo usar ejemplos y cuándo omitirlos: elegir el enfoque de prompting correcto para la tarea.',
+            '[AI Hallucinations: Why AI Makes Things Up](/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Por qué las restricciones y los ejemplos importan: las causas raíz de las alucinaciones y las contramedidas basadas en evidencia.',
+            '[Which Prompt Framework Should You Use?](/es/prompt-engineering/which-prompt-framework-should-you-use) — Comparación de CRAFT, CO-STAR, SPECS y otros: elegir un framework que se adapte a tu caso de uso.',
           ],
         },
 
@@ -1300,7 +1300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Maîtrisez les 5 éléments fondamentaux de tout prompt : Rôle & Contexte, Tâche, Entrée & Exemples, Contraintes et Format de sortie. Avec ces cinq composantes, tout prompt IA devient fiable et reproductible.',
         datePublished: '2026-03-01',
         dateModified: '2026-04-28',
-        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'fr',
         proficiencyLevel: 'Beginner',
         keywords: ['Structure de prompt', 'Éléments de prompt', 'Rôle et contexte', 'Format de sortie', 'Contraintes de prompt', 'Exemples few-shot', 'Ingénierie des prompts', 'Modèles de langage'],
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block1Link: {
-          content: 'Pour comprendre comment le prompting par rôle a évolué alors que les modèles devenaient meilleurs à suivre les instructions, voir [How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=fr).',
+          content: 'Pour comprendre comment le prompting par rôle a évolué alors que les modèles devenaient meilleurs à suivre les instructions, voir [How Prompt Engineering Evolved](/fr/prompt-engineering/how-prompt-engineering-evolved).',
         },
 
         block2: {
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block2Link: {
-          content: 'Les instructions interagissent directement avec le fait de fournir des exemples — voir [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) pour quand chaque approche fonctionne le mieux.',
+          content: 'Les instructions interagissent directement avec le fait de fournir des exemples — voir [Zero-Shot vs. Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot) pour quand chaque approche fonctionne le mieux.',
         },
 
         block3: {
@@ -1517,7 +1517,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block3Link: {
-          content: 'Pour une ventilation complète de quand utiliser des exemples et quand les omettre, voir [Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/prompt-engineering/zero-shot-vs-few-shot?lang=fr).',
+          content: 'Pour une ventilation complète de quand utiliser des exemples et quand les omettre, voir [Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/fr/prompt-engineering/zero-shot-vs-few-shot).',
         },
 
         block4: {
@@ -1537,7 +1537,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block4Links: {
-          content: 'Pour la technique d\'utiliser les exclusions pour façonner les sorties, voir [Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=fr). Pourquoi les prompts incontrôlés hallucinent plus s\'explique dans [AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr).',
+          content: 'Pour la technique d\'utiliser les exclusions pour façonner les sorties, voir [Negative Prompting: Tell the AI What NOT to Do](/fr/prompt-engineering/negative-prompting). Pourquoi les prompts incontrôlés hallucinent plus s\'explique dans [AI Hallucinations: Why AI Makes Things Up](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
         },
 
         block5: {
@@ -1557,7 +1557,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block5Link: {
-          content: 'Pour un guide complet sur le mode JSON et la sortie structurée sur les modèles, voir [Structured Output & JSON Mode: Get AI to Return Usable Data](/prompt-engineering/structured-output-and-json-mode?lang=fr).',
+          content: 'Pour un guide complet sur le mode JSON et la sortie structurée sur les modèles, voir [Structured Output & JSON Mode: Get AI to Return Usable Data](/fr/prompt-engineering/structured-output-and-json-mode).',
         },
 
         template: {
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         frameworksLinks: {
-          content: 'PromptQuorum contient 9 frameworks intégrés qui pré-remplissent ces éléments selon le type de tâche. Pour des guides spécifiques au framework, voir [Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=fr), [CRAFT Framework](/prompt-engineering/craft-framework?lang=fr) et [CO-STAR Framework](/prompt-engineering/co-star-framework?lang=fr).',
+          content: 'PromptQuorum contient 9 frameworks intégrés qui pré-remplissent ces éléments selon le type de tâche. Pour des guides spécifiques au framework, voir [Which Prompt Framework Should You Use?](/fr/prompt-engineering/which-prompt-framework-should-you-use), [CRAFT Framework](/fr/prompt-engineering/craft-framework) et [CO-STAR Framework](/fr/prompt-engineering/co-star-framework).',
         },
 
         mistakes: {
@@ -1675,12 +1675,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[How Prompt Engineering Evolved](/prompt-engineering/how-prompt-engineering-evolved?lang=fr) — Des premiers modèles suivant les instructions aux systèmes de raisonnement d\'aujourd\'hui : comment les techniques de prompting ont évolué avec les capacités des modèles.',
-            '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — Quand utiliser des exemples et quand les omettre : choisir la bonne approche pour votre tâche.',
-            '[Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=fr) — Les contraintes en action : comment les exclusions rendent les sorties plus fiables que les inclusions.',
-            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — Pourquoi les contraintes et exemples sont importants : les causes profondes des hallucinations et les contre-mesures basées sur les preuves.',
-            '[Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode?lang=fr) — Spécifier les formats de sortie précis : mode JSON, tableaux Markdown et autres approches structurées sur les modèles.',
-            '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=fr) — Comparaison de CRAFT, CO-STAR, SPECS et autres : choisir un framework qui correspond à votre cas d\'usage.',
+            '[How Prompt Engineering Evolved](/fr/prompt-engineering/how-prompt-engineering-evolved) — Des premiers modèles suivant les instructions aux systèmes de raisonnement d\'aujourd\'hui : comment les techniques de prompting ont évolué avec les capacités des modèles.',
+            '[Zero-Shot vs. Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot) — Quand utiliser des exemples et quand les omettre : choisir la bonne approche pour votre tâche.',
+            '[Negative Prompting: Tell the AI What NOT to Do](/fr/prompt-engineering/negative-prompting) — Les contraintes en action : comment les exclusions rendent les sorties plus fiables que les inclusions.',
+            '[AI Hallucinations: Why AI Makes Things Up](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Pourquoi les contraintes et exemples sont importants : les causes profondes des hallucinations et les contre-mesures basées sur les preuves.',
+            '[Structured Output & JSON Mode](/fr/prompt-engineering/structured-output-and-json-mode) — Spécifier les formats de sortie précis : mode JSON, tableaux Markdown et autres approches structurées sur les modèles.',
+            '[Which Prompt Framework Should You Use?](/fr/prompt-engineering/which-prompt-framework-should-you-use) — Comparaison de CRAFT, CO-STAR, SPECS et autres : choisir un framework qui correspond à votre cas d\'usage.',
           ],
         },
 
@@ -1737,7 +1737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'プロンプトの5つの構成要素（役割とコンテキスト、タスク、入力と例、制約、出力形式）を理解し、信頼性の高い再現可能なAIプロンプトを作成する方法。',
         datePublished: '2026-03-01',
         dateModified: '2026-04-28',
-        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'ja',
         proficiencyLevel: 'Beginner',
         keywords: ['プロンプト構造', 'プロンプト構成要素', '役割とコンテキスト', '出力形式', 'プロンプト制約', 'フューショット例', 'プロンプトエンジニアリング', '言語モデル'],
@@ -1903,7 +1903,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block1Link: {
-          content: 'モデルが指示に従うことがより上手になったときに、ロールプロンプティングがどのように進化したかを理解するために、[プロンプトエンジニアリングの進化](/prompt-engineering/how-prompt-engineering-evolved?lang=ja)を参照してください。',
+          content: 'モデルが指示に従うことがより上手になったときに、ロールプロンプティングがどのように進化したかを理解するために、[プロンプトエンジニアリングの進化](/ja/prompt-engineering/how-prompt-engineering-evolved)を参照してください。',
         },
 
         block2: {
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block2Link: {
-          content: '指示は例を提供するかどうかと直接対話します。[Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/prompt-engineering/zero-shot-vs-few-shot?lang=ja)を参照して、各アプローチがいつ最適に機能するかを確認してください。',
+          content: '指示は例を提供するかどうかと直接対話します。[Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/ja/prompt-engineering/zero-shot-vs-few-shot)を参照して、各アプローチがいつ最適に機能するかを確認してください。',
         },
 
         block3: {
@@ -1941,7 +1941,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block3Link: {
-          content: '例を使うべき時と省く時の完全な分析については、[Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/prompt-engineering/zero-shot-vs-few-shot?lang=ja)を参照してください。',
+          content: '例を使うべき時と省く時の完全な分析については、[Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?](/ja/prompt-engineering/zero-shot-vs-few-shot)を参照してください。',
         },
 
         block4: {
@@ -1961,7 +1961,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block4Links: {
-          content: '出力を形作るために除外を使う技法については、[Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=ja)を参照してください。制約のないプロンプトがより多くハルシネートする理由については、[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja)を参照してください。',
+          content: '出力を形作るために除外を使う技法については、[Negative Prompting: Tell the AI What NOT to Do](/ja/prompt-engineering/negative-prompting)を参照してください。制約のないプロンプトがより多くハルシネートする理由については、[AI Hallucinations: Why AI Makes Things Up](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)を参照してください。',
         },
 
         block5: {
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block5Link: {
-          content: 'さまざまなモデルにおける JSON モードと構造化出力への完全ガイドについては、[Structured Output & JSON Mode: Get AI to Return Usable Data](/prompt-engineering/structured-output-and-json-mode?lang=ja)を参照してください。',
+          content: 'さまざまなモデルにおける JSON モードと構造化出力への完全ガイドについては、[Structured Output & JSON Mode: Get AI to Return Usable Data](/ja/prompt-engineering/structured-output-and-json-mode)を参照してください。',
         },
 
         template: {
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         frameworksLinks: {
-          content: 'PromptQuorum には 9つの統合フレームワークが含まれており、タスク タイプに応じてこれらの要素を事前入力します。フレームワーク固有のガイドについては、[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use?lang=ja)、[CRAFT Framework](/prompt-engineering/craft-framework?lang=ja)、[CO-STAR Framework](/prompt-engineering/co-star-framework?lang=ja)を参照してください。',
+          content: 'PromptQuorum には 9つの統合フレームワークが含まれており、タスク タイプに応じてこれらの要素を事前入力します。フレームワーク固有のガイドについては、[Which Prompt Framework Should You Use?](/ja/prompt-engineering/which-prompt-framework-should-you-use)、[CRAFT Framework](/ja/prompt-engineering/craft-framework)、[CO-STAR Framework](/ja/prompt-engineering/co-star-framework)を参照してください。',
         },
 
         mistakes: {
@@ -2098,12 +2098,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '関連資料',
           items: [
-            '[プロンプトエンジニアリングの進化](/prompt-engineering/how-prompt-engineering-evolved?lang=ja) — 初期のモデルから今日の推論システムへ。プロンプティング技法がモデル機能に応じてどのように進化したか。',
-            '[Zero-Shot vs. Few-Shot プロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) — 例をいつ使うか、いつ省くか。タスクに適したアプローチを選ぶ。',
-            '[Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting?lang=ja) — 制約の実行。除外がどのように含有より出力を信頼性にするのか。',
-            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) — 制約と例が重要な理由。ハルシネーションの根本原因と証拠ベースの対策。',
-            '[Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode?lang=ja) — 正確な出力形式を指定。JSON、Markdown テーブル、その他の構造化アプローチ。',
-            '[使うべきプロンプトフレームワークはどれ](/prompt-engineering/which-prompt-framework-should-you-use?lang=ja) — CRAFT、CO-STAR、SPECS の比較。ユースケースに合ったフレームワークを選ぶ。',
+            '[プロンプトエンジニアリングの進化](/ja/prompt-engineering/how-prompt-engineering-evolved) — 初期のモデルから今日の推論システムへ。プロンプティング技法がモデル機能に応じてどのように進化したか。',
+            '[Zero-Shot vs. Few-Shot プロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — 例をいつ使うか、いつ省くか。タスクに適したアプローチを選ぶ。',
+            '[Negative Prompting: Tell the AI What NOT to Do](/ja/prompt-engineering/negative-prompting) — 制約の実行。除外がどのように含有より出力を信頼性にするのか。',
+            '[AI Hallucinations: Why AI Makes Things Up](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 制約と例が重要な理由。ハルシネーションの根本原因と証拠ベースの対策。',
+            '[Structured Output & JSON Mode](/ja/prompt-engineering/structured-output-and-json-mode) — 正確な出力形式を指定。JSON、Markdown テーブル、その他の構造化アプローチ。',
+            '[使うべきプロンプトフレームワークはどれ](/ja/prompt-engineering/which-prompt-framework-should-you-use) — CRAFT、CO-STAR、SPECS の比較。ユースケースに合ったフレームワークを選ぶ。',
           ],
         },
 
@@ -2142,7 +2142,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '每个提示词必需的5个构建模块：角色与上下文、任务、输入与示例、约束条件和输出格式。这5个组成部分确保了AI提示词的可靠性和可重复性。',
         datePublished: '2026-03-01',
         dateModified: '2026-05-04',
-        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'zh',
         keywords: ['提示词结构', '提示词构件', '角色与背景', '输出格式', '提示词约束', '少样本示例', '提示词工程', '语言模型'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

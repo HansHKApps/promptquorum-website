@@ -509,8 +509,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Los mini PCs estándar con ranuras para GPU dedicada no son útiles para inferencia de LLMs porque el VRAM de la GPU está fijado de fábrica — típicamente 4–8 GB — y no puede expandirse. El Mac Mini M4 y el UM790 Pro resuelven esto mediante inferencia basada en GPU con memoria unificada. El Beelink SER8 adopta un enfoque diferente: su Ryzen 9 8845HS usa inferencia solo por CPU, que es más lenta pero no requiere configuración de GPU.',
           'El Mac Mini M4 con 16 GB de memoria unificada supera al UM790 Pro con 32 GB DDR5 en velocidad de inferencia pura porque el ancho de banda de memoria de Apple (~68 GB/s) y la aceleración GPU Metal son más eficientes que la iGPU Radeon 780M. La ventaja del UM790 Pro es la posibilidad de expandirse a 64 GB, lo que permite ejecutar modelos más grandes como 13B y 30B Q4 que no caben en 16 GB.',
-          'Para una guía completa de selección de hardware para LLM local, consulta el <a href="/prompt-bites/best-frontend-for-ollama?lang=es" class="text-primary hover:underline">resumen de las mejores interfaces para Ollama</a>, que cubre el lado de software de la configuración local.',
-          'Para recomendaciones específicas de mini PCs en Japón con enlaces de Amazon.co.jp y precios en JPY, consulta nuestra <a href="/prompt-bites/best-mini-pc-local-llm-japan?lang=es" class="text-primary hover:underline">guía de mejores mini PCs para LLMs locales en Japón</a>.',
+          'Para una guía completa de selección de hardware para LLM local, consulta el <a href="/es/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">resumen de las mejores interfaces para Ollama</a>, que cubre el lado de software de la configuración local.',
+          'Para recomendaciones específicas de mini PCs en Japón con enlaces de Amazon.co.jp y precios en JPY, consulta nuestra <a href="/es/prompt-bites/best-mini-pc-local-llm-japan" class="text-primary hover:underline">guía de mejores mini PCs para LLMs locales en Japón</a>.',
         ],
       },
       faq: {
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Cuál es el tamaño máximo de modelo que el UM790 Pro puede ejecutar a plena velocidad?',
-            a: 'Con 64 GB DDR5 configurados como memoria unificada en Linux con ROCm, el UM790 Pro puede ejecutar un modelo Q4 de 30B (~18 GB) a aproximadamente 3–4 tok/s. Un modelo Q4 de 13B (~8 GB) corre a ~6 tok/s. Consulta la <a href="/prompt-bites/best-frontend-for-ollama?lang=es" class="text-primary hover:underline">guía de interfaces Ollama</a> para la configuración de software.',
+            a: 'Con 64 GB DDR5 configurados como memoria unificada en Linux con ROCm, el UM790 Pro puede ejecutar un modelo Q4 de 30B (~18 GB) a aproximadamente 3–4 tok/s. Un modelo Q4 de 13B (~8 GB) corre a ~6 tok/s. Consulta la <a href="/es/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">guía de interfaces Ollama</a> para la configuración de software.',
           },
           {
             q: '¿Cuándo debo elegir el Beelink SER8 sobre el Mac Mini M4 o el UM790 Pro?',

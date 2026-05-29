@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/craft-framework',
         'inLanguage': 'de',
         headline: 'The CRAFT Framework',
         description: 'Das CRAFT-Framework zerlegt kreative Aufgaben in Kontext, Rolle, Zielgruppe, Format, Ton für konsistente, markengerechte Ausgaben.',
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatIsCRAFT: {
           title: 'Was das CRAFT-Framework ist',
           content: [
-            '**Das CRAFT-Framework ist eine Prompt-Vorlage für kreative und Marketing-Aufgaben, die große Sprachmodelle dazu bringt, festzulegen, aus welcher Perspektive sie schreiben, für wen sie schreiben und wie die Ausgabe aussehen soll.** Anstatt eine vage Anfrage wie \"Schreibe einen Beitrag über unser Produkt\" zu stellen, definieren Sie jedes CRAFT-Element, damit Modelle wie GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro konsistente, wiederverwendbare Texte erzeugen können. Wenn Sie neu in strukturiertem Prompting sind, lesen Sie [Was ist Prompt Engineering](/prompt-engineering/what-is-prompt-engineering?lang=de), um Grundkonzepte zu verstehen.',
+            '**Das CRAFT-Framework ist eine Prompt-Vorlage für kreative und Marketing-Aufgaben, die große Sprachmodelle dazu bringt, festzulegen, aus welcher Perspektive sie schreiben, für wen sie schreiben und wie die Ausgabe aussehen soll.** Anstatt eine vage Anfrage wie \"Schreibe einen Beitrag über unser Produkt\" zu stellen, definieren Sie jedes CRAFT-Element, damit Modelle wie GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro konsistente, wiederverwendbare Texte erzeugen können. Wenn Sie neu in strukturiertem Prompting sind, lesen Sie [Was ist Prompt Engineering](/de/prompt-engineering/what-is-prompt-engineering), um Grundkonzepte zu verstehen.',
             'Das Akronym wird typischerweise wie folgt ausgedehnt:',
           ],
           items: [
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Kontext, Rolle, Zielgruppe, Format und Ton durch strukturierte Eingaben ausfüllen, anstatt das Muster manuell zu merken.',
             'Den gleichen CRAFT-basierten Prompt parallel auf mehrere Modelle anwenden und vergleichen, wie GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle auf das gleiche Kreativ-Briefing reagieren.',
-            'CRAFT-Vorlagen für wiederkehrende Arbeitsabläufe speichern und wiederverwenden, z. B. \"Feature-Launch LinkedIn-Post\", \"Customer-Success-Fallstudie\" oder \"Sales-Outreach-Email\". (Für einfachere, einstufige Prompts, betrachten Sie das [Single-Step-Framework](/prompt-engineering/the-single-step-prompt-method?lang=de).)',
+            'CRAFT-Vorlagen für wiederkehrende Arbeitsabläufe speichern und wiederverwenden, z. B. \"Feature-Launch LinkedIn-Post\", \"Customer-Success-Fallstudie\" oder \"Sales-Outreach-Email\". (Für einfachere, einstufige Prompts, betrachten Sie das [Single-Step-Framework](/de/prompt-engineering/the-single-step-prompt-method).)',
           ],
         },
         usingCRAFTWithOthers: {
@@ -266,8 +266,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Nutzen Sie CRAFT für kreative Ausgaben: Beiträge, E-Mails, Skripte, Landingpages.',
-            'Nutzen Sie das [APE-Framework](/prompt-engineering/ape-framework?lang=de) oder [SPECS-Framework](/prompt-engineering/specs-framework?lang=de) für strukturierte Ausgaben, Checklisten oder JSON-Spezifikationen.',
-            'Nutzen Sie das [CO-STAR-Framework](/prompt-engineering/co-star-framework?lang=de) oder reasoning-orientierte Strukturen wie Chain-of-Thought für komplexe Analyse, Planung und Multi-Constraint-Kommunikationsaufgaben.',
+            'Nutzen Sie das [APE-Framework](/de/prompt-engineering/ape-framework) oder [SPECS-Framework](/de/prompt-engineering/specs-framework) für strukturierte Ausgaben, Checklisten oder JSON-Spezifikationen.',
+            'Nutzen Sie das [CO-STAR-Framework](/de/prompt-engineering/co-star-framework) oder reasoning-orientierte Strukturen wie Chain-of-Thought für komplexe Analyse, Planung und Multi-Constraint-Kommunikationsaufgaben.',
           ],
         },
         howToStart: {
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Cómo funciona el Framework CRAFT (Contexto, Rol, Audiencia, Formato y Tono), cuándo usarlo y cómo PromptQuorum ofrece CRAFT como opción integrada.',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        url: 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/craft-framework',
         inLanguage: 'es',
         keywords: ['Framework CRAFT', 'frameworks de prompt', 'prompt engineering', 'prompts creativos', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -414,8 +414,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Usa CRAFT para outputs creativos: posts, emails, scripts, landing pages.',
-            'Usa el [Framework APE](/prompt-engineering/ape-framework?lang=es) o el [Framework SPECS](/prompt-engineering/specs-framework?lang=es) para outputs estructurados, listas de verificación o especificaciones JSON.',
-            'Usa el [Framework CO-STAR](/prompt-engineering/co-star-framework?lang=es) o estructuras orientadas al razonamiento como Chain-of-Thought para análisis complejos, planificación y tareas de comunicación con múltiples restricciones.',
+            'Usa el [Framework APE](/es/prompt-engineering/ape-framework) o el [Framework SPECS](/es/prompt-engineering/specs-framework) para outputs estructurados, listas de verificación o especificaciones JSON.',
+            'Usa el [Framework CO-STAR](/es/prompt-engineering/co-star-framework) o estructuras orientadas al razonamiento como Chain-of-Thought para análisis complejos, planificación y tareas de comunicación con múltiples restricciones.',
           ],
         },
 
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/craft-framework',
         'inLanguage': 'fr',
         headline: 'The CRAFT Framework',
         description: 'Le framework CRAFT décompose les tâches créatives en contexte, rôle, audience, format, ton pour des résultats cohérents.',
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatIsCRAFT: {
           title: 'Qu\'est-ce que le framework CRAFT',
           content: [
-            '**Le CRAFT Framework est un modèle de prompt pour les tâches créatives et marketing qui pousse les grands modèles de langage à définir qui ils sont, pour qui ils écrivent et comment le résultat doit se présenter.** Au lieu d\'envoyer une demande vague comme \"écris un post sur notre produit\", vous définissez chaque élément CRAFT pour que GPT-4o, Claude Opus 4.7 et Gemini 3.1 Pro produisent du texte cohérent et réutilisable. Si vous découvrez le prompting structuré, consultez [Qu\'est-ce que le Prompt Engineering](/prompt-engineering/what-is-prompt-engineering?lang=fr) pour les concepts fondamentaux.',
+            '**Le CRAFT Framework est un modèle de prompt pour les tâches créatives et marketing qui pousse les grands modèles de langage à définir qui ils sont, pour qui ils écrivent et comment le résultat doit se présenter.** Au lieu d\'envoyer une demande vague comme \"écris un post sur notre produit\", vous définissez chaque élément CRAFT pour que GPT-4o, Claude Opus 4.7 et Gemini 3.1 Pro produisent du texte cohérent et réutilisable. Si vous découvrez le prompting structuré, consultez [Qu\'est-ce que le Prompt Engineering](/fr/prompt-engineering/what-is-prompt-engineering) pour les concepts fondamentaux.',
             'L\'acronyme se divise habituellement ainsi :',
           ],
           items: [
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Remplir Contexte, Rôle, Audience, Format et Ton par des entrées structurées au lieu de mémoriser le motif.',
-            'Appliquer le même prompt CRAFT à plusieurs modèles en parallèle, comparant comment GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro et modèles locaux réagissent au même brief. (Pour les prompts plus simples, considérez le [Framework Single-Step](/prompt-engineering/the-single-step-prompt-method?lang=fr).)',
+            'Appliquer le même prompt CRAFT à plusieurs modèles en parallèle, comparant comment GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro et modèles locaux réagissent au même brief. (Pour les prompts plus simples, considérez le [Framework Single-Step](/fr/prompt-engineering/the-single-step-prompt-method).)',
             'Sauvegarder et réutiliser des templates CRAFT pour des workflows récurrents comme \"post LinkedIn de lancement feature\", \"case study customer success\" ou \"email outreach sales\".',
           ],
         },
@@ -554,8 +554,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'CRAFT pour les outputs créatifs : posts, emails, scripts, landing pages.',
-            'Utilisez le [Framework APE](/prompt-engineering/ape-framework?lang=fr) ou [Framework SPECS](/prompt-engineering/specs-framework?lang=fr) pour les outputs structurés, checklists ou spécifications JSON.',
-            'Utilisez le [Framework CO-STAR](/prompt-engineering/co-star-framework?lang=fr) ou structures orientées reasoning comme Chain-of-Thought pour l\'analyse complexe, la planification et les tâches multi-contraintes.',
+            'Utilisez le [Framework APE](/fr/prompt-engineering/ape-framework) ou [Framework SPECS](/fr/prompt-engineering/specs-framework) pour les outputs structurés, checklists ou spécifications JSON.',
+            'Utilisez le [Framework CO-STAR](/fr/prompt-engineering/co-star-framework) ou structures orientées reasoning comme Chain-of-Thought pour l\'analyse complexe, la planification et les tâches multi-contraintes.',
           ],
         },
         howToStart: {
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/craft-framework',
         'inLanguage': 'ja',
         headline: 'The CRAFT Framework',
         description: 'CRAFTフレームワークはコンテキスト・役割・オーディエンス・フォーマット・トーンで創造的タスクを構成。',
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'CRAFTフレームワークとは',
           content: [
             '**CRAFTフレームワークは、クリエイティブおよびマーケティングタスク向けのプロンプトテンプレートです。**大規模言語モデルに対して「誰の視点から書くのか」「誰を対象に書くのか」「出力をどのような形式にするのか」を明確に指示します。「我が社の製品について書いて」といったあいまいなリクエストの代わりに、CRAFTの5つの要素を定義することで、GPT-4o、Claude Opus 4.7、Gemini 3.1 Proが一貫性のある再利用可能なコピーを生成できます。',
-            'プロンプトエンジニアリングが初めての場合は、[プロンプトエンジニアリングとは何か](/prompt-engineering/what-is-prompt-engineering?lang=ja)をご覧ください。',
+            'プロンプトエンジニアリングが初めての場合は、[プロンプトエンジニアリングとは何か](/ja/prompt-engineering/what-is-prompt-engineering)をご覧ください。',
             'CRAFTの各要素：',
           ],
           items: [
@@ -680,7 +680,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'パターンを手動で覚える代わりに、構造化された入力でコンテキスト、役割、オーディエンス、フォーマット、トーンを入力できます',
-            '同じCRAFTベースプロンプトを複数のモデルに並行適用し、GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro、ローカルモデルが同じクリエイティブブリーフにどう応答するかを比較します。(より単純な1ステップのプロンプトには、[シングルステップフレームワーク](/prompt-engineering/the-single-step-prompt-method?lang=ja)を検討してください。)',
+            '同じCRAFTベースプロンプトを複数のモデルに並行適用し、GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro、ローカルモデルが同じクリエイティブブリーフにどう応答するかを比較します。(より単純な1ステップのプロンプトには、[シングルステップフレームワーク](/ja/prompt-engineering/the-single-step-prompt-method)を検討してください。)',
             'CRAFTテンプレートを繰り返しのワークフロー（「機能ローンチLinkedInポスト」「カスタマーサクセスケーススタディ」「営業アウトリーチメール」など）に保存して再利用できます',
           ],
         },
@@ -692,8 +692,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'クリエイティブ出力（ポスト、メール、スクリプト、ランディングページ）にはCRAFTを使用します',
-            '構造化された出力、チェックリスト、JSON仕様には、[APEフレームワーク](/prompt-engineering/ape-framework?lang=ja)または[SPECSフレームワーク](/prompt-engineering/specs-framework?lang=ja)を使用します',
-            '複雑な分析、計画、マルチ制約通信には、[CO-STARフレームワーク](/prompt-engineering/co-star-framework?lang=ja)またはChain-of-Thoughtなどの推論志向の構造を使用します',
+            '構造化された出力、チェックリスト、JSON仕様には、[APEフレームワーク](/ja/prompt-engineering/ape-framework)または[SPECSフレームワーク](/ja/prompt-engineering/specs-framework)を使用します',
+            '複雑な分析、計画、マルチ制約通信には、[CO-STARフレームワーク](/ja/prompt-engineering/co-star-framework)またはChain-of-Thoughtなどの推論志向の構造を使用します',
           ],
         },
         howToStart: {
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/craft-framework',
         'inLanguage': 'zh',
         headline: 'The CRAFT Framework',
         description: 'CRAFT框架将创意任务分为背景、角色、受众、格式、语气。',
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'CRAFT框架是什么',
           content: [
             '**CRAFT框架是创意和营销任务的提示模板。**它让大语言模型明确：你以谁的身份写作、为谁写作、输出应该什么样子。与其发送模糊指令（如"为产品写一个帖子"），你定义每个CRAFT元素，让GPT-4o、Claude Opus 4.7和Gemini 3.1 Pro生成一致、可复用的文案。',
-            '如果你刚开始接触结构化提示，请阅读[什么是提示工程](/prompt-engineering/what-is-prompt-engineering?lang=zh)了解基础概念。',
+            '如果你刚开始接触结构化提示，请阅读[什么是提示工程](/zh/prompt-engineering/what-is-prompt-engineering)了解基础概念。',
             'CRAFT的5个要素：',
           ],
           items: [
@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '1. 通过结构化输入填写背景、角色、受众、格式和语气，而不是手动记忆',
-            '2. 将同一个CRAFT提示并行应用于多个模型，比较GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro和本地模型对同一文案需求的响应。（对于更简单的单步提示，可考虑[单步框架](/prompt-engineering/the-single-step-prompt-method?lang=zh)。）',
+            '2. 将同一个CRAFT提示并行应用于多个模型，比较GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro和本地模型对同一文案需求的响应。（对于更简单的单步提示，可考虑[单步框架](/zh/prompt-engineering/the-single-step-prompt-method)。）',
             '3. 为重复工作流保存并重复使用CRAFT模板，如"功能发布LinkedIn帖子""客户成功案例"或"销售外联邮件"',
           ],
         },
@@ -830,8 +830,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '1. 创意输出（帖子、邮件、脚本、落地页）用CRAFT',
-            '2. 结构化输出、清单、JSON规范用[APE框架](/prompt-engineering/ape-framework?lang=zh)或[SPECS框架](/prompt-engineering/specs-framework?lang=zh)',
-            '3. 复杂分析、规划和多约束通信用[CO-STAR框架](/prompt-engineering/co-star-framework?lang=zh)或思维链推理结构',
+            '2. 结构化输出、清单、JSON规范用[APE框架](/zh/prompt-engineering/ape-framework)或[SPECS框架](/zh/prompt-engineering/specs-framework)',
+            '3. 复杂分析、规划和多约束通信用[CO-STAR框架](/zh/prompt-engineering/co-star-framework)或思维链推理结构',
           ],
         },
         howToStart: {

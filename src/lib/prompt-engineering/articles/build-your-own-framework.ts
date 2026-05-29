@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-framework?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/build-your-own-framework',
       inLanguage: 'de',
       headline: 'Eigenes Prompt-Framework erstellen: 5-Schritte-Prozess (2026)',
       description: 'Eigenes Prompt-Framework in 5 Schritten erstellen: Ziel definieren, 3–6 Komponenten identifizieren, an 10 Prompts testen, verfeinern, dokumentieren.',
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-framework?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/build-your-own-framework',
       inLanguage: 'es',
       headline: 'Construye tu propio framework de prompts: proceso de 5 pasos',
       description: 'Aprende cuándo y cómo construir un framework de prompts personalizado: proceso de 5 pasos desde el objetivo hasta la documentación. Con el ejemplo REPAIR para equipos de soporte.',
@@ -615,12 +615,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: 'Lecturas relacionadas',
         items: [
-          { title: 'Framework CO-STAR: Componentes y cuándo usarlo', url: '/prompt-engineering/co-star-framework?lang=es' },
-          { title: 'Framework CRAFT: Contexto, Rol, Acción, Formato, Objetivo', url: '/prompt-engineering/craft-framework?lang=es' },
-          { title: 'Framework RISEN: Rol, Instrucciones, Pasos, Objetivo Final, Restricción', url: '/prompt-engineering/risen-framework?lang=es' },
-          { title: '¿Qué framework de prompts deberías usar?', url: '/prompt-engineering/which-framework-to-use?lang=es' },
-          { title: 'Selección de framework de prompts para equipos', url: '/prompt-engineering/prompt-framework-selection-for-teams?lang=es' },
-          { title: 'Configuración de prompt engineering para equipos pequeños', url: '/prompt-engineering/pe-setup-small-teams?lang=es' },
+          { title: 'Framework CO-STAR: Componentes y cuándo usarlo', url: '/es/prompt-engineering/co-star-framework' },
+          { title: 'Framework CRAFT: Contexto, Rol, Acción, Formato, Objetivo', url: '/es/prompt-engineering/craft-framework' },
+          { title: 'Framework RISEN: Rol, Instrucciones, Pasos, Objetivo Final, Restricción', url: '/es/prompt-engineering/risen-framework' },
+          { title: '¿Qué framework de prompts deberías usar?', url: '/es/prompt-engineering/which-framework-to-use' },
+          { title: 'Selección de framework de prompts para equipos', url: '/es/prompt-engineering/prompt-framework-selection-for-teams' },
+          { title: 'Configuración de prompt engineering para equipos pequeños', url: '/es/prompt-engineering/pe-setup-small-teams' },
         ],
       },
       sources: {
@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-framework?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/build-your-own-framework',
       inLanguage: 'fr',
       headline: 'Créer son propre framework de prompts : processus en 5 étapes',
       description: 'Créer un framework de prompts en 5 étapes : définir l\'objectif, identifier 3–6 composants, tester sur 10 prompts, affiner, documenter.',
@@ -871,7 +871,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-framework?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/build-your-own-framework',
       inLanguage: 'ja',
       headline: '独自プロンプトフレームワークの構築：5ステップ設計プロセス',
       description: 'カスタムプロンプトフレームワークを5ステップで構築：目標定義、3〜6コンポーネント特定、10プロンプトでテスト、改良、文書化。',
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/build-your-own-framework?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/build-your-own-framework',
       inLanguage: 'zh',
       headline: '构建自己的Prompt框架：5步设计流程',
       description: '5步构建自定义Prompt框架：定义目标、识别3至6个组件、在10条Prompt上测试、改进、文档化。',

@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Beste RAG-Tools für Geschäftsdokumente 2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      url: 'https://www.promptquorum.com/power-local-llm/best-rag-tools-for-business-documents-2026?lang=de', inLanguage: 'de',
+      url: 'https://www.promptquorum.com/de/power-local-llm/best-rag-tools-for-business-documents-2026', inLanguage: 'de',
     },
   },
   fr: {
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Meilleurs outils RAG pour documents professionnels 2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      url: 'https://www.promptquorum.com/power-local-llm/best-rag-tools-for-business-documents-2026?lang=fr', inLanguage: 'fr',
+      url: 'https://www.promptquorum.com/fr/power-local-llm/best-rag-tools-for-business-documents-2026', inLanguage: 'fr',
     },
   },
   ja: {
@@ -457,7 +457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'ビジネス文書向けRAGツール比較 2026年版',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      url: 'https://www.promptquorum.com/power-local-llm/best-rag-tools-for-business-documents-2026?lang=ja', inLanguage: 'ja',
+      url: 'https://www.promptquorum.com/ja/power-local-llm/best-rag-tools-for-business-documents-2026', inLanguage: 'ja',
     },
   },
   zh: {
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年商业文档最佳RAG工具对比',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      url: 'https://www.promptquorum.com/power-local-llm/best-rag-tools-for-business-documents-2026?lang=zh', inLanguage: 'zh',
+      url: 'https://www.promptquorum.com/zh/power-local-llm/best-rag-tools-for-business-documents-2026', inLanguage: 'zh',
     },
   },
 }

@@ -178,14 +178,14 @@ function renderInlineLinks(
           </a>
         )
       }
-      // Internal links: use Next.js Link with lang parameter injection
+      // Internal links: use Next.js Link with language path prefix
       let finalUrl = url
       if (lang !== 'en' && url.startsWith('/') && !url.includes('?lang=')) {
         if (url.includes('#')) {
           const [basePath, anchor] = url.split('#')
-          finalUrl = `${basePath}?lang=${lang}#${anchor}`
+          finalUrl = `/${lang}${basePath}#${anchor}`
         } else {
-          finalUrl = `${url}?lang=${lang}`
+          finalUrl = `/${lang}${url}`
         }
       }
       return (
@@ -858,7 +858,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
             {article?.ctaText ?? POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
           </p>
           <a
-            href={(article as any)?.ctaHref ?? (lang === 'en' ? '/waitlist' : `/waitlist?lang=${lang}`)}
+            href={(article as any)?.ctaHref ?? (lang === 'en' ? '/waitlist' : `/${lang}/waitlist`)}
             className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             {(article as any)?.ctaButton ?? POST_UI.ctaButton[lang] ?? POST_UI.ctaButton['en']}

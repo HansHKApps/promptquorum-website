@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/geopolitics-and-ai',
         'inLanguage': 'de',
         headline: 'KI-Geopolitik erklärt: EU AI Act vs. USA vs. China (Analyse 2026)',
         description: 'Die USA, China und die Europäische Union verfolgen unvereinbare Visionen der KI-Governance — die USA priorisieren Wettbewerbsfähigkeit, China betont staatliche Kontrolle, und die EU baut einen rechtsbasierten Rahmen. Für Organisationen, die KI einsetzen, entstehen daraus konkrete Compliance-Pflichten, Beschaffungsbeschränkungen und Anforderungen an den Datenspeicherort.',
@@ -848,7 +848,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-02',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=de', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/geopolitics-and-ai', width: 1200, height: 630 },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -1203,7 +1203,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Für Organisationen, die KI deployen, transliert geopolitischer Wettbewerb sich in vier konkrete operative Entscheidungen: welche KI-Tools zulässig sind, wo Daten gespeichert werden können, welche Compliance-Dokumentation erforderlich ist und wie schnell sich Regulierungen ändern.** Diese Entscheidungen unterscheiden sich signifikant abhängig davon, ob die Organisation in der EU ansässig ist, in EU-Märkten funktioniert oder US- oder chinesische KI-Anbieter nutzt.',
             'PromptQuorum unterstützt compliance-bewusste Modell-Auswahl — dispatch Prompts über EU-konforme Modelle (Mistral, lokal Ollama) und US Frontier-Modelle gleichzeitig, erlaubend, dass Sie EU AI Act konforme Optionen gegen proprietäre Alternativen ohne separate Infrastruktur Benchmark.',
-            'Die geopolitischen Dynamiken, die die Modell-Verfügbarkeit gestalten, machen die Open-Source vs. proprietäre Frage besonders relevant. Einen vollständigen Vergleich, wann Open-Source gewinnt und wann proprietäre Modelle den Aufwand wert sind, finden Sie unter [Open Source vs. proprietäre LLMs](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=de).',
+            'Die geopolitischen Dynamiken, die die Modell-Verfügbarkeit gestalten, machen die Open-Source vs. proprietäre Frage besonders relevant. Einen vollständigen Vergleich, wann Open-Source gewinnt und wann proprietäre Modelle den Aufwand wert sind, finden Sie unter [Open Source vs. proprietäre LLMs](https://www.promptquorum.com/de/prompt-engineering/open-source-vs-proprietary-llms).',
           ],
           items: [
             '**EU-basierte Organisationen:** Müssen den EU AI Act direkt befolgen. Hochrisiko-KI-Systeme (HR, Kredit, Gesundheitswesen, öffentliche Services) verlangen Konformitätsbewertungen, Menschliche Überwachungs-Dokumentation und Registrierung in der EU AI-Datenbank vor August 2026. Alle KI, die personenbezogene Daten behandelt, muss GDPR befolgen — einschließlich KI-Trainings-Pipelines und Output-Verarbeitung.',
@@ -1417,7 +1417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=es',
+        'url': 'https://www.promptquorum.com/es/prompt-engineering/geopolitics-and-ai',
         'inLanguage': 'es',
         headline: 'Geopolítica de la IA explicada: EU AI Act vs. EE.UU. vs. China (Análisis 2026)',
         description: 'EE.UU., China y la Unión Europea persiguen visiones incompatibles de la gobernanza de la IA. Para las organizaciones que despliegan IA, estas diferencias se traducen en obligaciones de cumplimiento concretas, restricciones de adquisición y requisitos de residencia de datos.',
@@ -1425,7 +1425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-02',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=es', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/geopolitics-and-ai', width: 1200, height: 630 },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -2037,12 +2037,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectura relacionada',
           items: [
-            '[LLMs de código abierto vs. propietarios](/prompt-engineering/open-source-vs-proprietary-llms?lang=es) — Cómo el cumplimiento del EU AI Act y los requisitos de soberanía de datos influyen en la decisión de pesos abiertos vs. API',
-            '[Limitaciones de la IA: Lo que los LLMs no pueden hacer](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es) — Comprensión de los límites de capacidad relevantes para las evaluaciones de sistemas de IA de alto riesgo bajo el EU AI Act',
-            '[Inyección de prompts y seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — Vulnerabilidades de seguridad que las estrategias nacionales de IA y el EU AI Act abordan en los requisitos de sistemas de alto riesgo',
-            '[Alucinaciones de IA: Por qué la IA inventa cosas](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=es) — Problemas de fiabilidad centrales para la documentación de alto riesgo del EU AI Act y los requisitos de supervisión humana',
-            '[RAG explicado](/prompt-engineering/rag-explained?lang=es) — Cómo la generación aumentada por recuperación aborda los cortes de conocimiento en despliegues de IA regulados',
-            '[RGPD e IA: Obligaciones de cumplimiento](/prompt-engineering/gdpr-and-ai-compliance?lang=es) — Cómo la ley de protección de datos de la UE se combina con el EU AI Act para crear requisitos de cumplimiento multicapa',
+            '[LLMs de código abierto vs. propietarios](/es/prompt-engineering/open-source-vs-proprietary-llms) — Cómo el cumplimiento del EU AI Act y los requisitos de soberanía de datos influyen en la decisión de pesos abiertos vs. API',
+            '[Limitaciones de la IA: Lo que los LLMs no pueden hacer](/es/prompt-engineering/ai-limitations-what-llms-cant-do) — Comprensión de los límites de capacidad relevantes para las evaluaciones de sistemas de IA de alto riesgo bajo el EU AI Act',
+            '[Inyección de prompts y seguridad](/es/prompt-engineering/prompt-injection-and-security) — Vulnerabilidades de seguridad que las estrategias nacionales de IA y el EU AI Act abordan en los requisitos de sistemas de alto riesgo',
+            '[Alucinaciones de IA: Por qué la IA inventa cosas](/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Problemas de fiabilidad centrales para la documentación de alto riesgo del EU AI Act y los requisitos de supervisión humana',
+            '[RAG explicado](/es/prompt-engineering/rag-explained) — Cómo la generación aumentada por recuperación aborda los cortes de conocimiento en despliegues de IA regulados',
+            '[RGPD e IA: Obligaciones de cumplimiento](/es/prompt-engineering/gdpr-and-ai-compliance) — Cómo la ley de protección de datos de la UE se combina con el EU AI Act para crear requisitos de cumplimiento multicapa',
           ],
         },
       },
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/geopolitics-and-ai',
         'inLanguage': 'fr',
         headline: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent pour la domination de l\'IA',
         description: 'Les États-Unis, la Chine et l\'Union européenne poursuivent des visions incompatibles de la gouvernance de l\'IA. Pour les organisations déployant l\'IA, ces différences se traduisent par des obligations de conformité concrètes, des contraintes d\'approvisionnement et des exigences de résidence des données.',
@@ -2520,7 +2520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Si vous déployez l\'IA globalement, vous naviguez trois régimes complètement différents :',
             'Stratégie recommandée : trois piles tech distinctes (EU stack, US stack, China stack) ou abstraction complète via API cloud (moins de contrôle mais moins de risque réglementaire).',
-            'Les dynamiques géopolitiques qui façonnent la disponibilité des modèles rendent la question open-source vs propriétaire particulièrement pertinente. Pour une comparaison complète de quand l\'open-source gagne et quand les modèles propriétaires valent leur coût, voir [LLMs open source vs propriétaires](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=fr).',
+            'Les dynamiques géopolitiques qui façonnent la disponibilité des modèles rendent la question open-source vs propriétaire particulièrement pertinente. Pour une comparaison complète de quand l\'open-source gagne et quand les modèles propriétaires valent leur coût, voir [LLMs open source vs propriétaires](https://www.promptquorum.com/fr/prompt-engineering/open-source-vs-proprietary-llms).',
           ],
           items: [
             '**En UE** : conformité obligatoire, audits, documentation, tests de non-discrimination. Coût : 20-30% du budget IA. Bénéfice : légal et éthique.',
@@ -2761,11 +2761,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Prompt Engineering for Compliance & Risk](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-rag?lang=fr) — How to build responsible AI systems',
-            '[How LLMs Actually Work](https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=fr) — Technical foundation for understanding AI capabilities',
-            '[EU AI Act & Compliance](https://www.promptquorum.com/prompt-engineering/prompt-governance-production?lang=fr) — Practical guide to meeting regulatory requirements',
-            '[AI Regulation & Policy](https://www.promptquorum.com/prompt-engineering/prompt-security-tools?lang=fr) — Security and governance in production AI systems',
-            '[Open Source vs Proprietary LLMs](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=fr) — Comparison of model approaches and dependencies',
+            '[Prompt Engineering for Compliance & Risk](https://www.promptquorum.com/fr/prompt-engineering/prompt-engineering-vs-rag) — How to build responsible AI systems',
+            '[How LLMs Actually Work](https://www.promptquorum.com/fr/prompt-engineering/how-llms-actually-work) — Technical foundation for understanding AI capabilities',
+            '[EU AI Act & Compliance](https://www.promptquorum.com/fr/prompt-engineering/prompt-governance-production) — Practical guide to meeting regulatory requirements',
+            '[AI Regulation & Policy](https://www.promptquorum.com/fr/prompt-engineering/prompt-security-tools) — Security and governance in production AI systems',
+            '[Open Source vs Proprietary LLMs](https://www.promptquorum.com/fr/prompt-engineering/open-source-vs-proprietary-llms) — Comparison of model approaches and dependencies',
           ],
         },
       },
@@ -2784,7 +2784,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/geopolitics-and-ai',
         'inLanguage': 'ja',
         headline: '地政学とAI：米国、中国、EUのAI支配競争解説（2026年分析）',
         description: '米国、中国、EUはAIガバナンスに関して相反するビジョンを追求しており、AIを展開する組織にとっては具体的なコンプライアンス義務、調達制約、データ保管要件に直結します。',
@@ -2896,7 +2896,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'ジオポリティクスがプロンプト最適化を変える方法：国ごと',
           content: [
             '**あなたのAI出力が消費される場所は、プロンプトが何をする必要があるか、そして何を避ける必要があるかを決定する。** 言語はモデルパフォーマンスに直接影響を与える：英語で書かれたプロンプトを中国のモデル（ERNIE 4.0、Qwen）に送信することは、同じプロンプトを中国語で書いて送信するより悪い。法律はプロンプト設計に構造的に影響を与える：EU AI法の開示要件、米国セクター規制、中国の CAC コンテンツフィルターはそれぞれ異なる制約を課す、プロンプトをどのように書くことができるか、何の出力が生成できるか、アプリケーションが回答にどのように反応する必要があるかについて。',
-            'モデルの可用性を形成する地政学的ダイナミクスは、オープンソース対プロプライエタリの問いを特に重要にします。オープンソースが勝つ場合とプロプライエタリモデルがコストに見合う場合の完全な比較については、[オープンソース vs プロプライエタリLLM](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=ja)をご覧ください。',
+            'モデルの可用性を形成する地政学的ダイナミクスは、オープンソース対プロプライエタリの問いを特に重要にします。オープンソースが勝つ場合とプロプライエタリモデルがコストに見合う場合の完全な比較については、[オープンソース vs プロプライエタリLLM](https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms)をご覧ください。',
           ],
           tableFormat: true,
           columns: ['地域', 'プロンプトの法的制限', '言語最適化', '推奨モデル'],
@@ -2949,7 +2949,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/geopolitics-and-ai',
         'inLanguage': 'zh',
         headline: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权（2026年分析）',
         description: '美国、中国和欧盟正在追求互不兼容的AI治理愿景。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据存储位置要求。',
@@ -2997,14 +2997,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=zh', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/geopolitics-and-ai', width: 1200, height: 630 },
       },
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: 'AI监管框架对比：EU AI法案 vs 美国战略 vs 中国',
         description: '欧盟、美国和中国在人工智能监管方面的9个关键维度的全面对比。',
-        url: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/geopolitics-and-ai',
         itemListElement: [
           {
             '@type': 'ListItem',
@@ -3111,7 +3111,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'Dataset',
         name: '全球AI监管对比：EU AI法案 vs 美国战略 vs 中国CAC',
         description: '跨欧盟、美国和中国8个维度的AI监管框架结构对比——主要方式、关键立法、风险框架、最高罚款、数据保护、禁止应用、执法机构和国际范围。',
-        url: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/geopolitics-and-ai',
         creator: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         dateModified: '2026-04-01',
         variableMeasured: [
@@ -3444,7 +3444,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**合规风险：** 三个矛盾的监管框架（EU AI法案、美国部门法、中国CAC）可能无法同时满足。',
             '**供应链风险：** 芯片（TSMC台湾）、顶级模型（OpenAI美国）、数据（地理分布）的依赖性。中美冲突可能会中断供应链。',
             '**内容审查风险：** 在中国运营意味着接受CAC内容过滤。在欧盟运营意味着接受AI Act披露。在美国运营意味着分散的部门监管。',
-            '塑造模型可用性的地缘政治动态使开源与专有的问题尤为重要。关于开源何时胜出以及专有模型何时物有所值的完整比较，请参阅[开源与专有LLM](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=zh)。',
+            '塑造模型可用性的地缘政治动态使开源与专有的问题尤为重要。关于开源何时胜出以及专有模型何时物有所值的完整比较，请参阅[开源与专有LLM](https://www.promptquorum.com/zh/prompt-engineering/open-source-vs-proprietary-llms)。',
           ],
         },
 
@@ -3586,10 +3586,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[EU AI法案：实际合规要求](/prompt-engineering/eu-ai-act-compliance-guide?lang=zh)',
-            '[如何在中国部署AI产品](/prompt-engineering/ai-deployment-china?lang=zh)',
-            '[提示工程和地缘政治：技能构建指南](/prompt-engineering/prompt-engineering-geopolitics?lang=zh)',
-            '[GDPR和AI：数据保护指南](/prompt-engineering/gdpr-ai-data-protection?lang=zh)',
+            '[EU AI法案：实际合规要求](/zh/prompt-engineering/eu-ai-act-compliance-guide)',
+            '[如何在中国部署AI产品](/zh/prompt-engineering/ai-deployment-china)',
+            '[提示工程和地缘政治：技能构建指南](/zh/prompt-engineering/prompt-engineering-geopolitics)',
+            '[GDPR和AI：数据保护指南](/zh/prompt-engineering/gdpr-ai-data-protection)',
           ],
         },
       },

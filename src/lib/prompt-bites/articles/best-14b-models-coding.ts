@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Tanto Qwen 2.5 Coder 14B como DeepSeek Coder 14B necesitan aproximadamente 10 GB de VRAM en Q4_K_M, dejando solo 2 GB de margen en una tarjeta de 12 GB. <strong>Este margen es justo para sesiones de contexto largo: con 8k de contexto, el uso de VRAM sube a ~11.5 GB.</strong> Si tu flujo de trabajo involucra archivos grandes, prefiere una tarjeta con 16 GB o más.',
           'Para ventanas de contexto por debajo de 4k tokens — el caso habitual para la finalización de código en un solo archivo — los tres modelos funcionan cómodamente en una RTX 3060 12 GB o RTX 3080 Ti 12 GB. La velocidad es aproximadamente 14–18 tok/s para Qwen y DeepSeek Coder; StarCoder2 15B corre a un rendimiento similar dado su huella de VRAM comparable. Prefiere StarCoder2 cuando tu flujo de trabajo se centra en búsqueda a escala de repositorio o patrones de contribución a código abierto.',
-          'Para una comparativa más amplia de modelos de coding en otros tamaños y niveles de VRAM, consulta la guía del <a href="/prompt-bites/best-local-llm-coding-12gb-vram?lang=es" class="text-primary hover:underline">mejor LLM de coding para 12 GB de VRAM</a>.',
+          'Para una comparativa más amplia de modelos de coding en otros tamaños y niveles de VRAM, consulta la guía del <a href="/es/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">mejor LLM de coding para 12 GB de VRAM</a>.',
         ],
       },
       faq: {
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Es mejor un modelo de coding 14B que un modelo general de 34B para código?',
-            a: 'Para tareas específicas de código, Qwen 2.5 Coder 14B generalmente supera a un modelo genérico de 34B a pesar de ser más pequeño, gracias a su preentrenamiento enfocado en coding. Consulta la <a href="/prompt-bites/qwen-coder-vs-deepseek-coder?lang=es" class="text-primary hover:underline">comparativa Qwen Coder vs DeepSeek Coder</a> para datos detallados de benchmarks.',
+            a: 'Para tareas específicas de código, Qwen 2.5 Coder 14B generalmente supera a un modelo genérico de 34B a pesar de ser más pequeño, gracias a su preentrenamiento enfocado en coding. Consulta la <a href="/es/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">comparativa Qwen Coder vs DeepSeek Coder</a> para datos detallados de benchmarks.',
           },
           {
             q: '¿Qué cuantización debo usar para un modelo de coding 14B?',

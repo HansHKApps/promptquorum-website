@@ -458,11 +458,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
-            '[Ollama installieren: Schritt-für-Schritt-Anleitung](/local-llms/how-to-install-ollama?lang=de) -- Aktualisierte Anleitung für alle Plattformen (macOS, Linux, Windows).',
-            '[LM Studio vs. Ollama: Vergleich 2026](/local-llms/lm-studio-vs-ollama?lang=de) -- Welches Tool ist für lokale Modelle besser?',
-            '[Lokale LLM-Hardware-Anforderungen 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) -- GPU/CPU/RAM-Anforderungen für Qwen2.5, Llama, Mistral.',
-            '[LLM-Quantisierung erklärt: Q4_K_M vs. Q5_K_M](/local-llms/llm-quantization-explained?lang=de) -- Warum Q4_K_M Standard ist.',
-            '[Troubleshooting lokaler LLM-Setups](/local-llms/troubleshooting-local-llm-setup?lang=de) -- Häufige Fehler und Lösungen (VRAM, Pfade, Quantisierungen).'
+            '[Ollama installieren: Schritt-für-Schritt-Anleitung](/de/local-llms/how-to-install-ollama) -- Aktualisierte Anleitung für alle Plattformen (macOS, Linux, Windows).',
+            '[LM Studio vs. Ollama: Vergleich 2026](/de/local-llms/lm-studio-vs-ollama) -- Welches Tool ist für lokale Modelle besser?',
+            '[Lokale LLM-Hardware-Anforderungen 2026](/de/local-llms/local-llm-hardware-guide-2026) -- GPU/CPU/RAM-Anforderungen für Qwen2.5, Llama, Mistral.',
+            '[LLM-Quantisierung erklärt: Q4_K_M vs. Q5_K_M](/de/local-llms/llm-quantization-explained) -- Warum Q4_K_M Standard ist.',
+            '[Troubleshooting lokaler LLM-Setups](/de/local-llms/troubleshooting-local-llm-setup) -- Häufige Fehler und Lösungen (VRAM, Pfade, Quantisierungen).'
           ]
         },
         sources: {
@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/multilingual-local-llms',
         'inLanguage': 'de',
         'headline': 'Beste mehrsprachige lokale LLMs 2026: Qwen2.5 vs. Mistral',
         'description': 'Vergleich mehrsprachiger lokaler Sprachmodelle: Qwen2.5 7B dominiert asiatische Sprachen. Mistral konkurriert bei europäischen Sprachen. Benchmarks, Hardware-Anforderungen.',
@@ -515,7 +515,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'inLanguage': 'de',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/multilingual-local-llms',
         'name': 'Mehrsprachige lokale LLMs auswählen und verwenden',
         'step': [
           {
@@ -554,7 +554,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'de',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/multilingual-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -658,7 +658,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'de',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/multilingual-local-llms',
         'name': 'Sprachvergleich für lokale Sprachmodelle',
         'description': 'Vergleich von Sprachunterstützung in Qwen2.5, Llama, Mistral und Gemma für Chinesisch, Japanisch, Koreanisch, Französisch, Deutsch, Spanisch, Italienisch und Arabisch.',
         'numberOfItems': 6,
@@ -977,11 +977,11 @@ schema: {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Installer Ollama : Guide complet](/local-llms/how-to-install-ollama?lang=fr) -- Guide mis à jour pour toutes les plates-formes (macOS, Linux, Windows).',
-            '[LM Studio vs Ollama : Comparaison 2026](/local-llms/lm-studio-vs-ollama?lang=fr) -- Quel outil est le meilleur pour les modèles locaux ?',
-            '[Configuration matérielle des LLMs locaux 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) -- Exigences GPU/CPU/RAM pour Qwen2.5, Llama, Mistral.',
-            '[Quantification LLM expliquée : Q4_K_M vs Q5_K_M](/local-llms/llm-quantization-explained?lang=fr) -- Pourquoi Q4_K_M est la norme.',
-            '[Dépannage des configurations locales des LLMs](/local-llms/troubleshooting-local-llm-setup?lang=fr) -- Erreurs courantes et solutions (VRAM, chemins, quantifications).'
+            '[Installer Ollama : Guide complet](/fr/local-llms/how-to-install-ollama) -- Guide mis à jour pour toutes les plates-formes (macOS, Linux, Windows).',
+            '[LM Studio vs Ollama : Comparaison 2026](/fr/local-llms/lm-studio-vs-ollama) -- Quel outil est le meilleur pour les modèles locaux ?',
+            '[Configuration matérielle des LLMs locaux 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Exigences GPU/CPU/RAM pour Qwen2.5, Llama, Mistral.',
+            '[Quantification LLM expliquée : Q4_K_M vs Q5_K_M](/fr/local-llms/llm-quantization-explained) -- Pourquoi Q4_K_M est la norme.',
+            '[Dépannage des configurations locales des LLMs](/fr/local-llms/troubleshooting-local-llm-setup) -- Erreurs courantes et solutions (VRAM, chemins, quantifications).'
           ]
         },
         sources: {
@@ -999,7 +999,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/multilingual-local-llms',
         'inLanguage': 'fr',
         'headline': 'Meilleurs LLMs locaux multilingues 2026 : Qwen2.5 vs Mistral',
         'description': 'Comparaison des LLMs locaux multilingues : Qwen2.5 7B domine les langues asiatiques. Mistral rivalise sur les langues européennes. Benchmarks, exigences matérielles.',
@@ -1034,7 +1034,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'inLanguage': 'fr',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/multilingual-local-llms',
         'name': 'Sélectionner et utiliser les LLMs locaux multilingues',
         'step': [
           {
@@ -1073,7 +1073,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'fr',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/multilingual-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1161,7 +1161,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'fr',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/multilingual-local-llms',
         'name': 'Comparaison des langues pour les modèles de langage locaux',
         'description': 'Comparaison du support linguistique dans Qwen2.5, Llama, Mistral et Gemma pour le chinois, le japonais, le coréen, le français, l\'allemand, l\'espagnol, l\'italien et l\'arabe.',
         'numberOfItems': 6,
@@ -1480,11 +1480,11 @@ schema: {
         relatedReading: {
           title: '参考資料',
           items: [
-            '[Ollama インストール：完全ガイド](/local-llms/how-to-install-ollama?lang=ja) -- 全プラットフォーム対応（macOS、Linux、Windows）。',
-            '[LM Studio vs Ollama：2026 比較](/local-llms/lm-studio-vs-ollama?lang=ja) -- ローカルモデルに最良のツール？',
-            '[ローカルLLM ハードウェア要件 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) -- Qwen2.5、Llama、Mistral の GPU/CPU/RAM 要件。',
-            '[LLM 量子化説明：Q4_K_M vs Q5_K_M](/local-llms/llm-quantization-explained?lang=ja) -- Q4_K_M が標準な理由。',
-            '[ローカルLLM セットアップトラブルシューティング](/local-llms/troubleshooting-local-llm-setup?lang=ja) -- 一般的エラーと解決策（VRAM、パス、量子化）。'
+            '[Ollama インストール：完全ガイド](/ja/local-llms/how-to-install-ollama) -- 全プラットフォーム対応（macOS、Linux、Windows）。',
+            '[LM Studio vs Ollama：2026 比較](/ja/local-llms/lm-studio-vs-ollama) -- ローカルモデルに最良のツール？',
+            '[ローカルLLM ハードウェア要件 2026](/ja/local-llms/local-llm-hardware-guide-2026) -- Qwen2.5、Llama、Mistral の GPU/CPU/RAM 要件。',
+            '[LLM 量子化説明：Q4_K_M vs Q5_K_M](/ja/local-llms/llm-quantization-explained) -- Q4_K_M が標準な理由。',
+            '[ローカルLLM セットアップトラブルシューティング](/ja/local-llms/troubleshooting-local-llm-setup) -- 一般的エラーと解決策（VRAM、パス、量子化）。'
           ]
         },
         sources: {
@@ -1501,7 +1501,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/multilingual-local-llms',
         'inLanguage': 'ja',
         'headline': 'ベスト多言語ローカルLLM 2026：Qwen2.5 vs Mistral',
         'description': '多言語ローカルLLM比較：Qwen2.5 7B はアジア言語で支配的。Mistral はヨーロッパ言語で競争。ベンチマーク、ハードウェア要件。',
@@ -1537,7 +1537,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'inLanguage': 'ja',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/multilingual-local-llms',
         'name': '多言語ローカルLLM選択と利用',
         'step': [
           {
@@ -1577,7 +1577,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'ja',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/multilingual-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1666,7 +1666,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'ja',
-        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/multilingual-local-llms',
         'name': 'ローカル言語モデル向け言語比較',
         'description': 'Qwen2.5、Llama、Mistral、Gemma における中国語、日本語、韓国語、フランス語、ドイツ語、スペイン語、イタリア語、アラビア語のサポート比較。',
         'numberOfItems': 6,
@@ -1896,11 +1896,11 @@ schema: {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[Ollama安装完整指南](/local-llms/how-to-install-ollama?lang=zh) -- 全平台支持（macOS、Linux、Windows）。',
-            '[LM Studio vs Ollama：2026对比](/local-llms/lm-studio-vs-ollama?lang=zh) -- 本地模型最佳工具是哪个？',
-            '[本地LLM硬件要求2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) -- Qwen2.5、Llama、Mistral的GPU/CPU/RAM要求。',
-            '[LLM量化解释：Q4_K_M vs Q5_K_M](/local-llms/llm-quantization-explained?lang=zh) -- 为什么Q4_K_M是标准。',
-            '[本地LLM配置故障排除](/local-llms/troubleshooting-local-llm-setup?lang=zh) -- 常见错误与解决方案（VRAM、路径、量化）。'
+            '[Ollama安装完整指南](/zh/local-llms/how-to-install-ollama) -- 全平台支持（macOS、Linux、Windows）。',
+            '[LM Studio vs Ollama：2026对比](/zh/local-llms/lm-studio-vs-ollama) -- 本地模型最佳工具是哪个？',
+            '[本地LLM硬件要求2026](/zh/local-llms/local-llm-hardware-guide-2026) -- Qwen2.5、Llama、Mistral的GPU/CPU/RAM要求。',
+            '[LLM量化解释：Q4_K_M vs Q5_K_M](/zh/local-llms/llm-quantization-explained) -- 为什么Q4_K_M是标准。',
+            '[本地LLM配置故障排除](/zh/local-llms/troubleshooting-local-llm-setup) -- 常见错误与解决方案（VRAM、路径、量化）。'
           ]
         },
         sources: {

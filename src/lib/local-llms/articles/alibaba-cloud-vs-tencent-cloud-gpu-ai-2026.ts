@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
-      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=de',
+      url: 'https://www.promptquorum.com/de/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
     },
   },
   fr: {
@@ -472,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
-      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=fr',
+      url: 'https://www.promptquorum.com/fr/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
     },
   },
   ja: {
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
-      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=ja',
+      url: 'https://www.promptquorum.com/ja/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
     },
   },
   zh: {
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
-      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=zh',
+      url: 'https://www.promptquorum.com/zh/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
     },
   },
 }

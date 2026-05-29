@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: 'Für Tool-Calling-Agenten (das Modell entscheidet, welche API aufgerufen wird), siehe [lokale KI-Agenten mit MCP in 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de). MCP ermöglicht es einem Agenten, Gmail, Notion und Datei-APIs autonom zu verketten, ohne dass Sie jeden Schritt in n8n verdrahten müssen.',
+            text: 'Für Tool-Calling-Agenten (das Modell entscheidet, welche API aufgerufen wird), siehe [lokale KI-Agenten mit MCP in 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026). MCP ermöglicht es einem Agenten, Gmail, Notion und Datei-APIs autonom zu verketten, ohne dass Sie jeden Schritt in n8n verdrahten müssen.',
           },
         ],
       },
@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       workflowContentScheduling: {
         id: 'workflow-content-scheduling',
         title: 'Workflow 5 — Content-Planung (Cross-Post)',
-        content: '**Ausgelöst durch einen Webhook von Ihrem CMS (oder eine Zeile in einer lokalen Content-DB), generiert plattformspezifische Copy (LinkedIn lang, Twitter kurz, Mastodon mittel) mit Llama 3.2 3B und plant die Posts über jede Plattform-API zur angeforderten Zeit.** Ersetzt "in CMS veröffentlichen → Cross-Post"-Zapier-Flows. Für Prompt-Techniken, die die Kopiengenerierung des Modells für plattformspezifisch verbessern, siehe [Prompt-Engineering für Content-Teams](/prompt-engineering/prompt-engineering-for-content-teams?lang=de).',
+        content: '**Ausgelöst durch einen Webhook von Ihrem CMS (oder eine Zeile in einer lokalen Content-DB), generiert plattformspezifische Copy (LinkedIn lang, Twitter kurz, Mastodon mittel) mit Llama 3.2 3B und plant die Posts über jede Plattform-API zur angeforderten Zeit.** Ersetzt "in CMS veröffentlichen → Cross-Post"-Zapier-Flows. Für Prompt-Techniken, die die Kopiengenerierung des Modells für plattformspezifisch verbessern, siehe [Prompt-Engineering für Content-Teams](/de/prompt-engineering/prompt-engineering-for-content-teams).',
         numberedItems: [
           'Trigger: Webhook-Knoten — öffentlich über Cloudflare Tunnel (`cloudflared tunnel --url http://localhost:5678`) freigegeben.',
           'Webhook-Payload: `{ "title": "...", "url": "...", "summary": "...", "publishAt": "ISO timestamp" }`.',
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Für die vollständige Local-LLM-Hardware-Sizing einschließlich VRAM-Tabellen für größere Modelle siehe [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de).',
+            text: 'Für die vollständige Local-LLM-Hardware-Sizing einschließlich VRAM-Tabellen für größere Modelle siehe [Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026).',
           },
         ],
       },
@@ -942,12 +942,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Empfohlene Lektüre',
         items: [
-          '[Lokale KI-Agenten mit MCP in 2026: Ollama mit Datenbanken und APIs verbinden](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de) — was wahrhaft autonome lokale Agenten ermöglicht (vs die festen n8n-Pipelines hier).',
-          '[Autonome lokale Agenten: Funktionieren sie 2026 wirklich?](/power-local-llm/autonomous-local-agents-actually-work?lang=de) — Kontext für Grenzen von LLM-gesteuerten Entscheidungen.',
-          '[Grammarly und Notion AI durch lokales LLM ersetzen](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=de) — benachbarter SaaS-Ersatz-Leitfaden.',
-          '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — Dimensionierung Ihrer Maschine für n8n + Ollama und darüber hinaus.',
-          '[Beste lokale Modelle für Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026?lang=de) — welches Modell wählen, wenn Ihr Workflow strukturierten Tool-Use braucht.',
-          '[Power Local LLM Hub](/power-local-llm?lang=de) — vollständige Leitfads-Bibliothek.',
+          '[Lokale KI-Agenten mit MCP in 2026: Ollama mit Datenbanken und APIs verbinden](/de/power-local-llm/local-ai-agents-with-mcp-2026) — was wahrhaft autonome lokale Agenten ermöglicht (vs die festen n8n-Pipelines hier).',
+          '[Autonome lokale Agenten: Funktionieren sie 2026 wirklich?](/de/power-local-llm/autonomous-local-agents-actually-work) — Kontext für Grenzen von LLM-gesteuerten Entscheidungen.',
+          '[Grammarly und Notion AI durch lokales LLM ersetzen](/de/power-local-llm/replace-grammarly-notion-ai-with-local) — benachbarter SaaS-Ersatz-Leitfaden.',
+          '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) — Dimensionierung Ihrer Maschine für n8n + Ollama und darüber hinaus.',
+          '[Beste lokale Modelle für Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — welches Modell wählen, wenn Ihr Workflow strukturierten Tool-Use braucht.',
+          '[Power Local LLM Hub](/de/power-local-llm) — vollständige Leitfads-Bibliothek.',
         ],
       },
     },
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: 'Pour les agents d\'appel d\'outils (le modèle décide quelle API appeler), voir [agents IA locaux avec MCP en 2026](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr). MCP est ce qui permet à un agent de chaîner Gmail, Notion et les APIs de fichiers de manière autonome.',
+            text: 'Pour les agents d\'appel d\'outils (le modèle décide quelle API appeler), voir [agents IA locaux avec MCP en 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026). MCP est ce qui permet à un agent de chaîner Gmail, Notion et les APIs de fichiers de manière autonome.',
           },
         ],
       },
@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       workflowContentScheduling: {
         id: 'workflow-content-scheduling',
         title: 'Workflow 5 — Planification de contenu (Cross-Post)',
-        content: '**Déclenché par un webhook de votre CMS (ou une ligne dans une base de données de contenu local), génère une copie spécifique à la plateforme (LinkedIn long, Twitter court, Mastodon moyen) avec Llama 3.2 3B et programme les publications via l\'API de chaque plateforme à l\'heure demandée.** Remplace les workflows Zapier "publier dans CMS → cross-post". Pour les techniques de prompt qui améliorent la génération de copie spécifique à la plateforme du modèle, voir [ingénierie de prompt pour les équipes de contenu](/prompt-engineering/prompt-engineering-for-content-teams?lang=fr).',
+        content: '**Déclenché par un webhook de votre CMS (ou une ligne dans une base de données de contenu local), génère une copie spécifique à la plateforme (LinkedIn long, Twitter court, Mastodon moyen) avec Llama 3.2 3B et programme les publications via l\'API de chaque plateforme à l\'heure demandée.** Remplace les workflows Zapier "publier dans CMS → cross-post". Pour les techniques de prompt qui améliorent la génération de copie spécifique à la plateforme du modèle, voir [ingénierie de prompt pour les équipes de contenu](/fr/prompt-engineering/prompt-engineering-for-content-teams).',
         numberedItems: [
           'Déclencheur : nœud Webhook — exposé publiquement via Tunnel Cloudflare (`cloudflared tunnel --url http://localhost:5678`).',
           'Payload Webhook : `{ "title": "...", "url": "...", "summary": "...", "publishAt": "ISO timestamp" }`.',
@@ -1330,7 +1330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pour le dimensionnement matériel complet du LLM local, y compris des tableaux VRAM pour les modèles plus grands, voir le [Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr).',
+            text: 'Pour le dimensionnement matériel complet du LLM local, y compris des tableaux VRAM pour les modèles plus grands, voir le [Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026).',
           },
         ],
       },
@@ -1415,12 +1415,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures recommandées',
         items: [
-          '[Agents IA locaux avec MCP en 2026 : connecter Ollama aux bases de données et APIs](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr) — ce qui rend possibles les vrais agents locaux autonomes (par rapport aux pipelines n8n fixes ici).',
-          '[Agents locaux autonomes : fonctionnent-ils réellement en 2026 ?](/power-local-llm/autonomous-local-agents-actually-work?lang=fr) — contexte des limites de la prise de décision pilotée par LLM.',
-          '[Remplacer Grammarly et Notion AI avec un LLM local](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=fr) — guide de remplacement SaaS adjacent.',
-          '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — dimensionner votre machine pour n8n + Ollama et au-delà.',
-          '[Meilleurs modèles locaux pour Tool Calling en 2026](/power-local-llm/best-local-models-tool-calling-2026?lang=fr) — quel modèle choisir quand votre workflow a besoin d\'un tool use structuré.',
-          '[Hub Power Local LLM](/power-local-llm?lang=fr) — bibliothèque complète des guides.',
+          '[Agents IA locaux avec MCP en 2026 : connecter Ollama aux bases de données et APIs](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — ce qui rend possibles les vrais agents locaux autonomes (par rapport aux pipelines n8n fixes ici).',
+          '[Agents locaux autonomes : fonctionnent-ils réellement en 2026 ?](/fr/power-local-llm/autonomous-local-agents-actually-work) — contexte des limites de la prise de décision pilotée par LLM.',
+          '[Remplacer Grammarly et Notion AI avec un LLM local](/fr/power-local-llm/replace-grammarly-notion-ai-with-local) — guide de remplacement SaaS adjacent.',
+          '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — dimensionner votre machine pour n8n + Ollama et au-delà.',
+          '[Meilleurs modèles locaux pour Tool Calling en 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — quel modèle choisir quand votre workflow a besoin d\'un tool use structuré.',
+          '[Hub Power Local LLM](/fr/power-local-llm) — bibliothèque complète des guides.',
         ],
       },
     },
@@ -1577,7 +1577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: 'ツール呼び出しエージェント (モデルがAPI選択判断) については、[2026年ローカルAIエージェント MCP版](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja) 参照。MCP は真の自律型エージェント (n8n の固定パイプライン vs)。',
+            text: 'ツール呼び出しエージェント (モデルがAPI選択判断) については、[2026年ローカルAIエージェント MCP版](/ja/power-local-llm/local-ai-agents-with-mcp-2026) 参照。MCP は真の自律型エージェント (n8n の固定パイプライン vs)。',
           },
         ],
       },
@@ -1723,7 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       workflowContentScheduling: {
         id: 'workflow-content-scheduling',
         title: 'ワークフロー5 — コンテンツスケジューリング (クロスポスト)',
-        content: '**CMS の webhook (or ローカルコンテンツDB 行) でトリガー、Llama 3.2 3B で プラットフォーム固有コピー生成 (LinkedIn 長、Twitter 短、Mastodon 中)、要求時刻に各プラットフォーム API 経由でスケジュール投稿。** \"CMS で公開 → cross-post\" Zapier フロー置き換え。prompt 技法がモデルのプラットフォーム固有コピー生成を改善する場合は [コンテンツチーム向け prompt engineering](/prompt-engineering/prompt-engineering-for-content-teams?lang=ja) 参照。',
+        content: '**CMS の webhook (or ローカルコンテンツDB 行) でトリガー、Llama 3.2 3B で プラットフォーム固有コピー生成 (LinkedIn 長、Twitter 短、Mastodon 中)、要求時刻に各プラットフォーム API 経由でスケジュール投稿。** \"CMS で公開 → cross-post\" Zapier フロー置き換え。prompt 技法がモデルのプラットフォーム固有コピー生成を改善する場合は [コンテンツチーム向け prompt engineering](/ja/prompt-engineering/prompt-engineering-for-content-teams) 参照。',
         numberedItems: [
           'トリガー：Webhook ノード — Cloudflare Tunnel (`cloudflared tunnel --url http://localhost:5678`) 経由で公開公開。',
           'Webhook payload：`{ \"title\": \"...\", \"url\": \"...\", \"summary\": \"...\", \"publishAt\": \"ISO timestamp\" }`。',
@@ -1803,7 +1803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'full ローカル LLM ハードウェア sizing (大モデル VRAM テーブル含む) は [ローカル LLM ハードウェアガイド 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) 参照。',
+            text: 'full ローカル LLM ハードウェア sizing (大モデル VRAM テーブル含む) は [ローカル LLM ハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) 参照。',
           },
         ],
       },
@@ -1888,12 +1888,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '推奨読み物',
         items: [
-          '[2026年ローカル AI エージェント MCP版：Ollama をデータベース・API と接続](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja) — what enables true autonomous local agent (vs fixed n8n pipeline here)。',
-          '[autonomous local agent 本当に 2026 で work？](/power-local-llm/autonomous-local-agents-actually-work?lang=ja) — LLM-driven decision-making の限界 context。',
-          '[Grammarly・Notion AI をローカル LLM に置き換え](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=ja) — adjacent SaaS-replacement guide。',
-          '[ローカル LLM ハードウェアガイド 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — n8n + Ollama 用マシン size、beyond。',
-          '[2026年 tool calling で最高 local モデル](/power-local-llm/best-local-models-tool-calling-2026?lang=ja) — workflow が structured tool-use 必須の場合、モデル選び。',
-          '[Power Local LLM Hub](/power-local-llm?lang=ja) — full guide library。',
+          '[2026年ローカル AI エージェント MCP版：Ollama をデータベース・API と接続](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — what enables true autonomous local agent (vs fixed n8n pipeline here)。',
+          '[autonomous local agent 本当に 2026 で work？](/ja/power-local-llm/autonomous-local-agents-actually-work) — LLM-driven decision-making の限界 context。',
+          '[Grammarly・Notion AI をローカル LLM に置き換え](/ja/power-local-llm/replace-grammarly-notion-ai-with-local) — adjacent SaaS-replacement guide。',
+          '[ローカル LLM ハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) — n8n + Ollama 用マシン size、beyond。',
+          '[2026年 tool calling で最高 local モデル](/ja/power-local-llm/best-local-models-tool-calling-2026) — workflow が structured tool-use 必須の場合、モデル選び。',
+          '[Power Local LLM Hub](/ja/power-local-llm) — full guide library。',
         ],
       },
     },
@@ -2050,7 +2050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'tip',
-            text: '对于工具调用代理（模型决定调用哪个 API），见 [2026 年 MCP 本地 AI 代理](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh)。MCP 使代理能自主链接 Gmail、Notion 和文件 API。',
+            text: '对于工具调用代理（模型决定调用哪个 API），见 [2026 年 MCP 本地 AI 代理](/zh/power-local-llm/local-ai-agents-with-mcp-2026)。MCP 使代理能自主链接 Gmail、Notion 和文件 API。',
           },
         ],
       },
@@ -2196,7 +2196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       workflowContentScheduling: {
         id: 'workflow-content-scheduling',
         title: '工作流 5 —— 内容发布（跨平台）',
-        content: '**由来自 CMS 的 webhook（或本地内容数据库行）触发，用 Llama 3.2 3B 生成平台特定副本（LinkedIn 长、Twitter 短、Mastodon 中），在请求的时间通过各平台 API 安排发布。** 替代"在 CMS 中发布 → 跨平台发布"Zapier 工作流。有关改进模型平台特定副本生成的提示技术，见 [内容团队的提示工程](/prompt-engineering/prompt-engineering-for-content-teams?lang=zh)。',
+        content: '**由来自 CMS 的 webhook（或本地内容数据库行）触发，用 Llama 3.2 3B 生成平台特定副本（LinkedIn 长、Twitter 短、Mastodon 中），在请求的时间通过各平台 API 安排发布。** 替代"在 CMS 中发布 → 跨平台发布"Zapier 工作流。有关改进模型平台特定副本生成的提示技术，见 [内容团队的提示工程](/zh/prompt-engineering/prompt-engineering-for-content-teams)。',
         numberedItems: [
           '触发器：Webhook 节点 —— 通过 Cloudflare Tunnel 公开(`cloudflared tunnel --url http://localhost:5678`)。',
           'Webhook 有效负载：`{ "title": "...", "url": "...", "summary": "...", "publishAt": "ISO timestamp" }`。',
@@ -2276,7 +2276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '完整本地 LLM 硬件尺寸(大模型 VRAM 表)，见 [本地 LLM 硬件指南 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh)。',
+            text: '完整本地 LLM 硬件尺寸(大模型 VRAM 表)，见 [本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026)。',
           },
         ],
       },
@@ -2361,12 +2361,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '推荐阅读',
         items: [
-          '[2026 年本地 AI 代理 MCP：连接 Ollama 到数据库和 API](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh) —— 什么启用真正自主本地代理(vs 此处固定 n8n 管道)。',
-          '[自主本地代理：2026 年真的动吗？](/power-local-llm/autonomous-local-agents-actually-work?lang=zh) —— LLM 驱动决策制定限制的背景。',
-          '[用本地 LLM 替代 Grammarly 和 Notion AI](/power-local-llm/replace-grammarly-notion-ai-with-local?lang=zh) —— 相邻 SaaS 替代指南。',
-          '[本地 LLM 硬件指南 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) —— 为 n8n + Ollama 及超越的机器尺寸。',
-          '[2026 年工具调用最佳本地模型](/power-local-llm/best-local-models-tool-calling-2026?lang=zh) —— 当工作流需结构化工具使用时选哪个模型。',
-          '[Power Local LLM Hub](/power-local-llm?lang=zh) —— 完整指南库。',
+          '[2026 年本地 AI 代理 MCP：连接 Ollama 到数据库和 API](/zh/power-local-llm/local-ai-agents-with-mcp-2026) —— 什么启用真正自主本地代理(vs 此处固定 n8n 管道)。',
+          '[自主本地代理：2026 年真的动吗？](/zh/power-local-llm/autonomous-local-agents-actually-work) —— LLM 驱动决策制定限制的背景。',
+          '[用本地 LLM 替代 Grammarly 和 Notion AI](/zh/power-local-llm/replace-grammarly-notion-ai-with-local) —— 相邻 SaaS 替代指南。',
+          '[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026) —— 为 n8n + Ollama 及超越的机器尺寸。',
+          '[2026 年工具调用最佳本地模型](/zh/power-local-llm/best-local-models-tool-calling-2026) —— 当工作流需结构化工具使用时选哪个模型。',
+          '[Power Local LLM Hub](/zh/power-local-llm) —— 完整指南库。',
         ],
       },
     },

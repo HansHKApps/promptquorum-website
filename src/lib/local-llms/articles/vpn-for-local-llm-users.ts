@@ -365,9 +365,9 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
-            '[Lokales LLM-Setup für Teams](/local-llms/local-llm-setup-for-teams?lang=de)',
-            '[Privates lokales LLM für sensible Daten](/local-llms/private-local-llm-sensitive-data?lang=de)',
-            '[Bester lokaler LLM-Stack für Entwickler](/local-llms/local-llm-developer-stack?lang=de)',
+            '[Lokales LLM-Setup für Teams](/de/local-llms/local-llm-setup-for-teams)',
+            '[Privates lokales LLM für sensible Daten](/de/local-llms/private-local-llm-sensitive-data)',
+            '[Bester lokaler LLM-Stack für Entwickler](/de/local-llms/local-llm-developer-stack)',
           ],
         },
         sources: {
@@ -386,7 +386,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'VPN für lokale LLM-Teams: Remote-Zugriff, Sicherheit, Split-Tunneling',
         description: 'VPN für lokalen LLM-Serverzugriff: WireGuard, OpenVPN Setup. Remote-Team-Zugriff, Sicherheit. Split-Tunneling-Anleitung.',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/vpn-for-local-llm-users',
         inLanguage: 'de',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -408,7 +408,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'de',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/vpn-for-local-llm-users',
         mainEntity: [
           {
             '@type': 'Question',
@@ -479,7 +479,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/vpn-for-local-llm-users',
         inLanguage: 'de',
         name: 'VPN-Setup-Optionen für lokalen LLM Remote-Zugriff',
         itemListElement: [
@@ -613,9 +613,9 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[Configuration LLM local pour équipes](/local-llms/local-llm-setup-for-teams?lang=fr)',
-            '[LLM local privé pour données sensibles](/local-llms/private-local-llm-sensitive-data?lang=fr)',
-            '[Meilleure pile LLM locale pour développeurs](/local-llms/local-llm-developer-stack?lang=fr)',
+            '[Configuration LLM local pour équipes](/fr/local-llms/local-llm-setup-for-teams)',
+            '[LLM local privé pour données sensibles](/fr/local-llms/private-local-llm-sensitive-data)',
+            '[Meilleure pile LLM locale pour développeurs](/fr/local-llms/local-llm-developer-stack)',
           ],
         },
         sources: {
@@ -633,7 +633,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'VPN pour équipes Local LLM : accès à distance, sécurité, split tunneling',
         description: 'VPN pour accès serveur LLM local : WireGuard, setup OpenVPN. Accès équipe distante, sécurité. Guide split tunneling.',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/vpn-for-local-llm-users',
         inLanguage: 'fr',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -655,7 +655,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'fr',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/vpn-for-local-llm-users',
         mainEntity: [
           { '@type': 'Question', 'name': 'Dois-je utiliser un VPN ou exposer l\'API LLM sur Internet ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Utilise toujours un VPN. N\'expose jamais LLM directement sur Internet (DDoS, accès non autorisé). VPN + pare-feu est sécurisé.' } },
           { '@type': 'Question', 'name': 'Les utilisateurs peuvent-ils accéder à l\'API LLM sans VPN ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Uniquement depuis le LAN (même réseau). Les utilisateurs distants DOIVENT utiliser le VPN. Ou utilise le tunnel SSH inverse (moins sécurisé).' } },
@@ -668,7 +668,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/vpn-for-local-llm-users',
         inLanguage: 'fr',
         name: 'Options de configuration VPN pour accès distant LLM local',
         itemListElement: [
@@ -802,9 +802,9 @@ schema: {
           id: 'related-reading',
           title: '関連資料',
           items: [
-            '[チーム向けローカルLLMセットアップ](/local-llms/local-llm-setup-for-teams?lang=ja)',
-            '[機密データ向けプライベートローカルLLM](/local-llms/private-local-llm-sensitive-data?lang=ja)',
-            '[開発者向けベストローカルLLMスタック](/local-llms/local-llm-developer-stack?lang=ja)',
+            '[チーム向けローカルLLMセットアップ](/ja/local-llms/local-llm-setup-for-teams)',
+            '[機密データ向けプライベートローカルLLM](/ja/local-llms/private-local-llm-sensitive-data)',
+            '[開発者向けベストローカルLLMスタック](/ja/local-llms/local-llm-developer-stack)',
           ],
         },
         sources: {
@@ -822,7 +822,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'ローカルLLMチーム向けVPN：リモートアクセス、セキュリティ、分割トンネリング',
         description: 'ローカルLLMサーバーアクセス用VPN：WireGuard、OpenVPNセットアップ。リモートチームアクセス、セキュリティ。分割トンネリングガイド。',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/vpn-for-local-llm-users',
         inLanguage: 'ja',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -844,7 +844,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'ja',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/vpn-for-local-llm-users',
         mainEntity: [
           { '@type': 'Question', 'name': 'VPNを使用するか、LLM APIをインターネットに公開するか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '常にVPNを使用。LLMをインターネットに直接公開しないでください（DDoS、不正アクセス）。VPN +ファイアウォールは安全。' } },
           { '@type': 'Question', 'name': 'VPNなしでLLM APIにアクセスできますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LANからのみ（同じネットワーク）。リモートユーザーはVPNを使用する必要があります。またはリバースSSHトンネルを使用（安全性が低い）。' } },
@@ -857,7 +857,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/vpn-for-local-llm-users',
         inLanguage: 'ja',
         name: 'ローカルLLMリモートアクセス用VPNセットアップオプション',
         itemListElement: [
@@ -991,9 +991,9 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[团队本地 LLM 设置](/local-llms/local-llm-setup-for-teams?lang=zh)',
-            '[敏感数据的私有本地 LLM](/local-llms/private-local-llm-sensitive-data?lang=zh)',
-            '[开发者最佳本地 LLM 栈](/local-llms/local-llm-developer-stack?lang=zh)',
+            '[团队本地 LLM 设置](/zh/local-llms/local-llm-setup-for-teams)',
+            '[敏感数据的私有本地 LLM](/zh/local-llms/private-local-llm-sensitive-data)',
+            '[开发者最佳本地 LLM 栈](/zh/local-llms/local-llm-developer-stack)',
           ],
         },
         sources: {
@@ -1011,7 +1011,7 @@ schema: {
         '@type': 'TechArticle',
         headline: '本地 LLM 团队 VPN：远程访问、安全、分割隧道',
         description: '本地 LLM 服务器 VPN 访问：WireGuard、OpenVPN 设置。远程团队访问、安全。分割隧道指南。',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/vpn-for-local-llm-users',
         inLanguage: 'zh',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -1033,7 +1033,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'zh',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/vpn-for-local-llm-users',
         mainEntity: [
           { '@type': 'Question', 'name': '应该使用 VPN 还是将 LLM API 公开到互联网？', 'acceptedAnswer': { '@type': 'Answer', 'text': '始终使用 VPN。切勿直接向互联网公开 LLM（DDoS、未授权访问）。VPN + 防火墙更安全。' } },
           { '@type': 'Question', 'name': '在没有 VPN 的情况下是否可以访问 LLM API？', 'acceptedAnswer': { '@type': 'Answer', 'text': '仅从 LAN（同一网络）。远程用户必须使用 VPN。或者使用反向 SSH 隧道（安全性较低）。' } },
@@ -1046,7 +1046,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/vpn-for-local-llm-users',
         inLanguage: 'zh',
         name: '本地 LLM 远程访问 VPN 设置选项',
         itemListElement: [

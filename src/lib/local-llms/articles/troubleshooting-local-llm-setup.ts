@@ -343,7 +343,7 @@ schema: {
     '@type': 'TechArticle',
     'headline': 'Lokale LLM-Fehler 2026 beheben: 10 häufige Probleme in Ollama, LM Studio und vLLM',
     'description': 'Beheben Sie Out-of-Memory-Abstürze, GPU nicht erkannt, Connection Refused und fehlerhafte Ausgabe in Ollama und LM Studio. Exakte Befehle: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
-    'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=de',
+    'url': 'https://www.promptquorum.com/de/local-llms/troubleshooting-local-llm-setup',
     'inLanguage': 'de',
     'datePublished': '2026-04-04',
     'dateModified': '2026-04-16',
@@ -441,7 +441,7 @@ schema: {
     error1: {
       id: 'error-1-out-of-memory',
       title: 'Fehler 1: "Nicht genug Speicher" / Out-of-Memory-Absturz',
-      content: '**Out-of-Memory-Fehler bedeuten, dass das Modell mehr RAM benötigt als verfügbar ist — kein Hardware-Fehler.** Dies ist der häufigste Fehler für Erstbenutzer. Siehe [LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de) für Hintergrund, wie Quantisierung RAM-Anforderungen reduziert.',
+      content: '**Out-of-Memory-Fehler bedeuten, dass das Modell mehr RAM benötigt als verfügbar ist — kein Hardware-Fehler.** Dies ist der häufigste Fehler für Erstbenutzer. Siehe [LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) für Hintergrund, wie Quantisierung RAM-Anforderungen reduziert.',
       items: [
         '**Verfügbaren Speicher überprüfen**: auf macOS/Linux `free -h` ausführen, auf Windows Task Manager → Performance → Memory öffnen.',
         '**Zu kleinerer Quantisierung wechseln**: Ersetzen Sie `Q8_0` oder `Q5_K_M` mit `Q4_K_M`. Für Ollama: `ollama run llama3.2-instruct-q4_K_M`.',
@@ -570,16 +570,16 @@ schema: {
     relatedReading: {
       title: 'Weiterführende Lektüre',
       items: [
-        '[Wie führen Sie lokale LLMs auf einem Laptop aus](/local-llms/local-llm-on-laptop?lang=de) — Wärmeverwaltung und Batterielebensdauer auf limitierter Hardware',
-        '[Lokale LLM-Sicherheits- und Datenschutz-Checkliste](/local-llms/local-llm-security-privacy-checklist?lang=de) — Vollständige Audit-Anleitung',
-        '[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de) — RAM-passende Modellempfehlungen',
-        '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen',
-        '[Beste LLMs für Coding 2026](/local-llms/best-local-llms-for-coding?lang=de) — Qwen2.5-Coder vs DeepSeek Benchmark-Vergleich',
+        '[Wie führen Sie lokale LLMs auf einem Laptop aus](/de/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf limitierter Hardware',
+        '[Lokale LLM-Sicherheits- und Datenschutz-Checkliste](/de/local-llms/local-llm-security-privacy-checklist) — Vollständige Audit-Anleitung',
+        '[Beste Anfänger-Lokale-LLM-Modelle](/de/local-llms/best-beginner-local-llm-models) — RAM-passende Modellempfehlungen',
+        '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen',
+        '[Beste LLMs für Coding 2026](/de/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek Benchmark-Vergleich',
       ],
     },
     moreTroubleshooting: {
       title: 'Wo finde ich mehr Hilfe',
-      content: 'Für Hardware-spezifische Probleme auf Laptops (thermische Drosselung, Batterieabfluss), siehe [Wie führen Sie lokale LLMs auf einem Laptop aus](/local-llms/local-llm-on-laptop?lang=de). Für Sicherheits- und Datenschutz-Konfigurationsfragen, siehe die [Lokale LLM-Sicherheits- und Datenschutz-Checkliste](/local-llms/local-llm-security-privacy-checklist?lang=de). Die Ollama GitHub-Issues-Seite (github.com/ollama/ollama/issues) und das r/LocalLLaMA-Subreddit sind die aktivsten Community-Ressourcen für modellspezifische Bugs.',
+      content: 'Für Hardware-spezifische Probleme auf Laptops (thermische Drosselung, Batterieabfluss), siehe [Wie führen Sie lokale LLMs auf einem Laptop aus](/de/local-llms/local-llm-on-laptop). Für Sicherheits- und Datenschutz-Konfigurationsfragen, siehe die [Lokale LLM-Sicherheits- und Datenschutz-Checkliste](/de/local-llms/local-llm-security-privacy-checklist). Die Ollama GitHub-Issues-Seite (github.com/ollama/ollama/issues) und das r/LocalLLaMA-Subreddit sind die aktivsten Community-Ressourcen für modellspezifische Bugs.',
     },
     commonMistakes: {
       title: 'Häufige Fehler bei der Fehlersuche lokaler LLMs',
@@ -638,7 +638,7 @@ schema: {
       '@type': 'TechArticle',
       'headline': 'Corriger les erreurs locales LLM 2026 : 10 problèmes courants dans Ollama, LM Studio et vLLM',
       'description': 'Correction des plantages dus au manque de mémoire, du GPU non détecté, de la connexion refusée et de la sortie brouillée dans Ollama et LM Studio. Commandes exactes : OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
-      'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=fr',
+      'url': 'https://www.promptquorum.com/fr/local-llms/troubleshooting-local-llm-setup',
       'inLanguage': 'fr',
       'datePublished': '2026-04-04',
       'dateModified': '2026-04-16',
@@ -736,7 +736,7 @@ schema: {
         error1: {
           id: 'error-1-out-of-memory',
           title: 'Erreur 1 : « Manque de mémoire » / Plantage Out-of-Memory',
-          content: '**Les erreurs manque de mémoire signifient que le modèle nécessite plus de RAM que disponible — ce n\'est pas une panne matérielle.** C\'est l\'erreur la plus courante pour les utilisateurs novices. Voir [Quantification LLM expliquée](/local-llms/llm-quantization-explained?lang=fr) pour les détails sur la façon dont la quantification réduit les exigences RAM.',
+          content: '**Les erreurs manque de mémoire signifient que le modèle nécessite plus de RAM que disponible — ce n\'est pas une panne matérielle.** C\'est l\'erreur la plus courante pour les utilisateurs novices. Voir [Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) pour les détails sur la façon dont la quantification réduit les exigences RAM.',
           items: [
             '**Vérifier la mémoire disponible** : Exécuter `free -h` sur macOS/Linux, ou ouvrir le Gestionnaire des tâches → Performance → Mémoire sur Windows.',
             '**Passer à une quantification plus petite** : Remplacer `Q8_0` ou `Q5_K_M` par `Q4_K_M`. Pour Ollama: `ollama run llama3.2-instruct-q4_K_M`.',
@@ -838,7 +838,7 @@ schema: {
           title: 'Erreur 8 : Sortie brouillée, répétitive ou dénuée de sens',
           content: [
             '**La sortie brouillée signifie presque toujours que vous utilisez un modèle de base au lieu d\'une variante instruct/chat.** Les modèles de base génèrent des complétions de texte brut, pas des réponses aux questions.',
-            'Les modèles de base (par exemple, `llama3.1:8b`) ne sont pas optimisés pour la conversation, et lorsqu\'on les invite avec une question, ils génèrent des complétions brutes qui ressemblent à du charabia. Utilisez toujours la variante instruct : `llama3.1:8b-instruct`. Voir [Comment installer LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) pour une méthode basée sur GUI pour basculer les variantes de modèle.',
+            'Les modèles de base (par exemple, `llama3.1:8b`) ne sont pas optimisés pour la conversation, et lorsqu\'on les invite avec une question, ils génèrent des complétions brutes qui ressemblent à du charabia. Utilisez toujours la variante instruct : `llama3.1:8b-instruct`. Voir [Comment installer LM Studio](/fr/local-llms/how-to-install-lm-studio) pour une méthode basée sur GUI pour basculer les variantes de modèle.',
             'Dans Ollama, la balise par défaut pour la plupart des modèles pointe déjà vers la variante instruct. Si vous avez téléchargé manuellement depuis Hugging Face, confirmez que le nom de fichier inclut « Instruct » ou « chat ».',
           ],
         },
@@ -862,18 +862,18 @@ schema: {
         relatedReading: {
           title: 'Lectures connexes',
           items: [
-            '[Quantification LLM expliquée](/local-llms/llm-quantization-explained?lang=fr) -- Pourquoi Q4_K_M est la valeur par défaut et comment la quantification affecte la RAM',
-            '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) -- Exigences matérielles pour exécuter des modèles 7B–70B',
-            '[Comment installer Ollama](/local-llms/how-to-install-ollama?lang=fr) -- Guide d\'installation et de configuration',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=fr) -- Comparaison des deux outils LLM locaux les plus populaires',
-            '[Comment exécuter des LLMs locaux sur un portable](/local-llms/local-llm-on-laptop?lang=fr) -- Optimisation thermique et batterie spécifique au portable',
-            '[Meilleurs modèles LLM locaux pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr) -- Recommandations de modèles pour 8 Go de RAM',
-            '[Meilleurs LLMs pour le code 2026](/local-llms/best-local-llms-for-coding?lang=fr) — Comparatif Qwen2.5-Coder vs DeepSeek',
+            '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) -- Pourquoi Q4_K_M est la valeur par défaut et comment la quantification affecte la RAM',
+            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Exigences matérielles pour exécuter des modèles 7B–70B',
+            '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) -- Guide d\'installation et de configuration',
+            '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) -- Comparaison des deux outils LLM locaux les plus populaires',
+            '[Comment exécuter des LLMs locaux sur un portable](/fr/local-llms/local-llm-on-laptop) -- Optimisation thermique et batterie spécifique au portable',
+            '[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- Recommandations de modèles pour 8 Go de RAM',
+            '[Meilleurs LLMs pour le code 2026](/fr/local-llms/best-local-llms-for-coding) — Comparatif Qwen2.5-Coder vs DeepSeek',
           ],
         },
         moreTroubleshooting: {
           title: 'Où trouver plus d\'aide',
-          content: 'Pour les problèmes spécifiques au matériel sur les ordinateurs portables (étranglement thermique, drainage de la batterie), voir [Comment exécuter des LLMs locaux sur un portable](/local-llms/local-llm-on-laptop?lang=fr). Pour les questions de configuration de sécurité et de confidentialité, voir [Liste de contrôle sécurité et confidentialité LLM local](/local-llms/local-llm-security-privacy-checklist?lang=fr). La page des problèmes GitHub d\'Ollama (github.com/ollama/ollama/issues) et le subreddit r/LocalLLaMA sont les ressources communautaires les plus actives pour les bugs spécifiques aux modèles.',
+          content: 'Pour les problèmes spécifiques au matériel sur les ordinateurs portables (étranglement thermique, drainage de la batterie), voir [Comment exécuter des LLMs locaux sur un portable](/fr/local-llms/local-llm-on-laptop). Pour les questions de configuration de sécurité et de confidentialité, voir [Liste de contrôle sécurité et confidentialité LLM local](/fr/local-llms/local-llm-security-privacy-checklist). La page des problèmes GitHub d\'Ollama (github.com/ollama/ollama/issues) et le subreddit r/LocalLLaMA sont les ressources communautaires les plus actives pour les bugs spécifiques aux modèles.',
         },
         commonMistakes: {
           title: 'Erreurs courantes dans le dépannage LLM local',
@@ -932,7 +932,7 @@ schema: {
     '@type': 'TechArticle',
     'headline': 'ローカルLLMエラーを2026年に修正する：Ollama、LM Studio、vLLMの10個の一般的な問題',
     'description': 'ローカルLLMのメモリ不足のクラッシュ、GPU検出エラー、接続拒否、出力破損を修正します。各エラーの正確なコマンド — OLLAMA_GPU_LAYERS、ollama rm、nvidia-smi。',
-    'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=ja',
+    'url': 'https://www.promptquorum.com/ja/local-llms/troubleshooting-local-llm-setup',
     'inLanguage': 'ja',
     'datePublished': '2026-04-04',
     'dateModified': '2026-04-16',
@@ -1030,7 +1030,7 @@ schema: {
     error1: {
       id: 'error-1-out-of-memory',
       title: 'エラー1：「メモリ不足」/メモリ不足クラッシュ',
-      content: '**メモリ不足エラーは、モデルが利用可能なRAMより多くメモリを必要とすることを意味します。ハードウェア障害ではありません。**これは初めてのユーザーにとって最も一般的なエラーです。背景について、[LLM量子化について説明](/local-llms/llm-quantization-explained?lang=ja)を参照してください。',
+      content: '**メモリ不足エラーは、モデルが利用可能なRAMより多くメモリを必要とすることを意味します。ハードウェア障害ではありません。**これは初めてのユーザーにとって最も一般的なエラーです。背景について、[LLM量子化について説明](/ja/local-llms/llm-quantization-explained)を参照してください。',
       items: [
         '**利用可能なRAMをチェックします**：macOS/Linuxではfree -hを実行します。Windowsではタスクマネージャー → パフォーマンス → メモリを開きます。',
         '**小さい量子化に切り替えます**：Q8_0またはQ5_K_Mをq4_K_Mに置き換えます。Ollamaの場合：ollama run llama3.2-instruct-q4_K_M。',
@@ -1132,7 +1132,7 @@ schema: {
       title: 'エラー8：出力が破損しているか反復的',
       content: [
         '**破損した出力はほぼ常に、ベースモデルではなくinstruct/chatvariantを使用していることを意味します。**ベースモデルは生のテキスト完成を生成し、質問への回答ではありません。',
-        'ベースモデル（例えば、llama3.1:8b）は会話用にファインチューニングされていないため、質問で促された場合、破損したテキストのような生の完成を生成します。常にinstruct variantを使用します：llama3.1:8b-instruct。詳細については、[LM Studioのインストール方法](/local-llms/how-to-install-lm-studio?lang=ja)を参照してください。',
+        'ベースモデル（例えば、llama3.1:8b）は会話用にファインチューニングされていないため、質問で促された場合、破損したテキストのような生の完成を生成します。常にinstruct variantを使用します：llama3.1:8b-instruct。詳細については、[LM Studioのインストール方法](/ja/local-llms/how-to-install-lm-studio)を参照してください。',
         'Ollamaでは、ほとんどのモデルのデフォルトタグはすでにinstruct variantを指します。Hugging Faceから手動でダウンロードした場合は、ファイル名に「Instruct」または「chat」が含まれていることを確認してください。',
       ],
     },
@@ -1166,13 +1166,13 @@ schema: {
       id: 'related-reading',
       title: '関連記事',
       items: [
-        '[LLM量子化について説明](/local-llms/llm-quantization-explained?lang=ja) — Q4_K_Mがデフォルトな理由と、量子化がRAMにどう影響するか',
-        '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — 7B–70Bモデルを実行するためのハードウェア要件',
-        '[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja) — インストールとセットアップガイド',
-        '[Ollama対LM Studio](/local-llms/ollama-vs-lm-studio?lang=ja) — 2つの最も一般的なローカルLLMツールの比較',
-        '[ラップトップでローカルLLMを実行する方法](/local-llms/local-llm-on-laptop?lang=ja) — ラップトップ固有の熱とバッテリー最適化',
-        '[初心者向けの最高のローカルLLMモデル](/local-llms/best-beginner-local-llm-models?lang=ja) — 8 GBのRAMのモデル推奨事項',
-        '[2026年コーディング用ローカルLLM比較](/local-llms/best-local-llms-for-coding?lang=ja) — Qwen2.5-CoderとDeepSeekのベンチマーク',
+        '[LLM量子化について説明](/ja/local-llms/llm-quantization-explained) — Q4_K_Mがデフォルトな理由と、量子化がRAMにどう影響するか',
+        '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 7B–70Bモデルを実行するためのハードウェア要件',
+        '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) — インストールとセットアップガイド',
+        '[Ollama対LM Studio](/ja/local-llms/ollama-vs-lm-studio) — 2つの最も一般的なローカルLLMツールの比較',
+        '[ラップトップでローカルLLMを実行する方法](/ja/local-llms/local-llm-on-laptop) — ラップトップ固有の熱とバッテリー最適化',
+        '[初心者向けの最高のローカルLLMモデル](/ja/local-llms/best-beginner-local-llm-models) — 8 GBのRAMのモデル推奨事項',
+        '[2026年コーディング用ローカルLLM比較](/ja/local-llms/best-local-llms-for-coding) — Qwen2.5-CoderとDeepSeekのベンチマーク',
       ],
     },
     faqSection: {
@@ -1223,7 +1223,7 @@ schema: {
     },
     moreTroubleshooting: {
       title: 'さらに支援を探す場所',
-      content: 'ラップトップでのハードウェア固有の問題（熱スロットリング、バッテリードレイン）については、[ラップトップでローカルLLMを実行する方法](/local-llms/local-llm-on-laptop?lang=ja)を参照してください。セキュリティおよびプライバシー構成の質問については、[ローカルLLMセキュリティ&プライバシーチェックリスト](/local-llms/local-llm-security-privacy-checklist?lang=ja)を参照してください。Ollama GitHubの問題ページ（github.com/ollama/ollama/issues）とr/LocalLLaMAサブレディットは、モデル固有のバグ最もアクティブなコミュニティリソースです。',
+      content: 'ラップトップでのハードウェア固有の問題（熱スロットリング、バッテリードレイン）については、[ラップトップでローカルLLMを実行する方法](/ja/local-llms/local-llm-on-laptop)を参照してください。セキュリティおよびプライバシー構成の質問については、[ローカルLLMセキュリティ&プライバシーチェックリスト](/ja/local-llms/local-llm-security-privacy-checklist)を参照してください。Ollama GitHubの問題ページ（github.com/ollama/ollama/issues）とr/LocalLLaMAサブレディットは、モデル固有のバグ最もアクティブなコミュニティリソースです。',
     },
     commonMistakes: {
       title: 'ローカルLLMのトラブルシューティングでよくある間違い',
@@ -1282,7 +1282,7 @@ schema: {
     '@type': 'TechArticle',
     'headline': '修复本地 LLM 错误 2026：Ollama、LM Studio 和 vLLM 的 10 个常见问题',
     'description': '修复本地 LLM 的内存不足崩溃、GPU 无法检测、连接被拒绝和输出乱码问题。Ollama 和 LM Studio 的确切命令：OLLAMA_GPU_LAYERS、ollama rm、nvidia-smi。',
-    'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=zh',
+    'url': 'https://www.promptquorum.com/zh/local-llms/troubleshooting-local-llm-setup',
     'inLanguage': 'zh',
     'datePublished': '2026-04-04',
     'dateModified': '2026-04-16',
@@ -1380,7 +1380,7 @@ schema: {
     error1: {
       id: 'error-1-out-of-memory',
       title: '错误 1："内存不足" / 内存不足崩溃',
-      content: '**内存不足错误意味着模型需要的 RAM 超过可用 RAM——不是硬件故障。** 这是首次使用者最常见的错误。请参阅 [LLM 量化解释](/local-llms/llm-quantization-explained?lang=zh) 了解量化如何减少 RAM 需求的背景。',
+      content: '**内存不足错误意味着模型需要的 RAM 超过可用 RAM——不是硬件故障。** 这是首次使用者最常见的错误。请参阅 [LLM 量化解释](/zh/local-llms/llm-quantization-explained) 了解量化如何减少 RAM 需求的背景。',
       items: [
         '**检查可用 RAM**：在 macOS/Linux 上运行 `free -h`，在 Windows 上打开任务管理器→性能→内存。',
         '**切换到更小的量化**：将 `Q8_0` 或 `Q5_K_M` 替换为 `Q4_K_M`。对于 Ollama：`ollama run llama3.2-instruct-q4_K_M`。',
@@ -1482,7 +1482,7 @@ schema: {
       title: '错误 8：输出乱码、重复或无意义',
       content: [
         '**输出乱码几乎总是意味着您使用的是基础模型而不是 instruct/chat 变体。** 基础模型生成原始文本补全，而不是对问题的答案。',
-        '基础模型（例如 `llama3.1:8b`）不是针对对话微调的，当用问题提示时会生成看起来像乱码的原始补全。始终使用 instruct 变体：`llama3.1:8b-instruct`。请参阅 [如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) 了解基于 GUI 的方法来切换模型变体。',
+        '基础模型（例如 `llama3.1:8b`）不是针对对话微调的，当用问题提示时会生成看起来像乱码的原始补全。始终使用 instruct 变体：`llama3.1:8b-instruct`。请参阅 [如何安装 LM Studio](/zh/local-llms/how-to-install-lm-studio) 了解基于 GUI 的方法来切换模型变体。',
         '在 Ollama 中，大多数模型的默认标签已经指向 instruct 变体。如果您从 Hugging Face 手动下载，确认文件名包括"Instruct"或"chat"。',
       ],
     },
@@ -1515,18 +1515,18 @@ schema: {
     relatedReading: {
       title: '相关阅读',
       items: [
-        '[LLM 量化解释](/local-llms/llm-quantization-explained?lang=zh) —— Q4_K_M 为什么是默认值以及量化如何影响 RAM',
-        '[本地 LLM 硬件指南 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) —— 本地运行 7B–70B 模型的硬件需求',
-        '[如何安装 Ollama](/local-llms/how-to-install-ollama?lang=zh) —— 安装和设置指南',
-        '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=zh) —— 两个最流行的本地 LLM 工具的比较',
-        '[如何在笔记本电脑上运行本地 LLM](/local-llms/local-llm-on-laptop?lang=zh) —— 笔记本电脑特定的热管理和电池优化',
-        '[最佳初学者本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh) —— 8 GB RAM 的模型建议',
-        '[2026年最佳编程本地LLM对比](/local-llms/best-local-llms-for-coding?lang=zh) — Qwen2.5-Coder与DeepSeek基准测试',
+        '[LLM 量化解释](/zh/local-llms/llm-quantization-explained) —— Q4_K_M 为什么是默认值以及量化如何影响 RAM',
+        '[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026) —— 本地运行 7B–70B 模型的硬件需求',
+        '[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) —— 安装和设置指南',
+        '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) —— 两个最流行的本地 LLM 工具的比较',
+        '[如何在笔记本电脑上运行本地 LLM](/zh/local-llms/local-llm-on-laptop) —— 笔记本电脑特定的热管理和电池优化',
+        '[最佳初学者本地 LLM 模型](/zh/local-llms/best-beginner-local-llm-models) —— 8 GB RAM 的模型建议',
+        '[2026年最佳编程本地LLM对比](/zh/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder与DeepSeek基准测试',
       ],
     },
     moreTroubleshooting: {
       title: '在哪里寻找更多帮助',
-      content: '对于笔记本电脑上的硬件特定问题（热节流、电池耗尽），请参阅 [如何在笔记本电脑上运行本地 LLM](/local-llms/local-llm-on-laptop?lang=zh)。对于安全和隐私配置问题，请参阅 [本地 LLM 安全和隐私检查清单](/local-llms/local-llm-security-privacy-checklist?lang=zh)。Ollama GitHub 问题页面（github.com/ollama/ollama/issues）和 r/LocalLLaMA subreddit 是特定于模型的错误的最活跃社区资源。',
+      content: '对于笔记本电脑上的硬件特定问题（热节流、电池耗尽），请参阅 [如何在笔记本电脑上运行本地 LLM](/zh/local-llms/local-llm-on-laptop)。对于安全和隐私配置问题，请参阅 [本地 LLM 安全和隐私检查清单](/zh/local-llms/local-llm-security-privacy-checklist)。Ollama GitHub 问题页面（github.com/ollama/ollama/issues）和 r/LocalLLaMA subreddit 是特定于模型的错误的最活跃社区资源。',
     },
     commonMistakes: {
       title: '本地 LLM 故障排除中的常见错误',

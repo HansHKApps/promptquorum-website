@@ -319,7 +319,7 @@ schema: {
           content: [
             '**Trois couches : fichier modèle, moteur d\'inférence, interface.**',
             '**Fichier modèle** : contient les poids du réseau neuronal. Stockés en GGUF (format du projet llama.cpp, compressé) ou safetensors. Un modèle 7B quantifié 4-bit ≈ 4.5 GB.',
-            '**Moteur d\'inférence** : lit le fichier et effectue calculs matriciels. Principaux : [Ollama](/local-llms/how-to-install-ollama?lang=fr) (service API compatible OpenAI), [LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) (interface desktop), llama.cpp (librairie C++ sous-jacente).',
+            '**Moteur d\'inférence** : lit le fichier et effectue calculs matriciels. Principaux : [Ollama](/fr/local-llms/how-to-install-ollama) (service API compatible OpenAI), [LM Studio](/fr/local-llms/how-to-install-lm-studio) (interface desktop), llama.cpp (librairie C++ sous-jacente).',
             '**Interface** : terminal, web UI, ou API. Ollama expose une API REST sur `http://localhost:11434` compatible OpenAI.',
           ],
         },
@@ -337,11 +337,11 @@ schema: {
         },
         hardwareGpu: {
           title: 'Une GPU accélère-t-elle un LLM local ?',
-          content: 'Oui, énormément. NVIDIA RTX 4070 Ti (12 GB VRAM) : 80-120 tokens/sec (4-8× plus rapide). Apple Silicon Macs (M1-M5) : 40-80 tokens/sec sans GPU discret grâce à la mémoire unifiée. Voir [LLMs locaux sur laptop](/local-llms/local-llm-on-laptop?lang=fr) pour tips matériel spécifiques.',
+          content: 'Oui, énormément. NVIDIA RTX 4070 Ti (12 GB VRAM) : 80-120 tokens/sec (4-8× plus rapide). Apple Silicon Macs (M1-M5) : 40-80 tokens/sec sans GPU discret grâce à la mémoire unifiée. Voir [LLMs locaux sur laptop](/fr/local-llms/local-llm-on-laptop) pour tips matériel spécifiques.',
         },
         vsCloud: {
           title: 'Différence : LLM local vs API cloud ?',
-          content: 'Compromis : confidentialité + coût vs puissance + vitesse. Voir la [comparaison complète](/local-llms/local-llms-vs-cloud-apis?lang=fr).',
+          content: 'Compromis : confidentialité + coût vs puissance + vitesse. Voir la [comparaison complète](/fr/local-llms/local-llms-vs-cloud-apis).',
           rows: [
             { 'Aspect': 'Confidentialité', 'LLM local': 'Totale -- données ne quittent jamais', 'API cloud': 'Traitement serveur' },
             { 'Aspect': 'Coût', 'LLM local': '0€/token (après matériel)', 'API cloud': '0.15-15€/1M tokens' },
@@ -383,17 +383,17 @@ schema: {
             },
             {
               q: 'Où télécharger modèles ?',
-              a: 'Trois sources : Ollama (ollama.com/library, easy downloads), Hugging Face (huggingface.co, GGUF + safetensors), LM Studio (browser intégré). Voir [Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) et [Installer LM Studio](/local-llms/how-to-install-lm-studio?lang=fr).',
+              a: 'Trois sources : Ollama (ollama.com/library, easy downloads), Hugging Face (huggingface.co, GGUF + safetensors), LM Studio (browser intégré). Voir [Installer Ollama](/fr/local-llms/how-to-install-ollama) et [Installer LM Studio](/fr/local-llms/how-to-install-lm-studio).',
             },
             {
               q: 'LLM local = privé ?',
-              a: 'Oui, avec réserves. Inférence locale = privée. Mais applications peut-être envoient données ailleurs. Vérifier télémétrie/sync cloud. Voir [Checklist Sécurité LLM local](/local-llms/local-llm-security-privacy-checklist?lang=fr).',
+              a: 'Oui, avec réserves. Inférence locale = privée. Mais applications peut-être envoient données ailleurs. Vérifier télémétrie/sync cloud. Voir [Checklist Sécurité LLM local](/fr/local-llms/local-llm-security-privacy-checklist).',
             },
           ],
         },
         nextSteps: {
           title: 'Comment démarrer ?',
-          content: 'Chemin rapide : [Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) -- une commande, 5 min sur macOS/Windows/Linux. GUI préféré : [Installer LM Studio](/local-llms/how-to-install-lm-studio?lang=fr). Modèle ? [Meilleurs LLMs débutants](/local-llms/best-beginner-local-llm-models?lang=fr).',
+          content: 'Chemin rapide : [Installer Ollama](/fr/local-llms/how-to-install-ollama) -- une commande, 5 min sur macOS/Windows/Linux. GUI préféré : [Installer LM Studio](/fr/local-llms/how-to-install-lm-studio). Modèle ? [Meilleurs LLMs débutants](/fr/local-llms/best-beginner-local-llm-models).',
         },
         sources: {
           title: 'Sources',
@@ -414,10 +414,10 @@ schema: {
         relatedReading: {
           title: 'Lectures connexes',
           items: [
-            '[Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) : setup + premier modèle',
-            '[Installer LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) : GUI alternative',
-            '[Meilleurs LLMs débutants](/local-llms/best-beginner-local-llm-models?lang=fr) : recommandations RAM',
-            '[LLMs locaux vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis?lang=fr) : comparaison complète',
+            '[Installer Ollama](/fr/local-llms/how-to-install-ollama) : setup + premier modèle',
+            '[Installer LM Studio](/fr/local-llms/how-to-install-lm-studio) : GUI alternative',
+            '[Meilleurs LLMs débutants](/fr/local-llms/best-beginner-local-llm-models) : recommandations RAM',
+            '[LLMs locaux vs Cloud APIs](/fr/local-llms/local-llms-vs-cloud-apis) : comparaison complète',
           ],
         },
       },
@@ -468,7 +468,7 @@ schema: {
           content: [
             '**ローカルLLM実行には3層が協働します：モデルファイル、推論エンジン、インターフェース。**',
             '**モデルファイル**：ニューラルネットワークの重み（学習された数値）を含みます。ローカル用途ではほぼ常にGGUF形式（llama.cpp プロジェクト開発、圧縮）またはsafetensors形式で保存されます。4ビット精度に量子化した7Bパラメータモデルはディスク上でおよそ4.5GB。',
-            '**推論エンジン**：モデルファイルを読み込み、トークン生成に必要な行列計算を実行します。最も人気のあるエンジン：[Ollama](/local-llms/how-to-install-ollama?lang=ja)（バックグラウンドサービス、OpenAI互換API）、[LM Studio](/local-llms/how-to-install-lm-studio?lang=ja)（デスクトップアプリ、統合チャットUI）、llama.cpp（多くのツールの基礎となるC++ライブラリ）。',
+            '**推論エンジン**：モデルファイルを読み込み、トークン生成に必要な行列計算を実行します。最も人気のあるエンジン：[Ollama](/ja/local-llms/how-to-install-ollama)（バックグラウンドサービス、OpenAI互換API）、[LM Studio](/ja/local-llms/how-to-install-lm-studio)（デスクトップアプリ、統合チャットUI）、llama.cpp（多くのツールの基礎となるC++ライブラリ）。',
             '**インターフェース**：モデルとやり取りする場所です。ターミナル、ウェブUI、APIエンドポイント。Ollama などは `http://localhost:11434` に REST API を公開するため、OpenAI互換のアプリケーションをローカルモデルに接続できます。',
           ],
         },
@@ -486,11 +486,11 @@ schema: {
         },
         hardwareGpu: {
           title: 'GPUはローカルLLMを高速化する？',
-          content: 'はい、劇的に改善します。NVIDIA RTX 4070 Ti（12GB VRAM）は7Bモデルを80～120トークン/秒で実行（CPU のみの4～8倍高速）。Apple Silicon Mac（M1、M2、M3、M4、M5）は統合メモリを使用し、専用GPUなしで7Bモデルで40～80トークン/秒を達成します。ラップトップユーザー向けに、[ラップトップでローカルLLMを実行](/local-llms/local-llm-on-laptop?lang=ja)でハードウェア固有のアドバイスをご覧ください。',
+          content: 'はい、劇的に改善します。NVIDIA RTX 4070 Ti（12GB VRAM）は7Bモデルを80～120トークン/秒で実行（CPU のみの4～8倍高速）。Apple Silicon Mac（M1、M2、M3、M4、M5）は統合メモリを使用し、専用GPUなしで7Bモデルで40～80トークン/秒を達成します。ラップトップユーザー向けに、[ラップトップでローカルLLMを実行](/ja/local-llms/local-llm-on-laptop)でハードウェア固有のアドバイスをご覧ください。',
         },
         vsCloud: {
           title: 'ローカルLLMとクラウドAPI：何が違うか',
-          content: 'トレードオフの関係：プライバシー＋コスト vs 機能＋速度。詳しくは[ローカルLLM vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis?lang=ja)をご覧ください。',
+          content: 'トレードオフの関係：プライバシー＋コスト vs 機能＋速度。詳しくは[ローカルLLM vs クラウドAPI](/ja/local-llms/local-llms-vs-cloud-apis)をご覧ください。',
           rows: [
             { '項目': 'プライバシー', 'ローカルLLM': '完全--データは絶対に外に出ない', 'クラウドAPI': 'プロバイダーのサーバーで処理' },
             { '項目': 'コスト', 'ローカルLLM': 'ハードウェア代後は$0/トークン', 'クラウドAPI': '$0.15～15/100万トークン' },
@@ -532,17 +532,17 @@ schema: {
             },
             {
               q: 'ローカルLLMモデルはどこからダウンロード？',
-              a: '3つの主要ソース：1. Ollama（ollama.com/library、ワンコマンドダウンロード）、2. Hugging Face（huggingface.co、GGUF＋safetensors）、3. LM Studio内蔵ブラウザ（Hugging Face検索）。[Ollama インストール](/local-llms/how-to-install-ollama?lang=ja)と[LM Studio インストール](/local-llms/how-to-install-lm-studio?lang=ja)をご覧ください。',
+              a: '3つの主要ソース：1. Ollama（ollama.com/library、ワンコマンドダウンロード）、2. Hugging Face（huggingface.co、GGUF＋safetensors）、3. LM Studio内蔵ブラウザ（Hugging Face検索）。[Ollama インストール](/ja/local-llms/how-to-install-ollama)と[LM Studio インストール](/ja/local-llms/how-to-install-lm-studio)をご覧ください。',
             },
             {
               q: 'ローカルLLM実行は プライベート？',
-              a: '基本的にははい。モデル推論自体は完全ローカル。ただしローカルLLM上に構築されたアプリケーションがデータを外部に送信する可能性。インターフェースやプラグインレイヤーがテレメトリやクラウド同期を有効にしていないか確認を。[ローカルLLM セキュリティ・プライバシーチェックリスト](/local-llms/local-llm-security-privacy-checklist?lang=ja)をご覧ください。',
+              a: '基本的にははい。モデル推論自体は完全ローカル。ただしローカルLLM上に構築されたアプリケーションがデータを外部に送信する可能性。インターフェースやプラグインレイヤーがテレメトリやクラウド同期を有効にしていないか確認を。[ローカルLLM セキュリティ・プライバシーチェックリスト](/ja/local-llms/local-llm-security-privacy-checklist)をご覧ください。',
             },
           ],
         },
         nextSteps: {
           title: '最初のローカルLLM実行の道筋',
-          content: '最速路：[Ollama をインストール](/local-llms/how-to-install-ollama?lang=ja)--1コマンド、macOS/Windows/Linux で5分以内。GUIを好む場合：[LM Studio をインストール](/local-llms/how-to-install-lm-studio?lang=ja)がデスクトップアプリセットアップをガイド。モデル選択は[初心者向けベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models?lang=ja)をご覧ください。',
+          content: '最速路：[Ollama をインストール](/ja/local-llms/how-to-install-ollama)--1コマンド、macOS/Windows/Linux で5分以内。GUIを好む場合：[LM Studio をインストール](/ja/local-llms/how-to-install-lm-studio)がデスクトップアプリセットアップをガイド。モデル選択は[初心者向けベストローカルLLMモデル](/ja/local-llms/best-beginner-local-llm-models)をご覧ください。',
         },
         sources: {
           title: 'ソース',
@@ -563,10 +563,10 @@ schema: {
         relatedReading: {
           title: '関連読み物',
           items: [
-            '[Ollama をインストール](/local-llms/how-to-install-ollama?lang=ja) : セットアップと最初のモデル',
-            '[LM Studio をインストール](/local-llms/how-to-install-lm-studio?lang=ja) : GUIアプリの代替',
-            '[初心者向けベストローカルLLM](/local-llms/best-beginner-local-llm-models?lang=ja) : RAM 対応モデル推奨',
-            '[ローカルLLM vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis?lang=ja) : 完全比較',
+            '[Ollama をインストール](/ja/local-llms/how-to-install-ollama) : セットアップと最初のモデル',
+            '[LM Studio をインストール](/ja/local-llms/how-to-install-lm-studio) : GUIアプリの代替',
+            '[初心者向けベストローカルLLM](/ja/local-llms/best-beginner-local-llm-models) : RAM 対応モデル推奨',
+            '[ローカルLLM vs クラウドAPI](/ja/local-llms/local-llms-vs-cloud-apis) : 完全比較',
           ],
         },
       },
@@ -617,7 +617,7 @@ schema: {
           content: [
             '三层协作：模型文件、推理引擎、界面。',
             '**模型文件**：包含神经网络权重（学习的数值）。本地使用几乎总是采用GGUF格式（llama.cpp项目开发、压缩）或safetensors格式。4位精度的7B参数模型约4.5GB磁盘空间。',
-            '**推理引擎**：读取模型文件、执行token生成所需的矩阵计算。最受欢迎的引擎：[Ollama](/local-llms/how-to-install-ollama?lang=zh)（后台服务、OpenAI兼容API）、[LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)（桌面应用、内置聊天UI）、llama.cpp（大多数工具的基础C++库）。',
+            '**推理引擎**：读取模型文件、执行token生成所需的矩阵计算。最受欢迎的引擎：[Ollama](/zh/local-llms/how-to-install-ollama)（后台服务、OpenAI兼容API）、[LM Studio](/zh/local-llms/how-to-install-lm-studio)（桌面应用、内置聊天UI）、llama.cpp（大多数工具的基础C++库）。',
             '**界面**：与模型交互的地方。终端、网页UI或API端点。Ollama在`http://localhost:11434`公开REST API，连接任何OpenAI兼容应用到本地模型。',
           ],
         },
@@ -635,11 +635,11 @@ schema: {
         },
         hardwareGpu: {
           title: 'GPU是否加快本地LLM',
-          content: '是的，大幅加快。NVIDIA RTX 4070 Ti（12GB VRAM）运行7B模型80-120 tokens/秒（仅CPU的4-8倍）。Apple Silicon Mac（M1、M2、M3、M4、M5）使用统一内存达到7B模型40-80 tokens/秒，无独立GPU。笔记本用户见[在笔记本上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh)获取硬件特定建议。',
+          content: '是的，大幅加快。NVIDIA RTX 4070 Ti（12GB VRAM）运行7B模型80-120 tokens/秒（仅CPU的4-8倍）。Apple Silicon Mac（M1、M2、M3、M4、M5）使用统一内存达到7B模型40-80 tokens/秒，无独立GPU。笔记本用户见[在笔记本上运行本地LLM](/zh/local-llms/local-llm-on-laptop)获取硬件特定建议。',
         },
         vsCloud: {
           title: '本地LLM与云API的区别',
-          content: '核心权衡：隐私+成本 vs 能力+速度。完整比较见[本地LLM vs 云API](/local-llms/local-llms-vs-cloud-apis?lang=zh)。',
+          content: '核心权衡：隐私+成本 vs 能力+速度。完整比较见[本地LLM vs 云API](/zh/local-llms/local-llms-vs-cloud-apis)。',
           rows: [
             { '因素': '隐私', '本地LLM': '完全--数据永不离开您的机器', '云API': '在提供商服务器上处理' },
             { '因素': '成本', '本地LLM': '硬件后$0/token', '云API': '按token计费（$0.15-15/100万tokens）' },
@@ -681,17 +681,17 @@ schema: {
             },
             {
               q: '本地LLM模型从何处下载？',
-              a: '三个主要来源：1. Ollama（ollama.com/library，单命令下载）2. Hugging Face（huggingface.co，GGUF+safetensors）3. LM Studio内置浏览器（直接搜索Hugging Face）。见[安装Ollama](/local-llms/how-to-install-ollama?lang=zh)和[安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)。',
+              a: '三个主要来源：1. Ollama（ollama.com/library，单命令下载）2. Hugging Face（huggingface.co，GGUF+safetensors）3. LM Studio内置浏览器（直接搜索Hugging Face）。见[安装Ollama](/zh/local-llms/how-to-install-ollama)和[安装LM Studio](/zh/local-llms/how-to-install-lm-studio)。',
             },
             {
               q: '运行本地LLM隐私吗？',
-              a: '基本是。模型推理本身完全本地。但基于本地LLM的应用可能向外部发送数据。检查使用的界面或插件层是否启用了遥测或云同步。见[本地LLM安全隐私检查清单](/local-llms/local-llm-security-privacy-checklist?lang=zh)完整审核指南。',
+              a: '基本是。模型推理本身完全本地。但基于本地LLM的应用可能向外部发送数据。检查使用的界面或插件层是否启用了遥测或云同步。见[本地LLM安全隐私检查清单](/zh/local-llms/local-llm-security-privacy-checklist)完整审核指南。',
             },
           ],
         },
         nextSteps: {
           title: '开始使用本地LLM',
-          content: '最快途径：[安装Ollama](/local-llms/how-to-install-ollama?lang=zh)--单条命令，macOS/Windows/Linux 5分钟内。偏好GUI：[安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)带您完成桌面应用设置。选择模型：见[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models?lang=zh)。',
+          content: '最快途径：[安装Ollama](/zh/local-llms/how-to-install-ollama)--单条命令，macOS/Windows/Linux 5分钟内。偏好GUI：[安装LM Studio](/zh/local-llms/how-to-install-lm-studio)带您完成桌面应用设置。选择模型：见[初学者最佳本地LLM模型](/zh/local-llms/best-beginner-local-llm-models)。',
         },
         sources: {
           title: '资源',
@@ -712,10 +712,10 @@ schema: {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[安装Ollama](/local-llms/how-to-install-ollama?lang=zh) : 设置和第一个模型',
-            '[安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) : GUI替代方案',
-            '[初学者最佳本地LLM](/local-llms/best-beginner-local-llm-models?lang=zh) : RAM匹配推荐',
-            '[本地LLM vs 云API](/local-llms/local-llms-vs-cloud-apis?lang=zh) : 完整比较',
+            '[安装Ollama](/zh/local-llms/how-to-install-ollama) : 设置和第一个模型',
+            '[安装LM Studio](/zh/local-llms/how-to-install-lm-studio) : GUI替代方案',
+            '[初学者最佳本地LLM](/zh/local-llms/best-beginner-local-llm-models) : RAM匹配推荐',
+            '[本地LLM vs 云API](/zh/local-llms/local-llms-vs-cloud-apis) : 完整比较',
           ],
         },
       },
@@ -766,7 +766,7 @@ schema: {
           content: [
             '**Das Ausführen eines lokalen LLM umfasst drei zusammenwirkende Schichten: die Modelldatei, die Inferenz-Engine und die Schnittstelle.**',
             '**Die Modelldatei** enthält die Gewichte des neuronalen Netzes -- die gelernten numerischen Werte, die definieren, wie das Modell Text verarbeitet und generiert. Für die lokale Verwendung werden diese Gewichte fast immer im GGUF-Format (ein vom llama.cpp-Projekt entwickeltes komprimiertes Format) oder im safetensors-Format gespeichert. Ein auf 4-Bit-Präzision quantisiertes 7B-Parametern-Modell ist auf der Festplatte etwa 4,5 GB groß.',
-            '**Die Inferenz-Engine** liest die Modelldatei und führt die erforderlichen Matrixberechnungen durch, um Tokens zu generieren. Die beliebtesten Engines sind [Ollama](/local-llms/how-to-install-ollama?lang=de) (wird als Hintergrunddienst mit OpenAI-kompatibler API ausgeführt), [LM Studio](/local-llms/how-to-install-lm-studio?lang=de) (eine Desktop-Anwendung mit integrierter Chat-UI) und llama.cpp (die zugrunde liegende C++-Bibliothek, auf der die meisten anderen Tools aufgebaut sind).',
+            '**Die Inferenz-Engine** liest die Modelldatei und führt die erforderlichen Matrixberechnungen durch, um Tokens zu generieren. Die beliebtesten Engines sind [Ollama](/de/local-llms/how-to-install-ollama) (wird als Hintergrunddienst mit OpenAI-kompatibler API ausgeführt), [LM Studio](/de/local-llms/how-to-install-lm-studio) (eine Desktop-Anwendung mit integrierter Chat-UI) und llama.cpp (die zugrunde liegende C++-Bibliothek, auf der die meisten anderen Tools aufgebaut sind).',
             '**Die Schnittstelle** ist der Ort, an dem Sie mit dem Modell interagieren -- ein Terminal, eine Web-UI oder ein API-Endpunkt. Viele Tools wie Ollama stellen eine REST-API auf `http://localhost:11434` bereit, damit Sie jede OpenAI-kompatible Anwendung mit Ihrem lokalen Modell verbinden können.',
           ],
         },
@@ -784,11 +784,11 @@ schema: {
         },
         hardwareGpu: {
           title: 'Macht eine GPU ein lokales LLM schneller?',
-          content: 'GPU-Beschleunigung verbessert die Geschwindigkeit dramatisch. Eine NVIDIA RTX 4070 Ti (12 GB VRAM) führt ein 7B-Modell mit 80-120 Tokens/Sek. aus -- 4-8× schneller als nur CPU-Modus. Apple Silicon Macs (M1, M2, M3, M4, M5) verwenden einheitlichen Speicher und erreichen auf 7B-Modellen 40-80 Tokens/Sek. ohne diskrete GPU. Für Laptop-Benutzer siehe [Wie man lokale LLMs auf einem Laptop ausführt](/local-llms/local-llm-on-laptop?lang=de) für Hardware-spezifische Tipps.',
+          content: 'GPU-Beschleunigung verbessert die Geschwindigkeit dramatisch. Eine NVIDIA RTX 4070 Ti (12 GB VRAM) führt ein 7B-Modell mit 80-120 Tokens/Sek. aus -- 4-8× schneller als nur CPU-Modus. Apple Silicon Macs (M1, M2, M3, M4, M5) verwenden einheitlichen Speicher und erreichen auf 7B-Modellen 40-80 Tokens/Sek. ohne diskrete GPU. Für Laptop-Benutzer siehe [Wie man lokale LLMs auf einem Laptop ausführt](/de/local-llms/local-llm-on-laptop) für Hardware-spezifische Tipps.',
         },
         vsCloud: {
           title: 'Worin besteht der Unterschied zwischen lokalen LLMs und Cloud-APIs?',
-          content: 'Der Kern-Kompromiss ist Datenschutz und Kosten vs. Fähigkeit und Geschwindigkeit. Siehe den vollständigen Vergleich unter [Lokale LLMs vs. Cloud-APIs](/local-llms/local-llms-vs-cloud-apis?lang=de).',
+          content: 'Der Kern-Kompromiss ist Datenschutz und Kosten vs. Fähigkeit und Geschwindigkeit. Siehe den vollständigen Vergleich unter [Lokale LLMs vs. Cloud-APIs](/de/local-llms/local-llms-vs-cloud-apis).',
           rows: [
             { 'Faktor': 'Datenschutz', 'Lokales LLM': 'Vollständig -- Daten verlassen nie Ihren Computer', 'Cloud-API': 'Daten werden auf Anbieter-Servern verarbeitet' },
             { 'Faktor': 'Kosten', 'Lokales LLM': '0 € pro Token nach Hardware-Kosten', 'Cloud-API': '0,15 €-15 € pro 1 Mio. Tokens je nach Modell' },
@@ -830,17 +830,17 @@ schema: {
             },
             {
               q: 'Wo lade ich lokale LLM-Modelle herunter?',
-              a: 'Die drei Hauptquellen sind: Ollamas Modellbibliothek (ollama.com/library) für einfache Ein-Befehl-Downloads, Hugging Face (huggingface.co) für die volle Palette von GGUF- und safetensors-Modellen, und LM Studios integrierter Modellbrowser, der direkt Hugging Face durchsucht. Siehe [Ollama installieren](/local-llms/how-to-install-ollama?lang=de) und [LM Studio installieren](/local-llms/how-to-install-lm-studio?lang=de) für Setup-Leitfäden.',
+              a: 'Die drei Hauptquellen sind: Ollamas Modellbibliothek (ollama.com/library) für einfache Ein-Befehl-Downloads, Hugging Face (huggingface.co) für die volle Palette von GGUF- und safetensors-Modellen, und LM Studios integrierter Modellbrowser, der direkt Hugging Face durchsucht. Siehe [Ollama installieren](/de/local-llms/how-to-install-ollama) und [LM Studio installieren](/de/local-llms/how-to-install-lm-studio) für Setup-Leitfäden.',
             },
             {
               q: 'Ist die Ausführung eines lokalen LLM privat?',
-              a: 'Ja -- mit Vorbehalten. Die Modell-Inferenz selbst ist vollständig lokal. Jedoch können einige auf lokalen LLMs basierende Anwendungen Daten an externe Server senden. Überprüfen Sie immer, ob die Schnittstelle oder Plugin-Schicht, die Sie verwenden, Telemetrie oder Cloud-Synchronisierung aktiviert hat. Siehe die [Sicherheits- und Datenschutz-Checkliste für lokale LLMs](/local-llms/local-llm-security-privacy-checklist?lang=de) für einen vollständigen Audit-Leitfaden.',
+              a: 'Ja -- mit Vorbehalten. Die Modell-Inferenz selbst ist vollständig lokal. Jedoch können einige auf lokalen LLMs basierende Anwendungen Daten an externe Server senden. Überprüfen Sie immer, ob die Schnittstelle oder Plugin-Schicht, die Sie verwenden, Telemetrie oder Cloud-Synchronisierung aktiviert hat. Siehe die [Sicherheits- und Datenschutz-Checkliste für lokale LLMs](/de/local-llms/local-llm-security-privacy-checklist) für einen vollständigen Audit-Leitfaden.',
             },
           ],
         },
         nextSteps: {
           title: 'Wie starten Sie mit lokalen LLMs?',
-          content: 'Der schnellste Weg zum Ausführen Ihres ersten lokalen LLM ist [Ollama installieren](/local-llms/how-to-install-ollama?lang=de) -- ein einzelner Befehl installiert die Engine und lädt ein Modell in unter 5 Minuten auf macOS, Windows oder Linux. Wenn Sie eine grafische Schnittstelle bevorzugen, führt Sie [LM Studio installieren](/local-llms/how-to-install-lm-studio?lang=de) durch das Desktop-App-Setup. Um auszuwählen, mit welchem ​​Modell Sie beginnen, siehe [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=de).',
+          content: 'Der schnellste Weg zum Ausführen Ihres ersten lokalen LLM ist [Ollama installieren](/de/local-llms/how-to-install-ollama) -- ein einzelner Befehl installiert die Engine und lädt ein Modell in unter 5 Minuten auf macOS, Windows oder Linux. Wenn Sie eine grafische Schnittstelle bevorzugen, führt Sie [LM Studio installieren](/de/local-llms/how-to-install-lm-studio) durch das Desktop-App-Setup. Um auszuwählen, mit welchem ​​Modell Sie beginnen, siehe [Best Beginner Local LLM Models](/de/local-llms/best-beginner-local-llm-models).',
         },
         sources: {
           id: 'sources',
@@ -862,10 +862,10 @@ schema: {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) -- Schritt-für-Schritt-Setup und erster Modell-Durchlauf',
-            '[LM Studio installieren](/local-llms/how-to-install-lm-studio?lang=de) -- Desktop-App-Alternative mit grafischer Schnittstelle',
-            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=de) -- RAM-gekoppelte Modellempfehlungen',
-            '[Lokale LLMs vs. Cloud-APIs](/local-llms/local-llms-vs-cloud-apis?lang=de) -- Vollständiger Vergleich von Kompromissen',
+            '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- Schritt-für-Schritt-Setup und erster Modell-Durchlauf',
+            '[LM Studio installieren](/de/local-llms/how-to-install-lm-studio) -- Desktop-App-Alternative mit grafischer Schnittstelle',
+            '[Best Beginner Local LLM Models](/de/local-llms/best-beginner-local-llm-models) -- RAM-gekoppelte Modellempfehlungen',
+            '[Lokale LLMs vs. Cloud-APIs](/de/local-llms/local-llms-vs-cloud-apis) -- Vollständiger Vergleich von Kompromissen',
           ],
         },
       },

@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qué elegir según tu flujo de trabajo',
         content: [
           '<strong>Elige Qwen 2.5 Coder 14B para proyectos intensivos en Python y TypeScript, uso de tools y function calling.</strong> Su ventaja en benchmarks se traduce directamente en menos completaciones incorrectas en las tareas que la mayoría de desarrolladores backend y frontend hacen a diario.',
-          'Elige DeepSeek Coder V2 para bases de código políglota donde Rust, Swift, Kotlin o Elixir aparecen junto a Python. También tiene una ventana de contexto efectiva más larga — útil cuando pegas archivos grandes para revisión. Para el desglose completo contra Mistral y otras opciones de coding local, consulta la <a href="/es/local-llms/qwen-coder-vs-deepseek-mistral-local-2026?lang=es" class="text-primary hover:underline">guía Qwen Coder vs DeepSeek vs Mistral</a>.',
+          'Elige DeepSeek Coder V2 para bases de código políglota donde Rust, Swift, Kotlin o Elixir aparecen junto a Python. También tiene una ventana de contexto efectiva más larga — útil cuando pegas archivos grandes para revisión. Para el desglose completo contra Mistral y otras opciones de coding local, consulta la <a href="/es/es/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">guía Qwen Coder vs DeepSeek vs Mistral</a>.',
           'Un detalle del flujo de trabajo: Qwen 2.5 Coder 14B tiene soporte nativo de function calling más fuerte, lo cual importa si estás construyendo agentes o pipelines de salida estructurada que invoquen herramientas externas durante la generación de código.',
           'Ambos modelos soportan una ventana de contexto de 32K tokens en sus configuraciones predeterminadas de Ollama. DeepSeek Coder V2 mantiene un recall ligeramente mejor en longitudes de contexto 16K–32K — útil cuando pegas archivos completos para revisión o refactorización. Qwen 2.5 Coder muestra degradación menor después de 20K tokens pero se desempeña fuertemente dentro de esa ventana.',
         ],
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Cuál es mejor para revisión de código?',
-            a: 'Para revisar archivos existentes grandes, el contexto efectivo más largo de DeepSeek Coder V2 es una ventaja. Para escribir código nuevo desde cero, la ventaja en benchmarks de Qwen 2.5 Coder lo hace la mejor opción. Ambos se ejecutan de forma idéntica en Ollama o LM Studio — consulta <a href="/es/prompt-bites/ollama-vs-lm-studio?lang=es" class="text-primary hover:underline">Ollama vs LM Studio</a> para elegir la herramienta correcta antes de instalar el modelo.',
+            a: 'Para revisar archivos existentes grandes, el contexto efectivo más largo de DeepSeek Coder V2 es una ventaja. Para escribir código nuevo desde cero, la ventaja en benchmarks de Qwen 2.5 Coder lo hace la mejor opción. Ambos se ejecutan de forma idéntica en Ollama o LM Studio — consulta <a href="/es/es/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a> para elegir la herramienta correcta antes de instalar el modelo.',
           },
           {
             q: '¿Estos modelos soportan tool y function calling?',

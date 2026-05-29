@@ -383,7 +383,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/your-brand-voice-ai?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/your-brand-voice-ai',
         headline: 'Brand-Voice-AI: KI-Modelle trainieren, um in Ihrer Marke zu sprechen',
         description: 'Erfahren Sie, wie Sie KI-Modelle trainieren, um Ihre Marke zu verstehen und anzuwenden. Enthält Sprachsäulen, Stilrichtlinien, Vokabularvorgaben und Schutzmaßnahmen, um Markenkonsistenz im großen Maßstab zu gewährleisten.',
         datePublished: '2026-03-24',
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'de',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=de', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/your-brand-voice-ai', width: 1200, height: 630 },
         keywords: ['Brand-Voice-AI', 'Markenkonsistenz', 'Sprachton', 'Content-Generierung', 'Prompt Engineering', 'Markenrichtlinien', 'KI-generierter Inhalt'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -468,7 +468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Was ist Brand-Voice-AI?',
           content: [
             '**Brand-Voice-AI ist nicht Software — es ist eine Trainingskonfiguration.** Es existiert in Jasper Brand Voice, Copy.ai, HubSpot und anderen Plattformen als ein Satz Anweisungen, den Sie schreiben, und Beispiele, die Sie bereitstellen. Das Modell selbst (GPT-4o, Claude, Gemini) kümmert sich nicht um Ihre Marke. Aber mit den richtigen Eingaben kann jedes Modell lernen, wie Ihre Marke spricht.',
-            '**Die Grundidee:** Nehmen Sie ein allgemeines KI-Modell und legen Sie eine Schicht Ihres Markentons, -stils und -vokabulars oben drauf, damit jede Ausgabe nach Ihnen klingt, nicht nach generischem KI-Output. Wenn Sie in [prompt](/prompt-engineering/what-is-prompt-engineering?lang=de) schreiben „In der Stimme von Jasper" oder „Mit unserem Brand-Leitfaden", tun Sie das bereits manuell. Brand-Voice-AI automatisiert es.',
+            '**Die Grundidee:** Nehmen Sie ein allgemeines KI-Modell und legen Sie eine Schicht Ihres Markentons, -stils und -vokabulars oben drauf, damit jede Ausgabe nach Ihnen klingt, nicht nach generischem KI-Output. Wenn Sie in [prompt](/de/prompt-engineering/what-is-prompt-engineering) schreiben „In der Stimme von Jasper" oder „Mit unserem Brand-Leitfaden", tun Sie das bereits manuell. Brand-Voice-AI automatisiert es.',
             '**In der Praxis bedeutet das:** Sie definieren 3–5 Adjektive (Sprachsäulen), sammeln Beispiele markengerechter und nicht-markengerechter Kopie, schreiben einen wiederverwendbaren Anweisungsblock und fügen ihn in Ihre Generierungs- und QA-Prompts ein. Mit jeder Iteration lernt das System Ihren Ton besser kennen.',
           ],
           snippets: [
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'prompt-structure',
           title: 'Wie trainieren Sie KI, um in Ihrer Marke zu sprechen?',
           content: [
-            '**Die beste Praxis ist ein wiederverwendbarer Brand-Voice-Anweisungsblock — ein standardisiertes Prompt-Template, das Sie in jeden Generierungs- oder QA-Prompt einfügen.** Speichern Sie ihn in einer gemeinsamen Datei oder [Prompt-Bibliothek](/prompt-engineering/build-a-prompt-library?lang=de) — nicht verstreut über Slack oder Notizen.',
+            '**Die beste Praxis ist ein wiederverwendbarer Brand-Voice-Anweisungsblock — ein standardisiertes Prompt-Template, das Sie in jeden Generierungs- oder QA-Prompt einfügen.** Speichern Sie ihn in einer gemeinsamen Datei oder [Prompt-Bibliothek](/de/prompt-engineering/build-a-prompt-library) — nicht verstreut über Slack oder Notizen.',
             '**Ein minimales Anweisungsblock beinhaltet:**',
           ],
           items: [
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         brandVoiceImplementation: {
           id: 'brand-voice-implementation',
           content: [
-            'Speichern Sie diese exakte Vorlage in Ihrer [Prompt-Bibliothek](/prompt-engineering/build-a-prompt-library?lang=de) oder in einem freigegebenen Google Doc, das jeder Autor zugreifen kann. Verwenden Sie dies für jeden Brand-Voice-AI-Prompt — Generierung, Umschreiben, QA, Übersetzung. Der Punkt ist Wiederholung. Mit jeder Verwendung wird die Ausgabe engmaschiger.'
+            'Speichern Sie diese exakte Vorlage in Ihrer [Prompt-Bibliothek](/de/prompt-engineering/build-a-prompt-library) oder in einem freigegebenen Google Doc, das jeder Autor zugreifen kann. Verwenden Sie dies für jeden Brand-Voice-AI-Prompt — Generierung, Umschreiben, QA, Übersetzung. Der Punkt ist Wiederholung. Mit jeder Verwendung wird die Ausgabe engmaschiger.'
           ],
         },
         guardrails: {
@@ -655,12 +655,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Weiterführendes Lesen',
           items: [
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de)',
-            '[Erstellen Sie eine Prompt-Bibliothek](/prompt-engineering/build-a-prompt-library?lang=de)',
-            '[So evaluieren Sie Prompt-Qualität](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de)',
-            '[Prompt Chaining: Multi-Step Workflows](/prompt-engineering/prompt-chaining?lang=de)',
-            '[Negative Prompting: Sagen Sie der KI, was zu vermeiden ist](/prompt-engineering/negative-prompting?lang=de)',
-            '[Temperature und Top-P: KI-Kreativität steuern](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de)',
+            '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering)',
+            '[Erstellen Sie eine Prompt-Bibliothek](/de/prompt-engineering/build-a-prompt-library)',
+            '[So evaluieren Sie Prompt-Qualität](/de/prompt-engineering/how-to-evaluate-prompt-quality)',
+            '[Prompt Chaining: Multi-Step Workflows](/de/prompt-engineering/prompt-chaining)',
+            '[Negative Prompting: Sagen Sie der KI, was zu vermeiden ist](/de/prompt-engineering/negative-prompting)',
+            '[Temperature und Top-P: KI-Kreativität steuern](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity)',
           ],
         },
         sources: {
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/your-brand-voice-ai?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/your-brand-voice-ai',
         headline: 'IA para la Voz de Marca: Cómo Entrenar Modelos para que Coincidan con tu Tono',
         description: 'Aprende cómo entrenar modelos de IA para entender y aplicar la voz de tu marca. Incluye pilares de voz, directrices de estilo, reglas de vocabulario y salvaguardas para mantener la coherencia de la marca a escala.',
         datePublished: '2026-03-24',
@@ -724,7 +724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=es', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/your-brand-voice-ai', width: 1200, height: 630 },
         keywords: ['IA de voz de marca', 'coherencia de marca', 'tono de voz', 'generación de contenido', 'prompt engineering', 'directrices de marca', 'contenido generado por IA'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -986,12 +986,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Lectura relacionada',
           items: [
-            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es)',
-            '[Construye una Biblioteca de Prompts](/prompt-engineering/build-a-prompt-library?lang=es)',
-            '[Cómo Evaluar la Calidad de los Prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es)',
-            '[Encadenamiento de Prompts: Flujos de Trabajo Multi-Paso](/prompt-engineering/prompt-chaining?lang=es)',
-            '[Prompting Negativo: Dile a la IA qué evitar](/prompt-engineering/negative-prompting?lang=es)',
-            '[Temperatura y Top-P: Controla la Creatividad de la IA](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=es)',
+            '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering)',
+            '[Construye una Biblioteca de Prompts](/es/prompt-engineering/build-a-prompt-library)',
+            '[Cómo Evaluar la Calidad de los Prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality)',
+            '[Encadenamiento de Prompts: Flujos de Trabajo Multi-Paso](/es/prompt-engineering/prompt-chaining)',
+            '[Prompting Negativo: Dile a la IA qué evitar](/es/prompt-engineering/negative-prompting)',
+            '[Temperatura y Top-P: Controla la Creatividad de la IA](/es/prompt-engineering/temperature-and-top-p-control-ai-creativity)',
           ],
         },
         sources: {
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/your-brand-voice-ai?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/your-brand-voice-ai',
         headline: 'Brand Voice IA : Entraîner l\'IA à correspondre à votre ton',
         description: 'Apprenez à entraîner les modèles IA pour comprendre et appliquer votre voix de marque. Incluent piliers de voix, directives de style, règles de vocabulaire et garde-fous.',
         datePublished: '2026-03-24',
@@ -1055,7 +1055,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'fr',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=fr', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/your-brand-voice-ai', width: 1200, height: 630 },
         keywords: ['voix de marque', 'cohérence de marque', 'ton de voix', 'génération de contenu', 'ingénierie des prompts', 'directives de marque', 'contenu généré par l\'IA'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -1130,7 +1130,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Qu\'est-ce que Brand Voice IA?',
           content: [
             '**Brand Voice IA n\'est pas un logiciel — c\'est une configuration d\'entraînement.** Elle existe dans Jasper, Copy.ai, HubSpot et autres comme un ensemble d\'instructions que vous écrivez et d\'exemples que vous fournissez. Chaque modèle peut apprendre votre marque avec les bons intrants.',
-            '**L\'idée fondamentale :** prenez un modèle IA générique et ajoutez une couche de votre ton, style et vocabulaire pour que chaque sortie sonne comme vous. Quand vous écrivez « en voix de Jasper » manuellement dans un [prompt](/prompt-engineering/what-is-prompt-engineering?lang=fr), Brand Voice IA l\'automatise.',
+            '**L\'idée fondamentale :** prenez un modèle IA générique et ajoutez une couche de votre ton, style et vocabulaire pour que chaque sortie sonne comme vous. Quand vous écrivez « en voix de Jasper » manuellement dans un [prompt](/fr/prompt-engineering/what-is-prompt-engineering), Brand Voice IA l\'automatise.',
             '**En pratique :** définissez 3–5 adjectifs, rassemblez des exemples on-brand et off-brand, écrivez un bloc d\'instructions réutilisable et collez-le dans vos prompts. Avec chaque itération, le système apprend mieux votre ton.',
           ],
           snippets: [
@@ -1199,7 +1199,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'prompt-structure',
           title: 'Comment entraîner l\'IA à votre voix?',
           content: [
-            '**La meilleure pratique est un bloc d\'instructions Brand Voice réutilisable — un template standardisé que vous insérez dans chaque prompt.** Stockez-le dans un fichier partagé ou [bibliothèque de prompts](/prompt-engineering/build-a-prompt-library?lang=fr) — pas dispersé sur Slack.',
+            '**La meilleure pratique est un bloc d\'instructions Brand Voice réutilisable — un template standardisé que vous insérez dans chaque prompt.** Stockez-le dans un fichier partagé ou [bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library) — pas dispersé sur Slack.',
             '**Un bloc minimum inclut :**',
           ],
           items: [
@@ -1225,7 +1225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         brandVoiceImplementation: {
           id: 'brand-voice-implementation',
           content: [
-            'Stockez ce template exact dans votre [bibliothèque de prompts](/prompt-engineering/build-a-prompt-library?lang=fr) ou doc partagé que tous les rédacteurs peuvent accéder. Utilisez-le pour chaque Brand Voice prompt — génération, réecriture, QA, traduction. Le point est la répétition. À chaque utilisation, la sortie devient plus serrée.'
+            'Stockez ce template exact dans votre [bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library) ou doc partagé que tous les rédacteurs peuvent accéder. Utilisez-le pour chaque Brand Voice prompt — génération, réecriture, QA, traduction. Le point est la répétition. À chaque utilisation, la sortie devient plus serrée.'
           ],
         },
         guardrails: {
@@ -1317,12 +1317,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[Qu\'est-ce que l\'ingénierie des prompts?](/prompt-engineering/what-is-prompt-engineering?lang=fr)',
-            '[Créez une bibliothèque de prompts](/prompt-engineering/build-a-prompt-library?lang=fr)',
-            '[Évaluez la qualité des prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr)',
-            '[Prompt Chaining : Workflows multi-étapes](/prompt-engineering/prompt-chaining?lang=fr)',
-            '[Negative Prompting : Dites à l\'IA quoi éviter](/prompt-engineering/negative-prompting?lang=fr)',
-            '[Température et Top-P : Contrôlez la créativité de l\'IA](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr)',
+            '[Qu\'est-ce que l\'ingénierie des prompts?](/fr/prompt-engineering/what-is-prompt-engineering)',
+            '[Créez une bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library)',
+            '[Évaluez la qualité des prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality)',
+            '[Prompt Chaining : Workflows multi-étapes](/fr/prompt-engineering/prompt-chaining)',
+            '[Negative Prompting : Dites à l\'IA quoi éviter](/fr/prompt-engineering/negative-prompting)',
+            '[Température et Top-P : Contrôlez la créativité de l\'IA](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity)',
           ],
         },
         sources: {
@@ -1378,7 +1378,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/your-brand-voice-ai?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/your-brand-voice-ai',
         headline: 'ブランドボイスAI：AIをあなたのトーンに合わせてトレーニング',
         description: 'AIモデルを使ってブランドボイスを理解・適用する方法を学ぶ。音声柱、スタイルガイドライン、語彙規則、ガードレール。',
         datePublished: '2026-03-24',
@@ -1386,7 +1386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ja',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=ja', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/your-brand-voice-ai', width: 1200, height: 630 },
         keywords: ['ブランドボイス', 'ブランド一貫性', 'トーン', 'コンテンツ生成', 'プロンプトエンジニアリング', 'ブランドガイドライン', 'AI生成コンテンツ'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -1532,7 +1532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'prompt-structure',
           title: 'AIをトレーニングする方法',
           content: [
-            '**ベストプラクティス：再利用可能なボイス指示ブロック — 標準テンプレート。** [プロンプトライブラリ](/prompt-engineering/build-a-prompt-library?lang=ja)か共有ドキュメントに保存 — Slack等に分散させない。',
+            '**ベストプラクティス：再利用可能なボイス指示ブロック — 標準テンプレート。** [プロンプトライブラリ](/ja/prompt-engineering/build-a-prompt-library)か共有ドキュメントに保存 — Slack等に分散させない。',
             '**最小限ブロックに含むもの：**',
           ],
           items: [
@@ -1558,7 +1558,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         brandVoiceImplementation: {
           id: 'brand-voice-implementation',
           content: [
-            'このテンプレート正確に [プロンプトライブラリ](/prompt-engineering/build-a-prompt-library?lang=ja)か共有Googleドキュメントに保存。すべてのボイスAIプロンプト — 生成・編集・QA・翻訳 — で使用。ポイントは繰り返し。毎使用で出力が更に精密に。'
+            'このテンプレート正確に [プロンプトライブラリ](/ja/prompt-engineering/build-a-prompt-library)か共有Googleドキュメントに保存。すべてのボイスAIプロンプト — 生成・編集・QA・翻訳 — で使用。ポイントは繰り返し。毎使用で出力が更に精密に。'
           ],
         },
         guardrails: {
@@ -1652,12 +1652,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '関連資料',
           items: [
-            '[プロンプトエンジニアリング とは?](/prompt-engineering/what-is-prompt-engineering?lang=ja)',
-            '[プロンプトライブラリを作成](/prompt-engineering/build-a-prompt-library?lang=ja)',
-            '[プロンプト品質を評価](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)',
-            '[プロンプトチェーニング：マルチステップワークフロー](/prompt-engineering/prompt-chaining?lang=ja)',
-            '[ネガティブプロンプティング：AIに避けさせる](/prompt-engineering/negative-prompting?lang=ja)',
-            '[温度とTop-P：AI創造性制御](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja)',
+            '[プロンプトエンジニアリング とは?](/ja/prompt-engineering/what-is-prompt-engineering)',
+            '[プロンプトライブラリを作成](/ja/prompt-engineering/build-a-prompt-library)',
+            '[プロンプト品質を評価](/ja/prompt-engineering/how-to-evaluate-prompt-quality)',
+            '[プロンプトチェーニング：マルチステップワークフロー](/ja/prompt-engineering/prompt-chaining)',
+            '[ネガティブプロンプティング：AIに避けさせる](/ja/prompt-engineering/negative-prompting)',
+            '[温度とTop-P：AI創造性制御](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity)',
           ],
         },
         sources: {
@@ -1713,7 +1713,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/your-brand-voice-ai?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/your-brand-voice-ai',
         headline: '品牌声音AI：训练AI匹配你的语调',
         description: '学习如何训练AI模型理解和应用你的品牌声音。包括语音支柱、风格指南、词汇规则和防护栏以大规模保持品牌一致性。',
         datePublished: '2026-03-24',
@@ -1721,7 +1721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'zh',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=zh', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/your-brand-voice-ai', width: 1200, height: 630 },
         keywords: ['品牌声音', '品牌一致性', '语调', '内容生成', '提示工程', '品牌指南', 'AI生成内容'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '什么是品牌声音AI?',
           content: [
             '**品牌声音AI不是软件——它是训练配置。** 它存在于Jasper Brand Voice、Copy.ai、HubSpot等中，作为你编写的指令和你提供的示例集合。模型本身（GPT-4o、Claude、Gemini）不关心你的品牌。但有了正确的输入，任何模型都可以学会你的品牌如何说话。',
-            '**核心思想：** 取一个通用AI模型，在其上叠加你的品牌语调、风格和词汇的一层，使每个输出听起来像你而不是通用AI输出。当你手动在[提示](/prompt-engineering/what-is-prompt-engineering?lang=zh)中写"以Jasper的声音"时，品牌声音AI就是自动化它。',
+            '**核心思想：** 取一个通用AI模型，在其上叠加你的品牌语调、风格和词汇的一层，使每个输出听起来像你而不是通用AI输出。当你手动在[提示](/zh/prompt-engineering/what-is-prompt-engineering)中写"以Jasper的声音"时，品牌声音AI就是自动化它。',
             '**实际上：** 你定义3～5个形容词，收集品牌内和品牌外的示例，编写可重用的指令块，并将其粘贴到你的生成和质量保证提示中。每次迭代，系统都会更好地学习你的语调。',
           ],
           snippets: [
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'prompt-structure',
           title: '如何训练AI用你的品牌声音说话?',
           content: [
-            '**最佳实践是可重用的品牌声音指令块——一个标准化的提示模板，你将其粘贴到每个生成或质量保证提示中。** 将其保存到共享文件或[提示库](/prompt-engineering/build-a-prompt-library?lang=zh)——不分散在Slack或笔记中。',
+            '**最佳实践是可重用的品牌声音指令块——一个标准化的提示模板，你将其粘贴到每个生成或质量保证提示中。** 将其保存到共享文件或[提示库](/zh/prompt-engineering/build-a-prompt-library)——不分散在Slack或笔记中。',
             '**最小指令块包括：**',
           ],
           items: [
@@ -1893,7 +1893,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         brandVoiceImplementation: {
           id: 'brand-voice-implementation',
           content: [
-            '将这个确切的模板保存在你的[提示库](/prompt-engineering/build-a-prompt-library?lang=zh)或所有作者可以访问的共享Google文档中。对每个品牌声音AI提示使用——生成、改写、质量保证、翻译。重点是重复。每次使用，输出都会更紧密。'
+            '将这个确切的模板保存在你的[提示库](/zh/prompt-engineering/build-a-prompt-library)或所有作者可以访问的共享Google文档中。对每个品牌声音AI提示使用——生成、改写、质量保证、翻译。重点是重复。每次使用，输出都会更紧密。'
           ],
         },
         guardrails: {
@@ -1987,12 +1987,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[什么是提示工程?](/prompt-engineering/what-is-prompt-engineering?lang=zh)',
-            '[构建提示库](/prompt-engineering/build-a-prompt-library?lang=zh)',
-            '[如何评估提示质量](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)',
-            '[提示链接：多步工作流](/prompt-engineering/prompt-chaining?lang=zh)',
-            '[负面提示：告诉AI避免什么](/prompt-engineering/negative-prompting?lang=zh)',
-            '[温度和Top-P：控制AI创意](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh)',
+            '[什么是提示工程?](/zh/prompt-engineering/what-is-prompt-engineering)',
+            '[构建提示库](/zh/prompt-engineering/build-a-prompt-library)',
+            '[如何评估提示质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)',
+            '[提示链接：多步工作流](/zh/prompt-engineering/prompt-chaining)',
+            '[负面提示：告诉AI避免什么](/zh/prompt-engineering/negative-prompting)',
+            '[温度和Top-P：控制AI创意](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity)',
           ],
         },
         sources: {

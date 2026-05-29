@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-powered-research?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/ai-powered-research',
         inLanguage: 'de',
         headline: 'KI-gestützte Forschung: Tools, Halluzinations-Quoten und Verifikations-Workflows',
         description: 'KI-gestützte Forschungstools verkürzen Literaturrecherchen von Wochen auf Stunden – aber Halluzinations-Quoten von 9,2% machen Verifikations-Workflows obligatorisch. Behandelt Elicit, Consensus, Perplexity, scite.ai, Multi-Modell-Cross-Checking und Prompt-Frameworks für Forschung.',
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=de',
+          url: 'https://www.promptquorum.com/de/api/og/ai-powered-research',
           width: 1200,
           height: 630,
         },
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Für Forschungsaufgaben mit weniger als 20 Papieren verarbeiten alle drei Modelle den vollständigen Context. Für Systematic Reviews, die 50–200 Papiere abdecken, ist Gemini 3.1 Pros 1-Million-Token Context Window das einzige aktuelle Modell, das die vollständige Kopie in einer Sitzung verarbeitet.',
             'Für wirklich große Korpora (500+ Papiere) ist eine RAG-Pipeline – wo Papiere geckt, in einer Vektor-Datenbank eingebettet und durch semantische Ähnlichkeit abgerufen werden – die korrekte Architektur, nicht direkter Context-Injection.',
-            'Für eine tiefere Erklärung von Context Windows und warum Modelle Informationen in der Mitte des Kontexts verlieren, siehe [Context Windows erklärt](/prompt-engineering/context-window-limits-explained?lang=de).',
+            'Für eine tiefere Erklärung von Context Windows und warum Modelle Informationen in der Mitte des Kontexts verlieren, siehe [Context Windows erklärt](/de/prompt-engineering/context-window-limits-explained).',
           ],
         },
         lostInMiddle: {
@@ -997,15 +997,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[RAG Explained](/prompt-engineering/rag-explained?lang=de) – die Abruf-Architektur, die Elicit, Consensus und alle Production-Forschungs-KI-Tools antreibt',
-            '[AI Limitations – What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) – warum Halluzination strukturell ist, kein \'fixed-able\' Bug',
-            '[Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security?lang=de) – indirekte Injection-Risiken beim Füttern von gescrape Web-Inhalten in Forschungs-Pipelines',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) – strukturiertes Denken für systematische Analyse-Aufgaben, die nachvollziehbare Logik erfordern',
-            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) – wie Zufallsparameter faktische Genauigkeit in Zitat-Generierung beeinflussen',
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) – fundamentale Definition strukturierter KI-Anweisungen',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de) – Vergleich führender Open-Source-Modelle für lokale Inferenz',
-            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=de) – Evaluierung lokaler Modelle für Softwareentwicklungs-Aufgaben',
-            '[Open Source vs Proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms?lang=de) – Trade-offs in der Modell-Auswahl für Forschungs-Workflows',
+            '[RAG Explained](/de/prompt-engineering/rag-explained) – die Abruf-Architektur, die Elicit, Consensus und alle Production-Forschungs-KI-Tools antreibt',
+            '[AI Limitations – What LLMs Can\'t Do](/de/prompt-engineering/ai-limitations-what-llms-cant-do) – warum Halluzination strukturell ist, kein \'fixed-able\' Bug',
+            '[Prompt Injection & Security](/de/prompt-engineering/prompt-injection-and-security) – indirekte Injection-Risiken beim Füttern von gescrape Web-Inhalten in Forschungs-Pipelines',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) – strukturiertes Denken für systematische Analyse-Aufgaben, die nachvollziehbare Logik erfordern',
+            '[Temperature and Top-P Explained](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) – wie Zufallsparameter faktische Genauigkeit in Zitat-Generierung beeinflussen',
+            '[What Is Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) – fundamentale Definition strukturierter KI-Anweisungen',
+            '[Qwen vs Llama vs Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) – Vergleich führender Open-Source-Modelle für lokale Inferenz',
+            '[Best Local LLMs for Coding](/de/local-llms/best-local-llms-for-coding) – Evaluierung lokaler Modelle für Softwareentwicklungs-Aufgaben',
+            '[Open Source vs Proprietary LLMs](/de/prompt-engineering/open-source-vs-proprietary-llms) – Trade-offs in der Modell-Auswahl für Forschungs-Workflows',
           ],
         },
         howToStart: {
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-powered-research?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-powered-research',
         inLanguage: 'es',
         headline: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',
         description: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero las tasas de alucinación del 9,2 % hacen obligatorios los flujos de verificación. Cubre Elicit, Consensus, Perplexity, scite.ai, verificación cruzada multi-modelo y frameworks de prompts para investigación.',
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=es',
+          url: 'https://www.promptquorum.com/es/api/og/ai-powered-research',
           width: 1200,
           height: 630,
         },
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Para tareas de investigación con menos de 20 artículos, los tres modelos procesan el contexto completo. Para revisiones sistemáticas que cubren 50–200 artículos, la ventana de contexto de 1 millón de tokens de Gemini 3.1 Pro es el único modelo actual que procesa la copia completa en una sesión.',
             'Para corpus realmente grandes (más de 500 artículos), un pipeline RAG — donde los artículos se fragmentan, se embeben en una base de datos vectorial y se recuperan por similitud semántica — es la arquitectura correcta, no la inyección directa de contexto.',
-            'Para una explicación más profunda de las ventanas de contexto y por qué los modelos pierden información en el medio del contexto, consulta [Ventanas de contexto explicadas](/prompt-engineering/context-window-limits-explained?lang=es).',
+            'Para una explicación más profunda de las ventanas de contexto y por qué los modelos pierden información en el medio del contexto, consulta [Ventanas de contexto explicadas](/es/prompt-engineering/context-window-limits-explained).',
           ],
         },
         lostInMiddle: {
@@ -1523,15 +1523,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectura relacionada',
           items: [
-            '[RAG Explicado](/prompt-engineering/rag-explained?lang=es) — la arquitectura de recuperación que impulsa Elicit, Consensus y todas las herramientas de IA de investigación en producción',
-            '[Limitaciones de la IA — Qué no pueden hacer los LLMs](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es) — por qué la alucinación es estructural, no un bug que se puede corregir',
-            '[Prompt Injection y Seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — riesgos de inyección indirecta al alimentar contenido web scrapeado en pipelines de investigación',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=es) — razonamiento estructurado para tareas de análisis sistemático',
-            '[Temperatura y Top-P Explicados](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=es) — cómo los parámetros de aleatoriedad afectan la precisión factual en la generación de citas',
-            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — definición fundamental de instrucciones de IA estructuradas',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=es) — comparación de modelos de código abierto líderes para inferencia local',
-            '[Mejores LLMs locales para programación](/local-llms/best-local-llms-for-coding?lang=es) — evaluación de modelos locales para tareas de desarrollo de software',
-            '[LLMs de código abierto vs. propietarios](/prompt-engineering/open-source-vs-proprietary-llms?lang=es) — compensaciones en la selección de modelos para flujos de trabajo de investigación',
+            '[RAG Explicado](/es/prompt-engineering/rag-explained) — la arquitectura de recuperación que impulsa Elicit, Consensus y todas las herramientas de IA de investigación en producción',
+            '[Limitaciones de la IA — Qué no pueden hacer los LLMs](/es/prompt-engineering/ai-limitations-what-llms-cant-do) — por qué la alucinación es estructural, no un bug que se puede corregir',
+            '[Prompt Injection y Seguridad](/es/prompt-engineering/prompt-injection-and-security) — riesgos de inyección indirecta al alimentar contenido web scrapeado en pipelines de investigación',
+            '[Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting) — razonamiento estructurado para tareas de análisis sistemático',
+            '[Temperatura y Top-P Explicados](/es/prompt-engineering/temperature-and-top-p-control-ai-creativity) — cómo los parámetros de aleatoriedad afectan la precisión factual en la generación de citas',
+            '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — definición fundamental de instrucciones de IA estructuradas',
+            '[Qwen vs Llama vs Mistral](/es/local-llms/qwen-vs-llama-vs-mistral) — comparación de modelos de código abierto líderes para inferencia local',
+            '[Mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding) — evaluación de modelos locales para tareas de desarrollo de software',
+            '[LLMs de código abierto vs. propietarios](/es/prompt-engineering/open-source-vs-proprietary-llms) — compensaciones en la selección de modelos para flujos de trabajo de investigación',
           ],
         },
         howToStart: {
@@ -1615,7 +1615,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-powered-research?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/ai-powered-research',
         inLanguage: 'fr',
         headline: 'Recherche Assistée par IA : Outils, Taux d\'Hallucination et Workflows de Vérification',
         description: 'Les outils de recherche IA réduisent les revues de littérature de semaines à heures — mais des taux d\'hallucination de 9,2% rendent les workflows de vérification obligatoires. Couvre Elicit, Consensus, Perplexity, scite.ai, le cross-checking multi-modèles et les frameworks de prompts pour la recherche.',
@@ -1637,7 +1637,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=fr',
+          url: 'https://www.promptquorum.com/fr/api/og/ai-powered-research',
           width: 1200,
           height: 630,
         },
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Pour les tâches de recherche impliquant moins de 20 articles, les trois modèles gèrent le contexte complet. Pour les revues systématiques couvrant 50 à 200 articles, la fenêtre de contexte de 1 million de tokens de Gemini 3.1 Pro est le seul modèle actuel capable de traiter le corpus complet en une seule session.',
             'Pour les très grands corpus (500+ articles), un pipeline RAG — où les articles sont découpés, intégrés dans une base de données vectorielle et récupérés par similarité sémantique — est l\'architecture correcte, pas l\'injection directe de contexte.',
-            'Pour une explication plus profonde des fenêtres de contexte et pourquoi les modèles perdent l\'information au milieu des longs contextes, voir [les fenêtres de contexte expliquées](/prompt-engineering/context-window-limits-explained?lang=fr).',
+            'Pour une explication plus profonde des fenêtres de contexte et pourquoi les modèles perdent l\'information au milieu des longs contextes, voir [les fenêtres de contexte expliquées](/fr/prompt-engineering/context-window-limits-explained).',
           ],
         },
         lostInMiddle: {
@@ -2050,15 +2050,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[RAG Explained](/prompt-engineering/rag-explained?lang=fr) — l\'architecture de récupération qui alimente Elicit, Consensus et tous les outils de recherche IA en production',
-            '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — pourquoi l\'hallucination est structurelle, pas un bug corrigeable',
-            '[Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security?lang=fr) — risques d\'injection indirecte lors de l\'alimentation de contenu web scraped dans des pipelines de recherche',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — raisonnement structuré pour les tâches d\'analyse systématique nécessitant une logique traçable',
-            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) — comment les paramètres de hasard affectent la précision factuelle dans la génération de citations',
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — définition fondamentale des instructions IA structurées',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) — comparaison des modèles open-source leaders pour l\'inférence locale',
-            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=fr) — évaluation des modèles locaux pour les tâches de développement logiciel',
-            '[Open Source vs Proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms?lang=fr) — compromis dans le choix de modèle pour les workflows de recherche',
+            '[RAG Explained](/fr/prompt-engineering/rag-explained) — l\'architecture de récupération qui alimente Elicit, Consensus et tous les outils de recherche IA en production',
+            '[AI Limitations — What LLMs Can\'t Do](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — pourquoi l\'hallucination est structurelle, pas un bug corrigeable',
+            '[Prompt Injection & Security](/fr/prompt-engineering/prompt-injection-and-security) — risques d\'injection indirecte lors de l\'alimentation de contenu web scraped dans des pipelines de recherche',
+            '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — raisonnement structuré pour les tâches d\'analyse systématique nécessitant une logique traçable',
+            '[Temperature and Top-P Explained](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) — comment les paramètres de hasard affectent la précision factuelle dans la génération de citations',
+            '[What Is Prompt Engineering?](/fr/prompt-engineering/what-is-prompt-engineering) — définition fondamentale des instructions IA structurées',
+            '[Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral) — comparaison des modèles open-source leaders pour l\'inférence locale',
+            '[Best Local LLMs for Coding](/fr/local-llms/best-local-llms-for-coding) — évaluation des modèles locaux pour les tâches de développement logiciel',
+            '[Open Source vs Proprietary LLMs](/fr/prompt-engineering/open-source-vs-proprietary-llms) — compromis dans le choix de modèle pour les workflows de recherche',
           ],
         },
         howToStart: {
@@ -2141,7 +2141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-powered-research?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/ai-powered-research',
         inLanguage: 'ja',
         headline: 'AI駆動型研究：ツール、幻想率、検証ワークフロー',
         description: 'AI研究ツールは文献レビューを数週間から数時間に短縮します — ただし9.2%の幻想率により検証ワークフローが必須。Elicit、Consensus、Perplexity、scite.ai、マルチモデルクロスチェック、研究用プロンプトフレームワークをカバー。',
@@ -2347,15 +2347,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '関連読書',
           items: [
-            '[RAG説明](/prompt-engineering/rag-explained?lang=ja) — Elicit、Consensus、すべてプロダクション研究AIツールに電力供給する検索アーキテクチャ',
-            '[AI制限 — LLMが できないもの](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — 幻想がなぜ構造的か、修正可能バグではなく',
-            '[プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — スクレイプWebコンテンツを研究パイプラインに供給時の間接インジェクションリスク',
-            '[思考の連鎖プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — 追跡可能なロジック必要なシステマティック分析タスク用構造化推論',
-            '[温度とTop-P説明](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja) — ランダムパラメータが引用生成の事実精度にどう影響するか',
-            '[プロンプト工学とは](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 構造化AI指示の基本定義',
-            '[Qwen対Llama対Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=ja) — ローカル推論向けリーディングオープンソースモデル比較',
-            '[コーディング向けベストローカルLLM](/local-llms/best-local-llms-for-coding?lang=ja) — ソフトウェア開発タスク向けローカルモデル評価',
-            '[オープンソース対独占LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=ja) — 研究ワークフロー向けモデル選択のトレードオフ',
+            '[RAG説明](/ja/prompt-engineering/rag-explained) — Elicit、Consensus、すべてプロダクション研究AIツールに電力供給する検索アーキテクチャ',
+            '[AI制限 — LLMが できないもの](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — 幻想がなぜ構造的か、修正可能バグではなく',
+            '[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — スクレイプWebコンテンツを研究パイプラインに供給時の間接インジェクションリスク',
+            '[思考の連鎖プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — 追跡可能なロジック必要なシステマティック分析タスク用構造化推論',
+            '[温度とTop-P説明](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity) — ランダムパラメータが引用生成の事実精度にどう影響するか',
+            '[プロンプト工学とは](/ja/prompt-engineering/what-is-prompt-engineering) — 構造化AI指示の基本定義',
+            '[Qwen対Llama対Mistral](/ja/local-llms/qwen-vs-llama-vs-mistral) — ローカル推論向けリーディングオープンソースモデル比較',
+            '[コーディング向けベストローカルLLM](/ja/local-llms/best-local-llms-for-coding) — ソフトウェア開発タスク向けローカルモデル評価',
+            '[オープンソース対独占LLM](/ja/prompt-engineering/open-source-vs-proprietary-llms) — 研究ワークフロー向けモデル選択のトレードオフ',
           ],
         },
         howToStart: {
@@ -2393,7 +2393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-powered-research?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/ai-powered-research',
         inLanguage: 'zh',
         headline: 'AI研究：工具、幻想率和验证工作流',
         description: 'AI研究工具将文献评审从数周缩短至数小时 — 但9.2%幻想率使验证工作流成为必需。覆盖Elicit、Consensus、Perplexity、scite.ai、多模型交叉检查和研究提示框架。',
@@ -2599,15 +2599,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[RAG说明](/prompt-engineering/rag-explained?lang=zh) — 为Elicit、Consensus和所有生产研究AI工具供电的检索架构',
-            '[AI局限性 — LLM不能做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 为什么幻想是结构性的，而不是可修复的错误',
-            '[提示注入和安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 将抓取网络内容馈送到研究管道时的间接注入风险',
-            '[思想链提示](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 需要可追溯逻辑的系统分析任务的结构化推理',
-            '[温度和Top-P说明](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh) — 随机参数如何影响引用生成中的事实准确性',
-            '[什么是提示工程](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 结构化AI说明的基础定义',
-            '[Qwen对Llama对Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=zh) — 本地推理的领先开源模型比较',
-            '[最佳编码本地LLM](/local-llms/best-local-llms-for-coding?lang=zh) — 软件开发任务的本地模型评估',
-            '[开源对专有LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh) — 研究工作流中模型选择的权衡',
+            '[RAG说明](/zh/prompt-engineering/rag-explained) — 为Elicit、Consensus和所有生产研究AI工具供电的检索架构',
+            '[AI局限性 — LLM不能做什么](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) — 为什么幻想是结构性的，而不是可修复的错误',
+            '[提示注入和安全](/zh/prompt-engineering/prompt-injection-and-security) — 将抓取网络内容馈送到研究管道时的间接注入风险',
+            '[思想链提示](/zh/prompt-engineering/chain-of-thought-prompting) — 需要可追溯逻辑的系统分析任务的结构化推理',
+            '[温度和Top-P说明](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 随机参数如何影响引用生成中的事实准确性',
+            '[什么是提示工程](/zh/prompt-engineering/what-is-prompt-engineering) — 结构化AI说明的基础定义',
+            '[Qwen对Llama对Mistral](/zh/local-llms/qwen-vs-llama-vs-mistral) — 本地推理的领先开源模型比较',
+            '[最佳编码本地LLM](/zh/local-llms/best-local-llms-for-coding) — 软件开发任务的本地模型评估',
+            '[开源对专有LLM](/zh/prompt-engineering/open-source-vs-proprietary-llms) — 研究工作流中模型选择的权衡',
           ],
         },
         howToStart: {

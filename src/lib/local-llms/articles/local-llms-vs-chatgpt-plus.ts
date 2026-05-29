@@ -372,11 +372,11 @@ schema: {
           id: 'local-upfront',
           title: 'Was kostet ein lokales LLM Setup im April 2026?',
           content: [
-            '**Seit April 2026 decken drei Hardware-Ebenen die Spanne von gelegentlichem 7B-Einsatz bis zu GPT-5.2-Klasse 70B-Inferenz ab.** Alle Software ist kostenlos: [Ollama](/local-llms/how-to-install-ollama?lang=de) (Inferenz-Engine), Open WebUI (Chat-Interface) und alle Open-Source-Modelle (Llama, Qwen, Mistral, Gemma, Phi) kosten 0€ zum Herunterladen und Ausführen.',
+            '**Seit April 2026 decken drei Hardware-Ebenen die Spanne von gelegentlichem 7B-Einsatz bis zu GPT-5.2-Klasse 70B-Inferenz ab.** Alle Software ist kostenlos: [Ollama](/de/local-llms/how-to-install-ollama) (Inferenz-Engine), Open WebUI (Chat-Interface) und alle Open-Source-Modelle (Llama, Qwen, Mistral, Gemma, Phi) kosten 0€ zum Herunterladen und Ausführen.',
           ],
           items: [
             '**Einsteiger-Level — 7B Modelle — RTX 4060 Ti 8 GB (gebraucht, 250–280€):** Führt Llama 3.1 8B, Mistral 7B, Gemma 4 9B mit 25–60 Tokens/s aus. Gesamtkomplettrechner: 700–900€.',
-            '**Sweet Spot — 13B–24B Modelle — [RTX 5060 Ti 16 GB (neu, 450–500€)](/local-llms/best-budget-gpus-local-llm?lang=de):** Führt Mistral Small 3.1 24B und Qwen2.5 14B mit 20–40 Tokens/s aus. Gesamtrechner: 900–1.200€. Deckt 85 % der ChatGPT Plus-Anwendungsfälle ab.',
+            '**Sweet Spot — 13B–24B Modelle — [RTX 5060 Ti 16 GB (neu, 450–500€)](/de/local-llms/best-budget-gpus-local-llm):** Führt Mistral Small 3.1 24B und Qwen2.5 14B mit 20–40 Tokens/s aus. Gesamtrechner: 900–1.200€. Deckt 85 % der ChatGPT Plus-Anwendungsfälle ab.',
             '**70B-Tier — GPT-5.2-Klasse — drei Hardware-Optionen:**',
             '   Option A: RTX 4090 gebraucht (24 GB, ~1.999€) — führt Llama 3.3 70B mit ~25 Tokens/s über CUDA aus',
             '   Option B: Mac mini M4 Pro 64 GB (~2.499€) — führt Llama 3.3 70B mit 10–15 Tokens/s über Metal aus',
@@ -388,7 +388,7 @@ schema: {
           id: 'breakeven',
           title: 'Wann amortisiert sich ein lokales Setup gegenüber ChatGPT Plus?',
           content: [
-            '**Amortisationspunkt bei 10 Std./Woche: ~14 Monate für RTX 5060 Ti (~600€ GPU) vs ChatGPT Plus (240€/Jahr).** Nach 14 Monaten kostet lokal nur noch Strom (~30€/Jahr). Siehe das [vollständige Hardware-Kostenhandbuch](/local-llms/local-llm-hardware-guide-2026?lang=de) für detaillierte Berechnungen pro Inferenzstunde.',
+            '**Amortisationspunkt bei 10 Std./Woche: ~14 Monate für RTX 5060 Ti (~600€ GPU) vs ChatGPT Plus (240€/Jahr).** Nach 14 Monaten kostet lokal nur noch Strom (~30€/Jahr). Siehe das [vollständige Hardware-Kostenhandbuch](/de/local-llms/local-llm-hardware-guide-2026) für detaillierte Berechnungen pro Inferenzstunde.',
             'Bei 15 Std./Woche: Amortisationspunkt bei ~10 Monaten. Bei 5 Std./Woche: Amortisationspunkt bei ~18 Monaten. Bei 2 Std./Woche: ChatGPT Plus (20€/Monat) ist für 2+ Jahre billiger als ein Hardware-Kauf — lokal ist nur gerechtfertigt, wenn Datenschutz, Ratenbegrenzungen oder Offline-Zugriff wichtig sind.',
             'Vergleich mit ChatGPT Go (8€/Monat = 96€/Jahr): Lokale RTX 5060 Ti amortisiert sich gegenüber Go in ~4,5 Jahren. Für Leichtnutzer, die zwischen Free/Go und einer lokalen GPU wählen, ist die finanzielle Begründung für lokal nur sinnvoll, wenn Sie 24B+-Modellqualität benötigen (die ChatGPT Go mit GPT-5.3 bereits bietet).',
           ],
@@ -423,7 +423,7 @@ schema: {
           title: 'Wie vergleichen sich GPT-5.2 und lokale Modelle in der Qualität im April 2026?',
           content: [
             '**GPT-5.2 (ChatGPT Plus, April 2026): 87 % MMLU, 87 % HumanEval — das fähigste Modell in einem 20€/Monat-Abonnement.** Der GPT-5.2 Thinking-Modus fügt tiefe Gedankenketten für komplexe Mathematik und Analyse hinzu, enthalten in Plus mit 3.000 Abfragen/Woche.',
-            '[Llama 3.3 70B (Meta, Dezember 2024): 80 % MMLU, 88 % HumanEval](/local-llms/top-open-source-models-ollama?lang=de) — das beste Open-Source-Modell für lokale Inferenz. Die 5-Punkt-MMLU-Lücke mit GPT-5.2 ist die kleinste Cloud/lokal-Lücke in der Geschichte. Für 80 % der Business-Aufgaben (E-Mail, Code-Review, Zusammenfassung, Q&A) ist Llama 3.3 70B ausreichend.',
+            '[Llama 3.3 70B (Meta, Dezember 2024): 80 % MMLU, 88 % HumanEval](/de/local-llms/top-open-source-models-ollama) — das beste Open-Source-Modell für lokale Inferenz. Die 5-Punkt-MMLU-Lücke mit GPT-5.2 ist die kleinste Cloud/lokal-Lücke in der Geschichte. Für 80 % der Business-Aufgaben (E-Mail, Code-Review, Zusammenfassung, Q&A) ist Llama 3.3 70B ausreichend.',
             'GPT-5.2 Thinking und GPT-5.4 Pro (Pro €100-Stufe) führen bei neuartigen mehrstufigen Denkvorgängen, Graduate-Level-Mathematik und autonomen Agenten-Aufgaben. Für diese Anwendungsfälle gibt es kein lokales Modell, das im April 2026 vollständig konkurriert.',
           ],
           columns: ['Modell', 'Typ', 'MMLU', 'HumanEval', 'Hinweise'],
@@ -509,12 +509,12 @@ schema: {
         'relatedReading': {
           title: 'Weiterführende Ressourcen',
           items: [
-            '[Lokale LLMs vs Claude Pro](/local-llms/local-llms-vs-claude-pro?lang=de) — Datenschutz-, Kosten- und Qualitätsvergleich mit Anthropic Claude Pro (20€/Monat)',
-            '[Ollama auf jedem OS installieren](/local-llms/how-to-install-ollama?lang=de) — Kostenlose Open-Source-Inference-Engine zum Ausführen von Llama 3.1 lokal in 5 Minuten',
-            '[Lokales LLM vs Cloud GPU: Kostenvergleich](/local-llms/local-llm-vs-cloud-gpu-cost?lang=de) — Amortisierungsanalyse: Lokale RTX 4070 vs Lambda Labs, Paperspace, AWS GPUs',
-            '[Lohnt sich der GPU-Kauf vs Zahlung für AI-Abos?](/local-llms/gpu-vs-ai-subscription-roi?lang=de) — ROI-Rechner für GPU-Kauf vs ChatGPT Plus, Claude Pro und API-Abos',
-            '[Best Budget GPUs für lokale LLMs](/local-llms/best-budget-gpus-local-llm?lang=de) — Top bezahlbare Optionen: RTX 4060, RTX 3060, RX 6700, nach Leistung-pro-Euro bewertet',
-            '[Lokales LLM Hardware-Handbuch 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — Umfassendes GPU und RAM Empfehlungen für alle Modellgrößen und Budgets',
+            '[Lokale LLMs vs Claude Pro](/de/local-llms/local-llms-vs-claude-pro) — Datenschutz-, Kosten- und Qualitätsvergleich mit Anthropic Claude Pro (20€/Monat)',
+            '[Ollama auf jedem OS installieren](/de/local-llms/how-to-install-ollama) — Kostenlose Open-Source-Inference-Engine zum Ausführen von Llama 3.1 lokal in 5 Minuten',
+            '[Lokales LLM vs Cloud GPU: Kostenvergleich](/de/local-llms/local-llm-vs-cloud-gpu-cost) — Amortisierungsanalyse: Lokale RTX 4070 vs Lambda Labs, Paperspace, AWS GPUs',
+            '[Lohnt sich der GPU-Kauf vs Zahlung für AI-Abos?](/de/local-llms/gpu-vs-ai-subscription-roi) — ROI-Rechner für GPU-Kauf vs ChatGPT Plus, Claude Pro und API-Abos',
+            '[Best Budget GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — Top bezahlbare Optionen: RTX 4060, RTX 3060, RX 6700, nach Leistung-pro-Euro bewertet',
+            '[Lokales LLM Hardware-Handbuch 2026](/de/local-llms/local-llm-hardware-guide-2026) — Umfassendes GPU und RAM Empfehlungen für alle Modellgrößen und Budgets',
           ],
         },
         'sources': {
@@ -532,7 +532,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Lokale LLMs vs ChatGPT Plus 2026: Vollständiger Kostenvergleich über 7 Preisstufen',
         'description': 'ChatGPT Plus: 20€/Monat = 720€ über 3 Jahre. Lokales Llama 3.3 70B auf RTX 5060 Ti: ~600€ GPU + 90€ Strom = 590€ gesamt. Amortisationspunkt 14 Monate. 7 ChatGPT-Stufen im Vergleich.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-chatgpt-plus',
         'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -552,7 +552,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-chatgpt-plus',
         'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Lohnt sich ChatGPT Plus für 20€/Monat gegenüber lokalen LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für Leichtnutzer (unter 5 Std./Woche): ja — 20€/Monat Plus ist einfacher als ein 450€ GPU zu kaufen. Für regelmäßige Profi-Nutzung (10+ Std./Woche) amortisiert sich lokales Llama 3.3 70B auf RTX 5060 Ti in ~14 Monaten und kostet dann nur noch Strom (~30€/Jahr). Plus bleibt vorne durch neuartiges Denken via GPT-5.2 Thinking.' } },
@@ -665,11 +665,11 @@ schema: {
           id: 'local-upfront',
           title: 'Quel est le coût d\'une configuration LLM locale en avril 2026 ?',
           content: [
-            '**Depuis avril 2026, trois niveaux matériels couvrent l\'étendue de l\'utilisation occasionnelle 7B à l\'inférence 70B de classe GPT-5.2.** Tous les logiciels sont gratuits : [Ollama](/local-llms/how-to-install-ollama?lang=fr) (moteur d\'inférence), Open WebUI (interface de chat) et tous les modèles open-source (Llama, Qwen, Mistral, Gemma, Phi) coûtent 0€ à télécharger et exécuter.',
+            '**Depuis avril 2026, trois niveaux matériels couvrent l\'étendue de l\'utilisation occasionnelle 7B à l\'inférence 70B de classe GPT-5.2.** Tous les logiciels sont gratuits : [Ollama](/fr/local-llms/how-to-install-ollama) (moteur d\'inférence), Open WebUI (interface de chat) et tous les modèles open-source (Llama, Qwen, Mistral, Gemma, Phi) coûtent 0€ à télécharger et exécuter.',
           ],
           items: [
             '**Niveau d\'entrée — modèles 7B — RTX 4060 Ti 8 GB (occasion, 250–280€) :** Exécute Llama 3.1 8B, Mistral 7B, Gemma 4 9B à 25–60 tokens/s. Construction complète : 700–900€.',
-            '**Point optimal — modèles 13B–24B — [RTX 5060 Ti 16 GB (neuf, 450–500€)](/local-llms/best-budget-gpus-local-llm?lang=fr) :** Exécute Mistral Small 3.1 24B et Qwen2.5 14B à 20–40 tokens/s. Construction complète : 900–1 200€. Couvre 85 % des cas d\'usage ChatGPT Plus.',
+            '**Point optimal — modèles 13B–24B — [RTX 5060 Ti 16 GB (neuf, 450–500€)](/fr/local-llms/best-budget-gpus-local-llm) :** Exécute Mistral Small 3.1 24B et Qwen2.5 14B à 20–40 tokens/s. Construction complète : 900–1 200€. Couvre 85 % des cas d\'usage ChatGPT Plus.',
             '**Niveau 70B — classe GPT-5.2 — trois options matérielles :**',
             '   Option A : RTX 4090 occasion (24 GB, ~1 999€) — exécute Llama 3.3 70B à ~25 tokens/s via CUDA',
             '   Option B : Mac mini M4 Pro 64 GB (~2 499€) — exécute Llama 3.3 70B à 10–15 tokens/s via Metal',
@@ -681,7 +681,7 @@ schema: {
           id: 'breakeven',
           title: 'Quand une configuration locale devient-elle rentable par rapport à ChatGPT Plus ?',
           content: [
-            '**Rentabilité à 10 heures/semaine : ~14 mois pour RTX 5060 Ti (600€ GPU) vs ChatGPT Plus (240€/an).** Après 14 mois, le local ne coûte que l\'électricité (~30€/an). Consultez le [guide complet des coûts matériels](/local-llms/local-llm-hardware-guide-2026?lang=fr) pour les calculs détaillés par heure d\'inférence.',
+            '**Rentabilité à 10 heures/semaine : ~14 mois pour RTX 5060 Ti (600€ GPU) vs ChatGPT Plus (240€/an).** Après 14 mois, le local ne coûte que l\'électricité (~30€/an). Consultez le [guide complet des coûts matériels](/fr/local-llms/local-llm-hardware-guide-2026) pour les calculs détaillés par heure d\'inférence.',
             'À 15 heures/semaine : rentabilité à ~10 mois. À 5 heures/semaine : rentabilité à ~18 mois. À 2 heures/semaine : ChatGPT Plus (20€/mois) est moins cher que tout achat matériel pendant 2+ ans — le local n\'est justifié que si la confidentialité, les limites de débit ou l\'accès hors ligne comptent.',
             'Comparaison avec ChatGPT Go (8€/mois = 96€/an) : RTX 5060 Ti local se rentabilise par rapport à Go en ~4,5 ans. Pour les utilisateurs légers choisissant entre Free/Go et un GPU local, le cas financier pour le local ne tient que si vous avez besoin de qualité de modèle 24B+ (que ChatGPT Go avec GPT-5.3 fournit déjà).',
           ],
@@ -716,7 +716,7 @@ schema: {
           title: 'Comment GPT-5.2 et les modèles locaux se comparent-ils en qualité en avril 2026 ?',
           content: [
             '**GPT-5.2 (ChatGPT Plus, avril 2026) : 87 % MMLU, 87 % HumanEval — le modèle le plus capable dans un abonnement 20€/mois.** Le mode GPT-5.2 Thinking ajoute un raisonnement en chaîne profonde pour les mathématiques complexes et l\'analyse, inclus dans Plus avec 3 000 requêtes/semaine.',
-            '[Llama 3.3 70B (Meta, décembre 2024) : 80 % MMLU, 88 % HumanEval](/local-llms/top-open-source-models-ollama?lang=fr) — le meilleur modèle open-source pour l\'inférence locale. L\'écart MMLU de 5 points avec GPT-5.2 est le plus petit écart cloud/local de l\'histoire. Pour 80 % des tâches métier (email, révision de code, synthèse, Q&A), Llama 3.3 70B est suffisant.',
+            '[Llama 3.3 70B (Meta, décembre 2024) : 80 % MMLU, 88 % HumanEval](/fr/local-llms/top-open-source-models-ollama) — le meilleur modèle open-source pour l\'inférence locale. L\'écart MMLU de 5 points avec GPT-5.2 est le plus petit écart cloud/local de l\'histoire. Pour 80 % des tâches métier (email, révision de code, synthèse, Q&A), Llama 3.3 70B est suffisant.',
             'GPT-5.2 Thinking et GPT-5.4 Pro (niveau Pro 100€) dominent le raisonnement multi-étapes novateur, les mathématiques de niveau graduate et les tâches d\'agents autonomes. Pour ces cas d\'usage, aucun modèle local ne concurrence pleinement en avril 2026.',
           ],
           columns: ['Modèle', 'Type', 'MMLU', 'HumanEval', 'Notes'],
@@ -794,12 +794,12 @@ schema: {
         'relatedReading': {
           title: 'Lectures recommandées',
           items: [
-            '[LLMs locaux vs Claude Pro](/local-llms/local-llms-vs-claude-pro?lang=fr) — Comparaison de confidentialité, coûts et qualité avec Anthropic Claude Pro (20€/mois)',
-            '[Comment installer Ollama sur n\'importe quel OS](/local-llms/how-to-install-ollama?lang=fr) — Moteur d\'inférence gratuit et open-source pour exécuter Llama 3.1 localement en 5 minutes',
-            '[LLM local vs GPU cloud : Comparaison tarifaire](/local-llms/local-llm-vs-cloud-gpu-cost?lang=fr) — Analyse de rentabilité : RTX 4070 local vs Lambda Labs, Paperspace, GPUs AWS',
-            '[L\'achat d\'une GPU vaut-il la peine vs payer les abos IA ?](/local-llms/gpu-vs-ai-subscription-roi?lang=fr) — Calculateur ROI pour achat GPU vs ChatGPT Plus, Claude Pro et abos API',
-            '[Meilleurs GPUs pas chers pour LLMs locaux](/local-llms/best-budget-gpus-local-llm?lang=fr) — Options abordables top : RTX 4060, RTX 3060, RX 6700, classées par performance-par-euro',
-            '[Guide du matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Recommandations complètes GPU et RAM pour toutes les tailles de modèles et budgets',
+            '[LLMs locaux vs Claude Pro](/fr/local-llms/local-llms-vs-claude-pro) — Comparaison de confidentialité, coûts et qualité avec Anthropic Claude Pro (20€/mois)',
+            '[Comment installer Ollama sur n\'importe quel OS](/fr/local-llms/how-to-install-ollama) — Moteur d\'inférence gratuit et open-source pour exécuter Llama 3.1 localement en 5 minutes',
+            '[LLM local vs GPU cloud : Comparaison tarifaire](/fr/local-llms/local-llm-vs-cloud-gpu-cost) — Analyse de rentabilité : RTX 4070 local vs Lambda Labs, Paperspace, GPUs AWS',
+            '[L\'achat d\'une GPU vaut-il la peine vs payer les abos IA ?](/fr/local-llms/gpu-vs-ai-subscription-roi) — Calculateur ROI pour achat GPU vs ChatGPT Plus, Claude Pro et abos API',
+            '[Meilleurs GPUs pas chers pour LLMs locaux](/fr/local-llms/best-budget-gpus-local-llm) — Options abordables top : RTX 4060, RTX 3060, RX 6700, classées par performance-par-euro',
+            '[Guide du matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Recommandations complètes GPU et RAM pour toutes les tailles de modèles et budgets',
           ],
         },
         'sources': {
@@ -817,7 +817,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs locaux vs ChatGPT Plus 2026 : Comparaison tarifaire complète sur 7 niveaux',
         'description': 'ChatGPT Plus : 20€/mois = 720€ sur 3 ans. LLM Llama 3.3 70B local sur RTX 5060 Ti : 600€ GPU + 90€ électricité = 590€ total. Rentabilité 14 mois. 7 niveaux ChatGPT comparés.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-chatgpt-plus',
         'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -837,7 +837,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-chatgpt-plus',
         'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ChatGPT Plus vaut-il 20€/mois par rapport aux LLMs locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les utilisateurs légers (moins de 5 heures/semaine), oui — 20€/mois Plus est plus facile que d\'acheter une GPU à 450€. Pour une utilisation professionnelle régulière (10+ heures/semaine), Llama 3.3 70B local sur RTX 5060 Ti se rentabilise en ~14 mois puis ne coûte que l\'électricité (~30€/an). Plus reste en tête sur le raisonnement novateur via GPT-5.2 Thinking.' } },
@@ -948,11 +948,11 @@ schema: {
           id: 'local-upfront',
           title: '2026年4月のローカル LLM セットアップのコストは？',
           content: [
-            '**2026年4月現在、3つのハードウェアティアがカジュアルな 7B 使用から GPT-5.2 クラスの 70B 推論まで、幅広くカバーしています。** すべてのソフトウェアは無料です：[Ollama](/local-llms/how-to-install-ollama?lang=ja)（推論エンジン）、Open WebUI（チャットインターフェース）、すべてのオープンソースモデル（Llama、Qwen、Mistral、Gemma、Phi）はダウンロードして実行するのに 0 円です。',
+            '**2026年4月現在、3つのハードウェアティアがカジュアルな 7B 使用から GPT-5.2 クラスの 70B 推論まで、幅広くカバーしています。** すべてのソフトウェアは無料です：[Ollama](/ja/local-llms/how-to-install-ollama)（推論エンジン）、Open WebUI（チャットインターフェース）、すべてのオープンソースモデル（Llama、Qwen、Mistral、Gemma、Phi）はダウンロードして実行するのに 0 円です。',
           ],
           items: [
             '**エントリーレベル — 7B モデル — RTX 4060 Ti 8 GB（中古、約31,000～35,000円）：** Llama 3.1 8B、Mistral 7B、Gemma 4 9B を 25～60 tokens/s で実行。完全なビルド：約87,000～112,000円。',
-            '**スイートスポット — 13B～24B モデル — [RTX 5060 Ti 16 GB（新品、約94,800円）](/local-llms/best-budget-gpus-local-llm?lang=ja)：** Mistral Small 3.1 24B および Qwen2.5 14B を 20～40 tokens/s で実行。完全なビルド：約112,000～150,000円。ChatGPT Plus ユースケースの 85％ をカバー。',
+            '**スイートスポット — 13B～24B モデル — [RTX 5060 Ti 16 GB（新品、約94,800円）](/ja/local-llms/best-budget-gpus-local-llm)：** Mistral Small 3.1 24B および Qwen2.5 14B を 20～40 tokens/s で実行。完全なビルド：約112,000～150,000円。ChatGPT Plus ユースケースの 85％ をカバー。',
             '**70B ティア — GPT-5.2 クラス — 3つのハードウェアオプション：**',
             '   オプション A：RTX 4090 中古（24 GB、約220,000～280,000円）— CUDA 経由で Llama 3.3 70B を ~25 tokens/s で実行',
             '   オプション B：Mac mini M4 Pro 64 GB（約358,800円）— Metal 経由で Llama 3.3 70B を 10～15 tokens/s で実行',
@@ -964,7 +964,7 @@ schema: {
           id: 'breakeven',
           title: 'ローカルセットアップは ChatGPT Plus と比べていつ損益分岐点に達する？',
           content: [
-            '**週10時間利用での損益分岐点：RTX 5060 Ti（約94,800円 GPU）vs ChatGPT Plus（年24,000円程度）で約14ヶ月。** 14ヶ月後、ローカルは電気代のみ（年約7,500円）です。詳細なユーザー/時間あたり計算については、[完全なハードウェアコストガイド](/local-llms/local-llm-hardware-guide-2026?lang=ja)を参照してください。',
+            '**週10時間利用での損益分岐点：RTX 5060 Ti（約94,800円 GPU）vs ChatGPT Plus（年24,000円程度）で約14ヶ月。** 14ヶ月後、ローカルは電気代のみ（年約7,500円）です。詳細なユーザー/時間あたり計算については、[完全なハードウェアコストガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
             '週15時間：損益分岐点は約10ヶ月。週5時間：損益分岐点は約18ヶ月。週2時間：ChatGPT Plus（20€/月）は2年以上、どのハードウェア購入よりも安いです — ローカルは、プライバシー、レート制限なし、またはオフラインアクセスが重要な場合にのみ正当化されます。',
             'ChatGPT Go（8€/月 = 年96€）との比較：ローカル RTX 5060 Ti は Go と比較して約4.5年で損益分岐点に達します。Free/Go と ローカル GPU のどちらかを選択するライトユーザーにとって、ローカルの経済的な場合は、24B 以上のモデル品質が必要な場合のみです（ChatGPT Go は GPT-5.3 で既に提供しています）。',
           ],
@@ -999,7 +999,7 @@ schema: {
           title: '2026年4月の品質：GPT-5.2 とローカルモデルはどう比較される？',
           content: [
             '**GPT-5.2（ChatGPT Plus、2026年4月）：87％ MMLU、87％ HumanEval — 20€/月のサブスクリプションで最も高性能なモデル。** GPT-5.2 Thinking モードは複雑な数学と分析のための深いチェーン・オブ・ソート推論を追加し、Plus で週3,000クエリ含まれています。',
-            '[Llama 3.3 70B（Meta、2024年12月）：80％ MMLU、88％ HumanEval](/local-llms/top-open-source-models-ollama?lang=ja) — ローカル推論向けの最高のオープンソースモデル。GPT-5.2 との 5 ポイント MMLU ギャップは歴史上最小です。ビジネスタスクの 80％（メール、コードレビュー、要約、Q&A）では Llama 3.3 70B で十分です。',
+            '[Llama 3.3 70B（Meta、2024年12月）：80％ MMLU、88％ HumanEval](/ja/local-llms/top-open-source-models-ollama) — ローカル推論向けの最高のオープンソースモデル。GPT-5.2 との 5 ポイント MMLU ギャップは歴史上最小です。ビジネスタスクの 80％（メール、コードレビュー、要約、Q&A）では Llama 3.3 70B で十分です。',
             'GPT-5.2 Thinking と GPT-5.4 Pro（Pro 100€ レベル）は、斬新なマルチステップ推論、大学院レベルの数学、自律エージェントタスクで主導しています。これらのユースケースの場合、2026年4月時点でローカルモデルは完全には競争しません。',
           ],
           columns: ['モデル', 'タイプ', 'MMLU', 'HumanEval', '注記'],
@@ -1077,12 +1077,12 @@ schema: {
         'relatedReading': {
           title: '関連資料',
           items: [
-            '[ローカル LLM vs Claude Pro](/local-llms/local-llms-vs-claude-pro?lang=ja) — Anthropic Claude Pro（20€/月）とのプライバシー、コスト、品質比較',
-            '[すべての OS に Ollama をインストールする方法](/local-llms/how-to-install-ollama?lang=ja) — 無料のオープンソース推論エンジンで Llama 3.1 を 5 分でローカル実行',
-            '[ローカル LLM vs クラウド GPU：コスト比較](/local-llms/local-llm-vs-cloud-gpu-cost?lang=ja) — 損益分岐点分析：ローカル RTX 4070 vs Lambda Labs、Paperspace、AWS GPU',
-            '[GPU 購入は AI サブスク支払いに対して価値がある？](/local-llms/gpu-vs-ai-subscription-roi?lang=ja) — GPU 購入 vs ChatGPT Plus、Claude Pro、API サブスク用 ROI 計算機',
-            '[ローカル LLM 向けベスト予算 GPU](/local-llms/best-budget-gpus-local-llm?lang=ja) — トップ手頃なオプション：RTX 4060、RTX 3060、RX 6700、パフォーマンス/円でランク付け',
-            '[ローカル LLM ハードウェアガイド 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — すべてのモデルサイズと予算向けの包括的な GPU および RAM 推奨事項',
+            '[ローカル LLM vs Claude Pro](/ja/local-llms/local-llms-vs-claude-pro) — Anthropic Claude Pro（20€/月）とのプライバシー、コスト、品質比較',
+            '[すべての OS に Ollama をインストールする方法](/ja/local-llms/how-to-install-ollama) — 無料のオープンソース推論エンジンで Llama 3.1 を 5 分でローカル実行',
+            '[ローカル LLM vs クラウド GPU：コスト比較](/ja/local-llms/local-llm-vs-cloud-gpu-cost) — 損益分岐点分析：ローカル RTX 4070 vs Lambda Labs、Paperspace、AWS GPU',
+            '[GPU 購入は AI サブスク支払いに対して価値がある？](/ja/local-llms/gpu-vs-ai-subscription-roi) — GPU 購入 vs ChatGPT Plus、Claude Pro、API サブスク用 ROI 計算機',
+            '[ローカル LLM 向けベスト予算 GPU](/ja/local-llms/best-budget-gpus-local-llm) — トップ手頃なオプション：RTX 4060、RTX 3060、RX 6700、パフォーマンス/円でランク付け',
+            '[ローカル LLM ハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) — すべてのモデルサイズと予算向けの包括的な GPU および RAM 推奨事項',
           ],
         },
         'sources': {
@@ -1100,7 +1100,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'ローカルLLM vs ChatGPT Plus 2026：7つの価格レベルの完全比較',
         'description': 'ChatGPT Plus：20€/月 = 3年で約144,000円。RTX 5060 Ti 上のローカル Llama 3.3 70B：約94,800円 GPU + 22,500円電気代 = 約117,300円。損益分岐点14ヶ月。7つの ChatGPT レベルを比較。',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-vs-chatgpt-plus',
         'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -1120,7 +1120,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-vs-chatgpt-plus',
         'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ChatGPT Plus は月額20€の価値があります？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ライトユーザー（週5時間未満）の場合：はい — 月額20€の Plus は 94,800円の GPU を購入するより簡単です。定期的なプロ使用（週10時間以上）の場合：ローカル Llama 3.3 70B は RTX 5060 Ti で約14ヶ月で損益分岐点に達し、その後は電気代のみ（年約7,500円）です。Plus は GPT-5.2 Thinking での斬新な推論で先を行きます。' } },
@@ -1231,11 +1231,11 @@ schema: {
           id: 'local-upfront',
           title: '2026年4月本地LLM设置成本是多少？',
           content: [
-            '**截至2026年4月，三个硬件层涵盖从休闲7B使用到GPT-5.2级别70B推理的范围。** 所有软件均免费：[Ollama](/local-llms/how-to-install-ollama?lang=zh)（推理引擎）、Open WebUI（聊天界面）和所有开源模型（Llama、Qwen、Mistral、Gemma、Phi）可免费下载和运行。',
+            '**截至2026年4月，三个硬件层涵盖从休闲7B使用到GPT-5.2级别70B推理的范围。** 所有软件均免费：[Ollama](/zh/local-llms/how-to-install-ollama)（推理引擎）、Open WebUI（聊天界面）和所有开源模型（Llama、Qwen、Mistral、Gemma、Phi）可免费下载和运行。',
           ],
           items: [
             '**入门级——7B模型——RTX 4060 Ti 8GB（二手，$220-260）：** 运行Llama 3.1 8B、Mistral 7B、Gemma 4 9B，速度为25-60 tokens/秒。完整构建：$700-900。',
-            '**黄金点——13B-24B模型——[RTX 5060 Ti 16GB（新，$450-500）](/local-llms/best-budget-gpus-local-llm?lang=zh)：** 运行Mistral Small 3.1 24B和Qwen2.5 14B，速度为20-40 tokens/秒。完整构建：$900-1,200。覆盖85%的ChatGPT Plus用例。',
+            '**黄金点——13B-24B模型——[RTX 5060 Ti 16GB（新，$450-500）](/zh/local-llms/best-budget-gpus-local-llm)：** 运行Mistral Small 3.1 24B和Qwen2.5 14B，速度为20-40 tokens/秒。完整构建：$900-1,200。覆盖85%的ChatGPT Plus用例。',
             '**70B层——GPT-5.2级别——三个硬件选项：**',
             '   选项A：RTX 4090二手（24GB，约$1,400）——通过CUDA以~25 tokens/秒运行Llama 3.3 70B',
             '   选项B：Mac mini M4 Pro 64GB（$2,299）——通过Metal以10-15 tokens/秒运行Llama 3.3 70B',
@@ -1247,7 +1247,7 @@ schema: {
           id: 'breakeven',
           title: '本地设置何时与ChatGPT Plus平衡？',
           content: [
-            '**每周10小时使用的平衡点：约14个月，用于RTX 5060 Ti（约$500 GPU）与ChatGPT Plus（$240/年）的对比。** 14个月后，本地仅成本电费（约$30/年）。请参阅[完整硬件成本指南](/local-llms/local-llm-hardware-guide-2026?lang=zh)了解详细的每推理小时计算。',
+            '**每周10小时使用的平衡点：约14个月，用于RTX 5060 Ti（约$500 GPU）与ChatGPT Plus（$240/年）的对比。** 14个月后，本地仅成本电费（约$30/年）。请参阅[完整硬件成本指南](/zh/local-llms/local-llm-hardware-guide-2026)了解详细的每推理小时计算。',
             '每周15小时：平衡点约10个月。每周5小时：平衡点约18个月。每周2小时：ChatGPT Plus（$20/月）在2年多的时间内比任何硬件购买都便宜——本地仅在隐私、无速率限制或离线访问重要时正当化。',
             '与ChatGPT Go（$8/月 = 年$96）比较：本地RTX 5060 Ti在约4.5年内与Go相比平衡。对于选择Free/Go或本地GPU的轻度用户，本地的经济案例仅在您需要24B+模型质量时成立（ChatGPT Go已通过GPT-5.3提供）。',
           ],
@@ -1282,7 +1282,7 @@ schema: {
           title: '2026年4月GPT-5.2和本地模型品质如何比较？',
           content: [
             '**GPT-5.2（ChatGPT Plus，2026年4月）：87% MMLU、87% HumanEval——$20/月订阅中最强大的模型。** GPT-5.2 Thinking模式为复杂数学和分析添加深度思维链，包含在Plus中，每周3,000个查询。',
-            '[Llama 3.3 70B（Meta，2024年12月）：80% MMLU、88% HumanEval](/local-llms/top-open-source-models-ollama?lang=zh)——本地推理的最佳开源模型。与GPT-5.2的5点MMLU差距是历史上最小的。对于80%的业务任务（电子邮件、代码审查、摘要、问答），Llama 3.3 70B就足够了。',
+            '[Llama 3.3 70B（Meta，2024年12月）：80% MMLU、88% HumanEval](/zh/local-llms/top-open-source-models-ollama)——本地推理的最佳开源模型。与GPT-5.2的5点MMLU差距是历史上最小的。对于80%的业务任务（电子邮件、代码审查、摘要、问答），Llama 3.3 70B就足够了。',
             'GPT-5.2 Thinking和GPT-5.4 Pro（Pro 100€级别）在新颖的多步骤推理、研究生级数学和自主代理任务中处于领先地位。对于这些用例，截至2026年4月，没有本地模型可以完全竞争。',
           ],
           columns: ['模型', '类型', 'MMLU', 'HumanEval', '备注'],
@@ -1359,12 +1359,12 @@ schema: {
         'relatedReading': {
           title: '相关资源',
           items: [
-            '[本地LLM vs Claude Pro](/local-llms/local-llms-vs-claude-pro?lang=zh)——与Anthropic Claude Pro（$20/月）的隐私、成本和品质对比',
-            '[如何在任何OS上安装Ollama](/local-llms/how-to-install-ollama?lang=zh)——免费开源推理引擎，在5分钟内本地运行Llama 3.1',
-            '[本地LLM vs云GPU：成本对比](/local-llms/local-llm-vs-cloud-gpu-cost?lang=zh)——损益分岐点分析：本地RTX 4070 vs Lambda Labs、Paperspace、AWS GPU',
-            '[购买GPU是否值得vs支付AI订阅？](/local-llms/gpu-vs-ai-subscription-roi?lang=zh)——GPU购买vs ChatGPT Plus、Claude Pro、API订阅的ROI计算器',
-            '[本地LLM最佳预算GPU](/local-llms/best-budget-gpus-local-llm?lang=zh)——顶级经济选项：RTX 4060、RTX 3060、RX 6700，按性能/美元排名',
-            '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh)——所有模型大小和预算的综合GPU和RAM推荐',
+            '[本地LLM vs Claude Pro](/zh/local-llms/local-llms-vs-claude-pro)——与Anthropic Claude Pro（$20/月）的隐私、成本和品质对比',
+            '[如何在任何OS上安装Ollama](/zh/local-llms/how-to-install-ollama)——免费开源推理引擎，在5分钟内本地运行Llama 3.1',
+            '[本地LLM vs云GPU：成本对比](/zh/local-llms/local-llm-vs-cloud-gpu-cost)——损益分岐点分析：本地RTX 4070 vs Lambda Labs、Paperspace、AWS GPU',
+            '[购买GPU是否值得vs支付AI订阅？](/zh/local-llms/gpu-vs-ai-subscription-roi)——GPU购买vs ChatGPT Plus、Claude Pro、API订阅的ROI计算器',
+            '[本地LLM最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm)——顶级经济选项：RTX 4060、RTX 3060、RX 6700，按性能/美元排名',
+            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026)——所有模型大小和预算的综合GPU和RAM推荐',
           ],
         },
         'sources': {
@@ -1382,7 +1382,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '本地LLM vs ChatGPT Plus 2026：7个价格级别完整对比',
         'description': 'ChatGPT Plus：$20/月 = 3年$720。RTX 5060 Ti本地Llama 3.3 70B：约$500 GPU + $90电费 = $590总计。平衡点14个月。7个ChatGPT级别对比。',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-vs-chatgpt-plus',
         'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -1402,7 +1402,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-vs-chatgpt-plus',
         'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ChatGPT Plus是否值得每月$20与本地LLM相比？', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于轻度用户（每周少于5小时），是的——每月$20的Plus比购买$500 GPU更简单。对于定期专业使用（每周10小时以上），本地Llama 3.3 70B在RTX 5060 Ti上在约14个月内平衡，然后仅成本电费（约$30/年）。Plus通过GPT-5.2 Thinking在新颖推理上保持领先。' } },

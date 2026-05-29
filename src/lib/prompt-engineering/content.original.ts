@@ -764,7 +764,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
-        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'de',
       },
       itemListSchema: {
@@ -879,7 +879,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           content: [
             'Ein vager Prompt erzeugt eine vage Ausgabe. Ein schlecht spezifizierter Prompt erzeugt eine verfehlt angestrebte Antwort. Ein Prompt, der am Montag funktioniert, könnte am Freitag fehlschlagen, wenn sich die Eingabe leicht ändert. Optimierung beseitigt diese Schwankungen durch systematische Diagnose und gezielte Überarbeitung.',
             'Echtes Vorher/Nachher: Ein nicht optimierter Prompt lautet „Fasse diesen Artikel zusammen." Dreimal auf denselben Artikel angewendet, erzeugt er völlig unterschiedliche Ausgaben: eine mit 47 Wörtern, eine mit 120 Wörtern, die dritte übersieht den Hauptpunkt völlig. Nach Optimierung — Zugabe von Ausgabeformat („3 Aufzählungspunkte, je ≤20 Wörter"), einer Rolle („Analyst") und Spezifität („Liste die 3 Schlüsselbefunde auf, nicht die Methodik") — produziert derselbe Prompt konsistente, spezifizierte Ergebnisse alle 3 Male, über GPT-4o, Claude und Gemini hinweg.',
-            '**Für EU-Organisationen ist systematische Prompt-Optimierung eine Compliance-Anforderung, nicht nur eine Best Practice.** Das EU-Gesetz über künstliche Intelligenz (2024) verlangt von Hochrisiko-AI-Systemen — solche, die bei Einstellung, Kreditbewertung, Gesundheitswesen oder Strafverfolgung verwendet werden — zu dokumentieren, wie AI-Entscheidungen getroffen werden, und konsistente, testbare Ergebnisse zu demonstrieren. Eine versionskontrollierte Prompt-Bibliothek mit dokumentierter Optimierungshistorie erfüllt diese Audit-Trail-Anforderung. In Japan erfordert die METI-AI-Governance-Richtlinie ähnlich nachverfolgbare AI-Entscheidungsdokumentation für regulierte Anwendungen. Prompt-Optimierung ist die Grundlage dieser Nachverfolgbarkeit. Siehe [Geopolitik und KI](/prompt-engineering/geopolitics-and-ai?lang=de) für den vollständigen Compliance-Kontext.',
+            '**Für EU-Organisationen ist systematische Prompt-Optimierung eine Compliance-Anforderung, nicht nur eine Best Practice.** Das EU-Gesetz über künstliche Intelligenz (2024) verlangt von Hochrisiko-AI-Systemen — solche, die bei Einstellung, Kreditbewertung, Gesundheitswesen oder Strafverfolgung verwendet werden — zu dokumentieren, wie AI-Entscheidungen getroffen werden, und konsistente, testbare Ergebnisse zu demonstrieren. Eine versionskontrollierte Prompt-Bibliothek mit dokumentierter Optimierungshistorie erfüllt diese Audit-Trail-Anforderung. In Japan erfordert die METI-AI-Governance-Richtlinie ähnlich nachverfolgbare AI-Entscheidungsdokumentation für regulierte Anwendungen. Prompt-Optimierung ist die Grundlage dieser Nachverfolgbarkeit. Siehe [Geopolitik und KI](/de/prompt-engineering/geopolitics-and-ai) für den vollständigen Compliance-Kontext.',
           ],
         },
 
@@ -967,15 +967,15 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           title: 'Was bedeuten diese Prompt-Optimierungsbegriffe?',
           content: [],
           items: [
-            '**Prompt-Optimierung** — Der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der Ausgabequalität durch Diagnose von Fehlermodi und Änderung jeweils einer Variable (Spezifität, Kontext, Beispiele, Beschränkungen, Format oder Rolle). Siehe [5 Bausteine, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) für die strukturellen Elemente, die du optimierst.',
-            '**Few-Shot-Prompting** — Einbeziehen von 1–3 Input/Output-Beispielen im Prompt, um das Modell das gewünschte Format oder Muster zu lehren. Siehe [Zero-Shot vs. Few-Shot-Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) für wann man Beispiele als primären Optimierungshebel hinzufügt.',
-            '**Chain-of-Thought (CoT)** — Das Modell Schritt-für-Schritt argumentieren lassen („denk nach, bevor du antwortest"), um Genauigkeit bei mehrstufigen Logikaufgaben um 10–15 % zu verbessern. Siehe [Chain-of-Thought-Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) für detaillierte Techniken.',
-            '**Beschränkung** — Ein explizites Verbot oder eine Grenze (z.B. „verwende keine Fachjargon", „maximum 150 Wörter", „zitiere nur Quellen"), die Ausgabespielraum einengt und häufige Fehlermodi verhindert. Siehe [Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) für erweiterte Beschränkungsmuster.',
-            '**Token** — Die kleinste Texteinheit, die das Modell verarbeitet; etwa 4 Zeichen oder 1 Wort im Englischen. Prompt-Länge und Ausgabebudget werden in Tokens gemessen. Siehe [Tokens, Kosten & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de) für Kostenberechnung.',
-            '**Halluzination** — Selbstbewusste aber faktisch falsche Ausgabe; tritt auf, wenn das Modell Fakten erfindet, nicht existierende Studien zitiert oder unbegründete Behauptungen wiederholt. Siehe [KI-Halluzinationen: Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — gemindert durch Hinzufügen von Verankerungskontext, Beispielen und Beschränkungen.',
+            '**Prompt-Optimierung** — Der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der Ausgabequalität durch Diagnose von Fehlermodi und Änderung jeweils einer Variable (Spezifität, Kontext, Beispiele, Beschränkungen, Format oder Rolle). Siehe [5 Bausteine, die jeder Prompt braucht](/de/prompt-engineering/5-building-blocks-every-prompt-needs) für die strukturellen Elemente, die du optimierst.',
+            '**Few-Shot-Prompting** — Einbeziehen von 1–3 Input/Output-Beispielen im Prompt, um das Modell das gewünschte Format oder Muster zu lehren. Siehe [Zero-Shot vs. Few-Shot-Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) für wann man Beispiele als primären Optimierungshebel hinzufügt.',
+            '**Chain-of-Thought (CoT)** — Das Modell Schritt-für-Schritt argumentieren lassen („denk nach, bevor du antwortest"), um Genauigkeit bei mehrstufigen Logikaufgaben um 10–15 % zu verbessern. Siehe [Chain-of-Thought-Prompting](/de/prompt-engineering/chain-of-thought-prompting) für detaillierte Techniken.',
+            '**Beschränkung** — Ein explizites Verbot oder eine Grenze (z.B. „verwende keine Fachjargon", „maximum 150 Wörter", „zitiere nur Quellen"), die Ausgabespielraum einengt und häufige Fehlermodi verhindert. Siehe [Constrained Prompting](/de/prompt-engineering/constrained-prompting) für erweiterte Beschränkungsmuster.',
+            '**Token** — Die kleinste Texteinheit, die das Modell verarbeitet; etwa 4 Zeichen oder 1 Wort im Englischen. Prompt-Länge und Ausgabebudget werden in Tokens gemessen. Siehe [Tokens, Kosten & Limits](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) für Kostenberechnung.',
+            '**Halluzination** — Selbstbewusste aber faktisch falsche Ausgabe; tritt auf, wenn das Modell Fakten erfindet, nicht existierende Studien zitiert oder unbegründete Behauptungen wiederholt. Siehe [KI-Halluzinationen: Warum KI Dinge erfindet](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — gemindert durch Hinzufügen von Verankerungskontext, Beispielen und Beschränkungen.',
             '**Fine-Tuning** — Umschulung von Modellgewichten auf domänenspezifischen beschrifteten Daten; verwendet, wenn Prompt-Optimierung die erforderliche Qualität nicht erreichen kann. Erschöpfe immer Optimierung bevor Fine-Tuning — es ist langsamer und teurer.',
-            '**RAG (Retrieval-Augmented Generation)** — Einspritzen von abgerufenen Dokumenten in den Prompt-Kontext bevor du das Modell fragst. Siehe [RAG erklärt](/prompt-engineering/rag-explained?lang=de) — komplementär zur Optimierung (RAG verbessert Information; Optimierung verbessert wie das Modell sie nutzt).',
-            '**System-Prompt** — Persistente Anweisung, die die Rolle, Beschränkungen und das Verhalten des Modells über alle Züge setzt. Siehe [System-Prompt vs. User-Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=de) — erfordert separate Optimierungstests vom nutzerfachigen Prompt.',
+            '**RAG (Retrieval-Augmented Generation)** — Einspritzen von abgerufenen Dokumenten in den Prompt-Kontext bevor du das Modell fragst. Siehe [RAG erklärt](/de/prompt-engineering/rag-explained) — komplementär zur Optimierung (RAG verbessert Information; Optimierung verbessert wie das Modell sie nutzt).',
+            '**System-Prompt** — Persistente Anweisung, die die Rolle, Beschränkungen und das Verhalten des Modells über alle Züge setzt. Siehe [System-Prompt vs. User-Prompt](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — erfordert separate Optimierungstests vom nutzerfachigen Prompt.',
             '**Spezifität** — Präzision in der Aufgabendefinition; von vagen Anweisungen („fasse zusammen") zu exakten Anforderungen („liste 3 Aufzählungspunkte, je ≤20 Wörter"). Der erste und oft höchsten Impact-Optimierungshebel zum Anpassen.',
           ],
         },
@@ -1027,11 +1027,11 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
             '**Jenseits der 6 Kern-Hebel wenden fortgeschrittene Prompt-Optimierungstechniken spezialisierte Muster an, um spezifische Fehlermodi zu beheben.** Diese Techniken kombinieren mehrere Hebel oder schichten Beschränkungen, um schwierigere Probleme zu lösen. Erfahre, welche Techniken du je nach deiner Optimierungsherausforderung anwendest:',
           ],
           items: [
-            '[Few-Shot vs. Zero-Shot](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — Addiere 1–3 Beispiel-Input-Output-Paare zum Prompt, wenn das Modell die Ausgabe nicht korrekt formatiert oder den gewünschten Stil vermisst. Few-Shot-Beispiele sind die direkteste Art, Format zu lehren.',
-            '[Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=de) — Füge „denke Schritt für Schritt vor der Antwort" ein, um Fehler beim mehrstufigen Denken zu beheben. Diese Technik verbessert oft die Genauigkeit bei Logikaufgaben um 10–15 %.',
-            '[Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) — Addiere explizite Verbote („Verwende keinen Jargon", „Erfinde keine Zahlen", „Wiederhole die Eingabe nicht"), um Umfang und Stil-Fehler zu beheben. Beschränkungen sind stärker als Anweisungen.',
-            '[Self-Consistency](/prompt-engineering/self-consistency-prompting?lang=de) — Generiere die Ausgabe des Prompts 3–5 Mal unabhängig, dann gebe die häufigste Antwort zurück. Dies reduziert Halluzinationen bei unwahrscheinlichen Fakten durch das Kombinieren von Modell-Läufen.',
-            '[Strukturierte Ausgabe](/prompt-engineering/structured-output-and-json-mode?lang=de) — Fordere JSON, Markdown-Tabellen oder andere maschinenlesbare Formate an, um Format-Compliance-Fehler zu beheben. Strukturierte Ausgabe ist schneller zu parsen und fehleranfälliger als Prosa.',
+            '[Few-Shot vs. Zero-Shot](/de/prompt-engineering/zero-shot-vs-few-shot) — Addiere 1–3 Beispiel-Input-Output-Paare zum Prompt, wenn das Modell die Ausgabe nicht korrekt formatiert oder den gewünschten Stil vermisst. Few-Shot-Beispiele sind die direkteste Art, Format zu lehren.',
+            '[Chain-of-Thought](/de/prompt-engineering/chain-of-thought-prompting) — Füge „denke Schritt für Schritt vor der Antwort" ein, um Fehler beim mehrstufigen Denken zu beheben. Diese Technik verbessert oft die Genauigkeit bei Logikaufgaben um 10–15 %.',
+            '[Constrained Prompting](/de/prompt-engineering/constrained-prompting) — Addiere explizite Verbote („Verwende keinen Jargon", „Erfinde keine Zahlen", „Wiederhole die Eingabe nicht"), um Umfang und Stil-Fehler zu beheben. Beschränkungen sind stärker als Anweisungen.',
+            '[Self-Consistency](/de/prompt-engineering/self-consistency-prompting) — Generiere die Ausgabe des Prompts 3–5 Mal unabhängig, dann gebe die häufigste Antwort zurück. Dies reduziert Halluzinationen bei unwahrscheinlichen Fakten durch das Kombinieren von Modell-Läufen.',
+            '[Strukturierte Ausgabe](/de/prompt-engineering/structured-output-and-json-mode) — Fordere JSON, Markdown-Tabellen oder andere maschinenlesbare Formate an, um Format-Compliance-Fehler zu beheben. Strukturierte Ausgabe ist schneller zu parsen und fehleranfälliger als Prosa.',
           ],
         },
 
@@ -1041,18 +1041,18 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
             '**Ein optimierter Prompt ist ein dauerhafter Vermögenswert.** Sobald du einen Prompt über 3 Modelle getestet hast, bestätigt hast, dass er auf 5–10 repräsentativen Eingaben funktioniert, und dokumentiert hast, was jeder Hebel tut — speichere ihn. Eine Prompt-Bibliothek ermöglicht es dir, optimierte Prompts über Projekte hinweg zu renutzen, sie mit deinem Team zu teilen und sie im Laufe der Zeit zu verbessern.',
             'Was mit jedem Prompt zu speichern ist: der letzte Prompt-Text, der Hebel der geändert wurde, der Fehlermodus den er behob, welche Modelle er getestet wurden, und die Bestätigung/Fehler-Ergebnisse auf deinen repräsentativen Eingaben. Diese Dokumentation trennt eine Prompt-Bibliothek von einem einfachen Ordner von Textdateien — und erfüllt die Anforderungen für Audit-Trail der EU AI Act.',
             '**PromptQuorum speichert jeden Prompt, den du ausführst, versionskontrolliert, zusammen mit seinen Antworten von GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro.** Anstatt Ausgaben in eine Tabellenkalkulation zu kopieren, werden deine Testergebnisse automatisch bewahrt. [Starte deine Prompt-Bibliothek auf PromptQuorum](https://www.promptquorum.com) — jeder Prompt, den du optimierst, wird gespeichert und neu abspielbar.',
-            'Siehe [Baue eine Prompt-Bibliothek, die Stunden spart](/prompt-engineering/build-a-prompt-library?lang=de) für einen vollständigen Leitfaden zur Strukturierung, Versionierung und Wartung einer Bibliothek.',
+            'Siehe [Baue eine Prompt-Bibliothek, die Stunden spart](/de/prompt-engineering/build-a-prompt-library) für einen vollständigen Leitfaden zur Strukturierung, Versionierung und Wartung einer Bibliothek.',
           ],
         },
 
         relatedReading: {
           title: 'Weiterführende Lektüre',
           items: [
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — die Grunddefinition und Kern-Bausteine des Prompt-Designs',
-            '[5 Bausteine, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — die strukturellen Elemente, die du optimierst',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — Schritt-für-Schritt-Denkens-Technik zur Genauigkeitsverbesserung',
-            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — wann Beispiele als Optimierungshebel hinzufügen',
-            '[Baue eine Prompt-Bibliothek, die Stunden spart](/prompt-engineering/build-a-prompt-library?lang=de) — Bewahren optimierter Prompts als Team-Vermögenswerte',
+            '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — die Grunddefinition und Kern-Bausteine des Prompt-Designs',
+            '[5 Bausteine, die jeder Prompt braucht](/de/prompt-engineering/5-building-blocks-every-prompt-needs) — die strukturellen Elemente, die du optimierst',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — Schritt-für-Schritt-Denkens-Technik zur Genauigkeitsverbesserung',
+            '[Zero-Shot vs Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) — wann Beispiele als Optimierungshebel hinzufügen',
+            '[Baue eine Prompt-Bibliothek, die Stunden spart](/de/prompt-engineering/build-a-prompt-library) — Bewahren optimierter Prompts als Team-Vermögenswerte',
           ],
         },
 
@@ -1193,7 +1193,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
-        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'fr',
       },
       itemListSchema: {
@@ -1325,7 +1325,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           content: [
             'Un prompt vague produit une sortie vague. Un prompt mal spécifié produit une réponse hors cible. Un prompt qui fonctionne lundi peut échouer vendredi si l\'entrée change légèrement. L\'optimisation élimine ces variations par un diagnostic systématique et une révision ciblée.',
             'Exemple réel avant/après : Un prompt non optimisé lit « Résumer cet article. » Exécuté 3 fois sur le même article, il produit des sorties radicalement différentes : une de 47 mots, une autre de 120 mots, la troisième rate complètement le point principal. Après optimisation — ajout du format de sortie (« 3 puces, ≤20 mots chacune »), un rôle (« analyste »), et spécificité (« Lister les 3 éléments clés, pas la méthodologie ») — le même prompt produit des résultats cohérents et conformes aux spécifications les 3 fois, sur GPT-4o, Claude et Gemini.',
-            '**Pour les organisations de l\'UE, l\'optimisation systématique des prompts est une exigence de conformité, pas seulement une meilleure pratique.** La loi sur l\'IA de l\'UE (2024) exige que les systèmes d\'IA à haut risque — ceux utilisés dans l\'embauche, l\'évaluation de crédit, la santé ou l\'application de la loi — documentent comment les décisions d\'IA sont prises et démontrent des sorties cohérentes et testables. Une bibliothèque de prompts contrôlée en version avec un historique d\'optimisation documenté satisfait cette exigence de piste d\'audit. Au Japon, les lignes directrices sur la gouvernance de l\'IA du METI exigent également la traçabilité de la documentation des décisions d\'IA pour les applications réglementées. L\'optimisation de prompt est la base de cette traçabilité. Voir [Géopolitique et IA](/prompt-engineering/geopolitics-and-ai?lang=fr) pour le contexte complet de conformité réglementaire.',
+            '**Pour les organisations de l\'UE, l\'optimisation systématique des prompts est une exigence de conformité, pas seulement une meilleure pratique.** La loi sur l\'IA de l\'UE (2024) exige que les systèmes d\'IA à haut risque — ceux utilisés dans l\'embauche, l\'évaluation de crédit, la santé ou l\'application de la loi — documentent comment les décisions d\'IA sont prises et démontrent des sorties cohérentes et testables. Une bibliothèque de prompts contrôlée en version avec un historique d\'optimisation documenté satisfait cette exigence de piste d\'audit. Au Japon, les lignes directrices sur la gouvernance de l\'IA du METI exigent également la traçabilité de la documentation des décisions d\'IA pour les applications réglementées. L\'optimisation de prompt est la base de cette traçabilité. Voir [Géopolitique et IA](/fr/prompt-engineering/geopolitics-and-ai) pour le contexte complet de conformité réglementaire.',
           ],
         },
 
@@ -1413,15 +1413,15 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           title: 'Que signifient ces termes d\'optimisation de prompt ?',
           content: [],
           items: [
-            '**Optimisation de prompt** — Le processus itératif de révision d\'un prompt pour améliorer la qualité de la sortie en diagnostiquant les modes d\'échec et en modifiant une variable (spécificité, contexte, exemples, contraintes, format ou rôle) à la fois. Voir [5 éléments fondamentaux de tout prompt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) pour les éléments structurels que vous optimisez.',
-            '**Prompting few-shot** — Inclure 1–3 exemples d\'entrée/sortie dans le prompt pour enseigner au modèle le format ou le modèle désiré. Voir [Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) pour savoir quand ajouter des exemples comme levier d\'optimisation principal.',
-            '**Chain-of-Thought (CoT)** — Demander au modèle de raisonner étape par étape (« réfléchis avant de répondre ») pour améliorer la précision sur les problèmes logiques multi-étapes de 10–15 %. Voir [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) pour les techniques détaillées.',
-            '**Contrainte** — Une interdiction explicite ou une limite (par ex., « ne pas utiliser de jargon », « maximum 150 mots », « citer uniquement les sources ») qui limite la portée de la sortie et prévient les modes d\'échec courants. Voir [Constrained Prompting](/prompt-engineering/constrained-prompting?lang=fr) pour les modèles de contrainte avancés.',
-            '**Token** — La plus petite unité de texte que le modèle traite ; environ 4 caractères ou 1 mot en anglais. La longueur des prompts et le budget de sortie sont mesurés en tokens. Voir [Tokens, Coûts & Limites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr) pour le calcul des coûts.',
-            '**Hallucination** — Sortie confiante mais factuellement incorrecte ; se produit lorsque le modèle invente des faits, cite des études inexistantes ou répète des affirmations non fondées. Voir [Hallucinations IA : Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — atténuée en ajoutant du contexte d\'ancrage, des exemples et des contraintes.',
+            '**Optimisation de prompt** — Le processus itératif de révision d\'un prompt pour améliorer la qualité de la sortie en diagnostiquant les modes d\'échec et en modifiant une variable (spécificité, contexte, exemples, contraintes, format ou rôle) à la fois. Voir [5 éléments fondamentaux de tout prompt](/fr/prompt-engineering/5-building-blocks-every-prompt-needs) pour les éléments structurels que vous optimisez.',
+            '**Prompting few-shot** — Inclure 1–3 exemples d\'entrée/sortie dans le prompt pour enseigner au modèle le format ou le modèle désiré. Voir [Zero-Shot vs Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot) pour savoir quand ajouter des exemples comme levier d\'optimisation principal.',
+            '**Chain-of-Thought (CoT)** — Demander au modèle de raisonner étape par étape (« réfléchis avant de répondre ») pour améliorer la précision sur les problèmes logiques multi-étapes de 10–15 %. Voir [Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) pour les techniques détaillées.',
+            '**Contrainte** — Une interdiction explicite ou une limite (par ex., « ne pas utiliser de jargon », « maximum 150 mots », « citer uniquement les sources ») qui limite la portée de la sortie et prévient les modes d\'échec courants. Voir [Constrained Prompting](/fr/prompt-engineering/constrained-prompting) pour les modèles de contrainte avancés.',
+            '**Token** — La plus petite unité de texte que le modèle traite ; environ 4 caractères ou 1 mot en anglais. La longueur des prompts et le budget de sortie sont mesurés en tokens. Voir [Tokens, Coûts & Limites](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) pour le calcul des coûts.',
+            '**Hallucination** — Sortie confiante mais factuellement incorrecte ; se produit lorsque le modèle invente des faits, cite des études inexistantes ou répète des affirmations non fondées. Voir [Hallucinations IA : Pourquoi l\'IA invente des choses](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — atténuée en ajoutant du contexte d\'ancrage, des exemples et des contraintes.',
             '**Fine-tuning** — Réentraîner les poids du modèle sur les données étiquetées spécifiques au domaine ; utilisé lorsque l\'optimisation de prompt ne peut pas atteindre la qualité requise. Toujours épuiser l\'optimisation avant le fine-tuning — c\'est plus lent et plus coûteux.',
-            '**RAG (Retrieval-Augmented Generation)** — Injecter les documents récupérés dans le contexte du prompt avant de demander au modèle de répondre. Voir [RAG expliqué](/prompt-engineering/rag-explained?lang=fr) — complémentaire à l\'optimisation (RAG améliore l\'information ; l\'optimisation améliore comment le modèle l\'utilise).',
-            '**System prompt** — Instruction persistante qui définit le rôle, les contraintes et le comportement du modèle sur tous les tours. Voir [System Prompt vs User Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr) — nécessite des tests d\'optimisation séparés du prompt côté utilisateur.',
+            '**RAG (Retrieval-Augmented Generation)** — Injecter les documents récupérés dans le contexte du prompt avant de demander au modèle de répondre. Voir [RAG expliqué](/fr/prompt-engineering/rag-explained) — complémentaire à l\'optimisation (RAG améliore l\'information ; l\'optimisation améliore comment le modèle l\'utilise).',
+            '**System prompt** — Instruction persistante qui définit le rôle, les contraintes et le comportement du modèle sur tous les tours. Voir [System Prompt vs User Prompt](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — nécessite des tests d\'optimisation séparés du prompt côté utilisateur.',
             '**Spécificité** — Précision dans la définition de la tâche ; passer d\'instructions vagues (« résumer ») à des exigences exactes (« lister 3 puces, ≤20 mots chacune »). Le premier et souvent le levier d\'optimisation le plus important à ajuster.',
           ],
         },
@@ -1478,11 +1478,11 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
             '**Au-delà des 6 leviers fondamentaux, les techniques avancées d\'optimisation de prompt appliquent des modèles spécialisés pour corriger les modes d\'échec spécifiques.** Ces techniques combinent plusieurs leviers ou superposent des contraintes pour résoudre des problèmes plus difficiles. Apprenez quelles techniques appliquer en fonction de votre défi d\'optimisation :',
           ],
           items: [
-            '[Few-shot vs Zero-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) : Ajouter 1–3 paires d\'entrée/sortie d\'exemple au prompt lorsque le modèle ne formate pas correctement la sortie ou manque le style que vous souhaitez. Les exemples few-shot sont le moyen le plus direct d\'enseigner le format.',
-            '[Chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=fr) : Insérer « réfléchis étape par étape avant de répondre » pour corriger les défaillances du raisonnement multi-étapes. Cette technique améliore souvent la précision sur les problèmes logiques de 10–15 %.',
-            '[Constrained prompting](/prompt-engineering/constrained-prompting?lang=fr) : Ajouter des interdictions explicites (« Ne pas utiliser de jargon », « Ne pas inventer des chiffres », « Ne pas répéter l\'entrée ») pour corriger les défaillances de portée et de style. Les contraintes sont plus fortes que les instructions.',
-            '[Self-consistency](/prompt-engineering/self-consistency-prompting?lang=fr) : Générer la sortie du prompt 3–5 fois indépendamment, puis retourner la réponse la plus courante. Cela réduit les hallucinations sur les faits de faible probabilité en combinant les exécutions du modèle.',
-            '[Structured output](/prompt-engineering/structured-output-and-json-mode?lang=fr) : Demander JSON, des tableaux markdown ou d\'autres formats lisibles par machine pour corriger la conformité du format. La sortie structurée est plus rapide à analyser et moins sujette aux erreurs que la prose.',
+            '[Few-shot vs Zero-shot](/fr/prompt-engineering/zero-shot-vs-few-shot) : Ajouter 1–3 paires d\'entrée/sortie d\'exemple au prompt lorsque le modèle ne formate pas correctement la sortie ou manque le style que vous souhaitez. Les exemples few-shot sont le moyen le plus direct d\'enseigner le format.',
+            '[Chain-of-thought](/fr/prompt-engineering/chain-of-thought-prompting) : Insérer « réfléchis étape par étape avant de répondre » pour corriger les défaillances du raisonnement multi-étapes. Cette technique améliore souvent la précision sur les problèmes logiques de 10–15 %.',
+            '[Constrained prompting](/fr/prompt-engineering/constrained-prompting) : Ajouter des interdictions explicites (« Ne pas utiliser de jargon », « Ne pas inventer des chiffres », « Ne pas répéter l\'entrée ») pour corriger les défaillances de portée et de style. Les contraintes sont plus fortes que les instructions.',
+            '[Self-consistency](/fr/prompt-engineering/self-consistency-prompting) : Générer la sortie du prompt 3–5 fois indépendamment, puis retourner la réponse la plus courante. Cela réduit les hallucinations sur les faits de faible probabilité en combinant les exécutions du modèle.',
+            '[Structured output](/fr/prompt-engineering/structured-output-and-json-mode) : Demander JSON, des tableaux markdown ou d\'autres formats lisibles par machine pour corriger la conformité du format. La sortie structurée est plus rapide à analyser et moins sujette aux erreurs que la prose.',
           ],
         },
 
@@ -1492,18 +1492,18 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
             '**Un prompt optimisé est un atout durable.** Une fois que vous avez testé un prompt sur 3 modèles, confirmé qu\'il fonctionne sur 5–10 entrées représentatives et documenté ce que chaque levier fait — sauvegardez-le. Une bibliothèque de prompts vous permet de réutiliser les prompts optimisés dans les projets, de les partager avec votre équipe et de les améliorer au fil du temps.',
             'Ce qu\'il faut sauvegarder avec chaque prompt : le texte du prompt final, le levier qui a été modifié, le mode d\'échec qu\'il a corrigé, les modèles sur lesquels il a été testé et les résultats de réussite/échec sur vos entrées représentatives. Cette documentation est ce qui sépare une bibliothèque de prompts d\'un simple dossier de fichiers texte — et ce qui satisfait les exigences de piste d\'audit de la loi sur l\'IA de l\'UE.',
             '**PromptQuorum stocke chaque prompt que vous exécutez, contrôlé en version, aux côtés de ses réponses de GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.** Au lieu de copier les sorties dans une feuille de calcul, vos résultats de test sont automatiquement préservés. [Commencez votre bibliothèque de prompts sur PromptQuorum](https://www.promptquorum.com) — chaque prompt que vous optimisez est sauvegardé et rejouable.',
-            'Voir [Construire une bibliothèque de prompts qui vous fait gagner des heures](/prompt-engineering/build-a-prompt-library?lang=fr) pour un guide complet sur la structuration, la versioning et la maintenance d\'une bibliothèque.',
+            'Voir [Construire une bibliothèque de prompts qui vous fait gagner des heures](/fr/prompt-engineering/build-a-prompt-library) pour un guide complet sur la structuration, la versioning et la maintenance d\'une bibliothèque.',
           ],
         },
 
         relatedReading: {
           title: 'Lectures connexes',
           items: [
-            '[Qu\'est-ce que le prompt engineering ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — la définition pilier et les éléments constitutifs fondamentaux de la conception de prompts',
-            '[Les 5 éléments fondamentaux de tout prompt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) — les éléments structurels que vous optimisez',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — technique de raisonnement étape par étape pour améliorer la précision',
-            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — quand ajouter des exemples comme levier d\'optimisation',
-            '[Construire une bibliothèque de prompts qui vous fait gagner des heures](/prompt-engineering/build-a-prompt-library?lang=fr) — persister les prompts optimisés comme atouts d\'équipe',
+            '[Qu\'est-ce que le prompt engineering ?](/fr/prompt-engineering/what-is-prompt-engineering) — la définition pilier et les éléments constitutifs fondamentaux de la conception de prompts',
+            '[Les 5 éléments fondamentaux de tout prompt](/fr/prompt-engineering/5-building-blocks-every-prompt-needs) — les éléments structurels que vous optimisez',
+            '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — technique de raisonnement étape par étape pour améliorer la précision',
+            '[Zero-Shot vs Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot) — quand ajouter des exemples comme levier d\'optimisation',
+            '[Construire une bibliothèque de prompts qui vous fait gagner des heures](/fr/prompt-engineering/build-a-prompt-library) — persister les prompts optimisés comme atouts d\'équipe',
           ],
         },
 
@@ -1643,7 +1643,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
-        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'ja',
       },
       itemListSchema: {
@@ -1775,7 +1775,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           content: [
             '曖昧なプロンプトは曖昧な出力を生成します。不十分に指定されたプロンプトはオフターゲット応答を生成します。月曜日に機能するプロンプトは、入力がわずかに変わるとの金曜日に失敗する可能性があります。最適化はこれらの変動を体系的な診断とターゲット改定を通じて排除します。',
             '実際の前後：最適化されていないプロンプトは「この記事を要約する」と言及しています。同じ記事で3回実行し、根本的に異なる出力を生成します：1つは47ワード、別は120ワード、3番目は要点を完全に見逃します。最適化後—出力フォーマット（「3つのポイント、≤20語各」）、ロール（「アナリスト」）、および具体性（「方法論ではなく3つの重要な発見をリストアップ」）を追加—同じプロンプトがGPT-4o、Claude、Gemini全体の3回すべてで一貫性のある仕様準拠の結果を生成します。',
-            '**EU組織の場合、体系的なプロンプト最適化はベストプラクティスではなく、コンプライアンス要件です。** EU AI Act（2024）は、採用、信用査定、医療、または法執行行為で使用されるハイリスク AI システムが、AI決定をどのように下すか文書化し、一貫性のあるテスト可能な出力を実証することを要求します。改定履歴が文書化されたバージョン管理プロンプト・ライブラリはこの監査追跡要件を満たします。日本では、METI AI ガバナンス ガイダンス同様に規制されたアプリケーションのAI決定トレーサビリティ文書を要求します。プロンプト最適化はそのトレーサビリティの基礎です。全規制コンプライアンスコンテキストについては[地政学とAI](/prompt-engineering/geopolitics-and-ai?lang=ja)を参照してください。',
+            '**EU組織の場合、体系的なプロンプト最適化はベストプラクティスではなく、コンプライアンス要件です。** EU AI Act（2024）は、採用、信用査定、医療、または法執行行為で使用されるハイリスク AI システムが、AI決定をどのように下すか文書化し、一貫性のあるテスト可能な出力を実証することを要求します。改定履歴が文書化されたバージョン管理プロンプト・ライブラリはこの監査追跡要件を満たします。日本では、METI AI ガバナンス ガイダンス同様に規制されたアプリケーションのAI決定トレーサビリティ文書を要求します。プロンプト最適化はそのトレーサビリティの基礎です。全規制コンプライアンスコンテキストについては[地政学とAI](/ja/prompt-engineering/geopolitics-and-ai)を参照してください。',
           ],
         },
 
@@ -1863,15 +1863,15 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           title: 'これらのプロンプト最適化用語は何ですか？',
           content: [],
           items: [
-            '**プロンプト最適化** — 失敗モードを診断し、（具体性、コンテキスト、例、制約、フォーマット、またはロール）1つずつ1つの変数を変更することで出力品質を改善するためにプロンプトを改定する反復的なプロセス。あなたが最適化している構造要素については[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja)を参照してください。',
-            '**フューショット・プロンプティング** — モデルに目的のフォーマットまたはパターンを教えるためにプロンプトに1～3個の入出力例を含める。[ゼロショット対フューショット・プロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja)を参照して、主な最適化・レバーとして例を追加するときを確認してください。',
-            '**チェーン・オブ・ソート（CoT）** — モデルにステップバイステップで推論を求める（「答える前に考える」）マルチステップ論理問題の精度を10～15％向上させる。詳細なテクニックについては[チェーン・オブ・ソート・プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja)を参照してください。',
-            '**制約** — 明示的な禁止または制限（例、「専門用語を使わない」、「最大150ワード」、「ソースのみを引用」）これは出力スコープを絞り込み、一般的な障害モードを防止します。[制約されたプロンプティング](/prompt-engineering/constrained-prompting?lang=ja)を参照して、高度な制約パターンを確認してください。',
-            '**トークン** — モデルが処理する最小のテキストユニット；英語では約4文字または1単語。プロンプト長と出力予算はトークンで測定されます。コスト計算については[トークン、コスト、限度](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja)を参照してください。',
-            '**幻覚** — 自信を持っているが事実的に不正確な出力；モデルが事実を発明し、存在しない研究を引用するか、根拠のない主張を繰り返すときに発生します。[AIの幻覚：なぜAIが物事を作成するのか](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja)を参照—係留コンテキスト、例、および制約を追加することで軽減。',
+            '**プロンプト最適化** — 失敗モードを診断し、（具体性、コンテキスト、例、制約、フォーマット、またはロール）1つずつ1つの変数を変更することで出力品質を改善するためにプロンプトを改定する反復的なプロセス。あなたが最適化している構造要素については[すべてのプロンプトが必要とする5つの構成要素](/ja/prompt-engineering/5-building-blocks-every-prompt-needs)を参照してください。',
+            '**フューショット・プロンプティング** — モデルに目的のフォーマットまたはパターンを教えるためにプロンプトに1～3個の入出力例を含める。[ゼロショット対フューショット・プロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot)を参照して、主な最適化・レバーとして例を追加するときを確認してください。',
+            '**チェーン・オブ・ソート（CoT）** — モデルにステップバイステップで推論を求める（「答える前に考える」）マルチステップ論理問題の精度を10～15％向上させる。詳細なテクニックについては[チェーン・オブ・ソート・プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting)を参照してください。',
+            '**制約** — 明示的な禁止または制限（例、「専門用語を使わない」、「最大150ワード」、「ソースのみを引用」）これは出力スコープを絞り込み、一般的な障害モードを防止します。[制約されたプロンプティング](/ja/prompt-engineering/constrained-prompting)を参照して、高度な制約パターンを確認してください。',
+            '**トークン** — モデルが処理する最小のテキストユニット；英語では約4文字または1単語。プロンプト長と出力予算はトークンで測定されます。コスト計算については[トークン、コスト、限度](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)を参照してください。',
+            '**幻覚** — 自信を持っているが事実的に不正確な出力；モデルが事実を発明し、存在しない研究を引用するか、根拠のない主張を繰り返すときに発生します。[AIの幻覚：なぜAIが物事を作成するのか](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)を参照—係留コンテキスト、例、および制約を追加することで軽減。',
             '**ファインチューニング** — ドメイン固有のラベル付きデータでモデルウェイトを再トレーニング；プロンプト最適化が必要な品質に達することができないときに使用されます。ファインチューニングの前に常に最適化を最大化—それはより遅く、より高価です。',
-            '**RAG（検索増幅生成）** — モデルに答えるように求める前にプロンプト・コンテキストに検索されたドキュメントを注入します。[RAG説明](/prompt-engineering/rag-explained?lang=ja)を参照—最適化を補完（RAGは情報を改善；最適化はモデルがそれをどのように使用するかを改善）。',
-            '**システム・プロンプト** — モデルのロール、制約、およびすべてのターンに対する動作を設定する永続的な指示。[システム・プロンプト対ユーザー・プロンプト](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja)を参照—ユーザーに直面したプロンプトから別の最適化テストが必要。',
+            '**RAG（検索増幅生成）** — モデルに答えるように求める前にプロンプト・コンテキストに検索されたドキュメントを注入します。[RAG説明](/ja/prompt-engineering/rag-explained)を参照—最適化を補完（RAGは情報を改善；最適化はモデルがそれをどのように使用するかを改善）。',
+            '**システム・プロンプト** — モデルのロール、制約、およびすべてのターンに対する動作を設定する永続的な指示。[システム・プロンプト対ユーザー・プロンプト](/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)を参照—ユーザーに直面したプロンプトから別の最適化テストが必要。',
             '**具体性** — タスク定義の精度；曖昧な指示（「要約する」）から正確な要件（「3つのポイント、≤20ワード各」）に移動。最初の、そしてしばしば最高影響最適化・レバーを調整すること。',
           ],
         },
@@ -1928,11 +1928,11 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
             '**6つのコア・レバーを超えて、高度なプロンプト最適化テクニックは特定の障害モードを修正するために特殊なパターンを適用します。** これらのテクニックは複数のレバーを結合するか、より難しい問題を解決するための層制約。あなたの最適化チャレンジに基づいて適用するテクニックを学びます：',
           ],
           items: [
-            '[フューショット対ゼロショット](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) : モデルが出力を正しくフォーマットしていないか、または必要なスタイルが不足している場合、プロンプトに1～3個の入出力ペアを追加します。フューショット例はフォーマットを教える最も直接的な方法です。',
-            '[チェーン・オブ・ソート](/prompt-engineering/chain-of-thought-prompting?lang=ja) : マルチステップ推論障害を修正するために「答える前にステップバイステップで考える」を挿入します。このテクニックはしばしば論理問題の精度を10～15％向上させます。',
-            '[制約されたプロンプティング](/prompt-engineering/constrained-prompting?lang=ja) : 範囲とスタイル障害を修正するために明示的な禁止（「専門用語を使わない」、「数字を発明しない」、「入力を繰り返さない」）を追加します。制約は指示より強い。',
-            '[自己一貫性](/prompt-engineering/self-consistency-prompting?lang=ja) : プロンプトの出力を3～5回独立して生成し、最も一般的な回答を返します。これはモデルの実行を組み合わせることで低確率のファクトでの幻覚を減らします。',
-            '[構造化出力](/prompt-engineering/structured-output-and-json-mode?lang=ja) : JSON、マークダウン表、またはその他のマシン読み取り可能な形式を要求してフォーマット準拠を修正します。構造化出力は散文より解析が速く、エラーが少ない。',
+            '[フューショット対ゼロショット](/ja/prompt-engineering/zero-shot-vs-few-shot) : モデルが出力を正しくフォーマットしていないか、または必要なスタイルが不足している場合、プロンプトに1～3個の入出力ペアを追加します。フューショット例はフォーマットを教える最も直接的な方法です。',
+            '[チェーン・オブ・ソート](/ja/prompt-engineering/chain-of-thought-prompting) : マルチステップ推論障害を修正するために「答える前にステップバイステップで考える」を挿入します。このテクニックはしばしば論理問題の精度を10～15％向上させます。',
+            '[制約されたプロンプティング](/ja/prompt-engineering/constrained-prompting) : 範囲とスタイル障害を修正するために明示的な禁止（「専門用語を使わない」、「数字を発明しない」、「入力を繰り返さない」）を追加します。制約は指示より強い。',
+            '[自己一貫性](/ja/prompt-engineering/self-consistency-prompting) : プロンプトの出力を3～5回独立して生成し、最も一般的な回答を返します。これはモデルの実行を組み合わせることで低確率のファクトでの幻覚を減らします。',
+            '[構造化出力](/ja/prompt-engineering/structured-output-and-json-mode) : JSON、マークダウン表、またはその他のマシン読み取り可能な形式を要求してフォーマット準拠を修正します。構造化出力は散文より解析が速く、エラーが少ない。',
           ],
         },
 
@@ -1942,18 +1942,18 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
             '**最適化されたプロンプトは耐久性のあるアセットです。** 3モデルでプロンプトをテストし、5～10個の代表的な入力で動作を確認し、各レバーが何をするかを文書化したら—保存します。プロンプト・ライブラリを使用すると、プロジェクト全体で最適化されたプロンプトを再利用し、チームと共有し、時間をかけて改善できます。',
             '各プロンプトで保存するもの：最終プロンプトテキスト、変更されたレバー、修正した障害モード、テストしたモデル、および代表的な入力での合格/不合格の結果。このドキュメント化は、プロンプト・ライブラリを単純なテキストファイルフォルダから分離するもの—およびEU AI Act監査追跡要件を満たします。',
             '**PromptQuorumは実行する各プロンプトを保存します、バージョン管理、GPT-4o、Claude 4.6 Sonnet、およびGemini 2.5 Proからの応答と一緒に。** スプレッドシートに出力をコピーする代わりに、テスト結果は自動的に保存されます。[PromptQuorumでプロンプト・ライブラリを開始](https://www.promptquorum.com)—最適化するすべてのプロンプトは保存され再生可能です。',
-            '完全なガイドについては、[数時間を節約するプロンプト・ライブラリを構築](/prompt-engineering/build-a-prompt-library?lang=ja)で、ライブラリの構造化、バージョン化、保守を参照してください。',
+            '完全なガイドについては、[数時間を節約するプロンプト・ライブラリを構築](/ja/prompt-engineering/build-a-prompt-library)で、ライブラリの構造化、バージョン化、保守を参照してください。',
           ],
         },
 
         relatedReading: {
           title: '関連読書',
           items: [
-            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 柱の定義とプロンプト設計の核となる構成要素',
-            '[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja) — あなたが最適化している構造要素',
-            '[チェーン・オブ・ソート・プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — 精度向上のためのステップバイステップ推論テクニック',
-            '[ゼロショット対フューショット・プロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) — 最適化・レバーとして例を追加するときを確認',
-            '[数時間を節約するプロンプト・ライブラリを構築](/prompt-engineering/build-a-prompt-library?lang=ja) — チーム・アセットとして最適化されたプロンプトを持続',
+            '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — 柱の定義とプロンプト設計の核となる構成要素',
+            '[すべてのプロンプトが必要とする5つの構成要素](/ja/prompt-engineering/5-building-blocks-every-prompt-needs) — あなたが最適化している構造要素',
+            '[チェーン・オブ・ソート・プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — 精度向上のためのステップバイステップ推論テクニック',
+            '[ゼロショット対フューショット・プロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — 最適化・レバーとして例を追加するときを確認',
+            '[数時間を節約するプロンプト・ライブラリを構築](/ja/prompt-engineering/build-a-prompt-library) — チーム・アセットとして最適化されたプロンプトを持続',
           ],
         },
 
@@ -2033,7 +2033,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
-        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'zh',
       },
       itemListSchema: {
@@ -2250,27 +2250,27 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           title: '提示词优化技巧：高级方法',
           content: '当基础6个杠杆不足时，应用这些技巧。',
           items: [
-            '[少样本vs零样本](/prompt-engineering/zero-shot-vs-few-shot?lang=zh) — 添加1–3个示例以修复格式不一致',
-            '[思维链](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 插入"逐步思考"以修复多步推理失败',
-            '[受约束的提示](/prompt-engineering/constrained-prompting?lang=zh) — 添加明确的禁止以修复范围和基调失败',
-            '[自一致性](/prompt-engineering/self-consistency-prompting?lang=zh) — 运行3–5次并返回最常见的答案以修复幻觉',
-            '[结构化输出](/prompt-engineering/structured-output-and-json-mode?lang=zh) — 请求JSON或markdown表格以修复格式合规性',
+            '[少样本vs零样本](/zh/prompt-engineering/zero-shot-vs-few-shot) — 添加1–3个示例以修复格式不一致',
+            '[思维链](/zh/prompt-engineering/chain-of-thought-prompting) — 插入"逐步思考"以修复多步推理失败',
+            '[受约束的提示](/zh/prompt-engineering/constrained-prompting) — 添加明确的禁止以修复范围和基调失败',
+            '[自一致性](/zh/prompt-engineering/self-consistency-prompting) — 运行3–5次并返回最常见的答案以修复幻觉',
+            '[结构化输出](/zh/prompt-engineering/structured-output-and-json-mode) — 请求JSON或markdown表格以修复格式合规性',
           ],
         },
 
         promptLibrary: {
           title: '将优化的提示词保存到库',
-          content: '优化的提示词是资产。提示词库存储它们及版本注释。查看[构建节省小时的提示词库](/prompt-engineering/build-a-prompt-library?lang=zh)以开始。',
+          content: '优化的提示词是资产。提示词库存储它们及版本注释。查看[构建节省小时的提示词库](/zh/prompt-engineering/build-a-prompt-library)以开始。',
         },
 
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[什么是提示词工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 提示词优化的上游学科',
-            '[每个提示词需要的5个构建块](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh) — 您正在优化的结构元素',
-            '[思维链提示](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 用于准确性改进的逐步推理',
-            '[零样本vs少样本提示](/prompt-engineering/zero-shot-vs-few-shot?lang=zh) — 何时添加示例作为优化杠杆',
-            '[构建节省小时的提示词库](/prompt-engineering/build-a-prompt-library?lang=zh) — 持久化优化的提示词作为团队资产',
+            '[什么是提示词工程？](/zh/prompt-engineering/what-is-prompt-engineering) — 提示词优化的上游学科',
+            '[每个提示词需要的5个构建块](/zh/prompt-engineering/5-building-blocks-every-prompt-needs) — 您正在优化的结构元素',
+            '[思维链提示](/zh/prompt-engineering/chain-of-thought-prompting) — 用于准确性改进的逐步推理',
+            '[零样本vs少样本提示](/zh/prompt-engineering/zero-shot-vs-few-shot) — 何时添加示例作为优化杠杆',
+            '[构建节省小时的提示词库](/zh/prompt-engineering/build-a-prompt-library) — 持久化优化的提示词作为团队资产',
           ],
         },
 
@@ -2656,7 +2656,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/what-is-prompt-engineering',
         inLanguage: 'de',
         headline: 'Was ist Prompt Engineering?',
         description: 'Prompt Engineering: Texteinträge so gestalten, dass zuverlässige, genaue Ausgaben von LLMs wie GPT-4o, Claude und Gemini erzeugt werden.',
@@ -2909,7 +2909,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/what-is-prompt-engineering',
         inLanguage: 'fr',
         headline: 'Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum',
         description: 'Prompt engineering : concevoir des entrées textuelles pour obtenir des sorties fiables et précises des LLM. Apprenez les techniques essentielles, les frameworks et pourquoi cela compte.',
@@ -3163,7 +3163,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/what-is-prompt-engineering',
         inLanguage: 'ja',
         headline: 'プロンプトエンジニアリングとは？',
         description: 'プロンプトエンジニアリング：テキスト入力を設計・構造化して、大規模言語モデルから正確で有用かつ再現性のある出力を得る実践。',
@@ -3388,7 +3388,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/what-is-prompt-engineering',
         inLanguage: 'zh',
         headline: '什么是提示工程？ — PromptQuorum 指南',
         description: '提示工程：设计文本输入以从 GPT-4o、Claude 和 Gemini 等大语言模型获得可靠、准确的输出。学习基本技术、框架和为什么这对人工智能输出质量很重要。',
@@ -3859,7 +3859,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: 'Die Geschichte des Prompt Engineerings von GPT-3 und Few-Shot-Prompting im Jahr 2020 bis zum Context Design im Jahr 2026. Wichtige Meilensteine, Papiere und Wendepunkte.',
         datePublished: '2026-03-01',
         dateModified: '2026-03-01',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'de',
         keywords: ['Prompt Engineering Geschichte', 'GPT-3 Few-Shot Learning', 'Chain-of-Thought Prompting', 'ChatGPT', 'Context Engineering', 'Prompt Engineering Timeline', 'InstructGPT', 'RLHF'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -4059,7 +4059,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: 'L\'histoire du prompt engineering de GPT-3 et du prompting few-shot en 2020 à la conception de contexte en 2026. Jalons clés, articles et tournants.',
         datePublished: '2026-03-01',
         dateModified: '2026-03-01',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'fr',
         keywords: ['histoire du prompt engineering', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'chronologie prompt engineering', 'InstructGPT', 'RLHF'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -4259,7 +4259,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: '2020年のGPT-3とフューショットプロンプティングから2026年のコンテキストデザインまで、プロンプトエンジニアリングの歴史。主要なマイルストーン、論文、ターニングポイント。',
         datePublished: '2026-03-01',
         dateModified: '2026-03-01',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'ja',
         keywords: ['プロンプトエンジニアリング歴史', 'GPT-3 フューショット学習', 'Chain-of-Thought プロンプティング', 'ChatGPT', 'コンテキストエンジニアリング', 'プロンプトエンジニアリング タイムライン', 'InstructGPT', 'RLHF'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -4485,7 +4485,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: '提示词工程的历史：从2020年的GPT-3和少样本提示到2026年的上下文设计。关键里程碑、论文和转折点。',
         datePublished: '2026-03-01',
         dateModified: '2026-03-01',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'zh',
         keywords: ['提示工程历史', 'GPT-3 少样本学习', 'Chain-of-Thought 提示', 'ChatGPT', '上下文工程', '提示工程时间线', 'InstructGPT', 'RLHF'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -4934,7 +4934,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: 'Die 5 Bausteine jedes Prompts: Rolle & Kontext, Aufgabe, Eingabe & Beispiele, Einschränkungen und Ausgabeformat. Mit diesen fünf Komponenten wird jeder KI-Prompt zuverlässig und wiederholbar.',
         datePublished: '2026-03-01',
         dateModified: '2026-03-01',
-        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'de',
         keywords: ['Prompt-Struktur', 'Prompt-Bausteine', 'Rolle und Kontext', 'Ausgabeformat', 'Prompt-Einschränkungen', 'Few-Shot-Beispiele', 'Prompt Engineering', 'GPT-4o', 'Claude', 'Gemini'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -5156,7 +5156,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: 'Les 5 éléments fondamentaux de tout prompt : Rôle & Contexte, Tâche, Entrée & Exemples, Contraintes et Format de sortie. Avec ces cinq composants, tout prompt IA devient fiable et reproductible.',
         datePublished: '2026-03-01',
         dateModified: '2026-03-01',
-        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'fr',
         keywords: ['structure de prompt', 'éléments de prompt', 'rôle et contexte', 'format de sortie', 'contraintes de prompt', 'exemples few-shot', 'prompt engineering', 'GPT-4o', 'Claude', 'Gemini'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -5378,7 +5378,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: 'プロンプトの5つの構成要素：役割とコンテキスト、タスク、入力と例、制約、出力形式。これらの5つのコンポーネントにより、AIプロンプトは信頼性が高く再現可能になります。',
         datePublished: '2026-03-01',
         dateModified: '2026-03-01',
-        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'ja',
         keywords: ['プロンプト構造', 'プロンプト要素', 'ロールとコンテキスト', '出力形式', 'プロンプト制約', 'フューショット例', 'プロンプトエンジニアリング', 'GPT-4o', 'Claude', 'Gemini'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -5618,7 +5618,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: '每个提示词必需的5个构建模块：角色与上下文、任务、输入与示例、约束条件和输出格式。这5个组成部分确保了AI提示词的可靠性和可重复性。',
         datePublished: '2026-03-01',
         dateModified: '2026-03-01',
-        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'zh',
         keywords: ['提示词结构', '提示词构件', '角色与背景', '输出格式', '提示词约束', '少样本示例', '提示词工程', 'GPT-4o', 'Claude', 'Gemini'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -6163,7 +6163,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: 'Warum Sprachmodelle halluzinieren, wie man Halluzinationen erkennt und Techniken zu ihrer Verringerung. Erfahren Sie mehr über Prompt-Design-Strategien, systemweite Ansätze und Multi-Modell-Konsens-Scoring.',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'de',
         keywords: ['KI-Halluzinationen', 'LLM-Halluzinationen', 'Halluzinationserkennung', 'Prompt Engineering', 'Multi-Modell-Konsens', 'RAG', 'Retrieval Augmented Generation'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -6428,7 +6428,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: 'Pourquoi les modèles de langage hallucinent, comment détecter les hallucinations et techniques pour les réduire. Apprenez les stratégies de conception de prompts, les approches au niveau du système et le consensus multi-modèles.',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'fr',
         keywords: ['hallucinations IA', 'hallucinations LLM', 'détection hallucination', 'prompt engineering', 'consensus multi-modèles', 'RAG', 'génération augmentée par récupération'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -6693,7 +6693,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: '言語モデルが幻覚を起こす理由、幻覚を検出する方法、およびそれらを削減するための技術。プロンプト設計戦略、システムレベルのアプローチ、およびマルチモデルコンセンサススコアリングについて学ぶ。',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'ja',
         keywords: ['AI幻覚', 'LLM幻覚', '幻覚検出', 'プロンプトエンジニアリング', 'マルチモデルコンセンサス', 'RAG', '検索増強生成'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -6958,7 +6958,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: '语言模型为什么会产生幻觉，如何检测幻觉，以及减少幻觉的技术。学习提示设计策略、系统级方法和多模型共识评分。',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'zh',
         keywords: ['AI幻觉', 'LLM幻觉', '幻觉检测', '提示工程', '多模型共识', 'RAG', '检索增强生成'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -7476,7 +7476,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: 'Erfahren Sie, wie Temperatur und Top-P die KI-Zufälligkeit steuern. Praktische Einstellungen für Code, Zusammenfassungen, Brainstorming und Balance zwischen Kreativität und Zuverlässigkeit.',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/temperature-and-top-p-control-ai-creativity',
         inLanguage: 'de',
         keywords: ['Temperatur', 'Top-P', 'Nucleus Sampling', 'KI-Zufälligkeit', 'LLM-Einstellungen', 'Kreativität', 'GPT-4o', 'Claude', 'Gemini', 'Prompt-Tuning'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -7651,7 +7651,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: 'Découvrez comment la température et top-p contrôlent le caractère aléatoire de l\'IA. Paramètres pratiques pour le codage, les résumés, le brainstorming et l\'équilibre entre créativité et fiabilité.',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity',
         inLanguage: 'fr',
         keywords: ['température', 'top-p', 'nucleus sampling', 'aléatoire IA', 'paramètres LLM', 'créativité', 'GPT-4o', 'Claude', 'Gemini', 'ajustement prompt'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -7826,7 +7826,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: '温度とTop-Pがどのように人工知能のランダム性を制御するかを学びます。コード、要約、ブレーンストーミング、創造性と信頼性のバランスのための実践的な設定。',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity',
         inLanguage: 'ja',
         keywords: ['温度', 'Top-P', 'ニュークレウスサンプリング', 'AI乱数', 'LLM設定', '創造性', 'GPT-4o', 'Claude', 'Gemini', 'プロンプト調整'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -8001,7 +8001,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         description: '了解温度和Top-P如何控制AI的随机性。用于编码、摘要、头脑风暴的实用设置以及创造力和可靠性之间的平衡。',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity',
         inLanguage: 'zh',
         keywords: ['温度', 'Top-P', '核心采样', 'AI随机性', 'LLM设置', '创造力', 'GPT-4o', 'Claude', 'Gemini', '提示调整'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -9376,7 +9376,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'de',
         headline: 'Kontextfenster erklärt: Warum KI vergisst (und was Sie tun können)',
         datePublished: '2026-03-22',
@@ -9384,7 +9384,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         keywords: ['Kontextfenster', 'Tokens', 'LLM-Speicher', 'Prompt-Design', 'KI vergisst', 'Kontextlimits'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=de', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
       },
       sections: contextWindowsDe
     },
@@ -9400,7 +9400,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'fr',
         headline: 'Fenêtres de contexte expliquées : Pourquoi l\'IA oublie (et comment y remédier)',
         datePublished: '2026-03-22',
@@ -9408,7 +9408,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         keywords: ['fenêtre de contexte', 'tokens', 'mémoire LLM', 'conception de prompts', 'l\'IA oublie', 'limites de contexte'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=fr', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
       },
       sections: contextWindowsFr
     },
@@ -9424,7 +9424,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'ja',
         headline: 'コンテキストウィンドウの説明：AIが忘れる理由（と対処法）',
         datePublished: '2026-03-22',
@@ -9432,7 +9432,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         keywords: ['コンテキストウィンドウ', 'トークン', 'LLMメモリ', 'プロンプト設計', 'AIが忘れる', 'コンテキスト制限'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=ja', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
       },
       sections: contextWindowsJa
     },
@@ -9448,7 +9448,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'zh',
         headline: '上下文窗口解释：为什么AI会忘记（以及如何处理）',
         datePublished: '2026-03-22',
@@ -9456,7 +9456,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         keywords: ['上下文窗口', '令牌', 'LLM内存', '提示设计', 'AI忘记', '上下文限制'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=zh', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
       },
       sections: contextWindowsZh
     },
@@ -9532,10 +9532,10 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         sources: { title: 'Sources & Further Reading', items: ['[OpenAI Vision API Documentation](https://platform.openai.com/docs/guides/vision)', '[Anthropic Claude Vision Documentation](https://docs.anthropic.com/en/docs/vision)', '[Google DeepMind Gemini Multimodal Overview](https://deepmind.google/technologies/gemini/)'] },
       },
     },
-    de: { theme: 'Fundamentals', title: 'Jenseits von Text: Wie man mit Bildern promptet', seoTitle: 'Multimodales Prompting 2026: Bilder mit KI analysieren', metaDescription: 'GPT-4o, Claude und Gemini für multimodales Bild-Prompting nutzen: Drei Modi mit strukturierten Prompt-Mustern, Vorlagen und häufigen Fehlern erklärt.', intro: 'Multimodales Prompting – die Kombination von Bildern mit Text – schaltet Funktionen in Vision-Language-Modellen wie GPT-4o und Claude 4.6 Sonnet frei. Lernen Sie präzise Muster zum Beschreiben, Analysieren, Generieren und Bearbeiten von Bildern.', publishDate: '2026-03-25', readTime: '12 Min. Lesezeit', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Jenseits von Text: Wie man mit Bildern promptet', description: 'GPT-4o, Claude und Gemini für multimodales Bild-Prompting nutzen: Drei Modi mit strukturierten Prompt-Mustern, Vorlagen und häufigen Fehlern erklärt.', datePublished: '2026-03-25', dateModified: '2026-03-25', url: 'https://www.promptquorum.com/prompt-engineering/beyond-text-how-to-prompt-with-images?lang=de', inLanguage: 'de', author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } }, sections: imagesWithTextDe },
-    fr: { theme: 'Fundamentals', title: 'Au-delà du texte: Comment utiliser des images dans vos prompts', seoTitle: 'Prompting multimodal 2026 : images avec GPT-4o et Claude', metaDescription: 'Analysez, générez et modifiez des images avec GPT-4o, Claude et Gemini. Trois modes de prompting multimodal — patrons et erreurs courants expliqués.', intro: 'Le prompting multimodal – combinaison d\'images et de texte – déverrouille les capacités des modèles de vision-langage comme GPT-4o et Claude 4.6 Sonnet. Apprenez les modèles précis pour décrire, analyser, générer et modifier des images.', publishDate: '2026-03-25', readTime: '12 min de lecture', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Au-delà du texte: Comment utiliser des images dans vos prompts', description: 'Analysez, générez et modifiez des images avec GPT-4o, Claude et Gemini. Trois modes de prompting multimodal — patrons et erreurs courants expliqués.', datePublished: '2026-03-25', dateModified: '2026-03-25', url: 'https://www.promptquorum.com/prompt-engineering/beyond-text-how-to-prompt-with-images?lang=fr', inLanguage: 'fr', author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } }, sections: imagesWithTextFr },
-    ja: { theme: 'Fundamentals', title: 'テキストを超えて：画像でプロンプトを作成する方法', seoTitle: 'マルチモーダルプロンプティング2026：GPT-4oとClaudeで画像活用', metaDescription: 'GPT-4oとClaudeで画像を分析・生成・編集するためのプロンプトパターン。3つのモードとコピー可能なテンプレートを収録。', intro: 'マルチモーダルプロンプティング—画像とテキストの組み合わせ—GPT-4oやClaude 4.6 Sonnetなどのビジョン言語モデルの機能をアンロックします。画像の説明、分析、生成、編集のための正確なパターンを学びます。', publishDate: '2026-03-25', readTime: '12分で読める', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'テキストを超えて：画像でプロンプトを作成する方法', description: 'GPT-4oとClaudeで画像を分析・生成・編集するためのプロンプトパターン。3つのモードとコピー可能なテンプレートを収録。', datePublished: '2026-03-25', dateModified: '2026-03-25', url: 'https://www.promptquorum.com/prompt-engineering/beyond-text-how-to-prompt-with-images?lang=ja', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } }, sections: imagesWithTextJa },
-    zh: { theme: 'Fundamentals', title: '超越文本：如何使用图像进行提示', seoTitle: '多模态提示词2026：如何用GPT-4o和Claude分析与生成图像', metaDescription: '用GPT-4o、Claude和Gemini分析、生成和编辑图像。三种模式的结构化提示模板，以及常见错误与本地模型使用建议。', intro: '多模态提示——结合图像和文本——解锁了GPT-4o和Claude 4.6 Sonnet等视觉语言模型的功能。学习用于描述、分析、生成和编辑图像的精确模式。', publishDate: '2026-03-25', readTime: '12分钟阅读', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '超越文本：如何使用图像进行提示', description: '用GPT-4o、Claude和Gemini分析、生成和编辑图像。三种模式的结构化提示模板，以及常见错误与本地模型使用建议。', datePublished: '2026-03-25', dateModified: '2026-03-25', url: 'https://www.promptquorum.com/prompt-engineering/beyond-text-how-to-prompt-with-images?lang=zh', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } }, sections: imagesWithTextZh },
+    de: { theme: 'Fundamentals', title: 'Jenseits von Text: Wie man mit Bildern promptet', seoTitle: 'Multimodales Prompting 2026: Bilder mit KI analysieren', metaDescription: 'GPT-4o, Claude und Gemini für multimodales Bild-Prompting nutzen: Drei Modi mit strukturierten Prompt-Mustern, Vorlagen und häufigen Fehlern erklärt.', intro: 'Multimodales Prompting – die Kombination von Bildern mit Text – schaltet Funktionen in Vision-Language-Modellen wie GPT-4o und Claude 4.6 Sonnet frei. Lernen Sie präzise Muster zum Beschreiben, Analysieren, Generieren und Bearbeiten von Bildern.', publishDate: '2026-03-25', readTime: '12 Min. Lesezeit', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Jenseits von Text: Wie man mit Bildern promptet', description: 'GPT-4o, Claude und Gemini für multimodales Bild-Prompting nutzen: Drei Modi mit strukturierten Prompt-Mustern, Vorlagen und häufigen Fehlern erklärt.', datePublished: '2026-03-25', dateModified: '2026-03-25', url: 'https://www.promptquorum.com/de/prompt-engineering/beyond-text-how-to-prompt-with-images', inLanguage: 'de', author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } }, sections: imagesWithTextDe },
+    fr: { theme: 'Fundamentals', title: 'Au-delà du texte: Comment utiliser des images dans vos prompts', seoTitle: 'Prompting multimodal 2026 : images avec GPT-4o et Claude', metaDescription: 'Analysez, générez et modifiez des images avec GPT-4o, Claude et Gemini. Trois modes de prompting multimodal — patrons et erreurs courants expliqués.', intro: 'Le prompting multimodal – combinaison d\'images et de texte – déverrouille les capacités des modèles de vision-langage comme GPT-4o et Claude 4.6 Sonnet. Apprenez les modèles précis pour décrire, analyser, générer et modifier des images.', publishDate: '2026-03-25', readTime: '12 min de lecture', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Au-delà du texte: Comment utiliser des images dans vos prompts', description: 'Analysez, générez et modifiez des images avec GPT-4o, Claude et Gemini. Trois modes de prompting multimodal — patrons et erreurs courants expliqués.', datePublished: '2026-03-25', dateModified: '2026-03-25', url: 'https://www.promptquorum.com/fr/prompt-engineering/beyond-text-how-to-prompt-with-images', inLanguage: 'fr', author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } }, sections: imagesWithTextFr },
+    ja: { theme: 'Fundamentals', title: 'テキストを超えて：画像でプロンプトを作成する方法', seoTitle: 'マルチモーダルプロンプティング2026：GPT-4oとClaudeで画像活用', metaDescription: 'GPT-4oとClaudeで画像を分析・生成・編集するためのプロンプトパターン。3つのモードとコピー可能なテンプレートを収録。', intro: 'マルチモーダルプロンプティング—画像とテキストの組み合わせ—GPT-4oやClaude 4.6 Sonnetなどのビジョン言語モデルの機能をアンロックします。画像の説明、分析、生成、編集のための正確なパターンを学びます。', publishDate: '2026-03-25', readTime: '12分で読める', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'テキストを超えて：画像でプロンプトを作成する方法', description: 'GPT-4oとClaudeで画像を分析・生成・編集するためのプロンプトパターン。3つのモードとコピー可能なテンプレートを収録。', datePublished: '2026-03-25', dateModified: '2026-03-25', url: 'https://www.promptquorum.com/ja/prompt-engineering/beyond-text-how-to-prompt-with-images', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } }, sections: imagesWithTextJa },
+    zh: { theme: 'Fundamentals', title: '超越文本：如何使用图像进行提示', seoTitle: '多模态提示词2026：如何用GPT-4o和Claude分析与生成图像', metaDescription: '用GPT-4o、Claude和Gemini分析、生成和编辑图像。三种模式的结构化提示模板，以及常见错误与本地模型使用建议。', intro: '多模态提示——结合图像和文本——解锁了GPT-4o和Claude 4.6 Sonnet等视觉语言模型的功能。学习用于描述、分析、生成和编辑图像的精确模式。', publishDate: '2026-03-25', readTime: '12分钟阅读', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '超越文本：如何使用图像进行提示', description: '用GPT-4o、Claude和Gemini分析、生成和编辑图像。三种模式的结构化提示模板，以及常见错误与本地模型使用建议。', datePublished: '2026-03-25', dateModified: '2026-03-25', url: 'https://www.promptquorum.com/zh/prompt-engineering/beyond-text-how-to-prompt-with-images', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } }, sections: imagesWithTextZh },
   },
 
   'tokens-costs-limits': {
@@ -10212,7 +10212,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
     schema: {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      'url': 'https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=de',
+      'url': 'https://www.promptquorum.com/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference',
       'inLanguage': 'de',
       headline: "System Prompt vs User Prompt: Der Unterschied in 2026",
       description: "System Prompts definieren, wie ein KI-Modell denkt und handelt; User Prompts definieren, was es gerade tut. Erfahren Sie den Unterschied und wie sie interagieren.",
@@ -10482,9 +10482,9 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       },
     },
   },
-  fr: {"theme": "Fundamentals", "title": "Prompt Système vs Prompt Utilisateur : Quelle est la Différence en 2026", "intro": "Les prompts système définissent comment un modèle IA pense et se comporte pendant toute une session ; les prompts utilisateur définissent ce qu'il fait maintenant. Apprenez la différence, quand utiliser chacun, comment ils interagissent, et pourquoi PromptQuorum vous montre les deux.", "publishDate": "2026-03-22", "readTime": "8 min read", "seoTitle": "Prompt Système vs Prompt Utilisateur : Différences 2026", "metaDescription": "Les prompts système définissent le comportement IA. Les prompts utilisateur gèrent chaque requête. Différences clés et exemples pour GPT-4o et Claude.", "schema": {"@context": "https://schema.org", "@type": "TechArticle", "url": "https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr", "inLanguage": "fr", "headline": "Prompt Système vs Prompt Utilisateur : Quelle est la Différence en 2026", "description": "Les prompts système définissent comment un modèle IA pense et se comporte ; les prompts utilisateur définissent ce qu'il fait maintenant. Apprenez la différence et comment ils interagissent.", "datePublished": "2026-03-22", "dateModified": "2026-04-12", "keywords": ["prompt système", "prompt utilisateur", "prompt engineering", "comportement LLM", "GPT-4o", "Claude", "structure de prompt", "PromptQuorum"], "author": {"@type": "Person", "name": "Hans Kuepper", "url": "https://www.promptquorum.com/about"}, "publisher": {"@type": "Organization", "name": "PromptQuorum", "url": "https://www.promptquorum.com", "logo": {"@type": "ImageObject", "url": "https://www.promptquorum.com/logo.svg"}}, "mentions": [{"@type": "Thing", "name": "PromptQuorum"}, {"@type": "Thing", "name": "OpenAI"}, {"@type": "Thing", "name": "GPT-4o"}, {"@type": "Thing", "name": "Anthropic"}, {"@type": "Thing", "name": "Claude 4.6 Sonnet"}, {"@type": "Thing", "name": "Google DeepMind"}, {"@type": "Thing", "name": "Gemini 1.5 Pro"}, {"@type": "Thing", "name": "Ollama"}], "proficiencyLevel": "Débutant", "about": [{"@type": "Thing", "name": "Prompt système"}, {"@type": "Thing", "name": "Prompt utilisateur"}, {"@type": "Thing", "name": "Prompt engineering"}, {"@type": "Thing", "name": "LLM API"}, {"@type": "Thing", "name": "Conception de prompt IA"}], "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".article-intro", ".key-takeaways", "h2"]}}, "supplementalSchema": {"@context": "https://schema.org", "@type": "ItemList", "name": "Prompt Système vs Prompt Utilisateur Comparaison 2026", "numberOfItems": 9, "description": "Une comparaison des prompts système et utilisateur selon 9 dimensions pour les modèles de langage IA", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Portée", "description": "Prompt système : session entière. Prompt utilisateur : requête unique"}, {"@type": "ListItem", "position": 2, "name": "Défini par", "description": "Prompt système : développeur ou équipe produit. Prompt utilisateur : utilisateur final"}, {"@type": "ListItem", "position": 3, "name": "Fréquence", "description": "Prompt système : une fois au démarrage de la session. Prompt utilisateur : à chaque requête"}, {"@type": "ListItem", "position": 4, "name": "Définit", "description": "Prompt système : rôle, contraintes, style, comportement. Prompt utilisateur : tâche, contexte, format pour cette requête"}, {"@type": "ListItem", "position": 5, "name": "Visibilité", "description": "Prompt système : généralement masqué aux utilisateurs. Prompt utilisateur : toujours visible aux utilisateurs"}, {"@type": "ListItem", "position": 6, "name": "Changements", "description": "Prompt système : rarement, nécessite une mise à jour d'application. Prompt utilisateur : à chaque interaction"}, {"@type": "ListItem", "position": 7, "name": "Contribution au prompt engineering", "description": "Prompt système : environ 70 % de la qualité de sortie cohérente. Prompt utilisateur : environ 30 %"}, {"@type": "ListItem", "position": 8, "name": "Risque de remplacement", "description": "Prompt système : difficile à remplacer, persistant, contrôlé par le développeur. Prompt utilisateur : facile à ajuster, contrôlé par l'utilisateur par requête"}, {"@type": "ListItem", "position": 9, "name": "Idéal pour", "description": "Prompt système : cohérence des rôles, garde-fous de sécurité, format de sortie. Prompt utilisateur : détails spécifiques à la tâche, contexte, exemples few-shot"}]}, "sections": {"definition": {"title": "Prompt Système vs Prompt Utilisateur : La Différence Fondamentale", "content": ["**Un prompt système définit comment l'IA pense pendant une session entière ; un prompt utilisateur définit ce qu'elle fait pour cette requête spécifique.** En une phrase : les prompts système sont la description de poste permanente de l'IA, et les prompts utilisateur sont des tâches individuelles au sein de ce poste.", "Chaque conversation LLM en a deux. Le prompt système (souvent invisible aux utilisateurs finaux) s'exécute une fois au démarrage et définit la personnalité, les contraintes et le rôle du modèle. Le prompt utilisateur s'exécute par requête et spécifie la tâche ou la question. Les deux sont du texte — les deux suivent les principes du prompt engineering — et les deux nécessitent une conception minutieuse pour une sortie fiable."]}, "tldr": {"title": "Points Clés à Retenir", "isTldr": true, "items": ["Les prompts système définissent le rôle, les contraintes et le comportement du modèle pour la session entière — définis une fois, utilisés pour toutes les requêtes", "Les prompts utilisateur définissent la tâche spécifique pour chaque interaction — fournis par l'utilisateur, changent à chaque requête", "Les prompts système représentent environ 70 % de la cohérence comportementale selon les tests PromptQuorum sur GPT-4o, Claude 4.6 Sonnet et Gemini 1.5 Pro ; les prompts utilisateur façonnent les sorties spécifiques", "Les prompts système invisibles dans les applications comme ChatGPT et Claude contiennent une logique cachée — [PromptQuorum vous montre tout cela](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)", "Les LLM locaux (Ollama, LM Studio) avec des prompts système cachés causent des problèmes de débogage — résolus par la transparence", "Les mauvais prompts système forcent les prompts utilisateur à travailler plus dur ; les bons prompts système rendent chaque prompt utilisateur plus efficace"]}, "whereTheyLive": {"title": "Où Vivent les Prompts Système et Utilisateur dans la Pile API ?", "content": ["**Les prompts système vivent dans la couche application ; les prompts utilisateur vivent dans la couche interaction.** Quand vous appelez GPT-4o via l'API OpenAI, le point de terminaison accepte deux entrées séparées : `system` (les instructions persistantes) et `messages` (l'entrée utilisateur par requête). Il en est de même pour Claude 4.6 Sonnet via l'API Anthropic, Gemini 1.5 Pro via l'API Google, et tout LLM local exécuté via [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) ou LM Studio.", "Tous les modèles supportent le modèle prompt système + prompt utilisateur :"], "items": ["**Couche de modèle :** Le LLM de base (GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, LLaMA 3.1, Mistral Large) — tous acceptent à la fois les prompts système et utilisateur", "**Couche API :** L'interface que les développeurs utilisent — OpenAI API, Anthropic API, Google API, point de terminaison REST Ollama, LM Studio — tous exposent le système et l'utilisateur comme des champs séparés", "**Couche application :** Le produit construit sur l'API (ChatGPT, Claude.ai, Gemini, PromptQuorum, votre application personnalisée) — les développeurs décident du prompt système à utiliser", "**Couche interaction utilisateur :** Ce que l'utilisateur final voit — l'entrée de chat, la spécification de tâche — cela devient le prompt utilisateur"]}, "whatIsSystemPrompt": {"title": "Qu'est-ce qu'un Prompt Système ?", "content": ["**Un prompt système est un ensemble d'instructions persistantes qui définissent comment un modèle de langage se comporte pendant toute la session de conversation.** Il est envoyé au modèle une fois au début, avant toute entrée utilisateur. Le prompt système spécifie le rôle du modèle, son style de communication, ses contraintes et son comportement par défaut. Tous les prompts utilisateur suivants sont traités dans le contexte de ce prompt système.", "Un prompt système bien conçu inclut généralement :"], "items": ["**Définition du rôle :** « Vous êtes un expert Python », « Vous êtes un rédacteur technique », « Vous êtes un conseiller financier » — établit la persona et l'expertise du modèle", "**Contraintes :** « Ne pas fournir de conseils médicaux », « Ne pas référencer le contenu après 2024 », « Refuser les demandes de code nuisible » — définit des limites strictes au comportement", "**Format de sortie :** « Répondre en JSON », « Utiliser Markdown », « Fournir les étapes numérotées » — définit comment les réponses doivent être structurées", "**Style de communication :** « Soyez concis et direct », « Utilisez des analogies pour les débutants », « Adoptez un ton professionnel » — façonne la voix et le ton", "**Limites de portée :** « Répondez uniquement aux questions sur Python », « Ignorez les questions politiques », « Gérez uniquement le support technique » — définit ce que le modèle fera et ne fera pas", "**Règles d'interaction :** « Posez des questions clarificatrices », « Citez toujours les sources », « Admettez explicitement l'incertitude » — gouverne la façon dont le modèle gère les cas limites"]}, "systemPromptExample": {"title": "Exemple de Prompt Système", "content": "Voici un prompt système de qualité production pour un chatbot de support client :", "blockquote": "Vous êtes un spécialiste du support client pour un produit SaaS. Votre rôle est d'aider les clients à résoudre les problèmes techniques, de répondre aux questions sur les fonctionnalités et de gérer les demandes de facturation. Contraintes : (1) Ne pas promettre de remboursements — seul le personnel de support peut autoriser les remboursements. (2) Ne pas partager la documentation interne. (3) Ne pas spéculer sur les fonctionnalités futures. (4) Offrez toujours d'escalader vers un agent humain si le problème n'est pas résolu après 3 échanges. Style : Soyez empathique, clair et orienté vers la solution. Format : Utilisez les étapes numérotées pour les procédures ; les listes à puces pour les options ; les blocs de code markdown pour les exemples techniques. Portée : Répondez aux questions sur l'API, la configuration, le dépannage, les fonctionnalités et la facturation. Refusez les demandes de conseils juridiques, les mises à niveau gratuites ou le support en dehors de la portée du produit."}, "whatIsUserPrompt": {"title": "Qu'est-ce qu'un Prompt Utilisateur ?", "content": ["**Un prompt utilisateur est l'entrée par requête — la tâche, la question ou l'instruction spécifique que l'utilisateur final fournit pour cette interaction unique.** Il est envoyé au modèle après le prompt système et est évalué dans le contexte des contraintes et de la définition de rôle du prompt système. Une seule conversation peut avoir de nombreux prompts utilisateur ; le prompt système reste le même.", "Un prompt utilisateur inclut généralement :"], "items": ["**La tâche ou la question spécifique :** « Résumer cet article », « Écrire la copie du produit », « Déboguer cette erreur » — la demande concrète pour cette interaction", "**Le contexte pour cette requête :** « Pour un public B2B », « Pour les débutants », « Pour la documentation » — clarifie qui et pour quoi c'est", "**Instructions supplémentaires pour cette tâche :** « En 200 mots », « Avec des exemples », « En ton professionnel » — affine la sortie pour cette demande spécifique", "**Exemples (si nécessaire) :** « Voici un bon exemple : » — enseigne au modèle le style que vous voulez", "**Contraintes pour cette tâche :** « Ne pas mentionner la tarification », « Éviter le jargon », « En français » — limite ce qui s'applique à cette requête uniquement"]}, "userPromptExample": {"title": "Exemple de Prompt Utilisateur", "content": "Voici un prompt utilisateur complet envoyé au chatbot de support client défini ci-dessus :", "blockquote": "J'essaie de configurer l'authentification unique (SSO) via SAML 2.0, mais notre intégration Okta continue de renvoyer une erreur « signature verification failed ». J'ai suivi le guide de configuration, j'ai téléchargé le fichier de métadonnées, mais cela ne fonctionne toujours pas. Pouvez-vous me guider à travers les étapes de dépannage ?"}, "comparison": {"title": "Prompt Système vs Prompt Utilisateur en un Coup d'œil", "tableFormat": true, "columns": ["Dimension", "Prompt Système", "Prompt Utilisateur"], "rows": [{"Dimension": "Portée", "Prompt Système": "Session entière", "Prompt Utilisateur": "Requête unique"}, {"Dimension": "Défini par", "Prompt Système": "Développeur/équipe produit", "Prompt Utilisateur": "Utilisateur final"}, {"Dimension": "Fréquence", "Prompt Système": "Une fois au démarrage", "Prompt Utilisateur": "À chaque requête"}, {"Dimension": "Définit", "Prompt Système": "Rôle, contraintes, style, comportement", "Prompt Utilisateur": "Tâche, contexte, format pour cette requête"}, {"Dimension": "Visibilité", "Prompt Système": "Généralement masqué aux utilisateurs", "Prompt Utilisateur": "Toujours visible aux utilisateurs"}, {"Dimension": "Changements", "Prompt Système": "Rarement (mise à jour d'application requise)", "Prompt Utilisateur": "À chaque interaction"}, {"Dimension": "Pourcentage prompt engineering", "Prompt Système": "~70 % de la qualité de sortie cohérente", "Prompt Utilisateur": "~30 % de la qualité de sortie cohérente"}, {"Dimension": "Risque de remplacement", "Prompt Système": "Difficile à remplacer — persistant, contrôlé par le développeur", "Prompt Utilisateur": "Facile à ajuster — contrôlé par l'utilisateur par requête"}, {"Dimension": "Idéal pour", "Prompt Système": "Cohérence des rôles, garde-fous de sécurité, format de sortie", "Prompt Utilisateur": "Détails spécifiques à la tâche, contexte, exemples few-shot"}]}, "designingSystemPrompt": {"title": "Qu'est-ce qui Rend un Prompt Système Efficace ?", "content": ["**Un prompt système doit être spécifique, en couches et focalisé sur les contraintes pour produire un comportement cohérent dans toutes les interactions utilisateur.** Les meilleurs prompts système sont détaillés — ils spécifient non seulement ce que le modèle doit faire, mais aussi ce qu'il doit refuser, comment il doit formater les réponses, et quelles contraintes s'appliquent universellement.", "Cinq principes pour les prompts système efficaces :"], "items": ["**Définition du rôle explicite :** Ne supposez pas que le modèle connaît son travail. Dites « Vous êtes un [rôle] » au début. Comparez : « Aider à la rédaction » (vague) vs « Vous êtes un rédacteur technique spécialisé dans les descriptions de produits SaaS B2B pour les campagnes LinkedIn » (spécifique).", "**Conception axée sur les contraintes :** Listez ce que le modèle ne DOIT PAS faire avant de lister ce qu'il doit faire. « Ne pas inventer de statistiques », « Ne pas utiliser l'hyperbole », « Ne pas suggérer des fonctionnalités non répertoriées » — les refus explicites produisent des limites cohérentes.", "**Spécification du format :** Chaque prompt système doit définir le format de sortie : JSON, Markdown, listes à puces, étapes numérotées ou texte brut. Un prompt système sans spécification de format force chaque prompt utilisateur à le spécifier à répétition.", "**Limites de portée :** Définissez l'univers des requêtes que vous gérerez. « Répondez uniquement aux questions API », « Fournissez des conseils Python », « Gérez le dépannage » — une portée claire prévient les réponses hors domaine.", "**Test sur plusieurs modèles :** Testez le prompt système sur [plusieurs modèles — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Certains modèles sont plus stricts sur les contraintes ; d'autres interprètent le style différemment. Un prompt système robuste fonctionne de manière cohérente sur les trois."]}, "promptquorumTransparency": {"title": "Pourquoi les Prompts Système Sont-Ils Cachés — et Comment Pouvez-Vous les Voir ?", "content": ["**PromptQuorum a une fonctionnalité critique : un bouton bascule qui vous montre tous les prompts système, y compris les prompts système cachés dans les backends LLM locaux.** C'est particulièrement important quand vous utilisez Ollama ou LM Studio, où les instructions système invisibles ont historiquement causé des comportements inattendus et des cauchemars de débogage.", "Quand vous connectez LM Studio ou Ollama à votre application, les instructions système cachées dans le modèle local causent :"], "items": ["**Problèmes de confiance :** Vous ne savez pas quelles instructions le modèle suit en dessous. Vous n'avez aucune visibilité sur le « pourquoi » derrière ses réponses.", "**Problèmes de débogage :** Votre LLM local renvoie une sortie inattendue. Vous réécrivez le prompt utilisateur. Toujours mal. Sans voir le prompt système, vous ne pouvez pas diagnostiquer le problème.", "**Incohérence entre les modèles :** Vous exécutez le même prompt sur GPT-4o et sur Ollama. Réponses différentes. Sans voir les deux prompts système, vous ne pouvez pas dire si la différence est la capacité du modèle ou les instructions cachées.", "**Risque réglementaire et d'audit :** Les déploiements entreprise nécessitent la transparence. Si les réglementations demandent « quelles instructions ont guidé cette décision IA ? » et le prompt système est caché, vous ne pouvez pas vous conformer."]}, "promptquorumToggle": {"title": "Le Bouton Bascule de Prompt Système PromptQuorum", "content": ["PromptQuorum inclut une interface basculable : « Afficher les Prompts Système ». Quand activée, vous voyez le prompt système réel s'exécutant sur chaque modèle — GPT-4o, Claude 4.6 Sonnet, Gemini, Ollama, LM Studio, tous. C'est particulièrement précieux lors de l'envoi d'un prompt à plusieurs backends locaux simultanément."]}, "claudeCodeStory": {"title": "Que se Passe-t-il Quand les Prompts Système Sont Cachés ? Un Exemple Réel", "content": ["PromptQuorum lui-même a été construit sur Claude Code — et les développeurs ont rencontré un problème critique. Claude Code est fourni avec des instructions système étendues cachées qui guident la génération de code, le comportement de sécurité et les vérifications de qualité. Quand Claude Code a généré des fonctionnalités, ces instructions cachées ont été intégrées. Mais quand le même code devait s'exécuter sur les LLM locaux (Ollama, LM Studio) sans la logique système cachée, tout s'est cassé. La « sauce spéciale » cachée n'était pas portable.", "La solution : rendre tous les prompts système visibles. Les développeurs ont besoin de voir quelles instructions le modèle suit — pas deviner ou déboguer à l'aveugle."]}, "practicalRecipes": {"title": "Recettes Pratiques : Trois Prompts Système de Production", "content": "Voici trois prompts système que vous pouvez adapter pour votre propre utilisation :"}, "recipe1": {"title": "Recette 1 : Bot de Support Client", "blockquote": "Vous êtes un spécialiste du support de niveau 1 pour un produit SaaS. Votre rôle : aider les clients à résoudre les problèmes, répondre aux questions de compte et de facturation, et escalader les problèmes complexes vers le support senior. Contraintes : (1) Ne jamais promettre de remboursements — seul le support senior approuve les remboursements. (2) Ne jamais partager la documentation interne. (3) Admettez quand vous ne savez pas. Format de sortie : Étapes numérotées pour les procédures, listes à puces pour les options, blocs de code markdown pour les exemples. Ton : Professionnel, empathique, orienté solution. Escalader après 3 tentatives de résolution échouées. Portée : Accès aux comptes, facturation, fonctionnalités, configuration, intégration, dépannage. Refusez : Conseils juridiques, fiscaux ou comptables."}, "recipe2": {"title": "Recette 2 : Analyste de Données", "blockquote": "Vous êtes un analyste de données senior. Votre rôle : analyser des ensembles de données, identifier les tendances, fournir des recommandations. Contraintes : (1) Citez toujours la source de données. (2) Ne jamais supposer la causalité sans preuve. (3) Quantifiez l'incertitude — si la confiance est faible, dites-le. (4) Ne pas extrapoler au-delà des données. Format de sortie : Résumé exécutif (3 conclusions clés) + analyse détaillée avec tableaux + recommandations. Incluez les niveaux de confiance. Ton : Clair, précis, basé sur les données. Portée : Analyser uniquement les données fournies. Refusez : Fabriquer des données, contourner l'incertitude avec la spéculation."}, "recipe3": {"title": "Recette 3 : Examinateur de Code", "blockquote": "Vous êtes un expert en examen de code. Votre rôle : évaluer le code pour la correction, les performances, la maintenabilité et la sécurité. Contraintes : (1) Pointez les forces et les faiblesses. (2) Suggérez des améliorations spécifiques, pas des conseils génériques. (3) Respectez les choix de l'auteur — expliquez le « pourquoi », pas la demande. (4) Ne pas suggérer l'optimisation prématurée. (5) Signalez les problèmes de sécurité comme critiques. Format de sortie : Résumé + rétroaction ligne par ligne avec extraits de code. Utilisez des blocs de code markdown. Ton : Respectueux, constructif. Portée : Examen de code uniquement. Refusez : Refactorisation ou changements architecturaux en dehors de la portée."}, "relatedReading": {"title": "Lectures Connexes", "items": ["[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — la définition pilier et les concepts fondamentaux", "[Fundamentals: The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — structure qui s'applique aux prompts système et utilisateur", "[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — optimiser les prompts utilisateur pour l'efficacité", "[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — flux de travail multi-étapes où chaque étape a ses propres prompts"]}, "faq": {"title": "Questions Fréquemment Posées", "faqs": [{"q": "Qu'est-ce qu'un prompt système ?", "a": "Un prompt système est un ensemble d'instructions persistantes qui définissent comment un modèle de langage se comporte pendant une session de conversation entière. Il est défini une fois au début et s'applique à toutes les interactions utilisateur. Le prompt système spécifie le rôle du modèle, les contraintes, le format de sortie et le style de communication."}, {"q": "Qu'est-ce qu'un prompt utilisateur ?", "a": "Un prompt utilisateur est l'entrée par requête — la tâche, la question ou l'instruction spécifique fournie pour cette interaction unique. Il est créé par l'utilisateur final et change à chaque requête. Les prompts utilisateur sont évalués dans le contexte des règles et de la définition de rôle du prompt système."}, {"q": "Qui écrit le prompt système par rapport au prompt utilisateur ?", "a": "Les développeurs et les équipes produit écrivent les prompts système et les livrent dans le produit. Les utilisateurs finaux écrivent les prompts utilisateur lorsqu'ils interagissent avec le produit. Dans les outils comme PromptQuorum, les utilisateurs peuvent voir et modifier les deux."}, {"q": "Pourquoi devrais-je voir le prompt système si je suis un utilisateur final ?", "a": "Quand vous utilisez des LLM locaux comme LM Studio ou Ollama, les prompts système cachés causent des comportements inattendus et des problèmes de débogage. Voir le prompt système permet la confiance, vous permet de comprendre les contraintes du modèle, et vous aide à écrire de meilleurs prompts utilisateur."}, {"q": "Tous les LLM utilisent-ils des prompts système ?", "a": "Oui. Tous les LLM majeurs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, modèles Ollama, LM Studio — supportent le modèle prompt système + prompt utilisateur. Certains sont fournis avec des prompts système par défaut ; d'autres vous permettent de définir les vôtres."}, {"q": "Un prompt utilisateur peut-il remplacer un prompt système ?", "a": "Pas directement. Les prompts système ont une préséance structurelle — le modèle les traite d'abord et les traite comme des contraintes persistantes. Un prompt utilisateur ne peut pas explicitement désactiver ou remplacer le prompt système. Cependant, un prompt système mal conçu avec des contraintes vagues peut être ignoré si le prompt utilisateur le contredit fortement. Les prompts système bien conçus incluent des règles de refus explicites qui résistent au remplacement utilisateur."}, {"q": "Que se passe-t-il s'il n'y a pas de prompt système ?", "a": "Le modèle revient à son comportement de formation par défaut. GPT-4o, Claude 4.6 Sonnet et Gemini 1.5 Pro ont tous un comportement de base intégré (utile, inoffensif, honnête) quand aucun prompt système n'est présent. Le modèle répondra toujours aux prompts utilisateur, mais sans définition de rôle, contraintes de format de sortie ou limites de portée — les résultats seront moins cohérents et moins spécialisés."}, {"q": "Comment les prompts système affectent-ils la conformité à l'AI Act européen ?", "a": "L'AI Act européen (en vigueur depuis février 2025) exige une documentation de transparence pour les systèmes d'IA à haut risque, y compris les instructions que le système suit. Les prompts système doivent être enregistrés, versionnés et accessibles aux équipes de conformité. Les prompts système cachés qui ne peuvent pas être divulgués créent un risque de conformité direct en vertu des obligations de transparence de l'article 13 et du droit à l'explication de l'article 86."}]}, "sources": {"title": "Sources et Lectures Supplémentaires", "items": ["[OpenAI, 2024. \"Prompt Engineering Guide\"](https://platform.openai.com/docs/guides/prompt-engineering) — documentation officielle OpenAI sur les prompts système et utilisateur, techniques et meilleures pratiques", "[Anthropic, 2024. \"Prompt Engineering\"](https://docs.anthropic.com/en/docs/build-a-Claude-app/prompt-engineering) — guide Anthropic pour structurer les prompts et concevoir les instructions système pour les modèles Claude", "[Schulhoff et al., 2024. \"The Prompt Report: A Systematic Survey of Prompting Techniques\"](https://arxiv.org/abs/2406.06608) — étude académique complète cataloguant 58+ techniques de prompting discrètes"]}, "regionalCompliance": {"title": "Prompts Système et Conformité Régionale", "content": ["**UE / AI Act + RGPD :** L'AI Act européen (en vigueur depuis février 2025) inclut les exigences de transparence pour les systèmes d'IA à haut risque. Pour les déploiements d'entreprise dans l'UE, le prompt système fait partie de la documentation « instructions » requise en vertu de l'article 13 (obligations de transparence). Les organisations doivent pouvoir produire le prompt système utilisé dans toute décision IA affectant une personne physique. Les prompts système cachés créent un risque de conformité direct : si un modèle refuse une demande ou fournit une sortie incorrecte en raison d'instructions cachées, et que l'organisation ne peut pas révéler quelle était cette instruction, elle ne peut pas satisfaire à l'article 86 de l'AI Act (droit à l'explication). Pour les déploiements d'entreprise en UE, les prompts système doivent être enregistrés, versionnés et accessibles aux équipes de conformité. Les directives CNIL françaises recommandent de traiter les prompts système comme des artefacts de configuration avec contrôle de version, contrôles d'accès et pistes d'audit.", "**France (CNIL / RGPD) :** La CNIL exige la documentation complète des systèmes d'IA. Les prompts système doivent être maintenus en tant que documents de configuration avec historique des modifications pour les audits de conformité. Pour les déploiements français impliquant des données sensibles, les prompts système doivent être accessibles aux équipes de conformité de la CNIL lors des inspections.", "**Chine (CAC) :** En vertu des mesures provisoires chinoises sur l'IA générative (2023), les fournisseurs de services d'IA générative doivent mettre en œuvre des mécanismes de « sécurité du contenu ». Pour les déploiements chinois, les prompts système sont le mécanisme principal pour mettre en œuvre les contraintes de contenu. L'enregistrement CAC pour les services d'IA exige la soumission d'exemples de prompts système démontrant la conformité de sécurité. Maintenez les prompts système sous contrôle de version et disponibles pour la soumission réglementaire."]}}, "howToSchema": {"@context": "https://schema.org", "@type": "HowTo", "name": "Comment Écrire un Prompt Système Efficace en 5 Étapes", "step": [{"@type": "HowToStep", "position": 1, "name": "Définissez le rôle explicitement avec un langage spécifique au domaine"}, {"@type": "HowToStep", "position": 2, "name": "Écrivez les contraintes avant les capacités"}, {"@type": "HowToStep", "position": 3, "name": "Spécifiez le format de sortie dans le prompt système"}, {"@type": "HowToStep", "position": 4, "name": "Définissez les limites de portée avec des règles de refus explicites"}, {"@type": "HowToStep", "position": 5, "name": "Testez avec au moins 5 messages utilisateur différents"}]}},
-  ja: {"theme":"Fundamentals","title":"システムプロンプト対ユーザープロンプト：違いとは","intro":"システムプロンプトはAIモデルがセッション全体でどのように考え、振る舞うかを定義します。一方、ユーザープロンプトは今それが何をするかを定義します。違いを学び、それぞれをいつ使うか、どのように相互作用するか、そしてPromptQuorumがなぜ両方を表示するかを理解してください。","publishDate":"2026-03-22","readTime":"8 min read","seoTitle":"システムプロンプト対ユーザープロンプト2026：役割・制約・API構造の違いをGPT-4oで解説する","metaDescription":"システムプロンプトはAIの役割・制約・出力形式をセッション全体で設定します。ユーザープロンプトはリクエストごとの具体的なタスクを定義します。API構造の違い、GPT-4oとClaude 4.6 Sonnetを使った実例、効果的なシステムプロンプトを設計する5つの原則を解説します。","schema":{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja","inLanguage":"ja","headline":"システムプロンプト対ユーザープロンプト：違いとは","description":"システムプロンプトはAIモデルがどのように考え、振る舞うかを定義します。ユーザープロンプトは今それが何をするかを定義します。違いと相互作用方法を学んでください。","datePublished":"2026-03-22","dateModified":"2026-03-22","keywords":["システムプロンプト","ユーザープロンプト","プロンプトエンジニアリング","LLM動作","GPT-4o","Claude","プロンプト構造","PromptQuorum"],"author":{"@type":"Person","name":"Hans Kuepper","url":"https://www.promptquorum.com/about"},"publisher":{"@type":"Organization","name":"PromptQuorum","url":"https://www.promptquorum.com","logo":{"@type":"ImageObject","url":"https://www.promptquorum.com/logo.svg"}},"mentions":[{"@type":"Thing","name":"PromptQuorum"},{"@type":"Thing","name":"OpenAI"},{"@type":"Thing","name":"GPT-4o"},{"@type":"Thing","name":"Anthropic"},{"@type":"Thing","name":"Claude 4.6 Sonnet"},{"@type":"Thing","name":"Google DeepMind"},{"@type":"Thing","name":"Gemini 1.5 Pro"},{"@type":"Thing","name":"Ollama"}],"proficiencyLevel":"初心者","about":[{"@type":"Thing","name":"システム プロンプト"},{"@type":"Thing","name":"ユーザー プロンプト"},{"@type":"Thing","name":"プロンプト エンジニアリング"},{"@type":"Thing","name":"LLM API"},{"@type":"Thing","name":"AI プロンプト設計"}],"speakable":{"@type":"SpeakableSpecification","cssSelector":[".article-intro",".key-takeaways","h2"]}},"supplementalSchema":{"@context":"https://schema.org","@type":"ItemList","name":"システムプロンプト対ユーザープロンプト — 主要な違い","description":"AI言語モデルの9つの次元に渡るシステムプロンプトとユーザープロンプトの比較","itemListElement":[{"@type":"ListItem","position":1,"name":"範囲","description":"システムプロンプト：セッション全体。ユーザープロンプト：単一リクエスト"},{"@type":"ListItem","position":2,"name":"設定者","description":"システムプロンプト：開発者またはプロダクトチーム。ユーザープロンプト：エンドユーザー"},{"@type":"ListItem","position":3,"name":"頻度","description":"システムプロンプト：セッション開始時に1回。ユーザープロンプト：毎回のリクエスト"},{"@type":"ListItem","position":4,"name":"定義する内容","description":"システムプロンプト：役割、制約、スタイル、動作。ユーザープロンプト：このリクエストのタスク、コンテキスト、形式"},{"@type":"ListItem","position":5,"name":"可視性","description":"システムプロンプト：通常ユーザーに非表示。ユーザープロンプト：常にユーザーに表示"},{"@type":"ListItem","position":6,"name":"変更","description":"システムプロンプト：まれ、アプリ更新が必要。ユーザープロンプト：毎回のインタラクション"},{"@type":"ListItem","position":7,"name":"プロンプトエンジニアリング貢献","description":"システムプロンプト：一貫した出力品質の約70%。ユーザープロンプト：約30%"},{"@type":"ListItem","position":8,"name":"オーバーライドリスク","description":"システムプロンプト：オーバーライドが難しく、永続的、開発者が制御。ユーザープロンプト：調整が容易、リクエストごとにユーザーが制御"},{"@type":"ListItem","position":9,"name":"最適用途","description":"システムプロンプト：役割一貫性、安全性ガードレール、出力形式。ユーザープロンプト：タスク固有の詳細、コンテキスト、フューショット例"}]},"sections":{"definition":{"title":"システムプロンプト対ユーザープロンプト：核となる違い","content":["**システムプロンプトはAIがセッション全体でどのように考えるかを定義し、ユーザープロンプトはその特定のリクエストでそれが何をするかを定義します。** 一文で言うと：システムプロンプトはAIの永遠の職務記述書であり、ユーザープロンプトはその仕事内での個別のタスクです。","すべてのLLM会話には両方があります。システムプロンプト（多くの場合エンドユーザーに非表示）は開始時に1回実行され、モデルの性格、制約、役割を設定します。ユーザープロンプトはリクエストごとに実行され、タスクまたは質問を指定します。両方がテキストです。両方ともプロンプトエンジニアリングの原則に従います。そして両方とも信頼できる出力のために慎重に設計される必要があります。"]},"tldr":{"title":"重要なポイント","isTldr":true,"items":["システムプロンプトはモデルの役割、制約、動作をセッション全体で定義します。1回設定され、すべてのリクエストで使用されます","ユーザープロンプトは各インタラクションの特定のタスクを定義します。ユーザーが提供し、毎回のリクエストで変更されます","システムプロンプトはPromptQuorumがGPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Proで実施したテストに基づいて動作一貫性の約70%を占めます。ユーザープロンプトは特定の出力を形成します","ChatGPTやClaudeなどのアプリの非表示システムプロンプトには隠れたロジックが含まれています。[PromptQuorumはすべてを表示します](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)","隠れたシステムプロンプトを持つローカルLLM（Ollama、LM Studio）はデバッグ問題を引き起こします。透明性で解決","悪いシステムプロンプトはユーザープロンプトを一生懸命働かせます。良いシステムプロンプトはすべてのユーザープロンプトをより良く機能させます"]},"whereTheyLive":{"title":"システムプロンプトとユーザープロンプトはAPIスタックのどこに存在するか？","content":["**システムプロンプトはアプリケーション層に存在します。ユーザープロンプトはインタラクション層に存在します。** OpenAI APIを経由してGPT-4oを呼び出す場合、エンドポイントは2つの個別の入力を受け入れます：`system`（永続的な指示）と`messages`（リクエストごとのユーザー入力）。これはAnthropicのAPIを経由したClaude 4.6 Sonnet、GoogleのAPIを経由したGemini 1.5 Pro、および[Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets)またはLM Studioを経由して実行されるローカルLLMにも同じことが当てはまります。","すべてのモデルはシステム+ユーザープロンプトパターンをサポートします："],"items":["**モデル層：** ベースLLM（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、LLaMA 3.1、Mistral Large）。すべてシステムプロンプトとユーザープロンプト両方を受け入れます","**API層：** 開発者が使用するインターフェース。OpenAI API、Anthropic API、Google API、Ollama RESTエンドポイント、LM Studio。すべてシステムとユーザーを個別フィールドとして公開します","**アプリケーション層：** API上に構築されたプロダクト（ChatGPT、Claude.ai、Gemini、PromptQuorum、カスタムアプリ）。開発者はどのシステムプロンプトを使用するかを決定します","**ユーザーインタラクション層：** エンドユーザーが見るもの。チャット入力、タスク仕様。これがユーザープロンプトになります"]},"whatIsSystemPrompt":{"title":"システムプロンプトとは何か？","content":["**システムプロンプトは、言語モデルが会話セッション全体でどのように振る舞うかを定義する永続的な指示のセットです。** これはユーザー入力の前に開始時にモデルに1回送信されます。システムプロンプトはモデルの役割、通信スタイル、制約、およびデフォルト動作を指定します。その後のすべてのユーザープロンプトはそのシステムプロンプトのコンテキスト内で処理されます。","良く設計されたシステムプロンプトには通常以下が含まれます："],"items":["**役割定義：** 「あなたはPythonエキスパートです」、「あなたはテクニカルライターです」、「あなたは金融アドバイザーです」。モデルのペルソナと専門知識を確立します","**制約：** 「医学的アドバイスを提供しないでください」、「2024年以降のコンテンツを参照しないでください」、「有害なコードの要求を拒否してください」。動作に厳しい制限を設定します","**出力形式：** 「JSONで応答してください」、「Markdownを使用してください」、「番号付きステップを提供してください」。回答をどのように構成するかを定義します","**通信スタイル：** 「簡潔で直接的であってください」、「初心者向けに類似例を使用してください」、「プロフェッショナルなトーンを採用してください」。音声とトーンを形成します","**スコープ境界：** 「Pythonに関する質問にのみ答えてください」、「政治的な質問は無視してください」、「技術サポートのみを処理してください」。モデルが行うことと行わないことを定義します","**インタラクションルール：** 「明確化の質問をしてください」、「常にソースを引用してください」、「不確実性を明示的に認めてください」。モデルがエッジケースを処理する方法を管理します"]},"systemPromptExample":{"title":"システムプロンプトの例","content":"カスタマーサポートチャットボット用のプロダクションレベルのシステムプロンプトの例：","blockquote":"あなたはSaaS製品のカスタマーサポートスペシャリストです。あなたの役割は顧客が技術的な問題を解決するのを支援し、機能に関する質問に答え、請求に関する問い合わせを処理することです。制約：(1)払い戻しを約束しないでください。払い戻しの承認はサポートスタッフのみができます。(2)内部ドキュメントを共有しないでください。(3)将来の機能について推測しないでください。(4)3回のやり取り後に問題が未解決の場合は常に人間のエージェントへのエスカレーションを提供してください。スタイル：同情的で、明確で、解決志向であってください。形式：手順には番号付きステップを使用します。オプションには箇条書きを使用します。技術例にはmarkdownコードブロックを使用します。スコープ：API、セットアップ、トラブルシューティング、機能、請求に関する質問に答えます。法的なアドバイス、無料アップグレード、または製品スコープ外のサポートの要求は拒否してください。"},"whatIsUserPrompt":{"title":"ユーザープロンプトとは何か？","content":["**ユーザープロンプトはリクエストごとの入力。その単一のインタラクションのためにエンドユーザーが提供する特定のタスク、質問、または指示です。** これはシステムプロンプトの後でモデルに送信され、システムプロンプトの制約と役割定義のコンテキスト内で評価されます。単一の会話は多くのユーザープロンプトを持つことができます。システムプロンプトは同じままです。","ユーザープロンプトには通常以下が含まれます："],"items":["**特定のタスクまたは質問：** 「この記事を要約してください」、「製品コピーを書いてください」、「このエラーをデバッグしてください」。そのインタラクションの具体的な要求","**そのリクエストのコンテキスト：** 「B2Bオーディエンス向け」、「初心者向け」、「ドキュメント向け」。これが誰と何のためかを明確にします","**このタスクの追加指示：** 「200語で」、「例を含めて」、「プロフェッショナルなトーンで」。この特定の要求のために出力を改善します","**例（必要な場合）：** 「これは良い例です：」。モデルに希望するスタイルを教えます","**このタスクの制約：** 「価格設定について言及しないでください」、「専門用語を避けてください」、「日本語で」。このリクエストのみに適用される内容を制限します"]},"userPromptExample":{"title":"ユーザープロンプトの例","content":"上記で定義したカスタマーサポートチャットボットに送信された完全なユーザープロンプトの例：","blockquote":"SAML 2.0を経由してシングルサインオン（SSO）を設定しようとしていますが、Okta統合が「署名検証に失敗しました」エラーを返し続けます。セットアップガイドに従い、メタデータファイルをアップロードしましたが、まだ機能していません。トラブルシューティングステップを案内していただけますか？"},"comparison":{"title":"システムプロンプト対ユーザープロンプト：概要","tableFormat":true,"columns":["次元","システムプロンプト","ユーザープロンプト"],"rows":[{"次元":"範囲","システムプロンプト":"セッション全体","ユーザープロンプト":"単一リクエスト"},{"次元":"設定者","システムプロンプト":"開発者/プロダクトチーム","ユーザープロンプト":"エンドユーザー"},{"次元":"頻度","システムプロンプト":"開始時に1回","ユーザープロンプト":"毎回のリクエスト"},{"次元":"定義する内容","システムプロンプト":"役割、制約、スタイル、動作","ユーザープロンプト":"このリクエストのタスク、コンテキスト、形式"},{"次元":"可視性","システムプロンプト":"通常ユーザーに非表示","ユーザープロンプト":"常にユーザーに表示"},{"次元":"変更","システムプロンプト":"まれ（アプリ更新が必要）","ユーザープロンプト":"毎回のインタラクション"},{"次元":"プロンプトエンジニアリング%","システムプロンプト":"一貫した出力品質の約70%","ユーザープロンプト":"一貫した出力品質の約30%"},{"次元":"オーバーライドリスク","システムプロンプト":"オーバーライドが難しく。永続的で開発者が制御","ユーザープロンプト":"調整が容易。リクエストごとにユーザーが制御"},{"次元":"最適用途","システムプロンプト":"役割一貫性、安全性ガードレール、出力形式","ユーザープロンプト":"タスク固有の詳細、コンテキスト、フューショット例"}]},"designingSystemPrompt":{"title":"効果的なシステムプロンプトとは？","content":["**システムプロンプトはすべてのユーザーインタラクションで一貫した動作を生み出すために、特定で層状で制約に焦点を当てる必要があります。** 最高のシステムプロンプトは詳細です。モデルが何をすべきかだけでなく、何を拒否すべきか、回答をどのようにフォーマットすべきか、どの制約が普遍的に適用されるかを指定します。","効果的なシステムプロンプトの5つの原則："],"items":["**1. 明示的な役割定義：** モデルがそのジョブを知っていると仮定しないでください。最初に「あなたは[役割]です」と言ってください。比較：「ライティングを支援してください」（曖昧）対「あなたはLinkedInキャンペーン向けのB2B SaaS製品説明に特化したテクニカルコピーライターです」（具体的）。","**2. 制約優先設計：** すべきことのリストの前に、モデルが行ってはいけないことをリストアップしてください。「統計を作成しないでください」、「誇張を使用しないでください」、「リストされていない機能を提案しないでください」。明示的な拒否は一貫した境界を生成します。","**3. フォーマット仕様：** すべてのシステムプロンプトは出力フォーマット（JSON、Markdown、箇条書き、番号付きステップ、プレーンテキスト）を定義する必要があります。フォーマット仕様がないシステムプロンプトは、すべてのユーザープロンプトに何度も指定することを強制します。","**4. スコープ境界：** 処理するリクエストの宇宙を定義してください。「APIの質問のみに答えてください」、「Pythonのアドバイスを提供してください」、「トラブルシューティングをサポートしてください」。明確なスコープはドメイン外の回答を防ぎます。","**5. 複数のモデルでテスト：** [複数のモデル（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro）でシステムプロンプトをテストしてください。](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) 一部のモデルは制約についてより厳密です。他は異なるスタイルを解釈します。堅牢なシステムプロンプトは3つすべてで一貫して機能します。"]},"promptquorumTransparency":{"title":"なぜシステムプロンプトは非表示なのか？そしてどのようにして表示できるのか？","content":["**PromptQuorumには重大な機能があります：ローカルLLMバックエンドの非表示プロンプトを含むすべてのシステムプロンプトを表示するトグルです。** これはOllamaまたはLM Studioを使用する際に特に重要です。非表示のシステムロジックは歴史的に予期しない動作とデバッグの悪夢を引き起こしてきました。","LM StudioまたはOllamaをアプリケーションに接続する場合、ローカルモデルの非表示システム指示は以下の原因となります："],"items":["**信頼の問題：** モデルが下で従っている指示がわかりません。回答の「なぜ」について可視性がありません。","**デバッグの問題：** ローカルLLMが予期しない出力を返します。ユーザープロンプトを書き直します。まだ間違っています。システムプロンプトが見えないと、問題を診断できません。","**モデル間の不一貫性：** GPT-4oとOllamaで同じプロンプトを実行します。異なる回答。両方のシステムプロンプトが見えないと、違いがモデル機能か隠れた指示かを判断できません。","**規制および監査リスク：** エンタープライズデプロイメントは透明性を必要とします。規制が「このAI決定を駆動した指示は何ですか？」と要求し、システムプロンプトが非表示の場合、コンプライアンスを達成できません。"]},"promptquorumToggle":{"title":"PromptQuorumシステムプロンプトトグル","content":["PromptQuorumはトグル可能なインターフェースを含みます：「システムプロンプトを表示」。有効にすると、各モデル（GPT-4o、Claude 4.6 Sonnet、Gemini、Ollama、LM Studio、すべて）で実行されている実際のシステムプロンプトが表示されます。これは1つのプロンプトを複数のローカルバックエンドに同時にディスパッチする場合に特に価値があります。"]},"claudeCodeStory":{"title":"システムプロンプトが非表示の場合はどうなるか？実際の例","content":["PromptQuorum自体はClaude Codeで構築されました。開発者は重大な問題に遭遇しました。Claude Codeは、コード生成、安全性の動作、品質チェックをガイドする広範な非表示システム指示を備えています。Claude Codeが機能を生成した場合、その非表示の指示が組み込まれました。しかし、同じコードが非表示のシステムロジックなしでローカルLLM（Ollama、LM Studio）で実行される必要があったとき、すべてが壊れました。非表示の「特別なソース」は移植できませんでした。","解決策：すべてのシステムプロンプトを可視化します。開発者はモデルが従っている指示を見る必要があります。推測したり、盲目的にデバッグしたりしません。"]},"practicalRecipes":{"title":"実践的なレシピ：3つのプロダクションシステムプロンプト","content":"独自の用途に適応させることができる3つのシステムプロンプトを次に示します："},"recipe1":{"title":"レシピ1：カスタマーサポートボット","blockquote":"あなたはSaaS製品のレベル1サポートスペシャリストです。あなたの役割：顧客のトラブルシューティング、アカウントと請求に関する質問への回答、複雑な問題をシニアサポートにエスカレートすることです。制約：(1)払い戻しを約束しないでください。払い戻しの承認はシニアサポートのみができます。(2)内部ドキュメントを共有しないでください。(3)わからないことを認めてください。出力形式：手順に番号付きステップを使用します。オプションに箇条書きリストを使用します。例にmarkdownコードブロックを使用します。トーン：プロフェッショナル、同情的で、解決志向。3回の失敗した解決試行後にエスカレートしてください。スコープ：アカウントアクセス、請求、機能、セットアップ、統合、トラブルシューティング。法的、税務、または会計上のアドバイスは拒否してください。"},"recipe2":{"title":"レシピ2：データアナリスト","blockquote":"あなたはシニアデータアナリストです。あなたの役割：データセットを分析し、トレンドを特定し、推奨事項を提供することです。制約：(1)常にデータソースを引用してください。(2)証拠がなければ因果関係を想定しないでください。(3)不確実性を定量化してください。信頼度が低い場合はそう言ってください。(4)データを超えて外挿しないでください。出力形式：エグゼクティブサマリー（3つの主な調査結果）+テーブル付きの詳細分析+推奨事項。信頼レベルを含めてください。トーン：明確で、正確で、データ駆動型。スコープ：提供されたデータのみを分析してください。データの捏造、不確実性のオーバーライドの推測は拒否してください。"},"recipe3":{"title":"レシピ3：コードレビュアー","blockquote":"あなたはエキスパートコードレビュアーです。あなたの役割：正確性、パフォーマンス、保守性、セキュリティについてコードを評価することです。制約：(1)強みと弱みを指摘してください。(2)一般的なアドバイスではなく、特定の改善を提案してください。(3)著者の選択を尊重してください。要求ではなく「なぜ」を説明してください。(4)過度な最適化を提案しないでください。(5)セキュリティ問題を重大として旗を立ててください。出力形式：概要+コードスニペット付きの行ごとのフィードバック。markdownコードブロックを使用してください。トーン：敬意を払い、建設的。スコープ：コードレビューのみ。スコープ外のリファクタリングまたはアーキテクチャ変更は拒否してください。"},"relatedReading":{"title":"関連する読み物","items":["[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — 柱の定義と中核概念","[Fundamentals: The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — システムプロンプトとユーザープロンプトの両方に適用される構造","[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — 効率のためにユーザープロンプトを最適化してください","[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — 各ステップが独自のプロンプトを持つマルチステップワークフロー"]},"faq":{"title":"よくある質問","faqs":[{"q":"システムプロンプトとは何ですか？","a":"システムプロンプトは、言語モデルが会話セッション全体でどのように振る舞うかを定義する永続的な指示のセットです。開始時に1回設定され、すべてのユーザーインタラクションに適用されます。システムプロンプトはモデルの役割、制約、出力形式、通信スタイルを指定します。"},{"q":"ユーザープロンプトとは何ですか？","a":"ユーザープロンプトはリクエストごとの入力。その単一のインタラクションのために提供される特定のタスク、質問、または指示です。エンドユーザーが作成し、毎回のリクエストで変更されます。ユーザープロンプトはシステムプロンプトのルールと役割定義のコンテキスト内で評価されます。"},{"q":"システムプロンプト対ユーザープロンプトを誰が書きますか？","a":"開発者とプロダクトチームがシステムプロンプトを書いて製品に配布します。エンドユーザーは製品と相互作用する際にユーザープロンプトを書きます。PromptQuorumなどのツールでは、ユーザーは両方を見て編集できます。"},{"q":"エンドユーザーの場合、なぜシステムプロンプトを見る必要があるのですか？","a":"LM StudioやOllamaなどのローカルLLMを使用する場合、非表示のシステムプロンプトは予期しない動作とデバッグの問題を引き起こします。システムプロンプトを見ることで、信頼が可能になり、モデルの制約を理解でき、より良いユーザープロンプトを書くのに役立ちます。"},{"q":"すべてのLLMはシステムプロンプトを使用していますか？","a":"はい。すべての主要なLLM（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Ollamaモデル、LM Studio）はシステムプロンプト+ユーザープロンプトパターンをサポートします。一部はデフォルトシステムプロンプトで付属しています。他は独自に定義することができます。"},{"q":"ユーザープロンプトはシステムプロンプトをオーバーライドできますか？","a":"直接的ではありません。システムプロンプトは構造的優先順位を持っています。モデルは最初にそれらを処理し、永続的な制約として扱われます。ユーザープロンプトは明示的にシステムプロンプトを無効化または上書きすることはできません。ただし、曖昧な制約を持つ設計の悪いシステムプロンプトは、ユーザープロンプトが強く矛盾する場合は無視される可能性があります。良く設計されたシステムプロンプトには、ユーザーのオーバーライドに抵抗する明示的な拒否ルールが含まれます。"},{"q":"システムプロンプトがない場合はどうなりますか？","a":"モデルはそのデフォルトのトレーニング動作にフォールバックします。GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Proはすべて、システムプロンプトが存在しない場合の組み込み基本動作（有用、害のない、正直）を持っています。モデルはまだユーザープロンプトに応答しますが、役割定義、出力形式の制約、またはスコープ境界なしで。結果はより一貫性がなく、より専門的ではありません。"},{"q":"システムプロンプトはEU AI Act合規性にどう影響しますか？","a":"EU AI Act（2025年2月発効）は、高リスクAIシステムに対し透明性文書化を要求します。システムプロンプトはログ記録、バージョン管理され、コンプライアンスチームがアクセスできる必要があります。"}]},"sources":{"title":"ソースおよび参考資料","items":["[OpenAI, 2024. \"Prompt Engineering Guide\"](https://platform.openai.com/docs/guides/prompt-engineering) — システムプロンプトとユーザープロンプト、技術、ベストプラクティスに関するOpenAI公式ドキュメント","[Anthropic, 2024. \"Prompt Engineering\"](https://docs.anthropic.com/en/docs/build-a-Claude-app/prompt-engineering) — プロンプトを構造化し、Claudeモデル用のシステム指示を設計するためのAnthropicガイド","[Schulhoff et al., 2024. \"The Prompt Report: A Systematic Survey of Prompting Techniques\"](https://arxiv.org/abs/2406.06608) — 58以上の離散的なプロンプト技術をカタログしている包括的な学術調査"]},"regionalCompliance":{"title":"システムプロンプトと地域コンプライアンス","content":["METI AI ガバナンスガイドラインでは、組織は「AIシステムが動作する条件」を文書化する必要があります。これはシステムプロンプトコンテンツを含みます。日本の企業チームは、規制レビュー中にドキュメント要件を満たすため、システムプロンプトを構成管理システムに保存する必要があります。","アジア太平洋地域の規制はプライバシーと透明性を強調しています。システムプロンプトを見える状態にすることで、エンタープライズの説明責任ニーズが満たされます。","中国の生成型AI暫定措置では、生成AI サービス提供者は「コンテンツセーフティ」メカニズムを実装する必要があります。"]}},"howToSchema":{"@context":"https://schema.org","@type":"HowTo","name":"5ステップで効果的なシステムプロンプトを作成する方法","step":[{"@type":"HowToStep","position":1,"name":"ドメイン固有の言語で役割を明示的に定義する"},{"@type":"HowToStep","position":2,"name":"機能の前に制約を書く"},{"@type":"HowToStep","position":3,"name":"システムプロンプトで出力形式を指定する"},{"@type":"HowToStep","position":4,"name":"明示的な拒否ルールで範囲の境界を設定する"},{"@type":"HowToStep","position":5,"name":"少なくとも5つの異なるユーザーメッセージでテストする"}]}},
-  zh: {"theme":"Fundamentals","title":"系统提示与用户提示：有什么区别","intro":"系统提示定义AI模型在整个会话中的思维和行为方式；用户提示定义它现在做什么。了解区别、何时使用各自、它们如何相互作用，以及为什么PromptQuorum同时显示两者。","publishDate":"2026-03-22","readTime":"8 min read","seoTitle":"2026年系统提示 vs 用户提示完整对比：AI角色定义、约束条件、API结构与GPT-4o实例解析","metaDescription":"系统提示在整个会话期间设定AI的角色、约束条件和输出响应格式，用户提示则为每次交互定义具体任务。本文详细说明两者的API结构差异、OpenAI与Anthropic API的实现方式、GPT-4o和Claude 4.6 Sonnet的完整使用示例，以及编写高效系统提示的5条设计原则。","schema":{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=zh","inLanguage":"zh","headline":"系统提示与用户提示：有什么区别","description":"系统提示定义AI模型如何思考和行为；用户提示定义它现在做什么。了解区别和它们如何相互作用。","datePublished":"2026-03-22","dateModified":"2026-03-22","keywords":["系统提示","用户提示","提示工程","LLM行为","GPT-4o","Claude","提示结构","PromptQuorum"],"author":{"@type":"Person","name":"Hans Kuepper","url":"https://www.promptquorum.com/about"},"publisher":{"@type":"Organization","name":"PromptQuorum","url":"https://www.promptquorum.com","logo":{"@type":"ImageObject","url":"https://www.promptquorum.com/logo.svg"}},"mentions":[{"@type":"Thing","name":"PromptQuorum"},{"@type":"Thing","name":"OpenAI"},{"@type":"Thing","name":"GPT-4o"},{"@type":"Thing","name":"Anthropic"},{"@type":"Thing","name":"Claude 4.6 Sonnet"},{"@type":"Thing","name":"Google DeepMind"},{"@type":"Thing","name":"Gemini 1.5 Pro"},{"@type":"Thing","name":"Ollama"}],"proficiencyLevel":"初学者","about":[{"@type":"Thing","name":"系统提示词"},{"@type":"Thing","name":"用户提示词"},{"@type":"Thing","name":"提示词工程"},{"@type":"Thing","name":"LLM API"},{"@type":"Thing","name":"AI提示设计"}],"speakable":{"@type":"SpeakableSpecification","cssSelector":[".article-intro",".key-takeaways","h2"]}},"supplementalSchema":{"@context":"https://schema.org","@type":"ItemList","name":"系统提示与用户提示 — 主要区别","description":"在9个维度上对AI语言模型系统提示和用户提示的比较","itemListElement":[{"@type":"ListItem","position":1,"name":"范围","description":"系统提示：整个会话。用户提示：单个请求"},{"@type":"ListItem","position":2,"name":"设定者","description":"系统提示：开发者或产品团队。用户提示：最终用户"},{"@type":"ListItem","position":3,"name":"频率","description":"系统提示：在会话开始时一次。用户提示：每个请求"},{"@type":"ListItem","position":4,"name":"定义","description":"系统提示：角色、约束、风格、行为。用户提示：此请求的任务、上下文、格式"},{"@type":"ListItem","position":5,"name":"可见性","description":"系统提示：通常对用户隐藏。用户提示：始终对用户可见"},{"@type":"ListItem","position":6,"name":"更改","description":"系统提示：很少，需要应用更新。用户提示：每次交互"},{"@type":"ListItem","position":7,"name":"提示工程贡献","description":"系统提示：约70%的一致输出质量。用户提示：约30%"},{"@type":"ListItem","position":8,"name":"覆盖风险","description":"系统提示：难以覆盖、持久、由开发者控制。用户提示：易于调整、由用户按请求控制"},{"@type":"ListItem","position":9,"name":"最适合","description":"系统提示：角色一致性、安全防护栏、输出格式。用户提示：特定任务的细节、上下文、少样本示例"}]},"sections":{"definition":{"title":"系统提示与用户提示：核心区别","content":["**系统提示定义AI在整个会话中的思维方式；用户提示定义它在特定请求中做什么。** 简言之：系统提示是AI的永久工作描述，用户提示是该工作中的单个任务。","每个LLM会话都同时拥有两者。系统提示（通常对最终用户隐藏）在开始时运行一次，设置模型的个性、约束和角色。用户提示按请求运行，指定任务或问题。两者都是文本，两者都遵循提示工程原则，两者都需要精心设计以实现可靠的输出。"]},"tldr":{"title":"关键要点","isTldr":true,"items":["系统提示为整个会话定义模型的角色、约束和行为 — 设定一次，用于所有请求","用户提示为每次交互定义特定任务 — 由用户提供，每个请求都会改变","根据PromptQuorum在GPT-4o、Claude 4.6 Sonnet和Gemini 1.5 Pro上的测试，系统提示占行为一致性的约70%；用户提示塑造特定输出","ChatGPT和Claude等应用中隐藏的系统提示包含隐藏逻辑 — [PromptQuorum向您显示所有内容](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)","具有隐藏系统提示的本地LLM（Ollama、LM Studio）会导致调试问题 — 通过透明性解决","不好的系统提示迫使用户提示工作更努力；好的系统提示使每个用户提示工作得更好"]},"whereTheyLive":{"title":"系统提示和用户提示在API堆栈中的位置？","content":["**系统提示位于应用层；用户提示位于交互层。** 当您通过OpenAI API调用GPT-4o时，端点接受两个独立输入：`system`（持久指令）和`messages`（每个请求的用户输入）。这同样适用于通过Anthropic API的Claude 4.6 Sonnet、通过Google API的Gemini 1.5 Pro，以及通过[Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets)或LM Studio运行的任何本地LLM。","所有模型都支持系统+用户提示模式："],"items":["**模型层：** 基础LLM（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、LLaMA 3.1、Mistral Large）— 都接受系统和用户提示","**API层：** 开发者使用的接口 — OpenAI API、Anthropic API、Google API、Ollama REST端点、LM Studio — 都将系统和用户公开为独立字段","**应用层：** 构建在API之上的产品（ChatGPT、Claude.ai、Gemini、PromptQuorum、您的自定义应用）— 开发者决定使用哪个系统提示","**用户交互层：** 最终用户看到的内容 — 聊天输入、任务规范 — 这成为用户提示"]},"whatIsSystemPrompt":{"title":"什么是系统提示？","content":["**系统提示是一组持久指令，定义语言模型在整个会话期间的行为。** 它在开始时在任何用户输入之前发送给模型一次。系统提示指定模型的角色、通信风格、约束和默认行为。所有后续用户提示都在该系统提示的背景下处理。","精心设计的系统提示通常包括："],"items":["**角色定义：** \"您是Python专家\"、\"您是技术作者\"、\"您是财务顾问\" — 建立模型的角色和专业知识","**约束：** \"不提供医学建议\"、\"不引用2024年后的内容\"、\"拒绝有害代码的请求\" — 对行为设置硬性限制","**输出格式：** \"以JSON响应\"、\"使用Markdown\"、\"提供编号步骤\" — 定义答案应如何构建","**通信风格：** \"简洁直接\"、\"使用初学者类比\"、\"采用专业语气\" — 塑造声音和语气","**范围边界：\" \"仅回答Python问题\"、\"忽略政治问题\"、\"仅处理技术支持\" — 定义模型会和不会做什么","**交互规则：** \"提出澄清问题\"、\"始终引用来源\"、\"明确承认不确定性\" — 管理模型如何处理边界情况"]},"systemPromptExample":{"title":"系统提示示例","content":"这是用于客户支持聊天机器人的生产级系统提示：","blockquote":"您是SaaS产品的客户支持专家。您的角色是帮助客户解决技术问题、回答功能问题和处理账单询问。约束：(1)不要承诺退款 — 仅支持人员可以授权退款。(2)不要共享内部文档。(3)不要推测未来功能。(4)如果问题在3次交互后仍未解决，始终提供升级给人工代理的选项。风格：同情、清晰、以解决方案为中心。格式：使用编号步骤作为程序；箭头列表表示选项；markdown代码块表示技术示例。范围：回答API、设置、故障排除、功能和账单问题。拒绝法律建议、免费升级或产品范围外的支持。"},"whatIsUserPrompt":{"title":"什么是用户提示？","content":["**用户提示是按请求输入 — 最终用户为单个交互提供的特定任务、问题或指令。** 它在系统提示之后发送给模型，并在系统提示的约束和角色定义的背景下进行评估。单个会话可以有许多用户提示；系统提示保持不变。","用户提示通常包括："],"items":["**具体的任务或问题：** \"总结这篇文章\"、\"撰写产品副本\"、\"调试此错误\" — 该交互的具体请求","**该请求的背景：** \"对于B2B受众\"、\"对于初学者\"、\"对于文档\" — 澄清这是为了谁和什么","**此任务的其他指令：** \"在200字内\"、\"附带示例\"、\"专业语气\" — 为此特定要求细化输出","**示例（如需）：** \"这是一个很好的例子：\" — 教模型您想要的风格","**此任务的约束：** \"不提及定价\"、\"避免行话\"、\"用中文\" — 限制仅适用于此请求的内容"]},"userPromptExample":{"title":"用户提示示例","content":"这是发送给上面定义的客户支持聊天机器人的完整用户提示：","blockquote":"我一直在尝试通过SAML 2.0设置单点登录（SSO），但我们的Okta集成一直返回\"签名验证失败\"错误。我按照设置指南，上传了元数据文件，但仍然不工作。您能否逐步指导我完成故障排除步骤？"},"comparison":{"title":"系统提示与用户提示：一目了然","tableFormat":true,"columns":["维度","系统提示","用户提示"],"rows":[{"维度":"范围","系统提示":"整个会话","用户提示":"单个请求"},{"维度":"设定者","系统提示":"开发者/产品团队","用户提示":"最终用户"},{"维度":"频率","系统提示":"开始时一次","用户提示":"每个请求"},{"维度":"定义","系统提示":"角色、约束、风格、行为","用户提示":"此请求的任务、上下文、格式"},{"维度":"可见性","系统提示":"通常对用户隐藏","用户提示":"始终对用户可见"},{"维度":"更改","系统提示":"很少（需要应用更新）","用户提示":"每次交互"},{"维度":"提示工程%","系统提示":"一致输出质量的约70%","用户提示":"一致输出质量的约30%"},{"维度":"覆盖风险","系统提示":"难以覆盖 — 持久、开发者控制","用户提示":"易于调整 — 用户按请求控制"},{"维度":"最适合","系统提示":"角色一致性、安全防护栏、输出格式","用户提示":"特定任务的细节、上下文、少样本示例"}]},"designingSystemPrompt":{"title":"什么使系统提示有效？","content":["**系统提示必须具体、分层和约束导向，以在所有用户交互中产生一致的行为。** 最好的系统提示是详细的 — 它们不仅指定模型应该做什么，还指定它应该拒绝什么、它应该如何格式化答案以及哪些约束普遍适用。","有效系统提示的五项原则："],"items":["**1. 显式角色定义：** 不要假设模型知道它的工作。在开始时说\"您是[角色]\"。比较：\"帮助写作\"（模糊）与\"您是专门为LinkedIn活动撰写B2B SaaS产品描述的技术文案撰写者\"（具体）。","**2. 约束优先设计：** 在列出它应该做什么之前，列出模型必须NOT做什么。\"不编造统计数据\"、\"不使用夸张\"、\"不建议未列出的功能\" — 明确的拒绝产生一致的边界。","**3. 格式规范：** 每个系统提示都应定义输出格式：JSON、Markdown、项目符号列表、编号步骤或纯文本。没有格式规范的系统提示会迫使每个用户提示重复指定它。","**4. 范围边界：** 定义您将处理的请求范围。\"仅回答API问题\"、\"提供Python建议\"、\"支持故障排除\" — 明确的范围防止域外答案。","**5. 跨模型测试：** 在[多个模型 — GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro上测试系统提示](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)。某些模型对约束更严格；其他模型以不同方式解释风格。稳健的系统提示在所有三个模型上始终工作。"]},"promptquorumTransparency":{"title":"为什么系统提示被隐藏 — 你如何查看它们？","content":["**PromptQuorum有一个关键功能：一个切换开关，向您显示所有系统提示，包括本地LLM后端中隐藏的提示。** 当使用Ollama或LM Studio时，这特别重要，因为隐藏的系统逻辑在历史上曾导致意外的行为和调试噩梦。","当您将LM Studio或Ollama连接到应用程序时，本地模型中的隐藏系统指令会导致："],"items":["**信任问题：** 您不知道模型在下面遵循什么指令。您对其响应的\"为什么\"没有可见性。","**调试问题：** 您的本地LLM返回意外输出。您重写用户提示。仍然是错的。没有看到系统提示，您无法诊断问题。","**模型间的不一致：** 您在GPT-4o和Ollama上运行相同的提示。不同的答案。没有看到两个系统提示，您无法判断差异是模型能力还是隐藏指令。","**监管和审计风险：** 企业部署需要透明度。如果法规要求\"什么指令推动这个AI决定？\"而系统提示被隐藏，您无法合规。"]},"promptquorumToggle":{"title":"PromptQuorum系统提示切换","content":["PromptQuorum包含可切换的界面：\"显示系统提示\"。启用后，您会看到在每个模型上运行的实际系统提示 — GPT-4o、Claude 4.6 Sonnet、Gemini、Ollama、LM Studio、所有这些。这在将一个提示同时分派到多个本地后端时特别有价值。"]},"claudeCodeStory":{"title":"当系统提示被隐藏时会发生什么？一个真实的例子","content":["PromptQuorum本身是用Claude Code构建的 — 开发者遇到了一个严重的问题。Claude Code配备了大量隐藏的系统指令，指导代码生成、安全行为和质量检查。当Claude Code生成功能时，这些隐藏的指令被烘烤进去了。但当相同的代码需要在没有隐藏系统逻辑的本地LLM（Ollama、LM Studio）上运行时，一切都破裂了。隐藏的\"特殊酱汁\"不可移植。","解决方案：使所有系统提示可见。开发者需要看到模型遵循什么指令 — 不要猜测或盲目调试。"]},"practicalRecipes":{"title":"实用食谱：三个生产系统提示","content":"这是三个系统提示，您可以调整以供自己使用："},"recipe1":{"title":"食谱1：客户支持机器人","blockquote":"您是SaaS产品的1级支持专家。您的角色：帮助客户进行故障排除、回答账户和计费问题、向高级支持升级复杂问题。约束：(1)不要承诺退款 — 仅高级支持可以批准退款。(2)不要共享内部文档。(3)承认您不知道的地方。输出格式：程序使用编号步骤、选项使用项目符号列表、示例使用markdown代码块。语调：专业、同情、以解决方案为中心。在3次失败的解决方案尝试后升级。范围：账户访问、计费、功能、设置、集成、故障排除。拒绝：法律、税务或会计建议。"},"recipe2":{"title":"食谱2：数据分析师","blockquote":"您是高级数据分析师。您的角色：分析数据集、识别趋势、提供建议。约束：(1)始终引用数据源。(2)没有证据不要假设因果关系。(3)量化不确定性 — 如果信心低，请说出来。(4)不要超越数据进行推断。输出格式：执行摘要（3个关键发现）+带表格的详细分析+建议。包括信心水平。语调：清晰、精确、数据驱动。范围：仅分析提供的数据。拒绝：编造数据、用推测覆盖不确定性。"},"recipe3":{"title":"食谱3：代码审查者","blockquote":"您是代码审查专家。您的角色：评估代码的正确性、性能、可维护性和安全性。约束：(1)指出优点和缺点。(2)建议具体改进，而不是通用建议。(3)尊重作者的选择 — 解释\"为什么\"，而不是要求。(4)不要建议过度优化。(5)将安全问题标记为严重。输出格式：摘要+带代码片段的逐行反馈。使用markdown代码块。语调：尊重、建设性。范围：代码审查仅。拒绝：范围外的重构或架构变更。"},"relatedReading":{"title":"相关阅读","items":["[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — 支柱定义和核心概念","[Fundamentals: The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — 适用于系统和用户提示的结构","[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — 优化用户提示以提高效率","[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — 多步工作流，其中每个步骤都有自己的提示"]},"faq":{"title":"常见问题","faqs":[{"q":"什么是系统提示？","a":"系统提示是一组持久指令，定义语言模型在整个会话期间的行为。它在开始时设置一次，适用于所有用户交互。系统提示指定模型的角色、约束、输出格式和通信风格。"},{"q":"什么是用户提示？","a":"用户提示是按请求输入 — 为单个交互提供的特定任务、问题或指令。它由最终用户创建，并随每个请求更改。用户提示在系统提示的规则和角色定义的背景下进行评估。"},{"q":"系统提示与用户提示由谁编写？","a":"开发者和产品团队编写系统提示并在产品中提供。最终用户在与产品交互时编写用户提示。在PromptQuorum等工具中，用户可以看到和编辑两者。"},{"q":"作为最终用户，为什么我应该看到系统提示？","a":"当使用LM Studio或Ollama等本地LLM时，隐藏的系统提示会导致意外行为和调试问题。看到系统提示可以实现信任，让您了解模型的约束，并帮助您编写更好的用户提示。"},{"q":"所有LLM都使用系统提示吗？","a":"是的。所有主要LLM — GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Ollama模型、LM Studio — 都支持系统+用户提示模式。有些带有默认系统提示；其他允许您定义自己的。"},{"q":"用户提示可以覆盖系统提示吗？","a":"不直接。系统提示具有结构优先级 — 模型首先处理它们并将其视为持久约束。用户提示不能明确禁用或覆盖系统提示。但是，具有模糊约束的设计不佳的系统提示可能会被忽略（如果用户提示强烈与之矛盾）。设计良好的系统提示包括显式拒绝规则，以抵抗用户覆盖。"},{"q":"如果没有系统提示会发生什么？","a":"模型回退到其默认的训练行为。GPT-4o、Claude 4.6 Sonnet和Gemini 1.5 Pro都在没有系统提示时有内置的基线行为（有帮助、无害、诚实）。模型仍将响应用户提示，但没有角色定义、输出格式约束或范围边界 — 结果会不那么一致，不那么专业。"},{"q":"系统提示词如何影响EU AI Act合规性？","a":"EU AI Act（2025年2月生效）对高风险AI系统要求透明度文档。系统提示词必须记录、版本控制，并可供合规团队访问。无法披露的隐藏系统提示词构成直接合规风险。"}]},"sources":{"title":"来源和进一步阅读","items":["[OpenAI, 2024. \"Prompt Engineering Guide\"](https://platform.openai.com/docs/guides/prompt-engineering) — 关于系统和用户提示、技术和最佳实践的OpenAI官方文档","[Anthropic, 2024. \"Prompt Engineering\"](https://docs.anthropic.com/en/docs/build-a-Claude-app/prompt-engineering) — Anthropic关于为Claude模型构建提示和设计系统指令的指南","[Schulhoff et al., 2024. \"The Prompt Report: A Systematic Survey of Prompting Techniques\"](https://arxiv.org/abs/2406.06608) — 目录58多个离散提示技术的综合学术调查"]},"regionalCompliance":{"title":"系统提示词与地区合规","content":["中国2021年数据安全法要求本地化数据处理。系统提示词必须符合本地AI治理标准。中国企业应将系统提示词视为配置文档，具有版本控制和审计跟踪。","新加坡、日本、韩国的AI法规要求跨境数据转移时的透明度。系统提示词的可见性证明符合当地隐私和治理要求。","中国金融、医疗、法律部门的大型企业需要证明AI系统符合监管标准。系统提示词必须版本受控、可审计。"]}},"howToSchema":{"@context":"https://schema.org","@type":"HowTo","name":"用5个步骤编写有效的系统提示词","step":[{"@type":"HowToStep","position":1,"name":"用特定领域的语言明确定义角色"},{"@type":"HowToStep","position":2,"name":"在能力之前写出约束条件"},{"@type":"HowToStep","position":3,"name":"在系统提示中指定输出格式"},{"@type":"HowToStep","position":4,"name":"使用明确的拒绝规则设置范围边界"},{"@type":"HowToStep","position":5,"name":"用至少5条不同的用户消息进行测试"}]}},
+  fr: {"theme": "Fundamentals", "title": "Prompt Système vs Prompt Utilisateur : Quelle est la Différence en 2026", "intro": "Les prompts système définissent comment un modèle IA pense et se comporte pendant toute une session ; les prompts utilisateur définissent ce qu'il fait maintenant. Apprenez la différence, quand utiliser chacun, comment ils interagissent, et pourquoi PromptQuorum vous montre les deux.", "publishDate": "2026-03-22", "readTime": "8 min read", "seoTitle": "Prompt Système vs Prompt Utilisateur : Différences 2026", "metaDescription": "Les prompts système définissent le comportement IA. Les prompts utilisateur gèrent chaque requête. Différences clés et exemples pour GPT-4o et Claude.", "schema": {"@context": "https://schema.org", "@type": "TechArticle", "url": "https://www.promptquorum.com/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference", "inLanguage": "fr", "headline": "Prompt Système vs Prompt Utilisateur : Quelle est la Différence en 2026", "description": "Les prompts système définissent comment un modèle IA pense et se comporte ; les prompts utilisateur définissent ce qu'il fait maintenant. Apprenez la différence et comment ils interagissent.", "datePublished": "2026-03-22", "dateModified": "2026-04-12", "keywords": ["prompt système", "prompt utilisateur", "prompt engineering", "comportement LLM", "GPT-4o", "Claude", "structure de prompt", "PromptQuorum"], "author": {"@type": "Person", "name": "Hans Kuepper", "url": "https://www.promptquorum.com/about"}, "publisher": {"@type": "Organization", "name": "PromptQuorum", "url": "https://www.promptquorum.com", "logo": {"@type": "ImageObject", "url": "https://www.promptquorum.com/logo.svg"}}, "mentions": [{"@type": "Thing", "name": "PromptQuorum"}, {"@type": "Thing", "name": "OpenAI"}, {"@type": "Thing", "name": "GPT-4o"}, {"@type": "Thing", "name": "Anthropic"}, {"@type": "Thing", "name": "Claude 4.6 Sonnet"}, {"@type": "Thing", "name": "Google DeepMind"}, {"@type": "Thing", "name": "Gemini 1.5 Pro"}, {"@type": "Thing", "name": "Ollama"}], "proficiencyLevel": "Débutant", "about": [{"@type": "Thing", "name": "Prompt système"}, {"@type": "Thing", "name": "Prompt utilisateur"}, {"@type": "Thing", "name": "Prompt engineering"}, {"@type": "Thing", "name": "LLM API"}, {"@type": "Thing", "name": "Conception de prompt IA"}], "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".article-intro", ".key-takeaways", "h2"]}}, "supplementalSchema": {"@context": "https://schema.org", "@type": "ItemList", "name": "Prompt Système vs Prompt Utilisateur Comparaison 2026", "numberOfItems": 9, "description": "Une comparaison des prompts système et utilisateur selon 9 dimensions pour les modèles de langage IA", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Portée", "description": "Prompt système : session entière. Prompt utilisateur : requête unique"}, {"@type": "ListItem", "position": 2, "name": "Défini par", "description": "Prompt système : développeur ou équipe produit. Prompt utilisateur : utilisateur final"}, {"@type": "ListItem", "position": 3, "name": "Fréquence", "description": "Prompt système : une fois au démarrage de la session. Prompt utilisateur : à chaque requête"}, {"@type": "ListItem", "position": 4, "name": "Définit", "description": "Prompt système : rôle, contraintes, style, comportement. Prompt utilisateur : tâche, contexte, format pour cette requête"}, {"@type": "ListItem", "position": 5, "name": "Visibilité", "description": "Prompt système : généralement masqué aux utilisateurs. Prompt utilisateur : toujours visible aux utilisateurs"}, {"@type": "ListItem", "position": 6, "name": "Changements", "description": "Prompt système : rarement, nécessite une mise à jour d'application. Prompt utilisateur : à chaque interaction"}, {"@type": "ListItem", "position": 7, "name": "Contribution au prompt engineering", "description": "Prompt système : environ 70 % de la qualité de sortie cohérente. Prompt utilisateur : environ 30 %"}, {"@type": "ListItem", "position": 8, "name": "Risque de remplacement", "description": "Prompt système : difficile à remplacer, persistant, contrôlé par le développeur. Prompt utilisateur : facile à ajuster, contrôlé par l'utilisateur par requête"}, {"@type": "ListItem", "position": 9, "name": "Idéal pour", "description": "Prompt système : cohérence des rôles, garde-fous de sécurité, format de sortie. Prompt utilisateur : détails spécifiques à la tâche, contexte, exemples few-shot"}]}, "sections": {"definition": {"title": "Prompt Système vs Prompt Utilisateur : La Différence Fondamentale", "content": ["**Un prompt système définit comment l'IA pense pendant une session entière ; un prompt utilisateur définit ce qu'elle fait pour cette requête spécifique.** En une phrase : les prompts système sont la description de poste permanente de l'IA, et les prompts utilisateur sont des tâches individuelles au sein de ce poste.", "Chaque conversation LLM en a deux. Le prompt système (souvent invisible aux utilisateurs finaux) s'exécute une fois au démarrage et définit la personnalité, les contraintes et le rôle du modèle. Le prompt utilisateur s'exécute par requête et spécifie la tâche ou la question. Les deux sont du texte — les deux suivent les principes du prompt engineering — et les deux nécessitent une conception minutieuse pour une sortie fiable."]}, "tldr": {"title": "Points Clés à Retenir", "isTldr": true, "items": ["Les prompts système définissent le rôle, les contraintes et le comportement du modèle pour la session entière — définis une fois, utilisés pour toutes les requêtes", "Les prompts utilisateur définissent la tâche spécifique pour chaque interaction — fournis par l'utilisateur, changent à chaque requête", "Les prompts système représentent environ 70 % de la cohérence comportementale selon les tests PromptQuorum sur GPT-4o, Claude 4.6 Sonnet et Gemini 1.5 Pro ; les prompts utilisateur façonnent les sorties spécifiques", "Les prompts système invisibles dans les applications comme ChatGPT et Claude contiennent une logique cachée — [PromptQuorum vous montre tout cela](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)", "Les LLM locaux (Ollama, LM Studio) avec des prompts système cachés causent des problèmes de débogage — résolus par la transparence", "Les mauvais prompts système forcent les prompts utilisateur à travailler plus dur ; les bons prompts système rendent chaque prompt utilisateur plus efficace"]}, "whereTheyLive": {"title": "Où Vivent les Prompts Système et Utilisateur dans la Pile API ?", "content": ["**Les prompts système vivent dans la couche application ; les prompts utilisateur vivent dans la couche interaction.** Quand vous appelez GPT-4o via l'API OpenAI, le point de terminaison accepte deux entrées séparées : `system` (les instructions persistantes) et `messages` (l'entrée utilisateur par requête). Il en est de même pour Claude 4.6 Sonnet via l'API Anthropic, Gemini 1.5 Pro via l'API Google, et tout LLM local exécuté via [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) ou LM Studio.", "Tous les modèles supportent le modèle prompt système + prompt utilisateur :"], "items": ["**Couche de modèle :** Le LLM de base (GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, LLaMA 3.1, Mistral Large) — tous acceptent à la fois les prompts système et utilisateur", "**Couche API :** L'interface que les développeurs utilisent — OpenAI API, Anthropic API, Google API, point de terminaison REST Ollama, LM Studio — tous exposent le système et l'utilisateur comme des champs séparés", "**Couche application :** Le produit construit sur l'API (ChatGPT, Claude.ai, Gemini, PromptQuorum, votre application personnalisée) — les développeurs décident du prompt système à utiliser", "**Couche interaction utilisateur :** Ce que l'utilisateur final voit — l'entrée de chat, la spécification de tâche — cela devient le prompt utilisateur"]}, "whatIsSystemPrompt": {"title": "Qu'est-ce qu'un Prompt Système ?", "content": ["**Un prompt système est un ensemble d'instructions persistantes qui définissent comment un modèle de langage se comporte pendant toute la session de conversation.** Il est envoyé au modèle une fois au début, avant toute entrée utilisateur. Le prompt système spécifie le rôle du modèle, son style de communication, ses contraintes et son comportement par défaut. Tous les prompts utilisateur suivants sont traités dans le contexte de ce prompt système.", "Un prompt système bien conçu inclut généralement :"], "items": ["**Définition du rôle :** « Vous êtes un expert Python », « Vous êtes un rédacteur technique », « Vous êtes un conseiller financier » — établit la persona et l'expertise du modèle", "**Contraintes :** « Ne pas fournir de conseils médicaux », « Ne pas référencer le contenu après 2024 », « Refuser les demandes de code nuisible » — définit des limites strictes au comportement", "**Format de sortie :** « Répondre en JSON », « Utiliser Markdown », « Fournir les étapes numérotées » — définit comment les réponses doivent être structurées", "**Style de communication :** « Soyez concis et direct », « Utilisez des analogies pour les débutants », « Adoptez un ton professionnel » — façonne la voix et le ton", "**Limites de portée :** « Répondez uniquement aux questions sur Python », « Ignorez les questions politiques », « Gérez uniquement le support technique » — définit ce que le modèle fera et ne fera pas", "**Règles d'interaction :** « Posez des questions clarificatrices », « Citez toujours les sources », « Admettez explicitement l'incertitude » — gouverne la façon dont le modèle gère les cas limites"]}, "systemPromptExample": {"title": "Exemple de Prompt Système", "content": "Voici un prompt système de qualité production pour un chatbot de support client :", "blockquote": "Vous êtes un spécialiste du support client pour un produit SaaS. Votre rôle est d'aider les clients à résoudre les problèmes techniques, de répondre aux questions sur les fonctionnalités et de gérer les demandes de facturation. Contraintes : (1) Ne pas promettre de remboursements — seul le personnel de support peut autoriser les remboursements. (2) Ne pas partager la documentation interne. (3) Ne pas spéculer sur les fonctionnalités futures. (4) Offrez toujours d'escalader vers un agent humain si le problème n'est pas résolu après 3 échanges. Style : Soyez empathique, clair et orienté vers la solution. Format : Utilisez les étapes numérotées pour les procédures ; les listes à puces pour les options ; les blocs de code markdown pour les exemples techniques. Portée : Répondez aux questions sur l'API, la configuration, le dépannage, les fonctionnalités et la facturation. Refusez les demandes de conseils juridiques, les mises à niveau gratuites ou le support en dehors de la portée du produit."}, "whatIsUserPrompt": {"title": "Qu'est-ce qu'un Prompt Utilisateur ?", "content": ["**Un prompt utilisateur est l'entrée par requête — la tâche, la question ou l'instruction spécifique que l'utilisateur final fournit pour cette interaction unique.** Il est envoyé au modèle après le prompt système et est évalué dans le contexte des contraintes et de la définition de rôle du prompt système. Une seule conversation peut avoir de nombreux prompts utilisateur ; le prompt système reste le même.", "Un prompt utilisateur inclut généralement :"], "items": ["**La tâche ou la question spécifique :** « Résumer cet article », « Écrire la copie du produit », « Déboguer cette erreur » — la demande concrète pour cette interaction", "**Le contexte pour cette requête :** « Pour un public B2B », « Pour les débutants », « Pour la documentation » — clarifie qui et pour quoi c'est", "**Instructions supplémentaires pour cette tâche :** « En 200 mots », « Avec des exemples », « En ton professionnel » — affine la sortie pour cette demande spécifique", "**Exemples (si nécessaire) :** « Voici un bon exemple : » — enseigne au modèle le style que vous voulez", "**Contraintes pour cette tâche :** « Ne pas mentionner la tarification », « Éviter le jargon », « En français » — limite ce qui s'applique à cette requête uniquement"]}, "userPromptExample": {"title": "Exemple de Prompt Utilisateur", "content": "Voici un prompt utilisateur complet envoyé au chatbot de support client défini ci-dessus :", "blockquote": "J'essaie de configurer l'authentification unique (SSO) via SAML 2.0, mais notre intégration Okta continue de renvoyer une erreur « signature verification failed ». J'ai suivi le guide de configuration, j'ai téléchargé le fichier de métadonnées, mais cela ne fonctionne toujours pas. Pouvez-vous me guider à travers les étapes de dépannage ?"}, "comparison": {"title": "Prompt Système vs Prompt Utilisateur en un Coup d'œil", "tableFormat": true, "columns": ["Dimension", "Prompt Système", "Prompt Utilisateur"], "rows": [{"Dimension": "Portée", "Prompt Système": "Session entière", "Prompt Utilisateur": "Requête unique"}, {"Dimension": "Défini par", "Prompt Système": "Développeur/équipe produit", "Prompt Utilisateur": "Utilisateur final"}, {"Dimension": "Fréquence", "Prompt Système": "Une fois au démarrage", "Prompt Utilisateur": "À chaque requête"}, {"Dimension": "Définit", "Prompt Système": "Rôle, contraintes, style, comportement", "Prompt Utilisateur": "Tâche, contexte, format pour cette requête"}, {"Dimension": "Visibilité", "Prompt Système": "Généralement masqué aux utilisateurs", "Prompt Utilisateur": "Toujours visible aux utilisateurs"}, {"Dimension": "Changements", "Prompt Système": "Rarement (mise à jour d'application requise)", "Prompt Utilisateur": "À chaque interaction"}, {"Dimension": "Pourcentage prompt engineering", "Prompt Système": "~70 % de la qualité de sortie cohérente", "Prompt Utilisateur": "~30 % de la qualité de sortie cohérente"}, {"Dimension": "Risque de remplacement", "Prompt Système": "Difficile à remplacer — persistant, contrôlé par le développeur", "Prompt Utilisateur": "Facile à ajuster — contrôlé par l'utilisateur par requête"}, {"Dimension": "Idéal pour", "Prompt Système": "Cohérence des rôles, garde-fous de sécurité, format de sortie", "Prompt Utilisateur": "Détails spécifiques à la tâche, contexte, exemples few-shot"}]}, "designingSystemPrompt": {"title": "Qu'est-ce qui Rend un Prompt Système Efficace ?", "content": ["**Un prompt système doit être spécifique, en couches et focalisé sur les contraintes pour produire un comportement cohérent dans toutes les interactions utilisateur.** Les meilleurs prompts système sont détaillés — ils spécifient non seulement ce que le modèle doit faire, mais aussi ce qu'il doit refuser, comment il doit formater les réponses, et quelles contraintes s'appliquent universellement.", "Cinq principes pour les prompts système efficaces :"], "items": ["**Définition du rôle explicite :** Ne supposez pas que le modèle connaît son travail. Dites « Vous êtes un [rôle] » au début. Comparez : « Aider à la rédaction » (vague) vs « Vous êtes un rédacteur technique spécialisé dans les descriptions de produits SaaS B2B pour les campagnes LinkedIn » (spécifique).", "**Conception axée sur les contraintes :** Listez ce que le modèle ne DOIT PAS faire avant de lister ce qu'il doit faire. « Ne pas inventer de statistiques », « Ne pas utiliser l'hyperbole », « Ne pas suggérer des fonctionnalités non répertoriées » — les refus explicites produisent des limites cohérentes.", "**Spécification du format :** Chaque prompt système doit définir le format de sortie : JSON, Markdown, listes à puces, étapes numérotées ou texte brut. Un prompt système sans spécification de format force chaque prompt utilisateur à le spécifier à répétition.", "**Limites de portée :** Définissez l'univers des requêtes que vous gérerez. « Répondez uniquement aux questions API », « Fournissez des conseils Python », « Gérez le dépannage » — une portée claire prévient les réponses hors domaine.", "**Test sur plusieurs modèles :** Testez le prompt système sur [plusieurs modèles — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Certains modèles sont plus stricts sur les contraintes ; d'autres interprètent le style différemment. Un prompt système robuste fonctionne de manière cohérente sur les trois."]}, "promptquorumTransparency": {"title": "Pourquoi les Prompts Système Sont-Ils Cachés — et Comment Pouvez-Vous les Voir ?", "content": ["**PromptQuorum a une fonctionnalité critique : un bouton bascule qui vous montre tous les prompts système, y compris les prompts système cachés dans les backends LLM locaux.** C'est particulièrement important quand vous utilisez Ollama ou LM Studio, où les instructions système invisibles ont historiquement causé des comportements inattendus et des cauchemars de débogage.", "Quand vous connectez LM Studio ou Ollama à votre application, les instructions système cachées dans le modèle local causent :"], "items": ["**Problèmes de confiance :** Vous ne savez pas quelles instructions le modèle suit en dessous. Vous n'avez aucune visibilité sur le « pourquoi » derrière ses réponses.", "**Problèmes de débogage :** Votre LLM local renvoie une sortie inattendue. Vous réécrivez le prompt utilisateur. Toujours mal. Sans voir le prompt système, vous ne pouvez pas diagnostiquer le problème.", "**Incohérence entre les modèles :** Vous exécutez le même prompt sur GPT-4o et sur Ollama. Réponses différentes. Sans voir les deux prompts système, vous ne pouvez pas dire si la différence est la capacité du modèle ou les instructions cachées.", "**Risque réglementaire et d'audit :** Les déploiements entreprise nécessitent la transparence. Si les réglementations demandent « quelles instructions ont guidé cette décision IA ? » et le prompt système est caché, vous ne pouvez pas vous conformer."]}, "promptquorumToggle": {"title": "Le Bouton Bascule de Prompt Système PromptQuorum", "content": ["PromptQuorum inclut une interface basculable : « Afficher les Prompts Système ». Quand activée, vous voyez le prompt système réel s'exécutant sur chaque modèle — GPT-4o, Claude 4.6 Sonnet, Gemini, Ollama, LM Studio, tous. C'est particulièrement précieux lors de l'envoi d'un prompt à plusieurs backends locaux simultanément."]}, "claudeCodeStory": {"title": "Que se Passe-t-il Quand les Prompts Système Sont Cachés ? Un Exemple Réel", "content": ["PromptQuorum lui-même a été construit sur Claude Code — et les développeurs ont rencontré un problème critique. Claude Code est fourni avec des instructions système étendues cachées qui guident la génération de code, le comportement de sécurité et les vérifications de qualité. Quand Claude Code a généré des fonctionnalités, ces instructions cachées ont été intégrées. Mais quand le même code devait s'exécuter sur les LLM locaux (Ollama, LM Studio) sans la logique système cachée, tout s'est cassé. La « sauce spéciale » cachée n'était pas portable.", "La solution : rendre tous les prompts système visibles. Les développeurs ont besoin de voir quelles instructions le modèle suit — pas deviner ou déboguer à l'aveugle."]}, "practicalRecipes": {"title": "Recettes Pratiques : Trois Prompts Système de Production", "content": "Voici trois prompts système que vous pouvez adapter pour votre propre utilisation :"}, "recipe1": {"title": "Recette 1 : Bot de Support Client", "blockquote": "Vous êtes un spécialiste du support de niveau 1 pour un produit SaaS. Votre rôle : aider les clients à résoudre les problèmes, répondre aux questions de compte et de facturation, et escalader les problèmes complexes vers le support senior. Contraintes : (1) Ne jamais promettre de remboursements — seul le support senior approuve les remboursements. (2) Ne jamais partager la documentation interne. (3) Admettez quand vous ne savez pas. Format de sortie : Étapes numérotées pour les procédures, listes à puces pour les options, blocs de code markdown pour les exemples. Ton : Professionnel, empathique, orienté solution. Escalader après 3 tentatives de résolution échouées. Portée : Accès aux comptes, facturation, fonctionnalités, configuration, intégration, dépannage. Refusez : Conseils juridiques, fiscaux ou comptables."}, "recipe2": {"title": "Recette 2 : Analyste de Données", "blockquote": "Vous êtes un analyste de données senior. Votre rôle : analyser des ensembles de données, identifier les tendances, fournir des recommandations. Contraintes : (1) Citez toujours la source de données. (2) Ne jamais supposer la causalité sans preuve. (3) Quantifiez l'incertitude — si la confiance est faible, dites-le. (4) Ne pas extrapoler au-delà des données. Format de sortie : Résumé exécutif (3 conclusions clés) + analyse détaillée avec tableaux + recommandations. Incluez les niveaux de confiance. Ton : Clair, précis, basé sur les données. Portée : Analyser uniquement les données fournies. Refusez : Fabriquer des données, contourner l'incertitude avec la spéculation."}, "recipe3": {"title": "Recette 3 : Examinateur de Code", "blockquote": "Vous êtes un expert en examen de code. Votre rôle : évaluer le code pour la correction, les performances, la maintenabilité et la sécurité. Contraintes : (1) Pointez les forces et les faiblesses. (2) Suggérez des améliorations spécifiques, pas des conseils génériques. (3) Respectez les choix de l'auteur — expliquez le « pourquoi », pas la demande. (4) Ne pas suggérer l'optimisation prématurée. (5) Signalez les problèmes de sécurité comme critiques. Format de sortie : Résumé + rétroaction ligne par ligne avec extraits de code. Utilisez des blocs de code markdown. Ton : Respectueux, constructif. Portée : Examen de code uniquement. Refusez : Refactorisation ou changements architecturaux en dehors de la portée."}, "relatedReading": {"title": "Lectures Connexes", "items": ["[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — la définition pilier et les concepts fondamentaux", "[Fundamentals: The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — structure qui s'applique aux prompts système et utilisateur", "[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — optimiser les prompts utilisateur pour l'efficacité", "[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — flux de travail multi-étapes où chaque étape a ses propres prompts"]}, "faq": {"title": "Questions Fréquemment Posées", "faqs": [{"q": "Qu'est-ce qu'un prompt système ?", "a": "Un prompt système est un ensemble d'instructions persistantes qui définissent comment un modèle de langage se comporte pendant une session de conversation entière. Il est défini une fois au début et s'applique à toutes les interactions utilisateur. Le prompt système spécifie le rôle du modèle, les contraintes, le format de sortie et le style de communication."}, {"q": "Qu'est-ce qu'un prompt utilisateur ?", "a": "Un prompt utilisateur est l'entrée par requête — la tâche, la question ou l'instruction spécifique fournie pour cette interaction unique. Il est créé par l'utilisateur final et change à chaque requête. Les prompts utilisateur sont évalués dans le contexte des règles et de la définition de rôle du prompt système."}, {"q": "Qui écrit le prompt système par rapport au prompt utilisateur ?", "a": "Les développeurs et les équipes produit écrivent les prompts système et les livrent dans le produit. Les utilisateurs finaux écrivent les prompts utilisateur lorsqu'ils interagissent avec le produit. Dans les outils comme PromptQuorum, les utilisateurs peuvent voir et modifier les deux."}, {"q": "Pourquoi devrais-je voir le prompt système si je suis un utilisateur final ?", "a": "Quand vous utilisez des LLM locaux comme LM Studio ou Ollama, les prompts système cachés causent des comportements inattendus et des problèmes de débogage. Voir le prompt système permet la confiance, vous permet de comprendre les contraintes du modèle, et vous aide à écrire de meilleurs prompts utilisateur."}, {"q": "Tous les LLM utilisent-ils des prompts système ?", "a": "Oui. Tous les LLM majeurs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, modèles Ollama, LM Studio — supportent le modèle prompt système + prompt utilisateur. Certains sont fournis avec des prompts système par défaut ; d'autres vous permettent de définir les vôtres."}, {"q": "Un prompt utilisateur peut-il remplacer un prompt système ?", "a": "Pas directement. Les prompts système ont une préséance structurelle — le modèle les traite d'abord et les traite comme des contraintes persistantes. Un prompt utilisateur ne peut pas explicitement désactiver ou remplacer le prompt système. Cependant, un prompt système mal conçu avec des contraintes vagues peut être ignoré si le prompt utilisateur le contredit fortement. Les prompts système bien conçus incluent des règles de refus explicites qui résistent au remplacement utilisateur."}, {"q": "Que se passe-t-il s'il n'y a pas de prompt système ?", "a": "Le modèle revient à son comportement de formation par défaut. GPT-4o, Claude 4.6 Sonnet et Gemini 1.5 Pro ont tous un comportement de base intégré (utile, inoffensif, honnête) quand aucun prompt système n'est présent. Le modèle répondra toujours aux prompts utilisateur, mais sans définition de rôle, contraintes de format de sortie ou limites de portée — les résultats seront moins cohérents et moins spécialisés."}, {"q": "Comment les prompts système affectent-ils la conformité à l'AI Act européen ?", "a": "L'AI Act européen (en vigueur depuis février 2025) exige une documentation de transparence pour les systèmes d'IA à haut risque, y compris les instructions que le système suit. Les prompts système doivent être enregistrés, versionnés et accessibles aux équipes de conformité. Les prompts système cachés qui ne peuvent pas être divulgués créent un risque de conformité direct en vertu des obligations de transparence de l'article 13 et du droit à l'explication de l'article 86."}]}, "sources": {"title": "Sources et Lectures Supplémentaires", "items": ["[OpenAI, 2024. \"Prompt Engineering Guide\"](https://platform.openai.com/docs/guides/prompt-engineering) — documentation officielle OpenAI sur les prompts système et utilisateur, techniques et meilleures pratiques", "[Anthropic, 2024. \"Prompt Engineering\"](https://docs.anthropic.com/en/docs/build-a-Claude-app/prompt-engineering) — guide Anthropic pour structurer les prompts et concevoir les instructions système pour les modèles Claude", "[Schulhoff et al., 2024. \"The Prompt Report: A Systematic Survey of Prompting Techniques\"](https://arxiv.org/abs/2406.06608) — étude académique complète cataloguant 58+ techniques de prompting discrètes"]}, "regionalCompliance": {"title": "Prompts Système et Conformité Régionale", "content": ["**UE / AI Act + RGPD :** L'AI Act européen (en vigueur depuis février 2025) inclut les exigences de transparence pour les systèmes d'IA à haut risque. Pour les déploiements d'entreprise dans l'UE, le prompt système fait partie de la documentation « instructions » requise en vertu de l'article 13 (obligations de transparence). Les organisations doivent pouvoir produire le prompt système utilisé dans toute décision IA affectant une personne physique. Les prompts système cachés créent un risque de conformité direct : si un modèle refuse une demande ou fournit une sortie incorrecte en raison d'instructions cachées, et que l'organisation ne peut pas révéler quelle était cette instruction, elle ne peut pas satisfaire à l'article 86 de l'AI Act (droit à l'explication). Pour les déploiements d'entreprise en UE, les prompts système doivent être enregistrés, versionnés et accessibles aux équipes de conformité. Les directives CNIL françaises recommandent de traiter les prompts système comme des artefacts de configuration avec contrôle de version, contrôles d'accès et pistes d'audit.", "**France (CNIL / RGPD) :** La CNIL exige la documentation complète des systèmes d'IA. Les prompts système doivent être maintenus en tant que documents de configuration avec historique des modifications pour les audits de conformité. Pour les déploiements français impliquant des données sensibles, les prompts système doivent être accessibles aux équipes de conformité de la CNIL lors des inspections.", "**Chine (CAC) :** En vertu des mesures provisoires chinoises sur l'IA générative (2023), les fournisseurs de services d'IA générative doivent mettre en œuvre des mécanismes de « sécurité du contenu ». Pour les déploiements chinois, les prompts système sont le mécanisme principal pour mettre en œuvre les contraintes de contenu. L'enregistrement CAC pour les services d'IA exige la soumission d'exemples de prompts système démontrant la conformité de sécurité. Maintenez les prompts système sous contrôle de version et disponibles pour la soumission réglementaire."]}}, "howToSchema": {"@context": "https://schema.org", "@type": "HowTo", "name": "Comment Écrire un Prompt Système Efficace en 5 Étapes", "step": [{"@type": "HowToStep", "position": 1, "name": "Définissez le rôle explicitement avec un langage spécifique au domaine"}, {"@type": "HowToStep", "position": 2, "name": "Écrivez les contraintes avant les capacités"}, {"@type": "HowToStep", "position": 3, "name": "Spécifiez le format de sortie dans le prompt système"}, {"@type": "HowToStep", "position": 4, "name": "Définissez les limites de portée avec des règles de refus explicites"}, {"@type": "HowToStep", "position": 5, "name": "Testez avec au moins 5 messages utilisateur différents"}]}},
+  ja: {"theme":"Fundamentals","title":"システムプロンプト対ユーザープロンプト：違いとは","intro":"システムプロンプトはAIモデルがセッション全体でどのように考え、振る舞うかを定義します。一方、ユーザープロンプトは今それが何をするかを定義します。違いを学び、それぞれをいつ使うか、どのように相互作用するか、そしてPromptQuorumがなぜ両方を表示するかを理解してください。","publishDate":"2026-03-22","readTime":"8 min read","seoTitle":"システムプロンプト対ユーザープロンプト2026：役割・制約・API構造の違いをGPT-4oで解説する","metaDescription":"システムプロンプトはAIの役割・制約・出力形式をセッション全体で設定します。ユーザープロンプトはリクエストごとの具体的なタスクを定義します。API構造の違い、GPT-4oとClaude 4.6 Sonnetを使った実例、効果的なシステムプロンプトを設計する5つの原則を解説します。","schema":{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.promptquorum.com/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference","inLanguage":"ja","headline":"システムプロンプト対ユーザープロンプト：違いとは","description":"システムプロンプトはAIモデルがどのように考え、振る舞うかを定義します。ユーザープロンプトは今それが何をするかを定義します。違いと相互作用方法を学んでください。","datePublished":"2026-03-22","dateModified":"2026-03-22","keywords":["システムプロンプト","ユーザープロンプト","プロンプトエンジニアリング","LLM動作","GPT-4o","Claude","プロンプト構造","PromptQuorum"],"author":{"@type":"Person","name":"Hans Kuepper","url":"https://www.promptquorum.com/about"},"publisher":{"@type":"Organization","name":"PromptQuorum","url":"https://www.promptquorum.com","logo":{"@type":"ImageObject","url":"https://www.promptquorum.com/logo.svg"}},"mentions":[{"@type":"Thing","name":"PromptQuorum"},{"@type":"Thing","name":"OpenAI"},{"@type":"Thing","name":"GPT-4o"},{"@type":"Thing","name":"Anthropic"},{"@type":"Thing","name":"Claude 4.6 Sonnet"},{"@type":"Thing","name":"Google DeepMind"},{"@type":"Thing","name":"Gemini 1.5 Pro"},{"@type":"Thing","name":"Ollama"}],"proficiencyLevel":"初心者","about":[{"@type":"Thing","name":"システム プロンプト"},{"@type":"Thing","name":"ユーザー プロンプト"},{"@type":"Thing","name":"プロンプト エンジニアリング"},{"@type":"Thing","name":"LLM API"},{"@type":"Thing","name":"AI プロンプト設計"}],"speakable":{"@type":"SpeakableSpecification","cssSelector":[".article-intro",".key-takeaways","h2"]}},"supplementalSchema":{"@context":"https://schema.org","@type":"ItemList","name":"システムプロンプト対ユーザープロンプト — 主要な違い","description":"AI言語モデルの9つの次元に渡るシステムプロンプトとユーザープロンプトの比較","itemListElement":[{"@type":"ListItem","position":1,"name":"範囲","description":"システムプロンプト：セッション全体。ユーザープロンプト：単一リクエスト"},{"@type":"ListItem","position":2,"name":"設定者","description":"システムプロンプト：開発者またはプロダクトチーム。ユーザープロンプト：エンドユーザー"},{"@type":"ListItem","position":3,"name":"頻度","description":"システムプロンプト：セッション開始時に1回。ユーザープロンプト：毎回のリクエスト"},{"@type":"ListItem","position":4,"name":"定義する内容","description":"システムプロンプト：役割、制約、スタイル、動作。ユーザープロンプト：このリクエストのタスク、コンテキスト、形式"},{"@type":"ListItem","position":5,"name":"可視性","description":"システムプロンプト：通常ユーザーに非表示。ユーザープロンプト：常にユーザーに表示"},{"@type":"ListItem","position":6,"name":"変更","description":"システムプロンプト：まれ、アプリ更新が必要。ユーザープロンプト：毎回のインタラクション"},{"@type":"ListItem","position":7,"name":"プロンプトエンジニアリング貢献","description":"システムプロンプト：一貫した出力品質の約70%。ユーザープロンプト：約30%"},{"@type":"ListItem","position":8,"name":"オーバーライドリスク","description":"システムプロンプト：オーバーライドが難しく、永続的、開発者が制御。ユーザープロンプト：調整が容易、リクエストごとにユーザーが制御"},{"@type":"ListItem","position":9,"name":"最適用途","description":"システムプロンプト：役割一貫性、安全性ガードレール、出力形式。ユーザープロンプト：タスク固有の詳細、コンテキスト、フューショット例"}]},"sections":{"definition":{"title":"システムプロンプト対ユーザープロンプト：核となる違い","content":["**システムプロンプトはAIがセッション全体でどのように考えるかを定義し、ユーザープロンプトはその特定のリクエストでそれが何をするかを定義します。** 一文で言うと：システムプロンプトはAIの永遠の職務記述書であり、ユーザープロンプトはその仕事内での個別のタスクです。","すべてのLLM会話には両方があります。システムプロンプト（多くの場合エンドユーザーに非表示）は開始時に1回実行され、モデルの性格、制約、役割を設定します。ユーザープロンプトはリクエストごとに実行され、タスクまたは質問を指定します。両方がテキストです。両方ともプロンプトエンジニアリングの原則に従います。そして両方とも信頼できる出力のために慎重に設計される必要があります。"]},"tldr":{"title":"重要なポイント","isTldr":true,"items":["システムプロンプトはモデルの役割、制約、動作をセッション全体で定義します。1回設定され、すべてのリクエストで使用されます","ユーザープロンプトは各インタラクションの特定のタスクを定義します。ユーザーが提供し、毎回のリクエストで変更されます","システムプロンプトはPromptQuorumがGPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Proで実施したテストに基づいて動作一貫性の約70%を占めます。ユーザープロンプトは特定の出力を形成します","ChatGPTやClaudeなどのアプリの非表示システムプロンプトには隠れたロジックが含まれています。[PromptQuorumはすべてを表示します](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)","隠れたシステムプロンプトを持つローカルLLM（Ollama、LM Studio）はデバッグ問題を引き起こします。透明性で解決","悪いシステムプロンプトはユーザープロンプトを一生懸命働かせます。良いシステムプロンプトはすべてのユーザープロンプトをより良く機能させます"]},"whereTheyLive":{"title":"システムプロンプトとユーザープロンプトはAPIスタックのどこに存在するか？","content":["**システムプロンプトはアプリケーション層に存在します。ユーザープロンプトはインタラクション層に存在します。** OpenAI APIを経由してGPT-4oを呼び出す場合、エンドポイントは2つの個別の入力を受け入れます：`system`（永続的な指示）と`messages`（リクエストごとのユーザー入力）。これはAnthropicのAPIを経由したClaude 4.6 Sonnet、GoogleのAPIを経由したGemini 1.5 Pro、および[Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets)またはLM Studioを経由して実行されるローカルLLMにも同じことが当てはまります。","すべてのモデルはシステム+ユーザープロンプトパターンをサポートします："],"items":["**モデル層：** ベースLLM（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、LLaMA 3.1、Mistral Large）。すべてシステムプロンプトとユーザープロンプト両方を受け入れます","**API層：** 開発者が使用するインターフェース。OpenAI API、Anthropic API、Google API、Ollama RESTエンドポイント、LM Studio。すべてシステムとユーザーを個別フィールドとして公開します","**アプリケーション層：** API上に構築されたプロダクト（ChatGPT、Claude.ai、Gemini、PromptQuorum、カスタムアプリ）。開発者はどのシステムプロンプトを使用するかを決定します","**ユーザーインタラクション層：** エンドユーザーが見るもの。チャット入力、タスク仕様。これがユーザープロンプトになります"]},"whatIsSystemPrompt":{"title":"システムプロンプトとは何か？","content":["**システムプロンプトは、言語モデルが会話セッション全体でどのように振る舞うかを定義する永続的な指示のセットです。** これはユーザー入力の前に開始時にモデルに1回送信されます。システムプロンプトはモデルの役割、通信スタイル、制約、およびデフォルト動作を指定します。その後のすべてのユーザープロンプトはそのシステムプロンプトのコンテキスト内で処理されます。","良く設計されたシステムプロンプトには通常以下が含まれます："],"items":["**役割定義：** 「あなたはPythonエキスパートです」、「あなたはテクニカルライターです」、「あなたは金融アドバイザーです」。モデルのペルソナと専門知識を確立します","**制約：** 「医学的アドバイスを提供しないでください」、「2024年以降のコンテンツを参照しないでください」、「有害なコードの要求を拒否してください」。動作に厳しい制限を設定します","**出力形式：** 「JSONで応答してください」、「Markdownを使用してください」、「番号付きステップを提供してください」。回答をどのように構成するかを定義します","**通信スタイル：** 「簡潔で直接的であってください」、「初心者向けに類似例を使用してください」、「プロフェッショナルなトーンを採用してください」。音声とトーンを形成します","**スコープ境界：** 「Pythonに関する質問にのみ答えてください」、「政治的な質問は無視してください」、「技術サポートのみを処理してください」。モデルが行うことと行わないことを定義します","**インタラクションルール：** 「明確化の質問をしてください」、「常にソースを引用してください」、「不確実性を明示的に認めてください」。モデルがエッジケースを処理する方法を管理します"]},"systemPromptExample":{"title":"システムプロンプトの例","content":"カスタマーサポートチャットボット用のプロダクションレベルのシステムプロンプトの例：","blockquote":"あなたはSaaS製品のカスタマーサポートスペシャリストです。あなたの役割は顧客が技術的な問題を解決するのを支援し、機能に関する質問に答え、請求に関する問い合わせを処理することです。制約：(1)払い戻しを約束しないでください。払い戻しの承認はサポートスタッフのみができます。(2)内部ドキュメントを共有しないでください。(3)将来の機能について推測しないでください。(4)3回のやり取り後に問題が未解決の場合は常に人間のエージェントへのエスカレーションを提供してください。スタイル：同情的で、明確で、解決志向であってください。形式：手順には番号付きステップを使用します。オプションには箇条書きを使用します。技術例にはmarkdownコードブロックを使用します。スコープ：API、セットアップ、トラブルシューティング、機能、請求に関する質問に答えます。法的なアドバイス、無料アップグレード、または製品スコープ外のサポートの要求は拒否してください。"},"whatIsUserPrompt":{"title":"ユーザープロンプトとは何か？","content":["**ユーザープロンプトはリクエストごとの入力。その単一のインタラクションのためにエンドユーザーが提供する特定のタスク、質問、または指示です。** これはシステムプロンプトの後でモデルに送信され、システムプロンプトの制約と役割定義のコンテキスト内で評価されます。単一の会話は多くのユーザープロンプトを持つことができます。システムプロンプトは同じままです。","ユーザープロンプトには通常以下が含まれます："],"items":["**特定のタスクまたは質問：** 「この記事を要約してください」、「製品コピーを書いてください」、「このエラーをデバッグしてください」。そのインタラクションの具体的な要求","**そのリクエストのコンテキスト：** 「B2Bオーディエンス向け」、「初心者向け」、「ドキュメント向け」。これが誰と何のためかを明確にします","**このタスクの追加指示：** 「200語で」、「例を含めて」、「プロフェッショナルなトーンで」。この特定の要求のために出力を改善します","**例（必要な場合）：** 「これは良い例です：」。モデルに希望するスタイルを教えます","**このタスクの制約：** 「価格設定について言及しないでください」、「専門用語を避けてください」、「日本語で」。このリクエストのみに適用される内容を制限します"]},"userPromptExample":{"title":"ユーザープロンプトの例","content":"上記で定義したカスタマーサポートチャットボットに送信された完全なユーザープロンプトの例：","blockquote":"SAML 2.0を経由してシングルサインオン（SSO）を設定しようとしていますが、Okta統合が「署名検証に失敗しました」エラーを返し続けます。セットアップガイドに従い、メタデータファイルをアップロードしましたが、まだ機能していません。トラブルシューティングステップを案内していただけますか？"},"comparison":{"title":"システムプロンプト対ユーザープロンプト：概要","tableFormat":true,"columns":["次元","システムプロンプト","ユーザープロンプト"],"rows":[{"次元":"範囲","システムプロンプト":"セッション全体","ユーザープロンプト":"単一リクエスト"},{"次元":"設定者","システムプロンプト":"開発者/プロダクトチーム","ユーザープロンプト":"エンドユーザー"},{"次元":"頻度","システムプロンプト":"開始時に1回","ユーザープロンプト":"毎回のリクエスト"},{"次元":"定義する内容","システムプロンプト":"役割、制約、スタイル、動作","ユーザープロンプト":"このリクエストのタスク、コンテキスト、形式"},{"次元":"可視性","システムプロンプト":"通常ユーザーに非表示","ユーザープロンプト":"常にユーザーに表示"},{"次元":"変更","システムプロンプト":"まれ（アプリ更新が必要）","ユーザープロンプト":"毎回のインタラクション"},{"次元":"プロンプトエンジニアリング%","システムプロンプト":"一貫した出力品質の約70%","ユーザープロンプト":"一貫した出力品質の約30%"},{"次元":"オーバーライドリスク","システムプロンプト":"オーバーライドが難しく。永続的で開発者が制御","ユーザープロンプト":"調整が容易。リクエストごとにユーザーが制御"},{"次元":"最適用途","システムプロンプト":"役割一貫性、安全性ガードレール、出力形式","ユーザープロンプト":"タスク固有の詳細、コンテキスト、フューショット例"}]},"designingSystemPrompt":{"title":"効果的なシステムプロンプトとは？","content":["**システムプロンプトはすべてのユーザーインタラクションで一貫した動作を生み出すために、特定で層状で制約に焦点を当てる必要があります。** 最高のシステムプロンプトは詳細です。モデルが何をすべきかだけでなく、何を拒否すべきか、回答をどのようにフォーマットすべきか、どの制約が普遍的に適用されるかを指定します。","効果的なシステムプロンプトの5つの原則："],"items":["**1. 明示的な役割定義：** モデルがそのジョブを知っていると仮定しないでください。最初に「あなたは[役割]です」と言ってください。比較：「ライティングを支援してください」（曖昧）対「あなたはLinkedInキャンペーン向けのB2B SaaS製品説明に特化したテクニカルコピーライターです」（具体的）。","**2. 制約優先設計：** すべきことのリストの前に、モデルが行ってはいけないことをリストアップしてください。「統計を作成しないでください」、「誇張を使用しないでください」、「リストされていない機能を提案しないでください」。明示的な拒否は一貫した境界を生成します。","**3. フォーマット仕様：** すべてのシステムプロンプトは出力フォーマット（JSON、Markdown、箇条書き、番号付きステップ、プレーンテキスト）を定義する必要があります。フォーマット仕様がないシステムプロンプトは、すべてのユーザープロンプトに何度も指定することを強制します。","**4. スコープ境界：** 処理するリクエストの宇宙を定義してください。「APIの質問のみに答えてください」、「Pythonのアドバイスを提供してください」、「トラブルシューティングをサポートしてください」。明確なスコープはドメイン外の回答を防ぎます。","**5. 複数のモデルでテスト：** [複数のモデル（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro）でシステムプロンプトをテストしてください。](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) 一部のモデルは制約についてより厳密です。他は異なるスタイルを解釈します。堅牢なシステムプロンプトは3つすべてで一貫して機能します。"]},"promptquorumTransparency":{"title":"なぜシステムプロンプトは非表示なのか？そしてどのようにして表示できるのか？","content":["**PromptQuorumには重大な機能があります：ローカルLLMバックエンドの非表示プロンプトを含むすべてのシステムプロンプトを表示するトグルです。** これはOllamaまたはLM Studioを使用する際に特に重要です。非表示のシステムロジックは歴史的に予期しない動作とデバッグの悪夢を引き起こしてきました。","LM StudioまたはOllamaをアプリケーションに接続する場合、ローカルモデルの非表示システム指示は以下の原因となります："],"items":["**信頼の問題：** モデルが下で従っている指示がわかりません。回答の「なぜ」について可視性がありません。","**デバッグの問題：** ローカルLLMが予期しない出力を返します。ユーザープロンプトを書き直します。まだ間違っています。システムプロンプトが見えないと、問題を診断できません。","**モデル間の不一貫性：** GPT-4oとOllamaで同じプロンプトを実行します。異なる回答。両方のシステムプロンプトが見えないと、違いがモデル機能か隠れた指示かを判断できません。","**規制および監査リスク：** エンタープライズデプロイメントは透明性を必要とします。規制が「このAI決定を駆動した指示は何ですか？」と要求し、システムプロンプトが非表示の場合、コンプライアンスを達成できません。"]},"promptquorumToggle":{"title":"PromptQuorumシステムプロンプトトグル","content":["PromptQuorumはトグル可能なインターフェースを含みます：「システムプロンプトを表示」。有効にすると、各モデル（GPT-4o、Claude 4.6 Sonnet、Gemini、Ollama、LM Studio、すべて）で実行されている実際のシステムプロンプトが表示されます。これは1つのプロンプトを複数のローカルバックエンドに同時にディスパッチする場合に特に価値があります。"]},"claudeCodeStory":{"title":"システムプロンプトが非表示の場合はどうなるか？実際の例","content":["PromptQuorum自体はClaude Codeで構築されました。開発者は重大な問題に遭遇しました。Claude Codeは、コード生成、安全性の動作、品質チェックをガイドする広範な非表示システム指示を備えています。Claude Codeが機能を生成した場合、その非表示の指示が組み込まれました。しかし、同じコードが非表示のシステムロジックなしでローカルLLM（Ollama、LM Studio）で実行される必要があったとき、すべてが壊れました。非表示の「特別なソース」は移植できませんでした。","解決策：すべてのシステムプロンプトを可視化します。開発者はモデルが従っている指示を見る必要があります。推測したり、盲目的にデバッグしたりしません。"]},"practicalRecipes":{"title":"実践的なレシピ：3つのプロダクションシステムプロンプト","content":"独自の用途に適応させることができる3つのシステムプロンプトを次に示します："},"recipe1":{"title":"レシピ1：カスタマーサポートボット","blockquote":"あなたはSaaS製品のレベル1サポートスペシャリストです。あなたの役割：顧客のトラブルシューティング、アカウントと請求に関する質問への回答、複雑な問題をシニアサポートにエスカレートすることです。制約：(1)払い戻しを約束しないでください。払い戻しの承認はシニアサポートのみができます。(2)内部ドキュメントを共有しないでください。(3)わからないことを認めてください。出力形式：手順に番号付きステップを使用します。オプションに箇条書きリストを使用します。例にmarkdownコードブロックを使用します。トーン：プロフェッショナル、同情的で、解決志向。3回の失敗した解決試行後にエスカレートしてください。スコープ：アカウントアクセス、請求、機能、セットアップ、統合、トラブルシューティング。法的、税務、または会計上のアドバイスは拒否してください。"},"recipe2":{"title":"レシピ2：データアナリスト","blockquote":"あなたはシニアデータアナリストです。あなたの役割：データセットを分析し、トレンドを特定し、推奨事項を提供することです。制約：(1)常にデータソースを引用してください。(2)証拠がなければ因果関係を想定しないでください。(3)不確実性を定量化してください。信頼度が低い場合はそう言ってください。(4)データを超えて外挿しないでください。出力形式：エグゼクティブサマリー（3つの主な調査結果）+テーブル付きの詳細分析+推奨事項。信頼レベルを含めてください。トーン：明確で、正確で、データ駆動型。スコープ：提供されたデータのみを分析してください。データの捏造、不確実性のオーバーライドの推測は拒否してください。"},"recipe3":{"title":"レシピ3：コードレビュアー","blockquote":"あなたはエキスパートコードレビュアーです。あなたの役割：正確性、パフォーマンス、保守性、セキュリティについてコードを評価することです。制約：(1)強みと弱みを指摘してください。(2)一般的なアドバイスではなく、特定の改善を提案してください。(3)著者の選択を尊重してください。要求ではなく「なぜ」を説明してください。(4)過度な最適化を提案しないでください。(5)セキュリティ問題を重大として旗を立ててください。出力形式：概要+コードスニペット付きの行ごとのフィードバック。markdownコードブロックを使用してください。トーン：敬意を払い、建設的。スコープ：コードレビューのみ。スコープ外のリファクタリングまたはアーキテクチャ変更は拒否してください。"},"relatedReading":{"title":"関連する読み物","items":["[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — 柱の定義と中核概念","[Fundamentals: The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — システムプロンプトとユーザープロンプトの両方に適用される構造","[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — 効率のためにユーザープロンプトを最適化してください","[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — 各ステップが独自のプロンプトを持つマルチステップワークフロー"]},"faq":{"title":"よくある質問","faqs":[{"q":"システムプロンプトとは何ですか？","a":"システムプロンプトは、言語モデルが会話セッション全体でどのように振る舞うかを定義する永続的な指示のセットです。開始時に1回設定され、すべてのユーザーインタラクションに適用されます。システムプロンプトはモデルの役割、制約、出力形式、通信スタイルを指定します。"},{"q":"ユーザープロンプトとは何ですか？","a":"ユーザープロンプトはリクエストごとの入力。その単一のインタラクションのために提供される特定のタスク、質問、または指示です。エンドユーザーが作成し、毎回のリクエストで変更されます。ユーザープロンプトはシステムプロンプトのルールと役割定義のコンテキスト内で評価されます。"},{"q":"システムプロンプト対ユーザープロンプトを誰が書きますか？","a":"開発者とプロダクトチームがシステムプロンプトを書いて製品に配布します。エンドユーザーは製品と相互作用する際にユーザープロンプトを書きます。PromptQuorumなどのツールでは、ユーザーは両方を見て編集できます。"},{"q":"エンドユーザーの場合、なぜシステムプロンプトを見る必要があるのですか？","a":"LM StudioやOllamaなどのローカルLLMを使用する場合、非表示のシステムプロンプトは予期しない動作とデバッグの問題を引き起こします。システムプロンプトを見ることで、信頼が可能になり、モデルの制約を理解でき、より良いユーザープロンプトを書くのに役立ちます。"},{"q":"すべてのLLMはシステムプロンプトを使用していますか？","a":"はい。すべての主要なLLM（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Ollamaモデル、LM Studio）はシステムプロンプト+ユーザープロンプトパターンをサポートします。一部はデフォルトシステムプロンプトで付属しています。他は独自に定義することができます。"},{"q":"ユーザープロンプトはシステムプロンプトをオーバーライドできますか？","a":"直接的ではありません。システムプロンプトは構造的優先順位を持っています。モデルは最初にそれらを処理し、永続的な制約として扱われます。ユーザープロンプトは明示的にシステムプロンプトを無効化または上書きすることはできません。ただし、曖昧な制約を持つ設計の悪いシステムプロンプトは、ユーザープロンプトが強く矛盾する場合は無視される可能性があります。良く設計されたシステムプロンプトには、ユーザーのオーバーライドに抵抗する明示的な拒否ルールが含まれます。"},{"q":"システムプロンプトがない場合はどうなりますか？","a":"モデルはそのデフォルトのトレーニング動作にフォールバックします。GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Proはすべて、システムプロンプトが存在しない場合の組み込み基本動作（有用、害のない、正直）を持っています。モデルはまだユーザープロンプトに応答しますが、役割定義、出力形式の制約、またはスコープ境界なしで。結果はより一貫性がなく、より専門的ではありません。"},{"q":"システムプロンプトはEU AI Act合規性にどう影響しますか？","a":"EU AI Act（2025年2月発効）は、高リスクAIシステムに対し透明性文書化を要求します。システムプロンプトはログ記録、バージョン管理され、コンプライアンスチームがアクセスできる必要があります。"}]},"sources":{"title":"ソースおよび参考資料","items":["[OpenAI, 2024. \"Prompt Engineering Guide\"](https://platform.openai.com/docs/guides/prompt-engineering) — システムプロンプトとユーザープロンプト、技術、ベストプラクティスに関するOpenAI公式ドキュメント","[Anthropic, 2024. \"Prompt Engineering\"](https://docs.anthropic.com/en/docs/build-a-Claude-app/prompt-engineering) — プロンプトを構造化し、Claudeモデル用のシステム指示を設計するためのAnthropicガイド","[Schulhoff et al., 2024. \"The Prompt Report: A Systematic Survey of Prompting Techniques\"](https://arxiv.org/abs/2406.06608) — 58以上の離散的なプロンプト技術をカタログしている包括的な学術調査"]},"regionalCompliance":{"title":"システムプロンプトと地域コンプライアンス","content":["METI AI ガバナンスガイドラインでは、組織は「AIシステムが動作する条件」を文書化する必要があります。これはシステムプロンプトコンテンツを含みます。日本の企業チームは、規制レビュー中にドキュメント要件を満たすため、システムプロンプトを構成管理システムに保存する必要があります。","アジア太平洋地域の規制はプライバシーと透明性を強調しています。システムプロンプトを見える状態にすることで、エンタープライズの説明責任ニーズが満たされます。","中国の生成型AI暫定措置では、生成AI サービス提供者は「コンテンツセーフティ」メカニズムを実装する必要があります。"]}},"howToSchema":{"@context":"https://schema.org","@type":"HowTo","name":"5ステップで効果的なシステムプロンプトを作成する方法","step":[{"@type":"HowToStep","position":1,"name":"ドメイン固有の言語で役割を明示的に定義する"},{"@type":"HowToStep","position":2,"name":"機能の前に制約を書く"},{"@type":"HowToStep","position":3,"name":"システムプロンプトで出力形式を指定する"},{"@type":"HowToStep","position":4,"name":"明示的な拒否ルールで範囲の境界を設定する"},{"@type":"HowToStep","position":5,"name":"少なくとも5つの異なるユーザーメッセージでテストする"}]}},
+  zh: {"theme":"Fundamentals","title":"系统提示与用户提示：有什么区别","intro":"系统提示定义AI模型在整个会话中的思维和行为方式；用户提示定义它现在做什么。了解区别、何时使用各自、它们如何相互作用，以及为什么PromptQuorum同时显示两者。","publishDate":"2026-03-22","readTime":"8 min read","seoTitle":"2026年系统提示 vs 用户提示完整对比：AI角色定义、约束条件、API结构与GPT-4o实例解析","metaDescription":"系统提示在整个会话期间设定AI的角色、约束条件和输出响应格式，用户提示则为每次交互定义具体任务。本文详细说明两者的API结构差异、OpenAI与Anthropic API的实现方式、GPT-4o和Claude 4.6 Sonnet的完整使用示例，以及编写高效系统提示的5条设计原则。","schema":{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.promptquorum.com/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference","inLanguage":"zh","headline":"系统提示与用户提示：有什么区别","description":"系统提示定义AI模型如何思考和行为；用户提示定义它现在做什么。了解区别和它们如何相互作用。","datePublished":"2026-03-22","dateModified":"2026-03-22","keywords":["系统提示","用户提示","提示工程","LLM行为","GPT-4o","Claude","提示结构","PromptQuorum"],"author":{"@type":"Person","name":"Hans Kuepper","url":"https://www.promptquorum.com/about"},"publisher":{"@type":"Organization","name":"PromptQuorum","url":"https://www.promptquorum.com","logo":{"@type":"ImageObject","url":"https://www.promptquorum.com/logo.svg"}},"mentions":[{"@type":"Thing","name":"PromptQuorum"},{"@type":"Thing","name":"OpenAI"},{"@type":"Thing","name":"GPT-4o"},{"@type":"Thing","name":"Anthropic"},{"@type":"Thing","name":"Claude 4.6 Sonnet"},{"@type":"Thing","name":"Google DeepMind"},{"@type":"Thing","name":"Gemini 1.5 Pro"},{"@type":"Thing","name":"Ollama"}],"proficiencyLevel":"初学者","about":[{"@type":"Thing","name":"系统提示词"},{"@type":"Thing","name":"用户提示词"},{"@type":"Thing","name":"提示词工程"},{"@type":"Thing","name":"LLM API"},{"@type":"Thing","name":"AI提示设计"}],"speakable":{"@type":"SpeakableSpecification","cssSelector":[".article-intro",".key-takeaways","h2"]}},"supplementalSchema":{"@context":"https://schema.org","@type":"ItemList","name":"系统提示与用户提示 — 主要区别","description":"在9个维度上对AI语言模型系统提示和用户提示的比较","itemListElement":[{"@type":"ListItem","position":1,"name":"范围","description":"系统提示：整个会话。用户提示：单个请求"},{"@type":"ListItem","position":2,"name":"设定者","description":"系统提示：开发者或产品团队。用户提示：最终用户"},{"@type":"ListItem","position":3,"name":"频率","description":"系统提示：在会话开始时一次。用户提示：每个请求"},{"@type":"ListItem","position":4,"name":"定义","description":"系统提示：角色、约束、风格、行为。用户提示：此请求的任务、上下文、格式"},{"@type":"ListItem","position":5,"name":"可见性","description":"系统提示：通常对用户隐藏。用户提示：始终对用户可见"},{"@type":"ListItem","position":6,"name":"更改","description":"系统提示：很少，需要应用更新。用户提示：每次交互"},{"@type":"ListItem","position":7,"name":"提示工程贡献","description":"系统提示：约70%的一致输出质量。用户提示：约30%"},{"@type":"ListItem","position":8,"name":"覆盖风险","description":"系统提示：难以覆盖、持久、由开发者控制。用户提示：易于调整、由用户按请求控制"},{"@type":"ListItem","position":9,"name":"最适合","description":"系统提示：角色一致性、安全防护栏、输出格式。用户提示：特定任务的细节、上下文、少样本示例"}]},"sections":{"definition":{"title":"系统提示与用户提示：核心区别","content":["**系统提示定义AI在整个会话中的思维方式；用户提示定义它在特定请求中做什么。** 简言之：系统提示是AI的永久工作描述，用户提示是该工作中的单个任务。","每个LLM会话都同时拥有两者。系统提示（通常对最终用户隐藏）在开始时运行一次，设置模型的个性、约束和角色。用户提示按请求运行，指定任务或问题。两者都是文本，两者都遵循提示工程原则，两者都需要精心设计以实现可靠的输出。"]},"tldr":{"title":"关键要点","isTldr":true,"items":["系统提示为整个会话定义模型的角色、约束和行为 — 设定一次，用于所有请求","用户提示为每次交互定义特定任务 — 由用户提供，每个请求都会改变","根据PromptQuorum在GPT-4o、Claude 4.6 Sonnet和Gemini 1.5 Pro上的测试，系统提示占行为一致性的约70%；用户提示塑造特定输出","ChatGPT和Claude等应用中隐藏的系统提示包含隐藏逻辑 — [PromptQuorum向您显示所有内容](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)","具有隐藏系统提示的本地LLM（Ollama、LM Studio）会导致调试问题 — 通过透明性解决","不好的系统提示迫使用户提示工作更努力；好的系统提示使每个用户提示工作得更好"]},"whereTheyLive":{"title":"系统提示和用户提示在API堆栈中的位置？","content":["**系统提示位于应用层；用户提示位于交互层。** 当您通过OpenAI API调用GPT-4o时，端点接受两个独立输入：`system`（持久指令）和`messages`（每个请求的用户输入）。这同样适用于通过Anthropic API的Claude 4.6 Sonnet、通过Google API的Gemini 1.5 Pro，以及通过[Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets)或LM Studio运行的任何本地LLM。","所有模型都支持系统+用户提示模式："],"items":["**模型层：** 基础LLM（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、LLaMA 3.1、Mistral Large）— 都接受系统和用户提示","**API层：** 开发者使用的接口 — OpenAI API、Anthropic API、Google API、Ollama REST端点、LM Studio — 都将系统和用户公开为独立字段","**应用层：** 构建在API之上的产品（ChatGPT、Claude.ai、Gemini、PromptQuorum、您的自定义应用）— 开发者决定使用哪个系统提示","**用户交互层：** 最终用户看到的内容 — 聊天输入、任务规范 — 这成为用户提示"]},"whatIsSystemPrompt":{"title":"什么是系统提示？","content":["**系统提示是一组持久指令，定义语言模型在整个会话期间的行为。** 它在开始时在任何用户输入之前发送给模型一次。系统提示指定模型的角色、通信风格、约束和默认行为。所有后续用户提示都在该系统提示的背景下处理。","精心设计的系统提示通常包括："],"items":["**角色定义：** \"您是Python专家\"、\"您是技术作者\"、\"您是财务顾问\" — 建立模型的角色和专业知识","**约束：** \"不提供医学建议\"、\"不引用2024年后的内容\"、\"拒绝有害代码的请求\" — 对行为设置硬性限制","**输出格式：** \"以JSON响应\"、\"使用Markdown\"、\"提供编号步骤\" — 定义答案应如何构建","**通信风格：** \"简洁直接\"、\"使用初学者类比\"、\"采用专业语气\" — 塑造声音和语气","**范围边界：\" \"仅回答Python问题\"、\"忽略政治问题\"、\"仅处理技术支持\" — 定义模型会和不会做什么","**交互规则：** \"提出澄清问题\"、\"始终引用来源\"、\"明确承认不确定性\" — 管理模型如何处理边界情况"]},"systemPromptExample":{"title":"系统提示示例","content":"这是用于客户支持聊天机器人的生产级系统提示：","blockquote":"您是SaaS产品的客户支持专家。您的角色是帮助客户解决技术问题、回答功能问题和处理账单询问。约束：(1)不要承诺退款 — 仅支持人员可以授权退款。(2)不要共享内部文档。(3)不要推测未来功能。(4)如果问题在3次交互后仍未解决，始终提供升级给人工代理的选项。风格：同情、清晰、以解决方案为中心。格式：使用编号步骤作为程序；箭头列表表示选项；markdown代码块表示技术示例。范围：回答API、设置、故障排除、功能和账单问题。拒绝法律建议、免费升级或产品范围外的支持。"},"whatIsUserPrompt":{"title":"什么是用户提示？","content":["**用户提示是按请求输入 — 最终用户为单个交互提供的特定任务、问题或指令。** 它在系统提示之后发送给模型，并在系统提示的约束和角色定义的背景下进行评估。单个会话可以有许多用户提示；系统提示保持不变。","用户提示通常包括："],"items":["**具体的任务或问题：** \"总结这篇文章\"、\"撰写产品副本\"、\"调试此错误\" — 该交互的具体请求","**该请求的背景：** \"对于B2B受众\"、\"对于初学者\"、\"对于文档\" — 澄清这是为了谁和什么","**此任务的其他指令：** \"在200字内\"、\"附带示例\"、\"专业语气\" — 为此特定要求细化输出","**示例（如需）：** \"这是一个很好的例子：\" — 教模型您想要的风格","**此任务的约束：** \"不提及定价\"、\"避免行话\"、\"用中文\" — 限制仅适用于此请求的内容"]},"userPromptExample":{"title":"用户提示示例","content":"这是发送给上面定义的客户支持聊天机器人的完整用户提示：","blockquote":"我一直在尝试通过SAML 2.0设置单点登录（SSO），但我们的Okta集成一直返回\"签名验证失败\"错误。我按照设置指南，上传了元数据文件，但仍然不工作。您能否逐步指导我完成故障排除步骤？"},"comparison":{"title":"系统提示与用户提示：一目了然","tableFormat":true,"columns":["维度","系统提示","用户提示"],"rows":[{"维度":"范围","系统提示":"整个会话","用户提示":"单个请求"},{"维度":"设定者","系统提示":"开发者/产品团队","用户提示":"最终用户"},{"维度":"频率","系统提示":"开始时一次","用户提示":"每个请求"},{"维度":"定义","系统提示":"角色、约束、风格、行为","用户提示":"此请求的任务、上下文、格式"},{"维度":"可见性","系统提示":"通常对用户隐藏","用户提示":"始终对用户可见"},{"维度":"更改","系统提示":"很少（需要应用更新）","用户提示":"每次交互"},{"维度":"提示工程%","系统提示":"一致输出质量的约70%","用户提示":"一致输出质量的约30%"},{"维度":"覆盖风险","系统提示":"难以覆盖 — 持久、开发者控制","用户提示":"易于调整 — 用户按请求控制"},{"维度":"最适合","系统提示":"角色一致性、安全防护栏、输出格式","用户提示":"特定任务的细节、上下文、少样本示例"}]},"designingSystemPrompt":{"title":"什么使系统提示有效？","content":["**系统提示必须具体、分层和约束导向，以在所有用户交互中产生一致的行为。** 最好的系统提示是详细的 — 它们不仅指定模型应该做什么，还指定它应该拒绝什么、它应该如何格式化答案以及哪些约束普遍适用。","有效系统提示的五项原则："],"items":["**1. 显式角色定义：** 不要假设模型知道它的工作。在开始时说\"您是[角色]\"。比较：\"帮助写作\"（模糊）与\"您是专门为LinkedIn活动撰写B2B SaaS产品描述的技术文案撰写者\"（具体）。","**2. 约束优先设计：** 在列出它应该做什么之前，列出模型必须NOT做什么。\"不编造统计数据\"、\"不使用夸张\"、\"不建议未列出的功能\" — 明确的拒绝产生一致的边界。","**3. 格式规范：** 每个系统提示都应定义输出格式：JSON、Markdown、项目符号列表、编号步骤或纯文本。没有格式规范的系统提示会迫使每个用户提示重复指定它。","**4. 范围边界：** 定义您将处理的请求范围。\"仅回答API问题\"、\"提供Python建议\"、\"支持故障排除\" — 明确的范围防止域外答案。","**5. 跨模型测试：** 在[多个模型 — GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro上测试系统提示](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)。某些模型对约束更严格；其他模型以不同方式解释风格。稳健的系统提示在所有三个模型上始终工作。"]},"promptquorumTransparency":{"title":"为什么系统提示被隐藏 — 你如何查看它们？","content":["**PromptQuorum有一个关键功能：一个切换开关，向您显示所有系统提示，包括本地LLM后端中隐藏的提示。** 当使用Ollama或LM Studio时，这特别重要，因为隐藏的系统逻辑在历史上曾导致意外的行为和调试噩梦。","当您将LM Studio或Ollama连接到应用程序时，本地模型中的隐藏系统指令会导致："],"items":["**信任问题：** 您不知道模型在下面遵循什么指令。您对其响应的\"为什么\"没有可见性。","**调试问题：** 您的本地LLM返回意外输出。您重写用户提示。仍然是错的。没有看到系统提示，您无法诊断问题。","**模型间的不一致：** 您在GPT-4o和Ollama上运行相同的提示。不同的答案。没有看到两个系统提示，您无法判断差异是模型能力还是隐藏指令。","**监管和审计风险：** 企业部署需要透明度。如果法规要求\"什么指令推动这个AI决定？\"而系统提示被隐藏，您无法合规。"]},"promptquorumToggle":{"title":"PromptQuorum系统提示切换","content":["PromptQuorum包含可切换的界面：\"显示系统提示\"。启用后，您会看到在每个模型上运行的实际系统提示 — GPT-4o、Claude 4.6 Sonnet、Gemini、Ollama、LM Studio、所有这些。这在将一个提示同时分派到多个本地后端时特别有价值。"]},"claudeCodeStory":{"title":"当系统提示被隐藏时会发生什么？一个真实的例子","content":["PromptQuorum本身是用Claude Code构建的 — 开发者遇到了一个严重的问题。Claude Code配备了大量隐藏的系统指令，指导代码生成、安全行为和质量检查。当Claude Code生成功能时，这些隐藏的指令被烘烤进去了。但当相同的代码需要在没有隐藏系统逻辑的本地LLM（Ollama、LM Studio）上运行时，一切都破裂了。隐藏的\"特殊酱汁\"不可移植。","解决方案：使所有系统提示可见。开发者需要看到模型遵循什么指令 — 不要猜测或盲目调试。"]},"practicalRecipes":{"title":"实用食谱：三个生产系统提示","content":"这是三个系统提示，您可以调整以供自己使用："},"recipe1":{"title":"食谱1：客户支持机器人","blockquote":"您是SaaS产品的1级支持专家。您的角色：帮助客户进行故障排除、回答账户和计费问题、向高级支持升级复杂问题。约束：(1)不要承诺退款 — 仅高级支持可以批准退款。(2)不要共享内部文档。(3)承认您不知道的地方。输出格式：程序使用编号步骤、选项使用项目符号列表、示例使用markdown代码块。语调：专业、同情、以解决方案为中心。在3次失败的解决方案尝试后升级。范围：账户访问、计费、功能、设置、集成、故障排除。拒绝：法律、税务或会计建议。"},"recipe2":{"title":"食谱2：数据分析师","blockquote":"您是高级数据分析师。您的角色：分析数据集、识别趋势、提供建议。约束：(1)始终引用数据源。(2)没有证据不要假设因果关系。(3)量化不确定性 — 如果信心低，请说出来。(4)不要超越数据进行推断。输出格式：执行摘要（3个关键发现）+带表格的详细分析+建议。包括信心水平。语调：清晰、精确、数据驱动。范围：仅分析提供的数据。拒绝：编造数据、用推测覆盖不确定性。"},"recipe3":{"title":"食谱3：代码审查者","blockquote":"您是代码审查专家。您的角色：评估代码的正确性、性能、可维护性和安全性。约束：(1)指出优点和缺点。(2)建议具体改进，而不是通用建议。(3)尊重作者的选择 — 解释\"为什么\"，而不是要求。(4)不要建议过度优化。(5)将安全问题标记为严重。输出格式：摘要+带代码片段的逐行反馈。使用markdown代码块。语调：尊重、建设性。范围：代码审查仅。拒绝：范围外的重构或架构变更。"},"relatedReading":{"title":"相关阅读","items":["[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — 支柱定义和核心概念","[Fundamentals: The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — 适用于系统和用户提示的结构","[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — 优化用户提示以提高效率","[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — 多步工作流，其中每个步骤都有自己的提示"]},"faq":{"title":"常见问题","faqs":[{"q":"什么是系统提示？","a":"系统提示是一组持久指令，定义语言模型在整个会话期间的行为。它在开始时设置一次，适用于所有用户交互。系统提示指定模型的角色、约束、输出格式和通信风格。"},{"q":"什么是用户提示？","a":"用户提示是按请求输入 — 为单个交互提供的特定任务、问题或指令。它由最终用户创建，并随每个请求更改。用户提示在系统提示的规则和角色定义的背景下进行评估。"},{"q":"系统提示与用户提示由谁编写？","a":"开发者和产品团队编写系统提示并在产品中提供。最终用户在与产品交互时编写用户提示。在PromptQuorum等工具中，用户可以看到和编辑两者。"},{"q":"作为最终用户，为什么我应该看到系统提示？","a":"当使用LM Studio或Ollama等本地LLM时，隐藏的系统提示会导致意外行为和调试问题。看到系统提示可以实现信任，让您了解模型的约束，并帮助您编写更好的用户提示。"},{"q":"所有LLM都使用系统提示吗？","a":"是的。所有主要LLM — GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Ollama模型、LM Studio — 都支持系统+用户提示模式。有些带有默认系统提示；其他允许您定义自己的。"},{"q":"用户提示可以覆盖系统提示吗？","a":"不直接。系统提示具有结构优先级 — 模型首先处理它们并将其视为持久约束。用户提示不能明确禁用或覆盖系统提示。但是，具有模糊约束的设计不佳的系统提示可能会被忽略（如果用户提示强烈与之矛盾）。设计良好的系统提示包括显式拒绝规则，以抵抗用户覆盖。"},{"q":"如果没有系统提示会发生什么？","a":"模型回退到其默认的训练行为。GPT-4o、Claude 4.6 Sonnet和Gemini 1.5 Pro都在没有系统提示时有内置的基线行为（有帮助、无害、诚实）。模型仍将响应用户提示，但没有角色定义、输出格式约束或范围边界 — 结果会不那么一致，不那么专业。"},{"q":"系统提示词如何影响EU AI Act合规性？","a":"EU AI Act（2025年2月生效）对高风险AI系统要求透明度文档。系统提示词必须记录、版本控制，并可供合规团队访问。无法披露的隐藏系统提示词构成直接合规风险。"}]},"sources":{"title":"来源和进一步阅读","items":["[OpenAI, 2024. \"Prompt Engineering Guide\"](https://platform.openai.com/docs/guides/prompt-engineering) — 关于系统和用户提示、技术和最佳实践的OpenAI官方文档","[Anthropic, 2024. \"Prompt Engineering\"](https://docs.anthropic.com/en/docs/build-a-Claude-app/prompt-engineering) — Anthropic关于为Claude模型构建提示和设计系统指令的指南","[Schulhoff et al., 2024. \"The Prompt Report: A Systematic Survey of Prompting Techniques\"](https://arxiv.org/abs/2406.06608) — 目录58多个离散提示技术的综合学术调查"]},"regionalCompliance":{"title":"系统提示词与地区合规","content":["中国2021年数据安全法要求本地化数据处理。系统提示词必须符合本地AI治理标准。中国企业应将系统提示词视为配置文档，具有版本控制和审计跟踪。","新加坡、日本、韩国的AI法规要求跨境数据转移时的透明度。系统提示词的可见性证明符合当地隐私和治理要求。","中国金融、医疗、法律部门的大型企业需要证明AI系统符合监管标准。系统提示词必须版本受控、可审计。"]}},"howToSchema":{"@context":"https://schema.org","@type":"HowTo","name":"用5个步骤编写有效的系统提示词","step":[{"@type":"HowToStep","position":1,"name":"用特定领域的语言明确定义角色"},{"@type":"HowToStep","position":2,"name":"在能力之前写出约束条件"},{"@type":"HowToStep","position":3,"name":"在系统提示中指定输出格式"},{"@type":"HowToStep","position":4,"name":"使用明确的拒绝规则设置范围边界"},{"@type":"HowToStep","position":5,"name":"用至少5条不同的用户消息进行测试"}]}},
 },
 
 
@@ -10921,7 +10921,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de',
+    url: 'https://www.promptquorum.com/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model',
     inLanguage: 'de',
     headline: 'GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen',
     datePublished: '2026-03-23',
@@ -11225,7 +11225,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model',
       inLanguage: 'fr',
       headline: 'GPT, Claude ou Gemini : Comment choisir le bon modèle IA',
       datePublished: '2026-03-23',
@@ -11551,7 +11551,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model',
       inLanguage: 'ja',
       headline: 'GPT、Claude、Gemini：正しいAIモデルの選び方',
       datePublished: '2026-03-23',
@@ -11877,7 +11877,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model',
       inLanguage: 'zh',
       headline: 'GPT、Claude还是Gemini：如何选择正确的AI模型',
       datePublished: '2026-03-23',
@@ -13203,7 +13203,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=de',
+          url: 'https://www.promptquorum.com/de/api/og/ai-powered-research',
           width: 1200,
           height: 630,
         },
@@ -13577,12 +13577,12 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[RAG Explained](/prompt-engineering/rag-explained?lang=de) – die Abruf-Architektur, die Elicit, Consensus und alle Production-Forschungs-KI-Tools antreibt',
-            '[AI Limitations – What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) – warum Halluzination strukturell ist, kein \'fixed-able\' Bug',
-            '[Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security?lang=de) – indirekte Injection-Risiken beim Füttern von gescrape Web-Inhalten in Forschungs-Pipelines',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) – strukturiertes Denken für systematische Analyse-Aufgaben, die nachvollziehbare Logik erfordern',
-            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) – wie Zufallsparameter faktische Genauigkeit in Zitat-Generierung beeinflussen',
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) – fundamentale Definition strukturierter KI-Anweisungen',
+            '[RAG Explained](/de/prompt-engineering/rag-explained) – die Abruf-Architektur, die Elicit, Consensus und alle Production-Forschungs-KI-Tools antreibt',
+            '[AI Limitations – What LLMs Can\'t Do](/de/prompt-engineering/ai-limitations-what-llms-cant-do) – warum Halluzination strukturell ist, kein \'fixed-able\' Bug',
+            '[Prompt Injection & Security](/de/prompt-engineering/prompt-injection-and-security) – indirekte Injection-Risiken beim Füttern von gescrape Web-Inhalten in Forschungs-Pipelines',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) – strukturiertes Denken für systematische Analyse-Aufgaben, die nachvollziehbare Logik erfordern',
+            '[Temperature and Top-P Explained](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) – wie Zufallsparameter faktische Genauigkeit in Zitat-Generierung beeinflussen',
+            '[What Is Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) – fundamentale Definition strukturierter KI-Anweisungen',
           ],
         },
         howToStart: {
@@ -13683,7 +13683,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=fr',
+          url: 'https://www.promptquorum.com/fr/api/og/ai-powered-research',
           width: 1200,
           height: 630,
         },
@@ -14057,12 +14057,12 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[RAG Explained](/prompt-engineering/rag-explained?lang=fr) — l\'architecture de récupération qui alimente Elicit, Consensus et tous les outils de recherche IA en production',
-            '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — pourquoi l\'hallucination est structurelle, pas un bug corrigeable',
-            '[Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security?lang=fr) — risques d\'injection indirecte lors de l\'alimentation de contenu web scraped dans des pipelines de recherche',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — raisonnement structuré pour les tâches d\'analyse systématique nécessitant une logique traçable',
-            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) — comment les paramètres de hasard affectent la précision factuelle dans la génération de citations',
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — définition fondamentale des instructions IA structurées',
+            '[RAG Explained](/fr/prompt-engineering/rag-explained) — l\'architecture de récupération qui alimente Elicit, Consensus et tous les outils de recherche IA en production',
+            '[AI Limitations — What LLMs Can\'t Do](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — pourquoi l\'hallucination est structurelle, pas un bug corrigeable',
+            '[Prompt Injection & Security](/fr/prompt-engineering/prompt-injection-and-security) — risques d\'injection indirecte lors de l\'alimentation de contenu web scraped dans des pipelines de recherche',
+            '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — raisonnement structuré pour les tâches d\'analyse systématique nécessitant une logique traçable',
+            '[Temperature and Top-P Explained](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) — comment les paramètres de hasard affectent la précision factuelle dans la génération de citations',
+            '[What Is Prompt Engineering?](/fr/prompt-engineering/what-is-prompt-engineering) — définition fondamentale des instructions IA structurées',
           ],
         },
         howToStart: {
@@ -15845,10 +15845,10 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Schreiben Sie besseren Code mit KI](/prompt-engineering/write-better-code-with-ai?lang=de) — wie Prompts für Code-Generierung strukturiert werden',
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — grundlegende Techniken',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — Reasoning-Technik',
-            '[RAG Erklärt](/prompt-engineering/rag-explained?lang=de) — wie vollständige Codebase-Indexierung funktioniert',
+            '[Schreiben Sie besseren Code mit KI](/de/prompt-engineering/write-better-code-with-ai) — wie Prompts für Code-Generierung strukturiert werden',
+            '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — grundlegende Techniken',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — Reasoning-Technik',
+            '[RAG Erklärt](/de/prompt-engineering/rag-explained) — wie vollständige Codebase-Indexierung funktioniert',
           ],
         },
         howToStart: {
@@ -15888,7 +15888,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         '@type': 'TechArticle',
         headline: 'KI Code Review 2026: Best Tools & Prompts für schnellere Reviews',
         description: 'KI Code Review erkennt 42–85% von Runtime-Bugs vs. unter-20% für traditionelle SAST. Begrenzte Prompts und vollständiger Codebase-Kontext kehren das Signal-Rausch-Problem um.',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/ai-code-review',
         datePublished: '2026-03-24',
         dateModified: '2026-04-05',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -16071,10 +16071,10 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         relatedReading: {
           title: 'Lectures Complémentaires',
           items: [
-            '[Écrire un Meilleur Code avec l\'IA](/prompt-engineering/write-better-code-with-ai?lang=fr) — comment les prompts pour la génération de code sont structurés',
-            '[Qu\'est-ce que l\'Ingénierie des Prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — techniques fondamentales',
-            '[Prompting Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=fr) — technique de raisonnement',
-            '[RAG Expliqué](/prompt-engineering/rag-explained?lang=fr) — comment fonctionne l\'indexation complète de la base de code',
+            '[Écrire un Meilleur Code avec l\'IA](/fr/prompt-engineering/write-better-code-with-ai) — comment les prompts pour la génération de code sont structurés',
+            '[Qu\'est-ce que l\'Ingénierie des Prompts ?](/fr/prompt-engineering/what-is-prompt-engineering) — techniques fondamentales',
+            '[Prompting Chain-of-Thought](/fr/prompt-engineering/chain-of-thought-prompting) — technique de raisonnement',
+            '[RAG Expliqué](/fr/prompt-engineering/rag-explained) — comment fonctionne l\'indexation complète de la base de code',
           ],
         },
         howToStart: {
@@ -16114,7 +16114,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         '@type': 'TechArticle',
         headline: 'Révision de Code IA 2026 : Meilleurs Outils & Prompts pour des Reviews Plus Rapides',
         description: 'La révision de code IA détecte 42–85% des bugs d\'exécution vs. moins de 20% pour l\'analyse statique traditionnelle. Les prompts limités et le contexte complet de la base de code inversent le problème signal-bruit.',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/ai-code-review',
         datePublished: '2026-03-24',
         dateModified: '2026-04-05',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -16297,10 +16297,10 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         relatedReading: {
           title: '関連資料',
           items: [
-            '[AI でより良いコードを書く](/prompt-engineering/write-better-code-with-ai?lang=ja) —— コード生成プロンプトの構造化方法',
-            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) —— 基本的なテクニック',
-            '[Chain-of-Thought プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) —— 推論テクニック',
-            '[RAG 説明](/prompt-engineering/rag-explained?lang=ja) —— 完全なコードベースインデックス化の仕組み',
+            '[AI でより良いコードを書く](/ja/prompt-engineering/write-better-code-with-ai) —— コード生成プロンプトの構造化方法',
+            '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) —— 基本的なテクニック',
+            '[Chain-of-Thought プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) —— 推論テクニック',
+            '[RAG 説明](/ja/prompt-engineering/rag-explained) —— 完全なコードベースインデックス化の仕組み',
           ],
         },
         howToStart: {
@@ -16340,7 +16340,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         '@type': 'TechArticle',
         headline: 'AI コードレビュー 2026：ベストツールとプロンプト',
         description: 'AI コードレビューは実行時バグの42～85%を検出対従来型SASの20%未満。制限プロンプトとコードベース全文コンテキストがシグナル・ノイズ問題を反転。',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/ai-code-review',
         datePublished: '2026-03-24',
         dateModified: '2026-04-05',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -16523,10 +16523,10 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[用 AI 编写更好的代码](/prompt-engineering/write-better-code-with-ai?lang=zh) —— 代码生成提示的结构化方式',
-            '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) —— 基本技术',
-            '[思维链提示](/prompt-engineering/chain-of-thought-prompting?lang=zh) —— 推理技术',
-            '[RAG 解释](/prompt-engineering/rag-explained?lang=zh) —— 完整代码库索引化的工作原理',
+            '[用 AI 编写更好的代码](/zh/prompt-engineering/write-better-code-with-ai) —— 代码生成提示的结构化方式',
+            '[什么是提示工程？](/zh/prompt-engineering/what-is-prompt-engineering) —— 基本技术',
+            '[思维链提示](/zh/prompt-engineering/chain-of-thought-prompting) —— 推理技术',
+            '[RAG 解释](/zh/prompt-engineering/rag-explained) —— 完整代码库索引化的工作原理',
           ],
         },
         howToStart: {
@@ -16566,7 +16566,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         '@type': 'TechArticle',
         headline: 'AI 代码审查 2026：最佳工具和提示',
         description: 'AI 代码审查检测 42–85% 的运行时错误对比传统 SAST 的 20% 以下。受限提示和完整代码库上下文反转信号噪声问题。',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/ai-code-review',
         datePublished: '2026-03-24',
         dateModified: '2026-04-05',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -17786,7 +17786,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/how-llms-actually-work',
         inLanguage: 'de',
         headline: 'Wie LLMs wirklich funktionieren: Tokens, Attention und Inferenz',
         description: 'Große Sprachmodelle sagen das nächste Token per Wahrscheinlichkeitsverteilung voraus — kein Verstehen, kein Abrufen. Lerne Tokenisierung, Attention, RLHF und Inferenzparameter.',
@@ -18031,7 +18031,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/how-llms-actually-work',
         inLanguage: 'fr',
         headline: 'Comment fonctionnent vraiment les LLMs : tokens, attention et inférence',
         description: 'Les grands modèles de langage prédisent le prochain token par distribution de probabilités — sans comprendre ni récupérer. Apprenez la tokenisation, l\'attention, le RLHF et les paramètres d\'inférence.',
@@ -18276,7 +18276,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/how-llms-actually-work',
         inLanguage: 'ja',
         headline: 'LLMは実際にどのように機能するか：トークン、注意、推論',
         description: '大規模言語モデルは確率分布経由で次のトークンを予測します — 理解や取得ではなく。トークン化、注意、RLHF、推論パラメータを学んでください。',
@@ -18534,7 +18534,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/how-llms-actually-work',
         inLanguage: 'zh',
         headline: '大型语言模型实际如何工作：令牌、注意力与推理',
         description: '大型语言模型通过概率分布预测下一个令牌——而非理解或检索。学习令牌化、注意力机制、RLHF和推理参数。',
@@ -19197,7 +19197,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=de',
+        image: 'https://www.promptquorum.com/de/api/og/prompt-injection-and-security',
         keywords: ['Prompt Injection', 'LLM-Sicherheit', 'Indirekte Prompt Injection', 'Jailbreak', 'KI-Sicherheit', 'OWASP LLM Top 10', 'System-Prompt-Schutz', 'Eingabevalidierung', 'RAG-Sicherheit', 'Prompt-Injection-Abwehr', 'Adversarial Machine Learning', 'Modellrobustheit'],
         teaches: [
           'Identifikation und Klassifikation von Prompt-Injection-Angriffstypen (direkt, indirekt, gespeichert, multimodal)',
@@ -19589,7 +19589,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=fr',
+        image: 'https://www.promptquorum.com/fr/api/og/prompt-injection-and-security',
         keywords: ['injection de prompt', 'sécurité LLM', 'injection de prompt indirecte', 'jailbreak', 'sécurité IA', 'OWASP LLM Top 10', 'protection du system prompt', 'validation des entrées', 'sécurité RAG', 'défense contre l\'injection de prompt', 'apprentissage automatique adversarial', 'robustesse des modèles'],
         teaches: [
           'Comment identifier et classer les types d\'attaques par injection de prompt (directe, indirecte, stockée, multimodale)',
@@ -19981,7 +19981,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=ja',
+        image: 'https://www.promptquorum.com/ja/api/og/prompt-injection-and-security',
         keywords: ['プロンプトインジェクション', 'LLMセキュリティ', '間接プロンプトインジェクション', 'ジェイルブレーク', 'AIセキュリティ', 'OWASP LLM Top 10', 'システムプロンプト保護', '入力検証', 'RAGセキュリティ', 'プロンプトインジェクション対策', '敵対的機械学習', 'モデル堅牢性'],
         teaches: [
           'プロンプトインジェクション攻撃の種類の識別と分類（直接、間接、保存済み、マルチモーダル）',
@@ -20373,7 +20373,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=zh',
+        image: 'https://www.promptquorum.com/zh/api/og/prompt-injection-and-security',
         keywords: ['提示词注入', 'LLM安全', '间接提示词注入', '越狱', 'AI安全', 'OWASP LLM Top 10', '系统提示词保护', '输入验证', 'RAG安全', '提示词注入防御', '对抗性机器学习', '模型鲁棒性'],
         teaches: [
           '如何识别和分类提示词注入攻击类型（直接、间接、存储型、多模态）',
@@ -21115,7 +21115,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'de',
         headline: 'KI-Einschränkungen — Was LLMs nicht können',
         description: 'Die acht strukturellen Grenzen großer Sprachmodelle: Wissens-Cutoffs, Halluzination, keine Echtzeitdaten, Kontextfenster, kein dauerhaftes Gedächtnis, Bias und die Unfähigkeit, Ausgaben zu überprüfen.',
@@ -21285,15 +21285,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           content: [
             '**Jedes LLM hat ein Trainings-Cutoff-Datum, und das Modell hat kein Wissen über Ereignisse, Preise, Forschungsarbeiten oder Produktversionen, die nach diesem Datum veröffentlicht wurden, sofern kein externes Retrieval hinzugefügt wird.** OpenAI GPT-4o hat einen Cutoff von Oktober 2024. Anthropic Claude 4.6 Sonnet und Google Gemini 2.5 Pro haben Cutoffs Anfang 2025.',
             'Modelle haben auch spärliches Wissen über Ereignisse *nahe* ihres Cutoffs, da die Trainingsdatensammlung und -verarbeitung Wochen bis Monate nach dem Eintreten von Ereignissen dauert. Ein Modell, das bis Oktober 2024 trainiert wurde, kann dünne Abdeckung von Ereignissen September–Oktober 2024 haben.',
-            'Der primäre Workaround ist [Retrieval-Augmented Generation (RAG)](/prompt-engineering/rag-explained?lang=de), das aktuelle oder neuere Dokumente zur Abfragezeit in den Prompt einfügt. Ein sekundärer Workaround ist Prompt-Erdung: die relevanten aktuellen Fakten direkt in den Prompt einfügen und das Modell anweisen, nur aus diesem Kontext zu antworten.',
+            'Der primäre Workaround ist [Retrieval-Augmented Generation (RAG)](/de/prompt-engineering/rag-explained), das aktuelle oder neuere Dokumente zur Abfragezeit in den Prompt einfügt. Ein sekundärer Workaround ist Prompt-Erdung: die relevanten aktuellen Fakten direkt in den Prompt einfügen und das Modell anweisen, nur aus diesem Kontext zu antworten.',
           ],
         },
         hallucination: {
           title: 'Einschränkung 2 — Halluzination ist strukturell, kein Bug',
           content: [
-            '**LLMs generieren statistisch plausible Tokens, keine verifizierten Fakten — wenn das Trainings-Signal für einen spezifischen Fakt dünn ist, produziert das Modell eine selbstbewusst klingende Erfindung.** Dies gilt für jedes Modell, einschließlich GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro. Für einen tieferen Einblick siehe [KI-Halluzinationen — Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de).',
+            '**LLMs generieren statistisch plausible Tokens, keine verifizierten Fakten — wenn das Trainings-Signal für einen spezifischen Fakt dünn ist, produziert das Modell eine selbstbewusst klingende Erfindung.** Dies gilt für jedes Modell, einschließlich GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro. Für einen tieferen Einblick siehe [KI-Halluzinationen — Warum KI Dinge erfindet](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
             'Halluzination tritt am häufigsten auf bei: spezifischen numerischen Werten (Preise, Daten, Statistiken), Zitaten und Papierreferenzen, Nischen-Technikspezifikationen und Ereignissen nahe oder nach dem Trainings-Cutoff. Modelle signalisieren selten, wenn sie halluzinieren.',
-            'Workarounds: das Quellmaterial im Prompt bereitstellen und das Modell anweisen, nur daraus zu antworten; das Modell bitten, jede Behauptung zu markieren, die es nicht aus dem bereitgestellten Kontext bestätigen kann; [RAG](/prompt-engineering/rag-explained?lang=de) verwenden, um Antworten an verifizierten Dokumenten zu verankern; alle Schlüsselzahlen vor der Veröffentlichung gegen primäre Quellen validieren.',
+            'Workarounds: das Quellmaterial im Prompt bereitstellen und das Modell anweisen, nur daraus zu antworten; das Modell bitten, jede Behauptung zu markieren, die es nicht aus dem bereitgestellten Kontext bestätigen kann; [RAG](/de/prompt-engineering/rag-explained) verwenden, um Antworten an verifizierten Dokumenten zu verankern; alle Schlüsselzahlen vor der Veröffentlichung gegen primäre Quellen validieren.',
           ],
           blockquote: '„Das Modell weiß nicht, was es nicht weiß. Es füllt Lücken mit Mustern, nicht mit Stille."',
           blockquoteSource: 'Forschungsergebnis aus mehreren Halluzinations-Benchmarks, 2023–2024',
@@ -21309,7 +21309,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         contextWindow: {
           title: 'Einschränkung 4 — Kontextfenster-Limits',
           content: [
-            '**Jede LLM-Sitzung hat ein hartes Token-Limit — GPT-4o bei 128.000 Tokens, Claude 4.6 Sonnet bei 200.000 Tokens, Gemini 2.5 Pro bei 2.000.000 Tokens — und die Leistung bei früheren Inhalten nimmt ab, wenn das Fenster sich füllt.** Siehe [Kontextfenster erklärt](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de) für eine vollständige Erklärung.',
+            '**Jede LLM-Sitzung hat ein hartes Token-Limit — GPT-4o bei 128.000 Tokens, Claude 4.6 Sonnet bei 200.000 Tokens, Gemini 2.5 Pro bei 2.000.000 Tokens — und die Leistung bei früheren Inhalten nimmt ab, wenn das Fenster sich füllt.** Siehe [Kontextfenster erklärt](/de/prompt-engineering/context-windows-explained-why-ai-forgets) für eine vollständige Erklärung.',
             'Das "Lost in the Middle"-Problem: mehrere Studien zeigen, dass die LLM-Genauigkeit beim Abrufen von Informationen aus der Mitte eines langen Kontexts deutlich geringer ist als vom Anfang oder Ende. Ein 200K-Token-Fenster bedeutet keine einheitliche Aufmerksamkeit über alle 200K Tokens.',
             'Workarounds: wichtige Informationen am Anfang oder Ende des Prompts strukturieren; RAG verwenden, um nur relevante Chunks abzurufen, anstatt vollständige Dokumente einzufügen; lange Dokumente in Chunk-Sitzungen mit Zusammenfassungsschritten aufteilen.',
           ],
@@ -21329,7 +21329,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           content: [
             '**LLMs generieren Text — sie können nicht im Web surfen, Code ausführen, E-Mails senden, Dateien ändern oder mit externen Systemen interagieren, sofern eine Tool-Use-Schicht diese Aktionen nicht explizit ermöglicht.** Das Modell produziert eine Textbeschreibung dessen, was es tun würde; die Gerüstschicht führt es aus.',
             'Tool-Use (auch Function Calling genannt) — verfügbar in GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro — lässt ein Modell strukturierte Funktionsaufrufe ausgeben, die eine Anwendung abfängt und ausführt. Das Modell kann immer noch keine Aktionen eigenständig durchführen; es kann nur strukturierten Text ausgeben, der externe Ausführung auslöst.',
-            'Autonome Agenten verpacken mehrere Tool-Aufrufe in einer Orchestrierungsschleife, was den Anschein unabhängiger Aktion erzeugt. Prompt-Injection und Sicherheitslücken sind erhebliche Bedenken in diesen Architekturen — siehe [Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de).',
+            'Autonome Agenten verpacken mehrere Tool-Aufrufe in einer Orchestrierungsschleife, was den Anschein unabhängiger Aktion erzeugt. Prompt-Injection und Sicherheitslücken sind erhebliche Bedenken in diesen Architekturen — siehe [Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security).',
           ],
         },
         bias: {
@@ -21399,15 +21399,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
         keyTerms: {
           title: 'Schlüsselbegriffe',
-          content: ['Definitionen der Kernkonzepte, die in diesem Artikel verwendet werden. Jeder Begriff verlinkt zum vollständigen Eintrag im [Prompt Engineering Glossar](/prompt-engineering/prompt-engineering-glossary?lang=de).'],
+          content: ['Definitionen der Kernkonzepte, die in diesem Artikel verwendet werden. Jeder Begriff verlinkt zum vollständigen Eintrag im [Prompt Engineering Glossar](/de/prompt-engineering/prompt-engineering-glossary).'],
           items: [
-            '**[Wissens-Cutoff](/prompt-engineering/prompt-engineering-glossary?lang=de)** — Das Datum, nach dem ein Modell keine Trainingsdaten hat. Jedes Ereignis, jede Preisänderung oder jeder Release nach diesem Datum ist für das Modell unsichtbar, sofern er nicht in den Prompt eingefügt wird. GPT-4o: Oktober 2024; Claude 4.6 Sonnet und Gemini 2.5 Pro: Anfang 2025.',
-            '**[Halluzination](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Selbstbewusst klingende, aber faktisch falsche oder erfundene Ausgabe. Verursacht durch statistische Token-Vorhersage statt Wahrheitsabfrage. Das Erden von Prompts mit Quellmaterial reduziert, eliminiert sie aber nicht.',
-            '**[Kontextfenster](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Die maximale Anzahl von Tokens (Wörter + Interpunktion), die das Modell gleichzeitig verarbeiten kann, einschließlich System-Prompt, Gesprächsverlauf und abgerufener Dokumente. GPT-4o: 128K Tokens; Claude 4.6 Sonnet: 200K; Gemini 2.5 Pro: 2M.',
-            '**[Tool-Use / Function Calling](/prompt-engineering/prompt-engineering-glossary?lang=de#agents-orchestration)** — Eine Fähigkeit, die es dem Modell ermöglicht, externe Funktionen (Websuche, Code-Ausführung, Datenbankabfragen) aufzurufen, anstatt Text-Antworten zu generieren. Erforderlich, um die Keine-Echtwelt-Aktion-Einschränkung zu umgehen.',
-            '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Eine Prompting-Technik, bei der Sie das Modell bitten, Schritt für Schritt zu schlussfolgen, bevor Sie eine endgültige Antwort geben. Verbessert die Genauigkeit bei mehrstufiger Arithmetik, Logik und Planungsaufgaben erheblich.',
-            '**[RAG (Retrieval-Augmented Generation)](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Architektur, bei der relevante Dokumente aus einer externen Wissensdatenbank abgerufen und zur Abfragezeit in den Prompt eingefügt werden. Der primäre Workaround für Wissens-Cutoffs.',
-            '**[Trainings-Bias](/prompt-engineering/prompt-engineering-glossary?lang=de#safety-alignment)** — Systematische Verzerrung in Modellausgaben, verursacht durch Ungleichgewichte in Trainingsdaten — primär englischsprachige, westliche und Pre-2025-Internetinhalte. Nicht-englische und Nischendomänen-Aufgaben sind strukturell schwächer bei allen großen Modellen.',
+            '**[Wissens-Cutoff](/de/prompt-engineering/prompt-engineering-glossary)** — Das Datum, nach dem ein Modell keine Trainingsdaten hat. Jedes Ereignis, jede Preisänderung oder jeder Release nach diesem Datum ist für das Modell unsichtbar, sofern er nicht in den Prompt eingefügt wird. GPT-4o: Oktober 2024; Claude 4.6 Sonnet und Gemini 2.5 Pro: Anfang 2025.',
+            '**[Halluzination](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Selbstbewusst klingende, aber faktisch falsche oder erfundene Ausgabe. Verursacht durch statistische Token-Vorhersage statt Wahrheitsabfrage. Das Erden von Prompts mit Quellmaterial reduziert, eliminiert sie aber nicht.',
+            '**[Kontextfenster](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Die maximale Anzahl von Tokens (Wörter + Interpunktion), die das Modell gleichzeitig verarbeiten kann, einschließlich System-Prompt, Gesprächsverlauf und abgerufener Dokumente. GPT-4o: 128K Tokens; Claude 4.6 Sonnet: 200K; Gemini 2.5 Pro: 2M.',
+            '**[Tool-Use / Function Calling](/de/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — Eine Fähigkeit, die es dem Modell ermöglicht, externe Funktionen (Websuche, Code-Ausführung, Datenbankabfragen) aufzurufen, anstatt Text-Antworten zu generieren. Erforderlich, um die Keine-Echtwelt-Aktion-Einschränkung zu umgehen.',
+            '**[Chain-of-Thought (CoT)](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Eine Prompting-Technik, bei der Sie das Modell bitten, Schritt für Schritt zu schlussfolgen, bevor Sie eine endgültige Antwort geben. Verbessert die Genauigkeit bei mehrstufiger Arithmetik, Logik und Planungsaufgaben erheblich.',
+            '**[RAG (Retrieval-Augmented Generation)](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Architektur, bei der relevante Dokumente aus einer externen Wissensdatenbank abgerufen und zur Abfragezeit in den Prompt eingefügt werden. Der primäre Workaround für Wissens-Cutoffs.',
+            '**[Trainings-Bias](/de/prompt-engineering/prompt-engineering-glossary#safety-alignment)** — Systematische Verzerrung in Modellausgaben, verursacht durch Ungleichgewichte in Trainingsdaten — primär englischsprachige, westliche und Pre-2025-Internetinhalte. Nicht-englische und Nischendomänen-Aufgaben sind strukturell schwächer bei allen großen Modellen.',
           ],
         },
         regionalContext: {
@@ -21421,12 +21421,12 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[RAG erklärt](/prompt-engineering/rag-explained?lang=de) — Der primäre Workaround für Wissens-Cutoffs und Halluzinationen',
-            '[KI-Halluzinationen — Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — Tieferer Einblick in Einschränkung 2',
-            '[Kontextfenster erklärt — Warum KI vergisst](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de) — Detaillierte Aufschlüsselung der Token-Limits',
-            '[Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — Wie LLM-Einschränkungen Sicherheitsrisiken in Agenten- und Tool-Use-Architekturen schaffen',
-            '[Wie LLMs wirklich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de) — Die Transformer-Architektur, Tokenisierung und RLHF, die diese Grenzen erzeugen',
-            '[Self-Consistency-Prompting](/prompt-engineering/self-consistency-prompting?lang=de) — Verifikationstechnik, die teilweise die Selbstverifikations- und Schlussfolgerungslücken anspricht',
+            '[RAG erklärt](/de/prompt-engineering/rag-explained) — Der primäre Workaround für Wissens-Cutoffs und Halluzinationen',
+            '[KI-Halluzinationen — Warum KI Dinge erfindet](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Tieferer Einblick in Einschränkung 2',
+            '[Kontextfenster erklärt — Warum KI vergisst](/de/prompt-engineering/context-windows-explained-why-ai-forgets) — Detaillierte Aufschlüsselung der Token-Limits',
+            '[Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Wie LLM-Einschränkungen Sicherheitsrisiken in Agenten- und Tool-Use-Architekturen schaffen',
+            '[Wie LLMs wirklich funktionieren](/de/prompt-engineering/how-llms-actually-work) — Die Transformer-Architektur, Tokenisierung und RLHF, die diese Grenzen erzeugen',
+            '[Self-Consistency-Prompting](/de/prompt-engineering/self-consistency-prompting) — Verifikationstechnik, die teilweise die Selbstverifikations- und Schlussfolgerungslücken anspricht',
           ],
         },
         faq: {
@@ -21635,15 +21635,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           content: [
             '**Chaque LLM a une date de coupure d\'entraînement, et le modèle n\'a aucune connaissance des événements, prix, articles ou versions de produits publiés après cette date sans récupération externe.** OpenAI GPT-4o a une coupure d\'octobre 2024. Anthropic Claude 4.6 Sonnet et Google Gemini 2.5 Pro ont des coupures début 2025.',
             'Les modèles ont également des connaissances clairsemées des événements *proches* de leur coupure, car la collecte et le traitement des données d\'entraînement prennent des semaines à des mois après que les événements se produisent. Un modèle entraîné jusqu\'en octobre 2024 peut avoir une couverture mince des événements de septembre–octobre 2024.',
-            'La solution principale est la [génération augmentée par récupération (RAG)](/prompt-engineering/rag-explained?lang=fr), qui injecte des documents actuels ou récents dans le prompt au moment de la requête. Une solution secondaire est l\'ancrage du prompt : coller les faits actuels pertinents directement dans le prompt et demander au modèle de répondre uniquement à partir de ce contexte.',
+            'La solution principale est la [génération augmentée par récupération (RAG)](/fr/prompt-engineering/rag-explained), qui injecte des documents actuels ou récents dans le prompt au moment de la requête. Une solution secondaire est l\'ancrage du prompt : coller les faits actuels pertinents directement dans le prompt et demander au modèle de répondre uniquement à partir de ce contexte.',
           ],
         },
         hallucination: {
           title: 'Limitation 2 — L\'hallucination est structurelle, pas un bug',
           content: [
-            '**Les LLMs génèrent des tokens statistiquement plausibles, pas des faits vérifiés — quand le signal d\'entraînement pour un fait spécifique est faible, le modèle produit une fabrication qui sonne assurée.** Cela s\'applique à chaque modèle, y compris GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro. Pour un approfondissement, voir [Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr).',
+            '**Les LLMs génèrent des tokens statistiquement plausibles, pas des faits vérifiés — quand le signal d\'entraînement pour un fait spécifique est faible, le modèle produit une fabrication qui sonne assurée.** Cela s\'applique à chaque modèle, y compris GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro. Pour un approfondissement, voir [Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
             'L\'hallucination se produit le plus fréquemment sur : les chiffres numériques spécifiques (prix, dates, statistiques), les citations et références d\'articles, les spécifications techniques de niche et les événements proches ou après la coupure d\'entraînement. Les modèles signalent rarement quand ils hallucinent.',
-            'Solutions : fournir le matériel source dans le prompt et demander au modèle de n\'y répondre qu\'à partir de celui-ci ; demander au modèle de signaler toute affirmation qu\'il ne peut pas confirmer à partir du contexte fourni ; utiliser [RAG](/prompt-engineering/rag-explained?lang=fr) pour ancrer les réponses sur des documents vérifiés ; valider tous les chiffres clés contre des sources primaires avant publication.',
+            'Solutions : fournir le matériel source dans le prompt et demander au modèle de n\'y répondre qu\'à partir de celui-ci ; demander au modèle de signaler toute affirmation qu\'il ne peut pas confirmer à partir du contexte fourni ; utiliser [RAG](/fr/prompt-engineering/rag-explained) pour ancrer les réponses sur des documents vérifiés ; valider tous les chiffres clés contre des sources primaires avant publication.',
           ],
           blockquote: '« Le modèle ne sait pas ce qu\'il ne sait pas. Il comble les lacunes avec des motifs, pas avec le silence. »',
           blockquoteSource: 'Résultat de recherche issu de plusieurs benchmarks d\'hallucination, 2023–2024',
@@ -21659,7 +21659,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         contextWindow: {
           title: 'Limitation 4 — Limites de la fenêtre de contexte',
           content: [
-            '**Chaque session LLM a une limite stricte de tokens — GPT-4o à 128 000 tokens, Claude 4.6 Sonnet à 200 000 tokens, Gemini 2.5 Pro à 2 000 000 tokens — et les performances sur le contenu antérieur se dégradent à mesure que la fenêtre se remplit.** Voir [Fenêtres de contexte expliquées](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) pour une explication complète.',
+            '**Chaque session LLM a une limite stricte de tokens — GPT-4o à 128 000 tokens, Claude 4.6 Sonnet à 200 000 tokens, Gemini 2.5 Pro à 2 000 000 tokens — et les performances sur le contenu antérieur se dégradent à mesure que la fenêtre se remplit.** Voir [Fenêtres de contexte expliquées](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) pour une explication complète.',
             'Le problème « perdu au milieu » : plusieurs études montrent que la précision des LLMs pour récupérer des informations au milieu d\'un long contexte est significativement plus faible qu\'au début ou à la fin. Une fenêtre de 200K tokens ne signifie pas une attention uniforme sur tous les 200K tokens.',
             'Solutions : structurer les informations importantes au début ou à la fin du prompt ; utiliser RAG pour récupérer uniquement les morceaux pertinents plutôt que d\'insérer des documents complets ; découper les longs documents en sessions fragmentées avec des étapes de résumé.',
           ],
@@ -21679,7 +21679,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           content: [
             '**Les LLMs génèrent du texte — ils ne peuvent pas naviguer sur le web, exécuter du code, envoyer des e-mails, modifier des fichiers ou interagir avec des systèmes externes sauf si une couche d\'utilisation d\'outils active explicitement ces actions.** Le modèle produit une description textuelle de ce qu\'il ferait ; la couche d\'infrastructure l\'exécute.',
             'L\'utilisation d\'outils (aussi appelée appel de fonctions) — disponible dans GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro — permet à un modèle d\'émettre des appels de fonctions structurés qu\'une application intercepte et exécute. Le modèle ne peut toujours pas agir de manière autonome ; il peut seulement émettre du texte structuré qui déclenche une exécution externe.',
-            'Les agents autonomes encapsulent plusieurs appels d\'outils dans une boucle d\'orchestration, créant l\'apparence d\'une action indépendante. L\'injection de prompts et les vulnérabilités de sécurité sont des préoccupations importantes dans ces architectures — voir [Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr).',
+            'Les agents autonomes encapsulent plusieurs appels d\'outils dans une boucle d\'orchestration, créant l\'apparence d\'une action indépendante. L\'injection de prompts et les vulnérabilités de sécurité sont des préoccupations importantes dans ces architectures — voir [Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security).',
           ],
         },
         bias: {
@@ -21749,15 +21749,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
         keyTerms: {
           title: 'Termes clés',
-          content: ['Définitions des concepts fondamentaux utilisés tout au long de cet article. Chaque terme renvoie à l\'entrée complète dans le [Glossaire d\'ingénierie des prompts](/prompt-engineering/prompt-engineering-glossary?lang=fr).'],
+          content: ['Définitions des concepts fondamentaux utilisés tout au long de cet article. Chaque terme renvoie à l\'entrée complète dans le [Glossaire d\'ingénierie des prompts](/fr/prompt-engineering/prompt-engineering-glossary).'],
           items: [
-            '**[Coupure de connaissance](/prompt-engineering/prompt-engineering-glossary?lang=fr)** — La date au-delà de laquelle un modèle n\'a pas de données d\'entraînement. Tout événement, changement de prix ou publication après cette date est invisible pour le modèle sauf si vous le collez dans le prompt. GPT-4o : octobre 2024 ; Claude 4.6 Sonnet et Gemini 2.5 Pro : début 2025.',
-            '**[Hallucination](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Sortie qui sonne assurée mais factuellement incorrecte ou inventée. Causée par la prédiction statistique de tokens plutôt que la recherche de vérité. Ancrer les prompts avec des sources réduit mais n\'élimine pas ce phénomène.',
-            '**[Fenêtre de contexte](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Le nombre maximum de tokens (mots + ponctuation) que le modèle peut traiter en même temps, incluant le prompt système, l\'historique de conversation et les documents récupérés. GPT-4o : 128K tokens ; Claude 4.6 Sonnet : 200K ; Gemini 2.5 Pro : 2M.',
-            '**[Utilisation d\'outils / Appel de fonctions](/prompt-engineering/prompt-engineering-glossary?lang=fr#agents-orchestration)** — Une capacité permettant au modèle d\'invoquer des fonctions externes (recherche web, exécution de code, requêtes de base de données) au lieu de générer des réponses textuelles. Nécessaire pour contourner la limitation d\'absence d\'action réelle.',
-            '**[Chaîne-de-pensée (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Une technique de prompting où vous demandez au modèle de raisonner étape par étape avant de donner une réponse finale. Améliore significativement la précision sur l\'arithmétique multi-étapes, la logique et les tâches de planification.',
-            '**[RAG (Génération augmentée par récupération)](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Architecture où des documents pertinents sont récupérés depuis une base de connaissances externe et injectés dans le prompt au moment de la requête. La solution principale pour les coupures de connaissance.',
-            '**[Biais d\'entraînement](/prompt-engineering/prompt-engineering-glossary?lang=fr#safety-alignment)** — Distorsion systématique dans les sorties du modèle causée par des déséquilibres dans les données d\'entraînement — principalement du contenu internet anglophone, occidental et d\'avant 2025. Les tâches en langues non anglophones et dans des domaines de niche sont structurellement plus faibles pour tous les grands modèles.',
+            '**[Coupure de connaissance](/fr/prompt-engineering/prompt-engineering-glossary)** — La date au-delà de laquelle un modèle n\'a pas de données d\'entraînement. Tout événement, changement de prix ou publication après cette date est invisible pour le modèle sauf si vous le collez dans le prompt. GPT-4o : octobre 2024 ; Claude 4.6 Sonnet et Gemini 2.5 Pro : début 2025.',
+            '**[Hallucination](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Sortie qui sonne assurée mais factuellement incorrecte ou inventée. Causée par la prédiction statistique de tokens plutôt que la recherche de vérité. Ancrer les prompts avec des sources réduit mais n\'élimine pas ce phénomène.',
+            '**[Fenêtre de contexte](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Le nombre maximum de tokens (mots + ponctuation) que le modèle peut traiter en même temps, incluant le prompt système, l\'historique de conversation et les documents récupérés. GPT-4o : 128K tokens ; Claude 4.6 Sonnet : 200K ; Gemini 2.5 Pro : 2M.',
+            '**[Utilisation d\'outils / Appel de fonctions](/fr/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — Une capacité permettant au modèle d\'invoquer des fonctions externes (recherche web, exécution de code, requêtes de base de données) au lieu de générer des réponses textuelles. Nécessaire pour contourner la limitation d\'absence d\'action réelle.',
+            '**[Chaîne-de-pensée (CoT)](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Une technique de prompting où vous demandez au modèle de raisonner étape par étape avant de donner une réponse finale. Améliore significativement la précision sur l\'arithmétique multi-étapes, la logique et les tâches de planification.',
+            '**[RAG (Génération augmentée par récupération)](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Architecture où des documents pertinents sont récupérés depuis une base de connaissances externe et injectés dans le prompt au moment de la requête. La solution principale pour les coupures de connaissance.',
+            '**[Biais d\'entraînement](/fr/prompt-engineering/prompt-engineering-glossary#safety-alignment)** — Distorsion systématique dans les sorties du modèle causée par des déséquilibres dans les données d\'entraînement — principalement du contenu internet anglophone, occidental et d\'avant 2025. Les tâches en langues non anglophones et dans des domaines de niche sont structurellement plus faibles pour tous les grands modèles.',
           ],
         },
         regionalContext: {
@@ -21771,12 +21771,12 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[RAG expliqué](/prompt-engineering/rag-explained?lang=fr) — La solution principale pour les coupures de connaissance et les hallucinations',
-            '[Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — Approfondissement de la limitation 2',
-            '[Fenêtres de contexte expliquées — Pourquoi l\'IA oublie](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) — Analyse détaillée des limites de tokens',
-            '[Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Comment les limitations des LLM créent des risques de sécurité dans les architectures d\'agents et d\'utilisation d\'outils',
-            '[Comment les LLMs fonctionnent vraiment](/prompt-engineering/how-llms-actually-work?lang=fr) — L\'architecture transformer, la tokenisation et le RLHF qui produisent ces limites',
-            '[Prompting par cohérence automatique](/prompt-engineering/self-consistency-prompting?lang=fr) — Technique qui aborde partiellement les lacunes d\'auto-vérification et de raisonnement',
+            '[RAG expliqué](/fr/prompt-engineering/rag-explained) — La solution principale pour les coupures de connaissance et les hallucinations',
+            '[Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Approfondissement de la limitation 2',
+            '[Fenêtres de contexte expliquées — Pourquoi l\'IA oublie](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) — Analyse détaillée des limites de tokens',
+            '[Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Comment les limitations des LLM créent des risques de sécurité dans les architectures d\'agents et d\'utilisation d\'outils',
+            '[Comment les LLMs fonctionnent vraiment](/fr/prompt-engineering/how-llms-actually-work) — L\'architecture transformer, la tokenisation et le RLHF qui produisent ces limites',
+            '[Prompting par cohérence automatique](/fr/prompt-engineering/self-consistency-prompting) — Technique qui aborde partiellement les lacunes d\'auto-vérification et de raisonnement',
           ],
         },
         faq: {
@@ -21817,7 +21817,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/ai-limitations-what-llms-cant-do',
     inLanguage: 'ja',
     headline: 'AI制限 — LLMができないこと',
     description: '大規模言語モデルの8つの構造的な制限：知識カットオフ、幻覚、リアルタイムデータなし、コンテキストウィンドウ、永続的なメモリなし、バイアス、出力検証の不可能性。',
@@ -21987,15 +21987,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       content: [
         '**すべてのLLMはトレーニングカットオフ日を持ち、外部検索が追加されない限り、モデルはその日付の後にリリースされたイベント、価格、論文、または製品バージョンについての知識を持ちません。** OpenAI GPT-4oは2024年10月のカットオフを持っています。Anthropic Claude 4.6 SonnetとGoogle Gemini 2.5 Proは2025年初頭のカットオフを持っています。',
         'モデルはまた、カットオフに*近い*イベントについて希薄な知識を持っています。トレーニングデータの収集と処理にはイベントの発生から数週間から数か月かかるため。2024年10月までトレーニングされたモデルは、2024年9月から10月のイベントについてのカバレッジが薄い可能性があります。',
-        '主要な回避方法は、[検索拡張生成（RAG）](/prompt-engineering/rag-explained?lang=ja)で、クエリ時にプロンプトにライブまたは最近のドキュメントを注入します。二次的な回避方法はプロンプトの接地です：関連する現在の事実をプロンプトに直接貼り付けて、モデルにそのコンテキストからのみ答えるよう指示する。',
+        '主要な回避方法は、[検索拡張生成（RAG）](/ja/prompt-engineering/rag-explained)で、クエリ時にプロンプトにライブまたは最近のドキュメントを注入します。二次的な回避方法はプロンプトの接地です：関連する現在の事実をプロンプトに直接貼り付けて、モデルにそのコンテキストからのみ答えるよう指示する。',
       ],
     },
     hallucination: {
       title: '制限2 — 幻覚は構造的で、バグではない',
       content: [
-        '**LLMは検証された事実ではなく、統計的にもっともらしいトークンを生成します — 特定の事実のトレーニング信号が薄いとき、モデルは確信を持った虚偽を生成します。** これはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proを含むすべてのモデルに適用されます。詳細については、[AI幻覚 — AIが物事を作り出す理由](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja)を参照してください。',
+        '**LLMは検証された事実ではなく、統計的にもっともらしいトークンを生成します — 特定の事実のトレーニング信号が薄いとき、モデルは確信を持った虚偽を生成します。** これはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proを含むすべてのモデルに適用されます。詳細については、[AI幻覚 — AIが物事を作り出す理由](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)を参照してください。',
         '幻覚は最も頻繁に発生します：特定の数値（価格、日付、統計）、引用と論文参考文献、ニッチな技術仕様、およびトレーニングカットオフに近いまたは後のイベント。モデルが幻覚を起こしているときは、ほとんど信号を送りません。',
-        '回避方法：ソース資料をプロンプトに提供し、モデルにそれからのみ回答するよう指示する；モデルに提供されたコンテキストから確認できない主張にフラグを立てるよう指示する；[RAG](/prompt-engineering/rag-explained?lang=ja)を使用して、確認されたドキュメントに回答を結合する；公開前にすべての重要な数字を一次資料に対して検証する。',
+        '回避方法：ソース資料をプロンプトに提供し、モデルにそれからのみ回答するよう指示する；モデルに提供されたコンテキストから確認できない主張にフラグを立てるよう指示する；[RAG](/ja/prompt-engineering/rag-explained)を使用して、確認されたドキュメントに回答を結合する；公開前にすべての重要な数字を一次資料に対して検証する。',
       ],
       blockquote: '「モデルは知らないことを知りません。ギャップを沈黙ではなくパターンで埋めます。」',
       blockquoteSource: '複数の幻覚ベンチマーク全体の研究結果、2023–2024',
@@ -22011,7 +22011,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     contextWindow: {
       title: '制限4 — コンテキストウィンドウの上限',
       content: [
-        '**すべてのLLMセッションにハードなトークン制限があります — GPT-4oは128,000トークン、Claude 4.6 Sonnetは200,000トークン、Gemini 2.5 Proは2,000,000トークン — ウィンドウが満杯になると、前のコンテンツのパフォーマンスが低下します。** [コンテキストウィンドウの説明](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja)を参照して、完全な詳細を確認してください。',
+        '**すべてのLLMセッションにハードなトークン制限があります — GPT-4oは128,000トークン、Claude 4.6 Sonnetは200,000トークン、Gemini 2.5 Proは2,000,000トークン — ウィンドウが満杯になると、前のコンテンツのパフォーマンスが低下します。** [コンテキストウィンドウの説明](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を参照して、完全な詳細を確認してください。',
         '「中間で失われる」問題：複数の研究によると、長いコンテキストの中間から情報を取得するLLM精度は、始まりまたは終わりから大幅に低くなっています。200Kトークンウィンドウは、すべての200Kトークンに対して均一な注意が広がることを意味しません。',
         '回避方法：重要な情報をプロンプトの開始または終了に配置する；RAGを使用して関連チャンクのみを取得し、完全なドキュメントをダンプしない；長いドキュメントを要約ステップで分割されたセッションに分割する。',
       ],
@@ -22031,7 +22031,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       content: [
         '**LLMはテキストを生成します — ツール使用レイヤーが明示的にこれらのアクションを有効にしない限り、ウェブをブラウズしたり、コードを実行したり、メールを送信したり、ファイルを変更したり、外部システムと相互作用したりすることはできません。** モデルはそれが何をするかを説明するテキスト説明を生成します；スキャフォルディングレイヤーが実行します。',
         'ツール使用（関数呼び出しとも呼ばれる）— GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで利用可能です — モデルがアプリケーションが傍受して実行する構造化関数呼び出しを出力できるようにします。モデルは独立してアクションを実行することはできず、外部実行をトリガーする構造化テキストのみを出力できます。',
-        '自律的なエージェントは、複数のツール呼び出しをオーケストレーションループで包みます。プロンプト注入とセキュリティの脆弱性はこれらのアーキテクチャの重大な懸念です — [プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja)を参照してください。',
+        '自律的なエージェントは、複数のツール呼び出しをオーケストレーションループで包みます。プロンプト注入とセキュリティの脆弱性はこれらのアーキテクチャの重大な懸念です — [プロンプト注入とセキュリティ](/ja/prompt-engineering/prompt-injection-and-security)を参照してください。',
       ],
     },
     bias: {
@@ -22101,15 +22101,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     },
     keyTerms: {
       title: 'キーター',
-      content: ['この記事全体で使用されるコア概念の定義。各用語は、[プロンプトエンジニアリング用語集](/prompt-engineering/prompt-engineering-glossary?lang=ja)の完全なエントリにリンクしています。'],
+      content: ['この記事全体で使用されるコア概念の定義。各用語は、[プロンプトエンジニアリング用語集](/ja/prompt-engineering/prompt-engineering-glossary)の完全なエントリにリンクしています。'],
       items: [
-        '**[知識カットオフ](/prompt-engineering/prompt-engineering-glossary?lang=ja)** — モデルがトレーニングデータを持たない日付。この日付後の任何のイベント、価格変更、またはリリースは、プロンプトに貼り付けない限り、モデルに見えません。GPT-4o：2024年10月；Claude 4.6 SonnetおよびGemini 2.5 Pro：2025年初頭。',
-        '**[幻覚](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — 事実的に不正確または捏造された、確信を持った音の出力。統計的なトークン予測ではなく、真実検索による。ソース資料でプロンプトを接地することで削減されますが、排除されません。',
-        '**[コンテキストウィンドウ](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — モデルが一度に処理できるトークンの最大数（単語 + 句読点）、システムプロンプト、会話履歴、取得ドキュメントを含む。GPT-4o：128Kトークン；Claude 4.6 Sonnet：200K；Gemini 2.5 Pro：2M。',
-        '**[ツール使用/関数呼び出し](/prompt-engineering/prompt-engineering-glossary?lang=ja#agents-orchestration)** — モデルがテキスト答えを生成する代わりに、外部関数（ウェブ検索、コード実行、データベースクエリ）を呼び出すことができる機能。実世界のアクション制限を回避するために必要。',
-        '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — モデルに最終的な答えを与える前にステップバイステップで推論するよう指示するプロンプト技術。複数ステップの算術、ロジック、計画タスクの精度を大幅に改善します。',
-        '**[RAG (検索拡張生成)](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — 関連するドキュメントが外部知識ベースから取得され、クエリ時にプロンプトに注入されるアーキテクチャ。知識カットオフの主要な回避方法。',
-        '**[トレーニングバイアス](/prompt-engineering/prompt-engineering-glossary?lang=ja#safety-alignment)** — トレーニングデータのバランス不均衡によるモデル出力の体系的なスキュー — 主に英語、西洋、2025年前のインターネットコンテンツ。非英語とニッチドメインのタスクは、すべての主要なモデル間で構造的に弱い。',
+        '**[知識カットオフ](/ja/prompt-engineering/prompt-engineering-glossary)** — モデルがトレーニングデータを持たない日付。この日付後の任何のイベント、価格変更、またはリリースは、プロンプトに貼り付けない限り、モデルに見えません。GPT-4o：2024年10月；Claude 4.6 SonnetおよびGemini 2.5 Pro：2025年初頭。',
+        '**[幻覚](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 事実的に不正確または捏造された、確信を持った音の出力。統計的なトークン予測ではなく、真実検索による。ソース資料でプロンプトを接地することで削減されますが、排除されません。',
+        '**[コンテキストウィンドウ](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — モデルが一度に処理できるトークンの最大数（単語 + 句読点）、システムプロンプト、会話履歴、取得ドキュメントを含む。GPT-4o：128Kトークン；Claude 4.6 Sonnet：200K；Gemini 2.5 Pro：2M。',
+        '**[ツール使用/関数呼び出し](/ja/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — モデルがテキスト答えを生成する代わりに、外部関数（ウェブ検索、コード実行、データベースクエリ）を呼び出すことができる機能。実世界のアクション制限を回避するために必要。',
+        '**[Chain-of-Thought (CoT)](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — モデルに最終的な答えを与える前にステップバイステップで推論するよう指示するプロンプト技術。複数ステップの算術、ロジック、計画タスクの精度を大幅に改善します。',
+        '**[RAG (検索拡張生成)](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 関連するドキュメントが外部知識ベースから取得され、クエリ時にプロンプトに注入されるアーキテクチャ。知識カットオフの主要な回避方法。',
+        '**[トレーニングバイアス](/ja/prompt-engineering/prompt-engineering-glossary#safety-alignment)** — トレーニングデータのバランス不均衡によるモデル出力の体系的なスキュー — 主に英語、西洋、2025年前のインターネットコンテンツ。非英語とニッチドメインのタスクは、すべての主要なモデル間で構造的に弱い。',
       ],
     },
     regionalContext: {
@@ -22123,12 +22123,12 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     relatedReading: {
       title: '関連資料',
       items: [
-        '[RAG説明](/prompt-engineering/rag-explained?lang=ja) — 知識カットオフと幻覚の主要な回避方法',
-        '[AI幻覚 — AIが物事を作り出す理由](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) — 制限2についての詳細な掘り下げ',
-        '[コンテキストウィンドウの説明 — AIが忘れる理由](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja) — トークン制限の詳細な分析',
-        '[プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — LLM制限がエージェントおよびツール使用アーキテクチャでセキュリティリスクを生成する方法',
-        '[LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja) — これらの制限が存在する理由を説明するトランスフォーマーアーキテクチャ、トークン化、RLHF',
-        '[自己一貫性プロンプティング](/prompt-engineering/self-consistency-prompting?lang=ja) — 自己検証および推論ギャップに部分的に対処するテクニック',
+        '[RAG説明](/ja/prompt-engineering/rag-explained) — 知識カットオフと幻覚の主要な回避方法',
+        '[AI幻覚 — AIが物事を作り出す理由](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 制限2についての詳細な掘り下げ',
+        '[コンテキストウィンドウの説明 — AIが忘れる理由](/ja/prompt-engineering/context-windows-explained-why-ai-forgets) — トークン制限の詳細な分析',
+        '[プロンプト注入とセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — LLM制限がエージェントおよびツール使用アーキテクチャでセキュリティリスクを生成する方法',
+        '[LLMが実際にどのように機能するか](/ja/prompt-engineering/how-llms-actually-work) — これらの制限が存在する理由を説明するトランスフォーマーアーキテクチャ、トークン化、RLHF',
+        '[自己一貫性プロンプティング](/ja/prompt-engineering/self-consistency-prompting) — 自己検証および推論ギャップに部分的に対処するテクニック',
       ],
     },
     faq: {
@@ -22169,7 +22169,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'zh',
         headline: 'AI 局限性 — 大语言模型无法做什么',
         description: '大语言模型的八个结构性限制：知识截断、幻觉、无法获取实时数据、上下文窗口、无持久内存、偏见和无法验证输出的能力。',
@@ -22339,15 +22339,15 @@ zh: {
           content: [
             '**每个大语言模型都有训练截断日期，除非添加外部检索，否则模型对该日期后发布的事件、价格、论文或产品版本一无所知。** OpenAI GPT-4o 的截断为 2024 年 10 月。Anthropic Claude 4.6 Sonnet 和 Google Gemini 2.5 Pro 的截断为 2025 年初。',
             '模型对*接近*其截断的事件的了解也很少，因为训练数据收集和处理在事件发生后需要数周到数月。训练到 2024 年 10 月的模型可能对 2024 年 9 月-10 月的事件覆盖很少。',
-            '主要解决方案是[检索增强生成（RAG）](/prompt-engineering/rag-explained?lang=zh)，在查询时将实时或最近的文档注入提示词中。次要解决方案是提示词基础化：将相关当前事实直接粘贴到提示词中，并指示模型仅从该上下文回答。',
+            '主要解决方案是[检索增强生成（RAG）](/zh/prompt-engineering/rag-explained)，在查询时将实时或最近的文档注入提示词中。次要解决方案是提示词基础化：将相关当前事实直接粘贴到提示词中，并指示模型仅从该上下文回答。',
           ],
         },
         hallucination: {
           title: '限制 2 — 幻觉是结构性的，不是错误',
           content: [
-            '**大语言模型生成统计上合理的令牌，而非已验证的事实 — 当特定事实的训练信号很少时，模型生成有信心但虚假的说法。** 这适用于每个模型，包括 GPT-4o、Claude 4.6 Sonnet 和 Gemini 2.5 Pro。深入了解，请参见[AI 幻觉 — 为什么 AI 编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh)。',
+            '**大语言模型生成统计上合理的令牌，而非已验证的事实 — 当特定事实的训练信号很少时，模型生成有信心但虚假的说法。** 这适用于每个模型，包括 GPT-4o、Claude 4.6 Sonnet 和 Gemini 2.5 Pro。深入了解，请参见[AI 幻觉 — 为什么 AI 编造东西](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)。',
             '幻觉最常发生在：特定数值（价格、日期、统计数据）、引用和论文参考、利基技术规格和接近或超过训练截断的事件。模型很少在幻觉时发出信号。',
-            '解决方案：在提示词中提供源材料，指示模型仅从中回答；要求模型标记任何无法从提供的上下文确认的声明；使用[RAG](/prompt-engineering/rag-explained?lang=zh)将答案锚定到已验证文档；在发布前根据原始来源验证所有关键数字。',
+            '解决方案：在提示词中提供源材料，指示模型仅从中回答；要求模型标记任何无法从提供的上下文确认的声明；使用[RAG](/zh/prompt-engineering/rag-explained)将答案锚定到已验证文档；在发布前根据原始来源验证所有关键数字。',
           ],
           blockquote: '"模型不知道它不知道的东西。它用模式而非沉默填充空白。"',
           blockquoteSource: '2023-2024 年多个幻觉基准的研究发现',
@@ -22363,7 +22363,7 @@ zh: {
         contextWindow: {
           title: '限制 4 — 上下文窗口限制',
           content: [
-            '**每个大语言模型会话都有硬令牌限制 — GPT-4o 128,000 令牌、Claude 4.6 Sonnet 200,000 令牌、Gemini 2.5 Pro 2,000,000 令牌 — 随着窗口填充，早期内容的性能会下降。** 请参见[上下文窗口详解](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh)获取完整分析。',
+            '**每个大语言模型会话都有硬令牌限制 — GPT-4o 128,000 令牌、Claude 4.6 Sonnet 200,000 令牌、Gemini 2.5 Pro 2,000,000 令牌 — 随着窗口填充，早期内容的性能会下降。** 请参见[上下文窗口详解](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)获取完整分析。',
             '"中间遗忘"问题：多项研究表明大语言模型从长上下文中间检索信息的准确性明显低于从开始或结束。200K 令牌窗口不意味着对所有 200K 令牌的统一注意。',
             '解决方案：在提示词的开始或结束位置构造重要信息；使用 RAG 仅检索相关块而不是转储完整文档；将长文档分解为带摘要步骤的分块会话。',
           ],
@@ -22383,7 +22383,7 @@ zh: {
           content: [
             '**大语言模型生成文本 — 除非工具使用层明确启用这些操作，否则它们无法浏览网络、运行代码、发送电子邮件、修改文件或与外部系统交互。** 模型生成它会做什么的文本描述；支架层执行它。',
             '工具使用（也称函数调用） — 在 GPT-4o、Claude 4.6 Sonnet 和 Gemini 2.5 Pro 中可用 — 让模型输出应用拦截和执行的结构化函数调用。模型仍然无法独立采取行动；它只能发出触发外部执行的结构化文本。',
-            '自主代理在编排循环中包装多个工具调用，创建独立操作的*表象*。提示词注入和安全漏洞在这些架构中是重大问题 — 请参见[提示词注入和安全性](/prompt-engineering/prompt-injection-and-security?lang=zh)。',
+            '自主代理在编排循环中包装多个工具调用，创建独立操作的*表象*。提示词注入和安全漏洞在这些架构中是重大问题 — 请参见[提示词注入和安全性](/zh/prompt-engineering/prompt-injection-and-security)。',
           ],
         },
         bias: {
@@ -22453,15 +22453,15 @@ zh: {
         },
         keyTerms: {
           title: '关键术语',
-          content: ['本文中使用的核心概念定义。每个术语链接到[提示词工程词汇表](/prompt-engineering/prompt-engineering-glossary?lang=zh)中的完整条目。'],
+          content: ['本文中使用的核心概念定义。每个术语链接到[提示词工程词汇表](/zh/prompt-engineering/prompt-engineering-glossary)中的完整条目。'],
           items: [
-            '**[知识截断](/prompt-engineering/prompt-engineering-glossary?lang=zh)** — 模型之后没有训练数据的日期。此日期后的任何事件、价格变化或发布对模型是无形的，除非您将其粘贴到提示词中。GPT-4o：2024 年 10 月；Claude 4.6 Sonnet 和 Gemini 2.5 Pro：2025 年初。',
-            '**[幻觉](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 有信心但事实不正确或虚构的输出。由统计令牌预测而非真实查找导致。用源材料基础化提示词减少但不消除它。',
-            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 模型一次可处理的最大令牌数（单词+标点），包括系统提示、对话历史和检索文档。GPT-4o：128K 令牌；Claude 4.6 Sonnet：200K；Gemini 2.5 Pro：200 万。',
-            '**[工具使用/函数调用](/prompt-engineering/prompt-engineering-glossary?lang=zh#agents-orchestration)** — 让模型调用外部函数（网络搜索、代码执行、数据库查询）而非生成文本答案的能力。需要解决无现实世界操作限制。',
-            '**[思维链（CoT）](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 一种提示词技术，要求模型在给出最终答案前逐步推理。显著改善多步算术、逻辑和规划任务的准确性。',
-            '**[RAG（检索增强生成）](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 相关文档从外部知识库检索并在查询时注入提示词的架构。知识截断的主要解决方案。',
-            '**[训练偏见](/prompt-engineering/prompt-engineering-glossary?lang=zh#safety-alignment)** — 由训练数据中的不平衡导致的模型输出系统性偏斜 — 主要是英文、西方和 2025 年前的互联网内容。非英语和利基域任务在所有主要模型上结构上更弱。',
+            '**[知识截断](/zh/prompt-engineering/prompt-engineering-glossary)** — 模型之后没有训练数据的日期。此日期后的任何事件、价格变化或发布对模型是无形的，除非您将其粘贴到提示词中。GPT-4o：2024 年 10 月；Claude 4.6 Sonnet 和 Gemini 2.5 Pro：2025 年初。',
+            '**[幻觉](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 有信心但事实不正确或虚构的输出。由统计令牌预测而非真实查找导致。用源材料基础化提示词减少但不消除它。',
+            '**[上下文窗口](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 模型一次可处理的最大令牌数（单词+标点），包括系统提示、对话历史和检索文档。GPT-4o：128K 令牌；Claude 4.6 Sonnet：200K；Gemini 2.5 Pro：200 万。',
+            '**[工具使用/函数调用](/zh/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — 让模型调用外部函数（网络搜索、代码执行、数据库查询）而非生成文本答案的能力。需要解决无现实世界操作限制。',
+            '**[思维链（CoT）](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 一种提示词技术，要求模型在给出最终答案前逐步推理。显著改善多步算术、逻辑和规划任务的准确性。',
+            '**[RAG（检索增强生成）](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 相关文档从外部知识库检索并在查询时注入提示词的架构。知识截断的主要解决方案。',
+            '**[训练偏见](/zh/prompt-engineering/prompt-engineering-glossary#safety-alignment)** — 由训练数据中的不平衡导致的模型输出系统性偏斜 — 主要是英文、西方和 2025 年前的互联网内容。非英语和利基域任务在所有主要模型上结构上更弱。',
           ],
         },
         regionalContext: {
@@ -22475,12 +22475,12 @@ zh: {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[RAG 详解](/prompt-engineering/rag-explained?lang=zh) — 知识截断和幻觉的主要解决方案',
-            '[AI 幻觉 — 为什么 AI 编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh) — 限制 2 的深入探讨',
-            '[上下文窗口详解 — 为什么 AI 遗忘](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh) — 令牌限制的详细分析',
-            '[提示词注入和安全性](/prompt-engineering/prompt-injection-and-security?lang=zh) — LLM 限制如何在代理和工具使用架构中产生安全风险',
-            '[大语言模型如何实际工作](/prompt-engineering/how-llms-actually-work?lang=zh) — 解释这些限制存在的 transformer 架构、标记化和 RLHF',
-            '[自我一致性提示](/prompt-engineering/self-consistency-prompting?lang=zh) — 在一定程度上解决自我验证和推理差距的技术',
+            '[RAG 详解](/zh/prompt-engineering/rag-explained) — 知识截断和幻觉的主要解决方案',
+            '[AI 幻觉 — 为什么 AI 编造东西](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 限制 2 的深入探讨',
+            '[上下文窗口详解 — 为什么 AI 遗忘](/zh/prompt-engineering/context-windows-explained-why-ai-forgets) — 令牌限制的详细分析',
+            '[提示词注入和安全性](/zh/prompt-engineering/prompt-injection-and-security) — LLM 限制如何在代理和工具使用架构中产生安全风险',
+            '[大语言模型如何实际工作](/zh/prompt-engineering/how-llms-actually-work) — 解释这些限制存在的 transformer 架构、标记化和 RLHF',
+            '[自我一致性提示](/zh/prompt-engineering/self-consistency-prompting) — 在一定程度上解决自我验证和推理差距的技术',
           ],
         },
         faq: {
@@ -23050,7 +23050,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/open-source-vs-proprietary-llms',
         'inLanguage': 'de',
         headline: 'Open Source vs. proprietäre LLMs',
         description: 'Open-Weights-Modelle wie LLaMA 3.1 und Mistral bieten Kontrolle und Kosteneinsparungen; proprietäre Modelle wie GPT-4o und Claude 4.6 Sonnet liefern Spitzenleistung.',
@@ -23207,7 +23207,7 @@ zh: {
           content: [
             '**"Open Source" und "Open Weights" sind nicht synonym.** Open-Source-Lizenzierung (Apache 2.0, MIT, GPL) gilt für Quellcode und erlaubt unbeschränkte kommerzielle und private Nutzung. Open-Weights bedeutet, dass die trainierten Modellgewichte herunterladbar sind, aber möglicherweise unter einer spezialisierten Lizenz beschränkt sind. LLaMA 3.1 ist Open-Weights, nicht Open Source — Meta veröffentlicht die Gewichte unter Llama Community License 2.1, die kommerzielle Nutzung erlaubt, aber Einschränkungen enthält, die das Aufrufen von Derivatmodellen als "LLaMA" verhindern und Attribution erfordern.',
             '**Proprietäre Modelle sind weder Open-Weights noch Open Source.** OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet) und Google (Gemini 2.5 Pro) veröffentlichen keine Modellgewichte. Sie greifen ausschließlich über API zu. Die Gewichte bleiben geschlossen; Sie können das Modell nicht sehen, herunterladen, ändern oder selbst bereitstellen.',
-            'Das Verständnis dieser Unterscheidung ist wichtig für Compliance, Anpassung und Datensouveränität. [Erfahren Sie, wie LLMs intern funktionieren, um zu verstehen, warum Gewichte wichtig sind](/prompt-engineering/how-llms-actually-work?lang=de).',
+            'Das Verständnis dieser Unterscheidung ist wichtig für Compliance, Anpassung und Datensouveränität. [Erfahren Sie, wie LLMs intern funktionieren, um zu verstehen, warum Gewichte wichtig sind](/de/prompt-engineering/how-llms-actually-work).',
           ],
         },
     
@@ -23321,7 +23321,7 @@ zh: {
           title: 'Die proprietäre Landschaft in 2026',
           content: [
             '**Proprietäre LLMs werden ausschließlich über Vendor-kontrollierte APIs zugegriffen; Modellgewichte werden nie veröffentlicht und können nicht heruntergeladen, geändert oder lokal bereitgestellt werden.** Benutzer zahlen Pro-Token-API-Billing und akzeptieren Vendor-Kontrolle über Modell-Updates, Sicherheitsrichtlinien und Leistungsmerkmale.',
-            '**OpenAIs GPT-4o bleibt der Reasoning-Leiter.** GPT-4o unterstützt 128K Token-Kontextfenster mit Training-Cutoff Oktober 2024. Es zeichnet sich bei Tool-Use, Agent-Workflows, Multimodal-Input (Bilder, Text) und komplexem Multi-Step-Reasoning aus. API-Preisgestaltung: $5 pro 1 Million Input-Token, $15 pro 1 Million Output-Token (März 2026 Raten). GPT-4o ist nur API; Gewichte werden nie veröffentlicht. Siehe [wie Kontextfenster Ihr AI-System beeinflussen](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de), um Trade-Offs zu verstehen.',
+            '**OpenAIs GPT-4o bleibt der Reasoning-Leiter.** GPT-4o unterstützt 128K Token-Kontextfenster mit Training-Cutoff Oktober 2024. Es zeichnet sich bei Tool-Use, Agent-Workflows, Multimodal-Input (Bilder, Text) und komplexem Multi-Step-Reasoning aus. API-Preisgestaltung: $5 pro 1 Million Input-Token, $15 pro 1 Million Output-Token (März 2026 Raten). GPT-4o ist nur API; Gewichte werden nie veröffentlicht. Siehe [wie Kontextfenster Ihr AI-System beeinflussen](/de/prompt-engineering/context-windows-explained-why-ai-forgets), um Trade-Offs zu verstehen.',
             '**Anthropics Claude 4.6 Sonnet dominiert Schreib- und Code-Qualitäts-Benchmarks.** Claude unterstützt 200K Token-Kontext — 2× größer als GPT-4o — ermöglicht längere Dokumente und erweiterte Gespräche. Training-Datums-Cutoff: Anfang 2025. API-Preisgestaltung: $3 pro 1 Million Input-Token, $15 pro 1 Million Output-Token. Claude bietet kein öffentliches Fine-Tuning. Anthropic priorisiert Interpretierbarkeit und Safety-Alignment gegenüber Benchmark-Maximierung.',
             '**Googles Gemini 2.5 Pro bietet das größte Kontextfenster: 2M Token.** Dies ermöglicht vollständiges Buch-Längen-Dokument-Verarbeitung, erschöpfende Forschung und erweiterte Multi-Turn-Gespräche. Preisgestaltung: $1,25 pro 1 Million Input-Token (≤200K Kontext), $10 pro 1 Million Output-Token; höhere Raten für >200K Kontext. Gemini integriert sich tief mit Google Workspace, Calendar, Gmail und Web-Suche. Training-Datums-Cutoff: Oktober 2024. Fine-Tuning ist für Gemini-Modelle verfügbar.',
           ],
@@ -23330,7 +23330,7 @@ zh: {
         performanceBenchmarks: {
           title: 'Benchmark-Leistung: Wo die Lücke in 2026 steht',
           content: [
-            '**Proprietäre Modelle führen immer noch bei allgemeinem Reasoning (MMLU), aber die Lücke hat sich auf 7–8 Prozentpunkte verengt.** MMLU (Massive Multitask Language Understanding) ist ein breiter Benchmark, der 57 akademische Disziplinen abdeckt. Um zu verstehen, warum [wie LLMs tatsächlich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de) wichtig für Reasoning-Fähigkeit ist, lesen Sie unseren tiefgehenden Bericht zur Transformer-Architektur. Aktuelle Scores:',
+            '**Proprietäre Modelle führen immer noch bei allgemeinem Reasoning (MMLU), aber die Lücke hat sich auf 7–8 Prozentpunkte verengt.** MMLU (Massive Multitask Language Understanding) ist ein breiter Benchmark, der 57 akademische Disziplinen abdeckt. Um zu verstehen, warum [wie LLMs tatsächlich funktionieren](/de/prompt-engineering/how-llms-actually-work) wichtig für Reasoning-Fähigkeit ist, lesen Sie unseren tiefgehenden Bericht zur Transformer-Architektur. Aktuelle Scores:',
             '',
             'GPT-4o: 88,7% (OpenAI, 2024)',
             'Claude 3.5 Sonnet: 88,3% (Anthropic, 2024)',
@@ -23340,9 +23340,9 @@ zh: {
             '',
             '**Die Leistungslücke zwischen Open-Weights- und proprietären Modellen hat sich von 15–20 Prozentpunkten in 2022 auf 7–8 Punkte bei Reasoning-Aufgaben in 2026 verengt.** Bei spezialisierten Aufgaben (Programmierung, Mathematik, Zusammenfassung, Klassifizierung) entsprechen Open-Weights-Modelle jetzt proprietären Pendants oder übertreffen sie.',
             '',
-            'Die verbleibende Lücke ist hauptsächlich bei abstraktem Reasoning und [Tool-Use-Orchestrierung](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de). — Touvron et al., "Llama 3 Herd of Models", 2024',
+            'Die verbleibende Lücke ist hauptsächlich bei abstraktem Reasoning und [Tool-Use-Orchestrierung](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). — Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
-            '**Wichtiger Vorbehalt:** Benchmarks messen enge Fähigkeiten. Task-spezifische Leistung variiert: bei Klassifizierung, Zusammenfassung und Extraktion entspricht LLaMA 3.1 70B oft oder übertrifft GPT-4o. Für komplexes Multi-Step-Reasoning (Algebra, lange Gedankenketten), behalten proprietäre Modelle einen Vorteil. Der einzige zuverlässige Benchmark ist das Testen bei Ihrer tatsächlichen Aufgabe — siehe [wie Sie das richtige Modell für Ihren Anwendungsfall wählen](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de).',
+            '**Wichtiger Vorbehalt:** Benchmarks messen enge Fähigkeiten. Task-spezifische Leistung variiert: bei Klassifizierung, Zusammenfassung und Extraktion entspricht LLaMA 3.1 70B oft oder übertrifft GPT-4o. Für komplexes Multi-Step-Reasoning (Algebra, lange Gedankenketten), behalten proprietäre Modelle einen Vorteil. Der einzige zuverlässige Benchmark ist das Testen bei Ihrer tatsächlichen Aufgabe — siehe [wie Sie das richtige Modell für Ihren Anwendungsfall wählen](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
         },
     
@@ -23361,7 +23361,7 @@ zh: {
             '',
             '**Bei 100M Token/Tag:** Benötigen 40 A100s = $100/Tag. API-Kosten: $1.800/Tag. Open-Weights ist 18× billiger.',
             '',
-            'Überprüfen Sie Preisgestaltung: [OpenAI Pricing](https://openai.com/pricing) · [Anthropic Pricing](https://www.anthropic.com/api) · [Google Pricing](https://ai.google.dev/pricing) — Raten ändern sich vierteljährlich. Siehe [Token, Kosten und Limits erklärt](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de) für detaillierter Token-Kosten-Aufschlüsselung.',
+            'Überprüfen Sie Preisgestaltung: [OpenAI Pricing](https://openai.com/pricing) · [Anthropic Pricing](https://www.anthropic.com/api) · [Google Pricing](https://ai.google.dev/pricing) — Raten ändern sich vierteljährlich. Siehe [Token, Kosten und Limits erklärt](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) für detaillierter Token-Kosten-Aufschlüsselung.',
           ],
           columns: ['Modell', 'Input (pro 1M Token)', 'Output (pro 1M Token)'],
           rows: [
@@ -23386,7 +23386,7 @@ zh: {
           content: [
             '**Open-Weights-Modelle erlauben vollständiges Fine-Tuning; proprietäre Modelle beschränken oder verbieten es.** Fine-Tuning bedeutet Umschulung der Modellgewichte auf Ihren eigenen Daten, um das Modell für Ihre Domain zu spezialisieren. Sie können LoRA (Low-Rank Adaptation) für effizientes Fine-Tuning, QLoRA für quantisiertes Training oder vollständiges Backpropagation-Training verwenden, wenn Sie die Compute haben. Nach Fine-Tuning gehört das Modell Ihnen — Sie besitzen die resultierenden Gewichte, können sie überall bereitstellen und können sie offline aktualisieren.',
             '**Proprietäre Fine-Tuning-Verfügbarkeit:** OpenAI Fine-Tuning-API funktioniert nur für GPT-4o mini, GPT-4 (ältere Modelle). Nicht verfügbar für GPT-4o Flagship. Anthropic bietet kein Fine-Tuning für Claude über API. Google bietet begrenzt Fine-Tuning für Gemini. Keine dieser Optionen erlaubt Besitz der Fine-Tuned-Gewichte — Sie mieten eine Fine-Tuned-Kopie des proprietären Modells.',
-            '**Sicherheitsüberlegung:** Bei Fine-Tuning auf proprietären APIs werden Ihre Trainingsdaten auf Vendor-Server hochgeladen. Für sensitive Domains verletzt dies Compliance-Regeln. Open-Weights Fine-Tuning bleibt On-Premises. Siehe [Prompt-Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) für zusätzliche Angriffsflächen-Überlegungen bei Verwendung externer APIs.',
+            '**Sicherheitsüberlegung:** Bei Fine-Tuning auf proprietären APIs werden Ihre Trainingsdaten auf Vendor-Server hochgeladen. Für sensitive Domains verletzt dies Compliance-Regeln. Open-Weights Fine-Tuning bleibt On-Premises. Siehe [Prompt-Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) für zusätzliche Angriffsflächen-Überlegungen bei Verwendung externer APIs.',
           ],
         },
     
@@ -23422,8 +23422,8 @@ zh: {
           title: 'Wann Open-Source-Modelle zu verwenden',
           content: '**Wählen Sie Open-Weights, wenn Datenschutz, Kosten in großem Maßstab oder tiefe Anpassungsanforderungen Ihre Zwänge dominieren.** Open-Weights zeichnen sich aus in:',
           items: [
-            '**Sensitive Daten (Gesundheitswesen, Finanzen, Recht):** Patientenakten, Finanzdaten, Anwalt-Klient-Kommunikation können externe APIs nicht durchqueren. Open-Weights lokal bereitgestellt hält Daten in Ihrer Kontrolle und erreicht Compliance. Verwenden Sie LLaMA 3.1 oder Mistral für HIPAA-, GDPR- und Anwalt-Klient-Berechtigungs-Compliance. Kombinieren Sie mit [Sicherheitskontrollen gegen Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de), um Modell-Eingaben zu schützen.',
-            '**High-Volume-Automatisierung (50M+ Token/Tag):** Über ~10M Token/Tag wird Self-Hosting billiger als proprietäre APIs. Verwenden Sie Open-Weights für High-Volume-Klassifizierung, Extraktion, Zusammenfassung oder Datenverarbeitungs-Pipelines, wo [API-Kosten unerschwinglich wären](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de).',
+            '**Sensitive Daten (Gesundheitswesen, Finanzen, Recht):** Patientenakten, Finanzdaten, Anwalt-Klient-Kommunikation können externe APIs nicht durchqueren. Open-Weights lokal bereitgestellt hält Daten in Ihrer Kontrolle und erreicht Compliance. Verwenden Sie LLaMA 3.1 oder Mistral für HIPAA-, GDPR- und Anwalt-Klient-Berechtigungs-Compliance. Kombinieren Sie mit [Sicherheitskontrollen gegen Prompt-Injection](/de/prompt-engineering/prompt-injection-and-security), um Modell-Eingaben zu schützen.',
+            '**High-Volume-Automatisierung (50M+ Token/Tag):** Über ~10M Token/Tag wird Self-Hosting billiger als proprietäre APIs. Verwenden Sie Open-Weights für High-Volume-Klassifizierung, Extraktion, Zusammenfassung oder Datenverarbeitungs-Pipelines, wo [API-Kosten unerschwinglich wären](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting).',
             '**Domain-Anpassung und Fine-Tuning:** Sie haben gekennzeichnete Datensätze und müssen das Modell auf Ihre Terminologie, Schreibstil oder Task-Verteilung spezialisieren. Open-Weights erlauben LoRA, QLoRA oder vollständiges Fine-Tuning. Proprietäre APIs verbieten oder beschränken Anpassung.',
             '**Geografische oder Netzwerk-Zwänge:** Sie benötigen Inferenz ohne Internetverbindung (U-Boote, Flugzeuge, Remote-Standorte). Open-Weights läuft offline. Proprietäre APIs erfordern Netzwerkverbindung.',
             '**EU AI Act Compliance (High-Risk-Bereitstellungen):** Einstellungssysteme, Kreditentscheidungen, Vorteilsbestimmung. Audit-Trails, Risicodokumentation und On-Premises-Datenresidenz sind mit Open-Weights einfacher. Proprietäre APIs erschweren Compliance-Nachweis.',
@@ -23450,7 +23450,7 @@ zh: {
           items: [
             '**Datenschutz-sensitive Daten → lokal Open-Weights; komplexes Reasoning → proprietäre API.** Leiten Sie Patientenakten, Finanzdaten und Rechtsdokumente an LLaMA 3.1 lokal über Ollama weiter. Leiten Sie Multi-Step-Forschungs-Synthese, Code-Generierung und Agent-Orchestrierung an GPT-4o oder Claude 4.6 Sonnet weiter. Dieser Hybrid-Ansatz erreicht Compliance bei Aufrechterhaltung der Frontier-Leistung.',
             '**Kostenempfindliche Batch-Verarbeitung → lokal Open-Weights; interaktive Anfragen → proprietäre API.** Für Background-Aufgaben (Klassifizierung, Extraktion, Zusammenfassung) verwenden Sie Self-Hosted LLaMA 3.1 70B (~$2/Stunde auf A100). Für Real-Time-User-Anfragen, wo Latenz wichtig ist, verwenden Sie GPT-4o API ($5/$15 pro 1M Token). Hybrid reduziert Gesamtkosten und Latenz.',
-            '**Multi-Model-Vergleich und Consensus → PromptQuorum.** Verteilen Sie einen einzelnen [Prompt](/prompt-engineering/what-is-prompt-engineering?lang=de) gleichzeitig an lokal Ollama, GPT-4o, Claude 4.6 und Gemini 2.5 Pro über PromptQuorum. Vergleichen Sie Outputs nebeneinander auf Qualität, Latenz und Kosten. Wählen Sie den Gewinner für Produktion oder kombinieren Sie Outputs für Ensemble-Reasoning.',
+            '**Multi-Model-Vergleich und Consensus → PromptQuorum.** Verteilen Sie einen einzelnen [Prompt](/de/prompt-engineering/what-is-prompt-engineering) gleichzeitig an lokal Ollama, GPT-4o, Claude 4.6 und Gemini 2.5 Pro über PromptQuorum. Vergleichen Sie Outputs nebeneinander auf Qualität, Latenz und Kosten. Wählen Sie den Gewinner für Produktion oder kombinieren Sie Outputs für Ensemble-Reasoning.',
             '**Testing und Staging → Open-Weights; Produktions-Serving → proprietär.** Verwenden Sie LLaMA 3.1 8B lokal für schnelle Prototypen und Entwicklung. Sobald Prompt und Pipeline validiert sind, upgraden Sie zu GPT-4o oder Claude für Production-Traffic, wo Zuverlässigkeit, Tool-Integration und Safety-Garantien am meisten wichtig sind.',
           ],
         },
@@ -23461,19 +23461,19 @@ zh: {
           items: [
             '**Die Leistungslücke ist task-spezifisch, nicht universell.** Proprietäre Modelle führen bei MMLU (Reasoning) um 7–8 Punkte. Aber bei Klassifizierung, Zusammenfassung, Extraktion und vielen Domain-Aufgaben entspricht LLaMA 3.1 70B proprietären Modellen oder übertrifft sie. "Proprietär ist besser" ist zu breit. Benchmark Ihre tatsächliche Aufgabe.',
             '**"Open Source" Lizenzierung ist komplex und oft nicht wirklich Open Source.** LLaMA, Mistral und Qwen sind nicht OSI-konform Open Source — sie sind "Open Weights" unter nicht-Standard-Lizenzen. Sie "Open Source" zu nennen ist irreführend und lädt zu Rechtsverwirung ein. Klären Sie Lizenzierung mit Rat bevor Sie sich auf legale Schutzmaßnahmen verlassen.',
-            '**Proprietär ist nicht immer sicherer oder besser aligned.** [Alle Modelle halluzinieren](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de). Proprietäres Training-Data, Cutoffs und Constitutional AI verhindern nicht Jailbreaking, [Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de) oder Missbrauch. Open-Weights können Fine-Tuned werden, um proprietäres Alignment zu entsprechen oder zu übertreffen. Safety ist eine Eigenschaft der Bereitstellung und Schutzmaßnahmen, nicht der Modellklasse.',
+            '**Proprietär ist nicht immer sicherer oder besser aligned.** [Alle Modelle halluzinieren](/de/prompt-engineering/ai-limitations-what-llms-cant-do). Proprietäres Training-Data, Cutoffs und Constitutional AI verhindern nicht Jailbreaking, [Prompt-Injection](/de/prompt-engineering/prompt-injection-and-security) oder Missbrauch. Open-Weights können Fine-Tuned werden, um proprietäres Alignment zu entsprechen oder zu übertreffen. Safety ist eine Eigenschaft der Bereitstellung und Schutzmaßnahmen, nicht der Modellklasse.',
           ],
         },
     
         keyTerms: {
           title: 'Schlüsselbegriffe',
           items: [
-            '[Open Weights](/prompt-engineering/prompt-engineering-glossary?lang=de#open-weights) — Modellgewichte sind herunterladbar, aber möglicherweise unter Lizenz beschränkt',
-            '[Fine-Tuning](/prompt-engineering/prompt-engineering-glossary?lang=de#fine-tuning) — Umschulung von Modellgewichten auf Domain-spezifischen Daten',
-            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=de#lora) — Effizientes Fine-Tuning über Low-Rank-Adaptation (5–10% von vollständigen Trainingskosten)',
-            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=de#rag) — Retrieval-Augmented Generation; Verankerung von LLM-Ausgaben in externen Dokumenten',
-            '[Context Window](/prompt-engineering/prompt-engineering-glossary?lang=de#context-window) — Maximale Token-Kapazität für Input + Output kombiniert',
-            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=de#vram) — GPU-Speicher erforderlich für Modell-Inferenz',
+            '[Open Weights](/de/prompt-engineering/prompt-engineering-glossary#open-weights) — Modellgewichte sind herunterladbar, aber möglicherweise unter Lizenz beschränkt',
+            '[Fine-Tuning](/de/prompt-engineering/prompt-engineering-glossary#fine-tuning) — Umschulung von Modellgewichten auf Domain-spezifischen Daten',
+            '[LoRA](/de/prompt-engineering/prompt-engineering-glossary#lora) — Effizientes Fine-Tuning über Low-Rank-Adaptation (5–10% von vollständigen Trainingskosten)',
+            '[RAG](/de/prompt-engineering/prompt-engineering-glossary#rag) — Retrieval-Augmented Generation; Verankerung von LLM-Ausgaben in externen Dokumenten',
+            '[Context Window](/de/prompt-engineering/prompt-engineering-glossary#context-window) — Maximale Token-Kapazität für Input + Output kombiniert',
+            '[VRAM](/de/prompt-engineering/prompt-engineering-glossary#vram) — GPU-Speicher erforderlich für Modell-Inferenz',
           ],
         },
     
@@ -23488,12 +23488,12 @@ zh: {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Fundamentals: AI Limitations and Structural Constraints](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — Warum sowohl proprietäre als auch Open-Weights-Modelle fundamentale Einschränkungen wie Halluzination und Kontextgrenzen teilen',
-            '[Fundamentals: How LLMs Actually Work](/prompt-engineering/how-llms-actually-work?lang=de) — Verstehen von Transformer-Architektur erklärt, warum Open-Weights- und proprietäre Modelle den gleichen Core-Mechanismen teilen',
-            '[Fundamentals: GPT-4o, Claude, or Gemini? How to Pick the Right Model](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de) — Detaillierter Vergleich von Frontier-proprietären Modellen',
-            '[Techniques: RAG Explained — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=de) — Wie man jedes Modell (proprietär oder Open-Weights) mit externem Wissen erweitert',
-            '[Fundamentals: Tokens, Costs & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de) — Detaillierte Kostenanalyse und Token-Ökonomie',
-            '[Fundamentals: Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security?lang=de) — Sicherheitsüberlegungen für beide Modellklassen',
+            '[Fundamentals: AI Limitations and Structural Constraints](/de/prompt-engineering/ai-limitations-what-llms-cant-do) — Warum sowohl proprietäre als auch Open-Weights-Modelle fundamentale Einschränkungen wie Halluzination und Kontextgrenzen teilen',
+            '[Fundamentals: How LLMs Actually Work](/de/prompt-engineering/how-llms-actually-work) — Verstehen von Transformer-Architektur erklärt, warum Open-Weights- und proprietäre Modelle den gleichen Core-Mechanismen teilen',
+            '[Fundamentals: GPT-4o, Claude, or Gemini? How to Pick the Right Model](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Detaillierter Vergleich von Frontier-proprietären Modellen',
+            '[Techniques: RAG Explained — Retrieval-Augmented Generation](/de/prompt-engineering/rag-explained) — Wie man jedes Modell (proprietär oder Open-Weights) mit externem Wissen erweitert',
+            '[Fundamentals: Tokens, Costs & Limits](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Detaillierte Kostenanalyse und Token-Ökonomie',
+            '[Fundamentals: Prompt Injection and Security](/de/prompt-engineering/prompt-injection-and-security) — Sicherheitsüberlegungen für beide Modellklassen',
           ],
         },
     
@@ -23575,7 +23575,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/open-source-vs-proprietary-llms',
         'inLanguage': 'fr',
         headline: 'LLMs open source vs propriétaires',
         description: 'Les modèles open-weights comme LLaMA 3.1 et Mistral offrent contrôle et économies ; les modèles propriétaires comme GPT-4o et Claude 4.6 Sonnet livrent des performances de pointe.',
@@ -23732,7 +23732,7 @@ zh: {
           content: [
             '**"Open source" et "open-weights" ne sont pas synonymes.** La licence open source (Apache 2.0, MIT, GPL) s\'applique au code source et autorise un usage commercial et privé sans restriction. Open-weights signifie que les poids du modèle entraîné sont téléchargeables, mais peuvent être restreints par une licence spécialisée. LLaMA 3.1 est open-weights, pas open source — Meta publie les poids sous la Llama Community License 2.1, qui autorise l\'usage commercial mais contient des restrictions empêchant d\'appeler les modèles dérivés "LLaMA" et exigeant une attribution.',
             '**Les modèles propriétaires ne sont ni open-weights ni open source.** OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet) et Google (Gemini 2.5 Pro) ne publient pas les poids des modèles. Vous y accédez exclusivement via API. Les poids restent fermés ; vous ne pouvez pas voir, télécharger, modifier ou déployer le modèle vous-même.',
-            'Comprendre cette distinction est essentiel pour la conformité, la personnalisation et la souveraineté des données. [Découvrez comment les LLMs fonctionnent en interne pour comprendre pourquoi les poids sont importants](/prompt-engineering/how-llms-actually-work?lang=fr).',
+            'Comprendre cette distinction est essentiel pour la conformité, la personnalisation et la souveraineté des données. [Découvrez comment les LLMs fonctionnent en interne pour comprendre pourquoi les poids sont importants](/fr/prompt-engineering/how-llms-actually-work).',
           ],
         },
 
@@ -23846,7 +23846,7 @@ zh: {
           title: 'Le paysage propriétaire en 2026',
           content: [
             '**Les LLMs propriétaires sont accessibles exclusivement via des APIs contrôlées par le fournisseur ; les poids du modèle ne sont jamais publiés et ne peuvent être ni téléchargés, ni modifiés, ni déployés localement.** Les utilisateurs paient une facturation API par token et acceptent le contrôle du fournisseur sur les mises à jour du modèle, les politiques de sécurité et les caractéristiques de performance.',
-            '**GPT-4o d\'OpenAI reste le leader du raisonnement.** GPT-4o prend en charge un contexte de 128 K tokens avec une coupure d\'entraînement en octobre 2024. Il excelle dans l\'utilisation d\'outils, les workflows d\'agents, les entrées multimodales (images, texte) et le raisonnement multi-étapes complexe. Tarification API : 5 $ par million de tokens en entrée, 15 $ par million de tokens en sortie (tarifs mars 2026). GPT-4o est API uniquement ; les poids ne sont jamais publiés. Consultez [comment les fenêtres de contexte affectent votre système d\'IA](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) pour comprendre les compromis.',
+            '**GPT-4o d\'OpenAI reste le leader du raisonnement.** GPT-4o prend en charge un contexte de 128 K tokens avec une coupure d\'entraînement en octobre 2024. Il excelle dans l\'utilisation d\'outils, les workflows d\'agents, les entrées multimodales (images, texte) et le raisonnement multi-étapes complexe. Tarification API : 5 $ par million de tokens en entrée, 15 $ par million de tokens en sortie (tarifs mars 2026). GPT-4o est API uniquement ; les poids ne sont jamais publiés. Consultez [comment les fenêtres de contexte affectent votre système d\'IA](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) pour comprendre les compromis.',
             '**Claude 4.6 Sonnet d\'Anthropic domine les benchmarks de qualité rédactionnelle et de code.** Claude prend en charge un contexte de 200 K tokens — 2× plus grand que GPT-4o — permettant de traiter des documents plus longs et des conversations prolongées. Coupure des données d\'entraînement : début 2025. Tarification API : 3 $ par million de tokens en entrée, 15 $ par million de tokens en sortie. Claude ne propose pas de fine-tuning public. Anthropic privilégie l\'interprétabilité et l\'alignement de sécurité plutôt que la maximisation des benchmarks.',
             '**Gemini 2.5 Pro de Google offre la plus grande fenêtre de contexte : 2 M tokens.** Cela permet le traitement de documents de la longueur d\'un livre entier, de recherches exhaustives et de conversations multi-tours étendues. Tarification : 1,25 $ par million de tokens en entrée (≤200 K contexte), 10 $ par million de tokens en sortie ; tarifs plus élevés pour >200 K de contexte. Gemini s\'intègre profondément avec Google Workspace, Calendar, Gmail et la recherche web. Coupure des données d\'entraînement : octobre 2024. Le fine-tuning est disponible pour les modèles Gemini.',
           ],
@@ -23855,7 +23855,7 @@ zh: {
         performanceBenchmarks: {
           title: 'Performance sur les benchmarks : où en est l\'écart en 2026',
           content: [
-            '**Les modèles propriétaires mènent encore sur le raisonnement général (MMLU), mais l\'écart s\'est réduit à 7–8 points de pourcentage.** MMLU (Massive Multitask Language Understanding) est un benchmark large couvrant 57 disciplines académiques. Pour comprendre pourquoi [le fonctionnement réel des LLMs](/prompt-engineering/how-llms-actually-work?lang=fr) importe pour la capacité de raisonnement, consultez notre analyse approfondie de l\'architecture transformer. Scores actuels :',
+            '**Les modèles propriétaires mènent encore sur le raisonnement général (MMLU), mais l\'écart s\'est réduit à 7–8 points de pourcentage.** MMLU (Massive Multitask Language Understanding) est un benchmark large couvrant 57 disciplines académiques. Pour comprendre pourquoi [le fonctionnement réel des LLMs](/fr/prompt-engineering/how-llms-actually-work) importe pour la capacité de raisonnement, consultez notre analyse approfondie de l\'architecture transformer. Scores actuels :',
             '',
             'GPT-4o : 88,7 % (OpenAI, 2024)',
             'Claude 3.5 Sonnet : 88,3 % (Anthropic, 2024)',
@@ -23865,9 +23865,9 @@ zh: {
             '',
             '**L\'écart de performance entre les modèles open-weights et propriétaires s\'est réduit de 15–20 points de pourcentage en 2022 à 7–8 points sur les tâches de raisonnement en 2026.** Sur les tâches spécialisées (code, mathématiques, résumé, classification), les modèles open-weights égalent ou dépassent désormais leurs homologues propriétaires.',
             '',
-            'L\'écart restant porte principalement sur le raisonnement abstrait et [l\'orchestration d\'outils](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr). — Touvron et al., "Llama 3 Herd of Models", 2024',
+            'L\'écart restant porte principalement sur le raisonnement abstrait et [l\'orchestration d\'outils](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). — Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
-            '**Mise en garde importante :** Les benchmarks mesurent des compétences étroites. Les performances spécifiques aux tâches varient : sur la classification, le résumé et l\'extraction, LLaMA 3.1 70B égale ou dépasse souvent GPT-4o. Pour le raisonnement multi-étapes complexe (algèbre, longues chaînes de pensée), les modèles propriétaires conservent un avantage. Le seul benchmark fiable est de tester sur votre tâche réelle — consultez [comment choisir le bon modèle pour votre cas d\'usage](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr).',
+            '**Mise en garde importante :** Les benchmarks mesurent des compétences étroites. Les performances spécifiques aux tâches varient : sur la classification, le résumé et l\'extraction, LLaMA 3.1 70B égale ou dépasse souvent GPT-4o. Pour le raisonnement multi-étapes complexe (algèbre, longues chaînes de pensée), les modèles propriétaires conservent un avantage. Le seul benchmark fiable est de tester sur votre tâche réelle — consultez [comment choisir le bon modèle pour votre cas d\'usage](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
         },
 
@@ -23886,7 +23886,7 @@ zh: {
             '',
             '**À 100 M tokens/jour :** Besoin de 40 A100 = 100 $/jour. Coûts API : 1 800 $/jour. L\'open-weights est 18× moins cher.',
             '',
-            'Vérifiez les tarifs : [Tarification OpenAI](https://openai.com/pricing) · [Tarification Anthropic](https://www.anthropic.com/api) · [Tarification Google](https://ai.google.dev/pricing) — les tarifs changent trimestriellement. Consultez [tokens, coûts et limites expliqués](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr) pour une analyse détaillée des coûts par token.',
+            'Vérifiez les tarifs : [Tarification OpenAI](https://openai.com/pricing) · [Tarification Anthropic](https://www.anthropic.com/api) · [Tarification Google](https://ai.google.dev/pricing) — les tarifs changent trimestriellement. Consultez [tokens, coûts et limites expliqués](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) pour une analyse détaillée des coûts par token.',
           ],
           columns: ['Modèle', 'Entrée (par million de tokens)', 'Sortie (par million de tokens)'],
           rows: [
@@ -23911,7 +23911,7 @@ zh: {
           content: [
             '**Les modèles open-weights permettent un fine-tuning complet ; les modèles propriétaires le restreignent ou l\'interdisent.** Le fine-tuning consiste à réentraîner les poids du modèle sur vos propres données pour le spécialiser sur votre domaine. Vous pouvez utiliser LoRA (Low-Rank Adaptation) pour un fine-tuning efficace, QLoRA pour un entraînement quantifié, ou la rétropropagation complète si vous disposez des ressources de calcul. Après le fine-tuning, le modèle vous appartient — vous êtes propriétaire des poids résultants, pouvez les déployer partout et les mettre à jour hors ligne.',
             '**Disponibilité du fine-tuning propriétaire :** L\'API de fine-tuning OpenAI fonctionne uniquement pour GPT-4o mini et GPT-4 (anciens modèles). Non disponible pour GPT-4o phare. Anthropic ne propose pas de fine-tuning pour Claude via API. Google propose un fine-tuning limité pour Gemini. Aucun de ces fournisseurs ne permet la propriété des poids affinés — vous louez une copie affinée du modèle propriétaire.',
-            '**Considération de sécurité :** Lors du fine-tuning sur des APIs propriétaires, vos données d\'entraînement sont téléchargées sur les serveurs du fournisseur. Pour les domaines sensibles, cela viole les règles de conformité. Le fine-tuning open-weights reste sur site. Consultez [injection de prompt et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) pour des considérations supplémentaires sur la surface d\'attaque lors de l\'utilisation d\'APIs externes.',
+            '**Considération de sécurité :** Lors du fine-tuning sur des APIs propriétaires, vos données d\'entraînement sont téléchargées sur les serveurs du fournisseur. Pour les domaines sensibles, cela viole les règles de conformité. Le fine-tuning open-weights reste sur site. Consultez [injection de prompt et sécurité](/fr/prompt-engineering/prompt-injection-and-security) pour des considérations supplémentaires sur la surface d\'attaque lors de l\'utilisation d\'APIs externes.',
           ],
         },
 
@@ -23947,8 +23947,8 @@ zh: {
           title: 'Quand utiliser des modèles open source',
           content: '**Choisissez l\'open-weights quand la confidentialité des données, le coût à grande échelle ou les exigences de personnalisation approfondie dominent vos contraintes.** L\'open-weights excelle dans :',
           items: [
-            '**Données sensibles (santé, finance, juridique) :** Les dossiers patients, les données financières et les communications avocat-client ne peuvent pas transiter par des APIs externes. Les modèles open-weights déployés sur site gardent les données sous votre contrôle et assurent la conformité. Utilisez LLaMA 3.1 ou Mistral pour la conformité HIPAA, RGPD et le secret professionnel avocat-client. Associez avec des [contrôles de sécurité contre l\'injection de prompt](/prompt-engineering/prompt-injection-and-security?lang=fr) pour protéger les entrées du modèle.',
-            '**Automatisation à grand volume (50 M+ tokens/jour) :** Au-delà de ~10 M tokens/jour, l\'auto-hébergement devient moins cher que les APIs propriétaires. Utilisez l\'open-weights pour les pipelines de classification, extraction, résumé ou traitement de données à haut volume où [les coûts API seraient prohibitifs](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr).',
+            '**Données sensibles (santé, finance, juridique) :** Les dossiers patients, les données financières et les communications avocat-client ne peuvent pas transiter par des APIs externes. Les modèles open-weights déployés sur site gardent les données sous votre contrôle et assurent la conformité. Utilisez LLaMA 3.1 ou Mistral pour la conformité HIPAA, RGPD et le secret professionnel avocat-client. Associez avec des [contrôles de sécurité contre l\'injection de prompt](/fr/prompt-engineering/prompt-injection-and-security) pour protéger les entrées du modèle.',
+            '**Automatisation à grand volume (50 M+ tokens/jour) :** Au-delà de ~10 M tokens/jour, l\'auto-hébergement devient moins cher que les APIs propriétaires. Utilisez l\'open-weights pour les pipelines de classification, extraction, résumé ou traitement de données à haut volume où [les coûts API seraient prohibitifs](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting).',
             '**Personnalisation et fine-tuning de domaine :** Vous disposez de jeux de données étiquetés et avez besoin que le modèle se spécialise sur votre terminologie, style rédactionnel ou distribution de tâches. L\'open-weights permet LoRA, QLoRA ou le fine-tuning complet. Les APIs propriétaires l\'interdisent ou le restreignent.',
             '**Contraintes géographiques ou réseau :** Vous avez besoin d\'inférence sans accès internet (sous-marins, aéronefs, sites distants). L\'open-weights fonctionne hors ligne. Les APIs propriétaires nécessitent une connectivité réseau.',
             '**Conformité EU AI Act (déploiements à haut risque) :** Systèmes de recrutement, décisions de crédit, attribution de prestations. Les pistes d\'audit, la documentation des risques et la résidence des données sur site sont plus faciles à réaliser avec l\'open-weights. Les APIs propriétaires rendent la conformité plus difficile à démontrer.',
@@ -23975,7 +23975,7 @@ zh: {
           items: [
             '**Données sensibles → open-weights local ; raisonnement complexe → API propriétaire.** Routez les dossiers patients, les données financières et les documents juridiques vers LLaMA 3.1 exécuté localement via Ollama. Routez la synthèse de recherche multi-étapes, la génération de code et l\'orchestration d\'agents vers GPT-4o ou Claude 4.6 Sonnet. Cette approche hybride assure la conformité tout en maintenant des performances de pointe.',
             '**Traitement par lots sensible aux coûts → open-weights local ; requêtes interactives → API propriétaire.** Pour les tâches en arrière-plan (classification, extraction, résumé), utilisez LLaMA 3.1 70B auto-hébergé (~2 $/h sur A100). Pour les requêtes utilisateur en temps réel où la latence compte, utilisez l\'API GPT-4o (5 $/15 $ par million de tokens). Le mode hybride réduit les coûts totaux et la latence.',
-            '**Comparaison et consensus multi-modèles → PromptQuorum.** Envoyez un seul [prompt](/prompt-engineering/what-is-prompt-engineering?lang=fr) à Ollama local, GPT-4o, Claude 4.6 et Gemini 2.5 Pro simultanément via PromptQuorum. Comparez les sorties côte à côte sur la qualité, la latence et le coût. Choisissez le meilleur pour la production ou combinez les sorties pour un raisonnement en ensemble.',
+            '**Comparaison et consensus multi-modèles → PromptQuorum.** Envoyez un seul [prompt](/fr/prompt-engineering/what-is-prompt-engineering) à Ollama local, GPT-4o, Claude 4.6 et Gemini 2.5 Pro simultanément via PromptQuorum. Comparez les sorties côte à côte sur la qualité, la latence et le coût. Choisissez le meilleur pour la production ou combinez les sorties pour un raisonnement en ensemble.',
             '**Tests et préproduction → open-weights ; serving en production → propriétaire.** Utilisez LLaMA 3.1 8B exécuté localement pour le prototypage rapide et le développement. Une fois le prompt et le pipeline validés, passez à GPT-4o ou Claude pour le trafic de production où la fiabilité, l\'intégration d\'outils et les garanties de sécurité comptent le plus.',
           ],
         },
@@ -23986,7 +23986,7 @@ zh: {
           items: [
             '**L\'écart de performance est spécifique à la tâche, pas universel.** Les modèles propriétaires mènent sur MMLU (raisonnement) de 7–8 points. Mais sur la classification, le résumé, l\'extraction et de nombreuses tâches de domaine, LLaMA 3.1 70B égale ou dépasse les modèles propriétaires. "Le propriétaire est meilleur" est trop large. Benchmarkez votre tâche réelle.',
             '**La licence "open source" est complexe et souvent pas vraiment open source.** LLaMA, Mistral et Qwen ne sont pas conformes à l\'OSI — ce sont des "open-weights" sous des licences non standard. Les appeler "open source" est trompeur et invite à la confusion juridique. Clarifiez les licences avec un conseil juridique avant de vous reposer sur des protections légales.',
-            '**Le propriétaire n\'est pas toujours plus sûr ou mieux aligné.** [Tous les modèles hallucinent](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr). Les données d\'entraînement propriétaires, les dates de coupure et l\'IA constitutionnelle ne préviennent pas le jailbreaking, [l\'injection de prompt](/prompt-engineering/prompt-injection-and-security?lang=fr) ou les abus. Les modèles open-weights peuvent être affinés pour égaler ou dépasser l\'alignement propriétaire. La sécurité est une propriété du déploiement et des garde-fous, pas de la classe de modèle.',
+            '**Le propriétaire n\'est pas toujours plus sûr ou mieux aligné.** [Tous les modèles hallucinent](/fr/prompt-engineering/ai-limitations-what-llms-cant-do). Les données d\'entraînement propriétaires, les dates de coupure et l\'IA constitutionnelle ne préviennent pas le jailbreaking, [l\'injection de prompt](/fr/prompt-engineering/prompt-injection-and-security) ou les abus. Les modèles open-weights peuvent être affinés pour égaler ou dépasser l\'alignement propriétaire. La sécurité est une propriété du déploiement et des garde-fous, pas de la classe de modèle.',
           ],
         },
 
@@ -24013,12 +24013,12 @@ zh: {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Fondamentaux : Limitations de l\'IA et contraintes structurelles](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — Pourquoi les modèles propriétaires et open-weights partagent des limitations fondamentales comme l\'hallucination et les limites de contexte',
-            '[Fondamentaux : Comment les LLMs fonctionnent réellement](/prompt-engineering/how-llms-actually-work?lang=fr) — Comprendre l\'architecture transformer explique pourquoi les modèles open-weights et propriétaires partagent les mêmes mécaniques fondamentales',
-            '[Fondamentaux : GPT-4o, Claude ou Gemini ? Comment choisir le bon modèle](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr) — Comparaison détaillée des modèles propriétaires de pointe',
-            '[Techniques : RAG expliqué — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=fr) — Comment étendre n\'importe quel modèle (propriétaire ou open-weights) avec des connaissances externes',
-            '[Fondamentaux : Tokens, coûts et limites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr) — Analyse détaillée des coûts et économie des tokens',
-            '[Fondamentaux : Injection de prompt et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Considérations de sécurité pour les deux classes de modèles',
+            '[Fondamentaux : Limitations de l\'IA et contraintes structurelles](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — Pourquoi les modèles propriétaires et open-weights partagent des limitations fondamentales comme l\'hallucination et les limites de contexte',
+            '[Fondamentaux : Comment les LLMs fonctionnent réellement](/fr/prompt-engineering/how-llms-actually-work) — Comprendre l\'architecture transformer explique pourquoi les modèles open-weights et propriétaires partagent les mêmes mécaniques fondamentales',
+            '[Fondamentaux : GPT-4o, Claude ou Gemini ? Comment choisir le bon modèle](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Comparaison détaillée des modèles propriétaires de pointe',
+            '[Techniques : RAG expliqué — Retrieval-Augmented Generation](/fr/prompt-engineering/rag-explained) — Comment étendre n\'importe quel modèle (propriétaire ou open-weights) avec des connaissances externes',
+            '[Fondamentaux : Tokens, coûts et limites](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Analyse détaillée des coûts et économie des tokens',
+            '[Fondamentaux : Injection de prompt et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Considérations de sécurité pour les deux classes de modèles',
           ],
         },
 
@@ -24100,7 +24100,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms',
         'inLanguage': 'ja',
         headline: 'オープンソース vs 独自LLM：2026年の比較',
         description: 'LLaMA 3.1やMistralなどのオープンウェイトモデルは制御とコスト削減を提供し、GPT-4oやClaude 4.6 Sonnetなどの独自モデルはフロンティアパフォーマンスを実現します。',
@@ -24257,7 +24257,7 @@ zh: {
           content: [
             '**「オープンソース」と「オープンウェイト」は同義語ではありません。** オープンソースライセンス（Apache 2.0、MIT、GPL）はソースコードに適用され、無制限の商用・プライベート利用を許可します。オープンウェイトとは、学習済みモデルウェイトがダウンロード可能ですが、特殊なライセンスの下で制限される場合があることを意味します。LLaMA 3.1はオープンウェイトであり、オープンソースではありません — MetaはLlama Community License 2.1の下でウェイトをリリースしており、商用利用は許可されていますが、派生モデルを「LLaMA」と命名することを禁止し、帰属表示を要求する制限が含まれています。',
             '**独自モデルはオープンウェイトでもオープンソースでもありません。** OpenAI（GPT-4o）・Anthropic（Claude 4.6 Sonnet）・Google（Gemini 2.5 Pro）はモデルウェイトをリリースしていません。APIを通じてのみアクセスできます。ウェイトはクローズドのままで、自分でモデルを確認・ダウンロード・修正・デプロイすることはできません。',
-            'この区別を理解することは、コンプライアンス・カスタマイズ・データ主権の面で重要です。[LLMが内部でどのように機能するかを学ぶ](/prompt-engineering/how-llms-actually-work?lang=ja)と、なぜウェイトが重要なのかが理解できます。',
+            'この区別を理解することは、コンプライアンス・カスタマイズ・データ主権の面で重要です。[LLMが内部でどのように機能するかを学ぶ](/ja/prompt-engineering/how-llms-actually-work)と、なぜウェイトが重要なのかが理解できます。',
           ],
         },
 
@@ -24371,7 +24371,7 @@ zh: {
           title: '2026年の独自モデルの状況',
           content: [
             '**独自LLMはベンダー管理のAPIを通じてのみアクセスできます。モデルウェイトは決してリリースされず、ダウンロード・修正・ローカルデプロイはできません。** ユーザーはトークン単位のAPI課金を支払い、モデルの更新・安全ポリシー・パフォーマンス特性に関するベンダーの管理を受け入れます。',
-            '**OpenAIのGPT-4oは推論のリーダーとして地位を維持しています。** GPT-4oは2024年10月の学習カットオフで128Kトークンのコンテキストをサポートしています。ツール使用・エージェントワークフロー・マルチモーダル入力（画像・テキスト）・複雑な多段階推論で優れています。APIの価格：入力100万トークンあたり$5、出力100万トークンあたり$15（2026年3月現在）。GPT-4oはAPIのみです。[コンテキストウィンドウがAIシステムにどう影響するか](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja)を参照して、トレードオフを理解してください。',
+            '**OpenAIのGPT-4oは推論のリーダーとして地位を維持しています。** GPT-4oは2024年10月の学習カットオフで128Kトークンのコンテキストをサポートしています。ツール使用・エージェントワークフロー・マルチモーダル入力（画像・テキスト）・複雑な多段階推論で優れています。APIの価格：入力100万トークンあたり$5、出力100万トークンあたり$15（2026年3月現在）。GPT-4oはAPIのみです。[コンテキストウィンドウがAIシステムにどう影響するか](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を参照して、トレードオフを理解してください。',
             '**AnthropicのClaude 4.6 Sonnetはライティングとコード品質ベンチマークで支配的です。** Claudeは200Kトークンのコンテキストをサポートしており、GPT-4oの2倍で、より長い文書と長い会話が可能です。学習データのカットオフ：2025年初頭。APIの価格：入力100万トークンあたり$3、出力100万トークンあたり$15。Claudeは公開のファインチューニングを提供していません。Anthropicはベンチマーク最大化よりも解釈可能性と安全アライメントを優先しています。',
             '**GoogleのGemini 2.5 Proは最大のコンテキストウィンドウを提供しています：200万トークン。** これにより、本の長さの文書処理・徹底的な調査・長い多ターンの会話が可能になります。価格：入力100万トークンあたり$1.25（200K以下のコンテキスト）、出力100万トークンあたり$10。200K超のコンテキストには高い料金が適用されます。GeminiはGoogle Workspace・Calendar・Gmail・Webサーチと深く統合されています。学習データのカットオフ：2024年10月。GeminiモデルのファインチューニングはGoogleが提供しています。',
           ],
@@ -24380,7 +24380,7 @@ zh: {
         performanceBenchmarks: {
           title: 'ベンチマークパフォーマンス：2026年の差の現状',
           content: [
-            '**独自モデルは一般推論（MMLU）でまだリードしていますが、差は7〜8ポイントに縮まっています。** MMLU（Massive Multitask Language Understanding）は57の学術分野を網羅する広範なベンチマークです。[LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja)が推論能力に関係する理由については、トランスフォーマーアーキテクチャに関する詳細解説をご覧ください。現在のスコア：',
+            '**独自モデルは一般推論（MMLU）でまだリードしていますが、差は7〜8ポイントに縮まっています。** MMLU（Massive Multitask Language Understanding）は57の学術分野を網羅する広範なベンチマークです。[LLMが実際にどのように機能するか](/ja/prompt-engineering/how-llms-actually-work)が推論能力に関係する理由については、トランスフォーマーアーキテクチャに関する詳細解説をご覧ください。現在のスコア：',
             '',
             'GPT-4o: 88.7%（OpenAI、2024年）',
             'Claude 3.5 Sonnet: 88.3%（Anthropic、2024年）',
@@ -24390,9 +24390,9 @@ zh: {
             '',
             '**オープンウェイトと独自モデルのパフォーマンスの差は、2022年の15〜20ポイントから2026年の推論タスクでの7〜8ポイントに縮まっています。** 特化タスク（コーディング・数学・要約・分類）では、オープンウェイトモデルが独自モデルと同等またはそれ以上のパフォーマンスを発揮しています。',
             '',
-            '残りの差は主に抽象推論と[ツール使用オーケストレーション](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja)にあります。— Touvron et al., "Llama 3 Herd of Models", 2024',
+            '残りの差は主に抽象推論と[ツール使用オーケストレーション](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)にあります。— Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
-            '**重要な注意点：** ベンチマークは狭いスキルを測定します。タスク固有のパフォーマンスは変動します：分類・要約・抽出では、LLaMA 3.1 70BがGPT-4oと同等またはそれ以上のパフォーマンスを示すことが多いです。複雑な多段階推論（代数、長い思考の連鎖）では、独自モデルが優位性を維持しています。唯一の信頼できるベンチマークは、実際のタスクでテストすることです — [ユースケースに最適なモデルの選び方](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja)を参照してください。',
+            '**重要な注意点：** ベンチマークは狭いスキルを測定します。タスク固有のパフォーマンスは変動します：分類・要約・抽出では、LLaMA 3.1 70BがGPT-4oと同等またはそれ以上のパフォーマンスを示すことが多いです。複雑な多段階推論（代数、長い思考の連鎖）では、独自モデルが優位性を維持しています。唯一の信頼できるベンチマークは、実際のタスクでテストすることです — [ユースケースに最適なモデルの選び方](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)を参照してください。',
           ],
         },
 
@@ -24411,7 +24411,7 @@ zh: {
             '',
             '**1日1億トークンの場合：** A100が40台必要 = $100/日。APIコスト：$1,800/日。オープンウェイトは18倍安価。',
             '',
-            '価格の確認：[OpenAI Pricing](https://openai.com/pricing) · [Anthropic Pricing](https://www.anthropic.com/api) · [Google Pricing](https://ai.google.dev/pricing) — 価格は四半期ごとに変更されます。詳細なトークンコストの内訳については[トークン・コスト・制限の解説](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja)を参照してください。',
+            '価格の確認：[OpenAI Pricing](https://openai.com/pricing) · [Anthropic Pricing](https://www.anthropic.com/api) · [Google Pricing](https://ai.google.dev/pricing) — 価格は四半期ごとに変更されます。詳細なトークンコストの内訳については[トークン・コスト・制限の解説](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)を参照してください。',
           ],
           columns: ['モデル', '入力（100万トークンあたり）', '出力（100万トークンあたり）'],
           rows: [
@@ -24436,7 +24436,7 @@ zh: {
           content: [
             '**オープンウェイトモデルはフルファインチューニングを許可します。独自モデルはこれを制限または禁止しています。** ファインチューニングとは、モデルのウェイトを自分のデータで再学習させて、特定のドメインに特化させることを意味します。効率的なファインチューニングにはLoRA（Low-Rank Adaptation）、量子化学習にはQLoRA、十分なコンピュートがある場合は完全なバックプロパゲーション学習を使用できます。ファインチューニング後、モデルはあなたのものになります — 生成されたウェイトを所有し、どこにでもデプロイでき、オフラインで更新できます。',
             '**独自のファインチューニング対応状況：** OpenAIのファインチューニングAPIはGPT-4o mini・GPT-4（旧モデル）のみ対応。GPT-4oフラッグシップには対応していません。AnthropicはAPIを通じたClaudeのファインチューニングを提供していません。GoogleはGeminiの限定的なファインチューニングを提供しています。これらのいずれもファインチューニングされたウェイトの所有権を許可しません — 独自モデルのファインチューニング済みコピーをレンタルするだけです。',
-            '**セキュリティ上の考慮事項：** 独自APIでファインチューニングを行う場合、学習データがベンダーサーバーにアップロードされます。機密ドメインでは、これがコンプライアンス規則に違反します。オープンウェイトのファインチューニングはオンプレミスで実施されます。外部APIを使用する際の追加の攻撃面の考慮事項については[プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja)を参照してください。',
+            '**セキュリティ上の考慮事項：** 独自APIでファインチューニングを行う場合、学習データがベンダーサーバーにアップロードされます。機密ドメインでは、これがコンプライアンス規則に違反します。オープンウェイトのファインチューニングはオンプレミスで実施されます。外部APIを使用する際の追加の攻撃面の考慮事項については[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security)を参照してください。',
           ],
         },
 
@@ -24472,8 +24472,8 @@ zh: {
           title: 'オープンソースモデルをいつ使用するか',
           content: '**データプライバシー・大規模コスト・深いカスタマイズ要件が制約を支配する場合、オープンウェイトを選択してください。** オープンウェイトが優れているケース：',
           items: [
-            '**機密データ（医療・金融・法律）：** 患者記録・金融データ・弁護士-クライアント間のコミュニケーションは外部APIを経由できません。オンプレミスにデプロイされたオープンウェイトはデータを管理下に置き、コンプライアンスを達成できます。HIPAA・GDPR・弁護士秘密特権のコンプライアンスにはLLaMA 3.1またはMistralを使用してください。[プロンプトインジェクションに対するセキュリティ管理策](/prompt-engineering/prompt-injection-and-security?lang=ja)と組み合わせてモデル入力を保護してください。',
-            '**高量オートメーション（1日5000万+トークン）：** 1日約1000万トークンを超えると、セルフホスティングが独自APIより安価になります。[APIコストが法外になる](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja)高量の分類・抽出・要約・データ処理パイプラインにはオープンウェイトを使用してください。',
+            '**機密データ（医療・金融・法律）：** 患者記録・金融データ・弁護士-クライアント間のコミュニケーションは外部APIを経由できません。オンプレミスにデプロイされたオープンウェイトはデータを管理下に置き、コンプライアンスを達成できます。HIPAA・GDPR・弁護士秘密特権のコンプライアンスにはLLaMA 3.1またはMistralを使用してください。[プロンプトインジェクションに対するセキュリティ管理策](/ja/prompt-engineering/prompt-injection-and-security)と組み合わせてモデル入力を保護してください。',
+            '**高量オートメーション（1日5000万+トークン）：** 1日約1000万トークンを超えると、セルフホスティングが独自APIより安価になります。[APIコストが法外になる](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)高量の分類・抽出・要約・データ処理パイプラインにはオープンウェイトを使用してください。',
             '**ドメインカスタマイズとファインチューニング：** ラベル付きデータセットがあり、モデルを自分の用語・文体・タスク分布に特化させる必要がある場合。オープンウェイトはLoRA・QLoRA・フルファインチューニングを許可します。独自APIはカスタマイズを禁止または制限しています。',
             '**地理的またはネットワーク上の制約：** インターネットアクセスなしで推論が必要な場合（潜水艦・航空機・遠隔地）。オープンウェイトはオフラインで動作します。独自APIはネットワーク接続が必要です。',
             '**EU AI Actコンプライアンス（高リスクデプロイ）：** 採用システム・信用決定・給付金決定。監査証跡・リスク文書・オンプレミスのデータ所在地はオープンウェイトの方が容易です。独自APIはコンプライアンスの実証を困難にします。',
@@ -24500,7 +24500,7 @@ zh: {
           items: [
             '**プライバシー敏感データ → ローカルのオープンウェイト、複雑な推論 → 独自API。** 患者記録・金融データ・法的文書をOllamaを通じてローカルで動作するLLaMA 3.1にルーティングします。多段階の研究合成・コード生成・エージェントオーケストレーションをGPT-4oまたはClaude 4.6 Sonnetにルーティングします。このハイブリッドアプローチでコンプライアンスを達成しながらフロンティアパフォーマンスを維持できます。',
             '**コスト重視のバッチ処理 → ローカルのオープンウェイト、インタラクティブなリクエスト → 独自API。** バックグラウンドタスク（分類・抽出・要約）にはセルフホストのLLaMA 3.1 70Bを使用（A100で約$2/時間）。レイテンシーが重要なリアルタイムのユーザーリクエストにはGPT-4o API（100万トークンあたり$5/$15）を使用。ハイブリッドにより総コストとレイテンシーが削減されます。',
-            '**マルチモデル比較とコンセンサス → PromptQuorum。** PromptQuorumを使用して、単一の[プロンプト](/prompt-engineering/what-is-prompt-engineering?lang=ja)をローカルOllama・GPT-4o・Claude 4.6・Gemini 2.5 Proに同時にディスパッチします。品質・レイテンシー・コストを並べて比較してください。本番用のウィナーを選択するか、アンサンブル推論のために出力を組み合わせてください。',
+            '**マルチモデル比較とコンセンサス → PromptQuorum。** PromptQuorumを使用して、単一の[プロンプト](/ja/prompt-engineering/what-is-prompt-engineering)をローカルOllama・GPT-4o・Claude 4.6・Gemini 2.5 Proに同時にディスパッチします。品質・レイテンシー・コストを並べて比較してください。本番用のウィナーを選択するか、アンサンブル推論のために出力を組み合わせてください。',
             '**テストとステージング → オープンウェイト、本番サービング → 独自。** ローカルで動作するLLaMA 3.1 8Bを使用して迅���なプロトタイピングと開発を行います。プロンプトとパイプラインが検証されたら、信頼性・ツール統合・安全保証が重要な本番トラフィック用にGPT-4oまたはClaudeにアップグレードします。',
           ],
         },
@@ -24511,7 +24511,7 @@ zh: {
           items: [
             '**パフォーマンスの差はタスク固有であり、普遍的ではありません。** 独自モデルはMMUL（推論）で7〜8ポイントリードしています。しかし分類・要約・抽出・多くのドメインタスクでは、LLaMA 3.1 70Bが独自モデルと同等またはそれ以上のパフォーマンスを発揮します。「独自モデルの方が優れている」という言い方は広すぎます。実際のタスクでベンチマークを測定してください。',
             '**「オープンソース」のライセンスは複雑であり、実際にはオープンソースではないことが多いです。** LLaMA・Mistral・Qwenは OSI準拠のオープンソースではなく、非標準ライセンスの下での「オープンウェイト」です。これらを「オープンソース」と呼ぶのは誤解を招き、法的な混乱を招きます。法的保護に依存する前に、顧問と一緒にライセンスを確認してください。',
-            '**独自モデルが常により安全またはアライメントされているわけではありません。** [すべてのモデルはハルシネーションします](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja)。独自の学習データ・カットオフ・Constitutional AIは、ジェイルブレイク・[プロンプトインジェクション](/prompt-engineering/prompt-injection-and-security?lang=ja)・悪用を防ぐことができません。オープンウェイトは独自のアライメントと同等またはそれ以上になるようにファインチューニングできます。安全性はモデルクラスではなく、デプロイとガードレールの特性です。',
+            '**独自モデルが常により安全またはアライメントされているわけではありません。** [すべてのモデルはハルシネーションします](/ja/prompt-engineering/ai-limitations-what-llms-cant-do)。独自の学習データ・カットオフ・Constitutional AIは、ジェイルブレイク・[プロンプトインジェクション](/ja/prompt-engineering/prompt-injection-and-security)・悪用を防ぐことができません。オープンウェイトは独自のアライメントと同等またはそれ以上になるようにファインチューニングできます。安全性はモデルクラスではなく、デプロイとガードレールの特性です。',
           ],
         },
 
@@ -24538,12 +24538,12 @@ zh: {
         relatedReading: {
           title: '関連資料',
           items: [
-            '[基礎：AIの限界と構造的制約](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — 独自モデルとオープンウェイトモデルの両方がハルシネーションやコンテキスト上限などの基本的な制限を共有する理由',
-            '[基礎：LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja) — トランスフォーマーアーキテクチャを理解することで、オープンウェイトと独自モデルが同じコアメカニズムを共有する理由がわかる',
-            '[基礎：GPT-4o、Claude、それともGemini？正しいモデルの選び方](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja) — フロンティア独自モデルの詳細比較',
-            '[テクニック：RAG解説 — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=ja) — 任意のモデル（独自またはオープンウェイト）を外部知識で拡張する方法',
-            '[基礎：トークン・コスト・制限](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja) — 詳細なコスト分析とトークンエコノミクス',
-            '[基礎：プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — 両モデルクラスのセキュリティ上の考慮事項',
+            '[基礎：AIの限界と構造的制約](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — 独自モデルとオープンウェイトモデルの両方がハルシネーションやコンテキスト上限などの基本的な制限を共有する理由',
+            '[基礎：LLMが実際にどのように機能するか](/ja/prompt-engineering/how-llms-actually-work) — トランスフォーマーアーキテクチャを理解することで、オープンウェイトと独自モデルが同じコアメカニズムを共有する理由がわかる',
+            '[基礎：GPT-4o、Claude、それともGemini？正しいモデルの選び方](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — フロンティア独自モデルの詳細比較',
+            '[テクニック：RAG解説 — Retrieval-Augmented Generation](/ja/prompt-engineering/rag-explained) — 任意のモデル（独自またはオープンウェイト）を外部知識で拡張する方法',
+            '[基礎：トークン・コスト・制限](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 詳細なコスト分析とトークンエコノミクス',
+            '[基礎：プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — 両モデルクラスのセキュリティ上の考慮事項',
           ],
         },
 
@@ -24625,7 +24625,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/open-source-vs-proprietary-llms',
         'inLanguage': 'zh',
         headline: '开源与专有LLM：竞争格局',
         description: '开放权重模型（如LLaMA 3.1和Mistral）提供控制力与成本节省；专有模型（如GPT-4o和Claude 4.6 Sonnet）则提供前沿性能。',
@@ -24782,7 +24782,7 @@ zh: {
           content: [
             '**"开源"与"开放权重"并不同义。** 开源许可证（Apache 2.0、MIT、GPL）适用于源代码，允许不受限制的商业和私人使用。开放权重意味着训练好的模型权重可以下载，但可能受专门许可证的限制。LLaMA 3.1是开放权重，而非开源——Meta在Llama Community License 2.1下发布权重，允许商业使用但包含限制，禁止将衍生模型命名为"LLaMA"且要求署名。',
             '**专有模型既非开放权重也非开源。** OpenAI（GPT-4o）、Anthropic（Claude 4.6 Sonnet）和Google（Gemini 2.5 Pro）不发布模型权重。您只能通过API访问它们。权重保持封闭；您无法查看、下载、修改或自行部署模型。',
-            '理解这一区别对合规、定制化和数据主权至关重要。[了解LLM内部工作原理以理解权重的重要性](/prompt-engineering/how-llms-actually-work?lang=zh)。',
+            '理解这一区别对合规、定制化和数据主权至关重要。[了解LLM内部工作原理以理解权重的重要性](/zh/prompt-engineering/how-llms-actually-work)。',
           ],
         },
 
@@ -24896,7 +24896,7 @@ zh: {
           title: '2026年专有模型市场格局',
           content: [
             '**专有LLM完全通过供应商控制的API访问；模型权重从不发布，无法下载、修改或在本地部署。** 用户按token API计费，并接受供应商对模型更新、安全策略和性能特性的控制。',
-            '**OpenAI的GPT-4o仍然是推理领域的领导者。** GPT-4o支持128K token上下文，训练截止日期为2024年10月。它在工具使用、智能体工作流、多模态输入（图像、文本）和复杂多步骤推理方面表现出色。API定价：每百万输入token 5美元，每百万输出token 15美元（2026年3月价格）。GPT-4o仅限API；权重从不发布。参见[上下文窗口如何影响您的AI系统](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh)以了解权衡。',
+            '**OpenAI的GPT-4o仍然是推理领域的领导者。** GPT-4o支持128K token上下文，训练截止日期为2024年10月。它在工具使用、智能体工作流、多模态输入（图像、文本）和复杂多步骤推理方面表现出色。API定价：每百万输入token 5美元，每百万输出token 15美元（2026年3月价格）。GPT-4o仅限API；权重从不发布。参见[上下文窗口如何影响您的AI系统](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)以了解权衡。',
             '**Anthropic的Claude 4.6 Sonnet在写作和代码质量基准上占据主导地位。** Claude支持200K token上下文——是GPT-4o的2倍——能够处理更长的文档和更长的对话。训练数据截止日期：2025年初。API定价：每百万输入token 3美元，每百万输出token 15美元。Claude不提供公开微调。Anthropic将可解释性和安全对齐置于基准最大化之上。',
             '**Google的Gemini 2.5 Pro提供最大的上下文窗口：200万token。** 这使得处理完整书籍长度的文档、详尽研究和扩展多轮对话成为可能。定价：每百万输入token 1.25美元（≤200K上下文），每百万输出token 10美元；超过200K上下文时价格更高。Gemini与Google Workspace、日历、Gmail和网络搜索深度集成。训练数据截止日期：2024年10月。Gemini模型可进行微调。',
           ],
@@ -24905,7 +24905,7 @@ zh: {
         performanceBenchmarks: {
           title: '基准性能：2026年的差距现状',
           content: [
-            '**专有模型在通用推理（MMLU）上仍然领先，但差距已缩小至7–8个百分点。** MMLU（大规模多任务语言理解）是涵盖57个学术学科的广泛基准。要了解[LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh)对推理能力的重要性，请阅读我们关于transformer架构的深度解析。当前分数：',
+            '**专有模型在通用推理（MMLU）上仍然领先，但差距已缩小至7–8个百分点。** MMLU（大规模多任务语言理解）是涵盖57个学术学科的广泛基准。要了解[LLM实际工作原理](/zh/prompt-engineering/how-llms-actually-work)对推理能力的重要性，请阅读我们关于transformer架构的深度解析。当前分数：',
             '',
             'GPT-4o: 88.7%（OpenAI，2024年）',
             'Claude 3.5 Sonnet: 88.3%（Anthropic，2024年）',
@@ -24915,9 +24915,9 @@ zh: {
             '',
             '**2022年开放权重与专有模型之间的性能差距从15–20个百分点缩小到2026年推理任务的7–8个百分点。** 在专项任务（编程、数学、摘要、分类）上，开放权重模型现已与专有同类产品持平或超越。',
             '',
-            '剩余差距主要在抽象推理和[工具使用编排](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)上。——Touvron等，"LLaMA 3模型群"，2024年',
+            '剩余差距主要在抽象推理和[工具使用编排](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)上。——Touvron等，"LLaMA 3模型群"，2024年',
             '',
-            '**重要说明：** 基准测试衡量的是狭窄技能。特定任务性能各有不同：在分类、摘要和提取方面，LLaMA 3.1 70B经常与GPT-4o持平甚至超越。在复杂多步骤推理（代数、长思维链）方面，专有模型保持优势。唯一可靠的基准是在您的实际任务上测试——参见[如何为您的用例选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)。',
+            '**重要说明：** 基准测试衡量的是狭窄技能。特定任务性能各有不同：在分类、摘要和提取方面，LLaMA 3.1 70B经常与GPT-4o持平甚至超越。在复杂多步骤推理（代数、长思维链）方面，专有模型保持优势。唯一可靠的基准是在您的实际任务上测试——参见[如何为您的用例选择合适的模型](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)。',
           ],
         },
 
@@ -24936,7 +24936,7 @@ zh: {
             '',
             '**每天1亿token时：** 需要40台A100 = 每天100美元。API成本：每天1,800美元。开放权重便宜18倍。',
             '',
-            '验证定价：[OpenAI定价](https://openai.com/pricing) · [Anthropic定价](https://www.anthropic.com/api) · [Google定价](https://ai.google.dev/pricing)——价格每季度变化。参见[token、成本与限制详解](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh)获取详细的token成本分析。',
+            '验证定价：[OpenAI定价](https://openai.com/pricing) · [Anthropic定价](https://www.anthropic.com/api) · [Google定价](https://ai.google.dev/pricing)——价格每季度变化。参见[token、成本与限制详解](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)获取详细的token成本分析。',
           ],
           columns: ['模型', '输入（每百万token）', '输出（每百万token）'],
           rows: [
@@ -24961,7 +24961,7 @@ zh: {
           content: [
             '**开放权重模型允许完整微调；专有模型限制甚至禁止微调。** 微调意味着在您自己的数据上重新训练模型权重，以将其专业化于您的领域。您可以使用LoRA（低秩适应）进行高效微调，使用QLoRA进行量化训练，或者在有足够算力时进行全量反向传播训练。微调后，模型成为您的——您拥有生成的权重，可以在任何地方部署它们，并可以离线更新它们。',
             '**专有微调可用性：** OpenAI微调API仅适用于GPT-4o mini、GPT-4（旧版模型），不适用于GPT-4o旗舰版。Anthropic不通过API为Claude提供微调。Google为Gemini提供有限的微调。这些都不允许拥有微调后的权重——您只是租用专有模型的微调副本。',
-            '**安全考虑：** 在专有API上进行微调时，您的训练数据会上传到供应商服务器。对于敏感领域，这违反合规规定。开放权重微调保留在本地。参见[提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh)了解使用外部API时的其他攻击面考虑因素。',
+            '**安全考虑：** 在专有API上进行微调时，您的训练数据会上传到供应商服务器。对于敏感领域，这违反合规规定。开放权重微调保留在本地。参见[提示词注入与安全](/zh/prompt-engineering/prompt-injection-and-security)了解使用外部API时的其他攻击面考虑因素。',
           ],
         },
 
@@ -24997,8 +24997,8 @@ zh: {
           title: '何时使用开源模型',
           content: '**当数据隐私、规模化成本或深度定制需求主导您的约束时，选择开放权重。** 开放权重的优势场景：',
           items: [
-            '**敏感数据（医疗、金融、法律）：** 患者记录、金融数据、律师-客户通信不能经过外部API传输。本地部署的开放权重将数据保留在您的控制之下，实现合规性。使用LLaMA 3.1或Mistral满足HIPAA、GDPR和律师-客户特权合规要求。配合[提示词注入安全控制措施](/prompt-engineering/prompt-injection-and-security?lang=zh)保护模型输入。',
-            '**高量自动化（每天5000万+个token）：** 每天超过约1000万token时，自托管比专有API更便宜。对于[API成本会过高](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh)的高量分类、提取、摘要或数据处理管道，使用开放权重。',
+            '**敏感数据（医疗、金融、法律）：** 患者记录、金融数据、律师-客户通信不能经过外部API传输。本地部署的开放权重将数据保留在您的控制之下，实现合规性。使用LLaMA 3.1或Mistral满足HIPAA、GDPR和律师-客户特权合规要求。配合[提示词注入安全控制措施](/zh/prompt-engineering/prompt-injection-and-security)保护模型输入。',
+            '**高量自动化（每天5000万+个token）：** 每天超过约1000万token时，自托管比专有API更便宜。对于[API成本会过高](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)的高量分类、提取、摘要或数据处理管道，使用开放权重。',
             '**领域定制化和微调：** 您有标注数据集，需要模型在您的术语、写作风格或任务分布上进行专业化。开放权重支持LoRA、QLoRA或全量微调。专有API禁止或限制定制化。',
             '**地理或网络约束：** 您需要在没有互联网访问的情况下进行推理（潜艇、飞机、远程站点）。开放权重可离线运行。专有API需要网络连接。',
             '**欧盟AI法案合规（高风险部署）：** 招聘系统、信贷决策、福利确定。审计跟踪、风险文档和本地数据驻留通过开放权重更容易实现。专有API使合规性更难证明。',
@@ -25025,7 +25025,7 @@ zh: {
           items: [
             '**隐私敏感数据 → 本地开放权重；复杂推理 → 专有API。** 将患者记录、金融数据和法律文件路由到通过Ollama本地运行的LLaMA 3.1。将多步骤研究综合、代码生成和智能体编排路由到GPT-4o或Claude 4.6 Sonnet。这种混合方式在保持前沿性能的同时实现合规性。',
             '**成本敏感的批处理 → 本地开放权重；交互式请求 → 专有API。** 对于后台任务（分类、提取、摘要），使用自托管的LLaMA 3.1 70B（在A100上约每小时2美元）。对于延迟重要的实时用户请求，使用GPT-4o API（每百万token 5/15美元）。混合方式降低总成本和延迟。',
-            '**多模型对比和共识 → PromptQuorum。** 通过PromptQuorum同时将单个[提示词](/prompt-engineering/what-is-prompt-engineering?lang=zh)分发到本地Ollama、GPT-4o、Claude 4.6和Gemini 2.5 Pro。并排比较质量、延迟和成本方面的输出。选择生产中的获胜者，或将输出组合用于集成推理。',
+            '**多模型对比和共识 → PromptQuorum。** 通过PromptQuorum同时将单个[提示词](/zh/prompt-engineering/what-is-prompt-engineering)分发到本地Ollama、GPT-4o、Claude 4.6和Gemini 2.5 Pro。并排比较质量、延迟和成本方面的输出。选择生产中的获胜者，或将输出组合用于集成推理。',
             '**测试和暂存 → 开放权重；生产服务 → 专有。** 使用本地运行的LLaMA 3.1 8B进行快速原型开发和开发工作。一旦提示词和管道经过验证，升级到GPT-4o或Claude用于生产流量，在可靠性、工具集成和安全保证最重要的地方使用。',
           ],
         },
@@ -25036,19 +25036,19 @@ zh: {
           items: [
             '**性能差距是特定任务的，并非普遍适用。** 专有模型在MMLU（推理）上领先7–8个百分点。但在分类、摘要、提取和许多领域任务上，LLaMA 3.1 70B与专有模型持平甚至超越。"专有模型更好"过于笼统。在您的实际任务上进行基准测试。',
             '**"开源"许可证复杂，通常并不真正是开源。** LLaMA、Mistral和Qwen不符合OSI的开源标准——它们是非标准许可证下的"开放权重"。将它们称为"开源"具有误导性，可能引起法律混淆。在依赖法律保护之前，请咨询法律顾问确认许可证要求。',
-            '**专有模型并不总是更安全或更对齐。** [所有模型都会产生幻觉](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh)。专有训练数据、截止日期和Constitutional AI无法防止越狱、[提示词注入](/prompt-engineering/prompt-injection-and-security?lang=zh)或滥用。开放权重可以微调以匹配或超越专有模型的对齐效果。安全是部署和护栏的属性，而非模型类别的属性。',
+            '**专有模型并不总是更安全或更对齐。** [所有模型都会产生幻觉](/zh/prompt-engineering/ai-limitations-what-llms-cant-do)。专有训练数据、截止日期和Constitutional AI无法防止越狱、[提示词注入](/zh/prompt-engineering/prompt-injection-and-security)或滥用。开放权重可以微调以匹配或超越专有模型的对齐效果。安全是部署和护栏的属性，而非模型类别的属性。',
           ],
         },
 
         keyTerms: {
           title: '关键术语',
           items: [
-            '[开放权重](/prompt-engineering/prompt-engineering-glossary?lang=zh#open-weights) — 模型权重可下载，但可能受许可证限制',
-            '[微调](/prompt-engineering/prompt-engineering-glossary?lang=zh#fine-tuning) — 在特定领域数据上重新训练模型权重',
-            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=zh#lora) — 通过低秩适应进行高效微调（全量训练成本的5–10%）',
-            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=zh#rag) — 检索增强生成；将LLM输出锚定于外部文档',
-            '[上下文窗口](/prompt-engineering/prompt-engineering-glossary?lang=zh#context-window) — 输入+输出合并的最大token容量',
-            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=zh#vram) — 模型推理所需的GPU显存',
+            '[开放权重](/zh/prompt-engineering/prompt-engineering-glossary#open-weights) — 模型权重可下载，但可能受许可证限制',
+            '[微调](/zh/prompt-engineering/prompt-engineering-glossary#fine-tuning) — 在特定领域数据上重新训练模型权重',
+            '[LoRA](/zh/prompt-engineering/prompt-engineering-glossary#lora) — 通过低秩适应进行高效微调（全量训练成本的5–10%）',
+            '[RAG](/zh/prompt-engineering/prompt-engineering-glossary#rag) — 检索增强生成；将LLM输出锚定于外部文档',
+            '[上下文窗口](/zh/prompt-engineering/prompt-engineering-glossary#context-window) — 输入+输出合并的最大token容量',
+            '[VRAM](/zh/prompt-engineering/prompt-engineering-glossary#vram) — 模型推理所需的GPU显存',
           ],
         },
 
@@ -25063,12 +25063,12 @@ zh: {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[基础知识：AI的局限性与结构性约束](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 专有和开放权重模型为何共享幻觉和上下文限制等基本局限性',
-            '[基础知识：LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh) — 了解transformer架构有助于解释开放权重与专有模型共享相同核心机制',
-            '[基础知识：GPT-4o、Claude还是Gemini？如何选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh) — 前沿专有模型的详细对比',
-            '[技术：RAG详解——检索增强生成](/prompt-engineering/rag-explained?lang=zh) — 如何用外部知识扩展任意模型（专有或开放权重）',
-            '[基础知识：Token、成本与限制](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh) — 详细的成本分析和token经济学',
-            '[基础知识：提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 两类模型的安全注意事项',
+            '[基础知识：AI的局限性与结构性约束](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) — 专有和开放权重模型为何共享幻觉和上下文限制等基本局限性',
+            '[基础知识：LLM实际工作原理](/zh/prompt-engineering/how-llms-actually-work) — 了解transformer架构有助于解释开放权重与专有模型共享相同核心机制',
+            '[基础知识：GPT-4o、Claude还是Gemini？如何选择合适的模型](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 前沿专有模型的详细对比',
+            '[技术：RAG详解——检索增强生成](/zh/prompt-engineering/rag-explained) — 如何用外部知识扩展任意模型（专有或开放权重）',
+            '[基础知识：Token、成本与限制](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 详细的成本分析和token经济学',
+            '[基础知识：提示词注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — 两类模型的安全注意事项',
           ],
         },
 
@@ -25881,7 +25881,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/geopolitics-and-ai',
         'inLanguage': 'de',
         headline: 'KI-Geopolitik erklärt: EU AI Act vs. USA vs. China (Analyse 2026)',
         description: 'Die USA, China und die Europäische Union verfolgen unvereinbare Visionen der KI-Governance — die USA priorisieren Wettbewerbsfähigkeit, China betont staatliche Kontrolle, und die EU baut einen rechtsbasierten Rahmen. Für Organisationen, die KI einsetzen, entstehen daraus konkrete Compliance-Pflichten, Beschaffungsbeschränkungen und Anforderungen an den Datenspeicherort.',
@@ -25889,7 +25889,7 @@ zh: {
         dateModified: '2026-04-02',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=de', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/geopolitics-and-ai', width: 1200, height: 630 },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -26454,7 +26454,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/geopolitics-and-ai',
         'inLanguage': 'fr',
         headline: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent pour la domination de l\'IA',
         description: 'Les États-Unis, la Chine et l\'Union européenne poursuivent des visions incompatibles de la gouvernance de l\'IA. Pour les organisations déployant l\'IA, ces différences se traduisent par des obligations de conformité concrètes, des contraintes d\'approvisionnement et des exigences de résidence des données.',
@@ -27150,11 +27150,11 @@ zh: {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Prompt Engineering for Compliance & Risk](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-rag?lang=fr) — How to build responsible AI systems',
-            '[How LLMs Actually Work](https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=fr) — Technical foundation for understanding AI capabilities',
-            '[EU AI Act & Compliance](https://www.promptquorum.com/prompt-engineering/prompt-governance-production?lang=fr) — Practical guide to meeting regulatory requirements',
-            '[AI Regulation & Policy](https://www.promptquorum.com/prompt-engineering/prompt-security-tools?lang=fr) — Security and governance in production AI systems',
-            '[Open Source vs Proprietary LLMs](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=fr) — Comparison of model approaches and dependencies',
+            '[Prompt Engineering for Compliance & Risk](https://www.promptquorum.com/fr/prompt-engineering/prompt-engineering-vs-rag) — How to build responsible AI systems',
+            '[How LLMs Actually Work](https://www.promptquorum.com/fr/prompt-engineering/how-llms-actually-work) — Technical foundation for understanding AI capabilities',
+            '[EU AI Act & Compliance](https://www.promptquorum.com/fr/prompt-engineering/prompt-governance-production) — Practical guide to meeting regulatory requirements',
+            '[AI Regulation & Policy](https://www.promptquorum.com/fr/prompt-engineering/prompt-security-tools) — Security and governance in production AI systems',
+            '[Open Source vs Proprietary LLMs](https://www.promptquorum.com/fr/prompt-engineering/open-source-vs-proprietary-llms) — Comparison of model approaches and dependencies',
           ],
         },
       },
@@ -27173,7 +27173,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/geopolitics-and-ai',
         'inLanguage': 'ja',
         headline: '地政学とAI：米国、中国、EUのAI支配競争解説（2026年分析）',
         description: '米国、中国、EUはAIガバナンスに関して相反するビジョンを追求しており、AIを展開する組織にとっては具体的なコンプライアンス義務、調達制約、データ保管要件に直結します。',
@@ -27337,7 +27337,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/geopolitics-and-ai',
         'inLanguage': 'zh',
         headline: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权（2026年分析）',
         description: '美国、中国和欧盟正在追求互不兼容的AI治理愿景。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据存储位置要求。',
@@ -27385,14 +27385,14 @@ zh: {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=zh', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/geopolitics-and-ai', width: 1200, height: 630 },
       },
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: 'AI监管框架对比：EU AI法案 vs 美国战略 vs 中国',
         description: '欧盟、美国和中国在人工智能监管方面的9个关键维度的全面对比。',
-        url: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/geopolitics-and-ai',
         itemListElement: [
           {
             '@type': 'ListItem',
@@ -27499,7 +27499,7 @@ zh: {
         '@type': 'Dataset',
         name: '全球AI监管对比：EU AI法案 vs 美国战略 vs 中国CAC',
         description: '跨欧盟、美国和中国8个维度的AI监管框架结构对比——主要方式、关键立法、风险框架、最高罚款、数据保护、禁止应用、执法机构和国际范围。',
-        url: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/geopolitics-and-ai',
         creator: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         dateModified: '2026-04-01',
         variableMeasured: [
@@ -27974,10 +27974,10 @@ zh: {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[EU AI法案：实际合规要求](/prompt-engineering/eu-ai-act-compliance-guide?lang=zh)',
-            '[如何在中国部署AI产品](/prompt-engineering/ai-deployment-china?lang=zh)',
-            '[提示工程和地缘政治：技能构建指南](/prompt-engineering/prompt-engineering-geopolitics?lang=zh)',
-            '[GDPR和AI：数据保护指南](/prompt-engineering/gdpr-ai-data-protection?lang=zh)',
+            '[EU AI法案：实际合规要求](/zh/prompt-engineering/eu-ai-act-compliance-guide)',
+            '[如何在中国部署AI产品](/zh/prompt-engineering/ai-deployment-china)',
+            '[提示工程和地缘政治：技能构建指南](/zh/prompt-engineering/prompt-engineering-geopolitics)',
+            '[GDPR和AI：数据保护指南](/zh/prompt-engineering/gdpr-ai-data-protection)',
           ],
         },
       },
@@ -28185,7 +28185,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/which-prompt-framework-should-you-use',
         'inLanguage': 'de',
         headline: 'Welches Prompt-Framework ist das richtige für Sie? (2026)',
         description: 'Vergleich der wichtigsten Prompt-Frameworks: CO-STAR, CRAFT, SPECS, RISEN, TRACE. Wählen Sie das richtige Framework für GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokale Modelle.',
@@ -28358,7 +28358,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/which-prompt-framework-should-you-use',
         'inLanguage': 'fr',
         headline: 'Quel framework de prompt choisir ? (2026)',
         description: 'Comparaison des frameworks de prompt majeurs : CO-STAR, CRAFT, SPECS, RISEN, TRACE. Choisissez le bon framework pour GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et modèles locaux.',
@@ -28531,7 +28531,7 @@ zh: {
             schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/which-prompt-framework-should-you-use',
         'inLanguage': 'ja',
         headline: 'どのプロンプトフレームワーク？2026年比較',
         description: 'Chain-of-Thought、ReAct、Tree-of-Thoughtを比較。ユースケース別に選べるフレームワーク。メリット・デメリット解説。',
@@ -28704,7 +28704,7 @@ zh: {
             schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/which-prompt-framework-should-you-use',
         'inLanguage': 'zh',
         headline: '选择哪个提示框架？2026年对比',
         description: 'Chain-of-Thought vs ReAct vs Tree-of-Thought框架对比。按用例选择。优缺点解析，推荐决策指南。',
@@ -29018,7 +29018,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/the-single-step-prompt-method',
         inLanguage: 'de',
         headline: 'Die Single Step Prompt Methode',
         description: 'Wie die Single Step Prompt Methode funktioniert, wann Sie sie einsetzen sollten und wie PromptQuorum sie als Hauptframework für neue Benutzer nutzt.',
@@ -29046,8 +29046,8 @@ zh: {
         whatIsSingleStep: {
           title: 'Was die Single Step Prompt Methode ist',
           content: [
-            '**Die Single Step Prompt Methode ist eine Prompt-Struktur auf Basis eines einzelnen Durchlaufs, die Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer einzigen Nachricht an das Modell zusammenfasst.** Anstatt die KI über mehrere Durchläufe hinweg zur gemeinsamen Überlegung aufzufordern, geben Sie ihr alles, was sie benötigt, von Anfang an. Dieser Ansatz funktioniert mit GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokalen Modellen wie denen, die Sie über [Ollama](/local-llms/ollama-installation-guide?lang=de) oder LM Studio ausführen.',
-            'Die Kernidee ist: einmal denken, einmal schreiben, einmal ausführen. Sie investieren Aufwand in die Gestaltung eines präzisen [Prompts](/prompt-engineering/what-is-prompt-engineering?lang=de) und verwenden ihn anschließend in verschiedenen Aufgaben, Projekten und Modellen. Da die Struktur fest ist, können Sie die Qualität messen, jeweils einen Parameter ändern und Ihre Prompts systematisch verbessern.',
+            '**Die Single Step Prompt Methode ist eine Prompt-Struktur auf Basis eines einzelnen Durchlaufs, die Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer einzigen Nachricht an das Modell zusammenfasst.** Anstatt die KI über mehrere Durchläufe hinweg zur gemeinsamen Überlegung aufzufordern, geben Sie ihr alles, was sie benötigt, von Anfang an. Dieser Ansatz funktioniert mit GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokalen Modellen wie denen, die Sie über [Ollama](/de/local-llms/ollama-installation-guide) oder LM Studio ausführen.',
+            'Die Kernidee ist: einmal denken, einmal schreiben, einmal ausführen. Sie investieren Aufwand in die Gestaltung eines präzisen [Prompts](/de/prompt-engineering/what-is-prompt-engineering) und verwenden ihn anschließend in verschiedenen Aufgaben, Projekten und Modellen. Da die Struktur fest ist, können Sie die Qualität messen, jeweils einen Parameter ändern und Ihre Prompts systematisch verbessern.',
           ],
         },
         whySingleStepWorks: {
@@ -29074,7 +29074,7 @@ zh: {
         singleVsMulti: {
           title: 'Single Step vs. mehrstufiges Prompting',
           content: [
-            '**Sie sollten die Single Step Prompt Methode verwenden, wenn Sie bereits wissen, was Sie wollen, und es vorausplanen können. Reservieren Sie [mehrstufiges Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) für genuinely mehrdeutige oder explorative Aufgaben.** Wenn Ihr Ziel klar ist, wird eine einstufige Anweisung in der Regel konsistentere Ergebnisse über Modelle und Durchläufe hinweg erbringen.',
+            '**Sie sollten die Single Step Prompt Methode verwenden, wenn Sie bereits wissen, was Sie wollen, und es vorausplanen können. Reservieren Sie [mehrstufiges Prompting](/de/prompt-engineering/chain-of-thought-prompting) für genuinely mehrdeutige oder explorative Aufgaben.** Wenn Ihr Ziel klar ist, wird eine einstufige Anweisung in der Regel konsistentere Ergebnisse über Modelle und Durchläufe hinweg erbringen.',
             'Die Hauptunterschiede sind:',
           ],
           items: [
@@ -29098,7 +29098,7 @@ zh: {
         whenToStart: {
           title: 'Wann Sie mit der Single Step Prompt in PromptQuorum beginnen sollten',
           content: [
-            '**Wenn Sie unsicher sind, welches Framework Sie in PromptQuorum wählen sollen, beginnen Sie mit der Single Step Prompt Methode und wechseln Sie nur dann zu einem spezialisierteren Framework wie [CRAFT](/prompt-engineering/craft-framework?lang=de) oder [APE](/prompt-engineering/ape-framework?lang=de), wenn Sie eine deutliche Einschränkung feststellen.** Dies hält Ihren Workflow einfach und ermöglicht später eine erweiterte Optimierung.',
+            '**Wenn Sie unsicher sind, welches Framework Sie in PromptQuorum wählen sollen, beginnen Sie mit der Single Step Prompt Methode und wechseln Sie nur dann zu einem spezialisierteren Framework wie [CRAFT](/de/prompt-engineering/craft-framework) oder [APE](/de/prompt-engineering/ape-framework), wenn Sie eine deutliche Einschränkung feststellen.** Dies hält Ihren Workflow einfach und ermöglicht später eine erweiterte Optimierung.',
             'Typische Situationen, in denen Single Step der richtige Ausgangspunkt ist:',
           ],
           items: [
@@ -29223,7 +29223,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/the-single-step-prompt-method',
         inLanguage: 'fr',
         headline: 'The Single Step Prompt Method',
         description: 'Fonctionnement de la Méthode Single Step Prompt, quand l\'utiliser et comment PromptQuorum l\'utilise comme cadre principal pour les nouveaux utilisateurs.',
@@ -29251,8 +29251,8 @@ zh: {
         whatIsSingleStep: {
           title: 'What the Single Step Prompt Method Is',
           content: [
-            '**La Méthode Single Step Prompt est une structure d\'invite unique qui concentre le rôle, l\'objectif, le contexte, les contraintes et le format de sortie dans un seul message au modèle.** Au lieu de demander à l\'IA de « réfléchir ensemble » sur plusieurs tours, vous lui fournissez tout ce dont elle a besoin d\'emblée. Cette approche fonctionne avec GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et les modèles locaux tels que ceux que vous exécutez via [Ollama](/local-llms/ollama-installation-guide?lang=fr) ou LM Studio.',
-            'L\'idée centrale est de réfléchir une seule fois, d\'écrire une seule fois et d\'exécuter une seule fois. Vous investissez l\'effort initial dans la conception d\'un seul [prompt](/prompt-engineering/what-is-prompt-engineering?lang=fr) précis, puis le réutilisez dans différentes tâches, projets et modèles. Comme la structure est fixe, vous pouvez mesurer la qualité, modifier un paramètre à la fois et améliorer vos prompts de façon systématique.',
+            '**La Méthode Single Step Prompt est une structure d\'invite unique qui concentre le rôle, l\'objectif, le contexte, les contraintes et le format de sortie dans un seul message au modèle.** Au lieu de demander à l\'IA de « réfléchir ensemble » sur plusieurs tours, vous lui fournissez tout ce dont elle a besoin d\'emblée. Cette approche fonctionne avec GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et les modèles locaux tels que ceux que vous exécutez via [Ollama](/fr/local-llms/ollama-installation-guide) ou LM Studio.',
+            'L\'idée centrale est de réfléchir une seule fois, d\'écrire une seule fois et d\'exécuter une seule fois. Vous investissez l\'effort initial dans la conception d\'un seul [prompt](/fr/prompt-engineering/what-is-prompt-engineering) précis, puis le réutilisez dans différentes tâches, projets et modèles. Comme la structure est fixe, vous pouvez mesurer la qualité, modifier un paramètre à la fois et améliorer vos prompts de façon systématique.',
           ],
         },
         whySingleStepWorks: {
@@ -29279,7 +29279,7 @@ zh: {
         singleVsMulti: {
           title: 'Single Step vs Multi-Step Prompting',
           content: [
-            '**Utilisez la Méthode Single Step Prompt quand vous savez déjà ce que vous voulez et que vous pouvez le spécifier d\'emblée. Réservez le [prompting multi-étapes](/prompt-engineering/chain-of-thought-prompting?lang=fr) aux tâches véritablement ambiguës ou exploratoires.** Si votre objectif est clair, une instruction unique produira généralement des résultats plus cohérents entre les modèles et les exécutions.',
+            '**Utilisez la Méthode Single Step Prompt quand vous savez déjà ce que vous voulez et que vous pouvez le spécifier d\'emblée. Réservez le [prompting multi-étapes](/fr/prompt-engineering/chain-of-thought-prompting) aux tâches véritablement ambiguës ou exploratoires.** Si votre objectif est clair, une instruction unique produira généralement des résultats plus cohérents entre les modèles et les exécutions.',
             'Les différences principales sont :',
           ],
           items: [
@@ -29303,7 +29303,7 @@ zh: {
         whenToStart: {
           title: 'When to Start With the Single Step Prompt in PromptQuorum',
           content: [
-            '**Si vous hésitez sur le choix du cadre dans PromptQuorum, commencez par la Méthode Single Step Prompt et ne passez à un cadre plus spécialisé comme [CRAFT](/prompt-engineering/craft-framework?lang=fr) ou [APE](/prompt-engineering/ape-framework?lang=fr) que si vous rencontrez une limitation claire.** Cela maintient votre flux de travail simple tout en autorisant l\'optimisation avancée ultérieure.',
+            '**Si vous hésitez sur le choix du cadre dans PromptQuorum, commencez par la Méthode Single Step Prompt et ne passez à un cadre plus spécialisé comme [CRAFT](/fr/prompt-engineering/craft-framework) ou [APE](/fr/prompt-engineering/ape-framework) que si vous rencontrez une limitation claire.** Cela maintient votre flux de travail simple tout en autorisant l\'optimisation avancée ultérieure.',
             'Les situations typiques où Single Step est le bon point de départ :',
           ],
           items: [
@@ -29428,7 +29428,7 @@ ja: {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/the-single-step-prompt-method',
     inLanguage: 'ja',
     headline: 'The Single Step Prompt Method',
     description: 'Single Step Prompt Methodの構築方法、活用場面、およびPromptQuorumにおける実装方法を解説します。',
@@ -29456,8 +29456,8 @@ ja: {
     whatIsSingleStep: {
       title: 'What the Single Step Prompt Method Is',
       content: [
-        '**Single Step Prompt Methodは、ロール・目的・コンテキスト・制約・出力形式を1つのメッセージに凝縮する1回限りのプロンプト構造です。** AIに「一緒にブレインストーミングしましょう」と複数ターンにわたって提案する代わりに、必要な情報をすべて最初に提供します。このアプローチはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、および[Ollama](/local-llms/ollama-installation-guide?lang=ja)やLM Studioなどのローカルモデルに対応しています。',
-        '基本的な考え方は「1度考え、1度書き、1度実行する」ことです。1つの精密な[プロンプト](/prompt-engineering/what-is-prompt-engineering?lang=ja)設計に時間をかけ、その後タスク・プロジェクト・モデル全体で再利用します。構造が固定されているため、品質を測定し、1度に1つのパラメータを変更し、プロンプトを体系的に改善できます。',
+        '**Single Step Prompt Methodは、ロール・目的・コンテキスト・制約・出力形式を1つのメッセージに凝縮する1回限りのプロンプト構造です。** AIに「一緒にブレインストーミングしましょう」と複数ターンにわたって提案する代わりに、必要な情報をすべて最初に提供します。このアプローチはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、および[Ollama](/ja/local-llms/ollama-installation-guide)やLM Studioなどのローカルモデルに対応しています。',
+        '基本的な考え方は「1度考え、1度書き、1度実行する」ことです。1つの精密な[プロンプト](/ja/prompt-engineering/what-is-prompt-engineering)設計に時間をかけ、その後タスク・プロジェクト・モデル全体で再利用します。構造が固定されているため、品質を測定し、1度に1つのパラメータを変更し、プロンプトを体系的に改善できます。',
       ],
     },
     whySingleStepWorks: {
@@ -29484,7 +29484,7 @@ ja: {
     singleVsMulti: {
       title: 'Single Step vs Multi-Step Prompting',
       content: [
-        '**Single Step Prompt Methodは、すでに必要な内容が明確で事前に指定できる場合に使用すべきです。本当に曖昧な、または探索的なタスクには[マルチステッププロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja)を予約してください。** 目的が明確であれば、1回限りの指示は通常、モデルと実行にわたってより一貫した結果をもたらします。',
+        '**Single Step Prompt Methodは、すでに必要な内容が明確で事前に指定できる場合に使用すべきです。本当に曖昧な、または探索的なタスクには[マルチステッププロンプティング](/ja/prompt-engineering/chain-of-thought-prompting)を予約してください。** 目的が明確であれば、1回限りの指示は通常、モデルと実行にわたってより一貫した結果をもたらします。',
         '主な違いは以下の通りです。',
       ],
       items: [
@@ -29508,7 +29508,7 @@ ja: {
     whenToStart: {
       title: 'When to Start With the Single Step Prompt in PromptQuorum',
       content: [
-        '**PromptQuorumでどのフレームワークを選ぶべきか不確かな場合、Single Step Prompt Methodから始め、[CRAFT](/prompt-engineering/craft-framework?lang=ja)や[APE](/prompt-engineering/ape-framework?lang=ja)などのより特化したフレームワークへの切り替えは明確な制限に直面したときだけにしてください。** これにより、ワークフローをシンプルに保ちながら、後で高度な最適化を行うことができます。',
+        '**PromptQuorumでどのフレームワークを選ぶべきか不確かな場合、Single Step Prompt Methodから始め、[CRAFT](/ja/prompt-engineering/craft-framework)や[APE](/ja/prompt-engineering/ape-framework)などのより特化したフレームワークへの切り替えは明確な制限に直面したときだけにしてください。** これにより、ワークフローをシンプルに保ちながら、後で高度な最適化を行うことができます。',
         'Single Stepが適切な出発点である典型的な状況は以下の通りです。',
       ],
       items: [
@@ -29737,7 +29737,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/the-single-step-prompt-method',
         inLanguage: 'zh',
         headline: '单步提示法（Single Step Prompt Method）',
         description: '单步提示法的工作原理、适用场景，以及PromptQuorum如何将其作为新用户的默认框架。',
@@ -29765,8 +29765,8 @@ ja: {
         whatIsSingleStep: {
           title: '什么是单步提示法',
           content: [
-            '**单步提示法是一种一次性的提示结构，将角色、目标、上下文、约束条件和输出格式整合到一条给模型的单一消息中。** 不同于让AI在多轮对话中"一起头脑风暴"，单步提示法在最初就向模型提供它所需的全部信息。这种方法适用于GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro以及通过[Ollama](/local-llms/ollama-installation-guide?lang=zh)或LM Studio等工具运行的本地模型。',
-            '核心理念是"思考一次、编写一次、执行一次"。你投入精力设计一个精确的[提示](/prompt-engineering/what-is-prompt-engineering?lang=zh)，然后在多个任务、项目和模型中重复使用。由于结构固定，你可以衡量质量、每次改变一个参数，并系统地改进提示。',
+            '**单步提示法是一种一次性的提示结构，将角色、目标、上下文、约束条件和输出格式整合到一条给模型的单一消息中。** 不同于让AI在多轮对话中"一起头脑风暴"，单步提示法在最初就向模型提供它所需的全部信息。这种方法适用于GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro以及通过[Ollama](/zh/local-llms/ollama-installation-guide)或LM Studio等工具运行的本地模型。',
+            '核心理念是"思考一次、编写一次、执行一次"。你投入精力设计一个精确的[提示](/zh/prompt-engineering/what-is-prompt-engineering)，然后在多个任务、项目和模型中重复使用。由于结构固定，你可以衡量质量、每次改变一个参数，并系统地改进提示。',
           ],
         },
         whySingleStepWorks: {
@@ -29793,7 +29793,7 @@ ja: {
         singleVsMulti: {
           title: '单步法 vs 多步提示法',
           content: [
-            '**当你已经知道自己想要什么并能预先指定时，应该使用单步提示法；将[多步提示](/prompt-engineering/chain-of-thought-prompting?lang=zh)留给真正模糊或探索性的任务。** 如果你的目标明确，一条单一指令通常会在模型和运行中产生更一致的结果。',
+            '**当你已经知道自己想要什么并能预先指定时，应该使用单步提示法；将[多步提示](/zh/prompt-engineering/chain-of-thought-prompting)留给真正模糊或探索性的任务。** 如果你的目标明确，一条单一指令通常会在模型和运行中产生更一致的结果。',
             '主要区别包括：',
           ],
           items: [
@@ -29817,7 +29817,7 @@ ja: {
         whenToStart: {
           title: '何时在PromptQuorum中使用单步提示法',
           content: [
-            '**如果你不确定在PromptQuorum中选择哪个框架，应该从单步提示法开始，只有在遇到明确的限制时才切换到[CRAFT](/prompt-engineering/craft-framework?lang=zh)或[APE](/prompt-engineering/ape-framework?lang=zh)等更专业的框架。** 这保持了你的工作流简单，同时允许后续高级优化。',
+            '**如果你不确定在PromptQuorum中选择哪个框架，应该从单步提示法开始，只有在遇到明确的限制时才切换到[CRAFT](/zh/prompt-engineering/craft-framework)或[APE](/zh/prompt-engineering/ape-framework)等更专业的框架。** 这保持了你的工作流简单，同时允许后续高级优化。',
             '单步法是正确起点的典型情况：',
           ],
           items: [
@@ -30180,7 +30180,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/ape-framework',
         'inLanguage': 'de',
         headline: 'The APE Framework',
         description: 'Das APE-Prompt-Framework trennt das Denken in Analyse, Planung und Ausführung für klare, nachverfolgbare LLM-Ausgaben.',
@@ -30204,7 +30204,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/ape-framework',
         'inLanguage': 'fr',
         headline: 'The APE Framework',
         description: 'Le framework de prompt APE sépare la réflexion en analyse, planification et exécution pour des résultats LLM clairs et traçables.',
@@ -30228,7 +30228,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/ape-framework',
         'inLanguage': 'ja',
         headline: 'The APE Framework',
         description: 'APEプロンプトフレームワークは思考を分析・計画・実行に分離。',
@@ -30252,7 +30252,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/ape-framework',
         'inLanguage': 'zh',
         headline: 'The APE Framework',
         description: 'APE提示框架将思维分为分析、规划和执行阶段。',
@@ -30415,7 +30415,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/craft-framework',
         'inLanguage': 'de',
         headline: 'The CRAFT Framework',
         description: 'Das CRAFT-Framework zerlegt kreative Aufgaben in Kontext, Rolle, Zielgruppe, Format, Ton für konsistente, markengerechte Ausgaben.',
@@ -30429,7 +30429,7 @@ ja: {
         whatIsCRAFT: {
           title: 'Was das CRAFT-Framework ist',
           content: [
-            '**Das CRAFT-Framework ist eine Prompt-Vorlage für kreative und Marketing-Aufgaben, die große Sprachmodelle dazu bringt, festzulegen, aus welcher Perspektive sie schreiben, für wen sie schreiben und wie die Ausgabe aussehen soll.** Anstatt eine vage Anfrage wie \"Schreibe einen Beitrag über unser Produkt\" zu stellen, definieren Sie jedes CRAFT-Element, damit Modelle wie GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro konsistente, wiederverwendbare Texte erzeugen können. Wenn Sie neu in strukturiertem Prompting sind, lesen Sie [Was ist Prompt Engineering](/prompt-engineering/what-is-prompt-engineering?lang=de), um Grundkonzepte zu verstehen.',
+            '**Das CRAFT-Framework ist eine Prompt-Vorlage für kreative und Marketing-Aufgaben, die große Sprachmodelle dazu bringt, festzulegen, aus welcher Perspektive sie schreiben, für wen sie schreiben und wie die Ausgabe aussehen soll.** Anstatt eine vage Anfrage wie \"Schreibe einen Beitrag über unser Produkt\" zu stellen, definieren Sie jedes CRAFT-Element, damit Modelle wie GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro konsistente, wiederverwendbare Texte erzeugen können. Wenn Sie neu in strukturiertem Prompting sind, lesen Sie [Was ist Prompt Engineering](/de/prompt-engineering/what-is-prompt-engineering), um Grundkonzepte zu verstehen.',
             'Das Akronym wird typischerweise wie folgt ausgedehnt:',
           ],
           items: [
@@ -30499,7 +30499,7 @@ ja: {
           items: [
             'Kontext, Rolle, Zielgruppe, Format und Ton durch strukturierte Eingaben ausfüllen, anstatt das Muster manuell zu merken.',
             'Den gleichen CRAFT-basierten Prompt parallel auf mehrere Modelle anwenden und vergleichen, wie GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokale Modelle auf das gleiche Kreativ-Briefing reagieren.',
-            'CRAFT-Vorlagen für wiederkehrende Arbeitsabläufe speichern und wiederverwenden, z. B. \"Feature-Launch LinkedIn-Post\", \"Customer-Success-Fallstudie\" oder \"Sales-Outreach-Email\". (Für einfachere, einstufige Prompts, betrachten Sie das [Single-Step-Framework](/prompt-engineering/the-single-step-prompt-method?lang=de).)',
+            'CRAFT-Vorlagen für wiederkehrende Arbeitsabläufe speichern und wiederverwenden, z. B. \"Feature-Launch LinkedIn-Post\", \"Customer-Success-Fallstudie\" oder \"Sales-Outreach-Email\". (Für einfachere, einstufige Prompts, betrachten Sie das [Single-Step-Framework](/de/prompt-engineering/the-single-step-prompt-method).)',
           ],
         },
         usingCRAFTWithOthers: {
@@ -30510,8 +30510,8 @@ ja: {
           ],
           items: [
             'Nutzen Sie CRAFT für kreative Ausgaben: Beiträge, E-Mails, Skripte, Landingpages.',
-            'Nutzen Sie das [APE-Framework](/prompt-engineering/ape-framework?lang=de) oder [SPECS-Framework](/prompt-engineering/specs-framework?lang=de) für strukturierte Ausgaben, Checklisten oder JSON-Spezifikationen.',
-            'Nutzen Sie das [CO-STAR-Framework](/prompt-engineering/co-star-framework?lang=de) oder reasoning-orientierte Strukturen wie Chain-of-Thought für komplexe Analyse, Planung und Multi-Constraint-Kommunikationsaufgaben.',
+            'Nutzen Sie das [APE-Framework](/de/prompt-engineering/ape-framework) oder [SPECS-Framework](/de/prompt-engineering/specs-framework) für strukturierte Ausgaben, Checklisten oder JSON-Spezifikationen.',
+            'Nutzen Sie das [CO-STAR-Framework](/de/prompt-engineering/co-star-framework) oder reasoning-orientierte Strukturen wie Chain-of-Thought für komplexe Analyse, Planung und Multi-Constraint-Kommunikationsaufgaben.',
           ],
         },
         howToStart: {
@@ -30538,7 +30538,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/craft-framework',
         'inLanguage': 'fr',
         headline: 'The CRAFT Framework',
         description: 'Le framework CRAFT décompose les tâches créatives en contexte, rôle, audience, format, ton pour des résultats cohérents.',
@@ -30552,7 +30552,7 @@ ja: {
         whatIsCRAFT: {
           title: 'Qu\'est-ce que le framework CRAFT',
           content: [
-            '**Le CRAFT Framework est un modèle de prompt pour les tâches créatives et marketing qui pousse les grands modèles de langage à définir qui ils sont, pour qui ils écrivent et comment le résultat doit se présenter.** Au lieu d\'envoyer une demande vague comme \"écris un post sur notre produit\", vous définissez chaque élément CRAFT pour que GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro produisent du texte cohérent et réutilisable. Si vous découvrez le prompting structuré, consultez [Qu\'est-ce que le Prompt Engineering](/prompt-engineering/what-is-prompt-engineering?lang=fr) pour les concepts fondamentaux.',
+            '**Le CRAFT Framework est un modèle de prompt pour les tâches créatives et marketing qui pousse les grands modèles de langage à définir qui ils sont, pour qui ils écrivent et comment le résultat doit se présenter.** Au lieu d\'envoyer une demande vague comme \"écris un post sur notre produit\", vous définissez chaque élément CRAFT pour que GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro produisent du texte cohérent et réutilisable. Si vous découvrez le prompting structuré, consultez [Qu\'est-ce que le Prompt Engineering](/fr/prompt-engineering/what-is-prompt-engineering) pour les concepts fondamentaux.',
             'L\'acronyme se divise habituellement ainsi :',
           ],
           items: [
@@ -30621,7 +30621,7 @@ ja: {
           ],
           items: [
             'Remplir Contexte, Rôle, Audience, Format et Ton par des entrées structurées au lieu de mémoriser le motif.',
-            'Appliquer le même prompt CRAFT à plusieurs modèles en parallèle, comparant comment GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et modèles locaux réagissent au même brief. (Pour les prompts plus simples, considérez le [Framework Single-Step](/prompt-engineering/the-single-step-prompt-method?lang=fr).)',
+            'Appliquer le même prompt CRAFT à plusieurs modèles en parallèle, comparant comment GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et modèles locaux réagissent au même brief. (Pour les prompts plus simples, considérez le [Framework Single-Step](/fr/prompt-engineering/the-single-step-prompt-method).)',
             'Sauvegarder et réutiliser des templates CRAFT pour des workflows récurrents comme \"post LinkedIn de lancement feature\", \"case study customer success\" ou \"email outreach sales\".',
           ],
         },
@@ -30633,8 +30633,8 @@ ja: {
           ],
           items: [
             'CRAFT pour les outputs créatifs : posts, emails, scripts, landing pages.',
-            'Utilisez le [Framework APE](/prompt-engineering/ape-framework?lang=fr) ou [Framework SPECS](/prompt-engineering/specs-framework?lang=fr) pour les outputs structurés, checklists ou spécifications JSON.',
-            'Utilisez le [Framework CO-STAR](/prompt-engineering/co-star-framework?lang=fr) ou structures orientées reasoning comme Chain-of-Thought pour l\'analyse complexe, la planification et les tâches multi-contraintes.',
+            'Utilisez le [Framework APE](/fr/prompt-engineering/ape-framework) ou [Framework SPECS](/fr/prompt-engineering/specs-framework) pour les outputs structurés, checklists ou spécifications JSON.',
+            'Utilisez le [Framework CO-STAR](/fr/prompt-engineering/co-star-framework) ou structures orientées reasoning comme Chain-of-Thought pour l\'analyse complexe, la planification et les tâches multi-contraintes.',
           ],
         },
         howToStart: {
@@ -30661,7 +30661,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/craft-framework',
         'inLanguage': 'ja',
         headline: 'The CRAFT Framework',
         description: 'CRAFTフレームワークはコンテキスト・役割・オーディエンス・フォーマット・トーンで創造的タスクを構成。',
@@ -30676,7 +30676,7 @@ ja: {
           title: 'CRAFTフレームワークとは',
           content: [
             '**CRAFTフレームワークは、クリエイティブおよびマーケティングタスク向けのプロンプトテンプレートです。**大規模言語モデルに対して「誰の視点から書くのか」「誰を対象に書くのか」「出力をどのような形式にするのか」を明確に指示します。「我が社の製品について書いて」といったあいまいなリクエストの代わりに、CRAFTの5つの要素を定義することで、GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proが一貫性のある再利用可能なコピーを生成できます。',
-            'プロンプトエンジニアリングが初めての場合は、[プロンプトエンジニアリングとは何か](/prompt-engineering/what-is-prompt-engineering?lang=ja)をご覧ください。',
+            'プロンプトエンジニアリングが初めての場合は、[プロンプトエンジニアリングとは何か](/ja/prompt-engineering/what-is-prompt-engineering)をご覧ください。',
             'CRAFTの各要素：',
           ],
           items: [
@@ -30746,7 +30746,7 @@ ja: {
           ],
           items: [
             'パターンを手動で覚える代わりに、構造化された入力でコンテキスト、役割、オーディエンス、フォーマット、トーンを入力できます',
-            '同じCRAFTベースプロンプトを複数のモデルに並行適用し、GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、ローカルモデルが同じクリエイティブブリーフにどう応答するかを比較します。(より単純な1ステップのプロンプトには、[シングルステップフレームワーク](/prompt-engineering/the-single-step-prompt-method?lang=ja)を検討してください。)',
+            '同じCRAFTベースプロンプトを複数のモデルに並行適用し、GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、ローカルモデルが同じクリエイティブブリーフにどう応答するかを比較します。(より単純な1ステップのプロンプトには、[シングルステップフレームワーク](/ja/prompt-engineering/the-single-step-prompt-method)を検討してください。)',
             'CRAFTテンプレートを繰り返しのワークフロー（「機能ローンチLinkedInポスト」「カスタマーサクセスケーススタディ」「営業アウトリーチメール」など）に保存して再利用できます',
           ],
         },
@@ -30758,8 +30758,8 @@ ja: {
           ],
           items: [
             'クリエイティブ出力（ポスト、メール、スクリプト、ランディングページ）にはCRAFTを使用します',
-            '構造化された出力、チェックリスト、JSON仕様には、[APEフレームワーク](/prompt-engineering/ape-framework?lang=ja)または[SPECSフレームワーク](/prompt-engineering/specs-framework?lang=ja)を使用します',
-            '複雑な分析、計画、マルチ制約通信には、[CO-STARフレームワーク](/prompt-engineering/co-star-framework?lang=ja)またはChain-of-Thoughtなどの推論志向の構造を使用します',
+            '構造化された出力、チェックリスト、JSON仕様には、[APEフレームワーク](/ja/prompt-engineering/ape-framework)または[SPECSフレームワーク](/ja/prompt-engineering/specs-framework)を使用します',
+            '複雑な分析、計画、マルチ制約通信には、[CO-STARフレームワーク](/ja/prompt-engineering/co-star-framework)またはChain-of-Thoughtなどの推論志向の構造を使用します',
           ],
         },
         howToStart: {
@@ -30786,7 +30786,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/craft-framework?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/craft-framework',
         'inLanguage': 'zh',
         headline: 'The CRAFT Framework',
         description: 'CRAFT框架将创意任务分为背景、角色、受众、格式、语气。',
@@ -30801,7 +30801,7 @@ ja: {
           title: 'CRAFT框架是什么',
           content: [
             '**CRAFT框架是创意和营销任务的提示模板。**它让大语言模型明确：你以谁的身份写作、为谁写作、输出应该什么样子。与其发送模糊指令（如"为产品写一个帖子"），你定义每个CRAFT元素，让GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro生成一致、可复用的文案。',
-            '如果你刚开始接触结构化提示，请阅读[什么是提示工程](/prompt-engineering/what-is-prompt-engineering?lang=zh)了解基础概念。',
+            '如果你刚开始接触结构化提示，请阅读[什么是提示工程](/zh/prompt-engineering/what-is-prompt-engineering)了解基础概念。',
             'CRAFT的5个要素：',
           ],
           items: [
@@ -30871,7 +30871,7 @@ ja: {
           ],
           items: [
             '1. 通过结构化输入填写背景、角色、受众、格式和语气，而不是手动记忆',
-            '2. 将同一个CRAFT提示并行应用于多个模型，比较GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro和本地模型对同一文案需求的响应。（对于更简单的单步提示，可考虑[单步框架](/prompt-engineering/the-single-step-prompt-method?lang=zh)。）',
+            '2. 将同一个CRAFT提示并行应用于多个模型，比较GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro和本地模型对同一文案需求的响应。（对于更简单的单步提示，可考虑[单步框架](/zh/prompt-engineering/the-single-step-prompt-method)。）',
             '3. 为重复工作流保存并重复使用CRAFT模板，如"功能发布LinkedIn帖子""客户成功案例"或"销售外联邮件"',
           ],
         },
@@ -30883,8 +30883,8 @@ ja: {
           ],
           items: [
             '1. 创意输出（帖子、邮件、脚本、落地页）用CRAFT',
-            '2. 结构化输出、清单、JSON规范用[APE框架](/prompt-engineering/ape-framework?lang=zh)或[SPECS框架](/prompt-engineering/specs-framework?lang=zh)',
-            '3. 复杂分析、规划和多约束通信用[CO-STAR框架](/prompt-engineering/co-star-framework?lang=zh)或思维链推理结构',
+            '2. 结构化输出、清单、JSON规范用[APE框架](/zh/prompt-engineering/ape-framework)或[SPECS框架](/zh/prompt-engineering/specs-framework)',
+            '3. 复杂分析、规划和多约束通信用[CO-STAR框架](/zh/prompt-engineering/co-star-framework)或思维链推理结构',
           ],
         },
         howToStart: {
@@ -31109,7 +31109,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/co-star-framework',
         'inLanguage': 'de',
         headline: 'CO-STAR-Framework: Kontext, Ziel, Stil & Tone 2026',
         description: 'Das CO-STAR-Framework zerlegt komplexe Prompts in Kontext, Ziel, Stil, Ton, Zielgruppe und Response. Nutze es mit GPT-4o, Claude und Gemini. PromptQuorum-unterstützt.',
@@ -31129,7 +31129,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/co-star-framework',
         'inLanguage': 'fr',
         headline: 'Framework CO-STAR: Contexte, Objectif, Style 2026',
         description: 'Le framework CO-STAR divise les prompts complexes en Contexte, Objectif, Style, Ton, Audience et Réponse. Utilisez avec GPT-4o, Claude et Gemini. Support PromptQuorum.',
@@ -31149,7 +31149,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/co-star-framework',
         'inLanguage': 'ja',
         headline: 'CO-STARフレームワーク: コンテキスト、目的、スタイル 2026',
         description: 'CO-STARフレームワークは複雑なプロンプトを：コンテキスト、目的、スタイル、トーン、対象者、レスポンスに分割します。GPT-4o、Claude、Geminiで使用可能。',
@@ -31169,7 +31169,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/co-star-framework',
         'inLanguage': 'zh',
         headline: 'CO-STAR框架: 背景、目标、风格 2026',
         description: 'CO-STAR框架将复杂提示分解为：背景、目标、风格、语调、受众、回应。适用于GPT-4o、Claude和Gemini。PromptQuorum支持。',
@@ -32639,7 +32639,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/trace-framework',
         'inLanguage': 'de',
         headline: 'Das TRACE Framework',
         description: 'Wie das TRACE Framework (Think, Reason, Analyze, Conclude, Explain) funktioniert, wann es sinnvoll ist, und wie PromptQuorum es nativ anbietet.',
@@ -32795,7 +32795,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/trace-framework',
         'inLanguage': 'fr',
         headline: 'Le Framework TRACE',
         description: 'Comment fonctionne le Framework TRACE (Penser, Raisonner, Analyser, Conclure, Expliquer), quand l\'utiliser, et comment PromptQuorum l\'intègre.',
@@ -32937,7 +32937,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/trace-framework',
         'inLanguage': 'ja',
         headline: 'TRACEフレームワーク',
         description: 'TRACEフレームワーク（考える・推論する・分析する・結論を出す・説明する）の仕組み、活用場面、PromptQuorumでの実装方法。',
@@ -33091,7 +33091,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/trace-framework',
         'inLanguage': 'zh',
         headline: 'TRACE框架',
         description: 'TRACE框架（思考、推理、分析、结论、解释）的工作原理、适用场景、以及PromptQuorum中的实现方式。',
@@ -39915,7 +39915,7 @@ fr: {
         whyItMatters: {
           title: 'Warum RAG wichtig ist',
           content: [
-            '**RAG ist wichtig, weil es [Halluzinationen](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) reduziert und Antworten aktuell hält.** Ein reines Sprachmodell kann vertrauensvoll Details erfinden, besonders bei Spezialthemen oder aktuellen Inhalten. Mit RAG sind Antworten in abgerufenen Dokumenten verankert, die Sie kontrollieren.',
+            '**RAG ist wichtig, weil es [Halluzinationen](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) reduziert und Antworten aktuell hält.** Ein reines Sprachmodell kann vertrauensvoll Details erfinden, besonders bei Spezialthemen oder aktuellen Inhalten. Mit RAG sind Antworten in abgerufenen Dokumenten verankert, die Sie kontrollieren.',
             'RAG ist auch für Datenschutz und Governance wichtig. Anstatt ein Modell mit sensiblen Daten zu trainieren, können Sie diese Daten in Ihrem eigenen Store behalten und nur relevante Ausschnitte zur Abfragezeit an das Modell übergeben. Das Modell begründet sein Verständnis auf Ihren Inhalten, ohne diese dauerhaft zu absorbieren.',
           ],
         },
@@ -39945,7 +39945,7 @@ fr: {
         vsFineTuning: {
           title: 'RAG vs Fine-Tuning: Wann man was einsetzt',
           content: [
-            '**RAG und [Fine-Tuning](/prompt-engineering/open-source-vs-proprietary-llms?lang=de) lösen unterschiedliche Probleme und funktionieren am besten kombiniert, nicht als Alternativen.** Verwenden Sie zuerst RAG. Fügen Sie Fine-Tuning nur hinzu, wenn Sie konsistente Verhaltensänderungen benötigen, die RAG durch Prompting nicht bieten kann.',
+            '**RAG und [Fine-Tuning](/de/prompt-engineering/open-source-vs-proprietary-llms) lösen unterschiedliche Probleme und funktionieren am besten kombiniert, nicht als Alternativen.** Verwenden Sie zuerst RAG. Fügen Sie Fine-Tuning nur hinzu, wenn Sie konsistente Verhaltensänderungen benötigen, die RAG durch Prompting nicht bieten kann.',
           ],
           columns: ['Faktor', 'RAG', 'Fine-Tuning'],
           rows: [
@@ -39978,7 +39978,7 @@ fr: {
           ],
           items: [
             'Ein Modell oder Service zum Einbetten und Abrufen von Dokumenten und ein anderes zur Generierung von Antworten verwenden.',
-            'Reasoning-fokussierte Prompts (wie [chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=de) oder [TRACE](/prompt-engineering/trace-framework?lang=de)-ähnliche Strukturen) zusätzlich zu abgerufenen Kontexten anwenden.',
+            'Reasoning-fokussierte Prompts (wie [chain-of-thought](/de/prompt-engineering/chain-of-thought-prompting) oder [TRACE](/de/prompt-engineering/trace-framework)-ähnliche Strukturen) zusätzlich zu abgerufenen Kontexten anwenden.',
             'Denselben RAG-Prompt über mehrere Modelle ausführen, um zu vergleichen, wie gut jedes die gleichen Dokumente nutzt.',
           ],
         },
@@ -40019,12 +40019,12 @@ fr: {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — Grundkonzepte zum Entwerfen von Prompts, die mit RAG-abgerufenen Inhalten funktionieren',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — kombinieren Sie Chain-of-Thought mit RAG für komplexes mehrstufiges Reasoning über abgerufene Dokumente',
-            '[Prompt-Injection & Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — indirekte Prompt-Injection über abgerufene Dokumente ist das primäre RAG-Sicherheitsrisiko',
-            '[Open Source vs proprietäre LLMs](/prompt-engineering/open-source-vs-proprietary-llms?lang=de) — wählen Sie zwischen Cloud und lokalen LLMs für die Generierungsstufe Ihrer RAG-Pipeline',
-            '[KI-Grenzen — Was LLMs nicht können](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — verstehen Sie, warum RAG notwendig ist, um LLM-Wissensstichtag und Halluzinations-Grenzen zu überwinden',
-            '[Qualitätschecks aufbauen](/prompt-engineering/build-quality-checks?lang=de) — Validierungsmuster für RAG-Ausgabe einschließlich Halluzinations-Erkennung und Quellen-Verifizierung',
+            '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — Grundkonzepte zum Entwerfen von Prompts, die mit RAG-abgerufenen Inhalten funktionieren',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — kombinieren Sie Chain-of-Thought mit RAG für komplexes mehrstufiges Reasoning über abgerufene Dokumente',
+            '[Prompt-Injection & Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — indirekte Prompt-Injection über abgerufene Dokumente ist das primäre RAG-Sicherheitsrisiko',
+            '[Open Source vs proprietäre LLMs](/de/prompt-engineering/open-source-vs-proprietary-llms) — wählen Sie zwischen Cloud und lokalen LLMs für die Generierungsstufe Ihrer RAG-Pipeline',
+            '[KI-Grenzen — Was LLMs nicht können](/de/prompt-engineering/ai-limitations-what-llms-cant-do) — verstehen Sie, warum RAG notwendig ist, um LLM-Wissensstichtag und Halluzinations-Grenzen zu überwinden',
+            '[Qualitätschecks aufbauen](/de/prompt-engineering/build-quality-checks) — Validierungsmuster für RAG-Ausgabe einschließlich Halluzinations-Erkennung und Quellen-Verifizierung',
           ],
         },
         faq: {
@@ -40173,7 +40173,7 @@ fr: {
         whyItMatters: {
           title: 'Pourquoi RAG est important',
           content: [
-            '**RAG réduit les [hallucinations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) et maintient les réponses à jour.** Un modèle seul invente volontiers sur des sujets spécialisés ou récents. Avec RAG, les réponses reposent sur des documents que vous contrôlez.',
+            '**RAG réduit les [hallucinations](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) et maintient les réponses à jour.** Un modèle seul invente volontiers sur des sujets spécialisés ou récents. Avec RAG, les réponses reposent sur des documents que vous contrôlez.',
             'Essentiel aussi pour la confidentialité. Vous gardez vos données sensibles dans votre infrastructure et ne passez que des extraits pertinents au modèle à chaque interrogation. Le modèle opère sur votre contenu sans l\'absorber définitivement.',
           ],
         },
@@ -40192,7 +40192,7 @@ fr: {
         vsFineTuning: {
           title: 'RAG vs Fine-Tuning : quand utiliser quoi',
           content: [
-            '**RAG et [Fine-Tuning](/prompt-engineering/open-source-vs-proprietary-llms?lang=fr) résolvent des problèmes différents et marchent mieux combinés.** Commencez par RAG. Ajoutez Fine-Tuning seulement si vous besoin de changements comportementaux stables que le prompting ne peut pas fournir.',
+            '**RAG et [Fine-Tuning](/fr/prompt-engineering/open-source-vs-proprietary-llms) résolvent des problèmes différents et marchent mieux combinés.** Commencez par RAG. Ajoutez Fine-Tuning seulement si vous besoin de changements comportementaux stables que le prompting ne peut pas fournir.',
           ],
           columns: ['Facteur', 'RAG', 'Fine-Tuning'],
           rows: [
@@ -40225,7 +40225,7 @@ fr: {
           ],
           items: [
             'Un modèle pour embedding/récupération, un autre pour génération de réponse.',
-            '[Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=fr) ou [TRACE](/prompt-engineering/trace-framework?lang=fr) sur contexte récupéré pour reasoning complexe.',
+            '[Chain-of-Thought](/fr/prompt-engineering/chain-of-thought-prompting) ou [TRACE](/fr/prompt-engineering/trace-framework) sur contexte récupéré pour reasoning complexe.',
             'Même prompt RAG sur plusieurs modèles pour comparer l\'utilisation du contexte.',
           ],
         },
@@ -40266,12 +40266,12 @@ fr: {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Qu\'est-ce que l\'ingénierie des prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — Fondamentaux pour prompts avec contexte RAG.',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — Combinez CoT avec RAG pour multi-étapes sur docs récupérés.',
-            '[Injection de Prompts & Sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Injection indirecte via docs : risque RAG primaire.',
-            '[Open Source vs LLMs propriétaires](/prompt-engineering/open-source-vs-proprietary-llms?lang=fr) — Cloud vs local pour étape génération.',
-            '[Limites de l\'IA — Ce que LLMs ne peuvent pas faire](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — Pourquoi RAG nécessaire.',
-            '[Construire des vérifications qualité](/prompt-engineering/build-quality-checks?lang=fr) — Validation RAG : détection hallucinations, vérification sources.',
+            '[Qu\'est-ce que l\'ingénierie des prompts ?](/fr/prompt-engineering/what-is-prompt-engineering) — Fondamentaux pour prompts avec contexte RAG.',
+            '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — Combinez CoT avec RAG pour multi-étapes sur docs récupérés.',
+            '[Injection de Prompts & Sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Injection indirecte via docs : risque RAG primaire.',
+            '[Open Source vs LLMs propriétaires](/fr/prompt-engineering/open-source-vs-proprietary-llms) — Cloud vs local pour étape génération.',
+            '[Limites de l\'IA — Ce que LLMs ne peuvent pas faire](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — Pourquoi RAG nécessaire.',
+            '[Construire des vérifications qualité](/fr/prompt-engineering/build-quality-checks) — Validation RAG : détection hallucinations, vérification sources.',
           ],
         },
         faq: {
@@ -40418,7 +40418,7 @@ fr: {
         whyItMatters: {
           title: 'なぜRAGが重要か',
           content: [
-            '**RAG は [ハルシネーション](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) を削減し、回答を最新に保つため重要です。** 純粋な言語モデルは専門的または最新の話題で自信満々に詳細を作り出すことができます。RAG を使えば、回答はあなたが管理するドキュメントに固定されます。',
+            '**RAG は [ハルシネーション](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) を削減し、回答を最新に保つため重要です。** 純粋な言語モデルは専門的または最新の話題で自信満々に詳細を作り出すことができます。RAG を使えば、回答はあなたが管理するドキュメントに固定されます。',
             'プライバシーとガバナンスにおいても重要です。機密データでモデルをトレーニングする代わりに、そのデータを自社ストアに保管し、クエリ時に関連スニペットのみをモデルに供給できます。モデルはあなたのコンテンツについて推論しますが、永続的に吸収することはありません。',
           ],
         },
@@ -40437,7 +40437,7 @@ fr: {
         vsFineTuning: {
           title: 'RAG vs ファインチューニング',
           content: [
-            '**RAG と [ファインチューニング](/prompt-engineering/open-source-vs-proprietary-llms?lang=ja) は異なる問題を解決し、組み合わせが最適です。** 最初に RAG から始めます。プロンプトでは実現できない一貫した動作変更が必要な場合のみファインチューニングを追加してください。',
+            '**RAG と [ファインチューニング](/ja/prompt-engineering/open-source-vs-proprietary-llms) は異なる問題を解決し、組み合わせが最適です。** 最初に RAG から始めます。プロンプトでは実現できない一貫した動作変更が必要な場合のみファインチューニングを追加してください。',
           ],
           columns: ['要素', 'RAG', 'ファインチューニング'],
           rows: [
@@ -40470,7 +40470,7 @@ fr: {
           ],
           items: [
             'ドキュメント埋め込み・検索に 1 つのモデル、回答生成に別のモデル使用。',
-            '[chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=ja) や [TRACE](/prompt-engineering/trace-framework?lang=ja) のような推論重点プロンプトを取得コンテキストの上に適用。',
+            '[chain-of-thought](/ja/prompt-engineering/chain-of-thought-prompting) や [TRACE](/ja/prompt-engineering/trace-framework) のような推論重点プロンプトを取得コンテキストの上に適用。',
             '複数モデルで同じ RAG プロンプトを実行して、各モデルがドキュメントをどう活用するかを比較。',
           ],
         },
@@ -40511,12 +40511,12 @@ fr: {
         relatedReading: {
           title: '関連資料',
           items: [
-            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) — RAG 取得コンテキストで動くプロンプト設計基礎',
-            '[Chain-of-Thought プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — RAG で取得ドキュメント上で複雑なマルチステップ推論に Chain-of-Thought を組み合わせ',
-            '[プロンプトインジェクション＆セキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — 取得ドキュメント経由の間接プロンプトインジェクションは RAG の最初のセキュリティリスク',
-            '[オープンソース vs 専有 LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=ja) — RAG パイプラインの生成段階向けにクラウドとローカル LLM から選択',
-            '[AI の限界―LLM ができないこと](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — LLM 知識カットオフとハルシネーション限界を克服するのに RAG がなぜ必要かを理解',
-            '[品質チェックを構築](/prompt-engineering/build-quality-checks?lang=ja) — RAG 出力検証パターン：ハルシネーション検出、ソース検証を含む',
+            '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — RAG 取得コンテキストで動くプロンプト設計基礎',
+            '[Chain-of-Thought プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — RAG で取得ドキュメント上で複雑なマルチステップ推論に Chain-of-Thought を組み合わせ',
+            '[プロンプトインジェクション＆セキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — 取得ドキュメント経由の間接プロンプトインジェクションは RAG の最初のセキュリティリスク',
+            '[オープンソース vs 専有 LLM](/ja/prompt-engineering/open-source-vs-proprietary-llms) — RAG パイプラインの生成段階向けにクラウドとローカル LLM から選択',
+            '[AI の限界―LLM ができないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — LLM 知識カットオフとハルシネーション限界を克服するのに RAG がなぜ必要かを理解',
+            '[品質チェックを構築](/ja/prompt-engineering/build-quality-checks) — RAG 出力検証パターン：ハルシネーション検出、ソース検証を含む',
           ],
         },
         faq: {
@@ -40663,7 +40663,7 @@ fr: {
         whyItMatters: {
           title: '为什么RAG很重要',
           content: [
-            '**RAG很重要，因为它减少[幻觉](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh)并保持答案最新。** 纯LLM能够自信地在专业或最新主题上虚构细节。通过RAG，答案固定在你管理的文档中。',
+            '**RAG很重要，因为它减少[幻觉](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)并保持答案最新。** 纯LLM能够自信地在专业或最新主题上虚构细节。通过RAG，答案固定在你管理的文档中。',
             '对隐私和治理也至关重要。与其用敏感数据微调模型，不如将该数据保留在自己的存储中，并仅在查询时将相关片段传递给模型。模型对你的内容推理但永不吸收。',
           ],
         },
@@ -40682,7 +40682,7 @@ fr: {
         vsFineTuning: {
           title: 'RAG vs 微调',
           content: [
-            '**RAG和[微调](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh)解决不同问题，最适合组合使用。** 从RAG开始。仅当需要提示无法提供的一致行为变化时才添加微调。',
+            '**RAG和[微调](/zh/prompt-engineering/open-source-vs-proprietary-llms)解决不同问题，最适合组合使用。** 从RAG开始。仅当需要提示无法提供的一致行为变化时才添加微调。',
           ],
           columns: ['因素', 'RAG', '微调'],
           rows: [
@@ -40715,7 +40715,7 @@ fr: {
           ],
           items: [
             '用一个模型进行嵌入和检索，另一个用于生成答案。',
-            '在检索上下文之上应用推理重点的提示，如[chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=zh)或[TRACE](/prompt-engineering/trace-framework?lang=zh)风格结构。',
+            '在检索上下文之上应用推理重点的提示，如[chain-of-thought](/zh/prompt-engineering/chain-of-thought-prompting)或[TRACE](/zh/prompt-engineering/trace-framework)风格结构。',
             '在多个模型上运行相同的RAG提示以比较每个模型如何使用相同文档。',
           ],
         },
@@ -40768,12 +40768,12 @@ fr: {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 与RAG检索上下文一起工作的提示设计基础',
-            '[Chain-of-Thought提示](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 将Chain-of-Thought与RAG结合以进行检索文档上的复杂多步推理',
-            '[提示注入和安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 通过检索文档的间接注入是RAG的主要安全风险',
-            '[开源vs专有LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh) — 为RAG生成阶段选择云或本地LLM',
-            '[AI限制—LLM无法做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 理解为什么需要RAG来克服LLM知识截止和幻觉限制',
-            '[构建质量检查](/prompt-engineering/build-quality-checks?lang=zh) — RAG输出验证模式：幻觉检测、来源验证',
+            '[什么是提示工程？](/zh/prompt-engineering/what-is-prompt-engineering) — 与RAG检索上下文一起工作的提示设计基础',
+            '[Chain-of-Thought提示](/zh/prompt-engineering/chain-of-thought-prompting) — 将Chain-of-Thought与RAG结合以进行检索文档上的复杂多步推理',
+            '[提示注入和安全](/zh/prompt-engineering/prompt-injection-and-security) — 通过检索文档的间接注入是RAG的主要安全风险',
+            '[开源vs专有LLM](/zh/prompt-engineering/open-source-vs-proprietary-llms) — 为RAG生成阶段选择云或本地LLM',
+            '[AI限制—LLM无法做什么](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) — 理解为什么需要RAG来克服LLM知识截止和幻觉限制',
+            '[构建质量检查](/zh/prompt-engineering/build-quality-checks) — RAG输出验证模式：幻觉检测、来源验证',
           ],
         },
         faq: {
@@ -41405,12 +41405,12 @@ fr: {
             'Kurze, eindeutige Schlüsselnamen verwenden (z. B. `issue_type`, `urgency`, `summary`).',
             'Beispiele für valide Ausgaben hinzufügen, wenn die Aufgabe komplex oder sensibel ist.',
             'Bei verschachtelten Strukturen diese schrittweise aufbauen und mit echten Eingaben testen.',
-            'Spezifikationsorientierte Frameworks wie SPECS oder RTF mit Format-[Einschränkungen]((/prompt-engineering/constrained-prompting?lang=de)) verwenden, um Schemas direkt in Prompts zu kodieren.',
+            'Spezifikationsorientierte Frameworks wie SPECS oder RTF mit Format-[Einschränkungen]((/de/prompt-engineering/constrained-prompting)) verwenden, um Schemas direkt in Prompts zu kodieren.',
           ],
         },
         practicesAddendum: {
           content: [
-            'Wenn weiterhin Formatierungsprobleme auftreten, kann die einfache Anweisung "Im Zweifel das Feld als leeren String belassen statt zu raten" hinzugefügt werden. Strukturierte Ausgabe funktioniert am besten in Kombination mit [RAG (Retrieval-Augmented Generation)]((/prompt-engineering/rag-explained?lang=de)) zur Faktenprüfung extrahierter Daten.',
+            'Wenn weiterhin Formatierungsprobleme auftreten, kann die einfache Anweisung "Im Zweifel das Feld als leeren String belassen statt zu raten" hinzugefügt werden. Strukturierte Ausgabe funktioniert am besten in Kombination mit [RAG (Retrieval-Augmented Generation)]((/de/prompt-engineering/rag-explained)) zur Faktenprüfung extrahierter Daten.',
           ],
         },
         modelComparison: {
@@ -41499,12 +41499,12 @@ fr: {
             '**Erweitere dein Wissen mit diesen verwandten Prompt-Engineering-Themen:**',
           ],
           items: [
-            '[Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) — spezifische Ausgabeformate und Token-Budgets erzwingen.',
-            '[SPECS Framework](/prompt-engineering/specs-framework?lang=de) — spezifikationsorientierte Prompts für zuverlässiges Modellverhalten.',
-            '[RAG Explained](/prompt-engineering/rag-explained?lang=de) — strukturierte Extraktion mit Echtzeit-Datenabruf kombinieren.',
-            '[Chain of Thought](/prompt-engineering/chain-of-thought?lang=de) — Schritt für Schritt denken, bevor strukturierte Ausgaben zurückgegeben werden.',
-            '[Prompt Templates](/prompt-engineering/prompt-templates?lang=de) — wiederverwendbare Muster für häufige Aufgaben mit strukturierter Ausgabe.',
-            '[Zero-Shot vs Few-Shot](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — verstehen, wann Beispiele (Few-Shot) die JSON-Compliance verbessern.',
+            '[Constrained Prompting](/de/prompt-engineering/constrained-prompting) — spezifische Ausgabeformate und Token-Budgets erzwingen.',
+            '[SPECS Framework](/de/prompt-engineering/specs-framework) — spezifikationsorientierte Prompts für zuverlässiges Modellverhalten.',
+            '[RAG Explained](/de/prompt-engineering/rag-explained) — strukturierte Extraktion mit Echtzeit-Datenabruf kombinieren.',
+            '[Chain of Thought](/de/prompt-engineering/chain-of-thought) — Schritt für Schritt denken, bevor strukturierte Ausgaben zurückgegeben werden.',
+            '[Prompt Templates](/de/prompt-engineering/prompt-templates) — wiederverwendbare Muster für häufige Aufgaben mit strukturierter Ausgabe.',
+            '[Zero-Shot vs Few-Shot](/de/prompt-engineering/zero-shot-vs-few-shot) — verstehen, wann Beispiele (Few-Shot) die JSON-Compliance verbessern.',
           ],
         },
         faq: {
@@ -41533,9 +41533,9 @@ fr: {
         },
       },
     },
-    fr: { theme: 'Techniques', title: 'Sortie structuree dans les LLM : mode JSON, exemples et utilisation', intro: 'La sortie structuree et le mode JSON transforment les resultats libres des modeles linguistiques en formats fiables et lisibles par machine qui s\'integrent parfaitement aux bases de donnees, aux API et aux workflows d\'automatisation. Apprenez a concevoir des prompts qui forcent une sortie JSON valide, comparez le mode JSON avec les appels de fonction et les prompts de schema, et decidez quelle methode convient a votre cas d\'usage.', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10 min de lecture', seoTitle: 'Sortie structuree et mode JSON dans les LLM : utilisation, exemples et comparaison', metaDescription: 'Apprenez quand utiliser la sortie structuree, le mode JSON ou les appels de fonction. Comparez la conformite JSON par modele, voyez des exemples reels et maitrisez la conception de schemas pour les API.', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Sortie structuree et mode JSON : obtenir des donnees utilisables de l\'IA', description: 'Maitrisez la sortie structuree et le mode JSON dans les prompts. Apprenez a concevoir des schemas, a imposer un JSON valide, a comparer la conformite des modeles et a eviter les erreurs courantes dans les systemes de production.', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['sortie structuree', 'mode JSON', 'ingenierie des prompts', 'conception de schemas', 'sortie lisible par machine', 'validation JSON', 'modeles de prompts'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'Comment utiliser la sortie structuree et le mode JSON', step: [ { '@type': 'HowToStep', position: 1, name: 'Choisir le mode JSON', text: 'Pour l\'extraction de donnees et les sorties lisibles par machine, utilisez le mode JSON disponible dans OpenAI GPT-4o, Anthropic Claude, Google Gemini et autres fournisseurs majeurs. Cela garantit que le modele renvoie un JSON valide, pas du texte.' }, { '@type': 'HowToStep', position: 2, name: 'Definir votre schema', text: 'Definissez explicitement votre schema JSON, y compris les noms de champs, les types de donnees et les contraintes.' }, { '@type': 'HowToStep', position: 3, name: 'Fournir un exemple de sortie', text: 'Fournissez un exemple de la structure JSON exacte que vous voulez. Les exemples sont plus puissants que les descriptions de schemas seules.' }, { '@type': 'HowToStep', position: 4, name: 'Gerer les structures imbriquees', text: 'Pour les objets dans les tableaux, soyez explicite sur la hierarchie. Fournissez un exemple JSON complet.' }, { '@type': 'HowToStep', position: 5, name: 'Valider la sortie JSON', text: 'Validez la sortie JSON avant la use en aval. Analysez et verifiez le JSON valide, le schema correct, et les types de donnees attendus.' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: 'Quelle est la difference entre la sortie structuree et le mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'La sortie structuree est la categorie plus large de demander aux modeles de renvoyer des donnees dans un format fixe. Le mode JSON est une variante plus stricte qui impose une sortie JSON valide.' } }, { '@type': 'Question', name: 'Tous les LLM supportent-ils le mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. OpenAI GPT-4o, Anthropic Claude 3.5+ et Google Gemini supportent le mode JSON natif. Les modeles plus anciens et les LLM open-source peuvent necessiter l\'application du mode JSON basee sur les prompts.' } }, { '@type': 'Question', name: 'Comment imposer des reponses JSON uniquement sans mode JSON natif ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez l\'ingenierie des prompts : declarez explicitement "sortie uniquement du JSON valide", fournissez un schema detaille et des exemples.' } }, { '@type': 'Question', name: 'Que se passe-t-il si le modele renvoie un JSON invalide ?', acceptedAnswer: { '@type': 'Answer', text: 'Validez le JSON de votre cote avec un analyseur. En cas d\'echec, reessayez la demande avec un prompt plus clair ou revenez a l\'extraction manuelle.' } }, { '@type': 'Question', name: 'Puis-je utiliser la sortie structuree pour des documents complexes ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Divisez les taches complexes en etapes : d\'abord extraire les champs cles, puis valider, puis optionnellement transformer dans les systemes en aval.' } }, { '@type': 'Question', name: 'Comment gerer les donnees manquantes ou ambigues dans les sorties structurees ?', acceptedAnswer: { '@type': 'Answer', text: 'Definissez le comportement de secours dans votre schema : utilisez des chaines vides, des valeurs null ou un marqueur special comme "inconnu".' } }, { '@type': 'Question', name: 'Le mode JSON est-il affecte par la conformite reglementaire (RGPD, CCPA) ?', acceptedAnswer: { '@type': 'Answer', text: 'Le mode JSON lui-meme est neutre. Cependant, la sortie structuree est benefique pour la conformite car elle vous permet de suivre systematiquement les donnees extraites.' } }, { '@type': 'Question', name: 'Comment tester les prompts en mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Testez avec des entrees diversifiees : cas limites, donnees ambigues et exemples du monde reel. Analysez la sortie et verifiez le JSON valide.' } }, { '@type': 'Question', name: 'Puis-je reutiliser les schemas de sortie structuree sur differents modeles ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, avec prudence. Definissez votre schema une fois et testez-le sur les modeles, vous devrez peut-etre ajuster les prompts pour les modeles plus anciens.' } }, { '@type': 'Question', name: 'Quel est le cout de performance du mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Minimal. Le mode JSON natif (OpenAI, Anthropic, Google) a un impact de performance negligeable.' } } ] }, sections: { definition: { content: [ '**La sortie structuree est une methode de forcer les modeles linguistiques a renvoyer les donnees dans un format predefini (par exemple JSON).** Elle differe du texte libre en imposant des noms de champs stricts, des types de donnees et des schemas que les outils en aval peuvent traiter sans nettoyage manuel.' ] }, exampleBlock: { content: [ 'Voici un exemple simple de sortie structuree au format JSON :' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**Points cles : ce que vous devez savoir sur la sortie structuree :**' ], items: [ '**Ameliore la fiabilite** : la sortie structuree reduit les erreurs d\'analyse en imposant des schemas stricts.', '**Active l\'automatisation** : le mode JSON declenche la logique conditionnelle basee sur les champs extraits.', '**Pret pour l\'API** : integration directe aux bases de donnees, CRM et systemes metier sans reformatage.', '**Dependant du modele** : le mode JSON natif est disponible dans GPT-4o, Claude, Gemini.', '**Meilleur pour les taches deterministes** : API, automatisation, pipelines de donnees.', '**Necessite la validation** : analysez et validez toujours la sortie JSON avant utilisation en aval.', '**Echelle entre les modeles** : definissez le schema une fois ; testez et documentez les differences.' ] }, whatIsStructured: { title: 'Qu\'est-ce que la sortie structuree', content: [ '**La sortie structuree signifie demander au modele de suivre un schema fixe.** Au lieu d\'un paragraphe libre, vous definissez les champs, les types et les valeurs autorisees.', 'La sortie structuree peut prendre plusieurs formes :' ], items: [ 'Listes a puces avec un nombre fixe d\'elements.', 'Tableaux Markdown avec colonnes specifiques.', 'Paires cle-valeur pour les attributs simples.', 'Objets ou tableaux JSON complets avec des cles predefinies.' ] }, structuredGoal: { content: [ 'L\'objectif est toujours le meme : transformer une description floue en une forme previsible.' ] }, whatIsJSON: { title: 'Qu\'est-ce que le mode JSON', content: [ '**Le mode JSON est une variante plus stricte de la sortie structuree ou le modele est invite a renvoyer uniquement du JSON valide.** En mode JSON, tout ce que le modele produit devrait etre analysable en JSON.', 'Un schema JSON typique pourrait ressembler a ceci :' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ 'Vous refletez ce schema dans votre prompt, puis demandez au modele de le remplir. Certaines plates-formes fournissent egalement des parametres speciaux ou des API.' ] }, whyItMatterns: { title: 'Pourquoi la sortie structuree et le mode JSON sont importants', content: [ '**La sortie structuree et le mode JSON sont importants parce qu\'ils vous permettent de transformer les modeles linguistiques en composants de systemes plus larges.** Quand la sortie est previsible, vous pouvez :' ], items: [ 'Alimenter les resultats directement dans les bases de donnees, CRM ou outils d\'analyse.', 'Declencheur des automations basees sur des champs comme "priorite", "statut" ou "confiance".', 'Creer des interfaces utilisateur qui affichent les resultats du modele.' ] }, jsonVsFunctionCalling: { title: 'Mode JSON vs Appels de fonction vs Prompts de schema', content: [ '**Trois methodes existent pour obtenir une sortie structuree des LLM.**' ], items: [ '**Mode JSON** : le modele ne produit que du JSON valide.', '**Appels de fonction** : le modele selectionne quelle fonction appeler et fournit des arguments en JSON.', '**Prompts de schema** : instructions explicites + exemples.' ] }, example: { title: 'Exemple : texte libre vs JSON structure', content: [ '**La difference devient claire quand vous comparez un prompt texte libre avec un prompt JSON structure.** Ici, nous classons et resumons un email client.', '**[Mauvais prompt]**', '"Lisez cet email client et resumez ce qu\'ils veulent."', '**[Bon prompt – Mode JSON]**', '"Vous etes un assistant de support client."', 'La version "bonne" definit le schema, les valeurs valides et l\'exigence JSON uniquement.' ] }, bestPractices: { title: 'Meilleures pratiques', content: [ '**Pour obtenir des sorties structurees fiables, vous devez etre explicite et strict dans vos prompts.**' ], items: [ 'Montrez le schema exact que vous attendez.', 'Declarez clairement que rien d\'autre que le JSON ne doit etre retourne.', 'Utilisez des noms de cles courts et sans ambiguite.', 'Ajoutez des exemples de sorties valides quand la tache est complexe.', 'Pour les structures imbriquees, construisez-les etape par etape.' ] }, modelComparison: { title: 'Comparaison des modeles : conformite JSON par fournisseur', content: [ '**Differents modeles ont differents niveaux de support du mode JSON natif.** En avril 2026, voici comment se classent les principaux fournisseurs :' ], columns: [ 'Modele', 'Mode JSON natif', 'Conformite prompt seul', 'Notes' ], rows: [ { 'Modele': 'OpenAI GPT-4o', 'Mode JSON natif': 'Oui (applique)', 'Conformite prompt seul': 'Non necessaire', 'Notes': 'Standard de l\'industrie.' }, { 'Modele': 'Anthropic Claude 3.5 Sonnet', 'Mode JSON natif': 'Oui (applique)', 'Conformite prompt seul': 'Non necessaire', 'Notes': 'Conformite JSON excellente.' }, { 'Modele': 'Google Gemini 2.0', 'Mode JSON natif': 'Oui (applique)', 'Conformite prompt seul': 'Non necessaire', 'Notes': 'Support JSON natif.' }, { 'Modele': 'Meta Llama 3.1 (70B)', 'Mode JSON natif': 'Partiel', 'Conformite prompt seul': 'Fortement recommande', 'Notes': 'Open-source.' }, { 'Modele': 'Mistral Large', 'Mode JSON natif': 'Partiel', 'Conformite prompt seul': 'Recommande', 'Notes': 'Bon comportement JSON.' }, { 'Modele': 'Anciens GPT-3.5, Claude 2', 'Mode JSON natif': 'Non', 'Conformite prompt seul': 'Requis', 'Notes': 'Necessite une ingenierie forte.' }, { 'Modele': 'Petits modeles open-source (<13B)', 'Mode JSON natif': 'Non', 'Conformite prompt seul': 'Requis avec exemples', 'Notes': 'Necessitent des schemas detailles.' } ] }, relatedReading: { title: 'Lectures connexes', items: [ '[Prompts contraints](/prompt-engineering/constrained-prompting?lang=fr) — imposer des formats.', '[Framework SPECS](/prompt-engineering/specs-framework?lang=fr) — prompts axes sur la specification.', '[RAG explique](/prompt-engineering/rag-explained?lang=fr) — combinez l\'extraction avec la recuperation.', '[Chaine de pensee](/prompt-engineering/chain-of-thought?lang=fr) — raisonnez etape par etape.', '[Modeles de prompts](/prompt-engineering/prompt-templates?lang=fr) — modeles reutilisables.', '[Zero-Shot vs Few-Shot](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — quand les exemples ameliorent.' ] }, faq: { title: 'Questions frequemment posees', faqs: [ { q: 'Quelle est la difference entre la sortie structuree et le mode JSON ?', a: 'La sortie structuree est la categorie plus large. Le mode JSON est une variante plus stricte.' }, { q: 'Tous les LLM supportent-ils le mode JSON ?', a: 'Non. OpenAI GPT-4o, Anthropic Claude 3.5+ et Google Gemini supportent le mode JSON natif.' }, { q: 'Comment imposer les reponses JSON uniquement ?', a: 'Utilisez l\'ingenierie des prompts : declarez explicitement "sortie uniquement du JSON valide".' }, { q: 'Que se passe-t-il si le modele renvoie un JSON invalide ?', a: 'Validez le JSON de votre cote. En cas d\'echec, reessayez ou revenez a l\'extraction manuelle.' }, { q: 'Puis-je utiliser la sortie structuree pour des documents complexes ?', a: 'Oui. Divisez les taches complexes en etapes.' }, { q: 'Comment gerer les donnees manquantes ?', a: 'Definissez le comportement de secours : utilisez des chaines vides, null ou un marqueur special.' }, { q: 'Le mode JSON est-il affecte par la conformite RGPD ?', a: 'Le mode JSON lui-meme est neutre. Mais la sortie structuree aide a la conformite.' }, { q: 'Comment tester les prompts en mode JSON ?', a: 'Testez avec des entrees diversifiees : cas limites, donnees ambigues et exemples reels.' }, { q: 'Puis-je reutiliser les schemas sur differents modeles ?', a: 'Oui, avec prudence. Testez-le sur les modeles et documentez les differences.' }, { q: 'Quel est le cout de performance du mode JSON ?', a: 'Minimal. Le mode JSON natif a un impact negligeable.' } ] }, sources: { title: 'Sources', items: [ '[Documentation mode JSON OpenAI](https://platform.openai.com/docs/guides/json-mode) — Guide officiel.', '[Guide Anthropic](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — Documentation.', '[API Google Gemini](https://ai.google.dev/gemini-2/docs/structured-output) — Support JSON natif.', '[Specification JSON Schema](https://json-schema.org/specification.html) — Standard de conception.' ] } } },
-    ja: { theme: 'テクニック', title: 'LLMの構造化出力：JSONモード、サンプル、使用タイミング', intro: '構造化出力とJSONモードは、言語モデルの出力を信頼性の高い機械可読フォーマットに変換し、データベース、API、自動化ワークフローにシームレスに統合できます。有効なJSONを強制するプロンプトの設計方法、JSONモード対関数呼び出し対スキーマプロンプティングの比較、およびユースケースに適した方法の選択方法を学びます。', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10分読む', seoTitle: 'LLMの構造化出力とJSONモード：使用時期、サンプル、比較', metaDescription: '構造化出力、JSONモード、関数呼び出しをいつ使用するかを学びます。モデル別のJSON準拠を比較し、実例を確認し、APIのスキーマ設計をマスターしてください。', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '構造化出力とJSONモード：AIから使用可能なデータを取得', description: 'プロンプトで構造化出力とJSONモードをマスターします。スキーマ設計、有効なJSONの強制、モデル準拠の比較、および本番システムでの一般的なエラーの回避方法を学びます。', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['構造化出力', 'JSONモード', 'プロンプトエンジニアリング', 'スキーマ設計', '機械可読出力', 'JSON検証', 'プロンプトテンプレート'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: '構造化出力とJSONモードの使用方法', step: [ { '@type': 'HowToStep', position: 1, name: 'JSONモードを選択', text: 'データ抽出と機械可読出力の場合、OpenAI GPT-4o、Anthropic Claude、Google Geminiおよびその他の主要プロバイダで利用可能なJSONモードを使用します。これにより、モデルが有効なJSONを返すことが保証されます。' }, { '@type': 'HowToStep', position: 2, name: 'スキーマを定義', text: 'JSONスキーマを明示的に定義します。フィールド名、データタイプ、および制約を含めます。' }, { '@type': 'HowToStep', position: 3, name: '出力例を提供', text: '必要なJSON構造の例を提供します。例はスキーマの説明だけより強力です。' }, { '@type': 'HowToStep', position: 4, name: 'ネストされた構造を処理', text: '配列内のオブジェクトの場合、階層に関して明示的にします。完全なJSON例を提供します。' }, { '@type': 'HowToStep', position: 5, name: 'JSON出力を検証', text: 'ダウンストリームシステムで使用する前にJSON出力を検証します。有効なJSON、正しいスキーマ、期待されるデータタイプを確認します。' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: '構造化出力とJSONモードの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '構造化出力はモデルに固定フォーマットでデータを返すよう要求する広いカテゴリです。JSONモードはより厳密なバリアントで、有効なJSON出力を強制します。' } }, { '@type': 'Question', name: 'すべてのLLMがJSONモードをサポートしていますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。OpenAI GPT-4o、Anthropic Claude 3.5+、Google Geminiがネイティブjsonモードをサポートします。古いモデルとオープンソースLLMはプロンプトベースの適用が必要です。' } }, { '@type': 'Question', name: 'ネイティブJSONモードなしでJSON応答のみを強制するにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトエンジニアリングを使用します：「有効なJSONのみを出力」を明示的に宣言し、詳細なスキーマと例を提供します。' } }, { '@type': 'Question', name: 'モデルが無効なJSONを返す場合はどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: 'JSONをサイドで検証します。失敗した場合、より明確なプロンプトでリクエストを再試行するか、手動抽出に戻ります。' } }, { '@type': 'Question', name: '複雑なドキュメントに構造化出力を使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。複雑なタスクをステップに分割します：最初に主要フィールドを抽出し、次に検証し、オプションでダウンストリームシステムに変換します。' } }, { '@type': 'Question', name: '構造化出力で欠落しているまたは曖昧なデータを処理するにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'スキーマでフォールバック動作を定義します：空の文字列、null値、または「不明」などの特別なマーカーを使用します。' } }, { '@type': 'Question', name: 'JSONモードは規制遵守（GDPR、CCPA）の影響を受けますか？', acceptedAnswer: { '@type': 'Answer', text: 'JSONモード自体は中立的です。ただし、構造化出力は、抽出、変換、記録されたデータを体系的に追跡できるため、コンプライアンスに有益です。' } }, { '@type': 'Question', name: 'JSONモードプロンプトをテストするにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: '多様な入力でテストします：エッジケース、曖昧なデータ、実世界の例。有効なJSON、正しいスキーマ、予想されるデータタイプを確認します。' } }, { '@type': 'Question', name: 'さまざまなモデル全体で構造化出力スキーマを再利用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、注意深く。スキーマを一度定義し、モデル全体でテストします。古いモデルや小さいモデルのプロンプト調整が必要な場合があります。' } }, { '@type': 'Question', name: 'JSONモードのパフォーマンスコストは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '最小限。ネイティブJSONモード（OpenAI、Anthropic、Google）はパフォーマンスへの影響がわずかです。' } } ] }, sections: { definition: { content: [ '**構造化出力は、言語モデルを強制して、定義済みフォーマット（JSONなど）でデータを返す方法です。** 自由形式のテキストとは異なり、ダウンストリームツールが手動クリーンアップなしで処理できる厳密なフィールド名、データタイプ、スキーマを強制します。' ] }, exampleBlock: { content: [ 'JSON形式での構造化出力の簡単な例を次に示します。' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**重要なポイント：構造化出力について知っておくべきことが：**' ], items: [ '**信頼性の向上** : 構造化出力は、厳密なスキーマを強制することで、パースエラーと手動データクリーンアップを削減します。', '**自動化の有効化** : JSONモードは、抽出されたフィールド（優先度、カテゴリ、緊急度）に基づいて条件付きロジックをトリガーします。', '**API対応** : 再フォーマットなしでデータベース、CRM、ビジネスシステムへの直接統合。', '**モデル依存** : ネイティブJSONモードはGPT-4o、Claude、Geminiで利用可能です。古いモデル/オープンソースモデルはプロンプトエンジニアリングが必要です。', '**決定論的タスクに最適** : API、自動化、データパイプライン。クリエイティブライティングは避けてください。', '**検証が必要** : ダウンストリーム使用前にJSON出力を常に検証および検証してください。', '**モデル全体でスケール** : スキーマを一度定義します。テストし、相違点を文書化します。' ] }, whatIsStructured: { title: '構造化出力とは', content: [ '**構造化出力とは、モデルに固定スキーマ（リスト、テーブル、JSONなど）に従うよう要求することです。** 自由形式の段落の代わりに、フィールド、タイプ、許可された値を定義します。', '構造化出力はいくつかの形式をとることができます：' ], items: [ '固定数のアイテムを含むブレットリスト。', '特定の列を持つMarkdownテーブル。', '単純な属性のキーと値のペア。', '事前定義されたキーを持つ完全なJSONオブジェクトまたは配列。' ] }, structuredGoal: { content: [ '目標は常に同じです：あいまいな説明を予測可能な形に変換することです。' ] }, whatIsJSON: { title: 'JSONモードとは', content: [ '**JSONモードは、モデルが有効なJSONのみを返すよう指示または構成される厳密な構造化出力バリアントです。** JSONモードでは、モデルが出力するすべてが追加のクリーンアップなしでJSONとして解析可能である必要があります。', '典型的なJSONスキーマは次のようになります：' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ 'このスキーマをプロンプトに反映し、モデルにそれを入力するよう要求します。一部のプラットフォームはJSON のみの応答を強制する特別な設定またはAPIも提供します。' ] }, whyItMatters: { title: '構造化出力とJSONモードが重要な理由', content: [ '**構造化出力とJSONモードが重要な理由は、言語モデルを単なるチャットアシスタントではなく、より大きなシステムのコンポーネントに変換できるためです。** 出力が予測可能な場合、以下を実行できます：' ], items: [ 'データベース、CRM、分析ツールに結果を直接供給します。', 'モデル出力フィールド（優先度、ステータス、信頼度）に基づいてアクションをトリガーします。', 'カード、テーブル、ダッシュボードにモデル結果を表示するUIを構築します。' ] }, jsonVsFunctionCalling: { title: 'JSONモード対関数呼び出し対スキーマプロンプティング', content: [ '**LLMから構造化出力を取得するための3つのメソッドが存在します。それぞれ異なる強さと弱さを持っています。**' ], items: [ '**JSONモード** : モデルは有効なJSONのみを出力します。最適用途：データ抽出、分類、要約。', '**関数呼び出し** : モデルは呼び出す関数を選択し、JSONで引数を提供します。最適用途：API統合、ツール使用、エージェントワークフロー。', '**スキーマプロンプティング** : スキーマに従うようモデルに要求する明示的な指示と例。最適用途：柔軟性、オープンソースモデル、カスタムフォーマット。' ] }, example: { title: '例：自由テキスト対構造化JSON', content: [ '**同じタスクに対して自由形式のプロンプトと構造化JSONプロンプトを比較すると、違いが明確になります。** ここでは、顧客メールを分類および要約します。', '**[悪いプロンプト]**', '"この顧客メールを読んで、彼らが欲しいものを要約してください。"', '**[良いプロンプト - JSONモード]**', '"あなたはカスタマーサポートアシスタントです。"', '「良い」バージョンはスキーマ、有効な値、およびJSONのみの要件を定義します。' ] }, bestPractices: { title: '構造化出力とJSONモードのベストプラクティス', content: [ '**信頼性の高い構造化出力を取得するには、プロンプトで明示的、一貫性があり、厳密である必要があります。**' ], items: [ '予期するスキーマを正確に表示します。' , '列挙の許可値を含めます。', 'JSON（または構造）のみを返す必要があることを明確に宣言してください。', '短くて曖昧でないキー名を使用します。', 'タスクが複雑または機密の場合は、有効な出力の例を追加します。', 'ネストされた構造については、段階的に構築し、実際の入力でテストしてください。' ] }, modelComparison: { title: 'モデル比較：プロバイダー別のJSON準拠', content: [ '**異なるモデルは、ネイティブJSONモードサポートのレベルが異なります。** 2026年4月現在、主要プロバイダーがどのようにランク付けされているかを次に示します：' ], columns: [ 'モデル', 'ネイティブJSONモード', 'プロンプトのみ準拠', '備考' ], rows: [ { 'モデル': 'OpenAI GPT-4o', 'ネイティブJSONモード': 'はい（実施）', 'プロンプトのみ準拠': '不要', '備考': 'JSONモードの業界標準です。' }, { 'モデル': 'Anthropic Claude 3.5 Sonnet', 'ネイティブJSONモード': 'はい（実施）', 'プロンプトのみ準拠': '不要', '備考': 'JSON準拠が優れています。' }, { 'モデル': 'Google Gemini 2.0', 'ネイティブJSONモード': 'はい（実施）', 'プロンプトのみ準拠': '不要', '備考': 'ネイティブJSONサポート。' }, { 'モデル': 'Meta Llama 3.1（70B）', 'ネイティブJSONモード': '部分的', 'プロンプトのみ準拠': '強く推奨', '備考': 'オープンソース。' }, { 'モデル': 'Mistral Large', 'ネイティブJSONモード': '部分的', 'プロンプトのみ準拠': '推奨', '備考': '良好なJSONの動作。' }, { 'モデル': '古いGPT-3.5、Claude 2', 'ネイティブJSONモード': 'いいえ', 'プロンプトのみ準拠': '必須', '備考': '強いエンジニアリングが必要です。' }, { 'モデル': '小さいオープンソースモデル（<13B）', 'ネイティブJSONモード': 'いいえ', 'プロンプトのみ準拠': '例に必須', '備考': '詳細なスキーマが必要です。' } ] }, relatedReading: { title: '関連読み物', items: [ '[制約付きプロンプト](/prompt-engineering/constrained-prompting?lang=ja) — 特定の出力フォーマットを強制します。', '[SPECSフレームワーク](/prompt-engineering/specs-framework?lang=ja) — 仕様重視のプロンプト。', '[RAG説明](/prompt-engineering/rag-explained?lang=ja) — 構造化抽出とデータ取得を組み合わせます。', '[思考の連鎖](/prompt-engineering/chain-of-thought?lang=ja) — ステップバイステップで理由を述べます。', '[プロンプトテンプレート](/prompt-engineering/prompt-templates?lang=ja) — 再利用可能なテンプレート。', '[ゼロショット対フューショット](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) — 例がJSON準拠を改善するとき。' ] }, faq: { title: 'よくある質問', faqs: [ { q: '構造化出力とJSONモードの違いは何ですか？', a: '構造化出力はより広いカテゴリです。JSONモードはより厳密なバリアントです。' }, { q: 'すべてのLLMがJSONモードをサポートしていますか？', a: 'いいえ。OpenAI GPT-4o、Anthropic Claude 3.5+、Google Geminiがサポートしています。' }, { q: 'ネイティブJSONモードなしでJSON応答のみを強制するにはどうすればよいですか？', a: 'プロンプトエンジニアリング：「有効なJSONのみ」を宣言し、スキーマと例を提供します。' }, { q: 'モデルが無効なJSONを返す場合はどうなりますか？', a: 'JSONをサイドで検証します。失敗した場合は再試行するか、手動で戻ります。' }, { q: '複雑なドキュメントに構造化出力を使用できますか？', a: 'はい。複雑なタスクをステップに分割します。' }, { q: '欠落しているまたは曖昧なデータを処理するにはどうすればよいですか？', a: 'スキーマでフォールバック動作を定義します。' }, { q: 'JSONモードは規制遵守に影響を受けますか？', a: 'JSONモード自体は中立的です。しかし構造化出力はコンプライアンスに有益です。' }, { q: 'JSONモードプロンプトをテストするにはどうすればよいですか？', a: '多様な入力でテストします。本番前に95%以上の成功率を目指します。' }, { q: 'さまざまなモデル全体でスキーマを再利用できますか？', a: 'はい、注意深く。スキーマを定義してテストします。' }, { q: 'JSONモードのパフォーマンスコストは何ですか？', a: '最小限。ネイティブJSONモードはわずかな影響です。' } ] }, sources: { title: 'ソース', items: [ '[OpenAI JSONモードドキュメント](https://platform.openai.com/docs/guides/json-mode) — 公式ガイド。', '[Anthropicガイド](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — ドキュメント。', '[Google Gemini API](https://ai.google.dev/gemini-2/docs/structured-output) — ネイティブJSONサポート。', '[JSON Schemaスペック](https://json-schema.org/specification.html) — 標準仕様。' ] } } },
-    zh: { theme: '技术', title: 'LLM中的结构化输出：JSON模式、示例及使用时机', intro: '结构化输出和JSON模式将语言模型的输出转变为可靠的机器可读格式，可以无缝集成到数据库、API和自动化工作流中。学习如何设计强制有效JSON输出的提示词，比较JSON模式与函数调用与架构提示词，并确定哪种方法适合您的用例。', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10分钟阅读', seoTitle: 'LLM中的结构化输出和JSON模式：何时使用、示例和比较', metaDescription: '学习何时使用结构化输出、JSON模式或函数调用。按模型比较JSON合规性，查看真实示例，掌握API的架构设计。', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '结构化输出和JSON模式：从AI获取可用数据', description: '掌握提示词中的结构化输出和JSON模式。学习架构设计、强制有效JSON、比较模型合规性以及避免生产系统中的常见错误。', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['结构化输出', 'JSON模式', '提示词工程', '架构设计', '机器可读输出', 'JSON验证', '提示词模板'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: '如何使用结构化输出和JSON模式', step: [ { '@type': 'HowToStep', position: 1, name: '选择JSON模式', text: '对于数据提取和机器可读输出，请使用OpenAI GPT-4o、Anthropic Claude、Google Gemini及其他主要提供商提供的JSON模式。这可确保模型返回有效的JSON，而不是文本。' }, { '@type': 'HowToStep', position: 2, name: '定义架构', text: '显式定义JSON架构。包括字段名称、数据类型和约束。' }, { '@type': 'HowToStep', position: 3, name: '提供输出示例', text: '提供您想要的确切JSON结构的示例。示例比架构描述本身更强大。' }, { '@type': 'HowToStep', position: 4, name: '处理嵌套结构', text: '对于数组中的对象，明确说明层次结构。提供完整的JSON示例。' }, { '@type': 'HowToStep', position: 5, name: '验证JSON输出', text: '在下游使用前验证JSON输出。检查有效的JSON、正确的架构和预期的数据类型。' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: '结构化输出和JSON模式之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '结构化输出是要求模型以固定格式返回数据的更广泛类别。JSON模式是更严格的变体，强制有效的JSON输出。' } }, { '@type': 'Question', name: '所有LLM都支持JSON模式吗？', acceptedAnswer: { '@type': 'Answer', text: '否。OpenAI GPT-4o、Anthropic Claude 3.5+和Google Gemini支持原生JSON模式。较旧的模型和开源LLM可能需要基于提示词的应用。' } }, { '@type': 'Question', name: '在没有原生JSON模式的情况下如何强制仅JSON响应？', acceptedAnswer: { '@type': 'Answer', text: '使用提示词工程：明确声明"仅输出有效的JSON"，提供详细的架构和示例。' } }, { '@type': 'Question', name: '如果模型返回无效的JSON会发生什么？', acceptedAnswer: { '@type': 'Answer', text: '在您的一方验证JSON。如果失败，请用更清晰的提示词重试请求或回到手动提取。' } }, { '@type': 'Question', name: '我可以将结构化输出用于复杂的文档吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。将复杂任务分解成步骤：首先提取关键字段，然后验证，然后可选地转换为下游系统。' } }, { '@type': 'Question', name: '我如何处理结构化输出中缺失或模糊的数据？', acceptedAnswer: { '@type': 'Answer', text: '在架构中定义后备行为：使用空字符串、null值或特殊标记（如"未知"）。' } }, { '@type': 'Question', name: 'JSON模式是否受到监管合规性（GDPR、CCPA）的影响？', acceptedAnswer: { '@type': 'Answer', text: 'JSON模式本身是中立的。但是，结构化输出对合规性有益，因为它可以系统地跟踪提取、转换和记录的数据。' } }, { '@type': 'Question', name: '我如何测试JSON模式提示词？', acceptedAnswer: { '@type': 'Answer', text: '使用不同的输入进行测试：边界案例、模糊数据和真实示例。验证有效的JSON、正确的架构和预期的数据类型。' } }, { '@type': 'Question', name: '我可以在不同的模型中重复使用结构化输出架构吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，但要谨慎。定义一次架构，在模型中测试。您可能需要为较旧或较小的模型调整提示词。' } }, { '@type': 'Question', name: 'JSON模式的性能成本是什么？', acceptedAnswer: { '@type': 'Answer', text: '最少。原生JSON模式（OpenAI、Anthropic、Google）的性能影响可以忽略不计。' } } ] }, sections: { definition: { content: [ '**结构化输出是强制语言模型以预定义格式（如JSON）返回数据的一种方法。** 它不同于自由形式文本，在于它强制严格的字段名称、数据类型和架构，下游工具可以毫不费力地处理。' ] }, exampleBlock: { content: [ '以下是JSON格式的结构化输出的简单示例：' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**关键点：关于结构化输出您需要了解的内容：**' ], items: [ '**提高可靠性** : 结构化输出通过强制严格的架构来减少解析错误和手动数据清理。', '**启用自动化** : JSON模式基于提取的字段（优先级、类别、紧急性）触发条件逻辑。', '**API就绪** : 直接集成到数据库、CRM和业务系统，无需重新格式化。', '**取决于模型** : 原生JSON模式在GPT-4o、Claude、Gemini中可用。旧型号/开源模式需要提示词工程。', '**最适合确定性任务** : API、自动化、数据管道。避免创意写作。', '**需要验证** : 始终在下游使用前验证和检查JSON输出。', '**跨模型扩展** : 定义一次架构；测试和记录差异。' ] }, whatIsStructured: { title: '什么是结构化输出', content: [ '**结构化输出意味着要求模型遵循固定的架构，例如列表、表格或JSON。** 而不是自由形式的段落，您定义字段、类型和允许的值。', '结构化输出可以采用多种形式：' ], items: [ '具有固定项数的项目符号列表。', '具有特定列的Markdown表格。', '简单属性的键值对。', '具有预定义键的完整JSON对象或数组。' ] }, structuredGoal: { content: [ '目标始终是相同的：将模糊的描述转换为可预测的形式。' ] }, whatIsJSON: { title: '什么是JSON模式', content: [ '**JSON模式是结构化输出的更严格变体，其中模型被指示或配置为仅返回有效的JSON。** 在JSON模式中，模型输出的所有内容都应该可以解析为JSON而无需额外的清理。', '典型的JSON架构可能如下所示：' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ '您在提示词中反映该架构，然后要求模型填充它。某些平台也提供强制仅JSON响应的特殊设置或API。' ] }, whyItMatters: { title: '为什么结构化输出和JSON模式很重要', content: [ '**结构化输出和JSON模式很重要，因为它们使您能够将语言模型转变为更大系统的组件，而不仅仅是聊天助手。** 当输出是可预测的时，您可以：' ], items: [ '直接将结果提供给数据库、CRM或分析工具。', '基于模型输出字段（优先级、状态、信心）触发自动化。', '构建显示卡片、表格或仪表板中模型结果的用户界面。' ] }, jsonVsFunctionCalling: { title: 'JSON模式与函数调用与架构提示词', content: [ '**存在三种从LLM获取结构化输出的方法。每种都有不同的优缺点。**' ], items: [ '**JSON模式** : 模型仅输出有效的JSON。最佳用途：数据提取、分类、摘要。', '**函数调用** : 模型选择要调用的函数并以JSON提供参数。最佳用途：API集成、工具使用、代理工作流。', '**架构提示词** : 显式指令+要求模型遵循架构的示例。最佳用途：灵活性、开源模型、自定义格式。' ] }, example: { title: '示例：自由文本与结构化JSON', content: [ '**当您比较免费文本提示词和结构化JSON提示词完成相同任务时，差异变得明显。** 在这里，我们对客户电子邮件进行分类和汇总。', '**[错误的提示词]**', '"阅读此客户电子邮件并总结他们想要什么。"', '**[正确的提示词 - JSON模式]**', '"您是一名客户支持助理。"', '"正确"版本定义架构、有效值和仅JSON要求。' ] }, bestPractices: { title: '结构化输出和JSON模式的最佳做法', content: [ '**要获得可靠的结构化输出，您在提示词中需要明确、一致和严格。**' ], items: [ '显示您期望的确切架构。', '声明仅应返回JSON或结构。', '使用简短、明确的键名称。', '当任务复杂或敏感时添加有效输出的示例。', '对于嵌套结构，逐步构建并使用真实输入进行测试。' ] }, modelComparison: { title: '模型比较：按提供商的JSON合规性', content: [ '**不同的模型对原生JSON模式支持的级别不同。** 截至2026年4月，以下是主要提供商的排名：' ], columns: [ '模型', '原生JSON模式', '仅提示词合规', '备注' ], rows: [ { '模型': 'OpenAI GPT-4o', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': 'JSON模式的行业标准。' }, { '模型': 'Anthropic Claude 3.5 Sonnet', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': 'JSON合规性优秀。' }, { '模型': 'Google Gemini 2.0', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': '原生JSON支持。' }, { '模型': 'Meta Llama 3.1（70B）', '原生JSON模式': '部分', '仅提示词合规': '强烈推荐', '备注': '开源。' }, { '模型': 'Mistral Large', '原生JSON模式': '部分', '仅提示词合规': '推荐', '备注': 'JSON行为良好。' }, { '模型': '旧GPT-3.5、Claude 2', '原生JSON模式': '否', '仅提示词合规': '必需', '备注': '需要强大的工程。' }, { '模型': '小型开源模型（<13B）', '原生JSON模式': '否', '仅提示词合规': '示例需要', '备注': '需要详细的架构。' } ] }, relatedReading: { title: '相关阅读', items: [ '[约束提示词](/prompt-engineering/constrained-prompting?lang=zh) — 强制特定的输出格式。', '[SPECS框架](/prompt-engineering/specs-framework?lang=zh) — 规范专注的提示词。', '[RAG说明](/prompt-engineering/rag-explained?lang=zh) — 结合结构化提取和数据检索。', '[思维链](/prompt-engineering/chain-of-thought?lang=zh) — 逐步推理。', '[提示词模板](/prompt-engineering/prompt-templates?lang=zh) — 可重复使用的模板。', '[零次对少次](/prompt-engineering/zero-shot-vs-few-shot?lang=zh) — 何时示例改进JSON合规性。' ] }, faq: { title: '常见问题', faqs: [ { q: '结构化输出和JSON模式之间有什么区别？', a: '结构化输出是更广泛的类别。JSON模式是更严格的变体。' }, { q: '所有LLM都支持JSON模式吗？', a: '否。OpenAI GPT-4o、Anthropic Claude 3.5+和Google Gemini支持。' }, { q: '在没有原生JSON模式的情况下如何强制仅JSON响应？', a: '使用提示词工程：明确声明"仅输出有效JSON"。' }, { q: '如果模型返回无效JSON会发生什么？', a: '在您的一方验证。失败时重试或回到手动方法。' }, { q: '我可以将结构化输出用于复杂文档吗？', a: '是的。将复杂任务分解成步骤。' }, { q: '我如何处理缺失或模糊的数据？', a: '在架构中定义后备行为。' }, { q: 'JSON模式是否受监管合规性影响？', a: 'JSON本身是中立的。但结构化输出有益于合规性。' }, { q: '我如何测试JSON模式提示词？', a: '使用不同的输入进行测试。在部署前达到95%的成功率。' }, { q: '我可以跨不同模型重复使用架构吗？', a: '可以，但要谨慎。定义、测试和记录差异。' }, { q: 'JSON模式的性能成本是什么？', a: '最少。原生JSON模式影响可以忽略不计。' } ] }, sources: { title: '来源', items: [ '[OpenAI JSON模式文档](https://platform.openai.com/docs/guides/json-mode) — 官方指南。', '[Anthropic指南](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — 文档。', '[Google Gemini API](https://ai.google.dev/gemini-2/docs/structured-output) — 原生JSON支持。', '[JSON架构规范](https://json-schema.org/specification.html) — 标准规范。' ] } } },
+    fr: { theme: 'Techniques', title: 'Sortie structuree dans les LLM : mode JSON, exemples et utilisation', intro: 'La sortie structuree et le mode JSON transforment les resultats libres des modeles linguistiques en formats fiables et lisibles par machine qui s\'integrent parfaitement aux bases de donnees, aux API et aux workflows d\'automatisation. Apprenez a concevoir des prompts qui forcent une sortie JSON valide, comparez le mode JSON avec les appels de fonction et les prompts de schema, et decidez quelle methode convient a votre cas d\'usage.', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10 min de lecture', seoTitle: 'Sortie structuree et mode JSON dans les LLM : utilisation, exemples et comparaison', metaDescription: 'Apprenez quand utiliser la sortie structuree, le mode JSON ou les appels de fonction. Comparez la conformite JSON par modele, voyez des exemples reels et maitrisez la conception de schemas pour les API.', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Sortie structuree et mode JSON : obtenir des donnees utilisables de l\'IA', description: 'Maitrisez la sortie structuree et le mode JSON dans les prompts. Apprenez a concevoir des schemas, a imposer un JSON valide, a comparer la conformite des modeles et a eviter les erreurs courantes dans les systemes de production.', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['sortie structuree', 'mode JSON', 'ingenierie des prompts', 'conception de schemas', 'sortie lisible par machine', 'validation JSON', 'modeles de prompts'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'Comment utiliser la sortie structuree et le mode JSON', step: [ { '@type': 'HowToStep', position: 1, name: 'Choisir le mode JSON', text: 'Pour l\'extraction de donnees et les sorties lisibles par machine, utilisez le mode JSON disponible dans OpenAI GPT-4o, Anthropic Claude, Google Gemini et autres fournisseurs majeurs. Cela garantit que le modele renvoie un JSON valide, pas du texte.' }, { '@type': 'HowToStep', position: 2, name: 'Definir votre schema', text: 'Definissez explicitement votre schema JSON, y compris les noms de champs, les types de donnees et les contraintes.' }, { '@type': 'HowToStep', position: 3, name: 'Fournir un exemple de sortie', text: 'Fournissez un exemple de la structure JSON exacte que vous voulez. Les exemples sont plus puissants que les descriptions de schemas seules.' }, { '@type': 'HowToStep', position: 4, name: 'Gerer les structures imbriquees', text: 'Pour les objets dans les tableaux, soyez explicite sur la hierarchie. Fournissez un exemple JSON complet.' }, { '@type': 'HowToStep', position: 5, name: 'Valider la sortie JSON', text: 'Validez la sortie JSON avant la use en aval. Analysez et verifiez le JSON valide, le schema correct, et les types de donnees attendus.' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: 'Quelle est la difference entre la sortie structuree et le mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'La sortie structuree est la categorie plus large de demander aux modeles de renvoyer des donnees dans un format fixe. Le mode JSON est une variante plus stricte qui impose une sortie JSON valide.' } }, { '@type': 'Question', name: 'Tous les LLM supportent-ils le mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. OpenAI GPT-4o, Anthropic Claude 3.5+ et Google Gemini supportent le mode JSON natif. Les modeles plus anciens et les LLM open-source peuvent necessiter l\'application du mode JSON basee sur les prompts.' } }, { '@type': 'Question', name: 'Comment imposer des reponses JSON uniquement sans mode JSON natif ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez l\'ingenierie des prompts : declarez explicitement "sortie uniquement du JSON valide", fournissez un schema detaille et des exemples.' } }, { '@type': 'Question', name: 'Que se passe-t-il si le modele renvoie un JSON invalide ?', acceptedAnswer: { '@type': 'Answer', text: 'Validez le JSON de votre cote avec un analyseur. En cas d\'echec, reessayez la demande avec un prompt plus clair ou revenez a l\'extraction manuelle.' } }, { '@type': 'Question', name: 'Puis-je utiliser la sortie structuree pour des documents complexes ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Divisez les taches complexes en etapes : d\'abord extraire les champs cles, puis valider, puis optionnellement transformer dans les systemes en aval.' } }, { '@type': 'Question', name: 'Comment gerer les donnees manquantes ou ambigues dans les sorties structurees ?', acceptedAnswer: { '@type': 'Answer', text: 'Definissez le comportement de secours dans votre schema : utilisez des chaines vides, des valeurs null ou un marqueur special comme "inconnu".' } }, { '@type': 'Question', name: 'Le mode JSON est-il affecte par la conformite reglementaire (RGPD, CCPA) ?', acceptedAnswer: { '@type': 'Answer', text: 'Le mode JSON lui-meme est neutre. Cependant, la sortie structuree est benefique pour la conformite car elle vous permet de suivre systematiquement les donnees extraites.' } }, { '@type': 'Question', name: 'Comment tester les prompts en mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Testez avec des entrees diversifiees : cas limites, donnees ambigues et exemples du monde reel. Analysez la sortie et verifiez le JSON valide.' } }, { '@type': 'Question', name: 'Puis-je reutiliser les schemas de sortie structuree sur differents modeles ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, avec prudence. Definissez votre schema une fois et testez-le sur les modeles, vous devrez peut-etre ajuster les prompts pour les modeles plus anciens.' } }, { '@type': 'Question', name: 'Quel est le cout de performance du mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Minimal. Le mode JSON natif (OpenAI, Anthropic, Google) a un impact de performance negligeable.' } } ] }, sections: { definition: { content: [ '**La sortie structuree est une methode de forcer les modeles linguistiques a renvoyer les donnees dans un format predefini (par exemple JSON).** Elle differe du texte libre en imposant des noms de champs stricts, des types de donnees et des schemas que les outils en aval peuvent traiter sans nettoyage manuel.' ] }, exampleBlock: { content: [ 'Voici un exemple simple de sortie structuree au format JSON :' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**Points cles : ce que vous devez savoir sur la sortie structuree :**' ], items: [ '**Ameliore la fiabilite** : la sortie structuree reduit les erreurs d\'analyse en imposant des schemas stricts.', '**Active l\'automatisation** : le mode JSON declenche la logique conditionnelle basee sur les champs extraits.', '**Pret pour l\'API** : integration directe aux bases de donnees, CRM et systemes metier sans reformatage.', '**Dependant du modele** : le mode JSON natif est disponible dans GPT-4o, Claude, Gemini.', '**Meilleur pour les taches deterministes** : API, automatisation, pipelines de donnees.', '**Necessite la validation** : analysez et validez toujours la sortie JSON avant utilisation en aval.', '**Echelle entre les modeles** : definissez le schema une fois ; testez et documentez les differences.' ] }, whatIsStructured: { title: 'Qu\'est-ce que la sortie structuree', content: [ '**La sortie structuree signifie demander au modele de suivre un schema fixe.** Au lieu d\'un paragraphe libre, vous definissez les champs, les types et les valeurs autorisees.', 'La sortie structuree peut prendre plusieurs formes :' ], items: [ 'Listes a puces avec un nombre fixe d\'elements.', 'Tableaux Markdown avec colonnes specifiques.', 'Paires cle-valeur pour les attributs simples.', 'Objets ou tableaux JSON complets avec des cles predefinies.' ] }, structuredGoal: { content: [ 'L\'objectif est toujours le meme : transformer une description floue en une forme previsible.' ] }, whatIsJSON: { title: 'Qu\'est-ce que le mode JSON', content: [ '**Le mode JSON est une variante plus stricte de la sortie structuree ou le modele est invite a renvoyer uniquement du JSON valide.** En mode JSON, tout ce que le modele produit devrait etre analysable en JSON.', 'Un schema JSON typique pourrait ressembler a ceci :' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ 'Vous refletez ce schema dans votre prompt, puis demandez au modele de le remplir. Certaines plates-formes fournissent egalement des parametres speciaux ou des API.' ] }, whyItMatterns: { title: 'Pourquoi la sortie structuree et le mode JSON sont importants', content: [ '**La sortie structuree et le mode JSON sont importants parce qu\'ils vous permettent de transformer les modeles linguistiques en composants de systemes plus larges.** Quand la sortie est previsible, vous pouvez :' ], items: [ 'Alimenter les resultats directement dans les bases de donnees, CRM ou outils d\'analyse.', 'Declencheur des automations basees sur des champs comme "priorite", "statut" ou "confiance".', 'Creer des interfaces utilisateur qui affichent les resultats du modele.' ] }, jsonVsFunctionCalling: { title: 'Mode JSON vs Appels de fonction vs Prompts de schema', content: [ '**Trois methodes existent pour obtenir une sortie structuree des LLM.**' ], items: [ '**Mode JSON** : le modele ne produit que du JSON valide.', '**Appels de fonction** : le modele selectionne quelle fonction appeler et fournit des arguments en JSON.', '**Prompts de schema** : instructions explicites + exemples.' ] }, example: { title: 'Exemple : texte libre vs JSON structure', content: [ '**La difference devient claire quand vous comparez un prompt texte libre avec un prompt JSON structure.** Ici, nous classons et resumons un email client.', '**[Mauvais prompt]**', '"Lisez cet email client et resumez ce qu\'ils veulent."', '**[Bon prompt – Mode JSON]**', '"Vous etes un assistant de support client."', 'La version "bonne" definit le schema, les valeurs valides et l\'exigence JSON uniquement.' ] }, bestPractices: { title: 'Meilleures pratiques', content: [ '**Pour obtenir des sorties structurees fiables, vous devez etre explicite et strict dans vos prompts.**' ], items: [ 'Montrez le schema exact que vous attendez.', 'Declarez clairement que rien d\'autre que le JSON ne doit etre retourne.', 'Utilisez des noms de cles courts et sans ambiguite.', 'Ajoutez des exemples de sorties valides quand la tache est complexe.', 'Pour les structures imbriquees, construisez-les etape par etape.' ] }, modelComparison: { title: 'Comparaison des modeles : conformite JSON par fournisseur', content: [ '**Differents modeles ont differents niveaux de support du mode JSON natif.** En avril 2026, voici comment se classent les principaux fournisseurs :' ], columns: [ 'Modele', 'Mode JSON natif', 'Conformite prompt seul', 'Notes' ], rows: [ { 'Modele': 'OpenAI GPT-4o', 'Mode JSON natif': 'Oui (applique)', 'Conformite prompt seul': 'Non necessaire', 'Notes': 'Standard de l\'industrie.' }, { 'Modele': 'Anthropic Claude 3.5 Sonnet', 'Mode JSON natif': 'Oui (applique)', 'Conformite prompt seul': 'Non necessaire', 'Notes': 'Conformite JSON excellente.' }, { 'Modele': 'Google Gemini 2.0', 'Mode JSON natif': 'Oui (applique)', 'Conformite prompt seul': 'Non necessaire', 'Notes': 'Support JSON natif.' }, { 'Modele': 'Meta Llama 3.1 (70B)', 'Mode JSON natif': 'Partiel', 'Conformite prompt seul': 'Fortement recommande', 'Notes': 'Open-source.' }, { 'Modele': 'Mistral Large', 'Mode JSON natif': 'Partiel', 'Conformite prompt seul': 'Recommande', 'Notes': 'Bon comportement JSON.' }, { 'Modele': 'Anciens GPT-3.5, Claude 2', 'Mode JSON natif': 'Non', 'Conformite prompt seul': 'Requis', 'Notes': 'Necessite une ingenierie forte.' }, { 'Modele': 'Petits modeles open-source (<13B)', 'Mode JSON natif': 'Non', 'Conformite prompt seul': 'Requis avec exemples', 'Notes': 'Necessitent des schemas detailles.' } ] }, relatedReading: { title: 'Lectures connexes', items: [ '[Prompts contraints](/fr/prompt-engineering/constrained-prompting) — imposer des formats.', '[Framework SPECS](/fr/prompt-engineering/specs-framework) — prompts axes sur la specification.', '[RAG explique](/fr/prompt-engineering/rag-explained) — combinez l\'extraction avec la recuperation.', '[Chaine de pensee](/fr/prompt-engineering/chain-of-thought) — raisonnez etape par etape.', '[Modeles de prompts](/fr/prompt-engineering/prompt-templates) — modeles reutilisables.', '[Zero-Shot vs Few-Shot](/fr/prompt-engineering/zero-shot-vs-few-shot) — quand les exemples ameliorent.' ] }, faq: { title: 'Questions frequemment posees', faqs: [ { q: 'Quelle est la difference entre la sortie structuree et le mode JSON ?', a: 'La sortie structuree est la categorie plus large. Le mode JSON est une variante plus stricte.' }, { q: 'Tous les LLM supportent-ils le mode JSON ?', a: 'Non. OpenAI GPT-4o, Anthropic Claude 3.5+ et Google Gemini supportent le mode JSON natif.' }, { q: 'Comment imposer les reponses JSON uniquement ?', a: 'Utilisez l\'ingenierie des prompts : declarez explicitement "sortie uniquement du JSON valide".' }, { q: 'Que se passe-t-il si le modele renvoie un JSON invalide ?', a: 'Validez le JSON de votre cote. En cas d\'echec, reessayez ou revenez a l\'extraction manuelle.' }, { q: 'Puis-je utiliser la sortie structuree pour des documents complexes ?', a: 'Oui. Divisez les taches complexes en etapes.' }, { q: 'Comment gerer les donnees manquantes ?', a: 'Definissez le comportement de secours : utilisez des chaines vides, null ou un marqueur special.' }, { q: 'Le mode JSON est-il affecte par la conformite RGPD ?', a: 'Le mode JSON lui-meme est neutre. Mais la sortie structuree aide a la conformite.' }, { q: 'Comment tester les prompts en mode JSON ?', a: 'Testez avec des entrees diversifiees : cas limites, donnees ambigues et exemples reels.' }, { q: 'Puis-je reutiliser les schemas sur differents modeles ?', a: 'Oui, avec prudence. Testez-le sur les modeles et documentez les differences.' }, { q: 'Quel est le cout de performance du mode JSON ?', a: 'Minimal. Le mode JSON natif a un impact negligeable.' } ] }, sources: { title: 'Sources', items: [ '[Documentation mode JSON OpenAI](https://platform.openai.com/docs/guides/json-mode) — Guide officiel.', '[Guide Anthropic](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — Documentation.', '[API Google Gemini](https://ai.google.dev/gemini-2/docs/structured-output) — Support JSON natif.', '[Specification JSON Schema](https://json-schema.org/specification.html) — Standard de conception.' ] } } },
+    ja: { theme: 'テクニック', title: 'LLMの構造化出力：JSONモード、サンプル、使用タイミング', intro: '構造化出力とJSONモードは、言語モデルの出力を信頼性の高い機械可読フォーマットに変換し、データベース、API、自動化ワークフローにシームレスに統合できます。有効なJSONを強制するプロンプトの設計方法、JSONモード対関数呼び出し対スキーマプロンプティングの比較、およびユースケースに適した方法の選択方法を学びます。', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10分読む', seoTitle: 'LLMの構造化出力とJSONモード：使用時期、サンプル、比較', metaDescription: '構造化出力、JSONモード、関数呼び出しをいつ使用するかを学びます。モデル別のJSON準拠を比較し、実例を確認し、APIのスキーマ設計をマスターしてください。', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '構造化出力とJSONモード：AIから使用可能なデータを取得', description: 'プロンプトで構造化出力とJSONモードをマスターします。スキーマ設計、有効なJSONの強制、モデル準拠の比較、および本番システムでの一般的なエラーの回避方法を学びます。', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['構造化出力', 'JSONモード', 'プロンプトエンジニアリング', 'スキーマ設計', '機械可読出力', 'JSON検証', 'プロンプトテンプレート'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: '構造化出力とJSONモードの使用方法', step: [ { '@type': 'HowToStep', position: 1, name: 'JSONモードを選択', text: 'データ抽出と機械可読出力の場合、OpenAI GPT-4o、Anthropic Claude、Google Geminiおよびその他の主要プロバイダで利用可能なJSONモードを使用します。これにより、モデルが有効なJSONを返すことが保証されます。' }, { '@type': 'HowToStep', position: 2, name: 'スキーマを定義', text: 'JSONスキーマを明示的に定義します。フィールド名、データタイプ、および制約を含めます。' }, { '@type': 'HowToStep', position: 3, name: '出力例を提供', text: '必要なJSON構造の例を提供します。例はスキーマの説明だけより強力です。' }, { '@type': 'HowToStep', position: 4, name: 'ネストされた構造を処理', text: '配列内のオブジェクトの場合、階層に関して明示的にします。完全なJSON例を提供します。' }, { '@type': 'HowToStep', position: 5, name: 'JSON出力を検証', text: 'ダウンストリームシステムで使用する前にJSON出力を検証します。有効なJSON、正しいスキーマ、期待されるデータタイプを確認します。' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: '構造化出力とJSONモードの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '構造化出力はモデルに固定フォーマットでデータを返すよう要求する広いカテゴリです。JSONモードはより厳密なバリアントで、有効なJSON出力を強制します。' } }, { '@type': 'Question', name: 'すべてのLLMがJSONモードをサポートしていますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。OpenAI GPT-4o、Anthropic Claude 3.5+、Google Geminiがネイティブjsonモードをサポートします。古いモデルとオープンソースLLMはプロンプトベースの適用が必要です。' } }, { '@type': 'Question', name: 'ネイティブJSONモードなしでJSON応答のみを強制するにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトエンジニアリングを使用します：「有効なJSONのみを出力」を明示的に宣言し、詳細なスキーマと例を提供します。' } }, { '@type': 'Question', name: 'モデルが無効なJSONを返す場合はどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: 'JSONをサイドで検証します。失敗した場合、より明確なプロンプトでリクエストを再試行するか、手動抽出に戻ります。' } }, { '@type': 'Question', name: '複雑なドキュメントに構造化出力を使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。複雑なタスクをステップに分割します：最初に主要フィールドを抽出し、次に検証し、オプションでダウンストリームシステムに変換します。' } }, { '@type': 'Question', name: '構造化出力で欠落しているまたは曖昧なデータを処理するにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'スキーマでフォールバック動作を定義します：空の文字列、null値、または「不明」などの特別なマーカーを使用します。' } }, { '@type': 'Question', name: 'JSONモードは規制遵守（GDPR、CCPA）の影響を受けますか？', acceptedAnswer: { '@type': 'Answer', text: 'JSONモード自体は中立的です。ただし、構造化出力は、抽出、変換、記録されたデータを体系的に追跡できるため、コンプライアンスに有益です。' } }, { '@type': 'Question', name: 'JSONモードプロンプトをテストするにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: '多様な入力でテストします：エッジケース、曖昧なデータ、実世界の例。有効なJSON、正しいスキーマ、予想されるデータタイプを確認します。' } }, { '@type': 'Question', name: 'さまざまなモデル全体で構造化出力スキーマを再利用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、注意深く。スキーマを一度定義し、モデル全体でテストします。古いモデルや小さいモデルのプロンプト調整が必要な場合があります。' } }, { '@type': 'Question', name: 'JSONモードのパフォーマンスコストは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '最小限。ネイティブJSONモード（OpenAI、Anthropic、Google）はパフォーマンスへの影響がわずかです。' } } ] }, sections: { definition: { content: [ '**構造化出力は、言語モデルを強制して、定義済みフォーマット（JSONなど）でデータを返す方法です。** 自由形式のテキストとは異なり、ダウンストリームツールが手動クリーンアップなしで処理できる厳密なフィールド名、データタイプ、スキーマを強制します。' ] }, exampleBlock: { content: [ 'JSON形式での構造化出力の簡単な例を次に示します。' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**重要なポイント：構造化出力について知っておくべきことが：**' ], items: [ '**信頼性の向上** : 構造化出力は、厳密なスキーマを強制することで、パースエラーと手動データクリーンアップを削減します。', '**自動化の有効化** : JSONモードは、抽出されたフィールド（優先度、カテゴリ、緊急度）に基づいて条件付きロジックをトリガーします。', '**API対応** : 再フォーマットなしでデータベース、CRM、ビジネスシステムへの直接統合。', '**モデル依存** : ネイティブJSONモードはGPT-4o、Claude、Geminiで利用可能です。古いモデル/オープンソースモデルはプロンプトエンジニアリングが必要です。', '**決定論的タスクに最適** : API、自動化、データパイプライン。クリエイティブライティングは避けてください。', '**検証が必要** : ダウンストリーム使用前にJSON出力を常に検証および検証してください。', '**モデル全体でスケール** : スキーマを一度定義します。テストし、相違点を文書化します。' ] }, whatIsStructured: { title: '構造化出力とは', content: [ '**構造化出力とは、モデルに固定スキーマ（リスト、テーブル、JSONなど）に従うよう要求することです。** 自由形式の段落の代わりに、フィールド、タイプ、許可された値を定義します。', '構造化出力はいくつかの形式をとることができます：' ], items: [ '固定数のアイテムを含むブレットリスト。', '特定の列を持つMarkdownテーブル。', '単純な属性のキーと値のペア。', '事前定義されたキーを持つ完全なJSONオブジェクトまたは配列。' ] }, structuredGoal: { content: [ '目標は常に同じです：あいまいな説明を予測可能な形に変換することです。' ] }, whatIsJSON: { title: 'JSONモードとは', content: [ '**JSONモードは、モデルが有効なJSONのみを返すよう指示または構成される厳密な構造化出力バリアントです。** JSONモードでは、モデルが出力するすべてが追加のクリーンアップなしでJSONとして解析可能である必要があります。', '典型的なJSONスキーマは次のようになります：' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ 'このスキーマをプロンプトに反映し、モデルにそれを入力するよう要求します。一部のプラットフォームはJSON のみの応答を強制する特別な設定またはAPIも提供します。' ] }, whyItMatters: { title: '構造化出力とJSONモードが重要な理由', content: [ '**構造化出力とJSONモードが重要な理由は、言語モデルを単なるチャットアシスタントではなく、より大きなシステムのコンポーネントに変換できるためです。** 出力が予測可能な場合、以下を実行できます：' ], items: [ 'データベース、CRM、分析ツールに結果を直接供給します。', 'モデル出力フィールド（優先度、ステータス、信頼度）に基づいてアクションをトリガーします。', 'カード、テーブル、ダッシュボードにモデル結果を表示するUIを構築します。' ] }, jsonVsFunctionCalling: { title: 'JSONモード対関数呼び出し対スキーマプロンプティング', content: [ '**LLMから構造化出力を取得するための3つのメソッドが存在します。それぞれ異なる強さと弱さを持っています。**' ], items: [ '**JSONモード** : モデルは有効なJSONのみを出力します。最適用途：データ抽出、分類、要約。', '**関数呼び出し** : モデルは呼び出す関数を選択し、JSONで引数を提供します。最適用途：API統合、ツール使用、エージェントワークフロー。', '**スキーマプロンプティング** : スキーマに従うようモデルに要求する明示的な指示と例。最適用途：柔軟性、オープンソースモデル、カスタムフォーマット。' ] }, example: { title: '例：自由テキスト対構造化JSON', content: [ '**同じタスクに対して自由形式のプロンプトと構造化JSONプロンプトを比較すると、違いが明確になります。** ここでは、顧客メールを分類および要約します。', '**[悪いプロンプト]**', '"この顧客メールを読んで、彼らが欲しいものを要約してください。"', '**[良いプロンプト - JSONモード]**', '"あなたはカスタマーサポートアシスタントです。"', '「良い」バージョンはスキーマ、有効な値、およびJSONのみの要件を定義します。' ] }, bestPractices: { title: '構造化出力とJSONモードのベストプラクティス', content: [ '**信頼性の高い構造化出力を取得するには、プロンプトで明示的、一貫性があり、厳密である必要があります。**' ], items: [ '予期するスキーマを正確に表示します。' , '列挙の許可値を含めます。', 'JSON（または構造）のみを返す必要があることを明確に宣言してください。', '短くて曖昧でないキー名を使用します。', 'タスクが複雑または機密の場合は、有効な出力の例を追加します。', 'ネストされた構造については、段階的に構築し、実際の入力でテストしてください。' ] }, modelComparison: { title: 'モデル比較：プロバイダー別のJSON準拠', content: [ '**異なるモデルは、ネイティブJSONモードサポートのレベルが異なります。** 2026年4月現在、主要プロバイダーがどのようにランク付けされているかを次に示します：' ], columns: [ 'モデル', 'ネイティブJSONモード', 'プロンプトのみ準拠', '備考' ], rows: [ { 'モデル': 'OpenAI GPT-4o', 'ネイティブJSONモード': 'はい（実施）', 'プロンプトのみ準拠': '不要', '備考': 'JSONモードの業界標準です。' }, { 'モデル': 'Anthropic Claude 3.5 Sonnet', 'ネイティブJSONモード': 'はい（実施）', 'プロンプトのみ準拠': '不要', '備考': 'JSON準拠が優れています。' }, { 'モデル': 'Google Gemini 2.0', 'ネイティブJSONモード': 'はい（実施）', 'プロンプトのみ準拠': '不要', '備考': 'ネイティブJSONサポート。' }, { 'モデル': 'Meta Llama 3.1（70B）', 'ネイティブJSONモード': '部分的', 'プロンプトのみ準拠': '強く推奨', '備考': 'オープンソース。' }, { 'モデル': 'Mistral Large', 'ネイティブJSONモード': '部分的', 'プロンプトのみ準拠': '推奨', '備考': '良好なJSONの動作。' }, { 'モデル': '古いGPT-3.5、Claude 2', 'ネイティブJSONモード': 'いいえ', 'プロンプトのみ準拠': '必須', '備考': '強いエンジニアリングが必要です。' }, { 'モデル': '小さいオープンソースモデル（<13B）', 'ネイティブJSONモード': 'いいえ', 'プロンプトのみ準拠': '例に必須', '備考': '詳細なスキーマが必要です。' } ] }, relatedReading: { title: '関連読み物', items: [ '[制約付きプロンプト](/ja/prompt-engineering/constrained-prompting) — 特定の出力フォーマットを強制します。', '[SPECSフレームワーク](/ja/prompt-engineering/specs-framework) — 仕様重視のプロンプト。', '[RAG説明](/ja/prompt-engineering/rag-explained) — 構造化抽出とデータ取得を組み合わせます。', '[思考の連鎖](/ja/prompt-engineering/chain-of-thought) — ステップバイステップで理由を述べます。', '[プロンプトテンプレート](/ja/prompt-engineering/prompt-templates) — 再利用可能なテンプレート。', '[ゼロショット対フューショット](/ja/prompt-engineering/zero-shot-vs-few-shot) — 例がJSON準拠を改善するとき。' ] }, faq: { title: 'よくある質問', faqs: [ { q: '構造化出力とJSONモードの違いは何ですか？', a: '構造化出力はより広いカテゴリです。JSONモードはより厳密なバリアントです。' }, { q: 'すべてのLLMがJSONモードをサポートしていますか？', a: 'いいえ。OpenAI GPT-4o、Anthropic Claude 3.5+、Google Geminiがサポートしています。' }, { q: 'ネイティブJSONモードなしでJSON応答のみを強制するにはどうすればよいですか？', a: 'プロンプトエンジニアリング：「有効なJSONのみ」を宣言し、スキーマと例を提供します。' }, { q: 'モデルが無効なJSONを返す場合はどうなりますか？', a: 'JSONをサイドで検証します。失敗した場合は再試行するか、手動で戻ります。' }, { q: '複雑なドキュメントに構造化出力を使用できますか？', a: 'はい。複雑なタスクをステップに分割します。' }, { q: '欠落しているまたは曖昧なデータを処理するにはどうすればよいですか？', a: 'スキーマでフォールバック動作を定義します。' }, { q: 'JSONモードは規制遵守に影響を受けますか？', a: 'JSONモード自体は中立的です。しかし構造化出力はコンプライアンスに有益です。' }, { q: 'JSONモードプロンプトをテストするにはどうすればよいですか？', a: '多様な入力でテストします。本番前に95%以上の成功率を目指します。' }, { q: 'さまざまなモデル全体でスキーマを再利用できますか？', a: 'はい、注意深く。スキーマを定義してテストします。' }, { q: 'JSONモードのパフォーマンスコストは何ですか？', a: '最小限。ネイティブJSONモードはわずかな影響です。' } ] }, sources: { title: 'ソース', items: [ '[OpenAI JSONモードドキュメント](https://platform.openai.com/docs/guides/json-mode) — 公式ガイド。', '[Anthropicガイド](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — ドキュメント。', '[Google Gemini API](https://ai.google.dev/gemini-2/docs/structured-output) — ネイティブJSONサポート。', '[JSON Schemaスペック](https://json-schema.org/specification.html) — 標準仕様。' ] } } },
+    zh: { theme: '技术', title: 'LLM中的结构化输出：JSON模式、示例及使用时机', intro: '结构化输出和JSON模式将语言模型的输出转变为可靠的机器可读格式，可以无缝集成到数据库、API和自动化工作流中。学习如何设计强制有效JSON输出的提示词，比较JSON模式与函数调用与架构提示词，并确定哪种方法适合您的用例。', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10分钟阅读', seoTitle: 'LLM中的结构化输出和JSON模式：何时使用、示例和比较', metaDescription: '学习何时使用结构化输出、JSON模式或函数调用。按模型比较JSON合规性，查看真实示例，掌握API的架构设计。', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '结构化输出和JSON模式：从AI获取可用数据', description: '掌握提示词中的结构化输出和JSON模式。学习架构设计、强制有效JSON、比较模型合规性以及避免生产系统中的常见错误。', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['结构化输出', 'JSON模式', '提示词工程', '架构设计', '机器可读输出', 'JSON验证', '提示词模板'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: '如何使用结构化输出和JSON模式', step: [ { '@type': 'HowToStep', position: 1, name: '选择JSON模式', text: '对于数据提取和机器可读输出，请使用OpenAI GPT-4o、Anthropic Claude、Google Gemini及其他主要提供商提供的JSON模式。这可确保模型返回有效的JSON，而不是文本。' }, { '@type': 'HowToStep', position: 2, name: '定义架构', text: '显式定义JSON架构。包括字段名称、数据类型和约束。' }, { '@type': 'HowToStep', position: 3, name: '提供输出示例', text: '提供您想要的确切JSON结构的示例。示例比架构描述本身更强大。' }, { '@type': 'HowToStep', position: 4, name: '处理嵌套结构', text: '对于数组中的对象，明确说明层次结构。提供完整的JSON示例。' }, { '@type': 'HowToStep', position: 5, name: '验证JSON输出', text: '在下游使用前验证JSON输出。检查有效的JSON、正确的架构和预期的数据类型。' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: '结构化输出和JSON模式之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '结构化输出是要求模型以固定格式返回数据的更广泛类别。JSON模式是更严格的变体，强制有效的JSON输出。' } }, { '@type': 'Question', name: '所有LLM都支持JSON模式吗？', acceptedAnswer: { '@type': 'Answer', text: '否。OpenAI GPT-4o、Anthropic Claude 3.5+和Google Gemini支持原生JSON模式。较旧的模型和开源LLM可能需要基于提示词的应用。' } }, { '@type': 'Question', name: '在没有原生JSON模式的情况下如何强制仅JSON响应？', acceptedAnswer: { '@type': 'Answer', text: '使用提示词工程：明确声明"仅输出有效的JSON"，提供详细的架构和示例。' } }, { '@type': 'Question', name: '如果模型返回无效的JSON会发生什么？', acceptedAnswer: { '@type': 'Answer', text: '在您的一方验证JSON。如果失败，请用更清晰的提示词重试请求或回到手动提取。' } }, { '@type': 'Question', name: '我可以将结构化输出用于复杂的文档吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。将复杂任务分解成步骤：首先提取关键字段，然后验证，然后可选地转换为下游系统。' } }, { '@type': 'Question', name: '我如何处理结构化输出中缺失或模糊的数据？', acceptedAnswer: { '@type': 'Answer', text: '在架构中定义后备行为：使用空字符串、null值或特殊标记（如"未知"）。' } }, { '@type': 'Question', name: 'JSON模式是否受到监管合规性（GDPR、CCPA）的影响？', acceptedAnswer: { '@type': 'Answer', text: 'JSON模式本身是中立的。但是，结构化输出对合规性有益，因为它可以系统地跟踪提取、转换和记录的数据。' } }, { '@type': 'Question', name: '我如何测试JSON模式提示词？', acceptedAnswer: { '@type': 'Answer', text: '使用不同的输入进行测试：边界案例、模糊数据和真实示例。验证有效的JSON、正确的架构和预期的数据类型。' } }, { '@type': 'Question', name: '我可以在不同的模型中重复使用结构化输出架构吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，但要谨慎。定义一次架构，在模型中测试。您可能需要为较旧或较小的模型调整提示词。' } }, { '@type': 'Question', name: 'JSON模式的性能成本是什么？', acceptedAnswer: { '@type': 'Answer', text: '最少。原生JSON模式（OpenAI、Anthropic、Google）的性能影响可以忽略不计。' } } ] }, sections: { definition: { content: [ '**结构化输出是强制语言模型以预定义格式（如JSON）返回数据的一种方法。** 它不同于自由形式文本，在于它强制严格的字段名称、数据类型和架构，下游工具可以毫不费力地处理。' ] }, exampleBlock: { content: [ '以下是JSON格式的结构化输出的简单示例：' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**关键点：关于结构化输出您需要了解的内容：**' ], items: [ '**提高可靠性** : 结构化输出通过强制严格的架构来减少解析错误和手动数据清理。', '**启用自动化** : JSON模式基于提取的字段（优先级、类别、紧急性）触发条件逻辑。', '**API就绪** : 直接集成到数据库、CRM和业务系统，无需重新格式化。', '**取决于模型** : 原生JSON模式在GPT-4o、Claude、Gemini中可用。旧型号/开源模式需要提示词工程。', '**最适合确定性任务** : API、自动化、数据管道。避免创意写作。', '**需要验证** : 始终在下游使用前验证和检查JSON输出。', '**跨模型扩展** : 定义一次架构；测试和记录差异。' ] }, whatIsStructured: { title: '什么是结构化输出', content: [ '**结构化输出意味着要求模型遵循固定的架构，例如列表、表格或JSON。** 而不是自由形式的段落，您定义字段、类型和允许的值。', '结构化输出可以采用多种形式：' ], items: [ '具有固定项数的项目符号列表。', '具有特定列的Markdown表格。', '简单属性的键值对。', '具有预定义键的完整JSON对象或数组。' ] }, structuredGoal: { content: [ '目标始终是相同的：将模糊的描述转换为可预测的形式。' ] }, whatIsJSON: { title: '什么是JSON模式', content: [ '**JSON模式是结构化输出的更严格变体，其中模型被指示或配置为仅返回有效的JSON。** 在JSON模式中，模型输出的所有内容都应该可以解析为JSON而无需额外的清理。', '典型的JSON架构可能如下所示：' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ '您在提示词中反映该架构，然后要求模型填充它。某些平台也提供强制仅JSON响应的特殊设置或API。' ] }, whyItMatters: { title: '为什么结构化输出和JSON模式很重要', content: [ '**结构化输出和JSON模式很重要，因为它们使您能够将语言模型转变为更大系统的组件，而不仅仅是聊天助手。** 当输出是可预测的时，您可以：' ], items: [ '直接将结果提供给数据库、CRM或分析工具。', '基于模型输出字段（优先级、状态、信心）触发自动化。', '构建显示卡片、表格或仪表板中模型结果的用户界面。' ] }, jsonVsFunctionCalling: { title: 'JSON模式与函数调用与架构提示词', content: [ '**存在三种从LLM获取结构化输出的方法。每种都有不同的优缺点。**' ], items: [ '**JSON模式** : 模型仅输出有效的JSON。最佳用途：数据提取、分类、摘要。', '**函数调用** : 模型选择要调用的函数并以JSON提供参数。最佳用途：API集成、工具使用、代理工作流。', '**架构提示词** : 显式指令+要求模型遵循架构的示例。最佳用途：灵活性、开源模型、自定义格式。' ] }, example: { title: '示例：自由文本与结构化JSON', content: [ '**当您比较免费文本提示词和结构化JSON提示词完成相同任务时，差异变得明显。** 在这里，我们对客户电子邮件进行分类和汇总。', '**[错误的提示词]**', '"阅读此客户电子邮件并总结他们想要什么。"', '**[正确的提示词 - JSON模式]**', '"您是一名客户支持助理。"', '"正确"版本定义架构、有效值和仅JSON要求。' ] }, bestPractices: { title: '结构化输出和JSON模式的最佳做法', content: [ '**要获得可靠的结构化输出，您在提示词中需要明确、一致和严格。**' ], items: [ '显示您期望的确切架构。', '声明仅应返回JSON或结构。', '使用简短、明确的键名称。', '当任务复杂或敏感时添加有效输出的示例。', '对于嵌套结构，逐步构建并使用真实输入进行测试。' ] }, modelComparison: { title: '模型比较：按提供商的JSON合规性', content: [ '**不同的模型对原生JSON模式支持的级别不同。** 截至2026年4月，以下是主要提供商的排名：' ], columns: [ '模型', '原生JSON模式', '仅提示词合规', '备注' ], rows: [ { '模型': 'OpenAI GPT-4o', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': 'JSON模式的行业标准。' }, { '模型': 'Anthropic Claude 3.5 Sonnet', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': 'JSON合规性优秀。' }, { '模型': 'Google Gemini 2.0', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': '原生JSON支持。' }, { '模型': 'Meta Llama 3.1（70B）', '原生JSON模式': '部分', '仅提示词合规': '强烈推荐', '备注': '开源。' }, { '模型': 'Mistral Large', '原生JSON模式': '部分', '仅提示词合规': '推荐', '备注': 'JSON行为良好。' }, { '模型': '旧GPT-3.5、Claude 2', '原生JSON模式': '否', '仅提示词合规': '必需', '备注': '需要强大的工程。' }, { '模型': '小型开源模型（<13B）', '原生JSON模式': '否', '仅提示词合规': '示例需要', '备注': '需要详细的架构。' } ] }, relatedReading: { title: '相关阅读', items: [ '[约束提示词](/zh/prompt-engineering/constrained-prompting) — 强制特定的输出格式。', '[SPECS框架](/zh/prompt-engineering/specs-framework) — 规范专注的提示词。', '[RAG说明](/zh/prompt-engineering/rag-explained) — 结合结构化提取和数据检索。', '[思维链](/zh/prompt-engineering/chain-of-thought) — 逐步推理。', '[提示词模板](/zh/prompt-engineering/prompt-templates) — 可重复使用的模板。', '[零次对少次](/zh/prompt-engineering/zero-shot-vs-few-shot) — 何时示例改进JSON合规性。' ] }, faq: { title: '常见问题', faqs: [ { q: '结构化输出和JSON模式之间有什么区别？', a: '结构化输出是更广泛的类别。JSON模式是更严格的变体。' }, { q: '所有LLM都支持JSON模式吗？', a: '否。OpenAI GPT-4o、Anthropic Claude 3.5+和Google Gemini支持。' }, { q: '在没有原生JSON模式的情况下如何强制仅JSON响应？', a: '使用提示词工程：明确声明"仅输出有效JSON"。' }, { q: '如果模型返回无效JSON会发生什么？', a: '在您的一方验证。失败时重试或回到手动方法。' }, { q: '我可以将结构化输出用于复杂文档吗？', a: '是的。将复杂任务分解成步骤。' }, { q: '我如何处理缺失或模糊的数据？', a: '在架构中定义后备行为。' }, { q: 'JSON模式是否受监管合规性影响？', a: 'JSON本身是中立的。但结构化输出有益于合规性。' }, { q: '我如何测试JSON模式提示词？', a: '使用不同的输入进行测试。在部署前达到95%的成功率。' }, { q: '我可以跨不同模型重复使用架构吗？', a: '可以，但要谨慎。定义、测试和记录差异。' }, { q: 'JSON模式的性能成本是什么？', a: '最少。原生JSON模式影响可以忽略不计。' } ] }, sources: { title: '来源', items: [ '[OpenAI JSON模式文档](https://platform.openai.com/docs/guides/json-mode) — 官方指南。', '[Anthropic指南](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — 文档。', '[Google Gemini API](https://ai.google.dev/gemini-2/docs/structured-output) — 原生JSON支持。', '[JSON架构规范](https://json-schema.org/specification.html) — 标准规范。' ] } } },
   },
 
   'prompt-engineering-glossary': {
@@ -41762,7 +41762,7 @@ fr: {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=de',
+    url: 'https://www.promptquorum.com/de/prompt-engineering/prompt-engineering-glossary',
     inLanguage: 'de',
     headline: 'Prompt Engineering Glossar: 500 Essenzielle Begriffe für Entwickler & KI-Teams',
     datePublished: '2026-03-28',
@@ -41892,7 +41892,7 @@ fr: {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=fr',
+    url: 'https://www.promptquorum.com/fr/prompt-engineering/prompt-engineering-glossary',
     inLanguage: 'fr',
     headline: 'Glossaire de l\'ingénierie de prompt : 500 termes essentiels',
     datePublished: '2026-03-28',
@@ -42116,7 +42116,7 @@ fr: {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/prompt-engineering-glossary',
     inLanguage: 'ja',
     headline: 'プロンプトエンジニアリング用語集：500の必須用語',
     datePublished: '2026-03-28',
@@ -42393,7 +42393,7 @@ fr: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/prompt-engineering-glossary',
         inLanguage: 'zh',
         headline: '提示工程词汇表：500个必备术语',
         datePublished: '2026-03-28',

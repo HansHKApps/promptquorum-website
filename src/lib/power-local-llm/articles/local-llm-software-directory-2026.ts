@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Llamafile**', 'Link': '[github.com/Mozilla-Ocho/llamafile](https://github.com/Mozilla-Ocho/llamafile)', 'Beschreibung': 'Portable Ein-Datei-LLM-Ausführung von Mozilla', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', 'Beschreibung': 'Apple-Silicon-native Laufzeitumgebung von Apple Research', 'Lizenz': 'MIT' },
         ],
-        note: 'Vertiefender Vergleich: [llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=de)',
+        note: 'Vertiefender Vergleich: [llama.cpp vs Ollama vs vLLM](/de/local-llms/llamacpp-vs-ollama-vs-vllm)',
         affiliateLinks: [
           {
             url: 'https://www.runpod.io/console/signup',
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Beschreibung': 'Funktionsreiche Enterprise-Desktop- und Serveranwendung', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Beschreibung': 'Erlaubt einem lokalen LLM, Ihren Computer zu steuern und Code auszuführen', 'Lizenz': 'AGPL 3.0' },
         ],
-        note: 'Vertiefender Vergleich: [LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=de)',
+        note: 'Vertiefender Vergleich: [LM Studio vs Jan vs GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
           {
             url: 'https://msty.app/pricing',
@@ -597,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', 'Beschreibung': 'Browser-Sidebar-KI für Chrome und Firefox', 'Lizenz': 'MIT' },
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', 'Beschreibung': 'Plattformübergreifender Desktop- und Web-Client', 'Lizenz': 'GPLv3' },
         ],
-        note: 'Vertiefender Vergleich: [SillyTavern vs Agnai vs RisuAI](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=de)',
+        note: 'Vertiefender Vergleich: [SillyTavern vs Agnai vs RisuAI](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
       codingAssistants: {
         id: 'coding-assistants',
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Cursor (lokaler Modus)**', 'Link': '[cursor.com](https://cursor.com)', 'Beschreibung': 'KI-first Code-Editor mit Unterstützung lokaler Modelle', 'Lizenz': 'Kostenlos (proprietär)' },
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', 'Beschreibung': 'Kostenlose Copilot-Alternative für VS Code', 'Lizenz': 'MIT' },
         ],
-        note: 'Vertiefender Vergleich: [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=de)',
+        note: 'Vertiefender Vergleich: [Continue.dev vs Cline vs Aider](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local)',
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-systems',
         title: '5. RAG- & Dokumenten-Chat-Systeme',
         content:
-          '**[RAG (Retrieval-Augmented Generation)](/prompt-engineering/rag-explained?lang=de)-Systeme verbinden ein lokales LLM mit einem Embedding-Modell und einem Vektorspeicher, damit das Modell aus Ihren eigenen Dokumenten antworten kann.** Die Unterscheidung liegt zwischen schlüsselfertigen Apps (AnythingLLM, PrivateGPT, Quivr, Khoj), die „einfach funktionieren", und Framework-Bibliotheken (LlamaIndex, Haystack, txtai), auf denen Sie aufbauen. RAGFlow hat 2026 Marktanteile gewonnen, speziell für Dokumente, die zitiergenaue Extraktion erfordern.',
+          '**[RAG (Retrieval-Augmented Generation)](/de/prompt-engineering/rag-explained)-Systeme verbinden ein lokales LLM mit einem Embedding-Modell und einem Vektorspeicher, damit das Modell aus Ihren eigenen Dokumenten antworten kann.** Die Unterscheidung liegt zwischen schlüsselfertigen Apps (AnythingLLM, PrivateGPT, Quivr, Khoj), die „einfach funktionieren", und Framework-Bibliotheken (LlamaIndex, Haystack, txtai), auf denen Sie aufbauen. RAGFlow hat 2026 Marktanteile gewonnen, speziell für Dokumente, die zitiergenaue Extraktion erfordern.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
         rows: [
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Beschreibung': 'Einfachstes All-in-One-Personal-RAG mit Arbeitsbereichen', 'Lizenz': 'MIT' },
@@ -647,7 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**RAGFlow**', 'Link': '[ragflow.io](https://ragflow.io)', 'Beschreibung': 'Tiefes Dokumentenverständnis für RAG mit Zitat-Extraktion', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', 'Beschreibung': 'Eingebettete Vektor- und LLM-Datenbank in einer Bibliothek', 'Lizenz': 'Apache 2.0' },
         ],
-        note: 'Vertiefender Vergleich: [AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=de)',
+        note: 'Vertiefender Vergleich: [AnythingLLM vs PrivateGPT vs Open WebUI](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)',
         image: '/images/local-llm-software-directory-2026-rag-systems-de.svg',
         imageCaption: 'Lokales RAG: Fertiglösungen (AnythingLLM, PrivateGPT, Quivr, RAGFlow, Khoj) für codefreien Dokumenten-Chat vs. Framework-Bibliotheken (LlamaIndex, Haystack, Dify, Flowise, txtai) für eigene Pipelines.',
       },
@@ -667,7 +667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Letta** (ehemals MemGPT)', 'Link': '[letta.com](https://letta.com)', 'Beschreibung': 'Agenten mit Langzeitgedächtnis', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**Pydantic AI**', 'Link': '[ai.pydantic.dev](https://ai.pydantic.dev)', 'Beschreibung': 'Typsicheres Agenten-Framework auf Basis von Pydantic', 'Lizenz': 'MIT' },
         ],
-        note: 'Vertiefender Artikel: [Lokale KI-Agenten mit MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de)',
+        note: 'Vertiefender Artikel: [Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
       voiceMultimodal: {
         id: 'voice-multimodal',
@@ -686,7 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Beschreibung': 'Lokales Vision-und-Sprache-Modell', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**Ollama Vision-Modelle**', 'Link': '[ollama.com](https://ollama.com)', 'Beschreibung': 'Lokales Vision via Ollama (Llama 3.2 Vision, Llava u. a.)', 'Lizenz': 'Verschiedene' },
         ],
-        note: 'Vertiefender Artikel: [Lokalen Sprachassistenten auf dem Smartphone aufbauen](/power-local-llm/voice-assistant-local-mobile-offline?lang=de)',
+        note: 'Vertiefender Artikel: [Lokalen Sprachassistenten auf dem Smartphone aufbauen](/de/power-local-llm/voice-assistant-local-mobile-offline)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', 'Beschreibung': 'Open-Source Android-App für lokale KI', 'Lizenz': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Beschreibung': 'Fernzugriff auf Ihren lokalen AnythingLLM-Arbeitsbereich', 'Lizenz': 'MIT' },
         ],
-        note: 'Vertiefender Artikel: [Die besten lokalen LLM-Apps für iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026?lang=de)',
+        note: 'Vertiefender Artikel: [Die besten lokalen LLM-Apps für iPhone in 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', 'Beschreibung': 'Rollenspiel-Frontend mit Charakter-Karten', 'Lizenz': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', 'Beschreibung': 'Mobilfreundliches Rollenspiel-Frontend', 'Lizenz': 'GPL 3.0' },
         ],
-        note: 'Vertiefender Artikel: [Lokale LLMs mit Obsidian in 2026](/power-local-llm/local-llm-with-obsidian-2026?lang=de)',
+        note: 'Vertiefender Artikel: [Lokale LLMs mit Obsidian in 2026](/de/power-local-llm/local-llm-with-obsidian-2026)',
       },
       stacks: {
         id: 'stacks',
@@ -825,15 +825,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=de) — Laufzeitumgebungen im direkten Vergleich.',
-          '[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=de) — Desktop-GUI-Vergleich.',
-          '[AnythingLLM vs PrivateGPT vs Open WebUI für RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=de) — RAG-Schicht im Vergleich.',
-          '[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=de) — Coding-Integrationen im Vergleich.',
-          '[Lokale KI-Agenten mit MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de) — Protokoll, das die Laufzeitumgebungen oben zu Agenten macht.',
-          '[Die besten lokalen LLM-Apps für iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026?lang=de) — Mobile-Clients im Detail.',
-          '[Power Local LLM Hub](/power-local-llm?lang=de) — Vollständige Leitfadenbibliothek für alle 9 Schichten.',
-          '[Beste lokale LLM IDE-Plugins (2026)](/power-local-llm/best-local-llm-ide-plugins-2026?lang=de) — Continue.dev, Cline, Aider: Einrichtung und lokale Modellkonfiguration.',
-          '[Beste RAG-Tools für Geschäftsdokumente (2026)](/power-local-llm/best-rag-tools-for-business-documents-2026?lang=de) — AnythingLLM, PrivateGPT, LlamaIndex: Unternehmens-Dokument-Q&A-Stacks.',
+          '[llama.cpp vs Ollama vs vLLM](/de/local-llms/llamacpp-vs-ollama-vs-vllm) — Laufzeitumgebungen im direkten Vergleich.',
+          '[LM Studio vs Jan vs GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — Desktop-GUI-Vergleich.',
+          '[AnythingLLM vs PrivateGPT vs Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG-Schicht im Vergleich.',
+          '[Continue.dev vs Cline vs Aider](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — Coding-Integrationen im Vergleich.',
+          '[Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp-2026) — Protokoll, das die Laufzeitumgebungen oben zu Agenten macht.',
+          '[Die besten lokalen LLM-Apps für iPhone in 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — Mobile-Clients im Detail.',
+          '[Power Local LLM Hub](/de/power-local-llm) — Vollständige Leitfadenbibliothek für alle 9 Schichten.',
+          '[Beste lokale LLM IDE-Plugins (2026)](/de/power-local-llm/best-local-llm-ide-plugins-2026) — Continue.dev, Cline, Aider: Einrichtung und lokale Modellkonfiguration.',
+          '[Beste RAG-Tools für Geschäftsdokumente (2026)](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — AnythingLLM, PrivateGPT, LlamaIndex: Unternehmens-Dokument-Q&A-Stacks.',
         ],
       },
     },
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Llamafile**', 'Link': '[github.com/Mozilla-Ocho/llamafile](https://github.com/Mozilla-Ocho/llamafile)', 'Description': 'Exécution LLM portable en fichier unique par Mozilla', 'Licence': 'Apache 2.0' },
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', 'Description': 'Runtime natif Apple Silicon par Apple Research', 'Licence': 'MIT' },
         ],
-        note: 'Comparatif approfondi : [llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=fr)',
+        note: 'Comparatif approfondi : [llama.cpp vs Ollama vs vLLM](/fr/local-llms/llamacpp-vs-ollama-vs-vllm)',
         affiliateLinks: [
           {
             url: 'https://www.runpod.io/console/signup',
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Description': 'Application bureau et serveur riche en fonctionnalités enterprise', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Permet à un LLM local de contrôler votre ordinateur et d\'exécuter du code', 'Licence': 'AGPL 3.0' },
         ],
-        note: 'Comparatif approfondi : [LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=fr)',
+        note: 'Comparatif approfondi : [LM Studio vs Jan vs GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
           {
             url: 'https://msty.app/pricing',
@@ -1017,7 +1017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', 'Description': 'IA en barre latérale navigateur pour Chrome et Firefox', 'Licence': 'MIT' },
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', 'Description': 'Client bureau et web multiplateforme', 'Licence': 'GPLv3' },
         ],
-        note: 'Comparatif approfondi : [SillyTavern vs Agnai vs RisuAI](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=fr)',
+        note: 'Comparatif approfondi : [SillyTavern vs Agnai vs RisuAI](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
       codingAssistants: {
         id: 'coding-assistants',
@@ -1035,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Cursor (mode local)**', 'Link': '[cursor.com](https://cursor.com)', 'Description': 'Éditeur de code centré IA avec support de modèles locaux', 'Licence': 'Gratuit (propriétaire)' },
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', 'Description': 'Alternative Copilot gratuite pour VS Code', 'Licence': 'MIT' },
         ],
-        note: 'Comparatif approfondi : [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr)',
+        note: 'Comparatif approfondi : [Continue.dev vs Cline vs Aider](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local)',
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
@@ -1052,7 +1052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-systems',
         title: '5. Systèmes RAG & chat sur documents',
         content:
-          '**Les systèmes [RAG (Retrieval-Augmented Generation)](/prompt-engineering/rag-explained?lang=fr) combinent un LLM local avec un modèle d\'embedding et un store vectoriel pour que le modèle puisse répondre à partir de vos propres documents.** La distinction est entre les applications clés en main (AnythingLLM, PrivateGPT, Quivr, Khoj) et les bibliothèques de framework (LlamaIndex, Haystack, txtai) sur lesquelles vous construisez. RAGFlow a gagné des parts de marché en 2026 pour les documents nécessitant une extraction de citations précise.',
+          '**Les systèmes [RAG (Retrieval-Augmented Generation)](/fr/prompt-engineering/rag-explained) combinent un LLM local avec un modèle d\'embedding et un store vectoriel pour que le modèle puisse répondre à partir de vos propres documents.** La distinction est entre les applications clés en main (AnythingLLM, PrivateGPT, Quivr, Khoj) et les bibliothèques de framework (LlamaIndex, Haystack, txtai) sur lesquelles vous construisez. RAGFlow a gagné des parts de marché en 2026 pour les documents nécessitant une extraction de citations précise.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
         rows: [
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'RAG personnel tout-en-un le plus simple, avec espaces de travail', 'Licence': 'MIT' },
@@ -1067,7 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**RAGFlow**', 'Link': '[ragflow.io](https://ragflow.io)', 'Description': 'Compréhension approfondie des documents pour le RAG avec extraction de citations', 'Licence': 'Apache 2.0' },
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', 'Description': 'Base de données vectorielle et LLM intégrée en une seule bibliothèque', 'Licence': 'Apache 2.0' },
         ],
-        note: 'Comparatif approfondi : [AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=fr)',
+        note: 'Comparatif approfondi : [AnythingLLM vs PrivateGPT vs Open WebUI](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)',
         image: '/images/local-llm-software-directory-2026-rag-systems-fr.svg',
         imageCaption: 'RAG local : applications clés en main (AnythingLLM, PrivateGPT, Quivr, RAGFlow, Khoj) pour le chat documentaire sans code vs bibliothèques framework (LlamaIndex, Haystack, Dify, Flowise, txtai) pour des pipelines personnalisés.',
       },
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Letta** (ex-MemGPT)', 'Link': '[letta.com](https://letta.com)', 'Description': 'Agents avec mémoire à long terme', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Pydantic AI**', 'Link': '[ai.pydantic.dev](https://ai.pydantic.dev)', 'Description': 'Framework d\'agents typé construit sur Pydantic', 'Licence': 'MIT' },
         ],
-        note: 'Article approfondi : [Agents IA locaux avec MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr)',
+        note: 'Article approfondi : [Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
       voiceMultimodal: {
         id: 'voice-multimodal',
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Description': 'Modèle local vision + langage', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Modèles vision Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Description': 'Vision locale via Ollama (Llama 3.2 Vision, Llava, etc.)', 'Licence': 'Divers' },
         ],
-        note: 'Article approfondi : [Construire un assistant vocal local sur mobile](/power-local-llm/voice-assistant-local-mobile-offline?lang=fr)',
+        note: 'Article approfondi : [Construire un assistant vocal local sur mobile](/fr/power-local-llm/voice-assistant-local-mobile-offline)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', 'Description': 'IA locale Android open source', 'Licence': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'Accès distant à votre espace de travail AnythingLLM local', 'Licence': 'MIT' },
         ],
-        note: 'Article approfondi : [Meilleures applications LLM locales pour iPhone en 2026](/power-local-llm/best-local-llm-apps-iphone-2026?lang=fr)',
+        note: 'Article approfondi : [Meilleures applications LLM locales pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', 'Description': 'Frontend de jeu de rôle avec cartes de personnages', 'Licence': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', 'Description': 'Frontend de jeu de rôle adapté au mobile', 'Licence': 'GPL 3.0' },
         ],
-        note: 'Article approfondi : [LLM local avec Obsidian en 2026](/power-local-llm/local-llm-with-obsidian-2026?lang=fr)',
+        note: 'Article approfondi : [LLM local avec Obsidian en 2026](/fr/power-local-llm/local-llm-with-obsidian-2026)',
       },
       stacks: {
         id: 'stacks',
@@ -1237,15 +1237,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=fr) — comparatif de la couche runtime.',
-          '[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=fr) — comparatif des applications bureau.',
-          '[AnythingLLM vs PrivateGPT vs Open WebUI pour le RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=fr) — comparatif de la couche RAG.',
-          '[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr) — comparatif des assistants de codage.',
-          '[Agents IA locaux avec MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr) — le protocole qui transforme les runtimes en agents.',
-          '[Meilleures applications LLM locales pour iPhone en 2026](/power-local-llm/best-local-llm-apps-iphone-2026?lang=fr) — clients mobiles en détail.',
-          '[Hub Power Local LLM](/power-local-llm?lang=fr) — bibliothèque complète de guides pour les 9 couches.',
-          '[Meilleurs plugins IDE LLM local (2026)](/power-local-llm/best-local-llm-ide-plugins-2026?lang=fr) — Continue.dev, Cline, Aider : configuration et modèle local.',
-          '[Meilleurs outils RAG pour documents professionnels (2026)](/power-local-llm/best-rag-tools-for-business-documents-2026?lang=fr) — AnythingLLM, PrivateGPT, LlamaIndex : stacks de Q&R documentaire en entreprise.',
+          '[llama.cpp vs Ollama vs vLLM](/fr/local-llms/llamacpp-vs-ollama-vs-vllm) — comparatif de la couche runtime.',
+          '[LM Studio vs Jan vs GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparatif des applications bureau.',
+          '[AnythingLLM vs PrivateGPT vs Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparatif de la couche RAG.',
+          '[Continue.dev vs Cline vs Aider](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparatif des assistants de codage.',
+          '[Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — le protocole qui transforme les runtimes en agents.',
+          '[Meilleures applications LLM locales pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — clients mobiles en détail.',
+          '[Hub Power Local LLM](/fr/power-local-llm) — bibliothèque complète de guides pour les 9 couches.',
+          '[Meilleurs plugins IDE LLM local (2026)](/fr/power-local-llm/best-local-llm-ide-plugins-2026) — Continue.dev, Cline, Aider : configuration et modèle local.',
+          '[Meilleurs outils RAG pour documents professionnels (2026)](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) — AnythingLLM, PrivateGPT, LlamaIndex : stacks de Q&R documentaire en entreprise.',
         ],
       },
     },
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Llamafile**', 'Link': '[github.com/Mozilla-Ocho/llamafile](https://github.com/Mozilla-Ocho/llamafile)', '概要': 'Mozilla製の単一ファイルポータブルLLM実行', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', '概要': 'Apple Research製のApple Siliconネイティブランタイム', 'ライセンス': 'MIT' },
         ],
-        note: '詳細比較：[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=ja)',
+        note: '詳細比較：[llama.cpp vs Ollama vs vLLM](/ja/local-llms/llamacpp-vs-ollama-vs-vllm)',
         affiliateLinks: [
           {
             url: 'https://www.runpod.io/console/signup',
@@ -1394,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '概要': 'エンタープライズ機能が充実したデスクトップ・サーバーアプリ', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '概要': 'ローカルLLMがコンピュータを操作しコードを実行できる', 'ライセンス': 'AGPL 3.0' },
         ],
-        note: '詳細比較：[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=ja)',
+        note: '詳細比較：[LM Studio vs Jan vs GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
           {
             url: 'https://msty.app/pricing',
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', '概要': 'ChromeとFirefox向けブラウザサイドバーAI', 'ライセンス': 'MIT' },
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', '概要': 'クロスプラットフォームのデスクトップ・Webクライアント', 'ライセンス': 'GPLv3' },
         ],
-        note: '詳細比較：[SillyTavern vs Agnai vs RisuAI](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=ja)',
+        note: '詳細比較：[SillyTavern vs Agnai vs RisuAI](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
       codingAssistants: {
         id: 'coding-assistants',
@@ -1447,7 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Cursor（ローカルモード）**', 'Link': '[cursor.com](https://cursor.com)', '概要': 'ローカルモデル対応のAIファーストコードエディター', 'ライセンス': '無料（プロプライエタリ）' },
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', '概要': 'VS Code向け無料Copilot代替', 'ライセンス': 'MIT' },
         ],
-        note: '詳細比較：[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=ja)',
+        note: '詳細比較：[Continue.dev vs Cline vs Aider](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local)',
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
@@ -1464,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-systems',
         title: '5. RAG & ドキュメントチャットシステム',
         content:
-          '**[RAG（Retrieval-Augmented Generation）](/prompt-engineering/rag-explained?lang=ja)システムはローカルLLMをembeddingモデルとベクターストアと組み合わせ、自分のドキュメントから回答できるようにします。** ターンキーアプリ（AnythingLLM、PrivateGPT、Quivr、Khoj）とフレームワークライブラリ（LlamaIndex、Haystack、txtai）に分かれます。RAGFlowは2026年に引用精度の高いドキュメント処理で存在感を高めています。',
+          '**[RAG（Retrieval-Augmented Generation）](/ja/prompt-engineering/rag-explained)システムはローカルLLMをembeddingモデルとベクターストアと組み合わせ、自分のドキュメントから回答できるようにします。** ターンキーアプリ（AnythingLLM、PrivateGPT、Quivr、Khoj）とフレームワークライブラリ（LlamaIndex、Haystack、txtai）に分かれます。RAGFlowは2026年に引用精度の高いドキュメント処理で存在感を高めています。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
         rows: [
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', '概要': 'ワークスペース付きの最も簡単なオールインワン個人RAG', 'ライセンス': 'MIT' },
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**RAGFlow**', 'Link': '[ragflow.io](https://ragflow.io)', '概要': '引用抽出付きの深いドキュメント理解RAG', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', '概要': '1ライブラリに組み込まれたベクターDB + LLMデータベース', 'ライセンス': 'Apache 2.0' },
         ],
-        note: '詳細比較：[AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=ja)',
+        note: '詳細比較：[AnythingLLM vs PrivateGPT vs Open WebUI](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)',
         image: '/images/local-llm-software-directory-2026-rag-systems-ja.svg',
         imageCaption: 'ローカルRAGの二択：すぐ使えるアプリ（AnythingLLM、PrivateGPT、Quivr、RAGFlow、Khoj）のノーコード文書チャット vs フレームワーク（LlamaIndex、Haystack、Dify、Flowise、txtai）でのカスタムパイプライン構築。',
       },
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Letta**（旧MemGPT）', 'Link': '[letta.com](https://letta.com)', '概要': '長期記憶エージェント', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Pydantic AI**', 'Link': '[ai.pydantic.dev](https://ai.pydantic.dev)', '概要': 'Pydantic上に構築された型安全エージェントフレームワーク', 'ライセンス': 'MIT' },
         ],
-        note: '詳細記事：[MCPを使ったローカルAIエージェント](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja)',
+        note: '詳細記事：[MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
       voiceMultimodal: {
         id: 'voice-multimodal',
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', '概要': 'ローカルビジョン + 言語モデル', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Ollamaビジョンモデル**', 'Link': '[ollama.com](https://ollama.com)', '概要': 'Ollamaによるローカルビジョン（Llama 3.2 Vision、Llavaなど）', 'ライセンス': '各種' },
         ],
-        note: '詳細記事：[スマートフォンでローカル音声アシスタントを構築する](/power-local-llm/voice-assistant-local-mobile-offline?lang=ja)',
+        note: '詳細記事：[スマートフォンでローカル音声アシスタントを構築する](/ja/power-local-llm/voice-assistant-local-mobile-offline)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -1538,7 +1538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', '概要': 'オープンソースAndroidローカルAI', 'ライセンス': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', '概要': 'ローカルAnythingLLMワークスペースへのリモートアクセス', 'ライセンス': 'MIT' },
         ],
-        note: '詳細記事：[2026年のiPhone向けベストローカルLLMアプリ](/power-local-llm/best-local-llm-apps-iphone-2026?lang=ja)',
+        note: '詳細記事：[2026年のiPhone向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -1559,7 +1559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', '概要': 'キャラクターカード付きロールプレイフロントエンド', 'ライセンス': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', '概要': 'モバイル対応ロールプレイフロントエンド', 'ライセンス': 'GPL 3.0' },
         ],
-        note: '詳細記事：[2026年のObsidianとローカルLLM](/power-local-llm/local-llm-with-obsidian-2026?lang=ja)',
+        note: '詳細記事：[2026年のObsidianとローカルLLM](/ja/power-local-llm/local-llm-with-obsidian-2026)',
       },
       stacks: {
         id: 'stacks',
@@ -1649,15 +1649,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
-          '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=ja) — ランタイム層の直接比較。',
-          '[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=ja) — デスクトップGUIの比較。',
-          '[AnythingLLM vs PrivateGPT vs Open WebUI（RAG比較）](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=ja) — RAG層の比較。',
-          '[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=ja) — コーディングハーネスの比較。',
-          '[MCPを使ったローカルAIエージェント](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja) — 上記ランタイムをエージェントに変えるプロトコル。',
-          '[2026年のiPhone向けベストローカルLLMアプリ](/power-local-llm/best-local-llm-apps-iphone-2026?lang=ja) — モバイルクライアントの詳細。',
-          '[Power Local LLM Hub](/power-local-llm?lang=ja) — 9層すべての完全ガイドライブラリ。',
-          '[ベストローカルLLM IDEプラグイン（2026）](/power-local-llm/best-local-llm-ide-plugins-2026?lang=ja) — Continue.dev、Cline、Aider：ローカルモデルのセットアップと設定。',
-          '[ビジネス文書向けベストRAGツール（2026）](/power-local-llm/best-rag-tools-for-business-documents-2026?lang=ja) — AnythingLLM、PrivateGPT、LlamaIndex：エンタープライズ文書Q&Aスタック。',
+          '[llama.cpp vs Ollama vs vLLM](/ja/local-llms/llamacpp-vs-ollama-vs-vllm) — ランタイム層の直接比較。',
+          '[LM Studio vs Jan vs GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — デスクトップGUIの比較。',
+          '[AnythingLLM vs PrivateGPT vs Open WebUI（RAG比較）](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG層の比較。',
+          '[Continue.dev vs Cline vs Aider](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local) — コーディングハーネスの比較。',
+          '[MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — 上記ランタイムをエージェントに変えるプロトコル。',
+          '[2026年のiPhone向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — モバイルクライアントの詳細。',
+          '[Power Local LLM Hub](/ja/power-local-llm) — 9層すべての完全ガイドライブラリ。',
+          '[ベストローカルLLM IDEプラグイン（2026）](/ja/power-local-llm/best-local-llm-ide-plugins-2026) — Continue.dev、Cline、Aider：ローカルモデルのセットアップと設定。',
+          '[ビジネス文書向けベストRAGツール（2026）](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) — AnythingLLM、PrivateGPT、LlamaIndex：エンタープライズ文書Q&Aスタック。',
         ],
       },
     },
@@ -1761,7 +1761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Llamafile**', 'Link': '[github.com/Mozilla-Ocho/llamafile](https://github.com/Mozilla-Ocho/llamafile)', '描述': 'Mozilla出品的单文件可移植LLM运行方案', '许可证': 'Apache 2.0' },
           { 'Tool': '**MLX-LM**', 'Link': '[github.com/ml-explore/mlx-examples](https://github.com/ml-explore/mlx-examples)', '描述': 'Apple研究院出品的Apple Silicon原生运行时', '许可证': 'MIT' },
         ],
-        note: '深度指南：[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=zh)',
+        note: '深度指南：[llama.cpp vs Ollama vs vLLM](/zh/local-llms/llamacpp-vs-ollama-vs-vllm)',
         affiliateLinks: [
           {
             url: 'https://www.runpod.io/console/signup',
@@ -1806,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '描述': '企业功能丰富的桌面与服务器方案', '许可证': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '描述': '允许本地LLM操控电脑并执行代码', '许可证': 'AGPL 3.0' },
         ],
-        note: '深度指南：[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=zh)',
+        note: '深度指南：[LM Studio vs Jan vs GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
           {
             url: 'https://msty.app/pricing',
@@ -1841,7 +1841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', '描述': 'Chrome和Firefox的浏览器侧边栏AI', '许可证': 'MIT' },
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', '描述': '跨平台桌面与Web客户端', '许可证': 'GPLv3' },
         ],
-        note: '深度指南：[SillyTavern vs Agnai vs RisuAI](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=zh)',
+        note: '深度指南：[SillyTavern vs Agnai vs RisuAI](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
       codingAssistants: {
         id: 'coding-assistants',
@@ -1859,7 +1859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Cursor（本地模式）**', 'Link': '[cursor.com](https://cursor.com)', '描述': '支持本地模型的AI优先代码编辑器', '许可证': '免费（闭源）' },
           { 'Tool': '**Twinny**', 'Link': '[github.com/twinnydotdev/twinny](https://github.com/twinnydotdev/twinny)', '描述': 'VS Code的免费Copilot替代插件', '许可证': 'MIT' },
         ],
-        note: '深度指南：[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=zh)',
+        note: '深度指南：[Continue.dev vs Cline vs Aider](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local)',
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
@@ -1876,7 +1876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-systems',
         title: '5. RAG与文档问答系统',
         content:
-          '**[RAG（检索增强生成）](/prompt-engineering/rag-explained?lang=zh)系统将本地LLM与嵌入模型和向量数据库结合，使模型能够基于自有文档进行问答。**主要分为两类：开箱即用的应用（AnythingLLM、PrivateGPT、Quivr、Khoj）和可二次开发的框架库（LlamaIndex、Haystack、txtai）。RAGFlow在2026年凭借文档级引用精准检索能力取得了显著的份额增长。',
+          '**[RAG（检索增强生成）](/zh/prompt-engineering/rag-explained)系统将本地LLM与嵌入模型和向量数据库结合，使模型能够基于自有文档进行问答。**主要分为两类：开箱即用的应用（AnythingLLM、PrivateGPT、Quivr、Khoj）和可二次开发的框架库（LlamaIndex、Haystack、txtai）。RAGFlow在2026年凭借文档级引用精准检索能力取得了显著的份额增长。',
         columns: ['Tool', 'Link', '描述', '许可证'],
         rows: [
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', '描述': '最易上手的一体化个人RAG工具，支持工作区', '许可证': 'MIT' },
@@ -1891,7 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**RAGFlow**', 'Link': '[ragflow.io](https://ragflow.io)', '描述': '深度文档理解RAG，支持引用提取', '许可证': 'Apache 2.0' },
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', '描述': '将向量数据库与LLM合为一体的嵌入式库', '许可证': 'Apache 2.0' },
         ],
-        note: '深度指南：[AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=zh)',
+        note: '深度指南：[AnythingLLM vs PrivateGPT vs Open WebUI](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)',
         image: '/images/local-llm-software-directory-2026-rag-systems-zh.svg',
         imageCaption: '本地RAG两类方案：即用型应用（AnythingLLM、PrivateGPT、Quivr、RAGFlow、Khoj）实现无代码文档问答，vs 框架库（LlamaIndex、Haystack、Dify、Flowise、txtai）用于构建自定义管道。',
       },
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Letta**（原MemGPT）', 'Link': '[letta.com](https://letta.com)', '描述': '长期记忆智能体', '许可证': 'Apache 2.0' },
           { 'Tool': '**Pydantic AI**', 'Link': '[ai.pydantic.dev](https://ai.pydantic.dev)', '描述': '基于Pydantic的类型安全智能体框架', '许可证': 'MIT' },
         ],
-        note: '深度指南：[使用MCP的本地AI智能体](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh)',
+        note: '深度指南：[使用MCP的本地AI智能体](/zh/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
       voiceMultimodal: {
         id: 'voice-multimodal',
@@ -1930,7 +1930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', '描述': '本地视觉+语言模型', '许可证': 'Apache 2.0' },
           { 'Tool': '**Ollama视觉模型**', 'Link': '[ollama.com](https://ollama.com)', '描述': '通过Ollama运行的本地视觉模型（Llama 3.2 Vision、Llava等）', '许可证': 'Various' },
         ],
-        note: '深度指南：[在手机上构建本地语音助手](/power-local-llm/voice-assistant-local-mobile-offline?lang=zh)',
+        note: '深度指南：[在手机上构建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -1950,7 +1950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', '描述': '开源Android本地AI', '许可证': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', '描述': '远程访问本地AnythingLLM工作区', '许可证': 'MIT' },
         ],
-        note: '深度指南：[2026年iPhone最佳本地LLM应用](/power-local-llm/best-local-llm-apps-iphone-2026?lang=zh)',
+        note: '深度指南：[2026年iPhone最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -1971,7 +1971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', '描述': '支持角色卡的角色扮演前端', '许可证': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', '描述': '移动端友好的角色扮演前端', '许可证': 'GPL 3.0' },
         ],
-        note: '深度指南：[2026年本地LLM与Obsidian集成](/power-local-llm/local-llm-with-obsidian-2026?lang=zh)',
+        note: '深度指南：[2026年本地LLM与Obsidian集成](/zh/power-local-llm/local-llm-with-obsidian-2026)',
       },
       stacks: {
         id: 'stacks',
@@ -2061,15 +2061,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=zh) — 运行时层横向对比。',
-          '[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=zh) — 桌面GUI对比。',
-          '[AnythingLLM vs PrivateGPT vs Open WebUI（RAG对比）](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=zh) — RAG层对比。',
-          '[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=zh) — 编程助手对比。',
-          '[使用MCP的本地AI智能体](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh) — 将上述运行时转变为智能体的协议。',
-          '[2026年iPhone最佳本地LLM应用](/power-local-llm/best-local-llm-apps-iphone-2026?lang=zh) — 移动端客户端深度介绍。',
-          '[Power Local LLM Hub](/power-local-llm?lang=zh) — 跨越9层的完整指南库。',
-          '[2026年最佳本地LLM IDE插件](/power-local-llm/best-local-llm-ide-plugins-2026?lang=zh) — Continue.dev、Cline、Aider：本地模型设置与配置指南。',
-          '[2026年最佳业务文档RAG工具](/power-local-llm/best-rag-tools-for-business-documents-2026?lang=zh) — AnythingLLM、PrivateGPT、LlamaIndex：企业文档问答技术栈。',
+          '[llama.cpp vs Ollama vs vLLM](/zh/local-llms/llamacpp-vs-ollama-vs-vllm) — 运行时层横向对比。',
+          '[LM Studio vs Jan vs GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 桌面GUI对比。',
+          '[AnythingLLM vs PrivateGPT vs Open WebUI（RAG对比）](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG层对比。',
+          '[Continue.dev vs Cline vs Aider](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 编程助手对比。',
+          '[使用MCP的本地AI智能体](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 将上述运行时转变为智能体的协议。',
+          '[2026年iPhone最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — 移动端客户端深度介绍。',
+          '[Power Local LLM Hub](/zh/power-local-llm) — 跨越9层的完整指南库。',
+          '[2026年最佳本地LLM IDE插件](/zh/power-local-llm/best-local-llm-ide-plugins-2026) — Continue.dev、Cline、Aider：本地模型设置与配置指南。',
+          '[2026年最佳业务文档RAG工具](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) — AnythingLLM、PrivateGPT、LlamaIndex：企业文档问答技术栈。',
         ],
       },
     },

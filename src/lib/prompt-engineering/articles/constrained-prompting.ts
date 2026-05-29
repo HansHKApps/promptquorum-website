@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/constrained-prompting?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/constrained-prompting',
         inLanguage: 'de',
         headline: 'Constrained Prompting: Strukturierte Prompts für zuverlässige Ausgaben',
         description: 'Constrained Prompting für strukturierte KI-Ausgaben in Prompt Engineering. Wie Sie Regeln, Formate und Inhaltsrichtlinien direkt im Prompt definieren, um zuverlässige und sichere Outputs zu erreichen.',
@@ -635,12 +635,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Ressourcen',
           items: [
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — Grundlagen vor Anwendung von Constraints.',
-            '[RTF Framework](/prompt-engineering/rtf-framework?lang=de) — Role-Task-Format: ein strukturiertes Framework, das natürlich mit Constrained Prompting kombiniert werden kann.',
-            '[Few-Shot Prompting](/prompt-engineering/few-shot-prompting?lang=de) — Beispiele bereitstellen ist eine Form impliziter Constraints.',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — Wenn Sie Reasoning-Schritte wünschen, nicht nur geconstraintetete Ausgabe.',
-            '[KI-Halluzinationen: Wie man sie stoppt](/prompt-engineering/ai-hallucinations-how-to-stop?lang=de) — Constraints, die Halluzinations-Risiken reduzieren.',
-            '[Grundlagen der Prompt-Engineering-Optimierung](/prompt-engineering/fundamentals-of-prompt-optimization?lang=de) — Optimierungstechniken, die Constrained Prompting erweitern.',
+            '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — Grundlagen vor Anwendung von Constraints.',
+            '[RTF Framework](/de/prompt-engineering/rtf-framework) — Role-Task-Format: ein strukturiertes Framework, das natürlich mit Constrained Prompting kombiniert werden kann.',
+            '[Few-Shot Prompting](/de/prompt-engineering/few-shot-prompting) — Beispiele bereitstellen ist eine Form impliziter Constraints.',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — Wenn Sie Reasoning-Schritte wünschen, nicht nur geconstraintetete Ausgabe.',
+            '[KI-Halluzinationen: Wie man sie stoppt](/de/prompt-engineering/ai-hallucinations-how-to-stop) — Constraints, die Halluzinations-Risiken reduzieren.',
+            '[Grundlagen der Prompt-Engineering-Optimierung](/de/prompt-engineering/fundamentals-of-prompt-optimization) — Optimierungstechniken, die Constrained Prompting erweitern.',
           ],
         },
         faqSection: {
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/constrained-prompting?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/constrained-prompting',
         inLanguage: 'es',
         headline: 'Constrained Prompting: Fuerza formatos de salida de IA (2026)',
         description: 'Qué es el constrained prompting, por qué importa y cómo usarlo para hacer que las salidas de IA sean predecibles y seguras en workflows reales.',
@@ -969,12 +969,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[¿Qué es el prompt engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — Fundamentos antes de aplicar constraints.',
-            '[Salida estructurada: modo JSON](/prompt-engineering/structured-output-json-mode?lang=es) — Aplicación de esquemas de salida a nivel de API.',
-            '[Framework RTF](/prompt-engineering/rtf-framework?lang=es) — Role-Task-Format: un framework estructurado que se combina bien con constrained prompting.',
-            '[Few-shot prompting](/prompt-engineering/few-shot-prompting?lang=es) — Proporcionar ejemplos es una forma de constraint implícita.',
-            '[Cómo probar prompts entre modelos](/prompt-engineering/how-to-test-prompts-across-models?lang=es) — Valida prompts con constraints en múltiples LLMs.',
-            '[Prompt injection y seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — Las constraints de seguridad defienden contra entradas adversariales.',
+            '[¿Qué es el prompt engineering?](/es/prompt-engineering/what-is-prompt-engineering) — Fundamentos antes de aplicar constraints.',
+            '[Salida estructurada: modo JSON](/es/prompt-engineering/structured-output-json-mode) — Aplicación de esquemas de salida a nivel de API.',
+            '[Framework RTF](/es/prompt-engineering/rtf-framework) — Role-Task-Format: un framework estructurado que se combina bien con constrained prompting.',
+            '[Few-shot prompting](/es/prompt-engineering/few-shot-prompting) — Proporcionar ejemplos es una forma de constraint implícita.',
+            '[Cómo probar prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Valida prompts con constraints en múltiples LLMs.',
+            '[Prompt injection y seguridad](/es/prompt-engineering/prompt-injection-and-security) — Las constraints de seguridad defienden contra entradas adversariales.',
           ],
         },
         faqSection: {
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/constrained-prompting?lang=fr',
+    url: 'https://www.promptquorum.com/fr/prompt-engineering/constrained-prompting',
     inLanguage: 'fr',
     headline: 'Prompting avec Contraintes 2026: Structures Fiables pour LLM',
     description: 'Le prompting avec contraintes pour outputs LLM prévisibles. Formats stricts, validation de schémas JSON, enforcement au niveau API.',
@@ -1274,12 +1274,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: 'Lectures complémentaires',
       items: [
-        '[Grammars LLM : Forcer la Structure de Sortie](/prompt-engineering/llm-grammars?lang=fr) — Approches formelles au-delà des contraintes',
-        '[Chain-of-Thought vs. Structured Reasoning](/prompt-engineering/cot-structured-reasoning?lang=fr) — Quand utiliser lequel',
-        '[Fine-Tuning pour la Conformité de Sortie](/prompt-engineering/fine-tuning-for-structured-output?lang=fr) — Alternatives au prompting',
-        '[Validation d\'Outputs LLM : Schémas et Tests](/prompt-engineering/llm-output-validation?lang=fr) — Cadre complet de validation',
-        '[PromptQuorum : Dispatch Multi-Modèle](/features/multi-model-dispatch?lang=fr) — Comment tester les contraintes à l\'échelle',
-        '[API Conversationnelles avec LLM](/local-llms/conversational-apis?lang=fr) — Cas d\'usage réel : structures contrôlées dans les chatbots'
+        '[Grammars LLM : Forcer la Structure de Sortie](/fr/prompt-engineering/llm-grammars) — Approches formelles au-delà des contraintes',
+        '[Chain-of-Thought vs. Structured Reasoning](/fr/prompt-engineering/cot-structured-reasoning) — Quand utiliser lequel',
+        '[Fine-Tuning pour la Conformité de Sortie](/fr/prompt-engineering/fine-tuning-for-structured-output) — Alternatives au prompting',
+        '[Validation d\'Outputs LLM : Schémas et Tests](/fr/prompt-engineering/llm-output-validation) — Cadre complet de validation',
+        '[PromptQuorum : Dispatch Multi-Modèle](/fr/features/multi-model-dispatch) — Comment tester les contraintes à l\'échelle',
+        '[API Conversationnelles avec LLM](/fr/local-llms/conversational-apis) — Cas d\'usage réel : structures contrôlées dans les chatbots'
       ]
     },
     faqSection: {
@@ -1552,12 +1552,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: '参考資料',
       items: [
-        '[LLM文法：出力構造の強制](/prompt-engineering/llm-grammars?lang=ja) — 制約を超えた形式的アプローチ',
-        '[Chain-of-Thoughtと構造化推論](/prompt-engineering/cot-structured-reasoning?lang=ja) — 使い分け',
-        '[構造化出力向けファインチューニング](/prompt-engineering/fine-tuning-for-structured-output?lang=ja) — プロンプティングの代替手段',
-        '[LLMアウトプット検証：スキーマとテスト](/prompt-engineering/llm-output-validation?lang=ja) — 総合検証フレームワーク',
-        '[PromptQuorum：マルチモデルディスパッチ](/features/multi-model-dispatch?lang=ja) — 大規模制約テスト',
-        '[会話型API with LLM](/local-llms/conversational-apis?lang=ja) — 実例：チャットボットの制御出力'
+        '[LLM文法：出力構造の強制](/ja/prompt-engineering/llm-grammars) — 制約を超えた形式的アプローチ',
+        '[Chain-of-Thoughtと構造化推論](/ja/prompt-engineering/cot-structured-reasoning) — 使い分け',
+        '[構造化出力向けファインチューニング](/ja/prompt-engineering/fine-tuning-for-structured-output) — プロンプティングの代替手段',
+        '[LLMアウトプット検証：スキーマとテスト](/ja/prompt-engineering/llm-output-validation) — 総合検証フレームワーク',
+        '[PromptQuorum：マルチモデルディスパッチ](/ja/features/multi-model-dispatch) — 大規模制約テスト',
+        '[会話型API with LLM](/ja/local-llms/conversational-apis) — 実例：チャットボットの制御出力'
       ]
     },
     faqSection: {
@@ -1635,7 +1635,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     'headline': '制約付きプロンプティング：完全ガイド',
-    'url': 'https://www.promptquorum.com/prompt-engineering/constrained-prompting?lang=ja',
+    'url': 'https://www.promptquorum.com/ja/prompt-engineering/constrained-prompting',
     'inLanguage': 'ja',
     'image': 'https://www.promptquorum.com/og-constrained-prompting-ja.png',
     'datePublished': '2026-01-20',
@@ -2048,12 +2048,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: '相关阅读',
       items: [
-        '[LLM文法：强制输出结构](/prompt-engineering/llm-grammars?lang=zh) — 约束之外的形式化方法',
-        '[Chain-of-Thought vs 结构化推理](/prompt-engineering/cot-structured-reasoning?lang=zh) — 何时使用哪种',
-        '[结构化输出微调](/prompt-engineering/fine-tuning-for-structured-output?lang=zh) — 提示工程的替代方案',
-        '[LLM输出验证：架构和测试](/prompt-engineering/llm-output-validation?lang=zh) — 完整验证框架',
-        '[PromptQuorum：多模型分发](/features/multi-model-dispatch?lang=zh) — 大规模测试约束',
-        '[与LLM的会话API](/local-llms/conversational-apis?lang=zh) — 实例：聊天机器人的控制输出'
+        '[LLM文法：强制输出结构](/zh/prompt-engineering/llm-grammars) — 约束之外的形式化方法',
+        '[Chain-of-Thought vs 结构化推理](/zh/prompt-engineering/cot-structured-reasoning) — 何时使用哪种',
+        '[结构化输出微调](/zh/prompt-engineering/fine-tuning-for-structured-output) — 提示工程的替代方案',
+        '[LLM输出验证：架构和测试](/zh/prompt-engineering/llm-output-validation) — 完整验证框架',
+        '[PromptQuorum：多模型分发](/zh/features/multi-model-dispatch) — 大规模测试约束',
+        '[与LLM的会话API](/zh/local-llms/conversational-apis) — 实例：聊天机器人的控制输出'
       ]
     },
     faqSection: {
@@ -2131,7 +2131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     'headline': '受限提示：完整指南',
-    'url': 'https://www.promptquorum.com/prompt-engineering/constrained-prompting?lang=zh',
+    'url': 'https://www.promptquorum.com/zh/prompt-engineering/constrained-prompting',
     'inLanguage': 'zh',
     'image': 'https://www.promptquorum.com/og-constrained-prompting-zh.png',
     'datePublished': '2026-01-20',

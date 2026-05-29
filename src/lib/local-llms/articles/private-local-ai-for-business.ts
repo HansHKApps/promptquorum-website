@@ -434,12 +434,12 @@ de: {
           id: 'related-reading',
           title: 'Verwandte Lektüre',
           items: [
-            '[Lokale Multi-GPU-LLMs](/local-llms/multi-gpu-local-llms?lang=de) — Skalierung der Inferenz über mehrere GPUs hinweg.',
-            '[Stromverbrauch lokaler LLM](/local-llms/local-llm-power-consumption?lang=de) — Kühl- und Infrastrukturkosten.',
-            '[Fine-Tuning lokaler LLMs mit LoRA](/local-llms/fine-tuning-local-llms-lora?lang=de) — Benutzerdefinierte Modelle für geschäftliche Workflows.',
-            '[Lokale LLMs vs. ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=de) — Kompletter 3-Jahres-Kostenvergleich Abonnement vs. On-Premises-Bereitstellung.',
-            '[Mac vs. Windows vs. Linux lokale LLM](/local-llms/mac-vs-windows-vs-linux-local-llm?lang=de) — Betriebssystem-Auswahl für On-Premises-Infrastruktur.',
-            '[Lokale LLM OpenAI-kompatible API](/local-llms/local-llm-openai-compatible-api?lang=de) — Integriere Deine lokale LLM mit geschäftlichen Anwendungen über OpenAI SDK auf localhost.',
+            '[Lokale Multi-GPU-LLMs](/de/local-llms/multi-gpu-local-llms) — Skalierung der Inferenz über mehrere GPUs hinweg.',
+            '[Stromverbrauch lokaler LLM](/de/local-llms/local-llm-power-consumption) — Kühl- und Infrastrukturkosten.',
+            '[Fine-Tuning lokaler LLMs mit LoRA](/de/local-llms/fine-tuning-local-llms-lora) — Benutzerdefinierte Modelle für geschäftliche Workflows.',
+            '[Lokale LLMs vs. ChatGPT Plus](/de/local-llms/local-llms-vs-chatgpt-plus) — Kompletter 3-Jahres-Kostenvergleich Abonnement vs. On-Premises-Bereitstellung.',
+            '[Mac vs. Windows vs. Linux lokale LLM](/de/local-llms/mac-vs-windows-vs-linux-local-llm) — Betriebssystem-Auswahl für On-Premises-Infrastruktur.',
+            '[Lokale LLM OpenAI-kompatible API](/de/local-llms/local-llm-openai-compatible-api) — Integriere Deine lokale LLM mit geschäftlichen Anwendungen über OpenAI SDK auf localhost.',
           ],
         },
         sources: {
@@ -459,7 +459,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Private lokale KI für Unternehmen 2026: DSGVO, HIPAA, On-Premises',
         description: 'Private lokale KI wird ab 200 Mio. Token/Monat wirtschaftlich — 83 €/Monat Hardware vs. 1.000 €/Monat Cloud. DSGVO-, HIPAA-, SOC2-konform. Llama 3.3 70B auf RTX 5090 oder vLLM-Cluster.',
-        url: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/private-local-ai-for-business',
         inLanguage: 'de',
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
@@ -770,12 +770,12 @@ schema: {
           id: 'related-reading',
           title: 'Lectures Connexes',
           items: [
-            '[LLMs Multi-GPU Locaux](/local-llms/multi-gpu-local-llms?lang=fr) -- Évolution inférence GPUs multiples.',
-            '[Consommation Électrique LLM Local](/local-llms/local-llm-power-consumption?lang=fr) -- Coûts refroidissement et infrastructure.',
-            '[Fine-Tuning LLMs Locaux LoRA](/local-llms/fine-tuning-local-llms-lora?lang=fr) -- Modèles personnalisés workflows métier.',
-            '[LLMs Locaux vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=fr) -- Comparaison coûts complets abonnement vs déploiement on-premises 3 ans.',
-            '[Mac vs Windows vs Linux LLMs Locaux](/local-llms/mac-vs-windows-vs-linux-local-llm?lang=fr) -- Choix système exploitation infrastructure on-premises.',
-            '[API Compatible OpenAI LLM Local](/local-llms/local-llm-openai-compatible-api?lang=fr) -- Intégrez votre LLM on-premises applications métier via SDK OpenAI localhost.'
+            '[LLMs Multi-GPU Locaux](/fr/local-llms/multi-gpu-local-llms) -- Évolution inférence GPUs multiples.',
+            '[Consommation Électrique LLM Local](/fr/local-llms/local-llm-power-consumption) -- Coûts refroidissement et infrastructure.',
+            '[Fine-Tuning LLMs Locaux LoRA](/fr/local-llms/fine-tuning-local-llms-lora) -- Modèles personnalisés workflows métier.',
+            '[LLMs Locaux vs ChatGPT Plus](/fr/local-llms/local-llms-vs-chatgpt-plus) -- Comparaison coûts complets abonnement vs déploiement on-premises 3 ans.',
+            '[Mac vs Windows vs Linux LLMs Locaux](/fr/local-llms/mac-vs-windows-vs-linux-local-llm) -- Choix système exploitation infrastructure on-premises.',
+            '[API Compatible OpenAI LLM Local](/fr/local-llms/local-llm-openai-compatible-api) -- Intégrez votre LLM on-premises applications métier via SDK OpenAI localhost.'
           ]
         },
         sources: {
@@ -794,7 +794,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'IA Locale Privée Pour Entreprises 2026 : RGPD, HIPAA, On-Premises',
         description: 'IA on-premises rentable 200 M tokens/mois — 120 €/mois matériel vs 900 €/mois cloud. Conforme RGPD, HIPAA, SOC2. Llama 3.3 70B RTX 5090 ou cluster vLLM.',
-        url: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/private-local-ai-for-business',
         inLanguage: 'fr',
         datePublished: '2026-04-04',
         dateModified: '2026-04-25',
@@ -1176,12 +1176,12 @@ schema: {
           id: 'related-reading',
           title: '関連資料',
           items: [
-            '[マルチGPUローカルLLM](/local-llms/multi-gpu-local-llms?lang=ja) — マルチGPU推論進化。',
-            '[ローカルLLM電力消費](/local-llms/local-llm-power-consumption?lang=ja) — 冷却およびインフラストラクチャコスト。',
-            '[LoRA でローカルLLMをファインチューニング](/local-llms/fine-tuning-local-llms-lora?lang=ja) — カスタムモデルビジネスワークフロー。',
-            '[ローカルLLM vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=ja) — 3年間のサブスクリプション vs オンプレミス展開の完全なコスト比較。',
-            '[Mac vs Windows vs Linux ローカルLLM](/local-llms/mac-vs-windows-vs-linux-local-llm?lang=ja) — オンプレミスインフラOSの選択。',
-            '[OpenAI互換ローカルLLM API](/local-llms/local-llm-openai-compatible-api?lang=ja) — ローカルLLMを OpenAI SDK経由でビジネスアプリに統合。'
+            '[マルチGPUローカルLLM](/ja/local-llms/multi-gpu-local-llms) — マルチGPU推論進化。',
+            '[ローカルLLM電力消費](/ja/local-llms/local-llm-power-consumption) — 冷却およびインフラストラクチャコスト。',
+            '[LoRA でローカルLLMをファインチューニング](/ja/local-llms/fine-tuning-local-llms-lora) — カスタムモデルビジネスワークフロー。',
+            '[ローカルLLM vs ChatGPT Plus](/ja/local-llms/local-llms-vs-chatgpt-plus) — 3年間のサブスクリプション vs オンプレミス展開の完全なコスト比較。',
+            '[Mac vs Windows vs Linux ローカルLLM](/ja/local-llms/mac-vs-windows-vs-linux-local-llm) — オンプレミスインフラOSの選択。',
+            '[OpenAI互換ローカルLLM API](/ja/local-llms/local-llm-openai-compatible-api) — ローカルLLMを OpenAI SDK経由でビジネスアプリに統合。'
           ]
         },
         sources: {
@@ -1200,7 +1200,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'プライベート・ローカルAI for ビジネス 2026：オンプレミス展開、METI対応、コンプライアンス',
         description: 'ローカルAIは月2億トークン以上で採算性が高い（月¥15,000ハードウェア vs 月¥90,000クラウド）。METI AI統治、金融庁、個人情報保護法対応。Llama 3.3 70B RTX 5090 またはvLLMクラスター展開。',
-        url: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/private-local-ai-for-business',
         inLanguage: 'ja',
         datePublished: '2026-04-04',
         dateModified: '2026-04-25',
@@ -1623,12 +1623,12 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[多GPU本地LLM](/local-llms/multi-gpu-local-llms?lang=zh) — 多GPU推理演进。',
-            '[本地LLM功耗](/local-llms/local-llm-power-consumption?lang=zh) — 冷却和基础设施成本。',
-            '[使用LoRA微调本地LLM](/local-llms/fine-tuning-local-llms-lora?lang=zh) — 业务工作流自定义模型。',
-            '[本地LLM vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=zh) — 3年订阅 vs 本地部署成本完整比较。',
-            '[Mac vs Windows vs Linux本地LLM](/local-llms/mac-vs-windows-vs-linux-local-llm?lang=zh) — 本地基础设施操作系统选择。',
-            '[OpenAI兼容本地LLM API](/local-llms/local-llm-openai-compatible-api?lang=zh) — 通过OpenAI SDK将本地LLM集成至业务应用。'
+            '[多GPU本地LLM](/zh/local-llms/multi-gpu-local-llms) — 多GPU推理演进。',
+            '[本地LLM功耗](/zh/local-llms/local-llm-power-consumption) — 冷却和基础设施成本。',
+            '[使用LoRA微调本地LLM](/zh/local-llms/fine-tuning-local-llms-lora) — 业务工作流自定义模型。',
+            '[本地LLM vs ChatGPT Plus](/zh/local-llms/local-llms-vs-chatgpt-plus) — 3年订阅 vs 本地部署成本完整比较。',
+            '[Mac vs Windows vs Linux本地LLM](/zh/local-llms/mac-vs-windows-vs-linux-local-llm) — 本地基础设施操作系统选择。',
+            '[OpenAI兼容本地LLM API](/zh/local-llms/local-llm-openai-compatible-api) — 通过OpenAI SDK将本地LLM集成至业务应用。'
           ]
         },
         sources: {
@@ -1647,7 +1647,7 @@ schema: {
         '@type': 'TechArticle',
         headline: '企业本地私有AI：保持数据主权与成本控制的On-Premises部署指南 2026',
         description: '本地AI在月2亿token处成本更低（月$150硬件 vs 月$900云端）。符合数据安全法、个人信息保护法。Llama 3.3 70B RTX 5090或vLLM集群部署。',
-        url: 'https://www.promptquorum.com/local-llms/private-local-ai-for-business?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/private-local-ai-for-business',
         inLanguage: 'zh',
         datePublished: '2026-04-04',
         dateModified: '2026-04-25',

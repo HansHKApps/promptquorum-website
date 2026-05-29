@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué modelo de Qwen es el más adecuado para flujos de trabajo sensibles bajo el RGPD?',
-            a: 'Para 12 GB de VRAM: Qwen 2.5 14B en Q4_K_M (tareas generales) o Qwen 2.5 Coder 14B (flujos de trabajo intensivos en código). Para 6–8 GB de VRAM: Qwen 3 8B en Q4_K_M. Ambos funcionan completamente offline via Ollama. Consulta la <a href="/local-llms/qwen-local-gdpr-setup-guide-2026?lang=es" class="text-primary hover:underline">guía completa de configuración de Qwen para el RGPD</a> para los pasos de instalación con Ollama.',
+            a: 'Para 12 GB de VRAM: Qwen 2.5 14B en Q4_K_M (tareas generales) o Qwen 2.5 Coder 14B (flujos de trabajo intensivos en código). Para 6–8 GB de VRAM: Qwen 3 8B en Q4_K_M. Ambos funcionan completamente offline via Ollama. Consulta la <a href="/es/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">guía completa de configuración de Qwen para el RGPD</a> para los pasos de instalación con Ollama.',
           },
           {
             q: '¿Necesito un Acuerdo de Procesamiento de Datos con Ollama?',

@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-29',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/how-to-evaluate-prompt-quality',
         inLanguage: 'de',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-is-prompt-quality',
           title: 'Was ist Prompt-Qualität?',
-          content: '**Prompt-Qualität ist, wie zuverlässig ein Prompt die beabsichtigte Ausgabe über verschiedene Eingaben, Modelle und Bedingungen hinweg erzeugt.** Ein Prompt, der auf zehn handgewählten Beispielen funktioniert, kann 20 % Fehlerquote aufweisen, wenn echte Benutzer ihn in großem Maßstab verwenden.\n\nQualität ist keine einzelne Zahl. Sie hat drei unabhängige Dimensionen: Accuracy, Konsistenz und Instruction-Following Rate. Ein Prompt kann bei jeder dieser fehlschlagen, während er auf cherry-gepickten Beispielen zu funktionieren scheint.\n\nSystematische Bewertung bedeutet, alle drei Dimensionen gegen einen reproduzierbaren Test-Set zu messen — vor dem Deployment in die Produktion. Siehe [Prompt-Evaluierungs-Metriken](/prompt-engineering/prompt-evaluation-metrics?lang=de) für einen vollständigen Überblick über Scoring-Ansätze.',
+          content: '**Prompt-Qualität ist, wie zuverlässig ein Prompt die beabsichtigte Ausgabe über verschiedene Eingaben, Modelle und Bedingungen hinweg erzeugt.** Ein Prompt, der auf zehn handgewählten Beispielen funktioniert, kann 20 % Fehlerquote aufweisen, wenn echte Benutzer ihn in großem Maßstab verwenden.\n\nQualität ist keine einzelne Zahl. Sie hat drei unabhängige Dimensionen: Accuracy, Konsistenz und Instruction-Following Rate. Ein Prompt kann bei jeder dieser fehlschlagen, während er auf cherry-gepickten Beispielen zu funktionieren scheint.\n\nSystematische Bewertung bedeutet, alle drei Dimensionen gegen einen reproduzierbaren Test-Set zu messen — vor dem Deployment in die Produktion. Siehe [Prompt-Evaluierungs-Metriken](/de/prompt-engineering/prompt-evaluation-metrics) für einen vollständigen Überblick über Scoring-Ansätze.',
           snippets: [
             { type: 'in-one-sentence', text: 'Prompt-Qualität ist der Prozentsatz von Test-Eingaben, bei denen das Modell eine Ausgabe erzeugt, die alle definierten Erfolgskriterien erfüllt.' },
           ],
@@ -418,7 +418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         testSets: {
           id: 'test-sets',
           title: 'Wie erstellst du einen Prompt-Test-Set?',
-          content: '**Erstelle einen Test-Set, indem du Eingaben über drei Kategorien hinweg sammelst, dann schreibe explizite Pass-Kriterien für jeden, bevor du Tests ausführst.**\n\n**Happy-Path-Eingaben (40 %):** Typische Eingaben, für die der Prompt designed wurde. Alle sollten bestehen.\n\n**Edge-Case-Eingaben (30 %):** Eingaben an der Grenze: leere Eingabe, sehr lange Eingabe, mehrsprachige Eingabe, ungewöhnliche Formatierung, fehlende erforderliche Felder. Diese enthüllen Sprödigkeit.\n\n**Adversarial-Eingaben (30 %):** Eingaben, die den Prompt zum Scheitern bringen sollen: Anweisungen, die dem System-Prompt widersprechen, Anforderungen, Einschränkungen zu ignorieren, Injection-ähnliche Muster. Diese enthüllen Sicherheits- und Zuverlässigkeitslücken.\n\nSchreibe ein Pass-Kriterium für jede Eingabe, bevor du den Test ausführst. Ein Test-Set ohne erwartete Ausgaben ist keine Bewertung. Wenn du Prompts in einer [Prompt-Bibliothek](/prompt-engineering/build-a-prompt-library?lang=de) speicherst, verfolge die Test-Set-Pass-Rate als Metadaten pro Eintrag.',
+          content: '**Erstelle einen Test-Set, indem du Eingaben über drei Kategorien hinweg sammelst, dann schreibe explizite Pass-Kriterien für jeden, bevor du Tests ausführst.**\n\n**Happy-Path-Eingaben (40 %):** Typische Eingaben, für die der Prompt designed wurde. Alle sollten bestehen.\n\n**Edge-Case-Eingaben (30 %):** Eingaben an der Grenze: leere Eingabe, sehr lange Eingabe, mehrsprachige Eingabe, ungewöhnliche Formatierung, fehlende erforderliche Felder. Diese enthüllen Sprödigkeit.\n\n**Adversarial-Eingaben (30 %):** Eingaben, die den Prompt zum Scheitern bringen sollen: Anweisungen, die dem System-Prompt widersprechen, Anforderungen, Einschränkungen zu ignorieren, Injection-ähnliche Muster. Diese enthüllen Sicherheits- und Zuverlässigkeitslücken.\n\nSchreibe ein Pass-Kriterium für jede Eingabe, bevor du den Test ausführst. Ein Test-Set ohne erwartete Ausgaben ist keine Bewertung. Wenn du Prompts in einer [Prompt-Bibliothek](/de/prompt-engineering/build-a-prompt-library) speicherst, verfolge die Test-Set-Pass-Rate als Metadaten pro Eintrag.',
           promptExamples: [
             {
               bad: 'Teste den Prompt mit ein paar E-Mails und schaue, ob es gut aussieht.',
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         multiModel: {
           id: 'multi-model',
           title: 'Unterscheidet sich die Prompt-Qualität zwischen Modellen?',
-          content: '**Ja — derselbe Prompt kann 20+ Punkte unterschiedlich zwischen GPT-4o und Claude Opus 4.7 scored, primär aufgrund von Instruction-Format-Sensitivität und System-Prompt-Handling.**\n\nQualitätslücken sind am größten für:\n\n- **JSON-Output-Formatierung:** Claude Opus 4.7 folgt komplexen Schemas strikter als GPT-4o\n- **Instruction-Priorität:** GPT-4o gewichtet die zuletzt gegebene Anweisung; Claude Opus 4.7 gewichtet den System-Prompt\n- **Refusal-Muster:** OpenAI und Anthropic Modelle haben unterschiedliche Schwellen für Grenzfall-Inhalte\n\nUnsere Bewertung von Classification- und Formatting-Prompts über beide Modelle (aktualisiert bis April 2026) fand Pass-Rate-Unterschiede von 10–20 Punkten, wobei JSON-Output-Formatierung die größten Lücken erzeugte. Siehe [Wie man Prompts über Modelle testet](/prompt-engineering/how-to-test-prompts-across-models?lang=de) für vollständige Multi-Model-Evaluierungs-Methodik.\n\nNutze PromptQuorum, um denselben Test-Set zu GPT-4o, Claude Opus 4.7 und Gemini 2.5 Pro in einem Durchlauf zu leiten und Pass-Raten Seite-an-Seite zu vergleichen.',
+          content: '**Ja — derselbe Prompt kann 20+ Punkte unterschiedlich zwischen GPT-4o und Claude Opus 4.7 scored, primär aufgrund von Instruction-Format-Sensitivität und System-Prompt-Handling.**\n\nQualitätslücken sind am größten für:\n\n- **JSON-Output-Formatierung:** Claude Opus 4.7 folgt komplexen Schemas strikter als GPT-4o\n- **Instruction-Priorität:** GPT-4o gewichtet die zuletzt gegebene Anweisung; Claude Opus 4.7 gewichtet den System-Prompt\n- **Refusal-Muster:** OpenAI und Anthropic Modelle haben unterschiedliche Schwellen für Grenzfall-Inhalte\n\nUnsere Bewertung von Classification- und Formatting-Prompts über beide Modelle (aktualisiert bis April 2026) fand Pass-Rate-Unterschiede von 10–20 Punkten, wobei JSON-Output-Formatierung die größten Lücken erzeugte. Siehe [Wie man Prompts über Modelle testet](/de/prompt-engineering/how-to-test-prompts-across-models) für vollständige Multi-Model-Evaluierungs-Methodik.\n\nNutze PromptQuorum, um denselben Test-Set zu GPT-4o, Claude Opus 4.7 und Gemini 2.5 Pro in einem Durchlauf zu leiten und Pass-Raten Seite-an-Seite zu vergleichen.',
           callouts: [
             { type: 'warning', label: 'Warnung', text: 'Gehe nicht davon aus, dass ein Prompt, der auf GPT-4o bestanden hat, auf Claude Opus 4.7 bestehen wird. Führe denselben Test-Set auf jedem Modell aus, das du einsetzen möchtest — ein Prompt kann modellspezifisches Tuning benötigen.' },
           ],
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         howToStart: {
           id: 'how-to-start',
           title: 'So startest du mit der Bewertung',
-          content: '**Starte mit Erfolgskriterien, bevor du den Test-Set erstellst — das Bewerten von Ausgaben ohne vordefinierte Kriterien reintroduciert die Subjektivität, die systematisches Testen eliminieren soll.** Arbeite die sechs Schritte unten durch, um ein wiederholbares Bewertungs-System aufzubauen. Wenn die Pass-Rate nach Änderungen sinkt, wende [Prompt-Sprödheit-Reduziertechniken](/prompt-engineering/how-to-reduce-prompt-brittleness?lang=de) an, bevor du neu bewertest.',
+          content: '**Starte mit Erfolgskriterien, bevor du den Test-Set erstellst — das Bewerten von Ausgaben ohne vordefinierte Kriterien reintroduciert die Subjektivität, die systematisches Testen eliminieren soll.** Arbeite die sechs Schritte unten durch, um ein wiederholbares Bewertungs-System aufzubauen. Wenn die Pass-Rate nach Änderungen sinkt, wende [Prompt-Sprödheit-Reduziertechniken](/de/prompt-engineering/how-to-reduce-prompt-brittleness) an, bevor du neu bewertest.',
           numberedItems: [
             'Schreibe Erfolgskriterien auf, bevor du den Test-Set erstellst: Wie sieht eine korrekte Ausgabe in Bezug auf Format, Inhalt und Einschränkungen aus?',
             'Sammle 20 Test-Eingaben: 8 Happy-Path, 6 Edge Cases, 6 Adversarial. Schreibe erwartete Ausgaben oder Pass-Kriterien für jeden.',
@@ -514,12 +514,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Lektüre',
           items: [
-            '[Prompt-Evaluierungs-Metriken: Was gemessen werden soll und wie](/prompt-engineering/prompt-evaluation-metrics?lang=de) — Aufschlüsselung von Pass-Rate, BLEU, semantischer Ähnlichkeit und LLM-as-Judge',
-            '[Wie man Prompts über Modelle testet](/prompt-engineering/how-to-test-prompts-across-models?lang=de) — Multi-Model-Bewertung für GPT-4o vs Claude vs Gemini',
-            '[Wie man Prompt-Sprödheit reduziert](/prompt-engineering/how-to-reduce-prompt-brittleness?lang=de) — Output-Schemas, Few-Shot-Anker und Regressions-Gates',
-            '[Prompt-Bibliothek erstellen](/prompt-engineering/build-a-prompt-library?lang=de) — Speichere Test-Sets neben Prompts mit Metadaten für Team-Wiederverwendung',
-            '[Beste Prompt-Optimierungs-Tools für Teams](/prompt-engineering/best-prompt-optimization-tools-teams?lang=de) — Tools, die Test-Set-Management und Pass-Rate-Tracking enthalten',
-            '[Grundlagen der Prompt-Optimierung](/prompt-engineering/fundamentals-of-prompt-optimization?lang=de) — Kern-Techniken zur Verbesserung von Accuracy und Instruction-Following Rate',
+            '[Prompt-Evaluierungs-Metriken: Was gemessen werden soll und wie](/de/prompt-engineering/prompt-evaluation-metrics) — Aufschlüsselung von Pass-Rate, BLEU, semantischer Ähnlichkeit und LLM-as-Judge',
+            '[Wie man Prompts über Modelle testet](/de/prompt-engineering/how-to-test-prompts-across-models) — Multi-Model-Bewertung für GPT-4o vs Claude vs Gemini',
+            '[Wie man Prompt-Sprödheit reduziert](/de/prompt-engineering/how-to-reduce-prompt-brittleness) — Output-Schemas, Few-Shot-Anker und Regressions-Gates',
+            '[Prompt-Bibliothek erstellen](/de/prompt-engineering/build-a-prompt-library) — Speichere Test-Sets neben Prompts mit Metadaten für Team-Wiederverwendung',
+            '[Beste Prompt-Optimierungs-Tools für Teams](/de/prompt-engineering/best-prompt-optimization-tools-teams) — Tools, die Test-Set-Management und Pass-Rate-Tracking enthalten',
+            '[Grundlagen der Prompt-Optimierung](/de/prompt-engineering/fundamentals-of-prompt-optimization) — Kern-Techniken zur Verbesserung von Accuracy und Instruction-Following Rate',
           ],
         },
         faq: {
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-29',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-evaluate-prompt-quality',
         inLanguage: 'es',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -657,7 +657,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-is-prompt-quality',
           title: '¿Qué es la calidad de los prompts?',
-          content: '**La calidad de los prompts es con qué fiabilidad un prompt produce la salida esperada en entradas, modelos y condiciones variadas.** Un prompt que funciona en diez ejemplos escogidos a mano puede fallar el 20 % del tiempo cuando los usuarios reales interactúan con él a escala.\n\nLa calidad no es un número único. Tiene tres dimensiones independientes: precisión, consistencia y tasa de seguimiento de instrucciones. Un prompt puede fallar en cualquiera de ellas mientras parece funcionar en ejemplos seleccionados.\n\nLa evaluación sistemática significa medir las tres dimensiones contra un conjunto de prueba reproducible — antes de desplegar en producción. Consulta las [métricas de evaluación de prompts](/prompt-engineering/prompt-evaluation-metrics?lang=es) para un análisis completo de los enfoques de puntuación.',
+          content: '**La calidad de los prompts es con qué fiabilidad un prompt produce la salida esperada en entradas, modelos y condiciones variadas.** Un prompt que funciona en diez ejemplos escogidos a mano puede fallar el 20 % del tiempo cuando los usuarios reales interactúan con él a escala.\n\nLa calidad no es un número único. Tiene tres dimensiones independientes: precisión, consistencia y tasa de seguimiento de instrucciones. Un prompt puede fallar en cualquiera de ellas mientras parece funcionar en ejemplos seleccionados.\n\nLa evaluación sistemática significa medir las tres dimensiones contra un conjunto de prueba reproducible — antes de desplegar en producción. Consulta las [métricas de evaluación de prompts](/es/prompt-engineering/prompt-evaluation-metrics) para un análisis completo de los enfoques de puntuación.',
           snippets: [
             { type: 'in-one-sentence', text: 'La calidad de los prompts es el porcentaje de entradas de prueba donde el modelo produce una salida que cumple todos los criterios de éxito definidos.' },
           ],
@@ -787,12 +787,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[Métricas de evaluación de prompts: qué medir y cómo](/prompt-engineering/prompt-evaluation-metrics?lang=es) — Desglose de tasa de éxito, BLEU, similitud semántica y LLM-as-judge',
-            '[Cómo probar prompts entre modelos](/prompt-engineering/how-to-test-prompts-across-models?lang=es) — Evaluación multi-modelo para GPT-4o vs Claude vs Gemini',
-            '[Cómo reducir la fragilidad de los prompts](/prompt-engineering/how-to-reduce-prompt-brittleness?lang=es) — Schemas de salida, anclas few-shot y umbrales de regresión',
-            '[Construye una biblioteca de prompts](/prompt-engineering/build-a-prompt-library?lang=es) — Almacena conjuntos de prueba junto a prompts con metadatos para reutilización en equipo',
-            '[Mejores herramientas de optimización de prompts para equipos](/prompt-engineering/best-prompt-optimization-tools-teams?lang=es) — Herramientas que incluyen gestión de conjuntos de prueba y seguimiento de tasas de éxito',
-            '[Fundamentos de optimización de prompts](/prompt-engineering/fundamentals-of-prompt-optimization?lang=es) — Técnicas fundamentales para mejorar la precisión y la tasa de seguimiento de instrucciones',
+            '[Métricas de evaluación de prompts: qué medir y cómo](/es/prompt-engineering/prompt-evaluation-metrics) — Desglose de tasa de éxito, BLEU, similitud semántica y LLM-as-judge',
+            '[Cómo probar prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Evaluación multi-modelo para GPT-4o vs Claude vs Gemini',
+            '[Cómo reducir la fragilidad de los prompts](/es/prompt-engineering/how-to-reduce-prompt-brittleness) — Schemas de salida, anclas few-shot y umbrales de regresión',
+            '[Construye una biblioteca de prompts](/es/prompt-engineering/build-a-prompt-library) — Almacena conjuntos de prueba junto a prompts con metadatos para reutilización en equipo',
+            '[Mejores herramientas de optimización de prompts para equipos](/es/prompt-engineering/best-prompt-optimization-tools-teams) — Herramientas que incluyen gestión de conjuntos de prueba y seguimiento de tasas de éxito',
+            '[Fundamentos de optimización de prompts](/es/prompt-engineering/fundamentals-of-prompt-optimization) — Técnicas fundamentales para mejorar la precisión y la tasa de seguimiento de instrucciones',
           ],
         },
         faq: {
@@ -871,7 +871,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-29',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/how-to-evaluate-prompt-quality',
         inLanguage: 'fr',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -930,7 +930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-is-prompt-quality',
           title: 'Qu\'est-ce que la qualité des prompts ?',
-          content: '**La qualité des prompts est la fiabilité avec laquelle un prompt produit la sortie prévue sur différentes entrées, modèles et conditions.** Un prompt qui fonctionne sur dix exemples handpickés peut avoir un taux d\'erreur de 20 % quand les vrais utilisateurs l\'utilisent à grande échelle.\n\nLa qualité n\'est pas un nombre unique. Elle a trois dimensions indépendantes : précision, cohérence et taux de conformité aux instructions. Un prompt peut échouer sur l\'une d\'elles tout en paraissant fonctionner sur des exemples cherry-picked.\n\nL\'évaluation systématique signifie mesurer les trois dimensions contre un ensemble de tests reproductible — avant de déployer en production. Voir [métriques d\'évaluation des prompts](/prompt-engineering/prompt-evaluation-metrics?lang=fr) pour une analyse complète des approches de scoring.',
+          content: '**La qualité des prompts est la fiabilité avec laquelle un prompt produit la sortie prévue sur différentes entrées, modèles et conditions.** Un prompt qui fonctionne sur dix exemples handpickés peut avoir un taux d\'erreur de 20 % quand les vrais utilisateurs l\'utilisent à grande échelle.\n\nLa qualité n\'est pas un nombre unique. Elle a trois dimensions indépendantes : précision, cohérence et taux de conformité aux instructions. Un prompt peut échouer sur l\'une d\'elles tout en paraissant fonctionner sur des exemples cherry-picked.\n\nL\'évaluation systématique signifie mesurer les trois dimensions contre un ensemble de tests reproductible — avant de déployer en production. Voir [métriques d\'évaluation des prompts](/fr/prompt-engineering/prompt-evaluation-metrics) pour une analyse complète des approches de scoring.',
           snippets: [
             { type: 'in-one-sentence', text: 'La qualité des prompts est le pourcentage d\'entrées de test où le modèle produit une sortie qui répond à tous les critères de succès définis.' },
           ],
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         testSets: {
           id: 'test-sets',
           title: 'Comment construire un ensemble de tests de prompts ?',
-          content: '**Construisez un ensemble de tests en collectant des entrées sur trois catégories, puis écrivez des critères de passage explicites pour chacun avant d\'exécuter des tests.**\n\n**Entrées de chemin heureux (40%):** Entrées typiques pour lesquelles le prompt a été conçu. Tous devraient réussir.\n\n**Entrées de cas limites (30%):** Entrées aux frontières : entrée vide, entrée très longue, entrée multilingue, formatage inhabituel, champs obligatoires manquants. Celles-ci révèlent la fragilité.\n\n**Entrées adversariales (30%):** Entrées conçues pour faire échouer le prompt : instructions qui contredisent le prompt système, demandes d\'ignorer des contraintes, motifs de type injection. Celles-ci révèlent des lacunes en sécurité et fiabilité.\n\nÉcrivez un critère de passage pour chaque entrée avant d\'exécuter le test. Un ensemble de tests sans sorties attendues n\'est pas une évaluation. Si vous stockez les prompts dans une [bibliothèque de prompts](/prompt-engineering/build-a-prompt-library?lang=fr), suivez le taux de passage de l\'ensemble de tests comme métadonnées par entrée.',
+          content: '**Construisez un ensemble de tests en collectant des entrées sur trois catégories, puis écrivez des critères de passage explicites pour chacun avant d\'exécuter des tests.**\n\n**Entrées de chemin heureux (40%):** Entrées typiques pour lesquelles le prompt a été conçu. Tous devraient réussir.\n\n**Entrées de cas limites (30%):** Entrées aux frontières : entrée vide, entrée très longue, entrée multilingue, formatage inhabituel, champs obligatoires manquants. Celles-ci révèlent la fragilité.\n\n**Entrées adversariales (30%):** Entrées conçues pour faire échouer le prompt : instructions qui contredisent le prompt système, demandes d\'ignorer des contraintes, motifs de type injection. Celles-ci révèlent des lacunes en sécurité et fiabilité.\n\nÉcrivez un critère de passage pour chaque entrée avant d\'exécuter le test. Un ensemble de tests sans sorties attendues n\'est pas une évaluation. Si vous stockez les prompts dans une [bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library), suivez le taux de passage de l\'ensemble de tests comme métadonnées par entrée.',
           promptExamples: [
             {
               bad: 'Testez le prompt avec quelques emails et voyez si ça a l\'air bon.',
@@ -999,7 +999,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         multiModel: {
           id: 'multi-model',
           title: 'La qualité des prompts diffère-t-elle selon les modèles ?',
-          content: '**Oui — le même prompt peut scorer 20+ points différemment entre GPT-4o et Claude Opus 4.7, principalement en raison de la sensibilité aux formats d\'instructions et à la gestion du prompt système.**\n\nLes écarts de qualité sont plus larges pour :\n\n- **Formatage de sortie JSON:** Claude Opus 4.7 suit les schémas complexes plus strictement que GPT-4o\n- **Priorité des instructions:** GPT-4o pèse l\'instruction la plus récente; Claude Opus 4.7 pèse le prompt système\n- **Motifs de refus:** Les modèles OpenAI et Anthropic ont différents seuils pour le contenu borderline\n\nNotre évaluation des prompts de classification et de formatage sur les deux modèles (mise à jour jusqu\'en avril 2026) a trouvé des différences de taux de passage de 10–20 points, le formatage de sortie JSON produisant les plus grands écarts. Consultez [comment tester les prompts sur plusieurs modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) pour la méthodologie d\'évaluation multi-modèle complète.\n\nUtilisez PromptQuorum pour diriger le même ensemble de tests vers GPT-4o, Claude Opus 4.7 et Gemini 2.5 Pro en une exécution et comparez les taux de passage côte à côte.',
+          content: '**Oui — le même prompt peut scorer 20+ points différemment entre GPT-4o et Claude Opus 4.7, principalement en raison de la sensibilité aux formats d\'instructions et à la gestion du prompt système.**\n\nLes écarts de qualité sont plus larges pour :\n\n- **Formatage de sortie JSON:** Claude Opus 4.7 suit les schémas complexes plus strictement que GPT-4o\n- **Priorité des instructions:** GPT-4o pèse l\'instruction la plus récente; Claude Opus 4.7 pèse le prompt système\n- **Motifs de refus:** Les modèles OpenAI et Anthropic ont différents seuils pour le contenu borderline\n\nNotre évaluation des prompts de classification et de formatage sur les deux modèles (mise à jour jusqu\'en avril 2026) a trouvé des différences de taux de passage de 10–20 points, le formatage de sortie JSON produisant les plus grands écarts. Consultez [comment tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) pour la méthodologie d\'évaluation multi-modèle complète.\n\nUtilisez PromptQuorum pour diriger le même ensemble de tests vers GPT-4o, Claude Opus 4.7 et Gemini 2.5 Pro en une exécution et comparez les taux de passage côte à côte.',
           callouts: [
             { type: 'warning', label: 'Avertissement', text: 'Ne supposez pas qu\'un prompt qui réussit sur GPT-4o réussira sur Claude Opus 4.7. Exécutez le même ensemble de tests sur chaque modèle que vous prévoyez de déployer — un prompt peut nécessiter un tuning modèle-spécifique.' },
           ],
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         howToStart: {
           id: 'how-to-start',
           title: 'Comment commencer l\'évaluation',
-          content: '**Commencez avec les critères de succès avant de construire l\'ensemble de tests — évaluer les sorties sans critères prédéfinis réintroduit la subjectivité que le test systématique est conçu pour éliminer.** Parcourez les six étapes ci-dessous pour configurer un système d\'évaluation reproductible. Si le taux de passage baisse après les changements, appliquez les [techniques de réduction de la fragilité des prompts](/prompt-engineering/how-to-reduce-prompt-brittleness?lang=fr) avant de réévaluer.',
+          content: '**Commencez avec les critères de succès avant de construire l\'ensemble de tests — évaluer les sorties sans critères prédéfinis réintroduit la subjectivité que le test systématique est conçu pour éliminer.** Parcourez les six étapes ci-dessous pour configurer un système d\'évaluation reproductible. Si le taux de passage baisse après les changements, appliquez les [techniques de réduction de la fragilité des prompts](/fr/prompt-engineering/how-to-reduce-prompt-brittleness) avant de réévaluer.',
           numberedItems: [
             'Écrivez les critères de succès avant de construire l\'ensemble de tests : comment une sortie correcte ressemble-t-elle en termes de format, contenu et contraintes ?',
             'Collectez 20 entrées de test : 8 chemin heureux, 6 cas limites, 6 adversariales. Écrivez les sorties attendues ou critères de passage pour chacun.',
@@ -1060,12 +1060,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures connexes',
           items: [
-            '[Métriques d\'évaluation des prompts : quoi mesurer et comment](/prompt-engineering/prompt-evaluation-metrics?lang=fr) — Décomposition du taux de passage, BLEU, similarité sémantique et LLM-as-Judge',
-            '[Comment tester les prompts sur plusieurs modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) — Évaluation multi-modèle pour GPT-4o vs Claude vs Gemini',
-            '[Comment réduire la fragilité des prompts](/prompt-engineering/how-to-reduce-prompt-brittleness?lang=fr) — Schémas de sortie, ancres few-shot et gates de régression',
-            '[Construire une bibliothèque de prompts](/prompt-engineering/build-a-prompt-library?lang=fr) — Stockez les ensembles de tests aux côtés des prompts avec métadonnées pour la réutilisation d\'équipe',
-            '[Meilleurs outils d\'optimisation des prompts pour les équipes](/prompt-engineering/best-prompt-optimization-tools-teams?lang=fr) — Outils incluant la gestion des ensembles de tests et le suivi du taux de passage',
-            '[Fondamentaux de l\'optimisation des prompts](/prompt-engineering/fundamentals-of-prompt-optimization?lang=fr) — Techniques essentielles pour améliorer la précision et le taux de conformité aux instructions',
+            '[Métriques d\'évaluation des prompts : quoi mesurer et comment](/fr/prompt-engineering/prompt-evaluation-metrics) — Décomposition du taux de passage, BLEU, similarité sémantique et LLM-as-Judge',
+            '[Comment tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Évaluation multi-modèle pour GPT-4o vs Claude vs Gemini',
+            '[Comment réduire la fragilité des prompts](/fr/prompt-engineering/how-to-reduce-prompt-brittleness) — Schémas de sortie, ancres few-shot et gates de régression',
+            '[Construire une bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library) — Stockez les ensembles de tests aux côtés des prompts avec métadonnées pour la réutilisation d\'équipe',
+            '[Meilleurs outils d\'optimisation des prompts pour les équipes](/fr/prompt-engineering/best-prompt-optimization-tools-teams) — Outils incluant la gestion des ensembles de tests et le suivi du taux de passage',
+            '[Fondamentaux de l\'optimisation des prompts](/fr/prompt-engineering/fundamentals-of-prompt-optimization) — Techniques essentielles pour améliorer la précision et le taux de conformité aux instructions',
           ],
         },
         faq: {
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/how-to-evaluate-prompt-quality',
         inLanguage: 'ja',
         headline: 'プロンプト品質の評価方法：実践的フレームワーク',
         description: 'プロンプト品質をテストセット、Pass/Fail、LLM-as-Judge で評価します。精度、一貫性、指示遵守率を測定。ステップバイステップガイド。2026年4月版。',
@@ -1382,9 +1382,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '関連記事',
           items: [
-            '[プロンプトライブラリの構築方法](/prompt-engineering/build-a-prompt-library?lang=ja) — チーム間でテスト済みプロンプトを共有する方法。評価フレームワークとテストセットを版管理します。',
-            '[LLM の幻覚を減らす方法](/prompt-engineering/reducing-llm-hallucinations?lang=ja) — 幻覚は評価フレームワークの一般的な失敗カテゴリーです。このガイドは幻覚を検出して軽減する方法を説明します。',
-            '[プロンプト最適化フレームワーク](/prompt-engineering/prompt-optimization-guide?lang=ja) — 評価フレームワークを使用してプロンプトを段階的に改善する方法。',
+            '[プロンプトライブラリの構築方法](/ja/prompt-engineering/build-a-prompt-library) — チーム間でテスト済みプロンプトを共有する方法。評価フレームワークとテストセットを版管理します。',
+            '[LLM の幻覚を減らす方法](/ja/prompt-engineering/reducing-llm-hallucinations) — 幻覚は評価フレームワークの一般的な失敗カテゴリーです。このガイドは幻覚を検出して軽減する方法を説明します。',
+            '[プロンプト最適化フレームワーク](/ja/prompt-engineering/prompt-optimization-guide) — 評価フレームワークを使用してプロンプトを段階的に改善する方法。',
           ],
         },
         faqSection: {
@@ -1456,7 +1456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/how-to-evaluate-prompt-quality',
         inLanguage: 'zh',
         headline: '提示词质量评估方法：实践框架',
         description: '使用测试集、Pass/Fail评分和LLM-as-Judge评估提示词质量。测量精度、一致性、指令遵守率。分步指南。2026年4月版。',
@@ -1699,9 +1699,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[如何构建提示词库](/prompt-engineering/build-a-prompt-library?lang=zh) — 在团队间共享经过测试的提示词。评估框架和测试集通过版本控制。',
-            '[减少LLM幻觉](/prompt-engineering/reducing-llm-hallucinations?lang=zh) — 幻觉是评估框架的常见失败类别。本指南说明如何检测和减少幻觉。',
-            '[提示词优化框架](/prompt-engineering/prompt-optimization-guide?lang=zh) — 使用评估框架逐步改进提示词。',
+            '[如何构建提示词库](/zh/prompt-engineering/build-a-prompt-library) — 在团队间共享经过测试的提示词。评估框架和测试集通过版本控制。',
+            '[减少LLM幻觉](/zh/prompt-engineering/reducing-llm-hallucinations) — 幻觉是评估框架的常见失败类别。本指南说明如何检测和减少幻觉。',
+            '[提示词优化框架](/zh/prompt-engineering/prompt-optimization-guide) — 使用评估框架逐步改进提示词。',
           ],
         },
         faqSection: {

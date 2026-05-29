@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Stand Mai 2026 folgt der VRAM-Bedarf eines Modells einer einfachen Formel: Parameteranzahl in Milliarden × 0,7 = ungefähre GB bei Q4-Quantisierung. <strong>Ein 7B-Modell benötigt ~4,9 GB für die Gewichte plus 0,5–1 GB Kontext-Overhead.</strong> Deshalb sind 6 GB das Minimum für die 7–8B-Tier und warum 12 GB die 14B-Tier mit Spielraum freischaltet.',
           'Verwenden Sie die nachstehende Tabelle als schnelle Entscheidungsreferenz. Die Spalte "Geschwindigkeit" setzt Ollama auf einer Desktop-GPU mit Standard-Kontext (2048 Tokens) voraus.',
-          '<strong>Halten Sie stets 1–2 GB VRAM über dem angegebenen Bedarf Ihres Modells frei.</strong> Betriebssysteme, Browser-Tabs und die Ollama-Laufzeit verbrauchen 500 MB–1 GB, selbst wenn kein Modell geladen ist. Eine 6-GB-Karte, die ein 5,5-GB-Modell betreibt, lässt nur 500 MB Spielraum — beim Erhöhen von <code>--num-ctx</code> über 2048 Tokens treten sofort Out-of-Memory-Fehler auf. Für die 6-GB-Tier mit sicherem Spielraum, siehe <a href="/prompt-bites/best-local-llm-6gb-vram?lang=de" class="text-primary hover:underline">beste lokale LLMs für 6 GB VRAM</a>.',
+          '<strong>Halten Sie stets 1–2 GB VRAM über dem angegebenen Bedarf Ihres Modells frei.</strong> Betriebssysteme, Browser-Tabs und die Ollama-Laufzeit verbrauchen 500 MB–1 GB, selbst wenn kein Modell geladen ist. Eine 6-GB-Karte, die ein 5,5-GB-Modell betreibt, lässt nur 500 MB Spielraum — beim Erhöhen von <code>--num-ctx</code> über 2048 Tokens treten sofort Out-of-Memory-Fehler auf. Für die 6-GB-Tier mit sicherem Spielraum, siehe <a href="/de/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">beste lokale LLMs für 6 GB VRAM</a>.',
         ],
         columns: ['VRAM', 'Bestes Modell bei Q4_K_M', 'Geschwindigkeit'],
         rows: [
@@ -178,7 +178,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Wenn ein Modell Ihren VRAM überschreitet, haben Sie drei Möglichkeiten: Quantisierung reduzieren (Q4_K_M statt Q5), das Kontextfenster mit <code>--num-ctx 2048</code> verkleinern oder Ollama Schichten in den System-RAM auslagern lassen.',
           'CPU-Offload funktioniert, ist aber langsam — jede in den RAM verschobene Schicht erhöht die Latenz. Für interaktive Nutzung bleiben Sie innerhalb des VRAM-Limits Ihrer GPU. Die Reduzierung des Kontexts von 4096 auf 2048 Tokens spart etwa 2 GB bei einem 7B-Modell.',
-          'Für eine vollständige Aufschlüsselung der Modellgrößen und die Berechnung hinter VRAM-Schätzungen, siehe den <a href="/local-llms/how-much-vram-local-llm?lang=de" class="text-primary hover:underline">vollständigen VRAM-Leitfaden für lokale LLMs</a>. Speziell für die 7B-Tier, siehe <a href="/prompt-bites/how-much-ram-for-7b-model?lang=de" class="text-primary hover:underline">wie viel RAM ein 7B-Modell benötigt</a>.',
+          'Für eine vollständige Aufschlüsselung der Modellgrößen und die Berechnung hinter VRAM-Schätzungen, siehe den <a href="/de/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">vollständigen VRAM-Leitfaden für lokale LLMs</a>. Speziell für die 7B-Tier, siehe <a href="/de/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">wie viel RAM ein 7B-Modell benötigt</a>.',
         ],
       },
       faq: {
@@ -191,7 +191,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann ich ein 7B-Modell auf 4 GB VRAM betreiben?',
-            a: 'Nein. Ein 7B-Modell bei Q4 benötigt 5–6 GB VRAM. Die kleinste nutzbare Quantisierung überschreitet immer noch 4 GB. Siehe <a href="/prompt-bites/how-much-ram-for-7b-model?lang=de" class="text-primary hover:underline">wie viel RAM ein 7B-Modell benötigt</a> für die vollständige Aufschlüsselung.',
+            a: 'Nein. Ein 7B-Modell bei Q4 benötigt 5–6 GB VRAM. Die kleinste nutzbare Quantisierung überschreitet immer noch 4 GB. Siehe <a href="/de/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">wie viel RAM ein 7B-Modell benötigt</a> für die vollständige Aufschlüsselung.',
           },
           {
             q: 'Beeinflusst die Kontextfenstergröße den VRAM-Verbrauch?',
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'En mai 2026, le besoin en VRAM d\'un modèle suit une formule simple : nombre de paramètres en milliards × 0,7 = Go approximatifs en quantisation Q4. <strong>Un modèle 7B nécessite ~4,9 Go pour les poids, plus 0,5–1 Go de surcharge de contexte.</strong> C\'est pourquoi 6 Go est le minimum pour le tier 7–8B, et pourquoi 12 Go débloque le tier 14B avec de la marge.',
           'Utilisez le tableau ci-dessous comme référence de décision rapide. La colonne "Vitesse" suppose Ollama sur un GPU de bureau tournant avec le contexte par défaut (2048 tokens).',
-          '<strong>Gardez toujours 1–2 Go de VRAM libres au-dessus des besoins déclarés de votre modèle.</strong> Les systèmes d\'exploitation, les onglets de navigateur et le runtime d\'Ollama consomment 500 Mo–1 Go même sans modèle chargé. Une carte 6 Go faisant tourner un modèle de 5,5 Go ne laisse que 500 Mo de marge — vous rencontrerez des erreurs de mémoire insuffisante dès que vous augmentez <code>--num-ctx</code> au-delà de 2048 tokens. Pour le tier 6 Go avec une marge sécurisée, voir <a href="/prompt-bites/best-local-llm-6gb-vram?lang=fr" class="text-primary hover:underline">les meilleurs LLMs locaux pour 6 Go de VRAM</a>.',
+          '<strong>Gardez toujours 1–2 Go de VRAM libres au-dessus des besoins déclarés de votre modèle.</strong> Les systèmes d\'exploitation, les onglets de navigateur et le runtime d\'Ollama consomment 500 Mo–1 Go même sans modèle chargé. Une carte 6 Go faisant tourner un modèle de 5,5 Go ne laisse que 500 Mo de marge — vous rencontrerez des erreurs de mémoire insuffisante dès que vous augmentez <code>--num-ctx</code> au-delà de 2048 tokens. Pour le tier 6 Go avec une marge sécurisée, voir <a href="/fr/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">les meilleurs LLMs locaux pour 6 Go de VRAM</a>.',
         ],
         columns: ['VRAM', 'Meilleur modèle en Q4_K_M', 'Vitesse'],
         rows: [
@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Si un modèle dépasse votre VRAM, vous avez trois options : réduire la quantisation (Q4_K_M au lieu de Q5), réduire la fenêtre de contexte avec <code>--num-ctx 2048</code>, ou laisser Ollama décharger des couches vers la RAM système.',
           'Le déchargement CPU fonctionne mais est lent — chaque couche déplacée vers la RAM ajoute de la latence. Pour un usage interactif, restez dans les limites VRAM de votre GPU. Réduire le contexte de 4096 à 2048 tokens économise environ 2 Go sur un modèle 7B.',
-          'Pour une répartition complète des tailles de modèles et les calculs derrière les estimations VRAM, voir le <a href="/local-llms/how-much-vram-local-llm?lang=fr" class="text-primary hover:underline">guide VRAM complet pour les LLMs locaux</a>. Pour le tier 7B spécifiquement, voir <a href="/prompt-bites/how-much-ram-for-7b-model?lang=fr" class="text-primary hover:underline">combien de RAM nécessite un modèle 7B</a>.',
+          'Pour une répartition complète des tailles de modèles et les calculs derrière les estimations VRAM, voir le <a href="/fr/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">guide VRAM complet pour les LLMs locaux</a>. Pour le tier 7B spécifiquement, voir <a href="/fr/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">combien de RAM nécessite un modèle 7B</a>.',
         ],
       },
       faq: {
@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Puis-je faire tourner un modèle 7B sur 4 Go de VRAM ?',
-            a: 'Non. Un modèle 7B en Q4 nécessite 5–6 Go de VRAM. La plus petite quantisation utilisable dépasse encore les 4 Go. Voir <a href="/prompt-bites/how-much-ram-for-7b-model?lang=fr" class="text-primary hover:underline">combien de RAM nécessite un modèle 7B</a> pour la répartition complète.',
+            a: 'Non. Un modèle 7B en Q4 nécessite 5–6 Go de VRAM. La plus petite quantisation utilisable dépasse encore les 4 Go. Voir <a href="/fr/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">combien de RAM nécessite un modèle 7B</a> pour la répartition complète.',
           },
           {
             q: 'La taille de la fenêtre de contexte affecte-t-elle l\'utilisation de la VRAM ?',
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '2026年5月現在、モデルのVRAM要件は単純な計算式に従います：パラメータ数（十億単位）× 0.7 = Q4量化での概算GB。<strong>7Bモデルは重みに~4.9 GB、加えてコンテキストオーバーヘッドに0.5–1 GBが必要です。</strong>これが7–8Bティアの最小が6 GBである理由であり、12 GBが余裕を持って14Bティアを解放する理由です。',
           '以下の表を素早い決定リファレンスとして使用してください。「速度」列はデフォルトコンテキスト（2048トークン）で動作するデスクトップGPU上のOllamaを前提としています。',
-          '<strong>モデルの必要VRAMより常に1–2 GB多くの空き容量を確保してください。</strong>OSや、ブラウザタブ、Ollamaのランタイムは、モデルを読み込んでいない状態でも500 MB–1 GBを消費します。5.5 GBのモデルを動かす6 GBカードには500 MBしか余裕がなく、<code>--num-ctx</code>を2048トークン超に増やした瞬間にメモリ不足エラーが発生します。安全な余裕のある6 GBティアについては、<a href="/prompt-bites/best-local-llm-6gb-vram?lang=ja" class="text-primary hover:underline">6 GB VRAM向け最良ローカルLLM</a>を参照してください。',
+          '<strong>モデルの必要VRAMより常に1–2 GB多くの空き容量を確保してください。</strong>OSや、ブラウザタブ、Ollamaのランタイムは、モデルを読み込んでいない状態でも500 MB–1 GBを消費します。5.5 GBのモデルを動かす6 GBカードには500 MBしか余裕がなく、<code>--num-ctx</code>を2048トークン超に増やした瞬間にメモリ不足エラーが発生します。安全な余裕のある6 GBティアについては、<a href="/ja/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB VRAM向け最良ローカルLLM</a>を参照してください。',
         ],
         columns: ['VRAM', 'Q4_K_Mでの最良モデル', '速度'],
         rows: [
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'モデルがVRAMを超える場合、3つの選択肢があります：量化を下げる（Q5の代わりにQ4_K_M）、<code>--num-ctx 2048</code>でコンテキストウィンドウを縮小する、またはOllamaにレイヤーをシステムRAMにオフロードさせる。',
           'CPUオフロードは機能しますが低速です — RAMに移動された各レイヤーがレイテンシを増加させます。インタラクティブな使用では、GPUのVRAM制限内に収めてください。コンテキストを4096から2048トークンに削減すると、7Bモデルで約2 GBを節約できます。',
-          'モデルサイズの完全な内訳とVRAM推定の計算については、<a href="/local-llms/how-much-vram-local-llm?lang=ja" class="text-primary hover:underline">ローカルLLMの完全VRAMガイド</a>を参照してください。7Bティアについては、<a href="/prompt-bites/how-much-ram-for-7b-model?lang=ja" class="text-primary hover:underline">7Bモデルに必要なRAM量</a>を参照してください。',
+          'モデルサイズの完全な内訳とVRAM推定の計算については、<a href="/ja/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">ローカルLLMの完全VRAMガイド</a>を参照してください。7Bティアについては、<a href="/ja/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">7Bモデルに必要なRAM量</a>を参照してください。',
         ],
       },
       faq: {
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '4 GB VRAMで7Bモデルを動かせますか？',
-            a: 'いいえ。Q4の7BモデルにはVRAM 5–6 GBが必要です。最小の使用可能な量化でも4 GBを超えます。完全な内訳については<a href="/prompt-bites/how-much-ram-for-7b-model?lang=ja" class="text-primary hover:underline">7Bモデルに必要なRAM量</a>を参照してください。',
+            a: 'いいえ。Q4の7BモデルにはVRAM 5–6 GBが必要です。最小の使用可能な量化でも4 GBを超えます。完全な内訳については<a href="/ja/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">7Bモデルに必要なRAM量</a>を参照してください。',
           },
           {
             q: 'コンテキストウィンドウのサイズはVRAM使用量に影響しますか？',
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '截至2026年5月，模型的显存需求遵循一个简单公式：参数量（十亿为单位）× 0.7 = Q4量化下的近似GB数。<strong>7B模型的权重需要约4.9 GB，另加0.5–1 GB的上下文开销。</strong>这就是为什么6 GB是7–8B档位的最低要求，以及12 GB能够为14B档位留有余量的原因。',
           '请将下表作为快速决策参考。「速度」列假设Ollama在台式机GPU上以默认上下文（2048令牌）运行。',
-          '<strong>始终在模型声明需求基础上保留1–2 GB的空闲显存。</strong>操作系统、浏览器标签页和Ollama运行时即使在未加载模型时也会消耗500 MB–1 GB。运行5.5 GB模型的6 GB显卡只剩500 MB余量——一旦将<code>--num-ctx</code>增加到2048令牌以上就会出现内存不足错误。有关安全余量的6 GB档位建议，请参阅<a href="/prompt-bites/best-local-llm-6gb-vram?lang=zh" class="text-primary hover:underline">6 GB显存最佳本地LLM</a>。',
+          '<strong>始终在模型声明需求基础上保留1–2 GB的空闲显存。</strong>操作系统、浏览器标签页和Ollama运行时即使在未加载模型时也会消耗500 MB–1 GB。运行5.5 GB模型的6 GB显卡只剩500 MB余量——一旦将<code>--num-ctx</code>增加到2048令牌以上就会出现内存不足错误。有关安全余量的6 GB档位建议，请参阅<a href="/zh/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB显存最佳本地LLM</a>。',
         ],
         columns: ['显存', 'Q4_K_M最佳模型', '速度'],
         rows: [
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '当模型超出显存时，您有三个选择：降低量化等级（用Q4_K_M代替Q5）、使用<code>--num-ctx 2048</code>缩小上下文窗口，或让Ollama将层卸载到系统RAM。',
           'CPU卸载可以运行但速度较慢——每个移至RAM的层都会增加延迟。对于交互式使用，请保持在GPU显存限制内。将上下文从4096缩减到2048令牌，7B模型约可节省2 GB显存。',
-          '有关模型大小的完整分类以及显存估算的计算方法，请参阅<a href="/local-llms/how-much-vram-local-llm?lang=zh" class="text-primary hover:underline">本地LLM完整显存指南</a>。关于7B档位的详情，请参阅<a href="/prompt-bites/how-much-ram-for-7b-model?lang=zh" class="text-primary hover:underline">7B模型所需RAM量</a>。',
+          '有关模型大小的完整分类以及显存估算的计算方法，请参阅<a href="/zh/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">本地LLM完整显存指南</a>。关于7B档位的详情，请参阅<a href="/zh/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">7B模型所需RAM量</a>。',
         ],
       },
       faq: {
@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '4 GB显存能运行7B模型吗？',
-            a: '不能。Q4的7B模型需要5–6 GB显存，最小可用量化仍超过4 GB。完整分析请参阅<a href="/prompt-bites/how-much-ram-for-7b-model?lang=zh" class="text-primary hover:underline">7B模型所需RAM量</a>。',
+            a: '不能。Q4的7B模型需要5–6 GB显存，最小可用量化仍超过4 GB。完整分析请参阅<a href="/zh/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">7B模型所需RAM量</a>。',
           },
           {
             q: '上下文窗口大小会影响显存使用量吗？',
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'A mayo de 2026, el consumo de VRAM de un modelo sigue una fórmula sencilla: parámetros en miles de millones × 0,7 = GB aproximados en cuantización Q4. <strong>Un modelo 7B necesita ~4,9 GB para los pesos, más 0,5–1 GB de sobrecarga de contexto.</strong> Por eso 6 GB es el mínimo para el rango 7–8B, y 12 GB desbloquea el rango 14B con margen.',
           'Usa la tabla siguiente como referencia rápida. La columna "Velocidad" asume Ollama en una GPU de escritorio con contexto predeterminado (2048 tokens).',
-          '<strong>Deja siempre 1–2 GB de VRAM libres por encima de las necesidades declaradas del modelo.</strong> El sistema operativo, las pestañas del navegador y el runtime de Ollama consumen 500 MB–1 GB incluso sin modelo cargado. Una tarjeta de 6 GB ejecutando un modelo de 5,5 GB solo deja 500 MB de margen — tendrás errores de memoria en cuanto aumente <code>--num-ctx</code> más allá de 2048 tokens. Para el rango de 6 GB con margen seguro, consulta <a href="/prompt-bites/best-local-llm-6gb-vram?lang=es" class="text-primary hover:underline">los mejores LLMs locales para 6 GB de VRAM</a>.',
+          '<strong>Deja siempre 1–2 GB de VRAM libres por encima de las necesidades declaradas del modelo.</strong> El sistema operativo, las pestañas del navegador y el runtime de Ollama consumen 500 MB–1 GB incluso sin modelo cargado. Una tarjeta de 6 GB ejecutando un modelo de 5,5 GB solo deja 500 MB de margen — tendrás errores de memoria en cuanto aumente <code>--num-ctx</code> más allá de 2048 tokens. Para el rango de 6 GB con margen seguro, consulta <a href="/es/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">los mejores LLMs locales para 6 GB de VRAM</a>.',
         ],
         columns: ['VRAM', 'Mejor modelo en Q4_K_M', 'Velocidad'],
         rows: [
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Si un modelo supera tu VRAM tienes tres opciones: reducir la cuantización (Q4_K_M en lugar de Q5), reducir la ventana de contexto con <code>--num-ctx 2048</code>, o dejar que Ollama descargue capas en la RAM del sistema.',
           'El offloading a CPU funciona pero es lento — cada capa movida a RAM añade latencia. Para uso interactivo, mantente dentro del límite de VRAM de tu GPU. Reducir el contexto de 4096 a 2048 tokens ahorra aproximadamente 2 GB en un modelo 7B.',
-          'Para un desglose completo de tamaños de modelos y el cálculo de estimación de VRAM, consulta la <a href="/local-llms/how-much-vram-local-llm?lang=es" class="text-primary hover:underline">guía completa de VRAM para LLMs locales</a>. Para el rango 7B específicamente, consulta <a href="/prompt-bites/how-much-ram-for-7b-model?lang=es" class="text-primary hover:underline">cuánta RAM necesita un modelo 7B</a>.',
+          'Para un desglose completo de tamaños de modelos y el cálculo de estimación de VRAM, consulta la <a href="/es/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">guía completa de VRAM para LLMs locales</a>. Para el rango 7B específicamente, consulta <a href="/es/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">cuánta RAM necesita un modelo 7B</a>.',
         ],
       },
       faq: {
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puedo ejecutar un modelo 7B con 4 GB de VRAM?',
-            a: 'No. Un modelo 7B en Q4 necesita 5–6 GB de VRAM. La cuantización más pequeña utilizable sigue superando los 4 GB. Consulta <a href="/prompt-bites/how-much-ram-for-7b-model?lang=es" class="text-primary hover:underline">cuánta RAM necesita un modelo 7B</a> para el desglose completo.',
+            a: 'No. Un modelo 7B en Q4 necesita 5–6 GB de VRAM. La cuantización más pequeña utilizable sigue superando los 4 GB. Consulta <a href="/es/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">cuánta RAM necesita un modelo 7B</a> para el desglose completo.',
           },
           {
             q: '¿Afecta el tamaño de la ventana de contexto al uso de VRAM?',

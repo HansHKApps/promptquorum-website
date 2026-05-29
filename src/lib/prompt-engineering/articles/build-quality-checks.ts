@@ -539,13 +539,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'KI-Build-Quality-Checks: Halluzinationen und gefälschte Abhängigkeiten erkennen',
         description: 'CI/CD-Qualitätsgates für KI-generierten Code entwerfen. Mit Halluzinationserkennung, Abhängigkeitsvalidierung, Sicherheitsgates und entwicklerfreundlichen Praktiken.',
-        url: 'https://www.promptquorum.com/prompt-engineering/build-quality-checks?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/build-quality-checks',
         inLanguage: 'de',
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks?lang=de', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/build-quality-checks', width: 1200, height: 630 },
         keywords: ['Qualitätsgates', 'CI/CD', 'KI-Halluzinationen', 'Code-Review', 'Sicherheitsscanning', 'Abhängigkeitsvalidierung', 'Build-Prüfungen'],
         proficiencyLevel: 'Intermediate',
         audience: { '@type': 'Audience', audienceType: 'Entwicklungsleiter und DevOps-Ingenieure, die KI-Coding-Assistenten integrieren' },
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Was ändert sich, wenn KI Ihren Code schreibt?',
           content: [
             '**Wenn KI Code schreibt, müssen Qualitätsgates eine neue Klasse von Problemen abwehren: halluzinierte APIs, gefälschte Abhängigkeiten und Muster, die korrekt aussehen, aber zur Laufzeit oder unter Angriffen versagen.** Das unterscheidet sich strukturell von dem, was Lint und Unit-Tests erkennen sollten.',
-            'Stand Q2 2026 werden diese Probleme konsistent über Sprachen und Modelle hinweg berichtet. Beobachtete Probleme mit [KI-generiertem Code](/prompt-engineering/write-better-code-with-ai?lang=de) umfassen:',
+            'Stand Q2 2026 werden diese Probleme konsistent über Sprachen und Modelle hinweg berichtet. Beobachtete Probleme mit [KI-generiertem Code](/de/prompt-engineering/write-better-code-with-ai) umfassen:',
           ],
           items: [
             '**Sicherheitslücken:** Studien und Branchenberichte stellen konsistent fest, dass KI-generierte Lösungen für gängige Programmierprobleme häufiger ausnutzbare Fehler enthalten als manuell geprüfter Code – insbesondere bei Eingabevalidierung, Authentifizierung und Kryptografie.',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           callouts: [
             { type: 'key-point', label: 'Quick Facts', text: '≥80 % Coverage-Schwellenwert empfohlen für KI-generierte Zeilen. 5-stufige Gate-Architektur: Pre-Commit → PR-Review → CI → Sicherheit → Laufzeit-Monitoring. Null neue kritische Findings auf geänderten Dateien erforderlich.' },
-            { type: 'warning', label: 'Slopsquatting-Risiko', text: 'Wenn ein KI-Modell einen Paketnamen erfindet, können Angreifer diesen Namen mit schädlichem Code registrieren. Sobald Ihr Team npm install oder pip install darauf ausführt, wird beliebiger Code in Ihrer Build-Umgebung ausgeführt. Siehe auch: [Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de).' },
+            { type: 'warning', label: 'Slopsquatting-Risiko', text: 'Wenn ein KI-Modell einen Paketnamen erfindet, können Angreifer diesen Namen mit schädlichem Code registrieren. Sobald Ihr Team npm install oder pip install darauf ausführt, wird beliebiger Code in Ihrer Build-Umgebung ausgeführt. Siehe auch: [Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security).' },
           ],
         },
         definitionConclusion: {
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'hallucination-types',
           title: 'Welche Halluzinationstypen muss Ihre Pipeline erkennen?',
           content: [
-            '**Code-Halluzinationen sind nicht nur Syntaxfehler; sie umfassen logische, strukturelle und abhängigkeitsbezogene Fälschungen, die oberflächliche Prüfungen oft bestehen.** Effektive Gates zu entwerfen erfordert das Verständnis jeder Kategorie. Techniken zur Reduzierung auf Prompt-Ebene finden Sie unter [KI-Halluzinationen: So stoppen Sie sie](/prompt-engineering/ai-hallucinations-how-to-stop?lang=de).',
+            '**Code-Halluzinationen sind nicht nur Syntaxfehler; sie umfassen logische, strukturelle und abhängigkeitsbezogene Fälschungen, die oberflächliche Prüfungen oft bestehen.** Effektive Gates zu entwerfen erfordert das Verständnis jeder Kategorie. Techniken zur Reduzierung auf Prompt-Ebene finden Sie unter [KI-Halluzinationen: So stoppen Sie sie](/de/prompt-engineering/ai-hallucinations-how-to-stop).',
             'Häufige Kategorien, auf die Sie Ihre Gates ausrichten sollten:',
           ],
           items: [
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Pre-Commit / lokale Hooks** — Grundlegendes Formatting und Linting erzwingen. Optional: direktes Committen großer KI-generierter Diffs ohne kurze menschliche Zusammenfassung der Änderungen verbieten.',
             '**Pull-Request-Qualitätsgate** — KI-spezifische Prüfungen auf gewöhnliche aufsetzen: Unit-Tests, Coverage-Schwellenwerte, Style, konventionelle statische Analyse, plus KI-bewusste Checks (unbekannte oder nicht existierende Pakete erkennen, referenzierte APIs überprüfen, neue Endpunkte ohne Tests markieren).',
-            '**Tiefere CI-Analyse** — Erweiterte Testsuiten und Property-based Tests für KI-berührten Code ausführen. [Sicherheits-Scanner (SAST/DAST)](/prompt-engineering/ai-code-review?lang=de) mit Fokus auf neu geänderte Codepfade einsetzen. Komplexität und potenzielle Performance-Hotspots analysieren.',
+            '**Tiefere CI-Analyse** — Erweiterte Testsuiten und Property-based Tests für KI-berührten Code ausführen. [Sicherheits-Scanner (SAST/DAST)](/de/prompt-engineering/ai-code-review) mit Fokus auf neu geänderte Codepfade einsetzen. Komplexität und potenzielle Performance-Hotspots analysieren.',
             '**Muster- und Drift-Erkennung** — Neuen Code mit etablierten Projektmustern vergleichen: Architektur, Fehlerbehandlung, Logging. Code markieren, der stark von den üblichen Idiomen abweicht.',
             '**Sicherheits- und Abhängigkeitsgates** — „Keine neuen kritischen Schwachstellen" aus Ihren Sicherheits-Tools auf geänderten Zeilen verlangen. Builds blockieren, wenn neue Abhängigkeiten nicht genehmigt, nicht gepinnt oder aus verdächtigen Quellen stammen.',
             '**Laufzeit-Monitoring und Feedback** — Fehlerraten, Latenz und Ressourcennutzung für Endpunkte verfolgen, die durch KI-gestützte Änderungen kürzlich modifiziert wurden. Vorfälle in Prompts und Qualitätsregeln zurückführen, um Gates über die Zeit zu härten.',
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Tests und Coverage** — Mindest-Coverage für neue oder geänderte Zeilen (zum Beispiel ≥80 %). Pflichthafte Tests für alle neuen öffentlichen Endpunkte, Background-Jobs oder exportierten Funktionen.',
-            '**Sicherheitsgates** — Keine neuen kritischen Findings von SAST oder Abhängigkeits-Scannern auf geändertem Code. Manuelle Reviews für KI-generierten Code verlangen, der Authentifizierung, Zahlungen, Admin-Funktionen oder personenbezogene Daten berührt. Empfehlung: [KI-Code-Review: Tools und Verfahren](/prompt-engineering/ai-code-review?lang=de).',
+            '**Sicherheitsgates** — Keine neuen kritischen Findings von SAST oder Abhängigkeits-Scannern auf geändertem Code. Manuelle Reviews für KI-generierten Code verlangen, der Authentifizierung, Zahlungen, Admin-Funktionen oder personenbezogene Daten berührt. Empfehlung: [KI-Code-Review: Tools und Verfahren](/de/prompt-engineering/ai-code-review).',
             '**Abhängigkeitssanitätsprüfungen** — Neue Pakete müssen in der Ziel-Registry existieren und Mindest-Reifesignale erfüllen (Downloads, Stars, letztes Veröffentlichungsdatum), sofern nicht explizit auf der Whitelist. Bekannte Typosquats brechen den Build sofort ab.',
             '**API-Realitätschecks** — Statische Analyse, die sicherstellt, dass alle aufgerufenen Methoden und Endpunkte in Ihrer Codebasis oder dokumentierten SDK vorhanden sind. Optional: Verwendung auf eine Whitelist genehmigter APIs in sensiblen Bereichen beschränken.',
             '**Muster- und Performance-Prüfungen** — Standard-Fehlerbehandlungs- und Logging-Wrapper erzwingen. Neu hinzugefügte Funktionen mit ungewöhnlich hoher Komplexität oder offensichtlichen O(n²)/O(n³)-Mustern auf großen Datenpfaden markieren.',
@@ -894,12 +894,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
-            '[Besseren Code mit KI schreiben](/prompt-engineering/write-better-code-with-ai?lang=de) — wie man Prompts für die Code-Generierung strukturiert, die überprüfbaren Output produzieren',
-            '[KI-Code-Review: Tools und Verfahren](/prompt-engineering/ai-code-review?lang=de) — KI für Code-Qualität und Sicherheitsüberprüfung einsetzen',
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — grundlegende Prinzipien für zuverlässige KI-Ausgaben',
-            '[Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — Angriffsmuster, die KI-gestützte Entwicklungs-Pipelines betreffen',
-            '[KI-Halluzinationen: So stoppen Sie sie](/prompt-engineering/ai-hallucinations-how-to-stop?lang=de) — Techniken zur Reduzierung von Halluzinationen in KI-generierten Ausgaben',
-            '[Wie man Prompt-Qualität bewertet](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) — Bewertungsrahmen für Code-Generierungsqualität',
+            '[Besseren Code mit KI schreiben](/de/prompt-engineering/write-better-code-with-ai) — wie man Prompts für die Code-Generierung strukturiert, die überprüfbaren Output produzieren',
+            '[KI-Code-Review: Tools und Verfahren](/de/prompt-engineering/ai-code-review) — KI für Code-Qualität und Sicherheitsüberprüfung einsetzen',
+            '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — grundlegende Prinzipien für zuverlässige KI-Ausgaben',
+            '[Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Angriffsmuster, die KI-gestützte Entwicklungs-Pipelines betreffen',
+            '[KI-Halluzinationen: So stoppen Sie sie](/de/prompt-engineering/ai-hallucinations-how-to-stop) — Techniken zur Reduzierung von Halluzinationen in KI-generierten Ausgaben',
+            '[Wie man Prompt-Qualität bewertet](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Bewertungsrahmen für Code-Generierungsqualität',
           ],
         },
         sources: {
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        url: 'https://www.promptquorum.com/prompt-engineering/build-quality-checks?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/build-quality-checks',
         inLanguage: 'es',
         keywords: ['gates de calidad', 'CI/CD', 'alucinaciones IA', 'revisión de código', 'escaneo de seguridad', 'validación de dependencias', 'controles de build'],
         proficiencyLevel: 'Intermediate',
@@ -1222,12 +1222,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Escribe mejor código con IA](/prompt-engineering/write-better-code-with-ai?lang=es) — cómo estructurar prompts para la generación de código que produce salida revisable',
-            '[Revisión de código IA: herramientas y verificación](/prompt-engineering/ai-code-review?lang=es) — usar IA para revisar la calidad del código y la seguridad',
-            '[¿Qué es el prompt engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — principios fundamentales para la salida fiable de IA',
-            '[Inyección de prompts y seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — patrones de ataque que afectan los pipelines de desarrollo asistido por IA',
-            '[Alucinaciones de IA: cómo detenerlas](/prompt-engineering/ai-hallucinations-how-to-stop?lang=es) — técnicas para reducir alucinaciones en salidas de IA generadas',
-            '[Cómo evaluar la calidad del prompt](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — marcos de evaluación aplicables a la calidad de generación de código',
+            '[Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai) — cómo estructurar prompts para la generación de código que produce salida revisable',
+            '[Revisión de código IA: herramientas y verificación](/es/prompt-engineering/ai-code-review) — usar IA para revisar la calidad del código y la seguridad',
+            '[¿Qué es el prompt engineering?](/es/prompt-engineering/what-is-prompt-engineering) — principios fundamentales para la salida fiable de IA',
+            '[Inyección de prompts y seguridad](/es/prompt-engineering/prompt-injection-and-security) — patrones de ataque que afectan los pipelines de desarrollo asistido por IA',
+            '[Alucinaciones de IA: cómo detenerlas](/es/prompt-engineering/ai-hallucinations-how-to-stop) — técnicas para reducir alucinaciones en salidas de IA generadas',
+            '[Cómo evaluar la calidad del prompt](/es/prompt-engineering/how-to-evaluate-prompt-quality) — marcos de evaluación aplicables a la calidad de generación de código',
           ],
         },
         sources: {
@@ -1282,13 +1282,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'Qualité CI/CD pour code généré par IA : détecter hallucinations et dépendances fabriquées',
         description: 'Concevoir des gates qualité CI/CD pour le code généré par IA. Inclut la détection des hallucinations, la validation des dépendances, les gates sécurité et les bonnes pratiques.',
-        url: 'https://www.promptquorum.com/prompt-engineering/build-quality-checks?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/build-quality-checks',
         inLanguage: 'fr',
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks?lang=fr', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/build-quality-checks', width: 1200, height: 630 },
         keywords: ['gates qualité', 'CI/CD', 'hallucinations IA', 'revue de code', 'analyse statique', 'validation des dépendances', 'checks de build'],
         proficiencyLevel: 'Intermediate',
         audience: { '@type': 'Audience', audienceType: 'Responsables d\'équipes de développement et ingénieurs DevOps intégrant des assistants IA' },
@@ -1351,7 +1351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Qu\'est-ce qui change quand l\'IA écrit votre code ?',
           content: [
             '**Quand l\'IA écrit du code, les gates qualité doivent se défendre contre une nouvelle classe de problèmes : API hallucinées, dépendances fabriquées et patterns qui semblent corrects mais échouent à l\'exécution ou sous attaque.** C\'est structurellement différent de ce que lint et tests unitaires ont été conçus à détecter.',
-            'Au T2 2026, ces problèmes sont signalés de façon constante dans tous les langages et modèles. Problèmes observés avec le [code généré par IA](/prompt-engineering/write-better-code-with-ai?lang=fr) :',
+            'Au T2 2026, ces problèmes sont signalés de façon constante dans tous les langages et modèles. Problèmes observés avec le [code généré par IA](/fr/prompt-engineering/write-better-code-with-ai) :',
           ],
           items: [
             '**Vulnérabilités de sécurité :** études et rapports sectoriels montrent systématiquement que les solutions IA contiennent des bugs exploitables à des taux supérieurs au code relu par des humains — notamment en validation des entrées, authentification et cryptographie.',
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           callouts: [
             { type: 'key-point', label: 'Faits clés', text: 'Seuil de couverture ≥80 % recommandé pour les lignes générées par IA. Architecture en 5 étapes : pre-commit → révision PR → CI → sécurité → monitoring en production. Zéro nouveau finding critique exigé sur les fichiers modifiés.' },
-            { type: 'warning', label: 'Risque de slopsquatting', text: 'Quand un modèle IA invente un nom de package, des attaquants peuvent enregistrer ce nom avec du code malveillant. Dès que votre équipe exécute npm install ou pip install dessus, le code s\'exécute dans votre environnement de build. Voir aussi : [Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr).' },
+            { type: 'warning', label: 'Risque de slopsquatting', text: 'Quand un modèle IA invente un nom de package, des attaquants peuvent enregistrer ce nom avec du code malveillant. Dès que votre équipe exécute npm install ou pip install dessus, le code s\'exécute dans votre environnement de build. Voir aussi : [Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security).' },
           ],
         },
         definitionConclusion: {
@@ -1372,7 +1372,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'hallucination-types',
           title: 'Quels types d\'hallucinations votre pipeline doit-il détecter ?',
           content: [
-            '**Les hallucinations de code ne sont pas seulement des erreurs de syntaxe ; elles incluent des fabrications logiques, structurelles et au niveau des dépendances qui passent souvent les vérifications superficielles.** Pour concevoir des gates efficaces, il faut comprendre chaque catégorie. Pour les techniques de réduction au niveau du prompt, voir [Hallucinations IA : comment les stopper](/prompt-engineering/ai-hallucinations-how-to-stop?lang=fr).',
+            '**Les hallucinations de code ne sont pas seulement des erreurs de syntaxe ; elles incluent des fabrications logiques, structurelles et au niveau des dépendances qui passent souvent les vérifications superficielles.** Pour concevoir des gates efficaces, il faut comprendre chaque catégorie. Pour les techniques de réduction au niveau du prompt, voir [Hallucinations IA : comment les stopper](/fr/prompt-engineering/ai-hallucinations-how-to-stop).',
             'Catégories courantes à couvrir :',
           ],
           items: [
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Pre-commit / hooks locaux** — Appliquer le formatage et le lint de base. En option : interdire le commit direct de larges diffs générés par IA sans résumé humain des changements.',
             '**Gate qualité au niveau PR** — Ajouter des checks spécifiques à l\'IA par-dessus les checks normaux : tests unitaires, seuils de couverture, style, analyse statique, plus des checks IA (détecter les packages inconnus ou inexistants, vérifier l\'existence des API référencées, signaler les nouveaux endpoints sans tests).',
-            '**Analyse CI approfondie** — Exécuter des suites de tests étendues et des tests à base de propriétés pour le code touché par IA. Utiliser des [scanners sécurité (SAST/DAST)](/prompt-engineering/ai-code-review?lang=fr) sur les chemins de code nouvellement modifiés. Analyser la complexité et les hotspots de performance potentiels.',
+            '**Analyse CI approfondie** — Exécuter des suites de tests étendues et des tests à base de propriétés pour le code touché par IA. Utiliser des [scanners sécurité (SAST/DAST)](/fr/prompt-engineering/ai-code-review) sur les chemins de code nouvellement modifiés. Analyser la complexité et les hotspots de performance potentiels.',
             '**Détection de patterns et de dérives** — Comparer le nouveau code aux patterns établis du projet : architecture, gestion des erreurs, logging. Signaler le code qui s\'écarte fortement des idiomes habituels.',
             '**Gates sécurité et dépendances** — Exiger « zéro nouvelle vulnérabilité critique » des outils de sécurité sur les lignes modifiées. Bloquer les builds si de nouvelles dépendances sont non approuvées, non épinglées ou de sources suspectes.',
             '**Monitoring en production et feedback** — Suivre les taux d\'erreur, la latence et l\'utilisation des ressources pour les endpoints récemment modifiés par des changements IA. Réintégrer les incidents dans les prompts et règles qualité.',
@@ -1425,7 +1425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Tests et couverture** — Couverture minimale pour les lignes nouvelles ou modifiées (par exemple ≥80 %). Tests obligatoires pour tous les nouveaux endpoints publics, jobs en arrière-plan ou fonctions exportées.',
-            '**Gates sécurité** — Zéro nouveau finding critique des outils SAST ou scanners de dépendances sur le code modifié. Exiger une revue manuelle pour le code IA touchant l\'authentification, les paiements, les fonctions admin ou les données personnelles. Guide outillage : [Revue de code IA : outils et méthodes](/prompt-engineering/ai-code-review?lang=fr).',
+            '**Gates sécurité** — Zéro nouveau finding critique des outils SAST ou scanners de dépendances sur le code modifié. Exiger une revue manuelle pour le code IA touchant l\'authentification, les paiements, les fonctions admin ou les données personnelles. Guide outillage : [Revue de code IA : outils et méthodes](/fr/prompt-engineering/ai-code-review).',
             '**Checks de sanité des dépendances** — Les nouveaux packages doivent exister dans le registre cible et satisfaire des signaux minimaux de maturité (téléchargements, étoiles, date de dernière publication), sauf exception explicite. Les typosquats connus font échouer le build immédiatement.',
             '**Vérifications de réalité des API** — Analyse statique s\'assurant que toutes les méthodes et endpoints appelés existent dans votre codebase ou SDK documenté. En option : restreindre l\'usage à une liste approuvée d\'API dans les zones sensibles.',
             '**Checks de patterns et de performance** — Appliquer les wrappers standard de gestion d\'erreurs et de logging. Signaler les nouvelles fonctions avec une complexité inhabituellement élevée ou des patterns O(n²)/O(n³) évidents.',
@@ -1554,12 +1554,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Écrire du meilleur code avec l\'IA](/prompt-engineering/write-better-code-with-ai?lang=fr) — comment structurer les prompts de génération de code pour produire des sorties révisables',
-            '[Revue de code IA : outils et méthodes](/prompt-engineering/ai-code-review?lang=fr) — utiliser l\'IA pour la qualité du code et la sécurité',
-            '[Qu\'est-ce que le prompt engineering ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — principes fondamentaux pour des sorties IA fiables',
-            '[Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — patterns d\'attaque affectant les pipelines de développement assistés par IA',
-            '[Hallucinations IA : comment les stopper](/prompt-engineering/ai-hallucinations-how-to-stop?lang=fr) — techniques pour réduire les hallucinations dans les sorties générées par IA',
-            '[Comment évaluer la qualité des prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) — cadres d\'évaluation applicables à la qualité de génération de code',
+            '[Écrire du meilleur code avec l\'IA](/fr/prompt-engineering/write-better-code-with-ai) — comment structurer les prompts de génération de code pour produire des sorties révisables',
+            '[Revue de code IA : outils et méthodes](/fr/prompt-engineering/ai-code-review) — utiliser l\'IA pour la qualité du code et la sécurité',
+            '[Qu\'est-ce que le prompt engineering ?](/fr/prompt-engineering/what-is-prompt-engineering) — principes fondamentaux pour des sorties IA fiables',
+            '[Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — patterns d\'attaque affectant les pipelines de développement assistés par IA',
+            '[Hallucinations IA : comment les stopper](/fr/prompt-engineering/ai-hallucinations-how-to-stop) — techniques pour réduire les hallucinations dans les sorties générées par IA',
+            '[Comment évaluer la qualité des prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — cadres d\'évaluation applicables à la qualité de génération de code',
           ],
         },
         sources: {
@@ -1616,11 +1616,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'AI生成コード向けCI/CD品質ゲートの設計方法。ハルシネーション検出、依存関係バリデーション、セキュリティゲート、開発者フレンドリーな手法を解説。',
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
-        url: 'https://www.promptquorum.com/prompt-engineering/build-quality-checks?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/build-quality-checks',
         inLanguage: 'ja',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks?lang=ja', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/build-quality-checks', width: 1200, height: 630 },
         keywords: ['品質ゲート', 'CI/CD', 'AIハルシネーション', 'コードレビュー', 'セキュリティスキャン', '依存関係バリデーション', 'ビルドチェック'],
         proficiencyLevel: 'Intermediate',
         audience: { '@type': 'Audience', audienceType: 'AI coding assistantを統合する開発チームリードとDevOpsエンジニア' },
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'AIがコードを書くと何が変わるか？',
           content: [
             '**AIがコードを書く場合、品質ゲートは新しいクラスの問題から防御する必要があります：ハルシネーションされたAPI、架空の依存関係、そして正しく見えるが実行時または攻撃下で失敗するパターン。** これは、lintや単体テストが検出するよう設計されたものとは構造的に異なります。',
-            '2026年第2四半期時点で、これらの問題は言語とモデル全体で一貫して報告されています。[AI生成コード](/prompt-engineering/write-better-code-with-ai?lang=ja)で観察される問題には以下が含まれます：',
+            '2026年第2四半期時点で、これらの問題は言語とモデル全体で一貫して報告されています。[AI生成コード](/ja/prompt-engineering/write-better-code-with-ai)で観察される問題には以下が含まれます：',
           ],
           items: [
             '**セキュリティ脆弱性：** 調査と業界レポートは、AI生成ソリューションが特に入力バリデーション、認証、暗号化周辺でレビュー済みコードより高い割合で悪用可能なバグを含むことを一貫して示しています。',
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           callouts: [
             { type: 'key-point', label: 'クイックファクト', text: 'AI生成行には≥80%のカバレッジしきい値を推奨。5段階ゲートアーキテクチャ：プリコミット → PRレビュー → CI → セキュリティ → ランタイム監視。変更ファイルに新規の高/重大な問題ゼロを要求。' },
-            { type: 'warning', label: 'スロップスクワッティングリスク', text: 'AIモデルが存在しないパッケージ名を発明した場合、攻撃者はその名前を悪意のあるコードで登録できます。チームがnpm installまたはpip installを実行すると、パッケージはビルド環境で任意のコードを実行します。参照：[プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja)。' },
+            { type: 'warning', label: 'スロップスクワッティングリスク', text: 'AIモデルが存在しないパッケージ名を発明した場合、攻撃者はその名前を悪意のあるコードで登録できます。チームがnpm installまたはpip installを実行すると、パッケージはビルド環境で任意のコードを実行します。参照：[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security)。' },
           ],
         },
 
@@ -1801,7 +1801,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'hallucination-types',
           title: 'ゲートが検出すべきハルシネーションの種類は？',
           content: [
-            '**コードハルシネーションは構文エラーだけではありません。表面的なチェックを通過することが多い論理的、構造的、依存関係レベルの偽造も含まれます。** 効果的なゲートを設計するには、各カテゴリを理解する必要があります。プロンプトレベルでの削減技術については、[AIハルシネーション：止める方法](/prompt-engineering/ai-hallucinations-how-to-stop?lang=ja)を参照してください。',
+            '**コードハルシネーションは構文エラーだけではありません。表面的なチェックを通過することが多い論理的、構造的、依存関係レベルの偽造も含まれます。** 効果的なゲートを設計するには、各カテゴリを理解する必要があります。プロンプトレベルでの削減技術については、[AIハルシネーション：止める方法](/ja/prompt-engineering/ai-hallucinations-how-to-stop)を参照してください。',
             '設計時に考慮すべき主なカテゴリ：',
           ],
           items: [
@@ -1837,7 +1837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**プリコミット/ローカルフック** — ベースラインフォーマットとlintingを強制します。オプションで、変更の短い人間が書いた要約なしに大きなAI生成の差分を直接コミットすることを禁止します。',
             '**プルリクエスト品質ゲート** — 通常のものに加えてAI固有のチェックを追加します：単体テスト、カバレッジしきい値、スタイル、従来の静的解析、さらにAI対応チェック（不明または存在しないパッケージを検出、参照されたAPIが存在することを確認、テストなしの新しいエンドポイントにフラグ）。',
-            '**より深いCI分析** — AIが触れたコードに対して拡張テストスイートとプロパティベーステストを実行します。新たに修正されたコードパスに重点を置いた[セキュリティスキャナー（SAST/DAST）](/prompt-engineering/ai-code-review?lang=ja)を適用します。複雑さと潜在的なパフォーマンスホットスポットを分析します。',
+            '**より深いCI分析** — AIが触れたコードに対して拡張テストスイートとプロパティベーステストを実行します。新たに修正されたコードパスに重点を置いた[セキュリティスキャナー（SAST/DAST）](/ja/prompt-engineering/ai-code-review)を適用します。複雑さと潜在的なパフォーマンスホットスポットを分析します。',
             '**パターンとドリフト検出** — 新しいコードを確立されたプロジェクトパターン（アーキテクチャ、エラー処理、ロギング）と比較します。通常のイディオムから大きく逸脱するコードにフラグを立てます。',
             '**セキュリティと依存関係ゲート** — 変更された行のセキュリティツールから「新規の高または重大な脆弱性なし」を要求します。新しい依存関係が未承認、未固定、または疑わしいソースからの場合はビルドをブロックします。',
             '**ランタイムモニタリングとフィードバック** — AI支援の変更によって最近修正されたエンドポイントのエラーレート、レイテンシ、リソース使用量を追跡します。インシデントをプロンプトと品質ルールにフィードバックして、ゲートを時間をかけて強化します。',
@@ -1862,7 +1862,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**テストとカバレッジ** — 新規または変更された行の最低カバレッジ（例：≥80%）。すべての新しいパブリックエンドポイント、バックグラウンドジョブ、エクスポートされた関数の必須テスト。',
-            '**セキュリティゲート** — 変更されたコードのSASTまたは依存関係スキャナーからの新規の高/重大な問題なし。認証、決済、管理機能、または個人データに触れるAI生成コードには手動レビューを要求します。ツールのガイダンス：[AIコードレビュー：ツールと検証](/prompt-engineering/ai-code-review?lang=ja)。',
+            '**セキュリティゲート** — 変更されたコードのSASTまたは依存関係スキャナーからの新規の高/重大な問題なし。認証、決済、管理機能、または個人データに触れるAI生成コードには手動レビューを要求します。ツールのガイダンス：[AIコードレビュー：ツールと検証](/ja/prompt-engineering/ai-code-review)。',
             '**依存関係の正気チェック** — 新しいパッケージは対象レジストリに存在し、明示的にホワイトリストに登録されていない限り、最低限の成熟度シグナル（ダウンロード数、スター、最終公開日）を満たす必要があります。既知のtyposquatはビルドを即座に失敗させます。',
             '**API実在確認** — 呼び出されたすべてのメソッドとエンドポイントがコードベースまたはドキュメント化されたSDKに存在することを確認する静的解析。オプション：機密エリアで承認済みAPIのallowlistへの使用制限。',
             '**パターンとパフォーマンスチェック** — 標準のエラー処理とロギングラッパーを強制します。大きなデータパスで明らかにO(n²)/O(n³)パターンを持つ異常に高い複雑さの新しく追加された関数にフラグを立てます。',
@@ -2068,12 +2068,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[AIでより良いコードを書く](/prompt-engineering/write-better-code-with-ai?lang=ja) — レビュー可能な出力を生成するコード生成のためのプロンプト構造',
-            '[AIコードレビュー：ツールと検証](/prompt-engineering/ai-code-review?lang=ja) — AIを使ったコード品質とセキュリティのレビュー',
-            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 信頼できるAI出力のための基礎原則',
-            '[プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — AI支援開発パイプラインに影響する攻撃パターン',
-            '[AIハルシネーション：止める方法](/prompt-engineering/ai-hallucinations-how-to-stop?lang=ja) — AI生成出力のハルシネーションを減らす技術',
-            '[プロンプト品質の評価方法](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja) — コード生成品質に適用できる評価フレームワーク',
+            '[AIでより良いコードを書く](/ja/prompt-engineering/write-better-code-with-ai) — レビュー可能な出力を生成するコード生成のためのプロンプト構造',
+            '[AIコードレビュー：ツールと検証](/ja/prompt-engineering/ai-code-review) — AIを使ったコード品質とセキュリティのレビュー',
+            '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — 信頼できるAI出力のための基礎原則',
+            '[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — AI支援開発パイプラインに影響する攻撃パターン',
+            '[AIハルシネーション：止める方法](/ja/prompt-engineering/ai-hallucinations-how-to-stop) — AI生成出力のハルシネーションを減らす技術',
+            '[プロンプト品質の評価方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — コード生成品質に適用できる評価フレームワーク',
           ],
         },
 
@@ -2131,11 +2131,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'AI生成代码的CI/CD质量门控设计方法，涵盖幻觉检测、依赖项验证、安全门控及开发者友好实践。',
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
-        url: 'https://www.promptquorum.com/prompt-engineering/build-quality-checks?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/build-quality-checks',
         inLanguage: 'zh',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks?lang=zh', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/build-quality-checks', width: 1200, height: 630 },
         keywords: ['质量门控', 'CI/CD', 'AI幻觉', '代码审查', '安全扫描', '依赖项验证', '构建检查'],
         proficiencyLevel: 'Intermediate',
         audience: { '@type': 'Audience', audienceType: '将AI编码助手集成到生产流水线的开发团队负责人和DevOps工程师' },
@@ -2291,7 +2291,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'AI编写代码会带来哪些变化？',
           content: [
             '**当AI编写代码时，质量门控必须防御一类新问题：幻觉API、伪造依赖项，以及看起来正确但在运行时或攻击下失败的模式。** 这与lint和单元测试设计检测的问题在结构上截然不同。',
-            '截至2026年第二季度，这些问题在不同语言和模型中被持续报告。[AI生成代码](/prompt-engineering/write-better-code-with-ai?lang=zh)中观察到的问题包括：',
+            '截至2026年第二季度，这些问题在不同语言和模型中被持续报告。[AI生成代码](/zh/prompt-engineering/write-better-code-with-ai)中观察到的问题包括：',
           ],
           items: [
             '**安全漏洞：** 研究和行业报告一致发现，AI生成的解决方案包含可利用漏洞的比例高于经审查代码，尤其在输入验证、认证和加密方面。',
@@ -2302,7 +2302,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           callouts: [
             { type: 'key-point', label: '快速事实', text: 'AI生成行推荐≥80%覆盖率阈值。5阶段门控架构：预提交 → PR审查 → CI → 安全 → 运行时监控。要求更改文件上零新增高危/严重问题。' },
-            { type: 'warning', label: '投机注册风险', text: '当AI模型发明了一个不存在的包名时，攻击者可以用恶意代码注册该名称。一旦团队运行npm install或pip install，该包就会在构建环境中执行任意代码。另请参阅：[提示注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh)。' },
+            { type: 'warning', label: '投机注册风险', text: '当AI模型发明了一个不存在的包名时，攻击者可以用恶意代码注册该名称。一旦团队运行npm install或pip install，该包就会在构建环境中执行任意代码。另请参阅：[提示注入与安全](/zh/prompt-engineering/prompt-injection-and-security)。' },
           ],
         },
 
@@ -2316,7 +2316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'hallucination-types',
           title: '门控必须捕获哪些幻觉类型？',
           content: [
-            '**代码幻觉不仅仅是语法错误，还包括经常能通过表面检查的逻辑、结构和依赖项级别的伪造。** 设计有效的门控需要理解每个类别。有关在提示层面减少幻觉的技术，请参阅[AI幻觉：如何阻止它们](/prompt-engineering/ai-hallucinations-how-to-stop?lang=zh)。',
+            '**代码幻觉不仅仅是语法错误，还包括经常能通过表面检查的逻辑、结构和依赖项级别的伪造。** 设计有效的门控需要理解每个类别。有关在提示层面减少幻觉的技术，请参阅[AI幻觉：如何阻止它们](/zh/prompt-engineering/ai-hallucinations-how-to-stop)。',
             '设计时需考虑的常见类别：',
           ],
           items: [
@@ -2352,7 +2352,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**预提交/本地钩子** — 强制执行基准格式和linting。可选择禁止直接提交没有人工编写摘要的大型AI生成diff。',
             '**拉取请求质量门控** — 在正常检查之上添加AI专用检查：单元测试、覆盖率阈值、风格、常规静态分析，加上AI感知检查（检测未知或不存在的包、验证引用的API存在、标记无测试的新端点）。',
-            '**深度CI分析** — 对AI修改的代码运行扩展测试套件和基于属性的测试。将[安全扫描器（SAST/DAST）](/prompt-engineering/ai-code-review?lang=zh)重点应用于新修改的代码路径。分析复杂度和潜在性能热点。',
+            '**深度CI分析** — 对AI修改的代码运行扩展测试套件和基于属性的测试。将[安全扫描器（SAST/DAST）](/zh/prompt-engineering/ai-code-review)重点应用于新修改的代码路径。分析复杂度和潜在性能热点。',
             '**模式和漂移检测** — 将新代码与已建立的项目模式（架构、错误处理、日志记录）进行比较。标记与通常惯用语大幅偏离的代码。',
             '**安全和依赖项门控** — 要求安全工具对更改行报告"零新增高危或严重漏洞"。如果新依赖项未经批准、未固定版本或来自可疑来源，则阻止构建。',
             '**运行时监控和反馈** — 跟踪最近由AI辅助变更修改的端点的错误率、延迟和资源使用情况。将事件反馈到提示和质量规则中以随时间强化门控。',
@@ -2377,7 +2377,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**测试和覆盖率** — 新增或更改行的最低覆盖率（例如≥80%）。所有新公共端点、后台任务或导出函数的强制测试。',
-            '**安全门控** — 变更代码的SAST或依赖项扫描器零新增高危/严重问题。要求对涉及认证、支付、管理功能或个人数据的AI生成代码进行人工审查。工具指导：[AI代码审查：工具与验证](/prompt-engineering/ai-code-review?lang=zh)。',
+            '**安全门控** — 变更代码的SAST或依赖项扫描器零新增高危/严重问题。要求对涉及认证、支付、管理功能或个人数据的AI生成代码进行人工审查。工具指导：[AI代码审查：工具与验证](/zh/prompt-engineering/ai-code-review)。',
             '**依赖项合理性检查** — 新包必须存在于目标注册表中，并满足最低成熟度信号（下载量、star数、最后发布日期），除非明确加入白名单。已知的投机注册包立即使构建失败。',
             '**API实存验证** — 静态分析以确保所有调用的方法和端点在代码库或已文档化的SDK中存在。可选：在敏感区域限制使用已批准API的白名单。',
             '**模式和性能检查** — 强制执行标准错误处理和日志记录包装器。标记在大数据路径上具有明显O(n²)/O(n³)模式的异常高复杂度新增函数。',
@@ -2582,12 +2582,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[用AI编写更好的代码](/prompt-engineering/write-better-code-with-ai?lang=zh) — 如何构建提示以生成可审查的代码生成输出',
-            '[AI代码审查：工具与验证](/prompt-engineering/ai-code-review?lang=zh) — 使用AI审查代码质量和安全性',
-            '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 可靠AI输出的基础原则',
-            '[提示注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 影响AI辅助开发流水线的攻击模式',
-            '[AI幻觉：如何阻止它们](/prompt-engineering/ai-hallucinations-how-to-stop?lang=zh) — 减少AI生成输出中幻觉的技术',
-            '[如何评估提示质量](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh) — 适用于代码生成质量的评估框架',
+            '[用AI编写更好的代码](/zh/prompt-engineering/write-better-code-with-ai) — 如何构建提示以生成可审查的代码生成输出',
+            '[AI代码审查：工具与验证](/zh/prompt-engineering/ai-code-review) — 使用AI审查代码质量和安全性',
+            '[什么是提示工程？](/zh/prompt-engineering/what-is-prompt-engineering) — 可靠AI输出的基础原则',
+            '[提示注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — 影响AI辅助开发流水线的攻击模式',
+            '[AI幻觉：如何阻止它们](/zh/prompt-engineering/ai-hallucinations-how-to-stop) — 减少AI生成输出中幻觉的技术',
+            '[如何评估提示质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 适用于代码生成质量的评估框架',
           ],
         },
 

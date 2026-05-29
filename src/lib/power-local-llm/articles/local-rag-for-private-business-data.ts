@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Unveränderliche Audit-Logs für Ingest und Retrieval',
             whyItMatters:
-              'Für jedes Dokument: wer es hochgeladen hat, wann, Quellpfad, Hash. Für jede Anfrage: wer gefragt hat, was gefragt wurde (sofern das Logging es zulässt), welche Chunks abgerufen wurden, aus welchen Dokument-IDs sie stammen, welche Antwort zurückgegeben wurde. Logs müssen manipulationssicher sein — append-only, signiert, mit einer Aufbewahrungsdauer, die das Untersuchungsfenster der Aufsichtsbehörde abdeckt. Für den prompt-bezogenen Audit-Trail — Versionierung, Änderungsprotokolle und Rollback — siehe [Workflows zur Versionskontrolle von Prompts](/prompt-engineering/prompt-version-control-workflows?lang=de).',
+              'Für jedes Dokument: wer es hochgeladen hat, wann, Quellpfad, Hash. Für jede Anfrage: wer gefragt hat, was gefragt wurde (sofern das Logging es zulässt), welche Chunks abgerufen wurden, aus welchen Dokument-IDs sie stammen, welche Antwort zurückgegeben wurde. Logs müssen manipulationssicher sein — append-only, signiert, mit einer Aufbewahrungsdauer, die das Untersuchungsfenster der Aufsichtsbehörde abdeckt. Für den prompt-bezogenen Audit-Trail — Versionierung, Änderungsprotokolle und Rollback — siehe [Workflows zur Versionskontrolle von Prompts](/de/prompt-engineering/prompt-version-control-workflows).',
           },
           {
             title: 'Verschlüsselung im Ruhezustand und bei der Übertragung',
@@ -963,8 +963,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Der Einzelnutzer-Laptop ist das Muster, das sich am einfachsten air-gappen und am schwersten skalieren lässt.** Richtig für Einzelpersonen und einmalige Mandatsprüfungen; falsch für alles, was einen einzelnen Nutzer überdauern oder dessen Ausscheiden überstehen muss.',
         items: [
-          '**Hardware** — ein Workstation-Laptop mit Vollverschlüsselung der Festplatte, einer dedizierten GPU (oder einer aktuellen Unified-Memory-Maschine) und mindestens 32 GB RAM. Modell und Embedder müssen neben dem Vektorspeicher-Cache in den Speicher passen. Hardwareanforderungen und Modellauswahl nach VRAM finden Sie im [Hardware-Leitfaden für lokale LLMs](/local-llms/local-llm-hardware-guide-2026?lang=de).',
-          '**Software** — eine in sich geschlossene Desktop-RAG-Anwendung, die lokal läuft; ein Open-Source-LLM mit einmal heruntergeladenen und auf einen Hash fixierten Gewichten; ein Open-Source-Embedder; ein lokaler Vektorspeicher auf der verschlüsselten Festplatte. Einen Vergleich von Open-Source-Modellen, die für lokales RAG geeignet sind, finden Sie unter [Top-Open-Source-Modelle für Ollama](/local-llms/top-open-source-models-ollama?lang=de).',
+          '**Hardware** — ein Workstation-Laptop mit Vollverschlüsselung der Festplatte, einer dedizierten GPU (oder einer aktuellen Unified-Memory-Maschine) und mindestens 32 GB RAM. Modell und Embedder müssen neben dem Vektorspeicher-Cache in den Speicher passen. Hardwareanforderungen und Modellauswahl nach VRAM finden Sie im [Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026).',
+          '**Software** — eine in sich geschlossene Desktop-RAG-Anwendung, die lokal läuft; ein Open-Source-LLM mit einmal heruntergeladenen und auf einen Hash fixierten Gewichten; ein Open-Source-Embedder; ein lokaler Vektorspeicher auf der verschlüsselten Festplatte. Einen Vergleich von Open-Source-Modellen, die für lokales RAG geeignet sind, finden Sie unter [Top-Open-Source-Modelle für Ollama](/de/local-llms/top-open-source-models-ollama).',
           '**Netzwerk-Posture** — air-gapped während der Arbeit; nur für ausdrücklich signierte Updates wieder verbunden. Konfigurieren Sie die OS-Firewall so, dass sie standardmäßig alle ausgehenden Verbindungen verwirft, und legen Sie explizite Ausnahmen für den Update-Workflow an.',
           '**Dokumentenhandhabung** — Quelldokumente auf der verschlüsselten Festplatte; eine separate Mandatsstruktur pro Mandat; wöchentliche verschlüsselte Backups auf einer externen Festplatte, die an einem anderen Ort gelagert wird.',
           '**Audit-Posture** — Das OS-seitige Audit-Log (Login, Dateizugriff, Peripherieereignisse) ist die Grundlage. Anwendungsbezogene Ereignisse sind im On-Prem-Server-Muster einfacher; für das Laptop-Muster behandeln Sie das OS-Log als primären Nachweis und ergänzen Sie es mit manuellen Notizen pro Mandat.',
@@ -1486,7 +1486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: "Journaux d'audit immuables couvrant ingestion et recherche",
             whyItMatters:
-              "Pour chaque document : qui l'a chargé, quand, chemin source, hash. Pour chaque requête : qui a demandé, ce qui a été demandé (si la base légale le permet), quels chunks ont été retournés, depuis quels document IDs, quelle réponse. Les journaux doivent être à preuve d'altération — append-only, signés, avec une rétention couvrant la fenêtre d'enquête de l'autorité de contrôle. Pour la traçabilité au niveau prompt — versionnement, changelog, rollback — voir [workflows de version control des prompts](/prompt-engineering/prompt-version-control-workflows?lang=fr).",
+              "Pour chaque document : qui l'a chargé, quand, chemin source, hash. Pour chaque requête : qui a demandé, ce qui a été demandé (si la base légale le permet), quels chunks ont été retournés, depuis quels document IDs, quelle réponse. Les journaux doivent être à preuve d'altération — append-only, signés, avec une rétention couvrant la fenêtre d'enquête de l'autorité de contrôle. Pour la traçabilité au niveau prompt — versionnement, changelog, rollback — voir [workflows de version control des prompts](/fr/prompt-engineering/prompt-version-control-workflows).",
           },
           {
             title: 'Chiffrement au repos et en transit',
@@ -1583,8 +1583,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Le laptop mono-utilisateur est le modèle le plus facile à air-gapper et le plus difficile à mettre à l'échelle.** Adapté pour les solos et les revues ponctuelles ; inadapté à tout ce qui doit survivre à un seul utilisateur ou à son départ.",
         items: [
-          '**Matériel** — un laptop classe workstation avec chiffrement disque complet, GPU dédié (ou machine récente à mémoire unifiée) et au moins 32 Go de RAM. Le modèle et l\'embedder doivent tenir en mémoire avec le cache du store vectoriel. Pour les besoins matériels et la sélection par VRAM, voir le [guide matériel LLM local](/local-llms/local-llm-hardware-guide-2026?lang=fr).',
-          "**Logiciel** — application RAG desktop autonome qui tourne en local ; LLM open source dont les poids sont téléchargés une fois et figés sur un hash ; embedder open source ; store vectoriel local sur le disque chiffré. Pour une comparaison de modèles open source adaptés au RAG local, voir [meilleurs modèles open source pour Ollama](/local-llms/top-open-source-models-ollama?lang=fr).",
+          '**Matériel** — un laptop classe workstation avec chiffrement disque complet, GPU dédié (ou machine récente à mémoire unifiée) et au moins 32 Go de RAM. Le modèle et l\'embedder doivent tenir en mémoire avec le cache du store vectoriel. Pour les besoins matériels et la sélection par VRAM, voir le [guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026).',
+          "**Logiciel** — application RAG desktop autonome qui tourne en local ; LLM open source dont les poids sont téléchargés une fois et figés sur un hash ; embedder open source ; store vectoriel local sur le disque chiffré. Pour une comparaison de modèles open source adaptés au RAG local, voir [meilleurs modèles open source pour Ollama](/fr/local-llms/top-open-source-models-ollama).",
           "**Posture réseau** — air-gappé pendant le travail ; reconnecté uniquement pour des mises à jour signées explicites. Configurez le pare-feu OS pour rejeter par défaut toutes les connexions sortantes et créez des exceptions explicites pour le workflow de mise à jour.",
           '**Manipulation des documents** — documents source sur le disque chiffré ; arborescence par dossier dédié à chaque dossier ; sauvegardes hebdomadaires chiffrées sur disque externe stocké dans un autre lieu.',
           "**Posture d'audit** — le journal d'audit OS (login, accès fichiers, événements périphériques) est la base. Les événements applicatifs sont plus simples sur on-prem ; pour le laptop, traitez le log OS comme l'enregistrement primaire et complétez avec des notes manuelles dossier par dossier.",
@@ -2098,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'ingestおよびretrievalをカバーする改ざん防止監査ログ',
             whyItMatters:
-              '各文書について：誰がアップロードしたか、いつ、ソースパス、ハッシュ。各クエリについて：誰が尋ねたか、何を尋ねたか（ロギングポリシーが許す場合）、どのchunkがretrieveされ、どの文書IDから来たか、どの回答が返ったか。ログは改ざん検知可能（append-only、署名、規制当局の調査ウィンドウをカバーする保管期間）でなければなりません。プロンプトレベルの監査トレイル — バージョン管理、変更履歴、ロールバック — については[プロンプトのバージョン管理ワークフロー](/prompt-engineering/prompt-version-control-workflows?lang=ja)を参照してください。',
+              '各文書について：誰がアップロードしたか、いつ、ソースパス、ハッシュ。各クエリについて：誰が尋ねたか、何を尋ねたか（ロギングポリシーが許す場合）、どのchunkがretrieveされ、どの文書IDから来たか、どの回答が返ったか。ログは改ざん検知可能（append-only、署名、規制当局の調査ウィンドウをカバーする保管期間）でなければなりません。プロンプトレベルの監査トレイル — バージョン管理、変更履歴、ロールバック — については[プロンプトのバージョン管理ワークフロー](/ja/prompt-engineering/prompt-version-control-workflows)を参照してください。',
           },
           {
             title: '保存時および転送時の暗号化',
@@ -2195,8 +2195,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**単一ユーザーラップトップは最もAir-Gap化しやすく、最もスケールしにくいパターンです。** 単独プロフェッショナルや単発の案件レビューに最適、単一ユーザーを超えて存続する必要のあるものや退職に耐える必要のあるものには不適です。',
         items: [
-          '**ハードウェア** — フルディスク暗号化、専用GPU（または近年のunified-memoryマシン）、最低32 GBのRAMを備えたワークステーションクラスのラップトップ。モデルとembedderはベクトルストアキャッシュとともにメモリに収まる必要があります。VRAMによるハード要件とモデル選択については[ローカルLLMハードウェアガイド](/local-llms/local-llm-hardware-guide-2026?lang=ja)を参照してください。',
-          '**ソフトウェア** — ローカルで動く自己完結型のデスクトップRAGアプリ、重みを一度ダウンロードしハッシュにピン留めしたOpen-source LLM、Open-source embedder、暗号化ディスク上のローカルベクトルストア。ローカルRAGに適したオープンソースモデルの比較は[Ollama向けトップオープンソースモデル](/local-llms/top-open-source-models-ollama?lang=ja)を参照してください。',
+          '**ハードウェア** — フルディスク暗号化、専用GPU（または近年のunified-memoryマシン）、最低32 GBのRAMを備えたワークステーションクラスのラップトップ。モデルとembedderはベクトルストアキャッシュとともにメモリに収まる必要があります。VRAMによるハード要件とモデル選択については[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
+          '**ソフトウェア** — ローカルで動く自己完結型のデスクトップRAGアプリ、重みを一度ダウンロードしハッシュにピン留めしたOpen-source LLM、Open-source embedder、暗号化ディスク上のローカルベクトルストア。ローカルRAGに適したオープンソースモデルの比較は[Ollama向けトップオープンソースモデル](/ja/local-llms/top-open-source-models-ollama)を参照してください。',
           '**ネットワークposture** — 業務中はAir-Gap、明示的な署名付き更新時のみ再接続。OSファイアウォールをデフォルトで全外向きdrop、更新ワークフロー用に明示的例外を作成してください。',
           '**文書の取り扱い** — 暗号化ディスク上のソース文書、案件ごとの分離フォルダ構造、別場所保管の外付けディスクへの週次暗号化バックアップ。',
           '**監査posture** — OSレベルの監査ログ（ログイン、ファイルアクセス、周辺機器イベント）が床面。アプリケーションレベルイベントはOn-Premパターンの方が容易ですが、ラップトップパターンではOSログを主記録として扱い、案件ごとの手書き記録で補完します。',
@@ -2717,7 +2717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '覆盖入库与检索的不可篡改审计日志',
             whyItMatters:
-              '每份文档：谁上传、何时、源路径、哈希。每次查询：谁问的、问了什么（如允许）、检索到哪些分块、来自哪些文档 ID、返回的回答是什么。日志须防篡改 — 仅追加、签名、保留期至少覆盖监管机构调查窗口。提示级别的审计追踪 — 版本控制、变更日志、回滚 — 见[提示版本控制工作流](/prompt-engineering/prompt-version-control-workflows?lang=zh)。',
+              '每份文档：谁上传、何时、源路径、哈希。每次查询：谁问的、问了什么（如允许）、检索到哪些分块、来自哪些文档 ID、返回的回答是什么。日志须防篡改 — 仅追加、签名、保留期至少覆盖监管机构调查窗口。提示级别的审计追踪 — 版本控制、变更日志、回滚 — 见[提示版本控制工作流](/zh/prompt-engineering/prompt-version-control-workflows)。',
           },
           {
             title: '静态与传输加密',
@@ -2814,8 +2814,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**单用户笔记本是最容易做到空气隔离、最难规模化的模式。** 适合独立专业人员与单次案件评审；不适合任何需要超越单一用户或抗用户离职的场景。',
         items: [
-          '**硬件** — 工作站级笔记本，具备全盘加密、独立 GPU（或近年的统一内存机型）、至少 32 GB 内存。模型与嵌入器要与向量库缓存共驻内存。按 VRAM 选择硬件与模型可参考 [本地 LLM 硬件指南](/local-llms/local-llm-hardware-guide-2026?lang=zh)。',
-          '**软件** — 自包含的桌面 RAG 应用本地运行；权重一次性下载并固定哈希的开源 LLM；开源嵌入器；运行在加密磁盘上的本地向量库。适合本地 RAG 的开源模型对比见 [Ollama 顶级开源模型](/local-llms/top-open-source-models-ollama?lang=zh)。',
+          '**硬件** — 工作站级笔记本，具备全盘加密、独立 GPU（或近年的统一内存机型）、至少 32 GB 内存。模型与嵌入器要与向量库缓存共驻内存。按 VRAM 选择硬件与模型可参考 [本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
+          '**软件** — 自包含的桌面 RAG 应用本地运行；权重一次性下载并固定哈希的开源 LLM；开源嵌入器；运行在加密磁盘上的本地向量库。适合本地 RAG 的开源模型对比见 [Ollama 顶级开源模型](/zh/local-llms/top-open-source-models-ollama)。',
           '**网络姿态** — 工作时空气隔离；仅在显式签名更新时重新连接。把 OS 防火墙配置为默认拒绝所有出站，并为更新流程开放显式例外。',
           '**文档处置** — 源文档放加密磁盘；按案件分目录；每周加密备份到异地外置驱动器。',
           '**审计姿态** — OS 级审计日志（登录、文件访问、外设事件）作为底层。应用级事件在本地服务器模式更易；笔记本模式以 OS 日志为主，并以案件级人工记录补充。',

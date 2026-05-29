@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'KI lokal auf Ihrem Tablet ausführen: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'So führen Sie KI lokal auf einem iPad oder Android-Tablet 2026 aus. Lokale Inferenz-Apps, Termux + Ollama auf Android und Remote-Verbindung zu einem Home-Mac oder PC erklärt.',
-      image: `https://www.promptquorum.com/og/power-local-llm/run-ai-on-tablet-ipad-android?lang=de`,
+      image: `https://www.promptquorum.com/de/og/power-local-llm/run-ai-on-tablet-ipad-android`,
       url: 'https://www.promptquorum.com/de/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'de',
       datePublished: '2026-05-07',
@@ -1160,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Exécuter l\'IA localement sur votre tablette : iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'Exécutez l\'IA localement sur iPad ou Android en 2026. Applications d\'inférence locale, Termux + Ollama, connexion à distance vers Mac ou PC expliqués.',
-      image: `https://www.promptquorum.com/og/power-local-llm/run-ai-on-tablet-ipad-android?lang=fr`,
+      image: `https://www.promptquorum.com/fr/og/power-local-llm/run-ai-on-tablet-ipad-android`,
       url: 'https://www.promptquorum.com/fr/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'fr',
       datePublished: '2026-05-07',
@@ -1567,7 +1567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'タブレットでAIをローカル実行：iPad Pro M4・Galaxy Tab S10・OnePlus Pad 2（2026年版）',
       description:
         '2026年のiPadとAndroidタブレットでのAIローカル実行方法。オンデバイス推論アプリ、Termux + Ollama、ホームMac・PCへのリモート接続を解説。',
-      image: `https://www.promptquorum.com/og/power-local-llm/run-ai-on-tablet-ipad-android?lang=ja`,
+      image: `https://www.promptquorum.com/ja/og/power-local-llm/run-ai-on-tablet-ipad-android`,
       url: 'https://www.promptquorum.com/ja/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'ja',
       datePublished: '2026-05-07',

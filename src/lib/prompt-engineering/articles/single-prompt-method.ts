@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/the-single-step-prompt-method',
         inLanguage: 'de',
         headline: 'Die Single Step Prompt Methode',
         description: 'Wie die Single Step Prompt Methode funktioniert, wann Sie sie einsetzen sollten und wie PromptQuorum sie als Hauptframework für neue Benutzer nutzt.',
@@ -511,8 +511,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatIsSingleStep: {
           title: 'Was die Single Step Prompt Methode ist',
           content: [
-            '**Die Single Step Prompt Methode ist eine Prompt-Struktur auf Basis eines einzelnen Durchlaufs, die Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer einzigen Nachricht an das Modell zusammenfasst.** Anstatt die KI über mehrere Durchläufe hinweg zur gemeinsamen Überlegung aufzufordern, geben Sie ihr alles, was sie benötigt, von Anfang an. Dieser Ansatz funktioniert mit GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro und lokalen Modellen wie denen, die Sie über [Ollama](/local-llms/ollama-installation-guide?lang=de) oder LM Studio ausführen.',
-            'Die Kernidee ist: einmal denken, einmal schreiben, einmal ausführen. Sie investieren Aufwand in die Gestaltung eines präzisen [Prompts](/prompt-engineering/what-is-prompt-engineering?lang=de) und verwenden ihn anschließend in verschiedenen Aufgaben, Projekten und Modellen. Da die Struktur fest ist, können Sie die Qualität messen, jeweils einen Parameter ändern und Ihre Prompts systematisch verbessern.',
+            '**Die Single Step Prompt Methode ist eine Prompt-Struktur auf Basis eines einzelnen Durchlaufs, die Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer einzigen Nachricht an das Modell zusammenfasst.** Anstatt die KI über mehrere Durchläufe hinweg zur gemeinsamen Überlegung aufzufordern, geben Sie ihr alles, was sie benötigt, von Anfang an. Dieser Ansatz funktioniert mit GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro und lokalen Modellen wie denen, die Sie über [Ollama](/de/local-llms/ollama-installation-guide) oder LM Studio ausführen.',
+            'Die Kernidee ist: einmal denken, einmal schreiben, einmal ausführen. Sie investieren Aufwand in die Gestaltung eines präzisen [Prompts](/de/prompt-engineering/what-is-prompt-engineering) und verwenden ihn anschließend in verschiedenen Aufgaben, Projekten und Modellen. Da die Struktur fest ist, können Sie die Qualität messen, jeweils einen Parameter ändern und Ihre Prompts systematisch verbessern.',
           ],
         },
         whySingleStepWorks: {
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         singleVsMulti: {
           title: 'Single Step vs. mehrstufiges Prompting',
           content: [
-            '**Sie sollten die Single Step Prompt Methode verwenden, wenn Sie bereits wissen, was Sie wollen, und es vorausplanen können. Reservieren Sie [mehrstufiges Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) für genuinely mehrdeutige oder explorative Aufgaben.** Wenn Ihr Ziel klar ist, wird eine einstufige Anweisung in der Regel konsistentere Ergebnisse über Modelle und Durchläufe hinweg erbringen.',
+            '**Sie sollten die Single Step Prompt Methode verwenden, wenn Sie bereits wissen, was Sie wollen, und es vorausplanen können. Reservieren Sie [mehrstufiges Prompting](/de/prompt-engineering/chain-of-thought-prompting) für genuinely mehrdeutige oder explorative Aufgaben.** Wenn Ihr Ziel klar ist, wird eine einstufige Anweisung in der Regel konsistentere Ergebnisse über Modelle und Durchläufe hinweg erbringen.',
             'Die Hauptunterschiede sind:',
           ],
           items: [
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whenToStart: {
           title: 'Wann Sie mit der Single Step Prompt in PromptQuorum beginnen sollten',
           content: [
-            '**Wenn Sie unsicher sind, welches Framework Sie in PromptQuorum wählen sollen, beginnen Sie mit der Single Step Prompt Methode und wechseln Sie nur dann zu einem spezialisierteren Framework wie [CRAFT](/prompt-engineering/craft-framework?lang=de) oder [APE](/prompt-engineering/ape-framework?lang=de), wenn Sie eine deutliche Einschränkung feststellen.** Dies hält Ihren Workflow einfach und ermöglicht später eine erweiterte Optimierung.',
+            '**Wenn Sie unsicher sind, welches Framework Sie in PromptQuorum wählen sollen, beginnen Sie mit der Single Step Prompt Methode und wechseln Sie nur dann zu einem spezialisierteren Framework wie [CRAFT](/de/prompt-engineering/craft-framework) oder [APE](/de/prompt-engineering/ape-framework), wenn Sie eine deutliche Einschränkung feststellen.** Dies hält Ihren Workflow einfach und ermöglicht später eine erweiterte Optimierung.',
             'Typische Situationen, in denen Single Step der richtige Ausgangspunkt ist:',
           ],
           items: [
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/the-single-step-prompt-method',
         inLanguage: 'es',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         headline: 'El Método de Prompt de Un Solo Paso',
@@ -1046,11 +1046,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lecturas relacionadas',
           id: 'related-reading',
           items: [
-            '[Framework CO-STAR](/prompt-engineering/co-star-framework?lang=es) — Para tareas que necesitan adaptación de audiencia y control de tono',
-            '[Framework CRAFT](/prompt-engineering/craft-framework?lang=es) — Cuando necesitas control independiente sobre múltiples variables',
-            '[Prompting Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=es) — Para razonamiento complejo que requiere pensamiento paso a paso',
+            '[Framework CO-STAR](/es/prompt-engineering/co-star-framework) — Para tareas que necesitan adaptación de audiencia y control de tono',
+            '[Framework CRAFT](/es/prompt-engineering/craft-framework) — Cuando necesitas control independiente sobre múltiples variables',
+            '[Prompting Chain-of-Thought](/es/prompt-engineering/chain-of-thought-prompting) — Para razonamiento complejo que requiere pensamiento paso a paso',
             '[Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Mejores prácticas del equipo de Claude',
-            '[Framework SPECS](/prompt-engineering/specs-framework?lang=es) — Cuando necesitas imponer validación estricta de output y restricciones',
+            '[Framework SPECS](/es/prompt-engineering/specs-framework) — Cuando necesitas imponer validación estricta de output y restricciones',
           ],
         },
         sources: {
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/the-single-step-prompt-method',
         inLanguage: 'fr',
         headline: 'The Single Step Prompt Method',
         description: 'Fonctionnement de la Méthode Single Step Prompt, quand l\'utiliser et comment PromptQuorum l\'utilise comme cadre principal pour les nouveaux utilisateurs.',
@@ -1161,8 +1161,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatIsSingleStep: {
           title: 'What the Single Step Prompt Method Is',
           content: [
-            '**La Méthode Single Step Prompt est une structure d\'invite unique qui concentre le rôle, l\'objectif, le contexte, les contraintes et le format de sortie dans un seul message au modèle.** Au lieu de demander à l\'IA de « réfléchir ensemble » sur plusieurs tours, vous lui fournissez tout ce dont elle a besoin d\'emblée. Cette approche fonctionne avec GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro et les modèles locaux tels que ceux que vous exécutez via [Ollama](/local-llms/ollama-installation-guide?lang=fr) ou LM Studio.',
-            'L\'idée centrale est de réfléchir une seule fois, d\'écrire une seule fois et d\'exécuter une seule fois. Vous investissez l\'effort initial dans la conception d\'un seul [prompt](/prompt-engineering/what-is-prompt-engineering?lang=fr) précis, puis le réutilisez dans différentes tâches, projets et modèles. Comme la structure est fixe, vous pouvez mesurer la qualité, modifier un paramètre à la fois et améliorer vos prompts de façon systématique.',
+            '**La Méthode Single Step Prompt est une structure d\'invite unique qui concentre le rôle, l\'objectif, le contexte, les contraintes et le format de sortie dans un seul message au modèle.** Au lieu de demander à l\'IA de « réfléchir ensemble » sur plusieurs tours, vous lui fournissez tout ce dont elle a besoin d\'emblée. Cette approche fonctionne avec GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro et les modèles locaux tels que ceux que vous exécutez via [Ollama](/fr/local-llms/ollama-installation-guide) ou LM Studio.',
+            'L\'idée centrale est de réfléchir une seule fois, d\'écrire une seule fois et d\'exécuter une seule fois. Vous investissez l\'effort initial dans la conception d\'un seul [prompt](/fr/prompt-engineering/what-is-prompt-engineering) précis, puis le réutilisez dans différentes tâches, projets et modèles. Comme la structure est fixe, vous pouvez mesurer la qualité, modifier un paramètre à la fois et améliorer vos prompts de façon systématique.',
           ],
         },
         whySingleStepWorks: {
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         singleVsMulti: {
           title: 'Single Step vs Multi-Step Prompting',
           content: [
-            '**Utilisez la Méthode Single Step Prompt quand vous savez déjà ce que vous voulez et que vous pouvez le spécifier d\'emblée. Réservez le [prompting multi-étapes](/prompt-engineering/chain-of-thought-prompting?lang=fr) aux tâches véritablement ambiguës ou exploratoires.** Si votre objectif est clair, une instruction unique produira généralement des résultats plus cohérents entre les modèles et les exécutions.',
+            '**Utilisez la Méthode Single Step Prompt quand vous savez déjà ce que vous voulez et que vous pouvez le spécifier d\'emblée. Réservez le [prompting multi-étapes](/fr/prompt-engineering/chain-of-thought-prompting) aux tâches véritablement ambiguës ou exploratoires.** Si votre objectif est clair, une instruction unique produira généralement des résultats plus cohérents entre les modèles et les exécutions.',
             'Les différences principales sont :',
           ],
           items: [
@@ -1213,7 +1213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whenToStart: {
           title: 'When to Start With the Single Step Prompt in PromptQuorum',
           content: [
-            '**Si vous hésitez sur le choix du cadre dans PromptQuorum, commencez par la Méthode Single Step Prompt et ne passez à un cadre plus spécialisé comme [CRAFT](/prompt-engineering/craft-framework?lang=fr) ou [APE](/prompt-engineering/ape-framework?lang=fr) que si vous rencontrez une limitation claire.** Cela maintient votre flux de travail simple tout en autorisant l\'optimisation avancée ultérieure.',
+            '**Si vous hésitez sur le choix du cadre dans PromptQuorum, commencez par la Méthode Single Step Prompt et ne passez à un cadre plus spécialisé comme [CRAFT](/fr/prompt-engineering/craft-framework) ou [APE](/fr/prompt-engineering/ape-framework) que si vous rencontrez une limitation claire.** Cela maintient votre flux de travail simple tout en autorisant l\'optimisation avancée ultérieure.',
             'Les situations typiques où Single Step est le bon point de départ :',
           ],
           items: [
@@ -1339,7 +1339,7 @@ ja: {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/the-single-step-prompt-method',
     inLanguage: 'ja',
     headline: 'The Single Step Prompt Method',
     description: 'Single Step Prompt Methodの構築方法、活用場面、およびPromptQuorumにおける実装方法を解説します。',
@@ -1398,8 +1398,8 @@ ja: {
     whatIsSingleStep: {
       title: 'What the Single Step Prompt Method Is',
       content: [
-        '**Single Step Prompt Methodは、ロール・目的・コンテキスト・制約・出力形式を1つのメッセージに凝縮する1回限りのプロンプト構造です。** AIに「一緒にブレインストーミングしましょう」と複数ターンにわたって提案する代わりに、必要な情報をすべて最初に提供します。このアプローチはGPT-4o、Claude Opus 4.7、Gemini 3.1 Pro、および[Ollama](/local-llms/ollama-installation-guide?lang=ja)やLM Studioなどのローカルモデルに対応しています。',
-        '基本的な考え方は「1度考え、1度書き、1度実行する」ことです。1つの精密な[プロンプト](/prompt-engineering/what-is-prompt-engineering?lang=ja)設計に時間をかけ、その後タスク・プロジェクト・モデル全体で再利用します。構造が固定されているため、品質を測定し、1度に1つのパラメータを変更し、プロンプトを体系的に改善できます。',
+        '**Single Step Prompt Methodは、ロール・目的・コンテキスト・制約・出力形式を1つのメッセージに凝縮する1回限りのプロンプト構造です。** AIに「一緒にブレインストーミングしましょう」と複数ターンにわたって提案する代わりに、必要な情報をすべて最初に提供します。このアプローチはGPT-4o、Claude Opus 4.7、Gemini 3.1 Pro、および[Ollama](/ja/local-llms/ollama-installation-guide)やLM Studioなどのローカルモデルに対応しています。',
+        '基本的な考え方は「1度考え、1度書き、1度実行する」ことです。1つの精密な[プロンプト](/ja/prompt-engineering/what-is-prompt-engineering)設計に時間をかけ、その後タスク・プロジェクト・モデル全体で再利用します。構造が固定されているため、品質を測定し、1度に1つのパラメータを変更し、プロンプトを体系的に改善できます。',
       ],
     },
     whySingleStepWorks: {
@@ -1426,7 +1426,7 @@ ja: {
     singleVsMulti: {
       title: 'Single Step vs Multi-Step Prompting',
       content: [
-        '**Single Step Prompt Methodは、すでに必要な内容が明確で事前に指定できる場合に使用すべきです。本当に曖昧な、または探索的なタスクには[マルチステッププロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja)を予約してください。** 目的が明確であれば、1回限りの指示は通常、モデルと実行にわたってより一貫した結果をもたらします。',
+        '**Single Step Prompt Methodは、すでに必要な内容が明確で事前に指定できる場合に使用すべきです。本当に曖昧な、または探索的なタスクには[マルチステッププロンプティング](/ja/prompt-engineering/chain-of-thought-prompting)を予約してください。** 目的が明確であれば、1回限りの指示は通常、モデルと実行にわたってより一貫した結果をもたらします。',
         '主な違いは以下の通りです。',
       ],
       items: [
@@ -1450,7 +1450,7 @@ ja: {
     whenToStart: {
       title: 'When to Start With the Single Step Prompt in PromptQuorum',
       content: [
-        '**PromptQuorumでどのフレームワークを選ぶべきか不確かな場合、Single Step Prompt Methodから始め、[CRAFT](/prompt-engineering/craft-framework?lang=ja)や[APE](/prompt-engineering/ape-framework?lang=ja)などのより特化したフレームワークへの切り替えは明確な制限に直面したときだけにしてください。** これにより、ワークフローをシンプルに保ちながら、後で高度な最適化を行うことができます。',
+        '**PromptQuorumでどのフレームワークを選ぶべきか不確かな場合、Single Step Prompt Methodから始め、[CRAFT](/ja/prompt-engineering/craft-framework)や[APE](/ja/prompt-engineering/ape-framework)などのより特化したフレームワークへの切り替えは明確な制限に直面したときだけにしてください。** これにより、ワークフローをシンプルに保ちながら、後で高度な最適化を行うことができます。',
         'Single Stepが適切な出発点である典型的な状況は以下の通りです。',
       ],
       items: [
@@ -1680,7 +1680,7 @@ ja: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/the-single-step-prompt-method',
         inLanguage: 'zh',
         headline: '单步提示法（Single Step Prompt Method）',
         description: '单步提示法的工作原理、适用场景，以及PromptQuorum如何将其作为新用户的默认框架。',
@@ -1708,8 +1708,8 @@ ja: {
         whatIsSingleStep: {
           title: '什么是单步提示法',
           content: [
-            '**单步提示法是一种一次性的提示结构，将角色、目标、上下文、约束条件和输出格式整合到一条给模型的单一消息中。** 不同于让AI在多轮对话中"一起头脑风暴"，单步提示法在最初就向模型提供它所需的全部信息。这种方法适用于GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro以及通过[Ollama](/local-llms/ollama-installation-guide?lang=zh)或LM Studio等工具运行的本地模型。',
-            '核心理念是"思考一次、编写一次、执行一次"。你投入精力设计一个精确的[提示](/prompt-engineering/what-is-prompt-engineering?lang=zh)，然后在多个任务、项目和模型中重复使用。由于结构固定，你可以衡量质量、每次改变一个参数，并系统地改进提示。',
+            '**单步提示法是一种一次性的提示结构，将角色、目标、上下文、约束条件和输出格式整合到一条给模型的单一消息中。** 不同于让AI在多轮对话中"一起头脑风暴"，单步提示法在最初就向模型提供它所需的全部信息。这种方法适用于GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro以及通过[Ollama](/zh/local-llms/ollama-installation-guide)或LM Studio等工具运行的本地模型。',
+            '核心理念是"思考一次、编写一次、执行一次"。你投入精力设计一个精确的[提示](/zh/prompt-engineering/what-is-prompt-engineering)，然后在多个任务、项目和模型中重复使用。由于结构固定，你可以衡量质量、每次改变一个参数，并系统地改进提示。',
           ],
         },
         whySingleStepWorks: {
@@ -1736,7 +1736,7 @@ ja: {
         singleVsMulti: {
           title: '单步法 vs 多步提示法',
           content: [
-            '**当你已经知道自己想要什么并能预先指定时，应该使用单步提示法；将[多步提示](/prompt-engineering/chain-of-thought-prompting?lang=zh)留给真正模糊或探索性的任务。** 如果你的目标明确，一条单一指令通常会在模型和运行中产生更一致的结果。',
+            '**当你已经知道自己想要什么并能预先指定时，应该使用单步提示法；将[多步提示](/zh/prompt-engineering/chain-of-thought-prompting)留给真正模糊或探索性的任务。** 如果你的目标明确，一条单一指令通常会在模型和运行中产生更一致的结果。',
             '主要区别包括：',
           ],
           items: [
@@ -1760,7 +1760,7 @@ ja: {
         whenToStart: {
           title: '何时在PromptQuorum中使用单步提示法',
           content: [
-            '**如果你不确定在PromptQuorum中选择哪个框架，应该从单步提示法开始，只有在遇到明确的限制时才切换到[CRAFT](/prompt-engineering/craft-framework?lang=zh)或[APE](/prompt-engineering/ape-framework?lang=zh)等更专业的框架。** 这保持了你的工作流简单，同时允许后续高级优化。',
+            '**如果你不确定在PromptQuorum中选择哪个框架，应该从单步提示法开始，只有在遇到明确的限制时才切换到[CRAFT](/zh/prompt-engineering/craft-framework)或[APE](/zh/prompt-engineering/ape-framework)等更专业的框架。** 这保持了你的工作流简单，同时允许后续高级优化。',
             '单步法是正确起点的典型情况：',
           ],
           items: [

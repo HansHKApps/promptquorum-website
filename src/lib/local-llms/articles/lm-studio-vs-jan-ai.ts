@@ -378,7 +378,7 @@ schema: {
           content: [
             '**LM Studio:** Einfaches 3-Pane-Layout (Modellbrowser → Einstellungen → Chat). Lädt erstes Modell in 2 Minuten. Stabile Benutzeroberfläche, keine Überraschungen. Ideal für deutsche Mittelständler und technische Teams, die schnell einsatzbereit sein möchten.',
             '**Jan AI:** Funktionsreiches Seitenleisten-Interface mit Plug-ins. Dauert 5 Minuten, um das Plugin-System zu verstehen. Mehr Klicks erforderlich, um zu häufigen Funktionen zu gelangen.',
-            '**Gewinner: LM Studio für Anfänger**. Schnelleres Onboarding, weniger kognitive Last. Für fortgeschrittenere Benutzeroberflächen empfehlen wir unseren Leitfaden [beste lokale LLM Frontends](/local-llms/best-local-llm-frontends?lang=de).',
+            '**Gewinner: LM Studio für Anfänger**. Schnelleres Onboarding, weniger kognitive Last. Für fortgeschrittenere Benutzeroberflächen empfehlen wir unseren Leitfaden [beste lokale LLM Frontends](/de/local-llms/best-local-llm-frontends).',
           ],
           callouts: [
             { type: '💡 Profi-Tipp', text: 'LM Studios Layout spiegelt VS Code Editor-Muster wider. Wenn Sie mit VS Code vertraut sind, werden Sie sich in wenigen Sekunden in LM Studio zurecht finden.' },
@@ -390,7 +390,7 @@ schema: {
             '**Beide Apps verwenden das gleiche llama.cpp-Backend.** Es gibt keinen inhärenten Geschwindigkeitsunterschied.',
             '**LM Studio:** Etwas geringerer Overhead (minimales UI, weniger Funktionen = leichterer Speicher-Footprint).',
             '**Jan AI:** Schwerere UI (Electron-basiert), nutzt mehr RAM. Inferenz-Geschwindigkeit identisch.',
-            'Realer Unterschied: Wenn Sie über 50 Token/s benötigen, ist keine dieser Apps optimal. Verwenden Sie [Ollama oder vLLM](/local-llms/ollama-vs-lm-studio?lang=de) für Leistung.',
+            'Realer Unterschied: Wenn Sie über 50 Token/s benötigen, ist keine dieser Apps optimal. Verwenden Sie [Ollama oder vLLM](/de/local-llms/ollama-vs-lm-studio) für Leistung.',
             '**Gewinner: Unentschieden**. Geschwindigkeit ist Backend-abhängig (llama.cpp), nicht App-abhängig.',
           ],
           callouts: [
@@ -415,7 +415,7 @@ schema: {
             '**LM Studio:** Ein OpenAI-kompatibler `/v1/chat/completions`-Endpunkt pro Sitzung.',
             '**Jan AI:** Mehrere API-Endpunkte, jede führt Modell unabhängig aus. Besser für parallele Workflows und mehrere Modelle pro Projekt.',
             'Beide funktionieren mit VS Code Copilot, Cursor und anderen IDE-Erweiterungen.',
-            'Für Produktions-API-Server: Überspringen Sie beide und verwenden Sie [Ollama oder vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=de).',
+            'Für Produktions-API-Server: Überspringen Sie beide und verwenden Sie [Ollama oder vLLM](/de/local-llms/llamacpp-vs-ollama-vs-vllm).',
             '**Gewinner: Jan AI** für Entwickler, die mehrere gleichzeitig laufende Modelle benötigen.',
           ],
           callouts: [
@@ -469,10 +469,10 @@ schema: {
         'relatedReading': {
           title: 'Weiterführende Literatur',
           items: [
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=de)',
-            '[Beste lokale LLM Frontends](/local-llms/best-local-llm-frontends?lang=de)',
-            '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=de)',
-            '[Bestes lokales LLM-Setup nach Use Case](/local-llms/best-local-llm-stack-use-case?lang=de)',
+            '[Ollama vs LM Studio](/de/local-llms/ollama-vs-lm-studio)',
+            '[Beste lokale LLM Frontends](/de/local-llms/best-local-llm-frontends)',
+            '[llama.cpp vs Ollama vs vLLM](/de/local-llms/llamacpp-vs-ollama-vs-vllm)',
+            '[Bestes lokales LLM-Setup nach Use Case](/de/local-llms/best-local-llm-stack-use-case)',
           ],
         },
         'sources': {
@@ -489,7 +489,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LM Studio vs Jan AI: Welches ist besser für lokale LLMs?',
         'description': 'LM Studio führt für Anfänger: schnelleres Setup, integrierte HuggingFace-Suche, 3 Jahre Erfolgsbilanz. Jan AI für Entwickler: Plugins, mehrere API-Endpunkte, lokales RAG. April 2026 Entscheidungsleitfaden.',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -531,7 +531,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI: Welches ist besser für lokale LLMs?',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'de',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio: Einfacher, stabiler, 3 Jahre Erfolgsbilanz. Ideal für Anfänger.' },
@@ -640,7 +640,7 @@ schema: {
           content: [
             '**LM Studio :** 3 panneaux simples (navigateur → paramètres → chat). Charge premier modèle en 2 min. Stable, prévisible. Parfait pour les PME et équipes créatives qui veulent démarrer rapidement.',
             '**Jan AI :** Interface riche avec plugins. 5 min pour comprendre le système. Plus de clics pour accéder aux actions courantes.',
-            '**Gagnant : LM Studio pour débutants**. Onboarding plus rapide. Pour interfaces avancées, consultez notre guide [meilleurs frontends LLM](/local-llms/best-local-llm-frontends?lang=fr).',
+            '**Gagnant : LM Studio pour débutants**. Onboarding plus rapide. Pour interfaces avancées, consultez notre guide [meilleurs frontends LLM](/fr/local-llms/best-local-llm-frontends).',
           ],
           callouts: [
             { type: '💡 Conseil pro', text: 'LM Studio reprend les patterns de VS Code. Familier avec VS Code ? Vous maîtriserez LM Studio en quelques secondes.' },
@@ -652,7 +652,7 @@ schema: {
             '**Tous deux utilisent le backend llama.cpp.** Aucune différence intrinsèque.',
             '**LM Studio :** Overhead minimal (UI légère, moins de features).',
             '**Jan AI :** Interface plus lourde (Electron), plus de RAM. Vitesse d\'inférence identique.',
-            'Besoin de 50+ tokens/s ? Ni l\'un ni l\'autre ne convient. Préférez [Ollama ou vLLM](/local-llms/ollama-vs-lm-studio?lang=fr).',
+            'Besoin de 50+ tokens/s ? Ni l\'un ni l\'autre ne convient. Préférez [Ollama ou vLLM](/fr/local-llms/ollama-vs-lm-studio).',
             '**Gagnant : Égalité**. La vitesse dépend du backend, pas de l\'app.',
           ],
           callouts: [
@@ -677,7 +677,7 @@ schema: {
             '**LM Studio :** Un endpoint `/v1/chat/completions` par session.',
             '**Jan AI :** Endpoints multiples, chaque modèle indépendant. Mieux pour workflows parallèles.',
             'Les deux travaillent avec VS Code Copilot, Cursor, autres IDE.',
-            'Pour serveur production : préférez [Ollama ou vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=fr).',
+            'Pour serveur production : préférez [Ollama ou vLLM](/fr/local-llms/llamacpp-vs-ollama-vs-vllm).',
             '**Gagnant : Jan AI** pour développeurs avec modèles concurrents.',
           ],
           callouts: [
@@ -729,10 +729,10 @@ schema: {
         'relatedReading': {
           title: 'Lectures complémentaires',
           items: [
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=fr)',
-            '[Meilleurs frontends LLM locaux](/local-llms/best-local-llm-frontends?lang=fr)',
-            '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=fr)',
-            '[Meilleure stack LLM locale par use case](/local-llms/best-local-llm-stack-use-case?lang=fr)',
+            '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio)',
+            '[Meilleurs frontends LLM locaux](/fr/local-llms/best-local-llm-frontends)',
+            '[llama.cpp vs Ollama vs vLLM](/fr/local-llms/llamacpp-vs-ollama-vs-vllm)',
+            '[Meilleure stack LLM locale par use case](/fr/local-llms/best-local-llm-stack-use-case)',
           ],
         },
         'sources': {
@@ -749,7 +749,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LM Studio vs Jan AI : Lequel choisir pour les LLM locaux ?',
         'description': 'LM Studio domine pour les débutants : installation rapide, recherche HuggingFace intégrée, 3 ans de fiabilité. Jan AI pour les développeurs : plugins, API multiples, RAG local. Guide 2026.',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -789,7 +789,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI : Lequel choisir pour les LLM locaux ?',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'fr',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio : simple, stable, 3 ans de suivi. Idéal pour débutants.' },
@@ -899,7 +899,7 @@ schema: {
           content: [
             '**LM Studio：** シンプルな3ペイン設計（モデルブラウザ → 設定 → チャット）。最初のモデルを読み込むのに2分。安定したUI、予期しないことはありません。',
             '**Jan AI：** プラグイン機能をサイドバーに搭載したより豊かな機能。プラグインシステムを理解するのに5分。一般的な操作に到達するまでにより多くのクリックが必要です。',
-            '**勝者：初心者向けはLM Studio**。オンボーディングが速く、認知負荷が少なくなります。より高度なインターフェースが必要な場合は、[ローカルLLMフロントエンドの比較](/local-llms/best-local-llm-frontends?lang=ja) ガイドを確認してください。',
+            '**勝者：初心者向けはLM Studio**。オンボーディングが速く、認知負荷が少なくなります。より高度なインターフェースが必要な場合は、[ローカルLLMフロントエンドの比較](/ja/local-llms/best-local-llm-frontends) ガイドを確認してください。',
           ],
           callouts: [
             { type: '💡 プロのヒント', text: 'LM StudioのレイアウトはVS Codeのエディターパターンを反映しています。VS Codeに慣れていれば、数秒以内にLM Studioでも自分で操作できるようになります。' },
@@ -911,7 +911,7 @@ schema: {
             '**どちらのアプリも同じllama** .cpp バックエンドを使用しています。本来的な速度の違いはありません。',
             '**LM Studio：** オーバーヘッドが若干低い（ミニマルなUI、機能が少ない = メモリフットプリントが軽い）。',
             '**Jan AI：** より重いUI（Electron ベース）、より多くのRAMを使用。推論速度は同一。',
-            '本当の違い：50トークン/秒以上が必要な場合、どちらのアプリも最適ではありません。パフォーマンスには [OllamaまたはvLLM](/local-llms/ollama-vs-lm-studio?lang=ja) を使用してください。',
+            '本当の違い：50トークン/秒以上が必要な場合、どちらのアプリも最適ではありません。パフォーマンスには [OllamaまたはvLLM](/ja/local-llms/ollama-vs-lm-studio) を使用してください。',
             '**勝者：同点**。速度はバックエンド依存（llama.cpp）、アプリ依存ではありません。',
           ],
           callouts: [
@@ -936,7 +936,7 @@ schema: {
             '**LM Studio：** セッションごとに1つのOpenAI互換 `/v1/chat/completions` エンドポイント。',
             '**Jan AI：** 複数のAPIエンドポイント、それぞれ独立して実行されるモデル。並列ワークフローに最適です。',
             'どちらもVS Code Copilot、Cursor、その他のIDE拡張機能で動作します。',
-            '本番用APIサーバーの場合：どちらもスキップして、[OllamaまたはvLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=ja) を使用してください。',
+            '本番用APIサーバーの場合：どちらもスキップして、[OllamaまたはvLLM](/ja/local-llms/llamacpp-vs-ollama-vs-vllm) を使用してください。',
             '**勝者：Jan AI** 複数の並列モデルが必要な開発者向け。',
           ],
           callouts: [
@@ -997,10 +997,10 @@ schema: {
         'relatedReading': {
           title: '関連資料',
           items: [
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=ja)',
-            '[最高のローカルLLMフロントエンド](/local-llms/best-local-llm-frontends?lang=ja)',
-            '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=ja)',
-            '[ユースケース別最高のローカルLLMスタック](/local-llms/best-local-llm-stack-use-case?lang=ja)',
+            '[Ollama vs LM Studio](/ja/local-llms/ollama-vs-lm-studio)',
+            '[最高のローカルLLMフロントエンド](/ja/local-llms/best-local-llm-frontends)',
+            '[llama.cpp vs Ollama vs vLLM](/ja/local-llms/llamacpp-vs-ollama-vs-vllm)',
+            '[ユースケース別最高のローカルLLMスタック](/ja/local-llms/best-local-llm-stack-use-case)',
           ],
         },
         'sources': {
@@ -1017,7 +1017,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LM Studio vs Jan AI：ローカルLLMにはどちらが優れているか？',
         'description': 'LM Studioは初心者向け：セットアップが速い、HuggingFaceの検索機能が組み込み、3年の信頼実績。Jan AIは開発者向け：プラグインシステム、複数のAPIエンドポイント、ローカルRAG対応。2026年の決定ガイド。',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -1057,7 +1057,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI：ローカルLLMにはどちらが優れているか？',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'ja',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio：シンプル、安定、3年の信頼実績。初心者向け。' },
@@ -1167,7 +1167,7 @@ schema: {
           content: [
             '**LM Studio：** 3栏布局简洁（模型浏览器→设置→聊天）。2分钟加载首个模型。稳定可靠。对中国企业用户和团队协作场景友好。',
             '**Jan AI：** 功能丰富的侧边栏带插件系统。理解插件需5分钟。常用操作需要更多点击。',
-            '**赢家：初学者选LM Studio**。上手快，学习曲线平缓。进阶用户查看我们的[本地LLM最佳前端指南](/local-llms/best-local-llm-frontends?lang=zh)。',
+            '**赢家：初学者选LM Studio**。上手快，学习曲线平缓。进阶用户查看我们的[本地LLM最佳前端指南](/zh/local-llms/best-local-llm-frontends)。',
           ],
           callouts: [
             { type: '💡 专业提示', text: 'LM Studio界面设计参考VS Code。熟悉VS Code的用户，几秒内就能掌握LM Studio。' },
@@ -1179,7 +1179,7 @@ schema: {
             '**两者都用同样的llama** .cpp后端。没有本质速度差异。',
             '**LM Studio：** 开销稍小（最小UI、功能少=内存占用轻）。',
             '**Jan AI：** UI较重（Electron框架），占用更多RAM。推论速度相同。',
-            '需要50+tokens/秒？两个都不是最优选择。选[Ollama或vLLM](/local-llms/ollama-vs-lm-studio?lang=zh)。',
+            '需要50+tokens/秒？两个都不是最优选择。选[Ollama或vLLM](/zh/local-llms/ollama-vs-lm-studio)。',
             '**赢家：平手**。速度取决于后端，不是应用。',
           ],
           callouts: [
@@ -1204,7 +1204,7 @@ schema: {
             '**LM Studio：** 每个会话一个OpenAI兼容 `/v1/chat/completions` 端口。',
             '**Jan AI：** 多个API端口，每个独立运行模型。更适合并行工作流。',
             '两者都支持VS Code Copilot、Cursor、其他IDE扩展。',
-            '生产API服务器：跳过两个，选[Ollama或vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=zh)。',
+            '生产API服务器：跳过两个，选[Ollama或vLLM](/zh/local-llms/llamacpp-vs-ollama-vs-vllm)。',
             '**赢家：Jan AI** 需要多并行模型的开发者首选。',
           ],
           callouts: [
@@ -1265,10 +1265,10 @@ schema: {
         'relatedReading': {
           title: '延伸阅读',
           items: [
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=zh)',
-            '[最佳本地LLM前端](/local-llms/best-local-llm-frontends?lang=zh)',
-            '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=zh)',
-            '[按用途选最佳本地LLM堆栈](/local-llms/best-local-llm-stack-use-case?lang=zh)',
+            '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio)',
+            '[最佳本地LLM前端](/zh/local-llms/best-local-llm-frontends)',
+            '[llama.cpp vs Ollama vs vLLM](/zh/local-llms/llamacpp-vs-ollama-vs-vllm)',
+            '[按用途选最佳本地LLM堆栈](/zh/local-llms/best-local-llm-stack-use-case)',
           ],
         },
         'sources': {
@@ -1285,7 +1285,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LM Studio vs Jan AI：哪款本地LLM应用更好用？',
         'description': 'LM Studio适合初学者：安装快、集成HuggingFace搜索、3年稳定记录。Jan AI适合开发者：插件系统、多API端口、本地RAG。2026年选择指南。',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -1325,7 +1325,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI：哪款本地LLM应用更好用？',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'zh',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio：简洁、稳定、3年历史。最适合初学者。' },
@@ -1434,7 +1434,7 @@ schema: {
           content: [
             '**LM Studio:** diseño simple de 3 paneles (navegador de modelos → ajustes → chat). Carga el primer modelo en 2 minutos. Interfaz estable, sin sorpresas.',
             '**Jan AI:** barra lateral con más funciones y plugins. Toma 5 minutos entender el sistema de plugins. Más clics para acceder a las acciones comunes.',
-            '**Ganador: LM Studio para principiantes**. Incorporación más rápida, menos carga cognitiva. Para frontends más avanzados, consulta nuestra guía [mejores frontends LLM locales](/local-llms/best-local-llm-frontends?lang=es).',
+            '**Ganador: LM Studio para principiantes**. Incorporación más rápida, menos carga cognitiva. Para frontends más avanzados, consulta nuestra guía [mejores frontends LLM locales](/es/local-llms/best-local-llm-frontends).',
           ],
           callouts: [
             { type: '💡 Consejo pro', text: 'El diseño de LM Studio refleja los patrones del editor VS Code. Si ya conoces VS Code, te sentirás cómodo en LM Studio en cuestión de segundos.' },
@@ -1446,7 +1446,7 @@ schema: {
             '**Ambas apps usan el mismo backend llama.cpp.** No hay diferencia de velocidad inherente.',
             '**LM Studio:** overhead ligeramente menor (UI minimal, menos funciones = menor huella de memoria).',
             '**Jan AI:** UI más pesada (basada en Electron), usa más RAM. Velocidad de inferencia idéntica.',
-            'Diferencia real: si necesitas más de 50 tokens/s, ninguna de estas apps es óptima. Usa [Ollama o vLLM](/local-llms/ollama-vs-lm-studio?lang=es) para rendimiento.',
+            'Diferencia real: si necesitas más de 50 tokens/s, ninguna de estas apps es óptima. Usa [Ollama o vLLM](/es/local-llms/ollama-vs-lm-studio) para rendimiento.',
             '**Ganador: Empate.** La velocidad depende del backend (llama.cpp), no de la app.',
           ],
           callouts: [
@@ -1471,7 +1471,7 @@ schema: {
             '**LM Studio:** un solo endpoint `/v1/chat/completions` compatible con OpenAI por sesión.',
             '**Jan AI:** múltiples endpoints API, cada uno ejecutando el modelo de forma independiente. Mejor para flujos de trabajo paralelos y múltiples modelos por proyecto.',
             'Ambas funcionan con VS Code Copilot, Cursor y otras extensiones IDE.',
-            'Para servidor API en producción: sáltate ambas y usa [Ollama o vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=es).',
+            'Para servidor API en producción: sáltate ambas y usa [Ollama o vLLM](/es/local-llms/llamacpp-vs-ollama-vs-vllm).',
             '**Ganador: Jan AI** para desarrolladores que necesitan múltiples modelos simultáneos.',
           ],
           callouts: [
@@ -1523,10 +1523,10 @@ schema: {
         'relatedReading': {
           title: 'Lecturas relacionadas',
           items: [
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=es)',
-            '[Los mejores frontends LLM locales](/local-llms/best-local-llm-frontends?lang=es)',
-            '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm?lang=es)',
-            '[Mejor stack LLM local por caso de uso](/local-llms/best-local-llm-stack-use-case?lang=es)',
+            '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio)',
+            '[Los mejores frontends LLM locales](/es/local-llms/best-local-llm-frontends)',
+            '[llama.cpp vs Ollama vs vLLM](/es/local-llms/llamacpp-vs-ollama-vs-vllm)',
+            '[Mejor stack LLM local por caso de uso](/es/local-llms/best-local-llm-stack-use-case)',
           ],
         },
         'sources': {
@@ -1543,7 +1543,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LM Studio vs Jan AI: ¿Cuál es mejor para LLMs locales?',
         'description': 'LM Studio es mejor para principiantes: configuración más rápida, búsqueda HuggingFace integrada, 3 años de historial. Jan AI para desarrolladores: plugins, múltiples endpoints API, RAG local. Guía de decisión de abril de 2026.',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=es',
+        'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -1583,7 +1583,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI: ¿Cuál es mejor para LLMs locales?',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=es',
+        'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'es',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio: más simple, más estable, 3 años de historial. Mejor para principiantes.' },

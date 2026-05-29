@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'Mit KI extrahieren und zusammenfassen',
         description: 'KI-Dokumentenzusammenfassung reduziert die Prüfzeit um 60–80 % bei 0,7 % Halluzinationsrate. Extraktive vs. abstraktive Ansätze, Modellvergleich und Promptstruktur für quelltreue Ausgaben.',
-        url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/extract-and-summarise',
         inLanguage: 'de',
         datePublished: '2026-03-23',
         dateModified: '2026-05-04',
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie schreibt man Extraktions- und Zusammenfassungsprompts?',
           content: [
             '**Ein strukturierter Zusammenfassungsprompt — der Dokumenttyp, Ausgabeformat, Längenbeschränkung und explizite Anweisung zur Kennzeichnung nicht überprüfbarer Aussagen angibt — liefert direkt verwendbare Ausgaben; ein unstrukturierter Prompt liefert einen allgemeinen Absatz, der kritische Informationen auslässt.**',
-            'Der häufigste [Prompt-Engineering](/prompt-engineering/what-is-prompt-engineering?lang=de)-Fehler bei Zusammenfassungen ist die Behandlung von „Fasse das zusammen" als vollständige Anweisung. Jede Annahme des Modells über Länge, Format, Perspektive und Detailgrad ist ein potenzieller Mismatch mit dem tatsächlichen Bedarf. Die [5-Bausteine-Promptstruktur](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — Rolle, Aufgabe, Eingabe, Einschränkungen, Ausgabeformat — gilt direkt für Extraktionsaufgaben.',
+            'Der häufigste [Prompt-Engineering](/de/prompt-engineering/what-is-prompt-engineering)-Fehler bei Zusammenfassungen ist die Behandlung von „Fasse das zusammen" als vollständige Anweisung. Jede Annahme des Modells über Länge, Format, Perspektive und Detailgrad ist ein potenzieller Mismatch mit dem tatsächlichen Bedarf. Die [5-Bausteine-Promptstruktur](/de/prompt-engineering/5-building-blocks-every-prompt-needs) — Rolle, Aufgabe, Eingabe, Einschränkungen, Ausgabeformat — gilt direkt für Extraktionsaufgaben.',
           ],
         },
         promptFramework: {
@@ -1000,7 +1000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Warum halluzinieren KI-Modelle in Zusammenfassungen noch immer und wie häufig?',
           content: [
             '**Die Halluzinationsraten bei quelltreuer Zusammenfassung sanken seit 2021 um 96 % — von 21,8 % auf 0,7 % bei den besten Modellen — aber ein mathematischer Beweis (2025) bestätigte, dass Halluzinationen unter aktuellen LLM-Architekturen nicht vollständig eliminierbar sind.**',
-            'Der architekturelle Grund ist fundamental: LLMs generieren statistisch wahrscheinliche nächste Token auf Basis von Mustererkennung über Trainingsdaten, nicht durch Abruf verifizierter Fakten. Selbst bei Angabe eines Quelldokuments „vermischt" ein Modell gelegentlich Quellinhalte mit Trainingswissen auf eine Weise, die einen plausiblen, aber ungetreuen Satz ergibt — was Forscher als „Mixed-Context-Halluzination" bezeichnen. Dies ist eine der grundlegenden [KI-Grenzen](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de), die quelltreue Zusammenfassungs-Workflows berücksichtigen müssen.',
+            'Der architekturelle Grund ist fundamental: LLMs generieren statistisch wahrscheinliche nächste Token auf Basis von Mustererkennung über Trainingsdaten, nicht durch Abruf verifizierter Fakten. Selbst bei Angabe eines Quelldokuments „vermischt" ein Modell gelegentlich Quellinhalte mit Trainingswissen auf eine Weise, die einen plausiblen, aber ungetreuen Satz ergibt — was Forscher als „Mixed-Context-Halluzination" bezeichnen. Dies ist eine der grundlegenden [KI-Grenzen](/de/prompt-engineering/ai-limitations-what-llms-cant-do), die quelltreue Zusammenfassungs-Workflows berücksichtigen müssen.',
             'Die Fehlermodi bei KI-Zusammenfassungen, nach Häufigkeit geordnet:',
           ],
           items: [
@@ -1072,13 +1072,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
-            '[Was ist Prompt-Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — die Grundprinzipien strukturierter KI-Anweisungen',
-            '[KI-gestützte Recherche](/prompt-engineering/ai-powered-research?lang=de) — wie man Extraktionstools mit Mehrquellen-Verifizierungs-Workflows kombiniert',
-            '[Warum KI halluziniert und wie man es stoppt](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — die Ursachen von Halluzinationen und bewährte Gegenmaßnahmen',
-            '[KI-Grenzen — Was LLMs nicht können](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — spezifische Techniken zur Verankerung von KI-Ausgaben in verifizierten Quellinhalten',
-            '[5 Bausteine, die jeder KI-Prompt benötigt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — strukturierte Prompt-Komponenten, die die Extraktionsgenauigkeit direkt verbessern',
-            '[Temperature und Top-P: KI-Ausgabe kontrollieren](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) — Temperature auf 0,0–0,1 setzen für deterministische, halluzinationsresistente Zusammenfassung',
-            '[Chain-of-Thought-Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — schrittweises Denken, das die Treue bei komplexen Mehrquellen-Analysen verbessert',
+            '[Was ist Prompt-Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — die Grundprinzipien strukturierter KI-Anweisungen',
+            '[KI-gestützte Recherche](/de/prompt-engineering/ai-powered-research) — wie man Extraktionstools mit Mehrquellen-Verifizierungs-Workflows kombiniert',
+            '[Warum KI halluziniert und wie man es stoppt](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — die Ursachen von Halluzinationen und bewährte Gegenmaßnahmen',
+            '[KI-Grenzen — Was LLMs nicht können](/de/prompt-engineering/ai-limitations-what-llms-cant-do) — spezifische Techniken zur Verankerung von KI-Ausgaben in verifizierten Quellinhalten',
+            '[5 Bausteine, die jeder KI-Prompt benötigt](/de/prompt-engineering/5-building-blocks-every-prompt-needs) — strukturierte Prompt-Komponenten, die die Extraktionsgenauigkeit direkt verbessern',
+            '[Temperature und Top-P: KI-Ausgabe kontrollieren](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) — Temperature auf 0,0–0,1 setzen für deterministische, halluzinationsresistente Zusammenfassung',
+            '[Chain-of-Thought-Prompting](/de/prompt-engineering/chain-of-thought-prompting) — schrittweises Denken, das die Treue bei komplexen Mehrquellen-Analysen verbessert',
           ],
         },
         howToStart: {
@@ -1197,7 +1197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'Extrae y resume con IA',
         description: 'El resumen de documentos con IA reduce el tiempo de revisión entre un 60 y un 80 % con tasas de alucinación del 0,7 %. Aprende los enfoques extractivo vs abstractivo, qué modelos usar y cómo estructurar prompts para salidas fieles.',
-        url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/extract-and-summarise',
         inLanguage: 'es',
         datePublished: '2026-03-23',
         dateModified: '2026-05-04',
@@ -1217,7 +1217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/extract-and-summarise?lang=es',
+          url: 'https://www.promptquorum.com/es/api/og/extract-and-summarise',
           width: 1200,
           height: 630,
         },
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Cómo escribir prompts de extracción y resumen',
           content: [
             '**Un prompt de resumen estructurado — que especifica el tipo de documento, el formato de salida, la restricción de longitud y la instrucción explícita de señalar afirmaciones no verificables — produce salidas directamente utilizables; un prompt no estructurado produce un párrafo genérico que omite información crítica.**',
-            'El fallo más común de [prompt engineering](/prompt-engineering/what-is-prompt-engineering?lang=es) en el resumen es tratar "resume esto" como una instrucción completa. Cada suposición que hace el modelo sobre longitud, formato, perspectiva y nivel de detalle es un posible desajuste con lo que realmente necesitas.',
+            'El fallo más común de [prompt engineering](/es/prompt-engineering/what-is-prompt-engineering) en el resumen es tratar "resume esto" como una instrucción completa. Cada suposición que hace el modelo sobre longitud, formato, perspectiva y nivel de detalle es un posible desajuste con lo que realmente necesitas.',
           ],
         },
         promptFramework: {
@@ -1709,7 +1709,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'Extraire et résumer avec l\'IA',
         description: 'Le résumé de documents par IA réduit le temps d\'examen de 60–80 % avec 0.7 % d\'hallucinations. Approches extractives vs abstraites, comparaison de modèles et structure de prompts pour des résumés fidèles.',
-        url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/extract-and-summarise',
         inLanguage: 'fr',
         datePublished: '2026-03-23',
         dateModified: '2026-05-04',
@@ -1986,7 +1986,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Comment rédiger des prompts d\'extraction et de résumé ?',
           content: [
             '**Un prompt de résumé structuré — celui qui spécifie le type de document, le format de sortie, la limite de longueur et l\'instruction explicite de signaler les affirmations non vérifiables — produit des résultats directement utilisables ; un prompt non structuré produit un paragraphe générique qui manque les informations critiques.**',
-            'L\'erreur [d\'ingénierie des prompts](/prompt-engineering/what-is-prompt-engineering?lang=fr) la plus courante en résumé est de traiter « résumez ceci » comme une instruction complète. Chaque hypothèse du modèle sur la longueur, le format, la perspective et le niveau de détail est un décalage potentiel avec ce que vous avez réellement besoin. La [structure en 5 blocs](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) — Rôle, Tâche, Entrée, Contraintes, Format de sortie — s\'applique directement aux tâches d\'extraction.',
+            'L\'erreur [d\'ingénierie des prompts](/fr/prompt-engineering/what-is-prompt-engineering) la plus courante en résumé est de traiter « résumez ceci » comme une instruction complète. Chaque hypothèse du modèle sur la longueur, le format, la perspective et le niveau de détail est un décalage potentiel avec ce que vous avez réellement besoin. La [structure en 5 blocs](/fr/prompt-engineering/5-building-blocks-every-prompt-needs) — Rôle, Tâche, Entrée, Contraintes, Format de sortie — s\'applique directement aux tâches d\'extraction.',
           ],
         },
         promptFramework: {
@@ -2062,7 +2062,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Pourquoi les modèles IA hallucinisent-ils encore dans les résumés et à quelle fréquence ?',
           content: [
             '**Les taux d\'hallucination de la résumé ancrée à la source ont baissé de 96 % depuis 2021 — de 21.8 % à 0.7 % pour les meilleurs modèles — mais une preuve mathématique (2025) a confirmé que l\'hallucination ne peut pas être complètement éliminée sous les architectures LLM actuelles.**',
-            'La raison architecturale est fondamentale : les LLM génèrent des jetons statistiquement probables basés sur la reconnaissance de motifs sur les données d\'entraînement, pas en récupérant les faits vérifiés. Même avec un document source fourni, un modèle « mélange » occasionnellement le contenu source avec les connaissances d\'entraînement de manière à produire une phrase plausible mais infidèle — ce que les chercheurs appellent « hallucination de contexte mixte ». C\'est l\'une des [limites fondamentales de l\'IA](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) que les workflows de résumé ancré doivent gérer.',
+            'La raison architecturale est fondamentale : les LLM génèrent des jetons statistiquement probables basés sur la reconnaissance de motifs sur les données d\'entraînement, pas en récupérant les faits vérifiés. Même avec un document source fourni, un modèle « mélange » occasionnellement le contenu source avec les connaissances d\'entraînement de manière à produire une phrase plausible mais infidèle — ce que les chercheurs appellent « hallucination de contexte mixte ». C\'est l\'une des [limites fondamentales de l\'IA](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) que les workflows de résumé ancré doivent gérer.',
             'Les modes de défaillance en résumé par IA, par ordre de fréquence :',
           ],
           items: [
@@ -2134,13 +2134,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: 'Lecture complémentaire',
           items: [
-            '[Qu\'est-ce que l\'ingénierie des prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — les principes fondamentaux derrière les instructions IA structurées',
-            '[Recherche assistée par IA](/prompt-engineering/ai-powered-research?lang=fr) — comment combiner les outils d\'extraction avec les workflows de vérification multi-sources',
-            '[Pourquoi l\'IA hallucine et comment l\'arrêter](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — comprendre les causes profondes de l\'hallucination et les stratégies d\'atténuation prouvées',
-            '[Limites de l\'IA — Ce que les LLM ne peuvent pas faire](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — techniques spécifiques pour ancrer les résultats de l\'IA dans le contenu source vérifié',
-            '[5 composants que chaque prompt IA doit avoir](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) — composants de prompt structurés qui améliorent directement la précision d\'extraction',
-            '[Température et Top-P : contrôler la sortie IA](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) — définir la température à 0.0–0.1 pour la résumé déterministe et résistante aux hallucinations',
-            '[Chaînage de pensée](/prompt-engineering/chain-of-thought-prompting?lang=fr) — raisonnement étape par étape qui améliore la fidélité dans l\'analyse complexe multi-sources',
+            '[Qu\'est-ce que l\'ingénierie des prompts ?](/fr/prompt-engineering/what-is-prompt-engineering) — les principes fondamentaux derrière les instructions IA structurées',
+            '[Recherche assistée par IA](/fr/prompt-engineering/ai-powered-research) — comment combiner les outils d\'extraction avec les workflows de vérification multi-sources',
+            '[Pourquoi l\'IA hallucine et comment l\'arrêter](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — comprendre les causes profondes de l\'hallucination et les stratégies d\'atténuation prouvées',
+            '[Limites de l\'IA — Ce que les LLM ne peuvent pas faire](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — techniques spécifiques pour ancrer les résultats de l\'IA dans le contenu source vérifié',
+            '[5 composants que chaque prompt IA doit avoir](/fr/prompt-engineering/5-building-blocks-every-prompt-needs) — composants de prompt structurés qui améliorent directement la précision d\'extraction',
+            '[Température et Top-P : contrôler la sortie IA](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) — définir la température à 0.0–0.1 pour la résumé déterministe et résistante aux hallucinations',
+            '[Chaînage de pensée](/fr/prompt-engineering/chain-of-thought-prompting) — raisonnement étape par étape qui améliore la fidélité dans l\'analyse complexe multi-sources',
           ],
         },
         howToStart: {
@@ -2248,7 +2248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'AIで抽出と要約を実現',
         description: 'AI文書要約は確認時間を60～80％削減し、0.7%のハルシネーション率を達成します。抽出型と抽象型のアプローチ、モデル比較、ソースに忠実な出力のためのプロンプト構造を学びます。',
-        url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/extract-and-summarise',
         inLanguage: 'ja',
         datePublished: '2026-03-23',
         dateModified: '2026-05-04',
@@ -2524,7 +2524,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '抽出と要約プロンプトの書き方',
           content: [
             '**構造化要約プロンプト — ドキュメントタイプ、出力形式、長さ制限、確認不可能な主張の明示指示 — 直ちに使用可能な出力を提供。非構造化プロンプトは重要情報を見落とす一般的な段落を提供。**',
-            '要約の最も一般的な[プロンプトエンジニアリング](/prompt-engineering/what-is-prompt-engineering?lang=ja)失敗は「これを要約して」を完全な指示として扱うこと。長さ、形式、観点、詳細レベルに関するすべてのモデル仮定は、実際に必要なものとの潜在的なミスマッチ。[5ブロック構造](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja) — 役割、タスク、入力、制約、出力形式 — は抽出タスクに直接適用。',
+            '要約の最も一般的な[プロンプトエンジニアリング](/ja/prompt-engineering/what-is-prompt-engineering)失敗は「これを要約して」を完全な指示として扱うこと。長さ、形式、観点、詳細レベルに関するすべてのモデル仮定は、実際に必要なものとの潜在的なミスマッチ。[5ブロック構造](/ja/prompt-engineering/5-building-blocks-every-prompt-needs) — 役割、タスク、入力、制約、出力形式 — は抽出タスクに直接適用。',
           ],
         },
         promptFramework: {
@@ -2600,7 +2600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'なぜAIはまだ要約でハルシネーションするのか、どのくらい頻繁か？',
           content: [
             '**ソース固定要約のハルシネーション率は2021年から2025年で96%低下 — 最高モデルで21.8%から0.7%に — しかし2025年数学証明は現在のLLMアーキテクチャでハルシネーションを完全に排除できないことを確認。**',
-            'アーキテクチャ理由は根本的：LLMはトレーニングデータパターン認識に基づいて統計的に可能なネクストトークンを生成。確認された事実を取得ではなく。ソースドキュメントが与えられても、モデルは時々ソースコンテンツをトレーニング知識と「混合」し、妥当だが不忠実な文を生成 — 研究者が「混合文脈ハルシネーション」と呼ぶもの。これは基本的な[AIの限界](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja)でソース固定要約ワークフローが勘定する必要があるもの。',
+            'アーキテクチャ理由は根本的：LLMはトレーニングデータパターン認識に基づいて統計的に可能なネクストトークンを生成。確認された事実を取得ではなく。ソースドキュメントが与えられても、モデルは時々ソースコンテンツをトレーニング知識と「混合」し、妥当だが不忠実な文を生成 — 研究者が「混合文脈ハルシネーション」と呼ぶもの。これは基本的な[AIの限界](/ja/prompt-engineering/ai-limitations-what-llms-cant-do)でソース固定要約ワークフローが勘定する必要があるもの。',
             'AI要約の失敗モード、頻度順：',
           ],
           items: [
@@ -2672,13 +2672,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '参考資料',
           items: [
-            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 構造化AI指示の背後の基本原則',
-            '[AI支援研究](/prompt-engineering/ai-powered-research?lang=ja) — 複数ソース検証ワークフローで抽出ツール組み合わせ方法',
-            '[AIがなぜ幻覚見て、どのように停止するか](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) — ハルシネーション根本原因と実証的軽減戦略理解',
-            '[AIの限界 — LLMができないこと](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — 確認されたソースコンテンツにAI出力をアンカーするための特定技術',
-            '[すべてのAIプロンプトが必要な5つのコンポーネント](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja) — 抽出正確性を直接改善する構造化プロンプトコンポーネント',
-            '[温度とTop-P：AI出力制御](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja) — 決定論的でハルシネーション抵抗性のある要約向けに0.0～0.1に温度設定',
-            '[チェーン・オブ・シンク・プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — 複雑な複数ソース分析で忠実性改善するステップバイステップ推論',
+            '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — 構造化AI指示の背後の基本原則',
+            '[AI支援研究](/ja/prompt-engineering/ai-powered-research) — 複数ソース検証ワークフローで抽出ツール組み合わせ方法',
+            '[AIがなぜ幻覚見て、どのように停止するか](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — ハルシネーション根本原因と実証的軽減戦略理解',
+            '[AIの限界 — LLMができないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — 確認されたソースコンテンツにAI出力をアンカーするための特定技術',
+            '[すべてのAIプロンプトが必要な5つのコンポーネント](/ja/prompt-engineering/5-building-blocks-every-prompt-needs) — 抽出正確性を直接改善する構造化プロンプトコンポーネント',
+            '[温度とTop-P：AI出力制御](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 決定論的でハルシネーション抵抗性のある要約向けに0.0～0.1に温度設定',
+            '[チェーン・オブ・シンク・プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — 複雑な複数ソース分析で忠実性改善するステップバイステップ推論',
           ],
         },
         howToStart: {
@@ -2788,7 +2788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'AI文档提取与总结',
         description: 'AI文档总结将审查时间减少60–80%，幻觉率为0.7%。对比抽取式与抽象式方法、模型选择和确保输出忠实于源文本的提示词结构。',
-        url: 'https://www.promptquorum.com/prompt-engineering/extract-and-summarise?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/extract-and-summarise',
         inLanguage: 'zh',
         datePublished: '2026-03-23',
         dateModified: '2026-05-04',
@@ -3064,7 +3064,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '如何撰写提取和总结提示词',
           content: [
             '**结构化总结提示词——指定文档类型、输出格式、长度限制和明确指示来标记无法验证的声明——产生直接可用的输出；非结构化提示词产生遗漏关键信息的通用段落。**',
-            '总结中最常见的[提示词工程](/prompt-engineering/what-is-prompt-engineering?lang=zh)失败是将"总结一下"作为完整指示。模型对长度、格式、视角和细节级别所做的每一个假设都是与您实际需要的潜在不匹配。[5块提示词结构](/prompt-engineering/prompt-building-blocks?lang=zh)——角色、任务、输入、约束、输出格式——直接适用于提取任务。',
+            '总结中最常见的[提示词工程](/zh/prompt-engineering/what-is-prompt-engineering)失败是将"总结一下"作为完整指示。模型对长度、格式、视角和细节级别所做的每一个假设都是与您实际需要的潜在不匹配。[5块提示词结构](/zh/prompt-engineering/prompt-building-blocks)——角色、任务、输入、约束、输出格式——直接适用于提取任务。',
           ],
         },
         promptFramework: {
@@ -3140,7 +3140,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '为什么AI模型在总结中仍会产生幻觉？',
           content: [
             '**有根据的总结幻觉率自2021年以来下降了96%——从顶级模型的21.8%降至0.7%——但2025年的数学证明确认在当前LLM架构下无法完全消除幻觉。**',
-            '架构原因是基本的：LLM基于训练数据中的模式匹配生成统计概率最高的下一个token，而不是通过检索已验证的事实。即使给定源文档，模型有时也会"混合"源内容与训练知识，以一种产生似乎合理但不忠实的句子的方式——研究人员称之为"混合上下文幻觉"。这是有根据总结工作流程必须考虑的核心[AI限制](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh)之一。',
+            '架构原因是基本的：LLM基于训练数据中的模式匹配生成统计概率最高的下一个token，而不是通过检索已验证的事实。即使给定源文档，模型有时也会"混合"源内容与训练知识，以一种产生似乎合理但不忠实的句子的方式——研究人员称之为"混合上下文幻觉"。这是有根据总结工作流程必须考虑的核心[AI限制](/zh/prompt-engineering/ai-limitations-what-llms-cant-do)之一。',
             'AI总结中按频率排序的失败模式：',
           ],
           items: [
@@ -3212,13 +3212,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[什么是提示词工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) —— 结构化AI指示背后的基础原则',
-            '[AI驱动的研究](/prompt-engineering/ai-powered-research?lang=zh) —— 如何将提取工具与多源验证工作流程相结合',
-            '[AI为什么会幻觉及如何阻止](/prompt-engineering/ai-hallucinations-how-to-stop?lang=zh) —— 理解幻觉的根本原因和经过验证的缓解策略',
-            '[AI限制——LLM不能做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) —— 将AI输出根植于已验证源内容的具体技术',
-            '[每个AI提示词需要的5个构建块](/prompt-engineering/prompt-building-blocks?lang=zh) —— 直接改进提取准确性的结构化提示词组件',
-            '[温度和Top-P：如何控制AI输出](/prompt-engineering/temperature-and-top-p?lang=zh) —— 将温度设置为0.0–0.1以实现确定性、抗幻觉总结',
-            '[思路链式提示词](/prompt-engineering/chain-of-thought-prompting?lang=zh) —— 改进复杂多文档分析中忠实度的分步推理',
+            '[什么是提示词工程？](/zh/prompt-engineering/what-is-prompt-engineering) —— 结构化AI指示背后的基础原则',
+            '[AI驱动的研究](/zh/prompt-engineering/ai-powered-research) —— 如何将提取工具与多源验证工作流程相结合',
+            '[AI为什么会幻觉及如何阻止](/zh/prompt-engineering/ai-hallucinations-how-to-stop) —— 理解幻觉的根本原因和经过验证的缓解策略',
+            '[AI限制——LLM不能做什么](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) —— 将AI输出根植于已验证源内容的具体技术',
+            '[每个AI提示词需要的5个构建块](/zh/prompt-engineering/prompt-building-blocks) —— 直接改进提取准确性的结构化提示词组件',
+            '[温度和Top-P：如何控制AI输出](/zh/prompt-engineering/temperature-and-top-p) —— 将温度设置为0.0–0.1以实现确定性、抗幻觉总结',
+            '[思路链式提示词](/zh/prompt-engineering/chain-of-thought-prompting) —— 改进复杂多文档分析中忠实度的分步推理',
           ],
         },
         howToStart: {

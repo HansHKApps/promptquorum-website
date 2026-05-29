@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puedo usar Ollama en un entorno corporativo para el cumplimiento del RGPD?',
-            a: 'Sí. Ollama es un runtime de inferencia local sin telemetría en la nube para el tráfico de inferencia (consulta la documentación de Ollama para la política de telemetría actual sobre descargas de modelos). En un entorno corporativo: desactiva las actualizaciones automáticas de modelos, documenta la versión de Ollama y los checksums de los modelos en tu registro de tratamientos del Artículo 30, y ejecútalo en un segmento de red aislado. Consulta la <a href="/local-llms/qwen-local-gdpr-setup-guide-2026?lang=es" class="text-primary hover:underline">guía completa de configuración de Qwen para el RGPD</a> para una lista de verificación completa.',
+            a: 'Sí. Ollama es un runtime de inferencia local sin telemetría en la nube para el tráfico de inferencia (consulta la documentación de Ollama para la política de telemetría actual sobre descargas de modelos). En un entorno corporativo: desactiva las actualizaciones automáticas de modelos, documenta la versión de Ollama y los checksums de los modelos en tu registro de tratamientos del Artículo 30, y ejecútalo en un segmento de red aislado. Consulta la <a href="/es/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">guía completa de configuración de Qwen para el RGPD</a> para una lista de verificación completa.',
           },
           {
             q: '¿Es suficiente un LLM local para procesar datos médicos o legales bajo el RGPD?',

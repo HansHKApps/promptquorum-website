@@ -840,9 +840,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lecturas relacionadas',
         items: [
-          '[RunPod vs Vast.ai Precios](/prompt-bites/runpod-vs-vastai-pricing?lang=es) — ventajas y desventajas de gestionado vs marketplace',
-          '[Mejor GPU por menos de $600 para LLMs locales](/prompt-bites/best-gpu-under-600-local-llm?lang=es) — contexto para decidir entre comprar y alquilar',
-          '[Guía completa para comprar GPU para LLMs locales 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=es) — panorama completo de compra de hardware',
+          '[RunPod vs Vast.ai Precios](/es/prompt-bites/runpod-vs-vastai-pricing) — ventajas y desventajas de gestionado vs marketplace',
+          '[Mejor GPU por menos de $600 para LLMs locales](/es/prompt-bites/best-gpu-under-600-local-llm) — contexto para decidir entre comprar y alquilar',
+          '[Guía completa para comprar GPU para LLMs locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — panorama completo de compra de hardware',
         ],
       },
     },

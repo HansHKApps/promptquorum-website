@@ -330,7 +330,7 @@ schema: {
           id: 'cost',
           title: 'Was kostet jeder Ansatz?',
           content: [
-            '**Cloud ist günstiger unter 50M Token pro Monat. Local ist günstiger darüber.** Bei Local müssen die Hardware-Kosten (RTX 4090: ca. 1.599 €) über 3 Jahre amortisiert werden, plus Stromkosten (~200 €/Jahr). Der [Hardware-Leitfaden](/local-llms/local-llm-hardware-guide-2026?lang=de) behandelt exakte GPU-Kosten.',
+            '**Cloud ist günstiger unter 50M Token pro Monat. Local ist günstiger darüber.** Bei Local müssen die Hardware-Kosten (RTX 4090: ca. 1.599 €) über 3 Jahre amortisiert werden, plus Stromkosten (~200 €/Jahr). Der [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide-2026) behandelt exakte GPU-Kosten.',
           ],
           columns: ['Monatliches Volumen', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (amortisiert)'],
           rows: [
@@ -347,7 +347,7 @@ schema: {
           title: 'Welcher Ansatz ist besser für Datenschutz und Compliance?',
           content: [
             '**Local-Agenten gewinnen beim Datenschutz — keine Daten verlassen Ihre Maschine.** Cloud-Agenten senden jeden Prompt und jede Antwort an Vendor-Server (OpenAI, Anthropic), die unter deren Datenschutzrichtlinien unterliegen.',
-            '**DSGVO Artikel 28** erfordert eine Datenverarbeitungsvereinbarung für Cloud-AI — Local-Agenten eliminieren diese Anforderung völlig. [HIPAA-regulierte Gesundheitsdaten](/local-llms/private-local-ai-for-business?lang=de) und Finanzdaten unter SOC2 sind am besten für Local-Agenten geeignet.',
+            '**DSGVO Artikel 28** erfordert eine Datenverarbeitungsvereinbarung für Cloud-AI — Local-Agenten eliminieren diese Anforderung völlig. [HIPAA-regulierte Gesundheitsdaten](/de/local-llms/private-local-ai-for-business) und Finanzdaten unter SOC2 sind am besten für Local-Agenten geeignet.',
             '**Cloud-Kompromiss:** Anthropic Claude trainiert nicht auf Ihren Daten (nach deren Richtlinie). OpenAI bietet Enterprise-Pläne mit Datenisolation an. Beide eliminieren die Datenübertragung selbst nicht.',
           ],
         },
@@ -361,7 +361,7 @@ schema: {
           rows: [
             { 'Aufgabe': 'Multi-Step-Reasoning', 'Cloud-Agenten': 'Hervorragend (GPT-4, Claude)', 'Local-Agenten': 'Gut (13B+, DeepSeek-R1)' },
             { 'Aufgabe': 'Code-Generierung', 'Cloud-Agenten': 'Hervorragend', 'Local-Agenten': 'Gut (Qwen2.5-Coder 32B)' },
-            { 'Aufgabe': 'Websuche/Browsing', 'Cloud-Agenten': 'Nativ (eingebaut)', 'Local-Agenten': 'Selbstgebaut via [LangGraph](/local-llms/local-ai-agents-langgraph-ollama?lang=de)' },
+            { 'Aufgabe': 'Websuche/Browsing', 'Cloud-Agenten': 'Nativ (eingebaut)', 'Local-Agenten': 'Selbstgebaut via [LangGraph](/de/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Aufgabe': 'Dokumentenverarbeitung', 'Cloud-Agenten': 'Hervorragend', 'Local-Agenten': 'Gut (via lokales RAG)' },
             { 'Aufgabe': 'Tool-Nutzung', 'Cloud-Agenten': 'Nativ Function Calling', 'Local-Agenten': 'Funktioniert via Ollama Tool API' },
             { 'Aufgabe': 'Langfristiges Gedächtnis', 'Cloud-Agenten': 'Begrenzt (Vendor-verwaltet)', 'Local-Agenten': 'Vollständige Kontrolle (benutzerdefinierte DB)' },
@@ -417,7 +417,7 @@ schema: {
             '**EU/DACH:** DSGVO Artikel 28 und BSI-Grundschutz-Anforderungen begünstigen Local-Agenten stark bei der Verarbeitung von EU-Bürgerdaten. Cloud-Agenten erfordern Standardvertragsklauseln für grenzüberschreitende Transfers zu US-Anbietern.',
             '**Mittelstand & KMU (Deutschland, Österreich, Schweiz):** Kleine und mittlere Unternehmen (KMU) in DACH profitieren von Local-Agenten zur Einhaltung von BSI-Grundschutz-Katalogen und IT-Sicherheitsstandards. Kostenfreie Inference nach Hardware-Investment ist besonders wertvoll für Mittelstand mit begrenztem Cloud-Budget.',
             '**Japan:** APPI-Anforderungen begünstigen Local-Agenten für sensible Geschäftsdaten. Japanische Unternehmen in Banking und Gesundheitswesen setzen zunehmend Local-Agenten zur Compliance ein.',
-            '**China:** Cloud-Agenten von US-Anbietern (OpenAI, Anthropic) sind nicht direkt verfügbar. Local-Agenten mit [Qwen2.5](/local-llms/top-open-source-models-ollama?lang=de) oder DeepSeek entsprechen Chinas Datensicherheitsgesetz von 2021.',
+            '**China:** Cloud-Agenten von US-Anbietern (OpenAI, Anthropic) sind nicht direkt verfügbar. Local-Agenten mit [Qwen2.5](/de/local-llms/top-open-source-models-ollama) oder DeepSeek entsprechen Chinas Datensicherheitsgesetz von 2021.',
           ],
         },
         faqSection: {
@@ -434,7 +434,7 @@ schema: {
             },
             {
               q: 'Kann ich einen Local-Agenten auf Consumer-Hardware ausführen?',
-              a: 'Ja. Ein Llama 13B Agent läuft auf RTX 4090 (24GB VRAM) mit 2–3 sec pro Schritt. Für 7B-Agenten ist RTX 4070 Ti (12GB) ausreichend. Siehe den [Hardware-Leitfaden](/local-llms/local-llm-hardware-guide-2026?lang=de) für exakte Spezifikationen.',
+              a: 'Ja. Ein Llama 13B Agent läuft auf RTX 4090 (24GB VRAM) mit 2–3 sec pro Schritt. Für 7B-Agenten ist RTX 4070 Ti (12GB) ausreichend. Siehe den [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide-2026) für exakte Spezifikationen.',
             },
             {
               q: 'Unterstützen Local-Agenten Tool-Nutzung und Function Calling?',
@@ -470,12 +470,12 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
-            '[Local AI Agenten mit LangGraph & Ollama](/local-llms/local-ai-agents-langgraph-ollama?lang=de) — Bauen Sie Multi-Step-Local-Agenten mit Tool-Nutzung und Memory',
-            '[Private lokale KI für Unternehmen](/local-llms/private-local-ai-for-business?lang=de) — On-Premises-KI-Bereitstellung für Enterprise-Compliance',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — GPU- und Hardware-Empfehlungen für Agent-Workloads',
-            '[Local LLMs vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=de) — Kostenvergleich: Abonnement vs lokale Inference',
-            '[Top Open Source Modelle für Ollama](/local-llms/top-open-source-models-ollama?lang=de) — Beste Modelle für Local-Agent-Bereitstellung',
-            '[Warum Unternehmen lokale LLMs nutzen](/local-llms/why-enterprises-use-local-llms?lang=de) — Kosten-, Compliance- und Kontrollanalyse',
+            '[Local AI Agenten mit LangGraph & Ollama](/de/local-llms/local-ai-agents-langgraph-ollama) — Bauen Sie Multi-Step-Local-Agenten mit Tool-Nutzung und Memory',
+            '[Private lokale KI für Unternehmen](/de/local-llms/private-local-ai-for-business) — On-Premises-KI-Bereitstellung für Enterprise-Compliance',
+            '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) — GPU- und Hardware-Empfehlungen für Agent-Workloads',
+            '[Local LLMs vs ChatGPT Plus](/de/local-llms/local-llms-vs-chatgpt-plus) — Kostenvergleich: Abonnement vs lokale Inference',
+            '[Top Open Source Modelle für Ollama](/de/local-llms/top-open-source-models-ollama) — Beste Modelle für Local-Agent-Bereitstellung',
+            '[Warum Unternehmen lokale LLMs nutzen](/de/local-llms/why-enterprises-use-local-llms) — Kosten-, Compliance- und Kontrollanalyse',
           ],
         },
         sources: {
@@ -494,7 +494,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Local vs Cloud AI Agenten 2026: Welcher Ansatz für Ihre Anforderungen?',
         'description': 'Cloud-Agenten antworten in 100–300ms, kosten 18 €/1M Token. Local-Agenten brauchen 2–5 sec, kosten 0 €. Break-even 50M Token/Monat. Vollständiger Vergleich 2026 mit Entscheidungshilfe.',
-        'url': 'https://www.promptquorum.com/local-llms/local-vs-cloud-agents?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-vs-cloud-agents',
         'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
@@ -604,7 +604,7 @@ schema: {
           id: 'cost',
           title: 'Quel est le coût de chaque approche?',
           content: [
-            '**Cloud est moins cher en dessous de 50M tokens/mois. Local est moins cher au-dessus.** Pour Local, amortissez les coûts matériel (RTX 4090 : ~1.499 €) sur 3 ans, plus l\'électricité (~200 €/an). Le [guide matériel](/local-llms/local-llm-hardware-guide-2026?lang=fr) couvre les coûts GPU exacts.',
+            '**Cloud est moins cher en dessous de 50M tokens/mois. Local est moins cher au-dessus.** Pour Local, amortissez les coûts matériel (RTX 4090 : ~1.499 €) sur 3 ans, plus l\'électricité (~200 €/an). Le [guide matériel](/fr/local-llms/local-llm-hardware-guide-2026) couvre les coûts GPU exacts.',
           ],
           columns: ['Volume mensuel', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (amorti)'],
           rows: [
@@ -621,7 +621,7 @@ schema: {
           title: 'Quelle approche convient mieux à la confidentialité et la conformité?',
           content: [
             '**Les agents locaux gagnent sur la confidentialité — aucune donnée ne quitte votre machine.** Les agents Cloud envoient chaque requête et réponse aux serveurs fournisseurs (OpenAI, Anthropic) soumis à leurs politiques de conservation des données.',
-            '**RGPD Article 28** exige un accord de traitement des données pour l\'IA Cloud — les agents locaux éliminent complètement cette exigence. Les [données de santé réglementées par HIPAA](/local-llms/private-local-ai-for-business?lang=fr) et les données financières sous SOC2 conviennent mieux aux agents locaux.',
+            '**RGPD Article 28** exige un accord de traitement des données pour l\'IA Cloud — les agents locaux éliminent complètement cette exigence. Les [données de santé réglementées par HIPAA](/fr/local-llms/private-local-ai-for-business) et les données financières sous SOC2 conviennent mieux aux agents locaux.',
             '**Compromis Cloud :** Anthropic Claude ne s\'entraîne pas sur vos données (selon leur politique). OpenAI offre des plans Enterprise avec isolation des données. Aucun n\'élimine le transfert de données lui-même.',
           ],
         },
@@ -635,7 +635,7 @@ schema: {
           rows: [
             { 'Tâche': 'Raisonnement multi-étapes', 'Agents Cloud': 'Excellent (GPT-4, Claude)', 'Agents locaux': 'Bon (13B+, DeepSeek-R1)' },
             { 'Tâche': 'Génération de code', 'Agents Cloud': 'Excellent', 'Agents locaux': 'Bon (Qwen2.5-Coder 32B)' },
-            { 'Tâche': 'Recherche/navigation web', 'Agents Cloud': 'Natif (intégré)', 'Agents locaux': 'Personnalisé via [LangGraph](/local-llms/local-ai-agents-langgraph-ollama?lang=fr)' },
+            { 'Tâche': 'Recherche/navigation web', 'Agents Cloud': 'Natif (intégré)', 'Agents locaux': 'Personnalisé via [LangGraph](/fr/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Tâche': 'Traitement de documents', 'Agents Cloud': 'Excellent', 'Agents locaux': 'Bon (via RAG local)' },
             { 'Tâche': 'Utilisation d\'outils', 'Agents Cloud': 'Appel de fonction natif', 'Agents locaux': 'Fonctionne via API d\'outils Ollama' },
             { 'Tâche': 'Mémoire à long terme', 'Agents Cloud': 'Limitée (gérée par fournisseur)', 'Agents locaux': 'Contrôle complet (base de données personnalisée)' },
@@ -690,7 +690,7 @@ schema: {
           content: [
             '**UE :** Le RGPD Article 28 et les standards de conformité exigent des accords de traitement pour l\'IA Cloud. Les agents locaux éliminent cette exigence. La CNIL recommande les agents locaux pour le traitement des données sensibles des citoyens de l\'UE.',
             '**Japon :** Les exigences APPI favorisent les agents locaux pour les données commerciales sensibles. Les entreprises japonaises du secteur bancaire et de la santé déploient de plus en plus d\'agents locaux pour se conformer.',
-            '**Chine :** Les agents Cloud des fournisseurs américains (OpenAI, Anthropic) ne sont pas directement disponibles. Les agents locaux avec [Qwen2.5](/local-llms/top-open-source-models-ollama?lang=fr) ou DeepSeek se conforment à la Loi sur la sécurité des données 2021 de la Chine.',
+            '**Chine :** Les agents Cloud des fournisseurs américains (OpenAI, Anthropic) ne sont pas directement disponibles. Les agents locaux avec [Qwen2.5](/fr/local-llms/top-open-source-models-ollama) ou DeepSeek se conforment à la Loi sur la sécurité des données 2021 de la Chine.',
           ],
         },
         faqSection: {
@@ -707,7 +707,7 @@ schema: {
             },
             {
               q: 'Puis-je exécuter un agent local sur du matériel grand public?',
-              a: 'Oui. Un agent Llama 13B fonctionne sur RTX 4090 (24GB VRAM) à 2–3 sec par étape. Pour les agents 7B, RTX 4070 Ti (12GB) suffit. Voir le [guide matériel](/local-llms/local-llm-hardware-guide-2026?lang=fr) pour les specs exactes.',
+              a: 'Oui. Un agent Llama 13B fonctionne sur RTX 4090 (24GB VRAM) à 2–3 sec par étape. Pour les agents 7B, RTX 4070 Ti (12GB) suffit. Voir le [guide matériel](/fr/local-llms/local-llm-hardware-guide-2026) pour les specs exactes.',
             },
             {
               q: 'Les agents locaux supportent-ils l\'utilisation d\'outils et l\'appel de fonction?',
@@ -743,12 +743,12 @@ schema: {
           id: 'related-reading',
           title: 'Lectures associées',
           items: [
-            '[Agents IA locaux avec LangGraph & Ollama](/local-llms/local-ai-agents-langgraph-ollama?lang=fr) — Construisez agents locaux multi-étapes avec utilisation d\'outils et mémoire',
-            '[IA locale privée pour les entreprises](/local-llms/private-local-ai-for-business?lang=fr) — Déploiement d\'IA on-premises pour conformité Enterprise',
-            '[Guide matériel Local LLM 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Recommandations GPU et matériel pour workloads agents',
-            '[LLMs locaux vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=fr) — Comparaison coûts : abonnement vs inférence locale',
-            '[Meilleurs modèles Open Source pour Ollama](/local-llms/top-open-source-models-ollama?lang=fr) — Meilleurs modèles pour déploiement agents locaux',
-            '[Pourquoi les entreprises utilisent les LLMs locaux](/local-llms/why-enterprises-use-local-llms?lang=fr) — Analyse coûts, conformité et contrôle',
+            '[Agents IA locaux avec LangGraph & Ollama](/fr/local-llms/local-ai-agents-langgraph-ollama) — Construisez agents locaux multi-étapes avec utilisation d\'outils et mémoire',
+            '[IA locale privée pour les entreprises](/fr/local-llms/private-local-ai-for-business) — Déploiement d\'IA on-premises pour conformité Enterprise',
+            '[Guide matériel Local LLM 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Recommandations GPU et matériel pour workloads agents',
+            '[LLMs locaux vs ChatGPT Plus](/fr/local-llms/local-llms-vs-chatgpt-plus) — Comparaison coûts : abonnement vs inférence locale',
+            '[Meilleurs modèles Open Source pour Ollama](/fr/local-llms/top-open-source-models-ollama) — Meilleurs modèles pour déploiement agents locaux',
+            '[Pourquoi les entreprises utilisent les LLMs locaux](/fr/local-llms/why-enterprises-use-local-llms) — Analyse coûts, conformité et contrôle',
           ],
         },
         sources: {
@@ -767,7 +767,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Agents IA Cloud vs Locaux 2026 : Quel approche pour vous?',
         'description': 'Agents Cloud répondent en 100–300ms, coûtent 18€/1M tokens. Agents locaux prennent 2–5 sec, coûtent 0€. Point d\'équilibre 50M tokens/mois. Comparaison 2026 complet avec cadre décisionnel.',
-        'url': 'https://www.promptquorum.com/local-llms/local-vs-cloud-agents?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-vs-cloud-agents',
         'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
@@ -877,7 +877,7 @@ schema: {
           id: 'cost',
           title: 'それぞれのアプローチのコストは?',
           content: [
-            '**Cloudは50M tokens/月以下で安い。Localはそれ以上で安い。** Localはハードウェアコスト(RTX 4090: 約¥247,000)を3年償却、電気代(~¥24,000/年)追加。 [ハードウェアガイド](/local-llms/local-llm-hardware-guide-2026?lang=ja) で正確なGPUコストをご確認ください。',
+            '**Cloudは50M tokens/月以下で安い。Localはそれ以上で安い。** Localはハードウェアコスト(RTX 4090: 約¥247,000)を3年償却、電気代(~¥24,000/年)追加。 [ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) で正確なGPUコストをご確認ください。',
           ],
           columns: ['月間ボリューム', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (償却)'],
           rows: [
@@ -894,7 +894,7 @@ schema: {
           title: 'プライバシーとコンプライアンスではどちらが優れている?',
           content: [
             '**Localエージェントはプライバシーで優位です — データがマシンを離れません。** Cloudエージェントは毎回のプロンプトと応答をベンダーサーバー(OpenAI, Anthropic)に送信します。',
-            'GDPR適合が必要な場合、Cloudエージェントはデータ処理契約が必須です。Localエージェントはこの要件を完全に排除します。 [HIPAA規制データ](/local-llms/private-local-ai-for-business?lang=ja) と SOC2の金融データはLocalエージェントが適しています。',
+            'GDPR適合が必要な場合、Cloudエージェントはデータ処理契約が必須です。Localエージェントはこの要件を完全に排除します。 [HIPAA規制データ](/ja/local-llms/private-local-ai-for-business) と SOC2の金融データはLocalエージェントが適しています。',
             '**Cloudの妥協点:** Anthropic Claudeはポリシー上データを学習に使いません。OpenAIはデータ分離のエンタープライズプランを提供。どちらもデータ転送自体は排除できません。',
           ],
         },
@@ -908,7 +908,7 @@ schema: {
           rows: [
             { 'タスク': 'マルチステップreasoning', 'Cloudエージェント': '優秀(GPT-4, Claude)', 'Localエージェント': '良好(13B+, DeepSeek-R1)' },
             { 'タスク': 'コード生成', 'Cloudエージェント': '優秀', 'Localエージェント': '良好(Qwen2.5-Coder 32B)' },
-            { 'タスク': 'ウェブ検索/ブラウジング', 'Cloudエージェント': 'ネイティブ(内蔵)', 'Localエージェント': 'カスタム構築via [LangGraph](/local-llms/local-ai-agents-langgraph-ollama?lang=ja)' },
+            { 'タスク': 'ウェブ検索/ブラウジング', 'Cloudエージェント': 'ネイティブ(内蔵)', 'Localエージェント': 'カスタム構築via [LangGraph](/ja/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'タスク': 'ドキュメント処理', 'Cloudエージェント': '優秀', 'Localエージェント': '良好(ローカルRAG経由)' },
             { 'タスク': 'ツール利用', 'Cloudエージェント': 'ネイティブ関数呼び出し', 'Localエージェント': 'Ollama Tool API経由で機能' },
             { 'タスク': '長期メモリ', 'Cloudエージェント': '制限(ベンダー管理)', 'Localエージェント': '完全制御(カスタムDB)' },
@@ -980,7 +980,7 @@ schema: {
             },
             {
               q: 'コンシューマーハードウェアでLocalエージェント実行可?',
-              a: 'はい。Llama 13B エージェントはRTX 4090(24GB VRAM)で2–3秒/ステップ。7Bエージェント用ならRTX 4070 Ti(12GB)で充分。[ハードウェアガイド](/local-llms/local-llm-hardware-guide-2026?lang=ja) で正確スペックを確認。',
+              a: 'はい。Llama 13B エージェントはRTX 4090(24GB VRAM)で2–3秒/ステップ。7Bエージェント用ならRTX 4070 Ti(12GB)で充分。[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) で正確スペックを確認。',
             },
             {
               q: 'Localエージェントはツール利用と関数呼び出し対応?',
@@ -1016,12 +1016,12 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[LangGraph & Ollama使用 Local AIエージェント](/local-llms/local-ai-agents-langgraph-ollama?lang=ja) — ツール利用とメモリ搭載マルチステップLocal構築',
-            '[企業向けプライベートLocal AI](/local-llms/private-local-ai-for-business?lang=ja) — エンタープライズコンプライアンス用オンプレミスAI導入',
-            '[Local LLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — エージェントワークロード用GPU・ハードウェア推奨',
-            '[Local LLMs vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=ja) — コスト比較: サブスク vs Local推論',
-            '[Ollama用トップOpen Sourceモデル](/local-llms/top-open-source-models-ollama?lang=ja) — Local エージェント導入向けベストモデル',
-            '[企業がLocal LLMを使う理由](/local-llms/why-enterprises-use-local-llms?lang=ja) — コスト・コンプライアンス・制御分析',
+            '[LangGraph & Ollama使用 Local AIエージェント](/ja/local-llms/local-ai-agents-langgraph-ollama) — ツール利用とメモリ搭載マルチステップLocal構築',
+            '[企業向けプライベートLocal AI](/ja/local-llms/private-local-ai-for-business) — エンタープライズコンプライアンス用オンプレミスAI導入',
+            '[Local LLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — エージェントワークロード用GPU・ハードウェア推奨',
+            '[Local LLMs vs ChatGPT Plus](/ja/local-llms/local-llms-vs-chatgpt-plus) — コスト比較: サブスク vs Local推論',
+            '[Ollama用トップOpen Sourceモデル](/ja/local-llms/top-open-source-models-ollama) — Local エージェント導入向けベストモデル',
+            '[企業がLocal LLMを使う理由](/ja/local-llms/why-enterprises-use-local-llms) — コスト・コンプライアンス・制御分析',
           ],
         },
         sources: {
@@ -1040,7 +1040,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Local vs Cloud AIエージェント2026: どちらを選ぶ?',
         'description': 'クラウドエージェント100–300ms応答、¥3,300/1M tokens。ローカルエージェント2–5秒、¥0。損益分岐点50M tokens/月。2026年完全比較ガイド。',
-        'url': 'https://www.promptquorum.com/local-llms/local-vs-cloud-agents?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-vs-cloud-agents',
         'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
@@ -1150,7 +1150,7 @@ schema: {
           id: 'cost',
           title: '各种方案的成本是多少?',
           content: [
-            '**云端在50M令牌/月以下成本更低。本地在此之上成本更低。** 本地需要摊销硬件成本(RTX 4090约$1,500)至3年，加上电费(~$200/年)。 [硬件指南](/local-llms/local-llm-hardware-guide-2026?lang=zh) 详细说明GPU成本。',
+            '**云端在50M令牌/月以下成本更低。本地在此之上成本更低。** 本地需要摊销硬件成本(RTX 4090约$1,500)至3年，加上电费(~$200/年)。 [硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 详细说明GPU成本。',
           ],
           columns: ['月度体量', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (摊销)'],
           rows: [
@@ -1167,7 +1167,7 @@ schema: {
           title: '隐私和合规性方面哪种更好?',
           content: [
             '**本地代理在隐私方面胜出 — 数据永不离开您的机器。** 云端代理将每个提示和响应发送给供应商服务器(OpenAI、Anthropic)，受其数据保留政策约束。',
-            '**GDPR第28条**要求云端AI需签订数据处理协议 — 本地代理完全消除此要求。 [HIPAA规管医疗数据](/local-llms/private-local-ai-for-business?lang=zh) 和SOC2金融数据最适合本地代理。',
+            '**GDPR第28条**要求云端AI需签订数据处理协议 — 本地代理完全消除此要求。 [HIPAA规管医疗数据](/zh/local-llms/private-local-ai-for-business) 和SOC2金融数据最适合本地代理。',
             '**云端折衷:** Anthropic Claude按其政策不使用您的数据进行训练。OpenAI提供数据隔离的企业计划。两者都无法消除数据传输本身。',
           ],
         },
@@ -1181,7 +1181,7 @@ schema: {
           rows: [
             { '任务': '多步推理', '云端代理': '优秀(GPT-4、Claude)', '本地代理': '良好(13B+、DeepSeek-R1)' },
             { '任务': '代码生成', '云端代理': '优秀', '本地代理': '良好(Qwen2.5-Coder 32B)' },
-            { '任务': '网络搜索/浏览', '云端代理': '原生(内置)', '本地代理': 'DIY via [LangGraph](/local-llms/local-ai-agents-langgraph-ollama?lang=zh)' },
+            { '任务': '网络搜索/浏览', '云端代理': '原生(内置)', '本地代理': 'DIY via [LangGraph](/zh/local-llms/local-ai-agents-langgraph-ollama)' },
             { '任务': '文档处理', '云端代理': '优秀', '本地代理': '良好(通过本地RAG)' },
             { '任务': '工具使用', '云端代理': '原生函数调用', '本地代理': '通过Ollama工具API工作' },
             { '任务': '长期内存', '云端代理': '有限(供应商管理)', '本地代理': '完全控制(自定义数据库)' },
@@ -1253,7 +1253,7 @@ schema: {
             },
             {
               q: '我能在消费级硬件上运行本地代理吗?',
-              a: '能。Llama 13B代理在RTX 4090(24GB VRAM)上以2–3秒/步运行。7B代理用RTX 4070 Ti(12GB)足够。详见 [硬件指南](/local-llms/local-llm-hardware-guide-2026?lang=zh) 了解精确规格。',
+              a: '能。Llama 13B代理在RTX 4090(24GB VRAM)上以2–3秒/步运行。7B代理用RTX 4070 Ti(12GB)足够。详见 [硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 了解精确规格。',
             },
             {
               q: '本地代理支持工具使用和函数调用吗?',
@@ -1289,12 +1289,12 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[使用LangGraph和Ollama构建本地AI代理](/local-llms/local-ai-agents-langgraph-ollama?lang=zh) — 构建包含工具使用和内存的多步本地代理',
-            '[企业隐私本地AI](/local-llms/private-local-ai-for-business?lang=zh) — 企业合规的本地部署',
-            '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — 代理工作负载的GPU和硬件推荐',
-            '[本地LLM vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus?lang=zh) — 成本对比: 订阅 vs 本地推论',
-            '[Ollama顶级开源模型](/local-llms/top-open-source-models-ollama?lang=zh) — 本地代理部署最佳模型',
-            '[企业为何使用本地LLM](/local-llms/why-enterprises-use-local-llms?lang=zh) — 成本、合规和控制分析',
+            '[使用LangGraph和Ollama构建本地AI代理](/zh/local-llms/local-ai-agents-langgraph-ollama) — 构建包含工具使用和内存的多步本地代理',
+            '[企业隐私本地AI](/zh/local-llms/private-local-ai-for-business) — 企业合规的本地部署',
+            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 代理工作负载的GPU和硬件推荐',
+            '[本地LLM vs ChatGPT Plus](/zh/local-llms/local-llms-vs-chatgpt-plus) — 成本对比: 订阅 vs 本地推论',
+            '[Ollama顶级开源模型](/zh/local-llms/top-open-source-models-ollama) — 本地代理部署最佳模型',
+            '[企业为何使用本地LLM](/zh/local-llms/why-enterprises-use-local-llms) — 成本、合规和控制分析',
           ],
         },
         sources: {
@@ -1313,7 +1313,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '本地 vs 云端AI代理2026: 如何选择?',
         'description': '云端代理100–300ms响应，$20/1M令牌。本地代理2–5秒，$0。损益分界点50M令牌/月。2026完整比较指南。',
-        'url': 'https://www.promptquorum.com/local-llms/local-vs-cloud-agents?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-vs-cloud-agents',
         'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',

@@ -349,7 +349,7 @@ schema: {
         },
         q12026: {
           title: 'Q1 2026 でリリースされたローカルLLMモデルは？',
-          content: '2026年4月現在、2026年1月～4月の主要なオープンウェイトモデルリリース。以下のモデルはすべてさまざまな量子化フォーマットで利用可能です -- [量子化ガイド](/local-llms/llm-quantization-explained?lang=ja) で Q4 vs Q5 のトレードオフについて詳細をご覧ください：',
+          content: '2026年4月現在、2026年1月～4月の主要なオープンウェイトモデルリリース。以下のモデルはすべてさまざまな量子化フォーマットで利用可能です -- [量子化ガイド](/ja/local-llms/llm-quantization-explained) で Q4 vs Q5 のトレードオフについて詳細をご覧ください：',
           image: '/images/q1-2026-model-releases-timeline-ja.svg',
           imageCaption: 'Q1 2026 ローカルLLMリリースタイムライン：Phi-4 Mini（1月、3.8B）、Gemma 3（2月、全サイズでビジョン対応）、Llama 4 Scout（3月、MoEアーキテクチャ）、Mistral Small 3.2（4月）。すべてオープンウェイト発表から数日以内に Ollama に追加。',
           rows: [
@@ -387,7 +387,7 @@ schema: {
           id: 'quality-improvement',
           title: '2024年から2026年にかけてローカルLLMの品質はどのくらい改善されました？',
           content: [
-            '**ローカル実行可能モデル品質の2年間の改善は大幅です。** 2026年4月現在、7Bモデル（Qwen2.5 7B、74% MMLU）は2024年初頭の13Bモデルのベンチマーク性能に相当します。70Bモデル（Llama 3.3 70B、82% MMLU）は GPT-4（2023）の性能に相当します -- 3年前に数十億ドルのサーバーインフラストラクチャが必要だったモデルが現在 Mac Studio で実行されます。各モデルクラスに対応するハードウェア推奨については、[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) を参照してください。',
+            '**ローカル実行可能モデル品質の2年間の改善は大幅です。** 2026年4月現在、7Bモデル（Qwen2.5 7B、74% MMLU）は2024年初頭の13Bモデルのベンチマーク性能に相当します。70Bモデル（Llama 3.3 70B、82% MMLU）は GPT-4（2023）の性能に相当します -- 3年前に数十億ドルのサーバーインフラストラクチャが必要だったモデルが現在 Mac Studio で実行されます。各モデルクラスに対応するハードウェア推奨については、[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) を参照してください。',
           ],
           image: '/images/llm-quality-improvement-2024-2026-ja.svg',
           imageCaption: 'ローカルLLM品質の改善2024～2026：7Bクラスモデルは64%（Mistral 7B、2024初）から74%（Qwen2.5 7B、2026年4月）に改善。70Bクラスは75%（Llama 3.3 70B）から82～84%（Llama 3.3 70B と Qwen2.5 72B）に改善。18～24か月ごとにローカルモデル品質は1世代進化。',
@@ -429,12 +429,12 @@ schema: {
           id: 'related',
           title: '関連資料',
           items: [
-            '[ベストローカルLLM2026](/local-llms/best-local-llms-2026?lang=ja) -- 2026年すべてのリリースを含むタスク、ハードウェア、品質別のトップ5モデルの現在ランキング。',
-            '[LLM量子化の説明](/local-llms/llm-quantization-explained?lang=ja) -- 新しいモデルリリースをダウンロードするときの Q4_K_M vs Q5_K_M を理解します。',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=ja) -- 最新の2026年データを含む3つの主要モデルファミリーの完全なベンチマーク比較。',
-            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) -- ダウンロード前に、ハードウェアが最新のモデルリリースをサポートするかチェックしてください。',
-            '[Ollama のインストール方法](/local-llms/how-to-install-ollama?lang=ja) -- Ollama をアップデートして、正確なバージョンタグで最新のモデルをプルします。',
-            '[Ollama のトップオープンソースモデル](/local-llms/top-open-source-models-ollama?lang=ja) -- プルコマンドとパフォーマンスデータを含む利用可能なモデルの完全なライブラリ。',
+            '[ベストローカルLLM2026](/ja/local-llms/best-local-llms-2026) -- 2026年すべてのリリースを含むタスク、ハードウェア、品質別のトップ5モデルの現在ランキング。',
+            '[LLM量子化の説明](/ja/local-llms/llm-quantization-explained) -- 新しいモデルリリースをダウンロードするときの Q4_K_M vs Q5_K_M を理解します。',
+            '[Qwen vs Llama vs Mistral](/ja/local-llms/qwen-vs-llama-vs-mistral) -- 最新の2026年データを含む3つの主要モデルファミリーの完全なベンチマーク比較。',
+            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) -- ダウンロード前に、ハードウェアが最新のモデルリリースをサポートするかチェックしてください。',
+            '[Ollama のインストール方法](/ja/local-llms/how-to-install-ollama) -- Ollama をアップデートして、正確なバージョンタグで最新のモデルをプルします。',
+            '[Ollama のトップオープンソースモデル](/ja/local-llms/top-open-source-models-ollama) -- プルコマンドとパフォーマンスデータを含む利用可能なモデルの完全なライブラリ。',
           ],
         },
         faqSection: {
@@ -493,7 +493,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-model-updates-2026',
         'headline': 'ローカルLLMモデルアップデート2026年：すべての大型オープンウェイトリリース',
         'description': 'ローカルLLMモデルアップデート2026：Gemma 3、Llama 4 Scout、DeepSeek-R1 を含むすべての大型オープンウェイトリリース、仕様、ベンチマーク、Ollama 対応。2026年4月更新。',
         'inLanguage': 'ja',
@@ -515,7 +515,7 @@ schema: {
         '@type': 'ItemList',
         'inLanguage': 'ja',
         'name': 'Q1 2026 ローカルLLMリリース',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-model-updates-2026',
         'numberOfItems': 4,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Gemma 3（全サイズ）', 'description': '2026年2月 Google リリース。全サイズでビジョン。128K コンテキスト。Apache 2.0。ollama run gemma3:9b' },
@@ -580,7 +580,7 @@ schema: {
         },
         q12026: {
           title: 'Welche lokalen LLM-Modelle wurden in Q1 2026 veröffentlicht?',
-          content: 'Stand April 2026, die bemerkenswerten Open-Weight-Modell-Releases von Januar-April 2026. Alle Modelle unten sind in verschiedenen Quantisierungsformaten verfügbar -- siehe [Quantisierungsleitfaden](/local-llms/llm-quantization-explained?lang=de) für Details zu Q4 vs. Q5 Abwägungen:',
+          content: 'Stand April 2026, die bemerkenswerten Open-Weight-Modell-Releases von Januar-April 2026. Alle Modelle unten sind in verschiedenen Quantisierungsformaten verfügbar -- siehe [Quantisierungsleitfaden](/de/local-llms/llm-quantization-explained) für Details zu Q4 vs. Q5 Abwägungen:',
           image: '/images/q1-2026-model-releases-timeline-de.svg',
           imageCaption: 'Q1 2026 lokale LLM-Release-Timeline: Phi-4 Mini (Januar, 3.8B), Gemma 3 (Februar, Vision auf allen Größen), Llama 4 Scout (März, MoE-Architektur) und Mistral Small 3.2 (April). Alle wurden Ollama innerhalb von Tagen nach Open-Weight-Ankündigung hinzugefügt.',
           rows: [
@@ -618,7 +618,7 @@ schema: {
           id: 'quality-improvement',
           title: 'Um wie viel hat sich die Qualität lokaler LLMs von 2024 bis 2026 verbessert?',
           content: [
-            '**Die zweijährige Verbesserung der Qualität lokal lauffähiger Modelle ist erheblich.** Stand April 2026 entspricht ein 7B-Modell (Qwen2.5 7B, 74 % MMLU) der Benchmark-Leistung eines 13B-Modells von Anfang 2024. Ein 70B-Modell (Llama 3.3 70B, 82 % MMLU) entspricht GPT-4 (2023) Leistung -- ein Modell, das vor 3 Jahren eine Milliarden-Dollar-Server-Infrastruktur benötigte, läuft jetzt auf einem Mac Studio. Für Hardware-Empfehlungen, die jeder Modellklasse entsprechen, siehe [lokaler LLM Hardware-Leitfaden 2026](/local-llms/local-llm-hardware-guide-2026?lang=de).',
+            '**Die zweijährige Verbesserung der Qualität lokal lauffähiger Modelle ist erheblich.** Stand April 2026 entspricht ein 7B-Modell (Qwen2.5 7B, 74 % MMLU) der Benchmark-Leistung eines 13B-Modells von Anfang 2024. Ein 70B-Modell (Llama 3.3 70B, 82 % MMLU) entspricht GPT-4 (2023) Leistung -- ein Modell, das vor 3 Jahren eine Milliarden-Dollar-Server-Infrastruktur benötigte, läuft jetzt auf einem Mac Studio. Für Hardware-Empfehlungen, die jeder Modellklasse entsprechen, siehe [lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-de.svg',
           imageCaption: 'Lokale LLM-Qualitätsverbesserung 2024-2026: 7B-Klasse-Modelle verbessert sich von 64 % MMLU (Mistral 7B, Anfang 2024) auf 74 % (Qwen2.5 7B, April 2026). 70B-Klasse verbessert sich von 75 % (Llama 3.3 70B) auf 82-84 % (Llama 3.3 70B und Qwen2.5 72B). Alle 18-24 Monate rückt die lokale Modellqualität eine Generation vor.',
@@ -660,12 +660,12 @@ schema: {
           id: 'related',
           title: 'Weiterführendes Material',
           items: [
-            '[Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) -- aktuelle Rankings der Top 5 Modelle nach Task, Hardware und Qualität, einschließlich aller 2026 Releases.',
-            '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de) -- verstehen Sie Q4_K_M vs. Q5_K_M beim Herunterladen neuer Modell-Releases.',
-            '[Qwen vs. Llama vs. Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de) -- vollständiger Benchmark-Vergleich der drei Hauptmodellfamilien mit neuesten 2026 Daten.',
-            '[Lokaler LLM Hardware-Leitfaden 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) -- überprüfen Sie, ob Ihre Hardware die neuesten Modell-Releases unterstützt, bevor Sie sie herunterladen.',
-            '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) -- aktualisieren Sie Ollama und ziehen Sie die neuesten Modelle mit korrekten Versions-Tags.',
-            '[Top Open Source Modelle auf Ollama](/local-llms/top-open-source-models-ollama?lang=de) -- vollständige Bibliothek verfügbarer Modelle mit Pull-Befehlen und Performance-Daten.',
+            '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) -- aktuelle Rankings der Top 5 Modelle nach Task, Hardware und Qualität, einschließlich aller 2026 Releases.',
+            '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) -- verstehen Sie Q4_K_M vs. Q5_K_M beim Herunterladen neuer Modell-Releases.',
+            '[Qwen vs. Llama vs. Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) -- vollständiger Benchmark-Vergleich der drei Hauptmodellfamilien mit neuesten 2026 Daten.',
+            '[Lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) -- überprüfen Sie, ob Ihre Hardware die neuesten Modell-Releases unterstützt, bevor Sie sie herunterladen.',
+            '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- aktualisieren Sie Ollama und ziehen Sie die neuesten Modelle mit korrekten Versions-Tags.',
+            '[Top Open Source Modelle auf Ollama](/de/local-llms/top-open-source-models-ollama) -- vollständige Bibliothek verfügbarer Modelle mit Pull-Befehlen und Performance-Daten.',
           ],
         },
         faqSection: {
@@ -698,7 +698,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Lokale LLM-Modell-Updates 2026: Alle großen Open-Weight-Releases dieses Jahr',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-llm-model-updates-2026',
         'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
@@ -718,7 +718,7 @@ schema: {
         '@type': 'ItemList',
         'inLanguage': 'de',
         'name': 'Große lokale LLM-Releases Q1 2026',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-llm-model-updates-2026',
         'numberOfItems': 4,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Gemma 3 (alle Größen)', 'description': 'Februar 2026 von Google veröffentlicht. Vision auf allen Größen. 128K Kontext. Apache 2.0. ollama run gemma3:9b' },
@@ -769,7 +769,7 @@ schema: {
         },
         q12026: {
           title: '2026年Q1发布了哪些本地LLM？',
-          content: '2026年4月，2026年1月-4月的重要开源模型发布。以下所有模型均支持多种量化格式 -- 详见[量子化指南](/local-llms/llm-quantization-explained?lang=zh)了解Q4与Q5的权衡：',
+          content: '2026年4月，2026年1月-4月的重要开源模型发布。以下所有模型均支持多种量化格式 -- 详见[量子化指南](/zh/local-llms/llm-quantization-explained)了解Q4与Q5的权衡：',
           image: '/images/q1-2026-model-releases-timeline-zh.svg',
           imageCaption: 'Q1 2026本地LLM发布时间线：Phi-4 Mini（1月，3.8B，70% HumanEval）、Gemma 3（2月，全规格支持视觉）、Llama 4 Scout（3月，MoE架构）、Mistral Small 3.2（4月）。所有模型在开源发布后数日内加入Ollama。',
           rows: [
@@ -807,7 +807,7 @@ schema: {
           id: 'quality-improvement',
           title: '2024年到2026年本地LLM质量提升了多少？',
           content: [
-            '**两年间本地运行模型质量的提升幅度巨大。** 2026年4月，一个7B模型（Qwen2.5 7B、74% MMLU）的性能相当于2024年初的13B模型。一个70B模型（Llama 3.3 70B、82% MMLU）相当于GPT-4（2023）-- 三年前需要数十亿美元服务器基础设施的模型现在能在Mac Studio上运行。针对各模型等级的硬件建议，参见[2026本地LLM硬件指南](/local-llms/local-llm-hardware-guide-2026?lang=zh)。',
+            '**两年间本地运行模型质量的提升幅度巨大。** 2026年4月，一个7B模型（Qwen2.5 7B、74% MMLU）的性能相当于2024年初的13B模型。一个70B模型（Llama 3.3 70B、82% MMLU）相当于GPT-4（2023）-- 三年前需要数十亿美元服务器基础设施的模型现在能在Mac Studio上运行。针对各模型等级的硬件建议，参见[2026本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
           ],
           image: '/images/llm-quality-improvement-2024-2026-zh.svg',
           imageCaption: '本地LLM质量改进（2024-2026）：7B级模型从64%（Mistral 7B、2024初）提升到74%（Qwen2.5 7B、2026年4月）。70B级从75%（Llama 3.3 70B）提升到82-84%（Llama 3.3 70B和Qwen2.5 72B）。每18-24个月本地模型质量进步一代。',
@@ -849,12 +849,12 @@ schema: {
           id: 'related',
           title: '相关阅读',
           items: [
-            '[2026最佳本地LLM](/local-llms/best-local-llms-2026?lang=zh) -- 按任务、硬件和质量排名前5模型的当前排序。',
-            '[LLM量子化解释](/local-llms/llm-quantization-explained?lang=zh) -- 下载新模型发布时理解Q4_K_M与Q5_K_M。',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=zh) -- 三大模型家族的完整基准对比，含最新2026数据。',
-            '[2026本地LLM硬件指南](/local-llms/local-llm-hardware-guide-2026?lang=zh) -- 拉取最新模型发布前检查硬件是否支持。',
-            '[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh) -- 更新Ollama并用正确版本标签拉取最新模型。',
-            '[Ollama上的顶级开源模型](/local-llms/top-open-source-models-ollama?lang=zh) -- 包含拉取命令和性能数据的完整可用模型库。',
+            '[2026最佳本地LLM](/zh/local-llms/best-local-llms-2026) -- 按任务、硬件和质量排名前5模型的当前排序。',
+            '[LLM量子化解释](/zh/local-llms/llm-quantization-explained) -- 下载新模型发布时理解Q4_K_M与Q5_K_M。',
+            '[Qwen vs Llama vs Mistral](/zh/local-llms/qwen-vs-llama-vs-mistral) -- 三大模型家族的完整基准对比，含最新2026数据。',
+            '[2026本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) -- 拉取最新模型发布前检查硬件是否支持。',
+            '[如何安装Ollama](/zh/local-llms/how-to-install-ollama) -- 更新Ollama并用正确版本标签拉取最新模型。',
+            '[Ollama上的顶级开源模型](/zh/local-llms/top-open-source-models-ollama) -- 包含拉取命令和性能数据的完整可用模型库。',
           ],
         },
         faqSection: {
@@ -918,7 +918,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': '本地LLM模型更新2026：所有重大开源权重发布',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-model-updates-2026',
         'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
@@ -941,7 +941,7 @@ schema: {
         '@type': 'ItemList',
         'name': '2026年Q1重大本地LLM发布',
         'inLanguage': 'zh',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-model-updates-2026',
         'numberOfItems': 4,
         'itemListElement': [
           {
@@ -1096,7 +1096,7 @@ schema: {
         },
         q12026: {
           title: 'Quels modèles LLM locaux ont été publiés en Q1 2026 ?',
-          content: 'En avril 2026, les releases de modèles open-weight notables de janvier à avril 2026. Tous les modèles ci-dessous sont disponibles dans divers formats de quantification -- voir [guide de quantification](/local-llms/llm-quantization-explained?lang=fr) pour les détails des compromis Q4 vs Q5 :',
+          content: 'En avril 2026, les releases de modèles open-weight notables de janvier à avril 2026. Tous les modèles ci-dessous sont disponibles dans divers formats de quantification -- voir [guide de quantification](/fr/local-llms/llm-quantization-explained) pour les détails des compromis Q4 vs Q5 :',
           image: '/images/q1-2026-model-releases-timeline-fr.svg',
           imageCaption: 'Chronologie des releases LLM locaux Q1 2026 : Phi-4 Mini (janvier, 3.8B), Gemma 3 (février, capacités vision sur toutes les tailles), Llama 4 Scout (mars, architecture MoE) et Mistral Small 3.2 (avril). Toutes les releases ajoutées à Ollama dans les jours suivant l\'annonce des poids open-weight.',
           rows: [
@@ -1134,7 +1134,7 @@ schema: {
           id: 'quality-improvement',
           title: 'De combien la qualité des LLM locaux a-t-elle progressé de 2024 à 2026 ?',
           content: [
-            '**L\'amélioration de la qualité des modèles exécutables localement sur deux ans est substantielle.** En avril 2026, un modèle 7B (Qwen2.5 7B, 74% MMLU) correspond à la performance de benchmark d\'un modèle 13B du début 2024. Un modèle 70B (Llama 3.3 70B, 82% MMLU) correspond à la performance de GPT-4 (2023) -- un modèle qui nécessitait une infrastructure serveur d\'un milliard de dollars il y a 3 ans fonctionne maintenant sur un Mac Studio. Pour les recommandations matérielles correspondant à chaque classe de modèle, voir [guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr).',
+            '**L\'amélioration de la qualité des modèles exécutables localement sur deux ans est substantielle.** En avril 2026, un modèle 7B (Qwen2.5 7B, 74% MMLU) correspond à la performance de benchmark d\'un modèle 13B du début 2024. Un modèle 70B (Llama 3.3 70B, 82% MMLU) correspond à la performance de GPT-4 (2023) -- un modèle qui nécessitait une infrastructure serveur d\'un milliard de dollars il y a 3 ans fonctionne maintenant sur un Mac Studio. Pour les recommandations matérielles correspondant à chaque classe de modèle, voir [guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-fr.svg',
           imageCaption: 'Amélioration de la qualité des LLM locaux 2024-2026 : les modèles de classe 7B se sont améliorés de 64% MMLU (Mistral 7B, début 2024) à 74% (Qwen2.5 7B, avril 2026). La classe 70B s\'est améliorée de 75% (Llama 3.3 70B) à 82-84% (Llama 3.3 70B et Qwen2.5 72B). Tous les 18-24 mois, la qualité des modèles locaux progresse d\'une génération.',
@@ -1176,12 +1176,12 @@ schema: {
           id: 'related',
           title: 'Lectures connexes',
           items: [
-            '[Meilleurs LLM locaux 2026](/local-llms/best-local-llms-2026?lang=fr) -- classements actuels des 5 meilleurs modèles par tâche, matériel et qualité incluant toutes les releases 2026.',
-            '[Quantification LLM expliquée](/local-llms/llm-quantization-explained?lang=fr) -- comprenez Q4_K_M vs Q5_K_M lors du téléchargement de nouvelles releases de modèles.',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) -- comparaison complète de benchmark des trois principales familles de modèles avec données 2026 les plus récentes.',
-            '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) -- vérifiez si votre matériel supporte les dernières releases de modèles avant de les télécharger.',
-            '[Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) -- mettez à jour Ollama et tirez les derniers modèles avec les balises de version correctes.',
-            '[Top modèles open source sur Ollama](/local-llms/top-open-source-models-ollama?lang=fr) -- bibliothèque complète des modèles disponibles avec commandes pull et données de performance.',
+            '[Meilleurs LLM locaux 2026](/fr/local-llms/best-local-llms-2026) -- classements actuels des 5 meilleurs modèles par tâche, matériel et qualité incluant toutes les releases 2026.',
+            '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) -- comprenez Q4_K_M vs Q5_K_M lors du téléchargement de nouvelles releases de modèles.',
+            '[Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral) -- comparaison complète de benchmark des trois principales familles de modèles avec données 2026 les plus récentes.',
+            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- vérifiez si votre matériel supporte les dernières releases de modèles avant de les télécharger.',
+            '[Installer Ollama](/fr/local-llms/how-to-install-ollama) -- mettez à jour Ollama et tirez les derniers modèles avec les balises de version correctes.',
+            '[Top modèles open source sur Ollama](/fr/local-llms/top-open-source-models-ollama) -- bibliothèque complète des modèles disponibles avec commandes pull et données de performance.',
           ],
         },
         faqSection: {
@@ -1213,7 +1213,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Mises à jour des LLM locaux 2026 : Chaque release open-weight majeure de l\'année',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-model-updates-2026',
         'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
@@ -1233,7 +1233,7 @@ schema: {
         '@type': 'ItemList',
         'inLanguage': 'fr',
         'name': 'Releases LLM locaux majeurs Q1 2026',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-model-updates-2026',
         'numberOfItems': 4,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Gemma 3 (toutes les tailles)', 'description': 'Publié février 2026 par Google. Vision sur toutes les tailles. Contexte 128K. Apache 2.0. ollama run gemma3:9b' },

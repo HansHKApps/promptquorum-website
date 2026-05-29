@@ -487,7 +487,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Con 4k de contexto, ambos modelos 14B usan ~10 GB de VRAM y funcionan cómodamente. <strong>Con 8k de contexto, el VRAM sube a aproximadamente 11,5 GB — dejando solo 500 MB de margen en una tarjeta de 12 GB.</strong> Con 16k de contexto, un modelo 14B Q4_K_M supera los 12 GB de VRAM y comenzará a descargar parcialmente hacia la CPU, reduciendo la velocidad a ~3 tok/s.',
           'Para el uso práctico de programación, 4k de contexto es suficiente para la mayoría de los completados de archivo único y sesiones de revisión de código. Las necesidades de contexto largo (repositorios completos, refactorizaciones extensas) requieren una GPU de 16 GB o 24 GB, o cambiar a la variante 7B que usa ~5 GB de VRAM y deja toda la tarjeta de 12 GB libre para contexto.',
-          'Si trabajas frecuentemente con archivos grandes y quieres quedarte con una tarjeta de 12 GB, considera Qwen 2.5 Coder 7B Q4_K_M — corre a ~28 tok/s en RTX 3060, obtiene 72,1 % en HumanEval y deja 7 GB de VRAM libres para contexto. Consulta la <a href="/prompt-bites/best-14b-models-coding?lang=es" class="text-primary hover:underline">comparativa de los mejores modelos de programación 14B</a> para más detalles sobre el compromiso 14B vs 7B.',
+          'Si trabajas frecuentemente con archivos grandes y quieres quedarte con una tarjeta de 12 GB, considera Qwen 2.5 Coder 7B Q4_K_M — corre a ~28 tok/s en RTX 3060, obtiene 72,1 % en HumanEval y deja 7 GB de VRAM libres para contexto. Consulta la <a href="/es/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">comparativa de los mejores modelos de programación 14B</a> para más detalles sobre el compromiso 14B vs 7B.',
         ],
       },
       faq: {
@@ -508,7 +508,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Un modelo de programación dedicado es mejor que uno de propósito general para el completado de código?',
-            a: 'Sí, notablemente. Qwen 2.5 Coder 14B obtiene 78,4 % en HumanEval. Un Mistral 12B de propósito general de tamaño similar obtiene alrededor de 60 %. La diferencia de 18 puntos refleja los datos de preentrenamiento específicos para código. Para trabajo de programación serio, elige siempre un modelo ajustado para código sobre un modelo de propósito general del mismo tamaño. Compara las opciones en la <a href="/prompt-bites/qwen-coder-vs-deepseek-coder?lang=es" class="text-primary hover:underline">guía Qwen Coder vs DeepSeek Coder</a>.',
+            a: 'Sí, notablemente. Qwen 2.5 Coder 14B obtiene 78,4 % en HumanEval. Un Mistral 12B de propósito general de tamaño similar obtiene alrededor de 60 %. La diferencia de 18 puntos refleja los datos de preentrenamiento específicos para código. Para trabajo de programación serio, elige siempre un modelo ajustado para código sobre un modelo de propósito general del mismo tamaño. Compara las opciones en la <a href="/es/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">guía Qwen Coder vs DeepSeek Coder</a>.',
           },
         ],
       },

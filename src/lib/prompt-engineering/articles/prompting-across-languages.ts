@@ -424,7 +424,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompting-across-languages?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/prompting-across-languages',
       inLanguage: 'de',
       headline: 'Prompting in verschiedenen Sprachen: Konsistente KI-Ergebnisse in jeder Sprache',
       description: 'Sprachmodelle wurden hauptsächlich auf Englisch trainiert — Prompts auf Deutsch, Französisch, Japanisch oder Arabisch aktivieren einen anderen Teil des Modell-Wissens mit geringerer Genauigkeit und höheren Token-Kosten.',
@@ -493,7 +493,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Mehrsprachiges Prompting ist keine Übersetzung — es aktiviert einen anderen Teil der erlernten Verteilung des Modells.** LLMs tokenisieren und repräsentieren Text in einem gemeinsamen Embedding-Raum, doch die Trainingsdaten sind stark verzerrt: CommonCrawl (zum Training der meisten LLMs verwendet) besteht zu ~46 % aus Englisch, ~6 % aus Deutsch, ~5 % aus Französisch, ~3 % aus Chinesisch. Sprachen mit einem Trainingsanteil von <1 % (z. B. die meisten afrikanischen Sprachen, viele südasiatische Sprachen) verhalten sich unvorhersehbar.',
           'Wenn Sie auf Französisch prompten, stützt sich das Modell auf Muster aus französischen Trainingsdaten. Da Französisch nur ~5 % des Trainingskorpus ausmacht, hat das Modell im Vergleich zu englischen Prompts deutlich weniger erlernte Assoziationen. Dies äußert sich in: niedrigerer Reasoning-Genauigkeit, inkonsistenter Befolgung von Anweisungen, höheren Halluzinationsraten und unvorhersehbarer Ausgabequalität.',
-          'Eine ausführliche Erklärung, wie LLMs Sprachmuster erlernen, finden Sie unter [Wie LLMs wirklich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de).',
+          'Eine ausführliche Erklärung, wie LLMs Sprachmuster erlernen, finden Sie unter [Wie LLMs wirklich funktionieren](/de/prompt-engineering/how-llms-actually-work).',
         ],
         snippets: [
           { type: 'in-plain-terms', text: 'Einfach erklärt: LLMs haben Englisch aus Milliarden von Büchern, Websites und Artikeln gelernt. Deutsch aus Millionen. Wenn Sie eine Frage auf Deutsch stellen, stehen dem Modell weniger Beispiele zur Verfügung — es macht also mehr Fehler, genau wie Sie Matheaufgaben in einer Sprache, die Sie erst wenige Wochen gelernt haben, schlechter lösen würden als in Ihrer Muttersprache.' },
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Token-Kosten nach Schrift',
         content: [
           '**Derselbe 1.000-Wörter-Text kostet auf Arabisch 46 % mehr Token als auf Englisch und auf Russisch 31 % mehr — das wirkt sich direkt auf Ihre API-Rechnung aus.** Die Token-Effizienz variiert stark je nach Schriftsystem und Sprachfamilie. Dies beeinflusst sowohl die API-Kosten als auch die Kontextfenster-Budgetierung.',
-          'Weitere Details finden Sie unter [Tokens, Kosten und Limits](/prompt-engineering/tokens-costs-limits?lang=de).',
+          'Weitere Details finden Sie unter [Tokens, Kosten und Limits](/de/prompt-engineering/tokens-costs-limits).',
         ],
         columns: ['Sprache', 'Schrift', 'Token (ca.)', 'vs. Englisch', 'API-Kostenfaktor'],
         rows: [
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Warum? Der Großteil der Instruction-Following-Fähigkeit von LLMs wurde auf englischen RLHF-Daten (Reinforcement Learning from Human Feedback) trainiert. Komplexe System-Anweisungen (Formatierungsregeln, Personas, Chain-of-Thought-Direktiven) werden zuverlässiger befolgt, wenn sie auf Englisch geschrieben sind. Englische Anweisungen sind Teil des zentralen Reasoning-Pfads des Modells.',
           'Stil-Anweisungen (Formalitätsregister, kultureller Ton, Höflichkeitsniveau) funktionieren hingegen am besten in der Zielsprache, da sie ein Verständnis dafür erfordern, was „formales Deutsch" oder „höfliches Japanisch" für Muttersprachler tatsächlich bedeutet.',
           '**Entscheidungsbaum:** Komplexe Reasoning-/Formatierungsregeln → englischer System-Prompt. Formalitätsregister (Sie-Form, Vous, Keigo) → Zielsprache. Persona-Definition → Englisch + ein Muster in der Zielsprache. Ausgabesprachen-Spezifikation → immer explizit im System-Prompt: „Respond in formal Japanese (丁寧語 / です・ます体)."',
-          'Ausführliche Erklärung: [System-Prompt vs. Benutzer-Prompt](/prompt-engineering/system-prompt-vs-user-prompt?lang=de).',
+          'Ausführliche Erklärung: [System-Prompt vs. Benutzer-Prompt](/de/prompt-engineering/system-prompt-vs-user-prompt).',
         ],
         callouts: [
           { type: 'warning', label: 'Häufiger Fehler', text: 'System-Prompt und Benutzeranweisungen vollständig in der Zielsprache zu schreiben, reduziert die Reasoning-Genauigkeit oft deutlich. Verwenden Sie Englisch für Logik, die Zielsprache für den Ton.' },
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Wenn LLMs schrittweise denken, stützen sie sich auf Muster aus ihrem größten Trainingskorpus (Englisch). Wenn Sie das Reasoning vollständig in einer ressourcenarmen Sprache wie Japanisch oder Arabisch erzwingen, sinkt die Genauigkeit — das Modell hat in dieser Sprache weniger erlernte Reasoning-Muster. Der hybride Ansatz — englisches CoT, Ausgabe in der Zielsprache — kombiniert die Stärken beider Welten.',
           '**Vorlage:** `Think through this step by step in English, then write your final answer in Japanese. Question: [question]`',
           '**Entscheidung:** Englisches CoT verwenden, wenn → die Aufgabe mehrstufiges Reasoning erfordert, die Zielsprache Ebene 3+ ist, Genauigkeit wichtiger als Latenz ist. Natives CoT verwenden, wenn → Ton und Register wichtiger als Reasoning-Tiefe sind, die Zielsprache Ebene 1–2 ist.',
-          'Vertiefung: [Chain-of-Thought-Prompting: Wie LLMs ihr Denken zeigen](/prompt-engineering/chain-of-thought-prompting?lang=de).',
+          'Vertiefung: [Chain-of-Thought-Prompting: Wie LLMs ihr Denken zeigen](/de/prompt-engineering/chain-of-thought-prompting).',
         ],
         callouts: [
           { type: 'warning', label: 'Hinweis', text: 'Sprachübergreifendes CoT funktioniert für Ebene-3-Sprachen, kann jedoch Modelle bei Ebene-4-Sprachen verwirren. Immer an einer kleinen Stichprobe testen, bevor Sie den Ansatz produktiv einsetzen.' },
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Few-Shot-Beispiele müssen in derselben Sprache wie die Aufgabe sein — sprachübergreifende Beispiele senken die Ausgabegenauigkeit in Ebene-2- und Ebene-3-Sprachen um 15–20 % (Shi et al., 2023).** Few-Shot-Beispiele lehren das Modell Format, Ton und Muster. Wenn die Beispiele auf Englisch sind, die Aufgabe aber auf Französisch, erhält das Modell widersprüchliche Signale.',
           '**Zwei Strategien:** (1) Native Few-Shot — alle Beispiele in der Zielsprache (beste Qualität). (2) Zero-Shot + explizite Anweisungen — keine Beispiele, aber klare Stil-/Formatregeln auf Englisch (beste Option, wenn keine nativen Beispiele verfügbar sind). Vermeiden Sie: Englische Beispiele + Französische Aufgabe = das Schlechteste beider Welten.',
-          'Entscheidungsrahmen: [Few-Shot vs. Zero-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de).',
+          'Entscheidungsrahmen: [Few-Shot vs. Zero-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot).',
         ],
         callouts: [
           { type: 'insight', label: 'Kernpunkt', text: 'Sprachungleichgewicht bei Beispielen: Englische Beispiele trainieren das Modell auf englische Formatierung — es muss dann gleichzeitig die Sprache wechseln und das Format ableiten, was zu einer doppelten kognitiven Last und schlechterer Ausgabequalität führt.' },
@@ -740,11 +740,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Ressourcen',
         items: [
-          '[System-Prompt vs. Benutzer-Prompt: Was gehört wohin?](/prompt-engineering/system-prompt-vs-user-prompt?lang=de) — Verstehen, wo Sprachanweisungen platziert werden sollten',
-          '[Tokens, Kosten und Limits: Ein praktischer Leitfaden](/prompt-engineering/tokens-costs-limits?lang=de) — Token-Budget für nicht-englische Eingaben berechnen',
-          '[Chain-of-Thought-Prompting: Wie LLMs ihr Denken zeigen](/prompt-engineering/chain-of-thought-prompting?lang=de) — Sprachübergreifende CoT-Techniken',
-          '[Few-Shot vs. Zero-Shot Prompting: Was Sie wann verwenden sollten](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — Beispielstrategie für mehrsprachige Aufgaben',
-          '[Welches KI-Modell ist das richtige für Ihre Aufgabe?](/prompt-engineering/gpt-claude-gemini-which-model?lang=de) — Modellauswahl nach Sprache und Aufgabe',
+          '[System-Prompt vs. Benutzer-Prompt: Was gehört wohin?](/de/prompt-engineering/system-prompt-vs-user-prompt) — Verstehen, wo Sprachanweisungen platziert werden sollten',
+          '[Tokens, Kosten und Limits: Ein praktischer Leitfaden](/de/prompt-engineering/tokens-costs-limits) — Token-Budget für nicht-englische Eingaben berechnen',
+          '[Chain-of-Thought-Prompting: Wie LLMs ihr Denken zeigen](/de/prompt-engineering/chain-of-thought-prompting) — Sprachübergreifende CoT-Techniken',
+          '[Few-Shot vs. Zero-Shot Prompting: Was Sie wann verwenden sollten](/de/prompt-engineering/zero-shot-vs-few-shot) — Beispielstrategie für mehrsprachige Aufgaben',
+          '[Welches KI-Modell ist das richtige für Ihre Aufgabe?](/de/prompt-engineering/gpt-claude-gemini-which-model) — Modellauswahl nach Sprache und Aufgabe',
         ],
       },
       sources: {
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompting-across-languages?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompting-across-languages',
       inLanguage: 'es',
       headline: 'Prompting en Diferentes Idiomas: Cómo Obtener Resultados Coherentes',
       description: 'Los LLMs fueron entrenados principalmente en inglés — hacer prompting en francés, alemán, japonés o árabe activa una región diferente del conocimiento del modelo con menor precisión y mayor costo de tokens.',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**El prompting multilingüe no es traducción — activa una parte diferente de la distribución aprendida del modelo.** Los LLMs tokenizan y representan el texto en un espacio de embedding común, pero los datos de entrenamiento están muy sesgados: CommonCrawl (usado para entrenar la mayoría de los LLMs) consiste en ~46 % de inglés, ~6 % de alemán, ~5 % de francés, ~3 % de chino. Los idiomas con menos del 1 % de participación en el entrenamiento (p. ej., la mayoría de los idiomas africanos, muchos idiomas del sur de Asia) se comportan de forma impredecible.',
           'Cuando haces prompting en francés, el modelo se apoya en patrones de los datos de entrenamiento en francés. Como el francés representa solo ~5 % del corpus de entrenamiento, el modelo tiene significativamente menos asociaciones aprendidas en comparación con los prompts en inglés. Esto se manifiesta en: menor precisión de razonamiento, seguimiento de instrucciones inconsistente, tasas de alucinación más altas y calidad de salida impredecible.',
-          'Para una explicación detallada de cómo los LLMs aprenden patrones de idioma, consulta [Cómo funcionan realmente los LLMs](/prompt-engineering/how-llms-actually-work?lang=es).',
+          'Para una explicación detallada de cómo los LLMs aprenden patrones de idioma, consulta [Cómo funcionan realmente los LLMs](/es/prompt-engineering/how-llms-actually-work).',
         ],
         snippets: [
           { type: 'in-plain-terms', text: 'En términos sencillos: los LLMs han aprendido inglés de miles de millones de libros, sitios web y artículos. Español de millones. Cuando haces una pregunta en español, el modelo tiene menos ejemplos de los que apoyarse — por eso comete más errores, igual que resolverías peor ejercicios de matemáticas en un idioma que llevas aprendiendo pocas semanas que en tu lengua materna.' },
@@ -898,7 +898,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Costos de tokens por escritura',
         content: [
           '**El mismo texto de 1.000 palabras cuesta un 46 % más en tokens en árabe que en inglés y un 31 % más en ruso — esto impacta directamente en tu factura de la API.** La eficiencia de tokens varía significativamente según el sistema de escritura y la familia de idiomas. Esto afecta tanto los costos de la API como la planificación del presupuesto de ventana de contexto.',
-          'Más detalles en [Tokens, costos y límites](/prompt-engineering/tokens-costs-limits?lang=es).',
+          'Más detalles en [Tokens, costos y límites](/es/prompt-engineering/tokens-costs-limits).',
         ],
         columns: ['Idioma', 'Escritura', 'Tokens (aprox.)', 'vs. inglés', 'Factor de costo API'],
         rows: [
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '¿Por qué? La mayor parte de la capacidad de seguimiento de instrucciones de los LLMs fue entrenada en datos RLHF (Reinforcement Learning from Human Feedback) en inglés. Las instrucciones de sistema complejas (reglas de formato, personas, directivas Chain-of-Thought) se siguen de forma más fiable cuando están escritas en inglés. Las instrucciones en inglés forman parte de la ruta de razonamiento central del modelo.',
           'Las instrucciones de estilo (registro de formalidad, tono cultural, nivel de cortesía) funcionan mejor en el idioma objetivo, ya que requieren comprensión de lo que el "español formal" o el "japonés cortés" significa realmente para los hablantes nativos.',
           '**Árbol de decisión:** Reglas de razonamiento/formato complejas → prompt de sistema en inglés. Registro de formalidad (usted, vous, keigo) → idioma objetivo. Definición de persona → inglés + un ejemplo en el idioma objetivo. Especificación del idioma de salida → siempre explícita en el prompt de sistema: "Respond in formal Spanish (tratamiento de usted)."',
-          'Explicación detallada: [Prompt de sistema vs. prompt de usuario](/prompt-engineering/system-prompt-vs-user-prompt?lang=es).',
+          'Explicación detallada: [Prompt de sistema vs. prompt de usuario](/es/prompt-engineering/system-prompt-vs-user-prompt).',
         ],
         callouts: [
           { type: 'warning', label: 'Error común', text: 'Escribir el prompt de sistema y las instrucciones de usuario completamente en el idioma objetivo a menudo reduce significativamente la precisión de razonamiento. Usa inglés para la lógica, el idioma objetivo para el tono.' },
@@ -987,7 +987,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Cuando los LLMs piensan paso a paso, se apoyan en patrones de su corpus de entrenamiento más grande (inglés). Si fuerzas el razonamiento completamente en un idioma con pocos recursos como el japonés o el árabe, la precisión disminuye — el modelo tiene menos patrones de razonamiento aprendidos en ese idioma. El enfoque híbrido — CoT en inglés, salida en el idioma objetivo — combina lo mejor de ambos mundos.',
           '**Plantilla:** `Think through this step by step in English, then write your final answer in Spanish. Question: [pregunta]`',
           '**Decisión:** Usar CoT en inglés cuando → la tarea requiere razonamiento en múltiples pasos, el idioma objetivo es de nivel 3+, la precisión es más importante que la latencia. Usar CoT nativo cuando → el tono y el registro importan más que la profundidad del razonamiento, el idioma objetivo es de nivel 1–2.',
-          'Para más detalles: [Prompting Chain-of-Thought: Cómo los LLMs muestran su razonamiento](/prompt-engineering/chain-of-thought-prompting?lang=es).',
+          'Para más detalles: [Prompting Chain-of-Thought: Cómo los LLMs muestran su razonamiento](/es/prompt-engineering/chain-of-thought-prompting).',
         ],
         callouts: [
           { type: 'warning', label: 'Nota', text: 'El CoT entre idiomas funciona para los idiomas de nivel 3, pero puede confundir a los modelos con idiomas de nivel 4. Prueba siempre en una muestra pequeña antes de usarlo en producción.' },
@@ -1000,7 +1000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Los ejemplos few-shot deben estar en el mismo idioma que la tarea — los ejemplos entre idiomas reducen la precisión de salida en los idiomas de nivel 2 y nivel 3 entre un 15 y un 20 % (Shi et al., 2023).** Los ejemplos few-shot enseñan al modelo el formato, el tono y los patrones. Si los ejemplos están en inglés pero la tarea está en español, el modelo recibe señales contradictorias.',
           '**Dos estrategias:** (1) Few-shot nativo — todos los ejemplos en el idioma objetivo (mejor calidad). (2) Zero-shot + instrucciones explícitas — sin ejemplos, pero con reglas claras de estilo/formato en inglés (mejor opción cuando no hay ejemplos nativos disponibles). Evita: ejemplos en inglés + tarea en español = lo peor de ambos mundos.',
-          'Marco de decisión: [Prompting few-shot vs. zero-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=es).',
+          'Marco de decisión: [Prompting few-shot vs. zero-shot](/es/prompt-engineering/zero-shot-vs-few-shot).',
         ],
         callouts: [
           { type: 'insight', label: 'Punto clave', text: 'Desequilibrio de idioma en los ejemplos: los ejemplos en inglés entrenan al modelo en el formato en inglés — luego tiene que cambiar de idioma y deducir el formato simultáneamente, lo que genera una carga cognitiva doble y una calidad de salida inferior.' },
@@ -1115,11 +1115,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Prompt de sistema vs. prompt de usuario: ¿Qué va dónde?](/prompt-engineering/system-prompt-vs-user-prompt?lang=es) — Comprender dónde deben estar las instrucciones de idioma',
-          '[Tokens, costos y límites: Una guía práctica](/prompt-engineering/tokens-costs-limits?lang=es) — Calcular el presupuesto de tokens para entradas en idiomas distintos al inglés',
-          '[Prompting Chain-of-Thought: Cómo los LLMs muestran su razonamiento](/prompt-engineering/chain-of-thought-prompting?lang=es) — Técnicas de CoT entre idiomas',
-          '[Prompting few-shot vs. zero-shot: ¿Cuándo usar cuál?](/prompt-engineering/zero-shot-vs-few-shot?lang=es) — Elegir la estrategia de ejemplos para tareas multilingüe',
-          '[¿Qué modelo de IA es el adecuado para tu tarea?](/prompt-engineering/gpt-claude-gemini-which-model?lang=es) — Selección de modelo por idioma y tarea',
+          '[Prompt de sistema vs. prompt de usuario: ¿Qué va dónde?](/es/prompt-engineering/system-prompt-vs-user-prompt) — Comprender dónde deben estar las instrucciones de idioma',
+          '[Tokens, costos y límites: Una guía práctica](/es/prompt-engineering/tokens-costs-limits) — Calcular el presupuesto de tokens para entradas en idiomas distintos al inglés',
+          '[Prompting Chain-of-Thought: Cómo los LLMs muestran su razonamiento](/es/prompt-engineering/chain-of-thought-prompting) — Técnicas de CoT entre idiomas',
+          '[Prompting few-shot vs. zero-shot: ¿Cuándo usar cuál?](/es/prompt-engineering/zero-shot-vs-few-shot) — Elegir la estrategia de ejemplos para tareas multilingüe',
+          '[¿Qué modelo de IA es el adecuado para tu tarea?](/es/prompt-engineering/gpt-claude-gemini-which-model) — Selección de modelo por idioma y tarea',
         ],
       },
       sources: {
@@ -1176,7 +1176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompting-across-languages?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/prompting-across-languages',
       inLanguage: 'fr',
       headline: 'Prompts Multilingues : Obtenir des Résultats Cohérents dans Chaque Langue',
       description: 'Les modèles de langage ont été entraînés principalement en anglais — les prompts en français, japonais ou arabe activent une région différente du modèle avec une précision moindre et des coûts de tokens plus élevés.',
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Les prompts multilingues ne sont pas des traductions — ils activent une région différente de la distribution apprise du modèle.** Les LLM tokenisent et représentent le texte dans un espace d\'embeddings partagé, mais les données d\'entraînement sont déséquilibrées : CommonCrawl (utilisé pour entraîner la plupart des LLM) est composé d\'environ 46 % d\'anglais, 6 % d\'allemand, 5 % de français et 3 % de chinois. Les langues représentant moins de 1 % des données (ex. la plupart des langues africaines, de nombreuses langues d\'Asie du Sud) ont un comportement imprévisible.',
           'Lorsque vous rédigez un prompt en français, le modèle s\'appuie sur les motifs issus des données d\'entraînement en français. Comme celles-ci ne représentent qu\'environ 5 % du corpus total, le modèle dispose de moins d\'associations apprises qu\'avec des prompts en anglais. Cela se manifeste par : une précision de raisonnement moindre, un suivi des instructions moins fiable, des taux d\'hallucination plus élevés et une qualité de sortie imprévisible.',
-          'Pour approfondir la façon dont les LLM apprennent les motifs linguistiques, consultez [comment fonctionnent réellement les LLM](/prompt-engineering/how-llms-actually-work?lang=fr).',
+          'Pour approfondir la façon dont les LLM apprennent les motifs linguistiques, consultez [comment fonctionnent réellement les LLM](/fr/prompt-engineering/how-llms-actually-work).',
         ],
         snippets: [
           { type: 'in-plain-terms', text: 'Voyez-le ainsi : les LLM ont appris l\'anglais à partir de milliards de livres, sites web et articles. Ils ont appris le français à partir de millions. Quand vous posez une question en français, le modèle dispose de moins d\'exemples pour répondre, et fait donc plus d\'erreurs — tout comme vous résoudriez des problèmes de mathématiques moins bien dans une langue que vous n\'étudiez que depuis quelques semaines.' },
@@ -1274,7 +1274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Coûts de tokens par script',
         content: [
           '**Le même contenu de 1 000 mots coûte 46 % plus de tokens en arabe qu\'en anglais, et 30 % de plus en japonais — ce qui impacte directement votre facture d\'API.** L\'efficacité des tokens varie considérablement selon le script et la famille linguistique.',
-          'Consultez [tokens, coûts et limites](/prompt-engineering/tokens-costs-limits?lang=fr) pour une ventilation détaillée de la gestion des tokens dans vos workflows multilingues.',
+          'Consultez [tokens, coûts et limites](/fr/prompt-engineering/tokens-costs-limits) pour une ventilation détaillée de la gestion des tokens dans vos workflows multilingues.',
         ],
         columns: ['Langue', 'Script', 'Tokens (approx.)', 'vs. Anglais', 'Multiplicateur de coût'],
         rows: [
@@ -1297,7 +1297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Pour les tâches structurées et de raisonnement, les prompts système en anglais surpassent les prompts système en langue native pour les langues de niveau 2–3. Pour le ton et la formalité, les prompts système en langue native obtiennent de meilleurs résultats.** C\'est la décision la plus importante du prompting multilingue.',
           'Pourquoi ? La plupart des capacités de suivi d\'instructions des LLM ont été entraînées sur des données RLHF en anglais. Les instructions système complexes (règles de formatage, personas, directives chain-of-thought) sont suivies de façon plus fiable en anglais. En revanche, les instructions de style (registre de formalité, ton culturel, niveau de politesse) sont mieux rédigées dans la langue cible.',
           '**Arbre de décision :** Règles de raisonnement/formatage complexes → prompt système en anglais. Registre de formalité (Vous, Sie, keigo) → langue cible. Définition de persona → anglais + un exemple en langue cible. Spécification de la langue de sortie → toujours explicite dans le prompt système : "Respond in formal French using Vous-form."',
-          'Pour la ventilation complète, consultez [prompt système vs. prompt utilisateur](/prompt-engineering/system-prompt-vs-user-prompt?lang=fr).',
+          'Pour la ventilation complète, consultez [prompt système vs. prompt utilisateur](/fr/prompt-engineering/system-prompt-vs-user-prompt).',
         ],
         callouts: [
           { type: 'warning', label: 'Erreur courante', text: 'Rédiger à la fois le prompt système ET les instructions utilisateur dans la langue cible réduit souvent la précision du raisonnement. Utilisez l\'anglais pour la logique, la langue cible pour le ton.' },
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Lorsque les LLM raisonnent étape par étape, ils s\'appuient sur les motifs de leur plus grand corpus d\'entraînement (l\'anglais). Forcer le raisonnement entièrement dans une langue à faibles ressources réduit la précision. L\'approche hybride — CoT en anglais, sortie en langue native — offre le meilleur des deux.',
           '**Modèle :** `Raisonnez étape par étape en anglais, puis rédigez votre réponse finale en français. Question : [question]`',
           '**Décision :** Utilisez le CoT en anglais quand → la tâche requiert un raisonnement en plusieurs étapes, la langue cible est de niveau 3+, la précision prime sur la latence. Utilisez le CoT en langue native quand → le ton et le registre comptent plus que la profondeur du raisonnement, la langue cible est de niveau 1–2.',
-          'Approfondissez : [Chain-of-thought : comment pousser les LLM à montrer leur raisonnement](/prompt-engineering/chain-of-thought-prompting?lang=fr).',
+          'Approfondissez : [Chain-of-thought : comment pousser les LLM à montrer leur raisonnement](/fr/prompt-engineering/chain-of-thought-prompting).',
         ],
         callouts: [
           { type: 'warning', label: 'Attention', text: 'Le CoT multilingue fonctionne pour les langues de niveau 3 mais peut perturber les modèles avec les langues de niveau 4. Testez toujours sur un petit échantillon avant de valider l\'approche.' },
@@ -1375,7 +1375,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Les exemples few-shot doivent être dans la même langue que la tâche — les exemples en langue différente réduisent la précision de 15 à 20 % dans les langues de niveau 2–3 (Shi et al., 2023).** Les exemples few-shot apprennent au modèle le format, le ton et le schéma. Quand les exemples sont en anglais mais la tâche en français, le modèle reçoit des signaux contradictoires.',
           '**Deux stratégies :** (1) Few-shot natif — tous les exemples dans la langue cible (meilleure qualité). (2) Zéro-shot + instructions explicites — pas d\'exemples, mais des règles de style/format claires en anglais (meilleur quand les exemples natifs ne sont pas disponibles). Évitez le mélange : exemples anglais + tâche française = pire des deux.',
-          'Consultez [few-shot vs. zéro-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) pour le cadre de décision complet.',
+          'Consultez [few-shot vs. zéro-shot](/fr/prompt-engineering/zero-shot-vs-few-shot) pour le cadre de décision complet.',
         ],
         callouts: [
           { type: 'insight', label: 'Point clé', text: 'La discordance de langue source est importante : les exemples anglais entraînent le modèle sur le formatage anglais, puis il doit simultanément changer de langue et déduire le format — une double charge cognitive qui dégrade la sortie.' },
@@ -1489,11 +1489,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures connexes',
         items: [
-          '[Prompt système vs. prompt utilisateur : où mettre quoi ?](/prompt-engineering/system-prompt-vs-user-prompt?lang=fr) — Comprendre où placer les instructions de langue',
-          '[Tokens, coûts et limites : guide pratique](/prompt-engineering/tokens-costs-limits?lang=fr) — Calculer le budget de tokens pour les entrées non anglophones',
-          '[Chain-of-Thought : comment pousser les LLM à montrer leur raisonnement](/prompt-engineering/chain-of-thought-prompting?lang=fr) — Techniques CoT multilingues',
-          '[Few-shot vs. zéro-shot : quand utiliser lequel ?](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — Choisir une stratégie d\'exemples pour les tâches multilingues',
-          '[Quel modèle d\'IA choisir pour votre tâche ?](/prompt-engineering/gpt-claude-gemini-which-model?lang=fr) — Sélection de modèle par langue et tâche',
+          '[Prompt système vs. prompt utilisateur : où mettre quoi ?](/fr/prompt-engineering/system-prompt-vs-user-prompt) — Comprendre où placer les instructions de langue',
+          '[Tokens, coûts et limites : guide pratique](/fr/prompt-engineering/tokens-costs-limits) — Calculer le budget de tokens pour les entrées non anglophones',
+          '[Chain-of-Thought : comment pousser les LLM à montrer leur raisonnement](/fr/prompt-engineering/chain-of-thought-prompting) — Techniques CoT multilingues',
+          '[Few-shot vs. zéro-shot : quand utiliser lequel ?](/fr/prompt-engineering/zero-shot-vs-few-shot) — Choisir une stratégie d\'exemples pour les tâches multilingues',
+          '[Quel modèle d\'IA choisir pour votre tâche ?](/fr/prompt-engineering/gpt-claude-gemini-which-model) — Sélection de modèle par langue et tâche',
         ],
       },
       sources: {
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompting-across-languages?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/prompting-across-languages',
       inLanguage: 'ja',
       headline: '多言語プロンプティング：あらゆる言語で一貫した結果を得る方法',
       description: '言語モデルは主に英語で学習されています。日本語、アラビア語、フランス語でプロンプトを書くと精度が低下し、tokenコストが増加します。',
@@ -1618,7 +1618,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**多言語プロンプティングは翻訳ではありません — モデルの学習分布の異なる部分を活性化することです。** LLMはテキストを共有embedding空間でtokenize・表現しますが、トレーニングデータは偏っています：CommonCrawl（ほとんどのLLMのトレーニングに使用）は英語約46%、ドイツ語約6%、フランス語約5%、中国語約3%で構成されています。トレーニングデータが1%未満の言語（アフリカ言語の多く、南アジアの多くの言語など）は予測不可能な挙動を示します。',
           '日本語でpromptを書くと、モデルは日本語のトレーニングデータのパターンに頼ります。日本語はコーパス全体の約3%にすぎないため、英語promptと比較して学習済みの関連付けが少ない状態です。これは次のような形で現れます：推論精度の低下、指示に従う信頼性の低下、幻覚率の上昇、出力品質のばらつき。',
-          'LLMが言語パターンを実際にどのように学習するかについては、[LLMの実際の仕組み](/prompt-engineering/how-llms-actually-work?lang=ja)をご覧ください。',
+          'LLMが言語パターンを実際にどのように学習するかについては、[LLMの実際の仕組み](/ja/prompt-engineering/how-llms-actually-work)をご覧ください。',
         ],
         snippets: [
           { type: 'in-plain-terms', text: '「このセクションでは」わかりやすく説明します：LLMは何十億もの本・サイト・記事から英語を学習しました。日本語は数百万から学習しました。日本語で質問すると、モデルが参照できる例が少ないため、ミスが増えます — 数年勉強した言語より、ずっと使い慣れた言語の方が数学の問題を解けるのと同じ理由です。' },
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'スクリプト別tokenコスト',
         content: [
           '**同じ1,000語のコンテンツは英語よりアラビア語で46%多くのtokenを消費し、ロシア語では30%多くなります — API請求に直接影響します。** tokenの効率はscriptと言語ファミリーによって大きく異なります。',
-          'tokenの詳細な予算管理については[tokens、コスト、制限](/prompt-engineering/tokens-costs-limits?lang=ja)をご覧ください。',
+          'tokenの詳細な予算管理については[tokens、コスト、制限](/ja/prompt-engineering/tokens-costs-limits)をご覧ください。',
         ],
         columns: ['言語', 'スクリプト', 'トークン（概算）', '英語比', 'APIコスト倍率'],
         rows: [
@@ -1670,7 +1670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**構造化・推論タスクでは、英語のsystem promptはレベル2〜3言語の母語system promptを上回ります。語調と敬語については、母語のsystem promptの方が効果的です。** これが多言語promptingで最も重要な判断です。',
           'なぜでしょうか？LLMの指示に従う能力の多くは英語のRLHF（人間からのフィードバックによる強化学習）データで訓練されています。複雑なsystem指示（フォーマット規則、ペルソナ、CoTディレクティブ）は英語で書くとより確実に守られます。一方、スタイル指示（敬語レベル、文化的なトーン）はターゲット言語で書く方が効果的です。',
           '**判断フロー：** 複雑な推論・フォーマット規則 → 英語のsystem prompt。敬語レベル（丁寧語、Sie、keigo）→ ターゲット言語。ペルソナ定義 → 英語＋1件のターゲット言語サンプル。出力言語指定 → 常にsystem promptで明示：「Respond in formal Japanese using 丁寧語.」',
-          '詳細は[system prompt vs user prompt](/prompt-engineering/system-prompt-vs-user-prompt?lang=ja)をご覧ください。',
+          '詳細は[system prompt vs user prompt](/ja/prompt-engineering/system-prompt-vs-user-prompt)をご覧ください。',
         ],
         callouts: [
           { type: 'warning', label: 'よくある間違い', text: 'System promptとuser指示の両方をターゲット言語で書くと、推論精度が低下することがよくあります。ロジックには英語、語調にはターゲット言語を使用してください。' },
@@ -1735,7 +1735,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'LLMがステップバイステップで推論するとき、最大のトレーニングコーパス（英語）のパターンに依存します。日本語やアラビア語などの低リソース言語でのみ推論させると、その言語での学習済み推論パターンが少ないため精度が低下します。ハイブリッドアプローチ — 英語CoT＋母語出力 — が両方の利点を活かします。',
           '**テンプレート：** `英語でステップバイステップで考えてください。最終回答は日本語で書いてください。質問：[質問]`',
           '**判断：** 英語CoTを使う場合 → タスクが多段階推論を必要とする、ターゲット言語がレベル3以上、精度がレイテンシより重要。母語CoTを使う場合 → 語調・敬語が推論の深さより重要、ターゲット言語がレベル1〜2。',
-          '詳細：[Chain-of-Thoughtプロンプティング：LLMに推論を示させる方法](/prompt-engineering/chain-of-thought-prompting?lang=ja)。',
+          '詳細：[Chain-of-Thoughtプロンプティング：LLMに推論を示させる方法](/ja/prompt-engineering/chain-of-thought-prompting)。',
         ],
         callouts: [
           { type: 'warning', label: '注意', text: '言語横断CoTはレベル3言語に効果的ですが、レベル4言語ではモデルが混乱する可能性があります。採用前に必ず小さなサンプルでテストしてください。' },
@@ -1748,7 +1748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Few-shot例はタスクと同じ言語で用意する必要があります — 言語が異なるfew-shot例はレベル2〜3言語で出力精度を15〜20%低下させます（Shi et al., 2023）。** Few-shot例はフォーマット・語調・パターンをモデルに教えます。例が英語でタスクが日本語の場合、モデルは矛盾したシグナルを受け取ります。',
           '**2つの戦略：** (1) 母語few-shot — 全例をターゲット言語で用意（品質最優先）。(2) ゼロショット＋明示的指示 — 例なし、英語で明確なスタイル・フォーマット規則（母語の例がない場合に最適）。避けるべきこと：英語の例＋日本語タスク＝最悪の組み合わせ。',
-          '[few-shot vs ゼロショット](/prompt-engineering/zero-shot-vs-few-shot?lang=ja)で完全な判断フレームワークをご確認ください。',
+          '[few-shot vs ゼロショット](/ja/prompt-engineering/zero-shot-vs-few-shot)で完全な判断フレームワークをご確認ください。',
         ],
         callouts: [
           { type: 'insight', label: 'ポイント', text: 'ソース言語の不一致が問題です：英語の例はモデルに英語のフォーマットを学習させ、その後モデルは同時に言語を切り替えてフォーマットを推測しなければならない — 出力品質を低下させる二重の認知負荷です。' },
@@ -1862,11 +1862,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
-          '[システムプロンプト vs ユーザープロンプト：何をどこに置くか？](/prompt-engineering/system-prompt-vs-user-prompt?lang=ja) — 言語指示をどこに配置すべきかを理解する',
-          '[トークン、コスト、制限：実践ガイド](/prompt-engineering/tokens-costs-limits?lang=ja) — 非英語入力のtokenバジェットを計算する',
-          '[Chain-of-Thoughtプロンプティング：LLMに推論を示させる方法](/prompt-engineering/chain-of-thought-prompting?lang=ja) — 言語横断CoT技法',
-          '[Few-shot vs ゼロショット：どちらをいつ使うか？](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) — 多言語タスクのための例戦略を選ぶ',
-          '[あなたのタスクに適したAIモデルはどれ？](/prompt-engineering/gpt-claude-gemini-which-model?lang=ja) — 言語とタスクによるモデル選択',
+          '[システムプロンプト vs ユーザープロンプト：何をどこに置くか？](/ja/prompt-engineering/system-prompt-vs-user-prompt) — 言語指示をどこに配置すべきかを理解する',
+          '[トークン、コスト、制限：実践ガイド](/ja/prompt-engineering/tokens-costs-limits) — 非英語入力のtokenバジェットを計算する',
+          '[Chain-of-Thoughtプロンプティング：LLMに推論を示させる方法](/ja/prompt-engineering/chain-of-thought-prompting) — 言語横断CoT技法',
+          '[Few-shot vs ゼロショット：どちらをいつ使うか？](/ja/prompt-engineering/zero-shot-vs-few-shot) — 多言語タスクのための例戦略を選ぶ',
+          '[あなたのタスクに適したAIモデルはどれ？](/ja/prompt-engineering/gpt-claude-gemini-which-model) — 言語とタスクによるモデル選択',
         ],
       },
       sources: {
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompting-across-languages?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/prompting-across-languages',
       inLanguage: 'zh',
       headline: '多语言提示工程：在任何语言中获得一致的AI结果',
       description: '大语言模型主要用英文训练——用中文、日文或阿拉伯文提示时精度下降，token成本差异显著。本文介绍各语言最佳模型选择与企业级多语言AI应用策略。',
@@ -1991,7 +1991,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**多语言提示不是翻译——它激活模型学习分布的不同部分。** LLM在共享嵌入空间中对文本进行分词和表示，但训练数据存在偏差：CommonCrawl（用于训练大多数LLM）由约46%的英文、6%的德文、5%的法文和3%的中文构成。训练数据占比不足1%的语言（如大多数非洲语言、许多南亚语言）行为不可预测。',
           '当您用中文提示时，模型依赖中文训练数据中的模式。由于中文仅占总语料库的约3%，与英文提示相比，模型可调用的关联更少。这表现为：推理精度下降、指令遵循不稳定、幻觉率升高和输出质量不一致。',
-          '要深入了解LLM如何学习语言模式，请参阅[LLM的实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh)。',
+          '要深入了解LLM如何学习语言模式，请参阅[LLM的实际工作原理](/zh/prompt-engineering/how-llms-actually-work)。',
         ],
         snippets: [
           { type: 'in-plain-terms', text: '直白地说：LLM从数十亿本书、网站和文章中学习了英文。它们从数百万中学习了中文。当您用中文提问时，模型可参考的例子更少，因此会犯更多错误——就像用一门只学了几周的语言解数学题，比用母语要难得多。' },
@@ -2020,7 +2020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '按文字系统的token成本',
         content: [
           '**相同1,000词内容在阿拉伯文中比英文多消耗46%的token，在俄文中多30%——直接影响API账单。** Token效率因文字系统和语言族系而有显著差异。中文是例外：比英文少消耗31%的token，是成本效益最高的语言之一。',
-          '详细了解如何在多语言工作流中管理token预算，请参阅[token、成本和限制](/prompt-engineering/tokens-costs-limits?lang=zh)。',
+          '详细了解如何在多语言工作流中管理token预算，请参阅[token、成本和限制](/zh/prompt-engineering/tokens-costs-limits)。',
         ],
         columns: ['语言', '文字系统', 'Token数（约）', '与英文比较', 'API成本倍数'],
         rows: [
@@ -2043,7 +2043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**对于结构化和推理任务，英文系统提示在2～3级语言中优于母语系统提示。对于语气和正式程度，母语系统提示效果更好。** 这是多语言提示中最重要的决策。',
           '原因：LLM的大多数指令遵循能力在英文RLHF（基于人类反馈的强化学习）数据上训练。复杂的系统级指令（格式规则、角色扮演、思维链指令）用英文写时遵循更可靠。而风格指令（正式程度、文化语气、礼貌级别）用目标语言写效果更好。',
           '**决策树：** 复杂推理/格式规则 → 英文系统提示。正式程度（敬语、Vous、keigo）→ 目标语言。角色定义 → 英文+一个目标语言示例。输出语言规范 → 始终在系统提示中明确：「Respond in formal Chinese.」',
-          '完整分析请参阅[系统提示 vs 用户提示](/prompt-engineering/system-prompt-vs-user-prompt?lang=zh)。',
+          '完整分析请参阅[系统提示 vs 用户提示](/zh/prompt-engineering/system-prompt-vs-user-prompt)。',
         ],
         callouts: [
           { type: 'warning', label: '常见错误', text: '同时用目标语言写系统提示和用户指令通常会降低推理精度。逻辑用英文，语气用目标语言。' },
@@ -2108,7 +2108,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'LLM逐步推理时，依赖其最大训练语料（英文）中的模式。强迫在日文或阿拉伯文等低资源语言中推理会降低精度。混合方法——英文思维链+母语输出——兼顾了两者的优势。',
           '**模板：** `请用英文逐步思考，然后用中文写出最终答案。问题：[问题]`',
           '**决策：** 使用英文思维链的情况 → 任务需要多步骤推理、目标语言为3级以上、精度比延迟更重要。使用母语思维链的情况 → 语气和正式程度比推理深度更重要、目标语言为1～2级。',
-          '深入了解：[思维链提示：让LLM展示推理过程](/prompt-engineering/chain-of-thought-prompting?lang=zh)。',
+          '深入了解：[思维链提示：让LLM展示推理过程](/zh/prompt-engineering/chain-of-thought-prompting)。',
         ],
         callouts: [
           { type: 'warning', label: '注意', text: '跨语言思维链对3级语言有效，但可能会混淆处理4级语言的模型。在采用该方法前，务必在小样本上测试。' },
@@ -2121,7 +2121,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Few-shot示例必须与任务使用相同的语言——语言不同的few-shot示例在2～3级语言中会使输出精度降低15～20%（Shi et al., 2023）。** Few-shot示例向模型传授格式、语气和模式。当示例用英文但任务用中文时，模型会收到冲突信号。',
           '**两种策略：** (1) 母语few-shot——所有示例用目标语言（品质最佳）。(2) 零样本+明确指令——没有示例，但用英文提供清晰的样式/格式规则（在没有母语示例时最佳）。避免混用：英文示例+中文任务=最差组合。',
-          '完整决策框架请参阅[few-shot vs 零样本提示](/prompt-engineering/zero-shot-vs-few-shot?lang=zh)。',
+          '完整决策框架请参阅[few-shot vs 零样本提示](/zh/prompt-engineering/zero-shot-vs-few-shot)。',
         ],
         callouts: [
           { type: 'insight', label: '关键点', text: '源语言不匹配问题：英文示例让模型学习英文格式，然后模型必须同时切换语言和推断格式——这是导致输出质量下降的双重认知负担。' },
@@ -2235,11 +2235,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[系统提示 vs 用户提示：内容应放在哪里？](/prompt-engineering/system-prompt-vs-user-prompt?lang=zh) — 了解语言指令应放置的位置',
-          '[Token、成本和限制：实践指南](/prompt-engineering/tokens-costs-limits?lang=zh) — 计算非英文输入的token预算',
-          '[思维链提示：让LLM展示推理过程](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 跨语言思维链技术',
-          '[Few-shot vs 零样本：何时使用哪种？](/prompt-engineering/zero-shot-vs-few-shot?lang=zh) — 为多语言任务选择示例策略',
-          '[哪个AI模型适合您的任务？](/prompt-engineering/gpt-claude-gemini-which-model?lang=zh) — 按语言和任务选择模型',
+          '[系统提示 vs 用户提示：内容应放在哪里？](/zh/prompt-engineering/system-prompt-vs-user-prompt) — 了解语言指令应放置的位置',
+          '[Token、成本和限制：实践指南](/zh/prompt-engineering/tokens-costs-limits) — 计算非英文输入的token预算',
+          '[思维链提示：让LLM展示推理过程](/zh/prompt-engineering/chain-of-thought-prompting) — 跨语言思维链技术',
+          '[Few-shot vs 零样本：何时使用哪种？](/zh/prompt-engineering/zero-shot-vs-few-shot) — 为多语言任务选择示例策略',
+          '[哪个AI模型适合您的任务？](/zh/prompt-engineering/gpt-claude-gemini-which-model) — 按语言和任务选择模型',
         ],
       },
       sources: {

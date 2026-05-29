@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/trace-framework',
         'inLanguage': 'de',
         headline: 'Das TRACE Framework',
         description: 'Wie das TRACE Framework (Think, Reason, Analyze, Conclude, Explain) funktioniert, wann es sinnvoll ist, und wie PromptQuorum es nativ anbietet.',
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/trace-framework',
         inLanguage: 'es',
         headline: 'El Framework TRACE',
         description: 'Cómo funciona el Framework TRACE (Pensar, Razonar, Analizar, Concluir, Explicar), cuándo usarlo y cómo PromptQuorum ofrece TRACE como opción integrada.',
@@ -860,11 +860,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'El Framework TRACE se basa en técnicas de razonamiento más amplias. Aquí hay guías relacionadas para profundizar tu comprensión:',
           ],
           items: [
-            '[Prompting Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=es) — La técnica fundamental que pide a los modelos razonar paso a paso.',
-            '[El Framework RISEN](/prompt-engineering/risen-framework?lang=es) — Úsalo cuando quieras refinamiento iterativo junto con el razonamiento.',
-            '[El Framework CO-STAR](/prompt-engineering/co-star-framework?lang=es) — Un framework complementario para tareas de redacción y generación.',
-            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=es) — Entiende cuándo TRACE es excesivo y técnicas más simples son suficientes.',
-            '[Fundamentos de Prompt Engineering](/prompt-engineering/prompt-engineering-fundamentals?lang=es) — Una guía fundamental para estructurar prompts efectivamente.',
+            '[Prompting Chain-of-Thought](/es/prompt-engineering/chain-of-thought-prompting) — La técnica fundamental que pide a los modelos razonar paso a paso.',
+            '[El Framework RISEN](/es/prompt-engineering/risen-framework) — Úsalo cuando quieras refinamiento iterativo junto con el razonamiento.',
+            '[El Framework CO-STAR](/es/prompt-engineering/co-star-framework) — Un framework complementario para tareas de redacción y generación.',
+            '[Zero-Shot vs Few-Shot Prompting](/es/prompt-engineering/zero-shot-vs-few-shot-prompting) — Entiende cuándo TRACE es excesivo y técnicas más simples son suficientes.',
+            '[Fundamentos de Prompt Engineering](/es/prompt-engineering/prompt-engineering-fundamentals) — Una guía fundamental para estructurar prompts efectivamente.',
           ],
         },
 
@@ -949,7 +949,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/trace-framework',
         'inLanguage': 'fr',
         headline: 'Le Framework TRACE',
         description: 'Comment fonctionne le Framework TRACE (Penser, Raisonner, Analyser, Conclure, Expliquer), quand l\'utiliser, et comment PromptQuorum l\'intègre.',
@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/trace-framework',
         'inLanguage': 'ja',
         headline: 'TRACEフレームワーク',
         description: 'TRACEフレームワーク（考える・推論する・分析する・結論を出す・説明する）の仕組み、活用場面、PromptQuorumでの実装方法。',
@@ -1541,7 +1541,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/trace-framework?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/trace-framework',
         'inLanguage': 'zh',
         headline: 'TRACE框架',
         description: 'TRACE框架（思考、推理、分析、结论、解释）的工作原理、适用场景、以及PromptQuorum中的实现方式。',

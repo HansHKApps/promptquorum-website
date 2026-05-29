@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué LLM es el más seguro para datos regulados por el RGPD?',
-            a: 'Para la máxima seguridad bajo el RGPD: cualquier modelo de código abierto local (Qwen 2.5, Llama 4, DeepSeek R1 local) ejecutado offline sin llamadas a APIs externas. Entre ellos, Qwen 2.5 y Llama 4 tienen una procedencia de datos de entrenamiento más transparente. Consulta la <a href="/local-llms/gdpr-llm-risk-comparison-2026?lang=es" class="text-primary hover:underline">comparación completa de riesgos RGPD entre LLMs</a> para una herramienta de decisión estructurada.',
+            a: 'Para la máxima seguridad bajo el RGPD: cualquier modelo de código abierto local (Qwen 2.5, Llama 4, DeepSeek R1 local) ejecutado offline sin llamadas a APIs externas. Entre ellos, Qwen 2.5 y Llama 4 tienen una procedencia de datos de entrenamiento más transparente. Consulta la <a href="/es/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">comparación completa de riesgos RGPD entre LLMs</a> para una herramienta de decisión estructurada.',
           },
         ],
       },

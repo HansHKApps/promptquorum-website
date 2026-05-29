@@ -499,11 +499,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          { title: 'Prompt injection y seguridad', url: '/prompt-engineering/prompt-injection-and-security?lang=es' },
-          { title: 'Governance de prompts en producción', url: '/prompt-engineering/prompt-governance-in-production?lang=es' },
-          { title: 'Auditoría de prompts y riesgo de regresión', url: '/prompt-engineering/prompt-audit-and-regression-risk?lang=es' },
-          { title: 'Incorpora controles de calidad a tus prompts', url: '/prompt-engineering/build-quality-checks?lang=es' },
-          { title: 'Salida estructurada y modo JSON', url: '/prompt-engineering/structured-output-json-mode?lang=es' },
+          { title: 'Prompt injection y seguridad', url: '/es/prompt-engineering/prompt-injection-and-security' },
+          { title: 'Governance de prompts en producción', url: '/es/prompt-engineering/prompt-governance-in-production' },
+          { title: 'Auditoría de prompts y riesgo de regresión', url: '/es/prompt-engineering/prompt-audit-and-regression-risk' },
+          { title: 'Incorpora controles de calidad a tus prompts', url: '/es/prompt-engineering/build-quality-checks' },
+          { title: 'Salida estructurada y modo JSON', url: '/es/prompt-engineering/structured-output-json-mode' },
         ],
       },
       sources: {

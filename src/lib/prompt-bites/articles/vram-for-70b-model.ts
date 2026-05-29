@@ -171,8 +171,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Wann Cloud sinnvoller ist als lokale Hardware',
         content: [
           'Cloud-GPU-Miete für 70B-Inferenz kostet Stand Mai 2026 ca. 0,50–1,50 USD pro Stunde bei RunPod und Lambda Labs. Ein Dual RTX 3090-Setup kostet ca. 1.200–2.000 € als Hardware — Amortisation gegenüber Cloud-Kosten erst nach 1.500–3.000 Betriebsstunden.',
-          'Für Teams oder Einzelpersonen, die 70B-Modelle weniger als 5 Stunden pro Woche nutzen, ist Cloud-Miete sowohl günstiger als auch wartungsärmer. Lokale 70B-Ausführung ist gerechtfertigt für datenschutzkritische Anwendungsfälle (keine Daten verlassen die eigene Hardware) oder dauerhaft hohe Inferenz-Frequenz, bei der Cloud-Kosten schnell eskalieren. Für kleinere Modelle, die auf Consumer-GPUs passen, siehe <a href="/prompt-bites/how-much-vram-for-local-llm?lang=de" class="text-primary hover:underline">den VRAM-Tier-Leitfaden</a>.',
-          'Für eine vollständige Aufschlüsselung der 70B-Deployment-Strategien, siehe <a href="/local-llms/run-70b-models-24gb-vram?lang=de" class="text-primary hover:underline">wie man 70B-Modelle mit 24 GB VRAM betreibt</a>.',
+          'Für Teams oder Einzelpersonen, die 70B-Modelle weniger als 5 Stunden pro Woche nutzen, ist Cloud-Miete sowohl günstiger als auch wartungsärmer. Lokale 70B-Ausführung ist gerechtfertigt für datenschutzkritische Anwendungsfälle (keine Daten verlassen die eigene Hardware) oder dauerhaft hohe Inferenz-Frequenz, bei der Cloud-Kosten schnell eskalieren. Für kleinere Modelle, die auf Consumer-GPUs passen, siehe <a href="/de/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">den VRAM-Tier-Leitfaden</a>.',
+          'Für eine vollständige Aufschlüsselung der 70B-Deployment-Strategien, siehe <a href="/de/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">wie man 70B-Modelle mit 24 GB VRAM betreibt</a>.',
         ],
       },
       faq: {
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann ich ein 70B-Modell auf einem MacBook ausführen?',
-            a: 'Nur auf M3 Max, M4 Max, M4 Ultra oder M5 Max mit 128 GB Unified Memory. Ein MacBook mit 32 GB RAM kann 70B bei Q4 nicht ausführen. Siehe <a href="/prompt-bites/how-much-ram-for-7b-model?lang=de" class="text-primary hover:underline">den RAM-Größenleitfaden</a> für kleinere Modell-Alternativen.',
+            a: 'Nur auf M3 Max, M4 Max, M4 Ultra oder M5 Max mit 128 GB Unified Memory. Ein MacBook mit 32 GB RAM kann 70B bei Q4 nicht ausführen. Siehe <a href="/de/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">den RAM-Größenleitfaden</a> für kleinere Modell-Alternativen.',
           },
           {
             q: 'Gibt es einen günstigeren Weg, 70B-Modelle lokal zu betreiben?',
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Wie unterscheidet sich der VRAM-Bedarf von 70B vs. 13B?',
-            a: 'Ein 13B-Modell bei Q4 benötigt ~9 GB VRAM vs. ~40 GB für 70B. Für die meisten Aufgaben — Chat, Coding, Zusammenfassung — deckt ein 13–14B-Modell bei Q5 den Unterschied ab. Siehe <a href="/prompt-bites/how-much-vram-for-local-llm?lang=de" class="text-primary hover:underline">VRAM-Anforderungen nach Modellgröße</a>.',
+            a: 'Ein 13B-Modell bei Q4 benötigt ~9 GB VRAM vs. ~40 GB für 70B. Für die meisten Aufgaben — Chat, Coding, Zusammenfassung — deckt ein 13–14B-Modell bei Q5 den Unterschied ab. Siehe <a href="/de/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">VRAM-Anforderungen nach Modellgröße</a>.',
           },
         ],
       },
@@ -235,8 +235,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quand le cloud est plus judicieux que le local',
         content: [
           'La location de GPU cloud pour l\'inférence 70B coûte entre 0,50 et 1,50 $ par heure sur RunPod et Lambda Labs en mai 2026. Un setup dual RTX 3090 revient à env. 1 200–2 000 € en matériel, et ne s\'amortit face aux coûts cloud qu\'après 1 500–3 000 heures d\'utilisation.',
-          'Pour les équipes ou particuliers utilisant les modèles 70B moins de 5 heures par semaine, la location cloud est à la fois moins chère et plus facile à maintenir. Le 70B local se justifie pour les cas d\'usage sensibles à la confidentialité (aucune donnée ne quitte le matériel) ou pour une inférence fréquente et soutenue où les coûts cloud s\'accumulent rapidement. Pour les modèles plus petits adaptés aux GPU grand public, voir <a href="/prompt-bites/how-much-vram-for-local-llm?lang=fr" class="text-primary hover:underline">le guide des niveaux VRAM</a>.',
-          'Pour une analyse complète des stratégies de déploiement 70B, voir <a href="/local-llms/run-70b-models-24gb-vram?lang=fr" class="text-primary hover:underline">comment exécuter des modèles 70B avec 24 Go de VRAM</a>.',
+          'Pour les équipes ou particuliers utilisant les modèles 70B moins de 5 heures par semaine, la location cloud est à la fois moins chère et plus facile à maintenir. Le 70B local se justifie pour les cas d\'usage sensibles à la confidentialité (aucune donnée ne quitte le matériel) ou pour une inférence fréquente et soutenue où les coûts cloud s\'accumulent rapidement. Pour les modèles plus petits adaptés aux GPU grand public, voir <a href="/fr/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">le guide des niveaux VRAM</a>.',
+          'Pour une analyse complète des stratégies de déploiement 70B, voir <a href="/fr/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">comment exécuter des modèles 70B avec 24 Go de VRAM</a>.',
         ],
       },
       faq: {
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Puis-je faire tourner un modèle 70B sur un MacBook ?',
-            a: 'Uniquement sur M3 Max, M4 Max, M4 Ultra ou M5 Max avec 128 Go de mémoire unifiée. Un MacBook avec 32 Go de RAM ne peut pas exécuter le 70B en Q4. Voir <a href="/prompt-bites/how-much-ram-for-7b-model?lang=fr" class="text-primary hover:underline">le guide de dimensionnement RAM</a> pour des alternatives plus petites.',
+            a: 'Uniquement sur M3 Max, M4 Max, M4 Ultra ou M5 Max avec 128 Go de mémoire unifiée. Un MacBook avec 32 Go de RAM ne peut pas exécuter le 70B en Q4. Voir <a href="/fr/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">le guide de dimensionnement RAM</a> pour des alternatives plus petites.',
           },
           {
             q: 'Existe-t-il un moyen moins cher d\'exécuter des modèles 70B localement ?',
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Comment se compare le VRAM d\'un 70B par rapport à un 13B ?',
-            a: 'Un modèle 13B en Q4 nécessite ~9 Go de VRAM contre ~40 Go pour le 70B. Pour la plupart des tâches — chat, code, résumé — un modèle 13–14B en Q5 couvre l\'écart. Voir <a href="/prompt-bites/how-much-vram-for-local-llm?lang=fr" class="text-primary hover:underline">les besoins VRAM par taille de modèle</a>.',
+            a: 'Un modèle 13B en Q4 nécessite ~9 Go de VRAM contre ~40 Go pour le 70B. Pour la plupart des tâches — chat, code, résumé — un modèle 13–14B en Q5 couvre l\'écart. Voir <a href="/fr/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">les besoins VRAM par taille de modèle</a>.',
           },
         ],
       },
@@ -299,8 +299,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'クラウドの方がローカルより合理的な場合',
         content: [
           '2026年5月現在、70B推論のクラウドGPUレンタルはRunPodとLambda Labsで1時間あたり$0.50–$1.50です。デュアルRTX 3090のセットアップには$1,500–$2,500のハードウェアコストがかかり、クラウドコストに対して1,500–3,000時間の使用後でのみ元が取れます。',
-          '70Bモデルを週5時間未満しか使わないチームや個人にとって、クラウドレンタルは安価で保守も容易です。ローカル70Bが正当化されるのは、プライバシーに敏感なユースケース（データが自分のハードウェアから出ない）や、クラウドコストが急速に積み上がる高頻度の推論です。コンシューマーGPUで動くより小さなモデルについては、<a href="/prompt-bites/how-much-vram-for-local-llm?lang=ja" class="text-primary hover:underline">VRAMティアガイド</a>を参照してください。',
-          '70Bデプロイ戦略の詳細については、<a href="/local-llms/run-70b-models-24gb-vram?lang=ja" class="text-primary hover:underline">24 GB VRAMで70Bモデルを動かす方法</a>を参照してください。',
+          '70Bモデルを週5時間未満しか使わないチームや個人にとって、クラウドレンタルは安価で保守も容易です。ローカル70Bが正当化されるのは、プライバシーに敏感なユースケース（データが自分のハードウェアから出ない）や、クラウドコストが急速に積み上がる高頻度の推論です。コンシューマーGPUで動くより小さなモデルについては、<a href="/ja/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">VRAMティアガイド</a>を参照してください。',
+          '70Bデプロイ戦略の詳細については、<a href="/ja/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">24 GB VRAMで70Bモデルを動かす方法</a>を参照してください。',
         ],
       },
       faq: {
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'MacBookで70Bモデルを動かせますか？',
-            a: '128 GB統合メモリを搭載したM3 Max、M4 Max、M4 Ultra、またはM5 Maxのみ可能です。32 GB RAMのMacBookではQ4で70Bを動かせません。より小さなモデルの代替については<a href="/prompt-bites/how-much-ram-for-7b-model?lang=ja" class="text-primary hover:underline">RAMサイジングガイド</a>をご覧ください。',
+            a: '128 GB統合メモリを搭載したM3 Max、M4 Max、M4 Ultra、またはM5 Maxのみ可能です。32 GB RAMのMacBookではQ4で70Bを動かせません。より小さなモデルの代替については<a href="/ja/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAMサイジングガイド</a>をご覧ください。',
           },
           {
             q: '70Bモデルをローカルで動かす安価な方法はありますか？',
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '70BのVRAM必要量は13Bと比べてどうですか？',
-            a: '13BモデルのQ4は約9 GB VRAMが必要で、70Bの約40 GBとは大きな差があります。チャット、コーディング、要約など多くのタスクでは、Q5の13–14Bモデルでその差を埋められます。<a href="/prompt-bites/how-much-vram-for-local-llm?lang=ja" class="text-primary hover:underline">モデルサイズ別のVRAM必要量</a>を参照してください。',
+            a: '13BモデルのQ4は約9 GB VRAMが必要で、70Bの約40 GBとは大きな差があります。チャット、コーディング、要約など多くのタスクでは、Q5の13–14Bモデルでその差を埋められます。<a href="/ja/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">モデルサイズ別のVRAM必要量</a>を参照してください。',
           },
         ],
       },
@@ -363,8 +363,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '何时云端比本地更合理',
         content: [
           '截至2026年5月，RunPod和Lambda Labs上70B推理的云端GPU租用费用为每小时$0.50–$1.50。双RTX 3090配置的硬件成本为$1,500–$2,500，需要使用1,500–3,000小时后才能摊平云端成本。',
-          '对于每周使用70B模型不足5小时的团队或个人，云端租用既更便宜又更易维护。本地70B适用于隐私敏感场景（数据不离开自有硬件）或高频推理场景（云端成本快速累积）。对于适合消费级GPU的较小模型，请参阅<a href="/prompt-bites/how-much-vram-for-local-llm?lang=zh" class="text-primary hover:underline">显存层级指南</a>。',
-          '70B部署策略的完整分析，请参阅<a href="/local-llms/run-70b-models-24gb-vram?lang=zh" class="text-primary hover:underline">如何用24 GB显存运行70B模型</a>。',
+          '对于每周使用70B模型不足5小时的团队或个人，云端租用既更便宜又更易维护。本地70B适用于隐私敏感场景（数据不离开自有硬件）或高频推理场景（云端成本快速累积）。对于适合消费级GPU的较小模型，请参阅<a href="/zh/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">显存层级指南</a>。',
+          '70B部署策略的完整分析，请参阅<a href="/zh/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">如何用24 GB显存运行70B模型</a>。',
         ],
       },
       faq: {
@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '能在MacBook上运行70B模型吗？',
-            a: '仅限搭载128 GB统一内存的M3 Max、M4 Max、M4 Ultra或M5 Max。32 GB RAM的MacBook无法以Q4运行70B。较小模型的替代方案请参阅<a href="/prompt-bites/how-much-ram-for-7b-model?lang=zh" class="text-primary hover:underline">RAM容量指南</a>。',
+            a: '仅限搭载128 GB统一内存的M3 Max、M4 Max、M4 Ultra或M5 Max。32 GB RAM的MacBook无法以Q4运行70B。较小模型的替代方案请参阅<a href="/zh/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM容量指南</a>。',
           },
           {
             q: '有没有更便宜的方式在本地运行70B模型？',
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '70B与13B的显存需求对比如何？',
-            a: 'Q4量化的13B模型约需9 GB显存，而70B约需40 GB。对于大多数任务——聊天、编程、摘要——Q5量化的13–14B模型可以弥补差距。请参阅<a href="/prompt-bites/how-much-vram-for-local-llm?lang=zh" class="text-primary hover:underline">按模型大小划分的显存需求</a>。',
+            a: 'Q4量化的13B模型约需9 GB显存，而70B约需40 GB。对于大多数任务——聊天、编程、摘要——Q5量化的13–14B模型可以弥补差距。请参阅<a href="/zh/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">按模型大小划分的显存需求</a>。',
           },
         ],
       },
@@ -439,8 +439,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Cuándo la nube tiene más sentido que lo local',
         content: [
           'El alquiler de GPU en la nube para inferencia 70B cuesta $0,50–$1,50 por hora en RunPod y Lambda Labs a mayo de 2026. Un setup de dual RTX 3090 cuesta $1.500–$2.500 en hardware, que se amortiza respecto a los costes de nube solo después de 1.500–3.000 horas de uso.',
-          'Para equipos o individuos que usan modelos 70B menos de 5 horas por semana, el alquiler en la nube es tanto más barato como más fácil de mantener. El 70B local se justifica para casos de uso sensibles a la privacidad (sin datos saliendo de tu hardware) o inferencia sostenida de alta frecuencia donde los costes de nube se acumulan rápidamente. Para modelos más pequeños que caben en GPUs de consumo, consulta <a href="/prompt-bites/how-much-vram-for-local-llm?lang=es" class="text-primary hover:underline">la guía de niveles de VRAM</a>.',
-          'Para un desglose completo de estrategias de despliegue 70B, consulta <a href="/local-llms/run-70b-models-24gb-vram?lang=es" class="text-primary hover:underline">cómo ejecutar modelos 70B con 24 GB de VRAM</a>.',
+          'Para equipos o individuos que usan modelos 70B menos de 5 horas por semana, el alquiler en la nube es tanto más barato como más fácil de mantener. El 70B local se justifica para casos de uso sensibles a la privacidad (sin datos saliendo de tu hardware) o inferencia sostenida de alta frecuencia donde los costes de nube se acumulan rápidamente. Para modelos más pequeños que caben en GPUs de consumo, consulta <a href="/es/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">la guía de niveles de VRAM</a>.',
+          'Para un desglose completo de estrategias de despliegue 70B, consulta <a href="/es/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">cómo ejecutar modelos 70B con 24 GB de VRAM</a>.',
         ],
       },
       faq: {
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puedo ejecutar un modelo 70B en un MacBook?',
-            a: 'Solo en M3 Max, M4 Max, M4 Ultra o M5 Max con 128 GB de memoria unificada. Un MacBook con 32 GB de RAM no puede ejecutar el 70B en Q4. Consulta <a href="/prompt-bites/how-much-ram-for-7b-model?lang=es" class="text-primary hover:underline">la guía de dimensionamiento de RAM</a> para alternativas más pequeñas.',
+            a: 'Solo en M3 Max, M4 Max, M4 Ultra o M5 Max con 128 GB de memoria unificada. Un MacBook con 32 GB de RAM no puede ejecutar el 70B en Q4. Consulta <a href="/es/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">la guía de dimensionamiento de RAM</a> para alternativas más pequeñas.',
           },
           {
             q: '¿Hay alguna forma más barata de ejecutar modelos 70B localmente?',
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Cómo se compara la VRAM de un 70B con un modelo 13B?',
-            a: 'Un modelo 13B en Q4 necesita ~9 GB de VRAM frente a ~40 GB del 70B. Para la mayoría de las tareas — chat, programación, resúmenes — un modelo 13–14B en Q5 cubre la diferencia. Consulta <a href="/prompt-bites/how-much-vram-for-local-llm?lang=es" class="text-primary hover:underline">los requisitos de VRAM por tamaño de modelo</a>.',
+            a: 'Un modelo 13B en Q4 necesita ~9 GB de VRAM frente a ~40 GB del 70B. Para la mayoría de las tareas — chat, programación, resúmenes — un modelo 13–14B en Q5 cubre la diferencia. Consulta <a href="/es/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">los requisitos de VRAM por tamaño de modelo</a>.',
           },
         ],
       },

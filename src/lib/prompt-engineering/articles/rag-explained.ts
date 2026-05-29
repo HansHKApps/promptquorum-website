@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Wie Retrieval-Augmented Generation funktioniert, warum es Halluzinationen reduziert und wie Sie eine 4-stufige RAG-Pipeline für private oder häufig wechselnde Daten implementieren.',
         datePublished: '2026-03-26',
         dateModified: '2026-05-05',
-        url: 'https://www.promptquorum.com/prompt-engineering/rag-explained?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/rag-explained',
         inLanguage: 'de',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'Vektor-Datenbank', 'LLM-Halluzinationen', 'semantische Suche', 'Prompt-Engineering'],
         proficiencyLevel: 'Intermediate',
@@ -502,16 +502,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whyItMatters: {
           title: 'Warum RAG wichtig ist',
           content: [
-            '**RAG ist wichtig, weil es [Halluzinationen](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) reduziert und Antworten aktuell hält.** Ein reines Sprachmodell kann vertrauensvoll Details erfinden, besonders bei Spezialthemen oder aktuellen Inhalten. Mit RAG sind Antworten in abgerufenen Dokumenten verankert, die Sie kontrollieren.',
+            '**RAG ist wichtig, weil es [Halluzinationen](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) reduziert und Antworten aktuell hält.** Ein reines Sprachmodell kann vertrauensvoll Details erfinden, besonders bei Spezialthemen oder aktuellen Inhalten. Mit RAG sind Antworten in abgerufenen Dokumenten verankert, die Sie kontrollieren.',
             'RAG ist auch für Datenschutz und Governance wichtig. Anstatt ein Modell mit sensiblen Daten zu trainieren, können Sie diese Daten in Ihrem eigenen Store behalten und nur relevante Ausschnitte zur Abfragezeit an das Modell übergeben. Das Modell begründet sein Verständnis auf Ihren Inhalten, ohne diese dauerhaft zu absorbieren.',
-            'Wenn die Dokumente, die Sie abrufen wollen, Ihre Infrastruktur nicht verlassen dürfen, kann die gesamte RAG-Pipeline auf Ihrer eigenen Hardware laufen. Für die DSGVO-konforme Architektur, Audit-Protokollierung und Deployment-Muster siehe [Lokales RAG für Geschäftsdaten](/power-local-llm/local-rag-for-private-business-data?lang=de).',
+            'Wenn die Dokumente, die Sie abrufen wollen, Ihre Infrastruktur nicht verlassen dürfen, kann die gesamte RAG-Pipeline auf Ihrer eigenen Hardware laufen. Für die DSGVO-konforme Architektur, Audit-Protokollierung und Deployment-Muster siehe [Lokales RAG für Geschäftsdaten](/de/power-local-llm/local-rag-for-private-business-data).',
           ],
         },
         howItWorks: {
           title: 'Wie ein RAG-System funktioniert: Schritt für Schritt',
           content: [
             '**Ein typisches RAG-System durchläuft vier Hauptstufen: Aufnahme, Indexierung, Abruf und Generierung.** Jede Stufe kann unabhängig abgestimmt werden.',
-            'Für eine Schritt-für-Schritt-Anleitung, wie Sie diese Pipeline auf Ihren eigenen PDFs mit einem lokalen Modell ausführen, siehe [Lokales RAG auf Ihren PDFs Schritt für Schritt](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=de).',
+            'Für eine Schritt-für-Schritt-Anleitung, wie Sie diese Pipeline auf Ihren eigenen PDFs mit einem lokalen Modell ausführen, siehe [Lokales RAG auf Ihren PDFs Schritt für Schritt](/de/power-local-llm/local-rag-on-your-pdfs-step-by-step).',
           ],
           callouts: [
             { type: 'info', label: 'Abruf ist der Engpass', text: 'Die meisten RAG-Fehler sind Abruffehler — die falschen Dokumente werden zurückgegeben, oder es werden keine Dokumente über den Schwellenwert hinaus zurückgegeben. Testen Sie den Retriever unabhängig auf 20 repräsentativen Abfragen, bevor Sie die vollständige Pipeline evaluieren. Wenn der Abruf defekt ist, wird das Verbessern des Generators nicht helfen.' }
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         vsFineTuning: {
           title: 'RAG vs Fine-Tuning: Wann man was einsetzt',
           content: [
-            '**RAG und [Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=de) lösen unterschiedliche Probleme und funktionieren am besten kombiniert, nicht als Alternativen.** Verwenden Sie zuerst RAG. Fügen Sie Fine-Tuning nur hinzu, wenn Sie konsistente Verhaltensänderungen benötigen, die RAG durch Prompting nicht bieten kann.',
+            '**RAG und [Fine-Tuning](/de/prompt-engineering/prompt-engineering-vs-fine-tuning) lösen unterschiedliche Probleme und funktionieren am besten kombiniert, nicht als Alternativen.** Verwenden Sie zuerst RAG. Fügen Sie Fine-Tuning nur hinzu, wenn Sie konsistente Verhaltensänderungen benötigen, die RAG durch Prompting nicht bieten kann.',
           ],
           callouts: [
             { type: 'info', label: 'RAG zuerst, Fine-Tuning später', text: 'RAG ist reversibel — aktualisieren Sie Ihren Dokumentenspeicher, Antworten ändern sich sofort, keine Retraining-Kosten. Fine-Tuning ist dauerhaft — es ändert die Modellparameter und erfordert einen neuen Trainingslauf zum Rückgängigmachen. Beginnen Sie mit RAG. Fügen Sie Fine-Tuning nur hinzu, wenn RAG durch Prompting allein keine konsistenten Verhaltensänderungen erzeugen kann.' }
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Ein Modell oder Service zum Einbetten und Abrufen von Dokumenten und ein anderes zur Generierung von Antworten verwenden.',
-            'Reasoning-fokussierte Prompts (wie [chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=de) oder [TRACE](/prompt-engineering/trace-framework?lang=de)-ähnliche Strukturen) zusätzlich zu abgerufenen Kontexten anwenden.',
+            'Reasoning-fokussierte Prompts (wie [chain-of-thought](/de/prompt-engineering/chain-of-thought-prompting) oder [TRACE](/de/prompt-engineering/trace-framework)-ähnliche Strukturen) zusätzlich zu abgerufenen Kontexten anwenden.',
             'Denselben RAG-Prompt über mehrere Modelle ausführen, um zu vergleichen, wie gut jedes die gleichen Dokumente nutzt.',
           ],
         },
@@ -653,12 +653,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — Grundkonzepte zum Entwerfen von Prompts, die mit RAG-abgerufenen Inhalten funktionieren',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — kombinieren Sie Chain-of-Thought mit RAG für komplexes mehrstufiges Reasoning über abgerufene Dokumente',
-            '[Prompt-Injection & Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — indirekte Prompt-Injection über abgerufene Dokumente ist das primäre RAG-Sicherheitsrisiko',
-            '[Open Source vs proprietäre LLMs](/prompt-engineering/open-source-vs-proprietary-llms?lang=de) — wählen Sie zwischen Cloud und lokalen LLMs für die Generierungsstufe Ihrer RAG-Pipeline',
-            '[KI-Grenzen — Was LLMs nicht können](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — verstehen Sie, warum RAG notwendig ist, um LLM-Wissensstichtag und Halluzinations-Grenzen zu überwinden',
-            '[Qualitätschecks aufbauen](/prompt-engineering/build-quality-checks?lang=de) — Validierungsmuster für RAG-Ausgabe einschließlich Halluzinations-Erkennung und Quellen-Verifizierung',
+            '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — Grundkonzepte zum Entwerfen von Prompts, die mit RAG-abgerufenen Inhalten funktionieren',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — kombinieren Sie Chain-of-Thought mit RAG für komplexes mehrstufiges Reasoning über abgerufene Dokumente',
+            '[Prompt-Injection & Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — indirekte Prompt-Injection über abgerufene Dokumente ist das primäre RAG-Sicherheitsrisiko',
+            '[Open Source vs proprietäre LLMs](/de/prompt-engineering/open-source-vs-proprietary-llms) — wählen Sie zwischen Cloud und lokalen LLMs für die Generierungsstufe Ihrer RAG-Pipeline',
+            '[KI-Grenzen — Was LLMs nicht können](/de/prompt-engineering/ai-limitations-what-llms-cant-do) — verstehen Sie, warum RAG notwendig ist, um LLM-Wissensstichtag und Halluzinations-Grenzen zu überwinden',
+            '[Qualitätschecks aufbauen](/de/prompt-engineering/build-quality-checks) — Validierungsmuster für RAG-Ausgabe einschließlich Halluzinations-Erkennung und Quellen-Verifizierung',
           ],
         },
         faq: {
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Cómo funciona la generación aumentada por recuperación, por qué reduce las alucinaciones y cómo implementar un pipeline RAG de 4 etapas para datos privados o frecuentemente cambiantes.',
         datePublished: '2026-03-26',
         dateModified: '2026-05-05',
-        url: 'https://www.promptquorum.com/prompt-engineering/rag-explained?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/rag-explained',
         inLanguage: 'es',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'base de datos vectorial', 'alucinación LLM', 'búsqueda semántica', 'prompt engineering'],
         proficiencyLevel: 'Intermediate',
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Comment fonctionne la génération augmentée par récupération, pourquoi elle réduit les hallucinations et comment implémenter une pipeline RAG 4 étapes pour des données privées ou changeantes.',
         datePublished: '2026-03-26',
         dateModified: '2026-05-05',
-        url: 'https://www.promptquorum.com/prompt-engineering/rag-explained?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/rag-explained',
         inLanguage: 'fr',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'base de données vectorielle', 'hallucinations LLM', 'recherche sémantique', 'ingénierie des prompts'],
         proficiencyLevel: 'Intermediate',
@@ -1114,16 +1114,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whyItMatters: {
           title: 'Pourquoi RAG est important',
           content: [
-            '**RAG réduit les [hallucinations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) et maintient les réponses à jour.** Un modèle seul invente volontiers sur des sujets spécialisés ou récents. Avec RAG, les réponses reposent sur des documents que vous contrôlez.',
+            '**RAG réduit les [hallucinations](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) et maintient les réponses à jour.** Un modèle seul invente volontiers sur des sujets spécialisés ou récents. Avec RAG, les réponses reposent sur des documents que vous contrôlez.',
             'Essentiel aussi pour la confidentialité. Vous gardez vos données sensibles dans votre infrastructure et ne passez que des extraits pertinents au modèle à chaque interrogation. Le modèle opère sur votre contenu sans l\'absorber définitivement.',
-            'Lorsque les documents que vous voulez interroger ne peuvent pas quitter votre infrastructure, le pipeline RAG complet peut s\'exécuter sur votre propre matériel. Pour l\'architecture conforme RGPD, la journalisation d\'audit et les schémas de déploiement, voir [RAG local pour les données métier](/power-local-llm/local-rag-for-private-business-data?lang=fr).',
+            'Lorsque les documents que vous voulez interroger ne peuvent pas quitter votre infrastructure, le pipeline RAG complet peut s\'exécuter sur votre propre matériel. Pour l\'architecture conforme RGPD, la journalisation d\'audit et les schémas de déploiement, voir [RAG local pour les données métier](/fr/power-local-llm/local-rag-for-private-business-data).',
           ],
         },
         howItWorks: {
           title: 'Comment fonctionne un système RAG',
           content: [
             '**Quatre étapes principales : ingestion, indexation, récupération, génération.** Chacune peut être affinée indépendamment.',
-            'Pour un guide pas-à-pas qui exécute ce pipeline sur vos propres PDF avec un modèle local, voir [RAG local sur vos PDF étape par étape](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=fr).',
+            'Pour un guide pas-à-pas qui exécute ce pipeline sur vos propres PDF avec un modèle local, voir [RAG local sur vos PDF étape par étape](/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step).',
           ],
           callouts: [
             { type: 'info', label: 'La récupération est le goulot', text: 'La qualité de RAG dépend 80% de la récupération. Un bon retriever avec un modèle faible donne meilleures résultats qu\'un mauvais retriever avec GPT-4o. Investissez dans le tuning de l\'indexation et des chunking.' },
@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         vsFineTuning: {
           title: 'RAG vs Fine-Tuning : quand utiliser quoi',
           content: [
-            '**RAG et [Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=fr) résolvent des problèmes différents et marchent mieux combinés.** Commencez par RAG. Ajoutez Fine-Tuning seulement si vous besoin de changements comportementaux stables que le prompting ne peut pas fournir.',
+            '**RAG et [Fine-Tuning](/fr/prompt-engineering/prompt-engineering-vs-fine-tuning) résolvent des problèmes différents et marchent mieux combinés.** Commencez par RAG. Ajoutez Fine-Tuning seulement si vous besoin de changements comportementaux stables que le prompting ne peut pas fournir.',
           ],
           callouts: [
             { type: 'info', label: 'RAG d\'abord, fine-tuning ensuite', text: 'RAG ajoute des connaissances (réversible : mettez à jour le vecteur-store). Fine-tuning change le comportement (permanent : réentraînement). Commencez toujours par RAG pour le contenu, puis fine-tuning seulement pour le style/ton.' },
@@ -1191,7 +1191,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Un modèle pour embedding/récupération, un autre pour génération de réponse.',
-            '[Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=fr) ou [TRACE](/prompt-engineering/trace-framework?lang=fr) sur contexte récupéré pour reasoning complexe.',
+            '[Chain-of-Thought](/fr/prompt-engineering/chain-of-thought-prompting) ou [TRACE](/fr/prompt-engineering/trace-framework) sur contexte récupéré pour reasoning complexe.',
             'Même prompt RAG sur plusieurs modèles pour comparer l\'utilisation du contexte.',
           ],
         },
@@ -1235,12 +1235,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Qu\'est-ce que l\'ingénierie des prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — Fondamentaux pour prompts avec contexte RAG.',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — Combinez CoT avec RAG pour multi-étapes sur docs récupérés.',
-            '[Injection de Prompts & Sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Injection indirecte via docs : risque RAG primaire.',
-            '[Open Source vs LLMs propriétaires](/prompt-engineering/open-source-vs-proprietary-llms?lang=fr) — Cloud vs local pour étape génération.',
-            '[Limites de l\'IA — Ce que LLMs ne peuvent pas faire](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — Pourquoi RAG nécessaire.',
-            '[Construire des vérifications qualité](/prompt-engineering/build-quality-checks?lang=fr) — Validation RAG : détection hallucinations, vérification sources.',
+            '[Qu\'est-ce que l\'ingénierie des prompts ?](/fr/prompt-engineering/what-is-prompt-engineering) — Fondamentaux pour prompts avec contexte RAG.',
+            '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — Combinez CoT avec RAG pour multi-étapes sur docs récupérés.',
+            '[Injection de Prompts & Sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Injection indirecte via docs : risque RAG primaire.',
+            '[Open Source vs LLMs propriétaires](/fr/prompt-engineering/open-source-vs-proprietary-llms) — Cloud vs local pour étape génération.',
+            '[Limites de l\'IA — Ce que LLMs ne peuvent pas faire](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — Pourquoi RAG nécessaire.',
+            '[Construire des vérifications qualité](/fr/prompt-engineering/build-quality-checks) — Validation RAG : détection hallucinations, vérification sources.',
           ],
         },
         faq: {
@@ -1326,7 +1326,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Retrieval-Augmented Generationの仕組み、ハルシネーション減少の理由、プライベートまたは頻繁に変更されるデータ向け4段階パイプラインの実装方法。',
         datePublished: '2026-03-26',
         dateModified: '2026-05-05',
-        url: 'https://www.promptquorum.com/prompt-engineering/rag-explained?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/rag-explained',
         inLanguage: 'ja',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'ベクトルデータベース', 'LLMハルシネーション', 'セマンティック検索', 'プロンプトエンジニアリング'],
         proficiencyLevel: 'Intermediate',
@@ -1428,16 +1428,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whyItMatters: {
           title: 'なぜRAGが重要か',
           content: [
-            '**RAG は [ハルシネーション](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) を削減し、回答を最新に保つため重要です。** 純粋な言語モデルは専門的または最新の話題で自信満々に詳細を作り出すことができます。RAG を使えば、回答はあなたが管理するドキュメントに固定されます。',
+            '**RAG は [ハルシネーション](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) を削減し、回答を最新に保つため重要です。** 純粋な言語モデルは専門的または最新の話題で自信満々に詳細を作り出すことができます。RAG を使えば、回答はあなたが管理するドキュメントに固定されます。',
             'プライバシーとガバナンスにおいても重要です。機密データでモデルをトレーニングする代わりに、そのデータを自社ストアに保管し、クエリ時に関連スニペットのみをモデルに供給できます。モデルはあなたのコンテンツについて推論しますが、永続的に吸収することはありません。',
-            '取得したい文書がインフラ外に出せない場合、RAG パイプライン全体を自分のハードウェアで動かすことができます。GDPR 対応のアーキテクチャ、監査ログ、デプロイパターンについては、[業務データのためのローカル RAG](/power-local-llm/local-rag-for-private-business-data?lang=ja)を参照してください。',
+            '取得したい文書がインフラ外に出せない場合、RAG パイプライン全体を自分のハードウェアで動かすことができます。GDPR 対応のアーキテクチャ、監査ログ、デプロイパターンについては、[業務データのためのローカル RAG](/ja/power-local-llm/local-rag-for-private-business-data)を参照してください。',
           ],
         },
         howItWorks: {
           title: 'RAGシステムの仕組み',
           content: [
             '**典型的な RAG システムは 4 つの主段階を実行：取得、索引化、検索、生成。** 各段階は独立して調整可能です。',
-            'このパイプラインを自分の PDF とローカルモデルで動かす手順については、[自分の PDF でローカル RAG をステップバイステップで動かす](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=ja)を参照してください。',
+            'このパイプラインを自分の PDF とローカルモデルで動かす手順については、[自分の PDF でローカル RAG をステップバイステップで動かす](/ja/power-local-llm/local-rag-on-your-pdfs-step-by-step)を参照してください。',
           ],
           callouts: [
             { type: 'info', label: '検索がボトルネック', text: 'RAG の品質は 80%が検索に依存。優れたレトリバーと弱いモデル = 弱いレトリバーと GPT-4o より良い結果。索引化とチャンク化のチューニングに時間をかけてください。' },
@@ -1452,7 +1452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         vsFineTuning: {
           title: 'RAG vs ファインチューニング',
           content: [
-            '**RAG と [ファインチューニング](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=ja) は異なる問題を解決し、組み合わせが最適です。** 最初に RAG から始めます。プロンプトでは実現できない一貫した動作変更が必要な場合のみファインチューニングを追加してください。',
+            '**RAG と [ファインチューニング](/ja/prompt-engineering/prompt-engineering-vs-fine-tuning) は異なる問題を解決し、組み合わせが最適です。** 最初に RAG から始めます。プロンプトでは実現できない一貫した動作変更が必要な場合のみファインチューニングを追加してください。',
           ],
           callouts: [
             { type: 'info', label: 'RAG 優先、その後ファインチューニング', text: 'RAG は知識を追加（可逆：ベクトルストア更新）。ファインチューニングは動作を変更（永続：再訓練）。コンテンツには常に RAG を使用、スタイル/トーンにのみファインチューニング。' },
@@ -1505,7 +1505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'ドキュメント埋め込み・検索に 1 つのモデル、回答生成に別のモデル使用。',
-            '[chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=ja) や [TRACE](/prompt-engineering/trace-framework?lang=ja) のような推論重点プロンプトを取得コンテキストの上に適用。',
+            '[chain-of-thought](/ja/prompt-engineering/chain-of-thought-prompting) や [TRACE](/ja/prompt-engineering/trace-framework) のような推論重点プロンプトを取得コンテキストの上に適用。',
             '複数モデルで同じ RAG プロンプトを実行して、各モデルがドキュメントをどう活用するかを比較。',
           ],
         },
@@ -1549,12 +1549,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '関連資料',
           items: [
-            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) — RAG 取得コンテキストで動くプロンプト設計基礎',
-            '[Chain-of-Thought プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — RAG で取得ドキュメント上で複雑なマルチステップ推論に Chain-of-Thought を組み合わせ',
-            '[プロンプトインジェクション＆セキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — 取得ドキュメント経由の間接プロンプトインジェクションは RAG の最初のセキュリティリスク',
-            '[オープンソース vs 専有 LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=ja) — RAG パイプラインの生成段階向けにクラウドとローカル LLM から選択',
-            '[AI の限界―LLM ができないこと](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — LLM 知識カットオフとハルシネーション限界を克服するのに RAG がなぜ必要かを理解',
-            '[品質チェックを構築](/prompt-engineering/build-quality-checks?lang=ja) — RAG 出力検証パターン：ハルシネーション検出、ソース検証を含む',
+            '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — RAG 取得コンテキストで動くプロンプト設計基礎',
+            '[Chain-of-Thought プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — RAG で取得ドキュメント上で複雑なマルチステップ推論に Chain-of-Thought を組み合わせ',
+            '[プロンプトインジェクション＆セキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — 取得ドキュメント経由の間接プロンプトインジェクションは RAG の最初のセキュリティリスク',
+            '[オープンソース vs 専有 LLM](/ja/prompt-engineering/open-source-vs-proprietary-llms) — RAG パイプラインの生成段階向けにクラウドとローカル LLM から選択',
+            '[AI の限界―LLM ができないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — LLM 知識カットオフとハルシネーション限界を克服するのに RAG がなぜ必要かを理解',
+            '[品質チェックを構築](/ja/prompt-engineering/build-quality-checks) — RAG 出力検証パターン：ハルシネーション検出、ソース検証を含む',
           ],
         },
         faq: {
@@ -1640,7 +1640,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '检索增强生成如何运作、为何减少幻觉，以及如何为私有或频繁变化的数据实现4步骤RAG管道。',
         datePublished: '2026-03-26',
         dateModified: '2026-05-05',
-        url: 'https://www.promptquorum.com/prompt-engineering/rag-explained?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/rag-explained',
         inLanguage: 'zh',
         keywords: ['RAG', '检索增强生成', '向量数据库', 'LLM幻觉', '语义搜索', '提示工程'],
         proficiencyLevel: 'Intermediate',
@@ -1743,16 +1743,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whyItMatters: {
           title: '为什么RAG很重要',
           content: [
-            '**RAG很重要，因为它减少[幻觉](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh)并保持答案最新。** 纯LLM能够自信地在专业或最新主题上虚构细节。通过RAG，答案固定在你管理的文档中。',
+            '**RAG很重要，因为它减少[幻觉](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)并保持答案最新。** 纯LLM能够自信地在专业或最新主题上虚构细节。通过RAG，答案固定在你管理的文档中。',
             '对隐私和治理也至关重要。与其用敏感数据微调模型，不如将该数据保留在自己的存储中，并仅在查询时将相关片段传递给模型。模型对你的内容推理但永不吸收。',
-            '当您要检索的文档不能离开自己的基础设施时，整条 RAG 管线都可以在自己的硬件上运行。要查看符合 GDPR 的架构、审计日志和部署模式，请参阅[面向企业数据的本地 RAG](/power-local-llm/local-rag-for-private-business-data?lang=zh)。',
+            '当您要检索的文档不能离开自己的基础设施时，整条 RAG 管线都可以在自己的硬件上运行。要查看符合 GDPR 的架构、审计日志和部署模式，请参阅[面向企业数据的本地 RAG](/zh/power-local-llm/local-rag-for-private-business-data)。',
           ],
         },
         howItWorks: {
           title: 'RAG系统如何运作',
           content: [
             '**典型RAG系统执行4个主要阶段：取入、索引、检索、生成。** 每个阶段都可独立调优。',
-            '要查看在自己的 PDF 上用本地模型一步步运行该管线的完整流程，请参阅[在自己的 PDF 上一步步搭建本地 RAG](/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh)。',
+            '要查看在自己的 PDF 上用本地模型一步步运行该管线的完整流程，请参阅[在自己的 PDF 上一步步搭建本地 RAG](/zh/power-local-llm/local-rag-on-your-pdfs-step-by-step)。',
           ],
           callouts: [
             { type: 'info', label: '检索是瓶颈', text: 'RAG质量80%取决于检索。优秀的检索器配弱模型 = 劣质检索器配GPT-4o。花时间优化索引和分块。' },
@@ -1767,7 +1767,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         vsFineTuning: {
           title: 'RAG vs 微调',
           content: [
-            '**RAG和[微调](/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=zh)解决不同问题，最适合组合使用。** 从RAG开始。仅当需要提示无法提供的一致行为变化时才添加微调。',
+            '**RAG和[微调](/zh/prompt-engineering/prompt-engineering-vs-fine-tuning)解决不同问题，最适合组合使用。** 从RAG开始。仅当需要提示无法提供的一致行为变化时才添加微调。',
           ],
           callouts: [
             { type: 'info', label: 'RAG优先，其次微调', text: 'RAG添加知识（可逆：更新向量存储）。微调改变行为（永久：重新训练）。总是先用RAG获取内容，仅用微调调整风格/语调。' },
@@ -1820,7 +1820,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '用一个模型进行嵌入和检索，另一个用于生成答案。',
-            '在检索上下文之上应用推理重点的提示，如[chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=zh)或[TRACE](/prompt-engineering/trace-framework?lang=zh)风格结构。',
+            '在检索上下文之上应用推理重点的提示，如[chain-of-thought](/zh/prompt-engineering/chain-of-thought-prompting)或[TRACE](/zh/prompt-engineering/trace-framework)风格结构。',
             '在多个模型上运行相同的RAG提示以比较每个模型如何使用相同文档。',
           ],
         },
@@ -1876,12 +1876,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 与RAG检索上下文一起工作的提示设计基础',
-            '[Chain-of-Thought提示](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 将Chain-of-Thought与RAG结合以进行检索文档上的复杂多步推理',
-            '[提示注入和安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 通过检索文档的间接注入是RAG的主要安全风险',
-            '[开源vs专有LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh) — 为RAG生成阶段选择云或本地LLM',
-            '[AI限制—LLM无法做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 理解为什么需要RAG来克服LLM知识截止和幻觉限制',
-            '[构建质量检查](/prompt-engineering/build-quality-checks?lang=zh) — RAG输出验证模式：幻觉检测、来源验证',
+            '[什么是提示工程？](/zh/prompt-engineering/what-is-prompt-engineering) — 与RAG检索上下文一起工作的提示设计基础',
+            '[Chain-of-Thought提示](/zh/prompt-engineering/chain-of-thought-prompting) — 将Chain-of-Thought与RAG结合以进行检索文档上的复杂多步推理',
+            '[提示注入和安全](/zh/prompt-engineering/prompt-injection-and-security) — 通过检索文档的间接注入是RAG的主要安全风险',
+            '[开源vs专有LLM](/zh/prompt-engineering/open-source-vs-proprietary-llms) — 为RAG生成阶段选择云或本地LLM',
+            '[AI限制—LLM无法做什么](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) — 理解为什么需要RAG来克服LLM知识截止和幻觉限制',
+            '[构建质量检查](/zh/prompt-engineering/build-quality-checks) — RAG输出验证模式：幻觉检测、来源验证',
           ],
         },
         faq: {

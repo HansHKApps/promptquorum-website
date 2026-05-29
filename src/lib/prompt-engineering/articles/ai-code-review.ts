@@ -600,10 +600,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Schreiben Sie besseren Code mit KI](/prompt-engineering/write-better-code-with-ai?lang=de) — wie Prompts für Code-Generierung strukturiert werden',
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — grundlegende Techniken',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — Reasoning-Technik',
-            '[RAG Erklärt](/prompt-engineering/rag-explained?lang=de) — wie vollständige Codebase-Indexierung funktioniert',
+            '[Schreiben Sie besseren Code mit KI](/de/prompt-engineering/write-better-code-with-ai) — wie Prompts für Code-Generierung strukturiert werden',
+            '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — grundlegende Techniken',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — Reasoning-Technik',
+            '[RAG Erklärt](/de/prompt-engineering/rag-explained) — wie vollständige Codebase-Indexierung funktioniert',
           ],
         },
         howToStart: {
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'KI Code Review 2026: Best Tools & Prompts für schnellere Reviews',
         description: 'KI Code Review erkennt 42–85% von Runtime-Bugs vs. unter-20% für traditionelle SAST. Begrenzte Prompts und vollständiger Codebase-Kontext kehren das Signal-Rausch-Problem um.',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/ai-code-review',
         datePublished: '2026-03-24',
         dateModified: '2026-04-05',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-code-review',
         inLanguage: 'es',
         headline: 'Revisión de Código con IA 2026: Mejores Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
         description: 'La revisión de código con IA detecta entre el 42 y el 85 % de los bugs en tiempo de ejecución vs. menos del 20 % para SAST. CodeRabbit, Greptile y Snyk comparados. Incluye framework de prompts de 5 partes para reducir el ruido 3 veces.',
@@ -1029,15 +1029,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectura relacionada',
           items: [
-            '[Escribe mejor código con IA](/prompt-engineering/write-better-code-with-ai?lang=es) — cómo estructurar prompts para generación de código que produce salidas revisables',
-            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — técnicas fundamentales para escribir instrucciones de IA estructuradas',
-            '[Limitaciones de la IA — Qué no pueden hacer los LLMs](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es) — la razón arquitectónica por la que la revisión de código con IA produce falsos positivos',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=es) — la técnica de razonamiento usada para trazar rutas de ejecución',
-            '[Prompt Injection y Seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — vulnerabilidades de seguridad en flujos de trabajo de desarrollo asistido por IA',
-            '[RAG Explicado](/prompt-engineering/rag-explained?lang=es) — cómo las herramientas de indexación de código base completo como Greptile usan recuperación para extender el contexto',
-            '[Mejores LLMs locales para revisión de código](/local-llms/best-local-llms-code-review?lang=es) — alternativas de modelos locales para revisión de código privada',
-            '[Mejores LLMs locales para programación](/local-llms/best-local-llms-for-coding?lang=es) — Kimi K2.6, Qwen 3.6, Devstral clasificados para tareas de programación',
-            '[Prompting Restringido](/prompt-engineering/constrained-prompting?lang=es) — la técnica detrás de la instrucción "NO comentes sobre estilo"',
+            '[Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai) — cómo estructurar prompts para generación de código que produce salidas revisables',
+            '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — técnicas fundamentales para escribir instrucciones de IA estructuradas',
+            '[Limitaciones de la IA — Qué no pueden hacer los LLMs](/es/prompt-engineering/ai-limitations-what-llms-cant-do) — la razón arquitectónica por la que la revisión de código con IA produce falsos positivos',
+            '[Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting) — la técnica de razonamiento usada para trazar rutas de ejecución',
+            '[Prompt Injection y Seguridad](/es/prompt-engineering/prompt-injection-and-security) — vulnerabilidades de seguridad en flujos de trabajo de desarrollo asistido por IA',
+            '[RAG Explicado](/es/prompt-engineering/rag-explained) — cómo las herramientas de indexación de código base completo como Greptile usan recuperación para extender el contexto',
+            '[Mejores LLMs locales para revisión de código](/es/local-llms/best-local-llms-code-review) — alternativas de modelos locales para revisión de código privada',
+            '[Mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding) — Kimi K2.6, Qwen 3.6, Devstral clasificados para tareas de programación',
+            '[Prompting Restringido](/es/prompt-engineering/constrained-prompting) — la técnica detrás de la instrucción "NO comentes sobre estilo"',
           ],
         },
         howToStart: {
@@ -1281,10 +1281,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures Complémentaires',
           items: [
-            '[Écrire un Meilleur Code avec l\'IA](/prompt-engineering/write-better-code-with-ai?lang=fr) — comment les prompts pour la génération de code sont structurés',
-            '[Qu\'est-ce que l\'Ingénierie des Prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — techniques fondamentales',
-            '[Prompting Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=fr) — technique de raisonnement',
-            '[RAG Expliqué](/prompt-engineering/rag-explained?lang=fr) — comment fonctionne l\'indexation complète de la base de code',
+            '[Écrire un Meilleur Code avec l\'IA](/fr/prompt-engineering/write-better-code-with-ai) — comment les prompts pour la génération de code sont structurés',
+            '[Qu\'est-ce que l\'Ingénierie des Prompts ?](/fr/prompt-engineering/what-is-prompt-engineering) — techniques fondamentales',
+            '[Prompting Chain-of-Thought](/fr/prompt-engineering/chain-of-thought-prompting) — technique de raisonnement',
+            '[RAG Expliqué](/fr/prompt-engineering/rag-explained) — comment fonctionne l\'indexation complète de la base de code',
           ],
         },
         howToStart: {
@@ -1324,7 +1324,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'Révision de Code IA 2026 : Meilleurs Outils & Prompts pour des Reviews Plus Rapides',
         description: 'La révision de code IA détecte 42–85% des bugs d\'exécution vs. moins de 20% pour l\'analyse statique traditionnelle. Les prompts limités et le contexte complet de la base de code inversent le problème signal-bruit.',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/ai-code-review',
         datePublished: '2026-03-24',
         dateModified: '2026-04-05',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1507,10 +1507,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '関連資料',
           items: [
-            '[AI でより良いコードを書く](/prompt-engineering/write-better-code-with-ai?lang=ja) —— コード生成プロンプトの構造化方法',
-            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) —— 基本的なテクニック',
-            '[Chain-of-Thought プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) —— 推論テクニック',
-            '[RAG 説明](/prompt-engineering/rag-explained?lang=ja) —— 完全なコードベースインデックス化の仕組み',
+            '[AI でより良いコードを書く](/ja/prompt-engineering/write-better-code-with-ai) —— コード生成プロンプトの構造化方法',
+            '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) —— 基本的なテクニック',
+            '[Chain-of-Thought プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) —— 推論テクニック',
+            '[RAG 説明](/ja/prompt-engineering/rag-explained) —— 完全なコードベースインデックス化の仕組み',
           ],
         },
         howToStart: {
@@ -1550,7 +1550,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'AI コードレビュー 2026：ベストツールとプロンプト',
         description: 'AI コードレビューは実行時バグの42～85%を検出対従来型SASの20%未満。制限プロンプトとコードベース全文コンテキストがシグナル・ノイズ問題を反転。',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/ai-code-review',
         datePublished: '2026-03-24',
         dateModified: '2026-04-05',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1733,10 +1733,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[用 AI 编写更好的代码](/prompt-engineering/write-better-code-with-ai?lang=zh) —— 代码生成提示的结构化方式',
-            '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) —— 基本技术',
-            '[思维链提示](/prompt-engineering/chain-of-thought-prompting?lang=zh) —— 推理技术',
-            '[RAG 解释](/prompt-engineering/rag-explained?lang=zh) —— 完整代码库索引化的工作原理',
+            '[用 AI 编写更好的代码](/zh/prompt-engineering/write-better-code-with-ai) —— 代码生成提示的结构化方式',
+            '[什么是提示工程？](/zh/prompt-engineering/what-is-prompt-engineering) —— 基本技术',
+            '[思维链提示](/zh/prompt-engineering/chain-of-thought-prompting) —— 推理技术',
+            '[RAG 解释](/zh/prompt-engineering/rag-explained) —— 完整代码库索引化的工作原理',
           ],
         },
         howToStart: {
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'AI 代码审查 2026：最佳工具和提示',
         description: 'AI 代码审查检测 42–85% 的运行时错误对比传统 SAST 的 20% 以下。受限提示和完整代码库上下文反转信号噪声问题。',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/ai-code-review',
         datePublished: '2026-03-24',
         dateModified: '2026-04-05',
         author: { '@type': 'Organization', name: 'PromptQuorum' },

@@ -544,7 +544,7 @@ schema: {
         description: 'Lokale vs. Cloud-LLMs: 6 Grenzen (Geschwindigkeit, Qualität, Hardware). Entscheidungsbaum für Mittelstand und Unternehmen. Benchmarks + Kostenvergleich.',
         datePublished: '2026-04-04',
         dateModified: '2026-04-18',
-        url: 'https://www.promptquorum.com/local-llms/local-llm-limitations?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/local-llm-limitations',
         inLanguage: 'de',
         about: [
           { '@type': 'Thing', 'name': 'Lokale LLMs' },
@@ -1151,11 +1151,11 @@ schema: {
         relatedReading: {
           title: 'Verwandte Artikel',
           items: [
-            '[Wie viel VRAM brauche ich für lokale LLMs? (Hardware-Guide)](/local-llms/how-much-vram-local-llm?lang=de)',
-            '[Ollama installieren: Schritt-für-Schritt-Anleitung](/local-llms/how-to-install-ollama?lang=de)',
-            '[LM Studio vs. Ollama: Welches ist besser?](/local-llms/lm-studio-vs-ollama?lang=de)',
-            '[Die besten lokalen Modelle 2026 im Vergleich](/local-llms/best-local-llm-models?lang=de)',
-            '[Prompt Engineering für lokale LLMs (Techniken & Tricks)](/prompt-engineering/prompt-engineering-local-llms?lang=de)'
+            '[Wie viel VRAM brauche ich für lokale LLMs? (Hardware-Guide)](/de/local-llms/how-much-vram-local-llm)',
+            '[Ollama installieren: Schritt-für-Schritt-Anleitung](/de/local-llms/how-to-install-ollama)',
+            '[LM Studio vs. Ollama: Welches ist besser?](/de/local-llms/lm-studio-vs-ollama)',
+            '[Die besten lokalen Modelle 2026 im Vergleich](/de/local-llms/best-local-llm-models)',
+            '[Prompt Engineering für lokale LLMs (Techniken & Tricks)](/de/prompt-engineering/prompt-engineering-local-llms)'
           ]
         }
       }
@@ -1198,7 +1198,7 @@ schema: {
         description: 'LLMs locaux vs cloud : 6 limitations (vitesse, qualité, matériel). Arbre décisionnel pour PME et entreprises. Benchmarks + comparaison de coûts.',
         datePublished: '2026-04-04',
         dateModified: '2026-04-18',
-        url: 'https://www.promptquorum.com/local-llms/local-llm-limitations?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/local-llm-limitations',
         inLanguage: 'fr',
         about: [
           { '@type': 'Thing', 'name': 'LLMs locaux' },
@@ -1790,11 +1790,11 @@ schema: {
         relatedReading: {
           title: 'Articles connexes',
           items: [
-            '[Combien VRAM pour LLMs locaux ? (Guide matériel)](/local-llms/how-much-vram-local-llm?lang=fr)',
-            '[Installer Ollama : guide étape par étape](/local-llms/how-to-install-ollama?lang=fr)',
-            '[LM Studio vs. Ollama : lequel choisir ?](/local-llms/lm-studio-vs-ollama?lang=fr)',
-            '[Meilleurs modèles locaux 2026 comparés](/local-llms/best-local-llm-models?lang=fr)',
-            '[Prompt Engineering pour LLMs locaux (techniques & astuces)](/prompt-engineering/prompt-engineering-local-llms?lang=fr)'
+            '[Combien VRAM pour LLMs locaux ? (Guide matériel)](/fr/local-llms/how-much-vram-local-llm)',
+            '[Installer Ollama : guide étape par étape](/fr/local-llms/how-to-install-ollama)',
+            '[LM Studio vs. Ollama : lequel choisir ?](/fr/local-llms/lm-studio-vs-ollama)',
+            '[Meilleurs modèles locaux 2026 comparés](/fr/local-llms/best-local-llm-models)',
+            '[Prompt Engineering pour LLMs locaux (techniques & astuces)](/fr/prompt-engineering/prompt-engineering-local-llms)'
           ]
         }
       }
@@ -1837,7 +1837,7 @@ schema: {
         description: 'ローカルLLM vs クラウド：6つの限界（速度、品質、ハードウェア）。企業向け決定ツリー。ベンチマーク＋コスト比較。',
         datePublished: '2026-04-04',
         dateModified: '2026-04-18',
-        url: 'https://www.promptquorum.com/local-llms/local-llm-limitations?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/local-llm-limitations',
         inLanguage: 'ja',
         about: [
           { '@type': 'Thing', 'name': 'ローカルLLM' },
@@ -2429,11 +2429,11 @@ schema: {
         relatedReading: {
           title: '関連記事',
           items: [
-            '[ローカルLLMに何VRAM必要？（ハードウェアガイド）](/local-llms/how-much-vram-local-llm?lang=ja)',
-            '[Ollama インストール ： ステップバイステップガイド](/local-llms/how-to-install-ollama?lang=ja)',
-            '[LM Studio vs. Ollama ： どちらを選ぶ？](/local-llms/lm-studio-vs-ollama?lang=ja)',
-            '[2026最高ローカルモデル比較](/local-llms/best-local-llm-models?lang=ja)',
-            '[ローカルLLM用プロンプトエンジニアリング（技法＆コツ）](/prompt-engineering/prompt-engineering-local-llms?lang=ja)'
+            '[ローカルLLMに何VRAM必要？（ハードウェアガイド）](/ja/local-llms/how-much-vram-local-llm)',
+            '[Ollama インストール ： ステップバイステップガイド](/ja/local-llms/how-to-install-ollama)',
+            '[LM Studio vs. Ollama ： どちらを選ぶ？](/ja/local-llms/lm-studio-vs-ollama)',
+            '[2026最高ローカルモデル比較](/ja/local-llms/best-local-llm-models)',
+            '[ローカルLLM用プロンプトエンジニアリング（技法＆コツ）](/ja/prompt-engineering/prompt-engineering-local-llms)'
           ]
         }
       }
@@ -2476,7 +2476,7 @@ schema: {
         description: '本地LLM vs 云：6个限制（速度、质量、硬件）。企业决策框架。基准测试+成本对比。',
         datePublished: '2026-04-04',
         dateModified: '2026-04-18',
-        url: 'https://www.promptquorum.com/local-llms/local-llm-limitations?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/local-llm-limitations',
         inLanguage: 'zh',
         about: [
           { '@type': 'Thing', 'name': '本地LLM' },
@@ -2923,11 +2923,11 @@ schema: {
         relatedReading: {
           title: '相关文章',
           items: [
-            '[本地LLM需多少VRAM？（硬件指南）](/local-llms/how-much-vram-local-llm?lang=zh)',
-            '[Ollama安装：分步指南](/local-llms/how-to-install-ollama?lang=zh)',
-            '[LM Studio vs. Ollama：选哪个？](/local-llms/lm-studio-vs-ollama?lang=zh)',
-            '[2026最佳本地模型对比](/local-llms/best-local-llm-models?lang=zh)',
-            '[本地LLM提示工程（技巧和诀窍）](/prompt-engineering/prompt-engineering-local-llms?lang=zh)'
+            '[本地LLM需多少VRAM？（硬件指南）](/zh/local-llms/how-much-vram-local-llm)',
+            '[Ollama安装：分步指南](/zh/local-llms/how-to-install-ollama)',
+            '[LM Studio vs. Ollama：选哪个？](/zh/local-llms/lm-studio-vs-ollama)',
+            '[2026最佳本地模型对比](/zh/local-llms/best-local-llm-models)',
+            '[本地LLM提示工程（技巧和诀窍）](/zh/prompt-engineering/prompt-engineering-local-llms)'
           ]
         }
       }

@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/co-star-framework',
         'inLanguage': 'de',
         headline: 'CO-STAR-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe, Response',
         description: 'Das CO-STAR-Framework strukturiert komplexe Prompts in 6 Komponenten: Kontext, Ziel, Stil, Ton, Zielgruppe und Response. Wie es funktioniert, wann man es einsetzt, und wie PromptQuorum es als integrierte Option anbietet.',
@@ -640,12 +640,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         weitereLektuere: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Welches Prompt-Framework sollten Sie verwenden?](/prompt-engineering/which-prompt-framework-should-you-use?lang=de) — Vergleich CO-STAR vs CRAFT vs SPECS vs APE',
-            '[CRAFT-Framework](/prompt-engineering/craft-framework?lang=de) — Rollenorientierte Alternative zu CO-STAR',
-            '[SPECS-Framework](/prompt-engineering/specs-framework?lang=de) — Problemlösungsorientierte Alternative zu CO-STAR',
-            '[APE-Framework](/prompt-engineering/ape-framework?lang=de) — Reasoning-fokussiertes Framework (Analyze, Plan, Execute)',
-            '[5 Bausteine, die jeder Prompt benötigt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — Die universellen Bausteine, die CO-STAR organisiert',
-            '[Persona-Prompting](/prompt-engineering/persona-prompting?lang=de) — Tiefgang in die Rollen-/Zielgruppendimension, die CO-STAR berührt',
+            '[Welches Prompt-Framework sollten Sie verwenden?](/de/prompt-engineering/which-prompt-framework-should-you-use) — Vergleich CO-STAR vs CRAFT vs SPECS vs APE',
+            '[CRAFT-Framework](/de/prompt-engineering/craft-framework) — Rollenorientierte Alternative zu CO-STAR',
+            '[SPECS-Framework](/de/prompt-engineering/specs-framework) — Problemlösungsorientierte Alternative zu CO-STAR',
+            '[APE-Framework](/de/prompt-engineering/ape-framework) — Reasoning-fokussiertes Framework (Analyze, Plan, Execute)',
+            '[5 Bausteine, die jeder Prompt benötigt](/de/prompt-engineering/5-building-blocks-every-prompt-needs) — Die universellen Bausteine, die CO-STAR organisiert',
+            '[Persona-Prompting](/de/prompt-engineering/persona-prompting) — Tiefgang in die Rollen-/Zielgruppendimension, die CO-STAR berührt',
           ],
         },
         wieManSieAnwendet: {
@@ -692,7 +692,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/co-star-framework',
         inLanguage: 'es',
         headline: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta',
         description: 'Cómo funciona el Framework CO-STAR (Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta), cuándo usarlo y cómo PromptQuorum lo ofrece como opción integrada.',
@@ -936,12 +936,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[¿Qué framework de prompt deberías usar?](/prompt-engineering/which-prompt-framework-should-you-use?lang=es) — comparación CO-STAR vs CRAFT vs SPECS vs APE',
-            '[Framework CRAFT](/prompt-engineering/craft-framework?lang=es) — alternativa orientada al rol de CO-STAR',
-            '[Framework SPECS](/prompt-engineering/specs-framework?lang=es) — alternativa orientada a la resolución de problemas de CO-STAR',
-            '[Framework APE](/prompt-engineering/ape-framework?lang=es) — framework orientado al razonamiento (Analizar, Planificar, Ejecutar)',
-            '[5 Bloques de Construcción que Todo Prompt Necesita](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — los bloques universales que CO-STAR organiza',
-            '[Prompting de Persona](/prompt-engineering/persona-prompting?lang=es) — profundización en la dimensión de rol/audiencia que CO-STAR toca',
+            '[¿Qué framework de prompt deberías usar?](/es/prompt-engineering/which-prompt-framework-should-you-use) — comparación CO-STAR vs CRAFT vs SPECS vs APE',
+            '[Framework CRAFT](/es/prompt-engineering/craft-framework) — alternativa orientada al rol de CO-STAR',
+            '[Framework SPECS](/es/prompt-engineering/specs-framework) — alternativa orientada a la resolución de problemas de CO-STAR',
+            '[Framework APE](/es/prompt-engineering/ape-framework) — framework orientado al razonamiento (Analizar, Planificar, Ejecutar)',
+            '[5 Bloques de Construcción que Todo Prompt Necesita](/es/prompt-engineering/5-building-blocks-every-prompt-needs) — los bloques universales que CO-STAR organiza',
+            '[Prompting de Persona](/es/prompt-engineering/persona-prompting) — profundización en la dimensión de rol/audiencia que CO-STAR toca',
           ],
         },
 
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/co-star-framework',
         'inLanguage': 'fr',
         headline: 'Framework CO-STAR : Contexte, Objectif, Style, Ton, Audience, Réponse',
         description: 'Comment fonctionne le framework CO-STAR (Contexte, Objectif, Style, Ton, Audience, Réponse), quand l\'utiliser, et comment PromptQuorum l\'intègre comme option native.',
@@ -1276,12 +1276,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         lectureSup: {
           title: 'Lectures complémentaires',
           items: [
-            '[Quel framework de prompt devriez-vous utiliser ?](/prompt-engineering/which-prompt-framework-should-you-use?lang=fr) — Comparaison CO-STAR vs CRAFT vs SPECS vs APE',
-            '[Framework CRAFT](/prompt-engineering/craft-framework?lang=fr) — alternative orientée rôle à CO-STAR',
-            '[Framework SPECS](/prompt-engineering/specs-framework?lang=fr) — alternative orientée résolution de problèmes à CO-STAR',
-            '[Framework APE](/prompt-engineering/ape-framework?lang=fr) — framework orienté reasoning (Analyze, Plan, Execute)',
-            '[5 blocs que chaque prompt a besoin](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) — les blocs universels que CO-STAR organise',
-            '[Persona Prompting](/prompt-engineering/persona-prompting?lang=fr) — deep dive dans la dimension rôle/audience que CO-STAR touche',
+            '[Quel framework de prompt devriez-vous utiliser ?](/fr/prompt-engineering/which-prompt-framework-should-you-use) — Comparaison CO-STAR vs CRAFT vs SPECS vs APE',
+            '[Framework CRAFT](/fr/prompt-engineering/craft-framework) — alternative orientée rôle à CO-STAR',
+            '[Framework SPECS](/fr/prompt-engineering/specs-framework) — alternative orientée résolution de problèmes à CO-STAR',
+            '[Framework APE](/fr/prompt-engineering/ape-framework) — framework orienté reasoning (Analyze, Plan, Execute)',
+            '[5 blocs que chaque prompt a besoin](/fr/prompt-engineering/5-building-blocks-every-prompt-needs) — les blocs universels que CO-STAR organise',
+            '[Persona Prompting](/fr/prompt-engineering/persona-prompting) — deep dive dans la dimension rôle/audience que CO-STAR touche',
           ],
         },
         comment: {
@@ -1326,7 +1326,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/co-star-framework',
         'inLanguage': 'ja',
         headline: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス',
         description: 'CO-STARフレームワークの仕組み、使用するタイミング、PromptQuorumがどのように組み込みオプションとして実装しているかについてのガイド。',
@@ -1615,12 +1615,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '関連資料',
           items: [
-            '[どのプロンプトフレームワークを使用すべきか？](/prompt-engineering/which-prompt-framework-should-you-use?lang=ja) — CO-STAR vs CRAFT vs SPECS vs APE 比較',
-            '[CRAFTフレームワーク](/prompt-engineering/craft-framework?lang=ja) — CO-STARの役割志向の代替案',
-            '[SPECSフレームワーク](/prompt-engineering/specs-framework?lang=ja) — CO-STARの問題解決志向の代替案',
-            '[APEフレームワーク](/prompt-engineering/ape-framework?lang=ja) — 推論焦点フレームワーク（Analyze、Plan、Execute）',
-            '[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja) — CO-STARが組織する普遍的な構成要素',
-            '[ペルソナプロンプティング](/prompt-engineering/persona-prompting?lang=ja) — CO-STARがタッチする役割/対象者次元への深掘り',
+            '[どのプロンプトフレームワークを使用すべきか？](/ja/prompt-engineering/which-prompt-framework-should-you-use) — CO-STAR vs CRAFT vs SPECS vs APE 比較',
+            '[CRAFTフレームワーク](/ja/prompt-engineering/craft-framework) — CO-STARの役割志向の代替案',
+            '[SPECSフレームワーク](/ja/prompt-engineering/specs-framework) — CO-STARの問題解決志向の代替案',
+            '[APEフレームワーク](/ja/prompt-engineering/ape-framework) — 推論焦点フレームワーク（Analyze、Plan、Execute）',
+            '[すべてのプロンプトが必要とする5つの構成要素](/ja/prompt-engineering/5-building-blocks-every-prompt-needs) — CO-STARが組織する普遍的な構成要素',
+            '[ペルソナプロンプティング](/ja/prompt-engineering/persona-prompting) — CO-STARがタッチする役割/対象者次元への深掘り',
           ],
         },
         hoToApply: {
@@ -1665,7 +1665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/co-star-framework',
         'inLanguage': 'zh',
         headline: 'CO-STAR框架：背景、目标、风格、语调、受众、回应',
         description: 'CO-STAR框架如何运作，何时使用，以及PromptQuorum如何将CO-STAR作为内置选项实现的指南。',
@@ -1872,12 +1872,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'relatedReading': {
           title: '相关阅读',
           items: [
-            '[CRAFT框架详解](/prompt-engineering/craft-framework-guide?lang=zh)',
-            '[如何通过提示优化提高输出质量](/prompt-engineering/prompt-optimization-guide?lang=zh)',
-            '[AI提示工程基础](/prompt-engineering/prompt-engineering-fundamentals?lang=zh)',
-            '[提示框架对比：选择适合你的框架](/prompt-engineering/prompt-frameworks-comparison?lang=zh)',
-            '[零样本提示vs少样本提示](/prompt-engineering/zero-shot-vs-few-shot?lang=zh)',
-            '[构建可重复使用的AI工作流](/prompt-engineering/reusable-ai-workflows?lang=zh)',
+            '[CRAFT框架详解](/zh/prompt-engineering/craft-framework-guide)',
+            '[如何通过提示优化提高输出质量](/zh/prompt-engineering/prompt-optimization-guide)',
+            '[AI提示工程基础](/zh/prompt-engineering/prompt-engineering-fundamentals)',
+            '[提示框架对比：选择适合你的框架](/zh/prompt-engineering/prompt-frameworks-comparison)',
+            '[零样本提示vs少样本提示](/zh/prompt-engineering/zero-shot-vs-few-shot)',
+            '[构建可重复使用的AI工作流](/zh/prompt-engineering/reusable-ai-workflows)',
           ],
         },
         faqSection: {

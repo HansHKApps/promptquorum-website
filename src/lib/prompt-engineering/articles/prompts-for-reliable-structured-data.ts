@@ -446,7 +446,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompts-for-reliable-structured-data?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/prompts-for-reliable-structured-data',
       inLanguage: 'de',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Nur gegen das Modell testen, auf dem Sie den Prompt entwickelt haben',
             problem: 'Strukturierte Output-Zuverlässigkeit variiert erheblich zwischen Modellen — ein Prompt bei 95% auf GPT-4o kann bei 70% auf Claude 4.6 Sonnet scheitern aufgrund unterschiedlichen Instruction-Folgens bei Schema-Konstraints',
-            fix: 'Führen Sie jeden strukturierten Output-Prompt gegen mindestens 2 Modelle aus, bevor Sie ihn als modellunabhängig behandeln. Nutzen Sie PromptQuorum oder direkte API-Calls zum [Test von Prompts über Modelle hinweg](/prompt-engineering/how-to-test-prompts-across-models?lang=de) in einem Schritt.',
+            fix: 'Führen Sie jeden strukturierten Output-Prompt gegen mindestens 2 Modelle aus, bevor Sie ihn als modellunabhängig behandeln. Nutzen Sie PromptQuorum oder direkte API-Calls zum [Test von Prompts über Modelle hinweg](/de/prompt-engineering/how-to-test-prompts-across-models) in einem Schritt.',
           },
           {
             mistake: 'Fehlgeschlagene Ausgaben mit dem gleichen Prompt wiederholen',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'JSON-Modus als komplette strukturierte Output-Lösung behandeln',
             problem: 'JSON-Modus verhindert nicht analysierbare Ausgabe aber nicht Schema-Konformitätsfehler — ein Modell mit JSON-Modus kann immer noch gültiges JSON mit fehlenden Feldern, falschem Typ und ungültigen Enum-Werten zurückgeben, alle davon scheitern nachgelagert Validierung',
-            fix: 'Beziehen Sie immer Schema im Prompt und Feldanweisungen ein, sogar wenn Sie API-erzwungenen JSON-Modus nutzen. Siehe [Strukturierte Ausgabe und JSON-Modus](/prompt-engineering/structured-output-json-mode?lang=de) für API-Konfiguration — dieses Handbuch behandelt die Prompt-Level-Ergänzung.',
+            fix: 'Beziehen Sie immer Schema im Prompt und Feldanweisungen ein, sogar wenn Sie API-erzwungenen JSON-Modus nutzen. Siehe [Strukturierte Ausgabe und JSON-Modus](/de/prompt-engineering/structured-output-json-mode) für API-Konfiguration — dieses Handbuch behandelt die Prompt-Level-Ergänzung.',
           },
         ],
       },
@@ -642,12 +642,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Ressourcen',
         items: [
-          '[Strukturierte Ausgabe und JSON-Modus: Wann und wie Sie es nutzen](/prompt-engineering/structured-output-json-mode?lang=de) — API-Level-JSON-Modus-Konfiguration für GPT-4o, Claude und Gemini mit Modell-Konformitäts-Tabelle',
-          '[Beste Tools für strukturierte Ausgabe (2026)](/prompt-engineering/best-tools-structured-output?lang=de) — Instructor, Outlines, Pydantic AI und LangChain für strukturierte Extraktions-Workflows verglichen',
-          '[Wie Sie die Ausgabe kontrollieren: Format, Temperatur und beschränkte Dekodierung](/prompt-engineering/control-the-output?lang=de) — beschränkte Dekodierungs-Mechanik, Temperatur und top-p für strukturierte Aufgaben, Stop-Sequenzen',
-          '[Wie Sie Prompt-Qualität bewerten: Metriken, Tests und Checkliste](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) — 20-Fall-Test-Set-Konstruktion, binäre Pass/Fail-Bewertung und LLM-as-Judge-Rubriken',
-          '[Wie Sie Prompts über Modelle hinweg testen](/prompt-engineering/how-to-test-prompts-across-models?lang=de) — Ausführen des gleichen Prompts gegen GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro, um modellabhängige Fehler zu finden',
-          '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — Wann Sie Beispiele zu einem Prompt addieren und wie viele bei verschiedenen Aufgabentypen einbeziehen',
+          '[Strukturierte Ausgabe und JSON-Modus: Wann und wie Sie es nutzen](/de/prompt-engineering/structured-output-json-mode) — API-Level-JSON-Modus-Konfiguration für GPT-4o, Claude und Gemini mit Modell-Konformitäts-Tabelle',
+          '[Beste Tools für strukturierte Ausgabe (2026)](/de/prompt-engineering/best-tools-structured-output) — Instructor, Outlines, Pydantic AI und LangChain für strukturierte Extraktions-Workflows verglichen',
+          '[Wie Sie die Ausgabe kontrollieren: Format, Temperatur und beschränkte Dekodierung](/de/prompt-engineering/control-the-output) — beschränkte Dekodierungs-Mechanik, Temperatur und top-p für strukturierte Aufgaben, Stop-Sequenzen',
+          '[Wie Sie Prompt-Qualität bewerten: Metriken, Tests und Checkliste](/de/prompt-engineering/how-to-evaluate-prompt-quality) — 20-Fall-Test-Set-Konstruktion, binäre Pass/Fail-Bewertung und LLM-as-Judge-Rubriken',
+          '[Wie Sie Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Ausführen des gleichen Prompts gegen GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro, um modellabhängige Fehler zu finden',
+          '[Zero-Shot vs. Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) — Wann Sie Beispiele zu einem Prompt addieren und wie viele bei verschiedenen Aufgabentypen einbeziehen',
         ],
       },
       sources: {
@@ -711,7 +711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified:  '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompts-for-reliable-structured-data?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompts-for-reliable-structured-data',
       inLanguage: 'es',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -936,11 +936,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Salida estructurada y modo JSON: cuándo y cómo usarlo](/prompt-engineering/structured-output-json-mode?lang=es) — Configuración del modo JSON a nivel de API para GPT-4o, Claude y Gemini con tabla de cumplimiento del modelo',
-          '[Cómo controlar la salida: formato, temperatura y decodificación restringida](/prompt-engineering/control-the-output?lang=es) — mecánicas de decodificación restringida, temperatura y top-p para tareas estructuradas',
-          '[Cómo evaluar la calidad del prompt: métricas, pruebas y lista de verificación](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — construcción de conjuntos de prueba de 20 casos, puntuación binaria de aprobación/fallo',
-          '[Cómo probar prompts en diferentes modelos](/prompt-engineering/how-to-test-prompts-across-models?lang=es) — ejecutar el mismo prompt en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro para encontrar fallos específicos del modelo',
-          '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=es) — cuándo añadir ejemplos a un prompt y cuántos incluir para diferentes tipos de tarea',
+          '[Salida estructurada y modo JSON: cuándo y cómo usarlo](/es/prompt-engineering/structured-output-json-mode) — Configuración del modo JSON a nivel de API para GPT-4o, Claude y Gemini con tabla de cumplimiento del modelo',
+          '[Cómo controlar la salida: formato, temperatura y decodificación restringida](/es/prompt-engineering/control-the-output) — mecánicas de decodificación restringida, temperatura y top-p para tareas estructuradas',
+          '[Cómo evaluar la calidad del prompt: métricas, pruebas y lista de verificación](/es/prompt-engineering/how-to-evaluate-prompt-quality) — construcción de conjuntos de prueba de 20 casos, puntuación binaria de aprobación/fallo',
+          '[Cómo probar prompts en diferentes modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — ejecutar el mismo prompt en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro para encontrar fallos específicos del modelo',
+          '[Zero-Shot vs Few-Shot Prompting](/es/prompt-engineering/zero-shot-vs-few-shot) — cuándo añadir ejemplos a un prompt y cuántos incluir para diferentes tipos de tarea',
         ],
       },
       sources: {
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompts-for-reliable-structured-data?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/prompts-for-reliable-structured-data',
       inLanguage: 'fr',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Tester seulement contre le modèle sur lequel vous avez développé le prompt',
             problem: 'La fiabilité de sortie structurée varie significativement entre les modèles — un prompt à 95% sur GPT-4o peut échouer à 70% sur Claude 4.6 Sonnet à cause du suivi d\'instruction différent sur les contraintes de schéma',
-            fix: 'Exécuter chaque prompt de sortie structurée contre au minimum 2 modèles avant de le traiter comme agnostique au modèle. Utiliser PromptQuorum ou des appels API directs pour [tester les prompts sur les modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) en une étape.',
+            fix: 'Exécuter chaque prompt de sortie structurée contre au minimum 2 modèles avant de le traiter comme agnostique au modèle. Utiliser PromptQuorum ou des appels API directs pour [tester les prompts sur les modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) en une étape.',
           },
           {
             mistake: 'Réessayer une sortie échouée avec le même prompt',
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Traiter JSON-mode comme une solution complète de sortie structurée',
             problem: 'JSON-mode empêche la sortie non analysable mais pas les défaillances de conformité du schéma — un modèle avec JSON-mode peut toujours retourner du JSON valide avec champs manquants, mauvais types et valeurs enum invalides, tous échouant à la validation en aval',
-            fix: 'Toujours inclure schéma-dans-le-prompt et instructions de champ même quand utilisant JSON-mode imposé par API. Voir [Sortie Structurée et JSON-mode](/prompt-engineering/structured-output-json-mode?lang=fr) pour configuration API — ce guide couvre le complément au niveau prompt.',
+            fix: 'Toujours inclure schéma-dans-le-prompt et instructions de champ même quand utilisant JSON-mode imposé par API. Voir [Sortie Structurée et JSON-mode](/fr/prompt-engineering/structured-output-json-mode) pour configuration API — ce guide couvre le complément au niveau prompt.',
           },
         ],
       },
@@ -1200,12 +1200,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures Supplémentaires',
         items: [
-          '[Sortie Structurée et JSON-mode: Quand et Comment l\'Utiliser](/prompt-engineering/structured-output-json-mode?lang=fr) — Configuration JSON-mode au niveau API pour GPT-4o, Claude et Gemini avec tableau de conformité du modèle',
-          '[Meilleurs Outils pour Sortie Structurée (2026)](/prompt-engineering/best-tools-structured-output?lang=fr) — Instructor, Outlines, Pydantic AI et LangChain comparés pour workflows d\'extraction structurée',
-          '[Comment Contrôler la Sortie: Format, Température et Décodage Contraint](/prompt-engineering/control-the-output?lang=fr) — Mécanique de décodage contraint, température et top-p pour tâches structurées, séquences d\'arrêt',
-          '[Comment Évaluer la Qualité du Prompt: Métriques, Tests et Checklist](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) — Construction d\'ensemble de test de 20 cas, scoring réussite/échec binaire et rubriques LLM-as-judge',
-          '[Comment Tester les Prompts sur les Modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) — Exécution du même prompt sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro pour trouver les défaillances dépendantes du modèle',
-          '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — Quand ajouter des exemples à un prompt et combien en inclure pour différents types de tâches',
+          '[Sortie Structurée et JSON-mode: Quand et Comment l\'Utiliser](/fr/prompt-engineering/structured-output-json-mode) — Configuration JSON-mode au niveau API pour GPT-4o, Claude et Gemini avec tableau de conformité du modèle',
+          '[Meilleurs Outils pour Sortie Structurée (2026)](/fr/prompt-engineering/best-tools-structured-output) — Instructor, Outlines, Pydantic AI et LangChain comparés pour workflows d\'extraction structurée',
+          '[Comment Contrôler la Sortie: Format, Température et Décodage Contraint](/fr/prompt-engineering/control-the-output) — Mécanique de décodage contraint, température et top-p pour tâches structurées, séquences d\'arrêt',
+          '[Comment Évaluer la Qualité du Prompt: Métriques, Tests et Checklist](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Construction d\'ensemble de test de 20 cas, scoring réussite/échec binaire et rubriques LLM-as-judge',
+          '[Comment Tester les Prompts sur les Modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécution du même prompt sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro pour trouver les défaillances dépendantes du modèle',
+          '[Zero-Shot vs. Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot) — Quand ajouter des exemples à un prompt et combien en inclure pour différents types de tâches',
         ],
       },
       sources: {
@@ -1269,7 +1269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompts-for-reliable-structured-data?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/prompts-for-reliable-structured-data',
       inLanguage: 'ja',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1447,7 +1447,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'プロンプトを開発したモデルに対してのみテストする',
             problem: '構造化出力信頼性はモデル間で大きく異なります — GPT-4oで95%のプロンプトはClaude 4.6 Sonnetで70%失敗することができ、スキーマ制約でのさまざまな指示フォローが原因で',
-            fix: 'ライブラリをモデル依存として処理する前に、最小2モデルに対して各構造化出力プロンプトを実行します。PromptQuorumまたは直接API呼び出しを使用して [プロンプトをモデル全体でテスト](/prompt-engineering/how-to-test-prompts-across-models?lang=ja) 1つのステップで。',
+            fix: 'ライブラリをモデル依存として処理する前に、最小2モデルに対して各構造化出力プロンプトを実行します。PromptQuorumまたは直接API呼び出しを使用して [プロンプトをモデル全体でテスト](/ja/prompt-engineering/how-to-test-prompts-across-models) 1つのステップで。',
           },
           {
             mistake: '同じプロンプトで失敗した出力を再試行',
@@ -1457,7 +1457,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: '完全な構造化出力ソリューションとしてJSON-modeを扱う',
             problem: 'JSON-modeは解析不可能な出力を防ぎますが、スキーマ準拠の失敗を防ぎません — JSON-modeを使用するモデルは、不足しているフィールド、間違ったタイプ、無効な列挙値を含む有効なJSONを返すことができ、すべてが下流検証に失敗',
-            fix: 'API-enforced JSON-modeを使用する場合でも、常にスキーマ-in-prompｔと フィールド指示を含めてください。[構造化出力とJSON-mode](/prompt-engineering/structured-output-json-mode?lang=ja) 参照 API構成— このガイドはプロンプトレベルの補完をカバーしています。',
+            fix: 'API-enforced JSON-modeを使用する場合でも、常にスキーマ-in-prompｔと フィールド指示を含めてください。[構造化出力とJSON-mode](/ja/prompt-engineering/structured-output-json-mode) 参照 API構成— このガイドはプロンプトレベルの補完をカバーしています。',
           },
         ],
       },
@@ -1465,12 +1465,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '参考資料',
         items: [
-          '[構造化出力とJSON-mode: いつ、どのように使用するか](/prompt-engineering/structured-output-json-mode?lang=ja) — GPT-4o、Claude、Geminiのためのapi-levelJSON-mode構成と、モデル準拠テーブル',
-          '[構造化出力用のベストツール (2026)](/prompt-engineering/best-tools-structured-output?lang=ja) — 構造化抽出ワークフロー用に比較されたInstructor、Outlines、Pydantic AI、LangChain',
-          '[出力を制御する方法: フォーマット、温度、制約デコード](/prompt-engineering/control-the-output?lang=ja) — メカニクスデコード制約、構造化タスク、停止シーケンスの温度とtop-p',
-          '[プロンプト品質を評価する方法: メトリクス、テスト、チェックリスト](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja) — 20ケーステストセット構築、バイナリ合格/不合格スコアリング、LLM-as-judgeルーブリック',
-          '[モデル全体でプロンプトをテストする方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja) — GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro全体で同じプロンプトを実行して、モデル依存の失敗を検出',
-          '[Zero-shotと少数shotプロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) — プロンプトに例を追加する場合とさまざまなタスクタイプで含める数',
+          '[構造化出力とJSON-mode: いつ、どのように使用するか](/ja/prompt-engineering/structured-output-json-mode) — GPT-4o、Claude、Geminiのためのapi-levelJSON-mode構成と、モデル準拠テーブル',
+          '[構造化出力用のベストツール (2026)](/ja/prompt-engineering/best-tools-structured-output) — 構造化抽出ワークフロー用に比較されたInstructor、Outlines、Pydantic AI、LangChain',
+          '[出力を制御する方法: フォーマット、温度、制約デコード](/ja/prompt-engineering/control-the-output) — メカニクスデコード制約、構造化タスク、停止シーケンスの温度とtop-p',
+          '[プロンプト品質を評価する方法: メトリクス、テスト、チェックリスト](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — 20ケーステストセット構築、バイナリ合格/不合格スコアリング、LLM-as-judgeルーブリック',
+          '[モデル全体でプロンプトをテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro全体で同じプロンプトを実行して、モデル依存の失敗を検出',
+          '[Zero-shotと少数shotプロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — プロンプトに例を追加する場合とさまざまなタスクタイプで含める数',
         ],
       },
       sources: {

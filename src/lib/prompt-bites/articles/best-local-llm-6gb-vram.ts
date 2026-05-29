@@ -171,8 +171,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Unter Windows sind RTX 3050 6 GB und RTX 4050 6 GB die beiden Hauptgrafikkarten dieser Kategorie. Beide betreiben Ollama über CUDA mit nahezu identischer Leistung — der neuere RTX 4050 ist etwa 10 % effizienter pro Watt, aber in der Praxis nicht merklich schneller.',
           'Unter macOS verfügt jedes MacBook mit 16 GB Unified Memory über ca. 6 GB für GPU-Workloads. Unified Memory eliminiert den PCIe-Bandbreitenengpass diskreter GPUs, sodass macOS-Leistung oft gleich oder besser als bei einer diskreten RTX 3050 ist.',
-          'Ein Upgrade von 6 GB auf 8 GB schaltet Q5_K_M-Quantisierung für 7–8B-Modelle frei (+3 % Qualität) und ermöglicht schnellere Kontextfenster. Für 12-GB-Optionen und 14B-Modelle, siehe <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=de" class="text-primary hover:underline">beste Ollama-Modelle für RTX 3060 12 GB</a>. Für die vollständige VRAM-Referenz, siehe <a href="/local-llms/how-much-vram-local-llm?lang=de" class="text-primary hover:underline">wie viel VRAM ein lokales LLM benötigt</a>.',
-          '<strong>6 GB ist das kleinste VRAM, bei dem ein lokales LLM bei alltäglichen Aufgaben mit Cloud-Modellen konkurriert.</strong> Unterhalb von 6 GB sind Sie auf kleine Modelle beschränkt, die bei Coding oder langer Denkleistung kämpfen. Bei 6 GB ist Llama 3 8B Q4_K_M vollständig freigeschaltet. Für den Schritt zu 14B-Modellen, siehe <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=de" class="text-primary hover:underline">die 12-GB-Tier-Empfehlungen</a>.',
+          'Ein Upgrade von 6 GB auf 8 GB schaltet Q5_K_M-Quantisierung für 7–8B-Modelle frei (+3 % Qualität) und ermöglicht schnellere Kontextfenster. Für 12-GB-Optionen und 14B-Modelle, siehe <a href="/de/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">beste Ollama-Modelle für RTX 3060 12 GB</a>. Für die vollständige VRAM-Referenz, siehe <a href="/de/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">wie viel VRAM ein lokales LLM benötigt</a>.',
+          '<strong>6 GB ist das kleinste VRAM, bei dem ein lokales LLM bei alltäglichen Aufgaben mit Cloud-Modellen konkurriert.</strong> Unterhalb von 6 GB sind Sie auf kleine Modelle beschränkt, die bei Coding oder langer Denkleistung kämpfen. Bei 6 GB ist Llama 3 8B Q4_K_M vollständig freigeschaltet. Für den Schritt zu 14B-Modellen, siehe <a href="/de/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">die 12-GB-Tier-Empfehlungen</a>.',
         ],
       },
       faq: {
@@ -189,7 +189,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann ich 13B- oder 14B-Modelle mit 6 GB VRAM betreiben?',
-            a: 'Nein. Qwen 14B bei Q4_K_M benötigt ~10 GB VRAM. Ein Upgrade auf 12 GB ist das Minimum für 14B-Modelle. Siehe <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=de" class="text-primary hover:underline">beste Ollama-Modelle für RTX 3060 12 GB</a>.',
+            a: 'Nein. Qwen 14B bei Q4_K_M benötigt ~10 GB VRAM. Ein Upgrade auf 12 GB ist das Minimum für 14B-Modelle. Siehe <a href="/de/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">beste Ollama-Modelle für RTX 3060 12 GB</a>.',
           },
           {
             q: 'Kann ich 6 GB VRAM auch für Bildgenerierung nutzen?',
@@ -235,8 +235,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Sous Windows, la RTX 3050 6 Go et la RTX 4050 6 Go sont les deux principaux GPU de ce niveau. Les deux exécutent Ollama via CUDA avec des performances quasi identiques — la RTX 4050 est environ 10 % plus efficace en énergie, mais pas sensiblement plus rapide en pratique.',
           'Sous macOS, tout MacBook avec 16 Go de mémoire unifiée dispose d\'environ 6 Go disponibles pour la charge de travail GPU. La mémoire unifiée élimine le goulot d\'étranglement PCIe des cartes graphiques dédiées, ce qui rend les performances macOS souvent équivalentes ou supérieures à une RTX 3050 dédiée.',
-          'Passer de 6 Go à 8 Go débloque la quantisation Q5_K_M sur les modèles 7–8B (+3 % de qualité) et des fenêtres de contexte plus rapides. Pour les options 12 Go et les modèles 14B, voir <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=fr" class="text-primary hover:underline">les meilleurs modèles Ollama pour RTX 3060 12 Go</a>. Pour la référence VRAM complète, voir <a href="/local-llms/how-much-vram-local-llm?lang=fr" class="text-primary hover:underline">combien de VRAM un LLM local nécessite</a>.',
-          '<strong>6 Go est le plus petit VRAM où un LLM local rivalise avec les modèles cloud sur les tâches quotidiennes.</strong> En dessous de 6 Go, vous êtes limité à des petits modèles qui peinent sur le code ou le raisonnement long. À 6 Go, Llama 3 8B Q4_K_M est entièrement disponible. Pour passer aux modèles 14B, voir <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=fr" class="text-primary hover:underline">les sélections du niveau 12 Go</a>.',
+          'Passer de 6 Go à 8 Go débloque la quantisation Q5_K_M sur les modèles 7–8B (+3 % de qualité) et des fenêtres de contexte plus rapides. Pour les options 12 Go et les modèles 14B, voir <a href="/fr/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">les meilleurs modèles Ollama pour RTX 3060 12 Go</a>. Pour la référence VRAM complète, voir <a href="/fr/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">combien de VRAM un LLM local nécessite</a>.',
+          '<strong>6 Go est le plus petit VRAM où un LLM local rivalise avec les modèles cloud sur les tâches quotidiennes.</strong> En dessous de 6 Go, vous êtes limité à des petits modèles qui peinent sur le code ou le raisonnement long. À 6 Go, Llama 3 8B Q4_K_M est entièrement disponible. Pour passer aux modèles 14B, voir <a href="/fr/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">les sélections du niveau 12 Go</a>.',
         ],
       },
       faq: {
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Puis-je faire tourner des modèles 13B ou 14B sur 6 Go de VRAM ?',
-            a: 'Non. Qwen 14B en Q4_K_M nécessite ~10 Go de VRAM. Passer à 12 Go est le minimum pour les modèles 14B. Voir <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=fr" class="text-primary hover:underline">les meilleurs modèles Ollama pour RTX 3060 12 Go</a>.',
+            a: 'Non. Qwen 14B en Q4_K_M nécessite ~10 Go de VRAM. Passer à 12 Go est le minimum pour les modèles 14B. Voir <a href="/fr/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">les meilleurs modèles Ollama pour RTX 3060 12 Go</a>.',
           },
           {
             q: 'Puis-je aussi utiliser 6 Go de VRAM pour la génération d\'images ?',
@@ -299,8 +299,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Windowsでは、RTX 3050 6 GBとRTX 4050 6 GBがこの層の主要GPUです。両者はCUDA経由でOllamaをほぼ同等の性能で動作させます — 新しいRTX 4050はワット当たり約10%効率的ですが、実際の速度差は小さいです。',
           'macOSでは、16 GB統合メモリを搭載した全MacBookがGPUワークロード用に約6 GBを利用できます。統合メモリはディスクリートGPUカードのPCIe帯域幅ボトルネックを解消するため、macOSのパフォーマンスはしばしばディスクリートRTX 3050と同等以上です。',
-          '6 GBから8 GBへのアップグレードで7–8BモデルのQ5_K_M量化（+3%品質）と高速コンテキストウィンドウが解放されます。12 GBオプションと14Bモデルについては<a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=ja" class="text-primary hover:underline">RTX 3060 12GB向けOllamaモデル</a>を参照してください。完全なVRAMリファレンスは<a href="/local-llms/how-much-vram-local-llm?lang=ja" class="text-primary hover:underline">ローカルLLMに必要なVRAM量</a>をご覧ください。',
-          '<strong>6 GBは日常タスクでローカルLLMがクラウドモデルと競合できる最小VRAMです。</strong>6 GB未満ではコーディングや長文推論で苦労する小型モデルに限られます。6 GBではLlama 3 8B Q4_K_Mが完全に解放されます。14Bモデルへのステップアップには<a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=ja" class="text-primary hover:underline">12 GBティアのおすすめ</a>を参照してください。',
+          '6 GBから8 GBへのアップグレードで7–8BモデルのQ5_K_M量化（+3%品質）と高速コンテキストウィンドウが解放されます。12 GBオプションと14Bモデルについては<a href="/ja/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">RTX 3060 12GB向けOllamaモデル</a>を参照してください。完全なVRAMリファレンスは<a href="/ja/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">ローカルLLMに必要なVRAM量</a>をご覧ください。',
+          '<strong>6 GBは日常タスクでローカルLLMがクラウドモデルと競合できる最小VRAMです。</strong>6 GB未満ではコーディングや長文推論で苦労する小型モデルに限られます。6 GBではLlama 3 8B Q4_K_Mが完全に解放されます。14Bモデルへのステップアップには<a href="/ja/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">12 GBティアのおすすめ</a>を参照してください。',
         ],
       },
       faq: {
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '6 GB VRAMで13Bや14Bモデルを動かせますか？',
-            a: 'いいえ。Qwen 14BのQ4_K_Mには約10 GB VRAMが必要です。14Bモデルには最低12 GBへのアップグレードが必要です。<a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=ja" class="text-primary hover:underline">RTX 3060 12GB向けOllamaモデル</a>をご覧ください。',
+            a: 'いいえ。Qwen 14BのQ4_K_Mには約10 GB VRAMが必要です。14Bモデルには最低12 GBへのアップグレードが必要です。<a href="/ja/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">RTX 3060 12GB向けOllamaモデル</a>をご覧ください。',
           },
           {
             q: '6 GB VRAMを画像生成にも使えますか？',
@@ -363,8 +363,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '在Windows端，RTX 3050 6 GB和RTX 4050 6 GB是这一层级的两款主要GPU。两者均通过CUDA运行Ollama，性能几乎相同——新款RTX 4050每瓦性能高约10%，但实际速度差异不大。',
           '在macOS端，所有搭载16 GB统一内存的MacBook约有6 GB可用于GPU工作负载。统一内存消除了独立显卡的PCIe带宽瓶颈，因此macOS性能通常与独立RTX 3050相当甚至更好。',
-          '从6 GB升级到8 GB可解锁7–8B模型的Q5_K_M量化（+3%质量）和更快的上下文窗口。12 GB选项和14B模型请参阅<a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=zh" class="text-primary hover:underline">RTX 3060 12 GB最佳Ollama模型</a>。完整显存参考请查看<a href="/local-llms/how-much-vram-local-llm?lang=zh" class="text-primary hover:underline">本地LLM所需显存量</a>。',
-          '<strong>6 GB是本地LLM能与云端模型在日常任务上竞争的最低显存配置。</strong>低于6 GB只能运行在编程或长文推理上力不从心的小模型。在6 GB配置下，Llama 3 8B Q4_K_M完全解锁。要迈向14B模型，请参阅<a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=zh" class="text-primary hover:underline">12 GB层级推荐</a>。',
+          '从6 GB升级到8 GB可解锁7–8B模型的Q5_K_M量化（+3%质量）和更快的上下文窗口。12 GB选项和14B模型请参阅<a href="/zh/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">RTX 3060 12 GB最佳Ollama模型</a>。完整显存参考请查看<a href="/zh/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">本地LLM所需显存量</a>。',
+          '<strong>6 GB是本地LLM能与云端模型在日常任务上竞争的最低显存配置。</strong>低于6 GB只能运行在编程或长文推理上力不从心的小模型。在6 GB配置下，Llama 3 8B Q4_K_M完全解锁。要迈向14B模型，请参阅<a href="/zh/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">12 GB层级推荐</a>。',
         ],
       },
       faq: {
@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '6 GB显存能运行13B或14B模型吗？',
-            a: '不行。Qwen 14B的Q4_K_M需要约10 GB显存。14B模型至少需要升级到12 GB。请参阅<a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=zh" class="text-primary hover:underline">RTX 3060 12 GB最佳Ollama模型</a>。',
+            a: '不行。Qwen 14B的Q4_K_M需要约10 GB显存。14B模型至少需要升级到12 GB。请参阅<a href="/zh/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">RTX 3060 12 GB最佳Ollama模型</a>。',
           },
           {
             q: '6 GB显存也能用于图像生成吗？',
@@ -439,8 +439,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'En Windows, la RTX 3050 6 GB y la RTX 4050 6 GB son las dos GPUs principales en este rango. Ambas ejecutan Ollama vía CUDA con un rendimiento casi idéntico — la más nueva RTX 4050 es alrededor de un 10% más eficiente por vatio pero no significativamente más rápida en la práctica.',
           'En macOS, cualquier MacBook con 16 GB de memoria unificada tiene aproximadamente 6 GB disponibles para la carga de trabajo GPU. La memoria unificada elimina el cuello de botella PCIe que limita las tarjetas discretas, por lo que el rendimiento de macOS suele ser igual o mejor que el de una RTX 3050 discreta.',
-          'Actualizar de 6 GB a 8 GB desbloquea la cuantización Q5_K_M en modelos 7–8B (+3% calidad) y ventanas de contexto más rápidas. Para opciones de 12 GB y modelos 14B, consulta <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=es" class="text-primary hover:underline">los mejores modelos Ollama para RTX 3060 12 GB</a>. Para la referencia completa de VRAM, consulta <a href="/local-llms/how-much-vram-local-llm?lang=es" class="text-primary hover:underline">cuánta VRAM necesita un LLM local</a>.',
-          '<strong>6 GB es la VRAM mínima donde un LLM local compite con los modelos en la nube en tareas cotidianas.</strong> Por debajo de 6 GB, estás limitado a modelos pequeños que tienen dificultades con código o razonamiento extenso. Con 6 GB, Llama 3 8B Q4_K_M está completamente desbloqueado. Para dar el salto a modelos 14B, consulta <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=es" class="text-primary hover:underline">las opciones del nivel de 12 GB</a>.',
+          'Actualizar de 6 GB a 8 GB desbloquea la cuantización Q5_K_M en modelos 7–8B (+3% calidad) y ventanas de contexto más rápidas. Para opciones de 12 GB y modelos 14B, consulta <a href="/es/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">los mejores modelos Ollama para RTX 3060 12 GB</a>. Para la referencia completa de VRAM, consulta <a href="/es/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">cuánta VRAM necesita un LLM local</a>.',
+          '<strong>6 GB es la VRAM mínima donde un LLM local compite con los modelos en la nube en tareas cotidianas.</strong> Por debajo de 6 GB, estás limitado a modelos pequeños que tienen dificultades con código o razonamiento extenso. Con 6 GB, Llama 3 8B Q4_K_M está completamente desbloqueado. Para dar el salto a modelos 14B, consulta <a href="/es/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">las opciones del nivel de 12 GB</a>.',
         ],
       },
       faq: {
@@ -457,7 +457,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puedo ejecutar modelos 13B o 14B con 6 GB de VRAM?',
-            a: 'No. Qwen 14B en Q4_K_M necesita ~10 GB de VRAM. Actualizar a 12 GB es el mínimo para modelos 14B. Consulta <a href="/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=es" class="text-primary hover:underline">los mejores modelos Ollama para RTX 3060 12 GB</a>.',
+            a: 'No. Qwen 14B en Q4_K_M necesita ~10 GB de VRAM. Actualizar a 12 GB es el mínimo para modelos 14B. Consulta <a href="/es/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">los mejores modelos Ollama para RTX 3060 12 GB</a>.',
           },
           {
             q: '¿Puedo usar también 6 GB de VRAM para generación de imágenes?',

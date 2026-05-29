@@ -463,7 +463,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**PromptLayer, Mirascope und PromptPerfect lösen drei unterschiedliche Workflow-Probleme, die sich selten überschneiden.** PromptLayer ergänzt Ihre LLM-Aufrufe um Observability: Es protokolliert jede Anfrage, verfolgt Kosten und Latenz und ermöglicht die Versionierung von Prompt-Templates. Mirascope ist eine Python-Bibliothek, die LLM-Aufrufe typsicher, testbar und provider-agnostisch macht. PromptPerfect nimmt einen Prompt entgegen und gibt eine verbesserte Version zurück — ohne Code.',
           'Der Grund, warum Entwickler diese Tools verwechseln: Alle drei behaupten, Prompts zu verbessern — jedoch in unterschiedlichen Phasen und für unterschiedliche Nutzer. PromptLayer verbessert Prompts, indem es zeigt, welche Version in der Produktion am besten abschneidet. Mirascope verbessert Prompts, indem es sie zu strukturierten, testbaren Python-Funktionen macht. PromptPerfect verbessert Prompts, indem es sie für ein bestimmtes Modell umschreibt.',
-          'Für eine umfassendere Übersicht der Prompt-Engineering-Tools siehe [Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026?lang=de). Für Evaluation und CI/CD-Tools siehe [Braintrust vs PromptHub vs Vellum vs Promptfoo](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=de).',
+          'Für eine umfassendere Übersicht der Prompt-Engineering-Tools siehe [Best Prompt Engineering Tools 2026](/de/prompt-engineering/best-prompt-engineering-tools-2026). Für Evaluation und CI/CD-Tools siehe [Braintrust vs PromptHub vs Vellum vs Promptfoo](/de/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo).',
         ],
         snippets: [
           {
@@ -648,7 +648,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Wählen Sie Mirascope, wenn Sie Python-Anwendungen entwickeln, die LLMs aufrufen, und typsicheren, testbaren, provider-agnostischen Code ohne SaaS-Kosten möchten.**',
           '**Wählen Sie PromptPerfect, wenn Sie bestimmte Prompts schnell ohne Code verbessern müssen — insbesondere für Bildgenerierungs- oder Content-Creation-Workflows.**',
           'Verwenden Sie PromptLayer nicht, wenn Sie noch vor der Produktion sind und keinen Live-Traffic zum Protokollieren haben — seine Observability-Funktionen haben ohne Produktionsdaten keinen Wert. Verwenden Sie Mirascope nicht, wenn Ihr Team kein Python schreibt — es ist eine reine Python-Bibliothek ohne Web-Oberfläche. Verwenden Sie PromptPerfect nicht, wenn Sie automatisierte, reproduzierbare Prompt-Tests benötigen — seine nicht-deterministische Ausgabe macht es für CI/CD-Gates ungeeignet.',
-          'Für einen vollständigen Team-Setup-Workflow mit Prompt-Review-Zuständigkeiten und CI/CD-Gates siehe [Prompt Engineering Setup für kleine Teams](/prompt-engineering/prompt-engineering-setup-small-teams?lang=de).',
+          'Für einen vollständigen Team-Setup-Workflow mit Prompt-Review-Zuständigkeiten und CI/CD-Gates siehe [Prompt Engineering Setup für kleine Teams](/de/prompt-engineering/prompt-engineering-setup-small-teams).',
         ],
       },
       regionalContext: {
@@ -741,10 +741,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Weiterführende Links',
         items: [
-          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 4-Tool-Vergleich für Evaluation, CI/CD, A/B-Tests und Versionskontrolle](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=de)',
-          '[Best Prompt Engineering Tools 2026 — gerankte Übersicht über 10+ Tools in allen Prompt-Workflow-Kategorien](/prompt-engineering/best-prompt-engineering-tools-2026?lang=de)',
-          '[Prompt Engineering Setup für kleine Teams — Rollen, Review-Workflows und Tooling-Entscheidungen für 2–10-Personen-Teams](/prompt-engineering/prompt-engineering-setup-small-teams?lang=de)',
-          '[Wie Sie Prompt-Qualität evaluieren — Metriken, Scoring-Funktionen und Frameworks für die Messung von LLM-Ausgabegenauigkeit und Relevanz](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de)',
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 4-Tool-Vergleich für Evaluation, CI/CD, A/B-Tests und Versionskontrolle](/de/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
+          '[Best Prompt Engineering Tools 2026 — gerankte Übersicht über 10+ Tools in allen Prompt-Workflow-Kategorien](/de/prompt-engineering/best-prompt-engineering-tools-2026)',
+          '[Prompt Engineering Setup für kleine Teams — Rollen, Review-Workflows und Tooling-Entscheidungen für 2–10-Personen-Teams](/de/prompt-engineering/prompt-engineering-setup-small-teams)',
+          '[Wie Sie Prompt-Qualität evaluieren — Metriken, Scoring-Funktionen und Frameworks für die Messung von LLM-Ausgabegenauigkeit und Relevanz](/de/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       inLanguage: 'de',
       about: [
         { '@type': 'Thing', name: 'Prompt Management' },
@@ -789,7 +789,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'ItemList',
       name: 'PromptLayer vs Mirascope vs PromptPerfect: Tool-Vergleich',
       inLanguage: 'de',
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       numberOfItems: 3,
       itemListElement: [
         {
@@ -871,7 +871,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**PromptLayer, Mirascope y PromptPerfect abordan tres problemas distintos de flujo de trabajo que raramente se solapan.** PromptLayer añade observabilidad a tus llamadas LLM: registra cada petición, rastrea coste y latencia, y te permite versionar plantillas de prompts. Mirascope es una biblioteca Python que hace las llamadas LLM type-safe, testables y agnósticas al proveedor. PromptPerfect toma un prompt como entrada y devuelve una versión mejorada — sin código requerido.',
           'La razón por la que los desarrolladores confunden estas herramientas: las tres afirman mejorar prompts, pero en etapas diferentes y para usuarios distintos. PromptLayer mejora prompts mostrándote qué versión funciona mejor en producción. Mirascope mejora prompts convirtiéndolos en funciones Python estructuradas y testeables. PromptPerfect mejora prompts reescribiéndolos para un modelo específico.',
-          'Para un ranking más amplio de herramientas de prompt engineering, consulta [Mejores herramientas de prompt engineering 2026](/prompt-engineering/best-prompt-engineering-tools-2026?lang=es). Para herramientas centradas en evaluación y CI/CD, consulta [Braintrust vs PromptHub vs Vellum vs Promptfoo](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=es).',
+          'Para un ranking más amplio de herramientas de prompt engineering, consulta [Mejores herramientas de prompt engineering 2026](/es/prompt-engineering/best-prompt-engineering-tools-2026). Para herramientas centradas en evaluación y CI/CD, consulta [Braintrust vs PromptHub vs Vellum vs Promptfoo](/es/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo).',
         ],
         snippets: [
           {
@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Elige PromptPerfect si necesitas mejorar prompts específicos rápidamente sin escribir código — particularmente para generación de imágenes o flujos de trabajo de creación de contenido.**',
           '**Antes de comprometerte con cualquier proveedor específico, usa [PromptQuorum](/features) para despachar el mismo prompt a 25+ modelos de IA simultáneamente** — un paso de validación agnóstico al modelo que confirma si tu optimización del prompt se generaliza entre proveedores.',
           'No uses PromptLayer si estás pre-producción y no tienes tráfico en vivo que registrar — sus características de observabilidad no tienen valor sin datos de producción. No uses Mirascope si tu equipo no escribe Python — es una biblioteca Python-only sin interfaz web. No uses PromptPerfect si necesitas testing de prompts automatizado y reproducible — su output no determinista lo hace inadecuado para gates CI/CD.',
-          'Para un flujo de trabajo completo de configuración del equipo con propiedad de revisión de prompts y gates CI/CD, consulta [Configuración de prompt engineering para equipos pequeños](/prompt-engineering/prompt-engineering-setup-small-teams?lang=es).',
+          'Para un flujo de trabajo completo de configuración del equipo con propiedad de revisión de prompts y gates CI/CD, consulta [Configuración de prompt engineering para equipos pequeños](/es/prompt-engineering/prompt-engineering-setup-small-teams).',
         ],
       },
       regionalContext: {
@@ -1141,10 +1141,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Lecturas relacionadas',
         items: [
-          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — comparativa de 4 herramientas que cubre eval, CI/CD, A/B testing y control de versiones](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=es)',
-          '[Mejores herramientas de prompt engineering 2026 — ranking de 10+ herramientas en todas las categorías de flujo de trabajo de prompts](/prompt-engineering/best-prompt-engineering-tools-2026?lang=es)',
-          '[Configuración de prompt engineering para equipos pequeños — roles, flujos de revisión y decisiones de herramientas para equipos de 2–10 personas](/prompt-engineering/prompt-engineering-setup-small-teams?lang=es)',
-          '[Cómo evaluar la calidad de prompts — métricas, funciones de scoring y frameworks para medir la precisión y relevancia del output LLM](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es)',
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — comparativa de 4 herramientas que cubre eval, CI/CD, A/B testing y control de versiones](/es/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
+          '[Mejores herramientas de prompt engineering 2026 — ranking de 10+ herramientas en todas las categorías de flujo de trabajo de prompts](/es/prompt-engineering/best-prompt-engineering-tools-2026)',
+          '[Configuración de prompt engineering para equipos pequeños — roles, flujos de revisión y decisiones de herramientas para equipos de 2–10 personas](/es/prompt-engineering/prompt-engineering-setup-small-teams)',
+          '[Cómo evaluar la calidad de prompts — métricas, funciones de scoring y frameworks para medir la precisión y relevancia del output LLM](/es/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       inLanguage: 'es',
       about: [
         { '@type': 'Thing', name: 'Gestión de Prompts' },
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'ItemList',
       name: 'PromptLayer vs Mirascope vs PromptPerfect: Comparativa de herramientas',
       inLanguage: 'es',
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       numberOfItems: 3,
       itemListElement: [
         {
@@ -1271,7 +1271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**PromptLayer, Mirascope et PromptPerfect résolvent trois problèmes de workflow distincts qui se recoupent rarement.** PromptLayer ajoute l\'observabilité à vos appels LLM : il journalise chaque requête, suit les coûts et la latence, et permet de versionner les templates de prompts. Mirascope est une bibliothèque Python qui rend les appels LLM typés, testables et indépendants du fournisseur. PromptPerfect prend un prompt en entrée et retourne une version améliorée — sans code.',
           'La raison pour laquelle les développeurs confondent ces outils : tous trois prétendent améliorer les prompts, mais à des stades différents et pour des utilisateurs différents. PromptLayer améliore les prompts en montrant quelle version performe le mieux en production. Mirascope améliore les prompts en les transformant en fonctions Python structurées et testables. PromptPerfect améliore les prompts en les réécrivant pour un modèle spécifique.',
-          'Pour une vue d\'ensemble des outils de prompt engineering, consultez [Meilleurs outils de prompt engineering 2026](/prompt-engineering/best-prompt-engineering-tools-2026?lang=fr). Pour les outils d\'évaluation et CI/CD, voir [Braintrust vs PromptHub vs Vellum vs Promptfoo](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=fr).',
+          'Pour une vue d\'ensemble des outils de prompt engineering, consultez [Meilleurs outils de prompt engineering 2026](/fr/prompt-engineering/best-prompt-engineering-tools-2026). Pour les outils d\'évaluation et CI/CD, voir [Braintrust vs PromptHub vs Vellum vs Promptfoo](/fr/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo).',
         ],
         snippets: [
           {
@@ -1456,7 +1456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Choisissez Mirascope si vous développez des applications Python appelant des LLMs et souhaitez du code à typage fort, testable et indépendant du fournisseur, sans coût SaaS.**',
           '**Choisissez PromptPerfect si vous devez améliorer rapidement des prompts spécifiques sans écrire de code — notamment pour les workflows de génération d\'images ou de création de contenu.**',
           'N\'utilisez pas PromptLayer si vous êtes en pré-production sans trafic réel à journaliser — ses fonctionnalités d\'observabilité n\'ont aucune valeur sans données de production. N\'utilisez pas Mirascope si votre équipe n\'écrit pas Python — c\'est une bibliothèque Python uniquement, sans interface web. N\'utilisez pas PromptPerfect si vous avez besoin de tests de prompts automatisés et reproductibles — sa sortie non-déterministe le rend inadapté aux gates CI/CD.',
-          'Pour un workflow complet de configuration d\'équipe avec gestion des revues de prompts et gates CI/CD, voir [Configuration de prompt engineering pour les petites équipes](/prompt-engineering/prompt-engineering-setup-small-teams?lang=fr).',
+          'Pour un workflow complet de configuration d\'équipe avec gestion des revues de prompts et gates CI/CD, voir [Configuration de prompt engineering pour les petites équipes](/fr/prompt-engineering/prompt-engineering-setup-small-teams).',
         ],
       },
       regionalContext: {
@@ -1540,10 +1540,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Lectures complémentaires',
         items: [
-          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — comparatif 4 outils pour l\'évaluation, CI/CD, tests A/B et contrôle de version](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=fr)',
-          '[Meilleurs outils de prompt engineering 2026 — vue d\'ensemble classée de 10+ outils dans toutes les catégories de workflow de prompts](/prompt-engineering/best-prompt-engineering-tools-2026?lang=fr)',
-          '[Configuration de prompt engineering pour les petites équipes — rôles, workflows de revue et décisions d\'outillage pour les équipes de 2 à 10 personnes](/prompt-engineering/prompt-engineering-setup-small-teams?lang=fr)',
-          '[Évaluer la qualité des prompts — métriques, fonctions de scoring et frameworks pour mesurer la précision et la pertinence des sorties LLM](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr)',
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — comparatif 4 outils pour l\'évaluation, CI/CD, tests A/B et contrôle de version](/fr/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
+          '[Meilleurs outils de prompt engineering 2026 — vue d\'ensemble classée de 10+ outils dans toutes les catégories de workflow de prompts](/fr/prompt-engineering/best-prompt-engineering-tools-2026)',
+          '[Configuration de prompt engineering pour les petites équipes — rôles, workflows de revue et décisions d\'outillage pour les équipes de 2 à 10 personnes](/fr/prompt-engineering/prompt-engineering-setup-small-teams)',
+          '[Évaluer la qualité des prompts — métriques, fonctions de scoring et frameworks pour mesurer la précision et la pertinence des sorties LLM](/fr/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {
@@ -1569,7 +1569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       inLanguage: 'fr',
       about: [
         { '@type': 'Thing', name: 'Prompt Management' },
@@ -1588,7 +1588,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'ItemList',
       name: 'PromptLayer vs Mirascope vs PromptPerfect : comparatif d\'outils',
       inLanguage: 'fr',
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       numberOfItems: 3,
       itemListElement: [
         {
@@ -1670,7 +1670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**PromptLayer、Mirascope、PromptPerfectはそれぞれ異なるワークフロー上の問題を解決します。重複することはほぼありません。** PromptLayerはLLMコールにObservabilityを追加します：すべてのリクエストを記録し、コストとレイテンシを追跡し、プロンプトテンプレートのバージョン管理ができます。Mirascopeは、LLMコールを型安全・テスト可能・プロバイダー非依存にするPythonライブラリです。PromptPerfectはプロンプトを入力として受け取り、改善バージョンを返します — コード不要。',
           'このセクションでは、3つのツールが混同されやすい理由を説明します。3つとも「プロンプトを改善する」と主張していますが、フェーズも対象ユーザーも異なります。PromptLayerは本番環境でどのバージョンが最も良かったかを示すことでプロンプトを改善します。Mirascopeは構造化・テスト可能なPython関数としてプロンプトを実装することで改善します。PromptPerfectは特定のモデル向けにプロンプトを書き換えることで改善します。',
-          'プロンプトエンジニアリングツールの幅広い比較については[Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026?lang=ja)を参照してください。評価・CI/CDツールについては[Braintrust vs PromptHub vs Vellum vs Promptfoo](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=ja)をご覧ください。',
+          'プロンプトエンジニアリングツールの幅広い比較については[Best Prompt Engineering Tools 2026](/ja/prompt-engineering/best-prompt-engineering-tools-2026)を参照してください。評価・CI/CDツールについては[Braintrust vs PromptHub vs Vellum vs Promptfoo](/ja/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)をご覧ください。',
         ],
         snippets: [
           {
@@ -1855,7 +1855,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**LLMを呼び出すPythonアプリを構築しており、SaaSコストゼロで型安全・テスト可能・プロバイダー非依存のコードが欲しい場合はMirascopeを選択してください。**',
           '**コードを書かずに特定のプロンプトを素早く改善したい場合 — 特に画像生成やコンテンツ制作ワークフローでは — PromptPerfectを選択してください。**',
           'プロダクション前でログに記録するライブトラフィックがない場合はPromptLayerを使わないでください — Observability機能は本番データなしでは価値がありません。チームがPythonを書かない場合はMirascopeは選択肢になりません — Python専用ライブラリでWeb UIはありません。自動化・再現可能なプロンプトテストが必要な場合はPromptPerfectを使わないでください — 非決定論的な出力はCI/CDゲートには不適です。',
-          'プロンプトレビューのオーナーシップとCI/CDゲートを含む完全なチームセットアップについては[小規模チームのプロンプトエンジニアリング設定](/prompt-engineering/prompt-engineering-setup-small-teams?lang=ja)を参照してください。',
+          'プロンプトレビューのオーナーシップとCI/CDゲートを含む完全なチームセットアップについては[小規模チームのプロンプトエンジニアリング設定](/ja/prompt-engineering/prompt-engineering-setup-small-teams)を参照してください。',
         ],
       },
       regionalContext: {
@@ -1938,10 +1938,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: '関連記事',
         items: [
-          '[Braintrust vs PromptHub vs Vellum vs Promptfoo（2026年）— 評価・CI/CD・A/Bテスト・バージョン管理をカバーする4ツール比較](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=ja)',
-          '[Best Prompt Engineering Tools 2026 — あらゆるプロンプトワークフローカテゴリの10以上のツールのランク付き概要](/prompt-engineering/best-prompt-engineering-tools-2026?lang=ja)',
-          '[小規模チームのプロンプトエンジニアリング設定 — 2〜10人チームの役割・レビューワークフロー・ツール決定](/prompt-engineering/prompt-engineering-setup-small-teams?lang=ja)',
-          '[プロンプト品質の評価方法 — LLM出力の精度と関連性を測定するメトリクス・スコアリング関数・フレームワーク](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)',
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo（2026年）— 評価・CI/CD・A/Bテスト・バージョン管理をカバーする4ツール比較](/ja/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
+          '[Best Prompt Engineering Tools 2026 — あらゆるプロンプトワークフローカテゴリの10以上のツールのランク付き概要](/ja/prompt-engineering/best-prompt-engineering-tools-2026)',
+          '[小規模チームのプロンプトエンジニアリング設定 — 2〜10人チームの役割・レビューワークフロー・ツール決定](/ja/prompt-engineering/prompt-engineering-setup-small-teams)',
+          '[プロンプト品質の評価方法 — LLM出力の精度と関連性を測定するメトリクス・スコアリング関数・フレームワーク](/ja/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       inLanguage: 'ja',
       about: [
         { '@type': 'Thing', name: 'プロンプト管理' },
@@ -1982,7 +1982,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'ItemList',
       name: 'PromptLayer・Mirascope・PromptPerfect ツール比較',
       inLanguage: 'ja',
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       numberOfItems: 3,
       itemListElement: [
         {
@@ -2064,7 +2064,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**PromptLayer、Mirascope 和 PromptPerfect 分别解决三个不同的工作流问题，极少重叠。** PromptLayer 为您的 LLM 调用增加可观测性：记录每次请求，追踪成本和延迟，并对提示词模板进行版本管理。Mirascope 是一个 Python 库，使 LLM 调用具备类型安全、可测试且与提供商无关的特性。PromptPerfect 以提示词作为输入，返回改进后的版本 — 无需代码。',
           '开发者混淆这三款工具的原因在于：三者都声称能改进提示词，但所处阶段和目标用户各不相同。PromptLayer 通过展示哪个版本在生产环境中表现最佳来改进提示词。Mirascope 通过将提示词实现为结构化、可测试的 Python 函数来改进提示词。PromptPerfect 通过针对特定模型改写提示词来改进提示词。',
-          '如需更全面的提示词工程工具对比，请参阅 [Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh)。如需评估和 CI/CD 工具，请参阅 [Braintrust vs PromptHub vs Vellum vs Promptfoo](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=zh)。',
+          '如需更全面的提示词工程工具对比，请参阅 [Best Prompt Engineering Tools 2026](/zh/prompt-engineering/best-prompt-engineering-tools-2026)。如需评估和 CI/CD 工具，请参阅 [Braintrust vs PromptHub vs Vellum vs Promptfoo](/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)。',
         ],
         snippets: [
           {
@@ -2249,7 +2249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**如果您正在构建调用 LLM 的 Python 应用，并希望以零 SaaS 成本实现类型安全、可测试、与提供商无关的代码，请选择 Mirascope。**',
           '**如果您需要在不编写代码的情况下快速改进特定提示词 — 尤其是图像生成或内容创作工作流 — 请选择 PromptPerfect。**',
           '如果您尚未上线且没有需要记录的实时流量，请勿使用 PromptLayer — 可观测性功能在没有生产数据的情况下毫无价值。如果您的团队不使用 Python，Mirascope 不是一个选项 — 它是纯 Python 库，没有 Web 界面。如果您需要自动化、可重现的提示词测试，请勿使用 PromptPerfect — 其非确定性输出不适合 CI/CD 质量门禁。',
-          '关于包含提示词审查所有权和 CI/CD 门禁的完整团队配置工作流，请参阅 [小团队提示词工程配置](/prompt-engineering/prompt-engineering-setup-small-teams?lang=zh)。',
+          '关于包含提示词审查所有权和 CI/CD 门禁的完整团队配置工作流，请参阅 [小团队提示词工程配置](/zh/prompt-engineering/prompt-engineering-setup-small-teams)。',
         ],
       },
       regionalContext: {
@@ -2332,10 +2332,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: '延伸阅读',
         items: [
-          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 涵盖评估、CI/CD、A/B 测试和版本管理的四工具对比](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=zh)',
-          '[Best Prompt Engineering Tools 2026 — 涵盖所有提示词工作流类别的 10 多款工具排名概述](/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh)',
-          '[小团队提示词工程配置 — 2 至 10 人团队的角色、审查工作流和工具决策](/prompt-engineering/prompt-engineering-setup-small-teams?lang=zh)',
-          '[如何评估提示词质量 — 衡量 LLM 输出准确性和相关性的指标、评分函数和框架](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)',
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 涵盖评估、CI/CD、A/B 测试和版本管理的四工具对比](/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
+          '[Best Prompt Engineering Tools 2026 — 涵盖所有提示词工作流类别的 10 多款工具排名概述](/zh/prompt-engineering/best-prompt-engineering-tools-2026)',
+          '[小团队提示词工程配置 — 2 至 10 人团队的角色、审查工作流和工具决策](/zh/prompt-engineering/prompt-engineering-setup-small-teams)',
+          '[如何评估提示词质量 — 衡量 LLM 输出准确性和相关性的指标、评分函数和框架](/zh/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {
@@ -2357,7 +2357,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       inLanguage: 'zh',
       about: [
         { '@type': 'Thing', name: '提示词管理' },
@@ -2376,7 +2376,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'ItemList',
       name: 'PromptLayer vs Mirascope vs PromptPerfect：工具对比',
       inLanguage: 'zh',
-      url: 'https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       numberOfItems: 3,
       itemListElement: [
         {

@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-10',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/how-to-test-prompts-across-models',
       inLanguage: 'de',
       keywords: 'Multi-Modell-Prompt-Testing, GPT-4o vs Claude, Prompt-Evaluierung, LLM-Kostenvergleich, modellunabhängige Prompts',
       proficiencyLevel: 'Intermediate',
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'why-differ',
         title: 'Warum unterscheiden sich Prompts zwischen Modellen?',
         content: [
-          '**Verschiedene Modelle verarbeiten Instruktionen unterschiedlich.** GPT-4o ist streng bei System-Prompts und JSON-Direktiven. [Claude Opus 4.7](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) ist toleranter gegenüber informeller Formulierung, erzwingt aber stärkere Sicherheits-Refusals. Gemini 1.5 Pro hat das größte Kontextfenster, kann aber bei langen Dokumenten den Fokus verlieren. Llama ist leichtgewichtig, hat aber Schwierigkeiten mit komplexem mehrstufigem Reasoning.',
+          '**Verschiedene Modelle verarbeiten Instruktionen unterschiedlich.** GPT-4o ist streng bei System-Prompts und JSON-Direktiven. [Claude Opus 4.7](/de/prompt-engineering/how-to-evaluate-prompt-quality) ist toleranter gegenüber informeller Formulierung, erzwingt aber stärkere Sicherheits-Refusals. Gemini 1.5 Pro hat das größte Kontextfenster, kann aber bei langen Dokumenten den Fokus verlieren. Llama ist leichtgewichtig, hat aber Schwierigkeiten mit komplexem mehrstufigem Reasoning.',
           'Diese Unterschiede spiegeln Trainingsdaten, Alignment-Techniken und Designphilosophie wider – sie sind keine Fehler. Ein für GPT-4o optimierter Prompt kann bei Claude lautlos scheitern und eine plausibel aussehende, aber falsche Ausgabe produzieren. Tests über mehrere Modelle decken diese Lücken auf, bevor sie in die Produktion gelangen.',
         ],
         callouts: [
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Was ist Multi-Modell-Prompt-Testing?',
         content: [
           '**Multi-Modell-Testing sendet denselben Prompt und Test-Set gleichzeitig an mehrere Modelle und vergleicht die Ausgaben, um Kompatibilitätslücken zu identifizieren.** Der Prozess: 10–20 repräsentative Eingaben vorbereiten (Happy Path + Randfälle + adversarielle Beispiele); einen Prompt schreiben und unverändert bei GPT-4o, Claude, Gemini und Llama testen; alle Modelle parallel ausführen (Sekunden, keine Stunden); Ausgaben prüfen und Abweichungen erkennen; jede Ausgabe nach Rubrik bewerten.',
-          'Ergebnis: Sie wissen vor dem Produktiveinsatz, welche Modelle mit Ihrem Prompt kompatibel sind – und welche einen überarbeiteten Prompt oder ein anderes Modell benötigen. Für Bewertungsframeworks siehe [Prompt-Evaluierungsmetriken](/prompt-engineering/prompt-evaluation-metrics?lang=de).',
+          'Ergebnis: Sie wissen vor dem Produktiveinsatz, welche Modelle mit Ihrem Prompt kompatibel sind – und welche einen überarbeiteten Prompt oder ein anderes Modell benötigen. Für Bewertungsframeworks siehe [Prompt-Evaluierungsmetriken](/de/prompt-engineering/prompt-evaluation-metrics).',
         ],
         snippets: [
           { type: 'in-one-sentence', text: 'Multi-Modell-Prompt-Testing sendet denselben Prompt und dieselben Testfälle gleichzeitig an GPT-4o, Claude, Gemini und Llama, um herauszufinden, welches Modell vor dem Deployment korrekte, gut formatierte Ausgaben liefert.' },
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**1. Explizites Ausgabeformat.** Geben Sie ein JSON-Schema, XML-Tags oder eine Markdown-Struktur im System-Prompt an. Vermeiden Sie „Geben Sie das Ergebnis in Ihrem bevorzugten Format zurück" – jedes Modell hat ein anderes Standard-Format.',
           '**2. System-Prompt von User-Message trennen.** Nutzen Sie den System-Prompt für Rolle, Einschränkungen und Ausgabe-Schema. Nutzen Sie die User-Message für die eigentliche Anfrage. Modelle behandeln diese Eingaben unterschiedlich – eine Vermischung reduziert die Portabilität.',
           '**3. Modellspezifische Formulierungen vermeiden.** Phrasen wie „Als GPT-4-KI" oder „Du bist Claude" verwirren Modelle und können zu unerwarteten Refusals führen. Beschreiben Sie die Aufgabe, nicht das Modell.',
-          '**4. Few-Shot-Beispiele verwenden.** Stellen Sie 2–3 Eingabe/Ausgabe-Paare bereit, die Randfälle abdecken. Modelle, die verbale Instruktionen ignorieren, folgen oft vorgezeigten Mustern. Mehr dazu: [Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de).',
+          '**4. Few-Shot-Beispiele verwenden.** Stellen Sie 2–3 Eingabe/Ausgabe-Paare bereit, die Randfälle abdecken. Modelle, die verbale Instruktionen ignorieren, folgen oft vorgezeigten Mustern. Mehr dazu: [Zero-Shot vs Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot).',
           '**5. Ausgabe gegen Schema validieren.** Parsen Sie JSON-Ausgaben programmatisch und prüfen Sie gegen Ihr Schema. Visuelle Überprüfung übersieht fehlerhafte Klammern und fehlende Pflichtfelder, die nachgelagerte Pipelines brechen.',
         ],
         callouts: [
@@ -394,7 +394,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Kosten vs. Qualität: Modell-Trade-offs',
         content: [
           '**Kosten- und Qualitäts-Trade-offs unterscheiden sich je nach Aufgabentyp.** Bei JSON-Ausgabe-Aufgaben liefert GPT-4o mit 5 $/Mio. Eingabe und 15 $/Mio. Ausgabe die höchste Zuverlässigkeit (~95 % gültiges JSON), aber auch die höchsten Kosten. Bei eingabelastigen Aufgaben wie Dokumentenanalyse spart Claude Opus 4.7 mit 3 $/Mio. Eingabe 40 % bei ~90 % JSON-Zuverlässigkeit. Für Langkontext-Aufgaben (100.000+ Tokens) ist Geminis 1-Mio.-Fenster die einzige praktikable Cloud-Option bei 3,50 $/Mio. Eingabe.',
-          'Zur Kostenoptimierung empfiehlt sich Tier-Routing: Happy-Path-Anfragen an Gemini 1.5 Pro oder Llama leiten, GPT-4o und Claude Opus 4.7 nur für Randfälle und sicherheitskritische Pfade reservieren. Wie Sie Kostenkontrollpunkte in Ihre Deployment-Pipeline integrieren, zeigt [Build Quality Checks in CI/CD](/prompt-engineering/build-quality-checks?lang=de).',
+          'Zur Kostenoptimierung empfiehlt sich Tier-Routing: Happy-Path-Anfragen an Gemini 1.5 Pro oder Llama leiten, GPT-4o und Claude Opus 4.7 nur für Randfälle und sicherheitskritische Pfade reservieren. Wie Sie Kostenkontrollpunkte in Ihre Deployment-Pipeline integrieren, zeigt [Build Quality Checks in CI/CD](/de/prompt-engineering/build-quality-checks).',
         ],
         callouts: [
           { type: 'info', label: 'Eingabe-Kosten bei Skalierung', text: 'Claude Opus 4.7 kostet 3 $/Mio. Eingabe-Tokens vs. GPT-4o mit 5 $/Mio. Bei 10.000 Eingabe-Tokens pro Anfrage und 1 Mio. Anfragen/Monat ergibt das allein bei den Eingabe-Kosten einen Unterschied von 20.000 $ pro Monat.' },
@@ -458,12 +458,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Prompt-Evaluierungsmetriken: Was messen und wie](/prompt-engineering/prompt-evaluation-metrics?lang=de)',
-          '[Prompt-Qualität bewerten: Ein praktischer Rahmen](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de)',
-          '[Build Quality Checks: KI-Halluzinationen in CI/CD erkennen](/prompt-engineering/build-quality-checks?lang=de)',
-          '[GPT vs Claude vs Gemini: Welches Modell 2026 verwenden](/prompt-engineering/gpt-claude-gemini-which-model?lang=de)',
-          '[Strukturierte Ausgabe und JSON-Modus: Zuverlässige LLM-Formatierung](/prompt-engineering/structured-output-json-mode?lang=de)',
-          '[Zero-Shot vs Few-Shot Prompting: Wann Beispiele einsetzen](/prompt-engineering/zero-shot-vs-few-shot?lang=de)',
+          '[Prompt-Evaluierungsmetriken: Was messen und wie](/de/prompt-engineering/prompt-evaluation-metrics)',
+          '[Prompt-Qualität bewerten: Ein praktischer Rahmen](/de/prompt-engineering/how-to-evaluate-prompt-quality)',
+          '[Build Quality Checks: KI-Halluzinationen in CI/CD erkennen](/de/prompt-engineering/build-quality-checks)',
+          '[GPT vs Claude vs Gemini: Welches Modell 2026 verwenden](/de/prompt-engineering/gpt-claude-gemini-which-model)',
+          '[Strukturierte Ausgabe und JSON-Modus: Zuverlässige LLM-Formatierung](/de/prompt-engineering/structured-output-json-mode)',
+          '[Zero-Shot vs Few-Shot Prompting: Wann Beispiele einsetzen](/de/prompt-engineering/zero-shot-vs-few-shot)',
         ],
       },
       faq: {
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-10',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-test-prompts-across-models',
       inLanguage: 'es',
       keywords: 'pruebas de prompts multi-modelo, GPT-4o vs Claude, evaluación de prompts, comparación de costos LLM, prompts agnósticos al modelo',
       proficiencyLevel: 'Intermediate',
@@ -605,7 +605,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '¿Qué son las pruebas de prompts multi-modelo?',
         content: [
           '**Las pruebas multi-modelo despachan el mismo prompt y conjunto de prueba a múltiples modelos simultáneamente, luego comparan las salidas para identificar brechas de compatibilidad.** El proceso: preparar 10–20 entradas representativas (ruta estándar + casos límite + adversariales); escribir un prompt y probarlo sin cambios en GPT-4o, Claude, Gemini y Llama; ejecutar todos los modelos en paralelo (segundos, no horas); revisar las salidas y detectar divergencias; puntuar cada salida según tu rúbrica.',
-          'Resultado: sabes qué modelos son compatibles con tu prompt antes de desplegar en producción — y cuáles necesitan un prompt revisado o un modelo diferente. Para un análisis más profundo de los frameworks de puntuación, consulta las [métricas de evaluación de prompts](/prompt-engineering/prompt-evaluation-metrics?lang=es).',
+          'Resultado: sabes qué modelos son compatibles con tu prompt antes de desplegar en producción — y cuáles necesitan un prompt revisado o un modelo diferente. Para un análisis más profundo de los frameworks de puntuación, consulta las [métricas de evaluación de prompts](/es/prompt-engineering/prompt-evaluation-metrics).',
         ],
         snippets: [
           { type: 'in-one-sentence', text: 'Las pruebas de prompts multi-modelo despachan el mismo prompt y casos de prueba a GPT-4o, Claude, Gemini y Llama simultáneamente para encontrar qué modelo produce la salida correcta y bien formateada antes del despliegue.' },
@@ -712,12 +712,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Métricas de evaluación de prompts: qué medir y cómo](/prompt-engineering/prompt-evaluation-metrics?lang=es)',
-          '[Cómo evaluar la calidad de los prompts: un framework práctico](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es)',
-          '[Build Quality Checks: detecta alucinaciones de IA en CI/CD](/prompt-engineering/build-quality-checks?lang=es)',
-          '[GPT vs Claude vs Gemini: qué modelo usar en 2026](/prompt-engineering/gpt-claude-gemini-which-model?lang=es)',
-          '[Salida estructurada y modo JSON: formato LLM fiable](/prompt-engineering/structured-output-json-mode?lang=es)',
-          '[Zero-shot vs few-shot prompting: cuándo usar ejemplos](/prompt-engineering/zero-shot-vs-few-shot?lang=es)',
+          '[Métricas de evaluación de prompts: qué medir y cómo](/es/prompt-engineering/prompt-evaluation-metrics)',
+          '[Cómo evaluar la calidad de los prompts: un framework práctico](/es/prompt-engineering/how-to-evaluate-prompt-quality)',
+          '[Build Quality Checks: detecta alucinaciones de IA en CI/CD](/es/prompt-engineering/build-quality-checks)',
+          '[GPT vs Claude vs Gemini: qué modelo usar en 2026](/es/prompt-engineering/gpt-claude-gemini-which-model)',
+          '[Salida estructurada y modo JSON: formato LLM fiable](/es/prompt-engineering/structured-output-json-mode)',
+          '[Zero-shot vs few-shot prompting: cuándo usar ejemplos](/es/prompt-engineering/zero-shot-vs-few-shot)',
         ],
       },
       faq: {
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-10',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/how-to-test-prompts-across-models',
       inLanguage: 'fr',
       keywords: 'test de prompts multi-modèles, GPT-4o vs Claude, évaluation de prompts, comparaison coûts LLM, prompts indépendants du modèle',
       proficiencyLevel: 'Intermediate',
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'why-differ',
         title: 'Pourquoi les prompts diffèrent-ils d\'un modèle à l\'autre ?',
         content: [
-          '**Les modèles analysent les instructions différemment.** GPT-4o est strict avec les system prompts et les directives JSON. [Claude Opus 4.7](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) est plus tolérant envers les formulations informelles mais applique des refus de sécurité plus stricts. Gemini 1.5 Pro dispose de la plus grande fenêtre de contexte mais peut perdre le fil sur de longs documents. Llama est léger mais peine sur le raisonnement multi-étapes.',
+          '**Les modèles analysent les instructions différemment.** GPT-4o est strict avec les system prompts et les directives JSON. [Claude Opus 4.7](/fr/prompt-engineering/how-to-evaluate-prompt-quality) est plus tolérant envers les formulations informelles mais applique des refus de sécurité plus stricts. Gemini 1.5 Pro dispose de la plus grande fenêtre de contexte mais peut perdre le fil sur de longs documents. Llama est léger mais peine sur le raisonnement multi-étapes.',
           'Ces différences reflètent les données d\'entraînement, les techniques d\'alignement et la philosophie de conception de chaque modèle — ce ne sont pas des bugs. Un prompt optimisé pour GPT-4o peut échouer silencieusement sur Claude, produisant une sortie qui semble correcte mais ne l\'est pas. Les tests multi-modèles révèlent ces lacunes avant la production.',
         ],
         callouts: [
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Qu\'est-ce que le test de prompts multi-modèles ?',
         content: [
           '**Le test multi-modèles envoie le même prompt et le même jeu de tests à plusieurs modèles simultanément, puis compare les sorties pour identifier les incompatibilités.** Le processus : préparez 10 à 20 entrées représentatives (chemin nominal + cas limites + exemples adversariaux) ; écrivez un prompt et testez-le inchangé sur GPT-4o, Claude, Gemini et Llama ; exécutez tous les modèles en parallèle (secondes, pas des heures) ; examinez les sorties et repérez les divergences ; évaluez chaque sortie selon votre grille.',
-          'Résultat : vous savez avant le déploiement en production quels modèles sont compatibles avec votre prompt — et lesquels nécessitent un prompt révisé. Pour les frameworks d\'évaluation, voir [métriques d\'évaluation de prompts](/prompt-engineering/prompt-evaluation-metrics?lang=fr).',
+          'Résultat : vous savez avant le déploiement en production quels modèles sont compatibles avec votre prompt — et lesquels nécessitent un prompt révisé. Pour les frameworks d\'évaluation, voir [métriques d\'évaluation de prompts](/fr/prompt-engineering/prompt-evaluation-metrics).',
         ],
         snippets: [
           { type: 'in-one-sentence', text: 'Le test multi-modèles envoie le même prompt et les mêmes cas de test à GPT-4o, Claude, Gemini et Llama simultanément pour trouver quel modèle produit des sorties correctes et bien formatées avant le déploiement.' },
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**1. Format de sortie explicite.** Spécifiez un schéma JSON, des balises XML ou une structure markdown dans le system prompt. Évitez « retournez le résultat dans votre format préféré » — chaque modèle a un format par défaut différent.',
           '**2. Séparez le system prompt du message utilisateur.** Utilisez le system prompt pour le rôle, les contraintes et le schéma de sortie. Utilisez le message utilisateur pour la requête réelle. Les modèles traitent ces entrées différemment.',
           '**3. Évitez les formulations spécifiques à un modèle.** Des phrases comme « En tant qu\'IA GPT-4 » ou « Tu es Claude » perturbent les modèles et peuvent déclencher des refus inattendus.',
-          '**4. Utilisez des exemples few-shot.** Fournissez 2 à 3 paires entrée/sortie qui couvrent les cas limites. Les modèles qui ignorent les instructions verbales suivent souvent les patterns démontrés. Voir [zero-shot vs few-shot prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr).',
+          '**4. Utilisez des exemples few-shot.** Fournissez 2 à 3 paires entrée/sortie qui couvrent les cas limites. Les modèles qui ignorent les instructions verbales suivent souvent les patterns démontrés. Voir [zero-shot vs few-shot prompting](/fr/prompt-engineering/zero-shot-vs-few-shot).',
           '**5. Validez la sortie contre le schéma.** Parsez la sortie JSON de façon programmatique. Ne vous fiez pas à l\'inspection visuelle — les accolades malformées et les champs requis manquants passent la revue visuelle mais cassent les pipelines.',
         ],
         callouts: [
@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Coût vs qualité : arbitrages par modèle',
         content: [
           '**Les arbitrages coût/qualité varient selon le type de tâche.** Pour les tâches à sortie JSON, GPT-4o à 5 $/M entrée et 15 $/M sortie offre la fiabilité la plus élevée (~95 % de JSON valide) mais aussi le coût le plus élevé. Pour les tâches à forte entrée comme l\'analyse documentaire, Claude Opus 4.7 à 3 $/M économise 40 % avec ~90 % de fiabilité JSON. Pour les tâches à long contexte (100 K+ tokens), la fenêtre d\'1 M tokens de Gemini 1.5 Pro est la seule option cloud viable à 3,50 $/M.',
-          'Pour optimiser les coûts, utilisez le routage par niveau : dirigez les requêtes standard vers Gemini 1.5 Pro ou Llama, réservez GPT-4o et Claude Opus 4.7 aux cas limites et chemins critiques. Pour intégrer des contrôles qualité dans votre pipeline, voir [build quality checks en CI/CD](/prompt-engineering/build-quality-checks?lang=fr).',
+          'Pour optimiser les coûts, utilisez le routage par niveau : dirigez les requêtes standard vers Gemini 1.5 Pro ou Llama, réservez GPT-4o et Claude Opus 4.7 aux cas limites et chemins critiques. Pour intégrer des contrôles qualité dans votre pipeline, voir [build quality checks en CI/CD](/fr/prompt-engineering/build-quality-checks).',
         ],
         callouts: [
           { type: 'info', label: 'Coût d\'entrée à l\'échelle', text: 'Claude Opus 4.7 coûte 3 $/M tokens d\'entrée contre 5 $/M pour GPT-4o. Pour un prompt de 10 K tokens par requête à 1 M requêtes/mois, cela représente une différence de 20 000 $ par mois sur les seuls coûts d\'entrée.' },
@@ -945,12 +945,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Métriques d\'évaluation de prompts : que mesurer et comment](/prompt-engineering/prompt-evaluation-metrics?lang=fr)',
-          '[Évaluer la qualité d\'un prompt : un cadre pratique](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr)',
-          '[Build Quality Checks : détecter les hallucinations en CI/CD](/prompt-engineering/build-quality-checks?lang=fr)',
-          '[GPT vs Claude vs Gemini : quel modèle utiliser en 2026](/prompt-engineering/gpt-claude-gemini-which-model?lang=fr)',
-          '[Sortie structurée et mode JSON : formatage LLM fiable](/prompt-engineering/structured-output-json-mode?lang=fr)',
-          '[Zero-shot vs few-shot prompting : quand utiliser des exemples](/prompt-engineering/zero-shot-vs-few-shot?lang=fr)',
+          '[Métriques d\'évaluation de prompts : que mesurer et comment](/fr/prompt-engineering/prompt-evaluation-metrics)',
+          '[Évaluer la qualité d\'un prompt : un cadre pratique](/fr/prompt-engineering/how-to-evaluate-prompt-quality)',
+          '[Build Quality Checks : détecter les hallucinations en CI/CD](/fr/prompt-engineering/build-quality-checks)',
+          '[GPT vs Claude vs Gemini : quel modèle utiliser en 2026](/fr/prompt-engineering/gpt-claude-gemini-which-model)',
+          '[Sortie structurée et mode JSON : formatage LLM fiable](/fr/prompt-engineering/structured-output-json-mode)',
+          '[Zero-shot vs few-shot prompting : quand utiliser des exemples](/fr/prompt-engineering/zero-shot-vs-few-shot)',
         ],
       },
       faq: {
@@ -1028,7 +1028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-10',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/how-to-test-prompts-across-models',
       inLanguage: 'ja',
       keywords: 'マルチモデルプロンプトテスト, GPT-4o vs Claude, プロンプト評価, LLMコスト比較, モデル非依存プロンプト',
       proficiencyLevel: 'Intermediate',
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'why-differ',
         title: 'なぜモデルによってプロンプトの挙動が異なるのか？',
         content: [
-          '**モデルによって指示の解析方法が異なります。** GPT-4oはシステムプロンプトとJSON指示に対して厳格です。[Claude Opus 4.7](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)はカジュアルな表現に寛容ですが、より厳格な安全リファザルを適用します。Gemini 1.5 Proは最大のコンテキストウィンドウを持ちますが、長いドキュメントでは焦点を失うことがあります。Llamaは軽量ですが、複雑な多段階の推論には苦労します。',
+          '**モデルによって指示の解析方法が異なります。** GPT-4oはシステムプロンプトとJSON指示に対して厳格です。[Claude Opus 4.7](/ja/prompt-engineering/how-to-evaluate-prompt-quality)はカジュアルな表現に寛容ですが、より厳格な安全リファザルを適用します。Gemini 1.5 Proは最大のコンテキストウィンドウを持ちますが、長いドキュメントでは焦点を失うことがあります。Llamaは軽量ですが、複雑な多段階の推論には苦労します。',
           'これらの違いは各モデルのトレーニングデータ・アライメント技術・設計哲学を反映しており、バグではありません。GPT-4o向けに最適化されたプロンプトがClaudeで無音で失敗し、もっともらしく見えるが間違った出力を生成することがあります。複数モデルでのテストにより、本番前にこれらの欠陥を発見できます。',
         ],
         callouts: [
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'マルチモデル・プロンプトテストとは？',
         content: [
           '**マルチモデルテストは、同じプロンプトとテストセットを複数のモデルに同時送信し、出力を比較して互換性の欠陥を特定します。** プロセス：10〜20の代表的な入力（ハッピーパス＋エッジケース＋敵対的な例）を準備；1つのプロンプトを書きGPT-4o・Claude・Gemini・Llamaで変更せずテスト；全モデルを並列実行（秒単位、数時間ではなく）；出力を確認して乖離を特定；ルーブリックで各出力を評価。',
-          '結果：本番デプロイ前に、どのモデルがプロンプトと互換性があるか——そしてどのモデルが修正されたプロンプトや別のモデルを必要とするかがわかります。評価フレームワークについては[プロンプト評価メトリクス](/prompt-engineering/prompt-evaluation-metrics?lang=ja)を参照してください。',
+          '結果：本番デプロイ前に、どのモデルがプロンプトと互換性があるか——そしてどのモデルが修正されたプロンプトや別のモデルを必要とするかがわかります。評価フレームワークについては[プロンプト評価メトリクス](/ja/prompt-engineering/prompt-evaluation-metrics)を参照してください。',
         ],
         snippets: [
           { type: 'in-one-sentence', text: 'マルチモデル・プロンプトテストは、同じプロンプトとテストケースをGPT-4o・Claude・Gemini・Llamaに同時送信し、デプロイ前に正確で適切なフォーマットの出力を生成するモデルを特定します。' },
@@ -1102,7 +1102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**1. 明示的な出力フォーマット。** システムプロンプトでJSONスキーマ・XMLタグ・Markdown構造を指定します。「好みのフォーマットで結果を返してください」は避けます——モデルによってデフォルトフォーマットが異なります。',
           '**2. システムプロンプトとユーザーメッセージを分離する。** 役割・制約・出力スキーマにはシステムプロンプトを使用します。実際のリクエストにはユーザーメッセージを使用します。モデルによって扱いが異なり、混在させるとポータビリティが低下します。',
           '**3. モデル固有の表現を避ける。** 「GPT-4 AIとして」や「あなたはClaudeです」などのフレーズはモデルを混乱させ、予期しないリファザルを引き起こすことがあります。',
-          '**4. few-shotの例を使用する。** エッジケースをカバーする2〜3の入力/出力ペアを提供します。口頭での指示を無視するモデルも、示されたパターンに従うことが多いです。詳細は[ゼロショットvsフューショットプロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja)を参照。',
+          '**4. few-shotの例を使用する。** エッジケースをカバーする2〜3の入力/出力ペアを提供します。口頭での指示を無視するモデルも、示されたパターンに従うことが多いです。詳細は[ゼロショットvsフューショットプロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot)を参照。',
           '**5. スキーマに対して出力を検証する。** JSON出力をプログラム的にパースし、スキーマに対してチェックします。視覚的な検査に頼らないでください——不正なブレースや不足している必須フィールドは目視では気づきにくく、パイプラインを壊します。',
         ],
         callouts: [
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'コスト対品質：モデルのトレードオフ',
         content: [
           '**コストと品質のトレードオフはタスクタイプによって異なります。** JSON出力タスクでは、GPT-4oは入力$5/M・出力$15/Mで最高の信頼性（~95%の有効なJSON）を提供しますが、コストも最高です。文書分析などの入力量の多いタスクでは、Claude Opus 4.7は入力$3/Mで~90%のJSON信頼性を維持しながら40%節約できます。長コンテキストタスク（100K+トークン）では、Geminiの1Mウィンドウが入力$3.50/Mで唯一の現実的なクラウドオプションです。',
-          'コスト最適化にはティアルーティングを使用します：ハッピーパスのリクエストをGemini 1.5 ProまたはLlamaにルーティングし、GPT-4oとClaude Opus 4.7をエッジケースと安全性重要パスに予約します。デプロイメントパイプラインへのコスト管理の統合については[CI/CDでのビルド品質チェック](/prompt-engineering/build-quality-checks?lang=ja)を参照。',
+          'コスト最適化にはティアルーティングを使用します：ハッピーパスのリクエストをGemini 1.5 ProまたはLlamaにルーティングし、GPT-4oとClaude Opus 4.7をエッジケースと安全性重要パスに予約します。デプロイメントパイプラインへのコスト管理の統合については[CI/CDでのビルド品質チェック](/ja/prompt-engineering/build-quality-checks)を参照。',
         ],
         callouts: [
           { type: 'info', label: 'スケール時の入力コスト', text: 'Claude Opus 4.7は1Mトークンあたり$3対GPT-4oの$5。1リクエストあたり10Kトークンで月100Mリクエストの場合、入力コストだけで月$20,000の差があります。' },
@@ -1178,12 +1178,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[プロンプト評価メトリクス：何を測定し、どのように測定するか](/prompt-engineering/prompt-evaluation-metrics?lang=ja)',
-          '[プロンプト品質の評価：実践的フレームワーク](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)',
-          '[ビルド品質チェック：CI/CDでAIの幻覚を検出する](/prompt-engineering/build-quality-checks?lang=ja)',
-          '[GPT vs Claude vs Gemini：2026年に使うべきモデルは？](/prompt-engineering/gpt-claude-gemini-which-model?lang=ja)',
-          '[構造化出力とJSONモード：信頼性の高いLLMフォーマット](/prompt-engineering/structured-output-json-mode?lang=ja)',
-          '[ゼロショットvsフューショットプロンプティング：例を使うべき状況](/prompt-engineering/zero-shot-vs-few-shot?lang=ja)',
+          '[プロンプト評価メトリクス：何を測定し、どのように測定するか](/ja/prompt-engineering/prompt-evaluation-metrics)',
+          '[プロンプト品質の評価：実践的フレームワーク](/ja/prompt-engineering/how-to-evaluate-prompt-quality)',
+          '[ビルド品質チェック：CI/CDでAIの幻覚を検出する](/ja/prompt-engineering/build-quality-checks)',
+          '[GPT vs Claude vs Gemini：2026年に使うべきモデルは？](/ja/prompt-engineering/gpt-claude-gemini-which-model)',
+          '[構造化出力とJSONモード：信頼性の高いLLMフォーマット](/ja/prompt-engineering/structured-output-json-mode)',
+          '[ゼロショットvsフューショットプロンプティング：例を使うべき状況](/ja/prompt-engineering/zero-shot-vs-few-shot)',
         ],
       },
       faq: {
@@ -1261,7 +1261,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-10',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/how-to-test-prompts-across-models',
       inLanguage: 'zh',
       keywords: '多模型提示词测试, GPT-4o vs Claude, 提示词评估, LLM成本对比, 模型无关提示词',
       proficiencyLevel: 'Intermediate',
@@ -1289,7 +1289,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'why-differ',
         title: '为什么提示词在不同模型间表现不同？',
         content: [
-          '**不同模型对指令的解析方式不同。** GPT-4o对系统提示词和JSON指令很严格。[Claude Opus 4.7](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)对非正式措辞更宽容，但执行更严格的安全拒绝。Gemini 1.5 Pro拥有最大的上下文窗口，但在长文档中可能失去焦点。Llama轻量但在复杂多步推理上有困难。',
+          '**不同模型对指令的解析方式不同。** GPT-4o对系统提示词和JSON指令很严格。[Claude Opus 4.7](/zh/prompt-engineering/how-to-evaluate-prompt-quality)对非正式措辞更宽容，但执行更严格的安全拒绝。Gemini 1.5 Pro拥有最大的上下文窗口，但在长文档中可能失去焦点。Llama轻量但在复杂多步推理上有困难。',
           '这些差异反映了每个模型的训练数据、对齐技术和设计理念——它们不是错误。为GPT-4o优化的提示词可能在Claude上无声失败，产生看似正确但实际错误的输出。跨模型测试在生产前揭示这些缺陷。',
         ],
         callouts: [
@@ -1320,7 +1320,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '什么是多模型提示词测试？',
         content: [
           '**多模型测试将同一提示词和测试集同时发送给多个模型，然后对比输出以识别兼容性缺陷。** 流程：准备10-20个代表性输入（正常路径+边缘案例+对抗性示例）；编写一个提示词并在GPT-4o、Claude、Gemini和Llama上不加修改地测试；并行运行所有模型（秒级，不是几小时）；检查输出并发现差异；根据评分标准对每个输出打分。',
-          '结果：在生产部署前，你就知道哪些模型与提示词兼容——哪些需要修订的提示词或不同的模型。有关评估框架，请参见[提示词评估指标](/prompt-engineering/prompt-evaluation-metrics?lang=zh)。',
+          '结果：在生产部署前，你就知道哪些模型与提示词兼容——哪些需要修订的提示词或不同的模型。有关评估框架，请参见[提示词评估指标](/zh/prompt-engineering/prompt-evaluation-metrics)。',
         ],
         snippets: [
           { type: 'in-one-sentence', text: '多模型提示词测试将同一提示词和测试用例同时发送给GPT-4o、Claude、Gemini和Llama，以在部署前找到哪个模型能产生正确、格式良好的输出。' },
@@ -1335,7 +1335,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**1. 明确的输出格式。** 在系统提示词中指定JSON模式、XML标签或Markdown结构。避免"以你喜欢的格式返回结果"——每个模型有不同的默认格式。',
           '**2. 将系统提示词与用户消息分离。** 系统提示词用于角色、约束和输出模式。用户消息用于实际请求。模型对这些输入的处理方式不同——混合会降低可移植性。',
           '**3. 避免特定模型的措辞。** 像"作为GPT-4 AI"或"你是Claude"这样的短语会混淆模型，可能触发意外拒绝。',
-          '**4. 使用少样本示例。** 提供2-3个涵盖边缘案例的输入/输出对。忽略口头指令的模型通常会遵循演示的模式。见[零样本vs少样本提示词](/prompt-engineering/zero-shot-vs-few-shot?lang=zh)。',
+          '**4. 使用少样本示例。** 提供2-3个涵盖边缘案例的输入/输出对。忽略口头指令的模型通常会遵循演示的模式。见[零样本vs少样本提示词](/zh/prompt-engineering/zero-shot-vs-few-shot)。',
           '**5. 针对模式验证输出。** 以编程方式解析JSON输出并对照模式检查。不要依赖视觉检查——格式错误的括号和缺失的必填字段通过视觉检查但会破坏管道。',
         ],
         callouts: [
@@ -1347,7 +1347,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '成本与质量：模型权衡',
         content: [
           '**成本和质量的权衡因任务类型而异。** 对于JSON输出任务，GPT-4o以输入$5/百万、输出$15/百万的价格提供最高可靠性（~95%有效JSON），但成本也最高。对于文档分析等输入密集型任务，Claude Opus 4.7以输入$3/百万节省40%，同时保持~90%的JSON可靠性。对于长上下文任务（10万+token），Gemini的100万token窗口是唯一可行的云端选项，输入$3.50/百万。',
-          '为优化成本，使用分级路由：将正常路径请求路由到Gemini 1.5 Pro或Llama，将GPT-4o和Claude Opus 4.7保留用于边缘案例和安全关键路径。有关将成本控制集成到部署管道的方法，请参见[CI/CD构建质量检查](/prompt-engineering/build-quality-checks?lang=zh)。',
+          '为优化成本，使用分级路由：将正常路径请求路由到Gemini 1.5 Pro或Llama，将GPT-4o和Claude Opus 4.7保留用于边缘案例和安全关键路径。有关将成本控制集成到部署管道的方法，请参见[CI/CD构建质量检查](/zh/prompt-engineering/build-quality-checks)。',
         ],
         callouts: [
           { type: 'info', label: '规模化时的输入成本', text: 'Claude Opus 4.7每百万输入token $3，GPT-4o $5。对于每次请求发送1万个输入token、每月100万次请求的情况，仅输入成本就相差每月$20,000。' },
@@ -1410,12 +1410,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[提示词评估指标：衡量什么以及如何衡量](/prompt-engineering/prompt-evaluation-metrics?lang=zh)',
-          '[如何评估提示词质量：实用框架](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)',
-          '[构建质量检查：在CI/CD中捕获AI幻觉](/prompt-engineering/build-quality-checks?lang=zh)',
-          '[GPT vs Claude vs Gemini：2026年使用哪个模型](/prompt-engineering/gpt-claude-gemini-which-model?lang=zh)',
-          '[结构化输出和JSON模式：可靠的LLM格式化](/prompt-engineering/structured-output-json-mode?lang=zh)',
-          '[零样本vs少样本提示词：何时使用示例](/prompt-engineering/zero-shot-vs-few-shot?lang=zh)',
+          '[提示词评估指标：衡量什么以及如何衡量](/zh/prompt-engineering/prompt-evaluation-metrics)',
+          '[如何评估提示词质量：实用框架](/zh/prompt-engineering/how-to-evaluate-prompt-quality)',
+          '[构建质量检查：在CI/CD中捕获AI幻觉](/zh/prompt-engineering/build-quality-checks)',
+          '[GPT vs Claude vs Gemini：2026年使用哪个模型](/zh/prompt-engineering/gpt-claude-gemini-which-model)',
+          '[结构化输出和JSON模式：可靠的LLM格式化](/zh/prompt-engineering/structured-output-json-mode)',
+          '[零样本vs少样本提示词：何时使用示例](/zh/prompt-engineering/zero-shot-vs-few-shot)',
         ],
       },
       faq: {

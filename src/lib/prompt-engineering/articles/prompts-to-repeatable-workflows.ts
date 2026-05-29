@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompts-to-repeatable-workflows?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/prompts-to-repeatable-workflows',
       inLanguage: 'de',
       headline: 'Von Prompts zu automatisierten Workflows: 4 Vorlagen',
       description: 'Prompts in automatisierte Workflows umwandeln: Auslösebedingungen, State Management, Fehlerbehandlung. 4 Vorlagen: Dokumentenverarbeitung, Recherche, Code-Review, Triage.',
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompts-to-repeatable-workflows?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompts-to-repeatable-workflows',
       inLanguage: 'es',
       headline: 'De prompts a flujos de trabajo repetibles: plantillas de automatización para equipos en producción',
       description: 'Convierte prompts en flujos de trabajo automatizados con activadores, gestión de estado y manejo de errores. 4 plantillas: procesamiento de documentos, investigación, revisión de código, triage.',
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompts-to-repeatable-workflows?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/prompts-to-repeatable-workflows',
       inLanguage: 'fr',
       headline: 'Des prompts aux workflows répétables : modèles d\'automatisation pour les équipes en production',
       description: 'Convertir des prompts en workflows automatisés avec déclencheurs, gestion d\'état et gestion des erreurs. 4 modèles : traitement de documents, recherche, revue de code, triage.',
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompts-to-repeatable-workflows?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/prompts-to-repeatable-workflows',
       inLanguage: 'ja',
       headline: 'プロンプトから繰り返し可能なワークフローへ：本番チーム向け自動化テンプレート',
       description: 'トリガー、状態管理、エラー処理を使ってプロンプトを自動化ワークフローに変換。4つのテンプレート：文書処理、リサーチ、コードレビュー、トリアージ。',
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompts-to-repeatable-workflows?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/prompts-to-repeatable-workflows',
       inLanguage: 'zh',
       headline: '从Prompt到可重复工作流：生产团队的自动化模板',
       description: '使用触发器、状态管理和错误处理将Prompt转化为自动化工作流。4个模板：文档处理、研究、代码审查、分诊。',

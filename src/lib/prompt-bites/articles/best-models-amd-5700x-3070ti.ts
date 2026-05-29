@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'A partir de mayo de 2026, <strong>la RTX 3070 Ti (8 GB GDDR6X, 608 GB/s de ancho de banda) ejecuta Llama 3 8B Q4_K_M y Mistral 7B Q5_K_M completamente en VRAM — aproximadamente 6 GB cada uno — a ~22–25 tok/s.</strong> La clase de modelos 14B es el límite duro: necesitan ~10 GB en Q4, lo que supera el límite de 8 GB.',
           'Si se requiere un modelo 14B, existen tres caminos: Q3_K_M reduce el uso a ~7 GB y cabe completamente en VRAM, pero degrada la calidad de salida en tareas de razonamiento y código. El offload parcial a CPU mediante llama.cpp (dividir capas entre VRAM y RAM) es viable a ~8 tok/s — los 8 núcleos Zen 3 del 5700X lo gestionan mejor que una CPU de 4 núcleos. Ejecutar un modelo 70B en Q2_K es técnicamente posible a ~1 tok/s, pero no es práctico para uso interactivo.',
-          'Si el objetivo son modelos de codificación 14B con calidad completa, consulta la <a href="/prompt-bites/best-local-llm-coding-12gb-vram?lang=es" class="text-primary hover:underline">guía de los mejores LLMs de codificación para 12 GB VRAM</a> para conocer el camino de actualización de hardware.',
+          'Si el objetivo son modelos de codificación 14B con calidad completa, consulta la <a href="/es/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">guía de los mejores LLMs de codificación para 12 GB VRAM</a> para conocer el camino de actualización de hardware.',
         ],
         columns: ['Modelo', 'Configuración', 'Velocidad'],
         rows: [
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Este equipo ejecuta modelos 7B–8B a 20+ tok/s — suficiente para chat general, scripting en Python, herramientas TypeScript y revisión de código de un solo archivo.</strong> Si eso describe tu carga de trabajo, no hay razón urgente para actualizar.',
           'Si necesitas modelos de codificación 14B sin penalización de calidad o velocidad, la GPU es el objetivo de actualización — no la CPU. Una RTX 3060 12 GB usada (típicamente $200–$300) o RTX 4070 base (12 GB) desbloquea Qwen 2.5 Coder 14B en Q4 con rendimiento completo. La 5800X3D es la mejor actualización de CPU AM4, pero su ventaja de 3D V-Cache es específica para gaming y cargas de trabajo científicas limitadas por CPU — la inferencia LLM está limitada por el ancho de banda de memoria de la GPU y el 5700X no es el cuello de botella aquí.',
-          'Para la guía completa de selección de GPU y cómo el ancho de banda de memoria se traduce en velocidad de inferencia LLM, consulta la <a href="/local-llms/best-gpus-for-local-llms?lang=es" class="text-primary hover:underline">guía de las mejores GPUs para LLMs locales</a>.',
+          'Para la guía completa de selección de GPU y cómo el ancho de banda de memoria se traduce en velocidad de inferencia LLM, consulta la <a href="/es/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">guía de las mejores GPUs para LLMs locales</a>.',
         ],
       },
       faq: {

@@ -318,9 +318,9 @@ schema: {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Privates lokales LLM für vertrauliche Daten](/local-llms/private-local-llm-sensitive-data?lang=de)',
-            '[Lokales LLM-Setup für Teams](/local-llms/local-llm-setup-for-teams?lang=de)',
-            '[Enterprise-Compliance mit lokalen LLMs](/local-llms/enterprise-compliance-local-llms?lang=de)',
+            '[Privates lokales LLM für vertrauliche Daten](/de/local-llms/private-local-llm-sensitive-data)',
+            '[Lokales LLM-Setup für Teams](/de/local-llms/local-llm-setup-for-teams)',
+            '[Enterprise-Compliance mit lokalen LLMs](/de/local-llms/enterprise-compliance-local-llms)',
           ],
         },
         sources: {
@@ -342,7 +342,7 @@ schema: {
         author: { '@type': 'Person', name: 'Hans Kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         inLanguage: 'de',
-        url: 'https://www.promptquorum.com/local-llms/secure-offline-local-llm-workflow?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/secure-offline-local-llm-workflow',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -544,9 +544,9 @@ schema: {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[LLM local privé pour données sensibles](/local-llms/private-local-llm-sensitive-data?lang=fr)',
-            '[Configuration LLM locale pour équipes](/local-llms/local-llm-setup-for-teams?lang=fr)',
-            '[Conformité d\'entreprise avec LLMs locaux](/local-llms/enterprise-compliance-local-llms?lang=fr)',
+            '[LLM local privé pour données sensibles](/fr/local-llms/private-local-llm-sensitive-data)',
+            '[Configuration LLM locale pour équipes](/fr/local-llms/local-llm-setup-for-teams)',
+            '[Conformité d\'entreprise avec LLMs locaux](/fr/local-llms/enterprise-compliance-local-llms)',
           ],
         },
         sources: {
@@ -568,7 +568,7 @@ schema: {
         author: { '@type': 'Person', name: 'Hans Kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         inLanguage: 'fr',
-        url: 'https://www.promptquorum.com/local-llms/secure-offline-local-llm-workflow?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/secure-offline-local-llm-workflow',
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -576,7 +576,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'fr',
-        url: 'https://www.promptquorum.com/local-llms/secure-offline-local-llm-workflow?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/secure-offline-local-llm-workflow',
         mainEntity: [
           {
             '@type': 'Question',
@@ -757,9 +757,9 @@ schema: {
         relatedReading: {
           title: '関連読み物',
           items: [
-            '[機密データ用プライベートローカルLLM](/local-llms/private-local-llm-sensitive-data?lang=ja)',
-            '[チーム向けローカルLLMセットアップ](/local-llms/local-llm-setup-for-teams?lang=ja)',
-            '[ローカルLLMを使用した企業コンプライアンス](/local-llms/enterprise-compliance-local-llms?lang=ja)',
+            '[機密データ用プライベートローカルLLM](/ja/local-llms/private-local-llm-sensitive-data)',
+            '[チーム向けローカルLLMセットアップ](/ja/local-llms/local-llm-setup-for-teams)',
+            '[ローカルLLMを使用した企業コンプライアンス](/ja/local-llms/enterprise-compliance-local-llms)',
           ],
         },
         sources: {
@@ -781,7 +781,7 @@ schema: {
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         inLanguage: 'ja',
-        url: 'https://www.promptquorum.com/local-llms/secure-offline-local-llm-workflow?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/secure-offline-local-llm-workflow',
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -789,7 +789,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'ja',
-        url: 'https://www.promptquorum.com/local-llms/secure-offline-local-llm-workflow?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/secure-offline-local-llm-workflow',
         mainEntity: [
           {
             '@type': 'Question',
@@ -970,9 +970,9 @@ schema: {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[用于敏感数据的私有本地LLM](/local-llms/private-local-llm-sensitive-data?lang=zh)',
-            '[团队本地LLM设置](/local-llms/local-llm-setup-for-teams?lang=zh)',
-            '[本地LLM企业合规](/local-llms/enterprise-compliance-local-llms?lang=zh)',
+            '[用于敏感数据的私有本地LLM](/zh/local-llms/private-local-llm-sensitive-data)',
+            '[团队本地LLM设置](/zh/local-llms/local-llm-setup-for-teams)',
+            '[本地LLM企业合规](/zh/local-llms/enterprise-compliance-local-llms)',
           ],
         },
         sources: {
@@ -994,7 +994,7 @@ schema: {
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         inLanguage: 'zh',
-        url: 'https://www.promptquorum.com/local-llms/secure-offline-local-llm-workflow?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/secure-offline-local-llm-workflow',
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -1002,7 +1002,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'zh',
-        url: 'https://www.promptquorum.com/local-llms/secure-offline-local-llm-workflow?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/secure-offline-local-llm-workflow',
         mainEntity: [
           {
             '@type': 'Question',

@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: '~5000 € Profi-Build', description: 'Dual RTX 3090 48 GB + Threadripper + 256 GB RAM — 70B Q4 mit GPU-Geschwindigkeit' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Beste Workstation für lokale KI 2026: Drei Budgetstufen', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-2026?lang=de', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Beste Workstation für lokale KI 2026: Drei Budgetstufen', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/de/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'de' },
   },
 
   fr: {
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: '~5000 € Build professionnel', description: 'Dual RTX 3090 48 Go + Threadripper + 256 Go RAM — 70B Q4 à vitesse GPU' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleure configuration workstation IA locale 2026 : 3 budgets', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-2026?lang=fr', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleure configuration workstation IA locale 2026 : 3 budgets', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/fr/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'fr' },
   },
 
   ja: {
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: '約66万円プロビルド', description: 'デュアルRTX 3090 48GB + Threadripper + 256GB — 70B Q4をGPU速度で実行' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'ローカルAI最高ワークステーション構成2026年版：3つの予算別ビルド', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-2026?lang=ja', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'ローカルAI最高ワークステーション構成2026年版：3つの予算別ビルド', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ja/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'ja' },
   },
 
   zh: {
@@ -866,6 +866,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: '约33000元专业方案', description: '双RTX 3090 48GB + Threadripper + 256GB — GPU速度运行70B Q4' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年本地AI最佳工作站配置：三档预算方案', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-2026?lang=zh', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年本地AI最佳工作站配置：三档预算方案', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/zh/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'zh' },
   },
 }

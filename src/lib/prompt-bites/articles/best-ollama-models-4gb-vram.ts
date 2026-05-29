@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Was nicht in 4 GB passt',
         content: [
           'Diese Modelle werden häufig angefragt, benötigen aber bei jeder Quantisierungsstufe mehr als 4 GB VRAM:',
-          'Ein Upgrade auf 6 GB schaltet Llama 3 8B und Mistral 7B frei — die zwei beliebtesten lokalen Modelle. Siehe <a href="/prompt-bites/best-local-llm-6gb-vram?lang=de" class="text-primary hover:underline">beste lokale LLMs für 6 GB VRAM</a>. Für einen vollständigen Hardware-Vergleich, siehe <a href="/local-llms/fastest-local-llms-low-end-pcs?lang=de" class="text-primary hover:underline">schnellste lokale LLMs für Low-End-PCs</a>.',
+          'Ein Upgrade auf 6 GB schaltet Llama 3 8B und Mistral 7B frei — die zwei beliebtesten lokalen Modelle. Siehe <a href="/de/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">beste lokale LLMs für 6 GB VRAM</a>. Für einen vollständigen Hardware-Vergleich, siehe <a href="/de/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">schnellste lokale LLMs für Low-End-PCs</a>.',
         ],
         items: [
           'Llama 3 8B — benötigt ~5,5 GB bei Q4_K_M (Minimum)',
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann ich Llama 3 mit 4 GB VRAM betreiben?',
-            a: 'Nein. Llama 3 8B benötigt mindestens ~5,5 GB bei Q4_K_M. Llama 3.2 3B passt in ~2,5 GB, wenn Sie speziell eine Llama-Variante wollen. Siehe <a href="/prompt-bites/how-much-vram-for-local-llm?lang=de" class="text-primary hover:underline">den vollständigen VRAM-Anforderungsleitfaden</a>.',
+            a: 'Nein. Llama 3 8B benötigt mindestens ~5,5 GB bei Q4_K_M. Llama 3.2 3B passt in ~2,5 GB, wenn Sie speziell eine Llama-Variante wollen. Siehe <a href="/de/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">den vollständigen VRAM-Anforderungsleitfaden</a>.',
           },
           {
             q: 'Welche GPU hat 4 GB VRAM?',
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Ce qui ne tient pas dans 4 Go',
         content: [
           'Ces modèles sont souvent demandés mais nécessitent plus de 4 Go de VRAM à tous les niveaux de quantisation :',
-          'Passer à 6 Go débloque Llama 3 8B et Mistral 7B — les deux modèles locaux les plus populaires. Voir <a href="/prompt-bites/best-local-llm-6gb-vram?lang=fr" class="text-primary hover:underline">les meilleurs LLM locaux pour 6 Go de VRAM</a>. Pour une comparaison matérielle complète, voir <a href="/local-llms/fastest-local-llms-low-end-pcs?lang=fr" class="text-primary hover:underline">les LLM locaux les plus rapides pour PC d\'entrée de gamme</a>.',
+          'Passer à 6 Go débloque Llama 3 8B et Mistral 7B — les deux modèles locaux les plus populaires. Voir <a href="/fr/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">les meilleurs LLM locaux pour 6 Go de VRAM</a>. Pour une comparaison matérielle complète, voir <a href="/fr/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">les LLM locaux les plus rapides pour PC d\'entrée de gamme</a>.',
         ],
         items: [
           'Llama 3 8B — nécessite ~5,5 Go en Q4_K_M (minimum)',
@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Puis-je faire tourner Llama 3 avec 4 Go de VRAM ?',
-            a: 'Non. Llama 3 8B nécessite au moins ~5,5 Go en Q4_K_M. Llama 3.2 3B tient en ~2,5 Go si vous voulez spécifiquement une variante Llama. Voir <a href="/prompt-bites/how-much-vram-for-local-llm?lang=fr" class="text-primary hover:underline">le guide complet des besoins VRAM</a>.',
+            a: 'Non. Llama 3 8B nécessite au moins ~5,5 Go en Q4_K_M. Llama 3.2 3B tient en ~2,5 Go si vous voulez spécifiquement une variante Llama. Voir <a href="/fr/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">le guide complet des besoins VRAM</a>.',
           },
           {
             q: 'Quel GPU a 4 Go de VRAM ?',
@@ -310,7 +310,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '4 GBに収まらないもの',
         content: [
           'よく要望されますが、すべての量化レベルで4 GB以上を必要とするモデル：',
-          '6 GBへのアップグレードでLlama 3 8BとMistral 7B — 最も人気の2つのローカルモデル — が解放されます。<a href="/prompt-bites/best-local-llm-6gb-vram?lang=ja" class="text-primary hover:underline">6 GB VRAM向け最良ローカルLLM</a>を参照してください。ハードウェアの完全な比較については<a href="/local-llms/fastest-local-llms-low-end-pcs?lang=ja" class="text-primary hover:underline">ローエンドPCの最速ローカルLLM</a>をご覧ください。',
+          '6 GBへのアップグレードでLlama 3 8BとMistral 7B — 最も人気の2つのローカルモデル — が解放されます。<a href="/ja/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB VRAM向け最良ローカルLLM</a>を参照してください。ハードウェアの完全な比較については<a href="/ja/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">ローエンドPCの最速ローカルLLM</a>をご覧ください。',
         ],
         items: [
           'Llama 3 8B — Q4_K_Mで~5.5 GB必要（最小）',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '4 GB VRAMでLlama 3を動かせますか？',
-            a: 'いいえ。Llama 3 8BはQ4_K_Mで最低~5.5 GBが必要です。Llamaバリアントが必要な場合、Llama 3.2 3Bは~2.5 GBに収まります。<a href="/prompt-bites/how-much-vram-for-local-llm?lang=ja" class="text-primary hover:underline">完全なVRAM要件ガイド</a>を参照してください。',
+            a: 'いいえ。Llama 3 8BはQ4_K_Mで最低~5.5 GBが必要です。Llamaバリアントが必要な場合、Llama 3.2 3Bは~2.5 GBに収まります。<a href="/ja/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">完全なVRAM要件ガイド</a>を参照してください。',
           },
           {
             q: '4 GB VRAMのGPUはどれですか？',
@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '4 GB装不下的模型',
         content: [
           '以下模型经常被问到，但在所有量化级别下都需要超过4 GB显存：',
-          '升级到6 GB可解锁Llama 3 8B和Mistral 7B——两款最流行的本地模型。参阅<a href="/prompt-bites/best-local-llm-6gb-vram?lang=zh" class="text-primary hover:underline">6 GB显存最佳本地LLM</a>。完整硬件比较请参阅<a href="/local-llms/fastest-local-llms-low-end-pcs?lang=zh" class="text-primary hover:underline">低端PC最快本地LLM</a>。',
+          '升级到6 GB可解锁Llama 3 8B和Mistral 7B——两款最流行的本地模型。参阅<a href="/zh/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB显存最佳本地LLM</a>。完整硬件比较请参阅<a href="/zh/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">低端PC最快本地LLM</a>。',
         ],
         items: [
           'Llama 3 8B——Q4_K_M至少需要约5.5 GB',
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '4 GB显存能运行Llama 3吗？',
-            a: '不能。Llama 3 8B在Q4_K_M下至少需要约5.5 GB。如果特别想要Llama变体，Llama 3.2 3B需约2.5 GB。参阅<a href="/prompt-bites/how-much-vram-for-local-llm?lang=zh" class="text-primary hover:underline">完整显存需求指南</a>。',
+            a: '不能。Llama 3 8B在Q4_K_M下至少需要约5.5 GB。如果特别想要Llama变体，Llama 3.2 3B需约2.5 GB。参阅<a href="/zh/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">完整显存需求指南</a>。',
           },
           {
             q: '哪些GPU有4 GB显存？',
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qué no cabe en 4 GB',
         content: [
           'Estos modelos se solicitan frecuentemente pero requieren más de 4 GB de VRAM en todos los niveles de cuantización:',
-          'Actualizar a 6 GB desbloquea Llama 3 8B y Mistral 7B — los dos modelos locales más populares. Consulta <a href="/prompt-bites/best-local-llm-6gb-vram?lang=es" class="text-primary hover:underline">los mejores LLMs locales para 6 GB de VRAM</a>. Para una comparación completa de hardware, consulta <a href="/local-llms/fastest-local-llms-low-end-pcs?lang=es" class="text-primary hover:underline">los LLMs locales más rápidos para PCs de gama baja</a>.',
+          'Actualizar a 6 GB desbloquea Llama 3 8B y Mistral 7B — los dos modelos locales más populares. Consulta <a href="/es/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">los mejores LLMs locales para 6 GB de VRAM</a>. Para una comparación completa de hardware, consulta <a href="/es/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">los LLMs locales más rápidos para PCs de gama baja</a>.',
         ],
         items: [
           'Llama 3 8B — necesita ~5,5 GB en Q4_K_M (mínimo)',
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puedo ejecutar Llama 3 con 4 GB de VRAM?',
-            a: 'No. Llama 3 8B necesita ~5,5 GB en Q4_K_M como mínimo. Llama 3.2 3B cabe en ~2,5 GB si quieres específicamente una variante Llama. Consulta <a href="/prompt-bites/how-much-vram-for-local-llm?lang=es" class="text-primary hover:underline">la guía completa de requisitos de VRAM</a>.',
+            a: 'No. Llama 3 8B necesita ~5,5 GB en Q4_K_M como mínimo. Llama 3.2 3B cabe en ~2,5 GB si quieres específicamente una variante Llama. Consulta <a href="/es/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">la guía completa de requisitos de VRAM</a>.',
           },
           {
             q: '¿Qué GPU tiene 4 GB de VRAM?',

@@ -874,9 +874,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lecturas relacionadas',
         items: [
-          '[Mejor GPU por menos de $300 para LLMs locales](/prompt-bites/best-gpu-under-300-local-llm?lang=es) — el nivel económico: RTX 3060 12 GB usada',
-          '[Mejor LLM local para programación con 12 GB de VRAM](/prompt-bites/best-local-llm-coding-12gb-vram?lang=es) — selección de modelos para tarjetas de 12-16 GB',
-          '[Guía de compra de GPU para LLMs locales 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=es) — la comparación completa de ocho GPUs en todos los rangos de presupuesto',
+          '[Mejor GPU por menos de $300 para LLMs locales](/es/prompt-bites/best-gpu-under-300-local-llm) — el nivel económico: RTX 3060 12 GB usada',
+          '[Mejor LLM local para programación con 12 GB de VRAM](/es/prompt-bites/best-local-llm-coding-12gb-vram) — selección de modelos para tarjetas de 12-16 GB',
+          '[Guía de compra de GPU para LLMs locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la comparación completa de ocho GPUs en todos los rangos de presupuesto',
         ],
       },
     },

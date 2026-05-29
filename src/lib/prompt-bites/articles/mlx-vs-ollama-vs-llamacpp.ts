@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Verwendet Ollama MLX auf dem Mac?',
-            a: 'Nein. Ollama verwendet llama.cpp mit Metal-GPU-Beschleunigung auf Apple Silicon, nicht MLX. Für native MLX-Inferenz verwenden Sie mlx-lm direkt oder LM Studio (das beide Backends unterstützt). Siehe <a href="/prompt-bites/ollama-mlx-apple-silicon?lang=de" class="text-primary hover:underline">Unterstützt Ollama MLX auf Apple Silicon?</a> für die vollständige Erklärung.',
+            a: 'Nein. Ollama verwendet llama.cpp mit Metal-GPU-Beschleunigung auf Apple Silicon, nicht MLX. Für native MLX-Inferenz verwenden Sie mlx-lm direkt oder LM Studio (das beide Backends unterstützt). Siehe <a href="/de/prompt-bites/ollama-mlx-apple-silicon" class="text-primary hover:underline">Unterstützt Ollama MLX auf Apple Silicon?</a> für die vollständige Erklärung.',
           },
           {
             q: 'Ist llama.cpp schneller als Ollama?',
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Wie konvertiere ich ein Ollama-Modell in das MLX-Format?',
-            a: 'Sie können ein Ollama-Modell nicht direkt in MLX konvertieren. Laden Sie die Original-Gewichte von Hugging Face herunter und verwenden Sie mlx-lms Konverter, oder finden Sie eine bereits konvertierte Version in der mlx-community-Organisation. Siehe <a href="/prompt-bites/convert-ollama-model-to-mlx?lang=de" class="text-primary hover:underline">Wie man Ollama-Modelle in MLX konvertiert</a>.',
+            a: 'Sie können ein Ollama-Modell nicht direkt in MLX konvertieren. Laden Sie die Original-Gewichte von Hugging Face herunter und verwenden Sie mlx-lms Konverter, oder finden Sie eine bereits konvertierte Version in der mlx-community-Organisation. Siehe <a href="/de/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">Wie man Ollama-Modelle in MLX konvertiert</a>.',
           },
         ],
       },
@@ -256,7 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ollama utilise-t-il MLX sur Mac ?',
-            a: 'Non. Ollama utilise llama.cpp avec accélération GPU Metal sur Apple Silicon, pas MLX. Pour l\'inférence MLX native, utilisez mlx-lm directement ou LM Studio (qui prend en charge les deux backends). Voir <a href="/prompt-bites/ollama-mlx-apple-silicon?lang=fr" class="text-primary hover:underline">Ollama prend-il en charge MLX sur Apple Silicon ?</a> pour l\'explication complète.',
+            a: 'Non. Ollama utilise llama.cpp avec accélération GPU Metal sur Apple Silicon, pas MLX. Pour l\'inférence MLX native, utilisez mlx-lm directement ou LM Studio (qui prend en charge les deux backends). Voir <a href="/fr/prompt-bites/ollama-mlx-apple-silicon" class="text-primary hover:underline">Ollama prend-il en charge MLX sur Apple Silicon ?</a> pour l\'explication complète.',
           },
           {
             q: 'llama.cpp est-il plus rapide qu\'Ollama ?',
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Comment convertir un modèle Ollama au format MLX ?',
-            a: 'Vous ne pouvez pas convertir directement un modèle Ollama en MLX. Téléchargez les poids originaux depuis Hugging Face et utilisez le convertisseur de mlx-lm, ou trouvez une version pré-convertie dans l\'organisation mlx-community. Voir <a href="/prompt-bites/convert-ollama-model-to-mlx?lang=fr" class="text-primary hover:underline">Comment convertir des modèles Ollama en MLX</a>.',
+            a: 'Vous ne pouvez pas convertir directement un modèle Ollama en MLX. Téléchargez les poids originaux depuis Hugging Face et utilisez le convertisseur de mlx-lm, ou trouvez une version pré-convertie dans l\'organisation mlx-community. Voir <a href="/fr/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">Comment convertir des modèles Ollama en MLX</a>.',
           },
         ],
       },
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'OllamaはMacでMLXを使用しますか？',
-            a: 'いいえ。OllamaはApple Silicon上でMLXではなく、Metal GPU加速付きのllaMa.cppを使用します。ネイティブMLX推論には、mlx-lmを直接使用するか、LM Studio（両方のバックエンドをサポート）を使用してください。詳しい説明は<a href="/prompt-bites/ollama-mlx-apple-silicon?lang=ja" class="text-primary hover:underline">OllamaはApple SiliconでMLXをサポートしていますか？</a>をご覧ください。',
+            a: 'いいえ。OllamaはApple Silicon上でMLXではなく、Metal GPU加速付きのllaMa.cppを使用します。ネイティブMLX推論には、mlx-lmを直接使用するか、LM Studio（両方のバックエンドをサポート）を使用してください。詳しい説明は<a href="/ja/prompt-bites/ollama-mlx-apple-silicon" class="text-primary hover:underline">OllamaはApple SiliconでMLXをサポートしていますか？</a>をご覧ください。',
           },
           {
             q: 'llama.cppはOllamaより速いですか？',
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'OllamaモデルをMLX形式に変換するにはどうすればよいですか？',
-            a: 'OllamaモデルをMLXに直接変換することはできません。Hugging Faceから元のウェイトをダウンロードし、mlx-lmのコンバーターを使用するか、mlx-communityオーガニゼーションで事前変換されたバージョンを探してください。<a href="/prompt-bites/convert-ollama-model-to-mlx?lang=ja" class="text-primary hover:underline">OllamaモデルをMLXに変換する方法</a>をご覧ください。',
+            a: 'OllamaモデルをMLXに直接変換することはできません。Hugging Faceから元のウェイトをダウンロードし、mlx-lmのコンバーターを使用するか、mlx-communityオーガニゼーションで事前変換されたバージョンを探してください。<a href="/ja/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">OllamaモデルをMLXに変換する方法</a>をご覧ください。',
           },
         ],
       },
@@ -406,7 +406,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ollama 在 Mac 上使用 MLX 吗？',
-            a: '不。Ollama 在 Apple Silicon 上使用带有 Metal GPU 加速的 llama.cpp，而不是 MLX。如需原生 MLX 推理，请直接使用 mlx-lm 或 LM Studio（支持两种后端）。完整说明请参阅<a href="/prompt-bites/ollama-mlx-apple-silicon?lang=zh" class="text-primary hover:underline">Ollama 是否支持 Apple Silicon 上的 MLX？</a>。',
+            a: '不。Ollama 在 Apple Silicon 上使用带有 Metal GPU 加速的 llama.cpp，而不是 MLX。如需原生 MLX 推理，请直接使用 mlx-lm 或 LM Studio（支持两种后端）。完整说明请参阅<a href="/zh/prompt-bites/ollama-mlx-apple-silicon" class="text-primary hover:underline">Ollama 是否支持 Apple Silicon 上的 MLX？</a>。',
           },
           {
             q: 'llama.cpp 比 Ollama 更快吗？',
@@ -418,7 +418,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '如何将 Ollama 模型转换为 MLX 格式？',
-            a: '您无法直接将 Ollama 模型转换为 MLX。请从 Hugging Face 下载原始权重并使用 mlx-lm 的转换器，或在 mlx-community 组织中寻找预转换版本。请参阅<a href="/prompt-bites/convert-ollama-model-to-mlx?lang=zh" class="text-primary hover:underline">如何将 Ollama 模型转换为 MLX</a>。',
+            a: '您无法直接将 Ollama 模型转换为 MLX。请从 Hugging Face 下载原始权重并使用 mlx-lm 的转换器，或在 mlx-community 组织中寻找预转换版本。请参阅<a href="/zh/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">如何将 Ollama 模型转换为 MLX</a>。',
           },
         ],
       },

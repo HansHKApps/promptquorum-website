@@ -751,12 +751,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[GitHub Copilot durch ein lokales LLM ersetzen](/power-local-llm/replace-github-copilot-with-local-llm?lang=de) — praktisches Anwendungs-Kontext: Kostenberechnung, Hardware-Sizing, welches Modell zu welchem Workflow passt.',
-          '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=de) — ergänzt Modellwahl; die Harness-Schicht unter dem Modell.',
-          '[Lokales Coding-LLM ohne Internet](/power-local-llm/local-coding-llm-without-internet?lang=de) — Nische-Use-Case Kontext für vollständig offline Workflows.',
-          '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de) — tiefere technische Schicht hinter der VRAM-Mathematik, die in diesem Leitfaden verwendet wird.',
-          '[Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) — allgemeine Modelle Autorität für Non-Coding Workloads.',
-          '[Power Local LLM Hub](/power-local-llm?lang=de) — komplette Guides Bibliothek.',
+          '[GitHub Copilot durch ein lokales LLM ersetzen](/de/power-local-llm/replace-github-copilot-with-local-llm) — praktisches Anwendungs-Kontext: Kostenberechnung, Hardware-Sizing, welches Modell zu welchem Workflow passt.',
+          '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — ergänzt Modellwahl; die Harness-Schicht unter dem Modell.',
+          '[Lokales Coding-LLM ohne Internet](/de/power-local-llm/local-coding-llm-without-internet) — Nische-Use-Case Kontext für vollständig offline Workflows.',
+          '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — tiefere technische Schicht hinter der VRAM-Mathematik, die in diesem Leitfaden verwendet wird.',
+          '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) — allgemeine Modelle Autorität für Non-Coding Workloads.',
+          '[Power Local LLM Hub](/de/power-local-llm) — komplette Guides Bibliothek.',
         ],
       },
       faq: {
@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Beste lokale Coding-Modelle 2026: Qwen3-Coder vs DeepSeek vs Codestral',
       description: 'Sechs lokale Coding-Modelle im Vergleich: Größe, Kontext, Lizenz, VRAM und HumanEval+-Richtung. Qwen3-Coder 30B ist die Standard-Wahl für Mai 2026; vollständige Analyse im Beitrag.',
-      image: 'https://www.promptquorum.com/api/og/power-local-llm/best-local-coding-models-2026?lang=de',
+      image: 'https://www.promptquorum.com/de/api/og/power-local-llm/best-local-coding-models-2026',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -831,7 +831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
       inLanguage: 'de',
-      url: 'https://www.promptquorum.com/power-local-llm/best-local-coding-models-2026?lang=de',
+      url: 'https://www.promptquorum.com/de/power-local-llm/best-local-coding-models-2026',
       keywords: 'beste lokale Coding-Modelle 2026, qwen3-coder vs deepseek, codestral vs qwen, lokale LLM zum Programmieren, Open-Source Coding-Modell, lokale LLM HumanEval',
       about: [
         { '@type': 'Thing', name: 'Qwen3-Coder' },
@@ -1182,12 +1182,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Remplacer GitHub Copilot avec un LLM local](/power-local-llm/replace-github-copilot-with-local-llm?lang=fr) — contexte application pratique : math coût, sizing hardware, quel modèle à quel workflow.',
-          '[Continue.dev vs Cline vs Aider : Meilleur agent codage local 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr) — paires avec choix modèle; couche harness sous le modèle.',
-          '[LLM de codage local sans Internet](/power-local-llm/local-coding-llm-without-internet?lang=fr) — contexte use-case niche pour workflows complètement offline.',
-          '[Quantisierung LLM expliquée](/local-llms/llm-quantization-explained?lang=fr) — couche technique plus profonde derrière math VRAM utilisée dans ce guide.',
-          '[Meilleurs LLMs locaux 2026](/local-llms/best-local-llms-2026?lang=fr) — autorité modèles général-purpose pour non-coding workloads.',
-          '[Power Local LLM Hub](/power-local-llm?lang=fr) — bibliothèque guides complète.',
+          '[Remplacer GitHub Copilot avec un LLM local](/fr/power-local-llm/replace-github-copilot-with-local-llm) — contexte application pratique : math coût, sizing hardware, quel modèle à quel workflow.',
+          '[Continue.dev vs Cline vs Aider : Meilleur agent codage local 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — paires avec choix modèle; couche harness sous le modèle.',
+          '[LLM de codage local sans Internet](/fr/power-local-llm/local-coding-llm-without-internet) — contexte use-case niche pour workflows complètement offline.',
+          '[Quantisierung LLM expliquée](/fr/local-llms/llm-quantization-explained) — couche technique plus profonde derrière math VRAM utilisée dans ce guide.',
+          '[Meilleurs LLMs locaux 2026](/fr/local-llms/best-local-llms-2026) — autorité modèles général-purpose pour non-coding workloads.',
+          '[Power Local LLM Hub](/fr/power-local-llm) — bibliothèque guides complète.',
         ],
       },
       faq: {
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Meilleurs modèles de codage local 2026 : Qwen3-Coder vs DeepSeek vs Codestral',
       description: 'Six modèles de codage local comparés : taille, contexte, licence, VRAM et direction HumanEval+. Qwen3-Coder 30B est le meilleur choix pour mai 2026 ; analyse complète incluse.',
-      image: 'https://www.promptquorum.com/api/og/power-local-llm/best-local-coding-models-2026?lang=fr',
+      image: 'https://www.promptquorum.com/fr/api/og/power-local-llm/best-local-coding-models-2026',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1254,7 +1254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
       inLanguage: 'fr',
-      url: 'https://www.promptquorum.com/power-local-llm/best-local-coding-models-2026?lang=fr',
+      url: 'https://www.promptquorum.com/fr/power-local-llm/best-local-coding-models-2026',
       keywords: 'meilleur modèle de codage local 2026, qwen3-coder vs deepseek, codestral vs qwen, llm local pour codage, modèle de codage open source, llm local humaneval',
       about: [
         { '@type': 'Thing', name: 'Qwen3-Coder' },

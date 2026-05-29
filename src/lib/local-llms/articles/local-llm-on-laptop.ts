@@ -584,7 +584,7 @@ schema: {
         },
         bestModels: {
           title: 'Was sind die besten Local LLM-Modelle für Laptops?',
-          content: 'Diese Modelle sind speziell für Laptop-Beschränkungen ausgewählt -- Qualität, RAM-Verbrauch und kontinuierliche Generierungsgeschwindigkeit im Gleichgewicht. Für detaillierte Anleitungen zu VRAM-Anforderungen in verschiedenen Laptop-Konfigurationen siehe den [VRAM-Anforderungsleitfaden →](/local-llms/how-much-vram-local-llm?lang=de). Installieren Sie [Ollama](/local-llms/how-to-install-ollama) um jedes dieser Modelle mit einem einzigen Befehl auszuführen:',
+          content: 'Diese Modelle sind speziell für Laptop-Beschränkungen ausgewählt -- Qualität, RAM-Verbrauch und kontinuierliche Generierungsgeschwindigkeit im Gleichgewicht. Für detaillierte Anleitungen zu VRAM-Anforderungen in verschiedenen Laptop-Konfigurationen siehe den [VRAM-Anforderungsleitfaden →](/de/local-llms/how-much-vram-local-llm). Installieren Sie [Ollama](/local-llms/how-to-install-ollama) um jedes dieser Modelle mit einem einzigen Befehl auszuführen:',
           rows: [
             { 'Modell': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Geschwindigkeit (CPU)': '25-45 Token/s', 'Qualität': 'Mittel', 'Beste für': '8 GB Laptops, schnelle Aufgaben' },
             { 'Modell': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Geschwindigkeit (CPU)': '20-35 Token/s', 'Qualität': 'Mittel-Hoch', 'Beste für': '8 GB Laptops, Reasoning/Coding' },
@@ -693,9 +693,9 @@ schema: {
             '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- Detaillierter Vergleich von Inferenz-Architekturen, die für die Auswahl von Laptop-Hardware relevant sind',
             '[Lokale LLMs vs Cloud-APIs](/local-llms/local-llms-vs-cloud-apis) -- Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann Laptop-Inferenz die richtige Wahl ist',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Vollständiger Leitfaden zu Q4/Q5/Q8-Quantisierungs-Kompromissen für speicherbegrenzte Laptop-Umgebungen',
-            '[MLX vs Ollama vs llama.cpp auf Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=de) -- Framework-Vergleich für Apple Silicon: Geschwindigkeit, Setup-Zeit und Ökosystem-Überlegungen.',
-            '[Günstigste Methode zum lokalen Ausführen eines 70B-Modells](/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=de) -- Wann ein Laptop 70B verarbeiten kann: Q3_K_S auf M3 Max vs CPU-Offloading.',
-            '[Beste GPU für LLM-Inferenz unter 500 $ (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=de) -- eGPU-Upgrade-Pfad für MacBook und Windows-Laptops.',
+            '[MLX vs Ollama vs llama.cpp auf Mac 2026](/de/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Framework-Vergleich für Apple Silicon: Geschwindigkeit, Setup-Zeit und Ökosystem-Überlegungen.',
+            '[Günstigste Methode zum lokalen Ausführen eines 70B-Modells](/de/prompt-bites/cheapest-way-to-run-70b-model-locally) -- Wann ein Laptop 70B verarbeiten kann: Q3_K_S auf M3 Max vs CPU-Offloading.',
+            '[Beste GPU für LLM-Inferenz unter 500 $ (2026)](/de/local-llms/best-gpu-for-llm-inference-under-500-2026) -- eGPU-Upgrade-Pfad für MacBook und Windows-Laptops.',
           ],
         },
         faqSection: {
@@ -771,7 +771,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Local LLMs auf Laptop (8-16GB VRAM) - Performance Guide 2026',
         'description': 'Praxis-Guide für leistungsstarke Local LLMs auf Laptops mit wenig VRAM. Mit Quantisierungs-Tricks, besten Modellen und echten Performance-Benchmarks.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-llm-on-laptop',
         'inLanguage': 'de',
         'datePublished': '2026-01-01',
         'dateModified': '2026-04-18',
@@ -950,7 +950,7 @@ schema: {
         },
         bestModels: {
           title: 'Quels sont les meilleurs modèles Local LLM pour ordinateurs portables?',
-          content: 'Ces modèles sont spécifiquement sélectionnés pour les contraintes d\'ordinateur portable -- équilibrant la qualité, l\'utilisation de RAM et la vitesse de génération continue. Pour des conseils détaillés sur les exigences VRAM selon les configurations portables, consultez le [guide des exigences VRAM →](/local-llms/how-much-vram-local-llm?lang=fr). Installez [Ollama](/local-llms/how-to-install-ollama) pour exécuter l\'un de ces modèles avec une seule commande:',
+          content: 'Ces modèles sont spécifiquement sélectionnés pour les contraintes d\'ordinateur portable -- équilibrant la qualité, l\'utilisation de RAM et la vitesse de génération continue. Pour des conseils détaillés sur les exigences VRAM selon les configurations portables, consultez le [guide des exigences VRAM →](/fr/local-llms/how-much-vram-local-llm). Installez [Ollama](/local-llms/how-to-install-ollama) pour exécuter l\'un de ces modèles avec une seule commande:',
           rows: [
             { 'Modèle': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Vitesse (CPU)': '25-45 token/s', 'Qualité': 'Moyenne', 'Meilleur pour': 'Ordinateurs portables 8 GB, tâches rapides' },
             { 'Modèle': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Vitesse (CPU)': '20-35 token/s', 'Qualité': 'Moyenne-Haute', 'Meilleur pour': 'Ordinateurs portables 8 GB, reasoning/coding' },
@@ -1058,9 +1058,9 @@ schema: {
             '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- comparaison détaillée des architectures d\'inférence pertinentes pour la sélection du matériel d\'ordinateur portable',
             '[Local LLMs vs API cloud](/local-llms/local-llms-vs-cloud-apis) -- comparaison des coûts et de la vitesse pour vous aider à décider quand l\'inférence d\'ordinateur portable est le bon choix',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- guide complet des compromis de quantification Q4/Q5/Q8 pour les environnements d\'ordinateur portable à mémoire limitée',
-            '[MLX vs Ollama vs llama.cpp sur Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=fr) -- Comparaison des frameworks pour Apple Silicon: vitesse, temps de configuration et compromis d\'écosystème.',
-            '[Moyen le moins cher d\'exécuter un modèle 70B localement](/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=fr) -- Quand un ordinateur portable peut gérer 70B : Q3_K_S sur M3 Max vs déchargement CPU.',
-            '[Meilleur GPU pour l\'inférence LLM sous 500 $ (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=fr) -- Chemin de mise à niveau eGPU pour MacBook et ordinateurs portables Windows.',
+            '[MLX vs Ollama vs llama.cpp sur Mac 2026](/fr/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Comparaison des frameworks pour Apple Silicon: vitesse, temps de configuration et compromis d\'écosystème.',
+            '[Moyen le moins cher d\'exécuter un modèle 70B localement](/fr/prompt-bites/cheapest-way-to-run-70b-model-locally) -- Quand un ordinateur portable peut gérer 70B : Q3_K_S sur M3 Max vs déchargement CPU.',
+            '[Meilleur GPU pour l\'inférence LLM sous 500 $ (2026)](/fr/local-llms/best-gpu-for-llm-inference-under-500-2026) -- Chemin de mise à niveau eGPU pour MacBook et ordinateurs portables Windows.',
           ],
         },
         faqSection: {
@@ -1135,7 +1135,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Local LLMs sur ordinateur portable (8-16 Go VRAM) - Guide Performance 2026',
         'description': 'Guide pratique pour exécuter des Local LLMs puissants avec peu de VRAM. Astuces de quantification, meilleurs modèles et benchmarks réels.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-on-laptop',
         'inLanguage': 'fr',
         'datePublished': '2026-01-01',
         'dateModified': '2026-04-18',
@@ -1314,7 +1314,7 @@ schema: {
         },
         bestModels: {
           title: 'ノートパソコン向けのベストローカルLLMモデルは何ですか？',
-          content: 'これらのモデルはノートパソコンの制約用に特別に選択されています--品質、RAM使用量、および継続的な生成速度のバランスをとっています。異なるノートパソコン構成でのVRAM要件についての詳細ガイドは、[VRAM要件ガイド →](/local-llms/how-much-vram-local-llm?lang=ja)をご参照ください。[Ollama](/local-llms/how-to-install-ollama)をインストールして、これらのいずれかを単一のコマンドで実行します：',
+          content: 'これらのモデルはノートパソコンの制約用に特別に選択されています--品質、RAM使用量、および継続的な生成速度のバランスをとっています。異なるノートパソコン構成でのVRAM要件についての詳細ガイドは、[VRAM要件ガイド →](/ja/local-llms/how-much-vram-local-llm)をご参照ください。[Ollama](/local-llms/how-to-install-ollama)をインストールして、これらのいずれかを単一のコマンドで実行します：',
           rows: [
             { 'モデル': 'Llama 3.2 3B', 'RAM': '2.5GB', 'Speed (CPU)': '25-45トークン/秒', '品質': '中', '最適な用途': '8GBノートパソコン、クイックタスク' },
             { 'モデル': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20-35トークン/秒', '品質': '中〜高', '最適な用途': '8GBノートパソコン、推論/コーディング' },
@@ -1422,9 +1422,9 @@ schema: {
             '[GPUvs CPUvs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)--ノートパソコンハードウェア選択に関連する推論アーキテクチャの詳細な比較',
             '[ローカルLLMs vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis)--ノートパソコン推論がいつ正しい選択であるかを決定するのに役立つコストと速度の比較',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)--メモリ制約のあるノートパソコン環境向けのQ4/Q5/Q8量子化トレードオフの完全なガイド',
-            '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=ja) -- Apple Silicon フレームワーク比較: スピード、セットアップ時間、エコシステムトレードオフ',
-            '[70Bモデルをローカルで実行する最安値の方法](/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=ja) -- ノートパソコンが70Bを処理できるとき：M3 MaxでのQ3_K_S vs CPUオフローディング。',
-            '[500ドル以下のローカルLLM推論向けベストGPU (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=ja) -- MacBookとWindowsラップトップ向けeGPUアップグレードパス。',
+            '[MLX vs Ollama vs llama.cpp on Mac 2026](/ja/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Apple Silicon フレームワーク比較: スピード、セットアップ時間、エコシステムトレードオフ',
+            '[70Bモデルをローカルで実行する最安値の方法](/ja/prompt-bites/cheapest-way-to-run-70b-model-locally) -- ノートパソコンが70Bを処理できるとき：M3 MaxでのQ3_K_S vs CPUオフローディング。',
+            '[500ドル以下のローカルLLM推論向けベストGPU (2026)](/ja/local-llms/best-gpu-for-llm-inference-under-500-2026) -- MacBookとWindowsラップトップ向けeGPUアップグレードパス。',
           ],
         },
         faqSection: {
@@ -1499,7 +1499,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'ノートPCでLocal LLMを動かす（8〜16GB VRAM）実測性能ガイド 2026',
         'description': '低VRAM環境で高性能Local LLMを動かす実践ガイド。量子化テクニック、おすすめモデル、実測ベンチマークを詳しく解説。',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-on-laptop',
         'inLanguage': 'ja',
         'datePublished': '2026-01-01',
         'dateModified': '2026-04-18',
@@ -1678,7 +1678,7 @@ schema: {
         },
         bestModels: {
           title: '笔记本电脑最佳本地LLM模型是什么？',
-          content: '这些模型专门为笔记本电脑限制而选择 -- 平衡质量、RAM使用和持续生成速度。关于不同笔记本电脑配置中VRAM要求的详细指南，见[VRAM需求指南 →](/local-llms/how-much-vram-local-llm?lang=zh)。安装[Ollama](/local-llms/how-to-install-ollama)以使用单个命令运行这些模型中的任何一个：',
+          content: '这些模型专门为笔记本电脑限制而选择 -- 平衡质量、RAM使用和持续生成速度。关于不同笔记本电脑配置中VRAM要求的详细指南，见[VRAM需求指南 →](/zh/local-llms/how-much-vram-local-llm)。安装[Ollama](/local-llms/how-to-install-ollama)以使用单个命令运行这些模型中的任何一个：',
           rows: [
             { '模型': 'Llama 3.2 3B', 'RAM': '2.5GB', '速度（CPU）': '25-45令牌/秒', '质量': '中等', '最佳适配': '8GB笔记本电脑，快速任务' },
             { '模型': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', '速度（CPU）': '20-35令牌/秒', '质量': '中高', '最佳适配': '8GB笔记本电脑，推理/编码' },
@@ -1786,9 +1786,9 @@ schema: {
             '[GPU与CPU与Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- 与笔记本电脑硬件选择相关的推理架构的详细比较',
             '[本地LLM与云API](/local-llms/local-llms-vs-cloud-apis) -- 成本和速度比较，可帮助您决定何时笔记本电脑推理是正确的选择',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- 关于内存受限笔记本电脑环境的Q4/Q5/Q8量化权衡的完整指南',
-            '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac?lang=zh) -- Apple Silicon 框架对比：速度、设置时间和生态系统权衡',
-            '[本地运行70B模型的最低成本方案](/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=zh) -- 笔记本电脑处理70B的时机：M3 Max上的Q3_K_S vs CPU卸载。',
-            '[500美元以下本地LLM推理最佳GPU (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=zh) -- MacBook和Windows笔记本的eGPU升级路径。',
+            '[MLX vs Ollama vs llama.cpp on Mac 2026](/zh/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Apple Silicon 框架对比：速度、设置时间和生态系统权衡',
+            '[本地运行70B模型的最低成本方案](/zh/prompt-bites/cheapest-way-to-run-70b-model-locally) -- 笔记本电脑处理70B的时机：M3 Max上的Q3_K_S vs CPU卸载。',
+            '[500美元以下本地LLM推理最佳GPU (2026)](/zh/local-llms/best-gpu-for-llm-inference-under-500-2026) -- MacBook和Windows笔记本的eGPU升级路径。',
           ],
         },
         faqSection: {
@@ -1863,7 +1863,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '笔记本运行 Local LLM（8-16GB 显存）实测性能指南 2026',
         'description': '低显存环境运行高性能 Local LLM 的完整指南。涵盖量化技巧、最佳模型推荐与真实性能测试。',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-on-laptop',
         'inLanguage': 'zh',
         'datePublished': '2026-01-01',
         'dateModified': '2026-04-18',

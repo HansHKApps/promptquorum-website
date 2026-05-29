@@ -387,12 +387,12 @@ schema: {
         relatedReading: {
           title: 'Weiterführende Lektüre',
           items: [
-            '[Beste KI-Coding-Assistenten für lokale LLM](/local-llms/best-ai-coding-assistant-local-llm?lang=de) -- Umfassender Vergleich von Cursor, Continue.dev, Cody, Tabnine und Windsurf mit Unterstützung für lokale LLMs.',
-            '[Lokaler LLM-Entwickler-Stack](/local-llms/local-llm-developer-stack?lang=de) -- Vollständiger Stack mit API-Server und Produktions-Monitoring über die IDE-Integration hinaus.',
-            '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) -- Ollama für Code-Vervollständigungen einrichten.',
-            '[Beste lokale LLMs für Programmierung](/local-llms/best-local-llms-for-coding?lang=de) -- Detaillierter Programmierungs-Modell-Benchmark.',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=de) -- Welches Werkzeug verwenden.',
-            '[Lokale LLM OpenAI-kompatible API](/local-llms/local-llm-openai-compatible-api?lang=de) -- Code-Vervollständigungs-APIs.',
+            '[Beste KI-Coding-Assistenten für lokale LLM](/de/local-llms/best-ai-coding-assistant-local-llm) -- Umfassender Vergleich von Cursor, Continue.dev, Cody, Tabnine und Windsurf mit Unterstützung für lokale LLMs.',
+            '[Lokaler LLM-Entwickler-Stack](/de/local-llms/local-llm-developer-stack) -- Vollständiger Stack mit API-Server und Produktions-Monitoring über die IDE-Integration hinaus.',
+            '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- Ollama für Code-Vervollständigungen einrichten.',
+            '[Beste lokale LLMs für Programmierung](/de/local-llms/best-local-llms-for-coding) -- Detaillierter Programmierungs-Modell-Benchmark.',
+            '[How to Install LM Studio](/de/local-llms/how-to-install-lm-studio) -- Welches Werkzeug verwenden.',
+            '[Lokale LLM OpenAI-kompatible API](/de/local-llms/local-llm-openai-compatible-api) -- Code-Vervollständigungs-APIs.',
           ],
         },
         sources: {
@@ -411,7 +411,7 @@ schema: {
         '@type': 'HowTo',
         'name': 'Wie man lokale LLMs mit VS Code und Cursor 2026 nutzt',
         'description': 'Wie man lokale LLMs in VS Code und Cursor für private, schnelle Code-Unterstützung mit PromptQuorum-Integration nutzt.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-llms-with-vscode-cursor',
         'inLanguage': 'de',
         'step': [
           { '@type': 'HowToStep', 'name': 'Installieren Sie Continue.dev für VS Code', 'text': 'Installieren Sie die Continue-Erweiterung aus dem VS Code Marketplace und konfigurieren Sie sie, um auf Ihren lokalen Ollama-Server zu zeigen.' },
@@ -564,12 +564,12 @@ schema: {
         relatedReading: {
           title: 'Lectures connexes',
           items: [
-            '[Meilleur assistant IA de code pour LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=fr) -- Comparaison complète de Cursor, Continue.dev, Cody, Tabnine et Windsurf avec support LLM local.',
-            '[Stack LLM Développeur Local](/local-llms/local-llm-developer-stack?lang=fr) -- Stack complet avec serveur API et monitoring de production au-delà de l\'intégration IDE.',
-            '[Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) -- Configurer Ollama pour les complétions de code.',
-            '[Meilleurs LLM locaux pour le codage](/local-llms/best-local-llms-for-coding?lang=fr) -- Benchmark détaillé du modèle de codage.',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) -- Quel outil utiliser.',
-            '[API compatible OpenAI LLM local](/local-llms/local-llm-openai-compatible-api?lang=fr) -- APIs de complétions de code.',
+            '[Meilleur assistant IA de code pour LLM local](/fr/local-llms/best-ai-coding-assistant-local-llm) -- Comparaison complète de Cursor, Continue.dev, Cody, Tabnine et Windsurf avec support LLM local.',
+            '[Stack LLM Développeur Local](/fr/local-llms/local-llm-developer-stack) -- Stack complet avec serveur API et monitoring de production au-delà de l\'intégration IDE.',
+            '[Installer Ollama](/fr/local-llms/how-to-install-ollama) -- Configurer Ollama pour les complétions de code.',
+            '[Meilleurs LLM locaux pour le codage](/fr/local-llms/best-local-llms-for-coding) -- Benchmark détaillé du modèle de codage.',
+            '[How to Install LM Studio](/fr/local-llms/how-to-install-lm-studio) -- Quel outil utiliser.',
+            '[API compatible OpenAI LLM local](/fr/local-llms/local-llm-openai-compatible-api) -- APIs de complétions de code.',
           ],
         },
         sources: {
@@ -587,7 +587,7 @@ schema: {
         '@type': 'HowTo',
         'name': 'Comment utiliser les LLM locaux avec VS Code et Cursor 2026',
         'description': 'Comment utiliser les LLM locaux dans VS Code et Cursor pour l\'assistance code privée et rapide avec intégration PromptQuorum.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-with-vscode-cursor',
         'inLanguage': 'fr',
         'step': [
           { '@type': 'HowToStep', 'name': 'Installez Continue.dev pour VS Code', 'text': 'Installez l\'extension Continue depuis la marketplace VS Code et configurez-la pour pointer vers votre serveur Ollama local.' },
@@ -755,12 +755,12 @@ schema: {
         relatedReading: {
           title: '関連情報',
           items: [
-            '[ローカルLLM向け最高のAIコーディングアシスタント](/local-llms/best-ai-coding-assistant-local-llm?lang=ja) -- Cursor、Continue.dev、Cody、Tabnine、Windsurfの包括的な比較とローカルLLMサポート。',
-            '[ローカルLLM開発スタック](/local-llms/local-llm-developer-stack?lang=ja) -- IDE統合を超えたAPIサーバーと本番モニタリングを含む完全スタック。',
-            '[Ollama をインストール](/local-llms/how-to-install-ollama?lang=ja) -- コード補完用 Ollama セットアップ。',
-            '[コーディング用の最高のローカル LLM](/local-llms/best-local-llms-for-coding?lang=ja) -- 詳細なコーディングモデルベンチマーク。',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=ja) -- どのツールを使用するか。',
-            '[ローカル LLM OpenAI 互換 API](/local-llms/local-llm-openai-compatible-api?lang=ja) -- コード補完 API。',
+            '[ローカルLLM向け最高のAIコーディングアシスタント](/ja/local-llms/best-ai-coding-assistant-local-llm) -- Cursor、Continue.dev、Cody、Tabnine、Windsurfの包括的な比較とローカルLLMサポート。',
+            '[ローカルLLM開発スタック](/ja/local-llms/local-llm-developer-stack) -- IDE統合を超えたAPIサーバーと本番モニタリングを含む完全スタック。',
+            '[Ollama をインストール](/ja/local-llms/how-to-install-ollama) -- コード補完用 Ollama セットアップ。',
+            '[コーディング用の最高のローカル LLM](/ja/local-llms/best-local-llms-for-coding) -- 詳細なコーディングモデルベンチマーク。',
+            '[How to Install LM Studio](/ja/local-llms/how-to-install-lm-studio) -- どのツールを使用するか。',
+            '[ローカル LLM OpenAI 互換 API](/ja/local-llms/local-llm-openai-compatible-api) -- コード補完 API。',
           ],
         },
         sources: {
@@ -778,7 +778,7 @@ schema: {
         '@type': 'HowTo',
         'name': 'VS CodeとCursorで 2026年ローカル LLM を使用する方法',
         'description': 'VS CodeとCursorでローカルLLMを使用してプライベートで高速なコードアシスタンスを得る方法(PromptQuorum統合)',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-with-vscode-cursor',
         'inLanguage': 'ja',
         'step': [
           { '@type': 'HowToStep', 'name': 'VS Code用Continue.devをインストール', 'text': 'VS Code Marketplaceからcontinue拡張をインストールし、ローカルOllamaサーバーをポイントするように設定。' },
@@ -931,12 +931,12 @@ schema: {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[本地LLM最佳AI编码助手](/local-llms/best-ai-coding-assistant-local-llm?lang=zh) -- Cursor、Continue.dev、Cody、Tabnine和Windsurf与本地LLM支持的全面对比。',
-            '[本地LLM开发栈](/local-llms/local-llm-developer-stack?lang=zh) -- 超越IDE集成的完整栈，包含API服务器搭建和生产监控。',
-            '[安装Ollama](/local-llms/how-to-install-ollama?lang=zh) -- 代码补全Ollama设置。',
-            '[编码的最佳本地LLM](/local-llms/best-local-llms-for-coding?lang=zh) -- 详细编码模型基准。',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) -- 使用哪个工具。',
-            '[本地LLM OpenAI兼容API](/local-llms/local-llm-openai-compatible-api?lang=zh) -- 代码补全API。',
+            '[本地LLM最佳AI编码助手](/zh/local-llms/best-ai-coding-assistant-local-llm) -- Cursor、Continue.dev、Cody、Tabnine和Windsurf与本地LLM支持的全面对比。',
+            '[本地LLM开发栈](/zh/local-llms/local-llm-developer-stack) -- 超越IDE集成的完整栈，包含API服务器搭建和生产监控。',
+            '[安装Ollama](/zh/local-llms/how-to-install-ollama) -- 代码补全Ollama设置。',
+            '[编码的最佳本地LLM](/zh/local-llms/best-local-llms-for-coding) -- 详细编码模型基准。',
+            '[How to Install LM Studio](/zh/local-llms/how-to-install-lm-studio) -- 使用哪个工具。',
+            '[本地LLM OpenAI兼容API](/zh/local-llms/local-llm-openai-compatible-api) -- 代码补全API。',
           ],
         },
         sources: {
@@ -954,7 +954,7 @@ schema: {
         '@type': 'HowTo',
         'name': '如何在VS Code和Cursor中使用本地LLM 2026',
         'description': '如何在VS Code和Cursor中使用本地LLM进行私密、快速的代码帮助（带PromptQuorum集成）。',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-with-vscode-cursor',
         'inLanguage': 'zh',
         'step': [
           { '@type': 'HowToStep', 'name': '安装VS Code的Continue.dev', 'text': '从VS Code市场安装Continue扩展并将其配置为指向您的本地Ollama服务器。' },
@@ -1109,12 +1109,12 @@ schema: {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[Mejor asistente de código IA para LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=es) -- Comparativa completa de Cursor, Continue.dev, Cody, Tabnine y Windsurf con soporte para LLM local.',
-            '[Stack de desarrollador con LLM local](/local-llms/local-llm-developer-stack?lang=es) -- El stack completo que incluye configuración del servidor API y monitoreo en producción más allá de la integración con el IDE.',
-            '[Cómo instalar Ollama](/local-llms/how-to-install-ollama?lang=es) -- Configura Ollama para completaciones de código.',
-            '[Mejores LLMs locales para programación](/local-llms/best-local-llms-for-coding?lang=es) -- Benchmark detallado de modelos de código.',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=es) -- Qué herramienta usar.',
-            '[API compatible con OpenAI para LLM local](/local-llms/local-llm-openai-compatible-api?lang=es) -- APIs para completaciones de código.',
+            '[Mejor asistente de código IA para LLM local](/es/local-llms/best-ai-coding-assistant-local-llm) -- Comparativa completa de Cursor, Continue.dev, Cody, Tabnine y Windsurf con soporte para LLM local.',
+            '[Stack de desarrollador con LLM local](/es/local-llms/local-llm-developer-stack) -- El stack completo que incluye configuración del servidor API y monitoreo en producción más allá de la integración con el IDE.',
+            '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- Configura Ollama para completaciones de código.',
+            '[Mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding) -- Benchmark detallado de modelos de código.',
+            '[How to Install LM Studio](/es/local-llms/how-to-install-lm-studio) -- Qué herramienta usar.',
+            '[API compatible con OpenAI para LLM local](/es/local-llms/local-llm-openai-compatible-api) -- APIs para completaciones de código.',
           ],
         },
         sources: {
@@ -1132,7 +1132,7 @@ schema: {
         '@type': 'HowTo',
         'name': 'Cómo usar LLMs locales con VS Code y Cursor 2026',
         'description': 'Cómo usar LLMs locales en VS Code y Cursor para asistencia de código privada y rápida con integración de PromptQuorum.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor?lang=es',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-with-vscode-cursor',
         'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'name': 'Instala Continue.dev para VS Code', 'text': 'Instala la extensión Continue desde el marketplace de VS Code y configúrala para que apunte a tu servidor Ollama local.' },

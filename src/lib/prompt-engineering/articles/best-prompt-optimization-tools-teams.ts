@@ -582,7 +582,7 @@ tests:
           '**Prompt-Optimierung ist der systematische Prozess zur Verbesserung von KI-Prompts durch strukturierte Iteration, Varianten-Tests und Output-Messung — unterscheidet sich vom einmaligen Prompt-Schreiben.**',
           'Was Team-Optimierung von Einzelarbeit unterscheidet: gemeinsame Prompt-Bibliotheken, die mehrere Ingenieure bearbeiten, Review-Workflows, die unbefugte Änderungen verhindern, A/B-Experimente, die gegen denselben Bewertungsdatensatz laufen, und Audit-Trails für Compliance-Teams.',
           'Im Gegensatz zu einzelnen Prompt-Ingenieuren, die Ad-hoc-Verbesserungen durchführen, erfordert Team-Optimierung reproduzierbare Prozesse: dokumentierte Baselines, versionskontrollierte Prompt-Varianten und automatisierte Bewertungen.',
-          'Weitere Informationen zu den Grundlagen: [Grundlagen der Prompt-Optimierung: Ein praktischer Leitfaden](/prompt-engineering/fundamentals-of-prompt-optimization?lang=de).',
+          'Weitere Informationen zu den Grundlagen: [Grundlagen der Prompt-Optimierung: Ein praktischer Leitfaden](/de/prompt-engineering/fundamentals-of-prompt-optimization).',
         ],
       },
       evaluationCriteria: {
@@ -853,12 +853,12 @@ tests:
       relatedReading: {
         id: 'related-reading',
         items: [
-          '[Grundlagen der Prompt-Optimierung: Ein praktischer Leitfaden](/prompt-engineering/fundamentals-of-prompt-optimization?lang=de) — Grundkonzepte der Optimierung vor der Werkzeugauswahl',
-          '[So bewerten Sie die Prompt-Qualität: Metriken und Methoden](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) — Erstellen Sie den Bewertungs-Datensatz, den Ihr Team benötigt',
-          '[Manuelle vs. automatisierte Prompt-Optimierung: Wann sollte man was nutzen](/prompt-engineering/manual-vs-automated-prompt-optimization?lang=de) — Framework zur Entscheidung, wann automatisiert werden soll',
-          '[Best Prompt Engineering Tools 2026: Nach Anwendungsfall bewertet](/prompt-engineering/best-prompt-engineering-tools-2026?lang=de) — umfassenderer Werkzeug-Überblick über nur Optimierung',
-          '[Best Prompt Management Platforms 2026](/prompt-engineering/best-prompt-management-platforms?lang=de) — Versionierungs- und Bereitstellungs-Tools',
-          '[So testen Sie Prompts über mehrere Modelle hinweg](/prompt-engineering/how-to-test-prompts-across-models?lang=de) — Multi-Modell-Test-Methodik',
+          '[Grundlagen der Prompt-Optimierung: Ein praktischer Leitfaden](/de/prompt-engineering/fundamentals-of-prompt-optimization) — Grundkonzepte der Optimierung vor der Werkzeugauswahl',
+          '[So bewerten Sie die Prompt-Qualität: Metriken und Methoden](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Erstellen Sie den Bewertungs-Datensatz, den Ihr Team benötigt',
+          '[Manuelle vs. automatisierte Prompt-Optimierung: Wann sollte man was nutzen](/de/prompt-engineering/manual-vs-automated-prompt-optimization) — Framework zur Entscheidung, wann automatisiert werden soll',
+          '[Best Prompt Engineering Tools 2026: Nach Anwendungsfall bewertet](/de/prompt-engineering/best-prompt-engineering-tools-2026) — umfassenderer Werkzeug-Überblick über nur Optimierung',
+          '[Best Prompt Management Platforms 2026](/de/prompt-engineering/best-prompt-management-platforms) — Versionierungs- und Bereitstellungs-Tools',
+          '[So testen Sie Prompts über mehrere Modelle hinweg](/de/prompt-engineering/how-to-test-prompts-across-models) — Multi-Modell-Test-Methodik',
         ],
       },
       sources: {
@@ -876,7 +876,7 @@ tests:
       '@type': 'TechArticle',
       headline: 'Die besten Prompt-Optimierungs-Tools für Teams (2026)',
       description: 'Sieben Prompt-Optimierungs-Tools für Teams: Braintrust, DSPy, PromptPerfect, Vellum, Promptfoo, Helicone und PromptQuorum. Vergleich nach A/B-Tests, Zusammenarbeit und Preisgestaltung.',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'de',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',
@@ -897,7 +897,7 @@ tests:
         { '@type': 'SoftwareApplication', name: 'Helicone' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=de', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 630 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -976,7 +976,7 @@ tests:
           '**La optimización de prompts es el proceso sistemático de mejorar los prompts de IA mediante iteración estructurada, testing de variantes y medición del output — distinto de la escritura puntual de prompts.** Cuando un ingeniero ajusta un prompt y lo comparte verbalmente, las mejoras no son reproducibles ni comparables. Cuando un equipo adopta la optimización sistemática, todos los ingenieros editan la misma biblioteca de prompts, comparan variantes contra el mismo dataset de test y rastrean qué cambios mejoran realmente la calidad.',
           'Lo que hace que la optimización en equipo sea diferente del trabajo individual: bibliotecas de prompts compartidas que múltiples ingenieros editan simultáneamente, flujos de revisión que evitan cambios no autorizados en los prompts de producción, experimentos A/B que miden el impacto en el mundo real y trazas de auditoría para cumplimiento. El ajuste individual de prompts es rápido pero frágil; la optimización en equipo es más lenta de configurar pero escala.',
           'Esta guía distingue la optimización de prompts (hacer prompts mejores) de la gestión de prompts (organizar y desplegar) y de la evaluación de prompts (medir calidad). La mayoría de equipos necesita herramientas para las tres categorías. Para comparación multi-modelo durante la optimización, [PromptQuorum](/features) despacha un prompt a 25+ proveedores de IA simultáneamente — útil para equipos que validan si los cambios de prompt se generalizan entre modelos.',
-          'Para una comparación más amplia de todas las herramientas de prompt engineering (no solo las orientadas a optimización), consulta [Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso](/prompt-engineering/best-prompt-engineering-tools-2026?lang=es).',
+          'Para una comparación más amplia de todas las herramientas de prompt engineering (no solo las orientadas a optimización), consulta [Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso](/es/prompt-engineering/best-prompt-engineering-tools-2026).',
         ],
       },
       evaluationCriteria: {
@@ -1292,27 +1292,27 @@ tests:
         items: [
           {
             title: 'Fundamentos de la optimización de prompts: una guía práctica',
-            url: '/prompt-engineering/fundamentals-of-prompt-optimization?lang=es',
+            url: '/es/prompt-engineering/fundamentals-of-prompt-optimization',
           },
           {
             title: 'Cómo evaluar la calidad de prompts: métricas y métodos',
-            url: '/prompt-engineering/how-to-evaluate-prompt-quality?lang=es',
+            url: '/es/prompt-engineering/how-to-evaluate-prompt-quality',
           },
           {
             title: 'Optimización manual vs automatizada de prompts: cuándo usar cada una',
-            url: '/prompt-engineering/manual-vs-automated-prompt-optimization?lang=es',
+            url: '/es/prompt-engineering/manual-vs-automated-prompt-optimization',
           },
           {
             title: 'Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso',
-            url: '/prompt-engineering/best-prompt-engineering-tools-2026?lang=es',
+            url: '/es/prompt-engineering/best-prompt-engineering-tools-2026',
           },
           {
             title: 'Mejores plataformas de gestión de prompts 2026',
-            url: '/prompt-engineering/best-prompt-management-platforms?lang=es',
+            url: '/es/prompt-engineering/best-prompt-management-platforms',
           },
           {
             title: 'Cómo testear prompts entre modelos',
-            url: '/prompt-engineering/how-to-test-prompts-across-models?lang=es',
+            url: '/es/prompt-engineering/how-to-test-prompts-across-models',
           },
         ],
       },
@@ -1338,7 +1338,7 @@ tests:
       headline: 'Mejores herramientas de optimización de prompts para equipos 2026',
       description:
         'Seis herramientas para optimización de prompts a escala de equipo: comparadas por A/B testing, características de colaboración, integración CI/CD y precios.',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'es',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',
@@ -1369,7 +1369,7 @@ tests:
       ],
       image: {
         '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=es',
+        url: 'https://www.promptquorum.com/es/api/og/best-prompt-optimization-tools-for-teams',
         width: 1200,
         height: 630,
       },
@@ -1453,7 +1453,7 @@ tests:
           '**L\'optimisation d\'invites est processus systématique améliorant invites IA via itération structurée, test variantes et mesure résultats — distinct écriture invites ponctuelle.**',
           'Équipes diffèrent travail solo : bibliothèques invites partagées, workflows révision empêchant modifications non-autorisées, expériences A/B contre mêmes données évaluation, audit trails compliance.',
           'Contrairement ingénieurs solo effectuant améliorations ad-hoc, optimisation équipe exige processus reproductibles : baselines documentées, variantes versionées, évaluations automatisées.',
-          'Bases : [Fondamentaux optimisation invites : guide pratique](/prompt-engineering/fundamentals-of-prompt-optimization?lang=fr).',
+          'Bases : [Fondamentaux optimisation invites : guide pratique](/fr/prompt-engineering/fundamentals-of-prompt-optimization).',
         ],
       },
       evaluationCriteria: {
@@ -1707,12 +1707,12 @@ tests:
       relatedReading: {
         id: 'related-reading',
         items: [
-          '[Fondamentaux optimisation invites : guide pratique](/prompt-engineering/fundamentals-of-prompt-optimization?lang=fr) — concepts-base optimisation avant sélection outil',
-          '[Comment évaluer qualité invites : métriques et méthodes](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) — construisez dataset évaluation équipe besoin',
-          '[Optimisation invites manuelle vs automatisée : quand utiliser chacun](/prompt-engineering/manual-vs-automated-prompt-optimization?lang=fr) — framework décider quand automatiser',
-          '[Meilleures outils ingénierie invites 2026 : classées cas usage](/prompt-engineering/best-prompt-engineering-tools-2026?lang=fr) — aperçu outil plus large optimisation-seule',
-          '[Meilleures plateformes gestion invites 2026](/prompt-engineering/best-prompt-management-platforms?lang=fr) — outils versioning déploiement',
-          '[Comment tester invites modèles multiples](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) — méthodologie test multi-modèle',
+          '[Fondamentaux optimisation invites : guide pratique](/fr/prompt-engineering/fundamentals-of-prompt-optimization) — concepts-base optimisation avant sélection outil',
+          '[Comment évaluer qualité invites : métriques et méthodes](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — construisez dataset évaluation équipe besoin',
+          '[Optimisation invites manuelle vs automatisée : quand utiliser chacun](/fr/prompt-engineering/manual-vs-automated-prompt-optimization) — framework décider quand automatiser',
+          '[Meilleures outils ingénierie invites 2026 : classées cas usage](/fr/prompt-engineering/best-prompt-engineering-tools-2026) — aperçu outil plus large optimisation-seule',
+          '[Meilleures plateformes gestion invites 2026](/fr/prompt-engineering/best-prompt-management-platforms) — outils versioning déploiement',
+          '[Comment tester invites modèles multiples](/fr/prompt-engineering/how-to-test-prompts-across-models) — méthodologie test multi-modèle',
         ],
       },
       sources: {
@@ -1730,7 +1730,7 @@ tests:
       '@type': 'TechArticle',
       headline: 'Meilleures outils d\'optimisation d\'invites pour les équipes (2026)',
       description: 'Sept outils d\'optimisation d\'invites pour équipes : Braintrust, DSPy, PromptPerfect, Vellum, Promptfoo, Helicone et PromptQuorum. Comparez par test A/B, collaboration et tarification.',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'fr',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',
@@ -1751,7 +1751,7 @@ tests:
         { '@type': 'SoftwareApplication', name: 'Helicone' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=fr', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 630 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1829,7 +1829,7 @@ tests:
           '**プロンプト最適化は、構造化イテレーション、バリアント検証、出力測定によるAIプロンプト改善システムプロセス — 単発プロンプト作成と異なる。**',
           'チーム作業が単独エンジニアと異なる: 複数エンジニア編集共有プロンプトライブラリ、未承認変更防止レビューワークフロー、同じ評価データセット対A/B実験、コンプライアンスチーム監査証跡。',
           'アドホック改善実施単独エンジニアと異なり、チーム最適化は再現可能プロセス要求: 記録ベースライン、バージョン管理バリアント、自動評価。',
-          'ベース: [プロンプト最適化基礎: 実践ガイド](/prompt-engineering/fundamentals-of-prompt-optimization?lang=ja)。',
+          'ベース: [プロンプト最適化基礎: 実践ガイド](/ja/prompt-engineering/fundamentals-of-prompt-optimization)。',
         ],
       },
       evaluationCriteria: {
@@ -2083,12 +2083,12 @@ tests:
       relatedReading: {
         id: 'related-reading',
         items: [
-          '[プロンプト最適化基礎: 実践ガイド](/prompt-engineering/fundamentals-of-prompt-optimization?lang=ja) — ツール選択前コア最適化概念',
-          '[プロンプト品質評価: メトリクスとメソッド](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja) — チーム必要評価データセット構築',
-          '[手動 vs 自動プロンプト最適化: いつ各使用](/prompt-engineering/manual-vs-automated-prompt-optimization?lang=ja) — いつ自動化判定フレームワーク',
-          '[2026年ベスト プロンプトエンジニアリングツール: ユースケース別ランク](/prompt-engineering/best-prompt-engineering-tools-2026?lang=ja) — 最適化外更広いツール概要',
-          '[2026年ベストプロンプト管理プラットフォーム](/prompt-engineering/best-prompt-management-platforms?lang=ja) — バージョン管理デプロイツール',
-          '[複数モデル対プロンプトテスト方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja) — マルチモデルテスト方法論',
+          '[プロンプト最適化基礎: 実践ガイド](/ja/prompt-engineering/fundamentals-of-prompt-optimization) — ツール選択前コア最適化概念',
+          '[プロンプト品質評価: メトリクスとメソッド](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — チーム必要評価データセット構築',
+          '[手動 vs 自動プロンプト最適化: いつ各使用](/ja/prompt-engineering/manual-vs-automated-prompt-optimization) — いつ自動化判定フレームワーク',
+          '[2026年ベスト プロンプトエンジニアリングツール: ユースケース別ランク](/ja/prompt-engineering/best-prompt-engineering-tools-2026) — 最適化外更広いツール概要',
+          '[2026年ベストプロンプト管理プラットフォーム](/ja/prompt-engineering/best-prompt-management-platforms) — バージョン管理デプロイツール',
+          '[複数モデル対プロンプトテスト方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — マルチモデルテスト方法論',
         ],
       },
       sources: {
@@ -2106,7 +2106,7 @@ tests:
       '@type': 'TechArticle',
       headline: 'チームのためのベストプロンプト最適化ツール(2026)',
       description: 'チーム向け7つのプロンプト最適化ツール: Braintrust、DSPy、PromptPerfect、Vellum、Promptfoo、Helicone、PromptQuorum。A/Bテスト、コラボレーション、価格で比較。',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ja',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',
@@ -2127,7 +2127,7 @@ tests:
         { '@type': 'SoftwareApplication', name: 'Helicone' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=ja', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 630 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -2206,7 +2206,7 @@ tests:
           '**提示优化是通过结构化迭代、变体测试和输出测量来系统性改进AI提示的过程 — 不同于一次性提示编写。** 当一个工程师调整提示并口头分享时，改进无法重现或对比。当团队采纳系统化优化时，所有工程师编辑同一提示库、针对同一测试数据集对比变体、跟踪哪些变化真正改善质量。',
           '团队优化与个人工作的区别：多个工程师同时编辑的共享提示库、防止未授权更改生产提示的审查工作流、衡量真实影响的A/B实验、合规性审计日志。个人提示调整速度快但脆弱；团队优化初期设置慢但可扩展。',
           '本指南区分提示优化(使提示更好)、提示管理(组织和部署提示)和提示评估(测量质量)。大多数团队需要这三个类别的工具。',
-          '如需更宽泛的所有提示工程工具对比(非仅优化工具)，请参阅[2026年最佳提示工程工具：按使用场景排名](/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh)。该指南涵盖发现、研究和通用工具。',
+          '如需更宽泛的所有提示工程工具对比(非仅优化工具)，请参阅[2026年最佳提示工程工具：按使用场景排名](/zh/prompt-engineering/best-prompt-engineering-tools-2026)。该指南涵盖发现、研究和通用工具。',
         ],
       },
       evaluationCriteria: {
@@ -2513,27 +2513,27 @@ tests:
         items: [
           {
             title: '提示优化基础：实践指南',
-            url: '/prompt-engineering/fundamentals-of-prompt-optimization?lang=zh',
+            url: '/zh/prompt-engineering/fundamentals-of-prompt-optimization',
           },
           {
             title: '如何评估提示质量：指标和方法',
-            url: '/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh',
+            url: '/zh/prompt-engineering/how-to-evaluate-prompt-quality',
           },
           {
             title: '手动vs.自动化提示优化：何时使用',
-            url: '/prompt-engineering/manual-vs-automated-prompt-optimization?lang=zh',
+            url: '/zh/prompt-engineering/manual-vs-automated-prompt-optimization',
           },
           {
             title: '2026年最佳提示工程工具：按使用场景排名',
-            url: '/prompt-engineering/best-prompt-engineering-tools-2026?lang=zh',
+            url: '/zh/prompt-engineering/best-prompt-engineering-tools-2026',
           },
           {
             title: '2026年最佳提示管理平台',
-            url: '/prompt-engineering/best-prompt-management-platforms?lang=zh',
+            url: '/zh/prompt-engineering/best-prompt-management-platforms',
           },
           {
             title: '如何跨模型测试提示',
-            url: '/prompt-engineering/how-to-test-prompts-across-models?lang=zh',
+            url: '/zh/prompt-engineering/how-to-test-prompts-across-models',
           },
         ],
       },
@@ -2559,7 +2559,7 @@ tests:
       headline: '2026年团队提示优化最佳工具',
       description:
         '7个团队提示优化工具对比：按A/B测试、协作功能、CI/CD集成、价格比较。',
-      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'zh',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',
@@ -2588,7 +2588,7 @@ tests:
         { '@type': 'SoftwareApplication', name: 'Helicone' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=zh', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 630 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {

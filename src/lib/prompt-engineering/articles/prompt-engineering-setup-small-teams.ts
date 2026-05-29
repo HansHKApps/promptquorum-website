@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified:  '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-setup-small-teams?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/prompt-engineering-setup-small-teams',
       inLanguage:       'de',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         callouts: [
           { type: 'key-point', label: 'Minimale Testset-Größe', text: '20 Fälle sind die Untergrenze – weniger verfehlt zu viele Edge Cases. Über 50 Fälle hinaus nehmen die marginalen Abdeckungsgewinne für die meisten kleinen Team-Produktions-Prompts ab. Starten Sie mit 20 und erweitern Sie nur, wenn Sie spezifische Fehlerkategorien identifizieren, die Sie abdecken müssen.' },
-          { type: 'pro-tip', label: 'Multi-Modell-Baseline', text: 'Führen Sie Ihr Testset vor jedem Deployment gegen GPT-4o und Claude 4.6 Sonnet aus. Modelle werden ohne Vorwarnung aktualisiert – ein Version-Bump kann Pass-Raten bei Ihren spezifischen Aufgaben still verändern. Lesen Sie [Prompts modellübergreifend testen](/prompt-engineering/how-to-test-prompts-across-models?lang=de) für den vollständigen Vergleichs-Workflow.' },
+          { type: 'pro-tip', label: 'Multi-Modell-Baseline', text: 'Führen Sie Ihr Testset vor jedem Deployment gegen GPT-4o und Claude 4.6 Sonnet aus. Modelle werden ohne Vorwarnung aktualisiert – ein Version-Bump kann Pass-Raten bei Ihren spezifischen Aufgaben still verändern. Lesen Sie [Prompts modellübergreifend testen](/de/prompt-engineering/how-to-test-prompts-across-models) für den vollständigen Vergleichs-Workflow.' },
         ],
       },
       modelSelection: {
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Auswahl von KI-Modellen für Ihre Prompts',
         content: [
           '**Beginnen Sie für die meisten Aufgaben mit GPT-4o und Claude 4.6 Sonnet – führen Sie beide aus und vergleichen Sie Pass-Raten für Ihren spezifischen Anwendungsfall, bevor Sie sich auf ein Modell festlegen.** Das richtige Modell hängt vom Aufgabentyp ab, nicht von allgemeinen Leaderboard-Rankings.',
-          'GPT-4o (OpenAI) und Claude 4.6 Sonnet (Anthropic) sind die zwei am weitesten verbreiteten Frontier-Modelle für Produktions-Prompt-Engineering [Stand April 2026](/prompt-engineering/gpt-claude-gemini-which-model?lang=de). Für Dokumente über 100k Token: Gemini 2.5 Pro hinzufügen. Für kostenempfindliche Hochvolumen-Aufgaben: Claude 4.5 Haiku oder GPT-4o mini verwenden.',
+          'GPT-4o (OpenAI) und Claude 4.6 Sonnet (Anthropic) sind die zwei am weitesten verbreiteten Frontier-Modelle für Produktions-Prompt-Engineering [Stand April 2026](/de/prompt-engineering/gpt-claude-gemini-which-model). Für Dokumente über 100k Token: Gemini 2.5 Pro hinzufügen. Für kostenempfindliche Hochvolumen-Aufgaben: Claude 4.5 Haiku oder GPT-4o mini verwenden.',
         ],
         columns: ['Aufgabentyp', 'Empfohlenes Modell', 'Begründung'],
         rows: [
@@ -553,9 +553,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Tag 1 — Audit und Ownership-Zuweisung.** Listen Sie alle Prompts auf, die Ihr Team verwendet. Erfassen Sie für jeden: wo er gespeichert ist, wer ihn geschrieben hat, auf welchem Modell er läuft. Weisen Sie jedem Prompt einen benannten Owner zu. Das dauert 1–2 Stunden und deckt sofort Prompt-Wildwuchs auf – die meisten Teams entdecken 30–50 % mehr Prompts als gedacht.',
           '**Tag 2 — Gemeinsames Prompt-Repository erstellen.** Erstellen Sie einen `/prompts`-Ordner in Ihrem bestehenden Code-Repository oder einem neuen dedizierten Git-Repo. Fügen Sie eine `README.md` mit den erforderlichen Metadatenfeldern hinzu: Name, Version, Owner, Modell, Template, last_tested.',
           '**Tag 3 — Die 3 wichtigsten Prompts in YAML-Dateien migrieren.** Schreiben Sie sie mit dem vollständigen Metadaten-Template. Committen Sie ins gemeinsame Repo mit einer Nachricht wie `feat(prompts): migrate zusammenfassung-fuer-pm zur Bibliothek v1.0.0`. Diese 3 Dateien sind das Fundament Ihrer Bibliothek.',
-          '**Tag 4 — Ein 20-Testfälle-Set für Ihren wichtigsten Prompt erstellen.** Zehn Happy-Path-Inputs, fünf Edge Cases (ungewöhnliche Formatierung, lange Inputs, fehlende Pflichtfelder), fünf adversarielle Inputs (Inputs, die Prompt-Anweisungen zu überschreiben versuchen). Definieren Sie ein binäres Pass/Fail-Kriterium für jeden Fall. Lesen Sie [Prompt-Qualität evaluieren](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) für das Bewertungs-Framework.',
+          '**Tag 4 — Ein 20-Testfälle-Set für Ihren wichtigsten Prompt erstellen.** Zehn Happy-Path-Inputs, fünf Edge Cases (ungewöhnliche Formatierung, lange Inputs, fehlende Pflichtfelder), fünf adversarielle Inputs (Inputs, die Prompt-Anweisungen zu überschreiben versuchen). Definieren Sie ein binäres Pass/Fail-Kriterium für jeden Fall. Lesen Sie [Prompt-Qualität evaluieren](/de/prompt-engineering/how-to-evaluate-prompt-quality) für das Bewertungs-Framework.',
           '**Tag 5 — Testset über mindestens 2 Modelle ausführen.** Verwenden Sie PromptQuorum oder eigene API-Aufrufe, um die 20 Fälle gegen GPT-4o und Claude 4.6 Sonnet auszuführen. Erfassen Sie die Pass-Rate für jedes Modell. Diese Baseline ist die wichtigste Zahl, die Ihr Team verfolgen wird – jede zukünftige Prompt-Änderung muss sie erreichen oder übertreffen.',
-          '**Woche 2+ — Bibliothek erweitern und Review hinzufügen.** Migrieren Sie Ihre nächsten 5 kritischen Prompts in YAML-Dateien. Wenn Ihr Team 5 oder mehr Personen hat, fügen Sie PR-Reviews für den `/prompts`-Ordner hinzu. Führen Sie das vollständige Testset im CI bei jedem Merge in main aus. Lesen Sie [Prompt-Bibliothek aufbauen](/prompt-engineering/build-a-prompt-library?lang=de) für Skalierungs-Guidance über 20 Prompts hinaus.',
+          '**Woche 2+ — Bibliothek erweitern und Review hinzufügen.** Migrieren Sie Ihre nächsten 5 kritischen Prompts in YAML-Dateien. Wenn Ihr Team 5 oder mehr Personen hat, fügen Sie PR-Reviews für den `/prompts`-Ordner hinzu. Führen Sie das vollständige Testset im CI bei jedem Merge in main aus. Lesen Sie [Prompt-Bibliothek aufbauen](/de/prompt-engineering/build-a-prompt-library) für Skalierungs-Guidance über 20 Prompts hinaus.',
         ],
         callouts: [
           { type: 'key-point', label: 'Der wichtigste einzelne Schritt', text: 'Wenn Sie nur eine Sache aus dieser Anleitung umsetzen, dann Tag 5: Etablieren Sie eine Multi-Modell-Baseline-Pass-Rate für Ihren wichtigsten Prompt. Diese eine Zahl zeigt Ihnen sofort, wenn ein Modell-Update, eine Formulierungsänderung oder ein neuer Edge Case etwas gebrochen hat.' },
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Enterprise-Grade-Tooling für ein 3-Personen-Team einführen',
             problem: 'Overhead übersteigt den Nutzen – Teams verbringen mehr Zeit damit, den Tool-Stack zu warten, als Features zu entwickeln, die Prompts verwenden',
-            fix: 'Mit Git + YAML beginnen. [Prompt-Management-Plattformen](/prompt-engineering/best-prompt-management-platforms?lang=de) (Braintrust, PromptHub, Vellum) erst hinzufügen, wenn die Grenzen von Git zu einer echten Einschränkung werden – typischerweise ab 10+ Personen oder 50+ Produktions-Prompts.',
+            fix: 'Mit Git + YAML beginnen. [Prompt-Management-Plattformen](/de/prompt-engineering/best-prompt-management-platforms) (Braintrust, PromptHub, Vellum) erst hinzufügen, wenn die Grenzen von Git zu einer echten Einschränkung werden – typischerweise ab 10+ Personen oder 50+ Produktions-Prompts.',
           },
         ],
       },
@@ -653,12 +653,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[Prompt-Bibliothek für Ihr Team aufbauen](/prompt-engineering/build-a-prompt-library?lang=de) — Metadatenstruktur, Ordnerorganisation und Skalierungs-Governance über 50 Prompts hinaus',
-          '[Prompt-Qualität evaluieren: Metriken, Tests & Checkliste](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) — Aufbau eines 20-Testfälle-Sets, binäre Pass/Fail-Bewertung und LLM-as-Judge-Rubrics',
-          '[Prompts modellübergreifend testen](/prompt-engineering/how-to-test-prompts-across-models?lang=de) — denselben Prompt gegen GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro ausführen, um den besten Performer pro Aufgabe zu finden',
-          '[Beste Prompt-Management-Plattformen (2026)](/prompt-engineering/best-prompt-management-platforms?lang=de) — wenn Sie über Git hinauswachsen: Braintrust, PromptHub und Vellum für wachsende Teams verglichen',
-          '[GPT-4o vs. Claude vs. Gemini: Welches Modell?](/prompt-engineering/gpt-claude-gemini-which-model?lang=de) — Modellauswahl nach Aufgabentyp, Latenz, Kosten und Kontextfenster',
-          '[Beste Prompt-Engineering-IDEs (2026)](/prompt-engineering/best-prompt-engineering-ides?lang=de) — VS Code und Cursor für die YAML-Prompt-Dateibearbeitung mit Syntax-Highlighting und team-geteilten Snippets konfigurieren',
+          '[Prompt-Bibliothek für Ihr Team aufbauen](/de/prompt-engineering/build-a-prompt-library) — Metadatenstruktur, Ordnerorganisation und Skalierungs-Governance über 50 Prompts hinaus',
+          '[Prompt-Qualität evaluieren: Metriken, Tests & Checkliste](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Aufbau eines 20-Testfälle-Sets, binäre Pass/Fail-Bewertung und LLM-as-Judge-Rubrics',
+          '[Prompts modellübergreifend testen](/de/prompt-engineering/how-to-test-prompts-across-models) — denselben Prompt gegen GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro ausführen, um den besten Performer pro Aufgabe zu finden',
+          '[Beste Prompt-Management-Plattformen (2026)](/de/prompt-engineering/best-prompt-management-platforms) — wenn Sie über Git hinauswachsen: Braintrust, PromptHub und Vellum für wachsende Teams verglichen',
+          '[GPT-4o vs. Claude vs. Gemini: Welches Modell?](/de/prompt-engineering/gpt-claude-gemini-which-model) — Modellauswahl nach Aufgabentyp, Latenz, Kosten und Kontextfenster',
+          '[Beste Prompt-Engineering-IDEs (2026)](/de/prompt-engineering/best-prompt-engineering-ides) — VS Code und Cursor für die YAML-Prompt-Dateibearbeitung mit Syntax-Highlighting und team-geteilten Snippets konfigurieren',
         ],
       },
       sources: {
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified:  '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-setup-small-teams?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-setup-small-teams',
       inLanguage:       'es',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -980,12 +980,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Construye una biblioteca de prompts para tu equipo](/prompt-engineering/build-a-prompt-library?lang=es) — estructura de metadatos, organización de carpetas y gobernanza de escalado más allá de 50 prompts',
-          '[Cómo evaluar la calidad de los prompts: métricas, pruebas y checklist](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — construcción de conjunto de pruebas de 20 casos, puntuación binaria aprobado/fallido y rúbricas LLM-as-judge',
-          '[Cómo probar prompts en múltiples modelos](/prompt-engineering/how-to-test-prompts-across-models?lang=es) — ejecutar el mismo prompt en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro para encontrar el mejor rendimiento por tarea',
-          '[Mejores plataformas de gestión de prompts (2026)](/prompt-engineering/best-prompt-management-platforms?lang=es) — cuándo superar Git: Braintrust, PromptHub y Vellum comparados para equipos en crecimiento',
-          '[GPT-4o vs Claude vs Gemini: ¿qué modelo?](/prompt-engineering/gpt-claude-gemini-which-model?lang=es) — selección de modelo por tipo de tarea, latencia, coste y ventana de contexto',
-          '[Mejores IDEs de prompt engineering (2026)](/prompt-engineering/best-prompt-engineering-ides?lang=es) — configuración de VS Code y Cursor para edición de archivos YAML de prompts con resaltado de sintaxis y snippets compartidos del equipo',
+          '[Construye una biblioteca de prompts para tu equipo](/es/prompt-engineering/build-a-prompt-library) — estructura de metadatos, organización de carpetas y gobernanza de escalado más allá de 50 prompts',
+          '[Cómo evaluar la calidad de los prompts: métricas, pruebas y checklist](/es/prompt-engineering/how-to-evaluate-prompt-quality) — construcción de conjunto de pruebas de 20 casos, puntuación binaria aprobado/fallido y rúbricas LLM-as-judge',
+          '[Cómo probar prompts en múltiples modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — ejecutar el mismo prompt en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro para encontrar el mejor rendimiento por tarea',
+          '[Mejores plataformas de gestión de prompts (2026)](/es/prompt-engineering/best-prompt-management-platforms) — cuándo superar Git: Braintrust, PromptHub y Vellum comparados para equipos en crecimiento',
+          '[GPT-4o vs Claude vs Gemini: ¿qué modelo?](/es/prompt-engineering/gpt-claude-gemini-which-model) — selección de modelo por tipo de tarea, latencia, coste y ventana de contexto',
+          '[Mejores IDEs de prompt engineering (2026)](/es/prompt-engineering/best-prompt-engineering-ides) — configuración de VS Code y Cursor para edición de archivos YAML de prompts con resaltado de sintaxis y snippets compartidos del equipo',
         ],
       },
       sources: {
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified:  '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-setup-small-teams?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/prompt-engineering-setup-small-teams',
       inLanguage:       'fr',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1174,7 +1174,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         callouts: [
           { type: 'key-point', label: 'Taille minimale du jeu de tests', text: '20 cas est le plancher — en dessous, trop de cas limites sont manqués. Au-delà de 50 cas, les gains marginaux de couverture diminuent pour la plupart des prompts de petites équipes. Démarrez à 20 et étendez uniquement quand vous identifiez des catégories de défaillances spécifiques à couvrir.' },
-          { type: 'pro-tip', label: 'Baseline multi-modèles', text: 'Exécutez votre jeu de tests contre GPT-4o et Claude 4.6 Sonnet avant chaque déploiement. Les modèles se mettent à jour sans préavis — un bump de version peut silencieusement changer les taux de réussite sur vos tâches spécifiques. Voir [Tester les prompts sur plusieurs modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) pour le workflow complet.' },
+          { type: 'pro-tip', label: 'Baseline multi-modèles', text: 'Exécutez votre jeu de tests contre GPT-4o et Claude 4.6 Sonnet avant chaque déploiement. Les modèles se mettent à jour sans préavis — un bump de version peut silencieusement changer les taux de réussite sur vos tâches spécifiques. Voir [Tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) pour le workflow complet.' },
         ],
       },
       modelSelection: {
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Choisir les modèles IA pour vos prompts',
         content: [
           '**Commencez avec GPT-4o et Claude 4.6 Sonnet pour la plupart des tâches — exécutez les deux et comparez les taux de réussite sur votre cas d\'usage avant de vous engager sur un modèle.** Le bon modèle dépend du type de tâche, pas des classements généraux.',
-          'GPT-4o (OpenAI) et Claude 4.6 Sonnet (Anthropic) sont les deux modèles frontier les plus utilisés pour le prompt engineering en production [en avril 2026](/prompt-engineering/gpt-claude-gemini-which-model?lang=fr). Pour les documents dépassant 100k tokens, ajoutez Gemini 2.5 Pro. Pour les tâches en volume à faible coût, utilisez Claude 4.5 Haiku ou GPT-4o mini.',
+          'GPT-4o (OpenAI) et Claude 4.6 Sonnet (Anthropic) sont les deux modèles frontier les plus utilisés pour le prompt engineering en production [en avril 2026](/fr/prompt-engineering/gpt-claude-gemini-which-model). Pour les documents dépassant 100k tokens, ajoutez Gemini 2.5 Pro. Pour les tâches en volume à faible coût, utilisez Claude 4.5 Haiku ou GPT-4o mini.',
         ],
         columns: ['Type de tâche', 'Modèle recommandé', 'Pourquoi'],
         rows: [
@@ -1224,9 +1224,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Jour 1 — Audit et attribution de propriété.** Listez tous les prompts utilisés par votre équipe. Pour chacun, notez : où il est stocké, qui l\'a créé, sur quel modèle il s\'exécute. Attribuez un owner nommé. Cette étape prend 1–2 heures et révèle immédiatement la prolifération des prompts — la plupart des équipes découvrent 30–50 % de prompts de plus qu\'elles ne pensaient.',
           '**Jour 2 — Créer un dépôt de prompts partagé.** Créez un dossier `/prompts` dans votre dépôt de code existant ou un nouveau dépôt Git dédié. Ajoutez un `README.md` avec les champs requis : nom, version, owner, modèle, template, last_tested.',
           '**Jour 3 — Migrer vos 3 prompts les plus critiques en fichiers YAML.** Rédigez-les avec le template complet. Commitez dans le dépôt partagé avec un message comme `feat(prompts): migrer resume-pour-pm vers la bibliothèque v1.0.0`. Ces 3 fichiers constituent le socle de votre bibliothèque.',
-          '**Jour 4 — Créer un jeu de 20 tests pour votre prompt le plus important.** Dix inputs nominaux, cinq cas limites (formatage inhabituel, inputs longs, champs manquants), cinq inputs adversariaux. Définissez un critère pass/fail binaire pour chaque cas. Voir [Évaluer la qualité des prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) pour le cadre de scoring.',
+          '**Jour 4 — Créer un jeu de 20 tests pour votre prompt le plus important.** Dix inputs nominaux, cinq cas limites (formatage inhabituel, inputs longs, champs manquants), cinq inputs adversariaux. Définissez un critère pass/fail binaire pour chaque cas. Voir [Évaluer la qualité des prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality) pour le cadre de scoring.',
           '**Jour 5 — Exécuter le jeu de tests sur au moins 2 modèles.** Utilisez PromptQuorum ou vos propres appels API pour exécuter les 20 cas contre GPT-4o et Claude 4.6 Sonnet. Notez le taux de réussite par modèle. Cette baseline est le chiffre le plus important que votre équipe suivra.',
-          '**Semaine 2+ — Étendre la bibliothèque et ajouter des revues.** Migrez vos 5 prochains prompts critiques en fichiers YAML. Pour les équipes de 5 personnes ou plus, ajoutez des PR reviews sur le dossier `/prompts`. Exécutez le jeu de tests complet en CI à chaque merge dans main. Voir [Construire une bibliothèque de prompts](/prompt-engineering/build-a-prompt-library?lang=fr) pour la montée en charge au-delà de 20 prompts.',
+          '**Semaine 2+ — Étendre la bibliothèque et ajouter des revues.** Migrez vos 5 prochains prompts critiques en fichiers YAML. Pour les équipes de 5 personnes ou plus, ajoutez des PR reviews sur le dossier `/prompts`. Exécutez le jeu de tests complet en CI à chaque merge dans main. Voir [Construire une bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library) pour la montée en charge au-delà de 20 prompts.',
         ],
         callouts: [
           { type: 'key-point', label: 'L\'étape la plus importante', text: 'Si vous ne faites qu\'une seule chose dans ce guide, faites le Jour 5 : établissez un taux de réussite baseline multi-modèles pour votre prompt le plus critique. Ce seul chiffre vous indique immédiatement quand une mise à jour de modèle, un changement de formulation ou un nouveau cas limite a cassé quelque chose.' },
@@ -1260,7 +1260,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Ajouter un outillage enterprise-grade à une équipe de 3 personnes',
             problem: 'La surcharge dépasse le bénéfice — les équipes passent plus de temps à maintenir la stack qu\'à construire',
-            fix: 'Démarrer avec Git + YAML. Ajouter les [plateformes de gestion de prompts](/prompt-engineering/best-prompt-management-platforms?lang=fr) (Braintrust, PromptHub, Vellum) uniquement quand les limites de Git deviennent une vraie contrainte — typiquement à 10+ personnes ou 50+ prompts en production.',
+            fix: 'Démarrer avec Git + YAML. Ajouter les [plateformes de gestion de prompts](/fr/prompt-engineering/best-prompt-management-platforms) (Braintrust, PromptHub, Vellum) uniquement quand les limites de Git deviennent une vraie contrainte — typiquement à 10+ personnes ou 50+ prompts en production.',
           },
         ],
       },
@@ -1307,12 +1307,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Construire une bibliothèque de prompts pour votre équipe](/prompt-engineering/build-a-prompt-library?lang=fr) — structure des métadonnées, organisation des dossiers et gouvernance au-delà de 50 prompts',
-          '[Évaluer la qualité des prompts : métriques, tests et checklist](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) — construction d\'un jeu de 20 tests, scoring binaire pass/fail et rubriques LLM-as-judge',
-          '[Tester les prompts sur plusieurs modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) — exécuter le même prompt sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro pour trouver le meilleur performer par tâche',
-          '[Meilleures plateformes de gestion de prompts (2026)](/prompt-engineering/best-prompt-management-platforms?lang=fr) — quand vous dépassez Git : Braintrust, PromptHub et Vellum comparés pour les équipes en croissance',
-          '[GPT-4o vs Claude vs Gemini : quel modèle choisir ?](/prompt-engineering/gpt-claude-gemini-which-model?lang=fr) — sélection de modèle par type de tâche, latence, coût et fenêtre de contexte',
-          '[Meilleurs IDE pour le prompt engineering (2026)](/prompt-engineering/best-prompt-engineering-ides?lang=fr) — configurer VS Code et Cursor pour l\'édition de fichiers YAML avec coloration syntaxique et snippets partagés',
+          '[Construire une bibliothèque de prompts pour votre équipe](/fr/prompt-engineering/build-a-prompt-library) — structure des métadonnées, organisation des dossiers et gouvernance au-delà de 50 prompts',
+          '[Évaluer la qualité des prompts : métriques, tests et checklist](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — construction d\'un jeu de 20 tests, scoring binaire pass/fail et rubriques LLM-as-judge',
+          '[Tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — exécuter le même prompt sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro pour trouver le meilleur performer par tâche',
+          '[Meilleures plateformes de gestion de prompts (2026)](/fr/prompt-engineering/best-prompt-management-platforms) — quand vous dépassez Git : Braintrust, PromptHub et Vellum comparés pour les équipes en croissance',
+          '[GPT-4o vs Claude vs Gemini : quel modèle choisir ?](/fr/prompt-engineering/gpt-claude-gemini-which-model) — sélection de modèle par type de tâche, latence, coût et fenêtre de contexte',
+          '[Meilleurs IDE pour le prompt engineering (2026)](/fr/prompt-engineering/best-prompt-engineering-ides) — configurer VS Code et Cursor pour l\'édition de fichiers YAML avec coloration syntaxique et snippets partagés',
         ],
       },
       sources: {
@@ -1375,7 +1375,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified:  '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-setup-small-teams?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/prompt-engineering-setup-small-teams',
       inLanguage:       'ja',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1500,7 +1500,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         callouts: [
           { type: 'key-point', label: 'テストセットの最小サイズ', text: '20件が最低ラインです — それより少ないとEdge Caseが多く見落とされます。50件を超えると、ほとんどの小規模チームの本番Promptではカバレッジの限界効果が逓減します。20件から始めて、カバーすべき特定の失敗カテゴリを特定した場合にのみ拡張します。' },
-          { type: 'pro-tip', label: 'マルチモデルベースライン', text: 'デプロイ前に毎回GPT-4oとClaude 4.6 Sonnetに対してテストセットを実行します。モデルは予告なくアップデートされます — バージョンバンプにより特定のタスクでの合格率がサイレントに変わることがあります。完全な比較ワークフローについては[複数モデルでのPromptテスト方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja)を参照してください。' },
+          { type: 'pro-tip', label: 'マルチモデルベースライン', text: 'デプロイ前に毎回GPT-4oとClaude 4.6 Sonnetに対してテストセットを実行します。モデルは予告なくアップデートされます — バージョンバンプにより特定のタスクでの合格率がサイレントに変わることがあります。完全な比較ワークフローについては[複数モデルでのPromptテスト方法](/ja/prompt-engineering/how-to-test-prompts-across-models)を参照してください。' },
         ],
       },
       modelSelection: {
@@ -1508,7 +1508,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'プロンプトに使うAIモデルの選び方',
         content: [
           '**ほとんどのタスクはGPT-4oとClaude 4.6 Sonnetから始めてください — 1つのモデルに絞る前に、両方を実行して特定のユースケースでの合格率を比較します。** 適切なモデルはタスクの種類に依存します。一般的なリーダーボードランキングではありません。',
-          'GPT-4o（OpenAI）とClaude 4.6 Sonnet（Anthropic）は、[2026年4月時点で](/prompt-engineering/gpt-claude-gemini-which-model?lang=ja)本番プロンプトエンジニアリングで最も広く使われている2つのフロンティアモデルです。100kトークンを超えるドキュメントにはGemini 2.5 Proを追加します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-4o miniを使用します。',
+          'GPT-4o（OpenAI）とClaude 4.6 Sonnet（Anthropic）は、[2026年4月時点で](/ja/prompt-engineering/gpt-claude-gemini-which-model)本番プロンプトエンジニアリングで最も広く使われている2つのフロンティアモデルです。100kトークンを超えるドキュメントにはGemini 2.5 Proを追加します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-4o miniを使用します。',
         ],
         columns: ['タスクの種類', '推奨モデル', '理由'],
         rows: [
@@ -1550,9 +1550,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Day 1 — 棚卸しとオーナーシップの割り当て。** チームが使用するすべてのPromptをリストアップします。それぞれについて：保存場所、作成者、使用モデルを記録します。各Promptに担当オーナーを割り当てます。1〜2時間でPromptの乱立がすぐに明らかになります — ほとんどのチームが想定より30〜50%多くのPromptを発見します。',
           '**Day 2 — 共有Promptリポジトリの作成。** 既存のコードリポジトリに`/prompts`フォルダを作るか、新しい専用Gitリポジトリを作成します。必須フィールド（name、version、owner、model、template、last_tested）を含む`README.md`を追加します。',
           '**Day 3 — 最重要Promptを3つYAMLファイルに移行。** 完全なメタデータテンプレートで記述します。`feat(prompts): pm-muke-yoyakuをライブラリv1.0.0に移行`のようなメッセージとともに共有リポジトリにコミットします。この3ファイルがライブラリの基盤です。',
-          '**Day 4 — 最重要Promptの20件テストセット作成。** Happy Pathが10件、Edge Caseが5件（特殊フォーマット、長い入力、必須フィールドの欠落）、Adversarial Inputが5件（Promptの指示を上書きしようとする入力）。各ケースのpass/fail二値基準を定義します。スコアリングフレームワークについては[Prompt品質の評価方法](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)を参照してください。',
+          '**Day 4 — 最重要Promptの20件テストセット作成。** Happy Pathが10件、Edge Caseが5件（特殊フォーマット、長い入力、必須フィールドの欠落）、Adversarial Inputが5件（Promptの指示を上書きしようとする入力）。各ケースのpass/fail二値基準を定義します。スコアリングフレームワークについては[Prompt品質の評価方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality)を参照してください。',
           '**Day 5 — 少なくとも2つのモデルでテストセットを実行。** PromptQuorumまたは独自のAPIコールを使って20件をGPT-4oとClaude 4.6 Sonnetに対して実行します。各モデルの合格率を記録します。このベースラインがチームが追跡する最も重要な数値です — 今後のPrompt変更はすべてこれを維持または上回る必要があります。',
-          '**Week 2以降 — ライブラリを拡張してレビューを追加。** 次の重要Prompt5つをYAMLファイルに移行します。チームが5人以上の場合は`/prompts`フォルダへのPRレビューを追加します。mainへのマージのたびにCIで全テストセットを実行します。20件以上へのスケールアップについては[Promptライブラリの構築](/prompt-engineering/build-a-prompt-library?lang=ja)を参照してください。',
+          '**Week 2以降 — ライブラリを拡張してレビューを追加。** 次の重要Prompt5つをYAMLファイルに移行します。チームが5人以上の場合は`/prompts`フォルダへのPRレビューを追加します。mainへのマージのたびにCIで全テストセットを実行します。20件以上へのスケールアップについては[Promptライブラリの構築](/ja/prompt-engineering/build-a-prompt-library)を参照してください。',
         ],
         callouts: [
           { type: 'key-point', label: '最も重要な1つのステップ', text: 'このガイドから1つだけ実行するなら、Day 5です：最も重要なPromptのマルチモデルベースライン合格率を確立します。この1つの数値が、モデルアップデート・文言変更・新しいEdge Caseが何かを壊したとき、すぐに教えてくれます。' },
@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: '3人チームにエンタープライズ向けツールを追加する',
             problem: 'オーバーヘッドがメリットを上回る — Promptを使う機能の構築よりツールスタックの維持に時間を費やす',
-            fix: 'Git + YAMLから始めます。Gitの限界が実際のボトルネックになった場合（通常10人以上または50件以上の本番Promptの時点）にのみ[Prompt管理プラットフォーム](/prompt-engineering/best-prompt-management-platforms?lang=ja)（Braintrust、PromptHub、Vellum）を追加します。',
+            fix: 'Git + YAMLから始めます。Gitの限界が実際のボトルネックになった場合（通常10人以上または50件以上の本番Promptの時点）にのみ[Prompt管理プラットフォーム](/ja/prompt-engineering/best-prompt-management-platforms)（Braintrust、PromptHub、Vellum）を追加します。',
           },
         ],
       },
@@ -1633,12 +1633,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[チームのためのPromptライブラリの構築](/prompt-engineering/build-a-prompt-library?lang=ja) — メタデータ構造、フォルダ構成、50件以上へのガバナンスのスケール',
-          '[Prompt品質の評価方法：メトリクス、テスト、チェックリスト](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja) — 20件テストセットの構築、二値pass/failスコアリング、LLM-as-Judgeルーブリック',
-          '[複数モデルでのPromptテスト方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja) — タスクごとのベストパフォーマーを見つけるためにGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで同じPromptを実行',
-          '[ベストPrompt管理プラットフォーム（2026年）](/prompt-engineering/best-prompt-management-platforms?lang=ja) — Gitを超えたとき：成長するチームのためのBraintrust、PromptHub、Vellumの比較',
-          '[GPT-4o vs Claude vs Gemini：どのモデルを選ぶ？](/prompt-engineering/gpt-claude-gemini-which-model?lang=ja) — タスクの種類、レイテンシ、コスト、コンテキストウィンドウによるモデル選択',
-          '[ベストPromptエンジニアリングIDE（2026年）](/prompt-engineering/best-prompt-engineering-ides?lang=ja) — シンタックスハイライトとチーム共有スニペット付きYAML Promptファイル編集のためのVS CodeとCursorの設定',
+          '[チームのためのPromptライブラリの構築](/ja/prompt-engineering/build-a-prompt-library) — メタデータ構造、フォルダ構成、50件以上へのガバナンスのスケール',
+          '[Prompt品質の評価方法：メトリクス、テスト、チェックリスト](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — 20件テストセットの構築、二値pass/failスコアリング、LLM-as-Judgeルーブリック',
+          '[複数モデルでのPromptテスト方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — タスクごとのベストパフォーマーを見つけるためにGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで同じPromptを実行',
+          '[ベストPrompt管理プラットフォーム（2026年）](/ja/prompt-engineering/best-prompt-management-platforms) — Gitを超えたとき：成長するチームのためのBraintrust、PromptHub、Vellumの比較',
+          '[GPT-4o vs Claude vs Gemini：どのモデルを選ぶ？](/ja/prompt-engineering/gpt-claude-gemini-which-model) — タスクの種類、レイテンシ、コスト、コンテキストウィンドウによるモデル選択',
+          '[ベストPromptエンジニアリングIDE（2026年）](/ja/prompt-engineering/best-prompt-engineering-ides) — シンタックスハイライトとチーム共有スニペット付きYAML Promptファイル編集のためのVS CodeとCursorの設定',
         ],
       },
       sources: {
@@ -1702,7 +1702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-setup-small-teams?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/prompt-engineering-setup-small-teams',
       inLanguage: 'zh',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1856,7 +1856,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**第1天——审计并分配Ownership。**列出团队使用的所有Prompt。对每个Prompt记录：存储位置、编写者、运行模型。分配一名Owner。耗时1–2小时，能立即暴露Prompt蔓延问题。',
           '**第2天——创建共享Prompt仓库。**在现有代码仓库中创建/prompts文件夹（或新建专用仓库）。添加包含4字段模板的README.md：name（名称）、version（版本）、owner（负责人）、model（模型）。',
           '**第3天——将3个最关键的Prompt迁移至YAML文件。**使用元数据模板编写。提交至共享仓库。这3个文件就是库的基础。',
-          '**第4天——为最重要的Prompt构建20条测试集。**10条正常路径输入、5条边界用例、5条对抗性输入。为每条定义二元通过/失败标准。参见[如何评估Prompt质量](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)了解评分框架。',
+          '**第4天——为最重要的Prompt构建20条测试集。**10条正常路径输入、5条边界用例、5条对抗性输入。为每条定义二元通过/失败标准。参见[如何评估Prompt质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)了解评分框架。',
           '**第5天——跨至少2个模型运行测试集。**使用PromptQuorum或自有API调用。记录GPT-4o和Claude 4.6 Sonnet的通过率。这是基准——未来每次变更都必须达到或超过此基准。',
           '**第2周起——添加审查并重复。**扩展至下5个关键Prompt。如团队≥5人，添加PR审查步骤。每次合并到main时在CI中运行完整测试集。',
         ],
@@ -1946,11 +1946,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[如何为团队构建Prompt库](/prompt-engineering/build-a-prompt-library?lang=zh) — 深入介绍元数据结构、治理和超过50个Prompt后的扩展',
-          '[如何评估Prompt质量：指标、测试和清单](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh) — 20条测试集构建、通过/失败评分、LLM-as-judge评分标准',
-          '[如何跨模型测试Prompt](/prompt-engineering/how-to-test-prompts-across-models?lang=zh) — 在GPT-4o、Claude和Gemini上运行相同Prompt以找到最佳表现者',
-          '[最佳Prompt管理平台（2026）](/prompt-engineering/best-prompt-management-platforms?lang=zh) — 超越Git后的选择：Braintrust、PromptHub、Vellum对比',
-          '[GPT-4o vs Claude vs Gemini：如何选择？](/prompt-engineering/gpt-claude-gemini-which-model?lang=zh) — 按任务类型的模型选择指南',
+          '[如何为团队构建Prompt库](/zh/prompt-engineering/build-a-prompt-library) — 深入介绍元数据结构、治理和超过50个Prompt后的扩展',
+          '[如何评估Prompt质量：指标、测试和清单](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 20条测试集构建、通过/失败评分、LLM-as-judge评分标准',
+          '[如何跨模型测试Prompt](/zh/prompt-engineering/how-to-test-prompts-across-models) — 在GPT-4o、Claude和Gemini上运行相同Prompt以找到最佳表现者',
+          '[最佳Prompt管理平台（2026）](/zh/prompt-engineering/best-prompt-management-platforms) — 超越Git后的选择：Braintrust、PromptHub、Vellum对比',
+          '[GPT-4o vs Claude vs Gemini：如何选择？](/zh/prompt-engineering/gpt-claude-gemini-which-model) — 按任务类型的模型选择指南',
         ],
       },
       sources: {

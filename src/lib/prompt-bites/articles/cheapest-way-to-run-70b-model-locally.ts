@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'Was ist der günstigste Weg, ein 70B-Modell lokal zu betreiben?', acceptedAnswer: { '@type': 'Answer', text: 'Mac Mini M4 Pro 48 GB (~2.000 $) ist 2026 die günstigste Komplettoption, mit 12–18 Tok/s und nur 45 W Verbrauch.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Günstigster Weg, ein 70B-Modell lokal zu betreiben 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=de', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Günstigster Weg, ein 70B-Modell lokal zu betreiben 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/de/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'de' },
   },
   fr: {
     freshness_tier: 'semi_annual',
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'Quelle est la configuration la moins chère pour un modèle 70B local ?', acceptedAnswer: { '@type': 'Answer', text: 'Mac Mini M4 Pro 48 Go (~2 000 $) est l\'option complète la moins chère en 2026, avec 12–18 tok/s et seulement 45 W.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Moyen le moins cher de faire tourner un modèle 70B localement 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=fr', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Moyen le moins cher de faire tourner un modèle 70B localement 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/fr/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'fr' },
   },
   ja: {
     freshness_tier: 'semi_annual',
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: '70Bモデルをローカルで動かす最安のハードウェアは？', acceptedAnswer: { '@type': 'Answer', text: 'Mac Mini M4 Pro 48GB（約28万円）が2026年の最安完結オプションで、12〜18 tok/s・45Wで動作します。' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '70Bモデルをローカル実行する最安の方法 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=ja', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: '70Bモデルをローカル実行する最安の方法 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/ja/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ja' },
   },
   es: {
     freshness_tier: 'semi_annual',
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'Mac Studio M4 Max 128GB', description: 'Mejor rendimiento por vatio, $3,000' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Forma Más Barata de Ejecutar un Modelo 70B Localmente 2026', author: { '@type': 'Person', name: 'Hans Kuepper' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=es', inLanguage: 'es' },
+    schema: { '@type': 'TechArticle', headline: 'Forma Más Barata de Ejecutar un Modelo 70B Localmente 2026', author: { '@type': 'Person', name: 'Hans Kuepper' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/es/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'es' },
   },
   zh: {
     freshness_tier: 'semi_annual',
@@ -542,6 +542,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年本地运行70B模型最省钱方案', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=zh', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年本地运行70B模型最省钱方案', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/zh/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'zh' },
   },
 }

@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Warum nomic-embed-text-v1.5 speziell? Im Mai 2026 liegt es in den Top 5 der MTEB-Retrieval-Leaderboard für jedes Modell unter 500 MB, läuft mit 400–800 Chunks/Sek. auf einer modernen CPU und 2000+ Chunks/Sek. auf Apple Silicon und ist Apache-2.0-lizenziert. Es ist das Standard-erste-Upgrade für fast jeden lokalen RAG-Stack — siehe den [Embedding-Modell-Vergleich](/power-local-llm/best-embedding-models-local-rag-2026?lang=de) für Alternativen.',
+            text: 'Warum nomic-embed-text-v1.5 speziell? Im Mai 2026 liegt es in den Top 5 der MTEB-Retrieval-Leaderboard für jedes Modell unter 500 MB, läuft mit 400–800 Chunks/Sek. auf einer modernen CPU und 2000+ Chunks/Sek. auf Apple Silicon und ist Apache-2.0-lizenziert. Es ist das Standard-erste-Upgrade für fast jeden lokalen RAG-Stack — siehe den [Embedding-Modell-Vergleich](/de/power-local-llm/best-embedding-models-local-rag-2026) für Alternativen.',
           },
         ],
         image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-de.svg',
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie viele PDFs kann ich auf einmal hochladen?',
-            a: 'AnythingLLM akzeptiert hunderte Dateien in einem einzelnen Drag-and-Drop. Die praktische Grenze ist RAM während des Parse-Schritts: ~1 GB Peak für 100 mittelgroße PDFs (50 Seiten pro Stück). Nach dem Embedding ist der On-Disk-Vector-Store klein (~10–30 MB pro 100 PDF-Seiten). Für 1000+ PDFs siehe die Spezial-Anleitung [Chatten mit 1000 PDFs lokal](/power-local-llm/chat-with-1000-pdfs-locally?lang=de).',
+            a: 'AnythingLLM akzeptiert hunderte Dateien in einem einzelnen Drag-and-Drop. Die praktische Grenze ist RAM während des Parse-Schritts: ~1 GB Peak für 100 mittelgroße PDFs (50 Seiten pro Stück). Nach dem Embedding ist der On-Disk-Vector-Store klein (~10–30 MB pro 100 PDF-Seiten). Für 1000+ PDFs siehe die Spezial-Anleitung [Chatten mit 1000 PDFs lokal](/de/power-local-llm/chat-with-1000-pdfs-locally).',
           },
           {
             q: 'Kann ich das für passwortgeschützte PDFs verwenden?',
@@ -879,12 +879,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=de) — für Leser, die Alternativen evaluieren wollen bevor sie sich auf AnythingLLM festlegen.',
-          '[Best Embedding Models for Local RAG in 2026](/power-local-llm/best-embedding-models-local-rag-2026?lang=de) — für Leser, die besseren Abruf als nomic-embed-text wollen.',
-          '[Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)](/power-local-llm/local-ai-app-with-built-in-rag?lang=de) — für Leser, die merken, dass sie noch einfacher als AnythingLLM wollen.',
-          '[RAG Explained: How to Ground AI Answers in Real Data (2026)](/prompt-engineering/rag-explained?lang=de) — Konzept-Autorität auf was RAG ist und warum jede Komponente wichtig ist.',
-          '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — Hardware-Sizing-Referenz falls du den Laptop wählst, nicht nur die Software.',
-          '[Power Local LLM Hub](/power-local-llm?lang=de) — volle Guide-Bibliothek für den Cluster.',
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — für Leser, die Alternativen evaluieren wollen bevor sie sich auf AnythingLLM festlegen.',
+          '[Best Embedding Models for Local RAG in 2026](/de/power-local-llm/best-embedding-models-local-rag-2026) — für Leser, die besseren Abruf als nomic-embed-text wollen.',
+          '[Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)](/de/power-local-llm/local-ai-app-with-built-in-rag) — für Leser, die merken, dass sie noch einfacher als AnythingLLM wollen.',
+          '[RAG Explained: How to Ground AI Answers in Real Data (2026)](/de/prompt-engineering/rag-explained) — Konzept-Autorität auf was RAG ist und warum jede Komponente wichtig ist.',
+          '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) — Hardware-Sizing-Referenz falls du den Laptop wählst, nicht nur die Software.',
+          '[Power Local LLM Hub](/de/power-local-llm) — volle Guide-Bibliothek für den Cluster.',
         ],
       },
     },
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pourquoi nomic-embed-text-v1.5 spécifiquement? En mai 2026, il score dans top 5 du classement MTEB Retrieval pour tout modèle sous 500 Mo, tourne à 400–800 chunks/sec sur CPU moderne et 2000+ chunks/sec sur Apple Silicon, Apache 2.0 licencié. C\'est l\'upgrade première-standard pour presque tout stack RAG local — voir le [comparaison modèles embedding](/power-local-llm/best-embedding-models-local-rag-2026?lang=fr) pour alternatives.',
+            text: 'Pourquoi nomic-embed-text-v1.5 spécifiquement? En mai 2026, il score dans top 5 du classement MTEB Retrieval pour tout modèle sous 500 Mo, tourne à 400–800 chunks/sec sur CPU moderne et 2000+ chunks/sec sur Apple Silicon, Apache 2.0 licencié. C\'est l\'upgrade première-standard pour presque tout stack RAG local — voir le [comparaison modèles embedding](/fr/power-local-llm/best-embedding-models-local-rag-2026) pour alternatives.',
           },
         ],
         image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-fr.svg',
@@ -1316,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Combien de PDFs puis-je charger à la fois?',
-            a: 'AnythingLLM accepte centaines de fichiers en un seul glissez-déposez. La limite pratique est RAM pendant étape parse: ~1 Go peak pour 100 PDFs taille-moyenne (50 pages chaque). Une fois embeddés, le magasin vectoriel on-disk est petit (~10–30 Mo par 100 pages PDF). Pour 1000+ PDFs, voir guide dédié [Discuter avec 1000 PDFs localement](/power-local-llm/chat-with-1000-pdfs-locally?lang=fr).',
+            a: 'AnythingLLM accepte centaines de fichiers en un seul glissez-déposez. La limite pratique est RAM pendant étape parse: ~1 Go peak pour 100 PDFs taille-moyenne (50 pages chaque). Une fois embeddés, le magasin vectoriel on-disk est petit (~10–30 Mo par 100 pages PDF). Pour 1000+ PDFs, voir guide dédié [Discuter avec 1000 PDFs localement](/fr/power-local-llm/chat-with-1000-pdfs-locally).',
           },
           {
             q: 'Puis-je utiliser ceci pour PDFs protégés par mot de passe?',
@@ -1352,12 +1352,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[AnythingLLM vs PrivateGPT vs Open WebUI: Meilleur RAG local](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=fr) — pour lecteurs voulant évaluer alternatives avant de s\'engager à AnythingLLM.',
-          '[Meilleurs modèles d\'embedding pour RAG local 2026](/power-local-llm/best-embedding-models-local-rag-2026?lang=fr) — pour lecteurs voulant meilleure récupération que nomic-embed-text.',
-          '[Apps IA locales avec RAG intégré: Discuter avec vos fichiers (zéro setup)](/power-local-llm/local-ai-app-with-built-in-rag?lang=fr) — pour lecteurs réalisant ils veulent encore plus simple que AnythingLLM.',
-          '[RAG expliqué: Fonder réponses IA sur données réelles (2026)](/prompt-engineering/rag-explained?lang=fr) — autorité concept sur quoi est RAG et pourquoi chaque composant importe.',
-          '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — référence hardware-sizing si vous choisissez l\'ordinateur portable, pas juste software.',
-          '[Hub Power Local LLM](/power-local-llm?lang=fr) — bibliothèque guide complète pour le cluster.',
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: Meilleur RAG local](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — pour lecteurs voulant évaluer alternatives avant de s\'engager à AnythingLLM.',
+          '[Meilleurs modèles d\'embedding pour RAG local 2026](/fr/power-local-llm/best-embedding-models-local-rag-2026) — pour lecteurs voulant meilleure récupération que nomic-embed-text.',
+          '[Apps IA locales avec RAG intégré: Discuter avec vos fichiers (zéro setup)](/fr/power-local-llm/local-ai-app-with-built-in-rag) — pour lecteurs réalisant ils veulent encore plus simple que AnythingLLM.',
+          '[RAG expliqué: Fonder réponses IA sur données réelles (2026)](/fr/prompt-engineering/rag-explained) — autorité concept sur quoi est RAG et pourquoi chaque composant importe.',
+          '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — référence hardware-sizing si vous choisissez l\'ordinateur portable, pas juste software.',
+          '[Hub Power Local LLM](/fr/power-local-llm) — bibliothèque guide complète pour le cluster.',
         ],
       },
     },
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'nomic-embed-text-v1.5 を選ぶ理由? 2026 年 5 月、500MB 以下のあらゆるモデルで MTEB Retrieval leaderboard top 5、最新 CPU で 400–800 chunks/sec、Apple Silicon で 2000+ chunks/sec、Apache 2.0 ライセンス。ほぼ全ローカル RAG stack のアップグレード first choice — 代替は [embedding model comparison](/power-local-llm/best-embedding-models-local-rag-2026?lang=ja) 参照。',
+            text: 'nomic-embed-text-v1.5 を選ぶ理由? 2026 年 5 月、500MB 以下のあらゆるモデルで MTEB Retrieval leaderboard top 5、最新 CPU で 400–800 chunks/sec、Apple Silicon で 2000+ chunks/sec、Apache 2.0 ライセンス。ほぼ全ローカル RAG stack のアップグレード first choice — 代替は [embedding model comparison](/ja/power-local-llm/best-embedding-models-local-rag-2026) 参照。',
           },
         ],
         image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-ja.svg',
@@ -1789,7 +1789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'いくつの PDF を一度に upload できる?',
-            a: 'AnythingLLM は単一 drag-drop で数百ファイル受け入れ。Practical limit は parse step 中の RAM: ~100 medium PDF (50 page each) で ~1GB peak。Embed 後、on-disk vector store は小さい (~100 page あたり 10–30MB)。1000+ PDF は [1000 PDF locally](/power-local-llm/chat-with-1000-pdfs-locally?lang=ja) dedicated guide 参照。',
+            a: 'AnythingLLM は単一 drag-drop で数百ファイル受け入れ。Practical limit は parse step 中の RAM: ~100 medium PDF (50 page each) で ~1GB peak。Embed 後、on-disk vector store は小さい (~100 page あたり 10–30MB)。1000+ PDF は [1000 PDF locally](/ja/power-local-llm/chat-with-1000-pdfs-locally) dedicated guide 参照。',
           },
           {
             q: 'Password-protected PDF に使用可能?',
@@ -1825,12 +1825,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
-          '[AnythingLLM vs PrivateGPT vs Open WebUI: 最高のローカル RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=ja) — AnythingLLM に commit する前に代替を評価したいリーダー向け。',
-          '[2026 ローカル RAG の最高 Embedding モデル](/power-local-llm/best-embedding-models-local-rag-2026?lang=ja) — nomic-embed-text より優秀な取得を望むリーダー向け。',
-          '[Built-in RAG 付きローカル AI App: ファイルとチャット (ゼロセットアップ)](/power-local-llm/local-ai-app-with-built-in-rag?lang=ja) — AnythingLLM より even simpler を実現したいリーダー向け。',
-          '[RAG 説明: リアルデータに基づいた AI 回答 (2026)](/prompt-engineering/rag-explained?lang=ja) — RAG とは何か、なぜ各 component が重要かの concept authority。',
-          '[2026 ローカル LLM ハードウェアガイド](/local-llms/local-llm-hardware-guide-2026?lang=ja) — ノートパソコンだけでなく hardware も選択中のリーダー向けの sizing reference。',
-          '[Power Local LLM Hub](/power-local-llm?lang=ja) — cluster 用の complete guide library。',
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: 最高のローカル RAG](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — AnythingLLM に commit する前に代替を評価したいリーダー向け。',
+          '[2026 ローカル RAG の最高 Embedding モデル](/ja/power-local-llm/best-embedding-models-local-rag-2026) — nomic-embed-text より優秀な取得を望むリーダー向け。',
+          '[Built-in RAG 付きローカル AI App: ファイルとチャット (ゼロセットアップ)](/ja/power-local-llm/local-ai-app-with-built-in-rag) — AnythingLLM より even simpler を実現したいリーダー向け。',
+          '[RAG 説明: リアルデータに基づいた AI 回答 (2026)](/ja/prompt-engineering/rag-explained) — RAG とは何か、なぜ各 component が重要かの concept authority。',
+          '[2026 ローカル LLM ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) — ノートパソコンだけでなく hardware も選択中のリーダー向けの sizing reference。',
+          '[Power Local LLM Hub](/ja/power-local-llm) — cluster 用の complete guide library。',
         ],
       },
     },
@@ -2097,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '为何选择 nomic-embed-text-v1.5？在2026年5月，它在所有500 MB以下模型中位列MTEB检索排行榜前五，在现代CPU上以400–800 chunks/秒运行，在Apple Silicon上达2000+ chunks/秒，并采用Apache 2.0许可证。它是几乎所有本地RAG技术栈的首选升级方案——参见[嵌入模型对比](/power-local-llm/best-embedding-models-local-rag-2026?lang=zh)了解其他选项。',
+            text: '为何选择 nomic-embed-text-v1.5？在2026年5月，它在所有500 MB以下模型中位列MTEB检索排行榜前五，在现代CPU上以400–800 chunks/秒运行，在Apple Silicon上达2000+ chunks/秒，并采用Apache 2.0许可证。它是几乎所有本地RAG技术栈的首选升级方案——参见[嵌入模型对比](/zh/power-local-llm/best-embedding-models-local-rag-2026)了解其他选项。',
           },
         ],
         image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-zh.svg',
@@ -2255,7 +2255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '一次可以上传多少个PDF？',
-            a: 'AnythingLLM 支持单次拖拽上传数百个文件。实际限制在于解析步骤的内存峰值：100个中等PDF（每个50页）约需1 GB峰值内存。向量化完成后，磁盘向量存储很小（每100页PDF约10–30 MB）。1000+ PDF请参见专项指南[本地与1000个PDF对话](/power-local-llm/chat-with-1000-pdfs-locally?lang=zh)。',
+            a: 'AnythingLLM 支持单次拖拽上传数百个文件。实际限制在于解析步骤的内存峰值：100个中等PDF（每个50页）约需1 GB峰值内存。向量化完成后，磁盘向量存储很小（每100页PDF约10–30 MB）。1000+ PDF请参见专项指南[本地与1000个PDF对话](/zh/power-local-llm/chat-with-1000-pdfs-locally)。',
           },
           {
             q: '能处理密码保护的PDF吗？',
@@ -2291,19 +2291,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[AnythingLLM vs PrivateGPT vs Open WebUI：最佳本地RAG对比](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=zh) — 适合在确定使用 AnythingLLM 之前想评估其他选项的读者。',
-          '[2026年本地RAG最佳嵌入模型](/power-local-llm/best-embedding-models-local-rag-2026?lang=zh) — 适合想获得比 nomic-embed-text 更好检索效果的读者。',
-          '[内置RAG的本地AI应用：无需配置即可对话文件](/power-local-llm/local-ai-app-with-built-in-rag?lang=zh) — 适合意识到自己想要比 AnythingLLM 更简单方案的读者。',
-          '[RAG解析：如何让AI回答基于真实数据（2026）](/prompt-engineering/rag-explained?lang=zh) — RAG概念权威解析，涵盖RAG是什么以及每个组件的作用。',
-          '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — 硬件规格参考，适合还在选购笔记本而非只是选软件的读者。',
-          '[Power Local LLM 资源中心](/power-local-llm?lang=zh) — 本专题的完整指南库。',
+          '[AnythingLLM vs PrivateGPT vs Open WebUI：最佳本地RAG对比](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 适合在确定使用 AnythingLLM 之前想评估其他选项的读者。',
+          '[2026年本地RAG最佳嵌入模型](/zh/power-local-llm/best-embedding-models-local-rag-2026) — 适合想获得比 nomic-embed-text 更好检索效果的读者。',
+          '[内置RAG的本地AI应用：无需配置即可对话文件](/zh/power-local-llm/local-ai-app-with-built-in-rag) — 适合意识到自己想要比 AnythingLLM 更简单方案的读者。',
+          '[RAG解析：如何让AI回答基于真实数据（2026）](/zh/prompt-engineering/rag-explained) — RAG概念权威解析，涵盖RAG是什么以及每个组件的作用。',
+          '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 硬件规格参考，适合还在选购笔记本而非只是选软件的读者。',
+          '[Power Local LLM 资源中心](/zh/power-local-llm) — 本专题的完整指南库。',
         ],
       },
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh',
+      'url': 'https://www.promptquorum.com/zh/power-local-llm/local-rag-on-your-pdfs-step-by-step',
       'inLanguage': 'zh',
       'headline': '30分钟在本地PDF上构建RAG系统（Ollama + AnythingLLM）',
       'description':
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '@type': 'ListItem',
           'position': 3,
           'name': '30分钟构建本地PDF RAG系统',
-          'item': 'https://www.promptquorum.com/power-local-llm/local-rag-on-your-pdfs-step-by-step?lang=zh',
+          'item': 'https://www.promptquorum.com/zh/power-local-llm/local-rag-on-your-pdfs-step-by-step',
         },
       ],
     },

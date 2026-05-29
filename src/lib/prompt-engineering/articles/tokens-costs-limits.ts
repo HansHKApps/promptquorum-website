@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Aprende cómo los tokens controlan los costes y límites de la IA. Entiende los modelos de precios, los límites de tasa y las estrategias para optimizar el gasto en GPT-4o, Claude, Gemini y modelos locales.',
         datePublished: '2026-03-22',
         dateModified: '2026-04-12',
-        url: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -533,9 +533,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[Fundamentals: Respuestas de IA más rápidas: Cómo hacer prompts para la velocidad](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed?lang=es) — la eficiencia de los prompts reduce directamente los costes de tokens',
-            '[Fundamentals: GPT, Claude o Gemini? Cómo elegir el modelo correcto](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=es) — la selección del modelo es la mayor palanca de coste',
-            '[Fundamentals: Context Windows explicados: Por qué la IA olvida](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=es) — los context windows limitan cuánto historial puedes incluir'
+            '[Fundamentals: Respuestas de IA más rápidas: Cómo hacer prompts para la velocidad](/es/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — la eficiencia de los prompts reduce directamente los costes de tokens',
+            '[Fundamentals: GPT, Claude o Gemini? Cómo elegir el modelo correcto](/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — la selección del modelo es la mayor palanca de coste',
+            '[Fundamentals: Context Windows explicados: Por qué la IA olvida](/es/prompt-engineering/context-windows-explained-why-ai-forgets) — los context windows limitan cuánto historial puedes incluir'
           ]
         },
         sources: {

@@ -540,7 +540,7 @@ schema: {
         byCategory: {
           id: 'by-category',
           title: 'Top-Modelle nach Kategorie',
-          content: 'Die Qualität der Modellausgabe hängt stark davon ab, wie Sie prompten. Für strukturierte Techniken, die mit allen lokalen Modellen funktionieren — darunter Chain-of-Thought, Few-Shot-Beispiele und Output-Formatierung — siehe den [Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering?lang=de). Für Reasoning-Aufgaben verbessert [Chain-of-Thought-Prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=de) erheblich DeepSeek-R1 und Qwen3 Output-Qualität. Für Quantisierungskompromisse dieser Modelle siehe den [Quantisierungsleitfaden →](/local-llms/llm-quantization-explained?lang=de). Um zu ermitteln, wie viel VRAM jedes Modell benötigt, siehe den [VRAM-Anforderungsleitfaden →](/local-llms/how-much-vram-local-llm?lang=de). Für Agent-Workflows mit Gemma 4 siehe [Tree-of-Thought und ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react?lang=de). Sobald ein Tool-Calling-Modell aus dieser Liste in einer mehrstufigen Schleife mit Datei- und Datenbankzugriff läuft, siehe [Lokale KI-Agenten mit MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=de) für das Open-Source-Orchestrierungsmuster.',
+          content: 'Die Qualität der Modellausgabe hängt stark davon ab, wie Sie prompten. Für strukturierte Techniken, die mit allen lokalen Modellen funktionieren — darunter Chain-of-Thought, Few-Shot-Beispiele und Output-Formatierung — siehe den [Prompt-Engineering-Guide](https://www.promptquorum.com/de/prompt-engineering). Für Reasoning-Aufgaben verbessert [Chain-of-Thought-Prompting](https://www.promptquorum.com/de/prompt-engineering/chain-of-thought-prompting) erheblich DeepSeek-R1 und Qwen3 Output-Qualität. Für Quantisierungskompromisse dieser Modelle siehe den [Quantisierungsleitfaden →](/de/local-llms/llm-quantization-explained). Um zu ermitteln, wie viel VRAM jedes Modell benötigt, siehe den [VRAM-Anforderungsleitfaden →](/de/local-llms/how-much-vram-local-llm). Für Agent-Workflows mit Gemma 4 siehe [Tree-of-Thought und ReAct](https://www.promptquorum.com/de/prompt-engineering/tree-of-thought-react). Sobald ein Tool-Calling-Modell aus dieser Liste in einer mehrstufigen Schleife mit Datei- und Datenbankzugriff läuft, siehe [Lokale KI-Agenten mit MCP](/de/power-local-llm/local-ai-agents-with-mcp-2026) für das Open-Source-Orchestrierungsmuster.',
           items: [
             '**Allgemeines Chat (Anfänger)**: `ollama run llama3.2:3b` -- die meiste Dokumentation, am besten unterstütztes Einstiegsmodell.',
             '**Allgemeines Chat (Qualität)**: `ollama run llama4:scout` -- MoE-Architektur, ~10 GB VRAM. Für 8 GB Maschinen `ollama run llama3.2:3b` verwenden.',
@@ -706,12 +706,12 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
         relatedReading: {
           title: 'Verwandte Lektüre',
           items: [
-            '[Lokale LLMs mit VS Code und Cursor installieren](/local-llms/local-llms-with-vscode-cursor?lang=de) -- VS Code und Cursor erkennen jetzt Ollama automatisch.',
-            '[So wählen Sie ein lokales Modell: Llama vs. Qwen vs. Mistral](/local-llms/llama-vs-qwen-vs-mistral?lang=de) -- Vollständiger Vergleich für Anfänger.',
-            '[Ollama vs. LM Studio: Welches ist schneller?](/local-llms/ollama-vs-lm-studio?lang=de) -- GPU-Benchmarks und Durchsatzvergleiche.',
-            '[Wie installieren Sie Ollama auf Windows/Mac](/local-llms/how-to-install-ollama?lang=de) -- Schritt-für-Schritt-Installations- und Umgebungskonfiguration.',
-            '[Hardware für lokale LLMs: GPU-Anforderungen 2026](/local-llms/hardware-guide-local-llms?lang=de) -- Welche GPU, RAM und Speicher für Ihr Modell erforderlich ist.',
-            '[Troubleshooting: Ollama-Fehler und Lösungen](/local-llms/troubleshooting-local-llm-setup?lang=de) -- CUDA, MPS, CPU-Fallback und häufige Fehler.',
+            '[Lokale LLMs mit VS Code und Cursor installieren](/de/local-llms/local-llms-with-vscode-cursor) -- VS Code und Cursor erkennen jetzt Ollama automatisch.',
+            '[So wählen Sie ein lokales Modell: Llama vs. Qwen vs. Mistral](/de/local-llms/llama-vs-qwen-vs-mistral) -- Vollständiger Vergleich für Anfänger.',
+            '[Ollama vs. LM Studio: Welches ist schneller?](/de/local-llms/ollama-vs-lm-studio) -- GPU-Benchmarks und Durchsatzvergleiche.',
+            '[Wie installieren Sie Ollama auf Windows/Mac](/de/local-llms/how-to-install-ollama) -- Schritt-für-Schritt-Installations- und Umgebungskonfiguration.',
+            '[Hardware für lokale LLMs: GPU-Anforderungen 2026](/de/local-llms/hardware-guide-local-llms) -- Welche GPU, RAM und Speicher für Ihr Modell erforderlich ist.',
+            '[Troubleshooting: Ollama-Fehler und Lösungen](/de/local-llms/troubleshooting-local-llm-setup) -- CUDA, MPS, CPU-Fallback und häufige Fehler.',
           ],
         },
         sources: {
@@ -730,7 +730,7 @@ schema: {
         '@type': 'NewsArticle',
         'headline': 'Die besten Open-Source-Modelle auf Ollama 2026',
         'description': 'Die beliebtesten Open-Source-Modelle auf Ollama im April 2026: Llama am meisten heruntergeladen, Qwen2.5 am schnellsten wachsend, DeepSeek-R1 für Reasoning.',
-        'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/top-open-source-models-ollama',
         'inLanguage': 'de',
         'datePublished': '2026-04-11',
         'dateModified': '2026-05-06',
@@ -918,7 +918,7 @@ schema: {
         },
         byCategory: {
           title: 'Meilleurs modèles par catégorie',
-          content: 'La qualité de la sortie d\'un modèle dépend fortement de la façon dont vous le promptez. Pour des techniques structurées applicables à tous les modèles locaux — chain-of-thought, exemples few-shot et formatage de sortie — consultez le [guide de prompt engineering](https://www.promptquorum.com/prompt-engineering?lang=fr). Pour les tâches de raisonnement, [le prompt engineering de chaîne de pensée](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=fr) améliore considérablement la qualité des sorties DeepSeek-R1 et Qwen3. Pour déterminer la RAM requise pour chaque modèle, consultez le [guide des exigences VRAM →](/local-llms/how-much-vram-local-llm?lang=fr). Pour les workflows d\'agents avec Gemini 4, voir [Tree-of-Thought et ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react?lang=fr). Une fois qu\'un modèle à appel d\'outils de cette liste est intégré dans une boucle multi-étapes avec accès aux fichiers et aux bases de données, voir [Agents IA locaux avec MCP](/power-local-llm/local-ai-agents-with-mcp-2026?lang=fr) pour le pattern d\'orchestration open source.',
+          content: 'La qualité de la sortie d\'un modèle dépend fortement de la façon dont vous le promptez. Pour des techniques structurées applicables à tous les modèles locaux — chain-of-thought, exemples few-shot et formatage de sortie — consultez le [guide de prompt engineering](https://www.promptquorum.com/fr/prompt-engineering). Pour les tâches de raisonnement, [le prompt engineering de chaîne de pensée](https://www.promptquorum.com/fr/prompt-engineering/chain-of-thought-prompting) améliore considérablement la qualité des sorties DeepSeek-R1 et Qwen3. Pour déterminer la RAM requise pour chaque modèle, consultez le [guide des exigences VRAM →](/fr/local-llms/how-much-vram-local-llm). Pour les workflows d\'agents avec Gemini 4, voir [Tree-of-Thought et ReAct](https://www.promptquorum.com/fr/prompt-engineering/tree-of-thought-react). Une fois qu\'un modèle à appel d\'outils de cette liste est intégré dans une boucle multi-étapes avec accès aux fichiers et aux bases de données, voir [Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026) pour le pattern d\'orchestration open source.',
           items: [
             '**Chat général (débutant)** : `ollama run llama3.2:3b` -- la plupart de la documentation, le modèle de démarrage le mieux soutenu.',
             '**Chat général (qualité)** : `ollama run llama4:scout` -- architecture MoE, ~10 Go VRAM. Pour les machines à 8 Go, gardez `ollama run llama3.2:3b`.',
@@ -1079,12 +1079,12 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
         relatedReading: {
           title: 'Lectures connexes',
           items: [
-            '[Installer les modèles locaux avec VS Code et Cursor](/local-llms/local-llms-with-vscode-cursor?lang=fr) -- VS Code et Cursor reconnaissent maintenant automatiquement Ollama.',
-            '[Comment choisir un modèle local : Llama vs Qwen vs Mistral](/local-llms/llama-vs-qwen-vs-mistral?lang=fr) -- Comparaison complète pour les débutants.',
-            '[Ollama vs LM Studio : Lequel est le plus rapide ?](/local-llms/ollama-vs-lm-studio?lang=fr) -- Benchmarks GPU et comparaisons de débit.',
-            '[Comment installer Ollama sur Windows/Mac](/local-llms/how-to-install-ollama?lang=fr) -- Configuration d\'installation étape par étape et configuration d\'environnement.',
-            '[Matériel pour les modèles locaux : Exigences GPU 2026](/local-llms/hardware-guide-local-llms?lang=fr) -- Quelle GPU, RAM et stockage il faut pour votre modèle.',
-            '[Dépannage : Erreurs Ollama et solutions](/local-llms/troubleshooting-local-llm-setup?lang=fr) -- CUDA, MPS, fallback CPU et erreurs courantes.',
+            '[Installer les modèles locaux avec VS Code et Cursor](/fr/local-llms/local-llms-with-vscode-cursor) -- VS Code et Cursor reconnaissent maintenant automatiquement Ollama.',
+            '[Comment choisir un modèle local : Llama vs Qwen vs Mistral](/fr/local-llms/llama-vs-qwen-vs-mistral) -- Comparaison complète pour les débutants.',
+            '[Ollama vs LM Studio : Lequel est le plus rapide ?](/fr/local-llms/ollama-vs-lm-studio) -- Benchmarks GPU et comparaisons de débit.',
+            '[Comment installer Ollama sur Windows/Mac](/fr/local-llms/how-to-install-ollama) -- Configuration d\'installation étape par étape et configuration d\'environnement.',
+            '[Matériel pour les modèles locaux : Exigences GPU 2026](/fr/local-llms/hardware-guide-local-llms) -- Quelle GPU, RAM et stockage il faut pour votre modèle.',
+            '[Dépannage : Erreurs Ollama et solutions](/fr/local-llms/troubleshooting-local-llm-setup) -- CUDA, MPS, fallback CPU et erreurs courantes.',
           ],
         },
         sources: {
@@ -1102,7 +1102,7 @@ schema: {
         '@type': 'NewsArticle',
         'headline': 'Les meilleurs modèles open source sur Ollama 2026',
         'description': 'Les modèles open source Ollama les plus populaires en avril 2026 : Llama le plus téléchargé, Qwen2.5 en plus forte croissance, DeepSeek-R1 pour le raisonnement.',
-        'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/top-open-source-models-ollama',
         'inLanguage': 'fr',
         'datePublished': '2026-04-11',
         'dateModified': '2026-05-06',
@@ -1290,7 +1290,7 @@ schema: {
         },
         byCategory: {
           title: 'カテゴリ別トップモデル',
-          content: 'モデルの出力品質はプロンプトの設計に大きく左右されます。Chain-of-Thought、Few-Shot例、出力フォーマットなど、すべてのローカルモデルで使える構造化テクニックについては[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering?lang=ja)をご覧ください。推論タスク用に、[Chain-of-Thoughtプロンプティング](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=ja)はDeepSeek-R1とQwen3出力品質を大幅に改善。各モデルに必要なRAMを確認するには、[VRAM要件ガイド →](/local-llms/how-much-vram-local-llm?lang=ja)をご参照ください。Gemma 4エージェントワークフロー用は[Tree-of-Thoughtと ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react?lang=ja)参照。このリストにあるツール呼び出し対応モデルを、ファイルアクセスやデータベース照会まで含むマルチステップのループに組み込む方法は、[MCP を使ったローカル AI エージェント](/power-local-llm/local-ai-agents-with-mcp-2026?lang=ja)を参照してください。オープンソースのオーケストレーションパターンを解説しています。',
+          content: 'モデルの出力品質はプロンプトの設計に大きく左右されます。Chain-of-Thought、Few-Shot例、出力フォーマットなど、すべてのローカルモデルで使える構造化テクニックについては[プロンプトエンジニアリングガイド](https://www.promptquorum.com/ja/prompt-engineering)をご覧ください。推論タスク用に、[Chain-of-Thoughtプロンプティング](https://www.promptquorum.com/ja/prompt-engineering/chain-of-thought-prompting)はDeepSeek-R1とQwen3出力品質を大幅に改善。各モデルに必要なRAMを確認するには、[VRAM要件ガイド →](/ja/local-llms/how-much-vram-local-llm)をご参照ください。Gemma 4エージェントワークフロー用は[Tree-of-Thoughtと ReAct](https://www.promptquorum.com/ja/prompt-engineering/tree-of-thought-react)参照。このリストにあるツール呼び出し対応モデルを、ファイルアクセスやデータベース照会まで含むマルチステップのループに組み込む方法は、[MCP を使ったローカル AI エージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026)を参照してください。オープンソースのオーケストレーションパターンを解説しています。',
           items: [
             '**一般チャット（初心者）**：`ollama run llama3.2:3b` -- ドキュメント多数、最適入門モデル。',
             '**一般チャット（品質）**：`ollama run llama4:scout` -- MoEアーキテクチャ、~10GB VRAM。8GB機はllama3.2:3b維持。',
@@ -1451,12 +1451,12 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         relatedReading: {
           title: '参考資料',
           items: [
-            '[VS CodeとCursorでローカルLLMインストール](/local-llms/local-llms-with-vscode-cursor?lang=ja) -- VS CodeとCursorが今Ollama自動認識。',
-            '[ローカルモデル選択：Llamaは Qwenか Mistralか](/local-llms/llama-vs-qwen-vs-mistral?lang=ja) -- ビギナー向け完全比較。',
-            '[OllamaはLM Studioより速い？](/local-llms/ollama-vs-lm-studio?lang=ja) -- GPU・スループットベンチ。',
-            '[Ollama Windows/Mac インストール方法](/local-llms/how-to-install-ollama?lang=ja) -- ステップバイステップ・環境設定。',
-            '[ローカルLLM ハードウェアガイド2026 GPU要件](/local-llms/hardware-guide-local-llms?lang=ja) -- どのGPU・RAM・ストレージがモデルに必須。',
-            '[トラブル：Ollama エラーと解策](/local-llms/troubleshooting-local-llm-setup?lang=ja) -- CUDA・MPS・CPU落とし穴・一般エラー。',
+            '[VS CodeとCursorでローカルLLMインストール](/ja/local-llms/local-llms-with-vscode-cursor) -- VS CodeとCursorが今Ollama自動認識。',
+            '[ローカルモデル選択：Llamaは Qwenか Mistralか](/ja/local-llms/llama-vs-qwen-vs-mistral) -- ビギナー向け完全比較。',
+            '[OllamaはLM Studioより速い？](/ja/local-llms/ollama-vs-lm-studio) -- GPU・スループットベンチ。',
+            '[Ollama Windows/Mac インストール方法](/ja/local-llms/how-to-install-ollama) -- ステップバイステップ・環境設定。',
+            '[ローカルLLM ハードウェアガイド2026 GPU要件](/ja/local-llms/hardware-guide-local-llms) -- どのGPU・RAM・ストレージがモデルに必須。',
+            '[トラブル：Ollama エラーと解策](/ja/local-llms/troubleshooting-local-llm-setup) -- CUDA・MPS・CPU落とし穴・一般エラー。',
           ],
         },
         sources: {
@@ -1474,7 +1474,7 @@ schema: {
         '@type': 'NewsArticle',
         'headline': '2026年Ollama最高のオープンソースモデル',
         'description': '2026年4月のOllama最人気オープンソースモデル：Llamaが最多DL、Qwen2.5が急成長、DeepSeek-R1が推論最強。',
-        'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/top-open-source-models-ollama',
         'inLanguage': 'ja',
         'datePublished': '2026-04-11',
         'dateModified': '2026-05-06',
@@ -1669,7 +1669,7 @@ schema: {
         },
         byCategory: {
           title: '按用途分类',
-          content: '模型的输出质量在很大程度上取决于你的提示方式。关于适用于所有本地模型的结构化技术——包括思维链、Few-Shot示例和输出格式化——请参阅[Prompt工程指南](https://www.promptquorum.com/prompt-engineering?lang=zh)。对于推理任务，[Chain-of-Thought提示](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=zh)显著改善DeepSeek-R1和Qwen3输出质量。了解每个模型所需的VRAM，见[VRAM需求指南 →](/local-llms/how-much-vram-local-llm?lang=zh)。对于Gemma 4代理工作流，见[Tree-of-Thought和ReAct](https://www.promptquorum.com/prompt-engineering/tree-of-thought-react?lang=zh)。一旦把这份榜单中的工具调用模型接入具备文件访问和数据库查询能力的多步循环，就可以参阅[使用 MCP 的本地 AI 代理](/power-local-llm/local-ai-agents-with-mcp-2026?lang=zh)，了解这套开源编排方案。',
+          content: '模型的输出质量在很大程度上取决于你的提示方式。关于适用于所有本地模型的结构化技术——包括思维链、Few-Shot示例和输出格式化——请参阅[Prompt工程指南](https://www.promptquorum.com/zh/prompt-engineering)。对于推理任务，[Chain-of-Thought提示](https://www.promptquorum.com/zh/prompt-engineering/chain-of-thought-prompting)显著改善DeepSeek-R1和Qwen3输出质量。了解每个模型所需的VRAM，见[VRAM需求指南 →](/zh/local-llms/how-much-vram-local-llm)。对于Gemma 4代理工作流，见[Tree-of-Thought和ReAct](https://www.promptquorum.com/zh/prompt-engineering/tree-of-thought-react)。一旦把这份榜单中的工具调用模型接入具备文件访问和数据库查询能力的多步循环，就可以参阅[使用 MCP 的本地 AI 代理](/zh/power-local-llm/local-ai-agents-with-mcp-2026)，了解这套开源编排方案。',
           items: [
             '**通用聊天（初学者）**：`ollama run llama3.2:3b` -- 文档最多，最佳入门模型。',
             '**通用聊天（品质）**：`ollama run llama4:scout` -- MoE架构，~10GB显存。8GB机器保持`ollama run llama3.2:3b`。',
@@ -1803,12 +1803,12 @@ schema: {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[如何安装Ollama：完整指南](/local-llms/how-to-install-ollama?lang=zh)',
-            '[Ollama vs LM Studio：完整对比](/local-llms/ollama-vs-lm-studio?lang=zh)',
-            '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh)',
-            '[LLM量子化完全指南：Q4_K_M vs IQ3_M](/local-llms/llm-quantization-guide?lang=zh)',
-            '[Prompt Engineering框架：RTF框架](/prompt-engineering/rtf-framework?lang=zh)',
-            '[AI代码审查指南](/prompt-engineering/ai-code-review?lang=zh)',
+            '[如何安装Ollama：完整指南](/zh/local-llms/how-to-install-ollama)',
+            '[Ollama vs LM Studio：完整对比](/zh/local-llms/ollama-vs-lm-studio)',
+            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026)',
+            '[LLM量子化完全指南：Q4_K_M vs IQ3_M](/zh/local-llms/llm-quantization-guide)',
+            '[Prompt Engineering框架：RTF框架](/zh/prompt-engineering/rtf-framework)',
+            '[AI代码审查指南](/zh/prompt-engineering/ai-code-review)',
           ],
         },
         sources: {
@@ -1826,7 +1826,7 @@ schema: {
         '@type': 'NewsArticle',
         'headline': '2026年Ollama最佳开源模型：下载量排行前十',
         'description': '2026年4月，Ollama最受欢迎的开源模型包括Llama 3.1（下载最多）、Qwen2.5（增长最快）、DeepSeek-R1（推理最强）。',
-        'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/top-open-source-models-ollama',
         'inLanguage': 'zh',
         'datePublished': '2026-04-11',
         'dateModified': '2026-05-06',

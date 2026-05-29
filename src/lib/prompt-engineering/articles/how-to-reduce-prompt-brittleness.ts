@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'Was verursacht Prompt-Brittleness?',
-        content: '**Die meiste Prompt-Brittleness kommt aus fünf Mustern, wie Prompts geschrieben und getestet werden.** Die zwei häufigsten — implizite Formaterwartungen und Happy-Path-Only-Tests — machen die Mehrheit der Produktionsfehler aus. Das Verständnis dieser Ursachen ist der erste Schritt zum [Bewerten und Verbessern der Qualität Ihrer Prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de).',
+        content: '**Die meiste Prompt-Brittleness kommt aus fünf Mustern, wie Prompts geschrieben und getestet werden.** Die zwei häufigsten — implizite Formaterwartungen und Happy-Path-Only-Tests — machen die Mehrheit der Produktionsfehler aus. Das Verständnis dieser Ursachen ist der erste Schritt zum [Bewerten und Verbessern der Qualität Ihrer Prompts](/de/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Implizite Formaterwartungen** — Der Prompt fordert ein bestimmtes Ausgabeformat (JSON, Bullet-Liste, ja/nein) an, ohne es durchzusetzen. Jede Eingabevariante, die das Modell veranlasst, eine Präambel hinzuzufügen oder umzuformulieren, bricht das nachgelagerte Parsing.',
           '**Happy-Path-Only-Tests** — Prompts werden an 3–5 manuell kuratierte Beispiele validiert, die immer funktionieren. Randfälle — leere Eingaben, sehr langer Text, mehrdeutige Formulierungen — werden nie getestet.',
@@ -378,8 +378,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Wie reduziert man Prompt-Brittleness?',
         content: '**Sieben Techniken behandeln die fünf Grundursachen oben und decken die gesamte Fehlermodell-Oberfläche ab.** Wenden Sie sie der Reihe nach an — frühere Techniken behandeln die häufigsten Fehler. In Produktions-Codebases macht Format-bezogene Brittleness — Prompts, die Freitext parsen und eine bestimmte Form erwarten — die Mehrheit der stillen Fehler in Klassifizierungs- und Extraktionsaufgaben aus. Durchsetzung strukturierter Ausgabe (Technik 1) behandelt diese Klasse vollständig.',
         numberedItems: [
-          '**Strukturierte Ausgabe durchsetzen** — Verwenden Sie [JSON-Modus oder native strukturierte Ausgabe-APIs](/prompt-engineering/structured-output-json-mode?lang=de) anstatt das Modell anzuweisen, „in JSON zu antworten". Formatdurchsetzung verlagert die Zuverlässigkeitslast vom Prompt zur API-Schicht.',
-          '**Explizite Few-Shot-Beispiele hinzufügen** — Fügen Sie 2–3 Input/Output-Paare ein, die korrektes Verhalten demonstrieren, einschließlich eines Randfalls. Beispiele verankern das Verhalten des Modells zuverlässiger als reine Instruktions-Prompts. Siehe [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) für weitere Anleitung.',
+          '**Strukturierte Ausgabe durchsetzen** — Verwenden Sie [JSON-Modus oder native strukturierte Ausgabe-APIs](/de/prompt-engineering/structured-output-json-mode) anstatt das Modell anzuweisen, „in JSON zu antworten". Formatdurchsetzung verlagert die Zuverlässigkeitslast vom Prompt zur API-Schicht.',
+          '**Explizite Few-Shot-Beispiele hinzufügen** — Fügen Sie 2–3 Input/Output-Paare ein, die korrektes Verhalten demonstrieren, einschließlich eines Randfalls. Beispiele verankern das Verhalten des Modells zuverlässiger als reine Instruktions-Prompts. Siehe [Zero-Shot vs. Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) für weitere Anleitung.',
           '**Defensive Anweisungen schreiben** — Geben Sie an, was das Modell tun soll, wenn die Eingabe fehlend, mehrdeutig oder außerhalb des Geltungsbereichs ist. Beispiel: „Wenn kein Datum gefunden wird, geben Sie `null` zurück. Raten Sie nicht." Ohne dies füllt das Modell Lücken mit plausibel klingenden Standardwerten.',
           '**Eingaben parametrisieren** — Ersetzen Sie hartcodierte Werte und Inline-Beispiele durch benannte Variablen (`{{customer_name}}`, `{{document_text}}`). Parametrisierte Prompts sind leichter zu testen und verhindern versehentliche Überanpassung an Beispielwerte.',
           '**Vor der Bereitstellung einen Regressions-Testsatz erstellen** — Stellen Sie 20+ Testfälle zusammen, die die erwartete Verteilung plus 5+ Randfälle abdecken. Führen Sie den Testsatz vor jedem Modell-Upgrade oder Prompt-Änderung aus.',
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Umformulierungstests** — Formulieren Sie 5–10 Testeingaben mit anderer Formulierung um und messen Sie, ob Ausgaben konsistent bleiben. Spröde Prompts zeigen eine hohe Varianz über Umformulierungen hinweg.',
           '**Randfalltest** — Testen Sie leere Eingaben, maximale Längeneingaben, nicht-englischen Text, Sonderzeichen und Eingaben, die im Bereich, aber ungewöhnlich sind. Diese decken implizite Annahmen auf.',
           '**Temperatur-Variation** — Führen Sie dieselben Eingaben bei Temperatur 0,0, 0,5 und 1,0 aus. Robuste Prompts zeigen eine konsistente Struktur über den Bereich; spröde Prompts brechen das Format bei höheren Temperaturen.',
-          '**Modell-Swap-Tests** — Führen Sie denselben Prompt und Testfälle auf mindestens zwei Modellen aus. Divergente Ausgaben signalisieren modellspezifische Überanpassung. Siehe [Wie testet man Prompts über Modelle hinweg](/prompt-engineering/how-to-test-prompts-across-models?lang=de) für ein Framework.',
+          '**Modell-Swap-Tests** — Führen Sie denselben Prompt und Testfälle auf mindestens zwei Modellen aus. Divergente Ausgaben signalisieren modellspezifische Überanpassung. Siehe [Wie testet man Prompts über Modelle hinweg](/de/prompt-engineering/how-to-test-prompts-across-models) für ein Framework.',
           '**Regressions-Durchläufe vor jedem Update** — Führen Sie den vollständigen Testsatz nach jeder Modellversionsänderung, System-Prompt-Update oder Prompt-Bearbeitung aus. Protokollieren Sie Pass-Raten pro Testkategorie (Format, Inhalt, Randfälle), um Regressions-Muster zu verfolgen.',
         ],
         callouts: [
@@ -542,12 +542,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Verwandte Lektüre',
         items: [
-          '[Wie man die Qualität von Prompts bewertet](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) — Framework mit drei Komponenten: Genauigkeit, Konsistenz, Befolgungsrate',
-          '[Wie man Prompts über Modelle hinweg testet](/prompt-engineering/how-to-test-prompts-across-models?lang=de) — Führen Sie denselben Testsatz auf GPT, Claude und Gemini aus mit Pass-Rate-Vergleich',
-          '[Prompt-Evaluations-Metriken](/prompt-engineering/prompt-evaluation-metrics?lang=de) — Pass-Rate, BLEU, semantische Ähnlichkeit und LLM-as-Judge-Scoring-Methoden',
-          '[Strukturierte Ausgabe und JSON-Modus](/prompt-engineering/structured-output-json-mode?lang=de) — API-Level-Format-Durchsetzung für GPT, Claude und Gemini',
-          '[Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — Wann sollten Beispiele verwendet werden und wie viele für Production-Zuverlässigkeit',
-          '[Prompt-Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — Input-Sanitization und Privilege-Separation für Prompt-basierte Systeme',
+          '[Wie man die Qualität von Prompts bewertet](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Framework mit drei Komponenten: Genauigkeit, Konsistenz, Befolgungsrate',
+          '[Wie man Prompts über Modelle hinweg testet](/de/prompt-engineering/how-to-test-prompts-across-models) — Führen Sie denselben Testsatz auf GPT, Claude und Gemini aus mit Pass-Rate-Vergleich',
+          '[Prompt-Evaluations-Metriken](/de/prompt-engineering/prompt-evaluation-metrics) — Pass-Rate, BLEU, semantische Ähnlichkeit und LLM-as-Judge-Scoring-Methoden',
+          '[Strukturierte Ausgabe und JSON-Modus](/de/prompt-engineering/structured-output-json-mode) — API-Level-Format-Durchsetzung für GPT, Claude und Gemini',
+          '[Zero-Shot vs. Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) — Wann sollten Beispiele verwendet werden und wie viele für Production-Zuverlässigkeit',
+          '[Prompt-Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Input-Sanitization und Privilege-Separation für Prompt-basierte Systeme',
         ],
       },
       sources: {
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'de',
       about: [
         { '@type': 'Thing', name: 'Prompt-Engineering' },
@@ -830,12 +830,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Cómo evaluar la calidad de un prompt](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — Framework de tres componentes: precisión, consistencia, tasa de seguimiento de instrucciones',
-          '[Cómo probar prompts en múltiples modelos](/prompt-engineering/how-to-test-prompts-across-models?lang=es) — Ejecuta el mismo conjunto de pruebas en GPT, Claude y Gemini con comparación de tasas de éxito',
-          '[Métricas de evaluación de prompts](/prompt-engineering/prompt-evaluation-metrics?lang=es) — Tasa de éxito, BLEU, similitud semántica y métodos de scoring LLM-as-judge',
-          '[Salida estructurada y modo JSON](/prompt-engineering/structured-output-json-mode?lang=es) — Aplicación de formato a nivel de API para GPT, Claude y Gemini',
-          '[Prompting zero-shot vs. few-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=es) — Cuándo usar ejemplos y cuántos para la fiabilidad en producción',
-          '[Prompt injection y seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — Saneamiento de entrada y separación de privilegios para sistemas basados en prompts',
+          '[Cómo evaluar la calidad de un prompt](/es/prompt-engineering/how-to-evaluate-prompt-quality) — Framework de tres componentes: precisión, consistencia, tasa de seguimiento de instrucciones',
+          '[Cómo probar prompts en múltiples modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Ejecuta el mismo conjunto de pruebas en GPT, Claude y Gemini con comparación de tasas de éxito',
+          '[Métricas de evaluación de prompts](/es/prompt-engineering/prompt-evaluation-metrics) — Tasa de éxito, BLEU, similitud semántica y métodos de scoring LLM-as-judge',
+          '[Salida estructurada y modo JSON](/es/prompt-engineering/structured-output-json-mode) — Aplicación de formato a nivel de API para GPT, Claude y Gemini',
+          '[Prompting zero-shot vs. few-shot](/es/prompt-engineering/zero-shot-vs-few-shot) — Cuándo usar ejemplos y cuántos para la fiabilidad en producción',
+          '[Prompt injection y seguridad](/es/prompt-engineering/prompt-injection-and-security) — Saneamiento de entrada y separación de privilegios para sistemas basados en prompts',
         ],
       },
       sources: {
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'es',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -945,7 +945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'Qu\'est-ce qui cause la fragilité des prompts ?',
-        content: '**La plupart des fragilités des prompts proviennent de cinq motifs dans la façon dont les prompts sont écrits et testés.** Les deux plus courants — attentes de format implicites et tests happy-path uniquement — expliquent la majorité des défaillances en production. Comprendre ces causes est la première étape pour [évaluer et améliorer la qualité de vos prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr).',
+        content: '**La plupart des fragilités des prompts proviennent de cinq motifs dans la façon dont les prompts sont écrits et testés.** Les deux plus courants — attentes de format implicites et tests happy-path uniquement — expliquent la majorité des défaillances en production. Comprendre ces causes est la première étape pour [évaluer et améliorer la qualité de vos prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Attentes de format implicites** — Le prompt demande un format de sortie spécifique (JSON, liste à puces, oui/non) sans le forcer. Toute variation d\'entrée qui amène le modèle à ajouter un préambule ou reformuler casse l\'analyse en aval.',
           '**Tests happy-path uniquement** — Les prompts sont validés contre 3–5 exemples manuellement triés qui fonctionnent toujours. Les cas limites — entrées vides, texte très long, formulations ambiguës — ne sont jamais testés.',
@@ -962,8 +962,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Comment réduire la fragilité des prompts ?',
         content: '**Sept techniques traitent les cinq causes racines ci-dessus et couvrent toute la surface des modes de défaillance.** Appliquez-les dans l\'ordre — les techniques antérieures traitent les défaillances les plus courantes. Dans les codebases de production, la fragilité liée au format — des prompts qui analysent du texte libre en attendant une forme spécifique — explique la majorité des défaillances silencieuses dans les tâches de classification et d\'extraction. L\'application de la sortie structurée (Technique 1) traite entièrement cette classe.',
         numberedItems: [
-          '**Forcer la sortie structurée** — Utilisez [le mode JSON ou les API de sortie structurée native](/prompt-engineering/structured-output-json-mode?lang=fr) au lieu de demander au modèle de \"répondre en JSON\". L\'application du format déplace le fardeau de la fiabilité du prompt à la couche API.',
-          '**Ajouter des exemples few-shot explicites** — Incluez 2–3 paires entrée/sortie qui démontrent le comportement correct, y compris un cas limite. Les exemples ancrent le comportement du modèle plus fiablement que les prompts d\'instruction uniquement. Voir [Zero-Shot vs. Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) pour plus de guidance.',
+          '**Forcer la sortie structurée** — Utilisez [le mode JSON ou les API de sortie structurée native](/fr/prompt-engineering/structured-output-json-mode) au lieu de demander au modèle de \"répondre en JSON\". L\'application du format déplace le fardeau de la fiabilité du prompt à la couche API.',
+          '**Ajouter des exemples few-shot explicites** — Incluez 2–3 paires entrée/sortie qui démontrent le comportement correct, y compris un cas limite. Les exemples ancrent le comportement du modèle plus fiablement que les prompts d\'instruction uniquement. Voir [Zero-Shot vs. Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot) pour plus de guidance.',
           '**Écrire des instructions défensives** — Spécifiez ce que le modèle doit faire quand l\'entrée est manquante, ambiguë ou hors du champ. Exemple : \"Si aucune date n\'est trouvée, retournez `null`. Ne devinez pas.\" Sans ceci, le modèle remplit les lacunes avec des valeurs par défaut plausiblement sonnantes.',
           '**Paramétrer les entrées** — Remplacez les valeurs codées en dur et les exemples en ligne par des variables nommées (`{{customer_name}}`, `{{document_text}}`). Les prompts paramétrés sont plus faciles à tester systématiquement et préviennent le surapprentissage accidentel aux valeurs d\'exemple.',
           '**Construire un ensemble de tests de régression avant le déploiement** — Assemblez 20+ cas de test couvrant la distribution attendue plus 5+ cas limites. Exécutez l\'ensemble de tests avant chaque mise à niveau du modèle ou changement de prompt.',
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Tests de paraphrase** — Reformulez 5–10 entrées de test en utilisant une formulation différente et mesurez si les sorties restent cohérentes. Les prompts fragiles affichent une variance élevée sur les paraphrases.',
           '**Tests de cas limites** — Testez les entrées vides, les entrées de longueur maximale, le texte non-anglais, les caractères spéciaux et les entrées qui sont dans le champ mais inhabituelles. Celles-ci exposent les hypothèses implicites.',
           '**Variation de température** — Exécutez les mêmes entrées aux températures 0.0, 0.5 et 1.0. Les prompts robustes affichent une structure cohérente sur la plage ; les prompts fragiles cassent le format à des températures plus élevées.',
-          '**Tests de swap de modèle** — Exécutez le même prompt et les cas de test sur au moins deux modèles. Les sorties divergentes signalent un surajustement spécifique au modèle. Voir [Comment tester les prompts sur les modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) pour un framework.',
+          '**Tests de swap de modèle** — Exécutez le même prompt et les cas de test sur au moins deux modèles. Les sorties divergentes signalent un surajustement spécifique au modèle. Voir [Comment tester les prompts sur les modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) pour un framework.',
           '**Exécutions de régression avant chaque mise à jour** — Exécutez l\'ensemble de tests complet après chaque changement de version du modèle, mise à jour du prompt système ou modification du prompt. Enregistrez les taux de réussite par catégorie de test (format, contenu, cas limites) pour suivre les motifs de régression.',
         ],
         callouts: [
@@ -1126,12 +1126,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures connexes',
         items: [
-          '[Comment évaluer la qualité des prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) — Framework en trois composantes : précision, cohérence, taux de suivi des instructions',
-          '[Comment tester les prompts sur les modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) — Exécutez le même ensemble de tests sur GPT, Claude et Gemini avec comparaison des taux de réussite',
-          '[Métriques d\'évaluation des prompts](/prompt-engineering/prompt-evaluation-metrics?lang=fr) — Taux de réussite, BLEU, similitude sémantique et méthodes de scoring LLM-as-Judge',
-          '[Sortie structurée et mode JSON](/prompt-engineering/structured-output-json-mode?lang=fr) — Application du format au niveau de l\'API pour GPT, Claude et Gemini',
-          '[Prompting zero-shot vs. few-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — Quand utiliser des exemples et combien pour la fiabilité en production',
-          '[Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Désinfection d\'entrée et séparation des privilèges pour les systèmes basés sur des prompts',
+          '[Comment évaluer la qualité des prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Framework en trois composantes : précision, cohérence, taux de suivi des instructions',
+          '[Comment tester les prompts sur les modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécutez le même ensemble de tests sur GPT, Claude et Gemini avec comparaison des taux de réussite',
+          '[Métriques d\'évaluation des prompts](/fr/prompt-engineering/prompt-evaluation-metrics) — Taux de réussite, BLEU, similitude sémantique et méthodes de scoring LLM-as-Judge',
+          '[Sortie structurée et mode JSON](/fr/prompt-engineering/structured-output-json-mode) — Application du format au niveau de l\'API pour GPT, Claude et Gemini',
+          '[Prompting zero-shot vs. few-shot](/fr/prompt-engineering/zero-shot-vs-few-shot) — Quand utiliser des exemples et combien pour la fiabilité en production',
+          '[Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Désinfection d\'entrée et séparation des privilèges pour les systèmes basés sur des prompts',
         ],
       },
       sources: {
@@ -1155,7 +1155,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'fr',
       about: [
         { '@type': 'Thing', name: 'Ingénierie des prompts' },
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: 'プロンプト脆弱性の原因は何か？',
-        content: '**ほとんどのプロンプト脆弱性は、プロンプトがどのように書かれてテストされるかの5つのパターンから生じます。** 最も一般的な2つ — 暗黙的な形式の期待とハッピーパステストのみ — は本番環境での失敗の大多数を説明しています。これらの原因を理解することは、[プロンプト品質を評価して改善する](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)ための最初のステップです。',
+        content: '**ほとんどのプロンプト脆弱性は、プロンプトがどのように書かれてテストされるかの5つのパターンから生じます。** 最も一般的な2つ — 暗黙的な形式の期待とハッピーパステストのみ — は本番環境での失敗の大多数を説明しています。これらの原因を理解することは、[プロンプト品質を評価して改善する](/ja/prompt-engineering/how-to-evaluate-prompt-quality)ための最初のステップです。',
         items: [
           '**暗黙的な形式の期待** — プロンプトは特定の出力形式（JSON、箇条書き、はい/いいえ）を要求しますが、強制しません。モデルを前文を追加したり、言い直したりする入力バリエーションは、下流の解析を中断します。',
           '**ハッピーパステストのみ** — プロンプトは常に機能する3〜5個の手動で管理された例に対して検証されます。エッジケース — 空の入力、非常に長いテキスト、あいまいなフレーズ — はテストされません。',
@@ -1258,8 +1258,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'プロンプト脆弱性を低減するには？',
         content: '**7つのテクニックは上記の5つの根本原因に対処し、失敗モードの全体的なサーフェスをカバーしています。** 順番に適用してください — 初期のテクニックは最も一般的な失敗に対処します。本番環境のコードベースでは、形式関連の脆弱性 — フリーテキストを解析し、特定の形状を期待するプロンプト — は分類タスクと抽出タスクで静かな失敗の大多数を説明しています。構造化出力の強制（テクニック1）はこのクラス全体に対処します。',
         numberedItems: [
-          '**構造化出力を強制する** — モデルに「JSONで応答する」ように要求する代わりに、[JSONモードまたはネイティブ構造化出力API](/prompt-engineering/structured-output-json-mode?lang=ja)を使用します。形式の強制は、信頼性の負担をプロンプトからAPI層に移動します。',
-          '**明示的なFew-Shot例を追加する** — エッジケースを含む正しい動作を示す2〜3個の入力/出力ペアを含めます。例は、命令のみのプロンプトよりも信頼できるようにモデルの動作をアンカリングします。詳細については、[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=ja)を参照してください。',
+          '**構造化出力を強制する** — モデルに「JSONで応答する」ように要求する代わりに、[JSONモードまたはネイティブ構造化出力API](/ja/prompt-engineering/structured-output-json-mode)を使用します。形式の強制は、信頼性の負担をプロンプトからAPI層に移動します。',
+          '**明示的なFew-Shot例を追加する** — エッジケースを含む正しい動作を示す2〜3個の入力/出力ペアを含めます。例は、命令のみのプロンプトよりも信頼できるようにモデルの動作をアンカリングします。詳細については、[Zero-Shot vs Few-Shot Prompting](/ja/prompt-engineering/zero-shot-vs-few-shot)を参照してください。',
           '**防御的指示を書く** — 入力が欠落している、あいまいである、または範囲外の場合にモデルが何をすべきかを指定します。例：「日付が見つからない場合は、`null`を返します。推測しないでください。」これなしで、モデルはもっともらしく聞こえるデフォルト値でギャップを埋めます。',
           '**入力をパラメータ化する** — ハードコードされた値とインライン例を名前付き変数（`{{customer_name}}`、`{{document_text}}`）に置き換えます。パラメータ化されたプロンプトはテストが容易で、例の値への偶発的なオーバーフィッティングを防ぎます。',
           '**デプロイ前に回帰テストセットを構築する** — 予想される分布プラス5以上のエッジケースをカバーする20以上のテストケースを組み立てます。モデルのアップグレードまたはプロンプトの変更の前にテストセットを実行します。',
@@ -1316,7 +1316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**言い換えテスト** — 5〜10個のテスト入力を異なる言葉で再述し、出力が一貫性を保つかどうかを測定します。脆いプロンプトは言い換え全体で高い分散を示します。',
           '**エッジケーステスト** — 空の入力、最大長の入力、英語以外のテキスト、特殊文字、および範囲内だが珍しい入力をテストします。これらは暗黙的な仮定を公開します。',
           '**温度の変動** — 温度0.0、0.5、1.0で同じ入力を実行します。堅牢なプロンプトは範囲全体で一貫した構造を示します。脆いプロンプトはより高い温度でフォーマットを破損します。',
-          '**モデルスワップテスト** — 少なくとも2つのモデルで同じプロンプトとテストケースを実行します。発散出力は、モデル固有のオーバーフィッティングを示します。フレームワークについては、[プロンプトをモデル全体でテストする方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja)を参照してください。',
+          '**モデルスワップテスト** — 少なくとも2つのモデルで同じプロンプトとテストケースを実行します。発散出力は、モデル固有のオーバーフィッティングを示します。フレームワークについては、[プロンプトをモデル全体でテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models)を参照してください。',
           '**すべての更新の前に回帰実行** — モデルバージョン変更、システムプロンプト更新、またはプロンプト編集の後、完全なテストセットを実行します。テストカテゴリ（形式、コンテンツ、エッジケース）ごとのログパスレート以下、回帰パターンをトラッキングします。',
         ],
         callouts: [
@@ -1398,7 +1398,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'すべてのモデルで同じプロンプトを使用すべきですか？',
-            a: 'テストなしではありません。モデルは命令の追従、デフォルト出力形式、および拒否動作が異なります。1つのモデルで調整されたプロンプトは、別のモデルで構造的に異なる出力を生成する可能性があります。本番環境トラフィックを切り替える前に、新しいモデルで回帰テストセットを実行します。フレームワークについては、[プロンプトをモデル全体でテストする方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja)を参照してください。',
+            a: 'テストなしではありません。モデルは命令の追従、デフォルト出力形式、および拒否動作が異なります。1つのモデルで調整されたプロンプトは、別のモデルで構造的に異なる出力を生成する可能性があります。本番環境トラフィックを切り替える前に、新しいモデルで回帰テストセットを実行します。フレームワークについては、[プロンプトをモデル全体でテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models)を参照してください。',
           },
           {
             q: 'プロンプトをどのくらい頻繁に回帰テストすべきですか？',
@@ -1406,7 +1406,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'プロンプト脆弱性とプロンプト注入の違いは何ですか？',
-            a: 'プロンプト脆弱性は信頼性の失敗です：プロンプトはテスト分布の外の合法的な入力バリエーションで破損します。プロンプト注入はセキュリティの失敗です：悪意のあるアクターがプロンプト指示をオーバーライドするために入力を意図的に作成します。どちらもプロンプト設計の欠陥ですが、脆弱性は堅牢性テクニックで対処され、注入は入力サニタイゼーションと特権分離が必要です。注入固有の緩和については、[プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja)を参照してください。',
+            a: 'プロンプト脆弱性は信頼性の失敗です：プロンプトはテスト分布の外の合法的な入力バリエーションで破損します。プロンプト注入はセキュリティの失敗です：悪意のあるアクターがプロンプト指示をオーバーライドするために入力を意図的に作成します。どちらもプロンプト設計の欠陥ですが、脆弱性は堅牢性テクニックで対処され、注入は入力サニタイゼーションと特権分離が必要です。注入固有の緩和については、[プロンプト注入とセキュリティ](/ja/prompt-engineering/prompt-injection-and-security)を参照してください。',
           },
         ],
       },
@@ -1414,12 +1414,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '関連読書',
         items: [
-          '[プロンプト品質を評価する方法](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja) — 3つのコンポーネントフレームワーク：正確性、一貫性、命令追従レート',
-          '[プロンプトをモデル全体でテストする方法](/prompt-engineering/how-to-test-prompts-across-models?lang=ja) — GPT、Claude、およびGeminiで同じテストセットを実行し、合格率を比較',
-          '[プロンプト評価メトリクス](/prompt-engineering/prompt-evaluation-metrics?lang=ja) — 合格率、BLEU、セマンティック類似性、およびLLM-as-judge採点方法',
-          '[構造化出力とJSONモード](/prompt-engineering/structured-output-json-mode?lang=ja) — GPT、Claude、およびGeminiのAPIレベルの形式強制',
-          '[ゼロショット対フューショットプロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) — 例を使用する場合と本番環境の信頼性に必要な数',
-          '[プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — プロンプトベースのシステムのための入力サニタイゼーションと特権分離',
+          '[プロンプト品質を評価する方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — 3つのコンポーネントフレームワーク：正確性、一貫性、命令追従レート',
+          '[プロンプトをモデル全体でテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT、Claude、およびGeminiで同じテストセットを実行し、合格率を比較',
+          '[プロンプト評価メトリクス](/ja/prompt-engineering/prompt-evaluation-metrics) — 合格率、BLEU、セマンティック類似性、およびLLM-as-judge採点方法',
+          '[構造化出力とJSONモード](/ja/prompt-engineering/structured-output-json-mode) — GPT、Claude、およびGeminiのAPIレベルの形式強制',
+          '[ゼロショット対フューショットプロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — 例を使用する場合と本番環境の信頼性に必要な数',
+          '[プロンプト注入とセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — プロンプトベースのシステムのための入力サニタイゼーションと特権分離',
         ],
       },
       sources: {
@@ -1443,7 +1443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'ja',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -1529,7 +1529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: '什么导致Prompt脆弱性？',
-        content: '**大多数Prompt脆弱性源于Prompt编写和测试方式的5个模式。** 最常见的两个 — 隐含的格式期望和仅正常路径测试 — 占生产失败的大多数。理解这些原因是[评估和改进Prompt质量](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)的第一步。',
+        content: '**大多数Prompt脆弱性源于Prompt编写和测试方式的5个模式。** 最常见的两个 — 隐含的格式期望和仅正常路径测试 — 占生产失败的大多数。理解这些原因是[评估和改进Prompt质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)的第一步。',
         items: [
           '**隐含的格式期望** — Prompt要求特定的输出格式（JSON、项目列表、是/否）但不强制。任何导致模型添加前言或改写的输入变化都会破坏下游解析。',
           '**仅正常路径测试** — Prompt针对3-5个手动精选的始终有效的示例进行验证。边界情况 — 空输入、非常长的文本、模糊措辞 — 从不测试。',
@@ -1546,8 +1546,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '如何减少Prompt脆弱性？',
         content: '**7种技术处理上述5个根本原因并覆盖整个失败模式表面。** 按顺序应用它们 — 早期技术处理最常见的失败。在生产代码库中，格式相关的脆弱性 — 解析自由文本并期望特定形状的Prompt — 占分类和提取任务中静默失败的大多数。强制结构化输出（技术1）完全处理这个类。',
         numberedItems: [
-          '**强制结构化输出** — 使用[JSON模式或本机结构化输出API](/prompt-engineering/structured-output-json-mode?lang=zh)而不是要求模型"以JSON响应"。格式强制将可靠性负担从Prompt转移到API层。',
-          '**添加显式Few-Shot示例** — 包括2-3个演示正确行为的输入/输出对，包括一个边界情况。示例比仅指令Prompt更可靠地锚定模型行为。参见[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=zh)了解更多指导。',
+          '**强制结构化输出** — 使用[JSON模式或本机结构化输出API](/zh/prompt-engineering/structured-output-json-mode)而不是要求模型"以JSON响应"。格式强制将可靠性负担从Prompt转移到API层。',
+          '**添加显式Few-Shot示例** — 包括2-3个演示正确行为的输入/输出对，包括一个边界情况。示例比仅指令Prompt更可靠地锚定模型行为。参见[Zero-Shot vs Few-Shot Prompting](/zh/prompt-engineering/zero-shot-vs-few-shot)了解更多指导。',
           '**编写防御性指令** — 指定当输入缺失、模糊或超出范围时模型应该做什么。示例："如果找不到日期，返回`null`。不要猜测。"没有这个，模型会用看似合理的默认值填补空白。',
           '**参数化输入** — 用命名变量（`{{customer_name}}`、`{{document_text}}`）替换硬编码值和内联示例。参数化Prompt更容易系统地测试，防止意外过拟合示例值。',
           '**部署前构建回归测试集** — 组装20多个测试案例，覆盖预期分布加5个以上的边界情况。在每次模型升级或Prompt更改前运行测试集。',
@@ -1604,7 +1604,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**改写测试** — 用不同的措辞重述5-10个测试输入，衡量输出是否保持一致。脆弱的Prompt在改写中显示高方差。',
           '**边界情况测试** — 测试空输入、最大长度输入、非英语文本、特殊字符和范围内但不寻常的输入。这些公开隐含的假设。',
           '**温度变化** — 在温度0.0、0.5和1.0下运行相同的输入。健壮的Prompt在范围内显示一致的结构；脆弱的Prompt在较高温度下破坏格式。',
-          '**模型交换测试** — 在至少两个模型上运行相同的Prompt和测试案例。不同的输出表示模型特定的过拟合。参见[如何在模型间测试Prompt](/prompt-engineering/how-to-test-prompts-across-models?lang=zh)了解框架。',
+          '**模型交换测试** — 在至少两个模型上运行相同的Prompt和测试案例。不同的输出表示模型特定的过拟合。参见[如何在模型间测试Prompt](/zh/prompt-engineering/how-to-test-prompts-across-models)了解框架。',
           '**每次更新前的回归运行** — 在每次模型版本更改、系统Prompt更新或Prompt编辑后运行完整测试集。按测试类别（格式、内容、边界情况）记录通过率以跟踪回归模式。',
         ],
         callouts: [
@@ -1702,12 +1702,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[如何评估Prompt质量](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh) — 3个组件框架：准确性、一致性、指令遵循率',
-          '[如何在模型间测试Prompt](/prompt-engineering/how-to-test-prompts-across-models?lang=zh) — 在GPT、Claude和Gemini上运行相同测试集，并比较通过率',
-          '[Prompt评估指标](/prompt-engineering/prompt-evaluation-metrics?lang=zh) — 通过率、BLEU、语义相似性和LLM-as-judge评分方法',
-          '[结构化输出和JSON模式](/prompt-engineering/structured-output-json-mode?lang=zh) — GPT、Claude和Gemini的API级格式强制',
-          '[零射击对少射击提示](/prompt-engineering/zero-shot-vs-few-shot?lang=zh) — 何时使用示例以及生产可靠性需要多少',
-          '[Prompt注入和安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — Prompt基础系统的输入清理和特权分离',
+          '[如何评估Prompt质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 3个组件框架：准确性、一致性、指令遵循率',
+          '[如何在模型间测试Prompt](/zh/prompt-engineering/how-to-test-prompts-across-models) — 在GPT、Claude和Gemini上运行相同测试集，并比较通过率',
+          '[Prompt评估指标](/zh/prompt-engineering/prompt-evaluation-metrics) — 通过率、BLEU、语义相似性和LLM-as-judge评分方法',
+          '[结构化输出和JSON模式](/zh/prompt-engineering/structured-output-json-mode) — GPT、Claude和Gemini的API级格式强制',
+          '[零射击对少射击提示](/zh/prompt-engineering/zero-shot-vs-few-shot) — 何时使用示例以及生产可靠性需要多少',
+          '[Prompt注入和安全](/zh/prompt-engineering/prompt-injection-and-security) — Prompt基础系统的输入清理和特权分离',
         ],
       },
       sources: {
@@ -1731,7 +1731,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
-      url: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'zh',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },

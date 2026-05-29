@@ -292,7 +292,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Self-Consistency Prompting verbessert die KI-Genauigkeit bei Mathematik, Logik und Analyse durch Generierung mehrerer Lösungswege und Auswahl der Mehrheitsantwort.',
         datePublished: '2026-03-26',
         dateModified: '2026-05-04',
-        'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/self-consistency-prompting',
         'inLanguage': 'de',
         keywords: ['Self-Consistency Prompting', 'Prompt Engineering', 'KI-Zuverlässigkeit', 'Mehrheitsabstimmung', 'Reasoning', 'Chain-of-Thought'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -455,12 +455,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Ressourcen',
           items: [
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — die Einzelpfad-Reasoning-Technik, die Self-Consistency auf mehrere Pfade erweitert',
-            '[Tree-of-Thought und ReAct](/prompt-engineering/tree-of-thought-and-react?lang=de) — Branching-Reasoning-Ansätze, die mit Self-Consistency verwandt sind',
-            '[Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — Sicherheitsaspekte beim Implementieren von Multi-Sample-Pipelines',
-            '[Temperatur und Top-P](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) — die Sampling-Parameter, die Self-Consistency zum Funktionieren bringen',
-            '[Prompt Chaining](/prompt-engineering/prompt-chaining?lang=de) — mehrstufige Workflows, bei denen Self-Consistency in jedem Schritt angewendet werden kann',
-            '[KI-Halluzinationen: Wie man sie erkennt und stoppt](/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them?lang=de) — Self-Consistency als Halluzinations-Erkennungsmethode',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — die Einzelpfad-Reasoning-Technik, die Self-Consistency auf mehrere Pfade erweitert',
+            '[Tree-of-Thought und ReAct](/de/prompt-engineering/tree-of-thought-and-react) — Branching-Reasoning-Ansätze, die mit Self-Consistency verwandt sind',
+            '[Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Sicherheitsaspekte beim Implementieren von Multi-Sample-Pipelines',
+            '[Temperatur und Top-P](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) — die Sampling-Parameter, die Self-Consistency zum Funktionieren bringen',
+            '[Prompt Chaining](/de/prompt-engineering/prompt-chaining) — mehrstufige Workflows, bei denen Self-Consistency in jedem Schritt angewendet werden kann',
+            '[KI-Halluzinationen: Wie man sie erkennt und stoppt](/de/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them) — Self-Consistency als Halluzinations-Erkennungsmethode',
           ],
         },
         sources: {
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'El self-consistency prompting mejora la precisión de la IA en matemáticas, lógica y análisis generando múltiples caminos de razonamiento y seleccionando la respuesta mayoritaria. Técnica, ejemplos y análisis costo-beneficio.',
         datePublished: '2026-03-26',
         dateModified: '2026-05-04',
-        url: 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/self-consistency-prompting',
         inLanguage: 'es',
         keywords: ['self-consistency prompting', 'prompt engineering', 'prompts de razonamiento', 'voto mayoritario', 'chain-of-thought', 'mejora de precisión', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -703,12 +703,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[Chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting?lang=es) — la técnica de razonamiento de ruta única que el self-consistency extiende a múltiples rutas',
-            '[Tree-of-thought y ReAct](/prompt-engineering/tree-of-thought-and-react?lang=es) — enfoques de razonamiento ramificado relacionados con el self-consistency',
-            '[Inyección de prompts y seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — consideraciones de seguridad al implementar pipelines de múltiples muestras',
-            '[Temperatura y Top-P](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=es) — los parámetros de muestreo que hacen funcionar el self-consistency',
-            '[Prompt chaining](/prompt-engineering/prompt-chaining?lang=es) — flujos de trabajo de múltiples pasos donde el self-consistency puede aplicarse en cada paso',
-            '[Alucinaciones de IA: cómo detectarlas y detenerlas](/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them?lang=es) — el self-consistency como método de detección de alucinaciones',
+            '[Chain-of-thought prompting](/es/prompt-engineering/chain-of-thought-prompting) — la técnica de razonamiento de ruta única que el self-consistency extiende a múltiples rutas',
+            '[Tree-of-thought y ReAct](/es/prompt-engineering/tree-of-thought-and-react) — enfoques de razonamiento ramificado relacionados con el self-consistency',
+            '[Inyección de prompts y seguridad](/es/prompt-engineering/prompt-injection-and-security) — consideraciones de seguridad al implementar pipelines de múltiples muestras',
+            '[Temperatura y Top-P](/es/prompt-engineering/temperature-and-top-p-control-ai-creativity) — los parámetros de muestreo que hacen funcionar el self-consistency',
+            '[Prompt chaining](/es/prompt-engineering/prompt-chaining) — flujos de trabajo de múltiples pasos donde el self-consistency puede aplicarse en cada paso',
+            '[Alucinaciones de IA: cómo detectarlas y detenerlas](/es/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them) — el self-consistency como método de detección de alucinaciones',
           ],
         },
         sources: {
@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Le Self-Consistency Prompting améliore la précision de l\'IA en mathématiques, logique et analyse en générant plusieurs chemins de raisonnement et en sélectionnant la réponse majoritaire.',
         datePublished: '2026-03-26',
         dateModified: '2026-05-04',
-        'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/self-consistency-prompting',
         'inLanguage': 'fr',
         keywords: ['Self-Consistency Prompting', 'Prompt Engineering', 'Fiabilité IA', 'Vote majoritaire', 'Raisonnement', 'Chaîne de pensée'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -957,12 +957,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures connexes',
           items: [
-            '[Chaîne de Pensée Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — la technique de raisonnement à chemin unique que Self-Consistency étend à plusieurs chemins',
-            '[Tree-of-Thought et ReAct](/prompt-engineering/tree-of-thought-and-react?lang=fr) — approches de raisonnement par branchement connexes à Self-Consistency',
-            '[Injection de Prompt et Sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — considérations de sécurité lors de l\'implémentation de pipelines multi-échantillons',
-            '[Température et Top-P](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) — les paramètres d\'échantillonnage qui rendent Self-Consistency fonctionnel',
-            '[Prompt Chaining](/prompt-engineering/prompt-chaining?lang=fr) — workflows multi-étapes où Self-Consistency peut être appliqué à chaque étape',
-            '[Hallucinations IA : Comment les détecter et les arrêter](/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them?lang=fr) — Self-Consistency comme méthode de détection des hallucinations',
+            '[Chaîne de Pensée Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — la technique de raisonnement à chemin unique que Self-Consistency étend à plusieurs chemins',
+            '[Tree-of-Thought et ReAct](/fr/prompt-engineering/tree-of-thought-and-react) — approches de raisonnement par branchement connexes à Self-Consistency',
+            '[Injection de Prompt et Sécurité](/fr/prompt-engineering/prompt-injection-and-security) — considérations de sécurité lors de l\'implémentation de pipelines multi-échantillons',
+            '[Température et Top-P](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) — les paramètres d\'échantillonnage qui rendent Self-Consistency fonctionnel',
+            '[Prompt Chaining](/fr/prompt-engineering/prompt-chaining) — workflows multi-étapes où Self-Consistency peut être appliqué à chaque étape',
+            '[Hallucinations IA : Comment les détecter et les arrêter](/fr/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them) — Self-Consistency comme méthode de détection des hallucinations',
           ],
         },
         sources: {
@@ -1330,12 +1330,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '関連記事',
           content: [
-            '[Chain-of-Thoughtプロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — セルフコンシステンシーの基盤となる線形推論手法',
-            '[プロンプトエンジニアリングとは](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 基礎知識',
-            '[マルチステップ推論と分解](/prompt-engineering/decomposition-prompting?lang=ja) — 大型問題を分割する手法',
-            '[Few-Shotプロンプティング](/prompt-engineering/few-shot-prompting?lang=ja) — 例示による精度向上',
-            '[モデル選択ガイド](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja) — Claude Opus 4.7、GPT-4o、Gemini 3.1 Pro 比較',
-            '[プロンプト検証戦略](/prompt-engineering/prompt-optimization-metrics?lang=ja) — 精度測定とA/Bテスト'
+            '[Chain-of-Thoughtプロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — セルフコンシステンシーの基盤となる線形推論手法',
+            '[プロンプトエンジニアリングとは](/ja/prompt-engineering/what-is-prompt-engineering) — 基礎知識',
+            '[マルチステップ推論と分解](/ja/prompt-engineering/decomposition-prompting) — 大型問題を分割する手法',
+            '[Few-Shotプロンプティング](/ja/prompt-engineering/few-shot-prompting) — 例示による精度向上',
+            '[モデル選択ガイド](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Claude Opus 4.7、GPT-4o、Gemini 3.1 Pro 比較',
+            '[プロンプト検証戦略](/ja/prompt-engineering/prompt-optimization-metrics) — 精度測定とA/Bテスト'
           ]
         },
 
@@ -1458,7 +1458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '複数の推論パスを生成して投票で答えを選ぶセルフコンシステンシープロンプティング。GSM8K数学ベンチマークで56%→74%に改善。実装方法と活用シーンを詳解。',
         datePublished: '2026-03-26',
         dateModified: '2026-05-03',
-        url: 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/self-consistency-prompting',
         inLanguage: 'ja',
         keywords: [
           'セルフコンシステンシー',
@@ -1826,12 +1826,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '相关阅读',
           content: [
-            '[Chain-of-Thought提示工程](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 自洽一致性的基础技术',
-            '[什么是提示工程](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 基础概念',
-            '[分解式提示（Decomposition）](/prompt-engineering/decomposition-prompting?lang=zh) — 拆分复杂问题',
-            '[少样本提示（Few-Shot）](/prompt-engineering/few-shot-prompting?lang=zh) — 用例子指导推理',
-            '[模型选择指南](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh) — Claude vs GPT vs Gemini推理能力对比',
-            '[提示优化与评估](/prompt-engineering/prompt-optimization-metrics?lang=zh) — 精度测量和A/B测试'
+            '[Chain-of-Thought提示工程](/zh/prompt-engineering/chain-of-thought-prompting) — 自洽一致性的基础技术',
+            '[什么是提示工程](/zh/prompt-engineering/what-is-prompt-engineering) — 基础概念',
+            '[分解式提示（Decomposition）](/zh/prompt-engineering/decomposition-prompting) — 拆分复杂问题',
+            '[少样本提示（Few-Shot）](/zh/prompt-engineering/few-shot-prompting) — 用例子指导推理',
+            '[模型选择指南](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Claude vs GPT vs Gemini推理能力对比',
+            '[提示优化与评估](/zh/prompt-engineering/prompt-optimization-metrics) — 精度测量和A/B测试'
           ]
         },
 
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '自洽一致性提示生成5-20个推理路径投票选最频繁答案。GSM8K数学精度从56%提升到74%。企业部署指南、实现代码、温度配置。',
         datePublished: '2026-03-26',
         dateModified: '2026-05-03',
-        url: 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/self-consistency-prompting',
         inLanguage: 'zh',
         keywords: [
           '自洽一致性',

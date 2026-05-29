@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Mixtral 8x7B está disponible en Ollama mediante <code>ollama pull mixtral:8x7b</code>, que descarga automáticamente el GGUF Q4_K_M.</strong> Ollama gestiona la asignación de capas entre el VRAM disponible y hará descarga parcial a la RAM de la CPU si el VRAM es insuficiente, aunque esto reduce significativamente la velocidad.',
           'Si solo tienes 16 GB de VRAM, DeepSeek V2 Q4 es la mejor opción MoE. Cabe completamente en una sola tarjeta de 16 GB y ofrece un rendimiento de coding de aproximadamente 15–20 tok/s en una RTX 4080 o equivalente. Para VRAM por debajo de 16 GB, cambia a modelos densos — las ventajas de MoE desaparecen cuando se requiere una descarga pesada a la CPU.',
           'Un malentendido común: los modelos MoE deben cargar TODOS los pesos de los expertos en VRAM al inicio, no solo el subconjunto activo. El coste de VRAM refleja los parámetros totales, no los activos. Para tareas de coding en un solo lenguaje (p. ej., trabajo solo en Python), un modelo denso como Qwen 2.5 Coder 14B a menudo supera a Mixtral 8x7B porque sus pesos están completamente especializados para código en lugar de distribuidos entre expertos de propósito general.',
-          'Para una comparativa completa de los mejores modelos de coding en cada nivel de VRAM incluyendo alternativas densas, consulta la <a href="/local-llms/best-local-llms-for-coding?lang=es" class="text-primary hover:underline">guía de mejores LLMs locales para coding</a>.',
+          'Para una comparativa completa de los mejores modelos de coding en cada nivel de VRAM incluyendo alternativas densas, consulta la <a href="/es/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">guía de mejores LLMs locales para coding</a>.',
         ],
       },
       faq: {
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué comando de Ollama ejecuta Mixtral 8x7B?',
-            a: '<code>ollama pull mixtral:8x7b</code> descarga el GGUF cuantizado Q4_K_M. Luego <code>ollama run mixtral:8x7b</code> lo inicia. Ollama asigna VRAM automáticamente y vierte a la RAM de la CPU si es necesario. Consulta los <a href="/prompt-bites/best-models-amd-5700x-3070ti?lang=es" class="text-primary hover:underline">requisitos de VRAM GPU por modelo</a> para confirmar que tu tarjeta puede manejarlo.',
+            a: '<code>ollama pull mixtral:8x7b</code> descarga el GGUF cuantizado Q4_K_M. Luego <code>ollama run mixtral:8x7b</code> lo inicia. Ollama asigna VRAM automáticamente y vierte a la RAM de la CPU si es necesario. Consulta los <a href="/es/prompt-bites/best-models-amd-5700x-3070ti" class="text-primary hover:underline">requisitos de VRAM GPU por modelo</a> para confirmar que tu tarjeta puede manejarlo.',
           },
         ],
       },

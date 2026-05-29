@@ -272,7 +272,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Best Local LLM Stack für Entwickler (April 2026)',
         'description': 'Produktionsreifer Stack: vLLM, FastAPI, IDE-Integration VS Code, Echtzeit-Code-Vervollständigung, 30-50 Token/Sekunde. DSGVO-konform, kein Vendor Lock-in.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-llm-developer-stack',
         'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -434,11 +434,11 @@ schema: {
         'relatedReading': {
           title: 'Weiterführende Lektüre',
           items: [
-            '[Beste KI-Coding-Assistenten für lokale LLM](/local-llms/best-ai-coding-assistant-local-llm?lang=de) -- Wählen Sie Ihre IDE: Cursor, Continue.dev, Cody, Tabnine mit Unterstützung für lokale LLMs.',
-            '[OpenAI-kompatible API mit lokalen LLMs](/local-llms/local-llm-openai-compatible-api?lang=de)',
-            '[Ollama-Installations- und Einrichtungsanleitung](/local-llms/how-to-install-ollama?lang=de)',
-            '[Lokale LLMs mit VS Code & Cursor](/local-llms/local-llms-with-vscode-cursor?lang=de)',
-            '[Fine-Tuning lokaler LLMs mit LoRA](/local-llms/fine-tuning-local-llms-lora?lang=de)',
+            '[Beste KI-Coding-Assistenten für lokale LLM](/de/local-llms/best-ai-coding-assistant-local-llm) -- Wählen Sie Ihre IDE: Cursor, Continue.dev, Cody, Tabnine mit Unterstützung für lokale LLMs.',
+            '[OpenAI-kompatible API mit lokalen LLMs](/de/local-llms/local-llm-openai-compatible-api)',
+            '[Ollama-Installations- und Einrichtungsanleitung](/de/local-llms/how-to-install-ollama)',
+            '[Lokale LLMs mit VS Code & Cursor](/de/local-llms/local-llms-with-vscode-cursor)',
+            '[Fine-Tuning lokaler LLMs mit LoRA](/de/local-llms/fine-tuning-local-llms-lora)',
           ],
         },
         'sources': {
@@ -481,7 +481,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Meilleur Stack LLM Local pour Développeurs (avril 2026)',
         'description': 'Stack production : vLLM, FastAPI, intégration IDE VS Code, complétions temps réel, 30-50 tokens/s. RGPD conforme, sans dépendance fournisseur.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-developer-stack',
         'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -639,11 +639,11 @@ schema: {
         'relatedReading': {
           title: 'Lectures complémentaires',
           items: [
-            '[Meilleur assistant IA de code pour LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=fr) -- Choisissez votre IDE : Cursor, Continue.dev, Cody, Tabnine avec support LLM local.',
-            '[API compatible OpenAI avec LLMs locaux](/local-llms/local-llm-openai-compatible-api?lang=fr)',
-            '[Guide d\'installation et de configuration d\'Ollama](/local-llms/how-to-install-ollama?lang=fr)',
-            '[LLMs locaux avec VS Code & Cursor](/local-llms/local-llms-with-vscode-cursor?lang=fr)',
-            '[Fine-Tuning de LLMs locaux avec LoRA](/local-llms/fine-tuning-local-llms-lora?lang=fr)',
+            '[Meilleur assistant IA de code pour LLM local](/fr/local-llms/best-ai-coding-assistant-local-llm) -- Choisissez votre IDE : Cursor, Continue.dev, Cody, Tabnine avec support LLM local.',
+            '[API compatible OpenAI avec LLMs locaux](/fr/local-llms/local-llm-openai-compatible-api)',
+            '[Guide d\'installation et de configuration d\'Ollama](/fr/local-llms/how-to-install-ollama)',
+            '[LLMs locaux avec VS Code & Cursor](/fr/local-llms/local-llms-with-vscode-cursor)',
+            '[Fine-Tuning de LLMs locaux avec LoRA](/fr/local-llms/fine-tuning-local-llms-lora)',
           ],
         },
         'sources': {
@@ -686,7 +686,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '開発者向けベストローカルLLMスタック（2026年4月）',
         'description': '本番グレードスタック：vLLM・FastAPI・IDE統合実現。VS Code Copilot拡張でリアルタイムコード補完、30-50トークン/秒。ベンダーロックインなし。',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-developer-stack',
         'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -843,11 +843,11 @@ schema: {
         'relatedReading': {
           title: '関連記事',
           items: [
-            '[ローカルLLM向け最高のAIコーディングアシスタント](/local-llms/best-ai-coding-assistant-local-llm?lang=ja) -- IDE選択：Cursor、Continue.dev、Cody、TabnineはローカルLLMをサポートしています。',
-            '[ローカルLLMとOpenAI互換API](/local-llms/local-llm-openai-compatible-api?lang=ja)',
-            '[Ollamaのインストールとセットアップガイド](/local-llms/how-to-install-ollama?lang=ja)',
-            '[VS Code＆CursorでローカルLLMを使う](/local-llms/local-llms-with-vscode-cursor?lang=ja)',
-            '[LoRAによるローカルLLMのファインチューニング](/local-llms/fine-tuning-local-llms-lora?lang=ja)',
+            '[ローカルLLM向け最高のAIコーディングアシスタント](/ja/local-llms/best-ai-coding-assistant-local-llm) -- IDE選択：Cursor、Continue.dev、Cody、TabnineはローカルLLMをサポートしています。',
+            '[ローカルLLMとOpenAI互換API](/ja/local-llms/local-llm-openai-compatible-api)',
+            '[Ollamaのインストールとセットアップガイド](/ja/local-llms/how-to-install-ollama)',
+            '[VS Code＆CursorでローカルLLMを使う](/ja/local-llms/local-llms-with-vscode-cursor)',
+            '[LoRAによるローカルLLMのファインチューニング](/ja/local-llms/fine-tuning-local-llms-lora)',
           ],
         },
         'sources': {
@@ -890,7 +890,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '开发者最佳本地LLM技术栈（2026年4月）',
         'description': '生产级技术栈：vLLM、FastAPI、IDE集成实现实时代码补全。30-50令牌/秒，符合PIPL合规，无厂商锁定。',
-        'url': 'https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-developer-stack',
         'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -1047,11 +1047,11 @@ schema: {
         'relatedReading': {
           title: '延伸阅读',
           items: [
-            '[本地LLM最佳AI编码助手](/local-llms/best-ai-coding-assistant-local-llm?lang=zh) -- 选择您的IDE：Cursor、Continue.dev、Cody、Tabnine支持本地LLM。',
-            '[本地LLM与OpenAI兼容API](/local-llms/local-llm-openai-compatible-api?lang=zh)',
-            '[Ollama安装与配置指南](/local-llms/how-to-install-ollama?lang=zh)',
-            '[在VS Code和Cursor中使用本地LLM](/local-llms/local-llms-with-vscode-cursor?lang=zh)',
-            '[使用LoRA对本地LLM进行微调](/local-llms/fine-tuning-local-llms-lora?lang=zh)',
+            '[本地LLM最佳AI编码助手](/zh/local-llms/best-ai-coding-assistant-local-llm) -- 选择您的IDE：Cursor、Continue.dev、Cody、Tabnine支持本地LLM。',
+            '[本地LLM与OpenAI兼容API](/zh/local-llms/local-llm-openai-compatible-api)',
+            '[Ollama安装与配置指南](/zh/local-llms/how-to-install-ollama)',
+            '[在VS Code和Cursor中使用本地LLM](/zh/local-llms/local-llms-with-vscode-cursor)',
+            '[使用LoRA对本地LLM进行微调](/zh/local-llms/fine-tuning-local-llms-lora)',
           ],
         },
         'sources': {

@@ -540,8 +540,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=de',
-        url: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=de',
+        image: 'https://www.promptquorum.com/de/api/og/write-better-code-with-ai',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/write-better-code-with-ai',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Der Output jeder KI-Programmier-Session ist nur so gut wie die Anweisung, die du gibst — ein vager Prompt erzeugt vagen Code, ein strukturierter Prompt erzeugt Production-Ready-Code.** Large Language Models (LLMs) — die Klasse neuronaler Netzwerke hinter GPT-5, Claude 4.7 Opus und Gemini 3 Pro — "verstehen" Ihr Projekt nicht; sie sagen das nächste wahrscheinlichste Token basierend auf Mustern vorher, die sie aus Milliarden Codezeilen gelernt haben.',
             'Das bedeutet, Ihr Prompt ist ein Architektur-Vertrag, keine beiläufige Frage. Wenn Sie die Programmiersprache, erwartete Eingaben/Ausgaben und Edge Cases spezifizieren, die Sie handhaben wollen, erhalten Sie durchgehend Code, der näher an Production-Ready ist.',
             'In einem Satz: Die Aufgabe des Entwicklers hat sich verschoben von "jede Zeile schreiben" zu "Anweisungen schreiben, die eine KI ausführt" — die Fähigkeit ist Prompt Engineering, nicht Schreibgeschwindigkeit.',
-            'Diese Prompting-Techniken gelten genauso für lokale Coding-Stacks. Um einen Cloud-Assistenten durch das Open-Source-Trio Continue.dev + Ollama + Qwen3-Coder zu ersetzen, siehe [GitHub Copilot durch ein lokales LLM ersetzen](/power-local-llm/replace-github-copilot-with-local-llm?lang=de).',
+            'Diese Prompting-Techniken gelten genauso für lokale Coding-Stacks. Um einen Cloud-Assistenten durch das Open-Source-Trio Continue.dev + Ollama + Qwen3-Coder zu ersetzen, siehe [GitHub Copilot durch ein lokales LLM ersetzen](/de/power-local-llm/replace-github-copilot-with-local-llm).',
           ],
         },
         modelComparison: {
@@ -795,13 +795,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chainOfThought: {
           title: 'Wie verbessert Chain-of-Thought Prompting das Code-Debugging',
           content: [
-            '**[Chain-of-Thought (CoT) Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — das Modell auffordernd, vor der Produktion einer endgültigen Antwort schritt für schritt zu argumentieren — reduziert Debugging-Fehler durch Inspektierbarkeit der Modell-Logik.** CoT Prompting ist eine Technik, die ein LLM auffordert, intermediate Argumentation-Schritte zu erzeugen, bevor es Output produziert. Beim Debugging bedeutet das, das Modell verfolgt den Fehler-Pfad explizit, was Ihnen erlaubt, genau zu identifizieren, wo die Logik zusammenbricht.',
+            '**[Chain-of-Thought (CoT) Prompting](/de/prompt-engineering/chain-of-thought-prompting) — das Modell auffordernd, vor der Produktion einer endgültigen Antwort schritt für schritt zu argumentieren — reduziert Debugging-Fehler durch Inspektierbarkeit der Modell-Logik.** CoT Prompting ist eine Technik, die ein LLM auffordert, intermediate Argumentation-Schritte zu erzeugen, bevor es Output produziert. Beim Debugging bedeutet das, das Modell verfolgt den Fehler-Pfad explizit, was Ihnen erlaubt, genau zu identifizieren, wo die Logik zusammenbricht.',
           ],
         },
         rules: {
           title: 'Programmierregeln in persistente Anweisungen integrieren',
           content: [
-            '**Regeln — kurze Sätze expliziter Anweisungen in System-Prompts oder Projekt-Konfiguration — machen KI-Programmier-Tools konsistent über Sessions, nicht nur bei Single-Shot-Generierung.** Moderne Programmier-Tools (Cursor, GitHub Copilot, Claude Code) unterstützen projektweite Regeln, die über alle Interaktionen hinweg persistieren. Diese funktionieren als Architektur-Vertrag zwischen Ihnen und dem Modell. Die Verwendung von [Rollen-Definition](/prompt-engineering/persona-prompting?lang=de) als Basis-Regel macht alle nachfolgenden Anfragen konsistent. Beispiele effektiver Regeln:',
+            '**Regeln — kurze Sätze expliziter Anweisungen in System-Prompts oder Projekt-Konfiguration — machen KI-Programmier-Tools konsistent über Sessions, nicht nur bei Single-Shot-Generierung.** Moderne Programmier-Tools (Cursor, GitHub Copilot, Claude Code) unterstützen projektweite Regeln, die über alle Interaktionen hinweg persistieren. Diese funktionieren als Architektur-Vertrag zwischen Ihnen und dem Modell. Die Verwendung von [Rollen-Definition](/de/prompt-engineering/persona-prompting) als Basis-Regel macht alle nachfolgenden Anfragen konsistent. Beispiele effektiver Regeln:',
           ],
           items: [
             'Immer TypeScript strict mode nutzen. Kein `any` Typ.',
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         security: {
           title: 'Das Security-Problem: Was KI falsch versteht',
           content: [
-            '**Im April 2026 erzeugt KI Code mit Sicherheitslücken in 45% der Fälle — eine Rate, die sich nicht verbessert hat, während Modelle leistungsfähiger geworden sind.** Ein 2025 Veracode-Bericht zeigte, dass LLMs sich beim Wählen zwischen einer sicheren und unsicheren Implementierung 45% der Zeit für die unsichere Option entschieden. Akademische Forschung bestätigt diesen Muster: über 40% der KI-generierten Code-Lösungen enthalten [Sicherheitsfehler](/prompt-engineering/prompt-injection-and-security?lang=de).',
+            '**Im April 2026 erzeugt KI Code mit Sicherheitslücken in 45% der Fälle — eine Rate, die sich nicht verbessert hat, während Modelle leistungsfähiger geworden sind.** Ein 2025 Veracode-Bericht zeigte, dass LLMs sich beim Wählen zwischen einer sicheren und unsicheren Implementierung 45% der Zeit für die unsichere Option entschieden. Akademische Forschung bestätigt diesen Muster: über 40% der KI-generierten Code-Lösungen enthalten [Sicherheitsfehler](/de/prompt-engineering/prompt-injection-and-security).',
             'Die drei kritischsten Fehler-Kategorien:',
           ],
           items: [
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         parameters: {
           title: 'Wie beeinflussen Temperature und Context Window die Code-Qualität',
           content: [
-            '**[Temperature (T)](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) kontrolliert die Zufälligkeit der KI-Output: für Code-Generierung erzeugt T = 0,0–0,3 deterministischen, konservativen Output; T = 0,7–1,0 erhöht kreative Variation aber auch Fehlerrate.** Temperature ist ein Hyperparameter, der auf die Softmax Wahrscheinlichkeits-Verteilung über das Modell-Vokabular angewendet wird. Bei T = 0,0 wählt das Modell immer das höchst-wahrscheinliche Token — erzeugt deterministischen Output.',
+            '**[Temperature (T)](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) kontrolliert die Zufälligkeit der KI-Output: für Code-Generierung erzeugt T = 0,0–0,3 deterministischen, konservativen Output; T = 0,7–1,0 erhöht kreative Variation aber auch Fehlerrate.** Temperature ist ein Hyperparameter, der auf die Softmax Wahrscheinlichkeits-Verteilung über das Modell-Vokabular angewendet wird. Bei T = 0,0 wählt das Modell immer das höchst-wahrscheinliche Token — erzeugt deterministischen Output.',
             'Für Production-Code-Generierung setzen Sie Temperature (T) auf 0,1–0,2 für Zuverlässigkeit. Für exploratives Brainstorming algorithmischer Ansätze, T = 0,7–0,9 erzeugt mehr diverse Optionen zum Evaluieren.',
             '**Das Context Window ist die maximale Anzahl Tokens (Input + Output zusammen), die das Modell in einer einzigen Anfrage verarbeiten kann.** Ein größeres Context Window lässt das Modell mehr Ihres Codebases sehen, verbessert die Konsistenz für Multi-File-Refactoring-Aufgaben. Context Window Größe bestimmt, wie viel Ihres Codebases das Modell während Generierung "sehen" kann:',
           ],
@@ -920,12 +920,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Lektüre',
           items: [
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — Step-by-Step-Argumentation für Logik- und Debugging-Aufgaben',
-            '[KI Code Review: Tools, Halluzinations-Raten und Verification-Workflows](/prompt-engineering/ai-code-review?lang=de) — systematische Review-Workflows für KI-generierten Code',
-            '[Temperature und Top-P erklärt](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) — wie Zufälligkeits-Parameter jeden Modell-Output beeinflussen',
-            '[Prompt Injection & Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — Sicherheits-Risiken in KI-gestützten Entwicklungs-Workflows',
-            '[Persona Prompting](/prompt-engineering/persona-prompting?lang=de) — wie Rollen-Definitionen wie "Senior Python Engineer" die Modell-Output-Qualität ändern',
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — Gründlicher Definition und Kernkonzepte',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — Step-by-Step-Argumentation für Logik- und Debugging-Aufgaben',
+            '[KI Code Review: Tools, Halluzinations-Raten und Verification-Workflows](/de/prompt-engineering/ai-code-review) — systematische Review-Workflows für KI-generierten Code',
+            '[Temperature und Top-P erklärt](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) — wie Zufälligkeits-Parameter jeden Modell-Output beeinflussen',
+            '[Prompt Injection & Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Sicherheits-Risiken in KI-gestützten Entwicklungs-Workflows',
+            '[Persona Prompting](/de/prompt-engineering/persona-prompting) — wie Rollen-Definitionen wie "Senior Python Engineer" die Modell-Output-Qualität ändern',
+            '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — Gründlicher Definition und Kernkonzepte',
           ],
         },
         howToStart: {
@@ -1048,8 +1048,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Prompt engineering' },
           { '@type': 'Thing', name: 'Seguridad del código' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=es',
-        url: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=es',
+        image: 'https://www.promptquorum.com/es/api/og/write-better-code-with-ai',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/write-better-code-with-ai',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       howToSchema: {
@@ -1240,11 +1240,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectura relacionada',
           items: [
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=es) — razonamiento paso a paso para tareas de lógica y depuración',
-            '[Revisión de Código con IA](/prompt-engineering/ai-code-review?lang=es) — flujos de trabajo de revisión sistemática para código generado por IA',
-            '[Temperatura y Top-P explicados](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=es) — cómo los parámetros de aleatoriedad afectan cada salida del modelo',
-            '[Prompt Injection y Seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — riesgos de seguridad en flujos de trabajo de desarrollo asistidos por IA',
-            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — definición completa y conceptos centrales',
+            '[Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting) — razonamiento paso a paso para tareas de lógica y depuración',
+            '[Revisión de Código con IA](/es/prompt-engineering/ai-code-review) — flujos de trabajo de revisión sistemática para código generado por IA',
+            '[Temperatura y Top-P explicados](/es/prompt-engineering/temperature-and-top-p-control-ai-creativity) — cómo los parámetros de aleatoriedad afectan cada salida del modelo',
+            '[Prompt Injection y Seguridad](/es/prompt-engineering/prompt-injection-and-security) — riesgos de seguridad en flujos de trabajo de desarrollo asistidos por IA',
+            '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — definición completa y conceptos centrales',
           ],
         },
         howToStart: {
@@ -1322,7 +1322,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         inLanguage: 'fr',
-        url: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/write-better-code-with-ai',
         keywords: 'Codage IA, ingénierie des prompts, génération de code, Claude, GPT-5, Gemini 3, vulnérabilités de sécurité, température, fenêtre de contexte',
         about: [
           { '@type': 'Thing', name: 'Génération de code par IA' },
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**La sortie de toute session de codage IA est aussi bonne que l\'instruction que vous donnez — un prompt vague produit du code vague, un prompt structuré produit du code prêt pour la production.** Les modèles de langage de grande taille (LLM) — la classe de réseaux de neurones derrière GPT-5, Claude 4.7 Opus et Gemini 3 Pro — ne « comprennent » pas votre projet ; ils prédisent le token le plus probable basé sur les patterns appris de milliards de lignes de code.',
             'Cela signifie que votre prompt est un contrat architectural, pas une question improvisée. Quand vous précisez le langage de programmation, les entrées/sorties attendues et les cas limites à gérer, vous recevez systématiquement du code plus proche d\'être prêt pour la production.',
             'En une phrase : Le rôle du développeur s\'est déplacé de l\'écriture de chaque ligne à l\'écriture d\'instructions qu\'une IA exécute — la compétence est l\'ingénierie des prompts, pas la vitesse de frappe.',
-            'Ces techniques de prompting s\'appliquent à l\'identique aux stacks de code locales. Pour remplacer un assistant cloud par le couple open-source Continue.dev + Ollama + Qwen3-Coder, voir [Remplacer GitHub Copilot par un LLM local](/power-local-llm/replace-github-copilot-with-local-llm?lang=fr).',
+            'Ces techniques de prompting s\'appliquent à l\'identique aux stacks de code locales. Pour remplacer un assistant cloud par le couple open-source Continue.dev + Ollama + Qwen3-Coder, voir [Remplacer GitHub Copilot par un LLM local](/fr/power-local-llm/replace-github-copilot-with-local-llm).',
           ],
         },
         modelComparison: {
@@ -1580,13 +1580,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chainOfThought: {
           title: 'Comment le Chain-of-Thought Améliore le Débogage',
           content: [
-            '**[Le Chain-of-Thought (CoT) prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — demander au modèle de raisonner étape par étape avant de produire une réponse finale — réduit les erreurs de débogage en rendant la logique du modèle inspectable.** Le CoT prompting est une technique qui demande à un LLM de générer des étapes de raisonnement intermédiaires avant de produire la sortie. Pour le débogage, cela signifie que le modèle trace le chemin d\'erreur explicitement, vous permettant d\'identifier exactement où la logique s\'effondre.',
+            '**[Le Chain-of-Thought (CoT) prompting](/fr/prompt-engineering/chain-of-thought-prompting) — demander au modèle de raisonner étape par étape avant de produire une réponse finale — réduit les erreurs de débogage en rendant la logique du modèle inspectable.** Le CoT prompting est une technique qui demande à un LLM de générer des étapes de raisonnement intermédiaires avant de produire la sortie. Pour le débogage, cela signifie que le modèle trace le chemin d\'erreur explicitement, vous permettant d\'identifier exactement où la logique s\'effondre.',
           ],
         },
         rules: {
           title: 'Comment Injecter des Règles de Codage dans les Instructions Persistantes',
           content: [
-            '**Les règles — des ensembles courts d\'instructions explicites intégrés dans les prompts système ou la configuration du projet — rendent les outils de codage IA cohérents sur les sessions, pas seulement dans la génération à coup unique.** Les outils de codage modernes (Cursor, GitHub Copilot, Claude Code) supportent les règles au niveau du projet qui persistent à travers toutes les interactions. Ces fonctionnent comme un contrat architectural entre vous et le modèle. Utiliser la [définition du rôle](/prompt-engineering/persona-prompting?lang=fr) comme règle fondamentale rend toutes les requêtes ultérieures cohérentes. Exemples de règles efficaces :',
+            '**Les règles — des ensembles courts d\'instructions explicites intégrés dans les prompts système ou la configuration du projet — rendent les outils de codage IA cohérents sur les sessions, pas seulement dans la génération à coup unique.** Les outils de codage modernes (Cursor, GitHub Copilot, Claude Code) supportent les règles au niveau du projet qui persistent à travers toutes les interactions. Ces fonctionnent comme un contrat architectural entre vous et le modèle. Utiliser la [définition du rôle](/fr/prompt-engineering/persona-prompting) comme règle fondamentale rend toutes les requêtes ultérieures cohérentes. Exemples de règles efficaces :',
           ],
           items: [
             'Toujours utiliser le mode strict TypeScript. Pas de types `any`.',
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         security: {
           title: 'Le Problème de Sécurité : Ce que l\'IA ne Comprend Pas',
           content: [
-            '**En avril 2026, l\'IA génère du code avec des vulnérabilités de sécurité dans 45 % des cas — un taux qui ne s\'est pas amélioré à mesure que les modèles sont devenus plus capables.** Un rapport Veracode 2025 a trouvé que quand on donne un choix entre une implémentation sécurisée et insécurisée, les modèles d\'IA génératifs ont choisi l\'option insécurisée 45 % du temps. La recherche académique confirme ce pattern : plus de 40 % des solutions de code générées par l\'IA contiennent des [flaws de sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr).',
+            '**En avril 2026, l\'IA génère du code avec des vulnérabilités de sécurité dans 45 % des cas — un taux qui ne s\'est pas amélioré à mesure que les modèles sont devenus plus capables.** Un rapport Veracode 2025 a trouvé que quand on donne un choix entre une implémentation sécurisée et insécurisée, les modèles d\'IA génératifs ont choisi l\'option insécurisée 45 % du temps. La recherche académique confirme ce pattern : plus de 40 % des solutions de code générées par l\'IA contiennent des [flaws de sécurité](/fr/prompt-engineering/prompt-injection-and-security).',
             'Les trois catégories d\'échec les plus critiques :',
           ],
           items: [
@@ -1657,7 +1657,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         parameters: {
           title: 'Comment la Température et la Fenêtre de Contexte Affectent la Qualité du Code',
           content: [
-            '**[La Température (T)](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) contrôle le caractère aléatoire de la sortie IA : pour la génération de code, T = 0,0–0,3 produit une sortie déterministe et conservative ; T = 0,7–1,0 augmente la variation créative mais aussi le taux d\'erreur.** La température est un hyperparamètre appliqué à la distribution de probabilité softmax sur le vocabulaire du modèle. À T = 0,0, le modèle sélectionne toujours le token la plus haute probabilité — produisant une sortie déterministe.',
+            '**[La Température (T)](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) contrôle le caractère aléatoire de la sortie IA : pour la génération de code, T = 0,0–0,3 produit une sortie déterministe et conservative ; T = 0,7–1,0 augmente la variation créative mais aussi le taux d\'erreur.** La température est un hyperparamètre appliqué à la distribution de probabilité softmax sur le vocabulaire du modèle. À T = 0,0, le modèle sélectionne toujours le token la plus haute probabilité — produisant une sortie déterministe.',
             'Pour la génération de code en production, réglez la Température (T) sur 0,1–0,2 pour la fiabilité. Pour le brainstorming exploratoire d\'approches algorithmiques, T = 0,7–0,9 produit plus d\'options diversifiées à évaluer.',
             '**La fenêtre de contexte est le nombre maximum de tokens (entrée + sortie combinée) que le modèle peut traiter dans une requête unique.** Une fenêtre de contexte plus grande permet au modèle de voir plus de votre codebase, améliorant la cohérence pour les tâches de refactorisation multi-fichiers. La taille de la fenêtre de contexte détermine combien de votre codebase le modèle peut « voir » pendant la génération :',
           ],
@@ -1705,12 +1705,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures Recommandées',
           items: [
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — raisonnement étape par étape pour les tâches de logique et débogage',
-            '[Examen de Code IA : Outils, Taux d\'Hallucination et Workflows de Vérification](/prompt-engineering/ai-code-review?lang=fr) — workflows d\'examen systématiques pour le code généré par l\'IA',
-            '[Température et Top-P Expliquées](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) — comment les paramètres de caractère aléatoire affectent chaque sortie de modèle',
-            '[Injection de Prompt & Sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — risques de sécurité dans les workflows de développement assistés par l\'IA',
-            '[Persona Prompting](/prompt-engineering/persona-prompting?lang=fr) — comment les définitions de rôle comme « ingénieur Python senior » changent la qualité de sortie du modèle',
-            '[Qu\'est-ce que l\'Ingénierie des Prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — définition fondationnelle et concepts clés',
+            '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — raisonnement étape par étape pour les tâches de logique et débogage',
+            '[Examen de Code IA : Outils, Taux d\'Hallucination et Workflows de Vérification](/fr/prompt-engineering/ai-code-review) — workflows d\'examen systématiques pour le code généré par l\'IA',
+            '[Température et Top-P Expliquées](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) — comment les paramètres de caractère aléatoire affectent chaque sortie de modèle',
+            '[Injection de Prompt & Sécurité](/fr/prompt-engineering/prompt-injection-and-security) — risques de sécurité dans les workflows de développement assistés par l\'IA',
+            '[Persona Prompting](/fr/prompt-engineering/persona-prompting) — comment les définitions de rôle comme « ingénieur Python senior » changent la qualité de sortie du modèle',
+            '[Qu\'est-ce que l\'Ingénierie des Prompts ?](/fr/prompt-engineering/what-is-prompt-engineering) — définition fondationnelle et concepts clés',
           ],
         },
         howToStart: {
@@ -1841,9 +1841,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=ja',
+        image: 'https://www.promptquorum.com/ja/api/og/write-better-code-with-ai',
         inLanguage: 'ja',
-        url: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/write-better-code-with-ai',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2023,7 +2023,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**AI コーディングセッションの出力は、提供する指示と同等です。曖昧なプロンプトは曖昧なコード、構造化されたプロンプトは本番環境対応のコードを生成します。** 大規模言語モデル（LLM）はプロジェクトを「理解」しません。代わりに、数十億行のコードから学んだパターンに基づいて、次の最も可能性の高いトークンを予測します。',
             'つまり、プロンプトは気軽な質問ではなく、アーキテクチャ契約です。プログラミング言語、期待される入力/出力、処理するエッジケースを指定すると、本番環境対応に近いコードが一貫して得られます。',
             '一文で言うと：開発者のジョブは「すべての行を書く」から「AI が実行する指示を書く」にシフトしました。スキルはプロンプトエンジニアリング、キーボード速度ではありません。',
-            'これらのプロンプト技法はローカルのコーディングスタックにもそのまま当てはまります。クラウドアシスタントをオープンソースの Continue.dev + Ollama + Qwen3-Coder で置き換える方法は、[GitHub Copilot をローカル LLM で置き換える](/power-local-llm/replace-github-copilot-with-local-llm?lang=ja)を参照してください。',
+            'これらのプロンプト技法はローカルのコーディングスタックにもそのまま当てはまります。クラウドアシスタントをオープンソースの Continue.dev + Ollama + Qwen3-Coder で置き換える方法は、[GitHub Copilot をローカル LLM で置き換える](/ja/power-local-llm/replace-github-copilot-with-local-llm)を参照してください。',
           ],
         },
         modelComparison: {
@@ -2059,7 +2059,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chainOfThought: {
           title: 'Chain-of-Thoughtプロンプティングはデバッグをどう改善するか',
           content: [
-            '**[Chain-of-Thought（CoT）プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) - 最終的な答えを生成する前にステップバイステップで推論するようモデルに要求する - デバッグエラーを削減し、モデルのロジックを検査可能にします。** CoT プロンプティングは、出力を生成する前に中間推論ステップを生成するよう LLM に要求するテクニックです。デバッグの場合、これはモデルがエラーパスを明示的にトレースすることを意味し、正確に特定できます。',
+            '**[Chain-of-Thought（CoT）プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) - 最終的な答えを生成する前にステップバイステップで推論するようモデルに要求する - デバッグエラーを削減し、モデルのロジックを検査可能にします。** CoT プロンプティングは、出力を生成する前に中間推論ステップを生成するよう LLM に要求するテクニックです。デバッグの場合、これはモデルがエラーパスを明示的にトレースすることを意味し、正確に特定できます。',
           ],
         },
         rules: {
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         parameters: {
           title: 'Temperatureとコンテキストウィンドウはコード品質にどう影響するか',
           content: [
-            '**[Temperature（T）](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja) は AI 出力のランダム性を制御：コード生成の場合、T = 0.0～0.3 は決定論的で保守的な出力を生成；T = 0.7～1.0 は創造的変動を増加。** Temperature は、モデルの語彙上のソフトマックス確率分布に適用されるハイパーパラメータです。',
+            '**[Temperature（T）](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity) は AI 出力のランダム性を制御：コード生成の場合、T = 0.0～0.3 は決定論的で保守的な出力を生成；T = 0.7～1.0 は創造的変動を増加。** Temperature は、モデルの語彙上のソフトマックス確率分布に適用されるハイパーパラメータです。',
             '本番コード生成では、Temperature（T）を 0.1～0.2 に設定して信頼性を確保。アルゴリズムアプローチの探索的ブレーンストーミングの場合、T = 0.7～0.9 は評価する多様オプションを生成。',
             '**コンテキストウィンドウは、モデルが単一リクエストで処理できる最大トークン数（入力+出力の合計）です。** より大きなコンテキストウィンドウにより、複数ファイルリファクタリングタスクの一貫性が向上。',
           ],
@@ -2148,12 +2148,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '関連記事',
           items: [
-            '[Chain-of-Thought プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) - ロジックとデバッグタスクのための推論',
-            '[AI コードレビュー：ツール、幻覚率、検証ワークフロー](/prompt-engineering/ai-code-review?lang=ja) - 体系的なレビューワークフロー',
-            '[Temperature と Top-P 説明](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja) - ランダムネスパラメータの影響',
-            '[プロンプト インジェクション とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) - セキュリティ リスク',
-            '[ペルソナプロンプティング](/prompt-engineering/persona-prompting?lang=ja) - 役割定義の効果',
-            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) - 基本定義とコアコンセプト',
+            '[Chain-of-Thought プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) - ロジックとデバッグタスクのための推論',
+            '[AI コードレビュー：ツール、幻覚率、検証ワークフロー](/ja/prompt-engineering/ai-code-review) - 体系的なレビューワークフロー',
+            '[Temperature と Top-P 説明](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity) - ランダムネスパラメータの影響',
+            '[プロンプト インジェクション とセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) - セキュリティ リスク',
+            '[ペルソナプロンプティング](/ja/prompt-engineering/persona-prompting) - 役割定義の効果',
+            '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) - 基本定義とコアコンセプト',
           ],
         },
         howToStart: {
@@ -2266,7 +2266,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         inLanguage: 'zh',
-        url: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/write-better-code-with-ai',
         keywords: 'AI编码，提示工程，代码生成，Claude，GPT-5，Gemini 3，安全漏洞，温度，上下文窗口',
         about: [
           { '@type': 'Thing', name: 'AI代码生成' },
@@ -2282,7 +2282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=zh',
+        image: 'https://www.promptquorum.com/zh/api/og/write-better-code-with-ai',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2454,7 +2454,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**任何AI编码会话的输出质量只取决于你给出的指令 — 模糊的提示词会产生模糊的代码，结构化的提示词会产生生产就绪的代码。** 大语言模型（LLM） — GPT-5、Claude 4.7 Opus和Gemini 3 Pro等神经网络类别 — 不"理解"你的项目；它们根据从数十亿行代码学习到的模式预测下一个最可能的token。',
             '这意味着你的提示词是一个架构合约，而不是随意的问题。当你指定编程语言、预期的输入/输出和要处理的边界情况时，你始终会收到更接近生产就绪的代码。',
             '一句话：开发人员的工作已经从编写每一行代码转变为编写AI执行的指令 — 这种技能是提示工程，而不是打字速度。',
-            '这些提示技巧同样适用于本地编码栈。要用 Continue.dev + Ollama + Qwen3-Coder 这套开源组合替代云端助手，请参阅[用本地 LLM 替代 GitHub Copilot](/power-local-llm/replace-github-copilot-with-local-llm?lang=zh)。',
+            '这些提示技巧同样适用于本地编码栈。要用 Continue.dev + Ollama + Qwen3-Coder 这套开源组合替代云端助手，请参阅[用本地 LLM 替代 GitHub Copilot](/zh/power-local-llm/replace-github-copilot-with-local-llm)。',
           ],
         },
         modelComparison: {
@@ -2515,13 +2515,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chainOfThought: {
           title: '思路链提示词如何改进调试？',
           content: [
-            '**[思路链（CoT）提示词](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 要求模型在生成最终答案前逐步推理 — 通过使模型的逻辑可检查来减少调试错误。** CoT提示词是一种要求LLM在生成输出前生成中间推理步骤的技术。对于调试，这意味着模型明确追踪错误路径，让你能识别逻辑确切破裂的地方。',
+            '**[思路链（CoT）提示词](/zh/prompt-engineering/chain-of-thought-prompting) — 要求模型在生成最终答案前逐步推理 — 通过使模型的逻辑可检查来减少调试错误。** CoT提示词是一种要求LLM在生成输出前生成中间推理步骤的技术。对于调试，这意味着模型明确追踪错误路径，让你能识别逻辑确切破裂的地方。',
           ],
         },
         rules: {
           title: '如何将编码规则注入为持久指令',
           content: [
-            '**规则 — 嵌入在系统提示或项目配置中的简短明确指令集 — 使AI编码工具在会话中保持一致，而不仅仅在单次生成中。** 现代编码工具（Cursor、GitHub Copilot、Claude Code）支持跨所有交互持久化的项目级规则。这些充当你和模型之间的架构合约。使用[角色定义](/prompt-engineering/persona-prompting?lang=zh)作为基础规则使所有后续请求保持一致。有效规则的示例：',
+            '**规则 — 嵌入在系统提示或项目配置中的简短明确指令集 — 使AI编码工具在会话中保持一致，而不仅仅在单次生成中。** 现代编码工具（Cursor、GitHub Copilot、Claude Code）支持跨所有交互持久化的项目级规则。这些充当你和模型之间的架构合约。使用[角色定义](/zh/prompt-engineering/persona-prompting)作为基础规则使所有后续请求保持一致。有效规则的示例：',
           ],
           items: [
             '始终使用TypeScript严格模式。没有`any`类型。',
@@ -2573,7 +2573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         security: {
           title: '安全问题：AI处理不当的方面',
           content: [
-            '**截至2026年4月，AI在45%的情况下生成含有安全漏洞的代码 — 这个比率随着模型变得更有能力而没有改进。** 一份2025年Veracode报告发现，当在安全和不安全的实现之间做出选择时，生成式AI模型在45%的时间内选择了不安全的选项。学术研究证实了这一模式：超过40%的AI生成代码解决方案包含[安全缺陷](/prompt-engineering/prompt-injection-and-security?lang=zh)。',
+            '**截至2026年4月，AI在45%的情况下生成含有安全漏洞的代码 — 这个比率随着模型变得更有能力而没有改进。** 一份2025年Veracode报告发现，当在安全和不安全的实现之间做出选择时，生成式AI模型在45%的时间内选择了不安全的选项。学术研究证实了这一模式：超过40%的AI生成代码解决方案包含[安全缺陷](/zh/prompt-engineering/prompt-injection-and-security)。',
             '三个最关键的失败类别：',
           ],
           items: [
@@ -2592,7 +2592,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         parameters: {
           title: '温度和上下文窗口设置如何影响代码质量？',
           content: [
-            '**[温度（T）](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh)控制AI输出的随机性：对于代码生成，T = 0.0–0.3产生确定性、保守的输出；T = 0.7–1.0增加创意变化但也增加错误率。** 温度是应用于模型词汇表上softmax概率分布的超参数。在T = 0.0时，模型始终选择最高概率的token — 产生确定性输出。',
+            '**[温度（T）](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity)控制AI输出的随机性：对于代码生成，T = 0.0–0.3产生确定性、保守的输出；T = 0.7–1.0增加创意变化但也增加错误率。** 温度是应用于模型词汇表上softmax概率分布的超参数。在T = 0.0时，模型始终选择最高概率的token — 产生确定性输出。',
             '对于生产代码生成，将温度（T）设置为0.1–0.2以实现可靠性。对于算法方法的探索性头脑风暴，T = 0.7–0.9产生更多样的选项供评估。',
             '**上下文窗口是模型在单个请求中能处理的最大token数（输入+输出合并）。** 更大的上下文窗口让模型看到更多你的代码库，改进多文件重构任务的一致性。上下文窗口大小决定了模型在生成期间能"看到"你的代码库的多少：',
           ],
@@ -2640,12 +2640,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[思路链提示词](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 用于逻辑和调试任务的分步推理',
-            '[AI代码审查：工具、幻觉率和验证工作流](/prompt-engineering/ai-code-review?lang=zh) — AI生成代码的系统审查工作流',
-            '[温度和Top-P解释](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh) — 随机性参数如何影响每个模型输出',
-            '[提示注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — AI辅助开发工作流中的安全风险',
-            '[角色提示词](/prompt-engineering/persona-prompting?lang=zh) — 角色定义如"资深Python工程师"如何改变模型输出质量',
-            '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 基础定义和核心概念',
+            '[思路链提示词](/zh/prompt-engineering/chain-of-thought-prompting) — 用于逻辑和调试任务的分步推理',
+            '[AI代码审查：工具、幻觉率和验证工作流](/zh/prompt-engineering/ai-code-review) — AI生成代码的系统审查工作流',
+            '[温度和Top-P解释](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 随机性参数如何影响每个模型输出',
+            '[提示注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — AI辅助开发工作流中的安全风险',
+            '[角色提示词](/zh/prompt-engineering/persona-prompting) — 角色定义如"资深Python工程师"如何改变模型输出质量',
+            '[什么是提示工程？](/zh/prompt-engineering/what-is-prompt-engineering) — 基础定义和核心概念',
           ],
         },
         howToStart: {

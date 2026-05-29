@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Für den Allzweck-Pick führen Sie Llama 3 8B bei Q5_K_M mit einem 4096-Token-Kontextfenster aus. Dies verwendet ~8 GB VRAM gesamt und lässt 4 GB Headroom — genug, um VRAM-Überlauf beim Wechseln zwischen Modellen zu vermeiden.',
           'Für Coding ist Qwen 2.5 Coder 14B bei Q4_K_M die klare Wahl: es übertrifft Llama 3 8B bei HumanEval, passt in 10 GB VRAM und verarbeitet Python, TypeScript und Go ohne Fine-Tuning.',
-          'Halten Sie immer mindestens 1,5–2 GB VRAM frei. Das Laden zweier Modelle nacheinander ohne das erste zu entladen löst VRAM-Überlauf aus und erzwingt langsames CPU-Offload. Für den vollständigen GPU-Benchmark-Kontext, siehe <a href="/local-llms/best-gpus-for-local-llms?lang=de" class="text-primary hover:underline">beste GPUs für lokale LLMs</a>. Wenn Ihre GPU weniger als 12 GB hat, siehe <a href="/prompt-bites/best-local-llm-6gb-vram?lang=de" class="text-primary hover:underline">beste Modelle für 6 GB VRAM</a>. So führen Sie den besten Allzweck-Pick auf Ihrem RTX 3060 aus:',
+          'Halten Sie immer mindestens 1,5–2 GB VRAM frei. Das Laden zweier Modelle nacheinander ohne das erste zu entladen löst VRAM-Überlauf aus und erzwingt langsames CPU-Offload. Für den vollständigen GPU-Benchmark-Kontext, siehe <a href="/de/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">beste GPUs für lokale LLMs</a>. Wenn Ihre GPU weniger als 12 GB hat, siehe <a href="/de/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">beste Modelle für 6 GB VRAM</a>. So führen Sie den besten Allzweck-Pick auf Ihrem RTX 3060 aus:',
         ],
         codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
         callouts: [{ type: 'tip', text: 'Pull lädt ~7 GB beim ersten Ausführen herunter. Nachfolgende Ausführungen starten sofort aus dem Cache. Verwenden Sie <code>--num-ctx 4096</code> für ein größeres Kontextfenster.' }],
@@ -187,7 +187,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Kann die RTX 3060 ein 70B-Modell ausführen?',
-            a: 'Nein. Ein 70B-Modell bei Q4_K_M benötigt ca. 40 GB VRAM. Die RTX 3060 12 GB kommt maximal auf ~14B-Modelle bei Q4. Siehe <a href="/prompt-bites/vram-for-70b-model?lang=de" class="text-primary hover:underline">wie viel VRAM ein 70B-Modell benötigt</a> für Optionen.',
+            a: 'Nein. Ein 70B-Modell bei Q4_K_M benötigt ca. 40 GB VRAM. Die RTX 3060 12 GB kommt maximal auf ~14B-Modelle bei Q4. Siehe <a href="/de/prompt-bites/vram-for-70b-model" class="text-primary hover:underline">wie viel VRAM ein 70B-Modell benötigt</a> für Optionen.',
           },
           {
             q: 'Ist RTX 3060 12 GB gut für lokale LLMs?',
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welche Quantisierung sollte ich auf RTX 3060 12 GB verwenden?',
-            a: 'Q5_K_M für 7–8B-Modelle (beste Qualität im 12-GB-Budget). Q4_K_M für 13–14B-Modelle (erforderlich, um hineinzupassen). Siehe <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=de" class="text-primary hover:underline">was Q4_K_M bedeutet</a> für den Qualitäts-Kompromiss.',
+            a: 'Q5_K_M für 7–8B-Modelle (beste Qualität im 12-GB-Budget). Q4_K_M für 13–14B-Modelle (erforderlich, um hineinzupassen). Siehe <a href="/de/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">was Q4_K_M bedeutet</a> für den Qualitäts-Kompromiss.',
           },
           {
             q: 'Verwendet Ollama automatisch die RTX 3060 GPU?',
@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Pour l\'usage général, lancez Llama 3 8B en Q5_K_M avec une fenêtre de contexte de 4 096 tokens. Cela utilise ~8 Go de VRAM au total et laisse 4 Go de marge — suffisant pour éviter les débordements lors du changement de modèle.',
           'Pour le code, Qwen 2.5 Coder 14B en Q4_K_M est le choix évident : il surpasse Llama 3 8B sur HumanEval, tient en 10 Go de VRAM et gère Python, TypeScript et Go sans fine-tuning.',
-          'Laissez toujours au moins 1,5–2 Go de VRAM libres. Pour le contexte complet des benchmarks GPU, voir <a href="/local-llms/best-gpus-for-local-llms?lang=fr" class="text-primary hover:underline">les meilleurs GPU pour LLM locaux</a>. Si votre GPU a moins de 12 Go, voir <a href="/prompt-bites/best-local-llm-6gb-vram?lang=fr" class="text-primary hover:underline">les meilleurs modèles pour 6 Go de VRAM</a>. Pour lancer le meilleur choix général sur votre RTX 3060 :',
+          'Laissez toujours au moins 1,5–2 Go de VRAM libres. Pour le contexte complet des benchmarks GPU, voir <a href="/fr/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">les meilleurs GPU pour LLM locaux</a>. Si votre GPU a moins de 12 Go, voir <a href="/fr/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">les meilleurs modèles pour 6 Go de VRAM</a>. Pour lancer le meilleur choix général sur votre RTX 3060 :',
         ],
         codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
         callouts: [{ type: 'tip', text: 'Pull télécharge ~7 Go à la première exécution. Les exécutions suivantes démarrent instantanément depuis le cache. Utilisez <code>--num-ctx 4096</code> pour une fenêtre de contexte plus grande.' }],
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'La RTX 3060 peut-elle faire tourner un modèle 70B ?',
-            a: 'Non. Un modèle 70B en Q4_K_M nécessite environ 40 Go de VRAM. La RTX 3060 12 Go est limitée aux modèles ~14B en Q4. Voir <a href="/prompt-bites/vram-for-70b-model?lang=fr" class="text-primary hover:underline">combien de VRAM un modèle 70B nécessite</a> pour les options.',
+            a: 'Non. Un modèle 70B en Q4_K_M nécessite environ 40 Go de VRAM. La RTX 3060 12 Go est limitée aux modèles ~14B en Q4. Voir <a href="/fr/prompt-bites/vram-for-70b-model" class="text-primary hover:underline">combien de VRAM un modèle 70B nécessite</a> pour les options.',
           },
           {
             q: 'La RTX 3060 12 Go est-elle bonne pour les LLM locaux ?',
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quelle quantisation utiliser sur RTX 3060 12 Go ?',
-            a: 'Q5_K_M pour les modèles 7–8B (meilleure qualité dans le budget 12 Go). Q4_K_M pour les modèles 13–14B (requis pour tenir). Voir <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=fr" class="text-primary hover:underline">ce que signifie Q4_K_M</a> pour le compromis qualité.',
+            a: 'Q5_K_M pour les modèles 7–8B (meilleure qualité dans le budget 12 Go). Q4_K_M pour les modèles 13–14B (requis pour tenir). Voir <a href="/fr/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ce que signifie Q4_K_M</a> pour le compromis qualité.',
           },
           {
             q: 'Ollama utilise-t-il automatiquement le GPU RTX 3060 ?',
@@ -310,7 +310,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '汎用用途には、4096トークンコンテキストウィンドウでQ5_K_MのLlama 3 8Bを実行してください。合計約8 GB VRAMを使用し、4 GBの余裕を残します。',
           'コーディングには、Q4_K_MのQwen 2.5 Coder 14Bが明確な選択です：HumanEvalでLlama 3 8Bを上回り、10 GB VRAMに収まり、ファインチューニングなしでPython、TypeScript、Goを処理します。',
-          '常に少なくとも1.5–2 GB VRAMを空けておいてください。完全なGPUベンチマーク背景については<a href="/local-llms/best-gpus-for-local-llms?lang=ja" class="text-primary hover:underline">ローカルLLM向け最良GPU</a>を参照してください。GPUが12 GB未満の場合は<a href="/prompt-bites/best-local-llm-6gb-vram?lang=ja" class="text-primary hover:underline">6 GB VRAM向け最良モデル</a>をご覧ください。RTX 3060で汎用Pickを実行するには：',
+          '常に少なくとも1.5–2 GB VRAMを空けておいてください。完全なGPUベンチマーク背景については<a href="/ja/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">ローカルLLM向け最良GPU</a>を参照してください。GPUが12 GB未満の場合は<a href="/ja/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB VRAM向け最良モデル</a>をご覧ください。RTX 3060で汎用Pickを実行するには：',
         ],
         codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
         callouts: [{ type: 'tip', text: 'Pullは初回実行時に約7 GBをダウンロードします。以降の実行はキャッシュから即座に開始します。より大きなコンテキストウィンドウが必要な場合は<code>--num-ctx 4096</code>を使用してください。' }],
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'RTX 3060は70Bモデルを動かせますか？',
-            a: 'いいえ。Q4_K_Mの70Bモデルには約40 GB VRAMが必要です。RTX 3060 12 GBはQ4で最大~14Bモデルまでです。選択肢については<a href="/prompt-bites/vram-for-70b-model?lang=ja" class="text-primary hover:underline">70Bモデルに必要なVRAM</a>を参照してください。',
+            a: 'いいえ。Q4_K_Mの70Bモデルには約40 GB VRAMが必要です。RTX 3060 12 GBはQ4で最大~14Bモデルまでです。選択肢については<a href="/ja/prompt-bites/vram-for-70b-model" class="text-primary hover:underline">70Bモデルに必要なVRAM</a>を参照してください。',
           },
           {
             q: 'RTX 3060 12 GBはローカルLLMに良いですか？',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'RTX 3060 12 GBではどの量化を使うべきですか？',
-            a: '7–8BモデルにはQ5_K_M（12 GBバジェット内での最高品質）。13–14BモデルにはQ4_K_M（収めるために必要）。品質のトレードオフについては<a href="/prompt-bites/what-is-q4-k-m-quantization?lang=ja" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
+            a: '7–8BモデルにはQ5_K_M（12 GBバジェット内での最高品質）。13–14BモデルにはQ4_K_M（収めるために必要）。品質のトレードオフについては<a href="/ja/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
           },
           {
             q: 'OllamaはRTX 3060 GPUを自動的に使用しますか？',
@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '对于通用用途，以4096 token上下文窗口运行Q5_K_M的Llama 3 8B。总计使用约8 GB显存，留有4 GB余量。',
           '对于编程，Q4_K_M的Qwen 2.5 Coder 14B是明确的选择：它在HumanEval上超越Llama 3 8B，适合10 GB显存，无需微调即可处理Python、TypeScript和Go。',
-          '始终保持至少1.5–2 GB显存空闲。完整的GPU基准测试背景请参阅<a href="/local-llms/best-gpus-for-local-llms?lang=zh" class="text-primary hover:underline">本地LLM最佳GPU</a>。如果您的GPU显存小于12 GB，请参阅<a href="/prompt-bites/best-local-llm-6gb-vram?lang=zh" class="text-primary hover:underline">6 GB显存最佳模型</a>。在您的RTX 3060上运行最佳通用选择：',
+          '始终保持至少1.5–2 GB显存空闲。完整的GPU基准测试背景请参阅<a href="/zh/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">本地LLM最佳GPU</a>。如果您的GPU显存小于12 GB，请参阅<a href="/zh/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB显存最佳模型</a>。在您的RTX 3060上运行最佳通用选择：',
         ],
         codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
         callouts: [{ type: 'tip', text: '首次运行时Pull下载约7 GB。后续运行从缓存即时启动。如需更大上下文窗口，使用<code>--num-ctx 4096</code>。' }],
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'RTX 3060能运行70B模型吗？',
-            a: '不能。Q4_K_M的70B模型需要约40 GB显存。RTX 3060 12 GB最多支持Q4的约14B模型。选择方案请参阅<a href="/prompt-bites/vram-for-70b-model?lang=zh" class="text-primary hover:underline">70B模型所需显存</a>。',
+            a: '不能。Q4_K_M的70B模型需要约40 GB显存。RTX 3060 12 GB最多支持Q4的约14B模型。选择方案请参阅<a href="/zh/prompt-bites/vram-for-70b-model" class="text-primary hover:underline">70B模型所需显存</a>。',
           },
           {
             q: 'RTX 3060 12 GB适合运行本地LLM吗？',
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'RTX 3060 12 GB应该使用哪种量化？',
-            a: '7–8B模型使用Q5_K_M（12 GB预算内的最佳质量）。13–14B模型使用Q4_K_M（装入所必需的）。质量权衡请参阅<a href="/prompt-bites/what-is-q4-k-m-quantization?lang=zh" class="text-primary hover:underline">Q4_K_M的含义</a>。',
+            a: '7–8B模型使用Q5_K_M（12 GB预算内的最佳质量）。13–14B模型使用Q4_K_M（装入所必需的）。质量权衡请参阅<a href="/zh/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M的含义</a>。',
           },
           {
             q: 'Ollama会自动使用RTX 3060 GPU吗？',
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Para uso general, ejecuta Llama 3 8B en Q5_K_M con una ventana de contexto de 4096 tokens. Esto usa ~8 GB de VRAM en total y deja 4 GB de margen — suficiente para evitar desbordamiento al cambiar entre modelos.',
           'Para código, Qwen 2.5 Coder 14B en Q4_K_M es la elección clara: supera a Llama 3 8B en HumanEval, cabe en 10 GB de VRAM y maneja Python, TypeScript y Go sin ajuste fino.',
-          'Deja siempre al menos 1,5–2 GB de VRAM libres. Cargar dos modelos seguidos sin descargar el primero provoca desbordamiento de VRAM y fuerza un lento offloading a CPU. Para el contexto completo de benchmarks de GPU, consulta <a href="/local-llms/best-gpus-for-local-llms?lang=es" class="text-primary hover:underline">las mejores GPUs para LLMs locales</a>. Si tu GPU tiene menos de 12 GB, consulta <a href="/prompt-bites/best-local-llm-6gb-vram?lang=es" class="text-primary hover:underline">los mejores modelos para 6 GB de VRAM</a>. Para ejecutar la mejor opción general en tu RTX 3060:',
+          'Deja siempre al menos 1,5–2 GB de VRAM libres. Cargar dos modelos seguidos sin descargar el primero provoca desbordamiento de VRAM y fuerza un lento offloading a CPU. Para el contexto completo de benchmarks de GPU, consulta <a href="/es/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">las mejores GPUs para LLMs locales</a>. Si tu GPU tiene menos de 12 GB, consulta <a href="/es/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">los mejores modelos para 6 GB de VRAM</a>. Para ejecutar la mejor opción general en tu RTX 3060:',
         ],
         codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
         callouts: [{ type: 'tip', text: 'Pull descarga ~7 GB en la primera ejecución. Las ejecuciones siguientes arrancan al instante desde la caché. Usa <code>--num-ctx 4096</code> si necesitas una ventana de contexto más grande.' }],
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Puede la RTX 3060 ejecutar un modelo 70B?',
-            a: 'No. Un modelo 70B en Q4_K_M necesita aproximadamente 40 GB de VRAM. La RTX 3060 12 GB llega como máximo a ~14B modelos en Q4. Consulta <a href="/prompt-bites/vram-for-70b-model?lang=es" class="text-primary hover:underline">cuánta VRAM necesita un modelo 70B</a> para las opciones.',
+            a: 'No. Un modelo 70B en Q4_K_M necesita aproximadamente 40 GB de VRAM. La RTX 3060 12 GB llega como máximo a ~14B modelos en Q4. Consulta <a href="/es/prompt-bites/vram-for-70b-model" class="text-primary hover:underline">cuánta VRAM necesita un modelo 70B</a> para las opciones.',
           },
           {
             q: '¿Es buena la RTX 3060 12 GB para LLMs locales?',
@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué cuantización usar en RTX 3060 12 GB?',
-            a: 'Q5_K_M para modelos 7–8B (mejor calidad dentro del presupuesto de 12 GB). Q4_K_M para modelos 13–14B (necesario para que quepan). Consulta <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=es" class="text-primary hover:underline">qué significa Q4_K_M</a> para el compromiso de calidad.',
+            a: 'Q5_K_M para modelos 7–8B (mejor calidad dentro del presupuesto de 12 GB). Q4_K_M para modelos 13–14B (necesario para que quepan). Consulta <a href="/es/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">qué significa Q4_K_M</a> para el compromiso de calidad.',
           },
           {
             q: '¿Ollama usa automáticamente la GPU RTX 3060?',

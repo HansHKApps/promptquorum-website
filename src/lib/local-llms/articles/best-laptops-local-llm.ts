@@ -389,10 +389,10 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
-            '[Lokale LLM auf Laptop: Einrichtungsleitfaden](/local-llms/local-llm-on-laptop?lang=de)',
-            '[Beste Mini-PCs für lokale LLMs](/local-llms/best-mini-pcs-local-llm?lang=de)',
-            '[Lokaler LLM-PC-Bau unter €2.000](/local-llms/local-llm-pc-build-2000?lang=de)',
-            '[Wie viel VRAM benötigen Sie?](/local-llms/how-much-vram-local-llm?lang=de)',
+            '[Lokale LLM auf Laptop: Einrichtungsleitfaden](/de/local-llms/local-llm-on-laptop)',
+            '[Beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm)',
+            '[Lokaler LLM-PC-Bau unter €2.000](/de/local-llms/local-llm-pc-build-2000)',
+            '[Wie viel VRAM benötigen Sie?](/de/local-llms/how-much-vram-local-llm)',
           ],
         },
         'sources': {
@@ -410,7 +410,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Beste Laptops für lokale LLMs 2026: GPU-Spezifikationen und Kaufleitfaden',
         description: 'Beste Laptops für lokale LLMs: GPU-Anforderungen, Modellgrößen, Akkulaufzeit. RTX 4060/4070, 16GB VRAM Minimum.',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/best-laptops-local-llm',
         inLanguage: 'de',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -432,7 +432,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'de',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/best-laptops-local-llm',
         mainEntity: [
           { '@type': 'Question', name: 'Kann ich ein 7B-Modell auf meinem Gaming-Laptop-Akku ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Technisch ja, aber GPU deaktiviert sich auf Batterie. Inferenz fällt auf 2–3 Token/Sec (sehr langsam). Anstecken für echte Nutzung.' }},
           { '@type': 'Question', name: 'Ist ein RTX 4060-Laptop gut genug für 7B-Modelle?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, bei 10–12 Token/Sec nach Drosselung. Akzeptabel zum Schreiben, Brainstorming. Nicht ideal für Produktion.' }},
@@ -451,7 +451,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/best-laptops-local-llm',
         inLanguage: 'de',
         name: 'Beste Gaming-Laptops für lokale LLMs 2026',
         itemListElement: [
@@ -582,10 +582,10 @@ schema: {
           id: 'related-reading',
           title: 'Lectures Connexes',
           items: [
-            '[LLM Local sur Ordinateur Portable: Guide de Configuration](/local-llms/local-llm-on-laptop?lang=fr)',
-            '[Meilleurs Mini-PC pour LLM Locaux](/local-llms/best-mini-pcs-local-llm?lang=fr)',
-            '[Configuration PC LLM Local sous 2 000 €](/local-llms/local-llm-pc-build-2000?lang=fr)',
-            '[Combien de VRAM Avez-Vous Besoin?](/local-llms/how-much-vram-local-llm?lang=fr)',
+            '[LLM Local sur Ordinateur Portable: Guide de Configuration](/fr/local-llms/local-llm-on-laptop)',
+            '[Meilleurs Mini-PC pour LLM Locaux](/fr/local-llms/best-mini-pcs-local-llm)',
+            '[Configuration PC LLM Local sous 2 000 €](/fr/local-llms/local-llm-pc-build-2000)',
+            '[Combien de VRAM Avez-Vous Besoin?](/fr/local-llms/how-much-vram-local-llm)',
           ],
         },
         'sources': {
@@ -603,7 +603,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Meilleurs Ordinateurs Portables pour LLM Locaux 2026: Guide Complet',
         description: 'Meilleurs ordinateurs portables pour LLM locaux: spécifications GPU, limites de taille de modèle, autonomie batterie. RTX 4060/4070, minimum 16GB VRAM.',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/best-laptops-local-llm',
         inLanguage: 'fr',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -625,7 +625,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'fr',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/best-laptops-local-llm',
         mainEntity: [
           { '@type': 'Question', name: 'Puis-je exécuter un modèle 7B sur la batterie de mon ordinateur portable gaming?', acceptedAnswer: { '@type': 'Answer', text: 'Techniquement oui, mais le GPU se désactive sur batterie. L\'inférence chute à 2–3 tokens/sec (très lent). Branchez pour une utilisation réelle.' }},
           { '@type': 'Question', name: 'Un ordinateur portable RTX 4060 est-il assez bon pour les modèles 7B?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, à 10–12 tokens/sec après limitation. Acceptable pour l\'écriture, le brainstorming. Pas idéal pour la production.' }},
@@ -642,7 +642,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/best-laptops-local-llm',
         inLanguage: 'fr',
         name: 'Meilleurs Ordinateurs Portables Gaming pour LLM Locaux 2026',
         itemListElement: [
@@ -773,10 +773,10 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMをノートパソコンで: セットアップガイド](/local-llms/local-llm-on-laptop?lang=ja)',
-            '[ローカルLLM向けベストミニPC](/local-llms/best-mini-pcs-local-llm?lang=ja)',
-            '[20万円以下でローカルLLM PC構築](/local-llms/local-llm-pc-build-2000?lang=ja)',
-            '[どのくらいVRAMが必要か?](/local-llms/how-much-vram-local-llm?lang=ja)',
+            '[ローカルLLMをノートパソコンで: セットアップガイド](/ja/local-llms/local-llm-on-laptop)',
+            '[ローカルLLM向けベストミニPC](/ja/local-llms/best-mini-pcs-local-llm)',
+            '[20万円以下でローカルLLM PC構築](/ja/local-llms/local-llm-pc-build-2000)',
+            '[どのくらいVRAMが必要か?](/ja/local-llms/how-much-vram-local-llm)',
           ],
         },
         'sources': {
@@ -794,7 +794,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'ローカルLLM向けベストノートパソコン 2026年: GPU仕様・バッテリー完全ガイド',
         description: 'ローカルLLM向けノートパソコン完全ガイド: GPU要件、モデルサイズ制限、バッテリー寿命。RTX 4060/4070、16GB VRAM以上推奨。',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/best-laptops-local-llm',
         inLanguage: 'ja',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -816,7 +816,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'ja',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/best-laptops-local-llm',
         mainEntity: [
           { '@type': 'Question', name: 'ゲーミングノートパソコンのバッテリーで7Bモデルは実行可能?', acceptedAnswer: { '@type': 'Answer', text: '技術上は可、しかしGPU無効(バッテリー駆動)。推論秒間2～3トークン(非常に遅い)。実用的には要AC接続。' }},
           { '@type': 'Question', name: 'RTX 4060ノートパソコンは7Bモデル向け十分?', acceptedAnswer: { '@type': 'Answer', text: 'はい、秒間10～12トークンで十分。執筆やブレストに許容。本番用途には不向き。' }},
@@ -833,7 +833,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/best-laptops-local-llm',
         inLanguage: 'ja',
         name: 'ローカルLLM向けベストゲーミングノートパソコン 2026年',
         itemListElement: [
@@ -964,10 +964,10 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[笔记本上的本地LLM: 设置指南](/local-llms/local-llm-on-laptop?lang=zh)',
-            '[本地LLM最佳迷你PC](/local-llms/best-mini-pcs-local-llm?lang=zh)',
-            '[本地LLM PC $2000以下构建](/local-llms/local-llm-pc-build-2000?lang=zh)',
-            '[你需要多少VRAM?](/local-llms/how-much-vram-local-llm?lang=zh)',
+            '[笔记本上的本地LLM: 设置指南](/zh/local-llms/local-llm-on-laptop)',
+            '[本地LLM最佳迷你PC](/zh/local-llms/best-mini-pcs-local-llm)',
+            '[本地LLM PC $2000以下构建](/zh/local-llms/local-llm-pc-build-2000)',
+            '[你需要多少VRAM?](/zh/local-llms/how-much-vram-local-llm)',
           ],
         },
         'sources': {
@@ -985,7 +985,7 @@ schema: {
         '@type': 'TechArticle',
         headline: '本地LLM最佳笔记本电脑2026: 完整GPU和电池指南',
         description: '本地LLM笔记本电脑完全指南: GPU规格、模型大小限制、电池寿命。RTX 4060/4070, 16GB VRAM最低要求。',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/best-laptops-local-llm',
         inLanguage: 'zh',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -1007,7 +1007,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'zh',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/best-laptops-local-llm',
         mainEntity: [
           { '@type': 'Question', name: '能在游戏笔记本电池上运行7B模型吗?', acceptedAnswer: { '@type': 'Answer', text: '技术上可以，但GPU在电池上禁用。推理跌到2-3 tokens/sec(极慢)。实际使用需接电。' }},
           { '@type': 'Question', name: 'RTX 4060笔记本对7B模型足够吗?', acceptedAnswer: { '@type': 'Answer', text: '是的，10-12 tokens/sec后足够。适合写作、头脑风暴。不适合生产。' }},
@@ -1024,7 +1024,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/local-llms/best-laptops-local-llm?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/best-laptops-local-llm',
         inLanguage: 'zh',
         name: '本地LLM最佳游戏笔记本2026',
         itemListElement: [

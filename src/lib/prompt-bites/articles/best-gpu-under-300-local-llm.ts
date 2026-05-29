@@ -874,9 +874,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lectura relacionada',
         items: [
-          '[Mejor GPU por menos de $600 para LLMs locales](/prompt-bites/best-gpu-under-600-local-llm?lang=es) — el siguiente nivel: RTX 4060 Ti 16 GB',
-          '[Mejores modelos Ollama para RTX 3060 12 GB](/prompt-bites/best-ollama-models-rtx-3060-12gb?lang=es) — qué modelos descargar una vez que tienes la tarjeta',
-          '[Guía de compra de GPU para LLMs locales 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=es) — la comparativa completa de ocho GPU en todos los niveles de presupuesto',
+          '[Mejor GPU por menos de $600 para LLMs locales](/es/prompt-bites/best-gpu-under-600-local-llm) — el siguiente nivel: RTX 4060 Ti 16 GB',
+          '[Mejores modelos Ollama para RTX 3060 12 GB](/es/prompt-bites/best-ollama-models-rtx-3060-12gb) — qué modelos descargar una vez que tienes la tarjeta',
+          '[Guía de compra de GPU para LLMs locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la comparativa completa de ocho GPU en todos los niveles de presupuesto',
         ],
       },
     },

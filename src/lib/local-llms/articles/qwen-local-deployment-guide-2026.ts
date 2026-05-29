@@ -402,7 +402,7 @@ curl http://localhost:11434/v1/chat/completions \\
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'fr',
-      url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026?lang=fr',
+      url: 'https://www.promptquorum.com/fr/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -482,7 +482,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'ollama-setup',
         title: 'Configuration avec Ollama',
         content: [
-          '**Ollama est la solution la plus rapide pour déployer localement n\'importe quel modèle Qwen2.5.** Il gère le téléchargement, la quantification GGUF et expose une API à `localhost:11434`. Installez-le depuis [ollama.com](https://ollama.com/download). Si vous débutez avec Ollama : [comment installer Ollama](/local-llms/how-to-install-ollama?lang=fr).',
+          '**Ollama est la solution la plus rapide pour déployer localement n\'importe quel modèle Qwen2.5.** Il gère le téléchargement, la quantification GGUF et expose une API à `localhost:11434`. Installez-le depuis [ollama.com](https://ollama.com/download). Si vous débutez avec Ollama : [comment installer Ollama](/fr/local-llms/how-to-install-ollama).',
         ],
         numberedItems: [
           { title: 'Installer Ollama', whyItMatters: 'Disponible pour macOS, Linux (installation en une ligne) et Windows. Ollama détecte automatiquement CUDA, ROCm et Metal.' },
@@ -517,7 +517,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'lm-studio-setup',
         title: 'Configuration avec LM Studio',
         content: [
-          '**LM Studio offre une interface graphique pour Qwen2.5 sans commandes terminal.** Téléchargement sur [lmstudio.ai](https://lmstudio.ai) ou voir [comment installer LM Studio](/local-llms/how-to-install-lm-studio?lang=fr). Disponible sur macOS, Windows et Linux.',
+          '**LM Studio offre une interface graphique pour Qwen2.5 sans commandes terminal.** Téléchargement sur [lmstudio.ai](https://lmstudio.ai) ou voir [comment installer LM Studio](/fr/local-llms/how-to-install-lm-studio). Disponible sur macOS, Windows et Linux.',
         ],
         numberedItems: [
           { title: 'Ouvrir le navigateur de modèles', whyItMatters: 'Rechercher « Qwen2.5 » ou « Qwen Coder ». Filtrer sur Q4_K_M pour le meilleur rapport qualité/taille.' },
@@ -539,7 +539,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Q2_K** : ~3 Go pour 7B. La qualité en langue chinoise se dégrade notablement — à éviter pour les usages CJK.',
           '**IQ4_XS** : ~4,8 Go pour 7B. Meilleure qualité que Q4_K_M à taille légèrement inférieure — disponible dans les versions récentes de llama.cpp et LM Studio 0.3+.',
         ],
-        note: 'Pour une explication complète de la quantification : [quantification LLM expliquée](/local-llms/llm-quantization-explained?lang=fr).',
+        note: 'Pour une explication complète de la quantification : [quantification LLM expliquée](/fr/local-llms/llm-quantization-explained).',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Q4_K_M est la meilleure quantification Qwen2.5 pour la plupart des utilisateurs : 55 % de réduction VRAM avec moins de 1 % de perte de qualité vs FP16.' },
           { type: 'plain-terms', text: 'La quantification compresse les nombres du modèle de 16 bits à 4 bits, réduisant environ de moitié la taille du fichier et le VRAM nécessaire — comme passer d\'un TIFF à un JPEG haute qualité.' },
@@ -579,7 +579,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['Niveau VRAM', 'Meilleur Qwen', 'Meilleur concurrent', 'Recommandation'],
         tableFormat: true,
-        content2: 'Pour une comparaison approfondie entre DeepSeek et Qwen sur le code, le raisonnement et le multilingue : [Comparaison locale DeepSeek vs Qwen 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=fr).',
+        content2: 'Pour une comparaison approfondie entre DeepSeek et Qwen sur le code, le raisonnement et le multilingue : [Comparaison locale DeepSeek vs Qwen 2026](/fr/power-local-llm/deepseek-vs-qwen-local-comparison-2026).',
       },
       regionalContext: {
         id: 'regional-context',
@@ -587,7 +587,7 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Déployer Qwen2.5 en local signifie qu\'aucune donnée ne quitte votre machine — aucun transfert vers un serveur cloud étranger.** Les API LLM cloud exigent l\'envoi de prompts vers des serveurs étrangers, ce qui déclenche l\'article 28 du RGPD (sous-traitant) et potentiellement les articles 44 et suivants (transferts hors UE).',
           'Qwen2.5 a été entraîné par l\'équipe Qwen d\'Alibaba sur un corpus principalement chinois et multilingue. C\'est le modèle localement déployable le plus performant pour le chinois simplifié, le traditionnel et les documents mixtes chinois/anglais/français.',
-          '**Pour les déploiements professionnels** : la CNIL recommande le traitement local des données personnelles sensibles dans les secteurs réglementés (médical, juridique, financier) lorsque cela est techniquement possible. Un déploiement Qwen2.5 sans connexion internet pendant l\'inférence est entièrement conforme au RGPD. Guide complet pour les setups hors ligne : [IA locale entièrement hors ligne](/power-local-llm/local-ai-behind-firewall-offline-2026?lang=fr).',
+          '**Pour les déploiements professionnels** : la CNIL recommande le traitement local des données personnelles sensibles dans les secteurs réglementés (médical, juridique, financier) lorsque cela est techniquement possible. Un déploiement Qwen2.5 sans connexion internet pendant l\'inférence est entièrement conforme au RGPD. Guide complet pour les setups hors ligne : [IA locale entièrement hors ligne](/fr/power-local-llm/local-ai-behind-firewall-offline-2026).',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen2.5 fonctionne entièrement hors ligne après téléchargement — aucune donnée ne quitte votre appareil, éliminant les risques de transfert transfrontalier sous le RGPD.' },
@@ -645,11 +645,11 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'related-reading',
         title: 'Articles associés',
         links: [
-          { url: '/local-llms/run-qwen-locally-guide-2026?lang=fr', title: 'Exécuter Qwen 3 en local 2026', description: 'Guide setup pour un seul modèle : Qwen 3.6 27B avec Ollama et LM Studio.' },
-          { url: '/local-llms/run-qwen-vl-locally-2026?lang=fr', title: 'Qwen2-VL en local 2026', description: 'Guide complet Qwen2-VL — OCR de documents CJK, Q&A sur images sur matériel grand public.' },
-          { url: '/local-llms/qwen-vs-llama-vs-mistral?lang=fr', title: 'Qwen vs Llama vs Mistral 2026', description: 'Comparaison benchmark : Qwen 3.6 27B, Llama 4 Scout et Mistral Small 3.1.' },
-          { url: '/local-llms/llm-quantization-explained?lang=fr', title: 'Quantification LLM expliquée', description: 'Q4_K_M, Q8_0 et IQ4_XS — impact sur le VRAM, la vitesse et la qualité.' },
-          { url: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=fr', title: 'DeepSeek vs Qwen local 2026', description: 'Comparaison complète : DeepSeek-V2.5 vs Qwen2.5 sur le code, le raisonnement et les langues.' },
+          { url: '/fr/local-llms/run-qwen-locally-guide-2026', title: 'Exécuter Qwen 3 en local 2026', description: 'Guide setup pour un seul modèle : Qwen 3.6 27B avec Ollama et LM Studio.' },
+          { url: '/fr/local-llms/run-qwen-vl-locally-2026', title: 'Qwen2-VL en local 2026', description: 'Guide complet Qwen2-VL — OCR de documents CJK, Q&A sur images sur matériel grand public.' },
+          { url: '/fr/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Comparaison benchmark : Qwen 3.6 27B, Llama 4 Scout et Mistral Small 3.1.' },
+          { url: '/fr/local-llms/llm-quantization-explained', title: 'Quantification LLM expliquée', description: 'Q4_K_M, Q8_0 et IQ4_XS — impact sur le VRAM, la vitesse et la qualité.' },
+          { url: '/fr/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwen local 2026', description: 'Comparaison complète : DeepSeek-V2.5 vs Qwen2.5 sur le code, le raisonnement et les langues.' },
         ],
       },
     },
@@ -697,7 +697,7 @@ curl http://localhost:11434/v1/chat/completions \\
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'de',
-      url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026?lang=de',
+      url: 'https://www.promptquorum.com/de/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -750,7 +750,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['Teilfamilie', 'Verfügbare Größen', 'Hauptanwendung', 'Ollama-Tag-Präfix'],
         tableFormat: true,
-        note: 'Qwen3 (erschienen Q1 2026) bietet Thinking-Mode-Modelle, hat aber weniger GGUF-Builds und geringere Ollama-Abdeckung als Qwen2.5 (Stand Mai 2026). Dieser Guide konzentriert sich auf Qwen2.5, das die breiteste Hardware-Unterstützung bietet. Siehe [Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) für einen umfassenderen Modellvergleich.',
+        note: 'Qwen3 (erschienen Q1 2026) bietet Thinking-Mode-Modelle, hat aber weniger GGUF-Builds und geringere Ollama-Abdeckung als Qwen2.5 (Stand Mai 2026). Dieser Guide konzentriert sich auf Qwen2.5, das die breiteste Hardware-Unterstützung bietet. Siehe [Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) für einen umfassenderen Modellvergleich.',
       },
       hardwareTiers: {
         id: 'hardware-tiers',
@@ -778,7 +778,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'ollama-setup',
         title: 'Setup mit Ollama',
         content: [
-          '**Ollama ist der schnellste Weg, um ein beliebiges Qwen2.5-Modell lokal zu betreiben** — es übernimmt den Modell-Download, die GGUF-Quantisierung und stellt eine lokale API unter `localhost:11434` bereit, ohne jegliche Konfiguration. Installation unter [ollama.com](https://ollama.com/download). Falls Sie Ollama noch nicht kennen, lesen Sie zunächst [Ollama installieren](/local-llms/how-to-install-ollama?lang=de).',
+          '**Ollama ist der schnellste Weg, um ein beliebiges Qwen2.5-Modell lokal zu betreiben** — es übernimmt den Modell-Download, die GGUF-Quantisierung und stellt eine lokale API unter `localhost:11434` bereit, ohne jegliche Konfiguration. Installation unter [ollama.com](https://ollama.com/download). Falls Sie Ollama noch nicht kennen, lesen Sie zunächst [Ollama installieren](/de/local-llms/how-to-install-ollama).',
         ],
         numberedItems: [
           { title: 'Ollama installieren', whyItMatters: 'Verfügbar für macOS, Linux (Ein-Zeilen-Installation) und Windows. Keine GPU-Treiber-Konfiguration erforderlich — Ollama erkennt CUDA, ROCm und Metal automatisch.' },
@@ -813,7 +813,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'lm-studio-setup',
         title: 'Setup mit LM Studio',
         content: [
-          '**LM Studio bietet eine grafische Oberfläche für Qwen2.5 ohne Terminal-Befehle.** Download unter [lmstudio.ai](https://lmstudio.ai) oder siehe [LM Studio installieren](/local-llms/how-to-install-lm-studio?lang=de). Verfügbar für macOS, Windows und Linux.',
+          '**LM Studio bietet eine grafische Oberfläche für Qwen2.5 ohne Terminal-Befehle.** Download unter [lmstudio.ai](https://lmstudio.ai) oder siehe [LM Studio installieren](/de/local-llms/how-to-install-lm-studio). Verfügbar für macOS, Windows und Linux.',
         ],
         numberedItems: [
           { title: 'Modell-Browser öffnen', whyItMatters: 'Nach „Qwen2.5" oder „Qwen Coder" suchen. Nach Q4_K_M filtern für das empfohlene Qualitäts/Größen-Verhältnis.' },
@@ -835,7 +835,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Q2_K**: ~3 GB für 7B. Kleinste Datei, aber die chinesischsprachige Ausgabequalität verschlechtert sich spürbar — bei Qwen2.5 für chinesische Anwendungen vermeiden.',
           '**IQ4_XS**: ~4,8 GB für 7B. Neuere imatrix-Quantisierung mit besserer Qualität als Q4_K_M bei etwas kleinerer Größe — verfügbar in neueren llama.cpp-Versionen und LM Studio 0.3+.',
         ],
-        note: 'Vollständige Erklärung der Quantisierung: [LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de).',
+        note: 'Vollständige Erklärung der Quantisierung: [LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained).',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Q4_K_M ist die beste Qwen2.5-Quantisierung für die meisten Nutzer: 55 % VRAM-Reduktion bei weniger als 1 % Qualitätsverlust gegenüber FP16.' },
           { type: 'plain-terms', text: 'Quantisierung komprimiert die Zahlen des Modells von 16-Bit auf 4-Bit, was die Dateigröße und den VRAM-Bedarf etwa halbiert. Vorstellbar wie TIFF-zu-JPEG: kleinere Datei, nahezu identisches Ergebnis für die meisten Anwendungsfälle.' },
@@ -875,7 +875,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['VRAM-Stufe', 'Bestes Qwen', 'Bester Konkurrent', 'Empfehlung'],
         tableFormat: true,
-        content2: 'Für einen ausführlichen Vergleich zwischen DeepSeek und Qwen in den Bereichen Coding, Reasoning und Mehrsprachigkeit, siehe [DeepSeek vs. Qwen Lokal-Vergleich 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=de).',
+        content2: 'Für einen ausführlichen Vergleich zwischen DeepSeek und Qwen in den Bereichen Coding, Reasoning und Mehrsprachigkeit, siehe [DeepSeek vs. Qwen Lokal-Vergleich 2026](/de/power-local-llm/deepseek-vs-qwen-local-comparison-2026).',
       },
       regionalContext: {
         id: 'regional-context',
@@ -883,7 +883,7 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Der lokale Betrieb von Qwen2.5 bedeutet, dass keine Daten das eigene Gerät verlassen — kein Cloud-API-Aufruf, kein Risiko unter der DSGVO oder dem deutschen IT-Sicherheitsrecht.** Cloud-basierte LLM-APIs erfordern die Übermittlung von Prompts an externe Server im Ausland, was DSGVO Art. 28 (Auftragsverarbeitung) und ggf. Art. 44 ff. (Drittlandübermittlung) auslöst.',
           'Qwen2.5 wurde vom Qwen-Team bei Alibaba auf einem überwiegend chinesisch- und mehrsprachigen Korpus trainiert. Es ist das stärkste lokal einsetzbare Modell für Vereinfachtes Chinesisch, Traditionelles Chinesisch und gemischtsprachige Dokumente (Chinesisch/Englisch/Deutsch).',
-          '**Für Unternehmensdeployments im DACH-Raum**: Ein luftgespaltenes Qwen2.5-Setup (keine Internetverbindung während der Inferenz) ist vollständig DSGVO-konform. Das Modell läuft ausschließlich auf lokaler Hardware — kein Drittanbieter erhält Zugriff auf Eingabe- oder Ausgabedaten. Für BSI-Grundschutz-konforme Setups empfiehlt sich Baustein OPS.2.2 (Fremdsoftware). Vollständige Anleitung für luftgespaltene Setups: [KI vollständig offline betreiben](/power-local-llm/local-ai-behind-firewall-offline-2026?lang=de).',
+          '**Für Unternehmensdeployments im DACH-Raum**: Ein luftgespaltenes Qwen2.5-Setup (keine Internetverbindung während der Inferenz) ist vollständig DSGVO-konform. Das Modell läuft ausschließlich auf lokaler Hardware — kein Drittanbieter erhält Zugriff auf Eingabe- oder Ausgabedaten. Für BSI-Grundschutz-konforme Setups empfiehlt sich Baustein OPS.2.2 (Fremdsoftware). Vollständige Anleitung für luftgespaltene Setups: [KI vollständig offline betreiben](/de/power-local-llm/local-ai-behind-firewall-offline-2026).',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen2.5 läuft nach dem Download vollständig offline — keine Daten verlassen Ihr Gerät, wodurch DSGVO-Risiken durch Drittlandübermittlung entfallen.' },
@@ -941,11 +941,11 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         links: [
-          { url: '/local-llms/run-qwen-locally-guide-2026?lang=de', title: 'Qwen 3 lokal betreiben 2026', description: 'Einzelmodell-Setup-Guide für Qwen 3.6 27B mit Ollama und LM Studio — der schnellste Weg zu einer funktionierenden Qwen-Instanz.' },
-          { url: '/local-llms/run-qwen-vl-locally-2026?lang=de', title: 'Qwen2-VL lokal betreiben 2026', description: 'Vollständiger Guide zu Qwen2-VL — CJK-Dokument-OCR, Bild-Q&A und mehrsprachige Screenshot-Analyse auf Consumer-Hardware.' },
-          { url: '/local-llms/qwen-vs-llama-vs-mistral?lang=de', title: 'Qwen vs. Llama vs. Mistral 2026', description: 'Benchmark-Vergleich von Qwen 3.6 27B, Llama 4 Scout und Mistral Small 3.1 auf MMLU, SWE-bench und MATH.' },
-          { url: '/local-llms/llm-quantization-explained?lang=de', title: 'LLM-Quantisierung erklärt', description: 'Was Q4_K_M, Q8_0 und IQ4_XS bedeuten — wie sie VRAM, Geschwindigkeit und Ausgabequalität beeinflussen.' },
-          { url: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=de', title: 'DeepSeek vs. Qwen Lokal-Vergleich 2026', description: 'Vollständiger Vergleich: DeepSeek-V2.5 vs. Qwen2.5 bei Coding, Reasoning, Chinesisch und kreativem Schreiben — mit Mac-vs.-NVIDIA-Aufschlüsselung.' },
+          { url: '/de/local-llms/run-qwen-locally-guide-2026', title: 'Qwen 3 lokal betreiben 2026', description: 'Einzelmodell-Setup-Guide für Qwen 3.6 27B mit Ollama und LM Studio — der schnellste Weg zu einer funktionierenden Qwen-Instanz.' },
+          { url: '/de/local-llms/run-qwen-vl-locally-2026', title: 'Qwen2-VL lokal betreiben 2026', description: 'Vollständiger Guide zu Qwen2-VL — CJK-Dokument-OCR, Bild-Q&A und mehrsprachige Screenshot-Analyse auf Consumer-Hardware.' },
+          { url: '/de/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs. Llama vs. Mistral 2026', description: 'Benchmark-Vergleich von Qwen 3.6 27B, Llama 4 Scout und Mistral Small 3.1 auf MMLU, SWE-bench und MATH.' },
+          { url: '/de/local-llms/llm-quantization-explained', title: 'LLM-Quantisierung erklärt', description: 'Was Q4_K_M, Q8_0 und IQ4_XS bedeuten — wie sie VRAM, Geschwindigkeit und Ausgabequalität beeinflussen.' },
+          { url: '/de/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs. Qwen Lokal-Vergleich 2026', description: 'Vollständiger Vergleich: DeepSeek-V2.5 vs. Qwen2.5 bei Coding, Reasoning, Chinesisch und kreativem Schreiben — mit Mac-vs.-NVIDIA-Aufschlüsselung.' },
         ],
       },
     },
@@ -993,7 +993,7 @@ curl http://localhost:11434/v1/chat/completions \\
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'ja',
-      url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026?lang=ja',
+      url: 'https://www.promptquorum.com/ja/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1075,7 +1075,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'ollama-setup',
         title: 'Ollamaでのセットアップ',
         content: [
-          '**Ollamaは任意のQwen2.5モデルをローカルで実行する最速の方法です。** モデルのダウンロード、GGUF量子化の管理、`localhost:11434`へのローカルAPI提供をすべて自動で行います。[ollama.com](https://ollama.com/download)からインストールしてください。Ollamaを初めて使う場合は、まず[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja)をご覧ください。',
+          '**Ollamaは任意のQwen2.5モデルをローカルで実行する最速の方法です。** モデルのダウンロード、GGUF量子化の管理、`localhost:11434`へのローカルAPI提供をすべて自動で行います。[ollama.com](https://ollama.com/download)からインストールしてください。Ollamaを初めて使う場合は、まず[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama)をご覧ください。',
         ],
         numberedItems: [
           { title: 'Ollamaをインストール', whyItMatters: 'macOS、Linux（ワンライナーインストール）、Windowsで利用可能。GPUドライバーの設定は不要 — OllamaはCUDA、ROCm、Metalを自動検出します。' },
@@ -1110,7 +1110,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'lm-studio-setup',
         title: 'LM Studioでのセットアップ',
         content: [
-          '**LM StudioはターミナルコマンドなしでQwen2.5を利用できるGUIです。** [lmstudio.ai](https://lmstudio.ai)からダウンロード、または[LM Studioのインストール方法](/local-llms/how-to-install-lm-studio?lang=ja)を参照。macOS・Windows・Linuxで動作します。',
+          '**LM StudioはターミナルコマンドなしでQwen2.5を利用できるGUIです。** [lmstudio.ai](https://lmstudio.ai)からダウンロード、または[LM Studioのインストール方法](/ja/local-llms/how-to-install-lm-studio)を参照。macOS・Windows・Linuxで動作します。',
         ],
         numberedItems: [
           { title: 'モデルブラウザを開く', whyItMatters: '「Qwen2.5」または「Qwen Coder」で検索。Q4_K_Mでフィルタリングすると推奨品質/サイズ比のビルドが表示されます。' },
@@ -1132,7 +1132,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Q2_K**：7Bで約3GB。最小ファイルサイズだが、中国語出力品質が著しく低下 — Qwen2.5で中国語を使う場合は避けること。',
           '**IQ4_XS**：7Bで約4.8GB。Q4_K_Mより品質が高くやや小さい新しいimatrix量子化 — 最近のllama.cppリリースとLM Studio 0.3+で利用可能。',
         ],
-        note: '量子化の詳細な解説は[LLM量子化の解説](/local-llms/llm-quantization-explained?lang=ja)をご覧ください。',
+        note: '量子化の詳細な解説は[LLM量子化の解説](/ja/local-llms/llm-quantization-explained)をご覧ください。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Q4_K_MはほとんどのユーザーにとってQwen2.5に最適な量子化です：FP16比でVRAMを55%削減し、品質低下は1%未満。' },
           { type: 'plain-terms', text: '量子化とはモデルの数値を16ビットから4ビットに圧縮することで、ファイルサイズとVRAM使用量を約半分にします。TIFFから高品質JPEGへの変換のようなもの — ファイルは小さくなりますが、ほとんどの用途では同じ結果が得られます。' },
@@ -1172,7 +1172,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['VRAM階層', '最良Qwen', '最良競合', '判定'],
         tableFormat: true,
-        content2: 'コーディング・推論・多言語対応でのDeepSeekとQwenの詳細な比較は[DeepSeek vs Qwenローカル比較2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=ja)をご覧ください。',
+        content2: 'コーディング・推論・多言語対応でのDeepSeekとQwenの詳細な比較は[DeepSeek vs Qwenローカル比較2026](/ja/power-local-llm/deepseek-vs-qwen-local-comparison-2026)をご覧ください。',
       },
       regionalContext: {
         id: 'regional-context',
@@ -1180,7 +1180,7 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Qwen2.5をローカルで運用すると、データが社外のサーバーに送信されません** — クラウドAPIと異なり、推論時に外部ネットワーク通信が発生しないためです。これは経済産業省（METI）の「AI事業者ガイドライン（2024年）」が求めるデータガバナンスの観点で有利な構成です。',
           '日本語はQwen2.5の29言語ネイティブサポートに含まれており、医療・法律・金融などの日本語専門文書でも高精度なテキスト処理が可能です。Qwen2-VL 7Bは日本語ドキュメントのOCRにおいて、LLaVAやLlama 3.2 Visionを上回る精度を示しています。',
-          '**アジア太平洋地域の規制環境** — 日本の個人情報保護法（PIPA改正版）では、個人データの安全管理措置として「技術的安全管理措置」が義務付けられています。ローカルLLMは、個人データをオンプレミスで処理することで、この要件に対応しやすい構成です。中国・韓国・シンガポール・オーストラリアでも同様に、機密データのローカル処理がクロスボーダーデータ転送リスクを排除します。完全オフライン構成のガイドは[完全オフラインでAIを動かす](/power-local-llm/local-ai-behind-firewall-offline-2026?lang=ja)をご覧ください。',
+          '**アジア太平洋地域の規制環境** — 日本の個人情報保護法（PIPA改正版）では、個人データの安全管理措置として「技術的安全管理措置」が義務付けられています。ローカルLLMは、個人データをオンプレミスで処理することで、この要件に対応しやすい構成です。中国・韓国・シンガポール・オーストラリアでも同様に、機密データのローカル処理がクロスボーダーデータ転送リスクを排除します。完全オフライン構成のガイドは[完全オフラインでAIを動かす](/ja/power-local-llm/local-ai-behind-firewall-offline-2026)をご覧ください。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen2.5はダウンロード後に完全オフラインで動作し、データが社外に出ないためMETIのAIガバナンスガイドラインへの対応が容易です。' },
@@ -1238,11 +1238,11 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'related-reading',
         title: '関連記事',
         links: [
-          { url: '/local-llms/run-qwen-locally-guide-2026?lang=ja', title: 'Qwen 3をローカルで動かす2026年版ガイド', description: 'OllamaとLM StudioでQwen 3.6 27Bをセットアップする単一モデルガイド。' },
-          { url: '/local-llms/run-qwen-vl-locally-2026?lang=ja', title: 'Qwen2-VLをローカルで動かす2026年版', description: 'Qwen2-VL完全ガイド — CJKドキュメントOCR、画像Q&A、コンシューマーハードウェアでの多言語スクリーンショット解析。' },
-          { url: '/local-llms/qwen-vs-llama-vs-mistral?lang=ja', title: 'Qwen vs Llama vs Mistral 2026', description: 'Qwen 3.6 27B、Llama 4 Scout、Mistral Small 3.1のMMLU・SWE-bench・MATH比較。' },
-          { url: '/local-llms/llm-quantization-explained?lang=ja', title: 'LLM量子化の解説', description: 'Q4_K_M・Q8_0・IQ4_XSの意味 — VRAMと速度と品質への影響。' },
-          { url: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=ja', title: 'DeepSeek vs Qwenローカル比較2026', description: 'DeepSeek-V2.5 vs Qwen2.5の全面比較：コーディング・推論・中国語・クリエイティブライティング。Mac vs NVIDIAの詳細付き。' },
+          { url: '/ja/local-llms/run-qwen-locally-guide-2026', title: 'Qwen 3をローカルで動かす2026年版ガイド', description: 'OllamaとLM StudioでQwen 3.6 27Bをセットアップする単一モデルガイド。' },
+          { url: '/ja/local-llms/run-qwen-vl-locally-2026', title: 'Qwen2-VLをローカルで動かす2026年版', description: 'Qwen2-VL完全ガイド — CJKドキュメントOCR、画像Q&A、コンシューマーハードウェアでの多言語スクリーンショット解析。' },
+          { url: '/ja/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Qwen 3.6 27B、Llama 4 Scout、Mistral Small 3.1のMMLU・SWE-bench・MATH比較。' },
+          { url: '/ja/local-llms/llm-quantization-explained', title: 'LLM量子化の解説', description: 'Q4_K_M・Q8_0・IQ4_XSの意味 — VRAMと速度と品質への影響。' },
+          { url: '/ja/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwenローカル比較2026', description: 'DeepSeek-V2.5 vs Qwen2.5の全面比較：コーディング・推論・中国語・クリエイティブライティング。Mac vs NVIDIAの詳細付き。' },
         ],
       },
     },
@@ -1290,7 +1290,7 @@ curl http://localhost:11434/v1/chat/completions \\
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'zh',
-      url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026?lang=zh',
+      url: 'https://www.promptquorum.com/zh/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1372,7 +1372,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'ollama-setup',
         title: 'Ollama部署方法',
         content: [
-          '**Ollama是本地运行任何Qwen2.5模型的最快方式**——自动处理模型下载、GGUF量化，并在`localhost:11434`提供本地API，无需任何配置。从[ollama.com](https://ollama.com/download)安装。Ollama新手请先阅读[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh)。',
+          '**Ollama是本地运行任何Qwen2.5模型的最快方式**——自动处理模型下载、GGUF量化，并在`localhost:11434`提供本地API，无需任何配置。从[ollama.com](https://ollama.com/download)安装。Ollama新手请先阅读[如何安装Ollama](/zh/local-llms/how-to-install-ollama)。',
         ],
         numberedItems: [
           { title: '安装Ollama', whyItMatters: '支持macOS、Linux（一行安装命令）和Windows。无需配置GPU驱动——Ollama自动检测CUDA、ROCm和Metal。' },
@@ -1407,7 +1407,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'lm-studio-setup',
         title: 'LM Studio部署方法',
         content: [
-          '**LM Studio提供无需命令行的图形界面运行Qwen2.5。** 从[lmstudio.ai](https://lmstudio.ai)下载，或参阅[如何安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)。支持macOS、Windows和Linux。',
+          '**LM Studio提供无需命令行的图形界面运行Qwen2.5。** 从[lmstudio.ai](https://lmstudio.ai)下载，或参阅[如何安装LM Studio](/zh/local-llms/how-to-install-lm-studio)。支持macOS、Windows和Linux。',
         ],
         numberedItems: [
           { title: '打开模型浏览器', whyItMatters: '搜索"Qwen2.5"或"Qwen Coder"。按Q4_K_M筛选以获得推荐的质量/尺寸比例。' },
@@ -1429,7 +1429,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Q2_K**：7B约3GB。文件最小，但中文输出质量明显下降——中文用途请避免使用Qwen2.5的Q2_K。',
           '**IQ4_XS**：7B约4.8GB。比Q4_K_M质量更高且体积略小的新型imatrix量化——在最新llama.cpp版本和LM Studio 0.3+中可用。',
         ],
-        note: '量化详细说明请参阅[LLM量化解析](/local-llms/llm-quantization-explained?lang=zh)。',
+        note: '量化详细说明请参阅[LLM量化解析](/zh/local-llms/llm-quantization-explained)。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Q4_K_M是大多数用户的最佳Qwen2.5量化选择：相比FP16减少55%显存，质量损失不足1%。' },
           { type: 'plain-terms', text: '量化将模型的数值从16位压缩到4位，大约将文件大小和显存需求减半。就像从TIFF转换为高质量JPEG——文件更小，但大多数用途的效果几乎相同。' },
@@ -1469,7 +1469,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['显存档位', '最佳Qwen', '最佳竞品', '建议'],
         tableFormat: true,
-        content2: '代码、推理和多语言任务上DeepSeek与Qwen的深度对比，请参阅[DeepSeek vs Qwen本地对比2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=zh)。',
+        content2: '代码、推理和多语言任务上DeepSeek与Qwen的深度对比，请参阅[DeepSeek vs Qwen本地对比2026](/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026)。',
       },
       regionalContext: {
         id: 'regional-context',
@@ -1477,7 +1477,7 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**本地运行Qwen2.5意味着数据完全不离开本地服务器——无需跨境传输，符合《数据安全法》（DSL）第31条和《网络安全法》的相关规定。** 基于云端的LLM API需要将提示词发送至境外服务器，可能触发DSL的数据出境安全评估要求。',
           'Qwen2.5由阿里巴巴Qwen团队在大规模中文及多语言语料库上训练，是简体中文、繁体中文及中英混合文档本地部署的最强选择。在中文阅读理解和文本生成任务上，持续优于Llama 3.3和Mistral。',
-          '**受监管行业（金融、医疗、法律）的企业部署方案**：完全离线的Qwen2.5部署（推理时无互联网连接）是最稳健的合规选择，符合国家互联网信息办公室（CAC）关于生成式AI服务的管理规定。模型完全在本地算力上运行——监管关注点在于训练数据和输出内容审核，而非在离线硬件上进行的推理过程。**亚太地区数据跨境**：中国、韩国、新加坡、澳大利亚均已建立数据本地化框架，本地LLM推理可消除跨境传输风险。**金融/医疗/法律企业方案**：大型银行、医院、律所如需在内网处理敏感数据，搭配防火墙内Qwen2.5即可满足内部AI合规要求。完整的离线部署指南请参阅[完全离线运行AI](/power-local-llm/local-ai-behind-firewall-offline-2026?lang=zh)。',
+          '**受监管行业（金融、医疗、法律）的企业部署方案**：完全离线的Qwen2.5部署（推理时无互联网连接）是最稳健的合规选择，符合国家互联网信息办公室（CAC）关于生成式AI服务的管理规定。模型完全在本地算力上运行——监管关注点在于训练数据和输出内容审核，而非在离线硬件上进行的推理过程。**亚太地区数据跨境**：中国、韩国、新加坡、澳大利亚均已建立数据本地化框架，本地LLM推理可消除跨境传输风险。**金融/医疗/法律企业方案**：大型银行、医院、律所如需在内网处理敏感数据，搭配防火墙内Qwen2.5即可满足内部AI合规要求。完整的离线部署指南请参阅[完全离线运行AI](/zh/power-local-llm/local-ai-behind-firewall-offline-2026)。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen2.5下载后可完全离线运行——数据不离开本机，消除了《数据安全法》下的跨境数据传输风险。' },
@@ -1535,12 +1535,12 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'related-reading',
         title: '相关阅读',
         links: [
-          { url: '/local-llms/run-qwen-locally-guide-2026?lang=zh', title: '2026年本地运行Qwen 3指南', description: 'Qwen 3.6 27B单模型设置指南，使用Ollama和LM Studio——最快速的Qwen实例启动方法。' },
-          { url: '/local-llms/run-qwen-vl-locally-2026?lang=zh', title: '2026年本地运行Qwen2-VL', description: 'Qwen2-VL完整指南——消费级硬件上的CJK文档OCR、图像问答和多语言截图分析。' },
-          { url: '/local-llms/qwen-vs-llama-vs-mistral?lang=zh', title: 'Qwen vs Llama vs Mistral 2026', description: 'Qwen 3.6 27B、Llama 4 Scout和Mistral Small 3.1在MMLU、SWE-bench和MATH上的基准对比。' },
-          { url: '/local-llms/llm-quantization-explained?lang=zh', title: 'LLM量化解析', description: 'Q4_K_M、Q8_0和IQ4_XS的含义——对显存、速度和输出质量的影响。' },
-          { url: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=zh', title: 'DeepSeek vs Qwen本地对比2026', description: '完整对比：DeepSeek-V2.5 vs Qwen2.5在代码、推理、中文和创意写作上的表现——含Mac vs NVIDIA详细分析。' },
-          { url: '/prompt-bites/best-qwen-model-for-coding?lang=zh', title: '最佳Qwen编码模型', description: 'Qwen2.5-Coder 7B vs 32B：本地自动补全与代码审查的选择指南。' },
+          { url: '/zh/local-llms/run-qwen-locally-guide-2026', title: '2026年本地运行Qwen 3指南', description: 'Qwen 3.6 27B单模型设置指南，使用Ollama和LM Studio——最快速的Qwen实例启动方法。' },
+          { url: '/zh/local-llms/run-qwen-vl-locally-2026', title: '2026年本地运行Qwen2-VL', description: 'Qwen2-VL完整指南——消费级硬件上的CJK文档OCR、图像问答和多语言截图分析。' },
+          { url: '/zh/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Qwen 3.6 27B、Llama 4 Scout和Mistral Small 3.1在MMLU、SWE-bench和MATH上的基准对比。' },
+          { url: '/zh/local-llms/llm-quantization-explained', title: 'LLM量化解析', description: 'Q4_K_M、Q8_0和IQ4_XS的含义——对显存、速度和输出质量的影响。' },
+          { url: '/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwen本地对比2026', description: '完整对比：DeepSeek-V2.5 vs Qwen2.5在代码、推理、中文和创意写作上的表现——含Mac vs NVIDIA详细分析。' },
+          { url: '/zh/prompt-bites/best-qwen-model-for-coding', title: '最佳Qwen编码模型', description: 'Qwen2.5-Coder 7B vs 32B：本地自动补全与代码审查的选择指南。' },
         ],
       },
     },

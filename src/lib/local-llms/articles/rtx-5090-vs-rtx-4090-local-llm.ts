@@ -257,10 +257,10 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
-            '[Beste GPUs für lokale LLMs](/local-llms/best-gpus-for-local-llms?lang=de)',
-            '[Beste Budget-GPUs](/local-llms/best-budget-gpus-local-llm?lang=de)',
-            '[Wie viel VRAM benötigen Sie?](/local-llms/how-much-vram-local-llm?lang=de)',
-            '[70B-Modelle auf Consumer-Hardware](/local-llms/70b-models-consumer-hardware?lang=de)',
+            '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms)',
+            '[Beste Budget-GPUs](/de/local-llms/best-budget-gpus-local-llm)',
+            '[Wie viel VRAM benötigen Sie?](/de/local-llms/how-much-vram-local-llm)',
+            '[70B-Modelle auf Consumer-Hardware](/de/local-llms/70b-models-consumer-hardware)',
           ],
         },
         'sources': {
@@ -278,7 +278,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'RTX 5090 vs RTX 4090: Welche GPU für lokale LLMs 2026?',
         'description': 'RTX 5090 vs RTX 4090 für lokale LLMs: Geschwindigkeitsvergleich, VRAM-Analyse, Kosten-pro-Performance, Upgrade-Leitfaden.',
-        'url': 'https://www.promptquorum.com/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',

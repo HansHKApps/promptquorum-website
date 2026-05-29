@@ -369,13 +369,13 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
-            '[VRAM-Rechner für lokale LLMs](/local-llms/vram-calculator-local-llm?lang=de) -- Prüfen Sie die VRAM-Kompatibilität für jedes Modell auf Ihrer GPU.',
-            '[Leitfaden zur lokalen LLM-Hardware 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) -- Kompletter Hardware-Einrichtungsleitfaden.',
-            '[Multi-GPU lokale LLMs](/local-llms/multi-gpu-local-llms?lang=de) -- Skalierung mit mehreren GPUs.',
-            '[Stromverbrauch lokaler LLMs](/local-llms/local-llm-power-consumption?lang=de) -- Stromverbrauch und Kühlung.',
-            '[Apple Silicon vs NVIDIA GPU für lokale LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=de) -- Mac vs GPU: 24GB einheitlicher Speicher, 3-Jahres-TCO und Stromverbrauchsvergleich.',
-            '[M5 Pro vs M5 Max LLM Benchmarks 2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=de) -- Token/Sek. und Strommessungen über alle Apple Silicon Chip-Ebenen.',
-            '[Apple Silicon für lokale LLMs: Kompletter Leitfaden](/local-llms/apple-silicon-local-llm-guide-2026?lang=de) -- M1 bis M5 Max: einheitlicher Speicher vs VRAM, Metal GPU, Framework-Auswahl.',
+            '[VRAM-Rechner für lokale LLMs](/de/local-llms/vram-calculator-local-llm) -- Prüfen Sie die VRAM-Kompatibilität für jedes Modell auf Ihrer GPU.',
+            '[Leitfaden zur lokalen LLM-Hardware 2026](/de/local-llms/local-llm-hardware-guide-2026) -- Kompletter Hardware-Einrichtungsleitfaden.',
+            '[Multi-GPU lokale LLMs](/de/local-llms/multi-gpu-local-llms) -- Skalierung mit mehreren GPUs.',
+            '[Stromverbrauch lokaler LLMs](/de/local-llms/local-llm-power-consumption) -- Stromverbrauch und Kühlung.',
+            '[Apple Silicon vs NVIDIA GPU für lokale LLMs](/de/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) -- Mac vs GPU: 24GB einheitlicher Speicher, 3-Jahres-TCO und Stromverbrauchsvergleich.',
+            '[M5 Pro vs M5 Max LLM Benchmarks 2026](/de/local-llms/m5-pro-max-llm-benchmarks-2026) -- Token/Sek. und Strommessungen über alle Apple Silicon Chip-Ebenen.',
+            '[Apple Silicon für lokale LLMs: Kompletter Leitfaden](/de/local-llms/apple-silicon-local-llm-guide-2026) -- M1 bis M5 Max: einheitlicher Speicher vs VRAM, Metal GPU, Framework-Auswahl.',
           ],
         },
         sources: {
@@ -393,7 +393,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Die besten GPUs für lokale LLMs 2026: VRAM, Geschwindigkeit & Wertführer',
         description: 'Beste GPUs für lokale LLMs 2026: RTX 4090, 4080, 4070 Ti. Benchmarks zu VRAM, Stromverbrauch, Kosten und Leistung pro Euro.',
-        url: 'https://www.promptquorum.com/local-llms/best-gpus-for-local-llms?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/best-gpus-for-local-llms',
         inLanguage: 'de',
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
@@ -404,7 +404,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        url: 'https://www.promptquorum.com/local-llms/best-gpus-for-local-llms?lang=de',
+        url: 'https://www.promptquorum.com/de/local-llms/best-gpus-for-local-llms',
         mainEntity: [
           {
             '@type': 'Question',
@@ -586,13 +586,13 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[Calculateur VRAM pour LLMs locaux](/local-llms/vram-calculator-local-llm?lang=fr) -- Vérifiez la compatibilité VRAM pour n\'importe quel modèle sur votre GPU.',
-            '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) -- Guide complet de configuration matérielle.',
-            '[LLMs locaux multi-GPU](/local-llms/multi-gpu-local-llms?lang=fr) -- Mise à l\'échelle avec plusieurs GPU.',
-            '[Consommation énergétique des LLMs locaux](/local-llms/local-llm-power-consumption?lang=fr) -- Puissance et refroidissement.',
-            '[Apple Silicon vs GPU NVIDIA pour LLMs locaux](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=fr) -- Mac vs GPU : seuil mémoire unifiée 24GB, TCO 3 ans, et comparaison consommation énergétique.',
-            '[Benchmarks LLM M5 Pro vs M5 Max 2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=fr) -- Tokens/sec et mesures de puissance sur tous les niveaux de puces Apple Silicon.',
-            '[Apple Silicon pour LLMs locaux : Guide complet](/local-llms/apple-silicon-local-llm-guide-2026?lang=fr) -- M1 à M5 Max : mémoire unifiée vs VRAM, GPU Metal, sélection framework.',
+            '[Calculateur VRAM pour LLMs locaux](/fr/local-llms/vram-calculator-local-llm) -- Vérifiez la compatibilité VRAM pour n\'importe quel modèle sur votre GPU.',
+            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Guide complet de configuration matérielle.',
+            '[LLMs locaux multi-GPU](/fr/local-llms/multi-gpu-local-llms) -- Mise à l\'échelle avec plusieurs GPU.',
+            '[Consommation énergétique des LLMs locaux](/fr/local-llms/local-llm-power-consumption) -- Puissance et refroidissement.',
+            '[Apple Silicon vs GPU NVIDIA pour LLMs locaux](/fr/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) -- Mac vs GPU : seuil mémoire unifiée 24GB, TCO 3 ans, et comparaison consommation énergétique.',
+            '[Benchmarks LLM M5 Pro vs M5 Max 2026](/fr/local-llms/m5-pro-max-llm-benchmarks-2026) -- Tokens/sec et mesures de puissance sur tous les niveaux de puces Apple Silicon.',
+            '[Apple Silicon pour LLMs locaux : Guide complet](/fr/local-llms/apple-silicon-local-llm-guide-2026) -- M1 à M5 Max : mémoire unifiée vs VRAM, GPU Metal, sélection framework.',
           ],
         },
         sources: {
@@ -610,7 +610,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Les meilleurs GPU pour LLMs locaux 2026 : Guide VRAM, vitesse et valeur',
         description: 'Meilleurs GPU budgétaires pour LLMs locaux 2026 : RTX 4090, 4080, 4070 Ti. Benchmarks VRAM, puissance, coûts et performance par euro.',
-        url: 'https://www.promptquorum.com/local-llms/best-gpus-for-local-llms?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/best-gpus-for-local-llms',
         inLanguage: 'fr',
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
@@ -621,7 +621,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        url: 'https://www.promptquorum.com/local-llms/best-gpus-for-local-llms?lang=fr',
+        url: 'https://www.promptquorum.com/fr/local-llms/best-gpus-for-local-llms',
         mainEntity: [
           {
             '@type': 'Question',
@@ -803,13 +803,13 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLM向けVRAM計算ツール](/local-llms/vram-calculator-local-llm?lang=ja) -- あなたのGPU上で任意のモデルのVRAM適合性を確認。',
-            '[ローカルLLMハードウェアガイド 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) -- 完全なハードウェア・セットアップガイド。',
-            '[マルチGPUローカルLLM](/local-llms/multi-gpu-local-llms?lang=ja) -- 複数GPUでのスケーリング。',
-            '[ローカルLLM消費電力](/local-llms/local-llm-power-consumption?lang=ja) -- 電力と冷却。',
-            '[Apple Silicon vs NVIDIA GPU ローカルLLM向け](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=ja) -- Mac vs GPU：24GB統合メモリ、3年TCO、消費電力比較。',
-            '[M5 Pro vs M5 Max LLM ベンチマーク 2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=ja) -- トークン/秒とパワー測定（すべてのApple Siliconチップティア）。',
-            '[Apple Silicon ローカルLLM向け：完全ガイド](/local-llms/apple-silicon-local-llm-guide-2026?lang=ja) -- M1からM5 Max：統合メモリ対VRAM、Metal GPU、フレームワーク選択。',
+            '[ローカルLLM向けVRAM計算ツール](/ja/local-llms/vram-calculator-local-llm) -- あなたのGPU上で任意のモデルのVRAM適合性を確認。',
+            '[ローカルLLMハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) -- 完全なハードウェア・セットアップガイド。',
+            '[マルチGPUローカルLLM](/ja/local-llms/multi-gpu-local-llms) -- 複数GPUでのスケーリング。',
+            '[ローカルLLM消費電力](/ja/local-llms/local-llm-power-consumption) -- 電力と冷却。',
+            '[Apple Silicon vs NVIDIA GPU ローカルLLM向け](/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) -- Mac vs GPU：24GB統合メモリ、3年TCO、消費電力比較。',
+            '[M5 Pro vs M5 Max LLM ベンチマーク 2026](/ja/local-llms/m5-pro-max-llm-benchmarks-2026) -- トークン/秒とパワー測定（すべてのApple Siliconチップティア）。',
+            '[Apple Silicon ローカルLLM向け：完全ガイド](/ja/local-llms/apple-silicon-local-llm-guide-2026) -- M1からM5 Max：統合メモリ対VRAM、Metal GPU、フレームワーク選択。',
           ],
         },
         sources: {
@@ -827,7 +827,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'ローカルLLM向け最高のGPU 2026年：VRAM、速度＆価値ガイド',
         description: '2026年のローカルLLM向け予算GPU：RTX 4090、4080、4070 Ti。VRAM、消費電力、コスト、性能のベンチマーク。',
-        url: 'https://www.promptquorum.com/local-llms/best-gpus-for-local-llms?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/best-gpus-for-local-llms',
         inLanguage: 'ja',
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
@@ -846,7 +846,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        url: 'https://www.promptquorum.com/local-llms/best-gpus-for-local-llms?lang=ja',
+        url: 'https://www.promptquorum.com/ja/local-llms/best-gpus-for-local-llms',
         mainEntity: [
           {
             '@type': 'Question',
@@ -1028,13 +1028,13 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[本地LLM VRAM计算器](/local-llms/vram-calculator-local-llm?lang=zh) -- 检查任何模型在你的GPU上的VRAM容量。',
-            '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) -- 完整硬件设置指南。',
-            '[多GPU本地LLM](/local-llms/multi-gpu-local-llms?lang=zh) -- 多GPU扩展。',
-            '[本地LLM功耗](/local-llms/local-llm-power-consumption?lang=zh) -- 功率和散热。',
-            '[Apple Silicon vs NVIDIA GPU本地LLM](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=zh) -- Mac vs GPU：24GB统一内存、3年TCO和功耗对比。',
-            '[M5 Pro vs M5 Max LLM基准2026](/local-llms/m5-pro-max-llm-benchmarks-2026?lang=zh) -- token/秒和功率测量（所有Apple Silicon芯片等级）。',
-            '[Apple Silicon本地LLM完整指南](/local-llms/apple-silicon-local-llm-guide-2026?lang=zh) -- M1至M5 Max：统一内存vs VRAM、Metal GPU、框架选择。',
+            '[本地LLM VRAM计算器](/zh/local-llms/vram-calculator-local-llm) -- 检查任何模型在你的GPU上的VRAM容量。',
+            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) -- 完整硬件设置指南。',
+            '[多GPU本地LLM](/zh/local-llms/multi-gpu-local-llms) -- 多GPU扩展。',
+            '[本地LLM功耗](/zh/local-llms/local-llm-power-consumption) -- 功率和散热。',
+            '[Apple Silicon vs NVIDIA GPU本地LLM](/zh/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) -- Mac vs GPU：24GB统一内存、3年TCO和功耗对比。',
+            '[M5 Pro vs M5 Max LLM基准2026](/zh/local-llms/m5-pro-max-llm-benchmarks-2026) -- token/秒和功率测量（所有Apple Silicon芯片等级）。',
+            '[Apple Silicon本地LLM完整指南](/zh/local-llms/apple-silicon-local-llm-guide-2026) -- M1至M5 Max：统一内存vs VRAM、Metal GPU、框架选择。',
           ],
         },
         sources: {
@@ -1052,7 +1052,7 @@ schema: {
         '@type': 'TechArticle',
         headline: '2026年本地LLM最佳GPU指南：VRAM、速度和价值',
         description: '2026年本地LLM最佳GPU：RTX 4090、4080、4070 Ti。包括VRAM、功耗、成本和性能基准。',
-        url: 'https://www.promptquorum.com/local-llms/best-gpus-for-local-llms?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/best-gpus-for-local-llms',
         inLanguage: 'zh',
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
@@ -1071,7 +1071,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        url: 'https://www.promptquorum.com/local-llms/best-gpus-for-local-llms?lang=zh',
+        url: 'https://www.promptquorum.com/zh/local-llms/best-gpus-for-local-llms',
         mainEntity: [
           {
             '@type': 'Question',

@@ -315,7 +315,7 @@ schema: {
           content: [
             '**Claude Pro berechnet 20€/Monat ohne Hardware erforderlich; lokales Llama 3.1 70B kostet 1.400€+ Auffront, aber nur 60€/Jahr Strom danach.** Jahr 1 ist teuer für lokal, aber Amortisationspunkt kommt bei Monat 50.',
             '**5-Jahres-Gesamtkostenrechnung:** Claude Pro 1.200€ vs Lokal Llama (gebrauchte GPU) 1.700€ vs Lokal Llama (neue GPU) 2.300€. Jahr 1: Claude Pro 240€ vs Lokal 1.460–1.960€. Jahr 3: Claude Pro 720€ vs Lokal 1.580–2.080€. Jahr 5: Claude Pro 1.200€ vs Lokal 1.700–2.300€.',
-            '[Beste GPUs für lokale LLMs](/local-llms/best-gpus-for-local-llms?lang=de) hat detaillierte Hardware-Optionen und Preisgestaltung.',
+            '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms) hat detaillierte Hardware-Optionen und Preisgestaltung.',
           ],
           callouts: [
             { type: '⚠️ Warnung', text: 'Jahr 1 kostet lokal 4–7× mehr Auffront. Amortisationspunkt tritt um Monat 50 mit einer gebrauchten GPU auf.' },
@@ -340,7 +340,7 @@ schema: {
           content: [
             '**Claude 3.5 Sonnet (2024) (Anthropic, Juni 2024): Beste Reasoning, Nuance, Anleitung-Befolgung.** 97% MMLU (Sprachverständnis) Ergebnis. Excels bei komplexer Analyse, Copywriting, Code-Reviews. MMLU-Ergebnis: 97%. Kontextfenster: 200K Tokens. Bildverständnis: Nativ. Fine-Tuning: Nicht verfügbar. Offline: Nein. Ratenbegrenzungen: Ja.',
             'Llama 3.1 70B (Meta, April 2024): 96% MMLU-Ergebnis. Ausgezeichnetes Reasoning, nahezu Parität mit Claude bei Benchmarks. Stärkere Coding-Leistung (+2% auf HumanEval). Etwas schwächer bei kreativen/narrative Aufgaben. MMLU-Ergebnis: 96%. HumanEval: +2% vs Claude. Kontextfenster: 128K Tokens. Bildverständnis: Via Adapter nur. Fine-Tuning: Vollständig (LoRA, voll). Offline: Ja. Ratenbegrenzungen: Keine.',
-            'Bei 80% der Real-World-Aufgaben (Zusammenfassung, Q&A, Datenextraktion, Coding) erzeugen Llama 3.1 70B und Claude 3.5 Sonnet (2024) äquivalente Output. Bei Edge Cases (subtile narrative Analyse, domänenspezifisches kreatives Schreiben) ist Claude marginal besser. [Wie viel VRAM brauchen Sie für lokale LLMs?](/local-llms/how-much-vram-local-llm?lang=de) behandelt Hardware-Anforderungen für die Ausführung von 70B-Modellen.',
+            'Bei 80% der Real-World-Aufgaben (Zusammenfassung, Q&A, Datenextraktion, Coding) erzeugen Llama 3.1 70B und Claude 3.5 Sonnet (2024) äquivalente Output. Bei Edge Cases (subtile narrative Analyse, domänenspezifisches kreatives Schreiben) ist Claude marginal besser. [Wie viel VRAM brauchen Sie für lokale LLMs?](/de/local-llms/how-much-vram-local-llm) behandelt Hardware-Anforderungen für die Ausführung von 70B-Modellen.',
           ],
           callouts: [
             { type: '💡 Pro Tipp', text: 'Bei Coding-Benchmarks (HumanEval) übertrifft Llama 3.1 70B Claude 3.5 Sonnet um ~2% seit April 2026.' },
@@ -446,12 +446,12 @@ schema: {
         'relatedReading': {
           title: 'Weiterführende Ressourcen',
           items: [
-            '[Lokale LLMs vs ChatGPT Plus: Kostenvergleich](/local-llms/local-llms-vs-chatgpt-plus?lang=de)',
-            '[Lokales LLM vs Cloud GPU: Kostenanalyse](/local-llms/local-llm-vs-cloud-gpu-cost?lang=de)',
-            '[Beste GPUs für lokale LLMs](/local-llms/best-gpus-for-local-llms?lang=de)',
-            '[Wie viel VRAM brauchen Sie für lokale LLMs?](/local-llms/how-much-vram-local-llm?lang=de)',
-            '[LLM Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de)',
-            '[Ist GPU-Kauf vs AI-Abos wert?](/local-llms/gpu-vs-ai-subscription-roi?lang=de)',
+            '[Lokale LLMs vs ChatGPT Plus: Kostenvergleich](/de/local-llms/local-llms-vs-chatgpt-plus)',
+            '[Lokales LLM vs Cloud GPU: Kostenanalyse](/de/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms)',
+            '[Wie viel VRAM brauchen Sie für lokale LLMs?](/de/local-llms/how-much-vram-local-llm)',
+            '[LLM Quantisierung erklärt](/de/local-llms/llm-quantization-explained)',
+            '[Ist GPU-Kauf vs AI-Abos wert?](/de/local-llms/gpu-vs-ai-subscription-roi)',
           ],
         },
         'sources': {
@@ -468,7 +468,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Lokale LLMs vs Claude Pro: Kostenanalyse, Datenschutz, Modellqualitätsvergleich',
         'description': 'Claude Pro vs lokale LLMs: Kosten, Datenschutz, Qualitätsvergleich. Anthropic vs Open Source.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-claude-pro',
         'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -490,7 +490,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-claude-pro',
         'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich Claude Pro offline verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Claude Pro erfordert aktive Internetverbindung und Anthropic-Server. Lokales Llama 3.1 funktioniert vollständig offline.' } },
@@ -575,7 +575,7 @@ schema: {
           content: [
             '**Claude Pro facture 20€/mois sans matériel requis; Llama 3.1 70B local coûte 1 200€+ d\'avance mais seulement 60€/an en électricité après cela.** L\'année 1 est chère pour le local, mais le seuil de rentabilité arrive au mois 50.',
             '**Coût total de propriété 5 ans:** Claude Pro 1 200€ vs Llama local (GPU d\'occasion) 1 500€ vs Llama local (GPU neuf) 2 400€. Année 1: Claude Pro 240€ vs Local 1 260–1 660€. Année 3: Claude Pro 720€ vs Local 1 380–1 780€. Année 5: Claude Pro 1 200€ vs Local 1 500–2 400€.',
-            '[Meilleures GPUs pour LLMs locaux](/local-llms/best-gpus-for-local-llms?lang=fr) détaille les options matériel et tarification.',
+            '[Meilleures GPUs pour LLMs locaux](/fr/local-llms/best-gpus-for-local-llms) détaille les options matériel et tarification.',
           ],
           callouts: [
             { type: '⚠️ Avertissement', text: 'Année 1, le local coûte 5–7× plus d\'avance. Le seuil de rentabilité intervient vers le mois 50 avec un GPU d\'occasion.' },
@@ -600,7 +600,7 @@ schema: {
           content: [
             '**Claude 3.5 Sonnet (2024) (Anthropic, juin 2024): Raisonnement meilleur-en-classe, nuance, suivi d\'instructions.** Score MMLU 97 % (compréhension langage). Excelle en analyse complexe, rédaction, révision code. Score MMLU: 97 %. Fenêtre contexte: 200K tokens. Compréhension images: Native. Fine-tuning: Non disponible. Hors ligne: Non. Limites débit: Oui.',
             'Llama 3.1 70B (Meta, avril 2024): Score MMLU 96 %. Raisonnement excellent, quasi-parité Claude sur benchmarks. Performance coding supérieure (+2 % sur HumanEval). Légèrement plus faible en tâches créatives/narrative. Score MMLU: 96 %. HumanEval: +2 % vs Claude. Fenêtre contexte: 128K tokens. Compréhension images: Via adaptateur seulement. Fine-tuning: Complet (LoRA, complet). Hors ligne: Oui. Limites débit: Aucune.',
-            'Sur 80 % des tâches réelles (résumé, Q&R, extraction données, coding), Llama 3.1 70B et Claude 3.5 Sonnet (2024) produisent output équivalent. Sur cas limites (analyse narrative subtile, rédaction créative domaine-spécifique), Claude est marginalement meilleur. [Combien de VRAM faut-il pour LLMs locaux?](/local-llms/how-much-vram-local-llm?lang=fr) couvre les exigences matériel pour exécuter modèles 70B.',
+            'Sur 80 % des tâches réelles (résumé, Q&R, extraction données, coding), Llama 3.1 70B et Claude 3.5 Sonnet (2024) produisent output équivalent. Sur cas limites (analyse narrative subtile, rédaction créative domaine-spécifique), Claude est marginalement meilleur. [Combien de VRAM faut-il pour LLMs locaux?](/fr/local-llms/how-much-vram-local-llm) couvre les exigences matériel pour exécuter modèles 70B.',
           ],
           callouts: [
             { type: '💡 Conseil utile', text: 'Sur benchmarks coding (HumanEval), Llama 3.1 70B surpasse Claude 3.5 Sonnet de ~2 % depuis avril 2026.' },
@@ -698,12 +698,12 @@ schema: {
         'relatedReading': {
           title: 'Lectures connexes',
           items: [
-            '[LLMs locaux vs ChatGPT Plus: Comparaison coûts](/local-llms/local-llms-vs-chatgpt-plus?lang=fr)',
-            '[LLM local vs GPU cloud: Analyse coûts](/local-llms/local-llm-vs-cloud-gpu-cost?lang=fr)',
-            '[Meilleures GPUs pour LLMs locaux](/local-llms/best-gpus-for-local-llms?lang=fr)',
-            '[Combien de VRAM pour LLMs locaux?](/local-llms/how-much-vram-local-llm?lang=fr)',
-            '[Quantification LLM expliquée](/local-llms/llm-quantization-explained?lang=fr)',
-            '[Acheter GPU vaut-il mieux vs abonnements IA?](/local-llms/gpu-vs-ai-subscription-roi?lang=fr)',
+            '[LLMs locaux vs ChatGPT Plus: Comparaison coûts](/fr/local-llms/local-llms-vs-chatgpt-plus)',
+            '[LLM local vs GPU cloud: Analyse coûts](/fr/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[Meilleures GPUs pour LLMs locaux](/fr/local-llms/best-gpus-for-local-llms)',
+            '[Combien de VRAM pour LLMs locaux?](/fr/local-llms/how-much-vram-local-llm)',
+            '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained)',
+            '[Acheter GPU vaut-il mieux vs abonnements IA?](/fr/local-llms/gpu-vs-ai-subscription-roi)',
           ],
         },
         'sources': {
@@ -720,7 +720,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs Locaux vs Claude Pro: Analyse coûts, confidentialité, comparaison qualité modèle',
         'description': 'LLMs locaux vs Claude Pro: coûts, confidentialité, comparaison qualité. Anthropic vs open source.',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-claude-pro',
         'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -742,7 +742,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-claude-pro',
         'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Puis-je utiliser Claude Pro hors ligne?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Claude Pro requiert connexion internet active et serveurs Anthropic. Llama 3.1 local fonctionne entièrement hors ligne.' } },
@@ -825,7 +825,7 @@ schema: {
           content: [
             '**Claude Proは月¥3,200でハードウェア不要; ローカルLlama 3.1 70Bは初期投資¥189,000以上だが、その後年¥9,600電気代のみ。** 初年度はローカルが高いですが、損益分岐点は約50ヶ月です。',
             '**5年総所有コスト:** Claude Pro ¥192,000 対 ローカルLlama（中古GPU）¥237,000 対 ローカルLlama（新GPU）¥302,400。初年度: Claude Pro ¥38,400 対 ローカル ¥198,600～258,600。3年目: Claude Pro ¥115,200 対 ローカル ¥207,600～267,600。5年目: Claude Pro ¥192,000 対 ローカル ¥237,000～302,400。',
-            '[ローカルLLM向けベストGPU](/local-llms/best-gpus-for-local-llms?lang=ja)はハードウェアオプションと価格をさらに詳しく説明しています。',
+            '[ローカルLLM向けベストGPU](/ja/local-llms/best-gpus-for-local-llms)はハードウェアオプションと価格をさらに詳しく説明しています。',
           ],
           callouts: [
             { type: '⚠️ 警告', text: '初年度、ローカルは4～7倍の初期投資が必要です。損益分岐点は中古GPUで約50ヶ月です。' },
@@ -850,7 +850,7 @@ schema: {
           content: [
             '**Claude 3.5 Sonnet（2024）（Anthropic、2024年6月）: 最高クラスの推論、ニュアンス、指示遵守。** MMLU（言語理解）スコア 97%。複雑な分析、コピーライティング、コードレビューで優秀。MMULスコア: 97%。コンテキストウィンドウ: 200Kトークン。画像理解: ネイティブ。ファインチューニング: 利用不可。オフライン: いいえ。レート制限: はい。',
             'Llama 3.1 70B（Meta、2024年4月）: MMULスコア 96%。優秀な推論、ベンチマークでClaudeに近い。コーディング性能が優れている（+2% HumanEval）。創造的/ナレーティブタスクでやや弱い。MMULスコア: 96%。HumanEval: Claude比+2%。コンテキストウィンドウ: 128Kトークン。画像理解: アダプター経由のみ。ファインチューニング: 完全（LoRA、完全）。オフライン: はい。レート制限: なし。',
-            '現実的なタスク（要約、Q&A、データ抽出、コーディング）の80%で、Llama 3.1 70BとClaude 3.5 Sonnet（2024）は同等の出力を生成します。エッジケース（微妙な物語分析、ドメイン特有の創造的執筆）では、Claudeが若干優位です。[ローカルLLMに必要なVRAM](/local-llms/how-much-vram-local-llm?lang=ja)は70Bモデル実行のハードウェア要件をカバーしています。',
+            '現実的なタスク（要約、Q&A、データ抽出、コーディング）の80%で、Llama 3.1 70BとClaude 3.5 Sonnet（2024）は同等の出力を生成します。エッジケース（微妙な物語分析、ドメイン特有の創造的執筆）では、Claudeが若干優位です。[ローカルLLMに必要なVRAM](/ja/local-llms/how-much-vram-local-llm)は70Bモデル実行のハードウェア要件をカバーしています。',
           ],
           callouts: [
             { type: '💡 プロのコツ', text: 'コーディングベンチマーク（HumanEval）では、Llama 3.1 70Bは2026年4月現在Claude 3.5 Sonnetを~2%上回ります。' },
@@ -948,12 +948,12 @@ schema: {
         'relatedReading': {
           title: '関連資料',
           items: [
-            '[ローカルLLM対ChatGPT Plus: コスト比較](/local-llms/local-llms-vs-chatgpt-plus?lang=ja)',
-            '[ローカルLLM対クラウドGPU: コスト分析](/local-llms/local-llm-vs-cloud-gpu-cost?lang=ja)',
-            '[ローカルLLM向けベストGPU](/local-llms/best-gpus-for-local-llms?lang=ja)',
-            '[ローカルLLMに必要なVRAM](/local-llms/how-much-vram-local-llm?lang=ja)',
-            '[LLM量子化説明済み](/local-llms/llm-quantization-explained?lang=ja)',
-            '[GPU購入はAIサブスク対ROIの価値がある?](/local-llms/gpu-vs-ai-subscription-roi?lang=ja)',
+            '[ローカルLLM対ChatGPT Plus: コスト比較](/ja/local-llms/local-llms-vs-chatgpt-plus)',
+            '[ローカルLLM対クラウドGPU: コスト分析](/ja/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[ローカルLLM向けベストGPU](/ja/local-llms/best-gpus-for-local-llms)',
+            '[ローカルLLMに必要なVRAM](/ja/local-llms/how-much-vram-local-llm)',
+            '[LLM量子化説明済み](/ja/local-llms/llm-quantization-explained)',
+            '[GPU購入はAIサブスク対ROIの価値がある?](/ja/local-llms/gpu-vs-ai-subscription-roi)',
           ],
         },
         'sources': {
@@ -970,7 +970,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'ローカルLLM対Claude Pro: コスト分析、プライバシー、モデル品質比較',
         'description': 'ローカルLLM対Claude Pro: コスト、プライバシー、品質比較。Anthropic対オープンソース。',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-vs-claude-pro',
         'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -992,7 +992,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-vs-claude-pro',
         'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Claude Proをオフラインで使用できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。Claude Proはアクティブなインターネット接続とAnthropicサーバーが必要です。ローカルLlama 3.1は完全にオフラインで動作します。' } },
@@ -1075,7 +1075,7 @@ schema: {
           content: [
             '**Claude Pro按月$20收费，无需硬件；本地Llama 3.1 70B初期投资$1,000+但之后仅年$60电力。** 初年本地更贵，但损益平衡点约在50个月。',
             '**5年总拥有成本:** Claude Pro $1,200 vs 本地Llama（二手GPU）$1,300 vs 本地Llama（新GPU）$1,900。初年: Claude Pro $240 vs 本地$1,060-1,660。3年: Claude Pro $720 vs 本地$1,180-1,780。5年: Claude Pro $1,200 vs 本地$1,300-1,900。',
-            '[本地LLM最佳GPU](/local-llms/best-gpus-for-local-llms?lang=zh)详细说明硬件选项和定价。',
+            '[本地LLM最佳GPU](/zh/local-llms/best-gpus-for-local-llms)详细说明硬件选项和定价。',
           ],
           callouts: [
             { type: '⚠️ 警告', text: '初年本地成本高4-7倍。使用二手GPU损益平衡约50个月。' },
@@ -1100,7 +1100,7 @@ schema: {
           content: [
             '**Claude 3.5 Sonnet（2024）（Anthropic，2024年6月）: 业界一流推理、细微差别、指令跟随。** MMLU（语言理解）得分97%。在复杂分析、文案写作、代码审查中表现出色。MMLU得分: 97%。上下文窗口: 200K令牌。图像理解: 原生。微调: 不可用。离线: 否。速率限制: 是。',
             'Llama 3.1 70B（Meta，2024年4月）: MMLU得分96%。优秀推理，基准上与Claude接近。编码性能更强（+2% HumanEval）。创意/叙述任务略弱。MMLU得分: 96%。HumanEval: vs Claude +2%。上下文窗口: 128K令牌。图像理解: 仅通过适配器。微调: 完整（LoRA、完整）。离线: 是。速率限制: 无。',
-            '在80%现实任务（摘要、Q&A、数据提取、编码）上，Llama 3.1 70B和Claude 3.5 Sonnet（2024）产生等效输出。在边界情况（细微叙述分析、域特定创意写作）上，Claude略占上风。[本地LLM需要多少VRAM?](/local-llms/how-much-vram-local-llm?lang=zh)涵盖运行70B模型的硬件要求。',
+            '在80%现实任务（摘要、Q&A、数据提取、编码）上，Llama 3.1 70B和Claude 3.5 Sonnet（2024）产生等效输出。在边界情况（细微叙述分析、域特定创意写作）上，Claude略占上风。[本地LLM需要多少VRAM?](/zh/local-llms/how-much-vram-local-llm)涵盖运行70B模型的硬件要求。',
           ],
           callouts: [
             { type: '💡 专业建议', text: '在编码基准（HumanEval）上，Llama 3.1 70B截至2026年4月超越Claude 3.5 Sonnet约2%。' },
@@ -1198,12 +1198,12 @@ schema: {
         'relatedReading': {
           title: '相关阅读',
           items: [
-            '[本地LLM vs ChatGPT Plus: 成本对比](/local-llms/local-llms-vs-chatgpt-plus?lang=zh)',
-            '[本地LLM vs 云GPU: 成本分析](/local-llms/local-llm-vs-cloud-gpu-cost?lang=zh)',
-            '[本地LLM最佳GPU](/local-llms/best-gpus-for-local-llms?lang=zh)',
-            '[本地LLM需要多少VRAM?](/local-llms/how-much-vram-local-llm?lang=zh)',
-            '[LLM量化解释](/local-llms/llm-quantization-explained?lang=zh)',
-            '[购买GPU值得 vs AI订阅ROI?](/local-llms/gpu-vs-ai-subscription-roi?lang=zh)',
+            '[本地LLM vs ChatGPT Plus: 成本对比](/zh/local-llms/local-llms-vs-chatgpt-plus)',
+            '[本地LLM vs 云GPU: 成本分析](/zh/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[本地LLM最佳GPU](/zh/local-llms/best-gpus-for-local-llms)',
+            '[本地LLM需要多少VRAM?](/zh/local-llms/how-much-vram-local-llm)',
+            '[LLM量化解释](/zh/local-llms/llm-quantization-explained)',
+            '[购买GPU值得 vs AI订阅ROI?](/zh/local-llms/gpu-vs-ai-subscription-roi)',
           ],
         },
         'sources': {
@@ -1220,7 +1220,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '本地LLM vs Claude Pro: 成本分析、隐私、模型质量对比',
         'description': '本地LLM vs Claude Pro: 成本、隐私、质量对比。Anthropic vs 开源。',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-vs-claude-pro',
         'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -1242,7 +1242,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-vs-claude-pro',
         'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '我能离线使用Claude Pro吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不能。Claude Pro需要活跃网络连接和Anthropic服务器。本地Llama 3.1完全离线运作。' } },

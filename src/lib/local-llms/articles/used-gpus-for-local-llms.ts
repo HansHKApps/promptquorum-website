@@ -360,10 +360,10 @@ schema: {
           id: 'related-reading',
           title: 'Empfohlene Artikel',
           items: [
-            '[Beste Budget-GPUs für lokale LLMs](/local-llms/best-budget-gpus-local-llm?lang=de)',
-            '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=de)',
-            '[Beste GPUs für lokale LLMs](/local-llms/best-gpus-for-local-llms?lang=de)',
-            '[Leitfaden zur lokalen LLM-Hardware 2026](/local-llms/local-llm-hardware-guide-2026?lang=de)',
+            '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm)',
+            '[RTX 5090 vs RTX 4090](/de/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms)',
+            '[Leitfaden zur lokalen LLM-Hardware 2026](/de/local-llms/local-llm-hardware-guide-2026)',
           ],
         },
         'sources': {
@@ -381,7 +381,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Beste gebrauchte GPUs für LLMs: RTX 3060, 3080, 4090 Kaufleitfaden',
         'description': 'Beste gebrauchte GPUs für lokale LLMs: RTX 3060, 3080, 3090, 4090. Wo kaufen, Risikobewertung, Bench-Test-Anleitung.',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/used-gpus-for-local-llms',
         'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -403,7 +403,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'de',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/used-gpus-for-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -455,7 +455,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/used-gpus-for-local-llms',
         'inLanguage': 'de',
         'name': 'Gebrauchte GPUs für lokale LLMs: Kostenvergleich & Zuverlässigkeit',
         'itemListElement': [
@@ -582,10 +582,10 @@ schema: {
           id: 'related-reading',
           title: 'Lectures recommandées',
           items: [
-            '[Meilleures GPU budget pour LLMs locaux](/local-llms/best-budget-gpus-local-llm?lang=fr)',
-            '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=fr)',
-            '[Meilleures GPU pour LLMs locaux](/local-llms/best-gpus-for-local-llms?lang=fr)',
-            '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr)',
+            '[Meilleures GPU budget pour LLMs locaux](/fr/local-llms/best-budget-gpus-local-llm)',
+            '[RTX 5090 vs RTX 4090](/fr/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[Meilleures GPU pour LLMs locaux](/fr/local-llms/best-gpus-for-local-llms)',
+            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026)',
           ],
         },
         'sources': {
@@ -603,7 +603,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Meilleures GPU utilisées pour LLMs : Guide d\'achat RTX 3060, 3080, 4090',
         'description': 'Meilleures GPU utilisées pour LLMs locaux : RTX 3060, 3080, 3090, 4090. Où acheter, évaluation des risques, test de performance.',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/used-gpus-for-local-llms',
         'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -625,7 +625,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'fr',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/used-gpus-for-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -667,7 +667,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/used-gpus-for-local-llms',
         'inLanguage': 'fr',
         'name': 'GPU utilisées pour LLMs locaux : Comparaison coûts & fiabilité',
         'itemListElement': [
@@ -794,10 +794,10 @@ schema: {
           id: 'related-reading',
           title: '関連リーディング',
           items: [
-            '[ローカルLLM向けベストバジェットGPU](/local-llms/best-budget-gpus-local-llm?lang=ja)',
-            '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=ja)',
-            '[ローカルLLM向けベストGPU](/local-llms/best-gpus-for-local-llms?lang=ja)',
-            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja)',
+            '[ローカルLLM向けベストバジェットGPU](/ja/local-llms/best-budget-gpus-local-llm)',
+            '[RTX 5090 vs RTX 4090](/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[ローカルLLM向けベストGPU](/ja/local-llms/best-gpus-for-local-llms)',
+            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026)',
           ],
         },
         'sources': {
@@ -815,7 +815,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '中古GPUローカルLLMガイド：RTX 3060、3080、4090購入ガイド',
         'description': 'ローカルLLM向け最高の中古GPU：RTX 3060、3080、3090、4090。購入方法、リスク評価、ベンチマークテスト。',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/used-gpus-for-local-llms',
         'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -837,7 +837,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'ja',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/used-gpus-for-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -879,7 +879,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/used-gpus-for-local-llms',
         'inLanguage': 'ja',
         'name': 'ローカルLLM向け中古GPU：コスト比較＆信頼性',
         'itemListElement': [
@@ -1006,10 +1006,10 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[本地LLM最佳预算GPU](/local-llms/best-budget-gpus-local-llm?lang=zh)',
-            '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=zh)',
-            '[本地LLM最佳GPU](/local-llms/best-gpus-for-local-llms?lang=zh)',
-            '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh)',
+            '[本地LLM最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm)',
+            '[RTX 5090 vs RTX 4090](/zh/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[本地LLM最佳GPU](/zh/local-llms/best-gpus-for-local-llms)',
+            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026)',
           ],
         },
         'sources': {
@@ -1027,7 +1027,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '本地LLM最佳二手GPU：RTX 3060、3080、4090购买指南',
         'description': '本地LLM最佳二手GPU：RTX 3060、3080、3090、4090。购买位置、风险评估、基准测试。',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/used-gpus-for-local-llms',
         'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -1049,7 +1049,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'zh',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/used-gpus-for-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1091,7 +1091,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/used-gpus-for-local-llms',
         'inLanguage': 'zh',
         'name': '本地LLM二手GPU：成本比较和可靠性',
         'itemListElement': [

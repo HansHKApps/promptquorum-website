@@ -844,9 +844,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lecturas relacionadas',
         items: [
-          '[¿Cuánto cuesta un GPU en la nube por hora?](/prompt-bites/cloud-gpu-cost-per-hour?lang=es) — panorama más amplio del mercado entre proveedores',
-          '[Mejor GPU por menos de $600 para LLMs locales](/prompt-bites/best-gpu-under-600-local-llm?lang=es) — cuándo comprar una tarjeta es mejor que alquilar',
-          '[Guía de compra de GPU para LLMs locales 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026?lang=es) — contexto de la decisión comprar vs. alquilar',
+          '[¿Cuánto cuesta un GPU en la nube por hora?](/es/prompt-bites/cloud-gpu-cost-per-hour) — panorama más amplio del mercado entre proveedores',
+          '[Mejor GPU por menos de $600 para LLMs locales](/es/prompt-bites/best-gpu-under-600-local-llm) — cuándo comprar una tarjeta es mejor que alquilar',
+          '[Guía de compra de GPU para LLMs locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — contexto de la decisión comprar vs. alquilar',
         ],
       },
     },

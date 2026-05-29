@@ -48,7 +48,7 @@ export const imagesWithTextDe: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Wie Vision-Language-Modelle Bilder sehen',
     content: [
-      '**Vision-Language-Modelle wie GPT-4o, Claude 3.5 Sonnet (2024) und Gemini 1.5 Pro wandeln Bilder in hochdimensionale Vektoren (Embeddings) mit einem visuellen Encoder um und verarbeiten diese Embeddings dann neben Text-Token in einem gemeinsamen semantischen Raum.** Dieser Ansatz gibt VLMs klare Stärken über mehrere Aufgaben hinweg: Sie identifizieren Objekte, lesen Text, verstehen räumliche Beziehungen und schlussfolgern über Inhalte über mehrere Bilder hinweg. Gemini 1.5 Pro unterstützt bis zu 1 Million Token, was die Analyse längerer Multimodal-Sequenzen ermöglicht als das 128k-Kontextfenster von GPT-4o. Das Verstehen von [Kontextfenster-Limits](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de) hilft dir, Prompts zu strukturieren, die Kürzungen vermeiden, wenn du mit langen Bildbeschreibungen oder Multi-Bild-Sequenzen arbeitest.',
+      '**Vision-Language-Modelle wie GPT-4o, Claude 3.5 Sonnet (2024) und Gemini 1.5 Pro wandeln Bilder in hochdimensionale Vektoren (Embeddings) mit einem visuellen Encoder um und verarbeiten diese Embeddings dann neben Text-Token in einem gemeinsamen semantischen Raum.** Dieser Ansatz gibt VLMs klare Stärken über mehrere Aufgaben hinweg: Sie identifizieren Objekte, lesen Text, verstehen räumliche Beziehungen und schlussfolgern über Inhalte über mehrere Bilder hinweg. Gemini 1.5 Pro unterstützt bis zu 1 Million Token, was die Analyse längerer Multimodal-Sequenzen ermöglicht als das 128k-Kontextfenster von GPT-4o. Das Verstehen von [Kontextfenster-Limits](/de/prompt-engineering/context-windows-explained-why-ai-forgets) hilft dir, Prompts zu strukturieren, die Kürzungen vermeiden, wenn du mit langen Bildbeschreibungen oder Multi-Bild-Sequenzen arbeitest.',
       'VLMs zeichnen sich durch Szenenverständnis, Dokumentenanalyse und den Vergleich visueller Elemente aus. Sie haben jedoch vorhersehbare Schwächen:',
     ],
     items: [
@@ -100,7 +100,7 @@ export const imagesWithTextDe: Record<string, PESection> = {
       '**Detailniveau angeben:** Vage Anfragen erzeugen vage Ergebnisse. „Analysiere dieses Bild in extremem Detail" funktioniert besser als „analysiere dieses Bild." Für Generierung: „photorealistisch, 4K-Qualität, jedes Detail scharf" schlägt „ein schönes Bild."',
       '**Positive Formulierung nutzen:** Sag dem Modell, was einzubeziehen ist, nicht was auszuschließen ist. Statt „Mache die Farben nicht zu hell," sag „Nutze gedämpfte, kühle Farbtöne mit niedriger Sättigung." Statt „Füge keinen Text hinzu," sag „Stelle sicher, dass kein sichtbarer Text erscheint."',
       '**Einschränkungen explizit setzen:** Einschränkungen verankern Ausgaben. „Extrahiere genau 10 Farben aus diesem Bild, geordnet nach Häufigkeit" ist besser als „welche Farben sind in diesem Bild?" Für Generierung: „1:1 Quadrat, genau zwei Personen, einzelner Innenraum."',
-      '**Vor- und Nachher-Beispiele bereitstellen:** Zeige dem Modell, wie Gutes aussieht. Füge Beispielbilder zusammen mit deiner Anfrage ein. [Few-Shot-Beispiele](/prompt-engineering/zero-shot-vs-few-shot?lang=de) verbessern die Konsistenz bei Bearbeitung und Stilübertragung dramatisch.',
+      '**Vor- und Nachher-Beispiele bereitstellen:** Zeige dem Modell, wie Gutes aussieht. Füge Beispielbilder zusammen mit deiner Anfrage ein. [Few-Shot-Beispiele](/de/prompt-engineering/zero-shot-vs-few-shot) verbessern die Konsistenz bei Bearbeitung und Stilübertragung dramatisch.',
     ],
   },
 
@@ -132,7 +132,7 @@ export const imagesWithTextDe: Record<string, PESection> = {
 
   recipes: {
     title: 'Mini-Rezepte: Copy-Paste Multimodale Prompts',
-    content: 'Nutze diese Vorlagen als Startpunkte für häufige Aufgaben. Jede folgt [strukturierten Prompt-Bausteinen](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de), um Konsistenz und Wiederholbarkeit zu sichern.',
+    content: 'Nutze diese Vorlagen als Startpunkte für häufige Aufgaben. Jede folgt [strukturierten Prompt-Bausteinen](/de/prompt-engineering/5-building-blocks-every-prompt-needs), um Konsistenz und Wiederholbarkeit zu sichern.',
     items: [
       '**Produktfotografie:** „Analysiere dieses Produktbild und extrahiere: (1) Hauptmaterialien, (2) Farbpalette, (3) Größe relativ zur Umgebung, (4) Beleuchtungsrichtung, (5) Mängel. Sei spezifisch; vermeide generische Adjektive."',
       '**Dokumentenextraktion:** „Extrahiere allen sichtbaren Text aus diesem Dokument. Behalte Formatierung, Zeilenumbrüche und Hervorhebung. Falls Text teilweise unleserlich ist, beachte [UNKLAR] und deine beste Vermutung. Formatiere als Markdown-Codeblock."',
@@ -180,9 +180,9 @@ export const imagesWithTextDe: Record<string, PESection> = {
   relatedReading: {
     title: 'Verwandte Lektüre',
     items: [
-      '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) – Grundkonzepte für alle Prompting',
-      '[Die 5 Bausteine jedes Prompts](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) – wie Struktur auf alle Prompts, einschließlich Multimodal, anwendbar ist',
-      '[Chain-of-Thought-Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) – Denkweisen, die sich mit Bild-Prompting für komplexe Aufgaben kombinieren',
+      '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) – Grundkonzepte für alle Prompting',
+      '[Die 5 Bausteine jedes Prompts](/de/prompt-engineering/5-building-blocks-every-prompt-needs) – wie Struktur auf alle Prompts, einschließlich Multimodal, anwendbar ist',
+      '[Chain-of-Thought-Prompting](/de/prompt-engineering/chain-of-thought-prompting) – Denkweisen, die sich mit Bild-Prompting für komplexe Aufgaben kombinieren',
     ],
   },
 
@@ -244,7 +244,7 @@ export const imagesWithTextFr: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Comment les Modèles Vision-Langage Voient les Images',
     content: [
-      '**Les modèles vision-langage comme GPT-4o, Claude 3.5 Sonnet (2024) et Gemini 1.5 Pro convertissent les images en vecteurs de haute dimension (embeddings) en utilisant un encodeur visuel, puis traitent ces embeddings aux côtés des tokens de texte dans un espace sémantique partagé.** Cette approche donne aux VLM des forces claires sur plusieurs tâches : ils identifient les objets, lisent le texte, comprennent les relations spatiales et raisonnent sur le contenu dans plusieurs images. Gemini 1.5 Pro supporte jusqu\'à 1 million de tokens, permettant l\'analyse de séquences multimodales plus longues que la fenêtre de contexte 128k de GPT-4o. Comprendre [les limites des fenêtres de contexte](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) vous aide à structurer des prompts qui évitent la troncature lorsque vous travaillez avec de longues descriptions d\'images ou des séquences multi-images.',
+      '**Les modèles vision-langage comme GPT-4o, Claude 3.5 Sonnet (2024) et Gemini 1.5 Pro convertissent les images en vecteurs de haute dimension (embeddings) en utilisant un encodeur visuel, puis traitent ces embeddings aux côtés des tokens de texte dans un espace sémantique partagé.** Cette approche donne aux VLM des forces claires sur plusieurs tâches : ils identifient les objets, lisent le texte, comprennent les relations spatiales et raisonnent sur le contenu dans plusieurs images. Gemini 1.5 Pro supporte jusqu\'à 1 million de tokens, permettant l\'analyse de séquences multimodales plus longues que la fenêtre de contexte 128k de GPT-4o. Comprendre [les limites des fenêtres de contexte](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) vous aide à structurer des prompts qui évitent la troncature lorsque vous travaillez avec de longues descriptions d\'images ou des séquences multi-images.',
       'Les VLM excellent à la compréhension de scènes, l\'analyse de documents et la comparaison d\'éléments visuels. Cependant, ils ont des faiblesses prévisibles :',
     ],
     items: [
@@ -296,7 +296,7 @@ export const imagesWithTextFr: Record<string, PESection> = {
       '**Spécifiez le niveau de détail :** Les demandes vagues produisent des résultats vagues. « Analysez cette image en détail extrême » fonctionne mieux que « analysez cette image. » Pour la génération : « photorealisque, qualité 4K, chaque détail net » surpasse « une belle image. »',
       '**Utilisez un cadrage positif :** Dites au modèle ce à inclure, pas ce à exclure. Au lieu de « Ne rendez pas les couleurs trop brillantes, » dites « Utilisez des couleurs sourdes et froides avec une faible saturation. » Au lieu de « N\'ajoutez pas de texte, » dites « Assurez-vous qu\'aucun texte visible n\'apparaît. »',
       '**Définissez des contraintes explicitement :** Les contraintes ancrent les résultats. « Extrayez exactement 10 couleurs de cette image, classées par fréquence » est mieux que « quelles sont les couleurs dans cette image ? » Pour la génération : « carré 1:1, exactement deux personnes, pièce intérieure unique. »',
-      '**Fournir des exemples avant/après :** Montrez au modèle ce que le bien ressemble. Incluez des images d\'exemple aux côtés de votre demande. [Les exemples few-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) améliorent dramatiquement la cohérence pour l\'édition et le transfert de style.',
+      '**Fournir des exemples avant/après :** Montrez au modèle ce que le bien ressemble. Incluez des images d\'exemple aux côtés de votre demande. [Les exemples few-shot](/fr/prompt-engineering/zero-shot-vs-few-shot) améliorent dramatiquement la cohérence pour l\'édition et le transfert de style.',
     ],
   },
 
@@ -328,7 +328,7 @@ export const imagesWithTextFr: Record<string, PESection> = {
 
   recipes: {
     title: 'Mini Recettes : Prompts Multimodaux Copy-Paste',
-    content: 'Utilisez ces modèles comme points de départ pour les tâches courantes. Chacun suit [les éléments de construction de prompt structurés](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) pour assurer la cohérence et la répétabilité.',
+    content: 'Utilisez ces modèles comme points de départ pour les tâches courantes. Chacun suit [les éléments de construction de prompt structurés](/fr/prompt-engineering/5-building-blocks-every-prompt-needs) pour assurer la cohérence et la répétabilité.',
     items: [
       '**Photographie de produit :** « Analysez cette image de produit et extrayez : (1) matériaux principaux, (2) palette de couleurs, (3) taille relative aux environs, (4) direction d\'éclairage, (5) défauts. Soyez précis ; évitez les adjectifs génériques. »',
       '**Extraction de documents :** « Extrayez tout le texte visible de ce document. Préservez la mise en forme, les sauts de ligne et l\'emphase. Si le texte est partiellement illisible, notez [FLOU] et votre meilleure supposition. Formatez comme un bloc de code markdown. »',
@@ -376,9 +376,9 @@ export const imagesWithTextFr: Record<string, PESection> = {
   relatedReading: {
     title: 'Lectures Connexes',
     items: [
-      '[Qu\'est-ce que le Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=fr) – concepts fondamentaux pour tous les prompts',
-      '[Les 5 Éléments Fondamentaux de Chaque Prompt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) – comment la structure s\'applique à tous les prompts, y compris multimodal',
-      '[Prompting Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=fr) – modèles de raisonnement qui se combinent avec les prompts d\'image pour les tâches complexes',
+      '[Qu\'est-ce que le Prompt Engineering?](/fr/prompt-engineering/what-is-prompt-engineering) – concepts fondamentaux pour tous les prompts',
+      '[Les 5 Éléments Fondamentaux de Chaque Prompt](/fr/prompt-engineering/5-building-blocks-every-prompt-needs) – comment la structure s\'applique à tous les prompts, y compris multimodal',
+      '[Prompting Chain-of-Thought](/fr/prompt-engineering/chain-of-thought-prompting) – modèles de raisonnement qui se combinent avec les prompts d\'image pour les tâches complexes',
     ],
   },
 
@@ -440,7 +440,7 @@ export const imagesWithTextJa: Record<string, PESection> = {
   howVisionWorks: {
     title: 'ビジョン言語モデルが画像を見る方法',
     content: [
-      '**GPT-4o、Claude 3.5 Sonnet (2024)、Gemini 1.5 Proなどのビジョン言語モデルは、ビジュアルエンコーダーを使用して画像を高次元ベクトル(埋め込み)に変換し、その後、共有されたセマンティック空間のテキストトークンと並行してこれらの埋め込みを処理します。** このアプローチはVLMに複数のタスク全体にわたって明確な強みを与えます: オブジェクトを識別し、テキストを読み、空間的関係を理解し、複数の画像全体でコンテンツについて推論します。Gemini 1.5 Proは最大100万トークンをサポートしており、GPT-4oの128kコンテキストウィンドウよりも長いマルチモーダルシーケンスの分析を可能にします。[コンテキストウィンドウの制限](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja)を理解することは、長い画像説明またはマルチ画像シーケンスで作業する際にトリミングを回避するプロンプトを構造化するのに役立ちます。',
+      '**GPT-4o、Claude 3.5 Sonnet (2024)、Gemini 1.5 Proなどのビジョン言語モデルは、ビジュアルエンコーダーを使用して画像を高次元ベクトル(埋め込み)に変換し、その後、共有されたセマンティック空間のテキストトークンと並行してこれらの埋め込みを処理します。** このアプローチはVLMに複数のタスク全体にわたって明確な強みを与えます: オブジェクトを識別し、テキストを読み、空間的関係を理解し、複数の画像全体でコンテンツについて推論します。Gemini 1.5 Proは最大100万トークンをサポートしており、GPT-4oの128kコンテキストウィンドウよりも長いマルチモーダルシーケンスの分析を可能にします。[コンテキストウィンドウの制限](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を理解することは、長い画像説明またはマルチ画像シーケンスで作業する際にトリミングを回避するプロンプトを構造化するのに役立ちます。',
       'VLMはシーン理解、ドキュメント分析、および視覚的要素の比較に優れています。ただし、予測可能な弱点があります:',
     ],
     items: [
@@ -492,7 +492,7 @@ export const imagesWithTextJa: Record<string, PESection> = {
       '**詳細レベルを指定:** あいまいなリクエストはあいまいな結果を生み出します。「この画像を非常に詳細に分析する」は「この画像を分析する」よりも機能します。生成の場合: 「フォトリアリスティック、4K品質、すべての詳細がシャープ」は「良い画像」を打ちます。',
       '**前向きなフレーミングを使用:** 除外するのではなく、何を含めるかをモデルに伝えます。「色を明るくしないでください」の代わりに、「柔らかく、涼しい色で低彩度を使用してください」と言ってください。「テキストを追加しないでください」の代わりに、「目に見えるテキストが表示されないようにしてください」と言ってください。',
       '**制約を明示的に設定:** 制約は出力を固定します。「この画像から正確に10色を抽出し、頻度でランク付けしてください」は「この画像の色は何ですか?」よりも優れています。生成の場合: 「1:1正方形、正確に2人、単一の室内室」。',
-      '**前後の例を提供:** モデルに良いものの例を見せてください。リクエストと一緒にサンプル画像を含めてください。[フューショットの例](/prompt-engineering/zero-shot-vs-few-shot?lang=ja)は編集とスタイル転送の一貫性を劇的に改善します。',
+      '**前後の例を提供:** モデルに良いものの例を見せてください。リクエストと一緒にサンプル画像を含めてください。[フューショットの例](/ja/prompt-engineering/zero-shot-vs-few-shot)は編集とスタイル転送の一貫性を劇的に改善します。',
     ],
   },
 
@@ -524,7 +524,7 @@ export const imagesWithTextJa: Record<string, PESection> = {
 
   recipes: {
     title: 'ミニレシピ: コピー-ペーストマルチモーダルプロンプト',
-    content: '一般的なタスクのスターティングポイントとしてこれらのテンプレートを使用してください。それぞれは[構造化されたプロンプト構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja)に従って、一貫性と反復性を確保します。',
+    content: '一般的なタスクのスターティングポイントとしてこれらのテンプレートを使用してください。それぞれは[構造化されたプロンプト構成要素](/ja/prompt-engineering/5-building-blocks-every-prompt-needs)に従って、一貫性と反復性を確保します。',
     items: [
       '**製品写真:** 「この製品画像を分析して抽出します: (1)主な材料、(2)カラーパレット、(3)周辺への大きさ、(4)照明方向、(5)欠陥。具体的であること; 一般的な形容詞を避けてください。」',
       '**ドキュメント抽出:** 「このドキュメントからすべての目に見えるテキストを抽出します。フォーマット、改行、強調を保持します。テキストが部分的に読めない場合は、[不明]とあなたの最良の推測をメモしてください。マークダウンコードブロックとしてフォーマットします。」',
@@ -572,9 +572,9 @@ export const imagesWithTextJa: Record<string, PESection> = {
   relatedReading: {
     title: '関連する読書',
     items: [
-      '[プロンプトエンジニアリングとは何か?](/prompt-engineering/what-is-prompt-engineering?lang=ja) – すべてのプロンプティングの基本概念',
-      '[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja) – マルチモーダルを含む、すべてのプロンプトに構造がどのように適用されるか',
-      '[チェーン-オブ-ソートプロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) – 複雑なタスクのための画像プロンプティングと組み合わせる推論パターン',
+      '[プロンプトエンジニアリングとは何か?](/ja/prompt-engineering/what-is-prompt-engineering) – すべてのプロンプティングの基本概念',
+      '[すべてのプロンプトが必要とする5つの構成要素](/ja/prompt-engineering/5-building-blocks-every-prompt-needs) – マルチモーダルを含む、すべてのプロンプトに構造がどのように適用されるか',
+      '[チェーン-オブ-ソートプロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) – 複雑なタスクのための画像プロンプティングと組み合わせる推論パターン',
     ],
   },
 
@@ -636,7 +636,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Cómo los modelos de visión-lenguaje ven las imágenes',
     content: [
-      '**Los modelos de visión-lenguaje como GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro convierten imágenes en vectores de alta dimensión (embeddings) utilizando un codificador visual y luego procesan esos embeddings junto con los tokens de texto en un espacio semántico compartido.** Este enfoque otorga a los VLM fortalezas claras en múltiples tareas: identifican objetos, leen texto, comprenden relaciones espaciales y razonan sobre el contenido en múltiples imágenes. Gemini 1.5 Pro admite hasta 1 millón de tokens, lo que permite el análisis de secuencias multimodales más largas que la context window de 128k de GPT-4o. Entender los [límites de la context window](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=es) te ayuda a estructurar prompts que eviten la truncación cuando trabajas con descripciones de imágenes largas o secuencias de múltiples imágenes.',
+      '**Los modelos de visión-lenguaje como GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro convierten imágenes en vectores de alta dimensión (embeddings) utilizando un codificador visual y luego procesan esos embeddings junto con los tokens de texto en un espacio semántico compartido.** Este enfoque otorga a los VLM fortalezas claras en múltiples tareas: identifican objetos, leen texto, comprenden relaciones espaciales y razonan sobre el contenido en múltiples imágenes. Gemini 1.5 Pro admite hasta 1 millón de tokens, lo que permite el análisis de secuencias multimodales más largas que la context window de 128k de GPT-4o. Entender los [límites de la context window](/es/prompt-engineering/context-windows-explained-why-ai-forgets) te ayuda a estructurar prompts que eviten la truncación cuando trabajas con descripciones de imágenes largas o secuencias de múltiples imágenes.',
       'Los VLM se destacan en la comprensión de escenas, el análisis de documentos y la comparación de elementos visuales. Sin embargo, tienen debilidades predecibles:',
     ],
     items: [
@@ -688,7 +688,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
       '**Especifica el nivel de detalle:** Las solicitudes vagas producen resultados vagos. "Analiza esta imagen con detalle extremo" funciona mejor que "analiza esta imagen." Para generación: "fotorrealista, calidad 4K, cada detalle nítido" supera a "una imagen bonita."',
       '**Usa un enfoque positivo:** Dile al modelo qué incluir, no qué excluir. En lugar de "No hagas los colores demasiado brillantes," di "Usa colores apagados y fríos con baja saturación." En lugar de "No agregues texto," di "Asegúrate de que no aparezca texto visible."',
       '**Establece restricciones de forma explícita:** Las restricciones anclan los resultados. "Extrae exactamente 10 colores de esta imagen, clasificados por frecuencia" es mejor que "¿qué colores hay en esta imagen?" Para generación: "cuadrado 1:1, exactamente dos personas, habitación interior única."',
-      '**Proporciona ejemplos de antes/después:** Muéstrale al modelo cómo es un buen resultado. Incluye imágenes de ejemplo junto a tu solicitud. Los [ejemplos few-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=es) mejoran drásticamente la consistencia en edición y transferencia de estilo.',
+      '**Proporciona ejemplos de antes/después:** Muéstrale al modelo cómo es un buen resultado. Incluye imágenes de ejemplo junto a tu solicitud. Los [ejemplos few-shot](/es/prompt-engineering/zero-shot-vs-few-shot) mejoran drásticamente la consistencia en edición y transferencia de estilo.',
     ],
   },
 
@@ -720,7 +720,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
 
   recipes: {
     title: 'Mini recetas: prompts multimodales para copiar y pegar',
-    content: 'Usa estas plantillas como punto de partida para tareas comunes. Cada una sigue los [bloques de construcción de prompts estructurados](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) para garantizar consistencia y repetibilidad.',
+    content: 'Usa estas plantillas como punto de partida para tareas comunes. Cada una sigue los [bloques de construcción de prompts estructurados](/es/prompt-engineering/5-building-blocks-every-prompt-needs) para garantizar consistencia y repetibilidad.',
     items: [
       '**Fotografía de productos:** "Analiza esta imagen de producto y extrae: (1) materiales principales, (2) paleta de colores, (3) tamaño en relación con el entorno, (4) dirección de la iluminación, (5) defectos. Sé específico; evita adjetivos genéricos."',
       '**Extracción de documentos:** "Extrae todo el texto visible de este documento. Preserva el formato, los saltos de línea y el énfasis. Si el texto es parcialmente ilegible, anota [NO CLARO] y tu mejor estimación. Formatea como un bloque de código markdown."',
@@ -768,9 +768,9 @@ export const imagesWithTextEs: Record<string, PESection> = {
   relatedReading: {
     title: 'Lecturas relacionadas',
     items: [
-      '[¿Qué es la ingeniería de prompts?](/prompt-engineering/what-is-prompt-engineering?lang=es) — conceptos fundamentales para todo tipo de prompting',
-      '[Los 5 bloques de construcción que todo prompt necesita](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — cómo la estructura se aplica a todos los prompts, incluidos los multimodales',
-      '[Prompting de cadena de pensamiento](/prompt-engineering/chain-of-thought-prompting?lang=es) — patrones de razonamiento que se combinan con el prompting de imágenes para tareas complejas',
+      '[¿Qué es la ingeniería de prompts?](/es/prompt-engineering/what-is-prompt-engineering) — conceptos fundamentales para todo tipo de prompting',
+      '[Los 5 bloques de construcción que todo prompt necesita](/es/prompt-engineering/5-building-blocks-every-prompt-needs) — cómo la estructura se aplica a todos los prompts, incluidos los multimodales',
+      '[Prompting de cadena de pensamiento](/es/prompt-engineering/chain-of-thought-prompting) — patrones de razonamiento que se combinan con el prompting de imágenes para tareas complejas',
     ],
   },
 
@@ -832,7 +832,7 @@ export const imagesWithTextZh: Record<string, PESection> = {
   howVisionWorks: {
     title: '视觉语言模型如何看到图像',
     content: [
-      '**GPT-4o、Claude 3.5 Sonnet (2024)和Gemini 1.5 Pro等视觉语言模型使用视觉编码器将图像转换为高维向量(嵌入)，然后在共享的语义空间中处理这些嵌入以及文本令牌。** 这种方法给VLM在多项任务中提供了明确的优势：它们识别对象、读取文本、理解空间关系，并推理多个图像中的内容。Gemini 1.5 Pro支持最多100万个令牌，允许比GPT-4o的128k上下文窗口更长的多模态序列分析。理解[上下文窗口限制](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh)有助于您在处理长图像描述或多图像序列时构建避免截断的提示。',
+      '**GPT-4o、Claude 3.5 Sonnet (2024)和Gemini 1.5 Pro等视觉语言模型使用视觉编码器将图像转换为高维向量(嵌入)，然后在共享的语义空间中处理这些嵌入以及文本令牌。** 这种方法给VLM在多项任务中提供了明确的优势：它们识别对象、读取文本、理解空间关系，并推理多个图像中的内容。Gemini 1.5 Pro支持最多100万个令牌，允许比GPT-4o的128k上下文窗口更长的多模态序列分析。理解[上下文窗口限制](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)有助于您在处理长图像描述或多图像序列时构建避免截断的提示。',
       'VLM在场景理解、文档分析和比较视觉元素方面表现出色。但是，它们有可预测的弱点：',
     ],
     items: [
@@ -884,7 +884,7 @@ export const imagesWithTextZh: Record<string, PESection> = {
       '**指定细节水平：** 模糊的请求产生模糊的结果。「非常详细地分析这个图像」比「分析这个图像」更有效。对于生成：「照片级逼真、4K质量、每个细节清晰」比「一个好的图像」更好。',
       '**使用积极框架：** 告诉模型包含什么，而不是排除什么。与其「不要使颜色太亮」不如说「使用柔和、冷色调，饱和度低」。与其「不要添加文本」不如说「确保没有可见的文本出现」。',
       '**明确设置约束：** 约束锚定输出。「从这个图像中提取正好10种颜色，按频率排列」比「这个图像中有什么颜色？」更好。对于生成：「1:1正方形、恰好两个人、单个室内房间」。',
-      '**提供前后示例：** 向模型展示好的样子。在您的请求旁包含示例图像。[少样本示例](/prompt-engineering/zero-shot-vs-few-shot?lang=zh)显著改善编辑和风格转移的一致性。',
+      '**提供前后示例：** 向模型展示好的样子。在您的请求旁包含示例图像。[少样本示例](/zh/prompt-engineering/zero-shot-vs-few-shot)显著改善编辑和风格转移的一致性。',
     ],
   },
 
@@ -916,7 +916,7 @@ export const imagesWithTextZh: Record<string, PESection> = {
 
   recipes: {
     title: '迷你食谱：复制粘贴多模态提示',
-    content: '使用这些模板作为常见任务的起点。每个都遵循[结构化提示构建块](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh)以确保一致性和可重复性。',
+    content: '使用这些模板作为常见任务的起点。每个都遵循[结构化提示构建块](/zh/prompt-engineering/5-building-blocks-every-prompt-needs)以确保一致性和可重复性。',
     items: [
       '**产品摄影：** 「分析这张产品图像并提取：(1)主要材料、(2)色调、(3)相对于周围的大小、(4)光线方向、(5)任何缺陷。具体；避免通用形容词。」',
       '**文档提取：** 「从这个文档提取所有可见文本。保留格式、换行符和强调。如果文本部分不清楚，请注明[不清楚]和您的最佳猜测。格式为Markdown代码块。」',
@@ -964,9 +964,9 @@ export const imagesWithTextZh: Record<string, PESection> = {
   relatedReading: {
     title: '相关阅读',
     items: [
-      '[什么是提示工程?](/prompt-engineering/what-is-prompt-engineering?lang=zh) – 所有提示的基础概念',
-      '[每个提示需要的5个构建块](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh) – 结构如何应用于所有提示，包括多模态',
-      '[链式思考提示](/prompt-engineering/chain-of-thought-prompting?lang=zh) – 与图像提示结合进行复杂任务的推理模式',
+      '[什么是提示工程?](/zh/prompt-engineering/what-is-prompt-engineering) – 所有提示的基础概念',
+      '[每个提示需要的5个构建块](/zh/prompt-engineering/5-building-blocks-every-prompt-needs) – 结构如何应用于所有提示，包括多模态',
+      '[链式思考提示](/zh/prompt-engineering/chain-of-thought-prompting) – 与图像提示结合进行复杂任务的推理模式',
     ],
   },
 

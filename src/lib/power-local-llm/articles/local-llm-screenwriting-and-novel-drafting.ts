@@ -524,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Phase 1 — Outline:** Kapitelweises Outline generieren (10–30 Kapitel, ein Satz pro Kapitel: was passiert, was sich ändert). Prompt: „Genre: [Genre]. Protagonist: [Name + Kernwunde]. Zentraler Konflikt: [in einem Satz]. Schreibe ein 20-Kapitel-Outline — ein Satz pro Kapitel, jeder Satz benennt die Szene und die Änderung." Outline vor dem Fortfahren überprüfen und bearbeiten.',
           '**Phase 2 — Beat Sheets:** Jeden Kapiteleintrag in ein szenenweises Beat Sheet erweitern (3–8 Szenen pro Kapitel). Prompt: „Kapitel-[N]-Zusammenfassung: [Einzeiler einfügen]. Erweitern zu einem szenenweisen Beat Sheet: 4–6 Szenen, jede in einem Satz mit Ort, Beteiligten und der einzigen Änderung beschrieben. Noch keine Prosa."',
           '**Phase 3 — Szenengenerierung:** Session-Dokument + aktuellen Szenen-Beat verwenden, um eine Szene nach der anderen zu generieren. Generieren, überprüfen, in das Manuskript einfügen, Session-Dokument aktualisieren. Wiederholen.',
-          '**Phase 4 — Überarbeitungsdurchläufe:** Nach Abschluss eines Kapitels gezielte Überarbeitungs-Prompts auf bestimmte Szenen anwenden. Siehe [Lokale LLM-Prompts für Romanautoren](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=de) für Überarbeitungs-Prompt-Strukturen. Nie mehr als eine Szene pro Generierungsaufruf überarbeiten.',
+          '**Phase 4 — Überarbeitungsdurchläufe:** Nach Abschluss eines Kapitels gezielte Überarbeitungs-Prompts auf bestimmte Szenen anwenden. Siehe [Lokale LLM-Prompts für Romanautoren](/de/power-local-llm/local-llm-prompts-for-fiction-writers) für Überarbeitungs-Prompt-Strukturen. Nie mehr als eine Szene pro Generierungsaufruf überarbeiten.',
         ],
         callouts: [
           {
@@ -601,7 +601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama stellt eine OpenAI-kompatible API auf localhost bereit, mit der eine wachsende Zahl von autorenseitigen Tools verbindet.** Die folgenden Integrationen stellen die etabliertesten Optionen dar.',
         columns: ['Tool', 'Integration', 'Ideal für'],
         rows: [
-          { 'Tool': 'Obsidian', 'Integration': 'Copilot-Plugin oder Smart Connections-Plugin → Ollama API. Siehe [Obsidian + Lokale LLM-Plugins](/power-local-llm/local-llm-with-obsidian-2026?lang=de) für den ausführlichen Leitfaden.', 'Ideal für': 'Autoren, die Obsidian bereits für Notizen + Manuskript verwenden; nahtlose Generierung in derselben App' },
+          { 'Tool': 'Obsidian', 'Integration': 'Copilot-Plugin oder Smart Connections-Plugin → Ollama API. Siehe [Obsidian + Lokale LLM-Plugins](/de/power-local-llm/local-llm-with-obsidian-2026) für den ausführlichen Leitfaden.', 'Ideal für': 'Autoren, die Obsidian bereits für Notizen + Manuskript verwenden; nahtlose Generierung in derselben App' },
           { 'Tool': 'Scrivener', 'Integration': 'Externes Skript über Ollama API → in Dokument einfügen', 'Ideal für': 'Autoren, die Romane in Scrivener strukturieren; KI-Entwürfe in bestehende Projektstruktur einfügen' },
           { 'Tool': 'VS Code', 'Integration': 'Continue.dev-Erweiterung → Ollama-Backend', 'Ideal für': 'Technische Autoren und Game-Narrative-Designer im Code-Editor' },
           { 'Tool': 'SillyTavern', 'Integration': 'OpenAI-kompatible API → Ollama', 'Ideal für': 'Roleplay-Fiktion und charakterkarten-gesteuertes Drafting; persistentes Charaktergedächtnis' },
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Die einfachste Integration für die meisten Autoren: Obsidian + das Copilot-Plugin, das auf Ollama zeigt. Session-Dokument und Manuskriptkapitel im selben Vault, Generierung direkt in derselben App ohne Kontextwechsel. Siehe [Obsidian + Lokale LLM-Plugins](/power-local-llm/local-llm-with-obsidian-2026?lang=de) für den ausführlichen Leitfaden.',
+            text: 'Die einfachste Integration für die meisten Autoren: Obsidian + das Copilot-Plugin, das auf Ollama zeigt. Session-Dokument und Manuskriptkapitel im selben Vault, Generierung direkt in derselben App ohne Kontextwechsel. Siehe [Obsidian + Lokale LLM-Plugins](/de/power-local-llm/local-llm-with-obsidian-2026) für den ausführlichen Leitfaden.',
           },
         ],
       },
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models',
         title: 'Modellempfehlungen für Langformarbeiten',
         content:
-          '**Langform-Drafting hat andere Modellanforderungen als Kurzformfiktion.** Kontextadhärenz, konsistente Instruktionsbefolgung und die Fähigkeit, die Stimme über mehrere Generierungsaufrufe beizubehalten, sind die entscheidenden Faktoren. Für das breitere Modellspektrum über alle Anwendungsfälle, siehe [Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de).',
+          '**Langform-Drafting hat andere Modellanforderungen als Kurzformfiktion.** Kontextadhärenz, konsistente Instruktionsbefolgung und die Fähigkeit, die Stimme über mehrere Generierungsaufrufe beizubehalten, sind die entscheidenden Faktoren. Für das breitere Modellspektrum über alle Anwendungsfälle, siehe [Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026).',
         columns: ['Aufgabe', 'Empfohlenes Modell', 'Warum'],
         rows: [
           { 'Aufgabe': 'Roman-Drafting (primär)', 'Empfohlenes Modell': 'Llama 3.3 70B', 'Warum': 'Beste Kontextadhärenz und Instruktionsbefolgung für sitzungsübergreifende Langformarbeiten; konsistenteste Stimme' },
@@ -712,14 +712,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokale LLM-Prompts für Romanautoren: Vorlagen & Techniken](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=de) — Szenenwriting-, Dialog-, Charakter-, Weltenbau- und Stil-Transfer-Templates für den Session-Dokument-Workflow.',
-          '[Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) — umfassender Modellvergleich über alle Anwendungsfälle.',
-          '[Obsidian + Lokale LLM-Plugins](/power-local-llm/local-llm-with-obsidian-2026?lang=de) — ausführlicher Leitfaden zu den besten Obsidian-Plugins für Ollama in Schreib-Workflows.',
-          '[Beste lokale LLMs für kreatives Schreiben 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=de) — Modellvergleich für narrative Generierung einschließlich Sampling-Einstellungen.',
-          '[Uncensored Local LLMs für kreatives Schreiben: Ethik und Setup](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=de) — wann uncensored Modelle für reife Fiktion verwendet werden.',
-          '[SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=de) — Frontend-Optionen für charakterkarten-gesteuertes Drafting.',
-          '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Assistent](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=de) — Continue.dev kann für Inline-Schreibassistenz in VS Code auf Ollama gezeigt werden.',
-          '[Chain-of-Thought Prompting erklärt](/prompt-engineering/chain-of-thought-prompting?lang=de) — strukturierte Reasoning-Prompts für Plotplanung, Story-Beat-Analyse und narratives Problemlösen.',
+          '[Lokale LLM-Prompts für Romanautoren: Vorlagen & Techniken](/de/power-local-llm/local-llm-prompts-for-fiction-writers) — Szenenwriting-, Dialog-, Charakter-, Weltenbau- und Stil-Transfer-Templates für den Session-Dokument-Workflow.',
+          '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) — umfassender Modellvergleich über alle Anwendungsfälle.',
+          '[Obsidian + Lokale LLM-Plugins](/de/power-local-llm/local-llm-with-obsidian-2026) — ausführlicher Leitfaden zu den besten Obsidian-Plugins für Ollama in Schreib-Workflows.',
+          '[Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) — Modellvergleich für narrative Generierung einschließlich Sampling-Einstellungen.',
+          '[Uncensored Local LLMs für kreatives Schreiben: Ethik und Setup](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — wann uncensored Modelle für reife Fiktion verwendet werden.',
+          '[SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — Frontend-Optionen für charakterkarten-gesteuertes Drafting.',
+          '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Assistent](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — Continue.dev kann für Inline-Schreibassistenz in VS Code auf Ollama gezeigt werden.',
+          '[Chain-of-Thought Prompting erklärt](/de/prompt-engineering/chain-of-thought-prompting) — strukturierte Reasoning-Prompts für Plotplanung, Story-Beat-Analyse und narratives Problemlösen.',
         ],
       },
     },
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Phase 1 — Outline :** générer un outline au niveau des chapitres (10–30 chapitres, une phrase par chapitre). Prompt : « Genre : [genre]. Protagoniste : [Nom + blessure fondamentale]. Conflit central : [en une phrase]. Écrire un outline de 20 chapitres — une phrase par chapitre, chaque phrase nommant la scène et le changement. » Réviser l\'outline avant de continuer.',
           '**Phase 2 — Beat sheets :** développer chaque entrée de chapitre en beat sheet de niveau scène (3–8 scènes par chapitre). Prompt par chapitre : « Résumé chapitre [N] : [coller l\'entrée]. Développer en beat sheet : 4–6 scènes, chacune décrite en une phrase nommant lieu, participants et le seul changement de la scène. Pas de prose encore. »',
           '**Phase 3 — Génération de scènes :** utiliser le document de session + le beat de la scène actuelle pour générer une scène à la fois. Générer, réviser, coller dans le manuscrit, mettre à jour le document de session. Répéter.',
-          '**Phase 4 — Passes de révision :** après avoir terminé un chapitre, appliquer des prompts de révision ciblés sur des scènes spécifiques. Voir [Prompts LLM locaux pour les auteurs de fiction](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=fr). Ne jamais demander au modèle de réviser plus d\'une scène par appel.',
+          '**Phase 4 — Passes de révision :** après avoir terminé un chapitre, appliquer des prompts de révision ciblés sur des scènes spécifiques. Voir [Prompts LLM locaux pour les auteurs de fiction](/fr/power-local-llm/local-llm-prompts-for-fiction-writers). Ne jamais demander au modèle de réviser plus d\'une scène par appel.',
         ],
         callouts: [
           {
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama expose une API compatible OpenAI sur localhost qu\'un écosystème croissant d\'outils orientés auteurs connecte.** Les intégrations ci-dessous représentent les options les plus établies.',
         columns: ['Outil', 'Intégration', 'Idéal pour'],
         rows: [
-          { 'Outil': 'Obsidian', 'Intégration': 'Plugin Copilot ou Smart Connections → API Ollama. Voir [Obsidian + Plugins LLM locaux](/power-local-llm/local-llm-with-obsidian-2026?lang=fr) pour le guide approfondi.', 'Idéal pour': 'Auteurs utilisant déjà Obsidian pour les notes + manuscrit ; génération dans la même appli sans changer de contexte' },
+          { 'Outil': 'Obsidian', 'Intégration': 'Plugin Copilot ou Smart Connections → API Ollama. Voir [Obsidian + Plugins LLM locaux](/fr/power-local-llm/local-llm-with-obsidian-2026) pour le guide approfondi.', 'Idéal pour': 'Auteurs utilisant déjà Obsidian pour les notes + manuscrit ; génération dans la même appli sans changer de contexte' },
           { 'Outil': 'Scrivener', 'Intégration': 'Script externe via API Ollama → coller dans le document', 'Idéal pour': 'Auteurs structurant leurs romans dans Scrivener ; brouillons IA collés dans la structure de projet existante' },
           { 'Outil': 'VS Code', 'Intégration': 'Extension Continue.dev → backend Ollama', 'Idéal pour': 'Auteurs techniques et concepteurs de narration de jeux à l\'aise dans un éditeur de code' },
           { 'Outil': 'SillyTavern', 'Intégration': 'API compatible OpenAI → Ollama', 'Idéal pour': 'Fiction roleplay et rédaction guidée par fiches personnages ; mémoire de personnage persistante' },
@@ -974,7 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'L\'intégration la plus simple pour la plupart des auteurs : Obsidian + le plugin Copilot pointant vers Ollama. Le document de session, les chapitres du manuscrit et la génération dans la même appli sans changement de contexte. Voir [Obsidian + Plugins LLM locaux](/power-local-llm/local-llm-with-obsidian-2026?lang=fr) pour le guide approfondi.',
+            text: 'L\'intégration la plus simple pour la plupart des auteurs : Obsidian + le plugin Copilot pointant vers Ollama. Le document de session, les chapitres du manuscrit et la génération dans la même appli sans changement de contexte. Voir [Obsidian + Plugins LLM locaux](/fr/power-local-llm/local-llm-with-obsidian-2026) pour le guide approfondi.',
           },
         ],
       },
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models',
         title: 'Recommandations de modèles pour le long format',
         content:
-          '**Le long format a des exigences différentes de la fiction courte.** L\'adhérence au contexte, la cohérence du suivi des instructions sur des sessions longues et la capacité à maintenir la voix sur plusieurs appels de génération sont les facteurs décisifs. Pour le panorama complet des modèles, voir [Meilleurs LLM locaux en 2026](/local-llms/best-local-llms-2026?lang=fr).',
+          '**Le long format a des exigences différentes de la fiction courte.** L\'adhérence au contexte, la cohérence du suivi des instructions sur des sessions longues et la capacité à maintenir la voix sur plusieurs appels de génération sont les facteurs décisifs. Pour le panorama complet des modèles, voir [Meilleurs LLM locaux en 2026](/fr/local-llms/best-local-llms-2026).',
         columns: ['Tâche', 'Modèle recommandé', 'Pourquoi'],
         rows: [
           { 'Tâche': 'Rédaction de roman (principal)', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Meilleure adhérence au contexte et suivi des instructions pour le long format multi-sessions ; voix la plus cohérente' },
@@ -1073,14 +1073,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Prompts LLM locaux pour les auteurs de fiction : templates et techniques](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=fr) — templates d\'écriture de scènes, dialogue, personnages, worldbuilding et transfert de style.',
-          '[Meilleurs LLM locaux en 2026](/local-llms/best-local-llms-2026?lang=fr) — comparaison complète des modèles pour tous les cas d\'usage.',
-          '[Obsidian + Plugins LLM locaux](/power-local-llm/local-llm-with-obsidian-2026?lang=fr) — guide approfondi sur les meilleurs plugins Obsidian pour Ollama dans les workflows d\'écriture.',
-          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=fr) — comparaison de modèles pour la génération narrative.',
-          '[LLM locaux non censurés pour l\'écriture créative : éthique et configuration](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=fr) — quand utiliser des modèles non censurés pour la fiction adulte.',
-          '[SillyTavern vs Agnai vs RisuAI : meilleur frontend roleplay local](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=fr) — options de frontend pour la rédaction guidée par fiches personnages.',
-          '[Continue.dev vs Cline vs Aider : meilleur assistant de code local](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=fr) — Continue.dev peut être pointé vers Ollama pour l\'assistance à l\'écriture dans VS Code.',
-          '[Chain-of-Thought Prompting expliqué](/prompt-engineering/chain-of-thought-prompting?lang=fr) — prompts de raisonnement structuré pour la planification de plot, l\'analyse de beats narratifs et la résolution de problèmes.',
+          '[Prompts LLM locaux pour les auteurs de fiction : templates et techniques](/fr/power-local-llm/local-llm-prompts-for-fiction-writers) — templates d\'écriture de scènes, dialogue, personnages, worldbuilding et transfert de style.',
+          '[Meilleurs LLM locaux en 2026](/fr/local-llms/best-local-llms-2026) — comparaison complète des modèles pour tous les cas d\'usage.',
+          '[Obsidian + Plugins LLM locaux](/fr/power-local-llm/local-llm-with-obsidian-2026) — guide approfondi sur les meilleurs plugins Obsidian pour Ollama dans les workflows d\'écriture.',
+          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) — comparaison de modèles pour la génération narrative.',
+          '[LLM locaux non censurés pour l\'écriture créative : éthique et configuration](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics) — quand utiliser des modèles non censurés pour la fiction adulte.',
+          '[SillyTavern vs Agnai vs RisuAI : meilleur frontend roleplay local](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — options de frontend pour la rédaction guidée par fiches personnages.',
+          '[Continue.dev vs Cline vs Aider : meilleur assistant de code local](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — Continue.dev peut être pointé vers Ollama pour l\'assistance à l\'écriture dans VS Code.',
+          '[Chain-of-Thought Prompting expliqué](/fr/prompt-engineering/chain-of-thought-prompting) — prompts de raisonnement structuré pour la planification de plot, l\'analyse de beats narratifs et la résolution de problèmes.',
         ],
       },
     },
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**フェーズ1——アウトライン：** 章レベルのアウトラインを生成します（10〜30章、1章1文：何が起きるか、何が変わるか）。プロンプト例：「ジャンル：[ジャンル]。主人公：[名前＋核心的な傷]。中心的な葛藤：[1文で]。20章のアウトラインを書く——1章1文、各文はシーンと変化を名指しする。」進む前にアウトラインを確認・編集します。',
           '**フェーズ2——ビートシート：** 各章エントリをシーンレベルのビートシートに展開します（1章あたり3〜8シーン）。',
           '**フェーズ3——シーン生成：** セッションドキュメント＋現在のシーンのビートを使って、1シーンずつ生成します。生成し、確認し、原稿に貼り付け、セッションドキュメントを更新。繰り返します。',
-          '**フェーズ4——リビジョンパス：** 章を完成させた後、特定のシーンにターゲットを絞ったリビジョンプロンプトを実行します。[フィクションライター向けローカルLLMプロンプト](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=ja)を参照。1生成呼び出しで1シーン以上のリビジョンを求めないこと。',
+          '**フェーズ4——リビジョンパス：** 章を完成させた後、特定のシーンにターゲットを絞ったリビジョンプロンプトを実行します。[フィクションライター向けローカルLLMプロンプト](/ja/power-local-llm/local-llm-prompts-for-fiction-writers)を参照。1生成呼び出しで1シーン以上のリビジョンを求めないこと。',
         ],
         callouts: [
           {
@@ -1323,7 +1323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OllamaはローカルホストでOpenAI互換APIを公開しており、成長しているライター向けツールのエコシステムが接続しています。** 以下の統合は最も確立されたオプションを示します。',
         columns: ['ツール', '連携方法', '用途'],
         rows: [
-          { 'ツール': 'Obsidian', '連携方法': 'CopilotプラグインまたはSmart ConnectionsプラグインでOllama APIに接続。詳細は[Obsidian＋ローカルLLMプラグイン](/power-local-llm/local-llm-with-obsidian-2026?lang=ja)を参照。', '用途': 'ノート＋原稿にObsidianをすでに使っているライター；同じアプリでシームレスに生成' },
+          { 'ツール': 'Obsidian', '連携方法': 'CopilotプラグインまたはSmart ConnectionsプラグインでOllama APIに接続。詳細は[Obsidian＋ローカルLLMプラグイン](/ja/power-local-llm/local-llm-with-obsidian-2026)を参照。', '用途': 'ノート＋原稿にObsidianをすでに使っているライター；同じアプリでシームレスに生成' },
           { 'ツール': 'Scrivener', '連携方法': 'Ollama API経由の外部スクリプト→ドキュメントに貼り付け', '用途': 'Scrivenerで小説を構成するライター；AI草稿を既存のプロジェクト構造に貼り付け' },
           { 'ツール': 'VS Code', '連携方法': 'Continue.dev拡張機能→Ollamaバックエンド', '用途': 'コードエディタに慣れているテクニカルライターとゲームナラティブデザイナー' },
           { 'ツール': 'SillyTavern', '連携方法': 'OpenAI互換API→Ollama', '用途': 'ロールプレイ形式のフィクションとキャラクターカード駆動の執筆；永続的なキャラクター記憶' },
@@ -1335,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'ほとんどのライターに機能する最もシンプルな統合：ObsidianにOllamaを向けたCopilotプラグイン。セッションドキュメントはObsidianノートに、原稿の章は同じVaultに、コンテキストを切り替えることなく同じアプリで直接生成できます。詳細は[Obsidian＋ローカルLLMプラグイン](/power-local-llm/local-llm-with-obsidian-2026?lang=ja)を参照。',
+            text: 'ほとんどのライターに機能する最もシンプルな統合：ObsidianにOllamaを向けたCopilotプラグイン。セッションドキュメントはObsidianノートに、原稿の章は同じVaultに、コンテキストを切り替えることなく同じアプリで直接生成できます。詳細は[Obsidian＋ローカルLLMプラグイン](/ja/power-local-llm/local-llm-with-obsidian-2026)を参照。',
           },
         ],
       },
@@ -1343,7 +1343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models',
         title: '長編作業のモデル推薦',
         content:
-          '**長編執筆には短編フィクションとは異なるモデル要件があります。** コンテキスト遵守性、長いセッションにわたる命令追随の一貫性、複数の生成呼び出しにわたって声を維持する能力が意思決定に関連する要素です。すべてのユースケースにわたるモデル景観については、[ローカルLLMベスト2026](/local-llms/best-local-llms-2026?lang=ja)を参照。',
+          '**長編執筆には短編フィクションとは異なるモデル要件があります。** コンテキスト遵守性、長いセッションにわたる命令追随の一貫性、複数の生成呼び出しにわたって声を維持する能力が意思決定に関連する要素です。すべてのユースケースにわたるモデル景観については、[ローカルLLMベスト2026](/ja/local-llms/best-local-llms-2026)を参照。',
         columns: ['タスク', 'おすすめモデル', '理由'],
         rows: [
           { 'タスク': '小説執筆（主要）', 'おすすめモデル': 'Llama 3.3 70B', '理由': 'マルチセッション長編作業での最良のコンテキスト遵守性と命令追随；最も一貫した声' },
@@ -1434,14 +1434,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[フィクションライター向けローカルLLMプロンプト：テンプレートと技術](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=ja) — セッションドキュメントワークフロー内で機能するシーン執筆、ダイアログ、キャラクター、ワールドビルディング、スタイル転換テンプレート。',
-          '[ローカルLLMベスト2026](/local-llms/best-local-llms-2026?lang=ja) — 創作執筆、コーディング、推論を含む全ユースケースにわたる包括的なモデル比較。',
-          '[Obsidian＋ローカルLLMプラグイン](/power-local-llm/local-llm-with-obsidian-2026?lang=ja) — 執筆ワークフロー向けにOllamaと最もよく機能するObsidianプラグインの詳細ガイド。',
-          '[ローカルLLMクリエイティブライティングベスト2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=ja) — サンプリング設定とハードウェア要件を含む物語生成のモデル比較。',
-          '[アンセンサードローカルLLMと創作：倫理とセットアップ](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=ja) — 成熟したフィクション向けにアンセンサードモデルをいつ使うか、同じOllamaワークフローでのセットアップ方法。',
-          '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=ja) — キャラクターカード駆動の執筆と協調フィクションのフロントエンドオプション。',
-          '[Continue.dev vs Cline vs Aider：ベストローカルコーディングアシスタント](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=ja) — Continue.devをVS Codeのインライン執筆支援にOllamaに向けられます。',
-          '[ゼロショット vs フューショットプロンプティング](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=ja) — フィクションタスクでプロンプトにサンプルを含めるべき時と保留すべき時。',
+          '[フィクションライター向けローカルLLMプロンプト：テンプレートと技術](/ja/power-local-llm/local-llm-prompts-for-fiction-writers) — セッションドキュメントワークフロー内で機能するシーン執筆、ダイアログ、キャラクター、ワールドビルディング、スタイル転換テンプレート。',
+          '[ローカルLLMベスト2026](/ja/local-llms/best-local-llms-2026) — 創作執筆、コーディング、推論を含む全ユースケースにわたる包括的なモデル比較。',
+          '[Obsidian＋ローカルLLMプラグイン](/ja/power-local-llm/local-llm-with-obsidian-2026) — 執筆ワークフロー向けにOllamaと最もよく機能するObsidianプラグインの詳細ガイド。',
+          '[ローカルLLMクリエイティブライティングベスト2026](/ja/power-local-llm/best-local-llm-creative-writing-2026) — サンプリング設定とハードウェア要件を含む物語生成のモデル比較。',
+          '[アンセンサードローカルLLMと創作：倫理とセットアップ](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 成熟したフィクション向けにアンセンサードモデルをいつ使うか、同じOllamaワークフローでのセットアップ方法。',
+          '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — キャラクターカード駆動の執筆と協調フィクションのフロントエンドオプション。',
+          '[Continue.dev vs Cline vs Aider：ベストローカルコーディングアシスタント](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local) — Continue.devをVS Codeのインライン執筆支援にOllamaに向けられます。',
+          '[ゼロショット vs フューショットプロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot-prompting) — フィクションタスクでプロンプトにサンプルを含めるべき時と保留すべき時。',
         ],
       },
     },
@@ -1607,7 +1607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**第一阶段——大纲：** 生成章节级大纲（10-30章，每章一句话：发生什么，什么改变）。提示词：「类型：[类型]。主角：[姓名＋核心创伤]。中心冲突：[一句话]。写一个20章大纲——每章一句话，每句话命名场景和变化。」在继续之前审查并编辑大纲。',
           '**第二阶段——节拍表：** 将每个章节条目扩展为场景级节拍表（每章3-8个场景）。每章提示词：「第[N]章摘要：[粘贴一句话大纲条目]。扩展为场景级节拍表：4-6个场景，每个用一句话描述地点、参与者和场景的唯一变化。还不需要散文。」',
           '**第三阶段——场景生成：** 使用会话文档＋当前场景节拍，逐场景生成。生成、审查、粘贴到手稿、更新会话文档。重复。',
-          '**第四阶段——修改轮次：** 完成章节后，对特定场景运行有针对性的修改提示词。参见[小说作家本地LLM提示词](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=zh)了解修改提示词结构。不要要求模型在一次生成调用中修改超过一个场景。',
+          '**第四阶段——修改轮次：** 完成章节后，对特定场景运行有针对性的修改提示词。参见[小说作家本地LLM提示词](/zh/power-local-llm/local-llm-prompts-for-fiction-writers)了解修改提示词结构。不要要求模型在一次生成调用中修改超过一个场景。',
         ],
         callouts: [
           {
@@ -1684,7 +1684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ollama在本地主机上暴露一个OpenAI兼容API，越来越多的面向作者的工具生态系统与之连接。** 以下集成代表截至目前最成熟的选项。',
         columns: ['工具', '集成方式', '适用场景'],
         rows: [
-          { '工具': 'Obsidian', '集成方式': 'Copilot插件或Smart Connections插件→Ollama API。详见[Obsidian＋本地LLM插件](/power-local-llm/local-llm-with-obsidian-2026?lang=zh)深度指南。', '适用场景': '已在用Obsidian做笔记＋手稿的作者；在同一应用中无缝生成' },
+          { '工具': 'Obsidian', '集成方式': 'Copilot插件或Smart Connections插件→Ollama API。详见[Obsidian＋本地LLM插件](/zh/power-local-llm/local-llm-with-obsidian-2026)深度指南。', '适用场景': '已在用Obsidian做笔记＋手稿的作者；在同一应用中无缝生成' },
           { '工具': 'Scrivener', '集成方式': '通过Ollama API的外部脚本→粘贴到文档', '适用场景': '在Scrivener中结构化小说的作者；AI草稿粘贴到现有项目结构' },
           { '工具': 'VS Code', '集成方式': 'Continue.dev扩展→Ollama后端', '适用场景': '熟悉代码编辑器的技术写作者和游戏叙事设计师' },
           { '工具': 'SillyTavern', '集成方式': 'OpenAI兼容API→Ollama', '适用场景': '角色扮演式小说和角色卡驱动的写作；持久化角色记忆' },
@@ -1696,7 +1696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '对大多数作者最有效的最简单集成：Obsidian＋指向Ollama的Copilot插件。会话文档在Obsidian笔记中，手稿章节在同一个Vault中，无需切换上下文即可在同一应用中直接生成。详见[Obsidian＋本地LLM插件](/power-local-llm/local-llm-with-obsidian-2026?lang=zh)深度指南。',
+            text: '对大多数作者最有效的最简单集成：Obsidian＋指向Ollama的Copilot插件。会话文档在Obsidian笔记中，手稿章节在同一个Vault中，无需切换上下文即可在同一应用中直接生成。详见[Obsidian＋本地LLM插件](/zh/power-local-llm/local-llm-with-obsidian-2026)深度指南。',
           },
         ],
       },
@@ -1704,7 +1704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models',
         title: '长篇写作模型推荐',
         content:
-          '**长篇写作与短篇小说的模型要求不同。** 上下文遵循性、跨长会话的指令跟随一致性，以及跨多次生成调用维持声音的能力，是决策相关因素。关于所有使用场景的更广泛模型概览，参见[本地LLM最佳选择2026](/local-llms/best-local-llms-2026?lang=zh)。',
+          '**长篇写作与短篇小说的模型要求不同。** 上下文遵循性、跨长会话的指令跟随一致性，以及跨多次生成调用维持声音的能力，是决策相关因素。关于所有使用场景的更广泛模型概览，参见[本地LLM最佳选择2026](/zh/local-llms/best-local-llms-2026)。',
         columns: ['任务', '推荐模型', '原因'],
         rows: [
           { '任务': '小说写作（主要）', '推荐模型': 'Llama 3.3 70B', '原因': '多会话长篇写作中最佳的上下文遵循性和指令跟随；最一致的声音' },
@@ -1795,14 +1795,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[小说作家本地LLM提示词：模板与技术](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=zh) — 在会话文档工作流中有效的场景写作、对话、角色、世界构建和风格迁移模板。',
-          '[本地LLM最佳选择2026](/local-llms/best-local-llms-2026?lang=zh) — 涵盖创意写作、编程和推理所有使用场景的综合模型比较。',
-          '[Obsidian＋本地LLM插件](/power-local-llm/local-llm-with-obsidian-2026?lang=zh) — 写作工作流中与Ollama配合最佳的Obsidian插件深度指南。',
-          '[本地LLM创意写作最佳选择2026](/power-local-llm/best-local-llm-creative-writing-2026?lang=zh) — 叙事生成模型比较，含采样设置和硬件要求。',
-          '[无审查本地LLM与创意写作：伦理与设置](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=zh) — 何时为成熟小说使用无审查模型，以及如何在相同Ollama工作流中设置。',
-          '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=zh) — 角色卡驱动写作和协作小说的前端选项。',
-          '[Continue.dev vs Cline vs Aider：最佳本地编程助手](/power-local-llm/continue-dev-vs-cline-vs-aider-local?lang=zh) — 用于代码辅助的相同Continue.dev IDE扩展可指向Ollama用于VS Code中的内联写作辅助。',
-          '[零样本vs少样本提示词详解](/prompt-engineering/zero-shot-vs-few-shot-prompting?lang=zh) — 小说任务中何时在提示词中包含示例，何时省略。',
+          '[小说作家本地LLM提示词：模板与技术](/zh/power-local-llm/local-llm-prompts-for-fiction-writers) — 在会话文档工作流中有效的场景写作、对话、角色、世界构建和风格迁移模板。',
+          '[本地LLM最佳选择2026](/zh/local-llms/best-local-llms-2026) — 涵盖创意写作、编程和推理所有使用场景的综合模型比较。',
+          '[Obsidian＋本地LLM插件](/zh/power-local-llm/local-llm-with-obsidian-2026) — 写作工作流中与Ollama配合最佳的Obsidian插件深度指南。',
+          '[本地LLM创意写作最佳选择2026](/zh/power-local-llm/best-local-llm-creative-writing-2026) — 叙事生成模型比较，含采样设置和硬件要求。',
+          '[无审查本地LLM与创意写作：伦理与设置](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 何时为成熟小说使用无审查模型，以及如何在相同Ollama工作流中设置。',
+          '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 角色卡驱动写作和协作小说的前端选项。',
+          '[Continue.dev vs Cline vs Aider：最佳本地编程助手](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 用于代码辅助的相同Continue.dev IDE扩展可指向Ollama用于VS Code中的内联写作辅助。',
+          '[零样本vs少样本提示词详解](/zh/prompt-engineering/zero-shot-vs-few-shot-prompting) — 小说任务中何时在提示词中包含示例，何时省略。',
         ],
       },
     },

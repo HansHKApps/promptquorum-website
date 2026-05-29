@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-10',
-        url: 'https://www.promptquorum.com/prompt-engineering/prompt-evaluation-metrics?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/prompt-evaluation-metrics',
         inLanguage: 'de',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         definition: {
           title: 'Was sind Prompt-Evaluierungsmetriken?',
-          content: '**Prompt-Evaluierungsmetriken sind quantitative Signale, die Ihnen sagen, ob ein Prompt zuverlässig die beabsichtigte Ausgabe über die Eingaben hinweg produziert, die wichtig sind.** Ohne Metriken ist die Prompt-Evaluierung subjektiv: zwei Ingenieure, die denselben Prompt gegen verschiedene Beispiele überprüfen, werden zu unterschiedlichen Schlussfolgerungen gelangen.\n\nDie richtige Metrik hängt davon ab, was Ihr Prompt produzieren soll. Ein JSON-Extraktions-Prompt benötigt andere Metriken als ein Kreativschreib-Prompt. Wenn Sie die richtige Metrik für Ihre Aufgabe wählen, können Sie [die Prompt-Qualität systematisch evaluieren](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de). Die Auswahl der falschen Metrik führt zu irreführenden Scores, die Sie nichts über echte Produktionsqualität sagen.',
+          content: '**Prompt-Evaluierungsmetriken sind quantitative Signale, die Ihnen sagen, ob ein Prompt zuverlässig die beabsichtigte Ausgabe über die Eingaben hinweg produziert, die wichtig sind.** Ohne Metriken ist die Prompt-Evaluierung subjektiv: zwei Ingenieure, die denselben Prompt gegen verschiedene Beispiele überprüfen, werden zu unterschiedlichen Schlussfolgerungen gelangen.\n\nDie richtige Metrik hängt davon ab, was Ihr Prompt produzieren soll. Ein JSON-Extraktions-Prompt benötigt andere Metriken als ein Kreativschreib-Prompt. Wenn Sie die richtige Metrik für Ihre Aufgabe wählen, können Sie [die Prompt-Qualität systematisch evaluieren](/de/prompt-engineering/how-to-evaluate-prompt-quality). Die Auswahl der falschen Metrik führt zu irreführenden Scores, die Sie nichts über echte Produktionsqualität sagen.',
           snippets: [
             { type: 'in-one-sentence', text: 'Prompt-Evaluierungsmetriken sind quantitative Signale, die messen, ob ein Prompt die beabsichtigte Ausgabe über einen repräsentativen Testsatz zuverlässig produziert.' },
             { type: 'in-plain-terms', text: 'Denken Sie an sie als Unit-Tests für KI: Sie definieren, wie „richtig" aussieht, führen den Prompt auf 20+ Beispielen aus und bewerten die Pass Rate. Ein Score von 95% bedeutet, dass 5% der echten Benutzeranfragen noch fehlschlagen.' }
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         passRate: {
           title: 'Was ist Pass Rate und warum ist sie die nützlichste Metrik?',
-          content: '**Pass Rate ist der Prozentsatz der Testeingaben, bei denen die Prompt-Ausgabe die definierten Erfolgskriterien erfüllt — und sie ist die aussagekräftigste Metrik, da sie sich direkt auf die Produktionsfehlerquote abbildet.** Eine Pass Rate von 92% bedeutet, dass 8% der echten Benutzeranfragen fehlschlagen.\n\nPass Rate = bestandene Ausgaben / Gesamtzahl Testfälle\n\nFür strukturierte Ausgaben definieren Sie „Bestehen" präzise vor Testbeginn: gültiges JSON, erforderliche Felder vorhanden, Werte innerhalb zulässiger Enumerationen, Länge unter angegebenem Limit. Für Klassifizierung bedeutet „Bestehen" die richtige Etikette wurde zurückgegeben.\n\nVerfolgen Sie Pass Rate pro Prompt-Version. Ein Rückgang von mehr als 5 Prozentpunkten ist eine Regression. Ein Rückgang von mehr als 10 Prozentpunkten sollte die Produktionsbereitstellung blockieren. Ab April 2026 beobachtet PromptQuorum Median-Pass-Rates von 88–94% für GPT-4o JSON-Extraktions-Prompts bei erster Bereitstellung. Wenn Sie [eine Prompt-Bibliothek aufbauen](/prompt-engineering/build-a-prompt-library?lang=de), etablieren Sie Baseline-Pass-Rates für jeden Prompt zur Regressionserkennung.',
+          content: '**Pass Rate ist der Prozentsatz der Testeingaben, bei denen die Prompt-Ausgabe die definierten Erfolgskriterien erfüllt — und sie ist die aussagekräftigste Metrik, da sie sich direkt auf die Produktionsfehlerquote abbildet.** Eine Pass Rate von 92% bedeutet, dass 8% der echten Benutzeranfragen fehlschlagen.\n\nPass Rate = bestandene Ausgaben / Gesamtzahl Testfälle\n\nFür strukturierte Ausgaben definieren Sie „Bestehen" präzise vor Testbeginn: gültiges JSON, erforderliche Felder vorhanden, Werte innerhalb zulässiger Enumerationen, Länge unter angegebenem Limit. Für Klassifizierung bedeutet „Bestehen" die richtige Etikette wurde zurückgegeben.\n\nVerfolgen Sie Pass Rate pro Prompt-Version. Ein Rückgang von mehr als 5 Prozentpunkten ist eine Regression. Ein Rückgang von mehr als 10 Prozentpunkten sollte die Produktionsbereitstellung blockieren. Ab April 2026 beobachtet PromptQuorum Median-Pass-Rates von 88–94% für GPT-4o JSON-Extraktions-Prompts bei erster Bereitstellung. Wenn Sie [eine Prompt-Bibliothek aufbauen](/de/prompt-engineering/build-a-prompt-library), etablieren Sie Baseline-Pass-Rates für jeden Prompt zur Regressionserkennung.',
           callouts: [
             { type: 'warning', label: 'Warnung', text: 'Eine Pass Rate von 90% bedeutet, dass 10% der echten Benutzeranfragen fehlschlagen. Legen Sie Ihren Regressions-Schwellenwert basierend auf Produktionsrisiko-Toleranz fest, nicht darauf, was im Dashboard gut aussieht.' }
           ],
@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         llmAsJudge: {
           title: 'Was ist LLM-as-Judge-Evaluierung?',
-          content: '**LLM-as-Judge nutzt ein leistungsstarkes Modell — typischerweise GPT-4o oder Claude Opus 4,7 — zur Bewertung von Ausgaben gegen ein Bewertungsschema.** Dies skaliert die Evaluierung auf Tausende von Testfällen ohne menschliche Überprüfung und behandelt Qualitätsdimensionen, die binäre Metriken nicht erfassen: Kohärenz, Ton, Vollständigkeit und faktische Genauigkeit.\n\nDer Judge-Ansatz erfordert:\n\n1. Ein detailliertes Bewertungsschema (Kriterien pro Dimension)\n2. Ein strukturiertes Ausgabeformat (z.B. JSON mit Score + Begründung)\n3. Wenn Sie [Prompts über Modelle hinweg testen](/prompt-engineering/how-to-test-prompts-across-models?lang=de), kalibrieren Sie den Judge gegen menschliche Urteile für Ihre spezifische Aufgabe',
+          content: '**LLM-as-Judge nutzt ein leistungsstarkes Modell — typischerweise GPT-4o oder Claude Opus 4,7 — zur Bewertung von Ausgaben gegen ein Bewertungsschema.** Dies skaliert die Evaluierung auf Tausende von Testfällen ohne menschliche Überprüfung und behandelt Qualitätsdimensionen, die binäre Metriken nicht erfassen: Kohärenz, Ton, Vollständigkeit und faktische Genauigkeit.\n\nDer Judge-Ansatz erfordert:\n\n1. Ein detailliertes Bewertungsschema (Kriterien pro Dimension)\n2. Ein strukturiertes Ausgabeformat (z.B. JSON mit Score + Begründung)\n3. Wenn Sie [Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models), kalibrieren Sie den Judge gegen menschliche Urteile für Ihre spezifische Aufgabe',
           columns: ['Dimension', 'Vorteil', 'Einschränkung'],
           rows: [
             { 'Dimension': 'Skalierung', 'Vorteil': 'Tausende Fälle pro Stunde', 'Einschränkung': 'API-Kosten steigen mit Volumen' },
@@ -425,7 +425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         regressionMetrics: {
           title: 'Wie erkennt man Metrikregressionen?',
-          content: '**Verfolgen Sie Ihre primäre Metrik pro Prompt-Version und alarmieren Sie, wenn sie mehr als 5 Prozentpunkte unter der etablierten Baseline fällt.** Führen Sie denselben Testsatz vor und nach jeder Prompt-Änderung, Model-Update oder Temperatur-Anpassung aus.\n\nWenn Sie [Prompt-Audit und Regressions-Risiko](/prompt-engineering/prompt-audit-and-regression-risk?lang=de) Erkennung implementieren, befolgen Sie diesen Workflow:\n\n1. Zeichnen Sie den aktuellen Metrik-Score als Baseline auf (z.B. Pass Rate = 91%)\n2. Führen Sie die Prompt-Änderung durch\n3. Führen Sie den vollständigen Testsatz erneut aus\n4. Vergleichen Sie neuen Score gegen Baseline\n5. Wenn Rückgang > 5 Punkte: Blockieren, untersuchen, beheben\n\nFür automatisierte Regressionserkennung in CI/CD: Tools wie [Promptfoo](https://www.promptfoo.dev) integrieren mit GitHub Actions und können einen PR fehlschlagen lassen, wenn Pass Rate unter Schwellenwert fällt.',
+          content: '**Verfolgen Sie Ihre primäre Metrik pro Prompt-Version und alarmieren Sie, wenn sie mehr als 5 Prozentpunkte unter der etablierten Baseline fällt.** Führen Sie denselben Testsatz vor und nach jeder Prompt-Änderung, Model-Update oder Temperatur-Anpassung aus.\n\nWenn Sie [Prompt-Audit und Regressions-Risiko](/de/prompt-engineering/prompt-audit-and-regression-risk) Erkennung implementieren, befolgen Sie diesen Workflow:\n\n1. Zeichnen Sie den aktuellen Metrik-Score als Baseline auf (z.B. Pass Rate = 91%)\n2. Führen Sie die Prompt-Änderung durch\n3. Führen Sie den vollständigen Testsatz erneut aus\n4. Vergleichen Sie neuen Score gegen Baseline\n5. Wenn Rückgang > 5 Punkte: Blockieren, untersuchen, beheben\n\nFür automatisierte Regressionserkennung in CI/CD: Tools wie [Promptfoo](https://www.promptfoo.dev) integrieren mit GitHub Actions und können einen PR fehlschlagen lassen, wenn Pass Rate unter Schwellenwert fällt.',
           callouts: [
             { type: 'practice', label: 'Best Practice', text: 'Integrieren Sie Promptfoo mit GitHub Actions, um PRs automatisch fehlschlagen zu lassen, wenn Pass Rate unter Schwellenwert fällt. Dies verhindert Prompt-Regressionen in der Produktion.' }
           ],
@@ -456,12 +456,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Wie man Prompt-Qualität evaluiert](/prompt-engineering/how-to-evaluate-prompt-quality?lang=de) — Drei-Komponenten-Framework: Genauigkeit, Konsistenz, Befolgungsrate',
-            '[Prompts über Modelle hinweg testen](/prompt-engineering/how-to-test-prompts-across-models?lang=de) — Denselben Testsatz auf GPT-4o, Claude und Gemini ausführen',
-            '[Prompt-Audit und Regressions-Risiko](/prompt-engineering/prompt-audit-and-regression-risk?lang=de) — Automatisierte Regressionssuits und CI/CD-Gates',
-            '[Braintrust vs Prompthub vs Vellum](/prompt-engineering/braintrust-vs-prompthub-vs-vellum?lang=de) — Vergleich dedizierter Prompt-Evaluierungs-Plattformen für Teams',
-            '[Best Prompt Testing & Evaluation Tools 2026](/prompt-engineering/best-prompt-testing-tools?lang=de) — Bewertete Tools für systematische Prompt-QA',
-            '[Wie man eine Prompt-Bibliothek aufbaut](/prompt-engineering/build-a-prompt-library?lang=de) — Versionierung und Organisation von Prompts neben ihren Evaluierungs-Baselines',
+            '[Wie man Prompt-Qualität evaluiert](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Drei-Komponenten-Framework: Genauigkeit, Konsistenz, Befolgungsrate',
+            '[Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Denselben Testsatz auf GPT-4o, Claude und Gemini ausführen',
+            '[Prompt-Audit und Regressions-Risiko](/de/prompt-engineering/prompt-audit-and-regression-risk) — Automatisierte Regressionssuits und CI/CD-Gates',
+            '[Braintrust vs Prompthub vs Vellum](/de/prompt-engineering/braintrust-vs-prompthub-vs-vellum) — Vergleich dedizierter Prompt-Evaluierungs-Plattformen für Teams',
+            '[Best Prompt Testing & Evaluation Tools 2026](/de/prompt-engineering/best-prompt-testing-tools) — Bewertete Tools für systematische Prompt-QA',
+            '[Wie man eine Prompt-Bibliothek aufbaut](/de/prompt-engineering/build-a-prompt-library) — Versionierung und Organisation von Prompts neben ihren Evaluierungs-Baselines',
           ],
         },
         faq: {
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-10',
-        url: 'https://www.promptquorum.com/prompt-engineering/prompt-evaluation-metrics?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-evaluation-metrics',
         inLanguage: 'es',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         definition: {
           title: '¿Qué son las métricas de evaluación de prompts?',
-          content: '**Las métricas de evaluación de prompts son señales cuantitativas que te dicen si un prompt produce de forma fiable la salida esperada en las entradas que importan.** Sin métricas, la evaluación de prompts es subjetiva. La métrica correcta depende de lo que se supone que debe producir tu prompt. Cuando eliges la métrica correcta para tu tarea, puedes [evaluar la calidad del prompt](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) de forma sistemática.',
+          content: '**Las métricas de evaluación de prompts son señales cuantitativas que te dicen si un prompt produce de forma fiable la salida esperada en las entradas que importan.** Sin métricas, la evaluación de prompts es subjetiva. La métrica correcta depende de lo que se supone que debe producir tu prompt. Cuando eliges la métrica correcta para tu tarea, puedes [evaluar la calidad del prompt](/es/prompt-engineering/how-to-evaluate-prompt-quality) de forma sistemática.',
           snippets: [
             { type: 'in-one-sentence', text: 'Las métricas de evaluación de prompts son señales cuantitativas que miden si un prompt produce de forma fiable la salida esperada en un conjunto de prueba representativo.' },
             { type: 'in-plain-terms', text: 'Piénsalas como pruebas unitarias para IA: defines qué es "correcto", ejecutas el prompt en 20+ ejemplos y puntúas el pass rate. Una puntuación del 95 % significa que el 5 % de las solicitudes reales de usuarios seguirán fallando.' }
@@ -701,12 +701,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas relacionadas',
           items: [
-            '[Cómo evaluar la calidad de los prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — Framework de tres componentes: precisión, consistencia, tasa de seguimiento',
-            '[Prueba prompts entre modelos](/prompt-engineering/how-to-test-prompts-across-models?lang=es) — Ejecuta el mismo conjunto de prueba en GPT-4o, Claude y Gemini',
-            '[Auditoría de prompts y riesgo de regresión](/prompt-engineering/prompt-audit-and-regression-risk?lang=es) — Suites de regresión automatizadas y gates de CI/CD',
-            '[Braintrust vs Prompthub vs Vellum](/prompt-engineering/braintrust-vs-prompthub-vs-vellum?lang=es) — Comparación de plataformas de evaluación de prompts dedicadas para equipos',
-            '[Mejores herramientas de prueba y evaluación de prompts 2026](/prompt-engineering/best-prompt-testing-tools?lang=es) — Herramientas valoradas para QA sistemática de prompts',
-            '[Cómo construir una biblioteca de prompts](/prompt-engineering/build-a-prompt-library?lang=es) — Versiona y organiza prompts junto a sus líneas base de evaluación',
+            '[Cómo evaluar la calidad de los prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality) — Framework de tres componentes: precisión, consistencia, tasa de seguimiento',
+            '[Prueba prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Ejecuta el mismo conjunto de prueba en GPT-4o, Claude y Gemini',
+            '[Auditoría de prompts y riesgo de regresión](/es/prompt-engineering/prompt-audit-and-regression-risk) — Suites de regresión automatizadas y gates de CI/CD',
+            '[Braintrust vs Prompthub vs Vellum](/es/prompt-engineering/braintrust-vs-prompthub-vs-vellum) — Comparación de plataformas de evaluación de prompts dedicadas para equipos',
+            '[Mejores herramientas de prueba y evaluación de prompts 2026](/es/prompt-engineering/best-prompt-testing-tools) — Herramientas valoradas para QA sistemática de prompts',
+            '[Cómo construir una biblioteca de prompts](/es/prompt-engineering/build-a-prompt-library) — Versiona y organiza prompts junto a sus líneas base de evaluación',
           ],
         },
         faq: {
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-10',
-        url: 'https://www.promptquorum.com/prompt-engineering/prompt-evaluation-metrics?lang=fr',
+        url: 'https://www.promptquorum.com/fr/prompt-engineering/prompt-evaluation-metrics',
         inLanguage: 'fr',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -847,7 +847,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         definition: {
           title: 'Que sont les métriques d\'évaluation de prompts ?',
-          content: '**Les métriques d\'évaluation de prompts sont des signaux quantitatifs indiquant si un prompt produit fiablement la sortie souhaitée sur l\'ensemble des entrées importantes.** Sans elles, l\'évaluation est subjective : deux ingénieurs examinant le même prompt sur différents exemples aboutissent à des conclusions différentes.\n\nLa bonne métrique dépend de ce que votre prompt produit. Un prompt d\'extraction JSON nécessite d\'autres métriques qu\'un prompt créatif. Quand vous choisissez la bonne métrique, vous pouvez [évaluer la qualité de manière systématique](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr). Choisir mal produit des scores trompeurs masquant la vraie qualité de production.',
+          content: '**Les métriques d\'évaluation de prompts sont des signaux quantitatifs indiquant si un prompt produit fiablement la sortie souhaitée sur l\'ensemble des entrées importantes.** Sans elles, l\'évaluation est subjective : deux ingénieurs examinant le même prompt sur différents exemples aboutissent à des conclusions différentes.\n\nLa bonne métrique dépend de ce que votre prompt produit. Un prompt d\'extraction JSON nécessite d\'autres métriques qu\'un prompt créatif. Quand vous choisissez la bonne métrique, vous pouvez [évaluer la qualité de manière systématique](/fr/prompt-engineering/how-to-evaluate-prompt-quality). Choisir mal produit des scores trompeurs masquant la vraie qualité de production.',
           snippets: [
             { type: 'in-one-sentence', text: 'Les métriques d\'évaluation de prompts sont des signaux quantitatifs mesurant si un prompt produit fiablement la sortie souhaitée sur un ensemble de test représentatif.' },
             { type: 'in-plain-terms', text: 'Pensez à elles comme des tests unitaires pour l\'IA : vous définissez ce que « correct » signifie, exécutez le prompt sur 20+ exemples, et mesurez le taux de réussite. 95% signifie 5% des demandes réelles échoueront.' }
@@ -874,7 +874,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         passRate: {
           title: 'Qu\'est-ce que le taux de réussite et pourquoi est-il si utile ?',
-          content: '**Le taux de réussite est le pourcentage d\'entrées de test où la sortie rencontre les critères de succès — et c\'est la métrique la plus utile car elle se traduit directement par le taux d\'erreur en production.** Un taux de 92% signifie 8% des demandes réelles échoueront.\n\nTaux de réussite = sorties réussies / nombre total de tests\n\nPour les sorties structurées, définissez « réussite » précisément avant les tests : JSON valide, champs obligatoires présents, valeurs dans l\'énumération admissible, longueur sous la limite. Pour la classification, « réussite » signifie le label correct est retourné.\n\nSuivez le taux de réussite par version de prompt. Une chute de plus de 5 points est une régression. Plus de 10 points bloque le déploiement en production. En avril 2026, PromptQuorum observe des taux médians de 88–94% pour les prompts d\'extraction JSON avec GPT-4o au premier déploiement. Quand vous [construisez une bibliothèque](/prompt-engineering/build-a-prompt-library?lang=fr), établissez les baselines pour détecter les régressions.',
+          content: '**Le taux de réussite est le pourcentage d\'entrées de test où la sortie rencontre les critères de succès — et c\'est la métrique la plus utile car elle se traduit directement par le taux d\'erreur en production.** Un taux de 92% signifie 8% des demandes réelles échoueront.\n\nTaux de réussite = sorties réussies / nombre total de tests\n\nPour les sorties structurées, définissez « réussite » précisément avant les tests : JSON valide, champs obligatoires présents, valeurs dans l\'énumération admissible, longueur sous la limite. Pour la classification, « réussite » signifie le label correct est retourné.\n\nSuivez le taux de réussite par version de prompt. Une chute de plus de 5 points est une régression. Plus de 10 points bloque le déploiement en production. En avril 2026, PromptQuorum observe des taux médians de 88–94% pour les prompts d\'extraction JSON avec GPT-4o au premier déploiement. Quand vous [construisez une bibliothèque](/fr/prompt-engineering/build-a-prompt-library), établissez les baselines pour détecter les régressions.',
           callouts: [
             { type: 'warning', label: 'Attention', text: 'Taux de 90% = 10% des demandes échoueront. Fixez le seuil selon la tolérance au risque de production, pas selon ce qui paraît bien au tableau de bord.' }
           ],
@@ -895,7 +895,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         llmAsJudge: {
           title: 'LLM-as-Judge : l\'évaluation par modèle',
-          content: '**LLM-as-Judge utilise un modèle capable — généralement GPT-4o ou Claude Opus 4.7 — pour noter les sorties selon une rubrique.** Cela scale l\'évaluation à des milliers de cas sans examen humain et gère les dimensions de qualité que les métriques binaires manquent : cohérence, ton, complétude, exactitude factuelle.\n\nL\'approche du juge requiert :\n\n1. Une rubrique détaillée (critères de notation par dimension)\n2. Un format de sortie structuré (par ex. JSON avec score + justification)\n3. Quand vous [testez les prompts sur plusieurs modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr), calibrez le juge contre les jugements humains pour votre tâche',
+          content: '**LLM-as-Judge utilise un modèle capable — généralement GPT-4o ou Claude Opus 4.7 — pour noter les sorties selon une rubrique.** Cela scale l\'évaluation à des milliers de cas sans examen humain et gère les dimensions de qualité que les métriques binaires manquent : cohérence, ton, complétude, exactitude factuelle.\n\nL\'approche du juge requiert :\n\n1. Une rubrique détaillée (critères de notation par dimension)\n2. Un format de sortie structuré (par ex. JSON avec score + justification)\n3. Quand vous [testez les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models), calibrez le juge contre les jugements humains pour votre tâche',
           columns: ['Dimension', 'Avantage', 'Limitation'],
           rows: [
             { 'Dimension': 'Scalabilité', 'Avantage': 'Milliers de cas par heure', 'Limitation': 'Le coût API augmente avec le volume' },
@@ -917,7 +917,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         regressionMetrics: {
           title: 'Comment détecter une régression de métriques ?',
-          content: '**Suivez votre métrique primaire par version et alertez si elle baisse de plus de 5 points de la baseline établie.** Exécutez le même ensemble de test avant et après chaque changement de prompt, mise à jour de modèle ou ajustement de température.\n\nQuand vous implémentez [l\'audit de prompts et la détection du risque de régression](/prompt-engineering/prompt-audit-and-regression-risk?lang=fr), suivez ce flux :\n\n1. Enregistrez le score actuel comme baseline (par ex. taux de réussite = 91%)\n2. Faites le changement de prompt\n3. Relancez l\'ensemble complet de test\n4. Comparez le nouveau score à la baseline\n5. Si chute > 5 points : bloquer, investiguer, corriger\n\nPour la détection automatisée dans CI/CD, des outils comme [Promptfoo](https://www.promptfoo.dev) s\'intègrent avec GitHub Actions et peuvent échouer une PR si le taux baisse.',
+          content: '**Suivez votre métrique primaire par version et alertez si elle baisse de plus de 5 points de la baseline établie.** Exécutez le même ensemble de test avant et après chaque changement de prompt, mise à jour de modèle ou ajustement de température.\n\nQuand vous implémentez [l\'audit de prompts et la détection du risque de régression](/fr/prompt-engineering/prompt-audit-and-regression-risk), suivez ce flux :\n\n1. Enregistrez le score actuel comme baseline (par ex. taux de réussite = 91%)\n2. Faites le changement de prompt\n3. Relancez l\'ensemble complet de test\n4. Comparez le nouveau score à la baseline\n5. Si chute > 5 points : bloquer, investiguer, corriger\n\nPour la détection automatisée dans CI/CD, des outils comme [Promptfoo](https://www.promptfoo.dev) s\'intègrent avec GitHub Actions et peuvent échouer une PR si le taux baisse.',
           callouts: [
             { type: 'practice', label: 'Bonne pratique', text: 'Intégrez Promptfoo avec GitHub Actions pour échouer automatiquement les PRs si le taux baisse. Cela prévient les régressions en production.' }
           ],
@@ -948,12 +948,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Comment évaluer la qualité d\'un prompt](/prompt-engineering/how-to-evaluate-prompt-quality?lang=fr) — Framework à trois composants : exactitude, consistance, taux de réussite',
-            '[Tester les prompts sur plusieurs modèles](/prompt-engineering/how-to-test-prompts-across-models?lang=fr) — Exécuter le même ensemble sur GPT-4o, Claude et Gemini',
-            '[Audit de prompt et risque de régression](/prompt-engineering/prompt-audit-and-regression-risk?lang=fr) — Suites automatisées et portes CI/CD',
-            '[Braintrust vs Prompthub vs Vellum](/prompt-engineering/braintrust-vs-prompthub-vs-vellum?lang=fr) — Comparaison de plateformes d\'évaluation pour équipes',
-            '[Meilleurs outils d\'évaluation de prompts 2026](/prompt-engineering/best-prompt-testing-tools?lang=fr) — Outils classés pour QA systématique',
-            '[Construire une bibliothèque de prompts](/prompt-engineering/build-a-prompt-library?lang=fr) — Versionnement et organisation aux côtés des baselines',
+            '[Comment évaluer la qualité d\'un prompt](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Framework à trois composants : exactitude, consistance, taux de réussite',
+            '[Tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécuter le même ensemble sur GPT-4o, Claude et Gemini',
+            '[Audit de prompt et risque de régression](/fr/prompt-engineering/prompt-audit-and-regression-risk) — Suites automatisées et portes CI/CD',
+            '[Braintrust vs Prompthub vs Vellum](/fr/prompt-engineering/braintrust-vs-prompthub-vs-vellum) — Comparaison de plateformes d\'évaluation pour équipes',
+            '[Meilleurs outils d\'évaluation de prompts 2026](/fr/prompt-engineering/best-prompt-testing-tools) — Outils classés pour QA systématique',
+            '[Construire une bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library) — Versionnement et organisation aux côtés des baselines',
           ],
         },
         faq: {
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-10',
-        url: 'https://www.promptquorum.com/prompt-engineering/prompt-evaluation-metrics?lang=ja',
+        url: 'https://www.promptquorum.com/ja/prompt-engineering/prompt-evaluation-metrics',
         inLanguage: 'ja',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         definition: {
           title: 'プロンプト評価指標とは何か？',
-          content: '**プロンプト評価指標は、プロンプトが重要な入力全体にわたって意図した出力を確実に生成するかを示す定量的シグナルです。** 指標がなければプロンプト評価は主観的になります。異なる例に対して同じプロンプトを検討する2人のエンジニアは異なる結論に達します。\n\n正しい指標はプロンプトが何を生成すべきかに依存します。JSON抽出プロンプトは創作文プロンプトとは異なる指標が必要です。正しい指標をタスク用に選ぶと、[プロンプト品質を体系的に評価できます](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja)。間違った指標を選ぶと、本当の本番環境品質について何も言わない誤解を招くスコアが生じます。',
+          content: '**プロンプト評価指標は、プロンプトが重要な入力全体にわたって意図した出力を確実に生成するかを示す定量的シグナルです。** 指標がなければプロンプト評価は主観的になります。異なる例に対して同じプロンプトを検討する2人のエンジニアは異なる結論に達します。\n\n正しい指標はプロンプトが何を生成すべきかに依存します。JSON抽出プロンプトは創作文プロンプトとは異なる指標が必要です。正しい指標をタスク用に選ぶと、[プロンプト品質を体系的に評価できます](/ja/prompt-engineering/how-to-evaluate-prompt-quality)。間違った指標を選ぶと、本当の本番環境品質について何も言わない誤解を招くスコアが生じます。',
           snippets: [
             { type: 'in-one-sentence', text: 'プロンプト評価指標は、プロンプトが代表的なテストセット全体にわたって意図した出力を確実に生成するかを測定する定量的シグナルです。' },
             { type: 'in-plain-terms', text: 'AIのためのユニットテストのように考えてください：「正しい」が何を意味するかを定義し、20以上の例でプロンプトを実行し、合格率を評点します。95%のスコアは実際のユーザーリクエストの5%が失敗することを意味します。' }
@@ -1121,7 +1121,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         passRate: {
           title: '合格率とは？なぜ最も有用な指標なのか？',
-          content: '**合格率は、定義された成功基準を満たすテスト入力の割合です。最も実用的な指標です。本番環境の失敗率に直結するからです。** 92%の合格率は、実際のユーザーリクエストの8%が失敗することを意味します。\n\n合格率 = 合格出力 / テストケース総数\n\n構造化出力の場合、テスト前に「合格」を正確に定義してください：有効なJSON、必須フィールド存在、列挙値内の値、指定限度以下の長さ。分類の場合、「合格」は正しいラベルが返されたことを意味します。\n\nプロンプトバージョンごとに合格率を追跡します。5ポイント以上の低下は回帰です。10ポイント以上の低下は本番デプロイをブロックすべきです。2026年4月時点で、PromptQuorumは初回デプロイでGPT-4o JSON抽出プロンプトで88–94%の中央合格率を観察しています。[プロンプトライブラリを構築する](/prompt-engineering/build-a-prompt-library?lang=ja)場合、各プロンプトのベースライン合格率を確立して回帰を検出してください。',
+          content: '**合格率は、定義された成功基準を満たすテスト入力の割合です。最も実用的な指標です。本番環境の失敗率に直結するからです。** 92%の合格率は、実際のユーザーリクエストの8%が失敗することを意味します。\n\n合格率 = 合格出力 / テストケース総数\n\n構造化出力の場合、テスト前に「合格」を正確に定義してください：有効なJSON、必須フィールド存在、列挙値内の値、指定限度以下の長さ。分類の場合、「合格」は正しいラベルが返されたことを意味します。\n\nプロンプトバージョンごとに合格率を追跡します。5ポイント以上の低下は回帰です。10ポイント以上の低下は本番デプロイをブロックすべきです。2026年4月時点で、PromptQuorumは初回デプロイでGPT-4o JSON抽出プロンプトで88–94%の中央合格率を観察しています。[プロンプトライブラリを構築する](/ja/prompt-engineering/build-a-prompt-library)場合、各プロンプトのベースライン合格率を確立して回帰を検出してください。',
           callouts: [
             { type: 'warning', label: '警告', text: '90%の合格率は実際のリクエストの10%が失敗することを意味します。本番環境リスク許容度に基づいて回帰閾値を設定してください。ダッシュボードで良く見えるもので設定しないでください。' }
           ],
@@ -1142,7 +1142,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         llmAsJudge: {
           title: 'LLM-as-Judgeによる評価',
-          content: '**LLM-as-JudgeはGPT-4oやClaude Opus 4.7などの高性能モデルを使用してルーブリックに基づいて出力を評点します。** これにより評価が数千のテストケースに拡張可能になり、人間の審査なしで、二値指標では捉えられない品質次元を扱います。一貫性、トーン、完全性、事実的正確性。\n\nJudgeアプローチには以下が必要です ：\n\n1. 詳細なルーブリック（次元ごとに評点基準）\n2. 構造化出力形式（例：スコア + 正当性を含むJSON）\n3. [複数モデル間でプロンプトをテストする](/prompt-engineering/how-to-test-prompts-across-models?lang=ja)場合、あなたの特定タスクに対してJudgeを人間の判定と校正します',
+          content: '**LLM-as-JudgeはGPT-4oやClaude Opus 4.7などの高性能モデルを使用してルーブリックに基づいて出力を評点します。** これにより評価が数千のテストケースに拡張可能になり、人間の審査なしで、二値指標では捉えられない品質次元を扱います。一貫性、トーン、完全性、事実的正確性。\n\nJudgeアプローチには以下が必要です ：\n\n1. 詳細なルーブリック（次元ごとに評点基準）\n2. 構造化出力形式（例：スコア + 正当性を含むJSON）\n3. [複数モデル間でプロンプトをテストする](/ja/prompt-engineering/how-to-test-prompts-across-models)場合、あなたの特定タスクに対してJudgeを人間の判定と校正します',
           columns: ['評価軸', 'メリット', 'デメリット'],
           rows: [
             { '評価軸': '拡張性', 'メリット': '1時間に数千ケース', 'デメリット': 'API費用はボリュームで増加' },
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         regressionMetrics: {
           title: 'メトリクスの回帰をどのように検出するか？',
-          content: '**プロンプトバージョンごとに主要指標を追跡し、確立されたベースラインから5ポイント以上低下したらアラートを出します。** プロンプト変更、モデル更新、温度調整のたびに変更前後で同じテストセットを実行します。\n\n[プロンプト監査と回帰リスク](/prompt-engineering/prompt-audit-and-regression-risk?lang=ja)検出を実装するとき、このワークフローに従ってください ：\n\n1. 現在の指標スコアをベースラインとして記録（例：合格率 = 91%）\n2. プロンプト変更を実施\n3. 完全なテストセットを再実行\n4. 新しいスコアをベースラインと比較\n5. 低下 > 5ポイント：ブロック、調査、修正\n\nCI/CDで自動回帰検出するために、[Promptfoo](https://www.promptfoo.dev)などのツールはGitHub Actionsと統合し、合格率が閾値を下回ったときPRを失敗させます。',
+          content: '**プロンプトバージョンごとに主要指標を追跡し、確立されたベースラインから5ポイント以上低下したらアラートを出します。** プロンプト変更、モデル更新、温度調整のたびに変更前後で同じテストセットを実行します。\n\n[プロンプト監査と回帰リスク](/ja/prompt-engineering/prompt-audit-and-regression-risk)検出を実装するとき、このワークフローに従ってください ：\n\n1. 現在の指標スコアをベースラインとして記録（例：合格率 = 91%）\n2. プロンプト変更を実施\n3. 完全なテストセットを再実行\n4. 新しいスコアをベースラインと比較\n5. 低下 > 5ポイント：ブロック、調査、修正\n\nCI/CDで自動回帰検出するために、[Promptfoo](https://www.promptfoo.dev)などのツールはGitHub Actionsと統合し、合格率が閾値を下回ったときPRを失敗させます。',
           callouts: [
             { type: 'practice', label: 'ベストプラクティス', text: 'PromptfooをGitHub Actionsと統合して、合格率が閾値を下回ったときPRを自動的に失敗させてください。これはプロンプト回帰がプロダクションに到達するのを防ぎます。' }
           ],
@@ -1195,12 +1195,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '関連資料',
           items: [
-            '[プロンプト品質を評価する方法](/prompt-engineering/how-to-evaluate-prompt-quality?lang=ja) — 3成分フレームワーク：正確度、一貫性、命令遵守率',
-            '[複数モデル間でプロンプトをテストする](/prompt-engineering/how-to-test-prompts-across-models?lang=ja) — GPT-4o、Claude、Geminiで同じテストセットを実行',
-            '[プロンプト監査と回帰リスク](/prompt-engineering/prompt-audit-and-regression-risk?lang=ja) — 自動回帰スイートとCI/CDゲート',
-            '[Braintrust vs Prompthub vs Vellum](/prompt-engineering/braintrust-vs-prompthub-vs-vellum?lang=ja) — チーム向け評価プラットフォーム比較',
-            '[最高のプロンプトテスト・評価ツール2026](/prompt-engineering/best-prompt-testing-tools?lang=ja) — 体系的プロンプトQA用ツールランキング',
-            '[プロンプトライブラリを構築する](/prompt-engineering/build-a-prompt-library?lang=ja) — 評価ベースラインとともにプロンプトをバージョニング・整理',
+            '[プロンプト品質を評価する方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — 3成分フレームワーク：正確度、一貫性、命令遵守率',
+            '[複数モデル間でプロンプトをテストする](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT-4o、Claude、Geminiで同じテストセットを実行',
+            '[プロンプト監査と回帰リスク](/ja/prompt-engineering/prompt-audit-and-regression-risk) — 自動回帰スイートとCI/CDゲート',
+            '[Braintrust vs Prompthub vs Vellum](/ja/prompt-engineering/braintrust-vs-prompthub-vs-vellum) — チーム向け評価プラットフォーム比較',
+            '[最高のプロンプトテスト・評価ツール2026](/ja/prompt-engineering/best-prompt-testing-tools) — 体系的プロンプトQA用ツールランキング',
+            '[プロンプトライブラリを構築する](/ja/prompt-engineering/build-a-prompt-library) — 評価ベースラインとともにプロンプトをバージョニング・整理',
           ],
         },
         faq: {
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-10',
-        url: 'https://www.promptquorum.com/prompt-engineering/prompt-evaluation-metrics?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/prompt-evaluation-metrics',
         inLanguage: 'zh',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -1341,7 +1341,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         definition: {
           title: '什么是提示词评估指标？',
-          content: '**提示词评估指标是定量信号，告诉你提示词是否在重要的输入范围内可靠地生成预期输出。** 没有指标的提示词评估是主观的：两个工程师针对不同示例审查相同的提示词会得出不同的结论。\n\n正确的指标取决于你的提示词应该生成什么。JSON提取提示词需要不同于创意写作提示词的指标。当你为任务选择正确的指标时，可以[系统地评估提示词质量](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh)。选择错误的指标会产生误导性的分数，这些分数对实际生产质量没有任何帮助。',
+          content: '**提示词评估指标是定量信号，告诉你提示词是否在重要的输入范围内可靠地生成预期输出。** 没有指标的提示词评估是主观的：两个工程师针对不同示例审查相同的提示词会得出不同的结论。\n\n正确的指标取决于你的提示词应该生成什么。JSON提取提示词需要不同于创意写作提示词的指标。当你为任务选择正确的指标时，可以[系统地评估提示词质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)。选择错误的指标会产生误导性的分数，这些分数对实际生产质量没有任何帮助。',
           snippets: [
             { type: 'in-one-sentence', text: '提示词评估指标是定量信号，衡量提示词在代表性测试集上是否可靠地生成预期输出。' },
             { type: 'in-plain-terms', text: '将其视为AI的单元测试：你定义「正确」的含义，在20多个示例上运行提示词，并评分通过率。95%的分数意味着实际用户请求中的5%仍会失败。' }
@@ -1368,7 +1368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         passRate: {
           title: '通过率：为什么是最实用的指标？',
-          content: '**通过率是测试输入中满足定义的成功标准的百分比——也是最实用的指标，因为它直接映射到生产失败率。** 92%的通过率意味着实际用户请求的8%会失败。\n\n通过率 = 合格输出 / 总测试用例\n\n对于结构化输出，在测试前精确定义「合格」：有效JSON、必填字段存在、值在允许的枚举内、长度在指定限制以下。对于分类，「合格」意味着返回了正确的标签。\n\n按提示词版本追踪通过率。下降超过5个百分点是回归。下降超过10个百分点应阻止生产部署。截至2026年4月，PromptQuorum在首次部署时对GPT-4o JSON提取提示词观察到88–94%的中位数通过率。当你[构建提示词库](/prompt-engineering/build-a-prompt-library?lang=zh)时，为每个提示词建立基准通过率以检测回归。',
+          content: '**通过率是测试输入中满足定义的成功标准的百分比——也是最实用的指标，因为它直接映射到生产失败率。** 92%的通过率意味着实际用户请求的8%会失败。\n\n通过率 = 合格输出 / 总测试用例\n\n对于结构化输出，在测试前精确定义「合格」：有效JSON、必填字段存在、值在允许的枚举内、长度在指定限制以下。对于分类，「合格」意味着返回了正确的标签。\n\n按提示词版本追踪通过率。下降超过5个百分点是回归。下降超过10个百分点应阻止生产部署。截至2026年4月，PromptQuorum在首次部署时对GPT-4o JSON提取提示词观察到88–94%的中位数通过率。当你[构建提示词库](/zh/prompt-engineering/build-a-prompt-library)时，为每个提示词建立基准通过率以检测回归。',
           callouts: [
             { type: 'warning', label: '警告', text: '90%的通过率意味着实际用户请求的10%会失败。根据生产风险容限设置回归阈值，而不是基于仪表板看起来不错的内容。' }
           ],
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         llmAsJudge: {
           title: 'LLM-as-Judge评估方法',
-          content: '**LLM-as-Judge使用强大的模型（通常是GPT-4o或Claude Opus 4.7）根据标准对输出进行评分。** 这将评估扩展到数千个测试用例，无需人工审查，并处理二值指标无法捕捉的质量维度：连贯性、语气、完整性和事实准确性。\n\nJudge方法需要：\n\n1. 详细的标准（每个维度的评分标准）\n2. 结构化的输出格式（例如包含分数和理由的JSON）\n3. 当你[跨模型测试提示词](/prompt-engineering/how-to-test-prompts-across-models?lang=zh)时，针对你的特定任务将Judge与人工判断相校准',
+          content: '**LLM-as-Judge使用强大的模型（通常是GPT-4o或Claude Opus 4.7）根据标准对输出进行评分。** 这将评估扩展到数千个测试用例，无需人工审查，并处理二值指标无法捕捉的质量维度：连贯性、语气、完整性和事实准确性。\n\nJudge方法需要：\n\n1. 详细的标准（每个维度的评分标准）\n2. 结构化的输出格式（例如包含分数和理由的JSON）\n3. 当你[跨模型测试提示词](/zh/prompt-engineering/how-to-test-prompts-across-models)时，针对你的特定任务将Judge与人工判断相校准',
           columns: ['评估维度', '优势', '局限性'],
           rows: [
             { '评估维度': '可扩展性', '优势': '每小时数千个案例', '局限性': 'API成本随体积增加' },
@@ -1411,7 +1411,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         regressionMetrics: {
           title: '如何检测指标回归？',
-          content: '**按提示词版本追踪主要指标，并在其从既定基准下降超过5个百分点时发出警报。** 每次提示词变更、模型更新或温度调整前后运行相同的测试集。\n\n当你实现[提示词审计和回归风险](/prompt-engineering/prompt-audit-and-regression-risk?lang=zh)检测时，遵循此工作流程：\n\n1. 将当前指标分数记录为基准（例如通过率 = 91%）\n2. 进行提示词变更\n3. 重新运行完整测试集\n4. 将新分数与基准进行比较\n5. 如果下降 > 5点：阻止、调查、修复\n\n对于CI/CD中的自动回归检测，[Promptfoo](https://www.promptfoo.dev)等工具与GitHub Actions集成，如果通过率下降到阈值以下可以导致PR失败。',
+          content: '**按提示词版本追踪主要指标，并在其从既定基准下降超过5个百分点时发出警报。** 每次提示词变更、模型更新或温度调整前后运行相同的测试集。\n\n当你实现[提示词审计和回归风险](/zh/prompt-engineering/prompt-audit-and-regression-risk)检测时，遵循此工作流程：\n\n1. 将当前指标分数记录为基准（例如通过率 = 91%）\n2. 进行提示词变更\n3. 重新运行完整测试集\n4. 将新分数与基准进行比较\n5. 如果下降 > 5点：阻止、调查、修复\n\n对于CI/CD中的自动回归检测，[Promptfoo](https://www.promptfoo.dev)等工具与GitHub Actions集成，如果通过率下降到阈值以下可以导致PR失败。',
           callouts: [
             { type: 'practice', label: '最佳实践', text: '将Promptfoo与GitHub Actions集成以在通过率低于阈值时自动导致PR失败。这可防止提示词回归到达生产环境。' }
           ],
@@ -1442,12 +1442,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[如何评估提示词质量](/prompt-engineering/how-to-evaluate-prompt-quality?lang=zh) — 三部分框架：准确性、一致性、指令遵从率',
-            '[跨模型测试提示词](/prompt-engineering/how-to-test-prompts-across-models?lang=zh) — 在GPT-4o、Claude和Gemini上运行相同测试集',
-            '[提示词审计和回归风险](/prompt-engineering/prompt-audit-and-regression-risk?lang=zh) — 自动化回归套件和CI/CD门禁',
-            '[Braintrust vs Prompthub vs Vellum](/prompt-engineering/braintrust-vs-prompthub-vs-vellum?lang=zh) — 比较团队的专用评估平台',
-            '[最佳提示词测试与评估工具2026](/prompt-engineering/best-prompt-testing-tools?lang=zh) — 排名的系统提示词QA工具',
-            '[构建提示词库](/prompt-engineering/build-a-prompt-library?lang=zh) — 提示词版本控制和整理与其评估基准',
+            '[如何评估提示词质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 三部分框架：准确性、一致性、指令遵从率',
+            '[跨模型测试提示词](/zh/prompt-engineering/how-to-test-prompts-across-models) — 在GPT-4o、Claude和Gemini上运行相同测试集',
+            '[提示词审计和回归风险](/zh/prompt-engineering/prompt-audit-and-regression-risk) — 自动化回归套件和CI/CD门禁',
+            '[Braintrust vs Prompthub vs Vellum](/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum) — 比较团队的专用评估平台',
+            '[最佳提示词测试与评估工具2026](/zh/prompt-engineering/best-prompt-testing-tools) — 排名的系统提示词QA工具',
+            '[构建提示词库](/zh/prompt-engineering/build-a-prompt-library) — 提示词版本控制和整理与其评估基准',
           ],
         },
         faq: {

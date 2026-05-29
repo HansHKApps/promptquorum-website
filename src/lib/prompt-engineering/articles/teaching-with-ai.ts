@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/teaching-with-ai',
         inLanguage: 'de',
         headline: 'Mit KI unterrichten 2026: Harvard-Studie zeigt 2× Lernzuwachs — Tools, Prompts & EU AI Act Leitfaden',
         description: 'Harvard-Studie: KI-Tutoring verdoppelte den Lernerfolg bei 18 % weniger Lernzeit. 85 % der Lehrkräfte nutzen KI — strukturierte Prompts sparen 5–13 Std./Woche. Best Tools für Lehrkräfte und EU AI Act Richtlinien.',
@@ -659,7 +659,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=de',
+          url: 'https://www.promptquorum.com/de/api/og/teaching-with-ai',
           width: 1200,
           height: 630,
         },
@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'HowTo',
         inLanguage: 'de',
         name: 'So integrieren Sie KI in Ihren Unterricht',
-        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/teaching-with-ai',
         step: [
           {
             '@type': 'HowToStep',
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'de',
         name: 'KI-Tools für Lehrkräfte 2026',
         description: 'Vergleich von KI-Lehrkräfte-Tools für den Klasseneinsatz',
-        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=de',
+        url: 'https://www.promptquorum.com/de/prompt-engineering/teaching-with-ai',
         numberOfItems: 6,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'Schülernachhilfe durch sokratische Fragestellung. K-12, Khan Academy Ökosystem. 44 US-Dollar pro Jahr.' },
@@ -865,7 +865,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Im Mai 2026 führen KI-Lehrkräfte-Tools vier unterschiedliche Funktionen aus: personalisierte Nachhilfe, Unterrichtsplangenerierung, automatisiertes Bewertungsfeedback und Reduktion von Verwaltungsaufgaben — jedes erfordert ein anderes Tool und eine andere Prompt-Struktur.**',
             'Intelligente Tutorialsysteme (ITS) — die technische Kategorie für Tools wie Khanmigo — passen Schwierigkeitsgrad an, bieten sofortiges Feedback und führen Schüler durch sokratische Fragestellung, anstatt direkte Antworten zu geben. Universelle LLMs (Large Language Models) wie GPT-4o (OpenAI) und Claude Sonnet 4.6 (Anthropic) bearbeiten Unterrichtsplangenerierung, Rubrik-Erstellung und differenzierte Unterrichtsmaterialien. Verwaltungs-KI-Tools bearbeiten Anwesenheitszusammenfassungen, Elternkommunikationsentwürfe und Fortschrittsberichte — die Aufgaben, die Lehrkräfte als am zeitintensivsten berichten.',
-            'In einem Satz: [KI im Unterricht](/prompt-engineering/what-is-prompt-engineering?lang=de) ist nicht ein Tool — es ist ein Stack, wo jede Schicht eine bestimmte Rolle im Unterrichts-Workflow erfüllt.',
+            'In einem Satz: [KI im Unterricht](/de/prompt-engineering/what-is-prompt-engineering) ist nicht ein Tool — es ist ein Stack, wo jede Schicht eine bestimmte Rolle im Unterrichts-Workflow erfüllt.',
           ],
           snippets: [
             { type: 'in-one-sentence', text: 'KI-Lehrkräfte-Tools umfassen Tutorialsysteme (Khanmigo), Unterrichtsplaner (ChatGPT, Claude) und Verwaltungsassistenten — jedes optimiert für verschiedene Klassenzimmeraufgaben.' },
@@ -969,14 +969,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         localLLMs: {
           title: 'Private Schul-KI: Lokale LLMs für Datenschutz',
           content: [
-            'Für Schulen mit strengen Datenschutzanforderungen — besonders EU-Schulen unter DSGVO — bieten lokale LLMs via [Ollama](/local-llms/how-to-install-ollama?lang=de) eine Null-Daten-Ausgang-Alternative. Ein Schul-Laptop mit 16 GB RAM führt Qwen3 8B oder Llama 4 Scout lokal aus, bearbeitet Unterrichtsplanung und Formativ-Feedback ohne dass Schülerdaten das Gerät verlassen. Die Qualität ist niedriger als Frontier-Cloud-Modelle, aber ausreichend für routinemäßige Planungsaufgaben. Siehe [Was sind lokale LLMs?](/local-llms/what-are-local-llms?lang=de) für Setupanleitung.',
+            'Für Schulen mit strengen Datenschutzanforderungen — besonders EU-Schulen unter DSGVO — bieten lokale LLMs via [Ollama](/de/local-llms/how-to-install-ollama) eine Null-Daten-Ausgang-Alternative. Ein Schul-Laptop mit 16 GB RAM führt Qwen3 8B oder Llama 4 Scout lokal aus, bearbeitet Unterrichtsplanung und Formativ-Feedback ohne dass Schülerdaten das Gerät verlassen. Die Qualität ist niedriger als Frontier-Cloud-Modelle, aber ausreichend für routinemäßige Planungsaufgaben. Siehe [Was sind lokale LLMs?](/de/local-llms/what-are-local-llms) für Setupanleitung.',
           ],
         },
         promptStructure: {
           title: 'Wie schreibe ich Prompts für Unterrichtsaufgaben',
           content: [
             '**Ein strukturierter Lehrkräfte-Prompt — einer, der Klassenstufe, Fach, Lernziel, Vorwissen, Zeitbeschränkungen und Ausgabeformat spezifiziert — erzeugt classroom-ready Materialien ohne Bearbeitung; ein unstrukturierter Prompt erzeugt einen generischen Entwurf, der 30+ Minuten Überarbeitung erfordert.**',
-            '[Prompt-Engineering](/prompt-engineering/what-is-prompt-engineering?lang=de) ist die Praktik der Erstellung präziser, strukturierter Anweisungen, die KI-Output leiten. Für Lehrkräfte ist der Unterschied zwischen einem nutzbaren und unnutzbaren KI-Output fast immer in der Spezifität des Prompts, nicht in der Fähigkeit des Modells.',
+            '[Prompt-Engineering](/de/prompt-engineering/what-is-prompt-engineering) ist die Praktik der Erstellung präziser, strukturierter Anweisungen, die KI-Output leiten. Für Lehrkräfte ist der Unterschied zwischen einem nutzbaren und unnutzbaren KI-Output fast immer in der Spezifität des Prompts, nicht in der Fähigkeit des Modells.',
           ],
           snippets: [
             { type: 'in-plain-terms', text: 'Denken Sie an KI-Prompts wie an Rezepte: vage Prompts („machen Sie etwas Leckeres\") produzieren inkonsistente Ergebnisse; detaillierte Prompts („backen Sie einen Schokoladenkuchen bei 175°C für 35 Minuten mit Zartbitterschokolade\") produzieren zuverlässige Ergebnisse.' },
@@ -1010,7 +1010,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie schreibe ich KI-Prompts für Bewertungsfeedback?',
           content: [
             '**Für Formativ-Bewertung: Inkludieren Sie Ihre Rubrik-Kriterien direkt im Prompt, damit die KI Ihre Benotungsstandards versteht und sie konsistent über alle Schülereinreichungen anwendet.**',
-            'Claude Sonnet 4.6s 1.000.000-Token [Kontextfenster](/prompt-engineering/context-windows-explained?lang=de) behandelt vollständige Klassensätze von Essays in einer einzelnen Sitzung — ungefähr 800 Standardseiten — was Batch-Feedback-Generierung für Lehrkräfte mit großen Klassen praktisch macht. GPT-4o behandelt ~800 Seiten pro Sitzung (1M Token), ausreichend für jede Klassengröße.',
+            'Claude Sonnet 4.6s 1.000.000-Token [Kontextfenster](/de/prompt-engineering/context-windows-explained) behandelt vollständige Klassensätze von Essays in einer einzelnen Sitzung — ungefähr 800 Standardseiten — was Batch-Feedback-Generierung für Lehrkräfte mit großen Klassen praktisch macht. GPT-4o behandelt ~800 Seiten pro Sitzung (1M Token), ausreichend für jede Klassengröße.',
           ],
           blockquote: 'Du bist eine erfahrene Englisch-Lehrerin der siebten Klasse. Analysiere diesen Schüler-Überzeugungsessay unter Verwendung dieser Rubrik: klare These (4 Punkte), drei stützende Argumente mit Belegen (12 Punkte), Anerkennung des Gegenarguments (4 Punkte), formale Übergänge (3 Punkte), Schlussfolgerung, die These verstärkt (3 Punkte). Für jedes Kriterium: geben Sie die Bewertung an, zitieren Sie den relevanten Satz, und schreiben Sie einen spezifischen Verbesserungsvorschlag. Gesamtbewertung von 26 Punkten.',
           callouts: [
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         integrityProblem: {
           title: 'Wie erkennbar ist KI-Betrug in Schulen?',
           content: [
-            '**Aktuelle KI-Erkennungstools haben in begutachteten Studien falsch-positive Raten von 15–30 %, was bedeutet, dass sie für risikoreiche akademische Integritätsentscheidungen unzuverlässig sind — und viele Schüler nutzen [KI-Halluzinationen](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) strategisch, um Erkennung zu vermeiden.**',
+            '**Aktuelle KI-Erkennungstools haben in begutachteten Studien falsch-positive Raten von 15–30 %, was bedeutet, dass sie für risikoreiche akademische Integritätsentscheidungen unzuverlässig sind — und viele Schüler nutzen [KI-Halluzinationen](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) strategisch, um Erkennung zu vermeiden.**',
             'Akademische Integrität ist die zentrale Herausforderung in KI-unterstützter Bildung. Der Umfang der Adoption hat sowohl Richtlinien als auch Erkennungstechnologie überholt. Schüler-Adoption ist weit verbreitet: Umfragen berichten 60–92 % der Schüler nutzen KI zum Lernen, obwohl institutionelle Richtlinien bezüglich erlaubter Nutzungen stark unterscheiden.',
             'Das Erkennungsproblem hat drei kritische Schichten:',
           ],
@@ -1111,15 +1111,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Was ist Prompt-Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — die grundlegenden Prinzipien hinter effektiven KI-Anweisungen',
-            '[Schreiben Sie besseren Code mit KI](/prompt-engineering/write-better-code-with-ai?lang=de) — wie strukturierte Prompts zuverlässige KI-Ausgaben erzeugen — anwendbar auf Unterrichtsplanung und Bewertungsgenerierung',
-            '[KI-Einschränkungen — Was LLMs nicht können](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — warum KI-Halluzination Lehrkräfte-Tools beeinflusst und wie man drumherum entwirft',
-            '[KI-gestützte Forschung](/prompt-engineering/ai-powered-research?lang=de) — Validierungs-Workflows für KI-generierte Inhalte, anwendbar auf Schüler- und Lehrkräfte-Forschungsaufgaben',
-            '[Persona-Prompting](/prompt-engineering/persona-prompting?lang=de) — wie Rollen-Definitionen wie „erfahrener Fünftklasse-Mathematik-Lehrer\" KI-Output-Qualität und Konsistenz ändern',
-            '[Chain-of-Thought-Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — die Reasoning-Technik hinter sokratischen KI-Tutoren wie Khanmigo',
-            '[Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) — wesentlich zur Kontrolle des KI-Output-Formats in Unterrichtsmaterialien',
-            '[Extract and Summarise](/prompt-engineering/extract-and-summarise?lang=de) — Techniken für KI-unterstütztes Leseverständnis und Dokumentenanalyse in Klassenzimmern',
-            '[5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — die universelle Prompt-Struktur, auf der das Lehrkräfte-Prompt-Framework aufbaut',
+            '[Was ist Prompt-Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — die grundlegenden Prinzipien hinter effektiven KI-Anweisungen',
+            '[Schreiben Sie besseren Code mit KI](/de/prompt-engineering/write-better-code-with-ai) — wie strukturierte Prompts zuverlässige KI-Ausgaben erzeugen — anwendbar auf Unterrichtsplanung und Bewertungsgenerierung',
+            '[KI-Einschränkungen — Was LLMs nicht können](/de/prompt-engineering/ai-limitations-what-llms-cant-do) — warum KI-Halluzination Lehrkräfte-Tools beeinflusst und wie man drumherum entwirft',
+            '[KI-gestützte Forschung](/de/prompt-engineering/ai-powered-research) — Validierungs-Workflows für KI-generierte Inhalte, anwendbar auf Schüler- und Lehrkräfte-Forschungsaufgaben',
+            '[Persona-Prompting](/de/prompt-engineering/persona-prompting) — wie Rollen-Definitionen wie „erfahrener Fünftklasse-Mathematik-Lehrer\" KI-Output-Qualität und Konsistenz ändern',
+            '[Chain-of-Thought-Prompting](/de/prompt-engineering/chain-of-thought-prompting) — die Reasoning-Technik hinter sokratischen KI-Tutoren wie Khanmigo',
+            '[Constrained Prompting](/de/prompt-engineering/constrained-prompting) — wesentlich zur Kontrolle des KI-Output-Formats in Unterrichtsmaterialien',
+            '[Extract and Summarise](/de/prompt-engineering/extract-and-summarise) — Techniken für KI-unterstütztes Leseverständnis und Dokumentenanalyse in Klassenzimmern',
+            '[5 Building Blocks Every Prompt Needs](/de/prompt-engineering/5-building-blocks-every-prompt-needs) — die universelle Prompt-Struktur, auf der das Lehrkräfte-Prompt-Framework aufbaut',
           ],
         },
         howToStart: {
@@ -1238,7 +1238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/teaching-with-ai',
         inLanguage: 'es',
         headline: 'Enseñar con IA en 2026: Estudio Harvard Muestra 2× Más Aprendizaje — Herramientas, Prompts y Guía Ley de IA de la UE',
         description: 'ECA de Harvard: la tutoría con IA produjo 2× las ganancias de aprendizaje en un 18 % menos de tiempo. Las mejores herramientas para docentes (Khanmigo, MagicSchool), framework de prompts de 5 partes y obligaciones escolares de la Ley de IA de la UE.',
@@ -1308,7 +1308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'HowTo',
         inLanguage: 'es',
         name: 'Cómo integrar la IA en tu enseñanza',
-        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/teaching-with-ai',
         step: [
           { '@type': 'HowToStep', position: 1, name: 'Define los objetivos de aprendizaje y las evaluaciones antes de introducir la IA', text: 'Especifica qué deben saber los estudiantes y cómo lo evaluarás. Luego diseña dónde la IA amplifica la instrucción.' },
           { '@type': 'HowToStep', position: 2, name: 'Usa la IA para práctica personalizada y retroalimentación inmediata, no para calificación', text: 'La IA destaca en la generación de problemas de práctica y en la provisión de retroalimentación inmediata. Evita usar la IA para calificación subjetiva sin revisión humana.' },
@@ -1323,7 +1323,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'es',
         name: 'Herramientas de IA para docentes 2026',
         description: 'Comparativa de herramientas de IA para docentes para uso en el aula',
-        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/teaching-with-ai',
         numberOfItems: 6,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'Tutoría estudiantil mediante cuestionamiento socrático. K-12, ecosistema Khan Academy. 44 USD al año.' },
@@ -1549,14 +1549,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lectura relacionada',
           items: [
-            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — los principios fundamentales detrás de las instrucciones de IA eficaces',
-            '[Escribe mejor código con IA](/prompt-engineering/write-better-code-with-ai?lang=es) — cómo los prompts estructurados generan salidas de IA fiables — aplicable a la planificación de lecciones y la generación de evaluaciones',
-            '[Limitaciones de la IA — Qué no pueden hacer los LLMs](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es) — por qué la alucinación de IA afecta a las herramientas para docentes y cómo diseñar alrededor de ella',
-            '[Investigación con IA](/prompt-engineering/ai-powered-research?lang=es) — flujos de trabajo de validación para contenido generado por IA, aplicables a tareas de investigación de estudiantes y docentes',
-            '[Persona Prompting](/prompt-engineering/persona-prompting?lang=es) — cómo las definiciones de rol como "docente de matemáticas de quinto grado con experiencia" cambian la calidad y la coherencia de la salida de IA',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=es) — la técnica de razonamiento detrás de los tutores de IA socráticos como Khanmigo',
-            '[Prompting restringido](/prompt-engineering/constrained-prompting?lang=es) — esencial para controlar el formato de salida de IA en los materiales de las lecciones',
-            '[5 bloques de construcción que necesita cada prompt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — la estructura universal de prompts sobre la que se construye el framework de prompts para docentes',
+            '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — los principios fundamentales detrás de las instrucciones de IA eficaces',
+            '[Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai) — cómo los prompts estructurados generan salidas de IA fiables — aplicable a la planificación de lecciones y la generación de evaluaciones',
+            '[Limitaciones de la IA — Qué no pueden hacer los LLMs](/es/prompt-engineering/ai-limitations-what-llms-cant-do) — por qué la alucinación de IA afecta a las herramientas para docentes y cómo diseñar alrededor de ella',
+            '[Investigación con IA](/es/prompt-engineering/ai-powered-research) — flujos de trabajo de validación para contenido generado por IA, aplicables a tareas de investigación de estudiantes y docentes',
+            '[Persona Prompting](/es/prompt-engineering/persona-prompting) — cómo las definiciones de rol como "docente de matemáticas de quinto grado con experiencia" cambian la calidad y la coherencia de la salida de IA',
+            '[Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting) — la técnica de razonamiento detrás de los tutores de IA socráticos como Khanmigo',
+            '[Prompting restringido](/es/prompt-engineering/constrained-prompting) — esencial para controlar el formato de salida de IA en los materiales de las lecciones',
+            '[5 bloques de construcción que necesita cada prompt](/es/prompt-engineering/5-building-blocks-every-prompt-needs) — la estructura universal de prompts sobre la que se construye el framework de prompts para docentes',
           ],
         },
         howToStart: {
@@ -1673,7 +1673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=fr',
+    url: 'https://www.promptquorum.com/fr/prompt-engineering/teaching-with-ai',
     inLanguage: 'fr',
     headline: 'Enseigner avec l\'IA en 2026 : étude Harvard révèle un gain de 2× — outils, prompts et guide loi IA de l\'UE',
     description: 'Étude Harvard : le tutorat IA double les résultats d\'apprentissage en 18 % moins de temps. Meilleurs outils pour enseignants et obligations loi IA de l\'UE.',
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     image: {
       '@type': 'ImageObject',
-      url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=fr',
+      url: 'https://www.promptquorum.com/fr/api/og/teaching-with-ai',
       width: 1200,
       height: 630,
     },
@@ -1820,7 +1820,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'HowTo',
     inLanguage: 'fr',
     name: 'Comment intégrer l\'IA dans l\'enseignement',
-    url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=fr',
+    url: 'https://www.promptquorum.com/fr/prompt-engineering/teaching-with-ai',
     step: [
       {
         '@type': 'HowToStep',
@@ -1860,7 +1860,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     inLanguage: 'fr',
     name: 'Outils IA pour enseignants 2026',
     description: 'Comparaison des outils pédagogiques IA pour utilisation en classe',
-    url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=fr',
+    url: 'https://www.promptquorum.com/fr/prompt-engineering/teaching-with-ai',
     numberOfItems: 6,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'Tutorat des élèves par questionnement socratique. K-12, écosystème Khan Academy. 44 $ par année.' },
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content: [
         '**En avril 2026, les outils pédagogiques IA exécutent quatre fonctions distinctes : tutorat personnalisé, génération de plans d\'études, rétroaction d\'évaluation automatisée et réduction des tâches administratives — chacun nécessite un outil différent et une structure de prompt différente.**',
         'Les systèmes tutoriels intelligents (STI) — la catégorie technique pour des outils comme Khanmigo — adaptent le niveau de difficulté, fournissent une rétroaction immédiate et guident les élèves par questionnement socratique plutôt que de donner des réponses directes. Les LLM universels (Large Language Models) comme GPT-4o (OpenAI) et Claude Sonnet 4.6 (Anthropic) gèrent la génération de plans d\'études, la création de rubriques et les matériels d\'enseignement différenciés. Les outils IA administratifs gèrent les résumés de présence, les brouillons de communication parentale et les rapports de progrès — les tâches que les enseignants signalent comme les plus exigeantes en temps.',
-        'En une phrase : [l\'IA en enseignement](/prompt-engineering/what-is-prompt-engineering?lang=fr) n\'est pas un seul outil — c\'est une pile où chaque couche joue un rôle spécifique dans le flux de travail pédagogique.',
+        'En une phrase : [l\'IA en enseignement](/fr/prompt-engineering/what-is-prompt-engineering) n\'est pas un seul outil — c\'est une pile où chaque couche joue un rôle spécifique dans le flux de travail pédagogique.',
       ],
       snippets: [
         { type: 'in-one-sentence', text: 'Les outils pédagogiques IA comprennent des systèmes tutoriels (Khanmigo), des planificateurs de cours (ChatGPT, Claude) et des assistants administratifs — chacun optimisé pour différentes tâches en classe.' },
@@ -2004,14 +2004,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     localLLMs: {
       title: 'IA scolaire privée : LLM locaux pour confidentialité des données',
       content: [
-        'Pour les écoles aux exigences strictes de confidentialité des données — particulièrement les écoles de l\'UE sous RGPD — les LLM locaux via [Ollama](/local-llms/how-to-install-ollama?lang=fr) offrent une alternative sans sortie de données. Un ordinateur portable scolaire avec 16 Go de RAM exécute Qwen3 8B ou Llama 4 Scout localement, gérant la planification pédagogique et les retours d\'apprentissage sans qu\'aucune donnée d\'élève ne quitte l\'appareil. La qualité est inférieure aux modèles cloud frontière mais suffisante pour les tâches de planification courante. Voir [Que sont les LLM locaux ?](/local-llms/what-are-local-llms?lang=fr) pour un guide de configuration.',
+        'Pour les écoles aux exigences strictes de confidentialité des données — particulièrement les écoles de l\'UE sous RGPD — les LLM locaux via [Ollama](/fr/local-llms/how-to-install-ollama) offrent une alternative sans sortie de données. Un ordinateur portable scolaire avec 16 Go de RAM exécute Qwen3 8B ou Llama 4 Scout localement, gérant la planification pédagogique et les retours d\'apprentissage sans qu\'aucune donnée d\'élève ne quitte l\'appareil. La qualité est inférieure aux modèles cloud frontière mais suffisante pour les tâches de planification courante. Voir [Que sont les LLM locaux ?](/fr/local-llms/what-are-local-llms) pour un guide de configuration.',
       ],
     },
     promptStructure: {
       title: 'Comment rédiger des prompts pour les tâches pédagogiques',
       content: [
         '**Un prompt d\'enseignant structuré — qui spécifie le niveau de classe, la matière, l\'objectif d\'apprentissage, les connaissances préalables, les contraintes de temps et le format de sortie — produit du matériel prêt pour la classe sans édition ; un prompt non structuré produit un brouillon générique nécessitant 30+ minutes de retouche.**',
-        '[L\'engineering des prompts](/prompt-engineering/what-is-prompt-engineering?lang=fr) est la pratique de créer des instructions précises et structurées qui guident la sortie d\'IA. Pour les enseignants, la différence entre une sortie utilisable et inutilisable réside presque toujours dans la spécificité du prompt, non dans les capacités du modèle.',
+        '[L\'engineering des prompts](/fr/prompt-engineering/what-is-prompt-engineering) est la pratique de créer des instructions précises et structurées qui guident la sortie d\'IA. Pour les enseignants, la différence entre une sortie utilisable et inutilisable réside presque toujours dans la spécificité du prompt, non dans les capacités du modèle.',
       ],
       snippets: [
         { type: 'in-plain-terms', text: 'Pensez aux prompts IA comme à des recettes : les prompts vagues (« cuisinez quelque chose de délicieux ») produisent des résultats incohérents ; les prompts détaillés (« préparez un gâteau au chocolat à 175°C pendant 35 minutes avec du chocolat noir ») produisent des résultats fiables.' },
@@ -2045,7 +2045,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Comment rédiger des prompts IA pour les commentaires d\'évaluation ?',
       content: [
         '**Pour l\'évaluation formative : incluez vos critères de rubrique directement dans le prompt, afin que l\'IA comprenne vos normes de notation et les applique régulièrement à tous les travaux des élèves.**',
-        'La [fenêtre de contexte](/prompt-engineering/context-windows-explained?lang=fr) de 200 000 tokens de Claude Sonnet 4.6 traite des séries complètes de courts essais en une seule session — environ 160 pages standard — rendant la génération de rétroaction en lot pratique pour les enseignants avec de grandes classes. GPT-4o traite ~100 pages par session, suffisant pour les tailles de classe typiques.',
+        'La [fenêtre de contexte](/fr/prompt-engineering/context-windows-explained) de 200 000 tokens de Claude Sonnet 4.6 traite des séries complètes de courts essais en une seule session — environ 160 pages standard — rendant la génération de rétroaction en lot pratique pour les enseignants avec de grandes classes. GPT-4o traite ~100 pages par session, suffisant pour les tailles de classe typiques.',
       ],
       blockquote: 'Tu es une enseignante expérimentée d\'anglais en septième année. Analyse cet essai persuasif d\'élève en utilisant cette rubrique : thèse claire (4 points), trois arguments avec preuves (12 points), reconnaissance du contre-argument (4 points), transitions formelles (3 points), conclusion renforçant la thèse (3 points). Pour chaque critère : donne la note, cite la phrase pertinente et écris une suggestion d\'amélioration spécifique. Score total sur 26 points.',
       callouts: [
@@ -2072,7 +2072,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     integrityProblem: {
       title: 'La triche par IA est-elle détectable dans les établissements scolaires ?',
       content: [
-        '**Les outils de détection d\'IA actuels ont des taux de faux positifs de 15–30 % dans les études examinées par les pairs, ce qui les rend peu fiables pour les décisions d\'intégrité académique à haut risque — et de nombreux élèves utilisent stratégiquement les [hallucinations d\'IA](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) pour éviter la détection.**',
+        '**Les outils de détection d\'IA actuels ont des taux de faux positifs de 15–30 % dans les études examinées par les pairs, ce qui les rend peu fiables pour les décisions d\'intégrité académique à haut risque — et de nombreux élèves utilisent stratégiquement les [hallucinations d\'IA](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) pour éviter la détection.**',
         'L\'intégrité académique est le défi central de l\'éducation assistée par IA. Le rythme d\'adoption a surpassé à la fois les politiques et la technologie de détection. L\'adoption par les élèves est répandue : les sondages signalent 60–92 % des élèves utilisant l\'IA pour l\'apprentissage, bien que les politiques institutionnelles varient considérablement sur l\'utilisation permise.',
         'Le problème de détection a trois couches critiques :',
       ],
@@ -2148,15 +2148,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: 'Lectures complémentaires',
       items: [
-        '[Qu\'est-ce que l\'engineering des prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — les principes fondamentaux derrière les instructions IA efficaces',
-        '[Écrivez un meilleur code avec l\'IA](/prompt-engineering/write-better-code-with-ai?lang=fr) — comment des prompts structurés produisent des résultats IA fiables — applicable à la planification des cours et la génération d\'évaluations',
-        '[Limitations de l\'IA — Ce que les LLM ne peuvent pas faire](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — pourquoi l\'hallucination d\'IA affecte les outils pédagogiques et comment en tenir compte',
-        '[Recherche assistée par IA](/prompt-engineering/ai-powered-research?lang=fr) — flux de validation pour le contenu généré par IA, applicable aux tâches de recherche des élèves et enseignants',
-        '[Prompting par persona](/prompt-engineering/persona-prompting?lang=fr) — comment les définitions de rôle comme « enseignant de mathématiques de cinquième année expérimenté » changent la qualité et la cohérence de la sortie IA',
-        '[Prompting par chaîne de pensée](/prompt-engineering/chain-of-thought-prompting?lang=fr) — la technique de raisonnement derrière les tuteurs IA socratiques comme Khanmigo',
-        '[Prompting contraint](/prompt-engineering/constrained-prompting?lang=fr) — essentiel pour contrôler le format de sortie IA dans les matériels pédagogiques',
-        '[Extraire et résumer](/prompt-engineering/extract-and-summarise?lang=fr) — techniques de compréhension de lecture assistée par IA et analyse de documents en classe',
-        '[5 briques élémentaires chaque prompt doit avoir](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) — la structure universelle de prompt sur laquelle le framework de prompt pédagogique s\'appuie',
+        '[Qu\'est-ce que l\'engineering des prompts ?](/fr/prompt-engineering/what-is-prompt-engineering) — les principes fondamentaux derrière les instructions IA efficaces',
+        '[Écrivez un meilleur code avec l\'IA](/fr/prompt-engineering/write-better-code-with-ai) — comment des prompts structurés produisent des résultats IA fiables — applicable à la planification des cours et la génération d\'évaluations',
+        '[Limitations de l\'IA — Ce que les LLM ne peuvent pas faire](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — pourquoi l\'hallucination d\'IA affecte les outils pédagogiques et comment en tenir compte',
+        '[Recherche assistée par IA](/fr/prompt-engineering/ai-powered-research) — flux de validation pour le contenu généré par IA, applicable aux tâches de recherche des élèves et enseignants',
+        '[Prompting par persona](/fr/prompt-engineering/persona-prompting) — comment les définitions de rôle comme « enseignant de mathématiques de cinquième année expérimenté » changent la qualité et la cohérence de la sortie IA',
+        '[Prompting par chaîne de pensée](/fr/prompt-engineering/chain-of-thought-prompting) — la technique de raisonnement derrière les tuteurs IA socratiques comme Khanmigo',
+        '[Prompting contraint](/fr/prompt-engineering/constrained-prompting) — essentiel pour contrôler le format de sortie IA dans les matériels pédagogiques',
+        '[Extraire et résumer](/fr/prompt-engineering/extract-and-summarise) — techniques de compréhension de lecture assistée par IA et analyse de documents en classe',
+        '[5 briques élémentaires chaque prompt doit avoir](/fr/prompt-engineering/5-building-blocks-every-prompt-needs) — la structure universelle de prompt sur laquelle le framework de prompt pédagogique s\'appuie',
       ],
     },
     faq: {
@@ -2252,7 +2252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/teaching-with-ai',
     inLanguage: 'ja',
     headline: 'AIで教える：教育者向けのツール、成果、プロンプト 2026',
     description: 'AIチューターシステムは従来の教室と比べて学習成果を2倍にします。教師がAIを計画、評価、生徒チューターに使用する方法と、2026年に米国教師の85%がAIを採用した理由を学びます。',
@@ -2290,7 +2290,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     image: {
       '@type': 'ImageObject',
-      url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=ja',
+      url: 'https://www.promptquorum.com/ja/api/og/teaching-with-ai',
       width: 1200,
       height: 630,
     },
@@ -2329,7 +2329,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'HowTo',
     inLanguage: 'ja',
     name: 'AIを指導に統合する方法',
-    url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/teaching-with-ai',
     step: [
       { '@type': 'HowToStep', position: 1, name: 'AIを導入する前に学習目標と評価を定義する', text: '生徒が何を知る必要があるか、どう評価するかを指定してください。それからAIが教えを増幅する場所を設計します。' },
       { '@type': 'HowToStep', position: 2, name: 'パーソナライズ実践と即座フィードバック向けAI、採点ではなく', text: 'AIは練習問題作成と即座フィードバック提供が得意です。人間査読なしの主観的採点にAIを使うのは避けてください。' },
@@ -2344,7 +2344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     inLanguage: 'ja',
     name: '2026年教師向けAIツール',
     description: '教室使用向けAI教育ツールの比較',
-    url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=ja',
+    url: 'https://www.promptquorum.com/ja/prompt-engineering/teaching-with-ai',
     numberOfItems: 6,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'ソクラテス的質問による生徒チューター。K-12、Khan Academy エコシステム。年$44。' },
@@ -2385,7 +2385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content: [
         '**2026年4月時点で、教育用AIツールは4つの異なる機能を実行します：パーソナライズチューター、カリキュラム生成、自動評価フィードバック、管理作業削減 - 各機能は異なるツールと異なるプロンプト構造を必要とします。**',
         'インテリジェント先生システム（ITS）—Khanmigoのようなツール技術カテゴリー—は難易度を調整し、即座フィードバックを提供し、直接答えを与えるのではなくソクラテス的質問で生徒を導きます。汎用LLM（大言語モデル）、GPT-4o（OpenAI）とClaude Sonnet 4.6（Anthropic）はカリキュラム生成、ルーブリック作成、差別化教材を処理します。管理AIツールは出席サマリ、親通信草案、進捗レポート—教師が最も時間消費と報告するタスク—を処理します。',
-        '一文で：[教育におけるAI](/prompt-engineering/what-is-prompt-engineering?lang=ja)は1つのツールではなく—各レイヤーが教育ワークフロー内で特定の役割を遂行するスタック。',
+        '一文で：[教育におけるAI](/ja/prompt-engineering/what-is-prompt-engineering)は1つのツールではなく—各レイヤーが教育ワークフロー内で特定の役割を遂行するスタック。',
       ],
       snippets: [
         { type: 'in-one-sentence', text: '教育用AIツールはチューターシステム（Khanmigo）、コース計画機（ChatGPT、Claude）、管理アシスタント—各異なる教室タスク向けに最適化されています。' },
@@ -2428,14 +2428,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     localLLMs: {
       title: 'プライベート学校AI：データプライバシー向けローカルLLM',
       content: [
-        'GDPRを含み厳密なデータプライバシー要件を持つ学校向け—特にEU圏の学校—OllamaおよびLM Studioを通じたローカルLLMはゼロデータエグレス代替を提供します。16 GB RAM学校ラップトップでQwen3 8BまたはLlama 4 Scoutをローカルで実行し、レッスンプラン生成と形成フィードバックハンドル、学生データなしデバイス外へ移動。品質はフロンティアクラウドモデルより低いですが、ルーチン計画タスク向けに十分。セットアップガイダンス向けに[ローカルLLMとは何か？](/local-llms/what-are-local-llms?lang=ja)を参照。',
+        'GDPRを含み厳密なデータプライバシー要件を持つ学校向け—特にEU圏の学校—OllamaおよびLM Studioを通じたローカルLLMはゼロデータエグレス代替を提供します。16 GB RAM学校ラップトップでQwen3 8BまたはLlama 4 Scoutをローカルで実行し、レッスンプラン生成と形成フィードバックハンドル、学生データなしデバイス外へ移動。品質はフロンティアクラウドモデルより低いですが、ルーチン計画タスク向けに十分。セットアップガイダンス向けに[ローカルLLMとは何か？](/ja/local-llms/what-are-local-llms)を参照。',
       ],
     },
     promptStructure: {
       title: '教育タスク向けプロンプトの書き方',
       content: [
         '**構造化教師プロンプト—クラスレベル、対象、学習目標、前提知識、時間制約、出力形式を指定—は編集不要の教室対応資料を生み出します；非構造化プロンプトは30+分の修正が必要な汎用ドラフトを生み出します。**',
-        '[プロンプト工学](/prompt-engineering/what-is-prompt-engineering?lang=ja)は正確で構造化された指示を作成し、AIの結果を導く実践。教師にとって、使用可能と使用不可能な結果の違いはほぼ常にプロンプト特異性にあります、モデル能力ではなく。',
+        '[プロンプト工学](/ja/prompt-engineering/what-is-prompt-engineering)は正確で構造化された指示を作成し、AIの結果を導く実践。教師にとって、使用可能と使用不可能な結果の違いはほぼ常にプロンプト特異性にあります、モデル能力ではなく。',
       ],
       snippets: [
         { type: 'in-plain-terms', text: 'AIプロンプトをレシピとして考えてください：曖昧なプロンプト（「何かおいしい調理」）は不安定な結果を生み出します；詳細なプロンプト（「175℃で35分、ダークチョコレート使用してチョコレートケーキ調理」）は信頼できる結果を生み出します。' },
@@ -2469,7 +2469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '評価フィードバック向けAIプロンプトの書き方',
       content: [
         '**形成評価向け：ルーブリック基準をプロンプトに直接含めます、AIがあなたの採点基準を理解し、すべての生徒作業に一貫して適用できるように。**',
-        'Claude Sonnet 4.6の[コンテキストウィンドウ](/prompt-engineering/context-windows-explained?lang=ja)（200,000トークン）は短いエッセイの完全シリーズを1セッションで処理します—約160標準ページ—大クラスを持つ教師向けにバッチフィードバック生成を実践的にしています。GPT-4oは1セッション約100ページ処理し、典型的なクラスサイズに十分。',
+        'Claude Sonnet 4.6の[コンテキストウィンドウ](/ja/prompt-engineering/context-windows-explained)（200,000トークン）は短いエッセイの完全シリーズを1セッションで処理します—約160標準ページ—大クラスを持つ教師向けにバッチフィードバック生成を実践的にしています。GPT-4oは1セッション約100ページ処理し、典型的なクラスサイズに十分。',
       ],
       blockquote: 'あなたは経験豊かな7年生英語教師です。このルーブリック使用しこの学生説得エッセイを分析：明確なテーゼ（4ポイント）、証拠3つの議論（12ポイント）、反論認識（4ポイント）、形式的移行（3ポイント）、テーゼを補強する結論（3ポイント）。各基準向けに：スコアを与え、関連文を引用、特定改善提案を書いてください。26ポイント満点。',
       callouts: [
@@ -2496,7 +2496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     integrityProblem: {
       title: '学校におけるAI不正はどの程度検出可能か',
       content: [
-        '**現在のAI検出ツールは査読済み研究で15～30%の偽陽性率を持つため、高リスク学業不正決定向けに信頼できません—多くの生徒は戦略的に[AI幻覚](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja)を使って検出を回避します。**',
+        '**現在のAI検出ツールは査読済み研究で15～30%の偽陽性率を持つため、高リスク学業不正決定向けに信頼できません—多くの生徒は戦略的に[AI幻覚](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)を使って検出を回避します。**',
         '学業不整がAI支援教育における中心課題。採用速度は両ポリシーと検出技術を上回りました。生徒採用は広範：調査は学習向けAI使用を60～92%の生徒が報告、制度ポリシーは許可した使用について大きく異なりますが。検出問題は3つの重要レイヤーを持つ：',
       ],
       items: [
@@ -2571,15 +2571,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       title: '関連リソース',
       items: [
-        '[プロンプト工学とは何か](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 効果的なAI指示の背後にある基本的原理',
-        '[AIでより良いコードを書く](/prompt-engineering/write-better-code-with-ai?lang=ja) — 構造化されたプロンプトが信頼性の高いAI出力を生成する方法 — 授業計画と評価生成に適用可能',
-        '[AI制限—LLMができないこと](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — AIハルシネーション教育ツールに影響する理由と計画方法',
-        '[AI支援研究](/prompt-engineering/ai-powered-research?lang=ja) — AIで生成コンテンツ検証フロー、生徒と教師研究タスク適用可能',
-        '[ペルソナプロンプティング](/prompt-engineering/persona-prompting?lang=ja) — 「経験豊かな5年生算数教師」のような役割定義がAI出力品質と一貫性を変える方法',
-        '[チェーン・オブ・シンク・プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — Khanmigoのようなソクラテス的AIチューターの背後の推理技術',
-        '[プロンプティングを制約する](/prompt-engineering/constrained-prompting?lang=ja) — 教育資料のAI出力形式の制御に不可欠',
-        '[抽出と要約](/prompt-engineering/extract-and-summarise?lang=ja) — 教室での読書理解と文書分析をAIで支援する技術',
-        '[すべてのプロンプトが持つべき5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja) — 教師プロンプトフレームワークが構築される普遍的プロンプト構造',
+        '[プロンプト工学とは何か](/ja/prompt-engineering/what-is-prompt-engineering) — 効果的なAI指示の背後にある基本的原理',
+        '[AIでより良いコードを書く](/ja/prompt-engineering/write-better-code-with-ai) — 構造化されたプロンプトが信頼性の高いAI出力を生成する方法 — 授業計画と評価生成に適用可能',
+        '[AI制限—LLMができないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — AIハルシネーション教育ツールに影響する理由と計画方法',
+        '[AI支援研究](/ja/prompt-engineering/ai-powered-research) — AIで生成コンテンツ検証フロー、生徒と教師研究タスク適用可能',
+        '[ペルソナプロンプティング](/ja/prompt-engineering/persona-prompting) — 「経験豊かな5年生算数教師」のような役割定義がAI出力品質と一貫性を変える方法',
+        '[チェーン・オブ・シンク・プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — Khanmigoのようなソクラテス的AIチューターの背後の推理技術',
+        '[プロンプティングを制約する](/ja/prompt-engineering/constrained-prompting) — 教育資料のAI出力形式の制御に不可欠',
+        '[抽出と要約](/ja/prompt-engineering/extract-and-summarise) — 教室での読書理解と文書分析をAIで支援する技術',
+        '[すべてのプロンプトが持つべき5つの構成要素](/ja/prompt-engineering/5-building-blocks-every-prompt-needs) — 教師プロンプトフレームワークが構築される普遍的プロンプト構造',
       ],
     },
     faq: {
@@ -2644,7 +2644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=zh',
+        url: 'https://www.promptquorum.com/zh/prompt-engineering/teaching-with-ai',
         inLanguage: 'zh',
         headline: '2026年用AI教学：哈佛研究证明学习效果提升2倍——工具、提示词与EU AI法合规指南',
         description: 'AI辅导系统将学习成效提升至传统课堂的两倍。了解教师如何将AI用于课程规划、评估、学生辅导，以及为什么85%的美国教师在2026年采用了AI。',
@@ -2897,7 +2897,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         localLLMs: {
           title: '私密学校AI：本地LLM用于数据隐私',
           content: [
-            '对于具有严格数据隐私要求的学校——尤其是欧盟学校在GDPR下——通过Ollama的本地LLM提供零数据泄露的替代方案。学校笔记本电脑配有16GB RAM可在本地运行Qwen3 8B或Llama 4 Scout，处理课程计划生成和形成反馈，学生数据无需离开设备。质量低于前沿云模型，但足以处理日常规划任务。请参考[什么是本地LLM？](/local-llms/what-are-local-llms?lang=zh)了解设置指南。',
+            '对于具有严格数据隐私要求的学校——尤其是欧盟学校在GDPR下——通过Ollama的本地LLM提供零数据泄露的替代方案。学校笔记本电脑配有16GB RAM可在本地运行Qwen3 8B或Llama 4 Scout，处理课程计划生成和形成反馈，学生数据无需离开设备。质量低于前沿云模型，但足以处理日常规划任务。请参考[什么是本地LLM？](/zh/local-llms/what-are-local-llms)了解设置指南。',
           ],
         },
         definition: {
@@ -3085,15 +3085,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '相关资源',
           items: [
-            '[什么是提示词工程](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 有效AI指令背后的基本原理',
-            '[用AI写更好的代码](/prompt-engineering/write-better-code-with-ai?lang=zh) — 结构化提示词如何产生可靠的AI输出 — 适用于课程规划和评估生成',
-            '[AI局限——LLM无法做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — AI幻觉如何影响教学工具以及如何规划',
-            '[AI支持的研究](/prompt-engineering/ai-powered-research?lang=zh) — AI生成内容验证工作流，可应用于学生和教师研究任务',
-            '[角色提示词](/prompt-engineering/persona-prompting?lang=zh) — 角色定义（如「经验丰富的五年级数学教师」）如何改变AI输出质量和一致性',
-            '[链式思维提示词](/prompt-engineering/chain-of-thought-prompting?lang=zh) — Khanmigo等苏格拉底式AI导师背后的推理技术',
-            '[约束提示词](/prompt-engineering/constrained-prompting?lang=zh) — 在教育材料中控制AI输出格式的必要工具',
-            '[提取与总结](/prompt-engineering/extract-and-summarise?lang=zh) — 教室中AI辅助阅读理解和文档分析的技术',
-            '[每个提示词需要的5个构建块](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh) — 教师提示词框架所基于的通用提示词结构',
+            '[什么是提示词工程](/zh/prompt-engineering/what-is-prompt-engineering) — 有效AI指令背后的基本原理',
+            '[用AI写更好的代码](/zh/prompt-engineering/write-better-code-with-ai) — 结构化提示词如何产生可靠的AI输出 — 适用于课程规划和评估生成',
+            '[AI局限——LLM无法做什么](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) — AI幻觉如何影响教学工具以及如何规划',
+            '[AI支持的研究](/zh/prompt-engineering/ai-powered-research) — AI生成内容验证工作流，可应用于学生和教师研究任务',
+            '[角色提示词](/zh/prompt-engineering/persona-prompting) — 角色定义（如「经验丰富的五年级数学教师」）如何改变AI输出质量和一致性',
+            '[链式思维提示词](/zh/prompt-engineering/chain-of-thought-prompting) — Khanmigo等苏格拉底式AI导师背后的推理技术',
+            '[约束提示词](/zh/prompt-engineering/constrained-prompting) — 在教育材料中控制AI输出格式的必要工具',
+            '[提取与总结](/zh/prompt-engineering/extract-and-summarise) — 教室中AI辅助阅读理解和文档分析的技术',
+            '[每个提示词需要的5个构建块](/zh/prompt-engineering/5-building-blocks-every-prompt-needs) — 教师提示词框架所基于的通用提示词结构',
           ],
         },
         faq: {

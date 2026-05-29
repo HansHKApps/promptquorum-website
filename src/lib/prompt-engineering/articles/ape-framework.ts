@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=de',
+        'url': 'https://www.promptquorum.com/de/prompt-engineering/ape-framework',
         'inLanguage': 'de',
         headline: 'APE-Framework: Analyse, Plan, Ausführung — Strukturierte Prompts mit sichtbarem Denken',
         description: 'Das APE-Framework teilt jeden AI-Prompt in Analyse, Planung und Ausführung auf, um das Denken des Modells sichtbar und überprüfbar zu machen.',
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'El Framework APE divide cada prompt de IA en Analizar, Planificar y Ejecutar — haciendo el razonamiento del modelo visible y verificable. Plantilla, ejemplos y comparación con otros frameworks.',
         datePublished: '2026-03-24',
         dateModified: '2026-05-04',
-        url: 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=es',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/ape-framework',
         inLanguage: 'es',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         keywords: ['Framework APE', 'Analizar Planificar Ejecutar', 'frameworks de prompt', 'prompt engineering', 'razonamiento estructurado', 'PromptQuorum'],
@@ -427,12 +427,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Lecturas Relacionadas',
           items: [
-            '[Prompting Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=es) — la técnica de razonamiento que APE formaliza en tres etapas',
-            '[¿Qué Framework de Prompt Deberías Usar?](/prompt-engineering/which-prompt-framework-should-you-use?lang=es) — comparación de APE vs CRAFT vs CO-STAR vs SPECS',
-            '[El Método de Prompt de Un Solo Paso](/prompt-engineering/the-single-step-prompt-method?lang=es) — cuando NO necesitas las tres etapas de APE',
-            '[5 Bloques de Construcción que Todo Prompt Necesita](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — los bloques universales que las etapas de APE organizan',
-            '[Prompting de Persona](/prompt-engineering/persona-prompting?lang=es) — combina con la definición de rol de APE para análisis específico de dominio',
-            '[Encadenamiento de Prompts](/prompt-engineering/prompt-chaining?lang=es) — para tareas demasiado complejas para un único prompt APE, encadena múltiples pasos APE',
+            '[Prompting Chain-of-Thought](/es/prompt-engineering/chain-of-thought-prompting) — la técnica de razonamiento que APE formaliza en tres etapas',
+            '[¿Qué Framework de Prompt Deberías Usar?](/es/prompt-engineering/which-prompt-framework-should-you-use) — comparación de APE vs CRAFT vs CO-STAR vs SPECS',
+            '[El Método de Prompt de Un Solo Paso](/es/prompt-engineering/the-single-step-prompt-method) — cuando NO necesitas las tres etapas de APE',
+            '[5 Bloques de Construcción que Todo Prompt Necesita](/es/prompt-engineering/5-building-blocks-every-prompt-needs) — los bloques universales que las etapas de APE organizan',
+            '[Prompting de Persona](/es/prompt-engineering/persona-prompting) — combina con la definición de rol de APE para análisis específico de dominio',
+            '[Encadenamiento de Prompts](/es/prompt-engineering/prompt-chaining) — para tareas demasiado complejas para un único prompt APE, encadena múltiples pasos APE',
           ],
         },
 
@@ -476,7 +476,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/prompt-engineering/ape-framework',
         'inLanguage': 'fr',
         headline: 'Framework APE : Analyse, Plan, Exécution — Prompts Structurés avec Raisonnement Visible',
         description: 'Le framework APE divise chaque prompt IA en analyse, planification et exécution pour rendre visible et vérifiable le raisonnement du modèle.',
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/prompt-engineering/ape-framework',
         'inLanguage': 'ja',
         headline: 'APEフレームワーク：分析・計画・実行 — 思考プロセスが見える構造化プロンプト',
         description: 'APEフレームワークはAIプロンプトを分析、計画、実行の3段階に分割し、モデルの思考プロセスを可視化・検証可能にします。',
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/prompt-engineering/ape-framework',
         'inLanguage': 'zh',
         headline: 'APE框架：分析·规划·执行 — 让思维过程可见的结构化提示',
         description: 'APE框架将每个AI提示分为分析、规划和执行三个阶段，让模型的思维过程可见且可检查。',

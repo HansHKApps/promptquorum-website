@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-governance-production?lang=de',
+      url: 'https://www.promptquorum.com/de/prompt-engineering/prompt-governance-production',
       inLanguage: 'de',
       headline: 'Prompt-Governance in Produktion: Rollen, Gates & Deployment (2026)',
       description: 'Prompt-Governance mit 3 Rollen, 3 Review-Gates, Rollback-Verfahren und Audit-Trail einrichten. NIST AI RMF und EU AI Act konform.',
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-governance-production?lang=es',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-governance-production',
       inLanguage: 'es',
       headline: 'Governance de prompts en producción: roles, gates de revisión y reglas de despliegue',
       description: 'Configura la governance de prompts con 3 roles, 3 gates de revisión, procedimientos de rollback y trazas de auditoría. Conforme con NIST AI RMF y EU AI Act.',
@@ -596,11 +596,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: 'Lectura relacionada',
         items: [
-          { title: 'Flujo de revisión de prompts para equipos', url: '/prompt-engineering/prompt-review-workflow-for-teams?lang=es' },
-          { title: 'Control de versiones de prompts', url: '/prompt-engineering/prompt-version-control?lang=es' },
-          { title: 'Auditoría y pruebas de regresión de prompts', url: '/prompt-engineering/prompt-audit-and-regression-risk?lang=es' },
-          { title: 'Herramientas de seguridad de prompts: pruebas de injection', url: '/prompt-engineering/prompt-security-tools-injection-testing?lang=es' },
-          { title: 'Plantillas de documentación de prompts', url: '/prompt-engineering/prompt-documentation-templates?lang=es' },
+          { title: 'Flujo de revisión de prompts para equipos', url: '/es/prompt-engineering/prompt-review-workflow-for-teams' },
+          { title: 'Control de versiones de prompts', url: '/es/prompt-engineering/prompt-version-control' },
+          { title: 'Auditoría y pruebas de regresión de prompts', url: '/es/prompt-engineering/prompt-audit-and-regression-risk' },
+          { title: 'Herramientas de seguridad de prompts: pruebas de injection', url: '/es/prompt-engineering/prompt-security-tools-injection-testing' },
+          { title: 'Plantillas de documentación de prompts', url: '/es/prompt-engineering/prompt-documentation-templates' },
         ],
       },
       sources: {
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-governance-production?lang=fr',
+      url: 'https://www.promptquorum.com/fr/prompt-engineering/prompt-governance-production',
       inLanguage: 'fr',
       headline: 'Gouvernance des prompts en production : rôles, gates de révision et règles de déploiement',
       description: 'Mettre en place la gouvernance des prompts avec 3 rôles, 3 gates de révision, procédures de rollback et pistes d\'audit. Conforme NIST AI RMF et EU AI Act.',
@@ -841,7 +841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-governance-production?lang=ja',
+      url: 'https://www.promptquorum.com/ja/prompt-engineering/prompt-governance-production',
       inLanguage: 'ja',
       headline: '本番環境のPromptガバナンス：役割、レビューゲート、デプロイルール',
       description: '3つの役割、3つのレビューゲート、ロールバック手順、監査証跡でPromptガバナンスを設定。NIST AI RMFおよびEU AI Act準拠。',
@@ -1032,7 +1032,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-governance-production?lang=zh',
+      url: 'https://www.promptquorum.com/zh/prompt-engineering/prompt-governance-production',
       inLanguage: 'zh',
       headline: '生产环境中的Prompt治理：角色、审查门控与部署规则',
       description: '通过3个角色、3个审查门控、回滚程序和审计记录建立Prompt治理。符合NIST AI RMF和EU AI Act要求。',

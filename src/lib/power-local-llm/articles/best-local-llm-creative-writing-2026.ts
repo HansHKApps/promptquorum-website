@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sampling:** Temperatur 0,95, Top-p 0,92, Repeat Penalty 1,1 als Ausgangspunkt; aufgabenspezifische Anpassungen in den Modell-Urteilen.',
           '**Bewertungsrubrik:** Stimmkonsistenz, Prompt-Treue, Prosaqualität und Bereitschaft (hat das Modell als Belletristik gerahmte Szenen abgelehnt oder aufgeweicht?).',
           '**Transparenz-Hinweis:** Werte als relative Ränge je Aufgabe, keine erfundenen absoluten Prozentwerte. „Bester Dialog" bedeutet konsistenter erster Platz auf dem Dialog-Teilset über die 3 Läufe.',
-          'Für Prompting-Techniken, die die kreative Ausgabe auf jedem Modell verbessern, siehe [Temperatur und Top-p](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) und [Persona-Prompting](/prompt-engineering/persona-prompting?lang=de).',
+          'Für Prompting-Techniken, die die kreative Ausgabe auf jedem Modell verbessern, siehe [Temperatur und Top-p](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) und [Persona-Prompting](/de/prompt-engineering/persona-prompting).',
         ],
         callouts: [
           {
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**min_p (0,05–0,1):** Eine neuere Alternative zu Top-p, die den Wahrscheinlichkeits-Cutoff relativ zur Peak-Token-Wahrscheinlichkeit dynamisch skaliert. Für kreative Prompts permissiver als Top-p 0,9, ohne das Inkoherenz-Risiko sehr hoher Top-p-Werte. Der empfohlene Standard für SillyTavern- und KoboldCpp-Nutzer 2026, wenn die Oberfläche ihn zugänglich macht.',
           '**DRY Repetition Penalty (Multiplikator 0,8, Basis 1,75, erlaubte Länge 2):** Erkennt Phrasen-Wiederholungen, die der Standard-Repeat_Penalty übersieht. Wo repeat_penalty einzelne Token verfolgt, verfolgt DRY n-Gramm-Sequenzen. Nützlich für lange Sessions, bei denen das Modell aus seiner eigenen Ausgabe schöpft.',
           '**Modernes Kreativschreiben-Baseline (2026):** Temperatur 0,95, min_p 0,05, DRY-Multiplikator 0,8 (Basis 1,75, erlaubte Länge 2). Top-p 0,92 funktioniert weiterhin gut, wenn das Frontend min_p oder DRY nicht anbietet.',
-          'Für eine tiefere Behandlung dieser Parameter und ihrer Wechselwirkungen, siehe [Temperatur und Top-p](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de).',
+          'Für eine tiefere Behandlung dieser Parameter und ihrer Wechselwirkungen, siehe [Temperatur und Top-p](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
         ],
         callouts: [
           {
@@ -620,7 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wo sie versagen.** Sie folgen dem Prompt — einschließlich schlecht geschriebener Prompts. Instruct-Modelle entschärfen vage Prompts oft zu etwas Veröffentlichbarem; Uncensored-Modelle geben genau das, was gefragt wurde, was manchmal schlechter ist. Die Anweisungen des Autors sind entscheidender.',
           '**Ethische Grenzen.** „Das Modell schreibt es" ist keine Kreativlizenz für Inhalte, die reale Personen zum Ziel haben, nicht-einvernehmliche Szenarien mit realen oder identifizierbaren Personen darstellen oder in der Jurisdiktion des Autors illegal sind. Lokales Hosting ändert nicht das Recht; es ändert, wer den Entwurf sieht.',
           '**Rechtlicher Kontext (Mai 2026, kurz und nicht abschließend).** EU-KI-Gesetz und mitgliedstaatliche Gesetze (insbesondere §184/§184c StGB in Deutschland) regeln spezifische Inhaltskategorien unabhängig vom Entstehungsort. US-Obszönitätsrecht gilt für die Veröffentlichung, nicht die Generierung. Für kommerzielle Veröffentlichungen ist das Modell irrelevant; das veröffentlichte Artefakt ist das, was reguliert wird.',
-          '**Für eine längere Behandlung** von Uncensored-Modell-Ethik, rechtlichem Kontext und Best Practices, siehe [Uncensored Local LLMs für kreatives Schreiben](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=de).',
+          '**Für eine längere Behandlung** von Uncensored-Modell-Ethik, rechtlichem Kontext und Best Practices, siehe [Uncensored Local LLMs für kreatives Schreiben](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics).',
         ],
         callouts: [
           {
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SillyTavern** — der Roleplay- und Dialog-Pick. Charakterkarten-Ökosystem (Tavern v2 Spec), Persona-Verwaltung, Lore Books für Weltenbau, Gruppen-Chat für Mehrfigurenszenen. Bestes für dialoggetriebene Arbeit und langfristige Charakter- oder Weltenprojekte. Passt gut zu Command R+ und Uncensored-Derivaten.',
           '**Agnai und RisuAI** — engere SillyTavern-Alternativen. Schlankere Feature-Sets, einfacherer Einstieg, weniger Anpassung. Wählen, wenn SillyTavern für den eigenen Workflow überdimensioniert wirkt.',
           '**Plain Ollama CLI plus Texteditor** — der minimale Pick. `ollama run llama3.3:70b` und Szenen über das Terminal in das Entwurfsdokument leiten. Verliert den persistenten Charakterkontext, gewinnt aber an Schreibfokus.',
-          'Für den Direktvergleich der Roleplay-fokussierten Frontends, siehe [SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=de).',
+          'Für den Direktvergleich der Roleplay-fokussierten Frontends, siehe [SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay).',
         ],
         callouts: [
           {
@@ -676,7 +676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Die meisten Autoren denken zu viel über das Modell nach und zu wenig über den Prompt. Ein sorgfältig gestalteter System-Prompt mit Charakternotizen, Stimmproben und explizitem POV tut mehr für die Ausgabe als der Wechsel von Qwen3 zu Llama 70B. Siehe [Persona-Prompting](/prompt-engineering/persona-prompting?lang=de) für die Prompt-Struktur, die kreative Ausgaben konsistent verbessert.',
+            text: 'Die meisten Autoren denken zu viel über das Modell nach und zu wenig über den Prompt. Ein sorgfältig gestalteter System-Prompt mit Charakternotizen, Stimmproben und explizitem POV tut mehr für die Ausgabe als der Wechsel von Qwen3 zu Llama 70B. Siehe [Persona-Prompting](/de/prompt-engineering/persona-prompting) für die Prompt-Struktur, die kreative Ausgaben konsistent verbessert.',
           },
         ],
       },
@@ -687,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Fehler 1: dem größten Modell auf Benchmarks nachjagen.** Kreativschreib-Wertungen korrelieren schlecht mit allgemeinen Benchmark-Leaderboards. Yi-1.5 34B schlägt Llama 3.3 70B bei Poesie; Command R+ schlägt beide bei Dialog. Nach Aufgabe wählen, nicht nach Leaderboard-Rang.',
           '**Fehler 2: Coding-Sampling-Einstellungen verwenden.** Temperatur 0,2–0,4 erzeugt flache, vorhersehbare Prosa. Kreatives Schreiben braucht 0,8–1,1 mit Top-p 0,9–0,95. Die Standardeinstellungen der meisten Chat-UIs sind für Q&A optimiert, nicht für Prosa.',
           '**Fehler 3: beim Instruct-Modell bleiben und aufgeben, wenn es ablehnt.** Die Instruct-Version lehnt Szenen ab, die explizit als Belletristik gerahmt wurden; das Uncensored-Derivat desselben Basismodells schreibt sie. Zwei Installs in Ollama ist die Lösung.',
-          '**Fehler 4: dünne System-Prompts.** „Du bist ein hilfreicher Assistent" ist der schlechtestmögliche Prompt für kreative Arbeit. Ein System-Prompt mit Charakternotizen, Stimmproben, POV, Tempus und Ton tut mehr für die Ausgabequalität als jeder Modellwechsel. Mit [Negativem Prompting](/prompt-engineering/negative-prompting?lang=de) kombinieren, um vorzugeben, was NICHT zu schreiben ist.',
+          '**Fehler 4: dünne System-Prompts.** „Du bist ein hilfreicher Assistent" ist der schlechtestmögliche Prompt für kreative Arbeit. Ein System-Prompt mit Charakternotizen, Stimmproben, POV, Tempus und Ton tut mehr für die Ausgabequalität als jeder Modellwechsel. Mit [Negativem Prompting](/de/prompt-engineering/negative-prompting) kombinieren, um vorzugeben, was NICHT zu schreiben ist.',
           '**Fehler 5: im Chat-Fenster überarbeiten.** Im Chat generieren ist fine; im Chat überarbeiten trainiert die Gewohnheit, das Modell Prosa korrigieren zu lassen statt selbst zu überarbeiten. Den Entwurf in einen Texteditor exportieren; die Autorenstimme wird stärker, wenn das Modell nicht im Überarbeitungsprozess ist.',
         ],
         callouts: [
@@ -750,7 +750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie vermeidet man Klischees wie „ein Schauder lief ihr den Rücken hinunter"?',
-            a: 'Ein System-Prompt mit negativen Beispielen ist der wirksamste Hebel — 8–12 verbannte Phrasen explizit auflisten. Die Temperatur leicht senken (0,85–0,95 statt 1,1), um die Neigung zu Standardformulierungen zu reduzieren. Repeat Penalty 1,1 allein reicht NICHT — die Phrasen sind keine exakten Token-Wiederholungen. DRY-Penalty (Multiplikator 0,8, Basis 1,75) erkennt sie auf n-Gramm-Ebene über Szenen hinweg. Ein manueller Überarbeitungsdurchgang ist der letzte Filter. Siehe [Negatives Prompting](/prompt-engineering/negative-prompting?lang=de).',
+            a: 'Ein System-Prompt mit negativen Beispielen ist der wirksamste Hebel — 8–12 verbannte Phrasen explizit auflisten. Die Temperatur leicht senken (0,85–0,95 statt 1,1), um die Neigung zu Standardformulierungen zu reduzieren. Repeat Penalty 1,1 allein reicht NICHT — die Phrasen sind keine exakten Token-Wiederholungen. DRY-Penalty (Multiplikator 0,8, Basis 1,75) erkennt sie auf n-Gramm-Ebene über Szenen hinweg. Ein manueller Überarbeitungsdurchgang ist der letzte Filter. Siehe [Negatives Prompting](/de/prompt-engineering/negative-prompting).',
           },
           {
             q: 'Muss ich bei der Nutzung lokaler LLMs für kreatives Schreiben die DSGVO beachten?',
@@ -766,12 +766,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend (2026)](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=de) — Direktvergleich der drei Roleplay-fokussierten Frontends mit den obigen Modellen.',
-          '[Lokale LLM-Prompts für Belletristik-Autoren: Vorlagen & Techniken](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=de) — kopierfertige Prompt-Vorlagen für Charakterentwicklung, Dialog, Weltenbau und Überarbeitungs-Workflows.',
-          '[Uncensored Local LLMs für kreatives Schreiben: Ethik, Recht & Best Practices](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=de) — wann Uncensored-Derivate legitime kreative Werkzeuge sind und wo die rechtlichen und ethischen Grenzen liegen.',
-          '[Temperatur und Top-P: KI-Kreativität steuern](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de) — die Prompt-Engineering-Seite der Sampling-Parameter; tiefer als die Zusammenfassung in diesem Leitfaden.',
-          '[Negatives Prompting](/prompt-engineering/negative-prompting?lang=de) — vorgeben, was NICHT im Prompt stehen soll; ein Kraft-Multiplikator für System-Prompts bei kreativer Arbeit.',
-          '[Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) — der maßgebliche Modell-Landscape-Leitfaden; nützlich, wenn du über die sechs Kreativschreib-Picks hinaus erkunden möchtest.',
+          '[SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend (2026)](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — Direktvergleich der drei Roleplay-fokussierten Frontends mit den obigen Modellen.',
+          '[Lokale LLM-Prompts für Belletristik-Autoren: Vorlagen & Techniken](/de/power-local-llm/local-llm-prompts-for-fiction-writers) — kopierfertige Prompt-Vorlagen für Charakterentwicklung, Dialog, Weltenbau und Überarbeitungs-Workflows.',
+          '[Uncensored Local LLMs für kreatives Schreiben: Ethik, Recht & Best Practices](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — wann Uncensored-Derivate legitime kreative Werkzeuge sind und wo die rechtlichen und ethischen Grenzen liegen.',
+          '[Temperatur und Top-P: KI-Kreativität steuern](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) — die Prompt-Engineering-Seite der Sampling-Parameter; tiefer als die Zusammenfassung in diesem Leitfaden.',
+          '[Negatives Prompting](/de/prompt-engineering/negative-prompting) — vorgeben, was NICHT im Prompt stehen soll; ein Kraft-Multiplikator für System-Prompts bei kreativer Arbeit.',
+          '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) — der maßgebliche Modell-Landscape-Leitfaden; nützlich, wenn du über die sechs Kreativschreib-Picks hinaus erkunden möchtest.',
         ],
       },
     },
@@ -891,7 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sampling :** température 0,95, top-p 0,92, repeat penalty 1,1 comme base ; ajustements par tâche notés dans les verdicts par modèle ci-dessous.',
           '**Grille d\'évaluation :** cohérence de voix (le personnage ou le narrateur sonne-t-il pareil d\'un paragraphe à l\'autre ?), fidélité au prompt (le modèle a-t-il suivi la direction ou inventé sa propre scène ?), qualité de prose (rythme, vocabulaire, évitement du cliché), et disponibilité (le modèle a-t-il refusé ou édulcoré des scènes que le prompt cadrait explicitement comme de la fiction ?).',
           '**Contrainte d\'honnêteté :** scores reportés comme rangs relatifs par tâche, sans pourcentages absolus inventés. "Meilleur dialogue" signifie premier régulièrement sur le sous-ensemble dialogue sur les 3 relances ; "bon" signifie top-3 ; "correct" signifie que le modèle a perdu face à un ou plusieurs concurrents sur la grille.',
-          'Pour les techniques de prompting qui améliorent les sorties créatives sur n\'importe quel modèle, voir [contrôle de la température et du top-p](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) et [persona prompting](/prompt-engineering/persona-prompting?lang=fr).',
+          'Pour les techniques de prompting qui améliorent les sorties créatives sur n\'importe quel modèle, voir [contrôle de la température et du top-p](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) et [persona prompting](/fr/prompt-engineering/persona-prompting).',
         ],
         callouts: [
           {
@@ -989,7 +989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**min_p (0,05–0,1) :** Une alternative plus récente au top-p qui fait varier dynamiquement le seuil de probabilité par rapport à la probabilité du token de pointe. Plus permissif sur les prompts créatifs que top-p 0,9 sans le risque d\'incohérence des valeurs très élevées de top-p. Valeur par défaut recommandée pour les utilisateurs de SillyTavern et KoboldCpp en 2026 quand l\'interface l\'expose ; Ollama le transmet tel quel, et Open WebUI 0.5+ l\'expose sous Paramètres avancés.',
           '**Pénalité de répétition DRY (multiplicateur 0,8, base 1,75, longueur autorisée 2) :** Capture les répétitions au niveau des phrases que le repeat_penalty standard manque. Là où repeat_penalty suit les tokens individuels, DRY suit les séquences n-grammes — ainsi le cliché "frisson dans la nuque" en scène 1 est supprimé quand il réapparaîtrait en scène 4. Utile pour le travail créatif en session longue où le modèle a vu ses propres sorties et commence à les recycler.',
           '**Base créative moderne (2026) :** température 0,95, min_p 0,05, DRY multiplicateur 0,8 (base 1,75, longueur autorisée 2). Top-p 0,92 fonctionne toujours bien si le frontend n\'expose pas min_p ou DRY — ce sont des améliorations progressives par rapport aux paramètres classiques, pas des remplacements obligatoires.',
-          'Pour un traitement plus complet de pourquoi ces paramètres comptent et comment ils interagissent, voir [contrôle de la température et du top-p](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr).',
+          'Pour un traitement plus complet de pourquoi ces paramètres comptent et comment ils interagissent, voir [contrôle de la température et du top-p](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
         ],
         callouts: [
           {
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Leurs limites.** Ils suivent le prompt — y compris les prompts mal rédigés. Les modèles instruction-tuned adoucissent souvent les prompts vagues vers quelque chose de publiable ; les modèles non censurés donnent exactement ce qu\'on demande, ce qui est parfois moins bon. La direction de l\'auteur compte davantage.',
           '**Limites éthiques.** "Le modèle le rédigera" n\'est pas une licence créative pour produire du contenu qui cible des personnes réelles, représente des scénarios non consentis impliquant des individus réels ou identifiables, ou qui est illégal dans la juridiction de l\'auteur. L\'hébergement local ne change pas la loi ; il change qui peut voir le brouillon.',
           '**Contexte légal (mai 2026, bref et non exhaustif).** L\'AI Act de l\'UE et les lois des États membres (notamment le §184/§184c StGB allemand et l\'article 227-23 du Code pénal français) couvrent des catégories de contenu spécifiques indépendamment du lieu de génération. Le droit américain sur l\'obscénité s\'applique à la publication, pas à la génération. Pour la publication commerciale, le modèle qui a produit un brouillon est sans pertinence ; l\'artefact publié est ce qui est réglementé.',
-          '**Pour un traitement plus approfondi** de l\'éthique des modèles non censurés, du contexte légal et des bonnes pratiques, voir [LLM locaux non censurés pour l\'écriture créative : éthique, légalité et bonnes pratiques](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=fr).',
+          '**Pour un traitement plus approfondi** de l\'éthique des modèles non censurés, du contexte légal et des bonnes pratiques, voir [LLM locaux non censurés pour l\'écriture créative : éthique, légalité et bonnes pratiques](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics).',
         ],
         callouts: [
           {
@@ -1028,7 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SillyTavern** — le choix roleplay et dialogue. Écosystème de fiches de personnages (spec Tavern v2), gestion de personas, lore books pour la construction de mondes, chat de groupe pour les scènes multi-personnages. Meilleur pour les travaux à dominante dialogue et les projets de personnages ou de monde sur le long terme. S\'associe bien avec Command R+ et les dérivés non censurés.',
           '**Agnai et RisuAI** — alternatives plus légères à SillyTavern. Moins de fonctionnalités, première prise en main plus facile, moins de personnalisation. À choisir quand SillyTavern semble trop complexe pour le workflow.',
           '**Ollama CLI simple plus un éditeur de texte** — le choix minimaliste. `ollama run llama3.3:70b` et faire passer les scènes par le terminal dans le document de brouillon. Perd le contexte de personnage persistant mais gagne en concentration de l\'auteur.',
-          'Pour le comparatif des interfaces focalisées sur le roleplay, voir [SillyTavern vs Agnai vs RisuAI : meilleure interface locale de roleplay](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=fr).',
+          'Pour le comparatif des interfaces focalisées sur le roleplay, voir [SillyTavern vs Agnai vs RisuAI : meilleure interface locale de roleplay](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay).',
         ],
         callouts: [
           {
@@ -1065,7 +1065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'La plupart des auteurs réfléchissent trop au modèle et pas assez au prompt. Un prompt système bien conçu avec des notes de personnage, des échantillons de voix et un PDV explicite fait plus pour la qualité de la sortie que passer de Qwen3 à Llama 70B. Voir [persona prompting](/prompt-engineering/persona-prompting?lang=fr) pour la structure de prompt qui améliore régulièrement la sortie créative.',
+            text: 'La plupart des auteurs réfléchissent trop au modèle et pas assez au prompt. Un prompt système bien conçu avec des notes de personnage, des échantillons de voix et un PDV explicite fait plus pour la qualité de la sortie que passer de Qwen3 à Llama 70B. Voir [persona prompting](/fr/prompt-engineering/persona-prompting) pour la structure de prompt qui améliore régulièrement la sortie créative.',
           },
         ],
       },
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Erreur 1 : courir après le plus grand modèle sur les benchmarks.** Les scores d\'écriture créative corrèlent faiblement avec les classements de benchmarks généraux. Yi-1.5 34B surpasse Llama 3.3 70B en poésie ; Command R+ surpasse les deux en dialogue. Choisir par type de tâche, pas par rang de classement.',
           '**Erreur 2 : utiliser les paramètres de sampling type code.** Une température de 0,2–0,4 produit une prose plate et prévisible. L\'écriture créative nécessite 0,8–1,1 avec top-p 0,9–0,95. Les paramètres par défaut de la plupart des interfaces de chat sont calibrés pour les Q&R, pas pour la prose.',
           '**Erreur 3 : se contenter du modèle instruct et abandonner quand il refuse.** La version instruct refuse des scènes qu\'on a explicitement cadrées comme de la fiction ; le dérivé non censuré du même modèle de base les rédige. Deux installations dans Ollama est la solution.',
-          '**Erreur 4 : prompts système légers.** "Tu es un assistant utile" est le pire prompt possible pour le travail créatif. Un prompt système avec des notes de personnage, des échantillons de voix, le PDV, le temps et le ton fait plus pour la qualité de la sortie que n\'importe quel changement de modèle. Associer avec le [negative prompting](/prompt-engineering/negative-prompting?lang=fr) pour spécifier ce qu\'il ne faut PAS faire (pas d\'exposition, pas de prose pourpre, pas de "elle ressentit").',
+          '**Erreur 4 : prompts système légers.** "Tu es un assistant utile" est le pire prompt possible pour le travail créatif. Un prompt système avec des notes de personnage, des échantillons de voix, le PDV, le temps et le ton fait plus pour la qualité de la sortie que n\'importe quel changement de modèle. Associer avec le [negative prompting](/fr/prompt-engineering/negative-prompting) pour spécifier ce qu\'il ne faut PAS faire (pas d\'exposition, pas de prose pourpre, pas de "elle ressentit").',
           '**Erreur 5 : réviser dans la fenêtre de chat.** Générer dans le chat est bien ; réviser dans le chat crée l\'habitude de demander au modèle de corriger la prose au lieu de la réviser soi-même. Exporter le brouillon vers un éditeur de texte pour la révision ; la voix de l\'auteur se renforce quand le modèle n\'est plus dans la boucle.',
         ],
         callouts: [
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Comment éviter le cliché du "frisson dans la nuque" ?',
-            a: 'Un prompt système avec des exemples négatifs est le levier à l\'impact le plus élevé — lister explicitement 8–12 phrases bannies ("n\'écris pas \'frisson\', \'tapisserie\', \'plonger dans\', \'magistralement\', ou \'elle ressentit\'"). Baisser légèrement la température (0,85–0,95 au lieu de 1,1) pour réduire l\'attirance du modèle vers le langage stock. Le repeat penalty 1,1 seul ne capture PAS cela — les phrases ne sont pas des répétitions exactes de tokens. La pénalité DRY (multiplicateur 0,8, base 1,75) les capture au niveau n-gramme entre les scènes. Une passe de révision manuelle est le filtre final. Voir [negative prompting](/prompt-engineering/negative-prompting?lang=fr) pour la structure de prompt qui élimine régulièrement les clichés.',
+            a: 'Un prompt système avec des exemples négatifs est le levier à l\'impact le plus élevé — lister explicitement 8–12 phrases bannies ("n\'écris pas \'frisson\', \'tapisserie\', \'plonger dans\', \'magistralement\', ou \'elle ressentit\'"). Baisser légèrement la température (0,85–0,95 au lieu de 1,1) pour réduire l\'attirance du modèle vers le langage stock. Le repeat penalty 1,1 seul ne capture PAS cela — les phrases ne sont pas des répétitions exactes de tokens. La pénalité DRY (multiplicateur 0,8, base 1,75) les capture au niveau n-gramme entre les scènes. Une passe de révision manuelle est le filtre final. Voir [negative prompting](/fr/prompt-engineering/negative-prompting) pour la structure de prompt qui élimine régulièrement les clichés.',
           },
           {
             q: 'L\'utilisation d\'un LLM local pour la fiction est-elle concernée par le RGPD ?',
@@ -1155,12 +1155,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecture complémentaire',
         items: [
-          '[SillyTavern vs Agnai vs RisuAI : meilleure interface locale de roleplay (2026)](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=fr) — comparatif des trois interfaces focalisées sur le roleplay avec les modèles ci-dessus.',
-          '[Prompts LLM locaux pour auteurs de fiction : modèles et techniques](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=fr) — modèles de prompts prêts à copier pour le développement de personnages, le dialogue, la construction de mondes et les workflows de révision.',
-          '[LLM locaux non censurés pour l\'écriture créative : éthique, légalité et bonnes pratiques](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=fr) — traitement complet de quand les dérivés non censurés sont des outils créatifs légitimes et où se trouvent les limites légales et éthiques.',
-          '[Température et top-p : contrôler la créativité de l\'IA](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr) — la face prompt engineering des paramètres de sampling ; plus approfondi que le résumé de ce guide.',
-          '[Negative prompting](/prompt-engineering/negative-prompting?lang=fr) — spécifier ce qu\'il ne faut PAS faire dans un prompt ; un multiplicateur de force pour les prompts système sur les travaux créatifs.',
-          '[Meilleurs LLM locaux 2026](/local-llms/best-local-llms-2026?lang=fr) — le guide de référence du paysage des modèles ; utile quand tu veux explorer au-delà des six choix créatifs ci-dessus.',
+          '[SillyTavern vs Agnai vs RisuAI : meilleure interface locale de roleplay (2026)](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparatif des trois interfaces focalisées sur le roleplay avec les modèles ci-dessus.',
+          '[Prompts LLM locaux pour auteurs de fiction : modèles et techniques](/fr/power-local-llm/local-llm-prompts-for-fiction-writers) — modèles de prompts prêts à copier pour le développement de personnages, le dialogue, la construction de mondes et les workflows de révision.',
+          '[LLM locaux non censurés pour l\'écriture créative : éthique, légalité et bonnes pratiques](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics) — traitement complet de quand les dérivés non censurés sont des outils créatifs légitimes et où se trouvent les limites légales et éthiques.',
+          '[Température et top-p : contrôler la créativité de l\'IA](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) — la face prompt engineering des paramètres de sampling ; plus approfondi que le résumé de ce guide.',
+          '[Negative prompting](/fr/prompt-engineering/negative-prompting) — spécifier ce qu\'il ne faut PAS faire dans un prompt ; un multiplicateur de force pour les prompts système sur les travaux créatifs.',
+          '[Meilleurs LLM locaux 2026](/fr/local-llms/best-local-llms-2026) — le guide de référence du paysage des modèles ; utile quand tu veux explorer au-delà des six choix créatifs ci-dessus.',
         ],
       },
     },
@@ -1280,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**サンプリング：** ベースラインとして温度0.95、Top-P 0.92、リピートペナルティ1.1；タスク別の調整は以下のモデル別評価に記録。',
           '**評価ルーブリック：** 声の一貫性（キャラクターやナレーターは段落をまたいで同じように聞こえるか？）、プロンプト忠実性（モデルは方向性に従ったか、それとも独自のシーンを作り出したか？）、散文の質（リズム・語彙・陳腐さの回避）、意欲（モデルはフィクションとして明示的に定義されたシーンを拒否またはサニタイズしたか？）。',
           '**誠実さの制約：** スコアはタスクごとの相対ランクとして報告し、作り上げた絶対パーセンテージは使用しません。「ダイアログベスト」は3回の実行にわたってダイアログサブセットで一貫して1位であることを意味します。「優秀」はトップ3を意味します。「可」はモデルがルーブリックで1つ以上の競合相手に負けたことを意味します。',
-          'モデルのクリエイティブ出力を向上させるプロンプティング技術については、[温度とTop-Pの制御](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja)と[ペルソナプロンプティング](/prompt-engineering/persona-prompting?lang=ja)をご覧ください。',
+          'モデルのクリエイティブ出力を向上させるプロンプティング技術については、[温度とTop-Pの制御](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity)と[ペルソナプロンプティング](/ja/prompt-engineering/persona-prompting)をご覧ください。',
         ],
         callouts: [
           {
@@ -1378,7 +1378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**min_p（0.05〜0.1）：** ピークトークン確率に対して確率カットオフを動的にスケーリングするTop-Pの新しい代替手段。非常に高いTop-P値の一貫性リスクなしに、クリエイティブなプロンプトではTop-P 0.9よりも許容的です。SillyTavernとKoboldCppのユーザーには、インターフェースがこれを公開している場合の2026年の推奨デフォルト；OllamaはそのままパススルーしてOllamaのOpen WebUI 0.5以降は詳細設定の下で公開しています。',
           '**DRYリピートペナルティ（乗数0.8、ベース1.75、許容長さ2）：** 標準のrepeat_penaltyが見逃す句レベルの繰り返しを捕捉します。repeat_penaltyが個々のトークンを追跡するのに対し、DRYはn-gramシーケンスを追跡します——シーン1の「背筋が凍った」という陳腐表現はシーン4で再び現れそうになると抑制されます。モデルが自分の出力を見てそれを引き出し始める長いセッションのクリエイティブ作業に役立ちます。',
           '**現代のクリエイティブライティングベースライン（2026）：** 温度0.95、min_p 0.05、DRY乗数0.8（ベース1.75、許容長さ2）。フロントエンドがmin_pやDRYを公開していない場合、Top-P 0.92も引き続き有効です——これらは古典的な設定の段階的な改善であり、必須の交換ではありません。',
-          'なぜこれらのパラメータが重要で、どのように相互作用するかについてのより完全な解説は、[温度とTop-Pの制御](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja)をご覧ください。',
+          'なぜこれらのパラメータが重要で、どのように相互作用するかについてのより完全な解説は、[温度とTop-Pの制御](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity)をご覧ください。',
         ],
         callouts: [
           {
@@ -1398,7 +1398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**弱点。** それらはプロンプトに従います——下手に書かれたプロンプトも含めて。instructモデルはしばしば漠然としたプロンプトを公開可能なものに柔らかくします；無検閲モデルは求めたものを正確に提供しますが、それが時々より悪いこともあります。著者の方向性がより重要になります。',
           '**倫理的な境界。** 「モデルが書いてくれる」は、実在の人物を対象とする、実在または識別可能な個人が関与する非同意シナリオを描写する、または著者の管轄で違法なコンテンツを書くためのクリエイティブライティングのライセンスではありません。ローカルホスティングは法律を変えません；誰が草稿を見ることができるかを変えます。',
           '**法的背景（2026年5月、簡潔・非網羅的）。** EU AI法と加盟国の法律（特にドイツの刑法§184/§184c、フランスの刑法典第227-23条）は、生成された場所に関わらず特定のコンテンツカテゴリをカバーします。米国の猥褻法は生成ではなく公開に適用されます。商業出版では、草稿を生成したモデルは無関係です；規制されるのは公開された成果物です。',
-          '**より詳しい解説については**、無検閲モデルの倫理・法的背景・ベストプラクティスについて[クリエイティブライティングのための無検閲ローカルLLM：倫理・合法性・ベストプラクティス](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=ja)をご覧ください。',
+          '**より詳しい解説については**、無検閲モデルの倫理・法的背景・ベストプラクティスについて[クリエイティブライティングのための無検閲ローカルLLM：倫理・合法性・ベストプラクティス](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics)をご覧ください。',
         ],
         callouts: [
           {
@@ -1417,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SillyTavern** — ロールプレイとダイアログの選択。キャラクターカードエコシステム（Tavern v2仕様）、ペルソナ管理、世界構築のためのロアブック、複数キャラクターシーンのグループチャット。ダイアログ主導の作業と長期的なキャラクターや世界のプロジェクトに最適です。Command R+と無検閲派生版との相性が良いです。',
           '**AgnaiとRisuAI** — SillyTavernの代替として絞り込まれたもの。軽量な機能セット、より簡単な初回実行、カスタマイズは少ない。SillyTavernがワークフローに対してオーバービルドに感じる場合に選んでください。',
           '**プレーンなOllama CLIとテキストエディタ** — 最小限の選択。`ollama run llama3.3:70b`を実行し、ターミナルからシーンを草稿ドキュメントにパイプします。持続的なキャラクターコンテキストは失いますが、著者の集中力を得ます。',
-          'ロールプレイ重視のフロントエンドのヘッドtoヘッド比較については、[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=ja)をご覧ください。',
+          'ロールプレイ重視のフロントエンドのヘッドtoヘッド比較については、[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)をご覧ください。',
         ],
         callouts: [
           {
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'ほとんどの著者はモデルを考えすぎてプロンプトを考えなさすぎます。キャラクターノート・声のサンプル・明示的なPOVを含む適切に作られたシステムプロンプトは、Qwen3からLlama 70Bに切り替えるよりも出力品質に対してより多くのことをします。クリエイティブ出力を一貫して向上させるプロンプト構造については[ペルソナプロンプティング](/prompt-engineering/persona-prompting?lang=ja)をご覧ください。',
+            text: 'ほとんどの著者はモデルを考えすぎてプロンプトを考えなさすぎます。キャラクターノート・声のサンプル・明示的なPOVを含む適切に作られたシステムプロンプトは、Qwen3からLlama 70Bに切り替えるよりも出力品質に対してより多くのことをします。クリエイティブ出力を一貫して向上させるプロンプト構造については[ペルソナプロンプティング](/ja/prompt-engineering/persona-prompting)をご覧ください。',
           },
         ],
       },
@@ -1465,7 +1465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**間違い1：ベンチマークで最大のモデルを追いかける。** クリエイティブライティングのスコアは一般的なベンチマークリーダーボードとの相関が低いです。Yi-1.5 34Bは詩でLlama 3.3 70Bを上回り；Command R+は両方をダイアログで上回ります。リーダーボードのランクではなく、タスクで選んでください。',
           '**間違い2：コーディングスタイルのサンプリング設定を使用する。** 温度0.2〜0.4は平坦で予測可能な散文を生成します。クリエイティブライティングにはTop-P 0.9〜0.95で0.8〜1.1が必要です。ほとんどのチャットUIのデフォルト設定はQ&Aに合わせられており、散文には合っていません。',
           '**間違い3：instructモデルをデフォルトにして、拒否されたら諦める。** instructバージョンはフィクションとして明示的に定義したシーンを拒否します；同じベースモデルの無検閲派生版はそれらを書きます。Ollamaに2つのインストールが回避策です。',
-          '**間違い4：薄いシステムプロンプト。** 「あなたは役立つアシスタントです」はクリエイティブ作業にとって最悪のプロンプトです。キャラクターノート・声のサンプル・POV・時制・トーンを含むシステムプロンプトは、どんなモデル切り替えよりも出力品質に対してより多くのことをします。何をすべきでないかを指定するために[ネガティブプロンプティング](/prompt-engineering/negative-prompting?lang=ja)と組み合わせてください（説明なし、過剰な装飾なし、「彼女は感じた」なし）。',
+          '**間違い4：薄いシステムプロンプト。** 「あなたは役立つアシスタントです」はクリエイティブ作業にとって最悪のプロンプトです。キャラクターノート・声のサンプル・POV・時制・トーンを含むシステムプロンプトは、どんなモデル切り替えよりも出力品質に対してより多くのことをします。何をすべきでないかを指定するために[ネガティブプロンプティング](/ja/prompt-engineering/negative-prompting)と組み合わせてください（説明なし、過剰な装飾なし、「彼女は感じた」なし）。',
           '**間違い5：チャットウィンドウ内で編集する。** チャットでの生成は問題ありません；チャットでの編集は自分で修正する代わりにモデルに散文を修正してもらうという習慣を育てます。修正のために草稿をテキストエディタにエクスポートしてください；モデルがループにいないとき著者の声は強くなります。',
         ],
         callouts: [
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '「背筋が凍る」という陳腐表現を避けるにはどうすればよいですか？',
-            a: 'ネガティブな例を含むシステムプロンプトが最も影響力の高いレバーです——8〜12個の禁止フレーズを明示的にリストアップしてください（「『背筋が凍る』『タペストリー』『深く潜る』『見事に』『彼女は感じた』は書かないでください」）。温度をわずかに下げる（1.1の代わりに0.85〜0.95）と、モデルのストックランゲージへの傾向が減ります。リピートペナルティ1.1だけではこれを捕捉しません——フレーズは正確なトークンの繰り返しではありません。DRYペナルティ（乗数0.8、ベース1.75）はシーンをまたいでn-gramレベルでそれらを捕捉します。手動の修正パスが最終フィルターです。陳腐表現を一貫して除去するプロンプト構造については[ネガティブプロンプティング](/prompt-engineering/negative-prompting?lang=ja)をご覧ください。',
+            a: 'ネガティブな例を含むシステムプロンプトが最も影響力の高いレバーです——8〜12個の禁止フレーズを明示的にリストアップしてください（「『背筋が凍る』『タペストリー』『深く潜る』『見事に』『彼女は感じた』は書かないでください」）。温度をわずかに下げる（1.1の代わりに0.85〜0.95）と、モデルのストックランゲージへの傾向が減ります。リピートペナルティ1.1だけではこれを捕捉しません——フレーズは正確なトークンの繰り返しではありません。DRYペナルティ（乗数0.8、ベース1.75）はシーンをまたいでn-gramレベルでそれらを捕捉します。手動の修正パスが最終フィルターです。陳腐表現を一貫して除去するプロンプト構造については[ネガティブプロンプティング](/ja/prompt-engineering/negative-prompting)をご覧ください。',
           },
           {
             q: 'ローカルLLMを小説執筆に使う場合、個人情報保護法は関係しますか？',
@@ -1544,12 +1544,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド（2026）](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=ja) — 上記のモデルと組み合わせた3つのロールプレイ重視フロントエンドのヘッドtoヘッド比較。',
-          '[小説家のためのローカルLLMプロンプト：テンプレートとテクニック](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=ja) — キャラクター開発・ダイアログ・世界構築・修正ワークフローのためのコピーペースト準備済みプロンプトテンプレート。',
-          '[クリエイティブライティングのための無検閲ローカルLLM：倫理・合法性・ベストプラクティス](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=ja) — 無検閲派生版が正当なクリエイティブツールである場合と法的・倫理的ラインの完全な解説。',
-          '[温度とTop-P：AIの創造性をコントロールする](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja) — サンプリングパラメータのプロンプトエンジニアリング側；このガイドのサマリーより深い内容。',
-          '[ネガティブプロンプティング](/prompt-engineering/negative-prompting?lang=ja) — プロンプトで何をすべきでないかを指定する；クリエイティブ作業のシステムプロンプトのための力の乗数。',
-          '[ベストローカルLLMs 2026](/local-llms/best-local-llms-2026?lang=ja) — 権威あるモデル全景ガイド；上記の6つのクリエイティブライティング選択を超えて探索したい場合に有用。',
+          '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド（2026）](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 上記のモデルと組み合わせた3つのロールプレイ重視フロントエンドのヘッドtoヘッド比較。',
+          '[小説家のためのローカルLLMプロンプト：テンプレートとテクニック](/ja/power-local-llm/local-llm-prompts-for-fiction-writers) — キャラクター開発・ダイアログ・世界構築・修正ワークフローのためのコピーペースト準備済みプロンプトテンプレート。',
+          '[クリエイティブライティングのための無検閲ローカルLLM：倫理・合法性・ベストプラクティス](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 無検閲派生版が正当なクリエイティブツールである場合と法的・倫理的ラインの完全な解説。',
+          '[温度とTop-P：AIの創造性をコントロールする](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity) — サンプリングパラメータのプロンプトエンジニアリング側；このガイドのサマリーより深い内容。',
+          '[ネガティブプロンプティング](/ja/prompt-engineering/negative-prompting) — プロンプトで何をすべきでないかを指定する；クリエイティブ作業のシステムプロンプトのための力の乗数。',
+          '[ベストローカルLLMs 2026](/ja/local-llms/best-local-llms-2026) — 権威あるモデル全景ガイド；上記の6つのクリエイティブライティング選択を超えて探索したい場合に有用。',
         ],
       },
     },
@@ -1669,7 +1669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**采样：** 基准为温度0.95、top-p 0.92、重复惩罚1.1；各模型评测中注明了逐任务调整值。',
           '**评分标准：** 声音一致性（角色或叙述者跨段落音调是否一致？）、提示词忠实度（模型是否按指令方向创作，还是自行发挥？）、文笔质量（节奏、词汇、避免陈词滥调）、创作意愿（提示词明确框定为小说时，模型是否拒绝或净化场景？）。',
           '**诚实约束：** 得分以各任务内的相对排名呈现，不虚构绝对百分比。"对话最佳"意味着在3次运行的对话子集中持续排名第一；"强"意味着前三名；"一般"意味着在该评分项目上落后于一款或多款竞争模型。',
-          '关于改善任意模型创意输出的提示词技巧，请参阅[温度与Top-P设置](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh)和[角色提示词设计](/prompt-engineering/persona-prompting?lang=zh)。',
+          '关于改善任意模型创意输出的提示词技巧，请参阅[温度与Top-P设置](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity)和[角色提示词设计](/zh/prompt-engineering/persona-prompting)。',
         ],
         callouts: [
           {
@@ -1767,7 +1767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**min_p（0.05–0.1）：** 相对于top-p的更新替代方案，动态地将概率截断值缩放至最高token概率的相对比例。在创意提示词上比top-p 0.9更宽松，同时没有极高top-p值的语义混乱风险。2026年SillyTavern和KoboldCpp用户在界面暴露该参数时的推荐默认值；Ollama直接传递，Open WebUI 0.5+在高级设置中提供。',
           '**DRY重复惩罚（乘数0.8、基础1.75、允许长度2）：** 捕捉标准repeat_penalty遗漏的短语级重复。标准重复惩罚追踪单个token，DRY追踪n-gram序列——因此第一个场景中的陈词滥调在第四个场景中就会被抑制。适用于模型已经看过自己输出并开始从中取样的长会话创意创作。',
           '**2026年现代创意写作基准：** 温度0.95、min_p 0.05、DRY乘数0.8（基础1.75、允许长度2）。如果你的前端不提供min_p或DRY，top-p 0.92仍然效果良好——这些是对经典设置的渐进改进，不是必须替换的选项。',
-          '关于这些参数为何重要以及如何相互作用的详细说明，请参阅[温度与Top-P设置](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh)。',
+          '关于这些参数为何重要以及如何相互作用的详细说明，请参阅[温度与Top-P设置](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity)。',
         ],
         callouts: [
           {
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**它们的局限所在。** 它们遵从提示词——包括写得不好的提示词。指令调优版经常将模糊提示词软化为可发表的内容；无审查版给你的正是你所要求的，有时反而更差。作者的指令方向更加重要。',
           '**伦理边界。** "模型会写"并非对创作以真实人物为原型、描绘真实或可识别个人的非自愿场景，或在作者所在司法管辖区属于违法内容的许可。本地部署不改变法律；它只是改变了谁能看到草稿。',
           '**法律背景（2026年5月，简要非全面陈述）。** 欧盟AI法案及成员国法律（尤其是德国《刑法》§184/§184c）不论内容在何处生成均涵盖特定内容类别。美国猥亵法规范的是发表行为，不是生成行为。对于商业出版，产生草稿的模型无关紧要；被监管的是发表的作品。',
-          '**更详细的说明**请参阅[创意写作的无审查本地LLM：伦理、合法性与最佳实践](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=zh)。',
+          '**更详细的说明**请参阅[创意写作的无审查本地LLM：伦理、合法性与最佳实践](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics)。',
         ],
         callouts: [
           {
@@ -1806,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SillyTavern** — 角色扮演和对话首选。角色卡生态系统（Tavern v2规范），角色管理，世界构建用书本功能，群聊用于多角色场景。适合对话驱动的创作和长期角色或世界项目。与Command R+和无审查衍生版搭配良好。',
           '**Agnai和RisuAI** — SillyTavern的精简替代选项。功能集更轻量，首次运行更简便，定制化程度较低。当SillyTavern对你的工作流显得过于复杂时选择。',
           '**纯Ollama命令行加文本编辑器** — 最简配置。`ollama run llama3.3:70b`，通过终端将场景导入草稿文档。失去持久角色背景，但赢得写作专注度。',
-          '关于角色扮演专注型前端的横向对比，请参阅[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=zh)。',
+          '关于角色扮演专注型前端的横向对比，请参阅[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)。',
         ],
         callouts: [
           {
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '大多数作者过度纠结模型，而忽视提示词。一个附有角色备注、语音示例和明确POV的精良系统提示词，对输出的改善程度远超从Qwen3切换到Llama 70B。请参阅[角色提示词设计](/prompt-engineering/persona-prompting?lang=zh)，了解持续提升创意输出的提示词结构。',
+            text: '大多数作者过度纠结模型，而忽视提示词。一个附有角色备注、语音示例和明确POV的精良系统提示词，对输出的改善程度远超从Qwen3切换到Llama 70B。请参阅[角色提示词设计](/zh/prompt-engineering/persona-prompting)，了解持续提升创意输出的提示词结构。',
           },
         ],
       },
@@ -1854,7 +1854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**错误一：追逐基准榜上最大的模型。** 创意写作得分与通用基准榜单的相关性很低。Yi-1.5 34B在诗歌上胜过Llama 3.3 70B；Command R+在对话上胜过两者。按任务类型选，不按榜单排名选。',
           '**错误二：使用编程风格的采样设置。** 温度0.2–0.4产出平淡可预测的散文。创意写作需要0.8–1.1配合top-p 0.9–0.95。大多数聊天界面的默认设置是为问答调整的，不是为散文设计的。',
           '**错误三：默认使用指令版，遇到拒绝就放弃。** 指令版拒绝你明确框定为小说的场景；相同基础模型的无审查衍生版会写。在Ollama中安装两个版本是解决办法。',
-          '**错误四：系统提示词过于单薄。** "你是一个有帮助的助手"是创意写作最糟糕的提示词。一个附有角色备注、语音示例、POV、时态和基调的系统提示词，对输出质量的改善远超任何模型切换。搭配[负向提示词](/prompt-engineering/negative-prompting?lang=zh)来指定不该做什么。',
+          '**错误四：系统提示词过于单薄。** "你是一个有帮助的助手"是创意写作最糟糕的提示词。一个附有角色备注、语音示例、POV、时态和基调的系统提示词，对输出质量的改善远超任何模型切换。搭配[负向提示词](/zh/prompt-engineering/negative-prompting)来指定不该做什么。',
           '**错误五：在聊天窗口内修改。** 在聊天中生成没问题；在聊天中修改会培养"让模型修改散文"而非自己修改的习惯。将草稿导出到文本编辑器进行修改；当模型不介入循环时，作者的声音会更强。',
         ],
         callouts: [
@@ -1917,7 +1917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '如何避免陈词滥调？',
-            a: '附有负面示例的系统提示词是效果最强的手段——明确列出8–12个禁用短语。略微降低温度（0.85–0.95而非1.1）可减少模型使用套话语言的倾向。单独使用重复惩罚1.1无法捕捉这类问题——这些短语不是精确的token重复。DRY惩罚（乘数0.8、基础1.75）在跨场景的n-gram层面捕捉它们。人工修改环节是最终过滤器。关于持续消灭陈词滥调的提示词结构，请参阅[负向提示词](/prompt-engineering/negative-prompting?lang=zh)。',
+            a: '附有负面示例的系统提示词是效果最强的手段——明确列出8–12个禁用短语。略微降低温度（0.85–0.95而非1.1）可减少模型使用套话语言的倾向。单独使用重复惩罚1.1无法捕捉这类问题——这些短语不是精确的token重复。DRY惩罚（乘数0.8、基础1.75）在跨场景的n-gram层面捕捉它们。人工修改环节是最终过滤器。关于持续消灭陈词滥调的提示词结构，请参阅[负向提示词](/zh/prompt-engineering/negative-prompting)。',
           },
           {
             q: '在中国大陆使用本地LLM创作小说，是否涉及《个人信息保护法》？',
@@ -1933,12 +1933,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端（2026）](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay?lang=zh) — 上述模型搭配三款角色扮演专注型前端的横向对比。',
-          '[本地LLM小说写作提示词：模板与技巧](/power-local-llm/local-llm-prompts-for-fiction-writers?lang=zh) — 适用于角色开发、对话、世界构建和修改工作流的即用型提示词模板。',
-          '[创意写作的无审查本地LLM：伦理、合法性与最佳实践](/power-local-llm/uncensored-local-llm-creative-writing-ethics?lang=zh) — 无审查衍生版何时属于合法创意工具、以及法律与伦理边界的完整解读。',
-          '[温度与Top-P：控制AI创意输出](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh) — 采样参数的提示词工程解读；比本文概述更深入。',
-          '[负向提示词](/prompt-engineering/negative-prompting?lang=zh) — 在提示词中指定不该做什么；创意写作系统提示词的力量倍增器。',
-          '[2026年最佳本地LLM](/local-llms/best-local-llms-2026?lang=zh) — 权威模型全景指南；在上述六款创意写作模型之外进一步探索时的参考。',
+          '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端（2026）](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 上述模型搭配三款角色扮演专注型前端的横向对比。',
+          '[本地LLM小说写作提示词：模板与技巧](/zh/power-local-llm/local-llm-prompts-for-fiction-writers) — 适用于角色开发、对话、世界构建和修改工作流的即用型提示词模板。',
+          '[创意写作的无审查本地LLM：伦理、合法性与最佳实践](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 无审查衍生版何时属于合法创意工具、以及法律与伦理边界的完整解读。',
+          '[温度与Top-P：控制AI创意输出](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 采样参数的提示词工程解读；比本文概述更深入。',
+          '[负向提示词](/zh/prompt-engineering/negative-prompting) — 在提示词中指定不该做什么；创意写作系统提示词的力量倍增器。',
+          '[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026) — 权威模型全景指南；在上述六款创意写作模型之外进一步探索时的参考。',
         ],
       },
     },

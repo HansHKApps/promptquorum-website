@@ -446,7 +446,7 @@ schema: {
             '1. **Haben Sie 8 GB RAM oder mehr?** (Falls nein, sind Cloud-APIs schneller für den Einstieg.)',
             '2. **Benötigen Sie, dass Ihre Daten privat bleiben?** (Falls nein, bieten Cloud-APIs bessere Qualität.)',
             '3. **Können Sie 20–40 Minuten Setup akzeptieren?** (Falls nein, sind Cloud-APIs in 5 Minuten einsatzbereit.)',
-            'Wenn Sie zwei oder mehr Fragen mit „nein" beantwortet haben, **[lesen Sie den vollständigen Vergleich lokal vs. Cloud](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=de)**, um zu prüfen, ob eine Cloud-API besser zu Ihrer Hardware und Ihrem Zeitplan passt. Anfänger nehmen oft an, dass lokale LLMs immer besser sind – das ist nicht wahr. Die richtige Wahl hängt von Ihren spezifischen Einschränkungen ab.',
+            'Wenn Sie zwei oder mehr Fragen mit „nein" beantwortet haben, **[lesen Sie den vollständigen Vergleich lokal vs. Cloud](https://www.promptquorum.com/de/local-llms/local-llm-limitations)**, um zu prüfen, ob eine Cloud-API besser zu Ihrer Hardware und Ihrem Zeitplan passt. Anfänger nehmen oft an, dass lokale LLMs immer besser sind – das ist nicht wahr. Die richtige Wahl hängt von Ihren spezifischen Einschränkungen ab.',
           ],
         },
         howToChoose: {
@@ -454,7 +454,7 @@ schema: {
           title: 'Wie wählt man ein lokales LLM-Einstiegsmodell aus?',
           content: [
             '**Die Modellauswahl für lokale LLMs hängt von drei Einschränkungen ab: verfügbarer RAM, Inferenzgeschwindigkeit und Aufgabentyp – in dieser Prioritätsreihenfolge.**',
-            'Die Parameteranzahl (3B, 7B, 13B) ist der primäre Treiber des RAM-Bedarfs. Bei [4-Bit-Quantisierung](/local-llms/llm-quantization-explained?lang=de) – dem Standard für die meisten lokalen Inferenz-Tools – multiplizieren Sie die Parameteranzahl mit ~0,5, um die benötigten GB RAM zu schätzen. Ein 7B-Modell bei Q4_K_M benötigt etwa 4,5 GB RAM.',
+            'Die Parameteranzahl (3B, 7B, 13B) ist der primäre Treiber des RAM-Bedarfs. Bei [4-Bit-Quantisierung](/de/local-llms/llm-quantization-explained) – dem Standard für die meisten lokalen Inferenz-Tools – multiplizieren Sie die Parameteranzahl mit ~0,5, um die benötigten GB RAM zu schätzen. Ein 7B-Modell bei Q4_K_M benötigt etwa 4,5 GB RAM.',
             'Für die meisten Einsteiger bieten **7B-Modelle bei Q4_K_M-Quantisierung** die beste Balance aus Qualität, Geschwindigkeit und RAM-Verbrauch auf Maschinen mit 8 GB oder mehr. Auf Maschinen mit 4–6 GB RAM sind 3B-Modelle die praktische Obergrenze.',
           ],
           image: '/images/best-beginner-local-llm-models-3b-vs-7b-de.svg',
@@ -534,7 +534,7 @@ schema: {
           title: '#5 Qwen2.5 7B – Bestes Modell für Mehrsprachigkeit und Coding',
           content: [
             '**Qwen2.5 7B übertrifft Mistral 7B bei HumanEval (Coding) und MBPP-Benchmarks und unterstützt nativ 29 Sprachen, darunter Chinesisch, Japanisch, Koreanisch, Arabisch und alle wichtigen europäischen Sprachen.** Es ist die empfohlene Wahl für nicht-englische Workflows oder coding-intensive Anwendungsfälle.',
-            'Qwen2.5 7B verwendet ein 128K-Kontextfenster (vs. 32K bei Mistral 7B) und unterstützt strukturierte Ausgaben mit JSON-Modus. Das Modell ist in Instruct- und Base-Varianten verfügbar – für Chat-Nutzung immer die Instruct-Version verwenden. Siehe den [Qwen vs Llama vs Mistral Benchmark-Vergleich](/local-llms/qwen-vs-llama-vs-mistral?lang=de) für detaillierte Benchmark-Daten.',
+            'Qwen2.5 7B verwendet ein 128K-Kontextfenster (vs. 32K bei Mistral 7B) und unterstützt strukturierte Ausgaben mit JSON-Modus. Das Modell ist in Instruct- und Base-Varianten verfügbar – für Chat-Nutzung immer die Instruct-Version verwenden. Siehe den [Qwen vs Llama vs Mistral Benchmark-Vergleich](/de/local-llms/qwen-vs-llama-vs-mistral) für detaillierte Benchmark-Daten.',
           ],
           rows: [
             { 'Spezifikation': 'Parameter', 'Wert': '7B' },
@@ -587,7 +587,7 @@ schema: {
           id: 'how-to-download',
           title: 'Wie lädt man diese Modelle herunter und startet sie?',
           content: [
-            '**Alle fünf Modelle installieren sich mit einem einzigen Ollama-Befehl – keine manuelle Konfiguration erforderlich.** Siehe [Ollama installieren](/local-llms/how-to-install-ollama?lang=de) für die Einrichtung, dann [Erstes lokales LLM starten](/local-llms/run-first-local-llm?lang=de) für eine schrittweise Anleitung. Wenn Sie auf einem Laptop mit begrenztem RAM arbeiten, finden Sie unter [Lokale LLMs auf dem Laptop ausführen](/local-llms/local-llm-on-laptop?lang=de) Informationen zur Quantisierung und Leistungsoptimierung für eingeschränkte Hardware.',
+            '**Alle fünf Modelle installieren sich mit einem einzigen Ollama-Befehl – keine manuelle Konfiguration erforderlich.** Siehe [Ollama installieren](/de/local-llms/how-to-install-ollama) für die Einrichtung, dann [Erstes lokales LLM starten](/de/local-llms/run-first-local-llm) für eine schrittweise Anleitung. Wenn Sie auf einem Laptop mit begrenztem RAM arbeiten, finden Sie unter [Lokale LLMs auf dem Laptop ausführen](/de/local-llms/local-llm-on-laptop) Informationen zur Quantisierung und Leistungsoptimierung für eingeschränkte Hardware.',
             'Sobald Ihr erstes Modell läuft, ist der nächste Schritt, es effektiv zu prompten. Beginnen Sie mit den [Prompt-Engineering-Grundlagen](https://www.promptquorum.com/prompt-engineering) — 16 Guides, die die Bausteine jedes Prompts abdecken, von Temperatureinstellungen bis zur Output-Formatierung.',
           ],
         },
@@ -606,14 +606,14 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Artikel',
           items: [
-            '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) – Installation und erster Modell-Download',
-            '[Erstes lokales LLM starten](/local-llms/run-first-local-llm?lang=de) – Erste Schritte nach der Installation',
-            '[Lokale LLMs auf dem Laptop ausführen](/local-llms/local-llm-on-laptop?lang=de) – RAM- und Wärme-Optimierung',
-            '[Probleme bei der lokalen LLM-Einrichtung beheben](/local-llms/troubleshooting-local-llm-setup?lang=de) – Häufige Probleme debuggen',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de) – Vollständiger Benchmark-Vergleich aller drei Modellfamilien bei 7B, 13B und 70B',
-            '[Lokaler LLM Hardware-Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) – GPU- und RAM-Anforderungen für den Aufstieg von 3B auf 7B auf 13B-Modelle',
-            '[Qwen Lokaler Deployment-Guide (2026)](/local-llms/qwen-local-deployment-guide-2026?lang=de) -- Einsteigerfreundliches Qwen2.5 7B-Setup via Ollama: ein Befehl bis zum Laufen.',
-            '[Beste Open-Source-Alternativen zu ChatGPT Plus](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=de) -- No-Code-Frontends für Erstnutzer lokaler LLMs.',
+            '[Ollama installieren](/de/local-llms/how-to-install-ollama) – Installation und erster Modell-Download',
+            '[Erstes lokales LLM starten](/de/local-llms/run-first-local-llm) – Erste Schritte nach der Installation',
+            '[Lokale LLMs auf dem Laptop ausführen](/de/local-llms/local-llm-on-laptop) – RAM- und Wärme-Optimierung',
+            '[Probleme bei der lokalen LLM-Einrichtung beheben](/de/local-llms/troubleshooting-local-llm-setup) – Häufige Probleme debuggen',
+            '[Qwen vs Llama vs Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) – Vollständiger Benchmark-Vergleich aller drei Modellfamilien bei 7B, 13B und 70B',
+            '[Lokaler LLM Hardware-Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) – GPU- und RAM-Anforderungen für den Aufstieg von 3B auf 7B auf 13B-Modelle',
+            '[Qwen Lokaler Deployment-Guide (2026)](/de/local-llms/qwen-local-deployment-guide-2026) -- Einsteigerfreundliches Qwen2.5 7B-Setup via Ollama: ein Befehl bis zum Laufen.',
+            '[Beste Open-Source-Alternativen zu ChatGPT Plus](/de/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- No-Code-Frontends für Erstnutzer lokaler LLMs.',
           ],
         },
         faqSection: {
@@ -687,7 +687,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/best-beginner-local-llm-models?lang=de',
+        'url': 'https://www.promptquorum.com/de/local-llms/best-beginner-local-llm-models',
         'inLanguage': 'de',
         'headline': 'Llama 3.2, Phi-4 Mini, Gemma 3: Beste Einsteiger-LLMs 2026',
         'description': 'Llama 3.2 3B = 2,5 GB RAM, 25–45 Tok/s. Phi-4 Mini = 2,5 GB. Gemma 3 2B = 1,7 GB, 40–60 Tok/s. Vergleichstabelle + Ollama-Befehle. April 2026.',
@@ -823,7 +823,7 @@ schema: {
             '1. **Avez-vous 8 Go de RAM ou plus ?** (Sinon, les APIs cloud sont plus rapides pour débuter.)',
             '2. **Avez-vous besoin que vos données restent privées ?** (Sinon, les APIs cloud offrent meilleure qualité.)',
             '3. **Pouvez-vous tolérer 20–40 minutes de configuration ?** (Sinon, les APIs cloud sont prêtes en 5 minutes.)',
-            'Si vous avez répondu « non » à deux questions ou plus, **[lisez la comparaison complète local vs cloud](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=fr)** pour déterminer si une API cloud convient mieux à vos contraintes matérielles et à votre calendrier. Les débutants supposent souvent que les LLMs locaux sont toujours meilleur — ce n\'est pas vrai. Le bon choix dépend de vos contraintes spécifiques.',
+            'Si vous avez répondu « non » à deux questions ou plus, **[lisez la comparaison complète local vs cloud](https://www.promptquorum.com/fr/local-llms/local-llm-limitations)** pour déterminer si une API cloud convient mieux à vos contraintes matérielles et à votre calendrier. Les débutants supposent souvent que les LLMs locaux sont toujours meilleur — ce n\'est pas vrai. Le bon choix dépend de vos contraintes spécifiques.',
           ],
         },
         howToChoose: {
@@ -831,7 +831,7 @@ schema: {
           title: 'Comment choisir un modèle LLM local pour débutant ?',
           content: [
             '**Le choix d\'un modèle LLM local dépend de trois contraintes : RAM disponible, vitesse d\'inférence et type de tâche — dans cet ordre de priorité.**',
-            'Le nombre de paramètres (3B, 7B, 13B) est le principal facteur du besoin en RAM. Avec la [quantification 4 bits](/local-llms/llm-quantization-explained?lang=fr) — standard pour la plupart des outils d\'inférence locale — multipliez le nombre de paramètres par ~0.5 pour estimer les Go de RAM nécessaires. Un modèle 7B en Q4_K_M requiert environ 4.5 Go de RAM.',
+            'Le nombre de paramètres (3B, 7B, 13B) est le principal facteur du besoin en RAM. Avec la [quantification 4 bits](/fr/local-llms/llm-quantization-explained) — standard pour la plupart des outils d\'inférence locale — multipliez le nombre de paramètres par ~0.5 pour estimer les Go de RAM nécessaires. Un modèle 7B en Q4_K_M requiert environ 4.5 Go de RAM.',
             'Pour la plupart des débutants, **les modèles 7B en quantification Q4_K_M** offrent le meilleur équilibre qualité/vitesse/RAM sur les machines disposant de 8 Go ou plus. Sur les machines avec 4–6 Go de RAM, les modèles 3B constituent le plafond pratique.',
           ],
           image: '/images/best-beginner-local-llm-models-3b-vs-7b-fr.svg',
@@ -911,7 +911,7 @@ schema: {
           title: '#5 Qwen2.5 7B — Meilleur pour le multilingue et le code',
           content: [
             '**Qwen2.5 7B surpasse Mistral 7B sur HumanEval (code) et les benchmarks MBPP, et supporte nativement 29 langues dont le chinois, le japonais, le coréen, l\'arabe et toutes les principales langues européennes.** C\'est le choix recommandé pour les workflows non-anglophones ou intensifs en code.',
-            'Qwen2.5 7B utilise une fenêtre de contexte de 128K (contre 32K pour Mistral 7B) et supporte les sorties structurées avec le mode JSON. Pour les données de benchmarks détaillées, consultez la [comparaison Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr).',
+            'Qwen2.5 7B utilise une fenêtre de contexte de 128K (contre 32K pour Mistral 7B) et supporte les sorties structurées avec le mode JSON. Pour les données de benchmarks détaillées, consultez la [comparaison Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral).',
           ],
           rows: [
             { 'Spécification': 'Paramètres', 'Valeur': '7B' },
@@ -964,7 +964,7 @@ schema: {
           id: 'how-to-download',
           title: 'Comment télécharger et exécuter ces modèles ?',
           content: [
-            '**Les cinq modèles s\'installent avec une seule commande Ollama — sans configuration manuelle.** Consultez [Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) pour la configuration, puis [Lancer votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) pour un guide pas à pas. Sur un laptop avec peu de RAM, [Exécuter des LLM locaux sur laptop](/local-llms/local-llm-on-laptop?lang=fr) couvre la quantification et l\'optimisation des performances.',
+            '**Les cinq modèles s\'installent avec une seule commande Ollama — sans configuration manuelle.** Consultez [Installer Ollama](/fr/local-llms/how-to-install-ollama) pour la configuration, puis [Lancer votre premier LLM local](/fr/local-llms/run-first-local-llm) pour un guide pas à pas. Sur un laptop avec peu de RAM, [Exécuter des LLM locaux sur laptop](/fr/local-llms/local-llm-on-laptop) couvre la quantification et l\'optimisation des performances.',
             'Une fois votre premier modèle lancé, l\'étape suivante est d\'apprendre à le prompter efficacement. Commencez par les [fondamentaux du prompt engineering](https://www.promptquorum.com/prompt-engineering) — 16 guides couvrant les éléments de base de tout prompt, des réglages de température au formatage des sorties.',
           ],
         },
@@ -983,14 +983,14 @@ schema: {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) — Installation et premier téléchargement de modèle',
-            '[Lancer votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) — Premiers pas après l\'installation',
-            '[Exécuter des LLM locaux sur laptop](/local-llms/local-llm-on-laptop?lang=fr) — Optimisation RAM et thermique',
-            '[Dépanner la configuration LLM locale](/local-llms/troubleshooting-local-llm-setup?lang=fr) — Résoudre les problèmes courants',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) — comparaison complète des benchmarks des trois familles de modèles',
-            '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Exigences GPU et RAM pour passer de 3B à 7B à 13B',
-            '[Guide de déploiement local Qwen (2026)](/local-llms/qwen-local-deployment-guide-2026?lang=fr) -- Configuration Qwen2.5 7B pour débutants via Ollama : une commande pour démarrer.',
-            '[Meilleures alternatives open-source à ChatGPT Plus](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=fr) -- Interfaces sans code pour les premiers utilisateurs de LLM locaux.',
+            '[Installer Ollama](/fr/local-llms/how-to-install-ollama) — Installation et premier téléchargement de modèle',
+            '[Lancer votre premier LLM local](/fr/local-llms/run-first-local-llm) — Premiers pas après l\'installation',
+            '[Exécuter des LLM locaux sur laptop](/fr/local-llms/local-llm-on-laptop) — Optimisation RAM et thermique',
+            '[Dépanner la configuration LLM locale](/fr/local-llms/troubleshooting-local-llm-setup) — Résoudre les problèmes courants',
+            '[Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral) — comparaison complète des benchmarks des trois familles de modèles',
+            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Exigences GPU et RAM pour passer de 3B à 7B à 13B',
+            '[Guide de déploiement local Qwen (2026)](/fr/local-llms/qwen-local-deployment-guide-2026) -- Configuration Qwen2.5 7B pour débutants via Ollama : une commande pour démarrer.',
+            '[Meilleures alternatives open-source à ChatGPT Plus](/fr/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- Interfaces sans code pour les premiers utilisateurs de LLM locaux.',
           ],
         },
         faqSection: {
@@ -1056,7 +1056,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/best-beginner-local-llm-models?lang=fr',
+        'url': 'https://www.promptquorum.com/fr/local-llms/best-beginner-local-llm-models',
         'inLanguage': 'fr',
         'headline': 'Llama 3.2, Phi-4 Mini, Gemma 3 : Meilleurs LLMs Débutants 2026',
         'description': 'Llama 3.2 3B = 2.5 Go RAM, 25–45 tok/s. Phi-4 Mini = 2.5 Go. Gemma 3 2B = 1.7 Go, 40–60 tok/s. Tableau comparatif + commandes Ollama. Avril 2026.',
@@ -1190,7 +1190,7 @@ schema: {
             '1. **8GB以上のRAMをお持ちですか？** (いいえの場合、クラウドAPIの方が開始が速いです。)',
             '2. **データをプライベートに保つ必要がありますか？** (いいえの場合、クラウドAPIはより良い品質を提供します。)',
             '3. **20～40分のセットアップを許容できますか？** (いいえの場合、クラウドAPIは5分で準備完了です。)',
-            '2つ以上の質問に「いいえ」と答えた場合、**[ローカルvsクラウド比較をお読みください](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=ja)** - クラウドAPIがハードウェアとタイムラインに適しているかを確認してください。初心者はしばしばローカルLLMが常に良いと仮定します——それは真実ではありません。正しい選択はあなたの特定の制約に依存します。',
+            '2つ以上の質問に「いいえ」と答えた場合、**[ローカルvsクラウド比較をお読みください](https://www.promptquorum.com/ja/local-llms/local-llm-limitations)** - クラウドAPIがハードウェアとタイムラインに適しているかを確認してください。初心者はしばしばローカルLLMが常に良いと仮定します——それは真実ではありません。正しい選択はあなたの特定の制約に依存します。',
           ],
         },
         howToChoose: {
@@ -1198,7 +1198,7 @@ schema: {
           title: '初心者向けローカルLLMモデルの選び方',
           content: [
             '**ローカルLLMのモデル選択は3つの制約に依存します：利用可能なRAM、推論速度、タスクの種類——この優先順位で。**',
-            'パラメータ数（3B、7B、13B）がRAM要件の主な決定要因です。[4ビット量子化](/local-llms/llm-quantization-explained?lang=ja)——ほとんどのローカル推論ツールのデフォルト——では、パラメータ数に~0.5を掛けて必要なGB RAMを推定できます。Q4_K_Mの7Bモデルは約4.5 GBのRAMを必要とします。',
+            'パラメータ数（3B、7B、13B）がRAM要件の主な決定要因です。[4ビット量子化](/ja/local-llms/llm-quantization-explained)——ほとんどのローカル推論ツールのデフォルト——では、パラメータ数に~0.5を掛けて必要なGB RAMを推定できます。Q4_K_Mの7Bモデルは約4.5 GBのRAMを必要とします。',
             'ほとんどの初心者にとって、**Q4_K_M量子化の7Bモデル**が8 GB以上のマシンで品質・速度・RAM使用のバランスが最良です。4〜6 GB RAMのマシンでは3Bモデルが実用的な上限です。',
           ],
           image: '/images/best-beginner-local-llm-models-3b-vs-7b-ja.svg',
@@ -1278,7 +1278,7 @@ schema: {
           title: '#5 Qwen2.5 7B — 多言語・コーディングに最適',
           content: [
             '**Qwen2.5 7BはHumanEval（コーディング）とMBPPベンチマークでMistral 7Bを超え、中国語・日本語・韓国語・アラビア語・主要欧州語を含む29言語にネイティブ対応しています。** 非英語ワークフローやコーディング主体のユースケースに推奨される選択肢です。',
-            'Qwen2.5 7Bは128Kコンテキストウィンドウ（Mistral 7Bの32Kと比較）を使用し、JSONモードによる構造化出力をサポートします。モデルはInstructバージョンとBaseバージョンで利用可能——チャット用途には必ずInstructバージョンを使用してください。詳細なベンチマークデータは[Qwen vs Llama vs Mistralベンチマーク比較](/local-llms/qwen-vs-llama-vs-mistral?lang=ja)を参照。',
+            'Qwen2.5 7Bは128Kコンテキストウィンドウ（Mistral 7Bの32Kと比較）を使用し、JSONモードによる構造化出力をサポートします。モデルはInstructバージョンとBaseバージョンで利用可能——チャット用途には必ずInstructバージョンを使用してください。詳細なベンチマークデータは[Qwen vs Llama vs Mistralベンチマーク比較](/ja/local-llms/qwen-vs-llama-vs-mistral)を参照。',
           ],
           rows: [
             { 'スペック': 'パラメータ数', '値': '7B' },
@@ -1331,7 +1331,7 @@ schema: {
           id: 'how-to-download',
           title: 'これらのモデルをどうやってダウンロード・実行するか？',
           content: [
-            '**5つのモデルすべてがOllamaコマンド1つでインストールできます——手動設定は不要です。** セットアップは[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja)を参照し、初回実行の手順は[初めてのローカルLLM実行](/local-llms/run-first-local-llm?lang=ja)をご覧ください。RAMが限られたノートPCで実行する場合は、[ノートPCでローカルLLMを実行する方法](/local-llms/local-llm-on-laptop?lang=ja)で量子化と制約されたハードウェアのパフォーマンスチューニングを参照。',
+            '**5つのモデルすべてがOllamaコマンド1つでインストールできます——手動設定は不要です。** セットアップは[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama)を参照し、初回実行の手順は[初めてのローカルLLM実行](/ja/local-llms/run-first-local-llm)をご覧ください。RAMが限られたノートPCで実行する場合は、[ノートPCでローカルLLMを実行する方法](/ja/local-llms/local-llm-on-laptop)で量子化と制約されたハードウェアのパフォーマンスチューニングを参照。',
             '最初のモデルが動いたら、次のステップは効果的なプロンプトの作り方を学ぶことです。[プロンプトエンジニアリングの基礎](https://www.promptquorum.com/prompt-engineering)から始めましょう——温度設定から出力フォーマットまで、すべてのプロンプトに必要な基本要素を16のガイドで解説しています。',
           ],
         },
@@ -1350,14 +1350,14 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja) — インストールと最初のモデルダウンロード',
-            '[初めてのローカルLLM実行](/local-llms/run-first-local-llm?lang=ja) — インストール後の入門ガイド',
-            '[ノートPCでローカルLLMを実行する方法](/local-llms/local-llm-on-laptop?lang=ja) — RAMと熱管理の最適化',
-            '[ローカルLLMセットアップのトラブルシューティング](/local-llms/troubleshooting-local-llm-setup?lang=ja) — よくある問題のデバッグ',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=ja) — 7B・13B・70Bの3モデルファミリー全体の詳細ベンチマーク比較',
-            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — 3Bから7B・13Bモデルへのアップグレードに必要なGPUとRAM要件',
-            '[Qwenローカルデプロイガイド (2026)](/local-llms/qwen-local-deployment-guide-2026?lang=ja) -- Ollamaを使った初心者向けQwen2.5 7Bセットアップ：一コマンドで起動。',
-            '[ChatGPT Plusのベストオープンソース代替品](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=ja) -- 初めてのローカルLLMユーザー向けノーコードフロントエンド。',
+            '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) — インストールと最初のモデルダウンロード',
+            '[初めてのローカルLLM実行](/ja/local-llms/run-first-local-llm) — インストール後の入門ガイド',
+            '[ノートPCでローカルLLMを実行する方法](/ja/local-llms/local-llm-on-laptop) — RAMと熱管理の最適化',
+            '[ローカルLLMセットアップのトラブルシューティング](/ja/local-llms/troubleshooting-local-llm-setup) — よくある問題のデバッグ',
+            '[Qwen vs Llama vs Mistral](/ja/local-llms/qwen-vs-llama-vs-mistral) — 7B・13B・70Bの3モデルファミリー全体の詳細ベンチマーク比較',
+            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 3Bから7B・13Bモデルへのアップグレードに必要なGPUとRAM要件',
+            '[Qwenローカルデプロイガイド (2026)](/ja/local-llms/qwen-local-deployment-guide-2026) -- Ollamaを使った初心者向けQwen2.5 7Bセットアップ：一コマンドで起動。',
+            '[ChatGPT Plusのベストオープンソース代替品](/ja/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 初めてのローカルLLMユーザー向けノーコードフロントエンド。',
           ],
         },
         faqSection: {
@@ -1423,7 +1423,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/best-beginner-local-llm-models?lang=ja',
+        'url': 'https://www.promptquorum.com/ja/local-llms/best-beginner-local-llm-models',
         'inLanguage': 'ja',
         'headline': 'Llama 3.2・Phi-4 Mini・Gemma 3：2026年初心者向けLLM比較',
         'description': 'Llama 3.2 3B=2.5GB RAM、Phi-4 Mini=2.5GB、Gemma 3 2B=1.7GB。RAM・速度・品質で5モデルを比較。Ollamaコマンド付き。2026年4月。',
@@ -1557,7 +1557,7 @@ schema: {
             '1. **您有8GB或更多RAM吗？** (如否，云API更快开始。)',
             '2. **您需要数据保持隐私吗？** (如否，云API提供更好质量。)',
             '3. **您能接受20～40分钟的设置吗？** (如否，云API在5分钟内准备就绪。)',
-            '如果您有两个或更多问题回答"否"，**[阅读完整的本地vs云比较](https://www.promptquorum.com/local-llms/local-llm-limitations?lang=zh)** ——查看云API是否更适合您的硬件和时间表。初学者经常假设本地LLM总是更好——这不是真的。正确的选择取决于您的具体约束条件。',
+            '如果您有两个或更多问题回答"否"，**[阅读完整的本地vs云比较](https://www.promptquorum.com/zh/local-llms/local-llm-limitations)** ——查看云API是否更适合您的硬件和时间表。初学者经常假设本地LLM总是更好——这不是真的。正确的选择取决于您的具体约束条件。',
           ],
         },
         howToChoose: {
@@ -1565,7 +1565,7 @@ schema: {
           title: '如何选择入门级本地LLM模型？',
           content: [
             '**本地LLM的模型选择取决于三个约束条件：可用内存、推理速度和任务类型——按此优先顺序排列。**',
-            '参数量（3B、7B、13B）是内存需求的主要决定因素。在[4位量化](/local-llms/llm-quantization-explained?lang=zh)——大多数本地推理工具的默认设置——下，将参数量乘以约0.5即可估算所需GB内存。Q4_K_M量化下的7B模型大约需要4.5 GB内存。',
+            '参数量（3B、7B、13B）是内存需求的主要决定因素。在[4位量化](/zh/local-llms/llm-quantization-explained)——大多数本地推理工具的默认设置——下，将参数量乘以约0.5即可估算所需GB内存。Q4_K_M量化下的7B模型大约需要4.5 GB内存。',
             '对于大多数初学者，**Q4_K_M量化的7B模型**在8 GB或更多内存的机器上提供最佳质量、速度和内存使用平衡。在4–6 GB内存的机器上，3B模型是实际上限。',
           ],
           image: '/images/best-beginner-local-llm-models-3b-vs-7b-zh.svg',
@@ -1645,7 +1645,7 @@ schema: {
           title: '#5 Qwen2.5 7B — 多语言和编程最佳选择',
           content: [
             '**Qwen2.5 7B在HumanEval（编程）和MBPP基准上优于Mistral 7B，原生支持29种语言，包括中文、日语、韩语、阿拉伯语和所有主要欧洲语言。** 它是非英语工作流或以编程为主用例的推荐选择。',
-            'Qwen2.5 7B使用128K上下文窗口（Mistral 7B为32K），支持带JSON模式的结构化输出。该模型提供instruct和base变体——用于对话时，始终使用instruct版本。详细基准数据请参见[Qwen vs Llama vs Mistral基准对比](/local-llms/qwen-vs-llama-vs-mistral?lang=zh)。',
+            'Qwen2.5 7B使用128K上下文窗口（Mistral 7B为32K），支持带JSON模式的结构化输出。该模型提供instruct和base变体——用于对话时，始终使用instruct版本。详细基准数据请参见[Qwen vs Llama vs Mistral基准对比](/zh/local-llms/qwen-vs-llama-vs-mistral)。',
           ],
           rows: [
             { '规格': '参数量', '值': '7B' },
@@ -1698,7 +1698,7 @@ schema: {
           id: 'how-to-download',
           title: '如何下载和运行这些模型？',
           content: [
-            '**所有五款模型均可通过单条Ollama命令安装——无需手动配置。** 安装步骤请参见[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh)，然后查看[运行您的第一个本地LLM](/local-llms/run-first-local-llm?lang=zh)获取分步首次运行指南。如果您在内存有限的笔记本电脑上运行，[如何在笔记本电脑上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh)涵盖了受限硬件的量化和性能调优。',
+            '**所有五款模型均可通过单条Ollama命令安装——无需手动配置。** 安装步骤请参见[如何安装Ollama](/zh/local-llms/how-to-install-ollama)，然后查看[运行您的第一个本地LLM](/zh/local-llms/run-first-local-llm)获取分步首次运行指南。如果您在内存有限的笔记本电脑上运行，[如何在笔记本电脑上运行本地LLM](/zh/local-llms/local-llm-on-laptop)涵盖了受限硬件的量化和性能调优。',
             '一旦你的第一个模型运行起来，下一步就是学习如何有效地提示它。从[Prompt工程基础](https://www.promptquorum.com/prompt-engineering)开始——16篇指南涵盖每个提示词所需的构建块，从温度设置到输出格式化。',
           ],
         },
@@ -1717,14 +1717,14 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh) — 安装和首次模型下载',
-            '[运行您的第一个本地LLM](/local-llms/run-first-local-llm?lang=zh) — 安装后的入门指南',
-            '[如何在笔记本电脑上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh) — 内存和散热优化',
-            '[本地LLM设置故障排查](/local-llms/troubleshooting-local-llm-setup?lang=zh) — 调试常见问题',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=zh) — 三大模型系列在7B、13B和70B的完整基准对比',
-            '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — 从3B升级到7B再到13B模型所需的GPU和内存要求',
-            '[Qwen本地部署指南 (2026)](/local-llms/qwen-local-deployment-guide-2026?lang=zh) -- 通过Ollama的初学者友好型Qwen2.5 7B设置：一条命令即可运行。',
-            '[ChatGPT Plus最佳开源替代品](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=zh) -- 首次使用本地LLM用户的无代码前端。',
+            '[如何安装Ollama](/zh/local-llms/how-to-install-ollama) — 安装和首次模型下载',
+            '[运行您的第一个本地LLM](/zh/local-llms/run-first-local-llm) — 安装后的入门指南',
+            '[如何在笔记本电脑上运行本地LLM](/zh/local-llms/local-llm-on-laptop) — 内存和散热优化',
+            '[本地LLM设置故障排查](/zh/local-llms/troubleshooting-local-llm-setup) — 调试常见问题',
+            '[Qwen vs Llama vs Mistral](/zh/local-llms/qwen-vs-llama-vs-mistral) — 三大模型系列在7B、13B和70B的完整基准对比',
+            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 从3B升级到7B再到13B模型所需的GPU和内存要求',
+            '[Qwen本地部署指南 (2026)](/zh/local-llms/qwen-local-deployment-guide-2026) -- 通过Ollama的初学者友好型Qwen2.5 7B设置：一条命令即可运行。',
+            '[ChatGPT Plus最佳开源替代品](/zh/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 首次使用本地LLM用户的无代码前端。',
           ],
         },
         faqSection: {
@@ -1790,7 +1790,7 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/best-beginner-local-llm-models?lang=zh',
+        'url': 'https://www.promptquorum.com/zh/local-llms/best-beginner-local-llm-models',
         'inLanguage': 'zh',
         'headline': 'Llama 3.2、Phi-4 Mini、Gemma 3：2026年初学者本地LLM推荐',
         'description': 'Llama 3.2 3B=2.5 GB内存，Phi-4 Mini=2.5 GB，Gemma 3 2B=1.7 GB，40–60词/秒。5款模型完整对比表+Ollama命令。2026年4月。',

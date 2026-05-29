@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Wird Raspberry Pi 5 (8 GB) ordentliches RAG ausführen?',
-            a: 'Ja. Ein Raspberry Pi 5 mit 8 GB RAM führt Llama 3 8B Q4_K_M (~5 GB) zusammen mit einem vollständigen Embedding- und Vektorspeicher-Stack mit Puffer aus. Die Geschwindigkeit beträgt ~1–2 tok/s auf der Pi 5 CPU — langsam, aber funktional für Offline-Anwendungsfälle der persönlichen Suche. Geschwindigkeits-Benchmarks finden Sie bei den <a href="/prompt-bites/best-ollama-models-cpu-only?lang=de" class="text-primary hover:underline">besten Ollama-Modellen für CPU-only-Inferenz</a>.',
+            a: 'Ja. Ein Raspberry Pi 5 mit 8 GB RAM führt Llama 3 8B Q4_K_M (~5 GB) zusammen mit einem vollständigen Embedding- und Vektorspeicher-Stack mit Puffer aus. Die Geschwindigkeit beträgt ~1–2 tok/s auf der Pi 5 CPU — langsam, aber funktional für Offline-Anwendungsfälle der persönlichen Suche. Geschwindigkeits-Benchmarks finden Sie bei den <a href="/de/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">besten Ollama-Modellen für CPU-only-Inferenz</a>.',
           },
           {
             q: 'Lohnt sich lokales RAG mit 2 GB RAM?',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Le Raspberry Pi 5 (8 Go) fera-t-il tourner un vrai RAG ?',
-            a: 'Oui. Un Raspberry Pi 5 avec 8 Go de RAM fait tourner Llama 3 8B Q4_K_M (~5 Go) avec une pile complète embedding + vector store avec de la marge. La vitesse est ~1–2 tok/s sur le CPU Pi 5 — lent mais fonctionnel pour les cas d\'usage de recherche personnelle hors ligne. Consultez les <a href="/prompt-bites/best-ollama-models-cpu-only?lang=fr" class="text-primary hover:underline">meilleurs modèles Ollama pour l\'inférence CPU uniquement</a> pour les benchmarks de vitesse.',
+            a: 'Oui. Un Raspberry Pi 5 avec 8 Go de RAM fait tourner Llama 3 8B Q4_K_M (~5 Go) avec une pile complète embedding + vector store avec de la marge. La vitesse est ~1–2 tok/s sur le CPU Pi 5 — lent mais fonctionnel pour les cas d\'usage de recherche personnelle hors ligne. Consultez les <a href="/fr/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">meilleurs modèles Ollama pour l\'inférence CPU uniquement</a> pour les benchmarks de vitesse.',
           },
           {
             q: 'Le RAG local vaut-il la peine avec 2 Go de RAM ?',
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Raspberry Pi 5（8 GB）は適切なRAGを実行できますか？',
-            a: 'はい。8 GB RAMを持つRaspberry Pi 5は、完全な埋め込み + ベクターストアスタックとともにLlama 3 8B Q4_K_M（~5 GB）を余裕を持って実行できます。速度はPi 5 CPUで~1–2 tok/sです — オフライン個人検索ユースケースには遅いですが機能的です。スピードベンチマークについては<a href="/prompt-bites/best-ollama-models-cpu-only?lang=ja" class="text-primary hover:underline">CPU専用推論のための最良のOllamaモデル</a>を参照してください。',
+            a: 'はい。8 GB RAMを持つRaspberry Pi 5は、完全な埋め込み + ベクターストアスタックとともにLlama 3 8B Q4_K_M（~5 GB）を余裕を持って実行できます。速度はPi 5 CPUで~1–2 tok/sです — オフライン個人検索ユースケースには遅いですが機能的です。スピードベンチマークについては<a href="/ja/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">CPU専用推論のための最良のOllamaモデル</a>を参照してください。',
           },
           {
             q: '2 GB RAMでのローカルRAGは価値がありますか？',
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Una Raspberry Pi 5 (8 GB) puede ejecutar RAG de verdad?',
-            a: 'Sí. Una Raspberry Pi 5 con 8 GB de RAM ejecuta Llama 3 8B Q4_K_M (~5 GB) junto con una pila completa de embeddings + vector store con margen. La velocidad es ~1–2 tok/s en el CPU del Pi 5 — lento pero funcional para búsqueda personal offline. Consulta los benchmarks en los <a href="/prompt-bites/best-ollama-models-cpu-only?lang=es" class="text-primary hover:underline">mejores modelos de Ollama para inferencia solo en CPU</a>.',
+            a: 'Sí. Una Raspberry Pi 5 con 8 GB de RAM ejecuta Llama 3 8B Q4_K_M (~5 GB) junto con una pila completa de embeddings + vector store con margen. La velocidad es ~1–2 tok/s en el CPU del Pi 5 — lento pero funcional para búsqueda personal offline. Consulta los benchmarks en los <a href="/es/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">mejores modelos de Ollama para inferencia solo en CPU</a>.',
           },
           {
             q: '¿Vale la pena el RAG local con 2 GB de RAM?',
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Raspberry Pi 5（8 GB）能运行真正的 RAG 吗？',
-            a: '可以。8 GB 内存的 Raspberry Pi 5 可以轻松运行 Llama 3 8B Q4_K_M（~5 GB）以及完整的 Embeddings + 向量数据库技术栈。Pi 5 CPU 的速度约为 ~1–2 tok/s——慢，但对离线个人搜索用例是可用的。速度基准测试请参阅<a href="/prompt-bites/best-ollama-models-cpu-only?lang=zh" class="text-primary hover:underline">仅 CPU 推理的最佳 Ollama 模型</a>。',
+            a: '可以。8 GB 内存的 Raspberry Pi 5 可以轻松运行 Llama 3 8B Q4_K_M（~5 GB）以及完整的 Embeddings + 向量数据库技术栈。Pi 5 CPU 的速度约为 ~1–2 tok/s——慢，但对离线个人搜索用例是可用的。速度基准测试请参阅<a href="/zh/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">仅 CPU 推理的最佳 Ollama 模型</a>。',
           },
           {
             q: '2 GB 内存下的本地 RAG 值得做吗？',

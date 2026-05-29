@@ -166,8 +166,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Direkter Vergleich',
         content: [
           'Die folgende Tabelle vergleicht Q4_K_M und Q8_0 für ein 7B-Modell. Beide Formate funktionieren mit Ollama, LM Studio und llama.cpp ohne spezielle Konfiguration.',
-          'Für Kontext zu Q4_K_M und K-Quant-Kompression, siehe den <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=de" class="text-primary hover:underline">Q4_K_M Erklärungsleitfaden</a>. Für die vollständige Quantisierungsreferenz, siehe <a href="/local-llms/quantization-levels-comparison?lang=de" class="text-primary hover:underline">Quantisierungsstufen verglichen</a>.',
-          '<strong>Drei Aufgaben offenbaren Q4_K_Ms Qualitätslücke: Abruf langer Dokumente (50+ Seiten), mehrstufige Mathematik mit Zwischenzustand und Code-Generierung über 300+ Zeilen.</strong> Für diese verhindert Q8_0s höhere Präzision die kleinen Drift-Fehler, die sich über lange Ausgaben akkumulieren. Für alles andere — Chat, Code unter 200 Zeilen, Q&A, Zusammenfassung — ist die Lücke unsichtbar. Für eine Auffrischung, siehe <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=de" class="text-primary hover:underline">was Q4_K_M bedeutet</a>.',
+          'Für Kontext zu Q4_K_M und K-Quant-Kompression, siehe den <a href="/de/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M Erklärungsleitfaden</a>. Für die vollständige Quantisierungsreferenz, siehe <a href="/de/local-llms/quantization-levels-comparison" class="text-primary hover:underline">Quantisierungsstufen verglichen</a>.',
+          '<strong>Drei Aufgaben offenbaren Q4_K_Ms Qualitätslücke: Abruf langer Dokumente (50+ Seiten), mehrstufige Mathematik mit Zwischenzustand und Code-Generierung über 300+ Zeilen.</strong> Für diese verhindert Q8_0s höhere Präzision die kleinen Drift-Fehler, die sich über lange Ausgaben akkumulieren. Für alles andere — Chat, Code unter 200 Zeilen, Q&A, Zusammenfassung — ist die Lücke unsichtbar. Für eine Auffrischung, siehe <a href="/de/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">was Q4_K_M bedeutet</a>.',
         ],
         columns: ['Metrik', 'Q4_K_M', 'Q8_0'],
         rows: [
@@ -187,7 +187,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ist Q8_0 schneller als Q4_K_M?',
-            a: 'Nein. Q8_0 ist größer und erfordert mehr Speicherbandbreite, was es pro Token leicht langsamer macht als Q4_K_M. Geschwindigkeit und Qualität begünstigen beide Q4_K_M für VRAM-begrenzte Setups. Siehe <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=de" class="text-primary hover:underline">was Q4_K_M bedeutet</a> für den Hintergrund.',
+            a: 'Nein. Q8_0 ist größer und erfordert mehr Speicherbandbreite, was es pro Token leicht langsamer macht als Q4_K_M. Geschwindigkeit und Qualität begünstigen beide Q4_K_M für VRAM-begrenzte Setups. Siehe <a href="/de/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">was Q4_K_M bedeutet</a> für den Hintergrund.',
           },
           {
             q: 'Kann ich für verschiedene Aufgaben zwischen Q4_K_M und Q8_0 wechseln?',
@@ -231,8 +231,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Comparaison côte à côte',
         content: [
           'Le tableau ci-dessous compare Q4_K_M et Q8_0 pour un modèle 7B. Les deux formats fonctionnent avec Ollama, LM Studio et llama.cpp sans configuration particulière.',
-          'Pour comprendre Q4_K_M et la compression k-quant, voir le <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=fr" class="text-primary hover:underline">guide explicatif Q4_K_M</a>. Pour la référence complète, voir <a href="/local-llms/quantization-levels-comparison?lang=fr" class="text-primary hover:underline">les niveaux de quantisation comparés</a>.',
-          '<strong>Trois tâches révèlent l\'écart de Q4_K_M : rappel de longs documents (50+ pages), calcul multi-étapes avec état intermédiaire, et génération de code sur 300+ lignes.</strong> Pour celles-ci, la précision supplémentaire de Q8_0 prévient les petites erreurs de dérive qui s\'accumulent sur de longues sorties. Pour tout le reste — chat, code sous 200 lignes, Q&R, résumé — l\'écart est invisible. Pour un rappel avant de décider, voir <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=fr" class="text-primary hover:underline">ce que signifie Q4_K_M</a>.',
+          'Pour comprendre Q4_K_M et la compression k-quant, voir le <a href="/fr/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">guide explicatif Q4_K_M</a>. Pour la référence complète, voir <a href="/fr/local-llms/quantization-levels-comparison" class="text-primary hover:underline">les niveaux de quantisation comparés</a>.',
+          '<strong>Trois tâches révèlent l\'écart de Q4_K_M : rappel de longs documents (50+ pages), calcul multi-étapes avec état intermédiaire, et génération de code sur 300+ lignes.</strong> Pour celles-ci, la précision supplémentaire de Q8_0 prévient les petites erreurs de dérive qui s\'accumulent sur de longues sorties. Pour tout le reste — chat, code sous 200 lignes, Q&R, résumé — l\'écart est invisible. Pour un rappel avant de décider, voir <a href="/fr/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ce que signifie Q4_K_M</a>.',
         ],
         columns: ['Métrique', 'Q4_K_M', 'Q8_0'],
         rows: [
@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Q8_0 est-il plus rapide que Q4_K_M ?',
-            a: 'Non. Q8_0 est plus lourd et nécessite plus de bande passante mémoire, ce qui le rend légèrement plus lent par token que Q4_K_M. Vitesse et qualité favorisent tous deux Q4_K_M pour les setups contraints en VRAM. Voir <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=fr" class="text-primary hover:underline">ce que signifie Q4_K_M</a> pour la raison sous-jacente.',
+            a: 'Non. Q8_0 est plus lourd et nécessite plus de bande passante mémoire, ce qui le rend légèrement plus lent par token que Q4_K_M. Vitesse et qualité favorisent tous deux Q4_K_M pour les setups contraints en VRAM. Voir <a href="/fr/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ce que signifie Q4_K_M</a> pour la raison sous-jacente.',
           },
           {
             q: 'Puis-je alterner entre Q4_K_M et Q8_0 selon les tâches ?',
@@ -296,8 +296,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '並列比較',
         content: [
           '以下の表は7BモデルのQ4_K_MとQ8_0を比較しています。両フォーマットは特別な設定なしにOllama、LM Studio、llama.cppで動作します。',
-          'Q4_K_Mとk-quant圧縮について理解するには、<a href="/prompt-bites/what-is-q4-k-m-quantization?lang=ja" class="text-primary hover:underline">Q4_K_M解説ガイド</a>を参照してください。完全な量化リファレンスは<a href="/local-llms/quantization-levels-comparison?lang=ja" class="text-primary hover:underline">量化レベル比較</a>を参照してください。',
-          '<strong>Q4_K_Mの品質ギャップを明らかにする3つのタスク：長文書の想起（50ページ以上）、中間状態を伴う複数ステップの数学、300行以上のコード生成です。</strong>これらにおいて、Q8_0の追加精度は長い出力で積み重なる小さなドリフトエラーを防ぎます。他のすべて — チャット、200行未満のコード、Q&A、要約 — ではギャップは見えません。決定前の復習は<a href="/prompt-bites/what-is-q4-k-m-quantization?lang=ja" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
+          'Q4_K_Mとk-quant圧縮について理解するには、<a href="/ja/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M解説ガイド</a>を参照してください。完全な量化リファレンスは<a href="/ja/local-llms/quantization-levels-comparison" class="text-primary hover:underline">量化レベル比較</a>を参照してください。',
+          '<strong>Q4_K_Mの品質ギャップを明らかにする3つのタスク：長文書の想起（50ページ以上）、中間状態を伴う複数ステップの数学、300行以上のコード生成です。</strong>これらにおいて、Q8_0の追加精度は長い出力で積み重なる小さなドリフトエラーを防ぎます。他のすべて — チャット、200行未満のコード、Q&A、要約 — ではギャップは見えません。決定前の復習は<a href="/ja/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
         ],
         columns: ['指標', 'Q4_K_M', 'Q8_0'],
         rows: [
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Q8_0はQ4_K_Mより速いですか？',
-            a: 'いいえ。Q8_0はより大きく、より多くのメモリ帯域幅を必要とするため、トークンあたりわずかにQ4_K_Mより遅いです。速度と品質の両方がVRAM制限のセットアップではQ4_K_Mを支持します。基本的な理由については<a href="/prompt-bites/what-is-q4-k-m-quantization?lang=ja" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
+            a: 'いいえ。Q8_0はより大きく、より多くのメモリ帯域幅を必要とするため、トークンあたりわずかにQ4_K_Mより遅いです。速度と品質の両方がVRAM制限のセットアップではQ4_K_Mを支持します。基本的な理由については<a href="/ja/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_Mの意味</a>を参照してください。',
           },
           {
             q: '異なるタスクでQ4_K_MとQ8_0を切り替えられますか？',
@@ -361,8 +361,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '并排对比',
         content: [
           '下表比较了7B模型的Q4_K_M和Q8_0。两种格式都可与Ollama、LM Studio和llama.cpp配合使用，无需特殊配置。',
-          '关于Q4_K_M的含义和k-quant压缩原理，请参阅<a href="/prompt-bites/what-is-q4-k-m-quantization?lang=zh" class="text-primary hover:underline">Q4_K_M详解指南</a>。完整量化参考请查看<a href="/local-llms/quantization-levels-comparison?lang=zh" class="text-primary hover:underline">量化级别比较</a>。',
-          '<strong>三个任务揭示了Q4_K_M的质量差距：长文档回忆（50页以上）、带中间状态的多步数学推理，以及超过300行的代码生成。</strong>对于这些任务，Q8_0的额外精度可防止在长输出中累积的小误差漂移。对于其他所有情况——聊天、200行以内的代码、问答、摘要——差距是不可见的。决策前的回顾请参阅<a href="/prompt-bites/what-is-q4-k-m-quantization?lang=zh" class="text-primary hover:underline">Q4_K_M的含义</a>。',
+          '关于Q4_K_M的含义和k-quant压缩原理，请参阅<a href="/zh/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M详解指南</a>。完整量化参考请查看<a href="/zh/local-llms/quantization-levels-comparison" class="text-primary hover:underline">量化级别比较</a>。',
+          '<strong>三个任务揭示了Q4_K_M的质量差距：长文档回忆（50页以上）、带中间状态的多步数学推理，以及超过300行的代码生成。</strong>对于这些任务，Q8_0的额外精度可防止在长输出中累积的小误差漂移。对于其他所有情况——聊天、200行以内的代码、问答、摘要——差距是不可见的。决策前的回顾请参阅<a href="/zh/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M的含义</a>。',
         ],
         columns: ['指标', 'Q4_K_M', 'Q8_0'],
         rows: [
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Q8_0比Q4_K_M快吗？',
-            a: '不。Q8_0更大，需要更多内存带宽，使其每token略慢于Q4_K_M。对于显存受限的配置，速度和质量都有利于Q4_K_M。底层原因请参阅<a href="/prompt-bites/what-is-q4-k-m-quantization?lang=zh" class="text-primary hover:underline">Q4_K_M的含义</a>。',
+            a: '不。Q8_0更大，需要更多内存带宽，使其每token略慢于Q4_K_M。对于显存受限的配置，速度和质量都有利于Q4_K_M。底层原因请参阅<a href="/zh/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M的含义</a>。',
           },
           {
             q: '我能在不同任务间切换Q4_K_M和Q8_0吗？',
@@ -438,8 +438,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Comparación lado a lado',
         content: [
           'La tabla siguiente compara Q4_K_M y Q8_0 para un modelo 7B. Ambos formatos funcionan con Ollama, LM Studio y llama.cpp sin configuración especial.',
-          'Para entender Q4_K_M y cómo funciona la compresión k-quant, consulta la <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=es" class="text-primary hover:underline">guía explicativa de Q4_K_M</a>. Para la referencia completa de cuantización, consulta <a href="/local-llms/quantization-levels-comparison?lang=es" class="text-primary hover:underline">niveles de cuantización comparados</a>.',
-          '<strong>Tres tareas revelan la brecha de calidad de Q4_K_M: recuperación de documentos largos (50+ páginas), matemáticas de múltiples pasos con estado intermedio, y generación de código en más de 300 líneas.</strong> Para estos casos, la precisión extra de Q8_0 previene los pequeños errores de deriva que se acumulan en salidas largas. Para todo lo demás — chat, código de menos de 200 líneas, preguntas y respuestas, resúmenes — la brecha es invisible. Para un repaso antes de decidir, consulta <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=es" class="text-primary hover:underline">qué significa Q4_K_M</a>.',
+          'Para entender Q4_K_M y cómo funciona la compresión k-quant, consulta la <a href="/es/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">guía explicativa de Q4_K_M</a>. Para la referencia completa de cuantización, consulta <a href="/es/local-llms/quantization-levels-comparison" class="text-primary hover:underline">niveles de cuantización comparados</a>.',
+          '<strong>Tres tareas revelan la brecha de calidad de Q4_K_M: recuperación de documentos largos (50+ páginas), matemáticas de múltiples pasos con estado intermedio, y generación de código en más de 300 líneas.</strong> Para estos casos, la precisión extra de Q8_0 previene los pequeños errores de deriva que se acumulan en salidas largas. Para todo lo demás — chat, código de menos de 200 líneas, preguntas y respuestas, resúmenes — la brecha es invisible. Para un repaso antes de decidir, consulta <a href="/es/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">qué significa Q4_K_M</a>.',
         ],
         columns: ['Métrica', 'Q4_K_M', 'Q8_0'],
         rows: [
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Es Q8_0 más rápido que Q4_K_M?',
-            a: 'No. Q8_0 es más grande y requiere más ancho de banda de memoria, lo que lo hace ligeramente más lento por token que Q4_K_M. Tanto la velocidad como la calidad favorecen a Q4_K_M en configuraciones con VRAM limitada. Consulta <a href="/prompt-bites/what-is-q4-k-m-quantization?lang=es" class="text-primary hover:underline">qué significa Q4_K_M</a> para la razón subyacente.',
+            a: 'No. Q8_0 es más grande y requiere más ancho de banda de memoria, lo que lo hace ligeramente más lento por token que Q4_K_M. Tanto la velocidad como la calidad favorecen a Q4_K_M en configuraciones con VRAM limitada. Consulta <a href="/es/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">qué significa Q4_K_M</a> para la razón subyacente.',
           },
           {
             q: '¿Puedo alternar entre Q4_K_M y Q8_0 para diferentes tareas?',
