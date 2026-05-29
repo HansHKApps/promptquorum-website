@@ -73,10 +73,10 @@ export const translations = {
     blogIntro: "Each article covers a practical use case with specific numbers, named models, and copy-ready prompt templates. Articles are structured for AI citation extraction.",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum — One Prompt. 25+ AI Models. Consensus.",
-    homeMetaDescription: "Compare responses from 25+ AI models with one prompt. Detect hallucinations, get consensus insights, and choose the best answer. Free with your API key.",
-    featuresMetaTitle: "Features: AI Dispatch, Frameworks & Consensus | PromptQuorum",
-    featuresMetaDescription: "PromptQuorum dispatches prompts to 25+ AI providers using 9 frameworks (CO-STAR, CRAFT, RISEN) and runs consensus analysis. Free with your API key.",
+    homeMetaTitle: "PromptQuorum — AI Prompt Optimization Across 25+ Models",
+    homeMetaDescription: "Prompt optimization and management across 25+ AI models. Run one prompt, compare outputs, detect hallucinations, and pick the best answer. Free with your API key.",
+    featuresMetaTitle: "Prompt Optimization Features: AI Dispatch & Consensus | PromptQuorum",
+    featuresMetaDescription: "PromptQuorum is a prompt optimization and management tool that dispatches to 25+ AI providers using 9 frameworks (CO-STAR, CRAFT, RISEN) and scores consensus.",
     howItWorksMetaTitle: "How PromptQuorum Works: Optimize, Dispatch & Score 2026",
     howItWorksMetaDescription: "PromptQuorum's 4-stage pipeline optimizes your prompt, dispatches to 25+ AI models simultaneously, then runs consensus scoring for the best answer.",
     faqMetaTitle: "PromptQuorum FAQ: Multi-Model Prompts, Privacy & Pricing",

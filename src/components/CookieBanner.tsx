@@ -219,12 +219,12 @@ function CookieBannerInner() {
   if (!visible) return null
 
   const btnStyle: React.CSSProperties = {
-    padding: '8px 18px',
+    padding: '6px 12px',
     borderRadius: '100px',
     border: '1px solid #CAC4D0',
     background: 'transparent',
     color: '#E6E1E5',
-    fontSize: '13px',
+    fontSize: '12px',
     fontWeight: 600,
     cursor: 'pointer',
     fontFamily: "'Plus Jakarta Sans', sans-serif",
@@ -239,24 +239,23 @@ function CookieBannerInner() {
       aria-label="Cookie consent"
       style={{
         position: 'fixed',
-        bottom: '24px',
-        left: '50%',
-        transform: 'translateX(-50%)',
+        bottom: '16px',
+        left: '16px',
         zIndex: 9998,
         background: '#1C1B1F',
         border: '1px solid #49454F',
-        borderRadius: '16px',
-        padding: '20px 24px',
-        maxWidth: '560px',
-        width: 'calc(100vw - 48px)',
+        borderRadius: '12px',
+        padding: '14px 16px',
+        maxWidth: '320px',
+        width: 'calc(100vw - 32px)',
         boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
         fontFamily: "'Plus Jakarta Sans', sans-serif",
         display: 'flex',
         flexDirection: 'column',
-        gap: '16px',
+        gap: '12px',
       }}
     >
-      <p style={{ margin: 0, fontSize: '13px', color: '#CAC4D0', lineHeight: 1.6 }}>
+      <p style={{ margin: 0, fontSize: '13px', color: '#CAC4D0', lineHeight: 1.5 }}>
         {c.intro}{' '}
         <a href="/privacy" style={{ color: '#D0BCFF', textDecoration: 'underline' }}>
           {c.policy}
@@ -277,7 +276,7 @@ function CookieBannerInner() {
       </div>
 
       {showCustom && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid #49454F', paddingTop: '14px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid #49454F', paddingTop: '14px', maxHeight: '220px', overflowY: 'auto' }}>
           <CategoryRow
             title={c.essential}
             desc={c.essentialDesc}
