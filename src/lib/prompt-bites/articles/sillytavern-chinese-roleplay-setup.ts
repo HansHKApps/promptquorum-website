@@ -946,7 +946,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: 'SillyTavern 中文角色扮演配置指南',
     seoTitle: 'SillyTavern 中文角色扮演 2026：Qwen2.5、Yi-34B最优模型与配置完整指南',
-    metaDescription: 'SillyTavern 中文角色扮演本地模型完整指南：Qwen2.5-72B 中文散文质量最佳，Yi-34B 角色情感层次突出，ChatGLM3-6B 推理最快。角色卡 UTF-8 中文设置与 Ollama API 桥接配置详解，助您搭建流畅的中文本地角色扮演环境。',
+    metaDescription: 'SillyTavern本地中文角色扮演完整配置指南：Qwen2.5-72B中文散文质量最佳，Yi-34B角色情感层次最丰富，ChatGLM3-6B速度最快（8 GB显存可运行）。角色卡UTF-8中文编码设置与Ollama API桥接步骤详解，助您搭建流畅的中文本地角色扮演环境。',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

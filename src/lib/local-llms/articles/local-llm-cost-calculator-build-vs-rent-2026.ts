@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Cost & Comparisons',
     title: '本地LLM成本计算器：自建 vs 云租GPU 2026',
     seoTitle: '本地LLM成本：自建GPU工作站 vs 云租GPU 2026',
-    metaDescription: '2026年本地GPU工作站与RunPod/Lambda Labs云GPU完整TCO对比——损益平衡点约1,800小时，含电费计算器。',
+    metaDescription: '2026年自建GPU工作站与云GPU租赁（RunPod/Lambda Labs）完整生命周期成本（TCO）对比分析：损益平衡点约1,800 GPU小时，含电费、折旧与维护成本计算器，帮您精确判断自建还是上云更划算。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

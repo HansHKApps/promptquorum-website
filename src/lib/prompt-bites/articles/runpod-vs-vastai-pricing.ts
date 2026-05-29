@@ -584,8 +584,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Tool Comparisons',
     title: '2026年RunPod与Vast.ai哪个更便宜？',
-    seoTitle: 'RunPod vs Vast.ai 价格 2026 | Prompt Bites',
-    metaDescription: 'Vast.ai在spot/可中断GPU上更便宜;RunPod在持续工作负载上更可靠。2026年5月数据 — 始终核查最新报价。',
+    seoTitle: 'RunPod vs Vast.ai 2026：GPU竞价实例价格与稳定性对比',
+    metaDescription: 'Vast.ai竞价/可中断GPU实例价格更低（A100 40GB约0.6–0.9美元/小时）；RunPod在长时连续推理工作负载上可靠性更强，SLA更有保障。2026年5月价格快照，具体费率以各平台官网实时报价为准。',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

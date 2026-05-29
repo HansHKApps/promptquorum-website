@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: 'DeepSeek V3本地运行硬件要求？',
     seoTitle: 'DeepSeek V3本地运行硬件要求 2026：400GB现实与各显存层级实用替代方案完整指南',
-    metaDescription: 'DeepSeek V3是六百七十一亿参数的专家混合模型，消费级硬件完全无法运行。Q4_K_M量化版需约四百GB内存。本文按显存层级提供实用替代方案，并附蒸馏版DS-R1-Distill-Qwen系列的具体基准测试数据。',
+    metaDescription: 'DeepSeek V3是671亿参数的MoE专家混合模型，消费级硬件完全无法本地运行——Q4_K_M量化版仍需约400 GB内存。本文列出各显存档位的实用替代方案，并附DS-R1-Distill-Qwen蒸馏系列的完整基准数据与本地部署建议。',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

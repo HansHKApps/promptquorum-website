@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Coding Assistants',
     title: '2026年本地LLM最佳IDE插件推荐（VS Code & JetBrains）',
     seoTitle: '2026年本地LLM IDE插件推荐（VS Code & JetBrains）',
-    metaDescription: 'Continue、Cline、Aider、Tabby——2026年本地模型支持对比评测。哪款IDE插件与Ollama或LM Studio连接效果最好？',
+    metaDescription: 'Continue、Cline、Aider、Tabby——2026年本地LLM支持最佳IDE插件横向评测。哪款与Ollama或LM Studio连接最流畅？代码补全延迟、上下文窗口与离线可用性全面对比，支持VS Code和JetBrains全系IDE。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

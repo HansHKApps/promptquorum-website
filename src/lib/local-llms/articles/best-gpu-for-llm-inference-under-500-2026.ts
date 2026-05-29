@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Hardware & Performance',
     title: '2026年500美元以下LLM推理最佳GPU排行',
     seoTitle: '2026年500美元以下LLM推理GPU推荐（5款测评）',
-    metaDescription: 'RTX 4060 Ti 16GB、RTX 3090二手、RX 7800 XT——按显存、速度和性价比排名。为本地AI推理选择最合适的GPU。',
+    metaDescription: 'RTX 4060 Ti 16GB、RTX 3090二手版、RX 7800 XT——2026年500美元以内本地LLM推理最优GPU，按显存容量、推理速度与性价比详细排名。帮您精准选购最适合7B–70B模型本地推理的显卡。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

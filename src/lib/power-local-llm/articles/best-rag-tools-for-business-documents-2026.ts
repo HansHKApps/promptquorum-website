@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'RAG & Document Chat',
     title: '2026年商业文档最佳RAG工具对比',
     seoTitle: '2026年商业文档最佳RAG工具对比',
-    metaDescription: '对比AnythingLLM、LlamaIndex、PrivateGPT、Cognita等RAG工具在PDF、Word、SharePoint企业文档中的表现——本地运行，数据不出网，2026年最新评测。',
+    metaDescription: 'AnythingLLM、LlamaIndex、PrivateGPT、Cognita企业文档RAG工具完整对比：在PDF、Word、SharePoint真实文档中的检索精度、本地部署难度与数据合规性全面评测，数据全程不出局域网，2026年最新实测。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

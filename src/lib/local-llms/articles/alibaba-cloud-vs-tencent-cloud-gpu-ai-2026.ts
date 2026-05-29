@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '阿里云vs腾讯云GPU人工智能对比2026：价格、Qwen性能、配置指南',
     seoTitle: '阿里云vs腾讯云GPU AI 2026：价格对比、Qwen推理速度、使用指南',
     metaDescription:
-      '阿里云PAI vs 腾讯云TI vs AutoDL：2026年中国GPU云服务对比。价格、Qwen推理性能、数据本地化与合规、配置教程。含推广链接。',
+      'AutoDL、阿里云PAI与腾讯云TI Platform 2026年中国AI云GPU完整对比：AutoDL最便宜（A100约2.5元/小时），阿里云Qwen推理优化最好（性能领先20–30%），腾讯云TI最适合微信生态集成。含配置教程与合规要点说明。',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: '在中国或面向中国业务的开发者和研究人员，在中国云GPU服务商之间做选择。',

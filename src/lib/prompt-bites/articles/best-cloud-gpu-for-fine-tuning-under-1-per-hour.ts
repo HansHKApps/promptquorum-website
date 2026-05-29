@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: '2026年最便宜LLM微调云GPU（每小时不到1美元）',
     seoTitle: '2026年1美元/小时以下LLM微调云GPU推荐',
-    metaDescription: '用QLoRA在RunPod、Vast.ai或Lambda Labs上以不到1美元/小时微调Llama 3.1 8B或Qwen2.5 14B。最便宜GPU选项、实际成本和平台对比。',
+    metaDescription: '用QLoRA在RunPod、Vast.ai或Lambda Labs上以不到1美元/小时微调Llama 3.1 8B或Qwen2.5 14B。2026年最便宜云GPU实测：A10G/RTX 4090低至0.5–0.8美元/小时，含实际成本计算与各平台功能对比。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

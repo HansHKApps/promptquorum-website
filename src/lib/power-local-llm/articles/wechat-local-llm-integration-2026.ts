@@ -908,7 +908,7 @@ while True:
     intro:
       '将微信与本地LLM连接，让你在全球最常用的即时通讯应用中拥有私密AI助手——无需向任何云端API发送一条消息。本指南涵盖三种集成方案、中文文本的模型选择，以及如何通过本地推理满足《数据安全法》要求。',
     metaDescription:
-      '2026年微信接入本地大模型三种集成方案：一、WeChatFerry（Windows钩子）、二、HTTP Webhook桥接、三、迷你主机Ollama服务器。中文对话优先推荐Qwen2.5 7B，完全符合《数据安全法》要求，所有推理数据不出本地设备。',
+      '2026年微信整合本地大模型三种技术路线：WeChatFerry Windows钩子实现自动回复、HTTP Webhook事件驱动桥接、迷你PC专用Ollama服务器。中文对话优先推荐Qwen2.5 7B Q4_K_M量化版，完全符合《数据安全法》，推理数据完全不离开本地设备。',
     twitterDescription:
       '微信 + 本地LLM：WeChatFerry、HTTP Webhook或迷你主机服务器。Qwen2.5 7B中文最优。无需云端API。',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',

@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'how-to',
     title: 'MacBook eGPU与本地AI：2026年什么有效',
     seoTitle: 'MacBook eGPU本地LLM 2026——替代方案详解',
-    metaDescription: 'Apple Silicon MacBook不支持eGPU进行GPU计算。2026年替代方案：Mac Mini M4 Pro、OCuLink迷你PC、通过局域网连接Ollama服务器。',
+    metaDescription: 'Apple Silicon MacBook（M2/M3/M4系列）不支持eGPU进行GPU计算推理。2026年最优替代方案：Mac Mini M4 Pro（48GB统一内存）、OCuLink接口AMD迷你PC、或通过局域网连接外部Ollama服务器，三方案详细对比。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

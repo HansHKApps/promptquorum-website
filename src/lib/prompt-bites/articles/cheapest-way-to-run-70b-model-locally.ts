@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: '2026年本地运行70B模型最省钱方案',
     seoTitle: '2026年本地运行70B大模型最低成本方案',
-    metaDescription: '2026年本地运行70B大模型最省钱方案：Mac Mini M4 Pro 48GB（约14,000元）、双RTX 3090（约15,000元）和CPU-only 128GB RAM对比。',
+    metaDescription: '2026年本地运行70B大模型最低成本三方案对比：Mac Mini M4 Pro 48GB（约14,000元，推荐新手首选）、双RTX 3090（约15,000元，推理速度最快）、CPU-only 128GB RAM（约5,000元，最省钱但速度慢）。含实测速度与性价比分析。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

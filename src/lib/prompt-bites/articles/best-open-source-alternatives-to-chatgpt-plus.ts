@@ -306,7 +306,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: '2026年ChatGPT Plus最佳开源替代方案',
     seoTitle: '2026年ChatGPT Plus最佳免费开源替代',
-    metaDescription: '2026年ChatGPT Plus最佳开源替代方案——Ollama+Open WebUI、LM Studio、Jan、AnythingLLM对比。免费、私密、无需订阅。',
+    metaDescription: '2026年ChatGPT Plus最佳免费开源替代方案：Ollama+Open WebUI（功能最全，支持多用户）、LM Studio（新手友好）、Jan（轻量快速）、AnythingLLM（RAG企业文档专用）。全程本地运行，数据不出设备，永久免费无需订阅。',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',

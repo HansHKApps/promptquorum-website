@@ -404,7 +404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Productivity & Knowledge Tools',
     title: '用本地大模型搭建微信机器人：私人助理 2026',
     seoTitle: '本地大模型WeChat机器人实战 2026：WeChatFerry + Ollama完整配置教程',
-    metaDescription: '2026年微信私人助理机器人搭建教程：在Windows上使用WeChatFerry钩入微信PC客户端，搭配Ollama本地大模型（推荐Qwen2.5 7B）实现自动回复。全程本地推理，无需任何云端API，私信和群聊均支持，数据完全不出本地。',
+    metaDescription: '2026年微信私人助理机器人完整搭建教程：使用WeChatFerry在Windows上钩入微信PC客户端，搭配Ollama本地大模型（推荐Qwen2.5 7B Q4量化版）自动处理私信与群聊。全程本地推理，无需云端API，约30–60分钟完成部署。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

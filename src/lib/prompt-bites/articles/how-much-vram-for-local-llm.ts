@@ -332,8 +332,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Quantization & VRAM',
     title: '运行本地LLM需要多少显存？',
-    seoTitle: '本地LLM显存 VRAM 层级 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: '4 GB运行Phi-4 Mini，6 GB运行Llama 3 8B Q4，12 GB运行Qwen 14B Q4。PromptQuorum显存快速决策指南。',
+    seoTitle: 'LLM显存速查 2026：4GB到24GB各档位运行哪款模型',
+    metaDescription: '本地大模型各参数规模所需显存参考（2026）：4 GB运行Phi-4 Mini Q4；6 GB运行Llama 3 8B Q4_K_M；12 GB解锁Qwen 14B；24 GB承载Qwen 32B。通用公式：参数量（B）×0.7≈Q4量化所需显存（GB）。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

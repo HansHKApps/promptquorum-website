@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: '2026年Ollama常驻服务器最佳迷你电脑推荐',
     seoTitle: '2026年Ollama常驻服务器迷你PC推荐（4款评测）',
-    metaDescription: '迷你PC运行Ollama 24小时，功耗仅15–35W。推荐：铭凡UM890 Pro、AOOSTAR GEM12、倍控SER8。规格、功耗和购买链接一网打尽。',
+    metaDescription: '以15–35W超低功耗全天候运行Ollama的迷你PC推荐：铭凡UM890 Pro（AMD 890M集显）、AOOSTAR GEM12（双DDR5）、倍控SER8（Ryzen 7 8845HS）。详细规格对比、实测功耗与购买链接，轻松搭建24小时本地AI服务器。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

@@ -360,8 +360,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Model Comparisons',
     title: '编程最佳14B模型是哪款？',
-    seoTitle: '本地编程最佳14B模型 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen 2.5 Coder 14B：78% HumanEval、10 GB VRAM。DeepSeek Coder 14B：75%。StarCoder2 15B：73%。PromptQuorum 快速解答。',
+    seoTitle: 'Qwen2.5-Coder 14B编程实测 2026：HumanEval 78%第一',
+    metaDescription: 'Qwen2.5-Coder 14B以78% HumanEval得分领先，12 GB显存运行Q4_K_M量化版。DeepSeek Coder 14B以75%紧随，Python与SQL补全特别出色。StarCoder2 15B评分73%，响应速度最快。三款均支持Ollama本地部署，无需订阅费用。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

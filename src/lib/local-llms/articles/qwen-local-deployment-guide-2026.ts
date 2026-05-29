@@ -1254,7 +1254,7 @@ curl http://localhost:11434/v1/chat/completions \\
     title: 'Qwen本地部署指南2026：在各硬件层级运行Qwen2.5、Coder和VL',
     seoTitle: 'Qwen2.5本地部署2026：Coder、VL与各硬件层级Ollama+LM Studio设置指南',
     intro: 'Qwen2.5 7B通过Ollama仅需5.5GB显存即可运行——只需一条命令，无需任何配置。Qwen2.5-Coder 32B在HumanEval上达到92.7%。Qwen2-VL 7B是中日文档OCR领域最强的本地视觉模型。本指南涵盖完整的Qwen模型家族：各硬件层级的最优模型选择、Ollama和LM Studio部署方法、量化方案推荐、基准测试数据，以及与DeepSeek和Llama在2026年消费级硬件上的对比。',
-    metaDescription: '2026年在本地运行Qwen2.5（7B–72B）、Qwen2.5-Coder和Qwen2-VL的完整部署实践指南。详细介绍各模型显存需求、Ollama与LM Studio安装配置教程、Q4_K_M量化基准测试数据，以及面向各硬件预算档位的选购建议与常见错误排查。',
+    metaDescription: '2026年本地运行Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2-VL的完整实战部署指南：各参数版本显存需求对照表、Ollama与LM Studio详细安装配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的精准配置建议与常见报错解决方案。',
     publishDate: '2026-05-26',
     dateModified: '2026-05-26',
     readTime: '阅读约14分钟',

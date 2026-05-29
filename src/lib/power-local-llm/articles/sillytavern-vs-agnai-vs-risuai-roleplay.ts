@@ -1626,7 +1626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'SillyTavern、Agnai和RisuAI是2026年本地LLM领域三个可靠的角色扮演前端——每一个都可以与Ollama、llama.cpp或任何OpenAI兼容端点无缝配合，且各自在功能密度上采取了不同的定位。SillyTavern是深度自定义的选择（大多数有经验的用户最终会停留在这里）；Agnai是多用户的选择（唯一具备真正共享服务器模式的选项）；RisuAI是当SillyTavern显得过于繁复时的轻量替代。本指南在角色卡片、人格管理、知识库、群组聊天、模型支持、隐私保护和平台覆盖等方面对三者进行对比。',
     metaDescription:
-      '对比SillyTavern、Agnai和RisuAI用于本地LLM角色扮演：功能特性、模型兼容性、隐私保护与社区生态系统全面比较。',
+      'SillyTavern vs Agnai vs RisuAI三款本地LLM角色扮演前端深度对比：SillyTavern自定义最强，Agnai独家支持多用户共享服务器，RisuAI最适合初学者。三款均兼容Ollama与llama.cpp，支持角色卡片和知识库，2026年最新实测。',
     twitterDescription:
       '三款本地角色扮演前端对比：SillyTavern（深度自定义）、Agnai（多用户）、RisuAI（轻量替代）。角色卡片、知识库、群组聊天、隐私保护。',
     current_models_mentioned: [

@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: '编程最佳Qwen模型是哪个？',
     seoTitle: 'Qwen2.5-Coder 2026编程对比：7B vs 14B vs 32B各显存层级完整指南',
-    metaDescription: 'Qwen2.5-Coder 32B以24 GB显存领先（HumanEval 91.5%）。8 GB选7B（79.7%）；14B是12 GB显存的最优选择。各硬件层级指南。',
+    metaDescription: 'Qwen2.5-Coder 32B在24 GB显存下以91.5% HumanEval得分领先；14B是12 GB显存速度与精度最均衡的选择；7B在8 GB显存下得79.7%，适合低显存设备。三款均支持Ollama本地运行，按显存预算精准匹配，无需订阅费用。',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

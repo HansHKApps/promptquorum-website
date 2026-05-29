@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     title: '2026年本地AI最佳工作站配置：三档预算方案',
     seoTitle: '2026年本地AI工作站配置推荐（三档预算完整指南）',
-    metaDescription: '2026年三档本地AI工作站完整配件清单：8000元、17000元、33000元。在家运行7B到70B模型的最优配置方案。',
+    metaDescription: '2026年三档预算本地AI工作站完整配件清单：入门档（约8000元，RTX 4060 16GB）、推荐档（约17000元，RTX 4090 24GB）、专业档（约33000元，双GPU方案）。支持在家本地运行7B至70B参数大模型，含详细采购建议。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
