@@ -22,6 +22,7 @@ const HUB_HERO_TITLE: Record<string, string> = {
   fr: 'Guide Prompt Engineering : 80 Articles en 9 Thématiques (2026)',
   ja: 'プロンプトエンジニアリングガイド：9テーマ80記事（2026年）',
   zh: 'Prompt工程指南：9大主题80篇文章（2026）',
+  es: 'Guía de Prompt Engineering: 80 artículos en 9 temas (2026)',
 }
 
 const HUB_LEAD_ANSWER: Record<string, string> = {
@@ -30,6 +31,7 @@ const HUB_LEAD_ANSWER: Record<string, string> = {
   fr: 'Le prompt engineering est la pratique qui consiste à concevoir les entrées des modèles de langage IA — en spécifiant rôle, contexte, contraintes, format de sortie et exemples — pour produire des résultats précis et cohérents. En 2026, avec plus de 25 modèles disponibles, la conception de prompts est la compétence la plus rentable pour tirer une valeur fiable de l\'IA.',
   ja: 'プロンプトエンジニアリングとは、AIの言語モデルへの入力（役割・文脈・制約・出力フォーマット・例示）を設計し、正確で一貫した結果を生み出す実践です。2026年、25以上のモデルが利用可能な現在、プロンプト設計はAIから信頼性の高い価値を引き出すための最重要スキルです。',
   zh: '提示词工程是设计AI语言模型输入的实践——指定角色、上下文、约束条件、输出格式和示例——以产生准确、一致的结果。2026年，随着25个以上模型的可用，提示词设计是从AI获取可靠价值的最高效技能。',
+  es: 'El prompt engineering es la práctica de diseñar entradas para modelos de lenguaje IA — especificando rol, contexto, restricciones, formato de salida y ejemplos — para producir resultados precisos y consistentes. En 2026, con más de 25 modelos disponibles, el diseño de prompts es la habilidad con mayor impacto para obtener valor fiable de la IA.',
 }
 
 const HUB_IN_ONE_SENTENCE: Record<string, string> = {
@@ -38,6 +40,7 @@ const HUB_IN_ONE_SENTENCE: Record<string, string> = {
   fr: 'Le prompt engineering consiste à concevoir les entrées pour les modèles IA — rôle, contexte, contraintes, format, exemples — pour obtenir des résultats précis, cohérents et prêts pour la production.',
   ja: 'プロンプトエンジニアリングとは、AIモデルへの入力（役割・コンテキスト・制約・フォーマット・例）を設計し、正確で一貫した本番環境品質の結果を得ることです。',
   zh: '提示词工程是为AI模型设计输入——角色、上下文、约束、格式、示例——以获得准确、一致、生产级的结果。',
+  es: 'El prompt engineering consiste en diseñar entradas para modelos de IA — rol, contexto, restricciones, formato, ejemplos — para obtener resultados precisos, consistentes y listos para producción.',
 }
 
 const HUB_IN_PLAIN_TERMS: Record<string, string> = {
@@ -46,14 +49,15 @@ const HUB_IN_PLAIN_TERMS: Record<string, string> = {
   fr: "Au lieu de taper \"écris-moi un email\" en espérant, vous indiquez à l'IA exactement quel rôle jouer, quel contexte elle a, quel format utiliser, et à quoi ressemble une bonne sortie — les performances sont 3 à 5× meilleures.",
   ja: '「メールを書いて」とだけ入力して期待する代わりに、AIにどの役割を果たすべきか、どのコンテキストを持つか、どのフォーマットを使うか、良い出力とはどのようなものかを正確に伝えると、パフォーマンスが3〜5倍向上します。',
   zh: '不再只是输入"帮我写封邮件"然后祈祷，而是告诉AI确切需要扮演什么角色、拥有什么上下文、使用什么格式以及好的输出是什么样子——性能提升3-5倍。',
+  es: 'En lugar de escribir "redáctame un email" y esperar, le dices a la IA exactamente qué rol jugar, qué contexto tiene, qué formato usar y cómo es una buena salida — y el rendimiento mejora 3-5×.',
 }
 
 const HUB_IN_ONE_SENTENCE_LABEL: Record<string, string> = {
-  en: '📍 In One Sentence', de: '📍 Kurzfassung', fr: '📍 En une phrase', ja: '📍 一言で', zh: '📍 一句话概括',
+  en: '📍 In One Sentence', de: '📍 Kurzfassung', fr: '📍 En une phrase', ja: '📍 一言で', zh: '📍 一句话概括', es: '📍 En una frase',
 }
 
 const HUB_IN_PLAIN_TERMS_LABEL: Record<string, string> = {
-  en: '💬 In Plain Terms', de: '💬 Einfach erklärt', fr: '💬 En termes simples', ja: '💬 わかりやすく言うと', zh: '💬 通俗来说',
+  en: '💬 In Plain Terms', de: '💬 Einfach erklärt', fr: '💬 En termes simples', ja: '💬 わかりやすく言うと', zh: '💬 通俗来说', es: '💬 En términos sencillos',
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
@@ -62,6 +66,7 @@ const HUB_HERO_DESC: Record<string, string> = {
   fr: 'Le prompt engineering détermine si un modèle d\'IA vous donne une réponse utile ou vague. Un prompt bien conçu spécifie clairement la tâche, fournit le bon contexte, définit des contraintes de format et utilise des exemples pour calibrer le comportement du modèle. Ces 80 guides couvrent l\'ensemble de l\'écosystème prompt engineering : fondamentaux (tokens, fenêtres de contexte, température), frameworks éprouvés (CO-STAR, CRAFT, RTF, APE), techniques avancées (chain-of-thought, RAG, few-shot), processus d\'équipe, méthodes d\'évaluation et comparatifs d\'outils pour GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.',
   ja: 'プロンプトエンジニアリングは、AIモデルが有用な回答を返すか曖昧な回答を返すかを決定します。適切に設計されたプロンプトは、タスクを明確に指定し、適切なコンテキストを提供し、フォーマット制約を設定し、例を用いてモデルの動作を調整します。これらの80本のガイドは、基礎知識（トークン、コンテキストウィンドウ、温度）、実証済みフレームワーク（CO-STAR、CRAFT、RTF）、高度な技術（チェーン・オブ・ソート、RAG、フューショット）、チームワークフロー、評価手法、GPT-4oとClaude 4.6 Sonnet向けのツール比較を網羅します。',
   zh: '提示词工程决定了AI模型是给出有用答案还是模糊答案。精心设计的提示词明确指定任务、提供正确上下文、设置格式约束并使用示例校准模型行为。这80篇指南涵盖完整的提示词工程体系：基础知识（词元、上下文窗口、温度）、成熟框架（CO-STAR、CRAFT、RTF）、高级技术（思维链、RAG、少样本学习）、团队工作流程、评估方法，以及GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro的工具比较。',
+  es: 'El prompt engineering determina si un modelo de IA te da una respuesta útil o vaga. Un prompt bien diseñado especifica la tarea con claridad, proporciona el contexto adecuado, establece restricciones de formato y usa ejemplos para calibrar el comportamiento del modelo. Estas 80 guías cubren el stack completo: fundamentos (tokens, ventanas de contexto, temperatura), frameworks probados (CO-STAR, CRAFT, RTF, APE, RISEN), técnicas avanzadas (chain-of-thought, RAG, self-consistency, few-shot), flujos de trabajo en equipo (control de versiones, governance, CI/CD), métodos de evaluación y comparativas de herramientas para GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro.',
 }
 
 const HUB_TLDR: Record<string, string> = {
@@ -70,6 +75,7 @@ const HUB_TLDR: Record<string, string> = {
   fr: '80 guides de prompt engineering organisés par niveau : débutez par les Fondamentaux (tokens, température, sélection de modèles), apprenez les Frameworks (CO-STAR, CRAFT, RTF), appliquez les Techniques (chain-of-thought, RAG, few-shot), mettez en place la Gouvernance d\'équipe (contrôle de version, CI/CD), et choisissez les bons Outils (Braintrust, Promptfoo, Cursor). Mis à jour mai 2026 pour GPT-4o, Claude et Gemini.',
   ja: 'スキルレベル別の80本のプロンプトエンジニアリングガイド：基礎（トークン、温度、モデル選択）から始め、フレームワーク（CO-STAR、CRAFT、RTF）を学び、テクニック（チェーン・オブ・ソート、RAG、フューショット）を適用し、チームガバナンス（バージョン管理、CI/CDゲート）を設定し、適切なツール（Braintrust、Promptfoo、Cursor）を選択してください。2026年5月にGPT-4o、Claude、Gemini向けに更新済み。',
   zh: '按技能水平整理的80篇Prompt工程指南：从基础开始（词元、温度、模型选择），学习框架（CO-STAR、CRAFT、RTF），应用技术（思维链、RAG、少样本），建立团队治理（版本控制、CI/CD门控），并选择合适的工具（Braintrust、Promptfoo、Cursor）。已更新至2026年5月，适用于GPT-4o、Claude和Gemini。',
+  es: '80 guías de prompt engineering organizadas por nivel: empieza con Fundamentos (tokens, temperatura, selección de modelos), aprende Frameworks (CO-STAR, CRAFT, RTF), aplica Técnicas (chain-of-thought, RAG, few-shot), configura la Gobernanza de equipo (control de versiones, CI/CD) y elige las herramientas correctas (Braintrust, Promptfoo, Cursor). Actualizado mayo 2026 para GPT-4o, Claude y Gemini.',
 }
 
 const HUB_CTA_TEXT: Record<string, string> = {
@@ -78,6 +84,7 @@ const HUB_CTA_TEXT: Record<string, string> = {
   fr: 'PromptQuorum optimise vos prompts automatiquement et les teste simultanément sur plus de 25 modèles d\'IA.',
   ja: 'PromptQuorumはプロンプトを自動的に最適化し、25以上のAIモデルで同時にテストします。',
   zh: 'PromptQuorum自动优化您的提示词，并同时在25+个AI模型中进行测试。',
+  es: 'PromptQuorum optimiza tus prompts automáticamente y los prueba en más de 25 modelos de IA simultáneamente.',
 }
 
 const HUB_QUICK_FACTS: Record<string, string[]> = {
@@ -86,6 +93,7 @@ const HUB_QUICK_FACTS: Record<string, string[]> = {
   fr: ['80 articles dans 9 domaines', 'Couvre GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro', '5–20 min par article', 'Mis à jour mai 2026'],
   ja: ['9テーマ領域の80記事', 'GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro対応', '記事あたり5〜20分', '2026年5月更新'],
   zh: ['9个主题领域80篇文章', '涵盖GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro', '每篇5-20分钟', '2026年5月更新'],
+  es: ['80 artículos en 9 áreas temáticas', 'Cubre GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro', '5–20 min por artículo', 'Actualizado mayo 2026'],
 }
 
 const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
@@ -129,10 +137,18 @@ const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
     '大多数生产团队只需2个工具：一个用于评估，一个用于部署',
     '新手从基础开始；有经验者直接跳至评估与可靠性或团队治理',
   ],
+  es: [
+    '80 artículos en 9 áreas temáticas, actualizado mayo 2026',
+    'Cubre GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro y más de 20 modelos open source',
+    '5–20 min por artículo, cada uno con Puntos clave, FAQ y Fuentes',
+    'El chain-of-thought prompting mejora la precisión en razonamiento complejo un 30–40%',
+    'La mayoría de equipos en producción necesitan exactamente 2 herramientas: una para evaluación y otra para despliegue',
+    'Si eres nuevo, empieza por Fundamentos; si tienes experiencia, ve directamente a Evaluación & Fiabilidad o Gobernanza de equipo',
+  ],
 }
 
 const HUB_QUICK_FACTS_HEADER: Record<string, string> = {
-  en: '⚡ Quick Facts', de: '⚡ Schnellfakten', fr: '⚡ En bref', ja: '⚡ クイックファクト', zh: '⚡ 快速事实',
+  en: '⚡ Quick Facts', de: '⚡ Schnellfakten', fr: '⚡ En bref', ja: '⚡ クイックファクト', zh: '⚡ 快速事实', es: '⚡ Datos rápidos',
 }
 
 const HUB_CTA_BUTTON: Record<string, string> = {
@@ -141,27 +157,28 @@ const HUB_CTA_BUTTON: Record<string, string> = {
   fr: 'Essayer PromptQuorum gratuitement →',
   ja: 'PromptQuorumを無料で試す →',
   zh: '免费试用PromptQuorum →',
+  es: 'Prueba PromptQuorum gratis →',
 }
 
 const HUB_NAV_HOME: Record<string, string> = {
-  en: '← Home', de: '← Startseite', fr: '← Accueil', ja: '← ホーム', zh: '← 主页',
+  en: '← Home', de: '← Startseite', fr: '← Accueil', ja: '← ホーム', zh: '← 主页', es: '← Inicio',
 }
 const HUB_NAV_FEATURES: Record<string, string> = {
-  en: 'Features', de: 'Funktionen', fr: 'Fonctionnalités', ja: '機能', zh: '功能',
+  en: 'Features', de: 'Funktionen', fr: 'Fonctionnalités', ja: '機能', zh: '功能', es: 'Características',
 }
 const HUB_NAV_HOW: Record<string, string> = {
-  en: 'How It Works', de: 'So funktioniert es', fr: 'Comment ça marche', ja: '仕組み', zh: '工作原理',
+  en: 'How It Works', de: 'So funktioniert es', fr: 'Comment ça marche', ja: '仕組み', zh: '工作原理', es: 'Cómo funciona',
 }
 const HUB_NAV_BLOG: Record<string, string> = {
-  en: 'Blog', de: 'Blog', fr: 'Blog', ja: 'ブログ', zh: '博客',
+  en: 'Blog', de: 'Blog', fr: 'Blog', ja: 'ブログ', zh: '博客', es: 'Blog',
 }
 
 const GUIDES_LABEL: Record<string, string> = {
-  en: 'guides', de: 'Leitfäden', fr: 'guides', ja: 'ガイド', zh: '篇指南',
+  en: 'guides', de: 'Leitfäden', fr: 'guides', ja: 'ガイド', zh: '篇指南', es: 'guías',
 }
 
 const GUIDE_LABEL_SINGULAR: Record<string, string> = {
-  en: 'guide', de: 'Leitfaden', fr: 'guide', ja: 'ガイド', zh: '篇指南',
+  en: 'guide', de: 'Leitfaden', fr: 'guide', ja: 'ガイド', zh: '篇指南', es: 'guía',
 }
 
 const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
@@ -171,6 +188,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     fr: 'Que faut-il vraiment savoir ?',
     ja: '本当に必要な知識とは？',
     zh: '你真正需要了解什么？',
+    es: '¿Qué necesitas saber realmente?',
   },
   frameworks: {
     en: 'Which Template Gets the Best Results?',
@@ -178,6 +196,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     fr: 'Quel modèle donne les meilleurs résultats ?',
     ja: '最高の結果を出すテンプレートは？',
     zh: '哪个模板效果最好？',
+    es: '¿Qué plantilla obtiene los mejores resultados?',
   },
   techniques: {
     en: 'What Separates Good Prompts from Great Ones?',
@@ -185,6 +204,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     fr: "Qu'est-ce qui distingue les bons prompts des excellents ?",
     ja: '良いプロンプトと優れたプロンプトの違いは？',
     zh: '好提示词与优秀提示词的区别是什么？',
+    es: '¿Qué separa los buenos prompts de los excelentes?',
   },
   'use-topics': {
     en: 'How Do You Prompt for Your Specific Job?',
@@ -192,6 +212,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     fr: 'Comment prompter pour votre métier ?',
     ja: 'あなたの仕事に合ったプロンプトとは？',
     zh: '如何针对你的工作提示？',
+    es: '¿Cómo haces prompts para tu trabajo específico?',
   },
   policy: {
     en: 'What Do AI Regulations Mean for Your Organization?',
@@ -199,6 +220,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     fr: 'Que signifient les régulations IA pour votre organisation ?',
     ja: 'AI規制はあなたの組織に何を意味するのか？',
     zh: 'AI法规对您的组织意味着什么？',
+    es: '¿Qué significan las regulaciones de IA para tu organización?',
   },
   'tools-platforms': {
     en: 'Which Tool Fits Your Workflow?',
@@ -206,6 +228,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     fr: 'Quel outil correspond à votre flux de travail ?',
     ja: 'どのツールがあなたのワークフローに合うのか？',
     zh: '哪个工具适合您的工作流程？',
+    es: '¿Qué herramienta encaja con tu flujo de trabajo?',
   },
   'evaluation-reliability': {
     en: 'How Do You Know Your Prompts Work?',
@@ -213,6 +236,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     fr: 'Comment savez-vous que vos prompts fonctionnent ?',
     ja: 'プロンプトが機能していることをどのように確認しますか？',
     zh: '您如何知道提示词是否有效？',
+    es: '¿Cómo sabes que tus prompts funcionan?',
   },
   'team-governance': {
     en: 'How Do You Manage Prompts at Scale?',
@@ -220,6 +244,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     fr: 'Comment gérez-vous les prompts à grande échelle ?',
     ja: '規模を拡大してプロンプトをどのように管理しますか？',
     zh: '如何大规模管理提示词？',
+    es: '¿Cómo gestionas prompts a escala?',
   },
   'workflows-automation': {
     en: 'How Do You Scale Prompts into Systems?',
@@ -227,6 +252,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     fr: 'Comment transformez-vous les prompts en systèmes ?',
     ja: 'プロンプトをどのようにシステムにスケーリングしますか？',
     zh: '如何将提示词扩展为系统？',
+    es: '¿Cómo conviertes prompts en sistemas?',
   },
 }
 

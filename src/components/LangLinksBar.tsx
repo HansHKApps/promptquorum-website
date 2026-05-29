@@ -1,6 +1,7 @@
 'use client'
 
 import { useLang } from '@/hooks/useLang'
+import { translations } from '@/translations'
 import type { Language } from '@/translations'
 
 interface LangLinksBarProps {
@@ -34,7 +35,7 @@ export function LangLinksBar({ cluster, slug, availableLangs }: LangLinksBarProp
 
   return (
     <div className="flex items-center gap-2 mb-8 pb-6 border-b border-gray-200">
-      <span className="text-sm text-text-secondary mr-2">Read in:</span>
+      <span className="text-sm text-text-secondary mr-2">{translations[currentLang].readIn}</span>
       <div className="flex gap-2 flex-wrap">
         {languages.map(({ code, flag }) => {
           const href = buildHref(code)

@@ -76,6 +76,17 @@ const JUMP_SECTION_LABELS: Partial<Record<Language, Record<string, string>>> = {
     advancedTechniques: '推理技术',
     metricsProduction: '指标 & 生产',
   },
+  es: {
+    jumpToSection: 'Ir a la sección',
+    learningPaths: 'Rutas de aprendizaje',
+    trending2026: 'Tendencias en 2026',
+    corePrompting: 'Prompting básico',
+    agentsOrchestration: 'Agentes & Orquestación',
+    safetyAlignment: 'Seguridad & Alineación',
+    evalsTesting: 'Evaluación & Testing',
+    advancedTechniques: 'Técnicas de razonamiento',
+    metricsProduction: 'Métricas & Producción',
+  },
 }
 
 // Presentation UI translations
@@ -110,6 +121,12 @@ const PRESENTATION_UI: Partial<Record<Language, { heading: string; description: 
     savePdf: '↓ 保存为PDF',
     fallbackDescription: '幻灯片涵盖本文的关键概念、参数设置和用例。将PDF下载作为参考卡。',
   },
+  es: {
+    heading: 'Resumen visual',
+    description: '¿Prefieres slides a la lectura? Navega por esta presentación interactiva con todos los conceptos clave, ajustes y casos de uso — y guárdala como PDF de referencia.',
+    savePdf: '↓ Guardar como PDF',
+    fallbackDescription: 'La presentación cubre los conceptos clave, los ajustes de parámetros y los casos de uso de este artículo. Descarga el PDF como tarjeta de referencia.',
+  },
 }
 
 // Widget UI translations
@@ -134,6 +151,10 @@ const WIDGET_UI: Partial<Record<Language, { heading: string; description: string
     heading: '交互式审计指南',
     description: '使用我们的交互式指南评估您当前的准备状况。回答几个快速问题以获得评分、优先级建议和可下载的行动计划。',
   },
+  es: {
+    heading: 'Guía de auditoría interactiva',
+    description: 'Evalúa tu nivel de preparación actual con nuestra guía interactiva. Responde unas preguntas rápidas para obtener una puntuación, recomendaciones priorizadas y un plan de acción descargable.',
+  },
 }
 
 // Section header translations
@@ -143,6 +164,7 @@ const SECTION_HEADER_LABELS: Partial<Record<Language, Record<string, string>>> =
   fr: { keyTakeaways: 'Points clés', tableOfContents: 'Sommaire' },
   ja: { keyTakeaways: '重要なポイント', tableOfContents: '目次' },
   zh: { keyTakeaways: '关键要点', tableOfContents: '目录' },
+  es: { keyTakeaways: 'Puntos clave', tableOfContents: 'Contenido' },
 }
 
 // Maps article display titles to their URL slugs
@@ -311,6 +333,28 @@ const TOP_20_TERMS: Partial<Record<Language, Array<{ term: string; anchor: strin
     { term: 'Context Engineering', anchor: 'term-context-engineering', description: '战略性地构建上下文窗口以优先处理重要信息。' },
     { term: 'Latency', anchor: 'term-latency', description: '从发送提示词到收到完整响应之间的时间延迟。' },
     { term: 'Cost Optimization', anchor: 'term-cost-optimization', description: '通过模型选择和批处理等技术降低API成本。' },
+  ],
+  es: [
+    { term: 'RAG (Retrieval-Augmented Generation)', anchor: 'term-rag-retrieval-augmented-generation', description: 'Conectar LLMs a bases de conocimiento externas para responder basándose en datos reales.' },
+    { term: 'Chain-of-Thought (CoT)', anchor: 'term-chain-of-thought-prompting', description: 'Pedir al modelo que muestre su razonamiento paso a paso antes de dar la respuesta final.' },
+    { term: 'AI Agent', anchor: 'term-ai-agent', description: 'Sistema de IA autónomo que planifica tareas, llama herramientas e itera hasta alcanzar un objetivo.' },
+    { term: 'Prompt Injection', anchor: 'term-prompt-injection', description: 'Ataque donde una entrada no confiable engaña a un LLM para que ignore sus instrucciones originales.' },
+    { term: 'Few-Shot Prompting', anchor: 'term-few-shot-prompting', description: 'Incluir 2–5 ejemplos del comportamiento deseado en el prompt para que el modelo aprenda el patrón.' },
+    { term: 'Fine-Tuning', anchor: 'term-fine-tuning', description: 'Reentrenar un modelo con datos específicos de la tarea para mejorar su rendimiento.' },
+    { term: 'Embeddings', anchor: 'term-embeddings', description: 'Convertir texto o imágenes en vectores numéricos que capturan el significado semántico.' },
+    { term: 'Vector Database', anchor: 'term-vector-database', description: 'Base de datos especializada que almacena y recupera embeddings por similitud.' },
+    { term: 'Hallucination', anchor: 'term-hallucination', description: 'Cuando un LLM genera información falsa con aparente confianza, inventando hechos o citas.' },
+    { term: 'Context Window', anchor: 'term-context-window', description: 'El número máximo de tokens que un LLM puede procesar en una sola solicitud (ej. GPT-4o: 128k).' },
+    { term: 'Temperature', anchor: 'term-temperature-and-top-p', description: 'Ajuste que controla la aleatoriedad: bajo (0.0) = predecible, alto (1.0) = creativo.' },
+    { term: 'Zero-Shot Prompting', anchor: 'term-zero-shot-prompting', description: 'Pedir al modelo que realice una tarea sin ningún ejemplo — el enfoque base.' },
+    { term: 'Tool Calling', anchor: 'term-tool-calling', description: 'Permitir que un LLM llame APIs externas, ejecute código o active acciones.' },
+    { term: 'Guardrails', anchor: 'term-guardrails', description: 'Sistemas de seguridad que filtran entradas y salidas dañinas para prevenir mal uso.' },
+    { term: 'LLM Evaluation', anchor: 'term-llm-evaluation', description: 'Medir la calidad del modelo usando benchmarks, valoraciones humanas o métricas automáticas.' },
+    { term: 'Prompt Engineering', anchor: 'term-prompt-engineering', description: 'El arte de escribir instrucciones precisas para obtener respuestas exactas y útiles de modelos de IA.' },
+    { term: 'Multi-Agent Systems', anchor: 'term-multi-agent-systems', description: 'Múltiples agentes de IA independientes trabajando en paralelo o secuencia para resolver problemas complejos.' },
+    { term: 'Context Engineering', anchor: 'term-context-engineering', description: 'Estructurar estratégicamente la ventana de contexto para priorizar información importante.' },
+    { term: 'Latency', anchor: 'term-latency', description: 'El tiempo de espera entre enviar un prompt y recibir la respuesta completa.' },
+    { term: 'Cost Optimization', anchor: 'term-cost-optimization', description: 'Técnicas como selección de modelo, caché de prompts y procesamiento por lotes para reducir el gasto.' },
   ],
 }
 
@@ -992,6 +1036,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Par [Hans Kuepper](/about) · Fondateur de PromptQuorum, outil de dispatch multi-modèle · PromptQuorum',
     ja: '[Hans Kuepper](/about) 著 · PromptQuorumの創設者、マルチモデルAIディスパッチツール · PromptQuorum',
     zh: '[Hans Kuepper](/about) 作者 · PromptQuorum创始人，多模型AI调度工具 · PromptQuorum',
+    es: 'Por [Hans Kuepper](/about) · Fundador de PromptQuorum, herramienta de despacho multi-modelo · PromptQuorum',
   },
   lastUpdated: {
     en: 'Last updated:',
@@ -999,6 +1044,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Dernière mise à jour:',
     ja: '最終更新:',
     zh: '最后更新:',
+    es: 'Última actualización:',
   },
   ctaText: {
     en: 'Apply these techniques across 25+ AI models simultaneously with PromptQuorum.',
@@ -1006,6 +1052,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Appliquez ces techniques simultanément sur plus de 25 modèles d\'IA avec PromptQuorum.',
     ja: 'これらのテクニックをPromptQuorumで25以上のAIモデルに同時に適用しましょう。',
     zh: '使用PromptQuorum将这些技术同时应用于25+个AI模型。',
+    es: 'Aplica estas técnicas en más de 25 modelos de IA simultáneamente con PromptQuorum.',
   },
   ctaButton: {
     en: 'Try PromptQuorum free →',
@@ -1013,6 +1060,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Essayer PromptQuorum gratuitement →',
     ja: 'PromptQuorumを無料で試す →',
     zh: '免费试用PromptQuorum →',
+    es: 'Prueba PromptQuorum gratis →',
   },
   backLink: {
     en: '← Back to Prompt Engineering',
@@ -1020,9 +1068,10 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: '← Retour au Prompt Engineering',
     ja: '← プロンプトエンジニアリングに戻る',
     zh: '← 返回提示词工程',
+    es: '← Volver a Prompt Engineering',
   },
   breadcrumbHome: {
-    en: 'Home', de: 'Startseite', fr: 'Accueil', ja: 'ホーム', zh: '主页',
+    en: 'Home', de: 'Startseite', fr: 'Accueil', ja: 'ホーム', zh: '主页', es: 'Inicio',
   },
   breadcrumbHub: {
     en: 'Prompt Engineering',
@@ -1030,26 +1079,28 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Prompt Engineering',
     ja: 'プロンプトエンジニアリング',
     zh: '提示词工程',
+    es: 'Prompt Engineering',
   },
   levelLabel: {
-    en: 'Level', de: 'Niveau', fr: 'Niveau', ja: 'レベル', zh: '级别',
+    en: 'Level', de: 'Niveau', fr: 'Niveau', ja: 'レベル', zh: '级别', es: 'Nivel',
   },
   audienceLabel: {
-    en: 'Audience', de: 'Zielgruppe', fr: 'Public', ja: '対象読者', zh: '目标读者',
+    en: 'Audience', de: 'Zielgruppe', fr: 'Public', ja: '対象読者', zh: '目标读者', es: 'Audiencia',
   },
 }
 
 const LEVEL_DISPLAY: Record<string, Record<string, string>> = {
-  Beginner: { en: 'Beginner', de: 'Einsteiger', fr: 'Débutant', ja: '初級', zh: '初级' },
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级' },
-  Advanced: { en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级' },
-  Technical: { en: 'Technical', de: 'Technisch', fr: 'Technique', ja: '技術', zh: '技术' },
+  Beginner: { en: 'Beginner', de: 'Einsteiger', fr: 'Débutant', ja: '初級', zh: '初级', es: 'Principiante' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio' },
+  Advanced: { en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级', es: 'Avanzado' },
+  Technical: { en: 'Technical', de: 'Technisch', fr: 'Technique', ja: '技術', zh: '技术', es: 'Técnico' },
 }
 
 // Map language codes to their locale strings for date formatting
 const LANGUAGE_TO_LOCALE: Record<string, string> = {
   en: 'en-US',
   de: 'de-DE',
+  es: 'es-ES',
   fr: 'fr-FR',
   ja: 'ja-JP',
   zh: 'zh-CN',

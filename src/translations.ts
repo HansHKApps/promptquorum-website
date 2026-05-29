@@ -6,6 +6,7 @@ export const translations = {
     howItWorks: "How it Works",
     faq: "FAQ",
     waitlist: "Waitlist",
+    readIn: "Read in:",
 
     // Hero
     waitlistNowOpen: "Waitlist Now Open",
@@ -286,6 +287,7 @@ export const translations = {
     howItWorks: "So funktioniert es",
     faq: "FAQ",
     waitlist: "Warteliste",
+    readIn: "Lesen auf:",
 
     // Hero
     waitlistNowOpen: "Warteliste jetzt offen",
@@ -566,6 +568,7 @@ export const translations = {
     howItWorks: "Comment ca marche",
     faq: "FAQ",
     waitlist: "Liste d'attente",
+    readIn: "Lire en:",
 
     // Hero
     waitlistNowOpen: "Liste d'attente ouverte",
@@ -846,6 +849,7 @@ export const translations = {
     howItWorks: "使い方",
     faq: "よくある質問",
     waitlist: "ウェイティングリスト",
+    readIn: "言語を選択:",
 
     // Hero
     waitlistNowOpen: "ウェイティングリスト受付開始",
@@ -1126,6 +1130,7 @@ export const translations = {
     howItWorks: "工作原理",
     faq: "常见问题",
     waitlist: "候补名单",
+    readIn: "选择语言:",
 
     // Hero
     waitlistNowOpen: "候补名单现已开放",
@@ -1406,6 +1411,7 @@ export const translations = {
     howItWorks: "Cómo funciona",
     faq: "FAQ",
     waitlist: "Lista de espera",
+    readIn: "Leer en:",
 
     // Hero
     waitlistNowOpen: "Lista de espera abierta",
