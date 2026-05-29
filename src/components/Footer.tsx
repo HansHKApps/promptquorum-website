@@ -23,7 +23,7 @@ const Substack = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
 )
 
-const FOOTER_COPY = {
+const FOOTER_COPY: Record<Language, Record<string, string>> = {
   en: {
     copyright: '© 2026 PromptQuorum. All rights reserved.',
     worldwide: '🌍 Available worldwide',
@@ -72,6 +72,36 @@ const FOOTER_COPY = {
     frameworks: 'Frameworks',
     privacy: '隐私政策',
     impressum: '法律声明',
+    contact: 'hello@promptquorum.com',
+  },
+  es: {
+    copyright: '© 2026 PromptQuorum. Todos los derechos reservados.',
+    worldwide: '🌍 Disponible en todo el mundo',
+    langs: 'English, Deutsch, Français, 日本語, 中文',
+    about: 'Acerca de',
+    frameworks: 'Frameworks',
+    privacy: 'Política de privacidad',
+    impressum: 'Aviso legal',
+    contact: 'hello@promptquorum.com',
+  },
+  pt: {
+    copyright: '© 2026 PromptQuorum. Todos os direitos reservados.',
+    worldwide: '🌍 Disponível em todo o mundo',
+    langs: 'English, Deutsch, Français, 日本語, 中文',
+    about: 'Sobre',
+    frameworks: 'Frameworks',
+    privacy: 'Política de Privacidade',
+    impressum: 'Aviso Legal',
+    contact: 'hello@promptquorum.com',
+  },
+  ar: {
+    copyright: '© 2026 PromptQuorum. جميع الحقوق محفوظة.',
+    worldwide: '🌍 متاح في جميع أنحاء العالم',
+    langs: 'English, Deutsch, Français, 日本語, 中文',
+    about: 'حول',
+    frameworks: 'Frameworks',
+    privacy: 'سياسة الخصوصية',
+    impressum: 'الإشعار القانوني',
     contact: 'hello@promptquorum.com',
   },
 }
