@@ -419,4 +419,85 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Privacy & Security',
+    title: '¿Es Qwen compatible con el RGPD?',
+    seoTitle: '¿Es Qwen compatible con el RGPD? 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Qwen ejecutado localmente es compatible con el RGPD: sin transferencia de datos, sin problema del Artículo 44. La API de Qwen (Alibaba Cloud) requiere CCT como cualquier proveedor no europeo. Mayo 2026.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    quickAnswerTop: {
+      es: {
+        question: '¿Es Qwen compatible con el RGPD?',
+        answer: 'Qwen ejecutado localmente en tu propio hardware es compatible con el RGPD, porque ningún dato de prompt abandona tu infraestructura y no ocurre ninguna transferencia a terceros países según el Artículo 44. La API de Qwen a través de Alibaba Cloud es diferente: requiere Cláusulas Contractuales Tipo y una Evaluación de Impacto de Transferencia, como cualquier proveedor cloud no europeo.',
+        bullets: [
+          'Qwen local: sin transferencia de datos = sin problema del Artículo 44 del RGPD',
+          'API de Qwen (Alibaba Cloud): requiere CCT + EIT según las reglas post-Schrems II',
+          'Recomendado: Qwen 2.5 14B o Qwen 3 8B localmente via Ollama para tareas con datos sensibles',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'El despliegue local de Qwen es compatible con el RGPD: los prompts nunca salen de tu servidor, por lo que el Artículo 44 (transferencias a terceros países) no aplica',
+          'La API de Qwen via Alibaba Cloud requiere Cláusulas Contractuales Tipo + Evaluación de Impacto de Transferencia, el mismo requisito que la API de OpenAI o Anthropic',
+          'La licencia Apache 2.0 permite auditar los pesos: puedes verificar qué hace el modelo, cumpliendo el Artículo 25 (privacidad desde el diseño)',
+          'Para tareas con datos sensibles (RRHH, legal, médico), Qwen local es el camino de menor riesgo frente a cualquier API de LLM en la nube',
+        ],
+      },
+      body1: {
+        title: 'Qwen local es compatible con el RGPD — la arquitectura es la razón',
+        content: [
+          '<strong>El Artículo 44 del RGPD prohíbe transferir datos personales a un país fuera de la UE sin una base legal adecuada. Cuando ejecutas Qwen localmente, no ocurre ninguna transferencia de datos: el modelo procesa todo en tu hardware, dentro de tu jurisdicción. Por eso el despliegue local es la posición más defendible frente al RGPD.</strong>',
+          'Los pesos del modelo Qwen (Qwen 2.5, Qwen 3) se publican bajo Apache 2.0. Esto significa que puedes descargarlos, inspeccionarlos y ejecutarlos en tu propio servidor de forma permanente; la licencia no puede revocarse. El Artículo 25 (privacidad desde el diseño) queda satisfecho porque puedes demostrar que los datos sensibles nunca se transmiten externamente.',
+          'Ejecuta Qwen localmente via Ollama: <code>ollama run qwen2.5:14b</code> para un modelo 14B de propósito general, o <code>ollama run qwen3:8b</code> para la generación actual de Qwen 3. Ambos necesitan 10–12 GB de VRAM en Q4_K_M. Una RTX 3080 o RTX 4070 estándar es suficiente.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen local es compatible con el RGPD porque ningún dato de prompt abandona tu infraestructura, eliminando por completo el requisito de transferencia a terceros países del Artículo 44.' },
+          { type: 'plain-terms', text: 'Ejecutar Qwen en tu propio equipo o servidor significa que tus datos permanecen en tu máquina. El RGPD solo restringe los datos que salen de la UE; si nunca abandonan tu edificio, no hay ningún problema con el RGPD.' },
+        ],
+      },
+      body2: {
+        title: 'La API de Qwen via Alibaba Cloud — un perfil de riesgo diferente',
+        content: [
+          '<strong>La API de Qwen (api.qwen.ai, via Alibaba Cloud) está alojada en China. Cualquier dato personal enviado a través de la API constituye una transferencia a un tercer país según el Artículo 44 del RGPD.</strong> China no cuenta con una decisión de adecuación de la UE, por lo que necesitas Cláusulas Contractuales Tipo (CCT) y una Evaluación de Impacto de Transferencia (EIT) antes de utilizarla para datos que contengan información personal.',
+          'Este es el mismo requisito que se aplica a OpenAI, Anthropic y Google Cloud. No es un problema exclusivo de Qwen: es una cuestión estructural de cualquier LLM en la nube alojado fuera de la UE. El riesgo adicional específico de China es la Ley de Protección de la Información Personal (PIPL), que puede obligar a revelar datos ante solicitudes gubernamentales. Esto importa para la EIT: los reguladores europeos pueden considerar la jurisdicción china de mayor riesgo que la estadounidense al evaluar la adecuación de la transferencia.',
+          'Si debes usar la API de Qwen, úsala solo para datos no personales (p. ej., documentos públicos, generación de código sin PII). Para datos personales o confidenciales de negocio, utiliza en cambio el despliegue local.',
+        ],
+        columns: ['Despliegue', '¿Datos salen del servidor?', '¿RGPD Artículo 44 aplica?', 'Acción requerida'],
+        rows: [
+          { 'Despliegue': 'Qwen local (Ollama)', '¿Datos salen del servidor?': 'No', '¿RGPD Artículo 44 aplica?': 'No', 'Acción requerida': 'Ninguna — la arquitectura es conforme' },
+          { 'Despliegue': 'API de Qwen (Alibaba Cloud)', '¿Datos salen del servidor?': 'Sí', '¿RGPD Artículo 44 aplica?': 'Sí', 'Acción requerida': 'CCT + EIT requeridas para datos personales' },
+          { 'Despliegue': 'Claude / OpenAI (región UE)', '¿Datos salen del servidor?': 'Sí (UE)', '¿RGPD Artículo 44 aplica?': 'Parcial', 'Acción requerida': 'CCT aún requeridas; EIT puede ser más ligera' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas: Qwen y el RGPD',
+        faqs: [
+          {
+            q: '¿Ejecutar Qwen localmente cumple el Artículo 25 del RGPD?',
+            a: 'Sí. El Artículo 25 exige privacidad desde el diseño y por defecto: medidas técnicas que impidan la exposición innecesaria de datos. Ejecutar Qwen localmente en un servidor aislado, sin llamadas de red externas para la inferencia, cumple directamente este requisito. Combínalo con cifrado de disco (dm-crypt o FileVault) y controles de acceso para una implementación completa del Artículo 25.',
+          },
+          {
+            q: '¿Es Alibaba Cloud compatible con el RGPD?',
+            a: 'Alibaba Cloud ofrece configuraciones compatibles con el RGPD para datos residentes en la UE (región de Frankfurt). Si usas la región UE de Alibaba Cloud con CCT en vigor, el riesgo de transferencia RGPD se reduce al mismo nivel que AWS o Azure. Sin embargo, la API de Qwen (api.qwen.ai) es un producto aparte: verifica qué región de infraestructura procesa tus solicitudes antes de llegar a esta conclusión.',
+          },
+          {
+            q: '¿Qué modelo de Qwen es el más adecuado para flujos de trabajo sensibles bajo el RGPD?',
+            a: 'Para 12 GB de VRAM: Qwen 2.5 14B en Q4_K_M (tareas generales) o Qwen 2.5 Coder 14B (flujos de trabajo intensivos en código). Para 6–8 GB de VRAM: Qwen 3 8B en Q4_K_M. Ambos funcionan completamente offline via Ollama. Consulta la <a href="/local-llms/qwen-local-gdpr-setup-guide-2026?lang=es" class="text-primary hover:underline">guía completa de configuración de Qwen para el RGPD</a> para los pasos de instalación con Ollama.',
+          },
+          {
+            q: '¿Necesito un Acuerdo de Procesamiento de Datos con Ollama?',
+            a: 'No. Ollama es un runtime local: no tiene componente de servidor y no procesa ningún dato en tu nombre. No se requiere un DPA porque Ollama no es un encargado del tratamiento según el Artículo 28 del RGPD. El modelo se ejecuta íntegramente en tu hardware.',
+          },
+        ],
+      },
+    },
+  },
 }

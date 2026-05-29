@@ -674,6 +674,334 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-29',
+    theme: 'Workflows',
+    title: 'Configuración de prompt engineering para equipos pequeños (2026)',
+    seoTitle: 'Prompt engineering para equipos pequeños: herramientas y flujo de trabajo (2026)',
+    metaDescription: 'Los equipos pequeños gestionan prompts en hilos de Slack, enfrentando trabajo duplicado, regresiones silenciosas y sin datos de prueba multi-modelo. Una biblioteca YAML, versionado Git y un arnés de 20 casos resuelve los tres en una semana.',
+    ogDescription: 'Configuración de prompt engineering para equipos pequeños: biblioteca de prompts compartida, versionado Git, pruebas multi-modelo con PromptQuorum y reglas de propiedad. Operativo en una semana.',
+    twitterDescription: 'Del caos de prompts a una configuración estructurada en una semana. Biblioteca YAML, versionado Git, 20 casos de prueba y propietarios nombrados. Para equipos de 2–15.',
+    intro: '**Los equipos pequeños que gestionan prompts en hilos de Slack, blocs de notas personales y cadenas de copiar y pegar se enfrentan a los mismos tres problemas: trabajo duplicado, regresiones no documentadas y ninguna forma de comparar qué modelo rinde mejor en sus tareas.** Una configuración estructurada de prompt engineering resuelve los tres con una biblioteca compartida, versionado y un arnés de prueba. Esta guía muestra cómo construirlo en una semana.',
+    leadAnswerBlock: '**Una configuración de prompt engineering para equipos pequeños necesita cuatro cosas: una biblioteca de prompts compartida, control de versiones, un arnés de prueba y reglas claras de propiedad.** Los equipos de 2–15 pueden estar completamente operativos en una semana usando herramientas gratuitas y una plataforma de pruebas multi-modelo.',
+    publishDate: '2026-04-29',
+    dateModified: '2026-04-29',
+    readTime: '8 min de lectura',
+    educationalLevel: 'Intermediate',
+    audience: 'Equipos de desarrollo pequeños (2–15 personas) que construyen productos con APIs LLM',
+    primaryTerm: 'configuración de prompt engineering para equipos pequeños',
+    aboutTopics: ['Gestión de biblioteca de prompts', 'Flujo de trabajo de prompts de equipo', 'Pruebas de prompts multi-modelo'],
+    quickFacts: [
+      'Una ejecución de 50 casos de prueba en GPT-4o y Claude 4.6 Sonnet cuesta menos de $2 a los precios de API de abril de 2026 ($5/1M tokens de entrada para GPT-4o; $3/1M para Claude 4.6 Sonnet)',
+      'Git maneja el historial de versiones de prompts sin herramientas adicionales — un archivo YAML o JSON plano en un repositorio compartido es suficiente para equipos de menos de 15 personas',
+      'GPT-4o y Claude 4.6 Sonnet producen salidas significativamente diferentes en tareas creativas, de resumen e instrucciones ambiguas — las pruebas multi-modelo son necesarias para detectar divergencias antes de que lleguen a los usuarios',
+      'Los equipos de 2–5 pueden implementar la configuración completa de esta guía usando solo herramientas gratuitas: Git, VS Code y una clave API compartida',
+    ],
+    toc: [
+      { label: 'Puntos clave',                                          anchor: '#key-takeaways' },
+      { label: 'Configuración de prompt engineering para equipos pequeños: 4 componentes requeridos', anchor: '#what-is-prompt-setup' },
+      { label: 'El tamaño del equipo determina el nivel de configuración requerido', anchor: '#team-size' },
+      { label: 'Los equipos pequeños necesitan 3 herramientas principales: Git, VS Code y PromptQuorum', anchor: '#tool-stack' },
+      { label: 'Inicia una biblioteca de prompts compartida con archivos YAML en Git', anchor: '#shared-library' },
+      { label: 'Versiona los prompts semánticamente y prueba en 2 modelos', anchor: '#versioning-testing' },
+      { label: 'Elige GPT-4o para salida estructurada, Claude 4.6 Sonnet para matices', anchor: '#model-selection' },
+      { label: 'Asigna un propietario nombrado a cada prompt',           anchor: '#governance' },
+      { label: 'Configura el prompt engineering en una semana: plan de 6 pasos', anchor: '#how-to-start' },
+      { label: '5 errores comunes de prompt engineering en equipos pequeños', anchor: '#common-mistakes' },
+      { label: 'Preguntas frecuentes',                                   anchor: '#faq' },
+      { label: 'Lecturas relacionadas',                                  anchor: '#related-reading' },
+      { label: 'Fuentes',                                                anchor: '#sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Configuración de prompt engineering para equipos pequeños (2026)',
+      description: 'Aprende a configurar el prompt engineering para equipos pequeños: biblioteca YAML compartida, versionado Git, conjunto de 20 casos de prueba y reglas de propiedad. Configuración completa en una semana.',
+      author:    { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-04-29',
+      dateModified:  '2026-04-29',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-setup-small-teams?lang=es',
+      inLanguage:       'es',
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: 'Gestión de biblioteca de prompts' },
+        { '@type': 'Thing', name: 'Flujo de trabajo de prompts de equipo' },
+        { '@type': 'Thing', name: 'Pruebas de prompts multi-modelo' },
+      ],
+      audience:  { '@type': 'Audience', audienceType: 'Equipos de desarrollo pequeños que construyen productos con APIs LLM' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    sections: {
+      tldrCallout: {
+        callouts: [
+          { type: 'tldr', label: 'TL;DR', text: 'Una configuración de prompt engineering para equipos pequeños necesita cuatro cosas: una biblioteca de prompts YAML compartida en Git, control de versiones con versionado semántico, un conjunto de 20 casos de prueba con puntuación binaria aprobado/fallido y un propietario nombrado por prompt. Los equipos de 2–4 pueden omitir la revisión formal; los equipos de 5–15 añaden revisiones PR. Ejecuta cada prompt de producción en GPT-4o y Claude antes de desplegar. La configuración completa tarda una semana.' },
+        ],
+      },
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        title: 'Puntos clave',
+        items: [
+          'Los equipos pequeños necesitan 4 componentes: una biblioteca de prompts compartida, control de versiones Git, un conjunto de 20 casos de prueba y un propietario designado por prompt',
+          'Equipos de 2–4 personas: un archivo YAML plano en Git es suficiente — no se necesita paso de revisión formal',
+          'Equipos de 5–15 personas: añade un paso de revisión por pull request antes de hacer merge de cambios a prompts usados en producción',
+          'Ejecuta cada prompt nuevo o modificado en al menos GPT-4o y Claude 4.6 Sonnet antes de desplegar — los modelos producen salidas significativamente diferentes en tareas ambiguas y creativas',
+          'El conjunto de pruebas mínimo viable es de 20 casos: 10 de ruta feliz, 5 casos límite, 5 entradas adversariales',
+          'Designa un propietario nombrado por prompt — sin propiedad clara, las regresiones quedan sin corregir porque todos asumen que alguien más se encargará',
+          'PromptQuorum despacha un prompt a múltiples modelos simultáneamente y muestra las tasas de aprobación en paralelo, eliminando la necesidad de escribir código de comparación de API por modelo',
+        ],
+      },
+      whatIs: {
+        id: 'what-is-prompt-setup',
+        title: 'Configuración de prompt engineering para equipos pequeños: 4 componentes requeridos',
+        content: [
+          '**Una configuración de prompt engineering para equipos pequeños es la combinación de cuatro sistemas: una biblioteca de prompts compartida, un flujo de trabajo de control de versiones, un arnés de prueba y reglas de propiedad.** Juntos, estos cuatro evitan el modo de fallo más común — múltiples personas editando los mismos prompts sin coordinación, lo que lleva a regresiones silenciosas.',
+          'La mayoría de los equipos pequeños omiten la configuración por completo hasta que algo falla en producción. Para entonces, el daño ya está hecho: los prompts que funcionaban la semana pasada fallan silenciosamente, nadie sabe quién cambió qué y la depuración requiere reconstruir el historial de memoria.',
+        ],
+        columns: ['Componente', 'Lo que previene', 'Forma mínima viable'],
+        rows: [
+          { 'Componente': 'Biblioteca de prompts compartida', 'Lo que previene': 'Prompts duplicados, "¿cuál versión es correcta?"', 'Forma mínima viable': 'Archivos YAML en un repositorio Git' },
+          { 'Componente': 'Control de versiones', 'Lo que previene': 'Regresiones silenciosas cuando los prompts cambian', 'Forma mínima viable': 'Commits de Git con una nota de cambio de una línea' },
+          { 'Componente': 'Arnés de prueba', 'Lo que previene': 'Desplegar prompts rotos sin detectar', 'Forma mínima viable': 'Conjunto de 20 casos de prueba con puntuación binaria aprobado/fallido' },
+          { 'Componente': 'Reglas de propiedad', 'Lo que previene': 'Prompts actualizados sin revisión', 'Forma mínima viable': 'Un campo de propietario nombrado por archivo YAML de prompt' },
+        ],
+        tableFormat: true,
+        snippets: [
+          { type: 'in-one-sentence', text: 'Una configuración de prompt engineering para equipos pequeños es el almacenamiento compartido, el historial de versiones, la cobertura de pruebas y el modelo de propiedad que permite que múltiples personas trabajen en prompts sin romper el trabajo de los demás.' },
+          { type: 'in-plain-terms', text: 'Piénsalo como un Google Doc compartido para código: en lugar de que todos mantengan su propia versión de un prompt en una aplicación de notas personal, el equipo mantiene una copia autorizada en una ubicación compartida, rastrea quién cambió qué y lo prueba antes de usarlo en producción.' },
+        ],
+        callouts: [
+          { type: 'key-point', label: 'Desarrolladores en solitario', text: 'Si trabajas solo, solo necesitas una biblioteca de prompts — omite las secciones de versionado y gobernanza. Esta guía es para equipos de 2+ donde la coordinación se convierte en la restricción.' },
+        ],
+      },
+      teamSize: {
+        id: 'team-size',
+        title: 'El tamaño del equipo determina el nivel de configuración requerido',
+        content: '**El nivel correcto de proceso depende directamente del tamaño del equipo — demasiado poco y los prompts fallan silenciosamente, demasiado y tu equipo pasa más tiempo en el proceso que construyendo.** Adapta tu configuración a tu plantilla y ajústala a medida que el equipo crece.',
+        columns: ['Tamaño del equipo', 'Configuración recomendada', 'Omitir por ahora'],
+        rows: [
+          { 'Tamaño del equipo': '1–2 personas', 'Configuración recomendada': 'YAML compartido en Git, un propietario por prompt, sin paso de revisión', 'Omitir por ahora': 'Arnés de prueba (añadir cuando despliegues para usuarios)' },
+          { 'Tamaño del equipo': '3–5 personas', 'Configuración recomendada': 'Biblioteca + Git + conjunto de 20 casos de prueba para los prompts principales', 'Omitir por ahora': 'Revisiones PR formales (la aprobación por Slack es suficiente)' },
+          { 'Tamaño del equipo': '6–10 personas', 'Configuración recomendada': 'Configuración completa: biblioteca + versionado + ejecución de prueba CI al hacer merge', 'Omitir por ahora': 'Herramienta externa de gestión de prompts (Git es suficiente en este tamaño)' },
+          { 'Tamaño del equipo': '11–15 personas', 'Configuración recomendada': 'Configuración completa + política de revisión PR + un propietario de prompt por área de producto', 'Omitir por ahora': 'Herramientas personalizadas (usa PromptQuorum en su lugar)' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'warning', label: 'Riesgo de sobreingeniería', text: 'Un equipo de 2 personas que añade revisiones PR formales, registros de cambios y ejecuciones de prueba CI pasará más tiempo manteniendo el sistema que construyendo. Comienza con Git + YAML. Añade proceso solo cuando el tamaño del equipo o los fallos de prompts lo demanden.' },
+        ],
+      },
+      toolStack: {
+        id: 'tool-stack',
+        title: 'Los equipos pequeños necesitan 3 herramientas principales: Git, VS Code y PromptQuorum',
+        content: [
+          '**La mayoría de los equipos pequeños solo necesitan tres herramientas: un editor de código para escribir prompts, Git para el control de versiones y una plataforma de pruebas multi-modelo para comparar salidas.** Todo lo demás es opcional hasta que una restricción específica lo haga necesario.',
+          'La tabla siguiente enumera las herramientas más utilizadas por equipos de 2–15 personas. Comienza con las tres primeras y añade otras solo cuando alcances sus limitaciones específicas.',
+        ],
+        columns: ['Herramienta', 'Propósito', 'Coste', 'Ideal para'],
+        rows: [
+          { 'Herramienta': 'Git + GitHub/GitLab', 'Propósito': 'Control de versiones para prompts e historial de cambios', 'Coste': 'Gratuito', 'Ideal para': 'Todos los tamaños de equipo' },
+          { 'Herramienta': 'VS Code o Cursor', 'Propósito': 'Escribir, editar y previsualizar archivos YAML de prompts', 'Coste': 'Gratuito', 'Ideal para': 'Todos los tamaños de equipo' },
+          { 'Herramienta': 'PromptQuorum', 'Propósito': 'Despachar un prompt a GPT-4o, Claude y Gemini simultáneamente; comparar tasas de aprobación en paralelo', 'Coste': 'Nivel gratuito disponible', 'Ideal para': 'Equipos que prueban prompts en múltiples modelos' },
+          { 'Herramienta': 'Langfuse o Phoenix', 'Propósito': 'Monitoreo y observabilidad de prompts en producción', 'Coste': 'Nivel gratuito disponible', 'Ideal para': 'Equipos con prompts en producción atendiendo usuarios reales' },
+          { 'Herramienta': 'Notion o Linear', 'Propósito': 'Seguimiento ligero de cambios de prompts para stakeholders no técnicos', 'Coste': 'Nivel gratuito disponible', 'Ideal para': 'Equipos donde no desarrolladores también gestionan prompts' },
+        ],
+        tableFormat: true,
+        items: [
+          'Usa Git si tu equipo puede usar un terminal o la interfaz web de GitHub/GitLab — no se necesitan herramientas adicionales',
+          'Usa PromptQuorum si comparas prompts en modelos — elimina la necesidad de escribir código de comparación de API por modelo',
+          'Añade Langfuse o Phoenix solo después de tener prompts en producción atendiendo usuarios reales, no antes',
+          'Usa Notion como interfaz secundaria solo para miembros no técnicos que no pueden usar archivos YAML — mantén la versión canónica en Git',
+        ],
+        callouts: [
+          { type: 'pro-tip', label: 'Inicio más rápido', text: 'El camino más rápido a una configuración funcional: repositorio Git + VS Code + PromptQuorum. Los tres son gratuitos y pueden instalarse en menos de 30 minutos. Evalúa herramientas más complejas una vez que tengas 20+ prompts en producción y entiendas tus cuellos de botella reales.' },
+        ],
+      },
+      sharedLibrary: {
+        id: 'shared-library',
+        title: 'Inicia una biblioteca de prompts compartida con archivos YAML en Git',
+        content: [
+          '**Una biblioteca de prompts compartida es una carpeta de archivos YAML en un repositorio Git, donde cada archivo representa un prompt con sus metadatos, cadena de plantilla y ruta del conjunto de pruebas.** Este formato es legible tanto por desarrolladores como por compañeros no técnicos, no requiere herramientas adicionales y proporciona historial completo de versiones de forma gratuita.',
+          'El registro mínimo viable de un prompt necesita seis campos: `name` (identificador único), `version` (semántico, p. ej. `1.2.0`), `owner` (nombre de usuario de GitHub o email), `model` (modelo objetivo), `template` (la cadena del prompt con marcadores de posición `{{variable}}`) y `last_tested` (fecha ISO). Añade un campo `test_set_path` una vez que tengas un conjunto de pruebas para el prompt.',
+        ],
+        promptExamples: [
+          {
+            bad: 'Almacenado en Slack: "Hola, usa esto: \'Resume el siguiente texto para un product manager: {{text}}\' — funciona bien con GPT-4o"',
+            good: 'name: resume-para-pm\nversion: 1.2.0\nowner: hans.kuepper@empresa.com\nmodel: gpt-4o\ntemplate: |\n  Resume el siguiente texto para un product manager en 3–5 puntos.\n  Enfócate en las decisiones requeridas, no en el contexto de fondo.\n  Texto: {{text}}\nlast_tested: 2026-04-29\ntest_set_path: tests/resume-para-pm.json',
+            badLabel: 'Disperso (mensaje de Slack)',
+            goodLabel: 'Entrada de biblioteca (prompts/resume-para-pm.yaml)',
+          },
+        ],
+        callouts: [
+          { type: 'pro-tip', label: 'Empieza con 3 prompts', text: 'Mueve tus 3 prompts más usados a archivos YAML hoy. La completitud llega después — lo que importa es cubrir primero tus prompts críticos. Consulta la guía completa de configuración de biblioteca para escalar más allá de 20 prompts.' },
+        ],
+      },
+      versioningTesting: {
+        id: 'versioning-testing',
+        title: 'Versiona los prompts semánticamente y prueba en 2 modelos',
+        content: [
+          '**Versiona los prompts con números de versión semánticos en el archivo YAML y commits de Git para el historial; prueba con un conjunto de 20 casos puntuado con aprobado/fallido binario antes de cada despliegue.** Estas dos prácticas juntas detectan la mayoría de las regresiones de prompts antes de que lleguen a los usuarios.',
+          'El versionado semántico (`1.0.0 → 1.1.0 → 2.0.0`) hace que el impacto de los cambios sea inmediatamente legible: un bump menor significa un ajuste de redacción; un bump mayor significa que el formato de salida o la intención de la tarea cambió. Registra el motivo en el mensaje del commit de Git.',
+          'El conjunto de pruebas mínimo viable es de 20 casos. Para cada caso, define la entrada y un único criterio binario — "aprobado" significa que la salida satisface el criterio, "fallido" significa que no. Rastrea la tasa de aprobación como tu métrica de calidad del prompt a lo largo del tiempo.',
+        ],
+        callouts: [
+          { type: 'key-point', label: 'Tamaño mínimo del conjunto de pruebas', text: '20 casos es el piso — menos casos cubren demasiado pocos casos límite. Más allá de 50 casos, las ganancias marginales de cobertura disminuyen para la mayoría de los prompts de producción de equipos pequeños. Empieza en 20 y expande solo cuando identifiques categorías específicas de fallo que necesitas cubrir.' },
+          { type: 'pro-tip', label: 'Línea base multi-modelo', text: 'Ejecuta tu conjunto de pruebas en GPT-4o y Claude 4.6 Sonnet antes de cada despliegue. Los modelos se actualizan sin previo aviso — un bump de versión puede cambiar silenciosamente las tasas de aprobación en tus tareas específicas.' },
+        ],
+      },
+      modelSelection: {
+        id: 'model-selection',
+        title: 'Elige GPT-4o para salida estructurada, Claude 4.6 Sonnet para matices',
+        content: [
+          '**Empieza con GPT-4o y Claude 4.6 Sonnet para la mayoría de las tareas — ejecuta ambos y compara las tasas de aprobación en tu caso de uso específico antes de comprometerte con un modelo.** El modelo correcto depende del tipo de tarea, no de los rankings generales de clasificación.',
+          'GPT-4o de OpenAI y Claude 4.6 Sonnet de Anthropic son los dos modelos frontier más utilizados para el prompt engineering de producción a abril de 2026. Para documentos que superan los 100k tokens, añade Gemini 2.5 Pro. Para tareas de alto volumen sensibles al coste, usa Claude 4.5 Haiku o GPT-4o mini.',
+        ],
+        columns: ['Tipo de tarea', 'Modelo recomendado', 'Por qué'],
+        rows: [
+          { 'Tipo de tarea': 'Salida estructurada (JSON, clasificación)', 'Modelo recomendado': 'GPT-4o', 'Por qué': 'Modo JSON fiable, seguimiento de instrucciones consistente en formatos de salida restringidos' },
+          { 'Tipo de tarea': 'Escritura de forma larga, instrucciones con matices', 'Modelo recomendado': 'Claude 4.6 Sonnet', 'Por qué': 'Maneja instrucciones de múltiples restricciones con menos errores de interpretación literal' },
+          { 'Tipo de tarea': 'Generación y revisión de código', 'Modelo recomendado': 'GPT-4o o Claude 4.6 Sonnet', 'Por qué': 'Ambos rinden bien — ejecuta ambos y compara en tu código base y lenguaje específicos' },
+          { 'Tipo de tarea': 'Documentos de más de 100k tokens', 'Modelo recomendado': 'Gemini 2.5 Pro', 'Por qué': 'Ventana de contexto de 1M tokens; GPT-4o y Claude 4.6 Sonnet tienen un límite de 200k tokens' },
+          { 'Tipo de tarea': 'Tareas de alto volumen sensibles al coste', 'Modelo recomendado': 'Claude 4.5 Haiku o GPT-4o mini', 'Por qué': 'Ambos son 10–20× más baratos que los modelos flagship con calidad aceptable para muchas tareas de producción' },
+        ],
+        tableFormat: true,
+        callouts: [
+          { type: 'key-point', label: 'PromptQuorum para comparación de modelos', text: 'PromptQuorum despacha un prompt a todos los modelos configurados simultáneamente y devuelve todas las respuestas en una vista con seguimiento de tasa de aprobación — la forma más rápida para un equipo pequeño de determinar qué modelo rinde mejor en una tarea específica sin escribir código de comparación de API por modelo.' },
+        ],
+      },
+      governance: {
+        id: 'governance',
+        title: 'Asigna un propietario nombrado a cada prompt',
+        content: [
+          '**Para equipos de menos de 5 personas: un propietario nombrado por archivo de prompt, cambios anotados en mensajes de commit de Git, sin paso de revisión formal requerido. Para equipos de 5–15: añade una revisión de pull request antes de hacer merge de cualquier cambio a un prompt usado en producción.** Estos dos niveles cubren las necesidades de gobernanza de la mayoría de los equipos pequeños sin añadir sobrecarga innecesaria.',
+          'El fallo de gobernanza más común en equipos pequeños no es demasiado poco proceso — es "todos son dueños de todo". Cuando nadie es individualmente responsable de un prompt, las regresiones quedan sin corregir porque todos asumen que alguien más se encargará.',
+        ],
+        items: [
+          'Cada archivo YAML de prompt incluye un campo `owner:` nombrado (nombre de usuario de GitHub o dirección de email)',
+          'El propietario recibe una notificación (GitHub/GitLab) cuando cualquier otra persona modifica su prompt',
+          'Cualquier cambio en la cadena `template:` debe incrementar el número de versión, incluso los cambios menores de redacción',
+          'Los prompts de producción deben pasar su conjunto de pruebas antes de que el cambio se haga merge en main',
+          'El propietario es responsable de mantener el conjunto de pruebas actualizado cuando el alcance del prompt o los criterios de éxito cambien',
+        ],
+        callouts: [
+          { type: 'warning', label: 'Cuándo NO añadir revisión formal', text: 'Los equipos de 2–3 personas con comunicación diaria directa no necesitan revisiones de pull request para cambios de prompts. Un mensaje de Slack — "Actualizado resume-para-pm a v1.3.0, motivo: GPT-4o cambió cómo maneja el formato de listas con viñetas" — es una gobernanza suficiente a esa escala.' },
+        ],
+      },
+      howToStart: {
+        id: 'how-to-start',
+        title: 'Configura el prompt engineering en una semana: plan de 6 pasos',
+        content: '**El camino más rápido del caos de prompts a una configuración de equipo funcional son seis pasos en cinco días laborables.** Cada paso tiene un entregable concreto — sin progreso parcial, sin "lo terminaremos en el próximo sprint".',
+        numberedItems: [
+          '**Día 1 — Auditoría y asignación de propiedad.** Lista todos los prompts que usa tu equipo. Para cada uno, registra: dónde vive, quién lo escribió, en qué modelo se ejecuta. Asigna un propietario nombrado a cada prompt. Esto tarda 1–2 horas y expone inmediatamente la proliferación de prompts — la mayoría de los equipos descubren que tienen un 30–50% más de prompts de los que pensaban.',
+          '**Día 2 — Crea un repositorio de prompts compartido.** Crea una carpeta `/prompts` en tu repositorio de código existente, o un nuevo repositorio Git dedicado. Añade un `README.md` con los campos de metadatos requeridos: nombre, versión, propietario, modelo, plantilla, last_tested.',
+          '**Día 3 — Mueve tus 3 prompts más críticos a archivos YAML.** Escríbelos con la plantilla completa de metadatos. Confirma en el repositorio compartido con un mensaje como `feat(prompts): migrate resume-para-pm to library v1.0.0`. Estos 3 archivos son la base de tu biblioteca.',
+          '**Día 4 — Construye un conjunto de 20 casos de prueba para tu prompt más importante.** Diez entradas de ruta feliz, cinco casos límite (formato inusual, entradas largas, campos requeridos faltantes), cinco entradas adversariales (entradas que intentan anular las instrucciones del prompt). Define un criterio binario aprobado/fallido para cada uno.',
+          '**Día 5 — Ejecuta tu conjunto de pruebas en al menos 2 modelos.** Usa PromptQuorum o tus propias llamadas a la API para ejecutar los 20 casos en GPT-4o y Claude 4.6 Sonnet. Registra la tasa de aprobación para cada modelo. Esta línea base es el número más importante que tu equipo rastreará — cada cambio futuro de prompt debe igualar o superar este valor.',
+          '**Semana 2+ — Extiende la biblioteca y añade revisión.** Mueve tus próximos 5 prompts críticos a archivos YAML. Si tu equipo tiene 5 o más personas, añade revisiones PR en la carpeta `/prompts`. Ejecuta el conjunto de pruebas completo en CI en cada merge a main.',
+        ],
+        callouts: [
+          { type: 'key-point', label: 'El paso más importante', text: 'Si solo haces una cosa de esta guía, haz el Día 5: establece una tasa de aprobación de línea base multi-modelo para tu prompt más crítico. Ese único número te dice inmediatamente cuando una actualización de modelo, un cambio de redacción o un nuevo caso límite ha roto algo.' },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '5 errores comunes de prompt engineering en equipos pequeños',
+        content: '**La mayoría de los fallos de prompts en equipos pequeños se remontan a cinco errores repetibles, cada uno prevenible con los componentes descritos en esta guía.**',
+        mistakes: [
+          {
+            mistake: 'Almacenar prompts en Slack, email o notas personales',
+            problem: 'Sin historial de versiones, sin acceso compartido, sin forma de auditar qué cambió cuando algo falla en producción',
+            fix: 'Mueve a archivos YAML en un repositorio Git compartido el Día 2 de tu configuración. Incluso un único archivo plano con todos los prompts es mejor que un hilo de Slack.',
+          },
+          {
+            mistake: 'Una persona es propietaria de todos los prompts',
+            problem: 'Crea un único punto de fallo — esa persona se convierte en un cuello de botella, y los prompts quedan desactualizados cuando no está disponible',
+            fix: 'Asigna propiedad por caso de uso o área de producto, no por persona. Distribuir 2–3 propietarios en áreas funcionales es el modelo correcto para la mayoría de los equipos pequeños.',
+          },
+          {
+            mistake: 'Probar solo en el modelo que produjo el prompt original',
+            problem: 'Pasa por alto los fallos específicos del modelo y falla silenciosamente cuando cambias de modelo o cuando el modelo original actualiza sus pesos',
+            fix: 'Ejecuta cada prompt de producción en al menos GPT-4o y Claude 4.6 Sonnet antes de desplegar. Usa PromptQuorum para ejecutar ambos simultáneamente en un solo paso.',
+          },
+          {
+            mistake: 'Tratar el versionado como opcional hasta que algo falla',
+            problem: 'Cuando aparece una regresión, reconstruir qué cambió requiere memoria en lugar de un log de Git — la depuración tarda horas en lugar de minutos',
+            fix: 'Confirma cada cambio de prompt con un bump de versión semántica y una nota de cambio de una línea. El hábito tarda 30 segundos; la recompensa al depurar son horas.',
+          },
+          {
+            mistake: 'Añadir herramientas de nivel empresarial a un equipo de 3',
+            problem: 'La sobrecarga supera el beneficio — los equipos pasan más tiempo manteniendo la pila de herramientas que construyendo funciones que usan prompts',
+            fix: 'Empieza con Git + YAML. Añade plataformas de gestión de prompts (Braintrust, PromptHub, Vellum) solo cuando las limitaciones de Git se conviertan en una restricción real — típicamente con 10+ personas o 50+ prompts en producción.',
+          },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        content: '**Las preguntas más comunes de los equipos pequeños cubren la configuración mínima viable, Git vs herramientas dedicadas, elección de modelo y cómo prevenir regresiones silenciosas cuando los modelos se actualizan.** Cada respuesta incluye un umbral o acción concretos.',
+        faqs: [
+          {
+            q: '¿Los equipos pequeños necesitan un prompt engineer dedicado?',
+            a: 'No. La mayoría de los equipos pequeños asignan la propiedad de prompts a quien construye la función que usa el prompt — generalmente un desarrollador o product manager. Un prompt engineer dedicado generalmente solo vale la pena contratarlo cuando un equipo tiene más de 20 prompts en producción y la calidad de los prompts es un motor directo de ingresos.',
+          },
+          {
+            q: '¿Cuál es la configuración mínima viable de prompt engineering para un equipo pequeño?',
+            a: 'Una carpeta /prompts en un repositorio Git compartido con archivos YAML que incluyen cuatro campos: nombre, versión, propietario y modelo. Todo lo demás — conjuntos de prueba, observabilidad, procesos de revisión — se añade progresivamente a medida que crece la superficie de prompts.',
+          },
+          {
+            q: '¿Debe un equipo pequeño usar una plataforma de gestión de prompts o solo Git?',
+            a: 'Para equipos de menos de 15 personas con menos de 50 prompts en producción, Git es suficiente. Las plataformas de gestión de prompts como Braintrust, PromptHub y Vellum añaden valor cuando necesitas edición basada en interfaz de usuario para stakeholders no técnicos, ejecuciones de evaluación automatizadas en CI, o promoción multi-entorno de dev a staging a producción.',
+          },
+          {
+            q: '¿Cómo evitamos que los prompts fallen cuando los modelos se actualizan?',
+            a: 'Ejecuta tu conjunto de pruebas cuando recibas una notificación de actualización de modelo de OpenAI o Anthropic. Un conjunto de 20 casos tarda menos de 60 segundos en ejecutarse en GPT-4o y Claude 4.6 Sonnet con PromptQuorum o un script de API simple. Establece un umbral de tasa de aprobación — si la puntuación cae por debajo de tu línea base, investiga antes de desplegar.',
+          },
+          {
+            q: '¿En qué modelo de IA debe estandarizarse un equipo pequeño?',
+            a: 'No te estandarices en un solo modelo. Ejecuta tus prompts más críticos en GPT-4o y Claude 4.6 Sonnet y elige por tipo de tarea. GPT-4o es más fiable para salida estructurada como JSON y clasificación. Claude 4.6 Sonnet maneja instrucciones con matices y múltiples restricciones con menos errores literales. Usa Claude 4.5 Haiku o GPT-4o mini para tareas de alto volumen sensibles al coste.',
+          },
+          {
+            q: '¿Cuántos prompts necesitamos antes de que valga la pena construir una biblioteca compartida?',
+            a: 'Cinco o más. Si tu equipo tiene menos de cinco prompts en producción, un documento compartido es suficiente. A cinco o más, el coste de coordinación del almacenamiento disperso supera el coste de configuración de una hora de una biblioteca YAML en Git.',
+          },
+          {
+            q: '¿Cuál es un buen tamaño de conjunto de pruebas para un prompt de producción?',
+            a: '20 casos es el mínimo: 10 entradas de ruta feliz, 5 casos límite (formato inusual, entradas largas, campos requeridos faltantes) y 5 entradas adversariales. Más allá de 50 casos, las ganancias marginales de cobertura disminuyen para la mayoría de los prompts de producción a menos que estés tratando con salidas de alto riesgo en aplicaciones médicas, legales o financieras.',
+          },
+          {
+            q: '¿Cómo manejamos el prompt engineering para miembros no técnicos del equipo?',
+            a: 'Usa un Notion o Google Doc compartido para que los stakeholders no técnicos redacten el contenido del prompt, con un desarrollador responsable de estructurarlo como un archivo YAML y ejecutar las pruebas. PromptQuorum proporciona una interfaz sin código para ejecutar y comparar prompts sin acceso directo a la API, lo que lo hace utilizable por product managers y diseñadores.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Construye una biblioteca de prompts para tu equipo](/prompt-engineering/build-a-prompt-library?lang=es) — estructura de metadatos, organización de carpetas y gobernanza de escalado más allá de 50 prompts',
+          '[Cómo evaluar la calidad de los prompts: métricas, pruebas y checklist](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — construcción de conjunto de pruebas de 20 casos, puntuación binaria aprobado/fallido y rúbricas LLM-as-judge',
+          '[Cómo probar prompts en múltiples modelos](/prompt-engineering/how-to-test-prompts-across-models?lang=es) — ejecutar el mismo prompt en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro para encontrar el mejor rendimiento por tarea',
+          '[Mejores plataformas de gestión de prompts (2026)](/prompt-engineering/best-prompt-management-platforms?lang=es) — cuándo superar Git: Braintrust, PromptHub y Vellum comparados para equipos en crecimiento',
+          '[GPT-4o vs Claude vs Gemini: ¿qué modelo?](/prompt-engineering/gpt-claude-gemini-which-model?lang=es) — selección de modelo por tipo de tarea, latencia, coste y ventana de contexto',
+          '[Mejores IDEs de prompt engineering (2026)](/prompt-engineering/best-prompt-engineering-ides?lang=es) — configuración de VS Code y Cursor para edición de archivos YAML de prompts con resaltado de sintaxis y snippets compartidos del equipo',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[OpenAI API Pricing (abril 2026)](https://openai.com/api/pricing) — Tarifas de tokens de entrada/salida de GPT-4o y GPT-4o mini usadas para estimaciones de coste en este artículo',
+          '[Anthropic API Pricing (abril 2026)](https://www.anthropic.com/pricing) — Tarifas de tokens de Claude 4.6 Sonnet y Claude 4.5 Haiku',
+          '[Google Gemini API Pricing (abril 2026)](https://ai.google.dev/pricing) — Ventana de contexto y tarifas de tokens de Gemini 2.5 Pro',
+          '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — Principios de propiedad de código compartida y gobernanza aplicables a bibliotecas de prompts compartidas',
+          '[NIST AI Risk Management Framework (AI RMF)](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Principios de gobernanza para sistemas de IA en organizaciones de todos los tamaños',
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-29',

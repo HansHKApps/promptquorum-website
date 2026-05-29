@@ -32,6 +32,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       fr: { question: 'DeepSeek est-il sûr au regard du RGPD ?', answer: 'L\'API DeepSeek présente le risque RGPD le plus élevé parmi les LLMs majeurs car les serveurs sont soumis à la loi chinoise d\'accès aux données (PIPL), aucune décision d\'adéquation UE n\'existe pour la Chine, et les Conditions d\'utilisation se réservent explicitement le droit de partager des données avec les autorités chinoises. Les modèles DeepSeek open-weight en local ont un profil de risque différent et plus faible.', bullets: ['API DeepSeek : serveurs en Chine, loi PIPL de divulgation — risque le plus élevé', 'Pas de décision d\'adéquation UE pour la Chine : CCT + EIT requis, mais résultat de l\'EIT potentiellement défavorable', 'Poids locaux DeepSeek R1/V3 (Apache 2.0) : risque beaucoup plus faible si déployés localement sans appels API'], updatedDate: '2026-05' },
       ja: { question: 'DeepSeekはGDPR的に安全ですか？', answer: 'DeepSeek APIは主要LLMの中でGDPRリスクが最も高い。理由はサーバーが中国の個人情報アクセス法（PIPL）に従属し、中国にEU十分性認定がなく、利用規約が中国当局とのデータ共有権を明示的に留保しているためです。DeepSeekのローカルオープンウェイトモデルはリスクプロファイルが異なり、より低いリスクです。', bullets: ['DeepSeek API：中国サーバー、PILPデータ開示義務あり——最高リスク', '中国のEU十分性認定なし：SCC + TIA必要、ただしTIA結果は不利になる可能性', 'DeepSeek R1/V3ローカル重み（Apache 2.0）：APIコールなしでローカル展開すれば大幅リスク低減'], updatedDate: '2026-05' },
       zh: { question: 'DeepSeek在GDPR方面安全吗？', answer: 'DeepSeek API在主要LLM中具有最高的GDPR风险，因为服务器受中国数据访问法（PIPL）管辖，中国没有欧盟充分性认定，且服务条款明确保留了与中国当局共享数据的权利。DeepSeek本地开源权重模型具有不同且更低的风险状况。', bullets: ['DeepSeek API：服务器在中国，受PIPL数据披露法约束——风险最高', '中国无欧盟充分性认定：需要SCCs + TIA，但TIA结果可能不利', 'DeepSeek R1/V3本地权重（Apache 2.0）：本地部署无API调用风险大幅降低'], updatedDate: '2026-05' },
+      es: { question: '¿Es seguro usar DeepSeek bajo el RGPD?', answer: 'La API de DeepSeek presenta el mayor riesgo para el RGPD entre los principales LLMs, porque los servidores están sujetos a la ley china de acceso a datos (PIPL), no existe una decisión de adecuación de la UE para China, y los Términos de Servicio se reservan explícitamente el derecho a compartir datos con las autoridades chinas. Los modelos de código abierto de DeepSeek ejecutados localmente tienen un perfil de riesgo diferente y más bajo.', bullets: ['API de DeepSeek: servidores en China, sujetos a la ley PIPL de divulgación — riesgo máximo', 'Sin decisión de adecuación de la UE para China: CCT + EIT requeridas, pero el resultado de la EIT puede ser desfavorable', 'Pesos locales de DeepSeek R1/V3 (Apache 2.0): riesgo mucho menor si se despliegan localmente sin llamadas a la API'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {
@@ -402,6 +403,88 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'GDPR监管数据最安全的LLM是哪个？',
             a: '最大GDPR安全性：任何无外部API调用、离线运行的本地开源权重模型（Qwen 2.5、Llama 4、DeepSeek R1本地）。Qwen 2.5和Llama 4的训练数据来源更透明。结构化决策工具请参阅<a href="/zh/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">GDPR LLM风险完整对比</a>。',
+          },
+        ],
+      },
+    },
+  },
+  es: {
+    theme: 'Privacy & Security',
+    title: '¿Es seguro usar DeepSeek bajo el RGPD?',
+    seoTitle: '¿DeepSeek es seguro para el RGPD? 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'La API de DeepSeek es el LLM de mayor riesgo para el RGPD: jurisdicción china, ley PIPL, sin decisión de adecuación de la UE. Los pesos locales de DeepSeek son de menor riesgo. Mayo 2026.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    quickAnswerTop: {
+      es: {
+        question: '¿Es seguro usar DeepSeek bajo el RGPD?',
+        answer: 'La API de DeepSeek presenta el mayor riesgo para el RGPD entre los principales LLMs, porque los servidores están sujetos a la ley china de acceso a datos (PIPL), no existe una decisión de adecuación de la UE para China, y los Términos de Servicio se reservan explícitamente el derecho a compartir datos con las autoridades chinas. Los modelos de código abierto de DeepSeek ejecutados localmente tienen un perfil de riesgo diferente y más bajo.',
+        bullets: [
+          'API de DeepSeek: servidores en China, sujetos a la ley PIPL de divulgación — riesgo máximo',
+          'Sin decisión de adecuación de la UE para China: CCT + EIT requeridas, pero el resultado de la EIT puede ser desfavorable',
+          'Pesos locales de DeepSeek R1/V3 (Apache 2.0): riesgo mucho menor si se despliegan localmente sin llamadas a la API',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'La API de DeepSeek es el LLM de mayor riesgo para el RGPD: jurisdicción china, ley PIPL de acceso a datos, sin decisión de adecuación de la UE',
+          'Las CCT son técnicamente posibles, pero una Evaluación de Impacto de Transferencia para China probablemente producirá un resultado desfavorable para datos sensibles',
+          'Los modelos de código abierto de DeepSeek (R1, V3, Coder V2) son Apache 2.0: ejecutados localmente, tienen el mismo bajo riesgo que Qwen o Llama local',
+          'Para datos regulados en la UE: evita la API de DeepSeek; usa pesos locales o cambia a un modelo con opciones de API alojadas en la UE',
+        ],
+      },
+      body1: {
+        title: 'Por qué la API de DeepSeek tiene alto riesgo bajo el RGPD',
+        content: [
+          '<strong>Tres factores acumulativos hacen de la API de DeepSeek la opción de mayor riesgo para datos regulados por el RGPD entre los principales LLMs. Primero: los servidores están en China, lo que convierte cada llamada a la API en una transferencia a un tercer país según el Artículo 44 del RGPD. Segundo: China no tiene decisión de adecuación de la UE (a diferencia de EE.UU., que cuenta con el Marco de Privacidad de Datos UE-EE.UU.). Tercero: la Ley de Protección de la Información Personal de China (PIPL) obliga a las organizaciones que operan en China a proporcionar datos a las autoridades estatales bajo petición.</strong>',
+          'Las Cláusulas Contractuales Tipo son un mecanismo legal válido para las transferencias a China. Sin embargo, tras Schrems II, las organizaciones también deben realizar una Evaluación de Impacto de Transferencia que evalúe si las CCT ofrecen protección real en la práctica. Para China, la EIT es difícil de superar para datos sensibles: la PIPL puede invalidar las protecciones contractuales, y el gobierno chino puede exigir acceso. Las directrices del EDPB dejan claro que donde las medidas suplementarias no pueden compensar las deficiencias del marco legal del país de destino, la transferencia no debe realizarse.',
+          'Esto se aplica a cualquier dato personal: registros de RRHH, información de clientes, notas médicas, correspondencia legal. Si tus prompts contienen alguno de estos datos, la API de DeepSeek crea una exposición regulatoria que las CCT por sí solas pueden no resolver.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'La API de DeepSeek es el mayor riesgo para el RGPD entre los principales LLMs porque la ley PIPL china puede invalidar las CCT y obligar a revelar datos a las autoridades estatales.' },
+          { type: 'plain-terms', text: 'La ley china obliga a las empresas a entregar datos al gobierno bajo petición, y esa ley puede invalidar cualquier contrato de privacidad que firmes. Esto significa que las promesas de proteger datos europeos con la API de DeepSeek pueden no ser legalmente ejecutables.' },
+        ],
+      },
+      body2: {
+        title: 'Pesos locales de DeepSeek — un perfil de riesgo completamente diferente',
+        content: [
+          '<strong>Los modelos de código abierto de DeepSeek (R1, V3, Coder V2) son un producto distinto a la API. Se publican bajo Apache 2.0 y pueden descargarse y ejecutarse localmente sin ninguna conexión a los servidores de DeepSeek.</strong> Ejecutar los pesos localmente elimina por completo el problema de transferencia del Artículo 44 del RGPD, de la misma forma que Qwen o Llama local.',
+          'DeepSeek R1 7B u 8B local funciona cómodamente via Ollama en una GPU con 6–8 GB de VRAM. El rendimiento es excelente: R1 es uno de los modelos de razonamiento más potentes disponibles en el nivel de 7B. Para tareas de código, DeepSeek Coder V2 está disponible en variantes más pequeñas.',
+          'La pregunta restante para DeepSeek local: el entrenamiento del modelo. DeepSeek no ha publicado detalles completos sobre los datos usados para entrenar estos modelos. Para entornos de alta garantía (sanidad, legal, administración pública), esta incertidumbre puede ser relevante incluso en el despliegue local. Qwen 2.5 (Alibaba/Tongyi) y Llama 4 (Meta) ofrecen más transparencia sobre la procedencia de los datos de entrenamiento.',
+        ],
+        columns: ['Despliegue', 'Riesgo RGPD', 'Motivo', 'Acción recomendada'],
+        rows: [
+          { 'Despliegue': 'API de DeepSeek', 'Riesgo RGPD': 'Máximo', 'Motivo': 'Servidores chinos, PIPL, sin decisión de adecuación', 'Acción recomendada': 'Evitar para datos personales o sensibles' },
+          { 'Despliegue': 'DeepSeek local (R1/V3)', 'Riesgo RGPD': 'Bajo', 'Motivo': 'Sin transferencia, pesos Apache 2.0', 'Acción recomendada': 'Aceptable; ten en cuenta la opacidad de los datos de entrenamiento' },
+          { 'Despliegue': 'Qwen local (2.5/3)', 'Riesgo RGPD': 'Bajo', 'Motivo': 'Sin transferencia, Apache 2.0, información de entrenamiento publicada', 'Acción recomendada': 'Recomendado para uso con datos sensibles' },
+          { 'Despliegue': 'Claude / OpenAI API', 'Riesgo RGPD': 'Medio', 'Motivo': 'Jurisdicción EE.UU.; la región UE reduce pero no elimina el riesgo', 'Acción recomendada': 'CCT + DPA requeridos; preferir región UE' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas: DeepSeek y el RGPD',
+        faqs: [
+          {
+            q: '¿Puedo usar la API de DeepSeek con Cláusulas Contractuales Tipo para el RGPD?',
+            a: 'Técnicamente sí: puedes firmar CCT con la entidad responsable del tratamiento de DeepSeek. Sin embargo, también debes completar una Evaluación de Impacto de Transferencia que evalúe si la ley china socava esas CCT en la práctica. Dadas las obligaciones de divulgación de la PIPL, una EIT para datos personales sensibles probablemente concluirá que las CCT no son suficientes. Para datos no personales (código, texto público), el riesgo es menor.',
+          },
+          {
+            q: '¿DeepSeek R1 es lo mismo que la API de DeepSeek?',
+            a: 'No. DeepSeek R1 se refiere al modelo de código abierto publicado en Hugging Face bajo Apache 2.0. La API de DeepSeek (api.deepseek.com) es un servicio en la nube separado con servidores en China. El riesgo para el RGPD aplica a la API, no a los pesos. Ejecutar R1 localmente via Ollama (<code>ollama run deepseek-r1:7b</code>) no implica ningún riesgo de transferencia.',
+          },
+          {
+            q: '¿Qué es la PIPL y por qué importa para el RGPD?',
+            a: 'La Ley de Protección de la Información Personal de China (PIPL), en vigor desde noviembre de 2021, obliga a las organizaciones que operan en China a proporcionar información personal a las autoridades de seguridad pública o seguridad nacional bajo petición, independientemente de dónde estén ubicadas. Esto significa que DeepSeek, como empresa china, puede ser obligada a entregar datos procesados a través de su API. Las CCT no pueden invalidar una obligación de divulgación obligatoria en la ley del país de destino. Esta es la razón principal por la que las autoridades de protección de datos de la UE consideran las transferencias a China de alto riesgo.',
+          },
+          {
+            q: '¿Qué LLM es el más seguro para datos regulados por el RGPD?',
+            a: 'Para la máxima seguridad bajo el RGPD: cualquier modelo de código abierto local (Qwen 2.5, Llama 4, DeepSeek R1 local) ejecutado offline sin llamadas a APIs externas. Entre ellos, Qwen 2.5 y Llama 4 tienen una procedencia de datos de entrenamiento más transparente. Consulta la <a href="/local-llms/gdpr-llm-risk-comparison-2026?lang=es" class="text-primary hover:underline">comparación completa de riesgos RGPD entre LLMs</a> para una herramienta de decisión estructurada.',
           },
         ],
       },
