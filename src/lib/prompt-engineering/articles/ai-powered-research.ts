@@ -1075,6 +1075,533 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    es: {
+      theme: 'Use Cases',
+      title: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',
+      intro: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero introducen un riesgo crítico: citas alucinadas que superan la revisión por pares. GPTZero confirmó más de 100 referencias fabricadas en artículos de NeurIPS 2025 que superaron el escrutinio de múltiples revisores. A partir de abril de 2026, el flujo de trabajo fiable enruta cada fase de investigación a la herramienta correcta (Elicit para extracción, Consensus para síntesis, scite.ai para verificación) y verifica las afirmaciones factuales en al menos dos modelos independientes antes de confiar en ellas.',
+      publishDate: '2026-03-23',
+      dateModified: '2026-05-04',
+      readTime: '9 min de lectura',
+      seoTitle: 'Investigación con IA: Verifica Citas y Evita Alucinaciones',
+      metaDescription: 'Reduce la revisión bibliográfica de semanas a horas. Detecta alucinaciones (9,2 %), verifica citas con Elicit, Consensus, scite.ai. Domina los flujos de trabajo de investigación.',
+      educationalLevel: 'Intermediate',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/ai-powered-research?lang=es',
+        inLanguage: 'es',
+        headline: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',
+        description: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero las tasas de alucinación del 9,2 % hacen obligatorios los flujos de verificación. Cubre Elicit, Consensus, Perplexity, scite.ai, verificación cruzada multi-modelo y frameworks de prompts para investigación.',
+        datePublished: '2026-03-23',
+        dateModified: '2026-05-04',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          url: 'https://www.promptquorum.com/about',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.promptquorum.com/logo.svg',
+          },
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=es',
+          width: 1200,
+          height: 630,
+        },
+        keywords: ['herramientas de investigación con IA', 'alucinación de IA', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'verificación multi-modelo', 'prompt engineering', 'PromptQuorum'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Elicit' },
+          { '@type': 'SoftwareApplication', name: 'Consensus' },
+          { '@type': 'SoftwareApplication', name: 'Perplexity AI' },
+          { '@type': 'SoftwareApplication', name: 'scite.ai' },
+          { '@type': 'SoftwareApplication', name: 'NotebookLM' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+          { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'es',
+        name: 'Cómo usar IA para investigación con resultados verificados',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Usar Perplexity para mapear el panorama temático',
+            text: 'Comienza con Perplexity AI para investigación exploratoria y mapeo de temas en fuentes académicas y web.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Usar Elicit para encontrar artículos y extraer datos',
+            text: 'Usa Elicit para buscar semánticamente en más de 138M de artículos y extraer tablas de datos estructurados de PDFs.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Usar Consensus para verificar el acuerdo científico',
+            text: 'Usa Consensus para sintetizar evidencia y evaluar el consenso científico sobre tu hipótesis central.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Verificar afirmaciones en múltiples modelos',
+            text: 'Ejecuta tu pregunta de investigación simultáneamente en GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro para detectar alucinaciones.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Usar scite.ai para verificar que las citas no han sido retractadas',
+            text: 'Usa scite.ai para confirmar que tus citas clave no han sido retractadas ni contradichas por investigaciones posteriores.',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Cuál es la mejor herramienta de IA para investigación académica en 2026?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ninguna herramienta individual gana en todas las fases de investigación. Elicit lidera para revisiones bibliográficas estructuradas y extracción de datos de PDFs desde su base de datos de más de 138M de artículos. Consensus lidera para síntesis rápida de evidencia con su Consensus Meter (Sí/No/Posiblemente). Perplexity lidera para investigación exploratoria rápida y ampliamente citada. El flujo de trabajo de mayor calidad usa los tres secuencialmente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué tan precisa es la salida de investigación generada por IA?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'La precisión varía según la tarea y el modelo. Las mejores tasas de alucinación para resúmenes de texto son del 1,3–4,1 %. Para preguntas de conocimiento general, la media entre modelos es del 9,2 %. Los dominios legal y médico alcanzan el 18,7 % y el 15,6 % respectivamente. En enero de 2026, GPTZero confirmó más de 100 citas alucinadas en 53 artículos de NeurIPS 2025 que superaron la revisión por pares.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuántos artículos académicos puede procesar una IA a la vez?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Depende de la ventana de contexto del modelo. GPT-4o (OpenAI) maneja ~100 páginas académicas estándar por sesión (contexto de 128k tokens). Claude Opus 4.7 (Anthropic) maneja ~160 páginas (200k tokens). Gemini 3.1 Pro (Google DeepMind) maneja ~800 páginas (1M tokens). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es seguro citar referencias generadas por IA en artículos académicos?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No — no sin verificación. Los modelos de IA generan citas de apariencia plausible que pueden tener autores incorrectos, volúmenes equivocados o DOIs incorrectos. Cada cita generada por IA debe verificarse contra la base de datos fuente (Google Scholar, PubMed, arXiv) antes de incluirla en trabajos académicos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Funciona de manera diferente la asistencia de investigación con IA fuera de los EE. UU.?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen 2.5 (Alibaba) y DeepSeek V3. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — LLaMA 3.1 7B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué temperatura debo usar para tareas de investigación con IA?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Establece la temperatura en 0,0–0,1 para la generación de citas — la salida determinista minimiza la variación de tokens que podría corromper el nombre de un autor o un DOI. Usa 0,1–0,3 para resúmenes donde importa la redacción natural. Reserva 0,7–0,9 solo para lluvia de ideas de hipótesis donde la salida diversa es el objetivo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué es Elicit y cómo funciona?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Elicit es un asistente de investigación con IA que usa búsqueda semántica en más de 138M de artículos académicos y 545.000 ensayos clínicos. A diferencia de la búsqueda por palabras clave, hace coincidir artículos por similitud conceptual. Su función principal es la extracción de datos estructurados — extrayendo metodología, tamaño de muestra y resultados directamente del texto completo del PDF en una tabla comparativa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Pueden las herramientas de investigación con IA acceder a artículos detrás de muros de pago?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'La mayoría de las herramientas de investigación con IA (Elicit, Consensus, Semantic Scholar) usan bases de datos de artículos de acceso abierto. No pueden acceder a artículos detrás de muros de pago institucionales a menos que subas los PDFs directamente. NotebookLM (Google) y Elicit admiten cargas de PDFs para preguntas y respuestas basadas en fuentes sobre artículos a los que tienes acceso.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cómo detecto una cita alucinada?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ejecuta la cita en Google Scholar o PubMed. Verifica que los nombres de los autores, la revista, el volumen, el año y el DOI coincidan exactamente. Usa scite.ai para confirmar que el artículo tiene actividad de citas — cero citas en un artículo supuestamente influyente es una señal de alerta. Verifica con un segundo modelo de IA: si devuelve detalles de autor o revista diferentes, ambas versiones requieren verificación manual.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es Perplexity AI fiable para investigación académica?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Perplexity AI es fiable para investigación exploratoria — mapear un tema, identificar investigadores clave y encontrar fuentes relevantes para investigar más. No es fiable como fuente final de citas porque busca en la web, incluidas fuentes no revisadas por pares. Usa Perplexity para descubrimiento, luego verifica cualquier afirmación específica usando Elicit, Semantic Scholar o búsqueda directa en base de datos antes de citar.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'es',
+        'name': 'Comparativa de herramientas de investigación con IA 2026',
+        'description': 'Comparación de herramientas de investigación con IA para descubrimiento, extracción, síntesis y verificación de citas',
+        'numberOfItems': 6,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Elicit', 'description': 'Más de 138M de artículos. Extracción de datos estructurados de PDFs. Nivel gratuito: 5.000 créditos/mes.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Consensus', 'description': '~200M de artículos. Síntesis de evidencia con Consensus Meter (Sí/No/Posiblemente). Nivel gratuito limitado.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Semantic Scholar', 'description': 'Más de 200M de artículos. Descubrimiento de artículos, gráficos de citas, resúmenes TLDR. Completamente gratuito.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Perplexity AI', 'description': 'Web + académico. Respuestas citadas en tiempo real, exploración amplia. Nivel gratuito limitado.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'scite.ai', 'description': 'Más de 1.200M de declaraciones de citas. Análisis de apoyo/contradicción/mención. Nivel gratuito limitado.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'NotebookLM', 'description': 'Documentos cargados. Preguntas y respuestas basadas en fuentes en tus propios archivos. Nivel gratuito/Plus.' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: 'Puntos clave',
+          isTldr: true,
+          items: [
+            'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero requieren flujos de trabajo estructurados y específicos por fase para producir salidas precisas',
+            'La tasa de alucinación media de la IA es del 9,2 % para conocimiento general; 18,7 % para asuntos legales; 48 % para OpenAI o4-mini en PersonQA — ningún modelo es inmune',
+            'Usa Elicit para extracción de datos estructurados, Consensus para síntesis de evidencia, Perplexity para exploración, scite.ai para verificación de citas',
+            'La verificación cruzada multi-modelo (GPT-4o + Claude Opus 4.7 + Gemini 3.1 Pro) detecta alucinaciones que los flujos de trabajo de un solo modelo pierden',
+            'Establece la Temperatura (T) en 0,0–0,2 para la generación de citas; usa 0,7–0,9 solo para lluvia de ideas de hipótesis',
+            'La ventana de contexto de 1M tokens de Gemini 3.1 Pro es el único modelo actual capaz de procesar más de 800 páginas académicas en una sola sesión',
+            'Más de 100 citas alucinadas superaron la revisión por pares en NeurIPS 2025 — la verificación de investigación con IA no es opcional',
+          ],
+        },
+        quickFacts: {
+          title: '⚡ Datos rápidos',
+          items: [
+            'Elicit cubre más de 138M de artículos y 545.000 ensayos clínicos con búsqueda semántica (no por palabras clave)',
+            'Tasa media de alucinación de IA: 9,2 % para conocimiento general, 18,7 % para asuntos legales, 48 % para o4-mini en PersonQA',
+            'Más de 100 citas alucinadas superaron la revisión por pares en NeurIPS 2025 (conferencia de ML de élite, tasa de aceptación del 24,52 %)',
+            'La ventana de contexto de 1M tokens de Gemini 3.1 Pro procesa ~800 páginas académicas por sesión; GPT-4o maneja ~100, Claude ~160',
+            'Temperatura 0,0–0,1 para generación de citas; 0,7–0,9 solo para lluvia de ideas de hipótesis',
+            'La verificación cruzada multi-modelo detectó alucinaciones en 8 de 30 citas de prueba en las pruebas de PromptQuorum',
+          ],
+        },
+        definition: {
+          title: 'Qué hace realmente la investigación con IA',
+          content: [
+            '📍 **EN UNA ORACIÓN**\nLa investigación con IA usa LLMs conectados a RAG y búsqueda semántica para acelerar el descubrimiento, la síntesis y la verificación de literatura — pero requiere verificación cruzada multi-modelo para detectar citas alucinadas.',
+            '💬 **EN TÉRMINOS SENCILLOS**\nUn LLM estándar es un examen de libro cerrado. Una herramienta de investigación con RAG es de libro abierto — busca fuentes antes de responder. Pero incluso las respuestas de libro abierto pueden ser incorrectas, así que verificas con un segundo modelo y compruebas las citas manualmente.',
+            '**Cómo funciona:** La Generación Aumentada por Recuperación (RAG) es la arquitectura central detrás de la mayoría de las herramientas de investigación con IA. RAG conecta un LLM a una base de conocimiento externa — bases de datos académicas, PDFs cargados o índices web en vivo — para que el modelo base sus respuestas en documentos recuperados en lugar de depender únicamente de los datos de entrenamiento. Sin RAG, los modelos solo pueden recordar hechos en los que fueron entrenados; con RAG, responden desde las fuentes que tú proporcionas.',
+          ],
+        },
+        confidenceProblem: {
+          title: '🔍 El problema de la confianza',
+          content: [
+            'Los LLMs no expresan incertidumbre proporcional a su precisión. Una cita alucinada se lee de forma idéntica a una real — mismo formato, nombres de revistas plausibles, combinaciones coherentes de autores. No hay señal visual de que una cita sea fabricada. La verificación es la única defensa.',
+          ],
+        },
+        toolComparison: {
+          title: 'La herramienta correcta para cada fase de investigación',
+          content: [
+            '**A partir de abril de 2026, ninguna herramienta de investigación con IA maneja bien todas las fases de investigación — los flujos de trabajo de mayor calidad enrutan cada tarea a la herramienta mejor diseñada para ello.**',
+            'Elicit (elicit.com) usa búsqueda semántica en más de 138M de artículos académicos y 545.000 ensayos clínicos para extraer datos estructurados directamente de PDFs — metodologías, tamaños de muestra, resultados — sin requerir coincidencias de palabras clave. Consensus (consensus.app) busca en ~200 millones de artículos y devuelve un "Consensus Meter" que resume el acuerdo científico (Sí / No / Posiblemente) sobre una pregunta específica. Perplexity AI proporciona las respuestas citadas de propósito general más rápidas tanto en la web abierta como en la literatura académica, haciéndola óptima para fases exploratorias.',
+          ],
+          columns: ['Herramienta', 'Base de Datos', 'Función Principal', 'Nivel Gratuito'],
+          rows: [
+            {
+              'Herramienta': 'Elicit',
+              'Base de Datos': 'Más de 138M de artículos + 545K ensayos',
+              'Función Principal': 'Extracción de datos estructurados de PDFs',
+              'Nivel Gratuito': 'Sí (5.000 créditos/mes)',
+            },
+            {
+              'Herramienta': 'Consensus',
+              'Base de Datos': '~200M de artículos',
+              'Función Principal': 'Síntesis de evidencia con Consensus Meter',
+              'Nivel Gratuito': 'Sí (limitado)',
+            },
+            {
+              'Herramienta': 'Semantic Scholar',
+              'Base de Datos': 'Más de 200M de artículos',
+              'Función Principal': 'Descubrimiento de artículos, gráficos de citas, resúmenes TLDR',
+              'Nivel Gratuito': 'Completamente gratuito',
+            },
+            {
+              'Herramienta': 'Perplexity AI',
+              'Base de Datos': 'Web + académico',
+              'Función Principal': 'Respuestas citadas en tiempo real, exploración amplia',
+              'Nivel Gratuito': 'Sí (limitado)',
+            },
+            {
+              'Herramienta': 'scite.ai',
+              'Base de Datos': 'Más de 1.200M de declaraciones de citas',
+              'Función Principal': 'Análisis de apoyo / contradicción / mención',
+              'Nivel Gratuito': 'Sí (limitado)',
+            },
+            {
+              'Herramienta': 'NotebookLM (Google)',
+              'Base de Datos': 'Documentos cargados',
+              'Función Principal': 'Preguntas y respuestas basadas en fuentes en tus propios archivos',
+              'Nivel Gratuito': 'Gratuito / nivel Plus',
+            },
+          ],
+          items: [
+            '**Descubrimiento** — Usa Perplexity para mapear el panorama del tema y definir tu pregunta de investigación',
+            '**Recopilación de literatura** — Usa Elicit para encontrar artículos específicos y extraer tablas de datos',
+            '**Validación de evidencia** — Usa Consensus para verificar si la comunidad científica está de acuerdo con tu hipótesis central',
+            '**Verificación de citas** — Usa scite.ai para verificar que tus referencias clave no han sido ampliamente contradichas',
+          ],
+        },
+        hallucinationRisk: {
+          title: 'El problema de las alucinaciones en la IA de investigación',
+          content: [
+            '**A partir de abril de 2026, los sistemas de IA alucinan citas y fabrican estadísticas — y estos errores superan la revisión por pares.** GPTZero analizó 4.841 artículos aceptados por NeurIPS 2025 (la conferencia de aprendizaje automático de élite, tasa de aceptación del 24,52 %) y encontró más de 100 citas alucinadas confirmadas en 53 artículos, todos los cuales habían superado la revisión por pares de múltiples revisores.',
+            'Las tasas de alucinación varían considerablemente según el dominio y la complejidad de la tarea:',
+          ],
+          columns: ['Dominio', 'Tasa de Alucinación'],
+          rows: [
+            { 'Dominio': 'Preguntas de conocimiento general', 'Tasa de Alucinación': '9,2 % (media entre modelos)' },
+            { 'Dominio': 'Información legal', 'Tasa de Alucinación': '18,7 % (modelos principales)' },
+            { 'Dominio': 'Consultas médicas / sanitarias', 'Tasa de Alucinación': '15,6 % (media general)' },
+            { 'Dominio': 'Resúmenes de texto (mejores modelos)', 'Tasa de Alucinación': '1,3–4,1 %' },
+            { 'Dominio': 'OpenAI o4-mini en benchmark PersonQA', 'Tasa de Alucinación': '48 %' },
+          ],
+          blockquote: '**En términos sencillos:** Un asistente de investigación con IA con una tasa de alucinación del 9,2 % fabricará aproximadamente 1 cita de cada 11 que genere. En un artículo con 40 citas, eso son 3–4 referencias inventadas — suficiente para retirar una publicación. El modo de fallo principal es la confianza. Los LLMs no expresan incertidumbre proporcional a su precisión. Una cita alucinada se lee de forma idéntica a una real — mismo formato, nombres de revistas plausibles, combinaciones coherentes de autores.',
+        },
+        multiModelCheck: {
+          title: 'Cómo verificar los resultados de investigación con IA: verificación cruzada multi-modelo',
+          content: [
+            '**La verificación cruzada multi-modelo — ejecutar la misma pregunta de investigación en GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro simultáneamente — detecta alucinaciones que los flujos de trabajo de un solo modelo pierden, porque los modelos independientes raramente fabrican la misma afirmación falsa específica.**',
+            'La lógica de verificación es estadística: cuando tres modelos entrenados de forma independiente coinciden en una cita, la probabilidad de que los tres hayan alucinado el mismo autor, revista, volumen y año es insignificante. Cuando no están de acuerdo, esa divergencia es una señal explícita para verificar manualmente.',
+            'PromptQuorum es una herramienta de despacho de IA multi-modelo que envía un prompt a múltiples proveedores de IA simultáneamente y devuelve todas las respuestas lado a lado. Para flujos de trabajo de investigación, esto significa ejecutar una cita o afirmación factual en GPT-4o (OpenAI), Claude Opus 4.7 (Anthropic) y Gemini 3.1 Pro (Google DeepMind) en un solo despacho — y revisar dónde convergen o divergen los tres modelos.',
+            '**Probado en PromptQuorum — 30 prompts de citas de investigación en tres modelos:** Los tres modelos (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) coincidieron en el mismo formato de cita y DOI en 22 de 30 casos. En 8 casos, al menos un modelo produjo un nombre de autor o volumen de revista diferente — los 8 casos fueron confirmados como alucinaciones en la verificación manual contra Google Scholar.',
+          ],
+          items: [
+            '**Generar** — Pide a un modelo (p. ej., Claude Opus 4.7) que produzca un resumen bibliográfico con citas',
+            '**Verificación cruzada** — Despacha la misma pregunta a GPT-4o y Gemini 3.1 Pro mediante PromptQuorum',
+            '**Marcar divergencias** — Cualquier cita donde los modelos no coincidan en autor, año o revista requiere verificación manual',
+            '**Verificar afirmaciones convergentes** — Usa scite.ai para confirmar que las citas en las que se coincide no han sido retractadas ni contradichas',
+          ],
+        },
+        whyCrossCheckingWorks: {
+          title: '🔍 Por qué funciona la verificación cruzada',
+          content: [
+            'Tres modelos entrenados de forma independiente raramente fabrican la misma afirmación falsa específica — mismo autor, misma revista, mismo volumen, mismo año. Cuando los tres coinciden, la cita es casi con certeza real. Cuando no coinciden, esa divergencia es tu alarma de alucinación.',
+          ],
+        },
+        promptStructure: {
+          title: 'Prompt engineering para tareas de investigación',
+          content: [
+            '**Los prompts estructurados producen resultados de investigación más precisos y verificables que las preguntas abiertas — la diferencia está en la especificidad del alcance, el formato de salida y las instrucciones explícitas para citar fuentes.**',
+            'El error clave que cometen la mayoría de los investigadores es hacer una pregunta de investigación exactamente como la escribirían en un motor de búsqueda. Los motores de búsqueda clasifican documentos; los LLMs predicen tokens. Requieren estructuras de entrada diferentes.',
+          ],
+        },
+        promptFramework: {
+          title: 'El framework de prompts para investigación',
+          content: [
+            'Usa esta estructura para cualquier tarea de investigación con IA:',
+          ],
+          items: [
+            '**Rol** — "Eres un investigador de revisión sistemática especializado en [campo]."',
+            '**Alcance** — "Analiza solo artículos revisados por pares publicados entre 2020 y 2026."',
+            '**Objetivo** — "Resume el consenso científico actual sobre [tema]."',
+            '**Requisito de cita** — "Cita cada afirmación con autor, año y revista. Si no puedes encontrar una cita verificada, di \'no verificado\' en lugar de generar una."',
+            '**Formato de salida** — "Devuelve los resultados como una tabla estructurada: Afirmación | Fuente | Año | Confianza (Alta/Media/Baja)."',
+          ],
+        },
+        promptBadExample: {
+          content: [
+            '**Prompt malo:** Las preguntas abiertas sin rol ni requisitos de cita producen estadísticas alucinadas:',
+          ],
+          blockquote: '¿Qué dice la investigación sobre las alucinaciones de IA?',
+        },
+        promptGoodExample: {
+          title: 'Ejemplo de prompt bueno',
+          content: [
+            '**Prompt bueno:** La versión estructurada a continuación produce una tabla de salida verificable. El prompt abierto anterior produce un párrafo con confianza que puede contener estadísticas fabricadas.',
+          ],
+          blockquote: 'Eres un investigador de revisión sistemática. Resume el consenso científico actual sobre las tasas de alucinación de IA en diferentes dominios (médico, legal, conocimiento general). Cita solo artículos revisados por pares o informes oficiales de evaluación de modelos publicados entre 2023 y 2026. Formatea los resultados como: Dominio | Tasa de Alucinación | Estudio | Año. Si una tasa específica no está verificada, etiquétala como \'estimada\' y señálala.',
+        },
+        parameters: {
+          title: 'Ajustes de temperatura para investigación',
+          content: [
+            '**Establece la Temperatura (T) en 0,0–0,2 para todas las tareas de investigación que requieran precisión factual.** La Temperatura (T) es el hiperparámetro aplicado a la distribución de salida softmax: en T = 0,0, el modelo selecciona el token de mayor probabilidad en cada paso, produciendo salida determinista. En T = 1,0, la salida se vuelve más variada — deseable para tareas creativas, peligroso para la generación de citas donde un solo token incorrecto cambia un nombre de autor o un DOI.',
+          ],
+          columns: ['Tarea', 'T Recomendada', 'Razón'],
+          rows: [
+            {
+              'Tarea': 'Generación de citas',
+              'T Recomendada': '0,0–0,1',
+              'Razón': 'Salida determinista; minimiza la variación de tokens',
+            },
+            {
+              'Tarea': 'Resumen',
+              'T Recomendada': '0,1–0,3',
+              'Razón': 'Factual pero con redacción natural',
+            },
+            {
+              'Tarea': 'Lluvia de ideas de hipótesis',
+              'T Recomendada': '0,7–0,9',
+              'Razón': 'La salida diversa aumenta el rango de ideación',
+            },
+            {
+              'Tarea': 'Borrador de revisión bibliográfica',
+              'T Recomendada': '0,2–0,4',
+              'Razón': 'Equilibrio entre precisión y legibilidad',
+            },
+          ],
+        },
+        oneWrongToken: {
+          title: '🔍 Un token incorrecto',
+          content: [
+            'Con Temperatura 0,7, una sola variación de token puede cambiar "Smith 2024" a "Smith 2023" o "Nature" a "Nature Methods". Para la generación de citas, incluso T = 0,2 introduce un riesgo innecesario. Usa T = 0,0 a menos que tengas una razón específica para no hacerlo.',
+          ],
+        },
+        contextWindow: {
+          title: 'Herramientas de investigación con IA por modelo: límites de ventana de contexto',
+          content: [
+            '**El tamaño de la ventana de contexto determina cuántos artículos de investigación puede procesar un LLM en una sesión — esta es la restricción técnica principal para la síntesis de literatura a gran escala.**',
+          ],
+          columns: ['Modelo', 'Ventana de Contexto', 'Capacidad de Páginas Aproximada'],
+          rows: [
+            {
+              'Modelo': 'GPT-4o (OpenAI)',
+              'Ventana de Contexto': '128k tokens',
+              'Capacidad de Páginas Aproximada': '~100 páginas académicas estándar por sesión',
+            },
+            {
+              'Modelo': 'Claude Opus 4.7 (Anthropic)',
+              'Ventana de Contexto': '200k tokens',
+              'Capacidad de Páginas Aproximada': '~160 páginas académicas estándar por sesión',
+            },
+            {
+              'Modelo': 'Gemini 3.1 Pro (Google DeepMind)',
+              'Ventana de Contexto': '1M tokens',
+              'Capacidad de Páginas Aproximada': '~800 páginas académicas estándar por sesión',
+            },
+          ],
+          items: [
+            'Para tareas de investigación con menos de 20 artículos, los tres modelos procesan el contexto completo. Para revisiones sistemáticas que cubren 50–200 artículos, la ventana de contexto de 1 millón de tokens de Gemini 3.1 Pro es el único modelo actual que procesa la copia completa en una sesión.',
+            'Para corpus realmente grandes (más de 500 artículos), un pipeline RAG — donde los artículos se fragmentan, se embeben en una base de datos vectorial y se recuperan por similitud semántica — es la arquitectura correcta, no la inyección directa de contexto.',
+            'Para una explicación más profunda de las ventanas de contexto y por qué los modelos pierden información en el medio del contexto, consulta [Ventanas de contexto explicadas](/prompt-engineering/context-window-limits-explained?lang=es).',
+          ],
+        },
+        lostInMiddle: {
+          title: '🔍 Perdido en el medio',
+          content: [
+            'Incluso dentro de la ventana de contexto declarada de un modelo, la precisión de recuperación para la información colocada en el medio de entradas largas disminuye. Coloca tus artículos más importantes al principio y el material de referencia al final. Esta es una limitación conocida documentada en investigaciones de Anthropic y Google.',
+          ],
+        },
+        globalContext: {
+          title: 'Contexto global y regional para IA de investigación',
+          content: [
+            'Las instituciones de investigación europeas requieren cada vez más que la investigación asistida por IA cumpla con la Ley de IA de la UE, que obliga a transparencia, trazabilidad y supervisión humana para aplicaciones de IA de alto riesgo, incluida la publicación académica. Mistral AI (Francia) se usa frecuentemente en entornos académicos de la UE porque sus modelos son desplegables on-premise y cumplen los requisitos de residencia de datos del RGPD para datos de investigación sensibles.',
+            'Las instituciones de investigación chinas usan **Qwen 2.5** (Alibaba) y **DeepSeek V3** como herramientas principales de IA de investigación — ambos son de código abierto, desplegables localmente y procesan literatura en idioma CJK más rápido que los modelos entrenados en Occidente. Las Medidas Interinas para la IA Generativa de China (2023) requieren que el contenido de investigación generado por IA se etiquete como tal.',
+            'Las universidades japonesas que operan bajo las directrices de protección de datos de METI suelen desplegar **Ollama** con modelos LLaMA 3.1 localmente — LLaMA 3.1 7B requiere 8 GB de RAM para inferencia local, produce cero llamadas API externas y cumple estrictos estándares de residencia de datos para investigación sensible.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Errores comunes en la investigación con IA',
+          content: [
+            '**Evita estos errores comunes cuando uses herramientas de IA para investigación:**',
+          ],
+          items: [
+            '**Seleccionar basándose en tablas de clasificación de benchmarks (no en la tarea real)** — **Corrección:** Elige modelos por adecuación a la tarea, no por posición en la tabla de clasificación. Los campeones de benchmark (GPT-4o) están sobredimensionados para resúmenes; la ventaja de costo de Gemini 3.1 Pro domina cuando solo necesitas procesamiento de contexto.',
+            '**Asumir que ventana de contexto = calidad** — **Corrección:** La ventana de contexto es una dimensión. 1M de tokens importa solo para más de 50 artículos. Para revisiones bibliográficas pequeñas, GPT-4o (128k) o Claude Opus 4.7 (200k) son suficientes y cuestan menos.',
+            '**Usar modelo frontier para cada tarea** — **Corrección:** Enruta tareas por eficiencia de costo: Gemini Flash para clasificación, Claude Opus 4.7 para redacción, GPT-4o para código. El despacho multi-modelo mediante PromptQuorum permite la selección de modelo por tarea.',
+            '**Ignorar geografía y residencia de datos (RGPD de la UE, China)** — **Corrección:** La investigación en la UE debe usar herramientas conformes con el RGPD (Mistral on-premise, Ollama local). Las instituciones en China usan Qwen 2.5 o DeepSeek. Japón bajo directrices de METI usa Ollama con LLaMA 3.1 localmente.',
+            '**Bloqueo de proveedor sin capa de abstracción** — **Corrección:** Usa herramientas de despacho multi-modelo (PromptQuorum) para evitar el bloqueo de proveedor. Una sola llamada API enruta al mejor modelo por tarea; cambiar de proveedor no requiere cambios de código.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectura relacionada',
+          items: [
+            '[RAG Explicado](/prompt-engineering/rag-explained?lang=es) — la arquitectura de recuperación que impulsa Elicit, Consensus y todas las herramientas de IA de investigación en producción',
+            '[Limitaciones de la IA — Qué no pueden hacer los LLMs](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es) — por qué la alucinación es estructural, no un bug que se puede corregir',
+            '[Prompt Injection y Seguridad](/prompt-engineering/prompt-injection-and-security?lang=es) — riesgos de inyección indirecta al alimentar contenido web scrapeado en pipelines de investigación',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=es) — razonamiento estructurado para tareas de análisis sistemático',
+            '[Temperatura y Top-P Explicados](/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=es) — cómo los parámetros de aleatoriedad afectan la precisión factual en la generación de citas',
+            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — definición fundamental de instrucciones de IA estructuradas',
+            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=es) — comparación de modelos de código abierto líderes para inferencia local',
+            '[Mejores LLMs locales para programación](/local-llms/best-local-llms-for-coding?lang=es) — evaluación de modelos locales para tareas de desarrollo de software',
+            '[LLMs de código abierto vs. propietarios](/prompt-engineering/open-source-vs-proprietary-llms?lang=es) — compensaciones en la selección de modelos para flujos de trabajo de investigación',
+          ],
+        },
+        howToStart: {
+          title: 'Cómo realizar investigación con IA',
+          numberedItems: [
+            '**Mapea tu flujo de trabajo de investigación por fase: descubrimiento, recopilación, síntesis, verificación.** Usa Perplexity para el descubrimiento exploratorio, Elicit para la extracción de literatura estructurada, Consensus para la síntesis de evidencia y scite.ai para la verificación de citas. Enruta cada tarea a la herramienta diseñada para ello.',
+            '**Establece la Temperatura (T) en 0,0–0,1 para la generación de citas.** La salida determinista minimiza las alucinaciones en nombres de autores, años y DOIs. Usa T = 0,7–0,9 solo para lluvia de ideas de hipótesis, no para ninguna afirmación basada en hechos.',
+            '**Estructura los prompts de investigación con rol, alcance, objetivo, requisito de cita y formato de salida.** Ejemplo: "Eres un investigador de revisión sistemática. Analiza solo artículos revisados por pares entre 2020 y 2026. Resume el consenso científico sobre [tema]. Cita cada afirmación con autor, año, revista. Devuelve como tabla: Afirmación | Fuente | Año | Confianza."',
+            '**Usa la verificación cruzada multi-modelo para detectar citas alucinadas.** Ejecuta la misma pregunta de investigación en GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro mediante PromptQuorum. Cualquier cita donde los modelos no coincidan en autor, año o revista requiere verificación manual en Google Scholar o PubMed.',
+            '**Verifica todas las citas manualmente antes de incluirlas en trabajos académicos.** Cada referencia generada por IA debe comprobarse contra la base de datos fuente. Se han confirmado citas alucinadas en artículos que superaron la revisión por pares en conferencias de élite como NeurIPS 2025.',
+          ],
+        },
+        faq: {
+          title: 'Preguntas frecuentes',
+          faqs: [
+            {
+              q: '¿Cuál es la mejor herramienta de IA para investigación académica en 2026?',
+              a: 'Ninguna herramienta individual gana en todas las fases de investigación. Elicit lidera para revisiones bibliográficas estructuradas y extracción de datos de PDFs desde su base de datos de más de 138M de artículos. Consensus lidera para síntesis rápida de evidencia con su Consensus Meter (Sí/No/Posiblemente). Perplexity lidera para investigación exploratoria rápida y ampliamente citada a través de fuentes académicas y web. El flujo de trabajo de mayor calidad usa los tres secuencialmente.',
+            },
+            {
+              q: '¿Qué tan precisa es la salida de investigación generada por IA?',
+              a: 'La precisión varía según la tarea y el modelo. Las mejores tasas de alucinación para resúmenes de texto son del 1,3–4,1 %. Para preguntas de conocimiento general, la media entre modelos es del 9,2 %. Los dominios legal y médico alcanzan el 18,7 % y el 15,6 %. En enero de 2026, GPTZero confirmó más de 100 citas alucinadas en 53 artículos de NeurIPS 2025 que superaron la revisión por pares — lo que significa que los errores de IA no siempre son detectados por revisores expertos.',
+            },
+            {
+              q: '¿Cuántos artículos académicos puede procesar una IA a la vez?',
+              a: 'Depende de la ventana de contexto del modelo. GPT-4o (OpenAI) maneja ~100 páginas académicas estándar por sesión (contexto de 128k tokens). Claude Opus 4.7 (Anthropic) maneja ~160 páginas (200k tokens). Gemini 3.1 Pro (Google DeepMind) maneja ~800 páginas (1M tokens). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
+            },
+            {
+              q: '¿Es seguro citar referencias generadas por IA en artículos académicos?',
+              a: 'No — no sin verificación. Los modelos de IA generan citas de apariencia plausible que pueden tener autores incorrectos, volúmenes equivocados o DOIs incorrectos. Cada cita generada por IA debe verificarse contra la base de datos fuente (Google Scholar, PubMed, arXiv) antes de incluirla en trabajos académicos. Se han encontrado citas alucinadas en artículos de las principales conferencias de aprendizaje automático, incluida NeurIPS 2025.',
+            },
+            {
+              q: '¿Funciona de manera diferente la asistencia de investigación con IA fuera de los EE. UU.?',
+              a: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen 2.5 (Alibaba) y DeepSeek V3, que tienen un procesamiento de tokens más rápido para literatura en idioma CJK. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — LLaMA 3.1 7B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
+            },
+            {
+              q: '¿Qué temperatura debo usar para tareas de investigación con IA?',
+              a: 'Establece la temperatura en 0,0–0,1 para la generación de citas — la salida determinista minimiza la variación de tokens que podría corromper el nombre de un autor o un DOI. Usa 0,1–0,3 para resúmenes donde importa la redacción natural. Reserva 0,7–0,9 solo para lluvia de ideas de hipótesis donde la salida diversa es el objetivo.',
+            },
+            {
+              q: '¿Qué es Elicit y cómo funciona?',
+              a: 'Elicit es un asistente de investigación con IA que usa búsqueda semántica en más de 138M de artículos académicos y 545.000 ensayos clínicos. A diferencia de la búsqueda por palabras clave, hace coincidir artículos por similitud conceptual. Su función principal es la extracción de datos estructurados — extrayendo metodología, tamaño de muestra y resultados directamente del texto completo del PDF en una tabla comparativa sin requerir coincidencias de palabras clave.',
+            },
+            {
+              q: '¿Pueden las herramientas de investigación con IA acceder a artículos detrás de muros de pago?',
+              a: 'La mayoría de las herramientas de investigación con IA (Elicit, Consensus, Semantic Scholar) usan bases de datos de artículos de acceso abierto. No pueden acceder a artículos detrás de muros de pago institucionales a menos que subas los PDFs directamente. NotebookLM (Google) y Elicit admiten cargas de PDFs para preguntas y respuestas basadas en fuentes sobre artículos a los que tienes acceso.',
+            },
+            {
+              q: '¿Cómo detecto una cita alucinada?',
+              a: 'Ejecuta la cita en Google Scholar o PubMed. Verifica que los nombres de los autores, la revista, el volumen, el año y el DOI coincidan exactamente. Usa scite.ai para confirmar que el artículo tiene actividad de citas — cero citas en un artículo supuestamente influyente es una señal de alerta. Verifica con un segundo modelo de IA: si devuelve detalles de autor o revista diferentes, ambas versiones requieren verificación manual.',
+            },
+            {
+              q: '¿Es Perplexity AI fiable para investigación académica?',
+              a: 'Perplexity AI es fiable para investigación exploratoria — mapear un tema, identificar investigadores clave y encontrar fuentes relevantes para investigar más. No es fiable como fuente final de citas porque busca en la web, incluidas fuentes no revisadas por pares. Usa Perplexity para descubrimiento, luego verifica cualquier afirmación específica usando Elicit, Semantic Scholar o búsqueda directa en base de datos antes de citar.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Fuentes y lecturas adicionales',
+          items: [
+            '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — cataloga más de 58 técnicas de prompting aplicables a flujos de trabajo de investigación',
+            '[GPTZero, 2026. "GPTZero finds 100 new hallucinations in NeurIPS 2025 conference papers"](https://gptzero.me/news/neurips/) — primeros casos documentados de citas alucinadas que entraron en las actas de conferencias de élite',
+            '[Federal Reserve Bank of St. Louis, 2025. "The Impact of Generative AI on Work Productivity"](https://www.stlouisfed.org/on-the-economy/2025/feb/impact-generative-ai-work-productivity) — los trabajadores que usan IA informan de un 33 % más de productividad por hora asistida por IA',
+            '[Vectara Hallucination Evaluation Model (HHEM)](https://huggingface.co/vectara/hallucination_evaluation_model) — modelo de código abierto y tabla de clasificación para medir las tasas de alucinación de los LLMs en diferentes dominios',
+            '[Elicit Research Documentation](https://elicit.com/research) — documentación técnica de la búsqueda semántica de Elicit y la metodología de extracción estructurada',
+          ],
+        },
+      },
+    },
+
     fr: {
       theme: 'Use Cases',
       title: 'Recherche Assistée par IA : Outils, Taux d\'Hallucination et Workflows de Vérification',

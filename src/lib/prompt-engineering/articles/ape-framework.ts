@@ -255,6 +255,214 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       }
     },
+    es: {
+      freshness_tier: 'evergreen',
+      theme: 'Frameworks',
+      title: 'El Framework APE: Analizar, Planificar, Ejecutar — Prompts Estructurados que Muestran su Razonamiento',
+      intro: '**El Framework APE es una estructura de prompt de tres pasos basada en Analizar, Planificar y Ejecutar, de modo que los modelos de lenguaje produzcan resultados claros y trazables a partir de una sola instrucción.** En PromptQuorum, el Framework APE está disponible como opción predefinida que cualquier usuario puede seleccionar y aplicar en todos los modelos compatibles.',
+      publishDate: '2026-03-24',
+      readTime: '7 min de lectura',
+      educationalLevel: 'Intermediate',
+      audience: 'Desarrolladores, analistas y trabajadores del conocimiento que necesitan verificar el razonamiento de la IA en tareas complejas',
+      seoTitle: 'Framework APE: Estructura Prompts para Mostrar el Razonamiento de la IA',
+      metaDescription: 'El Framework APE (Analizar-Planificar-Ejecutar) hace el razonamiento de la IA transparente y auditable. Incluye plantillas, comparación con otros frameworks y guía de implementación.',
+      ogTitle: 'El Framework APE: Analizar, Planificar, Ejecutar — Prompts Estructurados que Muestran su Razonamiento',
+      ogDescription: 'Deja de obtener respuestas de IA de caja negra. El Framework APE obliga a los modelos a mostrar su análisis, declarar su plan y luego ejecutar — así detectas desalineaciones antes del resultado final.',
+      twitterTitle: 'Framework APE: Analizar → Planificar → Ejecutar',
+      twitterDescription: 'Framework APE: Analizar → Planificar → Ejecutar. Tres pasos que convierten respuestas de IA opacas en razonamiento trazable e inspeccionable.',
+      quickFacts: [
+        '**APE significa:** Analizar → Planificar → Ejecutar',
+        '**Propósito:** Hacer el razonamiento de la IA visible e inspeccionable antes del resultado final',
+        '**Cuándo usarlo:** Tareas complejas y de alto riesgo donde el razonamiento importa (análisis, estrategia, revisión de código, investigación)',
+        '**Cuándo NO usarlo:** Preguntas factuales simples, tareas cortas, borradores rápidos',
+        '**Complejidad:** 3 etapas — más simple que CRAFT (5), CO-STAR (6), SPECS (5)',
+        '**Funciona en:** Todos los modelos de lenguaje — APIs en la nube y modelos locales vía Ollama/LM Studio',
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'El Framework APE: Analizar, Planificar, Ejecutar — Prompts Estructurados que Muestran su Razonamiento',
+        description: 'El Framework APE divide cada prompt de IA en Analizar, Planificar y Ejecutar — haciendo el razonamiento del modelo visible y verificable. Plantilla, ejemplos y comparación con otros frameworks.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-04',
+        url: 'https://www.promptquorum.com/prompt-engineering/ape-framework?lang=es',
+        inLanguage: 'es',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        keywords: ['Framework APE', 'Analizar Planificar Ejecutar', 'frameworks de prompt', 'prompt engineering', 'razonamiento estructurado', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Frameworks de Prompt' },
+          { '@type': 'Thing', name: 'Modelos de Lenguaje de Gran Escala' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: 'Puntos clave',
+          isTldr: true,
+          content: [
+            '**APE significa Analizar, Planificar, Ejecutar** — una estructura de prompt de tres pasos que obliga a los modelos a mostrar el razonamiento antes de producir resultados.',
+            '**Usa APE cuando el razonamiento importa:** análisis complejos, revisiones técnicas, redacción estratégica y decisiones de alto riesgo donde necesitas inspeccionar el pensamiento del modelo.',
+            '**APE reduce errores al romper suposiciones implícitas:** en lugar de obtener una respuesta, ves cómo el modelo entendió el problema y qué plan eligió.',
+            '**PromptQuorum ofrece APE como opción integrada:** selecciónalo una vez, aplícalo a múltiples modelos en paralelo, guárdalo como plantilla.',
+            '**Comparado con prompts de un solo paso o multi-turno, APE es el punto medio:** más estructura que una instrucción, menos sobrecarga que muchos intercambios.',
+          ],
+        },
+        whatIsAPE: {
+          title: 'Qué es el Framework APE',
+          content: [
+            '**El Framework APE es una plantilla de prompt que obliga a los modelos de lenguaje a separar su pensamiento en análisis, planificación y ejecución.** En lugar de obtener una respuesta indiferenciada, ves cómo el modelo entendió el problema, cómo pretende resolverlo y el resultado final. Esta estructura mejora la fiabilidad porque puedes inspeccionar cada etapa.',
+            'APE es especialmente útil cuando se trata de tareas complejas o de alto riesgo. Al pedir al modelo que muestre su ruta de razonamiento explícitamente, reduces la posibilidad de que suposiciones ocultas o atajos permanezcan invisibles. El mismo patrón de tres partes funciona en todos los modelos — APIs en la nube y modelos locales vía Ollama o LM Studio — manteniendo resultados consistentes.',
+          ],
+        },
+        threeSteps: {
+          title: 'Los Tres Pasos: Analizar, Planificar, Ejecutar',
+          content: [
+            '**El núcleo del Framework APE es que cada prompt instruye al modelo a primero analizar el problema, luego planificar la solución, y solo entonces ejecutar la respuesta final.** Estos tres pasos corresponden directamente a cómo [los humanos manejan el razonamiento](/prompt-engineering/chain-of-thought-prompting) y te dan puntos de control claros.',
+            'Un desglose típico es el siguiente:',
+          ],
+          items: [
+            'Analizar: Reformular la tarea con tus propias palabras, identificar restricciones clave y detectar información faltante.',
+            'Planificar: Proponer un enfoque breve paso a paso que seguirás para resolver la tarea.',
+            'Ejecutar: Producir la respuesta final siguiendo el plan, con la estructura y el formato solicitados.',
+          ],
+        },
+        whenToUse: {
+          title: 'Cuándo usar el Framework APE',
+          content: [
+            '**Debes usar el Framework APE cuando tu tarea es lo suficientemente compleja como para que te importe el razonamiento del modelo, no solo su resultado final.** Esto incluye análisis técnico, investigación de múltiples pasos, redacción estratégica y cualquier situación donde los errores sean costosos.',
+            'Los casos de uso típicos incluyen:',
+          ],
+          items: [
+            'Desglosar un requisito de producto en historias de usuario y criterios de aceptación.',
+            'Diseñar una estrategia de contenido a partir de notas en bruto e información de mercado.',
+            'Revisar y refactorizar código mientras se explican compromisos y riesgos.',
+            'Planificar y redactar informes de largo alcance donde la estructura importa tanto como el contenido.',
+          ],
+          callouts: [
+            { type: 'warning', label: 'Advertencia', text: 'APE añade sobrecarga de tokens — las etapas de Analizar y Planificar consumen tokens de salida antes del Ejecutar final. Para tareas de producción de alto volumen donde solo necesitas la respuesta final y no inspeccionas el razonamiento, usa un prompt de un solo paso más simple para reducir costo y latencia.' },
+          ],
+        },
+        howToWrite: {
+          title: 'Cómo escribir un prompt APE',
+          content: [
+            '**Un prompt APE efectivo menciona las tres etapas por nombre y especifica lo que esperas en cada parte: notas de análisis, un plan paso a paso y un resultado final.** Puedes hacerlo de manera compacta para que siga contando como un único prompt.',
+            'Un patrón genérico es:',
+            '"Eres [rol]. Primero, **Analiza** la tarea listando los objetivos clave, restricciones e información faltante. Luego, **Planifica** tu enfoque en 3–5 puntos. Finalmente, **Ejecuta** produciendo [formato de resultado deseado], siguiendo estrictamente tu plan."',
+            'Luego puedes personalizar este patrón base con detalles de dominio como audiencia, tono, estructura de archivos o requisitos de citas. Una vez definido, puedes reutilizar el mismo prompt APE en múltiples tareas cambiando solo el objetivo y el contexto.',
+          ],
+          callouts: [
+            { type: 'pro-tip', label: 'Consejo Pro', text: 'Después de que el modelo complete su Análisis y Plan, léelos ANTES de mirar el resultado de Ejecutar. Si el Análisis omitió una restricción o el Plan tiene un paso incorrecto, dile al modelo que lo revise — esto es más económico y rápido que regenerar toda la respuesta.' },
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Ejemplo: Prompt APE Malo vs Bueno',
+          content: [
+            '**La diferencia entre un prompt no estructurado y un prompt APE se vuelve clara cuando los comparas en la misma tarea.** Aquí hay un ejemplo simple para un email de lanzamiento de producto.',
+            '**[Prompt Malo]**',
+            '"Escribe un email anunciando nuestro nuevo panel de análisis."',
+            '**[Prompt Bueno]**',
+            '"Eres un especialista en marketing de productos SaaS. Objetivo: Crear un email de anuncio para nuestro nuevo panel de análisis dirigido a clientes existentes. Estructura APE: 1) **Analiza**: Lista brevemente la audiencia objetivo, sus principales puntos de dolor y los beneficios clave que este panel aborda. 2) **Planifica**: Esboza la estructura del email en 3–5 puntos (gancho, beneficios clave, llamada a la acción, etc.). 3) **Ejecuta**: Escribe el email final (máx. 220 palabras) en un tono claro y profesional. Incluye línea de asunto, texto de vista previa y cuerpo."',
+            'Con el Framework APE, el modelo muestra su comprensión del problema y el plan antes de producir el email, lo que facilita detectar desalineaciones temprano.',
+          ],
+        },
+        howPQImplements: {
+          title: 'Cómo PromptQuorum implementa el Framework APE',
+          content: [
+            '**PromptQuorum es una herramienta de despacho de IA multi-modelo que incluye el Framework APE como una de sus estructuras de prompt integradas, para que los usuarios puedan aplicar el prompting Analizar–Planificar–Ejecutar con un solo clic.** Cuando eliges la opción APE en PromptQuorum, la aplicación inyecta automáticamente la estructura de tres pasos alrededor de tu objetivo y contexto.',
+            'Dentro de PromptQuorum, el Framework APE:',
+          ],
+          items: [
+            'Proporciona secciones etiquetadas para análisis, planificación y expectativas de ejecución, para que no tengas que recordar el patrón cada vez.',
+            'Envía el mismo prompt estructurado con APE a múltiples modelos en paralelo, facilitando comparar cómo distintos modelos responden en cada etapa.',
+            'Puede guardarse como plantilla para flujos de trabajo repetitivos como revisiones de código, memorandos de estrategia o informes de investigación.',
+          ],
+        },
+        choosingAPE: {
+          title: 'Elegir APE vs Otros Frameworks',
+          content: [
+            '**Debes elegir el Framework APE sobre otros frameworks de prompt cuando quieres pasos de razonamiento explícitos pero no necesitas un gran número de parámetros o secciones.** APE es deliberadamente compacto: tres etapas suelen ser suficientes para mejorar la claridad sin abrumar al usuario.',
+            'En la práctica:',
+          ],
+          items: [
+            'Elige APE para tareas complejas pero autocontenidas donde el razonamiento importa.',
+            'Elige un [framework de un solo paso](/prompt-engineering/the-single-step-prompt-method) cuando ya conoces el formato exacto del resultado y solo necesitas una instrucción bien especificada.',
+            'Elige frameworks más detallados (con muchas secciones y parámetros) solo cuando tienes estándares internos estrictos que deben codificarse en el prompt.',
+          ],
+          columns: ['Framework', 'Etapas/Secciones', 'Mejor Para', '¿Razonamiento Visible?'],
+          rows: [
+            { 'Framework': 'APE', 'Etapas/Secciones': '3 (Analizar, Planificar, Ejecutar)', 'Mejor Para': 'Tareas complejas que requieren razonamiento inspeccionable', '¿Razonamiento Visible?': 'Sí — etapas explícitas' },
+            { 'Framework': 'Single-Step', 'Etapas/Secciones': '1 (una instrucción)', 'Mejor Para': 'Tareas simples y bien definidas', '¿Razonamiento Visible?': 'No' },
+            { 'Framework': 'CRAFT', 'Etapas/Secciones': '5 (Contexto, Rol, Acción, Formato, Objetivo)', 'Mejor Para': 'Definición de contexto completo', '¿Razonamiento Visible?': 'Opcional' },
+            { 'Framework': 'CO-STAR', 'Etapas/Secciones': '6 (Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta)', 'Mejor Para': 'Marketing y comunicaciones', '¿Razonamiento Visible?': 'No' },
+            { 'Framework': 'SPECS', 'Etapas/Secciones': '5 (Situación, Problema, Ejemplos, Restricciones, Estilo)', 'Mejor Para': 'Resolución de problemas con ejemplos', '¿Razonamiento Visible?': 'Opcional' },
+            { 'Framework': 'Chain-of-Thought', 'Etapas/Secciones': '1 (con "piensa paso a paso")', 'Mejor Para': 'Matemáticas, lógica, razonamiento en un solo paso', '¿Razonamiento Visible?': 'Sí — pero sin estructura' },
+          ],
+          tableFormat: true,
+          callouts: [
+            { type: 'info', label: '¿Sabías que?', text: 'La estructura de tres etapas de APE corresponde directamente a cómo los expertos humanos abordan problemas complejos: entender el problema (Analizar), diseñar el enfoque (Planificar), luego producir el resultado (Ejecutar). La investigación en ciencias cognitivas muestra que esta separación reduce errores tanto en el razonamiento humano como en el de la IA.' },
+          ],
+        },
+
+        automaticPromptEngineering: {
+          title: 'APE también significa: Ingeniería Automática de Prompts (Concepto Diferente)',
+          content: [
+            'Nota: "APE" también se usa para referirse a la Ingeniería Automática de Prompts — una técnica separada del framework Analizar-Planificar-Ejecutar descrito arriba. La Ingeniería Automática de Prompts (Zhou et al., 2022) usa IA para generar y puntuar variantes de prompts automáticamente, encontrando frases óptimas sin prueba y error manual. Así es como funciona:',
+          ],
+          numberedItems: [
+            '**Define tu tarea, métrica de éxito y algunos ejemplos iniciales.** Ejemplo: Tarea = \'clasificar el sentimiento de comentarios de clientes.\' Métrica de éxito = \'precisión en 20 ejemplos etiquetados.\' Ejemplos iniciales = 3 mensajes de clientes variados con etiquetas de sentimiento correctas.',
+            '**Usa una herramienta APE o ChatGPT para generar automáticamente variantes de prompts.** Proporciona tu tarea y ejemplos, y pregunta: \'Genera 5 variaciones diferentes de prompt que puedan resolver esta tarea. Varía el estilo de instrucción, los ejemplos y las restricciones.\' Evalúa cada variante en tu conjunto de pruebas.',
+            '**Puntúa cada variante en tu métrica de éxito.** Ejecuta todas las variantes en tus ejemplos reservados. Registra precisión, velocidad y costo. El objetivo de APE es encontrar el mejor prompt sin prueba y error manual.',
+            '**Itera: elige las 2 mejores variantes, pide al optimizador que genere mutaciones de esas.** Si la variante 3 obtuvo 85% de precisión y la variante 5 obtuvo 82%, pide al optimizador que \'genere variaciones similares a la variante 3 pero con [ajuste específico].\' Refina iterativamente.',
+            '**Una vez que tengas un prompt sólido, pruébalo con datos nuevos para confirmar que generaliza.** Tu prompt optimizado tuvo buen rendimiento en tu conjunto de pruebas — ahora verifica que funcione con ejemplos nuevos no vistos. Si el rendimiento cae, puede que hayas sobreajustado a tus datos de prueba.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Lecturas Relacionadas',
+          items: [
+            '[Prompting Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=es) — la técnica de razonamiento que APE formaliza en tres etapas',
+            '[¿Qué Framework de Prompt Deberías Usar?](/prompt-engineering/which-prompt-framework-should-you-use?lang=es) — comparación de APE vs CRAFT vs CO-STAR vs SPECS',
+            '[El Método de Prompt de Un Solo Paso](/prompt-engineering/the-single-step-prompt-method?lang=es) — cuando NO necesitas las tres etapas de APE',
+            '[5 Bloques de Construcción que Todo Prompt Necesita](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — los bloques universales que las etapas de APE organizan',
+            '[Prompting de Persona](/prompt-engineering/persona-prompting?lang=es) — combina con la definición de rol de APE para análisis específico de dominio',
+            '[Encadenamiento de Prompts](/prompt-engineering/prompt-chaining?lang=es) — para tareas demasiado complejas para un único prompt APE, encadena múltiples pasos APE',
+          ],
+        },
+
+        sources: {
+          title: 'Fuentes',
+          items: [
+            '[White et al. (2023). "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." arXiv:2302.11382](https://arxiv.org/abs/2302.11382) — taxonomía de patrones de prompt incluyendo patrones de razonamiento estructurado',
+            '[Zhou et al. (2022). "Large Language Models Are Human-Level Prompt Engineers." arXiv:2211.01910](https://arxiv.org/abs/2211.01910) — el artículo original de Ingeniería Automática de Prompts (APE)',
+            '[Anthropic. "Prompt Engineering Guide." docs.anthropic.com](https://docs.anthropic.com) — mejores prácticas de prompting estructurado',
+            '[OpenAI. "Prompt Engineering Guide." platform.openai.com](https://platform.openai.com/docs) — orientación de razonamiento paso a paso y salida estructurada',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          { '@type': 'Question', name: '¿Qué significa APE?', acceptedAnswer: { '@type': 'Answer', text: 'APE significa Analizar, Planificar, Ejecutar. Es un framework de prompt de tres pasos que descompone el razonamiento complejo en tres etapas explícitas: comprender el problema, planificar un enfoque y ejecutar la solución.' } },
+          { '@type': 'Question', name: '¿En qué se diferencia APE de simplemente pedirle una respuesta a un modelo?', acceptedAnswer: { '@type': 'Answer', text: 'Con APE obtienes visibilidad del proceso de pensamiento del modelo. En lugar de una única respuesta, ves cómo el modelo entendió tu tarea, qué plan eligió y el resultado final. Esto facilita detectar errores y hace los resultados más fiables.' } },
+          { '@type': 'Question', name: '¿Cuándo debo usar APE en lugar del Método de Prompt de Un Solo Paso?', acceptedAnswer: { '@type': 'Answer', text: 'Usa APE cuando el razonamiento es crítico para tu tarea: análisis técnico, revisiones de código, desarrollo de estrategias o situaciones donde los errores son costosos. Usa Single Step cuando tu objetivo está claro desde el principio y principalmente necesitas velocidad de ejecución.' } },
+          { '@type': 'Question', name: '¿Puedo usar APE con modelos locales como Ollama o LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. APE funciona con cualquier modelo — modelos de frontera de OpenAI, Anthropic y Google, o modelos locales vía Ollama y LM Studio. La misma estructura de tres pasos se aplica en todas las plataformas.' } },
+          { '@type': 'Question', name: '¿Cuánto tiempo necesita tener un prompt APE?', acceptedAnswer: { '@type': 'Answer', text: 'Los prompts APE pueden ser compactos. Un solo párrafo que mencione Analizar, Planificar y Ejecutar y especifique lo que esperas en cada etapa es suficiente. El framework en sí trata de estructura, no de longitud.' } },
+          { '@type': 'Question', name: '¿Puedo guardar prompts APE como plantillas en PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Una vez que creas un prompt estructurado con APE que funciona bien para un flujo de trabajo particular (por ejemplo, revisiones de código, resúmenes de clientes), puedes guardarlo como plantilla en PromptQuorum y compartirlo con tu equipo.' } },
+          { '@type': 'Question', name: '¿Y si mi tarea es demasiado simple para APE?', acceptedAnswer: { '@type': 'Answer', text: 'Si tu tarea es sencilla y no requiere razonamiento visible, el Método de Prompt de Un Solo Paso probablemente sea suficiente. APE añade sobrecarga — el valor viene de poder inspeccionar y refinar el razonamiento del modelo.' } },
+          { '@type': 'Question', name: '¿Cómo sé si un prompt APE está funcionando bien?', acceptedAnswer: { '@type': 'Answer', text: 'Ejecuta tu prompt APE en 3–5 ejemplos representativos y verifica: (1) ¿Captura el análisis el desafío central? (2) ¿Es el plan razonable y ejecutable? (3) ¿Sigue la ejecución el plan? Si algún paso es débil, refina el prompt y prueba de nuevo.' } },
+          { '@type': 'Question', name: '¿Cuál es la diferencia entre APE (Analizar-Planificar-Ejecutar) y APE (Ingeniería Automática de Prompts)?', acceptedAnswer: { '@type': 'Answer', text: 'Comparten el acrónimo pero son técnicas completamente diferentes. APE (Analizar-Planificar-Ejecutar) es una estructura de prompt manual que escribes tú mismo. APE (Ingeniería Automática de Prompts, Zhou et al. 2022) es una técnica donde la IA genera y puntúa automáticamente variantes de prompt para encontrar la formulación óptima. Este artículo cubre ambas — el framework principal es Analizar-Planificar-Ejecutar; la optimización automatizada de prompts se cubre en la sección final.' } },
+        ],
+      },
+    },
     fr: {
       freshness_tier: 'evergreen',
       theme: 'Frameworks',

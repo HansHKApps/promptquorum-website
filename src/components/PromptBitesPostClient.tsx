@@ -5,6 +5,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { CopyButton } from '@/components/CopyButton'
 import { AffiliateLink } from '@/components/AffiliateLink'
+import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import type { Language } from '@/lib/blog/blogContent'
@@ -355,6 +356,13 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
 
         {/* Cross-language links */}
         <LangLinksBar cluster="prompt-bites" slug={slug} availableLangs={Object.keys(articleData ?? {})} />
+
+        {/* Affiliate disclosure — neutral third-party-link notice */}
+        {(article as any).affiliateDisclosure && (
+          <p className="affiliate-disclosure text-xs text-text-secondary bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 mb-6">
+            {AFFILIATE_DISCLOSURE[lang] ?? AFFILIATE_DISCLOSURE['en']}
+          </p>
+        )}
 
         {/* Quick Answer block */}
         {quickAnswer && (

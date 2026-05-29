@@ -1614,4 +1614,325 @@ schema: {
         ],
       },
     },
+
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'Los mejores frontends para LLMs locales 2026',
+      seoTitle: 'Los mejores frontends para LLMs locales 2026: 8 interfaces comparadas',
+      intro: 'Un frontend es la interfaz de chat con la que interactúas con tu LLM local. Ollama o LM Studio ejecutan el modelo, pero un frontend proporciona la interfaz visual. En abril de 2026, Open WebUI lidera con más de 25.000 estrellas en GitHub (RAG, multimodal, multi-usuario), Enchanted UI es la opción más rápida (sin configuración) y Jan AI cubre el uso en escritorio sin conexión. Esta guía compara 8 frontends según sus características, tiempo de configuración y caso de uso.',
+      metaDescription: 'Compara 8 frontends para LLMs locales: Open WebUI (25k estrellas, RAG), Enchanted UI (el más rápido), Jan AI (escritorio), Continue.dev (código). Tabla de características y guía de configuración.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Un frontend es la interfaz de chat con la que interactúas con tu LLM local. Ollama o LM Studio ejecutan el modelo, pero un frontend proporciona la interfaz visual. En abril de 2026, Open WebUI lidera con más de 25.000 estrellas en GitHub (RAG, multimodal, multi-usuario), Enchanted UI es la opción más rápida (sin configuración) y Jan AI cubre el uso en escritorio sin conexión.**',
+      audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
+      readTime: '11 min de lectura',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'frontend para LLM local',
+      next_refresh_due: '2026-10-04',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: 'Comparativa de los 8 mejores frontends', anchor: '#top-8-frontends' },
+        { label: 'El mejor en general: Open WebUI', anchor: '#best-overall-open-webui' },
+        { label: 'El más rápido: Enchanted UI', anchor: '#best-for-speed-enchanted' },
+        { label: 'La mejor app de escritorio: Jan AI', anchor: '#best-desktop-jan' },
+        { label: 'El mejor para código: Continue.dev', anchor: '#best-for-code-continue' },
+        { label: 'La mejor interfaz web: Gradio/Streamlit', anchor: '#best-web-gradio' },
+        { label: 'Autoalojado vs nube', anchor: '#self-hosted-vs-cloud' },
+        { label: 'Contexto regional', anchor: '#regional-context' },
+        { label: 'Errores comunes', anchor: '#common-mistakes' },
+        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+        { label: 'Fuentes', anchor: '#sources' },
+      ],
+      gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
+      gammaDescription: 'La presentación compara 8 frontends para LLMs locales -- Open WebUI (más de 25.000 estrellas, RAG), Enchanted UI (el más rápido), Jan AI (escritorio), Continue.dev (código) -- con tabla comparativa de características, guía de configuración, contexto de cumplimiento regional (UE/GDPR, Japón, China) y 5 errores comunes. Descarga el PDF como tarjeta de referencia de frontends para LLMs locales.',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Un frontend para LLM local es la interfaz de chat con la que hablas con tu modelo. Ollama proporciona la API; el frontend es la interfaz visual.',
+            '**Open WebUI** es el más completo en funcionalidades (RAG, multimodal, bases de conocimiento, llamadas a funciones). Requiere Docker. Se recomiendan 12 GB de RAM o más.',
+            '**Enchanted UI** es el más rápido y minimalista. Sin dependencias, se ejecuta en tu navegador. Ideal para uso ligero.',
+            '**Jan AI** es una app de escritorio (Windows, macOS) con sincronización sin conexión. Sin configuración de servidor. Popular entre usuarios no técnicos.',
+            '**Continue.dev** es una extensión de VS Code para sugerencias de código en línea desde tu modelo Ollama local.',
+            'En abril de 2026, todos los principales frontends son de código abierto y gratuitos.',
+          ],
+        },
+        topFrontends: {
+          title: 'Los 8 mejores frontends para LLMs locales: comparativa de características',
+          image: '/images/frontend-selection-guide-en.svg',
+          imageCaption: 'Elige tu frontend para LLM local según el caso de uso: todas las opciones se conectan a la misma API de Ollama.',
+          rows: [
+            { 'Frontend': 'Open WebUI', 'Tipo': 'App web (Docker)', 'Ideal para': 'Funciones avanzadas, RAG, equipos', 'Tiempo de config.': '5 min (con Docker)', 'RAM necesaria': '12 GB+', 'Código abierto': 'Sí' },
+            { 'Frontend': 'Enchanted UI', 'Tipo': 'Web (sin deps.)', 'Ideal para': 'Velocidad, simplicidad', 'Tiempo de config.': '0 min (URL)', 'RAM necesaria': '8 GB+', 'Código abierto': 'Sí' },
+            { 'Frontend': 'Jan AI', 'Tipo': 'App de escritorio', 'Ideal para': 'Usuarios no técnicos, sin conexión', 'Tiempo de config.': '3 min (instalación)', 'RAM necesaria': '8 GB+', 'Código abierto': 'Sí' },
+            { 'Frontend': 'Continue.dev', 'Tipo': 'Extensión de VS Code', 'Ideal para': 'Completado de código', 'Tiempo de config.': '2 min (instalar extensión)', 'RAM necesaria': '8 GB+', 'Código abierto': 'Sí' },
+            { 'Frontend': 'Lobe Chat', 'Tipo': 'App web', 'Ideal para': 'Privacidad, personalización', 'Tiempo de config.': '5 min', 'RAM necesaria': '8 GB+', 'Código abierto': 'Sí' },
+            { 'Frontend': 'Gradio', 'Tipo': 'Biblioteca de Python', 'Ideal para': 'Interfaces personalizadas, equipos ML', 'Tiempo de config.': '5 min (Python)', 'RAM necesaria': '8 GB+', 'Código abierto': 'Sí' },
+            { 'Frontend': 'Streamlit', 'Tipo': 'Framework de Python', 'Ideal para': 'Data scientists, dashboards', 'Tiempo de config.': '5 min (Python)', 'RAM necesaria': '8 GB+', 'Código abierto': 'Sí' },
+            { 'Frontend': 'Text-generation-webui', 'Tipo': 'Web (complejo)', 'Ideal para': 'Experimentación, usuarios avanzados', 'Tiempo de config.': '15 min', 'RAM necesaria': '12 GB+', 'Código abierto': 'Sí' },
+          ],
+          columns: ['Frontend', 'Tipo', 'Ideal para', 'Tiempo de config.', 'RAM necesaria', 'Código abierto'],
+        },
+        openWebUI: {
+          title: '¿Por qué Open WebUI es el frontend más popular?',
+          image: '/images/open-webui-architecture-en.svg',
+          imageCaption: 'Open WebUI se sitúa entre tu navegador y Ollama, habilitando acceso multi-usuario, RAG y funciones multimodales mediante Docker.',
+          content: [
+            '**Open WebUI es el frontend para LLMs locales más descargado en GitHub con más de 25.000 estrellas: integra RAG, multimodal, búsqueda web y colaboración multi-usuario en un único contenedor Docker.** Funciona con Ollama, LM Studio o cualquier API compatible con OpenAI.',
+            '**Características principales:**',
+            '- **RAG (Generación aumentada por recuperación)**: sube documentos (PDF, archivos de texto) y permite que el modelo responda preguntas sobre ellos.',
+            '- **Soporte multimodal**: sube imágenes y haz preguntas sobre ellas.',
+            '- **Integración de búsqueda web**: el modelo puede buscar en la web información actualizada.',
+            '- **Bases de conocimiento**: crea colecciones persistentes de documentos a las que el modelo hace referencia.',
+            '- **Llamadas a funciones y herramientas**: construye flujos de trabajo donde el modelo puede invocar funciones o herramientas.',
+            '- **Colaboración en equipo**: varios usuarios pueden compartir la misma instancia.',
+            '- **Marketplace de modelos**: explora y descarga modelos directamente desde la interfaz.',
+            'En abril de 2026, la principal limitación es que Open WebUI requiere Docker, lo que añade unos 5 minutos de configuración. Una vez en ejecución, añade RAG, multimodal, multi-usuario y búsqueda web, funciones no disponibles en alternativas más ligeras.',
+          ],
+          callouts: [
+            { type: '⚠️ Advertencia', text: 'Open WebUI requiere Docker. Si Docker no está instalado, añade entre 10 y 15 minutos al tiempo de configuración. Ejecuta `docker --version` para comprobarlo antes de empezar.' },
+            { type: '💡 Consejo profesional', text: 'Establece WEBUI_AUTH=true en tu comando de Docker para requerir inicio de sesión de usuario. Esto es obligatorio en cualquier despliegue multi-usuario o de equipo.' },
+          ],
+          codeBlock: '# Run Open WebUI with Docker (5 min setup)\ndocker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  --name open-webui ghcr.io/open-webui/open-webui:latest\n\n# Then open http://localhost:3000 in your browser',
+          codeLanguage: 'bash',
+        },
+        enchanted: {
+          title: '¿Por qué elegir Enchanted UI para una experiencia rápida y ligera?',
+          content: [
+            '**Enchanted UI es el frontend más rápido sin configuración: sin instalación, sin dependencias; abre una URL en tu navegador y empieza a chatear con tu modelo Ollama local.** En abril de 2026, es un único archivo HTML, lo que lo convierte en la opción más ágil para chat simple.',
+            '**Características principales:**',
+            '- **Inicio inmediato**: sin instalación, sin dependencias. Solo abre una URL.',
+            '- **Rápido**: JavaScript mínimo, sin frameworks pesados.',
+            '- **Privado**: todo se ejecuta en tu navegador; ningún dato sale de tu máquina.',
+            '- **Modo oscuro elegante**: interfaz limpia y moderna.',
+            'Enchanted UI es perfecto si quieres chatear con tu modelo local sin complejidad de configuración. Carece de RAG, multimodal y funciones avanzadas, pero para chat cotidiano no tiene rival en simplicidad.',
+          ],
+          callouts: [
+            { type: '💡 Consejo profesional', text: 'Enchanted UI se conecta a Ollama en localhost:11434 por defecto. Si Ollama no está en ejecución, el chat muestra un error de conexión. Ejecuta siempre `ollama serve` (o abre la app de Ollama) primero.' },
+          ],
+          codeBlock: '# 1. Start your Ollama model\nollama run llama3.2:3b\n\n# 2. Open this URL in your browser\n# https://enchanted.div.ai/\n\n# Ollama will auto-detect, and you can start chatting immediately',
+          codeLanguage: 'bash',
+        },
+        janAI: {
+          title: '¿Por qué Jan AI es la mejor opción para usuarios de escritorio?',
+          content: [
+            '**Jan AI es una app de escritorio (Windows, macOS) que integra gestión de modelos, inferencia y chat en una única aplicación sin conexión: sin servidor ni configuración de Docker.** Es similar a LM Studio, pero con mejor soporte sin conexión y un enfoque impulsado por la comunidad.',
+            '**Características principales:**',
+            '- **Primero sin conexión**: los modelos se sincronizan en tu dispositivo; no se necesita internet para chatear.',
+            '- **GPU y CPU como alternativa**: usa automáticamente la GPU si está disponible, y recurre a la CPU en caso contrario.',
+            '- **Privado por defecto**: no requiere cuenta, sin telemetría.',
+            '- **Marketplace de extensiones**: añade plugins como RAG, búsqueda web o herramientas.',
+            'Jan es la mejor opción para usuarios no técnicos que quieren una app de escritorio refinada. En abril de 2026, está ganando popularidad como alternativa a LM Studio con mayor soporte de la comunidad.',
+          ],
+          callouts: [
+            { type: '📌 Punto clave', text: 'Jan AI almacena los modelos en ~/jan/models, separado de la caché de modelos de Ollama. Si usas ambas apps, los modelos descargados no se comparten y el uso de disco se duplica para cualquier modelo usado en ambas.' },
+          ],
+        },
+        continueDev: {
+          title: '¿Cómo usar Continue.dev para completado de código?',
+          content: [
+            '**Continue.dev convierte tu modelo Ollama local en sugerencias de código en línea dentro de VS Code o JetBrains: la configuración lleva 2 minutos y no requiere ninguna clave de API en la nube.** Cuando empiezas a escribir, Continue sugiere completados basados en tu modelo local.',
+            '**Configuración (2 minutos):**',
+            '1. Instala Continue desde el marketplace de VS Code.',
+            '2. Apúntalo a tu instancia de Ollama (Config → Configure Continue → Add localhost:11434).',
+            '3. Empieza a escribir código y presiona Tab o Ctrl+Shift+\\ para obtener completados.',
+            'Continue es perfecto para desarrolladores que quieren sugerencias de código sin enviar código a APIs en la nube. Para tareas de codificación, Ollama con modelos Qwen2.5-Coder 7B o Llama Code produce sugerencias razonables.',
+          ],
+          callouts: [
+            { type: '💡 Consejo profesional', text: 'Para completado de código, Qwen2.5-Coder 7B (`ollama run qwen2.5-coder:7b`) supera a modelos generales como Llama 3.2 en tareas de código. Cambia el modelo en el config.json de Continue después de la configuración.' },
+          ],
+        },
+        selfHosted: {
+          title: '¿Deberías autoalojar o usar un frontend en la nube?',
+          content: '**Todos los frontends de esta guía se ejecutan en tu máquina o servidor: ningún dato de prompts sale de tu dispositivo y no hay costos de API.** La alternativa son los frontends en la nube como ChatGPT, Claude o Gemini, que se conectan a servidores remotos.',
+          items: [
+            '**Elige autoalojado si:** tienes datos sensibles, quieres cero costos de API, quieres personalizar la interfaz o trabajas sin conexión.',
+            '**Elige la nube si:** necesitas la mejor calidad de modelo, no quieres gestionar infraestructura o tienes un volumen bajo.',
+            '**Usa ambos en paralelo:** herramientas como [PromptQuorum](/) te permiten enviar un prompt a tu modelo local y a APIs en la nube simultáneamente, para que puedas comparar resultados lado a lado.',
+          ],
+          callouts: [
+            { type: '📌 Punto clave', text: 'Todos los frontends comparten la misma instancia de Ollama en localhost:11434. Cambiar de Open WebUI a Enchanted UI no requiere volver a descargar modelos: Ollama conserva todos los modelos descargados independientemente del frontend que uses.' },
+          ],
+        },
+        regionalContext: {
+          title: '¿Cómo afectan las normativas regionales a tu elección de frontend?',
+          content: [
+            '**UE / RGPD**',
+            'Para organizaciones de la UE que despliegan frontends para LLMs locales, la soberanía de datos es el principal impulsor. Los 8 frontends de esta guía se ejecutan completamente en las instalaciones propias: ningún contenido de prompts, historial de conversaciones ni documentos subidos salen de tu infraestructura. Esto satisface el artículo 5 del RGPD (minimización de datos) y elimina la relación de encargado del tratamiento del artículo 28.',
+            'Para sectores regulados de la UE (salud, legal, finanzas): Open WebUI es el frontend recomendado porque registra todas las conversaciones localmente con registros de auditoría exportables. El BSI alemán y la CNIL francesa aceptan herramientas de IA alojadas localmente para el procesamiento de alto riesgo cuando se combinan con controles de acceso adecuados. Configura Open WebUI con autenticación habilitada (`WEBUI_AUTH=true` en Docker) y restringe el acceso solo a usuarios autorizados.',
+            '**Japón (METI)**',
+            'Las directrices de gobernanza de IA de METI requieren documentar las versiones de las herramientas de IA en los despliegues en producción. La versión de Open WebUI es visible en Configuración → Acerca de, y las etiquetas de imagen Docker proporcionan una versión exacta para los registros de cumplimiento. Para equipos empresariales japoneses, la pila recomendada es Open WebUI con Qwen2.5 7B (`ollama run qwen2.5:7b`): la tokenización nativa en japonés ofrece mejor calidad para la función RAG con documentos en ese idioma.',
+            '**China**',
+            'Bajo la Ley de Seguridad de Datos de China (数据安全法), todos los frontends de esta guía satisfacen los requisitos de residencia local de datos cuando se despliegan en instalaciones propias o en proveedores de nube nacionales (Alibaba Cloud, Tencent Cloud). Open WebUI en Docker es compatible con instancias de VM en la nube china. Para despliegues RAG empresariales en chino, combina Open WebUI con Qwen2.5 14B para un análisis óptimo de documentos en ese idioma.',
+          ],
+          callouts: [
+            { type: '⚠️ Advertencia', text: 'Para sectores regulados de la UE (salud, legal, finanzas): la configuración Docker predeterminada de Open WebUI no tiene autenticación. Añade WEBUI_AUTH=true antes de exponerlo a cualquier red interna o externa: esto es obligatorio para las medidas técnicas del artículo 32 del RGPD.' },
+            { type: '🔍 ¿Sabías que?', text: 'Las directrices de gobernanza de IA de METI requieren documentar las versiones de las herramientas de IA en producción. La versión de Open WebUI es visible en Configuración → Acerca de, y las etiquetas de imagen Docker (p. ej., :0.3.32) proporcionan una versión exacta para los registros de cumplimiento.' },
+          ],
+        },
+        commonMistakes: {
+          title: '¿Cuáles son los 5 errores más comunes al elegir un frontend?',
+          items: [
+            '**Asumir que necesitas el frontend más completo.** Open WebUI tiene más funciones, pero si solo quieres chatear, Enchanted es más rápido. Elige según tus necesidades reales, no por la cantidad de funciones.',
+            '**No darte cuenta de que puedes cambiar de frontend fácilmente.** Tu modelo y los modelos de Ollama son independientes del frontend. Cambia de Open WebUI a Enchanted UI o Jan AI sin volver a descargar modelos: todos comparten la misma instancia de Ollama.',
+            '**Intentar ejecutar Open WebUI en una máquina de 8 GB de RAM sin GPU.** Open WebUI más la inferencia del modelo requieren más de 12 GB en total. En hardware limitado, usa Enchanted UI o una alternativa ligera.',
+            '**Ignorar la cuantización del modelo y los requisitos del frontend.** Un modelo de 13B en formato de 8 bits pesa 13 GB solo. Open WebUI añade sobrecarga. Haz las cuentas: tamaño del modelo + sobrecarga del frontend + SO = RAM total necesaria.',
+            '**No configurar Ollama como servicio en segundo plano primero.** Muchos usuarios nuevos intentan ejecutar varios frontends simultáneamente sin darse cuenta de que Ollama debe estar en ejecución. Configura Ollama primero (como servicio con `ollama serve` en segundo plano) y luego añade el frontend que elijas.',
+          ],
+          callouts: [
+            { type: '⚠️ Advertencia', text: 'Ejecutar Open WebUI más la inferencia del modelo en 8 GB de RAM provoca con frecuencia errores de falta de memoria. El mínimo para una experiencia fluida es 16 GB de RAM total en el sistema: 12 GB para el modelo, 4 GB para el SO y Docker.' },
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Preguntas frecuentes sobre frontends para LLMs locales',
+          faqs: [
+            {
+              q: '¿Puedo ejecutar varios frontends simultáneamente?',
+              a: 'Sí. Todos los frontends se conectan a la misma API de Ollama (localhost:11434). Puedes tener Open WebUI, Enchanted UI y Continue.dev en ejecución y usando el mismo modelo a la vez. Esto no duplica el uso de VRAM: todos comparten la misma instancia del modelo.',
+            },
+            {
+              q: '¿Qué frontend es mejor para RAG?',
+              a: 'Open WebUI tiene la implementación de RAG más madura. Sube documentos y el modelo responderá preguntas basándose en ellos. Para flujos de trabajo RAG avanzados, consulta [Mejores herramientas RAG locales](/local-llms/best-local-rag-tools?lang=es).',
+            },
+            {
+              q: '¿Necesito un frontend?',
+              a: 'No. Ollama proporciona una API REST en localhost:11434. Puedes escribir scripts en Python, JavaScript o bash para interactuar con el modelo directamente a través de la API, sin ningún frontend. Un frontend es solo para comodidad e interacción visual.',
+            },
+            {
+              q: '¿Qué frontend funciona en Linux?',
+              a: 'Open WebUI, Enchanted UI, Lobe Chat y Gradio/Streamlit funcionan en Linux. Jan AI tiene soporte para Linux en beta (en abril de 2026). Continue.dev funciona mediante VS Code en todas las plataformas.',
+            },
+            {
+              q: '¿Puedo alojar un frontend en un servidor remoto?',
+              a: 'Sí. Todos los frontends son apps web (o pueden contenerse). Puedes ejecutar Ollama en un servidor y Open WebUI en Docker, y luego acceder desde tu portátil mediante HTTP. Asegúrate de proteger la interfaz con autenticación o un firewall.',
+            },
+            {
+              q: '¿Qué frontend usa menos RAM?',
+              a: 'Enchanted UI usa esencialmente cero RAM adicional más allá de tu modelo en ejecución: es un único archivo HTML en tu navegador. Jan AI y Continue.dev también añaden una sobrecarga mínima (menos de 200 MB). Open WebUI en Docker añade aproximadamente entre 500 MB y 1 GB de sobrecarga. Si la RAM es limitada, usa Enchanted UI para chat o Continue.dev para código.',
+            },
+            {
+              q: '¿Puedo usar estos frontends con LM Studio en lugar de Ollama?',
+              a: 'Sí, con limitaciones. Enchanted UI y Open WebUI funcionan con cualquier API compatible con OpenAI, incluida la API beta de LM Studio en localhost:1234. Cambia la URL base en la configuración. Ten en cuenta que la API de LM Studio sigue en beta en abril de 2026: Ollama sigue siendo el backend más fiable para frontends.',
+            },
+            {
+              q: '¿Qué frontend es mejor para un equipo de 5 o más desarrolladores?',
+              a: 'Open WebUI. Es el único frontend de esta lista diseñado para despliegue multi-usuario: autenticación, historiales de conversación separados por usuario, bases de conocimiento compartidas y controles de administración. Despliégalo en un servidor compartido con Docker y todos los miembros del equipo acceden desde el navegador. Requiere 12 GB o más de RAM en el servidor anfitrión.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Cómo instalar Ollama](/local-llms/how-to-install-ollama?lang=es) -- Guía de configuración del motor de modelos.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=es) -- Comparativa de las dos herramientas para LLMs locales más populares.',
+            '[Mejores herramientas RAG locales](/local-llms/best-local-rag-tools?lang=es) -- Análisis detallado del RAG de Open WebUI y otras herramientas de LLM basadas en documentos.',
+            '[API local compatible con OpenAI para LLMs](/local-llms/local-llm-openai-compatible-api?lang=es) -- Cómo usar la API directamente desde código.',
+            '[LLMs locales con VS Code y Cursor](/local-llms/local-llms-with-vscode-cursor?lang=es) -- Configuración de Continue.dev e integraciones con VS Code.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            '[Open WebUI Contributors. (2026). "Open WebUI GitHub."](https://github.com/open-webui/open-webui) -- Código fuente y documentación de configuración con Docker para Open WebUI.',
+            '[Jan AI. (2026). "Jan AI Official Site."](https://jan.ai) -- Documentación de la app de escritorio y guía de gestión de modelos.',
+            '[Continue.dev. (2026). "Continue Documentation."](https://continue.dev/docs) -- Configuración de la extensión para VS Code y JetBrains para completado de código con LLMs locales.',
+            '[Lobe Chat Contributors. (2024). "Lobe Chat GitHub."](https://github.com/lobehub/lobe-chat) -- Código fuente e instrucciones de despliegue de la interfaz de chat centrada en la privacidad.',
+            'La elección del frontend afecta a la experiencia del usuario, no a la salida del modelo. La calidad de la salida depende de los prompts, no de las interfaces: la [guía de ingeniería de prompts](https://www.promptquorum.com/prompt-engineering?lang=es) funciona con todos los frontends.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Los mejores frontends para LLMs locales 2026',
+        'description': 'Compara 8 frontends para LLMs locales: Open WebUI (25k estrellas, RAG), Enchanted UI (el más rápido), Jan AI (app de escritorio). Tabla de características y guía de configuración.',
+        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=es',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-12',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Open WebUI' },
+          { '@type': 'Thing', 'name': 'Frontend para LLM local' },
+          { '@type': 'Thing', 'name': 'Jan AI' },
+          { '@type': 'Thing', 'name': 'Continue.dev' },
+          { '@type': 'Thing', 'name': 'Interfaz de chat para Ollama' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'es',
+        'name': 'Los mejores frontends para LLMs locales 2026',
+        'numberOfItems': 8,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'App web (Docker). Ideal para RAG, equipos y funciones avanzadas. 5 min de configuración. 12 GB+ de RAM. Código abierto y gratuito.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Enchanted UI', 'description': 'Web (sin dependencias). Ideal para velocidad y simplicidad. 0 min de configuración. 8 GB+ de RAM. Código abierto y gratuito.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Jan AI', 'description': 'App de escritorio. Ideal para usuarios no técnicos y uso sin conexión. 3 min de configuración. 8 GB+ de RAM. Código abierto y gratuito.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Continue.dev', 'description': 'Extensión de VS Code. Ideal para completado de código. 2 min de configuración. 8 GB+ de RAM. Código abierto y gratuito.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Lobe Chat', 'description': 'App web. Ideal para privacidad y personalización. 5 min de configuración. 8 GB+ de RAM. Código abierto y gratuito.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Gradio', 'description': 'Biblioteca de Python. Ideal para interfaces ML personalizadas. 5 min de configuración. 8 GB+ de RAM. Código abierto y gratuito.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Streamlit', 'description': 'Framework de Python. Ideal para data scientists. 5 min de configuración. 8 GB+ de RAM. Código abierto y gratuito.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Text-generation-webui', 'description': 'Web (complejo). Ideal para experimentación avanzada. 15 min de configuración. 12 GB+ de RAM. Código abierto y gratuito.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar varios frontends simultáneamente?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Todos los frontends se conectan a la misma API de Ollama (localhost:11434). Puedes tener Open WebUI, Enchanted UI y Continue.dev en ejecución y usando el mismo modelo a la vez. Esto no duplica el uso de VRAM: todos comparten la misma instancia del modelo.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué frontend es mejor para RAG?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI tiene la implementación de RAG más madura. Sube documentos y el modelo responderá preguntas basándose en ellos. Para flujos de trabajo RAG avanzados, consulta Mejores herramientas RAG locales.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito un frontend?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Ollama proporciona una API REST en localhost:11434. Puedes escribir scripts en Python, JavaScript o bash para interactuar con el modelo directamente a través de la API, sin ningún frontend. Un frontend es solo para comodidad e interacción visual.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué frontend funciona en Linux?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI, Enchanted UI, Lobe Chat y Gradio/Streamlit funcionan en Linux. Jan AI tiene soporte para Linux en beta (en abril de 2026). Continue.dev funciona mediante VS Code en todas las plataformas.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo alojar un frontend en un servidor remoto?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Todos los frontends son apps web (o pueden contenerse). Puedes ejecutar Ollama en un servidor y Open WebUI en Docker, y luego acceder desde tu portátil mediante HTTP. Asegúrate de proteger la interfaz con autenticación o un firewall.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué frontend usa menos RAM?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Enchanted UI usa esencialmente cero RAM adicional más allá de tu modelo en ejecución: es un único archivo HTML en tu navegador. Jan AI y Continue.dev también añaden una sobrecarga mínima (menos de 200 MB). Open WebUI en Docker añade aproximadamente entre 500 MB y 1 GB de sobrecarga. Si la RAM es limitada, usa Enchanted UI para chat o Continue.dev para código.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar estos frontends con LM Studio en lugar de Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, con limitaciones. Enchanted UI y Open WebUI funcionan con cualquier API compatible con OpenAI, incluida la API beta de LM Studio en localhost:1234. Cambia la URL base en la configuración. Ten en cuenta que la API de LM Studio sigue en beta en abril de 2026: Ollama sigue siendo el backend más fiable para frontends.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué frontend es mejor para un equipo de 5 o más desarrolladores?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI. Es el único frontend de esta lista diseñado para despliegue multi-usuario: autenticación, historiales de conversación separados por usuario, bases de conocimiento compartidas y controles de administración. Despliégalo en un servidor compartido con Docker y todos los miembros del equipo acceden desde el navegador. Requiere 12 GB o más de RAM en el servidor anfitrión.' }
+          },
+        ],
+      },
+    },
   };

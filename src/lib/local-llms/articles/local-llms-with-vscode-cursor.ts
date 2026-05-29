@@ -988,4 +988,182 @@ schema: {
         ],
       },
     },
+    es: {
+      theme: 'Tools & Interfaces',
+      title: 'LLMs Locales con VS Code y Cursor: Configuración y Mejores Prácticas',
+      seoTitle: 'LLMs Locales en VS Code y Cursor: Guía de Configuración 2026',
+      intro: 'VS Code y Cursor (un editor de código orientado a la IA) pueden usar LLMs locales para completar y sugerir código, mediante la extensión Continue.dev (VS Code) o la integración directa (Cursor). A partir de abril de 2026, las completaciones de código locales son prácticas para modelos 7B-13B y requieren 8-16 GB de RAM. Esta guía cubre la configuración, los mejores modelos y el ajuste del rendimiento.',
+      metaDescription: 'Usa Ollama con VS Code mediante Continue.dev para completaciones de código locales sin necesidad de clave API. Mejores modelos, requisitos de VRAM e integración con Cursor para 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min de lectura',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'completación de código local',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: 'VS Code + Continue.dev', anchor: '#vscode-continue' },
+        { label: 'Editor Cursor', anchor: '#cursor-editor' },
+        { label: 'Mejores modelos para código', anchor: '#best-models' },
+        { label: 'Rendimiento y VRAM', anchor: '#performance' },
+        { label: 'Configuración avanzada', anchor: '#advanced' },
+        { label: 'Errores comunes', anchor: '#common-mistakes' },
+        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+        { label: 'Fuentes', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).',
+            'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.',
+            '**Mejores modelos locales para código**: Qwen2.5-Coder 7B, Llama Code 13B o Mistral 7B.',
+            'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.',
+            'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.',
+          ],
+        },
+        vscodeContinue: {
+          title: '¿Cómo configurar Continue.dev en VS Code?',
+          content: 'Continue.dev es una extensión de VS Code para completaciones de código locales y en la nube.',
+          codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
+          codeLanguage: 'json',
+        },
+        cursor: {
+          title: '¿Cómo usar modelos locales en Cursor?',
+          content: [
+            '**Cursor es un fork de VS Code optimizado para la programación asistida por IA.** Tiene soporte integrado para modelos locales mediante Ollama.',
+          ],
+          codeBlock: '# 1. Download Cursor from cursor.sh\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Cursor Settings (Cmd/Ctrl + ,)\n# 4. Search "Model" and set:\n#    - Model Provider: "Ollama"\n#    - Model: "qwen2.5-coder:7b" (or your choice)\n#    - API Base: "http://localhost:11434"\n\n# 5. Type code and press Tab for inline completions\n# 6. Ctrl+K for multi-line completions',
+          codeLanguage: 'bash',
+        },
+        bestModels: {
+          title: '¿Qué modelos son los mejores para código?',
+          content: [
+            '⚠️ **Regla de VRAM**: Ten siempre 2-3 GB de VRAM libre por encima de lo que requiere el modelo. Un modelo 7B en Q4 (4,7 GB) necesita 8 GB de VRAM en total al ejecutarse en VS Code o Cursor.',
+          ],
+          rows: [
+            { 'Modelo': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Mejor equilibrio, más veloz' },
+            { 'Modelo': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Programación general' },
+            { 'Modelo': 'Mistral 7B', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Velocidad': 'Muy rápido', 'Ideal para': 'Ligero, servidores UE' },
+            { 'Modelo': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Velocidad': 'Medio', 'Ideal para': 'Mejor calidad en máquinas de 16 GB' },
+            { 'Modelo': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Alternativa ligera' },
+          ],
+          columns: ['Modelo', 'HumanEval', 'VRAM', 'Velocidad', 'Ideal para'],
+        },
+        performance: {
+          title: '¿Qué latencia y VRAM debes esperar?',
+          content: [
+            '**La latencia de completación (tiempo hasta el primer token) es fundamental para la experiencia en el IDE.** A partir de abril de 2026, estos son los valores típicos:',
+            '⚠️ **Verificación de realidad de la latencia**: Las completaciones locales son 2-10× más lentas que las de la nube. Usa lo local para trabajo privado; usa la nube (Copilot, Claude) para programación donde el tiempo importa.',
+            '💡 **Optimización del rendimiento**: Reduce `contextLength` de 2048 a 1024 tokens para reducir la latencia a la mitad. La contrapartida: menos líneas de código de contexto para las sugerencias.',
+          ],
+          rows: [
+            { 'Hardware': 'RTX 4090 GPU', 'Modelo': 'Qwen2.5-Coder 7B', 'Latencia': '0,3-0,5 seg', 'Rendimiento': '150 tokens/seg' },
+            { 'Hardware': 'RTX 4070 GPU', 'Modelo': 'Qwen2.5-Coder 7B', 'Latencia': '0,8-1,5 seg', 'Rendimiento': '80 tokens/seg' },
+            { 'Hardware': 'M3 MacBook Pro', 'Modelo': 'Qwen2.5-Coder 7B', 'Latencia': '2-3 seg', 'Rendimiento': '20 tokens/seg' },
+            { 'Hardware': 'CPU de 8 núcleos solo', 'Modelo': 'Qwen2.5-Coder 7B', 'Latencia': '5-10 seg', 'Rendimiento': '3 tokens/seg' },
+          ],
+          columns: ['Hardware', 'Modelo', 'Latencia', 'Rendimiento'],
+          note: '**Nota sobre los datos de rendimiento**: Latencia y rendimiento medidos con el formato Qwen2.5-Coder 7B Q4_K_M, tamaño de lote = 1, en un sistema sin carga (sin tareas en segundo plano). Tu rendimiento real depende del sistema operativo, la disponibilidad de VRAM, el formato de cuantización y la carga concurrente.',
+        },
+        advanced: {
+          title: '¿Cómo configurar las completaciones de código para obtener el mejor rendimiento?',
+          content: [
+            'Ajusta la experiencia con estos parámetros:',
+            '⚠️ **Advertencia**: En máquinas de 8 GB con modelos 13B, las completaciones pueden tardar 5-10 segundos, haciendo que el IDE se sienta poco responsivo. Quédate con los modelos 7B para un rendimiento fluido.',
+            '💡 **Consejo profesional**: Aumenta `debounceWaitMs` a 400-500 ms para reducir el parpadeo y evitar mostrar sugerencias incompletas.',
+          ],
+          codeBlock: '# config.json advanced settings\n{\n  "tabAutocompleteModel": {\n    "contextLength": 2048,     # How much code context to send\n    "maxTokens": 50            # Max tokens per completion\n  },\n  "completionOptions": {\n    "maxContextTokens": 1024,\n    "maxSuggestionsCount": 5,\n    "debounceWaitMs": 200      # Wait before showing completions (ms)\n  },\n  # For faster inference, use smaller context:\n  "models": [{\n    "contextLength": 1024      # Smaller context = faster\n  }]\n}\n\n# For best speed on 8GB machines:\n# - Use 7B model (not 13B)\n# - Set maxTokens to 30\n# - Set debounceWaitMs to 500 (less flickering)',
+          codeLanguage: 'json',
+        },
+        commonMistakes: {
+          title: '¿Cuáles son los errores comunes al configurar completaciones de código locales?',
+          items: [
+            '**No ajustar la latencia de debounce**: Si las completaciones se sienten "lentas", aumenta debounceWaitMs (por ejemplo, a 400 ms) para evitar mostrar sugerencias incompletas.',
+            '**Usar un modelo demasiado grande para tu VRAM**: Un modelo 13B más la sobrecarga del editor puede usar más de 12 GB. En máquinas de 8 GB, quédate con modelos 7B.',
+            '**Esperar calidad de código al nivel de la nube**: GPT-4o es significativamente mejor en código que cualquier modelo 7B. Las completaciones locales representan el 70-80% de la calidad de la nube.',
+            '**Ejecutar la inferencia en CPU**: Las completaciones en CPU son poco prácticas (latencia de 5-10 segundos). La GPU es necesaria para obtener completaciones utilizables.',
+          ],
+        },
+        faqSection: {
+          title: 'Preguntas frecuentes: Completaciones de código locales',
+          faqs: [
+            {
+              q: '¿Las completaciones de código locales son más rápidas que las de la nube?',
+              a: 'No. Las completaciones en la nube (GitHub Copilot) son más rápidas gracias a servidores optimizados. Las completaciones locales tienen mayor latencia, pero tienen coste cero y cero riesgo para la privacidad.',
+            },
+            {
+              q: '¿Puedo usar completaciones locales con otros IDEs (PyCharm, Neovim)?',
+              a: 'Sí, aunque la configuración varía. PyCharm tiene un plugin para Ollama. Para Neovim, usa cmp-ollama (plugin de completaciones). Consulta siempre la comunidad de tu IDE para conocer las integraciones disponibles.',
+            },
+            {
+              q: '¿Puedo usar modelos en la nube en Continue o Cursor?',
+              a: 'Sí. Configura Continue para usar OpenAI, Claude o Gemini. También puedes combinarlos (local para tareas rápidas, nube para código complejo).',
+            },
+            {
+              q: '¿Las completaciones de código locales funcionan sin conexión?',
+              a: 'Sí. Si has descargado el modelo en Ollama, las completaciones funcionan completamente sin conexión.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Mejor asistente de código IA para LLM local](/local-llms/best-ai-coding-assistant-local-llm?lang=es) -- Comparativa completa de Cursor, Continue.dev, Cody, Tabnine y Windsurf con soporte para LLM local.',
+            '[Stack de desarrollador con LLM local](/local-llms/local-llm-developer-stack?lang=es) -- El stack completo que incluye configuración del servidor API y monitoreo en producción más allá de la integración con el IDE.',
+            '[Cómo instalar Ollama](/local-llms/how-to-install-ollama?lang=es) -- Configura Ollama para completaciones de código.',
+            '[Mejores LLMs locales para programación](/local-llms/best-local-llms-for-coding?lang=es) -- Benchmark detallado de modelos de código.',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=es) -- Qué herramienta usar.',
+            '[API compatible con OpenAI para LLM local](/local-llms/local-llm-openai-compatible-api?lang=es) -- APIs para completaciones de código.',
+          ],
+        },
+        sources: {
+          title: 'Fuentes',
+          items: [
+            'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
+            'Cursor. (2026). "Cursor Documentation." https://docs.cursor.com/ -- Local model configuration, Ollama integration, and inference setup guide.',
+            'Alibaba Qwen Team. (2025). "Qwen2.5-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen2.5-Coder variants.',
+            'DeepSeek-AI. (2024). "DeepSeek-Coder Technical Paper." arXiv:2401.14196. https://arxiv.org/abs/2401.14196 -- Benchmark data and capability analysis for DeepSeek-Coder family.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Cómo usar LLMs locales con VS Code y Cursor 2026',
+        'description': 'Cómo usar LLMs locales en VS Code y Cursor para asistencia de código privada y rápida con integración de PromptQuorum.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor?lang=es',
+        'inLanguage': 'es',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Instala Continue.dev para VS Code', 'text': 'Instala la extensión Continue desde el marketplace de VS Code y configúrala para que apunte a tu servidor Ollama local.' },
+          { '@type': 'HowToStep', 'name': 'Configura Cursor con LLM local', 'text': 'En los ajustes de Cursor, establece el proveedor de IA como tu endpoint local de Ollama (http://localhost:11434).' },
+          { '@type': 'HowToStep', 'name': 'Selecciona un modelo de código', 'text': 'Usa Qwen2.5-Coder 7B o DeepSeek-Coder para obtener los mejores resultados de completación de código local.' },
+          { '@type': 'HowToStep', 'name': 'Prueba prompts con PromptQuorum', 'text': 'Compara las respuestas a prompts de código en varios modelos locales con PromptQuorum para encontrar el que mejor se adapta a tu flujo de trabajo.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        mainEntity: [
+          { '@type': 'Question', name: '¿Las completaciones de código locales son más rápidas que las de la nube?', acceptedAnswer: { '@type': 'Answer', text: 'No. Las completaciones en la nube (GitHub Copilot) son más rápidas gracias a servidores optimizados. Las completaciones locales tienen mayor latencia, pero tienen coste cero y cero riesgo para la privacidad.' } },
+          { '@type': 'Question', name: '¿Puedo usar completaciones locales con otros IDEs (PyCharm, Neovim)?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, aunque la configuración varía. PyCharm tiene un plugin para Ollama. Para Neovim, usa cmp-ollama (plugin de completaciones). Consulta siempre la comunidad de tu IDE para conocer las integraciones disponibles.' } },
+          { '@type': 'Question', name: '¿Puedo usar modelos en la nube en Continue o Cursor?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Configura Continue para usar OpenAI, Claude o Gemini. También puedes combinarlos (local para tareas rápidas, nube para código complejo).' } },
+          { '@type': 'Question', name: '¿Las completaciones de código locales funcionan sin conexión?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Si has descargado el modelo en Ollama, las completaciones funcionan completamente sin conexión.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'LLMs Locales con VS Code y Cursor: Configuración y Mejores Prácticas',
+        'inLanguage': 'es',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).' },
+          { '@type': 'ListItem', position: 2, name: 'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.' },
+          { '@type': 'ListItem', position: 3, name: '**Mejores modelos locales para código**: Qwen2.5-Coder 7B, Llama Code 13B o Mistral 7B.' },
+          { '@type': 'ListItem', position: 4, name: 'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.' },
+          { '@type': 'ListItem', position: 5, name: 'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.' },
+        ],
+      },
+    },
   };

@@ -394,6 +394,207 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Frameworks',
+      title: '¿Qué framework de prompts deberías usar?',
+      intro: 'El framework de prompt correcto depende de tu tarea, tu nivel de experiencia y si estás optimizando para creatividad, precisión o razonamiento fiable. PromptQuorum facilita esta elección al incluir múltiples frameworks, un selector automático y un constructor de frameworks personalizados directamente en la app.',
+      publishDate: '2026-03-24',
+      seoTitle: 'Elige el Framework de Prompts Correcto para tu Tarea 2026',
+      metaDescription: 'Compara frameworks de prompts: Chain-of-Thought, ReAct, Tree-of-Thought. Aprende pros/contras para cada caso de uso y elige el mejor para tu aplicación LLM.',
+      readTime: '9 min de lectura',
+      educationalLevel: 'Intermediate',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use?lang=es',
+        inLanguage: 'es',
+        headline: '¿Qué framework de prompts deberías usar?',
+        description: 'Cómo elegir el framework de prompt correcto para GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales — y cómo PromptQuorum automatiza la selección de frameworks.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-4o', 'Claude Opus 4.7', 'Gemini 3.1 Pro', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Modelos de Lenguaje de Gran Escala' },
+          { '@type': 'Thing', name: 'Frameworks de Prompt' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Elegir el Framework de Prompt Correcto',
+        step: [
+          { '@type': 'HowToStep', name: 'Identifica tu tipo de tarea', text: 'Determina si necesitas razonamiento estructurado (Chain-of-Thought), uso de herramientas (ReAct), pensamiento multi-paso (Tree-of-Thought) o output creativo. El tipo de tarea guía la elección del framework.' },
+          { '@type': 'HowToStep', name: 'Verifica la compatibilidad con el modelo', text: 'Algunos frameworks funcionan mejor con modelos específicos. GPT-4o y Claude Opus 4.7 manejan frameworks complejos. Los modelos locales via Ollama pueden preferir estructuras más simples.' },
+          { '@type': 'HowToStep', name: 'Prueba el framework con tus datos', text: 'Ejecuta tu tarea con 2-3 frameworks candidatos. Mide la calidad del output, latencia y costo. Elige el framework con mejores resultados para tu caso de uso.' },
+          { '@type': 'HowToStep', name: 'Documenta tu elección', text: 'Registra qué framework elegiste y por qué en tu biblioteca de prompts. Esto hace los resultados reproducibles entre equipos y modelos.' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Cuál es el mejor framework de prompt para todas las tareas?',
+            acceptedAnswer: { '@type': 'Answer', text: 'No hay un mejor framework universal. Chain-of-Thought funciona para el razonamiento, ReAct para el uso de herramientas, Tree-of-Thought para tareas complejas multi-paso. Prueba frameworks en tu tarea específica para encontrar el mejor ajuste.' }
+          },
+          {
+            '@type': 'Question',
+            name: '¿Los frameworks de prompt funcionan con LLMs locales como Ollama?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los frameworks funcionan con GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio. Algunos frameworks complejos (ej., Tree-of-Thought) pueden requerir modelos locales más grandes (13B+).' }
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo cambiar de framework para la misma tarea?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sí. La elección del framework es iterativa. Si Chain-of-Thought produce resultados lentos, cambia a un método más simple. Si los outputs carecen de detalle, actualiza a Tree-of-Thought. Prueba e itera según los resultados.' }
+          }
+        ]
+      },
+      sections: {
+        whatFrameworksDo: {
+          title: 'Lo que los frameworks de prompt realmente hacen',
+          content: [
+            '**Los frameworks de prompt te dan una estructura repetible para los prompts para que GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y otros modelos sepan exactamente qué rol adoptar, qué contexto usar y cómo formatear los outputs.** Un framework no es una característica del modelo; es una plantilla que controla cómo hablas con el modelo. Cuando usas un framework consistente, reduces el riesgo de alucinaciones porque el modelo recibe objetivos, restricciones y formatos de output más claros.',
+            'La mayoría de los frameworks descomponen un prompt en bloques de construcción como objetivo, rol, contexto, restricciones y formato. Esta estructura convierte una solicitud vaga como "ayúdame con esto" en una tarea bien especificada con calidad medible. En la práctica, los frameworks son especialmente útiles cuando necesitas outputs reproducibles en diferentes modelos y proveedores como OpenAI, Anthropic y Google DeepMind.',
+          ],
+        },
+        frameworksAtAGlance: {
+          title: 'Los principales frameworks de prompt de un vistazo',
+          content: [
+            '**Los principales frameworks de prompt difieren en su enfoque: algunos optimizan el razonamiento estructurado, otros la creatividad y otros las especificaciones precisas.** Para trabajo multi-modelo entre GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio, generalmente rotarás entre un pequeño conjunto de frameworks bien probados.',
+            'Aquí están los frameworks más comunes y para qué son mejores:',
+          ],
+          columns: ['Framework', 'Mejor para', 'Idea central'],
+          rows: [
+            { 'Framework': 'CO-STAR', 'Mejor para': 'Tareas complejas', 'Idea central': 'Divide las tareas en Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta' },
+            { 'Framework': 'CRAFT',   'Mejor para': 'Trabajo creativo', 'Idea central': 'Enfoca en rol, formato, audiencia y pruebas de variaciones' },
+            { 'Framework': 'SPECS',   'Mejor para': 'Outputs precisos', 'Idea central': 'Especifica Alcance, Propósito, Ejemplos, Restricciones, Pasos' },
+            { 'Framework': 'RISEN',   'Mejor para': 'Iteración', 'Idea central': 'Refina prompts rápidamente a través de múltiples turnos' },
+            { 'Framework': 'TRACE',   'Mejor para': 'Razonamiento', 'Idea central': 'Obliga al modelo a mostrar Pensamiento, Razonamiento, Análisis, Conclusión, Evaluación' },
+          ],
+        },
+        howToChooseByUseCase: {
+          title: 'Cómo elegir un framework por caso de uso',
+          content: [
+            '**Debes elegir tu framework de prompt basándote en el output que más te importa: calidad del razonamiento, variación creativa o formateo estricto.** Una vez que vinculas frameworks a casos de uso, la elección se convierte en una regla simple en lugar de un juego de adivinanzas.',
+            'Correspondencias típicas:',
+          ],
+          items: [
+            'Para resúmenes de investigación, análisis técnico o flujos de trabajo multi-paso, usa un framework orientado al razonamiento como TRACE o CO-STAR.',
+            'Para posts de blog, copy publicitario e ideación, usa CRAFT o una estructura similar orientada a la creatividad que enfatice audiencia, tono y variación.',
+            'Para extracción de datos, informes o refactorización de código, usa SPECS u otra plantilla con muchas especificaciones que fije formato y restricciones.',
+          ],
+        },
+        whenToSwitch: {
+          title: 'Cuándo deberías cambiar de framework',
+          content: [
+            '**Debes cambiar de framework de prompt cuando tu estructura actual no puede expresar tus restricciones o cuando los outputs de múltiples modelos se desvían del formato requerido.** Esto es más fácil de ver cuando ejecutas la misma tarea en varios modelos y notas encabezados inconsistentes, campos faltantes o frases demasiado creativas.',
+            'Señales claras de que un framework diferente es más adecuado:',
+          ],
+          items: [
+            'Necesitas JSON estricto con campos fijos en GPT-4o y Gemini 3.1 Pro, lo que apunta a un framework con muchas especificaciones como SPECS.',
+            'Estás explorando ideas de posicionamiento de producto y te importan más las opciones divergentes que la estructura estricta, lo que apunta a CRAFT.',
+            'Estás depurando un fallo de razonamiento complejo en Claude Opus 4.7 y necesitas pensamiento paso a paso explícito, lo que apunta a TRACE o un framework de estilo chain-of-thought.',
+          ],
+        },
+        howPQHandlesFrameworks: {
+          title: 'Cómo PromptQuorum maneja los frameworks por ti',
+          content: [
+            '**PromptQuorum es una herramienta de despacho de IA multi-modelo que incluye los principales frameworks de prompt, un selector automático de frameworks y un editor de frameworks personalizados para que no tengas que gestionar plantillas manualmente.** PromptQuorum puede enviar un prompt, estructurado con tu framework elegido, a GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio en paralelo.',
+            'Dentro de PromptQuorum, puedes:',
+          ],
+          items: [
+            'Elegir entre múltiples frameworks integrados como CO-STAR, CRAFT, RISEN, SPECS, TRACE y varias variantes adicionales ajustadas para análisis o generación.',
+            'Dejar que la app recomiende un framework automáticamente basándose en el tipo de tarea que seleccionas (por ejemplo "resumen de investigación", "copy de marketing" o "revisión de código").',
+            'Definir tu propio framework especificando roles, preguntas requeridas, restricciones y esquemas de output, luego reutilizarlo en todos los modelos y proyectos.',
+          ],
+        },
+        automaticSelection: {
+          title: 'Selección automática de frameworks de PromptQuorum',
+          content: [
+            '**El selector de frameworks de PromptQuorum recomienda un framework de prompt automáticamente usando la categoría de tarea, el formato de output deseado y tus preferencias guardadas.** Esto reduce el tiempo que pasas pensando en la meta-estructura y te permite concentrarte en describir la tarea en sí.',
+            'Un flujo típico:',
+          ],
+          numberedItems: [
+            'Seleccionas una tarea como "resumir investigación con citas" o "generar ideas de posts de LinkedIn".',
+            'PromptQuorum mapea esta tarea a un framework predeterminado — por ejemplo un framework orientado al razonamiento para investigación o uno creativo para ideación.',
+            'Puedes aceptar la sugerencia, anularla con un framework diferente o bloquear ciertos proyectos a un framework específico para consistencia.',
+          ],
+        },
+        customFrameworks: {
+          title: 'Crear tus propios frameworks de prompts en PromptQuorum',
+          content: [
+            '**PromptQuorum te permite definir, guardar y reutilizar tus propios frameworks de prompts para que tus flujos de trabajo específicos del dominio se conviertan en herramientas de primera clase en lugar de prompts ad hoc.** Esto es esencial si realizas análisis, informes o auditorías repetidos con estándares internos estrictos.',
+            'Cuando creas un framework personalizado en PromptQuorum, puedes:',
+          ],
+          items: [
+            'Definir las secciones (por ejemplo Objetivo, Contexto, Fuentes de Datos, Restricciones, Formato de Output).',
+            'Agregar preguntas obligatorias que la app hará cada vez antes del despacho, para que nunca olvides entradas críticas.',
+            'Adjuntar formatos de output específicos, como secciones Markdown, listas de puntos o JSON con claves predefinidas.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Ejemplo: Mal vs buen uso de un framework',
+          content: [
+            '**La forma más clara de ver el valor de los frameworks es comparar un prompt sin estructura con un prompt basado en framework para la misma tarea.** El ejemplo a continuación usa un framework de estilo especificación genérico similar a SPECS para escribir un informe corto a partir de datos.',
+            '**[Prompt Malo]**',
+            '"Mira estos datos y dime qué piensas."',
+            '**[Prompt Bueno]**',
+            '"Eres un analista de datos. Alcance: Analiza los datos de ventas adjuntos del Q1 2026 en el mercado UE. Propósito: Identifica las tres tendencias más importantes que un VP de Ventas debería conocer antes de planificar el Q2. Ejemplos: Estructura los insights como hallazgos numerados con una oración por hallazgo. Restricciones: No inventes datos; si falta una métrica, di \'no está en el conjunto de datos\'. Pasos: 1) Describe la tendencia general, 2) Destaca los valores atípicos a nivel de país, 3) Sugiere una acción concreta por hallazgo."',
+            'En PromptQuorum, puedes almacenar esta estructura como un framework reutilizable y aplicarla a GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro en paralelo, luego comparar cómo cada modelo maneja la misma especificación.',
+          ],
+        },
+        conclusion: {
+          title: '¿Qué framework de prompts deberías usar hoy?',
+          content: [
+            '**Para la mayoría de los usuarios, el mejor punto de partida es elegir un framework orientado al razonamiento para tareas de análisis y uno orientado a la creatividad para tareas de escritura, luego estandarizar en esos en todos los modelos via PromptQuorum.** A medida que tus flujos de trabajo maduran, puedes introducir un framework con muchas especificaciones para outputs estructurados y opcionalmente un framework personalizado ajustado a tu dominio.',
+            'Una línea base práctica:',
+          ],
+          items: [
+            'Usa un framework estilo CO-STAR o TRACE para resúmenes de investigación, análisis técnicos y razonamiento complejo.',
+            'Usa un framework estilo CRAFT para copy de marketing, ideas de contenido y experimentos de mensajería.',
+            'Usa un framework estilo SPECS para outputs estructurados como informes, listas de verificación o JSON que deben ser procesados por herramientas posteriores.',
+            'El selector automático y el editor de frameworks personalizados de PromptQuorum te ayudan a aplicar este patrón a escala para que la calidad del prompt no dependa de la memoria o habilidad individual.',
+          ],
+        },
+
+        howToStart: {
+          title: 'Cómo elegir un framework de prompt',
+          numberedItems: [
+            '**Mapea tu tipo de tarea a un framework: razonamiento (CoT), especificación (SPECS), basado en rol (Persona), output estructurado (modo JSON) o multi-paso (Chaining).** Diferentes frameworks resuelven diferentes problemas. CoT para lógica, SPECS para requisitos estructurados, Persona para tono/estilo, modo JSON para extracción de datos, Chaining para flujos de trabajo multi-paso.',
+            '**Prueba tu tarea con 2-3 frameworks en los mismos prompts y compara los outputs.** Para "resume este documento", prueba CoT (razona primero, luego resume) vs resumir directamente vs prompt chaining (extrae puntos clave → sintetiza). Ve cuál produce el mejor output para tu caso de uso.',
+            '**Para tareas complejas, combina frameworks: usa Persona para el tono, SPECS para restricciones y CoT para razonar casos límite.** No tienes que quedarte con un solo framework. Combínalos para que coincidan con la complejidad de tu tarea.',
+            '**Documenta por qué elegiste un framework para cada prompt en tu biblioteca.** Ejemplo: "Para análisis de errores, usamos CoT porque el modelo necesita rastrear la ejecución antes de identificar el error. Para generación de código, usamos SPECS porque necesitamos output determinístico que respete las restricciones."',
+            '**Revisa la elección del framework cuando cambien los requisitos de la tarea.** Si tu tarea de resumen pasa de "extraer hechos" a "sintetizar tres perspectivas", podrías pasar del resumen directo (más rápido) al Chaining (más matizado). La elección del framework es iterativa, no permanente.',
+          ],
+        },
+        faqSection: {
+          title: 'Preguntas frecuentes',
+          faqs: [
+            { q: '¿Cuál es el mejor framework de prompt para todas las tareas?', a: 'No hay un mejor framework universal. Chain-of-Thought funciona para el razonamiento, ReAct para el uso de herramientas, Tree-of-Thought para tareas complejas multi-paso. Prueba frameworks en tu tarea específica para encontrar el mejor ajuste.' },
+            { q: '¿Los frameworks de prompt funcionan con LLMs locales como Ollama?', a: 'Sí. Los frameworks funcionan con GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio. Algunos frameworks complejos (ej., Tree-of-Thought) pueden requerir modelos locales más grandes (13B+).' },
+            { q: '¿Puedo cambiar de framework para la misma tarea?', a: 'Sí. La elección del framework es iterativa. Si Chain-of-Thought produce resultados lentos, cambia a un método más simple. Si los outputs carecen de detalle, actualiza a Tree-of-Thought. Prueba e itera según los resultados.' },
+            { q: '¿Cómo sé qué framework es el mejor para mi tarea?', a: 'Empieza identificando tu tipo de tarea: ¿Estás optimizando para profundidad de razonamiento, creatividad, velocidad o output estructurado preciso? Luego emparéjalo con un framework (CoT para razonamiento, CRAFT para creatividad, SPECS para precisión). Prueba 2-3 frameworks y compara outputs.' },
+            { q: '¿Puedo combinar múltiples frameworks en un solo prompt?', a: 'Sí. Combinar frameworks es común. Usa CO-STAR para establecer contexto y audiencia, luego añade Chain-of-Thought para el razonamiento, luego SPECS para restricciones de output. La clave es la claridad — asegúrate de que el modelo entienda cada componente.' },
+            { q: '¿Afecta la elección del framework al consumo de tokens?', a: 'Sí. Los frameworks complejos como Tree-of-Thought generan más pasos de razonamiento y cuestan más tokens. Las estructuras simples como los prompts directos cuestan menos pero pueden producir resultados de menor calidad. La elección del framework implica un compromiso entre calidad y costo.' },
+            { q: '¿Debo quedarme con un framework o rotar entre ellos?', a: 'Combina ambos enfoques. Construye un pequeño conjunto de frameworks probados (3-5) para diferentes tipos de tareas y úsalos consistentemente. Pero revisa tus elecciones cuando cambien los requisitos de la tarea o las capacidades del modelo.' },
+            { q: '¿Cómo se relacionan los frameworks de prompt con el selector automático de PromptQuorum?', a: 'El selector de PromptQuorum analiza tu tarea y recomienda un framework basándose en tu descripción. Puedes anularlo, probar alternativas o construir un framework personalizado adaptado exactamente a tus necesidades.' },
+          ],
+        },
+      },
+    },
     fr: {
       theme: 'Frameworks',
       title: 'Quel framework de prompt choisir ? (2026)',

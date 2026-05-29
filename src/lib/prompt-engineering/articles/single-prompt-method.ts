@@ -730,6 +730,396 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
     },
+    es: {
+      freshness_tier: 'evergreen',
+      theme: 'Frameworks',
+      title: 'El Método de Prompt de Un Solo Paso',
+      intro: 'El Método de Prompt de Un Solo Paso es un framework de prompt mínimo donde describes toda la tarea en una instrucción cuidadosamente estructurada en lugar de construir una conversación de múltiples turnos. Este método reduce la sobrecarga, facilita la comparación de resultados entre modelos y es el framework de inicio predeterminado dentro de PromptQuorum para nuevos usuarios.',
+      publishDate: '2026-03-24',
+      seoTitle: 'Método de Prompt de Un Solo Paso: 5 Bloques y Ejemplos',
+      metaDescription: 'Aprende el Método de Prompt de Un Solo Paso: incluye rol, objetivo, contexto, restricciones y formato de output en un solo mensaje. Los prompts estructurados superan las instrucciones vagas.',
+      ogDescription: 'Método de Prompt de Un Solo Paso: 5 bloques de construcción, 5 ejemplos trabajados, tablas de comparación vs CO-STAR/RTF/SPECS. Framework predeterminado en PromptQuorum en todos los modelos.',
+      twitterDescription: 'Un prompt. Cinco bloques de construcción. El enfoque estructurado supera las instrucciones vagas. El Método de Un Solo Paso es el punto de partida para cada prompt — pasa a CO-STAR solo cuando lo necesites.',
+      readTime: '8 min de lectura',
+      educationalLevel: 'Intermediate',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method?lang=es',
+        inLanguage: 'es',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        headline: 'El Método de Prompt de Un Solo Paso',
+        description: 'Cómo funciona el Método de Prompt de Un Solo Paso, cuándo usarlo y cómo PromptQuorum lo usa como framework principal para nuevos usuarios.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-04',
+        keywords: ['Método de Prompt de Un Solo Paso', 'frameworks de prompt', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Frameworks de Prompt' },
+          { '@type': 'Thing', name: 'Modelos de Lenguaje de Gran Escala' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+      },
+      sections: {
+        keyTakeaways: {
+          isTldr: true,
+          title: 'Puntos clave',
+          id: 'key-takeaways',
+          items: [
+            'El Método de Prompt de Un Solo Paso incluye rol, objetivo, contexto, restricciones y formato de output en un mensaje completo — no se necesita conversación de múltiples turnos',
+            'Datos de prueba de PromptQuorum: los prompts de un solo paso estructurados produjeron output en formato correcto en 38/40 casos vs 21/40 para frases vagas (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro)',
+            'Cinco bloques de construcción: Rol, Objetivo, Contexto, Restricciones, Formato de Output — cada prompt efectivo de un solo paso contiene los cinco',
+            'Empieza con Un Solo Paso para cualquier tarea nueva; pasa a CO-STAR, CRAFT o TRACE solo cuando llegues a una limitación específica',
+            'Guarda los prompts de un solo paso que funcionan como plantillas reutilizables — son activos del equipo, no mensajes de chat desechables',
+            'El método funciona de manera idéntica en GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales (Ollama, LM Studio)',
+          ],
+        },
+        tldrBox: {
+          isTldr: true,
+          content: [
+            '> **TL;DR:** Incluye rol, objetivo, contexto, restricciones y formato de output en un mensaje. Prueba en 3-5 ejemplos. Guarda como plantilla reutilizable. Este enfoque de un solo paso obtuvo 95% en formato correcto en GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro vs 52.5% para prompts vagos. Empieza aquí para cualquier tarea; pasa a CO-STAR o CRAFT solo cuando necesites control independiente sobre tono, audiencia o estilo.',
+          ],
+        },
+        quickFacts: {
+          title: 'Datos rápidos',
+          id: 'quick-facts',
+          numberedItems: [
+            '**Prompts estructurados de Un Solo Paso:** tasa de formato correcto del 95% (38/40) en 3 modelos en pruebas de PromptQuorum',
+            '**Prompts de una frase vagas:** tasa de formato correcto del 52.5% (21/40) en las mismas tareas',
+            '**Cinco bloques de construcción:** Rol, Objetivo, Contexto, Restricciones, Formato de Output',
+            '**Rango de prompts efectivos:** 50 palabras (tareas simples) a 500+ palabras (tareas complejas)',
+            '**Framework predeterminado:** Un Solo Paso es el predeterminado en PromptQuorum y el punto de inicio recomendado para nuevos usuarios',
+            '**Funciona en:** GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales (Ollama, LM Studio)',
+            '**ROI de reutilización de plantillas:** Una inversión de 20 minutos en un prompt ahorra 10+ minutos por uso. Un prompt usado 50 veces se amortiza en los primeros 5 usos.',
+            '**Eficiencia de tokens:** Los prompts de Un Solo Paso cuestan 30-40% menos tokens que las conversaciones de ida y vuelta para lograr el mismo resultado',
+            '**Testabilidad:** Los prompts estructurados permiten pruebas A/B entre modelos, versiones y parámetros de una forma que los prompts conversacionales no pueden',
+          ],
+        },
+        whatIsSingleStep: {
+          title: 'El Método de Prompt de Un Solo Paso explicado',
+          snippets: [
+            { type: 'in-one-sentence', text: 'El Método de Prompt de Un Solo Paso incluye rol, objetivo, contexto, restricciones y formato de output en un mensaje completo para que el modelo obtenga todo lo que necesita desde el inicio.' },
+            { type: 'in-plain-terms', text: 'En lugar de tener una conversación de ida y vuelta con la IA, escribes una instrucción detallada que le dice exactamente quién ser, qué hacer, qué necesita saber, qué reglas seguir y cómo formatear la respuesta. Lo envías una vez. Funciona.' },
+          ],
+          content: [
+            '**El Método de Prompt de Un Solo Paso es una estructura de prompt de un disparo que incluye rol, objetivo, contexto, restricciones y formato de output en un único mensaje al modelo.** En lugar de pedirle a la IA que "piense en conjunto" durante varios turnos, le das todo lo que necesita desde el inicio. Este enfoque funciona con GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales como los que ejecutas via Ollama o LM Studio.',
+            'La idea central es pensar una vez, escribir una vez y ejecutar una vez. Inviertes esfuerzo en diseñar un prompt preciso, luego lo reutilizas en tareas, proyectos y modelos. Porque la estructura es fija, puedes medir la calidad, cambiar un parámetro a la vez y mejorar tus prompts sistemáticamente.',
+          ],
+        },
+        whySingleStepWorks: {
+          title: 'Por qué Un Solo Paso supera el prompting incremental',
+          content: [
+            '**Los prompts de un solo paso funcionan bien porque los modelos de lenguaje de gran escala se desempeñan mejor cuando reciben una instrucción completa y sin ambigüedad en lugar de pistas vagas e incrementales.** Cuando el modelo ve el objetivo completo y las restricciones en un mensaje, puede planificar su ruta de razonamiento interno de manera más efectiva.',
+            'Esta estructura también reduce el riesgo de olvidar detalles importantes a mitad de la conversación. Si el primer mensaje ya incluye audiencia, tono, formato y restricciones como recuento de palabras o frases prohibidas, no tienes que recordar añadirlos después. Para los equipos, esto es crítico: un prompt de un solo paso compartido se convierte en un activo repetible en lugar de un chat improvisado.',
+          ],
+          callouts: [
+            { type: '🔍', label: 'La Prueba de 38/40', text: 'En pruebas de PromptQuorum, se enviaron 40 prompts de resumen a GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro. Los prompts estructurados de un solo paso produjeron output en formato correcto en 38 de 40 casos. Las mismas tareas como frases vagas obtuvieron 21 de 40. Solo la estructura casi duplicó la tasa de éxito.' },
+          ],
+        },
+        fiveBlocks: {
+          title: 'Los Cinco Bloques de Construcción',
+          content: [
+            '**Un buen Prompt de Un Solo Paso contiene cinco bloques de construcción: rol, objetivo, contexto, restricciones y formato de output.** Puedes escribirlos como un párrafo fluido o como secciones claramente etiquetadas; el método no requiere una plantilla rígida siempre que cada elemento esté presente.',
+            'Los bloques de construcción son:',
+          ],
+          items: [
+            'Rol: Quién debe actuar el modelo (por ejemplo "Eres un gerente de producto técnico").',
+            'Objetivo: Lo que quieres, expresado como un único objetivo claro.',
+            'Contexto: Información de fondo que el modelo necesita pero no verá en otro lugar.',
+            'Restricciones: Límites como recuento de palabras, frases prohibidas o estilo de citación.',
+            'Formato de output: La estructura que quieres de vuelta (por ejemplo puntos, encabezados o JSON).',
+          ],
+          callouts: [
+            { type: '🔍', label: 'El Problema del Bloque Faltante', text: 'La mayoría de los prompts fallidos faltan exactamente un bloque de construcción. El modelo puede compensar objetivos vagos si las restricciones son claras. Puede manejar contexto faltante si el rol es suficientemente específico. Pero omite el formato de output y el modelo adivina — y adivina mal el 40-60% de las veces.' },
+          ],
+        },
+        singleVsMulti: {
+          title: 'Prompting de Un Solo Paso vs Multi-Paso',
+          content: [
+            '**Debes usar el Método de Prompt de Un Solo Paso cuando ya sabes lo que quieres y puedes especificarlo desde el inicio, y reservar el prompting multi-paso para tareas genuinamente ambiguas o exploratorias.** Si tu objetivo está claro, una instrucción de un disparo generalmente producirá resultados más consistentes entre modelos y ejecuciones.',
+            'Las principales diferencias son:',
+          ],
+          items: [
+            'Los prompts de un solo paso cargan el pensamiento al frente; diseñas el prompt cuidadosamente una vez.',
+            'Los prompts multi-paso distribuyen el pensamiento en varios turnos, lo que puede introducir inconsistencia y restricciones olvidadas.',
+            'Los prompts de un solo paso son más fáciles de almacenar, versionar y aplicar en herramientas como PromptQuorum, porque son activos atómicos en lugar de registros de conversación.',
+          ],
+          callouts: [
+            { type: '🔍', label: 'Empieza con Un Solo Paso, Graduado Después', text: 'El Método de Un Solo Paso no es limitante — es fundamental. El 80% de las tareas nunca necesitan un framework más complejo. El 20% que lo necesita (multi-restricción, razonamiento auditable, esquema estricto) te dice cuándo actualizar. No empieces con lo complejo.' },
+          ],
+        },
+        howPQImplements: {
+          title: 'Implementación de PromptQuorum',
+          content: [
+            '**PromptQuorum es una herramienta de despacho de IA multi-modelo donde el Método de Prompt de Un Solo Paso es el framework integrado principal y el punto de inicio predeterminado para nuevos usuarios.** Cuando abres PromptQuorum y creas una nueva tarea, la app te guía a estructurar una instrucción única y completa en lugar de un mensaje de chat suelto.',
+            'Dentro de PromptQuorum, el framework de Un Solo Paso:',
+          ],
+          items: [
+            'Presenta campos claros para rol, objetivo, contexto, restricciones y formato de output para que no olvides ningún bloque de construcción.',
+            'Aplica el mismo prompt estructurado a múltiples modelos en paralelo, incluyendo GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales configurados a través de Ollama o LM Studio.',
+            'Te permite guardar prompts de un solo paso exitosos como plantillas reutilizables para futuras tareas y para los miembros de tu equipo.',
+          ],
+        },
+        whenToStart: {
+          title: 'Cuándo empezar con Un Solo Paso',
+          content: [
+            '**Si no estás seguro de qué framework elegir en PromptQuorum, debes empezar con el Método de Prompt de Un Solo Paso y solo cambiar a un framework más especializado como CRAFT o APE cuando llegues a una limitación clara.** Esto mantiene tu flujo de trabajo simple mientras permite optimización avanzada más tarde.',
+            'Situaciones típicas donde Un Solo Paso es el punto de inicio correcto:',
+          ],
+          items: [
+            'Necesitas un resumen de investigación, informe, email o revisión de código con un objetivo y formato claros.',
+            'Quieres comparar cómo responden diferentes modelos a la misma tarea bien definida.',
+            'Estás diseñando nuevas plantillas internas y quieres un patrón base que todos puedan entender rápidamente.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Ejemplo: Prompt de Un Solo Paso malo vs bueno',
+          content: [
+            '**La forma más fácil de entender el Método de Prompt de Un Solo Paso es comparar una solicitud no estructurada con un prompt de un solo paso bien formado para la misma tarea.** El ejemplo a continuación apunta a un email B2B corto, pero la estructura aplica a cualquier dominio.',
+            '**[Prompt Malo]**',
+            '"Escribe un email de seguimiento para un cliente potencial."',
+            '**[Prompt Bueno]**',
+            '"Eres un copywriter de ventas B2B. Objetivo: Escribe un email de seguimiento a un CTO que tuvo una demo de nuestra herramienta SaaS la semana pasada pero aún no ha respondido. Contexto: El producto es un panel de control en la nube que ayuda a los equipos de ingeniería a rastrear fallos de despliegue y tiempos de respuesta a incidentes. La demo fue bien, y el CTO mencionó que su proceso de guardia no está estandarizado. Restricciones: Máximo 180 palabras. Tono neutral-profesional. No uses palabras de hype como \'revolucionario\' o \'que cambia el juego\'. Incluye un próximo paso específico: una llamada de 30 minutos la próxima semana con dos opciones de horario. Formato de output: Línea de asunto en una línea separada, luego el cuerpo del email en párrafos cortos."',
+            'Este único mensaje le da al modelo todo lo que necesita para producir un email específico y reutilizable sin más aclaraciones.',
+          ],
+        },
+        teamAsset: {
+          title: 'Convertir los Prompts de Un Solo Paso en un activo del equipo',
+          content: [
+            '**El Método de Prompt de Un Solo Paso se vuelve más valioso cuando lo estandarizas en tu equipo y almacenas tus mejores prompts como plantillas compartidas en PromptQuorum.** Esto convierte la experimentación individual en una capacidad operativa.',
+            'En PromptQuorum, puedes:',
+          ],
+          items: [
+            'Guardar un Prompt de Un Solo Paso exitoso como una plantilla nombrada vinculada a un flujo de trabajo particular, como "Anuncio de función de producto" o "Resumen trimestral del cliente".',
+            'Compartir plantillas para que los nuevos miembros del equipo puedan ejecutar prompts de alta calidad sin inventar su propia estructura.',
+            'Ejecutar estos prompts en múltiples modelos con un clic para ver qué proveedor se adapta mejor a cada flujo de trabajo.',
+          ],
+          callouts: [
+            { type: '🔍', label: 'La Prueba de Plantilla', text: 'Un prompt de un solo paso es "suficientemente bueno" cuando 3 personas diferentes pueden usarlo en 3 entradas diferentes y obtener output que cumple el mismo estándar de calidad. Si solo funciona para la persona que lo escribió, las restricciones no son suficientemente específicas.' },
+          ],
+        },
+
+        howToStart: {
+          title: 'Cómo usar el Método de Prompt de Un Solo Paso',
+          numberedItems: [
+            '**Escribe un prompt claro y completo que describa tu tarea, contexto, restricciones y output deseado.** En lugar de múltiples prompts más cortos, crea un único prompt bien estructurado que sirva como el "contrato" entre tú y el modelo. Incluye rol, objetivo, alcance, restricciones y formato de output.',
+            '**Estructura el prompt con secciones claras: Rol → Objetivo → Alcance → Restricciones → Formato de Output → Ejemplo.** Usa encabezados o secciones numeradas. Esto hace el prompt escaneable y asegura que el modelo pese todas las partes igualmente.',
+            '**Prueba tu prompt en ejemplos representativos antes de escalar.** Ejecútalo en 3-5 entradas diversas. Si la calidad del output varía mucho, refina las restricciones o el ejemplo. Una vez que sea fiable en casos de prueba, aplícalo a tu conjunto de datos completo.',
+            '**Guarda tu prompt como una plantilla reutilizable en tu biblioteca de prompts.** Documenta qué campos son marcadores de posición (los rellenas en tiempo de ejecución) vs instrucciones fijas. Esto lo hace reproducible entre miembros del equipo y herramientas.',
+            '**Actualiza el prompt cuando surjan nuevos casos límite.** Después de procesar 100 elementos, descubrirás casos que tu prompt original no anticipó. Documenta estos y actualiza el prompt para manejarlos, luego reprocesa elementos anteriores para consistencia.',
+          ],
+        },
+        comparisonTable: {
+          title: 'Comparación: Un Solo Paso vs Otros Frameworks',
+          id: 'comparison-table',
+          tableFormat: true,
+          columns: ['Dimensión', 'Un Solo Paso', 'CO-STAR', 'CRAFT', 'SPECS', 'RTF'],
+          rows: [
+            { 'Dimensión': 'Complejidad', 'Un Solo Paso': 'Mínima — 5 bloques', 'CO-STAR': 'Media — 7 componentes', 'CRAFT': 'Alta — 8+ componentes', 'SPECS': 'Media — output + reglas', 'RTF': 'Mínima — 3 bloques' },
+            { 'Dimensión': 'Mejor para', 'Un Solo Paso': 'Tareas claras, primeros intentos', 'CO-STAR': 'Trabajo con mucho contexto', 'CRAFT': 'Creativo, multidimensional', 'SPECS': 'Output estructurado', 'RTF': 'Rol-driven, simple' },
+            { 'Dimensión': 'Tiempo de configuración', 'Un Solo Paso': '10-15 min', 'CO-STAR': '20-30 min', 'CRAFT': '30-45 min', 'SPECS': '15-20 min', 'RTF': '5-10 min' },
+            { 'Dimensión': 'Costo de tokens', 'Un Solo Paso': 'Bajo (1×)', 'CO-STAR': 'Medio (1.2-1.5×)', 'CRAFT': 'Medio (1.2-1.5×)', 'SPECS': 'Bajo-Medio (1-1.2×)', 'RTF': 'Bajo (0.9-1×)' },
+            { 'Dimensión': 'Control de Tono/Audiencia', 'Un Solo Paso': 'Limitado (en Rol)', 'CO-STAR': 'Integrado (campos separados)', 'CRAFT': 'Control total (campos separados)', 'SPECS': 'Ninguno', 'RTF': 'Ninguno' },
+            { 'Dimensión': 'Transparencia del razonamiento', 'Un Solo Paso': 'No', 'CO-STAR': 'No', 'CRAFT': 'No', 'SPECS': 'No', 'RTF': 'No' },
+            { 'Dimensión': 'Validación del output', 'Un Solo Paso': 'Solo manual', 'CO-STAR': 'Solo manual', 'CRAFT': 'Solo manual', 'SPECS': 'Automático (esquema)', 'RTF': 'Solo manual' },
+            { 'Dimensión': 'Reutilizabilidad', 'Un Solo Paso': 'Alta — lista para plantillas', 'CO-STAR': 'Alta — si el contexto se repite', 'CRAFT': 'Media — dependiente del contexto', 'SPECS': 'Alta — basada en reglas', 'RTF': 'Alta — basada en rol' },
+          ],
+        },
+        commonMistakes: {
+          title: 'Errores comunes con los Prompts de Un Solo Paso',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Olvidar el formato de output',
+              problem: 'El modelo usa el formato que prefiere — normalmente párrafos en prosa. Si querías JSON, puntos o una tabla, tienes que decirlo. Omitir el formato de output es la causa #1 de "la IA no hizo lo que quería".',
+              fix: 'Siempre incluye una instrucción explícita de formato de output. Ejemplo: "Devuelve como una tabla markdown con columnas: Función | Descripción | Prioridad."',
+            },
+            {
+              mistake: 'Escribir restricciones como deseos en lugar de reglas',
+              problem: '"Intenta mantenerlo bajo 200 palabras" es un deseo. "Máximo 200 palabras. Corta cualquier oración que supere este límite" es una regla. Los modelos siguen reglas; interpretan los deseos libremente.',
+              fix: 'Usa lenguaje absoluto: "Máximo", "No", "Debe incluir", "Exactamente 5 elementos".',
+            },
+            {
+              mistake: 'Incluir contexto irrelevante',
+              problem: 'Más contexto no siempre es mejor. Los detalles irrelevantes diluyen la atención del modelo. Un prompt de 500 palabras donde 200 son ruido de fondo funciona peor que uno de 300 palabras donde cada palabra importa.',
+              fix: 'Incluye solo el contexto que el modelo necesita para producir el output correcto. Si eliminar una oración no cambia el output, elimínala.',
+            },
+            {
+              mistake: 'Probar en un ejemplo y lanzar',
+              problem: 'Un output exitoso no prueba que el prompt funcione. Los casos límite, las diferentes entradas y los diferentes modelos exponen debilidades que una sola prueba oculta.',
+              fix: 'Prueba en 3-5 ejemplos representativos incluyendo al menos 1 caso límite antes de guardar como plantilla.',
+            },
+            {
+              mistake: 'Nunca actualizar el prompt',
+              problem: 'Los requisitos cambian, los modelos se actualizan, aparecen casos límite. Un prompt que funcionó en enero puede tener bajo rendimiento en junio. Tratar los prompts como permanentes es cómo la calidad se degrada silenciosamente.',
+              fix: 'Versiona tus prompts (v1, v2, v3). Vuelve a probar trimestralmente o cuando cambie la versión del modelo. Mantén versiones antiguas para comparación.',
+            },
+            {
+              mistake: 'Confundir rol con tarea',
+              problem: 'Rol es "quién eres" (experto, asistente, analista). Tarea es "qué hacer" (resumir, generar, revisar). Cuando se mezclan, el modelo se confunde sobre su autoridad y perspectiva.',
+              fix: 'Mantén rol y tarea separados: "Eres un auditor de seguridad [rol]. Revisa este código en busca de vulnerabilidades [tarea]." El modelo sabe su perspectiva y responsabilidad.',
+            },
+            {
+              mistake: 'Escribir restricciones que contradicen el formato',
+              problem: '"Genera un objeto JSON de 500 palabras" no tiene sentido porque JSON es datos estructurados, no prosa. Las restricciones contradictorias obligan al modelo a elegir entre ellas, y su elección puede no ser lo que pretendías.',
+              fix: 'Alinea restricciones con el formato: "Genera un resumen estructurado como JSON con campos: tema, puntos-clave (array), conclusión." Ahora el formato y las restricciones se refuerzan mutuamente.',
+            },
+            {
+              mistake: 'Tratar Un Solo Paso como un método de un disparo, nunca mejorar',
+              problem: 'Un Solo Paso es mínimo pero no estático. Pensar que es un enfoque de "configurar y olvidar" significa que te pierdes oportunidades de mejora continua que surgen después del primer uso.',
+              fix: 'Usa Un Solo Paso como tu línea base. Después de los primeros 3-5 usos, identifica qué funciona y qué no. Refina el rol, el contexto o las restricciones. Prueba la versión refinada y sigue iterando.',
+            },
+          ],
+        },
+        faqSection: {
+          title: 'Preguntas frecuentes',
+          id: 'faq',
+          faqs: [
+            {
+              q: '¿En qué se diferencia el Método de Prompt de Un Solo Paso de simplemente dar una instrucción?',
+              a: 'Con Un Solo Paso, obtienes consistencia estructural. En lugar de una respuesta de una sola vez, obtienes la misma calidad de resultados cada vez porque el modelo sigue restricciones y formato fijos. Esto hace los resultados comparables entre modelos y reproducibles a lo largo del tiempo.',
+            },
+            {
+              q: '¿Cuándo debo usar Un Solo Paso en lugar del prompting multi-paso (Chain-of-Thought)?',
+              a: 'Usa Un Solo Paso cuando tu objetivo es claro y bien definido. Prefiere el prompting multi-paso para tareas ambiguas o exploratorias donde necesitas ver el proceso de razonamiento del modelo.',
+            },
+            {
+              q: '¿Puedo usar Un Solo Paso con modelos locales como Ollama o LM Studio?',
+              a: 'Sí, absolutamente. El Método de Prompt de Un Solo Paso funciona con cualquier modelo — GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro o modelos locales via Ollama y LM Studio. La misma estructura única aplica en todas las plataformas.',
+            },
+            {
+              q: '¿Cuánto tiempo lleva escribir y refinar un buen Prompt de Un Solo Paso?',
+              a: 'Típicamente 15-30 minutos para una primera versión sólida. Escribe un borrador, pruébalo en 3-5 ejemplos, refina las partes que no funcionan, luego úsalo. La inversión inicial se recupera rápidamente ya que lo reutilizarás docenas de veces.',
+            },
+            {
+              q: '¿Puedo guardar mis Prompts de Un Solo Paso como plantillas en PromptQuorum?',
+              a: 'Sí. Una vez que creas un Prompt de Un Solo Paso que funciona bien para un flujo de trabajo específico (ej., revisiones de código, resúmenes de clientes), puedes guardarlo como plantilla en PromptQuorum y compartirlo con tu equipo.',
+            },
+            {
+              q: '¿Y si mi tarea es demasiado compleja para Un Solo Paso?',
+              a: 'Si no puedes especificar claramente tu tarea en una sola instrucción, o si realmente necesitas múltiples pasadas del modelo, cambia a APE o CRAFT.',
+            },
+            {
+              q: '¿Cómo sé si mi Prompt de Un Solo Paso está funcionando bien?',
+              a: 'Ejecútalo en 5-10 ejemplos representativos y verifica: (1) ¿Siguen los resultados el formato especificado? (2) ¿Refleja el contenido el rol y tono especificados? (3) ¿Se respetan las restricciones como el recuento de palabras? Si alguno falla, refina y prueba de nuevo.',
+            },
+            {
+              q: '¿Hay una diferencia de rendimiento entre Un Solo Paso y APE en la misma tarea?',
+              a: 'En una tarea simple con un objetivo claro, Un Solo Paso típicamente produce resultados idénticos con una fracción de los tokens. APE añade sobrecarga para mostrar el razonamiento — el valor está en poder inspeccionar y refinar los pensamientos del modelo.',
+            },
+            {
+              q: '¿Cómo adapto Un Solo Paso para un equipo multilingüe o distribuido?',
+              a: 'Guarda la plantilla de Un Solo Paso en PromptQuorum con instrucciones claras sobre marcadores de posición (variables) y valores fijos. Documenta las expectativas de formato y los casos límite. Los miembros del equipo pueden entonces completar las variables y ejecutar el prompt idéntico.',
+            },
+            {
+              q: '¿Qué debo tener en cuenta al usar Prompts de Un Solo Paso con datos de clientes?',
+              a: 'Documenta qué prompt procesó qué datos del cliente (para rastros de auditoría). Usa marcadores de posición para datos sensibles; rellénalos solo en tiempo de ejecución. Para el procesamiento de datos regulados, puede que necesites un Acuerdo de Procesamiento de Datos con tu proveedor de IA y una Evaluación de Impacto de Privacidad de Datos.',
+            },
+            {
+              q: '¿Pueden las PYMEs estandarizar los Prompts de Un Solo Paso para procesos repetitivos?',
+              a: 'Sí — esta es una fortaleza central de Un Solo Paso. Estandariza el prompt en tu organización, guárdalo en PromptQuorum y el personal nuevo puede producir outputs de alta calidad (ofertas, informes) sin formación. Esto es especialmente valioso para escalar sin duplicar la plantilla.',
+            },
+            {
+              q: '¿Cuál debería ser mi primer Prompt de Un Solo Paso?',
+              a: 'Empieza con una tarea que realizas regularmente (email, resumen, revisión de código, informe). Escribe un prompt que capture rol, objetivo, contexto, restricciones y formato. Prueba en 3 ejemplos reales. Guárdalo. Esa es tu línea base — mejórala trimestralmente a medida que aprendes qué funciona.',
+            },
+            {
+              q: '¿Puedo usar Un Solo Paso para tareas creativas?',
+              a: 'Sí. Cuantas más restricciones añadas (tono, audiencia, longitud, estructura), mejor. Para trabajo creativo verdaderamente abierto, usa un framework diferente como CRAFT.',
+            },
+            {
+              q: '¿Cómo me ayuda PromptQuorum a usar Un Solo Paso a escala?',
+              a: 'PromptQuorum te permite estructurar los cinco bloques de construcción en un formulario guiado, probar el mismo prompt entre modelos en paralelo, guardar prompts que funcionan como plantillas, compartir plantillas con tu equipo y versionar tus prompts — convirtiendo prompts individuales en activos del equipo.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Lecturas relacionadas',
+          id: 'related-reading',
+          items: [
+            '[Framework CO-STAR](/prompt-engineering/co-star-framework?lang=es) — Para tareas que necesitan adaptación de audiencia y control de tono',
+            '[Framework CRAFT](/prompt-engineering/craft-framework?lang=es) — Cuando necesitas control independiente sobre múltiples variables',
+            '[Prompting Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=es) — Para razonamiento complejo que requiere pensamiento paso a paso',
+            '[Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Mejores prácticas del equipo de Claude',
+            '[Framework SPECS](/prompt-engineering/specs-framework?lang=es) — Cuando necesitas imponer validación estricta de output y restricciones',
+          ],
+        },
+        sources: {
+          title: 'Fuentes',
+          id: 'sources',
+          items: [
+            '[Schulhoff, M., Speziale, M., y otros. "Prompt Injection: A Causal Framework." 2024.](https://arxiv.org/abs/2404.04410) — Cómo el comportamiento del modelo responde a prompts estructurados vs no estructurados.',
+            '[Brown, T. B., Mann, B., Ryder, N., y otros. "Language Models are Few-Shot Learners." OpenAI, 2020.](https://arxiv.org/abs/2005.14165) — Investigación fundamental sobre cómo los modelos procesan instrucciones de un solo turno vs multi-turno.',
+            '[PromptQuorum Testing Database. 2026.](https://www.promptquorum.com) — Benchmarks internos: 38/40 prompts estructurados vs 21/40 prompts vagos en GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro.',
+            '[Anthropic. "Build with Claude: Prompt Engineering Guide." 2026.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Documentación oficial de Claude que recomienda instrucciones completas desde el inicio sobre conversación iterativa.',
+            '[OpenAI. "Prompt Engineering Best Practices." 2024.](https://platform.openai.com/docs/guides/prompt-engineering) — El enfoque de OpenAI para prompts estructurados para GPT-4o y modelos anteriores.',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          { '@type': 'Question', name: '¿En qué se diferencia el Método de Prompt de Un Solo Paso de simplemente dar una instrucción?', acceptedAnswer: { '@type': 'Answer', text: 'Con Un Solo Paso, obtienes consistencia estructural. En lugar de una respuesta de una sola vez, obtienes la misma calidad de resultados cada vez porque el modelo sigue restricciones y formato fijos. Esto hace los resultados comparables entre modelos y reproducibles a lo largo del tiempo.' } },
+          { '@type': 'Question', name: '¿Cuándo debo usar Un Solo Paso en lugar del prompting multi-paso (Chain-of-Thought)?', acceptedAnswer: { '@type': 'Answer', text: 'Usa Un Solo Paso cuando tu objetivo es claro y bien definido. Prefiere el prompting multi-paso para tareas ambiguas o exploratorias donde necesitas ver el proceso de razonamiento del modelo.' } },
+          { '@type': 'Question', name: '¿Puedo usar Un Solo Paso con modelos locales como Ollama o LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, absolutamente. El Método de Prompt de Un Solo Paso funciona con cualquier modelo — GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro o modelos locales via Ollama y LM Studio. La misma estructura única aplica en todas las plataformas.' } },
+          { '@type': 'Question', name: '¿Cuánto tiempo lleva escribir y refinar un buen Prompt de Un Solo Paso?', acceptedAnswer: { '@type': 'Answer', text: 'Típicamente 15-30 minutos para una primera versión sólida. Escribe un borrador, pruébalo en 3-5 ejemplos, refina las partes que no funcionan, luego úsalo. La inversión inicial se recupera rápidamente.' } },
+          { '@type': 'Question', name: '¿Puedo guardar mis Prompts de Un Solo Paso como plantillas en PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Una vez que creas un Prompt de Un Solo Paso que funciona bien para un flujo de trabajo específico, puedes guardarlo como plantilla en PromptQuorum y compartirlo con tu equipo.' } },
+          { '@type': 'Question', name: '¿Y si mi tarea es demasiado compleja para Un Solo Paso?', acceptedAnswer: { '@type': 'Answer', text: 'Si no puedes especificar claramente tu tarea en una sola instrucción, o si realmente necesitas múltiples pasadas del modelo, cambia a APE o CRAFT.' } },
+          { '@type': 'Question', name: '¿Cómo sé si mi Prompt de Un Solo Paso está funcionando bien?', acceptedAnswer: { '@type': 'Answer', text: 'Ejecútalo en 5-10 ejemplos representativos y verifica: (1) ¿Siguen los resultados el formato especificado? (2) ¿Refleja el contenido el rol y tono especificados? (3) ¿Se respetan las restricciones como el recuento de palabras? Si alguno falla, refina y prueba de nuevo.' } },
+          { '@type': 'Question', name: '¿Hay una diferencia de rendimiento entre Un Solo Paso y APE en la misma tarea?', acceptedAnswer: { '@type': 'Answer', text: 'En una tarea simple con un objetivo claro, Un Solo Paso típicamente produce resultados idénticos con una fracción de los tokens. APE añade sobrecarga para mostrar el razonamiento.' } },
+          { '@type': 'Question', name: '¿Cómo me ayuda PromptQuorum a usar Un Solo Paso a escala?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum te permite estructurar los cinco bloques en un formulario guiado, probar el mismo prompt entre modelos en paralelo, guardar prompts como plantillas y compartirlos con tu equipo — convirtiendo prompts individuales en activos del equipo.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Cómo usar el Método de Prompt de Un Solo Paso',
+        description: 'Guía paso a paso para estructurar prompts usando el Método de Un Solo Paso.',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Escribe un prompt único, claro y completo.',
+            text: 'En lugar de múltiples prompts más cortos, crea un único prompt bien estructurado que sirva como el "contrato" entre tú y el modelo. Incluye rol, objetivo, alcance, restricciones y formato de output.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Estructura el prompt con secciones claras.',
+            text: 'Usa encabezados o secciones numeradas: Rol → Objetivo → Alcance → Restricciones → Formato de Output → Ejemplo. Esto hace el prompt escaneable y asegura que el modelo pese todas las partes igualmente.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Prueba tu prompt en ejemplos representativos.',
+            text: 'Ejecútalo en 3-5 entradas diversas. Si la calidad del output varía mucho, refina las restricciones o el ejemplo. Una vez que sea fiable en casos de prueba, aplícalo a tu conjunto de datos completo.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Guarda tu prompt como una plantilla reutilizable.',
+            text: 'Documenta qué campos son marcadores de posición (los rellenas en tiempo de ejecución) y cuáles son instrucciones fijas. Esto lo hace reproducible entre miembros del equipo y herramientas.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Actualiza el prompt cuando surjan nuevos casos límite.',
+            text: 'Después de procesar 100 elementos, descubrirás casos que tu prompt original no anticipó. Documenta estos y actualiza el prompt. Luego reprocesa elementos anteriores para consistencia.',
+          },
+        ],
+      },
+    },
     fr: {
       freshness_tier: 'evergreen',
       theme: 'Frameworks',

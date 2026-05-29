@@ -446,6 +446,220 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
 
+    es: {
+      theme: 'Fundamentals',
+      title: 'Temperatura y Top-P: Controla la creatividad de la IA',
+      intro: 'La temperatura y el top-p controlan lo aventureras o conservadoras que son las elecciones de palabras de la IA. Ajustando estos parámetros, equilibras creatividad versus fiabilidad — los valores más altos producen outputs sorprendentes y variados; los más bajos producen outputs seguros y predecibles.',
+      publishDate: '2026-03-22',
+      seoTitle: 'Temperatura y Top-P 2026: Ajusta la creatividad y precisión de la IA',
+      metaDescription: 'Temperatura 0–2, Top-P 0.1–1.0: Establece la aleatoriedad de la IA con precisión para codificación, resúmenes o brainstorming. Rangos prácticos verificados en ChatGPT, Claude, Gemini.',
+      readTime: '10 min de lectura',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Temperatura y Top-P: Controla la creatividad de la IA',
+        description: 'Aprende cómo la temperatura y el top-p controlan la aleatoriedad de la IA. Configuraciones prácticas para codificación, resúmenes, brainstorming y equilibrar creatividad con fiabilidad.',
+        datePublished: '2026-03-22',
+        dateModified: '2026-03-22',
+        url: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=es',
+        inLanguage: 'es',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        keywords: ['temperatura', 'top-p', 'nucleus sampling', 'aleatoriedad de IA', 'configuración LLM', 'creatividad', 'GPT-4o', 'Claude', 'Gemini'],
+      },
+      gammaEmbedUrl: '/presentations/temperature-and-top-p-static.html',
+      gammaDescription: 'El deck cubre: cómo la temperatura controla el muestreo de probabilidad (rango 0.0–2.0), cómo el nucleus sampling top-p limita la selección de tokens, configuraciones específicas para 6 casos de uso (código, creativo, factual, chat) y una tabla de referencia rápida. Descarga el PDF como tarjeta de referencia de parámetros de temperatura y top-p.',
+      sections: {
+        definition: {
+          title: '¿Qué son la temperatura y el top-p?',
+          content: [
+            '**La temperatura es un dial que hace que el output del modelo sea más aleatorio (más alto) o más determinista (más bajo).** A temperatura 0.0, el modelo siempre elige la siguiente palabra más probable — produciendo un output idéntico en cada ejecución. A temperatura 1.0+, el modelo considera alternativas más arriesgadas, produciendo texto sorprendente y variado.',
+            '**Top-p (nucleus sampling) controla cuántas opciones de palabras probables considera el modelo en cada paso.** En lugar de "qué tan aleatorio", piénsalo como "cuántas opciones plausibles". Con top-p 0.1, el modelo solo considera las opciones más altas hasta que alcanzan el 10% de probabilidad acumulada — estrecho y seguro. Con top-p 0.9, considera un conjunto de palabras posibles mucho más amplio — más libre y variado.',
+            'En términos simples: la temperatura controla "qué tan aventurero", y el top-p controla "cuántas opciones a considerar". Ambos afectan la variedad del output, pero de formas diferentes.',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Funciona con modelos locales',
+              text: 'Los ajustes de temperatura y top-p están disponibles en todas las [herramientas LLM locales](https://www.promptquorum.com/local-llms). Los mismos parámetros, el mismo efecto.'
+            }
+          ],
+        },
+
+        tldr: {
+          title: 'Puntos clave',
+          isTldr: true,
+          items: [
+            '**La temperatura controla la aleatoriedad directamente:** 0.0–0.3 para determinista, 0.4–0.7 para equilibrado, 0.8+ para creativo.',
+            '**El top-p controla el rango de opciones de palabras:** más bajo limita las opciones, más alto las amplía.',
+            '**La mayoría de usuarios debería ajustar uno y mantener el otro en el valor predeterminado.** Ajustar ambos a la vez hace imposible saber qué configuración ayudó.',
+            '**El diseño del prompt sigue siendo más importante que los ajustes de deslizadores.** Corrige primero las instrucciones vagas, luego ajusta los parámetros si es necesario.',
+            '**Los diferentes casos de uso necesitan distintas configuraciones:** el código exige temperatura baja, el brainstorming recompensa valores más altos.',
+          ],
+        },
+
+        promptExample: {
+          title: 'Estructura del prompt + Configuraciones de temperatura',
+          content: [
+            '[Prompt malo] "Escribe algo creativo sobre el otoño."',
+            '[Prompt bueno] "Escribe una descripción metafórica de 100 palabras del otoño como si fueras un poeta. Temperatura: 0.9, top-p: 0.95."',
+          ],
+        },
+
+        notation: {
+          title: 'Notación matemática',
+          content: [
+            'Rango de temperatura: T ∈ [0.0, 2.0]',
+            'Softmax con temperatura: softmax(logit_i / T) = exp(logit_i / T) / Σ(exp(logit_j / T))',
+            'Muestreo top-p: Σ P(token_i) hasta ≥ p, luego muestrea de ese conjunto',
+          ],
+        },
+
+        behavior: {
+          title: 'Cómo cambian el comportamiento de la IA',
+          content: [
+            '**Efectos de la temperatura:**',
+          ],
+        },
+
+        tempTable: {
+          columns: ['Rango de temperatura', 'Comportamiento', 'Ideal para'],
+          rows: [
+            { 'Rango de temperatura': 'Bajo (0.0–0.3)', 'Comportamiento': 'Enfocado, repetitivo, muy estable', 'Ideal para': 'Tareas que requieren la misma respuesta cada vez; riesgo de bucles' },
+            { 'Rango de temperatura': 'Medio (0.4–0.7)', 'Comportamiento': 'Estabilidad y variación equilibradas', 'Ideal para': 'La mayoría de tareas generales; punto de partida recomendado' },
+            { 'Rango de temperatura': 'Alto (0.8–1.0+)', 'Comportamiento': 'Creativo, diverso, sorprendente', 'Ideal para': 'Brainstorming y variaciones; riesgo de alucinaciones' },
+          ],
+        },
+
+        toppBehavior: {
+          content: '**Efectos del top-p:** Bajo (0.1–0.3) crea conjuntos de opciones muy estrechos y outputs muy conservadores. Medio (0.5–0.7) equilibra diversidad con estabilidad. Alto (0.8–1.0) amplía el conjunto de opciones y fomenta la creatividad, similar a la temperatura alta. **Importante:** Muchos proveedores vinculan o limitan estos ajustes. Los modelos GPT de OpenAI a menudo ignoran el top-p si la temperatura está explícitamente establecida. Claude te permite controlar ambos de forma independiente. Siempre revisa la documentación de tu proveedor — los mismos números no significan lo mismo en todos los modelos.',
+        },
+
+        tradeoff: {
+          title: 'Temperatura vs Top-P: ¿Necesitas ambos?',
+          content: '**Ambos ajustes controlan la aleatoriedad, pero la mayoría de usuarios debería ajustar solo uno y mantener el otro en un valor predeterminado razonable.** Cambiar ambos a la vez hace imposible saber qué ajuste produjo el efecto que quieres. Por experiencia tras ajustar miles de prompts: mantén el top-p en un valor predeterminado (p. ej., 0.9–1.0) y solo ajusta la temperatura, a menos que un modelo específico recomiende otra cosa.',
+        },
+
+        strategyTable: {
+          columns: ['Estrategia', 'Temperatura', 'Top-P', 'Cuándo usar'],
+          rows: [
+            { 'Estrategia': 'Modo determinista', 'Temperatura': '0.0–0.2', 'Top-P': '1.0 (predeterminado)', 'Cuándo usar': 'Código, extracción de datos, output de misión crítica' },
+            { 'Estrategia': 'Predeterminado equilibrado', 'Temperatura': '0.5–0.7', 'Top-P': '0.9–1.0', 'Cuándo usar': 'La mayoría de tareas generales, resúmenes, explicaciones' },
+            { 'Estrategia': 'Creativo/brainstorming', 'Temperatura': '0.8–1.0', 'Top-P': '0.9–1.0', 'Cuándo usar': 'Ideación, copy de marketing, variaciones, storytelling' },
+            { 'Estrategia': 'Producción de alta estabilidad', 'Temperatura': '0.0–0.3', 'Top-P': '0.95', 'Cuándo usar': 'Salud, finanzas, legal, crítico para la seguridad' },
+          ],
+        },
+
+        useCases: {
+          title: 'Configuraciones recomendadas por caso de uso',
+          items: [
+            '**Codificación, refactoring, corrección de errores:** Temperatura 0.1–0.3, Top-P 0.95. La sintaxis debe ser correcta, la creatividad distrae. Las configuraciones más bajas evitan nombres de funciones alucinados o defectos lógicos.',
+            '**Resúmenes y explicaciones:** Temperatura 0.4–0.6, Top-P 0.9. Quieres claridad y consistencia, pero algo de variación en la formulación está bien. La temperatura baja puede hacer los resúmenes mecánicos.',
+            '**Brainstorming, copy de marketing, variaciones creativas:** Temperatura 0.7–1.0, Top-P 1.0. Las configuraciones más altas fomentan combinaciones inesperadas y formulaciones novedosas. Necesitas filtrar más outputs, pero obtienes ideas más originales.',
+            '**Extracción de datos y output estructurado:** Temperatura 0.0–0.2, Top-P 0.95. El formato debe ser exacto. La mayor aleatoriedad invita a errores de parsing y campos faltantes.',
+            '**Escritura de texto largo (ensayos, posts de blog):** Temperatura 0.6–0.8, Top-P 0.9–1.0. Empieza aquí y ajusta según el feedback. Si el output parece genérico, sube la temperatura; si divaga o alucina, bájala.',
+            '**Preguntas y respuestas factuales (sin grounding):** Temperatura 0.3–0.5, Top-P 0.9. Las configuraciones moderadas reducen las alucinaciones y mantienen las respuestas naturales.',
+          ],
+        },
+
+        promptsAndParams: {
+          title: 'Cómo los prompts y los parámetros trabajan juntos',
+          content: [
+            '**El diseño del prompt sigue siendo más importante que los ajustes de deslizadores.** Una instrucción imprecisa a temperatura 0.2 todavía produce una respuesta deficiente — solo una respuesta deficiente consistente. Un prompt claro y bien estructurado a cualquier temperatura produce mejores resultados que un prompt deficiente con configuraciones perfectas.',
+            'El flujo de trabajo correcto es: (1) Crea el prompt con una tarea clara, contexto, restricciones y formato de output. (2) Prueba a tu temperatura/top-p objetivo. (3) Ajusta los diales solo cuando necesites más o menos variación después de tener un prompt sólido.',
+            'El mismo prompt a diferentes temperaturas produce estilos muy diferentes. A temperatura 0.2, los outputs son seguros y directos. A temperatura 0.8, los outputs son creativos y poéticos. Ninguno es "mejor" — depende de la voz de tu marca y tu caso de uso.',
+          ],
+        },
+
+        example: {
+          title: '[Prompt de ejemplo]',
+          blockquote: `Escribe un eslogan de producto corto y conciso para una app de productividad. Mantenlo por debajo de 10 palabras.`,
+        },
+
+        lowTemp: {
+          title: 'A temperatura 0.2:',
+          blockquote: `"Haz más en menos tiempo."`,
+        },
+
+        highTemp: {
+          title: 'A temperatura 0.8:',
+          blockquote: `"Del caos a la claridad: donde los momentos se convierten en impulso."`,
+        },
+
+        risk: {
+          title: 'Cuándo la mayor creatividad se vuelve arriesgada',
+          content: [
+            '**Los valores más altos de temperatura y top-p aumentan las alucinaciones, las tangentes fuera del tema y la deriva de estilo — especialmente en tareas factuales.** Sé conservador (temp 0.0–0.5) para: código que va a producción (las APIs alucinadas rompen sistemas), consejos médicos (la información incorrecta daña), finanzas y legal (la precisión es obligatoria) y decisiones críticas para la seguridad (los errores tienen consecuencias).',
+            'Para tareas fundamentadas en hechos, considera combinar temperatura baja con RAG o restricciones de fuente explícitas para reducir aún más los errores.',
+          ],
+        },
+
+        promptquorum: {
+          title: 'Cómo PromptQuorum te ayuda a ajustar temperatura y top-p',
+          content: [
+            'Normalmente, probar configuraciones de temperatura y top-p significa ejecutar el mismo prompt muchas veces en varios modelos, registrando y comparando outputs manualmente — tedioso y difícil de rastrear. PromptQuorum optimiza este flujo de trabajo.',
+            '**Comparaciones multi-modelo:** Envía un prompt con diferentes configuraciones de temperatura/top-p a más de 25 modelos (GPT-4o, Claude Opus 4.7, Gemini 1.5 Pro, Mistral, modelos Ollama locales) en un solo envío. Ve inmediatamente qué modelo permanece estable a mayor temperatura y cuál produce el mejor output creativo en tu configuración objetivo.',
+            '**Consenso y puntuación:** Visualiza todos los outputs lado a lado con análisis Quorum que evalúa el riesgo de alucinación, la consistencia de estilo y la relevancia. Elige la combinación de modelo + configuración que mejor se adapte al equilibrio creatividad-fiabilidad de tu tarea.',
+          ],
+        },
+
+        recipes: {
+          title: 'Recetas de inicio rápido',
+          content: 'Úsalas como puntos de partida para tu tarea:',
+        },
+
+        recipeSafe: {
+          items: [
+            '**Modo factual seguro:** Temperatura 0.2, Top-P 0.95 | Ideal para Q&A, resúmenes, extracción de datos, tareas basadas en hechos | Output: Fiable, consistente, mínima alucinación',
+            '**Modo equilibrado predeterminado:** Temperatura 0.5, Top-P 0.9 | Ideal para la mayoría de tareas generales, explicaciones, escritura general | Output: Natural, estable, pero con algo de variación',
+            '**Modo creativo de brainstorming:** Temperatura 0.8, Top-P 1.0 | Ideal para ideación, copy de marketing, storytelling, variaciones | Output: Diverso, sorprendente, muchas opciones para filtrar',
+            '**Modo de respuesta breve:** Temperatura 0.3, Top-P 0.95 | Ideal para respuestas directas, decisiones rápidas, outputs concisos | Output: Rápido, directo, mínima elaboración',
+            '**Modo experimental:** Temperatura 1.0, Top-P 1.0 | Ideal para explorar el comportamiento del modelo, entender límites, investigación | Output: Impredecible, máxima variación',
+          ],
+        },
+
+        mistakes: {
+          title: 'Errores comunes con temperatura y top-p',
+          items: [
+            '**Girar ambos al máximo y esperar fiabilidad.** Temperatura alta + top-p alto = máxima aleatoriedad. Solo haz esto si estás haciendo brainstorming o experimentando.',
+            '**Cambiar ambos diales al mismo tiempo.** No sabrás qué ajuste ayudó o dañó. Cambia uno, observa, luego cambia el otro si es necesario.',
+            '**Intentar arreglar un prompt deficiente con deslizadores.** Una instrucción imprecisa a cualquier temperatura todavía produce outputs deficientes. Arregla primero el prompt.',
+            '**Olvidar que los modelos interpretan los mismos valores de forma diferente.** Temperatura 0.7 en Claude se siente diferente a 0.7 en GPT-4o. Siempre prueba tu modelo real.',
+            '**No probar suficientes ejecuciones.** Un output a temperatura 0.5 podría ser un valor atípico. Ejecuta al menos 3–5 veces para ver el comportamiento típico.',
+            '**Poner temperatura en 0 y esperar precisión perfecta.** La temperatura baja reduce la aleatoriedad, pero no elimina las alucinaciones. Las alucinaciones provienen de lagunas en los datos de entrenamiento, no del muestreo aleatorio.',
+            '**Ignorar por completo que tu proveedor puede ignorar el top-p.** Algunos modelos lo hacen; otros no. Revisa la documentación para evitar desperdiciar tiempo ajustando un dial deshabilitado.',
+          ],
+        },
+
+        faqs: {
+          faqs: [
+            { q: '¿Debo ajustar primero la temperatura o el top-p?', a: 'La temperatura. Tiene un efecto más obvio. Mantén el top-p en un valor predeterminado (0.9–1.0) hasta que tengas una idea de lo que la temperatura hace para tu tarea, luego ajusta el top-p solo si es necesario.' },
+            { q: '¿Por qué un modelo ignora mi configuración de temperatura?', a: 'Algunos modelos limitan o deshabilitan la temperatura y el top-p en ciertas configuraciones (p. ej., OpenAI ignora el top-p cuando la temperatura se establece en 0.0). Revisa la documentación de tu proveedor. Con la vista multi-modelo de PromptQuorum, lo notarás inmediatamente.' },
+            { q: '¿Puedo establecer la temperatura en 0 para garantizar la corrección?', a: 'No. Temperatura 0.0 significa "elegir siempre la palabra más probable", lo que es determinista pero no siempre correcto. Las alucinaciones tratan de lagunas en los datos de entrenamiento y claridad de la tarea, no del muestreo aleatorio. Combina temperatura baja con prompts claros y grounding para mejor fiabilidad.' },
+            { q: '¿Por qué sigo viendo alucinaciones con temperatura baja?', a: 'Las alucinaciones ocurren cuando los datos de entrenamiento del modelo tienen lagunas o la tarea es ambigua — no solo por el muestreo aleatorio. Una configuración de temperatura baja será consistente en sus alucinaciones, pero no las eliminará. Usa RAG o restricciones de fuente explícitas para reducirlas.' },
+            { q: '¿Difieren las configuraciones recomendadas entre GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro?', a: 'Ligeramente. Los tres se comportan razonablemente con temperatura 0.5–0.7, pero su tolerancia a temperaturas más altas varía. GPT-4o puede ir más alto sin volverse incoherente; Claude Opus 4.7 es muy estable; Gemini 1.5 Pro es más experimental. Prueba tu modelo real.' },
+            { q: '¿Cuántas ejecuciones necesito para comparar configuraciones de forma justa?', a: 'Al menos 3–5 por configuración para ver el comportamiento típico. Más si trabajas con temperaturas más altas donde la varianza del output es alta.' },
+          ],
+        },
+
+        relatedReading: {
+          content: [
+            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — por qué la estructura del prompt importa más que los parámetros',
+            '[Los 5 bloques de construcción que todo prompt necesita](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — cómo estructurar los prompts antes de ajustar los parámetros',
+            '[Alucinaciones de IA: Por qué la IA inventa cosas](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=es) — por qué la temperatura más baja no elimina las alucinaciones',
+          ],
+        },
+
+        sources: {
+          content: [
+            '[OpenAI, 2024. "API reference: Temperature and top_p parameters"](https://platform.openai.com/docs/api-reference/chat/create) — documentación oficial de rangos de parámetros y efectos',
+            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) — investigación sobre nucleus sampling (top-p) y sus efectos en la calidad del texto',
+            '[Anthropic, 2024. "Claude: How to Work with Prompts"](https://docs.anthropic.com/) — guía específica de Claude sobre temperatura y ajuste de parámetros',
+          ],
+        },
+      },
+    },
+
     fr: {
       theme: 'Fondamentaux',
       title: 'Température et Top-P : Contrôle la créativité de l\'IA',

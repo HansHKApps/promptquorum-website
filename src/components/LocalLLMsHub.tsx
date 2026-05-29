@@ -9,8 +9,8 @@ import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
-const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新' }
-const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新' }
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO' }
 
 function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
@@ -36,6 +36,7 @@ const HUB_HERO_TITLE: Record<string, string> = {
   fr: 'Meilleurs LLMs Locaux Mai 2026 : Ollama, LM Studio & Guide VRAM',
   ja: '2026年5月最高のローカルLLM：Ollama・LM Studio・VRAMガイド',
   zh: '2026年5月最佳本地LLM：Ollama、LM Studio与VRAM硬件指南',
+  es: 'Mejores LLMs Locales Mayo 2026: Ollama, LM Studio, Hardware y Guía de VRAM',
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
@@ -44,6 +45,7 @@ const HUB_HERO_DESC: Record<string, string> = {
   fr: 'Meilleurs LLMs locaux pour mai 2026 — modèles Ollama récents (Llama 4 Scout, Qwen3, Gemma 3), comparaison LM Studio vs Jan.ai, exigences VRAM/GPU (RTX 3060 inclus), commandes pull et recommandations matérielles débutants.',
   ja: '2026年5月最新ローカルLLM：Ollamaおすすめモデル（Llama 4 Scout・Qwen3・Gemma 3）、LM Studio vs Jan.ai比較、RTX 3060などVRAM/GPU必要スペック、pullコマンド付き完全ガイド。',
   zh: '2026年5月最佳本地LLM：最新Ollama模型（Llama 4 Scout、Qwen3、Gemma 3）、LM Studio vs Jan.ai对比、RTX 3060等VRAM/GPU需求、pull命令及新手硬件指南。',
+  es: 'Mejores LLMs locales para mayo de 2026 — modelos Ollama recientes (Llama 4 Scout, Qwen3, Gemma 3), comparativa LM Studio vs Jan.ai, requisitos VRAM/GPU (RTX 3060 incluida), comandos pull y recomendaciones de hardware para principiantes.',
 }
 
 const HUB_NEW_APRIL_HEADING: Record<string, string> = {
@@ -52,6 +54,7 @@ const HUB_NEW_APRIL_HEADING: Record<string, string> = {
   fr: 'Nouveautés de mai 2026',
   ja: '2026年5月の新着情報',
   zh: '2026年5月新增内容',
+  es: 'Novedades de mayo de 2026',
 }
 
 const HUB_NEW_APRIL_MODELS: Record<string, { name: string; pull: string; vram: string; note: string }[]> = {
@@ -85,6 +88,12 @@ const HUB_NEW_APRIL_MODELS: Record<string, { name: string; pull: string; vram: s
     { name: 'Gemma 3 12B', pull: 'ollama pull gemma3:12b', vram: '8 GB', note: 'Google。强大推理能力，RTX 3060可运行' },
     { name: 'DeepSeek-R2 8B', pull: 'ollama pull deepseek-r2:8b', vram: '5 GB', note: 'DeepSeek。数学逻辑最强，8 GB RAM' },
   ],
+  es: [
+    { name: 'Llama 4 Scout 17B', pull: 'ollama pull llama4:scout', vram: '10 GB', note: 'Meta. Mejor calidad global con 12 GB VRAM' },
+    { name: 'Qwen3 8B', pull: 'ollama pull qwen3:8b', vram: '5 GB', note: 'Alibaba. Top código + multilingüe, GPU 8 GB' },
+    { name: 'Gemma 3 12B', pull: 'ollama pull gemma3:12b', vram: '8 GB', note: 'Google. Razonamiento potente, compatible RTX 3060' },
+    { name: 'DeepSeek-R2 8B', pull: 'ollama pull deepseek-r2:8b', vram: '5 GB', note: 'DeepSeek. Mejor para matemáticas y lógica, 8 GB RAM' },
+  ],
 }
 
 const HUB_NEW_APRIL_COLS: Record<string, string[]> = {
@@ -93,6 +102,7 @@ const HUB_NEW_APRIL_COLS: Record<string, string[]> = {
   fr: ['Modèle', 'Commande pull', 'VRAM', 'Notes'],
   ja: ['モデル', 'Pullコマンド', 'VRAM', 'メモ'],
   zh: ['模型', 'Pull命令', 'VRAM', '备注'],
+  es: ['Modelo', 'Comando pull', 'VRAM', 'Notas'],
 }
 
 const HUB_COMPARISON_HEADING: Record<string, string> = {
@@ -101,6 +111,7 @@ const HUB_COMPARISON_HEADING: Record<string, string> = {
   fr: 'Ollama vs LM Studio vs Jan.ai : lequel utiliser ?',
   ja: 'Ollama vs LM Studio vs Jan.ai：どれを使うべきか？',
   zh: 'Ollama vs LM Studio vs Jan.ai：该用哪个？',
+  es: 'Ollama vs LM Studio vs Jan.ai: ¿Cuál deberías usar?',
 }
 
 const HUB_COMPARISON_ROWS: Record<string, { feature: string; ollama: string; lmstudio: string; janai: string }[]> = {
@@ -139,6 +150,13 @@ const HUB_COMPARISON_ROWS: Record<string, { feature: string; ollama: string; lms
     { feature: '最适合', ollama: '开发者、自动化', lmstudio: '初学者、GUI用户', janai: '隐私优先聊天' },
     { feature: '设置时间', ollama: '2分钟', lmstudio: '5分钟', janai: '5分钟' },
   ],
+  es: [
+    { feature: 'Interfaz', ollama: 'Terminal (CLI)', lmstudio: 'GUI de escritorio', janai: 'GUI escritorio + chat' },
+    { feature: 'Endpoint API', ollama: 'localhost:11434', lmstudio: 'localhost:1234', janai: 'localhost:1337' },
+    { feature: 'Explorador de modelos', ollama: 'Solo CLI', lmstudio: 'Integrado', janai: 'Integrado' },
+    { feature: 'Ideal para', ollama: 'Desarrolladores, automatización', lmstudio: 'Principiantes, usuarios GUI', janai: 'Chat enfocado en privacidad' },
+    { feature: 'Tiempo de configuración', ollama: '2 min', lmstudio: '5 min', janai: '5 min' },
+  ],
 }
 
 const HUB_COMPARISON_COLS: Record<string, string[]> = {
@@ -147,6 +165,7 @@ const HUB_COMPARISON_COLS: Record<string, string[]> = {
   fr: ['Fonctionnalité', 'Ollama', 'LM Studio', 'Jan.ai'],
   ja: ['機能', 'Ollama', 'LM Studio', 'Jan.ai'],
   zh: ['功能', 'Ollama', 'LM Studio', 'Jan.ai'],
+  es: ['Característica', 'Ollama', 'LM Studio', 'Jan.ai'],
 }
 
 const HUB_CTA_TEXT: Record<string, string> = {
@@ -155,6 +174,7 @@ const HUB_CTA_TEXT: Record<string, string> = {
   fr: 'PromptQuorum se connecte à votre LLM local (Ollama, LM Studio, Jan AI) et envoie votre prompt simultanément à plus de 25 modèles cloud — comparez les résultats locaux vs cloud en une vue.',
   ja: 'PromptQuorumはあなたのローカルLLM（Ollama、LM Studio、Jan AI）に接続し、プロンプトを25以上のクラウドモデルに同時に送信します。ローカルとクラウドの結果を一画面で比較できます。',
   zh: 'PromptQuorum连接到您的本地LLM（Ollama、LM Studio、Jan AI），并同时将提示词发送给25+个云模型——在一个视图中比较本地与云端结果。',
+  es: 'PromptQuorum se conecta a tu LLM local (Ollama, LM Studio, Jan AI) y envía tu prompt simultáneamente a más de 25 modelos cloud — compara resultados locales vs cloud en una sola vista.',
 }
 
 const HUB_CTA_BUTTON: Record<string, string> = {
@@ -163,10 +183,11 @@ const HUB_CTA_BUTTON: Record<string, string> = {
   fr: 'Essayer PromptQuorum gratuitement →',
   ja: 'PromptQuorumを無料で試す →',
   zh: '免费试用PromptQuorum →',
+  es: 'Probar PromptQuorum gratis →',
 }
 
 const HUB_NAV_HOME: Record<string, string> = {
-  en: '← Home', de: '← Startseite', fr: '← Accueil', ja: '← ホーム', zh: '← 主页',
+  en: '← Home', de: '← Startseite', fr: '← Accueil', ja: '← ホーム', zh: '← 主页', es: '← Inicio',
 }
 
 const THEME_LABELS: Record<string, Record<string, string>> = {
@@ -176,6 +197,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Premiers pas : Comment exécuter votre premier LLM local ?',
     ja: 'はじめに：最初のローカルLLMをどう実行するか？',
     zh: '入门：如何运行您的第一个本地LLM？',
+    es: 'Primeros pasos: ¿Cómo ejecutar tu primer LLM local?',
   },
   'best-models': {
     en: 'Models by Use Case: Which Local LLM Should You Actually Use?',
@@ -183,6 +205,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Modèles par cas d\'usage : Quel LLM local devriez-vous vraiment utiliser ?',
     ja: 'ユースケース別モデル：実際にどのローカルLLMを使うべきか？',
     zh: '按用例分类的模型：您实际上应该使用哪个本地LLM？',
+    es: 'Modelos por caso de uso: ¿Qué LLM local deberías usar?',
   },
   'tools-interfaces': {
     en: 'Tools & Interfaces: Which Software Gets You Running Fastest?',
@@ -190,6 +213,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Outils et interfaces : Quel logiciel vous fait démarrer le plus vite ?',
     ja: 'ツールとインターフェース：どのソフトウェアが最も速く起動できるか？',
     zh: '工具与界面：哪款软件让您启动最快？',
+    es: 'Herramientas e interfaces: ¿Qué software te pone en marcha más rápido?',
   },
   'hardware-performance': {
     en: 'Hardware & Performance: What Do You Actually Need to Run Local LLMs?',
@@ -197,6 +221,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Matériel et performances : De quoi avez-vous vraiment besoin pour les LLMs locaux ?',
     ja: 'ハードウェアとパフォーマンス：ローカルLLMに本当に必要なものは？',
     zh: '硬件与性能：运行本地LLM您真正需要什么？',
+    es: 'Hardware y rendimiento: ¿Qué necesitas realmente para LLMs locales?',
   },
   'advanced-techniques': {
     en: 'Advanced Techniques: How Do You Go Beyond Basic Chat?',
@@ -204,6 +229,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Techniques avancées : Comment aller au-delà du chat de base ?',
     ja: '高度なテクニック：基本的なチャット以上のことをどうするか？',
     zh: '高级技术：如何超越基本聊天？',
+    es: 'Técnicas avanzadas: ¿Cómo ir más allá del chat básico?',
   },
   enterprise: {
     en: 'Enterprise: How Do Organizations Deploy Local LLMs at Scale?',
@@ -211,6 +237,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Entreprise : Comment les organisations déploient-elles des LLMs locaux à grande échelle ?',
     ja: 'エンタープライズ：組織はローカルLLMをどのようにスケールデプロイするか？',
     zh: '企业：组织如何大规模部署本地LLM？',
+    es: 'Empresas: ¿Cómo despliegan organizaciones LLMs locales a escala?',
   },
   'gpu-buying-guides': {
     en: 'GPU Buying Guides: Which GPU Should You Buy for Local LLMs?',
@@ -218,6 +245,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Guides d\'achat de GPU : Quelle GPU devriez-vous acheter pour les LLMs locaux ?',
     ja: 'GPU購入ガイド：ローカルLLM用にどのGPUを購入すべきか？',
     zh: 'GPU购买指南：您应该为本地LLM购买哪个GPU？',
+    es: 'Guías de compra de GPU: ¿Qué GPU comprar para LLMs locales?',
   },
   'hardware-setups': {
     en: 'Hardware Setups: What Computer Do You Need for Local LLMs?',
@@ -225,6 +253,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Configurations matérielles : Quel ordinateur avez-vous besoin pour les LLMs locaux ?',
     ja: 'ハードウェアセットアップ：ローカルLLM用にどのコンピュータが必要か？',
     zh: '硬件设置：为本地LLM您需要什么计算机？',
+    es: 'Configuraciones de hardware: ¿Qué equipo necesitas para LLMs locales?',
   },
   'privacy-business': {
     en: 'Privacy & Business: How Do You Secure Local LLMs for Organizations?',
@@ -232,6 +261,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Confidentialité & Entreprise : Comment sécuriser les LLMs locaux pour les organisations ?',
     ja: 'プライバシーとビジネス：組織向けにローカルLLMをどのように保護するか？',
     zh: '隐私与业务：您如何为组织保护本地LLM？',
+    es: 'Privacidad y empresa: ¿Cómo asegurar LLMs locales para organizaciones?',
   },
   'cost-comparisons': {
     en: 'Cost & Comparisons: Local vs Cloud vs Subscriptions—What\'s Cheaper?',
@@ -239,6 +269,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     fr: 'Coûts et comparaisons : Local vs Cloud vs Abonnements—Qu\'est-ce qui est moins cher ?',
     ja: 'コストと比較：ローカルvsクラウドvsサブスク—どれが安いか？',
     zh: '成本与比较：本地vs云vs订阅—哪个更便宜？',
+    es: 'Costes y comparativas: Local vs cloud vs suscripciones — ¿qué es más barato?',
   },
 }
 
@@ -249,6 +280,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'De zéro à prêt en moins de 10 minutes. Guides d\'installation spécifiques à l\'OS, démarrage avec les premiers modèles et liste de contrôle de configuration respectueuse de la vie privée. Ollama s\'installe en une seule commande sur macOS, Windows et Linux. Pour 8 GB de RAM, commencez avec Llama 3.2 3B (Q4, ~2 GB).',
     ja: 'ゼロから起動まで10分以下。OS固有のインストールガイド、最初のモデルチュートリアル、プライバシーファースト設定チェックリスト。OllamaはmacOS、Windows、Linuxで1つのコマンドでインストールできます。8 GB RAMの場合、Llama 3.2 3B（Q4、約2 GB）から始めてください。',
     zh: '从零开始到运行，只需10分钟以内。提供特定操作系统的安装指南、首次模型演练和隐私优先的设置检查清单。Ollama可在macOS、Windows和Linux上用一条命令安装。8 GB RAM时，从Llama 3.2 3B（Q4，约2 GB）开始。',
+    es: 'De cero a funcionando en menos de 10 minutos. Guías de instalación por sistema operativo, primeros pasos con modelos y lista de verificación de configuración orientada a la privacidad. Ollama se instala con un solo comando en macOS, Windows y Linux. Con 8 GB de RAM, empieza con Llama 3.2 3B (Q4, ~2 GB) usando `ollama pull llama3.2:3b`.',
   },
   'best-models': {
     en: 'Model rankings, benchmark comparisons, and use-case winners. As of May 2026, the top locally-runnable models are Llama 4 Scout 17B (best overall, MoE architecture), Qwen3 (best coding), and Gemma 3 12B (best at 16 GB RAM). All ranked by MMLU, HumanEval, and real hardware tests.',
@@ -256,6 +288,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'Critiques de modèles, comparaisons de références, gagnants par cas d\'usage et guides de quantification pour Llama 4 Scout, Qwen3, DeepSeek, Gemma 3 et modèles 70B+. Qwen3-Coder domine les benchmarks de code ; Mistral 7B est le plus rapide pour les configurations RAM limitées. Chaque examen inclut les exigences VRAM exactes et les scores de benchmark par rapport à GPT-4o.',
     ja: 'Llama 4 Scout、Qwen3、DeepSeek、Gemma 3、70B+モデルのモデルレビュー、ベンチマーク比較、ユースケース勝者、量子化ガイド。Qwen3-Coderはコーディングベンチマークをリード；Mistral 7BはRAM制約されたセットアップで最速。各レビューには正確なVRAM要件とGPT-4oに対するベンチマークスコアが含まれます。',
     zh: 'Llama 4 Scout、Qwen3、DeepSeek、Gemma 3和70B+模型的模型评论、基准比较、使用案例获奖者和量化指南。Qwen3-Coder在编码基准中领先；Mistral 7B在RAM受限的设置中速度最快。每篇评论都包含确切的VRAM要求和与GPT-4o相比的基准分数。',
+    es: 'Clasificaciones de modelos, comparativas de benchmarks y ganadores por caso de uso. A mayo de 2026, los principales modelos ejecutables localmente son Llama 4 Scout 17B (mejor global, arquitectura MoE), Qwen3 (mejor en código) y Gemma 3 12B (mejor con 16 GB RAM). Todos clasificados por MMLU, HumanEval y pruebas reales de hardware.',
   },
   'tools-interfaces': {
     en: 'Ollama and LM Studio each run 200+ models on macOS, Windows, and Linux. Ollama is CLI-first with a production REST API; LM Studio provides a graphical interface with a built-in model browser. Guides cover both tools plus vLLM, llama.cpp, Open WebUI, and IDE integrations.',
@@ -263,6 +296,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'Comparaisons de logiciels, comparaisons d\'interface graphique, configurations d\'API et guides frontaux — Ollama, LM Studio, OpenWebUI, vLLM, llama.cpp, et plus. Ollama expose une API REST compatible avec OpenAI à `localhost:11434` — remplacement prêt à l\'emploi des SDK cloud sans modification de code. LM Studio ajoute une interface graphique et un navigateur de modèles pour les utilisateurs non techniques.',
     ja: 'ソフトウェアショーダウン、GUIの比較、APIセットアップ、フロントエンドガイド — Ollama、LM Studio、OpenWebUI、vLLM、llama.cpp、その他。OllamaはOpenAI互換のREST APIを`localhost:11434`で公開 — コード変更なしのクラウドSDKの置き換え。LM Studioは非技術ユーザー向けのGUIとモデルブラウザを追加します。',
     zh: '软件对比、GUI比较、API设置和前端指南 — Ollama、LM Studio、OpenWebUI、vLLM、llama.cpp等。Ollama在`localhost:11434`上公开OpenAI兼容的REST API — 无需代码更改即可替代云SDK。LM Studio为非技术用户添加GUI和模型浏览器。',
+    es: 'Ollama y LM Studio ejecutan más de 200 modelos en macOS, Windows y Linux. Ollama es primero en CLI con una API REST de producción; LM Studio proporciona una interfaz gráfica con explorador de modelos integrado. Las guías cubren ambas herramientas, vLLM, llama.cpp, Open WebUI e integraciones con IDEs.',
   },
   'hardware-performance': {
     en: 'VRAM is the primary constraint for local LLMs. A 7B model at Q4_K_M needs 4.7 GB; a 70B model needs 40 GB. Guides cover GPU selection (RTX 4070 Ti to RTX 5090), Apple Silicon, budget builds, and VRAM calculation for any model. See also: **[Fastest Local LLMs for Low-End PCs](/local-llms/fastest-local-llms-low-end-pcs)** for CPU-only, 4 GB, and 8 GB VRAM speed benchmarks.',
@@ -270,6 +304,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'Recommandations matérielles réelles, mathématiques VRAM, benchmarks GPU, compromis de quantification et astuces d\'optimisation pour RTX 5090, 4090, Mac Silicon et configurations budget. RTX 4060 (8 GB VRAM, ~$300) exécute les modèles 7B à 30+ tokens/sec. Apple Silicon M2 gère 7B–13B nativement via Metal sans GPU discret requis.',
     ja: '実際のハードウェア推奨事項、VRAM数学、GPUベンチマーク、量子化トレードオフ、RTX 5090、4090、Mac Silicon、予算ビルドの最適化トリック。RTX 4060（8 GB VRAM、約$300）は7Bモデルを30+トークン/秒で実行します。Apple Silicon M2はMetal経由で7B–13Bをネイティブに処理し、ディスクリートGPUは不要です。',
     zh: '真实的硬件建议、VRAM数学、GPU基准、量化权衡以及RTX 5090、4090、Mac Silicon和预算构建的优化技巧。RTX 4060（8 GB VRAM，约$300）以30+个令牌/秒运行7B模型。Apple Silicon M2通过Metal本机处理7B–13B，无需独立GPU。',
+    es: 'La VRAM es la restricción principal para LLMs locales. Un modelo 7B en Q4_K_M necesita 4,7 GB; un modelo 70B necesita 40 GB. Las guías cubren selección de GPU (RTX 4070 Ti a RTX 5090), Apple Silicon, builds económicos y cálculo de VRAM para cualquier modelo.',
   },
   'advanced-techniques': {
     en: 'Fine-tuning, RAG pipelines, quantization deep-dives, distillation, model merging, and prompt optimization for production use. LoRA reduces fine-tuning VRAM requirements from 24 GB to 8 GB. QLoRA cuts it further to 4 GB. Local RAG workflows keep sensitive data on-premises while maintaining search quality.',
@@ -277,6 +312,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'Fine-tuning, pipelines RAG, plongées approfondies de quantification, distillation, fusion de modèles et optimisation de prompts pour utilisation en production. LoRA réduit les besoins en VRAM du fine-tuning de 24 GB à 8 GB. QLoRA le réduit davantage à 4 GB. Les workflows RAG locaux maintiennent les données sensibles sur site tout en maintenant la qualité de la recherche.',
     ja: 'ファインチューニング、RAGパイプライン、量子化の深掘り、蒸留、モデルマージング、本番環境用のプロンプト最適化。LoRAはファインチューニングVRAM要件を24 GBから8 GBに削減します。QLоRAはさらに4 GBに削減します。ローカルRAGワークフローは、検索品質を維持しながら機密データをオンプレミスに保ちます。',
     zh: '微调、RAG管道、量化深度探讨、蒸馏、模型合并以及生产用途的提示词优化。LoRA将微调VRAM要求从24 GB降至8 GB。QLoRA进一步将其降至4 GB。本地RAG工作流在保持搜索质量的同时将敏感数据保留在本地。',
+    es: 'Fine-tuning, pipelines RAG, análisis profundo de cuantización, destilación, fusión de modelos y optimización de prompts para uso en producción. LoRA reduce los requisitos de VRAM para fine-tuning de 24 GB a 8 GB. QLoRA los reduce aún más a 4 GB. Los flujos de trabajo RAG locales mantienen los datos sensibles en local sin perder calidad de búsqueda.',
   },
   'enterprise': {
     en: 'Multi-GPU setups, inference optimization, model serving frameworks (vLLM, TensorRT-LLM), monitoring and observability, cost audits, and regulatory compliance. Local LLMs eliminate cross-border data transfer, satisfy GDPR Article 28, and reduce licensing costs 40–80% versus SaaS.',
@@ -284,6 +320,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'Configurations multi-GPU, optimisation de l\'inférence, cadres de service de modèles (vLLM, TensorRT-LLM), surveillance et observabilité, audits de coûts et conformité réglementaire. Les LLMs locaux éliminent le transfert de données transfrontalières, satisfont l\'article 28 du RGPD et réduisent les coûts de licences de 40–80% par rapport à SaaS.',
     ja: 'マルチGPUセットアップ、推論最適化、モデル提供フレームワーク（vLLM、TensorRT-LLM）、監視と可観測性、コスト監査および規制準拠。ローカルLLMは国境を超えたデータ転送を排除し、GDPR第28条を満たし、SaaSと比較してライセンス費用を40–80%削減します。',
     zh: '多GPU设置、推理优化、模型服务框架（vLLM、TensorRT-LLM）、监控和可观测性、成本审计和法规合规。本地LLM消除跨境数据转移、满足GDPR第28条，并相比SaaS将许可成本降低40–80%。',
+    es: 'Configuraciones multi-GPU, optimización de inferencia, frameworks de servicio de modelos (vLLM, TensorRT-LLM), monitorización y observabilidad, auditorías de costes y cumplimiento normativo. Los LLMs locales eliminan las transferencias de datos transfronterizas, cumplen el Artículo 28 del GDPR y reducen los costes de licencias un 40–80% frente a SaaS.',
   },
   'gpu-buying-guides': {
     en: 'GPU selection by budget and use case, cost per token, power efficiency, thermal design, second-hand marketplace comparisons, and warranty trade-offs. RTX 4090 (~$1600) handles 70B models; RTX 4080 (~$800) runs 13B–20B; RTX 4060 (~$300) is best value for 7B models.',
@@ -291,6 +328,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'Sélection GPU par budget et cas d\'usage, coût par token, efficacité énergétique, conception thermique, comparaisons du marché d\'occasion et compromis de garantie. RTX 4090 (~$1600) gère les modèles 70B ; RTX 4080 (~$800) exécute 13B–20B ; RTX 4060 (~$300) est le meilleur rapport pour les modèles 7B.',
     ja: '予算とユースケース別のGPU選択、トークンあたりのコスト、エネルギー効率、熱設計、中古市場の比較、保証トレードオフ。RTX 4090（~$1600）は70Bモデルを処理；RTX 4080（~$800）は13B–20Bを実行；RTX 4060（~$300）は7Bモデルに最適な値。',
     zh: '按预算和使用案例的GPU选择、每个令牌的成本、能源效率、热设计、二手市场比较和保修权衡。RTX 4090（~$1600）处理70B模型；RTX 4080（~$800）运行13B–20B；RTX 4060（~$300）是7B模型的最佳性价比。',
+    es: 'Selección de GPU por presupuesto y caso de uso, coste por token, eficiencia energética, diseño térmico, comparativas del mercado de segunda mano y compromisos de garantía. RTX 4090 (~$1600) gestiona modelos 70B; RTX 4080 (~$800) ejecuta 13B–20B; RTX 4060 (~$300) es la mejor relación calidad-precio para modelos 7B.',
   },
   'hardware-setups': {
     en: 'Complete build guides for laptop, desktop, workstation, and server deployments. From single-GPU setups to multi-node clusters. Budget builds ($500–$1500), mid-range ($1500–$5000), and enterprise ($5000+) configurations with exact part lists and estimated throughput.',
@@ -298,6 +336,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'Guides complets pour les déploiements portables, de bureau, de station de travail et de serveur. Des configurations GPU simples aux grappes multi-nœuds. Configurations budget ($500–$1500), milieu de gamme ($1500–$5000) et entreprise ($5000+) avec listes de pièces exactes et débit estimé.',
     ja: 'ラップトップ、デスクトップ、ワークステーション、サーバーデプロイメント用の完全な構築ガイド。シングルGPUセットアップからマルチノードクラスターまで。予算構築($500–$1500)、ミッドレンジ($1500–$5000)、エンタープライズ($5000+)構成、正確なパーツリストと推定スループット。',
     zh: '笔记本电脑、台式机、工作站和服务器部署的完整构建指南。从单GPU设置到多节点集群。预算构建（$500–$1500）、中档（$1500–$5000）和企业（$5000+）配置，附带精确的零件清单和估计吞吐量。',
+    es: 'Guías completas para despliegues en portátil, escritorio, estación de trabajo y servidor. Desde configuraciones con una sola GPU hasta clústeres multinodo. Configuraciones de presupuesto ($500–$1500), gama media ($1500–$5000) y empresa ($5000+) con listas de piezas exactas y rendimiento estimado.',
   },
   'privacy-business': {
     en: 'On-premises deployment for compliance (GDPR, HIPAA, APPI, CAC). Zero-knowledge architecture, air-gapped setups, and access logging. Local LLMs eliminate API vendor lock-in, reduce compliance audit burden, and protect proprietary data from SaaS providers.',
@@ -305,6 +344,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'Déploiement sur site pour la conformité (RGPD, HIPAA, APPI, CAC). Architecture zéro connaissance, configurations air-gap et journalisation des accès. Les LLMs locaux éliminent la dépendance aux fournisseurs d\'API, réduisent la charge d\'audit de conformité et protègent les données propriétaires des fournisseurs SaaS.',
     ja: 'コンプライアンス（GDPR、HIPAA、APPI、CAC）のためのオンプレミスデプロイ。ゼロナレッジアーキテクチャ、エアギャップセットアップ、アクセスログ。ローカルLLMはAPIベンダーロックインを排除し、コンプライアンス監査の負担を減らし、SaaSプロバイダーから専有データを保護します。',
     zh: '用于合规性（GDPR、HIPAA、APPI、CAC）的本地部署。零知识架构、隔离设置和访问日志。本地LLM消除API供应商锁定、减少合规审计负担并保护专有数据免受SaaS提供商影响。',
+    es: 'Despliegue en local para cumplimiento normativo (GDPR, HIPAA, APPI, CAC). Arquitectura zero-knowledge, configuraciones air-gap y registro de accesos. Los LLMs locales eliminan la dependencia de proveedores de API, reducen la carga de auditoría de cumplimiento y protegen los datos propietarios frente a proveedores SaaS.',
   },
   'cost-comparisons': {
     en: 'Break-even analysis: local vs cloud vs subscription models. Hidden SaaS costs: overage fees, enterprise seats, audit logs. Local hardware pays for itself in 6–18 months for heavy users. ROI calculators for different workload types.',
@@ -312,6 +352,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     fr: 'Analyse du seuil de rentabilité : local vs cloud vs modèles d\'abonnement. Coûts SaaS cachés : frais de dépassement, sièges entreprise, journaux d\'audit. Le matériel local s\'amortit en 6–18 mois pour les utilisateurs intensifs. Calculatrices ROI pour différents types de charges de travail.',
     ja: 'ブレークイーブン分析：ローカルvsクラウドvsサブスクリプションモデル。隠されたSaaSコスト：超過料金、エンタープライズシート、監査ログ。ローカルハードウェアは大量ユーザーにとって6–18ヶ月で投資を回収。異なるワークロードタイプのROI計算機。',
     zh: '损益平衡分析：本地vs云vs订阅模式。隐性SaaS成本：超额费用、企业席位、审计日志。本地硬件对于重度用户在6–18个月内回本。不同工作负载类型的ROI计算器。',
+    es: 'Análisis de punto de equilibrio: local vs cloud vs modelos de suscripción. Costes ocultos de SaaS: cargos por exceso, plazas enterprise, registros de auditoría. El hardware local se amortiza en 6–18 meses para usuarios intensivos. Calculadoras de ROI para diferentes tipos de carga de trabajo.',
   },
 }
 
@@ -321,6 +362,7 @@ const HUB_COMING_SOON: Record<string, string> = {
   fr: 'D\'autres guides arrivent bientôt.',
   ja: 'さらなるガイドが近日公開予定です。',
   zh: '更多指南即将推出。',
+  es: 'Más guías próximamente.',
 }
 
 const HUB_PE_SIDEBAR_TITLE: Record<string, string> = {
@@ -329,6 +371,7 @@ const HUB_PE_SIDEBAR_TITLE: Record<string, string> = {
   fr: 'Améliorez Vos Résultats',
   ja: '結果を改善する',
   zh: '改进您的结果',
+  es: 'Mejora tus resultados',
 }
 
 const HUB_PE_SIDEBAR_BODY: Record<string, string> = {
@@ -337,6 +380,7 @@ const HUB_PE_SIDEBAR_BODY: Record<string, string> = {
   fr: 'Vous utilisez un modèle local ? La qualité de sortie dépend de la manière dont vous le promptez. Apprenez des techniques systématiques pour obtenir de meilleures réponses de n\'importe quel LLM local.',
   ja: 'ローカルモデルを実行していますか？出力品質はプロンプト作成方法に依存します。ローカルLLMからより良い答えを得るための体系的な技法を学びます。',
   zh: '运行本地模型？输出质量取决于您如何提示它。学习系统化技术以从任何本地LLM获得更好的答案。',
+  es: '¿Usas un modelo local? La calidad de los resultados depende de cómo lo prompts. Aprende técnicas sistemáticas para obtener mejores respuestas de cualquier LLM local.',
 }
 
 const HUB_PE_SIDEBAR_LINKS: Record<string, { label: string; href: string }[]> = {
@@ -365,6 +409,11 @@ const HUB_PE_SIDEBAR_LINKS: Record<string, { label: string; href: string }[]> = 
     { label: '什么是提示词工程', href: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering' },
     { label: '链式推理提示词', href: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting' },
   ],
+  es: [
+    { label: 'Guía de Prompt Engineering', href: 'https://www.promptquorum.com/prompt-engineering' },
+    { label: '¿Qué es el Prompt Engineering?', href: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering' },
+    { label: 'Chain-of-Thought Prompting', href: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting' },
+  ],
 }
 
 const HUB_GETTING_STARTED_LINK: Record<string, string> = {
@@ -373,6 +422,7 @@ const HUB_GETTING_STARTED_LINK: Record<string, string> = {
   fr: 'Commencer par « Premiers pas »',
   ja: 'はじめにから始める',
   zh: '从"入门"开始',
+  es: 'Comenzar con Primeros pasos',
 }
 
 const HUB_TAKEAWAYS_TITLE: Record<string, string> = {
@@ -381,6 +431,7 @@ const HUB_TAKEAWAYS_TITLE: Record<string, string> = {
   fr: 'Points clés',
   ja: 'ポイントまとめ',
   zh: '核心要点',
+  es: 'Puntos clave',
 }
 
 const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
@@ -454,6 +505,20 @@ const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     '[阿里云vs腾讯云GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=zh) — 中国市场GPU云服务',
     '[本地LLM成本计算器：自建vs租用2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=zh) — 3年ROI计算器',
   ],
+  es: [
+    '8 GB de RAM son suficientes para ejecutar un modelo 7B localmente (Ollama o LM Studio, configuración en menos de 10 min)',
+    '40 GB VRAM ejecuta modelos 70B (Llama 4 Scout, DeepSeek V3) en calidad completa',
+    'La cuantización Q4 reduce a la mitad los requisitos de VRAM con pérdida de calidad mínima — un modelo 7B cabe en 4–5 GB VRAM',
+    'Llama 4 Scout, Qwen3, DeepSeek y Mistral igualan a GPT-4o mini en la mayoría de benchmarks de código y razonamiento',
+    'Cero costes de API tras la compra del hardware — sin límites de uso, sin dependencia de proveedor',
+    'Todos los datos permanecen en tu máquina — sin telemetría, sin almacenamiento cloud, listo para GDPR',
+    'El fine-tuning con LoRA requiere 500+ ejemplos etiquetados y 24 GB+ VRAM (o GPU cloud para entrenamiento)',
+    '[Guía de despliegue local de Qwen 2026](/local-llms/qwen-local-deployment-guide-2026?lang=es) — configuración Ollama en un comando para Qwen2.5 7B–72B',
+    '[Mejor GPU por menos de 500 $ para inferencia LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=es) — RTX 4060 Ti 16 GB lidera en valor',
+    '[DeepSeek vs Qwen: comparativa local 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=es) — benchmark cara a cara',
+    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=es) — GPU cloud para el mercado chino',
+    '[Calculadora de costes LLM local: construir vs alquilar 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=es) — calculadora ROI a 3 años',
+  ],
 }
 
 const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
@@ -490,6 +555,7 @@ const HUB_FAQ_TITLE: Record<string, string> = {
   fr: 'Questions fréquentes',
   ja: 'よくある質問',
   zh: '常见问题',
+  es: 'Preguntas frecuentes',
 }
 
 const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
@@ -791,6 +857,64 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: '最佳预算GPU：RTX 3060 12 GB（二手~1800元）运行13B模型20–30 tok/s。RTX 4060 8 GB（新品~2200元）运行7B达35–45 tok/s。RTX 2070 8 GB（二手~1100元）运行7B达15–20 tok/s。AMD RX 6700 XT 12 GB（~1500元）在ROCm/Linux下与RTX 3060相当。最低推荐：8 GB VRAM。'
     },
   ],
+  es: [
+    {
+      q: '¿Qué es un LLM local?',
+      a: 'Un modelo de lenguaje grande (p. ej., Llama 4, Qwen3.5, DeepSeek) que se ejecuta en tu propio hardware en lugar de en una API cloud. Obtienes privacidad total, capacidad offline, sin límites de uso y cero costes de API tras la compra del hardware.'
+    },
+    {
+      q: '¿Cuánta VRAM necesito para un LLM local?',
+      a: '8 GB VRAM ejecutan modelos 7B con cuantización Q4. 16 GB gestionan modelos 13B cómodamente. 40 GB+ (p. ej., RTX 4090 doble o A100) son necesarios para modelos 70B. La memoria unificada de Apple Silicon cuenta como VRAM.'
+    },
+    {
+      q: '¿Cuál es la diferencia entre Ollama y LM Studio?',
+      a: 'Ollama es una herramienta CLI que ejecuta modelos mediante comandos de terminal sencillos y expone una API compatible con OpenAI en `localhost:11434`. LM Studio ofrece una GUI de escritorio, explorador de modelos e interfaz de chat integrada. Ambos soportan los mismos modelos.'
+    },
+    {
+      q: '¿Pueden los LLMs locales competir con modelos cloud como GPT-4o?',
+      a: 'En tareas de código y razonamiento, Llama 4 Scout, DeepSeek V3 y Qwen3 obtienen resultados a un 5–10% de GPT-4o mini en benchmarks estándar (MMLU, HumanEval). Claude Opus 4.7 y GPT-4o mantienen ventaja en tareas complejas de múltiples pasos.'
+    },
+    {
+      q: '¿Cómo hago fine-tuning de un modelo local?',
+      a: 'El fine-tuning requiere 500+ ejemplos de entrenamiento etiquetados, el framework QLoRA (reduce los requisitos de VRAM mediante cuantización de 4 bits), 24 GB+ VRAM (o alquiler de GPU cloud) y 1–4 horas de entrenamiento para un modelo 7B.'
+    },
+    {
+      q: '¿Cuál es el hardware mínimo para ejecutar un LLM local en 2026?',
+      a: 'Mínimo: 8 GB de RAM y cualquier CPU moderna (ejecuta modelos 3B–7B a 2–5 tokens/seg). Recomendado: una GPU con 8 GB+ VRAM (RTX 3060 o superior) para 20–40 tokens/seg en modelos 7B.'
+    },
+    {
+      q: '¿Son gratuitos los LLMs locales?',
+      a: 'Sí. Ollama y LM Studio son gratuitos y de código abierto. Los propios modelos (Llama, Mistral, Qwen, DeepSeek) están disponibles bajo licencias open-source sin coste. El único gasto es el hardware.'
+    },
+    {
+      q: '¿Cuál es el mejor LLM local para código en 2026?',
+      a: 'Qwen3-Coder 7B es el mejor para completar y revisar código en hardware de consumo (8 GB VRAM). DeepSeek-Coder V2 Lite es la alternativa más potente. Para configuraciones solo-CPU, Phi-3.5 Mini ofrece la mejor calidad de código con menos de 4 GB de RAM.'
+    },
+    {
+      q: '¿Puedo ejecutar un LLM local sin GPU?',
+      a: 'Sí. Cualquier CPU moderna puede ejecutar modelos 3B–7B con cuantización Q4 usando Ollama (modo CPU) o LM Studio. Velocidad típica de inferencia CPU: 2–8 tokens/seg en una CPU de portátil moderna, frente a 20–50 tokens/seg en una RTX 4060. 7B Q4 requiere ~5 GB de RAM (no VRAM). Para configuraciones solo-CPU, Phi-3.5 Mini (3,8B) y Llama 3.2 3B ofrecen la mejor relación calidad-velocidad.'
+    },
+    {
+      q: '¿Cómo actualizo los modelos LLM locales cuando se lanzan nuevas versiones?',
+      a: 'Ollama: ejecuta `ollama pull <nombre-modelo>` de nuevo — solo descarga las capas modificadas. LM Studio: abre el explorador de modelos, encuentra la versión actualizada y descárgala. Los archivos GGUF antiguos no se eliminan automáticamente — bórralos manualmente de ~/.ollama/models (Ollama) o ~/Library/Application Support/LM Studio/models (macOS) para liberar espacio. Las actualizaciones de Meta, Alibaba y Mistral suelen estar disponibles en 24–48 horas tras el lanzamiento oficial.'
+    },
+    {
+      q: '¿Cuáles son los mejores modelos de Ollama en mayo de 2026?',
+      a: 'Top modelos Ollama mayo 2026: Llama 4 Scout 17B (mejor calidad global con 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (mejor código, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (razonamiento potente en RTX 3060, 8 GB VRAM) y DeepSeek-R2 8B (mejor matemáticas/lógica, 5 GB VRAM). Ejecuta cualquier modelo con `ollama run <nombre>` tras descargarlo.'
+    },
+    {
+      q: '¿Cuál es el mejor LLM local para una RTX 3060 con 12 GB VRAM?',
+      a: 'La RTX 3060 12 GB VRAM es una excelente GPU para LLMs locales. Mejores opciones: Llama 4 Scout 17B en Q4 (~10 GB VRAM, `ollama pull llama4:scout`), Gemma 3 12B (~8 GB VRAM) o Qwen3 14B (~9 GB VRAM). Todos funcionan a 20–40 tokens/seg. Los 12 GB VRAM te sitúan por encima de la RTX 3060 Ti (8 GB) y dan acceso a modelos de clase 13B y 17B MoE en calidad completa.'
+    },
+    {
+      q: 'Ollama vs LM Studio vs Jan.ai: ¿cuál debo usar?',
+      a: 'Usa Ollama si quieres una herramienta CLI con API compatible con OpenAI en localhost:11434 — ideal para desarrolladores y automatización. Usa LM Studio si quieres GUI de escritorio, explorador de modelos e interfaz de chat — ideal para principiantes. Usa Jan.ai si quieres una app de chat centrada en privacidad con tienda de modelos integrada. Los tres soportan los mismos modelos GGUF. Tiempo de configuración: Ollama 2 min, LM Studio 5 min, Jan.ai 5 min.'
+    },
+    {
+      q: '¿Cuáles son las mejores GPU económicas para LLMs locales en 2026?',
+      a: 'Mejores GPU económicas para LLMs locales: RTX 3060 12 GB (~250 € de segunda mano) ejecuta modelos 13B a 20–30 tok/s. RTX 4060 8 GB (~300 € nueva) ejecuta 7B a 35–45 tok/s. RTX 3080 10 GB (~350 € de segunda mano) gestiona 13B cómodamente. Por menos de 200 €: RTX 2070 8 GB ejecuta modelos 7B a 15–20 tok/s. AMD RX 6700 XT 12 GB (~200 € de segunda mano) es comparable a la RTX 3060 con ROCm en Linux. Mínimo recomendado: 8 GB VRAM para inferencia 7B útil.'
+    },
+  ],
 }
 
 const HUB_REGIONAL_TITLE: Record<string, string> = {
@@ -799,6 +923,7 @@ const HUB_REGIONAL_TITLE: Record<string, string> = {
   fr: 'Conformité et contexte régional',
   ja: 'コンプライアンスと地域別コンテキスト',
   zh: '合规与地区背景',
+  es: 'Cumplimiento normativo y contexto regional',
 }
 
 const HUB_REGIONAL_ITEMS: Record<string, {region:string, text:string}[]> = {
@@ -872,6 +997,20 @@ const HUB_REGIONAL_ITEMS: Record<string, {region:string, text:string}[]> = {
       text: '日本个人信息保护法（APPI）限制个人数据的跨境转移。本地LLM完全消除跨境转移。METI 2024年AI治理指南鼓励隐私保护AI— 本地部署与这些建议相一致。'
     },
   ],
+  es: [
+    {
+      region: 'EU / GDPR',
+      text: 'Los LLMs locales procesan todos los datos en local. Combinado con cifrado de disco completo y registro de accesos, la inferencia en local satisface el Artículo 28 del GDPR (no se requiere acuerdo de encargado del tratamiento si los datos nunca salen de la máquina). Ollama se enlaza a `localhost` por defecto — sin exposición externa.'
+    },
+    {
+      region: 'Japan / APPI',
+      text: 'La Ley japonesa de Protección de Información Personal (APPI) restringe la transferencia transfronteriza de datos personales. Los LLMs locales eliminan por completo las transferencias transfronterizas. Las directrices de gobernanza de IA del METI de 2024 fomentan la IA respetuosa con la privacidad — el despliegue local se alinea con estas recomendaciones.'
+    },
+    {
+      region: 'China / CAC',
+      text: 'Las Medidas Provisionales de la Administración del Ciberespacio de China para Servicios de IA Generativa (2023) exigen el registro de proveedores que ofrezcan servicios a usuarios chinos. Los LLMs locales que se ejecutan íntegramente en local quedan fuera de la definición de proveedor público de la CAC, reduciendo significativamente la carga de cumplimiento en despliegues empresariales.'
+    },
+  ],
 }
 
 const HUB_PRESENTATION_HEADING: Record<string, string> = {
@@ -880,6 +1019,7 @@ const HUB_PRESENTATION_HEADING: Record<string, string> = {
   fr: 'Résumé visuel : LLMs locaux 2026',
   ja: 'ビジュアルサマリー：ローカルLLM 2026',
   zh: '视觉摘要：本地LLM 2026',
+  es: 'Resumen visual: LLMs locales 2026',
 }
 
 const HUB_PRESENTATION_DESC: Record<string, string> = {
@@ -888,6 +1028,7 @@ const HUB_PRESENTATION_DESC: Record<string, string> = {
   fr: 'Les diapositives ci-dessous couvrent les exigences matérielles (8 Go de VRAM pour les modèles 7B, 40 Go+ pour les 70B), les meilleurs modèles open source 2026, la configuration Ollama en 5 minutes, la quantification Q4_K_M, la conformité régionale (RGPD, APPI) et les points clés. Téléchargez le PDF comme carte de référence LLM locale.',
   ja: '以下のスライドは、ハードウェア要件（7Bモデルに8 GB VRAM、70Bに40 GB以上）、2026年トップオープンソースモデル、5分でのOllamaセットアップ、Q4_K_M量子化、地域コンプライアンス（GDPR、APPI）、重要なポイントをカバーしています。PDFをローカルLLMクイックリファレンスカードとしてダウンロードしてください。',
   zh: '以下幻灯片涵盖硬件需求（7B模型需要8 GB显存，70B需要40 GB+）、2026年顶级开源模型、5分钟内完成Ollama设置、Q4_K_M量化、地区合规性（GDPR、APPI）和关键要点。将PDF下载为本地LLM快速参考卡。',
+  es: 'La presentación a continuación cubre los requisitos de hardware (8 GB VRAM para modelos 7B, 40 GB+ para 70B), los principales modelos open-source de 2026, configuración de Ollama en 5 minutos, cuantización Q4_K_M, cumplimiento regional (GDPR, APPI) y puntos clave. Descarga el PDF como tarjeta de referencia rápida de LLMs locales.',
 }
 
 const HUB_PRESENTATION_PDF: Record<string, string> = {
@@ -896,6 +1037,7 @@ const HUB_PRESENTATION_PDF: Record<string, string> = {
   fr: 'Télécharger la carte de référence LLMs locaux (PDF)',
   ja: 'ローカルLLMリファレンスカードをダウンロード（PDF）',
   zh: '下载本地LLM参考卡（PDF）',
+  es: 'Descargar tarjeta de referencia LLMs locales (PDF)',
 }
 
 const HUB_FAQS_BOTTOM: { q: string; a: string }[] = [

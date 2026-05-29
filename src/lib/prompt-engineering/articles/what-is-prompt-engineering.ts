@@ -679,6 +679,344 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    es: {
+      theme: 'Fundamentals',
+      title: '¿Qué es el Prompt Engineering? — Guía PromptQuorum',
+      seoTitle: '¿Qué es el Prompt Engineering en 2026? Guía para principiantes',
+      intro: 'Prompt engineering: diseñar entradas de texto para obtener respuestas fiables y precisas de LLMs como GPT-4o, Claude y Gemini. Aprende las técnicas esenciales, los frameworks y por qué importa para la calidad del output de IA.',
+      metaDescription: 'Prompt engineering 2026: diseña entradas de texto para obtener resultados fiables. Aprende role prompting, chain-of-thought y few-shot para ChatGPT, Claude y Ollama.',
+      publishDate: '2026-03-01',
+      readTime: '10 min de lectura',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering?lang=es',
+        inLanguage: 'es',
+        headline: '¿Qué es el Prompt Engineering?',
+        description: 'Prompt engineering: diseñar entradas de texto para obtener respuestas fiables y precisas de LLMs. Aprende las técnicas esenciales, los frameworks y por qué importa.',
+        datePublished: '2026-03-01',
+        dateModified: '2026-03-01',
+        keywords: ['prompt engineering', 'prompting de IA', 'LLM', 'GPT-4o', 'Claude', 'Gemini'],
+        mentions: [
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude' },
+          { '@type': 'Thing', name: 'Gemini' },
+        ],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Frameworks de Prompt Engineering',
+        inLanguage: 'es',
+        numberOfItems: 5,
+        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering?lang=es',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Single-Line', description: 'Tareas rápidas de una sola línea donde la velocidad importa más que la precisión.' },
+          { '@type': 'ListItem', position: 2, name: 'CRAFT', description: 'Marketing, redacción y contenido creativo con una voz definida.' },
+          { '@type': 'ListItem', position: 3, name: 'SPECS', description: 'Investigación, análisis y outputs estructurados basados en hechos.' },
+          { '@type': 'ListItem', position: 4, name: 'CO-STAR', description: 'Tareas complejas que necesitan contexto completo, audiencia definida e instrucciones paso a paso.' },
+          { '@type': 'ListItem', position: 5, name: 'RISEN', description: 'Escritura instructiva, material de formación y contenido educativo.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          { '@type': 'Question', name: '¿El prompt engineering sigue siendo útil con los nuevos modelos de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, y cada vez más. Los modelos más capaces siguen instrucciones precisas con mayor eficacia, lo que significa que el retorno de prompts bien estructurados aumenta a medida que los modelos mejoran. Incluso hoy, los modelos más capaces producen outputs inconsistentes o vagos cuando se les da input vago. Los prompts estructurados siguen siendo la forma más fiable de obtener output de calidad profesional en el primer intento.' } },
+          { '@type': 'Question', name: '¿Necesito saber programar para aprender prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'No. El prompt engineering es principalmente una habilidad de lenguaje y lógica: la capacidad de enunciar una tarea con precisión, anticipar modos de fallo y especificar lo que quieres. La programación ayuda al construir pipelines automatizados o procesar outputs estructurados, pero la gran mayoría del trabajo de prompt engineering no requiere ningún conocimiento de código.' } },
+          { '@type': 'Question', name: '¿Cuál es la diferencia entre prompt engineering y programación tradicional?', acceptedAnswer: { '@type': 'Answer', text: 'La programación tradicional da a un ordenador instrucciones deterministas que producen el mismo output cada vez, dado el mismo input. El prompt engineering da a un modelo probabilístico una guía estructurada que aumenta la probabilidad de un output útil, pero no puede garantizarlo. La habilidad está en diseñar prompts que produzcan resultados fiables a pesar de esa incertidumbre subyacente.' } },
+          { '@type': 'Question', name: '¿Cuál es la diferencia entre una técnica de prompt engineering y un framework?', acceptedAnswer: { '@type': 'Answer', text: 'Una técnica es un patrón específico aplicado para lograr una calidad de output determinada — por ejemplo, el prompting Chain-of-Thought mejora la precisión del razonamiento. Un framework es una plantilla estructural que organiza todos los elementos de un prompt — por ejemplo, CO-STAR define el orden en que se especifican el contexto, el objetivo, el estilo, el tono, la audiencia y el formato de respuesta. Los frameworks ayudan a construir el prompt; las técnicas ayudan a refinar lo que el modelo hace con él.' } },
+          { '@type': 'Question', name: '¿El prompt engineering seguirá siendo relevante a largo plazo?', acceptedAnswer: { '@type': 'Answer', text: 'Todas las evidencias disponibles apuntan a que sí. Los LLMs aún no son capaces de producir de forma fiable outputs de calidad profesional solo a partir de lenguaje natural no estructurado. Incluso a medida que las interfaces de IA se vuelven más conversacionales, los principios subyacentes de los buenos prompts — objetivo claro, contexto relevante, restricciones explícitas, formato de output especificado — siguen siendo la diferencia entre una respuesta de IA útil e inútil.' } },
+          { '@type': 'Question', name: '¿Cuál es la diferencia entre prompt engineering y fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'El prompt engineering da forma al output de un modelo existente sin cambiar el modelo en sí — funciona en el momento de la inferencia y no requiere entrenamiento. El fine-tuning modifica los pesos de un modelo entrenándolo en un nuevo conjunto de datos, cambiando su comportamiento predeterminado de forma permanente. El prompt engineering es más rápido, más barato y no requiere experiencia en ML; el fine-tuning es mejor cuando necesitas una especialización profunda y consistente que los prompts solos no pueden lograr.' } },
+          { '@type': 'Question', name: '¿Cómo se relaciona el prompt engineering con una herramienta como PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum es una herramienta de dispatch multi-modelo construida en torno a los principios del prompt engineering. Incluye 9 frameworks de prompts integrados, un optimizador de prompts con IA y la capacidad de enviar un prompt a varios modelos simultáneamente — GPT-4o, Claude, Gemini y modelos locales — y comparar los resultados en paralelo.' } },
+          { '@type': 'Question', name: '¿El prompt engineering sigue siendo relevante ahora que existen los agentes de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los agentes de IA — sistemas autónomos que planifican y ejecutan tareas de varios pasos — se construyen sobre el prompt engineering. Cada agente tiene un system prompt que define su rol, sus restricciones y sus herramientas disponibles. Cada llamada a herramienta se activa mediante instrucciones estructuradas. El prompt engineering es la base que hace a los agentes controlables y predecibles.' } },
+          { '@type': 'Question', name: '¿En qué se diferencia un user prompt de un system prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Un system prompt es un conjunto de instrucciones persistente que se aplica a toda la sesión — define el rol del modelo, sus restricciones y su comportamiento predeterminado antes de que el usuario diga nada. Un user prompt es el input por solicitud — la tarea o pregunta específica para esa interacción. Ambos se benefician del prompt engineering, pero sirven funciones distintas y requieren enfoques de diseño diferentes.' } },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'Prompt Engineering: Definición y principios fundamentales',
+          content: [
+            '**El prompt engineering es la práctica de diseñar y estructurar entradas de texto — llamadas prompts — para obtener outputs precisos, útiles y reproducibles de los grandes modelos de lenguaje (LLMs).** Se aplica a GPT-4o, Claude, Gemini y modelos ejecutados localmente mediante Ollama o LM Studio. La diferencia entre el prompt engineering y "simplemente hacerle una pregunta a la IA" es la diferencia entre una solicitud vaga y una instrucción precisa con un objetivo definido, contexto y formato de output.',
+            'Hoy en día, el prompt engineering es una disciplina estructurada con técnicas con nombres propios, frameworks reutilizables y resultados medibles. No se trata de engañar a los sistemas de IA ni de encontrar comandos ocultos — se trata de dar a un modelo probabilístico la señal más clara posible de lo que necesitas. Un prompt bien diseñado produce consistentemente un output utilizable en el primer intento.',
+            'Los fundamentos del prompt engineering comienzan por entender que los LLMs son motores de completado de patrones. Generan output basándose en la probabilidad estadística de lo que debería seguir a tu input. Cuanto más precisamente especifiques la tarea, el contexto, las restricciones y el formato deseado, menos tiene que adivinar el modelo — y mejor es el resultado.',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Funciona con modelos locales',
+              text: 'Todas las técnicas de esta guía funcionan con Ollama, LM Studio y otros [LLMs locales](https://www.promptquorum.com/local-llms). No se necesita API key.'
+            }
+          ],
+        },
+
+        tldr: {
+          title: 'Puntos clave',
+          isTldr: true,
+          items: [
+            'Prompt engineering = diseñar inputs para obtener outputs fiables y precisos de LLMs',
+            'Se aplica a todos los modelos principales: GPT-4o, Claude, Gemini y modelos locales mediante Ollama o LM Studio',
+            'Palancas clave: objetivo, contexto, ejemplos, restricciones, formato de output y rol',
+            'Las técnicas de prompt engineering van desde zero-shot hasta Chain-of-Thought y RAG',
+            'Los frameworks de prompt engineering (CRAFT, CO-STAR, SPECS, etc.) hacen los prompts reproducibles y enseñables',
+            'Es la forma más rápida de mejorar la calidad del output de IA sin cambiar el modelo',
+          ],
+        },
+
+        whyMatters: {
+          title: 'Por qué importa el prompt engineering',
+          content: [
+            'El mismo modelo de IA produce outputs drásticamente diferentes dependiendo de cómo se formule una pregunta. Un prompt vago devuelve una respuesta vaga. Un prompt estructurado con un objetivo claro, contexto relevante, restricciones explícitas y un formato de output especificado produce un resultado que no requiere edición.',
+            'Estas son las ventajas clave de aplicar los fundamentos del prompt engineering de forma consistente:',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Los prompts vagos son costosos',
+              text: 'Cada output fallido en el primer intento consume tokens y requiere reintentos. Un prompt estructurado elimina las aclaraciones de ida y vuelta y reduce los costes de API desperdiciados en un 40–60% de media.'
+            }
+          ],
+        },
+
+        whyMattersList: {
+          items: [
+            '**Fiabilidad:** Los prompts estructurados producen outputs consistentes a lo largo de varias ejecuciones y modelos — el mismo prompt funciona el lunes y el viernes',
+            '**Mayor calidad de output:** Las instrucciones explícitas reducen la ambigüedad del modelo y eliminan las suposiciones sobre la intención',
+            '**Velocidad:** Los prompts bien formulados eliminan los ciclos de aclaración de ida y vuelta → [Fundamentals: Faster AI Answers: How to Prompt for Speed]',
+            '**Control de costes:** Los prompts precisos usan menos tokens por tarea y reducen los reintentos → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
+            '**Reducción de alucinaciones:** La fundamentación clara, las restricciones de fuentes y las preguntas acotadas reducen los hechos fabricados → [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them]',
+            '**Compatibilidad multi-modelo:** El mismo prompt bien estructurado funciona en GPT-4o, Claude, Gemini y LLMs locales — reduciendo la dependencia del proveedor',
+            '**Reproducibilidad:** Un prompt bien diseñado es un activo reutilizable. Los equipos pueden compartir, versionar y mejorar los prompts con el tiempo',
+          ],
+        },
+
+        buildingBlocks: {
+          title: 'Bloques de construcción fundamentales de un prompt',
+          content: [
+            'Todo prompt efectivo se ensambla a partir de alguna combinación de estos siete elementos. Rara vez se necesitan los siete a la vez — la habilidad está en saber cuáles incluir para una tarea determinada.',
+            'Un análisis de 2024 de técnicas de prompting (Schulhoff et al., "The Prompt Report", arXiv:2406.06608) catalogó más de 58 técnicas discretas usadas en sistemas de IA en producción — todas son variaciones estructuradas de estos siete bloques de construcción aplicados en diferentes combinaciones.',
+            'Para un desglose más profundo con ejemplos de cada elemento en acción, consulta [Fundamentals: The 5 Building Blocks Every Prompt Needs].',
+          ],
+          items: [
+            '**Objetivo:** La tarea o pregunta, enunciada con precisión — lo que quieres que el modelo produzca',
+            '**Contexto:** Información de fondo que el modelo necesita para responder correctamente — quién pregunta, para qué es el output, qué restricciones aplican',
+            '**Instrucciones:** Pasos o reglas específicos que el modelo debe seguir — "listar en orden de importancia", "escribir en segunda persona", "usar solo los datos proporcionados"',
+            '**Ejemplos:** 1–3 pares de input/output de muestra que demuestran el formato o estilo exacto que quieres (few-shot prompting)',
+            '**Restricciones:** Límites explícitos sobre lo que el modelo NO debe hacer — temas prohibidos, frases vetadas, límites de longitud, restricciones de estilo',
+            '**Formato de output:** Cómo debe estructurarse la respuesta — lista con viñetas, objeto JSON, tabla Markdown, pasos numerados, párrafo simple',
+            '**Rol / persona:** Una experiencia o perspectiva definida que el modelo debe adoptar — "Actúa como un analista de datos senior" o "Eres un escritor técnico conciso"',
+          ],
+          callouts: [
+            {
+              type: 'tip',
+              label: 'No necesitas los siete',
+              text: 'Las tareas simples a menudo solo necesitan 2–3 bloques de construcción (objetivo + contexto + formato). El razonamiento complejo de varios pasos necesita los siete. Comienza con el mínimo y añade solo lo que la tarea requiere.'
+            }
+          ],
+        },
+
+        pqConsensusTest: {
+          title: 'Test de consenso PromptQuorum: Impacto de la estructura del prompt',
+          content: [
+            '**Probado en PromptQuorum — 40 prompts de resumen enviados a GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro:** Los prompts no estructurados produjeron longitud y estructura inconsistentes en los tres modelos en 37 de 40 casos. Tras reescribir con los cinco bloques de construcción anteriores, los tres modelos produjeron respuestas consistentes y con el formato correcto en el primer intento en 40 de 40 casos.',
+            'Este efecto de consenso — donde los prompts estructurados producen un comportamiento idéntico en diferentes modelos — es la idea central del prompt engineering. Los cinco bloques de construcción funcionan porque explotan cómo todos los principales LLMs procesan las instrucciones de forma idéntica.',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: '¿Sabías? El efecto de consenso',
+              text: 'El 92.5% de mejora en consistencia (37→40 de 40) proviene solo de la estructura, no de ajustar parámetros específicos del modelo. Esto significa que un prompt bien diseñado funciona en todos los proveedores sin modificación.'
+            }
+          ],
+        },
+
+        promptExample: {
+          title: 'Estructura del prompt en la práctica',
+          content: [
+            '[Prompt malo] "Resume este artículo."',
+            '[Prompt bueno] "Eres un analista de investigación. Resume este artículo en 3 puntos. Céntrate en los hallazgos, no en la metodología. Cada punto ≤ 25 palabras."',
+          ],
+        },
+
+        techniques: {
+          title: 'Técnicas comunes de prompt engineering',
+          tableFormat: true,
+          items: [
+            '| Técnica | Ideal para | Ejemplo |',
+            '|---|---|---|',
+            '| Few-shot prompting | Enseñar mediante ejemplos | Proporcionar 2–3 pares de input/output de muestra |',
+            '| Chain-of-thought | Lógica y tareas de varios pasos | "Piensa paso a paso antes de responder" |',
+            '| Role-prompting | Experiencia específica de dominio | "Actúa como un copywriter de marketing" |',
+            '| Constraint-based | Limitar el estilo de output | "Escribe en exactamente 150 palabras, sin jerga técnica" |',
+            '| Negative prompting | Evitar comportamientos específicos | "No uses buzzwords ni clichés" |',
+            '| Self-consistency | Mejorar la fiabilidad | "Genera 5 respuestas y devuelve la más frecuente" |',
+            '| Structured output | Resultados legibles por máquina | "Responde en formato JSON con estos campos..." |',
+            '| Prompt chaining | Flujos de trabajo de varios pasos | Dividir una tarea compleja en 3–4 prompts secuenciales |',
+            '| Tree-of-thought | Explorar múltiples caminos | "Considera 3 enfoques diferentes antes de elegir" |',
+            '| RAG (Retrieval-Augmented Generation) | Fundamentar en hechos | Adjuntar documentos recientes antes de hacer el prompt |',
+            '| Persona-based | Diferentes estilos de comunicación | "Explica como si tuviera 10 años" |',
+          ],
+          callouts: [
+            {
+              type: 'tip',
+              label: 'Buenas prácticas: Combinar técnicas',
+              text: 'Los prompts más efectivos usan 2–3 técnicas juntas. Ejemplo: rol (persona) + chain-of-thought (técnica) + constraint-based (formato). Empieza con una técnica, añade otras si el output carece de calidad.'
+            }
+          ],
+        },
+
+        frameworks: {
+          title: 'Frameworks de prompt engineering',
+          content: [
+            '**Un framework de prompt engineering es una plantilla con nombre que especifica qué bloques de construcción incluir y en qué orden.** Los frameworks convierten el prompt engineering de una habilidad ad hoc en un proceso reproducible. Son más fáciles de enseñar, más fáciles de compartir en un equipo y más rápidos de aplicar bajo presión de tiempo que construir un prompt desde cero.',
+            'La tabla a continuación muestra cinco frameworks de prompt engineering ampliamente utilizados y las situaciones para las que cada uno es más adecuado:',
+          ],
+          columns: ['Framework', 'Ideal para'],
+          rows: [
+            { 'Framework': 'Single-Line', 'Ideal para': 'Tareas rápidas de una sola línea donde la velocidad importa más que la precisión' },
+            { 'Framework': 'CRAFT', 'Ideal para': 'Marketing, redacción y contenido creativo con una voz definida' },
+            { 'Framework': 'SPECS', 'Ideal para': 'Investigación, análisis y outputs estructurados basados en hechos' },
+            { 'Framework': 'CO-STAR', 'Ideal para': 'Tareas complejas que necesitan contexto completo, audiencia definida e instrucciones paso a paso' },
+            { 'Framework': 'RISEN', 'Ideal para': 'Escritura instructiva, material de formación y contenido educativo' },
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Punto clave: Framework vs técnica',
+              text: 'Un framework es la estructura (qué bloques rellenar y en qué orden). Una técnica es un método para rellenar esos bloques. Usa un framework para organizar tu prompt; usa técnicas para refinar cada sección.'
+            }
+          ],
+        },
+
+        frameworksLinks: {
+          content: [
+            'Este sitio documenta diez frameworks — cada uno con su propia guía que cubre cuándo usarlo, cómo estructurar el prompt y ejemplos prácticos. Empieza con [Frameworks: Which Prompt Framework Should You Use?] para una guía de decisión. Luego explora [Frameworks: CRAFT Framework], [Frameworks: CO-STAR Framework], [Frameworks: SPECS Framework] y [Frameworks: RISEN Framework] individualmente.',
+            'PromptQuorum incluye 9 frameworks integrados y dos slots de frameworks personalizados. Puedes aplicar cualquier framework directamente dentro de la app, comparar el prompt estructurado con tu original y guardar tus propias plantillas — consulta [Frameworks: Build Your Own Prompt Framework].',
+          ],
+        },
+
+        workflow: {
+          title: 'Dónde encaja el prompt engineering en el flujo de trabajo de IA',
+          content: [
+            'El prompt engineering no opera de forma aislada. Cada prompt existe dentro de un contexto técnico más amplio — el modelo que eliges, el presupuesto de tokens que tienes y la arquitectura de tu sistema de IA afectan a lo que un prompt puede lograr.',
+            'Estas son las decisiones técnicas clave que interactúan con el prompt engineering:',
+          ],
+          items: [
+            '**Selección de modelo:** GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro responden de forma diferente al mismo prompt. Elegir el modelo correcto para la tarea forma parte del proceso de ingeniería. Mistral AI (Europa) y Qwen (China) siguen los mismos principios de prompting pero pueden requerir especificaciones de formato de output ajustadas debido a diferencias en el comportamiento de seguimiento de instrucciones. El mismo prompt estructurado funciona globalmente en todas las principales familias de modelos → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**System prompts vs. user prompts:** El system prompt establece instrucciones persistentes para toda una sesión; el user prompt es el input por solicitud. Hacer bien esta división determina la consistencia a escala → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
+            '**Context windows:** Cada modelo tiene un límite máximo de tokens para input + output combinado. Los prompts largos reducen el espacio disponible para la respuesta del modelo — y los modelos empiezan a ignorar el contenido anterior a medida que la ventana se llena → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
+            '**Límites de tokens y costes:** Los prompts precisos y concisos usan menos tokens por llamada, reducen la latencia y se mantienen dentro de los límites de tasa — afectando directamente al coste a escala → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
+            '**Prompting multimodal:** Los LLMs modernos como GPT-4o y Gemini aceptan imágenes además de texto. Los principios del prompt engineering se aplican igualmente a los inputs de imagen → [Fundamentals: Beyond Text: How to Prompt with Images]',
+            '**Modelos locales vs. en la nube:** Las técnicas de prompt engineering se aplican igualmente a las APIs en la nube y a los modelos ejecutados localmente mediante Ollama o LM Studio — aunque los modelos locales pueden requerir un formato ajustado debido a context windows más pequeñas y diferente comportamiento de seguimiento de instrucciones. PromptQuorum admite tanto modelos locales (Ollama, LM Studio, vLLM) como APIs en la nube (OpenAI, Anthropic, Google Gemini) a través de una sola interfaz — permitiéndote cambiar entre proveedores sin reescribir prompts, o comparar el mismo prompt en varios modelos simultáneamente.',
+          ],
+        },
+
+        canDo: {
+          title: 'Límites del prompt engineering: qué puede y no puede hacer',
+          content: '**Lo que el prompt engineering mejora de forma fiable:**',
+          items: [
+            'Consistencia de output — el mismo prompt estructurado produce resultados similares en varias ejecuciones y entre miembros del equipo',
+            'Reducción de alucinaciones — la fundamentación, las restricciones de fuentes y el acotamiento explícito reducen los hechos fabricados. La función Quorum de PromptQuorum ejecuta comprobaciones de consenso en las respuestas de los modelos, detectando alucinaciones y contradicciones comparando cómo diferentes modelos responden al mismo prompt estructurado.',
+            'Control de formato — especificar el formato de output significa que los resultados llegan listos para usar, no listos para editar',
+            'Velocidad de iteración — menos rondas de aclaración, más éxitos en el primer intento',
+            'Portabilidad multi-modelo — un prompt bien estructurado funciona en GPT-4o, Claude y Gemini sin reescribir',
+          ],
+        },
+
+        cannotDo: {
+          content: '**Lo que aún requiere otros enfoques:**',
+          items: [
+            '**Acceso a datos privados o en tiempo real:** Cuando el modelo necesita documentos, bases de datos o información en vivo que no cabe en un prompt — usa RAG → [Techniques: RAG Explained: How to Ground AI Answers in Real Data]',
+            '**Especialización profunda en un dominio:** Cuando un modelo necesita adoptar de forma fiable un vocabulario o estilo específico en todas las sesiones — usa fine-tuning, no prompts',
+            '**Conocimiento faltante:** El prompt engineering no puede dar a un modelo conocimiento en el que no fue entrenado. Si el modelo base no conoce un tema, ningún prompt lo enseñará',
+            '**Evaluación sistemática de calidad:** Verificar la calidad del output de IA a escala en miles de ejecuciones requiere pipelines de evaluación y herramientas más allá del prompting manual',
+          ],
+        },
+
+        cannotDoNote: {
+          content: 'El prompt engineering es la palanca más rápida y accesible para mejorar la calidad del output de IA — no requiere cambios de infraestructura ni reentrenamiento. Para los problemas que no puede resolver, señala claramente la siguiente herramienta correcta.',
+        },
+
+        howToStart: {
+          title: 'Cómo empezar a aprender prompt engineering',
+          content: 'Estos seis pasos llevan a un principiante inteligente de cero a productivo por el camino más corto a través del material de este sitio:',
+          numberedItems: [
+            '**Lee los Fundamentos.** Antes de escribir prompts complejos, entiende cómo los LLMs procesan texto, qué son los tokens, qué significa un context window y por qué los modelos alucinan. La sección [Fundamentals] cubre todo esto en artículos dedicados — empieza con [Fundamentals: The 5 Building Blocks Every Prompt Needs] y [Fundamentals: From GPT-2 to Today: How Prompt Engineering Evolved].',
+            '**Empieza con prompts de una sola línea.** Escribe una oración clara que describa tu tarea con exactitud. Observa lo que el modelo devuelve antes de añadir estructura. Esto establece una base de referencia — necesitas saber qué produce un prompt básico antes de poder mejorarlo.',
+            '**Aplica un framework a una tarea real.** Elige CRAFT para una tarea de escritura o CO-STAR para una instrucción compleja. Los frameworks te obligan a pensar en todos los elementos que necesita un prompt. La sección [Frameworks] cubre cada framework con ejemplos → empieza con [Frameworks: Which Prompt Framework Should You Use?].',
+            '**Añade una técnica a la vez.** Prueba ejemplos few-shot en una tarea. Añade una restricción a otra. Prueba Chain-of-Thought en un problema de razonamiento. Aislar los cambios te permite ver qué técnica mejoró realmente el output. La sección [Techniques] cubre cada técnica en profundidad.',
+            '**Prueba en varios modelos.** El mismo prompt produce resultados diferentes en GPT-4o, Claude y Gemini. Usa PromptQuorum para enviar un prompt a varios modelos simultáneamente y comparar respuestas lado a lado — esta es la forma más rápida de encontrar qué modelo y formulación funciona mejor para una tarea específica.',
+            '**Construye una biblioteca de prompts para tus casos de uso.** Guarda los prompts que funcionan. Refínalos con el tiempo. Una biblioteca de prompts probados para tu dominio específico es un activo duradero. Consulta [Use Topics: Build a Prompt Library That Saves Hours] para una guía sobre cómo estructurarla y mantenerla.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Fundamentals: AI Hallucinations — Why AI Makes Things Up] — comprender una limitación fundamental de los LLMs',
+            '[Techniques: Chain-of-Thought Prompting — Make AI Show Its Reasoning] — la técnica paso a paso que mejora la precisión',
+            '[Frameworks: CO-STAR Framework] — una plantilla estructurada que organiza los fundamentos en una secuencia probada',
+            '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es) — las ocho restricciones estructurales que comparten todos los LLMs y el workaround de ingeniería para cada una',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ: Fundamentos del prompt engineering',
+          faqs: [
+            {
+              q: '¿El prompt engineering sigue siendo útil con los nuevos modelos de IA?',
+              a: 'Sí, y cada vez más. Los modelos más capaces siguen instrucciones precisas con mayor eficacia, lo que significa que el retorno de prompts bien estructurados aumenta a medida que los modelos mejoran. Incluso hoy, los modelos más capaces producen outputs inconsistentes o vagos cuando se les da input vago. Los prompts estructurados siguen siendo la forma más fiable de obtener output de calidad profesional en el primer intento.',
+            },
+            {
+              q: '¿Necesito saber programar para aprender prompt engineering?',
+              a: 'No. El prompt engineering es principalmente una habilidad de lenguaje y lógica — la capacidad de enunciar una tarea con precisión, anticipar modos de fallo y especificar lo que quieres. La programación ayuda al construir pipelines automatizados o procesar outputs estructurados, pero la gran mayoría del trabajo de prompt engineering no requiere ningún conocimiento de código.',
+            },
+            {
+              q: '¿Cuál es la diferencia entre prompt engineering y programación tradicional?',
+              a: 'La programación tradicional da a un ordenador instrucciones deterministas que producen el mismo output cada vez, dado el mismo input. El prompt engineering da a un modelo probabilístico una guía estructurada que aumenta la probabilidad de un output útil — pero no puede garantizarlo. La habilidad está en diseñar prompts que produzcan resultados fiables a pesar de esa incertidumbre subyacente.',
+            },
+            {
+              q: '¿Cuál es la diferencia entre una técnica de prompt engineering y un framework?',
+              a: 'Una técnica es un patrón específico aplicado para lograr una calidad de output determinada — por ejemplo, el prompting Chain-of-Thought mejora la precisión del razonamiento. Un framework es una plantilla estructural que organiza todos los elementos de un prompt — por ejemplo, CO-STAR define el orden en que se especifican el contexto, el objetivo, el estilo, el tono, la audiencia y el formato de respuesta. Los frameworks ayudan a construir el prompt; las técnicas ayudan a refinar lo que el modelo hace con él.',
+            },
+            {
+              q: '¿El prompt engineering seguirá siendo relevante a largo plazo?',
+              a: 'Todas las evidencias disponibles apuntan a que sí. Los LLMs aún no son capaces de producir de forma fiable outputs de calidad profesional solo a partir de lenguaje natural no estructurado. Incluso a medida que las interfaces de IA se vuelven más conversacionales, los principios subyacentes de los buenos prompts — objetivo claro, contexto relevante, restricciones explícitas, formato de output especificado — siguen siendo la diferencia entre una respuesta de IA útil e inútil.',
+            },
+            {
+              q: '¿Cuál es la diferencia entre prompt engineering y fine-tuning?',
+              a: 'El prompt engineering da forma al output de un modelo existente sin cambiar el modelo en sí — funciona en el momento de la inferencia y no requiere entrenamiento. El fine-tuning modifica los pesos de un modelo entrenándolo en un nuevo conjunto de datos, cambiando su comportamiento predeterminado de forma permanente. El prompt engineering es más rápido, más barato y no requiere experiencia en ML; el fine-tuning es mejor cuando necesitas una especialización profunda y consistente que los prompts solos no pueden lograr.',
+            },
+            {
+              q: '¿Cómo se relaciona el prompt engineering con una herramienta como PromptQuorum?',
+              a: 'PromptQuorum es una herramienta de dispatch multi-modelo construida en torno a los principios del prompt engineering. Incluye 9 frameworks de prompts integrados, un optimizador de prompts con IA y la capacidad de enviar un prompt a varios modelos simultáneamente — GPT-4o, Claude, Gemini y modelos locales — y comparar los resultados en paralelo. Hace que el prompt engineering sea reproducible y elimina la fricción de probar modelos manualmente.',
+            },
+            {
+              q: '¿El prompt engineering sigue siendo relevante ahora que existen los agentes de IA?',
+              a: 'Sí. Los agentes de IA — sistemas autónomos que planifican y ejecutan tareas de varios pasos — se construyen sobre el prompt engineering. Cada agente tiene un system prompt que define su rol, sus restricciones y sus herramientas disponibles. Cada llamada a herramienta se activa mediante instrucciones estructuradas. El prompt engineering es la base que hace a los agentes controlables y predecibles. A medida que los agentes se vuelven más comunes, la habilidad se vuelve más importante, no menos.',
+            },
+            {
+              q: '¿En qué se diferencia un user prompt de un system prompt?',
+              a: 'Un system prompt es un conjunto de instrucciones persistente que se aplica a toda la sesión — define el rol del modelo, sus restricciones y su comportamiento predeterminado antes de que el usuario diga nada. Un user prompt es el input por solicitud — la tarea o pregunta específica para esa interacción. En la mayoría de los productos de IA, los desarrolladores escriben el system prompt; los usuarios finales escriben el user prompt. Ambos se benefician del prompt engineering, pero sirven funciones distintas y requieren enfoques de diseño diferentes. → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Fuentes y lecturas adicionales',
+          items: [
+            'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)" — el artículo fundacional que demuestra que el razonamiento paso a paso reduce las alucinaciones en tareas de matemáticas y lógica.',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). "[On Faithfulness and Factuality in Abstractive Summarization](https://aclanthology.org/2021.acl-long.200/)" — estudio empírico de las tasas y mecanismos de alucinación en la generación de texto neural.',
+            'Anthropic (2024). "[Constitutional AI](https://www.anthropic.com/constitutional-ai)" — el enfoque de Anthropic para reducir outputs dañinos y alucinaciones mediante entrenamiento basado en principios.',
+          ],
+        },
+
+      },
+    },
     fr: {
       theme: 'Fondamentaux',
       title: 'Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum',

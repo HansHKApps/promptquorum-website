@@ -584,6 +584,207 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Fundamentals',
+      title: 'De GPT-2 a hoy: Cómo evolucionó el Prompt Engineering',
+      seoTitle: '¿Está muerto el prompt engineering? Cómo evolucionó hacia el context design (2026)',
+      intro: 'El prompt engineering evolucionó de experimentos informales en torno a GPT-3 en 2020 a una disciplina estructurada con técnicas y frameworks con nombre propios para 2026. Esta línea de tiempo traza los avances clave, los artículos de investigación y los puntos de inflexión que convirtieron el prompting en una habilidad fundamental.',
+      metaDescription: 'El prompt engineering pasó por 7 fases distintas desde GPT-3 (2020) hasta el context design (2026). Línea de tiempo completa con 12+ citas de investigación, mitos desmentidos y por qué la disciplina se transformó pero no está muerta.',
+      publishDate: '2026-03-01',
+      dateModified: '2026-05-03',
+      readTime: '10 min de lectura',
+      educationalLevel: 'Beginner',
+      next_refresh_due: '2026-09-03',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '¿Está muerto el prompt engineering? Cómo evolucionó hacia el context design (2026)',
+        description: 'El prompt engineering pasó por 7 fases distintas desde GPT-3 (2020) hasta el context design (2026). Línea de tiempo completa con 12+ citas de investigación y análisis de por qué la disciplina se transformó pero no desapareció.',
+        datePublished: '2026-03-01',
+        dateModified: '2026-05-03',
+        url: 'https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved?lang=es',
+        inLanguage: 'es',
+        keywords: ['historia del prompt engineering', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'línea de tiempo del prompt engineering', 'InstructGPT', 'RLHF'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      },
+      sections: {
+        definition: {
+          title: 'Cómo evolucionó el prompt engineering: una breve visión general',
+          content: [
+            '**El prompt engineering evolucionó de una manipulación de texto informal por ensayo y error en torno a GPT-3 en 2020 a una disciplina estructurada con técnicas, frameworks y herramientas con nombre propios para 2026.** El arco abarca cinco fases: los primeros experimentos de few-shot, el momento ChatGPT que trajo la habilidad al conocimiento del público general, el desarrollo de técnicas de razonamiento estructurado, el auge de la optimización automática de prompts y el actual cambio hacia el context design.',
+            'La disciplina no surgió de un solo artículo o empresa. Creció a partir de la confluencia de la investigación (few-shot learning, chain-of-thought reasoning, RAG), comunidades de profesionales que compartían colecciones de prompts online y la repentina disponibilidad pública de modelos potentes que hizo que el buen prompting fuera inmediatamente gratificante. Para 2026, el prompt engineering ya no es un truco de nicho — es una habilidad básica para cualquiera que trabaje con sistemas de IA.',
+          ],
+        },
+
+        tldr: {
+          title: 'Puntos clave',
+          isTldr: true,
+          items: [
+            '2019–2020: GPT-2 y los primeros transformers — los prompts eran inputs, no una disciplina',
+            '2020: GPT-3 y Brown et al. introdujeron el few-shot prompting como un cambio de paradigma',
+            '2022: Los prompts de razonamiento Chain-of-Thought convirtieron el prompting en una habilidad estructurada',
+            'Finales de 2022: ChatGPT trajo el prompt engineering al conocimiento del público y a las ofertas de trabajo',
+            '2023: GPT-4, el prompting multimodal y los frameworks formalizaron las mejores prácticas',
+            '2024–2026: El context design, el prompting automatizado y los LLMs de código abierto redefinieron el campo',
+          ],
+        },
+
+        pre2020: {
+          title: 'Antes de que el prompt engineering tuviera nombre (antes de 2020)',
+          content: [
+            'Antes de que existiera el término "prompt engineering", los investigadores ya manipulaban los inputs de los modelos para obtener mejores outputs — solo que no lo llamaban así. Los primeros modelos transformer como GPT-2 (2019, OpenAI) y BERT (2018, Google) se usaban mediante texto de entrada cuidadosamente elegido, pero la práctica se trataba como parte del preprocesamiento de datos, no como una habilidad por sí sola.',
+            'GPT-2, publicado en febrero de 2019, era un modelo de 1.500 millones de parámetros que podía completar texto de formas sorprendentemente coherentes. Los investigadores y los primeros profesionales notaron que la redacción de un input cambiaba drásticamente la calidad del completado — pero aún no existía ningún framework, ninguna terminología ni ninguna comunidad construida en torno a esta observación. Los prompts eran inputs, no artefactos de ingeniería.',
+          ],
+        },
+
+        gpt3: {
+          title: '2020: GPT-3 y el avance del few-shot',
+          content: [
+            '**La historia moderna del prompt engineering comienza efectivamente con GPT-3.** En mayo de 2020, OpenAI publicó GPT-3, un modelo de 175.000 millones de parámetros, junto con el artículo pionero de Brown et al., "[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)". El artículo demostró que al incluir unos pocos ejemplos de la tarea deseada directamente en el prompt — sin actualizaciones de los pesos del modelo — el rendimiento en tareas posteriores mejoró drásticamente.',
+            'Esta fue la semilla del prompt engineering como disciplina. Los investigadores y desarrolladores se dieron cuenta de que el mismo modelo podía convertirse en un traductor, un resumidor, un generador de código o un sistema de preguntas y respuestas simplemente cambiando cómo se escribía el prompt. El modelo no necesitaba reentrenamiento — necesitaba un mejor prompt. Ese insight reformuló lo que era un prompt: no solo un input, sino un artefacto de diseño.',
+            'Brown et al. informaron que el rendimiento en few-shot escalaba de forma consistente con el tamaño del modelo. Esto convirtió la calidad del prompt en una variable que los profesionales — no solo los investigadores — podían controlar.',
+            'Consulta [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] para una guía práctica de la técnica que GPT-3 hizo famosa.',
+          ],
+        },
+
+        skill: {
+          title: '2021–principios de 2022: De los trucos de prompt a una habilidad reconocida',
+          content: [
+            'Entre 2021 y principios de 2022, la elaboración de prompts pasó de los artículos de investigación a las comunidades de profesionales. Aparecieron repositorios de GitHub con colecciones de prompts curadas — listas del estilo "awesome-prompts" que compartían lo que funcionaba para la asistencia en codificación, el resumen y la escritura creativa. Las colecciones de prompts, compartidas en Twitter y Reddit, se convirtieron en activos comunitarios.',
+            'El término "prompt engineering" empezó a aparecer con más frecuencia en artículos de investigación, publicaciones de blog y descripciones de puestos de trabajo durante este período. El artículo de InstructGPT de OpenAI (Ouyang et al., 2022) introdujo modelos ajustados con RLHF que respondían de forma mucho más fiable a las instrucciones en lenguaje natural — haciendo la calidad del prompt aún más determinante. A mediados de 2022, quedó claro que esta era una habilidad transferible, no solo una curiosidad de investigadores.',
+          ],
+        },
+
+        cot: {
+          title: '2022: Chain-of-Thought y prompts de razonamiento',
+          content: [
+            '**La introducción del prompting Chain-of-Thought (CoT) en 2022 fue el desarrollo técnico más significativo en la breve historia de la disciplina.** Wei et al. (Google Brain) publicaron "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models", demostrando que pedir a un modelo que razone paso a paso antes de responder mejoraba drásticamente el rendimiento en tareas de aritmética, razonamiento de sentido común y razonamiento simbólico. En un resultado destacado, el prompting chain-of-thought mejoró la precisión de PaLM en el benchmark GSM8K de matemáticas de primaria del 17.9% al 58% — una ganancia lograda puramente cambiando la estructura del prompt, sin entrenamiento adicional del modelo.',
+            'Las técnicas relacionadas siguieron rápidamente. Zhou et al. introdujeron el prompting least-to-most, que descomponía problemas complejos en una secuencia de subproblemas más simples resueltos en orden. Estos enfoques convirtieron el prompt engineering de un ejercicio de formato en una herramienta para elicitar razonamiento estructurado de modelos que no habían sido entrenados explícitamente para razonar de esa manera.',
+            'Para la guía completa de técnicas, consulta [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning] y [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps].',
+          ],
+        },
+
+        chatgpt: {
+          title: 'Finales de 2022–2023: El momento ChatGPT y el título de trabajo "Prompt Engineer"',
+          content: [
+            '**El lanzamiento de ChatGPT el 30 de noviembre de 2022 cambió de la noche a la mañana el perfil público del prompt engineering.** ChatGPT alcanzó un millón de usuarios en sus primeros cinco días y 100 millones de usuarios activos mensuales en enero de 2023. En cuestión de días, millones de personas estaban experimentando con prompts y descubriendo que sus resultados variaban enormemente en función de cómo formulaban las solicitudes. Los medios tecnológicos cubrieron el "prompt engineering" como una habilidad que valía la pena aprender.',
+            'A principios de 2023, "prompt engineer" apareció como título de trabajo con salarios reportados de 175.000–335.000 dólares en empresas como Anthropic. El papel atrajo una atención mediática significativa. El consenso en ese momento: era un papel de transición, parte diseño de interfaz humano-computadora, parte experiencia en la materia, parte control de calidad.',
+          ],
+        },
+
+        gpt4: {
+          title: '2023: GPT-4, prompting multimodal y frameworks',
+          content: [
+            'El lanzamiento de GPT-4 en marzo de 2023 expandió el prompt engineering en dos direcciones simultáneamente: context windows más grandes (hasta 128K tokens en versiones posteriores) y inputs multimodales. Los profesionales ahora podían incluir imágenes en los prompts junto con texto, abriendo el prompt engineering a tareas visuales — describir imágenes, comparar diagramas, anotar gráficos.',
+            'El mismo año vio la formalización de las mejores prácticas de prompt engineering. OpenAI publicó su guía oficial de prompt engineering. Google Cloud publicó su propia documentación de prompt engineering. Autores independientes codificaron frameworks — CRAFT, CO-STAR, SPECS, RISEN, TRACE — que dieron a los profesionales plantillas repetibles para estructurar prompts.',
+            'Estos frameworks representaron la maduración del prompt engineering de una habilidad personal a una práctica enseñable y compartible. Consulta [Frameworks: Which Prompt Framework Should You Use?] para una guía de selección.',
+          ],
+        },
+
+        automated: {
+          title: '2023–2024: Prompt engineering automatizado y RAG',
+          content: [
+            'Un desarrollo llamativo en 2023 fue la investigación que mostraba que los LLMs podían optimizar prompts tan bien como los humanos. Zhou et al. publicaron "Large Language Models Are Human-Level Prompt Engineers" (APE), demostrando que un LLM encargado de generar y evaluar candidatos de prompt podía igualar o superar los prompts escritos por humanos en tareas de benchmark. El framework DSPy de Stanford (2023) fue más lejos — permitiendo a los desarrolladores describir lo que debería lograr un prompt y dejar que el sistema optimizara la redacción automáticamente.',
+            'Simultáneamente, la Retrieval-Augmented Generation (RAG) — introducida originalmente por Lewis et al. en Meta en 2020 — se convirtió en un patrón central en los sistemas de IA en producción. RAG inyectaba documentos recuperados directamente en el contexto del prompt, fundamentando los outputs del modelo en fuentes reales y actualizadas. Esto desplazó el énfasis en el prompt engineering de "¿cómo hago que el modelo sepa esto?" a "¿cómo estructuro el contexto para que el modelo lo use correctamente?"',
+          ],
+        },
+
+        context: {
+          title: '2024–2025: Del prompt engineering al context design',
+          content: [
+            'Para 2024, un nuevo marco comenzó a desplazar la simple idea de "escribir un mejor prompt". Los profesionales e investigadores empezaron a referirse al context engineering — la práctica de orquestar lo que entra en el context window completo: el system prompt, los documentos recuperados, los outputs de las herramientas, el historial de conversación y el input del usuario, todos compuestos deliberadamente para guiar el comportamiento del modelo. El prompt ya no era un artefacto independiente; era una capa en un contexto diseñado.',
+            'Varios desarrollos aceleraron este cambio. Los modelos de la clase Llama 3 de Meta (2024) hicieron disponibles LLMs de código abierto capaces para despliegues privados. Los context windows crecieron hasta 1 millón de tokens o más (Gemini 1.5 Pro). Los frameworks multi-agente como LangChain y AutoGen convirtieron el prompting en orquestación.',
+          ],
+        },
+
+        beyond2026: {
+          title: '2026 y más allá: El prompt engineering como alfabetización fundamental',
+          content: [
+            'A partir de 2026, la investigación y los comentarios describen cada vez más el prompt engineering no como un título de trabajo de nicho, sino como una habilidad de alfabetización fundamental para los trabajadores del conocimiento que usan herramientas de IA. Los artículos académicos enmarcan el prompting estructurado junto con la lectura, la escritura y el cálculo como una competencia básica para trabajar con sistemas de IA generativa.',
+            'El papel se ha dividido en dos vías distintas. La primera es el diseño de sistemas y contextos — la ingeniería de sistemas de IA en producción donde los prompts forman parte de una arquitectura más amplia que involucra recuperación, agentes y pipelines de evaluación. La segunda es el uso cotidiano — la capacidad de escribir prompts claros y estructurados que produzcan outputs útiles sin conocer la arquitectura subyacente.',
+            'Lo que no ha cambiado, a pesar de los modelos más capaces y las herramientas automatizadas, es el principio fundamental: cuanto más claro y estructurado sea el input, más fiable y útil será el output.',
+          ],
+        },
+
+        timeline: {
+          title: 'Línea de tiempo: Hitos clave del prompt engineering',
+          content: 'La tabla a continuación resume los hitos clave de 2018 a 2026 — los eventos, artículos y lanzamientos de modelos que dieron forma a cómo el prompt engineering evolucionó a su forma actual.',
+          columns: ['Año', 'Hito', 'Por qué importa'],
+          rows: [
+            { 'Año': '2018–2019', 'Hito': 'Publicación de BERT (Google) y GPT-2 (OpenAI)', 'Por qué importa': 'Demostró que los modelos transformer podían guiarse por la formulación del input — pero aún sin disciplina formal' },
+            { 'Año': '2020', 'Hito': 'GPT-3 y Brown et al. "Language Models are Few-Shot Learners"', 'Por qué importa': 'Estableció el few-shot prompting como paradigma: reescribir el prompt cambia el comportamiento del modelo sin reentrenamiento' },
+            { 'Año': '2022 (ene)', 'Hito': 'InstructGPT / RLHF (Ouyang et al., OpenAI)', 'Por qué importa': 'Los modelos entrenados para seguir instrucciones — hicieron que la calidad del prompt fuera mucho más determinante' },
+            { 'Año': '2022 (may)', 'Hito': 'Chain-of-Thought prompting (Wei et al., Google Brain)', 'Por qué importa': 'Demostró que la estructura del prompt podía elicitar razonamiento paso a paso — convirtió el prompting en un andamiaje cognitivo' },
+            { 'Año': '2022 (nov)', 'Hito': 'Lanzamiento de ChatGPT', 'Por qué importa': 'Trajo el prompt engineering al conocimiento del público; millones comenzaron a experimentar de la noche a la mañana' },
+            { 'Año': '2023 (T1)', 'Hito': 'El título "Prompt Engineer" alcanza ofertas de $300K+; el OED añade "prompt" como verbo', 'Por qué importa': 'Definió el prompt engineering como una profesión reconocida y una habilidad con nombre' },
+            { 'Año': '2023 (mar)', 'Hito': 'Lanzamiento de GPT-4; prompting multimodal con imágenes', 'Por qué importa': 'Extendió el prompt engineering más allá del texto a inputs visuales y context windows grandes' },
+            { 'Año': '2023', 'Hito': 'Frameworks formalizados: CRAFT, CO-STAR, SPECS, RISEN; guías oficiales de OpenAI y Google', 'Por qué importa': 'Convirtió el prompt engineering de un arte personal en una práctica enseñable y compartible' },
+            { 'Año': '2023–2024', 'Hito': 'Artículo APE (Zhou et al.) y framework DSPy — prompts optimizados por IA', 'Por qué importa': 'Los LLMs demostraron poder escribir prompts tan bien como los humanos; la optimización automática de prompts se volvió práctica' },
+            { 'Año': '2024', 'Hito': 'Modelos clase Llama 3; context windows superan 1M tokens (Gemini 1.5 Pro)', 'Por qué importa': 'LLMs de código abierto para despliegues privados; el contexto masivo desplazó el foco hacia el context engineering' },
+            { 'Año': '2025–2026', 'Hito': 'El context design y la orquestación multi-agente reemplazan el simple ajuste de prompts', 'Por qué importa': 'El prompting se convierte en una capa en un contexto compuesto — se requiere pensamiento a nivel de sistema' },
+          ],
+        },
+
+        todayPractice: {
+          title: 'Cómo la historia da forma a las mejores prácticas actuales',
+          content: [
+            'Cada fase de la evolución del prompt engineering dejó un depósito duradero en la práctica actual. La era de GPT-3 nos dio el insight fundamental de que el comportamiento del modelo está moldeado por la estructura del input — no solo por el contenido. La era Chain-of-Thought nos dio andamiajes de razonamiento explícito: prompting paso a paso, prompt chaining y enfoques tree-of-thought. La era de los frameworks nos dio plantillas reutilizables que codifican las mejores prácticas sin requerir que cada profesional las descubra desde cero.',
+            'La era RAG y context design nos dio la comprensión de que los prompts no existen de forma aislada — se componen con datos recuperados, instrucciones del sistema y outputs de herramientas para formar un contexto completo.',
+          ],
+          items: [
+            'Técnicas de razonamiento de 2022 → [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning] y [Techniques: Tree of Thought & ReAct: Advanced Reasoning for Hard Problems]',
+            'Desarrollo de frameworks de 2023 → [Frameworks: Which Prompt Framework Should You Use?]',
+            'Crecimiento del context window → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
+            'Economía de tokens a través de generaciones de modelos → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
+            'RAG como complemento del prompting puro → [Techniques: RAG Explained: How to Ground AI Answers in Real Data]',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ: La evolución del prompt engineering',
+          faqs: [
+            {
+              q: '¿Quién acuñó por primera vez el término "prompt engineering"?',
+              a: 'El origen exacto es debatido. El término apareció en contextos de investigación ya en 2021 y ganó un uso más amplio a lo largo de 2022. Richard Socher es mencionado en algunos comentarios como alguien que ayudó a enmarcar el concepto públicamente, aunque no se le atribuye a ninguna persona en concreto haberlo inventado.',
+            },
+            {
+              q: '¿Por qué el prompt engineering explotó en popularidad después de ChatGPT?',
+              a: 'ChatGPT fue el primer modelo de IA de propósito general que millones de no investigadores podían usar de inmediato, gratis, sin escribir código. La brecha entre un prompt bien elaborado y uno vago era visible e inmediatamente relevante — los mejores prompts producían outputs usablemente mejores. Ese bucle de retroalimentación, experimentado simultáneamente por millones de personas, convirtió el prompt engineering de un concepto de investigación en una habilidad masiva.',
+            },
+            {
+              q: '¿Cómo influyeron los artículos de investigación en las técnicas de prompting del mundo real?',
+              a: 'La transferencia fue inusualmente rápida para la investigación en IA. El prompting Chain-of-Thought (Wei et al., 2022) pasó de artículo académico a técnica de profesionales ampliamente usada en meses, en parte porque no requería herramientas — solo un cambio en cómo se escribía el prompt. El few-shot prompting del artículo de GPT-3 (Brown et al., 2020) era inmediatamente adoptable por cualquier persona con acceso a la API.',
+            },
+            {
+              q: '¿El prompt engineering se está volviendo menos importante a medida que mejoran los modelos?',
+              a: 'No — los modelos más capaces responden mejor a los prompts bien estructurados, no peor. Las ganancias del buen prompting aumentan a medida que el modelo se vuelve más capaz de seguir instrucciones precisas. Lo que ha cambiado es el nivel de prompt engineering requerido para tareas simples. Pero para outputs complejos de nivel de producción, el prompting estructurado sigue siendo la palanca más fiable disponible.',
+            },
+            {
+              q: '¿Cuál es la diferencia entre prompt engineering y context engineering?',
+              a: 'El prompt engineering se refiere típicamente a diseñar el input de texto para un modelo para mejorar su output. El context engineering es un concepto más amplio y reciente que se refiere a orquestar todo lo que hay en el context window del modelo: el system prompt, los documentos recuperados, el historial de conversación, los outputs de las herramientas y el input del usuario — todos compuestos deliberadamente. El context engineering trata el prompt como un componente en un sistema diseñado, no como un artefacto independiente.',
+            },
+            {
+              q: '¿Las herramientas automatizadas reemplazarán la necesidad de entender el prompt engineering?',
+              a: 'Las herramientas automatizadas como DSPy pueden optimizar la redacción de prompts dentro de objetivos definidos, pero requieren que un humano especifique cuál es el objetivo, qué restricciones aplican y cómo evaluar el éxito. Entender los principios del prompt engineering sigue siendo necesario para usar estas herramientas de forma efectiva. La automatización elimina algo de la iteración manual; no elimina la necesidad de pensamiento estructurado.',
+            },
+            {
+              q: '¿Está muerto el prompt engineering en 2026?',
+              a: 'No. La disciplina ha cambiado, no ha desaparecido. A medida que los modelos crecen en capacidad, el trabajo pasa de los trucos de sintaxis y los hacks de formato al context design — estructurar inputs, gestionar la recuperación y componer outputs de herramientas. El título de trabajo "Prompt Engineer" se está estrechando, pero la habilidad subyacente está integrada en cada rol que usa IA: desarrollador, analista, marketer, investigador.',
+            },
+            {
+              q: '¿Necesito aprender prompt engineering si los modelos de IA siguen mejorando?',
+              a: 'Sí — pero el foco cambia con cada generación. Los mejores modelos reducen la necesidad de soluciones elaboradas y aumentan el beneficio de la intención clara, el contexto estructurado y los ejemplos bien elegidos. Los fundamentos — rol, contexto, formato, restricciones — permanecen estables en cada generación de modelos. Aprenderlos ahora significa que la habilidad se acumula en lugar de expirar.',
+            },
+            {
+              q: '¿Cuál es la diferencia entre prompt engineering y fine-tuning?',
+              a: 'El prompt engineering cambia cómo hablas con un modelo sin modificar sus pesos. El fine-tuning reentrena un modelo en nuevos datos para cambiar su comportamiento de forma permanente. El prompt engineering es más rápido, más barato y reversible — puedes iterar en minutos. El fine-tuning es mejor cuando el comportamiento objetivo es consistente, de alto volumen o imposible de describir de forma fiable en un prompt.',
+            },
+          ],
+        },
+      },
+    },
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Fondamentaux',

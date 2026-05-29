@@ -108,11 +108,11 @@ export function trackAffiliateClick(p: AffiliateClickParams): void {
 // the commission wording — switch the PowerLocalLLMPostClient lookup to it once
 // real affiliate programs go live (see the HONESTY NOTE at the top of this file).
 export const AFFILIATE_DISCLOSURE: Record<string, string> = {
-  en: 'This page contains links to third-party products for reference. PromptQuorum is not enrolled in any affiliate program — these are plain links that earn no commission.',
-  de: 'Diese Seite enthält Verweislinks zu Produkten von Drittanbietern. PromptQuorum ist an keinem Partnerprogramm beteiligt — es sind reine Referenzlinks, die keine Provision erzielen.',
-  fr: 'Cette page contient des liens de référence vers des produits tiers. PromptQuorum n\'est inscrit à aucun programme d\'affiliation — ce sont de simples liens qui ne génèrent aucune commission.',
-  ja: 'このページには参考用の第三者製品へのリンクが含まれています。PromptQuorumはいかなるアフィリエイトプログラムにも参加しておらず、これらはコミッションを得ない単なる参照リンクです。',
-  zh: '本页包含指向第三方产品的参考链接。PromptQuorum 未加入任何联盟计划——这些是不产生佣金的普通链接。',
+  en: 'This page contains links to third-party products for reference. PromptQuorum is not enrolled in any affiliate program — these are plain links that earn no commission. Clicking links and your next steps are entirely your own responsibility. These links do not represent any endorsement or verification by PromptQuorum.',
+  de: 'Diese Seite enthält Verweislinks zu Produkten von Drittanbietern. PromptQuorum ist an keinem Partnerprogramm beteiligt — es sind reine Referenzlinks, die keine Provision erzielen. Das Anklicken von Links und die nächsten Schritte liegen in Ihrer eigenen Verantwortung. Diese Links stellen keine Billigung oder Verifizierung durch PromptQuorum dar.',
+  fr: 'Cette page contient des liens de référence vers des produits tiers. PromptQuorum n\'est inscrit à aucun programme d\'affiliation — ce sont de simples liens qui ne génèrent aucune commission. Cliquer sur les liens et les prochaines étapes relèvent de votre responsabilité personnelle. Ces liens ne représentent aucun niveau d\'approbation ou de vérification par PromptQuorum.',
+  ja: 'このページには参考用の第三者製品へのリンクが含まれています。PromptQuorumはいかなるアフィリエイトプログラムにも参加しておらず、これらはコミッションを得ない単なる参照リンクです。リンクのクリックと次のステップはご自身の責任です。これらのリンクはPromptQuorumによる推奨や検証を表すものではありません。',
+  zh: '本页包含指向第三方产品的参考链接。PromptQuorum 未加入任何联盟计划——这些是不产生佣金的普通链接。点击链接和后续步骤由您自行承担责任。这些链接不代表 PromptQuorum 的任何认可或验证。',
 }
 
 // Commission wording — use only once real affiliate programs go live.
