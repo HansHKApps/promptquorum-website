@@ -618,7 +618,7 @@ function ArticleCard({ articleKey, dot, lang, titlesMap }: { articleKey: string;
   return (
     <Link
       href={href}
-      className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
+      className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 h-full hover:border-primary/50 hover:bg-primary/5 transition-colors group"
     >
       <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
       <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors">{title}</span>

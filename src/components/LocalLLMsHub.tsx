@@ -957,7 +957,7 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
   const showUpdated = !showNew && isUpdatedArticle(publishDate, dateModified)
 
   return (
-    <div className={`relative transition-all rounded-xl ${showNew ? 'ring-2 ring-emerald-400/60 shadow-[0_0_12px_rgba(52,211,153,0.25)]' : showUpdated ? 'ring-2 ring-amber-400/60 shadow-[0_0_12px_rgba(251,191,36,0.25)]' : ''}`}>
+    <div className={`relative h-full transition-all rounded-xl ${showNew ? 'ring-2 ring-emerald-400/60 shadow-[0_0_12px_rgba(52,211,153,0.25)]' : showUpdated ? 'ring-2 ring-amber-400/60 shadow-[0_0_12px_rgba(251,191,36,0.25)]' : ''}`}>
       {showNew && (
         <span className="absolute -top-3.5 right-3 text-[11px] font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-md rounded px-2.5 py-0.5 z-10">
           {NEW_LABEL[lang] ?? NEW_LABEL['en']}
@@ -970,7 +970,7 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
       )}
       <Link
         href={href}
-        className={`flex items-start gap-3 bg-card rounded-xl p-4 transition-colors group ${showNew ? 'border-2 border-emerald-400 hover:border-emerald-500' : showUpdated ? 'border-2 border-amber-400 hover:border-amber-500' : 'border border-primary/30 hover:border-primary/50 hover:bg-primary/5'}`}
+        className={`flex items-start gap-3 bg-card rounded-xl p-4 h-full transition-colors group ${showNew ? 'border-2 border-emerald-400 hover:border-emerald-500' : showUpdated ? 'border-2 border-amber-400 hover:border-amber-500' : 'border border-primary/30 hover:border-primary/50 hover:bg-primary/5'}`}
       >
         <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
         <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">

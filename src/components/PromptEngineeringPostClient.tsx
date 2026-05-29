@@ -336,6 +336,47 @@ const EXTERNAL_CITATIONS: Record<string, string> = {
   'The Evolution of Prompt Engineering to Context Design – 2026': 'https://www.sdggroup.com/en-ae/insights/blog/the-evolution-of-prompt-engineering-to-context-design-in-2026',
 }
 
+function isPEMarkdownTable(lines: string[]): boolean {
+  return lines.length >= 2 && lines[0].includes('|') && lines[1].includes('|') && lines[1].includes('-')
+}
+
+function renderPEMarkdownTable(lines: string[], renderLinks: (text: string) => React.ReactNode): JSX.Element {
+  const rows = lines
+    .filter(line => line.trim())
+    .map(line => line.split('|').map(cell => cell.trim()).filter(Boolean))
+    .filter(row => row.length > 0)
+  if (rows.length < 2) return <></>
+  const headers = rows[0]
+  const dataRows = rows.slice(2)
+  return (
+    <div className="relative overflow-x-auto my-6">
+      <table className="w-full border-collapse text-sm">
+        <thead>
+          <tr className="border-b-2 border-primary/20">
+            {headers.map((header, i) => (
+              <th key={i} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${i === 0 ? ' sticky left-0 z-10' : ''}`}>
+                {renderLinks(header)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {dataRows.map((row, i) => (
+            <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
+              {row.map((cell, j) => (
+                <td key={j} className={j === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
+                  {renderLinks(cell)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+    </div>
+  )
+}
+
 // Render inline link placeholders like [Techniques: Chain-of-Thought Prompting]
 // as real Next.js links resolved from the title-to-slug map
 // Also handles markdown links: [text](url)
@@ -680,7 +721,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
         </div>
       )}
 
-      {/* Regular content paragraphs */}
+      {/* Regular content paragraphs, headings, lists, or markdown tables */}
       {section.content && !section.isTldr && (
         <div className="space-y-4">
           {parseContentBlocks(section.content).map((block, i) => {
@@ -696,6 +737,9 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
                   </li>
                 ))}
               </ul>
+            )
+            if (block.type === 'table') return (
+              <div key={i}>{renderPEMarkdownTable(block.lines, (text) => renderInlineLinks(text, lang))}</div>
             )
             return <p key={i} className="text-text-secondary leading-relaxed">{renderInlineLinks(block.text, lang)}</p>
           })}
@@ -714,20 +758,26 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
         </blockquote>
       )}
 
-      {/* Bullet list */}
-      {!section.isTldr && section.items && (
-        <ul className="space-y-3 my-4">
-          {section.items.map((item, i) => {
-            const itemText = typeof item === 'string' ? item : `[${item.title}](${item.url})`;
-            return (
-              <li key={i} className="flex gap-3 text-text-secondary">
-                <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
-                <span className="leading-relaxed">{renderInlineLinks(itemText)}</span>
-              </li>
-            );
-          })}
-        </ul>
-      )}
+      {/* Bullet list or markdown table (when tableFormat: true) */}
+      {!section.isTldr && section.items && (() => {
+        const stringItems = section.items!.filter((item): item is string => typeof item === 'string')
+        if (section.tableFormat && isPEMarkdownTable(stringItems)) {
+          return renderPEMarkdownTable(stringItems, (text) => renderInlineLinks(text, lang))
+        }
+        return (
+          <ul className="space-y-3 my-4">
+            {section.items!.map((item, i) => {
+              const itemText = typeof item === 'string' ? item : `[${item.title}](${item.url})`;
+              return (
+                <li key={i} className="flex gap-3 text-text-secondary">
+                  <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
+                  <span className="leading-relaxed">{renderInlineLinks(itemText)}</span>
+                </li>
+              );
+            })}
+          </ul>
+        )
+      })()}
 
       {/* Numbered list */}
       {section.numberedItems && (

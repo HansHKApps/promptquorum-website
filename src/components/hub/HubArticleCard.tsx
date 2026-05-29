@@ -23,7 +23,7 @@ export function HubArticleCard({ highlight, children, publishDate, dateModified,
   return (
     <div
       className={`
-        relative transition-all duration-300 rounded-xl
+        relative h-full transition-all duration-300 rounded-xl
         ${isDimmed ? 'opacity-[0.45]' : 'opacity-100'}
         ${isHighlighted ? 'ring-2 ring-blue-200 bg-blue-50/30' : ''}
         ${showNew ? 'ring-2 ring-emerald-400/60 shadow-[0_0_12px_rgba(52,211,153,0.25)]' : ''}
