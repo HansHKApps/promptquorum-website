@@ -15,10 +15,10 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  return buildArticleMetadata(slug, 'de')
+  return buildArticleMetadata(slug, 'es')
 }
 
-export default async function PowerLocalLLMArticleDe({ params }: PageProps) {
+export default async function PowerLocalLLMArticleEs({ params }: PageProps) {
   const { slug } = await params
-  return buildArticlePageElement(slug, 'de')
+  return buildArticlePageElement(slug, 'es')
 }

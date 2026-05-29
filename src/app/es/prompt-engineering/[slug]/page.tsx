@@ -65,7 +65,7 @@ export default async function EsPromptEngineeringArticlePage({ params }: PagePro
 
   if (!key) notFound()
 
-  const article = peContent[key]['de'] ?? peContent[key]['en']
+  const article = peContent[key]['es'] ?? peContent[key]['en']
   if (!article) notFound()
 
   return (

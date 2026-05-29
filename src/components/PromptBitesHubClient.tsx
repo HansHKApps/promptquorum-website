@@ -359,7 +359,7 @@ export function PromptBitesHubClient({ lang }: Props) {
               <section key={cat.id}>
                 {CATEGORY_SVG[cat.id] && (
                   <img
-                    src={`/images/${CATEGORY_SVG[cat.id]}-${lang}.svg`}
+                    src={`/images/${CATEGORY_SVG[cat.id]}-${svgLang(lang)}.svg`}
                     alt={CATEGORY_SVG_ALT[cat.id]?.[lang] ?? ''}
                     className="w-full rounded-lg border border-primary/20 shadow-sm mb-4"
                     loading="lazy"

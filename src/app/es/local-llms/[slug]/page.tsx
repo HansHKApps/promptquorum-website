@@ -124,7 +124,7 @@ export default async function EsLocalLLMsArticlePage({ params }: PageProps) {
     )
   }
 
-  const article = llmContent[key]['de'] ?? llmContent[key]['en']
+  const article = llmContent[key]['es'] ?? llmContent[key]['en']
   if (!article) notFound()
 
   const canonicalUrl = `https://www.promptquorum.com/es/local-llms/${slug}`
@@ -133,7 +133,7 @@ export default async function EsLocalLLMsArticlePage({ params }: PageProps) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'Lokale LLMs', item: 'https://www.promptquorum.com/local-llms' },
+      { '@type': 'ListItem', position: 2, name: 'LLMs Locales', item: 'https://www.promptquorum.com/es/local-llms' },
       { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
     ],
   }
