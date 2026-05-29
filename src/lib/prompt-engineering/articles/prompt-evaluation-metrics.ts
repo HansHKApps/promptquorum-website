@@ -495,6 +495,251 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Techniques',
+      title: 'Métricas de evaluación de prompts: qué medir y cómo',
+      seoTitle: 'Métricas de evaluación de prompts: Pass Rate, BLEU y LLM-as-Judge (2026)',
+      metaDescription: 'Aprende qué métricas de evaluación de prompts usar según el tipo de salida: pass rate para JSON, BLEU para traducción, similitud semántica para paráfrasis, LLM-as-judge para texto libre.',
+      ogDescription: 'Elige la métrica de evaluación de prompts correcta según el tipo de salida. Compara pass rate, BLEU, similitud semántica y LLM-as-judge con detección de regresión.',
+      twitterDescription: '¿Pass rate, BLEU, similitud semántica o LLM-as-judge? Elige la métrica de evaluación de prompts correcta según el tipo de salida. Framework con alertas de regresión.',
+      intro: 'Elegir la métrica de evaluación incorrecta para tu prompt produce resultados engañosos que ocultan fallos reales en producción. Las puntuaciones BLEU carecen de sentido para las salidas JSON. El pass/fail binario no dice nada sobre la calidad matizada de la generación. La métrica que funciona depende completamente de lo que produce tu prompt.',
+      publishDate: '2026-04-10',
+      dateModified: '2026-04-10',
+      readTime: '8 min de lectura',
+      educationalLevel: 'Intermediate',
+      audience: 'Desarrolladores y equipos que despliegan LLMs en producción',
+      primaryTerm: 'métricas de evaluación de prompts',
+      aboutTopics: ['pass rate', 'puntuación BLEU', 'LLM-as-judge'],
+      next_refresh_due: '2026-10-10',
+      leadAnswerBlock: '**Las métricas de evaluación de prompts son señales cuantitativas que miden si un prompt produce de forma fiable la salida esperada.** La métrica correcta depende del tipo de salida: pass rate para datos estructurados, BLEU para traducción, similitud semántica para tareas de paráfrasis y LLM-as-judge para generación de texto libre matizada.',
+      quickFacts: [
+        'El pass rate se mapea directamente a la tasa de fallos en producción: 90 % = 10 % de las solicitudes fallan',
+        'La puntuación BLEU fue diseñada en 2002 para la traducción automática, no para la salida de IA en general',
+        'La similitud semántica por encima de 0,85 generalmente indica contenido semánticamente equivalente',
+        'LLM-as-judge escala a miles de evaluaciones por hora',
+        'Una caída de 5 puntos en el pass rate es el umbral estándar de alerta de regresión',
+        'Los modelos GPT-4o y Claude pueden diferir entre 10 y 20 puntos en el mismo conjunto de prueba de prompts',
+      ],
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: '¿Qué son las métricas de evaluación de prompts?', anchor: '#definition' },
+        { label: 'Métricas por tipo de salida', anchor: '#metric-types' },
+        { label: 'Pass rate: la métrica más útil', anchor: '#pass-rate' },
+        { label: 'Puntuación BLEU: cuándo usarla', anchor: '#bleu' },
+        { label: 'Puntuación de similitud semántica', anchor: '#semantic-similarity' },
+        { label: 'Evaluación LLM-as-judge', anchor: '#llm-as-judge' },
+        { label: 'Cómo detectar la regresión de métricas', anchor: '#regression-metrics' },
+        { label: 'Cómo empezar', anchor: '#how-to-start' },
+        { label: 'Errores comunes', anchor: '#common-mistakes' },
+        { label: 'Consideraciones regionales', anchor: '#regional-considerations' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Fuentes', anchor: '#sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Métricas de evaluación de prompts: qué medir y cómo',
+        description: 'Las métricas de evaluación de prompts incluyen pass rate, puntuación BLEU, similitud semántica y puntuación LLM-as-judge.',
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        datePublished: '2026-04-10',
+        dateModified: '2026-04-10',
+        url: 'https://www.promptquorum.com/prompt-engineering/prompt-evaluation-metrics?lang=es',
+        inLanguage: 'es',
+        proficiencyLevel: 'Intermediate',
+        about: [
+          { '@type': 'Thing', name: 'Pass Rate' },
+          { '@type': 'Thing', name: 'Puntuación BLEU' },
+          { '@type': 'Thing', name: 'LLM-as-Judge' },
+          { '@type': 'Thing', name: 'Similitud Semántica' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        audience: { '@type': 'Audience', audienceType: 'Desarrolladores y equipos que despliegan LLMs en producción' },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          { '@type': 'Question', name: '¿Qué son las métricas de evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Las métricas de evaluación de prompts son señales cuantitativas que miden si un prompt produce la salida esperada de forma fiable. Las métricas clave incluyen pass rate (correcto/incorrecto binario), puntuación BLEU (superposición de n-gramas para traducción y resumen), similitud semántica (similitud coseno de embeddings para tareas de paráfrasis) y LLM-as-judge (rúbrica de calidad puntuada por modelo para texto libre). Elegir la métrica incorrecta para tu tipo de salida produce puntuaciones engañosas.' } },
+          { '@type': 'Question', name: '¿Qué es el pass rate en la evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'El pass rate es el porcentaje de entradas de prueba donde la salida del prompt cumple los criterios de éxito definidos. Pass rate = salidas que pasan / total de casos de prueba. Es la métrica más útil para salidas estructuradas porque se mapea directamente a la tasa de fallos en producción.' } },
+          { '@type': 'Question', name: '¿Cuándo debes usar la puntuación BLEU para los prompts?', acceptedAnswer: { '@type': 'Answer', text: 'BLEU es apropiado para tareas de traducción y resumen donde la salida debe coincidir estrechamente con un texto de referencia. Es engañoso para la generación de JSON, el seguimiento de instrucciones y la escritura creativa porque mide la superposición de palabras en n-gramas, no el cumplimiento del formato o la corrección semántica.' } },
+          { '@type': 'Question', name: '¿Qué es la evaluación LLM-as-judge?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge usa un modelo capaz como GPT-4o o Claude Opus 4.7 para puntuar las salidas contra una rúbrica. Escala a miles de casos de prueba sin revisión humana y maneja dimensiones de calidad matizadas que las métricas binarias no pueden capturar. El principal riesgo es el sesgo del modelo: el juez puede favorecer las salidas similares a su propio estilo.' } },
+          { '@type': 'Question', name: '¿Cómo detectas la regresión de métricas de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Rastrea tu métrica principal por versión de prompt y alerta cuando caiga más de 5 puntos porcentuales desde la línea base establecida. El workflow es: registrar la métrica de línea base antes de cualquier cambio, hacer el cambio, volver a ejecutar el conjunto de prueba completo, comparar con la línea base. Una caída de más de 5 puntos debe bloquear el despliegue.' } },
+          { '@type': 'Question', name: '¿Qué métrica debo usar para los prompts de salida JSON?', acceptedAnswer: { '@type': 'Answer', text: 'Usa pass/fail binario para los prompts de salida JSON. Define "pasar" como: JSON válido + campos requeridos presentes + valores dentro del rango permitido. BLEU y la similitud semántica no tienen sentido para las salidas estructuradas.' } },
+          { '@type': 'Question', name: '¿Puedes combinar múltiples métricas de evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Sí — los prompts de producción típicamente necesitan una métrica primaria (pass rate para salidas estructuradas, precisión para clasificación) y una secundaria (similitud semántica o LLM-as-judge) para detectar diferentes modos de fallo. Rastrea ambas métricas de forma independiente y alerta si cualquiera cae por debajo del umbral.' } },
+          { '@type': 'Question', name: '¿Cómo evalúas la calidad del prompt para la generación de código?', acceptedAnswer: { '@type': 'Answer', text: 'Usa la tasa de éxito de pruebas como métrica principal — genera código, ejecuta pruebas unitarias contra él y calcula el porcentaje que pasa. Esto es más fiable que BLEU o la similitud semántica porque el código puede ser funcionalmente correcto con una sintaxis completamente diferente.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Cómo elegir y aplicar métricas de evaluación de prompts',
+        inLanguage: 'es',
+        step: [
+          { '@type': 'HowToStep', name: 'Identifica tu tipo de salida', text: 'Clasifica tu salida de prompt como datos estructurados (JSON, CSV), texto libre (resúmenes, descripciones) o código. El tipo de salida determina qué métricas aplican.' },
+          { '@type': 'HowToStep', name: 'Selecciona la métrica correcta', text: 'Salidas estructuradas: pass/fail binario. Traducción/resumen: BLEU o ROUGE. Tareas de paráfrasis: similitud semántica. Generación matizada: LLM-as-judge.' },
+          { '@type': 'HowToStep', name: 'Establece una línea base', text: 'Ejecuta tu conjunto de prueba y registra el valor de la métrica como tu línea base antes de hacer cualquier cambio de prompt.' },
+          { '@type': 'HowToStep', name: 'Establece un umbral de alerta de regresión', text: 'Define el valor mínimo aceptable de la métrica. Una caída de más de 5 puntos porcentuales en el pass rate debe bloquear el despliegue.' },
+          { '@type': 'HowToStep', name: 'Ejecuta las métricas después de cada cambio de prompt', text: 'Vuelve a ejecutar el conjunto de prueba y compara con la línea base cada vez que cambie el texto del prompt, el modelo o la temperatura.' },
+        ],
+      },
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Puntos clave',
+          items: [
+            'El pass rate (salidas correctas / total) es la métrica más útil para los prompts de producción con salidas estructuradas',
+            'La puntuación BLEU mide la superposición de n-gramas y solo tiene sentido para tareas de traducción y resumen',
+            'La similitud semántica (similitud coseno de embeddings) supera a BLEU para tareas de paráfrasis y reescritura',
+            'LLM-as-judge usa GPT-4o o Claude Opus 4.7 para puntuar salidas de texto libre matizadas a escala',
+            'Rastrea el pass rate por versión de prompt y alerta con caídas de más de 5 puntos porcentuales',
+            'Ninguna métrica única cubre todos los tipos de salida — elige según el formato de salida esperado de tu prompt',
+          ],
+        },
+        definition: {
+          title: '¿Qué son las métricas de evaluación de prompts?',
+          content: '**Las métricas de evaluación de prompts son señales cuantitativas que te dicen si un prompt produce de forma fiable la salida esperada en las entradas que importan.** Sin métricas, la evaluación de prompts es subjetiva. La métrica correcta depende de lo que se supone que debe producir tu prompt. Cuando eliges la métrica correcta para tu tarea, puedes [evaluar la calidad del prompt](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) de forma sistemática.',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Las métricas de evaluación de prompts son señales cuantitativas que miden si un prompt produce de forma fiable la salida esperada en un conjunto de prueba representativo.' },
+            { type: 'in-plain-terms', text: 'Piénsalas como pruebas unitarias para IA: defines qué es "correcto", ejecutas el prompt en 20+ ejemplos y puntúas el pass rate. Una puntuación del 95 % significa que el 5 % de las solicitudes reales de usuarios seguirán fallando.' }
+          ],
+          callouts: [
+            { type: 'tip', label: 'Consejo pro', text: 'Empieza con el pass rate antes de añadir métricas complejas. El correcto/incorrecto binario a menudo es más útil que una rúbrica de 1–5.' }
+          ],
+        },
+        metricTypes: {
+          title: '¿Qué métricas aplican a la salida estructurada vs texto libre vs código?',
+          content: '**El tipo de salida determina qué métrica es válida. Usar BLEU en salidas JSON o pass/fail en tareas de generación creativa produce puntuaciones sin sentido.**',
+          columns: ['Tipo de salida', 'Métrica recomendada', 'Por qué'],
+          rows: [
+            { 'Tipo de salida': 'JSON / datos estructurados', 'Métrica recomendada': 'Pass/fail binario', 'Por qué': 'O válido + correcto, o no. Sin crédito parcial.' },
+            { 'Tipo de salida': 'Clasificación', 'Métrica recomendada': 'Precisión (binaria)', 'Por qué': 'Una etiqueta correcta por entrada.' },
+            { 'Tipo de salida': 'Traducción / resumen', 'Métrica recomendada': 'BLEU o ROUGE', 'Por qué': 'Texto de referencia disponible para comparar.' },
+            { 'Tipo de salida': 'Paráfrasis / reescritura', 'Métrica recomendada': 'Similitud semántica', 'Por qué': 'Preserva el significado, no las palabras exactas.' },
+            { 'Tipo de salida': 'Texto libre / creativo', 'Métrica recomendada': 'LLM-as-judge', 'Por qué': 'Se necesita rúbrica matizada, sin texto de referencia.' },
+            { 'Tipo de salida': 'Generación de código', 'Métrica recomendada': 'Tasa de éxito de pruebas', 'Por qué': 'Ejecuta pruebas unitarias contra el código generado.' },
+          ],
+          callouts: [
+            { type: 'insight', label: 'Punto clave', text: 'El tipo de salida guía la elección de la métrica. El error más común es aplicar BLEU a tareas que no son de traducción — mide la superposición de palabras, no el cumplimiento del formato.' }
+          ],
+        },
+        passRate: {
+          title: '¿Qué es el pass rate y por qué es la métrica más útil?',
+          content: '**El pass rate es el porcentaje de entradas de prueba donde la salida del prompt cumple los criterios de éxito definidos — y es la métrica más útil porque se mapea directamente a la tasa de fallos en producción.** Un pass rate del 92 % significa que el 8 % de las solicitudes reales de usuarios fallarán.\n\nPass rate = salidas que pasan / total de casos de prueba\n\nPara salidas estructuradas, define "pasar" con precisión antes de ejecutar las pruebas: JSON válido, campos requeridos presentes, valores dentro del enum permitido, longitud por debajo del límite especificado.\n\nRastrea el pass rate por versión de prompt. Una caída de más de 5 puntos porcentuales es una regresión. Una caída de más de 10 puntos debe bloquear el despliegue en producción.',
+          callouts: [
+            { type: 'warning', label: 'Advertencia', text: 'Un pass rate del 90 % significa que el 10 % de las solicitudes reales de usuarios fallarán. Establece tu umbral de regresión basándote en la tolerancia al riesgo de producción, no en lo que parece bien en un dashboard.' }
+          ],
+        },
+        bleu: {
+          title: '¿Qué es la puntuación BLEU y cuándo debes usarla?',
+          content: '**La puntuación BLEU (Bilingual Evaluation Understudy) mide la superposición de n-gramas entre una salida del modelo y un texto de referencia.** Es la métrica estándar para la traducción automática y es apropiada para cualquier tarea donde la salida debe coincidir estrechamente con una referencia.\n\nBLEU es engañoso para:\n\n- **Salida JSON o estructurada:** BLEU puntúa los tokens de formato, no la corrección semántica\n- **Seguimiento de instrucciones:** Un prompt que sigue todas las instrucciones pero parafrasea diferente puntuará bajo en BLEU\n- **Generación creativa:** BLEU penaliza la variedad léxica incluso cuando la calidad es alta\n\nCuándo BLEU es apropiado: tareas de traducción donde existe una referencia de oro, resumen frente a un resumen escrito por humanos, preguntas y respuestas extractivas con respuestas verbatim esperadas.',
+          callouts: [
+            { type: 'note', label: '¿Sabías que?', text: 'BLEU fue diseñado en 2002 para la traducción automática. Tiene limitaciones conocidas para la generación abierta pero sigue siendo el estándar para los benchmarks de MT.' }
+          ],
+        },
+        semanticSimilarity: {
+          title: '¿Qué es la puntuación de similitud semántica?',
+          content: '**La similitud semántica mide qué tan cercanos están dos textos en significado calculando la similitud coseno de sus embeddings.** Supera a BLEU para tareas de paráfrasis y reescritura porque captura el significado en lugar de la elección de palabras.\n\nCómo funciona: embed la salida del modelo y la referencia usando text-embedding-3-small de OpenAI o un modelo de embedding local, luego calcula la similitud coseno. Las puntuaciones por encima de 0,85 generalmente indican contenido semánticamente equivalente.\n\nLimitaciones: la similitud semántica no verifica la exactitud factual, no detecta violaciones de formato y puede puntuar alto el contenido alucinado si la alucinación es semánticamente similar a la respuesta esperada.',
+          callouts: [
+            { type: 'tip', label: 'Consejo pro', text: 'text-embedding-3-small de OpenAI es el modelo más rápido y barato para la puntuación de similitud. Para contenido técnico/de código, considera un modelo de embedding específico para código.' }
+          ],
+        },
+        llmAsJudge: {
+          title: '¿Qué es la evaluación LLM-as-judge?',
+          content: '**LLM-as-judge usa un modelo capaz — típicamente GPT-4o o Claude Opus 4.7 — para puntuar las salidas contra una rúbrica.** Esto escala la evaluación a miles de casos de prueba sin revisión humana y maneja dimensiones de calidad que las métricas binarias no pueden capturar: coherencia, tono, completitud y exactitud factual.',
+          columns: ['Dimensión', 'Ventaja', 'Limitación'],
+          rows: [
+            { 'Dimensión': 'Escala', 'Ventaja': 'Miles de casos por hora', 'Limitación': 'El costo de API aumenta con el volumen' },
+            { 'Dimensión': 'Matiz', 'Ventaja': 'Maneja rúbricas complejas', 'Limitación': 'Sesgo del modelo hacia su propio estilo de salida' },
+            { 'Dimensión': 'Consistencia', 'Ventaja': 'Puntuación reproducible', 'Limitación': 'Sensible a la redacción del prompt del juez' },
+            { 'Dimensión': 'Costo', 'Ventaja': 'Más barato que la revisión humana a escala', 'Limitación': 'Caro para conjuntos de prueba pequeños' },
+          ],
+          promptExamples: [
+            {
+              badLabel: 'Rúbrica vaga',
+              bad: 'Califica la calidad de esta salida en una escala del 1 al 5.',
+              goodLabel: 'Rúbrica multi-dimensional explícita',
+              good: 'Puntúa esta salida en 3 dimensiones (1–3 cada una): (1) Exactitud factual — ¿coincide con los hechos de referencia? (2) Completitud — ¿se abordan todos los campos requeridos? (3) Tono — ¿es apropiadamente profesional? Devuelve JSON: {"accuracy": X, "completeness": X, "tone": X, "total": X, "reason": "..."}'
+            }
+          ],
+          callouts: [
+            { type: 'warning', label: 'Advertencia', text: 'LLM-as-judge tiene un sesgo propio: los modelos puntúan más alto las salidas similares a su propio estilo. Usa un modelo diferente como juez al que genera las salidas.' }
+          ],
+        },
+        regressionMetrics: {
+          title: '¿Cómo detectas la regresión de métricas?',
+          content: '**Rastrea tu métrica principal por versión de prompt y alerta cuando caiga más de 5 puntos porcentuales desde la línea base establecida.** Ejecuta el mismo conjunto de prueba antes y después de cada cambio de prompt, actualización del modelo o ajuste de temperature.\n\nSigue este workflow:\n\n1. Registra la puntuación de la métrica actual como línea base (por ejemplo, pass rate = 91 %)\n2. Haz el cambio de prompt\n3. Vuelve a ejecutar el conjunto de prueba completo\n4. Compara la nueva puntuación con la línea base\n5. Si la caída > 5 puntos: bloquea el cambio, investiga, corrige\n\nPara la detección de regresión automatizada en CI/CD, herramientas como Promptfoo se integran con GitHub Actions y pueden fallar un PR si el pass rate cae por debajo de un umbral.',
+          callouts: [
+            { type: 'practice', label: 'Buena práctica', text: 'Integra Promptfoo con GitHub Actions para fallar automáticamente los PRs cuando el pass rate caiga por debajo del umbral. Esto evita que las regresiones de prompts lleguen a producción.' }
+          ],
+        },
+        howToStart: {
+          title: 'Cómo empezar a medir las métricas de evaluación de prompts',
+          numberedItems: [
+            'Identifica tu tipo de salida de prompt: datos estructurados, clasificación, traducción/resumen, paráfrasis, texto libre o código.',
+            'Selecciona la métrica apropiada: pass/fail binario para estructurado, BLEU para traducción/resumen, similitud semántica para paráfrasis, LLM-as-judge para texto libre, tasa de éxito de pruebas para código.',
+            'Construye un conjunto de prueba de 20+ entradas con salidas esperadas o criterios de éxito escritos antes de ejecutar cualquier prueba.',
+            'Ejecuta el conjunto de prueba y registra tu puntuación de métrica de línea base.',
+            'Establece un umbral de alerta de regresión: alerta si el pass rate cae 5+ puntos desde la línea base.',
+            'Ejecuta la métrica automáticamente en cada cambio de prompt usando Promptfoo, Braintrust o PromptQuorum.',
+          ],
+          callouts: [
+            { type: 'insight', label: 'Punto clave', text: 'Construye tu conjunto de prueba antes de escribir el prompt, no después. Los casos de prueba definidos post-hoc tienden a coincidir con el prompt actual en lugar de la distribución de entradas real.' }
+          ],
+        },
+        commonMistakes: {
+          title: '¿Qué errores debes evitar con las métricas de evaluación de prompts?',
+          items: [
+            '**Error: usar BLEU en JSON o seguimiento de instrucciones.** Solución: BLEU mide la superposición de n-gramas, no el cumplimiento del formato o el seguimiento de instrucciones. Usa pass/fail binario para salidas estructuradas.',
+            '**Error: LLM-as-judge con rúbrica de evaluación vaga.** Solución: El prompt del juez debe definir explícitamente cada nivel de puntuación. Las rúbricas vagas como "califica la calidad del 1 al 5" producen puntuaciones inconsistentes sin valor diagnóstico.',
+            '**Error: sin línea base antes del primer cambio.** Solución: registra el valor de la métrica antes de hacer cambios. Sin una línea base, no puedes detectar regresiones.',
+            '**Error: medir solo una métrica.** Solución: los prompts de producción típicamente necesitan una métrica primaria (pass rate o precisión) y una secundaria (similitud semántica o LLM-as-judge) para detectar diferentes modos de fallo.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Cómo evaluar la calidad de los prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — Framework de tres componentes: precisión, consistencia, tasa de seguimiento',
+            '[Prueba prompts entre modelos](/prompt-engineering/how-to-test-prompts-across-models?lang=es) — Ejecuta el mismo conjunto de prueba en GPT-4o, Claude y Gemini',
+            '[Auditoría de prompts y riesgo de regresión](/prompt-engineering/prompt-audit-and-regression-risk?lang=es) — Suites de regresión automatizadas y gates de CI/CD',
+            '[Braintrust vs Prompthub vs Vellum](/prompt-engineering/braintrust-vs-prompthub-vs-vellum?lang=es) — Comparación de plataformas de evaluación de prompts dedicadas para equipos',
+            '[Mejores herramientas de prueba y evaluación de prompts 2026](/prompt-engineering/best-prompt-testing-tools?lang=es) — Herramientas valoradas para QA sistemática de prompts',
+            '[Cómo construir una biblioteca de prompts](/prompt-engineering/build-a-prompt-library?lang=es) — Versiona y organiza prompts junto a sus líneas base de evaluación',
+          ],
+        },
+        faq: {
+          title: 'Preguntas frecuentes',
+          faqs: [
+            { q: '¿Qué son las métricas de evaluación de prompts?', a: 'Las métricas de evaluación de prompts son señales cuantitativas que miden si un prompt produce la salida esperada de forma fiable. Las métricas clave incluyen pass rate (correcto/incorrecto binario), BLEU (superposición de n-gramas para traducción y resumen), similitud semántica (similitud coseno de embeddings) y LLM-as-judge (rúbrica de calidad para texto libre). Elegir la métrica incorrecta produce puntuaciones engañosas.' },
+            { q: '¿Qué es el pass rate en la evaluación de prompts?', a: 'El pass rate es el porcentaje de entradas de prueba donde la salida del prompt cumple los criterios de éxito definidos. Se mapea directamente a la tasa de fallos en producción y es la métrica más útil para los prompts de salida estructurada.' },
+            { q: '¿Cuándo debes usar la puntuación BLEU para los prompts?', a: 'BLEU es apropiado para tareas de traducción y resumen donde la salida debe coincidir estrechamente con un texto de referencia. Es engañoso para la generación de JSON, el seguimiento de instrucciones y la escritura creativa.' },
+            { q: '¿Qué es la evaluación LLM-as-judge?', a: 'LLM-as-judge usa GPT-4o o Claude Opus 4.7 para puntuar las salidas contra una rúbrica a escala. Maneja dimensiones de calidad matizadas que las métricas binarias no pueden capturar. El principal riesgo es el sesgo del modelo hacia su propio estilo de salida.' },
+            { q: '¿Cómo detectas la regresión de métricas de prompts?', a: 'Rastrea tu métrica principal por versión de prompt y alerta cuando caiga más de 5 puntos porcentuales desde la línea base. Ejecuta el mismo conjunto de prueba antes y después de cada cambio. Una caída de más de 10 puntos es una regresión crítica.' },
+            { q: '¿Qué métrica debo usar para los prompts de salida JSON?', a: 'Usa pass/fail binario. Define "pasar" como: JSON válido + campos requeridos presentes + valores dentro del rango permitido. BLEU y la similitud semántica no tienen sentido para las salidas estructuradas.' },
+            { q: '¿Puedes combinar múltiples métricas de evaluación de prompts?', a: 'Sí — los prompts de producción típicamente necesitan una métrica primaria y una secundaria para detectar diferentes modos de fallo. Rastrea ambas de forma independiente y alerta si cualquiera cae por debajo del umbral.' },
+            { q: '¿Cómo evalúas la calidad del prompt para la generación de código?', a: 'Usa la tasa de éxito de pruebas como métrica principal — genera código, ejecuta pruebas unitarias contra él y calcula el porcentaje que pasa. Suplementa con puntuaciones de análisis estático para una imagen más completa de la calidad.' },
+            { q: '¿Debo tener en cuenta regulaciones al usar métricas de evaluación de prompts?', a: 'Sí. Los sistemas de IA de alto riesgo bajo el AI Act de la UE deben demostrar pruebas documentadas con métricas de calidad cuantitativas. Los registros de evaluación de prompts — conjuntos de prueba, pass rates, líneas base de regresión — proporcionan evidencia lista para auditoría.' },
+            { q: '¿Qué métricas de evaluación de prompts son adecuadas para empresas medianas?', a: 'Pass rate para el procesamiento de documentos (por ejemplo, extracción de facturas), LLM-as-judge para la calidad del servicio al cliente. Los gates de regresión CI/CD proporcionan evidencia de trazabilidad para auditoría. Un umbral de pass rate del 95 % para documentos críticos es un objetivo razonable.' },
+          ],
+        },
+        regionalConsiderations: {
+          title: '¿Qué factores regionales influyen en los requisitos de evaluación de prompts?',
+          content: '**Los marcos regulatorios exigen cada vez más métricas de calidad de IA documentadas, con requisitos específicos según la jurisdicción y la clasificación de riesgos.**\n\n- **UE (AI Act 2025–2026):** Los sistemas de IA de alto riesgo deben demostrar pruebas documentadas con métricas de calidad cuantitativas. Los registros de evaluación de prompts — conjuntos de prueba, pass rates, líneas base de regresión — proporcionan evidencia lista para auditoría.\n\n- **EE. UU. (SOC 2 / NIST AI RMF):** Las auditorías SOC 2 Type II esperan QA documentada para los procesos impulsados por IA. Las métricas de evaluación de prompts con historial de versiones satisfacen los requisitos de auditoría de gestión del cambio.\n\n- **Evaluación multilingüe:** Si despliegas prompts en múltiples idiomas, evalúa cada variante de idioma por separado. Las puntuaciones BLEU y los umbrales de similitud semántica difieren significativamente entre pares de idiomas.',
+        },
+        sources: {
+          title: 'Fuentes',
+          items: [
+            '[Documentación de Promptfoo (promptfoo.dev)](https://www.promptfoo.dev) — Framework de evaluación de prompts de código abierto con métricas integradas incluyendo LLM-as-judge',
+            '[Guía de evaluación de Braintrust (braintrust.dev)](https://www.braintrust.dev) — Plataforma de evaluación de producción con soporte de pass rate, LLM-as-judge y puntuación personalizada',
+            '[Papineni et al., 2002. "BLEU: a Method for Automatic Evaluation of Machine Translation"](https://aclanthology.org/P02-1040.pdf) — Artículo original de BLEU',
+            '[DeepEval: Open-Source LLM Evaluation Framework (github.com/confident-ai/deepeval)](https://github.com/confident-ai/deepeval) — Confident AI, 2024–2025. Soporta pass rate, detección de alucinaciones y métricas LLM-as-judge con integración CI/CD.',
+            '[The Prompt Report: A Systematic Survey of Prompting Techniques (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — Schulhoff et al., 2024. Revisión completa incluyendo metodología de evaluación y selección de métricas para prompt engineering.',
+          ],
+        },
+      },
+    },
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
