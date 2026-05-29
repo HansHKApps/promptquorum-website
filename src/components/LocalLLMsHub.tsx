@@ -412,7 +412,7 @@ const HUB_PE_SIDEBAR_LINKS: Record<string, { label: string; href: string }[]> = 
   es: [
     { label: 'Guía de Prompt Engineering', href: 'https://www.promptquorum.com/prompt-engineering' },
     { label: '¿Qué es el Prompt Engineering?', href: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering' },
-    { label: 'Chain-of-Thought Prompting', href: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting' },
+    { label: 'Prompting de Cadena de Pensamiento', href: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting' },
   ],
 }
 
