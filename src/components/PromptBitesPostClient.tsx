@@ -355,7 +355,7 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
         </h1>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="prompt-bites" slug={slug} availableLangs={Object.keys(articleData ?? {})} />
+        <LangLinksBar cluster="prompt-bites" slug={slug} availableLangs={Object.keys(articleData ?? {})} initialLang={lang} />
 
         {/* Affiliate disclosure — neutral third-party-link notice */}
         {(article as any).affiliateDisclosure && (
