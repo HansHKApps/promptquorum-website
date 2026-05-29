@@ -12,6 +12,7 @@ import { LangLinksBar } from '@/components/LangLinksBar'
 import { GlossaryComparisonTable } from '@/components/GlossaryComparisonTable'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
+import { parseContentBlocks } from '@/lib/parseContentBlocks'
 
 interface Props {
   slug: string
@@ -682,11 +683,22 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
       {/* Regular content paragraphs */}
       {section.content && !section.isTldr && (
         <div className="space-y-4">
-          {(Array.isArray(section.content) ? section.content : [section.content]).map((para, i) => (
-            <p key={i} className="text-text-secondary leading-relaxed">
-              {renderInlineLinks(para, lang)}
-            </p>
-          ))}
+          {parseContentBlocks(section.content).map((block, i) => {
+            if (block.type === 'h3') return (
+              <h3 key={i} className="text-base font-semibold text-text-primary mt-2">{block.text}</h3>
+            )
+            if (block.type === 'ul') return (
+              <ul key={i} className="space-y-1.5 ml-1">
+                {block.items.map((item, j) => (
+                  <li key={j} className="flex gap-3 text-text-secondary">
+                    <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-1.5 ${colors.dot}`} />
+                    <span className="leading-relaxed">{renderInlineLinks(item, lang)}</span>
+                  </li>
+                ))}
+              </ul>
+            )
+            return <p key={i} className="text-text-secondary leading-relaxed">{renderInlineLinks(block.text, lang)}</p>
+          })}
         </div>
       )}
 

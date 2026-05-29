@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       next_refresh_due: '2026-11-06',
       theme: 'Best Models',
       title: 'LLM Quantization: Q4 vs Q5 vs Q8 Explained (When to Use Each)',
-      seoTitle: 'LLM Quantization: Q4 vs Q5 vs Q8 Explained (When to Use Each)',
+      seoTitle: 'LLM Quantization 2026: Q4_K_M vs Q8_0 VRAM Guide',
       intro: 'Complete guide to choosing the right LLM quantization for your hardware: Q4_K_M for 6–8 GB VRAM, Q5_K_M for 16 GB, Q8_0 for 24+ GB. Includes GGUF format explained, quality loss breakdown by quantization level, and advanced techniques (CPU offloading and multi-GPU layer splitting). Learn how to run Llama 3.3 70B on RTX 4090 via offloading, 2× RTX 4090 via layer splitting, or Mac Studio M2 Ultra natively. Updated May 2026.',
       metaDescription: 'Understand LLM quantization in 2026: Q4_K_M, Q5_K_M, Q8_0 differences. Memory savings, quality tradeoffs, model size table, recommendations per use case.',
       publishDate: '2026-04-04',
@@ -1102,7 +1102,7 @@ schema: {
     fr: {
       theme: 'Meilleurs modèles',
       title: 'Quelle quantification LLM choisir ? Q4_K_M, Q5_K_M, Q8_0 comparés (2026)',
-      seoTitle: 'Quelle quantification LLM : Q4_K_M vs Q5_K_M vs Q8_0 (2026)',
+      seoTitle: 'Quantification LLM 2026 : Q4_K_M vs Q5_K_M vs Q8_0',
       intro: 'Guide complet de la quantification LLM (Q4_K_M, Q5_K_M, Q8_0, GGUF) et des techniques avancées de réduction VRAM : offloading CPU et layer splitting multi-GPU. Apprenez à exécuter Llama 3.3 70B sur RTX 4090 via offloading, 2× RTX 4090 via layer splitting ou Mac Studio M2 Ultra nativement. En avril 2026, la combinaison de ces techniques permet une inférence locale à l\'échelle entreprise.',
       metaDescription: 'Choisissez la bonne quantification LLM pour votre matériel. Q4_K_M pour 6–8 GB VRAM, Q5_K_M pour 16 GB, Q8_0 pour 24 GB+. Guide 2026 avec tables RAM.',
       publishDate: '2026-04-04',
@@ -1566,7 +1566,7 @@ schema: {
     ja: {
       theme: 'ベストモデル',
       title: 'どのLLM量子化を選ぶべき？Q4_K_M、Q5_K_M、Q8_0を比較（2026）',
-      seoTitle: 'LLM量子化を選択：Q4_K_M vs Q5_K_M vs Q8_0（2026）',
+      seoTitle: '2026年LLM量子化：Q4_K_M vs Q5_K_M vs Q8_0 VRAM別おすすめガイド',
       intro: 'LLM量子化（Q4_K_M、Q5_K_M、Q8_0、GGUF）と、CPUオフロードおよびマルチGPUレイヤースプリッティングによる高度なVRAM削減技術の完全ガイド。RTX 4090でオフロードを使用したLlama 3.3 70Bの実行方法、2× RTX 4090でのレイヤースプリッティング、またはMac Studio M2 Ultraでのネイティブ実行方法を学びます。',
       metaDescription: 'ハードウェアに適したLLM量子化を選択してください。Q4_K_Mは6～8GB VRAM、Q5_K_Mは16GB、Q8_0は24GB以上向け。2026年RAMテーブル付きガイド。',
       publishDate: '2026-04-04',
@@ -2029,7 +2029,7 @@ schema: {
     zh: {
       theme: '量化入门',
       title: '应该选择哪种LLM量化？Q4_K_M、Q5_K_M、Q8_0对比（2026）',
-      seoTitle: '选择LLM量化：Q4_K_M vs Q5_K_M vs Q8_0（2026）',
+      seoTitle: 'LLM量化2026：Q4_K_M vs Q5_K_M vs Q8_0 区别与VRAM选择指南',
       intro: 'LLM量化（Q4_K_M、Q5_K_M、Q8_0、GGUF）及高级VRAM减少技术的完整指南：CPU卸载和多GPU层分割。了解如何通过卸载在RTX 4090上运行Llama 3.3 70B，通过层分割使用2× RTX 4090，或在Mac Studio M2 Ultra上原生运行。截至2026年4月，这些技术的组合支持企业级本地推理。',
       metaDescription: '为您的硬件选择合适的LLM量化。Q4_K_M适合6-8GB显存，Q5_K_M适合16GB，Q8_0适合24GB以上。2026年含RAM表格的指南。',
       publishDate: '2026-04-04',

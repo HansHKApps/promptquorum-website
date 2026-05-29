@@ -137,9 +137,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '| Windows + RTX 5090 32 GB | $2,500 | $120 | $2,620 |',
             '| Linux + RTX 5060 Ti 16 GB | $750 | $60 | $810 |',
             '| Linux + RTX 5090 32 GB | $1,400 | $100 | $1,500 |',
-            '',
-            '**Key insight:** Linux + RTX 5060 Ti remains the cheapest production solution at $810 over 3 years. Mac mini M4 Pro is the cheapest Apple option that runs 70B ($2,319). M5 Max is most expensive upfront but offers 4× the memory (128 GB vs 32 GB on RTX 5090).',
           ],
+          note: '**Key insight:** Linux + RTX 5060 Ti remains the cheapest production solution at $810 over 3 years. Mac mini M4 Pro is the cheapest Apple option that runs 70B ($2,319). M5 Max is most expensive upfront but offers 4× the memory (128 GB vs 32 GB on RTX 5090).',
         },
         'faqSection': {
           id: 'faq',
@@ -613,9 +612,8 @@ schema: {
                 '| Windows + RTX 5090 32 Go | 1.666 € | 120 € | 1.786 € |',
                 '| Linux + RTX 5060 Ti 16 Go | 500 € | 60 € | 560 € |',
                 '| Linux + RTX 5090 32 Go | 933 € | 100 € | 1.033 € |',
-                '',
-                '**Insight clé :** Linux + RTX 5060 Ti reste la solution de production la moins chère à 560 € sur 3 ans. Mac mini M4 Pro est l\'option Apple la moins chère qui exécute 70B (1.549 €). M5 Max est le plus cher en amont mais offre 4× la mémoire (128 Go vs 32 Go sur RTX 5090).',
               ],
+              note: '**Insight clé :** Linux + RTX 5060 Ti reste la solution de production la moins chère à 560 € sur 3 ans. Mac mini M4 Pro est l\'option Apple la moins chère qui exécute 70B (1.549 €). M5 Max est le plus cher en amont mais offre 4× la mémoire (128 Go vs 32 Go sur RTX 5090).',
             },
             'faqSection': {
               id: 'faq',
@@ -867,9 +865,8 @@ schema: {
                 '| Windows + RTX 5090 32GB | ¥409,500 | ¥19,500 | ¥429,000 |',
                 '| Linux + RTX 5060 Ti 16GB | ¥122,750 | ¥9,800 | ¥132,500 |',
                 '| Linux + RTX 5090 32GB | ¥229,000 | ¥16,500 | ¥245,500 |',
-                '',
-                '**重要な洞察:** Linux + RTX 5060 Ti は3年で132,500円で最も安い本番ソリューション。Mac mini M4 Pro は70B を実行できる最も安い Apple オプション（379,000円）。M5 Max は初期コスト最高ですがメモリ4倍（RTX 5090 の128GB vs 32GB）。',
               ],
+              note: '**重要な洞察:** Linux + RTX 5060 Ti は3年で132,500円で最も安い本番ソリューション。Mac mini M4 Pro は70B を実行できる最も安い Apple オプション（379,000円）。M5 Max は初期コスト最高ですがメモリ4倍（RTX 5090 の128GB vs 32GB）。',
             },
             'faqSection': {
               id: 'faq',
@@ -1121,9 +1118,8 @@ schema: {
                 '| Windows + RTX 5090 32GB | $2,500 | $120 | $2,620 |',
                 '| Linux + RTX 5060 Ti 16GB | $750 | $60 | $810 |',
                 '| Linux + RTX 5090 32GB | $1,400 | $100 | $1,500 |',
-                '',
-                '**关键洞察：** Linux + RTX 5060 Ti在3年内以810美元保持最便宜生产方案。Mac mini M4 Pro是能运行70B最便宜Apple选项（2319美元）。M5 Max初期成本最高但内存多4倍（128GB vs RTX 5090的32GB）。',
               ],
+              note: '**关键洞察：** Linux + RTX 5060 Ti在3年内以810美元保持最便宜生产方案。Mac mini M4 Pro是能运行70B最便宜Apple选项（2319美元）。M5 Max初期成本最高但内存多4倍（128GB vs RTX 5090的32GB）。',
             },
             'faqSection': {
               id: 'faq',

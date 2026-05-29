@@ -13,6 +13,7 @@ import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
+import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
 import { CopyButton } from '@/components/CopyButton'
 import { NextStepBlock } from '@/components/NextStepBlock'
@@ -325,11 +326,22 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
             if (isMarkdownTable(contentArray)) {
               return renderMarkdownTable(contentArray, lang, renderLinks)
             }
-            return contentArray.map((para, i) => (
-              <p key={i} className="text-text-secondary leading-relaxed">
-                {renderLinks(para)}
-              </p>
-            ))
+            return parseContentBlocks(section.content).map((block, i) => {
+              if (block.type === 'h3') return (
+                <h3 key={i} className="text-base font-semibold text-text-primary mt-2">{block.text}</h3>
+              )
+              if (block.type === 'ul') return (
+                <ul key={i} className="space-y-1.5 ml-1">
+                  {block.items.map((item, j) => (
+                    <li key={j} className="flex gap-3 text-text-secondary">
+                      <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
+                      <span className="leading-relaxed">{renderLinks(item)}</span>
+                    </li>
+                  ))}
+                </ul>
+              )
+              return <p key={i} className="text-text-secondary leading-relaxed">{renderLinks(block.text)}</p>
+            })
           })()}
         </div>
       )}
