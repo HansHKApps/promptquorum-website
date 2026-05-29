@@ -519,6 +519,89 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: { '@type': 'TechArticle', headline: '常時稼働Ollamaサーバー向けミニPC最おすすめ（2026年）', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=ja', inLanguage: 'ja' },
   },
 
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Hardware & Performance',
+    type: 'comparison',
+    title: 'Mejor Mini PC para Servidor Ollama Siempre Encendido 2026',
+    seoTitle: 'Mejor Mini PC para Servidor Ollama Always-On 2026',
+    metaDescription: 'Ejecuta Ollama 24/7 en un mini PC que consume 15–35 W. Mejores opciones: Minisforum UM890 Pro, AOOSTAR GEM12, Beelink SER8. Especificaciones, consumo de energía y enlaces de compra.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    parentArticle: '/local-llms/local-llm-hardware-guide-2026',
+    leadAnswerBlock: '**El Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) es el mejor mini PC para servidor Ollama siempre encendido en 2026: ejecuta modelos 7B a 12–18 tok/s solo CPU, consume 25–45 W bajo carga, cabe en un cajón.**',
+    quickAnswerTop: {
+      question: '¿Cuál es el mejor mini PC para ejecutar Ollama como servidor casero siempre encendido?',
+      answer: 'El Minisforum UM890 Pro es la opción principal: CPU rápido, hasta 96 GB RAM para modelos grandes, consumo 25–45 W bajo carga, GPU Radeon 780M acelera modelos 7B–13B. Opción presupuesto: Beelink SER8 (~$350). Usuarios eGPU: AOOSTAR GEM12 Pro OCuLink.',
+      bullets: [
+        'Minisforum UM890 Pro: mejor general — Ryzen 9 8945HS, hasta 96 GB DDR5, 25–45 W',
+        'AOOSTAR GEM12 Pro OCuLink: mejor para eGPU — puerto OCuLink conecta RTX 3080/3090',
+        'Beelink SER8: mejor presupuesto — Ryzen 7 8745H, 32 GB, ~$350',
+        'Apple Mac Mini M4 Pro: mejor para macOS — 48 GB memoria unificada, 15–30 W',
+        'Todos consumen menos de 50 W en reposo — funcionamiento 24/7 por ~$3–5/mes en electricidad',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Mini PCs consumen 15–45 W vs 200–350 W para GPUs de escritorio — ahorros 24/7 importan',
+          'UM890 Pro ejecuta modelos 7B solo CPU a 12–18 tok/s; ideal para servidor API',
+          'AOOSTAR GEM12 Pro + eGPU OCuLink desbloquea aceleración GPU sin PC de escritorio',
+          'Mac Mini M4 Pro: 48 GB memoria unificada ejecuta modelos 32B — mejor opción macOS',
+          'Beelink SER8 es el punto de entrada bajo $400 — 32 GB RAM para 7B y 13B',
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Puede un mini PC ejecutar modelos 13B o más grandes a velocidad útil?',
+            a: 'Sí — con suficiente RAM. El UM890 Pro con 64 GB ejecuta Llama 3.1 13B Q8 completamente en RAM a ~8–12 tok/s solo CPU. Con GPU Radeon 780M, modelos Q4 corren a 10–18 tok/s — útil para resumen en fondo o llamadas API. Para modelos 30B+, Mac Mini M4 Pro (48 GB memoria unificada) es la única opción mini PC bajo $1500.',
+          },
+          {
+            q: '¿Funciona bien Ollama como servidor de red en un mini PC?',
+            a: 'Sí. Configura OLLAMA_HOST=0.0.0.0 y Ollama sirve solicitudes desde cualquier dispositivo en tu LAN. Combina con Open WebUI (contenedor Docker) para interfaz basada en navegador accesible desde teléfonos, tablets y PCs. Maneja una solicitud simultánea sin problema.',
+          },
+          {
+            q: '¿Valen la pena las configuraciones eGPU?',
+            a: 'Para Ollama específicamente, una eGPU OCuLink (AOOSTAR GEM12 Pro + RTX 3090) es lo mejor de ambos mundos: velocidad GPU de escritorio con consumo eléctrico mini PC en reposo. OCuLink (PCIe 4.0 x4) entrega ~80% del ancho de banda de ranura PCIe x16 directa — suficiente para inferencia LLM con cuello de botella mínimo.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Puede un mini PC ejecutar modelos 13B o más grandes a velocidad útil?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Sí, con suficiente RAM. UM890 Pro con 64 GB ejecuta 13B Q8 a 8–12 tok/s solo CPU, 10–18 tok/s con Radeon 780M. Para 30B+, Mac Mini M4 Pro (48 GB) es la mejor opción mini PC.' },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Funciona bien Ollama como servidor de red en un mini PC?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Sí. Configura OLLAMA_HOST=0.0.0.0 y Ollama sirve tu LAN. Combina con Open WebUI para interfaz navegador. Maneja una solicitud simultánea sin problema.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Mejores Mini PCs para Servidor Ollama Always-On 2026',
+      numberOfItems: 4,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Mejor general — Ryzen 9 8945HS, hasta 96 GB DDR5, ~$450' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Mejor para eGPU — puerto OCuLink, ~$480' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Mejor presupuesto — Ryzen 7 8745H, 32 GB, ~$350' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Mejor macOS — 48 GB memoria unificada, ~$1399' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'Mejor Mini PC para Servidor Ollama Always-On 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on?lang=es', inLanguage: 'es' },
+  },
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
