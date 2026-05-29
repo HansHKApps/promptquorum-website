@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { FAQPageClient } from '@/components/FAQPageClient'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'ja'
@@ -10,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.faqMetaTitle,
     description: t.faqMetaDescription,
-    alternates: generateAlternates('/faq', lang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates('/faq', lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.faqMetaTitle,
       description: t.faqMetaDescription,
@@ -37,17 +38,18 @@ export default async function JaFAQPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
+            inLanguage: 'ja',
             mainEntity: [
-              { '@type': 'Question', name: 'Is PromptQuorum free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.' } },
-              { '@type': 'Question', name: 'How does privacy work?', acceptedAnswer: { '@type': 'Answer', text: 'Zero telemetry, zero tracking, no data collection. API keys are stored only in your browser localStorage and never transmitted to any PromptQuorum server.' } },
-              { '@type': 'Question', name: 'Which AI providers are supported?', acceptedAnswer: { '@type': 'Answer', text: 'Over 25 AI providers including OpenAI, Anthropic Claude, Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, plus all local providers like Ollama, LM Studio, Jan AI, GPT4All, and any OpenAI-compatible endpoint.' } },
-              { '@type': 'Question', name: 'What platforms does PromptQuorum run on?', acceptedAnswer: { '@type': 'Answer', text: 'Desktop apps (Mac, Windows via Electron), web application, and eventually mobile (iOS and Android via Capacitor). Works fully offline with a local LLM.' } },
-              { '@type': 'Question', name: 'What makes PromptQuorum different?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum covers the full prompt lifecycle in a single browser-based tool: structured writing with 9 frameworks, AI-powered iterative optimization with 8 refinement types, one-click dispatch to 25+ AI services, and 13 Quorum analysis types for consensus scoring — all without any data leaving your device.' } },
-              { '@type': 'Question', name: 'Are there any limits?', acceptedAnswer: { '@type': 'Answer', text: 'No limits from PromptQuorum. Your usage is only limited by your API keys or local LLM resources.' } },
-              { '@type': 'Question', name: 'What is prompt engineering and why does it matter?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt engineering is the practice of designing inputs to AI models so they return more accurate, useful, and reliable outputs. In testing, structured prompts with framework fields produce 25–45% higher LLM evaluation scores compared to unstructured inputs. PromptQuorum automates this with 9 built-in frameworks.' } },
-              { '@type': 'Question', name: 'How does PromptQuorum optimize my prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Your connected LLM transforms raw framework fields into a precision prompt. You then refine iteratively with 8 one-click refinements. Every step is saved in version history so you can revert anytime.' } },
-              { '@type': 'Question', name: 'What prompt frameworks are built into PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: '9 frameworks: Single Prompt Line, APE, CRAFT, CO-STAR (won the Singapore GPT-4 competition), SPECS, RISEN, TRACE, Google Prompt, and RTF. You can also build 2 fully custom frameworks.' } },
-              { '@type': 'Question', name: 'What is the CO-STAR framework?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. It won the Singapore GPT-4 prompt engineering competition and is ideal for business communication and marketing.' } },
+              { '@type': 'Question', name: 'PromptQuorumは無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、無料でご利用いただけます。独自のAPIキーを持ち込むか、ローカルLLMを使用するか、テスト用の無料バックエンドサービスをお試しいただけます。' } },
+              { '@type': 'Question', name: 'プライバシーはどう機能しますか？', acceptedAnswer: { '@type': 'Answer', text: 'データの行き先はあなたが決めます。LM StudioやOllamaですべてローカルに保つか、独自のAPIキーを使用してください。テレメトリーなし、追跡なし、データ収集なし — 匿名の使用統計さえも収集しません。' } },
+              { '@type': 'Question', name: 'どのAIプロバイダーがサポートされていますか？', acceptedAnswer: { '@type': 'Answer', text: '25以上のAIプロバイダーが含まれています：OpenAI（GPT-4、GPT-4o）、Anthropic（Claude）、Google Gemini、Grok、DeepSeek、Mistral、Cohere、Together AI、Groq、OpenRouter、そすべてのローカルプロバイダー（Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、KoboldCpp、vLLM、oobabooga、およびOpenAI互換エンドポイント）。' } },
+              { '@type': 'Question', name: 'どのプラットフォームで動きますか？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorumはデスクトップアプリ（Mac、Windows via Electron）から始まり、ウェブアプリ、そしてモバイル（iOS・Android via Capacitor）へと展開します。ローカルLLMで完全オフライン動作します。' } },
+              { '@type': 'Question', name: 'PromptQuorumの何が違うのですか？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorumはプロンプトの全ライフサイクルをカバーする唯一のツールです：9つのフレームワークによる構造化された作成、AI駆動の反復最適化、25以上のAIサービスへのワンクリック配信、マルチモデルコンセンサス分析 — すべてデータがデバイスから出ることなく実行されます。' } },
+              { '@type': 'Question', name: '利用制限はありますか？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum側からの制限はありません。利用はAPIキーまたはローカルLLMのリソースにのみ依存します。' } },
+              { '@type': 'Question', name: 'プロンプトエンジニアリングとは何ですか？なぜ重要なのですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトエンジニアリングとは、AIモデルへの入力をより正確で有用な出力が得られるよう設計する実践です。よく構造化されたプロンプトはAI出力品質を25〜45%向上させます。PromptQuorumは9つの組み込みフレームワークでこれを自動化します — 専門知識は不要です。' } },
+              { '@type': 'Question', name: 'PromptQuorumはどのようにプロンプトを最適化しますか？', acceptedAnswer: { '@type': 'Answer', text: '接続されたLLMがフレームワークの生のフィールドを精密なプロンプトに変換します。その後、8つのワンクリック改善（簡潔にする・詳細を拡張・ステップに分解・簡略化・具体性向上・マルチエキスパート相談・品質コントロール追加・カスタム指示）で反復的に改善できます。すべてのステップがバージョン履歴に保存されます。' } },
+              { '@type': 'Question', name: 'PromptQuorumにはどのようなプロンプトフレームワークが組み込まれていますか？', acceptedAnswer: { '@type': 'Answer', text: '9つのフレームワークが含まれています：Single Prompt Line、APE、CRAFT、CO-STAR（シンガポールGPT-4コンテスト優勝）、SPECS、RISEN、TRACE、Google Prompt、RTF。さらに2つの完全カスタムフレームワークを作成できます。' } },
+              { '@type': 'Question', name: 'CO-STARフレームワークとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'CO-STARはContext（文脈）、Objective（目標）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（回答形式）の略です。シンガポールGPT-4プロンプトエンジニアリングコンテストで優勝し、ビジネスコミュニケーションやマーケティングに最適です。' } },
             ],
             breadcrumb: {
               '@type': 'BreadcrumbList',
