@@ -348,6 +348,122 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: '70Bモデルをローカル実行する最安の方法 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=ja', inLanguage: 'ja' },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Hardware & Performance',
+    type: 'comparison',
+    title: 'Forma Más Barata de Ejecutar un Modelo 70B Localmente 2026',
+    seoTitle: 'Forma Más Barata de Ejecutar Modelo 70B Localmente 2026',
+    metaDescription: 'Las formas más baratas de ejecutar un LLM 70B localmente en 2026: Mac Mini M4 Pro 48GB ($2,000), RTX 3090 dual ($2,200), y CPU-only 128GB RAM. Rendimiento vs costo comparados.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**La forma más barata de ejecutar un modelo 70B localmente en 2026 es Mac Mini M4 Pro con 48GB memoria unificada (~$2,000) — cabe Llama 3.3 70B Q4_K_M completamente, ejecuta a 12–18 tokens/segundo, usa solo 45W, cuesta menos que configuración dual-GPU.**',
+    quickAnswerTop: {
+      question: '¿Cuál es la forma más barata de ejecutar un modelo 70B localmente?',
+      answer: 'Mac Mini M4 Pro 48GB (~$2,000) es la solución más barata 70B en 2026. Para Windows/Linux: dual RTX 3090 usada (~$2,200) es la siguiente opción más barata.',
+      bullets: [
+        'Mac Mini M4 Pro 48GB: ~$2,000, 12–18 tok/s, consumo 45W',
+        'Dual RTX 3090 usada: ~$2,200, 20–35 tok/s, consumo 600–700W',
+        'CPU-only 128GB RAM: ~$1,800, 1–3 tok/s (usable pero lento)',
+        '2x RTX 4070 Ti Super 16GB: ~$1,600, 25–40 tok/s via descarga CPU',
+        'RTX 4090 única + descarga CPU: ~$1,800, 8–12 tok/s',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'La forma más barata de ejecutar un modelo 70B localmente en 2026 es Mac Mini M4 Pro 48GB a ~$2,000, ejecutando Llama 3.3 70B Q4_K_M a 12–18 tokens/segundo.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'Un modelo 70B es un modelo IA grande con 70 mil millones de parámetros que requiere al menos 40GB de memoria para ejecutar — aquí están las opciones de hardware más baratas para hacerlo localmente.',
+      },
+    ],
+    affiliateLinks: [
+      {
+        productName: 'Mac Mini M4 Pro',
+        url: 'https://www.apple.com/shop/buy-mac/mac-mini',
+        productCategory: 'hardware',
+      },
+      {
+        productName: 'RTX 3090 usada (eBay)',
+        url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090',
+        productCategory: 'gpu',
+      },
+    ],
+    parentArticle: '/power-local-llm/best-workstation-build-local-ai-2026',
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Mac Mini M4 Pro 48GB: opción más barata, $2,000, 45W',
+          'RTX 3090 dual usada: $2,200, Windows/Linux, 20–35 tok/s',
+          'CPU-only 128GB RAM: ~$1,800 pero solo 1–3 tok/s (lento)',
+          '70B Q4_K_M requiere ~42GB RAM/VRAM mínimo',
+          'Cuantización Q2_K cabe en 32GB pero con pérdida de calidad notable',
+          'MLX de Apple da Mac el mejor rendimiento por dólar 70B en 2026',
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Puedo ejecutar un modelo 70B en una sola GPU de consumidor?',
+            a: 'No hay sola GPU de consumidor en 2026 con suficiente VRAM para ajustar un modelo 70B Q4_K_M (42GB). La más cercana es RTX 4090 (24GB) que puede ejecutar 70B con descarga CPU — aproximadamente 40% de capas en GPU, el resto en RAM. Velocidad cae a 8–12 tok/s pero funciona.',
+          },
+          {
+            q: '¿Cuánta RAM necesito para 70B modelo solo CPU?',
+            a: '70B Q4_K_M requiere ~44GB RAM mínimo. Para inferencia CPU práctica, se recomienda 64GB (para overhead OS y buffers de contexto). La velocidad es 1–3 tok/s en CPU desktop moderno — usable pero lento. 128GB DDR5 da velocidad ligeramente mejor.',
+          },
+          {
+            q: '¿Es suficiente calidad Q4 para modelos 70B?',
+            a: 'Para modelos 70B, Q4_K_M retiene ~96% de calidad FP16 — la pérdida de precisión es mucho más pequeña que para modelos 7B porque el modelo tiene más "redundancia" en su mayor espacio de parámetros. La mayoría de usuarios no pueden notar la diferencia entre Q4_K_M y Q8_0 a escala 70B.',
+          },
+          {
+            q: '¿Cuál es la opción cloud más barata en lugar de eso?',
+            a: 'RunPod precios spot para A40 48GB (GPU más pequeña que cabe 70B Q4 completamente) empieza en $0.44/hr. Groq API ofrece Llama 3.3 70B a $0.59 por millón tokens en nivel pagado. Para uso ocasional, Groq es más barato que cualquier opción de hardware.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Cuál es la forma más barata de ejecutar un modelo 70B localmente?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Mac Mini M4 Pro 48GB (~$2,000) es la solución más barata para ejecutar modelos 70B localmente en 2026, a 12–18 tok/s y solo 45W de consumo.' },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Puedo ejecutar un modelo 70B en una sola GPU de consumidor?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Ninguna GPU de consumidor única cabe 70B Q4_K_M (42GB). RTX 4090 puede con descarga CPU a 8–12 tok/s, pero requiere 64GB+ RAM de sistema.' },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cuánta RAM necesito para 70B modelo solo CPU?',
+          acceptedAnswer: { '@type': 'Answer', text: '70B Q4_K_M requiere ~44GB RAM mínimo. 64GB se recomienda para uso práctico. Velocidad es 1–3 tok/s en CPU.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Formas Más Baratas de Ejecutar Modelo 70B Localmente 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Mac Mini M4 Pro 48GB', description: 'Solución 70B más barata, $2,000, 45W' },
+        { '@type': 'ListItem', position: 2, name: 'RTX 3090 dual usada', description: 'Mejor opción Windows/Linux, $2,200, 20–35 tok/s' },
+        { '@type': 'ListItem', position: 3, name: 'CPU-only 128GB RAM', description: 'Camino de hardware más barato, lento a 1–3 tok/s' },
+        { '@type': 'ListItem', position: 4, name: 'RTX 4090 única + descarga CPU', description: 'GPU única con descarga RAM, 8–12 tok/s' },
+        { '@type': 'ListItem', position: 5, name: 'Mac Studio M4 Max 128GB', description: 'Mejor rendimiento por vatio, $3,000' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'Forma Más Barata de Ejecutar un Modelo 70B Localmente 2026', author: { '@type': 'Person', name: 'Hans Kuepper' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=es', inLanguage: 'es' },
+  },
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

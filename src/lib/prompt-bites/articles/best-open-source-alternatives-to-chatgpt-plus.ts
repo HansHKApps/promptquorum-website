@@ -299,6 +299,101 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'ChatGPT Plusの代替オープンソース 2026年ベスト', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=ja', inLanguage: 'ja' },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Cost & Comparisons',
+    type: 'comparison',
+    title: 'Mejores Alternativas Open Source a ChatGPT Plus 2026',
+    seoTitle: 'Mejores Alternativas Gratuitas Open Source a ChatGPT Plus 2026',
+    metaDescription: 'Mejores alternativas open source a ChatGPT Plus en 2026. Compara Ollama+Open WebUI, LM Studio, Jan y AnythingLLM — gratis, privado, sin suscripción requerida.',
+    educationalLevel: 'Beginner',
+    affiliateDisclosure: false,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**La mejor alternativa open source a ChatGPT Plus en 2026 es Ollama + Open WebUI — gratis, ejecuta modelos locales en cualquier hardware, compatible con modelos de clase GPT-4 como Qwen2.5 72B y Llama 3.3 70B, sin suscripción de $20/mes.**',
+    quickAnswerTop: {
+      question: '¿Cuál es la mejor alternativa gratuita a ChatGPT Plus?',
+      answer: 'Ollama + Open WebUI para auto-hospedaje local; Jan para la app de escritorio más fácil; Groq API para inferencia cloud rápida en nivel gratuito. Todas son gratis sin suscripción.',
+      bullets: [
+        'Ollama + Open WebUI: mejor reemplazo ChatGPT local completo',
+        'Jan: app de escritorio más fácil, descarga de modelo con un clic',
+        'LM Studio: mejor para exploración y prueba de modelos',
+        'Groq API (nivel gratuito): inferencia cloud más rápida, sin tarjeta de crédito',
+        'AnythingLLM: mejor para equipos y Q&A de documentos',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'La mejor alternativa open source a ChatGPT Plus en 2026 es Ollama con Open WebUI — gratis, local, capaz de ejecutar modelos de clase GPT-4.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'Las alternativas open source a ChatGPT ejecutan modelos de lenguaje IA en tu propio ordenador o servicio cloud gratuito en lugar de pagar a OpenAI $20/mes.',
+      },
+    ],
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Ollama + Open WebUI: mejor reemplazo local ChatGPT Plus, completamente gratis',
+          'Jan: app de escritorio más fácil para principiantes',
+          'LM Studio: mejor para exploración y comparación de modelos',
+          'Groq API nivel gratuito: inferencia cloud más rápida sin tarjeta de crédito',
+          'AnythingLLM: mejor para equipos necesitando Q&A de documentos y multi-usuario',
+          'Los cinco cuestan $0 — ChatGPT Plus cuesta $20/mes ($240/año)',
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Pueden los modelos open source locales igualar la calidad de ChatGPT Plus?',
+            a: 'Qwen2.5 72B y Llama 3.3 70B ejecutándose localmente igualan el rendimiento GPT-4o en la mayoría de puntos de referencia de razonamiento, codificación y escritura. Requieren 24GB+ VRAM para calidad completa. Modelos 14B más pequeños son notablemente más débiles que GPT-4o pero suficientemente fuertes para la mayoría de tareas cotidianas.',
+          },
+          {
+            q: '¿Qué hardware necesito para ejecutar una alternativa gratuita a ChatGPT localmente?',
+            a: 'Mínimo: 8GB RAM para modelos 3B en CPU. Mejor: 16GB RAM para modelos 7B, GPU 8GB VRAM para modelos 7B a velocidad completa. Mejor: 16–24GB VRAM para modelos 14–34B. Mac con Apple Silicon M2 o posterior maneja bien modelos 7B–14B con memoria unificada.',
+          },
+          {
+            q: '¿Es Groq realmente gratis?',
+            a: 'Groq ofrece un nivel gratuito con límites de tasa: ~30 solicitudes/minuto para Llama 3.3 70B. Para uso personal es suficiente. El nivel gratuito no requiere tarjeta de crédito. Para producción o uso intenso, planes pagos empiezan en ~$0.05 por millón de tokens.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Cuál es la mejor alternativa gratuita a ChatGPT Plus?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI para auto-hospedaje local; Jan para la app de escritorio más fácil. Ambas son completamente gratis.' },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Pueden los modelos open source locales igualar la calidad de ChatGPT Plus?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 72B y Llama 3.3 70B igualan GPT-4o en la mayoría de puntos de referencia y requieren 24GB+ VRAM. Modelos 14B son fuertes para tareas cotidianas.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Mejores Alternativas Open Source a ChatGPT Plus 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Ollama + Open WebUI', description: 'Mejor reemplazo local ChatGPT completo' },
+        { '@type': 'ListItem', position: 2, name: 'Jan', description: 'App de escritorio más fácil con descarga de modelo con un clic' },
+        { '@type': 'ListItem', position: 3, name: 'LM Studio', description: 'Mejor para exploración y prueba de modelos' },
+        { '@type': 'ListItem', position: 4, name: 'Groq API nivel gratuito', description: 'Inferencia cloud más rápida sin tarjeta de crédito' },
+        { '@type': 'ListItem', position: 5, name: 'AnythingLLM', description: 'Mejor para equipos y Q&A de documentos' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'Mejores Alternativas Open Source a ChatGPT Plus 2026', author: { '@type': 'Person', name: 'Hans Kuepper' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-open-source-alternatives-to-chatgpt-plus?lang=es', inLanguage: 'es' },
+  },
   zh: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
