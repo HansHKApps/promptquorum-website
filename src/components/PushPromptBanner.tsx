@@ -83,7 +83,7 @@ function PushPromptBannerInner() {
   const lang = (
     ['en', 'de', 'fr', 'ja', 'zh'].includes(rawLang) ? rawLang : 'en'
   ) as string
-  const c = COPY[lang] ?? COPY.en
+  const c = (COPY[lang as keyof typeof COPY] ?? COPY.en)!
 
   const [visible, setVisible] = useState(false)
 

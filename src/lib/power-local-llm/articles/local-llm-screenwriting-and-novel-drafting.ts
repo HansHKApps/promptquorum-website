@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
     title: 'Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)',
-    seoTitle: 'Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)',
+    seoTitle: 'Local LLM Screenwriting & Novel Drafting 2026',
     intro:
       'Local LLMs integrated into a screenwriting or novel-drafting workflow let you generate scene drafts, beat sheets, dialogue passes, and revision runs without internet access, cloud logging, or usage limits. This guide covers the full workflow: model selection, context-window management for long-form work, chapter scaffolding, scene generation, and the tools that connect a local LLM to your writing software.',
     metaDescription:
@@ -369,7 +369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
     title: 'Romane und Drehbücher mit lokalen LLMs verfassen: Workflow-Leitfaden für 100K+ Wörter',
-    seoTitle: 'Romane und Drehbücher mit lokalen LLMs verfassen: Workflow-Leitfaden',
+    seoTitle: 'Lokales LLM-Drehbuch- & Romanschreiben offline 2026',
     intro:
       'Lokale LLMs lassen sich in den Schreib-Workflow für Romane und Drehbücher integrieren: Szenentwürfe, Beat Sheets, Dialogdurchläufe und Überarbeitungsrunden — ohne Internetzugang, Cloud-Logging oder Nutzungslimits. Dieser Leitfaden deckt den vollständigen Workflow ab: Modellauswahl, Kontextfensterverwaltung für Langformarbeiten, Kapitelstruktur, Szenengenerierung und Tools, die ein lokales LLM mit Ihrer Schreibsoftware verbinden.',
     metaDescription:
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
     title: 'Rédiger des romans et des scénarios avec des LLM locaux : guide de workflow 100 000+ mots',
-    seoTitle: 'Rédiger des romans et des scénarios avec des LLM locaux : guide de workflow',
+    seoTitle: 'Scénarios et romans avec un LLM local hors ligne 2026',
     intro:
       'Les LLM locaux s\'intègrent dans le workflow d\'écriture de romans et de scénarios : brouillons de scènes, beat sheets, passes de dialogue et révisions — sans accès internet, journalisation dans le cloud ni limites d\'utilisation. Ce guide couvre le workflow complet : sélection du modèle, gestion de la fenêtre de contexte pour les longs formats, structuration des chapitres, génération de scènes et outils reliant un LLM local à votre logiciel d\'écriture.',
     metaDescription:

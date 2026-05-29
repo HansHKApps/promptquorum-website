@@ -45,6 +45,9 @@ const BLOG_UI = {
     fr: 'Accueil',
     ja: 'ホーム',
     zh: '主页',
+    es: 'Inicio',
+    pt: 'Início',
+    ar: 'الرئيسية',
   },
   breadcrumbHub: {
     en: 'Blog',
@@ -52,6 +55,9 @@ const BLOG_UI = {
     fr: 'Blog',
     ja: 'ブログ',
     zh: '博客',
+    es: 'Blog',
+    pt: 'Blog',
+    ar: 'المدونة',
   },
 }
 
@@ -61,7 +67,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
 
   // Get translated metadata
   const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]
-  const metadata = blogMetadata[postId as keyof typeof blogMetadata]?.[lang] || blogMetadata[postId as keyof typeof blogMetadata]?.['en']
+  const metadata = blogMetadata[postId as keyof typeof blogMetadata]?.[lang as 'en' | 'de' | 'fr' | 'ja' | 'zh'] || blogMetadata[postId as keyof typeof blogMetadata]?.['en']
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6">

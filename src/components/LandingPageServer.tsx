@@ -299,7 +299,7 @@ const ICONS = [Sparkles, Layers, Brain, Zap, Shield, Download]
 // Main Landing Page Server Component
 export function LandingPageServer({ initialLang }: { initialLang?: import('@/hooks/useLang').Lang }) {
   const lang = useLang(initialLang)
-  const t = T[lang] ?? T.en
+  const t = (T[lang as keyof typeof T] ?? T.en)!
 
   return (
     <div className="min-h-screen bg-white">

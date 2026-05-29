@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     title: 'Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline',
-    seoTitle: 'Local Multimodal Pipeline 2026: Whisper + LLaVA + Piper',
+    seoTitle: 'Local Multimodal Pipeline 2026: Voice + Vision + Text',
     intro:
       'A local multimodal AI pipeline combines separate specialized models for each modality — whisper.cpp for voice input, LLaVA or Llama 3.2 Vision for image understanding, an Ollama LLM for text reasoning, and Piper TTS for voice output — orchestrated into a single coherent system that runs 100% offline. This is the local equivalent of GPT-4o\'s multimodal capabilities: no single model understands everything, but the orchestrator routes each input type to the right model and combines the outputs. This guide shows how to build local multimodal pipeline capabilities from these open-source components — covering the architecture, component stack, hardware tiers, five practical use cases, and a Python async orchestrator that processes voice and vision inputs in parallel.',
     metaDescription:
@@ -570,7 +570,7 @@ if __name__ == "__main__":
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     title: 'Lokale multimodale KI-Pipeline 2026: Sprache, Vision und Text-Modelle offline kombinieren',
-    seoTitle: 'Lokale multimodale KI-Pipeline 2026: Sprache + Vision + Text offline',
+    seoTitle: 'Lokale multimodale Pipeline 2026: Sprache, Bild, Text',
     intro:
       'Eine lokale multimodale KI-Pipeline kombiniert separate spezialisierte Modelle für jede Modalität — whisper.cpp für Spracheingabe, LLaVA oder Llama 3.2 Vision für Bildverständnis, ein Ollama LLM für Textreasoning und Piper TTS für Sprachausgabe — orchestriert zu einem kohärenten System, das 100 % offline arbeitet. Dies ist das lokale Äquivalent zu GPT-4os multimodalen Fähigkeiten: kein einzelnes Modell versteht alles, aber der Orchestrator leitet jeden Eingabetyp an das richtige Modell weiter und kombiniert die Ausgaben. Dieser Leitfaden zeigt, wie Sie lokale multimodale Pipeline-Funktionen aus diesen Open-Source-Komponenten aufbauen — mit Abdeckung der Architektur, des Component-Stacks, Hardware-Tiers, fünf praktischer Use Cases und eines Python-Async-Orchestrators, der Sprach- und Vision-Eingaben parallel verarbeitet.',
     metaDescription:
@@ -941,7 +941,7 @@ if __name__ == "__main__":
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     title: 'Pipeline IA multimodale locale 2026 : combiner voix, vision et texte hors ligne',
-    seoTitle: 'Pipeline IA multimodale locale 2026 : voix + vision + texte hors ligne',
+    seoTitle: 'Pipeline multimodal local 2026 : voix, vision, texte',
     intro:
       'Un pipeline IA multimodal local combine des modèles spécialisés pour chaque modalité — whisper.cpp pour la saisie vocale, LLaVA ou Llama 3.2 Vision pour la compréhension d\'images, un LLM Ollama pour le raisonnement textuel et Piper TTS pour la sortie vocale — orchestrés en un système cohérent fonctionnant 100 % hors ligne. C\'est l\'équivalent local des capacités multimodales de GPT-4o : aucun modèle unique ne comprend tout, mais l\'orchestrateur route chaque type d\'entrée vers le bon modèle et combine les sorties.',
     metaDescription:

@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Die einfachste lokale AI-App für Windows, Mac und Linux (2026)',
-    seoTitle: 'Einfachste lokale KI-App 2026: Windows, Mac, Linux im Test',
+    seoTitle: 'Einfachste lokale KI-App 2026: Windows, Mac, Linux',
     intro:
       'LM Studio ist die einfachste lokale AI-App 2026 für Windows, Mac und Linux — Herunterladen, Installieren, ein Modell laden und in unter 10 Minuten chatten, ohne Terminal. Dieser Leitfaden behandelt LM Studio, Jan und GPT4All als die drei No-Code-Optionen, vergleicht sie nach Installationszeit und Funktionalität und erklärt, welche je nach Hardware und Zielen gewählt werden sollte.',
     metaDescription:

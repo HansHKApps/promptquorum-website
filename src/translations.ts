@@ -1399,8 +1399,299 @@ export const translations = {
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. 为AI高级用户精心打造。",
   },
+
+  es: {
+    // Navigation
+    features: "Funciones",
+    howItWorks: "Cómo funciona",
+    faq: "FAQ",
+    waitlist: "Lista de espera",
+
+    // Hero
+    waitlistNowOpen: "Lista de espera abierta",
+    heroTitle: "PromptQuorum: optimizador de prompts IA para",
+    heroTitleHighlight: "ChatGPT, Claude y Gemini",
+    heroDescription: "La herramienta de prompts IA que optimiza tus prompts y los envía a múltiples proveedores de IA simultáneamente. Compara resultados, encuentra consenso, obtén mejores respuestas.",
+    heroCta: "Únete a más de 500 personas en espera de acceso anticipado",
+    heroBuiltFor: "Diseñado para desarrolladores, marketers, investigadores y usuarios avanzados de IA",
+
+    // Features
+    featuresTitle: "Optimización inteligente de prompts IA",
+    featuresSubtitle: "PromptQuorum combina optimización, envío multi-IA y comparación inteligente en una poderosa herramienta.",
+    feature1Title: "Optimización inteligente",
+    feature1Desc: "Transforma ideas en bruto en prompts de precisión con optimización impulsada por IA. Sin experiencia en prompt engineering necesaria.",
+    feature2Title: "Envío multi-IA",
+    feature2Desc: "Envía tu prompt a ChatGPT, Claude, Gemini y modelos locales simultáneamente. Un clic, múltiples resultados.",
+    feature3Title: "Comparación con IA",
+    feature3Desc: "Deja que la IA analice respuestas, encuentre consenso y destaque la respuesta más fiable de todos los proveedores.",
+    feature4Title: "Frameworks integrados",
+    feature4Desc: "Elige entre más de 8 frameworks probados incluyendo CO-STAR, CRAFT, RISEN. Aplicados automáticamente a tus prompts.",
+    feature5Title: "LLM local o tu propia clave API",
+    feature5Desc: "Tú decides dónde optimizar tus prompts de forma gratuita. Optimízalos de forma privada y sin costo en tu equipo.",
+    feature6Title: "Optimizador de prompts gratuito y privado",
+    feature6Desc: "Descarga una potente herramienta de prompting para multiplicar por 10 tus resultados de IA. ¡Sé de los primeros en probarlo!",
+
+    // How It Works
+    howItWorksTitle: "Pipeline de cuatro etapas: Prompt → Optimizar → Enviar → Quorum",
+    howItWorksSubtitle: "Cuatro pasos simples hacia prompts perfectos",
+    step1Title: "Prompt",
+    step1Desc: "Comienza con cualquier idea, en bruto o refinada",
+    step2Title: "Optimizar",
+    step2Desc: "La IA lo transforma en un prompt de precisión",
+    step3Title: "Enviar",
+    step3Desc: "Envía a múltiples IAs a la vez",
+    step4Title: "Quorum",
+    step4Desc: "Compara resultados, encuentra la mejor respuesta",
+
+    // FAQ
+    faqTitle: "Preguntas frecuentes sobre el flujo de trabajo local y privado",
+    faq1Question: "¿PromptQuorum es gratuito?",
+    faq1Answer: "Sí. PromptQuorum es gratuito. Puedes traer tu propia clave API, usar un LLM local, o probar nuestro servicio backend gratuito limitado para optimización de prompts.",
+    faq2Question: "¿Cómo funciona la privacidad?",
+    faq2Answer: "Tú decides a dónde van tus datos. Mantén todo local con LM Studio u Ollama, o usa tus propias claves API. PromptQuorum es tan privado como tú lo configures.",
+    faq3Question: "¿Qué proveedores de IA son compatibles?",
+    faq3Answer: "Se incluyen más de 25 proveedores de IA, y puedes añadir tus propios proveedores personalizados. Conéctate a ChatGPT, Claude, Gemini y muchos más.",
+    faq4Question: "¿En qué plataformas funciona PromptQuorum?",
+    faq4Answer: "PromptQuorum comienza con apps de escritorio (Mac, Windows), seguidas de una aplicación web y, más adelante, soluciones móviles.",
+    faq5Question: "¿En qué se diferencia PromptQuorum?",
+    faq5Answer: "PromptQuorum está muy automatizado para mejoras de prompts, puede enviar el mismo prompt a múltiples IAs simultáneamente, y analiza resultados según tus criterios.",
+    faq6Question: "¿Hay límites?",
+    faq6Answer: "Sin límites por parte de PromptQuorum. Tu uso solo está limitado por tus claves API o los recursos de tu LLM local.",
+
+    // Waitlist CTA
+    waitlistCtaTitle: "¿Listo para transformar tus prompts?",
+    waitlistCtaDesc: "¡Los usuarios de acceso anticipado reciben incorporación prioritaria, acceso directo al desarrollador y una poderosa herramienta gratuita!",
+    emailPlaceholder: "Introduce tu email",
+    joinWaitlist: "Unirse a la lista de espera",
+    joining: "Uniéndose...",
+    youAreOnTheList: "¡Estás en la lista!",
+    notifyWhenLaunch: "Te avisaremos cuando PromptQuorum esté disponible.",
+
+    // Blog
+    blogTitle: "Guías de prompt engineering",
+    blogSubtitle: "12 artículos respaldados por investigación sobre prompt engineering, despacho multi-modelo, detección de alucinaciones, RAG y técnicas de LLM local para desarrolladores.",
+    blogIntro: "Cada artículo cubre un caso de uso práctico con datos específicos, modelos nombrados y plantillas de prompts listas para usar. Los artículos están estructurados para la extracción de citas por IA.",
+
+    // SEO Meta Tags — Group A
+    homeMetaTitle: "PromptQuorum — Optimización de prompts IA en 25+ modelos",
+    homeMetaDescription: "Optimización y gestión de prompts en más de 25 modelos de IA. Ejecuta un prompt, compara respuestas, detecta alucinaciones y elige la mejor. Gratis con tu clave API.",
+    featuresMetaTitle: "Funciones: Despacho multi-IA y consenso | PromptQuorum",
+    featuresMetaDescription: "PromptQuorum despacha prompts a 25+ proveedores de IA con 9 frameworks (CO-STAR, CRAFT, RISEN) y puntúa el consenso. Gratis con tu clave API.",
+    howItWorksMetaTitle: "Cómo funciona PromptQuorum: Optimiza, envía y puntúa 2026",
+    howItWorksMetaDescription: "El pipeline de 4 etapas de PromptQuorum optimiza tu prompt, lo despacha a 25+ modelos de IA simultáneamente y ejecuta puntuación de consenso para la mejor respuesta.",
+    faqMetaTitle: "PromptQuorum FAQ: Prompts multi-modelo, privacidad y precios",
+    faqMetaDescription: "FAQ de PromptQuorum: ¿Cómo funciona el consenso multi-modelo? ¿Hay plan gratuito? ¿Compatible con Ollama/LM Studio? Respuestas a 28 preguntas sobre optimización, frameworks y precios.",
+
+    // SEO Meta Tags — Group B
+    promptEngineeringHubTitle: "Prompt Engineering: mejores prácticas 2026 y frameworks",
+    promptEngineeringHubDescription: "Domina el prompt engineering: chain-of-thought, few-shot y técnicas RAG para GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro. 80 guías en 9 temas.",
+    promptEngineeringHubOgDescription: "80 artículos de prompt engineering para todos los niveles — chain-of-thought, RAG, few-shot, gobernanza de equipos y evaluación para GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro.",
+    promptEngineeringHubTwitterDescription: "80 guías de prompt engineering en 9 temas. Empieza por los fundamentos, domina la evaluación y la fiabilidad — para GPT-4o, Claude y Gemini.",
+    localLlmsHubTitle: "LLMs locales mayo 2026: modelos, hardware, RAG y guía VRAM",
+    localLlmsHubDescription: "LLMs locales mayo 2026: mejores modelos por nivel de VRAM (4 GB–48 GB), actualizaciones de Ollama, comparativa de LM Studio, configuración RAG local, requisitos de hardware (RTX 3060–RTX 5090) y guías para principiantes.",
+    compareMetaTitle: "PromptQuorum vs competidores: comparativa de funciones 2026",
+    compareMetaDescription: "Compara PromptQuorum con Poe, LM Arena, OpenMark y AiZolo: despacho multi-modelo, puntuación de consenso, LLM local, control de API, 9 frameworks.",
+    frameworksMetaTitle: "Frameworks de prompts: CO-STAR, CRAFT, RISEN y más",
+    frameworksMetaDescription: "Guías completas de 9 frameworks de prompt engineering: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF, Google Prompt y Single Prompt Line.",
+
+    // SEO Meta Tags — Group C
+    featuresOptimizationMetaTitle: "Resultados de optimización de prompts | PromptQuorum",
+    featuresOptimizationMetaDescription: "Descubre cómo PromptQuorum optimiza tus prompts: evaluaciones de calidad, historial de versiones, sugerencias de mejora y métricas de refinamiento detalladas.",
+    featuresQuorumMetaTitle: "Quorum: análisis de consenso multi-modelo | PromptQuorum",
+    featuresQuorumMetaDescription: "Recopila respuestas de múltiples modelos de IA, analiza patrones de consenso, identifica diferencias clave y sintetiza conclusiones de todos los proveedores.",
+    downloadMetaTitle: "Descargar PromptQuorum para Mac y Windows — Gratis 2026",
+    downloadMetaDescription: "Descarga PromptQuorum para macOS y Windows. Despacha prompts a 25+ modelos de IA, ejecuta análisis de consenso y trabaja sin conexión con LLMs locales. Gratis.",
+    aboutMetaTitle: "Acerca de PromptQuorum — Creado por Hans Kuepper",
+    aboutMetaDescription: "PromptQuorum es creado por Hans Kuepper, desarrollador independiente centrado en herramientas de IA que priorizan la privacidad. Conoce la misión, el producto y la filosofía.",
+    privacyMetaTitle: "Política de privacidad | PromptQuorum",
+    privacyMetaDescription: "Política de privacidad de PromptQuorum. Descubre cómo recopilamos, usamos y protegemos tus datos, tus derechos bajo el RGPD y cómo contactarnos con solicitudes de datos.",
+
+    // Privacy Policy Content
+    privacyPageTitle: "Política de privacidad",
+    privacyBreadcrumb: "Política de privacidad",
+    privacyEffectiveDate: "Fecha de entrada en vigor:",
+    privacyController: "Responsable del tratamiento:",
+    privacyContact: "Contacto:",
+    privacyGdprBanner: "Esta política está redactada para cumplir con el Reglamento General de Protección de Datos (RGPD/GDPR) de la UE, el RGPD del Reino Unido y la California Consumer Privacy Act (CCPA). Si tienes preguntas o deseas ejercer tus derechos, envía un email a {{email}} y te responderemos en un plazo de 30 días.",
+
+    // Section 1
+    privacyS1Title: "Quiénes somos",
+    privacyS1Para1: "PromptQuorum (\"nosotros\", \"nos\" o \"nuestro\") es un producto de software disponible en {{url}}. PromptQuorum es desarrollado por Hans Kuepper (el \"responsable del tratamiento\" a efectos del RGPD).",
+    privacyS1Para2: "Operamos una herramienta de despacho multi-IA y análisis de consenso. El producto en sí no procesa datos personales — los prompts, claves API y respuestas de IA se gestionan completamente en tu navegador y se transmiten directamente desde tu dispositivo a los proveedores de IA que eliges. Los servidores de PromptQuorum nunca reciben, almacenan ni procesan tus prompts o claves API.",
+    privacyS1Para3: "Esta política de privacidad cubre únicamente los datos personales que recopilamos a través del sitio web de PromptQuorum — específicamente el formulario de lista de espera en {{url}}.",
+
+    // Section 2
+    privacyS2Title: "Datos que recopilamos y por qué",
+    privacyS2Intro: "Recopilamos los siguientes datos personales:",
+    privacyS2Col1: "Dato",
+    privacyS2Col2: "Cómo se recopila",
+    privacyS2Col3: "Finalidad",
+    privacyS2Col4: "Base jurídica",
+    privacyS2Row1_1: "Dirección de email",
+    privacyS2Row1_2: "Formulario de lista de espera en la página principal",
+    privacyS2Row1_3: "Notificación de lanzamiento beta; emails de actualización del producto",
+    privacyS2Row1_4: "Consentimiento (Art. 6(1)(a) RGPD)",
+    privacyS2Row2_1: "Analítica de uso anónima",
+    privacyS2Row2_2: "Cookie de Google Analytics 4 (GA4)",
+    privacyS2Row2_3: "Entender qué páginas se visitan; mejorar el sitio",
+    privacyS2Row2_4: "Interés legítimo (Art. 6(1)(f) RGPD) — ver §7",
+    privacyS2Closure: "No recopilamos nombres, números de teléfono, información de pago, direcciones IP almacenadas más allá de la agregación a nivel de sesión, ni datos de categorías especiales según el Art. 9 del RGPD.",
+
+    // Section 3
+    privacyS3Title: "Base jurídica del tratamiento",
+    privacyS3Sub1: "Consentimiento — dirección de email",
+    privacyS3Para1: "Cuando introduces tu email y haces clic en \"Unirse a la lista de espera\", nos das consentimiento explícito para contactarte con anuncios de lanzamiento beta y actualizaciones del producto. El consentimiento es la base jurídica según el Art. 6(1)(a) del RGPD. Puedes retirar el consentimiento en cualquier momento haciendo clic en el enlace de cancelación de suscripción de cualquier email que te enviemos, o enviando un email a {{email}}. La retirada del consentimiento no afecta a la licitud del tratamiento anterior.",
+    privacyS3Sub2: "Interés legítimo — analítica",
+    privacyS3Para2: "Utilizamos Google Analytics 4 para entender cómo interactúan los visitantes con el sitio en general. Hemos evaluado que este interés no está superado por tus intereses o derechos, dado que: (a) utilizamos anonimización de IP; (b) los datos son agregados y no se usan para identificar personas; y (c) puedes rechazarlo mediante la configuración del navegador o el complemento de exclusión de Google Analytics. Si lo prefieres, puedes enviarnos un email para solicitar que dejemos de procesar los datos analíticos asociados a tu visita.",
+
+    // Section 4
+    privacyS4Title: "Encargados del tratamiento y terceros",
+    privacyS4Intro: "Utilizamos los siguientes encargados del tratamiento terceros. Cada uno está vinculado por un Acuerdo de Tratamiento de Datos (DPA) y obligaciones de tratamiento de datos conformes al RGPD:",
+    privacyS4ColProc: "Encargado",
+    privacyS4ColRole: "Función",
+    privacyS4ColData: "Datos compartidos",
+    privacyS4ColLoc: "Ubicación",
+    privacyS4Row1Proc: "Resend (Resend Inc.)",
+    privacyS4Row1Role: "Gestor de registro en lista de espera — almacena direcciones de email de suscriptores y envía emails de confirmación y lanzamiento en nuestro nombre",
+    privacyS4Row1Data: "Dirección de email",
+    privacyS4Row1Loc: "Estados Unidos",
+    privacyS4Row2Proc: "Google Analytics 4 (Google LLC)",
+    privacyS4Row2Role: "Analítica web — datos de uso agregados y anonimizados",
+    privacyS4Row2Data: "Eventos de analítica anonimizados, sin PII",
+    privacyS4Row2Loc: "Estados Unidos",
+    privacyS4Row3Proc: "Umami Analytics (Umami Software, Inc.)",
+    privacyS4Row3Role: "Analítica web respetuosa con la privacidad, sin cookies — vistas de página y referidos agregados (cargado solo con tu consentimiento de analítica)",
+    privacyS4Row3Data: "Datos de tráfico agregados, huella digital de visitante hasheada (sin cookies)",
+    privacyS4Row3Loc: "Unión Europea",
+    privacyS4Row4Proc: "Microsoft Clarity (Microsoft Corporation)",
+    privacyS4Row4Role: "Reproducción de sesiones y mapas de calor — funciona en modo sin cookies con almacenamiento de anuncios y analítica denegados",
+    privacyS4Row4Data: "Eventos de interacción y datos de viewport (sin cookies en la configuración actual)",
+    privacyS4Row4Loc: "Estados Unidos",
+    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
+    privacyS4Row5Role: "Métricas de vistas de página — mide visitas sin establecer cookies (cargado solo con tu consentimiento de analítica)",
+    privacyS4Row5Data: "Conteos de vistas de página agregados, clave de visitante hasheada (sin cookies)",
+    privacyS4Row5Loc: "Estados Unidos",
+    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
+    privacyS4Row6Role: "Medición de Core Web Vitals — métricas de rendimiento de página (cargado solo con tu consentimiento de analítica)",
+    privacyS4Row6Data: "Solo tiempos de rendimiento (sin datos personales, sin cookies)",
+    privacyS4Row6Loc: "Estados Unidos",
+    privacyS4Closure: "No vendemos tus datos a terceros. No compartimos tu dirección de email con anunciantes.",
+
+    // Section 5
+    privacyS5Title: "Transferencias internacionales de datos",
+    privacyS5Intro: "Algunos de nuestros encargados del tratamiento tienen su sede en Estados Unidos. Las transferencias de datos personales desde el Espacio Económico Europeo (EEE) o el Reino Unido (RU) a Estados Unidos están sujetas a garantías adecuadas:",
+    privacyS5Bullet1: "Resend: la transferencia está cubierta por Cláusulas Contractuales Tipo (CCT) adoptadas por la Comisión Europea en virtud del Art. 46(2)(c) del RGPD. El Acuerdo de Tratamiento de Datos de Resend está disponible en resend.com/legal/dpa.",
+    privacyS5Bullet2: "Google Analytics: Google LLC participa en el Marco de Privacidad de Datos UE-EE.UU. La transferencia también está cubierta por CCT. La documentación de transferencia de datos de Google está disponible en business.safety.google/gdpr.",
+    privacyS5Closure: "Puedes solicitar una copia de las CCT aplicables enviando un email a {{email}}.",
+
+    // Section 6
+    privacyS6Title: "Conservación de datos",
+    privacyS6Para1: "Conservamos tu dirección de email durante 24 meses desde la fecha de envío, o hasta que canceles la suscripción — lo que ocurra primero. Después de este período, tu dirección de email se elimina permanentemente de todos los sistemas, incluida la lista de nuestro proveedor de servicios de email.",
+    privacyS6Para2: "Los datos anonimizados de Google Analytics se conservan durante 14 meses (el período de retención mínimo configurable en GA4). No se conservan datos personales en GA4.",
+    privacyS6Para3: "Resend conserva los registros de email transaccional hasta 30 días. Los registros de contacto de audiencia (tu dirección de email y estado de suscripción) se conservan mientras tu suscripción esté activa, o hasta que solicites la eliminación.",
+
+    // Section 7
+    privacyS7Title: "Cookies y rastreo",
+    privacyS7Para1: "El sitio web de PromptQuorum utiliza las siguientes cookies:",
+    privacyS7ColCookie: "Cookie",
+    privacyS7ColSetBy: "Establecida por",
+    privacyS7ColPurpose: "Finalidad",
+    privacyS7ColDuration: "Duración",
+    privacyS7Row1Cookie: "_ga",
+    privacyS7Row1SetBy: "Google Analytics 4",
+    privacyS7Row1Purpose: "Distingue usuarios únicos; anonimizada",
+    privacyS7Row1Duration: "2 años",
+    privacyS7Row2Cookie: "_ga_*",
+    privacyS7Row2SetBy: "Google Analytics 4",
+    privacyS7Row2Purpose: "Estado de sesión",
+    privacyS7Row2Duration: "2 años",
+    privacyS7Row3Cookie: "localStorage",
+    privacyS7Row3SetBy: "PromptQuorum (solo producto)",
+    privacyS7Row3Purpose: "Almacena tus claves API y configuración localmente en tu navegador — nunca se transmite a nosotros",
+    privacyS7Row3Duration: "Hasta que borres los datos del navegador",
+    privacyS7Row4Cookie: "analytics_consent",
+    privacyS7Row4SetBy: "PromptQuorum (localStorage)",
+    privacyS7Row4Purpose: "Almacena tu elección de consentimiento de cookies (aceptado, denegado o por categoría) para no preguntarte en cada página",
+    privacyS7Row4Duration: "12 meses (nueva solicitud al expirar)",
+    privacyS7Para2: "No utilizamos píxeles de rastreo, fingerprinting ni cookies de publicidad de terceros. Para rechazar el rastreo de Google Analytics, instala el complemento de exclusión del navegador de Google Analytics o configura tu navegador para bloquear cookies de *.google-analytics.com.",
+    privacyS7Para3: "Consentimiento de cookies según el § 25 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz, antes TTDSG): este sitio requiere tu consentimiento explícito antes de establecer cualquier cookie no esencial o tecnología de almacenamiento similar en tu dispositivo. Las categorías de analítica y marketing están denegadas por defecto hasta que las aceptes. Puedes cambiar o retirar tu consentimiento en cualquier momento desde el enlace \"Configuración de cookies\" en el pie de página. TODO: nombrar la autoridad supervisora nacional competente una vez confirmado el domicilio del operador.",
+
+    // Section 8
+    privacyS8Title: "Tus derechos bajo el RGPD",
+    privacyS8Intro: "Si te encuentras en el EEE, el Reino Unido o Suiza, tienes los siguientes derechos respecto a tus datos personales. Responderemos a todas las solicitudes en un plazo de 30 días desde su recepción.",
+    privacyS8Right1: "Derecho de acceso (Art. 15)",
+    privacyS8Desc1: "Solicita una copia de los datos personales que tenemos sobre ti e información sobre cómo se tratan.",
+    privacyS8Right2: "Derecho de rectificación (Art. 16)",
+    privacyS8Desc2: "Pídenos que corrijamos datos personales inexactos o incompletos.",
+    privacyS8Right3: "Derecho de supresión / \"derecho al olvido\" (Art. 17)",
+    privacyS8Desc3: "Solicita la eliminación de tus datos personales. Eliminaremos tu email de todos los sistemas en 30 días, incluida la lista de nuestro proveedor de servicios de email.",
+    privacyS8Right4: "Derecho a la limitación del tratamiento (Art. 18)",
+    privacyS8Desc4: "Pídenos que pausemos el tratamiento de tus datos mientras se resuelve una disputa.",
+    privacyS8Right5: "Derecho a la portabilidad de los datos (Art. 20)",
+    privacyS8Desc5: "Recibe una copia de tus datos personales en un formato estructurado y legible por máquina (JSON o CSV) para transferirlos a otro responsable.",
+    privacyS8Right6: "Derecho de oposición (Art. 21)",
+    privacyS8Desc6: "Oponte al tratamiento basado en interés legítimo (analítica). Cesaremos ese tratamiento salvo que podamos demostrar motivos legítimos imperiosos.",
+    privacyS8Right7: "Derecho a retirar el consentimiento",
+    privacyS8Desc7: "Retira el consentimiento para comunicaciones por email en cualquier momento cancelando la suscripción desde cualquier email que te enviemos, o contactándonos directamente. La retirada no afecta a la licitud del tratamiento anterior.",
+    privacyS8Right8: "Derecho a no ser objeto de decisiones automatizadas (Art. 22)",
+    privacyS8Desc8: "No utilizamos toma de decisiones automatizada ni elaboración de perfiles que produzca efectos jurídicos o significativos similares.",
+    privacyS8Closure: "Para ejercer cualquiera de estos derechos, envía un email a {{email}} con el asunto \"Data Subject Request\". Es posible que te pidamos que verifiques tu identidad antes de procesar la solicitud. No hay ningún coste por ejercer tus derechos.",
+
+    // Section 9
+    privacyS9Title: "Derecho a presentar una reclamación",
+    privacyS9Para1: "Si crees que no hemos gestionado tus datos personales conforme a la legislación aplicable, tienes derecho a presentar una reclamación ante tu autoridad supervisora local. En la UE, encuentra tu autoridad nacional en edpb.europa.eu. En el Reino Unido, la autoridad supervisora es la Oficina del Comisionado de Información (ICO).",
+    privacyS9Para2: "Agradeceríamos la oportunidad de abordar tu preocupación directamente antes de que la escales a una autoridad supervisora — por favor, contáctanos primero en {{email}}.",
+
+    // Section 10
+    privacyS10Title: "Derechos de privacidad en California (CCPA)",
+    privacyS10Para: "Si eres residente de California, tienes derecho a saber qué información personal recopilamos, el derecho a eliminarla y el derecho a rechazar su venta. No vendemos información personal. Para ejercer tus derechos, envía un email a {{email}}.",
+
+    // Section 11
+    privacyS11Title: "Privacidad infantil",
+    privacyS11Para: "El sitio web de PromptQuorum no está dirigido a menores de 16 años. No recopilamos datos personales de personas menores de 16 años de forma consciente. Si crees que hemos recopilado inadvertidamente dichos datos, envía un email a {{email}} y los eliminaremos de inmediato.",
+
+    // Section 12
+    privacyS12Title: "Cambios en esta política",
+    privacyS12Para: "Podemos actualizar esta política de privacidad para reflejar cambios en nuestras prácticas o requisitos legales. Cuando lo hagamos, actualizaremos la fecha de entrada en vigor en la parte superior de esta página. Los cambios materiales — como la recopilación de nuevas categorías de datos o el cambio de base jurídica — se comunicarán por email a los suscriptores de la lista de espera al menos 14 días antes de que entren en vigor.",
+
+    // Section 13
+    privacyS13Title: "Contacto",
+    privacyS13Para: "Para todas las preguntas relacionadas con la privacidad, solicitudes de interesados o retirada del consentimiento:",
+    privacyS13ContactTitle: "PromptQuorum — Responsable del tratamiento",
+    privacyS13ContactEmail: "Email:",
+    privacyS13ContactWebsite: "Sitio web:",
+    privacyS13ResponseTime: "Tiempo de respuesta: en un plazo de 30 días desde la recepción",
+
+    // Footer Nav
+    privacyFooterHome: "Inicio",
+    privacyFooterFaq: "FAQ",
+
+    // Explore Free Guides Section
+    guidesTitle: "Explora las guías gratuitas",
+    guidesDesc: "Análisis profundos sobre IA, prompting y LLMs locales",
+    guidesLocalLlms: "LLMs locales",
+    guidesLocalLlmsDesc: "Cómo ejecutar modelos de IA en tu propio hardware",
+    guidesPromptEng: "Prompt Engineering",
+    guidesPromptEngDesc: "Técnicas para optimizar prompts y obtener mejores respuestas",
+    guidesQuantization: "Cuantización de LLM",
+    guidesQuantizationDesc: "Comprime modelos para ejecutarlos en GPUs de consumo",
+
+    // Footer
+    footerCopyright: "(c) 2026 PromptQuorum. Creado con cuidado para usuarios avanzados de IA.",
+  },
+
+  pt: {
+    // TODO: Add Portuguese (Brazilian) translations — July 2026
+    // For now, falls back to English
+  } as Record<string, string>,
+
+  ar: {
+    // TODO: Add Arabic translations — August 2026
+    // For now, falls back to English
+    // IMPORTANT: AR requires RTL layout support (dir="rtl")
+  } as Record<string, string>,
 };
 
-export type Language = "en" | "de" | "fr" | "ja" | "zh";
+export type Language = "en" | "de" | "fr" | "ja" | "zh" | "es" | "pt" | "ar";
 
 export type TranslationKey = keyof typeof translations.en;

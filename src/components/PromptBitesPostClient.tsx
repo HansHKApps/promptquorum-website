@@ -19,7 +19,7 @@ function promptBitesHubHref(lang: Language): string {
   return lang === 'en' ? '/prompt-bites' : `/${lang}/prompt-bites`
 }
 
-const BREADCRUMB_LABELS: Record<Language, Record<string, string>> = {
+const BREADCRUMB_LABELS: Partial<Record<Language, Record<string, string>>> = {
   en: { home: 'Home', hub: 'Prompt Bites' },
   de: { home: 'Startseite', hub: 'Prompt Bites' },
   fr: { home: 'Accueil', hub: 'Prompt Bites' },
@@ -27,7 +27,7 @@ const BREADCRUMB_LABELS: Record<Language, Record<string, string>> = {
   zh: { home: '主页', hub: 'Prompt Bites' },
 }
 
-const BACK_LABEL: Record<Language, string> = {
+const BACK_LABEL: Partial<Record<Language, string>> = {
   en: '← Back to Prompt Bites',
   de: '← Zurück zu Prompt Bites',
   fr: '← Retour aux Prompt Bites',
@@ -35,7 +35,7 @@ const BACK_LABEL: Record<Language, string> = {
   zh: '← 返回 Prompt Bites',
 }
 
-const QUICK_ANSWER_LABEL: Record<Language, string> = {
+const QUICK_ANSWER_LABEL: Partial<Record<Language, string>> = {
   en: 'Quick Answer',
   de: 'Schnelle Antwort',
   fr: 'Réponse rapide',
@@ -43,7 +43,7 @@ const QUICK_ANSWER_LABEL: Record<Language, string> = {
   zh: '快速回答',
 }
 
-const UPDATED_LABEL: Record<Language, string> = {
+const UPDATED_LABEL: Partial<Record<Language, string>> = {
   en: 'Updated:',
   de: 'Aktualisiert:',
   fr: 'Mis à jour :',
@@ -51,7 +51,7 @@ const UPDATED_LABEL: Record<Language, string> = {
   zh: '更新于:',
 }
 
-const KEY_TAKEAWAYS_LABEL: Record<Language, string> = {
+const KEY_TAKEAWAYS_LABEL: Partial<Record<Language, string>> = {
   en: 'Key Takeaways',
   de: 'Wichtigste Punkte',
   fr: 'Points clés',
@@ -59,7 +59,7 @@ const KEY_TAKEAWAYS_LABEL: Record<Language, string> = {
   zh: '关键要点',
 }
 
-const GO_DEEPER_HEADING: Record<Language, string> = {
+const GO_DEEPER_HEADING: Partial<Record<Language, string>> = {
   en: 'Want the full breakdown?',
   de: 'Den vollständigen Überblick?',
   fr: 'Vous voulez les détails complets ?',
@@ -67,7 +67,7 @@ const GO_DEEPER_HEADING: Record<Language, string> = {
   zh: '想了解完整详情？',
 }
 
-const READ_FULL_GUIDE: Record<Language, string> = {
+const READ_FULL_GUIDE: Partial<Record<Language, string>> = {
   en: 'Read the complete guide →',
   de: 'Die vollständige Anleitung lesen →',
   fr: 'Lire le guide complet →',
@@ -75,7 +75,7 @@ const READ_FULL_GUIDE: Record<Language, string> = {
   zh: '阅读完整指南 →',
 }
 
-const RELATED_BITES_LABEL: Record<Language, string> = {
+const RELATED_BITES_LABEL: Partial<Record<Language, string>> = {
   en: 'Related Prompt Bites',
   de: 'Verwandte Prompt Bites',
   fr: 'Prompt Bites associés',
@@ -83,7 +83,7 @@ const RELATED_BITES_LABEL: Record<Language, string> = {
   zh: '相关 Prompt Bites',
 }
 
-const EDUCATIONAL_LEVEL: Record<string, Record<Language, string>> = {
+const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
   Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级' },
   Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级' },
   Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级' },
@@ -326,11 +326,11 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
         <div className="flex items-start justify-between gap-4 mb-6">
           <nav className="text-sm text-text-secondary min-w-0">
             <Link href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary transition-colors shrink-0">
-              {BREADCRUMB_LABELS[lang].home}
+              {(BREADCRUMB_LABELS[lang] ?? BREADCRUMB_LABELS["en"]!).home}
             </Link>
             <span className="mx-2">›</span>
             <Link href={promptBitesHubHref(lang)} className="hover:text-primary transition-colors shrink-0">
-              {BREADCRUMB_LABELS[lang].hub}
+              {(BREADCRUMB_LABELS[lang] ?? BREADCRUMB_LABELS["en"]!).hub}
             </Link>
             <span className="mx-2">›</span>
             <span className="text-text-primary break-words">{article.title}</span>

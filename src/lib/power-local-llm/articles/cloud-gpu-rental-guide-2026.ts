@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Die meisten Cloud-GPU-Ratgeber optimieren auf den plakativen Stundenpreis, doch der Preis allein entscheidet niemals über die Kosten. Was Sie tatsächlich zahlen, ist der Stundensatz multipliziert mit der Laufzeit des Auftrags, zuzüglich der durch Unterbrechungen verlorenen Stunden und der Zeit für die Einrichtung. Dieser Ratgeber vergleicht drei Cloud-GPU-Anbieter für die Inferenz lokaler LLMs — RunPod, Lambda Labs und Vast.ai — anhand der Kennzahlen, die die Entscheidung bestimmen: Stundenpreis, Verfügbarkeitsgarantie, Einrichtungszeit und Datenschutzkonformität bei der Datenresidenz. Ein Hinweis zum Preis: Cloud-GPU-Sätze ändern sich von Woche zu Woche, und die Spot-Preise von Vast.ai können sich minütlich ändern, daher ist jeder hier genannte Satz eine Momentaufnahme vom Mai 2026. Cloud-GPU-Anbieter rechnen weltweit in US-Dollar ab, unabhängig vom Land des Kunden; alle Preise bleiben daher in USD angegeben. Mieten ist rund 30-50 % günstiger als der Kauf von Hardware, wenn Ihr Rechenbedarf gelegentlich statt konstant ist.',
     metaDescription:
-      'RunPod, Lambda Labs und Vast.ai im Vergleich für KI-Inferenz: Stundenpreis ($0.09-2.99/Std.), Verfügbarkeits-SLA, Einrichtungszeit und DSGVO-Eignung. Sätze von Mai 2026.',
+      'Cloud-GPU-Mietführer 2026: RunPod, Vast.ai, Lambda Labs im Vergleich. Stundenpreise für A100, H100, RTX 4090. Wann sich Cloud-GPUs gegenüber Hardware lohnen.',
     twitterDescription:
       'RunPod vs. Lambda Labs vs. Vast.ai für Cloud-GPU-KI-Inferenz — drei Anbieter, eine Regel: erst den Zuverlässigkeitsbedarf wählen, dann den Preis. Sätze von Mai 2026.',
     affiliateDisclosure: true,
@@ -887,7 +887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       "La plupart des conseils sur les GPU cloud optimisent le tarif horaire affiché, mais le tarif seul ne décide jamais du coût. Ce que vous payez réellement, c'est le tarif multiplié par la durée d'exécution de la tâche, plus les heures perdues à cause des interruptions et le temps consacré à la configuration. Ce guide compare trois fournisseurs de GPU cloud pour l'inférence de LLM locaux — RunPod, Lambda Labs et Vast.ai — sur les chiffres qui déterminent la décision : prix horaire, garantie de disponibilité, temps de configuration et conformité de la résidence des données. Une mise en garde sur les prix : les tarifs des GPU cloud évoluent d'une semaine à l'autre, et la tarification spot de Vast.ai peut changer d'une minute à l'autre, donc chaque tarif ici est un instantané de mai 2026. Les fournisseurs de GPU cloud facturent en USD partout dans le monde, quel que soit le pays du client ; tous les prix restent donc indiqués en USD. La location est environ 30-50 % moins chère que l'achat de matériel lorsque votre besoin de calcul est occasionnel plutôt que constant.",
     metaDescription:
-      "RunPod, Lambda Labs et Vast.ai comparés pour l'inférence IA : prix horaire ($0.09-2.99/h), SLA de disponibilité, temps de configuration et conformité RGPD. Tarifs de mai 2026.",
+      "Guide location GPU cloud 2026 : RunPod, Vast.ai, Lambda Labs comparés. Prix horaires pour A100, H100, RTX 4090. Quand louer un GPU plutôt qu'acheter.",
     twitterDescription:
       "RunPod vs Lambda Labs vs Vast.ai pour l'inférence IA sur GPU cloud — trois fournisseurs, une règle : choisir d'abord selon le besoin de fiabilité, puis le prix. Tarifs de mai 2026.",
     affiliateDisclosure: true,
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'クラウドGPUに関する多くのアドバイスは、目立つ時間単価を最適化しようとしますが、単価だけでコストが決まることはありません。実際に支払う金額は、単価にジョブの実行時間を掛け、さらに中断によって失われる時間とセットアップに費やす時間を加えたものです。このガイドでは、ローカルLLM推論を実行するための3つのクラウドGPUプロバイダー（RunPod、Lambda Labs、Vast.ai）を、決定を左右する数値で比較します。すなわち、時間料金、稼働率保証、セットアップ時間、データレジデンシーのコンプライアンスです。価格に関する注意点が1つあります。クラウドGPUの料金は週単位で変動し、Vast.aiのスポット価格は分単位で変わることがあるため、ここに記載するすべての料金は2026年5月時点のスナップショットです。クラウドGPUプロバイダーは顧客の国に関係なく世界中でUSDで請求するため、すべての価格はUSDのまま表記します。コンピューティングの必要が常時ではなく時々である場合、レンタルはハードウェア購入よりおよそ30-50%安くなります。',
     metaDescription:
-      'RunPod、Lambda Labs、Vast.aiをAI推論で比較：時間料金（$0.09-2.99/時）、稼働率SLA、セットアップ時間、GDPR適合性。2026年5月時点の料金。',
+      '2026年クラウドGPUレンタルガイド：RunPod、Vast.ai、Lambda Labsを比較。A100、H100、RTX 4090の時間料金。自前のハードウェアよりクラウドが有利な条件を解説。',
     twitterDescription:
       'クラウドGPU AI推論向けのRunPod vs Lambda Labs vs Vast.ai — 3つのプロバイダー、1つのルール：まず信頼性のニーズで選び、次に価格。2026年5月時点の料金。',
     affiliateDisclosure: true,
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '大多数云GPU建议都围绕醒目的小时单价做优化，但单价本身从来不能决定成本。你实际支付的，是单价乘以作业运行时长，再加上因中断损失的小时数和花在配置上的时间。本指南针对运行本地LLM推理的三家云GPU提供商——RunPod、Lambda Labs和Vast.ai——按真正决定选择的数字进行对比：小时价格、可用性保证、配置时间和数据驻留合规性。关于价格有一点提醒：云GPU费率每周都在变动，Vast.ai的现货价格甚至可能每分钟变化，因此这里的每个费率都是2026年5月的快照。云GPU提供商无论客户位于哪个国家都按USD全球计费，因此所有价格均保持以USD标示。当你的算力需求是偶尔而非持续时，租用比购买硬件大约便宜30-50%。',
     metaDescription:
-      'RunPod、Lambda Labs和Vast.ai用于AI推理的对比：小时价格（$0.09-2.99/小时）、可用性SLA、配置时间和GDPR适配性。2026年5月费率。',
+      '2026年云GPU租赁指南：对比RunPod、Vast.ai、Lambda Labs。A100、H100、RTX 4090的每小时价格。何时租用云GPU比购买自己的硬件更划算，全面分析。',
     twitterDescription:
       'RunPod vs Lambda Labs vs Vast.ai用于云GPU AI推理——三家提供商，一条规则：先按可靠性需求选，再看价格。2026年5月费率。',
     affiliateDisclosure: true,

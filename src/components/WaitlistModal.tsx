@@ -6,7 +6,7 @@ import type { Lang } from '@/hooks/useLang'
 import { LandingPageClient } from './LandingPageClient'
 import { useWaitlist } from '@/context/WaitlistContext'
 
-const T: Record<Lang, { title: string; desc: string }> = {
+const T: Partial<Record<Lang, { title: string; desc: string }>> = {
   en: {
     title: 'Join the Waitlist',
     desc: 'Early access users get priority onboarding, direct access to the developer, and a free power tool!',
@@ -32,7 +32,7 @@ const T: Record<Lang, { title: string; desc: string }> = {
 function WaitlistModalInner() {
   const { isOpen, closeWaitlist } = useWaitlist()
   const lang = useLang()
-  const t = T[lang] ?? T.en
+  const t = (T[lang as keyof typeof T] ?? T.en)!
 
   if (!isOpen) return null
 

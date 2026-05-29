@@ -14,9 +14,9 @@ import { promptBitesAlternates, promptBitesHubPath, promptBitesArticlePath } fro
 
 const BASE = 'https://www.promptquorum.com'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
 
-const HOME_LABEL: Record<Lang, string> = {
+const HOME_LABEL: Partial<Record<Lang, string>> = {
   en: 'Home',
   de: 'Startseite',
   fr: 'Accueil',
@@ -175,14 +175,14 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
 
 export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
   const count = PROMPT_BITES_PUBLISHED_SLUGS.size
-  const titleByLang: Record<Lang, string> = {
+  const titleByLang: Partial<Record<Lang, string>> = {
     en: `Local LLM Quick Reference: VRAM, Ollama Models & GPU Picks — ${count} Answers | PromptQuorum`,
     de: `Lokale LLM Kurzreferenz: VRAM, Ollama-Modelle & GPU-Empfehlungen — ${count} Antworten | PromptQuorum`,
     fr: `Référence rapide LLM local : VRAM, modèles Ollama et choix GPU — ${count} réponses | PromptQuorum`,
     ja: `ローカルLLMクイックリファレンス：VRAM・Ollamaモデル・GPU選び — ${count}の回答 | PromptQuorum`,
     zh: `本地LLM快速参考：VRAM、Ollama模型与GPU选择 — ${count}个解答 | PromptQuorum`,
   }
-  const descByLang: Record<Lang, string> = {
+  const descByLang: Partial<Record<Lang, string>> = {
     en: `Local LLM quick reference guide: VRAM tiers for ${count} models (2026), quantization basics, Ollama vs LM Studio, hardware picks, and setup tips. Complete answers for running models locally.`,
     de: `Lokale LLM Kurzreferenzanleitung: VRAM-Stufen für ${count} Modelle (2026), Quantisierungsgrundlagen, Ollama gegen LM Studio, Hardware-Empfehlungen und Setup-Tipps.`,
     fr: `Guide de référence rapide LLM local : niveaux VRAM pour ${count} modèles (2026), bases de quantification, Ollama vs LM Studio, choix matériels et conseils de configuration.`,
@@ -193,15 +193,15 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
   const isPublished = isPromptBitesHubPublished(lang)
 
   return {
-    title: truncateTitle(titleByLang[lang]),
-    description: descByLang[lang],
+    title: truncateTitle((titleByLang[lang] ?? titleByLang["en"])!),
+    description: (descByLang[lang] ?? descByLang["en"])!,
     alternates: promptBitesAlternates(lang),
     robots: isPublished
       ? { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 }
       : { index: false, follow: false },
     openGraph: {
       title: titleByLang[lang],
-      description: descByLang[lang],
+      description: (descByLang[lang] ?? descByLang["en"])!,
       url: `${BASE}${promptBitesHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
@@ -210,7 +210,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       card: 'summary_large_image',
       site: '@promptquorum',
       title: titleByLang[lang],
-      description: descByLang[lang],
+      description: (descByLang[lang] ?? descByLang["en"])!,
     },
   } satisfies Metadata
 }

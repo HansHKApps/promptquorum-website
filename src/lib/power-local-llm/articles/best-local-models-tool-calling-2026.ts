@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison',
-    seoTitle: 'Meilleurs modèles Tool Calling locaux 2026 : Benchmarks MCP réels',
+    seoTitle: 'Modèles locaux pour le tool calling 2026 : Qwen, Llama',
     intro:
       'La fiabilité des appels d\'outils est le déterminant le plus important du succès ou de l\'interruption d\'un agent local. Le harness qui enveloppe le modèle compte moins — même Cline, mêmes serveurs MCP, même prompt : le modèle émet des appels d\'outils bien formés ou non. Ce guide compare les cinq modèles fiables pour Tool Calling en mai 2026 (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) sur des flux MCP réels, nomme les modes de défaillance et vous dit quel modèle choisir selon votre budget VRAM.',
     metaDescription:
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ツール呼び出しの信頼性は、ローカルエージェントがタスクを完了するか停止するかを決める最も重要な要因です。モデルをラップするハーネスはそれほど重要ではありません — 同じCline、同じMCPサーバー、同じプロンプト : モデルは正しく形成されたツール呼び出しを出力するか、出力しません。このガイドは、2026年5月の5つの信頼できるツール呼び出し実行者(Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B)を実MCPワークフローでベンチマークし、失敗モードに名前を付け、VRAMバジェットあたりどのモデルを選択するかを示します。',
     metaDescription:
-      'Gemma 4、GLM-5.1、Qwen3、Qwen3-Coder、Llama 3.3を比較して、ツール呼び出しの信頼性を確認できます。実MCPベンチマーク、リーダーボードスコアではありません。',
+      '2026年のツール呼び出しに最適なローカルLLM。Qwen3、Llama 3.3、Mistralを実機テスト。関数呼び出し精度、JSON出力の信頼性、エージェント対応を比較。',
     twitterDescription:
       '実MCPツール呼び出しでテストされた5つのローカルモデル: Gemma 4、GLM-5.1、Qwen3、Qwen3-Coder、Llama 3.3。信頼度、VRAMバジェット、失敗モード。',
     current_models_mentioned: [

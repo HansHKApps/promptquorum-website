@@ -757,10 +757,10 @@ schema: {
     fr: {
       theme: 'Premiers pas',
       title: 'Meilleurs LLMs débutants 2026 : Modèles 4GB & 8GB RAM classés',
-      seoTitle: 'Meilleurs LLMs débutants 2026 : Modèles 4GB–8GB RAM classés',
+      seoTitle: 'Meilleurs LLMs débutants 2026 : Modèles 4GB–8GB RAM',
       intro: 'Les cinq meilleurs modèles LLM locaux pour débutants en 2026 sont Meta Llama 3.2 3B, Microsoft Phi-4 Mini, Google Gemma 3 2B, Mistral 7B v0.3 et Qwen2.5 7B. Chacun fonctionne sur du matériel grand public avec 4–8 Go de RAM. Llama 3.2 3B utilise 2.5 Go RAM à 25–45 tok/s. Phi-4 Mini atteint 68 % MMLU et 70 % HumanEval avec seulement 2.5 Go RAM. Gemma 3 2B tourne avec 1.7 Go à 40–60 tok/s — le modèle le plus rapide de cette liste.',
       leadAnswerBlock: '**Les cinq meilleurs modèles LLM locaux pour débutants en 2026 sont Llama 3.2 3B, Phi-4 Mini 3.8B, Gemma 3 2B, Mistral 7B v0.3 et Qwen2.5 7B. Tous fonctionnent avec 4–8 Go de RAM et se lancent avec une seule commande Ollama.**',
-      metaDescription: 'Classés : Llama 3.2 3B (2,5 Go), Phi-4 Mini (2,5 Go), Gemma 3 2B (1,7 Go), Mistral & Qwen 7B. RAM, benchmarks vitesse, commandes Ollama.',
+      metaDescription: 'Classés : Llama 3.2 3B (2,5 Go), Phi-4 Mini (2,5 Go), Gemma 3 2B (1,7 Go), Mistral & Qwen 7B. RAM, benchmarks vitesse, commandes Ollama. Débuter 2026.',
       twitterDescription: 'Classés : Llama 3.2 3B (2,5 Go, 25-45 tok/s), Phi-4 Mini (2,5 Go, meilleur reasoning), Gemma 3 2B (1,7 Go, plus rapide). 5 LLMs débutants par RAM 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
@@ -1124,7 +1124,7 @@ schema: {
     ja: {
       theme: '入門',
       title: '2026年初心者向けローカルLLM：4GB & 8GB RAM完全比較ガイド',
-      seoTitle: '2026年初心者向けローカルLLM：4GB–8GB RAM モデル評価',
+      seoTitle: '2026年初心者向けローカルLLM：Llama、Phi-4 Mini など4GB–8GB RAMモデル評価',
       intro: '2026年の初心者向けローカルLLMベスト5は、Meta Llama 3.2 3B、Microsoft Phi-4 Mini、Google Gemma 3 2B、Mistral 7B v0.3、Qwen2.5 7Bです。すべて4〜8 GBのRAMで動作します。Llama 3.2 3Bは2.5 GB RAMで25〜45トークン/秒。Phi-4 Miniは2.5 GB RAMで68% MMLU・70% HumanEvalを達成。Gemma 3 2Bは1.7 GBで40〜60トークン/秒——このリストで最速です。',
       leadAnswerBlock: '**2026年の初心者向けローカルLLMベスト5はLlama 3.2 3B、Phi-4 Mini 3.8B、Gemma 3 2B、Mistral 7B v0.3、Qwen2.5 7Bです。4〜8 GB RAMで動作し、Ollamaコマンド1つで起動できます。**',
       metaDescription: '比較評価：Llama 3.2 3B（2.5GB）、Phi-4 Mini（2.5GB）、Gemma 3 2B（1.7GB）、Mistral & Qwen 7B。RAM要件・速度テスト・Ollama操作法。',
@@ -1491,7 +1491,7 @@ schema: {
     zh: {
       theme: '入门指南',
       title: '2026年初学者最佳本地LLM：4GB & 8GB内存模型完整评测',
-      seoTitle: '2026年初学者最佳本地LLM：4GB–8GB内存模型评测',
+      seoTitle: '2026年最佳入门本地LLM：Phi-4 Mini、Llama 3.2 等4GB–8GB内存推荐',
       intro: '2026年面向初学者的五款最佳本地LLM是Meta Llama 3.2 3B、Microsoft Phi-4 Mini、Google Gemma 3 2B、Mistral 7B v0.3和Qwen2.5 7B。每款都可在配备4–8 GB内存的消费级硬件上运行。Llama 3.2 3B使用2.5 GB内存，速度达25–45词/秒。Phi-4 Mini仅需2.5 GB内存即可获得68% MMLU和70% HumanEval成绩。Gemma 3 2B仅需1.7 GB内存，速度达40–60词/秒——是本列表中最快的模型。',
       leadAnswerBlock: '**2026年初学者最佳本地LLM五款：Llama 3.2 3B、Phi-4 Mini 3.8B、Gemma 3 2B、Mistral 7B v0.3和Qwen2.5 7B。均可在4–8 GB内存下运行，通过单条Ollama命令启动。**',
       metaDescription: '评测：Llama 3.2 3B（2.5GB）、Phi-4 Mini（2.5GB）、Gemma 3 2B（1.7GB）、Mistral & Qwen 7B。内存要求、速度测试、Ollama命令。',

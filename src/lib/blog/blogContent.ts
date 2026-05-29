@@ -1,4 +1,4 @@
-export type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+export type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
 
 export interface BlogSection {
   title?: string
@@ -41,7 +41,7 @@ export interface BlogPost {
   specific_year?: number
 }
 
-export const blogContent: Record<string, Record<Language, BlogPost>> = {
+export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = {
   frameworks: {
     en: {
       category: 'Prompt Engineering',

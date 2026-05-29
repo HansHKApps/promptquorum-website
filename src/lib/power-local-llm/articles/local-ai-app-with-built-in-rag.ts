@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale KI-Apps mit integriertem RAG: Chat mit Ihren Dateien (ohne Setup)',
     seoTitle: 'PDFs lokal chatten 2026: Integrierte RAG, keine Vektor-DB',
     metaDescription:
-      'LM Studio, Jan, AnythingLLM: PDF ablegen, sofort chatten — ohne Vektor-DB, Python oder Setup. Auf 1.000-Seiten-Dokumenten getestet. Mai 2026.',
+      'Lokale KI-App mit integriertem RAG 2026: Dokumente durchsuchen ohne Cloud. Die besten Apps mit eingebautem RAG für private Wissensdatenbanken und Chat.',
     twitterDescription:
       '3 lokale KI-Apps mit integriertem RAG, die einfach funktionieren. PDF ablegen, Frage stellen. Getestet auf 1.000-Seiten-Dokumenten im Mai 2026.',
     readTime: '12 Min. Lesezeit',
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Applications IA locales avec RAG intégré : Discutez avec vos fichiers (sans configuration)',
     seoTitle: 'RAG intégré 2026 : chat PDF local sans base vectorielle',
     metaDescription:
-      'LM Studio, Jan, AnythingLLM : chargez un PDF et discutez — sans base vectorielle, sans Python. Testés sur 1 000 pages de documents locaux. Mai 2026.',
+      'Application IA locale avec RAG intégré 2026 : interrogez vos documents sans cloud. Les meilleures apps avec RAG pour bases de connaissances privées.',
     twitterDescription:
       '3 applications IA locales avec RAG intégré qui fonctionnent simplement. Chargez un PDF, posez une question. Testées sur documents de 1 000 pages en mai 2026.',
     readTime: '12 min de lecture',
@@ -1539,7 +1539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカルAIアプリ（内蔵RAG対応）：ファイルとチャット（セットアップ不要）',
     seoTitle: 'PDF対話内蔵RAGアプリ 2026：ベクトルDB不要、LM Studio・Jan・AnythingLLM実測',
     metaDescription:
-      'PDFを読み込んでチャットできるデスクトップアプリ3つ — ベクトルDB、Python、コマンドライン不要。LM Studio、Jan、AnythingLLM を1,000ページドキュメントでテスト。2026年5月。',
+      '2026年版RAG内蔵ローカルAIアプリ：クラウド不要で文書を検索。プライベートな知識ベースと文書チャットに最適なRAG内蔵アプリを紹介。完全オフラインで安全。',
     twitterDescription:
       'ローカルAIの内蔵RAGアプリ3つ。PDFを読み込み、質問を入力。1,000ページドキュメントで2026年5月テスト済み。',
     readTime: '12分で読める',

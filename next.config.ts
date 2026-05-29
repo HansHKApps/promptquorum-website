@@ -74,12 +74,12 @@ const nextConfig: NextConfig = {
       },
       // English-only pages: no /{lang}/* routes exist; sitemap bug caused Google to crawl these
       {
-        source: '/:lang(de|fr|ja|zh)/waitlist',
+        source: '/:lang(de|fr|ja|zh|es|pt|ar)/waitlist',
         destination: '/waitlist?lang=:lang',
         permanent: true,
       },
       {
-        source: '/:lang(de|fr|ja|zh)/image-license',
+        source: '/:lang(de|fr|ja|zh|es|pt|ar)/image-license',
         destination: '/image-license',
         permanent: true,
       },

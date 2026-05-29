@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Grammarly und Notion AI senden Ihre Texte zur Verarbeitung an Cloud-Server — Ihre E-Mail-Entwürfe, vertraulichen Dokumente und persönlichen Notizen laufen systembedingt durch fremde KI-Dienste. Ein lokales LLM, betrieben über Ollama oder LM Studio, kann beide für die meisten Schreibaufgaben ersetzen: Grammatik- und Stilkorrektur, Dokumentenentwurf, Inhaltszusammenfassung und KI-gestützte Notizverwaltung — ohne dass Daten Ihren Rechner verlassen.',
     metaDescription:
-      'Grammarly und Notion AI durch ein lokales LLM ersetzen: Datenschutz, Kosten, Funktionsvergleich. Einrichtung für Schreibkorrektur, Dokumente und Notizen.',
+      'Grammarly und Notion AI lokal ersetzen 2026: private Schreibassistenz ohne Cloud. Grammatikprüfung, Umformulierung und Textverbesserung mit lokalen LLMs.',
     twitterDescription:
       'Grammarly (Grammatik/Stil) und Notion AI (Entwürfe, Notizen) durch ein lokales LLM ersetzen — keine Daten verlassen Ihren Rechner. Datenschutz, Kosten, Setup.',
     current_models_mentioned: [
@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Grammarly et Notion AI envoient vos textes vers des serveurs cloud — vos brouillons d\'e-mails, documents confidentiels et notes personnelles transitent par conception par des systèmes d\'IA tiers. Un LLM local exécuté via Ollama ou LM Studio remplace les deux pour la plupart des tâches d\'écriture : correction grammaticale et stylistique, rédaction de documents, synthèse de contenu et prise de notes assistée — sans qu\'aucune donnée ne quitte votre machine.',
     metaDescription:
-      'Remplacer Grammarly et Notion AI par un LLM local : confidentialité, coûts, comparatif. Configuration pour correction d\'écriture, documents et automatisation.',
+      'Remplacer Grammarly et Notion AI en local 2026 : assistance d\'écriture privée sans cloud. Correction grammaticale et reformulation avec LLMs locaux.',
     twitterDescription:
       'Remplacer Grammarly (grammaire/style) et Notion AI (rédaction, notes) par un LLM local — aucune donnée ne quitte votre machine. Confidentialité, coûts, mise en place.',
     current_models_mentioned: [

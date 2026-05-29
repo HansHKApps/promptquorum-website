@@ -12,7 +12,7 @@ interface PageProps {
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as Language
 
   return buildHubMetadata(selectedLang)
@@ -21,7 +21,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
 export default async function BlogPage({ searchParams }: PageProps) {
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as Language
 
   return buildHubPageElement(selectedLang)

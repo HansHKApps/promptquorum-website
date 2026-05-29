@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 const CHANGELOG_PATH = path.join(ROOT, 'src/data/seo-changelog.json')
 const OUTPUT_PATH = path.join(ROOT, 'public/data/seo-registry.json')
-const LANGS = ['en', 'de', 'fr', 'ja', 'zh']
+const LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
 
 // Extract seoTitle and metaDescription per language from a PE article file.
 // Language blocks are at 4-space indent: "    en: {"
@@ -21,7 +21,7 @@ function extractMetaFromPeFile(filePath) {
   const langLines = [] // { lang, lineIndex }
 
   for (let i = 0; i < lines.length; i++) {
-    const m = lines[i].match(/^ {2,4}(en|de|fr|ja|zh):\s*\{/)
+    const m = lines[i].match(/^ {2,4}(en|de|fr|ja|zh|es|pt|ar):\s*\{/)
     if (m) {
       langLines.push({ lang: m[1], lineIndex: i })
     }
@@ -99,7 +99,7 @@ function extractMetaFromLlmContent(contentPath) {
     if (slugM) articleKeyLines.push({ slug: slugM[1], lineIndex: i })
 
     // Language key: "    en: {" (4-space indent inside article blocks)
-    const langM = lines[i].match(/^ {4}(en|de|fr|ja|zh):\s*\{/)
+    const langM = lines[i].match(/^ {4}(en|de|fr|ja|zh|es|pt|ar):\s*\{/)
     if (langM) {
       // Associate with last seen article slug
       const ownerSlug = articleKeyLines.length > 0

@@ -15,7 +15,7 @@ export default async function UnsubscribedPage({ searchParams }: PageProps) {
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
   const status = (sp?.status as string) || 'ok'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
   const selectedStatus = (['ok', 'invalid', 'error'].includes(status) ? status : 'ok') as 'ok' | 'invalid' | 'error'
 

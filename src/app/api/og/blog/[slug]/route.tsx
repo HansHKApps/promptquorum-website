@@ -16,10 +16,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
   // Extract language from query param, default to 'en'
   const url = new URL(request.url)
   const lang = (url.searchParams.get('lang') || 'en') as Language
-  const validLangs: Language[] = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs: Language[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
   const post = blogContent[postId][selectedLang] || blogContent[postId]['en']
+  if (!post) {
+    return new Response('Not Found', { status: 404 })
+  }
   const title = post.title
   const intro = post.intro
 

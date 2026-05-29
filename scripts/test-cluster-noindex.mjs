@@ -30,7 +30,7 @@ const PUBLISHED_FILE = 'src/lib/power-local-llm/published.ts'
 const LOCALE_PREFIXES = ['', '/de', '/fr', '/ja', '/zh']
 const NON_CLUSTER_PROBES = ['/', '/local-llms/llm-quantization-explained']
 // Mirrors isPowerLLMHubPublished() in published.ts — all langs now published
-const PUBLISHED_HUB_LANGS = new Set(['en', 'de', 'fr', 'ja', 'zh'])
+const PUBLISHED_HUB_LANGS = new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'])
 
 function readSlugs() {
   const src = readFileSync(SLUGS_FILE, 'utf8')

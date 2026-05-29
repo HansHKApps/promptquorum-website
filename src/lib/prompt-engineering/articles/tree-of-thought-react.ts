@@ -6,7 +6,7 @@ import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
 
-export const article: Record<Language, PEArticle> = {
+export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',

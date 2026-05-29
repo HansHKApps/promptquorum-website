@@ -86,7 +86,7 @@ import { article as a_prompt_framework_for_teams } from "./articles/prompt-frame
 import { article as a_pe_for_support_operations } from "./articles/pe-for-support-operations";
 import { article as a_manual_vs_automated_prompt_optimization } from "./articles/manual-vs-automated-prompt-optimization";
 
-export const peContent: Record<string, Record<Language, PEArticle>> = {
+export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
   "build-a-prompt-library": a_build_a_prompt_library,
   "fundamentals-of-prompt-optimization": a_fundamentals_of_prompt_optimization,
   "what-is-prompt-engineering": a_what_is_prompt_engineering,

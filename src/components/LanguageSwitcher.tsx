@@ -13,24 +13,38 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const languageNames: Record<Language, Record<Language, string>> = {
-    en: { en: 'English', de: 'German', fr: 'French', ja: 'Japanese', zh: 'Chinese' },
-    de: { en: 'Englisch', de: 'Deutsch', fr: 'Französisch', ja: 'Japanisch', zh: 'Chinesisch' },
-    fr: { en: 'Anglais', de: 'Allemand', fr: 'Français', ja: 'Japonais', zh: 'Chinois' },
-    ja: { en: '英語', de: 'ドイツ語', fr: 'フランス語', ja: '日本語', zh: '中国語' },
-    zh: { en: '英文', de: '德文', fr: '法文', ja: '日文', zh: '中文' },
+    en: { en: 'English', de: 'German', fr: 'French', ja: 'Japanese', zh: 'Chinese', es: 'Spanish', pt: 'Portuguese', ar: 'Arabic' },
+    de: { en: 'Englisch', de: 'Deutsch', fr: 'Französisch', ja: 'Japanisch', zh: 'Chinesisch', es: 'Spanisch', pt: 'Portugiesisch', ar: 'Arabisch' },
+    fr: { en: 'Anglais', de: 'Allemand', fr: 'Français', ja: 'Japonais', zh: 'Chinois', es: 'Espagnol', pt: 'Portugais', ar: 'Arabe' },
+    ja: { en: '英語', de: 'ドイツ語', fr: 'フランス語', ja: '日本語', zh: '中国語', es: 'スペイン語', pt: 'ポルトガル語', ar: 'アラビア語' },
+    zh: { en: '英文', de: '德文', fr: '法文', ja: '日文', zh: '中文', es: '西班牙文', pt: '葡萄牙文', ar: '阿拉伯文' },
+    es: { en: 'Inglés', de: 'Alemán', fr: 'Francés', ja: 'Japonés', zh: 'Chino', es: 'Español', pt: 'Portugués', ar: 'Árabe' },
+    pt: { en: 'Inglês', de: 'Alemão', fr: 'Francês', ja: 'Japonês', zh: 'Chinês', es: 'Espanhol', pt: 'Português', ar: 'Árabe' },
+    ar: { en: 'الإنجليزية', de: 'الألمانية', fr: 'الفرنسية', ja: 'اليابانية', zh: 'الصينية', es: 'الإسبانية', pt: 'البرتغالية', ar: 'العربية' },
   }
 
-  const languageCodes: { code: Language; flag: string }[] = [
+  const languageCodes: { code: Language; flag: string; comingSoon?: boolean }[] = [
     { code: 'en', flag: '🇺🇸' },
     { code: 'de', flag: '🇩🇪' },
     { code: 'fr', flag: '🇫🇷' },
     { code: 'ja', flag: '🇯🇵' },
     { code: 'zh', flag: '🇨🇳' },
+    { code: 'es', flag: '🇪🇸' },
+    { code: 'pt', flag: '🇧🇷', comingSoon: true },
+    // TODO: RTL styling needed for AR option — August 2026
+    { code: 'ar', flag: '🇸🇦', comingSoon: true },
   ]
 
   const current = languageCodes.find(l => l.code === currentLang) || languageCodes[0]
 
   const handleLanguageChange = (lang: Language) => {
+    // PT and AR have no page trees yet — redirect to EN instead of a 404.
+    const COMING_SOON_LANGS: Language[] = ['pt', 'ar']
+    if (COMING_SOON_LANGS.includes(lang)) {
+      window.location.href = window.location.origin + '/'
+      return
+    }
+
     window.umami?.track('language_switch', { from_lang: currentLang, to_lang: lang })
     document.cookie = `pq_lang=${lang}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`
     // Path-prefix-routed clusters for ALL non-EN langs (e.g. power-local-llm).
@@ -57,7 +71,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
     // --- Check 1: All-langs path-prefix cluster (e.g. power-local-llm) ---
     // Match: /<cluster> or /<cluster>/... or /<lang>/<cluster> or /<lang>/<cluster>/...
     const clusterMatch = pathname.match(
-      new RegExp(`^(?:/(de|fr|ja|zh))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/.*)?$`)
+      new RegExp(`^(?:/(de|fr|ja|zh|es|pt|ar))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/.*)?$`)
     )
     if (clusterMatch) {
       const cluster = clusterMatch[2]
@@ -70,12 +84,12 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
       return
     }
 
-    // --- Check 2: Path-prefix-lang cluster (all non-EN: JA/ZH/DE/FR) ---
+    // --- Check 2: Path-prefix-lang cluster (all non-EN: JA/ZH/DE/FR/ES) ---
     // Two sub-cases:
     //   A. Currently at /<lang>/<cluster>/... → handle all language switches from a path-prefix path
     //   B. Currently at /<cluster>/... → handle switch TO any language
     const pathPrefixLangClusterMatch = pathname.match(
-      new RegExp(`^(?:/(de|fr|ja|zh))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/.*)?$`)
+      new RegExp(`^(?:/(de|fr|ja|zh|es|pt|ar))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/.*)?$`)
     )
 
     if (pathPrefixLangClusterMatch) {
@@ -91,7 +105,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
         return
       }
 
-      // Any origin → non-EN (JA/ZH/DE/FR): path-navigate to /<lang>/<cluster>/<rest>
+      // Any origin → non-EN (JA/ZH/DE/FR/ES): path-navigate to /<lang>/<cluster>/<rest>
       const target = new URL(`/${lang}/${cluster}${rest}`, window.location.origin)
       target.search = ''
       target.hash = window.location.hash
@@ -99,9 +113,9 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
       return
     }
 
-    // --- Check 3: Home page (/, /de, /de/, /fr, /fr/, /ja, /ja/, /zh, /zh/) ---
+    // --- Check 3: Home page (/, /de, /de/, /fr, /fr/, /ja, /ja/, /zh, /zh/, /es, /es/) ---
     // Handle home page path-prefix for all non-EN languages.
-    const isHome = pathname === '/' || pathname === '/de' || pathname === '/de/' || pathname === '/fr' || pathname === '/fr/' || pathname === '/ja' || pathname === '/ja/' || pathname === '/zh' || pathname === '/zh/'
+    const isHome = pathname === '/' || pathname === '/de' || pathname === '/de/' || pathname === '/fr' || pathname === '/fr/' || pathname === '/ja' || pathname === '/ja/' || pathname === '/zh' || pathname === '/zh/' || pathname === '/es' || pathname === '/es/'
     if (isHome) {
       if (lang === 'en') {
         window.location.href = window.location.origin + '/'
@@ -144,6 +158,9 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
             >
               <span>{lang.flag}</span>
               <span>{languageNames[currentLang][lang.code]}</span>
+              {lang.comingSoon && (
+                <span className="ml-auto text-xs text-gray-400">soon</span>
+              )}
             </button>
           ))}
         </div>

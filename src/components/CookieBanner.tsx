@@ -31,7 +31,7 @@ type Copy = {
   save: string
 }
 
-const COPY: Record<Lang, Copy> = {
+const COPY: Partial<Record<Lang, Copy>> = {
   en: {
     intro: 'We use cookies and similar tech to understand how visitors use this site. Choose what to enable — you can change this anytime via "Cookie Settings" in the footer.',
     policy: 'Privacy Policy',
@@ -168,7 +168,7 @@ function isStale(r: ConsentRecord): boolean {
 
 function CookieBannerInner() {
   const lang = useLang()
-  const c = COPY[lang] ?? COPY.en
+  const c = (COPY[lang] ?? COPY.en)!
   const [visible, setVisible] = useState(false)
   const [showCustom, setShowCustom] = useState(false)
   const [analyticsOn, setAnalyticsOn] = useState(false)

@@ -94,14 +94,14 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
   const article = llmContent[key][selectedLang] ?? llmContent[key]['en']
   if (!article) return notFound()
 
   // Compute available languages for this article (only include langs with actual translations)
-  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh'] as const
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const
   const availableLangsForMeta = VALID_LANGS_META.filter(lang => {
     const c = llmContent[key]?.[lang]
     return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
@@ -200,7 +200,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
 
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
   const article = (llmContent[key][selectedLang] ?? llmContent[key]['en'])!

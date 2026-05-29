@@ -246,7 +246,7 @@ function FeatureCard({ icon: Icon, title, description }: { icon: React.ElementTy
 
 function FeaturesContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
   const lang = useLang(initialLang)
-  const t = T[lang] ?? T.en
+  const t = (T[lang as keyof typeof T] ?? T.en)!
 
   return (
     <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">

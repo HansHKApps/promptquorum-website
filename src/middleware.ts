@@ -30,23 +30,23 @@ const PATH_PREFIX_LANG_CLUSTERS = [
   'privacy',
 ]
 
-const PATH_LOCALE_RE = new RegExp(`^/(de|fr|ja|zh)(/|$)`)
+const PATH_LOCALE_RE = new RegExp(`^/(de|fr|ja|zh|es|pt|ar)(/|$)`)
 const CLUSTER_PATH_RE = new RegExp(
-  `^(?:/(de|fr|ja|zh))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/|$)`
+  `^(?:/(de|fr|ja|zh|es|pt|ar))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/|$)`
 )
-// Matches /ja/, /zh/, /de/, or /fr/ <pathPrefixLangCluster>/... or /<pathPrefixLangCluster>/... (without a locale prefix)
+// Matches /ja/, /zh/, /de/, /fr/, /es/, /pt/, or /ar/ <pathPrefixLangCluster>/... or /<pathPrefixLangCluster>/... (without a locale prefix)
 const PATH_PREFIX_LANG_CLUSTER_RE = new RegExp(
-  `^(?:/(de|fr|ja|zh))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
+  `^(?:/(de|fr|ja|zh|es|pt|ar))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
 )
-// Matches /ja/, /zh/, /de/, or /fr/ <pathPrefixLangCluster>/... (already prefixed — used to detect already-migrated URLs)
+// Matches /ja/, /zh/, /de/, /fr/, /es/, /pt/, or /ar/ <pathPrefixLangCluster>/... (already prefixed — used to detect already-migrated URLs)
 const PATH_PREFIX_LANG_PREFIXED_RE = new RegExp(
-  `^/(de|fr|ja|zh)/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
+  `^/(de|fr|ja|zh|es|pt|ar)/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
 )
 
 export function middleware(request: NextRequest) {
   const url = request.nextUrl
 
-  const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh']
+  const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const langParam = url.searchParams.get('lang')
   const isApiRoute = url.pathname.startsWith('/api/')
   const isCronRoute = url.pathname.startsWith('/cron/')
@@ -125,7 +125,7 @@ export function middleware(request: NextRequest) {
   //   /blog/slug?lang=ja          → /ja/blog/slug
   //   /compare?lang=de            → /de/compare
   //   /?lang=fr                   → /fr  (home page special case)
-  if ((langParam === 'ja' || langParam === 'zh' || langParam === 'de' || langParam === 'fr') && !isApiRoute && !isCronRoute) {
+  if (langParam !== null && VALID_NON_EN_LANGS.includes(langParam) && !isApiRoute && !isCronRoute) {
     const alreadyPrefixed = PATH_PREFIX_LANG_PREFIXED_RE.test(url.pathname)
     const isHome = url.pathname === '/' || url.pathname === ''
 
@@ -167,7 +167,7 @@ export function middleware(request: NextRequest) {
   // off the URL, not the query string — the <html lang="..."> attribute must match.
   const pathLocale = url.pathname.match(PATH_LOCALE_RE)?.[1]
   const lang = url.searchParams.get('lang') || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = pathLocale ?? (validLangs.includes(lang) ? lang : 'en')
 
   // Persist language choice in cookie so auto-detection only runs on first visit.

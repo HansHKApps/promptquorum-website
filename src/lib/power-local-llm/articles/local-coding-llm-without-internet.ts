@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Environnement de Développement Hors Ligne Sans Internet : Codage Entièrement Local (2026)',
-    seoTitle: 'Codage Hors Ligne : LLM Local Sans Internet 2026',
+    seoTitle: 'Coder avec un LLM local sans internet 2026',
     intro: 'Un environnement de codage entièrement hors ligne en 2026 tient sur environ 60 Go de disque et survit à un vol de 14 heures sans un seul appel réseau. La pile se compose d\'un LLM local (Qwen3-Coder 30B), d\'une intégration d\'éditeur (Continue.dev ou Aider), d\'un miroir de documentation hors ligne (Devdocs ou Zeal), d\'un registre de paquets en cache (Verdaccio pour npm, devpi pour pip) et d\'une recherche de code locale (ripgrep plus rga). Les seules choses qui ne fonctionnent vraiment pas hors ligne sont l\'installation de tous les nouveaux paquets tiers et la connaissance du modèle sur les API publiées après sa date limite d\'entraînement – les deux peuvent être résolues en téléchargeant à l\'avance ce dont vous avez besoin.',
     metaDescription: 'Programmation hors ligne testée lors d\'un vol de 14 heures. LLM local, npm/pip en cache, Devdocs, ripgrep – ~60 Go sur disque, zéro appels réseau. Liste de contrôle pré-vol incluse.',
     twitterDescription: 'Environnement de codage pour un vol de 14 heures : ~60 Go : Qwen3-Coder + Continue.dev + Devdocs + Cache. Liste de contrôle pré-vol + ce qui casse vraiment hors ligne.',

@@ -25,7 +25,7 @@ interface Props {
 }
 
 // Section header translations
-const SECTION_HEADER_LABELS: Record<Language, Record<string, string>> = {
+const SECTION_HEADER_LABELS: Partial<Record<Language, Record<string, string>>> = {
   en: { keyTakeaways: 'Key Takeaways', tableOfContents: 'Contents' },
   de: { keyTakeaways: 'Wichtigste Erkenntnisse', tableOfContents: 'Inhalt' },
   fr: { keyTakeaways: 'Points clés', tableOfContents: 'Sommaire' },
@@ -118,7 +118,7 @@ const THEME_COLORS: Record<string, { dot: string; badge: string }> = {
   'Enterprise':            { dot: 'bg-amber-400',     badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
 }
 
-const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string; fallbackDescription: string }> = {
+const PRESENTATION_UI: Partial<Record<Language, { heading: string; description: string; savePdf: string; fallbackDescription: string }>> = {
   en: {
     heading: 'Slide Deck',
     description: 'Browse the slides below or download as PDF for offline reference.',
@@ -294,7 +294,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
       {/* TL;DR block */}
       {section.isTldr && section.items && (
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4 key-takeaways">
-          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{SECTION_HEADER_LABELS[lang].keyTakeaways}</p>
+          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => (
               <li key={i} className="flex gap-3 text-text-secondary text-sm">
@@ -686,7 +686,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
               {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {(() => {
                 const d = article.dateModified ?? article.publishDate
                 if (!d) return ''
-                const localeMap: Record<Language, string> = {
+                const localeMap: Partial<Record<Language, string>> = {
                   en: 'en-US',
                   de: 'de-DE',
                   fr: 'fr-FR',
@@ -768,20 +768,20 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         {(article as any).gammaEmbedUrl && (
           <div className="mt-6 pt-8 border-t border-primary/20">
             <h2 className="text-2xl font-bold text-text-primary mb-2">
-              {PRESENTATION_UI[lang]?.heading}: {article.title}
+              {PRESENTATION_UI[lang]?.heading ?? PRESENTATION_UI["en"]?.heading}: {article.title}
             </h2>
             <p className="text-text-secondary mb-4 text-sm">
-              {(article as any).gammaDescription ?? PRESENTATION_UI[lang]?.fallbackDescription}
+              {(article as any).gammaDescription ?? (PRESENTATION_UI[lang] ?? PRESENTATION_UI["en"])?.fallbackDescription}
             </p>
             <p className="text-sm mb-4">
-              {PRESENTATION_UI[lang]?.description}{' '}
+              {(PRESENTATION_UI[lang] ?? PRESENTATION_UI["en"])?.description}{' '}
               <a
                 href={`${(article as any).gammaEmbedUrl}?lang=${lang}&print=1`}
                 className="text-primary underline font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {PRESENTATION_UI[lang]?.savePdf}
+                {(PRESENTATION_UI[lang] ?? PRESENTATION_UI["en"])?.savePdf}
               </a>
             </p>
             <iframe
@@ -816,7 +816,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         {/* Table of Contents */}
         {(article as any).toc && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{SECTION_HEADER_LABELS[lang].tableOfContents}</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).tableOfContents}</p>
             <ol className="space-y-1">
               {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                 <li key={item.anchor}>

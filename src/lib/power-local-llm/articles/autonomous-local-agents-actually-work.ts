@@ -1326,7 +1326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Sechs lokale KI-Agent-Stacks, fünf echte Aufgaben, dreißig Tage Evaluation. Zwei Stacks landen Aufgaben zuverlässig. Drei fehlschlagen auf Wegen, die die Demos nicht zeigen. Einer ist praktisch unbrauchbar. Das ist der ehrliche Bericht — was jedes Agent-Setup bei einer Umstrukturierung, einer Recherchaufgabe, einer E-Mail-Triage, einem Scrape-and-Summarize und einer Bug-Suche wirklich tut, mit spezifisch benannten Fehlern und quantifizierten Überwachungskosten.',
     metaDescription:
-      '6 lokale KI-Agent-Stacks auf 5 echten Aufgaben getestet. 2 funktionieren zuverlässig, 3 fehlschlagen überraschend, 1 ist unbrauchbar. Verdikt benannt.',
+      'Ehrlicher Test von 6 lokalen KI-Agent-Stacks (Cline, Continue.dev, LangGraph, AutoGPT, OpenInterpreter, MetaGPT) auf 5 Aufgaben. 2 funktionieren, 1 unbrauchbar.',
     twitterDescription:
       'Testete 6 lokale Agent-Stacks auf 5 echten Aufgaben über 30 Tage. 2 funktioniert, 3 fehlgeschlagen auf überraschende Weise, 1 war unbrauchbar. Das ehrliche Verdikt, welche Stacks Arbeit liefern und welche nur Demos liefern.',
     current_models_mentioned: [

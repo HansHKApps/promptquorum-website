@@ -55,7 +55,7 @@ export interface PEArticle {
   specific_year?: number
 }
 
-export const peContent: Record<string, Record<Language, PEArticle>> = {
+export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
 
   'build-a-prompt-library': {
     en: {

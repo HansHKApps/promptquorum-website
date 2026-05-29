@@ -20,7 +20,7 @@ interface Props {
 }
 
 // Jump-to-section translations
-const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
+const JUMP_SECTION_LABELS: Partial<Record<Language, Record<string, string>>> = {
   en: {
     jumpToSection: 'Jump to section',
     learningPaths: 'Learning Paths',
@@ -79,7 +79,7 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
 }
 
 // Presentation UI translations
-const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string; fallbackDescription: string }> = {
+const PRESENTATION_UI: Partial<Record<Language, { heading: string; description: string; savePdf: string; fallbackDescription: string }>> = {
   en: {
     heading: 'Visual Summary',
     description: 'Prefer slides over reading? Click through this interactive presentation covering all key concepts, settings, and use cases — then save as PDF for reference.',
@@ -113,7 +113,7 @@ const PRESENTATION_UI: Record<Language, { heading: string; description: string; 
 }
 
 // Widget UI translations
-const WIDGET_UI: Record<Language, { heading: string; description: string }> = {
+const WIDGET_UI: Partial<Record<Language, { heading: string; description: string }>> = {
   en: {
     heading: 'Interactive Audit Guide',
     description: 'Assess your current readiness with our interactive guide. Answer a few quick questions to get a score, prioritized recommendations, and a downloadable action plan.',
@@ -137,7 +137,7 @@ const WIDGET_UI: Record<Language, { heading: string; description: string }> = {
 }
 
 // Section header translations
-const SECTION_HEADER_LABELS: Record<Language, Record<string, string>> = {
+const SECTION_HEADER_LABELS: Partial<Record<Language, Record<string, string>>> = {
   en: { keyTakeaways: 'Key Takeaways', tableOfContents: 'Contents' },
   de: { keyTakeaways: 'Wichtigste Erkenntnisse', tableOfContents: 'Inhalt' },
   fr: { keyTakeaways: 'Points clés', tableOfContents: 'Sommaire' },
@@ -201,7 +201,7 @@ const TITLE_TO_SLUG: Record<string, string> = {
 // Top 20 most important AI & prompt engineering terms for 2026
 // Used for glossary prioritization layer
 // Anchor IDs follow glossary term ID format: term-{slug}
-const TOP_20_TERMS: Record<Language, Array<{ term: string; anchor: string; description: string }>> = {
+const TOP_20_TERMS: Partial<Record<Language, Array<{ term: string; anchor: string; description: string }>>> = {
   en: [
     { term: 'RAG (Retrieval-Augmented Generation)', anchor: 'term-rag-retrieval-augmented-generation', description: 'Connecting LLMs to external knowledge bases so they answer based on real data, not training memory.' },
     { term: 'Chain-of-Thought (CoT)', anchor: 'term-chain-of-thought-prompting', description: 'Asking the model to show its reasoning step-by-step before giving the final answer, improving accuracy on complex problems.' },
@@ -706,7 +706,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
       {/* TL;DR block */}
       {section.isTldr && section.items && (
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4 key-takeaways">
-          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{SECTION_HEADER_LABELS[lang].keyTakeaways}</p>
+          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => {
               const itemText = typeof item === 'string' ? item : `[${item.title}](${item.url})`;
@@ -1080,7 +1080,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
 
   // Fall back to English if translation has fewer than 5 sections (incomplete translation)
   const hasTranslation = articleData[lang] && Object.keys(articleData[lang].sections).length >= 5
-  const article = hasTranslation ? articleData[lang] : articleData['en']
+  const article = (hasTranslation ? articleData[lang] : articleData['en'])!
   const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Fundamentals']
 
   return (
@@ -1112,7 +1112,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {(() => {
                 const d = article.dateModified ?? article.publishDate
                 if (!d) return ''
-                const localeMap: Record<Language, string> = { en: 'en-US', de: 'de-DE', fr: 'fr-FR', ja: 'ja-JP', zh: 'zh-CN' }
+                const localeMap: Partial<Record<Language, string>> = { en: 'en-US', de: 'de-DE', fr: 'fr-FR', ja: 'ja-JP', zh: 'zh-CN' }
                 try {
                   const dateObj = new Date(d)
                   return isNaN(dateObj.getTime()) ? '' : dateObj.toLocaleDateString(localeMap[lang], { month: 'long', year: 'numeric' })
@@ -1321,7 +1321,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               )}
 
               <nav className="mb-4 bg-primary/5 border border-primary/20 rounded-lg p-4">
-                <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{JUMP_SECTION_LABELS[lang].jumpToSection}</p>
+                <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(JUMP_SECTION_LABELS[lang] ?? JUMP_SECTION_LABELS["en"]!).jumpToSection}</p>
                 <div className="flex flex-wrap gap-2">
                   {[
                     { id: '#learning-paths', key: 'learningPaths' },
@@ -1338,7 +1338,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
                       href={link.id}
                       className="text-sm text-primary hover:text-primary/80 font-medium transition-colors"
                     >
-                      {JUMP_SECTION_LABELS[lang][link.key as keyof typeof JUMP_SECTION_LABELS.en]}
+                      {(JUMP_SECTION_LABELS[lang] ?? JUMP_SECTION_LABELS["en"]!)[link.key as keyof typeof JUMP_SECTION_LABELS.en]}
                     </a>
                   ))}
                 </div>
@@ -1398,13 +1398,13 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {article.gammaEmbedUrl && (
           <section aria-label="Interactive presentation summary" className="my-8">
             <h2 className="text-xl font-semibold text-text-primary mb-2">
-              {PRESENTATION_UI[lang]?.heading ?? PRESENTATION_UI.en.heading}: {article.title}
+              {PRESENTATION_UI[lang]?.heading ?? (PRESENTATION_UI.en)!.heading}: {article.title}
             </h2>
             <p className="text-sm text-text-muted mb-4">
-              {PRESENTATION_UI[lang]?.description ?? PRESENTATION_UI.en.description}
+              {PRESENTATION_UI[lang]?.description ?? (PRESENTATION_UI.en)!.description}
             </p>
             <p className="text-sm text-text-secondary mb-4">
-              {article.gammaDescription ?? PRESENTATION_UI[lang]?.fallbackDescription ?? PRESENTATION_UI.en.fallbackDescription}
+              {article.gammaDescription ?? PRESENTATION_UI[lang]?.fallbackDescription ?? (PRESENTATION_UI.en)!.fallbackDescription}
             </p>
             <a
               href={`${article.gammaEmbedUrl}?lang=${lang}&print=1`}
@@ -1431,10 +1431,10 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {(article as any).widgetEmbedUrl && (
           <section aria-label="Interactive audit guide" className="my-8">
             <h2 className="text-xl font-semibold text-text-primary mb-2">
-              {WIDGET_UI[lang]?.heading ?? WIDGET_UI.en.heading}
+              {WIDGET_UI[lang]?.heading ?? (WIDGET_UI.en)!.heading}
             </h2>
             <p className="text-sm text-text-secondary mb-4">
-              {(article as any).widgetDescription ?? WIDGET_UI[lang]?.description ?? WIDGET_UI.en.description}
+              {(article as any).widgetDescription ?? WIDGET_UI[lang]?.description ?? (WIDGET_UI.en)!.description}
             </p>
             <div
               className="w-full rounded-xl overflow-hidden border border-primary/20 shadow-sm"
@@ -1454,7 +1454,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {/* Table of Contents */}
         {(article as any).toc && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{SECTION_HEADER_LABELS[lang].tableOfContents}</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).tableOfContents}</p>
             <ol className="space-y-1">
               {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                 <li key={item.anchor}>

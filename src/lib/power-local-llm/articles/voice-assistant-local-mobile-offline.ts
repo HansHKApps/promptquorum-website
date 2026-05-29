@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Ein vollständig offline funktionierender Sprachassistent auf iPhone oder Android in 2026 setzt sich aus drei Komponenten zusammen: Whisper für Sprache-zu-Text, ein lokales LLM auf dem Gerät für die Antwort und Piper oder das System-TTS für die Sprachausgabe. Die realistische Latenz von Sprache bis zum ersten Audio auf aktuellen Flaggschiff-Telefonen beträgt 0,8–1,5 Sekunden — unter der 2-Sekunden-Schwelle für „nutzbar anfühlend". Dieser Leitfaden behandelt den iPhone-Weg (LLM Farm + WhisperKit), Android-Weg (Layla + Whisper.cpp) und den hybriden Weg (Telefon-STT + Remote Ollama) mit gemessenen Latenz-, Akku- und Genauigkeitszahlen.',
     metaDescription:
-      'Vollständig offline funktionierender Sprachassistenten auf iPhone und Android in 2026. Whisper lokales STT + lokales LLM + Piper TTS. iPhone-, Android- und Hybrid-Setup; Latenz, Akku, Datenschutz.',
+      'Lokaler Sprachassistent für Mobilgeräte 2026: Offline-KI auf dem Smartphone. Whisper, lokale LLMs und TTS für private Sprachsteuerung ohne Cloud einrichten.',
     twitterDescription:
       'Erstellen Sie einen Siri-Ersatz, der offline läuft: Whisper lokales STT + Phi-4 Mini + Piper TTS. Sprache-zu-erstem-Audio unter 1,5 Sekunden auf Flaggschiff-Telefonen. iPhone + Android Setup.',
     current_models_mentioned: [
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Un assistant vocal entièrement hors ligne sur iPhone ou Android en 2026 repose sur trois composants : Whisper pour la conversion parole-texte, un LLM local sur l\'appareil pour la réponse, et Piper ou le TTS système pour la synthèse vocale. La latence réaliste du début de la parole au premier audio sur les téléphones phares actuels est de 0,8–1,5 secondes — sous le seuil de 2 secondes pour « se sentir utilisable ». Ce guide couvre le chemin iPhone (LLM Farm + WhisperKit), le chemin Android (Layla + Whisper.cpp) et le chemin hybride (STT téléphone + Ollama distant) avec des chiffres mesurés de latence, batterie et précision.',
     metaDescription:
-      'Assistant vocal entièrement hors ligne sur iPhone et Android en 2026. Whisper STT local + LLM local + Piper TTS. Configuration iPhone, Android et hybride ; latence, batterie, confidentialité.',
+      'Assistant vocal local pour mobile 2026 : IA hors ligne sur smartphone. Whisper, LLMs locaux et TTS pour un contrôle vocal privé sans connexion cloud.',
     twitterDescription:
       'Construisez un remplacement Siri fonctionnant hors ligne : Whisper STT local + Phi-4 Mini + Piper TTS. Parole vers premier audio en moins de 1,5 seconde sur téléphones phares. Configuration iPhone + Android.',
     current_models_mentioned: [

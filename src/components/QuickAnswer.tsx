@@ -2,7 +2,7 @@
 
 import { ReactNode } from 'react'
 
-type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
 
 interface QuickAnswerProps {
   lang?: Language
@@ -12,12 +12,15 @@ interface QuickAnswerProps {
   updatedDate?: string
 }
 
-const LABELS: Record<Language, { title: string; updated: string }> = {
+const LABELS: Partial<Record<Language, { title: string; updated: string }>> = {
   en: { title: 'Quick Answer', updated: 'Updated' },
   de: { title: 'Schnelle Antwort', updated: 'Aktualisiert' },
   fr: { title: 'Réponse rapide', updated: 'Mis à jour' },
   ja: { title: 'クイックアンサー', updated: '更新日' },
   zh: { title: '快速答案', updated: '更新' },
+  es: { title: 'Respuesta rápida', updated: 'Actualizado' },
+  pt: { title: 'Resposta rápida', updated: 'Atualizado' },
+  ar: { title: 'إجابة سريعة', updated: 'تحديث' },
 }
 
 export function QuickAnswer({
@@ -27,7 +30,7 @@ export function QuickAnswer({
   bullets = [],
   updatedDate,
 }: QuickAnswerProps): ReactNode {
-  const label = LABELS[lang]
+  const label = (LABELS[lang] ?? LABELS["en"])!
 
   return (
     <>

@@ -89,7 +89,9 @@ docs/
 
 ## Language / i18n
 
-The site supports 5 languages: `en`, `de`, `fr`, `ja`, `zh`.
+The site supports 8 languages:
+- **Active:** `en`, `de`, `fr`, `ja`, `zh`, `es` (Spanish — full /es/ routing live)
+- **Config-only, no pages yet:** `pt` (Portuguese — July 2026), `ar` (Arabic — August 2026, requires RTL)
 
 - Language is set via `?lang=XX` query param (e.g., `/?lang=fr`)
 - `useLang()` hook reads `window.location.search`

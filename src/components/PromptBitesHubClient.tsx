@@ -24,7 +24,7 @@ interface Props {
   lang: Language
 }
 
-const HUB_HEADLINE: Record<Language, string> = {
+const HUB_HEADLINE: Partial<Record<Language, string>> = {
   en: 'Quick Answers to Local LLM Questions',
   de: 'Schnelle Antworten zu lokalen LLM-Fragen',
   fr: 'Réponses rapides aux questions sur les LLM locaux',
@@ -34,7 +34,7 @@ const HUB_HEADLINE: Record<Language, string> = {
 
 const COUNT = PROMPT_BITES_PUBLISHED_SLUGS.size
 
-const HUB_SUBTITLE: Record<Language, string> = {
+const HUB_SUBTITLE: Partial<Record<Language, string>> = {
   en: `${COUNT} short-answer guides. VRAM requirements, Ollama picks, hardware comparisons, and setup tips — answered in 60 seconds or less.`,
   de: `${COUNT} Kurzantwort-Leitfäden. VRAM-Anforderungen, Ollama-Empfehlungen, Hardware-Vergleiche und Setup-Tipps — in 60 Sekunden beantwortet.`,
   fr: `${COUNT} guides à réponse rapide. Besoins en VRAM, choix Ollama, comparaisons matérielles et conseils de configuration — répondus en 60 secondes.`,
@@ -42,7 +42,7 @@ const HUB_SUBTITLE: Record<Language, string> = {
   zh: `${COUNT}篇简答指南。显存要求、Ollama推荐、硬件对比和设置技巧 — 60秒内解答。`,
 }
 
-const VRAM_TABLE_HEADERS: Record<Language, { vram: string; model: string; quant: string; useCase: string }> = {
+const VRAM_TABLE_HEADERS: Partial<Record<Language, { vram: string; model: string; quant: string; useCase: string }>> = {
   en: { vram: 'VRAM', model: 'Best Model (May 2026)', quant: 'Quantization', useCase: 'Use Case' },
   de: { vram: 'VRAM', model: 'Bestes Modell (Mai 2026)', quant: 'Quantisierung', useCase: 'Anwendungsfall' },
   fr: { vram: 'VRAM', model: 'Meilleur modèle (mai 2026)', quant: 'Quantisation', useCase: 'Cas d\'usage' },
@@ -50,7 +50,7 @@ const VRAM_TABLE_HEADERS: Record<Language, { vram: string; model: string; quant:
   zh: { vram: 'VRAM', model: '最佳模型（2026年5月）', quant: '量化', useCase: '使用场景' },
 }
 
-const VRAM_TABLE_ROWS: Record<Language, Array<{ vram: string; model: string; quant: string; useCase: string }>> = {
+const VRAM_TABLE_ROWS: Partial<Record<Language, Array<{ vram: string; model: string; quant: string; useCase: string }>>> = {
   en: [
     { vram: '4 GB', model: 'Phi-4 Mini', quant: 'Q4', useCase: 'Basic chat, small tasks' },
     { vram: '6 GB', model: 'Llama 3 8B', quant: 'Q4_K_M', useCase: 'Daily chat and coding' },
@@ -98,7 +98,7 @@ const VRAM_TABLE_ROWS: Record<Language, Array<{ vram: string; model: string; qua
   ],
 }
 
-const DEEPDIVE_LINKS: Record<Language, Record<string, { text: string; href: string }>> = {
+const DEEPDIVE_LINKS: Partial<Record<Language, Record<string, { text: string; href: string }>>> = {
   en: {
     'Quantization & VRAM': { text: 'Deep dive: Quantization Explained', href: '/local-llms/llm-quantization-explained' },
     'Ollama': { text: 'Deep dive: Top Open-Source Models with Ollama', href: '/local-llms/top-open-source-models-ollama' },
@@ -151,7 +151,7 @@ const DEEPDIVE_LINKS: Record<Language, Record<string, { text: string; href: stri
   },
 }
 
-const EDUCATIONAL_LEVEL: Record<string, Record<Language, string>> = {
+const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
   Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级' },
   Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级' },
   Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级' },
@@ -172,7 +172,7 @@ const CATEGORY_SVG: Partial<Record<string, string>> = {
   'privacy-compliance': 'prompt-bites-gpu-vram-tier-guide',
 }
 
-const CATEGORY_SVG_ALT: Record<string, Record<Language, string>> = {
+const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
   'quantization-vram': {
     en: 'VRAM and quantization decision tree for local LLMs',
     de: 'VRAM- und Quantisierungs-Entscheidungsbaum für lokale LLMs',
@@ -262,14 +262,14 @@ export function PromptBitesHubClient({ lang }: Props) {
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="bg-primary/5 border-b border-primary/20">
-                <th className="px-4 py-3 text-left font-semibold text-text-primary">{VRAM_TABLE_HEADERS[lang].vram}</th>
-                <th className="px-4 py-3 text-left font-semibold text-text-primary">{VRAM_TABLE_HEADERS[lang].model}</th>
-                <th className="px-4 py-3 text-left font-semibold text-text-primary">{VRAM_TABLE_HEADERS[lang].quant}</th>
-                <th className="px-4 py-3 text-left font-semibold text-text-primary">{VRAM_TABLE_HEADERS[lang].useCase}</th>
+                <th className="px-4 py-3 text-left font-semibold text-text-primary">{(VRAM_TABLE_HEADERS[lang] ?? VRAM_TABLE_HEADERS["en"]!).vram}</th>
+                <th className="px-4 py-3 text-left font-semibold text-text-primary">{(VRAM_TABLE_HEADERS[lang] ?? VRAM_TABLE_HEADERS["en"]!).model}</th>
+                <th className="px-4 py-3 text-left font-semibold text-text-primary">{(VRAM_TABLE_HEADERS[lang] ?? VRAM_TABLE_HEADERS["en"]!).quant}</th>
+                <th className="px-4 py-3 text-left font-semibold text-text-primary">{(VRAM_TABLE_HEADERS[lang] ?? VRAM_TABLE_HEADERS["en"]!).useCase}</th>
               </tr>
             </thead>
             <tbody>
-              {VRAM_TABLE_ROWS[lang].map((row, idx) => (
+              {(VRAM_TABLE_ROWS[lang] ?? VRAM_TABLE_ROWS["en"]!).map((row, idx) => (
                 <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-surface'}>
                   <td className="px-4 py-2 text-text-primary font-medium border-b border-primary/10">{row.vram}</td>
                   <td className="px-4 py-2 text-text-primary border-b border-primary/10">{row.model}</td>
@@ -395,13 +395,13 @@ export function PromptBitesHubClient({ lang }: Props) {
                     )
                   })}
                 </div>
-                {DEEPDIVE_LINKS[lang][cat.titleEn] && (
+                {(DEEPDIVE_LINKS[lang] ?? DEEPDIVE_LINKS["en"]!)[cat.titleEn] && (
                   <div>
                     <Link
-                      href={DEEPDIVE_LINKS[lang][cat.titleEn].href}
+                      href={(DEEPDIVE_LINKS[lang] ?? DEEPDIVE_LINKS["en"]!)[cat.titleEn].href}
                       className="inline-block text-sm font-medium text-primary hover:text-primary/80 hover:underline transition-colors"
                     >
-                      → {DEEPDIVE_LINKS[lang][cat.titleEn].text}
+                      → {(DEEPDIVE_LINKS[lang] ?? DEEPDIVE_LINKS["en"]!)[cat.titleEn].text}
                     </Link>
                   </div>
                 )}

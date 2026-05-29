@@ -1,9 +1,9 @@
 'use client'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
 type Status = 'ok' | 'invalid' | 'error'
 
-const COPY: Record<Lang, { ok: { title: string; body: string }; invalid: { title: string; body: string }; error: { title: string; body: string }; home: string }> = {
+const COPY: Partial<Record<Lang, { ok: { title: string; body: string }; invalid: { title: string; body: string }; error: { title: string; body: string }; home: string }>> = {
   en: {
     ok: { title: 'You have been unsubscribed', body: 'You will no longer receive emails from PromptQuorum. If you change your mind, you can sign up again anytime.' },
     invalid: { title: 'Invalid unsubscribe link', body: 'This unsubscribe link is invalid or expired. If you keep receiving emails you do not want, reply to one with the word "unsubscribe" and we will remove you manually.' },
@@ -37,7 +37,7 @@ const COPY: Record<Lang, { ok: { title: string; body: string }; invalid: { title
 }
 
 export function UnsubscribedClient({ lang, status }: { lang: Lang; status: Status }) {
-  const c = COPY[lang]
+  const c = (COPY[lang as keyof typeof COPY] ?? COPY.en)!
   const msg = c[status]
   const homeHref = lang === 'en' ? '/' : `/?lang=${lang}`
 

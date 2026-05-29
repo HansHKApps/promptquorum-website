@@ -19,7 +19,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const { slug } = await params
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as Language
 
   return buildArticleMetadata(slug, selectedLang)
@@ -29,7 +29,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
   const { slug } = await params
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as Language
 
   return buildArticlePageElement(slug, selectedLang)

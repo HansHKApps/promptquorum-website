@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026',
-    seoTitle: 'Ollama + MCP lokal: KI mit Datenbanken verbinden 2026',
+    seoTitle: 'Lokale KI-Agenten mit MCP 2026: Model Context Protocol',
     intro:
       'Model Context Protocol (MCP) ist die fehlende Schicht zwischen einem lokalen Ollama-Modell und dem Rest Ihres Rechners. Mit einer einzigen Konfigurationsdatei und einem Tool-Calling-Modell kann derselbe Agent eine Postgres-Datenbank abfragen, Dateien in einem isolierten Verzeichnis lesen und schreiben, einen Headless-Browser steuern und GitHub Pull Requests öffnen — alles läuft auf Ihrem Laptop, alles offline. Dieser Leitfaden führt Sie Schritt für Schritt durch das funktionierende Setup mit einem Sicherheitsmodell, das nicht davon ausgeht, dass Sie dem Modell vertrauen.',
     metaDescription:
@@ -886,7 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       "Model Context Protocol (MCP) est la couche manquante entre un modèle Ollama local et le reste de votre machine. Avec un seul fichier de configuration et un modèle compatible tool calling, le même agent interroge Postgres, lit et écrit dans un répertoire isolé, pilote un navigateur headless et ouvre des pull requests GitHub — tout en local, tout hors ligne. Ce guide détaille la configuration complète avec un modèle de sécurité qui ne suppose pas que vous faites confiance au modèle.",
     metaDescription:
-      "Agent IA local avec Ollama et MCP en 2026 : serveurs filesystem, SQLite/Postgres, navigateur, GitHub. Configs concrètes et modèle de sécurité serré.",
+      "Agents IA locaux avec MCP 2026 : configurez le Model Context Protocol pour des agents qui utilisent des outils. Serveurs MCP et workflows agentiques expliqués.",
     twitterDescription:
       "Ollama local + MCP = un agent IA qui lit des fichiers, interroge des bases et pilote un navigateur — entièrement hors ligne. Configs prêtes à l'emploi et modèle de sécurité qui ne fait pas confiance au modèle.",
     current_models_mentioned: [

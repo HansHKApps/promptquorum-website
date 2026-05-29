@@ -13,7 +13,7 @@ interface StageDetail {
   userBenefit: string[]
 }
 
-type StagesData = Record<Language, StageDetail[]>
+type StagesData = Partial<Record<Language, StageDetail[]>>
 
 const stagesData: StagesData = {
   en: [
@@ -348,7 +348,7 @@ const stagesData: StagesData = {
   ]
 }
 
-const descriptionText: Record<Language, Record<number, string>> = {
+const descriptionText: Partial<Record<Language, Record<number, string>>> = {
   en: {
     0: 'Start with any idea, rough or refined',
     1: 'AI transforms it into a precision prompt',
@@ -383,7 +383,7 @@ const descriptionText: Record<Language, Record<number, string>> = {
 
 export function InteractivePipeline() {
   const lang = useLang() as Language
-  const stages = stagesData[lang] || stagesData['en']
+  const stages = (stagesData[lang] || stagesData['en'])!
   const [expandedStage, setExpandedStage] = useState<number | null>(null)
 
   return (
@@ -405,7 +405,7 @@ export function InteractivePipeline() {
             </div>
             <h3 className="text-base sm:text-lg font-semibold text-text-primary mb-2">{stage.title}</h3>
             <p className="text-text-secondary text-xs sm:text-sm mb-3">
-              {descriptionText[lang][index]}
+              {(descriptionText[lang] ?? descriptionText['en'])![index]}
             </p>
             <div className="flex items-center justify-center text-primary text-sm font-medium">
               {expandedStage === index ? 'Hide details' : 'Show details'}

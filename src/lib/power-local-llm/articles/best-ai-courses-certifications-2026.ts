@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Best AI Courses and Certifications: 2026 Buying Guide',
-    seoTitle: 'Best AI Courses 2026: Free, Paid & Certification Guide',
+    seoTitle: 'Best AI Courses & Certifications 2026: Free & Paid',
     intro:
       'Most "best AI course" lists rank courses by brand name and ignore the question that actually matters: what are you trying to do with the skill afterward? A free fundamentals course and a paid certification track are not competing products — they serve different goals. This guide sorts AI learning into three categories — free courses, paid structured courses, and certifications — and gives a clear pick for each goal: getting oriented for free, building hands-on depth, or producing a credential an employer recognizes. It also covers a fourth track that the big platforms underweight: prompt engineering as a skill in its own right. Course prices change with promotions and subscription tiers, so every figure here is a May 2026 snapshot — check the current price on the platform before enrolling.',
     metaDescription:
@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Die besten KI-Kurse und Zertifizierungen: Kaufratgeber 2026',
-    seoTitle: 'Beste KI-Kurse 2026: Kostenlos, kostenpflichtig & Zertifikate',
+    seoTitle: 'Beste KI-Kurse & Zertifizierungen 2026: Gratis & Bezahlt',
     intro:
       'Die meisten Listen mit den „besten KI-Kursen“ ordnen Kurse nach dem Bekanntheitsgrad der Marke und übergehen die eigentlich entscheidende Frage: Was wollen Sie mit der erworbenen Kompetenz anschließend tun? Ein kostenloser Grundlagenkurs und ein kostenpflichtiger Zertifizierungspfad sind keine konkurrierenden Produkte – sie dienen unterschiedlichen Zielen. Dieser Ratgeber sortiert KI-Lernangebote in drei Kategorien – kostenlose Kurse, kostenpflichtige strukturierte Kurse und Zertifizierungen – und gibt für jedes Ziel eine klare Empfehlung: sich kostenlos orientieren, praktische Tiefe aufbauen oder einen von Arbeitgebern anerkannten Nachweis erwerben. Außerdem behandelt er einen vierten Pfad, den die großen Plattformen unterbewerten: Prompt Engineering als eigenständige Kompetenz. Kurspreise ändern sich mit Aktionen und Abostufen, daher ist jede Angabe hier eine Momentaufnahme vom Mai 2026 – prüfen Sie den aktuellen Preis auf der Plattform, bevor Sie sich einschreiben.',
     metaDescription:
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Meilleurs cours et certifications en IA : guide d\'achat 2026',
-    seoTitle: 'Meilleurs cours IA 2026 : gratuits, payants et certifications',
+    seoTitle: 'Cours et certifications IA 2026 : gratuits et payants',
     intro:
       'La plupart des classements des « meilleurs cours d\'IA » classent les cours selon la notoriété de la marque et ignorent la question qui compte réellement : que voulez-vous faire de la compétence acquise ? Un cours de fondamentaux gratuit et un parcours de certification payant ne sont pas des produits concurrents : ils servent des objectifs différents. Ce guide répartit l\'apprentissage de l\'IA en trois catégories — cours gratuits, cours structurés payants et certifications — et donne une recommandation claire pour chaque objectif : se repérer gratuitement, acquérir de la profondeur pratique ou obtenir un titre reconnu par un employeur. Il couvre aussi un quatrième parcours que les grandes plateformes sous-estiment : le prompt engineering en tant que compétence à part entière. Les tarifs des cours évoluent avec les promotions et les formules d\'abonnement, chaque chiffre est donc un instantané de mai 2026 — vérifiez le prix actuel sur la plateforme avant de vous inscrire.',
     metaDescription:
@@ -1938,7 +1938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '大多数“最佳 AI 课程”榜单按品牌知名度排列课程，却忽略了真正重要的问题：学到这项技能之后你想用它做什么？免费的基础课程和付费的认证路径并非相互竞争的产品，它们服务于不同的目标。本指南将 AI 学习分为三类——免费课程、付费的体系化课程和认证——并为每个目标给出明确的选择：免费打基础、建立动手深度，或拿到雇主认可的凭证。本指南还涵盖大平台往往低估的第四条路径：把 prompt engineering 当作一项独立技能。课程价格会随促销和订阅档位变化，因此本文每个数字都是 2026 年 5 月的快照——报名前请在平台上核对当前价格。',
     metaDescription:
-      '为 2026 年比较三条 AI 学习路径：免费课程、付费的体系化课程和认证——为打基础、建立深度或获得凭证给出明确选择。',
+      '2026年最佳AI课程与认证：从免费入门到付费专业课程。对比Coursera、DeepLearning.AI、fast.ai等平台，涵盖价格、时长、证书价值和就业前景分析。',
     twitterDescription:
       '免费课程、付费课程、认证——三条 AI 学习路径，一条规则：按目标选择。免费打基础，用付费路径建立深度，雇主需要时再拿凭证。',
     affiliateDisclosure: true,

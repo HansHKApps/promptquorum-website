@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
 
 const CheckCircle = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -130,7 +130,7 @@ const T = {
 }
 
 function WaitlistForm({ lang }: { lang: Lang }) {
-  const w = W[lang] ?? W.en
+  const w = (W[lang as keyof typeof W] ?? W.en)!
   const [email, setEmail] = useState('')
   const [consent, setConsent] = useState(false)
   const [consentError, setConsentError] = useState(false)
@@ -286,7 +286,7 @@ export function LandingPageClient({
   isWaitlistForm?: boolean
   lang?: Lang
 } = {}) {
-  const t = T[lang] ?? T.en
+  const t = (T[lang as keyof typeof T] ?? T.en)!
 
   if (isWaitlistForm) {
     return <WaitlistForm lang={lang} />

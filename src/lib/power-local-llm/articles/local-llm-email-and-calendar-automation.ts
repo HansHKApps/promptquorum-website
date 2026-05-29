@@ -404,7 +404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Lokale LLMs können E-Mail-Antworten entwerfen, Posteingänge zusammenfassen, Besprechungsagenden generieren und Kalenderereignisse klassifizieren — alles ohne Ihre Nachrichten an eine Cloud-API zu senden. Dieser Leitfaden behandelt die praktischen Architekturen: lokale IMAP-Automatisierung mit Ollama, Open-Source-E-Mail-Clients mit lokalen KI-Plugins und die Sicherheitsgrundlagen für die lokale Speicherung von Kommunikationsdaten.',
     metaDescription:
-      'Automatisierung von E-Mail-Entwürfen, Posteingangsorganisation und Kalendereverwaltung mit lokalen LLMs. Ollama, IMAP-Integration und datenschutzgerichtete Kommunikationsautomation.',
+      'Lokale LLM-E-Mail- und Kalender-Automatisierung 2026: private KI für Posteingang und Termine. Ohne Cloud, ohne Datenweitergabe. Workflows mit lokalen Modellen.',
     twitterDescription:
       'Lokale LLM-E-Mail-Automatisierung: Antworten entwerfen, Posteingänge zusammenfassen, Besprechungsagenden generieren — alles lokal, keine Cloud-API. Setup-Anleitung für Ollama + IMAP-Workflows.',
     current_models_mentioned: [
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Les LLMs locaux peuvent rédiger des réponses, résumer des boîtes aux lettres, générer des ordres du jour et classifier les événements calendaires — sans jamais envoyer vos messages à une API cloud. Ce guide couvre les architectures pratiques : automatisation IMAP locale avec Ollama, clients e-mail open-source avec plugins IA locaux, et les fondamentaux de confidentialité pour garder les données de communication sur votre machine.',
     metaDescription:
-      'Automatisez les brouillons d\'e-mail, l\'organisation de la boîte aux lettres et la gestion du calendrier avec des LLMs locaux. Intégration Ollama et IMAP, automatisation respectueuse de la confidentialité.',
+      'Automatisation e-mail et calendrier avec LLM local 2026 : IA privée pour boîte mail et agenda. Sans cloud, sans partage de données. Workflows avec modèles locaux.',
     twitterDescription:
       'Automatisation e-mail avec LLM local : rédiger des réponses, résumer la boîte, générer des ordres du jour — tout localement, pas d\'API cloud. Guide de configuration pour Ollama + workflows IMAP.',
     current_models_mentioned: [

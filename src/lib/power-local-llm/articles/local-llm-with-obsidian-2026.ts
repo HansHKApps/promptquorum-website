@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Fünf Obsidian-Plugins verwandeln einen Vault 2026 in ein funktionierendes zweites Gehirn, sobald sie an ein lokales Ollama-Backend angebunden sind: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT und BMO Chatbot. Jedes deckt eine andere Schicht ab — semantische Suche, Inline-Chat, Template-Generierung, Privacy-First-Konversation, schlanker kontextbewusster Chat. Die für die meisten Anwender empfohlene Kombination ist Smart Connections + Copilot for Obsidian: das eine übernimmt die vault-weite semantische Verknüpfung, das andere die Chat-Oberfläche. Dieser Leitfaden bewertet alle fünf Plugins anhand der Vault-Suchqualität, Generierungsgeschwindigkeit, Prompt-Anpassbarkeit und des Mobile-Sync-Verhaltens und enthält konkrete Konfigurationsschritte für Ollama.',
     metaDescription:
-      'Fünf Obsidian-Plugins mit lokalem Ollama 2026 getestet: Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot. Beste Kombination, Vault-Größe, Mobile-Sync.',
+      'Lokales LLM mit Obsidian verbinden 2026: KI-gestützte Notizen ohne Cloud. Plugins, Setup und Workflows für private Wissensarbeit mit lokalen Modellen.',
     twitterDescription:
       'Beste Obsidian + lokales LLM-Kombination 2026: Smart Connections (semantische Vault-Suche) + Copilot for Obsidian (Chat). Alle 5 Plugins mit Ollama getestet. Mobile-Sync-Hinweise.',
     current_models_mentioned: [
@@ -911,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Cinq plugins Obsidian transforment un vault en deuxième cerveau fonctionnel en 2026 lorsqu\'ils sont connectés à un backend Ollama local : Smart Connections, Copilot for Obsidian, Text Generator, Local GPT et BMO Chatbot. Chacun couvre une couche différente — recherche sémantique, chat intégré, génération de templates, conversation centrée sur la confidentialité, chat contexte léger. Pour la plupart des utilisateurs, la combinaison recommandée est Smart Connections + Copilot for Obsidian : l\'une gère la liaison sémantique dans l\'ensemble du vault, l\'autre fournit l\'interface de chat. Ce guide classe les cinq plugins selon la qualité de recherche du vault, la vitesse de génération, la personnalisation des prompts et le comportement de synchronisation mobile, avec des étapes de configuration concrètes pour Ollama.',
     metaDescription:
-      'Cinq plugins Obsidian testés avec Ollama local en 2026 : Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot. Meilleure combinaison, taille du vault, synchronisation mobile.',
+      'LLM local avec Obsidian 2026 : notes assistées par IA sans cloud. Plugins, configuration et workflows pour un travail de connaissance privé avec modèles locaux.',
     twitterDescription:
       'Meilleure combinaison Obsidian + LLM local en 2026 : Smart Connections (recherche sémantique du vault) + Copilot for Obsidian (chat). Tous les 5 plugins testés avec Ollama. Notes sur la synchronisation mobile.',
     current_models_mentioned: [
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '2026年、5つのObsidianプラグインがローカルOllamaバックエンドと組み合わせることで、ボルトを機能する第二の脳に変えます: Smart Connections、Copilot for Obsidian、Text Generator、Local GPT、BMO Chatbot。各プラグインは異なるレイヤーをカバーしています — セマンティック検索、インラインチャット、テンプレート生成、プライバシー重視の会話、軽量なコンテキスト対応チャット。ほとんどのユーザーにとって推奨される組み合わせはSmart Connections + Copilot for Obsidianです: 一方がボルト全体のセマンティック連携を処理し、もう一方がチャットインターフェイスを提供します。このガイドは、ボルト検索品質、生成速度、プロンプトのカスタマイズ、モバイル同期の動作に基づいて5つのプラグインをランク付けし、Ollamaの具体的な設定手順を含みます。',
     metaDescription:
-      '2026年にOllamaローカルでテストした5つのObsidianプラグイン: Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot。最良の組み合わせ、ボルトサイズ、モバイル同期。',
+      '2026年版ObsidianとローカルLLMの連携：クラウド不要のAI支援ノート。プラグイン、設定、ローカルモデルを使ったプライベートな知識作業のワークフローを解説。',
     twitterDescription:
       '2026年のObsidian + ローカルLLM最良の組み合わせ: Smart Connections (ボルトセマンティック検索) + Copilot for Obsidian (チャット)。すべての5つのプラグインはOllamaでテスト済み。モバイル同期の注意事項。',
     current_models_mentioned: [

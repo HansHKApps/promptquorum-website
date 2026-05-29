@@ -11,7 +11,7 @@ export interface SearchEntry {
   lang: string
 }
 
-export const SUPPORTED_LANGS = ['en', 'de', 'fr', 'ja', 'zh'] as const
+export const SUPPORTED_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const
 export type SearchLang = (typeof SUPPORTED_LANGS)[number]
 
 export const GROUP_ORDER = [

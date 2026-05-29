@@ -30,7 +30,7 @@ export function generateAlternates(
   const BASE = 'https://www.promptquorum.com'
   const LANGS = availableLangs && availableLangs.length > 0
     ? (['en', ...availableLangs.filter((l: string) => l !== 'en')] as const)
-    : (['en', 'de', 'fr', 'ja', 'zh'] as const)
+    : (['en', 'de', 'fr', 'ja', 'zh', 'es'] as const)
 
   // Build the URL for a given lang alternate.
   // If the lang is in pathPrefixLangs, use /{lang}{path} instead of {path}?lang={lang}.

@@ -37,7 +37,7 @@ function BlogSectionInner() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {blogPosts.map(({ key, href }) => {
-            const post = blogMetadata[key][lang] || blogMetadata[key].en
+            const post = blogMetadata[key][lang as 'en' | 'de' | 'fr' | 'ja' | 'zh'] || blogMetadata[key].en
             return (
               <Link
                 key={key}

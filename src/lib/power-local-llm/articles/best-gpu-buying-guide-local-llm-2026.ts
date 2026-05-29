@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Die meisten GPU-Empfehlungen für lokale LLMs optimieren die falsche Kennzahl. Das Tempo in Token pro Sekunde entscheidet, wie schnell ein Modell antwortet — der VRAM entscheidet jedoch, ob das Modell überhaupt läuft. Ein Modell, das nicht in den Speicher passt, ist unendlich langsamer als eines, das passt. Dieser Leitfaden vergleicht acht Consumer-GPUs über vier Preisklassen anhand der Kennzahlen, die einen Kauf wirklich bestimmen: VRAM-Kapazität, gemessenes Inferenztempo, Leistungsaufnahme und Preis. Ein Hinweis zum Preis: Die GPU-Preise sind 2026 wegen einer Speicherknappheit stark gestiegen und liegen 1,5- bis 2-fach über der ursprünglichen UVP — alle Preise hier sind eine Momentaufnahme von Mai 2026, prüfen Sie also den aktuellen Preis vor dem Kauf.',
     metaDescription:
-      'Acht GPUs für lokale LLMs im Vergleich über vier Preisklassen: RTX 3060 bis RTX 5090. VRAM, Token/s, Leistungsaufnahme und Preise (Mai 2026) je Modellgröße.',
+      'GPU-Kaufberatung für lokale LLMs 2026: VRAM je Modellgröße, beste GPUs nach Budget, gebraucht vs neu. RTX 4090, 3090, 4060 Ti und AMD-Optionen im Vergleich.',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — acht GPUs, vier Budgets, eine Regel: nach VRAM kaufen.',
     affiliateDisclosure: true,
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'La plupart des conseils sur les GPU pour LLM locaux optimisent le mauvais chiffre. La vitesse en tokens par seconde décide de la rapidité de réponse d\'un modèle, mais c\'est la VRAM qui décide si le modèle s\'exécute tout court — et un modèle qui ne tient pas en mémoire est infiniment plus lent qu\'un modèle qui y tient. Ce guide compare huit GPU grand public sur quatre gammes de prix selon les chiffres qui pèsent réellement sur un achat : capacité VRAM, vitesse d\'inférence mesurée, consommation et prix. Une réserve sur les prix : ils ont flambé en 2026 à cause d\'une pénurie de mémoire, et les cartes se vendent désormais 1,5 à 2 fois au-dessus de leur tarif de lancement — chaque prix ici est un instantané de mai 2026, vérifiez donc le tarif actuel avant d\'acheter.',
     metaDescription:
-      'Huit GPU comparés pour les LLM locaux sur quatre budgets : du RTX 3060 au RTX 5090. VRAM, tokens/s, consommation et prix de mai 2026 — avec la taille de modèle de chaque gamme.',
+      'Guide d\'achat GPU pour LLMs locaux 2026 : besoins VRAM par taille de modèle, meilleurs GPU par budget. RTX 4090, 3090, 4060 Ti et options AMD comparées.',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16 Go, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — huit GPU, quatre budgets, une règle : achetez pour la VRAM.',
     affiliateDisclosure: true,

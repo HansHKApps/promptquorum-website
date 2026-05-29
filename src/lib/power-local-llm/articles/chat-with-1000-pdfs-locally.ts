@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: '1000+ PDFs lokal chatten: RAG-Skalierung über Demo-Beispiele',
-    seoTitle: '1000+ PDFs lokal: Skalierung von lokalem RAG in 2026',
+    seoTitle: '1000 PDFs lokal durchsuchen: privates RAG ohne Cloud',
     intro:
       'Entscheidungsleitfaden für Poweruser mit 1.000-10.000+ persönlichen Dokumentenbeständen – Forschungsbibliotheken, Rechtsarchive, interne Wikis. Standardeinstellungen scheitern um 5.000 Chunks; dieser Artikel zeigt die vier Skalierungspfade (AnythingLLM optimiert, LlamaIndex lokal, Ollama+ChromaDB benutzerdefiniert, Ollama+Qdrant Produktion) mit gemessener Latenz, Speicher und Indexierungs-Benchmarks bei 100, 1.000 und 10.000 Dokumenten.',
     metaDescription:
@@ -1197,7 +1197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'Discuter avec 1000+ fichiers PDF en local : Évolution du RAG au-delà des démos',
-    seoTitle: 'Discuter avec 1000+ PDF localement en 2026 : Architecture RAG locale',
+    seoTitle: 'Discuter avec 1000 PDF en local : RAG privé sans cloud',
     intro:
       'Guide décisionnel pour utilisateurs avancés ayant 1.000-10.000+ documents personnels — bibliothèques de recherche, archives juridiques, wikis internes. Les paramètres par défaut échouent vers 5.000 chunks ; cet article présente quatre chemins d\'évolution (AnythingLLM ajusté, LlamaIndex local, Ollama+ChromaDB personnalisé, Ollama+Qdrant production) avec latence mesurée, stockage et benchmarks d\'indexation à 100, 1.000 et 10.000 documents.',
     metaDescription:

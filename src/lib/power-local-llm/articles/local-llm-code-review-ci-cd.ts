@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Local LLM in Your CI/CD: Automated Code Review Without Cloud',
-    seoTitle: 'Local LLM Code Review in CI/CD: Self-Hosted Setup 2026',
+    seoTitle: 'Local LLM Code Review in CI/CD 2026: Automate PR Reviews',
     intro:
       'Self-hosted local-LLM code review puts a Qwen3-Coder model behind your CI/CD pipeline so every pull request gets a review pass without the codebase leaving your network. The architecture is straightforward — a dedicated GPU server running Ollama, a custom GitHub Action calling its HTTP API, and a review prompt tuned for false-positive rate — and the economics flip in favour of self-hosting somewhere between 15 and 25 paid GitHub seats. This guide walks through the architecture, a working GitHub Actions workflow, hardware sizing by team size, the security model, and the operational pitfalls that bite teams in month two.',
     metaDescription:
@@ -460,7 +460,7 @@ jobs:
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Lokale LLM im CI/CD: Automatisierte Code Review ohne Cloud',
-    seoTitle: 'Lokale LLM Code Review in CI/CD: Selbstgehosteter Setup 2026',
+    seoTitle: 'Lokale LLM-Code-Reviews in CI/CD 2026 automatisieren',
     intro:
       'Selbstgehostete lokale LLM Code Review setzt ein Qwen3-Coder Modell hinter Ihre CI/CD Pipeline, sodass jede Pull Request überprüft wird, ohne dass die Codebasis Ihr Netzwerk verlässt. Die Architektur ist unkompliziert — ein dedizierter GPU Server mit Ollama, eine benutzerdefinierte GitHub Action, die die HTTP API aufruft, und ein Review Prompt mit angepasster False-Positive Rate — und die Wirtschaftlichkeit kippen zugunsten von Self-Hosting irgendwo zwischen 15 und 25 bezahlten GitHub Seats. Dieser Leitfaden führt durch die Architektur, einen funktionierenden GitHub Actions Workflow, Hardware Dimensionierung nach Teamgröße, das Sicherheitsmodell und die operativen Fallstricke, die Teams im zweiten Monat treffen.',
     metaDescription:
@@ -915,7 +915,7 @@ jobs:
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'LLM Local en CI/CD : Révision de Code Automatisée Sans Cloud',
-    seoTitle: 'Révision de Code avec LLM Local en CI/CD : Configuration Auto-Hébergée 2026',
+    seoTitle: 'Revue de code LLM dans CI/CD 2026 : automatiser les PR',
     intro: 'La révision de code LLM local auto-hébergée place un modèle Qwen3-Coder derrière votre pipeline CI/CD pour que chaque demande de tirage soit examinée sans que la base de code ne quitte votre réseau. L\'architecture est simple — un serveur GPU dédié exécutant Ollama, une action GitHub personnalisée appelant son API HTTP, et un prompt de révision ajusté sur le taux de faux positifs — et l\'économie bascule en faveur de l\'auto-hébergement quelque part entre 15 et 25 sièges GitHub payants. Ce guide couvre l\'architecture, un flux de travail GitHub Actions fonctionnant, le dimensionnement du matériel par taille d\'équipe, le modèle de sécurité et les pièges opérationnels qui frappent les équipes au deuxième mois.',
     metaDescription: 'Révision de code LLM local auto-hébergée en GitHub Actions : architecture, YAML de flux de travail fonctionnant, dimensionnement du matériel par taille d\'équipe, modèle de sécurité et parité des coûts par rapport à GitHub Advanced Security.',
     twitterDescription: 'Révision de code auto-hébergée sur un serveur GPU dans votre réseau. GitHub Actions appelle Ollama, Qwen3-Coder examine les RP, aucune base de code ne quitte votre périmètre. Configuration, dimensionnement et parité des coûts à l\'intérieur.',
@@ -1033,7 +1033,7 @@ jobs:
     intro:
       'セルフホスト型のローカルLLMコードレビューは、Qwen3-CoderモデルをあなたのCI/CDパイプラインの背後に配置して、プルリクエストがあるたびにコードベースがネットワークから出ることなくレビュー審査が実行されます。アーキテクチャは単純です——Ollama を実行する専用GPU サーバー、HTTP APIを呼び出すカスタムGitHub Action、そして偽陽性率のために調整されたレビュープロンプト——経済学は15人から25人の有料GitHubシート付近でセルフホスティングの方向にひっくり返ります。このガイドでは、アーキテクチャ、実装されたGitHub Actions ワークフロー、チームサイズ別のハードウェアサイジング、セキュリティモデル、そして2 か月目のチームを困らせる運用上の落とし穴について説明します。',
     metaDescription:
-      'GitHub Actionsのセルフホスト型ローカルLLMコードレビュー：アーキテクチャ、実装されたワークフローYAML、チームサイズ別ハードウェアサイジング、セキュリティモデル、そしてGitHub Advanced Securityに対する経済的転換点。',
+      '2026年版CI/CDでのローカルLLMコードレビュー：クラウド不要でPRレビューを自動化。GitHub Actions、GitLab CIとの統合、プライバシー保護、コスト削減を解説。',
     twitterDescription:
       'ネットワーク内のGPUサーバーでセルフホスト型コードレビュー。GitHub ActionsはOllamaを呼び出し、Qwen3-CoderがPRをレビューします。コードベースはあなたの境界内に留まります。セットアップ、サイジング、コスト分析はこちら。',
     current_models_mentioned: [

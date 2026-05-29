@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Most laptop advice for local LLMs starts with the GPU and stops there. The number that actually decides which model fits is memory: VRAM on a Windows gaming laptop, or unified memory on Apple Silicon — and a model that does not fit in memory either fails to load or crawls on swap. This guide compares four laptop families across three buying styles: an Apple MacBook Pro for the most memory in a portable body, a Lenovo ThinkPad or ASUS ROG gaming laptop for NVIDIA GPU speed, and a Framework Laptop 16 for repairability and upgrades. Expect a portable machine to run 20-30% slower than a desktop with the same chip because of thermal limits. Prices here are a May 2026 snapshot — laptop pricing moves with model cycles and sales, so confirm the current price before you buy.',
     metaDescription:
-      'Four laptop families compared for running local LLMs: MacBook Pro, Lenovo ThinkPad, ASUS ROG, and Framework 16. Buy for memory first — VRAM or unified memory decides which model fits.',
+      'Best laptops for running local LLMs in 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, GPU VRAM, and real token speeds compared by price tier.',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — four laptop families for local LLMs, one rule: buy for memory. VRAM or unified memory decides the model that fits, not the GPU name.',
     affiliateDisclosure: true,
@@ -999,7 +999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Les meilleurs ordinateurs portables pour LLM locaux : guide d\'achat 2026',
-    seoTitle: 'Meilleur portable pour LLM locaux 2026 : du MacBook au ThinkPad',
+    seoTitle: 'Meilleurs portables pour LLM locaux 2026 : Mac à ThinkPad',
     intro:
       'La plupart des conseils sur les ordinateurs portables pour LLM locaux commencent par le GPU et s\'arrêtent là. Le chiffre qui décide réellement du modèle qui tient, c\'est la mémoire : la VRAM sur un portable de jeu Windows, ou la mémoire unifiée sur Apple Silicon — et un modèle qui ne tient pas en mémoire échoue à se charger ou rampe via le swap. Ce guide compare quatre familles de portables selon trois styles d\'achat : un Apple MacBook Pro pour le plus de mémoire dans un châssis portable, un Lenovo ThinkPad ou un portable de jeu ASUS ROG pour la vitesse du GPU NVIDIA, et un Framework Laptop 16 pour la réparabilité et les évolutions. Attendez-vous à ce qu\'une machine portable tourne 20-30 % plus lentement qu\'un poste fixe équipé de la même puce, en raison des limites thermiques. Les prix indiqués ici sont un instantané de mai 2026 — la tarification des portables évolue avec les cycles de modèles et les promotions, vérifiez donc le prix actuel avant d\'acheter.',
     metaDescription:

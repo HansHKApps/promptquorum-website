@@ -22,7 +22,7 @@ export async function buildArticleMetadata(slug: string, lang: Language): Promis
     return notFound()
   }
 
-  const post = blogContent[postId][lang] || blogContent[postId]['en']
+  const post = (blogContent[postId][lang] || blogContent[postId]['en'])!
   const translationObj = blogContent[postId][lang] as any
   const hasTranslation =
     Boolean(translationObj) && Object.keys(translationObj.sections ?? {}).length > 0
@@ -79,6 +79,9 @@ const BLOG_BREADCRUMB_LABELS = {
   fr: { home: 'Accueil', blog: 'Blog' },
   ja: { home: 'ホーム', blog: 'ブログ' },
   zh: { home: '主页', blog: '博客' },
+  es: { home: 'Inicio', blog: 'Blog' },
+  pt: { home: 'Início', blog: 'Blog' },
+  ar: { home: 'الرئيسية', blog: 'المدونة' },
 }
 
 export async function buildArticlePageElement(slug: string, lang: Language) {
@@ -88,7 +91,7 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
     notFound()
   }
 
-  const post = blogContent[postId][lang] || blogContent[postId]['en']
+  const post = (blogContent[postId][lang] || blogContent[postId]['en'])!
 
   // JSON-LD: Article schema
   const publishDate = post.publishDate.replace('Published ', '').split(' ').slice(0, 3).join(' ')

@@ -8,7 +8,7 @@ import { LangLinksBar } from '@/components/LangLinksBar'
 // Content data — all 5 languages
 // ---------------------------------------------------------------------------
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
 
 interface CompareText {
   breadcrumbHome: string
@@ -98,7 +98,7 @@ interface CompareText {
   sourcesList: string[]
 }
 
-const content: Record<Lang, CompareText> = {
+const content: Partial<Record<Lang, CompareText>> = {
   en: {
     breadcrumbHome: 'Home',
     breadcrumbCompare: 'Compare',
@@ -831,7 +831,7 @@ const content: Record<Lang, CompareText> = {
 
 function CompareContent({ initialLang }: { initialLang?: Lang }) {
   const lang = useLang(initialLang) as Lang
-  const t = content[lang] ?? content['en']
+  const t = (content[lang] ?? content['en'])!
 
   return (
     <div className="min-h-screen bg-white pt-28 pb-20">

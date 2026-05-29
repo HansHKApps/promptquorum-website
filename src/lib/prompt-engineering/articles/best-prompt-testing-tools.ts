@@ -6,7 +6,7 @@ import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
 
-export const article: Record<Language, PEArticle> = { en: {
+export const article: Partial<Record<Language, PEArticle>> = { en: {
    theme: 'Tools & Platforms',
   title: 'Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval',
   seoTitle: 'Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval',

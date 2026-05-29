@@ -21,9 +21,9 @@ import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
 
 const BASE = 'https://www.promptquorum.com'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
 
-const HOME_LABEL: Record<Lang, string> = {
+const HOME_LABEL: Partial<Record<Lang, string>> = {
   en: 'Home',
   de: 'Startseite',
   fr: 'Accueil',
@@ -52,7 +52,7 @@ function slugToTitle(slug: string): string {
     .join(' ')
 }
 
-const COMING_SOON_COPY: Record<Lang, { badge: string; bodyArticle: string; bodyHub: string; back: string }> = {
+const COMING_SOON_COPY: Partial<Record<Lang, { badge: string; bodyArticle: string; bodyHub: string; back: string }>> = {
   en: {
     badge: 'Coming Soon',
     bodyArticle: 'This article is being prepared. Explore the English version of the Power Local LLM hub in the meantime.',
@@ -345,14 +345,14 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
 // ─── HUB PAGE ──────────────────────────────────────────────────────────────
 
 export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
-  const titleByLang: Record<Lang, string> = {
+  const titleByLang: Partial<Record<Lang, string>> = {
     en: 'Power Local LLM: Run AI Apps Privately on Your Own Hardware (2026)',
     de: 'Power Local LLM: KI-Apps privat auf eigener Hardware ausführen (2026)',
     fr: 'Power Local LLM: Exécuter des applications IA privées sur votre matériel (2026)',
     ja: 'Power Local LLM: AI アプリを自分のハードウェアでプライベート実行 (2026)',
     zh: 'Power Local LLM：在自己的硬件上私密运行 AI 应用（2026）',
   }
-  const descByLang: Record<Lang, string> = {
+  const descByLang: Partial<Record<Lang, string>> = {
     en: 'Stop paying for SaaS AI tools. Run coding assistants, RAG systems, agents, and creative apps fully offline with local LLMs. 35 guides, tested workflows, 2026 stack.',
     de: 'Hör auf, für SaaS-KI-Tools zu zahlen. Führe Coding-Assistenten, RAG-Systeme, Agenten und kreative Apps vollständig offline mit lokalen LLMs aus.',
     fr: 'Arrêtez de payer pour des outils IA SaaS. Exécutez des assistants de code, RAG, agents et applications créatives hors ligne avec des LLMs locaux.',
@@ -363,15 +363,15 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
   const isPublished = isPowerLLMHubPublished(lang)
 
   return {
-    title: truncateTitle(titleByLang[lang]),
-    description: descByLang[lang],
+    title: truncateTitle((titleByLang[lang] ?? titleByLang["en"])!),
+    description: (descByLang[lang] ?? descByLang["en"])!,
     alternates: powerLLMAlternates(lang),
     robots: isPublished
       ? { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 }
       : { index: false, follow: true },
     openGraph: {
       title: titleByLang[lang],
-      description: descByLang[lang],
+      description: (descByLang[lang] ?? descByLang["en"])!,
       url: `${BASE}${powerLLMHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
@@ -380,7 +380,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       card: 'summary_large_image',
       site: '@promptquorum',
       title: titleByLang[lang],
-      description: descByLang[lang],
+      description: (descByLang[lang] ?? descByLang["en"])!,
     },
   } satisfies Metadata
 }
@@ -581,7 +581,7 @@ function renderArticleBrief({ slug, brief }: { slug: string; brief: ArticleBrief
 }
 
 function renderComingSoon({ slug, lang, kind }: { slug?: string; lang: Lang; kind: 'article' | 'hub' }) {
-  const copy = COMING_SOON_COPY[lang]
+  const copy = (COMING_SOON_COPY[lang] ?? COMING_SOON_COPY['en'])!
   const title = slug ? slugToTitle(slug) : 'Power Local LLM'
   const enHref = slug ? powerLLMArticlePath('en', slug) : powerLLMHubPath('en')
   const body = kind === 'article' ? copy.bodyArticle : copy.bodyHub

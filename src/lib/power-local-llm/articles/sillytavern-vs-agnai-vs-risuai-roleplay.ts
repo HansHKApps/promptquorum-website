@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'SillyTavern vs Agnai vs RisuAI : Meilleure interface roleplay locale (2026)',
-    seoTitle: 'SillyTavern vs Agnai vs RisuAI : Meilleure UI Roleplay 2026',
+    seoTitle: 'SillyTavern vs Agnai vs RisuAI : roleplay 2026',
     intro:
       'SillyTavern, Agnai et RisuAI sont les trois interfaces roleplay crédibles pour les LLM locaux en 2026 — chacune se connecte proprement à Ollama, llama.cpp ou tout endpoint compatible OpenAI, et chacune adopte une position différente sur la densité de fonctionnalités. SillyTavern est le choix de personnalisation poussée (celui sur lequel la plupart des utilisateurs expérimentés finissent) ; Agnai est le choix multi-utilisateur (le seul avec un vrai mode serveur partagé) ; RisuAI est l\'alternative plus légère quand SillyTavern paraît surdimensionné. Ce guide les compare sur les cartes de personnages, la gestion des personas, les livres de lore, le chat de groupe, la compatibilité des modèles, la confidentialité et la disponibilité des plateformes.',
     metaDescription:

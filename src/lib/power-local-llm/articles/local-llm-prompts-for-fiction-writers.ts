@@ -633,7 +633,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Lokale LLM-Prompts für Belletristik-Autoren: 15 Vorlagen & Techniken (2026)',
-    seoTitle: 'Lokale LLM-Prompts für Belletristik-Autoren: 15 Vorlagen 2026',
+    seoTitle: 'LLM-Prompts für Romanautoren 2026: Belletristik schreiben',
     intro:
       'Lokale LLMs produzieren messbar bessere Belletristik, wenn sie strukturierte Prompts statt offener Anfragen erhalten. Dieser Leitfaden enthält 15 Prompt-Vorlagen, die funktionieren — für Szenen-Schreiben, Charakterentwicklung, Dialog, Weltenbau, Stiltransfer, Überarbeitung und redaktionelle Aufgaben — alle getestet mit Llama 3.3 70B, Qwen3 32B und Mistral Large lokal über Ollama oder LM Studio. Jede Vorlage ist kopierfertig und enthält Hinweise zur Genre-Anpassung.',
     metaDescription:
@@ -1260,7 +1260,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Prompts LLM locaux pour auteurs de fiction : 15 modèles et techniques (2026)',
-    seoTitle: 'Prompts LLM locaux pour la fiction : 15 modèles 2026',
+    seoTitle: 'Prompts LLM locaux pour auteurs de fiction 2026',
     intro:
       'Les LLM locaux produisent une fiction mesurément meilleure quand on leur fournit des prompts structurés plutôt que des demandes ouvertes. Ce guide couvre 15 modèles de prompts qui fonctionnent — pour l\'écriture de scènes, le développement de personnages, le dialogue, la construction de mondes, le transfert de style, la révision et les tâches éditoriales — tous testés sur Llama 3.3 70B, Qwen3 32B et Mistral Large tournant localement via Ollama ou LM Studio. Chaque modèle est prêt à copier-coller et indique ce qu\'il faut ajuster par genre.',
     metaDescription:

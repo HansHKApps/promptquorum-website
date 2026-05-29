@@ -9,7 +9,7 @@ const LABELS: Record<string, string> = {
 }
 
 export function CookieSettingsLink({ lang = 'en', className }: { lang?: string; className?: string }) {
-  const label = LABELS[lang] ?? LABELS.en
+  const label = (LABELS[lang as keyof typeof LABELS] ?? LABELS.en)!
   return (
     <button
       type="button"

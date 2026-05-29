@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Continue.dev vs Cline vs Aider: Der beste lokale Coding Agent in 2026',
-    seoTitle: 'Continue.dev vs Cline vs Aider: Lokale Coding Agents im Vergleich 2026',
+    seoTitle: 'Continue.dev vs Cline vs Aider: KI-Coding 2026',
     intro:
       'Continue.dev, Cline und Aider sind die drei ernsthaften Open-Source-Coding-Harnesses, die sich sauber mit einem lokalen LLM in 2026 kombinieren lassen. Sie sind nicht austauschbar: Jeder ist um ein anderes Workflow-Primitive herum aufgebaut — Autocomplete, autonome Agent-Schleife oder Git-natives Diff. Wählen Sie nach Workflow zuerst aus, Modell zuerst, und Sie vermeiden 90 % der Integrationsprobleme.',
     metaDescription:
@@ -1001,7 +1001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Continue.dev vs Cline vs Aider : Meilleur agent de codage local 2026',
-    seoTitle: 'Continue.dev vs Cline vs Aider – Comparaison agents IA locaux 2026',
+    seoTitle: 'Continue.dev vs Cline vs Aider : IA code local 2026',
     intro:
       "Continue.dev, Cline et Aider sont les trois outils de codage open-source sérieux qui s'intègrent correctement avec un LLM local en 2026. Ils ne sont pas interchangeables : chacun est construit autour d'une primitive de flux de travail différente — autocomplétion, boucle d'agent autonome ou diff natif Git. Choisissez d'abord selon le flux de travail, le modèle en second lieu, et vous évitez 90 % des problèmes d'intégration.",
     metaDescription:
@@ -1501,7 +1501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Continue.dev、Cline、Aider は、2026 年にローカル LLM と適切に統合する 3 つの真摯なオープンソースコーディングツールです。これらは交換可能ではありません。各ツールは異なるワークフロープリミティブの周りに構築されています。オートコンプリート、自律エージェントループ、または Git ネイティブ diff です。ワークフローを最初に選択し、モデルを次に選択すると、統合の問題の 90% を回避できます。',
     metaDescription:
-      '2026 年のローカルコーディングエージェントとして Continue.dev、Cline、Aider を比較。編集モデル、IDE 統合、キャンセル、コンテキスト戦略 — ワークフローで選択、ハイプで選択しない。',
+      'Continue.dev、Cline、Aiderを徹底比較。ローカルLLMで動くAIコーディングアシスタント3種の設定、自動補完、エージェント機能、対応エディタを2026年版で検証。',
     twitterDescription:
       '3 つのローカルコーディングツール、3 つの異なるワークフロープリミティブ。オートコンプリートのための Continue.dev、自律エージェントのための Cline、Git ネイティブ diff のための Aider。ワークフロー別の判定結果。',
     current_models_mentioned: [
@@ -1996,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Continue.dev、Cline 和 Aider 是三个认真的开源编码工具，可以与本地 LLM 完美集成。它们不可互换：每一个都围绕不同的工作流原语构建 — 自动完成、自主代理循环或 Git 原生差异。首先按工作流选择，其次按模型选择，您可以避免 90% 的集成问题。',
     metaDescription:
-      '2026 年本地编码代理对比：Continue.dev、Cline、Aider。编辑模型、IDE 集成、撤销和上下文策略 — 按工作流选择，不按效能选择。',
+      'Continue.dev、Cline、Aider对比：三款支持本地LLM的AI编程助手。设置方法、自动补全、代理功能和编辑器支持全面评测。2026年本地开发工具选择指南。',
     twitterDescription:
       '三个本地编码工具，三个不同的工作流原语。Continue.dev 用于自动完成，Cline 用于自主代理，Aider 用于 Git 原生差异。按工作流的判决在内部。',
     current_models_mentioned: [

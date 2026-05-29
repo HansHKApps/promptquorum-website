@@ -7,7 +7,7 @@ import { generateAlternates } from '@/lib/hreflang'
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
   const t = translations[selectedLang as keyof typeof translations]
 
@@ -44,7 +44,7 @@ export default async function FrameworksIndexPage({ searchParams }: PageProps) {
   // Extract language from searchParams
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
   return (
     <>

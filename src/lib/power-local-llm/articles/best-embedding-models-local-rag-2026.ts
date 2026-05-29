@@ -456,11 +456,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'Beste Embedding-Modelle für lokale RAG 2026 (Getestet auf echten Dokumenten)',
-    seoTitle: 'Beste Embedding-Modelle lokale RAG 2026: 6 Modelle benchmarkt',
+    seoTitle: 'Embedding-Modelle lokale RAG 2026: 6 im Benchmark',
     intro:
       'Sechs populäre Open-Weight-Embedding-Modelle — nomic-embed-text-v2, bge-large-en-v1.5, gte-large, mxbai-embed-large, snowflake-arctic-embed, jina-embeddings-v3 — getestet auf 4 Dokumenttypen (Rechtsverträge, Forschungsarbeiten, Quellcode, mehrsprachiges Unternehmens-Wiki). 100 bewertete Abfragen pro Modell, retrieval@10 gemessen gegen einen bekannten Antwortschlüssel, CPU- und GPU-Embedding-Durchsatz auf Consumer-Hardware. Ein Modell gewinnt bei der Gesamtgenauigkeit, ein anderes beim CPU-Durchsatz, und die Debatte über die Dimensionszahl hat eine klare Antwort.',
     metaDescription:
-      'Nomic, BGE, GTE, Mixedbread, Snowflake, Jina getestet auf juristischen Verträgen, Forschungsarbeiten, Code, mehrsprachigem Wiki. retrieval@10, Geschwindigkeit, RAM. Mai 2026 Ergebnis.',
+      'Sechs Embedding-Modelle für lokale RAG 2026 im Benchmark: nomic-embed-text, BGE-M3, mxbai-embed-large, Snowflake Arctic, GTE und Jina. MTEB-Scores und VRAM.',
     twitterDescription:
       '6 lokale Embedding-Modelle auf 4 Dokumenttypen benchmarkt. retrieval@10, CPU/GPU-Geschwindigkeit, RAM, mehrsprachige Qualität. Ein Modell dominiert die Genauigkeit. Vollständige Zahlen im Innern.',
     current_models_mentioned: [

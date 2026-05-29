@@ -66,7 +66,7 @@ const T = {
 
 function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
   const lang = useLang(initialLang)
-  const t = T[lang] ?? T.en
+  const t = (T[lang as keyof typeof T] ?? T.en)!
 
   return (
     <main className="min-h-screen bg-white pt-20 pb-20">

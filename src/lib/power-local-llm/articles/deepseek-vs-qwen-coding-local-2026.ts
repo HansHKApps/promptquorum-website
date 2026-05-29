@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'DeepSeek vs Qwen für lokales Coding 2026: Wer gewinnt?',
     seoTitle: 'DeepSeek vs Qwen Coding 2026: Python & Rust Vergleich',
     metaDescription:
-      'DeepSeek-V3 vs Qwen2.5-Coder im direkten Vergleich: Benchmarks in Python, JavaScript, Rust und C++. VRAM, Geschwindigkeit und Sieger nach Sprache. Mai 2026.',
+      'DeepSeek-Coder vs Qwen3-Coder für lokales Coding 2026: Benchmarks, VRAM-Bedarf und reale Code-Qualität. Welches Modell für Python, JavaScript, Refactoring.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -479,7 +479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'DeepSeek vs Qwen pour le Coding Local 2026 : Lequel Gagne ?',
     seoTitle: 'DeepSeek vs Qwen 2026 : Benchmark Python, Rust, JS',
     metaDescription:
-      'DeepSeek-V3 vs Qwen2.5-Coder pour le coding local : benchmarks en Python, JavaScript, Rust et C++. VRAM, vitesse et gagnant par langage. Mai 2026.',
+      'DeepSeek-Coder vs Qwen3-Coder pour le code local 2026 : benchmarks, besoins VRAM et qualité de code réelle. Quel modèle pour Python, JavaScript, refactoring.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience: 'Développeurs choisissant un LLM de coding local pour Continue.dev, Cline ou Cursor en mode local.',
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'DeepSeek vs Qwen ローカルコーディング2026：どちらが優れている？',
     seoTitle: 'DeepSeek vs Qwen コーディング2026：Python・Rust・JSベンチマーク比較',
     metaDescription:
-      'DeepSeek-V3 vs Qwen2.5-Coder ローカルコーディング比較：Python、JavaScript、Rust、C++のベンチマーク、VRAM要件、速度、言語別勝者（2026年5月版）。',
+      'DeepSeek-Coder vs Qwen3-Coder：2026年ローカルコーディング比較。ベンチマーク、VRAM要件、実際のコード品質。Python、JavaScript、リファクタリングに最適なのは。',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience: 'Continue.dev、Cline、Cursor Local ModeでローカルLLMを使用する開発者。',
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'DeepSeek vs Qwen本地编程2026：哪个更好？',
     seoTitle: 'DeepSeek vs Qwen编程对比2026：Python、Rust、JS基准测试',
     metaDescription:
-      'DeepSeek-V3 vs Qwen2.5-Coder本地编程深度对比：Python、JavaScript、Rust、C++实测基准，显存需求，推理速度，以及各编程语言的优胜者。2026年5月最新数据，帮您精准选出最适合本地部署的编程大模型。',
+      'DeepSeek-Coder vs Qwen3-Coder：2026年本地编程对比。基准测试、VRAM需求和真实代码质量。Python、JavaScript和重构任务中哪个模型更优，全面评测。',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience: '使用Continue.dev、Cline或Cursor本地模式的开发者，寻找最佳本地编程LLM。',

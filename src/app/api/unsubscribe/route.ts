@@ -5,7 +5,7 @@ import { verifyToken } from '@/lib/token'
 import { redis } from '@/lib/redis'
 
 const BASE = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://www.promptquorum.com'
-const VALID_LANGS = ['en', 'de', 'fr', 'ja', 'zh'] as const
+const VALID_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const
 const UNSUB_TTL_SECONDS = 60 * 60 * 24 * 30 * 25 // 25 months
 
 async function logUnsubscribe(email: string, source: 'click' | 'one-click') {

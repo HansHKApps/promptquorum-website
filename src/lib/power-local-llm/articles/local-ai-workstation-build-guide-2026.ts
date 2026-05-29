@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Die meisten Bauanleitungen für lokale KI beginnen mit der CPU, doch GPU und VRAM entscheiden darüber, welche Modelle die Maschine ausführen kann — jede andere Komponente wird so gewählt, dass sie diese GPU unterstützt. Diese Anleitung liefert drei vollständige Teilelisten für einen Lokal-LLM-PC: einen Budget-Build für 7B- bis 13B-Modelle, einen Mittelklasse-Build für 14B- bis 33B-Modelle und einen Enthusiasten-Build für die Arbeit mit 70B-Modellen. Jede Stufe nennt exakte Komponenten, die erwartete Leistung und die Gesamtkosten. Ein Hinweis zum Preis: Die Speicherchip-Knappheit von 2026 hat die GPU-Preise auf das 1,5- bis 2-Fache der UVP getrieben, was jeden Build hier teurer macht als dieselben Teile vor einem Jahr — behandeln Sie jede Zahl als Momentaufnahme vom Mai 2026 und nutzen Sie den Gebrauchtmarkt für GPUs, wo es geht.',
     metaDescription:
-      'Drei vollständige Lokal-KI-PCs für 2026: Budget 7B-13B, Mittelklasse 14B-33B und Enthusiast 70B. Exakte Teilelisten, erwartete Tokens/Sek. und Gesamtkosten von Mai 2026.',
+      'Lokale KI-Workstation bauen 2026: CPU, GPU, RAM und Speicher für LLM-Inferenz. Komplette Build-Anleitungen nach Budget, von Einsteiger bis RTX 5090.',
     twitterDescription:
       'Bauanleitung für einen Lokal-KI-PC: drei Budget-Stufen mit vollständigen Teilelisten für 7B- bis 70B-Modelle. Der GPU-Preisanstieg 2026 hat jeden Build verteuert — hier die Mai-2026-Summen.',
     affiliateDisclosure: true,
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'La plupart des guides de montage pour IA locale commencent par le processeur, mais ce sont le GPU et sa VRAM qui déterminent les modèles que la machine peut exécuter — chaque autre pièce est choisie pour soutenir ce GPU. Ce guide fournit trois listes de pièces complètes pour un PC dédié aux LLM locaux : une configuration budget pour les modèles 7B-13B, une configuration intermédiaire pour les modèles 14B-33B et une configuration enthousiaste pour le travail sur des modèles 70B. Chaque niveau précise les composants exacts, les performances attendues et un coût total. Une réserve sur les prix : la pénurie de puces mémoire de 2026 a poussé les prix des GPU à 1,5-2 fois au-dessus du tarif conseillé, ce qui renchérit chaque configuration ici par rapport aux mêmes pièces il y a un an — considérez chaque chiffre comme un instantané de mai 2026 et appuyez-vous sur le marché de l\'occasion pour les GPU lorsque c\'est possible.',
     metaDescription:
-      'Trois configurations PC complètes pour l\'IA locale en 2026 : budget 7B-13B, intermédiaire 14B-33B et enthousiaste 70B. Listes de pièces exactes, débit attendu et coûts totaux de mai 2026.',
+      'Construire une station IA locale 2026 : CPU, GPU, RAM et stockage pour l\'inférence LLM. Guides de build complets par budget, du débutant à la RTX 5090.',
     twitterDescription:
       'Guide de montage d\'un PC pour IA locale : trois niveaux de budget avec listes de pièces complètes pour les modèles 7B à 70B. La hausse des prix des GPU en 2026 a renchéri chaque configuration — voici les totaux de mai 2026.',
     affiliateDisclosure: true,
@@ -1559,7 +1559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルAI向けの自作ガイドの多くはCPUから始まりますが、マシンが実行できるモデルを決めるのはGPUとそのVRAMであり、他のすべてのパーツはそのGPUを支えるために選ばれます。本ガイドでは、ローカルLLM用PCの完全なパーツリストを3構成示します。7B〜13Bモデル向けのエントリー構成、14B〜33Bモデル向けのミドル構成、70B作業向けのハイエンド構成です。各ティアには正確なコンポーネント、想定される性能、合計コストを記載しています。価格について1点ご注意ください。2026年のメモリチップ不足によりGPU価格は希望小売価格の1.5〜2倍に上昇し、本ガイドのすべての構成コストは1年前の同じパーツより高くなっています。各数値は2026年5月時点のスナップショットとして扱い、可能な範囲で中古GPU市場を活用してください。',
     metaDescription:
-      '2026年のローカルAI向けPC完全自作構成3種：エントリー7B〜13B、ミドル14B〜33B、ハイエンド70B。正確なパーツリスト、想定トークン/秒、2026年5月の合計コストを掲載。',
+      '2026年ローカルAIワークステーション構築：LLM推論向けのCPU、GPU、RAM、ストレージ。予算別の完全ビルドガイド。入門機からRTX 5090搭載ハイエンドまで解説。',
     twitterDescription:
       'ローカルAI PC自作ガイド：7B〜70Bモデル向けの完全パーツリストを備えた予算別3構成。2026年のGPU価格高騰がすべての構成コストを押し上げた——2026年5月の合計はこちら。',
     affiliateDisclosure: true,
@@ -2068,7 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '大多数本地 AI 装机指南都从 CPU 讲起，但真正决定这台机器能跑哪些模型的是 GPU 及其显存——其他每个部件都是为支撑这块 GPU 而选定的。本指南为本地 LLM PC 提供三套完整配置清单：面向 7B-13B 模型的入门配置、面向 14B-33B 模型的中端配置，以及面向 70B 工作负载的发烧配置。每一档都列出确切部件、预期性能和总成本。关于价格有一点提醒：2026 年的存储芯片短缺将 GPU 价格推高至建议零售价的 1.5-2 倍，使本指南中每套配置的成本都高于一年前同样部件的价格——请把每个数字当作 2026 年 5 月的快照，并在可行时尽量利用二手 GPU 市场。',
     metaDescription:
-      '2026 年三套完整的本地 AI PC 配置：入门 7B-13B、中端 14B-33B、发烧 70B。确切部件清单、预期每秒 token 数和 2026 年 5 月总成本。',
+      '2026年本地AI工作站搭建：LLM推理所需的CPU、GPU、内存和存储。按预算的完整搭建指南，从入门级到搭载RTX 5090的高端配置，全面解析硬件选择。',
     twitterDescription:
       '本地 AI PC 装机指南：三档预算配置，附 7B 到 70B 模型的完整部件清单。2026 年 GPU 价格上涨抬高了每套配置的成本——这里是 2026 年 5 月的总价。',
     affiliateDisclosure: true,

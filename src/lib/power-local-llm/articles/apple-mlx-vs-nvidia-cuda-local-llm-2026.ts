@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Apple MLX vs NVIDIA CUDA für lokale LLMs',
     title: 'Apple MLX vs NVIDIA CUDA für lokale LLMs: Welches System wählen in 2026?',
     seoTitle: 'Apple MLX vs NVIDIA CUDA für lokale LLMs 2026',
-    metaDescription: 'Apple M5 Max vs RTX 4090/5090 für lokale LLMs: Benchmark-Daten, Gesamtkosten nach Modellgröße, Stromverbrauch und klare Empfehlungen für 2026.',
+    metaDescription: 'MLX nutzt Apple Unified Memory, CUDA dominiert mit roher Leistung. Benchmarks: M5 Max vs RTX 5090 für lokale LLM-Inferenz. Tokens/Sek, Speicher, Effizienz.',
     readTime: '18 Min. Lesezeit',
     targetKeywords: [
       'apple mlx vs nvidia cuda lokale llm',
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Apple MLX vs NVIDIA CUDA pour LLMs locaux',
     title: 'Apple MLX vs NVIDIA CUDA pour LLMs locaux : Quel système choisir en 2026 ?',
     seoTitle: 'Apple MLX vs NVIDIA CUDA pour LLMs locaux 2026',
-    metaDescription: 'Apple M5 Max vs RTX 4090/5090 pour LLMs locaux : données de benchmark, coût total par taille de modèle, consommation électrique et recommandations claires pour 2026.',
+    metaDescription: 'MLX exploite la mémoire unifiée Apple, CUDA domine en puissance brute. Benchmarks : M5 Max vs RTX 5090 pour l\'inférence LLM locale. Tokens/s et mémoire.',
     readTime: '18 min de lecture',
     targetKeywords: [
       'apple mlx vs nvidia cuda llm local',
@@ -1802,7 +1802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Apple MLX vs NVIDIA CUDA 本地LLM',
     title: 'Apple MLX vs NVIDIA CUDA 本地LLM对比：2026年该选哪个系统？',
     seoTitle: 'Apple MLX vs NVIDIA CUDA 本地LLM 2026年对比',
-    metaDescription: 'Apple M5 Max vs RTX 4090/5090 本地LLM对比：基准测试数据、各模型大小总成本、功耗及2026年明确推荐。',
+    metaDescription: 'MLX利用Apple统一内存，CUDA以原始性能占据主导。基准测试：M5 Max与RTX 5090本地LLM推理对比。每秒令牌数、内存、能效全面分析对比。',
     readTime: '18分钟阅读',
     targetKeywords: [
       'apple mlx vs nvidia cuda 本地llm',

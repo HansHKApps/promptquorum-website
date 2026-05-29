@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
 
-const FAQS: Record<Lang, { question: string; answer: string }[]> = {
+const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
   en: [
     // ── Existing ──────────────────────────────────────────────────────────────
     { question: 'Is PromptQuorum free?', answer: 'Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.' },
@@ -159,7 +159,7 @@ const FAQS: Record<Lang, { question: string; answer: string }[]> = {
 
 export function FAQAccordion({ lang = 'en' }: { lang?: Lang }) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0)
-  const faqs = FAQS[lang] ?? FAQS.en
+  const faqs = (FAQS[lang] ?? FAQS.en)!
 
   const toggleItem = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index)

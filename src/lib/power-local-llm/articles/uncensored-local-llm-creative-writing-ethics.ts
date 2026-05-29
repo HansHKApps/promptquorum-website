@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Uncensored Local LLMs for Creative Writing: When Writers Need Them in 2026',
-    seoTitle: 'Uncensored Local LLMs for Creative Writing: When and Why 2026',
+    seoTitle: 'Uncensored Local LLMs for Creative Writing 2026',
     intro:
       'Uncensored local LLMs let fiction writers generate mature, morally complex, and dark content that cloud services refuse — with no data leaving your machine. This guide covers which models to use, how to set them up through Ollama or LM Studio, the genuine ethical responsibilities that apply even when there is no terms-of-service enforcement, and the specific use cases where uncensored models are appropriate versus where they are not.',
     metaDescription:
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Uncensored Local LLMs für kreatives Schreiben: Wann Autoren sie brauchen (2026)',
-    seoTitle: 'Uncensored Local LLMs für kreatives Schreiben 2026: Wann und warum',
+    seoTitle: 'Unzensierte lokale LLMs für kreatives Schreiben 2026',
     intro:
       'Uncensored lokale LLMs ermöglichen Autoren, reife, moralisch komplexe und düstere Inhalte zu generieren, die Cloud-Dienste ablehnen — ohne dass Daten dein Gerät verlassen. Dieser Leitfaden behandelt die geeigneten Modelle, die Einrichtung über Ollama oder LM Studio, die ethischen Verantwortlichkeiten die auch ohne ToS-Durchsetzung gelten, und die spezifischen Anwendungsfälle, für die Uncensored-Modelle geeignet bzw. ungeeignet sind.',
     metaDescription:
@@ -747,7 +747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'LLM locaux non censurés pour l\'écriture créative : quand les auteurs en ont besoin (2026)',
-    seoTitle: 'LLM locaux non censurés pour l\'écriture créative 2026',
+    seoTitle: 'LLMs locaux non censurés pour l\'écriture créative 2026',
     intro:
       'Les LLM locaux non censurés permettent aux auteurs de fiction de générer des contenus matures, moralement complexes et sombres que les services cloud refusent — sans que les données quittent leur machine. Ce guide couvre les modèles à utiliser, leur configuration via Ollama ou LM Studio, les responsabilités éthiques qui s\'appliquent même en l\'absence de conditions d\'utilisation, et les cas d\'usage où les modèles non censurés sont appropriés ou non.',
     metaDescription:

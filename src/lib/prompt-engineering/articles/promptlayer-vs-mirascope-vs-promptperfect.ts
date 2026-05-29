@@ -5,7 +5,7 @@
 import type { Language } from "@/lib/blog/blogContent";
 import type { PEArticle } from "@/lib/prompt-engineering/types";
 
-export const article: Record<Language, PEArticle> = {
+export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',

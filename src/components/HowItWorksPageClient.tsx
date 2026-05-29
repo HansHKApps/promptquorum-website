@@ -542,7 +542,7 @@ const providers = {
 
 function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
   const lang = useLang(initialLang)
-  const t = T[lang] ?? T.en
+  const t = (T[lang as keyof typeof T] ?? T.en)!
 
   return (
     <div className="min-h-screen bg-surface pt-24 pb-20">

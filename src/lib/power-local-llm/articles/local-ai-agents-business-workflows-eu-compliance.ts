@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Lokale KI-Agenten machen die EU-Compliance materiell einfacher. Wenn das Modell, die Tool-Server und die Daten alle innerhalb Ihrer eigenen Infrastruktur liegen, entfällt das Bedrohungsmodell des Cloud-LLM — Schrems II, Auftragsverarbeiter-Listen und grenzüberschreitende Übermittlungs-Folgeabschätzungen sind nicht mehr anwendbar. Die eigentliche Arbeit verlagert sich auf die weiterhin geltenden Regelungen: DSGVO-Kontrollen für die verarbeiteten Daten, EU-AI-Act-Klassifizierung für den automatisierten Workflow und DACH-spezifische Anforderungen (Betriebsrat, §203 StGB) für Workflows, die Mitarbeiter- oder vertrauliche Daten berühren. Dieser Leitfaden behandelt 5 produktionsreife Workflow-Vorlagen, die Kontrollen, die jede einzelne benötigt, sowie Modell- und Stack-Empfehlungen, die einer Prüfung standhalten.',
     metaDescription:
-      'Lokale KI-Agenten für Dokumentenverarbeitung, E-Mail-Triage und Reporting unter DSGVO und EU AI Act bereitstellen. Architektur, Compliance-Kontrollen und 5 Workflow-Vorlagen.',
+      'Lokale KI-Agenten für Geschäftsworkflows 2026: EU-konforme Automatisierung ohne Cloud. DSGVO, Datenhoheit und praktische Workflows mit lokalen LLMs.',
     twitterDescription:
       'Lokale KI-Agenten + EU-Compliance: 5 Workflow-Vorlagen, DSGVO-Kontrollen, EU-AI-Act-Klassifizierung, DACH-Spezifika. Keine Daten verlassen Ihre Infrastruktur.',
     current_models_mentioned: [
@@ -675,7 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Les agents IA locaux simplifient nettement la conformité européenne. Lorsque le modèle, les serveurs d\'outils et les données résident tous dans votre propre infrastructure, le modèle de menace LLM-cloud disparaît : Schrems II, listes de sous-traitants et analyses d\'impact des transferts transfrontaliers ne s\'appliquent plus. Le travail réel se déplace vers les obligations qui s\'appliquent toujours : contrôles RGPD sur les données traitées, classification EU AI Act du workflow automatisé, et exigences spécifiques (en France : positionnement CNIL, obligations sectorielles). Ce guide présente 5 modèles de workflows métier prêts pour la production, les contrôles que chacun nécessite, ainsi que les choix de modèle et de stack qui résistent à un audit.',
     metaDescription:
-      'Déployer des agents IA locaux pour le traitement documentaire, le tri d\'e-mails et le reporting sous RGPD et EU AI Act. Architecture, contrôles de conformité et 5 modèles de workflows.',
+      'Agents IA locaux pour workflows métier 2026 : automatisation conforme UE sans cloud. RGPD, souveraineté des données et workflows pratiques avec LLMs locaux.',
     twitterDescription:
       'Agents IA locaux + conformité UE : 5 modèles de workflows, contrôles RGPD, classification EU AI Act, spécificités CNIL. Aucune donnée ne sort de votre infrastructure.',
     current_models_mentioned: [
@@ -975,7 +975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルAIエージェントは、EU準拠を実質的に簡素化します。モデル・ツールサーバー・データすべてが自社インフラ内に存在する場合、クラウドLLMの脅威モデルは消滅します。Schrems II、サブプロセッサーリスト、越境移転影響評価は適用されません。実際の作業は依然として適用される規制に移ります：処理データに対するGDPR管理、自動化ワークフローのEU AI Act分類、そして従業員データや機密データを扱うワークフローに対する地域固有要件（DACH地域のBetriebsrat、§203 StGB；日本の場合は経済産業省AIガバナンス2024、個人情報保護法）。本ガイドでは、本番運用可能な5つのワークフローテンプレート、各ワークフローに必要な管理策、監査に耐えうるモデルとスタックの選択を解説します。',
     metaDescription:
-      'ローカルAIエージェントによる文書処理、メールトリアージ、レポート作成をGDPRとEU AI Actのもとで展開。アーキテクチャ、コンプライアンス管理、5つのワークフローテンプレート。',
+      'ビジネスワークフロー向けローカルAIエージェント2026：クラウド不要のEU準拠自動化。GDPR、データ主権、ローカルLLMを使った企業向け実践ワークフローを解説。',
     twitterDescription:
       'ローカルAIエージェント + EU準拠：5つのワークフローテンプレート、GDPR管理、EU AI Act分類、DACH固有事項。データはインフラから出ません。',
     current_models_mentioned: [

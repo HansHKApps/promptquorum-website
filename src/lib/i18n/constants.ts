@@ -11,12 +11,12 @@
  * - Header navigation links (to generate correct href)
  */
 
-export const PATH_PREFIX_LANGS = ['de', 'fr', 'ja', 'zh'] as const;
+export const PATH_PREFIX_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const;
 export type PathPrefixLang = typeof PATH_PREFIX_LANGS[number];
 
 /**
  * ALL_LANGS: All supported languages including English.
  * Used for iterating over translations, validation, and type safety.
  */
-export const ALL_LANGS = ['en', 'de', 'fr', 'ja', 'zh'] as const;
+export const ALL_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const;
 export type Lang = typeof ALL_LANGS[number];

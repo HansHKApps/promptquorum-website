@@ -11,7 +11,7 @@ const initializer = peContent.getInitializer();
 const articleProps = initializer.getProperties();
 
 const TARGET_SLUG = "gpt-claude-gemini-which-model";
-const VALID_LANGS = ["en", "de", "fr", "ja", "zh"];
+const VALID_LANGS = ["en", "de", "fr", "ja", "zh", "es", "pt", "ar"];
 const TRANSLATION_HELPERS = new Set([
   "contextWindowsDe", "contextWindowsFr", "contextWindowsJa", "contextWindowsZh",
   "imagesWithTextDe", "imagesWithTextFr", "imagesWithTextJa", "imagesWithTextZh",

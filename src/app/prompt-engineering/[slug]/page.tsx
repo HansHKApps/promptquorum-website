@@ -98,10 +98,10 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   // Extract language from searchParams, default to 'en'
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
-  const article = peContent[key][selectedLang] || peContent[key]['en']
+  const article = (peContent[key][selectedLang] || peContent[key]['en'])!
   const translationObj = peContent[key][selectedLang] as any
   const hasTranslation =
     Boolean(translationObj) && Object.keys(translationObj.sections ?? {}).length > 0
@@ -142,7 +142,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const twDesc = (article as PEArticle & { twitterDescription?: string }).twitterDescription ?? ogDesc
 
   // Compute available languages for this article (only include langs with actual translations)
-  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh'] as const
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const
   const availableLangsForMeta = VALID_LANGS_META.filter(lang => {
     const c = peContent[key]?.[lang]
     return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
@@ -208,10 +208,10 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
   // Extract language from searchParams for schema generation
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
-  const article = peContent[key][selectedLang] || peContent[key]['en']
+  const article = (peContent[key][selectedLang] || peContent[key]['en'])!
   const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
 
   // Extract all 100 glossary terms for keywords if this is the glossary

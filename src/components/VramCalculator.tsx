@@ -14,9 +14,9 @@ interface Tooltip {
   description: string;
 }
 
-type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh';
+type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar';
 
-const VRAM_TRANSLATIONS: Record<Language, {
+const VRAM_TRANSLATIONS: Partial<Record<Language, {
   popularModels: string;
   modelSize: string;
   quantization: string;
@@ -41,7 +41,7 @@ const VRAM_TRANSLATIONS: Record<Language, {
   shareConfig: string;
   loading: string;
   tooltips: Record<string, Tooltip>;
-}> = {
+}>> = {
   en: {
     popularModels: 'Popular Models',
     modelSize: 'Model Size',
@@ -319,7 +319,7 @@ const BATCH_MULTIPLIER: { [key: string]: number } = {
 
 export function VramCalculator() {
   const lang = (useLang() as Language) in VRAM_TRANSLATIONS ? (useLang() as Language) : 'en';
-  const t = VRAM_TRANSLATIONS[lang];
+  const t = (VRAM_TRANSLATIONS[lang] ?? VRAM_TRANSLATIONS["en"])!;
 
   const [modelSize, setModelSize] = useState<string>('13B');
   const [quantization, setQuantization] = useState<string>('Q4');

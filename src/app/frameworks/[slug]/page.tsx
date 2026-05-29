@@ -16,7 +16,7 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   // Read language from searchParams, default to 'en'
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
   const fwTitle = (fw as any).seoTitle ?? `${fw.name} Prompt Framework — Fields, Examples & When To Use It | PromptQuorum`

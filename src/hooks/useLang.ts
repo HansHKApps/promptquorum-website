@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react'
 
-export type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+export type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
 
-const VALID_LANGS: Lang[] = ['en', 'de', 'fr', 'ja', 'zh']
-const PATH_LOCALE_RE = /^\/(de|fr|ja|zh)(\/|$)/
+const VALID_LANGS: Lang[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+const PATH_LOCALE_RE = /^\/(de|fr|ja|zh|es|pt|ar)(\/|$)/
 
 /**
  * Returns the current language. Path-prefix locales (/de/, /fr/, /ja/, /zh/) take
