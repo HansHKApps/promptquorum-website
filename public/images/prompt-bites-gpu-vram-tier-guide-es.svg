@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .title { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 18px; font-weight: 600; }
+      .tier-label { fill: #FFFFFF; font-family: system-ui, sans-serif; font-size: 12px; font-weight: 600; }
+      .tier-budget { fill: #6750A4; }
+      .gpu-card { fill: #F7F2FA; stroke: #6750A4; stroke-width: 1.5; }
+      .gpu-name { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 12px; font-weight: 600; }
+      .gpu-vram { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 11px; font-weight: 600; }
+      .gpu-info { fill: #79747E; font-family: system-ui, sans-serif; font-size: 10px; }
+      .text-label { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+  <rect class="bg" width="800" height="400"/>
+  <text x="400" y="28" class="title" text-anchor="middle">Guía de GPU y VRAM — Presupuesto a Empresa</text>
+  <rect x="20" y="45" width="180" height="25" class="tier-budget" rx="4"/>
+  <text x="110" y="62" class="tier-label" text-anchor="middle">PRESUPUESTO (4-8 GB)</text>
+  <rect x="20" y="75" width="180" height="70" class="gpu-card" rx="4"/>
+  <text x="110" y="93" class="gpu-name" text-anchor="middle">RTX 3060</text>
+  <text x="110" y="109" class="gpu-vram" text-anchor="middle">12 GB GDDR6</text>
+  <text x="110" y="123" class="gpu-info" text-anchor="middle">Gaming/LLM entrada</text>
+  <text x="110" y="135" class="gpu-info" text-anchor="middle">$250-300</text>
+  <rect x="20" y="155" width="180" height="70" class="gpu-card" rx="4"/>
+  <text x="110" y="173" class="gpu-name" text-anchor="middle">RTX 4060</text>
+  <text x="110" y="189" class="gpu-vram" text-anchor="middle">8 GB GDDR6</text>
+  <text x="110" y="203" class="gpu-info" text-anchor="middle">Compacto, eficiente</text>
+  <text x="110" y="215" class="gpu-info" text-anchor="middle">$150-200</text>
+  <rect x="220" y="45" width="180" height="25" style="fill: #9575CD;" rx="4"/>
+  <text x="310" y="62" class="tier-label" text-anchor="middle">ENTRADA (8-16 GB)</text>
+  <rect x="220" y="75" width="180" height="70" class="gpu-card" rx="4"/>
+  <text x="310" y="93" class="gpu-name" text-anchor="middle">RTX 3080</text>
+  <text x="310" y="109" class="gpu-vram" text-anchor="middle">10 GB GDDR6X</text>
+  <text x="310" y="123" class="gpu-info" text-anchor="middle">Excelente relación LLMs</text>
+  <text x="310" y="135" class="gpu-info" text-anchor="middle">$500-600</text>
+  <rect x="220" y="155" width="180" height="70" class="gpu-card" rx="4"/>
+  <text x="310" y="173" class="gpu-name" text-anchor="middle">RTX 4090</text>
+  <text x="310" y="189" class="gpu-vram" text-anchor="middle">24 GB GDDR6X</text>
+  <text x="310" y="203" class="gpu-info" text-anchor="middle">GPU consumidor top</text>
+  <text x="310" y="215" class="gpu-info" text-anchor="middle">$1500+</text>
+  <rect x="420" y="45" width="180" height="25" style="fill: #CE93D8;" rx="4"/>
+  <text x="510" y="62" class="tier-label" text-anchor="middle">RANGO MEDIO (24+ GB)</text>
+  <rect x="420" y="75" width="180" height="70" class="gpu-card" rx="4"/>
+  <text x="510" y="93" class="gpu-name" text-anchor="middle">L40</text>
+  <text x="510" y="109" class="gpu-vram" text-anchor="middle">48 GB GDDR6</text>
+  <text x="510" y="123" class="gpu-info" text-anchor="middle">Inferencia profesional</text>
+  <text x="510" y="135" class="gpu-info" text-anchor="middle">$6000+</text>
+  <rect x="420" y="155" width="180" height="70" class="gpu-card" rx="4"/>
+  <text x="510" y="173" class="gpu-name" text-anchor="middle">H100 PCIe</text>
+  <text x="510" y="189" class="gpu-vram" text-anchor="middle">80 GB HBM3</text>
+  <text x="510" y="203" class="gpu-info" text-anchor="middle">Clase empresa</text>
+  <text x="510" y="215" class="gpu-info" text-anchor="middle">$40,000+</text>
+  <rect x="620" y="45" width="160" height="25" style="fill: #6750A4;" rx="4"/>
+  <text x="700" y="62" class="tier-label" text-anchor="middle">EMPRESA</text>
+  <rect x="620" y="75" width="160" height="70" class="gpu-card" rx="4"/>
+  <text x="700" y="93" class="gpu-name" text-anchor="middle">A100 40GB</text>
+  <text x="700" y="109" class="gpu-vram" text-anchor="middle">40 GB HBM2</text>
+  <text x="700" y="123" class="gpu-info" text-anchor="middle">Probado data center</text>
+  <text x="700" y="135" class="gpu-info" text-anchor="middle">$10,000+</text>
+  <rect x="620" y="155" width="160" height="70" class="gpu-card" rx="4"/>
+  <text x="700" y="173" class="gpu-name" text-anchor="middle">2x+ GPU Setup</text>
+  <text x="700" y="189" class="gpu-vram" text-anchor="middle">80-160+ GB</text>
+  <text x="700" y="203" class="gpu-info" text-anchor="middle">Inferencia distribuida</text>
+  <text x="700" y="215" class="gpu-info" text-anchor="middle">Precio personalizado</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1202,6 +1202,440 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    es: {
+      freshness_tier: 'annual',
+      specific_year: 2026,
+      next_refresh_due: '2027-05-04',
+      theme: 'Use Cases',
+      title: 'Enseñar con IA en 2026: Estudio Harvard Muestra 2× Más Aprendizaje — Herramientas, Prompts y Guía Ley de IA de la UE',
+      intro: '**Para enseñar eficazmente con IA en 2026: usa un prompt estructurado de cinco componentes (rol, objetivo, contexto del estudiante, restricciones, formato de salida), elige una herramienta adaptada a la tarea (Khanmigo para tutoría, MagicSchool para planificación de lecciones, Claude Sonnet 4.6 o GPT-4o para generación de contenido), establece la temperatura en 0,1–0,2 para contenido factual, y — para escuelas de la UE — implementa la formación en alfabetización en IA del personal según el Artículo 4 antes de desplegar cualquier sistema de alto riesgo.** Un ensayo controlado aleatorizado de Harvard de 2024 descubrió que la tutoría con IA produjo ganancias de aprendizaje más del doble de las de las aulas de aprendizaje activo — en un 18 % menos de tiempo de estudio. En mayo de 2026, el 85 % de los docentes estadounidenses y el 86 % de los estudiantes usaron IA durante el año escolar, más que cualquier otra industria. El desafío no es la adopción sino la estructura: los prompts vagos producen resultados inutilizables, los prompts estructurados ahorran 5–13 horas por semana, y las escuelas de la UE ahora tienen obligaciones legales bajo la Ley de IA para cualquier herramienta de IA que afecte la evaluación de los estudiantes.',
+      publishDate: '2026-03-23',
+      dateModified: '2026-05-04',
+      readTime: '8 min de lectura',
+      seoTitle: 'Enseñar con IA en 2026: Guía 2× Más Aprendizaje',
+      metaDescription: 'Estudio Harvard: la tutoría con IA duplica las ganancias de aprendizaje, 18 % menos de tiempo. Herramientas: Khanmigo, MagicSchool, Claude. Los prompts estructurados ahorran 5–13 h/semana. Incluye guía de la Ley de IA de la UE.',
+      educationalLevel: 'Beginner',
+      audience: 'Docentes, directores escolares y profesionales de la educación que usan herramientas de IA',
+      aboutTopics: ['IA en la educación', 'Khanmigo', 'Ley de IA de la UE'],
+      howToName: 'Cómo enseñar con IA',
+      ogDescription: 'El 85 % de los docentes estadounidenses usaron IA en 2024–25 — pero los prompts vagos la desperdician. Harvard demostró que la tutoría con IA duplica las ganancias de aprendizaje. Aquí está el framework de prompts de 5 partes para docentes más el cumplimiento de la Ley de IA de la UE para escuelas.',
+      twitterDescription: 'Tutoría con IA: 2× más ganancias de aprendizaje, 18 % menos de tiempo de estudio (ECA de Harvard, n=194). Mejores herramientas + framework de prompts para docentes.',
+      toc: [
+        { label: 'Qué hacen realmente las herramientas de enseñanza con IA', anchor: '#what-ai-teaching-tools-actually-do' },
+        { label: '¿Qué herramientas de IA deberían usar los docentes en 2026?', anchor: '#which-ai-tools-should-teachers-use-in-2026' },
+        { label: 'Cómo escribir prompts para tareas de enseñanza', anchor: '#how-to-write-prompts-for-teaching-tasks' },
+        { label: 'El prompt de docente de cinco componentes', anchor: '#the-five-component-teacher-prompt' },
+        { label: '¿Cómo escribes prompts de IA para retroalimentación de evaluación?', anchor: '#how-do-you-prompt-ai-for-assessment-feedback' },
+        { label: '¿La tutoría con IA mejora los resultados de aprendizaje?', anchor: '#does-ai-tutoring-improve-learning-outcomes' },
+        { label: '¿Qué tan detectable es el engaño con IA en las escuelas?', anchor: '#how-detectable-is-ai-cheating-in-schools' },
+        { label: '¿Cómo afecta la Ley de IA de la UE a las escuelas?', anchor: '#how-does-the-eu-ai-act-affect-schools' },
+        { label: 'Errores comunes al usar IA en la educación', anchor: '#common-mistakes-when-using-ai-in-education' },
+        { label: 'Paso a paso: Integrar IA en tu enseñanza', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
+        { label: 'Lectura relacionada', anchor: '#related-reading' },
+        { label: 'Preguntas frecuentes', anchor: '#frequently-asked-questions' },
+        { label: 'Fuentes y lecturas adicionales', anchor: '#sources-further-reading' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=es',
+        inLanguage: 'es',
+        headline: 'Enseñar con IA en 2026: Estudio Harvard Muestra 2× Más Aprendizaje — Herramientas, Prompts y Guía Ley de IA de la UE',
+        description: 'ECA de Harvard: la tutoría con IA produjo 2× las ganancias de aprendizaje en un 18 % menos de tiempo. Las mejores herramientas para docentes (Khanmigo, MagicSchool), framework de prompts de 5 partes y obligaciones escolares de la Ley de IA de la UE.',
+        datePublished: '2026-03-23',
+        dateModified: '2026-05-04',
+        proficiencyLevel: 'Beginner',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        about: [
+          { '@type': 'Thing', name: 'IA en la educación' },
+          { '@type': 'SoftwareApplication', name: 'Khanmigo' },
+          { '@type': 'Legislation', name: 'Ley de IA de la UE' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        audience: { '@type': 'EducationalAudience', educationalRole: 'Teacher', audienceType: 'Docentes, directores escolares, profesionales de la educación' },
+        educationalLevel: 'K-12, Educación Superior',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Mejoran los tutores de IA realmente los resultados de aprendizaje?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sí — la evidencia es sólida. Un ensayo controlado aleatorizado de Harvard de 2024 con 194 estudiantes de física encontró que la tutoría con IA produjo efectos de 0,73–1,3 desviaciones estándar sobre las aulas de aprendizaje activo, con los estudiantes logrando puntuaciones más altas en 49 minutos frente a 60 minutos de tiempo de clase (p < 10⁻⁸). Una revisión sistemática de 2025 de 21 estudios muestra que los estudiantes asistidos por IA superan los métodos de enseñanza tradicionales en evaluaciones en un 15–35 %.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuánto tiempo puede ahorrarles la IA a los docentes por semana?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Los prompts específicos y ricos en contexto ahorran a los docentes entre 5 y 13 horas por semana en planificación de lecciones y tareas administrativas cuando se usan de forma coherente. Las aplicaciones de ahorro de tiempo más comunes son: investigación y recopilación de contenido (44 % de los docentes), creación de planes de lección (38 %), resumen de información (38 %) y creación de materiales de clase (37 %).' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es legal la IA en la educación bajo las regulaciones de la UE?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Los sistemas de IA que influyen en la evaluación del aprendizaje o las rutas de aprendizaje se clasifican como de alto riesgo en la Ley de IA de la UE (Anexo III). Las escuelas de la UE deben llevar a cabo formación en competencias de IA para el personal docente (Artículo 4, vigente desde 2025), mantener supervisión humana para las evaluaciones influenciadas por IA y gestionar registros de auditoría de todos los sistemas de IA que afecten los resultados de los estudiantes. La IA de reconocimiento de emociones en instituciones educativas está completamente prohibida por la ley.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿El software de detección de IA detecta de manera fiable el engaño académico?',
+            acceptedAnswer: { '@type': 'Answer', text: 'No — las herramientas actuales de detección de IA tienen tasas de falsos positivos del 15–30 % en estudios revisados por pares, lo que significa que hasta 30 de cada 100 entregas legítimas de estudiantes pueden marcarse erróneamente. Los hablantes no nativos y los estudiantes que escriben en estilos académicos estructurados se marcan de forma desproporcionada. Las universidades están pasando en 2026 de políticas de prohibición a marcos de divulgación y citación.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué ajuste de temperatura deberían usar los docentes para la planificación con IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Establece la temperatura en 0,1–0,2 para el contenido factual de las lecciones — planes de lección, rúbricas de evaluación, alineación curricular. Esto produce salidas consistentes y de baja variación. Usa 0,7–0,9 solo al generar ideas de actividades creativas donde las opciones diversas son el objetivo.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué es Khanmigo y en qué se diferencia de ChatGPT para los estudiantes?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Khanmigo es el asistente de tutoría con IA de Khan Academy, impulsado por GPT-4. Su característica definitoria es el cuestionamiento socrático — guía a los estudiantes hacia las respuestas en lugar de dárselas directamente. ChatGPT proporciona respuestas directas de forma predeterminada, lo que es eficiente pero reduce el esfuerzo cognitivo que produce el aprendizaje a largo plazo. Para la tutoría orientada al estudiante, el diseño pedagógico de Khanmigo es superior; para la creación de contenido por parte de los docentes, gana la flexibilidad de ChatGPT.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cómo creo una política de uso de IA para mi escuela?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Una política escolar de uso de IA eficaz define cuatro cosas: (1) qué tareas permiten la IA (lluvia de ideas, problemas de práctica, borradores de retroalimentación), (2) qué tareas requieren divulgación (ensayos asistidos por IA, presentaciones), (3) qué tareas prohíben la IA (respuestas finales de exámenes, plagio), (4) cómo se deben citar los contenidos generados por IA. La política debe revisarse cada 6 meses dada la rápida evolución de las herramientas. Las escuelas de la UE deben abordar adicionalmente los requisitos de formación del Artículo 4 y las obligaciones de alto riesgo del Anexo III.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Debo cumplir con el RGPD al usar herramientas de IA para docentes?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sí — si tu escuela está en la UE o el EEE y las herramientas de IA procesan datos de los estudiantes, debes cumplir con el RGPD. El punto crítico es el Artículo 28: si la plataforma de IA (p. ej., ChatGPT, Claude) actúa como procesador de datos, necesitas un Acuerdo de Procesamiento de Datos (DPA). Para escuelas en España, la LOPD-GDD se aplica con obligaciones adicionales; consulta la AEPD para orientación específica sobre el uso de IA en entornos educativos.' },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'es',
+        name: 'Cómo integrar la IA en tu enseñanza',
+        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=es',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Define los objetivos de aprendizaje y las evaluaciones antes de introducir la IA', text: 'Especifica qué deben saber los estudiantes y cómo lo evaluarás. Luego diseña dónde la IA amplifica la instrucción.' },
+          { '@type': 'HowToStep', position: 2, name: 'Usa la IA para práctica personalizada y retroalimentación inmediata, no para calificación', text: 'La IA destaca en la generación de problemas de práctica y en la provisión de retroalimentación inmediata. Evita usar la IA para calificación subjetiva sin revisión humana.' },
+          { '@type': 'HowToStep', position: 3, name: 'Enseña a los estudiantes cómo verificar los resultados de la IA y detectar alucinaciones', text: 'Muestra a los estudiantes la validación multi-modelo y la verificación de hechos contra fuentes primarias para desarrollar el pensamiento crítico y la alfabetización en IA.' },
+          { '@type': 'HowToStep', position: 4, name: 'Crea una plantilla de prompt estructurada que los estudiantes usen para todas las interacciones con IA', text: 'Usa Rol → Objetivo → Alcance → Formato de salida → Método de validación. Practica esta plantilla juntos hasta que los estudiantes reconozcan cuándo los prompts vagos producen respuestas vagas.' },
+          { '@type': 'HowToStep', position: 5, name: 'Establece directrices claras sobre el uso de la IA para tareas específicas', text: 'Sé explícito sobre qué tareas permiten la IA (lluvia de ideas, problemas de práctica) y cuáles no (respuestas de exámenes, código sin atribución).' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'es',
+        name: 'Herramientas de IA para docentes 2026',
+        description: 'Comparativa de herramientas de IA para docentes para uso en el aula',
+        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=es',
+        numberOfItems: 6,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'Tutoría estudiantil mediante cuestionamiento socrático. K-12, ecosistema Khan Academy. 44 USD al año.' },
+          { '@type': 'ListItem', position: 2, name: 'MagicSchool', description: 'Planificación de lecciones y gestión del aula. Docentes de K-12. Versión gratuita limitada.' },
+          { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-4o', description: 'Creación de contenido flexible y borradores. Cualquier nivel, cualquier materia. Versión gratuita limitada.' },
+          { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 4.6', description: 'Diseño curricular de formato largo, contexto de 1.000.000 tokens. Universidad y tareas complejas. Versión gratuita limitada.' },
+          { '@type': 'ListItem', position: 5, name: 'NotebookLM', description: 'Preguntas y respuestas basadas en fuentes sobre materiales cargados. Universidad e investigación. Gratuito.' },
+          { '@type': 'ListItem', position: 6, name: 'Gemini 3.1 Pro', description: 'Análisis de documentos grandes, contexto de 1 millón de tokens. Administración escolar. Versión gratuita limitada.' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: 'Puntos clave',
+          isTldr: true,
+          items: [
+            'Los tutores de IA produjeron ganancias de aprendizaje más del doble de las de las aulas de aprendizaje activo en el ensayo controlado aleatorizado de Harvard de 2024 (194 estudiantes; tamaño del efecto 0,73–1,3 DE) en un 18 % menos de tiempo de aprendizaje',
+            'El 85 % de los docentes estadounidenses y el 86 % de los estudiantes usaron IA en el año escolar 2024–25 — la tasa de adopción de IA más alta de cualquier industria en el mundo',
+            'Los prompts estructurados para docentes (con nivel de grado, objetivo, contexto del estudiante y formato de salida) ahorran 5–13 horas por semana en comparación con los prompts abiertos',
+            'Las herramientas de detección de IA tienen tasas de falsos positivos del 15–30 % — son insuficientes como herramienta independiente para hacer cumplir la integridad académica',
+            'La Ley de IA de la UE clasifica la IA educativa como de alto riesgo; las escuelas de la UE deben llevar a cabo formación en competencias de IA para todo el personal docente (Artículo 4, vigente desde 2025)',
+            'Los estudiantes que usan herramientas de IA logran entre un 15 y un 35 % de puntuaciones más altas en evaluaciones en 21 estudios empíricos; r = 0,781 correlación entre el uso de herramientas de IA y los resultados',
+            'En mayo de 2026, GPT-4o, Claude Sonnet 4.6 (Anthropic) y Gemini 3.1 Pro admiten todos ventanas de contexto de 1 millón de tokens (~800 páginas por sesión)',
+          ],
+        },
+        quickFacts: {
+          title: '⚡ Datos rápidos',
+          items: [
+            '**Resultado del ECA de Harvard:** La tutoría con IA produjo ganancias de aprendizaje de 0,73–1,3 DE sobre las aulas de aprendizaje activo en un 18 % menos de tiempo (n=194, p < 10⁻⁸)',
+            '**Adopción por parte de los docentes:** El 85 % de los docentes estadounidenses usó IA en el año escolar 2024–25',
+            '**Tiempo ahorrado:** Los prompts estructurados ahorran a los docentes 5–13 horas/semana en planificación de lecciones y administración',
+            '**Problema de detección de IA:** Tasa de falsos positivos del 15–30 % — poco fiable para decisiones independientes de integridad académica',
+            '**Ley de IA de la UE:** La IA educativa clasificada como de alto riesgo (Anexo III). La formación en competencias de IA para el personal docente es obligatoria (Artículo 4, vigente desde 2025). La IA de reconocimiento de emociones en las escuelas está prohibida.',
+            '**Mejores herramientas:** Khanmigo (tutoría), MagicSchool (planes de lección), ChatGPT/Claude (contenido flexible), NotebookLM (investigación basada en fuentes)',
+          ],
+        },
+        definition: {
+          title: 'Qué hacen realmente las herramientas de enseñanza con IA',
+          content: [
+            '**En mayo de 2026, las herramientas de enseñanza con IA realizan cuatro funciones distintas: tutoría personalizada, generación de planes de lección, retroalimentación de evaluación automatizada y reducción de tareas administrativas — cada una requiere una herramienta y una estructura de prompt diferentes.**',
+            'Los Sistemas de Tutoría Inteligente (STI) — la categoría técnica para herramientas como Khanmigo — adaptan la dificultad, proporcionan retroalimentación inmediata y guían a los estudiantes mediante el cuestionamiento socrático en lugar de dar respuestas directas. Los LLMs universales como GPT-4o (OpenAI) y Claude Sonnet 4.6 (Anthropic) manejan la generación de planes de lección, la creación de rúbricas y los materiales de instrucción diferenciada. Las herramientas de IA administrativas manejan resúmenes de asistencia, borradores de comunicación con padres e informes de progreso.',
+            'En una oración: la IA en el aula no es una herramienta — es un conjunto, donde cada capa cumple un rol específico en el flujo de trabajo de instrucción.',
+          ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'Las herramientas de enseñanza con IA abarcan sistemas de tutoría (Khanmigo), planificadores de lecciones (ChatGPT, Claude) y asistentes administrativos — cada uno optimizado para diferentes tareas del aula.' },
+          ],
+        },
+        toolComparison: {
+          title: '¿Qué herramientas de IA deberían usar los docentes en 2026?',
+          content: [
+            '**Khanmigo (Khan Academy), MagicSchool y ChatGPT (OpenAI) sirven cada uno para diferentes funciones del aula — elegir la herramienta incorrecta para la tarea desperdicia tiempo y oportunidades.**',
+            'Khanmigo es el asistente de tutoría con IA de Khan Academy, impulsado por GPT-4. Usa el cuestionamiento socrático para guiar a los estudiantes hacia las respuestas en lugar de dárselas directamente — una diferencia de diseño crucial para la retención del aprendizaje.',
+            'MagicSchool ofrece el conjunto de herramientas más completo para docentes — planificación de lecciones, plantillas de gestión del aula, asistencia para la creación de PEI y herramientas de comunicación con padres.',
+          ],
+          callouts: [
+            { type: '💡', label: 'Consejo Pro', text: 'Ninguna herramienta lo hace todo. La mayoría de los docentes usan 2–3 herramientas juntas: Khanmigo para la tutoría de los estudiantes, MagicSchool para la planificación y ChatGPT para la creación rápida de contenido.' },
+          ],
+          columns: ['Herramienta', 'Mejor para', 'Contexto', 'Versión gratuita'],
+          rows: [
+            { 'Herramienta': 'Khanmigo (Khan Academy)', 'Mejor para': 'Tutoría estudiantil; aprendizaje socrático', 'Contexto': 'K-12, ecosistema Khan Academy', 'Versión gratuita': '44 USD al año' },
+            { 'Herramienta': 'MagicSchool', 'Mejor para': 'Planificación de lecciones; gestión del aula', 'Contexto': 'Docentes de K-12', 'Versión gratuita': 'Sí (limitado)' },
+            { 'Herramienta': 'ChatGPT / GPT-4o (OpenAI)', 'Mejor para': 'Creación de contenido flexible; borradores', 'Contexto': 'Cualquier nivel, cualquier materia', 'Versión gratuita': 'Sí (limitado)' },
+            { 'Herramienta': 'Claude Sonnet 4.6 (Anthropic)', 'Mejor para': 'Diseño curricular de formato largo; análisis de documentos', 'Contexto': 'Universidad; tareas complejas', 'Versión gratuita': 'Sí (limitado)' },
+            { 'Herramienta': 'NotebookLM (Google DeepMind)', 'Mejor para': 'Preguntas y respuestas basadas en fuentes sobre materiales del aula cargados', 'Contexto': 'Universidad; contextos de investigación', 'Versión gratuita': 'Gratuito / nivel Plus' },
+            { 'Herramienta': 'Gemini 3.1 Pro (Google DeepMind)', 'Mejor para': 'Análisis de documentos grandes; revisión de políticas', 'Contexto': 'Administradores de distritos escolares', 'Versión gratuita': 'Sí (limitado)' },
+          ],
+        },
+        toolUseCaseMapping: {
+          title: 'IA en la educación: Mapeo de caso de uso a herramienta',
+          content: [
+            '**No todas las herramientas se adaptan a todas las tareas. Elige la herramienta correcta para cada caso de uso específico — los diferentes modelos destacan bajo diferentes restricciones (ventana de contexto, temperatura, costo, velocidad).**',
+          ],
+          columns: ['Caso de uso', 'Herramienta recomendada', 'Temperatura', 'Ahorro de tiempo'],
+          rows: [
+            { 'Caso de uso': 'Creación de planes de lección', 'Herramienta recomendada': 'MagicSchool / GPT-4o', 'Temperatura': '0,1–0,2', 'Ahorro de tiempo': '30–60 min./lección' },
+            { 'Caso de uso': 'Niveles de lectura diferenciados', 'Herramienta recomendada': 'Claude Sonnet 4.6', 'Temperatura': '0,1–0,2', 'Ahorro de tiempo': '15 min./pasaje' },
+            { 'Caso de uso': 'Tutoría estudiantil (socrática)', 'Herramienta recomendada': 'Khanmigo', 'Temperatura': 'n/a (preestablecido)', 'Ahorro de tiempo': 'Asíncrono' },
+            { 'Caso de uso': 'Retroalimentación alineada con rúbrica', 'Herramienta recomendada': 'Claude Sonnet 4.6 (contexto de 1.000.000 tokens)', 'Temperatura': '0,2', 'Ahorro de tiempo': 'Horas por conjunto de clase' },
+            { 'Caso de uso': 'Borradores de comunicación con padres', 'Herramienta recomendada': 'ChatGPT / GPT-4o', 'Temperatura': '0,3–0,5', 'Ahorro de tiempo': '5–10 min./mensaje' },
+            { 'Caso de uso': 'Revisión de libros de texto/políticas', 'Herramienta recomendada': 'Gemini 3.1 Pro (contexto de 1 millón de tokens)', 'Temperatura': '0,1', 'Ahorro de tiempo': 'Horas por documento' },
+          ],
+        },
+        localLLMs: {
+          title: 'IA escolar privada: LLMs locales para la privacidad de datos',
+          content: [
+            'Para escuelas con requisitos estrictos de privacidad de datos — especialmente las escuelas de la UE bajo el RGPD — los LLMs locales mediante Ollama ofrecen una alternativa de cero salida de datos. Un portátil escolar con 16 GB de RAM ejecuta Qwen3 8B o Llama 4 Scout localmente, manejando la planificación de lecciones y la retroalimentación formativa sin que los datos de los estudiantes abandonen el dispositivo. La calidad es inferior a los modelos en la nube frontier, pero suficiente para las tareas de planificación rutinarias.',
+          ],
+        },
+        promptStructure: {
+          title: 'Cómo escribir prompts para tareas de enseñanza',
+          content: [
+            '**Un prompt estructurado para docentes — que especifica el nivel de grado, la materia, el objetivo de aprendizaje, el conocimiento previo, las restricciones de tiempo y el formato de salida — produce materiales listos para el aula sin edición; un prompt no estructurado produce un borrador genérico que requiere más de 30 minutos de revisión.**',
+            'El prompt engineering es la práctica de crear instrucciones precisas y estructuradas que guíen la salida de la IA. Para los docentes, la diferencia entre una salida de IA útil e inútil está casi siempre en la especificidad del prompt, no en la capacidad del modelo.',
+          ],
+          snippets: [
+            { type: 'in-plain-terms', text: 'Piensa en los prompts de IA como recetas: los prompts vagos ("haz algo delicioso") producen resultados inconsistentes; los prompts detallados ("hornea un pastel de chocolate a 175°C durante 35 minutos con chocolate negro") producen resultados fiables.' },
+          ],
+        },
+        promptFramework: {
+          title: 'Malo vs. bueno: Prompts para la planificación de lecciones',
+          content: [
+            '**Los prompts específicos y ricos en contexto ahorran a los docentes entre 5 y 13 horas por semana en planificación de lecciones cuando se usan de forma coherente. La versión mala requiere más de 30 minutos de revisión; la buena genera una salida lista para el aula en un solo intento.**',
+            'Prompt malo — salida genérica:',
+          ],
+          blockquote: 'Crea una lección sobre la adición de fracciones para quinto grado.',
+          items: [
+            'Esto genera un esquema vago sin asignación de tiempo, sin alineación con estándares, sin diferenciación y sin boleto de salida. La mayor parte de la salida se desecha.',
+          ],
+        },
+        goodExample: {
+          title: 'El prompt de docente de cinco componentes',
+          content: [
+            'Prompt bueno — estructura de cinco partes:',
+          ],
+          blockquote: 'Eres un docente de matemáticas de quinto grado con experiencia. Crea una lección de 45 minutos sobre la adición de fracciones con denominadores diferentes. Los estudiantes comprenden las fracciones equivalentes pero aún no las han combinado. Incluye: un calentamiento de 10 minutos con modelos visuales, 15 minutos de instrucción directa con tres ejemplos resueltos, 15 minutos de práctica con un compañero y un boleto de salida de 5 minutos. Alineación con Common Core 5.NF.A.1. Genera solo el plan de lección con encabezados de sección, asignaciones de tiempo y una lista de materiales.',
+          items: [
+            'La versión estructurada genera un documento con secciones alineadas con rúbricas, actividades cronometradas y una lista de materiales. Listo para usar o para refinar — no para reescribir completamente.',
+          ],
+          callouts: [
+            { type: '📌', label: 'Punto clave', text: 'Los cinco componentes son: (1) Rol, (2) Objetivo, (3) Contexto del estudiante, (4) Restricciones, (5) Formato de salida. Usar los cinco de forma coherente ahorra 5–13 horas por semana.' },
+          ],
+        },
+        assessmentPrompt: {
+          title: '¿Cómo escribes prompts de IA para retroalimentación de evaluación?',
+          content: [
+            '**Para la evaluación formativa: incluye los criterios de tu rúbrica directamente en el prompt para que la IA comprenda tus estándares de calificación y los aplique de manera coherente en todas las entregas de los estudiantes.**',
+            'La ventana de contexto de 1.000.000 de tokens de Claude Sonnet 4.6 maneja conjuntos completos de clase de ensayos en una sola sesión — aproximadamente 800 páginas estándar — lo que hace práctico la generación de retroalimentación por lotes para los docentes con clases grandes.',
+          ],
+          blockquote: 'Eres una profesora de inglés de séptimo grado con experiencia. Analiza este ensayo persuasivo de un estudiante usando esta rúbrica: tesis clara (4 puntos), tres argumentos de apoyo con evidencia (12 puntos), reconocimiento del contraargumento (4 puntos), transiciones formales (3 puntos), conclusión que refuerza la tesis (3 puntos). Para cada criterio: da la puntuación, cita la oración relevante y escribe una sugerencia específica de mejora. Puntuación total de 26 puntos.',
+          callouts: [
+            { type: '⚠️', label: 'Advertencia', text: 'La IA no puede evaluar de manera fiable la voz, la originalidad ni la calidad de escritura — usa siempre la retroalimentación de la IA para la mecánica y la estructura, no para las puntuaciones holísticas en criterios subjetivos. Mantén la evaluación sumativa final en manos de humanos.' },
+          ],
+        },
+        learningOutcomes: {
+          title: '¿La tutoría con IA mejora realmente los resultados de aprendizaje?',
+          content: [
+            '**Los estudiantes que usan sistemas de tutoría con IA superan a sus pares en la instrucción tradicional entre un 15 y un 35 % en evaluaciones estandarizadas en 21 estudios empíricos.**',
+            'La evidencia más sólida proviene de un ensayo controlado aleatorizado de 2024 liderado por Gregory Kestin y Kelly Miller en la Universidad de Harvard con 194 estudiantes de física. El estudio utilizó un diseño cruzado donde cada estudiante experimentó tanto la tutoría con IA como los métodos de aprendizaje activo tradicionales en dos temas. Hallazgos clave:',
+          ],
+          callouts: [
+            { type: '🔍', label: '¿Sabías que?', text: 'Los estudiantes mostraron mayor motivación y compromiso en las sesiones de tutoría con IA. El tamaño del efecto (0,73–1,3 DE) es equivalente a la ganancia de aprendizaje de pasar de un aula típica a una instrucción de primera clase.' },
+          ],
+          items: [
+            'Los estudiantes enseñados por IA lograron puntuaciones significativamente más altas en las pruebas posteriores — tamaño del efecto entre 0,73 y 1,3 desviaciones estándar',
+            'Tiempo promedio de aprendizaje: **49 minutos** (grupo IA) vs. **60 minutos** (grupo de aula)',
+            'Los estudiantes informaron de mayor motivación y compromiso en las sesiones de IA',
+            'Significación estadística: p < 10⁻⁸',
+            'Una revisión sistemática de 2025 de 21 estudios empíricos muestra que los estudiantes asistidos por IA superan a los grupos de control en evaluaciones en un 15–35 %, r = 0,781',
+          ],
+        },
+        integrityProblem: {
+          title: '¿Qué tan detectable es el engaño con IA en las escuelas?',
+          content: [
+            '**Las herramientas actuales de detección de IA tienen tasas de falsos positivos del 15–30 % en estudios revisados por pares, lo que significa que son poco fiables para decisiones de integridad académica de alto riesgo.**',
+            'La integridad académica es el desafío central en la educación asistida por IA. El alcance de la adopción ha superado tanto las políticas como la tecnología de detección. La adopción por parte de los estudiantes es generalizada: las encuestas informan que el 60–92 % de los estudiantes usan la IA para aprender, aunque las políticas institucionales sobre los usos permitidos varían considerablemente.',
+            'El problema de detección tiene tres capas críticas:',
+          ],
+          items: [
+            '**Falsos positivos** — los hablantes no nativos se marcan de forma desproporcionada; los estilos de escritura académica estructurada activan consistentemente las herramientas de detección',
+            '**Texto híbrido** — los borradores de IA editados significativamente por los estudiantes vencen a la mayoría de los sistemas de detección',
+            '**Brecha de políticas** — las universidades están pasando en 2026 de las prohibiciones absolutas a los marcos de transparencia y divulgación',
+          ],
+          callouts: [
+            { type: '⚠️', label: 'Advertencia', text: 'Los hablantes no nativos y los estudiantes con estilos de escritura estructurados se marcan de forma desproporcionada. Acusar a un estudiante únicamente basándose en la salida de detección de IA tiene un riesgo de error del 15–30 %.' },
+          ],
+        },
+        integrityCloser: {
+          content: [
+            'El consenso institucional emergente: las herramientas de detección de IA no son autoridades definitivas. Las universidades exigen cada vez más la revisión humana-automatizada y hacen cumplir las normas de divulgación en lugar de las normas de prohibición.',
+          ],
+        },
+        regulatoryContext: {
+          title: '¿Cómo afecta la Ley de IA de la UE a las escuelas?',
+          content: [
+            '**La Ley de IA de la UE clasifica los sistemas de IA en la educación como "de alto riesgo" — lo que significa que las herramientas que influyen en la calificación de exámenes, las rutas de aprendizaje o la evaluación de los estudiantes están sujetas a requisitos obligatorios de transparencia, supervisión humana y evitación de sesgos.**',
+            'Según el Anexo III de la Ley de IA de la UE, las herramientas de IA educativas que determinan el acceso a la educación o evalúan los resultados del aprendizaje se clasifican como sistemas de alto riesgo. Las escuelas y universidades que operan en la UE se consideran "proveedoras" de IA bajo la ley y tienen obligaciones legales, incluyendo:',
+          ],
+          items: [
+            'Garantizar la competencia en IA del personal (mandato del Artículo 4 — vigente desde 2025)',
+            'Implementar la supervisión humana para todas las decisiones de IA de alto riesgo que afecten a los estudiantes',
+            'Mantener registros de auditoría de las evaluaciones influenciadas por IA',
+            'Divulgar las fuentes de datos del sistema de IA y la lógica del modelo a los estudiantes a petición',
+          ],
+          callouts: [
+            { type: '📌', label: 'Punto clave', text: 'Las escuelas de la UE deben llevar a cabo formación en competencias de IA para todos los docentes y administradores que trabajen con sistemas de IA (Artículo 4, vigente desde 2025). El incumplimiento conlleva penalizaciones de hasta 30 millones de euros.' },
+          ],
+        },
+        regulatoryRegionalContext: {
+          title: 'Regulaciones globales de IA educativa',
+          content: [
+            'La Ley de IA de la UE prohíbe completamente los sistemas de reconocimiento de emociones en instituciones educativas — que afecta directamente a las herramientas que rastrean el compromiso de los estudiantes mediante el análisis facial. Las instituciones educativas chinas despliegan herramientas de IA bajo las Medidas Provisionales de China para la IA Generativa (2023), que requieren que el contenido educativo generado por IA se etiquete como tal. El Ministerio de Educación de Japón (MEXT) emitió directrices en 2023 que advierten sobre el uso de IA en ciertos contextos de evaluación, al tiempo que reconoce la IA como una competencia estudiantil central.',
+          ],
+        },
+        regionalContext: {
+          title: 'En el contexto hispanohablante: IA en escuelas e instituciones educativas',
+          content: [
+            '**El uso de IA en las escuelas e instituciones educativas de España y Latinoamérica requiere atención cuidadosa al cumplimiento de la protección de datos, las directrices regulatorias locales y la documentación para las autoridades educativas.**',
+            'La IA en el contexto educativo hispanohablante ofrece oportunidades y desafíos únicos:',
+          ],
+          items: [
+            '**España (LOPD-GDD y RGPD):** Si una escuela usa plataformas de IA (ChatGPT, Claude, Khanmigo) que procesan datos de los estudiantes, la escuela necesita un Acuerdo de Procesamiento de Datos (DPA) con el proveedor. Verifica si tu proveedor de herramientas ofrece DPAs para escuelas. La AEPD ha emitido guías específicas sobre el uso de IA en entornos educativos. Las soluciones locales o alojadas en la UE (Ollama con inferencia local, LM Studio) reducen significativamente los riesgos de privacidad.',
+            '**Latinoamérica:** Las regulaciones varían por país. Brasil tiene la LGPD, Colombia la Ley 1581, México la LFPDPPP y Argentina la Ley 25.326. En general, todas exigen informar al usuario sobre el uso de IA en contextos educativos y obtener el consentimiento adecuado. Consulta siempre la normativa local antes de desplegar herramientas de IA que procesen datos de estudiantes menores de edad.',
+            '**Documentación para las autoridades educativas:** Las autoridades educativas de España y muchos países latinoamericanos requieren cada vez más documentación de todos los usos de IA. Mantén registros de auditoría de todas las evaluaciones influenciadas por IA, almacena los prompts y la configuración, y documenta la formación sobre el uso de IA.',
+            '**Modelos locales para escuelas con presupuesto limitado:** Para escuelas con presupuesto limitado o altos requisitos de privacidad de datos, los modelos de código abierto locales (Ollama, LM Studio, llama.cpp) son una alternativa práctica. Requieren conocimientos básicos de TI pero ahorran costos y evitan la salida de datos fuera de la jurisdicción local.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Errores comunes al usar IA en la educación',
+          content: [
+            '**Estos cinco errores les cuestan tiempo a los docentes y pueden crear problemas legales o éticos — todos se solucionan fácilmente con el proceso correcto.**',
+          ],
+          items: [
+            '**Usar la IA como sustituto de la calificación en lugar de como herramienta de retroalimentación:** La IA genera puntuaciones de rúbrica plausibles pero no puede evaluar de manera fiable la originalidad, la voz ni la calidad de la argumentación en escritos más largos. Usa la IA para la retroalimentación formativa en trabajos de bajo riesgo; mantén la evaluación sumativa en manos de humanos.',
+            '**Prompts no estructurados para la planificación de lecciones:** "Crea una lección sobre la fotosíntesis" genera una salida genérica que requiere más tiempo de edición que escribir desde cero. Especifica siempre el nivel de grado, el conocimiento previo, las restricciones de tiempo y el formato de salida.',
+            '**Exceso de confianza en las herramientas de detección de IA para la integridad académica:** Las tasas de falsos positivos del 15–30 % significan que acusar a un estudiante únicamente basándose en la salida de detección de IA tiene un riesgo de error del 15–30 %. Los hablantes no nativos se marcan de forma desproporcionada.',
+            '**Ignorar las obligaciones de la Ley de IA de la UE para las escuelas de la UE:** Las herramientas de IA educativas que influyen en las rutas de aprendizaje o la evaluación son de alto riesgo bajo el Anexo III. Las escuelas de la UE que implementan estas herramientas sin la formación en competencias del personal del Artículo 4 no están en cumplimiento.',
+            '**Usar ajustes de temperatura alta para el contenido de las lecciones:** La temperatura predeterminada en la mayoría de las plataformas de IA (0,7–1,0) aumenta el riesgo de alucinación. Para el contenido factual de las lecciones, las rúbricas de evaluación y la generación de referencias, establece la temperatura en 0,1–0,2.',
+            '**No enseñar a los estudiantes cómo usar las herramientas de IA de manera eficaz:** Los estudiantes que escriben "escribe mi ensayo sobre la fotosíntesis" no aprenden nada. Los estudiantes que escriben "explica la fotosíntesis al nivel de octavo grado, luego hazme un examen sobre los tres conceptos clave" están aprendiendo activamente. Crea una plantilla de prompt para el aula que los estudiantes deban usar para todas las interacciones con IA.',
+          ],
+          callouts: [
+            { type: '🛠️', label: 'Mejor práctica', text: 'Documenta todo el uso de IA: qué herramienta, qué configuración (temperatura, contexto) y qué tarea. Esto crea un rastro de auditoría para el cumplimiento y te ayuda a mejorar con el tiempo.' },
+          ],
+        },
+        relatedReading: {
+          title: 'Lectura relacionada',
+          items: [
+            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — los principios fundamentales detrás de las instrucciones de IA eficaces',
+            '[Escribe mejor código con IA](/prompt-engineering/write-better-code-with-ai?lang=es) — cómo los prompts estructurados generan salidas de IA fiables — aplicable a la planificación de lecciones y la generación de evaluaciones',
+            '[Limitaciones de la IA — Qué no pueden hacer los LLMs](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es) — por qué la alucinación de IA afecta a las herramientas para docentes y cómo diseñar alrededor de ella',
+            '[Investigación con IA](/prompt-engineering/ai-powered-research?lang=es) — flujos de trabajo de validación para contenido generado por IA, aplicables a tareas de investigación de estudiantes y docentes',
+            '[Persona Prompting](/prompt-engineering/persona-prompting?lang=es) — cómo las definiciones de rol como "docente de matemáticas de quinto grado con experiencia" cambian la calidad y la coherencia de la salida de IA',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=es) — la técnica de razonamiento detrás de los tutores de IA socráticos como Khanmigo',
+            '[Prompting restringido](/prompt-engineering/constrained-prompting?lang=es) — esencial para controlar el formato de salida de IA en los materiales de las lecciones',
+            '[5 bloques de construcción que necesita cada prompt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — la estructura universal de prompts sobre la que se construye el framework de prompts para docentes',
+          ],
+        },
+        howToStart: {
+          title: 'Paso a paso: Integrar IA en tu enseñanza',
+          content: [
+            '**Sigue estos cinco pasos para integrar la IA en tu enseñanza sin interrumpir los resultados de aprendizaje ni violar los estándares de integridad académica.**',
+          ],
+          numberedItems: [
+            'Define los objetivos de aprendizaje y las evaluaciones antes de introducir la IA.',
+            'Usa la IA para práctica personalizada y retroalimentación inmediata, no para juicios de calificación.',
+            'Enseña a los estudiantes cómo verificar los resultados de la IA y detectar alucinaciones.',
+            'Crea una plantilla de prompt estructurada que los estudiantes usen para todas las interacciones con IA.',
+            'Establece directrices claras sobre el uso de la IA para tareas específicas.',
+          ],
+        },
+        faq: {
+          title: 'Preguntas frecuentes',
+          items: [],
+          faqs: [
+            {
+              q: '¿Mejoran los tutores de IA realmente los resultados de aprendizaje?',
+              a: 'Sí — la evidencia es sólida. Un ensayo controlado aleatorizado de Harvard de 2024 con 194 estudiantes de física encontró que la tutoría con IA produjo efectos de 0,73–1,3 DE sobre las aulas de aprendizaje activo, con los estudiantes logrando puntuaciones más altas en 49 minutos frente a 60 minutos de tiempo de clase (p < 10⁻⁸). Una revisión sistemática de 2025 de 21 estudios muestra que los estudiantes asistidos por IA superan los métodos de enseñanza tradicionales en un 15–35 %.',
+            },
+            {
+              q: '¿Cuál es la mejor herramienta de IA para docentes en 2026?',
+              a: 'La respuesta depende de la tarea. Khanmigo (Khan Academy, impulsado por GPT-4) es el más potente para la tutoría estudiantil mediante el cuestionamiento socrático a 44 USD al año. MagicSchool lidera en herramientas completas de flujo de trabajo para docentes (planes de lección, PEIs, comunicación con padres). ChatGPT (GPT-4o, OpenAI) ofrece la creación de contenido universal más flexible. Para el análisis de planes de estudio complejos, Claude Sonnet 4.6 (Anthropic) maneja 1.000.000 de tokens — aproximadamente 800 páginas estándar — en una sola sesión.',
+            },
+            {
+              q: '¿Cuánto tiempo puede ahorrarles la IA a los docentes por semana?',
+              a: 'Los prompts específicos y ricos en contexto ahorran a los docentes entre 5 y 13 horas por semana en planificación de lecciones y tareas administrativas cuando se usan de forma coherente. Las aplicaciones de ahorro de tiempo más comunes son: investigación y recopilación de contenido (44 % de los docentes), creación de planes de lección (38 %), resumen de información (38 %) y creación de materiales de clase (37 %).',
+            },
+            {
+              q: '¿Es legal la IA en la educación bajo las regulaciones de la UE?',
+              a: 'Los sistemas de IA que influyen en la evaluación del aprendizaje o las rutas de aprendizaje se clasifican como de alto riesgo en la Ley de IA de la UE (Anexo III). Las escuelas de la UE deben llevar a cabo formación en competencias de IA para el personal docente (Artículo 4, vigente desde 2025), mantener supervisión humana para las evaluaciones influenciadas por IA y gestionar registros de auditoría. La IA de reconocimiento de emociones en instituciones educativas está completamente prohibida.',
+            },
+            {
+              q: '¿El software de detección de IA detecta de manera fiable el engaño académico?',
+              a: 'No — las herramientas actuales de detección de IA tienen tasas de falsos positivos del 15–30 % en estudios revisados por pares. Los hablantes no nativos y los estudiantes que escriben en estilos académicos estructurados se marcan de forma desproporcionada. Las universidades están pasando en 2026 de políticas de prohibición a marcos de divulgación y citación, tratando la detección de IA como un dato más entre varios en lugar de una prueba definitiva.',
+            },
+            {
+              q: '¿Qué ajuste de temperatura deberían usar los docentes para la planificación de lecciones con IA?',
+              a: 'Establece la temperatura en 0,1–0,2 para el contenido factual de las lecciones — planes de lección, rúbricas de evaluación, alineación curricular. Esto produce salidas consistentes y de baja variación. Usa 0,7–0,9 solo al generar ideas de actividades creativas donde las opciones diversas son el objetivo. La temperatura predeterminada en la mayoría de las plataformas (0,7–1,0) está diseñada para tareas creativas y aumenta los errores factuales en el contenido de las lecciones.',
+            },
+            {
+              q: '¿Pueden las herramientas de IA ayudar con la instrucción diferenciada?',
+              a: 'Sí — este es uno de los usos más potentes de la IA en la educación. Los LLMs pueden reescribir el mismo contenido en múltiples niveles de lectura en segundos. Estructura del prompt: "Reescribe esta sección para el nivel de grado [N]. Conserva todo el contenido factual. Reemplaza el vocabulario complejo con equivalentes más simples. Mantén la misma estructura de párrafo." Claude Sonnet 4.6 produce la diferenciación más coherente en todos los niveles de lectura.',
+            },
+            {
+              q: '¿Cómo deberían las escuelas manejar la competencia en IA para el personal docente bajo la Ley de IA de la UE?',
+              a: 'El Artículo 4 de la Ley de IA de la UE requiere que los proveedores de IA (incluidas las escuelas) garanticen suficiente competencia en IA para todo el personal que trabaje con sistemas de IA — vigente desde 2025. Esto significa formación en: cómo la IA toma decisiones, qué tasas de error tienen las herramientas específicas, cuándo se requiere la supervisión humana y cómo documentar las decisiones influenciadas por IA.',
+            },
+            {
+              q: '¿Qué es Khanmigo y en qué se diferencia de ChatGPT para los estudiantes?',
+              a: 'Khanmigo es el asistente de tutoría con IA de Khan Academy, impulsado por GPT-4. Su característica definitoria es el cuestionamiento socrático — guía a los estudiantes hacia las respuestas en lugar de dárselas directamente. ChatGPT proporciona respuestas directas de forma predeterminada, lo que es eficiente pero reduce el esfuerzo cognitivo que produce el aprendizaje a largo plazo.',
+            },
+            {
+              q: '¿Cómo creo una política de uso de IA para mi escuela?',
+              a: 'Una política escolar de uso de IA eficaz define cuatro cosas: (1) qué tareas permiten la IA (lluvia de ideas, problemas de práctica, borradores de retroalimentación), (2) qué tareas requieren divulgación (ensayos asistidos por IA, presentaciones), (3) qué tareas prohíben la IA (respuestas finales de exámenes, plagio), (4) cómo se deben citar los contenidos generados por IA. La política debe revisarse cada 6 meses.',
+            },
+            {
+              q: '¿Debo cumplir con el RGPD al usar herramientas de IA para docentes?',
+              a: 'Sí — si tu escuela está en la UE o el EEE y las herramientas de IA procesan datos de los estudiantes, debes cumplir con el RGPD. El punto crítico es el Artículo 28: si la plataforma de IA actúa como procesador de datos, necesitas un DPA. Para escuelas en España, la LOPD-GDD se aplica con obligaciones adicionales; consulta la AEPD para orientación específica sobre el uso de IA en entornos educativos.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Fuentes y lecturas adicionales',
+          content: [
+            '**Todas las estadísticas y hallazgos en este artículo provienen de investigaciones revisadas por pares, directrices gubernamentales oficiales y políticas institucionales documentadas.** Última verificación de hechos: 2026-04-28.',
+          ],
+          items: [
+            '[Kestin & Miller, 2024. "AI Tutoring Outperforms Active Learning Classrooms — Harvard RCT"](https://www.nature.com/articles/s41598-025-97652-6) — ensayo controlado aleatorizado con 194 estudiantes; tamaño del efecto 0,73–1,3 DE',
+            '[Kwak, 2025. "The Effectiveness of AI-Driven Tools in Improving Student Learning Outcomes"](https://iacis.org/iis/2025/4_iis_2025_233-247.pdf) — revisión sistemática de 21 estudios; ganancias de rendimiento del 15–35 %; r = 0,781',
+            '[Ley de IA de la UE, 2024. Anexo III — Sistemas de IA de alto riesgo en la educación](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) — clasifica la IA de evaluación educativa como de alto riesgo con requisitos de supervisión obligatorios',
+          ],
+        },
+      },
+    },
+
     fr: {
   freshness_tier: 'annual',
   theme: 'Use Cases',

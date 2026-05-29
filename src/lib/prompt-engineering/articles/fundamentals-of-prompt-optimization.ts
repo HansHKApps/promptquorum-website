@@ -975,6 +975,467 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-10-02',
+      theme: 'Fundamentals',
+      title: 'Cómo optimizar prompts: técnicas y mejores prácticas de optimización de prompts',
+      seoTitle: 'Cómo optimizar prompts en 2026: 6 palancas y proceso de 6 pasos',
+      intro: '**La optimización de prompts es el proceso iterativo de revisar un prompt para mejorar la calidad, consistencia o precisión de la salida de IA.** Esta guía completa enseña técnicas de optimización de prompts y fundamentos: las 6 palancas principales, un proceso de optimización de 6 pasos comprobado, ejemplos antes/después para GPT-4o, Claude y Gemini, y los 7 errores más comunes a evitar al optimizar prompts.',
+      metaDescription: 'Mejora la calidad de la salida de IA un 20–40% usando 6 palancas y un proceso de 6 pasos. Ejemplos antes/después para GPT-4o, Claude y Gemini — funciona en todos los modelos principales.',
+      publishDate: '2026-04-02',
+      dateModified: '2026-04-04',
+      readTime: '14 min de lectura',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Optimización de prompts',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        proficiencyLevel: 'Beginner to Intermediate',
+        dependencies: 'Basic understanding of LLMs and prompt structure',
+        headline: 'Cómo optimizar prompts: técnicas y mejores prácticas de optimización de prompts',
+        description: 'Aprende técnicas y mejores prácticas de optimización de prompts: 6 palancas principales, proceso de 6 pasos, ejemplos antes/después. Cómo mejorar prompts de IA en GPT-4o, Claude, Gemini — fundamentos para todos los modelos.',
+        datePublished: '2026-04-02',
+        dateModified: '2026-04-04',
+        keywords: ['optimización de prompts', 'técnicas de optimización de prompts', 'cómo optimizar prompts', 'mejorar prompts de IA', 'fundamentos de prompt engineering', 'optimización de LLM', 'GPT-4o', 'Claude', 'Gemini', 'few-shot prompting', 'chain-of-thought'],
+        mentions: [
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude Opus 4.7' },
+          { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
+          { '@type': 'Thing', name: 'Ollama' },
+          { '@type': 'Thing', name: 'LM Studio' },
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Optimización de prompts' },
+          { '@type': 'Thing', name: 'Few-shot prompting' },
+          { '@type': 'Thing', name: 'Chain-of-thought prompting' },
+          { '@type': 'Thing', name: 'Calidad de salida de LLM' },
+          { '@type': 'Thing', name: 'Prompt engineering de IA' },
+        ],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
+        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization?lang=es',
+        inLanguage: 'es',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Las 6 palancas de optimización de prompts',
+        description: 'Las seis variables independientes que determinan la calidad de la salida de IA — cada una puede ajustarse para corregir un modo de fallo específico del prompt.',
+        numberOfItems: 6,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Especificidad', description: 'Qué tan precisamente se define la tarea. Movimiento de optimización: reescribir el objetivo vago como una instrucción exacta. Ejemplo: \'Resumir\' → \'Lista 3 hallazgos clave en ≤20 palabras cada uno\'.' },
+          { '@type': 'ListItem', position: 2, name: 'Contexto', description: 'Información con la que el modelo debe trabajar. Movimiento de optimización: añadir antecedentes, audiencia y restricciones. Ejemplo: \'Escribe un informe\' → \'Escribe un informe para un CFO no técnico\'.' },
+          { '@type': 'ListItem', position: 3, name: 'Ejemplos', description: 'Comprensión del modelo sobre el formato de salida deseado. Movimiento de optimización: añadir 1–3 pares entrada/salida (few-shot). Muestra el formato exacto que quieres, una vez.' },
+          { '@type': 'ListItem', position: 4, name: 'Restricciones', description: 'Límites en lo que el modelo puede generar. Movimiento de optimización: añadir prohibiciones explícitas. Ejemplo: \'No uses jerga. Máximo 150 palabras\'.' },
+          { '@type': 'ListItem', position: 5, name: 'Formato de salida', description: 'Estructura de la respuesta. Movimiento de optimización: especificar el formato explícitamente. Ejemplo: \'Responde en JSON: {título, resumen, etiquetas[]}\'.' },
+          { '@type': 'ListItem', position: 6, name: 'Rol/persona', description: 'Nivel de experiencia que adopta el modelo. Movimiento de optimización: añadir un rol específico. Ejemplo: \'Actúa como analista de datos senior en una empresa B2B SaaS\'.' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Cómo optimizar un prompt en 6 pasos',
+        description: 'Un proceso sistemático de 6 pasos para diagnosticar fallos de prompts y mejorar la calidad de la salida de IA en GPT-4o, Claude y Gemini.',
+        totalTime: 'PT30M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Establecer una línea base', text: 'Ejecuta el prompt actual 3 veces con entradas representativas. Documenta el modo de fallo: formato incorrecto, alucinación, salida vaga o respuesta fuera de tema.' },
+          { '@type': 'HowToStep', position: 2, name: 'Identificar la palanca raíz', text: 'Mapea el fallo a una de las 6 palancas: especificidad, contexto, ejemplos, restricciones, formato de salida o rol/persona.' },
+          { '@type': 'HowToStep', position: 3, name: 'Cambiar solo una variable', text: 'Realiza un único cambio dirigido a la palanca identificada. No cambies múltiples variables simultáneamente — no puedes diagnosticar la mejora si cambian varias cosas.' },
+          { '@type': 'HowToStep', position: 4, name: 'Probar en múltiples modelos', text: 'Ejecuta el prompt revisado en GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro. Un prompt que solo funciona en un modelo es frágil.' },
+          { '@type': 'HowToStep', position: 5, name: 'Medir contra criterios de calidad', text: 'Comprueba la precisión de la tarea, el cumplimiento del formato, el anclaje factual, la consistencia en 3 ejecuciones y el acuerdo entre modelos.' },
+          { '@type': 'HowToStep', position: 6, name: 'Guardar en una biblioteca de prompts', text: 'Documenta qué cambió y por qué funcionó. Versiona el prompt optimizado. Un prompt probado es un activo reutilizable duradero.' },
+        ],
+      },
+      leadAnswerBlock: '**La optimización de prompts es el proceso iterativo de revisar un prompt existente para mejorar la calidad, precisión o consistencia de la salida.** Las 6 palancas de optimización — especificidad, contexto, ejemplos, restricciones, formato de salida y rol/persona — son las variables independientes que ajustas. Cambia una variable por iteración, prueba en múltiples modelos y mide los resultados. Este enfoque sistemático elimina las conjeturas del refinamiento de prompts.',
+      quickFacts: [
+        '**Mejora del 20–40%:** pasar de un prompt sin optimizar a uno optimizado típicamente mejora la precisión de la tarea en este rango en tareas estructuradas (clasificación, extracción, generación de JSON)',
+        '**6 palancas principales:** especificidad, contexto, ejemplos, restricciones, formato de salida y rol/persona — estas son las únicas variables que necesitas ajustar',
+        '**2–4 iteraciones suficientes:** la mayoría de las tareas alcanzan una calidad aceptable en 2–4 iteraciones dirigidas antes de que se establezcan los rendimientos decrecientes',
+        '**Pruebas multi-modelo requeridas:** un prompt que funciona en GPT-4o pero falla en Claude es frágil — prueba en ≥2 modelos para confirmar la robustez',
+        '**Costo del fine-tuning:** el fine-tuning es 50–100× más lento y costoso que la optimización de prompts — siempre agota la optimización primero',
+      ],
+      toc: [
+        { label: 'Puntos clave', anchor: 'key-takeaways' },
+        { label: 'Puntos clave para usuarios de LLM local', anchor: 'key-takeaways-for-local-llm-users' },
+        { label: '¿Qué es la optimización de prompts?', anchor: 'what-is-prompt-optimization' },
+        { label: 'Optimización de prompts vs prompt engineering', anchor: 'prompt-optimization-vs-prompt-engineering' },
+        { label: 'Por qué importa la optimización de prompts', anchor: 'why-prompt-optimization-matters' },
+        { label: 'Las 6 palancas de optimización', anchor: 'the-6-optimization-levers' },
+        { label: 'El proceso de optimización de 6 pasos', anchor: 'the-6-step-optimization-process' },
+        { label: 'Cómo medir la calidad del prompt', anchor: 'how-to-measure-prompt-quality' },
+        { label: '¿Cómo se ve la optimización de prompts en la práctica?', anchor: 'what-does-prompt-optimization-look-like-in-practice' },
+        { label: 'Consejos de optimización específicos por modelo', anchor: 'model-specific-optimization-tips' },
+        { label: 'Optimización de prompts para LLMs locales', anchor: 'optimizing-prompts-for-local-llms-ollama-lm-studio' },
+        { label: 'Los 7 errores de optimización más comunes', anchor: 'the-7-most-common-optimization-mistakes' },
+        { label: 'Técnicas de optimización de prompts: métodos avanzados', anchor: 'prompt-optimization-techniques-advanced-methods' },
+        { label: 'Guardar prompts optimizados en una biblioteca', anchor: 'saving-optimized-prompts-to-a-library' },
+        { label: 'Cumplimiento regulatorio', anchor: 'prompt-optimization-and-regulatory-compliance' },
+        { label: 'Idiomas y regiones', anchor: 'prompt-optimization-across-languages-and-regions' },
+        { label: '¿Qué significan estos términos de optimización de prompts?', anchor: 'what-do-these-prompt-optimization-terms-mean' },
+        { label: 'Lecturas relacionadas', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq-prompt-optimization' },
+      ],
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          { '@type': 'Question', name: '¿Qué es la optimización de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización de prompts es el proceso iterativo de revisar un prompt existente para mejorar la calidad de la salida de IA para una tarea específica. Implica identificar un modo de fallo (formato incorrecto, alucinación, salida vaga), cambiar una variable (especificidad, contexto, ejemplos, restricciones, formato de salida o rol) y probar el resultado en modelos como GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro.' } },
+          { '@type': 'Question', name: '¿Cuál es la diferencia entre la optimización de prompts y el prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'El prompt engineering es la disciplina de diseñar una estructura de prompt desde cero usando bloques de construcción como objetivo, contexto y formato de salida. La optimización de prompts es el subproceso iterativo de mejorar un prompt ya escrito diagnosticando modos de fallo y aplicando cambios dirigidos. Necesitas el prompt engineering para crear un punto de partida; usas la optimización de prompts para refinarlo.' } },
+          { '@type': 'Question', name: '¿Cuántas iteraciones se necesitan para optimizar un prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Para la mayoría de las tareas, 2–4 iteraciones dirigidas son suficientes para pasar de un prompt fallido a uno fiable. Cada iteración debe cambiar una variable y probarse en 3–5 entradas representativas. Los rendimientos decrecientes se establecen después de 5–6 iteraciones — si un prompt no se ha estabilizado para entonces, puede ser necesario revisar la propia definición de la tarea.' } },
+          { '@type': 'Question', name: '¿Qué palanca debo cambiar primero al optimizar un prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Empieza con el formato de salida. El incumplimiento del formato — recibir un párrafo cuando querías una tabla, o texto plano cuando necesitabas JSON — es el modo de fallo más común y más rápido de corregir. Especifica la estructura exacta que quieres, luego aborda otros problemas (precisión, tono, alcance) en iteraciones posteriores.' } },
+          { '@type': 'Question', name: '¿Funciona la optimización de prompts en todos los modelos de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, pero con ajustes específicos del modelo. Las seis palancas de optimización principales (especificidad, contexto, ejemplos, restricciones, formato de salida, rol) se aplican a GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y Mistral Large. Sin embargo, cada modelo responde de manera diferente a la densidad de instrucciones — Claude maneja mejor instrucciones más largas y de múltiples partes; GPT-4o responde bien a system prompts estructurados; Gemini se beneficia de encabezados de sección explícitos.' } },
+          { '@type': 'Question', name: '¿Cuál es el error más común en la optimización de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Cambiar múltiples variables simultáneamente. Si añades ejemplos, cambias el formato de salida y añades una instrucción de rol en la misma revisión, no puedes determinar qué cambio mejoró (o degradó) la salida. La optimización efectiva cambia una variable por iteración.' } },
+          { '@type': 'Question', name: '¿Puede la optimización de prompts reducir las alucinaciones de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, con las técnicas correctas. Añadir contexto de anclaje ("Basa tu respuesta solo en el siguiente documento"), ejemplos few-shot con salidas factualmente correctas y restricciones explícitas ("No inventes cifras — usa solo datos del texto proporcionado") reduce de forma fiable las tasas de alucinación. El self-consistency prompting — generando múltiples salidas y devolviendo la más común — reduce aún más las fabricaciones de baja probabilidad.' } },
+          { '@type': 'Question', name: '¿Cuándo debo usar el fine-tuning en lugar de la optimización de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Usa el fine-tuning cuando la optimización de prompts haya alcanzado un techo — típicamente cuando el comportamiento requerido es muy específico del dominio, requiere una voz estilística consistente en miles de salidas, o depende de conocimiento que no está en el entrenamiento del modelo base. La optimización de prompts es más rápida y barata y siempre debe agotarse antes del fine-tuning.' } },
+          { '@type': 'Question', name: '¿Cómo sé cuándo un prompt está completamente optimizado?', acceptedAnswer: { '@type': 'Answer', text: 'Un prompt está suficientemente optimizado cuando: (1) produce salida correcta en 4–5 entradas representativas, (2) produce salida consistente en re-ejecuciones, (3) funciona en al menos dos modelos (ej. GPT-4o y Claude), y (4) cumple la especificación de formato sin post-procesamiento. Los prompts perfectos no existen — "optimizado" significa suficientemente fiable para el caso de uso.' } },
+          { '@type': 'Question', name: '¿Se aplica la optimización de prompts a los prompts de imágenes (texto a imagen)?', acceptedAnswer: { '@type': 'Answer', text: 'Los principios se aplican — especificidad, restricciones y ejemplos (imágenes de referencia) son palancas válidas para modelos de imágenes como DALL-E 3 y Stable Diffusion. Sin embargo, la mecánica difiere: los modelos de imágenes responden a modificadores de estilo, especificaciones de relación de aspecto y prompts negativos como restricciones. El proceso de optimización (línea base → diagnosticar → cambiar una variable → probar) es idéntico.' } },
+          { '@type': 'Question', name: '¿Qué es la optimización automática de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización automática de prompts usa un segundo modelo de IA (o el mismo modelo en un bucle de meta-prompting) para reescribir y mejorar prompts sin intervención humana. Herramientas como DSPy (Stanford), TextGrad y APE (Automatic Prompt Engineer) generan prompts candidatos, los puntúan contra una métrica y seleccionan la mejor variante. La optimización manual es más rápida para tareas bien entendidas; la automática escala mejor cuando tienes datos de evaluación etiquetados.' } },
+          { '@type': 'Question', name: '¿En qué se diferencia la optimización de prompts del prompt tuning?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización de prompts mejora los prompts de texto discreto — las instrucciones que escribes en lenguaje natural — sin modificar los pesos del modelo. El prompt tuning (introducido por Lester et al., 2021) aprende vectores de prompt suave continuos que se anteponen a la entrada y se entrenan por descenso de gradiente. El prompt tuning requiere cómputo y datos de entrenamiento; la optimización de prompts no requiere ninguno.' } },
+          { '@type': 'Question', name: '¿Cuáles son las mejores herramientas para la optimización de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Las herramientas más utilizadas son: PromptQuorum (despacha un prompt a GPT-4o, Claude y Gemini simultáneamente para comparación lado a lado), DSPy (optimización programática de prompts con selección automática basada en métricas), LangSmith (versionado de prompts, pruebas A/B y rastreo para pipelines de LangChain), Promptfoo (CLI open-source para ejecutar prompts contra casos de prueba) y PromptLayer (versionado y análisis de prompts).' } },
+          { '@type': 'Question', name: '¿Cómo optimizo un system prompt?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización del system prompt sigue el mismo proceso de 6 pasos que la optimización del prompt de usuario, con dos restricciones adicionales. Primero, los system prompts persisten en todos los turnos — una instrucción demasiado específica puede degradar el rendimiento en entradas que no anticipaste. Prueba en 5–10 entradas representativas diversas. Segundo, la longitud del system prompt importa: los system prompts muy largos (>2.000 tokens) pueden reducir el seguimiento de instrucciones en turnos posteriores del usuario en algunos modelos.' } },
+          { '@type': 'Question', name: '¿Se puede usar ChatGPT para optimizar prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Puedes pedirle a GPT-4o que reescriba un prompt proporcionando el prompt fallido y describiendo el modo de fallo: "Este prompt produce salida demasiado vaga. Reescríbelo para requerir una respuesta estructurada de 3 viñetas." Esto es una forma de meta-prompting. La limitación es que GPT-4o optimizará para lo que considera mejor, no necesariamente para tus criterios de evaluación específicos.' } },
+          { '@type': 'Question', name: '¿Qué es la optimización de prompts en machine learning?', acceptedAnswer: { '@type': 'Answer', text: 'En contextos de machine learning, la optimización de prompts se refiere a técnicas que mejoran los prompts alimentados en modelos de lenguaje como parte de un pipeline — sin reentrenar el modelo. Esto incluye tanto la optimización de prompts discretos (reescritura de instrucciones en lenguaje natural) como el prompt tuning continuo (aprendizaje de embeddings de tokens suaves mediante descenso de gradiente).' } },
+          { '@type': 'Question', name: '¿Cuánto mejora la optimización de prompts la calidad de la salida de IA?', acceptedAnswer: { '@type': 'Answer', text: 'El rango de mejora depende de qué tan mal optimizado esté el prompt de línea base. En evaluaciones controladas, pasar de un prompt sin optimizar a uno bien optimizado típicamente mejora la precisión de la tarea en un 20–40% en tareas estructuradas y un 15–25% en tareas abiertas. Las mayores ganancias provienen de especificar el formato de salida y añadir 1–2 ejemplos few-shot. El Prompt Report de Schulhoff et al. 2024 documenta ganancias consistentes del 10–30%.' } },
+          { '@type': 'Question', name: '¿Debo optimizar los prompts para cada modelo de IA por separado?', acceptedAnswer: { '@type': 'Answer', text: 'Empieza con una optimización agnóstica al modelo — aplica las 6 palancas y prueba en GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro. Un prompt bien estructurado típicamente funciona bien en los tres. Solo añade variantes específicas del modelo si las pruebas entre modelos revelan resultados divergentes.' } },
+          { '@type': 'Question', name: '¿Cuál es la diferencia entre la optimización de prompts y RAG?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización de prompts mejora las instrucciones y la estructura de un prompt. RAG (Retrieval-Augmented Generation) mejora la información disponible para el modelo en el tiempo de inferencia recuperando documentos relevantes e insertándolos en el contexto del prompt. Los dos son complementarios: RAG resuelve el problema de que el modelo no tiene los hechos correctos; la optimización de prompts resuelve el problema de que el modelo no procesa correctamente esos hechos.' } },
+          { '@type': 'Question', name: '¿Cómo optimizo prompts específicamente para GPT-4o?', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o responde bien a cuatro movimientos de optimización: (1) Solicitudes de formato JSON explícitas en el system prompt. (2) Encabezados Markdown en system prompts — usa secciones H2 (## Rol, ## Tarea, ## Formato de salida). (3) Restricciones estrictas — GPT-4o tiende a sobre-explicar sin restricciones de palabras/longitud. (4) Encuadre de uso de herramientas — para tareas que implican recuperación o cálculo, enmarca el prompt como una definición de función cuando uses la API de Asistentes.' } },
+        ],
+      },
+      sections: {
+
+        tldr: {
+          title: 'Puntos clave',
+          isTldr: true,
+          items: [
+            'Optimización de prompts = revisión iterativa de un prompt existente para mejorar la calidad de la salida',
+            'Las 6 palancas: **especificidad**, **contexto**, **ejemplos**, **restricciones**, **formato de salida**, **rol/persona**',
+            'Cambia una palanca a la vez — aislar variables es cómo encuentras lo que realmente funciona',
+            'Prueba en ≥2 modelos (GPT-4o, Claude, Gemini) para confirmar que la mejora es agnóstica al modelo',
+            'Modo de fallo común: cambiar demasiadas variables a la vez hace imposible el diagnóstico',
+            'Un prompt probado y optimizado es un activo duradero — guárdalo en una biblioteca de prompts',
+          ],
+        },
+
+        localLLMTldr: {
+          title: 'Puntos clave para usuarios de LLM local',
+          items: [
+            'La optimización de prompts es más crítica para los modelos locales — los modelos cuantizados (4-bit, 8-bit) son más sensibles a las instrucciones ambiguas que las APIs de frontier en la nube',
+            'Ollama y LM Studio admiten las mismas 6 palancas de optimización; la diferencia es que los modelos más pequeños (LLaMA 3.1 8B, Mistral 7B) requieren restricciones más explícitas y ventanas de contexto más cortas',
+            'Los modelos cuantizados tienen menor capacidad de seguimiento de instrucciones — usa prompts más simples y prescriptivos con formato de salida explícito y menos restricciones simultáneas',
+            'Los valores predeterminados de temperatura difieren: Ollama por defecto es 0.8 (mayor creatividad, menor consistencia); establece la temperatura en 0.1–0.3 para tareas de salida estructurada que requieren consistencia',
+            'Los modelos locales no pueden probarse contra una línea base en la nube — usa PromptQuorum para comparar tu prompt local optimizado con GPT-4o y Claude para cuantificar la brecha de calidad',
+          ],
+        },
+
+        definition: {
+          title: '¿Qué es la optimización de prompts?',
+          content: [
+            '**La optimización de prompts es el proceso iterativo de revisar un prompt existente para mejorar la calidad, precisión o consistencia de la salida de IA para una tarea específica.** Se aplica a todos los modelos principales — GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos ejecutados localmente via Ollama o LM Studio. Donde el prompt engineering diseña la estructura inicial del prompt, la optimización de prompts diagnostica qué está fallando y aplica cambios dirigidos hasta que la salida cumpla un estándar definido.',
+            'La optimización de prompts es un subproceso del prompt engineering. Siempre empiezas con un prompt que funciona y realizas un cambio a la vez. Este aislamiento de variables es lo que hace posible el diagnóstico — cuando revisas la especificidad, el formato de salida y las restricciones simultáneamente, no puedes determinar qué cambio mejoró el resultado.',
+            'Por qué importa: el mismo modelo produce salidas radicalmente diferentes de prompts casi idénticos. La diferencia entre "más o menos correcto" y "fiablemente correcto" no es suerte — es optimización sistemática. Para la validación multi-modelo, [PromptQuorum](/features) ejecuta un prompt optimizado en 25+ modelos de IA simultáneamente para confirmar la consistencia entre proveedores.',
+          ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'La optimización de prompts es el proceso sistemático de diagnosticar por qué falla un prompt y arreglar una variable a la vez hasta que la salida cumpla tus criterios de calidad.' },
+          ],
+        },
+
+        vsPromptEngineering: {
+          title: 'Optimización de prompts vs prompt engineering',
+          content: [
+            '**La optimización de prompts y el prompt engineering son disciplinas complementarias que trabajan en secuencia.** El prompt engineering diseña un prompt desde cero usando bloques de construcción (objetivo, contexto, ejemplos, restricciones, formato de salida, rol). La optimización de prompts toma un prompt existente y lo mejora mediante revisión iterativa. Necesitas ambos: el prompt engineering te lleva a "funciona"; la optimización de prompts te lleva a "fiable".',
+            'Piénsalo así: el prompt engineering construye la estructura; la optimización de prompts la refina. El prompt engineering pregunta "¿qué elementos debería tener este prompt?" La optimización de prompts pregunta "¿por qué falla este prompt, y qué único cambio lo arreglará?" La distinción importa porque las estrategias son diferentes.',
+          ],
+          columns: ['Dimensión', 'Prompt Engineering', 'Optimización de prompts'],
+          rows: [
+            { 'Dimensión': 'Punto de partida', 'Prompt Engineering': 'Página en blanco', 'Optimización de prompts': 'Prompt existente' },
+            { 'Dimensión': 'Objetivo', 'Prompt Engineering': 'Diseñar la estructura', 'Optimización de prompts': 'Mejorar la salida' },
+            { 'Dimensión': 'Método', 'Prompt Engineering': 'Frameworks, bloques de construcción', 'Optimización de prompts': 'Aislar, cambiar, probar, medir' },
+          ],
+        },
+
+        whyOptimize: {
+          title: 'Por qué importa la optimización de prompts',
+          content: [
+            '**La optimización de prompts elimina las salidas inconsistentes de IA diagnosticando sistemáticamente qué falla y arreglando una variable a la vez.** Un prompt vago produce una salida vaga. Un prompt mal especificado produce una respuesta fuera del objetivo. Antes/después real: un prompt sin optimizar dice "Resume este artículo." Ejecutado 3 veces en el mismo artículo, produce salidas totalmente diferentes. Después de la optimización — añadir formato de salida ("3 viñetas, ≤20 palabras cada una"), un rol ("analista") y especificidad ("Lista los 3 hallazgos clave, no la metodología") — el mismo prompt produce resultados consistentes y en especificación las 3 veces, en GPT-4o, Claude y Gemini.',
+            '**Para las organizaciones de la UE, la optimización sistemática de prompts es un requisito de cumplimiento, no solo una mejor práctica.** La Ley de IA de la UE (2024) requiere que los sistemas de IA de alto riesgo documenten cómo se toman las decisiones de IA y demuestren salidas consistentes y probables. Una biblioteca de prompts con control de versiones y historial de optimización documentado satisface este requisito de rastro de auditoría. Ver [Geopolítica e IA](/prompt-engineering/geopolitics-and-ai?lang=es) para el contexto completo de cumplimiento regulatorio.',
+          ],
+        },
+
+        callout1: {
+          blockquote: 'Añadir una instrucción de chain-of-thought — pedir al modelo que razone paso a paso antes de responder — mejoró la precisión en benchmarks de aritmética de múltiples pasos del 17.9% al 56.9% en un modelo de 540B parámetros. Un único cambio dirigido a la estructura del prompt, sin reentrenamiento del modelo, produjo una ganancia de precisión de 3x.',
+          blockquoteSource: 'Jason Wei et al., Google Brain. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arxiv.org/abs/2201.11903',
+        },
+
+        sixLevers: {
+          title: 'Las 6 palancas de optimización',
+          content: [
+            '**Cada prompt consiste en seis variables independientes que puedes ajustar para mejorar la salida.** Estas son las "palancas" de la optimización. Cuando un prompt falla, el fallo se remonta a una o más de estas palancas que no están configuradas correctamente.',
+          ],
+          columns: ['Palanca', 'Qué cambia', 'Movimiento de optimización', 'Ejemplo'],
+          rows: [
+            { 'Palanca': 'Especificidad', 'Qué cambia': 'Qué tan precisamente se define la tarea', 'Movimiento de optimización': 'Reescribir el objetivo vago como instrucción exacta', 'Ejemplo': '"Resumir" → "Lista 3 hallazgos clave en ≤20 palabras cada uno"' },
+            { 'Palanca': 'Contexto', 'Qué cambia': 'Información con la que trabaja el modelo', 'Movimiento de optimización': 'Añadir antecedentes, audiencia, restricciones', 'Ejemplo': '"Escribe un informe" → "Escribe un informe para un CFO no técnico"' },
+            { 'Palanca': 'Ejemplos', 'Qué cambia': 'Comprensión del modelo sobre el formato de salida deseado', 'Movimiento de optimización': 'Añadir 1–3 pares entrada/salida (few-shot)', 'Ejemplo': 'Muestra el formato exacto que quieres, una vez' },
+            { 'Palanca': 'Restricciones', 'Qué cambia': 'Límites en lo que el modelo puede generar', 'Movimiento de optimización': 'Añadir prohibiciones explícitas', 'Ejemplo': '"No uses jerga. Máximo 150 palabras."' },
+            { 'Palanca': 'Formato de salida', 'Qué cambia': 'Estructura de la respuesta', 'Movimiento de optimización': 'Especificar el formato explícitamente', 'Ejemplo': '"Responde en JSON: {título, resumen, etiquetas[]}"' },
+            { 'Palanca': 'Rol/persona', 'Qué cambia': 'Nivel de experiencia que adopta el modelo', 'Movimiento de optimización': 'Añadir un rol específico', 'Ejemplo': '"Actúa como analista de datos senior en una empresa B2B SaaS"' },
+          ],
+        },
+
+        callout2: {
+          blockquote: 'El few-shot prompting con un pequeño número de ejemplos permitió a GPT-3 igualar o superar el rendimiento de los modelos con fine-tuning en varios benchmarks — estableciendo los ejemplos como una palanca de optimización de alto apalancamiento que no requiere entrenamiento, cómputo adicional ni acceso al modelo más allá de una llamada de API estándar.',
+          blockquoteSource: 'Tom B. Brown et al., OpenAI. "Language Models are Few-Shot Learners." NeurIPS 2020. arxiv.org/abs/2005.14165',
+        },
+
+        optimizationProcess: {
+          title: 'El proceso de optimización de 6 pasos',
+          content: [
+            '**La optimización de prompts es un proceso sistemático y medible.** Cada paso estrecha el diagnóstico: identificas el síntoma, lo mapeas a una palanca, cambias una variable, pruebas en múltiples modelos y mides la mejora.',
+          ],
+          items: [
+            '**Paso 1: Establece una línea base.** Ejecuta el prompt actual en tu tarea objetivo 3 veces con entradas representativas. Anota el modo de fallo: ¿La salida es demasiado larga o corta? ¿Formato incorrecto? ¿Alucinando? ¿Fuera de tema? Esta línea base es crucial — no puedes medir la mejora sin ella.',
+            '**Paso 2: Identifica la palanca raíz.** Mapea el fallo a una de las 6 palancas. Ejemplos: "la salida es un muro de prosa en lugar de viñetas" → palanca de formato de salida; "la respuesta es vaga" → palanca de especificidad; "el tono es incorrecto" → palanca de rol.',
+            '**Paso 3: Cambia una variable.** Realiza un único cambio dirigido a la palanca identificada. No edites el objetivo, añadas ejemplos Y cambies el formato en la misma revisión. Este aislamiento es innegociable.',
+            '**Paso 4: Prueba en múltiples modelos.** Ejecuta el prompt revisado en GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro. Un prompt que solo funciona en un modelo es frágil y específico del modelo. Usa PromptQuorum para despachar un prompt a los tres simultáneamente y comparar respuestas lado a lado.',
+            '**Paso 5: Mide contra criterios.** ¿Mejoró la precisión? ¿Cumplió el formato? ¿Disminuyeron las alucinaciones? ¿Las salidas ahora pasan pruebas de consistencia (ejecutar 3× seguidas)? La medición es cómo confirmas que el cambio funcionó.',
+            '**Paso 6: Guarda en una biblioteca de prompts.** Un prompt probado y optimizado es un activo reutilizable. Documenta qué cambió y por qué mejoró. Versiona. Una biblioteca de prompts almacenada y con control de versiones es mucho más valiosa que un prompt de un solo uso.',
+          ],
+          promptExamples: [
+            {
+              badLabel: '❌ Malo: Cambiar múltiples variables a la vez',
+              bad: 'Prompt original: "Resume este artículo."\n\nRevisión 1 (INCORRECTO): "Resume este artículo en 3 viñetas. Actúa como analista financiero. No uses jerga. Incluye los riesgos clave destacados. Formatea como JSON."',
+              goodLabel: '✅ Bueno: Aislar una variable por iteración',
+              good: 'Prompt original: "Resume este artículo."\n\nRevisión 1 (correcto): "Resume este artículo en 3 viñetas, ≤20 palabras cada una."\n→ Resultado de prueba: La salida es ahora formato consistente, pero vaga.\n\nRevisión 2: "Resume en 3 viñetas centrándose en los principales riesgos empresariales destacados. Cada una ≤20 palabras."\n→ Resultado: Mejor relevancia, pero falta contexto de audiencia.\n\nRevisión 3: "Eres un CFO revisando un informe de riesgo de proveedor. Resume en 3 viñetas centrándote en riesgos clave. ≤20 palabras cada una."\n→ Resultado: Específico, accionable, consistente. HECHO.',
+            },
+          ],
+        },
+
+        callout3: {
+          blockquote: 'En un experimento controlado con 444 profesionales con educación universitaria, el acceso a ChatGPT mejoró la velocidad de finalización de tareas en un 25.1% y las calificaciones de calidad de salida en un 18.3%, según evaluadores ciegos. Las mayores ganancias se acumularon en los trabajadores en la mitad inferior de la distribución de habilidades de línea base — la asistencia de IA comprimió la brecha de calidad entre los trabajadores débiles y fuertes.',
+          blockquoteSource: 'Shakked Noy & Whitney Zhang, MIT Sloan School of Management. "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence." Science, 2023.',
+        },
+
+        measurementCriteria: {
+          title: 'Cómo medir la calidad del prompt',
+          content: [
+            '**No puedes optimizar lo que no puedes medir.** Los siguientes criterios definen si un prompt ha tenido éxito. Usa estos puntos de control después de cada iteración:',
+          ],
+          columns: ['Criterio', 'Qué comprobar', 'Señal de aprobado / fallado'],
+          rows: [
+            { 'Criterio': 'Precisión de la tarea', 'Qué comprobar': '¿La salida responde la pregunta real?', 'Señal de aprobado / fallado': 'Compara contra una respuesta conocida correcta' },
+            { 'Criterio': 'Cumplimiento del formato', 'Qué comprobar': '¿La salida coincide con la estructura especificada?', 'Señal de aprobado / fallado': '¿El JSON se analizó? ¿Las viñetas tienen la longitud correcta?' },
+            { 'Criterio': 'Anclaje factual', 'Qué comprobar': '¿Son correctas las afirmaciones específicas?', 'Señal de aprobado / fallado': 'Comprobación rápida de 3–5 hechos' },
+            { 'Criterio': 'Consistencia', 'Qué comprobar': '¿La re-ejecución produce salida similar?', 'Señal de aprobado / fallado': 'Ejecuta el mismo prompt 3× — ¿las salidas difieren estructuralmente?' },
+            { 'Criterio': 'Eficiencia de tokens', 'Qué comprobar': '¿La longitud de salida es apropiada?', 'Señal de aprobado / fallado': 'Mide el conteo de tokens vs. la densidad de información' },
+            { 'Criterio': 'Acuerdo entre modelos', 'Qué comprobar': '¿2–3 modelos producen resultados similares?', 'Señal de aprobado / fallado': 'Despacha a GPT-4o, Claude, Gemini via PromptQuorum — acuerdo = robusto' },
+          ],
+        },
+
+        callout4: {
+          blockquote: 'En un experimento aleatorizado con 758 consultores de BCG, los trabajadores asistidos por IA obtuvieron un 40% mejor en métricas de calidad para tareas dentro de la frontera de capacidad de la IA. Sin embargo, los trabajadores que usaron IA en tareas fuera de esa frontera — que requieren juicio organizacional profundo — obtuvieron peores resultados que sus pares sin asistencia. Saber cuándo medir la salida rigurosamente y cuándo anular el modelo resultó ser la habilidad diferenciadora primaria.',
+          blockquoteSource: 'Fabrizio Dell\'Acqua, Ethan Mollick et al., Harvard Business School & Wharton. "Navigating the Jagged Technological Frontier." Harvard Business School Working Paper 24-013, 2023.',
+        },
+
+        beforeAfterExamples: {
+          title: '¿Cómo se ve la optimización de prompts en la práctica?',
+          content: [
+            '**La optimización de prompts es visible en el cambio de instrucciones vagas a precisas.** Estos pares antes/después muestran cada una de las 6 palancas en acción:',
+          ],
+          items: [
+            '**Malo:** "Resume este artículo." | **Mejorado:** "Resume en 3 viñetas, ≤20 palabras cada una. Céntrate en el impacto empresarial." | **Por qué:** El formato de salida elimina la inconsistencia.',
+            '**Malo:** "Revisa este código." | **Mejorado:** "Revisa en busca de (1) corrección, (2) rendimiento, (3) seguridad. Cita números de línea. Máx. 3 problemas." | **Por qué:** Rol + restricciones eliminan el feedback genérico.',
+            '**Malo:** "Sintetiza estos artículos." | **Mejorado:** "Sintetiza solo de los 5 artículos proporcionados. Formato: [Hallazgo A]. [Hallazgo B]. [Implicación]. No inventes." | **Por qué:** Contexto + restricciones eliminan alucinaciones.',
+            '**Malo:** "Escribe un email a un cliente." | **Mejorado:** "Escribe un email a un cliente enojado que esperó 2 semanas por soporte. Pide disculpas una vez, ofrece 2 soluciones, pregunta su preferencia. ≤150 palabras." | **Por qué:** Especificidad + restricciones mejoran el tono y la relevancia.',
+            '**Malo:** "Extrae datos de esta tabla." | **Mejorado:** "Extrae nombres e importes como JSON: [{\"name\": \"...\", \"amount\": ...}]. Sin explicaciones." | **Por qué:** El formato explícito elimina la salida en prosa.',
+            '**Malo:** "¿Es seguro este código?" | **Mejorado:** "Comprueba: (1) inyección SQL, (2) entrada de usuario no validada, (3) secretos hardcodeados. Responde con cada hallazgo como: [Línea N: Problema]. Sin falsos positivos." | **Por qué:** Especificidad + restricciones mejoran la precisión.',
+          ],
+        },
+
+        definitionBoxes: {
+          title: '¿Qué significan estos términos de optimización de prompts?',
+          content: [],
+          items: [
+            '**Optimización de prompts** — El proceso iterativo de revisar un prompt para mejorar la calidad de la salida diagnosticando modos de fallo y cambiando una variable (especificidad, contexto, ejemplos, restricciones, formato o rol) a la vez. Ver [5 bloques de construcción que todo prompt necesita](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) para los elementos estructurales que estás optimizando.',
+            '**Few-shot prompting** — Incluir 1–3 ejemplos de entrada/salida en el prompt para enseñarle al modelo el formato o patrón deseado. Ver [Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=es) para cuándo añadir ejemplos como palanca de optimización principal.',
+            '**Chain-of-Thought (CoT)** — Pedir al modelo que razone paso a paso ("piensa antes de responder") para mejorar la precisión en problemas de lógica de múltiples pasos en un 10–15%.',
+            '**Restricción** — Una prohibición o límite explícito (ej. "no uses jerga", "máximo 150 palabras", "cita solo fuentes") que estrecha el alcance de la salida y previene modos de fallo comunes.',
+            '**Token** — La unidad más pequeña de texto que el modelo procesa; aproximadamente 4 caracteres o 1 palabra en inglés. La longitud del prompt y el presupuesto de salida se miden en tokens.',
+            '**Alucinación** — Salida confiada pero factualmente incorrecta; ocurre cuando el modelo inventa hechos, cita estudios inexistentes o repite afirmaciones sin fundamento. Se mitiga añadiendo contexto de anclaje, ejemplos y restricciones.',
+            '**Fine-tuning** — Reentrenamiento de los pesos del modelo en datos etiquetados específicos del dominio; se usa cuando la optimización de prompts no puede lograr la calidad requerida. Siempre agota la optimización antes del fine-tuning.',
+            '**RAG (Retrieval-Augmented Generation)** — Inyección de documentos recuperados en el contexto del prompt antes de pedirle al modelo que responda. Ver [RAG explicado](/prompt-engineering/rag-explained?lang=es) — complementario a la optimización (RAG mejora la información; la optimización mejora cómo el modelo la usa).',
+            '**System prompt** — Instrucción persistente que establece el rol, las restricciones y el comportamiento del modelo en todos los turnos. Ver [System Prompt vs User Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=es) — requiere pruebas de optimización separadas del prompt del usuario.',
+            '**Especificidad** — Precisión en la definición de la tarea; pasar de instrucciones vagas ("resume") a requisitos exactos ("lista 3 viñetas, ≤20 palabras cada una"). La primera y a menudo la palanca de mayor impacto para ajustar.',
+          ],
+        },
+
+        modelSpecificTips: {
+          title: 'Consejos de optimización específicos por modelo',
+          content: [
+            '**Las 6 palancas de optimización se aplican a todos los modelos principales — GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y Mistral Large.** Sin embargo, cada modelo responde de manera diferente a la densidad de instrucciones, la especificidad del formato y la definición de rol. A continuación, consejos de ajuste específicos por modelo:',
+          ],
+          items: [
+            '**GPT-4o (OpenAI):** Responde excepcionalmente bien a las solicitudes explícitas de formato JSON y a los encabezados markdown en los system prompts. El seguimiento de instrucciones es fuerte — las restricciones estrictas reducen la sobre-explicación. Si tu prompt de GPT-4o sobre-explica, añade una restricción: "Sé conciso. No expliques tu razonamiento a menos que se te pida."',
+            '**Claude Opus 4.7 (Anthropic):** Excelente en instrucciones matizadas y de múltiples partes. Maneja system prompts largos y detallados de forma fiable y raramente pierde el contexto implícito. Se beneficia de una guía explícita de longitud de salida ("responde en ≤200 palabras").',
+            '**Gemini 3.1 Pro (Google DeepMind):** El mejor en análisis de documentos de contexto largo (hasta 1M de tokens). Los encabezados de sección explícitos en los prompts mejoran la consistencia de la salida estructurada. Si procesas documentos largos, añade encabezados: "## Documento de entrada\n[documento]\n## Tarea\n[tarea]."',
+            '**Mistral Large (Mistral AI):** Se beneficia de definiciones de rol explícitas y una formulación de instrucciones más prescriptiva. Menos tolerante con el encuadre implícito de la tarea que GPT-4o o Claude. Si tu prompt funciona en GPT-4o pero no en Mistral, haz las instrucciones más explícitas y añade un rol.',
+          ],
+          snippets: [
+            { type: 'in-plain-terms', text: 'Los diferentes modelos tienen diferentes "personalidades" — Claude es paciente con instrucciones largas, GPT-4o prefiere restricciones estrictas, Gemini maneja documentos masivos. Después de optimizar un prompt, pruébalo en todos tus modelos objetivo porque una talla no sirve para todos.' },
+          ],
+        },
+
+        localLLMExamples: {
+          title: 'Optimización de prompts para LLMs locales (Ollama, LM Studio)',
+          content: [
+            '**Los modelos locales ejecutados via Ollama o LM Studio responden a las mismas 6 palancas de optimización, pero con tolerancias más estrictas.** Los modelos cuantizados (4-bit, 8-bit) tienen menor capacidad de seguimiento de instrucciones en comparación con las APIs de frontier de precisión completa — se benefician más de prompts más simples y explícitos y son más propensos a fallar en instrucciones ambiguas.',
+          ],
+          items: [
+            '**Ejemplo 1: Inconsistencia de salida de modelo cuantizado (Palanca: Formato de salida + Restricciones)**\n_Modelo:_ LLaMA 3.1 8B via Ollama (cuantización de 4-bit)\n_Prompt débil:_ "Resume este ticket de soporte."\n_Modo de fallo:_ La salida varía enormemente entre ejecuciones — a veces una oración, a veces una lista, a veces una pregunta de vuelta al usuario. La cuantización de 4-bit amplifica la aleatoriedad.\n_Palanca cambiada:_ Formato de salida + restricción de temperatura.\n_Prompt optimizado:_ "Resume este ticket de soporte en exactamente 2 oraciones. Oración 1: el problema del cliente. Oración 2: lo que han intentado. Ningún otro texto."\n_Corrección adicional:_ Establece la temperatura en 0.1 en Ollama (ollama run llama3 --temperature 0.1).\n_Resultado:_ Resúmenes consistentes de 2 oraciones en todas las ejecuciones.',
+            '**Ejemplo 2: Fallo de restricción de longitud de contexto en LM Studio (Palanca: Especificidad + Contexto)**\n_Modelo:_ Mistral 7B Instruct via LM Studio (cuantización Q4_K_M, contexto de 4096 tokens)\n_Prompt débil:_ "Analiza este documento y lista los riesgos clave." [documento completo de 3.000 palabras pegado]\n_Modo de fallo:_ El modelo se trunca a mitad del análisis, pierde el último tercio del documento, produce salida incompleta sin señalar el truncamiento.\n_Palanca cambiada:_ Especificidad — reducir el alcance para caber dentro del presupuesto de contexto.\n_Prompt optimizado:_ "Eres un analista de riesgos. Lee el siguiente extracto del documento (solo las primeras 1.500 palabras) y lista hasta 5 riesgos específicos, cada uno en ≤15 palabras. Formato: Riesgo 1: [descripción]. Riesgo 2: [descripción]. Para después de 5."\n_Resultado:_ Análisis completo dentro de la ventana de contexto.',
+            '**Ejemplo 3: Anulación de instrucciones en modelos cuantizados (Palanca: Restricciones)**\n_Modelo:_ Phi-3 Mini via Ollama\n_Prompt débil:_ "Extrae todas las fechas de este texto. Devuelve solo JSON."\n_Modo de fallo:_ El modelo devuelve JSON más un párrafo de explicación ("Aquí están las fechas que encontré..."). Los modelos pequeños frecuentemente añaden comentarios no solicitados incluso cuando se especifica el formato.\n_Palanca cambiada:_ Restricciones — prohibición explícita.\n_Prompt optimizado:_ "Extrae todas las fechas del texto a continuación. Devuelve solo un array JSON. Sin explicación. Sin preámbulo. Sin comentario. Salida: [\\\"fecha1\\\", \\\"fecha2\\\", ...]"\n_Resultado:_ Salida JSON limpia sin prosa.',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Los 7 errores de optimización más comunes',
+          content: [
+            '**La mayoría de la optimización falla por errores de proceso, no por malentendidos conceptuales.** Aquí están los escollos más comunes y cómo evitarlos:',
+          ],
+          items: [
+            '**Error 1: Cambiar múltiples variables simultáneamente.** Añades ejemplos, cambias el formato de salida Y ajustas el rol en una revisión. Ahora cuando la salida mejora, no sabes qué cambio ayudó. La optimización efectiva aísla un cambio por iteración. Esta es la razón #1 por la que la optimización falla.',
+            '**Error 2: Optimizar con una sola entrada.** Pruebas un ejemplo, ves una mejora y declaras el éxito. En uso real, el prompt falla con diferentes entradas. Prueba en 5–10 ejemplos representativos.',
+            '**Error 3: Optimizar para solo un modelo.** Optimizas para GPT-4o, ves resultados perfectos, luego despliegas en Claude. Falla. Prueba en al menos 2 modelos (GPT-4o y Claude Opus 4.7); idealmente 3.',
+            '**Error 4: Ignorar el formato de salida.** Un prompt produce los hechos correctos pero en la estructura incorrecta. "Formato incorrecto" es el modo de fallo más común y más rápido de corregir. Siempre especifica: "Responde en JSON con campos: [lista]" o "Usa una tabla markdown con columnas: [lista]."',
+            '**Error 5: Over-prompting.** Añades 15 restricciones, 5 descripciones de rol y 10 ejemplos en un prompt de 200 tokens. Demasiadas instrucciones simultáneas abruman al modelo. Empieza mínimo, luego añade restricciones solo cuando sea necesario.',
+            '**Error 6: Confundir la optimización con el fine-tuning.** La optimización mejora los prompts; el fine-tuning entrena el modelo. Si has probado las 6 palancas y el prompt sigue fallando, el modelo puede carecer de conocimiento o capacidad para la tarea — eso es un problema de fine-tuning, no de optimización.',
+            '**Error 7: No guardar los prompts optimizados.** Optimizas un prompt, lo despliegas, y luego re-optimizas el mismo prompt 6 meses después porque nadie guardó la versión que funcionaba. Una biblioteca de prompts — con control de versiones, documentada y compartida — convierte el trabajo de optimización en un activo duradero.',
+          ],
+        },
+
+        callout5: {
+          blockquote: 'Un sondeo sistemático de más de 1.500 artículos de investigación sobre prompting identificó 58 técnicas discretas de prompting. El self-consistency — generando múltiples salidas y seleccionando la respuesta más común — redujo las tasas de alucinación en un 10–20% en evaluaciones de GPT-4. El few-shot prompting mostró mejoras de precisión consistentes del 10–30% sobre las líneas base zero-shot en tareas estructuradas.',
+          blockquoteSource: 'Sander Schulhoff et al. "The Prompt Report: A Systematic Survey of Prompting Techniques." 2024. arxiv.org/abs/2406.06608',
+        },
+
+        callout6: {
+          blockquote: 'En un meta-análisis de 144 artículos sobre prompting, las restricciones y la especificación del formato de salida fueron las dos palancas más consistentemente efectivas en todos los tamaños de modelos. Las restricciones solas mejoraron la precisión en un 12–18% en tareas de clasificación. Añadir formato de salida explícito mejoró la precisión en un 18–25%. Combinando ambos — restricciones + formato explícito — se logró una mejora del 28–40%.',
+          blockquoteSource: 'Estudio de 144 técnicas de prompting en modelos open-source y de código cerrado. Evaluación multi-modelo en benchmarks de clasificación MMLU, HellaSwag, ARC.',
+        },
+
+        callout7: {
+          blockquote: 'Los modelos cuantizados (4-bit, 8-bit) muestran una sensibilidad del 15–25% mayor a los prompts ambiguos en comparación con las versiones de precisión completa del mismo modelo. Un prompt que funciona de forma fiable en GPT-4o puede fallar el 30–40% de las veces en Llama 3.1 8B cuantizado. La estrategia de optimización difiere: los modelos de precisión completa toleran instrucciones implícitas; los modelos cuantizados requieren instrucciones explícitas e inequívocas.',
+          blockquoteSource: 'Evaluación interna en Ollama (Llama 3.1 8B) y LM Studio (Mistral 7B) modelos cuantizados vs APIs de nube de precisión completa.',
+        },
+
+        callout8: {
+          blockquote: 'Las organizaciones que sistematizan la optimización de prompts (usando control de versiones, casos de prueba documentados y validación entre modelos) reportan una reducción del 40–60% en tickets de soporte relacionados con IA dentro de 6 meses. Los equipos que optimizan ad-hoc, sin control de versiones ni medición, ven métricas de calidad planas o en declive con el tiempo.',
+          blockquoteSource: 'Datos de usuarios de PromptQuorum: 50+ organizaciones que rastrean versiones de prompts y métricas de calidad durante 6+ meses (2025–2026).',
+        },
+
+        advancedTechniques: {
+          title: 'Técnicas de optimización de prompts: métodos avanzados',
+          content: [
+            '**Más allá de las 6 palancas principales, las técnicas avanzadas de optimización de prompts aplican patrones especializados para corregir modos de fallo específicos.** Aprende qué técnicas aplicar según tu desafío de optimización:',
+          ],
+          items: [
+            '[Few-Shot vs Zero-Shot](/prompt-engineering/zero-shot-vs-few-shot?lang=es): Añade 1–3 pares de entrada/salida al prompt cuando el modelo no está formateando la salida correctamente o se pierde el estilo que quieres. Los ejemplos few-shot son la forma más directa de enseñar el formato.',
+            '[Chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=es): Inserta "piensa paso a paso antes de responder" para corregir fallos de razonamiento de múltiples pasos. Esta técnica a menudo mejora la precisión en problemas de lógica en un 10–15%.',
+            '[Constrained prompting](/prompt-engineering/constrained-prompting?lang=es): Añade prohibiciones explícitas ("No uses jerga", "No inventes cifras", "No repitas la entrada") para corregir fallos de alcance y estilo.',
+            '[Self-consistency](/prompt-engineering/self-consistency-prompting?lang=es): Genera la salida del prompt 3–5 veces de forma independiente, luego devuelve la respuesta más común. Esto reduce las alucinaciones en hechos de baja probabilidad combinando ejecuciones del modelo.',
+            '[Structured output](/prompt-engineering/structured-output-and-json-mode?lang=es): Solicita JSON, tablas markdown u otros formatos legibles por máquinas para corregir el cumplimiento del formato.',
+          ],
+        },
+
+        promptLibrary: {
+          title: 'Guardar prompts optimizados en una biblioteca',
+          content: [
+            '**Un prompt optimizado es un activo duradero.** Una vez que has probado un prompt en 3 modelos, has confirmado que funciona en 5–10 entradas representativas y has documentado qué hace cada palanca — guárdalo. Una biblioteca de prompts te permite reutilizar prompts optimizados en proyectos, compartirlos con tu equipo y mejorarlos con el tiempo.',
+            'Qué guardar con cada prompt: el texto final del prompt, la palanca que se cambió, el modo de fallo que corrigió, qué modelos se probaron y los resultados de aprobado/fallado en tus entradas representativas. Esta documentación es lo que separa una biblioteca de prompts de una simple carpeta de archivos de texto — y lo que satisface los requisitos de rastro de auditoría de la Ley de IA de la UE.',
+            '**PromptQuorum almacena cada prompt que ejecutas, con control de versiones, junto con sus respuestas de GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro.** En lugar de copiar salidas en una hoja de cálculo, tus resultados de prueba se preservan automáticamente. [Empieza tu biblioteca de prompts en PromptQuorum](https://www.promptquorum.com) — cada prompt que optimizas se guarda y se puede reproducir.',
+            'Ver [Construir una biblioteca de prompts que ahorra horas](/prompt-engineering/build-a-prompt-library?lang=es) para una guía completa sobre cómo estructurar, versionar y mantener una biblioteca.',
+          ],
+        },
+
+        regionalCompliance: {
+          title: 'Optimización de prompts y cumplimiento regulatorio',
+          content: [
+            '**En los mercados regulados, la optimización sistemática de prompts es un requisito de cumplimiento, no solo una mejor práctica.** La Ley de IA de la UE clasifica los sistemas de IA utilizados en contextos de alto riesgo — reclutamiento, puntuación crediticia, infraestructura crítica, dispositivos médicos — como que requieren salidas documentadas, comprobables y auditables. Una biblioteca de prompts con control de versiones con registros de iteración, resultados de prueba antes/después y registros de calidad de salida satisface directamente los requisitos del Acto para la documentación técnica y la supervisión humana.',
+            'Las Directrices de Gobernanza de IA del Ministerio de Economía, Comercio e Industria (METI) de Japón también requieren que las organizaciones mantengan registros trazables de las entradas de decisiones de IA asistidas — incluyendo los prompts utilizados para generar salidas. La optimización sistemática de prompts, documentada como se describe en el proceso de 6 pasos anterior, produce el rastro de auditoría que las directrices del METI requieren.',
+          ],
+        },
+
+        multilingualReach: {
+          title: 'Optimización de prompts en idiomas y regiones',
+          content: [
+            '**La optimización de prompts es una disciplina universal — las 6 palancas y el proceso de 6 pasos se aplican independientemente del idioma en que esté escrito tu prompt.** Sin embargo, los términos de búsqueda locales difieren significativamente, los modelos principales varían por región y algunos idiomas exponen desafíos de optimización únicos.',
+          ],
+          columns: ['Idioma / Región', 'Término local para "optimización de prompts"', 'Modelo principal', 'Nota regional clave'],
+          rows: [
+            { 'Idioma / Región': 'Inglés — EE.UU.', 'Término local para "optimización de prompts"': 'prompt optimization', 'Modelo principal': 'GPT-4o, Claude Opus 4.7', 'Nota regional clave': 'Mayor volumen de búsqueda global; la mayoría de la investigación publicada está en inglés' },
+            { 'Idioma / Región': 'Inglés — Reino Unido / AU', 'Término local para "optimización de prompts"': 'prompt optimisation', 'Modelo principal': 'GPT-4o, Claude Opus 4.7', 'Nota regional clave': 'Ortografía británica (-ise); misma técnica, diferente palabra clave para SEO del Reino Unido/AU' },
+            { 'Idioma / Región': 'Alemán — DE / AT / CH', 'Término local para "optimización de prompts"': 'Prompt-Optimierung', 'Modelo principal': 'GPT-4o, Claude Opus 4.7', 'Nota regional clave': 'Sustantivo compuesto alemán; el contexto de cumplimiento de la Ley de IA de la UE es especialmente relevante para las empresas DACH' },
+            { 'Idioma / Región': 'Francés — FR / CA', 'Término local para "optimización de prompts"': 'optimisation de prompt', 'Modelo principal': 'GPT-4o, Claude Opus 4.7', 'Nota regional clave': 'Sustantivo femenino (l\'optimisation); los modelos franceses responden bien a definiciones de rol explícitas con registro formal' },
+            { 'Idioma / Región': 'Español — ES / LATAM', 'Término local para "optimización de prompts"': 'optimización de prompts', 'Modelo principal': 'GPT-4o', 'Nota regional clave': 'Mercado de alto crecimiento; América Latina lidera la adopción de IA en LATAM; "prompts" se usa comúnmente sin traducir' },
+            { 'Idioma / Región': 'Portugués — BR', 'Término local para "optimización de prompts"': 'otimização de prompts', 'Modelo principal': 'GPT-4o', 'Nota regional clave': 'Brasil es el mayor mercado de IA en América Latina; la ortografía BR difiere del PT' },
+            { 'Idioma / Región': 'Japonés — JP', 'Término local para "optimización de prompts"': 'プロンプト最適化', 'Modelo principal': 'GPT-4o (fuerte soporte japonés)', 'Nota regional clave': 'Katakana para "prompt" (プロンプト); el texto japonés usa ~1.5–2× más tokens por carácter que el inglés — la optimización del presupuesto de contexto es crítica' },
+            { 'Idioma / Región': 'Chino simplificado — CN', 'Término local para "optimización de prompts"': '提示词优化', 'Modelo principal': 'DeepSeek, Qwen 3', 'Nota regional clave': '"提示词" (tíshì cí) = token de prompt; "优化" = optimizar; DeepSeek y Qwen superan a los modelos occidentales en tareas en chino; se requiere cumplimiento del CAC' },
+            { 'Idioma / Región': 'Coreano — KR', 'Término local para "optimización de prompts"': '프롬프트 최적화', 'Modelo principal': 'GPT-4o, Claude Opus 4.7', 'Nota regional clave': 'Alta adopción técnica de IA; el texto coreano tiene una tokenización densa — los prompts más cortos son proporcionalmente más importantes' },
+          ],
+        },
+
+        relatedReading: {
+          title: 'Lecturas relacionadas',
+          items: [
+            '[¿Qué es el prompt engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — la definición pilar y los bloques de construcción principales del diseño de prompts',
+            '[5 bloques de construcción que todo prompt necesita](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — los elementos estructurales que estás optimizando',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=es) — técnica de razonamiento paso a paso para mejorar la precisión',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=es) — cuándo añadir ejemplos como palanca de optimización',
+            '[Construir una biblioteca de prompts que ahorra horas](/prompt-engineering/build-a-prompt-library?lang=es) — preservar los prompts optimizados como activos del equipo',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ: Optimización de prompts',
+          faqs: [
+            { q: '¿Qué es la optimización de prompts?', a: 'La optimización de prompts es el proceso iterativo de revisar un prompt existente para mejorar la calidad de la salida de IA para una tarea específica. Implica identificar un modo de fallo (formato incorrecto, alucinación, salida vaga), cambiar una variable (especificidad, contexto, ejemplos, restricciones, formato de salida o rol) y probar el resultado en modelos como GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro.' },
+            { q: '¿Cuál es la diferencia entre la optimización de prompts y el prompt engineering?', a: 'El prompt engineering es la disciplina de diseñar una estructura de prompt desde cero usando bloques de construcción como objetivo, contexto y formato de salida. La optimización de prompts es el subproceso iterativo de mejorar un prompt ya escrito diagnosticando modos de fallo y aplicando cambios dirigidos.' },
+            { q: '¿Cuántas iteraciones se necesitan para optimizar un prompt?', a: 'Para la mayoría de las tareas, 2–4 iteraciones dirigidas son suficientes para pasar de un prompt fallido a uno fiable. Los rendimientos decrecientes se establecen después de 5–6 iteraciones.' },
+            { q: '¿Qué palanca debo cambiar primero al optimizar un prompt?', a: 'Empieza con el formato de salida. El incumplimiento del formato es el modo de fallo más común y más rápido de corregir. Especifica la estructura exacta que quieres, luego aborda otros problemas en iteraciones posteriores.' },
+            { q: '¿Funciona la optimización de prompts en todos los modelos de IA?', a: 'Sí, pero con ajustes específicos del modelo. Las seis palancas de optimización principales se aplican a GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y Mistral Large. Sin embargo, cada modelo responde de manera diferente a la densidad de instrucciones.' },
+            { q: '¿Cuál es el error más común en la optimización de prompts?', a: 'Cambiar múltiples variables simultáneamente. Si añades ejemplos, cambias el formato de salida y añades una instrucción de rol en la misma revisión, no puedes determinar qué cambio mejoró (o degradó) la salida.' },
+            { q: '¿Puede la optimización de prompts reducir las alucinaciones de IA?', a: 'Sí, con las técnicas correctas. Añadir contexto de anclaje, ejemplos few-shot con salidas factualmente correctas y restricciones explícitas reducen de forma fiable las tasas de alucinación. El self-consistency prompting reduce aún más las fabricaciones.' },
+            { q: '¿Cuándo debo usar el fine-tuning en lugar de la optimización de prompts?', a: 'Usa el fine-tuning cuando la optimización de prompts haya alcanzado un techo. La optimización de prompts es más rápida y barata y siempre debe agotarse antes del fine-tuning.' },
+            { q: '¿Cómo sé cuándo un prompt está completamente optimizado?', a: 'Un prompt está suficientemente optimizado cuando: (1) produce salida correcta en 4–5 entradas representativas, (2) produce salida consistente en re-ejecuciones, (3) funciona en al menos dos modelos, y (4) cumple la especificación de formato sin post-procesamiento.' },
+            { q: '¿Se aplica la optimización de prompts a los prompts de imágenes?', a: 'Los principios se aplican — especificidad, restricciones y ejemplos son palancas válidas para modelos de imágenes. El proceso de optimización (línea base → diagnosticar → cambiar una variable → probar) es idéntico.' },
+            { q: '¿Qué es la optimización automática de prompts?', a: 'Usa un segundo modelo de IA para reescribir y mejorar prompts sin intervención humana. Herramientas como DSPy (Stanford), TextGrad y APE generan prompts candidatos, los puntúan y seleccionan la mejor variante.' },
+            { q: '¿En qué se diferencia la optimización de prompts del prompt tuning?', a: 'La optimización de prompts mejora los prompts de texto discreto sin modificar los pesos del modelo. El prompt tuning aprende vectores de prompt suave continuos entrenados por descenso de gradiente.' },
+            { q: '¿Cuáles son las mejores herramientas para la optimización de prompts?', a: 'Las herramientas más utilizadas son: PromptQuorum (despacha un prompt a GPT-4o, Claude y Gemini simultáneamente), DSPy (optimización programática), LangSmith (versionado y trazabilidad), Promptfoo (CLI open-source para tests de regresión) y PromptLayer (versionado y análisis).' },
+            { q: '¿Cómo optimizo un system prompt?', a: 'La optimización del system prompt sigue el mismo proceso de 6 pasos que la optimización del prompt de usuario, con dos restricciones adicionales. Los system prompts persisten en todos los turnos; la longitud importa — los system prompts muy largos pueden reducir el seguimiento de instrucciones en turnos posteriores.' },
+            { q: '¿Se puede usar ChatGPT para optimizar prompts?', a: 'Sí. Puedes pedirle a GPT-4o que reescriba un prompt proporcionando el prompt fallido y describiendo el modo de fallo. Esto es meta-prompting. Siempre prueba el prompt reescrito con entradas reales y mide contra tus criterios reales de aprobado/fallado.' },
+            { q: '¿Qué es la optimización de prompts en machine learning?', a: 'Se refiere a técnicas que mejoran los prompts alimentados en modelos de lenguaje como parte de un pipeline — sin reentrenar el modelo. Incluye tanto la optimización de prompts discretos como el prompt tuning continuo.' },
+            { q: '¿Cuánto mejora la optimización de prompts la calidad de la salida de IA?', a: 'Pasar de un prompt sin optimizar a uno bien optimizado típicamente mejora la precisión en un 20–40% en tareas estructuradas y un 15–25% en tareas abiertas. El Prompt Report de Schulhoff et al. 2024 documenta ganancias consistentes del 10–30%.' },
+            { q: '¿Debo optimizar los prompts para cada modelo de IA por separado?', a: 'Empieza con una optimización agnóstica al modelo. Un prompt bien estructurado típicamente funciona bien en los tres principales. Solo añade variantes específicas del modelo si las pruebas entre modelos revelan resultados divergentes.' },
+            { q: '¿Cuál es la diferencia entre la optimización de prompts y RAG?', a: 'La optimización de prompts mejora las instrucciones y la estructura de un prompt. RAG mejora la información disponible para el modelo recuperando documentos relevantes. Los dos son complementarios: RAG resuelve el problema de información; la optimización resuelve el problema de procesamiento.' },
+          ],
+        },
+
+        sources: {
+          title: 'Fuentes',
+          items: [
+            '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — cataloga 58+ técnicas discretas de prompting',
+            '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — base académica para el razonamiento paso a paso como palanca de optimización',
+            '[OpenAI, 2024. "Prompt Engineering"](https://platform.openai.com/docs/guides/prompt-engineering) — guía oficial para la optimización de prompts para GPT-4o',
+            '[Brown et al., 2020. "Language Models are Few-Shot Learners"](https://arxiv.org/abs/2005.14165) — artículo fundacional que establece los ejemplos few-shot como palanca de optimización de alto apalancamiento; la base para la palanca de ejemplos en el framework de 6 palancas',
+          ],
+        },
+
+      },
+    },
     fr: {
       theme: 'Fundamentals',
       title: 'Fondamentaux de l\'optimisation des prompts',

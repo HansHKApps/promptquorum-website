@@ -593,6 +593,188 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    es: {
+      theme: 'Fundamentals',
+      title: 'Alucinaciones de IA: Por qué la IA inventa cosas — y cómo detenerlas',
+      intro: 'Los grandes modelos de lenguaje producen con confianza información falsa. Estos errores — llamados alucinaciones — van desde citas inventadas hasta hechos fabricados presentados con total autoridad. Entender por qué ocurren y cómo detectarlas y reducirlas es esencial para cualquiera que use LLMs en trabajo real.',
+      publishDate: '2026-03-22',
+      seoTitle: 'Alucinaciones de IA: Cómo detectarlas y reducirlas 2026',
+      metaDescription: 'Entiende por qué los LLMs alucinan y aprende técnicas de prompting probadas para minimizar errores. Sección especial sobre LLMs locales y puntuación de consenso de PromptQuorum.',
+      readTime: '12 min de lectura',
+      educationalLevel: 'Beginner',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Alucinaciones de IA: Por qué la IA inventa cosas — y cómo detenerlas',
+        description: 'Por qué los modelos de lenguaje alucinan, cómo detectar alucinaciones y técnicas para reducirlas. Aprende estrategias de diseño de prompts, enfoques a nivel de sistema y puntuación de consenso multi-modelo.',
+        datePublished: '2026-03-22',
+        dateModified: '2026-03-22',
+        url: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=es',
+        inLanguage: 'es',
+        keywords: ['alucinaciones de IA', 'alucinaciones LLM', 'detección de alucinaciones', 'prompt engineering', 'consenso multi-modelo', 'RAG'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      },
+      gammaEmbedUrl: '/presentations/ai-hallucinations-why-ai-makes-things-up-static.html',
+      gammaDescription: 'El deck cubre: por qué los LLMs alucinan (predicción de tokens probabilística, no comprensión), 7 tipos de alucinaciones con patrones de detección, técnicas de prompting que reducen las alucinaciones y una comparación del comportamiento de los modelos. Descarga el PDF como tarjeta de referencia para la reducción de alucinaciones.',
+      sections: {
+        definition: {
+          title: '¿Qué son las alucinaciones de IA?',
+          content: [
+            'Una **alucinación de IA** es una declaración factualmente falsa o fabricada generada por un LLM con aparente confianza. El modelo produce texto que viola la realidad — nombres incorrectos, fuentes inventadas, fechas imposibles, URLs ficticias — usando el mismo lenguaje fluido que la información precisa.',
+            'Esto difiere fundamentalmente de un modelo que expresa incertidumbre. Las alucinaciones se caracterizan por afirmaciones seguras y detalladas sobre cosas que no existen o eventos que no ocurrieron. Un modelo puede citar un artículo publicado en una revista que no existe, inventar detalles biográficos, indicar una fecha histórica incorrecta en siglos, o describir una característica de producto que nunca se construyó.',
+            '**En una oración:** Las alucinaciones son declaraciones falsas y fluidas que los modelos de lenguaje generan porque predicen patrones de texto en lugar de recuperar hechos de un almacén confiable.'
+          ],
+        },
+        tldr: {
+          title: 'Puntos clave',
+          isTldr: true,
+          items: [
+            '**Qué son las alucinaciones:** Declaraciones falsas con confianza generadas por LLMs que violan la realidad — fuentes inventadas, hechos incorrectos, detalles fabricados — entregadas fluidamente como si fueran precisas',
+            '**Por qué ocurren:** Los LLMs predicen patrones de texto en lugar de recuperar hechos; carecen de una base de datos para verificar y de un mecanismo de confianza interno para señalar la incertidumbre',
+            '**Cómo detectarlas:** Usa la puntuación de consenso (pregunta a varios modelos la misma pregunta; el acuerdo es una señal de fiabilidad), comprueba las citas, verifica las afirmaciones de forma independiente',
+            '**Puntuación de consenso:** Envía el mismo prompt a 5+ modelos independientes; las afirmaciones que aparecen en solo una o dos respuestas son muy sospechosas y justifican verificación',
+            '**Estrategias de mitigación:** Usa RAG (fundamentación en documentos verificados), proporciona fuentes explícitas, establece restricciones ("usa solo la información de este documento"), usa consenso multi-modelo y requiere revisión humana para afirmaciones de alto riesgo',
+          ],
+        },
+        whyHallucinate: {
+          title: 'Por qué los modelos de lenguaje alucinan',
+          content: 'Los LLMs funcionan prediciendo la siguiente palabra en una secuencia. No consultan una base de datos ni verifican hechos contra la verdad fundamental. Calculan probabilidades basadas en patrones en los datos de entrenamiento. Este diseño central — muy efectivo para tareas de lenguaje — crea inherentemente presión para alucinan.',
+        },
+        coreMechanisms: {
+          title: 'Los mecanismos centrales',
+          items: [
+            '**Predicción del siguiente token, no recuperación de hechos.** La arquitectura del modelo está optimizada para la generación de lenguaje, no para la verificación de hechos. Cuando un prompt hace una pregunta, el objetivo del modelo es producir una continuación coherente y plausible del texto. La coherencia y la veracidad no son lo mismo.',
+            '**Lagunas y vencimiento de los datos de entrenamiento.** Los modelos se entrenan con datos con una fecha final específica. Las lagunas de información crean vacíos. Cuando se les pregunta sobre estas lagunas, el modelo carece de patrones verídicos para predecir a partir de ellos. Inventa detalles que suenan plausibles en lugar de decir "No tengo esta información".',
+            '**Sin mecanismo de confianza explícito.** Los modelos no generan una puntuación de confianza junto a cada output. Producen texto sin una señal interna que diga "Estoy 30% seguro de esta afirmación."',
+            '**Presión de prompts que exigen respuestas.** Los prompts como "Explica todo sobre [tema]" comunican implícitamente: debes responder, incluso si no estás seguro. El modelo responde inventando detalles para satisfacer la solicitud.',
+            '**Context window limitado y pérdida de información.** Los LLMs solo pueden retener una cantidad finita de contexto en memoria. Los documentos o conversaciones largas hacen que los detalles anteriores se desvanezcan.',
+            '**Confabulación en el razonamiento de varios pasos.** Para problemas que requieren múltiples pasos de razonamiento, el modelo puede perder el hilo de los resultados intermedios e inventar un paso de apoyo para justificar una conclusión.'
+          ],
+        },
+        commonTypes: {
+          title: 'Tipos comunes de alucinaciones',
+          content: 'Las alucinaciones siguen patrones reconocibles. Identificar el tipo te ayuda a elegir estrategias de mitigación específicas.',
+          columns: ['Tipo', 'Ejemplo', 'Por qué ocurre', 'Severidad'],
+          rows: [
+            { 'Tipo': 'Fuentes inventadas', 'Ejemplo': 'Citar una revista académica que no existe; nombres de autores y años de publicación inventados', 'Por qué ocurre': 'El modelo fue entrenado con millones de citas y aprendió patrones similares a las citas, luego inventa nuevas', 'Severidad': 'Muy alta' },
+            { 'Tipo': 'Hechos incorrectos (fechas, números, nombres)', 'Ejemplo': 'Nombrar un evento histórico en el año incorrecto; detalles biográficos erróneos', 'Por qué ocurre': 'Los datos de entrenamiento son incompletos o contradictorios; el modelo elige un número que suena plausible', 'Severidad': 'Muy alta' },
+            { 'Tipo': 'URLs y emails falsos', 'Ejemplo': 'Proporcionar un enlace o dirección de email que no funciona o no pertenece a la organización reclamada', 'Por qué ocurre': 'El modelo aprendió patrones de URL y email y genera nuevos que son realistas pero ficticios', 'Severidad': 'Alta' },
+            { 'Tipo': 'Pérdida de contexto', 'Ejemplo': 'Responder una pregunta como si el modelo hubiera entendido el contexto anterior, pero en realidad perdió el hilo', 'Por qué ocurre': 'El context window es finito; los documentos largos hacen que los detalles anteriores se desvanezcan de la atención del modelo', 'Severidad': 'Alta' },
+            { 'Tipo': 'Cambio de rol', 'Ejemplo': 'Comenzar con un rol (analista) y gradualmente cambiar a otro (narrador), inventando detalles para llenar los huecos', 'Por qué ocurre': 'El modelo pierde el hilo de la instrucción original y vuelve a la coincidencia de patrones pura', 'Severidad': 'Media' },
+            { 'Tipo': 'Generalización con exceso de confianza', 'Ejemplo': 'Decir "Todos los X hacen Y" cuando solo los ejemplos de entrenamiento específicos lo muestran', 'Por qué ocurre': 'El modelo generaliza demasiado ampliamente a partir de datos de entrenamiento limitados sin verificación de confianza', 'Severidad': 'Media' },
+            { 'Tipo': 'Contradicción interna', 'Ejemplo': 'Hacer afirmaciones contradictorias dentro de la misma respuesta', 'Por qué ocurre': 'El modelo no tiene mecanismo para rastrear la consistencia en múltiples oraciones', 'Severidad': 'Media' },
+          ],
+        },
+        hallucinationTypesList: {
+          isTldr: false,
+          content: '**Los siete tipos de alucinaciones son:** fuentes inventadas, hechos incorrectos, URLs y emails falsos, pérdida de contexto, cambio de rol, generalización con exceso de confianza y contradicciones internas.',
+        },
+        promptDesignIntro: {
+          title: 'Cómo el diseño del prompt afecta al riesgo de alucinación',
+          content: 'Tus prompts alientan o desalientan las alucinaciones. La diferencia es medible.',
+        },
+        riskPrompts: {
+          title: 'Prompts que aumentan el riesgo de alucinación:',
+          items: [
+            '"Cuéntame todo sobre [tema]" — sin límites, sin permiso para decir "no lo sé"',
+            '"Asegúrate de incluir [muchos detalles]" — presión explícita para llenar el espacio con información inventada',
+            '"Escribe como si fueras un experto líder" — fomenta las afirmaciones seguras, incluso en reclamaciones inciertas',
+            '"Responde aunque no estés completamente seguro" — elimina el freno a las alucinaciones',
+          ],
+        },
+        safePrompts: {
+          title: 'Prompts que reducen el riesgo de alucinación:',
+          items: [
+            '"Puedes decir \'No lo sé\' si no estás seguro" — permiso explícito para admitir lagunas de conocimiento',
+            '"Usa solo información del contexto a continuación" — restringe la respuesta a los datos proporcionados, no al conocimiento inventado',
+            '"Distingue hechos de opiniones. Marca las afirmaciones inciertas [INCIERTO]" — obliga al modelo a diferenciar',
+            '"Cita tu fuente para cada afirmación factual" — hace que las citas inventadas sean visiblemente obvias',
+            '"Si no puedes verificar esta afirmación, no la incluyas" — restricción explícita de afirmaciones no verificadas',
+          ],
+        },
+        promptStructure: {
+          title: 'Buena estructura de prompt',
+          content: 'Los buenos prompts combinan cuatro elementos: un **rol o contexto claro** (¿qué marco debe adoptar el modelo?), una **tarea específica** (¿qué output necesito?), **datos de input reales** (¿qué información se proporciona?) y **restricciones explícitas** (¿qué NO puede hacer el modelo?). Esta estructura reduce la presión de alucinan eliminando la ambigüedad sobre lo que el modelo debe hacer.',
+        },
+        techniques: {
+          title: 'Técnicas para reducir las alucinaciones',
+          content: 'Tres enfoques complementarios reducen las alucinaciones:\n- **A nivel de prompt:** Añade restricciones y permiso para admitir la incertidumbre en tus prompts\n- **A nivel de sistema:** Usa RAG, function calling o recuperación para fundamentar las respuestas en datos reales\n- **A nivel de modelo:** Ejecuta el mismo prompt en varios modelos independientes para detectar alucinaciones mediante consenso',
+        },
+        technique1: {
+          title: '1. Permiso explícito para decir "No lo sé"',
+          content: 'Dile al modelo: "Si no estás seguro o no tienes la información, dilo. No adivines."\n\nEsto elimina la presión de inventar respuestas. Muchos modelos están entrenados para ser útiles e intentarán responder incluso cuando estén completamente inseguros. Liberarlos explícitamente de esta expectativa les da permiso para declinar.',
+        },
+        technique2: {
+          title: '2. Pedir fuentes o evidencias',
+          content: 'Exige: "Cita la fuente de cada afirmación factual" o "Proporciona URL y fecha de publicación para cada referencia."\n\nEsto hace que las citas inventadas sean obvias (no funcionan o apuntan a fuentes inexistentes) y obliga al modelo a ser más cuidadoso al afirmar hechos.',
+        },
+        technique3: {
+          title: '3. Autocrítica y verificación de contradicciones',
+          content: 'Pide al modelo que revise su propio output:\n\n> "Después de completar tu respuesta, revísala en busca de contradicciones o afirmaciones que contradigan algo que dijiste antes. Señala cualquier inconsistencia que encuentres."\n\nLos modelos a menudo captan sus propios errores cuando se les pide reflexionar.',
+        },
+        technique4: {
+          title: '4. Usa instrucciones negativas',
+          content: 'Especifica explícitamente lo que el modelo NO puede hacer:',
+          items: [
+            '"Nunca inventes fuentes, URLs o nombres de autores bajo ninguna circunstancia"',
+            '"No adivines fechas si no estás seguro — deja la fecha en blanco en lugar de adivinar"',
+            '"No añadas información que no esté en el contexto proporcionado"',
+            '"Instrucción negativa:" "No añadas información que no esté en la cronología" es explícita',
+            '"Permiso para omitir:" "Si no estás seguro, sáltalo" elimina la presión de inventar detalles',
+            '"Responsabilidad de las fuentes:" Cada afirmación requiere citar la referencia',
+          ],
+        },
+        faq: {
+          title: 'Preguntas frecuentes',
+          faqs: [
+            {
+              q: '¿Se pueden eliminar completamente las alucinaciones?',
+              a: 'No. Las alucinaciones son inherentes a cómo funcionan los modelos de lenguaje — predicen patrones de texto en lugar de recuperar hechos de un almacén verificado. Puedes reducirlas significativamente con buen diseño de prompts, herramientas como RAG y consenso multi-modelo, pero la eliminación completa no es posible con la arquitectura LLM actual. La verificación humana sigue siendo necesaria para decisiones de alto riesgo.',
+            },
+            {
+              q: '¿Por qué el modelo suena tan seguro cuando está equivocado?',
+              a: 'Los modelos de lenguaje están entrenados para generar texto fluido y coherente. La seguridad es un subproducto de la coherencia lingüística. Una afirmación falsa puede ser mucho más coherente y bien articulada que una admisión honesta de incertidumbre.',
+            },
+            {
+              q: '¿Los modelos más nuevos y grandes alucinan menos?',
+              a: 'Los modelos más grandes a veces alucinan más en algunas tareas porque son mejores generando texto que suena plausible, lo que hace que las afirmaciones falsas sean más difíciles de detectar. Los modelos más nuevos tienen mejor rendimiento factual en algunas tareas. La relación entre el tamaño del modelo y la alucinación depende de la tarea.',
+            },
+            {
+              q: '¿Conectar un modelo a internet elimina las alucinaciones?',
+              a: 'Parcialmente. El acceso web en tiempo real ayuda con los eventos actuales y los hechos más recientes, pero no resuelve el problema central: el modelo sigue inventando detalles, malinterpretando los resultados de búsqueda o alucinando sobre contenidos que no recuperó realmente.',
+            },
+            {
+              q: '¿Cómo puedo verificar rápidamente si una respuesta ha alucinado?',
+              a: 'Verifica las fuentes: haz clic en las URLs o busca los artículos citados. Si no existen, la respuesta ha alucinado. Verifica los hechos: comprueba datos, nombres y números con fuentes confiables. Compara varios modelos: haz la misma pregunta a diferentes modelos. El fuerte desacuerdo sugiere que al menos uno ha alucinado.',
+            },
+            {
+              q: '¿Debo dejar de usar la IA si alucina?',
+              a: 'No. Usa la IA estratégicamente con verificación. Para el brainstorming, los borradores y el trabajo exploratorio, las alucinaciones son una molestia menor. Para el trabajo crítico de hechos (investigación, cumplimiento, decisiones médicas, asesoramiento financiero), usa la IA como punto de partida, luego verifica todo con fuentes confiables o revisión de expertos.',
+            },
+            {
+              q: '¿Cuál es la diferencia entre una alucinación y un error real?',
+              a: 'Una alucinación es segura y falsa. Si un modelo dice "No estoy seguro, pero podría ser X", eso es incertidumbre honesta, no alucinación. Si dice "La capital de Francia es Berlín" con total confianza, eso es una alucinación — el modelo ha dicho algo falso como si fuera un hecho. La señal es la afirmación segura de algo no verdadero.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Material relacionado',
+          items: [
+            '[¿Qué es el Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=es) — los conceptos básicos detrás de la estructuración de prompts',
+            '[Self-Critique Prompting Techniques](/prompt-engineering/self-critique-prompting?lang=es) — cómo hacer que los modelos atrapen sus propios errores',
+          ],
+        },
+        sources: {
+          title: 'Fuentes',
+          items: [
+            'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." [ArXiv](https://arxiv.org/abs/2201.11903) — el artículo fundacional que muestra que el razonamiento paso a paso reduce las alucinaciones en tareas de matemáticas y lógica.',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). "On Faithfulness and Factuality in Abstractive Summarization." [ACL Proceedings](https://aclanthology.org/2021.acl-long.200/) — estudio empírico de las tasas y mecanismos de alucinación en la generación de texto neural.',
+            'Anthropic (2024). "Constitutional AI." [https://www.anthropic.com/constitutional-ai](https://www.anthropic.com/constitutional-ai) — el enfoque de Anthropic para reducir los outputs dañinos y las alucinaciones mediante el entrenamiento basado en principios.',
+          ],
+        },
+      },
+    },
     fr: {
       theme: 'Fundamentals',
       title: 'Hallucinations IA: Pourquoi l\'IA Invente des Choses — et Comment les Arrêter',
