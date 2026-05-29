@@ -3,7 +3,7 @@
 // Generated: 2026-04-26T09:45:32.245Z
 
 import type { Language } from "@/lib/blog/blogContent";
-import { contextWindowsDe, contextWindowsFr, contextWindowsJa, contextWindowsZh } from "@/lib/prompt-engineering/contextWindowsTranslations";
+import { contextWindowsDe, contextWindowsFr, contextWindowsJa, contextWindowsZh, contextWindowsEs } from "@/lib/prompt-engineering/contextWindowsTranslations";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
 
@@ -246,6 +246,78 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sections: contextWindowsDe
+    },
+    es: {
+      theme: 'Fundamentals',
+      title: 'Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)',
+      intro: 'Los LLM no tienen memoria a largo plazo — solo "ven" una ventana deslizante de tokens recientes. Aprende por qué la IA olvida el contexto, cómo estructurar los prompts para mantenerte dentro de los límites y cómo gestionar las context windows en modelos en la nube y locales.',
+      publishDate: '2026-03-22',
+      seoTitle: 'Context windows 2026: por qué la IA olvida y cómo gestionarlo',
+      metaDescription: 'Las context windows limitan la entrada a los LLM: supera el límite y los mensajes más antiguos desaparecen en silencio. Aprende a mantener el control con GPT-4o, Claude Opus 4.7 y Ollama.',
+      readTime: '11 min de lectura',
+      educationalLevel: 'Beginner',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=es',
+        inLanguage: 'es',
+        headline: 'Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)',
+        description: 'Los LLM no tienen memoria a largo plazo — solo "ven" una ventana deslizante de tokens recientes. Aprende por qué la IA olvida el contexto, cómo estructurar los prompts y estrategias prácticas para gestionar las context windows en distintos modelos.',
+        datePublished: '2026-03-22',
+        dateModified: '2026-03-22',
+        keywords: ['context window', 'tokens', 'memoria LLM', 'diseño de prompts', 'la IA olvida', 'límites de contexto'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=es', width: 1200, height: 630 },
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          { '@type': 'Question', name: '¿El modelo recuerda mis chats anteriores?', acceptedAnswer: { '@type': 'Answer', text: 'No. Cada nueva sesión de conversación comienza con cero historial. El modelo solo ve los tokens dentro de la context window actual. Si quieres hacer referencia a un chat anterior, debes copiar las partes relevantes en la conversación actual.' } },
+          { '@type': 'Question', name: '¿Por qué la IA ignoró una instrucción que di hace 20 mensajes?', acceptedAnswer: { '@type': 'Answer', text: 'Esa instrucción probablemente cayó fuera de la context window. El modelo ya no la ve, por lo que no puede seguirla. Solución: Repite las instrucciones críticas en tu prompt del sistema o pide al modelo que las recapitule y reinserte a mitad de la conversación.' } },
+          { '@type': 'Question', name: '¿Una context window más grande es siempre mejor?', acceptedAnswer: { '@type': 'Answer', text: 'No. Una ventana más grande te permite incluir más contenido, pero también aumenta el costo (más tokens a procesar) y, para los modelos locales, el uso de VRAM. Elige una context window que coincida con tu tarea: 4k para preguntas y respuestas simples, 32k para conversaciones largas, 128k+ para análisis de documentos. Más grande no es "mejor" — *apropiado* es mejor.' } },
+          { '@type': 'Question', name: '¿Cómo sé cuándo he alcanzado el límite de contexto?', acceptedAnswer: { '@type': 'Answer', text: 'Las respuestas del modelo cambian de tono, contradicen instrucciones anteriores o pierden el rastro de detalles que estableciste antes. Usa la verificación de desbordamiento de contexto de PromptQuorum antes de enviar — te avisa cuando te estás acercando al límite.' } },
+          { '@type': 'Question', name: '¿Cómo afecta el tamaño de la context window a la VRAM en los modelos locales?', acceptedAnswer: { '@type': 'Answer', text: 'Un modelo 7B (cuantización Q4_K_M) necesita ~5 GB de VRAM a 4k de contexto, ~8–10 GB a 32k y ~12–14 GB a 128k. El aumento no es estrictamente lineal. Consulta la calculadora de VRAM de PromptQuorum para conocer el límite de tu hardware.' } },
+          { '@type': 'Question', name: '¿Pueden herramientas como PromptQuorum prevenir el desbordamiento de contexto?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. PromptQuorum verifica el recuento de tokens de tu prompt, tu context window configurada y el límite real de tu modelo, y luego te avisa antes de enviar si el desbordamiento es probable. Entonces puedes recortar o resumir antes de continuar.' } },
+          { '@type': 'Question', name: '¿Los diferentes modelos manejan el contexto largo de manera diferente?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Claude Opus 4.7 mantiene bien el enfoque en 200k tokens. GPT-4o es sólido a 128k. Los modelos más pequeños (por ejemplo, LLaMA 3.1 7B) a veces pierden la coherencia del razonamiento más allá de 8k–16k, incluso si su context window es técnicamente más grande. El enfoque más seguro: prueba tu modelo y tarea específicos.' } },
+          { '@type': 'Question', name: '¿Cuál es la diferencia entre context window y memoria del modelo?', acceptedAnswer: { '@type': 'Answer', text: 'La context window es el búfer activo de tokens que el modelo lee en cada inferencia — contiene tu conversación actual. La memoria del modelo (pesos) es fija tras el entrenamiento y contiene patrones generales del lenguaje. Una context window amplía lo que el modelo puede referenciar en una respuesta; los pesos del modelo no se pueden cambiar en tiempo de ejecución.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'es',
+        name: 'Cómo gestionar las context windows en tus prompts',
+        description: 'Seis pasos para mantenerte dentro de los límites de contexto de los LLM: verifica los límites del modelo, coloca las instrucciones al principio, resume las conversaciones largas, procesa los documentos en secciones, monitorea el desbordamiento y ajusta el tamaño del contexto del LLM local a la VRAM disponible.',
+        totalTime: 'PT10M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Verifica el tamaño de la context window de tu modelo', text: 'GPT-4o = 128k tokens, Claude Opus 4.7 = 200k tokens, Gemini 3.1 Pro = 2M tokens. Los modelos locales varían (típicamente 4k–128k). Conoce tu límite antes de comenzar.' },
+          { '@type': 'HowToStep', position: 2, name: 'Coloca las instrucciones críticas al principio del prompt del sistema', text: 'Pon primero las restricciones no negociables y las definiciones de roles. Una vez que un turno cae fuera del contexto, las instrucciones enterradas 20 turnos después son invisibles para el modelo.' },
+          { '@type': 'HowToStep', position: 3, name: 'Resume las conversaciones largas antes de continuar', text: 'Después de cada 10–15 intercambios, pregunta al modelo: "¿Cuáles son las 5 decisiones más importantes que hemos tomado?" Luego usa ese resumen como contexto para tu siguiente turno.' },
+          { '@type': 'HowToStep', position: 4, name: 'Para documentos largos, procesa en secciones, no como un todo', text: 'Divide un informe de 100 páginas en capítulos. Haz preguntas enfocadas por capítulo y luego combina los resúmenes al final.' },
+          { '@type': 'HowToStep', position: 5, name: 'Monitorea el desbordamiento de contexto antes de enviar', text: 'Usa PromptQuorum o cuenta manualmente: (contexto disponible) − (tokens del prompt del sistema) − (tokens de salida esperados) = (tokens de entrada máximos). Mantente dentro de ese presupuesto.' },
+          { '@type': 'HowToStep', position: 6, name: 'Para LLM locales, ajusta la context window a tu VRAM', text: 'El tamaño de la context window impulsa el crecimiento de la VRAM del caché KV. Un modelo 7B (Q4_K_M) usa ~8–10 GB a 32k de contexto y ~12–14 GB a 128k. Prueba el límite de tu hardware en lugar de maximizar todo automáticamente.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'es',
+        name: 'Tamaños de context window por modelo — 2026',
+        description: 'Comparación de los tamaños de context window en los principales LLM, incluidos GPT-4o, Claude Opus, Gemini y modelos locales a través de Ollama.',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'GPT-4o mini', description: '4k tokens (≈ 3.000 palabras)' },
+          { '@type': 'ListItem', position: 2, name: 'GPT-4o', description: '128k tokens (≈ 96.000 palabras)' },
+          { '@type': 'ListItem', position: 3, name: 'Claude Opus 4.7', description: '200k tokens (≈ 150.000 palabras)' },
+          { '@type': 'ListItem', position: 4, name: 'Gemini 3.1 Pro', description: '2.000.000 tokens (≈ 1.500.000 palabras)' },
+          { '@type': 'ListItem', position: 5, name: 'Modelos locales (Ollama, LM Studio)', description: 'Configurable de 4k a 128k+, limitado por la VRAM disponible' },
+        ],
+      },
+      sections: contextWindowsEs
     },
     fr: {
       theme: 'Fundamentals',

@@ -404,6 +404,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: 'Q4_K_M vs Q8_0: ¿cuál elegir?',
+        answer: 'Usa Q4_K_M con 8 GB de VRAM o menos. Usa Q8_0 con 12+ GB. Q4_K_M ofrece el 95% de la calidad de Q8_0 aproximadamente a la mitad del tamaño de archivo.',
+        bullets: [
+          'Q4_K_M: ~5–6 GB para modelos 7B, ideal para 8 GB de VRAM',
+          'Q8_0: ~8–9 GB para modelos 7B, necesita 12+ GB de VRAM',
+          'La diferencia de calidad es inferior al 5% en uso real',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

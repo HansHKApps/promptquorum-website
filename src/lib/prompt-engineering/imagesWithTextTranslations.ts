@@ -588,6 +588,202 @@ export const imagesWithTextJa: Record<string, PESection> = {
   },
 }
 
+export const imagesWithTextEs: Record<string, PESection> = {
+  definition: {
+    title: '¿Qué es el Prompting Multimodal?',
+    content: '**El prompting multimodal combina texto e imágenes en un solo prompt para guiar la salida de la IA.** Los modelos de visión-lenguaje (VLM, por sus siglas en inglés) —redes neuronales entrenadas con datos de imagen y texto— procesan estas entradas multimodales para responder preguntas, describir escenas, generar nuevas imágenes o editar las existentes.\n\nA diferencia del prompting solo de texto, el prompting multimodal te permite mostrar en lugar de decir. Un modelo puede ver exactamente lo que quieres decir examinando detalles visuales, relaciones espaciales y colores, en lugar de basarse únicamente en la descripción escrita.',
+  },
+
+  tldr: {
+    title: 'Puntos clave',
+    isTldr: true,
+    items: [
+      'El prompting multimodal combina texto e imágenes; modelos como GPT-4o y Claude Opus 4.7 se destacan en el análisis y la descripción de imágenes',
+      'Existen tres modos: Imagen→Texto (describir/analizar), Texto→Imagen (generar) e Imagen↔Imagen (editar/transformar)',
+      'Los modelos de visión-lenguaje tienen dificultades con el conteo preciso, los límites de objetos detallados y la lectura de texto pequeño en imágenes',
+      'Sigue patrones estructurados: sé específico sobre los objetivos de análisis, proporciona contexto y usa ejemplos para lograr consistencia',
+      'PromptQuorum te permite probar prompts multimodales en múltiples modelos para comparar resultados y encontrar el mejor ajuste',
+    ],
+  },
+
+  modes: {
+    title: 'Tres modos del Prompting Multimodal',
+    content: 'El prompting multimodal toma tres formas principales, cada una adecuada para diferentes tareas.',
+    columns: ['Modo', 'Entrada', 'Salida', 'Mejores casos de uso'],
+    rows: [
+      {
+        'Modo': 'Imagen → Texto',
+        'Entrada': 'Imagen + pregunta de texto',
+        'Salida': 'Respuesta de texto',
+        'Mejores casos de uso': 'Leyendas, moderación de contenido, detección de objetos, análisis de documentos',
+      },
+      {
+        'Modo': 'Texto → Imagen',
+        'Entrada': 'Prompt de texto',
+        'Salida': 'Imagen generada',
+        'Mejores casos de uso': 'Visualización creativa, iteración de diseño, generación de ilustraciones',
+      },
+      {
+        'Modo': 'Imagen ↔ Imagen',
+        'Entrada': 'Imagen existente + instrucciones',
+        'Salida': 'Imagen modificada',
+        'Mejores casos de uso': 'Inpainting, transferencia de estilo, aumento de resolución, composición de imágenes',
+      },
+    ],
+    tableFormat: true,
+  },
+
+  howVisionWorks: {
+    title: 'Cómo los modelos de visión-lenguaje ven las imágenes',
+    content: [
+      '**Los modelos de visión-lenguaje como GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro convierten imágenes en vectores de alta dimensión (embeddings) utilizando un codificador visual y luego procesan esos embeddings junto con los tokens de texto en un espacio semántico compartido.** Este enfoque otorga a los VLM fortalezas claras en múltiples tareas: identifican objetos, leen texto, comprenden relaciones espaciales y razonan sobre el contenido en múltiples imágenes. Gemini 1.5 Pro admite hasta 1 millón de tokens, lo que permite el análisis de secuencias multimodales más largas que la context window de 128k de GPT-4o. Entender los [límites de la context window](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=es) te ayuda a estructurar prompts que eviten la truncación cuando trabajas con descripciones de imágenes largas o secuencias de múltiples imágenes.',
+      'Los VLM se destacan en la comprensión de escenas, el análisis de documentos y la comparación de elementos visuales. Sin embargo, tienen debilidades predecibles:',
+    ],
+    items: [
+      'Conteo preciso (especialmente de objetos pequeños o elementos en escenas densas)',
+      'Límites de objetos detallados y medidas espaciales exactas',
+      'Lectura de texto pequeño en imágenes o diagramas complejos',
+      'Comprensión de relaciones espaciales tridimensionales desde ángulos únicos',
+      'Evitar detalles alucinados que no están presentes en la imagen',
+    ],
+  },
+
+  imageToText: {
+    title: 'Patrones de prompting para Imagen → Texto',
+    content: 'Cuando pides a un modelo que analice o describa una imagen, estructura tu solicitud en torno a cuatro patrones:',
+    items: [
+      '**Describir imágenes:** Indica el objetivo del análisis y luego especifica el nivel de detalle. "Describe esta foto de producto en 2–3 oraciones, centrándote en los materiales, el color y la forma" es más útil que "describe la imagen."',
+      '**Extraer información:** Haz preguntas concretas. En lugar de "¿Qué hay en este documento?", pregunta "Extrae la fecha, el número de factura y el monto total de este recibo." Sé explícito sobre el formato: "Lista a todas las personas mencionadas como viñetas."',
+      '**Hacer preguntas específicas:** Limita tu pregunta de forma precisa. En lugar de "¿Esta imagen tiene texto?", pregunta "Lee todo el texto visible en este diagrama y transcríbelo exactamente." Las comparaciones ayudan a evitar alucinaciones: "¿Qué objeto es el más grande? ¿Cuál es el más pequeño?"',
+      '**Generar texto alternativo:** Para accesibilidad, pide al modelo que cree texto alternativo compatible con WCAG. "Escribe texto alternativo conciso (≤125 caracteres) para esta imagen que describa su contenido visual y contexto para un usuario ciego."',
+    ],
+  },
+
+  textToImage: {
+    title: 'Patrones de prompting para Texto → Imagen',
+    content: '**La generación de texto a imagen depende de prompts bien estructurados. Organiza cada prompt en torno a cinco componentes esenciales:**',
+    items: [
+      '**Sujeto:** Nombra lo que quieres ver. Sé específico: "un golden retriever con gafas de sol" supera a "un perro." Usa nombres propios: "un Jaguar E-Type de 1961" transmite más que "un auto clásico."',
+      '**Acción o estado:** Describe lo que hace el sujeto. "saltando por un aro," "sentado en un trono," "fundiéndose en agua." Los verbos activos hacen las imágenes dinámicas; las descripciones estáticas producen resultados estáticos.',
+      '**Estilo y estética:** Especifica el tratamiento visual. Referencia estilos conocidos: "pintura al óleo," "fotograma de cine negro," "render CGI," "acuarela," "póster Art Déco." Evita términos vagos como "hermoso" — usa referencias de estilo concretas.',
+      '**Contexto y entorno:** Dile al modelo dónde existe el sujeto. "en un bosque neblinoso al amanecer," "en una ciudad cyberpunk iluminada con neón," "sobre un pedestal de mármol en un museo." El contexto ancla la composición y el estado de ánimo.',
+      '**Detalles técnicos:** Especifica la iluminación y el ángulo de la cámara. "fotografiado desde arriba, iluminación de hora dorada, poca profundidad de campo" o "gran angular, sombras dramáticas, alto contraste." Los detalles técnicos controlan el estado de ánimo.',
+    ],
+  },
+
+  imageEditing: {
+    title: 'Patrones de prompting para edición de imágenes',
+    content: 'La edición de imágenes (inpainting, transferencia de estilo o composición) requiere una descripción clara de antes/después y restricciones precisas.',
+    items: [
+      '**Inpainting:** Marca o describe la región a modificar. "Reemplaza el fondo (actualmente una pared gris) con una puesta de sol sobre las montañas." Especifica qué debe permanecer igual: "Mantén la pose y la expresión de la persona idénticas; cambia solo el fondo."',
+      '**Transferencia de estilo:** Proporciona tanto la referencia como el objetivo. "Aplica la paleta de colores y el estilo de pincelada de esta pintura de Van Gogh (referencia) a esta fotografía (objetivo)." Especifica la conservación: "Mantén todos los detalles del original; aplica solo el estilo."',
+      '**Composición de múltiples imágenes:** Al combinar imágenes, sé explícito. "Combina estos tres objetos en una sola escena. Arréglalos de izquierda a derecha sobre una mesa de madera, iluminados por la luz del sol desde arriba. Mezcla los bordes sin costuras; asegura sombras consistentes."',
+    ],
+  },
+
+  reliableOutputs: {
+    title: 'Obtener resultados confiables: cuatro técnicas',
+    content: 'Los modelos multimodales producen resultados inconsistentes en diferentes tipos de imágenes, pero los prompts estructurados mejoran los resultados de forma medible. Estas cuatro técnicas aumentan la fiabilidad:',
+    items: [
+      '**Especifica el nivel de detalle:** Las solicitudes vagas producen resultados vagos. "Analiza esta imagen con detalle extremo" funciona mejor que "analiza esta imagen." Para generación: "fotorrealista, calidad 4K, cada detalle nítido" supera a "una imagen bonita."',
+      '**Usa un enfoque positivo:** Dile al modelo qué incluir, no qué excluir. En lugar de "No hagas los colores demasiado brillantes," di "Usa colores apagados y fríos con baja saturación." En lugar de "No agregues texto," di "Asegúrate de que no aparezca texto visible."',
+      '**Establece restricciones de forma explícita:** Las restricciones anclan los resultados. "Extrae exactamente 10 colores de esta imagen, clasificados por frecuencia" es mejor que "¿qué colores hay en esta imagen?" Para generación: "cuadrado 1:1, exactamente dos personas, habitación interior única."',
+      '**Proporciona ejemplos de antes/después:** Muéstrale al modelo cómo es un buen resultado. Incluye imágenes de ejemplo junto a tu solicitud. Los [ejemplos few-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=es) mejoran drásticamente la consistencia en edición y transferencia de estilo.',
+    ],
+  },
+
+  pitfalls: {
+    title: 'Errores comunes en el prompting multimodal',
+    content: 'Evita estos errores para mejorar los resultados multimodales:',
+    items: [
+      '**Prompts de imagen vagos:** [Prompt malo] "Analiza esta imagen." [Prompt bueno] "Esta es una captura de pantalla de una interfaz web. Identifica todos los botones, campos de entrada y enlaces. Para cada uno, anota su color, posición y texto visible."',
+      '**Olvidar las etiquetas o el contexto de la imagen:** Dile al modelo lo que muestra la imagen antes de hacer preguntas. "Esta es una imagen microscópica de una partícula de virus. Describe la estructura visible." es mejor que "¿Qué es esto?"',
+      '**Alcance de análisis incorrecto:** [Prompt malo] "Cuenta los objetos en esta imagen." [Prompt bueno] "Cuenta solo las manzanas rojas en este frutero. No cuentes otras frutas. Si no estás seguro, anótalo."',
+      '**Asumir precisión:** Los modelos de visión-lenguaje son propensos a las alucinaciones. No dependas de ellos para una precisión perfecta a nivel de píxel. Para tareas críticas, usa herramientas especializadas (OCR para texto, APIs de detección de objetos para conteo) junto con los VLM.',
+      '**Sobrecargar con múltiples imágenes:** La mayoría de los VLM manejan 2–10 imágenes de manera confiable; el rendimiento se degrada a partir de ese número. Procésalas por lotes: "Analiza las primeras 5 imágenes. Luego analiza las siguientes 5." Etiqueta claramente: "Imagen 1: [descripción], Imagen 2: [descripción]."',
+      '**Riesgos de privacidad y jurisdicción con VLM en la nube:** En la UE, enviar imágenes que contengan datos personales a VLM en la nube como GPT-4o o Gemini está sujeto al Artículo 9 del RGPD si se involucra información biométrica. Los modelos locales a través de Ollama o LM Studio procesan imágenes en el dispositivo, manteniendo los datos dentro de tu jurisdicción sin llamadas a API externas.',
+    ],
+  },
+
+  promptquorumHelps: {
+    title: 'Cómo PromptQuorum te ayuda a hacer prompts con imágenes',
+    content: [
+      '**PromptQuorum es una plataforma de distribución de prompts multimodelo que te permite probar prompts multimodales en GPT-4o, Claude Opus 4.7, Gemini 1.5 Pro y otros modelos simultáneamente.** Al probar el mismo prompt de descripción de imagen de producto en tres modelos, GPT-4o devolvió la salida más estructurada, Claude Opus 4.7 logró la mayor precisión en la extracción de texto y Gemini 1.5 Pro capturó más detalles contextuales — revelando que diferentes modelos se destacan en diferentes tareas de análisis de imágenes. Claude Opus 4.7 es preciso en el análisis de documentos; GPT-4o se destaca en la comprensión de escenas; Gemini 1.5 Pro maneja el razonamiento multimodal complejo.',
+      'Al distribuir el mismo prompt multimodal a los tres, ves qué modelo responde mejor y luego usas el Consensus Scoring para ponderar sus resultados.',
+    ],
+    items: [
+      '**Comparación de imágenes multimodelo:** Sube una imagen y haz la misma pregunta a todos los modelos. Compara las respuestas en segundos para descubrir qué modelo se adapta a tu caso de uso.',
+      '**Aplicación del framework:** Aplica el framework de prompts estructurados de PromptQuorum a las solicitudes multimodales. Define roles, contexto, restricciones y formato de salida — luego incluye una imagen. Esto asegura la consistencia entre modelos.',
+      '**Consensus Scoring en resultados de imágenes:** Cuando múltiples modelos analizan la misma imagen, el Consensus Scoring identifica qué análisis son más confiables. Si tres modelos están de acuerdo pero uno no, la puntuación señala el valor atípico.',
+    ],
+  },
+
+  recipes: {
+    title: 'Mini recetas: prompts multimodales para copiar y pegar',
+    content: 'Usa estas plantillas como punto de partida para tareas comunes. Cada una sigue los [bloques de construcción de prompts estructurados](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) para garantizar consistencia y repetibilidad.',
+    items: [
+      '**Fotografía de productos:** "Analiza esta imagen de producto y extrae: (1) materiales principales, (2) paleta de colores, (3) tamaño en relación con el entorno, (4) dirección de la iluminación, (5) defectos. Sé específico; evita adjetivos genéricos."',
+      '**Extracción de documentos:** "Extrae todo el texto visible de este documento. Preserva el formato, los saltos de línea y el énfasis. Si el texto es parcialmente ilegible, anota [NO CLARO] y tu mejor estimación. Formatea como un bloque de código markdown."',
+      '**Crítica de UI/UX:** "Identifica: (1) llamada a la acción principal y prominencia, (2) jerarquía visual, (3) problemas de espaciado y alineación, (4) problemas de contraste de color. Enfócate solo en las preocupaciones funcionales y de accesibilidad."',
+      '**Plantilla de texto a imagen:** "Sujeto: [sustantivo]. Acción: [verbo + estado]. Estilo: [estilo artístico]. Contexto: [configuración]. Técnico: [ángulo de cámara, iluminación]. Ejemplo: Sujeto: gramófono vintage. Acción: reproduce con ondas de sonido visibles. Estilo: surrealismo, pintura al óleo. Contexto: tienda de antigüedades, poca iluminación. Técnico: ángulo lateral, luz dorada, poca profundidad de campo."',
+      '**Edición de imagen:** "Edita esta imagen objetivo para que coincida con el estilo de esta imagen de referencia, mientras preservas la composición y el sujeto de la imagen objetivo. No agregues ni elimines elementos principales; aplica solo cambios de color, iluminación y textura."',
+      '**Generación de texto alternativo:** "Escribe texto alternativo para esta imagen. Debe ser ≤125 caracteres. Describe lo que un usuario ciego o con baja visión necesita saber. Ejemplo: \'un hombre con traje azul le da la mano a una mujer con vestido rojo en un evento formal con un paisaje urbano de fondo.\'"',
+    ],
+  },
+
+  faq: {
+    title: 'FAQ',
+    faqs: [
+      {
+        q: '¿Qué modelo de visión-lenguaje es mejor para analizar imágenes?',
+        a: 'No hay un único modelo mejor. GPT-4o se destaca en la comprensión general de escenas y el razonamiento complejo. Claude Opus 4.7 es preciso en el análisis de documentos y la extracción de texto. Gemini 1.5 Pro maneja contextos multimodales más largos (1 millón de tokens). Usa PromptQuorum para probar los tres en tu tarea específica.',
+      },
+      {
+        q: '¿Pueden los modelos de visión-lenguaje contar objetos con precisión?',
+        a: 'No. Los VLM tienen dificultades con el conteo preciso, especialmente de objetos pequeños o elementos densamente agrupados. Para conteos exactos, usa APIs de detección de objetos especializadas, o pide al modelo que enumere objetos con restricciones explícitas: "Cuenta solo los elementos rojos; sé conservador — si no estás seguro, no lo cuentes."',
+      },
+      {
+        q: '¿Cuántas imágenes puedo incluir en un solo prompt?',
+        a: 'La mayoría de los VLM manejan 2–10 imágenes de manera confiable. El rendimiento se degrada más allá de 10. Si necesitas analizar muchas imágenes, procésalas por lotes y en rondas. Etiqueta cada imagen claramente: "Imagen 1: [descripción], Imagen 2: [descripción]."',
+      },
+      {
+        q: '¿Qué formatos de imagen admiten los modelos de visión-lenguaje?',
+        a: 'GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro aceptan JPEG, PNG, GIF y WebP. La mayoría admite imágenes de hasta 20 MB. Los límites específicos varían según el modelo; consulta la documentación de OpenAI y Anthropic para obtener detalles actuales.',
+      },
+      {
+        q: '¿Puedo usar modelos locales como Ollama para el prompting multimodal?',
+        a: 'Sí. Modelos como LLaVA y Ollama admiten el análisis de imágenes local. Los modelos locales ofrecen privacidad, pero menor precisión que GPT-4o o Claude Opus 4.7. Úsalos para tareas no críticas o cuando la privacidad sea esencial.',
+      },
+      {
+        q: '¿Cómo mejoro la consistencia en la generación de texto a imagen?',
+        a: 'Usa plantillas estructuradas (Sujeto/Acción/Estilo/Contexto/Técnico), proporciona imágenes de referencia y especifica restricciones (resolución, composición, número de elementos). Itera con el mismo modelo — cambiar de modelo entre iteraciones produce resultados inconsistentes.',
+      },
+      {
+        q: '¿Cuál es la diferencia entre el prompting para análisis de imágenes frente a la generación?',
+        a: 'Los prompts de análisis especifican el alcance de la información ("Extrae solo la fecha y el número de factura"). Los prompts de generación deben describir claramente todos los elementos visuales (sujeto, acción, estilo, contexto, detalles técnicos). La generación exige más precisión porque el modelo imagina en lugar de percibir.',
+      },
+    ],
+  },
+
+  relatedReading: {
+    title: 'Lecturas relacionadas',
+    items: [
+      '[¿Qué es la ingeniería de prompts?](/prompt-engineering/what-is-prompt-engineering?lang=es) — conceptos fundamentales para todo tipo de prompting',
+      '[Los 5 bloques de construcción que todo prompt necesita](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es) — cómo la estructura se aplica a todos los prompts, incluidos los multimodales',
+      '[Prompting de cadena de pensamiento](/prompt-engineering/chain-of-thought-prompting?lang=es) — patrones de razonamiento que se combinan con el prompting de imágenes para tareas complejas',
+    ],
+  },
+
+  sources: {
+    title: 'Fuentes y lecturas adicionales',
+    items: [
+      '[Documentación de la API Vision de OpenAI](https://platform.openai.com/docs/guides/vision)',
+      '[Documentación de Claude Vision de Anthropic](https://docs.anthropic.com/en/docs/vision)',
+      '[Descripción general multimodal de Google DeepMind Gemini](https://deepmind.google/technologies/gemini/)',
+    ],
+  },
+}
+
 export const imagesWithTextZh: Record<string, PESection> = {
   definition: {
     title: '什么是多模态提示?',

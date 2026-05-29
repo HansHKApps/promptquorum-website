@@ -319,6 +319,161 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  es: {
+    freshness_tier: 'evergreen',
+    theme: 'Workflows & Automatización',
+    title: 'Prompt engineering para equipos de contenido: plantillas, flujos de revisión y controles de calidad',
+    seoTitle: 'Prompt Engineering para equipos de contenido: plantillas y revisiones',
+    metaDescription: 'Prompts para equipos de contenido: codificación de voz de marca, 5 plantillas reutilizables (blog, social, resumen, SEO meta, email), flujo de revisión editorial, puntuación de calidad.',
+    ogDescription: 'Guía de PE para equipos de contenido: cómo codificar la voz de marca en prompts, 5 plantillas reutilizables, flujo de revisión editorial y puntuación de calidad.',
+    twitterDescription: 'PE para equipos de contenido: codificación de voz de marca, 5 plantillas, flujo de revisión editorial, checklist de puntuación de calidad.',
+    intro: 'Los equipos de contenido que adoptan el prompt engineering reducen los ciclos de revisión — no aceptando salidas de IA de menor calidad, sino codificando los requisitos de calidad directamente en sus prompts antes de que comience la generación. Esta guía cubre cómo especificar la voz de marca, qué plantillas estandarizar y cómo puntuar la calidad de los prompts de forma sistemática.',
+    leadAnswerBlock: '**Los equipos de contenido reducen los ciclos de revisión codificando los requisitos de salida — tono, formato, recuento de palabras y restricciones de marca — directamente en sus prompts.** El fallo de PE más común en equipos de contenido es dejar los criterios de calidad implícitos y luego revisarlos manualmente a posteriori.',
+    publishDate: '2026-05-02',
+    readTime: '8 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Prompt Engineering para equipos de contenido',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/prompt-engineering/pe-for-content-teams?lang=es',
+      headline: 'Prompt engineering para equipos de contenido: plantillas, flujos de revisión y controles de calidad',
+      description: 'Cómo los equipos de contenido codifican la voz de marca, construyen plantillas de prompts reutilizables para 5 tipos de contenido, ejecutan flujos de revisión editorial y puntúan la calidad de los prompts de forma sistemática.',
+      datePublished: '2026-05-02',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-content-teams?lang=es', width: 1200, height: 630 },
+      keywords: ['prompt engineering', 'equipos de contenido', 'voz de marca', 'plantillas de contenido', 'flujo de trabajo editorial'],
+      proficiencyLevel: 'Intermediate',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    sections: {
+      key_takeaways: {
+        title: 'Puntos clave',
+        isTldr: true,
+        items: [
+          'Codifica los requisitos de salida — tono, formato, recuento de palabras y restricciones de marca — directamente en el prompt, no como criterios de revisión post-generación.',
+          'La codificación de voz de marca requiere 4 componentes: descriptor de tono (3 adjetivos), lista de vocabulario (5–10 términos de marca), lista negativa (5–10 palabras a evitar) y 2–3 ejemplos de referencia.',
+          'Usa el framework CRAFT (Context, Role, Action, Format, Tone) como base para todos los prompts de contenido — organiza las 5 dimensiones más relevantes para las salidas de contenido.',
+          'Una revisión editorial en 3 fases (precisión factual → cumplimiento de marca → pulido final) aplica a artículos publicados. Omite la fase 1 para contenido de bajo riesgo como publicaciones en redes sociales.',
+          'Despliega un prompt solo si alcanza una puntuación media de calidad de 1.5 o superior (en escala 0–2 por criterio) en 10 ejecuciones de prueba.',
+        ],
+      },
+      content_team_challenges: {
+        id: 'content-team-challenges',
+        title: '¿Qué hace diferente el prompting de equipos de contenido?',
+        content: [
+          '**El prompting de equipos de contenido difiere del prompting de desarrolladores porque los criterios de calidad son subjetivos, multi-stakeholder y dependientes del canal.** Tres desafíos específicos del prompt engineering para equipos de contenido:',
+        ],
+        items: [
+          '**La voz de marca es difícil de especificar con precisión:** Instrucciones genéricas como "escribe en un tono amigable" son demasiado vagas para salidas consistentes. La codificación efectiva de voz de marca requiere adjetivos específicos de la guía de estilo, una lista de vocabulario de términos preferidos, una lista negativa de palabras a evitar y ejemplos de referencia.',
+          '**La longitud y el formato de salida varían por canal:** Un borrador de blog requiere estructura H1 + H2 y 800–1200 palabras. Una publicación de LinkedIn requiere 150–300 palabras y sin estructura de encabezados H. Un email requiere línea de asunto, gancho, cuerpo y CTA en menos de 150 palabras. Cada canal necesita una plantilla específica — no un prompt genérico de "escribe contenido".',
+          '**Los flujos de revisión involucran múltiples stakeholders:** La revisión de contenido típicamente involucra a un autor (precisión factual), un revisor de marca (cumplimiento de marca) y un editor (pulido final). Los prompts que dejan los criterios de calidad implícitos obligan a los tres revisores a aplicar sus propios estándares — produciendo feedback inconsistente y ciclos de revisión más largos.',
+        ],
+      },
+      brand_voice_encoding: {
+        id: 'brand-voice-encoding',
+        title: 'Cómo codificar la voz de marca en un prompt',
+        content: [
+          '**La codificación de voz de marca requiere 4 componentes en el prompt: descriptor de tono, lista de vocabulario, lista negativa y ejemplos de referencia.** Los prompts que incluyen los 4 componentes superan consistentemente a los prompts que se basan solo en adjetivos de tono cuando son evaluados por revisores humanos.',
+        ],
+        items: [
+          '**Descriptor de tono:** 3 adjetivos de tu guía de estilo que describan la personalidad de la marca (p. ej., "directo, práctico, confiado"). Estos adjetivos comprimen las directrices de marca en una forma que el modelo puede aplicar a cada oración.',
+          '**Lista de vocabulario:** 5–10 términos específicos de la marca a usar — nombres de productos, verbos preferidos, frases características que definen cómo se comunica la marca (p. ej., "construir, lanzar, iterar" para una marca orientada a desarrolladores).',
+          '**Lista negativa:** 5–10 palabras o frases a evitar — típicamente jerga corporativa, superlativos, clichés o terminología de la competencia (p. ej., evitar "innovador, aprovechar, sin fricciones, revolucionario").',
+          '**Ejemplos de referencia:** 2–3 muestras de contenido aprobadas pegadas directamente en el prompt. Esto le da al modelo un patrón concreto que replicar en lugar de una descripción abstracta. Elige ejemplos del mismo canal y tipo de contenido que la salida objetivo.',
+        ],
+      },
+      five_templates: {
+        id: 'five-templates',
+        title: '5 plantillas de prompts de contenido reutilizables',
+        content: [
+          '**Cinco tipos de contenido representan la mayoría de la producción de un equipo de contenido: borradores de blog, publicaciones sociales, resúmenes de contenido, etiquetas meta SEO y emails.** Estandarizar una plantilla por tipo elimina la improvisación de prompts por tarea que crea inconsistencia.',
+        ],
+        numberedItems: [
+          'Borrador de blog: role=estratega de contenido, brief=[tema+audiencia+ángulo], format=[H1+3 H2s+conclusión], word_count=[objetivo], brand_voice=[3 adjetivos de tono], tone_examples=[2 muestras aprobadas del mismo canal]',
+          'Publicación social: role=gestor de redes sociales, platform=[LinkedIn/X/Instagram], topic=[brief], character_limit=[límite de plataforma: LinkedIn 300, X 280, Instagram 2200], cta=[acción deseada], brand_voice=[3 adjetivos de tono]',
+          'Resumen de contenido: role=editor, source=[pega el contenido aquí], output=[resumen ejecutivo de 3 puntos + 1 versión de longitud de tweet en menos de 280 caracteres], audience=[rol del lector], reading_level=[nivel objetivo]',
+          'SEO Meta: role=redactor SEO, page_topic=[tema], primary_keyword=[keyword], title_max=60 caracteres, description_max=155 caracteres, include_keyword_in=[tanto título como descripción], avoid=[voz pasiva, frases de relleno]',
+          'Email: role=redactor de email, objective=[objetivo de conversión], audience=[segmento], subject_line_options=[3 opciones con diferentes ganchos], body_structure=[gancho+propuesta de valor+cta], word_count=[menos de 150 palabras para el cuerpo]',
+        ],
+      },
+      review_workflow: {
+        id: 'review-workflow',
+        title: 'Flujo de revisión editorial para contenido generado por IA',
+        content: [
+          '**Un proceso de revisión editorial en 3 fases aplica estándares de calidad consistentes al contenido generado por IA sin requerir que cada revisor defina sus propios criterios.** Las 3 fases se corresponden con las 3 dimensiones de calidad que con mayor frecuencia fallan en el contenido generado por IA: precisión factual, cumplimiento de marca y calidad de escritura.',
+        ],
+        items: [
+          '**Fase 1 — Precisión factual (autor):** La persona que envió el brief revisa la salida para verificar la corrección factual. Comprueba: ¿son precisas todas las afirmaciones sobre el producto? ¿Son reales los estadísticos y datos y están correctamente atribuidos? ¿Son correctos los nombres y detalles de terceros? Esta fase requiere experiencia en el dominio, no experiencia editorial.',
+          '**Fase 2 — Cumplimiento de marca (revisor de marca):** Un gestor de marca o editor de contenido senior comprueba la salida frente a los componentes de codificación de voz de marca: ¿coincide con el descriptor de tono? ¿Usa términos de la lista de vocabulario y evita los términos de la lista negativa? ¿El registro general coincide con los ejemplos de referencia?',
+          '**Fase 3 — Pulido final (editor):** Un editor comprueba el flujo, las transiciones, la legibilidad y la efectividad de la CTA. Esta es la fase donde se produce la edición a nivel de oración.',
+        ],
+      },
+      quality_scoring: {
+        id: 'quality-scoring',
+        title: 'Checklist de puntuación de calidad para prompts de contenido',
+        content: [
+          '**Una checklist de puntuación de calidad de 5 puntos aplicada a 10 ejecuciones de prueba te da un umbral estadístico para decidir si desplegar un prompt de contenido a tu equipo.** Sin un sistema de puntuación, las decisiones de despliegue de prompts se basan en si la última ejecución de prueba parecía buena — lo cual es una muestra demasiado pequeña para ser fiable.',
+          'Los 5 criterios de puntuación (puntúa cada uno de 0–2 por ejecución):',
+        ],
+        items: [
+          '**Tarea completa (0–2):** ¿La salida responde al brief? Puntúa 0 si el brief no está abordado, 1 si está parcialmente abordado, 2 si aborda completamente el brief incluyendo todas las secciones y ángulos solicitados.',
+          '**Cumplimiento de formato (0–2):** ¿La salida coincide con la estructura especificada — niveles de encabezado correctos, recuento de palabras dentro del ±15% del objetivo, número correcto de viñetas o secciones?',
+          '**Coincidencia de voz de marca (0–2):** ¿La salida usa los descriptores de tono y los términos de la lista de vocabulario, y evita los términos de la lista negativa? Puntúa 0 si la salida suena genérica o usa frases prohibidas, 2 si coincide consistentemente con la codificación de marca.',
+          '**Precisión factual (0–2):** ¿Son verificables y precisas todas las afirmaciones fácticas en la salida? Puntúa 0 si hay afirmaciones no verificadas o datos alucinados, 2 si todas las afirmaciones son precisas o claramente enmarcadas como ejemplos.',
+          '**Alineación CTA/objetivo (0–2):** ¿La salida incluye la llamada a la acción requerida y el contenido conduce hacia el objetivo declarado? Puntúa 0 si la CTA falta o está desalineada, 2 si está presente y es efectiva.',
+        ],
+        callouts: [
+          {
+            type: 'key-point',
+            label: 'Umbral de despliegue',
+            text: 'Despliega el prompt si la puntuación media en los 5 criterios a lo largo de 10 ejecuciones de prueba es 1.5 o superior (sobre 2.0). Una puntuación inferior a 1.5 significa que el prompt produce demasiadas salidas parciales o fallidas para ser fiable en producción sin sobrecarga adicional de revisión por ejecución.',
+          },
+        ],
+      },
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        content: 'Los equipos de contenido reducen los ciclos de revisión codificando los requisitos de calidad — tono, formato, recuento de palabras y restricciones de marca — directamente en sus prompts. Usa el framework CRAFT (Context, Role, Action, Format, Tone) como base para todos los prompts de contenido. La codificación de voz de marca requiere 4 componentes: 3 adjetivos de tono, una lista de vocabulario de 5–10 términos, una lista negativa de 5–10 términos y 2–3 ejemplos de referencia. Los canales distintos necesitan plantillas distintas: blog (800–1200 palabras con estructura H1/H2), LinkedIn (150–300 palabras, sin encabezados), email (asunto + gancho + cuerpo + CTA en menos de 150 palabras). Ejecuta una revisión editorial en 3 fases para contenido publicado (precisión factual → cumplimiento de marca → pulido final; omite la fase 1 para contenido de bajo riesgo). Despliega solo cuando la puntuación media en una rúbrica de 5 puntos alcance 1.5 o superior en 10 ejecuciones de prueba.',
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Cómo reducen los equipos de contenido los ciclos de revisión de IA con el prompt engineering?', a: 'Los equipos de contenido reducen los ciclos de revisión codificando los criterios de calidad — tono, formato, recuento de palabras, vocabulario de marca y listas negativas — directamente en el prompt antes de la generación. Cuando los requisitos de salida son explícitos, el contenido generado por IA llega más cerca del objetivo y requiere menos rondas de revisión.' },
+          { q: '¿Qué es el framework CRAFT y cuándo deben usarlo los equipos de contenido?', a: 'CRAFT significa Context, Role, Action, Format y Tone. Es un framework de prompts estructurado adecuado para trabajo creativo y de contenido porque organiza las cinco dimensiones más relevantes para las salidas de contenido. Úsalo como estructura base para cualquier prompt de contenido que involucre voz de marca, requisitos de formato o revisión multi-stakeholder.' },
+          { q: '¿Cuántos ejemplos de marca necesito en un prompt de voz de marca?', a: 'Incluye 2 a 3 muestras de contenido aprobadas en el prompt. Menos de 2 le da al modelo una señal de patrón insuficiente. Más de 3 puede diluir la ventana de contexto disponible para la tarea real. Los ejemplos deben representar el canal objetivo y el tipo de contenido — no uses un ejemplo de LinkedIn para un brief de email.' },
+          { q: '¿Cuándo debe un equipo de contenido omitir la fase de revisión de precisión factual?', a: 'Omite la fase de precisión factual solo para contenido de bajo riesgo que no contiene afirmaciones fácticas — subtítulos de redes sociales que anuncian un evento, CTAs cortos, u opciones de línea de asunto. Cualquier contenido que haga afirmaciones sobre productos, precios, rendimiento o terceros requiere una verificación factual antes de la publicación.' },
+          { q: '¿Cómo configuro una plantilla de contenido que funcione consistentemente en múltiples modelos?', a: 'Prueba la misma plantilla en 2–3 modelos (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Flash) con 10+ ejecuciones de prueba cada uno. Usa la rúbrica de puntuación de calidad de 5 puntos para evaluar la consistencia. Si todos los modelos obtienen 1.5+, la plantilla es portable. Si un modelo cae por debajo de 1.5, revisa el prompt en lugar de adoptar una versión específica del modelo.' },
+          { q: '¿Cuál es el umbral de despliegue para un prompt de contenido?', a: 'Despliega el prompt si la puntuación media en todos los 5 criterios (tarea completa, cumplimiento de formato, coincidencia de voz de marca, precisión factual, alineación CTA) es 1.5 o superior (en escala 0–2) en 10 ejecuciones de prueba. Una puntuación inferior a 1.5 indica demasiadas salidas parciales o fallidas para uso en producción sin sobrecarga de revisión.' },
+        ],
+      },
+      related_reading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          { title: 'Framework CRAFT para equipos: prompting estructurado vs ad-hoc', url: '/prompt-engineering/prompt-framework-for-teams?lang=es' },
+          { title: 'Pruebas y validación de prompts: suites automatizadas para LLMs', url: '/prompt-engineering/prompt-testing-validation?lang=es' },
+          { title: 'Marca en prompts de LLM: codificar voz, tono y terminología', url: '/prompt-engineering/brand-voice-llm-prompts?lang=es' },
+          { title: 'Flujos editoriales con IA: controles de calidad y cumplimiento', url: '/prompt-engineering/editorial-workflow-ai?lang=es' },
+          { title: 'Pruebas de prompts multi-modelo para creación de contenido', url: '/prompt-engineering/multi-model-prompt-testing?lang=es' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          { title: 'PromptQuorum: herramienta de comparación multi-modelo', url: 'https://www.promptquorum.com/features' },
+          { title: 'Framework CRAFT', url: 'https://www.craftframework.dev/' },
+          { title: 'Recursos editoriales: HubSpot, Sprout Social guidelines', url: 'https://www.hubspot.com/' },
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisation',

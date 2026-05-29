@@ -828,6 +828,416 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ]
   },
 },
+    es: {
+  freshness_tier: 'semi_annual',
+  theme: 'Techniques',
+  title: 'Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento',
+  intro: 'El chain-of-thought prompting es una técnica en la que le pides explícitamente al modelo que muestre sus pasos de razonamiento en lugar de saltar directamente a la respuesta final. Esto hace que las decisiones complejas sean más fáciles de auditar, depurar y mejorar con el tiempo.',
+  leadAnswerBlock: '**El chain-of-thought (CoT) prompting le indica a un modelo de IA que muestre su razonamiento paso a paso antes de dar una respuesta final.** Esto mejora la precisión en tareas de matemáticas, lógica y múltiples pasos. En 2026, los modelos de frontera como Claude Opus 4.7 y OpenAI o3 tienen modos de razonamiento integrados que automatizan CoT internamente, pero el CoT a nivel de prompt sigue siendo valioso en modelos más pequeños y sin razonamiento integrado, donde es la principal forma de elicitar pensamiento estructurado.',
+  publishDate: '2026-03-26',
+  dateModified: '2026-05-03',
+  lastFactChecked: '2026-05-03',
+  readTime: '13 min de lectura',
+  seoTitle: 'Chain-of-Thought Prompting: Aumenta la Precisión un 40%',
+  metaDescription: 'Chain-of-Thought mejora el razonamiento entre un 10 y un 40 % en tareas de matemáticas y lógica. Aprende cuándo usar CoT a nivel de prompt frente a los modos de razonamiento integrados.',
+  educationalLevel: 'Intermediate',
+  primaryTerm: 'Chain-of-Thought Prompting',
+  audience: 'Desarrolladores, científicos de datos y equipos que trabajan con GPT-4o, Claude, Gemini o LLMs locales',
+  next_refresh_due: '2026-11-03',
+  aboutTopics: ['Chain-of-Thought Prompting', 'Razonamiento Estructurado', 'Prompt Engineering', 'Modelos de Razonamiento'],
+  toc: [
+    { label: 'Puntos clave', anchor: '#key-takeaways' },
+    { label: 'Datos rápidos', anchor: '#quick-facts' },
+    { label: '¿Qué es el chain-of-thought prompting?', anchor: '#what-is-chain-of-thought' },
+    { label: 'Por qué importa', anchor: '#why-it-matters' },
+    { label: 'Cuándo ayuda (y cuándo no)', anchor: '#when-it-helps' },
+    { label: 'Ejemplo: sin y con CoT', anchor: '#example-without-vs-with' },
+    { label: 'Ejemplo matemático: cálculo de ingresos', anchor: '#math-example' },
+    { label: 'Cómo escribir prompts efectivos', anchor: '#how-to-write' },
+    { label: 'Chain-of-Thought en PromptQuorum', anchor: '#in-promptquorum' },
+    { label: 'Cómo usar CoT prompting', anchor: '#how-to-start' },
+    { label: 'CoT vs modelos de razonamiento integrados', anchor: '#reasoning-models' },
+    { label: 'Variantes de chain-of-thought', anchor: '#cot-variants' },
+    { label: 'Comparación de modelos', anchor: '#model-comparison' },
+    { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    { label: 'FAQ', anchor: '#faq' },
+    { label: 'Fuentes', anchor: '#sources' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=es',
+    inLanguage: 'es',
+    headline: 'Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento',
+    description: 'Qué es el chain-of-thought prompting, cuándo ayuda y cómo estructurar prompts para que los modelos muestren su razonamiento con claridad.',
+    datePublished: '2026-03-26',
+    dateModified: '2026-05-03',
+    keywords: ['chain-of-thought prompting', 'razonamiento paso a paso', 'prompt engineering', 'modelos de razonamiento', 'extended thinking'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
+      { '@type': 'Thing', name: 'Large Language Models', 'sameAs': 'https://www.wikidata.org/wiki/Q115305900' },
+      { '@type': 'Thing', name: 'Razonamiento' },
+      { '@type': 'Thing', name: 'Salida Estructurada' },
+    ],
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.article-intro', '.key-takeaways'],
+    },
+  },
+  sections: {
+    tldr: {
+      isTldr: true,
+      title: 'Puntos clave',
+      numberedItems: [
+        '**El chain-of-thought prompting pide a los modelos que muestren los pasos de razonamiento antes de dar una respuesta final**, mejorando la precisión en tareas de matemáticas, lógica y múltiples pasos.',
+        'El CoT zero-shot ("piensa paso a paso") funciona en la mayoría de los modelos. El CoT few-shot (con ejemplos resueltos) es más fiable.',
+        'En 2026, los modelos de frontera como Claude Opus 4.7 y OpenAI o3 tienen **modos de razonamiento integrados** que reemplazan el CoT a nivel de prompt; no necesitas decir "piensa paso a paso" en estos modelos.',
+        'CoT aumenta los tokens de salida y, por tanto, el costo. Los modos de razonamiento integrados añaden presupuestos de tokens de pensamiento separados con su propia facturación.',
+        'Usa CoT a nivel de prompt en modelos sin razonamiento (Haiku, Flash, LLaMA 4) para razonamiento económico. Usa modos de razonamiento integrados en modelos de frontera para máxima precisión.',
+        'CoT es más valioso para matemáticas, lógica, planificación y análisis de causa raíz. Omítelo para clasificación simple, respuestas cortas y redacción rápida.',
+      ]
+    },
+    quickFacts: {
+      title: 'Datos rápidos',
+      numberedItems: [
+        '**Acuñado por:** Wei et al. (2022), Google Brain — artículo fundacional en NeurIPS 2022',
+        '**Resultado clave:** CoT zero-shot elevó la precisión de PaLM 540B del 17,7 % al 78,7 % en MultiArith',
+        '**Frase activadora:** "Pensemos paso a paso" (zero-shot) o ejemplos resueltos (few-shot)',
+        '**Evolución en 2026:** Los modos de razonamiento integrados (o3, Claude extended thinking) automatizan CoT internamente',
+        '**Impacto en costo:** CoT a nivel de prompt = más tokens de salida; modos de razonamiento = presupuesto de tokens de pensamiento separado',
+        '**Mejores modelos para CoT a nivel de prompt:** Modelos sin razonamiento (Claude Haiku 4.5, Gemini Flash, GPT-4o mini, LLaMA 4 Scout)',
+      ]
+    },
+    whatIsChainOfThought: {
+      title: 'Qué es el chain-of-thought prompting',
+      content: [
+        '**El chain-of-thought prompting le pide al modelo que razone paso a paso antes de llegar a una conclusión final.** En lugar de devolver solo "la respuesta", el modelo escribe cálculos intermedios, pasos lógicos o explicaciones.',
+        'Puedes activar este comportamiento con instrucciones como "piensa paso a paso", "muestra tu razonamiento" o proporcionando ejemplos resueltos donde el razonamiento es explícito. El resultado es un rastro que puedes leer para entender cómo llegó el modelo a su conclusión.',
+      ],
+    },
+    whyItMatters: {
+      title: 'Por qué importa el chain-of-thought prompting',
+      content: [
+        '**El chain-of-thought prompting importa porque hace que el comportamiento del modelo sea más transparente en tareas que implican razonamiento de múltiples pasos.** Cuando ves cada paso, puedes detectar malinterpretaciones, suposiciones faltantes o errores aritméticos.',
+        'Esto es especialmente valioso en áreas como análisis, planificación y resolución de problemas. En lugar de una salida opaca, obtienes una narrativa que puedes verificar, corregir o reutilizar como documentación.',
+      ],
+      callouts: [
+        {
+          type: 'info',
+          label: 'Funciona con modelos locales',
+          text: 'Chain-of-thought funciona en cualquier modelo con 7B+ parámetros. Pruébalo localmente con [Ollama o LM Studio](https://www.promptquorum.com/local-llms).'
+        }
+      ],
+    },
+    whenItHelps: {
+      title: 'Cuándo ayuda el chain-of-thought (y cuándo no)',
+      content: [
+        '**El chain-of-thought prompting ayuda más en tareas que se dividen naturalmente en pasos claros, pero no es necesario para cada prompt.** Brilla donde el camino es tan importante como el destino.',
+        'El razonamiento chain-of-thought es lo que permite que un agente con llamadas a herramientas sea fiable en tareas de múltiples pasos. Para un stack de agentes locales con MCP, consulta [Agentes de IA locales con MCP](/power-local-llm/local-ai-agents-with-mcp-2026).',
+        'Los buenos casos de uso incluyen:',
+      ],
+      items: [
+        'Problemas matemáticos y de razonamiento cuantitativo.',
+        'Puzzles lógicos de múltiples pasos o análisis de decisiones.',
+        'Análisis de causa raíz, postmortems de incidentes y discusiones de compensaciones.',
+        'Tareas de planificación donde la secuencia de acciones debe ser explícita.',
+      ],
+    },
+    whenItDoesntHelp: {
+      content: [
+        'Para clasificación simple, redacción rápida o respuestas factuales cortas, el chain-of-thought a menudo añade verbosidad sin mucho valor adicional. En dominios sensibles, también puede que quieras mantener el razonamiento interno y mostrar solo la respuesta final a los usuarios.',
+      ],
+    },
+    example: {
+      title: 'Ejemplo: Sin y con chain-of-thought',
+      content: [
+        '**La diferencia se hace clara cuando comparas un prompt de respuesta directa con uno que pide razonamiento explícitamente.** Aquí hay un ejemplo de decisión simple.',
+        '**[Prompt deficiente]**',
+        '"¿Qué proyecto deberíamos priorizar el próximo trimestre?"',
+        '**[Prompt mejorado]**',
+        '"Eres un gerente de operaciones de producto. Tenemos tres proyectos candidatos para el próximo trimestre. Usa razonamiento chain-of-thought para decidir qué proyecto priorizar. 1) Lista los criterios de decisión que usarás (por ejemplo, impacto en ingresos, riesgo, alineación con la estrategia). 2) Evalúa cada proyecto contra estos criterios paso a paso. 3) Haz una recomendación clara y justifícala en 3–5 oraciones. Al final, proporciona una respuesta final corta comenzando con `Recomendación:` en una línea separada."',
+        'En la versión "mejorada", el modelo explica cómo eligió sus criterios, cómo puntúa cada proyecto y luego emite una recomendación que puedes cuestionar o aceptar.',
+      ],
+    },
+    howToWrite: {
+      title: 'Cómo escribir prompts chain-of-thought efectivos',
+      content: [
+        '**Para escribir prompts chain-of-thought efectivos, debes definir la estructura del razonamiento y la estructura de la respuesta final.** Las solicitudes vagas como "explica más" son menos fiables que las instrucciones concretas.',
+        'Un patrón práctico es:',
+      ],
+      items: [
+        'Dile al modelo su rol (por ejemplo, "Eres un analista de datos senior.").',
+        'Especifica que debe pensar paso a paso o usar chain-of-thought.',
+        'Define las secciones de razonamiento que esperas (por ejemplo, supuestos, cálculos, comparación, conclusión).',
+        'Pide una respuesta final corta y claramente marcada al final para poder usarla rápidamente.',
+      ],
+    },
+    howtWriteNote: {
+      content: [
+        'Esto separa el razonamiento detallado de la salida concisa, lo cual es útil cuando integras el resultado en otras herramientas o informes.',
+      ],
+    },
+    inPromptQuorum: {
+      title: 'Chain-of-thought prompting en PromptQuorum',
+      content: [
+        '**PromptQuorum es una herramienta de despacho de IA multi-modelo donde puedes aplicar chain-of-thought prompting de forma consistente en diferentes modelos.** Escribes un prompt chain-of-thought estructurado y lo envías a varios proveedores en paralelo.',
+        'En PromptQuorum puedes:',
+      ],
+      items: [
+        'Combinar instrucciones chain-of-thought con frameworks orientados al razonamiento como TRACE o APE para que los pasos de pensamiento estén etiquetados explícitamente.',
+        'Comparar cómo diferentes modelos manejan la misma tarea de razonamiento e inspeccionar sus rastros paso a paso lado a lado.',
+        'Guardar prompts chain-of-thought como plantillas para análisis recurrentes, revisiones de incidentes o decisiones estratégicas.',
+      ],
+    },
+    inPromptQuorumClosing: {
+      content: [
+        'Esto convierte el chain-of-thought prompting de un truco puntual en una parte repetible de tu proceso de toma de decisiones.',
+      ],
+    },
+    howToStart: {
+      title: 'Cómo usar el CoT prompting',
+      numberedItems: [
+        '**Para tareas de lógica, razonamiento o depuración, pide al modelo que "piense paso a paso" antes de responder.** En lugar de "¿cuál es el bug?", pregunta "Sigue la ejecución paso a paso, luego identifica el bug."',
+        '**Proporciona un ejemplo resuelto que muestre el razonamiento paso a paso.** No lo describas solo — muéstrale al modelo cómo se ve el razonamiento paso a paso. Ejemplo: "Primero, reviso la firma de la función... Luego, sigo la primera llamada con la entrada X..."',
+        '**Usa prompts explícitos como "Pensemos paso a paso" o "Primero, identifica... Luego..."** Estos activan un razonamiento más deliberado en el modelo.',
+        '**Para problemas complejos, pide al modelo que rastree las salidas intermedias.** Ejemplo: "Sigue la ejecución de esta función para la entrada [5]. Muestra el valor de cada variable después de cada línea."',
+        '**Combina CoT con salidas verificables: pide al modelo que muestre su trabajo para que puedas auditarlo.** "Explica tu razonamiento en cada paso. Si cometes un error, debería ser visible en el trabajo que muestras."',
+      ],
+    },
+    mathExample: {
+      title: 'Ejemplo matemático: cálculo de ingresos',
+      content: [
+        '**Sin CoT, un modelo podría dar una sola respuesta final. Con CoT, el modelo muestra los cálculos paso a paso.**',
+        '**Sin CoT:**',
+        '"Un cliente compra 50 unidades a $15 cada una, pero obtiene un 10 % de descuento. ¿Cuánto paga?"',
+        'Modelo: "$675"',
+        '**Con CoT:**',
+        '"Un cliente compra 50 unidades a $15 cada una, pero obtiene un 10 % de descuento. Trabaja esto paso a paso: 1) Calcula el subtotal. 2) Calcula el monto del descuento. 3) Resta el descuento del subtotal para obtener el precio final."',
+        'Modelo: "1) Subtotal = 50 × $15 = $750. 2) Descuento = 10 % de $750 = $75. 3) Precio final = $750 − $75 = $675."',
+        'Ambos dan la misma respuesta, pero la versión CoT permite ver la matemática y detectar errores (por ejemplo, si alguien calcula mal el 10 % de $750).',
+      ],
+    },
+    reasoningModels: {
+      title: 'CoT vs modelos de razonamiento integrados (2026)',
+      content: [
+        '**En 2026, los modelos de frontera — Claude Opus 4.7, OpenAI o3, Gemini Deep Think — tienen modos de razonamiento integrados que internalizan chain-of-thought automáticamente.** No necesitas añadir instrucciones "piensa paso a paso" en estos modelos.',
+        '**Cuándo usar CoT a nivel de prompt:** Modelos sin razonamiento (Claude Haiku 4.5, GPT-4o mini, Gemini Flash, Llama 4), LLMs locales, o cuando quieres evitar el costo extra de los presupuestos de tokens de razonamiento.',
+        '**Cuándo usar modos de razonamiento integrados:** Máxima precisión en modelos de frontera, tareas con mucha matemática, análisis complejo. Estos modelos facturan los tokens de razonamiento por separado (normalmente a una tarifa mayor que los tokens de salida). Prueba tus prompts CoT en la [consola de Anthropic](https://docs.anthropic.com/) o en el [Playground de OpenAI](https://platform.openai.com/playground) antes de desplegarlos en producción.',
+      ],
+      columns: ['Enfoque', 'Mejor para', 'Costo', 'Transparencia', 'Modelos'],
+      rows: [
+        { 'Enfoque': 'CoT a nivel de prompt ("piensa paso a paso")', 'Mejor para': 'Modelos pequeños, LLMs locales, tareas sensibles al costo', 'Costo': 'Aumenta los tokens de salida', 'Transparencia': 'Total: pasos visibles en la salida', 'Modelos': 'Haiku, Flash, LLaMA, Qwen' },
+        { 'Enfoque': 'Claude extended thinking (Opus 4.7, Sonnet 4.6)', 'Mejor para': 'Análisis complejo, máxima precisión', 'Costo': 'Presupuesto de tokens de pensamiento separado (tarifa de entrada)', 'Transparencia': 'Traza de inspector vía API', 'Modelos': 'Claude Opus 4.7, Claude Sonnet 4.6' },
+        { 'Enfoque': 'OpenAI o3', 'Mejor para': 'Problemas más difíciles (matemáticas, código, competición)', 'Costo': 'Presupuesto de tokens de razonamiento (nivel más alto)', 'Transparencia': 'Razonamiento oculto, salida visible', 'Modelos': 'OpenAI o3' },
+        { 'Enfoque': 'Gemini Deep Think', 'Mejor para': 'Integración con Google Cloud, ecosistema Gemini', 'Costo': 'Tokens de pensamiento separados de la salida', 'Transparencia': 'Parámetro thinking_level (LOW, MEDIUM, HIGH)', 'Modelos': 'Gemini 3.1 Pro' },
+        { 'Enfoque': 'DeepSeek R1', 'Mejor para': 'Opción open-weights, razonamiento en dispositivo', 'Costo': 'Razonamiento visible transmitido como texto de salida', 'Transparencia': 'Total: CoT en línea en la salida', 'Modelos': 'DeepSeek R1' },
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: 'Consejo pro',
+          text: 'Si construyes pensando en el costo, usa CoT a nivel de prompt en modelos más pequeños. Si construyes para precisión en problemas difíciles, usa o3 o Claude extended thinking y deja que el modelo gestione el razonamiento internamente.'
+        }
+      ],
+    },
+    cotVariants: {
+      title: 'Variantes y extensiones de chain-of-thought',
+      content: [
+        '**Más allá del patrón básico "piensa paso a paso", los investigadores han desarrollado varias variantes de CoT, cada una optimizada para diferentes tipos de problemas.**',
+      ],
+      items: [
+        '**CoT zero-shot:** Pregunta "Pensemos paso a paso" sin ejemplos. Funciona en la mayoría de los modelos y es el más simple de implementar. Mejora: ~10–20 % en tareas de razonamiento.',
+        '**CoT few-shot:** Muestra 2–5 ejemplos resueltos donde el razonamiento es explícito, luego pide al modelo que aplique el mismo patrón a un nuevo problema. Más fiable que zero-shot pero requiere crear ejemplos manualmente. Mejora: ~20–40 % de precisión.',
+        '**Self-consistency (Wang et al., 2023):** Genera múltiples rutas de razonamiento CoT de forma independiente, luego toma una votación mayoritaria en la respuesta final. Significativamente más robusto frente a errores. Mejora: ~30–50 % en tareas difíciles.',
+        '**Tree of Thought (ToT):** En lugar de una cadena lineal, explora múltiples ramas de razonamiento y poda las pobres. Úsalo cuando hay muchas rutas de solución posibles (planificación, juegos, tareas creativas).',
+        '**ReAct (Reasoning + Acting):** Intercala el razonamiento con acciones externas — llamar APIs, buscar en bases de datos o ejecutar código — e incorpora los resultados en el siguiente paso de razonamiento. Ideal para tareas del mundo real que necesitan datos en tiempo real o verificación.',
+      ],
+    },
+    modelComparison: {
+      title: 'Comparación de modelos: cómo manejan el CoT prompting (2026)',
+      columns: ['Modelo', 'CoT a nivel de prompt', 'Razonamiento integrado', 'Mejor caso de uso', 'Costo (aprox.)'],
+      rows: [
+        { 'Modelo': 'Claude Opus 4.7', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Extended thinking (traza inspeccionable vía API)', 'Mejor caso de uso': 'Análisis de máxima precisión', 'Costo (aprox.)': 'Mayor (input + output + tokens de pensamiento)' },
+        { 'Modelo': 'Claude Sonnet 4.6', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Extended thinking', 'Mejor caso de uso': 'Equilibrio precisión/costo', 'Costo (aprox.)': 'Medio' },
+        { 'Modelo': 'Claude Haiku 4.5', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Razonamiento rápido y económico', 'Costo (aprox.)': 'Bajo' },
+        { 'Modelo': 'OpenAI o3', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Niveles de esfuerzo (low, medium, high, xhigh)', 'Mejor caso de uso': 'Problemas de nivel de competición', 'Costo (aprox.)': 'Muy alto (nivel de tokens de razonamiento)' },
+        { 'Modelo': 'GPT-4o mini', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Despliegue económico', 'Costo (aprox.)': 'Muy bajo' },
+        { 'Modelo': 'Gemini 3.1 Pro', 'CoT a nivel de prompt': 'Funciona', 'Razonamiento integrado': 'Deep Think (parámetro thinking_level)', 'Mejor caso de uso': 'Integración con Google Cloud', 'Costo (aprox.)': 'Medio-alto' },
+        { 'Modelo': 'Gemini Flash', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Respuestas rápidas', 'Costo (aprox.)': 'Bajo' },
+        { 'Modelo': 'DeepSeek R1', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Razonamiento en línea en la salida', 'Mejor caso de uso': 'Open-weights, en dispositivo', 'Costo (aprox.)': 'Gratis (código abierto)' },
+        { 'Modelo': 'Llama 4', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Despliegue local, privacidad', 'Costo (aprox.)': 'Self-hosted (depende del cómputo)' },
+      ],
+    },
+    relatedReading: {
+      title: 'Lecturas relacionadas',
+      items: [
+        '[¿Qué es el prompt engineering? Guía completa 2026](/prompt-engineering/what-is-prompt-engineering?lang=es)',
+        '[Salida estructurada y JSON Schema prompting](/prompt-engineering/structured-output?lang=es)',
+        '[Cómo reducir las alucinaciones de IA](/prompt-engineering/reducing-hallucination?lang=es)',
+        '[Constrained prompting: limita las salidas del modelo](/prompt-engineering/constrained-prompting?lang=es)',
+        '[Cómo construir un sistema de despacho multi-modelo](/prompt-engineering/multi-model-dispatch?lang=es)',
+        '[Framework de testing y evaluación de prompts](/prompt-engineering/prompt-testing?lang=es)',
+      ],
+    },
+    faqSection: {
+      title: 'Preguntas frecuentes',
+      faqs: [
+        {
+          q: '¿Funciona el chain-of-thought en todos los modelos?',
+          a: 'El chain-of-thought funciona en la mayoría de los modelos con 7B+ parámetros, pero el beneficio varía. Es más efectivo en modelos medianos y pequeños (Haiku, Flash, Llama 4). En modelos de frontera (Claude Opus 4.7, o3), los modos de razonamiento integrados suelen ser más eficientes que el CoT a nivel de prompt.'
+        },
+        {
+          q: '¿El chain-of-thought aumenta el costo?',
+          a: 'Sí, el CoT a nivel de prompt aumenta el número de tokens de salida (ya que el modelo escribe el razonamiento antes de la respuesta final). Los modos de razonamiento integrados (Claude extended thinking, OpenAI o3) usan presupuestos de tokens de pensamiento separados con tarifas de facturación distintas. Prueba ambos en tu caso de uso para comparar la compensación costo/precisión.'
+        },
+        {
+          q: '¿Cuándo debo usar CoT few-shot en lugar de zero-shot?',
+          a: 'Usa CoT zero-shot primero — es más simple y funciona en la mayoría de los casos. Pasa a few-shot (con 2–5 ejemplos) si zero-shot no es fiable o si tu dominio requiere patrones de razonamiento específicos (por ejemplo, análisis financiero con estructura de líneas estándar).'
+        },
+        {
+          q: '¿Puedo combinar chain-of-thought con salida estructurada (JSON)?',
+          a: 'Sí. Puedes pedir al modelo que muestre su razonamiento en texto plano primero, luego que produzca un objeto JSON con la respuesta final. Combina las instrucciones: "Piensa paso a paso. Luego produce tu resultado como JSON válido." Esto es común en sistemas de producción.'
+        },
+        {
+          q: '¿Cuál es la diferencia entre chain-of-thought y tree-of-thought?',
+          a: 'Chain-of-thought es una secuencia lineal: paso 1 → paso 2 → ... → conclusión. Tree-of-thought explora múltiples ramas (rutas de razonamiento alternativas) y poda las más débiles antes de llegar a la respuesta. Tree-of-thought es más potente pero más costoso (requiere múltiples llamadas al modelo).'
+        },
+        {
+          q: '¿OpenAI o3 requiere chain-of-thought prompting?',
+          a: 'No. OpenAI o3 tiene razonamiento integrado que se activa automáticamente. No necesitas añadir instrucciones "piensa paso a paso". Solo dale a o3 el problema y establece el nivel de esfuerzo (low/medium/high/xhigh) para controlar cuánto presupuesto de razonamiento gastar.'
+        },
+        {
+          q: '¿Puedo auditar el razonamiento de los modelos de razonamiento integrados?',
+          a: 'Sí, pero depende del modelo. Las trazas de razonamiento de Claude extended thinking son inspeccionables vía API. El razonamiento de OpenAI o3 está oculto por defecto (por ventaja competitiva). El razonamiento de Gemini Deep Think también está oculto. Para auditabilidad completa, usa CoT a nivel de prompt o DeepSeek R1.'
+        },
+        {
+          q: '¿Es el chain-of-thought prompting adecuado para aplicaciones en tiempo real?',
+          a: 'El CoT a nivel de prompt añade latencia (más tokens de salida = generación más lenta). Para casos de uso en tiempo real, usa modelos más pequeños con razonamiento mínimo, o usa endpoints de streaming para mostrar los tokens a medida que llegan. Los modos de razonamiento integrados pueden añadir aún más latencia; haz benchmarks de tu caso de uso específico.'
+        },
+      ],
+    },
+    sources: {
+      title: 'Fuentes y lecturas adicionales',
+      items: [
+        'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
+        'Kojima, T., Gu, S. S., Reid, M., Matsuo, Y., & Iwasawa, Y. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS 2022. arXiv:2205.11916',
+        'Wang, X., Wei, J., Schuurmans, D., et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2203.11171',
+        'Anthropic. (2024). "Extended Thinking in Claude." Documentación técnica sobre las capacidades de razonamiento de Claude Opus 4.7 y Sonnet 4.6.',
+        'OpenAI. (2026). "OpenAI o3: Reasoning Models for Competition-Level Problem Solving." Documentación e investigación de OpenAI.',
+      ],
+    },
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: '¿Funciona el chain-of-thought en todos los modelos?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'El chain-of-thought funciona en la mayoría de los modelos con 7B+ parámetros, pero el beneficio varía. Es más efectivo en modelos medianos y pequeños (Haiku, Flash, Llama 4). En modelos de frontera (Claude Opus 4.7, o3), los modos de razonamiento integrados suelen ser más eficientes que el CoT a nivel de prompt.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '¿El chain-of-thought aumenta el costo?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sí, el CoT a nivel de prompt aumenta el número de tokens de salida. Los modos de razonamiento integrados usan presupuestos de tokens de pensamiento separados con tarifas distintas. Prueba ambos para comparar la compensación costo/precisión.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '¿Cuándo debo usar CoT few-shot en lugar de zero-shot?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Usa CoT zero-shot primero. Pasa a few-shot (con 2–5 ejemplos) si zero-shot no es fiable o si tu dominio requiere patrones de razonamiento específicos.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '¿Puedo combinar chain-of-thought con salida estructurada (JSON)?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sí. Pide al modelo que muestre su razonamiento en texto plano primero, luego que produzca un objeto JSON con la respuesta final. Combina las instrucciones: "Piensa paso a paso. Luego produce tu resultado como JSON válido."'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '¿Cuál es la diferencia entre chain-of-thought y tree-of-thought?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Chain-of-thought es una secuencia lineal. Tree-of-thought explora múltiples ramas y poda las más débiles. Tree-of-thought es más potente pero más costoso (requiere múltiples llamadas al modelo).'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '¿OpenAI o3 requiere chain-of-thought prompting?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. OpenAI o3 tiene razonamiento integrado que se activa automáticamente. Solo dale el problema y establece el nivel de esfuerzo (low/medium/high/xhigh).'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '¿Puedo auditar el razonamiento de los modelos de razonamiento integrados?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Depende del modelo. Las trazas de Claude extended thinking son inspeccionables vía API. El razonamiento de OpenAI o3 y Gemini Deep Think está oculto por defecto. Para auditabilidad completa, usa CoT a nivel de prompt o DeepSeek R1.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '¿Es el chain-of-thought prompting adecuado para aplicaciones en tiempo real?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'El CoT a nivel de prompt añade latencia. Para uso en tiempo real, usa modelos más pequeños con razonamiento mínimo o endpoints de streaming. Los modos de razonamiento integrados pueden añadir aún más latencia; haz benchmarks de tu caso específico.'
+        }
+      },
+    ]
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Variantes de chain-of-thought',
+    numberOfItems: 5,
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Zero-shot CoT',
+        description: 'Pregunta "Pensemos paso a paso" sin ejemplos. Funciona en la mayoría de los modelos y es el más simple de implementar. Mejora: ~10–20 % de precisión.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Few-shot CoT',
+        description: 'Muestra 2–5 ejemplos resueltos con razonamiento explícito, luego aplica a un nuevo problema. Más fiable que zero-shot. Mejora: ~20–40 % de precisión.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Self-consistency',
+        description: 'Genera múltiples rutas de razonamiento independientes, toma una votación mayoritaria. Significativamente más robusto. Mejora: ~30–50 % en tareas difíciles.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Tree of Thought',
+        description: 'Explora múltiples ramas de razonamiento y poda las pobres. Ideal para planificación y tareas con muchas rutas de solución.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 5,
+        name: 'ReAct',
+        description: 'Intercala razonamiento con acciones externas (llamadas API, búsquedas, ejecución de código). Ideal para tareas del mundo real con datos en tiempo real o verificación.'
+      },
+    ]
+  },
+},
     fr: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',

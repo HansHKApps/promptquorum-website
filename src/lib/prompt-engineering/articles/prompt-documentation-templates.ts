@@ -355,6 +355,183 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  es: {
+    freshness_tier: 'evergreen',
+    theme: 'Team Governance',
+    title: 'Plantillas de documentación de prompts: 6 formatos reutilizables para equipos',
+    seoTitle: 'Plantillas de documentación de prompts: 6 formatos para equipos',
+    intro: 'Los prompts sin documentar fallan en silencio, se duplican y no pueden auditarse. Seis plantillas de documentación reutilizables cubren cada etapa del ciclo de vida de un prompt — desde one-liners de un solo uso hasta prompts de producción versionados con historial de revisiones.',
+    metaDescription: '6 plantillas de documentación de prompts: Tarjeta One-Liner, Bloque de Versión, Encabezado de Suite de Pruebas, Registro de Decisiones, Justificación de Cambio, Config API. Menos de 10 minutos cada una.',
+    ogDescription: 'Documenta prompts en 6 formatos: desde tarjetas one-liner para guardado rápido hasta bloques de configuración API para producción. Almacena junto a los prompts, no por separado.',
+    twitterDescription: 'Los prompts sin documentar fallan en silencio. 6 plantillas, menos de 10 minutos cada una. De la Tarjeta One-Liner al Bloque de Config API.',
+    publishDate: '2026-05-02',
+    readTime: '10 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Prompt Documentation',
+    leadAnswerBlock: '**La documentación de prompts es el registro estructurado de qué hace un prompt, por qué se escribió así y qué pruebas debe superar.** Sin ella, los prompts no pueden revisarse, revertirse ni reproducirse cuando el autor abandona el equipo.',
+    quickFacts: [
+      '6 plantillas que cubren el ciclo de vida completo del prompt: de la Tarjeta One-Liner al Bloque de Config API',
+      'La Tarjeta One-Liner tarda menos de 2 minutos y previene el fallo de documentación más común',
+      'Almacena la documentación junto al prompt — no en un sistema separado',
+      'El campo "por qué" (justificación de cambio) es el campo más importante en cualquier plantilla',
+      'Bloque de Versión + Justificación de Cambio requeridos para cada modificación de prompt en producción',
+      'PromptHub se mapea directamente a los campos del Bloque de Versión y del Bloque de Config API',
+    ],
+    toc: [
+      { label: 'Por qué los prompts sin documentar rompen los equipos', anchor: 'why_documentation' },
+      { label: '6 plantillas de documentación de prompts', anchor: 'six_templates' },
+      { label: 'Dónde almacenar la documentación de prompts', anchor: 'storage_options' },
+      { label: 'Errores comunes de documentación', anchor: 'common_doc_mistakes' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+      { label: 'Lectura relacionada', anchor: 'related_reading' },
+      { label: 'Fuentes', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-documentation-templates?lang=es',
+      inLanguage: 'es',
+      headline: 'Plantillas de documentación de prompts: 6 formatos reutilizables para equipos',
+      description: '6 plantillas de documentación de prompts: Tarjeta One-Liner, Bloque de Versión, Encabezado de Suite de Pruebas, Registro de Decisiones, Justificación de Cambio, Bloque de Config API.',
+      datePublished: '2026-05-02',
+      dateModified: '2026-05-02',
+      keywords: ['documentación de prompts', 'plantillas de prompts', 'gestión de prompts', 'equipo de prompt engineering'],
+      mentions: [
+        { '@type': 'Thing', name: 'PromptHub' },
+        { '@type': 'Thing', name: 'Git' },
+        { '@type': 'Thing', name: 'Notion' },
+        { '@type': 'Thing', name: 'Braintrust' },
+        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+      ],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        content: [
+          'Seis plantillas cubren el ciclo de vida completo del prompt: Tarjeta One-Liner (2 minutos, previene la pérdida de propósito), Bloque de Versión (rastrea cambios), Encabezado de Suite de Pruebas (define criterios de éxito), Registro de Decisiones (registra elecciones de diseño), Justificación de Cambio (explica el por qué), Bloque de Config API (parámetros de producción). Almacena la documentación con el prompt — nunca por separado.',
+        ],
+      },
+      key_takeaways: {
+        title: 'Puntos clave',
+        items: [
+          'Todo prompt de producción necesita como mínimo una Tarjeta One-Liner (propósito, modelo, fecha, autor)',
+          'Todo prompt modificado necesita un Bloque de Versión (qué cambió, por qué, resultado de prueba)',
+          'Todo prompt probado necesita un Encabezado de Suite de Pruebas (criterios de éxito, ejemplos golden, modos de fallo)',
+          'Almacena la documentación en el mismo sistema que el prompt — los docs separados quedan abandonados',
+          'La justificación del cambio ("por qué") es el campo más importante: los equipos que la omiten vuelven a los patrones anteriores cuando el autor se va',
+          'PromptHub ofrece la estructura de documentación incorporada más completa; Git funciona para equipos de ingeniería con buena disciplina de commits',
+        ],
+      },
+      why_documentation: {
+        title: 'Por qué los prompts sin documentar rompen los equipos',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Los prompts sin documentar rompen los equipos mediante regresión silenciosa, duplicación y pérdida de conocimiento — cada una prevenible con 5–10 minutos de documentación por prompt.' },
+          { type: 'in-plain-terms', text: 'Cuando un prompt no tiene registro de qué hace ni por qué se escribió así, el equipo no puede cambiarlo de forma segura, recuperarlo después de una edición ni entregárselo a un nuevo miembro sin contexto.' },
+        ],
+        content: [
+          '**Los prompts sin documentar rompen los equipos de tres maneras: regresión silenciosa (sin registro de qué cambió), duplicación (los equipos reescriben prompts existentes porque no los encuentran) y pérdida de conocimiento (los prompts se vuelven imposibles de mantener cuando el autor se va).** Cada fallo es prevenible con 5–10 minutos de documentación por prompt.',
+          'El fallo más costoso es la regresión silenciosa. Un equipo modifica un prompt de producción para solucionar un problema, inadvertidamente rompe otro, y no tiene un baseline con el que comparar. Sin historial de versiones y un encabezado de suite de pruebas, diagnosticar la regresión requiere comparación manual y suposiciones.',
+          'Usa documentación para todo prompt utilizado más de una vez, almacenado en infraestructura compartida o desplegado en producción. Omítela para prompts exploratorios de un solo uso en una única sesión.',
+        ],
+        callouts: [
+          { type: 'warning', label: 'Riesgo de regresión silenciosa', text: 'Sin un Bloque de Versión y ejemplos golden, un equipo que modifica un prompt de producción no tiene baseline. Cada edición es una suposición sobre cuál era el estado anterior.' },
+        ],
+      },
+      six_templates: {
+        title: '6 plantillas de documentación de prompts',
+        content: [
+          '**Seis plantillas cubren el ciclo de vida completo del prompt desde el primer borrador hasta la retirada en producción.** Cada plantilla está diseñada para completarse en menos de 10 minutos y proporcionar la información mínima requerida para cada etapa del ciclo de vida.',
+        ],
+        numberedItems: [
+          { title: 'Tarjeta One-Liner', whyItMatters: 'Propósito: capturar el registro mínimo para cualquier prompt reutilizado. Campos: nombre del prompt, propósito (1 oración), modelo objetivo, fecha de creación, autor. Úsala cuando: un prompt se guarda por primera vez. Almacenamiento: cualquier herramienta compartida (Notion, Git, PromptHub).' },
+          { title: 'Bloque de Versión', whyItMatters: 'Propósito: rastrear el historial de prompts que cambian con el tiempo. Campos: número de versión, fecha de modificación, autor, qué cambió (1 oración), razón del cambio (1 oración), resumen del resultado de prueba. Úsalo cuando: se modifica un prompt. Almacenamiento: mensaje de commit de Git o entrada de versión en PromptHub.' },
+          { title: 'Encabezado de Suite de Pruebas', whyItMatters: 'Propósito: definir los criterios de aceptación antes de escribir las pruebas. Campos: objetivo de la prueba (qué debe hacer el prompt), criterios de éxito (qué características de salida definen el éxito), ejemplos golden (2–3 pares entrada/salida), modos de fallo conocidos. Úsalo cuando: un prompt entra en la suite de pruebas. Almacenamiento: junto al archivo de prueba en Git o en el proyecto de Braintrust.' },
+          { title: 'Registro de Decisiones', whyItMatters: 'Propósito: registrar decisiones de diseño que no son obvias en el texto del prompt. Campos: decisión tomada, alternativas consideradas, razón por la que se eligió esta opción, fecha. Úsalo cuando: se toma una decisión de diseño no obvia (por ejemplo, por qué se estableció una temperatura específica). Almacenamiento: doc enlazado desde el bloque de versión.' },
+          { title: 'Justificación de Cambio', whyItMatters: 'Propósito: explicar por qué se cambió un prompt en términos que permitan revertir o replicar el cambio. Campos: descripción del problema (qué estaba mal), cambio realizado, mejora esperada, resultado medido. Úsalo cuando: se modifica un prompt en respuesta a un fallo o regresión. Almacenamiento: cuerpo del commit de Git o nota de cambio en PromptHub.' },
+          { title: 'Bloque de Config API', whyItMatters: 'Propósito: registrar los parámetros del modelo utilizados en producción. Campos: modelo (por ejemplo, GPT-4o, Claude 4.6 Sonnet), temperatura, max tokens, top_p, stop sequences, versión del system prompt, versión del user prompt. Úsalo cuando: se despliega un prompt en producción. Almacenamiento: archivo de configuración de despliegue, referenciado en el bloque de versión.' },
+        ],
+        callouts: [
+          { type: 'insight', label: 'Guía de selección de plantilla', text: 'Nuevo prompt → Tarjeta One-Liner. Prompt modificado → Bloque de Versión. Prompt probado → Encabezado de Suite de Pruebas. Decisión de diseño tomada → Registro de Decisiones. Cambiado tras un fallo → Justificación de Cambio. Desplegado en producción → Bloque de Config API.' },
+        ],
+      },
+      storage_options: {
+        title: 'Dónde almacenar la documentación de prompts',
+        content: [
+          '**Almacena la documentación de prompts en el mismo sistema que el prompt.** Si el prompt vive en código, almacena los docs en Git. Si vive en una herramienta GUI, almacena los docs en las notas de esa herramienta o en un doc enlazado.',
+        ],
+        items: [
+          'Git: mejor para equipos de ingeniería con prompts almacenados como archivos. Los mensajes de commit sirven como bloques de versión. Gratuito. Requiere disciplina. Sin flujo de trabajo de revisión incorporado.',
+          'PromptHub: gestión de prompts con historial de versiones, firmas de revisores y almacenamiento de resultados de pruebas. $0–$49/mes. Mejor para equipos con 3+ personas escribiendo prompts.',
+          'Notion: funciona para equipos que gestionan prompts como documentos en lugar de código. Fácil de configurar. Carece de control de versiones e integración de pruebas — trátalo como capa de documentación, no como fuente de verdad.',
+          'Braintrust: almacena encabezados de suite de pruebas y resultados de evaluación junto a las versiones del prompt. Mejor para equipos que ejecutan evaluaciones automatizadas regulares.',
+          'PromptQuorum: [plataforma de optimización de prompts](/features) para despachar prompts documentados a más de 25 proveedores de IA simultáneamente. Úsala para validar que los prompts documentados generalizan entre modelos antes de confirmar una versión. Nivel gratuito.',
+        ],
+        callouts: [
+          { type: 'tip', label: 'Co-localiza la documentación', text: 'La documentación almacenada en un sistema separado (Notion, Confluence, Google Docs) del prompt quedará obsoleta en días. La única documentación que se mantiene actualizada es la que vive con el prompt.' },
+        ],
+      },
+      common_doc_mistakes: {
+        title: 'Errores comunes de documentación',
+        mistakes: [
+          {
+            mistake: 'Sin documentación en absoluto',
+            problem: 'Los prompts no pueden recuperarse tras ediciones, el equipo no puede entender por qué se escribió un prompt de cierta manera',
+            fix: 'Usa como mínimo la plantilla Tarjeta One-Liner — 3 campos, menos de 2 minutos',
+          },
+          {
+            mistake: 'Documentación almacenada por separado del prompt',
+            problem: 'La documentación queda obsoleta a medida que cambian los prompts; los equipos olvidan actualizarla',
+            fix: 'Almacena la documentación en el mismo archivo o commit de Git que el prompt',
+          },
+          {
+            mistake: 'Campo "por qué" ausente — solo describe qué hace el prompt',
+            problem: 'Los editores futuros no conocen las restricciones, no pueden refactorizar de forma segura',
+            fix: 'Añade un campo "justificación" a cada plantilla: 1-2 oraciones sobre por qué se eligió esta estructura',
+          },
+          {
+            mistake: 'Sin bloque de versión',
+            problem: 'Sin forma de saber si el prompt que corre en producción coincide con la versión documentada',
+            fix: 'Añade versión y dateModified a cada archivo de prompt de producción',
+          },
+        ],
+      },
+      faq: {
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Por qué los prompts necesitan documentación?', a: 'Los prompts sin documentación no pueden revisarse, auditarse ni reproducirse. Cuando el autor cambia el prompt y no deja ningún registro, el equipo no puede diagnosticar regresiones, no puede volver a una versión conocida como buena ni puede incorporar a nuevos miembros.' },
+          { q: '¿Cuál es la documentación mínima que necesita un prompt?', a: 'El mínimo es una tarjeta one-liner: propósito del prompt (una oración), modelo objetivo, fecha de creación y autor. Esto tarda 2 minutos en escribirse y previene el fallo de documentación más común — prompts cuyo propósito es desconocido 6 meses después.' },
+          { q: '¿Dónde debe almacenarse la documentación de prompts?', a: 'Almacena la documentación de prompts en la misma ubicación que el prompt. Git funciona para prompts almacenados como archivos de código. PromptHub proporciona almacenamiento estructurado con historial de versiones y firmas de revisores incorporadas. Notion funciona para equipos que gestionan prompts como documentos, pero carece de control de versiones.' },
+          { q: '¿Qué tan detallada debe ser una justificación de cambio?', a: 'Tres líneas: qué cambió (una oración), por qué (el problema que resuelve el cambio) y qué prueba confirmó que funcionó. Los equipos que omiten el "por qué" invariablemente vuelven al patrón anterior cuando el autor se va.' },
+          { q: '¿Qué plantilla debo usar para un nuevo prompt?', a: 'Comienza con la Tarjeta One-Liner. Si el prompt va a producción, actualiza a un Bloque de Versión. Si tiene múltiples casos de prueba, añade un Encabezado de Suite de Pruebas. Si requirió una decisión de diseño no obvia, añade un Registro de Decisiones.' },
+          { q: '¿Con qué frecuencia debo actualizar la documentación de prompts?', a: 'Actualiza cada vez que cambie el texto del prompt. Añade un incremento de versión y una entrada de Justificación de Cambio para cada edición sustancial. No actualices la documentación de forma retroactiva.' },
+          { q: '¿Puedo usar estas plantillas en PromptHub?', a: 'Sí. PromptHub almacena campos de metadatos de prompts que se mapean directamente a las plantillas de Bloque de Versión y Bloque de Config API. Usa la plantilla como borrador y luego copia los campos a PromptHub cuando estés listo para compartirlo con tu equipo.' },
+        ],
+      },
+      related_reading: {
+        title: 'Lectura relacionada',
+        items: [
+          { title: 'Control de versiones de prompts', url: '/prompt-engineering/prompt-version-control?lang=es' },
+          { title: 'Governance de prompts en producción', url: '/prompt-engineering/prompt-governance-in-production?lang=es' },
+          { title: 'Gestión de biblioteca de prompts para equipos', url: '/prompt-engineering/prompt-library-management-for-teams?lang=es' },
+          { title: 'Construye una biblioteca de prompts', url: '/prompt-engineering/build-a-prompt-library?lang=es' },
+          { title: 'Flujo de revisión de prompts para equipos', url: '/prompt-engineering/prompt-review-workflow-for-teams?lang=es' },
+        ],
+      },
+      sources: {
+        title: 'Fuentes',
+        items: [
+          { title: 'Git Documentation: Version Control', url: 'https://git-scm.com/doc' },
+          { title: 'Braintrust: Prompt Management Docs', url: 'https://www.braintrust.dev/docs' },
+          { title: 'PromptHub Documentation', url: 'https://app.prompthub.us/docs' },
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Gouvernance d\'équipe',

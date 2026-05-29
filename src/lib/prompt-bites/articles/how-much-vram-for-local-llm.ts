@@ -414,6 +414,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuánta VRAM necesitas para un LLM local?',
+        answer: '4 GB de VRAM soporta Phi-4 Mini y Gemma 2B cómodamente con margen para expansión de contexto. 6 GB ejecuta Llama 3 8B en Q4. 12 GB aloja Qwen 14B Q4 eficientemente. Los modelos 70B en Q4 requieren 16+ GB.',
+        bullets: [
+          '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
+          '6 GB: Llama 3 8B Q4_K_M',
+          '8–12 GB: Mistral 7B Q5, Qwen 14B Q4',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

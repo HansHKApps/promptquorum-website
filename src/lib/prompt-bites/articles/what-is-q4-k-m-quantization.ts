@@ -404,6 +404,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué es la cuantización Q4_K_M?',
+        answer: 'Q4_K_M significa cuantización de 4 bits con compresión k-quant (K) a calidad media (M). Es la mejor opción por defecto para la mayoría de modelos: mejor calidad que Q4_0, menor tamaño que Q8_0.',
+        bullets: [
+          'Q = cuantizado, 4 = 4 bits, K = k-quant, M = medio',
+          'Mejor calidad que Q4_0 al mismo tamaño de archivo',
+          'Usa Q4_K_M como cuantización predeterminada',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

@@ -691,6 +691,349 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ]
   }
 },
+    es: {
+  theme: 'Tools & Platforms',
+  title: 'Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso',
+  seoTitle: 'Mejores herramientas de prompt engineering 2026: 6 comparadas por tipo de problema',
+  metaDescription: 'Promptfoo es gratis. Braintrust desde $249/mes. Vellum desde $500. Comparativa de 6 herramientas de PE clasificadas según el problema que resuelven en 2026.',
+  ogTitle: '6 herramientas de prompt engineering clasificadas — ¿cuál resuelve tu cuello de botella?',
+  ogDescription: 'Evaluación, testing, versionado, producción, despacho multi-modelo. Una herramienta por tarea. Tabla comparativa incluida.',
+  twitterTitle: 'Mejores herramientas de prompt engineering 2026: comparativa lado a lado',
+  twitterDescription: 'Promptfoo es gratis. Braintrust desde $500/mes. PromptQuorum despacha a 25+ modelos. ¿Qué stack encaja con tu equipo?',
+  intro: '**Seis herramientas dominan el prompt engineering en 2026: PromptQuorum para despacho multi-modelo, Braintrust para evaluación, Vellum para producción, Promptfoo para testing, PromptHub para versionado y LangSmith para observabilidad — cada una resuelve un cuello de botella diferente. Esta guía las clasifica por tarea y muestra qué pares funcionan juntos.**',
+  publishDate: '2026-04-10',
+  dateModified: '2026-04-29',
+  lastFactChecked: '2026-04-28 — todos los precios y características verificados contra documentación oficial',
+  readTime: '9 min de lectura',
+  educationalLevel: 'Intermediate',
+  primaryTerm: 'herramientas de prompt engineering',
+  aboutTopics: ['herramientas de prompt engineering', 'evaluación de prompts', 'gestión de prompts'],
+  audience: 'Desarrolladores y equipos de producto que gestionan pipelines de prompts de IA',
+  freshness_tier: 'semi_annual',
+  next_refresh_due: '2026-10-10',
+  toc: [
+    { label: 'Puntos clave', anchor: '#key-takeaways' },
+    { label: '¿Qué problema resuelve cada herramienta?', anchor: '#which-problem-each-tool-solves' },
+    { label: '¿Dónde encaja PromptQuorum?', anchor: '#where-promptquorum-fits' },
+    { label: 'Braintrust: Evaluación', anchor: '#braintrust-evaluation' },
+    { label: 'Vellum: Despliegue en producción', anchor: '#vellum-production' },
+    { label: 'Promptfoo: Testing open-source', anchor: '#promptfoo-testing' },
+    { label: 'PromptHub: Versionado tipo Git', anchor: '#prompthub-versioning' },
+    { label: 'LangSmith: Tracing para LangChain', anchor: '#langsmith-tracing' },
+    { label: 'Confident AI: Alternativa de evaluación', anchor: '#confident-ai-evaluation' },
+    { label: 'Comparativa lado a lado', anchor: '#side-by-side-comparison' },
+    { label: 'Cómo elegir según el caso de uso', anchor: '#how-to-choose' },
+    { label: 'Cómo construir tu stack de herramientas', anchor: '#how-to-build-stack' },
+    { label: 'Errores comunes', anchor: '#common-mistakes' },
+    { label: 'Notas regionales y de cumplimiento', anchor: '#regional-considerations' },
+    { label: 'Preguntas frecuentes', anchor: '#faq' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso',
+    description: 'Las mejores herramientas de PE en 2026: Braintrust (eval), Vellum (producción), Promptfoo (testing), PromptHub (versionado), LangSmith (tracing). La mayoría de equipos necesita solo 2–3.',
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    datePublished: '2026-04-10',
+    dateModified: '2026-04-28',
+    url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-tools-2026?lang=es',
+    inLanguage: 'es',
+    proficiencyLevel: 'Intermediate',
+    about: [
+      { '@type': 'Thing', name: 'Herramientas de Prompt Engineering' },
+      { '@type': 'Thing', name: 'Evaluación de LLM' },
+      { '@type': 'Thing', name: 'Gestión de Prompts' },
+    ],
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.article-intro', '.key-takeaways'],
+    },
+  },
+  gammaEmbedUrl: '/presentations/best-prompt-engineering-tools-2026-static.html',
+  gammaDescription: 'El deck de diapositivas cubre: 5 herramientas de prompt engineering clasificadas por caso de uso (Braintrust para evaluación, Vellum para producción, Promptfoo para testing, PromptHub para versionado, LangSmith para observabilidad), una tabla comparativa y cómo elegir el stack correcto según el tamaño del equipo. Descarga el PDF como tarjeta de referencia de herramientas de PE.',
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'es',
+    mainEntity: [
+      { '@type': 'Question', name: '¿Cuáles son las 5 mejores herramientas de prompt engineering en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Las cinco herramientas de PE más utilizadas en 2026 son Braintrust para evaluación, Vellum para despliegue en producción, Promptfoo para testing CI/CD open-source, PromptHub para versionado y LangSmith para observabilidad en LangChain. Cada una resuelve un cuello de botella distinto. La mayoría de equipos usa dos o tres de ellas, no las cinco.' } },
+      { '@type': 'Question', name: '¿Qué herramienta es mejor para evaluar prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust es la herramienta de evaluación más potente, con scoring LLM-as-judge, bucles de feedback humano y gestión de datasets para construir ground truth. Permite definir evals, ejecutarlos automáticamente, puntuar con humanos y compilar en un dataset reutilizable. Promptfoo es la alternativa gratuita para evaluación automatizada basada en tests en CI/CD.' } },
+      { '@type': 'Question', name: '¿Debo usar Promptfoo o Braintrust para testing?', acceptedAnswer: { '@type': 'Answer', text: 'Usa Promptfoo para testing CI/CD — gratuito, open-source, se ejecuta desde configuración YAML, se integra con GitHub Actions. Usa Braintrust cuando necesites evals offline con feedback humano y quieras construir un dataset de ground truth con puntuación. Muchos equipos usan ambos: Promptfoo controla los despliegues, Braintrust mide la calidad del output.' } },
+      { '@type': 'Question', name: '¿Es necesario el versionado de prompts para equipos?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, el versionado de prompts es esencial en cuanto más de una persona edita prompts. Sin él, los equipos no pueden rastrear qué versión se desplegó, no pueden hacer rollback tras una regresión ni auditar quién cambió qué y cuándo. PromptHub y Vellum ofrecen control de versiones; PromptHub tiene el flujo de trabajo más similar a Git para equipos con requisitos de gobernanza.' } },
+      { '@type': 'Question', name: '¿Estas herramientas soportan modelos locales?', acceptedAnswer: { '@type': 'Answer', text: 'La mayoría soporta modelos locales con distintos niveles de profundidad. Promptfoo tiene soporte nativo para Ollama y LM Studio mediante configuración de proveedor sin necesidad de wrapper. Braintrust y Vellum soportan modelos locales a través de wrappers de API que exponen un endpoint compatible con OpenAI.' } },
+      { '@type': 'Question', name: '¿Puedo combinar varias herramientas de prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'Sí — combinar dos o tres herramientas es el enfoque estándar en 2026. El stack más habitual es Promptfoo para testing CI/CD, Vellum para despliegue en producción y Braintrust para campañas de eval offline. Las tres se integran mediante REST APIs estándar sin vendor lock-in; evita comprar las cinco porque Braintrust y Promptfoo se solapan parcialmente en testing.' } },
+      { '@type': 'Question', name: '¿Cuál es el coste típico de estas herramientas?', acceptedAnswer: { '@type': 'Answer', text: 'A mayo de 2026: Braintrust tiene un tier gratuito permanente (1M trazas, 10k puntuaciones, usuarios ilimitados) y Pro a $249/mes; Vellum tiene tier gratuito y Pro a $500/mes; Promptfoo es totalmente gratuito (open-source self-hosted); PromptHub es gratuito y $20/usuario/mes (Team); LangSmith Developer es $0/seat (5k trazas/mes) y Plus a $39/seat/mes; Confident AI es gratuito (5 test runs/semana) y $19.99/usuario/mes (Starter). Los costes escalan con el volumen de eval, las llamadas a API y el número de seats.' } },
+      { '@type': 'Question', name: '¿Qué herramienta tiene el mejor tier gratuito?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo es completamente gratuito y open-source — sin límite de seats, sin caps de uso, self-hosted. Braintrust tiene un tier gratuito permanente: 1M spans de trazas, 10k puntuaciones y usuarios ilimitados. El tier gratuito de Confident AI incluye spans de traza ilimitados con 5 test runs/semana. LangSmith Developer es $0/seat con 5k trazas/mes. PromptHub es gratuito para prompts públicos con miembros ilimitados.' } },
+      { '@type': 'Question', name: '¿Cuál es la diferencia entre testing y evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'El testing (Promptfoo) verifica si un prompt produce el output correcto para entradas definidas — se ejecuta automáticamente en CI/CD y detecta regresiones. La evaluación (Braintrust) mide la calidad del output — precisión, tono, factualidad — usando jueces LLM o humanos. El testing es rápido y automatizado; la evaluación es más lenta y matizada. La mayoría de equipos necesita ambos.' } },
+      { '@type': 'Question', name: '¿Cómo sé cuándo he superado Promptfoo y necesito Braintrust?', acceptedAnswer: { '@type': 'Answer', text: 'Cambia a Braintrust cuando tu equipo necesite puntuar la calidad del output más allá de pass/fail — por ejemplo, tono, precisión factual o alineación con la marca. Promptfoo destaca en tests de corrección binaria en CI/CD. Braintrust añade scoring human-in-the-loop, jueces LLM y un dataset de ground truth que mejora con el tiempo. La mayoría de equipos alcanza este punto de inflexión cuando 3–5 personas iteran sobre prompts diariamente.' } }
+    ]
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Mejores herramientas de prompt engineering 2026',
+    description: 'Las seis herramientas líderes de prompt engineering en 2026, cada una especializada en un cuello de botella de flujo de trabajo diferente.',
+    numberOfItems: 6,
+    inLanguage: 'es',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Plataforma de evaluación + observabilidad con jueces LLM, feedback humano, tracing en producción y gates CI/CD. Tier gratuito; Pro $249/mes.' },
+      { '@type': 'ListItem', position: 2, name: 'Confident AI', description: 'Evaluación automatizada con 50+ métricas integradas, testing multi-turn y red teaming OWASP. Gratuito; Starter $19.99/usuario/mes.' },
+      { '@type': 'ListItem', position: 3, name: 'Vellum', description: 'Despliegue en producción con workflow builder, A/B testing, integración RAG y dashboard de monitorización. Tier gratuito; Pro $500/mes.' },
+      { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'CLI open-source para testing CI/CD de prompts con soporte nativo para Ollama y LM Studio. Completamente gratuito.' },
+      { '@type': 'ListItem', position: 5, name: 'PromptHub', description: 'Versionado de prompts tipo Git con ramas, colaboración de equipo y trazas de auditoría. Gratuito; Team $20/usuario/mes.' },
+      { '@type': 'ListItem', position: 6, name: 'LangSmith', description: 'Tracing y observabilidad nativos para aplicaciones LangChain. Developer $0/seat; Plus $39/seat/mes.' }
+    ]
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    inLanguage: 'es',
+    name: 'Cómo construir tu stack de herramientas de prompt engineering',
+    totalTime: 'PT15M',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Identifica tu cuello de botella', text: 'Determina si tu mayor brecha es la selección de modelo, la calidad de evaluación, la cobertura de tests, el control de versiones o la fiabilidad en producción. Empieza con la herramienta que resuelve esa única brecha.' },
+      { '@type': 'HowToStep', position: 2, name: 'Empieza gratis', text: 'Regístrate en PromptQuorum (comparación multi-modelo, tier gratuito) e instala Promptfoo (testing CI/CD, open-source). Ambos son gratuitos y cubren los dos puntos de partida más comunes: selección de modelo y cobertura de tests.' },
+      { '@type': 'HowToStep', position: 3, name: 'Añade versionado pronto', text: 'Configura PromptHub o control de versiones basado en Git antes de que tu equipo supere las dos personas editando prompts. Sin versionado no puedes hacer rollback de un prompt roto en producción.' },
+      { '@type': 'HowToStep', position: 4, name: 'Añade evaluación cuando la calidad importe', text: 'Integra Braintrust cuando necesites datasets de ground truth con puntuación y feedback human-in-the-loop sobre la calidad del output — precisión, tono y corrección factual.' },
+      { '@type': 'HowToStep', position: 5, name: 'Añade herramientas de producción al final', text: 'Despliega Vellum cuando publiques prompts para usuarios finales y necesites A/B testing, cadenas de fallback (GPT-4o → Claude 4.7 Opus → Gemini) y un dashboard de monitorización de latencia y coste.' },
+      { '@type': 'HowToStep', position: 6, name: 'Audita solapamientos trimestralmente', text: 'Revisa tu stack completo cada trimestre. Si dos herramientas cubren la misma función — por ejemplo Braintrust y Promptfoo ambos haciendo testing — elimina la de menor ROI.' }
+    ]
+  },
+  sections: {
+    quickFacts: {
+      id: 'quick-facts',
+      title: '⚡ Datos rápidos',
+      items: [
+        '**PromptQuorum** — despacha un prompt a 25+ modelos simultáneamente; ideal para selección de modelo antes de comprometerse con un stack (gratis)',
+        '**Braintrust** — evaluación + observabilidad; jueces LLM, feedback humano, tracing en producción; Gratis / $249/mes Pro',
+        '**Confident AI** — 50+ métricas de eval integradas y red teaming; alternativa a Braintrust con menor coste de tracing; $19.99/usuario/mes Starter',
+        '**Vellum** — despliegue en producción con workflow builder, A/B testing, RAG y monitorización; Gratis / $500/mes Pro',
+        '**Promptfoo** — testing CI/CD open-source; configuración YAML, integración con GitHub Actions; completamente gratuito',
+        '**PromptHub** — versionado de prompts tipo Git; ramas, flujos de revisión, colaboración en equipo; Gratis / $20/usuario/mes',
+        '**LangSmith** — tracing nativo para apps LangChain; registra cada paso de la cadena, llamada al modelo y coste; Developer gratis / Plus $39/seat/mes'
+      ]
+    },
+    keyTakeaways: {
+      isTldr: true,
+      items: [
+        'PromptQuorum: Despacho multi-modelo (compara GPT-4o, Claude 4.7 Opus, Gemini 3 Pro y 25+ modelos lado a lado antes de evaluar, testear o desplegar)',
+        'Braintrust: Plataforma de evaluación + observabilidad (jueces LLM, feedback humano, tracing en producción, gates CI/CD) — Gratis / $249/mes Pro',
+        'Confident AI: Evaluación automatizada con 50+ métricas integradas y red teaming — $19.99/usuario/mes Starter',
+        'Vellum: Producción (A/B testing, despliegue, dashboard de monitorización)',
+        'Promptfoo: Testing (open-source, CLI, gratuito, red teaming)',
+        'PromptHub: Versionado (flujo de trabajo tipo Git, colaboración en equipo)',
+        'LangSmith: Integración con LangChain (tracing, depuración, observabilidad)',
+        'Empieza con PromptQuorum + Promptfoo (ambos gratuitos), añade herramientas especializadas a medida que escales'
+      ]
+    },
+    whichProblem: {
+      id: 'which-problem-each-tool-solves',
+      title: '¿Qué problema resuelve cada herramienta?',
+      content: '**Cinco cuellos de botella bloquean a los equipos de prompt engineering:** evaluación (¿funciona esto?), testing (¿se romperá?), versionado (¿qué versión se desplegó?), despliegue (¿cómo sirvo esto?) y observabilidad (¿por qué falló?). Cada herramienta se especializa en uno o dos.',
+      image: '/images/best-pe-tools-2026-bottlenecks-to-tools-en.svg',
+      imageCaption: '5 cuellos de botella del prompt engineering mapeados a la herramienta especializada para cada uno: Braintrust (evaluación), Promptfoo (testing), PromptHub (versionado), Vellum (despliegue), LangSmith (observabilidad).'
+    },
+    wherePromptQuorum: {
+      id: 'where-promptquorum-fits',
+      title: '¿Dónde encaja PromptQuorum en este stack?',
+      content: '**[PromptQuorum](/features) resuelve un cuello de botella que ninguna de las cinco herramientas anteriores aborda: despachar un prompt a múltiples modelos de IA simultáneamente y comparar los outputs lado a lado.** Braintrust evalúa el output de un modelo contra ground truth. Vellum despliega un modelo en producción. Promptfoo testea un modelo en CI/CD. PromptQuorum te permite ver cómo responden GPT-4o, Claude 4.7 Opus, Gemini 3 Pro y modelos locales vía Ollama al mismo prompt — antes de comprometerte con un modelo o una versión de prompt.\n\nEsto convierte a PromptQuorum en el primer paso natural del flujo de trabajo: compara modelos → elige el mejor → luego evalúa (Braintrust), testea (Promptfoo), versiona (PromptHub) y despliega (Vellum).',
+      items: [
+        'Despacha a 25+ modelos incluyendo LLMs locales vía Ollama',
+        '9 frameworks de prompts integrados (TRACE, CO-STAR, CRAFT, RISEN, RTF y más)',
+        'Comparación de respuestas lado a lado con scoring por consenso',
+        'Tier gratuito disponible'
+      ]
+    },
+    braintrust: {
+      id: 'braintrust-evaluation',
+      title: '¿Qué es Braintrust? Evaluación, observabilidad y ground truth',
+      content: '**Braintrust se ha convertido en una plataforma completa de observabilidad + evaluación tras su Serie B de $80M (feb. 2026, valoración $800M).** Ahora cubre: tracing en producción (spans, latencia, coste), bucles de jueces LLM y feedback humano, gates de calidad CI/CD, integración con servidor MCP y un Playground para comparación de modelos lado a lado. El bucle de eval principal — definir evals, ejecutar automáticamente, puntuar con humanos, construir un dataset de ground truth — sigue siendo su diferenciador más fuerte.',
+      items: [
+        'Ideal para evaluación estructurada con feedback human-in-the-loop y datasets de ground truth reutilizables',
+        'Tracing en producción: registra cada span, latencia y coste junto a los resultados de eval',
+        'Comparación de modelos lado a lado vía Playground; integración con servidor MCP',
+        'Precios: Gratis (1M trazas, 10k puntuaciones, usuarios ilimitados); Pro $249/mes; Enterprise personalizado'
+      ],
+      image: '/images/best-pe-tools-2026-braintrust-eval-loop-en.svg',
+      imageCaption: 'Bucle de eval de 4 pasos de Braintrust: definir evals → ejecutar automáticamente → puntuar con feedback humano → compilar en dataset. Jueces LLM + feedback humano construyen ground truth para futuras evaluaciones.'
+    },
+    vellum: {
+      id: 'vellum-production',
+      title: '¿Qué es Vellum? Despliegue en producción, workflow builder y monitorización',
+      content: '**Vellum ha expandido más allá del despliegue en producción para convertirse en una plataforma completa de desarrollo LLM.** Núcleo: A/B testing, rollouts canary, cadenas de fallback (GPT-4o → Claude 4.7 Opus → Gemini) y un dashboard de monitorización de latencia y coste. Añadidos: workflow builder visual drag-and-drop, Python SDK para pipelines definidos por código, integración de recuperación de documentos y RAG, LLM Leaderboard para benchmarking de modelos y listado en AWS Marketplace para adquisición empresarial.',
+      items: [
+        'Ideal para despliegue en producción — A/B testing, rollouts canary, monitorización',
+        'Workflow builder visual: construcción de agentes drag-and-drop sin escribir código de pipeline',
+        'Integración RAG: recuperación de documentos integrada para pipelines de prompts fundamentados',
+        'Precios: Tier gratuito; Pro $500/mes; Enterprise personalizado (contactar ventas)'
+      ]
+    },
+    promptfoo: {
+      id: 'promptfoo-testing',
+      title: '¿Qué es Promptfoo? Testing CI/CD open-source sin coste',
+      content: '**Promptfoo es la mejor opción gratuita.** Herramienta CLI, ejecuta tests desde configuración YAML, se integra con CI/CD, incluye red teaming (detección de jailbreak, scoring de toxicidad). Empieza aquí para testing sin coste.',
+      items: [
+        'Soporta GPT-4o, Claude 4.7 Opus, Gemini 3 Pro y modelos locales vía Ollama y LM Studio de forma nativa',
+        'Ideal para testing CI/CD self-hosted gratuito',
+        'Red teaming integrado: detección de jailbreak y toxicidad'
+      ]
+    },
+    prompthub: {
+      id: 'prompthub-versioning',
+      title: '¿Qué es PromptHub? Versionado tipo Git para prompts de IA',
+      content: '**PromptHub trata los prompts como código: versionado, ramas, colaboración en equipo.** Discute cambios, rastrea quién cambió qué, revierte a versiones antiguas. Esencial para equipos con requisitos de gobernanza.',
+      items: [
+        'Ideal para equipos que necesitan flujos de aprobación estilo code review',
+        'Permite compartir prompts entre equipos con URLs públicas/privadas',
+        'Precios: Gratis (prompts públicos, miembros ilimitados); Pro $12/mes (solo, prompts privados); Team $20/usuario/mes'
+      ]
+    },
+    langsmith: {
+      id: 'langsmith-tracing',
+      title: '¿Qué es LangSmith? Tracing y observabilidad para LangChain',
+      content: '**LangSmith proporciona tracing nativo para aplicaciones LangChain.** Registra cada prompt, llamada al modelo y conteo de tokens en producción. Reproduce peticiones, depura fallos, recopila datos para reentrenamiento. Imprescindible si usas LangChain.',
+      items: [
+        'Esencial para aplicaciones LangChain en producción',
+        'Tracing detallado de cadenas de prompts multi-paso',
+        'Precios: Developer $0/seat (5k trazas/mes, pago por uso); Plus $39/seat/mes; Enterprise personalizado'
+      ]
+    },
+    confidentAI: {
+      id: 'confident-ai-evaluation',
+      title: '¿Qué es Confident AI? Evaluación automatizada y red teaming de LLMs',
+      content: '**Confident AI (construido sobre el framework open-source DeepEval) es la principal alternativa a Braintrust para evaluación automatizada.** Donde Braintrust se centra en el feedback human-in-the-loop y la acumulación de datasets, Confident AI enfatiza métricas preconstruidas: 50+ scorers integrados (factualidad, relevancia de respuesta, alucinación, toxicidad, G-Eval y más) sin necesidad de configuración de scorer personalizado. Utilizado por Panasonic, Amazon y BCG. El tracing tiene un precio de $1/GB-mes frente a los $3/GB de Braintrust en Pro.',
+      items: [
+        '50+ métricas de evaluación integradas — no se requiere configuración de scorer personalizado',
+        'Simulación de conversación multi-turn y testing de pipelines HTTP end-to-end',
+        'Red teaming integrado: OWASP Top 10 para LLMs, alineación con NIST AI RMF, detección de jailbreak',
+        'Precios: Gratis (5 test runs/semana, 2 seats); Starter $19.99/usuario/mes; Premium $49/usuario/mes; Enterprise personalizado'
+      ]
+    },
+    comparison: {
+      id: 'side-by-side-comparison',
+      title: '¿Cómo se comparan estas 6 herramientas? Desglose de características lado a lado',
+      content: '**A abril de 2026, este es el desglose completo de características en las seis herramientas:**',
+      columns: ['Herramienta', 'Multi-Modelo', 'Evaluación', 'Testing', 'Versionado', 'Producción', 'Precios'],
+      rows: [
+        { Herramienta: 'PromptQuorum', 'Multi-Modelo': 'Excelente', Evaluación: 'No', Testing: 'No', Versionado: 'No', Producción: 'No', Precios: 'Gratis + créditos' },
+        { Herramienta: 'Braintrust', 'Multi-Modelo': 'Básico', Evaluación: 'Excelente', Testing: 'Básico', Versionado: 'No', Producción: 'Básico', Precios: 'Gratis / $249/mes' },
+        { Herramienta: 'Confident AI', 'Multi-Modelo': 'No', Evaluación: 'Excelente', Testing: 'Excelente', Versionado: 'Básico', Producción: 'No', Precios: '$19.99/usuario/mes' },
+        { Herramienta: 'Vellum', 'Multi-Modelo': 'Básico', Evaluación: 'No', Testing: 'Básico', Versionado: 'Sí', Producción: 'Excelente', Precios: 'Gratis / $500/mes' },
+        { Herramienta: 'Promptfoo', 'Multi-Modelo': 'No', Evaluación: 'No', Testing: 'Excelente', Versionado: 'Vía Git', Producción: 'Solo CI/CD', Precios: 'Gratis' },
+        { Herramienta: 'PromptHub', 'Multi-Modelo': 'No', Evaluación: 'No', Testing: 'No', Versionado: 'Excelente', Producción: 'No', Precios: 'Gratis / $20/usuario/mes' },
+        { Herramienta: 'LangSmith', 'Multi-Modelo': 'No', Evaluación: 'No', Testing: 'No', Versionado: 'No', Producción: 'Solo tracing', Precios: 'Gratis / $39/seat/mes' }
+      ]
+    },
+    decision: {
+      id: 'how-to-choose',
+      title: '¿Cómo eliges la herramienta de prompt engineering correcta?',
+      content: '**Elige herramientas según tu etapa del flujo de trabajo. Todos los equipos: empieza con PromptQuorum para comparar modelos, luego añade herramientas especializadas para tu cuello de botella.**',
+      items: [
+        '**Todos los equipos — selección de modelo:** Empieza con PromptQuorum (gratis) para comparar GPT-4o, Claude 4.7 Opus, Gemini y modelos locales lado a lado antes de comprometerte con un stack.',
+        '**Startups (<10 personas):** PromptQuorum + Promptfoo (gratis) + PromptHub (versionado). Avanza a Braintrust cuando la calidad de eval sea crítica.',
+        '**Desplegando en producción:** Vellum (despliegue/monitorización) + Promptfoo (testing CI/CD) + Braintrust o Confident AI (evals offline)',
+        '**Uso intensivo de LangChain:** LangSmith (imprescindible para tracing de cadenas) + Promptfoo (tests unitarios) + Confident AI o Braintrust (evals offline)',
+        '**Enterprise (gobernanza importante):** PromptHub (trazas de auditoría) + Braintrust o Confident AI (gobernanza de eval) + Vellum (monitorización en producción)'
+      ],
+      image: '/images/best-pe-tools-2026-decision-guide-en.svg',
+      imageCaption: 'Recomendaciones de stack por tipo de equipo: todos los equipos empiezan con PromptQuorum; startups añaden Promptfoo + PromptHub; equipos de producción añaden Vellum; equipos LangChain añaden LangSmith; equipos enterprise usan PromptHub + Braintrust + Vellum para gobernanza.'
+    },
+    howToStack: {
+      id: 'how-to-build-stack',
+      title: '¿Cómo construyes tu stack de herramientas de prompt engineering?',
+      numberedItems: [
+        '**Identifica tu cuello de botella:** ¿El problema es la selección de modelo, la calidad de evaluación, la cobertura de tests, el control de versiones o la fiabilidad en producción? Empieza con la herramienta que resuelve tu brecha más dolorosa.',
+        '**Empieza gratis:** Regístrate en PromptQuorum (comparación multi-modelo) e instala Promptfoo (testing CI/CD). Ambos son gratuitos y cubren los dos puntos de partida más comunes.',
+        '**Añade versionado pronto:** Configura PromptHub o control de versiones basado en Git antes de que tu equipo supere las 2 personas editando prompts.',
+        '**Añade evaluación cuando la calidad importe:** Integra Braintrust cuando necesites datasets de ground truth con puntuación y feedback human-in-the-loop.',
+        '**Añade herramientas de producción al final:** Despliega Vellum cuando publiques prompts para usuarios finales y necesites A/B testing, cadenas de fallback y monitorización.',
+        '**Audita solapamientos:** Revisa tu stack trimestralmente. Si dos herramientas cubren la misma función, elimina la de menor ROI.'
+      ]
+    },
+    commonMistakes: {
+      id: 'common-mistakes',
+      title: '¿Cuáles son los errores más comunes al elegir herramientas de PE?',
+      mistakes: [
+        {
+          mistake: 'Comprar las 5 herramientas porque todas parecen útiles',
+          problem: 'Braintrust y Promptfoo se solapan en testing — comprar ambas crea flujos de trabajo duplicados y presupuesto desperdiciado.',
+          fix: 'Empieza con Promptfoo (gratis) para CI/CD. Añade Braintrust solo cuando necesites campañas de eval human-in-the-loop con datasets de ground truth.'
+        },
+        {
+          mistake: 'Saltarse el testing CI/CD y saltar directamente a evals en producción',
+          problem: 'Las evals manuales pierden regresiones que ocurren en edge cases. Los fallos en producción son caros de depurar.',
+          fix: 'Configura Promptfoo en CI/CD primero — detecta cambios que rompen cosas antes de que se desplieguen. Añade Braintrust para medición de calidad de eval offline.'
+        },
+        {
+          mistake: 'No añadir versionado de prompts hasta que una regresión lo fuerza',
+          problem: 'Sin versionado no puedes identificar qué cambio de prompt causó la regresión ni hacer rollback a una versión conocida buena.',
+          fix: 'Añade versionado con PromptHub o Vellum desde el día 1. Trata cada cambio de prompt como un commit de código: revisión antes de merge.'
+        },
+        {
+          mistake: 'Usar observabilidad genérica (Datadog, New Relic) para monitorizar prompts de IA',
+          problem: 'Las herramientas genéricas rastrean latencia y errores pero no el texto del prompt, las respuestas del modelo ni los costes por token — las señales necesarias para depurar prompts.',
+          fix: 'Usa Vellum para monitorización de prompts en producción o LangSmith si usas LangChain. Ambos registran el par completo prompt–respuesta con atribución de coste.'
+        }
+      ],
+      image: '/images/best-pe-tools-2026-common-mistakes-en.svg',
+      imageCaption: '4 errores que cometen los equipos de prompt engineering: comprar herramientas que se solapan, saltarse el testing CI/CD, versionado tardío y usar observabilidad genérica en lugar de herramientas específicas para prompts como Vellum o LangSmith.'
+    },
+    regionalConsiderations: {
+      id: 'regional-considerations',
+      title: 'Cumplimiento regional y residencia de datos',
+      content: '**Los requisitos de residencia de datos afectan qué herramientas son viables para equipos en la UE, sanidad, finanzas y sectores regulados.** Revísalos antes de seleccionar un plan de pago.',
+      items: [
+        '**Braintrust:** Certificación SOC 2 Type II. Acuerdo de Socio de Negocio HIPAA (BAA) disponible en Enterprise. Datos almacenados en EE.UU. por defecto; despliegue self-hosted disponible en Enterprise.',
+        '**Vellum:** Disponible en AWS Marketplace para adquisición empresarial. El plan Enterprise soporta despliegue self-hosted y personalizado.',
+        '**Promptfoo:** Completamente self-hosted — los datos nunca salen de tu infraestructura. La mejor opción para equipos con GDPR y sectores regulados que no pueden compartir datos de prompts con proveedores SaaS.',
+        '**LangSmith:** Datos almacenados en GCP us-central-1. El plan Enterprise soporta self-hosted y BYOC (Bring Your Own Cloud) en AWS, GCP o Azure.',
+        '**Confident AI:** Despliegue self-hosted disponible en el plan Enterprise para equipos con requisitos estrictos de residencia de datos.',
+        '**PromptQuorum:** Alojado en la UE, cumple con GDPR. Fundada en Alemania; todos los datos procesados dentro de infraestructura de la UE.'
+      ]
+    },
+    relatedReading: {
+      id: 'related-reading',
+      title: 'Lecturas relacionadas',
+      items: [
+        '[Cómo evaluar la calidad de prompts](/prompt-engineering/how-to-evaluate-prompt-quality?lang=es) — Métricas que miden estas herramientas: precisión, latencia, coste',
+        '[Mejores plataformas de gestión de prompts](/prompt-engineering/best-prompt-management-platforms?lang=es) — Cómo versionar, compartir y gobernar prompts en tu equipo',
+        '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=es) — Cuándo los ejemplos ayudan a las evals vs cuándo las perjudican',
+        '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=es) — Tareas de razonamiento complejo donde más importan las métricas de eval',
+        '[Prompt Chaining](/prompt-engineering/prompt-chaining?lang=es) — Flujos de trabajo multi-paso que se benefician del tracing de LangSmith',
+        '[Negative Prompting: Dile a la IA qué NO hacer](/prompt-engineering/negative-prompting?lang=es) — Técnicas de restricción que reducen las alucinaciones que estas herramientas están diseñadas para detectar'
+      ]
+    },
+    faq: {
+      id: 'faq',
+      title: 'Preguntas frecuentes',
+      faqs: [
+        { q: '¿Cuáles son las 5 mejores herramientas de prompt engineering en 2026?', a: 'Las cinco herramientas de PE más utilizadas en 2026 son Braintrust para evaluación, Vellum para despliegue en producción, Promptfoo para testing CI/CD open-source, PromptHub para versionado y LangSmith para observabilidad en LangChain. Cada una resuelve un cuello de botella distinto. La mayoría de equipos usa dos o tres de ellas, no las cinco.' },
+        { q: '¿Qué herramienta es mejor para evaluar prompts?', a: 'Braintrust es la herramienta de evaluación más potente, con scoring LLM-as-judge, bucles de feedback humano y gestión de datasets para construir ground truth. Permite definir evals, ejecutarlos automáticamente, puntuar con humanos y compilar en un dataset reutilizable. Promptfoo es la alternativa gratuita para evaluación automatizada basada en tests en CI/CD.' },
+        { q: '¿Debo usar Promptfoo o Braintrust para testing?', a: 'Usa Promptfoo para testing CI/CD — gratuito, open-source, se ejecuta desde configuración YAML, se integra con GitHub Actions. Usa Braintrust cuando necesites evals offline con feedback humano y quieras construir un dataset de ground truth con puntuación. Muchos equipos usan ambos: Promptfoo controla los despliegues, Braintrust mide la calidad del output.' },
+        { q: '¿Es necesario el versionado de prompts para equipos?', a: 'Sí, el versionado de prompts es esencial en cuanto más de una persona edita prompts. Sin él, los equipos no pueden rastrear qué versión se desplegó, no pueden hacer rollback tras una regresión ni auditar quién cambió qué y cuándo. PromptHub y Vellum ofrecen control de versiones; PromptHub tiene el flujo de trabajo más similar a Git para equipos con requisitos de gobernanza.' },
+        { q: '¿Estas herramientas soportan modelos locales?', a: 'La mayoría soporta modelos locales con distintos niveles de profundidad. Promptfoo tiene soporte nativo para Ollama y LM Studio mediante configuración de proveedor sin necesidad de wrapper. Braintrust y Vellum soportan modelos locales a través de wrappers de API que exponen un endpoint compatible con OpenAI.' },
+        { q: '¿Puedo combinar varias herramientas de prompt engineering?', a: 'Sí — combinar dos o tres herramientas es el enfoque estándar en 2026. El stack más habitual es Promptfoo para testing CI/CD, Vellum para despliegue en producción y Braintrust para campañas de eval offline. Las tres se integran mediante REST APIs estándar sin vendor lock-in; evita comprar las cinco porque Braintrust y Promptfoo se solapan parcialmente en testing.' },
+        { q: '¿Cuál es el coste típico de estas herramientas?', a: 'A mayo de 2026: Braintrust tiene un tier gratuito (1M trazas, 10k puntuaciones, usuarios ilimitados) y Pro a $249/mes; Vellum tiene tier gratuito y Pro a $500/mes; Promptfoo es totalmente gratuito (open-source); PromptHub es gratuito y $20/usuario/mes (Team); LangSmith Developer es $0/seat (5k trazas/mes) y Plus a $39/seat/mes; Confident AI es gratuito (limitado) y $19.99/usuario/mes (Starter). Los costes escalan con el volumen de eval, las llamadas a API y el número de seats.' },
+        { q: '¿Qué herramienta tiene el mejor tier gratuito?', a: 'Promptfoo es completamente gratuito y open-source — sin límite de seats, sin caps de uso, self-hosted en tu infraestructura. Braintrust ahora tiene un tier gratuito permanente generoso: 1M spans de trazas, 10k puntuaciones y usuarios ilimitados sin límite de tiempo. El tier gratuito de Confident AI incluye spans de traza ilimitados con 5 test runs/semana. LangSmith Developer es $0/seat con 5k trazas/mes. PromptHub es gratuito para prompts públicos con miembros ilimitados.' },
+        { q: '¿Cuál es la diferencia entre testing y evaluación de prompts?', a: 'El testing (Promptfoo) verifica si un prompt produce el output correcto para entradas definidas — se ejecuta automáticamente en CI/CD y detecta regresiones. La evaluación (Braintrust) mide la calidad del output — precisión, tono, factualidad — usando jueces LLM o humanos. El testing es rápido y automatizado; la evaluación es más lenta y matizada. La mayoría de equipos necesita ambos.' },
+        { q: '¿Cómo sé cuándo he superado Promptfoo y necesito Braintrust?', a: 'Cambia a Braintrust cuando tu equipo necesite puntuar la calidad del output más allá de pass/fail — por ejemplo, tono, precisión factual o alineación con la marca. Promptfoo destaca en tests de corrección binaria en CI/CD. Braintrust añade scoring human-in-the-loop, jueces LLM y un dataset de ground truth que mejora con el tiempo. La mayoría de equipos alcanza este punto de inflexión cuando 3–5 personas iteran sobre prompts diariamente.' }
+      ]
+    },
+    sources: {
+      id: 'sources',
+      title: 'Fuentes',
+      items: [
+        '[Docs de Braintrust](https://www.braintrust.dev/docs) — Documentación oficial sobre bucles de eval, jueces LLM y gestión de datasets',
+        '[Plataforma Vellum](https://www.vellum.ai) — Página de producto de Vellum con despliegue en producción, A/B testing y características de monitorización',
+        '[GitHub de Promptfoo](https://github.com/promptfoo/promptfoo) — Repositorio open-source con docs de configuración YAML y guías de red teaming',
+        '[PromptHub](https://prompthub.com) — Plataforma de versionado y colaboración en equipo de prompts',
+        '[Documentación de LangSmith](https://docs.smith.langchain.com) — Docs oficiales de tracing y observabilidad de LangSmith para LangChain',
+        '[Confident AI](https://www.confident-ai.com) — Plataforma de evaluación y red teaming basada en DeepEval con 50+ métricas integradas'
+      ]
+    }
+  }
+},
     fr: {
   theme: 'Outils & Plateformes',
   title: 'Meilleurs outils de prompt engineering 2026 : classés par usage',
