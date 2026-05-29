@@ -260,6 +260,10 @@ function CookieBannerInner() {
         <a href="/privacy" style={{ color: '#D0BCFF', textDecoration: 'underline' }}>
           {c.policy}
         </a>
+        {' · '}
+        <a href="/impressum" style={{ color: '#D0BCFF', textDecoration: 'underline' }}>
+          Impressum
+        </a>
         .
       </p>
 
