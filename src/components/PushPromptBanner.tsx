@@ -5,9 +5,11 @@ import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
 
 const STORAGE_KEY = 'push_prompt_dismissed_until'
-const OPTED_IN_KEY = 'push_prompt_opted_in'
-const DISMISS_DURATION_MS = 60 * 24 * 60 * 60 * 1000 // 60 days (~2 months)
-const SHOW_DELAY_MS = 10_000 // 10 seconds
+const SESSION_COUNT_KEY = 'pq_session_count'
+const SESSION_ACTIVE_KEY = 'pq_session_active'
+const SUPPRESS_DURATION_MS = 90 * 24 * 60 * 60 * 1000 // 3 months
+const NEW_VISITOR_DELAY_MS = 10 * 60 * 1000 // 10 minutes
+const RETURN_VISITOR_DELAY_MS = 30 * 1000 // 30 seconds on return visit
 
 interface OneSignalType {
   init: (config: {
@@ -87,14 +89,30 @@ function PushPromptBannerInner() {
 
   useEffect(() => {
     try {
-      if (localStorage.getItem(OPTED_IN_KEY)) return
       const until = localStorage.getItem(STORAGE_KEY)
       if (until && Date.now() < parseInt(until, 10)) return
     } catch {
       /* ignore */
     }
 
-    // Don't show if already subscribed
+    // Count distinct sessions — sessionStorage clears on tab/browser close
+    let sessionCount = 1
+    try {
+      if (!sessionStorage.getItem(SESSION_ACTIVE_KEY)) {
+        sessionCount = parseInt(localStorage.getItem(SESSION_COUNT_KEY) || '0', 10) + 1
+        localStorage.setItem(SESSION_COUNT_KEY, String(sessionCount))
+        sessionStorage.setItem(SESSION_ACTIVE_KEY, '1')
+      } else {
+        sessionCount = parseInt(localStorage.getItem(SESSION_COUNT_KEY) || '1', 10)
+      }
+    } catch {
+      /* ignore */
+    }
+
+    const isReturning = sessionCount >= 2
+    const delay = isReturning ? RETURN_VISITOR_DELAY_MS : NEW_VISITOR_DELAY_MS
+
+    // Don't show if already subscribed via OneSignal
     const checkSubscribed = () => {
       try {
         const w = window as Window & { OneSignal?: OneSignalType }
@@ -109,14 +127,14 @@ function PushPromptBannerInner() {
       if (!checkSubscribed()) {
         setVisible(true)
       }
-    }, SHOW_DELAY_MS)
+    }, delay)
 
     return () => clearTimeout(timer)
   }, [])
 
   const dismiss = useCallback(() => {
     try {
-      localStorage.setItem(STORAGE_KEY, String(Date.now() + DISMISS_DURATION_MS))
+      localStorage.setItem(STORAGE_KEY, String(Date.now() + SUPPRESS_DURATION_MS))
     } catch {
       /* ignore */
     }
@@ -125,7 +143,7 @@ function PushPromptBannerInner() {
 
   const allow = useCallback(() => {
     try {
-      localStorage.setItem(OPTED_IN_KEY, '1')
+      localStorage.setItem(STORAGE_KEY, String(Date.now() + SUPPRESS_DURATION_MS))
     } catch {
       /* ignore */
     }
