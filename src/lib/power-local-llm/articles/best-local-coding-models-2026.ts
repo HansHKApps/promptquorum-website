@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Best Local Coding Models in 2026: Qwen3-Coder vs DeepSeek vs Codestral',
-    seoTitle: 'Best Local Coding Models 2026: Qwen3-Coder, DeepSeek, Codestral',
+    seoTitle: 'Best Local Coding Models 2026: Qwen3, DeepSeek, Codestral',
     intro:
       'Six open-weight coding models compete for the local-LLM coding crown in 2026: Qwen3-Coder (30B and 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code, and StarCoder 2. They differ on parameter count, context window, training-data emphasis, license, and VRAM footprint — and the right pick depends on which of these constraints binds first for your hardware and your language. This guide compares them on what is publicly verifiable: architecture, sizes, context, licenses, VRAM math, and vendor-reported benchmark direction, with citations to each model card so you can re-check the numbers yourself.',
     metaDescription:
-      'Six local coding models compared on size, context, license, VRAM, and vendor-reported HumanEval+ direction. Qwen3-Coder 30B is the default pick for May 2026; full breakdown inside.',
+      '6 local coding models tested on VRAM, HumanEval+ benchmark direction, license, and context window. Qwen3-Coder 30B is the default pick for May 2026.',
     twitterDescription:
       'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — six open-weight coding models, six different sweet spots. Verdict per scenario inside.',
     current_models_mentioned: [
@@ -531,9 +531,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Beste lokale Coding-Modelle 2026: Qwen3-Coder vs DeepSeek vs Codestral',
-    seoTitle: 'Beste lokale Coding-Modelle 2026: Qwen3-Coder, DeepSeek, Codestral',
+    seoTitle: 'Lokale Coding-Modelle 2026: Qwen3, DeepSeek, Codestral',
     intro: 'Sechs Open-Source-Coding-Modelle konkurrieren 2026 um den Titel des besten lokalen Coding-Modells: Qwen3-Coder (30B und 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code und StarCoder 2. Sie unterscheiden sich in Parameterzahl, Kontext-Fenster, Trainingsdaten-Schwerpunkt, Lizenz und VRAM-Speicherfußabdruck — die richtige Wahl hängt davon ab, welche dieser Beschränkungen für Ihre Hardware und Ihre Programmiersprache zuerst bindend wird. Dieser Leitfaden vergleicht sie anhand öffentlich verifizierbarer Kriterien: Architektur, Größen, Kontext, Lizenzen, VRAM-Mathematik und Hersteller-gemeldete Benchmark-Richtung, mit Quellenangaben zu jedem Modell-Karteneintrag.',
-    metaDescription: 'Sechs lokale Coding-Modelle im Vergleich: Größe, Kontext, Lizenz, VRAM und HumanEval+-Richtung. Qwen3-Coder 30B ist die Standard-Wahl für Mai 2026; vollständige Analyse im Beitrag.',
+    metaDescription: '6 lokale Coding-Modelle im Vergleich: Größe, Kontext, Lizenz, VRAM und HumanEval+-Richtung. Qwen3-Coder 30B ist die Empfehlung für Mai 2026.',
     twitterDescription: 'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — sechs Open-Source-Coding-Modelle, sechs verschiedene Sweet Spots. Empfehlungen pro Szenario im Beitrag.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
@@ -962,9 +962,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Meilleurs modèles de codage local 2026 : Qwen3-Coder vs DeepSeek vs Codestral',
-    seoTitle: 'Meilleurs modèles de codage local 2026 : Qwen3-Coder, DeepSeek, Codestral',
+    seoTitle: 'Modèles de codage local 2026 : Qwen3, DeepSeek, Codestral',
     intro: 'Six modèles de codage open-source rivalisent pour la couronne du codage local en 2026 : Qwen3-Coder (30B et 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code et StarCoder 2. Ils diffèrent sur le nombre de paramètres, la fenêtre de contexte, l\'accent de la formation, la licence et l\'empreinte VRAM — le bon choix dépend de quelle contrainte devient prioritaire d\'abord pour votre matériel et votre langage. Ce guide les compare sur ce qui est publiquement vérifiable : architecture, tailles, contexte, licences, mathématique VRAM, avec citations à chaque fiche modèle pour que vous puissiez revérifier les chiffres.',
-    metaDescription: 'Six modèles de codage local comparés : taille, contexte, licence, VRAM et direction HumanEval+. Qwen3-Coder 30B est le meilleur choix pour mai 2026 ; analyse complète incluse.',
+    metaDescription: '6 modèles de codage local comparés : taille, contexte, licence, VRAM et direction HumanEval+. Qwen3-Coder 30B est la recommandation pour mai 2026.',
     twitterDescription: 'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — six modèles open-source, six points forts différents. Verdict par scénario inclus.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
@@ -1887,7 +1887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: '2026年最佳本地编码模型：Qwen3-Coder vs DeepSeek vs Codestral',
-    seoTitle: '2026年最佳本地编码模型：Qwen3-Coder、DeepSeek、Codestral',
+    seoTitle: '2026年最佳本地编码模型：Qwen3-Coder vs DeepSeek vs Codestral评测',
     intro:
       '2026年，6个开放权重编码模型正在争夺本地LLM编码的王冠：Qwen3-Coder（30B和7B）、DeepSeek Coder V3、Codestral 22B、Llama 3.3 Code、Granite Code和StarCoder 2。它们在参数数量、上下文窗口、训练数据重点、许可证和VRAM占用空间上存在差异 — 最佳选择取决于硬件和使用语言中哪个约束最先生效。本指南基于公开可验证的信息进行比较：架构、大小、上下文、许可证、VRAM计算和供应商报告的基准方向，并包含每个模型卡的链接，以便您可以自己重新检查数字。',
     metaDescription:

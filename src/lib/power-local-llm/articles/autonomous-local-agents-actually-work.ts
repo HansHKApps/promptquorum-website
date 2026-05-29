@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Six local AI agent stacks, five real tasks, thirty days of evaluation. Two stacks land tasks reliably. Three fail in ways the demos do not show. One is effectively unusable. This is the honest report — what each agent setup actually does on a refactor, a research task, an email triage, a scrape-and-summarize, and a bug hunt, with the failures named specifically and the supervision cost quantified.',
     metaDescription:
-      'Honest test of 6 local AI agent stacks (Cline, Continue.dev, LangGraph, AutoGPT, OpenInterpreter, MetaGPT) on 5 real tasks. 2 work reliably, 3 fail surprisingly, 1 is unusable. Verdicts named.',
+      '6 local AI agent stacks tested on 5 real tasks. 2 work reliably, 3 fail in ways demos hide, 1 is unusable. Cline, LangGraph, AutoGPT, MetaGPT assessed.',
     twitterDescription:
       'Tested 6 local agent stacks on 5 real tasks for 30 days. 2 worked, 3 failed in surprising ways, 1 was unusable. The honest verdict on which stacks ship work and which only ship demos.',
     current_models_mentioned: [
@@ -459,11 +459,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Agents locaux en 2026 : Ce qui fonctionne réellement (et ce qui échoue)',
-    seoTitle: 'Agents IA locaux 2026 : Ce qui marche, ce qui échoue (Test honnête)',
+    seoTitle: 'Agents IA locaux 2026 : Ce qui marche, ce qui échoue',
     intro:
       'Six stacks d\'agents IA locaux, cinq tâches réelles, trente jours d\'évaluation. Deux stacks accomplissent les tâches de manière fiable. Trois échouent d\'une manière que les démos ne montrent pas. Un est pratiquement inutilisable. C\'est le rapport honnête — ce que chaque configuration d\'agent fait réellement sur une refonte, une tâche de recherche, une triage d\'e-mails, un scrape-et-résumé, et une chasse aux bugs, avec les échecs nommés spécifiquement et le coût de supervision quantifié.',
     metaDescription:
-      'Test honnête de 6 stacks d\'agents IA locaux (Cline, Continue.dev, LangGraph, AutoGPT, OpenInterpreter, MetaGPT) sur 5 tâches réelles. 2 fonctionnent de manière fiable, 3 échouent de façon surprenante, 1 est inutilisable. Verdicts nommés.',
+      '6 stacks d\'agents IA locaux testés sur 5 tâches réelles. 2 fonctionnent, 3 échouent de façon surprenante, 1 est inutilisable. Verdicts nommés.',
     twitterDescription:
       'Testé 6 stacks d\'agents locaux sur 5 tâches réelles pendant 30 jours. 2 ont fonctionné, 3 ont échoué de façon surprenante, 1 était inutilisable. Le verdict honnête sur les stacks qui livrent le travail et ceux qui ne livrent que des démos.',
     current_models_mentioned: [
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'ローカルAIエージェント2026年：実際に機能するもの（そして失敗するもの）',
-    seoTitle: 'ローカルAIエージェント2026年：機能するもの、失敗するもの（正直なテスト）',
+    seoTitle: '2026年ローカルAIエージェント評価：Cline vs LangGraph vs MetaGPT',
     intro:
       'ローカルAIエージェント6スタック、実務タスク5種類、30日間の評価。2スタックがタスクを確実に達成します。3スタックはデモに見えない方法で失敗します。1つは実質的に使用不可能です。これが正直なレポートです。各エージェント設定がリファクタリング、研究タスク、メールトリアージ、スクレイプと要約、バグハント実施時に実際に何を行うか、具体的に名前が付けられた失敗と定量化された監視コストを含みます。',
     metaDescription:
@@ -1322,11 +1322,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Lokale KI-Agenten in 2026: Was funktioniert (und was noch fehlschlägt)',
-    seoTitle: 'Lokale KI-Agenten 2026: Was funktioniert, was fehlschlägt (Ehrlicher Test)',
+    seoTitle: 'Lokale KI-Agenten 2026: Was funktioniert, was fehlschlägt',
     intro:
       'Sechs lokale KI-Agent-Stacks, fünf echte Aufgaben, dreißig Tage Evaluation. Zwei Stacks landen Aufgaben zuverlässig. Drei fehlschlagen auf Wegen, die die Demos nicht zeigen. Einer ist praktisch unbrauchbar. Das ist der ehrliche Bericht — was jedes Agent-Setup bei einer Umstrukturierung, einer Recherchaufgabe, einer E-Mail-Triage, einem Scrape-and-Summarize und einer Bug-Suche wirklich tut, mit spezifisch benannten Fehlern und quantifizierten Überwachungskosten.',
     metaDescription:
-      'Ehrlicher Test von 6 lokalen KI-Agent-Stacks (Cline, Continue.dev, LangGraph, AutoGPT, OpenInterpreter, MetaGPT) auf 5 echten Aufgaben. 2 funktionieren zuverlässig, 3 fehlschlagen überraschend, 1 ist unbrauchbar. Verdikt benannt.',
+      '6 lokale KI-Agent-Stacks auf 5 echten Aufgaben getestet. 2 funktionieren zuverlässig, 3 fehlschlagen überraschend, 1 ist unbrauchbar. Verdikt benannt.',
     twitterDescription:
       'Testete 6 lokale Agent-Stacks auf 5 echten Aufgaben über 30 Tage. 2 funktioniert, 3 fehlgeschlagen auf überraschende Weise, 1 war unbrauchbar. Das ehrliche Verdikt, welche Stacks Arbeit liefern und welche nur Demos liefern.',
     current_models_mentioned: [
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: '本地AI代理2026：实际可行的方案（以及失败的原因）',
-    seoTitle: '本地AI代理2026：哪些可行，哪些失败（诚实测试）',
+    seoTitle: '2026年本地AI代理评测：Cline vs LangGraph vs MetaGPT 哪款真能用',
     intro:
       '六个本地AI代理框架，五项真实任务，三十天评估。两个框架可靠完成任务。三个框架以演示中未显示的方式失败。一个框架完全无法使用。这是诚实的报告——每个代理设置在重构、研究任务、邮件分类、爬取和总结、漏洞修复中的实际表现，包括具体命名的失败原因和量化的监督成本。',
     metaDescription:
