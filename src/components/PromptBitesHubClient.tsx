@@ -372,9 +372,9 @@ export function PromptBitesHubClient({ lang }: Props) {
                     <span className="inline-flex items-center justify-center w-6 h-6 text-xs font-bold rounded-full bg-primary/10 text-primary shrink-0">
                       {cat.label}
                     </span>
-                    {cat.titleEn}
+                    {cat.title[lang] ?? cat.titleEn}
                   </h2>
-                  <p className="text-sm text-text-secondary mt-1 ml-8">{cat.descriptionEn}</p>
+                  <p className="text-sm text-text-secondary mt-1 ml-8">{cat.description[lang] ?? cat.descriptionEn}</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
                   {cat.slugs.map((slug) => {

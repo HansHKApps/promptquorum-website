@@ -15,6 +15,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'Comparer les outils',
     ja: 'ツール比較',
     zh: '工具对比',
+    es: 'Comparar herramientas',
   },
   features: {
     en: 'Features',
@@ -22,6 +23,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'Fonctionnalités',
     ja: '機能',
     zh: '功能',
+    es: 'Características',
   },
   howItWorks: {
     en: 'How It Works',
@@ -29,6 +31,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'Comment ça marche',
     ja: '使い方',
     zh: '使用说明',
+    es: 'Cómo funciona',
   },
   faq: {
     en: 'FAQ',
@@ -36,6 +39,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'FAQ',
     ja: 'よくある質問',
     zh: '常见问题',
+    es: 'FAQ',
   },
   blog: {
     en: 'Blog',
@@ -43,6 +47,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'Blog',
     ja: 'ブログ',
     zh: '博客',
+    es: 'Blog',
   },
   promptEngineering: {
     en: 'Prompt Engineering',
@@ -50,6 +55,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'Prompt Engineering',
     ja: 'プロンプト設計',
     zh: '提示词工程',
+    es: 'Prompt Engineering',
   },
   localLlms: {
     en: 'Local LLMs',
@@ -57,6 +63,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'LLMs locaux',
     ja: 'ローカルLLM',
     zh: '本地LLM',
+    es: 'LLMs locales',
   },
   powerLocalLlm: {
     en: 'Power Local LLM',
@@ -64,6 +71,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'Power Local LLM',
     ja: 'Power Local LLM',
     zh: 'Power Local LLM',
+    es: 'Power Local LLM',
   },
   promptBites: {
     en: 'Prompt Bites',
@@ -71,6 +79,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'Prompt Bites',
     ja: 'Prompt Bites',
     zh: 'Prompt Bites',
+    es: 'Prompt Bites',
   },
   waitlist: {
     en: 'Waitlist',
@@ -78,6 +87,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'Liste d\'attente',
     ja: '順番待ちリスト',
     zh: '候补名单',
+    es: 'Lista de espera',
   },
   skipToMain: {
     en: 'Skip to main content',
@@ -85,6 +95,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     fr: 'Aller au contenu principal',
     ja: 'メインコンテンツへスキップ',
     zh: '跳转到主要内容',
+    es: 'Ir al contenido principal',
   },
 }
 

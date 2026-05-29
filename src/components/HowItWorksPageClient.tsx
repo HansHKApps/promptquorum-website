@@ -105,6 +105,14 @@ const T = {
     ctaBtn: 'Join the Waitlist',
     compareLink: 'See how PromptQuorum compares to other multi-LLM tools →',
     back: '← Back to Home',
+    keyConceptsH2: 'Key Concepts',
+    defs: [
+      { term: 'Multi-Model Dispatch', def: 'Sending one prompt simultaneously to 25+ AI models in a single click. PromptQuorum pre-loads your prompt into each destination via URL — no copy-pasting, all tabs open in parallel.' },
+      { term: 'Quorum Analysis', def: 'Structured comparison of responses from multiple AI models to identify consensus, contradictions, and confidence levels. PromptQuorum offers 13 analysis types including Hallucination Detection and Best Answer Selection.' },
+      { term: 'Consensus Scoring', def: 'A confidence rating derived from the degree of agreement across multiple model responses. Higher consensus = higher reliability. Lower consensus flags areas of uncertainty or potential hallucination.' },
+      { term: 'Hallucination Detection', def: 'Identifying factual claims that appear in only one or a minority of model responses, indicating potential AI fabrication. Cross-referencing 5+ independent models dramatically reduces the rate of undetected hallucinations.' },
+      { term: 'BYOM — Bring Your Own Model', def: 'Connecting your own API keys directly to AI providers. Keys are stored only in your browser\'s localStorage and connect directly to providers — no PromptQuorum server ever receives or transmits your credentials.' },
+    ],
   },
   de: {
     h1: 'Wie PromptQuorum funktioniert',
@@ -206,6 +214,14 @@ const T = {
     ctaBtn: 'Warteliste beitreten',
     compareLink: 'PromptQuorum im Vergleich zu anderen Multi-LLM-Tools →',
     back: '← Zurück zur Startseite',
+    keyConceptsH2: 'Schlüsselbegriffe',
+    defs: [
+      { term: 'Multi-Modell-Dispatch', def: 'Einen Prompt gleichzeitig mit einem Klick an 25+ KI-Modelle senden. PromptQuorum lädt Ihren Prompt per URL in jedes Ziel vor — kein Kopieren und Einfügen, alle Tabs öffnen parallel.' },
+      { term: 'Quorum-Analyse', def: 'Strukturierter Vergleich von Antworten mehrerer KI-Modelle zur Identifikation von Konsens, Widersprüchen und Konfidenzgraden. PromptQuorum bietet 13 Analysetypen, einschließlich Halluzinationserkennung und Beste-Antwort-Auswahl.' },
+      { term: 'Konsens-Scoring', def: 'Eine Vertrauensbewertung, die aus dem Übereinstimmungsgrad mehrerer Modellantworten abgeleitet wird. Höherer Konsens = höhere Zuverlässigkeit. Niedrigerer Konsens markiert Unsicherheitsbereiche oder potenzielle Halluzinationen.' },
+      { term: 'Halluzinationserkennung', def: 'Identifikation von Faktenbehauptungen, die nur in einem oder einer Minderheit von Modellen erscheinen, was auf potenzielle KI-Fabrikation hinweist. Der Abgleich mit 5+ unabhängigen Modellen reduziert die Rate unerkannter Halluzinationen drastisch.' },
+      { term: 'BYOM — Eigenes Modell mitbringen', def: 'Verbinden Sie Ihre eigenen API-Schlüssel direkt mit KI-Anbietern. Schlüssel werden nur im localStorage Ihres Browsers gespeichert und verbinden sich direkt mit Anbietern — kein PromptQuorum-Server empfängt oder überträgt jemals Ihre Zugangsdaten.' },
+    ],
   },
   fr: {
     h1: 'Comment fonctionne PromptQuorum',
@@ -307,6 +323,14 @@ const T = {
     ctaBtn: 'Rejoindre la liste d\'attente',
     compareLink: 'Comparer PromptQuorum avec d\'autres outils multi-LLM →',
     back: '← Retour à l\'accueil',
+    keyConceptsH2: 'Concepts Clés',
+    defs: [
+      { term: 'Envoi Multi-Modèle', def: 'Envoyer un prompt simultanément à 25+ modèles d\'IA en un seul clic. PromptQuorum pré-charge votre prompt dans chaque destination via URL — sans copier-coller, tous les onglets s\'ouvrent en parallèle.' },
+      { term: 'Analyse Quorum', def: 'Comparaison structurée des réponses de plusieurs modèles d\'IA pour identifier consensus, contradictions et niveaux de confiance. PromptQuorum propose 13 types d\'analyse dont la Détection des Hallucinations et la Sélection de la Meilleure Réponse.' },
+      { term: 'Score de Consensus', def: 'Une évaluation de confiance dérivée du degré d\'accord entre plusieurs réponses de modèles. Consensus élevé = fiabilité élevée. Consensus faible signale des zones d\'incertitude ou d\'hallucination potentielle.' },
+      { term: 'Détection des Hallucinations', def: 'Identifier les affirmations factuelles apparaissant dans un seul ou une minorité de modèles, indiquant une possible fabrication par l\'IA. Le recoupement avec 5+ modèles indépendants réduit drastiquement le taux d\'hallucinations non détectées.' },
+      { term: 'BYOM — Apportez votre propre modèle', def: 'Connectez vos propres clés API directement aux fournisseurs d\'IA. Les clés sont stockées uniquement dans le localStorage de votre navigateur et se connectent directement aux fournisseurs — aucun serveur PromptQuorum ne reçoit ni ne transmet jamais vos identifiants.' },
+    ],
   },
   ja: {
     h1: 'PromptQuorumの使い方',
@@ -408,6 +432,14 @@ const T = {
     ctaBtn: 'ウェイトリストに参加',
     compareLink: '他のマルチLLMツールとPromptQuorumを比較する →',
     back: '← ホームに戻る',
+    keyConceptsH2: '主要な概念',
+    defs: [
+      { term: 'マルチモデル・ディスパッチ', def: '1つのプロンプトを1クリックで25以上のAIモデルに同時送信。PromptQuorumはURLを通じて各送信先にプロンプトを事前にロード — コピー&ペースト不要、すべてのタブが並列で開きます。' },
+      { term: 'Quorum分析', def: '複数のAIモデルの回答を構造的に比較し、コンセンサス、矛盾、信頼度を特定。PromptQuorumはハルシネーション検出やベスト回答選択を含む13種類の分析タイプを提供。' },
+      { term: 'コンセンサス・スコアリング', def: '複数のモデル回答間の一致度から導出される信頼性評価。コンセンサスが高いほど信頼性が高い。コンセンサスが低い場合は不確実性や潜在的ハルシネーションを示します。' },
+      { term: 'ハルシネーション検出', def: '1つまたは少数のモデルにしか現れない事実的主張を特定し、潜在的なAI捏造を示す。5以上の独立したモデルとの相互参照により、未検出ハルシネーション率が大幅に低下。' },
+      { term: 'BYOM — 自分のモデルを持ち込む', def: '自分のAPIキーをAIプロバイダーに直接接続。キーはブラウザのlocalStorageにのみ保存され、プロバイダーに直接接続 — PromptQuorumのサーバーが認証情報を受信・送信することは一切ありません。' },
+    ],
   },
   zh: {
     h1: 'PromptQuorum 如何运作',
@@ -509,6 +541,14 @@ const T = {
     ctaBtn: '加入候补名单',
     compareLink: '查看 PromptQuorum 与其他多 LLM 工具的对比 →',
     back: '← 返回首页',
+    keyConceptsH2: '核心概念',
+    defs: [
+      { term: '多模型分发', def: '一键将一个提示词同时发送给 25+ 个 AI 模型。PromptQuorum 通过 URL 将您的提示词预加载到每个目标 — 无需复制粘贴，所有标签页并行打开。' },
+      { term: 'Quorum 分析', def: '对多个 AI 模型的回答进行结构化比较，以识别共识、矛盾和置信度。PromptQuorum 提供 13 种分析类型，包括幻觉检测和最佳答案选择。' },
+      { term: '共识评分', def: '从多个模型回答的一致程度推导出的置信度评级。共识越高 = 可靠性越高。共识越低则标志着不确定性或潜在幻觉区域。' },
+      { term: '幻觉检测', def: '识别仅出现在一个或少数模型中的事实性声明，表明可能存在 AI 捏造。与 5+ 个独立模型交叉验证可大幅降低未检测到的幻觉比率。' },
+      { term: 'BYOM — 带来您自己的模型', def: '将您自己的 API 密钥直接连接到 AI 提供商。密钥仅存储在您浏览器的 localStorage 中，直接连接到提供商 — 任何 PromptQuorum 服务器都不会接收或传输您的凭据。' },
+    ],
   },
   es: {
     h1: 'Cómo funciona PromptQuorum',
@@ -610,31 +650,31 @@ const T = {
     ctaBtn: 'Unirse a la lista de espera',
     compareLink: 'Ver cómo PromptQuorum se compara con otras herramientas multi-LLM →',
     back: '← Volver al inicio',
+    keyConceptsH2: 'Conceptos Clave',
+    defs: [
+      {
+        term: 'Envío Multi-Modelo',
+        def: 'Enviar un prompt simultáneamente a 25+ modelos de IA con un solo clic. PromptQuorum precarga tu prompt en cada destino a través de URL — sin copiar y pegar, todas las pestañas se abren en paralelo.',
+      },
+      {
+        term: 'Análisis Quorum',
+        def: 'Comparación estructurada de respuestas de múltiples modelos de IA para identificar consenso, contradicciones y niveles de confianza. PromptQuorum ofrece 13 tipos de análisis, incluyendo Detección de Alucinaciones y Selección de la Mejor Respuesta.',
+      },
+      {
+        term: 'Puntuación de Consenso',
+        def: 'Una calificación de confianza derivada del grado de acuerdo entre múltiples respuestas de modelos. Mayor consenso = mayor fiabilidad. Menor consenso señala áreas de incertidumbre o posible alucinación.',
+      },
+      {
+        term: 'Detección de Alucinaciones',
+        def: 'Identificar afirmaciones fácticas que aparecen en solo uno o una minoría de modelos, indicando posible fabricación de la IA. Contrastar 5+ modelos independientes reduce drásticamente la tasa de alucinaciones no detectadas.',
+      },
+      {
+        term: 'BYOM — Trae tu Propio Modelo',
+        def: 'Conectar tus propias claves de API directamente a los proveedores de IA. Las claves se almacenan solo en el localStorage de tu navegador y se conectan directamente a los proveedores — ningún servidor de PromptQuorum recibe ni transmite tus credenciales.',
+      },
+    ],
   },
 }
-
-const DEFS = [
-  {
-    term: 'Multi-Model Dispatch',
-    def: 'Sending one prompt simultaneously to 25+ AI models in a single click. PromptQuorum pre-loads your prompt into each destination via URL — no copy-pasting, all tabs open in parallel.',
-  },
-  {
-    term: 'Quorum Analysis',
-    def: 'Structured comparison of responses from multiple AI models to identify consensus, contradictions, and confidence levels. PromptQuorum offers 13 analysis types including Hallucination Detection and Best Answer Selection.',
-  },
-  {
-    term: 'Consensus Scoring',
-    def: 'A confidence rating derived from the degree of agreement across multiple model responses. Higher consensus = higher reliability. Lower consensus flags areas of uncertainty or potential hallucination.',
-  },
-  {
-    term: 'Hallucination Detection',
-    def: 'Identifying factual claims that appear in only one or a minority of model responses, indicating potential AI fabrication. Cross-referencing 5+ independent models dramatically reduces the rate of undetected hallucinations.',
-  },
-  {
-    term: 'BYOM — Bring Your Own Model',
-    def: 'Connecting your own API keys directly to AI providers. Keys are stored only in your browser\'s localStorage and connect directly to providers — no PromptQuorum server ever receives or transmits your credentials.',
-  },
-]
 
 const providers = {
   cloud: ['OpenAI (GPT-4, GPT-4o)', 'Anthropic (Claude 3.5)', 'Google Gemini 1.5', 'Grok (xAI)', 'DeepSeek', 'Mistral', 'Cohere', 'Together AI', 'Groq', 'OpenRouter (free tier)'],
@@ -658,7 +698,7 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
 
         {/* Cross-language links */}
         <div className="mt-8">
-          <LangLinksBar cluster="how-it-works" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh']} />
+          <LangLinksBar cluster="how-it-works" slug="" availableLangs={['en', 'de', 'fr', 'ja', 'zh', 'es']} />
         </div>
       </div>
 
@@ -761,9 +801,9 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
 
       {/* Key Concept Definitions — GEO semantic anchors */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
-        <h2 className="text-2xl font-bold text-text-primary mb-8">Key Concepts</h2>
+        <h2 className="text-2xl font-bold text-text-primary mb-8">{t.keyConceptsH2}</h2>
         <dl className="grid sm:grid-cols-2 gap-5">
-          {DEFS.map(({ term, def }) => (
+          {t.defs.map(({ term, def }) => (
             <div key={term} className="bg-card border border-primary/20 rounded-xl p-6">
               <dt className="font-semibold text-primary mb-2">{term}</dt>
               <dd className="text-text-secondary text-sm leading-relaxed">{def}</dd>

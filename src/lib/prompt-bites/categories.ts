@@ -1,10 +1,14 @@
 // Prompt Bites — 7 cluster definitions used by the hub page.
 
+import type { Language } from '@/lib/blog/blogContent'
+
 export interface PromptBiteCategory {
   id: string
   label: string
   titleEn: string
   descriptionEn: string
+  title: Partial<Record<Language, string>>
+  description: Partial<Record<Language, string>>
   articleSlugs: string[]
 }
 
@@ -14,6 +18,22 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     label: 'A',
     titleEn: 'Quantization & VRAM',
     descriptionEn: 'How much memory you need, which quantization format to pick, and VRAM decision trees.',
+    title: {
+      en: 'Quantization & VRAM',
+      de: 'Quantisierung & VRAM',
+      fr: 'Quantisation & VRAM',
+      ja: '量子化 & VRAM',
+      zh: '量化与显存',
+      es: 'Cuantización y VRAM',
+    },
+    description: {
+      en: 'How much memory you need, which quantization format to pick, and VRAM decision trees.',
+      de: 'Wie viel Speicher Sie benötigen, welches Quantisierungsformat Sie wählen und VRAM-Entscheidungsbäume.',
+      fr: 'La quantité de mémoire nécessaire, le format de quantisation à choisir et les arbres de décision VRAM.',
+      ja: '必要なメモリ量、選ぶべき量子化形式、VRAMの意思決定ツリー。',
+      zh: '所需内存量、选择哪种量化格式以及VRAM决策树。',
+      es: 'Cuánta memoria necesita, qué formato de cuantización elegir y árboles de decisión de VRAM.',
+    },
     articleSlugs: [
       'how-much-vram-for-local-llm',
       'what-is-q4-k-m-quantization',
@@ -31,6 +51,22 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     label: 'B',
     titleEn: 'Ollama',
     descriptionEn: 'Latest versions, best models, context windows, vision, and CPU-only use.',
+    title: {
+      en: 'Ollama',
+      de: 'Ollama',
+      fr: 'Ollama',
+      ja: 'Ollama',
+      zh: 'Ollama',
+      es: 'Ollama',
+    },
+    description: {
+      en: 'Latest versions, best models, context windows, vision, and CPU-only use.',
+      de: 'Neueste Versionen, beste Modelle, Kontextfenster, Vision und CPU-only-Nutzung.',
+      fr: 'Dernières versions, meilleurs modèles, fenêtres contextuelles, vision et utilisation CPU uniquement.',
+      ja: '最新バージョン、おすすめモデル、コンテキストウィンドウ、ビジョン、CPUのみの使用。',
+      zh: '最新版本、最佳模型、上下文窗口、视觉和纯CPU使用。',
+      es: 'Versiones más recientes, mejores modelos, ventanas de contexto, visión y uso solo con CPU.',
+    },
     articleSlugs: [
       'ollama-latest-version',
       'best-ollama-models-right-now',
@@ -45,6 +81,22 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     label: 'C',
     titleEn: 'Tool Comparisons',
     descriptionEn: 'Two-way comparisons: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
+    title: {
+      en: 'Tool Comparisons',
+      de: 'Tool-Vergleiche',
+      fr: 'Comparaisons d\'outils',
+      ja: 'ツール比較',
+      zh: '工具比较',
+      es: 'Comparativas de herramientas',
+    },
+    description: {
+      en: 'Two-way comparisons: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
+      de: 'Zweiseitige Vergleiche: Ollama vs. LM Studio, Jan vs. LM Studio, Qwen vs. DeepSeek.',
+      fr: 'Comparaisons en duo : Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
+      ja: '二者比較：Ollama vs LM Studio、Jan vs LM Studio、Qwen vs DeepSeek。',
+      zh: '双向对比：Ollama vs LM Studio、Jan vs LM Studio、Qwen vs DeepSeek。',
+      es: 'Comparaciones uno a uno: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
+    },
     articleSlugs: [
       'qwen-coder-vs-deepseek-coder',
       'ollama-vs-lm-studio',
@@ -62,6 +114,22 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     label: 'D',
     titleEn: 'Model Comparisons',
     descriptionEn: 'Best 14B models, MoE models, mini PCs, and head-to-head model matchups.',
+    title: {
+      en: 'Model Comparisons',
+      de: 'Modell-Vergleiche',
+      fr: 'Comparaisons de modèles',
+      ja: 'モデル比較',
+      zh: '模型比较',
+      es: 'Comparativas de modelos',
+    },
+    description: {
+      en: 'Best 14B models, MoE models, mini PCs, and head-to-head model matchups.',
+      de: 'Beste 14B-Modelle, MoE-Modelle, Mini-PCs und direkte Modell-Vergleiche.',
+      fr: 'Meilleurs modèles 14B, modèles MoE, mini-PC et confrontations directes entre modèles.',
+      ja: '最高の14Bモデル、MoEモデル、ミニPC、直接対決のモデル比較。',
+      zh: '最佳14B模型、MoE模型、迷你PC及正面对决模型比较。',
+      es: 'Mejores modelos 14B, modelos MoE, mini PCs y comparativas directas entre modelos.',
+    },
     articleSlugs: [
       'qwen-14b-vs-llama-8b',
       'best-14b-models-coding',
@@ -75,6 +143,22 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     label: 'E',
     titleEn: 'Hardware-Specific',
     descriptionEn: 'Hardware picks and buying-guide bites: GPU recommendations by budget, mini-PCs, SSDs, cloud GPUs, and eGPUs.',
+    title: {
+      en: 'Hardware-Specific',
+      de: 'Hardware-Spezifisch',
+      fr: 'Matériel spécifique',
+      ja: 'ハードウェア別',
+      zh: '特定硬件',
+      es: 'Hardware específico',
+    },
+    description: {
+      en: 'Hardware picks and buying-guide bites: GPU recommendations by budget, mini-PCs, SSDs, cloud GPUs, and eGPUs.',
+      de: 'Hardware-Empfehlungen und Kaufleitfäden: GPU-Empfehlungen nach Budget, Mini-PCs, SSDs, Cloud-GPUs und eGPUs.',
+      fr: 'Choix matériels et guides d\'achat : recommandations GPU par budget, mini-PC, SSD, GPU cloud et eGPU.',
+      ja: 'ハードウェアの選び方と購入ガイド：予算別GPU推奨、ミニPC、SSD、クラウドGPU、eGPU。',
+      zh: '硬件选择和购买指南：按预算推荐GPU、迷你PC、SSD、云GPU和eGPU。',
+      es: 'Recomendaciones de hardware y guías de compra: GPUs por presupuesto, mini-PCs, SSDs, GPUs en la nube y eGPUs.',
+    },
     articleSlugs: [
       'best-local-llm-coding-12gb-vram',
       'best-models-amd-5700x-3070ti',
@@ -94,6 +178,22 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     label: 'F',
     titleEn: 'Quick Answers',
     descriptionEn: 'Yes/no and one-number answers: RAM limits, laptop recommendations.',
+    title: {
+      en: 'Quick Answers',
+      de: 'Schnelle Antworten',
+      fr: 'Réponses rapides',
+      ja: 'クイック回答',
+      zh: '快速解答',
+      es: 'Respuestas rápidas',
+    },
+    description: {
+      en: 'Yes/no and one-number answers: RAM limits, laptop recommendations.',
+      de: 'Ja/Nein- und Einzahlungsantworten: RAM-Grenzen, Laptop-Empfehlungen.',
+      fr: 'Réponses oui/non et à un seul chiffre : limites RAM, recommandations d\'ordinateurs portables.',
+      ja: 'はい/いいえと1つの数字の回答：RAMの制限、ノートPC推奨。',
+      zh: '是/否和单数字答案：RAM限制、笔记本推荐。',
+      es: 'Respuestas de sí/no y un solo número: límites de RAM, recomendaciones de laptops.',
+    },
     articleSlugs: [
       'can-you-run-rag-on-2gb-ram',
       'best-local-llm-16gb-ram-laptop',
@@ -105,6 +205,22 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     label: 'G',
     titleEn: 'Prompt Engineering',
     descriptionEn: 'Quick definitions and best-of lists for prompt engineering concepts.',
+    title: {
+      en: 'Prompt Engineering',
+      de: 'Prompt Engineering',
+      fr: 'Prompt Engineering',
+      ja: 'プロンプトエンジニアリング',
+      zh: '提示词工程',
+      es: 'Ingeniería de prompts',
+    },
+    description: {
+      en: 'Quick definitions and best-of lists for prompt engineering concepts.',
+      de: 'Schnelle Definitionen und Bestenlisten für Prompt-Engineering-Konzepte.',
+      fr: 'Définitions rapides et meilleures listes pour les concepts d\'ingénierie de prompt.',
+      ja: 'プロンプトエンジニアリングの概念の簡単な定義とベストリスト。',
+      zh: '提示词工程概念的快速定义和最佳列表。',
+      es: 'Definiciones rápidas y mejores listas para conceptos de ingeniería de prompts.',
+    },
     articleSlugs: [
       'co-star-prompt-framework',
       'best-llm-right-now',
@@ -115,6 +231,22 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
     label: 'H',
     titleEn: 'Privacy & Compliance',
     descriptionEn: 'GDPR compliance, data sovereignty, and privacy-safe local AI deployment.',
+    title: {
+      en: 'Privacy & Compliance',
+      de: 'Datenschutz & Compliance',
+      fr: 'Confidentialité & conformité',
+      ja: 'プライバシーとコンプライアンス',
+      zh: '隐私与合规',
+      es: 'Privacidad y cumplimiento normativo',
+    },
+    description: {
+      en: 'GDPR compliance, data sovereignty, and privacy-safe local AI deployment.',
+      de: 'DSGVO-Konformität, Datensouveränität und datenschutzkonforme lokale KI-Bereitstellung.',
+      fr: 'Conformité RGPD, souveraineté des données et déploiement d\'IA locale respectueux de la vie privée.',
+      ja: 'GDPRへの準拠、データ主権、プライバシーを守るローカルAIの展開。',
+      zh: 'GDPR合规性、数据主权以及隐私安全的本地AI部署。',
+      es: 'Cumplimiento del RGPD, soberanía de datos y despliegue de IA local con privacidad garantizada.',
+    },
     articleSlugs: [
       'is-qwen-gdpr-compliant',
       'is-deepseek-gdpr-safe',
