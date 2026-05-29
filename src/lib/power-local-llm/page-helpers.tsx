@@ -1259,6 +1259,31 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh') {
             </div>
           </div>
 
+          {/* Recently Published — auto-surfaced articles with publishDate within 15 days */}
+          {(() => {
+            const RECENT_HEADING: Record<string, string> = {
+              en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新增',
+            }
+            const recentSlugs = Object.entries(powerLLMContent)
+              .filter(([slug, content]) => isNewArticle(content?.['en']?.publishDate) && isPowerLLMArticlePublished(slug))
+              .map(([slug]) => slug)
+            if (recentSlugs.length === 0) return null
+            return (
+              <section className="mb-16">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+                    {RECENT_HEADING[lang] ?? RECENT_HEADING['en']}
+                  </span>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-5 mt-4">
+                  {recentSlugs.map(slug => (
+                    <PowerArticleCard key={slug} slug={slug} dot="bg-emerald-400" lang={lang} />
+                  ))}
+                </div>
+              </section>
+            )
+          })()}
+
           {/* Themed sections — one per category */}
           {HUB_THEMES.map((theme, idx) => {
             const themeText = lang === 'de' ? HUB_THEME_TEXT_DE[idx] : lang === 'fr' ? HUB_THEME_TEXT_FR[idx] : lang === 'ja' ? HUB_THEME_TEXT_JA[idx] : lang === 'zh' ? HUB_THEME_TEXT_ZH[idx] : theme

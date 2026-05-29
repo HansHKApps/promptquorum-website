@@ -1201,6 +1201,32 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           </figcaption>
         </figure>
 
+        {/* Recently Published — auto-surfaced articles with publishDate within 15 days */}
+        {(() => {
+          const RECENT_HEADING: Record<string, string> = {
+            en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新增',
+          }
+          const recentSlugs = Object.entries(LLM_SLUG_TO_KEY)
+            .filter(([, key]) => isNewArticle(llmContent[key]?.en?.publishDate))
+            .map(([slug]) => slug)
+          if (recentSlugs.length === 0) return null
+          const dotColor = 'bg-emerald-400'
+          return (
+            <section className="mb-16">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+                  {RECENT_HEADING[lang] ?? RECENT_HEADING['en']}
+                </span>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-5 mt-4">
+                {recentSlugs.map(slug => (
+                  <ArticleCard key={slug} articleKey={slug} dot={dotColor} lang={lang} />
+                ))}
+              </div>
+            </section>
+          )
+        })()}
+
         {/* Theme sections */}
         {llmThemes.map(theme => (
           <ThemeSection key={theme.id} theme={theme} lang={lang} />

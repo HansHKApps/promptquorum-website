@@ -107,7 +107,7 @@ export const article: Record<Language, PEArticle> = {
         content: [
           '**Use Git tags to mark production versions of prompts: tag `prompt/ticket-triage/v2` when that version is deployed to production.** This makes rollback deterministic — revert to the tagged commit, not to an ambiguous "last stable" state.',
           'For concurrent edits, follow the same branching strategy as code: create a feature branch (`prompt/ticket-triage-intent-detection`), open a pull request, get a review, then merge. Never edit prompts directly on `main`. Branch protection rules on `main` enforce this at the infrastructure level.',
-          'PromptHub provides a structured review workflow for teams that want comment threads, approval checkboxes, and role-based access without managing Git branches manually. Both tools are compatible: store raw prompt files in Git and use PromptHub for the review UI on top.',
+          'PromptHub provides a structured review workflow for teams that want comment threads, approval checkboxes, and role-based access without managing Git branches manually. Both tools are compatible: store raw prompt files in Git and use PromptHub for the review UI on top. Before merging a new prompt version, [PromptQuorum](/features) validates it across 25+ models simultaneously — confirming the change works beyond the single model your team primarily tests against.',
         ],
       },
       access_control: {

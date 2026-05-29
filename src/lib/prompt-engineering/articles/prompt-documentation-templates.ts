@@ -115,6 +115,7 @@ export const article: Record<Language, PEArticle> = {
           'PromptHub: purpose-built prompt management with version history, reviewer signatures, and test result storage. $0–$49/month. Best for teams with 3+ people writing prompts.',
           'Notion: works for teams managing prompts as documents rather than code. Easy to set up. Lacks version control and test integration — treat as a documentation layer, not a source of truth.',
           'Braintrust: stores test suite headers and evaluation results alongside prompt versions. Best for teams running regular automated evaluations.',
+          'PromptQuorum: [prompt optimization platform](/features) for dispatching documented prompts to 25+ AI providers simultaneously. Use to validate that documented prompts generalize across models before committing a version. Free tier.',
         ],
         callouts: [
           { type: 'tip', label: 'Co-locate documentation', text: 'Documentation stored in a separate system (Notion, Confluence, Google Docs) from the prompt will go stale within days. The only documentation that stays current is documentation that lives with the prompt.' },
