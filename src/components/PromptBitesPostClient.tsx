@@ -25,6 +25,7 @@ const BREADCRUMB_LABELS: Partial<Record<Language, Record<string, string>>> = {
   fr: { home: 'Accueil', hub: 'Prompt Bites' },
   ja: { home: 'ホーム', hub: 'Prompt Bites' },
   zh: { home: '主页', hub: 'Prompt Bites' },
+  es: { home: 'Inicio', hub: 'Prompt Bites' },
 }
 
 const BACK_LABEL: Partial<Record<Language, string>> = {
@@ -33,6 +34,7 @@ const BACK_LABEL: Partial<Record<Language, string>> = {
   fr: '← Retour aux Prompt Bites',
   ja: '← Prompt Bites に戻る',
   zh: '← 返回 Prompt Bites',
+  es: '← Volver a Prompt Bites',
 }
 
 const QUICK_ANSWER_LABEL: Partial<Record<Language, string>> = {
@@ -41,6 +43,7 @@ const QUICK_ANSWER_LABEL: Partial<Record<Language, string>> = {
   fr: 'Réponse rapide',
   ja: 'クイック回答',
   zh: '快速回答',
+  es: 'Respuesta rápida',
 }
 
 const UPDATED_LABEL: Partial<Record<Language, string>> = {
@@ -49,6 +52,7 @@ const UPDATED_LABEL: Partial<Record<Language, string>> = {
   fr: 'Mis à jour :',
   ja: '更新:',
   zh: '更新于:',
+  es: 'Actualizado:',
 }
 
 const KEY_TAKEAWAYS_LABEL: Partial<Record<Language, string>> = {
@@ -57,6 +61,7 @@ const KEY_TAKEAWAYS_LABEL: Partial<Record<Language, string>> = {
   fr: 'Points clés',
   ja: '重要なポイント',
   zh: '关键要点',
+  es: 'Puntos clave',
 }
 
 const GO_DEEPER_HEADING: Partial<Record<Language, string>> = {
@@ -65,6 +70,7 @@ const GO_DEEPER_HEADING: Partial<Record<Language, string>> = {
   fr: 'Vous voulez les détails complets ?',
   ja: '詳しく読みたいですか？',
   zh: '想了解完整详情？',
+  es: '¿Quieres el desglose completo?',
 }
 
 const READ_FULL_GUIDE: Partial<Record<Language, string>> = {
@@ -73,6 +79,7 @@ const READ_FULL_GUIDE: Partial<Record<Language, string>> = {
   fr: 'Lire le guide complet →',
   ja: 'コンプリートガイドを読む →',
   zh: '阅读完整指南 →',
+  es: 'Leer la guía completa →',
 }
 
 const RELATED_BITES_LABEL: Partial<Record<Language, string>> = {
@@ -81,12 +88,13 @@ const RELATED_BITES_LABEL: Partial<Record<Language, string>> = {
   fr: 'Prompt Bites associés',
   ja: '関連する Prompt Bites',
   zh: '相关 Prompt Bites',
+  es: 'Prompt Bites relacionados',
 }
 
 const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
-  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级' },
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级' },
-  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级' },
+  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio' },
+  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado' },
 }
 
 function GoDeeper({ parentArticle, siblingBites, lang }: {

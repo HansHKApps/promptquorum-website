@@ -917,6 +917,484 @@ tests:
       ],
     },
   },
+  es: {
+    theme: 'Tools & Platforms',
+    title: 'Mejores herramientas de optimización de prompts para equipos',
+    seoTitle: 'Mejores herramientas de optimización de prompts para equipos 2026: clasificadas y comparadas',
+    intro: '**La optimización de prompts para equipos requiere cuatro capacidades: almacenamiento versionado, testing A/B de variantes, puntuación del output y revisión colaborativa. Ninguna herramienta única cubre las cuatro. Esta guía clasifica siete herramientas especializadas — más PromptQuorum para comparación multi-modelo — por tipo de equipo, precios y ajuste al flujo de trabajo.**',
+    metaDescription: 'Ninguna herramienta única cubre versionado, A/B testing, scoring y revisión. Braintrust lidera en eval ($500/mes), Vellum lidera en A/B de producción, Promptfoo es gratis CI/CD, DSPy auto-optimiza desde ejemplos. Recomendaciones de stack por tamaño de equipo.',
+    ogTitle: '¿Tu equipo gasta 5+ horas/semana ajustando prompts? Estas herramientas lo resuelven',
+    ogDescription: 'Vellum reduce el A/B testing a menos de 1 hora. DSPy auto-optimiza desde 20 ejemplos. Promptfoo es gratis. ¿Qué stack encaja con tu equipo?',
+    twitterTitle: 'Herramientas de optimización de prompts para equipos 2026: 6 comparadas',
+    twitterDescription: 'La mayoría de equipos necesita exactamente 2 herramientas — una para eval, otra para despliegue. Comprar las 5 desperdicia $1.000+/mes. Matriz de decisión por tipo de equipo incluida.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-04-29',
+    readTime: '10 min de lectura',
+    educationalLevel: 'Intermediate',
+    audience: 'Engineering managers e ingenieros de prompts que construyen flujos de trabajo LLM con múltiples personas',
+    primaryTerm: 'Herramientas de optimización de prompts para equipos',
+    aboutTopics: ['Optimización de prompts', 'Colaboración en equipo', 'Evaluación de LLM'],
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-10',
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: '¿Qué es la optimización de prompts para equipos?', anchor: '#what-is-prompt-optimization' },
+      { label: 'Cómo evaluamos estas herramientas', anchor: '#evaluation-criteria' },
+      { label: 'Braintrust: Colaboración centrada en la evaluación', anchor: '#braintrust' },
+      { label: 'DSPy: Programación automatizada de prompts', anchor: '#dspy' },
+      { label: 'PromptPerfect: Optimización basada en UI', anchor: '#promptperfect' },
+      { label: 'Vellum: A/B testing en producción', anchor: '#vellum' },
+      { label: 'Promptfoo: Testing CI/CD open-source', anchor: '#promptfoo' },
+      { label: 'Helicone: Observabilidad + experimentos', anchor: '#helicone' },
+      { label: 'PromptQuorum: Despacho multi-modelo para comparación', anchor: '#promptquorum' },
+      { label: 'Tabla comparativa lado a lado', anchor: '#comparison-table' },
+      { label: '¿Qué herramienta para qué equipo?', anchor: '#which-tool' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Cómo elegir un stack de optimización de prompts', anchor: '#how-to-choose' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+      { label: 'Fuentes', anchor: '#sources' },
+    ],
+    sections: {
+      keyTakeaways: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'La optimización de prompts para equipos requiere cuatro capacidades: almacenamiento versionado, testing A/B de variantes, puntuación del output y revisión colaborativa — ninguna herramienta única cubre las cuatro.',
+          'Braintrust lidera para equipos orientados a eval; Vellum lidera para A/B testing en producción; DSPy lidera para optimización automatizada; Promptfoo lidera para integración CI/CD.',
+          'Las opciones open-source (DSPy, Promptfoo) son gratuitas pero requieren configuración técnica — espera 1–2 días de configuración antes de la adopción por el equipo.',
+          'Los equipos que dedican más de 5 horas/semana ajustando prompts manualmente deberían adoptar A/B testing sistemático; el módulo de experimentos de Vellum o Promptfoo lo reduce a menos de 1 hora.',
+          'PromptQuorum: Despacho multi-modelo — compara cómo funciona el mismo prompt en 25+ modelos antes de optimizar para un proveedor específico.',
+          'Evita la trampa de la herramienta única: la mayoría de equipos necesita 2 herramientas — una para evaluación (Braintrust o Promptfoo) y otra para despliegue/versionado (Vellum o PromptHub).',
+          'Los precios van desde gratis (DSPy, Promptfoo) hasta $200–600/mes (Vellum, Braintrust) — el tamaño del equipo y el volumen de llamadas a API son los principales impulsores de coste.',
+        ],
+      },
+      whatIsPromptOptimization: {
+        id: 'what-is-prompt-optimization',
+        title: '¿Qué es la optimización de prompts para equipos?',
+        content: [
+          '**La optimización de prompts es el proceso sistemático de mejorar los prompts de IA mediante iteración estructurada, testing de variantes y medición del output — distinto de la escritura puntual de prompts.** Cuando un ingeniero ajusta un prompt y lo comparte verbalmente, las mejoras no son reproducibles ni comparables. Cuando un equipo adopta la optimización sistemática, todos los ingenieros editan la misma biblioteca de prompts, comparan variantes contra el mismo dataset de test y rastrean qué cambios mejoran realmente la calidad.',
+          'Lo que hace que la optimización en equipo sea diferente del trabajo individual: bibliotecas de prompts compartidas que múltiples ingenieros editan simultáneamente, flujos de revisión que evitan cambios no autorizados en los prompts de producción, experimentos A/B que miden el impacto en el mundo real y trazas de auditoría para cumplimiento. El ajuste individual de prompts es rápido pero frágil; la optimización en equipo es más lenta de configurar pero escala.',
+          'Esta guía distingue la optimización de prompts (hacer prompts mejores) de la gestión de prompts (organizar y desplegar) y de la evaluación de prompts (medir calidad). La mayoría de equipos necesita herramientas para las tres categorías. Para comparación multi-modelo durante la optimización, [PromptQuorum](/features) despacha un prompt a 25+ proveedores de IA simultáneamente — útil para equipos que validan si los cambios de prompt se generalizan entre modelos.',
+          'Para una comparación más amplia de todas las herramientas de prompt engineering (no solo las orientadas a optimización), consulta [Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso](/prompt-engineering/best-prompt-engineering-tools-2026?lang=es).',
+        ],
+      },
+      evaluationCriteria: {
+        id: 'evaluation-criteria',
+        title: 'Cómo evaluamos estas herramientas',
+        content: [
+          '**Evaluamos seis herramientas según cinco criterios: características de colaboración en equipo, capacidad de A/B testing, soporte de evaluación/scoring, integración CI/CD y transparencia de precios.** Cada criterio refleja un cuello de botella real en los flujos de trabajo de prompts en equipo.',
+        ],
+        columns: ['Criterio', 'Por qué importa para equipos', 'Mínimo aceptable'],
+        rows: [
+          {
+            Criterio: 'Colaboración en equipo',
+            'Por qué importa para equipos': 'Múltiples ingenieros editan prompts sin sobreescribirse',
+            'Mínimo aceptable': 'Control de acceso por roles O ramificación/versionado',
+          },
+          {
+            Criterio: 'Testing A/B de variantes',
+            'Por qué importa para equipos': 'Comparar variantes de prompts en el mismo conjunto de entradas',
+            'Mínimo aceptable': 'Comparación de outputs lado a lado con scoring',
+          },
+          {
+            Criterio: 'Soporte de evaluación',
+            'Por qué importa para equipos': 'Medir la calidad del output, no solo mirarlo',
+            'Mínimo aceptable': 'Métricas personalizadas, no solo revisión manual',
+          },
+          {
+            Criterio: 'Integración CI/CD',
+            'Por qué importa para equipos': 'Detectar regresiones de prompts antes del despliegue',
+            'Mínimo aceptable': 'CLI o API que se ejecuta en un pipeline',
+          },
+          {
+            Criterio: 'Transparencia de precios',
+            'Por qué importa para equipos': 'Previsibilidad presupuestaria para equipos de 3–10 personas',
+            'Mínimo aceptable': 'Página de precios pública; no solo "contactar con ventas"',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: colaboración centrada en la evaluación',
+        content: [
+          '**Braintrust es una plataforma de evaluación de IA que permite a los equipos puntuar outputs de LLM según métricas personalizadas, registrar todas las llamadas en producción y compartir resultados de experimentos — ideal para equipos que miden la calidad del output de forma sistemática.** Braintrust no es un constructor de prompts ni un sistema de control de versiones; es un laboratorio compartido donde los equipos diseñan funciones de scoring personalizadas, registran cada llamada a la API y ejecutan experimentos.',
+          'El plan Team cuesta ~$500/mes. El proxy de logging soporta las APIs de OpenAI, Anthropic y Google sin cambios de código. Las funciones de scoring se escriben en TypeScript o Python. La integración con GitHub permite versionar prompts junto al código. La contrapartida: requiere experiencia técnica para configurar y mantener el scoring personalizado.',
+          'Las características para equipos incluyen dashboards de experimentos compartidos (todos los miembros ven los mismos resultados de eval en tiempo real), control de acceso por roles (admin/miembro/observador), historial de commits tipo Git para versiones de prompts y logging en producción (cada llamada a la API registrada con entradas, salidas y puntuaciones).',
+        ],
+        items: [
+          'Dashboards de experimentos compartidos: todos los miembros del equipo ven los resultados de eval en tiempo real',
+          'Control de acceso por roles: roles admin/miembro/observador',
+          'Versionado de prompts mediante historial de commits tipo Git',
+          'Logging en producción: cada llamada a la API registrada con entradas/salidas/puntuaciones',
+        ],
+      },
+      dspy: {
+        id: 'dspy',
+        title: 'DSPy: programación automatizada de prompts',
+        content: [
+          '**DSPy (Stanford NLP Group, 2023) reemplaza los prompts escritos a mano con módulos aprendibles que optimizan automáticamente las instrucciones usando un conjunto de entrenamiento de ejemplos de entrada/salida — ideal para equipos técnicos cómodos con Python.** DSPy es open-source (Apache 2.0) y gratuito. En lugar de escribir un prompt manualmente, defines una tarea en DSPy y aprende instrucciones óptimas a partir de ejemplos.',
+          'Requiere Python 3.9+. Funciona con cualquier LLM vía el backend LiteLLM. Un conjunto de entrenamiento de 20–50 ejemplos etiquetados suele ser suficiente para la optimización. El optimizador BootstrapFewShot es el más amigable para equipos (sin GPU requerida, sin matemáticas complejas). Amigable para equipos mediante flujos de trabajo estándar de Git — sin dependencia de SaaS, sin facturas mensuales. La contrapartida: sin interfaz; requiere configuración técnica (1–2 días antes de la adopción por el equipo).',
+          'Ideal para equipos de investigación y ML que tienen un dataset etiquetado y quieren optimización de prompts reproducible y controlada por versiones.',
+        ],
+      },
+      promptperfect: {
+        id: 'promptperfect',
+        title: 'PromptPerfect: optimización basada en UI',
+        content: [
+          '**PromptPerfect es un optimizador de prompts SaaS con interfaz visual — los equipos pegan un prompt, seleccionan un modelo y reciben variantes optimizadas con puntuaciones de calidad, sin escribir código.** Diseñado para usuarios no técnicos (equipos de contenido, marketing, producto) que necesitan mejoras de prompts sin aprender DSPy ni herramientas técnicas.',
+          'Plan Starter $9.99/mes; Plan Team ~$49.99/mes (hasta 5 usuarios). Soporta GPT-4o, Claude, Gemini, Stable Diffusion. La UI devuelve prompts optimizados + explicaciones en lenguaje natural de los cambios. Ideal para equipos donde la mayoría de miembros no son ingenieros. La contrapartida: menos control que DSPy; sin integración CI/CD; limitado a estrategias de optimización predefinidas.',
+        ],
+        items: [
+          'UI sin código: pega el prompt, selecciona el modelo, recibe la variante optimizada',
+          'Explicación de cambios: justificación en lenguaje natural de cada optimización',
+          'Soporte multi-modelo: GPT-4o, Claude, Gemini, Stable Diffusion',
+        ],
+      },
+      vellum: {
+        id: 'vellum',
+        title: 'Vellum: A/B testing en producción',
+        content: [
+          '**Vellum es una plataforma de despliegue de prompts con A/B testing integrado que enruta el tráfico de producción entre variantes de prompts y mide la calidad del output en el mundo real — ideal para equipos que ejecutan features LLM en producción.** Vellum no es solo una herramienta de testing; es un plano de control de producción que divide el tráfico real de usuarios entre variantes de prompts y mide el rendimiento.',
+          'Starter $200/mes; Growth $500/mes; Enterprise personalizado. El A/B testing divide el tráfico por porcentaje entre variantes de prompts. La evaluación compara variantes en tu dataset de test. Características para equipos: workspace compartido, revisiones de prompts estilo PR, flujos de aprobación de despliegue. La contrapartida: la opción más cara; exagerada para equipos pre-producción que aún no manejan tráfico real.',
+          'Ideal para equipos de producto con features LLM en vivo que quieren comparar variantes en tráfico real de usuarios sin gestionar despliegues separados.',
+        ],
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: testing CI/CD open-source',
+        content: [
+          '**Promptfoo es una herramienta CLI open-source que ejecuta suites de test de prompts automatizadas contra múltiples modelos — los equipos la integran en pipelines CI/CD para detectar regresiones de prompts antes del despliegue.** Define los casos de test de prompts en YAML, haz commit a Git y Promptfoo los ejecuta en cada PR contra todos los modelos configurados.',
+          'Gratuito (licencia MIT). CLI-first, configuración basada en YAML. Ejecuta suites de test de prompts: proporcionas entradas, patrones de output esperado y aserciones personalizadas basadas en LLM (p.ej. "La respuesta debe contener 3 puntos"). Soporta 40+ proveedores LLM. Integración con GitHub Actions disponible. Amigable para equipos: configuraciones de test en Git, ejecutadas en CI, sin cuenta necesaria. La contrapartida: sin interfaz; solo para ingenieros.',
+        ],
+        codeBlock: `prompts:
+  - "Summarize this in 3 bullet points: {{text}}"
+providers:
+  - openai:gpt-4-turbo
+  - anthropic:claude-opus-4.1
+tests:
+  - vars:
+      text: "Long document text here"
+    assert:
+      - type: contains
+        value: "•"
+      - type: llm-rubric
+        value: "Response has exactly 3 bullet points"`,
+        codeLanguage: 'yaml',
+      },
+      helicone: {
+        id: 'helicone',
+        title: 'Helicone: observabilidad + experimentos',
+        content: [
+          '**Helicone es una plataforma de observabilidad LLM que registra todas las llamadas a la API, rastrea coste/latencia por prompt y soporta experimentos A/B — ideal para equipos que necesitan visibilidad de costes en tiempo real junto al monitoreo de calidad.** Helicone no es un constructor de prompts; es un proxy que se sitúa entre tu app y la API del LLM, registrando cada llamada.',
+          'Tier gratuito (100k peticiones/mes); Pro $20/mes; Growth $200/mes. Integración de una línea: cambia `baseURL` en el cliente OpenAI para apuntar a Helicone. Las propiedades personalizadas etiquetan peticiones por versión de prompt, usuario o feature. El módulo de experimentos compara variantes de prompts en tráfico de producción. El dashboard compartido del equipo muestra gasto, errores, latencia y resultados de experimentos. Ideal para startups y equipos conscientes del coste.',
+        ],
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum: despacho multi-modelo para comparación',
+        content: [
+          '**PromptQuorum despacha un prompt a 25+ modelos de IA simultáneamente y devuelve outputs lado a lado — la forma más rápida de comparar cómo funciona una variante de prompt en GPT-4o, Claude, Gemini y LLMs locales antes de comprometerte con un modelo o una versión.** A diferencia de las herramientas de evaluación anteriores (que testean un modelo a la vez), PromptQuorum responde a "¿qué modelo maneja mejor este prompt?" en una sola ejecución.',
+          'Usa PromptQuorum como primer paso antes de enrutar a Braintrust para evaluación más profunda o a Vellum para A/B testing en producción. Tier gratuito disponible — no se requiere configuración técnica. Soporta 25+ modelos incluyendo LLMs locales vía Ollama y LM Studio. Frameworks de prompts integrados con soporte de plantillas. Comparación de respuestas lado a lado con scoring por consenso.',
+          'Ideal para equipos que evalúan si optimizar para un proveedor de modelo específico, o equipos que quieren comparar el mismo prompt en múltiples opciones de LLM simultáneamente.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Tabla comparativa lado a lado',
+        content: [
+          '**Ninguna herramienta destaca en los cinco criterios. Braintrust lidera en profundidad de evaluación; Vellum lidera en A/B testing en producción; Promptfoo lidera en integración CI/CD; DSPy lidera en optimización automatizada.**',
+        ],
+        columns: ['Herramienta', 'A/B Testing', 'Colaboración', 'CI/CD', 'Precios', 'Ideal para'],
+        rows: [
+          {
+            Herramienta: 'Braintrust',
+            'A/B Testing': '✅ Experimentos',
+            Colaboración: '✅ Roles + dashboards',
+            'CI/CD': '✓ API',
+            Precios: '~$500/mes',
+            'Ideal para': 'Equipos orientados a eval',
+          },
+          {
+            Herramienta: 'DSPy',
+            'A/B Testing': '✅ Automatizado',
+            Colaboración: 'Basado en Git',
+            'CI/CD': '✅ Nativo',
+            Precios: 'Gratis',
+            'Ideal para': 'Equipos muy técnicos',
+          },
+          {
+            Herramienta: 'PromptPerfect',
+            'A/B Testing': '⚠️ Solo variantes',
+            Colaboración: '✓ Plan Team',
+            'CI/CD': '✗ Ninguna',
+            Precios: '$50/mes',
+            'Ideal para': 'Usuarios no técnicos',
+          },
+          {
+            Herramienta: 'Vellum',
+            'A/B Testing': '✅ División de tráfico',
+            Colaboración: '✅ Revisiones PR',
+            'CI/CD': '✓ Webhooks',
+            Precios: '$200–500/mes',
+            'Ideal para': 'Despliegues en producción',
+          },
+          {
+            Herramienta: 'Promptfoo',
+            'A/B Testing': '✅ Multi-modelo',
+            Colaboración: 'Basado en Git',
+            'CI/CD': '✅ GitHub Actions',
+            Precios: 'Gratis',
+            'Ideal para': 'Equipos centrados en CI/CD',
+          },
+          {
+            Herramienta: 'Helicone',
+            'A/B Testing': '✓ Experimentos',
+            Colaboración: '✅ Dashboard compartido',
+            'CI/CD': '✓ API',
+            Precios: 'Gratis–$200/mes',
+            'Ideal para': 'Equipos conscientes del coste',
+          },
+          {
+            Herramienta: 'PromptQuorum',
+            'A/B Testing': '✅ Multi-modelo',
+            Colaboración: '✓ Workspace compartido',
+            'CI/CD': '✗ Sin CI/CD',
+            Precios: 'Gratis + créditos',
+            'Ideal para': 'Comparación multi-modelo',
+          },
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: '¿Qué herramienta para qué equipo?',
+        content: [
+          '**Ajusta la herramienta al cuello de botella del equipo: calidad de evaluación → Braintrust; optimización automatizada → DSPy; A/B testing en producción → Vellum; prevención de regresiones CI/CD → Promptfoo; monitorización de costes + experimentos → Helicone; comparación multi-modelo → PromptQuorum.**',
+        ],
+        numberedItems: [
+          {
+            title: 'Equipos de investigación/ML → DSPy',
+            whyItMatters:
+              'Optimización automatizada sobre un dataset etiquetado; flujo de trabajo nativo de Git; sin dependencia de SaaS.',
+          },
+          {
+            title: 'Equipos de producto + ingeniería → Vellum',
+            whyItMatters:
+              'División de tráfico en producción, flujos de aprobación, UI no técnica para revisión de PM.',
+          },
+          {
+            title: 'Equipos de contenido/marketing → PromptPerfect',
+            whyItMatters:
+              'UI sin código, prompts optimizados compartibles, soporte multi-modelo.',
+          },
+          {
+            title: 'Equipos DevOps/plataforma → Promptfoo',
+            whyItMatters:
+              'Suites de test en YAML, GitHub Actions, detecta regresiones en CI.',
+          },
+          {
+            title: 'Startups monitorizando gasto → Helicone',
+            whyItMatters:
+              'El tier gratuito maneja 100k peticiones/mes; visibilidad de coste por prompt desde el día 1.',
+          },
+          {
+            title: 'Todos los equipos (primer paso) → PromptQuorum',
+            whyItMatters:
+              'Compara el rendimiento del modelo en tu prompt específico antes de invertir en herramientas de optimización específicas para un modelo.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        mistakes: [
+          {
+            mistake: 'Tratar la optimización como una tarea puntual',
+            problem: 'Los prompts se degradan a medida que los modelos se actualizan y ocurre la deriva de datos.',
+            fix: 'Programa re-evaluaciones mensuales usando el mismo dataset de test. La configuración YAML de Promptfoo hace esto reproducible.',
+          },
+          {
+            mistake: 'Comprar una herramienta SaaS antes de construir un dataset de evaluación',
+            problem: 'Sin 20–50 ejemplos etiquetados de entrada/salida, no puedes medir si un nuevo prompt es realmente mejor.',
+            fix: 'Construye el dataset de evaluación primero. Es la base de todo el trabajo de optimización.',
+          },
+          {
+            mistake: 'Usar un único modelo como juez',
+            problem:
+              'Evaluar outputs de GPT-4o con GPT-4o como modelo de scoring infla las puntuaciones un 10–20% (sesgo model-as-judge).',
+            fix: 'Usa un modelo diferente para el scoring, o usa evaluación humana para el ground truth.',
+          },
+          {
+            mistake: 'Ignorar el coste de tokens al comparar variantes',
+            problem:
+              'Un prompt que puntúa 5% mejor pero usa 40% más tokens puede costar más de lo que ahorra.',
+            fix: 'Rastrea tanto la calidad como el coste por output usando Helicone o el tracking de coste de Braintrust.',
+          },
+          {
+            mistake: 'Adoptar una herramienta antes de acordar las métricas de calidad',
+            problem:
+              'Los equipos que compran Vellum o Braintrust sin definir "buen output" pasan su primer mes discutiendo sobre puntuaciones, no optimizando.',
+            fix: 'Define 3–5 criterios de calidad específicos antes de incorporar cualquier herramienta.',
+          },
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: 'Cómo elegir un stack de optimización de prompts',
+        numberedItems: [
+          'Define tu cuello de botella principal: ¿es la calidad del output, el coste, la latencia o la velocidad del equipo?',
+          'Evalúa la profundidad técnica: equipo solo de ingenieros → DSPy o Promptfoo; equipo mixto → Vellum o Braintrust.',
+          'Construye un dataset de evaluación etiquetado (20–50 pares entrada/salida) antes de evaluar cualquier herramienta.',
+          'Empieza con una herramienta gratuita (Promptfoo o Helicone) para establecer métricas de línea base.',
+          'Ejecuta una prueba de 2 semanas con los prompts reales del equipo antes de pagar por una plataforma SaaS.',
+          'Planea para dos herramientas: una para evaluación (Braintrust, Promptfoo) + una para despliegue/versionado (Vellum, PromptHub).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Qué es la optimización de prompts para equipos?',
+            a: 'La optimización de prompts para equipos es la práctica de mejorar sistemáticamente los prompts LLM mediante A/B testing estructurado, scoring de output y revisión colaborativa. A diferencia de la escritura solo de prompts, la optimización en equipo requiere herramientas compartidas con versionado, acceso por roles y suites de test reproducibles.',
+          },
+          {
+            q: '¿Cuál es la diferencia entre optimización y gestión de prompts?',
+            a: 'La gestión de prompts cubre el almacenamiento, versionado y despliegue de prompts (PromptHub, Vellum). La optimización de prompts mejora activamente la calidad de los prompts mediante testing de variantes y scoring. La mayoría de equipos necesita ambas: gestión para organizar prompts, optimización para mejorarlos con el tiempo.',
+          },
+          {
+            q: '¿Vale la pena aprender DSPy para un equipo de 3 personas?',
+            a: 'Sí, si al menos una persona se maneja bien con Python. DSPy automatiza el proceso de prueba y error de la escritura de prompts usando un dataset etiquetado, reduciendo típicamente el tiempo de iteración manual en un 50–70%. Para equipos no técnicos, PromptPerfect ofrece mejora automatizada similar sin código.',
+          },
+          {
+            q: '¿Cuánto cuesta un stack de optimización de prompts para un equipo de 5 personas?',
+            a: 'Presupuesta $0–$700/mes según la selección de herramientas. Los stacks gratuitos (DSPy + Promptfoo + tier gratuito de Helicone) cubren la mayoría de casos de uso. Los stacks SaaS con Vellum o Braintrust cuestan $200–700/mes. El coste escala con el volumen de llamadas a la API y el tamaño del equipo.',
+          },
+          {
+            q: '¿Cómo mido si un prompt es realmente mejor?',
+            a: 'Define 3–5 criterios de calidad específicos para tu tarea (precisión, cumplimiento de formato, tono, longitud). Construye un dataset de test de 20–50 ejemplos de entrada/salida. Usa un LLM-as-judge (con un modelo diferente al que se evalúa) o revisión humana para puntuar los outputs. Tanto Braintrust como Promptfoo soportan funciones de scoring personalizadas.',
+          },
+          {
+            q: '¿Puede Promptfoo reemplazar a Braintrust?',
+            a: 'Promptfoo (open-source, CLI) maneja bien la ejecución de suites de test automatizadas y la integración CI/CD. Braintrust añade una interfaz compartida, logging en producción y dashboards de equipo. La mayoría de equipos de ingeniería empieza con Promptfoo (gratis) y avanza a Braintrust cuando necesitan visibilidad de resultados de eval para todo el equipo.',
+          },
+          {
+            q: '¿Helicone funciona con todos los proveedores LLM?',
+            a: 'Helicone soporta OpenAI, Anthropic (Claude), Groq, Mistral, Gemini, Azure OpenAI y cualquier endpoint compatible con OpenAI. La integración solo requiere un cambio de URL en el cliente API — sin dependencia de SDK.',
+          },
+          {
+            q: '¿Cuándo debería un equipo usar Vellum en lugar de Promptfoo?',
+            a: 'Usa Vellum cuando necesites división de tráfico en producción (A/B testing con usuarios reales), miembros del equipo no técnicos gestionando prompts vía UI, o flujos de aprobación estilo PR antes del despliegue de prompts. Usa Promptfoo cuando necesites integración CI/CD y tu equipo se sienta cómodo con YAML y herramientas CLI.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        items: [
+          {
+            title: 'Fundamentos de la optimización de prompts: una guía práctica',
+            url: '/prompt-engineering/fundamentals-of-prompt-optimization?lang=es',
+          },
+          {
+            title: 'Cómo evaluar la calidad de prompts: métricas y métodos',
+            url: '/prompt-engineering/how-to-evaluate-prompt-quality?lang=es',
+          },
+          {
+            title: 'Optimización manual vs automatizada de prompts: cuándo usar cada una',
+            url: '/prompt-engineering/manual-vs-automated-prompt-optimization?lang=es',
+          },
+          {
+            title: 'Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso',
+            url: '/prompt-engineering/best-prompt-engineering-tools-2026?lang=es',
+          },
+          {
+            title: 'Mejores plataformas de gestión de prompts 2026',
+            url: '/prompt-engineering/best-prompt-management-platforms?lang=es',
+          },
+          {
+            title: 'Cómo testear prompts entre modelos',
+            url: '/prompt-engineering/how-to-test-prompts-across-models?lang=es',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        content: [
+          'Última verificación de hechos: 2026-04-29 — todos los precios, características e integraciones verificados contra documentación oficial.'
+        ],
+        items: [
+          '[Khattab et al., 2023. "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — artículo fundacional de DSPy; base para las afirmaciones sobre capacidad de optimización automatizada de prompts.',
+          '[Zheng et al., 2023. "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — hallazgos de sesgo model-as-judge; base para la afirmación de inflación del 10–20% en Errores comunes.',
+          '[Página de precios de Braintrust — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — base para la afirmación del tier Team de Braintrust a $500/mes.',
+          '[Repositorio GitHub de Promptfoo — github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — framework de testing de prompts CI/CD open-source; base para afirmaciones de características de Promptfoo.',
+          '[Plataforma Vellum — vellum.ai](https://www.vellum.ai/) — plataforma de despliegue en producción; base para afirmaciones de A/B testing y flujos de aprobación.',
+          '[Documentación de Helicone — docs.helicone.ai](https://docs.helicone.ai/) — plataforma de observabilidad; base para afirmaciones de integración proxy y características de experimentos.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Mejores herramientas de optimización de prompts para equipos 2026',
+      description:
+        'Seis herramientas para optimización de prompts a escala de equipo: comparadas por A/B testing, características de colaboración, integración CI/CD y precios.',
+      url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-04-10',
+      dateModified: '2026-04-29',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        url: 'https://www.promptquorum.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: 'Optimización de Prompts' },
+        { '@type': 'Thing', name: 'Evaluación de LLM' },
+        { '@type': 'Thing', name: 'Colaboración en Equipo' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'DSPy' },
+        { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
+        { '@type': 'SoftwareApplication', name: 'Vellum' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+        { '@type': 'SoftwareApplication', name: 'Helicone' },
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+      ],
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams?lang=es',
+        width: 1200,
+        height: 630,
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'es',
+      name: 'Mejores herramientas de optimización de prompts para equipos 2026',
+      numberOfItems: 7,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Plataforma de evaluación con dashboards compartidos, scoring personalizado y logging en producción para equipos de ingeniería.' },
+        { '@type': 'ListItem', position: 2, name: 'DSPy', description: 'Framework open-source de programación automatizada de prompts; reemplaza la escritura manual de prompts con módulos aprendibles.' },
+        { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: 'Optimizador basado en UI sin código; ideal para miembros del equipo no técnicos.' },
+        { '@type': 'ListItem', position: 4, name: 'Vellum', description: 'Plataforma de A/B testing en producción con división de tráfico y flujos de aprobación estilo PR.' },
+        { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'Herramienta CLI open-source para testing de regresión de prompts en CI/CD.' },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: 'Plataforma de observabilidad LLM con seguimiento de costes y soporte de experimentos A/B.' },
+        { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: 'Plataforma de despacho multi-modelo; compara el mismo prompt en 25+ modelos simultáneamente antes de elegir una estrategia de optimización.' },
+      ],
+    },
+  },
   fr: {
     theme: 'Outils & Plateformes',
     title: 'Meilleures outils d\'optimisation d\'invites pour les équipes',

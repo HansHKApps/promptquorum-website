@@ -399,6 +399,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Mejor LLM local para 6 GB de VRAM?',
+        answer: 'Con 6 GB de VRAM, Llama 3 8B Q4_K_M es la mejor opción con ~5,5 GB, con excelentes capacidades de chat y programación a ~20 tok/s. Phi-4 Q4_K_M y Mistral 7B Q4_K_S son alternativas sólidas.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: mejor opción general para 6 GB (5,5 GB VRAM)',
+          'Phi-4 Q4_K_M: mejor para seguimiento de instrucciones',
+          'Mistral 7B Q4_K_S: el más rápido en 6 GB',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

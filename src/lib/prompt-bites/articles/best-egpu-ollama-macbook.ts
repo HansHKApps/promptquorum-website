@@ -622,4 +622,128 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Hardware-Specific',
+    title: '¿Mejor eGPU para Ollama en un MacBook en 2026?',
+    seoTitle: 'eGPU para Ollama en MacBook 2026 | Prompt Bites',
+    metaDescription: 'No existe ningún eGPU funcional para Ollama en un MacBook Apple Silicon. La memoria unificada y la ausencia de soporte PCIe lo descartan. Usa más memoria unificada o un portátil Linux.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Apple Silicon MacBook'],
+    educationalLevel: 'Intermediate',
+    audience: 'Propietarios de MacBook que consideran un eGPU para acelerar Ollama',
+    affiliateDisclosure: true,
+    siblingBites: ['mac-mini-m4-local-llm', 'best-budget-ai-laptop-under-1000'],
+    is_living_page: false,
+    readTime: '3 min de lectura',
+    leadAnswerBlock:
+      'No existe ningún eGPU funcional para Ollama en un MacBook Apple Silicon. Apple Silicon usa memoria unificada y no expone PCIe a GPUs externas — macOS eliminó los drivers de eGPU de terceros cuando se discontinuaron los Mac Intel. Los eGPU solo son útiles en portátiles Linux con Thunderbolt 4 o OCuLink.',
+    toc: [
+      { label: 'Mejor opción: olvida el eGPU, usa más memoria unificada', anchor: '#best-pick' },
+      { label: 'Por qué los eGPU no funcionan en Apple Silicon', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related' },
+    ],
+    intro:
+      'Los gabinetes eGPU conectan una GPU externa a un portátil vía Thunderbolt u OCuLink. Son útiles en Linux. En los MacBook Apple Silicon no funcionan — y no es cuestión de precio ni disponibilidad. La arquitectura los descarta.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Los MacBook Apple Silicon no admiten eGPUs — macOS eliminó los drivers de GPU de terceros cuando se retiraron los Mac Intel',
+          'Apple Silicon usa memoria unificada como memoria GPU; no existe una ruta PCIe para conectar una GPU discreta',
+          'Para tener más margen con LLMs en un Mac, compra un MacBook Pro o Mac Studio con más memoria unificada',
+          'Los eGPU siguen funcionando en portátiles Linux con Thunderbolt 4 o OCuLink — solo relevante para hardware que no sea Apple',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Mejor opción: olvida el eGPU — compra más memoria unificada',
+        content: [
+          '<strong>El mejor eGPU para Ollama en un MacBook es ningún eGPU. Apple Silicon no los admite y no existe ninguna solución alternativa.</strong> El camino hacia una inferencia LLM local más rápida en un Mac es más memoria unificada, no una GPU externa.',
+          'En Apple Silicon, la GPU comparte la misma RAM física que la CPU. No hay un pool de VRAM separado que ampliar, y macOS no expone el tunneling PCIe sobre Thunderbolt como sí hace Linux. Apple eliminó los drivers de eGPU de terceros cuando se discontinuaron los Mac Intel — no existe ningún driver Metal para NVIDIA, AMD ni ninguna GPU externa.',
+          'Si quieres más margen para LLMs locales en un Mac, la ruta de actualización es un MacBook Pro o Mac Studio con más memoria unificada (32 GB, 64 GB, 96 GB). Si la expansibilidad de GPU es imprescindible, la alternativa es un portátil Linux con Thunderbolt 4 o un portátil con OCuLink junto a una GPU de escritorio en un gabinete — esos siguen funcionando, pero no en Apple Silicon.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Pro+M4+32GB',
+            productName: 'MacBook Pro M-series 32GB+',
+            productCategory: 'laptop',
+            label: 'Ver MacBook Pro 32GB+ en Amazon (alternativa al eGPU)',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Studio+M+series',
+            productName: 'Mac Studio M-series',
+            productCategory: 'desktop',
+            label: 'Ver precio del Mac Studio en Amazon',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Por qué los eGPU no funcionan en Apple Silicon',
+        content: [
+          '<strong>El bloqueo es arquitectónico, no comercial — ningún gabinete, ningún driver ni ninguna pila de software lo resuelve.</strong>',
+        ],
+        columns: ['Restricción', 'MacBook Apple Silicon', 'Portátil Linux con TB4/OCuLink'],
+        rows: [
+          {
+            'Restricción': 'Driver GPU para NVIDIA/AMD externo',
+            'MacBook Apple Silicon': 'No disponible en macOS',
+            'Portátil Linux con TB4/OCuLink': 'Disponible (nvidia, amdgpu)',
+          },
+          {
+            'Restricción': 'Tunneling PCIe sobre Thunderbolt',
+            'MacBook Apple Silicon': 'No expuesto por macOS',
+            'Portátil Linux con TB4/OCuLink': 'Compatible',
+          },
+          {
+            'Restricción': 'Arquitectura de memoria',
+            'MacBook Apple Silicon': 'Solo memoria unificada',
+            'Portátil Linux con TB4/OCuLink': 'VRAM discreta en eGPU',
+          },
+          {
+            'Restricción': 'Aceleración eGPU para Ollama',
+            'MacBook Apple Silicon': 'Sin ruta — no funciona',
+            'Portátil Linux con TB4/OCuLink': 'Funciona con CUDA o ROCm',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre eGPUs y MacBooks',
+        faqs: [
+          {
+            q: '¿Por qué mi MacBook no admite un eGPU?',
+            a: 'Los MacBook Apple Silicon usan memoria unificada y no exponen el tunneling PCIe sobre Thunderbolt. Apple también eliminó los drivers de eGPU de terceros cuando se retiraron los Mac Intel. Hoy no existe ninguna ruta de software para hacer funcionar una GPU externa NVIDIA o AMD en macOS.',
+          },
+          {
+            q: '¿Los MacBook Intel más antiguos admitían eGPUs?',
+            a: 'Sí, los MacBook Intel admitían eGPUs AMD vía Thunderbolt 3. Ese soporte terminó con la transición a Apple Silicon. Los nuevos Mac y Ollama en Apple Silicon no tienen ruta para eGPU.',
+          },
+          {
+            q: '¿Cuál es la forma más rápida de acelerar Ollama en un MacBook?',
+            a: 'Comprar más memoria unificada. Un MacBook Pro con 32 GB o 64 GB de memoria unificada ejecuta modelos más grandes localmente con aceleración Metal GPU completa. No existe ninguna opción de acelerador externo.',
+          },
+          {
+            q: '¿Funcionan los eGPUs para Ollama en portátiles Linux?',
+            a: 'Sí. Un portátil Linux con Thunderbolt 4 o OCuLink puede conectar una GPU de escritorio NVIDIA o AMD y ejecutar Ollama vía CUDA o ROCm. El rendimiento está limitado por el ancho de banda de Thunderbolt 4 (40 Gbps), pero funciona.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[¿Es el Mac Mini M4 bueno para LLMs locales?](/prompt-bites/mac-mini-m4-local-llm?lang=es) — el equivalente de escritorio con la misma arquitectura',
+          '[Mejor portátil AI económico por menos de $1,000](/prompt-bites/best-budget-ai-laptop-under-1000?lang=es) — alternativas no Apple en el nivel de entrada',
+          '[Mejor mini PC para LLM local](/prompt-bites/best-mini-pc-for-local-llm?lang=es) — mini PCs de escritorio vs memoria unificada del MacBook',
+        ],
+      },
+    },
+  },
 }

@@ -414,6 +414,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Mejores modelos Ollama para RTX 3060 12 GB?',
+        answer: 'Con 12 GB de VRAM, el mejor modelo de uso general es Llama 3 8B en Q5_K_M, entregando 20–30 tokens por segundo con calidad equilibrada. Para programación, usa Qwen 2.5 Coder 14B en Q4_K_M. Ambos funcionan a 20–30 tok/s.',
+        bullets: [
+          'Llama 3 8B Q5_K_M: mejor uso general en RTX 3060',
+          'Qwen 2.5 Coder 14B Q4_K_M: mejor para programación',
+          'Mistral 7B Q6_K: alternativa rápida para chat',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

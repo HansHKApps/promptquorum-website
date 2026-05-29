@@ -399,6 +399,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuánta VRAM necesita un modelo 70B?',
+        answer: 'Un modelo 70B en Q4_K_M necesita aproximadamente 40 GB de VRAM. Opciones de consumo: dos RTX 3090 (48 GB en total), M5 Max con 128 GB de memoria unificada, o alquiler de GPU en la nube.',
+        bullets: [
+          'Q4_K_M 70B: ~40 GB de VRAM necesarios',
+          'Dual RTX 3090 (48 GB en total): opción de escritorio de consumo',
+          'M5 Max 128 GB de memoria unificada: mejor experiencia en un solo equipo',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

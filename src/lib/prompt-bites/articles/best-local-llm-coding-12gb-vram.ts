@@ -437,4 +437,81 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Hardware-Specific',
+    title: '¿Mejor LLM local para programar con 12 GB de VRAM?',
+    seoTitle: 'Mejor LLM de Programación para 12 GB 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Qwen 2.5 Coder 14B Q4_K_M: mejor LLM de programación para 12 GB con ~10 GB, mayor HumanEval. DeepSeek 14B Q4 como alternativa. Compatibles con RTX 3060/3080 Ti 12 GB.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Mejor LLM local para programar con 12 GB de VRAM?',
+        answer: 'Qwen 2.5 Coder 14B Q4_K_M es el mejor modelo de programación para GPUs con 12 GB de VRAM como la RTX 3060. Usa ~10 GB de VRAM y obtiene la puntuación HumanEval más alta entre los modelos que caben en esta restricción. DeepSeek Coder 14B es una alternativa sólida.',
+        bullets: [
+          'Qwen 2.5 Coder 14B Q4_K_M: ~10 GB de VRAM, mejor benchmark de programación para este tamaño',
+          'DeepSeek Coder 14B Q4_K_M: VRAM similar, competitivo en completado de código',
+          'Ambos caben en RTX 3060 12 GB y RTX 3080 Ti 12 GB',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Qwen 2.5 Coder 14B Q4_K_M usa ~10 GB de VRAM y cabe en RTX 3060 12 GB o RTX 3080 Ti 12 GB con 2 GB de margen',
+          'En contexto corto (≤4k tokens), Qwen y DeepSeek Coder 14B corren a 14–18 tok/s en estas tarjetas de 12 GB',
+          'Las sesiones con más de 8k tokens suben el VRAM a ~11,5 GB — mantente por debajo de 8k para un funcionamiento cómodo en 12 GB',
+          'Qwen 2.5 Coder 14B obtiene 78,4 % en HumanEval; DeepSeek Coder 14B 75,1 % — ambos muy por encima de cualquier modelo de programación 7B',
+        ],
+      },
+      body1: {
+        title: 'Qwen 2.5 Coder 14B es la elección correcta para 12 GB de VRAM',
+        content: [
+          '<strong>Qwen 2.5 Coder 14B en cuantización Q4_K_M usa aproximadamente 10 GB de VRAM — dejando 2 GB de margen en una tarjeta de 12 GB, suficiente para el sistema operativo y el runtime de Ollama.</strong> Alcanza 78,4 % en HumanEval, la puntuación más alta de cualquier modelo de programación de 14B o inferior disponible para despliegue local a mayo de 2026.',
+          'DeepSeek Coder 14B en Q4_K_M tiene un consumo de VRAM casi idéntico (~10 GB) y obtiene 75,1 % en HumanEval. La diferencia es pequeña, pero Qwen 2.5 Coder lidera de forma consistente en tareas de Python y TypeScript, que representan la mayoría de las cargas de trabajo habituales de los desarrolladores.',
+          'Ambos modelos funcionan de forma idéntica en RTX 3060 12 GB y RTX 3080 Ti 12 GB. La RTX 3080 Ti ofrece un ancho de banda de memoria ligeramente mayor (912 GB/s frente a 360 GB/s), lo que se traduce en aproximadamente 18 tok/s frente a 14 tok/s para el mismo modelo con la misma cuantización.',
+        ],
+        columns: ['Modelo', 'VRAM', 'HumanEval', 'Velocidad (RTX 3060)', 'Velocidad (RTX 3080 Ti)'],
+        rows: [
+          { 'Modelo': 'Qwen 2.5 Coder 14B Q4_K_M', 'VRAM': '~10 GB', 'HumanEval': '78,4 %', 'Velocidad (RTX 3060)': '~14 tok/s', 'Velocidad (RTX 3080 Ti)': '~18 tok/s' },
+          { 'Modelo': 'DeepSeek Coder 14B Q4_K_M', 'VRAM': '~10 GB', 'HumanEval': '75,1 %', 'Velocidad (RTX 3060)': '~14 tok/s', 'Velocidad (RTX 3080 Ti)': '~18 tok/s' },
+          { 'Modelo': 'Qwen 2.5 Coder 7B Q4_K_M', 'VRAM': '~5 GB', 'HumanEval': '72,1 %', 'Velocidad (RTX 3060)': '~28 tok/s', 'Velocidad (RTX 3080 Ti)': '~38 tok/s' },
+        ],
+      },
+      body2: {
+        title: 'La longitud del contexto es la variable clave de VRAM',
+        content: [
+          'Con 4k de contexto, ambos modelos 14B usan ~10 GB de VRAM y funcionan cómodamente. <strong>Con 8k de contexto, el VRAM sube a aproximadamente 11,5 GB — dejando solo 500 MB de margen en una tarjeta de 12 GB.</strong> Con 16k de contexto, un modelo 14B Q4_K_M supera los 12 GB de VRAM y comenzará a descargar parcialmente hacia la CPU, reduciendo la velocidad a ~3 tok/s.',
+          'Para el uso práctico de programación, 4k de contexto es suficiente para la mayoría de los completados de archivo único y sesiones de revisión de código. Las necesidades de contexto largo (repositorios completos, refactorizaciones extensas) requieren una GPU de 16 GB o 24 GB, o cambiar a la variante 7B que usa ~5 GB de VRAM y deja toda la tarjeta de 12 GB libre para contexto.',
+          'Si trabajas frecuentemente con archivos grandes y quieres quedarte con una tarjeta de 12 GB, considera Qwen 2.5 Coder 7B Q4_K_M — corre a ~28 tok/s en RTX 3060, obtiene 72,1 % en HumanEval y deja 7 GB de VRAM libres para contexto. Consulta la <a href="/prompt-bites/best-14b-models-coding?lang=es" class="text-primary hover:underline">comparativa de los mejores modelos de programación 14B</a> para más detalles sobre el compromiso 14B vs 7B.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre LLMs de programación para 12 GB de VRAM',
+        faqs: [
+          {
+            q: '¿Qué es mejor para 12 GB de VRAM: RTX 3060 o RTX 3080 Ti?',
+            a: 'Ambas tienen 12 GB de VRAM y ejecutan los mismos modelos. La RTX 3080 Ti tiene un ancho de banda de memoria de 912 GB/s frente a 360 GB/s de la RTX 3060 — aproximadamente 2,5 veces más rápida en generación de tokens para el mismo modelo. Si tienes la opción, la 3080 Ti es significativamente mejor para inferencia LLM a pesar de tener la misma capacidad de VRAM.',
+          },
+          {
+            q: '¿Puedo meter un modelo de 20B o 22B en 12 GB de VRAM?',
+            a: 'Con Q3_K_M algunos modelos de 20B caben en ~12 GB, pero la cuantización Q3 provoca una degradación perceptible de la calidad en tareas de código. Qwen 2.5 Coder 14B en Q4_K_M supera a Qwen 2.5 Coder 20B en Q3_K_M en la mayoría de benchmarks de programación, porque la calidad de cuantización importa más que el número de parámetros en este rango.',
+          },
+          {
+            q: '¿Cómo instalo Qwen 2.5 Coder 14B en Ollama para mi RTX 3060?',
+            a: 'Ejecuta <code>ollama pull qwen2.5-coder:14b-instruct-q4_K_M</code>. Ollama detecta automáticamente la GPU NVIDIA y usa CUDA. Verifica el uso de la GPU con <code>ollama ps</code> — el modelo debería aparecer ejecutándose en la GPU, no en la CPU. Si cae en CPU, comprueba que los controladores CUDA estén actualizados.',
+          },
+          {
+            q: '¿Un modelo de programación dedicado es mejor que uno de propósito general para el completado de código?',
+            a: 'Sí, notablemente. Qwen 2.5 Coder 14B obtiene 78,4 % en HumanEval. Un Mistral 12B de propósito general de tamaño similar obtiene alrededor de 60 %. La diferencia de 18 puntos refleja los datos de preentrenamiento específicos para código. Para trabajo de programación serio, elige siempre un modelo ajustado para código sobre un modelo de propósito general del mismo tamaño. Compara las opciones en la <a href="/prompt-bites/qwen-coder-vs-deepseek-coder?lang=es" class="text-primary hover:underline">guía Qwen Coder vs DeepSeek Coder</a>.',
+          },
+        ],
+      },
+    },
+  },
 }

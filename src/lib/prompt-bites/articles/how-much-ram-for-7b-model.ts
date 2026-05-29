@@ -399,6 +399,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuánta RAM necesita un modelo 7B?',
+        answer: 'Un modelo 7B en cuantización Q4 necesita 5–6 GB de VRAM o RAM para un rendimiento de inferencia eficiente. Regla: parámetros del modelo en miles de millones × 0,7 = GB aproximados en Q4. GPU ofrece ~25 tok/s; CPU ofrece ~5 tok/s con la misma memoria.',
+        bullets: [
+          '7B Q4: 5–6 GB de VRAM o memoria unificada',
+          '7B Q5: 6–7 GB de VRAM',
+          '7B Q8: 8–9 GB de VRAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

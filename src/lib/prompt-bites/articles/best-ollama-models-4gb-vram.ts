@@ -419,6 +419,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      es: {
+        question: '¿Mejores modelos Ollama para 4 GB de VRAM?',
+        answer: '4 GB de VRAM es ajustado pero utilizable con modelos pequeños como Phi-4 Mini Q4 (~3,2 GB), Gemma 2 2B (~1,5 GB) y SmolLM 1.7B (~1,0 GB). Llama 3 8B no cabe.',
+        bullets: [
+          'Phi-4 Mini Q4: mejor calidad en 4 GB (3,2 GB VRAM)',
+          'Gemma 2 2B: rápido y ligero (1,5 GB)',
+          'SmolLM 1.7B: huella VRAM mínima (1,0 GB)',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
