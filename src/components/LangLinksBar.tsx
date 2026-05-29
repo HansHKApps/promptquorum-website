@@ -8,10 +8,11 @@ interface LangLinksBarProps {
   cluster: string
   slug: string
   availableLangs: string[]
+  initialLang?: Language
 }
 
-export function LangLinksBar({ cluster, slug, availableLangs }: LangLinksBarProps) {
-  const currentLang = useLang() as Language
+export function LangLinksBar({ cluster, slug, availableLangs, initialLang }: LangLinksBarProps) {
+  const currentLang = useLang(initialLang) as Language
 
   const languages: { code: Language; flag: string }[] = [
     { code: 'en', flag: '🇺🇸' },
