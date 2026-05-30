@@ -1262,7 +1262,9 @@ function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang
   const brief = POWER_LLM_BRIEFS[slug]
   const linkable = hasContent || !!brief
   const title =
-    powerLLMContent[slug]?.['en']?.title ?? brief?.title ?? slugToTitle(slug)
+    powerLLMContent[slug]?.[lang]?.title ??
+    powerLLMContent[slug]?.['en']?.title ??
+    brief?.title ?? slugToTitle(slug)
 
   if (!linkable) {
     return (
