@@ -306,6 +306,304 @@ schema: {
         ]
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-11-06',
+      theme: 'GPU Buying Guides',
+      title: '¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)',
+      seoTitle: '¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)',
+      intro: '**Para modelos 7B necesitas 8 GB de VRAM; para 13B-22B, 12-16 GB; para 70B, mínimo 24 GB.** A partir de abril de 2026, estos números asumen cuantización Q4 (4 bits). Los modelos en precisión completa (FP32) necesitan 2-3× más VRAM y rara vez son prácticos en GPUs de consumo. La fórmula es: Tamaño del modelo (miles de millones) × 2 bytes (FP32) ÷ factor de cuantización.',
+      metaDescription: 'VRAM exacta para LLM local: 7B necesita 6-8 GB, 13B necesita 10-14 GB, 70B necesita 40-48 GB en Q4. Tablas para cuantización Q2-Q8, batch size y contexto.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**Para modelos 7B necesitas 8 GB de VRAM; para 13B-22B, 12-16 GB; para 70B, mínimo 24 GB. A partir de abril de 2026, estos números asumen cuantización Q4 (4 bits).**',
+      nextStep: {
+        text: 'Ya conoces tu presupuesto de VRAM. Ahora elige la GPU correcta para él.',
+        label: 'Mejores GPUs económicas para LLMs locales →',
+        href: '/es/local-llms/best-budget-gpus-local-llm',
+      },
+      audience: 'Principiantes ejecutando su primer LLM local en hardware de consumo',
+      readTime: '7 min de lectura',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'VRAM Requirements',
+      toc: [
+        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: '¿Cuál es la fórmula de VRAM para LLMs?', anchor: '#formula' },
+        { label: '¿Cuánta VRAM necesita cada tamaño de modelo?', anchor: '#by-model-size' },
+        { label: 'VRAM para modelos MoE', anchor: '#moe-vram' },
+        { label: '¿Cómo reduce la cuantización los requisitos de VRAM?', anchor: '#quantization' },
+        { label: '¿Qué hay del batch size y la inferencia multiusuario?', anchor: '#batch-size' },
+        { label: '¿Necesitas más VRAM que el tamaño del modelo?', anchor: '#overhead' },
+        { label: 'Errores comunes sobre VRAM', anchor: '#mistakes' },
+        { label: 'Calculadora de VRAM', anchor: '#vram-calculator' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Modelos 7B: mínimo 8 GB (Q4), cómodo con 10 GB (Q5), 14 GB para Q8 precisión completa.',
+            'Modelos 13B: mínimo 10 GB (Q4), cómodo con 12-14 GB (Q5), 16 GB para Q8.',
+            'Modelos 70B: mínimo 24 GB (Q4), 32 GB+ para Q5/Q8 o configuración multiusuario.',
+            'La cuantización (Q4, Q5, Q8) reduce la VRAM un 50-75% respecto a la precisión completa (FP32).',
+            'Siempre sobredimensiona 1-2 GB para el overhead (caché KV, estado del optimizador, sistema operativo).',
+            'El batch size ≠ VRAM por inferencia. La inferencia única usa la misma VRAM sin importar el batch (el batch procesa secuencialmente).',
+            'Más VRAM no acelera la inferencia de un solo prompt. Solo ayuda en configuraciones multiusuario/multi-petición.',
+          ],
+        },
+        'ruleOfThumb': {
+          title: 'Regla general de VRAM — Referencia rápida',
+          content: [
+            '**¿No tienes tiempo para la fórmula? Usa estas reglas simples:**',
+            'Una vez que conozcas tu presupuesto de VRAM, [consulta qué GPUs se adaptan a cada nivel →](/es/local-llms/best-budget-gpus-local-llm)',
+          ],
+          items: [
+            '**Modelos 3B** (Phi, StableLM): mínimo 4 GB de VRAM',
+            '**Modelos 7B** (Llama, Mistral, Qwen): 8 GB de VRAM (Q4), 10 GB (Q5)',
+            '**Modelos 13B** (Llama 3.1, Mistral): mínimo 12 GB de VRAM (Q4)',
+            '**Modelos 22B** (Qwen2.5, Gemma): 16 GB de VRAM (Q4)',
+            '**Modelos 70B** (Llama 3.3, Qwen 3.6): 24–32 GB de VRAM (Q4–Q5)',
+            '**Modelos MoE**: usa solo los parámetros activos. Ejemplo: Llama 4 Scout tiene 17B activos = ~9 GB de VRAM, no 44 GB',
+          ],
+          codeBlock: '# Quick VRAM formula (memorize this)\nVRAM (GB) ≈ Model Size (B) ÷ 8  # at Q4 quantization\n\n# Examples:\n7B ÷ 8 = 0.875 GB per billion ≈ 8 GB total\n70B ÷ 8 = 8.75 GB per billion ≈ 48 GB total\n\n# For other quantizations:\nQ8 (8-bit): Model Size ÷ 4\nQ5 (5-bit): Model Size ÷ 5\nFP32 (full): Model Size × 4',
+          codeLanguage: 'bash',
+        },
+        'formula': {
+          title: '¿Cuál es la fórmula de VRAM para LLMs?',
+          content: [
+            '**VRAM (GB) = (Tamaño del modelo en miles de millones × 4 bytes × Factor de cuantización)**',
+            '- Tamaño del modelo: Número de parámetros (7B, 13B, 70B, etc.)',
+            '- 4 bytes: precisión FP32 (1 byte = 8 bits)',
+            '- Factor de cuantización: 1.0 (FP32), 0.5 (Q8), 0.25 (Q4)',
+            'Ejemplo: Llama 3 70B, FP32, sin cuantización:',
+            '70 mil millones × 4 bytes = 280 GB. Impracticable.',
+            'Llama 3 70B, cuantización Q4 (4 bits):',
+            '70 mil millones × 4 bytes × 0.25 = 70 GB asignados, ~24 GB utilizados tras la compresión.',
+            '',
+            '**Modelos MoE (Dispersos):** Usa solo el recuento de parámetros activos. Ejemplo: Llama 4 Scout tiene 109B de parámetros totales pero solo 17B activos a la vez. VRAM = 17B × 0.5 bytes (Q4) ≈ 9 GB — no los 44 GB que sugeriría un cálculo ingenuo de parámetros totales.',
+          ],
+        },
+        'by-model-size': {
+          title: '¿Cuánta VRAM necesita cada tamaño de modelo?',
+          columns: ['Tamaño del modelo', 'FP32 (sin cuantización)', 'Q8 (8 bits)', 'Q5 (5 bits)', 'Q4 (4 bits)', 'GPU recomendada'],
+          rows: [
+            { 'Tamaño del modelo': '3B (Phi, StableLM)', 'FP32 (sin cuantización)': '12 GB', 'Q8 (8 bits)': '6 GB', 'Q5 (5 bits)': '4 GB', 'Q4 (4 bits)': '3 GB', 'GPU recomendada': 'RTX 2060 6 GB o RTX 5070 12 GB' },
+            { 'Tamaño del modelo': '7B (Llama 2, Mistral)', 'FP32 (sin cuantización)': '28 GB', 'Q8 (8 bits)': '14 GB', 'Q5 (5 bits)': '9 GB', 'Q4 (4 bits)': '7 GB', 'GPU recomendada': 'RTX 3060 12 GB o RTX 5070 12 GB' },
+            { 'Tamaño del modelo': '13B (Llama 2, Mistral)', 'FP32 (sin cuantización)': '52 GB', 'Q8 (8 bits)': '26 GB', 'Q5 (5 bits)': '17 GB', 'Q4 (4 bits)': '13 GB', 'GPU recomendada': 'RTX 3090 24 GB o RTX 5080 16 GB' },
+            { 'Tamaño del modelo': '22B (Qwen, Gemma)', 'FP32 (sin cuantización)': '88 GB', 'Q8 (8 bits)': '44 GB', 'Q5 (5 bits)': '28 GB', 'Q4 (4 bits)': '22 GB', 'GPU recomendada': 'RTX 4090 24 GB (Q4) o RTX 5090 32 GB' },
+            { 'Tamaño del modelo': '70B (Llama 3, Qwen)', 'FP32 (sin cuantización)': '280 GB', 'Q8 (8 bits)': '140 GB', 'Q5 (5 bits)': '88 GB', 'Q4 (4 bits)': '70 GB', 'GPU recomendada': '2× RTX 4090 (24 GB c/u), o 1× H100 80 GB' },
+            { 'Tamaño del modelo': 'Qwen 3.6 35B-A3B (3B activos, MoE)*', 'FP32 (sin cuantización)': '12 GB', 'Q8 (8 bits)': '3 GB', 'Q5 (5 bits)': '2 GB', 'Q4 (4 bits)': '2 GB', 'GPU recomendada': 'RTX 2060 6 GB o RTX 5070 12 GB' },
+            { 'Tamaño del modelo': 'DeepSeek V4-Flash (13B activos / 284B total, MoE)*', 'FP32 (sin cuantización)': '52 GB', 'Q8 (8 bits)': '13 GB', 'Q5 (5 bits)': '8 GB', 'Q4 (4 bits)': '7 GB', 'GPU recomendada': 'RTX 3060 12 GB o RTX 5070 12 GB' },
+            { 'Tamaño del modelo': 'Llama 4 Scout (17B activos / 109B total, MoE)*', 'FP32 (sin cuantización)': '68 GB', 'Q8 (8 bits)': '17 GB', 'Q5 (5 bits)': '11 GB', 'Q4 (4 bits)': '9 GB', 'GPU recomendada': 'RTX 3090 24 GB o RTX 5080 16 GB' },
+            { 'Tamaño del modelo': 'Kimi K2.6 (42B activos / 1T total, MoE)*', 'FP32 (sin cuantización)': '168 GB', 'Q8 (8 bits)': '42 GB', 'Q5 (5 bits)': '27 GB', 'Q4 (4 bits)': '21 GB', 'GPU recomendada': '2× RTX 4090 o RTX 5090 32 GB (solo Q4)' },
+          ],
+          note: '* Modelos MoE: la VRAM se calcula solo a partir de los parámetros activos, no del tamaño total del modelo.',
+        },
+        'moe-vram': {
+          title: 'Los modelos MoE necesitan mucha menos VRAM de lo que su tamaño sugiere',
+          id: 'moe-vram',
+          content: [
+            'Los modelos Mixture-of-Experts (MoE) distribuyen sus parámetros entre muchas sub-redes "expertas" y activan solo una fracción para cada token. La VRAM depende de los parámetros activos — el subconjunto cargado durante la inferencia — no del total de parámetros.',
+            '**Regla para modelos densos:** VRAM = parámetros_totales × bytes_por_parámetro',
+            '**Regla para modelos MoE:** VRAM = parámetros_activos × bytes_por_parámetro',
+            'Ejemplo: Llama 4 Scout tiene 109B de parámetros totales pero solo 17B se activan por token. Con cuantización Q4: 17B × 0.5 bytes ≈ 9 GB — ejecutable en una sola RTX 3090, frente a los ~55 GB que necesitaría un modelo denso de 109B.',
+            'Qwen 3.6 35B-A3B es aún más extremo: con 3B activos de 35B totales, tiene la huella de VRAM de un pequeño modelo denso de 3B mientras ofrece la calidad de un modelo de 35B.',
+          ],
+        },
+        'quantization': {
+          title: '¿Cómo reduce la cuantización los requisitos de VRAM?',
+          content: [
+            '**La cuantización** reduce el número de bits necesarios para representar cada parámetro del modelo.',
+            '- **FP32** (float de 32 bits): Precisión completa. 1 parámetro = 4 bytes. Sin pérdida. Más lento.',
+            '- **Q8** (8 bits): 1 parámetro = 1 byte. ~6% de pérdida de precisión. 75% de ahorro de VRAM.',
+            '- **Q5** (5 bits): 1 parámetro = 0.625 bytes. ~2% de pérdida de precisión. 84% de ahorro de VRAM.',
+            '- **Q4** (4 bits): 1 parámetro = 0.5 bytes. ~1% de pérdida de precisión. 87.5% de ahorro de VRAM.',
+            'Para la mayoría de los usuarios, Q4 es el punto óptimo: pérdida de precisión imperceptible, huella de VRAM un 87% menor.',
+            'A partir de abril de 2026, Q4 es el estándar. Q5 y Q8 están disponibles si tienes VRAM de sobra y quieres ganancias marginales de calidad.',
+            'La VRAM determina el tamaño del modelo, pero el diseño del prompt determina la calidad de la salida. Técnicas como chain-of-thought y few-shot prompting pueden cerrar la brecha de calidad entre modelos más pequeños y más grandes. Explora el completo [toolkit de prompt engineering](https://www.promptquorum.com/es/prompt-engineering) para sacar más partido a los modelos que soporta tu hardware. Si tienes 12–16 GB de VRAM y quieres una carga de trabajo de programación concreta para probar ese toolkit, [Reemplazar GitHub Copilot con un LLM local](/es/power-local-llm/replace-github-copilot-with-local-llm) mapea el stack Continue.dev + Ollama + Qwen3-Coder exactamente a esos niveles de VRAM.',
+          ],
+        },
+        'batch-size': {
+          title: '¿Qué hay del batch size y la inferencia multiusuario?',
+          content: [
+            '**El batch size afecta el rendimiento (tokens por segundo), no la latencia de una inferencia individual.**',
+            'Un solo usuario que pregunta "¿Cuánto es 2+2?" usa la misma VRAM sin importar si el batch size es 1 o 32.',
+            'Batch size = 32 significa procesar 32 prompts en paralelo. Esto usa ~32× más VRAM, pero genera 32 respuestas más rápido.',
+            'Para usuario único (uso típico de LLM local): Batch size = 1. La VRAM es el tamaño del modelo + 1-2 GB de overhead.',
+            'Para servidor multiusuario: Asigna batch size × VRAM del modelo. Un modelo 70B con batch=4 necesita ~96 GB (24 GB × 4).',
+          ],
+        },
+        'overhead': {
+          title: '¿Necesitas más VRAM que el tamaño del modelo?',
+          content: [
+            '**Sí. Más allá de los pesos del modelo, añade:**',
+            '- **Caché KV** (caché clave-valor para el contexto): ~5-10% de VRAM adicional.',
+            '- **Estado del optimizador** (si se hace fine-tuning): 2-4× el tamaño del modelo (solo relevante para entrenamiento, no para inferencia).',
+            '- **Overhead del sistema** (SO, drivers, runtime de Ollama/LM Studio): ~1-2 GB.',
+            'Regla: Un modelo 70B Q4 (20 GB) + caché KV (2 GB) + sistema (2 GB) = ~24 GB asignados.',
+            'Siempre compra GPUs con al menos 1-2 GB de margen por encima de los mínimos teóricos.',
+          ],
+        },
+        'mistakes': {
+          title: 'Errores comunes sobre VRAM',
+          items: [
+            'Más VRAM = inferencia más rápida. Falso. El tamaño de VRAM no afecta la velocidad. El ancho de banda de memoria (GB/seg) sí, y es fijo por GPU.',
+            'El batch size = límite secuencial de tokens. Falso. Batch size = peticiones en paralelo. La inferencia individual usa batch=1 sin importar el tamaño de VRAM.',
+            'Necesitas 24 GB para cualquier modelo 70B. Falso. Q4 necesita 24 GB. Q8 necesita 48 GB. Depende de la cuantización.',
+          ],
+        },
+        'vramCalculator': {
+          id: 'vram-calculator',
+          title: 'Calculadora de VRAM',
+          component: 'VramCalculator',
+          content: 'Selecciona el tamaño de tu modelo y la cuantización para estimar los requisitos de VRAM.',
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: '¿Puedo ejecutar Mistral 7B en una GPU de 6 GB?', a: 'Con dificultad, en Q4 con overhead ajustado. En la práctica, no. Compra al menos 8 GB. Tendrás errores de OOM con 6 GB.' },
+            { q: '¿Cuánta VRAM necesito para hacer fine-tuning de un modelo 7B?', a: 'Para LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. El fine-tuning requiere estado del optimizador (2-4× la VRAM del modelo), no solo la inferencia.' },
+            { q: '¿Son suficientes 12 GB para Llama 3 13B?', a: 'En Q4, apenas. En Q5 o Q8, no. 12 GB es muy ajustado. 16 GB es cómodo.' },
+            { q: '¿Necesito 24 GB para un modelo 70B?', a: 'En Q4, sí. En Q5+, no. Una cuantización más alta (Q5, Q8) necesita 32 GB+ para 70B.' },
+            { q: '¿Aumentar el batch size reduce la VRAM para inferencia individual?', a: 'No. La inferencia individual siempre usa la VRAM de batch=1. El batch size solo ayuda al rendimiento (escenarios multiusuario).' },
+            { q: '¿Cuál es la mejor cuantización para la precisión?', a: 'Q8 tiene una pérdida casi imperceptible. Q5 tiene ~2% de pérdida. Q4 tiene ~1% de pérdida. Para la mayoría, Q4 es el punto óptimo.' },
+            { q: '¿Puedo descargar parte de la VRAM a la RAM de la CPU?', a: 'Sí, mediante la división de capas (NVLink). Llama.cpp y Ollama lo soportan. El rendimiento cae un 30-50% pero funciona. ¿Menos de 8 GB de VRAM? Consulta **[qué modelos corren más rápido en tu nivel exacto de hardware](/es/local-llms/fastest-local-llms-low-end-pcs)** — benchmarks con números reales de tok/seg para solo CPU, 4 GB, 6 GB y 8 GB de VRAM.' },
+          ],
+        },
+        'relatedReading': {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Calculadora de VRAM para LLMs locales](/es/local-llms/vram-calculator-local-llm) -- Calculadora interactiva: VRAM exacta para cualquier modelo, cuantización y GPU.',
+            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) -- Recomendaciones completas de niveles de GPU con precios y benchmarks de tok/seg.',
+            '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms) -- Benchmarks y análisis de costes de RTX 4090, 4080 y 4070 Ti.',
+            '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) -- Análisis profundo de los formatos Q4, Q5 y Q8 y sus compromisos de calidad.',
+            '[¿Cuánta memoria unificada para LLMs locales?](/es/local-llms/how-much-unified-memory-for-local-llm) -- Equivalente Mac de VRAM: 16 GB vs 36 GB vs 64 GB vs 128 GB para Apple Silicon.',
+            '[Ejecutar modelos 70B en Apple Silicon M5 Max](/es/local-llms/running-70b-models-apple-silicon-m5-max) -- Cómo la memoria unificada permite a los Mac ejecutar 70B donde falla una VRAM de 24 GB.',
+            '[Mejores modelos para Apple Silicon 2026](/es/local-llms/best-models-apple-silicon-2026) -- Selección de modelos específicos por nivel de memoria unificada: de 16 GB a 128 GB.',
+            '[GPU vs CPU vs Apple Silicon para LLMs locales](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) -- Comparativa de tres plataformas: NVIDIA CUDA, memoria unificada de Apple e inferencia solo con CPU, lado a lado.',
+          ],
+        },
+        'sources': {
+          title: 'Fuentes',
+          items: [
+            'Documentación de la arquitectura de memoria CUDA y el modelo de memoria compartida de NVIDIA',
+            'Documentación oficial de Ollama y LM Studio: requisitos de VRAM para modelos y especificaciones de cuantización',
+            'Proyecto llama.cpp en GitHub: niveles de cuantización (Q4, Q5, Q8) y cálculos de memoria',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Requisitos de VRAM para LLM local 2026: modelos cuantizados de 7B a 70B',
+        'description': '¿Cuánta VRAM necesita un LLM de 70B? Consulta los requisitos exactos de 2026 para cuantización Q4/Q5, modelos de 13B a 70B y qué cabe en GPUs de 24 GB a 32 GB.',
+        'url': 'https://www.promptquorum.com/es/local-llms/how-much-vram-local-llm',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-05-06',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'GPU VRAM' },
+          { '@type': 'Thing', 'name': 'Requisitos de memoria para LLM' },
+          { '@type': 'Thing', 'name': 'cuantización' },
+          { '@type': 'Thing', 'name': 'inferencia de LLM local' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar Mistral 7B en una GPU de 6 GB?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Con dificultad, en Q4 con overhead ajustado. En la práctica, no. Compra al menos 8 GB. Tendrás errores de OOM con 6 GB.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánta VRAM necesito para hacer fine-tuning de un modelo 7B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para fine-tuning LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. El fine-tuning requiere estado del optimizador (2-4× la VRAM del modelo), no solo los pesos de inferencia.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Son suficientes 12 GB para Llama 3 13B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En Q4, apenas. En Q5 o Q8, no. 12 GB es muy ajustado. 16 GB es cómodo para modelos 13B.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito 24 GB de VRAM para un modelo 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En Q4, sí — los modelos 70B requieren ~20-24 GB de VRAM. En Q5+, necesitas 32 GB+. Una cuantización más alta añade necesidades de VRAM proporcionalmente.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Aumentar el batch size reduce la VRAM para inferencia individual?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. La inferencia individual siempre usa la VRAM de batch=1. El batch size solo ayuda al rendimiento en escenarios multiusuario. No reduce la VRAM por petición.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué nivel de cuantización tiene la mejor precisión?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8 tiene una pérdida de calidad casi imperceptible. Q5 tiene ~2% de degradación. Q4 tiene ~1% de degradación. Para la mayoría de las tareas, Q4 es el punto óptimo entre ahorro de VRAM y calidad.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo descargar parte de la VRAM a la RAM de la CPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, mediante la división de capas. llama.cpp y Ollama lo soportan con --n-gpu-layers. El rendimiento cae un 30-50% pero los modelos funcionan cuando la VRAM es insuficiente.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la fórmula de VRAM para LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'VRAM (GB) = parámetros del modelo (miles de millones) × bytes por parámetro + overhead. En Q4 (4 bits): 7B × 0.5 bytes + 1 GB overhead ≈ 4.5 GB pesos + 2 GB caché KV = ~7 GB total.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánta más VRAM necesita Q8 frente a Q4?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8 usa el doble de VRAM que Q4. Un modelo 7B en Q4 necesita ~4-5 GB; en Q8, ~8-9 GB. Comprueba siempre el nivel de cuantización antes de comprar una GPU.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar un modelo 70B en dos GPUs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Dos RTX 5090 (24 GB cada una) combinan 48 GB de VRAM — suficiente para un modelo 70B en Q4. llama.cpp y Ollama soportan múltiples GPUs mediante paralelismo tensorial y --n-gpu-layers.'
+            }
+          }
+        ]
+      },
+    },
     fr: {
       theme: 'GPU Buying Guides',
       title: 'Règle empirique VRAM: 7B=8GB, 70B=48GB (Guide 2026)',
