@@ -1085,4 +1085,236 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Hardware & Performance',
+      title: 'Cómo ejecutar modelos 70B en 24 GB de VRAM: técnicas avanzadas',
+      seoTitle: 'Ejecutar modelos 70B en 24 GB de VRAM: guía completa 2026',
+      intro: 'Ejecutar un modelo 70B (que normalmente requiere más de 40 GB) en 24 GB de VRAM es posible con cuantización agresiva (Q2-Q3) y offloading de capas, pero el resultado es lento (~3-5 tokens/seg). A partir de abril de 2026, esto es impráctico para chat en tiempo real, pero viable para procesamiento por lotes o experimentación.',
+      metaDescription: 'Ejecutar modelos 70B en 24 GB de VRAM 2026: cuantización (Q4_K_M), offloading, división de capas. Técnicas con compromisos y datos de rendimiento.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '**Ejecutar un modelo 70B (que normalmente requiere más de 40 GB) en 24 GB de VRAM es posible con cuantización agresiva (Q2-Q3) y offloading de capas, pero el resultado es lento (~3-5 tokens/seg).**',
+      audience: 'Ingenieros que despliegan LLMs locales en entornos de producción o empresariales',
+      readTime: '10 min de lectura',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'optimización de modelos 70B',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: 'Límites teóricos', anchor: '#limits' },
+        { label: 'Estrategia de cuantización', anchor: '#quantization' },
+        { label: 'Estrategia de offloading', anchor: '#offloading' },
+        { label: 'Configuración práctica', anchor: '#setup' },
+        { label: 'Rendimiento realista', anchor: '#performance' },
+        { label: 'Mejores alternativas', anchor: '#alternatives' },
+        { label: 'Errores comunes', anchor: '#common-mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Llama 3.1 70B en Q4 = 35 GB (demasiado grande para 24 GB). En Q3 = 26 GB (todavía demasiado grande). En Q2 = 17 GB (¡cabe!).',
+            'Compensación: Q2 tiene una pérdida de calidad notable. ~70% de la calidad FP16.',
+            'Velocidad: 3-5 tokens/seg con 20 GB descargados a la RAM del sistema (ultra lento).',
+            'Mejor opción: usar un modelo 13B en Q5, o comprar una segunda GPU para división de capas.',
+            'A partir de abril de 2026, esto es una solución a una restricción, no un enfoque recomendado.',
+          ],
+        },
+        limits: {
+          id: 'limits',
+          title: 'Las matemáticas teóricas del VRAM',
+          content: [
+            '**Llama 3.1 70B con varias cuantizaciones:**',
+          ],
+          rows: [
+            { 'Cuantización': 'FP16 (base)', 'Tamaño': '140 GB', '¿Cabe en 24 GB?': 'No' },
+            { 'Cuantización': 'Q8 (8 bits)', 'Tamaño': '70 GB', '¿Cabe en 24 GB?': 'No' },
+            { 'Cuantización': 'Q5 (5 bits)', 'Tamaño': '43,75 GB', '¿Cabe en 24 GB?': 'No' },
+            { 'Cuantización': 'Q4 (4 bits)', 'Tamaño': '35 GB', '¿Cabe en 24 GB?': 'No (con offloading: quizás)' },
+            { 'Cuantización': 'Q3 (3 bits)', 'Tamaño': '26 GB', '¿Cabe en 24 GB?': 'No (por poco)' },
+            { 'Cuantización': 'Q2 (2 bits)', 'Tamaño': '17,5 GB', '¿Cabe en 24 GB?': 'Sí' },
+          ],
+          columns: ['Cuantización', 'Tamaño del modelo', '¿Cabe en 24 GB?'],
+        },
+        quantization: {
+          id: 'quantization',
+          title: 'Cuantización agresiva: la herramienta principal',
+          content: [
+            '**Para que 70B quepa en 24 GB, debes usar cuantización Q2 o Q3.**',
+            '- **Q3**: 26 GB (todavía 2 GB de más). Se pueden descargar 2 GB a la RAM. Calidad ligeramente mejor que Q2.',
+            '- **Q2**: 17,5 GB (¡cabe!). 70% de calidad frente a FP16. Degradación notable pero utilizable.',
+            'Descarga el modelo cuantizado: `ollama pull llama3.1:70b-q2` (si está disponible) o usa herramientas de conversión como llama.cpp.',
+          ],
+        },
+        offloading: {
+          id: 'offloading',
+          title: 'Offloading a la RAM del sistema',
+          content: [
+            '**Si usas Q4 (35 GB) en una GPU de 24 GB, puedes descargar los 11 GB restantes a la RAM del sistema.** La penalización de velocidad es severa (10× más lento).',
+            'Solo es práctico para el procesamiento por lotes donde puedes esperar horas para obtener resultados.',
+          ],
+        },
+        setup: {
+          id: 'setup',
+          title: 'Configuración práctica: ejecutar 70B en 24 GB',
+          content: 'Paso a paso:',
+          numberedItems: [
+            'Usa cuantización Q2: `ollama pull llama3.1:70b-q2` (si está disponible; de lo contrario, convierte con llama.cpp)',
+            'Verifica el VRAM: `nvidia-smi` debería mostrar ~18 GB en uso',
+            'Ejecuta el modelo: `ollama run llama3.1:70b-q2`',
+            'Espera 3-5 tokens/seg (muy lento)',
+            'Úsalo solo para procesamiento por lotes/sin conexión, no para chat interactivo',
+          ],
+        },
+        performance: {
+          id: 'performance',
+          title: 'Expectativas de rendimiento realistas',
+          content: [
+            '**Ejecutar 70B en 24 GB de VRAM es lento:**',
+          ],
+          rows: [
+            { 'Cuantización': 'Q2 (24 GB VRAM)', 'Velocidad': '5-8 tok/seg', 'Latencia': '2-4 seg por token', 'Caso de uso': 'Solo procesamiento por lotes' },
+            { 'Cuantización': 'Q3 + offload (24 GB)', 'Velocidad': '3-5 tok/seg', 'Latencia': '3-5 seg por token', 'Caso de uso': 'Extremadamente limitado' },
+            { 'Cuantización': 'Q4 + offload (24 GB)', 'Velocidad': '1-3 tok/seg', 'Latencia': '5-10 seg por token', 'Caso de uso': 'Solo lotes nocturnos' },
+          ],
+          columns: ['Cuantización', 'Velocidad', 'Latencia', 'Caso de uso'],
+        },
+        alternatives: {
+          id: 'alternatives',
+          title: 'Mejores alternativas al 70B restringido',
+          content: 'En lugar de luchar con un 70B con VRAM limitada, considera:',
+          items: [
+            'Usar un modelo 13B (Llama 3.1 13B en Q5 = 8 GB, muy rápido)',
+            'Comprar una segunda RTX 4090 para división de capas (2× 24 GB = 48 GB, más de 100 tokens/seg)',
+            'Usar una API en la nube (GPT-4o para tareas importantes, local para experimentación)',
+            'Esperar modelos más eficientes (más pequeños, misma calidad)',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Errores comunes con el 70B restringido',
+          items: [
+            '**Esperar que Q2 sea utilizable para chat.** No lo es. La degradación de calidad es demasiado severa para la interacción en tiempo real.',
+            '**No medir la velocidad real antes de comprometerse.** Prueba con un prompt pequeño (10 tokens) y verifica la velocidad antes de ejecutar trabajos por lotes grandes.',
+            '**Asumir que el offloading es "gratuito".** La RAM del sistema es 100× más lenta que la VRAM de la GPU. El offloading hace que la inferencia sea impráctica.',
+            '**No considerar alternativas.** Un modelo 13B es dramáticamente más rápido y a menudo suficiente en calidad.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Preguntas frecuentes',
+          faqs: [
+            {
+              q: '¿Realmente puedo ejecutar un modelo 70B en una sola RTX 4090?',
+              a: 'Sí, pero con advertencias importantes. Con cuantización Q2 (17,5 GB), el modelo cabe en 24 GB de VRAM pero funciona a 5-8 tokens/seg y tiene ~70% de la calidad FP16. Con Q4 (35 GB), necesitas descargar 11 GB a la RAM del sistema, lo que reduce la velocidad a 1-3 tokens/seg. Ninguna opción es adecuada para el chat en tiempo real — solo para el procesamiento por lotes sin conexión.',
+            },
+            {
+              q: '¿Qué cuantización se necesita para que 70B quepa en 24 GB de VRAM?',
+              a: 'La cuantización Q2 cabe en 24 GB (17,5 GB de tamaño de modelo). Q3 (26 GB) requiere 2 GB de offloading de RAM. Q4 (35 GB) requiere 11 GB de offloading y hace que la inferencia sea muy lenta. Q5 y superiores (44-70 GB) no pueden caber incluso con offloading en una GPU de 24 GB. Q2 es la única opción que funciona completamente en VRAM.',
+            },
+            {
+              q: '¿Qué tan lento es un modelo 70B en 24 GB de VRAM?',
+              a: 'Con Q2 (completamente en VRAM): 5-8 tokens/seg. Con Q3 y 2 GB de offload de RAM: 3-5 tokens/seg. Con Q4 y 11 GB de offload de RAM: 1-3 tokens/seg. Compara con un modelo 13B en Q5 en la misma GPU: 80-100 tokens/seg. La configuración 70B restringida es 10-20× más lenta que un modelo más pequeño del tamaño adecuado.',
+            },
+            {
+              q: '¿Es mejor usar un modelo 13B que un 70B restringido?',
+              a: 'Para la mayoría de las tareas, sí. Un modelo 13B con cuantización Q5 funciona a 80-100 tokens/seg en una RTX 4090 y ofrece gran calidad. Un modelo 70B en Q2 funciona a 5-8 tokens/seg con calidad degradada. El 13B gana en velocidad y a menudo en calidad práctica debido a la degradación de Q2. Solo usa 70B-en-24GB si necesitas capacidades específicas del 70B y puedes tolerar un uso exclusivamente por lotes.',
+            },
+            {
+              q: '¿Cuál es el mejor caso de uso para 70B en 24 GB de VRAM?',
+              a: 'Procesamiento por lotes nocturno — tareas en las que envías 100+ prompts y recuperas resultados horas después. Ejemplos: análisis de documentos, revisiones de código por lotes, anotación de conjuntos de datos. El chat en tiempo real es impráctíco a 1-8 tokens/seg. Para uso interactivo, una segunda RTX 4090 ($1.800) con división de capas alcanza ~100 tokens/seg — una inversión mucho mejor.',
+            },
+            {
+              q: '¿Cómo descargo modelos 70B cuantizados en Q2?',
+              a: 'A través de Ollama: `ollama pull llama3.1:70b-instruct-q2_K` (la disponibilidad varía). A través de llama.cpp: descarga archivos GGUF Q2_K desde Hugging Face (busca "llama-3.1-70b GGUF"). TheBloke y bartowski publican versiones cuantizadas. Verifica el modelo con `nvidia-smi` después de cargarlo — el uso de VRAM debería ser ~18-20 GB para Q2.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Guía de hardware para LLM locales 2026](/es/local-llms/local-llm-hardware-guide-2026) -- Compra mejor hardware.',
+            '[LLMs locales con múltiples GPU](/es/local-llms/multi-gpu-local-llms) -- Usa la división de capas en su lugar.',
+            '[Los mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding) -- Los modelos más pequeños suelen ser suficientes.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            'Cuantización llama.cpp -- github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
+            'Ficha del modelo: Llama 3.1 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/es/local-llms/run-70b-models-24gb-vram',
+        inLanguage: 'es',
+        headline: 'Ejecutar modelos 70B en 24 GB de VRAM: guía completa 2026',
+        description: 'Ejecutar modelos 70B en 24 GB de VRAM 2026: cuantización (Q4_K_M), offloading, división de capas. Técnicas con compromisos y datos de rendimiento.',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-19',
+        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Advanced',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+        about: [
+          { '@type': 'Thing', name: 'Llama 3.1' },
+          { '@type': 'Thing', name: 'modelos 70B' },
+          { '@type': 'Thing', name: 'optimización de VRAM' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Ollama' },
+          { '@type': 'SoftwareApplication', name: 'llama.cpp' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Realmente puedo ejecutar un modelo 70B en una sola RTX 4090?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sí, pero con advertencias importantes. Con cuantización Q2 (17,5 GB), el modelo cabe en 24 GB de VRAM pero funciona a 5-8 tokens/seg y tiene ~70% de la calidad FP16. Con Q4 (35 GB), necesitas descargar 11 GB a la RAM del sistema, reduciendo la velocidad a 1-3 tokens/seg. Ninguna opción es adecuada para el chat en tiempo real.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué cuantización se necesita para que 70B quepa en 24 GB de VRAM?',
+            acceptedAnswer: { '@type': 'Answer', text: 'La cuantización Q2 cabe en 24 GB (17,5 GB de tamaño de modelo). Q3 (26 GB) requiere 2 GB de offloading de RAM. Q4 (35 GB) requiere 11 GB de offloading y hace que la inferencia sea muy lenta. Q5 y superiores no pueden caber incluso con offloading. Q2 es la única opción que funciona completamente en VRAM.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué tan lento es un modelo 70B en 24 GB de VRAM?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Con Q2 (completamente en VRAM): 5-8 tokens/seg. Con Q3 y 2 GB de offload de RAM: 3-5 tokens/seg. Con Q4 y 11 GB de offload de RAM: 1-3 tokens/seg. Un modelo 13B en Q5 en la misma GPU funciona a 80-100 tokens/seg — 10-20× más rápido.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es mejor usar un modelo 13B que un 70B restringido?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Para la mayoría de las tareas, sí. Un modelo 13B en Q5 funciona a 80-100 tokens/seg en una RTX 4090. Un modelo 70B en Q2 funciona a 5-8 tokens/seg con calidad degradada. El 13B gana en velocidad y a menudo en calidad práctica. Solo usa 70B-en-24GB si necesitas capacidades específicas del 70B y puedes tolerar un uso exclusivamente por lotes.' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'es',
+        name: 'Técnicas para ejecutar modelos 70B en 24 GB de VRAM',
+        numberOfItems: 3,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Cuantización Q2 (17,5 GB)', description: 'Cabe completamente en 24 GB de VRAM. Calidad: ~70% de FP16. Velocidad: 5-8 tokens/seg.' },
+          { '@type': 'ListItem', position: 2, name: 'Q4 + offloading de CPU (11 GB descargados)', description: 'Mejor calidad pero muy lento: 1-3 tokens/seg. Adecuado solo para lotes nocturnos.' },
+          { '@type': 'ListItem', position: 3, name: 'División de capas (2× RTX 4090)', description: 'Mejor opción: 48 GB en total, ejecuta Q5 a ~100 tokens/seg. Recomendado sobre la restricción de una sola GPU.' },
+        ],
+      },
+    },
   };

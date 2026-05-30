@@ -241,6 +241,218 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'annual',
+      theme: 'GPU Buying Guides',
+      title: 'GPUs de segunda mano para LLMs locales: Las mejores opciones por precio',
+      seoTitle: 'Mejores GPUs de segunda mano para LLMs locales: Guía de compra RTX 3060, 3080, 4090',
+      intro: '**Las GPUs de segunda mano ofrecen un ahorro del 30-50% frente a las nuevas, con un riesgo de rendimiento mínimo en modelos de probada fiabilidad como la RTX 3060 12GB y la RTX 3080.** En abril de 2026, el mercado de segunda mano está inundado de tarjetas ex-minería y ex-gaming a precios estables. Comprar de segunda mano tiene sentido para tu primer equipo o al actualizar; las tarjetas de minería son arriesgadas a menos que puedas probarlas in situ.',
+      metaDescription: 'Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**Las GPUs de segunda mano ofrecen un ahorro del 30-50% frente a las nuevas, con un riesgo mínimo en modelos como la RTX 3060 12GB y la RTX 3080. En abril de 2026, el mercado de segunda mano está inundado de tarjetas ex-minería y ex-gaming a precios estables.**',
+      audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo de LLMs locales',
+      readTime: '8 min de lectura',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'GPU de segunda mano',
+      toc: [
+        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: '¿Qué GPUs de segunda mano son más seguras?', anchor: '#safest-cards' },
+        { label: '¿Cuánto deberías pagar por una GPU de segunda mano?', anchor: '#pricing' },
+        { label: 'Tarjetas de minería vs. tarjetas gaming: ¿cuál es la diferencia?', anchor: '#mining-vs-gaming' },
+        { label: '¿Dónde comprar GPUs de segunda mano?', anchor: '#where-to-buy' },
+        { label: '¿Cómo probar una GPU de segunda mano antes de comprar?', anchor: '#testing' },
+        { label: 'Errores frecuentes al comprar GPUs de segunda mano', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'La RTX 3060 12GB de segunda mano ($200-250) y la RTX 3080 10GB de segunda mano ($350-400) son las apuestas más seguras: alto volumen en el mercado, precios estables y VRAM de salud comprobada.',
+            'Las tarjetas de minería son un 30% más baratas, pero presentan un riesgo de degradación del VRAM del 10-20%. Cómprala solo si puedes hacer una prueba de estrés in situ durante 2 horas o más.',
+            'Las tarjetas gaming (ventas de equipos ex-gaming) son más seguras que las de minería. El gaming casual no estresa el VRAM como la minería 24/7.',
+            'eBay con protección al comprador, Facebook Marketplace con prueba in situ y Craigslist (solo local, prueba en persona) son tus mejores fuentes.',
+            'Antes de cerrar la compra, ejecuta MemtestG80 (prueba de memoria GPU) durante 1-2 horas. La VRAM defectuosa se detecta de inmediato.',
+            'Descuenta un 5-10% del precio en tarjetas de historial desconocido. Si una oferta parece demasiado buena, la tarjeta probablemente tiene problemas.',
+            'Evita las tarjetas ex-servidor/centro de datos (RTX A100, L40S) a menos que estés seguro de su estado: funcionan a altas temperaturas y pueden tener daños por limitación térmica.',
+          ],
+        },
+        'safest-cards': {
+          id: 'safest-cards',
+          title: '¿Qué GPUs de segunda mano son más seguras?',
+          items: [
+            '**RTX 3060 12GB** ($200-250): Gran volumen en el mercado de segunda mano. VRAM fiable. La arquitectura más antigua implica menos fallos. Elección segura.',
+            '**RTX 3080 10GB** ($350-400): Tarjeta gaming popular. Historial sólido de VRAM. 10GB es usable (ajustado para algunos modelos 70B). Segura.',
+            '**RTX 4090 24GB** ($1,000-1,300): Precio premium, pero alto volumen de reventa = datos sobre tasas de fallo. Fallos de VRAM poco frecuentes. Segura si el precio es correcto.',
+            '**RTX 3090 24GB** ($400-600): Alta gama, cara, proporcionalmente menos fallos. Buena opción si encuentras una por menos de $500.',
+          ],
+        },
+        'pricing': {
+          id: 'pricing',
+          title: '¿Cuánto deberías pagar por una GPU de segunda mano?',
+          content: [
+            '**Referencia: MSRP de venta al por menor vs.** mercado de segunda mano (abril 2026).',
+          ],
+          items: [
+            'RTX 3060 12GB: MSRP $329 → Segunda mano $200-250 (39-62% de descuento)',
+            'RTX 3080 10GB: MSRP $699 → Segunda mano $350-400 (50-55% de descuento)',
+            'RTX 4090 24GB: MSRP $1,499 → Segunda mano $1,000-1,300 (13-33% de descuento, menos descuento por ser más reciente)',
+          ],
+        },
+        'mining-vs-gaming': {
+          id: 'mining-vs-gaming',
+          title: 'Tarjetas de minería vs. tarjetas gaming: ¿cuál es la diferencia?',
+          content: [
+            '**Tarjetas de minería**: funcionaron 24/7 durante 1-3 años a plena carga de cómputo. El estrés por ciclos térmicos es brutal para el VRAM. Existe un 10-20% de posibilidades de errores de VRAM en la actualidad.',
+            '**Tarjetas gaming**: funcionaron de forma intermitente (4-8 h/día) con carga variable. Menos estrés. El VRAM dura más. Más seguras.',
+            'Visualmente: las tarjetas de minería suelen mostrar signos de uso intenso (polvo, daños térmicos, etiquetas despegadas). Las tarjetas gaming tienen mejor aspecto.',
+            'Precio: las tarjetas de minería son $50-100 más baratas por el mismo modelo. No merece la pena el riesgo a menos que las pruebes in situ.',
+          ],
+        },
+        'where-to-buy': {
+          id: 'where-to-buy',
+          title: '¿Dónde comprar GPUs de segunda mano?',
+          items: [
+            '**eBay**: mejor protección al comprador. Calificaciones del vendedor visibles. Envío incluido. Posibilidad de devolución si llega defectuosa (DOA). Tarda 1-2 semanas.',
+            '**Facebook Marketplace**: ventas locales, prueba in situ antes del pago. Sin riesgo de envío. Disponibilidad inmediata. Mayor oferta que Craigslist.',
+            '**Craigslist**: precios más bajos. Solo local. Mayor riesgo de estafa. Úsalo solo si puedes quedar en un lugar público seguro y probar de inmediato.',
+            '**Tiendas locales de reparación de ordenadores**: suelen tener inventario de segunda mano. Puedes preguntar por la política de devoluciones. Precios un 10-15% más altos que eBay, pero mayor confianza.',
+          ],
+        },
+        'testing': {
+          id: 'testing',
+          title: '¿Cómo probar una GPU de segunda mano antes de comprar?',
+          content: [
+            '**1. Inspección visual: comprueba daños físicos, componentes quemados y condensadores con fugas.**',
+            '2. Instala en un sistema de prueba: arranca el sistema operativo, ejecuta GPU-Z. Verifica las velocidades de reloj (deben coincidir con las especificaciones) y las lecturas de temperatura.',
+            '3. Ejecuta MemtestG80 (gratuito): asigna el 90% del VRAM y ejecútalo durante 1-2 horas. La memoria defectuosa aparece como errores.',
+            '4. Ejecuta FurMark (prueba de estrés): 30 minutos a plena carga. La tarjeta no debería bloquearse ni throttlear gravemente.',
+            '5. Comprueba el ancho de banda de la VRAM (CrystalDiskInfo o GPU-Z): compara con las especificaciones. Si es significativamente inferior, puede haber degradación.',
+            'Si compras en eBay/Craigslist, exige que el vendedor realice esta prueba y proporcione capturas de pantalla como evidencia.',
+          ],
+        },
+        'mistakes': {
+          id: 'mistakes',
+          title: 'Errores frecuentes al comprar GPUs de segunda mano',
+          items: [
+            'Comprar una RTX 3080 de minería con "$250 de descuento sobre el MSRP" sin probarla: el VRAM suele estar degradado y muestra errores bajo carga.',
+            'Asumir que "como nueva" equivale a VRAM saludable: el aspecto cosmético no equivale a salud de los componentes. Haz siempre una prueba de estrés.',
+            'Pagar el envío de una GPU sin protección al comprador (fuera de eBay): si llega defectuosa, no tienes recurso.',
+          ],
+        },
+        'faqSection': {
+          id: 'faq',
+          title: 'FAQ',
+          faqs: [
+            { q: '¿Merece la pena comprar una GPU de minería de segunda mano con gran descuento?', a: 'Solo si puedes probarla in situ durante 2 horas o más con MemtestG80. De lo contrario, no. El descuento ($50-100) no compensa el 20% de riesgo de fallo.' },
+            { q: '¿Cómo puedo saber si una GPU de segunda mano fue una tarjeta de minería?', a: 'En muchos casos no es posible determinarlo solo por las fotos. Pregunta al vendedor. Busca daños térmicos (decoloración cerca de los condensadores) o polvo excesivo. Si la usaron para minar, pide la dirección del pool de minería.' },
+            { q: '¿Cuál es la generación RTX más antigua que debería comprar de segunda mano?', a: 'La serie RTX 2000 (2060, 2080) es muy antigua (2018). Cómprala solo por menos de $80. La serie RTX 3000 (2020-2021) es el punto de partida seguro.' },
+            { q: '¿Debería comprar una RTX 4070 o una RTX 3080 de segunda mano?', a: 'La RTX 3080 (10GB, $350-400 de segunda mano) ofrece mejor relación calidad-precio para LLMs locales que la 4070 (12GB, $450-550 de segunda mano). La 4070 es más reciente, pero solo es un 15% más rápida.' },
+            { q: '¿Puedo devolver una GPU de segunda mano en eBay si falla al mes?', a: 'Depende de la política del vendedor. La mayoría permite devoluciones en 14 días. Después de 30 días, eres responsable a menos que haya un defecto de fabricación (raro en tarjetas de segunda mano).' },
+            { q: '¿Vale la pena pagar un 20% más por una GPU con protección de devolución?', a: 'Sí. Cuesta unos $30-50 en una GPU de $250, pero te protege de perder $250 si la tarjeta falla después de la compra.' },
+            { q: '¿Debería comprar una RTX 3090 o una RTX 4090 de segunda mano?', a: 'La RTX 4090 si te lo puedes permitir ($1,000-1,300). Mejor eficiencia energética, arquitectura más reciente. La RTX 3090 es excesiva para modelos de 7B y no es mucho más barata de segunda mano ($500-600).' },
+          ],
+        },
+        'relatedReading': {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm)',
+            '[RTX 5090 vs RTX 4090](/es/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms)',
+            '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026)',
+          ],
+        },
+        'sources': {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            'Historial de precios de GPUs en eBay y datos del mercado (abril 2026)',
+            'Documentación de MemtestG80 y herramientas de prueba de estrés de GPU para validación de VRAM',
+            'Base de datos de especificaciones GPU-Z para valores de referencia térmicos y de velocidad de reloj',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Mejores GPUs de segunda mano para LLMs locales: Guía de compra RTX 3060, 3080, 4090',
+        'description': 'Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.',
+        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'GPUs de segunda mano' },
+          { '@type': 'Thing', 'name': 'Guía de compra de GPU' },
+          { '@type': 'Thing', 'name': 'Prueba de GPU' },
+          { '@type': 'Thing', 'name': 'Inferencia local de LLM' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Intermediate',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Merece la pena comprar una GPU de minería de segunda mano con gran descuento?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Solo si puedes probarla in situ durante 2 horas o más con MemtestG80. De lo contrario, no. El descuento ($50-100) no compensa el 20% de riesgo de fallo.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo puedo saber si una GPU de segunda mano fue una tarjeta de minería?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'En muchos casos no es posible determinarlo solo por las fotos. Pregunta al vendedor. Busca daños térmicos (decoloración cerca de los condensadores) o polvo excesivo. Si la usaron para minar, pide la dirección del pool de minería.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la generación RTX más antigua que debería comprar de segunda mano?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'La serie RTX 2000 (2060, 2080) es muy antigua (2018). Cómprala solo por menos de $80. La serie RTX 3000 (2020-2021) es el punto de partida seguro.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debería comprar una RTX 4070 o una RTX 3080 de segunda mano?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'La RTX 3080 (10GB, $350-400 de segunda mano) ofrece mejor relación calidad-precio para LLMs locales que la 4070 (12GB, $450-550 de segunda mano). La 4070 es más reciente, pero solo es un 15% más rápida.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo devolver una GPU de segunda mano en eBay si falla al mes?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Depende de la política del vendedor. La mayoría permite devoluciones en 14 días. Después de 30 días, eres responsable a menos que haya un defecto de fabricación (raro en tarjetas de segunda mano).' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Vale la pena pagar un 20% más por una GPU con protección de devolución?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Cuesta unos $30-50 en una GPU de $250, pero te protege de perder $250 si la tarjeta falla después de la compra.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debería comprar una RTX 3090 o una RTX 4090 de segunda mano?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'La RTX 4090 si te lo puedes permitir ($1,000-1,300). Mejor eficiencia energética, arquitectura más reciente. La RTX 3090 es excesiva para modelos de 7B y no es mucho más barata de segunda mano ($500-600).' }
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
+        'inLanguage': 'es',
+        'name': 'GPUs de segunda mano para LLMs locales: Comparativa de costes y fiabilidad',
+        'itemListElement': [
+          { '@type': 'ListItem', position: 1, name: 'Comparativa de costes: RTX 3060 ($200-250 de segunda mano) vs RTX 3080 ($350-400) vs RTX 4090 ($1,000-1,300): ahorro del 30-50% frente a nueva.' },
+          { '@type': 'ListItem', position: 2, name: 'Datos de fiabilidad: la RTX 3060 12GB y la RTX 3080 10GB tienen alto volumen de reventa y VRAM de salud comprobada. Las tarjetas de minería conllevan un riesgo de fallo del 10-20%.' },
+          { '@type': 'ListItem', position: 3, name: 'Modelos de GPU de segunda mano recomendados: RTX 3060 12GB (la más segura para empezar), RTX 3080 10GB (VRAM sólida), RTX 4090 24GB (premium, fallos poco frecuentes).' },
+        ],
+      },
+    },
     de: {
       freshness_tier: 'annual',
       theme: 'GPU Buying Guides',

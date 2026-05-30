@@ -296,6 +296,293 @@ print(embedding.data[0].embedding[:5])`,
       ],
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-23',
+    theme: 'Tools & Interfaces',
+    title: 'Xinference: ejecutar Llama 3, Qwen, ChatGLM y Mistral localmente 2026',
+    seoTitle: 'Xinference 2026: Llama 3, Qwen, ChatGLM y Mistral en local',
+    intro: 'Xinference (Xorbits Inference) es un framework de código abierto que permite servir Llama 3, Qwen 2.5, ChatGLM4, Mistral y más de 30 familias de modelos a través de una única API compatible con OpenAI — instalado con un comando pip y lanzado con una sola llamada CLI. A diferencia de Ollama, orientado a la comodidad del usuario final, Xinference está diseñado para equipos que necesitan servicio multi-modelo, soporte de clústeres GPU y embeddings/reranking junto a la inferencia LLM. Esta guía cubre las familias de modelos compatibles, la instalación, los comandos de lanzamiento por modelo y cómo Xinference se compara con Ollama y vLLM.',
+    metaDescription: 'Xinference soporta Llama 3, Qwen 2.5, ChatGLM4 y Mistral de forma nativa. pip install, xi launch — API compatible con OpenAI disponible en localhost:9997.',
+    publishDate: '2026-05-23',
+    dateModified: '2026-05-23',
+    readTime: '10 min de lectura',
+    educationalLevel: 'Intermediate',
+    audience: 'Desarrolladores e ingenieros de ML que necesitan un servidor de inferencia multi-modelo local que gestione Llama 3, Qwen, ChatGLM, Mistral y modelos de embeddings a través de una API compatible con OpenAI unificada',
+    primaryTerm: 'modelos compatibles con Xinference',
+    targetKeywords: [
+      'modelos compatibles xinference',
+      'xinference llama 3 qwen chatglm mistral',
+      'guía configuración xinference 2026',
+      'xinference vs ollama',
+      'ejecutar múltiples llm localmente xinference',
+      'xinference api compatible openai',
+    ],
+    current_models_mentioned: [
+      'Llama 3.1 8B Instruct',
+      'Llama 3.1 70B Instruct',
+      'Qwen 2.5 7B Instruct',
+      'Qwen 2.5 72B Instruct',
+      'ChatGLM4 9B',
+      'Mistral 7B Instruct v0.3',
+      'Mixtral 8x7B Instruct',
+    ],
+    current_hardware_mentioned: ['5 GB VRAM', '6 GB VRAM', '7 GB VRAM', '16 GB VRAM', '40 GB VRAM'],
+    leadAnswerBlock: '**Instala Xinference con `pip install "xinference[all]"`, inícialo con `xinference-local` y luego ejecuta `xinference launch --model-name llama-3.1-instruct --model-engine transformers --model-size-in-billions 8`.** Xinference soporta de forma nativa Llama 3, Qwen 2.5, ChatGLM4, Mistral y más de 30 familias — todos servidos a través de una API compatible con OpenAI en localhost:9997.',
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué modelos soporta Xinference?',
+        answer: 'Xinference soporta de forma nativa Llama 3.1 (8B y 70B), Qwen 2.5 (0,5B a 72B), ChatGLM4 (9B), Mistral 7B v0.3, Mixtral 8x7B y más de 30 familias adicionales. Cada modelo se lanza con un único comando `xinference launch` y se sirve a través de una API REST compatible con OpenAI en localhost:9997.',
+        bullets: [
+          'Instalación: `pip install "xinference[all]"` — incluye backends CUDA, llama.cpp y transformers',
+          'Iniciar servidor: `xinference-local` — la interfaz web se abre en http://localhost:9997',
+          'Lanzar modelo: `xinference launch --model-name llama-3.1-instruct --model-engine transformers --model-size-in-billions 8`',
+          'Endpoint de la API: `http://localhost:9997/v1` — reemplazo directo para cualquier cliente de la API de OpenAI',
+        ],
+        updatedDate: '2026-05-23',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        title: 'Puntos clave',
+        isTldr: true,
+        items: [
+          '**Xinference sirve más de 30 familias de modelos a través de una única API** — Llama 3, Qwen 2.5, ChatGLM4, Mistral, modelos de embeddings y rerankers comparten el mismo endpoint en localhost:9997/v1.',
+          '**Un pip install, un comando CLI** — `pip install "xinference[all]"` y luego `xinference-local` inicia el servidor con interfaz web; `xinference launch --model-name <nombre>` despliega cualquier modelo.',
+          '**Tres backends seleccionables** — `transformers` (GPU, precisión completa), `llama.cpp` (CPU + GGUF cuantizado, sin GPU), `vllm` (alto rendimiento, multi-GPU). Configurable por modelo.',
+          '**Qwen 2.5 y ChatGLM4 son las mejores opciones de Xinference para tareas CJK** — ambos funcionan con ~6–7 GB de VRAM y superan a modelos equivalentes solo en inglés en benchmarks de chino y japonés.',
+          '**Elige Xinference sobre Ollama cuando necesites servicio multi-modelo, embedding + reranking o soporte de clúster GPU** — Ollama es superior para la simplicidad de escritorio de un solo usuario.',
+        ],
+      },
+      whatIs: {
+        id: 'what-is-xinference',
+        title: 'Qué es Xinference y cómo funciona',
+        content: 'Xinference (github.com/xorbitsai/inference) es un framework de código abierto para servir modelos LLM y multimodales, desarrollado por Xorbits. Comenzó como una plataforma de inferencia empresarial para clústeres distribuidos y fue publicado como código abierto en 2023. La idea central: registras un modelo por nombre, Xinference descarga los pesos, selecciona el backend adecuado y expone una API REST. Nunca tienes que tocar el código de carga de modelos directamente.',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Xinference es un servidor de inferencia de código abierto que soporta de forma nativa Llama 3, Qwen 2.5, ChatGLM4, Mistral y más de 30 familias de modelos a través de una única API compatible con OpenAI.' },
+          { type: 'plain-terms', text: 'Piensa en Xinference como una centralita para modelos de IA locales. Le dices qué modelo cargar por nombre, lo descarga y lo inicia, y tu aplicación se comunica con él de la misma forma que con la API de OpenAI — sin cambios de código.' },
+        ],
+        items: [
+          '**Registro de modelos**: más de 200 modelos preregistrados. Los referencias por nombre (`llama-3.1-instruct`, `qwen2.5-instruct`, `chatglm4`) en lugar de gestionar rutas de pesos manualmente.',
+          '**Abstracción de backend**: un comando cambia entre los backends transformers, llama.cpp y vLLM — la misma API independientemente del backend.',
+          '**Concurrencia multi-modelo**: ejecuta Llama 3 para generación de texto y un modelo de embedding BGE para RAG simultáneamente en la misma GPU.',
+          '**Interfaz web**: un dashboard React en localhost:9997 te permite lanzar, inspeccionar y terminar modelos sin escribir código.',
+          '**Modo clúster**: una arquitectura supervisor + trabajadores escala a través de múltiples nodos GPU mediante `xinference start --host 0.0.0.0` en los trabajadores.',
+        ],
+      },
+      supportedModels: {
+        id: 'supported-model-families',
+        title: 'Familias de modelos compatibles: Llama 3, Qwen, ChatGLM, Mistral',
+        content: 'La tabla siguiente muestra las siete configuraciones de modelos más solicitadas en Xinference y la VRAM mínima requerida para cada una. Las siete comparten el mismo patrón de comando de lanzamiento — solo cambian `--model-name`, `--model-size-in-billions` y opcionalmente `--quantization`.',
+        columns: ['Modelo', 'Familia', 'VRAM (Q4)', 'Mejor backend', 'Mejor para'],
+        rows: [
+          { 'Modelo': 'llama-3.1-instruct 8B', 'Familia': 'Meta', 'VRAM (Q4)': '~6 GB', 'Mejor backend': 'transformers / llama.cpp', 'Mejor para': 'Uso general en inglés' },
+          { 'Modelo': 'llama-3.1-instruct 70B', 'Familia': 'Meta', 'VRAM (Q4)': '~40 GB', 'Mejor backend': 'vLLM', 'Mejor para': 'Salida en inglés de alta calidad' },
+          { 'Modelo': 'qwen2.5-instruct 7B', 'Familia': 'Alibaba', 'VRAM (Q4)': '~6 GB', 'Mejor backend': 'transformers / llama.cpp', 'Mejor para': 'Multilingüe, CJK, programación' },
+          { 'Modelo': 'qwen2.5-instruct 72B', 'Familia': 'Alibaba', 'VRAM (Q4)': '~40 GB', 'Mejor backend': 'vLLM', 'Mejor para': 'Tareas CJK a gran escala' },
+          { 'Modelo': 'chatglm4 9B', 'Familia': 'Zhipu AI', 'VRAM (Q4)': '~7 GB', 'Mejor backend': 'transformers', 'Mejor para': 'Tareas empresariales en chino' },
+          { 'Modelo': 'mistral-instruct-v0.3 7B', 'Familia': 'Mistral AI', 'VRAM (Q4)': '~5 GB', 'Mejor backend': 'transformers / llama.cpp', 'Mejor para': 'Idiomas europeos, llamadas a funciones' },
+          { 'Modelo': 'mixtral-instruct-v0.1 8x7B', 'Familia': 'Mistral AI', 'VRAM (Q4)': '~26 GB', 'Mejor backend': 'vLLM', 'Mejor para': 'Multilingüe de alta calidad' },
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Xinference soporta de forma nativa Llama 3.1 (8B/70B), Qwen 2.5 (7B/72B), ChatGLM4 9B, Mistral 7B v0.3 y Mixtral 8x7B — cada uno lanzable con un único comando CLI.' },
+          { type: 'plain-terms', text: 'La VRAM es la memoria de tu GPU. Un modelo que necesita 6 GB de VRAM requiere una GPU con al menos esa cantidad — como una RTX 3060 (12 GB) o RTX 4060 (8 GB). Si tu GPU es más pequeña, usa el backend llama.cpp con cuantización Q4, que reduce el uso de memoria aproximadamente a la mitad.' },
+        ],
+        faqs: [
+          { q: '¿Xinference soporta Llama 3.1?', a: 'Sí. Usa `--model-name llama-3.1-instruct` con `--model-size-in-billions 8` para la variante 8B o `70` para la 70B. Cambia a llama.cpp con `--model-engine llama.cpp` y `--quantization q4_k_m` para CPU o VRAM reducida.' },
+          { q: '¿Xinference soporta Qwen 2.5?', a: 'Sí. Qwen 2.5 Instruct está registrado como `qwen2.5-instruct`. Los tamaños 0,5B, 1,5B, 3B, 7B, 14B, 32B y 72B están disponibles. La variante 7B funciona con ~6 GB de VRAM y gestiona chino, japonés, coreano e inglés con una calidad comparable a Llama 3.1 8B.' },
+          { q: '¿Xinference soporta ChatGLM?', a: 'Sí. ChatGLM3 (`chatglm3`), ChatGLM4 (`chatglm4`) y la variante de visión ChatGLM4-Vision (`chatglm4v`) están todos registrados. ChatGLM4 9B es la opción recomendada para tareas en chino en 2026.' },
+          { q: '¿Xinference soporta Mistral?', a: 'Sí. `mistral-instruct-v0.3` (7B) y `mixtral-instruct-v0.1` (8x7B MoE) están ambos registrados. Para llamadas a funciones y salida JSON, Mistral 7B v0.3 es la mejor opción de modelo pequeño en Xinference.' },
+        ],
+      },
+      install: {
+        id: 'install-xinference',
+        title: 'Instalar Xinference: pip e iniciar el servidor',
+        content: 'Xinference requiere Python 3.9+ y pip. El extra `[all]` instala soporte CUDA, el backend llama.cpp y el backend transformers de una sola vez. En máquinas sin GPU, usa `pip install xinference` (sin `[all]`) y añade `--model-engine llama.cpp` al lanzar modelos.',
+        codeBlock: `# Instalación completa — backends CUDA + transformers + llama.cpp
+pip install "xinference[all]"
+
+# Instalación solo CPU (sin GPU)
+pip install xinference
+
+# Iniciar el servidor local (interfaz web en http://localhost:9997)
+xinference-local
+
+# O vincular a un host específico para acceso por LAN
+xinference-local --host 0.0.0.0 --port 9997`,
+        codeLanguage: 'bash',
+        note: 'El primer inicio no descarga pesos de modelos — solo inicia el servidor Xinference. Los pesos del modelo se descargan en la primera llamada `xinference launch` para cada modelo.',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Instala Xinference con `pip install "xinference[all]"` e inicia el servidor con `xinference-local` — la interfaz web se abre en http://localhost:9997.' },
+        ],
+        faqs: [
+          { q: '¿Xinference necesita una GPU?', a: 'No. Usa el backend llama.cpp (`--model-engine llama.cpp`) para ejecutar modelos GGUF cuantizados completamente en CPU. El rendimiento es más lento que la inferencia con GPU, pero funciona en cualquier máquina con Python 3.9+.' },
+          { q: '¿Cómo actualizo Xinference?', a: 'Ejecuta `pip install --upgrade xinference`. Revisa la página de lanzamientos de GitHub para detectar cambios incompatibles antes de actualizar, especialmente si usas el modo clúster.' },
+        ],
+      },
+      launchModels: {
+        id: 'launch-models',
+        title: 'Lanzar Llama 3, Qwen, ChatGLM y Mistral',
+        content: 'Usa `xinference launch` para desplegar cualquier modelo registrado. El patrón es siempre el mismo: `--model-name` define la familia del modelo, `--model-size-in-billions` el número de parámetros, y `--model-engine` selecciona el backend. Una vez lanzado, Xinference devuelve un UID de modelo que usas en las llamadas a la API.',
+        codeBlock: `# Llama 3.1 8B Instruct (GPU, backend transformers)
+xinference launch \\
+  --model-name llama-3.1-instruct \\
+  --model-engine transformers \\
+  --model-size-in-billions 8
+
+# Llama 3.1 8B Instruct (CPU, cuantización Q4_K_M)
+xinference launch \\
+  --model-name llama-3.1-instruct \\
+  --model-engine llama.cpp \\
+  --model-size-in-billions 8 \\
+  --quantization q4_k_m
+
+# Qwen 2.5 7B Instruct (GPU)
+xinference launch \\
+  --model-name qwen2.5-instruct \\
+  --model-engine transformers \\
+  --model-size-in-billions 7
+
+# ChatGLM4 9B (GPU)
+xinference launch \\
+  --model-name chatglm4 \\
+  --model-engine transformers \\
+  --model-size-in-billions 9
+
+# Mistral 7B Instruct v0.3 (GPU)
+xinference launch \\
+  --model-name mistral-instruct-v0.3 \\
+  --model-engine transformers \\
+  --model-size-in-billions 7
+
+# Mixtral 8x7B Instruct (backend vLLM, requiere 26+ GB VRAM)
+xinference launch \\
+  --model-name mixtral-instruct-v0.1 \\
+  --model-engine vllm \\
+  --model-size-in-billions 46`,
+        codeLanguage: 'bash',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Lanza cualquier modelo de Xinference con `xinference launch --model-name <nombre> --model-engine transformers --model-size-in-billions <tamaño>` — el modelo está disponible en localhost:9997/v1 segundos después de la descarga.' },
+        ],
+        faqs: [
+          { q: '¿Cómo listo todos los modelos que Xinference soporta?', a: 'Ejecuta `xinference registrations --model-type LLM` para ver todas las familias LLM registradas, o abre la interfaz web en http://localhost:9997 y navega por la biblioteca de modelos.' },
+          { q: '¿Puedo ejecutar dos modelos al mismo tiempo en Xinference?', a: 'Sí — ejecuta `xinference launch` dos veces con diferentes nombres de modelo. Cada modelo obtiene su propio UID y endpoint. Tu presupuesto total de VRAM debe cubrir ambos modelos simultáneamente.' },
+        ],
+      },
+      apiUsage: {
+        id: 'openai-compatible-api',
+        title: 'Usar la API compatible con OpenAI',
+        content: 'La API de Xinference es un reemplazo directo de la API de OpenAI. Apunta cualquier cliente de OpenAI a `http://localhost:9997/v1`, establece `api_key` con cualquier cadena no vacía y usa el UID del modelo (devuelto por `xinference launch`) como parámetro `model`. El código existente de LangChain, LlamaIndex o cliente personalizado de OpenAI funciona sin cambios.',
+        codeBlock: `from openai import OpenAI
+
+client = OpenAI(
+    api_key="not-required",   # Xinference accepts any non-empty string
+    base_url="http://localhost:9997/v1"
+)
+
+# Chat completion — works for Llama 3, Qwen, ChatGLM, Mistral
+response = client.chat.completions.create(
+    model="llama-3.1-instruct",   # use the model name as the UID
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Summarise the GDPR in 3 bullet points."}
+    ]
+)
+print(response.choices[0].message.content)
+
+# Embedding model (run a separate xinference launch for bge-base-en-v1.5 first)
+embedding = client.embeddings.create(
+    model="bge-base-en-v1.5",
+    input="Local LLMs preserve data privacy."
+)
+print(embedding.data[0].embedding[:5])`,
+        codeLanguage: 'python',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Conecta cualquier cliente compatible con OpenAI a Xinference configurando base_url en http://localhost:9997/v1 y usando el nombre del modelo como ID de modelo.' },
+          { type: 'plain-terms', text: 'Una API compatible con OpenAI significa que tu código no necesita cambiar. El mismo código Python que llama a GPT-4 puede llamar a Llama 3 a través de Xinference — solo cambias la URL base y el nombre del modelo.' },
+        ],
+        faqs: [
+          { q: '¿Xinference soporta respuestas en streaming?', a: 'Sí. Establece `stream=True` en la llamada `chat.completions.create`. Xinference transmite tokens en tiempo real para todos los backends soportados.' },
+          { q: '¿Puedo usar LangChain con Xinference?', a: 'Sí. Usa `ChatOpenAI(base_url="http://localhost:9997/v1", api_key="x", model="llama-3.1-instruct")` de `langchain_openai`. No se requiere ninguna biblioteca específica de Xinference adicional.' },
+        ],
+      },
+      vsAlternatives: {
+        id: 'xinference-vs-ollama-vllm',
+        title: 'Xinference vs Ollama vs vLLM: cuándo elegir cada uno',
+        content: 'Los tres frameworks de inferencia local más comunes están orientados a perfiles de usuario diferentes. Elige según tu restricción principal.',
+        rows: [
+          { 'Criterio': 'Mejor para', 'Xinference': 'Equipos, multi-modelo, embeddings + LLM', 'Ollama': 'Escritorio de un solo usuario, flujos de trabajo con Modelfile', 'vLLM': 'Servicio GPU de alto rendimiento' },
+          { 'Criterio': '¿Requiere GPU?', 'Xinference': 'No (backend llama.cpp)', 'Ollama': 'No (modo CPU disponible)', 'vLLM': 'Sí (CUDA/ROCm)' },
+          { 'Criterio': 'Cambio de modelos', 'Xinference': 'Múltiples modelos ejecutándose simultáneamente', 'Ollama': 'Un modelo a la vez (swap)', 'vLLM': 'Un modelo por instancia de servidor' },
+          { 'Criterio': 'Soporte de embeddings', 'Xinference': 'Sí (BGE, E5, etc.)', 'Ollama': 'Sí (limitado)', 'vLLM': 'No (servidor de embeddings separado)' },
+          { 'Criterio': 'Interfaz web', 'Xinference': 'Integrada en localhost:9997', 'Ollama': 'Ninguna (usar Open WebUI)', 'vLLM': 'Ninguna' },
+          { 'Criterio': 'Soporte de ChatGLM', 'Xinference': 'Nativo (chatglm4)', 'Ollama': 'Limitado', 'vLLM': 'Limitado' },
+        ],
+        columns: ['Criterio', 'Xinference', 'Ollama', 'vLLM'],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Elige Xinference cuando necesites servir múltiples tipos de modelos simultáneamente (LLM + embeddings + reranker) o soporte nativo de ChatGLM — elige Ollama para la comodidad de escritorio de un solo usuario.' },
+        ],
+        faqs: [
+          { q: '¿Xinference es más difícil de configurar que Ollama?', a: 'Ligeramente. Ollama es una descarga de un único binario; Xinference requiere Python y pip. Pero ambos están listos en menos de 5 minutos. Xinference ofrece un entorno multi-modelo más rico una vez en funcionamiento.' },
+          { q: '¿Puede Xinference reemplazar a vLLM?', a: 'Para el servicio en una sola máquina, sí — Xinference puede usar vLLM como backend (`--model-engine vllm`) y añade una interfaz web y registro de modelos. Para el máximo rendimiento bruto en múltiples nodos GPU, los despliegues dedicados de vLLM siguen siendo más rápidos.' },
+        ],
+      },
+      faqs: {
+        id: 'faqs',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Qué es Xinference?', a: 'Xinference (Xorbits Inference) es un framework de código abierto para servir modelos que ejecuta Llama 3, Qwen, ChatGLM, Mistral y más de 30 familias localmente a través de una API compatible con OpenAI. Soporta despliegues en GPU, CPU (via llama.cpp) y clústeres multi-GPU.' },
+          { q: '¿Qué modelos soporta Xinference en 2026?', a: 'Xinference registra más de 200 configuraciones de modelos. Los más populares en 2026 son Llama 3.1 8B/70B Instruct, Qwen 2.5 7B/72B Instruct, ChatGLM4 9B, Mistral 7B Instruct v0.3 y Mixtral 8x7B Instruct. Ejecuta `xinference registrations --model-type LLM` para ver la lista completa.' },
+          { q: '¿Cómo descarga Xinference los pesos del modelo?', a: 'En el primer `xinference launch` para cada modelo, Xinference descarga los pesos desde Hugging Face o ModelScope (configurable). Los pesos se almacenan en caché localmente, por lo que los lanzamientos posteriores son instantáneos. Establece `XINFERENCE_HOME` para controlar el directorio de caché.' },
+          { q: '¿Xinference funciona en Windows?', a: 'Sí, a través de pip en Python 3.9+. El backend llama.cpp funciona en CPU de Windows sin dependencias adicionales. Para soporte de GPU en Windows, instala CUDA 12.x y el wheel de PyTorch correspondiente antes de instalar Xinference.' },
+          { q: '¿Puedo usar Xinference para RAG?', a: 'Sí. Lanza un modelo de embedding BGE o E5 (`xinference launch --model-name bge-base-en-v1.5 --model-type embedding`) junto a tu LLM. Ambos comparten el mismo endpoint de la API — tu pipeline de RAG llama al endpoint de embedding para indexar y al endpoint de chat para la generación.' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/es/local-llms/xinference-llama-qwen-chatglm-mistral',
+      'inLanguage': 'es',
+      'headline': 'Xinference: ejecutar Llama 3, Qwen, ChatGLM y Mistral localmente 2026',
+      'description': 'Xinference soporta Llama 3, Qwen 2.5, ChatGLM4 y Mistral de forma nativa. pip install, xi launch — API compatible con OpenAI disponible en localhost:9997.',
+      'datePublished': '2026-05-23',
+      'dateModified': '2026-05-23',
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'educationalLevel': 'Intermediate',
+      'about': { '@type': 'SoftwareApplication', 'name': 'Xinference', 'applicationCategory': 'DeveloperApplication' },
+      'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        { '@type': 'Question', 'name': '¿Qué es Xinference?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Xinference (Xorbits Inference) es un framework de código abierto para servir modelos que ejecuta Llama 3, Qwen, ChatGLM, Mistral y más de 30 familias localmente a través de una API compatible con OpenAI.' } },
+        { '@type': 'Question', 'name': '¿Qué modelos soporta Xinference en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Los más populares son Llama 3.1 8B/70B Instruct, Qwen 2.5 7B/72B Instruct, ChatGLM4 9B, Mistral 7B Instruct v0.3 y Mixtral 8x7B Instruct.' } },
+        { '@type': 'Question', 'name': '¿Xinference soporta Llama 3?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Usa --model-name llama-3.1-instruct con --model-size-in-billions 8 para la variante 8B. Cambia a llama.cpp con --quantization q4_k_m para CPU o VRAM reducida.' } },
+        { '@type': 'Question', 'name': '¿Xinference soporta ChatGLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. ChatGLM3, ChatGLM4 y ChatGLM4-Vision están todos registrados. ChatGLM4 9B es la opción recomendada para tareas en chino en 2026.' } },
+        { '@type': 'Question', 'name': '¿Puedo usar Xinference para RAG?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Lanza un modelo de embedding BGE junto a tu LLM — ambos comparten el mismo endpoint de la API en localhost:9997/v1.' } },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': 'Modelos compatibles con Xinference 2026',
+      'description': 'Las siete configuraciones de modelos más solicitadas en Xinference con requisitos de VRAM',
+      'numberOfItems': 7,
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — ~6 GB VRAM (Q4), uso general en inglés' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.1 70B Instruct', 'description': 'Meta — ~40 GB VRAM, salida en inglés de alta calidad via vLLM' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 2.5 7B Instruct', 'description': 'Alibaba — ~6 GB VRAM (Q4), multilingüe, CJK, programación' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 2.5 72B Instruct', 'description': 'Alibaba — ~40 GB VRAM, tareas CJK a gran escala via vLLM' },
+        { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — ~7 GB VRAM, tareas empresariales en chino' },
+        { '@type': 'ListItem', 'position': 6, 'name': 'Mistral 7B Instruct v0.3', 'description': 'Mistral AI — ~5 GB VRAM (Q4), idiomas europeos y llamadas a funciones' },
+        { '@type': 'ListItem', 'position': 7, 'name': 'Mixtral 8x7B Instruct', 'description': 'Mistral AI — ~26 GB VRAM, multilingüe de alta calidad via vLLM' },
+      ],
+    },
+  },
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',

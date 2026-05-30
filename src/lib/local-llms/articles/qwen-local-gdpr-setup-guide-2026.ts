@@ -493,6 +493,139 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    theme: 'Privacy & Security',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    title: 'Cómo configurar Qwen localmente para flujos de trabajo conformes con el RGPD',
+    seoTitle: 'Configuración local de LLM conforme al RGPD con Qwen 2026 | PromptQuorum',
+    metaDescription: 'Guía paso a paso para ejecutar Qwen 2.5 14B localmente con cumplimiento del RGPD: instalación de Ollama, aislamiento de red, cifrado de disco y registro de auditoría del Artículo 30. Actualizado mayo 2026.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    readTime: '9 min de lectura',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'El despliegue local de Qwen satisface los Artículos 44 (sin transferencia a terceros países), 25 (privacidad desde el diseño) y 5(1)(f) (integridad de datos) del RGPD con una sola decisión arquitectónica',
+          'Hardware mínimo: cualquier GPU con 12 GB de VRAM (RTX 3080, RTX 4070 Ti o equivalente) para ejecutar Qwen 2.5 14B en Q4_K_M a través de Ollama',
+          'Pasos de aislamiento críticos: restringir el puerto 11434 de Ollama solo a la LAN mediante firewall, deshabilitar la telemetría y ejecutar en un segmento de red aislado',
+          'Registro de tratamiento del Artículo 30: registrar versión del modelo, cuantización, marca de tiempo de sesión y hash SHA-256 del prompt — nunca el contenido de datos personales en bruto',
+          'Tiempo total de configuración desde un SO limpio hasta la primera inferencia segura según el RGPD: menos de 30 minutos',
+        ],
+      },
+      gdprCase: {
+        id: 'gdpr-case',
+        title: 'Por qué el despliegue local satisface el RGPD',
+        content: [
+          '<strong>Los tres artículos del RGPD más directamente implicados por el uso de la IA son el Artículo 44 (transferencias internacionales de datos), el Artículo 25 (protección de datos desde el diseño) y el Artículo 5(1)(f) (integridad y confidencialidad). El despliegue local de un LLM aborda los tres mediante una única decisión arquitectónica: el modelo se ejecuta en tu hardware, dentro de tu jurisdicción, sin transferencia de datos al exterior.</strong>',
+          'El Artículo 44 es el más difícil de cumplir para la IA en la nube. Cada prompt que contiene datos personales enviado a OpenAI, Anthropic o Alibaba Cloud requiere una base legal para la transferencia — como mínimo Cláusulas Contractuales Estándar, y a menudo también una Evaluación de Impacto de la Transferencia. Cuando la inferencia ocurre localmente, no se produce ninguna transferencia del Artículo 44. La cuestión legal desaparece.',
+          'El Artículo 25 exige que el tratamiento esté diseñado desde el principio para proteger los datos personales. Un modelo local es el ejemplo de manual: por defecto, ningún dato sale del edificio. Los auditores y las autoridades de protección de datos están familiarizados con esta arquitectura.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ejecutar Qwen localmente satisface los Artículos 44, 25 y 5(1)(f) del RGPD mediante una sola decisión arquitectónica: el modelo procesa todos los datos en tu hardware, dentro de tu jurisdicción.' },
+          { type: 'plain-terms', text: 'El RGPD tiene normas estrictas sobre el envío de datos a otros países. Un modelo de IA local mantiene los datos en tus propias máquinas — ningún dato cruza fronteras, por lo que las normas de transferencia internacional simplemente no se aplican.' },
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Requisitos de hardware según el tamaño de la organización',
+        content: [
+          '<strong>Para un solo DPO o analista legal: cualquier GPU con 12 GB de VRAM gestiona Qwen 2.5 14B Q4_K_M a velocidades de inferencia prácticas (~18 tok/s en RTX 3080). Para un equipo de 5 a 10 usuarios compartiendo un servidor central: 24 GB de VRAM (RTX 3090 o RTX 4090) gestiona múltiples solicitudes simultáneas.</strong> El despliegue empresarial multi-usuario requiere configuración multi-GPU, fuera del alcance de esta guía.',
+          'Configuración mínima viable: RTX 3080, RTX 4070 Ti o cualquier GPU con 12 GB de VRAM. Se recomienda GPU dedicada sobre GPU de estación de trabajo compartida. La alternativa por CPU mediante Ollama es posible, pero la velocidad de inferencia cae a ~3 tok/s.',
+        ],
+        columns: ['Tamaño del equipo', 'GPU recomendada', 'Modelo', 'Velocidad esperada'],
+        rows: [
+          { 'Tamaño del equipo': '1 usuario', 'GPU recomendada': 'RTX 3080 (12 GB)', 'Modelo': 'Qwen 2.5 14B Q4', 'Velocidad esperada': '~18 tok/s' },
+          { 'Tamaño del equipo': '2–5 usuarios (cola)', 'GPU recomendada': 'RTX 4070 Ti (12 GB)', 'Modelo': 'Qwen 2.5 14B Q4', 'Velocidad esperada': '~22 tok/s' },
+          { 'Tamaño del equipo': '5–10 usuarios (compartido)', 'GPU recomendada': 'RTX 3090 / 4090 (24 GB)', 'Modelo': 'Qwen 2.5 14B Q5', 'Velocidad esperada': '~28 tok/s' },
+          { 'Tamaño del equipo': 'Equipo de documentos largos', 'GPU recomendada': 'RTX 3090 (24 GB)', 'Modelo': 'Llama 4 Scout (10M ctx)', 'Velocidad esperada': '~15 tok/s' },
+        ],
+      },
+      ollamaInstall: {
+        id: 'ollama-install',
+        title: 'Instalación de Ollama — paso a paso',
+        content: ['<strong>Instala Ollama en Linux, macOS o Windows. Descarga Qwen 2.5 14B una sola vez por HTTPS. A partir de ese momento, la inferencia es completamente sin conexión.</strong>'],
+        numberedItems: [
+          {
+            title: 'Instalar Ollama',
+            whyItMatters: 'Instalación en una línea en Linux: <code>curl -fsSL https://ollama.com/install.sh | sh</code>. macOS: descarga el .app desde ollama.com. Windows: descarga el instalador .exe. Verificación: <code>ollama --version</code> debe devolver un número de versión.',
+          },
+          {
+            title: 'Descargar el modelo (descarga única por HTTPS)',
+            whyItMatters: 'Ejecuta <code>ollama pull qwen2.5:14b</code>. Esto descarga ~9 GB desde Hugging Face a través de HTTPS. Esta es la única vez que se requiere acceso a red externa. En entornos con air-gap: descarga en una máquina conectada, transfiere el archivo GGUF por USB e impórtalo con <code>ollama create qwen2.5:14b --from /ruta/al/archivo.gguf</code>.',
+          },
+          {
+            title: 'Deshabilitar la telemetría',
+            whyItMatters: 'Crea o edita <code>~/.ollama/config.json</code> y añade: <code>{"telemetry": false}</code>. Ollama no envía tráfico de inferencia al exterior, pero realiza pings de telemetría al iniciar. Deshabilitarla elimina cualquier actividad de red residual del entorno de ejecución.',
+          },
+          {
+            title: 'Probar la inferencia',
+            whyItMatters: 'Ejecuta <code>ollama run qwen2.5:14b</code> e introduce un prompt. Confirma que la respuesta se genera localmente. Usa <code>ss -tnp | grep ollama</code> (Linux) o Wireshark para verificar que no se producen conexiones salientes durante la inferencia.',
+          },
+        ],
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+      },
+      networkIsolation: {
+        id: 'network-isolation',
+        title: 'Aislamiento de red',
+        content: [
+          '<strong>Ollama expone una API HTTP en el puerto 11434 por defecto. Este puerto debe estar restringido únicamente al acceso LAN — nunca expuesto a internet. La inferencia en un servidor Ollama correctamente configurado genera cero tráfico saliente.</strong>',
+          'En Linux con UFW: <code>ufw allow from 192.168.0.0/16 to any port 11434</code> seguido de <code>ufw deny 11434</code>. Para uso local de un solo usuario, vincula Ollama solo a localhost configurando la variable de entorno: <code>OLLAMA_HOST=127.0.0.1 ollama serve</code>.',
+          'Refuerzo adicional: ejecuta Ollama como usuario del sistema sin privilegios de root, restringe el directorio del modelo a ese usuario y audita las conexiones salientes mensualmente mediante <code>conntrack -L | grep ESTABLISHED</code> durante una sesión de inferencia para confirmar que no hay llamadas externas.',
+        ],
+        callouts: [
+          {
+            type: 'important',
+            text: 'Si usas Open WebUI o cualquier frontend accesible desde el navegador para Ollama, asegúrate de que el frontend también esté restringido solo al acceso LAN. El aislamiento de la API de Ollama no es suficiente si el frontend es públicamente accesible.',
+          },
+        ],
+      },
+      diskEncryption: {
+        id: 'disk-encryption',
+        title: 'Cifrado de disco — Artículo 5(1)(f) del RGPD',
+        content: [
+          '<strong>El Artículo 5(1)(f) del RGPD exige que los datos personales se traten con la seguridad adecuada, incluida la protección contra el acceso no autorizado. El cifrado de disco completo garantiza que, si un activo de hardware se pierde o es robado, los archivos del modelo y cualquier dato registrado no puedan ser accedidos.</strong>',
+          'Linux: LUKS2 con dm-crypt es el estándar. Actívalo en el momento de la instalación del SO para mayor cobertura. Para sistemas existentes: <code>cryptsetup</code> puede cifrar particiones específicas. macOS: FileVault está integrado — actívalo en Configuración del Sistema → Privacidad y Seguridad → FileVault. Windows: BitLocker en ediciones Pro/Enterprise.',
+          'Cifra tanto la unidad del SO como cualquier unidad externa utilizada para almacenar archivos del modelo o registros de sesión. Los pesos del modelo Qwen en sí no contienen datos personales, pero cualquier registro de sesión o modelo ajustado debe tratarse como si potencialmente los contuviera.',
+        ],
+      },
+      article30: {
+        id: 'article-30',
+        title: 'Registro de auditoría del Artículo 30 — qué registrar y cómo',
+        content: [
+          '<strong>El Artículo 30 del RGPD exige que las organizaciones mantengan un registro de las actividades de tratamiento que implican datos personales. Para un despliegue de LLM, esto significa documentar: la finalidad del tratamiento, las categorías de datos tratados, las medidas técnicas y organizativas, y los períodos de conservación.</strong>',
+          'Qué registrar por sesión de inferencia: (1) nombre y versión del modelo (p. ej., qwen2.5:14b), (2) nivel de cuantización (Q4_K_M), (3) marca de tiempo de la sesión (ISO 8601), (4) hash SHA-256 del prompt de entrada — no el texto en bruto. El hash permite demostrar consistencia sin retener datos personales. (5) Identificador de usuario (seudónimo) si aplica.',
+          'Qué NO registrar: el texto en bruto del prompt, el texto en bruto de la respuesta, ni ningún dato de identificación personal extraído de la respuesta. El propósito del hash es crear un registro a prueba de manipulaciones sin generar un nuevo problema de retención de datos personales.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Hash del prompt en una línea con Python: <code>import hashlib; hashlib.sha256(prompt.encode()).hexdigest()</code>. Almacena esto junto a los metadatos de la sesión, no el prompt original.',
+          },
+        ],
+        faqs: [
+          {
+            q: '¿Un LLM local requiere una Evaluación de Impacto sobre la Protección de Datos (EIPD)?',
+            a: 'Posiblemente. Se requiere una EIPD cuando el tratamiento es probable que genere un alto riesgo para las personas — por ejemplo, el tratamiento de registros médicos, datos de rendimiento de empleados o documentos legales a gran escala. El umbral de "sistemático y a gran escala" es el desencadenante, no la herramienta de IA en sí. Un solo analista que use Qwen 2.5 14B para revisar contratos probablemente no active la EIPD obligatoria. Una organización sanitaria que procese cientos de registros de pacientes al día probablemente sí.',
+          },
+          {
+            q: '¿Puedo usar Open WebUI con Ollama para el acceso conforme al RGPD?',
+            a: 'Sí, si Open WebUI también está restringido a la LAN. Ejecuta Open WebUI en la misma red aislada que Ollama, vincula su puerto solo a la interfaz interna y habilita la autenticación. Open WebUI admite cuentas de usuario, lo que también proporciona un registro de auditoría a nivel de usuario que se asigna a los requisitos del Artículo 30.',
+          },
+          {
+            q: '¿Qué variante del modelo Qwen es mejor para texto legal y de RR.HH. en idiomas europeos?',
+            a: 'Qwen 2.5 14B Q4_K_M es la base recomendada: fuerte en alemán, francés, italiano, español e inglés en el nivel 14B. Para flujos de trabajo legales con mucho código (p. ej., procesamiento de contratos con cláusulas de código incorporado o datos estructurados), Qwen 2.5 Coder 14B Q4_K_M. Para organizaciones limitadas a 6–8 GB de VRAM, Qwen 3 8B rinde bien con texto multilingüe.',
+          },
+          {
+            q: '¿Necesito un Acuerdo de Encargado del Tratamiento con Ollama?',
+            a: 'No. Ollama es un entorno de ejecución local sin componente de servidor. No procesa datos en tu nombre — los pesos del modelo se ejecutan completamente en tu hardware. No existe ninguna entidad de Ollama actuando como encargado del tratamiento de datos bajo el Artículo 28 del RGPD. No necesitas un acuerdo de encargado del tratamiento.',
+          },
+        ],
+      },
+    },
+  },
   zh: {
     theme: 'Privacy & Security',
     freshness_tier: 'semi_annual',
