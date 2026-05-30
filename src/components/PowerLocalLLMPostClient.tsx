@@ -38,6 +38,9 @@ const SECTION_HEADER_LABELS: Partial<Record<Language, Record<string, string>>> =
   fr: { keyTakeaways: 'Points clés', tableOfContents: 'Sommaire' },
   ja: { keyTakeaways: '重要なポイント', tableOfContents: '目次' },
   zh: { keyTakeaways: '关键要点', tableOfContents: '目录' },
+  es: { keyTakeaways: 'Conclusiones clave', tableOfContents: 'Contenido' },
+  pt: { keyTakeaways: 'Principais conclusões', tableOfContents: 'Conteúdo' },
+  ar: { keyTakeaways: 'النقاط الرئيسية', tableOfContents: 'المحتويات' },
 }
 
 // Post UI translations
@@ -48,6 +51,9 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Par [Hans Kuepper](/about) · Fondateur de PromptQuorum, outil de dispatch multi-modèle · PromptQuorum',
     ja: '[Hans Kuepper](/about) 著 · PromptQuorumの創設者、マルチモデルAIディスパッチツール · PromptQuorum',
     zh: '[Hans Kuepper](/about) 作者 · PromptQuorum创始人，多模型AI调度工具 · PromptQuorum',
+    es: 'Por [Hans Kuepper](/about) · Fundador de PromptQuorum, herramienta de despacho multi-modelo · PromptQuorum',
+    pt: 'Por [Hans Kuepper](/about) · Fundador do PromptQuorum, ferramenta de despacho multi-modelo de IA · PromptQuorum',
+    ar: 'بقلم [Hans Kuepper](/about) · مؤسس PromptQuorum، أداة إرسال الذكاء الاصطناعي متعددة النماذج · PromptQuorum',
   },
   lastUpdated: {
     en: 'Last updated:',
@@ -55,6 +61,9 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Dernière mise à jour:',
     ja: '最終更新:',
     zh: '最后更新:',
+    es: 'Última actualización:',
+    pt: 'Última atualização:',
+    ar: 'آخر تحديث:',
   },
   ctaText: {
     en: 'Compare your local LLM against 25+ cloud models simultaneously with PromptQuorum.',
@@ -62,6 +71,9 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Comparez votre LLM local avec 25+ modèles cloud simultanément avec PromptQuorum.',
     ja: 'PromptQuorumで、ローカルLLMを25以上のクラウドモデルと同時に比較しましょう。',
     zh: '使用PromptQuorum将您的本地LLM与25+个云模型同时进行比较。',
+    es: 'Compara tu LLM local con más de 25 modelos en la nube simultáneamente con PromptQuorum.',
+    pt: 'Compare seu LLM local com mais de 25 modelos na nuvem simultaneamente com o PromptQuorum.',
+    ar: 'قارن نموذج LLM المحلي الخاص بك مع أكثر من 25 نموذجًا سحابيًا في آن واحد باستخدام PromptQuorum.',
   },
   ctaButton: {
     en: 'Try PromptQuorum free →',
@@ -69,6 +81,9 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Essayer PromptQuorum gratuitement →',
     ja: 'PromptQuorumを無料で試す →',
     zh: '免费试用PromptQuorum →',
+    es: 'Prueba PromptQuorum gratis →',
+    pt: 'Experimente o PromptQuorum gratuitamente →',
+    ar: 'جرّب PromptQuorum مجانًا ←',
   },
   backLink: {
     en: '← Back to Power Local LLM',
@@ -76,6 +91,9 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: '← Retour à Power Local LLM',
     ja: '← Power Local LLM に戻る',
     zh: '← 返回 Power Local LLM',
+    es: '← Volver a Power Local LLM',
+    pt: '← Voltar para Power Local LLM',
+    ar: '← العودة إلى Power Local LLM',
   },
   breadcrumbHome: {
     en: 'Home',
@@ -83,6 +101,9 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Accueil',
     ja: 'ホーム',
     zh: '主页',
+    es: 'Inicio',
+    pt: 'Início',
+    ar: 'الرئيسية',
   },
   breadcrumbHub: {
     en: 'Power Local LLM',
@@ -90,6 +111,9 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Power Local LLM',
     ja: 'Power Local LLM',
     zh: 'Power Local LLM',
+    es: 'Power Local LLM',
+    pt: 'Power Local LLM',
+    ar: 'Power Local LLM',
   },
   snippetOneSentence: {
     en: '📍 In One Sentence',
@@ -97,6 +121,9 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: '📍 En une phrase',
     ja: '📍 一文で説明',
     zh: '📍 简单一句话',
+    es: '📍 En una frase',
+    pt: '📍 Em uma frase',
+    ar: '📍 في جملة واحدة',
   },
   snippetPlainTerms: {
     en: '💬 In Plain Terms',
@@ -104,6 +131,9 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: '💬 En termes simples',
     ja: '💬 簡潔に説明',
     zh: '💬 简单来说',
+    es: '💬 En términos simples',
+    pt: '💬 Em termos simples',
+    ar: '💬 بعبارات بسيطة',
   },
 }
 
@@ -114,6 +144,9 @@ const LANGUAGE_TO_LOCALE: Record<string, string> = {
   fr: 'fr-FR',
   ja: 'ja-JP',
   zh: 'zh-CN',
+  es: 'es-ES',
+  pt: 'pt-BR',
+  ar: 'ar-SA',
 }
 
 // Keys must match each article's `theme` string. Colors mirror the hub
@@ -177,6 +210,24 @@ const PRESENTATION_UI: Partial<Record<Language, { heading: string; description: 
     description: '浏览以下幻灯片或下载PDF以供离线参考。',
     savePdf: '下载参考卡（PDF）',
     fallbackDescription: '本文的交互式幻灯片。',
+  },
+  es: {
+    heading: 'Presentación',
+    description: 'Navega por las diapositivas o descárgalas en PDF para consultarlas sin conexión.',
+    savePdf: 'Descargar tarjeta de referencia (PDF)',
+    fallbackDescription: 'Presentación interactiva para este artículo.',
+  },
+  pt: {
+    heading: 'Apresentação',
+    description: 'Navegue pelos slides abaixo ou baixe em PDF para referência offline.',
+    savePdf: 'Baixar cartão de referência (PDF)',
+    fallbackDescription: 'Apresentação interativa para este artigo.',
+  },
+  ar: {
+    heading: 'عرض الشرائح',
+    description: 'تصفح الشرائح أدناه أو قم بتنزيلها بصيغة PDF للرجوع إليها دون اتصال.',
+    savePdf: 'تنزيل البطاقة المرجعية (PDF)',
+    fallbackDescription: 'عرض شرائح تفاعلي لهذا المقال.',
   },
 }
 

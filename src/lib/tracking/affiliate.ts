@@ -113,6 +113,9 @@ export const AFFILIATE_DISCLOSURE: Record<string, string> = {
   fr: 'Cette page contient des liens de référence vers des produits tiers. PromptQuorum n\'est inscrit à aucun programme d\'affiliation — ce sont de simples liens qui ne génèrent aucune commission. Cliquer sur les liens et vos prochaines étapes relèvent entièrement de votre responsabilité. Ces liens ne représentent aucune approbation ou vérification par PromptQuorum.',
   ja: 'このページには参考用の第三者製品へのリンクが含まれています。PromptQuorumはいかなるアフィリエイトプログラムにも参加しておらず、これらはコミッションを得ない単なる参照リンクです。リンクのクリックと次のステップはご自身の責任です。これらのリンクはPromptQuorumによる推奨や検証を表すものではありません。',
   zh: '本页包含指向第三方产品的参考链接。PromptQuorum 未加入任何联盟计划——这些是不产生佣金的普通链接。点击链接和后续步骤由您自行承担责任。这些链接不代表 PromptQuorum 的任何认可或验证。',
+  es: 'Esta página contiene enlaces de referencia a productos de terceros. PromptQuorum no participa en ningún programa de afiliados — son enlaces simples que no generan comisión. Hacer clic en los enlaces y los pasos siguientes son de su entera responsabilidad. Estos enlaces no representan ningún respaldo ni verificación por parte de PromptQuorum.',
+  pt: 'Esta página contém links de referência para produtos de terceiros. O PromptQuorum não está inscrito em nenhum programa de afiliados — são links simples que não geram comissão. Clicar nos links e os próximos passos são de sua inteira responsabilidade. Estes links não representam qualquer endosso ou verificação por parte do PromptQuorum.',
+  ar: 'تحتوي هذه الصفحة على روابط مرجعية لمنتجات طرف ثالث. لا يشارك PromptQuorum في أي برنامج تابع — هذه روابط عادية لا تدر أي عمولة. النقر على الروابط والخطوات التالية تقع على عاتقك بالكامل. لا تمثل هذه الروابط أي تأييد أو تحقق من قِبَل PromptQuorum.',
 }
 
 // Commission wording — use only once real affiliate programs go live.
@@ -122,4 +125,7 @@ export const AFFILIATE_DISCLOSURE_COMMISSION: Record<string, string> = {
   fr: 'Cette page contient des liens produits. Nous pouvons recevoir une commission si vous achetez via ces liens, sans frais supplémentaires pour vous.',
   ja: 'このページには製品リンクが含まれています。これらのリンクを通じてご購入いただいた場合、追加費用なしでコミッションを受け取る場合があります。',
   zh: '本页包含产品链接。如果您通过这些链接购买，我们可能会获得佣金，不会产生额外费用。',
+  es: 'Esta página contiene enlaces a productos. Podemos recibir una comisión si realiza una compra a través de estos enlaces, sin coste adicional para usted.',
+  pt: 'Esta página contém links de produtos. Podemos receber uma comissão se você comprar por meio desses links, sem custo adicional para você.',
+  ar: 'تحتوي هذه الصفحة على روابط منتجات. قد نحصل على عمولة إذا أجريت عملية شراء عبر هذه الروابط، دون أي تكلفة إضافية عليك.',
 }
