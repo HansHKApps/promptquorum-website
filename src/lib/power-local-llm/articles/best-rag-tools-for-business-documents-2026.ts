@@ -225,6 +225,231 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'en',
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'RAG & Document Chat',
+    title: 'Mejores herramientas RAG para documentos empresariales 2026',
+    seoTitle: 'Mejores herramientas RAG para documentos empresariales 2026',
+    metaDescription: 'Compara las mejores herramientas RAG para documentos empresariales en 2026: AnythingLLM, LlamaIndex, PrivateGPT y Cognita probadas con datos reales en PDF, Word y SharePoint.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**AnythingLLM es la mejor herramienta RAG para la mayoría de los equipos empresariales en 2026 — admite PDF, Word, Excel y URLs web sin configuración adicional, funciona completamente en local con Ollama y soporta espacios de trabajo multiusuario sin necesidad de programación.**',
+    quickAnswerTop: {
+      question: '¿Cuál es la mejor herramienta RAG para documentos empresariales?',
+      answer: 'AnythingLLM (gratuito, local) para equipos sin conocimientos de programación; LlamaIndex + Ollama para desarrolladores que necesitan pipelines personalizados. Ambos funcionan sin conexión a internet con total privacidad de documentos.',
+      bullets: [
+        'AnythingLLM: mejor RAG local sin código para equipos',
+        'LlamaIndex: mejor framework orientado a desarrolladores',
+        'PrivateGPT: configuración local más sencilla para un solo usuario',
+        'Cognita: RBAC empresarial y registros de auditoría',
+        'Chroma: mejor base de datos vectorial open source',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'La mejor herramienta RAG para documentos empresariales en 2026 es AnythingLLM para equipos sin código y LlamaIndex para desarrolladores que construyen pipelines personalizados.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'RAG (Retrieval Augmented Generation) conecta tus documentos a un modelo de IA local para que pueda responder preguntas usando tus datos empresariales reales — sin necesidad de nube.',
+      },
+    ],
+    affiliateLinks: [
+      {
+        productName: 'AnythingLLM',
+        url: 'https://anythingllm.com',
+        productCategory: 'software',
+      },
+      {
+        productName: 'Minisforum UM890 Pro (servidor RAG local)',
+        url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro',
+        productCategory: 'hardware',
+      },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'AnythingLLM es la mejor herramienta RAG todo en uno para equipos empresariales — sin código, multiusuario, funciona con Ollama en local',
+          'LlamaIndex ofrece a los desarrolladores el mayor control sobre el pipeline con el SDK de Python',
+          'PrivateGPT es la opción más sencilla para usuarios individuales con una carpeta de PDFs',
+          'Cognita añade funciones empresariales: RBAC, registros de auditoría e integraciones con Slack/Teams',
+          'Chroma es la mejor base de datos vectorial independiente si construyes tu propio stack RAG',
+          'Las cinco herramientas funcionan completamente sin conexión — ningún dato de documento sale de tu red',
+        ],
+      },
+      intro: {
+        heading: 'Por qué las herramientas RAG son clave para la seguridad de documentos empresariales',
+        body: 'Las empresas acumulan miles de PDFs, archivos Word, hojas de cálculo y wikis internos. Las herramientas de IA en la nube estándar (ChatGPT, Claude, Gemini) envían esos documentos a servidores externos — un problema para los equipos de legal, finanzas y RRHH que manejan datos sensibles. Las herramientas RAG locales resuelven esto ejecutando todo el pipeline — ingesta de documentos, embeddings, búsqueda vectorial e inferencia del LLM — en tu propio hardware. Tus documentos nunca salen del edificio.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Las herramientas RAG locales te permiten consultar documentos empresariales con IA sin enviar datos a servidores externos.',
+          },
+        ],
+      },
+      comparison: {
+        heading: 'Comparativa de herramientas RAG: funcionalidades de un vistazo',
+        body: 'La siguiente tabla compara las cinco herramientas en las características más relevantes para el despliegue empresarial.',
+        tableData: {
+          headers: ['Herramienta', 'Interfaz sin código', 'Multiusuario', 'LLM local', 'Tipos de archivo', 'Licencia'],
+          rows: [
+            ['AnythingLLM', 'Sí', 'Sí (espacios de trabajo)', 'Ollama, LM Studio', 'PDF, DOCX, XLSX, CSV, URL, YouTube', 'MIT'],
+            ['LlamaIndex', 'No (SDK Python)', 'Personalizable', 'Ollama, llama.cpp', 'Cualquiera (con loaders)', 'MIT'],
+            ['PrivateGPT', 'Interfaz básica', 'No', 'Ollama, llama.cpp', 'PDF, DOCX, TXT', 'Apache 2.0'],
+            ['Cognita', 'Sí', 'Sí (RBAC)', 'Ollama, Bedrock', 'PDF, DOCX, HTML, S3', 'Apache 2.0'],
+            ['Chroma', 'No (API)', 'Sí (modo servidor)', 'Cualquiera', 'Cualquiera (con cliente)', 'Apache 2.0'],
+          ],
+        },
+      },
+      anythingllm: {
+        heading: 'AnythingLLM — La mejor opción para equipos empresariales sin código',
+        body: 'AnythingLLM ofrece una plataforma RAG completa con una interfaz web que usuarios no técnicos pueden manejar. Puedes crear espacios de trabajo (uno por departamento, proyecto o cliente), subir documentos y empezar a chatear. Cada espacio de trabajo mantiene su propio índice vectorial, de modo que la biblioteca de NDAs del equipo Legal no interfiere con los documentos de arquitectura de Ingeniería.\n\nAnythingLLM se conecta a Ollama, LM Studio o cualquier API compatible con OpenAI. Para despliegue local, Qwen2.5 14B o Llama 3.1 8B atienden la mayoría de tareas de Q&A sobre documentos empresariales con 16GB de RAM. La edición Enterprise añade SSO, registros de auditoría y modelos de embedding personalizados.\n\n**Instalación:** Un solo comando Docker o descarga de la aplicación de escritorio desde useanything.com. No requiere configuración por línea de comandos.',
+        affiliateLinks: [
+          {
+            productName: 'AnythingLLM',
+            url: 'https://anythingllm.com',
+            productCategory: 'software',
+          },
+        ],
+        pros: ['Sin necesidad de programación', 'Espacios de trabajo multiusuario', 'Soporta más de 25 tipos de documentos', 'App de escritorio y opciones Docker', 'Herramientas de agente integradas (búsqueda web, SQL)'],
+        cons: ['Las funciones Enterprise requieren plan de pago', 'La configuración de chunking requiere ajuste para documentos largos'],
+        verdict: 'La mejor opción para equipos empresariales pequeños y medianos que quieren RAG funcionando hoy sin recursos de ingeniería.',
+      },
+      llamaindex: {
+        heading: 'LlamaIndex — El mejor framework para desarrolladores con pipelines personalizados',
+        body: 'LlamaIndex es el framework de Python más utilizado para construir sistemas RAG en producción. A diferencia de AnythingLLM, no tiene interfaz integrada — en cambio proporciona abstracciones componibles: cargadores de datos, tipos de índice (VectorStore, KnowledgeGraph, Summary), motores de consulta y flujos de trabajo de agentes.\n\nPara la integración con Ollama, instala `llama-index-llms-ollama` y `llama-index-embeddings-ollama`. LlamaIndex soporta Chroma, Qdrant, Weaviate, Pinecone y más de 20 bases de datos vectoriales como backends. El framework gestiona automáticamente las estrategias de chunking, filtrado de metadatos y búsqueda híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("¿Cuáles son los plazos de pago del MSA?")\n```',
+        pros: ['Máxima flexibilidad del pipeline', 'Soporta todas las bases de datos vectoriales principales', 'Nivel de producción con soporte empresarial', 'Comunidad activa (más de 30K estrellas en GitHub)'],
+        cons: ['Requiere conocimientos de Python', 'Sin interfaz integrada', 'Más configuración que las herramientas llave en mano'],
+        verdict: 'La mejor opción para equipos de desarrollo que construyen aplicaciones RAG específicas de dominio y necesitan control detallado sobre el chunking, la recuperación y el re-ranking.',
+      },
+      privategpt: {
+        heading: 'PrivateGPT — La configuración local más sencilla para un solo usuario',
+        body: 'PrivateGPT está dirigido a usuarios individuales que quieren una experiencia simple de "subir PDFs y chatear" sin que ningún dato salga de su máquina. La versión open source gestiona el stack completo: ingesta de documentos, embedding (nomic-embed-text via Ollama), almacenamiento vectorial (Qdrant) e inferencia.\n\nLa configuración lleva menos de 10 minutos: clona el repositorio, ejecuta `make install` y arranca el servidor. La interfaz web en localhost:8001 acepta PDFs y archivos DOCX. PrivateGPT 0.6+ incluye citas de fuentes para que puedas verificar exactamente qué fragmento de documento generó cada respuesta.',
+        pros: ['Completamente offline — sin telemetría', 'Citas de fuentes integradas', 'Configuración sencilla para usuarios individuales', 'Rápido con modelos de 7B'],
+        cons: ['Sin soporte multiusuario', 'Limitado a PDF/DOCX/TXT', 'Interfaz básica'],
+        verdict: 'La mejor opción para profesionales individuales — abogados, investigadores, consultores — que necesitan una herramienta privada de chat con documentos en su portátil.',
+      },
+      cognita: {
+        heading: 'Cognita — RAG empresarial con RBAC',
+        body: 'Cognita (de Truefoundry) está orientado a empresas que necesitan control de acceso basado en roles, registros de auditoría e integraciones con almacenamiento en la nube (S3, Azure Blob, SharePoint). Permite crear colecciones separadas por equipo, con permisos aplicados a nivel de colección.\n\nCognita se integra con Ollama para inferencia local pero también soporta AWS Bedrock y Azure OpenAI para despliegues híbridos. El pipeline de extracción de metadatos procesa PDFs escaneados mediante OCR, lo que lo hace adecuado para contratos digitalizados y documentos históricos.',
+        pros: ['RBAC y registros de auditoría', 'Integración con SharePoint y S3', 'OCR para documentos escaneados', 'Permisos por colección'],
+        cons: ['Configuración más compleja (se recomienda Kubernetes)', 'Comunidad más pequeña que AnythingLLM o LlamaIndex'],
+        verdict: 'La mejor opción para sectores regulados (finanzas, sanidad, legal) que requieren controles de acceso a documentos y registros de auditoría para cumplimiento normativo.',
+      },
+      chroma: {
+        heading: 'Chroma — La mejor base de datos vectorial open source',
+        body: 'Chroma no es una aplicación RAG completa — es una base de datos vectorial open source utilizada como capa de almacenamiento en stacks RAG personalizados. Si estás construyendo tu propio pipeline con LlamaIndex o LangChain, Chroma ofrece una alternativa local rápida a las bases de datos vectoriales alojadas como Pinecone.\n\nChroma almacena embeddings en SQLite (modo embebido) o funciona como servidor HTTP independiente para acceso multicliente. Soporta filtrado de metadatos, de modo que puedes acotar la recuperación a colecciones de documentos específicas o rangos de fechas.',
+        pros: ['Modo embebido ligero', 'Búsqueda por similitud rápida', 'Clientes nativos en Python y JavaScript', 'Gratuito y open source'],
+        cons: ['Sin interfaz integrada', 'Necesita un framework LLM complementario', 'No es una solución RAG completa por sí solo'],
+        verdict: 'La mejor opción como componente de almacenamiento vectorial al construir un stack RAG personalizado con LlamaIndex o LangChain.',
+      },
+      methodology: {
+        heading: 'Cómo evaluamos estas herramientas RAG',
+        body: 'Probamos cada herramienta con un corpus de referencia de 200 documentos empresariales (contratos, facturas, políticas internas, especificaciones técnicas) que totalizan 850 MB. Criterios de evaluación:\n\n- **Precisión de recuperación:** Porcentaje de respuestas correctas en un benchmark de 50 preguntas\n- **Tiempo de configuración:** Tiempo desde cero hasta la primera consulta para un usuario no desarrollador\n- **Calidad del chunking:** Coherencia de los fragmentos recuperados con la configuración predeterminada\n- **Velocidad:** Tiempo de respuesta a consultas en RTX 3090 con Qwen2.5 14B Q4_K_M\n- **Fallos:** Tasa de alucinaciones cuando la respuesta no está en el corpus',
+      },
+      hardwareGuide: {
+        heading: 'Requisitos de hardware para RAG empresarial local',
+        body: 'El RAG local añade sobrecarga de memoria sobre los requisitos base del LLM. La base de datos vectorial y el modelo de embedding consumen RAM adicional.',
+        tableData: {
+          headers: ['Configuración', 'RAM', 'VRAM', 'Caso de uso'],
+          rows: [
+            ['Modelo 7B + 10K docs', '16 GB', '8 GB', 'Un solo usuario, conjunto de documentos pequeño'],
+            ['Modelo 14B + 50K docs', '32 GB', '16 GB', 'Uso en equipo, base de conocimiento departamental'],
+            ['Modelo 32B + 200K docs', '64 GB', '24 GB', 'Empresa, varios departamentos'],
+            ['Mac Mini M4 Pro 48 GB', '48 GB (compartida)', 'N/A', 'Mejor servidor de equipo todo en uno por precio'],
+          ],
+        },
+      },
+      decisionMatrix: {
+        heading: '¿Qué herramienta RAG deberías elegir?',
+        body: '**Elige AnythingLLM si:** Necesitas una solución funcionando hoy sin programación, con soporte para varios miembros del equipo y formatos de documento variados.\n\n**Elige LlamaIndex si:** Eres desarrollador y estás construyendo una aplicación RAG personalizada, necesitas filtrado de metadatos o quieres integrarla con un pipeline de datos existente.\n\n**Elige PrivateGPT si:** Eres un usuario individual con una colección de PDFs y sin servidor que mantener.\n\n**Elige Cognita si:** Tu organización requiere controles de acceso a documentos, registros de auditoría para cumplimiento normativo o soporte de PDFs escaneados.\n\n**Elige Chroma si:** Estás construyendo un stack personalizado y necesitas una base de datos vectorial rápida y gratuita que funcione en local sin cuenta en la nube.',
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Las herramientas RAG funcionan con documentos de SharePoint?',
+            a: 'AnythingLLM y Cognita soportan SharePoint como fuente de datos. LlamaIndex tiene un loader de SharePoint en llama-hub. PrivateGPT y Chroma requieren exportar los documentos manualmente antes de la ingesta.',
+          },
+          {
+            q: '¿Qué modelo de embedding debo usar para documentos empresariales?',
+            a: 'nomic-embed-text (vía Ollama) ofrece la mejor relación precisión-velocidad para documentos empresariales en inglés. Para corpus multilingüe (alemán, francés, chino), usa mxbai-embed-large o multilingual-e5-large.',
+          },
+          {
+            q: '¿Cuántos documentos pueden gestionar estas herramientas?',
+            a: 'AnythingLLM maneja más de 100K documentos con Chroma o Weaviate como backend. PrivateGPT funciona mejor con menos de 10K documentos con su backend SQLite predeterminado. LlamaIndex escala a millones de documentos según la base de datos vectorial elegida.',
+          },
+          {
+            q: '¿Las herramientas RAG funcionan con hojas de cálculo Excel?',
+            a: 'AnythingLLM ingesta archivos XLSX y trata cada hoja como un bloque de contexto separado. LlamaIndex tiene un loader ExcelReader. PrivateGPT solo admite PDF/DOCX/TXT de forma nativa — Excel requiere conversión previa.',
+          },
+          {
+            q: '¿Qué LLM debo usar para RAG empresarial?',
+            a: 'Qwen2.5 14B Q4_K_M es el mejor modelo local para RAG empresarial en 2026 — excelente seguimiento de instrucciones, contexto de 128K, bueno para extracción de datos estructurados. Para 8 GB de VRAM, usa Qwen2.5 7B o Llama 3.1 8B.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Las herramientas RAG funcionan con documentos de SharePoint?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'AnythingLLM y Cognita soportan SharePoint como fuente de datos. LlamaIndex tiene un loader de SharePoint en llama-hub.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Qué modelo de embedding debo usar para documentos empresariales?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'nomic-embed-text (vía Ollama) ofrece la mejor relación precisión-velocidad para documentos empresariales en inglés. Para corpus multilingüe, usa mxbai-embed-large o multilingual-e5-large.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Qué LLM debo usar para RAG empresarial?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Qwen2.5 14B Q4_K_M es el mejor modelo local para RAG empresarial en 2026 — excelente seguimiento de instrucciones, contexto de 128K, bueno para extracción de datos estructurados.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Mejores herramientas RAG para documentos empresariales 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'AnythingLLM', description: 'Mejor plataforma RAG sin código para equipos empresariales' },
+        { '@type': 'ListItem', position: 2, name: 'LlamaIndex', description: 'Mejor framework para desarrolladores con pipelines RAG personalizados' },
+        { '@type': 'ListItem', position: 3, name: 'PrivateGPT', description: 'Chat local con documentos más sencillo para un solo usuario' },
+        { '@type': 'ListItem', position: 4, name: 'Cognita', description: 'Plataforma RAG empresarial con RBAC y registros de auditoría' },
+        { '@type': 'ListItem', position: 5, name: 'Chroma', description: 'Mejor base de datos vectorial open source para stacks personalizados' },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Mejores herramientas RAG para documentos empresariales 2026',
+      description: 'Compara AnythingLLM, LlamaIndex, PrivateGPT, Cognita y Chroma para RAG local en documentos empresariales en 2026.',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-rag-tools-for-business-documents-2026',
+      inLanguage: 'es',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+  },
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
@@ -539,6 +764,232 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
       url: 'https://www.promptquorum.com/zh/power-local-llm/best-rag-tools-for-business-documents-2026', inLanguage: 'zh',
+    },
+  },
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'RAG & Document Chat',
+    title: 'Mejores herramientas RAG para documentos de empresa 2026',
+    seoTitle: 'Mejores herramientas RAG para documentos de empresa 2026',
+    metaDescription: 'Comparativa de las mejores herramientas RAG para documentos empresariales en 2026. AnythingLLM, LlamaIndex, PrivateGPT y Cognita evaluados con PDF, Word y SharePoint reales.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**AnythingLLM es la mejor herramienta RAG para la mayoría de los equipos empresariales en 2026 — gestiona PDF, Word, Excel y URLs de forma nativa, funciona completamente en local con Ollama y admite espacios de trabajo multiusuario sin necesidad de programar.**',
+    quickAnswerTop: {
+      question: '¿Cuál es la mejor herramienta RAG para documentos empresariales?',
+      answer: 'AnythingLLM (gratis, local) para equipos sin conocimientos de programación; LlamaIndex + Ollama para desarrolladores que necesitan pipelines personalizados. Ambas funcionan sin conexión con privacidad total de los documentos.',
+      bullets: [
+        'AnythingLLM: mejor RAG local sin código para equipos',
+        'LlamaIndex: mejor framework orientado a desarrolladores',
+        'PrivateGPT: configuración local más sencilla para un solo usuario',
+        'Cognita: RBAC empresarial y registros de auditoría',
+        'Chroma: mejor base de datos vectorial open source',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'La mejor herramienta RAG para documentos empresariales en 2026 es AnythingLLM para equipos sin código y LlamaIndex para desarrolladores que construyen pipelines personalizados.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'RAG (Retrieval Augmented Generation) conecta tus documentos a un modelo de IA local para que pueda responder preguntas usando tus datos empresariales reales — sin necesidad de nube.',
+      },
+    ],
+    affiliateLinks: [
+      {
+        productName: 'AnythingLLM',
+        url: 'https://anythingllm.com',
+        productCategory: 'software',
+      },
+      {
+        productName: 'Minisforum UM890 Pro (local RAG server)',
+        url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro',
+        productCategory: 'hardware',
+      },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'AnythingLLM es la mejor herramienta RAG todo-en-uno para equipos empresariales — sin código, multiusuario, funciona con Ollama en local',
+          'LlamaIndex ofrece el mayor control sobre el pipeline para desarrolladores con SDK de Python',
+          'PrivateGPT es la opción más sencilla para usuarios individuales con una carpeta de PDFs',
+          'Cognita añade funciones empresariales: RBAC, registros de auditoría, integraciones con Slack/Teams',
+          'Chroma es la mejor base de datos vectorial independiente si construyes tu propio stack RAG',
+          'Las cinco funcionan completamente sin conexión — ningún documento sale de tu red',
+        ],
+      },
+      intro: {
+        heading: 'Por qué las herramientas RAG son clave para la seguridad de documentos empresariales',
+        body: 'Las empresas acumulan miles de PDFs, archivos Word, hojas de cálculo y wikis internos. Las herramientas de IA en la nube habituales (ChatGPT, Claude, Gemini) envían esos documentos a servidores externos — un problema para los equipos legales, financieros y de RRHH que manejan datos sensibles. Las herramientas RAG locales resuelven esto ejecutando todo el pipeline — ingesta de documentos, embedding, búsqueda vectorial e inferencia del LLM — en tu propio hardware. Tus documentos nunca salen del edificio.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Las herramientas RAG locales te permiten consultar documentos empresariales con IA sin enviar datos a servidores externos.',
+          },
+        ],
+      },
+      comparison: {
+        heading: 'Comparativa de herramientas RAG: funciones de un vistazo',
+        body: 'La tabla siguiente compara las cinco herramientas en las funciones más relevantes para el despliegue empresarial.',
+        tableData: {
+          headers: ['Herramienta', 'Interfaz sin código', 'Multiusuario', 'LLM local', 'Tipos de archivo', 'Licencia'],
+          rows: [
+            ['AnythingLLM', 'Sí', 'Sí (espacios de trabajo)', 'Ollama, LM Studio', 'PDF, DOCX, XLSX, CSV, URL, YouTube', 'MIT'],
+            ['LlamaIndex', 'No (SDK Python)', 'Personalizable', 'Ollama, llama.cpp', 'Cualquiera (con loaders)', 'MIT'],
+            ['PrivateGPT', 'Interfaz básica', 'No', 'Ollama, llama.cpp', 'PDF, DOCX, TXT', 'Apache 2.0'],
+            ['Cognita', 'Sí', 'Sí (RBAC)', 'Ollama, Bedrock', 'PDF, DOCX, HTML, S3', 'Apache 2.0'],
+            ['Chroma', 'No (API)', 'Sí (modo servidor)', 'Cualquiera', 'Cualquiera (con cliente)', 'Apache 2.0'],
+          ],
+        },
+      },
+      anythingllm: {
+        heading: 'AnythingLLM — La mejor opción para equipos empresariales sin código',
+        body: 'AnythingLLM proporciona una plataforma RAG completa con una interfaz web que pueden manejar usuarios sin conocimientos técnicos. Puedes crear espacios de trabajo (uno por departamento, proyecto o cliente), añadir documentos y empezar a chatear. Cada espacio de trabajo mantiene su propio índice vectorial, de modo que la biblioteca de NDAs del equipo Legal no se mezcla con la documentación de arquitectura de Ingeniería.\n\nAnythingLLM se conecta a Ollama, LM Studio o cualquier API compatible con OpenAI. Para despliegue local, Qwen2.5 14B o Llama 3.1 8B manejan la mayoría de las consultas sobre documentos empresariales con 16 GB de RAM. La edición Enterprise añade SSO, registros de auditoría y modelos de embedding personalizados.\n\n**Instalación:** un solo comando de Docker o descarga de la app de escritorio desde useanything.com. No requiere configuración por línea de comandos.',
+        affiliateLinks: [
+          {
+            productName: 'AnythingLLM',
+            url: 'https://anythingllm.com',
+            productCategory: 'software',
+          },
+        ],
+        pros: ['No requiere programación', 'Espacios de trabajo multiusuario', 'Más de 25 tipos de documentos compatibles', 'App de escritorio + opción Docker', 'Herramientas de agente integradas (búsqueda web, SQL)'],
+        cons: ['Las funciones Enterprise requieren plan de pago', 'La configuración de chunking necesita ajuste en documentos largos'],
+        verdict: 'Ideal para equipos de pequeñas y medianas empresas que quieren tener RAG funcionando hoy mismo sin recursos de ingeniería.',
+      },
+      llamaindex: {
+        heading: 'LlamaIndex — El mejor framework para desarrolladores con pipelines personalizados',
+        body: 'LlamaIndex es el framework de Python más utilizado para construir sistemas RAG en producción. A diferencia de AnythingLLM, no tiene interfaz propia — en su lugar ofrece abstracciones componibles: cargadores de datos, tipos de índice (VectorStore, KnowledgeGraph, Summary), motores de consulta y flujos de trabajo de agentes.\n\nPara la integración con Ollama, instala `llama-index-llms-ollama` y `llama-index-embeddings-ollama`. LlamaIndex admite Chroma, Qdrant, Weaviate, Pinecone y más de 20 bases de datos vectoriales como backend. El framework gestiona automáticamente las estrategias de chunking, el filtrado de metadatos y la búsqueda híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        pros: ['Máxima flexibilidad en el pipeline', 'Compatible con todas las bases de datos vectoriales principales', 'Nivel de producción con soporte empresarial', 'Comunidad activa (más de 30.000 estrellas en GitHub)'],
+        cons: ['Requiere conocimientos de Python', 'Sin interfaz integrada', 'Más configuración que las herramientas llave en mano'],
+        verdict: 'Ideal para equipos de desarrollo que construyen aplicaciones RAG específicas de dominio y necesitan control detallado sobre chunking, recuperación y re-ranking.',
+      },
+      privategpt: {
+        heading: 'PrivateGPT — La configuración local más sencilla para un solo usuario',
+        body: 'PrivateGPT está orientado a usuarios individuales que quieren una experiencia simple de "subir PDFs y chatear" sin que ningún dato salga de su máquina. La versión open source gestiona el stack completo: ingesta de documentos, embedding (nomic-embed-text vía Ollama), almacenamiento vectorial (Qdrant) e inferencia.\n\nLa configuración lleva menos de 10 minutos: clona el repositorio, ejecuta `make install` e inicia el servidor. La interfaz web en localhost:8001 acepta PDFs y archivos DOCX. PrivateGPT 0.6+ incluye citas de fuentes para que puedas verificar exactamente qué fragmento del documento generó cada respuesta.',
+        pros: ['Completamente sin conexión — sin telemetría', 'Citas de fuentes integradas', 'Configuración sencilla para individuos', 'Rápido con modelos de 7B'],
+        cons: ['Sin soporte multiusuario', 'Limitado a PDF/DOCX/TXT', 'Interfaz básica'],
+        verdict: 'Ideal para profesionales individuales — abogados, investigadores, consultores — que necesitan una herramienta privada de consulta de documentos en su portátil.',
+      },
+      cognita: {
+        heading: 'Cognita — RAG empresarial con RBAC',
+        body: 'Cognita (de Truefoundry) está orientado a empresas que necesitan control de acceso basado en roles, registros de auditoría e integraciones con almacenamiento en la nube (S3, Azure Blob, SharePoint). Permite crear colecciones separadas por equipo, con permisos aplicados a nivel de colección.\n\nCognita se integra con Ollama para inferencia local, pero también admite AWS Bedrock y Azure OpenAI para despliegues híbridos. El pipeline de extracción de metadatos gestiona PDFs escaneados mediante OCR, lo que lo hace apto para contratos digitalizados y documentos históricos.',
+        pros: ['RBAC y registros de auditoría', 'Integración con SharePoint/S3', 'OCR para documentos escaneados', 'Permisos por colección múltiple'],
+        cons: ['Configuración más compleja (se recomienda Kubernetes)', 'Comunidad más pequeña que AnythingLLM o LlamaIndex'],
+        verdict: 'Ideal para sectores regulados (finanzas, sanidad, legal) que requieren controles de acceso a documentos y trazas de auditoría de cumplimiento.',
+      },
+      chroma: {
+        heading: 'Chroma — La mejor base de datos vectorial open source',
+        body: 'Chroma no es una aplicación RAG completa — es una base de datos vectorial open source utilizada como capa de almacenamiento en stacks RAG personalizados. Si estás construyendo tu propio pipeline con LlamaIndex o LangChain, Chroma ofrece una alternativa local rápida a las bases de datos vectoriales en la nube como Pinecone.\n\nChroma almacena embeddings en SQLite (modo embebido) o funciona como servidor HTTP independiente para acceso de múltiples clientes. Admite filtrado por metadatos, por lo que puedes limitar la recuperación a colecciones de documentos o rangos de fechas específicos.',
+        pros: ['Modo embebido ligero', 'Búsqueda de similitud rápida', 'Clientes nativos en Python y JavaScript', 'Gratuito y open source'],
+        cons: ['Sin interfaz integrada', 'Necesita un framework LLM complementario', 'No es una solución RAG completa por sí sola'],
+        verdict: 'Ideal como componente de almacenamiento vectorial al construir un stack RAG personalizado con LlamaIndex o LangChain.',
+      },
+      methodology: {
+        heading: 'Cómo evaluamos estas herramientas RAG',
+        body: 'Pusimos a prueba cada herramienta con un corpus de referencia de 200 documentos empresariales (contratos, facturas, políticas internas, especificaciones técnicas) con un total de 850 MB. Criterios de evaluación:\n\n- **Precisión de recuperación:** Porcentaje de respuestas correctas en un benchmark de 50 preguntas\n- **Tiempo de configuración:** Tiempo desde cero hasta la primera consulta para un usuario sin experiencia técnica\n- **Calidad del chunking:** Coherencia de los fragmentos recuperados con la configuración predeterminada\n- **Velocidad:** Tiempo de respuesta a consultas en RTX 3090 con Qwen2.5 14B Q4_K_M\n- **Modos de fallo:** Tasa de alucinación cuando la respuesta no está en el corpus',
+      },
+      hardwareGuide: {
+        heading: 'Requisitos de hardware para RAG empresarial local',
+        body: 'El RAG local añade sobrecarga de memoria sobre los requisitos base del LLM. Tanto la base de datos vectorial como el modelo de embedding consumen RAM.',
+        tableData: {
+          headers: ['Configuración', 'RAM', 'VRAM', 'Caso de uso'],
+          rows: [
+            ['Modelo 7B + 10.000 docs', '16 GB', '8 GB', 'Usuario individual, conjunto de documentos pequeño'],
+            ['Modelo 14B + 50.000 docs', '32 GB', '16 GB', 'Uso en equipo, base de conocimiento departamental'],
+            ['Modelo 32B + 200.000 docs', '64 GB', '24 GB', 'Empresa, multidepartamental'],
+            ['Mac Mini M4 Pro 48 GB', '48 GB (compartida)', 'N/A', 'Mejor servidor de equipo todo-en-uno por precio'],
+          ],
+        },
+      },
+      decisionMatrix: {
+        heading: '¿Qué herramienta RAG deberías elegir?',
+        body: '**Elige AnythingLLM si:** Necesitas una solución funcional hoy sin programar, con soporte para varios miembros del equipo y diversos formatos de documentos.\n\n**Elige LlamaIndex si:** Eres un desarrollador que construye una aplicación RAG personalizada, necesitas filtrado por metadatos o quieres integrarte con un pipeline de datos existente.\n\n**Elige PrivateGPT si:** Eres un usuario individual con una colección de PDFs y sin servidor que mantener.\n\n**Elige Cognita si:** Tu organización requiere controles de acceso a documentos, registros de auditoría de cumplimiento o soporte para PDFs escaneados.\n\n**Elige Chroma si:** Estás construyendo un stack personalizado y necesitas una base de datos vectorial rápida y gratuita que funcione en local sin cuenta en la nube.',
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Las herramientas RAG funcionan con documentos de SharePoint?',
+            a: 'AnythingLLM y Cognita admiten SharePoint como fuente de datos. LlamaIndex tiene un loader de SharePoint en llama-hub. PrivateGPT y Chroma requieren exportar los documentos manualmente antes de la ingesta.',
+          },
+          {
+            q: '¿Qué modelo de embedding debo usar para documentos empresariales?',
+            a: 'nomic-embed-text (vía Ollama) ofrece la mejor relación precisión-velocidad para documentos empresariales en español. Para corpus multilingüe (alemán, francés, chino), utiliza mxbai-embed-large o multilingual-e5-large.',
+          },
+          {
+            q: '¿Cuántos documentos pueden gestionar estas herramientas?',
+            a: 'AnythingLLM gestiona más de 100.000 documentos con Chroma o Weaviate como backend. PrivateGPT funciona mejor con menos de 10.000 documentos con su backend SQLite predeterminado. LlamaIndex escala a millones de documentos según la base de datos vectorial elegida.',
+          },
+          {
+            q: '¿Las herramientas RAG funcionan con hojas de cálculo Excel?',
+            a: 'AnythingLLM ingesta archivos XLSX y trata cada hoja como un bloque de contexto independiente. LlamaIndex tiene un loader ExcelReader. PrivateGPT solo gestiona PDF/DOCX/TXT de forma nativa — Excel requiere conversión previa.',
+          },
+          {
+            q: '¿Qué LLM debo usar para RAG empresarial?',
+            a: 'Qwen2.5 14B Q4_K_M es el mejor modelo local para RAG empresarial en 2026 — excelente seguimiento de instrucciones, contexto de 128K, bueno en extracción de datos estructurados. Para 8 GB de VRAM, usa Qwen2.5 7B o Llama 3.1 8B.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'es',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Las herramientas RAG funcionan con documentos de SharePoint?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'AnythingLLM y Cognita admiten SharePoint como fuente de datos. LlamaIndex tiene un loader de SharePoint en llama-hub.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Qué modelo de embedding debo usar para documentos empresariales?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'nomic-embed-text (vía Ollama) ofrece la mejor relación precisión-velocidad para documentos empresariales en español. Para corpus multilingüe, utiliza mxbai-embed-large o multilingual-e5-large.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Qué LLM debo usar para RAG empresarial?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Qwen2.5 14B Q4_K_M es el mejor modelo local para RAG empresarial en 2026 — excelente seguimiento de instrucciones, contexto de 128K, bueno en extracción de datos estructurados.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'es',
+      name: 'Mejores herramientas RAG para documentos de empresa 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'AnythingLLM', description: 'Mejor plataforma RAG sin código para equipos empresariales' },
+        { '@type': 'ListItem', position: 2, name: 'LlamaIndex', description: 'Mejor framework para desarrolladores con pipelines RAG personalizados' },
+        { '@type': 'ListItem', position: 3, name: 'PrivateGPT', description: 'Chat de documentos local más sencillo para un solo usuario' },
+        { '@type': 'ListItem', position: 4, name: 'Cognita', description: 'Plataforma RAG empresarial con RBAC y registros de auditoría' },
+        { '@type': 'ListItem', position: 5, name: 'Chroma', description: 'Mejor base de datos vectorial open source para stacks personalizados' },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Mejores herramientas RAG para documentos de empresa 2026',
+      description: 'Compara AnythingLLM, LlamaIndex, PrivateGPT, Cognita y Chroma para RAG local de documentos empresariales en 2026.',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-rag-tools-for-business-documents-2026',
+      inLanguage: 'es',
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
 }

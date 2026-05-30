@@ -1716,4 +1716,482 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Easiest Desktop Apps',
+    title: 'Mejores apps de IA local para PCs de gama baja en 2026 (8 GB RAM, sin GPU)',
+    seoTitle: 'Mejores apps IA local PC 8 GB RAM 2026: probadas solo con CPU',
+    metaDescription:
+      'Ollama, GPT4All, Jan y llama.cpp probados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s, presión de memoria, configuraciones exactas. Mayo 2026.',
+    twitterDescription:
+      '4 apps de IA local que funcionan en portátiles con 8 GB RAM sin GPU. Tokens/s, configuraciones exactas, veredictos honestos. Mayo 2026.',
+    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
+    current_hardware_mentioned: [
+      'Intel UHD 620',
+      'Intel Iris Xe',
+      'AMD Ryzen 5 5500U',
+      'Apple M1 8GB',
+      'Intel Core i5-8250U',
+    ],
+    audience:
+      'Propietarios de portátiles de 4 a 7 años con 8 GB RAM y sin GPU dedicada que eligen su primera app de IA local.',
+    readTime: '11 min de lectura',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'IA local en PC de gama baja',
+    targetKeywords: [
+      'ia local 8gb ram',
+      'mejor llm local pc gama baja',
+      'ia local sin gpu',
+      'llm local solo cpu 2026',
+      'ia local portátil antiguo',
+    ],
+    leadAnswerBlock:
+      '**En un portátil con 8 GB RAM y sin GPU dedicada, cuatro apps funcionan bien en 2026: Ollama, GPT4All, Jan y llama.cpp. Combina cualquiera con Phi-4 Mini Q4 (mejor equilibrio), SmolLM 2 1.7B Q4 (más rápido) o Llama 3.2 1B Q5 (experiencia GUI más fluida) y mantén el conjunto de trabajo por debajo de 6 GB.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué app de IA local funciona mejor en un portátil con 8 GB RAM sin GPU?',
+        answer:
+          'Elige Ollama si te manejas con la terminal — es el runtime más ligero y funciona muy bien con Phi-4 Mini Q4 a 4–8 tok/s en CPUs Intel más antiguas y 8–14 tok/s en hardware de la clase Ryzen 5000 / Intel 12.ª gen. Elige GPT4All si quieres un instalador de un clic y nada de línea de comandos — es la más tolerante con 8 GB RAM e incluye un navegador de modelos integrado. Elige Jan si quieres una GUI limpia y código completamente abierto. Elige llama.cpp directamente si quieres el máximo de tokens por segundo y no te importa compilar.',
+        bullets: [
+          'Ollama — runtime CPU más ligero, basado en terminal, mejor combinación con Phi-4 Mini',
+          'GPT4All — instalación más sencilla, RAM mínima de 4 GB, recomendada para usuarios no técnicos',
+          'Jan — GUI completa, código abierto (AGPL), nativa en Apple Silicon, la opción más ligera en Mac con 8 GB',
+          'llama.cpp — velocidad bare-metal, requiere compilar, mejor combinación con SmolLM 2 / Gemma 3 4B',
+          'Las cuatro son gratuitas, funcionan sin conexión tras instalar y cargan archivos de modelo GGUF estándar',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Tabla comparativa', anchor: '#comparison-table' },
+      { label: '¿Cuál deberías elegir?', anchor: '#which-one' },
+      { label: 'Benchmarks de tokens/s (solo CPU, 8 GB RAM)', anchor: '#cpu-benchmarks' },
+      { label: 'Presión de memoria y throttling térmico', anchor: '#memory-thermals' },
+      { label: 'Mejor modelo por app con 8 GB RAM', anchor: '#best-models' },
+      { label: 'Configuraciones que dan 30–60% más velocidad', anchor: '#settings' },
+      { label: 'Gráficos integrados: ¿vale la pena?', anchor: '#igpu' },
+      { label: 'Errores comunes', anchor: '#mistakes' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/best-local-ai-app-low-end-pc-static.html',
+    gammaDescription: 'La presentación de abajo cubre: Ollama, GPT4All, Jan y llama.cpp probados con 8 GB RAM sin GPU (4–18 tok/s); las configuraciones exactas para un 30–60% más de velocidad (contexto 1024, batch 8, caché KV q8_0); el mejor modelo por app (Phi-4 Mini Q4_K_M, SmolLM 2 1.7B, Gemma 3 4B); y cinco errores comunes que provocan swap fatal. Descarga el PDF como tarjeta de referencia para PCs de gama baja.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Ollama** — runtime CPU más ligero en 2026, funciona como servidor en segundo plano, mejor combinación app + modelo: Ollama + Phi-4 Mini Q4 a 4–14 tok/s en 8 GB solo CPU.',
+          '**GPT4All** — única app con un mínimo de 4 GB RAM e instalación sin terminal, ideal para usuarios no técnicos en portátiles con Windows 10.',
+          '**Jan** — GUI completa, código abierto AGPL, nativa en Apple Silicon, la app GUI más ligera para un MacBook Air de 8 GB o Mac mini M1.',
+          '**llama.cpp** — mayor tokens/s en hardware idéntico (5–15% por encima de Ollama, 15–25% por encima de GPT4All), pero requiere un paso de compilación.',
+          '**Mejor modelo con 8 GB / sin GPU:** Phi-4 Mini 3.8B en Q4_K_M para equilibrio, SmolLM 2 1.7B Q4 para máxima velocidad, Llama 3.2 1B Q5 para la experiencia de chat más fluida.',
+          '**Ranking de velocidad en CPU idéntica:** llama.cpp > Ollama > Jan > GPT4All. La diferencia es del 15–25%, no de 2–3×.',
+          '**A mayo de 2026, no ejecutes modelos de 7B+ en 8 GB RAM** — la presión de la ventana de contexto más el propio sistema operativo activarán el swap y reducirán el throughput entre 5 y 10 veces.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '¿Cómo se comparan Ollama, GPT4All, Jan y llama.cpp en 8 GB RAM sin GPU?',
+        content:
+          'Los rangos a continuación se agregan a partir de hilos de benchmark de llama.cpp upstream, cifras de las fichas de modelos de Hugging Face e informes de pruebas de r/LocalLLaMA en portátiles de 8 GB con gráficos integrados (Intel UHD 620 / Iris Xe / Ryzen 5 5500U Vega / Apple M1 8 GB). Los tokens/s se miden en generaciones de 200 tokens tras cargar el modelo, ventana de contexto por defecto 2048 salvo indicación.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'En un portátil con 8 GB RAM y sin GPU dedicada, Ollama con Phi-4 Mini Q4_K_M es la mejor configuración de IA local para todo uso — la velocidad de generación más rápida entre las opciones sin código, la menor carga térmica y la biblioteca de modelos más amplia.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'En un PC de gama baja con 8 GB RAM y sin GPU: instala Ollama, ejecuta `ollama pull phi4-mini` y luego `ollama run phi4-mini`. Obtendrás entre 4 y 14 tokens por segundo según tu CPU — lento pero usable para tareas donde envías un prompt y esperas la respuesta. Para una alternativa sin terminal, GPT4All se instala como una app normal y filtra su lista de modelos a los que caben en 8 GB.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'El Apple M1 con 8 GB supera sistemáticamente a los portátiles x86 con 8 GB en las cuatro apps de esta tabla. Si tienes acceso a un Mac con Apple Silicon, es el mejor hardware de bajo RAM para IA local — la arquitectura de memoria unificada permite al modelo acceder a los 8 GB completos sin la penalización de overhead del SO que sufren los portátiles con Windows y Linux.',
+          },
+        ],
+        columns: ['App', 'RAM mín.', 'Mejor modelo (límite 8 GB)', 'Tokens/s (solo CPU)', 'Calor', 'Veredicto'],
+        rows: [
+          {
+            'App': 'Ollama',
+            'RAM mín.': '6 GB',
+            'Mejor modelo (límite 8 GB)': 'Phi-4 Mini Q4_K_M',
+            'Tokens/s (solo CPU)': '4–14 tok/s',
+            'Calor': 'Bajo',
+            'Veredicto': 'Mejor equilibrio — primera opción',
+          },
+          {
+            'App': 'GPT4All',
+            'RAM mín.': '4 GB',
+            'Mejor modelo (límite 8 GB)': 'Llama 3.2 1B Q4_0',
+            'Tokens/s (solo CPU)': '3–10 tok/s',
+            'Calor': 'Bajo',
+            'Veredicto': 'Instalación más sencilla — opción no técnica',
+          },
+          {
+            'App': 'Jan',
+            'RAM mín.': '6 GB',
+            'Mejor modelo (límite 8 GB)': 'Gemma 3 4B Q4_K_M',
+            'Tokens/s (solo CPU)': '3–11 tok/s',
+            'Calor': 'Medio',
+            'Veredicto': 'Mejor GUI en Apple Silicon 8 GB',
+          },
+          {
+            'App': 'llama.cpp',
+            'RAM mín.': '4 GB',
+            'Mejor modelo (límite 8 GB)': 'SmolLM 2 1.7B Q4_K_M',
+            'Tokens/s (solo CPU)': '5–18 tok/s',
+            'Calor': 'Bajo',
+            'Veredicto': 'La más rápida si compilas',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: '¿Cuál deberías elegir?',
+        content:
+          '**La app correcta depende de si puedes usar una terminal, si estás en Windows o Mac y cuántos años tiene tu CPU.** Usa este atajo de decisión:',
+        rows: [
+          {
+            'Tu situación': 'Portátil Windows 10, 8 GB RAM, sin experiencia con terminal',
+            'Elige': 'GPT4All',
+          },
+          {
+            'Tu situación': 'Ryzen moderno / Intel 12.ª gen, 8 GB, cómodo con la terminal',
+            'Elige': 'Ollama',
+          },
+          {
+            'Tu situación': 'MacBook Air M1 / Mac mini M1 8 GB',
+            'Elige': 'Jan u Ollama',
+          },
+          {
+            'Tu situación': 'Portátil Linux, quieres el máximo de tokens/s',
+            'Elige': 'llama.cpp',
+          },
+          {
+            'Tu situación': 'Máquina con 4 GB RAM (por debajo de especificaciones)',
+            'Elige': 'GPT4All + Llama 3.2 1B Q4_0',
+          },
+          {
+            'Tu situación': 'CPU antigua de clase Intel Core i5-8250U / i7-7700U',
+            'Elige': 'Ollama + SmolLM 2 1.7B',
+          },
+          {
+            'Tu situación': 'Chromebook con modo desarrollador Linux',
+            'Elige': 'llama.cpp + SmolLM 2',
+          },
+          {
+            'Tu situación': 'Portátil de trabajo donde no puedes instalar drivers',
+            'Elige': 'GPT4All (instalación sin driver / sin derechos de admin)',
+          },
+        ],
+        columns: ['Tu situación', 'Elige'],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ante la duda, empieza con Ollama. Funciona en todos los sistemas operativos, descarga modelos con un sencillo `ollama pull [nombre-del-modelo]` y expone una API compatible con OpenAI si quieres integrar otras herramientas más adelante. Si la terminal es un problema, GPT4All es la alternativa correcta — mismos modelos, sin línea de comandos.',
+          },
+        ],
+      },
+      cpuBenchmarks: {
+        id: 'cpu-benchmarks',
+        title: '¿Qué tan rápida es cada app en hardware de gama baja real?',
+        content:
+          '**Tokens por segundo en máquinas representativas con 8 GB RAM y sin GPU dedicada, mayo 2026.** Los números son rangos reportados por la comunidad en hilos de benchmark de llama.cpp upstream, datos de fichas de modelos de Hugging Face y pruebas con etiquetas de hardware de r/LocalLLaMA. Cada celda es el rango típico de las ejecuciones reportadas con configuración por defecto; se excluyen valores atípicos.',
+        columns: ['Hardware', 'Modelo', 'Ollama', 'GPT4All', 'Jan', 'llama.cpp'],
+        rows: [
+          {
+            'Hardware': 'Intel Core i5-8250U + UHD 620 (ultraportátil 2018)',
+            'Modelo': 'Phi-4 Mini Q4_K_M',
+            'Ollama': '4–6 tok/s',
+            'GPT4All': '3–5 tok/s',
+            'Jan': '3–5 tok/s',
+            'llama.cpp': '5–7 tok/s',
+          },
+          {
+            'Hardware': 'AMD Ryzen 5 5500U + Vega 7 (gama económica 2021)',
+            'Modelo': 'Phi-4 Mini Q4_K_M',
+            'Ollama': '8–11 tok/s',
+            'GPT4All': '6–9 tok/s',
+            'Jan': '7–9 tok/s',
+            'llama.cpp': '9–13 tok/s',
+          },
+          {
+            'Hardware': 'Intel Core Ultra 5 125H + Arc iGPU (gama media 2024)',
+            'Modelo': 'Gemma 3 4B Q4_K_M',
+            'Ollama': '10–14 tok/s',
+            'GPT4All': '8–11 tok/s',
+            'Jan': '9–12 tok/s',
+            'llama.cpp': '12–18 tok/s',
+          },
+          {
+            'Hardware': 'Apple M1 8 GB (MacBook Air 2020)',
+            'Modelo': 'Llama 3.2 1B Q5_K_M',
+            'Ollama': '28–40 tok/s',
+            'GPT4All': '20–30 tok/s',
+            'Jan': '26–38 tok/s',
+            'llama.cpp': '32–48 tok/s',
+          },
+          {
+            'Hardware': 'Apple M1 8 GB',
+            'Modelo': 'Phi-4 Mini Q4_K_M',
+            'Ollama': '12–18 tok/s',
+            'GPT4All': '9–14 tok/s',
+            'Jan': '11–17 tok/s',
+            'llama.cpp': '14–20 tok/s',
+          },
+          {
+            'Hardware': 'Intel Core i5-8250U',
+            'Modelo': 'SmolLM 2 1.7B Q4_K_M',
+            'Ollama': '10–14 tok/s',
+            'GPT4All': '8–12 tok/s',
+            'Jan': '9–13 tok/s',
+            'llama.cpp': '12–16 tok/s',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Apple Silicon domina esta tabla porque la arquitectura de memoria unificada del M1 permite que la GPU y la CPU compartan la misma RAM a alto ancho de banda. En portátiles x86 sin GPU dedicada, los gráficos integrados raramente compensan la penalización de overhead del offload — ver la sección iGPU más abajo.',
+          },
+        ],
+      },
+      memoryThermals: {
+        id: 'memory-thermals',
+        title: '¿Por qué 8 GB RAM se siente tan justo y cuándo empieza a limitarse el portátil?',
+        content:
+          '**Con 8 GB RAM, el sistema operativo ya consume 2,5–3,5 GB antes de cargar cualquier modelo, dejando 4,5–5,5 GB para el modelo y su caché KV.** Ese techo convierte a Phi-4 Mini (3.8B Q4 ≈ 2,4 GB) en el punto óptimo práctico y descarta cualquier modelo de 7B con cualquier cuantización para uso sostenido.',
+        items: [
+          '**Conjunto de trabajo vs RAM del sistema:** El archivo del modelo en disco es más pequeño que su conjunto de trabajo cargado. Phi-4 Mini Q4_K_M ocupa ≈ 2,4 GB en disco pero ≈ 3,0–3,5 GB en RAM una vez añadido el caché KV para un contexto de 2048 tokens. Recortar el contexto a 1024 ahorra ≈ 400 MB.',
+          '**Muerte por swap:** Cuando el conjunto de trabajo supera la RAM física, macOS y Linux comienzan a paginar en el SSD. Los tokens/s caen entre 5 y 10 veces y el portátil se vuelve irresponsivo. Supervisa `vm_stat` (Mac) o `free -h` (Linux) — si el swap sube durante la inferencia, cambia inmediatamente a un modelo más pequeño.',
+          '**Throttling térmico en ultraportátiles:** Los portátiles sin ventilador o de un solo ventilador (MacBook Air M1, XPS 13, Surface Laptop Go) alcanzan los límites térmicos en 3–5 minutos de inferencia sostenida y reducen los relojes de CPU un 20–35%. Los tokens/s caen de manera proporcional.',
+          '**La longitud de contexto es un impuesto de memoria:** El contexto por defecto de 4096 reserva un caché KV de 4096 tokens de antemano. En modelos de 1B son 200–300 MB; en modelos de 4B son 600–900 MB. Recórtalo a 1024 salvo que realmente necesites entradas largas.',
+          '**Las apps en segundo plano importan más que el modelo de CPU:** Una ventana de Chrome con 20 pestañas ocupa 1–2 GB. Slack ocupa 400–600 MB. Con 8 GB RAM, cerrar esas apps antes de cargar un modelo de 4B es la mayor ganancia individual de tokens/s disponible.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'No cargues ningún modelo de 7B en 8 GB RAM, ni siquiera en Q2. Q2 7B ocupa ≈ 2,5 GB en disco, pero el conjunto de trabajo más 2048 de contexto llega a ≈ 5,5 GB, lo que cruza al swap en la mayoría de sistemas Windows / Linux. El resultado es una caída de velocidad de 5–10× y una interfaz congelada.',
+          },
+        ],
+      },
+      bestModels: {
+        id: 'best-models',
+        title: '¿Qué modelo y cuantización deberías cargar en cada app?',
+        content:
+          '**Con 8 GB RAM y sin GPU dedicada, mantente por debajo de 4B parámetros en Q4_K_M o menos.** Q4_K_M es la cuantización estándar en 2026 — pierde ≈ 1% de perplejidad frente a FP16, cabe en la mitad de RAM y es el valor por defecto para la mayoría de builds GGUF en Hugging Face. Listado por app:',
+        items: [
+          '**Ollama:** `ollama pull phi3:mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2,4 GB) es la recomendación por defecto. Para máxima velocidad, `ollama pull smollm2:1.7b` (≈ 1,0 GB). Para mayor calidad de chat, `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0,85 GB).',
+          '**GPT4All:** Usa el navegador de modelos integrado → "Llama 3.2 1B Instruct Q4_0" (≈ 0,7 GB) para la instalación más ligera, o "Phi-4 Mini Q4_K_M" si la RAM lo permite. Los valores por defecto de GPT4All son conservadores, por lo que la lista visible de modelos es más corta que la de llama.cpp, pero cada entrada funciona.',
+          '**Jan:** Usa el catálogo curado → "Gemma 3 4B Instruct Q4_K_M" (≈ 2,6 GB) en Apple Silicon, o "Phi-4 Mini Q4_K_M" en x86. Jan también acepta pegar una URL de Hugging Face para cualquier GGUF.',
+          '**llama.cpp:** Descarga el GGUF directamente de Hugging Face — `bartowski/Phi-4-mini-instruct-GGUF`, `bartowski/SmolLM2-1.7B-Instruct-GGUF` o `bartowski/Llama-3.2-1B-Instruct-GGUF`. Ejecuta con `./llama-cli -m model.gguf -p "..." -c 1024 -t 4`.',
+          '**Evitar con 8 GB / sin GPU:** cualquier modelo de 7B con cualquier cuantización, cualquier modelo por encima de Q5_K_M (ganancia de calidad insignificante, doble coste de RAM) y cualquier modelo base — elige siempre las variantes `-instruct` o `-chat` para obtener una salida usable.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Q4_K_M no es lo mismo que Q4_0. Q4_K_M utiliza un esquema de precisión mixta más inteligente y tiene ≈ 5–10% más calidad con el mismo tamaño. Elige Q4_K_M siempre que ambas opciones estén disponibles.',
+          },
+        ],
+      },
+      settings: {
+        id: 'settings',
+        title: '¿Qué configuraciones dan un 30–60% más de tokens/s en PCs de gama baja?',
+        content:
+          '**Los valores por defecto están ajustados para 16 GB RAM y una GPU dedicada. Con 8 GB solo CPU, tres parámetros son los más importantes:** longitud de contexto, tamaño de batch y número de hilos. Ajustados juntos valen entre un 30 y un 60% más de tokens/s en el mismo hardware.',
+        items: [
+          '**Longitud de contexto — la mayor ganancia individual.** Recorta de 4096 (por defecto) a 1024. En Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi3:mini`. En llama.cpp: `-c 1024`. Ahorro de RAM: 400–900 MB según el modelo. Ganancia de tokens/s: 10–20%.',
+          '**Número de hilos — ajusta a núcleos físicos, no lógicos.** Las CPUs más antiguas (i5-8250U, Ryzen 5 5500U) tienen 4 físicos / 8 lógicos. Establece hilos = 4, no 8. En llama.cpp: `-t 4`. En Ollama: `OLLAMA_NUM_THREAD=4`. El hyperthreading perjudica la inferencia porque ambos hilos compiten por la misma unidad FP/SIMD.',
+          '**Tamaño de batch para el procesamiento de prompts — ponlo en 8 en CPUs lentas.** llama.cpp: `--n-batch 8`. El valor por defecto de 512 satura la caché L2 en CPUs de 4 núcleos. Ganancia de tokens/s en modelos de 4B: 15–25%.',
+          '**Cuantización de la caché KV — establécela en q8_0 para reducir a la mitad la RAM de KV.** llama.cpp: `--cache-type-k q8_0 --cache-type-v q8_0`. Ahorro de RAM: 150–400 MB a 1024 de contexto, más a contextos mayores. Impacto en calidad: imperceptible.',
+          '**Deshabilita mlock en sistemas con tendencia al swap.** llama.cpp `--no-mlock`. En sistemas de 8 GB, bloquear el modelo en RAM impide que el SO tome decisiones inteligentes de caché. Contraintuitivo pero consistentemente más rápido en Windows 10/11 con 8 GB.',
+          '**Usa builds con AVX2 explícitamente.** La mayoría de los binarios precompilados de llama.cpp / Ollama autodetectan AVX2 / AVX-512 y activan el kernel correcto. Si compilaste tú mismo, pasa `-DGGML_AVX2=ON`. Detección de AVX-512: `cat /proc/cpuinfo | grep avx512`. AVX-512 da otro 10–15% en CPUs compatibles (Ice Lake / Tiger Lake / Rocket Lake / Zen 4+).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Aplica los cinco ajustes juntos y normalmente verás entre un 35 y un 55% más de tokens/s en el mismo modelo y el mismo hardware. La mayor ganancia individual es el recorte de contexto de 4096 → 1024, que también reduce drásticamente el tiempo hasta el primer token en un prompt en frío.',
+          },
+        ],
+      },
+      igpu: {
+        id: 'igpu',
+        title: '¿Vale la pena usar los gráficos integrados para IA local?',
+        content:
+          '**En la mayoría de portátiles con 8 GB RAM la respuesta es no — mantén la inferencia en la CPU.** Los gráficos integrados comparten la RAM del sistema, por lo que descargar capas no te da memoria extra; solo añade una penalización de overhead por el offload. Tres excepciones que merece la pena conocer:',
+        items: [
+          '**Apple Silicon (M1/M2/M3/M4) — sí, siempre.** La arquitectura de memoria unificada hace que la "GPU" vea la misma RAM al mismo ancho de banda que la CPU. Ollama, Jan y llama.cpp usan automáticamente la aceleración Metal en Mac sin ningún flag. Por eso un M1 con 8 GB supera a la mayoría de portátiles Windows con 8 GB por un factor de 2–3×.',
+          '**Intel Arc iGPU (Meteor Lake / Lunar Lake / Arrow Lake) — a veces.** Los chips Intel Core Ultra (Ultra 5 125H, Ultra 7 155H, Ultra 7 258V) incluyen un iGPU Arc que soporta aceleración OpenVINO y SYCL. llama.cpp con `-DGGML_SYCL=ON` es un 30–60% más rápido que solo CPU en estos chips. La configuración no es trivial.',
+          '**AMD Ryzen 7000/8000 con iGPU Radeon 700M/800M — experimental.** El soporte de ROCm en Radeon integrado es parcial y problemático en 2026. Solo CPU es la opción más segura salvo que disfrutes depurando stacks de drivers.',
+          '**Intel UHD / Iris Plus / AMD Vega más antiguos — omítelos.** A estos iGPU les falta el throughput FP16 y el ancho de banda de memoria para superar un kernel CPU AVX2 moderno. Quédate en la CPU.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La prueba más sencilla para saber si tu iGPU merece usarse: ejecuta el mismo modelo 10 generaciones solo con CPU y otras 10 con aceleración iGPU y compara tokens/s. En Apple Silicon, el iGPU siempre es más rápido. En gráficos integrados x86, la respuesta depende del dispositivo — prueba en lugar de asumir.',
+          },
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'Errores comunes',
+        content:
+          '**Cinco errores que arruinan el rendimiento en sistemas con 8 GB / sin GPU**, con la solución para cada uno:',
+        items: [
+          '**Error 1: Cargar un modelo de 7B "porque Q4 cabe en disco".** El archivo en disco es más pequeño que el conjunto de trabajo cargado. 7B Q4 ≈ 4,4 GB en disco, ≈ 5,5–6,5 GB en RAM con un contexto de 2048, lo que supera el techo de 8 GB y activa el swap. **Solución:** mantente en 4B o menos. Phi-4 Mini Q4_K_M es el modelo de mayor calidad que cabe consistentemente.',
+          '**Error 2: Dejar la ventana de contexto en 4096.** El valor por defecto de 4096 reserva un caché KV que añade 400–900 MB sobre el modelo. **Solución:** establece el contexto en 1024 salvo que realmente necesites entradas largas. `OLLAMA_NUM_CTX=1024` (Ollama), `-c 1024` (llama.cpp).',
+          '**Error 3: Ejecutar con Chrome, Slack y Spotify abiertos.** Cada uno consume 0,5–2 GB. Con 8 GB RAM tienes ≈ 5 GB tras el SO. Las apps en segundo plano te empujan al swap antes de que el modelo se cargue siquiera. **Solución:** cierra todo excepto la app de IA y una ventana de notas antes de hacer inferencia.',
+          '**Error 4: Elegir Q8_0 "por calidad".** En modelos de 1B–4B la diferencia de calidad entre Q4_K_M y Q8_0 está por debajo del umbral perceptible para uso en chat, pero Q8 dobla el coste de RAM y reduce a la mitad los tokens/s. **Solución:** quédate en Q4_K_M salvo que tengas un benchmark medible que demuestre que Q8 ayuda en tu tarea.',
+          '**Error 5: Asumir que una Raspberry Pi 4 es suficiente.** 4 GB RAM y un Cortex-A72 a 1,5 GHz pueden técnicamente ejecutar TinyLlama 1B a 1–3 tok/s, pero la experiencia es inutilizable para chat. **Solución:** la Raspberry Pi 5 con 8 GB RAM es el suelo realista de ARM SBC — e incluso así, un portátil x86 con 8 GB es más rápido.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los cinco errores tienen la misma causa raíz: asumir que la configuración de escritorio aplica a un portátil con recursos limitados. Cada valor por defecto (contexto 4096, calidad Q8, todos los hilos) está ajustado para una máquina con 16–32 GB RAM y una GPU dedicada. Con 8 GB solo CPU, necesitas anular activamente los valores por defecto. Piensa en la sección de configuración de esta guía como el "preset para PC de gama baja" — aplica los cinco ajustes antes de tu primera ejecución.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Puedo ejecutar IA local con 4 GB RAM?',
+            a: 'Sí, pero solo con modelos sub-2B como Llama 3.2 1B Q4_0 (≈ 0,7 GB en disco) o SmolLM 2 360M (≈ 0,25 GB en disco). GPT4All es la única de las cuatro apps que indica 4 GB como mínimo oficial. Espera 3–8 tok/s en una CPU moderna y un comportamiento de UI notablemente más lento porque el SO no tiene casi margen.',
+          },
+          {
+            q: '¿Funciona una CPU Intel antigua para IA local?',
+            a: 'Cualquier CPU con AVX2 (Haswell, 2013 o posterior) funciona en 2026. El suelo práctico es un Intel Core i5-8250U o un Ryzen 5 2500U más antiguo, donde Phi-4 Mini Q4 corre a 4–6 tok/s. Las CPUs sin AVX2 (Intel anterior a 2013, AMD Bulldozer original) cargarán pero correrán a 1–2 tok/s, lo que es inutilizable para chat.',
+          },
+          {
+            q: '¿La IA local puede dañar mi portátil?',
+            a: 'No. La inferencia local es un proceso normal de espacio de usuario — no puede dañar el hardware. El peor escenario es que el portátil se caliente (90–100°C en ultraportátiles) y haga throttling, ante lo cual el firmware protege automáticamente. Para evitarlo, usa una base de refrigeración en sesiones largas, mantén la habitación por debajo de 25°C y detén la inferencia si el chasis resulta incómodo al tacto.',
+          },
+          {
+            q: '¿Son suficientes los gráficos integrados?',
+            a: 'En Apple Silicon (M1+) son más que suficientes — la memoria unificada hace que el iGPU sea efectivamente una GPU dedicada de gama baja. En Intel Core Ultra (Meteor Lake / Arrow Lake) puede dar un 30–60% de velocidad extra si configuras SYCL. En Intel UHD / Iris Plus / AMD Vega más antiguo, los gráficos integrados son más lentos que la CPU y no merece la pena usarlos.',
+          },
+          {
+            q: '¿Qué modelo es más rápido solo con CPU?',
+            a: 'Llama 3.2 1B Q4_0 y SmolLM 2 1.7B Q4_K_M son los modelos usables más rápidos. Llama 3.2 1B alcanza 25–50 tok/s en Apple M1 y 12–25 tok/s en una CPU Ryzen o Intel moderna. SmolLM 2 tiene una velocidad similar con escritura ligeramente más pulida. Cualquier cosa por encima de 4B parámetros es poco probable que se sienta rápida en sistemas solo CPU.',
+          },
+          {
+            q: '¿Añadir RAM ayuda más que actualizar la CPU?',
+            a: 'En sistemas de 8 GB, pasar a 16 GB es la actualización práctica más importante porque desbloquea modelos de 7B–8B como Mistral 7B Q4 y Llama 3.1 8B Q4. Las actualizaciones de CPU dan un 20–50% más de tokens/s; la actualización de RAM da 2–4× más calidad (salto de 1B–4B a 7B–8B). Si solo puedes hacer una cosa, añade RAM.',
+          },
+          {
+            q: '¿Puedo ejecutar IA local en un Chromebook?',
+            a: 'Solo si el modo desarrollador Linux (Crostini) está disponible. Las cuatro apps de esta guía funcionan en el contenedor Linux — llama.cpp compilado desde el código fuente es el más fiable en Chromebooks ARM, mientras que los Chromebooks x86 (basados en Intel) funcionan con Ollama o GPT4All. El rendimiento se corresponde con la CPU subyacente; un Chromebook Intel Core i3 / i5 se comporta como el portátil Windows equivalente.',
+          },
+          {
+            q: '¿Windows 10 sigue funcionando para IA local en 2026?',
+            a: 'Sí. Las cuatro apps soportan Windows 10 22H2. Ollama, GPT4All y Jan incluyen instaladores de Windows firmados; llama.cpp ofrece binarios de Windows precompilados en sus releases de GitHub. El fin del soporte general de Windows 10 en octubre de 2025 no impide la instalación, pero las actualizaciones de seguridad han terminado — considera un dual-boot con Linux o actualizar a Windows 11 para uso a largo plazo.',
+          },
+          {
+            q: '¿Cuál es el portátil más barato que ejecuta IA local bien?',
+            a: 'Un ThinkPad T14 o Dell Latitude 5430 de segunda mano de 2021–2022 con 16 GB RAM y un Ryzen 5 5500U o Intel i5-1235U cuesta 350–450 € en 2026 y ejecuta Phi-4 Mini Q4 a 8–14 tok/s. Aún más barato: cualquier MacBook Air Apple M1 con 8 GB de segunda mano a 450–550 €, que supera a la mayoría de portátiles x86 en tokens/s gracias a la memoria unificada.',
+          },
+          {
+            q: '¿Puedo usar una Raspberry Pi para IA local?',
+            a: 'Una Raspberry Pi 5 con 8 GB RAM ejecuta Llama 3.2 1B Q4 a 4–7 tok/s — usable pero lento. Una Pi 4 con 4 GB se queda en torno a 2 tok/s con TinyLlama 1B. Para uso real en chat, un portátil x86 con 8 GB o un MacBook Air M1 es más rápido, más barato de segunda mano y más fácil de configurar. La Pi tiene sentido solo para cargas de trabajo embebidas, edge o siempre encendidas.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[App de IA local más sencilla por SO: recomendaciones Windows, Mac y Linux](/es/power-local-llm/easiest-local-ai-app-windows-mac-linux) — muchos usuarios de PC de gama baja están en Windows antiguo; esta guía elige una app por SO.',
+          '[Mejores apps LLM locales para Android en 2026](/es/power-local-llm/best-local-llm-apps-android-2026) — alternativa natural para usuarios con recursos limitados que tienen un smartphone Android reciente.',
+          '[Reemplaza Zapier con agentes de IA local](/es/power-local-llm/replace-zapier-with-local-ai-agents) — automatización de flujos de trabajo práctica para usuarios con presupuesto ajustado en el mismo hardware.',
+          '[LM Studio vs Jan vs GPT4All: cuál gana en 2026](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparativa directa si también quieres considerar LM Studio.',
+          '[Mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm) — para cuando estés listo para salir del territorio solo CPU.',
+          '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) — guía completa de hardware con análisis de RAM, CPU y GPU.',
+          '[Hub Power Local LLM](/es/power-local-llm) — biblioteca completa de guías del cluster.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/es/power-local-llm/best-local-ai-app-low-end-pc',
+      'inLanguage': 'es',
+      'headline': 'Mejores apps de IA local para PCs de gama baja en 2026 (8 GB RAM, sin GPU)',
+      'description':
+        'Ollama, GPT4All, Jan y llama.cpp probados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s, presión de memoria, configuraciones exactas.',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+        'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' },
+      },
+      'proficiencyLevel': 'Beginner',
+      'about': [
+        { '@type': 'Thing', 'name': 'Ollama' },
+        { '@type': 'Thing', 'name': 'GPT4All' },
+        { '@type': 'Thing', 'name': 'Jan (app de IA local)' },
+        { '@type': 'Thing', 'name': 'llama.cpp' },
+        { '@type': 'Thing', 'name': 'Phi-4 Mini' },
+        { '@type': 'Thing', 'name': 'LLM local en PC de gama baja' },
+      ],
+      'speakable': {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['.article-intro', '.key-takeaways'],
+      },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'inLanguage': 'es',
+      'name': 'Mejores apps de IA local para portátiles con 8 GB RAM sin GPU en 2026',
+      'numberOfItems': 4,
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Ollama',
+          'description':
+            'Runtime CPU más ligero; mínimo 6 GB RAM; mejor combinación con Phi-4 Mini Q4_K_M a 4–14 tokens por segundo en 8 GB solo CPU.',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'GPT4All',
+          'description':
+            'Instalador de un clic más sencillo; mínimo 4 GB RAM; mejor combinación con Llama 3.2 1B Q4_0 a 3–10 tokens por segundo; recomendado para usuarios no técnicos.',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Jan',
+          'description':
+            'GUI de código abierto (AGPL); mínimo 6 GB RAM; mejor combinación con Gemma 3 4B Q4_K_M a 3–11 tokens por segundo; la GUI más ligera en Apple Silicon con 8 GB.',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 4,
+          'name': 'llama.cpp',
+          'description':
+            'Velocidad bare-metal si compilas; mínimo 4 GB RAM; mejor combinación con SmolLM 2 1.7B Q4_K_M a 5–18 tokens por segundo; la más rápida en hardware idéntico.',
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/?lang=es' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Power Local LLM', 'item': 'https://www.promptquorum.com/es/power-local-llm' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Mejores apps de IA local para PCs de gama baja', 'item': 'https://www.promptquorum.com/es/power-local-llm/best-local-ai-app-low-end-pc' },
+      ],
+    },
+  },
 }

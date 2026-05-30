@@ -231,6 +231,237 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Overview & Reference',
+    title: 'Mejor configuración de workstation para IA local 2026: tres niveles de presupuesto',
+    seoTitle: 'Mejor workstation para IA local 2026 (3 niveles de presupuesto)',
+    metaDescription: 'Lista completa de componentes para tres configuraciones de workstation para IA local en 2026: $1200 económica, $2500 recomendada, $5000 profesional. Ejecuta modelos 7B–70B en casa.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**La mejor workstation para IA local en 2026 para la mayoría de los usuarios es la configuración de $2500: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. Ejecuta modelos 7B a 100–120 tok/s, 14B en Q8 sin offloading y 30B Q4 a 25–35 tok/s — cubriendo el 95% de los casos de uso reales con LLM locales.**',
+    quickAnswerTop: {
+      question: '¿Cuál es la mejor configuración de PC para ejecutar modelos de IA localmente en 2026?',
+      answer: 'Para la mayoría de los usuarios: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000 a ~$2500. Para modelos 70B: dual RTX 3090 (48 GB VRAM total) a ~$3500. Opción económica: RTX 3090 usada + Ryzen 7 7700X a ~$1200.',
+      bullets: [
+        '$1200 económica: RTX 3090 usada (24 GB) + Ryzen 7 7700X + 64 GB DDR4 — ejecuta 30B Q4',
+        '$2500 recomendada: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5 — 30B Q4 a 25–35 tok/s',
+        '$5000 profesional: dual RTX 3090 (48 GB) o RTX 4090 + Threadripper — 70B Q4 de forma nativa',
+        'Todas las configuraciones manejan modelos 7B y 14B fácilmente; el 70B necesita dual GPU o CPU offloading',
+        'NVMe PCIe Gen 5 recomendado para carga rápida de modelos (>10 GB/s)',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'La RTX 4090 es la mejor GPU de consumo para IA local en 2026: 24 GB VRAM, ~1 TB/s de ancho de banda',
+          'Los modelos 70B Q4 necesitan 40+ GB VRAM — requiere dual RTX 3090 o CPU offloading',
+          'Ryzen 9 9950X (Zen 5, 16 núcleos) es el mejor CPU para CPU offloading rápido de capas grandes',
+          'DDR5-6000 con 64 GB mínimo; 128 GB permite CPU offloading de 70B a velocidades útiles',
+          'NVMe PCIe Gen 4/5 carga un modelo 7B en menos de 2 segundos frente a 10+ segundos en SATA',
+          'Las tres configuraciones usan el socket AM5 — puedes actualizar la GPU/RAM sin cambiar de placa base',
+        ],
+      },
+      tier1: {
+        title: 'Nivel 1: Workstation de IA económica por $1200',
+        content: 'La configuración económica de $1200 usa una RTX 3090 usada (24 GB VRAM) como núcleo. Ejecuta Llama 3.1 8B Q8 a 45–60 tok/s, Qwen2.5 14B Q8 a 20–28 tok/s y Qwen2.5 32B Q4 a 12–18 tok/s completamente en GPU. La RTX 3090 consume 350 W — combínala con una PSU de calidad de 850 W.',
+        tableData: {
+          headers: ['Componente', 'Modelo', 'Precio (mayo 2026)'],
+          rows: [
+            ['GPU', 'NVIDIA RTX 3090 (usada, 24 GB)', '~$440'],
+            ['CPU', 'AMD Ryzen 7 7700X', '~$180'],
+            ['Placa base', 'MSI MAG X670E Tomahawk WiFi', '~$170'],
+            ['RAM', '64 GB DDR5-5600 (2×32 GB)', '~$110'],
+            ['Almacenamiento', '2 TB PCIe Gen 4 NVMe', '~$90'],
+            ['Fuente de poder', '850 W certificada 80+ Gold', '~$90'],
+            ['Gabinete', 'Torre media ATX, 3+ ranuras de ventiladores', '~$70'],
+            ['Disipador CPU', 'AIO 240mm o torre', '~$60'],
+            ['Total', '', '~$1,210'],
+          ],
+        },
+        affiliateLinks: [
+          { label: 'RTX 3090 usada en eBay', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'GPU' },
+          { label: 'AMD Ryzen 7 7700X en Amazon', url: 'https://www.amazon.com/s?k=Ryzen+7+7700X', productName: 'AMD Ryzen 7 7700X', productCategory: 'CPU' },
+        ],
+        items: [
+          '**Modelos compatibles a velocidad completa de GPU:** 7B (cualquier cuantización), 13B, 14B (Q4/Q8), 30B (Q4)',
+          '**Soporte 70B:** requiere CPU offloading — ~5–8 tok/s, funcional pero no ideal',
+          '**Consumo máximo:** ~450 W (GPU 350 W + CPU 65 W + resto)',
+          '**PSU recomendada:** Corsair RM850x o equivalente 80+ Gold',
+        ],
+      },
+      tier2: {
+        title: 'Nivel 2: Workstation de IA recomendada por $2500',
+        content: 'La configuración recomendada de $2500 tiene como núcleo la RTX 4090 (24 GB, ~1 TB/s de ancho de banda de memoria) junto al AMD Ryzen 9 9950X (Zen 5, 16 núcleos). La 4090 es un 30–40% más rápida que la 3090 por GB de VRAM y consume menos energía por token. Esta configuración maneja modelos 30B Q4 completamente en GPU y modelos 70B vía CPU offloading a 10–15 tok/s con 64 GB de RAM.',
+        tableData: {
+          headers: ['Componente', 'Modelo', 'Precio (mayo 2026)'],
+          rows: [
+            ['GPU', 'NVIDIA GeForce RTX 4090 24 GB', '~$1,650'],
+            ['CPU', 'AMD Ryzen 9 9950X (16C/32T, Zen 5)', '~$420'],
+            ['Placa base', 'ASUS ProArt X870E-Creator WiFi', '~$350'],
+            ['RAM', '64 GB DDR5-6000 CL30 (2×32 GB)', '~$145'],
+            ['Almacenamiento', '4 TB PCIe Gen 5 NVMe', '~$200'],
+            ['Fuente de poder', '1000 W certificada 80+ Platinum', '~$150'],
+            ['Gabinete', 'Torre completa ATX con buen flujo de aire', '~$120'],
+            ['Disipador CPU', 'AIO 360mm', '~$90'],
+            ['Total', '', '~$3,125'],
+          ],
+        },
+        affiliateLinks: [
+          { label: 'RTX 4090 en Amazon', url: 'https://www.amazon.com/s?k=RTX+4090', productName: 'NVIDIA RTX 4090', productCategory: 'GPU' },
+          { label: 'Ryzen 9 9950X en Amazon', url: 'https://www.amazon.com/s?k=Ryzen+9+9950X', productName: 'AMD Ryzen 9 9950X', productCategory: 'CPU' },
+          { label: 'ASUS ProArt X870E en Amazon', url: 'https://www.amazon.com/s?k=ASUS+ProArt+X870E', productName: 'ASUS ProArt X870E-Creator WiFi', productCategory: 'Motherboard' },
+        ],
+        items: [
+          '**Modelos compatibles a velocidad completa de GPU:** 7B–30B (cualquier cuantización), 32B (Q4 cabe en 24 GB)',
+          '**Soporte 70B:** CPU offloading a 10–15 tok/s con 64 GB RAM; actualiza a 128 GB para 15–20 tok/s',
+          '**Velocidad 7B Q4:** ~105–125 tok/s en Ollama',
+          '**Velocidad 14B Q8:** ~48–60 tok/s',
+          '**Velocidad 30B Q4:** ~28–38 tok/s',
+          '**Consumo máximo:** ~550 W (GPU 450 W + CPU 65 W + resto)',
+        ],
+      },
+      tier3: {
+        title: 'Nivel 3: Workstation profesional 70B por $5000',
+        content: 'La configuración profesional de $5000 apunta a inferencia de modelos 70B a velocidad de GPU (25–40 tok/s) usando dos GPUs RTX 3090 para un total de 48 GB de VRAM. El Ryzen Threadripper 7960X (24 núcleos, alto ancho de banda de memoria) acelera el CPU offloading para modelos que superan los 48 GB. Con 256 GB DDR5, incluso los modelos 140B cuantizados se cargan completamente en RAM.',
+        tableData: {
+          headers: ['Componente', 'Modelo', 'Precio (mayo 2026)'],
+          rows: [
+            ['GPU ×2', '2× NVIDIA RTX 3090 24 GB (usadas)', '~$880'],
+            ['CPU', 'AMD Ryzen Threadripper 7960X (24C)', '~$1,300'],
+            ['Placa base', 'ASUS Pro WS TRX50-SAGE WiFi', '~$650'],
+            ['RAM', '256 GB DDR5-5200 ECC (8×32 GB)', '~$650'],
+            ['Almacenamiento', '8 TB PCIe Gen 4 NVMe (2×4 TB)', '~$360'],
+            ['Fuente de poder', '1600 W Platinum modular', '~$280'],
+            ['Gabinete', 'Torre completa HEDT ATX', '~$180'],
+            ['Disipador CPU', 'AIO 360mm + ventiladores adicionales', '~$120'],
+            ['Puentes/Cables GPU', 'NVLink no requerido (Ollama usa ambas)', '~$0'],
+            ['Total', '', '~$4,420'],
+          ],
+        },
+        affiliateLinks: [
+          { label: '2× RTX 3090 en eBay', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'GPU' },
+          { label: 'Ryzen Threadripper 7960X en Amazon', url: 'https://www.amazon.com/s?k=Threadripper+7960X', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'CPU' },
+          { label: 'ASUS TRX50-SAGE en Amazon', url: 'https://www.amazon.com/s?k=ASUS+TRX50+Sage', productName: 'ASUS Pro WS TRX50-SAGE WiFi', productCategory: 'Motherboard' },
+        ],
+        items: [
+          '**Modelos compatibles a velocidad completa de GPU (48 GB VRAM total):** 7B–70B Q4, 30B Q8',
+          '**Velocidad 70B Q4:** 25–40 tok/s (ambas RTX 3090 activas vía paralelismo tensorial en Ollama)',
+          '**CPU offloading con 256 GB RAM:** ejecuta modelos 140B+ a 4–6 tok/s',
+          '**Configuración dual GPU:** Ollama detecta ambas GPUs automáticamente; no se necesita NVLink',
+          '**Consumo máximo:** ~900 W (2× GPU 700 W + CPU 350 W + resto)',
+          '**PSU recomendada:** Seasonic PRIME TX-1600W o equivalente',
+        ],
+      },
+      softwareSetup: {
+        title: 'Stack de software para cualquier configuración',
+        content: 'Una vez ensamblado el hardware, poner Ollama en funcionamiento lleva menos de 10 minutos:',
+        numberedItems: [
+          'Instala Ubuntu 22.04 LTS o Windows 11 (Ubuntu preferido por estabilidad de CUDA)',
+          'Instala los drivers de NVIDIA 550+ desde nvidia.com o con `ubuntu-drivers autoinstall`',
+          'Instala Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
+          'Descarga un modelo: `ollama pull qwen2.5:14b-instruct-q8_0`',
+          'Ejecútalo como servidor de red: `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          'Instala Open WebUI para interfaz en el navegador: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
+          'Expón el servicio vía Tailscale para acceso remoto seguro desde cualquier dispositivo',
+        ],
+      },
+      benchmarkComparison: {
+        title: 'Comparativa de rendimiento entre las tres configuraciones',
+        tableData: {
+          headers: ['Modelo + Cuantización', 'Económica ($1200)', 'Recomendada ($2500)', 'Profesional ($5000)'],
+          rows: [
+            ['Llama 3.1 8B Q4', '55–70 tok/s', '105–125 tok/s', '120–140 tok/s'],
+            ['Qwen2.5 14B Q8', '20–28 tok/s', '48–60 tok/s', '55–70 tok/s'],
+            ['Qwen2.5 32B Q4', '12–18 tok/s', '28–38 tok/s', '40–55 tok/s'],
+            ['Llama 3.1 70B Q4', '5–8 tok/s (CPU)', '10–15 tok/s (CPU)', '25–40 tok/s (GPU)'],
+            ['Mixtral 8x7B Q4', '15–22 tok/s', '32–45 tok/s', '45–60 tok/s'],
+          ],
+        },
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Es mejor construir una workstation o alquilar GPUs en la nube para ejecutar modelos 70B?',
+            a: 'Para uso regular (2+ horas/día), construye la workstation. Una A40 dedicada de 48 GB en RunPod cuesta $0,44/hora — a 4 horas/día, son $641/año. La configuración profesional de $3000–4000 se amortiza en 5–6 años frente a la nube. Para uso ocasional (menos de 1 hora/día), la nube es más barata. Consulta nuestra calculadora de costos en /es/local-llms/local-llm-cost-calculator-build-vs-rent-2026.',
+          },
+          {
+            q: '¿Necesito NVLink para ejecutar Ollama en dos GPUs?',
+            a: 'No. Ollama usa paralelismo tensorial de CUDA para distribuir las capas del modelo entre varias GPUs vía PCIe — no se requiere NVLink. NVLink aumentaría el ancho de banda entre GPUs de ~32 GB/s (PCIe 4.0 x16) a ~600 GB/s, lo que importa para entrenamiento pero muy poco para inferencia. La configuración dual RTX 3090 funciona perfectamente sin NVLink.',
+          },
+          {
+            q: '¿Por qué no usar una RTX 4090 en lugar de dos RTX 3090 en la configuración profesional?',
+            a: 'El VRAM es el factor decisivo. Dos RTX 3090 con 24 GB cada una = 48 GB en total, suficiente para Llama 3.1 70B Q4 (~40 GB). Una sola RTX 4090 tiene solo 24 GB — el 70B Q4 no cabe sin CPU offloading. Para inferencia 70B a velocidad de GPU, el dual 3090 gana en VRAM por dólar. Para modelos de 30B o menos, la RTX 4090 es más rápida por dólar.',
+          },
+          {
+            q: '¿Puedo empezar con la configuración económica y actualizar a la recomendada?',
+            a: 'Sí — las configuraciones de nivel 1 y 2 usan el socket AM5, y el nivel 3 usa TRX50. Puedes reemplazar la RTX 3090 por una RTX 4090 más adelante, o añadir una segunda GPU. Los módulos de RAM son compatibles. La única incompatibilidad es entre los niveles 1/2 (AM5) y el nivel 3 (TRX50) — para actualizar a Threadripper necesitas una nueva placa base y CPU.',
+          },
+          {
+            q: '¿Qué tipo de enchufe necesito para la configuración profesional?',
+            a: 'La configuración profesional (dual RTX 3090 + Threadripper) alcanza un pico de ~900 W desde la toma de corriente. Un enchufe estándar de 15A/120V en EE. UU. soporta ~1800 W — no hay problema. Los enchufes europeos de 16A/230V soportan ~3680 W. Usa una PSU de calidad (Seasonic, Corsair, be quiet!) con eficiencia 80+ Platinum para minimizar el calor y el consumo.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Es mejor construir una workstation o alquilar GPUs en la nube para ejecutar modelos 70B?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Para uso regular (2+ horas/día), construye la workstation. Una GPU A40 cloud a $0,44/hora por 4 horas/día cuesta $641/año — una configuración profesional de $3000–4000 se amortiza en 5–6 años. Para uso ocasional (<1 hora/día), la nube es más barata.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Necesito NVLink para ejecutar Ollama en dos GPUs?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. Ollama usa paralelismo tensorial de CUDA vía PCIe — no se necesita NVLink. La configuración dual RTX 3090 funciona perfectamente sin él.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Por qué no usar una RTX 4090 en lugar de dos RTX 3090 en la configuración profesional?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Por el VRAM: dos RTX 3090 = 48 GB en total, lo que contiene Llama 3.1 70B Q4 (~40 GB). Una sola RTX 4090 tiene solo 24 GB — el 70B no cabe sin CPU offloading. El dual 3090 gana para inferencia 70B a velocidad de GPU.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Mejores configuraciones de workstation para IA local 2026',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Configuración económica $1200', description: 'RTX 3090 usada + Ryzen 7 7700X + 64 GB DDR5 — ejecuta 30B Q4' },
+        { '@type': 'ListItem', position: 2, name: 'Configuración recomendada $2500', description: 'RTX 4090 + Ryzen 9 9950X + 64 GB DDR5-6000 — 30B Q4 a 28–38 tok/s' },
+        { '@type': 'ListItem', position: 3, name: 'Configuración profesional $5000', description: 'Dual RTX 3090 48 GB + Threadripper + 256 GB RAM — 70B Q4 a velocidad de GPU' },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Mejor configuración de workstation para IA local 2026: tres niveles de presupuesto',
+      description: 'Listas completas de componentes para tres configuraciones de workstation para IA local: $1200 económica, $2500 recomendada, $5000 profesional. Incluye benchmarks de rendimiento para modelos 7B–70B.',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-workstation-build-local-ai-2026',
+      inLanguage: 'es',
+      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
@@ -867,5 +1098,237 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     schema: { '@type': 'TechArticle', headline: '2026年本地AI最佳工作站配置：三档预算方案', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/zh/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'zh' },
+  },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Overview & Reference',
+    title: 'Mejor workstation para IA local 2026: tres niveles de presupuesto',
+    seoTitle: 'Mejor workstation para IA local 2026 (3 niveles de presupuesto)',
+    metaDescription: 'Lista completa de componentes para tres workstations de IA local en 2026: $1200 económico, $2500 recomendado, $5000 profesional. Ejecuta modelos de 7B a 70B en casa.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**La mejor workstation de IA local en 2026 para la mayoría de usuarios es un build de $2500: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. Ejecuta modelos 7B a 100–120 tok/s, 14B en Q8 sin offloading y 30B Q4 a 25–35 tok/s — cubriendo el 95% de los casos de uso reales de LLM local.**',
+    quickAnswerTop: {
+      question: '¿Cuál es el mejor build de PC para ejecutar modelos de IA localmente en 2026?',
+      answer: 'Para la mayoría de usuarios: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000 a ~$2500. Para una workstation con modelos de 70B: dual RTX 3090 (48 GB VRAM en total) a ~$3500. Opción económica: RTX 3090 usada + Ryzen 7 7700X a ~$1200.',
+      bullets: [
+        '$1200 económico: RTX 3090 usada (24 GB) + Ryzen 7 7700X + 64 GB DDR4 — ejecuta 30B Q4',
+        '$2500 recomendado: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5 — ejecuta 30B Q4 a 25–35 tok/s',
+        '$5000 profesional: dual RTX 3090 (48 GB) o RTX 4090 + Threadripper — ejecuta 70B Q4 de forma nativa',
+        'Todos los builds manejan modelos de 7B y 14B sin problemas; el 70B requiere dual GPU o CPU offloading',
+        'Se recomienda NVMe PCIe Gen 5 para cargar modelos rápidamente (>10 GB/s)',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'La RTX 4090 es la mejor GPU de consumo individual para IA local en 2026: 24 GB VRAM, ~1 TB/s de ancho de banda',
+          'Los modelos 70B Q4 necesitan más de 40 GB VRAM — requieren dual RTX 3090 o CPU offloading',
+          'Ryzen 9 9950X (Zen 5, 16 núcleos) es la mejor CPU para CPU offloading rápido de capas grandes',
+          'DDR5-6000 con un mínimo de 64 GB; 128 GB permite CPU offloading de modelos 70B a velocidades útiles',
+          'NVMe PCIe Gen 4/5 carga un modelo de 7B en menos de 2 segundos frente a los 10+ segundos en SATA',
+          'Los tres builds usan el mismo socket AM5 — actualiza GPU/RAM sin cambiar la placa base',
+        ],
+      },
+      tier1: {
+        title: 'Nivel 1: workstation de IA económica por $1200',
+        content: 'El build económico de $1200 utiliza una RTX 3090 usada (24 GB VRAM) como núcleo. Ejecuta Llama 3.1 8B Q8 a 45–60 tok/s, Qwen2.5 14B Q8 a 20–28 tok/s y Qwen2.5 32B Q4 a 12–18 tok/s completamente en GPU. La RTX 3090 consume 350 W — combínala con una fuente de poder de calidad de 850 W.',
+        tableData: {
+          headers: ['Componente', 'Modelo', 'Precio (mayo 2026)'],
+          rows: [
+            ['GPU', 'NVIDIA RTX 3090 (usada, 24 GB)', '~$440'],
+            ['CPU', 'AMD Ryzen 7 7700X', '~$180'],
+            ['Placa base', 'MSI MAG X670E Tomahawk WiFi', '~$170'],
+            ['RAM', '64 GB DDR5-5600 (2×32 GB)', '~$110'],
+            ['Almacenamiento', '2 TB PCIe Gen 4 NVMe', '~$90'],
+            ['Fuente de poder', '850 W certificada 80+ Gold', '~$90'],
+            ['Gabinete', 'Torre media ATX, 3+ ranuras para ventiladores', '~$70'],
+            ['Disipador CPU', 'AIO 240mm o torre', '~$60'],
+            ['Total', '', '~$1.210'],
+          ],
+        },
+        affiliateLinks: [
+          { label: 'RTX 3090 usada en eBay', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'GPU' },
+          { label: 'AMD Ryzen 7 7700X en Amazon', url: 'https://www.amazon.com/s?k=Ryzen+7+7700X', productName: 'AMD Ryzen 7 7700X', productCategory: 'CPU' },
+        ],
+        items: [
+          '**Modelos compatibles a velocidad GPU completa:** 7B (cualquier cuantización), 13B (Q4/Q8), 14B (Q4/Q8), 30B (Q4)',
+          '**Soporte para 70B:** requiere CPU offloading — ~5–8 tok/s, funcional pero no ideal',
+          '**Consumo eléctrico:** ~450 W en pico (GPU 350 W + CPU 65 W + resto)',
+          '**Fuente de poder recomendada:** Corsair RM850x o equivalente 80+ Gold',
+        ],
+      },
+      tier2: {
+        title: 'Nivel 2: workstation de IA recomendada por $2500',
+        content: 'El build recomendado de $2500 se centra en la RTX 4090 (24 GB, ~1 TB/s de ancho de banda de memoria) combinada con el AMD Ryzen 9 9950X (Zen 5, 16 núcleos). La 4090 es un 30–40% más rápida que la 3090 por GB de VRAM y consume menos energía por token. Este build maneja modelos 30B Q4 completamente en GPU y modelos 70B mediante CPU offloading a 10–15 tok/s con 64 GB de RAM.',
+        tableData: {
+          headers: ['Componente', 'Modelo', 'Precio (mayo 2026)'],
+          rows: [
+            ['GPU', 'NVIDIA GeForce RTX 4090 24 GB', '~$1.650'],
+            ['CPU', 'AMD Ryzen 9 9950X (16C/32T, Zen 5)', '~$420'],
+            ['Placa base', 'ASUS ProArt X870E-Creator WiFi', '~$350'],
+            ['RAM', '64 GB DDR5-6000 CL30 (2×32 GB)', '~$145'],
+            ['Almacenamiento', '4 TB PCIe Gen 5 NVMe', '~$200'],
+            ['Fuente de poder', '1000 W certificada 80+ Platinum', '~$150'],
+            ['Gabinete', 'Torre completa ATX con buen flujo de aire', '~$120'],
+            ['Disipador CPU', 'AIO 360mm', '~$90'],
+            ['Total', '', '~$3.125'],
+          ],
+        },
+        affiliateLinks: [
+          { label: 'RTX 4090 en Amazon', url: 'https://www.amazon.com/s?k=RTX+4090', productName: 'NVIDIA RTX 4090', productCategory: 'GPU' },
+          { label: 'Ryzen 9 9950X en Amazon', url: 'https://www.amazon.com/s?k=Ryzen+9+9950X', productName: 'AMD Ryzen 9 9950X', productCategory: 'CPU' },
+          { label: 'ASUS ProArt X870E en Amazon', url: 'https://www.amazon.com/s?k=ASUS+ProArt+X870E', productName: 'ASUS ProArt X870E-Creator WiFi', productCategory: 'Motherboard' },
+        ],
+        items: [
+          '**Modelos compatibles a velocidad GPU completa:** 7B–30B (cualquier cuantización), 32B (Q4 cabe en 24 GB)',
+          '**Soporte para 70B:** CPU offloading a 10–15 tok/s con 64 GB RAM; actualiza a 128 GB para 15–20 tok/s',
+          '**Velocidad 7B Q4:** ~105–125 tok/s en Ollama',
+          '**Velocidad 14B Q8:** ~48–60 tok/s',
+          '**Velocidad 30B Q4:** ~28–38 tok/s',
+          '**Consumo eléctrico:** ~550 W en pico (GPU 450 W + CPU 65 W + resto)',
+        ],
+      },
+      tier3: {
+        title: 'Nivel 3: workstation profesional 70B por $5000',
+        content: 'El build profesional de $5000 está orientado a la inferencia de modelos 70B a velocidad de GPU (25–40 tok/s) usando dos RTX 3090 para un total de 48 GB VRAM. El Ryzen Threadripper 7960X (24 núcleos, alto ancho de banda de memoria) acelera el CPU offloading para modelos que superan los 48 GB. Con 256 GB DDR5, incluso los modelos 140B cuantizados se cargan completamente en RAM.',
+        tableData: {
+          headers: ['Componente', 'Modelo', 'Precio (mayo 2026)'],
+          rows: [
+            ['GPU ×2', '2× NVIDIA RTX 3090 24 GB (usadas)', '~$880'],
+            ['CPU', 'AMD Ryzen Threadripper 7960X (24C)', '~$1.300'],
+            ['Placa base', 'ASUS Pro WS TRX50-SAGE WiFi', '~$650'],
+            ['RAM', '256 GB DDR5-5200 ECC (8×32 GB)', '~$650'],
+            ['Almacenamiento', '8 TB PCIe Gen 4 NVMe (2×4 TB)', '~$360'],
+            ['Fuente de poder', '1600 W Platinum modular', '~$280'],
+            ['Gabinete', 'Torre completa HEDT ATX', '~$180'],
+            ['Disipador CPU', 'AIO 360mm + ventiladores adicionales', '~$120'],
+            ['Puentes/Cables GPU', 'NVLink no requerido (Ollama usa ambas)', '~$0'],
+            ['Total', '', '~$4.420'],
+          ],
+        },
+        affiliateLinks: [
+          { label: '2× RTX 3090 en eBay', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'GPU' },
+          { label: 'Ryzen Threadripper 7960X en Amazon', url: 'https://www.amazon.com/s?k=Threadripper+7960X', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'CPU' },
+          { label: 'ASUS TRX50-SAGE en Amazon', url: 'https://www.amazon.com/s?k=ASUS+TRX50+Sage', productName: 'ASUS Pro WS TRX50-SAGE WiFi', productCategory: 'Motherboard' },
+        ],
+        items: [
+          '**Modelos compatibles a velocidad GPU completa (48 GB VRAM total):** 7B–70B Q4, 30B Q8',
+          '**Velocidad 70B Q4:** 25–40 tok/s (ambas RTX 3090 activas mediante paralelismo de tensores en Ollama)',
+          '**CPU offloading con 256 GB RAM:** ejecuta modelos de 140B+ a 4–6 tok/s',
+          '**Configuración dual GPU:** Ollama detecta ambas GPU automáticamente; no se necesita NVLink',
+          '**Consumo eléctrico:** ~900 W en pico (2× GPU 700 W + CPU 350 W + resto)',
+          '**Fuente de poder recomendada:** Seasonic PRIME TX-1600W o equivalente',
+        ],
+      },
+      softwareSetup: {
+        title: 'Stack de software para cualquier build',
+        content: 'Una vez ensamblado el hardware, poner en marcha Ollama toma menos de 10 minutos:',
+        numberedItems: [
+          'Instala Ubuntu 22.04 LTS o Windows 11 (Ubuntu es preferible por la estabilidad de CUDA)',
+          'Instala los drivers de NVIDIA 550+ desde nvidia.com o con `ubuntu-drivers autoinstall`',
+          'Instala Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
+          'Descarga un modelo: `ollama pull qwen2.5:14b-instruct-q8_0`',
+          'Ejecuta como servidor de red: `OLLAMA_HOST=0.0.0.0 ollama serve`',
+          'Instala Open WebUI para interfaz en el navegador: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`',
+          'Usa Tailscale para acceso remoto seguro desde cualquier dispositivo',
+        ],
+      },
+      benchmarkComparison: {
+        title: 'Comparación de rendimiento en los tres builds',
+        tableData: {
+          headers: ['Modelo + cuantización', 'Económico ($1200)', 'Recomendado ($2500)', 'Profesional ($5000)'],
+          rows: [
+            ['Llama 3.1 8B Q4', '55–70 tok/s', '105–125 tok/s', '120–140 tok/s'],
+            ['Qwen2.5 14B Q8', '20–28 tok/s', '48–60 tok/s', '55–70 tok/s'],
+            ['Qwen2.5 32B Q4', '12–18 tok/s', '28–38 tok/s', '40–55 tok/s'],
+            ['Llama 3.1 70B Q4', '5–8 tok/s (CPU)', '10–15 tok/s (CPU)', '25–40 tok/s (GPU)'],
+            ['Mixtral 8x7B Q4', '15–22 tok/s', '32–45 tok/s', '45–60 tok/s'],
+          ],
+        },
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Es mejor construir una workstation o alquilar GPU en la nube para ejecutar modelos de 70B?',
+            a: 'Para uso regular (2+ horas al día), construye la workstation. Una A40 dedicada de 48 GB en RunPod cuesta $0.44/h — a 4 horas al día, eso es $641 al año. El build profesional de $3000–4000 se amortiza en 5–6 años frente a la nube. Para uso ocasional (menos de 1 hora al día), la nube es más económica. Consulta nuestra calculadora de costos en /es/local-llms/local-llm-cost-calculator-build-vs-rent-2026.',
+          },
+          {
+            q: '¿Necesito NVLink para ejecutar Ollama en dos GPU?',
+            a: 'No. Ollama usa paralelismo de tensores CUDA para distribuir las capas del modelo entre varias GPU a través de PCIe — no se necesita NVLink. NVLink aumentaría el ancho de banda entre GPU de ~32 GB/s (PCIe 4.0 x16) a ~600 GB/s, algo relevante para el entrenamiento pero poco significativo para la inferencia. La configuración con dual RTX 3090 funciona perfectamente sin NVLink.',
+          },
+          {
+            q: '¿Por qué una dual RTX 3090 en lugar de una RTX 4090 para el build profesional?',
+            a: 'La VRAM es el factor decisivo. Dos RTX 3090 de 24 GB cada una = 48 GB en total, suficiente para Llama 3.1 70B Q4 (~40 GB). Una sola RTX 4090 tiene solo 24 GB — el modelo 70B Q4 no cabe sin CPU offloading. Para inferencia de 70B a velocidad de GPU, el dual 3090 gana en VRAM por dólar. Para 30B e inferiores, la RTX 4090 es más rápida por dólar.',
+          },
+          {
+            q: '¿Puedo empezar con el build económico y actualizar al nivel recomendado?',
+            a: 'Sí — los tres builds usan el socket AM5 (Niveles 1 y 2) o TRX50 (Nivel 3). Puedes reemplazar la RTX 3090 por una RTX 4090 más adelante, o añadir una segunda GPU. Los módulos de RAM son compatibles. La única incompatibilidad es entre los Niveles 1/2 (AM5) y el Nivel 3 (TRX50) — pasar al Threadripper requiere placa base y CPU nuevas.',
+          },
+          {
+            q: '¿Qué toma de corriente necesito para el build profesional?',
+            a: 'El build profesional (dual RTX 3090 + Threadripper) tiene un pico de ~900 W desde la toma. Un tomacorriente estándar de 15A/120V en EE.UU. soporta ~1800 W — es suficiente. Los tomacorrientes europeos de 16A/230V soportan ~3680 W. Usa una fuente de poder de calidad (Seasonic, Corsair, be quiet!) con eficiencia 80+ Platinum para minimizar el calor y el consumo.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Es mejor construir una workstation o alquilar GPU en la nube para ejecutar modelos de 70B?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Para uso regular (2+ horas al día), construye la workstation. GPU en la nube a $0.44/h durante 4 horas al día cuesta $641 al año — un build profesional de $3000–4000 se amortiza en 5–6 años. Para uso ocasional (<1 hora al día), la nube es más barata.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Necesito NVLink para ejecutar Ollama en dos GPU?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. Ollama usa paralelismo de tensores CUDA a través de PCIe — no se necesita NVLink. La configuración dual RTX 3090 funciona perfectamente sin él.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Por qué una dual RTX 3090 en lugar de una RTX 4090 para el build profesional?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'VRAM: dos RTX 3090 = 48 GB en total, que aloja Llama 3.1 70B Q4 (~40 GB). Una sola RTX 4090 tiene solo 24 GB — el 70B no cabe sin CPU offloading. El dual 3090 gana para inferencia de 70B a velocidad de GPU.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Mejores builds de workstation para IA local 2026',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Build económico $1200', description: 'RTX 3090 usada + Ryzen 7 7700X + 64 GB DDR5 — ejecuta 30B Q4' },
+        { '@type': 'ListItem', position: 2, name: 'Build recomendado $2500', description: 'RTX 4090 + Ryzen 9 9950X + 64 GB DDR5-6000 — 30B Q4 a 28–38 tok/s' },
+        { '@type': 'ListItem', position: 3, name: 'Build profesional $5000', description: 'Dual RTX 3090 48 GB + Threadripper + 256 GB RAM — 70B Q4 a velocidad de GPU' },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Mejor workstation para IA local 2026: tres niveles de presupuesto',
+      description: 'Listas completas de componentes para tres builds de workstation de IA local: $1200 económico, $2500 recomendado, $5000 profesional. Incluye benchmarks de rendimiento para modelos de 7B a 70B.',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-workstation-build-local-ai-2026',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
   },
 }

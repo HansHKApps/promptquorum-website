@@ -363,6 +363,363 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'evergreen',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    theme: 'Creative & Roleplay',
+    title: 'Redactar novelas y guiones con LLMs locales: guía de flujo de trabajo para más de 100.000 palabras',
+    seoTitle: 'LLM local para guiones y novelas sin conexión 2026',
+    intro:
+      'Los LLMs locales integrados en un flujo de trabajo de redacción de novelas o guiones te permiten generar borradores de escenas, beat sheets, pasadas de diálogo y rondas de revisión sin acceso a internet, registro en la nube ni límites de uso. Esta guía cubre el flujo de trabajo completo: selección de modelos, gestión de la ventana de contexto para trabajos de formato largo, andamiaje por capítulos, generación de escenas y las herramientas que conectan un LLM local con tu software de escritura.',
+    metaDescription:
+      'Flujo de trabajo completo para usar LLMs locales en la redacción de novelas y guiones: selección de modelos, gestión del contexto, andamiaje por capítulos, generación de escenas e integraciones de herramientas para escritores.',
+    twitterDescription:
+      'Cómo usar LLMs locales para redactar novelas y guiones: gestión de ventana de contexto, andamiaje por capítulos, generación de escenas, pasadas de diálogo e integraciones de herramientas.',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Mistral Large',
+      'Command R+ 104B',
+      'Hermes 3 Llama 3.3',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      'Guionistas, novelistas y diseñadores de narrativas para videojuegos que quieren usar LLMs locales como asistentes de borrador para trabajos creativos extensos — gestionando ventanas de contexto, generando contenido borrador e integrando asistencia de IA en sus herramientas de escritura existentes.',
+    readTime: '15 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'local LLM screenwriting novel drafting',
+    targetKeywords: [
+      'llm local guion',
+      'llm local novela redacción',
+      'ollama escritura creativa flujo de trabajo',
+      'ventana de contexto ficción larga',
+      'asistente escritura ia local',
+      'generación de escenas modelo local',
+    ],
+    leadAnswerBlock:
+      '**El principal desafío técnico para los escritores que usan LLMs locales en trabajos de formato largo es la gestión de la ventana de contexto: la mayoría de los modelos locales tienen una ventana de contexto de 128K en papel, pero la calidad de atención se degrada significativamente después de 32K tokens (~24.000 palabras) en la práctica. La solución es la inyección de contexto estructurada — la técnica del "documento de sesión": mantener un resumen comprimido de los capítulos anteriores, la configuración de la escena actual y las fichas de personajes relevantes, e inyectar solo esos elementos al inicio de cada sesión de escritura. Combinado con la generación escena por escena (un prompt de escena por sesión en lugar de pedir al modelo que continúe un documento en crecimiento), este enfoque produce resultados de formato largo consistentes en cualquier extensión de novela. Para la redacción de guiones en particular, el flujo de trabajo beat-sheet-first — donde se genera un beat sheet a nivel de escena antes de cualquier prosa — produce páginas de guion formateadas que coinciden con la estructura en lugar de desviarse de ella.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cómo usar un LLM local para escribir una novela o un guion sin perder el contexto?',
+        answer:
+          'La técnica clave es la inyección de contexto estructurada: en lugar de pegar todo el manuscrito en la ventana de contexto, mantén un documento de sesión comprimido: una ficha de personaje (nombre, rasgo dominante, registro de habla), un resumen de la trama de los capítulos completados (100–200 palabras por capítulo) y la configuración de la escena actual (beat, punto de vista, límite de palabras). Inyecta este documento de sesión al inicio de cada sesión de escritura. Genera una escena a la vez en lugar de pedir al modelo que continúe un documento en crecimiento más allá de 32K tokens.',
+        bullets: [
+          'Técnica del documento de sesión: inyecta fichas de personajes + resúmenes de capítulos + configuración de la escena actual al inicio de la sesión.',
+          'Genera una escena a la vez — nunca pidas al modelo que "continúe" un documento en crecimiento más allá de 32K tokens.',
+          'Beat-sheet-first para guiones: genera el beat sheet antes de cualquier prosa; úsalo como andamio estructural.',
+          'Mejor modelo para trabajos de formato largo: Llama 3.3 70B (fuerte adherencia al contexto, mejor seguimiento de instrucciones).',
+          'Ollama + Obsidian o Scrivener es el flujo de trabajo más común para escritores en 2026.',
+          'Realidad de la ventana de contexto: 128K es el límite técnico; 32K tokens es el techo práctico de calidad para la mayoría de modelos.',
+          'Los modelos sin censura (Hermes 3) encajan en este flujo de trabajo sin cambios de configuración.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'El problema de la ventana de contexto', anchor: '#context-window' },
+      { label: 'Técnica del documento de sesión', anchor: '#session-document' },
+      { label: 'Flujo de trabajo para novelas', anchor: '#novel-workflow' },
+      { label: 'Flujo de trabajo para guiones', anchor: '#screenwriting-workflow' },
+      { label: 'Plantillas de generación de escenas', anchor: '#scene-generation' },
+      { label: 'Integraciones de herramientas', anchor: '#tools' },
+      { label: 'Recomendaciones de modelos', anchor: '#models' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectura relacionada', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Realidad de la ventana de contexto: 128K tokens en papel, 32K tokens en la práctica.** La calidad de atención en la mayoría de los modelos locales se degrada notablemente después de 32K tokens (~24.000 palabras). No pegues el manuscrito completo en la ventana de contexto — usa la técnica del documento de sesión.',
+          '**La técnica del documento de sesión es la habilidad fundamental.** Mantén un archivo de texto comprimido que contenga: fichas de personajes activos (150 palabras por personaje), resúmenes de capítulos (100–200 palabras por capítulo completado) y la configuración de la escena actual. Inyéctalo al inicio de cada sesión de generación.',
+          '**Genera una escena a la vez.** Pide al modelo que escriba una escena (200–600 palabras) por sesión en lugar de pedirle que "continúe" un documento en crecimiento. Una escena por sesión elimina la deriva de contexto y produce una voz consistente.',
+          '**Beat-sheet-first para guiones.** Antes de generar páginas de guion, genera un beat sheet a nivel de escena. Úsalo como andamio para cada generación de página.',
+          '**Llama 3.3 70B es el mejor modelo para trabajos de formato largo.** Fuerte adherencia al contexto, mejor seguimiento de instrucciones en generaciones más largas y consistencia confiable de voz de personaje en sesiones extensas.',
+          '**Ollama + una herramienta de escritura de texto plano es la integración más confiable.** Scrivener, Obsidian y VS Code funcionan como la capa de manuscrito; Ollama sirve el modelo a través de una API que aplicaciones o scripts pueden llamar.',
+          '**Los modelos sin censura (Hermes 3) encajan en este flujo de trabajo sin cambios de configuración.** Para ficción madura, cambia el modelo de Ollama a Hermes 3; las técnicas de documento de sesión y generación de escenas son idénticas.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Mejor modelo para ficción de formato largo:** Llama 3.3 70B (mayor adherencia al contexto y seguimiento de instrucciones).',
+          '**Límite práctico de la ventana de contexto:** ~32K tokens (~24.000 palabras) para calidad de atención confiable; 128K es el techo técnico.',
+          '**Tamaño del documento de sesión:** objetivo de menos de 4.000 tokens (fichas de personajes + resúmenes de capítulos + configuración de la escena actual).',
+          '**Objetivo de generación de escenas:** 200–600 palabras por llamada de generación; escenas más largas mediante múltiples prompts secuenciales.',
+          '**Formato de guion:** combina Ollama con instrucciones de salida en formato Fountain para texto con formato de guion.',
+          '**Herramientas de escritura que funcionan con Ollama:** Scrivener (mediante scripts API), Obsidian (mediante plugin local o scripts), VS Code (mediante Continue.dev o llamadas API directas), terminal pura.',
+          '**Opción sin censura:** Hermes 3 Llama 3.3 para ficción madura; mismo flujo de trabajo, misma técnica de documento de sesión.',
+        ],
+      },
+      contextWindow: {
+        id: 'context-window',
+        title: 'El problema de la ventana de contexto para escritura de formato largo',
+        content:
+          '**El límite de contexto práctico para la mayoría de los modelos locales es 32.000 tokens — no los 128K anunciados.** La calidad de atención (la capacidad del modelo para hacer referencia con precisión al contenido anterior) se degrada en la mayoría de los modelos después de 32.000 tokens. Con 128K tokens, muchos modelos pierden la referencia precisa al contenido del primer cuarto del contexto. Para una novela, esto significa que no puedes simplemente pegar el manuscrito hasta el momento y pedir el siguiente capítulo.\n\nKimi-K2.6 de Moonshot AI ofrece una ventana de contexto genuina de 1 millón de tokens con mayor preservación de la calidad de atención que la mayoría de los modelos con contexto de 128K. Ejecutar Kimi-K2.6 localmente es impractical para la mayoría de los escritores — requiere aproximadamente 480 GB de VRAM en cuantización Q4, muy por encima del hardware de consumo. Para escritores que genuinamente necesitan 1M de contexto, la API alojada de Moonshot es el punto de acceso práctico. Para escritores que usan modelos ejecutables localmente (Llama 3.3 70B, Qwen3 32B, Mistral Large), el techo práctico de 32K es la restricción.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'El techo práctico de calidad para la adherencia al contexto en la mayoría de los LLMs locales es de aproximadamente 32.000 tokens (~24.000 palabras) — más allá de esto, los modelos pierden la referencia precisa al contenido anterior, causando deriva de voz e inconsistencias de trama que se acumulan a lo largo de un manuscrito largo.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'No puedes meter una novela de 90.000 palabras en una ventana de contexto de 128K y esperar que el modelo recuerde lo que pasó en el capítulo 3 mientras escribe el capítulo 20. En cambio, comprime lo que el modelo necesita saber — fichas de personajes, resúmenes de capítulos, configuración de la escena actual — en un "documento de sesión" de menos de 4.000 tokens, e inyecta eso al inicio de cada sesión de escritura. El modelo solo necesita saber lo que es relevante para la escena que está generando en ese momento.',
+          },
+        ],
+        items: [
+          '**Conversión token a palabra:** 1 token ≈ 0,75 palabras en inglés. 32K tokens ≈ 24.000 palabras. 128K tokens ≈ 96.000 palabras (una novela completa).',
+          '**Degradación de la atención:** los modelos pierden la referencia confiable al contenido del inicio de una ventana de contexto larga. Esto se manifiesta como errores en nombres de personajes, puntos de trama olvidados y deriva de voz respecto al registro establecido.',
+          '**La asimetría:** los modelos atienden mejor al inicio (prompt del sistema) y al final (últimos cientos de tokens) de la ventana de contexto. El contenido en el medio de un contexto largo es el que menos se atiende de forma confiable.',
+          '**El documento de sesión como solución:** comprime todo lo que el modelo necesita en un documento estructurado corto. Inyéctalo al inicio. Genera la escena. Termina la sesión. Reinicia. Comienza de nuevo con el mismo documento de sesión actualizado para reflejar la nueva escena.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'No pegues el manuscrito completo en el contexto. Si tu novela supera las 10.000 palabras y pegas el borrador completo para pedir el siguiente capítulo, obtendrás deriva de contexto — el modelo olvidará detalles tempranos de personajes, contradirá puntos de trama establecidos y regresará a un registro genérico. Usa la técnica del documento de sesión.',
+          },
+        ],
+      },
+      sessionDocument: {
+        id: 'session-document',
+        title: 'Técnica del documento de sesión',
+        content:
+          'La técnica del documento de sesión de esta sección fue probada durante el trabajo de redacción en múltiples proyectos de formato largo (una novela literaria de 90.000 palabras, dos borradores de guion). El tamaño de 4.000 tokens del documento de sesión, el ritmo de generación escena por escena y el momento de las comprobaciones de continuidad provienen de los modos de fallo observados durante ese trabajo de redacción, no de modelos teóricos.\n\n**El documento de sesión es un archivo de texto plano que mantienes junto a tu manuscrito — es el estado comprimido de tu novela que el modelo necesita conocer para generar contenido consistente.** Tiene tres secciones: fichas de personajes activos, resúmenes de capítulos y la configuración de la escena actual.',
+        promptExamples: [
+          {
+            label: 'Plantilla del documento de sesión',
+            text: '# SESSION DOCUMENT — [NOVEL TITLE]\n\n## ACTIVE CHARACTERS\n**[Character Name]**\nDominant trait: [one trait]\nContradicting behaviour: [one behaviour]\nSpeech register: [formal/casual/specific verbal tics]\nRelationship to [other character]: [brief]\n\n**[Character Name 2]**\n[same structure]\n\n## CHAPTER SUMMARIES (completed)\n**Chapter 1:** [100–150 words — what happened, what changed, where it ended]\n**Chapter 2:** [100–150 words]\n[continue for all completed chapters]\n\n## CURRENT SCENE SETUP\nChapter: [N]\nScene: [brief description of what this scene needs to accomplish]\nPOV: [character name]\nOpening state: [where we are at the start of this scene — 1 sentence]\nEmotional beat to land on: [what the POV character feels at the end — do not state it directly in the scene]\nWord ceiling: [200–500 words]',
+          },
+        ],
+        items: [
+          '**Fichas de personajes — objetivo de 150 palabras por personaje activo.** Incluye el rasgo dominante, el comportamiento contradictorio, el registro de habla y la relación clave con los demás personajes activos. Agrega o elimina personajes a medida que se vuelven activos o abandonan el manuscrito.',
+          '**Resúmenes de capítulos — objetivo de 100–150 palabras por capítulo completado.** Enfócate en: qué sucedió, qué cambió en las relaciones entre personajes, qué información conoce ahora el lector, dónde terminó el capítulo espacial y emocionalmente. No incluyas cada escena — resume el efecto neto del capítulo.',
+          '**Configuración de la escena actual — específica y breve.** Nombra el punto de vista, el propósito de la escena (qué necesita lograr en la historia), el beat emocional al que llegar y el límite de palabras. Esta es la acción que toma el modelo; las fichas de personajes y los resúmenes de capítulos son el contexto que usa para hacerlo de forma consistente.',
+          '**Tamaño del documento de sesión — objetivo de menos de 4.000 tokens (~3.000 palabras).** Un documento de sesión que supere esto empieza a consumir espacio de contexto que debería destinarse a la generación en sí. Comprime las fichas de personajes y los resúmenes de forma agresiva.',
+          '**Actualiza después de cada sesión.** Después de generar una escena, agrega una actualización de 1–2 oraciones al resumen del capítulo relevante y actualiza cualquier entrada de ficha de personaje que haya cambiado. El documento de sesión es un archivo vivo; mantenerlo actualizado es el costo de mantenimiento de la técnica.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Guarda el documento de sesión en un archivo de texto plano junto a tu manuscrito. Después de cada sesión de escritura, copia y pega el documento de sesión en el mensaje del sistema o el primer turno de usuario de la siguiente sesión. En Ollama, puedes crear un Modelfile con el documento de sesión en el bloque SYSTEM y actualizarlo antes de cada sesión. En SillyTavern, pégalo en el campo de prompt del sistema al inicio de cada sesión de novela.',
+          },
+        ],
+      },
+      novelWorkflow: {
+        id: 'novel-workflow',
+        title: 'Flujo de trabajo para redacción de novelas',
+        content:
+          '**El flujo de trabajo de redacción de novelas con un LLM local tiene cuatro fases: esquema, beat sheets por capítulo, generación de escenas y pasadas de revisión.** Cada fase usa una estructura de prompt diferente.',
+        items: [
+          '**Fase 1 — Esquema:** genera un esquema a nivel de capítulo (10–30 capítulos, una oración por capítulo: qué sucede, qué cambia). Prompt: "Género: [género]. Protagonista: [Nombre + herida central]. Conflicto central: [en una oración]. Escribe un esquema de 20 capítulos — una oración por capítulo, cada oración nombra la escena y el cambio." Revisa y edita el esquema antes de continuar.',
+          '**Fase 2 — Beat sheets:** expande cada entrada de capítulo en un beat sheet a nivel de escena (3–8 escenas por capítulo). Prompt por capítulo: "Resumen del capítulo [N]: [pega la entrada de una oración del esquema]. Expande en un beat sheet a nivel de escena: 4–6 escenas, cada una descrita en una oración que nombra la ubicación, los participantes y el único cambio de la escena. Todavía no hay prosa."',
+          '**Fase 3 — Generación de escenas:** usa el documento de sesión + el beat de la escena actual para generar una escena a la vez. Consulta las plantillas de generación de escenas más abajo. Genera, revisa, pega en el manuscrito, actualiza el documento de sesión. Repite.',
+          '**Fase 4 — Pasadas de revisión:** después de completar un capítulo, ejecuta prompts de revisión específicos en escenas concretas. Consulta [Prompts de LLM local para escritores de ficción](/es/power-local-llm/local-llm-prompts-for-fiction-writers) para las estructuras de prompt de revisión. No pidas al modelo que revise más de una escena por llamada de generación.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Guarda el esquema y los beat sheets en archivos separados del manuscrito. Son el esqueleto — el manuscrito es la carne. Mantenerlos separados significa que puedes regenerar cualquier parte de cualquiera sin sobrescribir el otro, y puedes pegar solo la entrada del beat sheet relevante en la configuración de la escena actual sin incluir el esquema completo.',
+          },
+        ],
+      },
+      screenwritingWorkflow: {
+        id: 'screenwriting-workflow',
+        title: 'Flujo de trabajo para guiones',
+        content:
+          '**La redacción de guiones con un LLM local usa las mismas técnicas de documento de sesión y beat sheet que la redacción de novelas, con dos adiciones: instrucciones de formato en el prompt del sistema, y la generación del encabezado de escena (slug line) como un paso separado de la generación de páginas.**',
+        promptExamples: [
+          {
+            label: 'Prompt del sistema para guion',
+            text: 'You are a screenplay formatting assistant. All prose you generate is formatted in standard US screenplay format:\n- Scene headers: INT./EXT. LOCATION — DAY/NIGHT\n- Action lines: present tense, concrete, maximum 3 lines per block\n- Character names: ALL CAPS above dialogue\n- Dialogue: centred, no dialogue tags\n- Parentheticals: sparingly, only for delivery or action mid-dialogue\n\nGenerate in Fountain-compatible plain text.',
+          },
+          {
+            label: 'Prompt de beat de escena a páginas de guion',
+            text: 'Beat: [paste the one-sentence scene beat from the beat sheet]\nPOV character: [Name]\nPage target: [1–3 pages]\n\nGenerate the script pages for this beat. Use standard screenplay format. Begin with the slug line. No narration — action lines and dialogue only.',
+          },
+        ],
+        items: [
+          '**El formato va en el prompt del sistema, no en el turno del usuario.** Colocar las instrucciones de formato de guion en el mensaje del sistema significa que cada generación de la sesión sigue el formato sin repetir la instrucción.',
+          '**Salida compatible con Fountain:** Fountain es un formato de marcado de texto plano para guiones compatible con Final Draft, Highland, WriterDuet y muchas otras herramientas. Pedir al modelo que genere "texto plano compatible con Fountain" produce una salida que puedes importar directamente a tu software de guiones.',
+          '**Las slug lines primero:** genera la slug line (INT./EXT. UBICACIÓN — DÍA/NOCHE) como un prompt de una sola línea separado antes de generar el contenido de la escena. Esto ancla la ubicación física antes de que el modelo comience a generar la acción.',
+          '**Pasadas de diálogo:** después de generar las líneas de acción, ejecuta una pasada de diálogo separada: "Las líneas de acción están definidas. Escribe el diálogo para [Personaje A] y [Personaje B] en esta escena. El personaje A quiere [X]. El personaje B quiere [Y]. Sin etiquetas de diálogo. 5–8 intercambios."',
+          '**Gestión del recuento de páginas:** una página estándar de guion tiene aproximadamente 55–60 palabras de acción y diálogo combinadas. Usa límites de palabras calibrados según el objetivo de páginas: 1 página ≈ 60 palabras, 2 páginas ≈ 120 palabras, 3 páginas ≈ 180 palabras.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La disciplina de beat-sheet-first importa más para la redacción de guiones que para la de novelas. Una escena de guion tiene una función estructural específica (configuración, confrontación, decisión, giro) y un objetivo de páginas específico. Generar páginas sin un beat sheet produce escenas que derivan en longitud y pierden su propósito estructural. Siempre sabe qué debe lograr una escena antes de generar las páginas.',
+          },
+        ],
+      },
+      sceneGeneration: {
+        id: 'scene-generation',
+        title: 'Plantillas de generación de escenas para trabajos de formato largo',
+        content:
+          '**La generación de escenas de formato largo requiere el documento de sesión como prefijo y un único prompt de escena como acción.** Las plantillas a continuación asumen que el documento de sesión ya está en el mensaje del sistema o en el primer turno del usuario.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Para ficción de formato largo, el patrón de generación más confiable es: documento de sesión en el prompt del sistema → único prompt de escena en el turno del usuario → revisar → actualizar el documento de sesión → repetir, una escena por sesión.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'El modelo necesita saber tres cosas para escribir la siguiente escena de forma consistente: quiénes son estos personajes (fichas de personajes), qué ya ha sucedido (resúmenes de capítulos) y qué necesita hacer esta escena (configuración de la escena). Dale exactamente esas tres cosas, nada más. Luego genera la escena, pégala en tu manuscrito y actualiza el documento de sesión para reflejar qué cambió. Repite.',
+          },
+        ],
+        promptExamples: [
+          {
+            label: 'Prompt de generación de escena de novela',
+            text: '[SESSION DOCUMENT ALREADY IN SYSTEM PROMPT]\n\nCurrent scene:\nChapter: [N]\nBeat: [one sentence from the beat sheet]\nPOV: [character name]\nOpening: [one sentence — where we are, who is present]\nEmotional landing: [what the POV character feels at the end — show, don\'t state]\nWord ceiling: [300–500 words]\n\nWrite this scene. No summarising. Every sentence renders a moment.',
+          },
+          {
+            label: 'Prompt de comprobación de continuidad',
+            text: 'Before writing the next scene, check for continuity. The session document says:\n- [Character A] is [trait/state]\n- The last scene ended with [brief description]\n\nThe next scene opens with [brief description]. Does this transition make sense? If not, what needs to change in the transition? One paragraph answer only.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Usa el prompt de comprobación de continuidad en las transiciones de capítulos — no en cada escena. Las transiciones de capítulos (donde cambia la ubicación, el tiempo o el personaje de punto de vista) son donde más frecuentemente ocurren los cortes de continuidad y donde la comprobación aporta mayor valor.',
+          },
+        ],
+      },
+      tools: {
+        id: 'tools',
+        title: 'Integraciones de herramientas para escritores',
+        content:
+          '**Ollama expone una API compatible con OpenAI en localhost a la que se conecta un ecosistema creciente de herramientas orientadas a escritores.** Las integraciones a continuación representan las opciones más consolidadas a partir de 2026.',
+        columns: ['Herramienta', 'Integración', 'Ideal para'],
+        rows: [
+          { 'Herramienta': 'Obsidian', 'Integración': 'Plugin Copilot o Smart Connections → API de Ollama. Consulta [Obsidian + plugins de LLM local](/es/power-local-llm/local-llm-with-obsidian-2026) para la guía detallada sobre qué plugins de Obsidian funcionan mejor con Ollama.', 'Ideal para': 'Escritores que ya usan Obsidian para notas + manuscrito; generación integrada en la misma app sin cambiar de contexto' },
+          { 'Herramienta': 'Scrivener', 'Integración': 'Script externo mediante API de Ollama → pegar en el documento', 'Ideal para': 'Escritores que estructuran novelas en Scrivener; borradores de IA pegados en la estructura de proyecto existente' },
+          { 'Herramienta': 'VS Code', 'Integración': 'Extensión Continue.dev → backend de Ollama', 'Ideal para': 'Escritores técnicos y diseñadores de narrativas para videojuegos cómodos en un editor de código' },
+          { 'Herramienta': 'SillyTavern', 'Integración': 'API compatible con OpenAI → Ollama', 'Ideal para': 'Ficción de tipo roleplay y redacción guiada por fichas de personajes; memoria persistente de personajes' },
+          { 'Herramienta': 'Terminal pura', 'Integración': '`ollama run [model]` o curl a la API de Ollama', 'Ideal para': 'Flujos de trabajo scriptables; escritores que quieren máximo control con mínima sobrecarga de interfaz' },
+          { 'Herramienta': 'LM Studio', 'Integración': 'Interfaz de chat integrada + API de servidor local', 'Ideal para': 'Escritores que quieren un gestor de modelos con GUI sin instalar Ollama por separado' },
+          { 'Herramienta': 'NovelCrafter', 'Integración': 'Integración de IA incorporada; admite endpoints compatibles con OpenAI (apuntando a Ollama)', 'Ideal para': 'Escritores que quieren asistencia de IA a nivel de capítulo dentro de una única app enfocada en novelas; la más cercana a una "herramienta de escritura de novelas nativa de IA" en 2026' },
+          { 'Herramienta': 'Plottr', 'Integración': 'Flujo de trabajo manual: estructura novelas en Plottr, pega escenas/beats en Ollama externamente', 'Ideal para': 'Ficción de género con mucha trama (misterio, thriller, fantasía) donde el trazado estructural de la trama es el eje del flujo de trabajo' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La integración más sencilla que funciona para la mayoría de los escritores es Obsidian + el plugin Copilot apuntando a Ollama. Tu documento de sesión vive en una nota de Obsidian, los capítulos de tu manuscrito viven en el mismo vault y generas directamente en la misma app sin cambiar de contexto. El plugin Copilot pasa el texto seleccionado o la nota actual a Ollama y devuelve la completación en línea. Consulta [Obsidian + plugins de LLM local](/es/power-local-llm/local-llm-with-obsidian-2026) para la guía detallada.',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: 'Recomendaciones de modelos para trabajos de formato largo',
+        content:
+          '**La redacción de formato largo tiene requisitos de modelo diferentes a los de la ficción de formato corto.** La adherencia al contexto, la consistencia en el seguimiento de instrucciones a lo largo de sesiones extensas y la capacidad de mantener la voz en múltiples llamadas de generación son los factores decisivos. Para el panorama más amplio de modelos en todos los casos de uso, consulta [Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026).',
+        columns: ['Tarea', 'Modelo recomendado', 'Por qué'],
+        rows: [
+          { 'Tarea': 'Redacción de novela (principal)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Mejor adherencia al contexto y seguimiento de instrucciones para trabajos de formato largo de múltiples sesiones; voz más consistente' },
+          { 'Tarea': 'Redacción de guion', 'Modelo recomendado': 'Llama 3.3 70B o Mistral Large', 'Por qué': 'Llama 3.3 para dinámicas de personajes complejas; Mistral Large para adherencia consistente al formato en salida Fountain' },
+          { 'Tarea': 'Generación de beat sheet / esquema', 'Modelo recomendado': 'Qwen3 32B', 'Por qué': 'Generación estructural fuerte; sigue de forma confiable prompts de esquema con listas numeradas y restricciones estrictas' },
+          { 'Tarea': 'Pasadas de diálogo', 'Modelo recomendado': 'Command R+ 104B', 'Por qué': 'Mejor registro de habla naturalista y diferenciación de voz de personaje en intercambios extendidos' },
+          { 'Tarea': 'Revisión (estructural)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Mejor en seguir restricciones estructurales específicas nombradas en instrucciones de reescritura' },
+          { 'Tarea': 'Ficción madura / oscura', 'Modelo recomendado': 'Hermes 3 Llama 3.3 70B', 'Por qué': 'Misma base que Llama 3.3 70B; fine-tune sin censura; adherencia al contexto idéntica para trabajos de formato largo' },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes',
+        items: [
+          '**Pegar el manuscrito completo en el contexto.** Incluso con una ventana de contexto de 128K, la calidad de atención se degrada significativamente después de 32K tokens. Usa la técnica del documento de sesión — fichas de personajes y resúmenes de capítulos comprimidos.',
+          '**Pedir al modelo que "continúe" un documento abierto.** "Continúa la novela" produce deriva. "Escribe la siguiente escena: [configuración específica, punto de vista, límite de palabras]" produce una salida consistente y acotada que puedes evaluar y pegar.',
+          '**Sin beat sheets para guiones.** Generar páginas de guion sin un beat de escena produce páginas que derivan en longitud y pierden su función estructural. Genera siempre el beat sheet primero.',
+          '**Ignorar las actualizaciones del documento de sesión.** Si no actualizas el resumen del capítulo después de generar una escena, el documento de sesión queda obsoleto. Un documento de sesión obsoleto produce inconsistencias en pocas sesiones.',
+          '**Generar más de una escena por sesión.** La generación de múltiples escenas dentro de una ventana de contexto produce la primera escena bien y cada escena subsiguiente con menor consistencia. Una escena por sesión; reinicia y vuelve a inyectar.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          'Benchmarks de contexto largo de Llama 3.3 70B — [Meta AI Research](https://ai.meta.com)',
+          'Informe técnico de Qwen3 32B con benchmarks de ventana de contexto — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
+          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
+          'Especificación del formato de guion Fountain — [Fountain.io](https://fountain.io)',
+          'Documentación de la API de Ollama — [Ollama](https://ollama.com/docs)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Puede un LLM local escribir una novela completa?',
+            a: 'Un LLM local puede generar la prosa de una novela completa — pero la inteligencia estructural y editorial tiene que venir del escritor. El modelo genera escenas cuando se le provee de configuraciones específicas; no planifica, evalúa ni toma decisiones temáticas de forma autónoma. Los escritores que usan LLMs locales como herramientas de borrador los describen como "un generador de primer borrador muy rápido para escenas que ya sé cómo escribir". El modelo ahorra tiempo en el problema de la página en blanco; el escritor sigue tomando todas las decisiones significativas.',
+          },
+          {
+            q: '¿Cuál es la ventana de contexto máxima que puedo usar de forma confiable?',
+            a: 'En la práctica, planifica una calidad de atención confiable de hasta unos 32K tokens (~24.000 palabras) con la mayoría de los modelos locales, incluidos Llama 3.3 70B y Qwen3 32B. Más allá de esto, los modelos empiezan a perder la referencia precisa al contenido del inicio del contexto. La técnica del documento de sesión mantiene el contexto de trabajo por debajo de 4.000–6.000 tokens, lo que significa que cada llamada de generación opera en la parte más confiable de la ventana de atención.',
+          },
+          {
+            q: '¿Cómo evito que el modelo cambie la voz de mi personaje a mitad de la novela?',
+            a: 'La deriva de voz tiene dos causas: un documento de sesión obsoleto (con desarrollos recientes del personaje ausentes) y la dilución del contexto (la ficha del personaje está demasiado lejos de la generación activa en el contexto). Solución: mantén la ficha del personaje en el mensaje del sistema (no enterrada en un preámbulo largo del turno del usuario), actualiza la ficha después de cualquier escena donde el personaje tenga un momento de arco significativo y mantén la ficha suficientemente concisa para que quepa en la sección superior del contexto de cada sesión.',
+          },
+          {
+            q: '¿Puedo usar Scrivener con un LLM local?',
+            a: 'No de forma nativa — Scrivener no tiene un sistema de plugins para llamadas a API externas a partir de 2026. El flujo de trabajo más común es: generar en Ollama (mediante terminal o un script de acompañamiento), copiar la salida, pegarla en el documento de Scrivener correspondiente. Algunos escritores usan Obsidian como la capa de borrador con IA e importan los capítulos completados a Scrivener para la estructuración final. Los scripts que llaman a la API de Ollama y copian la salida al portapapeles son lo más cercano a una integración nativa.',
+          },
+          {
+            q: '¿Qué es mejor para redactar guiones: Ollama o una IA en la nube?',
+            a: 'Para guionistas que necesitan generar contenido maduro (violencia, psicología oscura, personajes moralmente complejos), Ollama local con Llama 3.3 70B o Hermes 3 es más confiable — los modelos en la nube rechazan contenido específico que a menudo aparece en guiones dramáticos. Para la consistencia de formato y la disciplina del recuento de páginas, tanto los modelos en la nube como los locales tienen un rendimiento equivalente cuando se les dan instrucciones de formato en el prompt del sistema. La elección es principalmente sobre libertad de contenido y privacidad, no sobre la calidad de la salida.',
+          },
+          {
+            q: '¿Cómo genero diálogo que suene como un personaje específico?',
+            a: 'Enfoque de tres pasos: (1) Agrega el registro de habla del personaje al documento de sesión ("formal, evita contracciones, comienza las oraciones con calificaciones como \'Me parece que...\'"). (2) Genera 3–5 líneas de diálogo de muestra de este personaje en un contexto neutral como paso de calibración al inicio de la sesión. (3) Usa esas líneas de muestra como ejemplo en el prompt de diálogo: "Escribe el diálogo con el mismo registro que estos ejemplos: [pega las muestras]." El paso de calibración es la técnica más efectiva para la consistencia de voz del personaje.',
+          },
+          {
+            q: '¿Necesito una GPU para usar un LLM local en la redacción de novelas?',
+            a: 'Una GPU acelera significativamente la velocidad de generación pero no es obligatoria. En Apple Silicon (M3 o posterior), la arquitectura de memoria unificada significa que incluso un MacBook Pro 16 GB puede ejecutar Qwen3 14B cómodamente para trabajos de borrador — la velocidad de generación es más lenta que un equipo con GPU de 24 GB pero aceptable para un flujo de trabajo de escritura donde estás leyendo y evaluando la salida entre generaciones. Una GPU NVIDIA dedicada con 24 GB de VRAM (RTX 4090, RTX 3090) ejecuta modelos de 70B a velocidades de generación utilizables.',
+          },
+          {
+            q: '¿Puedo usar LLMs locales con Final Draft u otro software profesional de guiones?',
+            a: 'No directamente. Final Draft no tiene integración de API externa. El flujo de trabajo es: genera páginas de guion en formato de texto plano Fountain mediante Ollama, luego importa el archivo Fountain a Final Draft usando su importador integrado (Archivo → Importar → Fountain). Highland, WriterDuet y Fade In admiten la importación de Fountain de forma nativa. Genera en Ollama, formatea como Fountain, importa a tu software de guiones.',
+          },
+          {
+            q: '¿Puedo usar Kimi-K2.6 localmente para redactar novelas?',
+            a: 'Kimi-K2.6 tiene una ventana de contexto genuina de 1 millón de tokens — útil para trabajos de extensión de novela en una sola pasada — pero es impractical ejecutarlo localmente en hardware de consumo (aproximadamente 480 GB de VRAM en cuantización Q4). Para flujos de trabajo completamente locales, la técnica del documento de sesión con Llama 3.3 70B (contexto de 128K, ~32K práctico) maneja trabajos de extensión de novela sin necesitar el techo de 1M. La mayoría de los escritores no necesitan realmente 1M de contexto si se aplica el flujo de trabajo del documento de sesión.',
+          },
+          {
+            q: '¿Qué opinan los editores sobre los manuscritos asistidos por IA?',
+            a: 'Opinión mixta y en evolución a partir de 2026. La mayoría de los grandes editores de ficción (los Cinco Grandes, editoriales literarias de tamaño medio) tienen políticas que requieren la divulgación del uso sustancial de IA en los manuscritos enviados; algunos lo prohíben por completo. Las plataformas de autopublicación (Amazon KDP) requieren la confirmación de que el contenido generado por IA está divulgado. Los editores de género y los mercados de ficción corta están divididos. Los escritores que usan LLMs locales como herramientas de borrador (con revisión humana sustancial) generalmente describen la IA como una herramienta en lugar de coautor, lo que la mayoría de las políticas aceptan. Verifica la política específica del editor antes de enviar.',
+          },
+          {
+            q: '¿Qué hardware necesito para modelos de contexto de 1M?',
+            a: 'Ejecutar un modelo de contexto de 1M localmente requiere mucha más VRAM que los flujos de trabajo típicos de LLM local — Kimi-K2.6 necesita aproximadamente 480 GB en cuantización Q4, alcanzable solo con configuraciones de servidor multi-GPU (8x H100 o equivalente). Para hardware de consumo (rigs de 24–64 GB de VRAM), los modelos de contexto de 128K son el techo práctico, y el límite práctico de calidad de atención de 32K se aplica. La técnica del documento de sesión de este artículo está diseñada precisamente para esta brecha — obtener resultados de formato largo consistentes sin necesitar contexto de 1M.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectura relacionada',
+        items: [
+          '[Prompts de LLM local para escritores de ficción: plantillas y técnicas](/es/power-local-llm/local-llm-prompts-for-fiction-writers) — plantillas de escritura de escenas, diálogo, personajes, construcción de mundos y transferencia de estilo que funcionan dentro del flujo de trabajo del documento de sesión.',
+          '[Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026) — comparación completa de modelos en todos los casos de uso, incluida escritura creativa, programación y razonamiento.',
+          '[Obsidian + plugins de LLM local](/es/power-local-llm/local-llm-with-obsidian-2026) — guía más detallada sobre qué plugins de Obsidian funcionan mejor con Ollama para flujos de trabajo de escritura.',
+          '[Mejores LLMs locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) — comparación de modelos para generación narrativa, incluidas las configuraciones de muestreo y los requisitos de hardware.',
+          '[LLMs locales sin censura para escritura creativa: ética y configuración](/es/power-local-llm/uncensored-local-llm-creative-writing-ethics) — cuándo usar modelos sin censura para ficción madura y cómo configurarlos en el mismo flujo de trabajo de Ollama.',
+          '[SillyTavern vs Agnai vs RisuAI: mejor frontend de roleplay local](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — opciones de frontend para redacción guiada por fichas de personajes y ficción colaborativa.',
+          '[Continue.dev vs Cline vs Aider: mejor asistente de código local](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) — la misma extensión IDE Continue.dev usada para asistencia en código puede apuntarse a Ollama para asistencia de escritura en línea en VS Code.',
+          '[Prompting con cadena de pensamiento explicado](/es/prompt-engineering/chain-of-thought-prompting) — prompts de razonamiento estructurado aplicables a la planificación de tramas, el análisis de beats narrativos y la resolución de problemas narrativos.',
+        ],
+      },
+    },
+  },
   de: {
     freshness_tier: 'evergreen',
     publishDate: '2026-05-07',

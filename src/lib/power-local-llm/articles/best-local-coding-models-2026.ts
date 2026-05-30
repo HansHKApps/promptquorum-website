@@ -2398,4 +2398,648 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: 'Mejores modelos de código local en 2026: Qwen3-Coder vs DeepSeek vs Codestral',
+    seoTitle: 'Mejores modelos de código local 2026: Qwen3, DeepSeek, Codestral',
+    intro:
+      'Seis modelos de código de pesos abiertos compiten por el liderazgo en 2026: Qwen3-Coder (30B y 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code y StarCoder 2. Se diferencian en cantidad de parámetros, ventana de contexto, énfasis del entrenamiento, licencia y huella de VRAM. La elección correcta depende de qué restricción te afecta primero según tu hardware y tu lenguaje de programación. Esta guía los compara con información públicamente verificable: arquitectura, tamaños, contexto, licencias, cálculo de VRAM y dirección de benchmarks reportada por cada proveedor, con enlaces a cada ficha de modelo para que puedas comprobar los datos tú mismo.',
+    metaDescription:
+      '6 modelos de código local comparados en VRAM, dirección de benchmark HumanEval+, licencia y ventana de contexto. Qwen3-Coder 30B es la opción recomendada para mayo de 2026.',
+    twitterDescription:
+      'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — seis modelos de código de pesos abiertos, seis puntos fuertes diferentes. El veredicto por escenario está adentro.',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3-Coder 7B',
+      'DeepSeek Coder V3',
+      'Codestral 22B',
+      'Llama 3.3 Code',
+      'Granite Code 34B',
+      'Granite Code 8B',
+      'StarCoder 2 15B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4060 Ti 16 GB',
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'NVIDIA RTX 5090 32 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      'Desarrolladores que ejecutan LLMs de código localmente y necesitan elegir un modelo según su presupuesto de hardware, ventana de contexto y énfasis de lenguaje — no por marketing. Se asume familiaridad con cuantización, cálculo de VRAM y servidores de inferencia compatibles con OpenAI.',
+    readTime: '15 min de lectura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'modelo de código local',
+    targetKeywords: [
+      'mejor modelo de código local 2026',
+      'qwen3-coder vs deepseek',
+      'codestral vs qwen',
+      'llm local para programar',
+      'modelo de código open source',
+      'llm local humaneval',
+    ],
+    leadAnswerBlock:
+      '**Qwen3-Coder 30B es el modelo de código local por defecto en mayo de 2026 — la dirección de HumanEval+ publicada más sólida entre los modelos de pesos abiertos, contexto de 256K tokens, licencia Apache 2.0 y pesos Q4_K_M que caben en una GPU de 24 GB. DeepSeek Coder V3 es la opción de alto rendimiento cuando necesitas la ventana de contexto más grande y tienes 48 GB o más de VRAM. Codestral 22B es la opción de velocidad y licencia clara para equipos que necesitan claridad sobre la división no comercial/comercial de Mistral. Llama 3.3 Code, Granite Code y StarCoder 2 son opciones situacionales para compatibilidad con el ecosistema (herramientas Llama), licencias enterprise (Granite) o cobertura multilenguaje profunda (StarCoder 2). Elige según la restricción que te limita — nivel de VRAM, longitud de contexto o licencia — no según el ranking del leaderboard.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuál es el mejor LLM de código local para desarrolladores en 2026?',
+        answer:
+          'Elige Qwen3-Coder 30B si tienes 24 GB de VRAM y quieres el modelo de código de pesos abiertos más sólido en mayo de 2026 — lidera la dirección de HumanEval+ reportada por el proveedor, admite una ventana de contexto de 256K y se distribuye bajo Apache 2.0. Elige Qwen3-Coder 7B para portátiles y tarjetas de 8 GB. Elige DeepSeek Coder V3 si tienes 48 GB o más de VRAM y necesitas la ventana de contexto más larga para trabajar con repositorios completos. Elige Codestral 22B para inferencia rápida y una historia de uso comercial clara (licencia Mistral Non-Production con licencia comercial de Mistral disponible de pago). Elige Llama 3.3 Code para compatibilidad con el ecosistema si tu stack ya usa modelos Llama. Elige Granite Code o StarCoder 2 para predictibilidad en licencias enterprise o cobertura amplia de lenguajes. La decisión raramente se trata del ranking; se trata de qué restricción — VRAM, contexto o licencia — te afecta primero.',
+        bullets: [
+          'Qwen3-Coder 30B — opción de código local por defecto en mayo de 2026: dirección HumanEval+ líder, contexto 256K, Apache 2.0, encaja en GPU de 24 GB con Q4_K_M.',
+          'Qwen3-Coder 7B — mejor opción para portátil / GPU de 8 GB. Sorprendentemente capaz para autocompletado y ediciones de archivos pequeños.',
+          'DeepSeek Coder V3 — ventana de contexto más grande del grupo; el modelo completo necesita 48 GB o más de VRAM con Q4_K_M.',
+          'Codestral 22B — el más rápido del nivel 22B+; camino comercial más claro mediante licencia comercial de Mistral.',
+          'Llama 3.3 Code — elegir por compatibilidad con el ecosistema Llama (herramientas existentes, fine-tunes); la dirección de código queda por detrás de Qwen3-Coder.',
+          'Granite Code (IBM) y StarCoder 2 (BigCode) — opciones enterprise/amplitud; raramente los mejores en términos absolutos, a menudo la licencia más defendible.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Tabla comparativa', anchor: '#comparison-table' },
+      { label: '¿Cuál deberías elegir?', anchor: '#which-one' },
+      { label: 'Qwen3-Coder: análisis en profundidad', anchor: '#qwen3-coder' },
+      { label: 'DeepSeek Coder V3: análisis en profundidad', anchor: '#deepseek-coder' },
+      { label: 'Codestral 22B: análisis en profundidad', anchor: '#codestral' },
+      { label: 'Llama 3.3 Code: análisis en profundidad', anchor: '#llama-code' },
+      { label: 'Granite Code: análisis en profundidad', anchor: '#granite-code' },
+      { label: 'StarCoder 2: análisis en profundidad', anchor: '#starcoder-2' },
+      { label: 'Cálculo de VRAM por cuantización', anchor: '#vram-math' },
+      { label: 'Comparativa de ventana de contexto', anchor: '#context-window' },
+      { label: 'Comparativa de licencias', anchor: '#licensing' },
+      { label: 'Árbol de decisión', anchor: '#decision-tree' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'Preguntas frecuentes', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Qwen3-Coder 30B (Alibaba, Apache 2.0)** es el modelo de código local por defecto en mayo de 2026 — lidera la dirección de HumanEval+ reportada por los proveedores entre los modelos de pesos abiertos, admite una ventana de contexto de 256K tokens y corre con Q4_K_M en una GPU de consumo de 24 GB.',
+          '**Qwen3-Coder 7B** es el modelo de código más sólido por debajo de 10B — encaja en tarjetas de 8-10 GB, funciona bien en un MacBook de 16 GB y potencia flujos de trabajo de autocompletado donde el 30B sería excesivo.',
+          '**DeepSeek Coder V3** ofrece la ventana de contexto práctico más grande del grupo y destaca en razonamiento multiarchivo — pero el modelo completo necesita 48 GB o más de VRAM con Q4_K_M; las variantes derivadas de MoE más pequeñas acortan la diferencia en tarjetas de 24 GB.',
+          '**Codestral 22B (Mistral)** es la opción de velocidad — menor número de parámetros activos, inferencia rápida y camino comercial claro mediante la licencia comercial de Mistral. Ligeramente por detrás de Qwen3-Coder en dirección de código, pero por delante en tokens por segundo.',
+          '**Llama 3.3 Code** queda por detrás de Qwen3-Coder en dirección de código publicada, pero gana donde el ecosistema circundante (fine-tunes existentes, herramientas específicas de Llama) importa más que el ranking absoluto.',
+          '**Granite Code (IBM, Apache 2.0)** está diseñado para contextos enterprise donde la claridad de licencia y la postura de auditoría importan más que la posición en el leaderboard. La variante 34B es la más sólida de la familia; la 8B es la opción para portátiles.',
+          '**StarCoder 2 (BigCode, BigCode OpenRAIL-M)** abarca el rango más amplio de lenguajes de programación del grupo, con cobertura sólida de lenguajes de nicho (Rust, Lua, Haskell, Solidity).',
+          '**La VRAM es la restricción principal para la mayoría de los lectores.** Elige el modelo más grande que quepa con Q4_K_M y 2-4 GB de margen para contexto y herramientas — no el modelo con el puntaje más alto en el leaderboard.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Opción óptima (mayo 2026):** Qwen3-Coder 30B con Q4_K_M en una GPU de 24 GB.',
+          '**Opción para portátil / GPU de 8-10 GB:** Qwen3-Coder 7B con Q4_K_M (~5 GB).',
+          '**Opción para contexto largo:** DeepSeek Coder V3 con Q4_K_M en 48 GB o más de VRAM.',
+          '**Opción de velocidad:** Codestral 22B con Q4_K_M — la más rápida del nivel 22B+.',
+          '**Opción enterprise / apta para auditoría:** Granite Code 34B (IBM, Apache 2.0).',
+          '**Opción para lenguajes de nicho:** StarCoder 2 15B (cobertura de Rust, Lua, Haskell, Solidity).',
+          '**Cálculo de VRAM con Q4_K_M:** aproximadamente `(parámetros en B) × 0,6 GB` más 2-4 GB de overhead de contexto.',
+          '**Las licencias no son iguales.** Qwen3-Coder, DeepSeek Coder V3 y Granite Code son Apache 2.0. Codestral tiene la licencia Mistral Non-Production con condiciones comerciales separadas. Llama 3.3 usa la Llama Community Licence (apta para uso comercial con los filtros de política de Meta). StarCoder 2 se distribuye bajo BigCode OpenRAIL-M.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Comparativa de los seis modelos de código local en 2026',
+        content:
+          'Todos los datos a continuación son verificables públicamente contra las fichas de modelo citadas (ver sección de Fuentes). La dirección de HumanEval+ es reportada por el proveedor; trátala como señal de ranking, no como precisión absoluta — comprueba la ficha de modelo antes de cualquier decisión de producción.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen3-Coder 30B es la opción por defecto para mayo de 2026; el resto gana en ajuste de hardware, longitud de contexto, postura de licencia o cobertura de lenguaje.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Seis modelos de código de pesos abiertos, sin un ganador claro para todo. Qwen3-Coder lidera en dirección del benchmark de código público; DeepSeek lidera en ventana de contexto; Codestral lidera en velocidad; Granite lidera en claridad de licencia; StarCoder lidera en cobertura de lenguajes de nicho. La elección correcta es la que mejor encaja con tu principal restricción.',
+          },
+        ],
+        columns: ['Modelo', 'Tamaño', 'VRAM (Q4_K_M)', 'Ventana de contexto', 'Licencia', 'Mejor para'],
+        rows: [
+          {
+            'Modelo': 'Qwen3-Coder 30B',
+            'Tamaño': '~30B params',
+            'VRAM (Q4_K_M)': '~17-18 GB',
+            'Ventana de contexto': '256K',
+            'Licencia': 'Apache 2.0',
+            'Mejor para': 'Opción por defecto para GPUs de 24 GB en mayo de 2026',
+          },
+          {
+            'Modelo': 'Qwen3-Coder 7B',
+            'Tamaño': '~7B params',
+            'VRAM (Q4_K_M)': '~5 GB',
+            'Ventana de contexto': '128K',
+            'Licencia': 'Apache 2.0',
+            'Mejor para': 'Portátiles, GPUs de 8-10 GB, cargas de trabajo de autocompletado',
+          },
+          {
+            'Modelo': 'DeepSeek Coder V3',
+            'Tamaño': 'MoE, ~36B activos de un total mayor',
+            'VRAM (Q4_K_M)': '~48 GB+ (completo); variantes más pequeñas ~24 GB',
+            'Ventana de contexto': '128K (ampliable)',
+            'Licencia': 'Apache 2.0',
+            'Mejor para': 'Contexto largo, multifichero, razonamiento a nivel de repositorio',
+          },
+          {
+            'Modelo': 'Codestral 22B',
+            'Tamaño': '~22B params',
+            'VRAM (Q4_K_M)': '~13 GB',
+            'Ventana de contexto': '32K',
+            'Licencia': 'Mistral Non-Production (comercial vía Mistral)',
+            'Mejor para': 'Inferencia rápida, camino de licencia comercial para equipos en la UE',
+          },
+          {
+            'Modelo': 'Llama 3.3 Code',
+            'Tamaño': '~70B (general) / variantes 8B',
+            'VRAM (Q4_K_M)': '~40 GB (70B) / ~5 GB (8B)',
+            'Ventana de contexto': '128K',
+            'Licencia': 'Llama Community Licence',
+            'Mejor para': 'Compatibilidad con el ecosistema Llama, flujos de trabajo de fine-tuning existentes',
+          },
+          {
+            'Modelo': 'Granite Code 34B',
+            'Tamaño': '~34B params',
+            'VRAM (Q4_K_M)': '~20 GB',
+            'Ventana de contexto': '128K',
+            'Licencia': 'Apache 2.0',
+            'Mejor para': 'Auditoría enterprise, postura de licencia predecible',
+          },
+          {
+            'Modelo': 'StarCoder 2 15B',
+            'Tamaño': '~15B params',
+            'VRAM (Q4_K_M)': '~9 GB',
+            'Ventana de contexto': '16K',
+            'Licencia': 'BigCode OpenRAIL-M',
+            'Mejor para': 'Cobertura amplia de lenguajes, incluidos lenguajes de nicho',
+          },
+        ],
+        image: '/images/best-local-coding-models-2026-model-comparison-en.svg',
+        imageCaption: 'Siete modelos de código local comparados por VRAM, ventana de contexto, licencia y caso de uso óptimo con Q4_K_M en mayo de 2026. Qwen3-Coder 30B es la opción por defecto para 24 GB; DeepSeek Coder V3 lidera en contexto largo; StarCoder 2 15B lidera en cobertura de lenguajes de nicho.',
+      },
+      whichOne: {
+        id: 'which-one',
+        title: 'Cuál deberías elegir',
+        content:
+          '**El modelo correcto lo determina tu restricción principal — VRAM, ventana de contexto o licencia — no el ranking del leaderboard.** Usa este atajo.',
+        columns: ['Tu situación', 'Opción'],
+        rows: [
+          { 'Tu situación': 'Tengo una GPU de 24 GB y quiero el mejor modelo de código local de uso general', 'Opción': 'Qwen3-Coder 30B' },
+          { 'Tu situación': 'Tengo una GPU de 12-16 GB y quiero un modelo sólido para el día a día', 'Opción': 'Qwen3-Coder 7B (con margen de calidad) o Codestral 22B (con margen de velocidad)' },
+          { 'Tu situación': 'Tengo una GPU de 8 GB o un MacBook de 16 GB', 'Opción': 'Qwen3-Coder 7B' },
+          { 'Tu situación': 'Tengo 48 GB o más de VRAM y trabajo en tareas de repositorio completo', 'Opción': 'DeepSeek Coder V3' },
+          { 'Tu situación': 'Estoy construyendo un producto comercial y necesito claridad de licencia ante todo', 'Opción': 'Granite Code 34B (Apache 2.0) o DeepSeek Coder V3 (Apache 2.0)' },
+          { 'Tu situación': 'Ya ejecuto modelos Llama y quiero consistencia en el stack', 'Opción': 'Llama 3.3 Code 70B (si la VRAM lo permite) o la variante 8B' },
+          { 'Tu situación': 'Programo en Rust, Lua, Haskell, Solidity u otros lenguajes de nicho', 'Opción': 'StarCoder 2 15B' },
+          { 'Tu situación': 'Mi prioridad es tokens por segundo, no la calidad absoluta', 'Opción': 'Codestral 22B' },
+        ],
+        image: '/images/best-local-coding-models-2026-which-pick-en.svg',
+        imageCaption: 'Ocho atajos de decisión que mapean restricciones de hardware, licencia, contexto y caso de uso al modelo de código local correcto. La VRAM es el primer filtro; la licencia es el segundo.',
+      },
+      qwenCoderDeep: {
+        id: 'qwen3-coder',
+        title: 'Qwen3-Coder: la opción de código local por defecto',
+        content:
+          '**Qwen3-Coder es la línea de modelos de código de pesos abiertos de Alibaba y, en mayo de 2026, el modelo de código local por defecto.** Combina la dirección de HumanEval+ más sólida públicamente reportada del grupo con una ventana de contexto de 256K y una licencia Apache 2.0 — tres características que raramente se dan juntas en un solo modelo.',
+        items: [
+          '**Tamaños:** 30B (el modelo estrella) y 7B (el modelo para portátiles y GPUs de 8 GB). Ambos son transformers densos (no mixture-of-experts).',
+          '**Ventana de contexto:** 256K tokens para el 30B; 128K para el 7B. Entre las más grandes del grupo sin recurrir a modelos derivados de MoE.',
+          '**Énfasis del entrenamiento:** corpus de entrenamiento multilingüe orientado al código, con fuerte cobertura de Python, TypeScript/JavaScript, Java, C++, Go y Rust. Los ejemplos de tool-calling forman parte del mix de post-entrenamiento.',
+          '**Licencia:** Apache 2.0 — uso comercial permitido sin licencia adicional, con preservación de atribución.',
+          '**VRAM con Q4_K_M:** el 30B encaja en aproximadamente 17-18 GB, dejando margen en una tarjeta de 24 GB para contexto y herramientas. El 7B encaja en aproximadamente 5 GB.',
+          '**Fiabilidad en tool-calling:** el más sólido de los modelos de código de pesos abiertos para harnesses con esquemas de herramientas estrictos (Cline, modo agente de Continue.dev). La fiabilidad del formato XML que requiere Cline es alta en el 30B; menos fiable en el 7B.',
+          '**Dónde brilla:** código de uso general (Python, TypeScript), tareas de gran contexto (refactorizaciones de archivos completos), bucles de agentes con uso de herramientas.',
+          '**Dónde flaquea:** la variante 7B es buena para su tamaño pero no iguala al 30B en razonamiento multistep. Los lenguajes de nicho (Lua, Haskell, Solidity) tienen menos cobertura que StarCoder 2.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'En una GPU de 24 GB, ejecuta Qwen3-Coder 30B con Q4_K_M para el rol de chat/agente y Qwen2.5-Coder 1.5B con Q4_K_M como proceso de autocompletado independiente. VRAM total: ~19 GB. La división mantiene la latencia del autocompletado por debajo de 200 ms mientras el modelo grande gestiona el trabajo no trivial en el chat.',
+          },
+        ],
+      },
+      deepseekCoderDeep: {
+        id: 'deepseek-coder',
+        title: 'DeepSeek Coder V3: el modelo de peso pesado para contexto largo',
+        content:
+          '**DeepSeek Coder V3 es el modelo al que recurres cuando la longitud de contexto es la restricción principal.** Utiliza una arquitectura mixture-of-experts (MoE), que le da un razonamiento sólido con un número moderado de parámetros activos, pero un footprint total del modelo pesado que condiciona las decisiones de hardware.',
+        items: [
+          '**Arquitectura:** MoE — parámetros totales muy superiores a los parámetros activos en inferencia. El modelo completo es más pesado en disco y VRAM de lo que sugeriría su recuento activo.',
+          '**Ventana de contexto:** 128K tokens con técnicas de extensión que amplían el contexto útil dependiendo de la cuantización y el motor de inferencia.',
+          '**Énfasis del entrenamiento:** código y razonamiento. Sólido en Python, TypeScript, C++ y Go. La planificación multistep y el razonamiento estilo chain-of-thought son puntos fuertes destacados.',
+          '**Licencia:** Apache 2.0 — uso comercial permitido.',
+          '**VRAM con Q4_K_M:** el V3 completo necesita 48 GB o más para inferencia cómoda. Existen variantes destiladas y derivadas de MoE más pequeñas orientadas a tarjetas de 24 GB; verifica la variante en la ficha de modelo antes de descargar.',
+          '**Fiabilidad en tool-calling:** sólido en harnesses que permiten llamadas de herramientas estilo OpenAI; ligeramente más débil que Qwen3-Coder en el esquema XML estricto de Cline en mayo de 2026.',
+          '**Dónde brilla:** razonamiento a nivel de repositorio completo, tareas de contexto largo, planes de agentes multistep.',
+          '**Dónde flaquea:** la barra de hardware es la más alta de cualquier modelo de esta guía. En una tarjeta de 24 GB, las variantes derivadas más pequeñas son la única opción viable, y estas quedan por detrás del modelo completo en tareas de contexto largo.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'DeepSeek Coder V3 tiene la barra de hardware más alta de esta guía — 48 GB o más de VRAM con Q4_K_M para el modelo completo. Las versiones derivadas orientadas a 24 GB de la comunidad existen y son utilizables, pero sacrifican el razonamiento de contexto largo que es la razón principal para elegir DeepSeek sobre Qwen3-Coder. Ajusta la variante a tu hardware antes de decidir.',
+          },
+        ],
+      },
+      codestralDeep: {
+        id: 'codestral',
+        title: 'Codestral 22B: la opción de velocidad con camino comercial claro',
+        content:
+          '**Codestral es el modelo de código de Mistral.** Queda ligeramente por detrás de Qwen3-Coder en dirección de código publicada, pero gana en tokens por segundo y en un camino de licencia comercial limpio a través de Mistral.',
+        items: [
+          '**Tamaños:** 22B (el modelo estrella). Encaja cómodamente con Q4_K_M en una GPU de 16 GB con margen de contexto.',
+          '**Ventana de contexto:** 32K tokens. Más pequeña que Qwen3-Coder y DeepSeek; suficiente para ediciones de un solo archivo y la mayoría de ediciones multiarchivo, pero limitante para trabajo con repositorios completos.',
+          '**Énfasis del entrenamiento:** amplia cobertura de código multilenguaje con buen rendimiento en Python, TypeScript, Java, C++ y Bash.',
+          '**Licencia:** licencia Mistral Non-Production por defecto; el uso comercial requiere la licencia comercial de Mistral (de pago). Esto es inusual en este grupo y es el dato más importante para equipos que van a lanzar un producto comercial con este modelo.',
+          '**VRAM con Q4_K_M:** ~13 GB — encaja en una GPU de 16 GB con margen de contexto, cómodo en 24 GB.',
+          '**Velocidad de inferencia:** más rápido que Qwen3-Coder 30B a la misma cuantización, y mucho más rápido que DeepSeek Coder V3. El trade-off calidad-velocidad es el más limpio de los seis.',
+          '**Dónde brilla:** autocompletado en tiempo real en tarjetas de 16-24 GB, flujos de trabajo de equipos en la UE donde la relación comercial con Mistral importa, iteración rápida en chat.',
+          '**Dónde flaquea:** el contexto de 32K es el más pequeño del grupo después de StarCoder 2. La historia de licencia es más compleja que Apache 2.0 — lee los términos de Mistral Non-Production antes de integrar.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'La licencia de Codestral es el mayor "punto de atención" de este grupo. Mistral Non-Production está bien para uso personal, evaluación e I+D interno. Para un producto comercial, debes negociar una licencia comercial de Mistral o elegir otro modelo — las alternativas Apache 2.0 (Qwen3-Coder, DeepSeek Coder V3, Granite Code) cubren los mismos casos de uso sin el overhead de gestión de licencia.',
+          },
+        ],
+      },
+      llamaCodeDeep: {
+        id: 'llama-code',
+        title: 'Llama 3.3 Code: la opción de compatibilidad con el ecosistema',
+        content:
+          '**Llama 3.3 Code es la opción correcta cuando tu stack ya ejecuta modelos Llama.** Su dirección de código bruta queda por detrás de Qwen3-Coder y DeepSeek, pero el ecosistema alrededor de Llama (fine-tunes, herramientas, patrones de despliegue) es el más grande de cualquier familia de modelos de esta guía.',
+        items: [
+          '**Tamaños:** 70B (de uso general, con capacidad de código), 8B (portátil / GPU de 8 GB). El 70B es el modelo estrella; el 8B es una opción frecuente de autocompletado por su fuerte soporte de herramientas.',
+          '**Ventana de contexto:** 128K tokens.',
+          '**Énfasis del entrenamiento:** uso general con fuerte capacidad de código — no está especializado en código de la misma manera que Qwen3-Coder o Codestral. Sus puntos fuertes en código provienen de la amplitud, no de la profundidad.',
+          '**Licencia:** Llama Community Licence — uso comercial permitido bajo las restricciones de política de Meta, incluyendo un umbral de uso por encima del cual se aplican términos de licencia separados. Lee la licencia antes de integrar en productos comerciales.',
+          '**VRAM con Q4_K_M:** ~40 GB para el 70B (las tarjetas de 24 GB necesitan la variante más pequeña o cuantización agresiva); ~5 GB para el 8B.',
+          '**Fiabilidad en tool-calling:** buena para llamadas de herramientas estilo OpenAI; menos fiable que Qwen3-Coder en los esquemas XML estrictos de Cline. La variante 8B tiene dificultades con las llamadas de herramientas en bucles de agentes.',
+          '**Dónde brilla:** stacks que ya ejecutan Llama (infraestructura existente, recetas de despliegue, fine-tunes), código de uso general con razonamiento no-código ocasional.',
+          '**Dónde flaquea:** la dirección de código absoluta queda por detrás de los modelos especializados. Si el código es el caso de uso principal y no tienes dependencias de Llama, Qwen3-Coder es el mejor por defecto.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El Llama 3.3 8B es una opción frecuente de autocompletado en GPUs de 8 GB — pero la fiabilidad en bucles de agentes cae bruscamente a ese tamaño. Usa el 8B para completados en línea y escala a un modelo de 27B+ entrenado para tool-calling para trabajo de chat y refactorización. Dos modelos en la misma configuración de Continue.dev o Cline es el patrón habitual.',
+          },
+        ],
+      },
+      graniteCodeDeep: {
+        id: 'granite-code',
+        title: 'Granite Code: la opción enterprise y apta para auditoría',
+        content:
+          '**La línea Granite Code de IBM está diseñada para contextos enterprise donde la predictibilidad de licencia y la postura de auditoría importan más que la posición en el leaderboard.** Apache 2.0, documentación transparente de los datos de entrenamiento y un ritmo de lanzamientos medido la hacen la más fácil de defender en una revisión de compras de las seis.',
+        items: [
+          '**Tamaños:** 34B (el modelo estrella) y 8B (portátil / GPU de 8 GB). Transformers densos, no MoE.',
+          '**Ventana de contexto:** 128K tokens.',
+          '**Énfasis del entrenamiento:** multilenguaje orientado al código con documentación deliberada de los corpus de entrenamiento — una decisión de posicionamiento que importa más en compras que en calidad de código.',
+          '**Licencia:** Apache 2.0 — la misma postura que Qwen3-Coder y DeepSeek Coder V3.',
+          '**VRAM con Q4_K_M:** ~20 GB para el 34B, ~5 GB para el 8B.',
+          '**Dirección de código:** queda por detrás de Qwen3-Coder 30B en la mayoría de benchmarks públicos; competitivo con Codestral en Python y Java, por detrás en TypeScript.',
+          '**Dónde brilla:** elecciones impulsadas por compras, contextos de auditoría enterprise, despliegues en industrias reguladas donde la documentación de procedencia de datos del modelo es en sí misma un entregable.',
+          '**Dónde flaquea:** la capacidad de código absoluta está por debajo de los líderes. Si las compras no son una restricción, Qwen3-Coder es la opción más sólida con el mismo presupuesto de hardware.',
+        ],
+      },
+      starCoderDeep: {
+        id: 'starcoder-2',
+        title: 'StarCoder 2: la opción para lenguajes de nicho',
+        content:
+          '**StarCoder 2 es la línea de modelos de código de pesos abiertos de BigCode y, en mayo de 2026, el modelo de pesos abiertos más sólido para lenguajes de programación de nicho.** Cubre más lenguajes que cualquier otro modelo del grupo, incluyendo Lua, Haskell, Solidity y una larga cola de lenguajes menos comunes.',
+        items: [
+          '**Tamaños:** 15B (la opción local práctica), 7B, 3B. Transformers densos.',
+          '**Ventana de contexto:** 16K tokens — la más pequeña del grupo y la principal restricción.',
+          '**Énfasis del entrenamiento:** amplitud sobre profundidad — entrenado en cientos de lenguajes de programación con cobertura deliberada de lenguajes menos comunes. El rendimiento en Python y TypeScript queda por detrás de los líderes, pero la cobertura de Rust, Lua, Haskell y Solidity es la mejor de su clase entre los modelos de pesos abiertos.',
+          '**Licencia:** BigCode OpenRAIL-M — una licencia de IA responsable con restricciones de caso de uso. Lee la licencia antes de la integración comercial; es más permisiva que Mistral Non-Production pero más restrictiva que Apache 2.0.',
+          '**VRAM con Q4_K_M:** ~9 GB para el 15B — encaja cómodamente en una tarjeta de 12 o 16 GB.',
+          '**Dónde brilla:** trabajo en lenguajes de nicho (Rust, Lua, Haskell, Solidity, Elm, Julia), bases de código poliglotas, cobertura de lenguajes que otros modelos no ofrecen.',
+          '**Dónde flaquea:** la ventana de contexto de 16K es la más pequeña del grupo; el rendimiento absoluto en Python y TypeScript está por debajo de Qwen3-Coder y DeepSeek.',
+        ],
+      },
+      vramMath: {
+        id: 'vram-math',
+        title: 'Cálculo de VRAM por nivel de cuantización',
+        content:
+          '**La VRAM es la restricción principal para la mayoría de las decisiones sobre modelos de código local.** La regla simple: con Q4_K_M, calcula aproximadamente `(parámetros en B) × 0,6 GB` para los pesos del modelo, más 2-4 GB para contexto y herramientas. Una cuantización más alta (Q5, Q6, Q8) intercambia VRAM por recuperación de calidad.',
+        items: [
+          '**Q4_K_M (el estándar):** el mejor balance entre tamaño y calidad para la mayoría del trabajo de código. Aproximadamente 0,6 GB por cada mil millones de parámetros. Un modelo de 30B encaja en ~18 GB; un 7B en ~5 GB.',
+          '**Q5_K_M:** aproximadamente 0,75 GB por cada mil millones de parámetros. Un modelo de 30B necesita ~22 GB. La recuperación de calidad es pequeña pero medible en razonamiento multistep.',
+          '**Q6_K:** aproximadamente 0,85 GB por cada mil millones de parámetros. Un modelo de 30B necesita ~26 GB. Vale la pena en una tarjeta de 32 GB.',
+          '**Q8_0:** aproximadamente 1,05 GB por cada mil millones de parámetros. Un modelo de 30B necesita ~32 GB. La calidad más cercana a FP16 con la mitad de la VRAM.',
+          '**FP16 (sin cuantización):** aproximadamente 2,0 GB por cada mil millones de parámetros. Un modelo de 30B necesita ~60 GB. Solo para fine-tuning o investigación; nunca para inferencia local.',
+          '**Coste de VRAM del contexto:** escala con la longitud de secuencia. Como regla general, calcula ~1 GB por cada 32K tokens de contexto activo en modelos de código — significativo para el uso de contexto largo de DeepSeek Coder V3 y Qwen3-Coder.',
+          '**Overhead de herramientas:** Ollama, LM Studio y llama.cpp añaden cada uno ~500 MB a ~1 GB sobre el modelo y el contexto. Reserva 2-4 GB de margen total para las herramientas activas.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para una explicación más profunda de cómo funciona la cuantización y por qué Q4_K_M es el estándar más citado, consulta [Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained). El resto de esta guía asume los cálculos anteriores.',
+          },
+        ],
+        image: '/images/best-local-coding-models-2026-vram-by-quant-en.svg',
+        imageCaption: 'Requisitos de VRAM por nivel de cuantización para modelos de 7B y 30B, de Q4_K_M a FP16. Q4_K_M es el estándar recomendado con ~0,60 GB por cada mil millones de parámetros; añade 2-4 GB de overhead para contexto y herramientas.',
+      },
+      contextWindow: {
+        id: 'context-window',
+        title: 'Comparativa de ventana de contexto',
+        content:
+          '**La ventana de contexto es la segunda restricción principal después de la VRAM y la métrica más sobrevalorada en el marketing.** Los modelos de código no mantienen la calidad de atención completa a lo largo de toda la ventana declarada — la porción de trabajo real es normalmente más pequeña. Usa los datos citados a continuación como límite superior, no como límite práctico.',
+        columns: ['Modelo', 'Contexto declarado', 'Contexto de trabajo práctico (código)', 'Notas'],
+        rows: [
+          { 'Modelo': 'Qwen3-Coder 30B', 'Contexto declarado': '256K', 'Contexto de trabajo práctico (código)': '~64K-128K', 'Notas': 'Uno de los modelos de código de contexto largo más sólidos en mayo de 2026.' },
+          { 'Modelo': 'Qwen3-Coder 7B', 'Contexto declarado': '128K', 'Contexto de trabajo práctico (código)': '~32K-64K', 'Notas': 'La clase 7B siempre pierde algo de recuperación de contexto largo.' },
+          { 'Modelo': 'DeepSeek Coder V3', 'Contexto declarado': '128K', 'Contexto de trabajo práctico (código)': '~64K-96K', 'Notas': 'Recuperación sólida a lo largo de la ventana; el líder en contexto largo.' },
+          { 'Modelo': 'Codestral 22B', 'Contexto declarado': '32K', 'Contexto de trabajo práctico (código)': '~16K-24K', 'Notas': 'La más pequeña del nivel 22B+; justa para trabajo con repositorios completos.' },
+          { 'Modelo': 'Llama 3.3 Code', 'Contexto declarado': '128K', 'Contexto de trabajo práctico (código)': '~32K-64K', 'Notas': 'La recuperación de contexto largo queda por detrás de Qwen3-Coder.' },
+          { 'Modelo': 'Granite Code 34B', 'Contexto declarado': '128K', 'Contexto de trabajo práctico (código)': '~32K-64K', 'Notas': 'Equilibrado; no es el líder en contexto largo.' },
+          { 'Modelo': 'StarCoder 2 15B', 'Contexto declarado': '16K', 'Contexto de trabajo práctico (código)': '~8K-12K', 'Notas': 'El límite estricto del grupo.' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El contexto de trabajo práctico es lo que determina si el modelo puede mantener tu repositorio en mente, no el número del titular. Para refactorizaciones multiarchivo, prioriza la columna de recuperación real sobre la columna de marketing — los 32K de Codestral son reales, los 128K de Llama 3.3 son parciales.',
+          },
+        ],
+        image: '/images/best-local-coding-models-2026-context-window-en.svg',
+        imageCaption: 'Ventana de contexto declarada vs. práctica de trabajo para siete modelos de código local. Los modelos de código pierden calidad de atención a partir de aproximadamente la mitad de la ventana declarada; planifica según la columna práctica, no el número de marketing.',
+      },
+      licensing: {
+        id: 'licensing',
+        title: 'Comparativa de licencias',
+        content:
+          '**Los términos de licencia deciden qué modelo puede integrarse en un producto comercial.** Verifica la licencia en el momento de la integración — las licencias de los modelos de código open source pueden cambiar entre versiones, especialmente en líneas con licencia de proveedor (Mistral, Llama).',
+        columns: ['Modelo', 'Licencia', '¿Uso comercial sin licencia separada?', 'Restricción clave'],
+        rows: [
+          { 'Modelo': 'Qwen3-Coder', 'Licencia': 'Apache 2.0', '¿Uso comercial sin licencia separada?': 'Sí', 'Restricción clave': 'Atribución estándar; sin otras restricciones.' },
+          { 'Modelo': 'DeepSeek Coder V3', 'Licencia': 'Apache 2.0', '¿Uso comercial sin licencia separada?': 'Sí', 'Restricción clave': 'Atribución estándar; sin otras restricciones.' },
+          { 'Modelo': 'Codestral', 'Licencia': 'Mistral Non-Production', '¿Uso comercial sin licencia separada?': 'No', 'Restricción clave': 'El uso comercial requiere la licencia comercial de pago de Mistral.' },
+          { 'Modelo': 'Llama 3.3 Code', 'Licencia': 'Llama Community Licence', '¿Uso comercial sin licencia separada?': 'Sí (con condiciones)', 'Restricción clave': 'Política de uso aceptable; se aplican términos separados por encima de un umbral de uso.' },
+          { 'Modelo': 'Granite Code', 'Licencia': 'Apache 2.0', '¿Uso comercial sin licencia separada?': 'Sí', 'Restricción clave': 'Atribución estándar; sin otras restricciones.' },
+          { 'Modelo': 'StarCoder 2', 'Licencia': 'BigCode OpenRAIL-M', '¿Uso comercial sin licencia separada?': 'Sí (con restricciones de caso de uso)', 'Restricción clave': 'Restricciones para aplicaciones de alto riesgo; verifica contra el texto de la licencia.' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'La licencia de Codestral atrapa a equipos que hacen prototipos con él y luego lanzan sin revisar. Si el modelo toca a un usuario de pago — incluso indirectamente a través de una herramienta interna que genera artefactos orientados al cliente — necesitas la licencia comercial de Mistral. Migra a Qwen3-Coder o Granite Code (ambos Apache 2.0) antes de la integración para evitar el ciclo de renegociación de licencia.',
+          },
+        ],
+        image: '/images/best-local-coding-models-2026-licence-comparison-en.svg',
+        imageCaption: 'Comparativa de licencias de seis modelos de código local: cuatro con Apache 2.0 (uso comercial sin restricciones), Codestral requiere licencia comercial de pago de Mistral para producción, y StarCoder 2 usa OpenRAIL-M con restricciones de caso de uso.',
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: 'Árbol de decisión: cuál deberías elegir',
+        content:
+          '**Seis preguntas, en orden, llevan a la mayoría de los lectores a la opción correcta.**',
+        items: [
+          '**1. ¿Cuánta VRAM tienes?** Menos de 12 GB: Qwen3-Coder 7B. 12-16 GB: Qwen3-Coder 7B o Codestral 22B. 24 GB: Qwen3-Coder 30B. 48 GB o más: DeepSeek Coder V3 (completo).',
+          '**2. ¿Vas a lanzar dentro de un producto comercial?** Sí: prefiere Apache 2.0 (Qwen3-Coder, DeepSeek Coder V3, Granite Code). Evita Codestral a menos que estés pagando la licencia comercial de Mistral.',
+          '**3. ¿Necesitas una ventana de contexto superior a 32K?** Sí: descarta Codestral y StarCoder 2. Elige Qwen3-Coder, DeepSeek, Llama Code o Granite Code.',
+          '**4. ¿Programas en lenguajes de nicho (Rust, Lua, Haskell, Solidity)?** Sí: StarCoder 2 15B, a pesar del límite de contexto de 16K.',
+          '**5. ¿Estás en una industria regulada donde la licencia y la procedencia de los datos de entrenamiento necesitan defensa en compras?** Sí: Granite Code 34B es el caso más fácil de argumentar.',
+          '**6. ¿Todavía no estás seguro?** Por defecto usa Qwen3-Coder — 30B si tienes una GPU de 24 GB, 7B en caso contrario. Reevalúa cuando lo superes.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La decisión es VRAM primero, licencia segundo, contexto tercero — Qwen3-Coder es el estándar seguro en 24 GB con Apache 2.0; los otros cinco cubren cada uno una restricción específica que Qwen3-Coder no resuelve.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Elige Qwen3-Coder a menos que tengas una razón específica para no hacerlo. Las razones son: hardware (menos de 12 GB → 7B; más de 48 GB → DeepSeek), lenguajes (soporte de lenguaje de nicho → StarCoder 2), compras (industria regulada → Granite Code) o dependencias del ecosistema (infraestructura Llama existente → Llama 3.3 Code). Codestral es la opción de velocidad si puedes pagar la licencia comercial.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El árbol de decisión es intencionalmente corto. La mayoría de los equipos se complican demasiado en la elección del modelo y no suficiente en la elección del harness — consulta [Continue.dev vs Cline vs Aider](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) para el lado del harness. Las diferencias entre los modelos confiables son menores que las diferencias de ajuste al harness.',
+          },
+        ],
+        image: '/images/best-local-coding-models-2026-decision-tree-en.svg',
+        imageCaption: 'Flujo de decisión de seis preguntas para elegir un modelo de código local: VRAM primero, licencia segundo, contexto tercero, fiabilidad del agente cuarto, cobertura de lenguajes de nicho quinto, velocidad vs. calidad último. Qwen3-Coder 30B es el estándar seguro en 24 GB.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes al elegir un modelo de código local',
+        items: [
+          '**Error 1: elegir el modelo con el puntaje más alto en el leaderboard independientemente del hardware.** Un modelo que no encaja con Q4_K_M y 2-4 GB de margen se desbordará al disco y quedará inutilizable para código interactivo. La VRAM es la restricción principal para la mayoría de los lectores.',
+          '**Error 2: confiar en la ventana de contexto declarada como la ventana de trabajo práctica.** Los modelos de código pierden calidad de atención a partir de aproximadamente la mitad del contexto declarado. Planifica para la ventana práctica, no para el número del titular.',
+          '**Error 3: saltarse la lectura de la licencia.** Codestral en un producto comercial sin licencia comercial de Mistral es un fallo de compras. La Llama Community Licence tiene filtros para aplicaciones de alto uso. Lee la licencia antes de integrar.',
+          '**Error 4: ignorar la fiabilidad del tool-calling al elegir para un harness de agente.** Los esquemas XML estrictos de Cline, el modo agente de Continue.dev y cualquier bucle basado en MCP dependen de que el modelo emita llamadas de herramientas de forma limpia. Los modelos de código de 30B+ son fiables; los de clase 7B fallan con frecuencia.',
+          '**Error 5: no combinar un modelo de autocompletado pequeño con el modelo de chat más grande.** Un modelo de chat de 30B es excesivo para autocompletado de menos de 200 ms. Ejecuta un modelo de autocompletado de 1,5B-7B junto al modelo de chat — la VRAM total se mantiene manejable y la latencia permanece interactiva.',
+          '**Error 6: no revisar la ficha de modelo cada seis meses.** Las líneas de modelos de pesos abiertos se actualizan; las recetas de cuantización mejoran; las licencias a veces se endurecen. La opción por defecto de hoy no es necesariamente la de noviembre de 2026.',
+        ],
+        image: '/images/best-local-coding-models-2026-common-mistakes-en.svg',
+        imageCaption: 'Seis errores comunes al elegir un modelo de código local: ignorar el margen de VRAM, confiar en los números de contexto del marketing, no leer la licencia, pasar por alto la fiabilidad de tool-calling del agente, ejecutar un único modelo para chat y autocompletado, y no reevaluar cada seis meses.',
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[Ficha de Qwen3-Coder en Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B) — Arquitectura, número de parámetros, ventana de contexto, licencia y dirección de benchmark reportada por el proveedor para Qwen3-Coder 30B.',
+          '[Ficha de DeepSeek Coder V3](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V3) — Detalles de arquitectura MoE, ventana de contexto, licencia y dirección de benchmark para DeepSeek Coder V3.',
+          '[Ficha de Codestral](https://huggingface.co/mistralai/Codestral-22B-v0.1) — Arquitectura, ventana de contexto y términos de licencia para Codestral 22B.',
+          '[Licencias comerciales de Mistral](https://mistral.ai/commercial-licenses/) — Términos requeridos para el uso comercial de Codestral y otros modelos con licencia no-producción de Mistral.',
+          '[Fichas de Llama 3.3](https://huggingface.co/meta-llama) — Tamaños, ventanas de contexto y texto de la Llama Community Licence para la familia Llama 3.3.',
+          '[Fichas de Granite Code (IBM)](https://huggingface.co/ibm-granite) — Tamaños, ventanas de contexto, documentación de datos de entrenamiento y licencia Apache 2.0 para Granite Code.',
+          '[Fichas de StarCoder 2 (BigCode)](https://huggingface.co/bigcode) — Tamaños, ventanas de contexto, cobertura de lenguajes y licencia BigCode OpenRAIL-M.',
+          '[Biblioteca de modelos de Ollama](https://ollama.com/library) — Variantes de cuantización, tamaños de archivo y comandos de descarga para cada modelo.',
+          '[Texto completo de la licencia BigCode OpenRAIL-M](https://huggingface.co/spaces/bigcode/license) — El texto completo de la licencia y las restricciones de caso de uso para los modelos de la línea StarCoder.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          {
+            q: '¿Cuál es el modelo de código local más cercano a GPT-5 para programar?',
+            a: 'Ningún modelo de pesos abiertos iguala a los modelos cerrados de frontera en capacidad absoluta de código en mayo de 2026 — la brecha con GPT-5, Claude 4.x y Gemini en modos de código de frontera es real en razonamiento multistep y uso de bibliotecas poco comunes. Entre los modelos de pesos abiertos, Qwen3-Coder 30B lidera en dirección de benchmark público para trabajo de código cotidiano; DeepSeek Coder V3 es el más cercano en razonamiento multiarchivo de contexto largo. Para código interactivo dentro de un editor, la brecha importa menos de lo que parece — los modelos locales son rutinariamente "suficientemente buenos" para autocompletado y del 70 al 90 % de las tareas de edición de código.',
+          },
+          {
+            q: '¿Qwen3-Coder supera a DeepSeek para TypeScript?',
+            a: 'En la dirección de HumanEval+ reportada por cada proveedor, Qwen3-Coder 30B está por delante de DeepSeek Coder V3 en mayo de 2026 para tareas de código general. El rendimiento específico en TypeScript es más difícil de comparar de forma clara porque no todos los proveedores publican desglose por lenguaje — si TypeScript es tu lenguaje principal, comprueba la ficha de modelo para ver los números actuales por lenguaje. Para la mayoría del trabajo TypeScript en un IDE, ambos modelos son intercambiables.',
+          },
+          {
+            q: '¿Cuál es el mejor modelo para desarrollo embebido / Rust?',
+            a: 'Qwen3-Coder 30B para Rust de uso general si tienes 24 GB de VRAM. StarCoder 2 15B para Rust combinado con lenguajes embebidos de nicho o trabajo embebido poliglota — su cobertura de lenguajes va más allá de donde los líderes entrenaron en profundidad. Para Rust puro en una GPU más pequeña, Qwen3-Coder 7B sigue siendo una opción sólida por encima de StarCoder 2 en capacidad Rust absoluta.',
+          },
+          {
+            q: '¿Puedo ejecutar un modelo de código de 30B con 16 GB de VRAM?',
+            a: 'No con Q4_K_M — un modelo de 30B necesita aproximadamente 17-18 GB con Q4_K_M más 2-4 GB de overhead de contexto. Opciones: cuantización agresiva (Q3_K_M reduce la VRAM a ~14 GB pero sacrifica calidad notable), usar un modelo de 22B (Codestral encaja cómodamente con Q4_K_M en 16 GB) o usar la variante 7B de Qwen3-Coder con margen. Comprar una GPU de 24 GB es la solución más limpia.',
+          },
+          {
+            q: '¿Sigue siendo relevante Codestral en 2026?',
+            a: 'Sí — Codestral 22B sigue siendo el líder en velocidad del nivel 22B+ y es la opción correcta cuando los tokens por segundo importan más que el ranking absoluto en el leaderboard. Su principal desventaja es la licencia Mistral Non-Production, que añade fricción para despliegues comerciales. Para uso no comercial o equipos que ya pagan la licencia comercial de Mistral, Codestral es competitivo con Qwen3-Coder en la mayoría del trabajo de código cotidiano.',
+          },
+          {
+            q: '¿Qué modelo gestiona mejor el contexto largo (100K+ líneas)?',
+            a: 'DeepSeek Coder V3 lidera en tareas de código de contexto largo en este grupo, con una recuperación sólida a lo largo de su ventana de 128K. Qwen3-Coder 30B declara 256K pero el contexto de trabajo práctico se acerca más a 64K-128K. Para tareas de repositorio completo genuinas (más de 100K líneas), ningún modelo mantiene la atención completa — divide la tarea en ámbitos más pequeños o usa un enfoque de recuperación aumentada sobre la base de código en lugar de depender de la longitud de contexto bruta.',
+          },
+          {
+            q: '¿Los modelos especializados en código superan a los modelos generales para programar?',
+            a: 'Para trabajo de código típico, sí. Qwen3-Coder 30B y DeepSeek Coder V3 superan a modelos de uso general de tamaño similar (Llama 3.3 70B, Qwen3 32B general) en benchmarks de código. La brecha es mayor en bucles de agentes con uso de herramientas y en razonamiento multistep sobre código. Para tareas mixtas de código más razonamiento (depuración que requiere leer especificaciones, proponer arquitectura), los modelos de uso general con razonamiento sólido a veces son preferibles.',
+          },
+          {
+            q: '¿Puedo hacer fine-tuning de alguno de estos modelos con mi base de código?',
+            a: 'Los seis permiten fine-tuning bajo sus respectivas licencias, siendo los más permisivos los modelos Apache 2.0 (Qwen3-Coder, DeepSeek Coder V3, Granite Code). El fine-tuning significativo de un modelo de 30B requiere más VRAM que la inferencia — típicamente 80 GB o más para LoRA, más para fine-tuning completo. Para la mayoría de los lectores, la generación aumentada por recuperación contra un índice de tu base de código es un mejor primer paso que el fine-tuning.',
+          },
+          {
+            q: '¿Qué modelo soporta más lenguajes de programación?',
+            a: 'StarCoder 2 — su corpus de entrenamiento abarca cientos de lenguajes de programación, incluyendo lenguajes de nicho (Lua, Haskell, Solidity, Elm, Julia, Nim, Zig). Para bases de código poliglotas o trabajo en lenguajes poco comunes, StarCoder 2 15B es la mejor opción de pesos abiertos aunque su calidad absoluta en Python y TypeScript quede por detrás de los líderes.',
+          },
+          {
+            q: '¿Los modelos de código open source están alcanzando a Claude/GPT?',
+            a: 'En tareas de código rutinarias (autocompletado, ediciones de un solo archivo, refactorizaciones comunes), la brecha es estrecha y sigue cerrándose. En razonamiento multistep difícil, trabajo con repositorios completos de gran contexto y uso de bibliotecas poco comunes, la brecha sigue siendo real. Implicación práctica: para la mayoría del trabajo interactivo en el editor, ejecutar Qwen3-Coder 30B en una GPU de 24 GB es "suficientemente bueno" para reemplazar los asistentes de código en la nube en el 70-90 % de las tareas; el 10-30 % restante es donde los modelos cerrados de frontera siguen por delante.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Reemplazar GitHub Copilot con un LLM local](/es/power-local-llm/replace-github-copilot-with-local-llm) — contexto de aplicación práctica: cálculo de costes, dimensionamiento de hardware y qué modelo encaja en qué flujo de trabajo.',
+          '[Continue.dev vs Cline vs Aider: el mejor agente de código local en 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) — complementa la elección de modelo; la capa de harness bajo el modelo.',
+          '[LLM de código local sin internet](/es/power-local-llm/local-coding-llm-without-internet) — contexto de caso de uso de nicho para flujos de trabajo completamente offline.',
+          '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — la capa técnica más profunda detrás del cálculo de VRAM utilizado a lo largo de esta guía.',
+          '[Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026) — autoridad de modelos de uso general para cargas de trabajo fuera del código.',
+          '[Power Local LLM Hub](/es/power-local-llm) — biblioteca completa de guías.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Mejores modelos de código local en 2026: Qwen3-Coder vs DeepSeek vs Codestral',
+      description: 'Seis modelos de código local comparados en tamaño, contexto, licencia, VRAM y dirección de HumanEval+. Qwen3-Coder 30B es la opción recomendada para mayo de 2026; análisis completo en el artículo.',
+      image: 'https://www.promptquorum.com/es/api/og/power-local-llm/best-local-coding-models-2026',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      inLanguage: 'es',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-local-coding-models-2026',
+      keywords: 'mejor modelo de código local 2026, qwen3-coder vs deepseek, codestral vs qwen, llm local para programar, modelo de código open source, llm local humaneval',
+      about: [
+        { '@type': 'Thing', name: 'Qwen3-Coder' },
+        { '@type': 'Thing', name: 'DeepSeek Coder V3' },
+        { '@type': 'Thing', name: 'Codestral' },
+        { '@type': 'Thing', name: 'Llama 3.3 Code' },
+        { '@type': 'Thing', name: 'Granite Code' },
+        { '@type': 'Thing', name: 'StarCoder 2' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'llama.cpp' },
+        { '@type': 'SoftwareApplication', name: 'vLLM' },
+        { '@type': 'SoftwareApplication', name: 'Text Generation WebUI' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'es',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Cuál es el modelo de código local más cercano a GPT-5 para programar?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ningún modelo de pesos abiertos iguala a los modelos cerrados de frontera en capacidad absoluta de código en mayo de 2026. Entre los modelos de pesos abiertos, Qwen3-Coder 30B lidera en dirección de benchmark público para trabajo de código cotidiano; DeepSeek Coder V3 es el más cercano en razonamiento multiarchivo de contexto largo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qwen3-Coder supera a DeepSeek para TypeScript?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'En la dirección de HumanEval+ reportada, Qwen3-Coder 30B está por delante de DeepSeek Coder V3 en mayo de 2026 para tareas generales. El rendimiento específico en TypeScript es difícil de comparar limpiamente — comprueba la ficha de modelo para los números actuales por lenguaje si TypeScript es tu lenguaje principal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuál es el mejor modelo para desarrollo embebido / Rust?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Qwen3-Coder 30B para Rust de uso general si tienes 24 GB de VRAM. StarCoder 2 15B para Rust combinado con lenguajes embebidos de nicho. Para Rust puro en una GPU más pequeña, Qwen3-Coder 7B sigue siendo una opción sólida.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo ejecutar un modelo de código de 30B con 16 GB de VRAM?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No con Q4_K_M — un modelo de 30B necesita aproximadamente 17-18 GB con Q4_K_M más 2-4 GB de overhead de contexto. Opciones: cuantización agresiva (Q3_K_M reduce la VRAM a ~14 GB pero sacrifica calidad notable), usar Codestral 22B o la variante 7B de Qwen3-Coder.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Sigue siendo relevante Codestral en 2026?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí — Codestral 22B sigue siendo el líder en velocidad del nivel 22B+ y es la opción correcta cuando los tokens por segundo importan más que el ranking absoluto. Su principal desventaja es la licencia Mistral Non-Production, que añade fricción para despliegues comerciales.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué modelo gestiona mejor el contexto largo (100K+ líneas)?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'DeepSeek Coder V3 lidera en tareas de código de contexto largo con recuperación sólida a lo largo de su ventana de 128K. Para tareas de repositorio completo genuinas, ningún modelo mantiene la atención completa — divide la tarea o usa un enfoque de recuperación aumentada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Los modelos especializados en código superan a los modelos generales para programar?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Para trabajo de código típico, sí. Qwen3-Coder 30B y DeepSeek Coder V3 superan a modelos de uso general de tamaño similar en benchmarks de código. La brecha es mayor en bucles de agentes con uso de herramientas y en razonamiento multistep.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo hacer fine-tuning de alguno de estos modelos con mi base de código?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Los seis permiten fine-tuning bajo sus respectivas licencias. Los más permisivos son los modelos Apache 2.0 (Qwen3-Coder, DeepSeek Coder V3, Granite Code). El fine-tuning de un modelo de 30B requiere típicamente 80 GB o más de VRAM para LoRA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué modelo soporta más lenguajes de programación?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'StarCoder 2 — su corpus abarca cientos de lenguajes, incluyendo Lua, Haskell, Solidity, Elm, Julia, Nim y Zig. Para bases de código poliglotas o trabajo en lenguajes poco comunes, StarCoder 2 15B es la mejor opción de pesos abiertos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Los modelos de código open source están alcanzando a Claude/GPT?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'En tareas de código rutinarias, la brecha es estrecha y sigue cerrándose. En razonamiento multistep difícil y trabajo con repositorios de gran contexto, la brecha sigue siendo real. Ejecutar Qwen3-Coder 30B en una GPU de 24 GB es suficientemente bueno para reemplazar los asistentes de código en la nube en el 70-90 % de las tareas.',
+            },
+          },
+        ],
+      },
+    },
+  },
 }

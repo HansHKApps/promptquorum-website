@@ -2241,4 +2241,451 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Obsidian + LLM Local: 5 Plugins que Convierten tu Vault en un Segundo Cerebro (2026)',
+    seoTitle: 'Obsidian + LLM Local: 5 Plugins para tu Vault 2026',
+    intro:
+      'Cinco plugins de Obsidian convierten un vault en un segundo cerebro funcional en 2026 cuando se combinan con un backend local de Ollama: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT y BMO Chatbot. Cada uno cubre una capa diferente: búsqueda semántica, chat en línea, generación por plantillas, conversación con privacidad prioritaria, chat ligero con contexto. La combinación recomendada para la mayoría de usuarios es Smart Connections + Copilot for Obsidian: uno gestiona la vinculación semántica en todo el vault, el otro proporciona la interfaz de chat. Esta guía clasifica los cinco plugins según la calidad de búsqueda en el vault, velocidad de generación, personalización de prompts y comportamiento de sincronización móvil, con pasos concretos de configuración para Ollama.',
+    metaDescription:
+      'Cinco plugins de Obsidian probados con Ollama local en 2026: Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot. Mejor combinación, escala del vault y sincronización móvil.',
+    twitterDescription:
+      'Mejor combinación Obsidian + LLM local en 2026: Smart Connections (búsqueda semántica del vault) + Copilot for Obsidian (chat). Los 5 plugins probados con Ollama. Advertencias de sincronización móvil.',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Qwen3 1.7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (16+ GB de memoria unificada)',
+      'PC con RTX 3060 12 GB o RTX 4060 8 GB',
+      'PC con 16 GB de RAM (respaldo solo CPU)',
+    ],
+    audience:
+      'Usuarios avanzados de Obsidian, trabajadores del conocimiento, investigadores y escritores que gestionan vaults de 1.000–20.000 notas y quieren funciones de IA sin enviar sus notas a un servicio en la nube.',
+    readTime: '14 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'plugin LLM local Obsidian',
+    targetKeywords: [
+      'obsidian llm local',
+      'obsidian ollama plugin',
+      'smart connections obsidian local',
+      'copilot for obsidian local',
+      'obsidian segundo cerebro ia',
+      'obsidian plugin llm privado',
+    ],
+    leadAnswerBlock:
+      '**Para la mayoría de usuarios de Obsidian en 2026, instala Smart Connections + Copilot for Obsidian y configura ambos para usar un backend local de Ollama.** Smart Connections gestiona la vinculación semántica en todo el vault (barra lateral de notas relacionadas) usando embeddings locales con `nomic-embed-text` o `mxbai-embed-large`. Copilot for Obsidian proporciona la interfaz de chat, configurada para apuntar al endpoint compatible con OpenAI de Ollama en `http://localhost:11434/v1`. Esta pareja cubre ~80 % de los casos de uso del "segundo cerebro" (búsqueda semántica + chat con notas) sin enviar contenido del vault a la nube. Agrega Text Generator como tercer plugin si quieres generación de contenido basada en plantillas (prompts para diario diario, expansión de notas de reunión). Los embeddings de Smart Connections viven en `.smart-env/` dentro del vault — se sincronizan entre dispositivos con Obsidian Sync pero deben regenerarse por dispositivo con iCloud o Git.',
+    quickAnswerTop: {
+      en: {
+        question: '¿Cuál es la mejor combinación de plugins de Obsidian para LLMs locales en 2026?',
+        answer:
+          'Smart Connections + Copilot for Obsidian es la combinación recomendada. Smart Connections gestiona la búsqueda semántica del vault con embeddings locales (nomic-embed-text o mxbai-embed-large vía Ollama); Copilot proporciona la barra lateral de chat configurada contra el endpoint compatible con OpenAI de Ollama. Juntos cubren el descubrimiento de notas relacionadas y el chat con contexto del vault — alrededor del 80 % de los casos de uso del "segundo cerebro". Agrega Text Generator como tercer plugin para generación basada en plantillas. Local GPT y BMO Chatbot son alternativas más ligeras a Copilot para usuarios que prefieren una experiencia de solo chat más simple. Los cinco plugins funcionan con cualquier modelo de Ollama; el modelo de chat recomendado en 2026 para sistemas de 16 GB de RAM es Llama 3.2 3B o Phi-4 Mini.',
+        bullets: [
+          'Smart Connections — búsqueda semántica + barra lateral de notas relacionadas. Ideal para la vinculación en todo el vault.',
+          'Copilot for Obsidian — barra lateral de chat con contexto del vault. Ideal para consultas conversacionales.',
+          'Text Generator — generación basada en plantillas con variables de frontmatter. Ideal para flujos de trabajo repetibles (notas diarias, resúmenes de reuniones).',
+          'Local GPT — chat con privacidad prioritaria con la nota actual. Alternativa más ligera a Copilot.',
+          'BMO Chatbot — chat minimalista con contexto del vault. Ideal para usuarios que quieren un único plugin de chat sin la superficie de funciones de Copilot.',
+          'Modelos de Ollama recomendados: Llama 3.2 3B (chat), Phi-4 Mini (chat, más pequeño), nomic-embed-text o mxbai-embed-large (embeddings para Smart Connections).',
+          'Aviso de sincronización móvil: los embeddings de Smart Connections viven en .smart-env/ — sincronización vía Obsidian Sync, regenerar por dispositivo con iCloud o Git.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: '¿Qué combinación de plugins instalar?', anchor: '#which-plugins' },
+      { label: 'Tabla comparativa de plugins', anchor: '#comparison-table' },
+      { label: 'Smart Connections: Búsqueda semántica del vault', anchor: '#smart-connections' },
+      { label: 'Copilot for Obsidian: Chat con contexto del vault', anchor: '#copilot' },
+      { label: 'Text Generator: Generación por plantillas', anchor: '#text-generator' },
+      { label: 'Local GPT: Chat con privacidad prioritaria', anchor: '#local-gpt' },
+      { label: 'BMO Chatbot: Chat ligero', anchor: '#bmo-chatbot' },
+      { label: 'La combinación recomendada: Smart Connections + Copilot', anchor: '#recommended-combo' },
+      { label: 'Flujos de trabajo: Notas diarias, MOCs, asistencia de escritura', anchor: '#workflows' },
+      { label: 'Sincronización móvil: Obsidian Sync vs iCloud vs Git', anchor: '#mobile-sync' },
+      { label: 'Escala del vault: 1K, 5K, 10K, 20K notas', anchor: '#vault-scale' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Smart Connections + Copilot for Obsidian es la combinación recomendada para la mayoría de usuarios.** Smart Connections gestiona la búsqueda semántica del vault con embeddings locales; Copilot gestiona el chat con contexto del vault. Juntos cubren ~80 % de los casos de uso del "segundo cerebro" sin llamadas a la nube.',
+          '**Los cinco plugins funcionan con Ollama a través de su endpoint compatible con OpenAI en `http://localhost:11434/v1`.** Configura el ajuste "URL base de API" o equivalente de cada plugin para apuntar a esta dirección. El nombre de modelo predeterminado de Ollama (por ejemplo, `llama3.2:3b`) es lo que ingresas en el campo de modelo del plugin.',
+          '**Smart Connections es el único plugin que construye un índice de embeddings de todo el vault.** Esto hace que la búsqueda de notas relacionadas sea práctica con 5.000+ notas. El índice se almacena en `.smart-env/` dentro del vault y se sincroniza con Obsidian Sync; regenera por dispositivo cuando uses iCloud o Git.',
+          '**Text Generator es el mejor plugin para flujos de trabajo repetibles.** El resumen de notas diarias, la expansión de notas de reunión y la generación de MOC (Mapa de Contenido) se convierten en acciones de una sola tecla mediante plantillas con variables de frontmatter.',
+          '**Para usuarios de solo chat, BMO Chatbot es más ligero que Copilot.** No construye un índice — el contexto es solo la nota actual. Si solo chateas sobre la nota abierta, BMO es suficiente.',
+          '**Escala del vault (con Smart Connections + nomic-embed-text):** 1K notas se indexan en ~2 min, 5K en ~10 min, 10K en ~25 min, 20K en ~75 min en Mac M3 Pro. El tiempo de reindexación es pequeño después de la primera ejecución porque solo se reincrustan las notas modificadas.',
+          '**Modelos de Ollama recomendados en 2026:** chat — Llama 3.2 3B (predeterminado) o Phi-4 Mini (más pequeño); embeddings — nomic-embed-text (768 dim, rápido) o mxbai-embed-large (1024 dim, más preciso).',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Plugins cubiertos:** Smart Connections, Copilot for Obsidian, Text Generator, Local GPT, BMO Chatbot.',
+          '**Backend LLM:** Ollama (recomendado) o LM Studio — cualquier cosa que exponga un endpoint compatible con OpenAI en una URL local.',
+          '**Endpoint predeterminado de Ollama:** `http://localhost:11434/v1` (chat) o `http://localhost:11434/api/embeddings` (embeddings).',
+          '**Modelos de chat recomendados:** Llama 3.2 3B, Phi-4 Mini, Gemma 3 4B (sistemas de 16 GB de RAM); Qwen3 1.7B (8 GB de RAM).',
+          '**Modelos de embeddings recomendados:** nomic-embed-text (768 dim, rápido), mxbai-embed-large (1024 dim, más preciso).',
+          '**Objetivos de tamaño del vault:** los cinco plugins permanecen responsivos con 5.000+ notas; la reindexación de Smart Connections es el cuello de botella por encima de 20K notas.',
+          '**Compatibilidad móvil:** los plugins de chat funcionan en Obsidian Mobile si Ollama es accesible en la LAN; la generación de embeddings de Smart Connections solo se ejecuta en escritorio.',
+        ],
+      },
+      whichPlugins: {
+        id: 'which-plugins',
+        title: '¿Qué combinación de plugins instalar?',
+        content:
+          '**Para la mayoría de usuarios de Obsidian en 2026: instala Smart Connections (búsqueda semántica del vault) y Copilot for Obsidian (barra lateral de chat) — juntos cubren ~80 % de los casos de uso del "segundo cerebro".** Agrega Text Generator si quieres generación basada en plantillas. Omite los demás a menos que prefieras específicamente su interfaz.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Instala Smart Connections + Copilot for Obsidian, configura ambos para usar Ollama en localhost:11434, y tendrás una pila de segundo cerebro privado que cubre búsqueda semántica en todo el vault y consultas conversacionales.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Piensa en Obsidian + IA como dos trabajos: encontrar notas relacionadas ("¿qué otras notas en mi vault tocan esta idea?") y chatear sobre notas ("¿qué escribí sobre esto el último trimestre?"). Smart Connections hace lo primero; Copilot hace lo segundo. Ambos usan un LLM local vía Ollama, por lo que nada sale de tu máquina. Agrega Text Generator si haces tareas repetibles (por ejemplo, convertir cada nota de reunión en un resumen). Omite Local GPT y BMO Chatbot a menos que tengas una razón específica.',
+          },
+        ],
+        decisionBlock: {
+          title: 'Decisión: ¿Qué plugins de Obsidian instalar?',
+          localIf: [
+            'Quieres búsqueda semántica en todo el vault ("muéstrame notas relacionadas") → Smart Connections',
+            'Quieres barra lateral de chat con contexto de notas → Copilot for Obsidian',
+            'Quieres generación basada en plantillas (notas diarias, resúmenes de reuniones) → Text Generator',
+            'Solo chateas sobre la nota actual (sin búsqueda en el vault) → BMO Chatbot (más ligero que Copilot)',
+            'Quieres chat con garantías estrictas de privacidad y funciones mínimas → Local GPT',
+          ],
+          cloudIf: [
+            'Necesitas calidad GPT-4o en cada respuesta de chat → equivalentes en la nube (la pila local alcanza ~70 % de capacidad)',
+            'Tu vault está en un servicio en la nube gestionado que bloquea las llamadas a la red local → plugin en la nube',
+            'Quieres una función de IA nativa de iOS dentro de la app Obsidian Mobile sin acceso LAN → aún no es factible en 2026 (el móvil no puede llegar al LLM local sin Tailscale o similar)',
+          ],
+          quick: [
+            'Combinación recomendada: Smart Connections + Copilot for Obsidian',
+            'Agregar para plantillas: Text Generator',
+            'Alternativa ligera: BMO Chatbot (solo chat)',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Instala Smart Connections y Copilot for Obsidian uno a la vez. Smart Connections necesita construir un índice de embeddings en la primera instalación (2–75 min según el tamaño del vault). Deja que termine antes de agregar Copilot para evitar competir por la CPU durante el índice inicial. Una vez que ambos estén funcionando, el uso de RAM es pequeño (~200–400 MB combinados) — Ollama es el proceso pesado, no los plugins.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Tabla comparativa de plugins',
+        content:
+          '**Los cinco plugins difieren en cuatro ejes que importan a la mayoría de usuarios: profundidad de búsqueda en el vault, flexibilidad de generación, compatibilidad móvil y superficie de funciones.** Smart Connections y Copilot no son intercambiables — resuelven problemas diferentes y se complementan entre sí.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Smart Connections es el único plugin que busca en todo el vault con embeddings; los otros cuatro son herramientas de chat o generación que operan en la nota actual o texto seleccionado.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Dos de estos plugins (Smart Connections, Copilot) manejan contexto de todo el vault. Los otros tres (Text Generator, Local GPT, BMO Chatbot) trabajan en la nota actual o una selección específica. La razón más común para instalar más de uno es que Smart Connections no tiene una interfaz de chat propia — necesitas Copilot o uno de los plugins de chat más ligeros para hablar realmente con tu vault.',
+          },
+        ],
+        columns: ['Plugin', 'Búsqueda en vault', 'Generación', 'Sincronización móvil', 'Ideal para'],
+        rows: [
+          { 'Plugin': 'Smart Connections', 'Búsqueda en vault': 'Sí (índice de embeddings)', 'Generación': 'No (solo búsqueda)', 'Sincronización móvil': 'El índice se sincroniza con Obsidian Sync; regenerar por dispositivo con iCloud / Git', 'Ideal para': 'Vinculación semántica entre notas' },
+          { 'Plugin': 'Copilot for Obsidian', 'Búsqueda en vault': 'Sí (con modo vault QA)', 'Generación': 'Sí (chat + inline)', 'Sincronización móvil': 'El plugin se sincroniza; Ollama debe ser accesible en LAN', 'Ideal para': 'Chat inline + asistencia de escritura' },
+          { 'Plugin': 'Text Generator', 'Búsqueda en vault': 'No', 'Generación': 'Sí (basada en plantillas)', 'Sincronización móvil': 'Las plantillas se sincronizan; Ollama debe ser accesible en LAN', 'Ideal para': 'Generación repetible por plantillas' },
+          { 'Plugin': 'Local GPT', 'Búsqueda en vault': 'No', 'Generación': 'Sí (chat)', 'Sincronización móvil': 'El plugin se sincroniza; Ollama debe ser accesible en LAN', 'Ideal para': 'Chat con privacidad prioritaria con la nota actual' },
+          { 'Plugin': 'BMO Chatbot', 'Búsqueda en vault': 'No', 'Generación': 'Sí (chat)', 'Sincronización móvil': 'El plugin se sincroniza; Ollama debe ser accesible en LAN', 'Ideal para': 'Chat ligero con la nota actual' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para uso móvil, la limitación no es el plugin — es si Obsidian Mobile puede llegar a Ollama. Soluciones: (1) ejecutar Ollama en un servidor doméstico y exponerlo en la LAN con una IP estática, luego ingresar esa IP en el plugin en lugar de localhost, (2) usar Tailscale u otra VPN de malla para llegar a un Ollama doméstico desde cualquier lugar, (3) aceptar que las funciones de IA solo funcionan cuando el teléfono está en el Wi-Fi de casa.',
+          },
+        ],
+      },
+      smartConnections: {
+        id: 'smart-connections',
+        title: 'Smart Connections: Búsqueda semántica del vault',
+        content:
+          '**Smart Connections es el único plugin de Obsidian en 2026 que construye un índice de embeddings sobre todo el vault.** Esto hace que "muéstrame notas relacionadas" sea práctico con 5.000+ notas y es el mayor habilitador del "segundo cerebro" en el ecosistema de plugins.',
+        items: [
+          '**Qué hace:** genera un embedding vectorial para cada nota (y sección configurable) y muestra una barra lateral "Smart Connections" de notas semánticamente relacionadas con la nota activa.',
+          '**Instalación:** Configuración → Plugins de comunidad → Explorar → "Smart Connections" → Instalar + Habilitar. Autor: Brian Petro.',
+          '**Configurar para Ollama:** Configuración → Smart Connections → Modelo de embedding → seleccionar "Local (Ollama)" → ingresar `http://localhost:11434/api/embeddings` → nombre del modelo `nomic-embed-text` (o `mxbai-embed-large`).',
+          '**Indexación inicial:** el plugin incrusta cada nota. Tiempo en Mac M3 Pro con nomic-embed-text: 1K notas ~2 min, 5K notas ~10 min, 10K notas ~25 min, 20K notas ~75 min. La reindexación tras ediciones es incremental (solo notas modificadas).',
+          '**Almacenamiento:** el índice vive en `.smart-env/` dentro del vault. Se sincroniza limpiamente con Obsidian Sync; con iCloud / Git debes regenerar por dispositivo porque el índice es binario específico de la plataforma.',
+          '**Mejor modelo de embeddings en 2026:** `nomic-embed-text` (137M parámetros, 768 dim, rápido) para la mayoría de usuarios. `mxbai-embed-large` (335M parámetros, 1024 dim) es más preciso en contenido técnico pero toma ~2× el tiempo de indexación.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Después de que el primer índice se complete, deja Smart Connections habilitado en segundo plano. Las ediciones posteriores desencadenan re-incrustación incremental — generalmente menos de un segundo por nota guardada. También puedes pausar la indexación durante sesiones de edición intensas para evitar competir por CPU con el propio Ollama.',
+          },
+        ],
+      },
+      copilot: {
+        id: 'copilot',
+        title: 'Copilot for Obsidian: Chat con contexto del vault',
+        content:
+          '**Copilot for Obsidian proporciona la barra lateral de chat que le falta a Smart Connections.** Configúralo para usar Ollama y obtendrás un asistente de chat privado que puede responder preguntas usando tu vault como contexto, generar contenido inline y ejecutar prompts personalizados en selecciones.',
+        items: [
+          '**Qué hace:** barra lateral de chat, modo vault QA (chat con notas recuperadas), chat inline, prompts personalizados en selecciones, comandos de paleta de comandos.',
+          '**Instalación:** Configuración → Plugins de comunidad → Explorar → "Copilot" de Logan Yang → Instalar + Habilitar.',
+          '**Configurar para Ollama:** Configuración → Copilot → Configuración de API → proveedor "Custom OpenAI" u "Ollama" → URL base de API `http://localhost:11434/v1` → modelo `llama3.2:3b` (o cualquier modelo de Ollama).',
+          '**Modo vault QA:** Copilot recupera las notas más relevantes usando su propio pipeline de embeddings (separado de Smart Connections), luego envía los fragmentos recuperados al modelo de chat. Configura los embeddings en la configuración de Copilot — apunta a `http://localhost:11434/api/embeddings` y selecciona `nomic-embed-text`.',
+          '**Comandos inline:** seleccionar texto en una nota → Cmd/Ctrl+P → "Copilot: …" — aplicar reescrituras, resúmenes o plantillas de prompts personalizadas sin abrir la barra lateral de chat.',
+          '**Ideal para:** usuarios que quieren una interfaz de chat Y recuperación con contexto del vault. Si solo quieres chatear sobre la nota actual, BMO Chatbot es más ligero.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Copilot mantiene su propio índice de embeddings separado de Smart Connections. Ejecutar ambos significa dos índices sobre el mismo vault y aproximadamente 2× el espacio en disco (~200 MB de datos vectoriales por 5K notas). Si el espacio en disco importa, configura Copilot para usar el índice de Smart Connections, o acepta que los dos plugins no comparten embeddings actualmente en 2026.',
+          },
+        ],
+      },
+      textGenerator: {
+        id: 'text-generator',
+        title: 'Text Generator: Generación por plantillas',
+        content:
+          '**Text Generator es el mejor plugin para flujos de trabajo repetibles: expansiones de notas diarias, resumen de notas de reunión, generación de MOC, salidas con formato personalizado.** Las plantillas usan variables de frontmatter y Markdown, por lo que una sola plantilla puede activarse con un atajo de teclado en cualquier nota.',
+        items: [
+          '**Qué hace:** ejecuta una plantilla de prompt personalizada contra la nota actual (o selección) usando tu LLM local. Las plantillas soportan variables de frontmatter, inserción de fecha actual y captura de selección.',
+          '**Instalación:** Configuración → Plugins de comunidad → Explorar → "Text Generator" → Instalar + Habilitar. Autor: nhaouari.',
+          '**Configurar para Ollama:** Configuración → Text Generator → Proveedor → "Ollama" o "Custom" → endpoint `http://localhost:11434/v1` → modelo `llama3.2:3b`.',
+          '**Plantillas:** almacenadas como archivos Markdown en una carpeta configurada (por ejemplo, `Templates/`). Una plantilla es simplemente un prompt con marcadores `{{title}}`, `{{selection}}`, `{{date}}`.',
+          '**Flujos de trabajo con atajos de teclado:** asigna un atajo a una plantilla específica (Cmd/Ctrl+T → "Generar desde plantilla" → seleccionar plantilla). Una pulsación ejecuta tu plantilla en la nota actual.',
+          '**Ideal para:** flujos de trabajo que realizas docenas de veces — prompts para diario, preguntas de revisión semanal, resúmenes de notas de reunión, notas de lectura de artículos.',
+        ],
+        promptExamples: [
+          {
+            label: 'Plantilla de Text Generator: resumidor de notas diarias',
+            text: '---\nname: Daily summary\n---\nSummarise the following daily note in three concise bullet points. Focus on decisions made, blockers identified, and action items for tomorrow.\n\nDaily note ({{date}}):\n{{content}}\n\nSummary:',
+          },
+          {
+            label: 'Plantilla de Text Generator: generador de MOC (Mapa de Contenido)',
+            text: '---\nname: MOC for tag\n---\nGenerate a Map of Content for all notes tagged with `#{{selection}}`. Group related notes into 3–5 thematic clusters, with a one-sentence description per cluster and a list of the notes inside each cluster.\n\nNotes tagged #{{selection}}:\n{{vault_search_result tag={{selection}}}}\n\nMOC:',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Combina las plantillas de Text Generator con Obsidian QuickAdd para construir una secuencia de "revisión diaria": un solo comando QuickAdd abre la nota diaria de hoy, ejecuta la plantilla de resumen diario e inserta el resultado. Tres plugins (Text Generator + QuickAdd + Templater para cálculo de fechas) te permiten construir un flujo de trabajo que toma 2 segundos para activar y 10 segundos para completar.',
+          },
+        ],
+      },
+      localGpt: {
+        id: 'local-gpt',
+        title: 'Local GPT: Chat con privacidad prioritaria',
+        content:
+          '**Local GPT es un plugin de chat construido en torno al principio de que ningún contenido de nota debe salir de la máquina.** Funcionalmente es más simple que Copilot for Obsidian — sin modo vault QA, sin biblioteca de plantillas — pero es el más explícito en cuanto a su postura de privacidad.',
+        items: [
+          '**Qué hace:** chat con la nota actual (o texto seleccionado) usando un LLM local. No existe opción en la nube en el plugin — solo proveedores locales.',
+          '**Instalación:** Configuración → Plugins de comunidad → Explorar → "Local GPT" → Instalar + Habilitar. Autor: pfrankov (verifica en el listado — varios plugins tienen nombres similares).',
+          '**Configurar para Ollama:** Configuración → Local GPT → Proveedor → "Ollama" → URL `http://localhost:11434` → modelo `llama3.2:3b`.',
+          '**Alcance del chat:** solo nota activa o texto seleccionado. No hay índice de embeddings — el contexto es lo que explícitamente envías.',
+          '**Ideal para:** usuarios que quieren chatear sobre la nota actual, prefieren la menor superficie de funciones posible y quieren un plugin que no pueda llamar accidentalmente a un servicio en la nube.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Si confías en que Copilot for Obsidian permanezca local (puede configurarse en la nube o local), usa Copilot. Si quieres que el propio código del plugin haga imposibles las llamadas a la nube, usa Local GPT — su restricción de diseño es "sin proveedores en la nube, nunca". Esta es una distinción significativa para flujos de trabajo de salud, legal y periodismo donde cualquier posibilidad de salida accidental a la nube es un problema.',
+          },
+        ],
+      },
+      bmoChatbot: {
+        id: 'bmo-chatbot',
+        title: 'BMO Chatbot: Chat ligero',
+        content:
+          '**BMO Chatbot es el plugin de chat minimalista: una barra lateral, un selector de modelo y un campo de configuración para tu endpoint.** Sin búsqueda en el vault, sin plantillas, sin comandos inline. Si solo chateas sobre la nota activa, BMO es la opción más ligera.',
+        items: [
+          '**Qué hace:** barra lateral de chat que incluye la nota activa como contexto.',
+          '**Instalación:** Configuración → Plugins de comunidad → Explorar → "BMO Chatbot" → Instalar + Habilitar. Autor: longy2k.',
+          '**Configurar para Ollama:** Configuración → BMO Chatbot → API → URL `http://localhost:11434/v1` → modelo `llama3.2:3b`.',
+          '**Manejo del contexto:** la nota activa se incluye automáticamente en el contexto del chat. Cambiar de nota cambia el contexto.',
+          '**Ideal para:** usuarios que quieren un único plugin de chat con la menor configuración posible, sin índice de embeddings y una interfaz que cabe en una barra lateral estrecha de Obsidian.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'BMO Chatbot es el plugin correcto para "solo quiero chatear sobre mi nota actual". Si te encuentras queriendo "buscar en todo mi vault" o "ejecutar esta plantilla de prompt en cada nota de reunión", has superado a BMO — cambia a Copilot for Obsidian (vault QA) o Text Generator (plantillas).',
+          },
+        ],
+      },
+      recommendedCombo: {
+        id: 'recommended-combo',
+        title: 'La combinación recomendada: Smart Connections + Copilot',
+        content:
+          '**Instala Smart Connections + Copilot for Obsidian, ambos apuntando a Ollama.** Esta combinación maneja las dos tareas distintas de IA que los usuarios de Obsidian quieren — búsqueda semántica del vault y chat con contexto del vault — y cubre ~80 % de los casos de uso del "segundo cerebro" sin enviar notas a la nube.',
+        numberedItems: [
+          '**Instala Ollama** en tu máquina: `brew install ollama` (macOS) o descarga desde ollama.com (Windows / Linux). Descarga el modelo de chat: `ollama pull llama3.2:3b`. Descarga el modelo de embeddings: `ollama pull nomic-embed-text`.',
+          '**Inicia Ollama:** generalmente arranca como un servicio en segundo plano después de la instalación. Verifica: `curl http://localhost:11434/api/tags` devuelve JSON con tus modelos instalados.',
+          '**Instala Smart Connections** en Obsidian → configura los embeddings para usar Ollama en `http://localhost:11434/api/embeddings` con modelo `nomic-embed-text`. Deja que indexe (2–75 min según el tamaño del vault).',
+          '**Instala Copilot for Obsidian** → configura el proveedor a "Ollama" o "Custom OpenAI" → URL base de API `http://localhost:11434/v1` → modelo de chat `llama3.2:3b` → modelo de embeddings `nomic-embed-text` (para vault QA).',
+          '**Prueba:** abre una nota → revisa la barra lateral de Smart Connections para notas relacionadas → abre el chat de Copilot → haz una pregunta que requiera conocimiento del vault ("resume lo que he escrito sobre [tema]") → verifica que la respuesta hace referencia a tus notas reales.',
+          '**Tercer plugin opcional:** agrega Text Generator si tienes flujos de trabajo repetibles (resúmenes de notas diarias, expansiones de reuniones, generación de MOC). Configura con el mismo endpoint de Ollama.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Un error común es configurar Copilot con un modelo y Smart Connections con otro — y luego preguntarse por qué las respuestas se sienten inconsistentes. Usa el mismo modelo de chat en ambos (Llama 3.2 3B para la mayoría de usuarios; Phi-4 Mini para sistemas de 8 GB de RAM). El único lugar para usar un modelo diferente es el modelo de embeddings — ese siempre es un modelo separado del modelo de chat.',
+          },
+        ],
+      },
+      workflows: {
+        id: 'workflows',
+        title: 'Flujos de trabajo: Notas diarias, MOCs, asistencia de escritura',
+        content:
+          '**Tres flujos de trabajo concretos que demuestran la combinación en acción.** Cada uno se basa en Smart Connections (para contexto del vault) y Copilot (para chat) con Text Generator agregado para trabajo con plantillas.',
+        items: [
+          '**Resumen de nota diaria:** en tu nota diaria, selecciona todo → comando inline de Copilot → "Resume este día en tres puntos centrados en decisiones, bloqueos y acciones de mañana". La salida reemplaza o se añade debajo de la selección. Guarda el prompt como plantilla de Text Generator para convertirlo en una acción de una sola tecla.',
+          '**Generación de MOC (Mapa de Contenido):** abre una página de etiqueta o nota de tema → Copilot → "Genera un Mapa de Contenido para este tema, agrupando las notas relacionadas que tengo en 3–5 clusters temáticos. Usa la barra lateral de Smart Connections para identificar notas relacionadas." → revisar y editar. Smart Connections proporciona la capa de descubrimiento; Copilot sintetiza la estructura.',
+          '**Asistencia de escritura contextual:** mientras redactas una nota, abre el chat de Copilot → pregunta "Dadas las notas que he escrito sobre [tema], ¿qué perspectivas me faltan?" Copilot recupera notas relevantes vía vault QA y propone brechas. Útil para salir de borradores con una sola perspectiva.',
+          '**Revisión semanal:** plantilla de Text Generator que se ejecuta contra las últimas 7 notas diarias → "Resume la semana en 3 puntos por categoría: progreso, bloqueos, temas." Asigna a un atajo de teclado para revisión de una sola tecla.',
+          '**Notas de lectura de artículos/libros:** abre la nota fuente → comando inline de Copilot → "Genera tres pares de pregunta/respuesta estilo Anki de esta nota para repetición espaciada." La salida puede enviarse al plugin de Repetición Espaciada.',
+          '**Vinculación de notas dormidas:** la barra lateral de Smart Connections muestra notas relacionadas que pueden haber estado intactas durante meses — te invita a revisar y conectar material antiguo con el trabajo actual.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El flujo de trabajo más subestimado es la revisión diaria de Smart Connections. Cada mañana, abre la nota diaria → revisa la barra lateral de Smart Connections en busca de notas relacionadas inesperadas de tu archivo. El plugin saca a la superficie notas olvidadas que tocan el mismo tema, que es exactamente el efecto de "compañero de pensamiento" que los trabajadores del conocimiento quieren de un segundo cerebro.',
+          },
+        ],
+      },
+      mobileSync: {
+        id: 'mobile-sync',
+        title: 'Sincronización móvil: Obsidian Sync vs iCloud vs Git',
+        content:
+          '**La compatibilidad de plugins en Obsidian Mobile depende de dos factores: cómo se sincroniza tu vault y si tu teléfono puede llegar a un servidor Ollama local.** Los embeddings de Smart Connections son el componente más sensible a la sincronización.',
+        items: [
+          '**Obsidian Sync (de pago):** el camino más limpio. La carpeta `.smart-env/` se sincroniza con cifrado de extremo a extremo entre dispositivos, por lo que Smart Connections no necesita reindexar por dispositivo. La configuración de plugins también se sincroniza. Los plugins de chat móvil aún necesitan acceso LAN a Ollama (ver más abajo).',
+          '**iCloud Drive:** el vault se sincroniza, pero `.smart-env/` es binario específico de la plataforma y puede corromperse o fallar al sincronizarse correctamente entre iOS / macOS / Windows / Android. Solución práctica: reindexar Smart Connections por dispositivo, o excluir `.smart-env/` de la sincronización y aceptar que el móvil no tiene barra lateral semántica.',
+          '**Git (vía Working Copy en iOS, Termux en Android):** el vault de texto plano se sincroniza limpiamente; `.smart-env/` debe agregarse a `.gitignore` porque el índice binario inflaría el repositorio y causaría conflictos de fusión. Reindexar por dispositivo.',
+          '**Acceso LAN a Ollama desde el móvil:** por defecto Ollama escucha solo en `localhost:11434` — no accesible desde tu teléfono. Para usar plugins de IA en Obsidian Mobile: vincula Ollama a tu LAN con `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, encuentra la IP LAN del escritorio (por ejemplo, `192.168.1.20`), ingresa esa IP en el plugin en lugar de localhost. El teléfono debe estar en el Wi-Fi de casa.',
+          '**Tailscale / VPN de malla:** permite que tu teléfono llegue al Ollama doméstico desde cualquier lugar, no solo el Wi-Fi de casa. Tailscale es la opción más popular en 2026 — instala en escritorio y teléfono, usa la IP de Tailscale en la configuración del plugin.',
+          '**La generación de embeddings de Smart Connections solo se ejecuta en escritorio.** Incluso con Obsidian Sync moviendo el índice, el índice debe crearse en algún lugar — eso siempre es una máquina de nivel escritorio. El móvil usa el índice sincronizado para búsqueda de solo lectura de notas relacionadas.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Si usas iCloud o Git para sincronización del vault y quieres que Smart Connections funcione en varios dispositivos, el camino más limpio es designar un dispositivo como el "indexador" (tu escritorio principal) y aceptar que Smart Connections solo funciona completamente allí. En otros dispositivos tendrás un índice obsoleto (iCloud) o ningún índice (Git con .smart-env en .gitignore). Obsidian Sync es la única opción que maneja esto correctamente.',
+          },
+        ],
+      },
+      vaultScale: {
+        id: 'vault-scale',
+        title: 'Escala del vault: 1K, 5K, 10K, 20K notas',
+        content:
+          '**Los cinco plugins permanecen responsivos con 5.000+ notas; el cuello de botella por encima de 20K notas es el tiempo de reindexación de Smart Connections, no la latencia de consulta.** Los números realistas a continuación se miden en Mac M3 Pro (16 GB de memoria unificada) con embeddings `nomic-embed-text` y chat Llama 3.2 3B.',
+        columns: ['Tamaño del vault', 'Índice inicial de Smart Connections', 'Reindexación por cambio', 'Latencia de chat (Copilot)', 'Notas'],
+        rows: [
+          { 'Tamaño del vault': '1.000 notas', 'Índice inicial de Smart Connections': '~2 min', 'Reindexación por cambio': '<1 seg', 'Latencia de chat (Copilot)': '~1–2 seg primer token', 'Notas': 'Cómodo en cualquier hardware moderno.' },
+          { 'Tamaño del vault': '5.000 notas', 'Índice inicial de Smart Connections': '~10 min', 'Reindexación por cambio': '<1 seg', 'Latencia de chat (Copilot)': '~1–2 seg primer token', 'Notas': 'Punto óptimo para la mayoría de trabajadores del conocimiento.' },
+          { 'Tamaño del vault': '10.000 notas', 'Índice inicial de Smart Connections': '~25 min', 'Reindexación por cambio': '~1–2 seg', 'Latencia de chat (Copilot)': '~2–3 seg primer token (recuperación vault QA agrega ~500 ms)', 'Notas': 'Aún completamente usable; considera dividir si notas ralentizaciones.' },
+          { 'Tamaño del vault': '20.000 notas', 'Índice inicial de Smart Connections': '~75 min', 'Reindexación por cambio': '~2–4 seg', 'Latencia de chat (Copilot)': '~3–5 seg primer token', 'Notas': 'Planifica el índice inicial de noche. Uso de disco de `.smart-env/` ~800 MB–1,2 GB.' },
+          { 'Tamaño del vault': '50.000+ notas', 'Índice inicial de Smart Connections': '4–8 horas', 'Reindexación por cambio': '~5–10 seg', 'Latencia de chat (Copilot)': '~5–10 seg primer token', 'Notas': 'Al límite de lo práctico. Considera sub-vaults o actualiza a mxbai-embed-large si la precisión importa más que la velocidad.' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El tamaño del vault tiene más impacto en la indexación inicial que en la capacidad de respuesta diaria. Después del índice inicial, la reincrustación solo ocurre para notas modificadas — generalmente menos de un segundo por guardado incluso con 20K notas. La experiencia lenta de la primera vez es un costo único. Ejecuta el índice inicial de noche si tu vault es grande.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes',
+        items: [
+          '**Configurar dos plugins con dos modelos de chat diferentes.** Smart Connections no genera, pero Copilot, Text Generator, Local GPT y BMO sí. Usar un modelo diferente en cada uno hace que las respuestas se sientan inconsistentes. Elige un modelo de chat (Llama 3.2 3B es el predeterminado para la mayoría de usuarios) y configura todos los plugins de chat para usarlo.',
+          '**Agregar `.smart-env/` a un vault sincronizado con Git sin `.gitignore`.** El índice de Smart Connections es binario y cambia en cada edición. Sin `.gitignore`, obtendrás un historial de Git masivo y conflictos de fusión constantes. Agrega `.smart-env/` a `.gitignore` y reindexar por dispositivo.',
+          '**Esperar que Smart Connections móvil construya su propio índice.** La generación de embeddings requiere una máquina de nivel escritorio. El móvil usa un índice sincronizado (Obsidian Sync) o no tiene índice (iCloud / Git). Planifica en consecuencia.',
+          '**Apuntar el plugin a `http://localhost:11434/v1` desde un dispositivo móvil.** El móvil no puede llegar al localhost del escritorio. Vincula Ollama a la IP LAN (`OLLAMA_HOST=0.0.0.0:11434`) y usa esa IP en la configuración del plugin, o usa Tailscale para acceso fuera de la red.',
+          '**Ejecutar ambos índices de Smart Connections y Copilot contra el mismo vault.** Dos índices separados consumen ~2× el disco y CPU. A mayo de 2026 los dos plugins no comparten embeddings. Si el espacio en disco importa, usa Smart Connections para la recuperación y configura Copilot para usarlo (avanzado — requiere editar la configuración de recuperación de Copilot para leer el almacén vectorial de Smart Connections).',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          'Smart Connections — [github.com/brianpetro/obsidian-smart-connections](https://github.com/brianpetro/obsidian-smart-connections) (plugin de Obsidian de código abierto).',
+          'Copilot for Obsidian — [github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot) (plugin de Obsidian de código abierto).',
+          'Text Generator — [github.com/nhaouari/obsidian-textgenerator-plugin](https://github.com/nhaouari/obsidian-textgenerator-plugin) (plugin de Obsidian de código abierto).',
+          'Ollama — [ollama.com](https://ollama.com) y [github.com/ollama/ollama](https://github.com/ollama/ollama) (entorno de ejecución LLM local).',
+          'Arquitectura de sincronización móvil de Obsidian — [help.obsidian.md](https://help.obsidian.md) y documentación de Obsidian Sync.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Qué plugin de Obsidian funciona mejor con Ollama?',
+            a: 'Para la mayoría de usuarios: Smart Connections (búsqueda semántica del vault) + Copilot for Obsidian (chat). Ambos se configuran para apuntar a los endpoints de Ollama (chat en `http://localhost:11434/v1`, embeddings en `http://localhost:11434/api/embeddings`). Smart Connections gestiona el descubrimiento de notas relacionadas; Copilot gestiona las consultas conversacionales con contexto del vault. Agrega Text Generator como tercer plugin si tienes flujos de trabajo de plantillas repetibles.',
+          },
+          {
+            q: '¿Pueden los plugins manejar un vault de 10.000 notas?',
+            a: 'Sí. Smart Connections tarda ~25 minutos para el índice de embeddings inicial en un Mac M3 Pro y ~1–2 segundos por cambio después de eso. La latencia del vault QA de Copilot es de ~2–3 segundos al primer token. Con 20K notas, planifica ~75 minutos de indexación inicial (ejecutar de noche). Con 50K+ notas, la indexación tarda 4–8 horas y deberías considerar dividir en sub-vaults.',
+          },
+          {
+            q: '¿Estos plugins se sincronizan al móvil?',
+            a: 'Los propios plugins se sincronizan vía la sincronización de plugins de Obsidian. Las restricciones son: (1) índice de embeddings de Smart Connections — se sincroniza limpiamente con Obsidian Sync, requiere reindexación por dispositivo con iCloud o Git; (2) los plugins de chat necesitan llegar a Ollama, lo que significa acceso LAN (reemplaza `localhost` con la IP LAN del escritorio después de vincular Ollama a `0.0.0.0`) o una VPN de malla como Tailscale.',
+          },
+          {
+            q: '¿Puedo usar varios plugins de IA juntos?',
+            a: 'Sí. Smart Connections + Copilot es la combinación recomendada. Agregar Text Generator para plantillas es común. Agregar más de 3 plugins de chat (Copilot + Local GPT + BMO) es redundante — todos hacen el mismo trabajo. Elige un plugin de chat y quédate con él.',
+          },
+          {
+            q: '¿Qué plugin es mejor para escribir dentro de notas?',
+            a: 'Copilot for Obsidian — tiene comandos inline (Cmd/Ctrl+P → Copilot → reescribir / resumir / prompt personalizado) que operan en texto seleccionado. Text Generator también es sólido para tareas de escritura repetibles vía plantillas. Para asistencia de escritura ad-hoc ("reescribe este párrafo en un tono más formal"), Copilot es más rápido. Para generación estructurada ("convierte cada nota de reunión en un resumen usando esta plantilla"), Text Generator es mejor.',
+          },
+          {
+            q: '¿Cómo hago prompts sobre todo mi vault?',
+            a: 'Usa el modo vault QA de Copilot for Obsidian. Utiliza un índice de embeddings (similar a Smart Connections) para recuperar las notas más relevantes para una consulta, luego envía esos fragmentos al modelo de chat. Configura los embeddings en la configuración de Copilot para apuntar a tu Ollama local. Smart Connections en sí no tiene interfaz de chat — muestra notas relacionadas pero no sintetiza a través de ellas.',
+          },
+          {
+            q: '¿Puedo usar estos para el diario diario?',
+            a: 'Sí. Dos patrones sólidos: (1) la barra lateral de Smart Connections saca a la superficie notas relacionadas olvidadas cuando abres la nota diaria de hoy — un efecto de "compañero de pensamiento". (2) La plantilla de Text Generator se ejecuta al final del día para resumir la nota diaria en 3 puntos (decisiones, bloqueos, elementos de acción). Combinar ambos hace el diario diario más reflexivo.',
+          },
+          {
+            q: '¿Sobreviven los plugins a las actualizaciones de Obsidian?',
+            a: 'Generalmente sí — los plugins bien mantenidos (Smart Connections, Copilot, Text Generator) se actualizan dentro de días de las versiones principales de Obsidian. Los plugins menos mantenidos ocasionalmente se retrasan. Revisa la página de GitHub Issues del plugin si un plugin falla después de una actualización de Obsidian; la corrección suele ser un lanzamiento del mantenedor en 1–2 semanas. El manifiesto del plugin declara la compatibilidad mínima con la versión de Obsidian.',
+          },
+          {
+            q: '¿Cuál tiene el mejor soporte de la comunidad?',
+            a: 'Smart Connections tiene la comunidad más grande y activa (~5K miembros en Discord en 2026, llamadas de desarrolladores regulares). Copilot for Obsidian tiene una fuerte comunidad en GitHub Issues y un mantenedor activo (Logan Yang). Text Generator tiene una comunidad más pequeña pero comprometida. Local GPT y BMO Chatbot tienen comunidades más pequeñas — bien para uso estable, más lentos para la resolución de problemas.',
+          },
+          {
+            q: '¿Puedo ejecutar el plugin de IA en una máquina diferente?',
+            a: 'Sí. Ejecuta Ollama en un servidor doméstico más potente (mini PC, NAS o estación de trabajo dedicada), vincúlalo a la LAN con `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, luego ingresa la IP LAN del servidor en la configuración de cada plugin (por ejemplo, `http://192.168.1.20:11434/v1`). Esto permite que un portátil de baja potencia o dispositivo móvil use modelos completos de 70B que se ejecutan en el servidor doméstico. Combínalo con Tailscale para que funcione desde cualquier lugar, no solo el Wi-Fi de casa.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[LLM local con Logseq y Joplin](/es/power-local-llm/local-llm-with-logseq-and-joplin) — alternativas de código abierto adyacentes para lectores que prefieren Logseq o Joplin sobre Obsidian.',
+          '[Base de conocimiento personal con LLM local 2026](/es/power-local-llm/local-llm-personal-knowledge-base-2026) — la arquitectura PKB más amplia en la que se integra Obsidian; cubre la capa RAG, estrategias de etiquetado y flujos de trabajo de 10K elementos.',
+          '[Construye RAG local en tus PDFs en 30 minutos (Ollama + AnythingLLM)](/es/power-local-llm/local-rag-on-your-pdfs-step-by-step) — la capa RAG que impulsa plugins semánticos como Smart Connections; útil como contexto sobre las opciones de embeddings.',
+          '[Redacción de novelas y guiones con LLMs locales (2026)](/es/power-local-llm/local-llm-screenwriting-and-novel-drafting) — Obsidian como capa de redacción para escritura de larga duración.',
+          '[Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026) — autoridad de modelos más amplia para elegir los modelos de chat y embeddings detrás de estos plugins.',
+          '[Directorio de software LLM local 2026](/es/power-local-llm/local-llm-software-directory-2026) — listados del directorio para Ollama, Smart Connections, Copilot y otros componentes de esta pila.',
+        ],
+      },
+    },
+  },
 }

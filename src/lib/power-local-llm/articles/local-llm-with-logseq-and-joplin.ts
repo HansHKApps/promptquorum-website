@@ -426,6 +426,426 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Logseq y Joplin con LLMs locales: notas inteligentes sin sincronización en la nube (2026)',
+    seoTitle: 'Logseq + Joplin con LLM local: notas sin nube 2026',
+    intro:
+      'Logseq y Joplin son las dos aplicaciones de notas open source que en 2026 se integran limpiamente con un LLM local y nunca necesitan una conexión a la nube. Logseq ejecuta el plugin logseq-copilot contra Ollama para chat nativo del outliner e IA en el diario diario; Joplin ejecuta el plugin Jarvis contra Ollama para chat consciente de notas, resúmenes y búsqueda respaldada por embeddings. Ambas son más compatibles con el RGPD que Notion AI por arquitectura predeterminada: Notion envía el contenido de las notas a OpenAI; Logseq y Joplin no envían nada a menos que tú lo configures así. El inconveniente en 2026 es el móvil: ni Logseq ni Joplin admiten plugins en iOS o Android, por lo que las funciones de IA solo se ejecutan en el escritorio. Esta guía clasifica ambas herramientas según la madurez de los plugins de IA, las rutas de sincronización sin nube, la compatibilidad móvil y el camino de migración desde Notion, con pasos de configuración concretos para Ollama.',
+    metaDescription:
+      'Logseq + logseq-copilot vs Joplin + Jarvis en Ollama: alternativa privada a Notion AI. Sync sin nube, postura RGPD, brecha de plugins móviles. 2026.',
+    twitterDescription:
+      'Notas open source + IA local sin nube: Logseq con logseq-copilot, Joplin con Jarvis, ambos en Ollama. Brecha de plugins móviles explicada. Ruta de migración desde Notion. Compatible con RGPD por defecto.',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Qwen3 1.7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (16+ GB de memoria unificada)',
+      'PC con RTX 3060 12 GB o RTX 4060 8 GB',
+      'PC con 16 GB de RAM (modo solo CPU como alternativa)',
+    ],
+    audience:
+      'Usuarios de aplicaciones de notas open source, trabajadores del conocimiento con conciencia sobre la privacidad, profesionales de la UE/DACH sujetos al RGPD, usuarios que abandonan Notion AI, y personas que llevan un diario diario y quieren funciones de IA sin enviar sus notas a OpenAI o Anthropic.',
+    readTime: '14 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Logseq Joplin LLM local plugin',
+    targetKeywords: [
+      'logseq llm local',
+      'joplin ia local',
+      'logseq copilot ollama',
+      'joplin jarvis plugin',
+      'notas open source ia privacidad',
+      'alternativa notion ai rgpd',
+    ],
+    leadAnswerBlock:
+      '**Para la mayoría de los lectores en 2026, Logseq + logseq-copilot o Joplin + Jarvis combinados con Ollama es la alternativa privada correcta a Notion AI.** Elige Logseq si tu flujo de trabajo es diario diario + outliner; elige Joplin si quieres notas Markdown puras con sincronización cifrada de extremo a extremo. Ambos se conectan a Ollama en `http://localhost:11434/v1`, ambos admiten chat con la nota actual de forma predeterminada, y ambos son open source bajo licencias permisivas (Logseq AGPL 3.0, Joplin AGPL 3.0 — misma familia). Ninguno envía contenido de notas a la nube a menos que configures explícitamente un proveedor en la nube en el plugin. El límite estricto en 2026: ninguna herramienta admite plugins en iOS o Android — las funciones de IA son exclusivamente de escritorio; el móvil se convierte en una superficie de captura manual que procesas con IA de vuelta en el escritorio. Para la migración desde Notion AI, Logseq tiene la ruta de importación más limpia a través del exportador nativo de Markdown de Notion; la importación de Notion en Joplin es funcional pero pierde la estructura a nivel de bloque.',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuál es la mejor combinación de plugins de Logseq o Joplin para un LLM local privado en 2026?',
+        answer:
+          'Logseq + logseq-copilot o Joplin + plugin Jarvis, ambos apuntando a Ollama en `http://localhost:11434/v1`. logseq-copilot añade bloques de chat y comandos slash dentro de Logseq; Jarvis añade chat, resumen y Q&A respaldada por embeddings dentro de Joplin. Ambos son plugins open source AGPL, ambos se ejecutan solo localmente por defecto, y ambos admiten Ollama de forma nativa. El modelo de chat recomendado en 2026 es Llama 3.2 3B (predeterminado) o Phi-4 Mini para sistemas con 8 GB de RAM. Para búsqueda respaldada por embeddings (solo Joplin Jarvis — Logseq no expone actualmente un plugin de embeddings para todo el vault en 2026), usa nomic-embed-text o mxbai-embed-large. Soporte de plugins móviles: no disponible en ninguna herramienta en 2026 — las funciones de IA solo se ejecutan en el escritorio.',
+        bullets: [
+          'Logseq + logseq-copilot — bloques de chat mediante comandos slash dentro del outliner. Ideal para flujos de trabajo de diario diario y grafos.',
+          'Joplin + plugin Jarvis — barra lateral de chat, resumen, búsqueda semántica respaldada por embeddings. Ideal para notas Markdown puras con sincronización robusta.',
+          'Ambos plugins apuntan a Ollama via `http://localhost:11434/v1` — sin llamadas a la nube por defecto.',
+          'Sync de Logseq sin nube: Git (integrado) o sincronización de archivos local mediante Syncthing/iCloud Drive. Sync de Joplin: Joplin Cloud cifrado de extremo a extremo, Joplin Server auto-alojado, o Nextcloud / WebDAV / Dropbox / OneDrive con E2EE.',
+          'Brecha de plugins móviles (2026): ni Logseq Mobile ni Joplin Mobile admiten plugins. Las funciones de IA son solo de escritorio — el móvil es para captura, el escritorio para procesamiento.',
+          'Migración desde Notion AI: Logseq tiene la ruta de importación Markdown más limpia; Joplin pierde la estructura a nivel de bloque pero preserva el contenido. Ambos dejan de enviar datos a OpenAI en el momento en que cambias.',
+          'Modelos de Ollama recomendados: chat — Llama 3.2 3B o Phi-4 Mini; embeddings (solo Joplin Jarvis) — nomic-embed-text o mxbai-embed-large.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Logseq o Joplin: ¿cuál deberías elegir?', anchor: '#which-tool' },
+      { label: 'Tabla comparativa de herramientas', anchor: '#comparison-table' },
+      { label: 'Plugins de IA de Logseq con Ollama', anchor: '#logseq-ai' },
+      { label: 'Plugins de IA de Joplin con Ollama', anchor: '#joplin-ai' },
+      { label: 'El caso de privacidad contra Notion AI', anchor: '#vs-notion' },
+      { label: 'Sync sin nube: Git, Syncthing, Joplin Server', anchor: '#sync' },
+      { label: 'Brecha de plugins móviles: qué funciona y qué no', anchor: '#mobile' },
+      { label: 'RGPD y residencia de datos en la UE', anchor: '#gdpr' },
+      { label: 'Migrar de Notion AI a Logseq o Joplin', anchor: '#notion-migration' },
+      { label: 'Flujos de trabajo de ejemplo: diario diario, notas de reunión, investigación', anchor: '#workflows' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Logseq + logseq-copilot es la combinación recomendada para usuarios de outliner / diario diario.** logseq-copilot añade bloques de chat y comandos slash dentro de Logseq, configurado contra Ollama en `http://localhost:11434/v1`. Ideal para usuarios que ya viven en el modelo de página de diario diario de Logseq.',
+          '**Joplin + Jarvis es la combinación recomendada para usuarios de notas Markdown puras.** Jarvis añade una barra lateral de chat, comandos de resumen y búsqueda semántica respaldada por embeddings en todo el cuaderno. Ideal para usuarios que quieren un cuaderno estilo Notion con sincronización cifrada de extremo a extremo robusta.',
+          '**Ambas herramientas son open source bajo AGPL 3.0** — la licencia es permisiva para uso personal y comercial; la única restricción es la divulgación del código fuente si las modificas y las alojas públicamente.',
+          '**La postura de privacidad supera a Notion AI por arquitectura.** Notion AI envía el contenido de las notas a OpenAI por diseño; Logseq y Joplin no envían nada a menos que configures explícitamente un proveedor en la nube. Esta distinción es significativa para sanidad, derecho, periodismo y cualquier contexto regulado por el RGPD.',
+          '**La brecha de plugins móviles es la mayor restricción en 2026.** Ni Logseq Mobile ni Joplin Mobile admiten plugins. Las funciones de IA solo se ejecutan en el escritorio — el móvil se convierte en una superficie de captura (escribir notas), y el procesamiento (resumir, chatear, recuperar) ocurre más tarde en el escritorio.',
+          '**La sync sin nube es sencilla, pero cada herramienta toma un enfoque diferente.** Logseq tiene sincronización Git integrada y funciona limpiamente con Syncthing o iCloud Drive. Joplin tiene Joplin Cloud cifrado de extremo a extremo, Joplin Server auto-alojado, o cualquier backend WebDAV / Nextcloud / Dropbox con E2EE encima.',
+          '**La migración desde Notion AI es un viaje de ida que ambas herramientas gestionan.** Logseq importa el exportador Markdown de Notion con mayor fidelidad a nivel de bloque; Joplin importa el contenido pero aplana los bloques anidados. Una vez migrado, ninguna nota sale de tu máquina a menos que lo decidas.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Herramientas cubiertas:** Logseq (outliner, con el diario diario como primera opción) y Joplin (cuaderno Markdown puro). Obsidian se menciona como referencia — su guía dedicada está enlazada al final.',
+          '**Plugins de IA principales:** logseq-copilot para Logseq; Jarvis (y plugins similares compatibles con Ollama) para Joplin.',
+          '**Backend LLM:** Ollama (recomendado) en `http://localhost:11434/v1`, o cualquier endpoint local compatible con OpenAI (LM Studio, servidor llama.cpp, vLLM).',
+          '**Modelos de chat recomendados:** Llama 3.2 3B, Phi-4 Mini, Gemma 3 4B (sistemas con 16 GB de RAM); Qwen3 1.7B (8 GB de RAM).',
+          '**Modelos de embedding recomendados (solo Joplin Jarvis):** nomic-embed-text (768 dimensiones, rápido), mxbai-embed-large (1024 dimensiones, más preciso).',
+          '**Licencias:** Logseq AGPL 3.0; Joplin AGPL 3.0; logseq-copilot AGPL 3.0 (mismo autor que Copilot for Obsidian, Logan Yang); Jarvis (Joplin) AGPL 3.0.',
+          '**Rutas de sync:** Logseq — Git integrado, Syncthing, iCloud Drive, Logseq Sync (de pago). Joplin — Joplin Cloud (de pago, E2EE), Joplin Server auto-alojado, WebDAV, Nextcloud, Dropbox, OneDrive (todos admiten E2EE).',
+          '**Plugins móviles:** no admitidos en ninguna herramienta en 2026 — IA solo en escritorio.',
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: 'Logseq o Joplin: ¿cuál deberías elegir?',
+        content:
+          '**Elige Logseq si tu flujo de trabajo de notas es principalmente diario diario o en forma de grafo; elige Joplin si tus notas son documentos Markdown puros con fuertes necesidades de sincronización.** Las dos herramientas tienen modelos mentales diferentes: Logseq es un outliner con enlaces bidireccionales y un diario diario como superficie de captura predeterminada; Joplin es un cuaderno de archivos Markdown con etiquetas, búsqueda y sincronización cifrada de extremo a extremo. El ecosistema de plugins de IA en 2026 refleja esto: logseq-copilot se integra en los bloques del outliner; Jarvis se integra en la barra lateral de Joplin.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Logseq + logseq-copilot es adecuado para flujos de trabajo de outliner / diario diario; Joplin + Jarvis es adecuado para flujos de trabajo de cuaderno Markdown puro con sincronización cifrada de extremo a extremo robusta.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Ambas herramientas son alternativas privadas a Notion AI. La elección depende principalmente de cómo escribes notas. Logseq trata las notas como viñetas anidadas y te da una página de diario diario automáticamente — bueno para pensar en voz alta, capturar con marca de tiempo y referenciar en modo grafo. Joplin trata las notas como documentos Markdown completos en cuadernos — bueno para escritura de formato largo, documentación estructurada y dispositivos que necesitan sincronización cifrada. Ambos funcionan con un LLM local via Ollama, ambos son open source, y ambos dejan de enviar datos a nadie en el momento en que cambias desde Notion.',
+          },
+        ],
+        decisionBlock: {
+          title: 'Decisión: ¿Logseq o Joplin?',
+          localIf: [
+            'Llevas un diario diario y quieres que la IA resuma / agrupe / enlace días → Logseq + logseq-copilot',
+            'Quieres backlinks estilo grafo y bloques del outliner con chat en línea → Logseq + logseq-copilot',
+            'Escribes notas Markdown de formato largo (investigación, documentación, borradores) → Joplin + Jarvis',
+            'Necesitas sincronización cifrada de extremo a extremo entre dispositivos → Joplin (mejor propuesta E2EE)',
+            'Quieres búsqueda semántica respaldada por embeddings en todo el cuaderno → Joplin + Jarvis (Logseq no tiene equivalente en 2026)',
+            'Estás migrando desde Notion y quieres la mayor fidelidad a nivel de bloque → Logseq',
+          ],
+          cloudIf: [
+            'Necesitas funciones de IA en iOS o Android (no solo captura) → ninguna herramienta admite plugins en móvil en 2026; considera Obsidian Mobile + Ollama en LAN con Tailscale',
+            'Necesitas colaboración multiusuario en tiempo real en el mismo vault → tanto Logseq como Joplin son de un solo usuario por diseño; la edición colaborativa no está en su modelo',
+            'Necesitas calidad GPT-4o en cada respuesta de chat → equivalentes en la nube (la pila local alcanza ~70% de capacidad)',
+          ],
+          quick: [
+            'Diario diario + outliner: Logseq + logseq-copilot',
+            'Cuaderno Markdown puro + sync E2EE: Joplin + Jarvis',
+            'Funciones de IA en móvil: no viable en 2026 — captura en móvil, procesamiento en escritorio',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Un patrón común es ejecutar ambos: Logseq para el diario diario y captura rápida (todo con marca de tiempo), Joplin para notas de referencia permanentes (más largas, etiquetadas, sincronizadas cifradas). Las dos herramientas no comparten una base de datos, pero ninguna es pesada — ejecutar ambas añade unos 200–400 MB de RAM combinados. Usa Logseq para "pensar" y Joplin para "saber", con el LLM local disponible en ambos.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Tabla comparativa de herramientas',
+        content:
+          '**Los cuatro ejes que más importan: profundidad de plugins de IA, sync sin nube, soporte de plugins móviles y flujo de trabajo más adecuado.** Obsidian se incluye como referencia — los lectores que comparan las tres herramientas también deberían leer la guía dedicada de Obsidian enlazada al final.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Logseq lidera en IA nativa del outliner y sync con Git; Joplin lidera en sync cifrada de extremo a extremo y recuperación respaldada por embeddings; Obsidian lidera en amplitud de plugins al costo de sync de pago y una licencia no OSI.',
+          },
+        ],
+        columns: ['Herramienta', 'Plugins de IA', 'Sync (sin nube)', 'Móvil', 'Ideal para'],
+        rows: [
+          { 'Herramienta': 'Logseq', 'Plugins de IA': 'logseq-copilot (bloques de chat, comandos slash), variantes del plugin GPT-3', 'Sync (sin nube)': 'Git integrado, Syncthing, iCloud Drive, Logseq Sync (de pago E2EE)', 'Móvil': 'App móvil disponible; plugins no admitidos en móvil (2026)', 'Ideal para': 'Flujo de trabajo de diario diario + outliner' },
+          { 'Herramienta': 'Joplin', 'Plugins de IA': 'Jarvis (chat, resumen, Q&A respaldada por embeddings), integraciones compatibles con Ollama', 'Sync (sin nube)': 'Joplin Cloud (de pago E2EE), Joplin Server auto-alojado, WebDAV, Nextcloud, Dropbox, OneDrive (todos compatibles con E2EE)', 'Móvil': 'App móvil disponible; plugins no admitidos en móvil (2026)', 'Ideal para': 'Cuaderno Markdown + sync E2EE' },
+          { 'Herramienta': 'Obsidian (referencia)', 'Plugins de IA': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (sin nube)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (de pago E2EE)', 'Móvil': 'La app móvil admite la mayoría de plugins; se requiere acceso LAN a Ollama', 'Ideal para': 'Usuarios avanzados con plugins de pago / sync de pago' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La columna de móvil es el mayor diferenciador de 2026. Obsidian Mobile ejecuta la mayoría de plugins (incluidos Smart Connections y Copilot) cuando Ollama es accesible en la LAN o via Tailscale. Logseq Mobile y Joplin Mobile no ejecutan ningún plugin — las funciones de IA son estrictamente de escritorio. Si la IA en móvil importa, planifica captura en móvil + procesamiento en escritorio, o echa un vistazo a Obsidian Mobile.',
+          },
+        ],
+      },
+      logseqAi: {
+        id: 'logseq-ai',
+        title: 'Plugins de IA de Logseq con Ollama',
+        content:
+          '**El plugin de IA de Logseq recomendado en 2026 es logseq-copilot — mismo autor que Copilot for Obsidian, configurado para apuntar a Ollama.** Añade bloques de chat (comando slash `/copilot`), reescritura en línea y prompts conscientes del diario directamente dentro del outliner de Logseq. Logseq actualmente no tiene un equivalente a Smart Connections (índice de embeddings para todo el vault), por lo que el enlace semántico a través del grafo aún no es un problema resuelto en 2026.',
+        items: [
+          '**Qué hace:** bloques de chat mediante comandos slash, generación de contenido en línea, prompts conscientes del diario que toman la página activa o los bloques seleccionados como contexto.',
+          '**Instalación:** Configuración → Plugins → Marketplace → busca "logseq-copilot" → Instalar + Habilitar. Autor: Logan Yang (el mismo que Copilot for Obsidian).',
+          '**Configurar para Ollama:** Configuración → logseq-copilot → API Provider → "Custom OpenAI" u "Ollama" → URL base de API `http://localhost:11434/v1` → modelo `llama3.2:3b` (o cualquier nombre de modelo de Ollama).',
+          '**Comandos slash:** escribe `/copilot` en cualquier bloque para iniciar un chat. La salida aparece como bloques anidados bajo el prompt — nativo del outliner, por lo que las respuestas se convierten en contenido de esquema de primera clase.',
+          '**Prompts basados en selección:** selecciona bloques → ejecuta una plantilla de prompt personalizada ("Resume estos en tres puntos") → el resultado se añade debajo de la selección.',
+          '**Integración con el diario diario:** apunta una plantilla a la página del diario diario → el resumen de fin de día, las preguntas de revisión semanal o la expansión de backlinks se convierten en acciones con una sola tecla.',
+          '**Lo que NO hace (2026):** no existe un índice de embeddings para todo el grafo. Los backlinks de Logseq siguen siendo explícitos; el descubrimiento semántico entre páginas aún no está soportado por ningún plugin open source de Logseq.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La salida de logseq-copilot son solo bloques — el mismo primitivo que todo lo demás en Logseq. Esta es la ventaja clave sobre Obsidian: las respuestas de IA no son texto flotante en la barra lateral; son nodos del grafo que puedes enlazar, etiquetar, consultar y reeditar. Usa `/copilot` intensivamente para la captura, luego refactoriza los bloques de respuesta como harías con cualquier otra nota.',
+          },
+        ],
+      },
+      joplinAi: {
+        id: 'joplin-ai',
+        title: 'Plugins de IA de Joplin con Ollama',
+        content:
+          '**El plugin de IA de Joplin recomendado en 2026 es Jarvis — proporciona chat, resumen y búsqueda semántica respaldada por embeddings en todo el cuaderno, todo configurable para usar Ollama.** Jarvis es el equivalente de Joplin más cercano a Smart Connections + Copilot for Obsidian combinados: un plugin, una configuración, dos trabajos.',
+        items: [
+          '**Qué hace:** barra lateral de chat, comando "Ask Jarvis" en todo el cuaderno (recuperación respaldada por embeddings), resumir nota seleccionada, generar notas a partir de prompts, prompts personalizados en selecciones.',
+          '**Instalación:** Herramientas → Opciones → Plugins → busca "Jarvis" → Instalar + Habilitar. Autor: Alon Bukai.',
+          '**Configurar para Ollama (chat):** Opciones → Jarvis → Model Provider → "OpenAI" con URL base personalizada → URL `http://localhost:11434/v1` → modelo `llama3.2:3b` → clave API cualquier cadena no vacía (Ollama la ignora).',
+          '**Configurar para Ollama (embeddings):** Opciones → Jarvis → Notes Database → habilitar Database → Embedding Model → "OpenAI" con URL base personalizada → URL `http://localhost:11434/v1` → modelo `nomic-embed-text`.',
+          '**Indexación inicial:** Jarvis integra cada nota en la base de datos cuando se habilita por primera vez. Tiempo en Mac M3 Pro con nomic-embed-text: 1K notas ~3 min, 5K notas ~15 min, 10K notas ~35 min. La reintegración al guardar es incremental.',
+          '**Flujo de trabajo "Ask Jarvis":** Herramientas → Jarvis → Ask Jarvis → escribe una pregunta → Jarvis recupera notas relevantes por similitud de embedding y envía los fragmentos más tu pregunta al modelo de chat. Equivalente al QA del vault de Copilot for Obsidian.',
+          '**Ideal para:** usuarios que quieren un único plugin que cubra chat + recuperación dentro de Joplin sin gestionar dos plugins separados.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Jarvis almacena su base de datos de embeddings dentro de la base de datos SQLite de Joplin. El archivo de base de datos crece ~150–250 MB por cada 5.000 notas integradas con nomic-embed-text. Si sincronizas el perfil de Joplin via Joplin Cloud o WebDAV, la base de datos de embeddings se incluye en la sync — planifica el costo de ancho de banda y tiempo de sincronización. La base de datos de embeddings en sí está cifrada en tránsito cuando se usa el E2EE de Joplin.',
+          },
+        ],
+      },
+      vsNotion: {
+        id: 'vs-notion',
+        title: 'El caso de privacidad contra Notion AI',
+        content:
+          '**Notion AI envía el contenido de las notas a OpenAI por diseño — eso es la arquitectura, no una elección de configuración.** Cuando usas las funciones de Notion AI en una página, Notion envía el contenido de la página a los servidores de OpenAI, OpenAI lo procesa, y la respuesta vuelve a través de Notion. Los datos se rigen por las políticas de privacidad de OpenAI y Notion, no por tu sistema de archivos local. Para usuarios en contextos regulados (sanidad, derecho, asesoramiento financiero, periodismo, datos de la UE cubiertos por el RGPD) este es un problema estructural que ninguna configuración soluciona.',
+        items: [
+          '**Arquitectura de Notion AI:** las notas salen de tu máquina para ser procesadas por OpenAI. Sujeto a los términos de manejo de datos de OpenAI Enterprise (mejor que la API estándar de OpenAI), pero aún fuera de tu infraestructura.',
+          '**Arquitectura de Logseq + logseq-copilot:** Logseq se ejecuta como una aplicación local, el plugin envía los prompts a tu Ollama local, ningún contenido de nota llega a un tercero a menos que configures explícitamente un proveedor en la nube en el plugin.',
+          '**Arquitectura de Joplin + Jarvis:** Joplin se ejecuta como una aplicación local, Jarvis envía los prompts a tu Ollama local, la generación de embeddings se ejecuta localmente, ningún contenido de nota llega a un tercero a menos que configures explícitamente un proveedor en la nube en Jarvis.',
+          '**Residencia de datos:** con Logseq o Joplin + Ollama, cada byte de contenido de nota permanece en tu máquina. Con Notion AI, el contenido de las notas transita por servidores de OpenAI con sede en EE. UU. independientemente de dónde estés.',
+          '**Pista de auditoría:** con LLMs locales, puedes ejecutar una captura de paquetes (Wireshark, Little Snitch, etc.) una vez después de la instalación y verificar que los plugins realizan cero llamadas salientes durante el uso de IA. Con Notion AI, las llamadas salientes son inherentes — no hay nada que verificar.',
+          '**Riesgo de subprocesadores:** Notion AI hereda todos los subprocesadores de OpenAI (Microsoft Azure como infraestructura principal, más proveedores de soporte). Logseq y Joplin + Ollama tienen cero subprocesadores para la capa de IA.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La prueba más clara de "¿es mi aplicación de notas realmente privada?" es desconectar la red e intentar usar las funciones de IA. Logseq + logseq-copilot + Ollama: funciona completamente sin conexión. Joplin + Jarvis + Ollama: funciona completamente sin conexión. Notion AI: devuelve un error. Haz esta prueba una vez después de la configuración para confirmar que tu stack hace lo que crees.',
+          },
+        ],
+      },
+      sync: {
+        id: 'sync',
+        title: 'Sync sin nube: Git, Syncthing, Joplin Server',
+        content:
+          '**Tanto Logseq como Joplin tienen múltiples rutas de sync que nunca requieren confiar el contenido de las notas a una nube de terceros.** La elección correcta depende de si quieres cero configuración (sync de pago), historial rastreado por Git (amigable para desarrolladores) o par a par (sin servidor).',
+        items: [
+          '**Logseq — sync Git integrada:** Configuración → Sync → habilitar auto-commit de Git. Logseq confirma el grafo en un remoto Git configurado según un calendario. Funciona con GitHub / GitLab / Gitea auto-alojado. Los commits de Markdown puro hacen que el historial sea legible para humanos.',
+          '**Logseq — Syncthing (par a par):** instala Syncthing en cada dispositivo, apúntalo a la carpeta del grafo de Logseq. Cifrado de extremo a extremo, sin servidor central, sin terceros. Excelente para sync de escritorio a escritorio; funciona en Logseq Mobile cuando Syncthing-Fork (Android) o Möbius Sync (iOS) mantiene la carpeta actualizada.',
+          '**Logseq — iCloud Drive:** mantén la carpeta del grafo dentro de iCloud Drive en macOS / iOS. La ruta más limpia en dispositivos Apple; los datos están cifrados en reposo por Apple, pero Apple guarda las claves (no es zero-knowledge).',
+          '**Logseq Sync (de pago E2EE):** la sync cifrada de extremo a extremo del equipo de Logseq. Desventaja: de pago (el nivel Pro incluye sync; los precios varían — consulta logseq.com), pero ofrece E2EE sin configuración en todos los dispositivos incluido el móvil.',
+          '**Joplin — Joplin Cloud (de pago E2EE):** la sync alojada del equipo de Joplin con cifrado de extremo a extremo. Gratis para cantidades pequeñas de notas; los niveles de pago escalan. Alojado en la UE. Conveniente y amigable para auditorías.',
+          '**Joplin — Joplin Server auto-alojado:** ejecuta la imagen Docker de Joplin Server en un NAS / VPS / servidor doméstico. Cifrado de extremo a extremo de cliente a cliente; el servidor almacena texto cifrado. La mejor opción para organizaciones que quieren propiedad total de la infraestructura de sync.',
+          '**Joplin — WebDAV / Nextcloud / Dropbox / OneDrive:** Joplin admite cualquier endpoint WebDAV, más soporte de primera clase para Nextcloud, Dropbox, OneDrive. Siempre habilita el E2EE integrado de Joplin encima — estos proveedores solo ven texto cifrado.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Joplin Server auto-alojado es la respuesta para organizaciones que quieren sync auditable en las instalaciones sin confiar en una nube de terceros. Ejecútalo en un pequeño VPS o servidor doméstico, apunta todos los clientes a él, habilita E2EE — el servidor solo guarda texto cifrado y tú controlas el host. Esto es significativamente más fácil que auto-alojar Notion (no admitido oficialmente) o la infraestructura de Obsidian Sync.',
+          },
+        ],
+      },
+      mobile: {
+        id: 'mobile',
+        title: 'Brecha de plugins móviles: qué funciona y qué no',
+        content:
+          '**Ni Logseq Mobile ni Joplin Mobile admiten plugins en 2026 — esta es la mayor restricción en comparación con Obsidian.** Las apps móviles son superficies funcionales de captura y lectura, pero logseq-copilot y Jarvis solo se ejecutan en el escritorio. Cualquier flujo de trabajo de IA debe asumir que el móvil es para captura y el escritorio para procesamiento.',
+        items: [
+          '**Logseq Mobile (iOS / Android):** ver, editar y capturar notas; los backlinks y la vista de grafo funcionan; la sync funciona. Los plugins no se ejecutan — incluido logseq-copilot. Las funciones de IA no están disponibles en móvil.',
+          '**Joplin Mobile (iOS / Android):** ver, editar y capturar notas; las etiquetas y la búsqueda funcionan; la sync funciona (incluido E2EE). Los plugins no se ejecutan — incluido Jarvis. Las funciones de IA no están disponibles en móvil.',
+          '**Patrón alternativo: captura en móvil, procesamiento en escritorio.** Escribe notas libremente en móvil. Cuando llegas al escritorio, ejecuta logseq-copilot o Jarvis para resumir, expandir, enlazar o consultar el contenido capturado.',
+          '**Patrón alternativo: servidor doméstico + escritorio remoto.** Ejecuta logseq-copilot o Jarvis en un escritorio en tu casa, accede a ese escritorio via Tailscale + un escritorio remoto / túnel SSH desde el móvil cuando se necesita IA. Añade costo de configuración; rara vez vale la pena para usuarios ocasionales.',
+          '**Patrón alternativo: cambiar a Obsidian Mobile para casos de uso de IA.** Obsidian Mobile ejecuta la mayoría de plugins. Si la IA en móvil es crítica, esta es la respuesta más sencilla — al costo de cambiar de herramienta.',
+          '**Por qué existe la brecha:** tanto Logseq como Joplin ejecutan sus motores de plugins como contextos Node.js / Electron exclusivos del escritorio. Las apps móviles son nativas (Logseq Capacitor, Joplin React Native) y no incorporan el runtime de plugins. Eliminar la brecha requiere reescribir la arquitectura de plugins — ningún equipo ha señalado esto para 2026.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Si tu caso de uso de IA es principalmente móvil (p. ej., dictar notas en movimiento y querer que la IA las resuma inmediatamente), Logseq y Joplin no son las herramientas correctas actualmente — Obsidian Mobile + Ollama en LAN lo es. Si tu caso de uso de IA es principalmente de escritorio con captura móvil (el patrón más común), Logseq y Joplin funcionan bien y la brecha móvil es una inconveniencia menor en lugar de un bloqueador.',
+          },
+        ],
+      },
+      gdpr: {
+        id: 'gdpr',
+        title: 'RGPD y residencia de datos en la UE',
+        content:
+          '**Para usuarios de la UE y DACH, Logseq + logseq-copilot + Ollama y Joplin + Jarvis + Ollama son más compatibles con el RGPD que Notion AI por arquitectura predeterminada.** El contenido de las notas nunca sale de la máquina del responsable del tratamiento, por lo que los flujos de datos que el artículo 28 del RGPD (acuerdos con encargados del tratamiento), el artículo 44 (transferencias internacionales) y los catálogos BSI-Grundschutz requieren documentar para herramientas SaaS simplemente no existen para la pila local.',
+        items: [
+          '**Artículo 28 (Acuerdos con encargados del tratamiento):** con Notion AI, Notion + OpenAI son encargados del tratamiento y requieren un Acuerdo de Procesamiento de Datos (APD) más Cláusulas Contractuales Estándar para la transferencia internacional a OpenAI. Con Logseq / Joplin + Ollama, no hay ningún encargado del tratamiento de terceros — solo el responsable ejecutando software local.',
+          '**Artículo 44 (Transferencias internacionales):** Notion AI envía datos a servidores de OpenAI con sede en EE. UU.; esta es una "transferencia internacional" de Schrems II que requiere CCE y una Evaluación de Impacto de la Transferencia. El procesamiento local de Ollama elimina la transferencia por completo.',
+          '**Catálogos BSI-Grundschutz (DACH):** las directrices federales de seguridad informática de Alemania tratan los servicios de IA en la nube como subcontratación que requiere evaluación formal de riesgos. El procesamiento de IA local cae bajo la línea de base de "TI interna" mucho más sencilla.',
+          '**Derecho de supresión (Artículo 17):** con Notion AI, eliminar el contenido de las notas de tu cuenta no necesariamente lo elimina del pipeline de entrenamiento o los registros de OpenAI (depende de los términos empresariales). Con Ollama local, la eliminación es la eliminación del sistema de archivos — verificable y completa.',
+          '**Auditabilidad:** las pilas locales son más fáciles de auditar. Ejecuta una captura de paquetes una vez, verifica cero tráfico saliente durante el uso de IA, documenta el resultado. Los servicios de IA en la nube requieren confiar en los informes SOC 2 / ISO 27001 del proveedor.',
+          '**Alojamiento compatible con la UE (cuando la sync implica un servidor):** Joplin Cloud está alojado en la UE; Joplin Server auto-alojado puede alojarse en infraestructura de la UE (Hetzner, OVH, IONOS). Logseq Sync está operado por Logseq Inc. (con sede en EE. UU.) — para residencia estricta en la UE, prefiere Git o Syncthing para la sync de Logseq.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para organizaciones que necesitan una historia defendible de funciones de IA bajo el RGPD, la pila de LLM local en Logseq o Joplin es la respuesta más sencilla. La discusión sobre el APD pasa de "usamos Notion + OpenAI como subprocesadores con estas cláusulas" a "usamos software local ejecutándose en el endpoint del responsable, sin ningún encargado del tratamiento implicado". El trabajo del equipo de cumplimiento se vuelve mucho más sencillo.',
+          },
+        ],
+      },
+      notionMigration: {
+        id: 'notion-migration',
+        title: 'Migrar de Notion AI a Logseq o Joplin',
+        content:
+          '**Notion ofrece una exportación nativa de Markdown que tanto Logseq como Joplin pueden importar — Logseq preserva mejor la estructura a nivel de bloque, Joplin preserva el contenido pero aplana los bloques anidados.** De cualquier manera, la migración es una exportación-importación única, no una sync continua, y detiene el flujo de datos a OpenAI de inmediato.',
+        numberedItems: [
+          '**Exportar desde Notion:** Configuración → Configuración y miembros → Configuración → "Exportar todo el contenido del espacio de trabajo" → elige "Markdown & CSV" → descarga el ZIP. La exportación contiene un archivo .md por página más carpetas para páginas anidadas.',
+          '**Descomprimir y limpiar:** la exportación de Notion usa sufijos largos de ID de página en los nombres de archivo (p. ej., `My Page 1f8b2a3c4d5e6f7g8h9i.md`). Ejecuta un script rápido de renombrado para eliminar los IDs si los nombres de archivo importan para tu nueva herramienta.',
+          '**Ruta de importación de Logseq:** abre Logseq → Archivo → Nuevo grafo → apunta a una nueva carpeta → copia los archivos de Notion descomprimidos en la carpeta `pages/` del grafo. Logseq los reconoce; los backlinks (estilo `[[Página]]` de Notion) sobreviven cuando los archivos coinciden. El anidamiento a nivel de bloque se preserva porque tanto Notion como Logseq usan sangría de bloques estilo lista.',
+          '**Ruta de importación de Joplin:** Herramientas → Importar → "MD - Markdown directory" → selecciona la carpeta de Notion descomprimida. Joplin crea una nota por archivo .md dentro de una estructura de cuaderno que refleja la jerarquía de páginas de Notion. El anidamiento a nivel de bloque se aplana — las listas desplegables anidadas de Notion se convierten en listas Markdown planas.',
+          '**Verificar la migración:** comprueba al azar 10–20 páginas — confirma que el contenido, los enlaces y las etiquetas sobrevivieron. Si usaste bases de datos de Notion extensivamente, la exportación CSV es separada; tanto Logseq como Joplin la tratan como un archivo plano en lugar de una base de datos estructurada, así que planifica alguna reestructuración manual.',
+          '**Detener Notion AI:** desactiva la suscripción a Notion AI en la configuración de la cuenta. El trabajo de IA futuro ocurre via logseq-copilot o Jarvis en tu máquina local.',
+          '**Verificar la postura de privacidad:** desconecta la red → ejecuta las funciones de IA en tu nueva herramienta → confirma que funcionan. Esta es la prueba que demuestra que la migración logró su objetivo.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Si usaste bases de datos de Notion como datos estructurados (rastreadores de proyectos, CRMs, etc.), la migración es más compleja que para páginas de prosa. Considera mantener esas bases de datos específicas en Notion (sin IA) mientras mueves el contenido con mucho texto a Logseq o Joplin — o migra las bases de datos al RAG estructurado de AnythingLLM, donde el LLM local puede consultarlas como documentos.',
+          },
+        ],
+      },
+      workflows: {
+        id: 'workflows',
+        title: 'Flujos de trabajo de ejemplo: diario diario, notas de reunión, investigación',
+        content:
+          '**Tres flujos de trabajo concretos que muestran la pila local en acción.** Los dos primeros son centrados en Logseq (nativos del outliner / diario); el tercero es centrado en Joplin (notas de formato más largo).',
+        items: [
+          '**Resumen del diario diario de Logseq:** al final del día → abre la página del diario de hoy → `/copilot Resume este día en tres puntos centrados en decisiones, bloqueos y acciones para mañana` → la respuesta aparece como bloques anidados. Guarda el prompt como plantilla de logseq-copilot para ejecuciones con una sola tecla.',
+          '**Revisión semanal de Logseq:** domingo por la tarde → abre una página nueva llamada `Revisión semana 19` → `/copilot Resume las últimas 7 páginas del diario diario en 3 puntos por categoría: progreso, bloqueos, temas` → logseq-copilot recupera páginas del diario recientes via el mecanismo de enlace de páginas. El resultado se convierte en la semilla de la planificación de la próxima semana.',
+          '**Expansión de notas de reunión de Joplin:** durante la reunión, captura viñetas aproximadas en una nota → después de la reunión, selecciona todo → Herramientas → Jarvis → "Expande y estructura estas notas" → la salida reemplaza o se añade a continuación. Guarda el prompt como preset de Jarvis.',
+          '**Q&A de investigación de Joplin:** añade 50–500 notas de fuentes (artículos, documentos, recortes web) en un solo cuaderno → habilita Jarvis Notes Database → espera a la integración → Herramientas → Jarvis → "Ask Jarvis" → haz preguntas entre fuentes ("¿Qué fuentes hablan de X?"). Equivalente al QA del vault de Obsidian Copilot pero dentro de Joplin.',
+          '**Logseq + Joplin combinados:** captura en Logseq (rápido, nativo del diario) → cura los elementos duraderos en Joplin (referencia permanente). Ejecuta IA en cada herramienta para sus puntos fuertes nativos — chat rápido / generación de esquemas en Logseq, Q&A de investigación respaldada por embeddings en Joplin.',
+          '**Captura en móvil, procesamiento en escritorio:** durante el día, captura notas libremente en Logseq Mobile o Joplin Mobile (sin IA). Al final del día en el escritorio, ejecuta logseq-copilot o Jarvis para resumir, enlazar y consultar — la IA se pone al día con lo que capturaste sin conexión.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El patrón de "captura en móvil, procesamiento en escritorio" es la forma correcta de pensar en Logseq + Joplin en 2026 dada la brecha de plugins móviles. No es una solución alternativa — corresponde a cómo funciona realmente el trabajo del conocimiento. El móvil es para las entradas (tienes una idea, la capturas). El escritorio es para la síntesis (procesas el material capturado). El LLM local se une en el momento de la síntesis, que es exactamente donde más importa su calidad.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes',
+        items: [
+          '**Configurar logseq-copilot o Jarvis con un proveedor en la nube por accidente.** Ambos plugins ofrecen "OpenAI" como proveedor predeterminado. La configuración solo local requiere cambiar a una URL base personalizada que apunte a `http://localhost:11434/v1`. Olvidar esto significa que el plugin envía notas silenciosamente a OpenAI — exactamente el modo de fallo del que migraste. Verifica con una captura de paquetes.',
+          '**Esperar soporte de plugins en móvil.** Ni Logseq Mobile ni Joplin Mobile ejecuta plugins en 2026. Si asumes que la IA funciona en cualquier lugar donde estén tus notas, te toparás con el límite la primera vez que intentes resumir en el tren. Planifica captura en móvil, procesamiento en escritorio desde el primer día.',
+          '**Apuntar el plugin a `http://localhost:11434/v1` desde una máquina diferente.** Localhost es por máquina. Si ejecutas Ollama en un escritorio y Logseq en un portátil, necesitas la IP de LAN del escritorio (`http://192.168.1.20:11434/v1`) más Ollama enlazado a `0.0.0.0:11434`.',
+          '**Sincronizar la base de datos de embeddings de Joplin Jarvis con un nivel WebDAV gratuito con cuota pequeña.** Las bases de datos de embeddings crecen ~150–250 MB por cada 5.000 notas. Los niveles gratuitos (Dropbox 2 GB) alcanzan el límite rápidamente a escala de cuaderno. Planifica Joplin Server auto-alojado o un nivel de pago cuando los cuadernos superen ~5.000 notas.',
+          '**No ejecutar una captura de paquetes de auditoría una vez.** Ambos plugins son open source y se comportan bien, pero la única prueba definitiva de que tu pila es solo local es ejecutar Wireshark / Little Snitch / equivalente durante el uso de IA y verificar cero tráfico saliente. Hazlo una vez después de la configuración, documenta el resultado, sigue adelante.',
+          '**Intentar usar Logseq + logseq-copilot para recuperación respaldada por embeddings.** logseq-copilot no tiene un índice de embeddings para todo el grafo en 2026. Si necesitas "pregunta a todo mi grafo", cambia a Joplin + Jarvis o usa Obsidian + Smart Connections. Logseq sobresale en IA nativa del outliner, no en búsqueda semántica.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          'Logseq — [logseq.com](https://logseq.com) y [github.com/logseq/logseq](https://github.com/logseq/logseq) (outliner open source; AGPL 3.0).',
+          'logseq-copilot — [github.com/logancyang/logseq-copilot](https://github.com/logancyang/logseq-copilot) (plugin open source de Logseq; AGPL 3.0).',
+          'Joplin — [joplinapp.org](https://joplinapp.org) y [github.com/laurent22/joplin](https://github.com/laurent22/joplin) (cuaderno open source; AGPL 3.0).',
+          'Jarvis (Joplin) — [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis) (plugin open source de Joplin; AGPL 3.0).',
+          'Ollama — [ollama.com](https://ollama.com) y [github.com/ollama/ollama](https://github.com/ollama/ollama) (runtime de LLM local; MIT).',
+          'Privacidad y manejo de datos de Notion AI — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs) (documentación del proveedor para el contexto comparativo).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Puede Logseq reemplazar a Notion para usuarios de IA?',
+            a: 'Sí para páginas de prosa y flujos de trabajo de diario diario. Instala logseq-copilot, apúntalo a Ollama, y tendrás chat, resumen y generación basada en plantillas dentro de Logseq — sin que los datos salgan de tu máquina. La brecha son las bases de datos estructuradas: las vistas de base de datos de Notion (rastreadores de proyectos, CRMs) no tienen un equivalente limpio en Logseq. Los usuarios con mucho texto reemplazan Notion completamente; los usuarios con muchas bases de datos aceptan reestructuración manual o mantienen bases de datos específicas en Notion (sin IA) mientras mueven el texto a Logseq.',
+          },
+          {
+            q: '¿Admite Joplin plugins de IA locales?',
+            a: 'Sí. El plugin recomendado en 2026 es Jarvis, que proporciona chat, resumen y búsqueda semántica respaldada por embeddings en todo el cuaderno. Configura Jarvis para usar Ollama en `http://localhost:11434/v1` para chat y `http://localhost:11434/v1` con `nomic-embed-text` para embeddings. Existen otros plugins de Joplin compatibles con Ollama, pero Jarvis es el más mantenido activamente y con más funciones.',
+          },
+          {
+            q: '¿Cuál tiene mejor sync sin nube — Logseq o Joplin?',
+            a: 'Joplin tiene la historia de sync sin nube más amplia y pulida. Joplin admite Joplin Server auto-alojado, WebDAV, Nextcloud, más E2EE de primera clase sobre cualquier backend. Logseq tiene sync Git integrada (excelente para desarrolladores) y funciona con Syncthing o iCloud Drive, pero carece de un equivalente auto-alojado a Joplin Server. Para equipos que quieren sync auditable en las instalaciones, Joplin Server es la mejor opción; para desarrolladores que quieren historial rastreado por Git, la sync Git de Logseq es la mejor opción.',
+          },
+          {
+            q: '¿Puedo migrar de Notion a Logseq con las funciones de IA intactas?',
+            a: 'La migración mueve el contenido, no la suscripción a Notion AI. Exporta desde Notion como Markdown, importa a Logseq, luego instala logseq-copilot y configúralo con Ollama — la capa de IA se reconstruye localmente. Logseq preserva mejor el anidamiento a nivel de bloque de Notion que Joplin porque ambas herramientas usan bloques con sangría de lista como primitivo. Las funciones de Notion AI (auto-rellenado, propiedades inteligentes en bases de datos) no tienen equivalentes directos en Logseq — esos flujos de trabajo deben reconstruirse con prompts de logseq-copilot o scripts.',
+          },
+          {
+            q: '¿Funciona Logseq completamente sin conexión?',
+            a: 'Sí. Logseq es una aplicación de escritorio local sin ningún componente de nube requerido. El grafo es una carpeta de archivos Markdown; la app los lee y escribe localmente. El acceso a la red solo es necesario para sincronizar con un remoto (Git push, descubrimiento de pares de Syncthing, Logseq Sync) y para ejecutar logseq-copilot contra un proveedor de LLM en la nube — esto último es opcional. Con Ollama como proveedor de LLM, toda la pila funciona sin conexión.',
+          },
+          {
+            q: '¿Son los plugins de IA de Joplin tan maduros como los de Obsidian?',
+            a: 'Obsidian tiene más plugins de IA y más mantenedores concurrentes. Joplin tiene menos plugins, pero Jarvis tiene funciones completas y está mantenido activamente — cubre chat, resumen y recuperación respaldada por embeddings en un solo plugin. Para la mayoría de los usuarios, Jarvis iguala o supera la combinación de Obsidian Copilot + Smart Connections en los cuadernos Markdown puros de Joplin; para usuarios avanzados que quieren variedad de plugins (motores de plantillas, chat de personajes, generadores de MOC), Obsidian sigue teniendo más opciones.',
+          },
+          {
+            q: '¿Cuál es mejor para el diario diario con IA — Logseq o Joplin?',
+            a: 'Logseq. El diario diario es un primitivo integrado en Logseq — cada día obtiene automáticamente una página de diario, los bloques son de primera clase, y la salida de logseq-copilot se convierte en bloques anidados bajo el prompt. Los flujos de trabajo de IA del diario diario (resumen de fin de día, revisión semanal, etiquetado de estado de ánimo) se sienten nativos. Joplin puede replicar esto con cuadernos por mes y prompts de Jarvis, pero la fricción es mayor.',
+          },
+          {
+            q: '¿Puedo usar el mismo vault en múltiples dispositivos?',
+            a: 'Sí — ambas herramientas admiten uso en múltiples dispositivos via su capa de sync. Logseq: Git, Syncthing, iCloud Drive o Logseq Sync. Joplin: Joplin Cloud, Joplin Server auto-alojado, WebDAV, Nextcloud, Dropbox u OneDrive. Advertencia: los plugins de IA solo se ejecutan en el escritorio. El contenido del vault se sincroniza con el móvil, pero logseq-copilot y Jarvis no se ejecutan allí. Planifica IA en escritorio, captura en móvil.',
+          },
+          {
+            q: '¿Funcionan los plugins de IA con Joplin Mobile o Logseq Mobile?',
+            a: 'No — ninguna herramienta admite plugins en móvil en 2026. Logseq Mobile y Joplin Mobile son superficies de lectura/escritura para el vault sincronizado, pero el runtime de plugins (Node.js / Electron) no existe en las apps móviles. Las funciones de IA (logseq-copilot, Jarvis) solo se ejecutan en el escritorio. Si la IA en móvil importa, las alternativas son Obsidian Mobile + Ollama en LAN, o captura en móvil + procesamiento en escritorio.',
+          },
+          {
+            q: '¿Es la integración de IA local open source más segura que Notion AI?',
+            a: 'Sí por arquitectura predeterminada. Notion AI envía el contenido de las notas a OpenAI por diseño — eso es estructural, no una elección de configuración. Logseq + logseq-copilot + Ollama y Joplin + Jarvis + Ollama no envían nada a un tercero a menos que configures explícitamente un proveedor de LLM en la nube. Para datos de la UE cubiertos por el RGPD, sanidad, derecho y periodismo, esta distinción es significativa: las pilas locales no tienen encargado del tratamiento, no hay transferencia internacional, no hay riesgo de subprocesadores. La auditabilidad también es más sencilla — una captura de paquetes única demuestra cero tráfico saliente durante el uso de IA.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Obsidian + LLM local: 5 plugins que convierten tu vault en un segundo cerebro (2026)](/es/power-local-llm/local-llm-with-obsidian-2026) — artículo hermano para usuarios de Obsidian; la alternativa de usuario avanzado contra la que estos lectores típicamente se están decidiendo.',
+          '[Base de conocimiento personal con LLM local 2026](/es/power-local-llm/local-llm-personal-knowledge-base-2026) — arquitectura PKB más amplia que Logseq y Joplin alimentan; cubre la capa RAG, pipelines de captura y flujos de trabajo de más de 10K elementos.',
+          '[Reemplaza Grammarly y Notion AI con un LLM local (2026)](/es/power-local-llm/replace-grammarly-notion-ai-with-local) — guía adyacente de reemplazo SaaS centrada específicamente en la salida de Notion AI.',
+          '[Reemplaza Zapier con agentes de IA locales: 5 flujos de trabajo que ahorran /mes (2026)](/es/power-local-llm/replace-zapier-with-local-ai-agents) — reemplazo adyacente de pila de productividad para lectores que consolidan dependencias SaaS.',
+          '[Los mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026) — autoridad en modelos para elegir los modelos de chat y embeddings detrás de logseq-copilot y Jarvis.',
+          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory-2026) — entradas del directorio para Logseq, Joplin, Ollama, logseq-copilot y Jarvis con licencias y enlaces.',
+        ],
+      },
+    },
+  },
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',

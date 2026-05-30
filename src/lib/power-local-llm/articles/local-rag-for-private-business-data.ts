@@ -3087,4 +3087,614 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: 'RAG local para datos empresariales: IA conforme al RGPD para documentos sensibles (2026)',
+    seoTitle: 'RAG local conforme al RGPD para documentos sensibles (2026)',
+    intro:
+      'Los equipos jurídicos, médicos y financieros se enfrentan al mismo problema: los documentos que más valor aportaría buscar con IA son precisamente los que no pueden salir de la organización. Este artículo recoge la arquitectura, el conjunto de controles y la matriz de decisión de patrones de despliegue para un RAG autoalojado que cumple el RGPD, la Ley de IA de la UE, HIPAA y las expectativas del Datenschutz alemán — redactado para el responsable de cumplimiento que necesita enviar un único documento a su equipo de TI y que este sepa qué construir.',
+    metaDescription:
+      'RAG local conforme al RGPD para equipos jurídicos, médicos y financieros. Arquitectura, registro de auditoría, alcance de la EIPD y 3 patrones de despliegue comparados.',
+    twitterDescription:
+      'RAG local que cumple el RGPD y la Ley de IA de la UE. Air-gap, registros de auditoría, trazabilidad de datos, alcance de la EIPD y 3 patrones de despliegue — el artículo que los responsables de cumplimiento envían a TI.',
+    audience:
+      'Responsables de cumplimiento de la UE, delegados de protección de datos (DPD), asesores jurídicos y arquitectos de TI responsables de construir RAG autoalojados sobre documentos confidenciales — contratos, historiales de pacientes, archivos de auditoría, salas de datos de M&A, correspondencia con reguladores.',
+    readTime: '15 min de lectura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'RAG local conforme al RGPD',
+    targetKeywords: [
+      'rag conforme rgpd',
+      'rag local datos empresariales',
+      'ley ia ue rag',
+      'rag privado documentos confidenciales',
+      'despliegue rag on-premise',
+      'datenschutz rag',
+      'eipd rag local',
+    ],
+    leadAnswerBlock:
+      '**Un despliegue RAG autoalojado cumple el RGPD y la Ley de IA de la UE solo cuando seis controles se integran desde el primer día: alojamiento en air-gap o con egress estrictamente controlado, autenticación por usuario con acceso a documentos basado en roles, registros de auditoría inmutables que cubran la ingesta y la recuperación, cifrado de extremo a extremo en reposo y en tránsito, trazabilidad determinista del chunk hasta la fuente, y un procedimiento de eliminación por escrito que se propague desde el almacén de origen a través del índice vectorial y cualquier embedding en caché. El patrón de despliegue (portátil de un solo usuario, servidor on-prem, nube privada en la UE) determina qué controles son sencillos y cuáles requieren trabajo — no si los controles son obligatorios.**',
+    quickAnswerTop: {
+      en: {
+        question: '¿El RAG local cumple el RGPD por defecto y qué patrón de despliegue deben elegir los equipos regulados?',
+        answer:
+          'El RAG local no cumple el RGPD por defecto. Ejecutar un modelo on-premise resuelve el problema de la transferencia transfronteriza de datos y reduce la lista de encargados del tratamiento, pero los artículos 5, 25, 30, 32 y 35 del RGPD siguen siendo aplicables: base jurídica, minimización de datos, registro de auditoría, seguridad del tratamiento y una EIPD para cualquier sistema que ingiera datos de categorías especiales a gran escala. Elige el patrón de portátil de un solo usuario para profesionales individuales y revisiones puntuales; un servidor on-prem para bases de conocimiento departamentales de hasta unos miles de documentos y 5–50 usuarios; una nube privada en la UE (nube soberana, claves gestionadas por el cliente, región exclusiva en la UE) para despliegues multi-entidad donde la resiliencia multiregional importa más que un air-gap completo. Independientemente del que elijas, los seis controles son los mismos — solo cambia el coste de implementación.',
+        bullets: [
+          'El alojamiento local resuelve la transferencia transfronteriza (artículos 44–49) y reduce la lista de encargados del tratamiento — no resuelve por sí solo la base jurídica, la EIPD ni los derechos de los interesados.',
+          'Portátil de un solo usuario — ideal para abogados, médicos, auditores individuales y revisiones puntuales. Difícil de auditar a escala; el air-gap más sencillo.',
+          'Servidor on-prem — ideal para despliegues departamentales de 5–50 usuarios. Registros de auditoría reales, RBAC, copias de seguridad y recuperación ante desastres. Mayor esfuerzo de TI.',
+          'Nube privada en la UE — ideal para despliegues multi-entidad que necesitan resiliencia. Región soberana + claves gestionadas por el cliente + cláusulas de no entrenamiento de IA con datos del cliente, obligatorias.',
+          'Una EIPD es obligatoria en virtud del artículo 35 cuando se ingieren datos de categorías especiales a gran escala, independientemente del patrón de despliegue.',
+          'Las solicitudes de derecho al olvido deben propagarse a los documentos de origen, los índices vectoriales y los embeddings en caché — diseña el procedimiento de eliminación antes de la puesta en producción, no tras recibir la primera solicitud.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Comparación de patrones de despliegue', anchor: '#deployment-comparison' },
+      { label: 'Elegir un patrón de despliegue', anchor: '#which-deployment' },
+      { label: 'Por qué RAG local para datos sensibles', anchor: '#why-local-rag' },
+      { label: 'Los seis controles que todo despliegue necesita', anchor: '#required-controls' },
+      { label: 'Air-gap y control de egress', anchor: '#air-gap' },
+      { label: 'Registro de auditoría que supere una revisión', anchor: '#audit-logging' },
+      { label: 'Trazabilidad de datos del chunk a la fuente', anchor: '#data-lineage' },
+      { label: 'Cifrado y control de acceso', anchor: '#encryption-access' },
+      { label: 'Patrón de portátil de un solo usuario', anchor: '#laptop-pattern' },
+      { label: 'Patrón de servidor on-prem', anchor: '#on-prem-pattern' },
+      { label: 'Opciones de bases de datos vectoriales', anchor: '#vector-db-comparison' },
+      { label: 'Patrón de nube privada en la UE', anchor: '#private-cloud-pattern' },
+      { label: 'Clasificación según la Ley de IA de la UE', anchor: '#eu-ai-act' },
+      { label: 'Requisitos de la EIPD', anchor: '#dpia-requirements' },
+      { label: 'Notas específicas para Alemania (Datenschutz)', anchor: '#germany-datenschutz' },
+      { label: 'Lista de verificación de cumplimiento', anchor: '#compliance-checklist' },
+      { label: 'Errores frecuentes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**El alojamiento local es necesario pero no suficiente.** Ejecutar el modelo y el almacén vectorial en tu propio hardware resuelve la transferencia transfronteriza de datos y reduce la lista de encargados del tratamiento, pero los artículos 5, 25, 30, 32 y 35 del RGPD siguen siendo aplicables. La base jurídica, la minimización de datos, el registro de auditoría, la seguridad del tratamiento y las EIPD no se vuelven opcionales solo porque los datos permanezcan en las instalaciones.',
+          '**Seis controles son innegociables** independientemente del patrón de despliegue: air-gap o control de egress estricto, autenticación por usuario con acceso basado en roles, registros de auditoría inmutables, cifrado en reposo y en tránsito, trazabilidad determinista del chunk hasta el documento de origen, y un procedimiento de eliminación por escrito que incluya el índice vectorial y cualquier embedding en caché.',
+          '**Tres patrones de despliegue cubren la mayoría de los casos de uso regulados.** Portátil de un solo usuario para profesionales individuales y revisiones puntuales; servidor on-prem para bases de conocimiento departamentales de 5–50 usuarios; nube privada en la UE (región soberana, claves gestionadas por el cliente) para despliegues multi-entidad donde la resiliencia importa más que el air-gap completo.',
+          '**La Ley de IA de la UE clasifica la mayoría de los RAG locales como sistemas de riesgo limitado** — pero en el momento en que la recuperación alimenta una decisión automatizada (puntuación de solvencia, selección de personal, elegibilidad a prestaciones), el despliegue pasa a ser de alto riesgo y activa la evaluación de conformidad completa, la supervisión post-comercialización y las obligaciones de supervisión humana.',
+          '**Una EIPD es obligatoria en virtud del artículo 35** para cualquier RAG que ingiera datos de categorías especiales (salud, datos jurídicos, biométricos, políticos, de afiliación sindical) a gran escala, o cualquier sistema que produzca decisiones automatizadas con efectos jurídicos. Saltarse la EIPD significa saltarse la defensa en auditoría.',
+          '**El derecho al olvido es la prueba de eliminación que más despliegues suspenden.** Los documentos de origen son fáciles. Los índices vectoriales se pueden reconstruir. Los embeddings en caché, los registros de recuperación y las respuestas almacenadas en el historial de chat son las partes que se pasan por alto — y las que un regulador preguntará.',
+          '**Los modelos de embedding de código abierto son seguros para el RGPD en principio**, pero solo si (a) los pesos del modelo se descargan una vez y se fijan a un hash, (b) la inferencia se ejecuta íntegramente en hardware local sin telemetría, y (c) la ficha del modelo y la licencia se revisan para detectar cláusulas que entren en conflicto con el uso empresarial confidencial.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**6 controles obligatorios** para cualquier RAG regulado: air-gap, RBAC, registros de auditoría, cifrado, trazabilidad de datos, procedimiento de eliminación.',
+          '**3 patrones de despliegue:** portátil de un solo usuario (profesionales individuales), servidor on-prem (5–50 usuarios), nube privada en la UE (multi-entidad).',
+          '**La EIPD es obligatoria** en virtud del artículo 35 cuando se ingieren datos de categorías especiales (salud, jurídicos, biométricos) a gran escala.',
+          '**Ley de IA de la UE:** la mayoría de los RAG locales = riesgo limitado; pasa a alto riesgo cuando la recuperación alimenta decisiones automatizadas (crédito, empleo, prestaciones).',
+          '**El derecho al olvido** debe propagarse a documentos de origen, índices vectoriales, embeddings en caché Y el historial de respuestas.',
+          '**Co-determinación del comité de empresa (Betriebsrat)** en virtud del §87 BetrVG requerida para cualquier RAG sobre contenido generado por empleados en Alemania.',
+          '**Los modelos de embedding de código abierto** solo son conformes al RGPD si los pesos están fijados, la inferencia es completamente local y la licencia ha sido revisada.',
+        ],
+      },
+      comparisonTable: {
+        id: 'deployment-comparison',
+        title: 'Comparación de patrones de despliegue',
+        content:
+          'Cada patrón puede hacerse conforme al RGPD; lo que cambia es el coste de los controles y los modos de fallo cuando algo sale mal. Elige el patrón más sencillo que se ajuste al número de usuarios, la sensibilidad de los documentos y el requisito de resiliencia.',
+        columns: ['Control', 'Portátil de un solo usuario', 'Servidor on-prem', 'Nube privada en la UE'],
+        rows: [
+          {
+            'Control': 'Air-gap (sin red de salida)',
+            'Portátil de un solo usuario': 'Trivial — desactivar la red',
+            'Servidor on-prem': 'Alcanzable — VLAN + cortafuegos',
+            'Nube privada en la UE': 'Difícil — solo lista de egress permitido',
+          },
+          {
+            'Control': 'Registro de auditoría (quién, qué, cuándo)',
+            'Portátil de un solo usuario': 'Manual — solo a nivel de SO',
+            'Servidor on-prem': 'Sólido — pipeline de logs centralizado',
+            'Nube privada en la UE': 'Sólido — logging nativo en la nube',
+          },
+          {
+            'Control': 'Trazabilidad de datos (chunk → fuente)',
+            'Portátil de un solo usuario': 'Solo archivos locales',
+            'Servidor on-prem': 'Pipeline completamente trazable',
+            'Nube privada en la UE': 'Completa — pero abarca regiones',
+          },
+          {
+            'Control': 'Residencia de datos en la UE',
+            'Portátil de un solo usuario': 'Inherente — ubicación física',
+            'Servidor on-prem': 'Inherente — ubicación física',
+            'Nube privada en la UE': 'Configurada — región soberana requerida',
+          },
+          {
+            'Control': 'RBAC por usuario',
+            'Portátil de un solo usuario': 'Un solo usuario — N/A',
+            'Servidor on-prem': 'Proveedor de identidad + grupos',
+            'Nube privada en la UE': 'IAM + SSO + ACL por colección',
+          },
+          {
+            'Control': 'Copia de seguridad y recuperación ante desastres',
+            'Portátil de un solo usuario': 'Disco externo cifrado',
+            'Servidor on-prem': 'Cinta o copia de seguridad externa',
+            'Nube privada en la UE': 'Replicación multi-AZ',
+          },
+          {
+            'Control': 'Coste inicial',
+            'Portátil de un solo usuario': 'Solo hardware — bajo',
+            'Servidor on-prem': 'Servidor + integración — medio',
+            'Nube privada en la UE': 'Suscripción + configuración — medio',
+          },
+          {
+            'Control': 'Coste continuo',
+            'Portátil de un solo usuario': 'Ninguno — tiempo de sysadmin',
+            'Servidor on-prem': 'Operaciones de TI + electricidad + refrigeración',
+            'Nube privada en la UE': 'Mensualidad recurrente',
+          },
+          {
+            'Control': 'Ideal para',
+            'Portátil de un solo usuario': 'Profesionales individuales, revisiones puntuales',
+            'Servidor on-prem': '5–50 usuarios, bases de conocimiento departamentales',
+            'Nube privada en la UE': 'Multi-entidad, despliegues resilientes',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-deployment',
+        title: 'Elegir un patrón de despliegue',
+        content:
+          '**La elección correcta depende del número de usuarios, la sensibilidad de los documentos, la presión de auditoría y la capacidad interna de TI.** Este atajo de decisión cubre la mayoría de las situaciones reales.',
+        columns: ['Tu situación', 'Elige'],
+        rows: [
+          {
+            'Tu situación': 'Abogado, médico o auditor individual que revisa un asunto cada vez',
+            'Elige': 'Portátil de un solo usuario',
+          },
+          {
+            'Tu situación': 'Sala de datos de M&A con 3–5 revisores nominados y fecha de cierre definida',
+            'Elige': 'Portátil de un solo usuario o on-prem (según el volumen de documentos)',
+          },
+          {
+            'Tu situación': 'Equipo de cumplimiento de 10–30 personas que comparte un archivo de correspondencia con reguladores',
+            'Elige': 'Servidor on-prem',
+          },
+          {
+            'Tu situación': 'Departamento hospitalario que construye un asistente de protocolos clínicos para 50 empleados',
+            'Elige': 'Servidor on-prem',
+          },
+          {
+            'Tu situación': 'Grupo multi-entidad que necesita un RAG compartido entre filiales en varios países de la UE',
+            'Elige': 'Nube privada en la UE (región soberana + claves gestionadas por el cliente)',
+          },
+          {
+            'Tu situación': 'Aseguradora con requisito de disponibilidad 24/7 y plan de recuperación ante desastres',
+            'Elige': 'Nube privada en la UE',
+          },
+          {
+            'Tu situación': 'Organismo público con datos clasificados o restringidos',
+            'Elige': 'Solo on-prem con air-gap — la nube queda fuera de alcance',
+          },
+          {
+            'Tu situación': 'Defensa de auditoría ante regulador en menos de 6 semanas',
+            'Elige': 'Servidor on-prem (el más rápido para demostrar control)',
+          },
+        ],
+      },
+      whyLocalRag: {
+        id: 'why-local-rag',
+        title: 'Por qué RAG local para datos sensibles',
+        content:
+          '**El argumento a favor del RAG local frente al LLM-as-a-service en la nube no es ideología — es la forma que adopta la evaluación de riesgos del RGPD.** El RAG en la nube es viable para muchos casos de uso; para datos empresariales sensibles añade cinco riesgos que el RAG local elimina por construcción.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'El RAG local mantiene tus documentos sensibles en tu propio hardware mientras proporciona a tu equipo búsqueda potenciada por IA — ningún dato sale del edificio, ningún encargado del tratamiento externo los toca, y no surge ninguna pregunta sobre transferencia transfronteriza.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Imagina que tu equipo jurídico pudiera buscar en 10.000 expedientes haciendo preguntas en lenguaje natural — pero los documentos nunca salieran de la sala de servidores. Eso es el RAG local: la IA lee tus documentos en tu hardware, responde tus preguntas en tu hardware, y nada se envía a ningún sitio. La ventaja de cumplimiento no es una característica — es la arquitectura.',
+          },
+        ],
+        items: [
+          '**Transferencia transfronteriza (artículos 44–49).** Enviar datos personales a un encargado del tratamiento fuera de la UE requiere cláusulas contractuales tipo, una evaluación del impacto de la transferencia y una respuesta creíble sobre si la jurisdicción receptora tiene poderes de citación que alcancen esos datos. El RAG local no transfiere datos — la pregunta no surge.',
+          '**Proliferación de subencargados del tratamiento (artículo 28).** Los proveedores de LLM en la nube suelen depender de infraestructura de hiperescalador, servicios de moderación de contenido y proveedores de observabilidad. Cada uno es un subencargado que debe ser listado, contratado y auditado. El RAG local tiene cero subencargados por defecto.',
+          '**Filtración de datos de entrenamiento.** Muchos términos de LLM en la nube se reservan el derecho de usar los prompts de los clientes para mejorar el modelo, a menos que se use un nivel enterprise de pago y se verifique la cláusula de no entrenamiento. El RAG local ejecuta modelos con pesos que tú controlas; nada sale del host.',
+          '**Cláusulas de confidencialidad en contratos con clientes.** Los acuerdos con asesoría externa, los NDA de M&A y los acuerdos sobre datos de pacientes frecuentemente prohíben la transmisión del material protegido a encargados del tratamiento externos. El RAG local sortea la cláusula por completo.',
+          '**Exposición a citaciones judiciales y procesos legales.** Los documentos almacenados con un proveedor en la nube pueden ser requeridos mediante un proceso legal dirigido al proveedor, con obligaciones de divulgación de las que el responsable del tratamiento puede ni siquiera ser notificado a tiempo. Los documentos que nunca salen de tus instalaciones solo pueden ser requeridos a ti.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'El RAG local no es la respuesta correcta para todas las cargas de trabajo. La investigación de información pública, la generación de borradores de marketing, la asistencia de código en repositorios de código abierto — todo esto suele funcionar mejor con LLM en la nube porque la exposición al RGPD es baja y la brecha de calidad del modelo importa. El argumento de este artículo es específicamente para datos empresariales confidenciales: jurídicos, médicos, financieros, de RRHH, correspondencia con reguladores y secretos comerciales.',
+          },
+        ],
+      },
+      requiredControls: {
+        id: 'required-controls',
+        title: 'Los seis controles que todo despliegue necesita',
+        content:
+          '**Estos seis controles son el suelo mínimo.** Todo despliegue regulado necesita los seis; el patrón de despliegue solo cambia cómo los implementas. Omitir cualquiera de ellos es la razón más frecuente por la que las auditorías salen mal.',
+        numberedItems: [
+          {
+            title: 'Air-gap o control de egress estricto',
+            whyItMatters:
+              'Confirma que los documentos y embeddings no pueden filtrarse mediante llamadas salientes — SDK de telemetría, sondas de actualización del modelo, informadores de fallos, callbacks de moderación de contenido, CDN de terceros para fuentes. O bien deshabilita el acceso a la red por completo (air-gap real) o ejecuta una lista de egress permitido que solo autorice servidores de actualización firmados.',
+          },
+          {
+            title: 'Autenticación por usuario con acceso basado en roles',
+            whyItMatters:
+              'Necesitas poder responder "quién accedió a qué documento" antes de que un regulador lo pregunte. Inicio de sesión único contra un proveedor de identidad, acceso por grupos a colecciones y ACL por documento donde el asunto lo requiera. Las cuentas compartidas no son un control — son un fallo de auditoría esperando a suceder.',
+          },
+          {
+            title: 'Registros de auditoría inmutables que cubran la ingesta y la recuperación',
+            whyItMatters:
+              'Para cada documento: quién lo subió, cuándo, ruta de origen, hash. Para cada consulta: quién preguntó, qué se preguntó (si el logging lo permite), qué chunks se recuperaron, de qué IDs de documentos procedían, qué respuesta se devolvió. Los registros deben ser a prueba de manipulaciones — solo de adición, firmados, con una retención suficiente para cubrir la ventana de investigación de la autoridad supervisora. Para el rastro de auditoría a nivel de prompt — control de versiones, registros de cambios y reversiones — consulta [flujos de trabajo de control de versiones de prompts](https://www.promptquorum.com/es/prompt-engineering/prompt-version-control-workflows).',
+          },
+          {
+            title: 'Cifrado en reposo y en tránsito',
+            whyItMatters:
+              'Cifrado de disco completo en el host, TLS para cualquier llamada interna entre servicios, y gestión de claves que sobreviva a un portátil robado o una cuenta de administrador comprometida. Claves gestionadas por el cliente para despliegues en la nube. Sin estas medidas, el robo de un dispositivo se convierte en una violación de datos notificable en virtud del artículo 33.',
+          },
+          {
+            title: 'Trazabilidad determinista de datos del chunk a la fuente',
+            whyItMatters:
+              'Cada chunk recuperado debe rastrearse hasta su documento de origen, página, sección y versión. Esto es lo que permite (a) verificar la respuesta, (b) atender una solicitud de eliminación, (c) defender el sistema ante un tribunal cuando se cuestiona un resumen generado. "No podemos reproducir qué chunk causó qué respuesta" no es una respuesta aceptable para una autoridad supervisora.',
+          },
+          {
+            title: 'Procedimiento de eliminación por escrito que incluya el índice vectorial y los embeddings en caché',
+            whyItMatters:
+              'Una solicitud de derecho al olvido debe propagarse desde el almacén de origen, a través del índice vectorial, hasta cualquier embedding en caché, y a través de la retención de registros de recuperación. La mayoría de los despliegues gestionan la eliminación del origen correctamente y olvidan el resto. Documenta el procedimiento de eliminación antes de la puesta en producción; practícalo con datos sintéticos.',
+          },
+        ],
+      },
+      airGap: {
+        id: 'air-gap',
+        title: 'Air-gap y control de egress',
+        content:
+          '**Air-gap significa que el host no tiene ruta de red de salida; el control de egress significa que tiene una estrictamente permitida.** Ambas son aceptables; elige el modelo más sólido que tus operaciones puedan sostener.',
+        items: [
+          '**Air-gap real** — sin DHCP, sin resolución DNS a destinos públicos, sin TCP de salida. Las actualizaciones se realizan mediante medios firmados que un administrador conecta físicamente. Este es el modelo correcto para trabajo clasificado, determinadas redes hospitalarias y cualquier despliegue cuyo modelo de amenazas incluya una dependencia maliciosa.',
+          '**Lista de egress permitido** — la red de salida solo se permite a una pequeña lista de destinos nombrados (servidores de actualización del modelo, tu proveedor de identidad, reenviadores de logs a colectores internos). Todo el demás tráfico se descarta en el cortafuegos. Este es el valor predeterminado práctico para la mayoría de los despliegues departamentales regulados.',
+          '**Qué buscar en la plataforma**: cero telemetría por defecto, sin llamadas de salida durante la inferencia, sin CDN de fuentes en la interfaz de usuario, sin informadores de fallos que envíen cargas útiles. Verifica con una captura de paquetes o una herramienta como Little Snitch en el banco de pruebas antes de pasar a producción.',
+          '**Gobernanza de actualizaciones** — los pesos del modelo, los pesos del embedder, el código de la aplicación y los parches del SO pasan todos por una ventana de actualización controlada. El administrador que promueve una actualización lo firma por escrito; el cambio se registra.',
+          '**Ruptura de air-gap frecuente:** un SDK de analítica incluido con un componente de interfaz de terceros, una referencia a CDN de fuentes en el chrome de la aplicación, o una sonda de "comprobar actualizaciones" que se ejecuta al iniciar. Por eso el paso de verificación importa — no asumas nada sobre los valores predeterminados.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Realiza una captura de paquetes de 24 horas en el host con la aplicación abierta y en reposo. Cualquier tráfico de salida que no esté en la lista permitida es un hallazgo. Repite esto cada vez que se actualice la aplicación — las notas de versión suelen subestimar qué nuevas llamadas de salida se han añadido.',
+          },
+        ],
+      },
+      auditLogging: {
+        id: 'audit-logging',
+        title: 'Registro de auditoría que supere una revisión',
+        content:
+          '**El registro de auditoría es el artefacto que una autoridad supervisora leerá primero.** Debe responder dos preguntas para cada recuperación: quién preguntó y qué le dio el sistema. Sin eso estás argumentando con palabras; con un logging adecuado, estás presentando recibos.',
+        items: [
+          '**Eventos de ingesta**: ID de documento, hash (SHA-256), nombre de archivo, ruta de origen, subido por, marca de tiempo, etiqueta de clasificación, tamaño, número de páginas, grupo propietario, clase de retención. Etiqueta cada documento en la ingesta — la clasificación retroactiva de corpus grandes es difícil y rara vez está completa.',
+          '**Eventos de recuperación**: ID de consulta, ID de usuario, marca de tiempo, IDs de chunks recuperados (e IDs de documentos de los que proceden), puntuaciones de recuperación, hash de la respuesta final, identificador del modelo, identificador del embedder, top-K utilizado. El texto de la consulta en sí es sensible — regístralo solo si tu base jurídica de tratamiento lo cubre; de lo contrario, registra el hash y la marca de tiempo.',
+          '**Eventos administrativos**: promoción del modelo, cambio de embedder, reconstrucción del índice, cambios de usuario/grupo, cambios de ACL, cambios de política de acceso. Cada evento firmado por el administrador responsable.',
+          '**Resistencia a manipulaciones**: registro de solo adición, cadena de hashes (cada entrada hace referencia al hash de la entrada anterior), clave de firma fuera de banda, reconciliación periódica con una copia separada mantenida por un administrador diferente o en un medio de escritura única.',
+          '**Retención**: se alinea con la ventana de investigación de la autoridad supervisora — como mínimo el período de retención del asunto; comúnmente seis a siete años para industrias reguladas; más donde se apliquen normas sectoriales.',
+          '**Pipeline**: la aplicación emite eventos estructurados; un reenviador los envía a un almacén de logs separado con acceso de escritura restringido. El servidor de aplicaciones nunca debe tener permiso para eliminar o reescribir entradas de logs — la separación de funciones es lo que hace que el log sea creíble.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Registrar el texto de la consulta introduce su propia pregunta sobre el RGPD — una consulta puede contener en sí misma datos personales (p. ej., "resume el historial médico del paciente X"). Decide en el momento del diseño si tu base jurídica de tratamiento cubre el registro de consultas, y si no lo hace, registra solo los metadatos necesarios para auditoría y diagnóstico operativo.',
+          },
+        ],
+      },
+      dataLineage: {
+        id: 'data-lineage',
+        title: 'Trazabilidad de datos del chunk a la fuente',
+        content:
+          '**La trazabilidad es la columna vertebral de todos los demás controles.** Sin ella, las solicitudes de eliminación fallan, la verificación de respuestas es imposible y el rastro de auditoría se derrumba. Integra la trazabilidad desde la primera ingesta, no después.',
+        items: [
+          '**Trazabilidad a nivel de documento**: cada documento tiene un ID interno estable, un hash de contenido, una marca de tiempo de ingesta, un propietario, una clasificación y una clase de retención. El archivo original permanece en el almacén de origen; el sistema RAG mantiene una referencia, no el original.',
+          '**Trazabilidad a nivel de chunk**: cada chunk hace referencia a su ID de documento padre, página (para PDFs), sección (para documentos estructurados), desplazamiento de caracteres, longitud y versión de la estrategia de chunking. Cuando vuelvas a hacer chunking (lo harás), los chunks antiguos se marcan como obsoletos, no se eliminan in situ — para que los logs de recuperación antiguos sigan siendo resolubles.',
+          '**Trazabilidad a nivel de embedding**: cada vector de embedding hace referencia a su ID de chunk e identificador de embedder. Cuando cambies de embedder, los vectores antiguos se conservan hasta que los nuevos sean validados y cualquier asunto que los referenciara esté cerrado; solo entonces se purgan.',
+          '**Trazabilidad a nivel de respuesta**: cada respuesta generada hace referencia a los IDs de chunks que la produjeron, el identificador del modelo, la versión de la plantilla de prompt y la marca de tiempo. Cuando un usuario pregunta "¿de dónde vino esta respuesta?", el sistema resuelve chunk → documento → página con un clic.',
+          '**Reindexación sin romper la trazabilidad**: las reconstrucciones preservan los IDs de documentos e incrementan las versiones de la estrategia de chunking. Los IDs de chunks antiguos siguen siendo resolubles en los registros de recuperación incluso después de que el índice activo haya avanzado.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Prueba la cadena de trazabilidad trimestralmente. Elige una recuperación aleatoria del registro de auditoría y recórrela hacia atrás: ID de chunk → ID de documento → archivo original en el almacén de origen → clase de retención. Si algún paso está roto, corrige el esquema antes de la próxima inspección supervisora — no durante ella.',
+          },
+        ],
+      },
+      encryptionAccess: {
+        id: 'encryption-access',
+        title: 'Cifrado y control de acceso',
+        content:
+          '**Cifrado en reposo, cifrado en tránsito y control de acceso que se mapea a tu proveedor de identidad existente.** Estos son controles bien entendidos; el modo de fallo es olvidar una de las tres capas, no implementar mal la capa elegida.',
+        items: [
+          '**Cifrado en reposo** — cifrado de disco completo en el host (LUKS en Linux, BitLocker en Windows, FileVault en macOS para portátiles). Para servidores, cifra también las particiones que alojan el almacén vectorial y la etapa de ingesta. Claves gestionadas por el cliente para cualquier despliegue en la nube, con rotación de claves según tu política.',
+          '**Cifrado en tránsito** — TLS para cualquier salto entre servicios, incluso en localhost. Política de cifrado alineada con tu línea base sectorial. TLS mutuo donde el modelo de amenazas lo justifique — típicamente servidor a servidor en despliegues en la nube.',
+          '**Autenticación** — inicio de sesión único contra tu proveedor de identidad existente (OIDC, SAML). Sin cuentas locales en producción. MFA obligatorio para cualquier usuario con acceso administrativo o a colecciones sensibles.',
+          '**Autorización** — acceso basado en grupos a nivel de colección; ACL a nivel de documento donde el asunto lo requiera (p. ej., salas de datos de M&A, investigaciones de empleo). El pipeline de recuperación debe aplicar las ACL en el momento de la consulta — no solo la interfaz de usuario. Un usuario que no puede ver un documento tampoco debe recibir sus chunks en la respuesta.',
+          '**Acceso administrativo** — gestión de acceso privilegiado para cualquier cuenta que pueda leer o reconstruir índices, ver registros de auditoría o cambiar ACL. La elevación justo a tiempo con justificación registrada supera a los derechos de administrador permanentes.',
+          '**Seguridad de endpoint** — dispositivos gestionados para despliegues con portátil (registrados en MDM, cifrados, política de bloqueo de pantalla aplicada). Un portátil de profesional individual con el almacén de documentos descifrado y desatendido en una cafetería es la violación del RGPD que no quieres reportar.',
+        ],
+      },
+      laptopDeep: {
+        id: 'laptop-pattern',
+        title: 'Patrón de portátil de un solo usuario',
+        content:
+          '**El portátil de un solo usuario es el patrón más fácil de hacer con air-gap y el más difícil de escalar.** Adecuado para profesionales individuales y revisiones puntuales; inadecuado para cualquier cosa que deba sobrevivir a un solo usuario o a su salida.',
+        items: [
+          '**Hardware** — un portátil de categoría workstation con cifrado de disco completo, una GPU discreta (o una máquina reciente de memoria unificada) y al menos 32 GB de RAM. El modelo y el embedder deben caber en memoria junto con la caché del almacén vectorial. Para requisitos de hardware y selección de modelos por VRAM, consulta la [guía de hardware para LLM locales](https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026).',
+          '**Software** — una aplicación RAG de escritorio autocontenida que se ejecuta localmente; un LLM de código abierto con pesos descargados una vez y fijados a un hash; un embedder de código abierto; un almacén vectorial local en el disco cifrado. Para una comparación de modelos de código abierto adecuados para RAG local, consulta [los mejores modelos de código abierto para Ollama](https://www.promptquorum.com/local-llms/top-open-source-models-ollama).',
+          '**Postura de red** — con air-gap durante el trabajo; reconectado solo para actualizaciones firmadas explícitas. Configura el cortafuegos del SO para descartar todas las conexiones de salida por defecto y crea excepciones explícitas para el flujo de actualización.',
+          '**Manejo de documentos** — documentos de origen en el disco cifrado; una estructura de carpetas por asunto; copias de seguridad semanales cifradas en un disco externo almacenado en un lugar diferente.',
+          '**Postura de auditoría** — el registro de auditoría a nivel del SO (inicio de sesión, acceso a archivos, eventos de periféricos) es el suelo mínimo. Los eventos a nivel de aplicación son más sencillos con el patrón de servidor on-prem; para el patrón de portátil, trata el log del SO como el registro principal y complementa con notas manuales por asunto.',
+          '**Limitaciones** — un portátil de un solo usuario no es una plataforma multiusuario. Compartir el portátil, compartir cuentas o copiar el almacén de documentos al portátil de un compañero rompe la postura de auditoría y la evaluación de la base jurídica.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para profesionales individuales que trabajan asuntos confidenciales, el patrón de portátil de un solo usuario es genuinamente la postura de privacidad más sólida disponible — mejor que cualquier nube y más sólida que muchos despliegues on-prem. La contrapartida es operativa: cuando el portátil falla, el asunto hereda el tiempo de recuperación de tu disciplina de copias de seguridad.',
+          },
+        ],
+      },
+      onPremDeep: {
+        id: 'on-prem-pattern',
+        title: 'Patrón de servidor on-prem',
+        content:
+          '**El servidor on-prem es el patrón de trabajo habitual para RAG departamental regulado.** Escala a 5–50 usuarios y unos pocos miles de documentos, admite registros de auditoría adecuados y permanece dentro de tu perímetro físico. El coste es trabajo real de operaciones de TI.',
+        items: [
+          '**Hardware** — un servidor con una o dos GPU de nivel empresarial (las GPU de categoría workstation son aceptables para corpus más pequeños), discos redundantes, memoria ECC y un SAI. Planifica 2–4× el almacenamiento de tu corpus de documentos sin procesar para cubrir vectores, índices, logs y copias de seguridad.',
+          '**Red** — una VLAN dedicada detrás del cortafuegos corporativo; lista de egress permitido o air-gap completo según el modelo de amenazas. Acceso interno solo a través de la red corporativa, sin ingreso público.',
+          '**Pila de software** — una plataforma RAG autoalojada (una imagen de servidor independiente o un despliegue en contenedores), un LLM de código abierto como modelo de chat, un embedder de código abierto y un almacén vectorial apropiado para el tamaño del corpus. El servidor de aplicaciones, el almacén vectorial y el reenviador de logs se ejecutan como procesos separados con cuentas de servicio separadas.',
+          '**Identidad** — federada con el proveedor de identidad corporativo; la pertenencia a grupos controla el acceso a las colecciones. Las colecciones sensibles requieren flujos de aprobación adicionales.',
+          '**Copia de seguridad y recuperación ante desastres** — copias de seguridad incrementales nocturnas del almacén de documentos y el índice vectorial; copias de seguridad completas semanales; copia externa mantenida por TI. Procedimiento de restauración documentado y probado al menos anualmente.',
+          '**Operaciones** — ventana de parcheo según la política de gestión de cambios; revisiones de acceso trimestrales; procedimiento de eliminación para solicitudes de derecho al olvido ensayado; ruta documentada de actualización del modelo y el embedder que preserve la trazabilidad.',
+          '**Planificación de capacidad** — unos pocos miles de documentos y 5–50 usuarios concurrentes caben cómodamente en un servidor GPU de gama media. Más allá de eso, planifica un host más potente o pasar al patrón de nube privada.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'El RAG on-prem es el patrón que con más frecuencia falla por razones no técnicas: una copia de seguridad que nunca se ha restaurado, una cuenta de administrador compartida entre el personal de TI, un SAI que nadie ha probado, un reenviador de logs que ha estado descartando eventos silenciosamente durante dos meses. Los controles técnicos son más fáciles que la higiene operativa.',
+          },
+        ],
+      },
+      vectorDbComparison: {
+        id: 'vector-db-comparison',
+        title: 'Opciones de bases de datos vectoriales para RAG on-prem',
+        content:
+          '**La elección del almacén vectorial rara vez determina el cumplimiento — pero sí da forma al coste operativo, el techo de escala y la limpieza con que puede implementarse el procedimiento de eliminación.** La mayoría de los despliegues regulados eligen una de estas seis opciones.',
+        columns: ['Base de datos vectorial', 'Tipo', 'Autoalojamiento en la UE', 'Mejor patrón de RAG'],
+        rows: [
+          {
+            'Base de datos vectorial': '**Chroma**',
+            'Tipo': 'Código abierto, ligero',
+            'Autoalojamiento en la UE': '✅',
+            'Mejor patrón de RAG': 'Portátil + on-prem pequeño',
+          },
+          {
+            'Base de datos vectorial': '**Qdrant**',
+            'Tipo': 'Código abierto, alto rendimiento',
+            'Autoalojamiento en la UE': '✅',
+            'Mejor patrón de RAG': 'Servidor on-prem, filtrado intensivo',
+          },
+          {
+            'Base de datos vectorial': '**Weaviate**',
+            'Tipo': 'Código abierto, completo',
+            'Autoalojamiento en la UE': '✅',
+            'Mejor patrón de RAG': 'On-prem + búsqueda híbrida',
+          },
+          {
+            'Base de datos vectorial': '**Milvus**',
+            'Tipo': 'Código abierto, empresarial',
+            'Autoalojamiento en la UE': '✅',
+            'Mejor patrón de RAG': 'On-prem a gran escala',
+          },
+          {
+            'Base de datos vectorial': '**pgvector**',
+            'Tipo': 'Extensión de PostgreSQL',
+            'Autoalojamiento en la UE': '✅',
+            'Mejor patrón de RAG': 'Equipos que ya usan Postgres',
+          },
+          {
+            'Base de datos vectorial': '**Pinecone**',
+            'Tipo': 'SaaS gestionado',
+            'Autoalojamiento en la UE': '⚠️ Alojado en EE.UU.',
+            'Mejor patrón de RAG': 'Solo nube privada en la UE (con reservas)',
+          },
+        ],
+      },
+      euCloudDeep: {
+        id: 'private-cloud-pattern',
+        title: 'Patrón de nube privada en la UE',
+        content:
+          '**El patrón de nube privada en la UE utiliza un proveedor de nube en región soberana con claves gestionadas por el cliente, residencia de datos exclusivamente en la UE y una cláusula contractual de no entrenamiento de IA que cubra los datos del cliente.** Es la respuesta correcta para despliegues multi-entidad, requisitos de resiliencia multiregional y equipos que carecen de capacidad operativa para un on-prem real.',
+        items: [
+          '**Selección del proveedor** — la oferta soberana en la UE de un hiperescalador o un proveedor de nube europeo. El DPA debe listar cada subencargado del tratamiento; los mecanismos de transferencia deben abordarse si algún subencargado está fuera del EEE. El análisis del impacto de la transferencia al estilo Schrems II forma parte del expediente incluso cuando el encargado inmediato tiene sede en la UE.',
+          '**Región** — exclusivamente en la UE, con garantías explícitas de residencia de datos. Replicación entre regiones solo hacia otras regiones de la UE. Sin región de EE.UU. como failover, ni siquiera temporalmente, ni siquiera para copias de seguridad.',
+          '**Cifrado** — claves gestionadas por el cliente con rotación; bring-your-own-key donde el proveedor lo admita; eventos de acceso a claves registrados separadamente de los logs operativos del proveedor de nube.',
+          '**Red** — VPC privada sin ingreso público; acceso solo a través de conectividad privada (enlace dedicado o VPN) desde tu red corporativa; lista de egress permitido para cualquier dependencia de salida.',
+          '**Identidad** — federada con tu IdP corporativo; IAM nativo de la nube vinculado a identidades de usuario, no a cuentas de servicio compartidas; ACL por colección aplicadas en el pipeline de recuperación.',
+          '**Logging** — log de auditoría nativo de la nube alimentado en tu SIEM existente; ingesta separada para eventos de auditoría de la aplicación; retención a prueba de manipulaciones que cumpla las expectativas del supervisor.',
+          '**Contratos** — el DPA debe cumplir el artículo 28, listar subencargados, abordar las cláusulas contractuales tipo donde sea necesario e incluir una cláusula explícita de no entrenamiento con datos del cliente que cubra tanto los pesos del LLM como cualquier servicio auxiliar (búsqueda, telemetría, soporte).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El patrón de nube privada en la UE parece más permisivo que el on-prem porque utiliza un encargado del tratamiento externo — pero con región soberana, claves gestionadas por el cliente, cláusula contractual de no entrenamiento y control de egress adecuado, puede igualar o superar al on-prem en disponibilidad y postura de auditoría. El expediente de cumplimiento es más voluminoso; el riesgo operativo es menor.',
+          },
+        ],
+      },
+      euAiAct: {
+        id: 'eu-ai-act',
+        title: 'Clasificación según la Ley de IA de la UE: riesgo limitado frente a alto riesgo',
+        content:
+          '**La mayoría de los despliegues de RAG local son sistemas de IA de riesgo limitado según la Ley de IA de la UE — pero en el momento en que la recuperación alimenta una decisión automatizada que afecta a una persona, la clasificación pasa a alto riesgo y las obligaciones se multiplican.** Clasifica antes de construir.',
+        items: [
+          '**Riesgo limitado (la mayoría de los RAG locales)** — el sistema recupera y resume documentos para asistir a un humano; el humano toma la decisión. Las obligaciones son principalmente de transparencia: los usuarios deben saber que están interactuando con una IA, el contenido generado debe ser identificable como tal, y sin diseño manipulador o engañoso.',
+          '**Alto riesgo** — la recuperación alimenta una decisión automatizada en dominios que la Ley enumera: puntuación de solvencia, selección de personal, admisiones educativas, servicios públicos esenciales, aplicación de la ley, migración, justicia, identificación biométrica, infraestructura crítica. Un RAG de apoyo a la decisión clínica que recomienda tratamientos es de alto riesgo; un RAG que resume protocolos clínicos para ayudar a un médico a leer directrices más rápido no lo es.',
+          '**Obligaciones de alto riesgo** — sistema de gestión de riesgos a lo largo del ciclo de vida, gobernanza de datos (datos de entrenamiento, validación y prueba documentados), documentación técnica, registro automático de eventos, transparencia e información a los usuarios, supervisión humana, medidas de precisión y robustez, evaluación de conformidad antes de la comercialización, supervisión post-comercialización.',
+          '**Consideraciones sobre la IA de propósito general** — usar un LLM de propósito general (de código abierto o no) no transfiere las obligaciones de alto riesgo al proveedor del modelo. El implantador (tu organización) lleva las obligaciones de alto riesgo para el sistema que construyes con ese modelo.',
+          '**Prácticas prohibidas** — puntuación social, rastreo no selectivo de imágenes faciales, reconocimiento de emociones en lugares de trabajo y centros educativos, determinada categorización biométrica en tiempo real. Estas quedan descartadas independientemente de lo localmente que las ejecutes.',
+          '**Documentación como artefacto de auditoría** — el expediente técnico requerido para sistemas de alto riesgo no es un entregable único; es un documento vivo. Vincúlalo a tu proceso de gestión de cambios para que cada promoción de modelo, cambio de embedder y cambio de ACL quede reflejado.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'La línea entre alto riesgo y riesgo limitado la traza el caso de uso, no la tecnología. El mismo almacén vectorial y el mismo modelo pueden ser de riesgo limitado en un despliegue de asistente de investigación y de alto riesgo en un despliegue de selección de personal de RRHH. Clasifica por caso de uso, no por plataforma.',
+          },
+        ],
+      },
+      dpia: {
+        id: 'dpia-requirements',
+        title: 'Requisitos de la EIPD',
+        content:
+          '**Una Evaluación de Impacto sobre la Protección de Datos (artículo 35) es obligatoria para el tratamiento que pueda suponer un alto riesgo para los derechos y libertades de los interesados.** La mayoría de los RAG locales regulados están en el ámbito de aplicación. Trata la EIPD como el documento de diseño, no como un artefacto de cumplimiento a posteriori.',
+        items: [
+          '**Cuándo es obligatoria** — evaluación sistemática y exhaustiva que incluya elaboración de perfiles con efectos jurídicos; tratamiento a gran escala de datos de categorías especiales (salud, datos jurídicos, biométricos, raciales, políticos, religiosos, sindicales); monitoreo sistemático de zonas de acceso público. Las autoridades supervisoras nacionales publican listas de operaciones que siempre requieren una EIPD — consulta la tuya.',
+          '**Alcance de la EIPD** — finalidad y base jurídica; descripción de las operaciones de tratamiento; evaluación de necesidad y proporcionalidad; evaluación de riesgos para los interesados; mitigaciones y riesgo residual; consulta con el DPD y (donde el riesgo residual sea alto) con la autoridad supervisora antes de iniciar el tratamiento.',
+          '**Riesgos específicos del RAG** a abordar: reidentificación de individuos a partir de chunks recuperados; generación de información inexacta que afecte a una persona; filtración a través de logs o copias de seguridad; completitud de la eliminación en solicitudes de derecho al olvido; contaminación cruzada entre colecciones; acceso demasiado amplio para usuarios con muchos privilegios.',
+          '**Mitigaciones a documentar** — los seis controles anteriores, más redacción o seudonimización a nivel de chunk donde la base jurídica sea el consentimiento o el interés legítimo; procedimiento de eliminación con evidencia de ensayo; revisiones de acceso en una cadencia establecida.',
+          '**Revisores** — el DPD lo aprueba; la autoridad supervisora es consultada donde el riesgo residual tras la mitigación siga siendo alto. La EIPD firmada va en el expediente técnico junto con la documentación de conformidad con la Ley de IA de la UE si el sistema también es de alto riesgo.',
+          '**Documento vivo** — vuelve a ejecutar la EIPD cuando el corpus se amplíe materialmente, cuando el modelo o el embedder cambie, cuando los límites de acceso cambien, o anualmente como base. Vincula esto a tu proceso de gestión de cambios.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Una EIPD redactada en la semana dos del proyecto es una herramienta de planificación. Una EIPD redactada en la semana diez es un documento defensivo. La primera es mucho más útil y tiende a sacar a la luz cambios de diseño que reducen el riesgo residual final. Comienza la EIPD antes de la decisión de adquisición, no después del despliegue.',
+          },
+        ],
+      },
+      germany: {
+        id: 'germany-datenschutz',
+        title: 'Notas específicas para Alemania (Datenschutz)',
+        content:
+          '**La práctica alemana de protección de datos superpone el BDSG-Neu, las normas sectoriales y la co-determinación del comité de empresa sobre la línea de base del RGPD.** Un despliegue de RAG que satisface el RGPD genérico puede aún así no superar una revisión alemana si se pasan por alto estos puntos.',
+        items: [
+          '**Co-determinación del comité de empresa (Betriebsrat)** — en virtud del §87 BetrVG, cualquier sistema que monitoree el rendimiento o el comportamiento de los empleados requiere un acuerdo del comité de empresa antes del despliegue. Un RAG sobre contenido generado por empleados (correos electrónicos, documentos internos) típicamente lo activa. Involucra al comité de empresa en el momento del diseño; el acuerdo (Betriebsvereinbarung) pasa a formar parte del expediente de base jurídica.',
+          '**Confidencialidad sectorial** — el §203 StGB penaliza la violación de la confidencialidad profesional (abogados, médicos, asesores fiscales, auditores). Desplegar un RAG de forma que exponga datos de clientes protegidos a personal no vinculado o a encargados del tratamiento externos puede constituir un delito penal, no solo un asunto civil. El patrón on-prem o con air-gap es la opción más segura en estos sectores.',
+          '**Telemediengesetz (TTDSG) y telemetría** — la telemetría de salida que toca los dispositivos de los usuarios finales está regulada no solo por el RGPD sino también por el TTDSG. El air-gap elimina la cuestión; los despliegues con control de egress deben verificar que cualquier llamada de salida esté consentida, sea necesaria o sea estrictamente técnica.',
+          '**Expectativas de transparencia** — las normas de transparencia federales y estatales ocasionalmente requieren la divulgación de la toma de decisiones asistida por IA a los interesados. Incluso donde no sea estrictamente requerido, la divulgación en lenguaje claro de que la recuperación es asistida por IA y que el revisor humano sigue siendo responsable de la decisión es el valor predeterminado defendible.',
+          '**Aufsichtsbehörden (autoridades supervisoras estatales)** — la supervisión del Datenschutz está organizada a nivel estatal para el sector privado. Contacta con el Landesbeauftragte für Datenschutz relevante donde se necesite consulta en virtud del artículo 36. Los documentos de posición de los principales Landesbeauftragte sobre herramientas de IA son insumos útiles para la EIPD.',
+          '**Idioma de la documentación** — las autoridades supervisoras alemanas aceptan documentación en inglés, pero los artefactos clave dirigidos a los usuarios (avisos de privacidad, divulgaciones de transparencia, acuerdos del comité de empresa) deben estar en alemán por razones tanto legales como prácticas.',
+        ],
+      },
+      checklist: {
+        id: 'compliance-checklist',
+        title: 'Lista de verificación de cumplimiento antes de la puesta en producción',
+        content:
+          '**Recorre esta lista de principio a fin antes de cualquier despliegue en producción.** Cada elemento es un modo de fallo real de una auditoría real; la lista es intencionadamente corta para que realmente se use.',
+        items: [
+          '☐ **Base jurídica documentada** para cada categoría de datos de origen — consentimiento, contrato, obligación legal, interés vital, tarea pública o interés legítimo con una prueba de ponderación en el expediente.',
+          '☐ **EIPD aprobada por el DPD**, con un procedimiento de eliminación ensayado adjunto.',
+          '☐ **Registro de actividades de tratamiento (artículo 30)** actualizado para incluir el sistema RAG, las categorías de datos, la retención, los destinatarios y los mecanismos de transferencia (típicamente ninguno para RAG local).',
+          '☐ **Seis controles verificados de extremo a extremo**: air-gap o lista de egress permitido, RBAC, registros de auditoría, cifrado, trazabilidad, procedimiento de eliminación.',
+          '☐ **Captura de paquetes de salida** limpia durante una prueba de saturación de 24 horas; repetida tras cada actualización de la aplicación.',
+          '☐ **Integración del proveedor de identidad** probada con un usuario real de cada nivel de acceso; el acceso a colecciones sensibles requiere elevación separada.',
+          '☐ **Copias de seguridad realizadas y una restauración realmente probada** en hardware aislado, no solo verificada en un panel de estado.',
+          '☐ **Procedimiento de derecho al olvido ensayado** con datos sintéticos que cubra el almacén de origen, el índice vectorial, los embeddings en caché y la retención del registro de recuperación.',
+          '☐ **Clasificación según la Ley de IA de la UE** confirmada (riesgo limitado frente a alto riesgo); expediente técnico en su lugar si es de alto riesgo.',
+          '☐ **Contratos de proveedores (si los hay) revisados**: DPA conforme al artículo 28, subencargados listados, cláusula de no entrenamiento que cubra los datos del cliente.',
+          '☐ **Acuerdo del comité de empresa** establecido donde el contenido generado por empleados esté en el ámbito de aplicación (Alemania; normas similares en otros lugares de la UE).',
+          '☐ **Aviso de transparencia** redactado en lenguaje comprensible para el usuario que explique la asistencia de IA, el humano en el bucle y el flujo de datos.',
+          '☐ **Procedimiento de respuesta a incidentes** actualizado para incluir escenarios específicos del RAG: filtración del índice, manipulación de logs, fallo de eliminación, cambio de modelo con ruptura de trazabilidad posterior.',
+          '☐ **Revisión de acceso trimestral** programada y asignada; primera revisión en el calendario antes de la puesta en producción.',
+          '☐ **Actualización anual de la EIPD** programada y vinculada al proceso de gestión de cambios.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores frecuentes',
+        items: [
+          '**Error 1: Tratar "local" como sinónimo de "conforme".** Ejecutar on-prem resuelve las preguntas de transferencia y de encargado del tratamiento; no resuelve la base jurídica, la EIPD, el registro de auditoría ni los derechos de los interesados. El cumplimiento es un programa por capas, no una elección de despliegue.',
+          '**Error 2: Saltarse la EIPD porque el sistema es "solo una herramienta de búsqueda".** Una herramienta de búsqueda que ingiere datos de categorías especiales a gran escala es exactamente lo que cubre el artículo 35. Saltarse la EIPD significa saltarse la defensa en auditoría.',
+          '**Error 3: Registrar el texto de la consulta sin verificar la base jurídica.** Las propias consultas son datos personales cuando hacen referencia a individuos. Decide en el momento del diseño si tu base jurídica de tratamiento cubre el registro de consultas; si no, registra solo el hash y los metadatos.',
+          '**Error 4: Olvidar los embeddings en caché en el procedimiento de eliminación.** La eliminación del origen funciona. La reconstrucción del índice vectorial funciona. La capa de caché que tu plataforma añadió para el rendimiento, las huellas de embedding en el registro de recuperación y el historial de respuestas en el almacén de chat son las partes que se pasan por alto.',
+          '**Error 5: Permitir a los usuarios con muchos privilegios saltarse las ACL de colección.** "Los administradores pueden verlo todo" es conveniente y muy común; también es la razón más frecuente por la que las auditorías salen mal. El acceso privilegiado debe estar a su vez controlado, limitado en el tiempo y justificado por uso.',
+          '**Error 6: Reutilizar un espacio de trabajo para varios asuntos o clientes.** La contaminación cruzada de citas y contexto es un fallo de confidencialidad incluso antes de que ninguna parte externa lo vea. Un asunto o cliente por colección; ACL separadas; retención separada.',
+          '**Error 7: Comprar air-gap y luego conectar un teléfono personal para las pruebas.** El perímetro de air-gap debe incluir a las personas que pueden transportar datos a través de él. La política de endpoints es parte del control, no una preocupación separada.',
+          '**Error 8: Tratar la elección de modelo y embedder como "configurar y olvidar".** Cada actualización es un evento de gestión de cambios con implicaciones para la EIPD, la trazabilidad y el rastro de auditoría. Planifica el flujo de trabajo de actualización antes del primer despliegue en producción.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[Texto completo del RGPD (Oficial)](https://gdpr-info.eu/) — Texto completo del Reglamento General de Protección de Datos con comentario artículo por artículo.',
+          '[Texto completo de la Ley de IA de la UE](https://artificialintelligenceact.eu/) — Texto completo del reglamento con el marco de clasificación de riesgos.',
+          '[Marco de Gestión de Riesgos de IA del NIST](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Marco de gobernanza federal de EE.UU. aplicable a la evaluación de riesgos de IA.',
+          '[BDSG-Neu (Ley Federal Alemana de Protección de Datos)](https://www.gesetze-im-internet.de/bdsg_2018/) — Implementación alemana del RGPD con adiciones sectoriales.',
+          '[Directrices del CEPD sobre EIPD](https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-data-protection-impact-assessment-and-determining_en) — Orientación del Comité Europeo de Protección de Datos sobre cuándo y cómo realizar EIPDs.',
+          '[BfDI (Comisionado Federal Alemán para la Protección de Datos)](https://www.bfdi.bund.de/) — Documentos de posición del Comisionado Federal Alemán para la Protección de Datos sobre despliegues de IA.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Ejecutar RAG localmente cumple automáticamente el RGPD?',
+            a: 'No. El alojamiento local resuelve la pregunta sobre la transferencia transfronteriza y reduce la lista de encargados del tratamiento, pero los principios del RGPD en el artículo 5 (licitud, lealtad, transparencia, limitación de la finalidad, minimización de datos, exactitud, limitación del plazo de conservación, integridad y confidencialidad, responsabilidad proactiva) siguen siendo aplicables. El artículo 25 (protección de datos desde el diseño y por defecto), el artículo 30 (registro de actividades de tratamiento), el artículo 32 (seguridad del tratamiento) y el artículo 35 (EIPD) se aplican independientemente de dónde se ejecute el modelo. El RAG local es un punto de partida sólido, no una postura de cumplimiento completa.',
+          },
+          {
+            q: '¿Qué se requiere para el cumplimiento de la Ley de IA de la UE en un despliegue de RAG local?',
+            a: 'Clasifica el caso de uso como riesgo limitado o alto riesgo. La mayoría de los despliegues de asistente de recuperación son de riesgo limitado y requieren obligaciones de transparencia: los usuarios deben saber que están interactuando con una IA, el contenido generado debe ser identificable. En el momento en que la recuperación alimenta una decisión automatizada en un dominio enumerado (crédito, empleo, educación, servicios públicos, aplicación de la ley, migración, justicia, biometría, infraestructura crítica), el despliegue es de alto riesgo y se aplican las obligaciones completas: sistema de gestión de riesgos, gobernanza de datos, documentación técnica, registro automático de eventos, transparencia, supervisión humana, precisión y robustez, evaluación de conformidad y supervisión post-comercialización.',
+          },
+          {
+            q: '¿Necesito una EIPD para el RAG local?',
+            a: 'Una EIPD en virtud del artículo 35 es obligatoria para el tratamiento que pueda suponer un alto riesgo para los derechos y libertades de los interesados — lo que incluye el tratamiento a gran escala de datos de categorías especiales (salud, datos jurídicos, biométricos, raciales, políticos, religiosos, sindicales) y la elaboración de perfiles sistemática con efectos jurídicos. La mayoría del RAG local regulado (jurídico, médico, financiero, investigaciones de RRHH) está en el ámbito de aplicación. Ejecuta la EIPD pronto, trátala como el documento de diseño y ensaya las mitigaciones — especialmente el procedimiento de eliminación — antes de la puesta en producción.',
+          },
+          {
+            q: '¿Puedo compartir un despliegue de RAG local entre departamentos?',
+            a: 'Sí, con cuidado. El control de acceso a nivel de colección, la autenticación por usuario contra un único proveedor de identidad y una base jurídica clara para el uso de cada departamento son el suelo mínimo. La EIPD debe cubrir el conjunto más amplio de finalidades de tratamiento; si algún departamento necesita una base jurídica diferente (p. ej., investigaciones de RRHH bajo interés legítimo mientras el personal clínico opera bajo tarea pública), las colecciones separadas y los grupos de acceso separados son más fáciles de defender que una sola colección con ACL elaboradas.',
+          },
+          {
+            q: '¿Cómo audito quién accedió a qué documento?',
+            a: 'Registra cada recuperación con ID de usuario, marca de tiempo, IDs de chunks recuperados y los IDs de documentos de los que proceden. Reenvía los eventos a un almacén de logs separado con acceso de escritura restringido bajo diferente control administrativo del servidor de aplicaciones (separación de funciones). Usa almacenamiento de solo adición con una cadena de hashes para que la manipulación sea detectable. La retención debe alinearse con la ventana de investigación de la autoridad supervisora y cualquier norma sectorial — seis a siete años es frecuente en industrias reguladas.',
+          },
+          {
+            q: '¿Los modelos de embedding de código abierto son seguros para el RGPD?',
+            a: 'En principio sí, con tres condiciones. Primero, los pesos se descargan una vez y se fijan a un hash para poder demostrar qué estaba ejecutándose. Segundo, la inferencia es completamente local sin telemetría ni llamadas de salida — verifica con una captura de paquetes, no te fíes solo de la documentación. Tercero, la ficha del modelo y la licencia se revisan para detectar cláusulas que entren en conflicto con el uso empresarial confidencial (algunas licencias de pesos abiertos adjuntan restricciones sobre tipos de datos o casos de uso). El valor predeterminado práctico para despliegues regulados es incluir en la lista permitida un pequeño número de embedders validados y revisarlos en cada actualización.',
+          },
+          {
+            q: '¿Qué hay de la trazabilidad de datos para los resultados generados por IA?',
+            a: 'Cada respuesta generada debe hacer referencia a los IDs de chunks que la produjeron, el identificador del modelo, la versión de la plantilla de prompt y la marca de tiempo. Los chunks se resuelven entonces a IDs de documentos, que se resuelven a documentos de origen. Esta cadena es lo que permite verificar la respuesta, defenderla ante un cuestionamiento, atender una solicitud de eliminación y reproducir el resultado más tarde. Sin ella, "la IA lo dijo" es la defensa de auditoría — lo que no es defensa alguna.',
+          },
+          {
+            q: '¿Puedo usar RAG local para documentos confidenciales de clientes?',
+            a: 'A menudo sí, a veces no. Muchos acuerdos con asesoría externa, NDA de M&A y contratos de datos de pacientes permiten la revisión asistida por IA siempre que los datos no salgan de un límite definido y se cumplan ciertos controles. El RAG local cumple el requisito de límite por construcción; la lista de controles específica del contrato (cifrado, acceso, auditoría, retención, notificación de violaciones) debe seguir siendo respetada. Donde el contrato prohíbe por completo el tratamiento mediante IA, ningún patrón de despliegue lo soluciona — la prohibición se aplica tanto si la IA es local como remota.',
+          },
+          {
+            q: '¿Qué registro es necesario para el cumplimiento?',
+            a: 'Eventos de ingesta (ID de documento, hash, origen, cargador, marca de tiempo, clasificación), eventos de recuperación (ID de usuario, metadatos de consulta o hash, IDs de chunks recuperados, referencia de respuesta, identificador de modelo/embedder), eventos administrativos (promoción del modelo, cambio de embedder, cambio de ACL, cambio de usuario/grupo) y eventos operativos (copia de seguridad, restauración, rotación de claves). Todos los eventos reenviados a un almacén de logs separado, de solo adición, con cadena de hashes y retenidos según tus requisitos de asunto y sector.',
+          },
+          {
+            q: '¿Cómo gestiono las solicitudes de derecho al olvido en RAG?',
+            a: 'Con un procedimiento documentado que recorra la eliminación a través de cada capa: almacén de documentos de origen, índice vectorial, embeddings en caché, retención del registro de recuperación (donde la base jurídica permita la eliminación de la entrada del log) y cualquier respuesta almacenada en el historial de chat. La eliminación del origen es sencilla; la reconstrucción del índice vectorial está bien entendida; los embeddings en caché y el historial de respuestas son las partes que la mayoría de los despliegues pasan por alto. Ensaya el procedimiento con datos sintéticos, documenta el ensayo y vincula el procedimiento a tu proceso de respuesta a incidentes para que una solicitud real active la secuencia ensayada y no la improvisación.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: el mejor RAG local](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — qué plataformas autoalojadas se adaptan a cada postura de cumplimiento, con notas sobre telemetría y licencias.',
+          '[Agentes de IA locales para flujos de trabajo empresariales y cumplimiento en la UE](/es/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — tema de cumplimiento adyacente cuando la recuperación alimenta pasos de flujo de trabajo automatizados en lugar de un lector humano.',
+          '[Automatización local de correo electrónico y calendario con LLM](/es/power-local-llm/local-llm-email-and-calendar-automation) — patrones de automatización empresarial adyacentes donde se aplica el mismo conjunto de controles.',
+          '[RAG local en tus PDFs paso a paso](/es/power-local-llm/local-rag-on-your-pdfs-step-by-step) — guía de implementación práctica para los patrones on-prem y de portátil.',
+          '[Chatea con 1.000 PDFs localmente](/es/power-local-llm/chat-with-1000-pdfs-locally) — orientación operativa para corpus más grandes que presionan el techo del on-prem.',
+          '[Hub de Power Local LLM](/es/power-local-llm) — la biblioteca completa de guías para despliegues de LLM autoalojados.',
+        ],
+      },
+    },
+  },
 }

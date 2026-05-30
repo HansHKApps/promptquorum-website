@@ -2450,4 +2450,490 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: 'Los mejores portátiles para ejecutar LLMs locales: guía de compra 2026',
+    seoTitle: 'Mejor portátil para LLMs locales 2026: de MacBook a ThinkPad',
+    intro:
+      'La mayoría de los consejos sobre portátiles para LLMs locales empiezan por la GPU y terminan ahí. El número que realmente decide qué modelo cabe es la memoria: la VRAM en un portátil gaming de Windows, o la memoria unificada en Apple Silicon — y un modelo que no cabe en memoria no logra cargarse o va arrastrándose en swap. Esta guía compara cuatro familias de portátiles según tres estilos de compra: un Apple MacBook Pro para tener la mayor memoria en un cuerpo portátil, un Lenovo ThinkPad o un portátil gaming ASUS ROG para velocidad de GPU NVIDIA, y un Framework Laptop 16 para reparabilidad y actualizaciones. Espera que una máquina portátil funcione entre un 20 y un 30 % más lento que un escritorio con el mismo chip debido a los límites térmicos. Los precios aquí son una instantánea de mayo de 2026 — los precios de los portátiles cambian con los ciclos de modelo y las ofertas, así que confirma el precio actual antes de comprar.',
+    metaDescription:
+      'Los mejores portátiles para ejecutar LLMs locales en 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, VRAM y velocidades reales en tokens comparadas por rango de precio.',
+    twitterDescription:
+      'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — cuatro familias de portátiles para LLMs locales, una regla: compra por memoria. La VRAM o la memoria unificada decide el modelo que cabe, no el nombre de la GPU.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Mistral 7B v0.3',
+      'Qwen2.5 7B',
+      'Llama 3.1 8B',
+      'Llama 3.1 13B',
+    ],
+    current_hardware_mentioned: [
+      'Apple MacBook Pro (Apple Silicon)',
+      'Lenovo ThinkPad with NVIDIA RTX GPU',
+      'ASUS ROG gaming laptop with NVIDIA RTX GPU',
+      'Framework Laptop 16',
+    ],
+    audience:
+      'Compradores que eligen un portátil específicamente para ejecutar LLMs locales, decidiendo según el estilo de compra — mayor memoria portátil, velocidad de GPU NVIDIA o hardware reparable — y según el modelo más grande que necesitan ejecutar.',
+    readTime: '13 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'laptop for local LLMs',
+    targetKeywords: [
+      'mejor portátil para llm local 2026',
+      'macbook pro vs portátil gaming llm local',
+      'cuánta ram necesito para llm local en portátil',
+      'mejor portátil gaming para ia',
+      'framework laptop 16 llm local',
+    ],
+    leadAnswerBlock:
+      '**El mejor portátil para LLMs locales es el que tiene suficiente memoria para tu modelo objetivo, no el que tiene la GPU más rápida. Un MacBook Pro con gran memoria unificada ejecuta los modelos más grandes de forma portátil, un portátil gaming con mucha VRAM los ejecuta más rápido, y un Framework Laptop 16 es la opción reparable.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué portátil debo comprar para ejecutar LLMs locales en 2026?',
+        answer:
+          'Compra primero por memoria, luego por velocidad. Un Apple MacBook Pro con gran memoria unificada encaja los modelos más grandes en un cuerpo portátil y eficiente. Un Lenovo ThinkPad o portátil gaming ASUS ROG con GPU NVIDIA RTX de alta VRAM ejecuta modelos de 7B a 13B más rápido cuando está enchufado. Un Framework Laptop 16 es la opción para reparabilidad y actualizaciones. Espera entre un 20 y un 30 % menos de velocidad que un escritorio. Los precios de los portátiles cambian con los ciclos de modelo, así que consulta el precio actual.',
+        bullets: [
+          'Mayor memoria portátil: Apple MacBook Pro con gran memoria unificada — modelos más grandes, mejor batería',
+          'Más rápido en 7B-13B: portátil gaming (ThinkPad o ASUS ROG) con GPU NVIDIA RTX de alta VRAM',
+          'Opción reparable: Framework Laptop 16 — RAM y almacenamiento actualizables',
+          'Planifica un mínimo de 8 GB, se recomiendan 16 GB o más; espera entre un 20 y un 30 % menos de velocidad que un escritorio',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Elección del editor', anchor: '#editors-choice' },
+      { label: 'Comparativa de familias de portátiles', anchor: '#comparison-table' },
+      { label: '¿Qué portátil deberías comprar?', anchor: '#which-laptop' },
+      { label: 'Apple MacBook Pro', anchor: '#family-macbook' },
+      { label: 'Lenovo ThinkPad y portátiles workstation', anchor: '#family-thinkpad' },
+      { label: 'ASUS ROG y portátiles gaming', anchor: '#family-rog' },
+      { label: 'Framework Laptop 16', anchor: '#family-framework' },
+      { label: '¿Cuánta memoria necesitas?', anchor: '#memory-needs' },
+      { label: 'Diagrama de decisión', anchor: '#decision-flowchart' },
+      { label: 'Dónde comprar', anchor: '#where-to-buy' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectura relacionada', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**La memoria es la restricción determinante, no el nombre de la GPU.** Un modelo que no cabe en la VRAM o en la memoria unificada no logra cargarse o se desborda al swap y se vuelve demasiado lento para uso interactivo. Compra según la memoria que necesita tu modelo objetivo y luego optimiza la velocidad.',
+          '**Mayor memoria portátil: un Apple MacBook Pro.** Apple Silicon comparte un único pool de memoria unificada entre CPU y GPU, por lo que una configuración de gran memoria encaja modelos más grandes que un portátil gaming comparable — con la mejor eficiencia energética.',
+          '**Más rápido en 7B-13B: un portátil gaming NVIDIA de alta VRAM.** Una workstation Lenovo ThinkPad o un portátil ASUS ROG con GPU RTX ejecuta modelos de 7B a 13B más rápido cuando está enchufado. Un portátil con RTX 4060 (8 GB) ejecuta un modelo de 7B a unos 60-90 tok/s; un portátil con RTX 4070 (12 GB) maneja el 13B con comodidad.',
+          '**Opción reparable: el Framework Laptop 16.** Tiene RAM y almacenamiento actualizables y un diseño modular, por lo que puedes aumentar la memoria más adelante en lugar de reemplazar toda la máquina — una cobertura frente al riesgo de quedarte corto con tu primera configuración.',
+          '**Mínimos de memoria:** 8 GB ejecuta modelos de 7B con Q4_K_M, 16 GB ejecuta el 13B con comodidad, y las configuraciones grandes de MacBook Pro alcanzan modelos mucho mayores. Deja siempre 2-4 GB de margen para el sistema operativo.',
+          '**Espera una brecha con el escritorio.** Un portátil funciona aproximadamente entre un 20 y un 30 % más lento que un escritorio con el mismo chip porque los límites térmicos mantienen bajas las frecuencias de reloj bajo carga sostenida.',
+          '**La batería lo cambia todo en Windows.** Un portátil gaming normalmente deshabilita o limita la GPU discreta con batería, reduciendo la inferencia a paso de tortuga — planifica usarlo enchufado. Apple Silicon sigue siendo usable con batería y es mucho más eficiente.',
+          '**Los precios son una instantánea de mayo de 2026.** Los precios de los portátiles cambian con los ciclos de actualización de modelos y las ofertas — trata cada cifra aquí como un rango y confirma el precio en tiempo real antes de comprar.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Apple MacBook Pro:** memoria unificada compartida por CPU y GPU — las configuraciones de gran memoria encajan los modelos más grandes de forma portátil.',
+          '**Lenovo ThinkPad / workstation:** construcción duradera con opción de GPU NVIDIA RTX — sólido para inferencia de 7B-13B enchufado.',
+          '**Portátil gaming ASUS ROG:** GPU RTX de alta VRAM con refrigeración de nivel gaming — la opción más rápida para 7B-13B con corriente alterna.',
+          '**Framework Laptop 16:** diseño modular y reparable con RAM y almacenamiento actualizables — compra la memoria que puedas aumentar más tarde.',
+          '**Regla de memoria en Q4_K_M:** 8 GB ejecuta modelos de 7B, 16 GB ejecuta el 13B; mantén siempre 2-4 GB libres para el sistema operativo.',
+          '**Referencia de velocidad:** un modelo de 7B funciona a 10-25 tok/s en una CPU de portátil, a 30-80 tok/s en Apple Silicon y a 60-90 tok/s en una GPU de portátil RTX 4060.',
+          '**Brecha con el escritorio:** espera una velocidad sostenida aproximadamente un 20-30 % menor en un portátil que en un escritorio con el mismo chip, debido al throttling térmico.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: 'Elección del editor: un Apple MacBook Pro con gran memoria unificada',
+        sponsoredSlot: true,
+        content:
+          '**Para la mayoría de los compradores que quieren un portátil que ejecute bien los LLMs locales y siga siendo portátil, un Apple MacBook Pro con gran memoria unificada es la opción equilibrada.** Apple Silicon comparte un único pool de memoria entre CPU y GPU, por lo que una configuración de gran memoria encaja modelos más grandes que un portátil gaming con la misma memoria dividida entre VRAM y RAM del sistema. Además, sigue siendo usable con batería y funciona con mucha mayor eficiencia — un MacBook Pro de la serie M consume aproximadamente 12-18 W durante la inferencia de 7B frente a 25-45 W en un portátil Windows. Si específicamente necesitas la inferencia más rápida de 7B-13B y mantendrás el portátil enchufado, un portátil gaming NVIDIA de alta VRAM es más rápido. Si quieres hardware que puedas reparar y actualizar, elige el Framework Laptop 16. Configura el MacBook Pro con tanta memoria unificada como tu presupuesto permita — la memoria no se puede actualizar después de la compra. Los precios cubren un rango amplio, así que consulta el precio actual antes de comprar.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Esta elección del editor refleja únicamente la idoneidad para el uso previsto. PromptQuorum no está inscrito en ningún programa de afiliados y los enlaces de abajo no llevan etiquetas de afiliado — son simples enlaces de referencia que no generan ninguna comisión.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: 'Consultar precios del MacBook Pro en Amazon',
+          },
+          {
+            url: 'https://www.apple.com/shop/buy-mac/macbook-pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: 'Consultar configuraciones del MacBook Pro en Apple',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Cómo se comparan las cuatro familias de portátiles para LLMs locales',
+        content:
+          'Las cifras de velocidad provienen de las pruebas de portátiles realizadas por PromptQuorum — un modelo de 7B funciona a 10-25 tok/s en una CPU de portátil, a 30-80 tok/s en Apple Silicon y a 60-90 tok/s en una GPU de portátil RTX 4060. La columna «mejor para» refleja el estilo de compra, no un SKU concreto. Los precios son una instantánea de mayo de 2026 expresada como rangos — los precios de los portátiles cambian con los ciclos de modelo y las ofertas, así que confirma antes de comprar.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Para un portátil con LLMs locales, el pool de memoria — VRAM en Windows o memoria unificada en Apple Silicon — decide qué modelos caben, y la refrigeración decide qué tan rápido funcionan antes del throttling térmico.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Piensa en la memoria como el tamaño del banco de trabajo y en el modelo como el proyecto sobre él. Un chip más rápido termina el trabajo antes, pero si el proyecto no cabe en el banco de trabajo, la velocidad nunca importa. Un portátil también tiene un sistema de refrigeración más pequeño que un escritorio, por lo que se ralentiza en tareas largas.',
+          },
+        ],
+        columns: ['Familia de portátiles', 'Modelo de memoria', 'Velocidad 7B (datos reutilizados)', 'Mejor para', 'Precio (mayo 2026)'],
+        rows: [
+          {
+            'Familia de portátiles': 'Apple MacBook Pro',
+            'Modelo de memoria': 'Memoria unificada (CPU + GPU compartida)',
+            'Velocidad 7B (datos reutilizados)': '30-80 tok/s en Apple Silicon',
+            'Mejor para': 'Modelos más grandes de forma portátil, mejor batería',
+            'Precio (mayo 2026)': 'Gama media a premium; consultar precio actual',
+          },
+          {
+            'Familia de portátiles': 'Lenovo ThinkPad / workstation',
+            'Modelo de memoria': 'VRAM NVIDIA RTX + RAM del sistema',
+            'Velocidad 7B (datos reutilizados)': '60-90 tok/s en una GPU RTX 4060',
+            'Mejor para': 'Construcción duradera, trabajo 7B-13B enchufado',
+            'Precio (mayo 2026)': 'Gama media a premium; consultar precio actual',
+          },
+          {
+            'Familia de portátiles': 'Portátil gaming ASUS ROG',
+            'Modelo de memoria': 'VRAM NVIDIA RTX + RAM del sistema',
+            'Velocidad 7B (datos reutilizados)': '60-90 tok/s en una GPU RTX 4060',
+            'Mejor para': 'El más rápido en 7B-13B con corriente alterna',
+            'Precio (mayo 2026)': 'Gama media; consultar precio actual',
+          },
+          {
+            'Familia de portátiles': 'Framework Laptop 16',
+            'Modelo de memoria': 'RAM del sistema actualizable + módulo GPU',
+            'Velocidad 7B (datos reutilizados)': 'Comparable a un portátil RTX con corriente alterna',
+            'Mejor para': 'Reparabilidad, aumentar memoria más adelante',
+            'Precio (mayo 2026)': 'Gama media; consultar precio actual',
+          },
+        ],
+      },
+      whichLaptop: {
+        id: 'which-laptop',
+        title: '¿Qué portátil deberías comprar?',
+        content:
+          '**Tu estilo de compra decide la familia; tu modelo objetivo más grande decide la configuración de memoria.** Encuentra la fila que coincide con tu situación.',
+        columns: ['Tu situación', 'Compra este'],
+        rows: [
+          { 'Tu situación': 'Quiero los modelos más grandes en un cuerpo portátil con excelente batería', 'Compra este': 'Apple MacBook Pro con gran memoria unificada' },
+          { 'Tu situación': 'Quiero la inferencia más rápida de 7B-13B y lo mantendré enchufado', 'Compra este': 'Portátil ASUS ROG con GPU NVIDIA RTX de alta VRAM' },
+          { 'Tu situación': 'Quiero una construcción duradera de nivel profesional con GPU RTX', 'Compra este': 'Workstation Lenovo ThinkPad con GPU RTX' },
+          { 'Tu situación': 'Quiero reparar y actualizar el portátil yo mismo con el tiempo', 'Compra este': 'Framework Laptop 16' },
+          { 'Tu situación': 'Principalmente ejecuto modelos de 7B y quiero un portátil cotidiano equilibrado', 'Compra este': 'MacBook Pro con memoria unificada de gama media' },
+          { 'Tu situación': 'No tengo claro qué elegir y quiero el primer portátil más seguro', 'Compra este': 'Apple MacBook Pro — el mejor equilibrio de memoria, eficiencia y batería' },
+        ],
+      },
+      familyMacbook: {
+        id: 'family-macbook',
+        title: 'Apple MacBook Pro: la memoria portátil más amplia',
+        content:
+          '**Un Apple MacBook Pro es la opción para encajar los LLMs locales más grandes en un cuerpo portátil, porque Apple Silicon comparte un único pool de memoria unificada entre CPU y GPU.** Eso significa que una configuración de gran memoria ejecuta modelos más grandes que un portátil gaming con la misma memoria total dividida en VRAM y RAM del sistema por separado.',
+        items: [
+          '**Por qué comprarlo:** la memoria unificada encaja modelos más grandes que una división VRAM comparable, Apple Silicon sigue siendo usable con batería y es la opción más eficiente energéticamente — aproximadamente 12-18 W durante la inferencia de 7B frente a 25-45 W en un portátil Windows.',
+          '**Usa un MacBook Pro si** quieres un portátil para los modelos más grandes, valoras la duración de la batería y prefieres una máquina silenciosa que no necesita estar enchufada para ejecutar inferencia.',
+          '**Datos de velocidad reutilizados:** un modelo de 7B funciona a 30-80 tok/s en Apple Silicon dependiendo del nivel de chip y la memoria; una configuración con gran memoria unificada encaja modelos de 13B completamente en memoria rápida.',
+          '**Configura con cuidado:** la memoria unificada no se puede actualizar después de la compra. Compra tanta memoria como tu presupuesto permita — es la especificación que decide permanentemente tu modelo más grande.',
+          '**Por qué descartarlo:** para la inferencia más rápida posible de 7B-13B con corriente alterna, un portátil gaming NVIDIA de alta VRAM es más rápido; y un MacBook Pro no es reparable por el usuario.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'En un MacBook Pro, la memoria unificada es la única especificación que no puedes cambiar después. Priorízala sobre el almacenamiento — un SSD externo puede alojar tu biblioteca de modelos, pero ningún componente externo puede añadir memoria unificada.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: 'Consultar precios del MacBook Pro en Amazon',
+          },
+          {
+            url: 'https://www.apple.com/shop/buy-mac/macbook-pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: 'Consultar configuraciones del MacBook Pro en Apple',
+          },
+        ],
+      },
+      familyThinkpad: {
+        id: 'family-thinkpad',
+        title: 'Lenovo ThinkPad y portátiles workstation: la opción NVIDIA duradera',
+        content:
+          '**Una workstation móvil Lenovo ThinkPad con GPU NVIDIA RTX es la opción para compradores que quieren velocidad de inferencia NVIDIA en una construcción duradera de nivel profesional.** Los modelos workstation de ThinkPad combinan una GPU RTX con un chasis robusto e internos con mantenimiento accesible.',
+        items: [
+          '**Por qué comprarlo:** una GPU NVIDIA RTX ejecuta inferencia acelerada por CUDA de forma nativa con Ollama y LM Studio, en un chasis construido para años de uso diario con piezas reemplazables.',
+          '**Usa una workstation ThinkPad si** quieres velocidad de GPU NVIDIA, valoras una construcción duradera y un buen teclado, y el portátil también sirve como máquina de trabajo.',
+          '**Datos de velocidad reutilizados:** una GPU de portátil RTX 4060 (8 GB) ejecuta un modelo de 7B a unos 60-90 tok/s; un portátil con RTX 4070 (12 GB) maneja modelos de 13B con comodidad. La velocidad es aproximadamente un 20-30 % inferior a una GPU de escritorio equivalente.',
+          '**Configura para la memoria:** elige al menos 16 GB de RAM del sistema y una GPU de 12 GB de VRAM si quieres margen para el 13B; la GPU está soldada, así que elige la VRAM correctamente al comprar.',
+          '**Por qué descartarlo:** la GPU discreta normalmente se limita con batería, así que planifica usarlo enchufado; y en pura relación precio-velocidad un portátil gaming ASUS ROG suele costar menos.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Una GPU de portátil está soldada a la placa y no se puede actualizar. Elige la cantidad de VRAM para el modelo más grande que vayas a ejecutar — una GPU de 8 GB encaja el 7B con comodidad, una GPU de 12 GB es el suelo más seguro para el 13B.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Lenovo+ThinkPad+RTX+workstation',
+            productName: 'Lenovo ThinkPad RTX workstation laptop',
+            productCategory: 'laptop',
+            label: 'Consultar precios de la workstation Lenovo ThinkPad en Amazon',
+          },
+          {
+            url: 'https://www.lenovo.com/us/en/d/laptops/thinkpad/',
+            productName: 'Lenovo ThinkPad workstation laptop',
+            productCategory: 'laptop',
+            label: 'Consultar configuraciones de ThinkPad en Lenovo',
+          },
+        ],
+      },
+      familyRog: {
+        id: 'family-rog',
+        title: 'ASUS ROG y portátiles gaming: el más rápido en 7B-13B con corriente alterna',
+        content:
+          '**Un portátil gaming ASUS ROG con GPU NVIDIA RTX de alta VRAM es la opción más rápida para LLMs locales de 7B-13B cuando el portátil permanece enchufado.** Los portátiles gaming combinan una GPU RTX con refrigeración diseñada para carga sostenida, que mantiene las frecuencias de reloj más tiempo que un chasis fino y ligero.',
+        items: [
+          '**Por qué comprarlo:** una GPU RTX de alta VRAM más refrigeración de nivel gaming ofrece la inferencia sostenida de 7B-13B más rápida de las opciones Windows, a menudo a un precio inferior a un portátil workstation.',
+          '**Usa un portátil ASUS ROG si** quieres velocidad máxima de 7B-13B, mantendrás el portátil enchufado y aceptas ventiladores más ruidosos y una estética gaming.',
+          '**Datos de velocidad reutilizados:** un portátil con RTX 4060 (8 GB) ejecuta un modelo de 7B a 60-90 tok/s; un portátil con RTX 4070 (12 GB) ejecuta el 13B con comodidad. Una mejor refrigeración retrasa el throttling térmico, que típicamente comienza tras 10-15 minutos de generación sostenida.',
+          '**Configura para la memoria:** elige al menos 16 GB de RAM del sistema y una GPU de 12 GB de VRAM para margen en 13B; un modelo de 8 GB de VRAM es suficiente si el 7B es tu techo.',
+          '**Por qué descartarlo:** la GPU discreta se deshabilita o limita con batería, reduciendo la inferencia a paso de tortuga; y el ruido del ventilador y el consumo de batería son notablemente mayores que en un MacBook Pro.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Un portátil gaming de Windows normalmente deshabilita la GPU discreta con batería para ahorrar energía, por lo que la inferencia cae a la velocidad de solo la CPU. Si necesitas ejecutar modelos lejos de un enchufe, un Apple MacBook Pro es la mejor opción.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=ASUS+ROG+RTX+gaming+laptop',
+            productName: 'ASUS ROG gaming laptop with NVIDIA RTX GPU',
+            productCategory: 'laptop',
+            label: 'Consultar precios del portátil ASUS ROG en Amazon',
+          },
+          {
+            url: 'https://www.asus.com/us/laptops/for-gaming/rog/',
+            productName: 'ASUS ROG gaming laptop',
+            productCategory: 'laptop',
+            label: 'Consultar configuraciones de ASUS ROG en ASUS',
+          },
+        ],
+      },
+      familyFramework: {
+        id: 'family-framework',
+        title: 'Framework Laptop 16: la opción reparable y actualizable',
+        content:
+          '**El Framework Laptop 16 es la opción para compradores que quieren un portátil que puedan reparar y actualizar ellos mismos con el tiempo.** Su diseño modular usa RAM y almacenamiento actualizables y piezas reemplazables, por lo que quedarte sin memoria en tu primera configuración no significa comprar una máquina completamente nueva.',
+        items: [
+          '**Por qué comprarlo:** RAM y almacenamiento actualizables por el usuario y un diseño modular y reparable — una cobertura frente al límite de la memoria soldada en un MacBook Pro o un portátil gaming.',
+          '**Usa un Framework Laptop 16 si** valoras la reparabilidad y la opción de aumentar la memoria más tarde, y quieres evitar reemplazar todo el portátil cuando tus necesidades crezcan.',
+          '**Ventaja de memoria:** como la RAM es actualizable, puedes empezar con una configuración más pequeña para modelos de 7B y añadir memoria más tarde para trabajo de 13B — la única familia aquí donde eso es posible.',
+          '**Configura para ahora, planifica para después:** compra suficiente memoria para tu modelo objetivo actual, sabiendo que puedes aumentarla. Confirma las opciones actuales del módulo GPU y la capacidad de RAM compatible en el sitio del fabricante antes de comprar.',
+          '**Por qué descartarlo:** si quieres la mayor memoria unificada posible en un cuerpo portátil, un MacBook Pro de gran memoria encaja modelos más grandes; y los portátiles gaming pueden ofrecer más velocidad de GPU bruta por euro.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El Framework Laptop 16 es la única familia de esta guía con RAM actualizable. Si no estás seguro de cuánto crecerán tus modelos, te permite empezar modestamente y añadir memoria más adelante en lugar de gastar de más por adelantado.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Framework+Laptop+16',
+            productName: 'Framework Laptop 16',
+            productCategory: 'laptop',
+            label: 'Consultar precios del Framework Laptop 16 en Amazon',
+          },
+          {
+            url: 'https://frame.work/laptop16',
+            productName: 'Framework Laptop 16',
+            productCategory: 'laptop',
+            label: 'Consultar configuraciones del Framework Laptop 16 en Framework',
+          },
+        ],
+      },
+      memoryNeeds: {
+        id: 'memory-needs',
+        title: '¿Cuánta memoria necesitas en un portátil?',
+        content:
+          '**Con cuantización Q4_K_M, un LLM local necesita aproximadamente 0,6 GB de memoria por cada mil millones de parámetros, más 2-4 GB para el sistema operativo y las herramientas.** En un portátil, «memoria» significa VRAM más RAM del sistema en Windows, o memoria unificada en Apple Silicon.',
+        items: [
+          '**8 GB — modelos de 3B y 7B:** un modelo de 7B en Q4_K_M necesita unos 4,5 GB, dejando espacio para el sistema operativo. 8 GB es el suelo práctico; cierra el navegador antes de cargar un modelo de 7B.',
+          '**16 GB — modelos de 7B y 13B:** un modelo de 13B en Q4_K_M necesita aproximadamente 9 GB, que cabe en 16 GB con multitarea normal. 16 GB es el punto de partida recomendado.',
+          '**32 GB o más — 13B con multitarea intensa, o modelos más grandes:** cómodo para el 13B junto a otras aplicaciones, y el punto de entrada para ir más allá del 13B.',
+          '**Gran memoria unificada del MacBook Pro — modelos portátiles más grandes:** como la GPU comparte el pool de memoria completo, un MacBook Pro de gran memoria encaja modelos muy por encima de un portátil Windows de 16 GB.',
+          '**Usa 8 GB si** los modelos de 7B cubren tu trabajo; **elige 16 GB o más si** quieres modelos de 13B o ejecutas un navegador y un editor junto a la inferencia.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Para un portátil con LLMs locales, planifica aproximadamente 0,6 GB de memoria por cada mil millones de parámetros del modelo más 2-4 GB de overhead — 8 GB cubre modelos de 7B y 16 GB cubre el 13B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Cada modelo necesita una cierta cantidad de memoria para cargarse, y el sistema operativo necesita su propia parte por encima de eso. Si el modelo no cabe, el portátil recurre al swap basado en disco y se vuelve muy lento. Compra suficiente memoria para tu modelo más grande con unos pocos gigabytes de margen.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: 'Diagrama de decisión: elige tu portátil en tres preguntas',
+        content:
+          '**Tres preguntas, en orden, guían a la mayoría de los compradores hacia una familia.**',
+        items: [
+          '**1. ¿Necesitas reparar y actualizar el portátil tú mismo?** Sí: un Framework Laptop 16. No: continúa.',
+          '**2. ¿Necesitas ejecutar modelos con batería o quieres la mayor memoria portátil?** Sí: un Apple MacBook Pro con gran memoria unificada. No: continúa.',
+          '**3. ¿Quieres la velocidad más rápida de 7B-13B con corriente alterna, en una construcción duradera?** La construcción duradera importa más: una workstation Lenovo ThinkPad. La velocidad bruta por euro importa más: un portátil gaming ASUS ROG.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Elige un portátil para LLMs locales respondiendo primero a la necesidad de reparabilidad, luego a la necesidad de batería y memoria portátil, y por último entre construcción duradera y velocidad bruta por euro.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Empieza por si quieres actualizar el portátil tú mismo — si es así, elige un Framework. Si necesitas ejecutar modelos sin enchufar o quieres la mayor memoria, elige un MacBook Pro. De lo contrario, elige un portátil gaming o workstation según si importa más la durabilidad o la relación precio-velocidad.',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Dónde comprar un portátil para LLMs locales',
+        content:
+          '**Los precios de los portátiles cambian con los ciclos de actualización de modelos y las ofertas — los precios en EE. UU. suelen ser los más bajos, los precios en la UE incluyen IVA.** Los enlaces de abajo son simples enlaces de búsqueda de productos y fabricantes por región; no llevan etiquetas de afiliado y no generan ninguna comisión.',
+        items: [
+          '**Estados Unidos:** Amazon y las tiendas de los fabricantes (Apple, Lenovo, ASUS, Framework) ofrecen la mayor variedad de configuraciones. Las tiendas de los fabricantes permiten elegir la memoria exacta.',
+          '**Alemania:** Amazon.de y las tiendas alemanas de los fabricantes; espera aproximadamente un 19 % de IVA incluido en los precios indicados.',
+          '**Francia:** Amazon.fr y las tiendas francesas de los fabricantes; los precios son similares a Alemania con un 20 % de IVA incluido.',
+          '**Japón:** Amazon.co.jp y las tiendas japonesas de los fabricantes; las opciones de configuración siguen las de EE. UU.',
+          '**Compra cerca de una actualización de modelo si** puedes esperar — la generación anterior suele bajar de precio cuando se lanza una nueva, y un portátil gaming de segunda mano o reacondicionado evita gran parte de la prima del nuevo modelo.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Cada rango de precios en esta guía es una instantánea de mayo de 2026. Los precios de los portátiles cambian con los ciclos de modelo y los eventos de oferta — abre siempre el listado actual del minorista o fabricante antes de comprar.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=laptop+for+local+LLM',
+            productName: 'Local-LLM laptops (US)',
+            productCategory: 'laptop',
+            label: 'Explorar portátiles para LLMs locales en Amazon US',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Laptop+RTX+KI',
+            productName: 'Local-LLM laptops (Germany)',
+            productCategory: 'laptop',
+            label: 'Explorar portátiles en Amazon.de',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=ordinateur+portable+RTX+IA',
+            productName: 'Local-LLM laptops (France)',
+            productCategory: 'laptop',
+            label: 'Explorar portátiles en Amazon.fr',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+laptop+AI',
+            productName: 'Local-LLM laptops (Japan)',
+            productCategory: 'laptop',
+            label: 'Explorar portátiles en Amazon.co.jp',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes al comprar un portátil para LLMs locales',
+        items: [
+          '**Comprar por el nombre de la GPU en lugar de la memoria.** Una GPU rápida que carece de la VRAM para tu modelo es inútil. Confirma primero que el modelo cabe en memoria con 2-4 GB de margen, luego compara la velocidad.',
+          '**Comprar un ultrabook fino esperando que ejecute bien modelos de 7B.** Un ultrabook con gráficos integrados y un pequeño margen térmico solo maneja inferencia CPU ligera de 3B-7B. Elige un MacBook Pro o un portátil correctamente refrigerado en su lugar.',
+          '**Esperar velocidad de escritorio de un portátil.** Los límites térmicos mantienen las frecuencias de reloj bajas bajo carga sostenida — un portátil funciona aproximadamente un 20-30 % más lento que un escritorio con el mismo chip.',
+          '**Planear ejecutar un portátil gaming con batería.** Un portátil gaming de Windows limita o deshabilita la GPU discreta con batería, reduciendo la inferencia a la velocidad de solo la CPU. Planifica usarlo enchufado, o compra un MacBook Pro.',
+          '**Configurar la memoria soldada con poca capacidad.** En un MacBook Pro o un portátil gaming, la memoria no se puede actualizar después. Compra suficiente en el momento de la compra para tu modelo objetivo más grande.',
+          '**Ignorar la gestión térmica.** Ejecutar inferencia en una bolsa cerrada, o sin un soporte para la circulación de aire, fuerza a la GPU a limitar de forma intensa en cuestión de minutos. Usa un soporte y mantén las rejillas despejadas.',
+          '**Comprar en exceso para modelos de 7B.** Si los modelos de 7B cubren tu trabajo, una configuración de gama alta es dinero y batería desperdiciados. Ajusta la memoria al modelo, no al presupuesto que casualmente tengas.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[Los mejores portátiles para ejecutar LLMs locales](/es/local-llms/best-laptops-local-llm) — guía de portátiles propia de PromptQuorum: niveles de GPU, límites de tamaño de modelos y la brecha de velocidad escritorio-portátil reutilizados aquí.',
+          '[Ejecutar LLMs locales en un portátil: RAM, velocidad y térmica](/es/local-llms/local-llm-on-laptop) — fuente propia de PromptQuorum para las cifras de velocidad de 7B (CPU, Apple Silicon, GPU de portátil RTX) y los datos de batería y térmica reutilizados aquí.',
+          '[Especificaciones del Apple MacBook Pro](https://www.apple.com/macbook-pro/specs/) — referencia oficial para las configuraciones de memoria unificada de Apple Silicon.',
+          '[Framework Laptop 16](https://frame.work/laptop16) — referencia oficial para el diseño modular con RAM y módulo GPU actualizables.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Cuál es el mejor portátil para ejecutar LLMs locales en 2026?',
+            a: 'No existe un único mejor portátil — depende de tu estilo de compra. Un Apple MacBook Pro con gran memoria unificada encaja los modelos más grandes en un cuerpo portátil y eficiente y es la mejor opción polivalente. Un portátil gaming NVIDIA de alta VRAM, como un ASUS ROG o una workstation Lenovo ThinkPad, ejecuta modelos de 7B a 13B más rápido cuando está enchufado. Un Framework Laptop 16 es la opción si quieres hardware reparable y actualizable. Compra primero por memoria, luego por velocidad.',
+          },
+          {
+            q: '¿Cuánta RAM necesito en un portátil para LLMs locales?',
+            a: 'Planifica 8 GB como mínimo práctico y 16 GB como punto de partida recomendado. Con cuantización Q4_K_M, un modelo de 7B necesita unos 4,5 GB y funciona en un portátil de 8 GB si mantienes otras aplicaciones ligeras. Un modelo de 13B necesita aproximadamente 9 GB, que cabe cómodamente en 16 GB. Deja siempre 2-4 GB de margen para el sistema operativo.',
+          },
+          {
+            q: '¿Es mejor un MacBook Pro o un portátil gaming para LLMs locales?',
+            a: 'Depende de tu prioridad. Un MacBook Pro comparte un único pool de memoria unificada entre CPU y GPU, por lo que encaja modelos más grandes, funciona con mucha mayor eficiencia y sigue siendo usable con batería. Un portátil gaming con GPU NVIDIA RTX de alta VRAM ejecuta modelos de 7B a 13B más rápido cuando está enchufado. Elige el MacBook Pro para portabilidad y modelos grandes, el portátil gaming para velocidad bruta enchufado.',
+          },
+          {
+            q: '¿Puede un portátil ejecutar LLMs locales tan rápido como un escritorio?',
+            a: 'No. Un portátil funciona aproximadamente un 20-30 % más lento que un escritorio con el mismo chip porque un sistema de refrigeración más pequeño fuerza las frecuencias de reloj a bajar bajo carga sostenida. El throttling térmico típicamente comienza tras 10-15 minutos de generación continua. Un portátil es la opción correcta para portabilidad; un escritorio es más rápido para cargas de trabajo sostenidas o con modelos grandes.',
+          },
+          {
+            q: '¿Es bueno el Framework Laptop 16 para LLMs locales?',
+            a: 'Sí, si la reparabilidad y las actualizaciones son importantes para ti. El Framework Laptop 16 tiene RAM y almacenamiento actualizables y un diseño modular, por lo que puedes empezar con una configuración de memoria para modelos de 7B y aumentarla más tarde para trabajo de 13B. Es la única familia en esta guía donde la memoria es actualizable por el usuario. Para la mayor memoria unificada en un cuerpo portátil, un MacBook Pro de gran memoria todavía encaja modelos más grandes.',
+          },
+          {
+            q: '¿Puedo ejecutar LLMs locales en un portátil con batería?',
+            a: 'Depende del portátil. Los MacBook con Apple Silicon siguen siendo usables con batería y funcionan eficientemente — aproximadamente 12-18 W durante la inferencia de 7B. Un portátil gaming de Windows normalmente deshabilita o limita la GPU discreta con batería, reduciendo la inferencia a la lenta velocidad de solo la CPU. Si ejecutar modelos lejos de un enchufe importa, elige un MacBook Pro.',
+          },
+          {
+            q: '¿Qué tan rápido ejecuta un portátil un modelo de 7B?',
+            a: 'La velocidad depende del hardware. Un modelo de 7B en Q4_K_M funciona a unos 10-25 tokens por segundo en una CPU de portátil, a 30-80 tokens por segundo en Apple Silicon usando memoria unificada, y a 60-90 tokens por segundo en una GPU de portátil NVIDIA RTX 4060. Estas cifras provienen de las pruebas de portátiles propias de PromptQuorum.',
+          },
+          {
+            q: '¿Puedo actualizar la GPU de un portátil más adelante?',
+            a: 'En casi todos los portátiles, no — la GPU está soldada a la placa base y no se puede cambiar. Eso convierte la VRAM en una elección permanente que debes hacer correctamente al comprar: una GPU de 8 GB encaja modelos de 7B, una GPU de 12 GB es el suelo más seguro para el 13B. El Framework Laptop 16 es modular en RAM y algunos componentes, pero la GPU se elige igualmente en el momento de la configuración.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectura relacionada',
+        items: [
+          '[Lee la guía completa de portátiles para LLMs locales](/es/local-llms/best-laptops-local-llm) — la guía de portátiles más amplia con niveles de GPU y detalle de batería detrás de esta guía de compra.',
+          '[Configura y ejecuta LLMs locales en un portátil paso a paso](/es/local-llms/local-llm-on-laptop) — RAM, throttling térmico y orientación sobre cuantización para el portátil que elijas.',
+          '[Compara un portátil con un escritorio para trabajo con LLMs locales](/es/local-llms/laptop-vs-desktop-local-llm) — la decisión de plataforma detrás de esta guía, con un desglose completo de costes y velocidad.',
+          '[Elige una GPU de escritorio si la portabilidad no es necesaria](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la guía de compra de GPU complementaria para una instalación más rápida en ubicación fija.',
+          '[Elige un monitor para conectar tu portátil](/es/power-local-llm/best-monitors-ai-development-2026) — la pantalla que convierte un portátil para LLMs locales en un puesto de desarrollo completo.',
+        ],
+      },
+    },
+  },
 }

@@ -2404,4 +2404,481 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: 'Mejores cursos y certificaciones de IA: guía de compra 2026',
+    seoTitle: 'Mejores cursos y certificaciones de IA 2026: gratis y de pago',
+    intro:
+      'La mayoría de las listas de "mejores cursos de IA" clasifican los cursos por el reconocimiento de la marca e ignoran la pregunta que realmente importa: ¿qué quieres hacer con esa habilidad después? Un curso gratuito de fundamentos y un itinerario de certificación de pago no son productos que compitan entre sí — sirven a objetivos distintos. Esta guía organiza el aprendizaje de IA en tres categorías — cursos gratuitos, cursos estructurados de pago y certificaciones — y da una recomendación clara para cada objetivo: orientarte sin coste, desarrollar profundidad práctica u obtener una credencial que un empleador reconozca. También cubre una cuarta vía que las grandes plataformas infravaloran: el prompt engineering como habilidad propia. Los precios de los cursos cambian con las promociones y los niveles de suscripción, por lo que cada cifra aquí es un snapshot de mayo de 2026 — consulta el precio actual en la plataforma antes de inscribirte.',
+    metaDescription:
+      'Tres itinerarios de aprendizaje de IA comparados para 2026: cursos gratuitos, cursos estructurados de pago y certificaciones — con una recomendación clara para orientarte, desarrollar profundidad o conseguir una credencial.',
+    twitterDescription:
+      'Cursos gratuitos, cursos de pago, certificaciones — tres itinerarios de aprendizaje de IA, una regla: elige según tu objetivo. Oriéntate gratis, desarrolla profundidad con un itinerario de pago, obtén una credencial cuando un empleador la exija.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    audience:
+      'Estudiantes y desarrolladores en activo que eligen un curso de IA o una certificación, decidiendo por objetivo — orientarse, desarrollar profundidad práctica u obtener una credencial reconocida — y no por la marca de la plataforma.',
+    readTime: '12 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AI course',
+    targetKeywords: [
+      'mejores cursos de ia 2026',
+      'mejor certificación de ia 2026',
+      'cursos de ia gratis online',
+      'curso de machine learning para principiantes',
+      'curso de prompt engineering',
+    ],
+    leadAnswerBlock:
+      '**El mejor curso de IA es el que se ajusta a tu objetivo, no el que tiene la marca más conocida. Elige un curso gratuito para orientarte, un curso estructurado de pago para desarrollar profundidad práctica, y una certificación solo cuando un empleador o un puesto pida expresamente una credencial.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuál es el mejor curso o certificación de IA para hacer en 2026?',
+        answer:
+          'Elige según tu objetivo. Para orientarte a coste cero, empieza con un curso gratuito de fundamentos. Para desarrollar profundidad práctica, haz un curso estructurado de pago o una especialización que incluya proyectos evaluados. Para obtener una credencial que un empleador reconozca, elige un itinerario de certificación. Si tu trabajo gira en torno a escribir prompts, haz un curso dedicado de prompt engineering. Los precios de los cursos cambian con frecuencia, así que comprueba el precio actual antes de inscribirte.',
+        bullets: [
+          'Orientarte gratis: un curso de fundamentos auditado sin coste',
+          'Desarrollar profundidad: un curso estructurado de pago o una especialización con proyectos evaluados',
+          'Obtener una credencial: un itinerario de certificación que emite un certificado verificable',
+          'Especializarte en prompts: un curso dedicado de prompt engineering',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Elección del editor', anchor: '#editors-choice' },
+      { label: 'Comparación de categorías de cursos', anchor: '#comparison-table' },
+      { label: '¿Qué curso deberías hacer?', anchor: '#which-course' },
+      { label: 'Cursos gratuitos de IA', anchor: '#category-free' },
+      { label: 'Cursos estructurados de pago', anchor: '#category-paid' },
+      { label: 'Certificaciones de IA', anchor: '#category-certifications' },
+      { label: 'Cursos de prompt engineering', anchor: '#category-prompt' },
+      { label: 'Cómo evaluar un curso de IA', anchor: '#how-to-evaluate' },
+      { label: 'Diagrama de decisión', anchor: '#decision-flowchart' },
+      { label: 'Dónde inscribirse', anchor: '#where-to-enroll' },
+      { label: 'Errores frecuentes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Tu objetivo es la restricción determinante, no la marca de la plataforma.** Un curso gratuito de fundamentos y una certificación de pago sirven propósitos distintos — ajusta la categoría a lo que quieres conseguir después, y luego compara opciones dentro de ella.',
+          '**Oriéntate gratis primero.** Muchos cursos sólidos de fundamentos se pueden auditar sin coste. Empieza aquí antes de pagar nada; te dirá si el tema es para ti.',
+          '**Desarrolla profundidad con un curso estructurado de pago.** Una especialización o curso estructurado con proyectos prácticos evaluados es la categoría que realmente construye habilidad aplicable. Los proyectos, no los vídeos, son lo que se transfiere al trabajo real.',
+          '**Haz una certificación solo cuando un puesto lo pida.** Una certificación produce una credencial verificable. Vale su coste cuando un empleador, un contrato o un puesto la valora expresamente — y tiene poco valor cuando nadie la comprueba.',
+          '**El prompt engineering es su propio itinerario.** Los cursos generales de IA infravaloran la escritura de prompts. Si tu trabajo gira en torno a obtener buenas salidas de modelos existentes, un curso dedicado de prompt engineering es el camino directo.',
+          '**Audita antes de pagar.** La mayoría de las plataformas de pago te permiten previsualizar o auditar el material del curso antes de comprarlo. Úsalo para confirmar que el nivel y el estilo de enseñanza encajan antes de comprometer dinero.',
+          '**Vigila el cálculo suscripción frente a pago único.** Algunas plataformas cobran una suscripción mensual, otras una tarifa única por curso — la opción más barata depende enteramente de lo rápido que termines.',
+          '**Los precios son un snapshot de mayo de 2026.** Los precios de las plataformas de cursos se mueven con las promociones y los cambios de suscripción — comprueba el precio actual en la plataforma antes de inscribirte.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Cursos gratuitos:** fundamentos y orientación, a menudo auditables sin coste — el punto de partida correcto.',
+          '**Cursos estructurados de pago:** especializaciones e itinerarios estructurados con proyectos evaluados — la categoría que construye habilidad aplicable.',
+          '**Certificaciones:** emiten una credencial verificable — merece la pena cuando un puesto o empleador lo pide expresamente.',
+          '**Cursos de prompt engineering:** un itinerario enfocado en obtener buenas salidas de modelos existentes.',
+          '**Los modelos de precios varían:** suscripción mensual, tarifa única por curso o auditoría gratuita — el más barato depende de lo rápido que termines.',
+          '**Certificado verificable:** comprueba si un curso emite una credencial con enlace de verificación compartible antes de pagar la opción de certificado.',
+          '**Tiempo de dedicación:** las especializaciones estructuradas suelen durar varias semanas a unos meses a razón de unas pocas horas semanales — confirma la estimación antes de inscribirte.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: 'Elección del editor: un curso estructurado de pago con proyectos evaluados',
+        sponsoredSlot: true,
+        content:
+          '**Para la mayoría de los estudiantes que van más allá de los fundamentos, un curso estructurado de pago o una especialización con proyectos prácticos evaluados es la elección que convierte el conocimiento de IA en habilidad aplicable.** El elemento decisivo son los proyectos: los vídeos transmiten información, pero los proyectos evaluados te obligan a aplicarla, que es lo que se transfiere al trabajo real. Un curso estructurado también secuencia los temas para que no te saltes prerrequisitos, y muchos emiten un certificado verificable al completarlos. Si solo quieres descubrir si la IA es para ti, empieza antes por un curso gratuito de fundamentos — no cuesta nada y responde esa pregunta. Si un trabajo o contrato concreto exige una credencial con nombre, elige en su lugar un itinerario de certificación. Los precios de los cursos cambian con las promociones y los niveles de suscripción, así que comprueba el precio actual en la plataforma antes de inscribirte.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Esta elección del editor refleja únicamente la adecuación al propósito. PromptQuorum no está inscrito en ningún programa de afiliados y los enlaces de abajo no llevan etiquetas de afiliado — son enlaces de referencia simples que no generan comisión.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.deeplearning.ai/courses/',
+            productName: 'DeepLearning.AI courses',
+            productCategory: 'course',
+            label: 'Explorar cursos estructurados de IA en DeepLearning.AI',
+          },
+          {
+            url: 'https://www.coursera.org/search?query=artificial%20intelligence',
+            productName: 'Coursera AI specializations',
+            productCategory: 'course',
+            label: 'Explorar especializaciones de IA en Coursera',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Cómo se comparan las cuatro categorías de aprendizaje de IA en 2026',
+        content:
+          'La columna "Ideal para" refleja el objetivo de aprendizaje, no un curso concreto. El precio es un snapshot de mayo de 2026 expresado cualitativamente — los precios de las plataformas de cursos cambian con las promociones y los niveles de suscripción, así que confirma el precio actual en la plataforma antes de inscribirte.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'En el aprendizaje de IA, tu objetivo — orientarte, desarrollar profundidad práctica u obtener una credencial reconocida — decide qué categoría de curso es la adecuada, no la marca de la plataforma.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Piensa en los cursos de IA como herramientas en una caja. Un curso gratuito es el que coges para ver si te gusta el trabajo. Un curso estructurado de pago es el que realmente construye la habilidad. Una certificación es la que usas para demostrar esa habilidad a otra persona. Elegir la herramienta equivocada para la tarea desperdicia dinero y tiempo.',
+          },
+        ],
+        columns: ['Categoría', 'Ideal para', 'Resultado', 'Coste (mayo 2026)'],
+        rows: [
+          {
+            'Categoría': 'Cursos gratuitos',
+            'Ideal para': 'Orientarse, decidir si la IA es para ti',
+            'Resultado': 'Comprensión básica, sin credencial formal',
+            'Coste (mayo 2026)': 'Gratis para auditar; comprobar precio actual',
+          },
+          {
+            'Categoría': 'Cursos estructurados de pago',
+            'Ideal para': 'Desarrollar habilidad práctica y aplicada',
+            'Resultado': 'Habilidad aplicable y, a menudo, un certificado verificable',
+            'Coste (mayo 2026)': 'Suscripción o tarifa única; comprobar precio actual',
+          },
+          {
+            'Categoría': 'Certificaciones',
+            'Ideal para': 'Obtener una credencial que un puesto o empleador pide',
+            'Resultado': 'Un certificado verificable para CV y perfiles',
+            'Coste (mayo 2026)': 'Tarifa única; comprobar precio actual',
+          },
+          {
+            'Categoría': 'Cursos de prompt engineering',
+            'Ideal para': 'Obtener buenas salidas de modelos existentes',
+            'Resultado': 'Habilidad práctica de escritura de prompts',
+            'Coste (mayo 2026)': 'Gratis a precio medio; comprobar precio actual',
+          },
+        ],
+      },
+      whichCourse: {
+        id: 'which-course',
+        title: '¿Qué curso de IA deberías hacer?',
+        content:
+          '**Tu objetivo decide la categoría; tu presupuesto y tu calendario deciden qué opción dentro de ella.** Encuentra la fila que se ajusta a tu situación.',
+        columns: ['Tu situación', 'Haz esto'],
+        rows: [
+          { 'Tu situación': 'Quiero descubrir si el trabajo en IA es para mí', 'Haz esto': 'Un curso gratuito de fundamentos, auditado sin coste' },
+          { 'Tu situación': 'Entiendo los fundamentos y quiero habilidad real y aplicada', 'Haz esto': 'Un curso estructurado de pago o una especialización con proyectos evaluados' },
+          { 'Tu situación': 'Una oferta de trabajo o mi empleador pide una credencial de IA', 'Haz esto': 'Un itinerario de certificación que emite un certificado verificable' },
+          { 'Tu situación': 'Mi trabajo consiste en escribir prompts para modelos existentes', 'Haz esto': 'Un curso dedicado de prompt engineering' },
+          { 'Tu situación': 'Ahora mismo no tengo presupuesto', 'Haz esto': 'Cursos gratuitos y material gratuito de prompt engineering' },
+          { 'Tu situación': 'No sé por dónde empezar', 'Haz esto': 'Un curso gratuito de fundamentos — no cuesta nada y aclara el siguiente paso' },
+        ],
+      },
+      categoryFree: {
+        id: 'category-free',
+        title: 'Cursos gratuitos de IA: dónde orientarte',
+        content:
+          '**Los cursos gratuitos de IA son el punto de partida correcto porque te permiten construir una base y decidir si el tema es para ti antes de gastar nada.** Muchos cursos sólidos de fundamentos se pueden auditar sin coste — obtienes las clases y las lecturas, normalmente sin el certificado evaluado.',
+        items: [
+          '**Por qué hacer uno:** coste cero, riesgo cero, y material suficiente para aprender los conceptos clave y juzgar si quieres ir más allá.',
+          '**Haz un curso gratuito si** eres nuevo en IA, explorar un cambio de carrera, o quieres confirmar que el tema encaja antes de comprometer dinero o tiempo.',
+          '**Dónde buscar:** DeepLearning.AI publica cursos cortos y enfocados; Coursera permite auditar muchos cursos completos de forma gratuita; universidades importantes y laboratorios de IA publican material de curso abierto.',
+          '**Por qué no es el punto final:** las auditorías gratuitas normalmente omiten proyectos evaluados y un certificado verificable. Para desarrollar habilidad aplicada, pasas a un curso estructurado de pago.',
+          '**Evita la trampa:** gratuito no significa baja calidad — parte del mejor material de fundamentos de IA es gratuito. Juzga por el temario y el instructor, no por el precio.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Audita un curso gratuito para confirmar un tema antes de pagar la versión estructurada. El material gratuito y el itinerario de pago a menudo comparten las mismas clases — el nivel de pago añade proyectos evaluados y un certificado.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.deeplearning.ai/courses/',
+            productName: 'DeepLearning.AI free and short courses',
+            productCategory: 'course',
+            label: 'Explorar cursos gratuitos y cortos en DeepLearning.AI',
+          },
+          {
+            url: 'https://www.coursera.org/courses?query=artificial%20intelligence&productDifficultyLevel=Beginner',
+            productName: 'Coursera auditable AI courses',
+            productCategory: 'course',
+            label: 'Encontrar cursos de IA auditables en Coursera',
+          },
+        ],
+      },
+      categoryPaid: {
+        id: 'category-paid',
+        title: 'Cursos estructurados de pago: donde la habilidad realmente se construye',
+        content:
+          '**Un curso estructurado de pago o una especialización es la categoría que construye habilidad de IA aplicable, porque los proyectos prácticos evaluados te obligan a aplicar lo que las clases enseñan.** Los proyectos — no los vídeos — son lo que se transfiere al trabajo real.',
+        items: [
+          '**Por qué hacer uno:** un temario secuenciado para no saltarte prerrequisitos, proyectos evaluados que prueban que puedes aplicar el material, y normalmente un certificado verificable al completarlo.',
+          '**Haz un curso estructurado de pago si** ya entiendes los fundamentos y quieres habilidad aplicada a nivel de portfolio, no familiaridad pasiva.',
+          '**Dónde buscar:** DeepLearning.AI y Coursera ofrecen especializaciones estructuradas de IA y machine learning; Udemy ofrece cursos de proyectos con pago único; DataCamp se centra en itinerarios interactivos y prácticos de datos e IA.',
+          '**Modelos de precio a comparar:** las plataformas de suscripción cobran mensualmente, por lo que terminar rápido es más barato; los cursos de pago único cuestan igual independientemente del ritmo. Elige el modelo que encaje con tu calendario.',
+          '**Por qué es la opción por defecto:** para la mayoría de los estudiantes que van más allá de los fundamentos, esta es la categoría que convierte el conocimiento en habilidad. Elígela a menos que tu objetivo concreto sea solo orientación o solo una credencial.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'En una plataforma de suscripción, el coste real depende de tu ritmo — quien completa una especialización en un mes paga mucho menos que quien tarda seis. Estima tu tiempo de finalización antes de elegir entre suscripción y pago único.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.coursera.org/search?query=machine%20learning%20specialization',
+            productName: 'Coursera AI and ML specializations',
+            productCategory: 'course',
+            label: 'Explorar especializaciones de IA en Coursera',
+          },
+          {
+            url: 'https://www.udemy.com/courses/search/?q=artificial%20intelligence',
+            productName: 'Udemy AI project courses',
+            productCategory: 'course',
+            label: 'Explorar cursos de IA de pago único en Udemy',
+          },
+          {
+            url: 'https://www.datacamp.com/search?q=artificial%20intelligence',
+            productName: 'DataCamp AI tracks',
+            productCategory: 'course',
+            label: 'Explorar itinerarios interactivos de IA en DataCamp',
+          },
+        ],
+      },
+      categoryCertifications: {
+        id: 'category-certifications',
+        title: 'Certificaciones de IA: cuándo vale la pena pagar por una credencial',
+        content:
+          '**Una certificación de IA vale su coste precisamente cuando un puesto, un empleador o un contrato pide una credencial reconocida — y tiene poco valor cuando nadie la comprueba.** Una certificación emite un certificado verificable que puedes adjuntar a un CV o perfil profesional.',
+        items: [
+          '**Por qué hacer una:** una credencial verificable, un currículo estructurado y una señal externa de estudio completado que algunos empleadores y contratos exigen expresamente.',
+          '**Haz una certificación si** una oferta de trabajo nombra una credencial, tu empleador financia o recompensa la certificación, o estás entrando en un campo donde la credencial es un requisito conocido.',
+          '**Dónde buscar:** Coursera aloja programas de certificado profesional; DeepLearning.AI ofrece especializaciones estructuradas que emiten certificados de finalización; los proveedores de nube y software tienen sus propios exámenes de certificación de IA.',
+          '**Por qué omitirla:** si ningún empleador o puesto lo pide, la credencial añade coste sin un beneficio claro — un curso estructurado de pago construye la misma habilidad y normalmente también emite un certificado.',
+          '**Verifica antes de comprar:** confirma que el certificado es verificable con un enlace compartible, y comprueba si el emisor es uno que tus empleadores objetivo realmente reconocen.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Una certificación demuestra que completaste un currículo, no que puedes hacer el trabajo. Trátala como una credencial para satisfacer un requisito concreto — no como sustituto de los proyectos prácticos de un curso estructurado.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.coursera.org/professional-certificates',
+            productName: 'Coursera professional certificates',
+            productCategory: 'course',
+            label: 'Explorar certificados profesionales de IA en Coursera',
+          },
+          {
+            url: 'https://www.deeplearning.ai/courses/',
+            productName: 'DeepLearning.AI specializations',
+            productCategory: 'course',
+            label: 'Explorar especializaciones con certificado en DeepLearning.AI',
+          },
+        ],
+      },
+      categoryPrompt: {
+        id: 'category-prompt',
+        title: 'Cursos de prompt engineering: el itinerario infravalorado',
+        content:
+          '**Un curso dedicado de prompt engineering es el camino directo si tu trabajo gira en torno a obtener buenas salidas de modelos existentes, no en entrenar nuevos.** Los cursos generales de IA infravaloran la escritura de prompts — enseñan cómo funcionan los modelos, no cómo escribir las entradas que los hacen útiles.',
+        items: [
+          '**Por qué hacer uno:** el prompt engineering es una habilidad aplicada propia — estructurar entradas, usar ejemplos few-shot y controlar el formato de salida — que un curso general de machine learning apenas toca.',
+          '**Haz un curso de prompt engineering si** usas modelos de IA en el día a día, construyes con APIs de modelos, o quieres salidas mejores y más fiables sin aprender a entrenar modelos.',
+          '**Dónde buscar:** DeepLearning.AI publica cursos cortos enfocados en prompting; muchos son gratuitos o de bajo coste. PromptQuorum también publica una biblioteca gratuita y estructurada de prompt engineering.',
+          '**Por qué complementa a los otros:** la habilidad de prompting complementa un curso de fundamentos o estructurado en lugar de reemplazarlo — hazlo en paralelo, o primero si el prompting es tu necesidad inmediata.',
+          '**Nota sobre el coste:** los cursos de prompt engineering tienden a ser gratuitos o de precio medio, así que es un itinerario de bajo riesgo para añadir. Comprueba el precio actual antes de inscribirte.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Si tu necesidad diaria es obtener mejores salidas de modelos que ya usas, empieza por un curso de prompt engineering antes de una especialización completa de machine learning — entrega habilidad utilizable más rápido y a menor coste.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.deeplearning.ai/short-courses/',
+            productName: 'DeepLearning.AI prompt engineering short courses',
+            productCategory: 'course',
+            label: 'Explorar cursos cortos de prompt engineering en DeepLearning.AI',
+          },
+          {
+            url: 'https://www.udemy.com/courses/search/?q=prompt%20engineering',
+            productName: 'Udemy prompt engineering courses',
+            productCategory: 'course',
+            label: 'Explorar cursos de prompt engineering en Udemy',
+          },
+        ],
+      },
+      howToEvaluate: {
+        id: 'how-to-evaluate',
+        title: '¿Cómo evalúas un curso de IA antes de inscribirte?',
+        content:
+          '**Evalúa un curso de IA por su temario, sus proyectos prácticos, su modelo de precios y si emite un certificado verificable — no por su marketing.** Usa esta lista de comprobación antes de pagar.',
+        items: [
+          '**Lee el temario completo:** confirma que cubre lo que realmente necesitas y que los prerrequisitos encajan con tu nivel actual. Un desajuste de nivel es la razón más habitual por la que un curso falla a un estudiante.',
+          '**Comprueba si hay proyectos prácticos evaluados:** un curso que solo tiene vídeos transmite información pero no habilidad. Los proyectos son lo que se transfiere al trabajo real — prioriza los cursos que los incluyan.',
+          '**Compara el modelo de precios:** una suscripción mensual recompensa a quienes terminan rápido; una tarifa única es independiente del ritmo. Estima tu tiempo de finalización y luego elige el modelo más barato para ese ritmo.',
+          '**Confirma que el certificado es verificable:** si necesitas una credencial, comprueba que el curso emite un certificado con un enlace de verificación compartible y que los empleadores objetivo reconocen al emisor.',
+          '**Audita o previsualiza primero:** la mayoría de las plataformas te permiten probar el material antes de comprar. Úsalo para confirmar que el estilo de enseñanza y la profundidad encajan antes de comprometer dinero.',
+          '**Elige un curso rico en proyectos si** quieres habilidad aplicada; **acepta un curso solo de vídeo si** solo necesitas orientación y el precio es gratuito o casi gratuito.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Evalúa un curso de IA por su temario, sus proyectos prácticos evaluados, su modelo de precios y si emite un certificado verificable — el texto de marketing no te dice nada útil.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Antes de pagar, lee lo que el curso realmente enseña y comprueba si construyes cosas o solo ves vídeos. Construir cosas es lo que fija una habilidad. Luego calcula si una suscripción mensual o una tarifa única es más barata según lo rápido que termines.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: 'Diagrama de decisión: elige tu curso de IA en tres preguntas',
+        content:
+          '**Tres preguntas, en orden, llevan a la mayoría de los estudiantes a una categoría.**',
+        items: [
+          '**1. ¿Un trabajo o empleador exige una credencial con nombre?** Sí: un itinerario de certificación. No: continúa.',
+          '**2. ¿Tu principal necesidad es escribir prompts para modelos existentes?** Sí: un curso de prompt engineering. No: continúa.',
+          '**3. ¿Ya entiendes los fundamentos de IA?** Sí: un curso estructurado de pago con proyectos evaluados. No: primero un curso gratuito de fundamentos.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Elige un curso de IA respondiendo primero si se requiere una credencial, luego si la escritura de prompts es el objetivo, y por último si ya conoces los fundamentos.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Empieza por si alguien va a pedir un certificado — si es así, consigue una certificación. Si tu objetivo real es escribir mejores prompts, haz un curso de prompts. En caso contrario, aprende los fundamentos gratis primero y luego paga por un curso estructurado para desarrollar habilidad real.',
+          },
+        ],
+      },
+      whereToEnroll: {
+        id: 'where-to-enroll',
+        title: 'Dónde inscribirse en un curso de IA',
+        content:
+          '**Las grandes plataformas de aprendizaje se inclinan cada una hacia una categoría distinta, así que dónde te inscribas debe seguir la categoría que elegiste.** Los enlaces de abajo son enlaces simples de plataforma; no llevan etiquetas de afiliado y no generan comisión.',
+        items: [
+          '**Coursera:** amplio catálogo de cursos auditables, especializaciones estructuradas y programas de certificado profesional — fuerte en las tres categorías de pago.',
+          '**DeepLearning.AI:** cursos y cursos cortos enfocados de IA y machine learning, incluyendo prompt engineering — muchos son gratuitos o de bajo coste.',
+          '**Udemy:** cursos de proyectos de pago único en IA y prompt engineering — bueno cuando prefieres pagar por curso en lugar de suscribirte.',
+          '**DataCamp:** itinerarios interactivos y prácticos de datos e IA — fuerte para estudiantes que quieren practicar en el navegador en lugar de ver clases.',
+          '**Inscríbete durante una promoción si** puedes esperar — los precios de las plataformas se mueven con eventos de venta y ofertas de suscripción, por lo que el momento afecta al coste.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Cada referencia de precio en esta guía es un snapshot de mayo de 2026. Los precios de las plataformas de cursos cambian con las promociones y los niveles de suscripción — abre siempre la página actual de la plataforma antes de inscribirte.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.coursera.org/search?query=artificial%20intelligence',
+            productName: 'Coursera AI catalog',
+            productCategory: 'course',
+            label: 'Explorar cursos de IA en Coursera',
+          },
+          {
+            url: 'https://www.deeplearning.ai/courses/',
+            productName: 'DeepLearning.AI course catalog',
+            productCategory: 'course',
+            label: 'Explorar cursos de IA en DeepLearning.AI',
+          },
+          {
+            url: 'https://www.udemy.com/courses/search/?q=artificial%20intelligence',
+            productName: 'Udemy AI catalog',
+            productCategory: 'course',
+            label: 'Explorar cursos de IA en Udemy',
+          },
+          {
+            url: 'https://www.datacamp.com/search?q=artificial%20intelligence',
+            productName: 'DataCamp AI tracks',
+            productCategory: 'course',
+            label: 'Explorar itinerarios de IA en DataCamp',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores frecuentes al elegir un curso de IA',
+        items: [
+          '**Pagar por un certificado antes de auditar el curso.** La mayoría de las plataformas te permiten previsualizar o auditar el material. Confirma que el nivel y el estilo de enseñanza encajan antes de gastar nada.',
+          '**Comprar una certificación cuando nadie la pide.** Una certificación vale su coste cuando un puesto o empleador la exige. Sin ese requisito, un curso estructurado de pago construye la misma habilidad y normalmente también emite un certificado.',
+          '**Elegir un curso solo de vídeo esperando desarrollar habilidad.** Las clases transmiten información; los proyectos evaluados construyen habilidad. Un curso sin trabajo práctico te deja con familiaridad, no con capacidad.',
+          '**Ignorar el cálculo suscripción frente a pago único.** Una suscripción mensual es barata si terminas rápido y cara si te estancas. Estima tu tiempo de finalización antes de elegir un modelo de precios.',
+          '**Empezar por un curso avanzado porque suena impresionante.** Un desajuste de nivel es la principal razón por la que los estudiantes abandonan un curso. Ajusta honestamente los prerrequisitos a tu nivel actual.',
+          '**Tratar un curso general de IA como un curso de prompt engineering.** Los cursos generales enseñan cómo funcionan los modelos, no cómo escribir buenos prompts. Si el prompting es tu objetivo, haz un curso dedicado de prompt engineering.',
+          '**Saltarte el material gratuito y pagar de más.** Parte del mejor contenido de fundamentos de IA es gratuito. Audita la opción gratuita antes de asumir que un curso de pago es mejor.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[Catálogo de cursos de Coursera](https://www.coursera.org/) — referencia para cursos auditables, especializaciones y estructuras de programas de certificado profesional.',
+          '[Cursos de DeepLearning.AI](https://www.deeplearning.ai/courses/) — referencia para cursos de IA y machine learning y cursos cortos de prompt engineering.',
+          '[Plataforma de cursos Udemy](https://www.udemy.com/) — referencia para modelos de precios de cursos de proyectos de pago único.',
+          '[Plataforma de aprendizaje DataCamp](https://www.datacamp.com/) — referencia para estructuras de itinerarios interactivos y prácticos de datos e IA.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Cuál es el mejor curso de IA para hacer en 2026?',
+            a: 'No hay un único mejor curso de IA — el mejor depende de tu objetivo. Para orientarte a coste cero, haz un curso gratuito de fundamentos. Para desarrollar habilidad práctica, haz un curso estructurado de pago o una especialización con proyectos evaluados. Para obtener una credencial, elige un itinerario de certificación. Si tu trabajo gira en torno a escribir prompts, haz un curso dedicado de prompt engineering. Ajusta primero la categoría a tu objetivo y luego compara opciones dentro de ella.',
+          },
+          {
+            q: '¿Son suficientes los cursos gratuitos de IA, o debería pagar?',
+            a: 'Los cursos gratuitos de IA son suficientes para orientarte y aprender los conceptos clave — muchos cursos de fundamentos muy valorados se pueden auditar sin coste. Son el punto de partida correcto. Donde los cursos gratuitos se quedan cortos es en proyectos prácticos evaluados y en un certificado verificable. Para desarrollar habilidad aplicada u obtener una credencial, pasa a un curso estructurado de pago o una certificación tras la base gratuita.',
+          },
+          {
+            q: '¿Vale la pena una certificación de IA?',
+            a: 'Una certificación de IA vale su coste cuando un puesto, un empleador o un contrato concreto pide una credencial reconocida. En ese caso satisface un requisito concreto. Cuando nadie la comprueba, una certificación añade coste sin un beneficio claro — un curso estructurado de pago construye la misma habilidad y normalmente también emite un certificado de finalización. Decide según si realmente alguien está pidiendo una credencial.',
+          },
+          {
+            q: '¿Debería hacer un curso de machine learning o uno de prompt engineering?',
+            a: 'Depende de lo que quieras hacer. Un curso de machine learning enseña cómo se construyen y entrenan los modelos — hazlo si quieres desarrollar o afinar modelos. Un curso de prompt engineering enseña cómo obtener salidas buenas y fiables de modelos existentes — hazlo si tu trabajo es usar modelos en lugar de construirlos. Si solo necesitas mejores salidas en el día a día, el curso de prompt engineering entrega habilidad utilizable más rápido.',
+          },
+          {
+            q: '¿Cuánto tarda en completarse un curso de IA?',
+            a: 'Varía según la categoría. Un curso corto gratuito puede llevar unas pocas horas. Una especialización estructurada suele durar varias semanas a unos meses a razón de unas pocas horas semanales. Un itinerario de certificación depende del programa. Comprueba siempre la estimación de tiempo en la página del curso antes de inscribirte — y en una plataforma de suscripción, tu tiempo de finalización afecta directamente al coste.',
+          },
+          {
+            q: '¿Necesito experiencia técnica para hacer un curso de IA?',
+            a: 'No para todos los cursos. Los cursos de fundamentos para principiantes y muchos cursos de prompt engineering no asumen ningún conocimiento técnico previo. Las especializaciones estructuradas de machine learning suelen esperar cierta comodidad con programación y matemáticas. El paso más importante es leer los prerrequisitos en la página del curso y ajustarlos honestamente a tu nivel actual — un desajuste de nivel es la principal razón por la que los estudiantes abandonan un curso.',
+          },
+          {
+            q: '¿Cuál es la diferencia entre una suscripción y una tarifa única por curso?',
+            a: 'Una suscripción cobra una cuota mensual recurrente por el acceso a una plataforma o especialización, por lo que terminar rápido es más barato y estancarse es caro. Una tarifa única por curso se paga una sola vez y es independiente del ritmo. La opción más barata depende enteramente de lo rápido que termines — estima tu tiempo de finalización y luego elige el modelo que cueste menos para ese ritmo.',
+          },
+          {
+            q: '¿Dónde puedo aprender prompt engineering gratis?',
+            a: 'El material gratuito de prompt engineering está ampliamente disponible. DeepLearning.AI publica cursos cortos enfocados en prompting, varios de ellos sin coste. PromptQuorum publica una biblioteca gratuita y estructurada de prompt engineering que cubre técnicas como el prompting few-shot y la salida estructurada. Como los cursos de prompt engineering tienden a ser gratuitos o de bajo coste, es un itinerario de bajo riesgo para empezar antes de pagar por una especialización completa de machine learning.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Empieza con la biblioteca de prompt engineering de PromptQuorum](/es/prompt-engineering) — material gratuito y estructurado que cubre las habilidades de escritura de prompts que los cursos generales de IA infravaloran.',
+          '[Elige una GPU si tu curso implica ejecutar modelos en local](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la guía de compra de hardware para el trabajo práctico en cursos de IA.',
+          '[Elige un monitor para el desarrollo y el estudio de IA](/es/power-local-llm/best-monitors-ai-development-2026) — la configuración de escritorio que acompaña a los cursos de IA ricos en proyectos.',
+          '[Ejecuta LLMs locales en un portátil para los proyectos del curso](/es/local-llms/local-llm-on-laptop) — cómo practicar con modelos en el hardware que ya tienes.',
+        ],
+      },
+    },
+  },
 }
