@@ -422,7 +422,7 @@ End with: "You're already doing prompt engineering—now do it better."`}
 
         {/* Teaching Explanation */}
         <div className="bg-blue-50 border-l-3 border-purple-600 border border-purple-200 rounded-lg p-4 mb-4">
-          <span className="block text-purple-600 font-semibold text-xs uppercase tracking-wider mb-2">📚 Teaching Explanation</span>
+          <span className="block text-purple-600 font-semibold text-xs uppercase tracking-wider mb-2">📚 {t.teachingExplanation}</span>
           <div className="text-gray-900 text-sm leading-relaxed whitespace-pre-wrap">
             Prompt engineering is the practice of carefully structuring your requests to an AI to get the most useful, accurate, and relevant responses. Think of it as learning the "language" that AI models understand best. The better you explain what you want, the better results you'll get—just like talking to a person, but with explicit clarity about structure, examples, and constraints.
           </div>
