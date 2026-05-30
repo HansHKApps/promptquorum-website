@@ -348,7 +348,7 @@ function FeaturesContent({ initialLang }: { initialLang?: import("@/hooks/useLan
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">{t.quorumDesc}</p>
           </div>
           <div className="bg-surface-highlight border border-primary/20 rounded-xl p-8 sm:p-12">
-            <QuorumShowcase lang={lang} />
+            <QuorumShowcase />
           </div>
         </div>
 
