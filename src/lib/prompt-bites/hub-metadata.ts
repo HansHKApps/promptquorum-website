@@ -21,11 +21,11 @@ export const HUB_METADATA: HubMetadataConfig = {
   },
   descriptions: {
     en: '{{count}} quick answers: VRAM requirements, Ollama vs LM Studio, quantization levels, best GPUs under $600, and local LLM setup tips for developers and hobbyists.',
-    de: '{{count}} Antworten: VRAM-Anforderungen, Ollama vs LM Studio, Quantisierungsstufen, beste GPUs unter 600 €, und Setup-Tipps für lokale LLMs.',
-    fr: '{{count}} réponses: VRAM, Ollama vs LM Studio, niveaux de quantification, meilleures GPU sous 600 €, conseils de configuration pour LLM local.',
-    ja: '{{count}}の回答：VRAM要件、Ollama vs LM Studio、量化レベル、600ドル以下のGPU、ローカルLLM設定のコツ。',
-    zh: '{{count}}个答案：VRAM需求、Ollama vs LM Studio、量化级别、600美元以下的最佳GPU、本地LLM配置技巧。',
-    es: '{{count}} respuestas: VRAM, Ollama vs LM Studio, niveles de cuantización, mejores GPU bajo $600, consejos de configuración para LLM local.',
+    de: '{{count}} Antworten: VRAM-Anforderungen, Ollama vs LM Studio, Quantisierung, beste GPUs unter 600 €, und praktische Setup-Tipps für lokale LLMs.',
+    fr: '{{count}} réponses: VRAM, Ollama vs LM Studio, quantification, meilleures GPU sous 600 €, conseils pratiques de configuration pour LLM local.',
+    ja: '{{count}}の質問への回答：VRAM要件、Ollama vs LM Studio、量化レベル、600ドル以下のGPU、ローカルLLM設定のコツと実用的なアドバイス。',
+    zh: '{{count}}个问题的答案：VRAM要求、Ollama vs LM Studio、量化级别、600美元以下的最佳GPU、本地LLM配置技巧和实用建议。',
+    es: '{{count}} respuestas: VRAM, Ollama vs LM Studio, cuantización, mejores GPU bajo $600, y consejos prácticos de configuración para LLM local.',
   },
 }
 

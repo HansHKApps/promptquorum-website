@@ -1,9 +1,186 @@
 'use client'
 
 import { useState } from 'react'
+import type { Lang } from '@/hooks/useLang'
 
-export function QuorumShowcase() {
+type ShowcaseStrings = {
+  quorumTitle: string
+  quorumDesc: string
+  collect: string
+  analyze: string
+  results: string
+  step3AnalysisResults: string
+  analysisComplete: string
+  consensus: string
+  differences: string
+  qualityAssessmentLabel: string
+  exportResults: string
+  downloadSelectedFormats: string
+  previous: string
+  next: string
+  saveToHistory: string
+  startNewAnalysis: string
+  clearSession: string
+}
+
+const translations: Record<Lang, ShowcaseStrings> = {
+  en: {
+    quorumTitle: 'Quorum — Multi-Model Consensus',
+    quorumDesc: 'Collect responses from multiple LLMs, analyze patterns, and synthesize insights across models.',
+    collect: 'Collect',
+    analyze: 'Analyze',
+    results: 'Results',
+    step3AnalysisResults: 'Step 3: Analysis Results',
+    analysisComplete: '✓ Analysis complete. Consensus and Differences patterns identified across 3 models.',
+    consensus: 'Consensus',
+    differences: 'Differences',
+    qualityAssessmentLabel: 'Quality Assessment',
+    exportResults: 'Export Results',
+    downloadSelectedFormats: 'Download Selected Formats',
+    previous: '← Previous',
+    next: 'Next →',
+    saveToHistory: 'Save to History',
+    startNewAnalysis: 'Start New Analysis',
+    clearSession: 'Clear Session',
+  },
+  es: {
+    quorumTitle: 'Quorum — Consenso Multi-Modelo',
+    quorumDesc: 'Recopila respuestas de múltiples LLMs, analiza patrones y sintetiza insights entre modelos.',
+    collect: 'Recopilar',
+    analyze: 'Analizar',
+    results: 'Resultados',
+    step3AnalysisResults: 'Paso 3: Resultados del Análisis',
+    analysisComplete: '✓ Análisis completo. Patrones de Consenso y Diferencias identificados entre 3 modelos.',
+    consensus: 'Consenso',
+    differences: 'Diferencias',
+    qualityAssessmentLabel: 'Evaluación de Calidad',
+    exportResults: 'Exportar Resultados',
+    downloadSelectedFormats: 'Descargar Formatos Seleccionados',
+    previous: '← Anterior',
+    next: 'Siguiente →',
+    saveToHistory: 'Guardar en Historial',
+    startNewAnalysis: 'Iniciar Nuevo Análisis',
+    clearSession: 'Limpiar Sesión',
+  },
+  de: {
+    quorumTitle: 'Quorum — Multi-Modell-Konsens',
+    quorumDesc: 'Sammeln Sie Antworten von mehreren LLMs, analysieren Sie Muster und synthetisieren Sie Erkenntnisse zwischen Modellen.',
+    collect: 'Erfassen',
+    analyze: 'Analysieren',
+    results: 'Ergebnisse',
+    step3AnalysisResults: 'Schritt 3: Analyseergebnisse',
+    analysisComplete: '✓ Analyse abgeschlossen. Konsens- und Differenzmuster über 3 Modelle hinweg identifiziert.',
+    consensus: 'Konsens',
+    differences: 'Unterschiede',
+    qualityAssessmentLabel: 'Qualitätsbewertung',
+    exportResults: 'Ergebnisse exportieren',
+    downloadSelectedFormats: 'Ausgewählte Formate herunterladen',
+    previous: '← Vorherige',
+    next: 'Nächste →',
+    saveToHistory: 'Im Verlauf speichern',
+    startNewAnalysis: 'Neue Analyse starten',
+    clearSession: 'Sitzung löschen',
+  },
+  fr: {
+    quorumTitle: 'Quorum — Consensus Multi-Modèle',
+    quorumDesc: 'Collectez les réponses de plusieurs LLM, analysez les modèles et synthétisez les insights entre les modèles.',
+    collect: 'Collecter',
+    analyze: 'Analyser',
+    results: 'Résultats',
+    step3AnalysisResults: 'Étape 3: Résultats de l\'Analyse',
+    analysisComplete: '✓ Analyse complète. Modèles de Consensus et Différences identifiés sur 3 modèles.',
+    consensus: 'Consensus',
+    differences: 'Différences',
+    qualityAssessmentLabel: 'Évaluation de la Qualité',
+    exportResults: 'Exporter les Résultats',
+    downloadSelectedFormats: 'Télécharger les Formats Sélectionnés',
+    previous: '← Précédent',
+    next: 'Suivant →',
+    saveToHistory: 'Enregistrer dans l\'Historique',
+    startNewAnalysis: 'Commencer une Nouvelle Analyse',
+    clearSession: 'Effacer la Séance',
+  },
+  ja: {
+    quorumTitle: 'クォーラム — マルチモデルコンセンサス',
+    quorumDesc: '複数の LLM から回答を収集し、パターンを分析し、モデル間の洞察を合成します。',
+    collect: '収集',
+    analyze: '分析',
+    results: '結果',
+    step3AnalysisResults: 'ステップ 3: 分析結果',
+    analysisComplete: '✓ 分析完了。3 つのモデル全体でコンセンサスと差異パターンが識別されました。',
+    consensus: 'コンセンサス',
+    differences: '相違点',
+    qualityAssessmentLabel: '品質評価',
+    exportResults: '結果をエクスポート',
+    downloadSelectedFormats: '選択したフォーマットをダウンロード',
+    previous: '← 前へ',
+    next: '次へ →',
+    saveToHistory: '履歴に保存',
+    startNewAnalysis: '新しい分析を開始',
+    clearSession: 'セッションをクリア',
+  },
+  zh: {
+    quorumTitle: 'Quorum — 多模型共识',
+    quorumDesc: '从多个 LLM 收集回答、分析模式并综合跨模型的洞察。',
+    collect: '收集',
+    analyze: '分析',
+    results: '结果',
+    step3AnalysisResults: '步骤 3：分析结果',
+    analysisComplete: '✓ 分析完成。在 3 个模型中识别出共识和差异模式。',
+    consensus: '共识',
+    differences: '差异',
+    qualityAssessmentLabel: '质量评估',
+    exportResults: '导出结果',
+    downloadSelectedFormats: '下载选定格式',
+    previous: '← 上一步',
+    next: '下一步 →',
+    saveToHistory: '保存到历史记录',
+    startNewAnalysis: '开始新分析',
+    clearSession: '清除会话',
+  },
+  pt: {
+    quorumTitle: 'Quorum — Consenso Multi-Modelo',
+    quorumDesc: 'Colete respostas de vários LLMs, analise padrões e sintetize insights em modelos.',
+    collect: 'Coletar',
+    analyze: 'Analisar',
+    results: 'Resultados',
+    step3AnalysisResults: 'Etapa 3: Resultados da Análise',
+    analysisComplete: '✓ Análise concluída. Padrões de Consenso e Diferenças identificados em 3 modelos.',
+    consensus: 'Consenso',
+    differences: 'Diferenças',
+    qualityAssessmentLabel: 'Avaliação de Qualidade',
+    exportResults: 'Exportar Resultados',
+    downloadSelectedFormats: 'Baixar Formatos Selecionados',
+    previous: '← Anterior',
+    next: 'Próximo →',
+    saveToHistory: 'Salvar no Histórico',
+    startNewAnalysis: 'Iniciar Novo Análise',
+    clearSession: 'Limpar Sessão',
+  },
+  ar: {
+    quorumTitle: 'Quorum — إجماع متعدد النماذج',
+    quorumDesc: 'اجمع الردود من عدة LLMs وحلل الأنماط وحسّن الرؤى عبر النماذج.',
+    collect: 'جمع',
+    analyze: 'تحليل',
+    results: 'النتائج',
+    step3AnalysisResults: 'الخطوة 3: نتائج التحليل',
+    analysisComplete: '✓ اكتمل التحليل. تم تحديد أنماط الإجماع والفروقات عبر 3 نماذج.',
+    consensus: 'الإجماع',
+    differences: 'الفروقات',
+    qualityAssessmentLabel: 'تقييم الجودة',
+    exportResults: 'تصدير النتائج',
+    downloadSelectedFormats: 'تنزيل التنسيقات المختارة',
+    previous: '← السابق',
+    next: 'التالي →',
+    saveToHistory: 'حفظ في السجل',
+    startNewAnalysis: 'بدء تحليل جديد',
+    clearSession: 'مسح الجلسة',
+  },
+}
+
+export function QuorumShowcase({ lang = 'en' }: { lang?: Lang }) {
   const [checkedFormats, setCheckedFormats] = useState<string[]>(['txt', 'md'])
+  const t = translations[lang] || translations.en
 
   const toggleFormat = (format: string) => {
     setCheckedFormats(prev =>
@@ -24,16 +201,16 @@ export function QuorumShowcase() {
     <div className="max-w-4xl mx-auto">
       {/* Header */}
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-2">Quorum — Multi-Model Consensus</h2>
-        <p className="text-gray-600">Collect responses from multiple LLMs, analyze patterns, and synthesize insights across models.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-2">{t.quorumTitle}</h2>
+        <p className="text-gray-600">{t.quorumDesc}</p>
       </div>
 
       {/* Stepper */}
       <div className="flex gap-6 mb-8 p-4 bg-gray-50 border border-gray-200 rounded-lg overflow-x-auto">
         {[
-          { num: '✓', label: 'Collect', completed: true, active: false },
-          { num: '✓', label: 'Analyze', completed: true, active: false },
-          { num: '3', label: 'Results', completed: false, active: true },
+          { num: '✓', label: t.collect, completed: true, active: false },
+          { num: '✓', label: t.analyze, completed: true, active: false },
+          { num: '3', label: t.results, completed: false, active: true },
         ].map((step, idx) => (
           <div key={idx} className="flex items-center gap-2 flex-shrink-0">
             <div
