@@ -1,5 +1,6 @@
 'use client'
 
+import { usePathname, useSearchParams } from 'next/navigation'
 import { CookieSettingsLink } from './CookieSettingsLink'
 import type { Language } from '@/lib/geo-schema'
 
@@ -23,11 +24,19 @@ const Substack = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
 )
 
+const ACTIVE_LANGS: { code: Language; label: string }[] = [
+  { code: 'en', label: 'English' },
+  { code: 'de', label: 'Deutsch' },
+  { code: 'fr', label: 'Français' },
+  { code: 'ja', label: '日本語' },
+  { code: 'zh', label: '中文' },
+  { code: 'es', label: 'Español' },
+]
+
 const FOOTER_COPY: Record<Language, Record<string, string>> = {
   en: {
     copyright: '© 2026 PromptQuorum. All rights reserved.',
     worldwide: '🌍 Available worldwide',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
     about: 'About',
     frameworks: 'Frameworks',
     privacy: 'Privacy Policy',
@@ -37,7 +46,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
   de: {
     copyright: '© 2026 PromptQuorum. Alle Rechte vorbehalten.',
     worldwide: '🌍 Weltweit verfügbar',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
     about: 'Über uns',
     frameworks: 'Frameworks',
     privacy: 'Datenschutzerklärung',
@@ -47,7 +55,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
   fr: {
     copyright: '© 2026 PromptQuorum. Tous droits réservés.',
     worldwide: '🌍 Disponible mondialement',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
     about: 'À propos',
     frameworks: 'Frameworks',
     privacy: 'Politique de confidentialité',
@@ -57,7 +64,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
   ja: {
     copyright: '© 2026 PromptQuorum. すべての権利を保有しています。',
     worldwide: '🌍 世界中で利用可能',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
     about: 'について',
     frameworks: 'Frameworks',
     privacy: 'プライバシーポリシー',
@@ -67,7 +73,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
   zh: {
     copyright: '© 2026 PromptQuorum. 版权所有。',
     worldwide: '🌍 全球可用',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
     about: '关于',
     frameworks: 'Frameworks',
     privacy: '隐私政策',
@@ -77,7 +82,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
   es: {
     copyright: '© 2026 PromptQuorum. Todos los derechos reservados.',
     worldwide: '🌍 Disponible en todo el mundo',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
     about: 'Acerca de',
     frameworks: 'Frameworks',
     privacy: 'Política de privacidad',
@@ -87,7 +91,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
   pt: {
     copyright: '© 2026 PromptQuorum. Todos os direitos reservados.',
     worldwide: '🌍 Disponível em todo o mundo',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
     about: 'Sobre',
     frameworks: 'Frameworks',
     privacy: 'Política de Privacidade',
@@ -97,7 +100,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
   ar: {
     copyright: '© 2026 PromptQuorum. جميع الحقوق محفوظة.',
     worldwide: '🌍 متاح في جميع أنحاء العالم',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
     about: 'حول',
     frameworks: 'Frameworks',
     privacy: 'سياسة الخصوصية',
@@ -108,6 +110,14 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
 
 export function Footer({ lang = 'en' }: { lang?: Language }) {
   const t = FOOTER_COPY[lang] || FOOTER_COPY['en']
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  const hrefFor = (code: Language) => {
+    const params = new URLSearchParams(searchParams)
+    params.set('lang', code)
+    return `${pathname}?${params.toString()}`
+  }
 
   return (
     <footer className="py-12 px-4 sm:px-6 border-t border-gray-200 bg-white">
@@ -145,7 +155,20 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
           <div className="flex items-center justify-center gap-2">
             <span>{t.worldwide}</span>
             <span>•</span>
-            <span>{t.langs}</span>
+            <span className="flex flex-wrap gap-x-1 justify-center">
+              {ACTIVE_LANGS.map((l, i) => (
+                <span key={l.code}>
+                  {i > 0 && <span className="text-gray-300 mx-0.5">,</span>}
+                  <a
+                    href={hrefFor(l.code)}
+                    className={l.code === lang ? 'font-semibold text-text-primary' : 'hover:text-primary transition-colors'}
+                    aria-current={l.code === lang ? 'page' : undefined}
+                  >
+                    {l.label}
+                  </a>
+                </span>
+              ))}
+            </span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
             <a href="/about" className="hover:text-primary transition-colors">{t.about}</a>

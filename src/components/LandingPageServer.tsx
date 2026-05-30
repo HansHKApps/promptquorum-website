@@ -75,7 +75,6 @@ const T = {
     ],
     copyright: '© 2026 PromptQuorum. All rights reserved.',
     worldwide: '🌍 Available worldwide',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
   },
   de: {
     badge: 'Warteliste jetzt offen',
@@ -120,7 +119,6 @@ const T = {
     ],
     copyright: '© 2026 PromptQuorum. Alle Rechte vorbehalten.',
     worldwide: '🌍 Weltweit verfügbar',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
   },
   fr: {
     badge: 'Liste d\'attente ouverte',
@@ -165,7 +163,6 @@ const T = {
     ],
     copyright: '© 2026 PromptQuorum. Tous droits réservés.',
     worldwide: '🌍 Disponible dans le monde entier',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
   },
   ja: {
     badge: 'ウェイトリスト受付中',
@@ -210,7 +207,6 @@ const T = {
     ],
     copyright: '© 2026 PromptQuorum. All rights reserved.',
     worldwide: '🌍 世界中で利用可能',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
   },
   zh: {
     badge: '候补名单现已开放',
@@ -255,7 +251,6 @@ const T = {
     ],
     copyright: '© 2026 PromptQuorum. 保留所有权利。',
     worldwide: '🌍 全球可用',
-    langs: 'English, Deutsch, Français, 日本語, 中文',
   },
   es: {
     badge: 'Lista de espera abierta',
@@ -300,7 +295,6 @@ const T = {
     ],
     copyright: '© 2026 PromptQuorum. Todos los derechos reservados.',
     worldwide: '🌍 Disponible en todo el mundo',
-    langs: 'English, Deutsch, Français, 日本語, 中文, Español',
   },
 }
 
