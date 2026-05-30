@@ -1099,4 +1099,247 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Privacy & Business',
+      title: 'Servidor LLM local para equipos empresariales: acceso multiusuario y control de costos',
+      seoTitle: 'Servidor LLM local para equipos: control de acceso y seguimiento de costos',
+      intro: '**Despliega un servidor LLM local compartido para 5-20 miembros de equipo usando vLLM + nginx load balancer.** A partir de abril de 2026, la inferencia a escala de equipo cuesta $50/mes (electricidad) frente a $1.000+/mes (APIs en la nube). Esta guía cubre el acceso multiusuario, permisos basados en roles, medición de uso y atribución de costos.',
+      metaDescription: 'Servidor LLM local para equipos con vLLM, nginx, control de acceso y seguimiento de uso. Configuración multiusuario, comparación de costos y permisos por roles.',
+      publishDate: '2026-04-05',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '**Despliega un servidor LLM local compartido para 5-20 miembros de equipo usando vLLM + nginx load balancer. A partir de abril de 2026, la inferencia a escala de equipo cuesta $50/mes (electricidad) frente a $1.000+/mes en APIs en la nube.**',
+      audience: 'Ingenieros que despliegan LLMs locales en entornos de producción o empresariales',
+      readTime: '10 min de lectura',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'Team Deployment',
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Servidor LLM local para equipos: control de acceso y seguimiento de costos',
+        'description': 'Servidor LLM local para equipos con vLLM, nginx, control de acceso y seguimiento de uso. Configuración multiusuario, comparación de costos y permisos por roles.',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-setup-for-teams',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
+      },
+      gammaEmbedUrl: '/presentations/local-llm-setup-for-teams-static.html',
+      gammaDescription: 'La presentación cubre: arquitecturas de servidor LLM para equipos (individual, dual-GPU, enterprise), comparación de costos ($600/año vs $12.000+), autenticación y control de acceso, medición de uso y atribución de costos, estrategias de escalado, monitoreo de rendimiento y errores comunes de configuración. Descarga el PDF como tarjeta de referencia para el despliegue de LLM en equipo.',
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Configurar un servidor LLM local para equipos',
+        'inLanguage': 'es',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Equipo pequeño (5-10 usuarios)', 'text': 'Un servidor vLLM único + nginx + autenticación por token. Hardware: RTX 4090 + 64GB RAM + 1TB SSD. Costo: $2.500 en hardware + $50/mes en electricidad.' },
+          { '@type': 'HowToStep', 'name': 'Equipo mediano (10-50 usuarios)', 'text': 'Clúster dual-GPU + load balancer + monitoreo con Prometheus. Hardware: 2× RTX 4090 + 128GB RAM. Costo: $5.000 en hardware + $100/mes en electricidad.' },
+          { '@type': 'HowToStep', 'name': 'Equipo grande (50+ usuarios)', 'text': 'Despliegue enterprise con redundancia, capa de caché (Redis) y auto-scaling. Costo: presupuesto personalizado. Tiempo de configuración: 1 mes (incluye auditoría de seguridad).' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto cuesta un servidor LLM local en equipo comparado con las APIs en la nube?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Un servidor individual: $2.500 en hardware + $50/mes en electricidad ($600/año) frente a $1.000+/mes en APIs en la nube ($12.000+/año). Período de amortización: 2-3 meses para equipos activos.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo configuro la autenticación de usuarios para un servidor LLM en equipo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Usa OAuth 2.0 con SSO (Active Directory / Okta) para enterprise. Autenticación simple por token para pymes. Todas las consultas se registran con ID de usuario, marca de tiempo y recuento de tokens para la atribución de costos.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué ocurre si una GPU falla en un entorno de equipo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Usa un clúster dual-GPU con load balancer: si la GPU 0 falla, todas las solicitudes se enrutan automáticamente a la GPU 1. Sin tiempo de inactividad. En configuraciones de servidor único, el almacenamiento RAID protege los datos, pero el failover de GPU requiere redundancia.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo agregar más usuarios sin comprar hardware nuevo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, hasta 20-30 usuarios simultáneos por GPU. Más allá de eso, agrega una tarjeta GPU y reequilibra el load balancer. Una RTX 4090 maneja aproximadamente 5 tokens/seg por usuario simultáneo.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo gestiono las actualizaciones de modelos en un entorno de equipo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Descarga el nuevo modelo en una máquina separada, pruébalo y luego intercámbialo. vLLM soporta el hot-swapping de modelos con cero tiempo de inactividad pausando nuevas solicitudes, terminando las consultas en curso y luego intercambiando los archivos del modelo.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debería usar Kubernetes para el despliegue de LLM en equipo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No, no es necesario para menos de 50 usuarios. Docker + docker-compose es más simple y requiere menos sobrecarga. Kubernetes agrega complejidad sin beneficio para equipos pequeños.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo facturar a los miembros del equipo según el uso de tokens?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, mediante informes de showback. Usa métricas de Prometheus para rastrear tokens por usuario por día, luego asigna los costos del servidor proporcionalmente. Define la política primero: costo compartido o chargeback por departamento.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo hago copias de seguridad de datos de usuarios y registros en un servidor de equipo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Realiza copias de seguridad diarias de todos los registros de entrada/salida en almacenamiento externo. Usa redundancia RAID-6 (tolera 2 fallos simultáneos de disco). Prueba la recuperación mensualmente para asegurarte de que las copias de seguridad sean válidas.' }
+          }
+        ]
+      },
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: '¿Qué arquitectura: servidor único o clúster multi-GPU?', anchor: '#architecture' },
+        { label: '¿Cómo configurar la autenticación y el control de acceso?', anchor: '#auth' },
+        { label: '¿Cómo hacer seguimiento de la atribución de costos y la medición de uso?', anchor: '#metering' },
+        { label: '¿Cómo escalar servidores LLM locales a medida que crece el equipo?', anchor: '#scaling' },
+        { label: '¿Cómo monitorear el rendimiento y resolver problemas?', anchor: '#monitoring' },
+        { label: 'Errores comunes de configuración', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**Equipo pequeño (5-10):** Servidor único (vLLM) + nginx + autenticación = $3K en hardware, $50/mes en electricidad.',
+            '**Equipo mediano (10-50):** Clúster dual-GPU + load balancer + monitoreo Prometheus = $6K en hardware, $100/mes en electricidad.',
+            '**Equipo grande (50+):** Configuración enterprise con redundancia, capa de caché (Redis) y auto-scaling = presupuesto personalizado.',
+            '**Costo por usuario:** $10-100/mes según el volumen de inferencia (frente a $200-500/mes en APIs en la nube).',
+            '**Tiempo de configuración:** Servidor único = 1 día. Clúster = 1 semana. Enterprise = 1 mes (incluye auditoría de seguridad).',
+            '**Autenticación API:** OAuth 2.0 (SSO vía AD/Okta) para enterprise. Autenticación simple por token para pymes.',
+            '**Seguimiento de uso:** Cada consulta registrada con ID de usuario, marca de tiempo y tokens generados (para atribución de costos).',
+            '**Carga administrativa:** Mínima (monitoreo automatizado). Evento de escalado = agregar tarjeta GPU + reequilibrar (sin cambios de código).',
+          ],
+          image: '/public/images/local-llm-cost-comparison.svg',
+          imageCaption: 'Año 1: El LLM local cuesta $3.100 en hardware + electricidad frente a $12.000–$36.000 en APIs en la nube. Año 3+: El costo mensual baja a $120 amortizado, ahorrando más de $16.000 anuales para equipos activos.',
+        },
+        'architecture': {
+          id: 'architecture',
+          title: '¿Qué arquitectura: servidor único o clúster multi-GPU?',
+          image: '/public/images/team-llm-architecture-comparison.svg',
+          imageCaption: 'Un servidor vLLM único maneja 5-10 usuarios con configuración sencilla pero con punto único de fallo. El clúster dual-GPU (10-50 usuarios) proporciona failover automático y mayor rendimiento con balanceo de carga.',
+          content: [
+            '**Servidor vLLM único (5-10 usuarios):**',
+            '- 1× RTX 4090 + 64GB RAM + 1TB SSD.',
+            '- Maneja 10 usuarios simultáneos (5 tok/s cada uno).',
+            '- Configuración sencilla, punto único de fallo. Consulta el [mejor stack LLM local](/es/local-llms/local-llm-developer-stack) para elegir el framework.',
+            '- Costo: $2.500 en hardware + $50/mes en electricidad.',
+            '**Clúster dual-GPU (10-50 usuarios):**',
+            '- 2× instancias vLLM (una por GPU) + nginx load balancer.',
+            '- Maneja 20 usuarios simultáneos (10 tok/s cada uno).',
+            '- Failover automático (si la GPU 0 falla, la GPU 1 sigue operativa). Más información en [escalar LLMs locales en enterprise](/es/local-llms/scaling-local-llms-enterprise).',
+            '- Costo: $5.000 en hardware + $100/mes en electricidad.',
+            '**Capa de caché Redis (opcional):**',
+            '- Almacena en caché prompts frecuentes (mensajes del sistema, plantillas).',
+            '- Reducción del 30% en latencia para consultas repetidas.',
+            '- Costo: $1K en hardware adicional.',
+          ],
+        },
+        'auth': {
+          id: 'auth',
+          title: '¿Cómo configurar la autenticación de usuarios y el control de acceso?',
+          image: '/public/images/team-llm-auth-flow.svg',
+          imageCaption: 'Autenticación simple por token para pymes y OAuth 2.0 con SAML 2.0 para integración SSO enterprise con asignación automática de grupos y control de acceso basado en roles.',
+          content: [
+            '**Autenticación simple (pymes < 50 usuarios):** Clave API por usuario. El usuario envía `Authorization: Bearer $API_KEY` en el encabezado de la solicitud. Para cumplimiento normativo, consulta [compliance enterprise con LLMs locales](/es/local-llms/enterprise-compliance-local-llms).',
+            '**Autenticación enterprise:** OAuth 2.0 + SAML 2.0 con integración Okta/Azure AD. Login SSO, asignación automática de grupos.',
+            '**Rate limiting:** Cuota de tokens por usuario (ej.: 100K tokens/día). Evita que un equipo sature el servidor.',
+            '**Registro de auditoría:** Registra cada llamada API con ID de usuario, IP, tamaño de solicitud, tamaño de respuesta y marca de tiempo.',
+          ],
+        },
+        'metering': {
+          id: 'metering',
+          title: '¿Cómo hacer seguimiento de la atribución de costos y la medición de uso?',
+          content: [
+            '**Seguimiento:** Tokens generados por usuario por día. Suma en todo el equipo para el costo total. Consulta [LLM local privado para datos sensibles](/es/local-llms/private-local-llm-sensitive-data) para la medición con privacidad como prioridad.',
+            '**Atribución:** Asigna el costo del servidor proporcionalmente (ej.: si Alice genera el 40% de los tokens, recibe el 40% de la factura).',
+            '**Informe de showback:** Informe mensual por usuario: tokens usados, costo estimado de API en la nube, costo interno y ahorros.',
+            '**Herramientas:** Prometheus + servicio de facturación personalizado. O la opción de código abierto: Metered.io (seguimiento de costos basado en la nube).',
+          ],
+        },
+        'scaling': {
+          id: 'scaling',
+          title: '¿Cómo escalar servidores LLM locales a medida que crece el equipo?',
+          image: '/public/images/team-scaling-progression.svg',
+          imageCaption: 'Progresión de escalado desde 5-10 usuarios en una sola GPU hasta 100+ usuarios en un despliegue enterprise multi-región. Los requisitos de hardware y el tiempo de configuración aumentan con el tamaño del equipo.',
+          content: [
+            '**5-10 usuarios:** 1× RTX 4090. El servidor se satura cuando todos ejecutan inferencia simultáneamente. Picos de latencia aceptables.',
+            '**10-30 usuarios:** 2× RTX 4090 (máquina dual-GPU). El nginx load balancer distribuye la carga. 20 usuarios simultáneos = cómodo.',
+            '**30-100 usuarios:** Clúster de 3-4× GPU (máquinas separadas) + load balancer dedicado (hardware o software). Kubernetes opcional.',
+            '**100+ usuarios:** Arquitectura enterprise (failover en la nube, capa de caché, API gateway) = considera el modelo híbrido (local + cloud burst).',
+          ],
+        },
+        'monitoring': {
+          id: 'monitoring',
+          title: '¿Cómo monitorear el rendimiento y solucionar problemas?',
+          image: '/public/images/team-llm-monitoring-dashboard.svg',
+          imageCaption: 'Panel de métricas Prometheus en tiempo real con utilización de GPU, latencia de solicitudes, profundidad de cola y rendimiento. Las alertas se activan cuando la latencia supera los 2 segundos o la cola supera las 10 solicitudes.',
+          content: [
+            '**Métricas Prometheus:** vLLM exporta latencia de solicitudes, tokens/seg y longitud de cola. Recoge datos cada 15 seg.',
+            '**Panel Grafana:** Visualiza profundidad de cola, percentiles de latencia (p50, p99) y utilización de GPU.',
+            '**Alertas:** Si la latencia > 2 seg o la cola > 10 solicitudes, notifica al ingeniero de guardia.',
+            '**Registros:** Centraliza los registros de vLLM + nginx en ELK Stack. Busca por usuario, marca de tiempo y error.',
+            '**Identificación de cuellos de botella:** Si la GPU está saturada (>90% de utilización) y la latencia > 1 seg, agrega GPU. Si la CPU está saturada, actualiza la CPU.',
+          ],
+        },
+        'mistakes': {
+          id: 'mistakes',
+          title: 'Errores comunes de configuración',
+          items: [
+            'Punto único de fallo (una sola GPU, sin failover). Si la GPU falla, el equipo pierde acceso. Usa al menos dual-GPU.',
+            'Sin rate limiting. Un usuario ejecuta inferencia de 1M tokens y bloquea a todos los demás. Implementa cuotas de tokens.',
+            'Sin registros de auditoría. No puedes rastrear quién accedió a qué datos. El registro es obligatorio para los equipos de cumplimiento.',
+          ],
+        },
+        'faqSection': {
+          id: 'faq',
+          title: 'FAQ',
+          faqs: [
+            { q: '¿Puedo agregar más usuarios sin comprar hardware nuevo?', a: 'Hasta 20-30 usuarios simultáneos por GPU. Más allá, agrega una segunda RTX 4090 y reequilibra la carga con nginx. Una RTX 4090 maneja aproximadamente 5 tokens/seg por usuario simultáneo.' },
+            { q: '¿Cómo gestiono las actualizaciones de modelos (nueva variante de Llama 3)?', a: 'Descarga el nuevo modelo en una máquina separada y pruébalo antes del despliegue. vLLM soporta el hot-swapping de modelos pausando nuevas solicitudes, terminando las consultas en curso y cambiando los archivos del modelo con cero tiempo de inactividad.' },
+            { q: '¿Debería usar Kubernetes para el despliegue en equipo?', a: 'No es necesario para menos de 50 usuarios. Docker + docker-compose es más simple, más transparente y requiere menos sobrecarga operativa. Kubernetes agrega complejidad sin beneficio correspondiente para equipos pequeños.' },
+            { q: '¿Puedo facturar a los usuarios según los tokens?', a: 'Sí, mediante informes de showback usando métricas de Prometheus. Rastrea los tokens por usuario por día y asigna los costos del servidor proporcionalmente. Define tu política primero: costo compartido en todo el equipo o chargeback por departamento.' },
+            { q: '¿Qué pasa si un usuario elimina accidentalmente datos del servidor?', a: 'Realiza copias de seguridad diarias de todos los registros de entrada/salida en almacenamiento externo. Usa configuración RAID-6 (tolera 2 fallos simultáneos de disco) para redundancia de hardware. Prueba los procedimientos de recuperación mensualmente para asegurarte de que las copias de seguridad sean válidas.' },
+            { q: '¿Puedo integrar con Slack/Teams para acceso sencillo?', a: 'Sí. Construye un bot de Slack que llame a la API de vLLM y devuelva respuestas en el canal. Integración popular: usa un wrapper de OpenAI API para Slack, compatible con el endpoint compatible con OpenAI de vLLM.' },
+          ],
+        },
+        'relatedReading': {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Mejor stack LLM local para desarrolladores](/es/local-llms/local-llm-developer-stack) — Elección de frameworks de código abierto para producción',
+            '[LLM local privado para datos sensibles](/es/local-llms/private-local-llm-sensitive-data) — Residencia de datos y requisitos de cumplimiento',
+            '[Compliance enterprise con LLMs locales](/es/local-llms/enterprise-compliance-local-llms) — Consideraciones legales y regulatorias para equipos',
+            '[Escalar LLMs locales en enterprise](/es/local-llms/scaling-local-llms-enterprise) — Despliegues multi-región y redundancia',
+          ],
+        },
+        'sources': {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            '[Documentación oficial de vLLM](https://docs.vllm.ai/en/latest/) — configuración multiusuario y rate limiting',
+            '[Documentación de Prometheus](https://prometheus.io/docs/) — recopilación de métricas y alertas',
+            '[Mejores prácticas de Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) — orquestación de contenedores para despliegues a gran escala',
+            'Los despliegues en equipo requieren prácticas estandarizadas de prompting. Establece estándares de ingeniería de prompts a nivel de equipo: [configuración de ingeniería de prompts para equipos pequeños](https://www.promptquorum.com/prompt-engineering/prompt-engineering-setup-small-teams) cubre gobernanza, plantillas y flujos de trabajo.',
+          ],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Configuración de LLM local para equipos empresariales',
+        'numberOfItems': 8,
+        'inLanguage': 'es',
+        'itemListElement': [
+          { '@type': 'ListItem', position: 1, name: 'Equipo pequeño (5-10): Servidor único (vLLM) + nginx + autenticación = $3K en hardware, $50/mes en electricidad.' },
+          { '@type': 'ListItem', position: 2, name: 'Equipo mediano (10-50): Clúster dual-GPU + load balancer + monitoreo Prometheus = $6K en hardware, $100/mes en electricidad.' },
+          { '@type': 'ListItem', position: 3, name: 'Equipo grande (50+): Configuración enterprise con redundancia, capa de caché (Redis) y auto-scaling = presupuesto personalizado.' },
+          { '@type': 'ListItem', position: 4, name: 'Costo por usuario: $10-100/mes según el volumen de inferencia (frente a $200-500/mes en APIs en la nube).' },
+          { '@type': 'ListItem', position: 5, name: 'Tiempo de configuración: Servidor único = 1 día. Clúster = 1 semana. Enterprise = 1 mes (incluye auditoría de seguridad).' },
+          { '@type': 'ListItem', position: 6, name: 'Autenticación API: OAuth 2.0 (SSO vía AD/Okta) para enterprise. Autenticación simple por token para pymes.' },
+          { '@type': 'ListItem', position: 7, name: 'Seguimiento de uso: Cada consulta registrada con ID de usuario, marca de tiempo y tokens generados (para atribución de costos).' },
+          { '@type': 'ListItem', position: 8, name: 'Carga administrativa: Mínima (monitoreo automatizado). Evento de escalado = agregar tarjeta GPU + reequilibrar (sin cambios de código).' },
+        ],
+      },
+    },
   };

@@ -945,6 +945,255 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'Guía de Comandos de Ollama: Todos los Comandos Explicados (2026)',
+      seoTitle: 'Referencia de Comandos Ollama 2026: pull, run, serve',
+      intro: 'Ollama es una herramienta de línea de comandos, y entender sus comandos la hace mucho más poderosa. Esta guía cubre los comandos esenciales: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` y opciones avanzadas como la cuantización de modelos y Modelfiles personalizados. A partir de abril de 2026, estos comandos cubren el 95% de los casos de uso del mundo real.',
+      metaDescription: 'Comandos de Ollama explicados 2026: pull, run, list, rm, serve, create con ejemplos. Referencia CLI completa cubre el 95% de los casos de uso.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '**Ollama es una herramienta de línea de comandos, y entender sus comandos la hace mucho más poderosa. Esta guía cubre los comandos esenciales: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` y opciones avanzadas como la cuantización de modelos y Modelfiles personalizados.**',
+      audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
+      readTime: '11 min de lectura',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'Comandos de Ollama',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: 'Comandos esenciales', anchor: '#essential-commands' },
+        { label: 'Gestión de modelos', anchor: '#managing-models' },
+        { label: 'Ejecución y servicio', anchor: '#running-serving' },
+        { label: 'Avanzado: Modelfiles personalizados', anchor: '#custom-modelfiles' },
+        { label: 'Avanzado: Cuantización', anchor: '#quantization' },
+        { label: 'Avanzado: Modelos de embeddings', anchor: '#embedding-models' },
+        { label: 'Variables de entorno', anchor: '#env-variables' },
+        { label: 'Errores comunes', anchor: '#common-mistakes' },
+        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+        { label: 'Fuentes', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '`ollama pull <model>` -- Descarga un modelo (p. ej., `ollama pull llama3.2:3b`).',
+            '`ollama run <model>` -- Inicia un chat con un modelo.',
+            '`ollama list` -- Muestra todos los modelos descargados y sus tamaños.',
+            '`ollama rm <model>` -- Elimina un modelo descargado.',
+            '`ollama serve` -- Inicia el servidor API de Ollama (se ejecuta automáticamente en Mac/Windows).',
+            '`ollama create <name> -f <modelfile>` -- Construye un modelo personalizado desde un Modelfile.',
+            'A partir de abril de 2026, estos comandos son estables y cubren todos los casos de uso comunes.',
+          ],
+        },
+        essentialCommands: {
+          id: 'essential-commands',
+          title: '¿Cuáles son los comandos esenciales de Ollama?',
+          items: [
+            '**`ollama list`** -- Muestra los modelos descargados, el uso del disco y la fecha de modificación.',
+            '**`ollama pull <model>`** -- Descarga un modelo por nombre (p. ej., `ollama pull mistral`).',
+            '**`ollama run <model>`** -- Inicia una sesión de chat con un modelo.',
+            '**`ollama rm <model>`** -- Elimina un modelo y libera espacio en disco.',
+            '**`ollama serve`** -- Inicia el servidor API REST (normalmente se ejecuta automáticamente).',
+            '**`ollama help`** -- Muestra todos los comandos disponibles.',
+          ],
+        },
+        managingModels: {
+          id: 'managing-models',
+          title: '¿Cómo se gestionan los modelos en Ollama?',
+          content: 'La gestión de modelos en Ollama es completamente por comandos:',
+          codeBlock: '# Listar todos los modelos descargados\nollama list\n\n# Descargar un modelo desde la biblioteca de Ollama\nollama pull llama3.2:3b       # Versión 7-bit (~2.5 GB)\nollama pull llama3.2:3b-fp16  # Precisión completa (~6.5 GB)\n\n# Descargar cuantización específica\nollama pull qwen2.5:7b-q4   # Cuantización 4-bit\nollama pull qwen2.5:7b-q8   # Cuantización 8-bit\n\n# Ver uso del disco\ndu -sh ~/.ollama/models\n\n# Eliminar un modelo\nollama rm llama3.2:3b\n\n# Descargar desde registro personalizado (avanzado)\nollama pull localhost:5000/custom-model',
+          codeLanguage: 'bash',
+        },
+        runningServing: {
+          id: 'running-serving',
+          title: '¿Cómo se ejecutan y sirven los modelos?',
+          content: 'Hay dos formas de usar Ollama:',
+          codeBlock: '# 1. Chat interactivo (CLI)\nollama run llama3.2:3b\n# Escribe tus prompts y presiona Enter\n\n# 2. Iniciar el servidor API (se ejecuta en segundo plano)\nollama serve\n# La API escucha en http://localhost:11434/v1\n\n# 3. Usar el modelo vía API desde otra terminal\ncurl http://localhost:11434/v1/chat/completions \\\n  -H "Content-Type: application/json" \\\n  -d \'{\n    "model": "llama3.2:3b",\n    "messages": [{"role": "user", "content": "Hola"}]\n  }\'',
+          codeLanguage: 'bash',
+        },
+        modelfiles: {
+          id: 'custom-modelfiles',
+          title: '¿Cómo se crean modelos personalizados con Modelfiles?',
+          content: [
+            '**Un Modelfile es un archivo de configuración (como un Dockerfile) que define un modelo personalizado partiendo de un modelo base y añadiendo system prompts, parámetros y pesos.**',
+          ],
+          codeBlock: '# Crear un archivo llamado Modelfile\nFROM llama3.2:3b\n\n# Añadir un system prompt\nSYSTEM """\nEres un experto útil en aprendizaje automático.\nSiempre explica conceptos complejos en términos simples.\n"""\n\n# Ajustar parámetros\nPARAMETER temperature 0.7\nPARAMETER top_p 0.9\n\n# Construir el modelo personalizado\nollama create ml-expert -f Modelfile\n\n# Usarlo\nollama run ml-expert',
+          codeLanguage: 'bash',
+        },
+        quantization: {
+          id: 'quantization',
+          title: '¿Qué opciones de cuantización soporta Ollama?',
+          content: [
+            '**La cuantización reduce el tamaño del modelo y la VRAM usando números de menor precisión.** Ollama soporta el formato GGUF con múltiples cuantizaciones:',
+          ],
+          rows: [
+            { 'Cuantización': 'FP16 (precisión completa)', 'Tamaño (7B)': '14 GB', 'VRAM': '16 GB', 'Calidad': 'Mejor', 'Velocidad': 'Más lenta' },
+            { 'Cuantización': 'Q8_0 (8-bit)', 'Tamaño (7B)': '7 GB', 'VRAM': '8 GB', 'Calidad': 'Excelente', 'Velocidad': 'Rápida' },
+            { 'Cuantización': 'Q6_K (6-bit)', 'Tamaño (7B)': '5.5 GB', 'VRAM': '6 GB', 'Calidad': 'Muy buena', 'Velocidad': 'Rápida' },
+            { 'Cuantización': 'Q5_K_M (5-bit)', 'Tamaño (7B)': '5 GB', 'VRAM': '5.5 GB', 'Calidad': 'Buena', 'Velocidad': 'Muy rápida' },
+            { 'Cuantización': 'Q4_K_M (4-bit)', 'Tamaño (7B)': '4.7 GB', 'VRAM': '5 GB', 'Calidad': 'Buena', 'Velocidad': 'Muy rápida' },
+            { 'Cuantización': 'Q3_K_M (3-bit)', 'Tamaño (7B)': '3.3 GB', 'VRAM': '4 GB', 'Calidad': 'Aceptable', 'Velocidad': 'Más rápida' },
+          ],
+          columns: ['Cuantización', 'Tamaño (7B)', 'VRAM', 'Calidad', 'Velocidad'],
+        },
+        embeddings: {
+          id: 'embedding-models',
+          title: '¿Cómo se generan embeddings con Ollama?',
+          content: [
+            '**Los embeddings son representaciones numéricas de texto, útiles para RAG (Generación Aumentada por Recuperación) y búsqueda semántica.**',
+          ],
+          codeBlock: '# Descargar un modelo de embeddings\nollama pull nomic-embed-text  # Mejor para inglés, 137M params\n\n# Generar embeddings\ncurl http://localhost:11434/v1/embeddings \\\n  -H "Content-Type: application/json" \\\n  -d \'{\n    "model": "nomic-embed-text",\n    "input": "The quick brown fox jumps"\n  }\'\n\n# La respuesta incluye embeddings como vector de 768 dimensiones',
+          codeLanguage: 'bash',
+        },
+        envVariables: {
+          id: 'env-variables',
+          title: '¿Qué variables de entorno controlan Ollama?',
+          content: 'Variables de entorno clave:',
+          items: [
+            '`OLLAMA_HOST` -- Dirección de escucha (por defecto: 127.0.0.1:11434). Establece `0.0.0.0:11434` para acceso en red.',
+            '`OLLAMA_MODELS` -- Dónde almacenar los modelos (por defecto: `~/.ollama/models`).',
+            '`OLLAMA_DEBUG` -- Establece en `1` para registros detallados.',
+            '`OLLAMA_GPU` -- GPU a usar (por defecto: detección automática). Establece `cuda` o `rocm`.',
+            '`OLLAMA_KEEP_ALIVE` -- Cuánto tiempo mantener el modelo en memoria (por defecto: 5 minutos).',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Errores comunes con los comandos de Ollama',
+          items: [
+            '**Olvidar las etiquetas del modelo.** `ollama pull llama3.2` descarga la versión más grande; `ollama pull llama3.2:3b` descarga la versión 3B.',
+            '**No saber que `ollama serve` se ejecuta automáticamente.** En Mac y Windows, Ollama inicia la API automáticamente al abrir la app. En Linux, puede ser necesario iniciarlo manualmente.',
+            '**Descargar la cuantización incorrecta.** Siempre especifica la etiqueta exacta del modelo (p. ej., `qwen2.5:7b-q4`) para controlar el uso de VRAM.',
+            '**Esperar que Ollama funcione sin conexión tras la descarga.** Ollama en sí funciona sin conexión, pero los modelos deben descargarse con conexión a internet.',
+          ],
+        },
+        faqSection: {
+          id: 'common-questions',
+          title: 'Preguntas frecuentes sobre los comandos de Ollama',
+          faqs: [
+            {
+              q: '¿Dónde se almacenan los modelos de Ollama?',
+              a: 'Por defecto: `~/.ollama/models` en macOS/Linux o `%USERPROFILE%\\.ollama\\models` en Windows. Establece `OLLAMA_MODELS` para cambiar la ubicación.',
+            },
+            {
+              q: '¿Puedo mover modelos entre computadoras?',
+              a: 'Sí. Copia los archivos del modelo desde `~/.ollama/models` al directorio `~/.ollama/models` de otra computadora; `ollama list` los reconocerá automáticamente.',
+            },
+            {
+              q: '¿Cómo veo el uso de memoria de los modelos activos?',
+              a: 'Usa `ollama ps` para listar los modelos actualmente cargados. Los modelos se descargan de memoria tras 5 minutos de inactividad por defecto.',
+            },
+            {
+              q: '¿Puedo ejecutar varios modelos simultáneamente?',
+              a: 'Sí, pero comparten VRAM. Ejecutar dos modelos 8B requiere 16 GB de VRAM. Cada modelo adicional aumenta el uso de memoria.',
+            },
+            {
+              q: '¿Cuál es la diferencia entre GGUF y otros formatos de modelo?',
+              a: 'GGUF está cuantizado, es eficiente y funciona en CPU/GPU. Es el estándar para LLMs locales. Otros formatos (safetensors, PyTorch .bin) requieren más VRAM y no están optimizados para inferencia local.',
+            },
+            {
+              q: '¿Cómo uso los modelos de Ollama en mi propia aplicación?',
+              a: '`ollama serve` inicia una API compatible con OpenAI en `localhost:11434`. Usa cualquier SDK de OpenAI (Python, Node.js, etc.) apuntando a esa URL para enviar solicitudes y recibir respuestas.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- Guía de instalación.',
+            '[API local LLM compatible con OpenAI](/es/local-llms/local-llm-openai-compatible-api) -- Usa la API de Ollama desde código.',
+            '[Mejores interfaces para LLMs locales](/es/local-llms/best-local-llm-frontends) -- Interfaces de chat para Ollama.',
+            '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) -- Comparativa con LM Studio.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            'GitHub de Ollama -- github.com/ollama/ollama',
+            'Documentación de Ollama -- github.com/ollama/ollama/blob/main/docs',
+            'Biblioteca de modelos de Ollama -- ollama.ai/library',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Guía de Comandos de Ollama: Todos los Comandos Explicados (2026)',
+        'description': 'Comandos de Ollama explicados 2026: pull, run, list, rm, serve, create con ejemplos. Referencia CLI completa cubre el 95% de los casos de uso.',
+        'url': 'https://www.promptquorum.com/es/local-llms/ollama-command-guide',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'Comandos de Ollama' },
+          { '@type': 'Thing', 'name': 'Formato GGUF' },
+          { '@type': 'Thing', 'name': 'cuantización de modelos' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner to Advanced',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Dónde se almacenan los modelos de Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Por defecto: `~/.ollama/models` en macOS/Linux o `%USERPROFILE%\\.ollama\\models` en Windows. Establece `OLLAMA_MODELS` para cambiar la ubicación.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo mover modelos entre computadoras?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Copia los archivos del modelo desde `~/.ollama/models` al directorio `~/.ollama/models` de otra computadora; `ollama list` los reconocerá automáticamente.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo veo el uso de memoria de los modelos activos?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Usa `ollama ps` para listar los modelos actualmente cargados. Los modelos se descargan de memoria tras 5 minutos de inactividad por defecto.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar varios modelos simultáneamente?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, pero comparten VRAM. Ejecutar dos modelos 8B requiere 16 GB de VRAM. Cada modelo adicional aumenta el uso de memoria.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre GGUF y otros formatos de modelo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF está cuantizado, es eficiente y funciona en CPU/GPU. Es el estándar para LLMs locales. Otros formatos (safetensors, PyTorch .bin) requieren más VRAM y no están optimizados para inferencia local.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo uso los modelos de Ollama en mi propia aplicación?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '`ollama serve` inicia una API compatible con OpenAI en `localhost:11434`. Usa cualquier SDK de OpenAI (Python, Node.js, etc.) apuntando a esa URL para enviar solicitudes y recibir respuestas.' }
+          }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Guía de Comandos de Ollama: Todos los Comandos Explicados (2026)',
+        'itemListElement': [
+          { '@type': 'ListItem', position: 1, name: '`ollama pull <model>` -- Descarga un modelo (p. ej., `ollama pull llama3.2:3b`).' },
+          { '@type': 'ListItem', position: 2, name: '`ollama run <model>` -- Inicia un chat con un modelo.' },
+          { '@type': 'ListItem', position: 3, name: '`ollama list` -- Muestra todos los modelos descargados y sus tamaños.' },
+          { '@type': 'ListItem', position: 4, name: '`ollama rm <model>` -- Elimina un modelo descargado.' },
+          { '@type': 'ListItem', position: 5, name: '`ollama serve` -- Inicia el servidor API de Ollama (se ejecuta automáticamente en Mac/Windows).' },
+          { '@type': 'ListItem', position: 6, name: '`ollama create <name> -f <modelfile>` -- Construye un modelo personalizado desde un Modelfile.' },
+          { '@type': 'ListItem', position: 7, name: 'A partir de abril de 2026, estos comandos son estables y cubren todos los casos de uso comunes.' },
+        ],
+      },
+    },
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',

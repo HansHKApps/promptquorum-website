@@ -118,6 +118,116 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Advanced Techniques',
+      title: 'LLMs locales multimodales: visión, audio y procesamiento de texto',
+      seoTitle: 'LLMs locales multimodales',
+      intro: 'Los modelos multimodales procesan imágenes, texto y audio. A partir de abril de 2026, Llama 3.2 Vision, Gemma 3 Vision y Qwen2-VL son modelos multimodales prácticos para implementación local. Permiten OCR de documentos, análisis de imágenes y preguntas y respuestas visuales sin APIs de nube.',
+      metaDescription: 'LLMs locales multimodales 2026: visión, procesamiento de imágenes, OCR, modelos de audio. Guías de LLaVA y Qwen-VL con casos de uso.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Los modelos multimodales procesan imágenes, texto y audio. A partir de abril de 2026, Llama 3.2 Vision, Gemma 3 Vision y Qwen2-VL son modelos multimodales prácticos para implementación local.**',
+      audience: 'Principiantes ejecutando su primer LLM local en hardware de consumo',
+      readTime: '10 min de lectura',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'modelos multimodales',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: 'Modelos multimodales disponibles', anchor: '#models' },
+        { label: 'Capacidades de visión', anchor: '#vision' },
+        { label: 'Configuración y uso', anchor: '#setup' },
+        { label: 'Casos de uso reales', anchor: '#use-cases' },
+        { label: 'Rendimiento y limitaciones', anchor: '#performance' },
+        { label: 'Errores comunes', anchor: '#common-mistakes' },
+        { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**Multimodal = texto + imágenes (+ audio).** Procesa imágenes de forma nativa sin preprocesamiento OCR.',
+            '**Mejores modelos (2026):** Llama 3.2 Vision 11B, Qwen2-VL 7B, Gemma 3 Vision 9B.',
+            '**Casos de uso:** OCR de documentos, análisis de imágenes, preguntas y respuestas visuales, extracción de tablas.',
+            '**Velocidad:** 2-5 segundos por imagen (modelo 11B). Más lento que solo texto, pero práctico.',
+            'A partir de abril de 2026, lo multimodal es maduro para casos de uso específicos, pero no de propósito general todavía.',
+          ],
+        },
+        models: {
+          title: 'Modelos multimodales disponibles (abril de 2026)',
+          rows: [
+            { 'Modelo': 'Llama 3.2 Vision 11B', 'Soporte de imagen': 'Sí', 'VRAM': '8 GB', 'Velocidad': '3-5 seg/imagen', 'Mejor para': 'Visión general' },
+            { 'Modelo': 'Qwen2-VL 7B', 'Soporte de imagen': 'Sí', 'VRAM': '5 GB', 'Velocidad': '2-3 seg/imagen', 'Mejor para': 'Visión rápida' },
+            { 'Modelo': 'Gemma 3 Vision 9B', 'Soporte de imagen': 'Sí', 'VRAM': '6 GB', 'Velocidad': '3 seg/imagen', 'Mejor para': 'Equilibrado' },
+            { 'Modelo': 'Llama 3.2 Vision 90B', 'Soporte de imagen': 'Sí', 'VRAM': '55 GB', 'Velocidad': '10+ seg/imagen', 'Mejor para': 'Alta calidad' },
+          ],
+          columns: ['Modelo', 'Soporte de imagen', 'VRAM', 'Velocidad por imagen', 'Mejor para'],
+        },
+        vision: {
+          title: 'Capacidades de visión',
+          content: [
+            'Los modelos multimodales pueden:',
+          ],
+          items: [
+            '**Descripción de imágenes:** Explica qué hay en una imagen.',
+            '**OCR (Reconocimiento óptico de caracteres):** Extrae texto de imágenes (tarjeta de visita, escaneo de documento).',
+            '**Preguntas y respuestas visuales:** Responde preguntas sobre imágenes ("¿Cuál es la marca del auto?").',
+            '**Extracción de tablas:** Analiza tablas de imágenes en datos estructurados.',
+            '**Análisis de gráficos:** Interpreta visualizaciones de datos.',
+            '**Detección de objetos:** Identifica y localiza objetos en imágenes.',
+          ],
+        },
+        setup: {
+          title: 'Configuración y uso',
+          content: 'Usando Llama 3.2 Vision con Ollama:',
+          codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
+          codeLanguage: 'python',
+        },
+        useCases: {
+          title: 'Casos de uso reales',
+          items: [
+            '**Procesamiento de documentos:** Extrae texto de PDFs escaneados sin servicio OCR externo.',
+            '**Moderación de contenido:** Marca imágenes inapropiadas sin enviarlas a la nube.',
+            '**Accesibilidad:** Describe imágenes para usuarios con discapacidad visual.',
+            '**Análisis de productos:** Analiza imágenes de productos en e-commerce (categoría, estado, defectos).',
+            '**Investigación:** Analiza gráficos y diagramas científicos.',
+          ],
+        },
+        performance: {
+          title: 'Rendimiento y limitaciones',
+          content: [
+            '**Precisión:** Buena para OCR de documentos y descripción, pero no perfecta para análisis detallado u objetos pequeños.',
+            '**Velocidad:** 2-5 segundos por imagen. Los modelos de nube (GPT-4 Vision) son 10-50× más rápidos.',
+            '**Tamaño de imagen:** Soporta hasta ~1000×1000 píxeles. Las imágenes más grandes se reducen por muestreo.',
+            '**Limitaciones:** No puede igualar la precisión de GPT-4 Vision en escenas complejas. Compromiso: privacidad frente a calidad.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Errores comunes',
+          items: [
+            '**Esperar la precisión de GPT-4 Vision.** Los modelos locales son 20-30% menos precisos. Úsalos para dominios específicos, no para visión general.',
+            '**No preparar las imágenes.** Recorta las imágenes al área de enfoque. Elimina el ruido. Mejor entrada = mejor salida.',
+            '**Usar modelos 7B para visión compleja.** Los modelos pequeños tienen dificultades con detalles sutiles. Usa 11B+ para visión confiable.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding) -- La visión puede ayudar a entender el código.',
+            '[RAG local 2026](/es/local-llms/local-rag-2026) -- Combina visión con RAG para el procesamiento de documentos.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            'Llama 3.2 Vision Model Card -- huggingface.co/meta-llama/Llama-3.2-11B-Vision',
+            'Qwen2-VL -- github.com/QwenLM/Qwen2-VL',
+          ],
+        },
+      },
+    },
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',

@@ -272,6 +272,270 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Enterprise',
+      title: 'On-Prem Air-Gapped Local LLMs: Despliegue Aislado para Entornos Clasificados',
+      seoTitle: 'Despliegue de LLM Local con Air-Gap',
+      intro: 'El despliegue air-gapped significa que la infraestructura del LLM está completamente aislada de internet. Sin conexión a internet, sin llamadas a API externas, sin riesgo de exfiltración de datos. A partir de abril de 2026, esto es el estándar para gobiernos, militares e instituciones financieras que manejan datos clasificados o altamente sensibles.',
+      metaDescription: 'Despliegue de LLM local con air-gap: arquitectura de aislamiento completo, seguridad de red, gestión de actualizaciones y manejo de datos clasificados.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**El despliegue air-gapped significa que la infraestructura del LLM está completamente aislada de internet. Sin conexión a internet, sin llamadas a API externas, sin riesgo de exfiltración de datos. A partir de abril de 2026, esto es el estándar para gobiernos, militares e instituciones financieras que manejan datos clasificados o altamente sensibles.**',
+      audience: 'Ingenieros que despliegan LLM locales en entornos de producción o empresariales',
+      readTime: '12 min de lectura',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'despliegue air-gapped',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: '¿Qué es air-gapped?', anchor: '#what-is-air-gapped' },
+        { label: 'Diseño de arquitectura', anchor: '#architecture' },
+        { label: 'Aislamiento de red', anchor: '#network-isolation' },
+        { label: 'Gestión de modelos y datos', anchor: '#model-management' },
+        { label: 'Actualizaciones y mantenimiento', anchor: '#updates' },
+        { label: 'Consideraciones de seguridad', anchor: '#security' },
+        { label: 'Errores comunes', anchor: '#common-mistakes' },
+        { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+        { label: 'Fuentes', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Air-gapped = completamente aislado de internet. Cero conectividad de red con sistemas externos.',
+            'Caso de uso: gobierno (clasificado), militar (escenarios de guerra), finanzas (alta seguridad), salud (HIPAA ultrasensible).',
+            'Desafío: no se pueden actualizar automáticamente modelos, embeddings ni dependencias. Requiere procedimientos manuales.',
+            'Arquitectura: hardware dedicado, almacenamiento cifrado, acceso de usuario restringido, seguridad física.',
+            '**Aislamiento de red:** firewalls, appliances air-gap y segmentación de red previenen cualquier comunicación externa.',
+            '**Gestión de modelos:** transfiere modelos solo por USB, medios seguros o redes internas; sin acceso a la nube.',
+            '**Actualizaciones:** proceso manual -- prueba las actualizaciones offline primero, luego despliégalas por canales seguros.',
+            'A partir de abril de 2026, air-gapped es el estándar para gobiernos y contratistas de defensa.',
+          ],
+        },
+        whatIsAirGapped: {
+          title: '¿Qué significa air-gapped?',
+          content: [
+            '**La infraestructura air-gapped no tiene conexión de red a internet ni a ningún sistema externo.** Todos los datos y la computación permanecen en hardware aislado.',
+            '**Aislamiento absoluto:** sin WiFi, sin Ethernet a redes externas, sin conexiones USB a dispositivos conectados a internet.',
+            '**Los datos nunca salen:** la inferencia ocurre localmente, los resultados se quedan localmente.',
+            '**Las actualizaciones son manuales:** no se pueden descargar actualizaciones de modelos automáticamente. Las actualizaciones requieren medios físicos (USB, tarjeta SD) o transferencia por red interna.',
+          ],
+        },
+        architecture: {
+          title: '¿Cómo es una arquitectura air-gapped típica?',
+          content: [
+            '**Una sola máquina o un pequeño clúster, completamente aislado, con acceso físico restringido.**',
+          ],
+          numberedItems: [
+            '**Hardware dedicado:** servidores usados solo para inferencia de LLM, nada más.',
+            '**Red aislada:** sin conexión a la red corporativa ni a internet. Como máximo, una VLAN separada.',
+            '**Almacenamiento cifrado:** todos los archivos de modelo, datos y logs cifrados en reposo.',
+            '**Acceso controlado:** solo el personal autorizado puede acceder. Se requiere autenticación multifactor.',
+            '**Seguridad física:** sala de servidores cerrada con llave, vigilancia, registros de acceso.',
+            '**Sin medios extraíbles:** puertos USB deshabilitados, unidades CD/DVD eliminadas.',
+            '**Monitoreo local:** los logs permanecen en el sistema, no se envían a servicios de monitoreo externos.',
+          ],
+        },
+        networkIsolation: {
+          title: '¿Cómo se aíslan las redes de las conexiones externas?',
+          content: [
+            '**El aislamiento se aplica en múltiples niveles:**',
+          ],
+          items: [
+            '**Físico:** hardware de red separado (switch, router) para la infraestructura air-gapped.',
+            '**Firewall:** tráfico entrante y saliente bloqueado. Sin excepciones para servicios en la nube, NTP ni DNS hacia servidores externos.',
+            '**Software:** firewalls a nivel de host (iptables, Windows Firewall) como control secundario.',
+            '**Monitoreo:** el tráfico de red se audita. Cualquier intento de conexión externa se registra y marca.',
+          ],
+        },
+        modelManagement: {
+          title: '¿Cómo se gestionan los modelos en entornos air-gapped?',
+          content: [
+            '**Las actualizaciones de modelos son manuales y requieren transferencia de medios físicos o procesos internos seguros.**',
+          ],
+          numberedItems: [
+            'Descarga el modelo en una máquina conectada a internet (entorno separado y no clasificado).',
+            'Verifica la integridad del modelo (checksum, firma digital).',
+            'Transfiere al sistema air-gapped mediante USB cifrado o servidor de archivos interno.',
+            'Validación: ejecuta pruebas para asegurar que la integridad del modelo no se comprometió durante la transferencia.',
+            'Despliegue: carga el modelo en el motor de inferencia.',
+            'Documentación: registra qué modelos se despliegan, versiones y fechas.',
+          ],
+        },
+        updates: {
+          title: '¿Cómo se gestionan las actualizaciones y los parches?',
+          content: [
+            '**Las actualizaciones de seguridad y de modelos son manuales:**',
+          ],
+          items: [
+            '**Actualizaciones de modelos:** sigue el proceso anterior. Programa actualizaciones trimestralmente o anualmente.',
+            '**Parches del SO:** prueba primero en un entorno de staging aislado, luego despliega en producción.',
+            '**Dependencias:** evalúa las versiones nuevas con cuidado. Los sistemas air-gapped ejecutan versiones más antiguas por más tiempo.',
+            '**Sin actualizaciones automáticas:** deshabilita las actualizaciones automáticas por completo. Todas las actualizaciones son controladas, documentadas y auditadas.',
+          ],
+        },
+        security: {
+          title: '¿Cómo se garantiza la seguridad en sistemas air-gapped?',
+          content: [
+            '**Air-gapped es inherentemente más seguro (sin ataques externos), pero surgen nuevos riesgos:**',
+          ],
+          items: [
+            '**Amenazas internas:** los empleados con acceso podrían copiar datos por USB. Se requiere integridad de dos personas.',
+            '**Ataques a la cadena de suministro:** modelos o dependencias comprometidos durante la transferencia. Verifica checksums y firmas digitales.',
+            '**Robo físico:** modelos y datos que valen millones. Se requieren sala cerrada, vigilancia y detección de intrusos.',
+            '**Ingeniería social:** "Confía en mí, necesito actualizar el modelo." Se requieren procesos formales de control de cambios.',
+            '**Brechas de registro:** si los logs no se auditan, nadie detecta la actividad interna. Se requiere auditoría externa regular de logs.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Errores comunes en el despliegue air-gapped',
+          items: [
+            '**Aislamiento incompleto:** dejar un puerto abierto, una tarjeta inalámbrica habilitada o permitir dispositivos USB anula el air-gapping. Audita rigurosamente.',
+            '**Sin control de cambios:** las actualizaciones de modelos ocurren de forma informal, sin documentación. Lleva a la pérdida de conocimiento sobre qué versión está desplegada.',
+            '**Mala estrategia de respaldo:** los sistemas air-gapped necesitan almacenamiento redundante y copias de seguridad fuera del sitio. Pero las copias de seguridad también deben ser air-gapped.',
+            '**Registro insuficiente:** los sistemas air-gapped requieren auditoría exhaustiva (quién accedió a qué y cuándo). Sin logs, las brechas no se detectan.',
+            '**Confiar solo en la seguridad física:** la seguridad requiere múltiples capas: aislamiento, cifrado, control de acceso y auditoría, no solo puertas con llave.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Preguntas frecuentes sobre sistemas air-gapped',
+          faqs: [
+            {
+              q: '¿Cómo actualizamos los modelos en un sistema air-gapped?',
+              a: 'De forma manual mediante USB cifrado, o a través de una red segura interna aislada de internet. Todas las actualizaciones requieren aprobación del control de cambios y registros de auditoría.',
+            },
+            {
+              q: '¿Podemos usar copias de seguridad en la nube para sistemas air-gapped?',
+              a: 'No. Las copias de seguridad en la nube requieren conexión a internet (lo que anula el air-gapping). Usa copias de seguridad físicas (discos duros cifrados) almacenadas en una instalación segura separada.',
+            },
+            {
+              q: '¿Es air-gapped realmente seguro contra todos los ataques?',
+              a: 'En su mayoría, pero las amenazas internas persisten. Air-gapped es seguro contra ataques remotos, pero el acceso físico o el acceso interno pueden comprometerlo.',
+            },
+            {
+              q: '¿Cuánto cuesta un despliegue air-gapped?',
+              a: 'El hardware cuesta entre $50k y $500k (no mucho más que un despliegue on-prem regular). Los costos operativos (seguridad, auditoría, formación) son entre 5 y 10 veces más altos debido a los procesos manuales.',
+            },
+            {
+              q: '¿Podemos usar herramientas estándar (Ollama, vLLM) en entornos air-gapped?',
+              a: 'Sí. Ambas herramientas funcionan sin internet. Se despliegan una vez y no necesitan conectividad a internet. Asegúrate de que todas las dependencias estén instaladas offline.',
+            },
+            {
+              q: '¿Qué pasa si necesitamos cumplir con el RGPD pero no necesitamos air-gapping completo?',
+              a: 'Para cargas de trabajo donde el air-gapping no es necesario pero sí el RGPD, las [opciones de GPU en la nube conformes con la UE →](/es/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) ofrecen residencia de datos en la UE sin la complejidad del aislamiento.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Por qué las empresas usan LLM locales](/es/local-llms/why-enterprises-use-local-llms) -- Caso de negocio para IA on-prem.',
+            '[Cumplimiento normativo para LLM locales en empresas](/es/local-llms/enterprise-compliance-local-llms) -- Requisitos regulatorios.',
+            '[Escalado de LLM locales en empresas](/es/local-llms/scaling-local-llms-enterprise) -- Despliegue en producción más allá de una sola máquina.',
+            '[Lista de verificación de seguridad y privacidad para LLM locales](/es/local-llms/local-llm-security-privacy-checklist) -- Verificación de seguridad en 12 pasos.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            'NIST Cybersecurity Framework -- nist.gov/cyberframework',
+            'DoD Data Management -- defense.gov/News/Releases/',
+            'Guías de seguridad air-gap -- ietf.org (documentos RFC sobre aislamiento de red)',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Despliegue de LLM Local con Air-Gap',
+        'description': 'Despliegue de LLM local con air-gap: arquitectura de aislamiento completo, seguridad de red, gestión de actualizaciones y manejo de datos clasificados.',
+        'url': 'https://www.promptquorum.com/es/local-llms/on-prem-air-gapped-local-llm',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Cómo actualizamos los modelos en un sistema air-gapped?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'De forma manual mediante USB cifrado, o a través de una red segura interna aislada de internet. Todas las actualizaciones requieren aprobación del control de cambios y registros de auditoría.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Podemos usar copias de seguridad en la nube para sistemas air-gapped?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Las copias de seguridad en la nube requieren conexión a internet (lo que anula el air-gapping). Usa copias de seguridad físicas (discos duros cifrados) almacenadas en una instalación segura separada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es air-gapped realmente seguro contra todos los ataques?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En su mayoría, pero las amenazas internas persisten. Air-gapped es seguro contra ataques remotos, pero el acceso físico o el acceso interno pueden comprometerlo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto cuesta un despliegue air-gapped?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El hardware cuesta entre $50k y $500k (no mucho más que un despliegue on-prem regular). Los costos operativos (seguridad, auditoría, formación) son entre 5 y 10 veces más altos debido a los procesos manuales.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Podemos usar herramientas estándar (Ollama, vLLM) en entornos air-gapped?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Ambas herramientas funcionan sin internet. Se despliegan una vez y no necesitan conectividad a internet. Asegúrate de que todas las dependencias estén instaladas offline.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Despliegue de LLM Local con Air-Gap',
+        'inLanguage': 'es',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Aislamiento de red completo',
+            'description': 'La infraestructura air-gapped no tiene conexión de red a internet ni a ningún sistema externo, garantizando cero acceso externo.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Procedimientos de actualización manual',
+            'description': 'Las actualizaciones de modelos requieren medios físicos (USB) o solo redes internas seguras; sin acceso a la nube.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Seguridad mejorada',
+            'description': 'Protege datos clasificados en entornos gubernamentales, militares y financieros que requieren la máxima protección de datos.',
+          },
+        ],
+      },
+    },
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',

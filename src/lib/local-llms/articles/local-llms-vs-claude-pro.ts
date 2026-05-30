@@ -257,6 +257,256 @@ schema: {
         ],
       },
     },
+    es: {
+      theme: 'Cost & Comparisons',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-10-05',
+      title: 'LLMs Locales vs Claude Pro: Privacidad, Costo y Calidad',
+      seoTitle: 'LLMs Locales vs Claude Pro: Costo, Privacidad y Calidad',
+      intro: '**Claude Pro cuesta $20/mes (igual que ChatGPT Plus) pero ofrece mayor privacidad (Anthropic no entrena con el historial de chat) y razonamiento superior en contexto largo (ventana de 200K tokens).** A partir de abril de 2026, una configuración local de Llama 3.1 70B (GPU usada ~$1,000) iguala la calidad de Claude 3.5 Sonnet (2024) en el 80% de las tareas y cuesta un 20-30% menos a lo largo de 3 años. Los LLMs locales ganan en privacidad, costo y manejo de documentos largos.',
+      metaDescription: 'Claude Pro cuesta $20/mes; una RTX 4090 usada ejecutando Llama 3.1 70B recupera la inversión en 4 años. Costo, privacidad, puntuaciones de benchmark y ventana de 200K tokens — comparativa completa.',
+      publishDate: '2026-04-05',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '**Claude Pro cuesta $20/mes (igual que ChatGPT Plus) pero ofrece mayor privacidad (Anthropic no entrena con el historial de chat) y razonamiento superior en contexto largo (ventana de 200K tokens).**',
+      audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLMs locales',
+      readTime: '8 min de lectura',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Claude Pro',
+      toc: [
+        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Datos rápidos', anchor: '#quick-facts' },
+        { label: 'Precio: Claude Pro vs LLMs locales', anchor: '#pricing' },
+        { label: 'Privacidad: Anthropic vs autoalojado', anchor: '#privacy' },
+        { label: 'Calidad del modelo: Claude 3.5 Sonnet vs Llama 3.1 70B', anchor: '#quality' },
+        { label: 'Rendimiento en contexto largo (200K tokens)', anchor: '#context' },
+        { label: 'Costo total a 5 años', anchor: '#five-year' },
+        { label: 'FAQ de costo y privacidad', anchor: '#faq' },
+      ],
+      sections: {
+        'tldr': {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Claude Pro: $20/mes = $240/año; incluye ventana de contexto de 200K tokens, comprensión de imágenes, carga de archivos',
+            'Llama 3.1 70B local: GPU usada ~$1,000 + $60/año de electricidad = $1,060 el primer año, $60/año después',
+            'Privacidad: Claude Pro — Anthropic no entrena con el historial de chat; sigue siendo propietario. LLMs locales — 100% privado, tus datos nunca salen de tu máquina',
+            'Paridad de calidad: Llama 3.1 70B ≈ Claude 3.5 Sonnet (2024) en benchmarks; Claude es ligeramente mejor en matices/casos límite',
+            'Ventana de contexto: Claude Pro 200K tokens vs Llama 3.1 70B 128K tokens (excelente para documentos)',
+            'TCO a 5 años: Claude Pro $1,200 vs local ($1,000 GPU + $300 electricidad) = $1,300. Costo casi idéntico.',
+            'Ventaja local: Consultas ilimitadas, sin límites de velocidad, capacidad offline, propiedad del modelo',
+            'Ventaja de Claude Pro: Mejor multimodal (imágenes), actualizaciones en tiempo real, sin sobrecarga de infraestructura',
+          ],
+        },
+        'quickFacts': {
+          id: 'quick-facts',
+          title: 'Datos rápidos',
+          items: [
+            '**Precio de Claude Pro:** $20/mes ($240/año), sin hardware necesario',
+            '**Hardware para Llama 3.1 70B:** RTX 4090 (~$1,000 usada) o dual RTX 4070s (~$550 usadas)',
+            '**TCO a 5 años:** Claude Pro $1,200 vs local ~$1,300 (GPU usada) — prácticamente igual',
+            '**Puntuaciones MMLU:** Claude 3.5 Sonnet 97% vs Llama 3.1 70B 96%',
+            '**Ventana de contexto:** Claude Pro 200K tokens vs Llama 3.1 128K tokens',
+            '**Punto de equilibrio:** Mes 50 (GPU usada) — después de eso, lo local es más barato indefinidamente',
+          ],
+        },
+        'pricing': {
+          id: 'pricing',
+          title: '¿Cuál es la diferencia de precio entre Claude Pro y los LLMs locales?',
+          content: [
+            '**Claude Pro cobra $20/mes sin necesidad de hardware; Llama 3.1 70B local cuesta $1,000+ de inicio pero solo $60/año en electricidad después.** El primer año es caro para la opción local, pero el punto de equilibrio llega en el mes 50.',
+            '**Costo total de propiedad a 5 años:** Claude Pro $1,200 vs Llama local (GPU usada) $1,300 vs Llama local (GPU nueva) $1,900. Año 1: Claude Pro $240 vs local $1,060–1,660. Año 3: Claude Pro $720 vs local $1,180–1,780. Año 5: Claude Pro $1,200 vs local $1,300–1,900.',
+            '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms) tiene opciones de hardware y precios detallados.',
+          ],
+          callouts: [
+            { type: '⚠️ Advertencia', text: 'El primer año, lo local cuesta 4–7× más de inicio. El punto de equilibrio ocurre alrededor del mes 50 con una GPU usada.' },
+            { type: '💡 Consejo profesional', text: 'Dos RTX 4070s ($500–600 usadas) también ejecutan Llama 3.1 70B al 60–70% de velocidad por aproximadamente la mitad del costo de GPU.' },
+          ],
+        },
+        'privacy': {
+          id: 'privacy',
+          title: '¿Cómo difieren los modelos de privacidad entre Claude Pro y los LLMs locales?',
+          content: [
+            '**Claude Pro (Anthropic): Tus conversaciones no se usan para entrenar futuros modelos Claude (política de privacidad explícita de Anthropic desde 2026).** Sin embargo, las consultas se registran en los servidores de Anthropic para monitoreo de seguridad y depuración. Anthropic tiene sede en EE. UU. y está sujeta a la ley estadounidense.',
+            'LLMs locales: Todos los datos permanecen en tu máquina. Sin registro en la nube, sin visibilidad de terceros. Adecuado para flujos de trabajo de salud (HIPAA), finanzas (PCI-DSS) y legal (privilegio abogado-cliente). A partir de abril de 2026, Llama 3.1 es completamente de código abierto (sin recopilación de datos de Anthropic).',
+          ],
+          callouts: [
+            { type: '📌 Punto clave', text: 'Anthropic no entrena con el historial de chat, pero las conversaciones se registran en servidores de EE. UU. para monitoreo de seguridad.' },
+            { type: '🛡️ Cumplimiento normativo', text: 'Para flujos de trabajo con HIPAA, PCI-DSS o privilegio abogado-cliente, solo los LLMs locales cumplen los requisitos — ningún servidor de terceros accede jamás a tus datos.' },
+          ],
+        },
+        'quality': {
+          id: 'quality',
+          title: '¿Cómo se comparan en calidad Claude 3.5 Sonnet (2024) y Llama 3.1 70B?',
+          content: [
+            '**Claude 3.5 Sonnet (2024) (Anthropic, junio 2024): Razonamiento de primer nivel, matiz, seguimiento de instrucciones.** Puntuación MMLU (comprensión del lenguaje) del 97%. Destaca en análisis complejo, redacción publicitaria, revisión de código. Puntuación MMLU: 97%. Ventana de contexto: 200K tokens. Comprensión de imágenes: Nativa. Fine-tuning: No disponible. Offline: No. Límites de velocidad: Sí.',
+            'Llama 3.1 70B (Meta, abril 2024): Puntuación MMLU del 96%. Razonamiento excelente, casi a la par con Claude en benchmarks. Mejor rendimiento en código (+2% en HumanEval). Ligeramente más débil en tareas creativas/narrativas. Puntuación MMLU: 96%. HumanEval: +2% vs Claude. Ventana de contexto: 128K tokens. Comprensión de imágenes: Solo mediante adaptador. Fine-tuning: Completo (LoRA, completo). Offline: Sí. Límites de velocidad: Ninguno.',
+            'En el 80% de las tareas del mundo real (resumen, Q&A, extracción de datos, código), Llama 3.1 70B y Claude 3.5 Sonnet (2024) producen resultados equivalentes. En casos límite (análisis narrativo sutil, escritura creativa de dominio específico), Claude es marginalmente mejor. [¿Cuánta VRAM necesitas para LLMs locales?](/es/local-llms/how-much-vram-local-llm) cubre los requisitos de hardware para ejecutar modelos de 70B.',
+          ],
+          callouts: [
+            { type: '💡 Consejo profesional', text: 'En benchmarks de código (HumanEval), Llama 3.1 70B supera a Claude 3.5 Sonnet en ~2% a partir de abril de 2026.' },
+          ],
+          snippetBlocks: [
+            {
+              type: 'one-sentence',
+              text: 'Llama 3.1 70B iguala a Claude 3.5 Sonnet en el 80% de las tareas del mundo real, pero Claude lleva ventaja en razonamiento matizado y casos límite de escritura creativa.',
+            },
+          ],
+        },
+        'context': {
+          id: 'context',
+          title: '¿Cuánto puede manejar cada uno en documentos largos?',
+          content: [
+            '**Claude Pro 200K tokens: ~150,000 palabras (equivalente a 3 libros).** Puede procesar una base de código completa, contratos legales o artículos de investigación en una sola consulta.',
+            'Llama 3.1 70B 128K tokens: ~96,000 palabras. Sigue siendo excelente para la mayoría de los documentos; algunas bases de código muy grandes o contratos de 500+ páginas superan este límite.',
+            'A partir de abril de 2026: Para flujos de trabajo de procesamiento de documentos (RAG, resumen masivo, revisión de contratos), la ventana de 200K de Claude Pro es una ventaja tangible. Llama 3.1 128K es suficiente para el ~95% de los documentos empresariales.',
+          ],
+          callouts: [
+            { type: '📌 Punto clave', text: 'Ambas ventanas de contexto son enormes. Solo las bases de código muy grandes o contratos de 500+ páginas alcanzan el límite de 128K de Llama.' },
+          ],
+        },
+        'five-year': {
+          id: 'five-year',
+          title: '¿Cuál es la comparativa de costo total de propiedad a 5 años?',
+          content: [
+            '**Claude Pro: $20 × 60 meses = $1,200 en total.**',
+            'Llama 3.1 70B local (GPU nueva): RTX 4090 $1,600 + electricidad 5 años $300 = $1,900 en total.',
+            'Llama 3.1 70B local (GPU usada): $1,000 + $300 de electricidad = $1,300 en total.',
+            'Punto de equilibrio: ~50 meses (4.2 años) con GPU usada. La GPU nueva solo se vuelve competitiva en costo después de 6+ años.',
+          ],
+          callouts: [
+            { type: '💡 Consejo profesional', text: 'Limitar la RTX 4090 a 350W ahorra un 40% en electricidad con solo ~10% de pérdida de velocidad — reduciendo el costo local a 5 años por debajo de $1,200.' },
+          ],
+          snippetBlocks: [
+            {
+              type: 'plain-terms',
+              text: 'En 5 años, ambas opciones cuestan aproximadamente $1,200–1,300 si usas una GPU de segunda mano. La diferencia real es $20/mes de suscripción vs pagar $1,000 al inicio y ser dueño del hardware para siempre.',
+            },
+          ],
+        },
+        'faqSection': {
+          id: 'faq',
+          title: 'FAQ de costo y privacidad',
+          faqs: [
+            {
+              q: '¿Puedo usar Claude Pro sin conexión?',
+              a: 'No. Claude Pro requiere conexión a internet activa y los servidores de Anthropic. Llama 3.1 local funciona completamente sin conexión.',
+            },
+            {
+              q: '¿Anthropic usa mis conversaciones de Claude Pro para entrenar?',
+              a: 'No (a partir de abril de 2026). Anthropic no entrena explícitamente con el historial de chat. Las conversaciones se registran para seguridad/depuración pero no se usan para mejorar el modelo.',
+            },
+            {
+              q: '¿Llama 3.1 70B es realmente gratuito?',
+              a: 'Sí. Llama 3.1 es de código abierto bajo la licencia de comunidad de Meta. Una vez que tienes la GPU, la inferencia cuesta $0 (solo electricidad). Las actualizaciones del modelo son gratuitas.',
+            },
+            {
+              q: '¿Puedo hacer fine-tuning de Claude Pro o Llama local de forma diferente?',
+              a: 'Claude Pro: No hay fine-tuning disponible a partir de abril de 2026. Llama 3.1 local: Soporte completo de fine-tuning (LoRA, ajuste completo de parámetros). Lo local gana en personalización.',
+            },
+            {
+              q: '¿Qué pasa si mi GPU local falla?',
+              a: 'Pierdes capacidad de cómputo hasta reemplazarla (~$1,000). Claude Pro degrada de forma elegante (limitación de velocidad). Lo local requiere planificación de redundancia (GPU de respaldo, failover en la nube).',
+            },
+            {
+              q: '¿Puede Llama 3.1 manejar imágenes como Claude Pro?',
+              a: 'Multimodal nativo: No (a partir de abril de 2026). Puedes integrar modelos de visión de código abierto (CLIP, LLaVA) como solución alternativa, pero no es tan fluido como Claude.',
+            },
+            {
+              q: '¿Es Claude Pro mejor que Llama 3.1 en alguna tarea específica?',
+              a: 'Sí. Claude 3.5 Sonnet destaca en análisis narrativo matizado, razonamiento complejo de varios pasos con contexto ambiguo y casos límite de escritura creativa. En código, Llama 3.1 70B supera a Claude en ~2% en los benchmarks HumanEval a partir de abril de 2026.',
+            },
+            {
+              q: '¿Puedo cambiar de Claude Pro a un LLM local sin perder mis flujos de trabajo?',
+              a: 'Sí. La mayoría de los casos de uso de Claude Pro (Q&A, resumen, código) se trasladan directamente a Llama 3.1 70B mediante Ollama o LM Studio. La migración implica: instalar Ollama, descargar llama3.1:70b y actualizar cualquier integración de API de claude.ai a localhost:11434. No hay datos bloqueados en Claude Pro.',
+            },
+          ],
+          callouts: [
+            { type: '🔍 ¿Sabías que?', text: 'Claude Pro tiene el mismo precio que ChatGPT Plus a $20/mes, pero ofrece una ventana de contexto 10× mayor (200K vs 16K tokens).' },
+          ],
+        },
+        'commonMistakes': {
+          id: 'common-mistakes',
+          title: 'Errores comunes al comparar Claude Pro y LLMs locales',
+          items: [
+            'Creer que Claude Pro es más barato porque el costo mensual es visible. A lo largo de 5+ años, lo local se equipara o se vuelve más barato.',
+            'Asumir que Llama 3.1 70B requiere una GPU de $1,600. Una RTX 4090 usada (~$1,000) o dos RTX 4070s ($500–600 en total) también funcionan.',
+            'Esperar que Llama 3.1 iguale la comprensión de imágenes de Claude. El multimodal nativo no está disponible; usar el adaptador CLIP.',
+            'Olvidar la ventaja de 200K de contexto de Claude Pro. Para procesamiento de documentos en una sola consulta, Claude gana. Para Q&A promedio, Llama 3.1 es suficiente.',
+            'No considerar la sobrecarga de infraestructura. Ejecutar Llama 3.1 70B requiere experiencia (CUDA, PyTorch, Docker). Claude Pro es llave en mano.',
+          ],
+        },
+        'relatedReading': {
+          title: 'Lecturas relacionadas',
+          items: [
+            '[LLMs locales vs ChatGPT Plus: comparativa de costos](/es/local-llms/local-llms-vs-chatgpt-plus)',
+            '[LLM local vs GPU en la nube: análisis de costos](/es/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms)',
+            '[¿Cuánta VRAM necesitas para LLMs locales?](/es/local-llms/how-much-vram-local-llm)',
+            '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained)',
+            '[¿Vale la pena comprar una GPU vs suscripciones de IA?](/es/local-llms/gpu-vs-ai-subscription-roi)',
+          ],
+        },
+        'sources': {
+          title: 'Fuentes',
+          items: [
+            '[Precios y política de privacidad de Anthropic Claude Pro](https://claude.ai) — Anthropic, abril de 2026',
+            '[Ficha del modelo Meta Llama 3.1 70B](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B) — Meta, abril de 2024',
+            '[Open LLM Leaderboard — Benchmarks MMLU y HumanEval](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — Hugging Face, abril de 2026',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'LLMs Locales vs Claude Pro: Análisis de costos, privacidad y comparativa de calidad del modelo',
+        'description': 'Claude Pro vs LLMs locales: comparativa de costo, privacidad y calidad. Anthropic vs código abierto.',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-claude-pro',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'about': [
+          { '@type': 'Thing', 'name': 'Inferencia de LLM local' },
+          { '@type': 'Thing', 'name': 'Comparativa de costos de suscripción de IA' },
+          { '@type': 'Thing', 'name': 'IA que preserva la privacidad' },
+        ],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Pro' },
+          { '@type': 'Product', 'name': 'RTX 4090' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-claude-pro',
+        'inLanguage': 'es',
+        'mainEntity': [
+          { '@type': 'Question', 'name': '¿Puedo usar Claude Pro sin conexión?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Claude Pro requiere conexión a internet activa y los servidores de Anthropic. Llama 3.1 local funciona completamente sin conexión.' } },
+          { '@type': 'Question', 'name': '¿Anthropic usa mis conversaciones de Claude Pro para entrenar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No (a partir de abril de 2026). Anthropic no entrena explícitamente con el historial de chat. Las conversaciones se registran para seguridad/depuración pero no se usan para mejorar el modelo.' } },
+          { '@type': 'Question', 'name': '¿Llama 3.1 70B es realmente gratuito?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Llama 3.1 es de código abierto bajo la licencia de comunidad de Meta. Una vez que tienes la GPU, la inferencia cuesta $0 (solo electricidad). Las actualizaciones del modelo son gratuitas.' } },
+          { '@type': 'Question', 'name': '¿Puedo hacer fine-tuning de Claude Pro o Llama local de forma diferente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Claude Pro: No hay fine-tuning disponible a partir de abril de 2026. Llama 3.1 local: Soporte completo de fine-tuning (LoRA, ajuste completo de parámetros). Lo local gana en personalización.' } },
+          { '@type': 'Question', 'name': '¿Qué pasa si mi GPU local falla?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pierdes capacidad de cómputo hasta reemplazarla (~$1,000). Claude Pro degrada de forma elegante (limitación de velocidad). Lo local requiere planificación de redundancia (GPU de respaldo, failover en la nube).' } },
+          { '@type': 'Question', 'name': '¿Puede Llama 3.1 manejar imágenes como Claude Pro?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Multimodal nativo: No (a partir de abril de 2026). Puedes integrar modelos de visión de código abierto (CLIP, LLaVA) como solución alternativa, pero no es tan fluido como Claude.' } },
+          { '@type': 'Question', 'name': '¿Es Claude Pro mejor que Llama 3.1 en alguna tarea específica?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Claude 3.5 Sonnet destaca en análisis narrativo matizado, razonamiento complejo de varios pasos con contexto ambiguo y casos límite de escritura creativa. En código, Llama 3.1 70B supera a Claude en ~2% en los benchmarks HumanEval a partir de abril de 2026.' } },
+          { '@type': 'Question', 'name': '¿Puedo cambiar de Claude Pro a un LLM local sin perder mis flujos de trabajo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. La mayoría de los casos de uso de Claude Pro (Q&A, resumen, código) se trasladan directamente a Llama 3.1 70B mediante Ollama o LM Studio. La migración implica: instalar Ollama, descargar llama3.1:70b y actualizar cualquier integración de API de claude.ai a localhost:11434. No hay datos bloqueados en Claude Pro.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Comparativa Claude Pro vs Llama 3.1 70B local',
+        'inLanguage': 'es',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Claude Pro', 'description': 'Suscripción en la nube de Anthropic a $20/mes con ventana de contexto de 200K tokens, comprensión de imágenes y garantías de privacidad.' },
+          { '@type': 'Thing', 'name': 'Llama 3.1 70B local', 'description': 'Modelo de código abierto en RTX 4090 (~$1,000 usada) con contexto de 128K tokens, soporte completo de fine-tuning y operación offline.' },
+          { '@type': 'Thing', 'name': 'Análisis TCO a 5 años', 'description': 'Claude Pro $1,200 vs Llama 3.1 local $1,300 (GPU usada) — costo casi idéntico con diferentes compromisos.' },
+        ],
+      },
+    },
     de: {
       theme: 'Cost & Comparisons',
       freshness_tier: 'semi_annual',

@@ -1856,4 +1856,371 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'annual',
+      theme: 'Hardware Setups',
+      title: 'Construye un PC para LLM Local: Mejor Estación de Trabajo (GPU, VRAM, Modelos 7B–70B)',
+      seoTitle: 'Estación de Trabajo LLM Local 2026: Dual RTX 4090, $4–6K, Lista para 70B',
+      intro: '**Una estación de trabajo profesional para inferencia LLM local en producción cuesta $4,000–6,000 y cuenta con GPUs dual RTX 4090 (48 GB VRAM combinada), CPU Threadripper 7970X (32 núcleos), 128 GB RAM DDR5, refrigeración personalizada y una fuente de alimentación de 2,000 W.** A partir de abril de 2026, este nivel da servicio a 2–3 usuarios concurrentes de 70B a 14 tok/s cada uno, ejecuta el ajuste fino de Llama 3.3 70B en paralelo con la inferencia y proporciona despliegue en instalaciones propias sin costos de API en la nube.',
+      metaDescription: 'Construye una potente estación de trabajo LLM local con la GPU, VRAM y RAM adecuadas. Configuraciones exactas para ejecutar modelos 7B–70B rápido con Ollama y LM Studio.',
+      publishDate: '2026-04-05',
+      dateModified: '2026-04-25',
+      leadAnswerBlock: '**Una estación de trabajo profesional para inferencia LLM local en producción cuesta $4,000–6,000 y cuenta con GPUs dual RTX 4090 (48 GB VRAM combinada), Threadripper 7970X (32 núcleos), 128 GB DDR5, refrigeración personalizada y fuente de 2,000 W.** A partir de abril de 2026: 2–3 usuarios 70B concurrentes a 14 tok/s, ajuste fino de Llama 3.3 en paralelo con inferencia, sin costos de API en la nube.',
+      audience: 'Ingenieros que despliegan LLMs locales en producción o entornos empresariales',
+      readTime: '10 min de lectura',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'AI Workstation',
+      toc: [
+        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: '¿Quién necesita una estación de trabajo de $4K–6K?', anchor: '#who-needs' },
+        { label: '¿Cuál es la lista de componentes de la estación de trabajo?', anchor: '#parts-list' },
+        { label: '¿Cómo configurar GPUs duales para máximo rendimiento?', anchor: '#dual-gpu' },
+        { label: 'Dual RTX 5090 vs Dual RTX 4090: Comparación de valor', anchor: '#rtx5090-vs-4090' },
+        { label: '¿Cómo refrigerar 1,200 W de calor?', anchor: '#cooling' },
+        { label: '¿Cuál es la fuente de alimentación y configuración eléctrica correcta?', anchor: '#power' },
+        { label: '¿Qué rendimiento de inferencia multiusuario puedes esperar?', anchor: '#perf' },
+        { label: '¿Cuáles son los errores comunes al construir la estación de trabajo?', anchor: '#mistakes' },
+        { label: 'Preguntas Frecuentes', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'CPU: Threadripper 7970X (32 núcleos, $2,499) o Intel Xeon W9-3495X ($5,000+). Permite ajuste fino paralelo mientras se sirve inferencia.',
+            'GPU: 2× RTX 4090 24GB (par usado ~$2,200–2,600). 48GB de VRAM total para 70B multiusuario o 70B único + tareas de preparación.',
+            'RAM: 128GB DDR5 ($600–800). Soporta 8+ usuarios concurrentes en 70B o usuario único 70B + cuantización en paralelo.',
+            'Almacenamiento: 4–8TB NVMe SSD + 12–24TB HDD ($800–1,500). Biblioteca multimodelo + copias de seguridad + datasets de entrenamiento.',
+            'Fuente de alimentación: 2× 1200W o 1× 2000W ($800–1,200). El par de 4090 consume 900W sostenido; el margen para picos es esencial.',
+            'Refrigeración: Circuito líquido personalizado o AIO dual ($1,000–2,000). GPU grande + CPU = 1,200W de salida térmica.',
+            'Red: Ethernet 10Gbps opcional ($200–400). Acceso multiusuario por LAN sin cuellos de botella.',
+            'Total: $4,000–6,000. Soporta 8+ usuarios 70B concurrentes o 1 usuario con ajuste fino + servicio simultáneo.',
+          ],
+        },
+        'who-needs': {
+          id: 'who-needs',
+          title: '¿Quién necesita una estación de trabajo de $4K–6K?',
+          content: 'Este nivel es para:',
+          items: [
+            '**PYMEs/Empresas:** Ejecutar una API LLM interna para 5+ empleados simultáneamente. Se requiere control de datos en instalaciones propias.',
+            '**Investigadores de IA:** Ajuste fino de modelos grandes (70B LoRA) mientras se sirve inferencia al equipo. Un equipo de $2K no puede paralelizar.',
+            '**Ingenieros de MLOps:** Construir clusters de inferencia internos. Comenzar con una estación de trabajo como nodo servidor.',
+            '**Estudios de contenido (serio):** Ejecutar subtitulado de video 24/7, generación de código, resumen sin costos de API.',
+          ],
+        },
+        'parts-list': {
+          id: 'parts-list',
+          title: '¿Cuál es la lista de componentes de la estación de trabajo?',
+          content: '**Una estación de trabajo profesional comienza con RTX 4090 duales ($2,200–2,600 para par usado) y una CPU Threadripper ($2,800–3,200), junto con 128GB de RAM DDR5 y refrigeración líquida personalizada.** Esta es la lista completa de componentes y desglose de costos:',
+          rows: [
+            { 'Componente': 'GPU', 'Modelo': '2× RTX 4090 24GB (usado)', 'Precio (Abril 2026)': '$2,200–2,600', 'Notas': 'Puentes NVLink opcionales. Prueba ambas tarjetas antes de emparejar.' },
+            { 'Componente': 'CPU', 'Modelo': 'Threadripper 7970X (32 núcleos)', 'Precio (Abril 2026)': '$2,400–2,500', 'Notas': 'Permite 32 núcleos paralelos para ajuste fino mientras se sirve inferencia en ambas GPUs.' },
+            { 'Componente': 'Placa base', 'Modelo': 'TRX850 o Xeon W90', 'Precio (Abril 2026)': '$400–800', 'Notas': 'Soporte para GPU dual, PCIe 5.0, suministro de energía de nivel empresarial.' },
+            { 'Componente': 'RAM', 'Modelo': '128GB DDR5 6000 MHz', 'Precio (Abril 2026)': '$600–800', 'Notas': 'Corsair Dominator Platinum. Soporta 8+ usuarios concurrentes.' },
+            { 'Componente': 'Almacenamiento', 'Modelo': '4TB NVMe + 12TB HDD', 'Precio (Abril 2026)': '$800–1,200', 'Notas': 'NVMe para modelos activos, HDD para copias de seguridad y datasets.' },
+            { 'Componente': 'Fuente de alimentación', 'Modelo': '2000W 80+ Platinum o 2× 1200W', 'Precio (Abril 2026)': '$1,000–1,500', 'Notas': 'Dual 4090s = 900W sostenido, necesitan margen de 2000W+.' },
+            { 'Componente': 'Refrigeración', 'Modelo': 'Circuito personalizado o 2× AIO 360mm', 'Precio (Abril 2026)': '$1,500–2,500', 'Notas': 'CPU + 2 GPUs = 1,200W de calor. La refrigeración por aire es insuficiente.' },
+            { 'Componente': 'Carcasa', 'Modelo': 'Lian Li O11 Dynamic o Corsair Crystal', 'Precio (Abril 2026)': '$200–300', 'Notas': 'Soporta GPU dual + AIO grande o circuito.' },
+            { 'Componente': 'Total', 'Modelo': '--', 'Precio (Abril 2026)': '$4,000–6,000', 'Notas': 'Varía con los precios de mercado de GPU y la elección de refrigeración.' },
+          ],
+          columns: ['Componente', 'Modelo', 'Precio (Abril 2026)', 'Notas'],
+          image: '/images/local-llm-workstation-build-components-layout-en.svg',
+          imageCaption: 'Componentes de la estación de trabajo: GPUs dual RTX 4090 (48GB VRAM total), CPU Threadripper 7970X (32 núcleos), 128GB RAM DDR5, fuente de 2000W y sistema de refrigeración líquida para disipación de 1,200W.',
+        },
+        'dual-gpu': {
+          id: 'dual-gpu',
+          title: '¿Cómo configurar GPUs duales para máximo rendimiento?',
+          content: '**Dos RTX 4090 te dan 48GB de VRAM y ~2× el rendimiento de inferencia.** Tienes tres opciones de configuración: operación independiente en paralelo, fusión NVLink para VRAM unificada, o paralelismo tensorial para aceleración de modelo único.',
+          numberedItems: [
+            '**En paralelo (sin NVLink):** Cada GPU funciona de forma independiente. Modelo A en GPU 0, Modelo B en GPU 1. Mejor para cargas de trabajo heterogéneas (ajuste fino 7B + servicio 70B).',
+            '**Puente NVLink:** Fusionar VRAM (48GB aparece como un único pool de 48GB). Permite tamaños de lote más grandes o ventanas de contexto masivas. Costo: $200–300 por el puente + complejidad de configuración.',
+            '**Inferencia GPU dual:** Dividir un único modelo 70B en 2 GPUs para 2× el rendimiento (28 tok/s en lugar de 14). Requiere soporte de tensor-parallel de vLLM o llama.cpp.',
+          ],
+          callouts: [
+            { type: '💡 Pro Tip', text: 'Omite NVLink para cargas de trabajo heterogéneas. La operación independiente es más simple, de menor costo ($200 ahorrados) y elimina errores de firmware del puente.' },
+            { type: '⚠️ Warning', text: 'El puente NVLink requiere soporte del driver propietario de NVIDIA. ROCm de código abierto o equivalentes AMD no soportan la conexión entre GPUs diferentes.' },
+          ],
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Las GPUs duales ejecutan modelos independientes por tarjeta (más simple) o agrupan su VRAM mediante NVLink (complejo pero permite modelos más grandes).' },
+            { type: 'plain-terms', text: 'Piénsalo como dos computadoras separadas (en paralelo) vs. una supercomputadora compartida (NVLink). En paralelo es más fácil de configurar; compartida da más potencia para modelos enormes.' },
+          ],
+          image: '/images/local-llm-workstation-build-dual-gpu-config-en.svg',
+          imageCaption: 'Tres opciones de configuración GPU dual: independiente en paralelo (cargas de trabajo heterogéneas, sin NVLink), puente NVLink (pool VRAM unificado de 48GB, ventanas de contexto grandes) y paralelismo tensorial (modelo 70B único dividido entre GPUs para 28 tok/s de rendimiento).',
+        },
+        'rtx5090-vs-4090': {
+          id: 'rtx5090-vs-4090',
+          title: 'Dual RTX 5090 vs Dual RTX 4090: Rendimiento y Valor (Abril 2026)',
+          content: '**Dual RTX 4090 usado ($2,200–2,600) sigue siendo la opción de valor para Q4 70B a 100 tok/s. Dual RTX 5090 nuevo ($4,000) gana por mayor VRAM (64 GB) y calidad (formato Q8) pero cuesta $1,400–1,800 más.** Single RTX 5090 ($2,000 nuevo) maneja 70B Q4 a 40–50 tok/s sin la complejidad del dual.',
+          rows: [
+            { 'Configuración': 'Dual RTX 4090 (usado)', 'VRAM': '48 GB', 'Velocidad 70B': '100 tok/s (Q4)', 'Costo': '$2,200–2,600' },
+            { 'Configuración': 'Single RTX 5090 (nuevo)', 'VRAM': '32 GB', 'Velocidad 70B': '40–50 tok/s (Q4)', 'Costo': '$2,000' },
+            { 'Configuración': 'Dual RTX 5090 (nuevo)', 'VRAM': '64 GB', 'Velocidad 70B': '120 tok/s (Q4)', 'Costo': '$4,000' },
+          ],
+          columns: ['Configuración', 'VRAM', 'Velocidad 70B', 'Costo'],
+          callouts: [
+            { type: '💡 Pro Tip', text: 'Para inferencia Q4 70B con máximo rendimiento: dual 4090 usado ($2,200–2,600) ofrece el mejor valor en abril de 2026. Las nuevas 5090 cuestan un 50%+ más.' },
+            { type: '📌 Key Point', text: 'Dual 5090 gana para Q8 70B (mayor calidad de salida) o preparación para el futuro. Single 5090 elimina la complejidad de GPU dual para usuarios individuales.' },
+          ],
+        },
+        'cooling': {
+          id: 'cooling',
+          title: '¿Cómo refrigerar 1,200 W de calor?',
+          content: 'RTX 4090 (450W) + RTX 4090 (450W) + CPU (200W) = 1,100W sostenido, picos de hasta 1,300W.',
+          items: [
+            '**Circuito líquido personalizado:** $1,500–2,500. Bloque de agua CPU + bloques de agua GPU + radiador 360mm. Mantiene GPUs <75°C, CPU <80°C.',
+            '**AIO dual 360mm:** $600–900. Un AIO por GPU + enfriador CPU separado. Más modular, mantenimiento más sencillo que el circuito personalizado.',
+            '**Refrigeración por aire:** No viable. El throttling térmico está garantizado en inferencia 70B sostenida.',
+          ],
+          callouts: [
+            { type: '🛠️ Best Practice', text: 'Usa pasta térmica con conductividad 5+ W/mK (Noctua NT-H2, Corsair TM30). La pasta barata puede añadir 10–15°C a las temperaturas y anular la garantía de la GPU.' },
+          ],
+          image: '/images/local-llm-workstation-build-cooling-setup-en.svg',
+          imageCaption: 'Disipación de calor: 1,200W total de las GPUs dual RTX 4090 (450W cada una) y CPU Threadripper (200W). Soluciones de refrigeración: circuito líquido personalizado ($1,500–2,500), AIO dual 360mm ($600–900) o refrigeración por aire (no recomendada, causa throttling térmico).',
+        },
+        'power': {
+          id: 'power',
+          title: '¿Cuál es la fuente de alimentación y configuración eléctrica correcta?',
+          content: '**Las 4090 duales (900W sostenido, picos de 1,300W) exigen una fuente de 2000W como mínimo — cualquier cosa menor causa caída de voltaje y bloqueos bajo carga.** Puedes elegir una fuente única de 2000W o dos de 1200W para redundancia, pero debes verificar que el circuito eléctrico de tu hogar/oficina pueda manejar 2000W en pico de demanda.',
+          items: [
+            '**Opción 1: Fuente única de 2000W:** Seasonic, Corsair o EVGA 80+ Platinum. Enrutamiento de cables más limpio, punto único de fallo.',
+            '**Opción 2: Fuentes duales de 1200W:** Una fuente por GPU + placa base compartida. Redundancia (una falla, la inferencia continúa al 50% de velocidad). Configuración compleja.',
+            '**Regla de capacidad:** 2000W para GPU dual es el mínimo. Cualquier cosa menor causa caída de voltaje bajo carga.',
+            '**Planificación de circuito:** Un equipo con GPU dual consume 2000W en pico. Asegúrate de tener un circuito de 20A (el tomacorriente doméstico/de oficina típico es de 15A, insuficiente). Usa una línea dedicada de 240V si está disponible.',
+          ],
+          callouts: [
+            { type: '⚠️ Warning', text: 'Los tomacorrientes domésticos suelen ser de 15A a 120V (1,800W máximo). Un equipo con dual 4090 disparará el disyuntor. Instala un circuito dedicado de 240V 20A ($200–400 de honorarios de electricista).' },
+            { type: '📌 Key Point', text: 'Usa siempre fuentes modulares. Las GPUs duales tienen docenas de pines de alimentación; los cables no modulares crean riesgos de incendio por resistencia de contacto en los conectores multipín.' },
+          ],
+          image: '/images/local-llm-workstation-build-power-electrical-en.svg',
+          imageCaption: 'Requisitos de alimentación: ~1,100W continuos (450W + 450W GPUs, 200W CPU) con picos de 1,300W. Opciones de fuente: única de 2000W (más simple, cables limpios) o dual de 1200W (redundante, configuración compleja). Ambas requieren circuito dedicado de 20A 240V.',
+        },
+        'perf': {
+          id: 'perf',
+          title: '¿Qué rendimiento de inferencia multiusuario puedes esperar?',
+          content: '**Con 128GB de RAM y GPUs 4090 duales, puedes servir a 2–3 usuarios 70B concurrentes a 14 tok/s cada uno, u 8+ usuarios 7B concurrentes a 30+ tok/s cada uno.** Los siguientes benchmarks asumen cuantización Q4 y vLLM para programación multiusuario:',
+          items: [
+            '**Usuario único, modelo 70B:** 28 tokens/seg (2× 14 tok/s por GPU mediante paralelismo tensorial).',
+            '**Dos usuarios concurrentes, 70B cada uno:** 14 tokens/seg por usuario (multiplexación temporal de solicitudes).',
+            '**Cuatro usuarios concurrentes, 7B cada uno:** 120 tokens/seg total (cada usuario recibe 30 tok/s).',
+            '**Ajuste fino 7B LoRA + servicio 70B:** Ajuste fino en GPU 0 (100W), inferencia en GPU 1 (450W). Sin interferencia.',
+          ],
+        },
+        'mistakes': {
+          id: 'mistakes',
+          title: '¿Cuáles son los errores comunes al construir la estación de trabajo?',
+          items: [
+            'Comprar dos modelos de GPU diferentes (5090 + 4090). La asimetría causa problemas de balanceo de carga. Usa tarjetas idénticas.',
+            'Escatimar en la fuente de alimentación para ahorrar $300. Una fuente de 1500W + GPUs 4090 duales hará throttle o se bloqueará bajo carga.',
+            'Usar refrigeración por aire en lugar de líquida. El throttling térmico reduce el rendimiento un 30–50% en inferencia sostenida.',
+            '**Olvidar el costo de electricidad en los cálculos de TCO.** Las GPUs RTX 4090 duales en inferencia sostenida consumen 900 W. Al promedio de EE. UU. ($0.14/kWh) funcionando 24/7: ~$1,100/año en electricidad. Promedio europeo (~$0.32/kWh): ~$2,500/año. En 3 años: $3,300–7,500 solo en electricidad. Incluye esto en el ROI frente a decisiones de API en la nube.',
+            '**Subestimar la red para configuraciones multiusuario.** El Ethernet estándar de gigabit (1 Gbps = 125 MB/s) es el cuello de botella al servir a 5+ usuarios concurrentes con respuestas de contexto largo. Actualiza a Ethernet de 2.5 Gbps o 10 Gbps para estaciones de trabajo en producción que sirven a equipos. Costo: $200–400 por NIC + switch.',
+          ],
+          callouts: [
+            { type: '⚠️ Warning', text: 'Las GPUs no coincidentes (modelos diferentes o tamaños de VRAM) rompen el paralelismo tensorial. vLLM recurrirá a inferencia en GPU única, reduciendo a la mitad el rendimiento.' },
+            { type: '💡 Pro Tip', text: 'Compra pares de RTX 4090 usados (verificados funcionando juntos por el propietario anterior) en lugar de tarjetas individuales nuevas. Ahorra $500–800 y evita la lotería del hardware.' },
+          ],
+        },
+        'faqSection': {
+          id: 'faq',
+          title: 'Preguntas Frecuentes',
+          faqs: [
+            { q: '¿Es necesaria una CPU Threadripper, o puedo usar Ryzen 9?', a: 'Solo para inferencia: Ryzen 9 funciona bien. Para inferencia + ajuste fino paralelo: los núcleos extra de Threadripper (64 vs. 16) son esenciales.' },
+            { q: '¿Debo usar NVLink para fusionar las dos 4090?', a: 'Opcional. Omítelo si ejecutas modelos separados en cada GPU (7B + 70B). Úsalo si divides un único 70B entre ambas GPUs para tamaños de lote más grandes.' },
+            { q: '¿Cuántos usuarios concurrentes puede manejar un equipo dual 4090?', a: 'Para 70B: 2–3 usuarios (cada uno recibiendo 14 tok/s). Para 7B: 8+ usuarios (cada uno recibiendo 30+ tok/s).' },
+            { q: '¿Puedo actualizar a RTX 5090 en lugar de dual 4090?', a: 'Single 5090: Rendimiento similar al dual 4090, la mitad de VRAM (24GB vs. 48GB), $1,999. Dual 5090: $4,000 (excesivo, peor valor).' },
+            { q: '¿Cuál es el ROI de una estación de trabajo de $5,000 vs. la API LLM en la nube?', a: 'Nube: $0.001 por 1K tokens. Estación de trabajo: $5,000 amortizado en 2 años = $2,500/año, ~$0.000001 por token. Punto de equilibrio en 2.5B tokens/año (uso ligero).' },
+            { q: '¿Necesita una estación de trabajo refrigeración de centro de datos?', a: 'No. La refrigeración líquida de nivel consumidor (2× AIO 360mm o circuito personalizado) es suficiente. La refrigeración de centro de datos (en fila, elevada) está diseñada para densidad; los 1,200W de una única estación de trabajo caben dentro del HVAC de una oficina.' },
+            { q: '¿Debo esperar la RTX 6090 en lugar de comprar las 4090 duales ahora?', a: 'La serie RTX 60 de NVIDIA se espera para finales de 2026 o 2027 según los ciclos históricos de actualización de 2 años. Si necesitas una estación de trabajo ahora: dual RTX 4090 usado ($2,200–2,600) ofrece el mejor valor para inferencia 70B en abril de 2026. Si puedes esperar 12–18 meses: la RTX 6090 probablemente tenga 48 GB de VRAM en tarjeta única, eliminando por completo la necesidad de GPUs duales.' },
+            { q: '¿Cuál es el nivel de ruido de una estación de trabajo con dual 4090?', a: 'Bajo inferencia 70B sostenida: 50–60 dB a 1 metro con refrigeración líquida personalizada. Comparable a una conversación normal de oficina. Con AIO dual 360mm: 55–65 dB (audiblemente más alto bajo carga). Refrigeración por aire: 65–75 dB (ruidoso, impráctico para uso en oficina). Para colocación junto al escritorio: el circuito personalizado o AIO silencioso es esencial. Para colocación en sala de servidores: el ruido es irrelevante.' },
+          ],
+          callouts: [
+            { type: '🔍 Did You Know?', text: 'Las RTX 4090 duales a plena carga de inferencia consumen 900W sostenidos. Tu factura de electricidad: ~$1,100/año al promedio de EE. UU. ($0.13/kWh) en funcionamiento 24/7.' },
+          ],
+        },
+        'relatedReading': {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Mejor PC LLM Local por menos de $2,000](/es/local-llms/local-llm-pc-build-2000) — Configuración de GPU única de gama media para equipos pequeños.',
+            '[Mejor PC LLM Local por menos de $1,000](/es/local-llms/local-llm-pc-build-1000) — Inferencia 7B–13B con presupuesto ajustado.',
+            '[Mini PCs AMD Ryzen AI Max+ (2026)](/es/local-llms/best-amd-mini-pc-local-llm-2026) — Alternativa: sistemas compactos con 64–128GB de memoria unificada para inferencia de modelos 30–70B.',
+            '[GPU en la nube vs Comprar: Cuándo alquilar](/es/local-llms/cloud-gpu-rental-comparison-2026) — Precios de RunPod, Vast.ai, Lambda Labs y matriz de decisión.',
+            '[RTX 5090 vs RTX 4090](/es/local-llms/rtx-5090-vs-rtx-4090-local-llm) — Comparación de GPU única para actualizaciones de estación de trabajo.',
+            '[Ajuste fino de LLMs locales con LoRA](/es/local-llms/fine-tuning-local-llms-lora) — Técnicas para ajuste fino paralelo en GPUs duales.',
+            '[¿Cuánta VRAM necesitas para LLMs locales?](/es/local-llms/how-much-vram-local-llm) — Escala de VRAM de 8GB a 128GB.',
+            '[Refrigeración líquida para estaciones de trabajo GPU](/es/local-llms/gpu-cooling-strategies) — Mejores prácticas de circuito personalizado vs. AIO.',
+          ],
+        },
+        'sources': {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            '[PCPartPicker](https://pcpartpicker.com) — Precios de componentes en tiempo real para Threadripper, RTX 4090/5090 y RAM DDR5 a abril de 2026.',
+            '[Base de datos CPU TechPowerUp](https://www.techpowerup.com/cpu-specs/?mfgr=AMD&family=Threadripper) — Especificaciones oficiales de consumo de energía y conteo de núcleos del Threadripper 7970X.',
+            '[Documentación NVIDIA NVLink](https://www.nvidia.com/en-us/data-center/nvlink/) — Especificaciones oficiales de NVLink para agrupación de memoria y paralelismo tensorial en tarjetas RTX duales.',
+            '[vLLM Distributed Serving](https://docs.vllm.ai/en/latest/serving/distributed_serving.html) — Configuración de paralelismo tensorial multi-GPU para modelos 70B en hardware de consumo.',
+          ],
+        },
+      },
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: 'La presentación a continuación cubre la construcción completa de la estación de trabajo para inferencia LLM local profesional: público objetivo y casos de uso, componentes duales RTX 4090 con costo total ($4,000–6,000), opciones de configuración GPU dual (en paralelo, NVLink, paralelismo tensorial), comparación de valor RTX 5090 vs 4090, soluciones de refrigeración para 1,200W de disipación, requisitos de fuente de alimentación y electricidad, benchmarks de rendimiento de inferencia multiusuario (28 tok/s usuario único 70B, 2–3 usuarios concurrentes, 8+ usuarios 7B concurrentes), errores comunes a evitar y preguntas frecuentes sobre procesadores, NVLink, gestión térmica y actualizabilidad. Descarga el PDF como guía de referencia para la estación de trabajo LLM local.',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Estación de Trabajo LLM Local 2026: Dual RTX 4090, Threadripper, $4,000–6,000',
+        'description': 'Construye una estación de trabajo de $4,000–6,000: 2× RTX 4090 (48 GB VRAM), Threadripper 7970X, 128 GB DDR5. Sirve a 2–3 usuarios 70B concurrentes a 14 tok/s cada uno. Guía completa de refrigeración, fuente de alimentación y configuración eléctrica.',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-workstation-build',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-25',
+        'author': {
+          '@type': 'Person',
+          'name': 'Hans Kuepper',
+          'url': 'https://www.promptquorum.com/about',
+          'sameAs': 'https://www.promptquorum.com/about'
+        },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Estación de trabajo LLM local' },
+          { '@type': 'Thing', 'name': 'Construcción dual RTX 4090' },
+          { '@type': 'Thing', 'name': 'Threadripper 7970X LLM' },
+          { '@type': 'Thing', 'name': 'Estación de trabajo para inferencia 70B' },
+          { '@type': 'Thing', 'name': 'Construcción IA local multi-GPU' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'proficiencyLevel': 'Advanced',
+        'educationalLevel': 'Advanced',
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Componentes para Construir Estación de Trabajo LLM Local 2026',
+        'numberOfItems': 8,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'GPU: 2× RTX 4090 24 GB (par usado)',
+            'description': '$2,200–2,600. 48 GB VRAM combinada. Paralelismo tensorial para 70B a 100 tok/s.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'CPU: AMD Threadripper 7970X (32 núcleos)',
+            'description': '$2,499. Permite cuantización y ajuste fino paralelo mientras se sirve inferencia.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Placa base: Chipset TRX50 (sTR5)',
+            'description': '$400–800. Soporte GPU dual, PCIe 5.0, DDR5 de 7 canales.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'RAM: 128 GB DDR5 6000 MHz',
+            'description': '$600–800. Corsair Dominator Platinum o equivalente. Soporta 8+ usuarios concurrentes.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 5,
+            'name': 'Almacenamiento: 4 TB NVMe Gen4 + 12 TB HDD',
+            'description': '$800–1,200. NVMe para modelos activos, HDD para copias de seguridad y datasets de entrenamiento.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 6,
+            'name': 'Fuente de alimentación: 2,000 W 80+ Platinum',
+            'description': '$300–500. Las 4090 duales consumen 900 W sostenidos. Margen esencial para picos de 1,300 W.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 7,
+            'name': 'Refrigeración: Circuito personalizado o 2× AIO 360mm',
+            'description': '$1,000–2,500. CPU + 2 GPUs = 1,200 W de calor. La refrigeración por aire causa throttling térmico.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 8,
+            'name': 'Carcasa: Lian Li O11 Dynamic XL',
+            'description': '$200–300. Espacio para GPU dual, soporte para radiador grande, gestión de cables.'
+          },
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-workstation-build',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Es necesaria una CPU Threadripper, o puedo usar Ryzen 9?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo para inferencia: Ryzen 9 funciona bien. Para inferencia + ajuste fino paralelo: los núcleos extra de Threadripper (32 vs. 16) son esenciales.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debo usar NVLink para fusionar las dos 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Opcional. Omítelo si ejecutas modelos separados en cada GPU (7B + 70B). Úsalo si divides un único 70B entre ambas GPUs para tamaños de lote más grandes.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuántos usuarios concurrentes puede manejar un equipo dual 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para 70B: 2–3 usuarios (cada uno recibiendo 14 tok/s). Para 7B: 8+ usuarios (cada uno recibiendo 30+ tok/s).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo actualizar a RTX 5090 en lugar de dual 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Single 5090: Rendimiento similar al dual 4090, la mitad de VRAM (24 GB vs. 48 GB), $1,999. Dual 5090: $4,000 (excesivo, peor valor).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el ROI de una estación de trabajo de $5,000 vs. la API LLM en la nube?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nube: $0.001 por 1K tokens. Estación de trabajo: $5,000 amortizado en 2 años = $2,500/año, ~$0.000001 por token. Punto de equilibrio en 2.5B tokens/año (uso ligero).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesita una estación de trabajo refrigeración de centro de datos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. La refrigeración líquida de nivel consumidor (2× AIO 360 mm o circuito personalizado) es suficiente. La refrigeración de centro de datos está diseñada para densidad; los 1,200 W de una única estación de trabajo caben dentro del HVAC de una oficina.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debo esperar la RTX 6090 en lugar de comprar las 4090 duales ahora?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La serie RTX 60 de NVIDIA se espera para finales de 2026 o 2027 según los ciclos históricos de actualización de 2 años. Si necesitas una estación de trabajo ahora: dual RTX 4090 usado ($2,200–2,600) ofrece el mejor valor para inferencia 70B en abril de 2026. Si puedes esperar 12–18 meses: la RTX 6090 probablemente tenga 48 GB de VRAM en tarjeta única, eliminando por completo la necesidad de GPUs duales.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el nivel de ruido de una estación de trabajo con dual 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bajo inferencia 70B sostenida: 50–60 dB a 1 metro con refrigeración líquida personalizada. Comparable a una conversación normal de oficina. Con AIO dual 360 mm: 55–65 dB (audiblemente más alto bajo carga). Refrigeración por aire: 65–75 dB (ruidoso, impráctico para uso en oficina). Para colocación junto al escritorio: el circuito personalizado o AIO silencioso es esencial. Para sala de servidores: el ruido es irrelevante.'
+            }
+          },
+        ],
+      },
+    },
   };

@@ -311,6 +311,316 @@ schema: {
         ],
       },
     },
+    es: {
+      freshness_tier: 'semi_annual',
+      theme: 'Best Models',
+      title: 'Actualizaciones de modelos LLM locales 2026: Todos los lanzamientos open-weight importantes del año',
+      seoTitle: 'LLM locales 2026: Todos los lanzamientos principales + estado en Ollama',
+      intro: 'A abril de 2026, los lanzamientos de LLM locales más significativos de este año incluyen Meta Llama 3.3 70B (diciembre de 2025), DeepSeek-R1 (enero de 2025), las familias Qwen2.5 y Qwen2.5-Coder (septiembre de 2025), Microsoft Phi-4 (diciembre de 2024) y Google Gemma 3 (febrero de 2026). Este artículo registra todos los lanzamientos principales de modelos con sus especificaciones clave y disponibilidad en Ollama.',
+      metaDescription: 'Actualizaciones de LLM locales 2026: Gemma 3, Llama 4 Scout, lanzamientos del Q1 con especificaciones, benchmarks MMLU y disponibilidad en Ollama. Abril de 2026.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**A abril de 2026, los lanzamientos de LLM locales más significativos de este año incluyen Meta Llama 3.3 70B (diciembre de 2025), DeepSeek-R1 (enero de 2025), las familias Qwen2.5 y Qwen2.5-Coder (septiembre de 2025) y Microsoft Phi-4.**',
+      audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
+      readTime: '8 min de lectura',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'actualizaciones LLM locales 2026',
+      toc: [
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: 'Lanzamientos Q1 2026', anchor: '#q1-2026-releases' },
+        { label: 'Lanzamientos Q4 2025', anchor: '#q4-2025-releases' },
+        { label: 'Lanzamientos Q3 2025', anchor: '#q3-2025-releases' },
+        { label: 'Mejora de calidad 2024 a 2026', anchor: '#quality-improvement' },
+        { label: 'Cómo mantenerse actualizado', anchor: '#how-to-stay-updated' },
+        { label: 'Contexto regional', anchor: '#regional-context' },
+        { label: 'Errores comunes', anchor: '#common-mistakes' },
+        { label: 'Lectura relacionada', anchor: '#related-reading' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
+        { label: 'Fuentes', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**Mayor lanzamiento del Q1 2026**: Google Gemma 3 (febrero de 2026) -- variantes de 1B, 4B, 9B y 27B, soporte de visión en todos los tamaños, licencia Apache 2.0.',
+            '**Mejor lanzamiento de modelo de razonamiento**: DeepSeek-R1 (enero de 2025) -- razonamiento chain-of-thought, 52% MATH a escala 7B, transformó el panorama de benchmarks 7B.',
+            '**Mayor salto de calidad en 2025**: Llama 3.3 70B (diciembre de 2025) -- iguala GPT-4 (2023) en MMLU, disponible mediante `ollama run llama3.3:70b`.',
+            '**Familia de modelos de mayor crecimiento en 2025**: Qwen2.5 -- superó a Mistral 7B en descargas de Ollama para el Q4 2025.',
+            'A abril de 2026, la brecha de calidad entre los modelos ejecutables localmente y los modelos frontier en la nube se ha reducido a aproximadamente 18-24 meses de capacidad equivalente.',
+          ],
+        },
+        q12026: {
+          title: '¿Qué modelos LLM locales se lanzaron en el Q1 2026?',
+          content: 'A abril de 2026, los lanzamientos notables de modelos open-weight de enero a abril de 2026. Todos los modelos a continuación están disponibles en varios formatos de cuantización -- consulta la [guía de cuantización](/es/local-llms/llm-quantization-explained) para conocer los detalles sobre las diferencias entre Q4 y Q5:',
+          image: '/images/q1-2026-model-releases-timeline-en.svg',
+          imageCaption: 'Línea de tiempo de lanzamientos de LLM locales del Q1 2026: Phi-4 Mini (enero, 3.8B), Gemma 3 (febrero, visión en todos los tamaños), Llama 4 Scout (marzo, arquitectura MoE) y Mistral Small 3.2 (abril). Todos se añadieron a Ollama en días tras el anuncio open-weight.',
+          rows: [
+            { 'Modelo': 'Gemma 3 (todos los tamaños)', 'Lanzamiento': 'Febrero 2026', 'Desarrollador': 'Google', 'Característica clave': 'Visión en todos los tamaños, contexto 128K, Apache 2.0', 'Ollama': 'ollama run gemma3:9b' },
+            { 'Modelo': 'Llama 4 Scout (vista previa)', 'Lanzamiento': 'Marzo 2026', 'Desarrollador': 'Meta', 'Característica clave': 'Vista previa de arquitectura MoE, contexto de 10M tokens declarado', 'Ollama': 'No disponible aún' },
+            { 'Modelo': 'Mistral Small 3.2', 'Lanzamiento': 'Febrero 2026', 'Desarrollador': 'Mistral AI', 'Característica clave': 'Seguimiento de instrucciones mejorado respecto a Small 3.1', 'Ollama': 'ollama run mistral-small3.2' },
+            { 'Modelo': 'Phi-4 Mini', 'Lanzamiento': 'Enero 2026', 'Desarrollador': 'Microsoft', 'Característica clave': '3.8B, 70% HumanEval, contexto 128K', 'Ollama': 'ollama run phi4-mini' },
+          ],
+          columns: ['Modelo', 'Lanzamiento', 'Desarrollador', 'Característica clave', 'Ollama'],
+        },
+        q42025: {
+          title: '¿Qué modelos del Q4 2025 siguen siendo los más importantes en 2026?',
+          image: '/images/model-comparison-2026-en.svg',
+          imageCaption: 'Comparación de modelos LLM locales en abril de 2026: Llama 3.3 70B lidera con 82% MMLU y 42 GB VRAM, Qwen2.5 7B ofrece el mejor soporte multilingüe con 74% MMLU y 5 GB VRAM, Gemma 3 9B añade capacidades de visión, DeepSeek-R1 7B se especializa en tareas de razonamiento con 52% MATH. Todos ejecutables mediante Ollama.',
+          rows: [
+            { 'Modelo': 'Llama 3.3 70B', 'Lanzamiento': 'Diciembre 2025', 'Especificaciones clave': '82% MMLU, 88% HumanEval, contexto 128K', 'Sigue siendo relevante': 'Sí -- mejor opción 70B' },
+            { 'Modelo': 'Phi-4 14B', 'Lanzamiento': 'Diciembre 2024', 'Especificaciones clave': '84% MMLU -- por encima de su clase de tamaño', 'Sigue siendo relevante': 'Sí -- sólido modelo de razonamiento 14B' },
+            { 'Modelo': 'Familia completa Qwen2.5', 'Lanzamiento': 'Septiembre 2025', 'Especificaciones clave': 'Rango de 0.5B a 72B, 29 idiomas, Apache 2.0', 'Sigue siendo relevante': 'Sí -- actualmente la mejor familia multilingüe' },
+            { 'Modelo': 'DeepSeek-R1', 'Lanzamiento': 'Enero 2025', 'Especificaciones clave': 'Modelo de razonamiento, 52% MATH a 7B, MoE a gran escala', 'Sigue siendo relevante': 'Sí -- mejor razonamiento local' },
+          ],
+          columns: ['Modelo', 'Lanzamiento', 'Especificaciones clave', 'Sigue siendo relevante'],
+        },
+        q32025: {
+          title: '¿Qué modelos del Q3 2025 siguen siendo ampliamente usados?',
+          content: [
+            '**Varios lanzamientos de 2025 continúan ampliamente desplegados en 2026 debido a la compatibilidad de herramientas y la documentación comunitaria:**',
+          ],
+          items: [
+            '**Llama 3.1 8B** (julio de 2025) -- sigue siendo el modelo 8B mejor documentado, preferido por principiantes por sus extensas guías e integraciones de herramientas.',
+            '**Mistral 7B v0.3** (mayo de 2025) -- puntuaciones de benchmark inferiores a las alternativas actuales, pero la licencia Apache 2.0 y el origen europeo de Mistral lo hacen preferido en algunos despliegues europeos.',
+            '**Llama 3.2 3B y 1B** (septiembre de 2025) -- siguen siendo la recomendación estándar para la primera instalación debido a su pequeño tamaño y documentación extensa.',
+          ],
+        },
+        whatChanged: {
+          id: 'quality-improvement',
+          title: '¿Cuánto ha mejorado la calidad de los LLM locales de 2024 a 2026?',
+          content: [
+            '**La mejora de dos años en la calidad de los modelos ejecutables localmente es sustancial.** A abril de 2026, un modelo de 7B (Qwen2.5 7B, 74% MMLU) iguala el rendimiento en benchmark de un modelo de 13B de principios de 2024. Un modelo de 70B (Llama 3.3 70B, 82% MMLU) iguala el rendimiento de GPT-4 (2023) -- un modelo que hace 3 años requería infraestructura de servidores de mil millones de dólares ahora funciona en un Mac Studio. Para recomendaciones de hardware según cada clase de modelo, consulta la [guía de hardware LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026).',
+          ],
+          image: '/images/llm-quality-improvement-2024-2026-en.svg',
+          imageCaption: 'Mejora de calidad de LLM locales 2024-2026: los modelos de clase 7B mejoraron del 64% MMLU (Mistral 7B, principios de 2024) al 74% (Qwen2.5 7B, abril de 2026). La clase 70B mejoró del 75% (Llama 3.3 70B) al 82-84% (Llama 3.3 70B y Qwen2.5 72B). Cada 18-24 meses, la calidad de los modelos locales avanza una generación.',
+          rows: [
+            { 'Año': 'Principios de 2024', 'Mejor 7B MMLU': '~64% (Mistral 7B)', 'Mejor 70B local MMLU': '~75% (Llama 3.3 70B)', 'Hardware necesario': '7B: 8 GB RAM; 70B: 48 GB RAM' },
+            { 'Año': 'Finales de 2025', 'Mejor 7B MMLU': '~74% (Qwen2.5 7B)', 'Mejor 70B local MMLU': '~82% (Llama 3.3 70B)', 'Hardware necesario': '7B: 5 GB RAM; 70B: 40 GB RAM' },
+            { 'Año': 'Abril de 2026', 'Mejor 7B MMLU': '~74% (Qwen2.5 7B)', 'Mejor 70B local MMLU': '~84% (Qwen2.5 72B)', 'Hardware necesario': '7B: 4.7 GB RAM; 70B: 43 GB RAM' },
+          ],
+          columns: ['Año', 'Mejor 7B MMLU', 'Mejor 70B local MMLU', 'Hardware necesario'],
+        },
+        stayUpdated: {
+          title: '¿Cómo mantenerse actualizado sobre los nuevos lanzamientos de LLM locales?',
+          items: [
+            '**Blog de Ollama** (ollama.com/blog) -- anuncia los nuevos modelos añadidos a la biblioteca de Ollama, normalmente en días tras los lanzamientos open-weight.',
+            '**Hugging Face Open LLM Leaderboard** (huggingface.co/spaces/open-llm-leaderboard) -- rastrea las puntuaciones de benchmark de todos los modelos recién lanzados.',
+            '**r/LocalLLaMA** (reddit.com/r/LocalLLaMA) -- la comunidad más activa para noticias de IA local, benchmarks y debates sobre hardware.',
+            '**GitHub Releases**: sigue los repositorios de llama.cpp (github.com/ggerganov/llama.cpp) y Ollama (github.com/ollama/ollama) para rastrear las actualizaciones del motor que habilitan nuevos modelos.',
+            '**PromptQuorum**: esta guía se actualiza cuando los principales lanzamientos de modelos cambian las recomendaciones. Consulta el campo dateModified para ver la última actualización.',
+          ],
+        },
+        regionalContext: {
+          title: 'Actualizaciones de modelos LLM locales 2026: Contexto regional',
+          content: [
+            '**UE / RGPD + AI Act:** La Ley de IA de la UE (en vigor desde febrero de 2025) introdujo requisitos de documentación para sistemas de IA en contextos regulados. A medida que se lancen nuevos modelos locales en 2026, las organizaciones de la UE deben tener en cuenta: Mistral AI (Francia) sigue siendo el único desarrollador principal de modelos open-weight con sede en la UE. Mistral Small 3.2 (febrero de 2026) y Mistral 7B mantienen licencias Apache 2.0 -- la opción de cumplimiento más limpia para sectores regulados. Tanto el BSI alemán como la CNIL francesa recomiendan la inferencia local para aplicaciones de IA de alto riesgo. Para modelos no europeos (Llama, Qwen, Gemma, DeepSeek): todos son utilizables bajo el RGPD para inferencia local ya que ningún dato abandona la organización. La diferencia en cumplimiento está en la documentación del proveedor, no en el tratamiento de datos. Al actualizar a un nuevo modelo, actualiza la documentación de la herramienta de IA con la nueva versión del modelo, el nivel de cuantización y el nombre del archivo GGUF.',
+            '**Japón (METI):** Las Directrices de Gobernanza de IA del METI requieren documentar los cambios de versión del modelo en sistemas de IA en producción. Al actualizar de Llama 3.1 8B a un modelo más reciente, documenta: etiqueta del modelo anterior, nueva etiqueta del modelo, fecha de actualización y motivo del cambio. El comando `ollama show <model>` proporciona la cadena de versión exacta para los registros de cumplimiento. Para despliegues en japonés, Qwen2.5 sigue siendo la familia recomendada en 2026 por su tokenizador CJK nativo.',
+            '**China:** Bajo las Medidas Provisionales de IA Generativa del CAC de China (2023), las organizaciones que prestan servicios de IA al público deben registrar los modelos ante los reguladores. Los despliegues locales para uso interno quedan fuera de este ámbito. Para despliegues en chino, Qwen2.5 (Alibaba, Apache 2.0) y DeepSeek-R1 (DeepSeek, MIT) son las opciones principales. Qwen2.5 recibió importantes actualizaciones de familia de modelos en el Q3 2025 -- las organizaciones que aún usan Qwen2 deberían actualizar a Qwen2.5 para mejorar el rendimiento y el soporte ampliado de 29 idiomas.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Errores comunes al rastrear y actualizar modelos LLM locales',
+          items: [
+            '**Actualizar a cada nuevo lanzamiento sin necesidad:** Los nuevos lanzamientos de modelos ocurren mensualmente. Si tu modelo actual satisface tu caso de uso, actualizar es opcional. Evalúa un nuevo modelo solo cuando alcances límites de calidad específicos: razonamiento deficiente en tareas complejas, salida multilingüe débil o fallos en código. Descargar un modelo de 4-40 GB por ganancias marginales en benchmarks es tiempo y espacio en disco desperdiciados.',
+            '**Usar el slug incorrecto al buscar modelos en Ollama tras un lanzamiento:** Los nombres de modelos en Hugging Face difieren de las etiquetas de Ollama. Meta Llama 3.3 es `llama3.3` en Ollama, no `llama-3.3` ni `meta-llama-3.3`. Verifica siempre la etiqueta exacta de Ollama en ollama.com/library antes de usarla en scripts.',
+            '**No actualizar Ollama antes de descargar nuevos modelos:** El soporte de nuevos modelos suele requerir una versión actualizada de Ollama. Antes de descargar un modelo recién lanzado, actualiza Ollama: macOS se actualiza automáticamente; Linux: vuelve a ejecutar `curl -fsSL https://ollama.com/install.sh | sh`; Windows: descarga el instalador más reciente. Ejecutar una versión desactualizada de Ollama puede hacer que un nuevo modelo falle silenciosamente.',
+            '**Asumir que más nuevo = mejor para tu tarea específica:** Gemma 3 9B (febrero de 2026) puntúa más alto que Llama 3.1 8B (julio de 2025) en la mayoría de benchmarks, pero Llama 3.1 8B tiene más de 18 meses de fine-tunes comunitarios, prompts de sistema y casos de uso documentados. Para flujos de trabajo establecidos con recursos comunitarios, el modelo más antiguo puede ser la mejor opción práctica.',
+          ],
+        },
+        relatedReading: {
+          id: 'related',
+          title: 'Lectura relacionada',
+          items: [
+            '[Mejores LLM locales 2026](/es/local-llms/best-local-llms-2026) -- clasificaciones actuales de los 5 mejores modelos por tarea, hardware y calidad, incluyendo todos los lanzamientos de 2026.',
+            '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) -- entiende Q4_K_M vs Q5_K_M al descargar nuevos lanzamientos de modelos.',
+            '[Qwen vs Llama vs Mistral](/es/local-llms/qwen-vs-llama-vs-mistral) -- comparación completa de benchmarks de las tres principales familias de modelos con datos más recientes de 2026.',
+            '[Guía de hardware LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) -- comprueba si tu hardware soporta los últimos lanzamientos de modelos antes de descargarlos.',
+            '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- actualiza Ollama y descarga los últimos modelos con las etiquetas de versión correctas.',
+            '[Mejores modelos open source en Ollama](/es/local-llms/top-open-source-models-ollama) -- biblioteca completa de modelos disponibles con comandos de descarga y datos de rendimiento.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Preguntas frecuentes sobre actualizaciones de modelos LLM locales en 2026',
+          faqs: [
+            {
+              q: '¿Con qué rapidez aparecen los nuevos modelos en Ollama tras su lanzamiento open-weight?',
+              a: 'Normalmente entre 1 y 7 días para lanzamientos principales de Meta, Google, Mistral y Alibaba. El equipo de Ollama prioriza los lanzamientos de alto perfil -- Llama 3.3 70B apareció en la biblioteca de Ollama 3 días después del lanzamiento open-weight de Meta. Los modelos más pequeños o comunitarios pueden tardar entre 2 y 4 semanas.',
+            },
+            {
+              q: '¿Debería actualizar de Llama 3.1 8B a un modelo más reciente?',
+              a: 'Si usas Llama 3.1 8B para tareas generales y estás satisfecho con la calidad, actualizar es opcional. Qwen2.5 7B puntúa ligeramente más alto en benchmarks y tiene mejor soporte multilingüe y de código. Para la mayoría de usos generales en inglés, la diferencia de calidad práctica es pequeña. Actualiza si tu modelo actual tiene dificultades con tareas específicas.',
+            },
+            {
+              q: '¿Alcanzarán alguna vez los modelos locales la calidad de los modelos frontier en la nube?',
+              a: 'La tendencia sugiere que sí -- con un retraso de 18-24 meses. GPT-4 (2023, con aproximadamente 1.7 billones de parámetros estimados) es igualado por Llama 3.3 70B (2025, ejecutable localmente). GPT-4o (2024) probablemente tendrá un equivalente ejecutable localmente a finales de 2026 o en 2027. El factor limitante es la eficiencia de cómputo, no la capacidad algorítmica.',
+            },
+            {
+              q: '¿Qué pasó con DeepSeek y por qué fue significativo?',
+              a: 'DeepSeek-R1 (enero de 2025) demostró que un laboratorio de IA chino podía producir modelos con capacidades de razonamiento competitivas con OpenAI o1 a menor coste de entrenamiento. El lanzamiento open-weight puso a disposición local por primera vez un modelo de razonamiento de clase frontier. DeepSeek-R1 7B alcanza el 52% en MATH -- casi el doble del 28% de Mistral 7B -- específicamente gracias a su metodología de entrenamiento chain-of-thought.',
+            },
+            {
+              q: '¿Qué es Llama 4 y está disponible localmente?',
+              a: 'A abril de 2026, Meta lanzó una vista previa de Llama 4 Scout -- un modelo mixture-of-experts que declara hasta 10M de contexto de tokens. El lanzamiento open-weight completo todavía no está disponible para inferencia local. La biblioteca de Ollama aún no incluye variantes de Llama 4. Esta página se actualizará cuando Llama 4 esté disponible para despliegue local.',
+            },
+            {
+              q: '¿Existen modelos locales específicamente para empresas o sectores regulados en 2026?',
+              a: 'Mistral AI ofrece contratos de soporte empresarial para los modelos Mistral. Su origen europeo es relevante para el cumplimiento del RGPD (Ley de IA de la UE en vigor desde febrero de 2025). Para sanidad (HIPAA) o finanzas (SOC 2), cualquier modelo desplegado localmente puede cumplir los requisitos de residencia de datos -- el modelo en sí es neutral respecto a los datos. El trabajo de cumplimiento está en la infraestructura de despliegue, no en la selección del modelo.',
+            },
+            {
+              q: '¿Con qué modelo debería empezar un principiante completo en 2026?',
+              a: 'Llama 3.2 3B o Gemma 3 4B son las mejores opciones para principiantes. Ambos funcionan con hardware modesto (4-6 GB VRAM), tienen documentación extensa y rinden bien en tareas generales. Llama 3.2 3B tiene más guías comunitarias e integraciones de herramientas. Gemma 3 4B es más reciente, algo más rápido y soporta capacidades de visión. Para usuarios no técnicos, LM Studio hace que ambos sean fáciles de instalar y usar sin línea de comandos.',
+            },
+            {
+              q: '¿Merece la pena actualizar a nuevos modelos si el actual funciona bien?',
+              a: 'Solo si alcanzas límites de calidad específicos. Si tu modelo de 7B u 8B satisface tus casos de uso, actualizar es opcional. Sin embargo, si notas errores de razonamiento, soporte multilingüe deficiente o capacidad de código débil, probar un modelo más reciente es recomendable. Qwen2.5 7B (2025) supera a Llama 3.1 8B en la mayoría de benchmarks, convirtiéndolo en un objetivo de actualización seguro para quienes busquen una mejora incremental.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fuentes',
+          items: [
+            'Hugging Face. (2026). "Open LLM Leaderboard." https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard -- Clasificaciones de benchmark en tiempo real para todos los lanzamientos de modelos open-weight.',
+            'Google DeepMind. (2026). "Gemma 3 Technical Report." https://storage.googleapis.com/deepmind-media/gemma/gemma-3-report.pdf -- Arquitectura, benchmarks y datos de capacidad de visión para todas las variantes de Gemma 3.',
+            'Meta AI. (2025). "Llama 3.3 Release." https://ai.meta.com/blog/llama-3-3/ -- Anuncio oficial y especificaciones de Llama 3.3 70B.',
+            'DeepSeek AI. (2025). "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 -- Arquitectura chain-of-thought y resultados de benchmark MATH para DeepSeek-R1.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Actualizaciones de modelos LLM locales 2026: Todos los lanzamientos open-weight importantes del año',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026',
+        'inLanguage': 'es',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-18',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'about': [
+          { '@type': 'Thing', 'name': 'Gemma 3' },
+          { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
+          { '@type': 'Thing', 'name': 'DeepSeek-R1' },
+          { '@type': 'Thing', 'name': 'Qwen2.5' },
+          { '@type': 'Thing', 'name': 'Open-weight LLM 2026' },
+        ],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'es',
+        'name': 'Principales lanzamientos de LLM locales del Q1 2026',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026',
+        'numberOfItems': 4,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Gemma 3 (todos los tamaños)',
+            'description': 'Lanzado en febrero de 2026 por Google. Visión en todos los tamaños. Contexto 128K. Apache 2.0. ollama run gemma3:9b',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Llama 4 Scout (vista previa)',
+            'description': 'Lanzado en marzo de 2026 por Meta. Arquitectura MoE. Contexto de 10M tokens declarado. Aún no disponible en Ollama.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Mistral Small 3.2',
+            'description': 'Lanzado en febrero de 2026 por Mistral AI. Seguimiento de instrucciones mejorado respecto a Small 3.1. ollama run mistral-small3.2',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Phi-4 Mini',
+            'description': 'Lanzado en enero de 2026 por Microsoft. 3.8B parámetros. 70% HumanEval. Contexto 128K. ollama run phi4-mini',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Con qué rapidez aparecen los nuevos modelos en Ollama tras su lanzamiento open-weight?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Normalmente entre 1 y 7 días para lanzamientos principales de Meta, Google, Mistral y Alibaba. Llama 3.3 70B apareció en la biblioteca de Ollama 3 días después del lanzamiento open-weight de Meta. Los modelos más pequeños o comunitarios pueden tardar entre 2 y 4 semanas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debería actualizar de Llama 3.1 8B a un modelo más reciente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Actualizar es opcional si estás satisfecho con la calidad actual. Qwen2.5 7B puntúa ligeramente más alto en benchmarks con mejor soporte multilingüe y de código. Para la mayoría de usos generales en inglés, la diferencia de calidad práctica es pequeña.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Alcanzarán alguna vez los modelos locales la calidad de los modelos frontier en la nube?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La tendencia sugiere que sí -- con un retraso de 18-24 meses. GPT-4 (2023) es igualado por Llama 3.3 70B (2025, ejecutable localmente). GPT-4o (2024) probablemente tendrá un equivalente ejecutable localmente a finales de 2026 o en 2027.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué pasó con DeepSeek y por qué fue significativo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-R1 (enero de 2025) demostró que un laboratorio de IA chino podía producir modelos con capacidades de razonamiento competitivas con OpenAI o1 a menor coste. La versión open-weight puso a disposición local por primera vez un modelo de razonamiento de clase frontier. DeepSeek-R1 7B alcanza el 52% en MATH frente al 28% de Mistral 7B gracias al entrenamiento chain-of-thought.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es Llama 4 y está disponible localmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A abril de 2026, Meta lanzó una vista previa de Llama 4 Scout -- un modelo mixture-of-experts con hasta 10M de contexto de tokens declarado. El lanzamiento open-weight completo aún no está disponible para inferencia local. La biblioteca de Ollama aún no incluye variantes de Llama 4.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Hay modelos locales para empresas o sectores regulados en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mistral AI ofrece contratos de soporte empresarial para los modelos Mistral. Su origen europeo es relevante para el cumplimiento del RGPD bajo la Ley de IA de la UE (en vigor desde febrero de 2025). Cualquier modelo desplegado localmente puede cumplir los requisitos de residencia de datos -- el trabajo de cumplimiento está en la infraestructura, no en la selección del modelo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Con qué modelo debería empezar un principiante en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Llama 3.2 3B o Gemma 3 4B. Ambos funcionan con hardware modesto (4-6 GB VRAM), tienen documentación extensa y rinden bien en tareas generales. Llama 3.2 3B tiene más guías comunitarias. Gemma 3 4B es más reciente, algo más rápido y soporta visión. Para usuarios no técnicos, LM Studio hace que ambos sean fáciles sin línea de comandos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Merece la pena actualizar a nuevos modelos si el actual funciona bien?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo si alcanzas límites de calidad específicos. Si tu modelo de 7B u 8B satisface tus casos de uso, actualizar es opcional. Actualiza si notas errores de razonamiento, soporte multilingüe deficiente o capacidad de código débil. Qwen2.5 7B supera a Llama 3.1 8B en la mayoría de benchmarks y es un objetivo de actualización seguro.',
+            },
+          },
+        ],
+      },
+    },
     ja: {
       theme: 'ベストモデル',
       title: 'ローカルLLMモデルアップデート2026年：すべての大型オープンウェイトリリース',
