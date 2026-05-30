@@ -6811,6 +6811,203 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
       },
     },
+    es: {
+      category: 'Herramientas de IA y Características',
+      title: 'Quorum: La Herramienta de Comparación de Modelos de IA que Detecta Alucinaciones y Encuentra Consenso',
+      intro: 'A partir de julio de 2026: Deja de confiar en un solo modelo de IA. Aprende por qué comparar múltiples modelos lado a lado revela sesgos ocultos, detecta alucinaciones y te da respuestas mejores.',
+      seoTitle: 'Detecta Alucinaciones de IA: Guía de Consenso Multi-Modelo',
+      publishDate: 'Publicado el 14 de marzo de 2026',
+      readTime: '11 min de lectura',
+      metaDescription: 'Deja de confiar en modelos de IA únicos. Compara 25+ modelos lado a lado para detectar alucinaciones, encontrar consenso y tomar decisiones confiadas. Gratis julio de 2026.',
+      educationalLevel: 'Principiante',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Qué es Quorum?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Quorum es el motor de análisis de PromptQuorum que te permite comparar respuestas de múltiples modelos de IA lado a lado. Envía un prompt a ChatGPT, Claude, Gemini y 25+ otros modelos a la vez. Quorum analiza todas las respuestas para encontrar consenso y detectar alucinaciones.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cómo detecta Quorum alucinaciones?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Cuando múltiples modelos no están de acuerdo en un hecho, Quorum marca la contradicción. Las alucinaciones a menudo son específicas del modelo: un modelo alucina mientras otros dan respuestas factualmente consistentes. Quorum destaca estas discrepancias.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué modelos admite PromptQuorum?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A partir de 2026: OpenAI GPT-4o, Anthropic Claude Opus 4.7, Google Gemini 3.1 Pro, Meta Llama 4, Mistral y 20+ modelos de código abierto y comerciales.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo exportar resultados de Quorum?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. Exporta en múltiples formatos: JSON (para integración), CSV (para análisis), HTML (para compartir), PDF (para reportes) o texto plano.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuánto cuesta PromptQuorum?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PromptQuorum está en beta gratuita (julio de 2026). Regístrate en promptquorum.com. Después de beta, el precio escala con el uso de API (pago por uso).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo usar Quorum para cargas de trabajo de producción?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. Durante beta, las cargas de trabajo son gratuitas. Se recomienda para evaluar qué modelos funcionan mejor para tu caso de uso antes de comprometerse a producción.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es PromptQuorum confiable para comparar salidas de modelos de IA?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. PromptQuorum envía prompts idénticos a todos los modelos seleccionados, asegurando una comparación justa. La puntuación de consenso marca dónde los modelos están de acuerdo (confiable) y dónde divergen (incierto). Los resultados son exportables para verificación. La confiabilidad aumenta con más modelos: comparar 5 modelos es más robusto que comparar 2.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cómo funciona la puntuación de consenso de PromptQuorum en múltiples modelos?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'La puntuación de consenso analiza patrones de acuerdo en todos los modelos enviados. Cuando 90%+ de modelos dan respuestas similares, la confianza es alta. Cuando los modelos se dividen, marca el desacuerdo. El Veredicto Quorum cuantifica qué tan fuertemente los modelos están de acuerdo en una afirmación factual, ayudándote a identificar respuestas confiables vs inciertas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo enviar un prompt a varios modelos frontera a la vez con PromptQuorum?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. La característica Dispatch de PromptQuorum envía tu prompt a ChatGPT, Claude, Gemini, Llama, Mistral y 20+ otros modelos frontera simultáneamente en paralelo. Todas las respuestas llegan en segundos. Este envío paralelo es más rápido y eficiente que consultar modelos individualmente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuál es la diferencia entre PromptQuorum y Poe o LM Arena?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PromptQuorum se enfoca en análisis de consenso y envío simultáneo. Poe es una interfaz de chat para acceder a múltiples modelos. LM Arena usa votación de multitudes para clasificar el desempeño de modelos. PromptQuorum es único: analiza automáticamente dónde los modelos están de acuerdo, marca alucinaciones y proporciona puntuación de consenso.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es PromptQuorum gratuito de usar?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. PromptQuorum está en beta gratuita a partir de julio de 2026. Todas las características — envío, análisis de consenso, detección de alucinaciones y exportación — son gratuitas. Después de beta, el precio escala con tu uso de API en un modelo de pago por uso. Regístrate en promptquorum.com hoy.',
+            },
+          },
+        ],
+      },
+      sections: {
+        whatIsQuorum: {
+          title: '¿Qué es Quorum?',
+          content: [
+            'Quorum es el motor de análisis de PromptQuorum que detecta alucinaciones comparando respuestas de múltiples modelos de IA. Cuando las respuestas de los modelos divergen, Quorum marca el desacuerdo. Cuando están de acuerdo, Quorum asigna una puntuación de confianza alta.',
+            'La idea central es simple: **un modelo puede estar equivocado, pero múltiples modelos en consenso rara vez lo están**. Cuando 90%+ de modelos dan la misma respuesta, puedes confiar en ello. Cuando se dividen, sabes que el resultado es incierto.',
+          ],
+        },
+        whyCompare: {
+          title: '¿Por Qué Comparar Múltiples Modelos?',
+          content: [
+            'Los modelos individuales alucinar. ChatGPT puede inventar un hecho. Claude puede cometer un error de lógica. Gemini puede olvidar una restricción. **Ningún modelo es perfecto**.',
+            'Pero cuando ejecutas el mismo prompt en 5-10 modelos, las alucinaciones se destacan. Los modelos confiables dan respuestas similares. Los modelos que alucinan dan respuestas que contradicen a los demás.',
+            'Esta es la ventaja de Quorum: **compara automáticamente tus prompts en múltiples modelos, detecta dónde están de acuerdo y dónde divergen, y te da un nivel de confianza para cada respuesta**.',
+          ],
+        },
+        sevenCapabilities: {
+          title: 'Las 7 Capacidades de Quorum',
+          content: [
+            'Quorum ofrece siete análisis principales para detectar alucinaciones y encontrar el mejor modelo para cada tarea:',
+          ],
+          items: [
+            '**1. Comparación Lado a Lado:** Envía un prompt a múltiples modelos en paralelo. Todas las respuestas llegan en segundos. Compara texto, formato, longitud, estructura.',
+            '**2. Detección de Consenso:** Identifica cuándo los modelos están de acuerdo en los hechos clave. Cuando 90%+ de modelos dan la misma respuesta, confianza alta.',
+            '**3. Puntuación de Calidad:** Califica cada respuesta en precisión, claridad, completitud y relevancia. Averigua qué modelos dieron las mejores respuestas.',
+            '**4. Recomendaciones:** Identifica la mejor(es) respuesta(s) basada en múltiples criterios. Obtén las 1-3 respuestas principales marcadas como "recomendadas".',
+            '**5. Detección de Contradicción:** Encuentra afirmaciones contradictorias entre modelos y las marca. Atrapa alucinaciones donde los modelos no están de acuerdo.',
+            '**6. Análisis de Confianza:** Mide qué tan fuertemente los modelos están de acuerdo o no están de acuerdo. Un valor de confianza te dice qué tan segura es la respuesta.',
+            '**7. Detección de Alucinación:** Identifica respuestas que contradicen hechos o consenso. Marca respuestas como alucinaciones potenciales.',
+          ],
+        },
+        realWorldExample: {
+          title: 'Ejemplo del Mundo Real: Detectar una Alucinación',
+          content: [
+            '**Escenario:** Preguntaste a ChatGPT: "¿Quién fue el fundador de PromptQuorum?"',
+            '**Respuesta de ChatGPT:** "John Smith lo fundó en 2022 con financiamiento de Sequoia Capital."',
+            '**Tu problema:** ¿Es esto correcto? ChatGPT parece confiado, pero ¿y si está alucinando?',
+            '**Lo que haces:** Copias el mismo prompt a Quorum, lo envías a 5 modelos (ChatGPT, Claude, Gemini, Llama, Mistral).',
+            '**Lo que ves:**',
+            '- ChatGPT: "John Smith lo fundó en 2022."',
+            '- Claude: "No tengo información actualizada sobre PromptQuorum."',
+            '- Gemini: "John Smith es un cofundador, pero necesito verificar la fecha."',
+            '- Llama: "Lo siento, no reconozco a PromptQuorum."',
+            '- Mistral: "Datos insuficientes para responder."',
+            '**El veredicto de Quorum:** Consenso del 20% (solo 1 de 5 está de acuerdo). **Confianza: BAJA**. Esto sugiere que ChatGPT puede estar alucinando.',
+          ],
+        },
+        implementations: {
+          title: 'Cómo PromptQuorum Implementa Quorum',
+          content: [
+            'PromptQuorum usa una arquitectura simple pero poderosa:',
+            '**1. Dispatch:** Envía tu prompt a múltiples modelos en paralelo. Todos responden en segundos.',
+            '**2. Aggregate:** Recopila respuestas, metadatos (latencia, tokens, costo) y contexto de cada modelo.',
+            '**3. Analyze:** Ejecuta 7 análisis (consenso, contradicción, confianza, alucinación).',
+            '**4. Rank:** Clasifica respuestas por calidad según cada análisis.',
+            '**5. Display:** Muestra lado a lado con colores de confianza, barras de consenso y banderas de alucinación.',
+            '**6. Export:** Exporta como JSON, CSV, HTML, PDF o texto plano para integración o análisis.',
+          ],
+        },
+        whyConsensusMatters: {
+          title: 'Por Qué el Consenso Importa',
+          content: [
+            'La ciencia de la probabilidad y la inferencia bayesiana lo respalda: **cuando múltiples sistemas independientes llegan a la misma conclusión, la probabilidad de que sea correcto aumenta dramáticamente**.',
+            'Si un modelo dice "la capital de Francia es París", puede estar correcto o alucinando.',
+            'Si 10 modelos independientes dicen "la capital de Francia es París", es casi definitivamente correcto.',
+            'Quorum automatiza este razonamiento: **más modelos = mayor confianza**. Menos modelos = mayor incertidumbre.',
+          ],
+        },
+        faqSection: {
+          title: 'Preguntas Frecuentes',
+          faqs: [
+            { q: '¿Quorum puede garantizar cero alucinaciones?', a: 'No. Pero puede reducir el riesgo drásticamente. Cuando 90%+ de modelos están de acuerdo, es muy probable que sea correcto. Cuando están divididos, sabes que el resultado es incierto y debes investigar más.' },
+            { q: '¿Qué pasa si todos los modelos alucinar de la misma manera?', a: 'Es posible pero raro. Los modelos entrenan en datos diferentes, tienen arquitecturas diferentes, y son creados por diferentes equipos. Para que todos alucinen de la misma manera, tendrían que compartir la misma alucinación, lo cual es extremadamente improbable.' },
+            { q: '¿Es más caro usar Quorum (múltiples modelos) que un solo modelo?', a: 'Sí, pero es más rentable. Una respuesta alucinada de un modelo gratuito cuesta dinero en trabajo manual de verificación. Una respuesta verificada de múltiples modelos es más rápida y más confiable en general.' },
+            { q: '¿Puedo usar Quorum para comparar modelos, no solo detectar alucinaciones?', a: 'Sí. Puedes ver qué modelo es más rápido, más barato, da respuestas más claras o mejor razonado para cada tarea. Quorum es tanto una herramienta de comparación como de detección de alucinaciones.' },
+            { q: '¿Funciona Quorum con modelos personalizados o fine-tuned?', a: 'Actualmente, Quorum soporta 25+ modelos frontales públicos (OpenAI, Anthropic, Google, Meta, etc.). Los modelos personalizados requieren una API pública. Ponte en contacto para casos de uso empresariales.' },
+          ],
+        },
+        nextSteps: {
+          title: 'Próximos Pasos',
+          content: [
+            'Si confías en un solo modelo de IA para trabajo importante, es hora de cambiar.',
+            '1. Regístrate en promptquorum.com',
+            '2. Escribe un prompt que realmente usas (no un ejemplo de demostración)',
+            '3. Envíalo a 5-10 modelos usando Dispatch',
+            '4. Mira los resultados lado a lado',
+            '5. Lee la puntuación de consenso de Quorum',
+            '6. Exporta para análisis o usar en producción',
+            'Eso es. **La comparación multi-modelo es el futuro de la IA confiable**.',
+          ],
+        },
+      },
+    },
   },
   optimization: {
     en: {
