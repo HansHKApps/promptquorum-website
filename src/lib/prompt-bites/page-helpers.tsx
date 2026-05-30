@@ -11,6 +11,7 @@ import { promptBitesContent } from './articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from './slugs'
 import { isPromptBitePublished, isPromptBitesHubPublished, PROMPT_BITES_PUBLISHED_SLUGS } from './published'
 import { promptBitesAlternates, promptBitesHubPath, promptBitesArticlePath } from './metadata-helpers'
+import { getHubMetadata } from './hub-metadata'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -176,22 +177,9 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
 
 export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
   const count = PROMPT_BITES_PUBLISHED_SLUGS.size
-  const titleByLang: Partial<Record<Lang, string>> = {
-    en: `Local LLM Quick Reference: VRAM, Ollama Models & GPU Picks — ${count} Answers | PromptQuorum`,
-    de: `Lokale LLM Kurzreferenz: VRAM, Ollama-Modelle & GPU-Empfehlungen — ${count} Antworten | PromptQuorum`,
-    fr: `Référence rapide LLM local : VRAM, modèles Ollama et choix GPU — ${count} réponses | PromptQuorum`,
-    ja: `ローカルLLMクイックリファレンス：VRAM・Ollamaモデル・GPU選び — ${count}の回答 | PromptQuorum`,
-    zh: `本地LLM快速参考：VRAM、Ollama模型与GPU选择 — ${count}个解答 | PromptQuorum`,
-    es: `Referencia rápida de LLM local: VRAM, modelos Ollama y GPU — ${count} respuestas | PromptQuorum`,
-  }
-  const descByLang: Partial<Record<Lang, string>> = {
-    en: `Local LLM quick reference guide: VRAM tiers for ${count} models (2026), quantization basics, Ollama vs LM Studio, hardware picks, and setup tips. Complete answers for running models locally.`,
-    de: `Lokale LLM Kurzreferenzanleitung: VRAM-Stufen für ${count} Modelle (2026), Quantisierungsgrundlagen, Ollama gegen LM Studio, Hardware-Empfehlungen und Setup-Tipps.`,
-    fr: `Guide de référence rapide LLM local : niveaux VRAM pour ${count} modèles (2026), bases de quantification, Ollama vs LM Studio, choix matériels et conseils de configuration.`,
-    ja: `ローカルLLMクイックリファレンスガイド：${count}モデルのVRAMティア（2026年）、量化の基礎、OllamaとLM Studio、ハードウェア選択、セットアップのコツ。`,
-    zh: `本地LLM快速参考指南：${count}款模型的显存级别（2026年）、量化基础、Ollama与LM Studio对比、硬件推荐和设置技巧。`,
-    es: `Guía de referencia rápida de LLM local: niveles de VRAM para ${count} modelos (2026), fundamentos de cuantización, Ollama vs LM Studio, recomendaciones de hardware y consejos de configuración. Respuestas completas para ejecutar modelos en local.`,
-  }
+  const metadata = getHubMetadata(count)
+  const titleByLang = metadata.titles
+  const descByLang = metadata.descriptions
 
   const isPublished = isPromptBitesHubPublished(lang)
 

@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import type { Lang } from '@/hooks/useLang'
 
+interface OptimizationShowcaseProps {
+  lang?: Lang
+}
+
 type ShowcaseStrings = {
   backToPrompt: string
   optimizationResults: string
@@ -313,7 +317,7 @@ const translations: Record<Lang, ShowcaseStrings> = {
   },
 }
 
-export function OptimizationShowcase({ lang = 'en' }: { lang?: Lang }) {
+export function OptimizationShowcase({ lang = 'en' }: OptimizationShowcaseProps) {
   const [expandedCollapsible, setExpandedCollapsible] = useState<string | null>('details')
   const [selectedVersion, setSelectedVersion] = useState('v3')
   const t = translations[lang] || translations.en
@@ -431,9 +435,9 @@ End with: "You're already doing prompt engineering—now do it better."`}
 
       {/* Quick Refinements Panel */}
       <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-8">
-        <div className="text-sm font-semibold text-gray-900 mb-3">Quick Refinements</div>
+        <div className="text-sm font-semibold text-gray-900 mb-3">{t.quickRefinements}</div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {['Make Concise', 'Add Examples', 'Improve Clarity', 'Expand Detail', 'Simplify', 'Make Professional'].map((btn) => (
+          {[t.makeConcise, t.addExamples, t.improveClarity, t.expandDetail, t.simplify, t.makeProfessional].map((btn) => (
             <button
               key={btn}
               className="px-3 py-2 text-xs font-medium border border-gray-300 rounded-lg bg-white hover:border-purple-600 hover:bg-purple-50 transition-colors"
@@ -446,11 +450,11 @@ End with: "You're already doing prompt engineering—now do it better."`}
 
       {/* Quality Assessment Section */}
       <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Quality Assessment</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">{t.qualityAssessment}</h3>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
           <div className="flex items-center gap-3">
-            <span className="text-sm font-medium text-gray-600">Current Quality:</span>
+            <span className="text-sm font-medium text-gray-600">{t.currentQuality}</span>
             <div className="flex gap-1">
               <span className="text-yellow-600">★</span>
               <span className="text-yellow-600">★</span>
@@ -460,7 +464,7 @@ End with: "You're already doing prompt engineering—now do it better."`}
             </div>
           </div>
           <button className="px-4 py-2 text-sm font-semibold bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-            Assess Quality
+            {t.assessQuality}
           </button>
         </div>
 
@@ -469,13 +473,13 @@ End with: "You're already doing prompt engineering—now do it better."`}
             onClick={() => toggleCollapsible('details')}
             className="px-3 py-2 text-sm font-medium border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
           >
-            ▼ Show Details
+            {t.showDetails}
           </button>
           <button
             onClick={() => toggleCollapsible('suggestions')}
             className="px-3 py-2 text-sm font-medium border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
           >
-            ▼ Show Suggestions
+            {t.showSuggestions}
           </button>
         </div>
 
@@ -485,7 +489,7 @@ End with: "You're already doing prompt engineering—now do it better."`}
             onClick={() => toggleCollapsible('details')}
             className="w-full flex items-center justify-between gap-3 px-4 py-3 bg-gray-50 hover:bg-gray-100 transition-colors"
           >
-            <span className="text-sm font-semibold text-gray-900">Quality Details</span>
+            <span className="text-sm font-semibold text-gray-900">{t.qualityDetails}</span>
             <span className={`text-lg text-gray-600 transition-transform ${expandedCollapsible === 'details' ? 'rotate-180' : ''}`}>▼</span>
           </button>
           {expandedCollapsible === 'details' && (
