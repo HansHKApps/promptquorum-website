@@ -4726,6 +4726,385 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
       },
     },
+    es: {
+      category: 'Comparación de Modelos de IA',
+      title: 'ChatGPT vs Claude vs Gemini: Comparación de Modelos de IA Lado a Lado en 2026',
+      intro: 'A partir de 2026: GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro comparados en razonamiento, velocidad, ventana de contexto, precios y capacidades multimodales. Cuándo usar cada uno — y cuándo usar los tres.',
+      publishDate: 'Publicado el 14 de marzo de 2026',
+      readTime: '12 min de lectura',
+      seoTitle: 'GPT-4o vs Claude Opus 4.7 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro comparados: velocidad, razonamiento, precios y ventana de contexto. Qué modelo de IA elegir — y cuándo usar los tres.',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-14',
+      current_models_mentioned: ['GPT-4o', 'Claude Opus 4.7', 'Gemini 3.1 Pro'],
+      educationalLevel: 'Intermedio',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'es',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Qué modelo de IA es mejor para escritura creativa?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GPT-4o (ChatGPT) destaca en escritura creativa, lluvia de ideas y tareas versátiles — rápido y accesible. Claude Opus 4.7 es mejor para razonamiento más profundo y análisis crítico de contenido creativo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué modelo es mejor para programación?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Claude Opus 4.7 lidera en calidad de código y depuración, con ~94% en HumanEval. GPT-4o (~92%) es más rápido. Para trabajo crítico, compara las sugerencias de código de ambos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuál es la comparación de costos para 2026?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GPT-4o: ~$5/1M tokens entrada, ~$15/1M salida. Claude Opus 4.7: ~$15/1M entrada, ~$75/1M salida. Gemini 3.1 Pro: ~$3.5/1M entrada, ~$10.5/1M salida. Los tres ofrecen planes de consumidor a ~$20/mes. Verifica los precios actuales con cada proveedor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué modelo maneja mejor tareas multimodales?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Gemini 3.1 Pro es más fuerte en imágenes, video, audio y comprensión de documentos. GPT-4o admite texto e imágenes. Claude Opus 4.7 admite texto e imágenes, pero no video.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuál es la ventana de contexto más grande?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Gemini 3.1 Pro tiene la más grande con 2M tokens — cabe una base de código completa o un libro. Claude Opus 4.7 tiene 1M tokens. GPT-4o tiene 128K tokens. Para análisis de documentos largos, Claude o Gemini es la opción correcta.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Los tres modelos tienen niveles gratuitos?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. ChatGPT, Claude.ai y Gemini ofrecen niveles gratuitos con límites de uso diario. Los tres ofrecen planes Pro/Plus a ~$20/mes con límites más altos. El acceso a API es de pago por token para los tres.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuál es el mejor modelo para análisis de datos grandes?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Claude Opus 4.7 o Gemini 3.1 Pro — ambos tienen ventanas de contexto grandes (1M y 2M tokens respectivamente). Claude Opus 4.7 genera resúmenes más estructurados con razonamiento transparente. Gemini 3.1 Pro procesa documentos más largos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo usar varios modelos en el mismo flujo de trabajo?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. PromptQuorum permite enviar el mismo prompt simultáneamente a GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y más modelos — y comparar los resultados lado a lado. Este enfoque se recomienda para trabajo crítico.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuál es la diferencia entre estos modelos en velocidad de respuesta?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GPT-4o y Gemini 3.1 Pro son más rápidos. Claude Opus 4.7 es más lento pero proporciona razonamiento más profundo. Para tareas que priorizan velocidad, elige GPT-4o. Para precisión, elige Claude.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuál es la mejor práctica al comparar modelos?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Envía el mismo prompt a los tres modelos y compara las respuestas. Busca donde están de acuerdo (confiable) y donde divergen (incierto). Este enfoque de múltiples modelos es más robusto que confiar en un solo modelo.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'inLanguage': 'es',
+        name: 'Cómo Comparar Modelos de IA Lado a Lado',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Crea un Prompt de Prueba',
+            text: 'Escribe un prompt claro y específico que represente tu caso de uso actual. Incluye contexto, restricciones y formato de salida deseado.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Prueba con ChatGPT (GPT-4o)',
+            text: 'Envía tu prompt a ChatGPT y registra la respuesta. Nota la calidad, tiempo y cualquier alucinación o error.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Prueba con Claude Opus 4.7',
+            text: 'Envía el mismo prompt a Claude. Compara la profundidad del razonamiento, precisión y transparencia del razonamiento.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Prueba con Gemini 3.1 Pro',
+            text: 'Envía el prompt a Gemini. Evalúa capacidades multimodales, integración de búsqueda web y calidad general de respuesta.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Analiza y Compara',
+            text: 'Crea una matriz de comparación: calidad de respuesta, calidad del razonamiento, precisión factual, velocidad, costo por token. Identifica qué modelo destaca para tu caso de uso.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Elige o Combina',
+            text: 'Usa el mejor modelo para esa tarea, o usa un enfoque híbrido: cada modelo donde destaca, luego sintetiza resultados. PromptQuorum automatiza esta comparación.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'es',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'ChatGPT (GPT-4o por OpenAI)',
+            description: 'Mejor para tareas generales, escritura creativa, velocidad. El más popular. Nivel gratuito disponible. Ventana de contexto de 128K.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Claude Opus 4.7 (Anthropic)',
+            description: 'Mejor para razonamiento complejo, calidad de código, análisis de documentos largos. Ventana de contexto de 1M tokens. Puntuación HumanEval más alta (~94%). Nivel gratuito disponible.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Gemini 3.1 Pro (Google)',
+            description: 'Mejor para tareas multimodales, comprensión de imágenes/video, integración de búsqueda web. Ventana de contexto más grande (2M tokens). Costo de API más bajo. Nivel gratuito disponible.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Calidad de Razonamiento',
+            description: '1. Claude Opus 4.7 (~91% MMLU-Pro, muestra razonamiento). 2. GPT-4o (~90%). 3. Gemini 3.1 Pro (~89%).',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Velocidad',
+            description: '1. GPT-4o (más rápido). 2. Gemini 3.1 Pro (rápido). 3. Claude Opus 4.7 (moderado — más exhaustivo).',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'Costo de API (entrada por 1M tokens)',
+            description: 'Gemini 3.1 Pro (~$3.5) < GPT-4o (~$5) < Claude Opus 4.7 (~$15). Verifica precios actuales con cada proveedor.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            name: 'Capacidad Multimodal',
+            description: 'Gemini 3.1 Pro (texto, imágenes, video, audio) > GPT-4o (texto, imágenes) > Claude Opus 4.7 (texto, imágenes).',
+          },
+          {
+            '@type': 'ListItem',
+            position: 8,
+            name: 'Mejor Práctica',
+            description: 'Ejecuta el mismo prompt en los tres para trabajo crítico. Elige la mejor respuesta. PromptQuorum automatiza esta comparación multi-modelo.',
+          },
+        ],
+      },
+      sections: {
+        why: {
+          title: '¿Por qué Comparar Modelos de IA?',
+          content: [
+            '**Resumen ejecutivo:** GPT-4o lidera en velocidad y salida creativa. Claude Opus 4.7 lidera en precisión de razonamiento y análisis de documentos largos (ventana de contexto de 1M tokens). Gemini 3.1 Pro lidera en tareas multimodales y tiene la ventana de contexto más grande (2M tokens). Para trabajo crítico, ejecuta el mismo prompt en los tres — la precisión de un solo modelo deja exactitud en la mesa.',
+            'Diferentes modelos de IA destacan en diferentes tareas. ChatGPT (GPT-4o) es el más rápido y versátil. Claude (Opus 4.7) obtiene las puntuaciones más altas en razonamiento y benchmarks de código. Gemini (3.1 Pro) es el más fuerte en tareas multimodales y acceso web en tiempo real. Saber qué modelo se ajusta a tu tarea significa mejores resultados y costos más bajos.',
+            'Esta guía compara los tres modelos fronterizos a partir de 2026: fortalezas, ventanas de contexto, precios y las tareas donde cada uno gana.',
+            'Para un enfoque sistemático de selección de modelos — incluyendo cuándo elegir código abierto versus comercial — ver [cómo elegir el modelo de IA adecuado: GPT, Claude o Gemini](/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
+          ],
+        },
+        chatgptSection: {
+          title: 'ChatGPT (OpenAI) — GPT-4o',
+          content: [
+            'El modelo de IA más ampliamente utilizado. GPT-4o en 2026 establece el estándar para velocidad y versatilidad creativa, con el ecosistema más grande de integraciones de terceros.',
+            '**Fortalezas:** Versátil en prácticamente todos los tipos de tareas — escritura, codificación, análisis, lluvia de ideas. Inferencia más rápida de los tres. Ecosistema de plugins e integraciones más grande. Nivel gratuito disponible. Modo de navegación web para información en tiempo real.',
+            '**Debilidades:** Puede hacer saltos lógicos sin mostrar el trabajo — el razonamiento es menos transparente que Claude. Los costos de API son más altos que Gemini a escala. Ventana de contexto más pequeña de los tres con 128K tokens.',
+            '**Mejor para:** Escritura creativa, lluvia de ideas, respuestas rápidas, generación de contenido, prototipado rápido, tareas generales donde importa la velocidad.',
+          ],
+          items: [
+            'Nivel gratuito: Uso limitado (ChatGPT.com)',
+            'ChatGPT Plus: $20/mes — acceso prioritario, Modo de Voz Avanzado, acceso GPT-4o',
+            'API: ~$5/1M tokens entrada, ~$15/1M tokens salida (GPT-4o)',
+            'Empresa: Precios personalizados para despliegues grandes',
+          ],
+        },
+        claudeSection: {
+          title: 'Claude (Anthropic) — Opus 4.7',
+          content: [
+            'El modelo orientado al razonamiento. Claude Opus 4.7 está optimizado para precisión, profundidad lógica y análisis de documentos largos. El modo de pensamiento extendido logra las puntuaciones más altas en MMLU-Pro (~91%) y benchmarks AIME entre modelos fronterizos a partir de 2025.',
+            '**Fortalezas:** Razonamiento superior paso a paso — muestra su trabajo consistentemente. Tasa de alucinación más baja que competidores. Ventana de contexto de 1M tokens para documentos largos y bases de código. Entrenamiento de IA constitucional para transparencia de seguridad. Mejor revisión de código (~94% HumanEval). Nivel gratuito disponible.',
+            '**Debilidades:** Inferencia más lenta que GPT-4o y Gemini 3.1 Pro. Más conservador en tareas altamente creativas. Costo de API más alto de los tres. Menos integraciones de terceros que ChatGPT.',
+            '**Mejor para:** Análisis técnico, revisión de código, razonamiento lógico, análisis de documentos, investigación, resolución de problemas complejos — cualquier tarea donde la precisión supera la velocidad.',
+          ],
+          items: [
+            'Nivel gratuito: Acceso limitado (Claude.ai)',
+            'Claude Pro: $20/mes — límites de uso más altos',
+            'API: ~$15/1M tokens entrada, ~$75/1M tokens salida (Opus 4.7)',
+            'Empresa: DPAs personalizados, modelos dedicados',
+          ],
+        },
+        geminiSection: {
+          title: 'Gemini (Google) — Gemini 3.1 Pro',
+          content: [
+            'El modelo multimodal más fuerte. Gemini 3.1 Pro lanza con 2M tokens de contexto — el más grande de cualquier modelo fronterizo — y domina en comprensión de imágenes, video, audio y documentos.',
+            '**Fortalezas:** Multimodal verdadero (texto, imágenes, video, audio) — mejor en clase. Integración de búsqueda web nativa para información en tiempo real. Ventana de contexto más grande (2M tokens) para análisis de documentos muy largos. Costo de API más bajo de los tres. Nivel gratuito disponible. Pensamiento flash para tareas rápidas.',
+            '**Debilidades:** Razonamiento paso a paso menos transparente que Claude. No es el mejor para código extremadamente crítico. Modo de búsqueda web requiere conectividad en tiempo real.',
+            '**Mejor para:** Tareas multimodales, análisis de imágenes, procesamiento de video, análisis de documentos visuales, búsqueda web integrada, presupuesto consciente.',
+          ],
+          items: [
+            'Nivel gratuito: Uso limitado (Gemini.google.com)',
+            'Gemini Advanced: $20/mes — límites más altos',
+            'API: ~$3.5/1M tokens entrada, ~$10.5/1M tokens salida (Gemini 3.1 Pro)',
+            'Empresa: Acceso API con SLAs',
+          ],
+        },
+        comparison: {
+          title: 'Comparación Lado a Lado: GPT-4o vs Claude Opus 4.7 vs Gemini 3.1 Pro',
+          content: '',
+          rows: [
+            { 'Factor': 'Interfaz', 'ChatGPT (GPT-4o)': 'Web + app móvil, navegación web integrada', 'Claude (Opus 4.7)': 'Web, aplicación de escritorio, API', 'Gemini (3.1 Pro)': 'Web + app móvil, búsqueda web integrada' },
+            { 'Factor': 'Ventana de Contexto', 'ChatGPT (GPT-4o)': '128K tokens', 'Claude (Opus 4.7)': '1M tokens', 'Gemini (3.1 Pro)': '2M tokens' },
+            { 'Factor': 'Razonamiento (MMLU-Pro)', 'ChatGPT (GPT-4o)': '~90%', 'Claude (Opus 4.7)': '~91%', 'Gemini (3.1 Pro)': '~89%' },
+            { 'Factor': 'Código (HumanEval)', 'ChatGPT (GPT-4o)': '~92%', 'Claude (Opus 4.7)': '~94%', 'Gemini (3.1 Pro)': '~88%' },
+            { 'Factor': 'Multimodal', 'ChatGPT (GPT-4o)': 'Texto + imágenes', 'Claude (Opus 4.7)': 'Texto + imágenes', 'Gemini (3.1 Pro)': 'Texto, imágenes, video, audio' },
+            { 'Factor': 'Velocidad', 'ChatGPT (GPT-4o)': 'Rápido', 'Claude (Opus 4.7)': 'Moderado', 'Gemini (3.1 Pro)': 'Rápido' },
+            { 'Factor': 'Costo de API (por 1M tokens entrada)', 'ChatGPT (GPT-4o)': '~$5', 'Claude (Opus 4.7)': '~$15', 'Gemini (3.1 Pro)': '~$3.50' },
+            { 'Factor': 'Nivel Gratuito', 'ChatGPT (GPT-4o)': '✅ Sí', 'Claude (Opus 4.7)': '✅ Sí (limitado)', 'Gemini (3.1 Pro)': '✅ Sí' },
+            { 'Factor': 'Razonamiento Extendido', 'ChatGPT (GPT-4o)': 'o3/o4-mini', 'Claude (Opus 4.7)': 'Integrado', 'Gemini (3.1 Pro)': 'Pensamiento Flash' },
+          ],
+          columns: ['Factor', 'ChatGPT (GPT-4o)', 'Claude (Opus 4.7)', 'Gemini (3.1 Pro)'],
+        },
+        contentCreation: {
+          title: 'Creación de Contenido',
+          content: 'GPT-4o gana en salida puramente creativa — el modelo más versátil y rápido, ideal para lluvia de ideas y creación de textos. Usa GPT-4o para publicaciones de blog, contenido de redes sociales, textos de marketing e ideación creativa.',
+        },
+        codeReview: {
+          title: 'Revisión de Código y Depuración',
+          content: 'Claude Opus 4.7 gana — puntuación HumanEval más alta (aprox. 94%), mejor depuración paso a paso, detección de errores y análisis de seguridad. Muestra el razonamiento de forma transparente. GPT-4o (aprox. 92%) es una fuerte alternativa cuando la velocidad es prioritaria.',
+        },
+        dataAnalysis: {
+          title: 'Análisis de Datos y Investigación',
+          content: 'Claude Opus 4.7 gana — excelente precisión, ventana de contexto de 1M tokens para analizar documentos largos y conjuntos de datos, razonamiento riguroso. Para documentos muy largos (libros, bases de código completas), la ventana de contexto de 2M tokens de Gemini 3.1 Pro es la mejor opción.',
+        },
+        imageAnalysis: {
+          title: 'Análisis de Imágenes',
+          content: 'Gemini 3.1 Pro gana — mejor comprensión multimodal para imágenes, video, audio y documentos. Describe una imagen, analiza gráficos, procesa documentos visuales o extrae texto de PDFs.',
+        },
+        generalQA: {
+          title: 'Preguntas Generales y Respuestas',
+          content: 'Gemini 3.1 Pro o GPT-4o — ambos fuertes. Gemini tiene búsqueda web integrada nativa para información en tiempo real. GPT-4o tiene la base de usuarios más grande y el ecosistema de plugins más completo. Para preguntas de hechos sensibles al tiempo, la integración web de Gemini lidera.',
+        },
+        summarization: {
+          title: 'Resumen de Documentos',
+          content: 'Claude Opus 4.7 o Gemini 3.1 Pro — ambos tienen ventanas de contexto grandes (1M y 2M tokens respectivamente). Claude Opus 4.7 crea resúmenes más estructurados con razonamiento claro. Gemini 3.1 Pro procesa los documentos más largos.',
+        },
+        budgetConscious: {
+          title: 'Usuarios Conscientes del Presupuesto',
+          content: 'Gemini 3.1 Pro gana en costos de API (~$3.50/1M tokens entrada). Los tres modelos ofrecen niveles gratuitos de consumidor. En API, Gemini es más barato, GPT-4o está en el medio, Claude Opus 4.7 es el más caro — pero las diferencias de calidad justifican la prima para tareas críticas en precisión.',
+        },
+        strategy: {
+          title: 'La Estrategia Inteligente: Usa los Tres',
+          content: [
+            'Los usuarios profesionales de IA no se atienen a un solo modelo. Envían el mismo prompt a los tres y eligen la mejor respuesta:',
+            '1. GPT-4o: Lluvia de ideas rápida y exploración creativa',
+            '2. Claude Opus 4.7: Análisis profundo, validación del razonamiento, revisión de código',
+            '3. Gemini 3.1 Pro: Información en tiempo real, tareas multimodales, documentos muy largos',
+            'Esto te da velocidad (GPT-4o), precisión (Claude Opus 4.7) y actualidad + contexto (Gemini 3.1 Pro). PromptQuorum automatiza este proceso: envía el mismo prompt optimizado a los tres modelos y compara los resultados lado a lado.',
+          ],
+        },
+        currentTrends: {
+          title: 'Tendencias Actuales de Modelos de IA (2026)',
+          content: ['Los tres modelos fronterizos han convergido significativamente en rendimiento de benchmark — la brecha que existía en 2023 ahora se mide en puntos porcentuales de un solo dígito en la mayoría de benchmarks estándar.'],
+          items: [
+            'Los modos de razonamiento extendido son estándar: Los tres ofrecen escalado de cómputo en tiempo de inferencia para tareas complejas',
+            'Las capacidades multimodales son básicas: GPT-4o y Claude Opus 4.7 admiten imágenes; Gemini 3.1 Pro lidera en video y audio',
+            'Las ventanas de contexto crecen rápidamente: De 4K (GPT-3) a 2M (Gemini 3.1 Pro) en menos de tres años — el contexto ya no es el cuello de botella',
+            'Los modelos de código abierto cierran la brecha de calidad: LLaMA 3.1 70B y Qwen2.5 alcanzan el nivel de GPT-4 en la mayoría de benchmarks',
+            'El uso de herramientas y llamadas de función son universales: Los tres modelos admiten salidas estructuradas, ejecución de código y llamadas a API externas en producción',
+          ],
+        },
+        localAlternatives: {
+          title: 'Alternativas Locales y de Código Abierto',
+          content: ['Para cargas de trabajo sensibles a datos o despliegue sin conexión, los modelos de código abierto han cerrado significativamente la brecha de calidad. LLaMA 3.1 (Meta), Qwen2.5 (Alibaba) y Mistral se ejecutan en hardware de consumidor con 8–16 GB VRAM.'],
+          items: [
+            'LLaMA 3.1 70B: Competible con GPT-4o en benchmarks de razonamiento; requiere aprox. 40 GB VRAM o cuantizado 8–16 GB',
+            'Qwen2.5 14B: Modelo de código abierto más fuerte para generación de código (a partir de 2025)',
+            'Mistral 7B: Inferencia más rápida en hardware de consumidor; ideal para aplicaciones sensibles a latencia',
+            '[Centro Local de LLMs — Guías de Configuración y Descripción General](/es/local-llms) — Ollama, LM Studio y llama.cpp en Mac, Windows y Linux',
+          ],
+        },
+        nextSteps: {
+          title: 'Próximos Pasos',
+          content: [
+            'No te atengasas a un solo modelo — prueba los tres con tus casos de uso reales:',
+            '1. Usa el nivel gratuito de ChatGPT (GPT-4o) para tareas creativas y lluvia de ideas',
+            '2. Prueba Claude Opus 4.7 para trabajo analítico y revisión de código',
+            '3. Experimenta con Gemini 3.1 Pro para análisis de imágenes y datos web en tiempo real',
+            '4. Envía el mismo prompt a los tres y compara respuestas',
+            '5. Identifica qué modelo da los mejores resultados para tu tipo de tarea específica',
+            'PromptQuorum permite enviar el mismo prompt optimizado simultáneamente a GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y más modelos — y comparar directamente qué modelo proporciona los mejores resultados para tu tarea.',
+          ],
+        },
+        tldr: {
+          title: 'Puntos Clave',
+          isTldr: true,
+          items: [
+            'GPT-4o: Mejor opción para velocidad, versatilidad y escritura creativa. Inferencia más rápida. Contexto de 128K.',
+            'Claude Opus 4.7: Mejor razonamiento (~91% MMLU-Pro), código (~94% HumanEval), análisis de forma larga. Contexto de 1M.',
+            'Gemini 3.1 Pro: Mejor multimodal (imágenes, video, audio). Acceso web en tiempo real. Contexto más grande (2M tokens). Costos de API más bajos.',
+            'Los tres ofrecen niveles gratuitos de consumidor y planes Pro a ~$20/mes.',
+            'Razonamiento: Claude Opus 4.7 > GPT-4o > Gemini 3.1 Pro.',
+            'Velocidad: GPT-4o ≈ Gemini 3.1 Pro > Claude Opus 4.7.',
+            'Costo de API: Gemini 3.1 Pro (~$3.50/1M) < GPT-4o (~$5/1M) < Claude Opus 4.7 (~$15/1M).',
+            'Mejor práctica: Para trabajo crítico, envía el mismo prompt a los tres — elige la mejor respuesta.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Errores Comunes',
+          items: [
+            'Error 1: Atarse a un solo modelo y nunca comparar. Cada modelo tiene sus propias fortalezas. Siempre prueba con tu tarea específica antes de comprometerse.',
+            'Error 2: Asumir que el modelo más caro es el mejor. Gemini 3.1 Pro es la opción más barata de API y gana en tareas multimodales. Ajusta el modelo a la tarea — no al precio.',
+            'Error 3: Ignorar los límites de la ventana de contexto. Gemini 3.1 Pro (2M tokens) y Claude Opus 4.7 (1M tokens) procesan documentos largos. GPT-4o (128K) puede truncar entradas grandes.',
+            'Error 4: No verificar la fecha límite del conocimiento. Los modelos con capacidad web (Gemini 3.1 Pro con Búsqueda, GPT-4o con navegación) tienen información actual. Las llamadas a API básicas pueden usar el corte del entrenamiento.',
+            'Error 5: Usar el mismo prompt para todos los modelos. Cada modelo responde mejor a diferentes estilos de prompt. Ajusta tus prompts — Claude se beneficia de instrucciones explícitas paso a paso; Gemini del contexto multimodal.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectura Relacionada',
+          items: [
+            '[Cómo funcionan realmente los LLMs](/es/prompt-engineering/how-llms-actually-work) — Arquitectura transformer, atención y por qué los modelos alucina',
+            '[Límites de la IA: Lo que los LLMs no pueden hacer](/es/prompt-engineering/ai-limitations-what-llms-cant-do) — Las ocho limitaciones estructurales que comparten todos los modelos',
+            '[IA Local vs Herramientas Cloud](/es/local-llms) — Cuándo usar modelos locales en lugar de APIs en la nube',
+            '[Alucinaciones de IA: Por qué la IA se inventa cosas](/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Detectar y reducir alucinaciones en todos los modelos',
+          ],
+        },
+        sources: {
+          title: 'Fuentes y Citas',
+          items: [
+            'Especificaciones del Modelo OpenAI GPT-4o — openai.com/models',
+            'Documentación de Anthropic Claude Opus 4.7 — docs.anthropic.com',
+            'Especificaciones de Google Gemini 3.1 Pro — gemini.google.com',
+            'Tablero de Líderes de LMSYS Chatbot Arena — arena.lmsys.org',
+            'Papers With Code — Resultados de Benchmarks MMLU — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
+          ],
+        },
+      },
+    },
   },
   quorum: {
     en: {
