@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Las 9 Capas de un Stack LLM Local (87 Proyectos)</text>
+  <!-- Header underline -->
+  <line x1="40" y1="44" x2="760" y2="44" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Column headers -->
+  <text x="68" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">#</text>
+  <text x="100" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">NOMBRE DE CAPA</text>
+  <text x="320" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">HERRAMIENTAS CLAVE</text>
+  <line x1="40" y1="68" x2="760" y2="68" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 - white -->
+  <rect x="40" y="70" width="720" height="36" fill="#FFFFFF"/>
+  <circle cx="68" cy="88" r="12" fill="#6750A4"/>
+  <text x="68" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="100" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Runtimes</text>
+  <text x="320" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">Ollama · llama.cpp · vLLM · LocalAI</text>
+  <line x1="40" y1="106" x2="760" y2="106" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 - tinted -->
+  <rect x="40" y="106" width="720" height="36" fill="#F7F2FA"/>
+  <circle cx="68" cy="124" r="12" fill="#6750A4"/>
+  <text x="68" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="100" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Apps de Escritorio</text>
+  <text x="320" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">LM Studio · Jan · GPT4All · AnythingLLM</text>
+  <line x1="40" y1="142" x2="760" y2="142" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 - white -->
+  <rect x="40" y="142" width="720" height="36" fill="#FFFFFF"/>
+  <circle cx="68" cy="160" r="12" fill="#6750A4"/>
+  <text x="68" y="164" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="100" y="164" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Interfaces Web</text>
+  <text x="320" y="164" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">Open WebUI · LibreChat · SillyTavern</text>
+  <line x1="40" y1="178" x2="760" y2="178" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 - tinted -->
+  <rect x="40" y="178" width="720" height="36" fill="#F7F2FA"/>
+  <circle cx="68" cy="196" r="12" fill="#6750A4"/>
+  <text x="68" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="100" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Asistentes de Código</text>
+  <text x="320" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">Continue.dev · Cline · Aider · Tabby</text>
+  <line x1="40" y1="214" x2="760" y2="214" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 - white -->
+  <rect x="40" y="214" width="720" height="36" fill="#FFFFFF"/>
+  <circle cx="68" cy="232" r="12" fill="#6750A4"/>
+  <text x="68" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="100" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Sistemas RAG</text>
+  <text x="320" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">AnythingLLM · PrivateGPT · RAGFlow · Dify</text>
+  <line x1="40" y1="250" x2="760" y2="250" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6 - tinted -->
+  <rect x="40" y="250" width="720" height="36" fill="#F7F2FA"/>
+  <circle cx="68" cy="268" r="12" fill="#6750A4"/>
+  <text x="68" y="272" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="100" y="272" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Frameworks de Agentes</text>
+  <text x="320" y="272" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">LangChain · CrewAI · LangGraph · AutoGen</text>
+  <line x1="40" y1="286" x2="760" y2="286" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 7 - white -->
+  <rect x="40" y="286" width="720" height="36" fill="#FFFFFF"/>
+  <circle cx="68" cy="304" r="12" fill="#6750A4"/>
+  <text x="68" y="308" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+  <text x="100" y="308" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Voz y Multimodal</text>
+  <text x="320" y="308" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">Whisper.cpp · Piper · LLaVA · Bark</text>
+  <line x1="40" y1="322" x2="760" y2="322" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 8 - tinted -->
+  <rect x="40" y="322" width="720" height="36" fill="#F7F2FA"/>
+  <circle cx="68" cy="340" r="12" fill="#6750A4"/>
+  <text x="68" y="344" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
+  <text x="100" y="344" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">M&#xf3;vil y Edge</text>
+  <text x="320" y="344" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">MLC Chat · PocketPal AI · Private LLM</text>
+  <line x1="40" y1="358" x2="760" y2="358" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 9 - white -->
+  <rect x="40" y="358" width="720" height="36" fill="#FFFFFF"/>
+  <circle cx="68" cy="376" r="12" fill="#6750A4"/>
+  <text x="68" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">9</text>
+  <text x="100" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Herramientas Especializadas</text>
+  <text x="320" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">Obsidian plugins · AutoGPT · Agnai</text>
+  <line x1="40" y1="394" x2="760" y2="394" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer -->
+  <text x="400" y="412" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com</text>
+</svg>

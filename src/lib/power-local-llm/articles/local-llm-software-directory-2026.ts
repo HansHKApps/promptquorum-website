@@ -2151,7 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La licencia importa para el uso comercial.** MIT y Apache 2.0 dominan el ecosistema. AGPL aparece en algunas interfaces (text-generation-webui, KoboldCpp, Jan, SillyTavern) — perfecto para uso personal, más deliberado para despliegues comerciales. La columna "Licencia" a continuación nombra cada una explícitamente.',
           '**Los stacks multiherramienta son la norma.** Ollama + Open WebUI + AnythingLLM + Continue.dev es una configuración de una sola máquina que cubre chat, RAG y código sin compromiso. La tabla "Stacks comunes en producción" a continuación nombra las recetas que realmente funcionan en 2026.',
         ],
-        image: '/images/local-llm-software-directory-2026-layer-map-en.svg',
+        image: '/images/local-llm-software-directory-2026-layer-map-es.svg',
         imageCaption: 'Las 9 capas de un stack LLM local: 87 proyectos en mantenimiento activo que abarcan runtimes (Ollama, llama.cpp, vLLM), apps de escritorio (LM Studio, Jan, GPT4All), interfaces web, asistentes de código, sistemas RAG, frameworks de agentes, voz y multimodal, clientes móviles y herramientas de productividad especializadas.',
       },
       runtimes: {
@@ -2197,7 +2197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Ver precios de Lambda Labs y registrarse',
           },
         ],
-        image: '/images/local-llm-software-directory-2026-runtimes-comparison-en.svg',
+        image: '/images/local-llm-software-directory-2026-runtimes-comparison-es.svg',
         imageCaption: 'Ollama vs llama.cpp vs vLLM: Ollama es MIT con instalación de un comando y API compatible con OpenAI; llama.cpp es el motor C++ fundamental con licencia MIT; vLLM es la opción Apache 2.0 de serving multiusuario para despliegues GPU.',
       },
       desktopApps: {
@@ -2281,7 +2281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Ver precios de Cursor',
           },
         ],
-        image: '/images/local-llm-software-directory-2026-coding-patterns-en.svg',
+        image: '/images/local-llm-software-directory-2026-coding-patterns-es.svg',
         imageCaption: '3 patrones de código con LLM local: Continue.dev para autocompletado inline en VS Code y JetBrains, Cline para ediciones autónomas de agente, y Aider para diffs en terminal nativos de git — todos se conectan a Ollama mediante la API compatible con OpenAI.',
       },
       ragSystems: {
@@ -2304,7 +2304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**txtai**', 'Link': '[github.com/neuml/txtai](https://github.com/neuml/txtai)', 'Descripción': 'Base de datos vectorial + LLM integrada en una sola biblioteca', 'Licencia': 'Apache 2.0' },
         ],
         note: 'Guía más detallada: [AnythingLLM vs PrivateGPT vs Open WebUI](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)',
-        image: '/images/local-llm-software-directory-2026-rag-systems-en.svg',
+        image: '/images/local-llm-software-directory-2026-rag-systems-es.svg',
         imageCaption: 'División del RAG local: apps llave en mano (AnythingLLM, PrivateGPT, Quivr, RAGFlow, Khoj) para chat de documentos sin código vs bibliotecas de framework (LlamaIndex, Haystack, Dify, Flowise, txtai) para construir pipelines personalizados.',
       },
       agentFrameworks: {
@@ -2402,7 +2402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Objetivo': 'Apple Silicon', 'Stack': 'Ollama (backend MLX) o LM Studio', 'Hardware mínimo': 'M2/M3/M4/M5 con 16+ GB unificada' },
           { 'Objetivo': 'Equipo multiusuario', 'Stack': 'vLLM + Open WebUI', 'Hardware mínimo': '32+ GB RAM + multi-GPU' },
         ],
-        image: '/images/local-llm-software-directory-2026-real-world-stacks-en.svg',
+        image: '/images/local-llm-software-directory-2026-real-world-stacks-es.svg',
         imageCaption: '9 stacks LLM locales comunes según el objetivo: desde LM Studio standalone (16 GB RAM, sin GPU) hasta vLLM + Open WebUI para equipos multiusuario (32 GB RAM + multi-GPU), con Ollama + Open WebUI como el mejor equilibrio por defecto con 16 GB RAM.',
       },
       howCurrent: {

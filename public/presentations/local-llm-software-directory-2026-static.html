@@ -1045,12 +1045,177 @@
           },
         ],
       },
+      es: {
+        title: 'Directorio de software LLM local 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'El directorio completo de software LLM local',
+            subtitle: '87 herramientas en 9 capas — runtimes, apps de escritorio, interfaces web, asistentes de código, sistemas RAG, frameworks de agentes, voz, móvil y plugins especializados.',
+            link: 'https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory-2026',
+          },
+          {
+            type: 'list',
+            h2: 'Conclusiones clave',
+            items: [
+              '<strong>Nueve capas, 87 proyectos, un solo mapa.</strong> Runtimes, apps de escritorio, interfaces web, asistentes de código, sistemas RAG, frameworks de agentes, voz/multimodal, clientes móviles y plugins de productividad especializados.',
+              '<strong>Elige primero un runtime.</strong> Ollama es la opción predeterminada correcta para ~95 % de los usuarios; llama.cpp es el motor detrás de la mayoría de las herramientas; vLLM para despliegues GPU multi-usuario.',
+              '<strong>La mayoría de las capas por encima del runtime son opcionales.</strong> Una app de escritorio O una interfaz web es suficiente para el chat. Añade integración de código solo para el IDE; RAG solo para chat con documentos.',
+              '<strong>Las licencias importan para el uso comercial.</strong> MIT y Apache 2.0 dominan. AGPL aparece en algunas interfaces — válido para uso personal, revisar con cuidado para despliegues comerciales.',
+              '<strong>Los stacks multi-herramienta son la norma.</strong> Ollama + Open WebUI + AnythingLLM + Continue.dev cubre chat, RAG y código en una sola máquina sin conflictos.',
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'El stack de 9 capas para LLMs locales',
+            items: [
+              '<strong>Runtimes</strong> (Ollama, llama.cpp, vLLM) — cargan pesos del modelo y ejecutan inferencia',
+              '<strong>Apps de escritorio</strong> (LM Studio, Jan, GPT4All) — interfaz de chat sobre un runtime, sin terminal',
+              '<strong>Interfaces web</strong> (Open WebUI, LibreChat) — chat en el navegador, acceso multi-dispositivo',
+              '<strong>Asistentes de código</strong> (Continue.dev, Cline, Aider) — modelo local integrado en tu editor',
+              '<strong>Sistemas RAG</strong> (AnythingLLM, PrivateGPT) — chatea con tus propios documentos',
+              '<strong>Frameworks de agentes</strong> (LangChain, CrewAI, LangGraph) — flujos de trabajo multi-paso y multi-llamada',
+              '<strong>Voz y multimodal</strong> (Whisper.cpp, Piper, LLaVA) — reconocimiento de voz, TTS y visión',
+              '<strong>Clientes móviles</strong> (MLC Chat, PocketPal AI) — inferencia en dispositivo, sin internet',
+              '<strong>Plugins especializados</strong> (Obsidian, AutoGPT) — integra LLMs locales en tus herramientas actuales',
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Capa 1: Runtimes e Inferencia',
+            columns: ['Herramienta', 'Licencia', 'Mejor para'],
+            rows: [
+              { Herramienta: 'Ollama', Licencia: 'MIT', 'Mejor para': 'Inicio más fácil — instalación en un comando, API OpenAI' },
+              { Herramienta: 'llama.cpp', Licencia: 'MIT', 'Mejor para': 'Motor fundamental, CPU + Apple Silicon' },
+              { Herramienta: 'vLLM', Licencia: 'Apache 2.0', 'Mejor para': 'Servicio GPU de alto rendimiento multi-usuario' },
+              { Herramienta: 'LocalAI', Licencia: 'MIT', 'Mejor para': 'Reemplazo de API OpenAI compatible con múltiples backends' },
+              { Herramienta: 'ExLlamaV2', Licencia: 'MIT', 'Mejor para': 'Inferencia cuantizada rápida en GPUs RTX' },
+              { Herramienta: 'MLX-LM', Licencia: 'MIT', 'Mejor para': 'Runtime nativo para Apple Silicon (Apple Research)' },
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Capa 2: Apps de escritorio',
+            columns: ['Herramienta', 'Licencia', 'Mejor para'],
+            rows: [
+              { Herramienta: 'LM Studio', Licencia: 'Propietario (gratuito)', 'Mejor para': 'GUI más pulida, navegador de modelos, modo servidor' },
+              { Herramienta: 'Jan', Licencia: 'AGPL 3.0', 'Mejor para': 'Privacidad primero, sin telemetría, completamente open source' },
+              { Herramienta: 'GPT4All', Licencia: 'MIT', 'Mejor para': 'Amigable para principiantes, buen soporte solo CPU' },
+              { Herramienta: 'AnythingLLM', Licencia: 'MIT', 'Mejor para': 'RAG + chat de documentos con almacén vectorial integrado' },
+              { Herramienta: 'Cherry Studio', Licencia: 'Apache 2.0', 'Mejor para': 'IA de escritorio multi-proveedor, alta personalización' },
+              { Herramienta: 'Open Interpreter', Licencia: 'AGPL 3.0', 'Mejor para': 'LLM local que controla y ejecuta en tu PC' },
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Capa 3: Interfaces web',
+            columns: ['Herramienta', 'Licencia', 'Mejor para'],
+            rows: [
+              { Herramienta: 'Open WebUI', Licencia: 'BSD 3-Clause', 'Mejor para': 'Interfaz de chat autoalojada más popular con RAG integrado' },
+              { Herramienta: 'LibreChat', Licencia: 'MIT', 'Mejor para': 'Alternativa a ChatGPT multi-modelo con funciones de equipo' },
+              { Herramienta: 'SillyTavern', Licencia: 'AGPL 3.0', 'Mejor para': 'Roleplay y chat de personajes con Lorebooks' },
+              { Herramienta: 'LobeChat', Licencia: 'MIT', 'Mejor para': 'UI moderna con mercado de plugins' },
+              { Herramienta: 'Chatbox', Licencia: 'GPLv3', 'Mejor para': 'Cliente de escritorio y web multiplataforma' },
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Capa 4: Asistentes de código e IDE',
+            columns: ['Herramienta', 'Licencia', 'Mejor para'],
+            rows: [
+              { Herramienta: 'Continue.dev', Licencia: 'Apache 2.0', 'Mejor para': 'Autocompletado + chat en VS Code y JetBrains' },
+              { Herramienta: 'Aider', Licencia: 'Apache 2.0', 'Mejor para': 'Pair programmer en terminal con edición multi-archivo' },
+              { Herramienta: 'Cline', Licencia: 'Apache 2.0', 'Mejor para': 'Agente de código autónomo para VS Code' },
+              { Herramienta: 'Tabby', Licencia: 'Apache 2.0', 'Mejor para': 'Alternativa autoalojada a GitHub Copilot' },
+              { Herramienta: 'Twinny', Licencia: 'MIT', 'Mejor para': 'Alternativa gratuita a Copilot para VS Code' },
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Capa 5: Sistemas RAG y chat de documentos',
+            columns: ['Herramienta', 'Licencia', 'Mejor para'],
+            rows: [
+              { Herramienta: 'AnythingLLM', Licencia: 'MIT', 'Mejor para': 'RAG personal todo-en-uno más sencillo con espacios de trabajo' },
+              { Herramienta: 'PrivateGPT', Licencia: 'Apache 2.0', 'Mejor para': 'RAG empresarial completamente offline' },
+              { Herramienta: 'Khoj', Licencia: 'AGPL 3.0', 'Mejor para': 'Segundo cerebro IA personal, sincronizado con Obsidian' },
+              { Herramienta: 'Dify', Licencia: 'Apache 2.0 mod.', 'Mejor para': 'Constructor de flujos IA con soporte RAG y agentes' },
+              { Herramienta: 'RAGFlow', Licencia: 'Apache 2.0', 'Mejor para': 'Comprensión profunda de documentos con extracción de citas' },
+              { Herramienta: 'LlamaIndex', Licencia: 'MIT', 'Mejor para': 'Framework RAG en Python para desarrollos propios' },
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Capas 6–9: Agentes, voz, móvil y especializados',
+            columns: ['Herramienta', 'Licencia', 'Mejor para'],
+            rows: [
+              { Herramienta: 'LangChain', Licencia: 'MIT', 'Mejor para': 'Librería de orquestación LLM más utilizada' },
+              { Herramienta: 'LangGraph', Licencia: 'MIT', 'Mejor para': 'Máquinas de estado multi-agente basadas en grafos' },
+              { Herramienta: 'CrewAI', Licencia: 'MIT', 'Mejor para': 'Equipos multi-agente colaborativos basados en roles' },
+              { Herramienta: 'Whisper.cpp', Licencia: 'MIT', 'Mejor para': 'Reconocimiento de voz offline local (STT)' },
+              { Herramienta: 'MLC Chat', Licencia: 'Apache 2.0', 'Mejor para': 'LLM en dispositivo para Android e iOS' },
+              { Herramienta: 'Smart Connections', Licencia: 'GPL 3.0', 'Mejor para': 'Chat IA y búsqueda semántica en Obsidian' },
+            ],
+          },
+          {
+            type: 'table',
+            h2: 'Stacks reales de uso común',
+            columns: ['Objetivo', 'Stack', 'Hardware mínimo'],
+            rows: [
+              { Objetivo: 'Solo chat', Stack: 'LM Studio standalone', 'Hardware mínimo': '16 GB RAM, sin GPU' },
+              { Objetivo: 'Mejor equilibrio', Stack: 'Ollama + Open WebUI', 'Hardware mínimo': '16 GB RAM, GPU opcional' },
+              { Objetivo: 'Chat de documentos', Stack: 'Ollama + AnythingLLM', 'Hardware mínimo': '16 GB RAM, GPU opcional' },
+              { Objetivo: 'Programación', Stack: 'Ollama + Continue.dev', 'Hardware mínimo': '16 GB RAM + GPU recomendado' },
+              { Objetivo: 'Roleplay / Creativo', Stack: 'KoboldCpp + SillyTavern', 'Hardware mínimo': '16 GB RAM, GPU recomendado' },
+              { Objetivo: 'Privacidad primero', Stack: 'Ollama + Open WebUI + PrivateGPT', 'Hardware mínimo': '32 GB RAM + 12 GB VRAM' },
+              { Objetivo: 'Móvil / En movimiento', Stack: 'MLC Chat o PocketPal AI', 'Hardware mínimo': 'iPhone 13+ / Pixel 7+' },
+              { Objetivo: 'Apple Silicon', Stack: 'Ollama (MLX) o LM Studio', 'Hardware mínimo': 'M2/M3/M4/M5, 16+ GB unified' },
+              { Objetivo: 'Equipo multi-usuario', Stack: 'vLLM + Open WebUI', 'Hardware mínimo': '32+ GB RAM + multi-GPU' },
+            ],
+          },
+          {
+            type: 'numbered',
+            h2: 'Elige tu stack en 5 pasos',
+            items: [
+              '<strong>Elige primero un runtime:</strong> Ollama para simplicidad, llama.cpp para máximo control, vLLM para despliegues multi-usuario simultáneos.',
+              '<strong>Añade una interfaz de chat:</strong> app de escritorio (LM Studio, Jan, GPT4All) o interfaz web (Open WebUI, LibreChat) — una de las dos, no ambas.',
+              '<strong>Añade integración de código si programas:</strong> Continue.dev para VS Code/JetBrains, Cline para ediciones autónomas.',
+              '<strong>Añade un sistema RAG si quieres chatear con tus documentos:</strong> AnythingLLM es el más sencillo; PrivateGPT para uso totalmente offline.',
+              '<strong>Revisa las licencias antes del uso comercial:</strong> MIT y Apache 2.0 son seguras; AGPL requiere revisión legal cuidadosa.',
+            ],
+          },
+          {
+            type: 'faq',
+            h2: 'Preguntas frecuentes',
+            faqs: [
+              { q: '¿Cuál es la diferencia entre un runtime y una app de escritorio?', a: 'Un runtime (Ollama, llama.cpp) carga pesos del modelo y ejecuta inferencia. Una app de escritorio (LM Studio, Jan) es una interfaz de chat que envuelve un runtime — necesitas ambos.' },
+              { q: '¿Puedo combinar varias herramientas del directorio?', a: 'Sí — los stacks multi-herramienta son la norma. Ollama + Open WebUI + AnythingLLM + Continue.dev funcionan todos contra la misma instancia de Ollama en una máquina.' },
+              { q: '¿Qué herramientas funcionan sin conocimientos de programación?', a: 'GPT4All (instalación más sencilla), LM Studio (más funciones), Jan (más centrada en privacidad), AnythingLLM (chat de documentos más fácil) — las cuatro sin terminal.' },
+            ],
+          },
+          {
+            type: 'list',
+            h2: 'Más recursos',
+            items: [
+              '<strong>llama.cpp vs Ollama vs vLLM</strong> — Comparación profunda de runtimes',
+              '<strong>LM Studio vs Jan vs GPT4All</strong> — Comparación de apps de escritorio',
+              '<strong>AnythingLLM vs PrivateGPT vs Open WebUI</strong> — Comparación de capa RAG',
+              '<strong>Continue.dev vs Cline vs Aider</strong> — Comparación de asistentes de código',
+              '<strong>Power Local LLM Hub</strong> — biblioteca completa de guías para las 9 capas',
+            ],
+          },
+          {
+            type: 'cta',
+            h2: 'Prueba PromptQuorum gratis',
+            body: 'Despacho de prompts IA multi-modelo — prueba tus prompts contra los modelos líderes en un solo lugar.',
+            cta: 'Empezar gratis',
+            href: 'https://www.promptquorum.com',
+          },
+        ],
+      },
     };
 
     function renderSlide(slide, lang) {
-      const slug = 'local-llm-software-directory-2026';
-      const articleUrl = 'https://www.promptquorum.com/power-local-llm/' + slug + '?lang=' + lang;
-      const footer = '<p class="slide-footer"><a href="' + articleUrl + '" target="_blank" rel="noopener">← Article</a></p>';
+      const footer = '<p class="slide-footer"><a href="' + articleBase + '" target="_blank" rel="noopener">← Article</a></p>';
       let html = '';
 
       switch (slide.type) {
@@ -1120,9 +1285,15 @@
     const lang = params.get('lang') || 'en';
     const content = CONTENT[lang] || CONTENT.en;
 
+    const PATH_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'];
+    const slug = 'local-llm-software-directory-2026';
+    const articleBase = PATH_LANGS.includes(lang)
+      ? 'https://www.promptquorum.com/' + lang + '/power-local-llm/' + slug
+      : 'https://www.promptquorum.com/power-local-llm/' + slug;
+
     document.getElementById('header-title').textContent = content.title;
     const backLink = document.getElementById('back-link');
-    backLink.href += '?lang=' + lang;
+    backLink.href = articleBase;
 
     const container = document.getElementById('slides-container');
     content.slides.forEach(slide => {
