@@ -555,13 +555,13 @@ End with: "You're already doing prompt engineering—now do it better."`}
       {/* Action Bar */}
       <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-gray-200">
         <button className="px-6 py-2 font-semibold bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-          Save to History
+          {t.saveToHistory}
         </button>
         <button className="px-6 py-2 font-semibold border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-          Dispatch to Multiple LLMs
+          {t.dispatchToMultipleLLMs}
         </button>
         <button className="px-6 py-2 font-semibold border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-          Export as PDF
+          {t.exportAsPDF}
         </button>
       </div>
     </div>
