@@ -8458,6 +8458,64 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
       },
     },
+    es: {
+      category: 'Confiabilidad de IA',
+      title: 'Puntuación de Consenso de IA: Cómo Detectar Alucinaciones en Múltiples Modelos',
+      intro: 'Cuando cinco modelos de IA coinciden independientemente en un hecho, la respuesta es mucho más confiable que cuando un solo modelo responde. Este es el principio detrás de la puntuación de consenso de IA — y por qué es el método más efectivo para detectar alucinaciones a escala.',
+      publishDate: 'Published March 16, 2026',
+      readTime: '11 min de lectura',
+      sections: {
+        definition: {
+          title: '¿Qué es la Puntuación de Consenso de IA?',
+          content: ['La puntuación de consenso de IA es un método para evaluar la confiabilidad de información generada por IA midiendo acuerdo entre múltiples modelos de lenguaje independientes. Cuando envías el mismo prompt a cinco o más modelos de IA y analizas dónde sus respuestas convergen y divergen, obtienes una señal estadística sobre qué afirmaciones son probablemente precisas y cuáles potencialmente alucinadas.', 'El principio subyacente viene de métodos de conjunto en estadística: fuentes independientes que llegan a la misma conclusión son más propensas a ser correctas que una única fuente, incluso si esa fuente es muy capaz. Esto aplica a modelos de IA igual que a expertos humanos.', 'Puntuación de consenso asigna un nivel de confianza a cada afirmación en un conjunto de respuestas de IA basado en cuántos modelos independientemente estuvieron de acuerdo. Alto consenso = alta confiabilidad. Bajo consenso = investigar más.', 'La puntuación de consenso funciona mejor cuando se combina con evaluación sistemática de prompts. Para el framework cubriendo métricas de precisión, consistencia y seguimiento de instrucciones, ver [cómo evaluar la calidad de prompts](https://www.promptquorum.com/es/prompt-engineering/how-to-evaluate-prompt-quality).']
+        },
+        problem: {
+          title: 'Por Qué Respuestas de Modelo Único No Pueden Confiarse para Decisiones Críticas',
+          content: ['Todo modelo de lenguaje principal alucina. GPT-4o, Claude, Gemini, Grok, Mistral — todos fabrican hechos con lenguaje que suena confiado. La diferencia entre modelos no es si alucinan, sino qué hechos entienden mal y cuándo.', 'Esto crea un problema crítico para cualquiera confiando en IA para investigación, escritura o toma de decisiones: no puedes decir de una única respuesta si una afirmación específica es precisa o inventada. El modelo presenta hechos reales y fabricados exactamente de la misma forma.'],
+          items: ['Las tasas de alucinación varían de 3–7% para dominios bien documentados (por ejemplo, eventos históricos importantes) a 20–30% para tópicos técnicos de nicho, eventos recientes y afirmaciones numéricas específicas', 'Modelos entrenados en los mismos datos de internet comparten algunos patrones de alucinación — pero cada modelo también tiene modos de falla únicos basados en su entrenamiento', 'Una afirmación alucinada por GPT-4o es improbable que sea alucinada independientemente por Claude exactamente de la misma forma — haciendo la comparación entre modelos una señal poderosa', 'El razonamiento en cadena de pensamiento reduce tasas de alucinación pero no las elimina — prompting estructurado y verificación multi-modelo son estrategias complementarias, no alternativas']
+        },
+        mechanism: {
+          title: 'Cómo Funciona la Puntuación de Consenso: La Metodología',
+          content: ['La puntuación de consenso opera en cuatro etapas. Cada etapa reduce la incertidumbre y expone la información más confiable de todas las respuestas del modelo.'],
+          items: ['Etapa 1 — Despacho: Envía un prompt idéntico y optimizado a múltiples modelos de IA simultáneamente. El prompt debe ser consistente en todos los modelos para asegurar que las respuestas sean comparables.', 'Etapa 2 — Recopilar: Reúne todas las respuestas sin editar o filtrar. Las respuestas crudas son la entrada al análisis de consenso.', 'Etapa 3 — Extraer: Descompón cada respuesta en afirmaciones discretas e independientemente verificables. "La Batalla de Hastings ocurrió en 1066" se convierte en dos afirmaciones separadas.', 'Etapa 4 — Puntuación: Para cada afirmación extraída, cuenta cuántos modelos la mencionaron independientemente. Una afirmación en 5/5 respuestas obtiene consenso máximo. Una afirmación en 1/5 se marca para revisión.']
+        },
+        levels: {
+          title: 'Los Niveles de Confianza de Consenso',
+          content: ['PromptQuorum mapea puntuaciones de consenso a cinco niveles de confianza, cada uno con una acción recomendada:'],
+          rows: [
+            { Nivel: 'Consenso Completo', Acuerdo: '5 de 5 modelos', Interpretación: 'Afirmación de hecho casi cierta', Acción: 'Aceptar con alta confianza' },
+            { Nivel: 'Consenso Fuerte', Acuerdo: '4 de 5 modelos', Interpretación: 'Altamente confiable, variación menor', Acción: 'Aceptar, notar modelo divergente' },
+            { Nivel: 'Consenso Mayoritario', Acuerdo: '3 de 5 modelos', Interpretación: 'Probablemente preciso, algo de incertidumbre', Acción: 'Aceptar con nota de verificación' },
+            { Nivel: 'Consenso Débil', Acuerdo: '2 de 5 modelos', Interpretación: 'Afirmación controvertida o ambigua', Acción: 'Verificar independientemente antes de usar' },
+            { Nivel: 'Sin Consenso', Acuerdo: '1 de 5 modelos', Interpretación: 'Alucinación potencial o hecho raro', Acción: 'Marcar para verificación manual' },
+          ],
+          columns: ['Nivel', 'Acuerdo', 'Interpretación', 'Acción']
+        },
+        hallucination: {
+          title: 'Detección de Alucinación Mediante Análisis Entre Modelos',
+          content: ['La detección de alucinación es la aplicación más importante de la puntuación de consenso. La lógica es directa: si solo un modelo afirma un hecho específico, dos explicaciones son posibles. O el hecho es tan oscuro que solo un modelo lo encontró en entrenamiento, o el modelo lo fabricó.', 'El insight clave es que modelos de IA alucinan independientemente. Cada modelo tiene su propia distribución de datos de entrenamiento, historia de fine-tuning y modos de falla únicos. Una afirmación falsa específica — una fecha incorrecta, una estadística fabricada, una cita mal atribuida — es improbable que sea generada independientemente por cinco modelos diferentes.', 'Cuando cinco modelos concuerdan que una figura histórica nació en 1847, y un modelo dice 1851, el 1851 casi seguramente es la alucinación. Cuando un modelo afirma que un estudio encontró mejora del 73% y ningún otro modelo referencia ese estudio, la estadística se marca como fabricación potencial.'],
+          items: ['Las alucinaciones numéricas (fechas incorrectas, estadísticas, porcentajes) son más fáciles de detectar — modelos divergen fuertemente en números fabricados', 'Las alucinaciones de nombres propios (nombres incorrectos, instituciones, títulos) son atrapadas cuando múltiples modelos discrepan en atribución', 'Las alucinaciones de relación (afirmaciones causales incorrectas, secuencias incorrectas) surgen cuando modelos se contradicen entre sí', 'Las alucinaciones de omisión (dejar fuera un calificador o excepción crítica) se identifican comparando qué salvedades aparecen entre modelos']
+        },
+        example: {
+          title: 'Un Ejemplo Real: Puntuación de Consenso en Acción',
+          content: ['Supón que pregunta a cinco modelos: "¿Cuál fue la capitalización de mercado de OpenAI en 2024?"', 'Modelo A: "$80 mil millones (ronda de financiación octubre 2024)" — Modelo B: "$86 mil millones (finales de 2024)" — Modelo C: "$80 mil millones, basado en la ronda de octubre 2024" — Modelo D: "$157 mil millones (octubre 2024)" — Modelo E: "$80 mil millones después de la ronda de inversión de octubre 2024"', 'La puntuación de consenso inmediatamente expone una discrepancia: cuatro modelos concuerdan en $80 mil millones, uno afirma $157 mil millones. La cifra de $157 mil millones era la valoración de OpenAI en una ronda de financiación posterior (2025) — Modelo D alucinó la valoración del año incorrecto. Sin análisis de consenso, podrías haber aceptado la primera respuesta que leíste.', 'Por esto la puntuación de consenso es más valiosa para: eventos recientes (modelos tienen menos datos de entrenamiento), afirmaciones numéricas (fáciles de malinterpretar) y hechos específicos de dominio (cobertura de datos de entrenamiento varía).']
+        },
+        quorumTypes: {
+          title: 'Los 13 Tipos de Análisis Quorum en PromptQuorum',
+          content: ['PromptQuorum implementa puntuación de consenso a través de 13 tipos distintos de análisis, cada uno apuntando a una dimensión diferente de comparación de respuestas multi-modelo:'],
+          items: ['Resumen de Consenso — extrae las afirmaciones en las que todos los modelos coinciden en un resumen único y autoritativo', 'Combinación Ponderada — sintetiza la mejor respuesta de todas, ponderada por puntuaciones de confianza por modelo', 'Extracción de Hechos Atómicos — descompone respuestas en afirmaciones individuales verificables para puntuación granular', 'Mapeo de Superposición — identifica qué secciones de contenido aparecen entre la mayoría de respuestas de modelo', 'Detección de Contradicción — marca puntos específicos donde modelos se contradicen directamente', 'Puntuación de Confianza — asigna una puntuación de confianza de 1–5 a cada afirmación basada en acuerdo entre modelos', 'Comprobación de Completitud — identifica información presente en algunos modelos pero ausente en otros', 'Detección de Alucinación — marca afirmaciones que aparecen en solo uno o dos modelos para verificación manual', 'Eliminación de Redundancia — elimina información repetida para exponer insights únicos por modelo', 'Selección de Mejor Respuesta — identifica qué respuesta de modelo único es más completa y precisa', 'Conjunto Multi-Modelo — crea una respuesta híbrida que extrae los elementos más fuertes de cada modelo', 'Marca de Controversia — marca tópicos donde modelos consistentemente discrepan, indicando incertidumbre genuina', 'Ranking de Respuesta — ordena respuestas de más a menos confiables basado en alineación de consenso']
+        },
+        whenToUse: {
+          title: 'Cuándo Importa Más la Puntuación de Consenso',
+          content: ['La puntuación de consenso suma el mayor valor en contextos críticos y sensibles a verificación:'],
+          items: ['Investigación y verificación de hechos — donde una estadística alucinada única puede invalidar un argumento completo', 'Información médica y legal — donde la precisión es no-negociable y los errores tienen consecuencias', 'Eventos recientes — modelos tienen datos de entrenamiento menos confiables para eventos cerca de su fecha de corte', 'Especificaciones técnicas — números de versión, endpoints de API, sintaxis de librería cambian frecuentemente y modelos divergen agudamente', 'Afirmaciones numéricas — fechas, figuras, porcentajes y medidas son los vectores de alucinación más comunes', 'Atribución y citas — modelos frecuentemente malattribuyen citas e inventan títulos de papers o autores']
+        },
+        keyTakeaways: {
+          title: 'Puntos Clave',
+          items: ['La puntuación de consenso de IA mide confiabilidad comparando cuántos modelos independientes coinciden en una afirmación específica', 'Ningún modelo de IA único — sin importar capacidad — puede eliminar alucinaciones; verificación entre modelos es la única capa de confiabilidad escalable', 'Afirmaciones que aparecen en 5/5 modelos son casi ciertas; afirmaciones en 1/5 modelos probablemente alucinadas u oscuras', 'La detección de alucinación funciona porque modelos alucinan independientemente — una afirmación falsa compartida entre cinco modelos es estadísticamente casi imposible', 'PromptQuorum implementa puntuación de consenso a través de 13 tipos de análisis Quorum, cada uno apuntando a una dimensión diferente de confiabilidad de respuesta multi-modelo']
+        }
+      }
+    },
     de: {
       category: 'KI-Zuverlässigkeit',
       title: 'KI-Konsens-Scoring: Halluzinationen über mehrere Modelle erkennen',
