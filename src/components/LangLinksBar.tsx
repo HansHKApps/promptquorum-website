@@ -35,8 +35,10 @@ export function LangLinksBar({ cluster, slug, availableLangs, initialLang }: Lan
   }
 
   return (
-    <div className="flex items-center gap-2 mb-8 pb-6 border-b border-gray-200">
-      <span className="text-sm text-text-secondary mr-2">{translations[currentLang].readIn}</span>
+    <div className="mb-8 pb-6 border-b border-gray-200">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-sm text-text-secondary">{translations[currentLang].readIn}</span>
+      </div>
       <div className="flex gap-2 flex-wrap">
         {languages.map(({ code, flag }) => {
           const href = buildHref(code)
