@@ -113,10 +113,38 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
+  const NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const
+
   const hrefFor = (code: Language) => {
+    let basePath = pathname
+    let wasPathPrefixed = false
+    for (const lang of NON_EN_LANGS) {
+      if (pathname === `/${lang}`) {
+        basePath = '/'
+        wasPathPrefixed = true
+        break
+      }
+      if (pathname.startsWith(`/${lang}/`)) {
+        basePath = pathname.slice(`/${lang}`.length)
+        wasPathPrefixed = true
+        break
+      }
+    }
+
+    if (code === 'en') {
+      const params = new URLSearchParams(searchParams)
+      params.delete('lang')
+      const qs = params.toString()
+      return qs ? `${basePath}?${qs}` : basePath
+    }
+
+    if (wasPathPrefixed) {
+      return `/${code}${basePath}`
+    }
+
     const params = new URLSearchParams(searchParams)
     params.set('lang', code)
-    return `${pathname}?${params.toString()}`
+    return `${basePath}?${params.toString()}`
   }
 
   return (
