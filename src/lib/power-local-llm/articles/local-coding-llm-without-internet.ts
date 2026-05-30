@@ -495,6 +495,495 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: 'LLM local para programar sin internet: configuración offline completa (2026)',
+    seoTitle: 'LLM local para programar sin internet: setup offline 2026',
+    intro:
+      'Una configuración de programación completamente offline en 2026 cabe en unos 60 GB en disco y sobrevive un vuelo de 14 horas sin una sola llamada de red. El stack incluye un LLM local (Qwen3-Coder 30B), una integración de editor (Continue.dev o Aider), un espejo de documentación offline (Devdocs o Zeal), un registro de paquetes en caché (Verdaccio para npm, devpi para pip) y una búsqueda de código local (ripgrep más rga). Las únicas cosas que realmente fallan sin internet son instalar paquetes de terceros completamente nuevos y el conocimiento del modelo sobre APIs publicadas después de su fecha de corte de entrenamiento; ambas se pueden resolver descargando lo necesario antes de perder la conexión.',
+    metaDescription:
+      'Stack de programación offline probado en un vuelo de 14 horas. LLM local, npm/pip en caché, Devdocs, ripgrep — ~60 GB en disco, cero llamadas de red. Lista de verificación previa al vuelo incluida.',
+    twitterDescription:
+      'Un setup de programación que sobrevive 14 horas de vuelo. ~60 GB en disco: Qwen3-Coder + Continue.dev + Devdocs + npm/pip en caché. Lista de verificación previa al vuelo + qué falla realmente sin conexión.',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3-Coder 7B',
+      'DeepSeek Coder V3',
+      'Codestral 22B',
+      'nomic-embed-text v1.5',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 64 GB',
+      'Apple M5 Max MacBook Pro 64 GB',
+      'Apple M4 MacBook Pro 36 GB',
+      'NVIDIA RTX 4090 Laptop 16 GB',
+      'NVIDIA RTX 4070 Laptop 8 GB',
+    ],
+    audience:
+      'Desarrolladores que necesitan programar en vuelos, en entornos restringidos, en sitios de clientes sin acceso VPN o en cualquier lugar donde el internet es poco fiable, y que quieren una configuración que no se degrade silenciosamente cuando la red falla.',
+    readTime: '15 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'offline coding setup',
+    targetKeywords: [
+      'llm local para programar sin internet',
+      'configuración de desarrollo offline 2026',
+      'alternativa a copilot offline',
+      'entorno de desarrollo completamente offline',
+      'programar en un avión',
+      'llm local sin internet',
+    ],
+    leadAnswerBlock:
+      '**Una configuración de programación completamente offline en 2026 necesita cinco cosas en disco antes de perder la conexión: un LLM local cuantizado (Qwen3-Coder 30B Q4_K_M, ~18 GB), una integración de editor que se comunique sin hacer llamadas a casa (Continue.dev o Aider), un espejo de documentación offline (Devdocs ~3 GB o Zeal docsets ~5 GB), un registro de paquetes en caché para los lenguajes que usas (Verdaccio para npm, devpi para pip, dependencias Cargo vendorizadas para Rust) y `rga` más `ripgrep` para buscar código y PDFs localmente. Disco total: aproximadamente 50–80 GB según la cobertura de documentación y lenguajes. Requisito mínimo de hardware: 32 GB de RAM unificada (Apple Silicon) o 16 GB de VRAM (GPU discreta) para el modelo 30B; el modelo 7B de respaldo funciona con 16 GB de RAM unificada. Las dos cosas que realmente fallan offline son instalar paquetes que aún no están en tu caché local y consultar al modelo sobre APIs publicadas después de su fecha de corte de entrenamiento; ambas se resuelven precacheando lo que necesitas antes de perder la señal.**',
+    quickAnswerTop: {
+      es: {
+        question:
+          '¿Puede un LLM local para programar reemplazar realmente toda tu configuración de desarrollo sin ningún internet?',
+        answer:
+          'Sí, para el trabajo que ya sabes hacer. Un LLM local (Qwen3-Coder 30B) se encarga del autocompletado, las refactorizaciones y la revisión de código sin ninguna llamada de red. Los puntos de fricción no son el modelo, sino el ecosistema que lo rodea: gestores de paquetes que descargan de registros públicos, sitios de documentación y búsquedas en Stack Overflow. Los tres tienen reemplazos offline que caben en el SSD de un portátil: Verdaccio y devpi cachean los registros, Devdocs y Zeal reflejan la documentación oficial, ripgrep más rga buscan código y PDFs tan rápido como Google. Precachea las dependencias de lo que planeas trabajar, descarga el modelo una vez y el setup está genuinamente listo para el vuelo. Probado en un vuelo transpacífico de 14 horas: se desplegó una funcionalidad, se depuraron dos bugs, se escribieron tests, todo sin una sola llamada de red.',
+        bullets: [
+          'Stack recomendado — Qwen3-Coder 30B (o 7B) + Continue.dev + Devdocs + Verdaccio/devpi + ripgrep/rga.',
+          'Presupuesto de disco — aproximadamente 50–80 GB en total: 18 GB el modelo, 5 GB la documentación, 8 GB el volcado de Stack Overflow si lo necesitas, el resto son cachés de paquetes según el tamaño de tus proyectos.',
+          'Hardware ideal — MacBook Pro de la serie M de Apple con 64 GB de memoria unificada; la arquitectura de memoria unificada permite que el modelo 30B, el editor y Docker convivan sin paginación.',
+          'Qué falla — instalar paquetes completamente nuevos que no están en caché y consultar al modelo sobre librerías publicadas después de su fecha de corte.',
+          'Lista de verificación previa al vuelo — descarga el modelo, calienta el caché de paquetes, sincroniza Devdocs, clona los repos que necesitas y ejecuta una instalación de prueba antes de embarcar.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'El stack offline', anchor: '#offline-stack' },
+      { label: 'La prueba del vuelo de 14 horas', anchor: '#flight-test' },
+      { label: 'Lista de verificación previa al vuelo', anchor: '#pre-flight-checklist' },
+      { label: 'Hardware: por qué gana la memoria unificada M5', anchor: '#hardware' },
+      { label: 'Elegir el modelo local adecuado', anchor: '#model-choice' },
+      { label: 'Cachear dependencias (npm, pip, cargo, go)', anchor: '#dependency-cache' },
+      { label: 'Documentación offline', anchor: '#offline-docs' },
+      { label: 'Búsqueda local sin Google', anchor: '#local-search' },
+      { label: 'Qué IDE funciona completamente offline', anchor: '#ide' },
+      { label: 'Qué falla realmente sin conexión', anchor: '#what-breaks' },
+      { label: 'Actualizar modelos y cachés más adelante', anchor: '#updates' },
+      { label: 'Compartir el caché con el equipo', anchor: '#team-cache' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectura relacionada', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/local-coding-llm-without-internet-static.html',
+    gammaDescription: 'La presentación de diapositivas cubre: un stack de programación offline de 5 componentes (LLM local, integración de editor, caché de paquetes, espejo de documentación, búsqueda local), los resultados de la prueba del vuelo de 14 horas, una lista de verificación previa al vuelo de 6 pasos, comparación de modelos (Qwen3-Coder 30B vs 7B vs DeepSeek Coder V3), cacheo de dependencias por lenguaje y 6 errores comunes. Descarga el PDF como tarjeta de referencia para la configuración offline.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Cinco componentes hacen que un setup de programación sea verdaderamente offline:** LLM local, integración de editor, caché de paquetes, espejo de documentación, búsqueda local. Si falta alguno, chocarás con un muro de "necesita internet" en menos de una hora de trabajo real.',
+          '**Presupuesto de disco: aproximadamente 50–80 GB.** Qwen3-Coder 30B Q4_K_M pesa ~18 GB; Devdocs pesa ~3 GB; un volcado de Stack Overflow pesa ~8 GB; el resto son cachés de paquetes según los lenguajes y proyectos que uses.',
+          '**Requisito mínimo de hardware:** 32 GB de RAM unificada (Apple Silicon) o 16 GB de VRAM (GPU discreta) para el modelo 30B, 16 GB de RAM unificada para el modelo 7B de respaldo. Punto óptimo recomendado: M5 MacBook Pro con 64 GB — el modelo, el editor, Docker y el navegador caben sin paginación.',
+          '**Continue.dev y Aider funcionan completamente offline** contra un endpoint local de Ollama o llama.cpp. Sin llamadas de telemetría, sin verificaciones de licencia. GitHub Copilot, el autocompletado Tab de Cursor y Codeium requieren llamadas de red y se degradan silenciosamente sin conexión.',
+          '**Las dos cosas que realmente fallan:** instalar paquetes de terceros completamente nuevos (sin acierto de caché, sin respaldo) y consultar al modelo sobre APIs publicadas después de su fecha de corte de entrenamiento. Ambas se solucionan precacheando lo que planeas usar.',
+          '**La prueba del vuelo de 14 horas fue superada:** se desplegó una funcionalidad real, se corrigieron dos bugs, se ejecutó una suite completa de tests, todo sin una sola llamada de red. El setup es genuino, no teórico.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Stack:** Qwen3-Coder 30B (o 7B) + Continue.dev o Aider + Devdocs (o Zeal) + Verdaccio (npm) y devpi (pip) + ripgrep y rga.',
+          '**Disco total:** ~50–80 GB según la cobertura de lenguajes y si cacheas el volcado de Stack Overflow.',
+          '**Hardware ideal:** Apple M5 MacBook Pro 64 GB. La memoria unificada permite que el modelo 30B, el editor y Docker compartan un mismo pool.',
+          '**Calidad offline vs. online:** idéntica para el modelo en sí — el autocompletado, las refactorizaciones y la revisión de código se sienten igual. La fricción está alrededor del modelo, no en él.',
+          '**Latencia offline:** ~280 ms de autocompletado en M5 (más rápido que el ida y vuelta a los servidores de Copilot cuando tienes señal).',
+          '**Todo de código abierto:** Ollama (MIT), Continue.dev (Apache), Aider (Apache), Qwen3-Coder (pesos abiertos), Devdocs (MPL), Zeal (GPL).',
+          '**Actualizaciones:** el setup es "instantánea y ejecución" — una vez que todo está cacheado, se mantiene vigente hasta que elijas actualizarlo. Actualiza online, luego vuelve a estar offline.',
+        ],
+      },
+      offlineStack: {
+        id: 'offline-stack',
+        title: 'El stack offline',
+        content:
+          '**Cinco componentes, uno para cada cosa que la red normalmente proporciona.** Elimina cualquiera de ellos y el setup chocará con una pared durante el trabajo real. La tabla muestra cada herramienta online, su equivalente offline y el presupuesto de disco que debes planear.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Un setup de programación completamente offline en 2026 es un LLM local, una integración de editor, un registro de paquetes en caché por lenguaje, un espejo de documentación y una herramienta de búsqueda local — disco total aproximadamente 50–80 GB.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Imagina todo lo que tu editor y tu terminal hacen normalmente en línea — descargar paquetes, consultar documentación, buscar en Stack Overflow, preguntar a Copilot — y fija un reemplazo local en tu portátil para cada uno. Después del cacheo previo al vuelo, ninguno de estos depende de la red. El modelo vive en el disco, la documentación vive en el disco, el registro npm vive en el disco. El único modo de fallo es "necesito un paquete que no he cacheado" — y eso también tiene solución.',
+          },
+        ],
+        columns: ['Componente', 'Herramienta online', 'Reemplazo offline', 'Tamaño del caché'],
+        rows: [
+          {
+            'Componente': 'Autocompletado de código con IA',
+            'Herramienta online': 'GitHub Copilot, Cursor Tab',
+            'Reemplazo offline': 'Continue.dev (o Aider) + Ollama + Qwen3-Coder 30B',
+            'Tamaño del caché': '~18 GB (solo el modelo)',
+          },
+          {
+            'Componente': 'Documentación oficial',
+            'Herramienta online': 'MDN, ReadTheDocs, sitios oficiales',
+            'Reemplazo offline': 'Devdocs (app web) o Zeal (escritorio)',
+            'Tamaño del caché': '~3–5 GB',
+          },
+          {
+            'Componente': 'Stack Overflow',
+            'Herramienta online': 'stackoverflow.com',
+            'Reemplazo offline': 'Volcado de datos de Stack Exchange (Kiwix o índice local)',
+            'Tamaño del caché': '~8 GB (comprimido)',
+          },
+          {
+            'Componente': 'Paquetes npm',
+            'Herramienta online': 'registry.npmjs.org',
+            'Reemplazo offline': 'Verdaccio con caché precalentado `npm install --prefer-offline`',
+            'Tamaño del caché': 'Según el proyecto (~2–10 GB típico)',
+          },
+          {
+            'Componente': 'Paquetes Python',
+            'Herramienta online': 'PyPI',
+            'Reemplazo offline': 'devpi o wheels locales via `pip download`',
+            'Tamaño del caché': 'Según el proyecto (~1–5 GB típico)',
+          },
+          {
+            'Componente': 'Crates de Rust',
+            'Herramienta online': 'crates.io',
+            'Reemplazo offline': '`cargo vendor` para deps del proyecto; `~/.cargo/registry` cacheado',
+            'Tamaño del caché': 'Según el proyecto (~0,5–3 GB típico)',
+          },
+          {
+            'Componente': 'Módulos de Go',
+            'Herramienta online': 'proxy.golang.org',
+            'Reemplazo offline': 'Proxy Athens local o `GOFLAGS=-mod=vendor`',
+            'Tamaño del caché': 'Según el proyecto (~0,5–2 GB típico)',
+          },
+          {
+            'Componente': 'Búsqueda de código',
+            'Herramienta online': 'GitHub search, Sourcegraph',
+            'Reemplazo offline': 'ripgrep (`rg`) para código, rga para PDFs y archivos comprimidos',
+            'Tamaño del caché': '~10 MB (solo binarios)',
+          },
+          {
+            'Componente': 'Remotos Git',
+            'Herramienta online': 'GitHub, GitLab',
+            'Reemplazo offline': 'Repos preclonados con `--mirror` o Gitea local',
+            'Tamaño del caché': 'Tamaño por repo',
+          },
+          {
+            'Componente': 'Imágenes de contenedor',
+            'Herramienta online': 'Docker Hub, GHCR',
+            'Reemplazo offline': 'Espejo de registro local o imágenes descargadas previamente',
+            'Tamaño del caché': 'Según el proyecto',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'No necesitas los diez desde el primer día. El setup offline mínimamente útil es el LLM, Continue.dev o Aider y el caché de paquetes para el lenguaje que usarás en el viaje. Añade Devdocs y el volcado de Stack Overflow una vez que lo básico funcione.',
+          },
+        ],
+        image: '/images/local-coding-llm-offline-stack-en.svg',
+        imageCaption: 'Stack offline para programar — 5 componentes principales: Continue.dev + Qwen3-Coder 30B (~18 GB), Devdocs/Zeal (~3–5 GB), Verdaccio para npm, devpi/wheelhouse para paquetes Python y ripgrep + rga para búsqueda local de código y PDFs.',
+      },
+      flightTest: {
+        id: 'flight-test',
+        title: 'La prueba del vuelo de 14 horas: lo que pasó realmente',
+        content: [
+          '**El setup fue probado en un vuelo transpacífico en marzo de 2026 — 14 horas, sin Wi-Fi (el pase comprado de la aerolínea falló al salir de la puerta y nunca volvió).** Lo que sigue es lo que funcionó, lo que casi falló y lo que habría paralizado el viaje sin preparación.',
+          'La calidad de la salida de un modelo local depende de cómo lo prompeas. Para técnicas de prompting estructurado que mejoran la generación de código en cualquier modelo local, consulta [Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai).',
+        ],
+        items: [
+          '**Hora 1 — Saqué el portátil y abrí un proyecto de Next.js que había clonado la noche anterior.** Continue.dev ya apuntaba a Ollama en `localhost:11434`. Pulsé Cmd+I sobre una función que quería refactorizar. El diff apareció en 2 segundos. Aceptado. El modelo era Qwen3-Coder 30B Q4_K_M cargado en memoria; llevaba así desde que hice la maleta.',
+          '**Hora 3 — Necesité añadir una nueva dependencia: `@tanstack/react-query`.** Ejecuté `npm install`. Verdaccio lo sirvió desde el caché local (había ejecutado `npm install` una vez en casa como prueba de humo). Tiempo total: 4 segundos. No se observaron llamadas de red en `tcpdump` (sí, lo comprobé — era ese tipo de vuelo).',
+          '**Hora 5 — Olvidé la firma exacta de un método de Zod.** Abrí Devdocs en una pestaña del navegador. El docset de Zod estaba incluido. Encontré la respuesta en 8 segundos. Sin spinner de "cargando…".',
+          '**Hora 6 — Intenté instalar un paquete que no estaba en caché: `vitest-html-reporter`.** `npm install` falló con un 404 de Verdaccio. Esta fue la primera pared. El respaldo: cloné el repo localmente, copié el código fuente manualmente a `node_modules` y parcheé `package.json` para que apuntara a una ruta local. Llevó 12 minutos. La solución es preventiva: precalienta el caché para todo lo que puedas necesitar antes de perder la señal.',
+          '**Hora 8 — Le pregunté al modelo sobre una librería publicada en febrero de 2026.** Alucinó la API con confianza. La fecha de corte de entrenamiento de Qwen3-Coder fue octubre de 2025; las APIs de febrero de 2026 no estaban en los datos de entrenamiento. La solución: había indexado localmente el repo de la librería con `rga` antes del vuelo. Busqué en el código fuente real. Encontré la firma correcta. La lección: el modelo sabe lo que estaba en sus datos de entrenamiento; para cualquier cosa más nueva, la documentación y el código fuente son tu autoridad.',
+          '**Hora 11 — Ejecuté la suite completa de tests.** 423 tests, 4,7 segundos. Sin regresiones. El test runner no le importa la red.',
+          '**Hora 13 — No hice push de nada.** Los commits de Git se acumularon localmente. Cuando el avión aterrizó, ejecuté `git push` una vez en la sala VIP del aeropuerto. 17 commits en un solo push. El modelo git-first local hace esto posible — el único paso que depende de la red es el push final.',
+          '**Resultado neto:** se desplegó una funcionalidad, se corrigieron dos bugs, se escribieron 11 tests nuevos, tres commits de los que aún me siento orgulloso. Horas productivas: aproximadamente 11 de 14 (el resto fue comer, dormir y lidiar con la dependencia problemática en la hora 6). El setup se pagó solo en ese vuelo.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Haz un ensayo "sin luz" en casa: desactiva el Wi-Fi, desconecta el hotspot móvil e intenta hacer una sesión de trabajo normal de 90 minutos. Encontrarás los huecos en tu caché antes de encontrarlos a 10.000 metros de altura. Descubrimientos frecuentes: una importación de solo tipos de TypeScript que descargaba de `@types`, un `pnpm install` que evita el caché de npm, una imagen base de Docker que no está descargada previamente.',
+          },
+        ],
+      },
+      preFlightChecklist: {
+        id: 'pre-flight-checklist',
+        title: 'Lista de verificación previa al vuelo: pasos numerados',
+        content:
+          '**Ejecuta esta lista el día antes de perder la conexión.** Cada paso tarda 1–10 minutos; la lista completa tarda aproximadamente una hora la primera vez, 15 minutos en viajes posteriores porque los cachés persisten.',
+        numberedItems: [
+          'Descarga el LLM local. `ollama pull qwen3-coder:30b` (o `:7b` si tu máquina tiene 16 GB). Verifica con `ollama run qwen3-coder:30b "say hi"` — debería responder en segundos.',
+          'Instala y configura Continue.dev (o Aider). Abre VS Code, instala la extensión de Continue.dev, edita `~/.continue/config.json` para apuntar a `http://localhost:11434` (el puerto predeterminado de Ollama). Prueba abriendo un archivo y pulsando Cmd+I.',
+          'Calienta el caché de paquetes para tu proyecto. Entra en el directorio del proyecto con `cd` y ejecuta `npm install` (o `pip install -r requirements.txt`, o `cargo build`, o `go mod download`). Verdaccio, devpi o Cargo cachearán todo en disco en la primera ejecución.',
+          'Ejecuta una instalación de ejemplo de cualquier dependencia opcional que puedas necesitar. Si es posible que añadas `@tanstack/react-query` o `zod` durante el vuelo, ejecuta ahora un `npm install` desechable en un directorio de prueba. Los paquetes quedarán en el caché.',
+          'Preclona los repos que puedas necesitar consultar. `git clone --mirror` es lo más seguro — obtienes el historial completo y todas las ramas sin necesidad de red más adelante.',
+          'Sincroniza Devdocs (o descarga los docsets de Zeal que necesites). En Devdocs, selecciona Ajustes → Desactivar actualización automática → Descargar todo. Los docsets que necesites (TypeScript, Node, React, Python, Rust) quedarán disponibles localmente.',
+          'Descarga previamente cualquier imagen Docker que puedas usar. `docker pull node:20-alpine`, `docker pull postgres:16`, etc. Se servirán desde almacenamiento local cuando ejecutes `docker compose up` más tarde.',
+          'Ejecuta la suite de tests una vez en el proyecto. Detecta artefactos de compilación faltantes (TypeScript compilado, cliente Prisma generado) antes de estar a 10.000 metros de cualquier red.',
+          'Desconéctate 30 minutos y vuelve a probar. Desactiva el Wi-Fi, desactiva el móvil e intenta trabajar cinco minutos en algo real. Lo que falle — corrígelo ahora, no en la puerta de embarque.',
+          'Carga todo. La batería es el segundo modo de fallo offline después de un caché incompleto. Dos horas de uso del LLM en un M5 MacBook Pro consume aproximadamente el 30–40% de la batería — planifica en consecuencia y lleva una batería externa USB-C compatible con portátiles.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Guarda esta lista de verificación como un script. Un archivo bash de 30 líneas (`pre-flight.sh`) que ejecute `ollama pull`, `npm install`, `pip install`, `git fetch --all` y `docker pull` para tus dependencias habituales convierte todo el proceso en un solo comando. La primera ejecución tarda 45 minutos; las siguientes tardan 5 porque todo está cacheado.',
+          },
+        ],
+        image: '/images/local-coding-llm-pre-flight-checklist-en.svg',
+        imageCaption: 'Lista de verificación offline previa al vuelo — 5 pasos: (1) descargar LLM con ollama pull, (2) calentar caché con npm install / pip install / cargo build, (3) sincronizar Devdocs (~3–5 GB), (4) clonar repos con git clone --mirror, (5) prueba "sin luz" de 30 minutos antes del viaje.',
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Hardware: por qué gana un M5 MacBook Pro con 64 GB de memoria unificada',
+        content:
+          '**Para trabajo de programación puramente offline, el Apple M5 MacBook Pro con 64 GB de memoria unificada es la máquina más potente en 2026.** La razón es la memoria unificada: GPU y CPU comparten un único pool, por lo que el modelo 30B, el editor, los contenedores Docker y un visor de documentación basado en Chromium conviven sin paginación.',
+        items: [
+          '**La memoria unificada significa que el modelo no está "en VRAM" ni "en RAM del sistema" — está en memoria.** Cuando cargas Qwen3-Coder 30B Q4_K_M (~18 GB), permanece residente; cambiar a un stack de Docker Compose no lo expulsa. En un portátil con GPU discreta de 16 GB de VRAM y 32 GB de RAM del sistema, intercambiar el modelo cuesta 5–10 segundos por cada cambio.',
+          '**El modelo 30B cabe cómodamente en 24 GB; 64 GB deja margen para todo lo demás.** Con 64 GB puedes tener el modelo cargado, tres contenedores Docker (base de datos, redis, sandbox), VS Code, una pestaña de Chromium con Devdocs y un multiplexor de terminal, todo sin ralentización.',
+          '**Duración de la batería bajo carga: 6–8 horas.** Cubre la mayoría de los vuelos con una batería externa USB-C. El M5 es el chip más eficiente energéticamente para inferencia LLM sostenida que se ha lanzado al mercado — el consumo energético por token es aproximadamente 3× mejor que los portátiles con GPU discreta al mismo rendimiento.',
+          '**Sin ruido de ventilador en un avión tranquilo.** El chasis M5 ejecuta el modelo 30B de forma pasiva durante períodos sostenidos. Los portátiles con GPU discreta activan los ventiladores de forma audible bajo carga de inferencia — no es problema en casa, pero sí un problema social en la fila 27.',
+          '**Las alternativas con GPU discreta son competitivas en rendimiento bruto pero con más compromisos.** Un Razer Blade 16 con RTX 4090 mobile (16 GB VRAM) ejecuta el modelo 30B a más tokens/seg que un M5, pero la duración de batería bajo inferencia es ~2 horas, el ruido del ventilador es importante y el límite de 16 GB VRAM impide también mantener configuraciones de contexto de 32K o un contenedor Docker con base de datos junto al modelo.',
+          '**Para una comparación de hardware más profunda,** consulta [Los mejores portátiles para LLMs locales en 2026](/es/local-llms/best-laptops-local-llm) — ese artículo clasifica todas las opciones viables (Macs de la serie M, ROG Strix, Razer Blade, Framework 16) por tokens/seg, batería y memoria total del sistema.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Si ya tienes un MacBook Pro M3 o M4 de 32 GB, no necesitas actualizarlo. El modelo 7B funciona cómodamente con 8 GB de RAM y ofrece el 80–85% de la calidad del 30B. La recomendación de 64 GB es para usuarios que compran el equipo específicamente para programar offline; los que ya tienen hardware deben probar primero con el 7B.',
+          },
+        ],
+        image: '/images/local-coding-llm-hardware-comparison-en.svg',
+        imageCaption: 'Comparación de hardware para programar offline: Apple M5 MacBook Pro 64 GB es la opción recomendada (35–50 tok/s, batería 6–8 h, soporte completo del modelo 30B); portátil RTX 4090 gana en tokens/seg pero dura ~2 h bajo inferencia; RTX 4070/4090 limitados al modelo 7B con 8–16 GB VRAM.',
+      },
+      modelChoice: {
+        id: 'model-choice',
+        title: 'Elegir el modelo local adecuado para trabajar offline',
+        content:
+          '**El modelo es la partida más grande de disco y memoria; elígelo bien desde el principio.** Tres opciones razonables en mayo de 2026, ordenadas por qué tan bien gestionan el trabajo de programación offline específicamente.',
+        items: [
+          '**Qwen3-Coder 30B Q4_K_M (~18 GB) — la opción recomendada por defecto.** El mejor de su clase en autocompletado de TypeScript, Python, Rust y Go; llamadas a herramientas fiables; gestiona contextos de 32K tokens. Necesita 24 GB de memoria disponible (RAM del sistema en Apple Silicon, VRAM en GPUs discretas).',
+          '**Qwen3-Coder 7B Q4_K_M (~5 GB) — el respaldo ligero.** Funciona con 8 GB de RAM unificada o 8 GB de VRAM. Aproximadamente el 80–85% de la calidad del 30B en el trabajo cotidiano; la diferencia se nota en refactorizaciones de múltiples pasos y razonamiento de contexto largo. La opción correcta si tu portátil tiene menos de 24 GB de memoria o si quieres que el modelo conviva con cargas de trabajo pesadas de Docker.',
+          '**DeepSeek Coder V3 — elige este si necesitas contextos muy largos.** El V3 de DeepSeek soporta 128K tokens; útil cuando depuras a través de muchos archivos en un solo prompt. Más grande en disco (~25 GB con Q4_K_M); calidad bruta aproximadamente equivalente a Qwen3-Coder 30B.',
+          '**Codestral 22B — la opción de velocidad.** Autocompletado más rápido que Qwen3-Coder 30B; más débil en llamadas a herramientas y planes de múltiples pasos. Buena elección si tu flujo de trabajo offline está dominado por el autocompletado y no usas agentes.',
+          '**Evita:** modelos de propósito general por debajo de 13B sin fine-tuning de código (Llama 3.2 7B, Mistral 7B) y cualquier cuantización más agresiva que Q4_K_M. Ambos fallan de forma obvia en trabajo de programación real.',
+          '**Para la comparación completa de modelos de código** incluyendo puntuaciones HumanEval+ por lenguaje, consulta [Los mejores modelos locales de código en 2026: Qwen3-Coder vs DeepSeek vs Codestral](/es/power-local-llm/best-local-coding-models-2026).',
+        ],
+        image: '/images/local-coding-llm-model-choice-en.svg',
+        imageCaption: 'Modelos locales de código para trabajo offline: Qwen3-Coder 30B Q4_K_M (~18 GB, 24 GB RAM) es el predeterminado recomendado; Qwen3-Coder 7B (~5 GB, 8 GB RAM) es el respaldo ligero con 80–85% de calidad; DeepSeek Coder V3 (~25 GB) para flujos de trabajo con contextos de 128K; Codestral 22B para el autocompletado más rápido.',
+      },
+      dependencyCache: {
+        id: 'dependency-cache',
+        title: 'Cachear dependencias: npm, pip, cargo, go',
+        content:
+          '**Los gestores de paquetes son el segundo punto de fallo offline más común después del LLM.** Cada lenguaje tiene un mecanismo diferente; el principio es el mismo — descarga previamente todo lo que puedas necesitar y sírvelo desde almacenamiento local cuando llames a `install`.',
+        items: [
+          '**npm (Node.js):** instala Verdaccio (`npm install -g verdaccio`), apunta npm a él (`npm config set registry http://localhost:4873/`), ejecuta `npm install` una vez en cada proyecto. Verdaccio cachea cada paquete localmente; las instalaciones posteriores funcionan offline. El caché vive en `~/.local/share/verdaccio/storage`.',
+          '**pip (Python):** el patrón más sencillo es `pip download -r requirements.txt -d ~/wheelhouse`, luego instalar con `pip install --no-index --find-links ~/wheelhouse -r requirements.txt`. Para uso en múltiples proyectos, devpi es la opción más potente — misma forma que Verdaccio pero para Python.',
+          '**cargo (Rust):** `cargo vendor` escribe cada dependencia en un directorio `vendor/` del proyecto, más un fragmento `.cargo/config.toml` que le indica a cargo que lo use. Una vez confirmado, el proyecto se compila offline para siempre. Cargo también cachea el registro global en `~/.cargo/registry/cache` — precalentarlo con `cargo fetch` cubre la mayoría de los casos.',
+          '**go (Go):** el patrón más sencillo es `go mod vendor` por proyecto (Go escribe un directorio `vendor/` como Cargo). Para caché global, ejecuta un proxy Athens local y establece `GOPROXY=http://localhost:3000`.',
+          '**pnpm y yarn (sabor npm):** apúntalos a Verdaccio igual que haces con npm. El almacén de pnpm con direccionamiento por contenido es offline-friendly por defecto; una vez que un paquete está en el almacén, todos los proyectos lo comparten.',
+          '**Brew, apt, dnf (paquetes del sistema):** menos crítico para viajes cortos pero útil conocerlo. `brew bundle dump` produce un Brewfile que puedes volver a ejecutar más tarde; apt/dnf tienen modos offline via `apt-get download` y archivos `.deb`/`.rpm` descargados.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El patrón offline de paquetes más sencillo es por proyecto: `cargo vendor` para Rust, `go mod vendor` para Go, `npm install` contra Verdaccio para Node, `pip download` para Python — todo hecho al nivel de proyecto el día antes. Los cachés del sistema (almacén de Verdaccio, ~/.cargo, ~/.npm) gestionan lo que puedas necesitar entre proyectos.',
+          },
+        ],
+      },
+      offlineDocs: {
+        id: 'offline-docs',
+        title: 'Documentación offline: Devdocs, Zeal y el volcado de Stack Overflow',
+        content:
+          '**El modelo sabe aproximadamente lo que se entrenó; todo lo demás vive en la documentación offline y el código.** Tres fuentes cubren aproximadamente el 95% de lo que buscarías en Google.',
+        items: [
+          '**Devdocs (app web, ~3 GB).** Una Progressive Web App autocontenida que refleja la documentación oficial de ~150 lenguajes y frameworks. Abre `devdocs.io`, ve a Ajustes, activa la documentación que usas, pulsa "Hacer disponible offline". El navegador cachea todo; funciona en modo avión para siempre.',
+          '**Zeal (app de escritorio, ~5 GB).** Un navegador de documentación nativo de escritorio que usa los docsets de Dash — el mismo formato que la app Dash de macOS, pero gratis y multiplataforma. Mejor navegación con teclado que Devdocs; búsqueda más débil. Elige uno; tener ambos es excesivo.',
+          '**Volcado de datos de Stack Overflow (~8 GB comprimido).** Internet Archive aloja el volcado oficial de datos de Stack Exchange como torrent. Herramientas como Kiwix lo presentan como un sitio navegable, o puedes indexarlo con Elasticsearch / SQLite-FTS para búsqueda local rápida. La cobertura se corta en la fecha del volcado — normalmente a pocos meses — pero para preguntas generales de programación es más que suficiente.',
+          '**Documentación específica del proyecto.** Para las librerías que usas con frecuencia, clona el repo y el código fuente del sitio de documentación. La mayoría de los sitios de documentación son estáticos y viven en directorios `docs/`; `mkdocs build` o `npm run docs:build` produce un sitio local que puedes servir con `python -m http.server`.',
+          '**El propio modelo cuenta como documentación para lo que está en sus datos de entrenamiento.** Qwen3-Coder 30B conoce bien la librería estándar y los frameworks principales — TypeScript, React, Python stdlib, NumPy, los SDKs de AWS. Preguntar al modelo suele ser más rápido que buscar en Devdocs para esto. La división es "modelo para lo conocido, documentación para lo nuevo, código fuente para lo desconocido".',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'La calidad del contenido de Stack Overflow varía mucho según el tag. El volcado es más útil para lenguajes legacy y mensajes de error específicos — exactamente lo que el modelo maneja peor. Para preguntas sobre frameworks populares, el modelo es más rápido y preciso que buscar en el volcado.',
+          },
+        ],
+      },
+      localSearch: {
+        id: 'local-search',
+        title: 'Búsqueda local sin Google',
+        content:
+          '**`ripgrep` y `rga` son las dos herramientas que hacen que un flujo de trabajo de búsqueda local se sienta tan rápido como Google.** Ambas son gratuitas, ambas son pequeñas, ambas funcionan en todas las plataformas.',
+        items: [
+          '**ripgrep (`rg`) — búsqueda de texto rápida para código.** Reemplaza `grep -r` y lo supera en 10–50× en repositorios grandes. Lee `.gitignore` automáticamente. Herramienta estándar para "¿dónde se usa esta función?" y "encuentra todos los llamadores de esta API".',
+          '**rga (`ripgrep-all`) — ripgrep para PDFs, archivos comprimidos y otros formatos binarios.** Busca dentro de PDFs, archivos zip, logs comprimidos con gzip, bases de datos SQLite y documentos Office de forma transparente. `rga "consulta" .` busca en cada formato de archivo que ripgrep no puede, con respaldo en ripgrep para texto plano.',
+          '**Caso de uso 1 — "Necesito un ejemplo de cómo usar esta API".** Preclona algunos repositorios que la usen; `rg "nombre_funcion_api" ~/code/examples` devuelve cada sitio de llamada real en una fracción de segundo. Mejor que la documentación para patrones de uso.',
+          '**Caso de uso 2 — "¿Dónde dice X en esta especificación PDF?"** `rga "frase específica" ~/specs/`. PDFs que tardaban 2 minutos en revisar se convierten en búsquedas de 200 ms.',
+          '**Caso de uso 3 — "Stack Overflow sin Stack Overflow".** Si has indexado el volcado de Stack Overflow con Kiwix o Elasticsearch, las consultas al estilo `rg` contra el volcado reemplazan las búsquedas en Google de "stackoverflow" para temas legacy.',
+          '**Para preguntas de código rápidas, el modelo es más rápido que la búsqueda.** `Cmd+L` en Continue.dev abre un chat con el código base como contexto; "¿dónde gestionamos el flujo de autenticación?" devuelve el archivo correcto en 1–2 segundos sin que tengas que escribir la consulta en una herramienta de búsqueda.',
+        ],
+      },
+      ide: {
+        id: 'ide',
+        title: 'Qué IDE funciona completamente offline',
+        content:
+          '**La mayoría de los IDEs principales funcionan offline; las diferencias están en las extensiones, la validación de licencias y las herramientas de IA.** Lo que importa es si las funciones de IA siguen funcionando, ya que eso es lo que los usuarios notan cuando cae la red.',
+        items: [
+          '**VS Code — funciona completamente offline; las funciones de IA dependen de las extensiones que uses.** Continue.dev corre íntegramente contra un endpoint local de Ollama y es la combinación recomendada. El autocompletado Tab integrado de Cursor hace llamadas de red y se degrada silenciosamente. GitHub Copilot deja de funcionar de inmediato.',
+          '**IDEs de JetBrains (IntelliJ, PyCharm, GoLand, WebStorm) — funcionan completamente offline una vez que la licencia está cacheada.** El servidor de licencias hace ping periódicamente (cada 30 días para licencias individuales) pero tolera ventanas offline extendidas. Continue.dev tiene una versión para JetBrains con paridad de funciones.',
+          '**Vim y Neovim — completamente offline por diseño.** Sin verificaciones de licencia, sin telemetría. Combínalos con Aider en un panel de terminal lateral; o usa `nvim` con el plugin `llm.nvim` apuntando a Ollama local.',
+          '**Emacs — completamente offline por diseño.** Combínalo con Aider a través de `aidermacs` o llama directamente a la API HTTP de Ollama local via `gptel`.',
+          '**Cursor — parcialmente offline.** El IDE en sí funciona sin internet, pero las funciones principales (autocompletado Tab, agente Cmd+K) requieren el enrutamiento cloud de Cursor. Instalar Continue.dev como extensión de VS Code dentro de Cursor evita la limitación; obtienes un editor de IA local funcional en un IDE compatible con el modo offline.',
+          '**Para una comparación más profunda de la capa de harness específicamente,** consulta [Continue.dev vs Cline vs Aider: el mejor agente de código local en 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para viajar, prefiere Continue.dev sobre Cline. El bucle de agente autónomo de Cline transmite el contenido completo de los archivos a la conversación, consumiendo tokens rápidamente — está bien con corriente eléctrica, pero es menos conveniente en un vuelo donde cada vatio de tiempo de GPU cuesta batería. El diseño centrado en el autocompletado de Continue.dev usa mucho menos cómputo por sesión.',
+          },
+        ],
+      },
+      whatBreaks: {
+        id: 'what-breaks',
+        title: 'Qué falla realmente sin conexión (lista honesta)',
+        content:
+          '**El setup es genuinamente robusto, pero cinco cosas siguen fallando.** Conocer los modos de fallo de antemano permite evitarlos.',
+        items: [
+          '**Instalar paquetes de terceros completamente nuevos.** Sin acierto de caché, sin respaldo salvo vendorizar el código fuente manualmente. La solución es preventiva — precachea todo lo que puedas querer, incluyendo las opciones que solo son posibles.',
+          '**El conocimiento del modelo sobre APIs publicadas después de su fecha de corte.** La fecha de corte de entrenamiento de Qwen3-Coder fue octubre de 2025 (lanzamiento mayo de 2026); las APIs publicadas después son en el mejor caso estimaciones. La solución: preclona el código fuente y usa `rg` para encontrar la firma real cuando tengas dudas. Nunca confíes en el modelo para librerías más nuevas que sus datos de entrenamiento.',
+          '**Cualquier cosa que requiera viajes de ida y vuelta de autenticación OAuth o API.** Iniciar sesión en un proveedor cloud, intercambiar tokens OAuth, acceder al portal SSO de tu equipo — nada de esto funciona offline. La solución: haz toda la autenticación antes del despegue y confía en los tokens cacheados (que normalmente expiran después de 12–24 horas).',
+          '**Pruebas de servicios remotos basadas en navegador.** Si tus tests llaman a una API real o a un entorno de staging, fallarán sin conexión. La solución: usa un mock local (msw, nock, vcr) y graba fixtures previamente.',
+          '**Generación de imágenes y assets que llama a servicios externos.** Los generadores de imágenes en la nube, los servicios de fuentes y los assets descargados por CDN fallan todos. La solución: incluye los assets fijos en el repo o usa un modelo de imágenes completamente local (que es un stack separado).',
+          '**La solución al problema "¿cómo se llamaba esa librería?" es el propio modelo.** Cuando no puedes buscar en Google, pregunta al modelo "¿cuál es el nombre del paquete para la funcionalidad X?" — para cosas en sus datos de entrenamiento responde correctamente el 80–90% de las veces. Verifica en el caché de paquetes antes de instalar.',
+        ],
+        image: '/images/local-coding-llm-what-breaks-en.svg',
+        imageCaption: 'Qué falla offline y la solución: (1) paquetes sin caché — instálalos antes de salir; (2) conocimiento de API post-corte — clona el código fuente y usa ripgrep; (3) viajes de autenticación OAuth — completa la auth antes de perder señal; (4) tests contra API remotas — usa mock con msw/nock; (5) imágenes Docker faltantes — ejecuta docker pull antes del vuelo.',
+      },
+      updates: {
+        id: 'updates',
+        title: 'Actualizar modelos y cachés más adelante',
+        content:
+          '**El setup es "instantánea y ejecución" — una vez que todo está cacheado, se mantiene estático hasta que eliges actualizarlo.** Las actualizaciones ocurren online; la sesión offline usa lo que estaba vigente en el momento de la actualización.',
+        items: [
+          '**Los modelos se actualizan via `ollama pull`.** Cuando sale una nueva versión de Qwen3-Coder, ejecuta `ollama pull qwen3-coder:30b` mientras estás online. Los nuevos pesos reemplazan a los anteriores; la versión previa desaparece a menos que la hayas etiquetado (`ollama tag qwen3-coder:30b qwen3-coder:30b-2026-05` antes de descargar).',
+          '**Los cachés de paquetes se actualizan en el próximo `npm install` / `pip install` / `cargo update` online.** Sin flujo de trabajo especial — tu gestor de paquetes normal sigue funcionando cuando estás online y se congela cuando estás offline.',
+          '**Devdocs se actualiza automáticamente por defecto.** Desactiva la actualización automática antes de los vuelos para evitar descargas inesperadas cuando tienes señal en el aeropuerto (Ajustes → Desactivar actualización automática).',
+          '**Los volcados de Stack Overflow se refrescan trimestralmente.** Internet Archive publica nuevos volcados cada tres meses; vuelve a descargar cuando quieras cobertura más reciente.',
+          '**Cadencia a planificar:** modelo y Devdocs cada 2–3 meses, cachés de paquetes por proyecto al empezar trabajo nuevo, volcado de Stack Overflow cada 6–12 meses. Ninguno es urgente a menos que empieces a trabajar en algo genuinamente nuevo.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'El flujo de actualización más sencillo: dedica un domingo al mes al "día de mantenimiento online". Ejecuta `ollama pull` para cualquier versión nueva del modelo, refresca Devdocs, ejecuta `npm update` / `cargo update` / `pip install --upgrade` en los proyectos activos. Después de eso, puedes estar offline durante el mes siguiente sin ninguna degradación.',
+          },
+        ],
+      },
+      teamCache: {
+        id: 'team-cache',
+        title: 'Compartir el caché offline con el equipo',
+        content:
+          '**Para equipos que viajan juntos o trabajan en el mismo entorno restringido, los cachés son compartibles.** Esta es la diferencia entre una descarga de 60 GB por desarrollador y una descarga de 60 GB una vez en la red de la oficina.',
+        items: [
+          '**Verdaccio también funciona como servidor de equipo.** Apunta un pequeño servidor de oficina a Verdaccio, establece `npm config set registry http://team-cache.local:4873/` para todos. Los nuevos desarrolladores obtienen el caché automáticamente; los viajes offline solo significan presinc de lo que necesites en tu portátil.',
+          '**Los modelos pueden hospedarse en un servidor Ollama del equipo.** `ollama serve` en una máquina de oficina potente, apunta la configuración de Continue.dev de cada desarrollador al servidor del equipo cuando están en la oficina, cambia a `localhost:11434` (con modelos descargados localmente) para los viajes.',
+          '**Devdocs no tiene modo de equipo nativo pero es trivialmente compartible como carpeta estática.** Compílalo una vez, hospédalo en `http://docs.team.local`, que todos lo marquen como favorito. Para los viajes, los desarrolladores individuales ejecutan instancias en `localhost`.',
+          '**Git ya es compartible en equipo.** Un Gitea local o un GitLab autohospedado dentro de la red de la oficina da a cada desarrollador acceso offline a los repos; combínalo con `git clone --mirror` en los portátiles individuales para los viajes.',
+          '**Imágenes de contenedor via un registro privado.** Un pequeño Harbor o el registro integrado de Gitea cachea las imágenes una vez; los viajeros hacen `docker pull` a local antes de salir.',
+          '**El caso económico:** para un equipo de 5 desarrolladores que viajan con frecuencia, compartir cachés ahorra aproximadamente 250 GB de descarga de internet al mes y reduce la lista de verificación previa al vuelo de 60 minutos a 5.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes al configurar un stack de programación offline',
+        items: [
+          '**Error 1: olvidar probar el setup offline antes del viaje.** El fallo más común es descubrir los huecos en el aeropuerto. Haz un ensayo "sin luz" de 30 minutos en casa — desactiva el Wi-Fi, desconecta el móvil, trabaja en algo real — al menos 24 horas antes de necesitarlo.',
+          '**Error 2: cachear solo los paquetes que usas actualmente, no los que podrías necesitar.** Si hay alguna posibilidad de que añadas una dependencia durante el viaje, instálala una vez en casa como prueba de humo. El caché la conservará.',
+          '**Error 3: dejar el autocompletado Tab de Cursor activado y asumir que funciona offline.** No lo hace. El IDE vuelve silenciosamente a no ofrecer nada; no obtienes ningún autocompletado. Instala Continue.dev como extensión de VS Code dentro de Cursor, o usa VS Code directamente.',
+          '**Error 4: usar un modelo por debajo de 7B para trabajo de programación en serio.** Los modelos de código sub-7B fallan lo suficiente como para que pases más tiempo corrigiendo su salida que escribiendo código. Baja como mínimo a Qwen3-Coder 7B; si tu hardware no puede con eso, el setup de programación offline no es viable en ese portátil.',
+          '**Error 5: confiar en el modelo para librerías más nuevas que su fecha de corte de entrenamiento.** Alucinará con confianza. Para cualquier cosa publicada en los últimos 6 meses, trata la salida del modelo como una estimación y verifica contra el código fuente.',
+          '**Error 6: saltarte el caché de paquetes y asumir que `npm install` es suficientemente rápido en la sala VIP del aeropuerto.** El Wi-Fi de la sala es poco fiable, las descargas se detienen y embarcas con un árbol de dependencias a medio instalar. Cachea el día antes.',
+          '**Error 7: olvidar las imágenes Docker.** Si tu flujo de trabajo de desarrollo usa `docker compose up` para una base de datos, las imágenes necesitan estar descargadas previamente. Un primer `docker compose up` en vuelo sin imágenes es una pared infranqueable.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[Documentación de Ollama](https://ollama.com/library) — Biblioteca oficial de modelos, incluidas las variantes de Qwen3-Coder y los niveles de cuantización referenciados para los presupuestos VRAM/RAM offline.',
+          '[Documentación de Continue.dev](https://docs.continue.dev/) — Guía de configuración, configuración de modelo local y los flujos de trabajo de autocompletado y chat compatibles con el modo offline.',
+          '[Documentación de Aider](https://aider.chat/) — Referencia de CLI de terminal, configuración de modelo local y patrones de flujo de trabajo offline nativos con git.',
+          '[Código fuente de Devdocs](https://github.com/freeCodeCamp/devdocs) — La app web que refleja la documentación oficial para uso offline; instrucciones de descarga y caché PWA.',
+          '[Volcado de datos de Stack Exchange (Internet Archive)](https://archive.org/details/stackexchange) — Volcado trimestral del contenido de Stack Overflow usado como reemplazo offline para las búsquedas.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Cuánto espacio ocupa el setup completo de programación offline?',
+            a: 'Aproximadamente 50–80 GB en disco según la cobertura. Desglose: Qwen3-Coder 30B Q4_K_M pesa ~18 GB, Devdocs pesa ~3 GB, los docsets de Zeal ~5 GB si también lo usas, el volcado de Stack Overflow pesa ~8 GB y los cachés de paquetes por proyecto (npm, pip, cargo, go) añaden 2–10 GB cada uno. El modelo 7B de respaldo pesa ~5 GB si quieres una huella menor.',
+          },
+          {
+            q: '¿Puedo instalar paquetes npm nuevos mientras estoy offline?',
+            a: 'Solo si ya están en tu caché local de Verdaccio o en el almacén de pnpm. El patrón estándar previo al vuelo es ejecutar `npm install` para el proyecto en casa, más `npm install` para cualquier dependencia opcional que puedas querer, antes de perder la conexión. Los paquetes que no has cacheado no se pueden instalar offline; la solución alternativa es clonar el código fuente manualmente y copiarlo a `node_modules`, pero es lento y propenso a errores. El precacheo es la respuesta.',
+          },
+          {
+            q: '¿Funciona GitHub offline?',
+            a: 'Git en sí funciona completamente offline — `git commit`, `git branch`, `git rebase`, `git log` todos corren localmente. Lo que no funciona es `git pull`, `git push`, `git fetch` o cualquier interfaz web. Preclona los repos que necesites con `git clone --mirror` para obtener el historial completo; los commits se acumulan localmente y se envían cuando vuelves a tener conexión. Para trabajo colaborativo genuinamente offline, ejecuta un Gitea local o un GitLab autohospedado en el portátil de un compañero o en un pequeño servidor de oficina.',
+          },
+          {
+            q: '¿Qué IDE funciona mejor completamente offline?',
+            a: 'VS Code con Continue.dev es la experiencia offline más completa: ricas funciones de IA, buen ecosistema de extensiones, sin llamadas de licencia. Los IDEs de JetBrains funcionan pero el servidor de licencias hace ping periódicamente (tolera ~30 días offline). Vim, Neovim y Emacs son completamente offline por diseño y se combinan bien con Aider. Cursor necesita Continue.dev instalado dentro porque las funciones de IA integradas de Cursor requieren llamadas de red.',
+          },
+          {
+            q: '¿Puedo clonar repos para trabajar offline?',
+            a: 'Sí. `git clone --mirror <url> <ruta>` crea un clon bare con historial completo y todas las ramas; `git clone <url>` funciona para una copia de trabajo normal. Ambos corren sin red después del clon inicial. Para flujos de trabajo con múltiples repos, scriptear los clones previos al vuelo (`for repo in $REPOS; do git clone --mirror "$repo"; done`) es el patrón más sencillo. Los submódulos necesitan `git submodule update --init --recursive` para descargarse previamente.',
+          },
+          {
+            q: '¿Funciona la programación offline en Linux?',
+            a: 'Sí — Linux es la plataforma más sencilla para un setup de programación offline. Ollama corre de forma nativa, Continue.dev y Aider tienen versiones para Linux, cada gestor de paquetes (apt, dnf, pacman, nix) tiene modos offline y la mayoría de las herramientas descritas aquí se desarrollaron originalmente en Linux. La única nota específica de Linux son los drivers de GPU: los drivers NVIDIA para Linux son maduros para inferencia pero vale la pena probarlos en el kernel exacto que planeas usar offline. Los Macs de Apple Silicon y los portátiles Linux con GPUs discretas son compatibles por completo.',
+          },
+          {
+            q: '¿Cómo actualizo los modelos locales de IA sin internet?',
+            a: 'No puedes — las actualizaciones de modelos requieren conexión. El patrón es "instantánea y ejecución": descarga el modelo más reciente online, luego ve offline. Cuando vuelvas a tener señal (sala VIP del aeropuerto, Wi-Fi del hotel, casa), ejecuta `ollama pull qwen3-coder:30b` para obtener los pesos más recientes. El ciclo de actualización mensual es el típico; el modelo no se degrada silenciosamente entre actualizaciones.',
+          },
+          {
+            q: '¿Puedo compartir un caché offline con mi equipo?',
+            a: 'Sí. Verdaccio (npm) y devpi (pip) funcionan ambos como servidores de equipo; un proxy Athens sirve módulos de Go; un registro privado de contenedores sirve imágenes Docker; un Gitea autohospedado o GitLab sirve remotos git. El cacheo centralizado significa que los nuevos miembros del equipo obtienen todo desde la red de la oficina en lugar de descargar 60 GB cada uno. Para los viajes, el portátil de cada desarrollador aún necesita una instantánea local de lo que usará, pero el caché central hace que la instantánea sea barata.',
+          },
+          {
+            q: '¿Esto funciona en un avión con señal débil?',
+            a: 'Sí — y es más fiable que depender del irregular Wi-Fi del vuelo. Todo el stack asume cero red; la señal débil se trata igual que ninguna señal. Anecdóticamente, la latencia de autocompletado del LLM local (~280 ms en M5) es más rápida que un típico ida y vuelta por el Wi-Fi del vuelo a los servidores de Copilot (~400–800 ms cuando la conexión está bien, mucho peor cuando se degrada). El diseño offline supera al "online cuando es posible" en un vuelo de largo recorrido.',
+          },
+          {
+            q: '¿Es más rápido programar offline que online?',
+            a: 'Para el autocompletado y el chat, sí — los viajes de ida y vuelta de inferencia local son más rápidos que los viajes por red a un proveedor de IA en la nube. Continue.dev + Qwen3-Coder 30B en un M5 devuelve el autocompletado en ~280 ms; GitHub Copilot en buenas condiciones de red devuelve en ~180–400 ms; Copilot con red degradada devuelve más lento o falla. La diferencia de latencia es pequeña pero consistentemente favorable al uso local. El mayor beneficio es el determinismo — la inferencia local tiene la misma velocidad siempre, independientemente del estado de la red.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectura relacionada',
+        items: [
+          '[Reemplaza GitHub Copilot con un LLM local: setup + comparación de costes 2026](/es/power-local-llm/replace-github-copilot-with-local-llm) — objetivo adyacente: mismo stack, diferente enfoque (coste vs. offline). Léelo si quieres primero los números de coste.',
+          '[Continue.dev vs Cline vs Aider: el mejor agente de código local en 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) — qué harnesses funcionan completamente offline, con cobertura profunda de las diferencias entre Continue.dev, Aider y Cline.',
+          '[Los mejores modelos locales de código en 2026: Qwen3-Coder vs DeepSeek vs Codestral](/es/power-local-llm/best-local-coding-models-2026) — el lado del modelo de la ecuación, con benchmarks HumanEval+ por lenguaje.',
+          '[Ejecuta IA en una tablet: apps de LLM local para iPad y Android](/es/power-local-llm/run-ai-on-tablet-ipad-android) — para viajeros que prefieren un dispositivo offline más ligero que un portátil.',
+          '[Los mejores portátiles para LLMs locales en 2026](/es/local-llms/best-laptops-local-llm) — referencia de hardware; clasifica todos los portátiles viables en tokens/seg, batería y memoria total del sistema.',
+          '[Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai) — técnicas de prompting que mejoran la calidad de generación de código en cualquier modelo, online u offline.',
+          '[Hub de Power Local LLM](/es/power-local-llm) — biblioteca completa de guías sobre código, RAG, agentes y trabajo creativo.',
+        ],
+      },
+    },
+  },
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',

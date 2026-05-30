@@ -2480,4 +2480,500 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: 'Continue.dev vs Cline vs Aider: Mejor agente de código local en 2026',
+    seoTitle: 'Continue.dev vs Cline vs Aider: Agente de código local 2026',
+    intro:
+      'Continue.dev, Cline y Aider son las tres herramientas de código open-source serias que se integran correctamente con un LLM local en 2026. No son intercambiables: cada una está construida alrededor de una primitiva de flujo de trabajo diferente — autocompletado, bucle de agente autónomo o diff nativo de Git. Elige primero según el flujo de trabajo y en segundo lugar el modelo, y evitarás el 90% de los problemas de integración.',
+    metaDescription:
+      'Continue.dev, Cline y Aider comparados como agentes de código local en 2026. Modelo de edición, integración con IDE, deshacer y estrategia de contexto — elegidos por flujo de trabajo, no por hype.',
+    twitterDescription:
+      'Tres herramientas de código local, tres primitivas de flujo de trabajo distintas. Continue.dev para autocompletado, Cline para agentes autónomos, Aider para diffs nativos de Git. Veredicto por flujo de trabajo.',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3-Coder 7B',
+      'DeepSeek Coder V3',
+      'Llama 3.3 70B',
+      'Codestral 22B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      'Desarrolladores que ejecutan un LLM de código local (Qwen3-Coder, DeepSeek Coder, Codestral, Llama 3.3) y necesitan elegir una herramienta que encaje con su editor y flujo de trabajo de proyecto.',
+    readTime: '14 min de lectura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'agente de código local',
+    targetKeywords: [
+      'continue.dev vs cline',
+      'cline vs aider',
+      'mejor agente de código local 2026',
+      'herramienta de código llm local',
+      'aider llm local',
+      'continue.dev llm local',
+    ],
+    leadAnswerBlock:
+      '**Continue.dev, Cline y Aider resuelven problemas distintos con el mismo modelo local. Continue.dev está construido en torno al autocompletado y un panel de chat integrado en el IDE — ideal para flujos de trabajo de edición mientras escribes en VS Code o JetBrains. Cline es un agente autónomo de VS Code que planifica, edita y ejecuta comandos en múltiples archivos con puertas de aprobación explícitas — ideal para refactorizaciones de múltiples archivos y búsquedas de errores exploratorias. Aider es un CLI orientado al terminal y nativo de Git que convierte cada edición en un commit con diffs de búsqueda y reemplazo quirúrgicos — ideal para trabajo a escala de repositorio y revisores que quieren cada cambio reflejado en `git log`. Elige según la primitiva de flujo de trabajo (autocompletado vs bucle de agente vs diff de Git), no según cuál herramienta suena más potente.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuál es el mejor agente de código local en 2026: Continue.dev, Cline o Aider?',
+        answer:
+          'Elige Continue.dev si pasas la mayor parte del día en VS Code o JetBrains y quieres autocompletado más un panel de chat que acceda a tu base de código. Elige Cline si quieres un agente autónomo que planifique, edite múltiples archivos y ejecute comandos con puertas de aprobación entre pasos — el más potente para refactorizaciones y búsquedas de errores exploratorias. Elige Aider si trabajas en el terminal y quieres que cada edición quede como un commit de git separado y revisable. Los tres funcionan completamente sin conexión contra cualquier endpoint de LLM local (Ollama, llama.cpp, LM Studio, vLLM). La elección correcta es una decisión de flujo de trabajo, no un ranking de calidad.',
+        bullets: [
+          'Continue.dev — autocompletado + chat integrado en IDE. Ideal para usuarios de VS Code y JetBrains que quieren ediciones incrementales sin abandonar el editor.',
+          'Cline — agente autónomo con modos Plan/Actuar, llamadas a herramientas y aprobación por paso. Ideal para refactorizaciones de múltiples archivos y búsquedas de errores.',
+          'Aider — CLI de terminal con commits nativos de Git y diffs de búsqueda y reemplazo. Ideal para trabajo a escala de repositorio revisable y con soporte para deshacer.',
+          'Los tres funcionan con cualquier endpoint local compatible con OpenAI — Ollama es el camino más sencillo, llama.cpp y vLLM son compatibles mediante configuraciones de proveedor.',
+          'La adecuación al flujo de trabajo supera la capacidad bruta. Forzar a un desarrollador orientado al terminal en Cline (o a uno exclusivo de VS Code en Aider) cuesta más tiempo del que la herramienta ahorra.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Tabla comparativa', anchor: '#comparison-table' },
+      { label: '¿Cuál deberías elegir?', anchor: '#which-one' },
+      { label: 'Continue.dev: Análisis en profundidad', anchor: '#continue-dev' },
+      { label: 'Cline: Análisis en profundidad', anchor: '#cline' },
+      { label: 'Aider: Análisis en profundidad', anchor: '#aider' },
+      { label: 'Modelo de edición: cómo escribe código cada herramienta', anchor: '#edit-model' },
+      { label: 'Deshacer y revertir', anchor: '#undo' },
+      { label: 'Estrategia de ventana de contexto', anchor: '#context' },
+      { label: 'Fiabilidad de llamadas a herramientas', anchor: '#tool-calls' },
+      { label: 'Integración con IDE', anchor: '#ide-integration' },
+      { label: 'Adecuación al flujo de trabajo por caso de uso', anchor: '#workflow-fit' },
+      { label: 'Árbol de decisión', anchor: '#decision-tree' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectura relacionada', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/continue-dev-vs-cline-vs-aider-local-static.html',
+    gammaDescription: 'La presentación a continuación cubre: cómo difieren Continue.dev, Cline y Aider como herramientas de código local (autocompletado vs agente autónomo vs diffs nativos de git), una tabla comparativa de funciones, fiabilidad del modelo de edición por herramienta y tamaño de modelo, estrategia de ventana de contexto (32K vs 128K), integración con IDE (VS Code, JetBrains, Vim/SSH) y 6 errores comunes al elegir una herramienta. Descarga el PDF como tarjeta de referencia para agentes de código local.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Continue.dev** es autocompletado primero: una extensión para VS Code y JetBrains con completados FIM (fill-in-the-middle), un panel de chat lateral integrado en el IDE y proveedores de contexto `@` (base de código, archivo, documentación, terminal). El análogo open-source más cercano a Copilot para modelos locales.',
+          '**Cline** es agente primero: una extensión de VS Code con modos Plan y Actuar explícitos, un bucle de llamadas a herramientas (read_file, write_to_file, execute_command, browser_action) y una puerta de aprobación en cada paso. Diseñado para ejecutarse de forma autónoma en múltiples archivos mientras tú supervisas.',
+          '**Aider** es Git primero: un CLI de terminal que mantiene un mapa de repositorio tree-sitter, edita archivos mediante bloques de diff de búsqueda y reemplazo, y hace commit de cada cambio. Deshacer es `git reset` — el flujo de trabajo más revisable de los tres.',
+          'Los tres hablan con endpoints compatibles con OpenAI. **Ollama** es el backend local más fluido; **llama.cpp** y **vLLM** funcionan mediante configuraciones de proveedor o proxies como LiteLLM.',
+          '**La fiabilidad de las llamadas a herramientas** depende del modelo, no de la herramienta. Qwen3-Coder 30B y DeepSeek Coder V3 son los llamadores de herramientas más fiables en mayo de 2026; los modelos más pequeños (clase 7B) emiten regularmente llamadas a herramientas mal formadas independientemente de cuál herramienta los envuelva.',
+          '**La estrategia de ventana de contexto** difiere notablemente: Continue.dev se apoya en el índice de base de código integrado y el contexto anclado con `@`, Cline transmite el contenido completo de los archivos a la conversación (alto uso de tokens), Aider usa un mapa de repositorio tree-sitter más `/add` y `/drop` explícitos para mantener pequeño el conjunto de trabajo.',
+          'Para un desarrollador individual, la **adecuación al flujo de trabajo** domina los resultados más que cualquier benchmark. La herramienta que realmente mantienes abierta es la que deberías elegir.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Continue.dev** — autocompletado + chat, VS Code y JetBrains, la instalación con menos fricción de las tres.',
+          '**Cline** — agente autónomo con puertas de aprobación, solo VS Code, la mayor capacidad y el mayor uso de tokens.',
+          '**Aider** — CLI de terminal, commits nativos de Git, cada edición es revisable y reversible a través de Git.',
+          'Los tres se ejecutan contra el mismo backend local — **Ollama** es el camino más fluido; **llama.cpp** y **vLLM** también funcionan con configuración compatible con OpenAI.',
+          '**La fiabilidad de las llamadas a herramientas es una propiedad del modelo, no de la herramienta.** Qwen3-Coder 30B y DeepSeek Coder V3 son fiables en las tres; los modelos de clase 7B fallan en las tres.',
+          '**Presupuesto de contexto:** Continue.dev y Aider se mantienen cómodos con un modelo de contexto de 32K; Cline necesita **128K** para tareas de múltiples archivos no triviales.',
+          '**Elige según el editor:** JetBrains → Continue.dev o Aider. Vim/Neovim o SSH → Aider. VS Code con días de mucho autocompletado → Continue.dev. VS Code con refactorizaciones de múltiples archivos → Cline.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Cómo se comparan Continue.dev, Cline y Aider en 2026',
+        content:
+          'Las tres herramientas son open-source, gratuitas y funcionan con cualquier endpoint de LLM local. Las diferencias estructurales a continuación determinan cuál encaja con tu flujo de trabajo.',
+        image: '/images/coding-agent-comparison-es.svg',
+        imageCaption: 'Continue.dev vs Cline vs Aider: Continue.dev para autocompletado en VS Code/JetBrains (contexto 32K), Cline para agentes autónomos de múltiples archivos en VS Code (128K recomendado), Aider para commits nativos de git en terminal (contexto 32K).',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Continue.dev es autocompletado estilo Copilot, Cline es un agente autónomo que edita entre archivos, Aider es una herramienta de terminal que hace commit de cada edición a Git — elige según el flujo de trabajo, no según el benchmark.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Tres herramientas gratuitas, el mismo modelo local, tres flujos de trabajo completamente distintos. Continue.dev se siente como Copilot — Tab para aceptar sugerencias dentro de tu editor. Cline se siente como un desarrollador junior que supervisas — planifica y edita entre archivos mientras apruebas cada paso. Aider se siente como programación en pareja en el terminal — tú hablas, él hace commit. Prueba el que coincida con cómo ya trabajas.',
+          },
+        ],
+        columns: ['Característica', 'Continue.dev', 'Cline', 'Aider'],
+        rows: [
+          {
+            'Característica': 'Superficie principal',
+            'Continue.dev': 'Extensión de VS Code y JetBrains',
+            'Cline': 'Extensión de VS Code',
+            'Aider': 'CLI de terminal (cualquier editor al lado)',
+          },
+          {
+            'Característica': 'Primitiva de flujo de trabajo',
+            'Continue.dev': 'Autocompletado + chat integrado en IDE',
+            'Cline': 'Bucle de agente autónomo con puertas de aprobación',
+            'Aider': 'Ediciones de diff nativo de Git, cada cambio un commit',
+          },
+          {
+            'Característica': 'Modelo de edición',
+            'Continue.dev': 'FIM en línea + aplicar al archivo desde el chat',
+            'Cline': 'Llamadas a herramientas (read_file, write_to_file, replace_in_file)',
+            'Aider': 'Bloques de diff de búsqueda y reemplazo; modo "entero" para archivos pequeños',
+          },
+          {
+            'Característica': 'Ediciones de múltiples archivos',
+            'Continue.dev': 'Manual: el chat sugiere, tú aplicas por archivo',
+            'Cline': 'Nativo: el agente edita entre archivos en una sola tarea',
+            'Aider': 'Nativo: nombra archivos en el prompt, las ediciones aterrizan en un commit',
+          },
+          {
+            'Característica': 'Deshacer / Revertir',
+            'Continue.dev': 'Pila de deshacer de VS Code en las ediciones aplicadas',
+            'Cline': 'Revertir por edición en la interfaz del agente; Git para reversión completa',
+            'Aider': '`/undo` revierte el último commit; historial completo de git debajo',
+          },
+          {
+            'Característica': 'Protocolo de llamada a herramientas',
+            'Continue.dev': 'Herramientas de OpenAI (function-calling) en modo Agente',
+            'Cline': 'Bloques de herramientas XML personalizados con esquema estricto',
+            'Aider': 'Sin llamadas a herramientas; indica al modelo que emita bloques de diff',
+          },
+          {
+            'Característica': 'Contexto de base de código',
+            'Continue.dev': 'Índice local (TF-IDF + embeddings) + proveedores `@`',
+            'Cline': 'Transmite el contenido completo de archivos a la conversación',
+            'Aider': 'Mapa de repositorio Tree-sitter + `/add` y `/drop` manual',
+          },
+          {
+            'Característica': 'Aprobación / Seguridad',
+            'Continue.dev': 'Vista previa de diff antes de cada aplicación',
+            'Cline': 'Aprobación por paso; listas de permisos de auto-aprobación configurables',
+            'Aider': 'Vista previa de diff en terminal; el paso de commit es automático',
+          },
+          {
+            'Característica': 'Mejor para',
+            'Continue.dev': 'Editar mientras escribes, chat integrado en IDE, días de mucho autocompletado',
+            'Cline': 'Refactorizaciones de múltiples archivos, depuración exploratoria, tareas de repositorio',
+            'Aider': 'Cambios revisables a escala de repositorio, flujos de trabajo orientados al terminal',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: 'Cuál deberías elegir',
+        content:
+          '**La herramienta correcta la decide tu editor, tu tolerancia a las ediciones autónomas y cómo revisas los cambios.** Usa este atajo.',
+        image: '/images/coding-agent-which-one-es.svg',
+        imageCaption: 'Qué herramienta de código local elegir: Continue.dev para autocompletado y chat en IDE (VS Code + JetBrains), Cline para bucles de agente de múltiples archivos y ejecución de comandos, Aider para flujos de trabajo nativos de git en terminal y entornos SSH.',
+        columns: ['Tu situación', 'Elige'],
+        rows: [
+          { 'Tu situación': 'Vivo en VS Code o un IDE de JetBrains y quiero autocompletado estilo Copilot', 'Elige': 'Continue.dev' },
+          { 'Tu situación': 'Quiero un panel de chat lateral que acceda a mi base de código sin subir archivos manualmente', 'Elige': 'Continue.dev' },
+          { 'Tu situación': 'Quiero un agente que planifique una refactorización en múltiples archivos y pregunte antes de cada paso', 'Elige': 'Cline' },
+          { 'Tu situación': 'Quiero que el modelo pueda ejecutar comandos y leer la salida del terminal como parte de su bucle', 'Elige': 'Cline' },
+          { 'Tu situación': 'Reviso los cambios con `git diff` y quiero que cada edición se haga commit automáticamente', 'Elige': 'Aider' },
+          { 'Tu situación': 'Trabajo por SSH o en un entorno orientado al terminal', 'Elige': 'Aider' },
+          { 'Tu situación': 'Necesito los tres flujos de trabajo ocasionalmente — elige el más sencillo primero', 'Elige': 'Empieza con Continue.dev; agrega Aider cuando necesites diffs nativos de Git' },
+        ],
+      },
+      continueDevDeep: {
+        id: 'continue-dev',
+        title: 'Continue.dev: La elección orientada al autocompletado',
+        content:
+          '**Continue.dev es el análogo open-source más cercano a GitHub Copilot para modelos locales.** Su superficie principal es el editor: completado con Tab mientras escribes más un panel de chat lateral que conoce tu base de código.',
+        items: [
+          '**Ruta de instalación:** VS Code Marketplace y JetBrains Marketplace. La configuración vive en `~/.continue/config.json` (o `config.yaml`); las definiciones de modelos, la configuración de autocompletado y los proveedores de contexto `@` están todos ahí.',
+          '**Primitiva de flujo de trabajo:** autocompletado vía FIM (fill-in-the-middle) más un panel de chat lateral integrado en el IDE. El panel de chat puede aplicar ediciones directamente a los archivos abiertos; un modo Agente añade bucles de llamadas a herramientas para tareas de múltiples pasos.',
+          '**Configuración de modelo local:** el soporte nativo de Ollama es un bloque de configuración. llama.cpp, LM Studio y cualquier endpoint compatible con OpenAI también funcionan. El patrón estándar es ejecutar modelos separados para autocompletado (pequeño, rápido — clase Qwen2.5-Coder 1.5B) y chat (más grande — Qwen3-Coder 30B, DeepSeek Coder V3).',
+          '**Contexto de base de código:** índice local (TF-IDF más embeddings) en tu carpeta de proyecto. `@codebase`, `@file`, `@folder`, `@docs`, `@terminal` y proveedores personalizados acceden al índice desde el panel de chat.',
+          '**Modelo de edición:** en el chat, el modelo propone un bloque de código; hacer clic en "Aplicar" hace un diff contra el archivo abierto y puedes aceptar o rechazar el cambio. Las ediciones en línea vía Cmd/Ctrl+I reescriben una selección en su lugar. Ambos flujos muestran una vista previa de diff antes de cualquier escritura.',
+          '**Donde destaca:** edición con teclado dentro de un IDE que ya usas, baja sobrecarga cognitiva por edición, ciclo de retroalimentación rápido. La herramienta que olvidas que instalaste.',
+          '**Donde se queda corto:** las refactorizaciones de múltiples archivos requieren que dirijas el chat por archivo. Las tareas autónomas de larga duración no son su modo nativo — el modo Agente está mejorando pero no es el centro de gravedad del proyecto.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ejecuta dos modelos en tu configuración de Continue.dev: un modelo de autocompletado pequeño (Qwen2.5-Coder 1.5B en Q4_K_M necesita ~1.5 GB de VRAM) y un modelo de chat más grande (Qwen3-Coder 30B Q4_K_M, ~17 GB). Separarlos mantiene la latencia de autocompletado por debajo de 200 ms mientras el panel de chat sigue siendo útil para preguntas no triviales.',
+          },
+        ],
+      },
+      clineDeep: {
+        id: 'cline',
+        title: 'Cline: La elección de agente autónomo',
+        content:
+          '**Cline trata el código como una tarea de agente, no como una serie de ediciones.** Le das un objetivo; planifica, lee archivos, los edita, ejecuta comandos y te pide que apruebes cada paso.',
+        items: [
+          '**Ruta de instalación:** VS Code Marketplace (sin versión para JetBrains). La configuración se hace por GUI dentro del panel de la extensión — proveedor, modelo, configuración de auto-aprobación, instrucciones personalizadas.',
+          '**Primitiva de flujo de trabajo:** bucle de agente autónomo con modos Plan y Actuar explícitos. El modo Plan razona sobre la tarea sin escribir archivos; el modo Actuar ejecuta el plan con llamadas a herramientas. Aparece una puerta de aprobación entre pasos a menos que coloques herramientas en una lista de permisos de auto-aprobación.',
+          '**Configuración de modelo local:** cualquier endpoint compatible con OpenAI. Ollama es un clic. Para llama.cpp o vLLM, apunta Cline a la URL del servidor compatible con OpenAI. El bucle de agente consume muchos tokens — reserva un modelo con al menos una ventana de contexto de 32K (Qwen3-Coder 30B en 32K, DeepSeek Coder V3 en 128K).',
+          '**Superficie de herramientas:** `read_file`, `write_to_file`, `replace_in_file`, `execute_command`, `list_files`, `search_files`, `browser_action`, `ask_followup_question`, `attempt_completion`. El conjunto es pequeño y bien documentado; los esquemas de herramientas usan un formato XML personalizado que el modelo debe emitir correctamente.',
+          '**Modelo de edición:** para archivos de pocas centenas de líneas, Cline escribe el archivo completo. Para archivos más grandes, emite operaciones `replace_in_file` con bloques de búsqueda y reemplazo explícitos. Los diffs se muestran en el panel antes de cada escritura.',
+          '**Donde destaca:** refactorizaciones de múltiples archivos, tareas exploratorias de "¿por qué falla este test?", flujos de trabajo de "añadir una función que toca tres capas". El más potente de los tres en tareas con más de cinco ediciones de archivos.',
+          '**Donde se queda corto:** el consumo de tokens es alto — el contenido completo de los archivos se transmite a la conversación en cada lectura. Las sesiones largas agotan los modelos de contexto 32K; se recomiendan modelos de contexto 128K para tareas no triviales. La fiabilidad de las llamadas a herramientas se degrada drásticamente en modelos más pequeños (clase 7B) — emiten XML mal formado y el bucle se detiene.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'La lista de permisos de auto-aprobación de Cline es la diferencia entre un agente útil y uno tedioso. Permite `read_file`, `list_files` y `search_files` por defecto; mantén `write_to_file`, `replace_in_file` y `execute_command` con puerta hasta que confíes en el modelo con esta base de código. Ajusta por proyecto.',
+          },
+        ],
+      },
+      aiderDeep: {
+        id: 'aider',
+        title: 'Aider: La elección nativa de Git',
+        content:
+          '**Aider es la única de las tres que trata tu repositorio como la fuente de verdad, no la conversación.** Cada edición aterriza como un commit de Git. Deshacer es `git reset`. El historial del chat es desechable; el log de commits es el artefacto.',
+        items: [
+          '**Ruta de instalación:** `pip install aider-chat` o `pipx install aider-chat`. Invocación CLI: `aider file1.py file2.py` (los archivos quedan en el ámbito de la conversación). Configuración vía `.aider.conf.yml` y sobreescrituras por bandera.',
+          '**Primitiva de flujo de trabajo:** edición conversacional orientada al terminal. Escribe un prompt; Aider propone un diff; si lo aceptas, el cambio se hace commit. `/add` y `/drop` gestionan los archivos en ámbito. `/undo` revierte el último commit. `/diff` muestra el cambio más reciente contra HEAD.',
+          '**Configuración de modelo local:** cualquier modelo accesible a través de LiteLLM — Ollama, servidores compatibles con OpenAI (llama.cpp, vLLM, LM Studio) o los proveedores de modelos directamente. `--model ollama_chat/qwen3-coder:30b` es la invocación local típica.',
+          '**Contexto de base de código:** mapa de repositorio tree-sitter. Aider analiza tu repositorio en busca de definiciones (funciones, clases, métodos), las resume por proximidad a los archivos en ámbito, e incluye el resumen en el prompt del sistema. El mapa cabe aproximadamente en 1K–4K tokens para repositorios pequeños, más para grandes — `--map-tokens` limita el presupuesto.',
+          '**Modelo de edición:** dos estrategias. El modo "diff" emite bloques de búsqueda y reemplazo que el modelo debe producir textualmente — quirúrgico, bajo en tokens, pero falla si el modelo parafrasea el bloque de búsqueda. El modo "entero" reescribe archivos completos — robusto en archivos pequeños, costoso en grandes. Aider selecciona automáticamente los valores predeterminados por modelo que coinciden con sus fortalezas conocidas.',
+          '**Donde destaca:** cambios a escala de repositorio de los que quieres cada paso en el log de commits; programación en pareja con revisión de código incorporada (cada commit es una unidad de revisión discreta); flujos de trabajo SSH y devcontainer donde las extensiones de IDE no son una opción.',
+          '**Donde se queda corto:** sin autocompletado. Sin vista previa en IDE por defecto (funciona bien en un panel de terminal de VS Code junto a tu editor, pero no está integrado). El formato de edición de diff es sensible a la calidad de salida del modelo — un modelo que parafrasea el bloque de búsqueda en vez de reproducirlo fallará las ediciones y verás intentos de reintento en el terminal.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Establece `auto-commits: true` (el valor predeterminado) y usa `git rebase -i` para aplastar los commits de Aider al final de una función. Los commits detallados durante el trabajo son valiosos para `/undo`; el commit final aplastado es lo que revisa tu equipo. Aider documenta exactamente este patrón.',
+          },
+        ],
+      },
+      editModel: {
+        id: 'edit-model',
+        title: 'Modelo de edición: cómo escribe código cada herramienta',
+        content:
+          '**El modelo de edición es el mayor determinante individual de cómo se siente cada herramienta.** Mismo modelo, misma tarea — tres artefactos muy distintos.',
+        image: '/images/coding-agent-edit-model-es.svg',
+        imageCaption: 'Fiabilidad del modelo de edición por herramienta: en modelos 7B, Continue.dev es el más tolerante, Aider rechaza bloques que no coinciden, Cline se detiene con XML mal formado; en modelos 30B+ de código (Qwen3-Coder, DeepSeek Coder V3), los tres son fiables.',
+        items: [
+          '**Continue.dev** — para autocompletado: los tokens FIM alrededor del cursor producen completados en línea. Para ediciones guiadas por chat: el modelo devuelve un bloque de código delimitado; "Aplicar" hace un diff contra el archivo abierto y lo presenta para aceptar/rechazar. Para ediciones en línea (Cmd/Ctrl+I sobre una selección): el modelo reescribe la selección en su lugar y el diff se muestra allí mismo.',
+          '**Cline** — cada edición es una llamada a herramienta. `write_to_file` para archivos nuevos o reescrituras completas, `replace_in_file` para cambios quirúrgicos con bloques explícitos `<<<<<<< SEARCH` / `>>>>>>> REPLACE`. Las llamadas a herramientas se validan contra un esquema; las mal formadas generan un "error de herramienta" que el agente ve y reintenta. La conversación son llamadas a herramientas estructuradas y resultados de herramientas, no prosa libre.',
+          '**Aider** — bloques de diff de búsqueda y reemplazo renderizados en prosa simple, analizados en el CLI. El modelo emite algo parecido a un bloque delimitado de diff unificado; Aider lo aplica y hace commit. Si el bloque SEARCH no coincide exactamente con el archivo, la edición se rechaza y Aider pide al modelo que reintente.',
+          '**Ranking de fiabilidad en un modelo de clase 7B:** Continue.dev > Aider > Cline. El "Aplicar" de Continue.dev es tolerante — las pequeñas paráfrasis las reconcilia el algoritmo de diff. Aider rechaza de plano en bloques de búsqueda que no coinciden, pero el fallo es ruidoso y recuperable. El formato de herramienta XML de Cline es el más frágil en modelos pequeños — las llamadas a herramientas mal formadas detienen el bucle.',
+          '**Ranking de fiabilidad en un modelo de llamadas a herramientas 30B+ (Qwen3-Coder 30B, DeepSeek Coder V3):** los tres convergen — el modelo tiene la capacidad de emitir bloques de diff precisos y llamadas a herramientas bien formadas de manera consistente.',
+          'Para técnicas de prompting estructurado que mejoran la generación de código independientemente de qué herramienta los envuelva, consulta [Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai).',
+        ],
+      },
+      undo: {
+        id: 'undo',
+        title: 'Deshacer, revertir y la pregunta "¿Qué acaba de hacer el agente?"',
+        content:
+          '**Deshacer es la función sin glamour que solo notas cuando la necesitas.** Las tres herramientas son recuperables; la diferencia está en cuánta fricción hay entre "esto fue un error" y "el error ha desaparecido".',
+        items: [
+          '**Continue.dev** — las ediciones aplicadas se unen a la pila de deshacer de VS Code. Cmd/Ctrl+Z revierte la aplicación más reciente por archivo. Para revertir múltiples archivos, tu flujo de trabajo de Git existente hace el trabajo pesado. No hay un comando a nivel de herramienta de "deshacer toda esta conversación".',
+          '**Cline** — la interfaz del agente muestra cada paso como una tarjeta; revertir por edición es un clic. Las tarjetas persisten durante la duración de la tarea. Tras finalizar la tarea, la reversión es vía Git — Cline no hace commit automáticamente, por lo que puede que tengas un montón de cambios sin commit tras una sesión larga.',
+          '**Aider** — `/undo` revierte el commit más reciente; repite para retroceder más. Como cada edición es un commit separado, la granularidad coincide paso a paso con la conversación. `git reflog` recupera todo lo que `/undo` no pueda.',
+          '**La implicación práctica:** si te inclinas a dejar un agente funcionando 20 minutos sin supervisión, Aider te da el artefacto más revisable después (un log de commits limpio) y Cline te da la pista de auditoría en progreso más legible (tarjetas por paso, pero sin commits). Continue.dev asume que te quedaste en el teclado durante todo el proceso.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para sesiones de Cline, ejecuta `git stash` antes de comenzar una tarea no trivial. Si el agente se descarrila, `git stash drop` limpia más rápido que revertir por archivo. Para Aider, el log de commits existente es la red de seguridad — no hagas nada extra.',
+          },
+        ],
+      },
+      context: {
+        id: 'context',
+        title: 'Estrategia de ventana de contexto: a dónde van los tokens',
+        content:
+          '**Las tres herramientas gastan tokens de manera diferente.** Esta es la decisión de presupuesto más importante cuando tienes un modelo con una ventana de contexto más pequeña (32K o menos) y un repositorio no trivial.',
+        image: '/images/coding-agent-context-strategy-es.svg',
+        imageCaption: 'Estrategia de ventana de contexto: Continue.dev usa recuperación de índice bajo demanda (mínimo 32K), Cline transmite archivos completos (128K recomendado para tareas de múltiples archivos), Aider usa mapa de repositorio tree-sitter más /add explícito (mínimo 32K).',
+        items: [
+          '**Continue.dev** — índice TF-IDF más embeddings sobre el proyecto. La recuperación es bajo demanda: solo los fragmentos relevantes para el mensaje de chat actual aterrizan en el prompt. `@codebase` desencadena una búsqueda semántica; `@file path/to/x.ts` inyecta el archivo literalmente. El uso de tokens escala con lo que anclas, no con el tamaño del repositorio.',
+          '**Cline** — el contenido completo de los archivos se transmite a la conversación en cada lectura. Un archivo de 500 líneas consume ~3K–5K tokens; una tarea de agente que toca 8 archivos consume 25K–40K tokens antes de que ocurra cualquier razonamiento. Mínimo recomendado: ventana de contexto de 32K; 128K es cómodo.',
+          '**Aider** — mapa de repositorio tree-sitter (por defecto ~2K tokens, configurable vía `--map-tokens`) más el contenido de los archivos explícitamente añadidos con `/add`. El mapa es un resumen solo de definiciones, no código completo, por lo que escala mucho mejor con el tamaño del repositorio que transmitir archivos. `/drop` los archivos cuando ya no estén en ámbito.',
+          '**Implicación práctica para un modelo de contexto de 32K:** Continue.dev y Aider se mantienen cómodos en la mayoría de los repositorios; Cline empieza a sufrir presión de contexto en tareas que tocan más de 5–6 archivos a menos que cambies a un modelo de contexto de 128K.',
+          '**Implicación práctica para un modelo de contexto de 128K:** los tres son cómodos. El mayor consumo de Cline deja de importar; el factor decisivo vuelve a la primitiva de flujo de trabajo.',
+          'Para una explicación más profunda de las ventanas de contexto y por qué los modelos pierden información a mitad del contexto, consulta [Ventanas de contexto explicadas: por qué la IA olvida](/es/prompt-engineering/context-windows-explained-why-ai-forgets).',
+        ],
+      },
+      toolCalls: {
+        id: 'tool-calls',
+        title: 'La fiabilidad de las llamadas a herramientas es una propiedad del modelo',
+        content:
+          '**Los fallos de llamadas a herramientas suelen atribuirse incorrectamente a la herramienta.** En la práctica el modelo emite una llamada mal formada, la herramienta valida estrictamente y el bucle se detiene. El mismo modelo en una herramienta diferente produce el mismo modo de fallo.',
+        items: [
+          '**Modelos que realizan llamadas a herramientas fiables para estas herramientas (mayo de 2026):** Qwen3-Coder 30B (el mejor en el formato XML de Cline), DeepSeek Coder V3 (contexto amplio, fuerte en planes de múltiples pasos), Llama 3.3 70B (lento pero fiable), Codestral 22B (rápido, menor horizonte de planificación).',
+          '**Modelos que tienen dificultades:** cualquier cosa por debajo de 7B, la mayoría de los modelos de propósito general por debajo de 13B sin ajuste fino de código, y cuantizaciones más estrictas que Q4_K_M en el extremo inferior. Síntomas: XML mal formado en Cline, bloques SEARCH parafraseados en Aider, código delimitado que no coincide con el archivo abierto en Continue.dev.',
+          '**La solución raramente es "cambiar de herramienta".** Es "cambiar de modelo" o "subir la cuantización". Un Qwen3-Coder 30B en Q4_K_M realiza llamadas a herramientas de manera fiable en las tres herramientas. Un Llama 3.2 7B en Q4 fallará en las tres.',
+          '**El modo Agente de Continue.dev** usa JSON estándar de llamada a herramientas de OpenAI. La mayoría de los modelos ajustados para código lo manejan bien.',
+          '**El formato XML de Cline** es el más exigente — el modelo debe producir una estructura XML exacta. Los modelos ajustados para código entrenados en formatos diversos (Qwen3-Coder, DeepSeek Coder) lo manejan; los modelos de propósito general con frecuencia no.',
+          '**Aider no tiene llamadas a herramientas per se** — analiza bloques de búsqueda y reemplazo de la prosa. La pregunta de "fiabilidad" se convierte en "¿el modelo reproduce los bloques SEARCH literalmente?", lo que la mayoría de los modelos ajustados para código de 22B o más hacen bien.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Al evaluar un nuevo modelo local, pruébalo en la herramienta que realmente usas, no en un benchmark genérico de llamadas a herramientas. La señal relevante es si tu flujo de trabajo diario se detiene. Un modelo que obtiene 85% en un benchmark público de llamadas a herramientas puede fallar la mitad de tus tareas de Cline si no emite de manera fiable el XML específico de Cline.',
+          },
+        ],
+      },
+      ideIntegration: {
+        id: 'ide-integration',
+        title: 'Integración con IDE y alcance del editor',
+        content:
+          '**El alcance del editor es donde las tres herramientas divergen más visiblemente.** Esta es la dimensión que más importa a la mayoría de los lectores; también es la más fácil de probar en 10 minutos.',
+        items: [
+          '**Continue.dev** — VS Code Marketplace y JetBrains Marketplace. La build de JetBrains es real (IntelliJ, PyCharm, GoLand, WebStorm, etc.) y tiene paridad de funciones con la build de VS Code para autocompletado y chat. Los usuarios de Cursor pueden instalar la extensión de VS Code; el comportamiento coincide con VS Code.',
+          '**Cline** — solo extensión de VS Code. Funciona en Cursor (que es un fork de VS Code) pero no está probado oficialmente; la superficie de la extensión es idéntica y la mayoría de los usuarios no reportan problemas. Los usuarios de JetBrains por ahora están sin opción.',
+          '**Aider** — orientado al terminal; se integra con cualquier editor situándose junto a él. VS Code: abre el terminal integrado, ejecuta Aider, edita en el panel del editor mientras Aider hace commit. JetBrains: el mismo patrón en el terminal de JetBrains. Vim/Neovim: combinado con `:e!` para recargar tras los commits de Aider, esto es un flujo productivo. Cursor: idéntico a VS Code.',
+          '**Implicación práctica para usuarios de JetBrains:** Continue.dev o Aider son tus únicas opciones.',
+          '**Implicación práctica para usuarios de Vim/Neovim:** Aider es la opción natural. Continue.dev tiene integraciones de Neovim de la comunidad con madurez variable; la superficie oficial es VS Code y JetBrains.',
+        ],
+      },
+      workflowFit: {
+        id: 'workflow-fit',
+        title: 'Adecuación al flujo de trabajo por caso de uso',
+        content:
+          '**El marco más útil es "qué tipo de día estás teniendo".** Adapta la herramienta al día, no al revés.',
+        image: '/images/coding-agent-workflow-fit-es.svg',
+        imageCaption: 'Adecuación al flujo de trabajo: Continue.dev para autocompletado y preguntas en el IDE; Cline para refactorizaciones de múltiples archivos y depuración exploratoria con acceso a comandos; Aider para cambios nativos de git, SSH y flujos de trabajo Vim/Neovim.',
+        columns: ['Caso de uso', 'Mejor opción', 'Por qué'],
+        rows: [
+          {
+            'Caso de uso': 'Añadir una función a un archivo existente con autocompletado',
+            'Mejor opción': 'Continue.dev',
+            'Por qué': 'El autocompletado FIM es la primitiva natural; no necesitas chat',
+          },
+          {
+            'Caso de uso': 'Preguntar "¿qué hace esta función?" sin salir del editor',
+            'Mejor opción': 'Continue.dev',
+            'Por qué': 'El chat en IDE con `@file` es el camino con menos fricción',
+          },
+          {
+            'Caso de uso': 'Refactorizar una función en 5+ archivos',
+            'Mejor opción': 'Cline',
+            'Por qué': 'Ediciones nativas de múltiples archivos con aprobación por paso',
+          },
+          {
+            'Caso de uso': '"¿Por qué falla este test?" — búsqueda exploratoria de errores',
+            'Mejor opción': 'Cline',
+            'Por qué': 'El bucle de agente ejecuta comandos, lee logs e itera',
+          },
+          {
+            'Caso de uso': 'Renombrado a escala de repositorio o migración de API con commits revisables',
+            'Mejor opción': 'Aider',
+            'Por qué': 'Cada edición se convierte en un commit; trivial de revisar y deshacer',
+          },
+          {
+            'Caso de uso': 'SSH a un servidor, trabajar sin IDE',
+            'Mejor opción': 'Aider',
+            'Por qué': 'Solo terminal por diseño',
+          },
+          {
+            'Caso de uso': 'Usuario de Vim o Neovim como herramienta principal',
+            'Mejor opción': 'Aider',
+            'Por qué': 'Se combina de forma natural con la edición orientada al terminal',
+          },
+          {
+            'Caso de uso': 'Usuario de IDE JetBrains (IntelliJ, GoLand, PyCharm)',
+            'Mejor opción': 'Continue.dev o Aider',
+            'Por qué': 'Cline es solo para VS Code',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: 'Árbol de decisión: cuál deberías elegir',
+        content:
+          '**Cinco preguntas, en orden, llevan a la mayoría de los lectores a la elección correcta.**',
+        items: [
+          '**1. ¿Estás en JetBrains, Vim o trabajando por SSH?** → Si sí, estás entre Continue.dev (solo JetBrains) y Aider (Vim/SSH). Salta a la Q4. Si no, continúa.',
+          '**2. ¿Quieres un agente autónomo que edite múltiples archivos en una sola tarea?** → Sí: Cline. No: continúa.',
+          '**3. ¿Quieres autocompletado más un panel de chat integrado en el IDE?** → Sí: Continue.dev. No: continúa.',
+          '**4. ¿Revisas los cambios con `git diff` y quieres que cada edición se haga commit automáticamente?** → Sí: Aider. No: Continue.dev (la opción predeterminada).',
+          '**5. ¿Todavía no lo tienes claro?** → Empieza con Continue.dev. Es la instalación con menos fricción, funciona en el editor que probablemente ya usas, y agregar Aider más tarde para el trabajo orientado al terminal es sencillo. Cline es el más disruptivo de añadir a un flujo de trabajo; adóptalo solo cuando sepas que quieres el bucle de agente.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes al elegir una herramienta de código local',
+        items: [
+          '**Error 1: elegir la herramienta antes que el modelo.** Un modelo ajustado para código de 30B en cualquiera de las tres herramientas supera a un modelo de propósito general de 7B en la herramienta "mejor". Elige el modelo primero; la herramienta es la segunda decisión.',
+          '**Error 2: usar un único modelo para autocompletado y chat en Continue.dev.** El autocompletado necesita latencia inferior a 200 ms; el chat tolera segundos. Ejecuta un modelo de autocompletado pequeño y un modelo de chat más grande en la misma configuración.',
+          '**Error 3: dejar la auto-aprobación de Cline completamente abierta.** Un bucle de modelo con `execute_command` auto-aprobado puede causar daño real. Mantén las herramientas destructivas con puerta hasta que confíes en el modelo con esta base de código.',
+          '**Error 4: usar Aider con un modelo que parafrasea el código.** Si el modelo no puede reproducir los bloques SEARCH literalmente, cada edición falla. Usa un modelo ajustado para código de 22B o más (Qwen3-Coder, DeepSeek Coder, Codestral) para ediciones de diff fiables.',
+          '**Error 5: cambiar de herramienta para solucionar un problema del modelo.** Si las llamadas a herramientas fallan en Cline, probablemente también fallarán en el modo Agente de Continue.dev por la misma razón. Diagnostica el modelo primero.',
+          '**Error 6: ejecutar Cline contra un modelo de contexto de 32K en tareas de múltiples archivos.** El consumo de tokens agota el presupuesto a mitad de la tarea. Usa un modelo de contexto de 128K para el trabajo no trivial con Cline.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[Documentación de Continue.dev](https://docs.continue.dev/) — guía de configuración oficial, configuración de modelos, proveedores de contexto `@` y referencia del modo Agente.',
+          '[Repositorio de GitHub de Cline](https://github.com/cline/cline) — código fuente, esquemas de herramientas, comportamiento del modo Plan/Actuar y arquitectura de la extensión.',
+          '[Documentación de Aider](https://aider.chat/) — referencia oficial de CLI, documentación del formato de edición, mecánicas del mapa de repositorio y valores predeterminados por modelo.',
+          '[Biblioteca de modelos de Ollama](https://ollama.com/library) — modelos locales disponibles y niveles de cuantización referenciados para cada herramienta.',
+          '[Tarjeta del modelo Qwen3-Coder](https://huggingface.co/Qwen/Qwen3-Coder-30B) — arquitectura, longitudes de contexto compatibles y datos de entrenamiento de llamadas a herramientas para el modelo de código recomendado.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Cuál es la mejor opción para usuarios de VS Code?',
+            a: 'Las tres funcionan en VS Code, pero Continue.dev y Cline son las opciones naturales. Continue.dev para autocompletado primero y chat integrado en IDE; Cline para tareas de agente autónomo. Aider funciona perfectamente desde el terminal integrado de VS Code pero no se integra con la superficie del editor en sí — su interfaz es el terminal.',
+          },
+          {
+            q: '¿Cline es compatible con el IDE Cursor?',
+            a: 'Cursor es un fork de VS Code y acepta extensiones de VS Code. Cline se instala y ejecuta en Cursor; la superficie de la extensión es idéntica. El equipo de Cline no apunta oficialmente a Cursor, por lo que los casos límite (API específicas de Cursor, cambios futuros de Cursor) no están garantizados, pero en la práctica los usuarios no reportan problemas.',
+          },
+          {
+            q: '¿Puede Aider funcionar sin Git?',
+            a: 'Sí, pero perderías la primitiva de flujo de trabajo que lo define. Aider funciona en directorios sin Git con `--no-git`; las ediciones se aplican pero no hay commits, por lo que `/undo` queda deshabilitado y la reversión recae en el historial de diffs del modelo dentro de la sesión. Para trabajo no trivial, inicializa un repositorio Git — incluso uno ignorado — antes de comenzar.',
+          },
+          {
+            q: '¿Cuál tiene la mejor refactorización de múltiples archivos?',
+            a: 'Cline para trabajo autónomo de múltiples archivos — planifica entre archivos, los lee según se necesita y edita con aprobación por paso. Aider para trabajo revisable de múltiples archivos donde nombras los archivos explícitamente y quieres que cada edición quede como commit. Continue.dev requiere conducción manual por archivo; es el más débil de los tres en refactorizaciones de múltiples archivos.',
+          },
+          {
+            q: '¿Son compatibles con Ollama local de forma inmediata?',
+            a: 'Sí. Continue.dev tiene un proveedor nativo de Ollama con un bloque de configuración. Cline lista Ollama en el menú desplegable de proveedores. Aider soporta Ollama a través de LiteLLM con `--model ollama_chat/<model-name>`. Ollama es el backend local con menos fricción para las tres.',
+          },
+          {
+            q: '¿Cuál funciona mejor con Qwen3-Coder?',
+            a: 'Qwen3-Coder 30B es fiable en las tres herramientas en mayo de 2026 — maneja el formato de herramienta XML de Cline, los bloques de búsqueda y reemplazo de Aider, y los flujos de trabajo de autocompletado + chat de Continue.dev sin degradación apreciable. Las variantes más pequeñas de Qwen3-Coder (clase 7B) realizan llamadas a herramientas con menos fiabilidad y funcionan mejor en el modo solo autocompletado de Continue.dev que en el bucle de agente de Cline.',
+          },
+          {
+            q: '¿Puedo usar estas herramientas con el modo local de Cursor?',
+            a: 'Las funciones integradas de Cursor (autocompletado con Tab, Cmd+K) usan el enrutamiento de modelos propio de Cursor, no estas herramientas. Para usar un LLM local en Cursor, instala Continue.dev o Cline como extensiones de VS Code dentro de Cursor — traen su propia configuración de proveedor independiente de la de Cursor. Aider funciona en el terminal integrado de Cursor igual que en el de VS Code.',
+          },
+          {
+            q: '¿Cuál es la más estable para sesiones largas?',
+            a: 'Aider, al no tener estado en proceso que pueda corromperse — cada edición es un commit, y un fallo de sesión solo pierde la conversación, no el trabajo. Continue.dev es estable a lo largo de sesiones largas en el IDE. Las sesiones largas de Cline pueden sufrir presión en la ventana de contexto con modelos más pequeños; reiniciar tareas entre refactorizaciones grandes evita el problema.',
+          },
+          {
+            q: '¿Son compatibles con prompts de sistema personalizados?',
+            a: 'Las tres. Continue.dev: `systemMessage` por modelo en `config.json`. Cline: campo "Instrucciones personalizadas" en la configuración de la extensión. Aider: bandera `--system-prompt` o valores predeterminados por modelo en `.aider.conf.yml`. Los prompts personalizados son especialmente útiles para Cline (orientar el comportamiento del modo Plan) y Aider (aplicar un estilo de código consistente entre commits).',
+          },
+          {
+            q: '¿Qué deben tener en cuenta los equipos DevOps o de plataforma sobre la privacidad al usar agentes de código local?',
+            a: 'Si el código o los logs que procesan los LLM locales pueden contener datos de usuarios de la UE o América Latina, se aplican normativas de privacidad regionales. Los LLM locales en sí (Ollama, llama.cpp) no almacenan datos personales, pero los directorios de código y logs que indexan pueden contener información sensible. Asegúrate de que el modelo se despliegue en infraestructura de la empresa sin acceso a API externas. En España y Latinoamérica, consulta con tu equipo de cumplimiento antes de desplegar en producción en sectores regulados.',
+          },
+          {
+            q: '¿Cuál es la mejor opción para pequeñas y medianas empresas hispanohablantes?',
+            a: 'Aider ofrece la mejor relación coste-beneficio para pymes: sin dependencia de licencias de IDE, completamente basado en terminal (encaja con entornos de desarrollo existentes), requisitos mínimos de hardware (funciona con un modelo de contexto de 32K), y la pista de auditoría completa está en el log de Git (simplifica el cumplimiento y la revisión de código). Continue.dev es la segunda opción para equipos fuertemente invertidos en VS Code/JetBrains. Cline se vuelve costoso en consumo de tokens y requiere mayor hardware, pero encaja en flujos de trabajo ágiles de refactorización intensiva. Las pymes ahorran costes con despliegue en local con modelos locales — la elección de herramienta debe seguir la infraestructura existente y los flujos de trabajo de los desarrolladores, no el hype.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectura relacionada',
+        items: [
+          '[Reemplazar GitHub Copilot con un LLM local](/es/power-local-llm/replace-github-copilot-with-local-llm) — contexto más amplio de sustitución, incluidos los cálculos de coste y privacidad.',
+          '[Mejores modelos de código local en 2026](/es/power-local-llm/best-local-coding-models-2026) — el lado del modelo en la ecuación: Qwen3-Coder vs DeepSeek vs Codestral en benchmarks reales.',
+          '[Agentes de IA local con MCP en 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — para usuarios que quieren llamadas a herramientas extendidas más allá de las herramientas anteriores.',
+          '[Mejores modelos locales para llamadas a herramientas en 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — profundidad técnica adyacente sobre fiabilidad de llamadas a herramientas.',
+          '[llama.cpp vs Ollama vs vLLM](/es/local-llms/llamacpp-vs-ollama-vs-vllm) — la capa del motor de inferencia bajo las tres herramientas.',
+          '[Hub Power Local LLM](/power-local-llm) — biblioteca completa de guías.',
+        ],
+      },
+    },
+  },
 }

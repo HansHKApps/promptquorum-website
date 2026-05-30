@@ -2160,4 +2160,432 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: 'Guía de alquiler de GPU en la nube 2026: RunPod vs Lambda vs Vast.ai',
+    seoTitle: 'Alquiler GPU cloud 2026: RunPod vs Lambda vs Vast.ai',
+    intro:
+      'La mayoría de los consejos sobre GPU en la nube optimizan la tarifa horaria publicada, pero la tarifa por sí sola nunca decide el costo. Lo que pagas en realidad es la tarifa multiplicada por el tiempo que dura el trabajo, más las horas perdidas por interrupciones y el tiempo dedicado a la configuración. Esta guía compara tres proveedores de GPU en la nube para ejecutar inferencia de LLMs locales — RunPod, Lambda Labs y Vast.ai — según las cifras que determinan la decisión: precio por hora, garantía de disponibilidad, tiempo de configuración y cumplimiento de residencia de datos. Una advertencia sobre los precios: las tarifas de GPU en la nube cambian semana a semana, y el precio spot de Vast.ai puede variar minuto a minuto, por lo que cada tarifa aquí es una instantánea de mayo de 2026. Los proveedores de GPU en la nube facturan en USD en todo el mundo independientemente del país del cliente; todos los precios se mantienen en USD. Alquilar es aproximadamente un 30-50% más barato que comprar hardware cuando tu necesidad de cómputo es ocasional en lugar de constante.',
+    metaDescription:
+      'Guía de alquiler GPU cloud 2026: RunPod, Vast.ai, Lambda Labs comparados. Precios por hora para A100, H100, RTX 4090. Cuándo alquilar una GPU es mejor que comprar hardware propio.',
+    twitterDescription:
+      'RunPod vs Lambda Labs vs Vast.ai para inferencia de IA en GPU cloud — tres proveedores, una regla: elige primero por necesidad de fiabilidad, luego por precio. Tarifas de mayo 2026.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.1 8B',
+      'Llama 3.1 70B',
+      'Mistral 7B',
+      'Qwen 2.5 32B',
+      'DeepSeek-R1 70B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4090',
+      'NVIDIA A100 80GB',
+      'NVIDIA H100 80GB',
+    ],
+    audience:
+      'Compradores que eligen un proveedor de GPU en la nube para ejecutar inferencia de LLM local o trabajos de fine-tuning, decidiendo por precio, fiabilidad y necesidad de residencia de datos. Se asume familiaridad con la VRAM de la GPU como restricción, pero no necesariamente con proveedores de nube específicos.',
+    readTime: '12 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'cloud GPU rental',
+    targetKeywords: [
+      'alquiler gpu cloud 2026',
+      'runpod vs lambda vs vast.ai',
+      'gpu cloud más barata para ia',
+      'alquilar gpu para inferencia llm',
+      'comparativa precios gpu cloud',
+    ],
+    leadAnswerBlock:
+      '**El mejor proveedor de GPU en la nube depende de tu necesidad de fiabilidad, no de la tarifa más baja. RunPod (~$0.34-0.69/h RTX 4090) es la opción equilibrada por defecto, Vast.ai (~$0.09-0.59/h) es la más barata para trabajos interrumpibles, y Lambda Labs ($1.79/h A100, $2.99/h H100) es la opción cuando un equipo necesita una garantía de disponibilidad del 99.9%.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿A qué proveedor de GPU en la nube debería alquilar en 2026?',
+        answer:
+          'Elige primero por fiabilidad, luego por precio. RunPod es la opción equilibrada por defecto a aproximadamente $0.34-0.69/h para una RTX 4090, con un nivel de disponibilidad del 99% y configuración en 5 minutos. Vast.ai es la más barata a $0.09-0.59/h, pero es un mercado entre pares sin garantía de disponibilidad. Lambda Labs cuesta más ($1.79/h A100, $2.99/h H100) pero añade un SLA del 99.9% y soporte en vivo. Todas las tarifas son una instantánea de mayo de 2026 — compruébalas antes de comprometerte. Los proveedores facturan en USD.',
+        bullets: [
+          'Opción equilibrada por defecto: RunPod, ~$0.34-0.69/h RTX 4090, 99% de disponibilidad, configuración en 5 min',
+          'Más barata: Vast.ai, ~$0.09-0.59/h RTX 4090, sin SLA, interrupciones spot',
+          'Más fiable: Lambda Labs, $1.79/h A100 / $2.99/h H100, SLA del 99.9%',
+          'Residencia de datos EU: RunPod tiene regiones EU; Lambda Labs y Vast.ai no de forma fiable',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Elección del editor', anchor: '#editors-choice' },
+      { label: 'Tabla comparativa de proveedores', anchor: '#comparison-table' },
+      { label: '¿Qué proveedor deberías elegir?', anchor: '#which-provider' },
+      { label: 'RunPod: la opción equilibrada por defecto', anchor: '#runpod' },
+      { label: 'Lambda Labs: la opción fiable', anchor: '#lambda-labs' },
+      { label: 'Vast.ai: la opción económica', anchor: '#vast-ai' },
+      { label: '¿Alquilar o comprar?', anchor: '#rent-or-buy' },
+      { label: 'Diagrama de decisión', anchor: '#decision-flowchart' },
+      { label: 'Dónde registrarse', anchor: '#where-to-buy' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lectura relacionada', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**La necesidad de fiabilidad es la restricción determinante, no la tarifa por hora.** Una tarifa barata que se interrumpe a mitad de un trabajo cuesta más que una tarifa estable que lo completa. Elige el proveedor cuya garantía de disponibilidad se ajuste al trabajo y luego optimiza el precio.',
+          '**El costo real es la tarifa por el tiempo de ejecución más las horas perdidas.** La mayoría de los proveedores facturan por segundo, por lo que un trabajo que dura el doble en una instancia más barata pero más lenta de arrancar puede costar lo mismo — compara el costo total del trabajo, no la tarifa anunciada.',
+          '**Opción equilibrada por defecto: RunPod** (~$0.34-0.69/h RTX 4090) — un nivel Secure Cloud con 99% de disponibilidad, configuración en 5 minutos, $10 de crédito al registrarte y regiones EU. La primera elección más segura para la mayoría de los compradores.',
+          '**Más barata: Vast.ai** (~$0.09-0.59/h RTX 4090) — un mercado entre pares un 30-50% por debajo de los competidores. Sin SLA de disponibilidad; las instancias spot pueden recuperarse con 15 segundos de aviso.',
+          '**Más fiable: Lambda Labs** ($1.79/h A100, $2.99/h H100) — SLA de disponibilidad del 99.9%, soporte en vivo por Slack y teléfono, y el proceso de incorporación más pulido. Precio premium y solo en EE.UU.',
+          '**La residencia de datos EU divide el campo.** RunPod tiene centros de datos EU (Países Bajos, Rumanía) y puede firmar un DPA. Lambda Labs es solo EE.UU.; la ubicación del host de Vast.ai varía y no es fiablemente conforme.',
+          '**Alquilar supera a comprar para cómputo ocasional.** El alquiler de GPU en la nube es aproximadamente un 30-50% más barato que poseer hardware cuando tu necesidad son ejecuciones de fine-tuning semanales o picos de carga, no inferencia 24/7.',
+          '**Los créditos gratuitos te permiten probar antes de comprometerte.** RunPod da $10, Lambda Labs $15, Vast.ai aproximadamente $5 — suficiente para hacer benchmark de tu propia carga de trabajo en cada uno antes de elegir.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Nivel más barato:** Vast.ai spot RTX 4090 desde ~$0.09/h (mediana alrededor de $0.21/h) — variable, interrumpible.',
+          '**Nivel equilibrado:** RunPod RTX 4090 ~$0.34-0.69/h, A100 80GB ~$1.79/h, SLA de disponibilidad del 99%.',
+          '**Nivel premium:** Lambda Labs A100 80GB $1.79/h, H100 80GB $2.99/h, SLA de disponibilidad del 99.9%.',
+          '**Granularidad de facturación:** RunPod y Vast.ai facturan por segundo; Lambda Labs factura por minuto.',
+          '**Tiempo de configuración:** Lambda Labs ~3 minutos, RunPod ~5 minutos, Vast.ai ~10 minutos.',
+          '**Crédito gratuito al registrarse:** RunPod $10, Lambda Labs $15, Vast.ai ~$5 (varía según la promoción).',
+          '**Realidad de precios 2026:** las tarifas de GPU en la nube cambian semana a semana; el precio spot de Vast.ai cambia minuto a minuto — confirma la tarifa en vivo.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: 'Elección del editor: RunPod',
+        sponsoredSlot: true,
+        content:
+          '**Para la mayoría de los compradores que alquilan una GPU en la nube para trabajos con LLMs locales, RunPod es la opción que equilibra precio, fiabilidad y esfuerzo de configuración.** Su nivel Secure Cloud ofrece una garantía de disponibilidad del 99% a aproximadamente $0.34-0.69/h para una RTX 4090, la configuración tarda unos 5 minutos y un crédito de $10 al registrarse cubre una ejecución de prueba real. También tiene centros de datos EU y puede firmar un acuerdo de procesamiento de datos, algo que Lambda Labs y Vast.ai no pueden hacer de forma fiable. Elige Vast.ai solo si tu trabajo tolera interrupciones y quieres la tarifa más baja posible; elige Lambda Labs solo si un equipo necesita un SLA estricto del 99.9% y soporte en vivo. Para todos los demás, RunPod es la opción segura por defecto.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Esta elección del editor refleja únicamente la relación precio-capacidad. PromptQuorum no está inscrito en ningún programa de afiliados y los enlaces de abajo no llevan etiquetas de afiliado — son simples enlaces de referencia que no generan comisión.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/console/signup',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-2.69/hr',
+            label: 'Ver precios de RunPod y registrarse',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Cómo se comparan RunPod, Lambda Labs y Vast.ai en 2026',
+        content:
+          'Las cifras de precio, disponibilidad y características son instantáneas de mayo de 2026 de cada proveedor, verificadas con la comparativa de GPU en la nube de PromptQuorum. Las tarifas de GPU en la nube cambian semana a semana, y las tarifas spot de Vast.ai cambian minuto a minuto — comprueba la tarifa en vivo antes de comprometerte. Las tarifas de RTX 4090 son adecuadas para inferencia 8B-34B; las tarifas de A100 y H100 son adecuadas para trabajos de 70B y fine-tuning. Todos los precios se mantienen en USD porque los proveedores facturan en USD en todo el mundo.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'En el alquiler de GPU en la nube, la garantía de disponibilidad de un proveedor decide si tu trabajo termina y su tarifa horaria decide lo que cuesta — elige por lo primero y luego optimiza lo segundo.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Piensa en ello como reservar un taxi frente a un servicio de transporte en hora punta. La opción barata puede cancelarte a mitad de camino; la cara tiene garantía de llevarte. Si el viaje debe completarse, paga por la garantía; si puedes simplemente volver a reservar, toma el viaje barato.',
+          },
+        ],
+        columns: ['Proveedor', 'RTX 4090', 'A100 80GB', 'H100 80GB', 'SLA de disponibilidad', 'Configuración', 'Región EU'],
+        rows: [
+          {
+            'Proveedor': 'RunPod',
+            'RTX 4090': '~$0.34-0.69/h',
+            'A100 80GB': '~$1.79/h',
+            'H100 80GB': '~$2.69/h',
+            'SLA de disponibilidad': '99%',
+            'Configuración': '~5 min',
+            'Región EU': 'Sí (NL, RO)',
+          },
+          {
+            'Proveedor': 'Lambda Labs',
+            'RTX 4090': 'No disponible',
+            'A100 80GB': '$1.79/h',
+            'H100 80GB': '$2.99/h',
+            'SLA de disponibilidad': '99.9%',
+            'Configuración': '~3 min',
+            'Región EU': 'No (solo EE.UU.)',
+          },
+          {
+            'Proveedor': 'Vast.ai',
+            'RTX 4090': '~$0.09-0.59/h',
+            'A100 80GB': '~$1.00-1.80/h',
+            'H100 80GB': '~$1.49-1.87/h',
+            'SLA de disponibilidad': 'Ninguno',
+            'Configuración': '~10 min',
+            'Región EU': 'Varía según el host',
+          },
+        ],
+      },
+      whichProvider: {
+        id: 'which-provider',
+        title: '¿Qué proveedor deberías elegir?',
+        content:
+          '**Tu necesidad de fiabilidad decide el proveedor; tu presupuesto decide el nivel de GPU dentro de él.** Encuentra la fila que se ajusta a tu situación.',
+        columns: ['Tu situación', 'Elige esto'],
+        rows: [
+          { 'Tu situación': 'Quiero la opción más segura por defecto y un equilibrio entre precio y fiabilidad', 'Elige esto': 'RunPod (Secure Cloud)' },
+          { 'Tu situación': 'Ejecuto trabajos interrumpibles y quiero la tarifa más baja posible', 'Elige esto': 'Vast.ai (instancias spot)' },
+          { 'Tu situación': 'Mi equipo necesita una garantía de disponibilidad estricta del 99.9% y soporte en vivo', 'Elige esto': 'Lambda Labs' },
+          { 'Tu situación': 'Proceso datos personales EU y necesito residencia de datos conforme con el RGPD', 'Elige esto': 'RunPod (regiones EU)' },
+          { 'Tu situación': 'Quiero probar muchos tipos de GPU antes de comprometerme', 'Elige esto': 'Vast.ai (catálogo más amplio)' },
+          { 'Tu situación': 'Ejecuto trabajos de fine-tuning estables que no deben interrumpirse', 'Elige esto': 'RunPod Secure Cloud o Lambda Labs' },
+          { 'Tu situación': 'Soy principiante y quiero el proceso de incorporación más sencillo', 'Elige esto': 'Lambda Labs (o RunPod)' },
+          { 'Tu situación': 'No estoy seguro y quiero la primera elección más segura', 'Elige esto': 'RunPod — $10 de crédito gratuito, el más flexible' },
+        ],
+      },
+      runpod: {
+        id: 'runpod',
+        title: 'RunPod: la opción equilibrada por defecto',
+        content:
+          '**RunPod es la opción equilibrada por defecto — un mercado gestionado con un nivel Secure Cloud estable y un nivel On-Demand interrumpible más barato.** Para la mayoría de los compradores es la primera elección correcta: precios predecibles, configuración rápida y el único de los tres con residencia de datos EU utilizable.',
+        items: [
+          '**RTX 4090 (~$0.34-0.69/h):** adecuada para inferencia 8B-34B. El nivel Secure Cloud tiene una garantía de disponibilidad del 99% y no se interrumpe; el nivel On-Demand es más barato pero puede recuperarse con 5 minutos de aviso.',
+          '**A100 80GB (~$1.79/h) y H100 80GB (~$2.69/h):** para inferencia 70B y fine-tuning. Los 80 GB de VRAM admiten un modelo 70B que una RTX 4090 de 24 GB no puede.',
+          '**Configuración y facturación:** unos 5 minutos desde el registro hasta una instancia en funcionamiento, facturación por segundo sin mínimo por hora, imágenes Docker personalizadas y plantillas ML con un clic.',
+          '**Por qué elegir RunPod:** quieres un equilibrio entre precio y fiabilidad, necesitas residencia de datos EU (centros de datos en los Países Bajos y Rumanía, DPA disponible) o quieres la opción más segura por defecto.',
+          '**Por qué omitir RunPod:** si tu trabajo tolera interrupciones y quieres la tarifa absolutamente más baja, Vast.ai es más barata; si necesitas un SLA estricto del 99.9%, Lambda Labs garantiza más.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Usa el nivel Secure Cloud para cualquier trabajo que deba completarse — ejecuciones de fine-tuning, inferencia por lotes. Usa el nivel On-Demand más barato solo para trabajos que puedas guardar con checkpoint y reanudar si la instancia se recupera.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/console/signup',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-2.69/hr',
+            label: 'Ver precios de RunPod y registrarse',
+          },
+        ],
+      },
+      lambdaLabs: {
+        id: 'lambda-labs',
+        title: 'Lambda Labs: la opción fiable',
+        content:
+          '**Lambda Labs es la opción fiable — una nube gestionada centrada en disponibilidad, soporte y GPU empresariales A100/H100.** Cuesta más que RunPod o Vast.ai, pero la prima compra un SLA del 99.9% y soporte humano en vivo, que las cargas de trabajo de producción a menudo necesitan.',
+        items: [
+          '**A100 80GB ($1.79/h) y H100 80GB ($2.99/h):** la oferta principal, orientada a inferencia 70B, fine-tuning y entrenamiento distribuido. Lambda Labs no ofrece la RTX 4090 de consumo — eso es deliberado.',
+          '**Fiabilidad y soporte:** SLA de disponibilidad del 99.9%, soporte en vivo por Slack, correo electrónico y teléfono, y el proceso de incorporación más pulido de los tres (unos 3 minutos hasta una instancia en funcionamiento).',
+          '**Facturación y créditos:** facturación por minuto, crédito de $15 al registrarse, descuentos en instancias reservadas para compromisos a largo plazo y cuentas de equipo multiusuario.',
+          '**Por qué elegir Lambda Labs:** tu equipo necesita una garantía de disponibilidad estricta, ejecutas inferencia de producción que no puede tolerar interrupciones, o quieres soporte en vivo en lugar de un foro comunitario.',
+          '**Por qué omitir Lambda Labs:** para experimentación es la opción más cara, no tiene nivel RTX 4090 para trabajo barato con modelos pequeños, y su infraestructura es solo EE.UU. — no es adecuada para datos personales EU.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'La infraestructura de Lambda Labs es solo EE.UU. sin regiones EU. Si procesas datos personales EU a través de tu carga de trabajo LLM, Lambda Labs no cumple con el RGPD para esos datos — usa las regiones EU de RunPod o un proveedor nativo EU en su lugar.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://lambdalabs.com/instances',
+            productName: 'Lambda Labs GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '1.79-2.99/hr',
+            label: 'Ver precios de Lambda Labs y registrarse',
+          },
+        ],
+      },
+      vastAi: {
+        id: 'vast-ai',
+        title: 'Vast.ai: la opción económica',
+        content:
+          '**Vast.ai es la opción económica — un mercado entre pares donde particulares y centros de datos alquilan capacidad de GPU sobrante un 30-50% por debajo de los proveedores gestionados.** El ahorro es real, pero también la variabilidad: no hay garantía de disponibilidad y las instancias spot pueden recuperarse con 15 segundos de aviso.',
+        items: [
+          '**RTX 4090 (~$0.09-0.59/h, mediana alrededor de $0.21/h):** la tarifa de RTX 4090 más barata de las tres. La cifra de $0.09/h es real pero rara; presupuesta con la mediana, no con el mínimo.',
+          '**A100 80GB (~$1.00-1.80/h) y H100 (~$1.49-1.87/h):** también por debajo de las tarifas de RunPod y Lambda Labs. Vast.ai tiene el catálogo más amplio — más de 500 modelos de GPU distintos.',
+          '**Las concesiones:** sin SLA de disponibilidad, interrupciones spot con 15 segundos de aviso, calidad del host variable, acceso root no garantizado y configuración más técnica (unos 10 minutos).',
+          '**Por qué elegir Vast.ai:** tu trabajo tolera interrupciones y puede hacer checkpoint, quieres la tarifa más baja posible o quieres probar un tipo de GPU inusual antes de comprar.',
+          '**Por qué omitir Vast.ai:** si el trabajo debe completarse en un plazo, si necesitas una garantía de fiabilidad, o si procesas datos personales EU — la ubicación del host varía y no hay DPA centralizado.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para un trabajo que no debe interrumpirse, usa el filtro "Interruptible: Off" en Vast.ai — devuelve instancias estables a un precio más alto. Si aun así necesitas garantía, RunPod Secure Cloud es la opción más segura.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://vast.ai/',
+            productName: 'Vast.ai cloud GPU marketplace',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.09-1.87/hr',
+            label: 'Ver precios de Vast.ai y registrarse',
+          },
+        ],
+      },
+      rentOrBuy: {
+        id: 'rent-or-buy',
+        title: '¿Deberías alquilar o comprar?',
+        content:
+          '**Alquila cuando tu necesidad de cómputo es ocasional; compra cuando es constante.** El alquiler de GPU en la nube es aproximadamente un 30-50% más barato que poseer hardware para cargas de trabajo en ráfagas, pero un servidor de inferencia 24/7 cruza el punto de equilibrio a favor del hardware propio.',
+        items: [
+          '**Alquila si:** necesitas ejecuciones de fine-tuning semanales, quieres evitar un desembolso de hardware de $2,000-10,000, necesitas varios tipos de GPU para experimentar, o necesitas muchas GPU brevemente para entrenamiento distribuido.',
+          '**Compra si:** ejecutas inferencia 24/7, tu carga de trabajo es estable y predecible, o tus datos nunca pueden salir de tu propio hardware. Una GPU alquilada continuamente eventualmente cuesta más que poseer una.',
+          '**El punto de cruce:** una RTX 4090 alquilada a aproximadamente $0.40/h cuesta unos $3,500 al año si se ejecuta continuamente — cerca de comprar la tarjeta directamente, y sigues pagando cada año.',
+          '**El camino híbrido:** muchos equipos poseen un Mac o una GPU económica para la inferencia diaria y alquilan capacidad A100/H100 solo para fine-tuning ocasional. Eso mantiene el costo fijo bajo y el costo de ráfaga variable.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Alquila GPU en la nube para cómputo de IA ocasional o en ráfagas y compra hardware para inferencia estable 24/7, porque una GPU alquilada continuamente eventualmente cuesta más que una propia.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Alquilar es como un hotel y comprar es como una casa. Unas pocas noches al año, el hotel es mucho más barato. Vive allí cada noche y deberías haber comprado la casa. Ajusta la elección a la frecuencia con la que realmente necesitas el cómputo.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: 'Diagrama de decisión: elige tu proveedor con cuatro preguntas',
+        content:
+          '**Cuatro preguntas, en orden, llevan a la mayoría de los compradores hacia un proveedor.**',
+        items: [
+          '**1. ¿El trabajo debe completarse sin interrupciones?** Sí, con garantía estricta: Lambda Labs (99.9%). Sí, pero el 99% es suficiente: RunPod Secure Cloud. No, puede hacer checkpoint y reanudar: Vast.ai.',
+          '**2. ¿Procesas datos personales EU?** Sí: regiones EU de RunPod o un proveedor nativo EU — no Lambda Labs ni Vast.ai. No: cualquier proveedor.',
+          '**3. ¿Qué GPU necesitas?** RTX 4090 para inferencia 8B-34B: RunPod o Vast.ai. A100 o H100 para 70B y fine-tuning: cualquiera de los tres.',
+          '**4. ¿Qué tan sensible eres al precio?** Tarifa más baja y la interrupción es aceptable: Vast.ai. Equilibrio entre precio y estabilidad: RunPod. El precio es secundario a la fiabilidad: Lambda Labs.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Elige un proveedor de GPU en la nube respondiendo primero la tolerancia a las interrupciones, segundo la residencia de datos EU, tercero el tipo de GPU y por último la sensibilidad al precio.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Comienza por si el trabajo puede sobrevivir a un corte, luego comprueba si tus datos deben quedarse en la EU, luego elige la GPU que tu modelo necesita y solo entonces compara las tarifas. Empezar por el precio es como elegir una instancia barata que hace perder el trabajo.',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Dónde registrarse',
+        content:
+          '**Cada proveedor tiene una página de registro directo con crédito inicial gratuito — suficiente para hacer benchmark de tu propia carga de trabajo antes de comprometerte.** Los enlaces de abajo son simples enlaces de proveedor; no llevan etiquetas de afiliado y no generan comisión.',
+        items: [
+          '**RunPod (runpod.io):** $10 de crédito al registrarse, acceso inmediato a los niveles Secure Cloud y On-Demand, regiones EU disponibles al registrarse.',
+          '**Lambda Labs (lambdalabs.com):** $15 de crédito al registrarse, el proceso de incorporación más pulido, opciones de instancias reservadas para compromisos a largo plazo.',
+          '**Vast.ai (vast.ai):** aproximadamente $5 de crédito inicial (varía según la promoción), el catálogo de GPU más amplio, pero una configuración más técnica — presupuesta unos 10 minutos.',
+          '**Prueba antes de comprometerte:** ejecuta tu modelo real con el crédito gratuito de cada proveedor y mide el costo total del trabajo, no la tarifa anunciada, antes de elegir.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Las tarifas de GPU en la nube son una instantánea de mayo de 2026 en rápida evolución. El precio spot de Vast.ai en particular cambia minuto a minuto. Siempre abre la página de precios en vivo del proveedor antes de comprometerte con un trabajo largo o una instancia reservada.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/console/signup',
+            productName: 'RunPod signup',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-2.69/hr',
+            label: 'Registrarse en RunPod',
+          },
+          {
+            url: 'https://lambdalabs.com/instances',
+            productName: 'Lambda Labs signup',
+            productCategory: 'cloud-gpu',
+            priceRange: '1.79-2.99/hr',
+            label: 'Registrarse en Lambda Labs',
+          },
+          {
+            url: 'https://vast.ai/',
+            productName: 'Vast.ai signup',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.09-1.87/hr',
+            label: 'Registrarse en Vast.ai',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes al alquilar una GPU en la nube',
+        items: [
+          '**Elegir la tarifa más baja sin comprobar la garantía de disponibilidad.** Una instancia barata que se recupera a mitad de un trabajo pierde el trabajo. Confirma que el nivel de fiabilidad se ajusta al trabajo antes de comparar tarifas.',
+          '**Comparar tarifas anunciadas en lugar del costo total del trabajo.** La mayoría de los proveedores facturan por segundo. Una instancia más lenta de arrancar puede ejecutarse el tiempo suficiente para borrar su tarifa más baja — compara la tarifa por el tiempo de ejecución.',
+          '**Dejar instancias en ejecución cuando están inactivas.** Una instancia en ejecución olvidada factura sin parar. Pausa o termina las instancias en el momento en que un trabajo finalice.',
+          '**Ignorar la residencia de datos para datos personales EU.** Lambda Labs es solo EE.UU. y la ubicación del host de Vast.ai varía — ninguno es fiablemente conforme con el RGPD. Usa las regiones EU de RunPod o un proveedor nativo EU para datos personales EU.',
+          '**Alquilar 24/7 cuando comprar sería más barato.** Una RTX 4090 alquilada continuamente cuesta unos $3,500 al año — cerca del precio de poseer la tarjeta. Alquila para ráfagas, compra para carga estable.',
+          '**Saltarse la prueba con el crédito gratuito.** RunPod, Lambda Labs y Vast.ai dan crédito al registrarse. Haz benchmark de tu propio modelo en cada uno antes de comprometer dinero real.',
+          '**Asumir acceso root en Vast.ai.** El acceso root no está garantizado en los hosts entre pares. Comprueba los detalles de la instancia antes de alquilar si tu configuración necesita sudo.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[RunPod Pricing](https://www.runpod.io/pricing) — Tarifas horarias oficiales de RunPod Secure Cloud y On-Demand para RTX 4090, A100 y H100, usadas para la instantánea de mayo de 2026.',
+          '[Lambda Labs GPU Cloud Pricing](https://lambdalabs.com/instances) — Tarifas oficiales a demanda de Lambda Labs para A100 y H100 y SLA de disponibilidad.',
+          '[Vast.ai Pricing and Marketplace](https://vast.ai/pricing) — Tarifas spot y a demanda del mercado de Vast.ai, usadas para los rangos de RTX 4090, A100 y H100 de mayo de 2026.',
+          '[Cloud GPU Rental Comparison 2026](/es/local-llms/cloud-gpu-rental-comparison-2026) — Pruebas de PromptQuorum: precios de proveedores, disponibilidad, tiempo de configuración y análisis de residencia de datos RGPD, verificados mensualmente.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Qué proveedor de GPU en la nube es más barato en 2026?',
+            a: 'Vast.ai es el más barato. Su precio spot entre pares para una RTX 4090 oscila entre aproximadamente $0.09 y $0.59 por hora, con una mediana alrededor de $0.21 por hora — aproximadamente un 30-50% por debajo de RunPod y Lambda Labs. La contrapartida es que no hay garantía de disponibilidad y hay interrupciones spot con 15 segundos de aviso. RunPod es el proveedor más barato que aún ofrece una garantía de fiabilidad.',
+          },
+          {
+            q: '¿Qué proveedor de GPU en la nube es más fiable?',
+            a: 'Lambda Labs es el más fiable, con un SLA de disponibilidad del 99.9% y soporte humano en vivo por Slack, correo electrónico y teléfono. RunPod Secure Cloud le sigue de cerca con un SLA del 99% a un precio inferior. Vast.ai no tiene garantía de disponibilidad — es un mercado entre pares, por lo que la fiabilidad depende del host individual.',
+          },
+          {
+            q: '¿Es más barato alquilar o comprar una GPU para IA?',
+            a: 'Alquila si tu necesidad de cómputo es ocasional — el alquiler en la nube es aproximadamente un 30-50% más barato que poseer hardware para ejecuciones de fine-tuning semanales o ráfagas. Compra si ejecutas inferencia 24/7: una RTX 4090 alquilada continuamente a aproximadamente $0.40 por hora cuesta unos $3,500 al año, cerca del precio de poseer la tarjeta, y sigues pagando cada año.',
+          },
+          {
+            q: '¿Qué proveedores de GPU en la nube cumplen con el RGPD?',
+            a: 'RunPod tiene centros de datos EU en los Países Bajos y Rumanía y puede firmar un acuerdo de procesamiento de datos, lo que lo hace utilizable para datos personales EU. Lambda Labs es solo EE.UU. sin regiones EU. La ubicación del host de Vast.ai varía y no hay DPA centralizado. Para datos personales EU, usa las regiones EU de RunPod o un proveedor nativo EU.',
+          },
+          {
+            q: '¿Qué tan rápido puedo poner en marcha una GPU en la nube?',
+            a: 'Lambda Labs es el más rápido, con unos 3 minutos desde el registro hasta una instancia en funcionamiento, gracias al proceso de incorporación más pulido. RunPod tarda unos 5 minutos. Vast.ai tarda unos 10 minutos porque el mercado entre pares es más técnico de navegar. Los tres dan crédito gratuito al registrarse para que puedas probar la configuración sin costo.',
+          },
+          {
+            q: '¿Qué GPU necesito para ejecutar un modelo 70B en la nube?',
+            a: 'Alquila una A100 80GB o H100 80GB para un modelo 70B. Un modelo 70B en Q4 necesita aproximadamente 39-42 GB de VRAM, lo que supera los 24 GB de una RTX 4090 en la nube. RunPod y Vast.ai ofrecen instancias A100 y H100; Lambda Labs ofrece A100 y H100 y está diseñado precisamente alrededor de este nivel de GPU empresarial.',
+          },
+          {
+            q: '¿Qué pasa si mi instancia spot de Vast.ai se interrumpe?',
+            a: 'Una instancia spot de Vast.ai puede ser recuperada por el host con 15 segundos de aviso, y el trabajo en progreso no guardado se pierde. Haz checkpoint de los trabajos largos con frecuencia para poder reanudar. Para evitar interrupciones por completo, usa el filtro "Interruptible: Off" para instancias estables a un precio más alto, o mueve el trabajo a RunPod Secure Cloud.',
+          },
+          {
+            q: '¿Los proveedores de GPU en la nube ofrecen créditos gratuitos?',
+            a: 'Sí. RunPod da un crédito de $10 al registrarse, Lambda Labs da $15 y Vast.ai da aproximadamente $5, aunque el monto de Vast.ai varía según la promoción. Ese crédito es suficiente para ejecutar un benchmark real de tu propio modelo en cada proveedor, para que puedas comparar el costo total del trabajo antes de comprometer dinero real.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectura relacionada',
+        items: [
+          '[Ver la comparativa completa de proveedores de GPU en la nube con precios verificados mensualmente](/es/local-llms/cloud-gpu-rental-comparison-2026) — el conjunto más amplio de proveedores, la lista de verificación RGPD y la matriz de decisión detrás de esta guía.',
+          '[Comparar el costo del hardware LLM local frente al alquiler de GPU en la nube](/es/local-llms/local-llm-vs-cloud-gpu-cost) — el cálculo del punto de equilibrio para cuando poseer hardware supera al alquiler.',
+          '[Consultar opciones de GPU en la nube conformes con el RGPD EU para datos personales](/es/local-llms/eu-cloud-gpu-gdpr-2026) — proveedores nativos EU y las reglas de residencia de datos que aplican.',
+          '[Elegir una GPU si decides comprar hardware](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la guía de compra de GPU de consumo en cuatro niveles de presupuesto.',
+          '[Construir una estación de trabajo de IA local como alternativa al hardware propio](/es/power-local-llm/local-ai-workstation-build-guide-2026) — listas de piezas y costos para una máquina de inferencia autoalojada.',
+        ],
+      },
+    },
+  },
 }

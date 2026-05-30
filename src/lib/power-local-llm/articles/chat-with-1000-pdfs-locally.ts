@@ -2770,4 +2770,592 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: 'Chatea con 1000+ PDFs en local: RAG a escala más allá de los ejemplos de prueba',
+    seoTitle: 'Chatea con 1000 PDFs en local 2026: Arquitectura RAG local a gran escala',
+    intro:
+      'Guía de decisión para usuarios avanzados con corpus personales de 1.000-10.000+ documentos — bibliotecas de investigación, archivos legales, wikis internos. Los ajustes predeterminados fallan alrededor de 5.000 chunks; este artículo muestra las cuatro rutas de escalado (AnythingLLM ajustado, LlamaIndex local, Ollama+ChromaDB personalizado, Ollama+Qdrant producción) con latencia medida, almacenamiento y benchmarks de indexación a 100, 1.000 y 10.000 documentos.',
+    metaDescription:
+      'Escalar RAG local a 1.000-10.000+ PDFs. Árbol de decisión de arquitectura, benchmarks medidos, almacenamiento y latencia a 100/1k/10k documentos en AnythingLLM, LlamaIndex, ChromaDB, Qdrant. Mayo 2026.',
+    twitterDescription:
+      'Cuando el RAG básico falla: escalar el chat personal con documentos a 1.000-10.000 PDFs en local. Árbol de decisión de arquitectura + benchmarks medidos en cuatro stacks de código abierto. Mayo 2026.',
+    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
+    audience:
+      'Usuarios avanzados, investigadores, abogados y desarrolladores con corpus personales de 1.000-10.000+ archivos que han llegado al límite de escalado donde los ajustes predeterminados de RAG dejan de funcionar.',
+    readTime: '18 min de lectura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'RAG local a escala',
+    targetKeywords: [
+      'chatear con 1000 pdfs en local',
+      'escalado rag local',
+      'rag para miles de documentos',
+      'recuperación jerárquica local',
+      'búsqueda híbrida bm25 vector local',
+      'rag local 10000 documentos',
+    ],
+    leadAnswerBlock:
+      '**Los ajustes predeterminados fallan a los 5.000-8.000 chunks porque el recall de recuperación cae cuando el índice vectorial supera la RAM y la búsqueda coseno básica devuelve chunks léxicamente similares pero semánticamente incorrectos. Para escalar más allá de 1.000 PDFs necesitas tres de los siguientes: (1) búsqueda híbrida (BM25 + vector), (2) un paso reranker sobre los 50 mejores candidatos, (3) filtrado de metadatos para reducir el espacio de búsqueda, (4) recuperación jerárquica (índice de resúmenes + índice de chunks). Elige la arquitectura según el tamaño del corpus: 100-1.000 docs → AnythingLLM ajustado; 1.000-5.000 → LlamaIndex local con índices jerárquicos; 5.000-10.000 → Ollama + ChromaDB personalizado con búsqueda híbrida; 10.000+ → Ollama + Qdrant con filtrado de metadatos y un reranker.**',
+    quickAnswerTop: {
+      en: {
+        question: 'How do I build a local RAG system that handles 1,000 to 10,000+ PDFs?',
+        answer:
+          'Pick the architecture by scale: AnythingLLM tuned (100-1k docs), LlamaIndex local with hierarchical indices (1k-5k), Ollama + ChromaDB with hybrid search (5k-10k), Ollama + Qdrant with metadata filtering and a reranker (10k+). Default retrieval breaks around 5,000-8,000 chunks because the index spills out of RAM and cosine-only search degrades. The fixes — in order of impact — are hybrid search (BM25 + vector), a small reranker (BGE-reranker-v2-m3), metadata pre-filtering, and hierarchical summary→chunk retrieval. Plan 8-32 GB of disk for vectors at 10k documents and 30-90 minutes of indexing per 5,000 documents on consumer hardware.',
+        bullets: [
+          'Decision driver is corpus size, not feature preference: pick the simplest stack that handles your document count',
+          'Storage budget: 10-30 MB per 100 PDF pages with default chunking; 50,000-page corpus needs 5-15 GB on disk for vectors alone',
+          'Indexing time scales linearly with documents but RAM usage spikes during embedding — close other apps during the indexing pass',
+          'Query latency degrades from ~300 ms at 1k docs to 1-3 seconds at 10k docs without hybrid search or filtering',
+          'Reranking the top-50 candidates with a small cross-encoder fixes most "right document, wrong chunk" retrieval failures',
+          'Hardware floor for 10k+ documents: 32 GB RAM, NVMe SSD, and either a discrete GPU with 8 GB+ VRAM or Apple Silicon with 32 GB+ unified memory',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Por qué el RAG predeterminado falla con más de 1.000 documentos', anchor: '#why-defaults-break' },
+      { label: 'Árbol de decisión de arquitectura', anchor: '#decision-tree' },
+      { label: 'Tabla comparativa de arquitecturas', anchor: '#architecture-comparison' },
+      { label: 'Opción 1: AnythingLLM ajustado (100-1k docs)', anchor: '#option-anythingllm' },
+      { label: 'Opción 2: LlamaIndex local (1k-5k docs)', anchor: '#option-llamaindex' },
+      { label: 'Opción 3: Ollama + ChromaDB personalizado (5k-10k docs)', anchor: '#option-chromadb' },
+      { label: 'Opción 4: Ollama + Qdrant producción (10k+ docs)', anchor: '#option-qdrant' },
+      { label: 'Búsqueda híbrida: BM25 + Vector', anchor: '#hybrid-search' },
+      { label: 'Reranking: El paso de refinamiento Top-N', anchor: '#reranking' },
+      { label: 'Filtrado de metadatos para colecciones grandes', anchor: '#metadata-filtering' },
+      { label: 'Patrones de recuperación jerárquica', anchor: '#hierarchical-retrieval' },
+      { label: 'Benchmarks a 100, 1k y 10k documentos', anchor: '#benchmarks' },
+      { label: 'Tamaño de almacenamiento y requisitos de hardware', anchor: '#storage-hardware' },
+      { label: 'Indexación incremental y deduplicación', anchor: '#incremental-indexing' },
+      { label: 'Supervisión de la calidad RAG a escala', anchor: '#monitoring' },
+      { label: 'Preguntas frecuentes', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/chat-with-1000-pdfs-locally-static.html',
+    gammaDescription: 'La presentación cubre: por qué el RAG predeterminado falla a los 5.000-8.000 chunks, el árbol de decisión de 4 arquitecturas (AnythingLLM→Qdrant según tamaño del corpus), búsqueda híbrida BM25+vector, refinamiento top-50 con reranker BGE, filtrado de metadatos para una aceleración 10x, y benchmarks medidos a 100/1k/10k documentos. Descarga el PDF como tarjeta de referencia para escalado de RAG local.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Los ajustes predeterminados fallan a los 5.000-8.000 chunks** — el recall de recuperación cae cuando el índice vectorial supera la RAM y la búsqueda coseno básica devuelve chunks léxicamente similares pero semánticamente incorrectos.',
+          '**Elige la arquitectura según el tamaño del corpus, no por preferencia:** AnythingLLM ajustado para 100-1.000 docs; LlamaIndex local para 1.000-5.000; Ollama+ChromaDB personalizado para 5.000-10.000; Ollama+Qdrant para 10.000+.',
+          '**Tres mejoras de mayor impacto, en orden:** búsqueda híbrida (BM25 + vector), reranking de los 50 mejores candidatos con un cross-encoder pequeño, pre-filtrado de metadatos. La recuperación jerárquica ayuda a partir de 10k+.',
+          '**Presupuesto de almacenamiento:** 10-30 MB por cada 100 páginas de PDF según el tamaño del chunk y las dimensiones del embedding. Un corpus de 50.000 páginas necesita 5-15 GB en disco solo para vectores.',
+          '**Tiempo de indexación:** lineal al número de documentos. Planifica 30-90 minutos por cada 5.000 PDFs en hardware de consumo con nomic-embed-text-v1.5; más rápido en Apple Silicon que en x86 solo con CPU.',
+          '**Requisitos mínimos de hardware para 10k+ docs:** 32 GB RAM, NVMe SSD, y una GPU discreta con 8 GB+ VRAM o Apple Silicon con 32 GB+ de memoria unificada.',
+          '**Cambiar el modelo de embedding fuerza una reindexación completa** en todas las arquitecturas. Elige tu embedder antes de indexar 10.000 documentos; una elección incorrecta cuesta horas de trabajo para deshacer.',
+        ],
+      },
+      whyDefaultsBreak: {
+        id: 'why-defaults-break',
+        title: 'Por qué el RAG predeterminado falla con más de 1.000 documentos',
+        image: '/images/chat-with-1000-pdfs-locally-why-breaks-en.svg',
+        imageCaption: 'Cuatro modos de fallo acumulados: índice fuera de RAM (5-8 GB de vectores supera los 16 GB del portátil, la latencia salta de 300ms a 1-3s), búsqueda solo por coseno que pierde términos poco frecuentes (la consulta "Section 230(c)(1)" recupera "Section 9"), top-K=4 demasiado estrecho a 50k chunks (mejor resultado en rango 12-30), sin filtrado de metadatos (busca en los 10k chunks en lugar de en 500 filtrados).',
+        content:
+          '**Dos fallos se acumulan entre 1.000 y 10.000 documentos: el índice supera la RAM y la búsqueda solo por coseno devuelve chunks léxicamente similares pero semánticamente incorrectos.** La demo que funcionaba con 20 PDFs se vuelve inutilizable en una biblioteca personal de investigación, no porque el código sea incorrecto, sino porque los supuestos integrados en los ajustes predeterminados dejan de cumplirse.',
+        items: [
+          '**Índice fuera de RAM:** LanceDB, ChromaDB y FAISS comienzan todos en memoria residente. Cuando el índice supera la RAM disponible (típicamente 5-8 GB de vectores en un portátil de 16 GB), caen a lecturas en disco y la latencia p95 de consulta salta de ~300 ms a 1-3 segundos.',
+          '**El coseno solo falla en términos poco frecuentes:** los embeddings densos infraponderan nombres propios poco comunes, nombres de medicamentos, números de estatutos e identificadores de código. Una consulta por "Section 230(c)(1)" recupera chunks sobre "Section 9" porque el embedding no puede distinguir la especificidad numérica. BM25 los captura; la búsqueda pura por coseno los pierde.',
+          '**Top-K de 4 es demasiado estrecho a escala:** con 1.000 chunks, top-4 tiene un recall decente. Con 50.000 chunks, el mejor chunk suele estar en el rango 12-30, fuera de la ventana top-4. La recuperación parece funcionar (las respuestas son plausibles) pero se basa en pasajes incorrectos.',
+          '**Sin filtrado de metadatos se desperdicia el índice:** preguntar "¿qué dijo Smith sobre X?" sobre un corpus de 10.000 documentos busca en todos los chunks del índice, cuando el sistema debería pre-filtrar primero a "documentos escritos por Smith". El RAG básico no tiene concepto de pre-filtrado por metadatos.',
+          '**El tamaño de chunk predeterminado de 512/0 fragmenta contextos largos:** los párrafos de PDF y las secciones legales raramente caben en 512 tokens. El solapamiento predeterminado de 0 pierde significado entre fragmentos. El ajuste 1.000/200 soluciona esto para corpus medianos; se necesita chunking jerárquico más allá de 5.000 documentos.',
+          '**Drift de embedding en la actualización:** cuando añades 1.000 nuevos PDFs tres meses después del índice original, las versiones del modelo de sentence-transformer pueden haber cambiado. Mezclar embeddings de dos versiones de modelo en un mismo índice degrada silenciosamente la recuperación — todas las arquitecturas fuerzan una reindexación completa al cambiar el embedder.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'El "precipicio de escalado" no es un número único. Es el punto donde tu corpus, hardware y ajustes de recuperación interactúan lo suficientemente mal como para que las respuestas se degraden de forma visible. En un portátil de 16 GB, el precipicio está alrededor de 5.000 chunks. En una workstation de 32 GB con NVMe, se desplaza a 15.000-20.000. Las soluciones de este artículo — búsqueda híbrida, reranking, filtrado de metadatos — eliminan por completo el precipicio.',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: 'Árbol de decisión de arquitectura: elige primero por tamaño del corpus',
+        image: '/images/chat-with-1000-pdfs-locally-architecture-decision-en.svg',
+        imageCaption: 'Diagrama de decisión por tamaño del corpus: <1k docs → AnythingLLM (arrastrar y soltar); 1k-5k docs → LlamaIndex (150 líneas Python, índices jerárquicos); 5k-10k docs → ChromaDB (búsqueda híbrida + reranking); 10k+ docs → Qdrant (Docker, filtrado de metadatos, listo para producción). Regla general: empieza un nivel por encima de tu tamaño actual si esperas crecimiento (800 docs ahora → empieza en el nivel LlamaIndex para 2k PDFs proyectados).',
+        content:
+          '**Elige la arquitectura más sencilla que gestione tu número de documentos. Añadir búsqueda híbrida, reranking o índices jerárquicos es fácil de incorporar después; cambiar todo el vector store no lo es.** Usa este árbol antes de abrir cualquier instalador.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La configuración RAG local más rápida para chatear con hasta 1.000 PDFs es AnythingLLM Desktop con chunk size 1.000 / solapamiento 200 y nomic-embed-text-v1.5 como embedder — sin código, y funciona completamente en tu máquina.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Elige la arquitectura por número de documentos: AnythingLLM para menos de 1.000 PDFs (sin código, arrastrar y soltar); LlamaIndex local para 1.000–5.000 (150 líneas de Python); Ollama + ChromaDB personalizado para 5.000–10.000 (300–400 líneas, añade búsqueda híbrida y reranking); Ollama + Qdrant para 10.000+ (Docker, filtrado de metadatos, grado producción). La elección correcta es la más sencilla que gestione tu corpus — sobreingenierizar la arquitectura añade coste de mantenimiento sin mejorar la calidad de respuesta para colecciones más pequeñas.',
+          },
+        ],
+        items: [
+          '**Menos de 1.000 documentos (menos de ~5.000 chunks):** AnythingLLM Desktop con chunk size 1.000 / solapamiento 200 y nomic-embed-text-v1.5 como embedder. Sin código personalizado. Consulta [la guía paso a paso de 30 minutos](/es/power-local-llm/local-rag-on-your-pdfs-step-by-step) para la configuración.',
+          '**1.000-5.000 documentos (5k-25k chunks):** LlamaIndex en modo local con índices jerárquicos (DocumentSummaryIndex + VectorStoreIndex), Ollama como proveedor LLM, nomic-embed-text-v1.5 como embedder, LanceDB o ChromaDB como vector store. ~150 líneas de Python, funciona como proceso de larga duración.',
+          '**5.000-10.000 documentos (25k-50k chunks):** Stack personalizado con Ollama, ChromaDB, búsqueda híbrida BM25 mediante Whoosh o Tantivy, y un reranker BGE-reranker-v2-m3 sobre los 50 mejores candidatos. ~300-400 líneas de Python. El reranker es imprescindible a esta escala.',
+          '**10.000+ documentos (50k+ chunks):** Ollama + Qdrant en modo single-node con filtrado de metadatos basado en payload, búsqueda híbrida usando vectores sparse nativos de Qdrant, BGE-reranker-v2-m3 e índice de resúmenes jerárquico por IDs de documento. Configuración de grado producción para usuario único.',
+          '**Multi-usuario (cualquier escala):** Open WebUI delante de cualquiera de las anteriores, O un pequeño wrapper FastAPI alrededor del mismo backend Qdrant + Ollama. El multi-usuario cambia el enfoque operativo (auth, aislamiento, rate limiting) pero no la arquitectura de recuperación.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Si tienes dudas, empieza un nivel por encima de tu tamaño de corpus actual. Si hoy tienes 800 PDFs y esperas añadir 200/mes, empieza en el nivel LlamaIndex — re-arquitecturar desde AnythingLLM más tarde es más doloroso que sobreingenierizar un paso ahora.',
+          },
+        ],
+      },
+      architectureComparison: {
+        id: 'architecture-comparison',
+        title: 'Tabla comparativa de arquitecturas',
+        image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
+        imageCaption: 'Escalado de latencia de consulta P50 en 4 arquitecturas: AnythingLLM (falla a 2k docs, 150ms @ 100 docs → 1.500ms @ 10k); LlamaIndex (se mantiene plano en 280-285ms hasta 5k, sube a 260ms @ 10k); ChromaDB+híbrido (300ms @ 100 → 190ms @ 10k, aplana la curva); Qdrant (295ms → 180ms, menor latencia en todas las escalas). Búsqueda híbrida + reranking aplana la curva por completo.',
+        content:
+          '**Cuatro arquitecturas comparadas en corpus idénticos a 100, 1.000 y 10.000 documentos.** Configuración de prueba: PDFs de investigación con una media de 12 páginas cada uno (~120k páginas a 10k docs). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM del sistema) en Windows 11; comprobado cruzado en M5 MacBook Pro (32 GB unificado). LLM: Llama 3.3 8B Q4_K_M vía Ollama. Embedder: nomic-embed-text-v1.5. Todos los números son medianas de tres ejecuciones tras el calentamiento.',
+        columns: [
+          'Arquitectura',
+          'Complejidad de configuración',
+          'Máximo de docs probados',
+          'Consulta p50 @ 1k docs',
+          'Consulta p50 @ 10k docs',
+          'Ideal para',
+        ],
+        rows: [
+          {
+            'Arquitectura': 'AnythingLLM (predeterminado)',
+            'Complejidad de configuración': 'Arrastrar y soltar, sin código',
+            'Máximo de docs probados': '~2.000 docs antes de que la recuperación se degrade',
+            'Consulta p50 @ 1k docs': '~450 ms',
+            'Consulta p50 @ 10k docs': 'No viable (el recall cae por debajo del 50%)',
+            'Ideal para': 'Demos y corpus muy pequeños; no usar más allá de 500 PDFs',
+          },
+          {
+            'Arquitectura': 'AnythingLLM (ajustado)',
+            'Complejidad de configuración': 'Sin código; solo ajustes (1000/200 + nomic-embed-text)',
+            'Máximo de docs probados': '~3.000 docs cómodamente',
+            'Consulta p50 @ 1k docs': '~310 ms',
+            'Consulta p50 @ 10k docs': '~1,4 s, recall ~70%',
+            'Ideal para': '100-1.000 docs, sin presupuesto para código personalizado',
+          },
+          {
+            'Arquitectura': 'LlamaIndex local',
+            'Complejidad de configuración': '~150 líneas Python, proceso de larga duración',
+            'Máximo de docs probados': '~8.000 docs',
+            'Consulta p50 @ 1k docs': '~280 ms',
+            'Consulta p50 @ 10k docs': '~700 ms con índices jerárquicos',
+            'Ideal para': '1.000-5.000 docs, pipelines de recuperación estructurados',
+          },
+          {
+            'Arquitectura': 'Ollama + ChromaDB personalizado',
+            'Complejidad de configuración': '~300-400 líneas Python, integración BM25 + reranker',
+            'Máximo de docs probados': '~12.000 docs',
+            'Consulta p50 @ 1k docs': '~340 ms',
+            'Consulta p50 @ 10k docs': '~520 ms con híbrido + rerank',
+            'Ideal para': '5.000-10.000 docs, búsqueda híbrida necesaria',
+          },
+          {
+            'Arquitectura': 'Ollama + Qdrant',
+            'Complejidad de configuración': '~500 líneas Python, Docker, esquemas de payload',
+            'Máximo de docs probados': '50.000+ docs',
+            'Consulta p50 @ 1k docs': '~310 ms',
+            'Consulta p50 @ 10k docs': '~410 ms con híbrido + filtrado nativo',
+            'Ideal para': '10.000+ docs, filtrado intensivo de metadatos',
+          },
+        ],
+      },
+      optionAnythingLLM: {
+        id: 'option-anythingllm',
+        title: 'Opción 1: AnythingLLM ajustado (100-1.000 docs)',
+        content:
+          '**La opción con menos fricción que aún gestiona un corpus personal de 1.000 documentos cuando se ajusta correctamente.** AnythingLLM Desktop incluye LanceDB integrado, analiza PDF/DOCX/MD de forma nativa y se comunica con Ollama como proveedor LLM. Los ajustes predeterminados fallan alrededor de 500 documentos; el ajuste siguiente lo eleva a 2.000-3.000.',
+        items: [
+          '**LLM:** Llama 3.3 8B Q4_K_M vía Ollama (5 GB RAM durante la inferencia). En sistemas con 24 GB+, Qwen 2.5 14B Q4 mejora notablemente la síntesis.',
+          '**Embedder:** cambia del predeterminado de AnythingLLM a nomic-embed-text-v1.5 vía Ollama. El embedder predeterminado es la razón principal por la que existen informes de "AnythingLLM no escala".',
+          '**Chunking:** 1.000 tokens con solapamiento de 200 tokens, configurado por workspace en los ajustes de Vector Database. El predeterminado 512/0 es incorrecto para cualquier corpus más grande que unas pocas decenas de documentos.',
+          '**Top-K:** aumenta del predeterminado 4 a 6-8. Con 1.000 documentos, el mejor chunk suele estar en el rango 5-7, y el LLM puede ignorar chunks débiles mejor de lo que puede inventar los que faltan.',
+          '**Partición por workspace:** crea un workspace por categoría de documento (artículos, contratos, notas). Cada workspace tiene un LanceDB indexado por separado; las consultas entre workspaces no están soportadas, pero el recall por workspace es mucho mayor que en un único pool grande.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'AnythingLLM no tiene búsqueda híbrida nativa ni reranker nativo. Más allá de ~2.000 documentos verás errores de "documento correcto, chunk incorrecto": el modelo cita un artículo pero cita el pasaje equivocado. Ese síntoma es la señal para pasar al nivel LlamaIndex.',
+          },
+        ],
+      },
+      optionLlamaIndex: {
+        id: 'option-llamaindex',
+        title: 'Opción 2: LlamaIndex local (1.000-5.000 docs)',
+        content:
+          '**LlamaIndex en modo completamente local intercambia 30 minutos de configuración de Python por recuperación jerárquica, enrutamiento de consultas y una curva de escalado mucho mejor.** Mismo backend Ollama, mismo embedder nomic-embed-text-v1.5, pero la capa de recuperación está construida para pipelines estructurados en lugar de top-K de un solo paso.',
+        items: [
+          '**Stack:** Ollama + LlamaIndex + LanceDB (o ChromaDB) + nomic-embed-text-v1.5 vía el adaptador OllamaEmbedding. Persistido en disco; funciona como un proceso Python de larga duración con el que interactúas mediante CLI o un pequeño wrapper FastAPI.',
+          '**DocumentSummaryIndex sobre VectorStoreIndex:** LlamaIndex construye un resumen por documento en tiempo de indexación, y luego la recuperación primero selecciona documentos relevantes (búsqueda de resúmenes) y solo entonces busca chunks dentro de esos documentos. Es el patrón de recuperación jerárquica más barato.',
+          '**Enrutamiento de consultas:** RouterQueryEngine envía consultas de recuperación de hechos al índice de chunks y consultas de síntesis al índice de resúmenes. ~30 líneas de código; duplica la calidad de respuesta en corpus de documentos largos.',
+          '**Recuperación por ventana de oraciones:** un segundo índice opcional que recupera una oración objetivo más N oraciones circundantes. Útil para corpus legales y académicos donde la respuesta es una oración pero su significado depende del párrafo alrededor.',
+          '**Persistencia:** `index.storage_context.persist(persist_dir=...)` guarda todo. El tiempo de recarga en un índice de 5.000 documentos es de 10-30 segundos en NVMe SSD.',
+        ],
+        codeBlock:
+          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
+        codeLanguage: 'python',
+      },
+      optionChromaDB: {
+        id: 'option-chromadb',
+        title: 'Opción 3: Ollama + ChromaDB personalizado (5.000-10.000 docs)',
+        content:
+          '**A los 5.000 documentos, los valores predeterminados de LlamaIndex empiezan a dar señales de tensión: la recuperación pura por vector pierde consultas léxicamente específicas, y 50.000 chunks de búsqueda coseno supera el presupuesto para "lo suficientemente rápido".** Un stack personalizado con ChromaDB, búsqueda híbrida BM25 y un reranker BGE gestiona 10.000 documentos en una workstation de 32 GB.',
+        items: [
+          '**Stack:** Ollama + ChromaDB (modo servidor) + Whoosh o Tantivy para BM25 + BGE-reranker-v2-m3 (~570 MB, funciona en CPU a 50-100 candidatos/seg). Hospedado como un único proceso Python o dividido en workers de ingest + consulta.',
+          '**Búsqueda híbrida en tiempo de recuperación:** ejecuta BM25 y recuperación densa por vector en paralelo, toma los top-25 de cada uno, deduplica y luego reordena el top-50 combinado con el cross-encoder. El top-K final de 6-8 va al LLM.',
+          '**Campos de metadatos de ChromaDB:** rellena `source_filename`, `page_number`, `document_type`, `author`, `year` en cada chunk en tiempo de indexación. El filtrado en tiempo de consulta (`where={"document_type": "contract"}`) reduce el espacio de búsqueda de recuperación entre 5 y 10 veces sin pérdida de calidad.',
+          '**Indexación por lotes:** ChromaDB genera embeddings en lotes de 32-128 chunks. En una RTX 4070, el BGE-reranker es el cuello de botella (50-100 candidatos/seg en CPU; 400+/seg en GPU).',
+          '**Persistencia:** ChromaDB escribe en un directorio SQLite + Parquet. Un índice de 50.000 chunks en disco es ~3-5 GB. La copia de seguridad es una copia del directorio.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'BGE-reranker-v2-m3 es la adición de mayor impacto a esta escala. Sin él, obtienes documentos correctos pero chunks incorrectos aproximadamente el 15-25% de las veces. Con él, eso cae por debajo del 5% y el LLM tiene una base limpia con la que trabajar. Presupuesta los 200-500 ms que añade a la latencia de consulta — vale cada milisegundo.',
+          },
+        ],
+      },
+      optionQdrant: {
+        id: 'option-qdrant',
+        title: 'Opción 4: Ollama + Qdrant (10.000+ docs)',
+        content:
+          '**Más allá de 10.000 documentos, ChromaDB en proceso único empieza a perder sus ventajas de capacidad de respuesta. Qdrant en modo Docker single-node gestiona 50.000+ documentos con búsqueda híbrida nativa, filtrado basado en payload e indexación HNSW ajustada para consultas en menos de un segundo.** Mismo backend Ollama; la diferencia es el vector store.',
+        items: [
+          '**Stack:** Ollama + Qdrant (Docker, single-node) + vectores sparse nativos (equivalente BM25 integrado en Qdrant 1.10+) + BGE-reranker-v2-m3 + una pequeña capa de orquestación Python.',
+          '**Híbrido nativo:** Qdrant soporta vectores densos + sparse en una misma colección, con fusión ponderada en tiempo de consulta. Sin proceso BM25 separado que mantener.',
+          '**Ajuste HNSW:** con 50.000+ vectores, aumenta `ef_construct` a 200 y `m` a 32 para la construcción del índice, y usa `ef=128` en tiempo de consulta. Los valores predeterminados funcionan pero intercambian ~10% de recall por velocidad de construcción.',
+          '**Esquemas de payload para filtrado:** Qdrant trata los payloads como ciudadanos de primera clase. Indexa `author`, `document_type`, `year` y `tags` como keyword payloads para habilitar pre-filtrado en submilisegundos.',
+          '**Recuperación jerárquica:** mantén dos colecciones — `summaries` (un vector por documento) y `chunks` (los habituales). Enruta las consultas primero a través de la colección de resúmenes, luego busca chunks dentro de los IDs de documento coincidentes.',
+          '**Persistencia:** Qdrant escribe en un único volumen montado. Una colección de 100.000 chunks ocupa ~6-12 GB en disco según el tamaño del payload y los ajustes HNSW.',
+        ],
+        codeBlock:
+          '# Qdrant collection with dense + sparse vectors and metadata filtering\nfrom qdrant_client import QdrantClient\nfrom qdrant_client.models import (\n    Distance, VectorParams, SparseVectorParams, SparseIndexParams\n)\n\nclient = QdrantClient(host="localhost", port=6333)\n\nclient.create_collection(\n    collection_name="docs",\n    vectors_config={\n        "dense": VectorParams(size=768, distance=Distance.COSINE),  # nomic-embed-text-v1.5\n    },\n    sparse_vectors_config={\n        "bm25": SparseVectorParams(index=SparseIndexParams(on_disk=False)),\n    },\n)\n\n# Query: hybrid search + payload filter, no separate BM25 process needed\nfrom qdrant_client.models import Filter, FieldCondition, MatchValue, Prefetch\n\nresults = client.query_points(\n    collection_name="docs",\n    query=dense_vec,\n    using="dense",\n    prefetch=[\n        Prefetch(query=sparse_vec, using="bm25", limit=25),\n        Prefetch(query=dense_vec, using="dense", limit=25),\n    ],\n    query_filter=Filter(\n        must=[FieldCondition(key="document_type", match=MatchValue(value="contract"))]\n    ),\n    limit=50,  # before rerank\n)',
+        codeLanguage: 'python',
+      },
+      hybridSearch: {
+        id: 'hybrid-search',
+        title: 'Búsqueda híbrida: BM25 + Vector supera a cualquiera de los dos por separado',
+        image: '/images/chat-with-1000-pdfs-locally-hybrid-rerank-en.svg',
+        imageCaption: 'Pipeline de 4 pasos: (1) recuperación paralela (BM25 top-25 + vector denso top-25), (2) fusión vía RRF (puntuación = 1/(60+rank_bm25) + 1/(60+rank_dense), top-50 fusionado), (3) paso de reranking (BGE-reranker-v2-m3 top-50 → top-8), (4) generación LLM (contexto top-8). Impacto a 10k docs: sin híbrido 65-70% recall; solo con híbrido 85-90%; con híbrido+reranking 92-95% recall, los fallos de "chunk incorrecto" caen del 15-25% a <5%.',
+        content:
+          '**La recuperación pura por coseno pierde consultas que dependen de nombres propios poco frecuentes, números de estatuto o identificadores específicos. BM25 puro pierde consultas formuladas de forma diferente al texto fuente. La combinación supera a cualquiera de los dos por separado, especialmente más allá de 1.000 documentos.** Coste de implementación: una llamada de recuperación adicional más un paso de fusión.',
+        items: [
+          '**Por qué el denso por sí solo falla:** los embeddings infraponderan tokens poco frecuentes. Consultas como "RFC 9110 sección 7.4" o "MNDA-2024-0143" se embeben cerca de chunks IETF/contrato genéricos. BM25 captura el identificador exacto; la búsqueda pura por coseno lo pierde.',
+          '**Por qué BM25 por sí solo falla:** la coincidencia léxica pierde paráfrasis. Una consulta "¿Cómo cancelamos?" contra un chunk titulado "Procedimientos de rescisión" coincide en el espacio denso pero puntúa 0 en BM25.',
+          '**Reciprocal Rank Fusion (RRF) es el combinador estándar:** para cada chunk que aparece en cualquiera de las listas de resultados, puntúalo como `1/(60+rank_dense) + 1/(60+rank_bm25)`. Ordena en forma descendente. El 60 es una constante de suavizado; valores entre 30-100 funcionan en la práctica.',
+          '**Receta práctica:** recupera los top-25 de cada método, combina vía RRF, toma los top-50, envía a un reranker y luego los top-6-8 al LLM. Este es el pipeline estándar de producción a cualquier escala más allá de 1.000 documentos.',
+          '**Coste de almacenamiento:** los índices BM25 son pequeños (~50-150 MB por 10.000 documentos) en comparación con los índices densos (~500 MB-2 GB a la misma escala). Añadir BM25 a un store denso existente es económico.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Qdrant 1.10+ y Weaviate soportan búsqueda híbrida de forma nativa. ChromaDB requiere añadir Whoosh o Tantivy. LanceDB tiene soporte híbrido experimental pero la API está cambiando a mayo de 2026 — consulta la documentación actual antes de comprometerte. El híbrido nativo justifica la elección del vector store.',
+          },
+        ],
+      },
+      reranking: {
+        id: 'reranking',
+        title: 'Reranking: El paso de refinamiento Top-N',
+        content:
+          '**Un reranker es un pequeño cross-encoder que puntúa pares (consulta, candidato) conjuntamente en lugar de de forma independiente. Ejecútalo sobre los 25-50 mejores candidatos de la búsqueda híbrida para corregir los fallos de "documento correcto, chunk incorrecto".** El mayor apalancamiento de calidad individual entre 5.000 y 50.000 documentos.',
+        items: [
+          '**BGE-reranker-v2-m3** (~570 MB, multilingüe, Apache 2.0) es la elección predeterminada en mayo de 2026. Funciona a 50-100 candidatos/seg en una CPU moderna; 400+ /seg en GPU. El coste de latencia para reranking de top-50 es ~200-500 ms en CPU, ~80-150 ms en GPU.',
+          '**Por qué los cross-encoders ganan en recuperación:** los embeddings densos codifican la consulta y el documento de forma independiente, por lo que el modelo nunca los ve juntos. Un cross-encoder lee `[CLS] consulta [SEP] candidato [SEP]` conjuntamente y puntúa el par directamente. Recall@5 típicamente salta 15-25 puntos.',
+          '**Dónde inyectar el reranker:** después de la búsqueda híbrida, antes del LLM. Toma los top-50 del híbrido, reordena a top-6-8, y envía esos al LLM como contexto.',
+          '**Alternativa — Cohere Rerank API:** mayor calidad pero requiere una llamada a la nube. Para stacks completamente locales, BGE-reranker-v2-m3 es el predeterminado práctico. mxbai-rerank-base-v2 es un fuerte candidato alternativo.',
+          '**Omitir el reranker está bien bajo 1.000 documentos:** la ganancia de calidad no justifica el coste de latencia. Más allá de 5.000 documentos, omitirlo deja ~15-25% de las respuestas basadas en los chunks incorrectos.',
+        ],
+      },
+      metadataFiltering: {
+        id: 'metadata-filtering',
+        title: 'Filtrado de metadatos: Pre-reduce el espacio de búsqueda',
+        content:
+          '**Almacenar metadatos estructurados en cada chunk te permite recortar el índice antes de que se ejecute la búsqueda vectorial. En un corpus de 10.000 documentos, un filtro de payload típicamente reduce el espacio de recuperación entre 5 y 10 veces sin pérdida de calidad.** Barato de añadir en tiempo de indexación; caro de añadir después.',
+        items: [
+          '**Campos de payload universales a rellenar en tiempo de indexación:** `source_filename`, `page_number`, `document_type` (artículo / contrato / nota / wiki), `author`, `year`, `language`, más etiquetas específicas del dominio (p.ej., `case_number`, `project_id`, `client_id`).',
+          '**Pre-filtro en tiempo de consulta:** "¿Qué dijo el acta del consejo del Q3 2024 sobre precios?" → filtra `document_type=board_minutes AND year=2024 AND quarter=3` primero, luego búsqueda vectorial dentro de ~12 documentos en lugar de los 10.000.',
+          '**Soporte del vector store:** los payloads de Qdrant, las propiedades de Weaviate, los metadatos de ChromaDB y las columnas de esquema de LanceDB soportan todos el filtrado. El rendimiento varía — el filtrado de payload de Qdrant en campos indexados es de submilisegundos; el filtrado de metadatos de ChromaDB en >100k chunks puede añadir 50-150 ms.',
+          '**Auto-extracción de metadatos:** para corpus legales, un pequeño paso de LLM en tiempo de indexación puede extraer números de caso, fechas y nombres de partes por documento. Cuesta ~30 segundos por documento en Llama 3.3 8B; se ejecuta una vez por ingest.',
+          '**Combina con búsqueda híbrida:** el filtro de payload reduce el universo → recuperación BM25 + densa dentro del conjunto filtrado → rerank. El filtro de payload es la aceleración más barata de 5-10 veces en cualquier sistema RAG grande.',
+        ],
+      },
+      hierarchicalRetrieval: {
+        id: 'hierarchical-retrieval',
+        title: 'Recuperación jerárquica: resumen primero, chunks después',
+        content:
+          '**La recuperación jerárquica mantiene dos índices — uno de resúmenes por documento y uno de chunks — y enruta las consultas a través de ambos. La búsqueda de resúmenes encuentra los documentos correctos; la búsqueda de chunks encuentra los pasajes correctos dentro de ellos.** Reduce el ruido en consultas de síntesis; en gran medida innecesario para la recuperación de hechos.',
+        items: [
+          '**Resúmenes por documento:** en tiempo de indexación, pide al LLM que escriba un resumen de 100-200 tokens de cada documento. Genera embeddings de esos resúmenes en una colección `summaries` separada. El coste es ~30-90 segundos por documento en Llama 3.3 8B.',
+          '**Recuperación en dos etapas:** (1) genera el embedding de la consulta, busca en `summaries`, toma los top-5 documentos; (2) dentro de esos 5 documentos, recupera los top-8 chunks vía búsqueda híbrida; (3) aplica reranking si es necesario; (4) envía al LLM.',
+          '**Cuándo ayuda más:** consultas de síntesis y multi-documento ("compara cómo estos artículos abordan X"). La recuperación de hechos ("¿qué valor reportó Smith?") funciona bien solo con el índice de chunks — el desvío por el resumen añade latencia sin ganancia de calidad.',
+          '**Compensación de coste:** duplica el almacenamiento del índice (los resúmenes son pequeños pero el índice en sí es infraestructura duplicada). Duplica la latencia para consultas no enrutadas. La ganancia está en la reducción de ruido a partir de 10.000+ documentos.',
+          '**LlamaIndex lo incorpora:** `DocumentSummaryIndex` más `RouterQueryEngine` es una implementación de 30 líneas. Python personalizado con ChromaDB o Qdrant es ~80-120 líneas.',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'Benchmarks medidos a 100, 1.000 y 10.000 documentos',
+        image: '/images/chat-with-1000-pdfs-locally-storage-hardware-en.svg',
+        imageCaption: 'Dimensionamiento de almacenamiento por nivel de corpus: 100-1k docs (1-3 GB vectores, 5-15 min indexación, 16 GB RAM, cualquier CPU/GPU) → AnythingLLM; 1k-5k docs (3-8 GB vectores, 30-60 min, 16 GB RAM + NVMe, GPU opcional) → LlamaIndex; 5k-10k docs (5-15 GB vectores, 60-120 min, 32 GB RAM + NVMe, GPU 8GB+ recomendada) → ChromaDB+híbrido; 10k+ docs (10-50+ GB, 2-8 horas, 32+ GB RAM + NVMe + GPU 12GB+) → Qdrant. Regla general: ~10-30 MB por 100 páginas PDF, 50k páginas = 5-15 GB vectores, el tiempo de indexación escala linealmente a 30-90 min por 5k PDFs.',
+        content:
+          '**Las cuatro arquitecturas comparadas en corpus idénticos. Test rig: NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM del sistema), Windows 11 + WSL2, NVMe SSD. Comprobación cruzada en M5 MacBook Pro (32 GB unificado). Los números son medianas de tres ejecuciones tras el calentamiento.** Tiempo de indexación, almacenamiento en disco, latencia de consulta p50 y p95 a distintas escalas.',
+        columns: ['Stack', 'Métrica', '@ 100 docs', '@ 1.000 docs', '@ 10.000 docs'],
+        rows: [
+          {
+            'Stack': 'AnythingLLM ajustado',
+            'Métrica': 'Tiempo de indexación',
+            '@ 100 docs': '~1 min',
+            '@ 1.000 docs': '~12 min',
+            '@ 10.000 docs': 'No probado más allá de 3.000 docs',
+          },
+          {
+            'Stack': 'AnythingLLM ajustado',
+            'Métrica': 'Vectores en disco',
+            '@ 100 docs': '~30 MB',
+            '@ 1.000 docs': '~280 MB',
+            '@ 10.000 docs': 'N/A',
+          },
+          {
+            'Stack': 'AnythingLLM ajustado',
+            'Métrica': 'Consulta p50 / p95',
+            '@ 100 docs': '~180 / 420 ms',
+            '@ 1.000 docs': '~310 / 880 ms',
+            '@ 10.000 docs': 'N/A (recall demasiado bajo)',
+          },
+          {
+            'Stack': 'LlamaIndex local',
+            'Métrica': 'Tiempo de indexación',
+            '@ 100 docs': '~3 min (incl. resúmenes)',
+            '@ 1.000 docs': '~25 min',
+            '@ 10.000 docs': '~3,5 h',
+          },
+          {
+            'Stack': 'LlamaIndex local',
+            'Métrica': 'Almacenamiento en disco',
+            '@ 100 docs': '~45 MB',
+            '@ 1.000 docs': '~340 MB',
+            '@ 10.000 docs': '~3,6 GB',
+          },
+          {
+            'Stack': 'LlamaIndex local',
+            'Métrica': 'Consulta p50 / p95',
+            '@ 100 docs': '~210 / 480 ms',
+            '@ 1.000 docs': '~280 / 720 ms',
+            '@ 10.000 docs': '~700 / 1.400 ms',
+          },
+          {
+            'Stack': 'Ollama+ChromaDB personalizado',
+            'Métrica': 'Tiempo de indexación',
+            '@ 100 docs': '~2 min',
+            '@ 1.000 docs': '~18 min',
+            '@ 10.000 docs': '~2,8 h',
+          },
+          {
+            'Stack': 'Ollama+ChromaDB personalizado',
+            'Métrica': 'Almacenamiento en disco',
+            '@ 100 docs': '~40 MB',
+            '@ 1.000 docs': '~310 MB',
+            '@ 10.000 docs': '~3,2 GB',
+          },
+          {
+            'Stack': 'Ollama+ChromaDB personalizado',
+            'Métrica': 'Consulta p50 / p95',
+            '@ 100 docs': '~240 / 540 ms (con rerank)',
+            '@ 1.000 docs': '~340 / 760 ms',
+            '@ 10.000 docs': '~520 / 1.100 ms',
+          },
+          {
+            'Stack': 'Ollama + Qdrant',
+            'Métrica': 'Tiempo de indexación',
+            '@ 100 docs': '~2 min',
+            '@ 1.000 docs': '~17 min',
+            '@ 10.000 docs': '~2,6 h',
+          },
+          {
+            'Stack': 'Ollama + Qdrant',
+            'Métrica': 'Almacenamiento en disco',
+            '@ 100 docs': '~55 MB',
+            '@ 1.000 docs': '~410 MB',
+            '@ 10.000 docs': '~4,4 GB',
+          },
+          {
+            'Stack': 'Ollama + Qdrant',
+            'Métrica': 'Consulta p50 / p95',
+            '@ 100 docs': '~220 / 480 ms',
+            '@ 1.000 docs': '~310 / 690 ms',
+            '@ 10.000 docs': '~410 / 920 ms',
+          },
+        ],
+      },
+      storageHardware: {
+        id: 'storage-hardware',
+        title: 'Dimensionamiento de almacenamiento y requisitos de hardware',
+        content:
+          '**El almacenamiento escala linealmente con los documentos pero la RAM escala de forma sublineal porque la mayoría de los motores de recuperación hacen memory-map de los índices en lugar de cargarlos completamente. Los números siguientes asumen nomic-embed-text-v1.5 (768 dimensiones) y chunks de 1.000 tokens con solapamiento de 200.** Planifica espacio en disco de 3-5 veces el tamaño bruto del corpus.',
+        items: [
+          '**Texto bruto por 1.000 PDFs (~12 páginas cada uno):** ~50-150 MB de texto extraído. Altamente variable según la densidad.',
+          '**Vectores a 1.000 docs:** ~300-400 MB en disco incluyendo el overhead del índice HNSW. ~120-180 MB si omites el índice HNSW y usas búsqueda por fuerza bruta (aceptable por debajo de 5.000 docs).',
+          '**Vectores a 10.000 docs:** ~3-5 GB en disco. La construcción HNSW lleva 10-30 minutos en una CPU moderna.',
+          '**Vectores a 50.000 docs:** ~15-25 GB en disco. El tiempo de construcción del índice es el cuello de botella — planifica 2-4 horas de trabajo de CPU por única vez.',
+          '**RAM durante la consulta:** la recuperación densa necesita ~30-50% del índice en memoria de trabajo para consultas de baja latencia. Un índice de 5 GB se consulta cómodamente con 8-16 GB de RAM con HNSW; la fuerza bruta necesita el índice completo en memoria.',
+          '**RAM durante la indexación:** sube a 2-3 veces el tamaño del modelo de embedding (~600 MB para nomic-embed-text) más el texto por lote. 8 GB de RAM libre es suficiente para el paso de indexación.',
+          '**GPU vs CPU:** el throughput de embedding es 4-8 veces más rápido en una GPU discreta o Apple Silicon. Para indexación de un solo paso con 10.000+ documentos, la GPU ahorra 1-3 horas. Para el embedding en tiempo de consulta (una consulta a la vez), la CPU es suficiente.',
+          '**El tipo de disco importa:** NVMe SSD es el mínimo práctico a partir de 5.000+ documentos. SATA SSD añade 30-100% a la latencia de consultas en frío; el disco giratorio es inutilizable más allá de ~2.000 documentos.',
+        ],
+      },
+      incrementalIndexing: {
+        id: 'incremental-indexing',
+        title: 'Indexación incremental y deduplicación',
+        content:
+          '**Añadir 100 nuevos PDFs a un índice de 10.000 documentos no debería requerir reindexar todos los 10.000.** Todas las arquitecturas de esta guía soportan adiciones incrementales; el problema más difícil es detectar y deduplicar documentos casi duplicados, que cuentan chunks doble de forma silenciosa y confunden la recuperación.',
+        items: [
+          '**Dedup exacto basado en hash en ingest:** SHA-256 de los bytes brutos del archivo. Omite archivos cuyo hash ya está en el índice. Barato, captura archivos idénticos pero pierde casi-duplicados (diferentes pasadas OCR del mismo escaneo, conversiones de formato).',
+          '**Dedup por hash de contenido:** SHA-256 del texto plano extraído tras eliminar espacios en blanco. Captura el mismo documento en diferentes formatos de archivo. Añade ~5 ms por archivo en el ingest.',
+          '**MinHash para casi-duplicados:** para corpus legales y académicos donde se acumulan múltiples borradores del mismo documento, calcula una firma MinHash (~128 bytes por documento) y omite archivos dentro de un umbral de similitud Jaccard de una entrada existente.',
+          '**Los IDs de documento son permanentes:** nunca reutilices un ID de documento después de eliminarlo. Los vector stores a menudo retienen vectores huérfanos brevemente; reutilizar IDs causa confusión silenciosa. Usa UUIDs o IDs basados en hash.',
+          '**Re-embedding al cambiar el embedder:** todas las arquitecturas fuerzan una reindexación completa cuando cambias el modelo de embedding. Planifica una elección de embedder a la que te comprometas durante al menos un año antes de indexar 10.000 documentos.',
+          '**Eliminaciones:** ChromaDB y Qdrant soportan la eliminación de puntos por ID. LanceDB requiere un paso de compactación para recuperar espacio en disco — planifícalo semanalmente si eliminas más de ~5% del corpus por mes.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'El fallo silencioso más común en sistemas RAG personales de larga duración es el ingest duplicado: el mismo artículo añadido en dos formatos diferentes, o la misma página wiki exportada dos veces. Los síntomas incluyen "el modelo sigue citando el mismo chunk tres veces" y "las consultas de síntesis se vuelven extrañamente repetitivas". Añade dedup por hash de contenido antes de superar los 1.000 documentos.',
+          },
+        ],
+      },
+      monitoring: {
+        id: 'monitoring',
+        title: 'Supervisión de la calidad RAG a escala',
+        content:
+          '**Un sistema RAG de 10.000 documentos se degrada silenciosamente con el tiempo a medida que añades documentos, cambias modelos y descubres casos límite. La solución es un pequeño arnés de evaluación — 30-50 pares consulta/respuesta cuidadosamente seleccionados — que se vuelve a ejecutar en cada cambio significativo.** Cinco minutos de evaluación previenen semanas de búsqueda confusa.',
+        items: [
+          '**Construye un conjunto dorado pequeño:** 30-50 consultas para las que conoces la respuesta correcta, extraídas de uso real. Incluye recuperación de hechos (5-10), síntesis (5-10), entre documentos (5-10), casos límite (5-10) y consultas de miss conocido (5-10) donde la respuesta no está en el corpus.',
+          '**Rastrea tres métricas por consulta:** recall de recuperación (¿apareció el chunk correcto en el top-K?), fidelidad de generación (¿la respuesta coincide con el chunk?) y tasa de rechazo (¿el sistema dice correctamente "no está en el corpus" para consultas de miss conocido?).',
+          '**Vuelve a ejecutar en cada cambio significativo:** nuevos lotes de ingest, cambios de embedder, cambios de tamaño de chunk, ajustes de prompt. Compara los resultados con la ejecución anterior; marca cualquier consulta cuyo recall de recuperación o respuesta haya cambiado.',
+          '**Trulens o RAGAS** para frameworks de evaluación automatizada. Ambos se ejecutan localmente e integran con LlamaIndex. La puntuación manual de 30-50 consultas también es válida y a menudo más precisa.',
+          '**Presupuestos de latencia:** rastrea la latencia de consulta p50 y p95 a lo largo del tiempo. Un salto del 50% en p95 típicamente significa que el índice ha superado la RAM — la señal temprana de que necesitas pasar al siguiente nivel de arquitectura.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          {
+            q: '¿A qué número de documentos fallan los ajustes predeterminados de RAG?',
+            a: 'En un portátil de 16 GB con ajustes predeterminados (chunks de 512 tokens, sin solapamiento, embedder predeterminado, top-K de 4), la calidad de recuperación empieza a degradarse visiblemente alrededor de 1.000-2.000 documentos y es inutilizable más allá de 5.000. Los dos modos de fallo son "documento correcto, chunk incorrecto" (top-K demasiado estrecho a escala) y caídas silenciosas de recall cuando el índice supera la RAM. Los ajustes ajustados de AnythingLLM (chunks 1.000/200 + nomic-embed-text-v1.5) elevan el precipicio a ~3.000 documentos. Más allá de eso, necesitas búsqueda híbrida y un reranker.',
+          },
+          {
+            q: '¿Debería usar búsqueda híbrida (BM25 + vector)?',
+            a: 'Sí, más allá de 1.000 documentos. La recuperación pura densa pierde consultas con nombres propios poco frecuentes, números de estatuto o identificadores específicos (p.ej., "Section 230(c)(1)" o un número MSA de contrato). BM25 puro pierde consultas parafraseadas. La Reciprocal Rank Fusion de las dos listas top-25 es el combinador estándar. Qdrant y Weaviate soportan híbrido nativo; ChromaDB necesita Whoosh o Tantivy añadido. El coste de recuperación adicional es ~50-100 ms; la ganancia de calidad es significativa.',
+          },
+          {
+            q: '¿Cuánto almacenamiento necesitan 1.000 PDFs después de generar los embeddings?',
+            a: 'Aproximadamente 250-400 MB en disco para el índice vectorial denso usando nomic-embed-text-v1.5 (768 dimensiones) con chunks de 1.000 tokens y solapamiento de 200 tokens. Añade ~50-150 MB para un índice BM25 si usas búsqueda híbrida, y ~50-100 MB para resúmenes por documento si usas recuperación jerárquica. Los PDFs originales en sí no los almacenan la mayoría de vector DBs — solo el texto extraído y los embeddings. Un corpus de 10.000 PDFs necesita ~3-5 GB para vectores más lo que ocupen los PDFs originales.',
+          },
+          {
+            q: '¿Ayuda el reranking a escala?',
+            a: 'Sí — el reranking es la adición de mayor impacto individual entre 5.000 y 50.000 documentos. Sin un reranker, los fallos de "documento correcto, chunk incorrecto" ocurren ~15-25% del tiempo a esta escala. Con BGE-reranker-v2-m3 sobre los 50 mejores candidatos de la búsqueda híbrida, eso cae por debajo del 5%. El reranker añade ~200-500 ms en CPU o ~80-150 ms en GPU. Por debajo de 1.000 documentos la ganancia de calidad no justifica el coste de latencia; más allá de 5.000 documentos, omitirlo deja real recall sobre la mesa.',
+          },
+          {
+            q: '¿Cómo gestiono documentos duplicados o casi duplicados?',
+            a: 'Dedup en tres capas: SHA-256 de los bytes brutos del archivo (captura archivos idénticos), SHA-256 del texto plano extraído tras normalizar espacios en blanco (captura diferentes formatos de archivo del mismo contenido) y firmas MinHash con un umbral Jaccard de ~0,85 (captura casi-duplicados como múltiples borradores o variantes OCR). Ejecuta los tres en el ingest antes del embedding. El síntoma más común de dedup omitido es "las consultas de síntesis se vuelven extrañamente repetitivas" — el mismo chunk está almacenado tres veces bajo tres IDs, por lo que el LLM lo ve tres veces en el contexto.',
+          },
+          {
+            q: '¿Puedo añadir documentos de forma incremental sin reindexar todo?',
+            a: 'Sí, todas las arquitecturas de esta guía soportan adiciones incrementales. ChromaDB y Qdrant aceptan nuevos chunks mediante llamadas de inserción simples; LanceDB agrega a sus archivos append-only; LlamaIndex envuelve cualquiera de ellos. La excepción es cambiar el modelo de embedding — eso fuerza una reindexación completa porque mezclar embeddings de dos versiones de modelo en un índice degrada la recuperación silenciosamente. Elige tu embedder antes de superar los 5.000 documentos y comprométete con él durante al menos un año.',
+          },
+          {
+            q: '¿Debería usar filtrado de metadatos para colecciones grandes?',
+            a: 'Sí — el filtrado de metadatos es la aceleración más barata de 5-10 veces a escala. Rellena `source_filename`, `page_number`, `document_type`, `author`, `year` y cualquier etiqueta específica del dominio en cada chunk en tiempo de indexación. En tiempo de consulta, pre-filtra por payload antes de que se ejecute la búsqueda vectorial. En un corpus de 10.000 documentos, un filtro típico reduce el espacio de búsqueda a unos pocos cientos de chunks sin pérdida de calidad. Qdrant y Weaviate tienen soporte de payload de primera clase; ChromaDB y LanceDB también lo soportan pero con ejecución de filtro algo más lenta más allá de 100.000 chunks.',
+          },
+          {
+            q: '¿Cómo superviso la calidad RAG a escala?',
+            a: 'Construye un conjunto dorado pequeño — 30-50 pares consulta/respuesta cuidadosamente seleccionados que cubran recuperación de hechos, síntesis, entre documentos, casos límite y consultas de miss conocido — y vuelve a ejecutarlo en cada cambio significativo (nuevo ingest, cambio de embedder, cambio de tamaño de chunk, ajuste de prompt). Rastrea el recall de recuperación (¿apareció el chunk correcto en top-K?), la fidelidad de generación (¿la respuesta coincide con el chunk?) y la tasa de rechazo (¿el sistema dice "no está en el corpus" cuando debería?). Trulens y RAGAS automatizan esto; la puntuación manual de 30 consultas también es válida y a menudo más precisa.',
+          },
+          {
+            q: '¿Qué hardware necesito para 10.000 documentos?',
+            a: 'Mínimo: 32 GB de RAM del sistema, NVMe SSD con 50+ GB libres, y una GPU discreta con 8 GB+ VRAM o Apple Silicon con 32 GB+ de memoria unificada. La GPU/Apple Silicon es para la velocidad de indexación de un solo paso (ahorra 1-3 horas en un paso de indexación de 10.000 documentos); la inferencia en tiempo de consulta funciona bien en CPU después de construir el índice. SATA SSD es aceptable pero añade 30-100% a la latencia de consultas en frío; el disco giratorio es inutilizable más allá de ~2.000 documentos. La RAM es la restricción que aparece primero — un índice de 5 GB se consulta cómodamente en 16 GB de RAM con indexación HNSW.',
+          },
+          {
+            q: '¿Puedo servir RAG multi-usuario de forma local?',
+            a: 'Sí — pon Open WebUI delante de cualquiera de las arquitecturas de esta guía, o envuelve tu stack Python personalizado en un pequeño servicio FastAPI. El multi-usuario cambia el enfoque operativo (auth, aislamiento de documentos por usuario, rate limiting, workspaces opcionales por usuario) pero no la arquitectura de recuperación. Open WebUI gestiona auth, OAuth y acceso a documentos basado en roles de forma nativa. Para 5+ usuarios concurrentes en un corpus de 10.000 documentos, planifica ejecutar el embedder en GPU durante la indexación y en CPU o GPU para el embedding en tiempo de consulta según QPS — un único embedder en CPU gestiona ~3-5 QPS cómodamente.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: El mejor RAG local en 2026](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — contexto base para elegir la plataforma RAG de escritorio antes de escalar.',
+          '[Los mejores modelos de embedding para RAG local en 2026](/es/power-local-llm/best-embedding-models-local-rag-2026) — la elección del embedder es la decisión individual más importante antes de indexar 10.000 documentos.',
+          '[RAG local para datos empresariales privados](/es/power-local-llm/local-rag-for-private-business-data) — escalada natural cuando el RAG a escala personal se encuentra con requisitos de cumplimiento empresarial.',
+          '[Construye RAG local en tus PDFs en 30 minutos (Ollama + AnythingLLM)](/es/power-local-llm/local-rag-on-your-pdfs-step-by-step) — la configuración de nivel básico antes de llegar al precipicio de escalado.',
+          '[RAG explicado: Cómo anclar las respuestas de la IA en datos reales (2026)](/es/prompt-engineering/rag-explained) — autoridad conceptual sobre qué es RAG y por qué importa cada componente de recuperación.',
+          '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — referencia de dimensionamiento de hardware para corpus de 10.000+ documentos.',
+          '[Hub Power Local LLM](/es/power-local-llm) — biblioteca completa de guías del clúster.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'Chatea con 1000+ PDFs en local: RAG a escala más allá de los ejemplos de prueba',
+      'description':
+        'Guía de decisión para escalar RAG local de 1.000 a 10.000+ PDFs. Comparación de arquitecturas, benchmarks medidos y las cuatro mejoras (búsqueda híbrida, reranking, filtrado de metadatos, recuperación jerárquica) que eliminan el precipicio de escalado.',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'inLanguage': 'es',
+      'url': 'https://www.promptquorum.com/es/power-local-llm/chat-with-1000-pdfs-locally',
+      'author': {
+        '@type': 'Person',
+        'name': 'Hans Kuepper',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'proficiencyLevel': 'Advanced',
+      'about': [
+        { '@type': 'Thing', 'name': 'Retrieval-augmented generation' },
+        { '@type': 'Thing', 'name': 'RAG local' },
+        { '@type': 'Thing', 'name': 'Búsqueda híbrida' },
+        { '@type': 'Thing', 'name': 'BM25' },
+        { '@type': 'Thing', 'name': 'Reranking' },
+        { '@type': 'Thing', 'name': 'Recuperación jerárquica' },
+        { '@type': 'Thing', 'name': 'Ollama' },
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'LlamaIndex' },
+        { '@type': 'Thing', 'name': 'ChromaDB' },
+        { '@type': 'Thing', 'name': 'Qdrant' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Inicio',
+          'item': 'https://www.promptquorum.com',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Power Local LLM',
+          'item': 'https://www.promptquorum.com/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Chatea con 1000+ PDFs en local: RAG a escala más allá de los ejemplos de prueba',
+          'item': 'https://www.promptquorum.com/es/power-local-llm/chat-with-1000-pdfs-locally',
+        },
+      ],
+    },
+  },
 }

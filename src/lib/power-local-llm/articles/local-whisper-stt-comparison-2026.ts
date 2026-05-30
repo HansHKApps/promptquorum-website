@@ -2643,4 +2643,530 @@ for segment in segments:
       },
     },
   },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-14',
+    dateModified: '2026-05-14',
+    next_refresh_due: '2026-11-14',
+    theme: 'Voice, Speech & Multimodal',
+    title: 'Whisper.cpp vs faster-whisper 2026: Benchmarks STT local, configuración y aceleración GPU',
+    seoTitle: 'Whisper.cpp vs faster-whisper 2026: Benchmarks STT local y configuración',
+    intro:
+      'whisper.cpp y faster-whisper son las dos implementaciones dominantes del modelo Whisper de OpenAI para transcripción local y offline en 2026. whisper.cpp es un port puro en C/C++ que funciona en Apple Metal, CUDA, Vulkan y CPU — ideal para Apple Silicon, sistemas embebidos y aplicaciones de voz en tiempo real. faster-whisper es una librería Python que usa CTranslate2 y logra un rendimiento de hasta ~4× el original de Whisper en GPUs NVIDIA mediante cuantización int8. Esta guía cubre instalación, benchmarks de rendimiento, configuración de transcripción en tiempo real y una comparación directa entre plataformas para que elijas la herramienta adecuada.',
+    metaDescription:
+      'Compara whisper.cpp y faster-whisper para reconocimiento de voz local en 2026. Benchmarks WER, velocidad GPU vs CPU, Apple Silicon Metal, transcripción en tiempo real y guías de instalación. Todo offline.',
+    twitterDescription:
+      'whisper.cpp vs faster-whisper: benchmarks de reconocimiento de voz local 2026. Velocidad CPU vs GPU, Apple Metal, precisión WER, transcripción en tiempo real. Sin nube, sin costo.',
+    audience:
+      'Desarrolladores, investigadores y constructores de sistemas que necesitan transcripción de voz offline y privada — para notas de reuniones, interfaces de voz, herramientas de accesibilidad o entornos seguros.',
+    readTime: '10 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'reconocimiento de voz local',
+    targetKeywords: [
+      'whisper.cpp vs faster-whisper',
+      'reconocimiento de voz local 2026',
+      'transcripción offline',
+      'whisper transcripción local',
+      'benchmark faster-whisper',
+      'whisper cpp apple silicon',
+      'STT local GPU',
+      'instalación whisper cpp',
+    ],
+    current_models_mentioned: [
+      'Whisper tiny (39M)',
+      'Whisper base (74M)',
+      'Whisper small (244M)',
+      'Whisper medium (769M)',
+      'Whisper large-v3 (1.55B)',
+      'distil-large-v3 (~756M)',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070',
+      'Apple M5 Pro',
+      'Apple Silicon (M-series)',
+      'Raspberry Pi',
+      'CPU (x86)',
+    ],
+    leadAnswerBlock:
+      '**whisper.cpp vs faster-whisper — los dos runtimes locales de Whisper más usados — ganan de forma decisiva en su plataforma objetivo.** **Para Apple Silicon (Macs con chip M), whisper.cpp con aceleración Metal es la opción STT local más rápida en 2026 — large-v3 funciona a ~10× tiempo real en un M5 Pro.** Para servidores GPU NVIDIA y pipelines Python, faster-whisper con cuantización int8 de CTranslate2 es la mejor opción, alcanzando ~12× tiempo real en una RTX 4070 con solo 2,5 GB de VRAM para el modelo large-v3. Ambas herramientas usan los mismos pesos del modelo Whisper de OpenAI (tiny hasta large-v3); la diferencia está en la optimización del runtime y el camino de integración. En hardware solo-CPU, ambas son utilizables para los modelos tiny y base — faster-whisper tiene una ligera ventaja (~20× vs ~15× tiempo real) en CPU mediante int8.',
+    quickAnswerTop: {
+      es: {
+        question: '¿Debería usar whisper.cpp o faster-whisper para reconocimiento de voz local en 2026?',
+        answer:
+          'La elección depende de tu hardware y necesidades de integración. En Apple Silicon (M1–M5), whisper.cpp con aceleración Metal es más rápido y la elección natural — alcanza ~10× tiempo real con large-v3 sin ninguna dependencia de Python. En GPUs NVIDIA, faster-whisper es más rápido y más fácil de integrar en pipelines Python, funcionando large-v3 a ~12× tiempo real con un 40% menos de VRAM mediante cuantización int8. En hardware solo-CPU, ambos funcionan para modelos small y base; faster-whisper tiene una ligera ventaja en velocidad.',
+        bullets: [
+          'Apple Silicon → whisper.cpp con Core ML / Metal. ~10× tiempo real en M5 Pro con large-v3.',
+          'NVIDIA GPU → faster-whisper. ~12× tiempo real en RTX 4070 con large-v3 int8, ~2,5 GB VRAM.',
+          'Pipeline Python → faster-whisper. Python nativo, configuración en 5 líneas, VAD incluido.',
+          'Embebido / Raspberry Pi → whisper.cpp. Binario C puro, sin necesidad de runtime Python.',
+          'Voz en tiempo real → modo stream de whisper.cpp o pipeline VAD de faster-whisper.',
+          'Transcripción por lotes → faster-whisper. Mejor rendimiento en GPU; batching asíncrono sencillo.',
+          'Precisión WER: idéntica en ambos — usan los mismos pesos del modelo Whisper.',
+        ],
+        updatedDate: '2026-05-14',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: '¿Por qué reconocimiento de voz local?', anchor: '#why-local-stt' },
+      { label: 'Tamaños del modelo Whisper', anchor: '#whisper-model-sizes' },
+      { label: 'Distil-Whisper: la alternativa más rápida', anchor: '#distil-whisper' },
+      { label: 'whisper.cpp — el port C/C++', anchor: '#whisper-cpp' },
+      { label: 'faster-whisper — el port CTranslate2', anchor: '#faster-whisper' },
+      { label: 'Comparativa directa: tabla de benchmarks', anchor: '#benchmarks' },
+      { label: 'Configuración de transcripción en tiempo real', anchor: '#real-time' },
+      { label: 'Apple Silicon: gana whisper.cpp', anchor: '#apple-silicon' },
+      { label: 'GPU NVIDIA: gana faster-whisper', anchor: '#nvidia-gpu' },
+      { label: 'Cuándo usar cuál', anchor: '#when-to-use' },
+      { label: 'Más allá de whisper.cpp y faster-whisper', anchor: '#beyond-tools' },
+      { label: 'Problemas comunes y soluciones', anchor: '#troubleshooting' },
+      { label: 'Preguntas frecuentes', anchor: '#faq' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'Lectura relacionada', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**whisper.cpp es la mejor opción STT local para Apple Silicon.** El port C/C++ aprovecha Core ML y Apple Metal para aceleración por hardware — large-v3 a ~10× tiempo real en M5 Pro, sin dependencia de Python.',
+          '**faster-whisper es la mejor opción STT local para GPUs NVIDIA y pipelines Python.** La cuantización int8 de CTranslate2 reduce el VRAM en ~40% y aumenta el rendimiento ~4× respecto a la implementación original de OpenAI — large-v3 a ~12× tiempo real en RTX 4070, usando solo ~2,5 GB de VRAM.',
+          '**Ambas herramientas usan los mismos pesos del modelo Whisper de OpenAI.** El WER (tasa de error de palabras) es idéntico — la diferencia está únicamente en el rendimiento del runtime y el camino de integración, no en la precisión de transcripción.',
+          '**Whisper large-v3 ofrece la mejor precisión con 2,5% WER en inglés.** Para la mayoría de casos de producción, Whisper small (3,4% WER, 2 GB RAM) o medium (2,9% WER, 5 GB RAM) ofrece mejor equilibrio entre velocidad y precisión.',
+          '**La transcripción en tiempo real es alcanzable con ambas herramientas** — whisper.cpp mediante su flag `--stream`, faster-whisper mediante su pipeline VAD (detección de actividad de voz) integrado. La latencia práctica es de 0,5–2 segundos detrás del habla en vivo según el tamaño del modelo.',
+          '**whisper.cpp funciona en CPU, Metal, CUDA y Vulkan** — siendo la única opción para uso embebido multiplataforma (Raspberry Pi, configuraciones GPU en Windows, servidores ARM). faster-whisper solo admite CPU y CUDA (sin Metal en Mac).',
+          '**Para Raspberry Pi y Linux embebido, whisper.cpp tiny/base en CPU** es el límite práctico — tiny a ~15× tiempo real en Pi 5, base a ~6× tiempo real. Ambos caben en 1 GB de RAM.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Ambas herramientas:** basadas en el modelo Whisper de código abierto de OpenAI (licencia MIT). Misma precisión — runtimes diferentes.',
+          '**whisper.cpp:** escrito en C/C++ por Georgi Gerganov. Admite CPU (AVX2/NEON), CUDA, Metal (Apple), Vulkan. No requiere Python.',
+          '**faster-whisper:** librería Python usando CTranslate2. Admite CPU (int8) y CUDA. Sin soporte para Apple Metal.',
+          '**Tamaños del modelo Whisper:** tiny (39M), base (74M), small (244M), medium (769M), large-v3 (1,55B). Todos en formato ggml / CTranslate2.',
+          '**Mejor modelo para la mayoría de casos:** Whisper small — 3,4% WER, funciona en 2 GB de RAM, 6× tiempo real en CPU moderno.',
+          '**Benchmark RTX 4070 (large-v3):** faster-whisper ~12× tiempo real; whisper.cpp CUDA ~8× tiempo real. faster-whisper gana en NVIDIA.',
+          '**Benchmark M5 Pro (large-v3):** whisper.cpp Metal ~10× tiempo real; faster-whisper solo-CPU ~3× tiempo real. whisper.cpp gana en Apple.',
+        ],
+      },
+      whyLocalSTT: {
+        id: 'why-local-stt',
+        title: '¿Por qué reconocimiento de voz local?',
+        content:
+          'Los servicios STT en la nube (Google Speech-to-Text, AWS Transcribe, Azure Speech) cobran por minuto de audio — típicamente $0,006–$0,024/minuto — y envían el audio a servidores remotos. Para aplicaciones sensibles a la privacidad (dictado médico, grabaciones legales, entrevistas periodísticas, reuniones corporativas), la transcripción local elimina completamente la exposición de datos.',
+        items: [
+          '**Privacidad:** el audio nunca sale de tu equipo. No se necesita acuerdo de procesamiento de datos para cumplimiento — el procesamiento ocurre localmente.',
+          '**Costo:** sin tarifas por minuto. Un desarrollador que transcribe 8 horas de reuniones por semana ahorra $120–480/mes respecto a precios STT en la nube.',
+          '**Offline:** funciona en aviones, instalaciones seguras y zonas sin internet estable. Sin gestión de API keys.',
+          '**Latencia:** sin ida y vuelta de subida/descarga. Para interfaces de voz en tiempo real, el procesamiento local reduce la latencia STT de 300–800 ms (nube) a 50–300 ms.',
+          '**Personalización:** ajusta el modelo con vocabulario específico del dominio. Ejecuta el tamaño de modelo que quepa en tu hardware.',
+        ],
+      },
+      whisperModelSizes: {
+        id: 'whisper-model-sizes',
+        title: 'Tamaños del modelo Whisper — base de ambas herramientas',
+        content:
+          'Tanto whisper.cpp como faster-whisper usan los mismos pesos del modelo Whisper, convertidos a sus formatos respectivos (GGML para whisper.cpp, CTranslate2 para faster-whisper). Elige el tamaño del modelo según tu presupuesto de VRAM/RAM y tus requisitos de precisión.',
+        columns: ['Modelo', 'Parámetros', 'VRAM / RAM', 'WER inglés', 'Factor de velocidad (vs tiempo real en RTX 4070)'],
+        rows: [
+          {
+            'Modelo': 'tiny',
+            'Parámetros': '39M',
+            'VRAM / RAM': '~1 GB',
+            'WER inglés': '7,6%',
+            'Factor de velocidad (vs tiempo real en RTX 4070)': '~32×',
+          },
+          {
+            'Modelo': 'base',
+            'Parámetros': '74M',
+            'VRAM / RAM': '~1 GB',
+            'WER inglés': '5,0%',
+            'Factor de velocidad (vs tiempo real en RTX 4070)': '~16×',
+          },
+          {
+            'Modelo': 'small',
+            'Parámetros': '244M',
+            'VRAM / RAM': '~2 GB',
+            'WER inglés': '3,4%',
+            'Factor de velocidad (vs tiempo real en RTX 4070)': '~6×',
+          },
+          {
+            'Modelo': 'medium',
+            'Parámetros': '769M',
+            'VRAM / RAM': '~5 GB',
+            'WER inglés': '2,9%',
+            'Factor de velocidad (vs tiempo real en RTX 4070)': '~2×',
+          },
+          {
+            'Modelo': 'large-v3',
+            'Parámetros': '1,55B',
+            'VRAM / RAM': '~10 GB',
+            'WER inglés': '2,5%',
+            'Factor de velocidad (vs tiempo real en RTX 4070)': '1× (referencia)',
+          },
+          {
+            'Modelo': 'distil-large-v3',
+            'Parámetros': '~756M',
+            'VRAM / RAM': '~4 GB',
+            'WER inglés': '~2,6%',
+            'Factor de velocidad (vs tiempo real en RTX 4070)': '~6×',
+          },
+        ],
+        note: 'Valores WER (tasa de error de palabras) del paper de Whisper en el conjunto de prueba limpio de LibriSpeech. Menor es mejor. Factores de velocidad para faster-whisper int8 en RTX 4070. Valores de distil-large-v3 del paper de Distil-Whisper.',
+      },
+      distilWhisper: {
+        id: 'distil-whisper',
+        title: 'Distil-Whisper: la alternativa más rápida',
+        content:
+          '**[distil-whisper/distil-large-v3](https://huggingface.co/distil-whisper/distil-large-v3) es una variante destilada de large-v3 con ~50% menos parámetros, que funciona ~6× más rápido manteniendo el WER dentro del ~1% del original.** Es la elección correcta cuando la velocidad de transcripción importa más que exprimir el último porcentaje de precisión. distil-large-v3 funciona con faster-whisper (soporte CTranslate2 nativo) y whisper.cpp (mediante conversión al formato GGML), integrándose en el runtime que ya uses.',
+        items: [
+          '**Parámetros:** ~756M — aproximadamente la mitad de los 1,55B de large-v3, cabe en ~4 GB de VRAM en lugar de ~10 GB.',
+          '**Velocidad:** ~6× tiempo real en RTX 4070 (vs. 1× de referencia para large-v3) — comparable al modelo medium en velocidad, con precisión cercana a large-v3.',
+          '**WER:** ~2,6% en inglés — solo ~0,1% superior al 2,5% de large-v3. En la práctica, la diferencia es imperceptible en habla típica.',
+          '**Compatibilidad:** funciona con faster-whisper de forma nativa (`WhisperModel("distil-large-v3", device="cuda", compute_type="int8")`). Para whisper.cpp, convierte al formato GGML usando el script de conversión GGML de distil-whisper.',
+          '**Mejor para:** trabajos de transcripción por lotes, despliegues en servidor con VRAM limitada y cualquier caso de uso donde quieras calidad de large-v3 a velocidad del modelo medium.',
+          '**No recomendado para:** transcripción multilingüe — distil-large-v3 es solo inglés. Para otros idiomas, usa large-v3 o medium.',
+        ],
+      },
+      whisperCppDeep: {
+        id: 'whisper-cpp',
+        title: 'whisper.cpp — el port C/C++',
+        content:
+          '**whisper.cpp (de Georgi Gerganov) es una reimplementación pura en C/C++ del modelo Whisper de OpenAI, optimizada para inferencia de bajo consumo de recursos y multiplataforma.** No requiere Python, ni CUDA toolkit, y funciona en prácticamente cualquier hardware — desde Raspberry Pi hasta Apple M5 Pro o configuraciones Windows CUDA.',
+        items: [
+          '**Soporte de plataformas:** CPU (AVX2, AVX512, ARM NEON), Apple Metal (Core ML), CUDA (NVIDIA), Vulkan (GPU AMD/Intel), OpenCL.',
+          '**Ventaja en Apple Silicon:** whisper.cpp exporta modelos al formato Core ML, habilitando inferencia en el Apple Neural Engine. Large-v3 funciona a ~10× tiempo real en M5 Pro mediante Metal — más rápido que cualquier ida y vuelta a la nube.',
+          '**Instalación:** clona el repositorio, ejecuta `make` (o `cmake`). Binarios precompilados disponibles para plataformas comunes. Sin dependencia de Python.',
+          '**Descarga de modelo:** `bash ./models/download-ggml-model.sh base.en` — descarga el archivo de modelo en formato GGML (~142 MB para base).',
+          '**Ejemplo de CLI:** `./main -m models/ggml-base.bin -f audio.wav` — transcribe un archivo WAV a la salida estándar. Añade `-l es` para español.',
+          '**Modo stream en tiempo real:** `./stream -m models/ggml-base.bin --step 3000 --length 10000` — transcribe desde el micrófono en chunks de 3 segundos.',
+          '**Wrapper Python:** pywhispercpp proporciona un binding Python para whisper.cpp, permitiendo su uso en pipelines Python sin sacrificar la aceleración Metal.',
+          '**Limitación:** sin VAD (detección de actividad de voz) nativo. El modo stream requiere ajustar los parámetros `--step` y `--length` según el caso de uso.',
+        ],
+        codeBlock: `# Build from source (macOS / Linux)
+git clone https://github.com/ggerganov/whisper.cpp
+cd whisper.cpp
+make -j4
+
+# Download a model
+bash ./models/download-ggml-model.sh large-v3
+
+# Transcribe a file
+./main -m models/ggml-large-v3.bin -f recording.wav
+
+# Enable Metal on Apple Silicon (Core ML)
+make -j4 WHISPER_COREML=1
+./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
+        codeLanguage: 'bash',
+      },
+      fasterWhisperDeep: {
+        id: 'faster-whisper',
+        title: 'faster-whisper — el port CTranslate2',
+        content:
+          '**faster-whisper (de SYSTRAN) es una librería Python que reimplementa la inferencia de Whisper usando CTranslate2 — un motor de inferencia C++ altamente optimizado con soporte de cuantización int8, reduciendo el uso de VRAM y aumentando el rendimiento.** En GPUs NVIDIA, faster-whisper es la implementación local de Whisper más rápida disponible.',
+        items: [
+          '**Soporte de plataformas:** CPU (cuantización int8) y GPU NVIDIA CUDA. Sin soporte para Apple Metal — funciona solo en CPU en Mac.',
+          '**Ventaja de int8:** la cuantización int8 de CTranslate2 reduce el VRAM en ~40% y aumenta la velocidad de inferencia ~2× respecto a float16, con impacto WER negligible (< 0,1% absoluto).',
+          '**Instalación:** `pip install faster-whisper` — sin compilación necesaria. El soporte CUDA requiere CUDA 11.8+ y cuDNN 8.x.',
+          '**VAD integrado:** faster-whisper incluye integración con Silero VAD, que omite automáticamente segmentos de audio silencioso — crítico para pipelines de transcripción en tiempo real.',
+          '**Python nativo:** la API Python directa facilita la integración con LLMs, librerías de procesamiento de audio y frameworks web.',
+          '**Velocidad:** large-v3 int8 en RTX 4070 funciona a ~12× tiempo real usando ~2,5 GB de VRAM. CPU int8 alcanza ~20× tiempo real para el modelo tiny.',
+          '**Procesamiento por lotes:** faster-whisper admite inferencia en lotes para procesar grandes archivos de audio de forma eficiente.',
+          '**Limitación:** sin soporte Metal en Mac — funciona solo en CPU en Apple Silicon, logrando ~3× tiempo real con large-v3 vs. ~10× de whisper.cpp con Metal.',
+        ],
+        codeBlock: `from faster_whisper import WhisperModel
+
+# Load model (downloads automatically on first run)
+model = WhisperModel("large-v3", device="cuda", compute_type="int8")
+
+# Transcribe
+segments, info = model.transcribe("audio.wav", beam_size=5)
+
+print(f"Detected language: {info.language} (probability: {info.language_probability:.2f})")
+for segment in segments:
+    print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
+        codeLanguage: 'python',
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'Comparativa directa: tabla de benchmarks',
+        content:
+          'Todos los benchmarks usan el modelo large-v3 salvo que se indique lo contrario. La velocidad se mide en múltiplos del tiempo real (p. ej., 10× significa 60 minutos de audio transcritos en 6 minutos). Cifras de VRAM para ejecuciones en GPU; cifras de RAM para ejecuciones en CPU.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'En Apple Silicon, whisper.cpp con Metal ejecuta large-v3 a ~10× tiempo real; en GPUs NVIDIA, faster-whisper con int8 alcanza ~12× tiempo real — cada herramienta gana de forma decisiva en su plataforma objetivo.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'En Mac elige whisper.cpp (usa el Apple Neural Engine), y en Windows/Linux con GPU NVIDIA elige faster-whisper (procesa audio 12× más rápido que en tiempo real usando un 40% menos de memoria GPU).',
+          },
+        ],
+        columns: ['Métrica', 'whisper.cpp (large-v3)', 'faster-whisper (large-v3)'],
+        rows: [
+          {
+            'Métrica': 'Plataforma / lenguaje',
+            'whisper.cpp (large-v3)': 'C/C++ (multiplataforma)',
+            'faster-whisper (large-v3)': 'Python (CTranslate2)',
+          },
+          {
+            'Métrica': 'Soporte GPU',
+            'whisper.cpp (large-v3)': 'CUDA, Metal, Vulkan',
+            'faster-whisper (large-v3)': 'Solo CUDA',
+          },
+          {
+            'Métrica': 'Optimización CPU',
+            'whisper.cpp (large-v3)': 'AVX2, ARM NEON',
+            'faster-whisper (large-v3)': 'Cuantización int8',
+          },
+          {
+            'Métrica': 'Velocidad — RTX 4070, large-v3',
+            'whisper.cpp (large-v3)': '~8× tiempo real',
+            'faster-whisper (large-v3)': '~12× tiempo real ✓',
+          },
+          {
+            'Métrica': 'Velocidad — M5 Pro, large-v3',
+            'whisper.cpp (large-v3)': '~10× tiempo real (Metal) ✓',
+            'faster-whisper (large-v3)': '~3× tiempo real (solo CPU)',
+          },
+          {
+            'Métrica': 'Velocidad — solo CPU (x86), base',
+            'whisper.cpp (large-v3)': '~15× tiempo real',
+            'faster-whisper (large-v3)': '~20× tiempo real ✓',
+          },
+          {
+            'Métrica': 'VRAM — large-v3, GPU',
+            'whisper.cpp (large-v3)': '~3 GB',
+            'faster-whisper (large-v3)': '~2,5 GB (int8) ✓',
+          },
+          {
+            'Métrica': 'Integración Python',
+            'whisper.cpp (large-v3)': 'Requiere wrapper (pywhispercpp)',
+            'faster-whisper (large-v3)': 'Nativo ✓',
+          },
+          {
+            'Métrica': 'VAD (detección de silencio)',
+            'whisper.cpp (large-v3)': 'Manual (ajuste de --step)',
+            'faster-whisper (large-v3)': 'Integrado (Silero VAD) ✓',
+          },
+          {
+            'Métrica': 'Streaming en tiempo real',
+            'whisper.cpp (large-v3)': 'Sí (flag --stream) ✓',
+            'faster-whisper (large-v3)': 'Sí (pipeline VAD)',
+          },
+          {
+            'Métrica': 'Precisión WER (large-v3)',
+            'whisper.cpp (large-v3)': '2,5% (idéntico)',
+            'faster-whisper (large-v3)': '2,5% (idéntico)',
+          },
+          {
+            'Métrica': 'Dependencia Python',
+            'whisper.cpp (large-v3)': 'Ninguna ✓',
+            'faster-whisper (large-v3)': 'Python 3.8+',
+          },
+          {
+            'Métrica': 'Raspberry Pi / embebido',
+            'whisper.cpp (large-v3)': 'Sí — binario C ✓',
+            'faster-whisper (large-v3)': 'Limitado — overhead de Python',
+          },
+          {
+            'Métrica': 'Formatos de salida',
+            'whisper.cpp (large-v3)': 'SRT, VTT, JSON, CSV, txt',
+            'faster-whisper (large-v3)': 'Objetos Python (start, end, text)',
+          },
+        ],
+        note: 'whisper.cpp escribe la salida directamente en formatos estándar de subtítulos y transcripción (SRT, VTT, JSON, CSV, txt) — ideal para flujos de trabajo de subtitulado donde necesitas un archivo en disco sin código adicional. faster-whisper devuelve un generador Python de objetos de segmento con atributos `start`, `end` y `text` — ideal para encadenamiento de pipelines LLM, donde pasas el texto del segmento directamente a un modelo posterior sin escribir archivos intermedios. Para generación de subtítulos, whisper.cpp es más sencillo. Para pipelines que procesan segmentos programáticamente, faster-whisper es más sencillo.',
+      },
+      realTimeSetup: {
+        id: 'real-time',
+        title: 'Configuración de transcripción en tiempo real',
+        content:
+          '**La transcripción en tiempo real procesa el audio en chunks a medida que llega desde el micrófono, produciendo texto con un breve retraso respecto al habla.** Ambas herramientas lo admiten, pero con diferentes compromisos.',
+        items: [
+          '**Modo stream de whisper.cpp:** ejecuta `./stream -m models/ggml-small.bin --step 3000 --length 10000 -t 4`. Procesa chunks de 3 segundos; latencia ~0,5–1,5 segundos con el modelo small. Sin Python necesario.',
+          '**Pipeline VAD de faster-whisper:** usa `vad_filter=True` en `model.transcribe()`. Silero VAD segmenta el audio automáticamente en los límites de silencio — chunks más naturales que ventanas de longitud fija.',
+          '**Latencia práctica:** 0,5–2 segundos detrás del habla en vivo con modelos small o medium. Usa tiny para la menor latencia (< 0,5 segundos, pero mayor WER).',
+          '**Selección de modelo para tiempo real:** small o base es el punto óptimo práctico — suficientemente rápido para seguir el habla, suficientemente preciso para audio limpio. Evita large-v3 en tiempo real salvo que tengas una GPU dedicada.',
+          '**Entrada de micrófono:** whisper.cpp lee audio raw mediante SDL2 o portaudio. faster-whisper lee arrays de audio desde cualquier librería Python de audio (sounddevice, pyaudio, soundfile).',
+          '**Estabilidad:** el modo stream de whisper.cpp puede producir tokens repetidos ("alucinaciones" de rellenos cortos) en silencio. Suprime con `--suppress-blank` y `--no-speech-threshold`.',
+        ],
+      },
+      appleSiliconSection: {
+        id: 'apple-silicon',
+        title: 'Apple Silicon: gana whisper.cpp',
+        content:
+          '**En Macs con M1, M2, M3, M4 y M5, whisper.cpp con aceleración Core ML / Metal es la herramienta correcta — sin duda.** faster-whisper no tiene soporte Metal y solo funciona en CPU en Mac, alcanzando ~3× tiempo real con large-v3. whisper.cpp con Metal logra ~10× tiempo real en M5 Pro — una ventaja de velocidad de 3×.',
+        items: [
+          '**Exportación a Core ML:** ejecuta `./models/generate-coreml-model.sh large-v3` para exportar el encoder al formato Core ML. Esto descarga la inferencia del encoder al Apple Neural Engine.',
+          '**Benchmark M5 Pro (large-v3, Metal):** ~10× tiempo real. 60 minutos de audio transcritos en ~6 minutos. Nota: el M5 Pro salió en marzo de 2026 — estos son benchmarks tempranos de la comunidad. El rendimiento puede mejorar con actualizaciones de whisper.cpp optimizando el M5 Neural Engine.',
+          '**Benchmark M3 MacBook Air (large-v3, Metal):** ~7× tiempo real. 60 minutos en ~8,5 minutos.',
+          '**Memoria:** la memoria unificada significa que no hay VRAM separada — un M5 Pro de 16 GB puede ejecutar large-v3 (~3 GB) cómodamente junto a otros procesos.',
+          '**faster-whisper en Mac:** solo CPU, int8. Large-v3 a ~3× tiempo real. Usable para transcripción por lotes nocturna, pero no para tiempo real o flujos de trabajo sensibles al tiempo.',
+          '**Recomendación:** usa whisper.cpp para todo el trabajo STT en Mac. Añade pywhispercpp si necesitas integración Python manteniendo la aceleración Metal.',
+        ],
+      },
+      nvidiaSection: {
+        id: 'nvidia-gpu',
+        title: 'GPU NVIDIA: gana faster-whisper',
+        content:
+          '**En Windows y Linux con GPUs NVIDIA, faster-whisper es la opción superior.** Su backend CUDA de CTranslate2 está más optimizado que el camino CUDA de whisper.cpp — ~12× vs. ~8× tiempo real con large-v3 en RTX 4070, con menor uso de VRAM.',
+        items: [
+          '**Benchmark RTX 4070 (12 GB) (large-v3 int8):** ~12× tiempo real, ~2,5 GB VRAM.',
+          '**Benchmark RTX 3060 (12 GB) (large-v3 int8):** ~8× tiempo real, ~2,5 GB VRAM.',
+          '**Benchmark RTX 4060 (8 GB) (large-v3 int8):** ~7× tiempo real, ~2,5 GB VRAM — cabe con margen.',
+          '**int8 vs float16:** int8 es ~2× más rápido y usa ~40% menos VRAM con pérdida de precisión negligible. Usa siempre `compute_type="int8"` en NVIDIA.',
+          '**Procesamiento por lotes:** el parámetro `batched=True` de faster-whisper permite el procesamiento paralelo de múltiples archivos de audio, maximizando la utilización GPU en trabajos grandes de transcripción.',
+          '**Integración en pipeline Python:** faster-whisper se integra directamente en LangChain, Haystack y pipelines Python personalizados. Sin overhead de subproceso comparado con envolver whisper.cpp.',
+        ],
+      },
+      whenToUse: {
+        id: 'when-to-use',
+        title: 'Cuándo usar cuál',
+        content: 'Mapeo directo de tu escenario a la herramienta adecuada:',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Usa whisper.cpp en Apple Silicon y objetivos embebidos/multiplataforma; usa faster-whisper en GPUs NVIDIA y pipelines Python.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Si tienes Mac, elige whisper.cpp — es 3× más rápido que faster-whisper en hardware Apple. Si tienes GPU NVIDIA y escribes Python, elige faster-whisper — es más rápido y necesita un 40% menos de memoria GPU.',
+          },
+        ],
+        columns: ['Escenario', 'Mejor opción', 'Por qué'],
+        rows: [
+          {
+            'Escenario': 'Mac con Apple Silicon (cualquier modelo)',
+            'Mejor opción': 'whisper.cpp',
+            'Por qué': 'Aceleración Metal / Core ML — 3× más rápido que faster-whisper (solo CPU en Mac)',
+          },
+          {
+            'Escenario': 'Servidor GPU NVIDIA (Linux/Windows)',
+            'Mejor opción': 'faster-whisper',
+            'Por qué': 'CTranslate2 int8 — más rápido y menor VRAM que el camino CUDA de whisper.cpp',
+          },
+          {
+            'Escenario': 'Pipeline de datos Python',
+            'Mejor opción': 'faster-whisper',
+            'Por qué': 'API Python nativa; sin wrapper de subproceso; VAD integrado',
+          },
+          {
+            'Escenario': 'Raspberry Pi / Linux embebido',
+            'Mejor opción': 'whisper.cpp',
+            'Por qué': 'Binario C puro; sin overhead del runtime Python; optimizado con ARM NEON',
+          },
+          {
+            'Escenario': 'Asistente de voz en tiempo real',
+            'Mejor opción': 'whisper.cpp',
+            'Por qué': 'Modo stream con bajo overhead; funciona sin Python en Pi / embebido',
+          },
+          {
+            'Escenario': 'Transcripción por lotes (gran archivo de audio)',
+            'Mejor opción': 'faster-whisper',
+            'Por qué': 'Inferencia por lotes, utilización GPU, integración Python asíncrona',
+          },
+          {
+            'Escenario': 'GPU AMD (Vulkan)',
+            'Mejor opción': 'whisper.cpp',
+            'Por qué': 'Soporte de backend Vulkan; faster-whisper es solo CUDA',
+          },
+          {
+            'Escenario': 'Servidor Linux solo-CPU',
+            'Mejor opción': 'faster-whisper',
+            'Por qué': 'La cuantización int8 da ~30% de ventaja de velocidad en CPU x86',
+          },
+        ],
+      },
+      beyondTools: {
+        id: 'beyond-tools',
+        title: 'Más allá de whisper.cpp y faster-whisper',
+        content:
+          'Dos herramientas adicionales extienden Whisper con capacidades que ninguna de las dos proporciona de serie: diarización de hablantes e inferencia GPU ultra-rápida en lotes.',
+        items: [
+          '**[WhisperX](https://github.com/m-bain/whisperX):** construido sobre faster-whisper, WhisperX añade marcas de tiempo a nivel de palabra y diarización de hablantes — identificando qué hablante dijo qué palabras. Mejor para: transcripción de reuniones con etiquetas de hablante, edición de podcasts y transcripción de entrevistas. Instala con `pip install whisperx` y proporciona un token de Hugging Face para el modelo de diarización.',
+          '**[insanely-fast-whisper](https://github.com/Vaibhavs10/insanely-fast-whisper):** un wrapper de pipeline Hugging Face Transformers que añade soporte de Flash Attention 2 para inferencia GPU significativamente más rápida que faster-whisper estándar en hardware NVIDIA. Mejor para: procesamiento por lotes de grandes archivos de audio en GPUs NVIDIA. Requiere una GPU compatible con Flash Attention 2 (Ampere o más reciente: RTX 3000+, A100, H100).',
+        ],
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: 'Problemas comunes y soluciones',
+        content: 'Los problemas de configuración y runtime más frecuentes, con soluciones directas:',
+        items: [
+          '**Incompatibilidad de versión CUDA:** faster-whisper requiere CUDA 11.8 o posterior. Verifica con `nvcc --version`. Si tu CUDA es más antigua, actualiza el driver o instala faster-whisper en un entorno conda con `cudatoolkit=11.8`.',
+          '**Falla la exportación del modelo Metal:** asegúrate de tener instaladas las Xcode Command Line Tools — ejecuta `xcode-select --install`. El script de exportación Core ML requiere el paquete Python `coremltools`: `pip install coremltools`.',
+          '**Alucinaciones en el silencio:** ambas herramientas pueden producir tokens de relleno repetidos en segmentos de audio silencioso. Usa `--no-speech-threshold 0.6` en el modo stream de whisper.cpp, o `vad_filter=True` en `model.transcribe()` de faster-whisper para omitir automáticamente los segmentos silenciosos.',
+          '**Sin memoria con large-v3:** cambia a cuantización int8 en faster-whisper (`compute_type="int8"`) — reduce el VRAM de ~5 GB (float16) a ~2,5 GB. En whisper.cpp, usa la variante GGML cuantizada (p. ej., `ggml-large-v3-q5_0.bin`) que reduce la memoria a ~3–4 GB.',
+          '**Salida ilegible en audio no inglés:** no uses variantes `.en` del modelo (tiny.en, base.en) para habla no inglesa — son solo inglés. Usa los modelos multilingüe (base, small, medium, large-v3) y especifica el idioma explícitamente: `-l es` en whisper.cpp o `language="es"` en faster-whisper.',
+          '**Inferencia CPU lenta:** verifica que tu CPU admita instrucciones AVX2 (necesarias para inferencia CPU optimizada). Comprueba con `grep avx2 /proc/cpuinfo` en Linux o `sysctl machdep.cpu.features` en Mac. Las CPUs sin AVX2 recurren a SIMD genérico y serán 2–3× más lentas.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          {
+            q: '¿La precisión de transcripción es la misma entre whisper.cpp y faster-whisper?',
+            a: 'Sí. Ambas herramientas usan los mismos pesos del modelo OpenAI Whisper — el modelo en sí es idéntico. La diferencia está únicamente en el runtime de inferencia (C/C++ vs CTranslate2 Python). El WER en el mismo archivo de audio estará dentro de un 0,1% absoluto el uno del otro, lo cual está dentro de la variación normal por la aleatoriedad de beam search.',
+          },
+          {
+            q: '¿Puedo usar faster-whisper en un Mac con Apple Silicon?',
+            a: 'Sí, pero funciona solo en CPU — faster-whisper no tiene soporte Metal. En un M5 Pro, faster-whisper large-v3 funciona a ~3× tiempo real (CPU int8), comparado con ~10× de whisper.cpp con Metal. Para la mayoría de usuarios Mac, whisper.cpp es 3× más rápido con el mismo modelo. La única razón para usar faster-whisper en Mac es si tu pipeline Python ya depende de él y la velocidad no es crítica.',
+          },
+          {
+            q: '¿Qué tamaño de modelo Whisper debo usar para un asistente de voz?',
+            a: 'Para interfaces de voz en tiempo real, Whisper small es la recomendación estándar — 3,4% WER en inglés limpio, ~200 ms de latencia STT en una CPU o GPU moderna, y cabe en 2 GB de RAM. Usa tiny si estás en hardware muy restringido (Raspberry Pi Zero 2W, teléfonos antiguos) y puedes tolerar ~7,6% WER. Usa medium o large-v3 solo para transcripción por lotes donde la latencia no es una restricción.',
+          },
+          {
+            q: '¿whisper.cpp admite idiomas distintos al inglés?',
+            a: 'Sí. Todos los modelos multilingüe de Whisper (base, small, medium, large-v3) admiten 99 idiomas. Añade `-l [código de idioma]` al CLI: `-l es` para español, `-l de` para alemán, `-l ja` para japonés, etc. Los modelos tiny.en y base.en son solo inglés y ligeramente más precisos para inglés que sus equivalentes multilingüe.',
+          },
+          {
+            q: '¿Cómo instalo faster-whisper con soporte CUDA?',
+            a: 'Instala con `pip install faster-whisper`. El soporte CUDA requiere CUDA 11.8 o posterior y cuDNN 8.x instalados en tu sistema. Verifica tu versión de CUDA con `nvcc --version`. Luego especifica `device="cuda"` al cargar el modelo: `WhisperModel("large-v3", device="cuda", compute_type="int8")`. Si no se detecta CUDA, faster-whisper recurre automáticamente a CPU.',
+          },
+          {
+            q: '¿Cuál es más preciso — whisper.cpp o faster-whisper?',
+            a: 'Idéntico. Ambas herramientas usan los mismos pesos del modelo OpenAI Whisper y producen el mismo WER en cualquier archivo de audio dado. La diferencia entre whisper.cpp y faster-whisper es la velocidad y el soporte de plataforma, no la precisión de transcripción. Cualquier diferencia de WER que midas entre ejecuciones está dentro de la variación normal de beam search, no proviene del runtime en sí.',
+          },
+          {
+            q: '¿Puedo ejecutar Whisper large-v3 con 8 GB de RAM?',
+            a: 'Sí en GPU — large-v3 int8 en faster-whisper usa ~2,5 GB de VRAM y funciona en cualquier GPU de 8 GB. En hardware solo-CPU, 8 GB de RAM es ajustado para large-v3 (float32 usa ~10 GB). Usa medium (5 GB RAM) o small (2 GB RAM) en sistemas solo-CPU. whisper.cpp es más eficiente en memoria en CPU que faster-whisper debido al menor overhead del runtime.',
+          },
+          {
+            q: '¿Cuánto cuesta Whisper local vs STT en la nube?',
+            a: 'Costo continuo cero. Los servicios STT en la nube cobran $0,006–$0,024 por minuto de audio — para un desarrollador que transcribe 8 horas de reuniones por semana, eso son $120–480/mes. Whisper local funciona en hardware que ya posees, sin tarifas por minuto, sin gestión de API keys y sin que los datos de audio salgan de tu equipo.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[whisper.cpp en GitHub](https://github.com/ggerganov/whisper.cpp) — Código fuente, instrucciones de compilación, scripts de descarga de modelos y guía de configuración Metal/Core ML.',
+          '[faster-whisper en GitHub](https://github.com/SYSTRAN/faster-whisper) — Código fuente, documentación de la API Python y resultados de benchmarks.',
+          '[distil-whisper/distil-large-v3 en Hugging Face](https://huggingface.co/distil-whisper/distil-large-v3) — Ficha del modelo, resultados de benchmarks e instrucciones de uso de la variante destilada de Whisper.',
+          '[WhisperX en GitHub](https://github.com/m-bain/whisperX) — Marcas de tiempo a nivel de palabra y diarización de hablantes construidas sobre faster-whisper.',
+          '[insanely-fast-whisper en GitHub](https://github.com/Vaibhavs10/insanely-fast-whisper) — Pipeline Whisper Flash Attention 2 para máximo rendimiento en GPU NVIDIA.',
+          '[OpenAI Whisper en GitHub](https://github.com/openai/whisper) — Modelo Whisper original, paper y fichas de modelo para todos los tamaños.',
+          '[Paper de OpenAI Whisper (Radford et al., 2022)](https://arxiv.org/abs/2212.04356) — "Robust Speech Recognition via Large-Scale Weak Supervision". Fuente de los valores WER.',
+          '[Documentación de CTranslate2](https://github.com/OpenNMT/CTranslate2) — Detalles de cuantización, soporte de hardware y fundamentos de optimización int8.',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectura relacionada',
+        items: [
+          '[TTS local y clonación de voz 2026: Piper vs Coqui vs XTTS v2](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — El complemento TTS: convierte el texto transcrito de nuevo en voz, offline.',
+          '[Construye un asistente de voz completamente offline en 2026](/es/power-local-llm/build-local-voice-assistant-2026) — Conecta Whisper STT a un LLM local y Piper TTS en un pipeline de voz completo.',
+          '[Pipeline de IA multimodal local 2026](/es/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Añade modelos de visión junto a STT y TTS para un stack local multimodal completo.',
+          '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Requisitos de GPU y RAM para el pipeline completo de voz + LLM.',
+          '[Construye un asistente de voz local en tu teléfono](/es/power-local-llm/voice-assistant-local-mobile-offline) — Versión móvil: WhisperKit en iPhone, Layla en Android.',
+        ],
+      },
+    },
+  },
 }

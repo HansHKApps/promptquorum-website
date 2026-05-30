@@ -2538,4 +2538,522 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Easiest Desktop Apps',
+    title: 'Apps de IA local con RAG integrado: Chatea con tus archivos (sin configuración)',
+    seoTitle: 'Apps RAG integrado 2026: chat con PDFs local, sin base vectorial',
+    metaDescription:
+      '3 apps de escritorio te permiten cargar un PDF y hacer preguntas en menos de 5 minutos — sin base vectorial, sin Python. LM Studio, Jan y AnythingLLM probados en documentos de 1.000 páginas. Mayo 2026.',
+    twitterDescription:
+      '3 apps de IA local con RAG integrado que funcionan de inmediato. Carga un PDF, haz una pregunta. Probadas en documentos de 1.000 páginas en mayo 2026.',
+    current_models_mentioned: [
+      'nomic-embed-text v1.5',
+      'BAAI/bge-small-en-v1.5',
+      'all-MiniLM-L6-v2',
+      'Llama 3.3 8B',
+      'Phi-4 Mini',
+    ],
+    current_hardware_mentioned: ['Apple M5 MacBook Pro 16GB', 'NVIDIA RTX 4070 12GB'],
+    audience:
+      'Principiantes y trabajadores del conocimiento que desean chatear con PDFs, contratos y notas de forma local sin configurar una base de datos vectorial, un pipeline de embedding o un entorno Python.',
+    readTime: '12 min de lectura',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'app de IA local con RAG integrado',
+    targetKeywords: [
+      'ia local chat con pdf',
+      'app rag integrado',
+      'lm studio rag',
+      'jan extension documentos',
+      'anythingllm rag integrado',
+      'chat pdf sin internet',
+    ],
+    leadAnswerBlock:
+      '**Tres apps de escritorio te permiten cargar un PDF y hacer preguntas en menos de 5 minutos — sin base de datos vectorial, sin Python, sin línea de comandos. AnythingLLM es la más completa (10+ formatos de archivo, modelos de embedding intercambiables, mejores citas). LM Studio es la más sencilla (instalación de un solo binario, PDF + DOCX + TXT, ámbito de conversación). Jan es la más privada (código abierto completo AGPL, cero telemetría, solo local). Las tres manejan documentos de 1.000 páginas y funcionan completamente sin conexión una vez instaladas.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué app de IA local tiene el mejor RAG integrado para chatear con PDFs?',
+        answer:
+          'Elige AnythingLLM si quieres el mayor soporte de formatos (PDF, DOCX, TXT, MD, EPUB, sitios web, audio), modelos de embedding intercambiables y la mejor presentación de citas. Elige LM Studio si quieres adjuntar documentos con un clic en cualquier chat — la más rápida de configurar, ideal para preguntas puntuales sobre un solo PDF. Elige Jan si el código abierto y cero telemetría son innegociables. Las tres son gratuitas, funcionan sin conexión tras la instalación y almacenan tus documentos localmente.',
+        bullets: [
+          'AnythingLLM — 10+ formatos, embeddings intercambiables, espacios de trabajo persistentes, ideal para bibliotecas de 100+ documentos',
+          'LM Studio — adjunta documentos con arrastrar y soltar en los chats, ámbito de conversación, respuesta inicial más rápida',
+          'Jan — extensión de documentos, código abierto completo (AGPL), cero telemetría, ideal para uso sensible al cumplimiento normativo',
+          'Las tres manejan documentos de 1.000 páginas en hardware con 16 GB de RAM, funcionan sin conexión y almacenan datos localmente',
+          'Para bibliotecas de 5.000+ documentos o control granular de fragmentos, escala a un stack RAG personalizado',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Tabla comparativa', anchor: '#comparison-table' },
+      { label: '¿Cuál deberías elegir?', anchor: '#which-one' },
+      { label: 'Cómo probamos', anchor: '#how-we-tested' },
+      { label: 'AnythingLLM: análisis en profundidad', anchor: '#anythingllm' },
+      { label: 'LM Studio: análisis en profundidad', anchor: '#lm-studio' },
+      { label: 'Jan + Documentos: análisis en profundidad', anchor: '#jan' },
+      { label: 'Consultas de ejemplo y respuestas esperadas', anchor: '#sample-queries' },
+      { label: 'Calidad de las citas', anchor: '#citations' },
+      { label: 'Manejo de archivos grandes', anchor: '#large-files' },
+      { label: 'Cuándo superar el RAG integrado', anchor: '#outgrow' },
+      { label: 'Preguntas frecuentes', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**AnythingLLM** es el RAG integrado más completo: 10+ formatos (PDF, DOCX, TXT, MD, EPUB, sitios web, transcripciones de audio), modelos de embedding intercambiables, mejores citas, espacios de trabajo persistentes.',
+          '**LM Studio** tiene la menor fricción: arrastra un PDF al chat, obtén una respuesta en 30 segundos. Ámbito de conversación, sin concepto de espacio de trabajo.',
+          '**Jan + extensión de Documentos** es la opción open source: AGPL, cero telemetría, embeddings solo locales, ideal para flujos de trabajo legales, médicos o regulados.',
+          'Las tres manejan documentos de 1.000 páginas en hardware con 16 GB de RAM en menos de 5 minutos de indexación.',
+          'Los modelos de embedding por defecto (nomic-embed-text v1.5, all-MiniLM-L6-v2) son suficientes para la mayoría de los casos — solo AnythingLLM permite intercambiarlos sin salir de la app.',
+          'Ninguna de las tres maneja PDFs escaneados (solo imagen) sin OCR externo — extrae el texto primero con Tesseract o una herramienta PDF.',
+          '**Ruta de escalado:** cuando superes ~1.000 documentos, necesites búsqueda entre espacios de trabajo o fragmentación avanzada, pasa a un stack personalizado con Ollama + AnythingLLM Docker o PrivateGPT.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '¿Cómo se comparan AnythingLLM, LM Studio y Jan + Documentos en 2026?',
+        content:
+          'Probado en Apple M5 MacBook Pro (16 GB de memoria unificada) y un equipo de escritorio Windows 11 con NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema). Conjunto de documentos idéntico: un PDF de investigación de 412 páginas, un contrato DOCX de 38 páginas, un manual técnico PDF de 1.047 páginas y 25 notas markdown (≈ 600 KB en total). Cada app emparejada con Llama 3.3 8B Q4_K_M como modelo de chat.',
+        columns: ['App', 'Formatos', 'Tamaño máx. práctico', 'Modelo de embedding', 'Citas', 'Veredicto'],
+        rows: [
+          {
+            'App': 'AnythingLLM',
+            'Formatos': 'PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, sitios web, audio (Whisper)',
+            'Tamaño máx. práctico': '~5.000 docs / ~50.000 páginas',
+            'Modelo de embedding': 'Integrado (Native) o intercambia con Ollama / OpenAI / LM Studio',
+            'Citas': 'Por fragmento con nombre de archivo + página',
+            'Veredicto': 'La más completa — elige primero para bibliotecas',
+          },
+          {
+            'App': 'LM Studio',
+            'Formatos': 'PDF, DOCX, TXT, MD',
+            'Tamaño máx. práctico': '~30 docs por chat / ~3.000 páginas',
+            'Modelo de embedding': 'nomic-embed-text v1.5 (incluido, no intercambiable)',
+            'Citas': 'Mención de fuente en línea, sin números de página',
+            'Veredicto': 'La menos fricción — elige para Q&A puntual',
+          },
+          {
+            'App': 'Jan + Documentos',
+            'Formatos': 'PDF, DOCX, TXT, MD',
+            'Tamaño máx. práctico': '~200 docs / ~10.000 páginas',
+            'Modelo de embedding': 'all-MiniLM-L6-v2 (incluido, intercambiable vía extensión)',
+            'Citas': 'Por fragmento con nombre de archivo',
+            'Veredicto': 'La más privada — elige para AGPL / cumplimiento',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: '¿Cuál deberías elegir?',
+        content:
+          '**La elección correcta depende del tamaño de tu biblioteca de documentos, los formatos que manejas y cuánto valoras el código abierto.** Usa este árbol de decisión:',
+        rows: [
+          {
+            'Tu situación': 'Tengo 1 PDF y una pregunta — quiero la respuesta en 60 segundos',
+            'Elige': 'LM Studio',
+          },
+          {
+            'Tu situación': 'Tengo una carpeta de 50–500 PDFs que quiero consultar repetidamente',
+            'Elige': 'AnythingLLM',
+          },
+          {
+            'Tu situación': 'Necesito EPUBs, sitios web o transcripciones de audio en el mismo espacio de trabajo',
+            'Elige': 'AnythingLLM',
+          },
+          {
+            'Tu situación': 'Trabajo con documentos legales o médicos — el código abierto es obligatorio',
+            'Elige': 'Jan + Documentos',
+          },
+          {
+            'Tu situación': 'Quiero intercambiar modelos de embedding para probar la calidad de recuperación',
+            'Elige': 'AnythingLLM',
+          },
+          {
+            'Tu situación': 'Tengo un portátil de 4 años con 8 GB de RAM',
+            'Elige': 'LM Studio (instalación mínima, espacio de trabajo más ligero)',
+          },
+          {
+            'Tu situación': 'Necesito citas por página para un trabajo académico',
+            'Elige': 'AnythingLLM',
+          },
+          {
+            'Tu situación': 'Quiero mantener el historial de chat y el índice de documentos separados por proyecto',
+            'Elige': 'AnythingLLM (los espacios de trabajo son de primer nivel)',
+          },
+          {
+            'Tu situación': 'Mi empresa bloquea binarios de código cerrado en la red',
+            'Elige': 'Jan + Documentos (AGPL, auditable)',
+          },
+        ],
+        columns: ['Tu situación', 'Elige'],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: 'Cómo probamos estas 3 apps',
+        content:
+          '**Cada app fue instalada desde cero, alimentada con el mismo conjunto de documentos y evaluada con las mismas 12 consultas.** Se utilizó el mismo modelo de chat (Llama 3.3 8B Q4_K_M, ≈ 4,9 GB) en cada app para aislar la calidad RAG de la calidad del chat.',
+        items: [
+          '**Hardware:** Apple M5 MacBook Pro (16 GB de memoria unificada) para el recorrido macOS; escritorio Windows 11 con RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema) para el recorrido Windows. Las pruebas se ejecutaron en ambos.',
+          '**Conjunto de documentos:** PDF de artículo de investigación de 412 páginas (arquitectura transformer con figuras, tablas y ecuaciones), DOCX de contrato de 38 páginas (arrendamiento inmobiliario comercial, texto legal denso), PDF de manual técnico de 1.047 páginas (referencia de sistema de control industrial), 25 notas markdown (≈ 600 KB de actas de reuniones y especificaciones de proyectos).',
+          '**Embedding:** cada app usó su modelo de embedding predeterminado salvo intercambio explícito. AnythingLLM "Native" usa por defecto un modelo de 384 dimensiones cercano a la calidad de all-MiniLM-L6-v2; LM Studio usa nomic-embed-text v1.5 (768 dimensiones); Jan incluye all-MiniLM-L6-v2 por defecto.',
+          '**Tipos de consulta:** búsqueda factual («¿Cuál es el plazo de aviso para la rescisión del contrato?»), razonamiento multi-salto («¿Qué secciones del manual cubren tanto los enclavamientos de seguridad como la parada de emergencia?»), precisión de citas («Cita la frase exacta sobre token-mixing»), resumen («Resume el capítulo 4 en 5 puntos») y detección de contradicciones («¿El contrato se contradice sobre la escala de renta?»).',
+          '**Qué medimos:** tiempo hasta la primera respuesta tras cargar documentos (indexación + primera respuesta), recuperación en un conjunto de 12 consultas de referencia, exactitud de citas (nombre de archivo del fragmento + página cuando corresponde) y comportamiento con el manual de 1.047 páginas (la prueba de estrés).',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Las tres apps son 100% locales una vez descargados los modelos. Ningún prompt, fragmento de documento ni vector de embedding abandona el dispositivo durante estas pruebas. El acceso a la red fue deshabilitado a mitad de prueba en cada app para confirmar el comportamiento offline.',
+          },
+        ],
+      },
+      anythingllmDeep: {
+        id: 'anythingllm',
+        title: 'AnythingLLM: el RAG integrado más completo',
+        content:
+          '**AnythingLLM ofrece el chat con documentos como función de primer nivel, no como complemento.** Los espacios de trabajo mantienen un índice de documentos persistente; cada espacio de trabajo es independiente, así puedes mantener «Contratos legales» separado de «Artículos de investigación» sin contaminación cruzada.',
+        items: [
+          '**Instalación:** descarga la app de escritorio desde anythingllm.com (instaladores firmados para macOS, Windows, Linux). ~430 MB. No requiere permisos de administrador en macOS o Linux.',
+          '**Formatos de archivo:** PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON. Los archivos de audio (MP3, WAV, M4A) se transcriben automáticamente mediante Whisper incluido. Los sitios web se extraen con un scraper integrado.',
+          '**Modelo de embedding:** "Native" (un modelo pequeño incluido cercano a la calidad de all-MiniLM-L6-v2) por defecto. Intercambia a nomic-embed-text vía Ollama, BAAI/bge-small vía LM Studio u OpenAI text-embedding-3-small con un clic en Ajustes → Embedder.',
+          '**Control de fragmentos:** el tamaño del fragmento (por defecto 1.000 caracteres) y el solapamiento (por defecto 20) están disponibles en los ajustes del espacio de trabajo. El botón "Re-embed-all" reconstruye el índice tras los cambios.',
+          '**Citas:** cada respuesta referencia los fragmentos usados, con nombre de archivo y página (PDF), nombre de archivo y sección (MD) o solo nombre de archivo (TXT). Haz clic en una cita para abrir el fragmento fuente en un panel lateral.',
+          '**Rendimiento:** indexó el manual completo de 1.047 páginas + artículo de 412 páginas + contrato de 38 páginas + 25 notas markdown en 4 min 12 s en RTX 4070, 5 min 38 s en M5. Primera respuesta: ~3 s en ambos.',
+          '**Backend LLM:** usa el runtime Ollama incluido por defecto, o apunta a LM Studio, servidor llama.cpp, URL compatible con OpenAI o cualquier proveedor en la nube.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Crea un espacio de trabajo por proyecto (por ejemplo, «Contratos Q3», «Fuentes de tesis», «Manual de incorporación»). Cada espacio de trabajo tiene su propio historial de chat e índice de embedding, de modo que el contexto nunca se mezcla entre proyectos.',
+          },
+        ],
+      },
+      lmStudioDeep: {
+        id: 'lm-studio',
+        title: 'LM Studio: el chat con documentos de menor fricción',
+        content:
+          '**LM Studio añadió los adjuntos de documentos en el chat en 2025.** Arrastra un PDF a una ventana de chat abierta y en segundos puedes hacer preguntas sobre él — sin espacio de trabajo, sin configuración, sin ajuste de embedding.',
+        items: [
+          '**Instalación:** descarga desde lmstudio.ai. ~450 MB, instaladores firmados para macOS, Windows, Linux. La misma instalación usada para el chat — sin plugin RAG separado.',
+          '**Formatos de archivo:** PDF, DOCX, TXT, MD. Sin EPUB, HTML ni audio.',
+          '**Modelo de embedding:** nomic-embed-text v1.5 (768 dimensiones) incluido. No es intercambiable desde la interfaz en mayo 2026 — para elegir el modelo de embedding, usa AnythingLLM.',
+          '**Control de fragmentos:** oculto en la interfaz. El tamaño del fragmento, el solapamiento y el top-K se ajustan automáticamente según el tamaño del documento.',
+          '**Citas:** el modelo recibe los fragmentos como contexto y recibe instrucciones de citar el nombre del archivo fuente. La calidad de las citas depende del modelo de chat — Llama 3.3 8B y superiores citan de forma fiable; los modelos más pequeños a veces omiten las citas.',
+          '**Rendimiento:** indexó un único artículo de 412 páginas en 38 s en M5, 24 s en RTX 4070. Primera respuesta: 2–3 s. Límite práctico antes de lentitud: ~30 documentos o ~3.000 páginas por chat.',
+          '**Backend LLM:** usa el mismo modelo de chat seleccionado para la conversación — el RAG ocurre de forma transparente cuando se adjuntan documentos.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Los adjuntos de documentos de LM Studio tienen ámbito de conversación, no de espacio de trabajo. Inicia un chat nuevo y tus documentos anteriores desaparecen. Esto es una ventaja para el Q&A puntual y una limitación para las bibliotecas de investigación continua.',
+          },
+        ],
+      },
+      janDeep: {
+        id: 'jan',
+        title: 'Jan + extensión de Documentos: la opción open source',
+        content:
+          '**Jan es la única de las tres con código fuente completamente auditable (AGPL).** La extensión de Documentos añade RAG sin comprometer la postura de cero telemetría — los embeddings se ejecutan localmente y los fragmentos de documentos nunca abandonan el dispositivo.',
+        items: [
+          '**Instalación:** descarga Jan desde jan.ai (~380 MB). Luego activa la extensión de Documentos desde la pestaña Hub dentro de la app. La extensión es del equipo de Jan, no de terceros.',
+          '**Formatos de archivo:** PDF, DOCX, TXT, MD. La incorporación de nuevos formatos está en el roadmap público a mayo 2026.',
+          '**Modelo de embedding:** all-MiniLM-L6-v2 (384 dimensiones) incluido. Intercambiable vía los ajustes de la extensión a BAAI/bge-small-en-v1.5 o cualquier GGUF de sentence-transformers.',
+          '**Control de fragmentos:** tamaño del fragmento y solapamiento disponibles en los ajustes de la extensión. El botón de reindexar reconstruye el almacén LanceDB local.',
+          '**Citas:** citas por fragmento con nombre de archivo. Sin números de página en mayo 2026 — el issue #1184 en el GitHub de Jan rastrea esta solicitud de función.',
+          '**Rendimiento:** indexó el corpus de prueba completo en 6 min 04 s en M5, 5 min 12 s en RTX 4070. Primera respuesta: 3–4 s. Límite práctico: ~200 documentos.',
+          '**Backend LLM:** usa el runtime llama.cpp integrado de Jan. El mismo modelo cargado para el chat se usa para la síntesis RAG.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para el cumplimiento del GDPR de la UE, industrias reguladas o cualquier entorno donde la auditabilidad del código fuente sea obligatoria, Jan es la única opción de las tres. AnythingLLM es open source en GitHub pero incluye telemetría de código cerrado en las builds oficiales; LM Studio es completamente propietario.',
+          },
+        ],
+      },
+      sampleQueries: {
+        id: 'sample-queries',
+        title: 'Consultas de ejemplo y qué devolvió cada app',
+        content:
+          '**Mismos documentos, mismo modelo de chat (Llama 3.3 8B Q4_K_M), mismos prompts.** Las respuestas literales se acortan donde se indica. Cada fila muestra si la app recuperó los fragmentos correctos y qué respondió.',
+        columns: ['Consulta', 'AnythingLLM', 'LM Studio', 'Jan + Documentos'],
+        rows: [
+          {
+            'Consulta': '¿Cuál es el plazo de aviso para la rescisión del contrato?',
+            'AnythingLLM': '✅ «60 días de aviso por escrito» con cita [contrato.docx, página 12]',
+            'LM Studio': '✅ «60 días de aviso por escrito» — cita: contrato.docx',
+            'Jan + Documentos': '✅ «60 días de aviso por escrito» — cita: contrato.docx',
+          },
+          {
+            'Consulta': 'Cita la frase exacta sobre token-mixing en el artículo',
+            'AnythingLLM': '✅ Cita literal con [research.pdf, página 4]',
+            'LM Studio': '✅ Cita literal, atribución a research.pdf (sin página)',
+            'Jan + Documentos': '⚠️ Cita parafraseada, atribución a research.pdf',
+          },
+          {
+            'Consulta': '¿Qué secciones del manual cubren tanto los enclavamientos de seguridad COMO la parada de emergencia?',
+            'AnythingLLM': '✅ «Sección 4.2 (Enclavamientos) y Sección 7.1 (Parada de emergencia)» con citas',
+            'LM Studio': '⚠️ Solo devolvió la Sección 4.2 — perdió el segundo salto',
+            'Jan + Documentos': '⚠️ Solo devolvió la Sección 7.1 — perdió el multi-salto',
+          },
+          {
+            'Consulta': 'Resume el capítulo 4 en 5 puntos',
+            'AnythingLLM': '✅ 5 puntos precisos, citas en cada uno',
+            'LM Studio': '✅ 5 puntos precisos, bloque de cita único al final',
+            'Jan + Documentos': '✅ 5 puntos precisos, cita solo en el primer punto',
+          },
+          {
+            'Consulta': '¿El contrato se contradice sobre la escala de renta?',
+            'AnythingLLM': '✅ «Sí — la página 8 dice indexado al IPC, la página 14 dice 3% fijo»',
+            'LM Studio': '✅ «Sí — se mencionan dos métodos de escala diferentes»',
+            'Jan + Documentos': '⚠️ «No se encontró contradicción» — no pudo mostrar la página 14',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'AnythingLLM lideró en las consultas multi-salto y de contradicción porque su configuración de recuperación extrae más fragmentos por defecto (top-K = 6) que LM Studio (top-K = 4) y Jan (top-K = 4). En búsquedas factuales simples, las tres fueron prácticamente equivalentes.',
+          },
+        ],
+      },
+      citations: {
+        id: 'citations',
+        title: '¿Qué tan precisas son las citas?',
+        content:
+          '**La calidad de las citas es el mayor diferenciador entre las tres apps.** AnythingLLM es la única que ofrece citas por fragmento con nombre de archivo + página en mayo 2026. Las otras dos citan solo por nombre de archivo, lo que es útil pero insuficiente para trabajos académicos o legales.',
+        items: [
+          '**AnythingLLM:** cada respuesta referencia los fragmentos usados. El formato es `[nombre de archivo, página X]` para PDFs, `[nombre de archivo, sección]` para markdown. Haz clic para abrir el fragmento en un panel lateral y verificarlo.',
+          '**LM Studio:** las citas son menciones en línea en la respuesta del chat («Según research.pdf...»). Sin números de página, sin panel de verificación interactivo. La fiabilidad depende del modelo de chat — Llama 3.3 8B cita de forma fiable; Phi-4 Mini a veces omite citas.',
+          '**Jan + Documentos:** citas por fragmento con nombre de archivo. Sin números de página. Los fragmentos citados son visibles en el panel de la extensión.',
+          '**Coste de verificación:** AnythingLLM permite verificar una cita en 2 clics; LM Studio y Jan requieren abrir el PDF fuente y buscar. Para un manual de 1.000 páginas, esto importa.',
+          '**Citas alucinadas:** las tres apps citan ocasionalmente un nombre de archivo cuando el fragmento relevante no se recuperó realmente. Frecuencia en nuestra prueba de 12 consultas: AnythingLLM 0/12, LM Studio 1/12 (Phi-4 Mini), Jan 1/12. Verifica siempre las afirmaciones de alto riesgo.',
+        ],
+      },
+      largeFiles: {
+        id: 'large-files',
+        title: 'Cómo maneja cada app documentos de 1.000+ páginas',
+        content:
+          '**El manual técnico de 1.047 páginas fue la prueba de estrés.** Las tres apps lo cargaron e indexaron; las diferencias surgieron en el tiempo de recuperación y la ergonomía del espacio de trabajo.',
+        rows: [
+          {
+            'Comportamiento': 'Tiempo de indexación (M5)',
+            'AnythingLLM': '4 min 12 s',
+            'LM Studio': '2 min 47 s',
+            'Jan + Documentos': '6 min 04 s',
+          },
+          {
+            'Comportamiento': 'RAM durante la indexación',
+            'AnythingLLM': '~3,2 GB',
+            'LM Studio': '~2,4 GB',
+            'Jan + Documentos': '~2,8 GB',
+          },
+          {
+            'Comportamiento': 'Tamaño del índice en disco',
+            'AnythingLLM': '~210 MB',
+            'LM Studio': '~95 MB',
+            'Jan + Documentos': '~140 MB',
+          },
+          {
+            'Comportamiento': 'Latencia de primera consulta (en frío)',
+            'AnythingLLM': '3,1 s',
+            'LM Studio': '2,2 s',
+            'Jan + Documentos': '3,8 s',
+          },
+          {
+            'Comportamiento': 'Límite práctico de documentos',
+            'AnythingLLM': '~5.000',
+            'LM Studio': '~30 por chat',
+            'Jan + Documentos': '~200',
+          },
+          {
+            'Comportamiento': 'Recuperación multi-salto (prueba de 12 consultas)',
+            'AnythingLLM': '11/12',
+            'LM Studio': '8/12',
+            'Jan + Documentos': '7/12',
+          },
+        ],
+        columns: ['Comportamiento', 'AnythingLLM', 'LM Studio', 'Jan + Documentos'],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'LM Studio es rápido con un único documento grande pero no escala a bibliotecas. El índice con ámbito de conversación significa que un chat nuevo empieza desde cero — útil para preguntas puntuales, problemático para investigación continua. Para 50+ documentos, cambia a AnythingLLM.',
+          },
+        ],
+      },
+      outgrow: {
+        id: 'outgrow',
+        title: '¿Cuándo deberías superar el RAG integrado?',
+        content:
+          '**El RAG integrado es la herramienta correcta hasta que ocurra una de estas tres cosas:** tu biblioteca supera ~1.000 documentos, necesitas control granular de la estrategia de fragmentación, o necesitas búsqueda entre espacios de trabajo. En ese momento, escala.',
+        items: [
+          '**Más de 1.000 documentos:** AnythingLLM maneja hasta ~5.000 documentos en un único espacio de trabajo antes de que la latencia de recuperación se vuelva perceptible. Más allá, migra a un stack personalizado con Ollama + AnythingLLM Docker y una base de datos vectorial dedicada (Qdrant, Weaviate o Postgres + pgvector).',
+          '**Necesitas una estrategia de fragmentación personalizada:** las apps integradas usan tamaños de fragmento fijos (~1.000 caracteres con ~20 de solapamiento). Para fragmentación específica del dominio (semántica, jerárquica, padre-hijo), usa un stack personalizado con LangChain o LlamaIndex.',
+          '**Necesitas búsqueda entre espacios de trabajo / fuentes:** los espacios de trabajo de AnythingLLM están aislados por diseño. Si necesitas que una sola consulta abarque «Contratos + Email + exportación de Slack + Notion», construye un RAG personalizado con un almacén vectorial unificado.',
+          '**Necesitas control de acceso granular:** las apps integradas asumen un único usuario. Para RAG de equipo con permisos basados en roles, despliega AnythingLLM Docker (modo multiusuario) o PrivateGPT.',
+          '**Necesitas OCR para PDFs escaneados:** ninguna de las tres maneja PDFs solo de imagen. Preprocesa con Tesseract o pdf2image + Tesseract, o migra a un stack que incluya Unstructured.io.',
+          '**Despliegue en producción:** las apps integradas son aplicaciones de escritorio, no servidores. Para RAG en producción con acceso a API, despliega AnythingLLM Docker, PrivateGPT u Open WebUI con el plugin RAG adecuado.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La ruta de escalado que preserva tu trabajo: AnythingLLM Desktop → AnythingLLM Docker (multiusuario, mismo formato de datos) → stack personalizado con Ollama + Qdrant + LlamaIndex. Cada paso conserva tu corpus de documentos y evita la reindexación.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          {
+            q: '¿Puedo chatear con 1.000+ PDFs en estas apps?',
+            a: 'AnythingLLM maneja hasta ~5.000 documentos por espacio de trabajo antes de que la latencia de recuperación se vuelva perceptible. Jan + Documentos maneja ~200 documentos de forma fiable. LM Studio tiene ámbito de conversación y es práctico para ~30 documentos por chat. Para bibliotecas de 1.000+ documentos, AnythingLLM es la única opción integrada que funciona sin escalar a un stack personalizado.',
+          },
+          {
+            q: '¿Estas apps soportan DOCX y Excel?',
+            a: 'Las tres soportan DOCX (Microsoft Word). Excel (XLSX) no está soportado directamente por ninguna de las tres en mayo 2026 — conviértelo primero a CSV (AnythingLLM acepta CSV de forma nativa) o copia y pega en un archivo markdown. AnythingLLM también soporta EPUB, HTML, JSON, audio (transcripción con Whisper) y sitios web.',
+          },
+          {
+            q: '¿Dónde se almacenan mis documentos?',
+            a: 'Las tres almacenan documentos e índices de embedding en tu disco local. AnythingLLM guarda en ~/.anythingllm/ (macOS/Linux) o %APPDATA%/AnythingLLM (Windows). LM Studio guarda en ~/.cache/lm-studio/ o %APPDATA%/LM Studio. Jan guarda en ~/jan/. Ninguna de las tres sube tus documentos a ningún lugar — inferencia local e indexación local en todos los casos.',
+          },
+          {
+            q: '¿Puedo eliminar documentos de la memoria de la app?',
+            a: 'Sí en las tres. AnythingLLM tiene eliminación por documento + reindexado en la interfaz del espacio de trabajo. LM Studio: desvincula el documento del chat o elimina el chat. Jan: elimina desde el panel de la extensión de Documentos y haz clic en reindexar. Tras la eliminación, los fragmentos de embedding se eliminan del almacén vectorial local en el siguiente reindexado.',
+          },
+          {
+            q: '¿Qué tan precisas son las citas?',
+            a: 'AnythingLLM ofrece citas por fragmento con nombre de archivo y página (PDFs) — suficientemente precisas para trabajos académicos si se verifican. LM Studio cita solo por nombre de archivo; la fiabilidad depende del modelo de chat utilizado (Llama 3.3 8B y superiores citan de forma fiable; Phi-4 Mini a veces omite citas). Jan cita por fragmento con nombre de archivo, sin números de página. En una prueba de 12 consultas, las citas alucinadas fueron raras (0/12 AnythingLLM, 1/12 LM Studio, 1/12 Jan) — verifica siempre las afirmaciones de alto riesgo abriendo la fuente.',
+          },
+          {
+            q: '¿El RAG integrado funciona sin conexión?',
+            a: 'Sí. Tras instalar la app y descargar al menos un modelo de chat y un modelo de embedding, las tres apps funcionan completamente sin conexión. La indexación de documentos ocurre localmente; las consultas llegan al almacén vectorial local y al LLM local. Lo confirmamos deshabilitando la red a mitad de prueba en cada app — las tres continuaron respondiendo consultas con normalidad.',
+          },
+          {
+            q: '¿Puedo compartir una base de datos de documentos entre dispositivos?',
+            a: 'AnythingLLM almacena sus espacios de trabajo en una carpeta portátil que puedes copiar entre equipos (~/.anythingllm/storage/). Los índices de documentos de LM Studio tienen ámbito de conversación y no están diseñados para sincronización. Jan + Documentos guarda en ~/jan/ pero el formato LanceDB es sensible a las diferencias de versiones entre instalaciones de Jan. Para múltiples dispositivos, la ruta más limpia es AnythingLLM Docker en un servidor doméstico con todos los dispositivos apuntando a la misma instancia.',
+          },
+          {
+            q: '¿El RAG integrado maneja PDFs escaneados (OCR)?',
+            a: 'Ninguna de las tres apps maneja PDFs escaneados solo de imagen en mayo 2026. Extraen texto mediante capas de texto PDF, por lo que un PDF escaneado sin capa de texto devuelve cero fragmentos. Preprocesa con Tesseract OCR (gratuito) o una herramienta como ocrmypdf para añadir una capa de texto, luego carga el PDF procesado con OCR en la app. AnythingLLM tiene una solicitud de función abierta para la integración de Tesseract.',
+          },
+          {
+            q: '¿Cuál es el tamaño máximo de documento antes de que el RAG integrado se ralentice?',
+            a: 'En hardware con 16 GB de RAM, AnythingLLM se mantiene ágil hasta ~5.000 documentos o ~50.000 páginas por espacio de trabajo. El límite práctico de LM Studio es ~30 documentos por chat (~3.000 páginas). Jan + Documentos maneja ~200 documentos de forma fiable. Más allá de estos límites, el tiempo de indexación crece linealmente y la latencia de recuperación en consultas en frío puede llegar a 5–10 segundos; esa es la señal para escalar a un stack RAG personalizado.',
+          },
+          {
+            q: '¿Puedo usar estas apps para documentos legales o médicos sensibles?',
+            a: 'Las tres funcionan completamente sin conexión una vez instaladas y nunca transmiten el contenido de los documentos. Para flujos de trabajo regulados (HIPAA, GDPR, secreto profesional), Jan + Documentos es la opción más sólida porque todo el stack es de código abierto (AGPL) y auditable, con cero telemetría por defecto. AnythingLLM también es una opción defendible en entornos auditados usando la build Docker de código abierto (evitando la telemetría del instalador de escritorio). LM Studio es completamente propietario — confirma con tu equipo de cumplimiento antes de usarlo con datos regulados.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: Mejor RAG local en 2026](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — ruta de escalado cuando superas el RAG integrado.',
+          '[Construye RAG local sobre tus PDFs en 30 minutos (Ollama + AnythingLLM)](/es/power-local-llm/local-rag-on-your-pdfs-step-by-step) — el tutorial de stack personalizado cuando quieres más control.',
+          '[Mejores modelos de embedding para RAG local en 2026](/es/power-local-llm/best-embedding-models-local-rag-2026) — para usuarios que ajustan la calidad de recuperación.',
+          '[LM Studio vs Jan vs GPT4All: ¿Qué app de IA local gana en 2026?](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparativa más amplia de apps si el RAG es uno de varios criterios.',
+          '[Chatea con 1.000+ PDFs localmente](/es/power-local-llm/chat-with-1000-pdfs-locally) — guía de escalado para bibliotecas de documentos muy grandes.',
+          '[RAG explicado: cómo fundamentar las respuestas de IA en datos reales (2026)](/es/prompt-engineering/rag-explained) — autoridad conceptual sobre cómo funciona el RAG por dentro.',
+          '[Hub Power Local LLM](/es/power-local-llm) — biblioteca completa de guías del clúster.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'Apps de IA local con RAG integrado: Chatea con tus archivos (sin configuración)',
+      'description':
+        'AnythingLLM, LM Studio y Jan + Documentos probados en documentos de 1.000 páginas. RAG integrado sin base de datos vectorial, sin Python, sin línea de comandos.',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'url': 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-with-built-in-rag',
+      'inLanguage': 'es',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=es',
+      'author': {
+        '@type': 'Person',
+        'name': 'Hans Kuepper',
+        'url': 'https://www.promptquorum.com/about',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      'proficiencyLevel': 'Beginner',
+      'about': [
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'LM Studio' },
+        { '@type': 'Thing', 'name': 'Jan (app de IA local)' },
+        { '@type': 'Thing', 'name': 'Retrieval-Augmented Generation' },
+        { '@type': 'Thing', 'name': 'Chat local con documentos' },
+        { '@type': 'Thing', 'name': 'RAG integrado' },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'inLanguage': 'es',
+      'name': 'Apps de escritorio de IA local con RAG integrado en 2026',
+      'numberOfItems': 3,
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'AnythingLLM',
+          'description':
+            'RAG integrado más completo: 10+ formatos (PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, sitios web, audio), modelos de embedding intercambiables, espacios de trabajo persistentes, citas por fragmento con números de página. Límite práctico de aproximadamente 5.000 documentos por espacio de trabajo.',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'LM Studio',
+          'description':
+            'Chat con documentos de menor fricción: adjuntos PDF / DOCX / TXT / MD con arrastrar y soltar en cualquier conversación. Modelo de embedding nomic-embed-text v1.5 incluido. Ámbito de conversación (sin concepto de espacio de trabajo). Límite práctico de aproximadamente 30 documentos por chat.',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Jan + extensión de Documentos',
+          'description':
+            'Opción open source: completamente AGPL, cero telemetría por defecto, embeddings solo locales (all-MiniLM-L6-v2 incluido, intercambiable). Soporte para PDF, DOCX, TXT, MD. Ideal para flujos de trabajo sensibles al cumplimiento normativo. Límite práctico de aproximadamente 200 documentos.',
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Inicio',
+          'item': 'https://www.promptquorum.com',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Power Local LLM',
+          'item': 'https://www.promptquorum.com/es/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Apps de IA local con RAG integrado',
+          'item': 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-with-built-in-rag',
+        },
+      ],
+    },
+  },
 }

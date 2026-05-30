@@ -2566,4 +2566,513 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: 'Guía para armar una PC con IA local 2026: 3 niveles de presupuesto',
+    seoTitle: 'PC para IA local 2026: del presupuesto básico a la estación 70B',
+    intro:
+      'La mayoría de las guías para armar una PC con IA local empiezan por la CPU, pero es la GPU y su VRAM lo que decide qué modelos puede ejecutar la máquina — cada otra parte se elige para dar soporte a esa GPU. Esta guía ofrece tres listas de componentes completas para una PC dedicada a LLM locales: una configuración económica para modelos 7B-13B, una configuración media para modelos 14B-33B y una configuración entusiasta para trabajar con modelos 70B. Cada nivel incluye los componentes exactos, el rendimiento esperado y el costo total. Una advertencia sobre los precios: la escasez de chips de memoria de 2026 empujó los precios de las GPU a 1,5-2 veces por encima del precio de lista, lo que eleva el costo de cada configuración aquí respecto a los mismos componentes de hace un año — toma cada cifra como una instantánea de mayo de 2026 y aprovecha el mercado de GPU usadas cuando puedas.',
+    metaDescription:
+      'Tres configuraciones completas de PC para IA local en 2026: económica 7B-13B, media 14B-33B y entusiasta 70B. Listas de componentes exactas, tokens por segundo esperados y costos totales de mayo de 2026.',
+    twitterDescription:
+      'Guía para armar una PC con IA local: tres niveles de presupuesto con listas de componentes completas para modelos de 7B a 70B. El aumento de precios de GPU en 2026 encareció cada configuración — aquí están los totales de mayo de 2026.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.1 8B',
+      'Qwen3 8B',
+      'Mistral 7B',
+      'Llama 3.1 33B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4060 Ti 16 GB',
+      'NVIDIA RTX 4070 Ti Super 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'NVIDIA RTX 5090 32 GB',
+      'AMD Ryzen 7 7700',
+      'AMD Ryzen 9 7900X',
+    ],
+    audience:
+      'Personas que arman una PC específicamente para ejecutar LLM locales y toman su decisión según el nivel de presupuesto y el tamaño de modelo objetivo. Se asume familiaridad con la cuantización y la VRAM como restricción, y con los términos básicos del armado de PC, pero no con los SKU de componentes actuales específicos.',
+    readTime: '14 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'local AI workstation build',
+    targetKeywords: [
+      'armar pc ia local 2026',
+      'guia armado workstation llm local',
+      'mejor pc para ejecutar llm',
+      'lista de componentes workstation ia',
+      'como armar una pc para ia local',
+    ],
+    leadAnswerBlock:
+      '**La mejor PC para IA local es el nivel cuya VRAM de GPU encaja con tu modelo objetivo. Una configuración económica de ~$1.100 ejecuta modelos 7B-13B, una configuración media de ~$2.400 ejecuta modelos 14B-33B y una configuración entusiasta de ~$5.000 ejecuta modelos 70B — con los precios de GPU de 2026 elevando cada total respecto al año anterior.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cómo armo una PC para ejecutar LLM locales en 2026?',
+        answer:
+          'Elige tu nivel según el modelo más grande que quieras ejecutar y luego arma la PC alrededor de la GPU. Una configuración económica (~$1.100) combina una RTX 4060 Ti 16 GB con una CPU Ryzen 7 para modelos 7B-13B. Una configuración media (~$2.400) usa una RTX 4070 Ti Super 16 GB para modelos 14B-33B. Una configuración entusiasta (~$5.000) usa una RTX 5090 32 GB para trabajo con 70B. La escasez de memoria de 2026 elevó los precios de GPU muy por encima del precio de lista, así que cada total es una instantánea de mayo de 2026.',
+        bullets: [
+          'Configuración económica ~$1.100: RTX 4060 Ti 16 GB, ejecuta modelos 7B-13B',
+          'Configuración media ~$2.400: RTX 4070 Ti Super 16 GB, ejecuta modelos 14B-33B',
+          'Configuración entusiasta ~$5.000: RTX 5090 32 GB, ejecuta modelos 70B en Q4',
+          'Los precios de GPU en 2026 son 1,5-2 veces el precio de lista — compra GPU usadas cuando puedas',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Elección del editor', anchor: '#editors-choice' },
+      { label: 'Comparación de niveles', anchor: '#comparison-table' },
+      { label: '¿Qué configuración elegir?', anchor: '#which-build' },
+      { label: 'Configuración económica (~$1.100)', anchor: '#budget-build' },
+      { label: 'Configuración media (~$2.400)', anchor: '#mid-build' },
+      { label: 'Configuración entusiasta (~$5.000)', anchor: '#enthusiast-build' },
+      { label: 'Cómo el aumento de precios de 2026 cambia el armado', anchor: '#price-surge' },
+      { label: 'Diagrama de decisión', anchor: '#decision-flowchart' },
+      { label: 'Dónde comprar los componentes', anchor: '#where-to-buy' },
+      { label: 'Errores frecuentes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**La GPU define el nivel; el resto de la configuración la soporta.** Una PC para IA local se elige primero por la GPU porque la VRAM decide qué modelos corren. Elige el nivel cuya VRAM de GPU encaje con tu modelo objetivo y luego dimensiona la CPU, la RAM y la fuente de alimentación alrededor de eso.',
+          '**Los precios de GPU de 2026 encarecieron cada configuración.** Una escasez de chips de memoria empujó los precios de GPU a 1,5-2 veces por encima del precio de lista. Los totales aquí son instantáneas de mayo de 2026 y son más altos que los mismos componentes de hace un año — aprovecha el mercado de GPU usadas.',
+          '**Configuración económica (~$1.100):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB de RAM, SSD de 1 TB, fuente de 650 W — ejecuta modelos 7B-13B a velocidad usable. La máquina completa más económica para IA local.',
+          '**Configuración media (~$2.400):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB de RAM, SSD de 2 TB, fuente de 850 W — ejecuta modelos 14B-33B y hace que los modelos 7B-14B respondan al instante.',
+          '**Configuración entusiasta (~$5.000):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB de RAM, SSD de 4 TB, fuente de 1000 W — la única configuración de GPU única que cabe un modelo 70B en Q4.',
+          '**La RAM no es un sustituto de la VRAM.** La RAM del sistema permite que un modelo desborde la VRAM, pero un modelo ejecutándose desde la RAM es demasiado lento para uso interactivo. Compra suficiente VRAM para el modelo; compra RAM para el sistema operativo y las herramientas.',
+          '**La fuente de alimentación escala con la GPU.** Una configuración económica necesita 650 W, la media 850 W y la entusiasta 1000 W porque la RTX 5090 sola consume 575 W. Presupuesta la fuente junto con la tarjeta.',
+          '**Las GPU usadas son la apuesta de valor en 2026.** Una RTX 4090 o RTX 4060 Ti usada evita la mayor parte del aumento de precios — compra una tarjeta usada con funcionamiento verificado para mantener bajo el total de la configuración.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Configuración económica (~$1.100):** GPU RTX 4060 Ti 16 GB — ejecuta modelos 7B y la mayoría de los 13B.',
+          '**Configuración media (~$2.400):** GPU RTX 4070 Ti Super 16 GB — ejecuta 14B con comodidad, trabajo ligero con 22B-33B.',
+          '**Configuración entusiasta (~$5.000):** GPU RTX 5090 32 GB — ejecuta 33B con comodidad y 70B en Q4.',
+          '**Regla general de VRAM en Q4_K_M:** aproximadamente 0,6 GB por cada mil millones de parámetros, más 2-4 GB para contexto y herramientas.',
+          '**Guía de RAM del sistema:** 32 GB para la configuración económica, 64 GB para la media, 128 GB para la entusiasta.',
+          '**Fuente de alimentación por nivel:** 650 W económica, 850 W media, 1000 W entusiasta — la RTX 5090 sola consume 575 W.',
+          '**Realidad de precios en 2026:** los precios de GPU son 1,5-2 veces el precio de lista por una escasez de memoria — confirma precios actuales y considera tarjetas usadas.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: 'Elección del editor: la configuración media (~$2.400)',
+        sponsoredSlot: true,
+        content:
+          '**Para la mayoría de quienes arman una PC para IA local, la configuración media es el nivel que equilibra capacidad, costo y margen.** Construida alrededor de una RTX 4070 Ti Super 16 GB, ejecuta cada modelo 14B con espacio de contexto, maneja trabajo ligero con 22B-33B y hace que los modelos 7B-14B respondan al instante — por alrededor de $2.400 en total. Es la configuración que no te frustrará en meses y no necesitará reemplazarse en un año. Baja a la configuración económica solo si tu techo es firmemente modelos 7B-13B; sube a la configuración entusiasta solo si necesitas específicamente trabajar con 70B. La configuración media es la opción predeterminada segura para una máquina que quieres conservar.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Esta elección del editor refleja solo la relación precio-capacidad. PromptQuorum no está inscrito en ningún programa de afiliados y los enlaces a continuación no llevan etiquetas de afiliado — son enlaces de referencia simples que no generan comisión.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4070+Ti+Super+16GB',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'pc-component',
+            priceRange: '1150-1200',
+            label: 'Ver precio de la RTX 4070 Ti Super en Amazon',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti+Super',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'pc-component',
+            priceRange: '1150-1200',
+            label: 'Ver precio de la RTX 4070 Ti Super en Newegg',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Cómo se comparan los tres niveles de configuración en 2026',
+        content:
+          'Las cifras de VRAM y potencia de la GPU son especificaciones del fabricante. Las velocidades de inferencia son estimaciones a nivel de familia de modelos de las pruebas de GPU de PromptQuorum para la GPU del nivel correspondiente. Los totales de configuración son instantáneas en USD de mayo de 2026 — el aumento de precios de GPU de 2026 empujó las tarjetas a 1,5-2 veces el precio de lista, por lo que la línea de GPU domina cada total y varía semana a semana. Comprar la GPU usada reduce cada total.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Para una PC con IA local, la VRAM de la GPU decide qué modelos puede ejecutar la máquina y el resto de la lista de componentes se dimensiona para soportar esa GPU — elige el nivel primero por tamaño de modelo.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Piensa en la configuración como un equipo construido alrededor de un jugador estrella: la GPU. La CPU, la RAM y la fuente de alimentación son el reparto de apoyo — útiles, pero existen para mantener a la GPU funcionando. Elige primero la GPU que necesita tu modelo y luego arma el resto alrededor de ella.',
+          },
+        ],
+        columns: ['Nivel', 'GPU', 'VRAM', 'Ejecuta', 'Fuente', 'Total (mayo 2026)'],
+        rows: [
+          {
+            'Nivel': 'Económica',
+            'GPU': 'RTX 4060 Ti 16 GB',
+            'VRAM': '16 GB',
+            'Ejecuta': 'modelos 7B-13B',
+            'Fuente': '650 W',
+            'Total (mayo 2026)': '~$1.100',
+          },
+          {
+            'Nivel': 'Media',
+            'GPU': 'RTX 4070 Ti Super 16 GB',
+            'VRAM': '16 GB',
+            'Ejecuta': '14B con comodidad, 22B-33B ligero',
+            'Fuente': '850 W',
+            'Total (mayo 2026)': '~$2.400',
+          },
+          {
+            'Nivel': 'Entusiasta',
+            'GPU': 'RTX 5090 32 GB',
+            'VRAM': '32 GB',
+            'Ejecuta': '33B con comodidad, 70B en Q4',
+            'Fuente': '1000 W',
+            'Total (mayo 2026)': '~$5.000',
+          },
+        ],
+      },
+      whichBuild: {
+        id: 'which-build',
+        title: '¿Qué configuración deberías elegir?',
+        content:
+          '**El modelo más grande que quieres ejecutar decide el nivel; tu presupuesto lo confirma.** Encuentra la fila que coincide con tu situación.',
+        columns: ['Tu situación', 'Arma esta'],
+        rows: [
+          { 'Tu situación': 'Ejecuto modelos 7B-13B y quiero la máquina completa más económica', 'Arma esta': 'Configuración económica (~$1.100)' },
+          { 'Tu situación': 'Quiero una primera PC para IA local y no sé hasta dónde llegaré', 'Arma esta': 'Configuración económica, o la media para tener margen' },
+          { 'Tu situación': 'Ejecuto modelos 14B constantemente y los quiero al instante', 'Arma esta': 'Configuración media (~$2.400)' },
+          { 'Tu situación': 'Hago trabajo ligero con 22B-33B y quiero una máquina duradera', 'Arma esta': 'Configuración media (~$2.400)' },
+          { 'Tu situación': 'Ejecuto modelos 33B intensivamente o quiero mucho margen futuro', 'Arma esta': 'Configuración entusiasta (~$5.000)' },
+          { 'Tu situación': 'Necesito una máquina de GPU única que ejecute modelos 70B en Q4', 'Arma esta': 'Configuración entusiasta (~$5.000)' },
+          { 'Tu situación': 'Quiero mantener el total bajo a pesar del aumento de 2026', 'Arma esta': 'Cualquier nivel — compra la GPU usada' },
+          { 'Tu situación': 'No estoy seguro y quiero la configuración más segura para conservar por años', 'Arma esta': 'Configuración media — la elección del editor' },
+        ],
+      },
+      budgetBuild: {
+        id: 'budget-build',
+        title: 'Configuración económica (~$1.100): RTX 4060 Ti 16 GB',
+        content:
+          '**La configuración económica es la PC completa para IA local más barata y ejecuta cada modelo 7B y la mayoría de los modelos 13B — suficiente capacidad para la mayoría de los usuarios por primera vez.** Está construida alrededor de la RTX 4060 Ti 16 GB, la GPU menos inflada por el aumento de 2026, lo que mantiene el total en un rango razonable.',
+        items: [
+          '**GPU — RTX 4060 Ti 16 GB (~$420-450):** 16 GB de VRAM, 165 W. Ejecuta modelos 7B a aproximadamente 20-25 tok/s y cabe modelos 14B con margen de contexto. La capacidad de 16 GB es la razón para elegirla sobre la versión de 8 GB.',
+          '**CPU — AMD Ryzen 7 7700 (~$250-280):** 8 núcleos, consumo de energía moderado. La CPU hace poco trabajo durante la inferencia de GPU, por lo que un chip de gama media es correcto aquí — no gastes de más en la CPU en este nivel.',
+          '**Placa base — chipset B650 (~$130-160):** soporta el Ryzen 7 y una GPU de tamaño completo en PCIe. No necesitas suministro de energía de gama alta en este nivel.',
+          '**RAM — 32 GB DDR5 (~$90-120):** suficiente para el sistema operativo, las herramientas y un modelo 7B-13B ejecutándose en VRAM. La RAM no es un sustituto de la VRAM — 32 GB es suficiente aquí.',
+          '**Almacenamiento — SSD NVMe de 1 TB (~$70-90):** contiene el sistema operativo y varios modelos (un modelo 7B Q4 pesa aproximadamente 4-5 GB).',
+          '**Fuente de alimentación — 650 W 80+ Gold (~$80-100):** margen cómodo para una GPU de 165 W y una CPU de 8 núcleos.',
+          '**Gabinete y refrigeración — torre media con enfriador de aire tipo torre (~$80-120):** el nivel económico genera poco calor; la refrigeración por aire es suficiente.',
+          '**Por qué armar este nivel:** menor costo de entrada, bajo consumo de energía y suficiente capacidad para los modelos 7B-13B que cubren chat general, ayuda con código y resumen. **Por qué saltarlo:** si ya quieres modelos de 14B o más grandes, comienza en la configuración media.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Compra la RTX 4060 Ti específicamente en su versión de 16 GB. La versión de 8 GB usa el mismo die de GPU y corre a velocidad similar, pero 8 GB no pueden alojar un modelo 14B — la memoria extra es el único propósito de esta elección.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'pc-component',
+            priceRange: '420-450',
+            label: 'Ver precio de la RTX 4060 Ti 16GB en Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=AMD+Ryzen+7+7700',
+            productName: 'AMD Ryzen 7 7700',
+            productCategory: 'pc-component',
+            priceRange: '250-280',
+            label: 'Ver precio del Ryzen 7 7700 en Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=32GB+DDR5+RAM',
+            productName: '32GB DDR5 RAM kit',
+            productCategory: 'pc-component',
+            priceRange: '90-120',
+            label: 'Ver precio de la RAM DDR5 32 GB en Amazon',
+          },
+        ],
+      },
+      midBuild: {
+        id: 'mid-build',
+        title: 'Configuración media (~$2.400): RTX 4070 Ti Super 16 GB',
+        content:
+          '**La configuración media es la elección del editor — ejecuta modelos 14B al instante, maneja trabajo ligero con 22B-33B y es el nivel que armas para conservar.** Está construida alrededor de la RTX 4070 Ti Super 16 GB, suficientemente rápida para que la latencia de respuesta deje de ser perceptible en modelos de clase 14B.',
+        items: [
+          '**GPU — RTX 4070 Ti Super 16 GB (~$1.150-1.200):** 16 GB de VRAM, 285 W. La misma capacidad de modelo que el nivel económico pero mucho más rápida — los modelos 7B-14B responden al instante y el trabajo ligero con 22B-33B es usable.',
+          '**CPU — AMD Ryzen 9 7900X (~$330-370):** 12 núcleos. Más margen que la CPU económica para preparación de datos y ejecución de herramientas junto a la inferencia.',
+          '**Placa base — chipset B650 o X670 (~$180-240):** suministro de energía sólido para la CPU de 12 núcleos y una GPU de 285 W.',
+          '**RAM — 64 GB DDR5 (~$180-230):** espacio para el sistema operativo, ventanas de contexto más grandes y herramientas como un pipeline RAG corriendo junto al modelo.',
+          '**Almacenamiento — SSD NVMe de 2 TB (~$130-170):** contiene una biblioteca de modelos considerable — un modelo 33B Q4 pesa aproximadamente 18-20 GB.',
+          '**Fuente de alimentación — 850 W 80+ Gold (~$120-150):** margen cómodo para la GPU de 285 W y la CPU de 12 núcleos bajo carga sostenida.',
+          '**Gabinete y refrigeración — torre media con AIO de 240-280 mm o enfriador de aire de alta gama (~$150-220):** el nivel medio genera calor moderado; un enfriador de calidad mantiene la CPU estable durante largas sesiones de inferencia.',
+          '**Por qué armar este nivel:** ejecutas modelos 14B constantemente y los quieres al instante, o haces trabajo ligero con 22B-33B y quieres margen. **Por qué saltarlo:** si 7B-13B es suficiente, la configuración económica ahorra más de $1.000; si necesitas 70B, ninguna GPU de 16 GB lo cabe — pasa a la entusiasta.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'La configuración media cabe los mismos modelos que la configuración económica — estás pagando por velocidad, no por capacidad. Arma este nivel si los modelos 14B serán una carga de trabajo diaria y esperar en ellos te molestaría.',
+          },
+          {
+            type: 'note',
+            text: 'Una RTX 4090 24 GB usada a veces se vende cerca del precio de una RTX 4070 Ti Super nueva después del aumento de 2026. Si encuentras una con funcionamiento verificado, agrega 8 GB de VRAM y alcanza modelos 33B — vale la pena comprobarlo antes de comprar la 4070 Ti Super.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4070+Ti+Super+16GB',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'pc-component',
+            priceRange: '1150-1200',
+            label: 'Ver precio de la RTX 4070 Ti Super en Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=AMD+Ryzen+9+7900X',
+            productName: 'AMD Ryzen 9 7900X',
+            productCategory: 'pc-component',
+            priceRange: '330-370',
+            label: 'Ver precio del Ryzen 9 7900X en Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=64GB+DDR5+RAM',
+            productName: '64GB DDR5 RAM kit',
+            productCategory: 'pc-component',
+            priceRange: '180-230',
+            label: 'Ver precio de la RAM DDR5 64 GB en Amazon',
+          },
+        ],
+      },
+      enthusiastBuild: {
+        id: 'enthusiast-build',
+        title: 'Configuración entusiasta (~$5.000): RTX 5090 32 GB',
+        content:
+          '**La configuración entusiasta es la única máquina de GPU única que cabe un modelo 70B en Q4 — su RTX 5090 32 GB es la pieza principal.** Arma este nivel por capacidad de VRAM, no por velocidad bruta; la velocidad es un efecto secundario. El aumento de 2026 golpeó este nivel con más fuerza, por lo que la línea de GPU domina y varía semana a semana.',
+        items: [
+          '**GPU — RTX 5090 32 GB (~$3.650-3.900):** 32 GB de VRAM GDDR7, 575 W. La única tarjeta de consumo que ejecuta un modelo 70B en Q4 sin una configuración de GPU dual. Ejecuta modelos 33B con comodidad y margen.',
+          '**CPU — AMD Ryzen 9 7950X (~$450-520):** 16 núcleos. Suficiente para ejecutar preparación de datos, experimentos de fine-tuning y herramientas junto a inferencia pesada.',
+          '**Placa base — chipset X670E (~$280-380):** suministro de energía robusto y PCIe 5.0, dimensionado para una GPU de 575 W y la CPU de 16 núcleos.',
+          '**RAM — 128 GB DDR5 (~$380-480):** espacio para ventanas de contexto grandes, múltiples modelos cargados a la vez y herramientas — y el margen para descargar un modelo parcialmente a la RAM si es necesario.',
+          '**Almacenamiento — SSD NVMe de 4 TB (~$260-340):** un modelo 70B Q4 pesa aproximadamente 40 GB; una unidad de 4 TB contiene una gran biblioteca de modelos grandes.',
+          '**Fuente de alimentación — 1000 W 80+ Platinum (~$180-240):** necesaria porque la RTX 5090 sola consume 575 W — una unidad de 750 W se vería superada bajo carga. No subestimes esta parte.',
+          '**Gabinete y refrigeración — gabinete de tamaño completo con AIO de 360 mm (~$280-380):** la GPU de 575 W y la CPU de 16 núcleos generan calor real; un enfriador líquido de 360 mm mantiene la CPU estable durante inferencia 70B sostenida.',
+          '**Por qué armar este nivel:** necesitas modelos 33B o 70B, ejecutas inferencia por lotes intensa o quieres una máquina que no necesite reemplazarse por años. **Por qué saltarlo:** para modelos 7B-14B es exagerado — la configuración media ofrece respuestas instantáneas en esos tamaños por menos de la mitad del costo.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'La RTX 5090 consume 575 W por sí sola. Combínala con la fuente de 1000 W de esta lista de componentes — una unidad más pequeña colapsará bajo carga. Confirma que el circuito de tu pared puede suministrar el consumo total antes de armar.',
+          },
+          {
+            type: 'note',
+            text: 'Un modelo 70B en Q4 necesita aproximadamente 39-42 GB de VRAM, así que incluso la RTX 5090 32 GB ejecuta 70B en Q4 solo con cuantización agresiva o descarga parcial a la RAM del sistema. Los 128 GB de RAM de esta configuración le dan a esa descarga el espacio que necesita.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+5090',
+            productName: 'NVIDIA RTX 5090 32GB',
+            productCategory: 'pc-component',
+            priceRange: '3650-3900',
+            label: 'Ver precio de la RTX 5090 en Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=AMD+Ryzen+9+7950X',
+            productName: 'AMD Ryzen 9 7950X',
+            productCategory: 'pc-component',
+            priceRange: '450-520',
+            label: 'Ver precio del Ryzen 9 7950X en Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=1000W+Platinum+power+supply',
+            productName: '1000W 80+ Platinum power supply',
+            productCategory: 'pc-component',
+            priceRange: '180-240',
+            label: 'Ver precio de la fuente 1000 W en Amazon',
+          },
+        ],
+      },
+      priceSurge: {
+        id: 'price-surge',
+        title: 'Cómo el aumento de precios de 2026 cambia los cálculos del armado',
+        content:
+          '**La escasez de chips de memoria de 2026 empujó los precios de GPU a 1,5-2 veces por encima del precio de lista, y dado que la GPU es la línea más grande en cada configuración, elevó cada total respecto al año anterior.** Planifica la configuración alrededor de los precios actuales, no de los precios de lanzamiento.',
+        items: [
+          '**La GPU domina el total.** En los tres niveles, la GPU es el costo individual más alto — el aumento cambia el total de la configuración más que cualquier otra parte.',
+          '**La causa es la memoria, no las GPU.** Una escasez de suministro de GDDR y HBM elevó el costo de cada tarjeta con memoria rápida; cuanta más VRAM, más fuerte fue el golpe. La RTX 5090 pasó de un precio de lanzamiento de $1.999 a aproximadamente $3.650-3.900.',
+          '**Las GPU de gama baja resistieron mejor.** La RTX 4060 Ti 16 GB está cerca de su precio de lista, que es por qué el total de la configuración económica se movió menos.',
+          '**Las GPU usadas son la apuesta de valor.** Una RTX 4060 Ti o RTX 4090 usada evita la mayor parte del aumento — comprar una tarjeta usada con funcionamiento verificado es la forma más simple de reducir el total de la configuración.',
+          '**Las partes que no son GPU se movieron menos.** Los precios de CPU, placa base, SSD y fuente de alimentación subieron moderadamente; la RAM DDR5 también se tensó con la escasez de memoria, pero la GPU sigue siendo la línea a vigilar.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La escasez de memoria de 2026 empujó los precios de GPU a 1,5-2 veces el precio de lista, elevando el total de cada configuración de IA local porque la GPU es la línea individual más grande en la lista de componentes.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'La GPU es la parte más cara de la máquina, y en 2026 la GPU es la parte que se encareció. Hasta que la escasez de memoria se alivie, trata los precios de lanzamiento como historia, compra la GPU de segunda mano cuando puedas y no compres más VRAM de la que necesita tu modelo.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: 'Diagrama de decisión: elige tu configuración en cuatro preguntas',
+        content:
+          '**Cuatro preguntas, en orden, llevan a la mayoría de los armadores a un nivel.**',
+        items: [
+          '**1. ¿Cuál es el modelo más grande que quieres ejecutar?** 7B-13B: configuración económica. 14B-33B: configuración media. 70B: configuración entusiasta.',
+          '**2. ¿Cuál es tu techo de presupuesto estricto?** Alrededor de $1.100: configuración económica. Alrededor de $2.400: configuración media. Alrededor de $5.000: configuración entusiasta.',
+          '**3. ¿GPU nueva o usada?** Una GPU usada con funcionamiento verificado evita la mayor parte del aumento de 2026 — elige usada para bajar el total de cualquier nivel.',
+          '**4. ¿Tu plan de energía y espacio se sostiene?** Confirma que la fuente de alimentación coincide con el nivel (650 W / 850 W / 1000 W) y que el gabinete cabe la GPU y el enfriador antes de pedir las piezas.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Elige una configuración de PC para IA local respondiendo primero el tamaño de modelo más grande, luego el techo de presupuesto, tercero GPU nueva versus usada y por último la planificación de energía y espacio.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Comienza con el modelo más grande que realmente quieres ejecutar y deja que eso defina tu nivel. Luego verifica tu presupuesto, decide si compras la GPU usada y confirma que la fuente de alimentación y el gabinete encajan con las piezas. Hacerlo en ese orden evita una configuración que no puede ejecutar tu modelo.',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Dónde comprar los componentes',
+        content:
+          '**Los grandes minoristas tienen cada pieza de estas configuraciones; el mercado de segunda mano es la fuente de valor específicamente para la GPU.** Los enlaces a continuación son enlaces simples de búsqueda de productos; no llevan etiquetas de afiliado y no generan comisión.',
+        items: [
+          '**Amazon y Newegg:** el stock más amplio de CPUs, RAM, SSDs, fuentes de alimentación y gabinetes. El stock de GPU nuevas es más escaso y tiene el precio del aumento de 2026.',
+          '**Mercado de GPU usadas:** el mejor valor para la línea de GPU — una RTX 4060 Ti, RTX 4070 Ti Super o RTX 4090 usada con funcionamiento verificado evita la mayor parte del aumento.',
+          '**MercadoLibre y tiendas locales de tecnología:** buenas fuentes en Latinoamérica para CPUs, placas base y fuentes de alimentación; también útiles para bundles de CPU más placa base.',
+          '**Compra la GPU primero.** Es la línea más grande y más volátil — asegura la GPU a un precio que aceptes, luego compra las piezas de soporte alrededor de ella.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Debido al aumento de precios de GPU de 2026, cada total en esta guía es una instantánea de mayo de 2026 que se mueve rápidamente. Siempre abre el listado actual del minorista para la GPU antes de armar — su precio ha variado semana a semana y domina el costo de la configuración.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+AI',
+            productName: 'GPUs for local AI builds',
+            productCategory: 'pc-component',
+            priceRange: '420-3900',
+            label: 'Explorar GPU en Amazon',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=CPU+AMD+Ryzen',
+            productName: 'AMD Ryzen CPUs',
+            productCategory: 'pc-component',
+            priceRange: '250-520',
+            label: 'Explorar CPU Ryzen en Newegg',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=DDR5+RAM+kit',
+            productName: 'DDR5 RAM kits',
+            productCategory: 'pc-component',
+            priceRange: '90-480',
+            label: 'Explorar RAM DDR5 en Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=NVMe+SSD+2TB',
+            productName: 'NVMe SSDs',
+            productCategory: 'pc-component',
+            priceRange: '70-340',
+            label: 'Explorar SSD NVMe en Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=850W+power+supply',
+            productName: 'ATX power supplies',
+            productCategory: 'pc-component',
+            priceRange: '80-240',
+            label: 'Explorar fuentes de alimentación en Amazon',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores frecuentes al armar una PC para IA local',
+        items: [
+          '**Elegir la CPU antes que la GPU.** La GPU decide qué modelos ejecuta la máquina; la CPU hace poco durante la inferencia. Elige primero la GPU y luego dimensiona la CPU para soportarla.',
+          '**Comprar RAM del sistema en lugar de VRAM.** La RAM permite que un modelo desborde la VRAM, pero un modelo ejecutándose desde la RAM es demasiado lento para uso interactivo. Compra suficiente VRAM para el modelo; compra RAM solo para el sistema operativo y las herramientas.',
+          '**Subestimar la fuente de alimentación.** La RTX 5090 sola consume 575 W. Una fuente de alimentación que colapsa bajo carga es peor que una GPU más lenta que corre establemente — ajusta la fuente al nivel.',
+          '**Anclarse en el precio de lista de la GPU.** El aumento de 2026 significa que los precios de lanzamiento ya no reflejan la realidad. Presupuesta la GPU contra el precio actual del minorista y considera el mercado de segunda mano.',
+          '**Comprar la RTX 4060 Ti de 8 GB para la configuración económica.** Comparte nombre con la versión de 16 GB pero no puede alojar un modelo 14B. Confirma la variante de 16 GB en el listado.',
+          '**Sobredimensionar para modelos 7B.** Si los modelos 7B cubren tu caso de uso, la configuración entusiasta desperdicia miles de dólares y cientos de vatios. Ajusta el nivel al modelo, no al presupuesto que casualmente tienes.',
+          '**Saltarse la planificación del gabinete y la refrigeración.** Una GPU de 575 W más una CPU de 16 núcleos genera calor real. Confirma que el gabinete cabe la GPU y el enfriador y tiene flujo de aire antes de pedir las piezas.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[Mejor guía de compra de GPU para LLM locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: precios de GPU de mayo de 2026 y el aumento de 1,5-2 veces sobre el precio de lista usado para los totales de configuración aquí.',
+          '[Armado de workstation para LLM local](/es/local-llms/local-llm-workstation-build) — PromptQuorum: lista de componentes, refrigeración y guía de fuente de alimentación para la workstation 70B de GPU dual detrás del nivel entusiasta.',
+          '[Especificaciones de NVIDIA GeForce RTX serie 40 y 50](https://www.nvidia.com/en-us/geforce/graphics-cards/) — Cifras oficiales de capacidad de VRAM y potencia (TGP) para la RTX 4060 Ti, 4070 Ti Super y 5090.',
+          '[PCPartPicker](https://pcpartpicker.com) — Precios de componentes en vivo para CPU AMD Ryzen, RAM DDR5, SSD NVMe y fuentes de alimentación a mayo de 2026.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Cuánto cuesta armar una PC para IA local en 2026?',
+            a: 'Una PC para IA local económica cuesta aproximadamente $1.100, una configuración media aproximadamente $2.400 y una configuración entusiasta 70B aproximadamente $5.000. Estas son instantáneas de mayo de 2026 — la escasez de chips de memoria de 2026 empujó los precios de GPU a 1,5-2 veces por encima del precio de lista, y dado que la GPU es la línea más grande en cada configuración, elevó cada total respecto a los mismos componentes de hace un año.',
+          },
+          {
+            q: '¿Qué GPU debo poner en una PC para IA local?',
+            a: 'Elige la GPU según tu modelo objetivo más grande. Una RTX 4060 Ti 16 GB es adecuada para una configuración económica con modelos 7B-13B, una RTX 4070 Ti Super 16 GB para una configuración media con modelos 14B-33B y una RTX 5090 32 GB para una configuración entusiasta con trabajo en 70B. La GPU decide qué modelos puede ejecutar la máquina, por lo que se elige primero y el resto de la lista de componentes se construye alrededor de ella.',
+          },
+          {
+            q: '¿Cuánta RAM necesito para una PC con IA local?',
+            a: 'Planifica 32 GB para una configuración económica, 64 GB para una media y 128 GB para una entusiasta. La RAM del sistema no es un sustituto de la VRAM — un modelo ejecutándose desde la RAM es demasiado lento para uso interactivo. La RAM es para el sistema operativo, el contexto y las herramientas; compra suficiente VRAM en la GPU para el modelo en sí.',
+          },
+          {
+            q: '¿Qué fuente de alimentación necesita una PC con IA local?',
+            a: 'Ajusta la fuente de alimentación al nivel: 650 W para la configuración económica, 850 W para la media y 1000 W para la entusiasta. El nivel entusiasta necesita 1000 W porque la RTX 5090 sola consume 575 W. Una fuente de alimentación subdimensionada causa inestabilidad bajo carga, así que no recortes en esta parte.',
+          },
+          {
+            q: '¿Debo comprar los componentes de GPU nuevos o usados en 2026?',
+            a: 'Compra la GPU usada cuando puedas y las demás partes nuevas. El aumento de 2026 empujó los precios de GPU nuevas a 1,5-2 veces por encima del precio de lista, pero el mercado de segunda mano evitó la mayor parte — una RTX 4060 Ti, RTX 4070 Ti Super o RTX 4090 usada con funcionamiento verificado reduce el total de la configuración significativamente. Las CPU, RAM, SSD y fuentes de alimentación es mejor comprarlas nuevas.',
+          },
+          {
+            q: '¿Puede una configuración de GPU única ejecutar un modelo 70B?',
+            a: 'Sí, la configuración entusiasta puede. Una RTX 5090 32 GB es la única tarjeta de consumo individual que cabe un modelo 70B en Q4, que necesita aproximadamente 39-42 GB de VRAM — por lo que ejecuta 70B con cuantización agresiva o descarga parcial a la RAM del sistema. Los 128 GB de RAM de la configuración entusiasta le dan a esa descarga el espacio que necesita.',
+          },
+          {
+            q: '¿Vale la pena la configuración media respecto al costo extra sobre la económica?',
+            a: 'Sí, si ejecutas modelos de clase 14B con regularidad. Las configuraciones económica y media caben modelos similares, pero la RTX 4070 Ti Super de la configuración media es mucho más rápida — los modelos 14B responden al instante en lugar de lentos, y el trabajo ligero con 22B-33B se vuelve usable. Si tu techo es firmemente modelos 7B-13B, la configuración económica ahorra más de $1.000 y es la mejor relación calidad-precio.',
+          },
+          {
+            q: '¿Necesito una CPU Threadripper para una PC con IA local?',
+            a: 'No. Una CPU Ryzen de consumo es suficiente para las tres configuraciones de esta guía — un Ryzen 7 para el nivel económico, un Ryzen 9 para los niveles medio y entusiasta. Un Threadripper solo vale su costo para una máquina de GPU dual que ejecuta fine-tuning e inferencia al mismo tiempo, lo que está más allá de una configuración de GPU única.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Elige la GPU para tu configuración con la guía de compra completa](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — ocho GPU en cuatro niveles de presupuesto, con precios de mayo de 2026 y el cálculo del aumento.',
+          '[Ve la configuración de workstation 70B de GPU dual para uso en producción](/es/local-llms/local-llm-workstation-build) — el nivel multiusuario de $4.000-6.000 más allá de la configuración entusiasta de esta guía.',
+          '[Compara armar una PC contra rentar GPU en la nube](/es/power-local-llm/cloud-gpu-rental-guide-2026) — cuándo rentar supera tener hardware propio para cómputo ocasional.',
+          '[Calcula la VRAM que necesita cada tamaño de modelo antes de armar](/es/local-llms/how-much-vram-local-llm) — el método completo de VRAM por tamaño de modelo detrás de las elecciones de nivel aquí.',
+          '[Considera una Mac como alternativa a una configuración de PC](/es/power-local-llm/best-mac-for-local-ai-2026) — cuándo el Apple Silicon con memoria unificada supera a una PC con GPU dedicada para IA local.',
+        ],
+      },
+    },
+  },
 }

@@ -602,4 +602,146 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: '2026年最便宜LLM微调云GPU（每小时不到1美元）', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour', inLanguage: 'zh' },
   },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Cost & Comparisons',
+    type: 'comparison',
+    title: 'Mejor GPU cloud para fine-tuning de LLMs por menos de $1/hora (2026)',
+    seoTitle: 'GPU cloud fine-tuning LLM menos $1/hora 2026',
+    metaDescription: 'Fine-tuning de Llama 3.1 8B o Qwen2.5 14B con QLoRA por menos de $1/hora en RunPod, Vast.ai o Lambda Labs. Opciones de GPU más baratas, costes reales y comparativa.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
+    leadAnswerBlock: '**Para fine-tuning de Llama 3.1 8B o Qwen2.5 14B con QLoRA en 2026, un A40 48GB en RunPod spot a $0.44/hora o una RTX 4090 24GB en Vast.ai a $0.32–0.48/hora funcionan bien por menos de $1/hora. Un run completo de fine-tuning cuesta $2–8 en total.**',
+    quickAnswerTop: {
+      question: '¿Cuál es la GPU cloud más barata para fine-tuning de un LLM local?',
+      answer: 'RunPod A40 48GB spot a $0.44/hora o Vast.ai RTX 4090 a $0.32–0.48/hora son las opciones más baratas para fine-tuning QLoRA de modelos 7B–14B. Un run típico dura 2–4 horas, con un coste total de $1–2.',
+      bullets: [
+        'RunPod RTX 4090 (spot): $0.28–0.44/hora — mejor para 7B QLoRA',
+        'Vast.ai RTX 4090: $0.32–0.48/hora — mercado de pujas, más barato cuando disponible',
+        'RunPod A40 48GB (spot): $0.44/hora — ideal para 14B y 30B QLoRA',
+        'Lambda Labs A10G 24GB: $0.60/hora — fiable bajo demanda, sin interrupciones spot',
+        'Google Colab Pro (T4): ~$0.36/hora equivalente — válido para 7B pero lento para modelos más grandes',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Fine-tuning QLoRA de modelos 7B necesita ~10–14 GB VRAM — RTX 4090 (24 GB) ideal',
+          'Fine-tuning QLoRA de modelos 14B necesita ~20–28 GB VRAM — A40 48GB o A100 80GB',
+          'Instancias spot de RunPod: GPU cloud más barata fiable — RTX 4090 a $0.28–0.44/hora',
+          'Vast.ai: mercado de pujas — se puede conseguir RTX 3090 (24 GB) por $0.20–0.30/hora con paciencia',
+          'Run completo (1K pasos, 1K muestras): 2–4 horas a $0.44/hora = $0.88–$1.76',
+          'Usa Unsloth + Hugging Face PEFT para fine-tuning 2× más rápido en la misma GPU',
+        ],
+      },
+      rankedList: {
+        title: 'Mejores plataformas cloud GPU para fine-tuning de LLMs por menos de $1/hora',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'RunPod spot (RTX 4090 a $0.28–0.44/hora) y Vast.ai (RTX 4090 a $0.32–0.48/hora en pujas) son las opciones de GPU cloud más baratas para fine-tuning QLoRA de modelos 7B–14B en 2026.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'El fine-tuning adapta un modelo de IA preentrenado a tus datos específicos usando QLoRA — que congela la mayor parte del modelo en forma comprimida y solo entrena capas adaptadoras pequeñas, reduciendo el uso de VRAM en 4–8×. Esto hace asequible el fine-tuning en GPUs alquiladas por unos pocos dólares.',
+          },
+        ],
+        rankedItems: [
+          {
+            rank: 1,
+            title: 'RunPod — Mejor en general (Spot + Bajo demanda)',
+            content: 'RunPod ofrece la mejor combinación de precio, fiabilidad y UX para desarrolladores en fine-tuning. Spot RTX 4090 (24 GB): $0.28–0.44/hora. Spot A40 48GB: $0.44/hora. Bajo demanda RTX 4090: $0.74/hora. Admite volúmenes de almacenamiento persistentes, plantillas Docker (Axolotl, Unsloth preinstalados) y comprobaciones de salud de GPU. Plantilla preconfigurada: "Unsloth + Llama Factory" — sin tiempo de configuración.',
+            affiliateLinks: [
+              { label: 'RunPod GPU Cloud (afiliado)', url: 'https://www.runpod.io' },
+            ],
+          },
+          {
+            rank: 2,
+            title: 'Vast.ai — Mercado spot más barato',
+            content: 'Vast.ai es un mercado P2P de GPUs donde vendedores individuales fijan los precios. Puedes pujar por instancias RTX 4090 a $0.32–0.48/hora o RTX 3090 (24 GB) a $0.20–0.32/hora. Ahorro sobre RunPod: 20–40%. Inconvenientes: la fiabilidad del host varía; comprueba checksums antes de comenzar. No recomendado para runs de más de 12 horas sin estrategia de checkpoint.',
+            affiliateLinks: [
+              { label: 'Vast.ai GPU Marketplace (afiliado)', url: 'https://vast.ai' },
+            ],
+          },
+          {
+            rank: 3,
+            title: 'Lambda Labs — Bajo demanda más fiable',
+            content: 'Lambda Labs Cloud proporciona GPUs bajo demanda sin riesgo spot. Precios: A10G 24GB a $0.60/hora, A100 40GB a $1.29/hora. Para un run de fine-tuning de 4 horas en A10G: $2.40 en total. Preferido por equipos que necesitan disponibilidad garantizada y entornos reproducibles.',
+            affiliateLinks: [
+              { label: 'Lambda Labs Cloud (afiliado)', url: 'https://lambdalabs.com' },
+            ],
+          },
+        ],
+      },
+      costCalculator: {
+        title: 'Estimaciones reales de costes de fine-tuning',
+        content: 'Costes reales para escenarios comunes de fine-tuning con Unsloth + QLoRA:',
+        tableData: {
+          headers: ['Tarea', 'GPU necesaria', 'Duración', 'Plataforma', 'Coste total'],
+          rows: [
+            ['Llama 3.1 8B QLoRA, 1K muestras, 1K pasos', 'RTX 4090 (24 GB)', '~2 horas', 'RunPod spot ($0.44/hora)', '~$0.88'],
+            ['Qwen2.5 14B QLoRA, 5K muestras, 3K pasos', 'A40 48GB', '~5 horas', 'RunPod spot ($0.44/hora)', '~$2.20'],
+            ['Llama 3.1 70B QLoRA-4bit, 1K muestras', 'A100 80GB', '~8 horas', 'RunPod ($1.49/hora)', '~$11.92'],
+            ['Qwen2.5-Coder 7B, dataset SQL, 10K pasos', 'RTX 3090 (24 GB)', '~4 horas', 'Vast.ai ($0.28/hora)', '~$1.12'],
+          ],
+        },
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Puedo hacer fine-tuning de un modelo 14B por menos de $1?',
+            a: 'Un run completo de fine-tuning de alta calidad en un modelo 14B tarda un mínimo de 4–8 horas, costando $1.76–$3.52 en un A40 spot de RunPod ($0.44/hora). Menos de $1 es alcanzable para un run rápido de prueba de concepto (500–1000 pasos de entrenamiento). Presupuesta $3–8 para un job de fine-tuning de producción en un modelo 14B.',
+          },
+          {
+            q: '¿Qué software necesito para fine-tuning QLoRA en una GPU cloud?',
+            a: 'La configuración más rápida: usa la plantilla Unsloth preconfigurada de RunPod (entorno Python con CUDA, PyTorch, Hugging Face PEFT y Unsloth preinstalados). Para configuración manual: instala Python 3.11+, torch, transformers, peft, trl y unsloth. Tiempo de configuración con la plantilla: menos de 5 minutos.',
+          },
+          {
+            q: '¿Vale la pena el fine-tuning frente a usar un modelo base más grande?',
+            a: 'Para tareas específicas de dominio (notas médicas, documentos legales, formatos específicos de empresa), hacer fine-tuning de un modelo 7B–14B a menudo supera a un modelo genérico de 70B a una fracción del coste de inferencia. El punto óptimo: hacer fine-tuning cuando tienes más de 500 ejemplos específicos del dominio y quieres formato de salida consistente.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Cuál es la GPU cloud más barata para fine-tuning de un LLM local?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'RunPod RTX 4090 spot a $0.28–0.44/hora y Vast.ai RTX 4090 a $0.32–0.48/hora. Un run típico cuesta $1–2 en total.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Puedo hacer fine-tuning de un modelo 14B por menos de $1?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Un run de prueba de concepto (500–1000 pasos) cuesta menos de $1. Un job de fine-tuning de producción en un modelo 14B cuesta $3–8 en total.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Mejor GPU cloud para fine-tuning de LLMs por menos de $1/hora 2026',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'RunPod', description: 'Mejor en general — RTX 4090 spot $0.28–0.44/hora, plantillas Unsloth' },
+        { '@type': 'ListItem', position: 2, name: 'Vast.ai', description: 'Mercado spot más barato — RTX 4090 $0.32–0.48/hora en pujas' },
+        { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: 'Bajo demanda más fiable — A10G 24GB $0.60/hora' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'Mejor GPU cloud para fine-tuning de LLMs por menos de $1/hora (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/es/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour', inLanguage: 'es' },
+  },
 }

@@ -1851,4 +1851,381 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Creative & Roleplay',
+    title: 'LLMs locales sin censura para escritura creativa: cuándo los escritores los necesitan (2026)',
+    seoTitle: 'LLMs locales sin censura para escritura creativa 2026',
+    intro:
+      'Los LLMs locales sin censura permiten a los escritores de ficción generar contenido adulto, moralmente complejo y oscuro que los servicios en la nube rechazan, sin que los datos abandonen tu máquina. Esta guía cubre qué modelos usar, cómo configurarlos mediante Ollama o LM Studio, las responsabilidades éticas genuinas que aplican incluso cuando no hay aplicación de términos de servicio, y los casos de uso específicos donde los modelos sin censura son apropiados frente a donde no lo son.',
+    metaDescription:
+      'LLMs locales sin censura para escritura creativa: qué modelos usar, configuración en Ollama, responsabilidades éticas, casos de uso apropiados y los límites que los escritores deben mantener siempre.',
+    twitterDescription:
+      'LLMs locales sin censura para escritores de ficción: qué modelos, configuración en Ollama y la ética real — cuándo son apropiados y qué responsabilidades siguen teniendo los escritores.',
+    current_models_mentioned: [
+      'Hermes 3 Llama 3.3',
+      'Dolphin 3.0 Mistral',
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Mistral Large',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      'Escritores de ficción, novelistas, diseñadores de narrativa para videojuegos y profesionales creativos que necesitan LLMs locales capaces de generar contenido adulto o oscuro sin rechazos de servicios en la nube, y que quieren entender sus responsabilidades éticas en ese uso.',
+    readTime: '13 min de lectura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'uncensored local LLM escritura creativa',
+    targetKeywords: [
+      'llm local sin censura escritura creativa',
+      'modelos ollama sin censura',
+      'hermes 3 escritura creativa',
+      'dolphin mistral sin censura configuracion',
+      'llm local ficcion oscura',
+      'etica ia escritura sin censura',
+    ],
+    leadAnswerBlock:
+      '**Los LLMs locales sin censura son apropiados para escritores de ficción que necesitan generar personajes moralmente complejos, temas oscuros, violencia, contenido romántico adulto o voces de narradores poco fiables que los modelos en la nube se niegan a producir. Son apropiados únicamente cuando el resultado se usa para ficción creativa con una audiencia adulta — no como herramienta para producir contenido dañino en el mundo real, representaciones no consentidas de personas reales o contenido que involucre a menores en contextos sexuales. Los modelos que se ajustan a la mayoría de los casos de uso de escritura de ficción en 2026 son Hermes 3 Llama 3.3 (menos rechazos, fuerte seguimiento de instrucciones) y Dolphin 3.0 Mistral (rango sin censura más amplio, menor huella de memoria). Ambos se ejecutan completamente en local a través de Ollama o LM Studio sin que los datos abandonen tu máquina. Las responsabilidades éticas que aplican al usar estos modelos no son cero — los escritores que trabajan con modelos sin censura siguen teniendo obligaciones respecto a la distribución, los menores y las personas reales que ninguna configuración local elimina.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué LLMs locales sin censura deben usar los escritores de ficción en 2026?',
+        answer:
+          'Hermes 3 Llama 3.3 es el mejor modelo sin censura de propósito general para ficción en 2026 — fuerte seguimiento de instrucciones, buena diferenciación de voz de personajes, menos rechazos arbitrarios sin la tendencia agresiva que producen algunos fine-tunes completamente sin censura. Dolphin 3.0 Mistral es la alternativa más ligera para sistemas de 16–24 GB. Para escritores que necesitan contenido oscuro ocasional en lugar de salida sin censura persistente, los modelos estándar con ajuste de instrucciones (Llama 3.3 70B, Qwen3 32B) con prompts bien estructurados generan la mayoría del contenido literario adulto sin requerir un fine-tune sin censura. La línea ética de base que aplica independientemente del modelo: sin contenido que involucre a menores en contextos sexuales, sin representaciones no consentidas de personas reales identificables, y consideración cuidadosa antes de distribuir públicamente.',
+        bullets: [
+          'Hermes 3 Llama 3.3 — mejor modelo sin censura de propósito general para ficción; fuerte seguimiento de instrucciones, menos rechazos arbitrarios.',
+          'Dolphin 3.0 Mistral — opción más ligera para sistemas de 16–24 GB; rango sin censura más amplio que Hermes 3.',
+          'Los modelos estándar Llama 3.3 70B y Qwen3 32B generan la mayoría del contenido literario adulto con prompts estructurados — no se requiere fine-tune sin censura para muchos casos de uso.',
+          'Todos los modelos sin censura se ejecutan completamente en local a través de Ollama o LM Studio — ningún dato abandona tu máquina.',
+          'La línea ética de base aplica independientemente del modelo: sin menores, sin representaciones no consentidas de personas reales.',
+          'Responsabilidad de distribución: lo que haces con la salida tiene el mismo peso legal que cualquier otro contenido de autoría propia.',
+          'Para frontends de roleplay, SillyTavern y Agnai se conectan limpiamente con los modelos de Ollama sin censura.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Qué significa realmente "sin censura"', anchor: '#what-uncensored-means' },
+      { label: 'Cómo hemos probado', anchor: '#how-we-tested' },
+      { label: 'Cuándo son apropiados los modelos sin censura', anchor: '#appropriate-use' },
+      { label: 'Cuándo no lo son', anchor: '#inappropriate-use' },
+      { label: 'Comparación de modelos', anchor: '#models' },
+      { label: 'Configuración: Ollama y LM Studio', anchor: '#setup' },
+      { label: 'Responsabilidades éticas que permanecen', anchor: '#ethics' },
+      { label: 'Flujo de trabajo práctico', anchor: '#workflow' },
+      { label: 'Errores comunes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
+    gammaDescription: 'La presentación a continuación cubre: qué significa realmente el fine-tuning "sin censura" (eliminación de RLHF frente a cero restricciones); una tabla comparativa de 5 modelos (de Hermes 3 Llama 3.3 a Dolphin 3.0 Mistral 7B con VRAM, tasa de rechazo y calidad de instrucciones); casos de uso apropiados e inapropiados; comandos de configuración de Ollama; responsabilidades éticas que permanecen independientemente de la configuración local; y 5 errores comunes. Descarga el PDF como tarjeta de referencia para escritura creativa con LLM sin censura.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**"Sin censura" significa que el modelo tiene un fine-tuning de seguridad RLHF reducido, no que no tenga ninguna restricción.** Los fine-tunes sin censura siguen el formato de instrucciones, mantienen la consistencia de los personajes y pueden dirigirse con prompts. No son sistemas de "todo permitido".',
+          '**Hermes 3 Llama 3.3 es la mejor opción de propósito general para escritores de ficción en 2026.** Menos rechazos arbitrarios, fuerte seguimiento de instrucciones, buena diferenciación de voz de personajes. La opción correcta para escritores que quieren la capacidad sin la salida agresiva que producen algunos modelos completamente sin censura.',
+          '**Los modelos estándar con ajuste de instrucciones gestionan la mayoría del contenido literario adulto con buenos prompts.** La violencia, la complejidad moral, la psicología oscura y los temas adultos en prosa literaria raramente requieren un fine-tune sin censura. Lo que rechazan es el contenido sexual explícito y las descripciones detalladas de daño real. Identifica en qué categoría cae tu obra antes de cambiar de modelo.',
+          '**Ejecutar en local significa que ningún dato abandona tu máquina.** No aplica ningún término de servicio de la nube. Ningún contenido se registra, analiza ni usa para entrenamiento. Esta es la razón estructural principal por la que los escritores usan modelos locales sin censura — privacidad y sin restricciones de uso en ficción.',
+          '**Las responsabilidades éticas no desaparecen porque no haya aplicación de los ToS.** Los escritores que distribuyen ficción producida con modelos sin censura llevan las mismas responsabilidades legales que cualquier otro autor: las leyes sobre menores, personas reales, incitación y obscenidad específica de la jurisdicción aplican independientemente del método de generación.',
+          '**Dolphin 3.0 Mistral es la opción más ligera para equipos de 16–24 GB.** Rango de salida sin censura más amplio que Hermes 3, pero seguimiento de instrucciones más débil en escenas complejas. Adecuado para ficción corta, exploración de prompts y pruebas de estilo.',
+          '**SillyTavern y Agnai se conectan limpiamente con los modelos de Ollama sin censura.** Apunta cualquiera de los dos frontends al endpoint compatible con OpenAI de Ollama y selecciona el modelo sin censura. No se requiere configuración adicional.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Modelos sin censura probados:** Hermes 3 Llama 3.3 (principal), Dolphin 3.0 Mistral (secundario).',
+          '**Backends:** Ollama (principal), LM Studio (alternativa para configuración con GUI).',
+          '**Hardware:** Hermes 3 70B en Q4 requiere ~42 GB; Dolphin 3.0 7B funciona con 8 GB; Dolphin 3.0 24B funciona con ~16 GB.',
+          '**Frontends:** SillyTavern, Agnai, RisuAI se conectan todos con los modelos de Ollama sin censura mediante el endpoint compatible con OpenAI.',
+          '**Privacidad:** todo en local — sin llamadas a API en la nube, sin registros, sin recolección de datos de entrenamiento.',
+          '**Límites éticos absolutos:** ningún contenido sexual que involucre a menores (prohibición absoluta), ninguna representación sexual no consentida de personas reales identificables, ningún contenido diseñado para facilitar violencia real.',
+          '**Distribución:** el contenido que publicas lleva responsabilidad de autoría independientemente del método de generación.',
+        ],
+      },
+      whatUncensoredMeans: {
+        id: 'what-uncensored-means',
+        title: 'Qué significa realmente "sin censura"',
+        content:
+          '**"Sin censura" en el contexto de los fine-tunes de LLM local significa entrenamiento de seguridad RLHF (aprendizaje por refuerzo a partir de retroalimentación humana) reducido, no la eliminación de todas las restricciones del modelo.** Los modelos estándar con ajuste de instrucciones se entrenan con capas RLHF que les hacen rechazar categorías específicas de contenido: contenido sexual explícito, violencia detallada, psicología oscura que se asemeja a una plantilla de daño real. Los fine-tunes sin censura (Hermes 3, Dolphin, Wizard, Erebus) eliminan o reducen estas capas RLHF del modelo base, dejando intacta la capacidad de seguimiento de instrucciones pero eliminando los comportamientos de rechazo. El resultado es un modelo que sigue tus prompts de ficción a través de contenido oscuro sin redirigir, moralizar ni detenerse a mitad de escena.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Sin censura no significa ingobernable. Los modelos sin censura siguen la estructura de los prompts, respetan los límites de palabras, mantienen la voz de los personajes y responden a las instrucciones de revisión. La diferencia es que no añaden advertencias de contenido no solicitadas, no rechazan direcciones moralmente oscuras ni rompen el personaje para señalar que una escena representa daño. Usa prompts estructurados de las plantillas de escritura de ficción como harías con cualquier otro modelo — la distinción entre system prompt y user prompt importa más que el nivel de descensurado del modelo. Consulta [System Prompt vs User Prompt](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) para entender por qué.',
+          },
+        ],
+        items: [
+          '**Qué se elimina:** los comportamientos de rechazo para categorías específicas de contenido (contenido sexual explícito, violencia gráfica, contenido psicológico oscuro).',
+          '**Qué se conserva:** el seguimiento de instrucciones, la consistencia de los personajes, la adherencia a la estructura de los prompts, la calidad lingüística.',
+          '**Grados de descensurado:** Hermes 3 está selectivamente sin censura (contenido adulto sí, pero conserva algunas barreras para el contenido extremo). La serie Dolphin está más ampliamente sin censura. Los modelos completamente abliterados (Wizard-Uncensored, Erebus) tienen la eliminación más agresiva de barreras — y el seguimiento de instrucciones más débil para tareas de ficción complejas.',
+          '**La calidad del modelo base importa:** el descensurado degrada la calidad de las instrucciones si el modelo base es débil. Hermes 3 sobre Llama 3.3 70B conserva el fuerte seguimiento de instrucciones de Llama 3.3; Dolphin 3.0 sobre Mistral 7B está limitado por la base más pequeña.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Los fine-tunes de LLM local sin censura eliminan las capas de rechazo de seguridad RLHF mientras conservan la capacidad de seguimiento de instrucciones — siguen las indicaciones creativas oscuras sin redirigir, moralizar ni detenerse a mitad de escena.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Un modelo estándar como Llama 3.3 70B se detiene a mitad de una escena que representa tortura, el monólogo de un villano moralmente complejo o contenido romántico explícito, y rechaza o suaviza la salida. Hermes 3 (la versión sin censura sobre la misma base) sigue tu prompt a través de la misma escena al mismo nivel de calidad sin interrupciones. La calidad de la prosa es equivalente; la diferencia está en la capa de rechazo.',
+          },
+        ],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: 'Cómo hemos probado',
+        content:
+          'Los veredictos de los modelos en esta guía se basan en una pequeña prueba cualitativa — un indicador de dirección, no un benchmark revisado por pares. Para un tema donde los lectores deciden si confiar en las recomendaciones de modelos sobre un asunto sensible, la transparencia sobre el método es importante.',
+        items: [
+          '**Conjunto de prompts:** 10 prompts en 5 categorías — monólogo del villano, escena de romance adulto, violencia gráfica en ficción de guerra, narrador moralmente complejo, escena psicológica oscura (2 prompts por categoría).',
+          '**Ejecuciones por modelo:** cada prompt ejecutado 3 veces por modelo.',
+          '**Tasa de rechazo:** porcentaje de ejecuciones donde el modelo rechazó, redirigió o suavizó el contenido solicitado sin instrucción.',
+          '**Medición de deriva:** porcentaje de ejecuciones donde el modelo añadió escalada no solicitada — extremidad gratuita más allá de lo que el prompt especificaba.',
+          '**Backend:** Ollama 0.5+ con cuantización Q4_K_M para todos los modelos.',
+          '**Restricción de honestidad:** prueba cualitativa pequeña. Los resultados indican diferencias de dirección entre modelos, no una medición numérica precisa. Trata los valores de Deriva hacia lo Extremo y Tasa de Rechazo de la tabla como juicios representativos.',
+        ],
+      },
+      appropriateUse: {
+        id: 'appropriate-use',
+        title: 'Cuándo los modelos sin censura son apropiados para la ficción',
+        content:
+          '**Los modelos sin censura son apropiados cuando tu ficción genuinamente necesita contenido que los servicios en la nube rechazan, tu audiencia es adulta y el propósito es la expresión creativa.** La mayoría de los escritores de ficción recurren a modelos sin censura para uno o más de estos casos de uso específicos.',
+        items: [
+          '**Psicología y monólogos de villanos:** personajes villanos moralmente coherentes que no son interrumpidos por el modelo que rompe el personaje para añadir advertencias a mitad de monólogo.',
+          '**Contenido romántico y sexual adulto:** escenas explícitas entre personajes ficticios adultos en romance, erótica o ficción literaria que requieren contenido sexual que los servicios en la nube bloquean.',
+          '**Violencia gráfica en ficción de género:** novelas de guerra, thrillers de crimen, terror — escenas donde la violencia es fundamental para el impacto emocional y suavizarla destruye la escena.',
+          '**Trauma y oscuridad psicológica:** narrativas de supervivientes, ficción sobre adicciones, historias de abuso — contenido que requiere una representación sin filtros para tener peso auténtico.',
+          '**Narradores moralmente poco fiables:** narradores que están equivocados, que racionalizan el daño, que son crueles o intolerantes dentro de la ficción — personajes que requieren que el modelo exprese puntos de vista que normalmente rechazaría.',
+          '**Roleplay oscuro y ficción colaborativa:** escenarios de larga duración con conflictos, complejidad moral y temas adultos donde un modelo estándar rompe la ficción para insertar rechazos.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Antes de cambiar a un modelo sin censura, prueba tu prompt en un modelo estándar con ajuste de instrucciones. Llama 3.3 70B y Qwen3 32B con un system prompt bien estructurado y restricciones de escena generan la mayoría del contenido literario adulto sin rechazos. Los fine-tunes sin censura añaden mayor valor para el contenido sexual explícito y las representaciones más extremas de violencia — no para la oscuridad psicológica, la complejidad moral ni los temas oscuros en general.',
+          },
+        ],
+      },
+      inappropriateUse: {
+        id: 'inappropriate-use',
+        title: 'Cuándo los modelos sin censura no son apropiados',
+        content:
+          '**La ausencia de aplicación en la nube no significa la ausencia de obligaciones legales y éticas.** Estas categorías representan límites absolutos que aplican independientemente del modelo, la plataforma o si tu máquina está aislada de la red.',
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Límites absolutos independientemente de la configuración. Ninguna configuración local elimina la responsabilidad legal o ética por: (1) contenido sexual que involucre a menores — prohibición absoluta por ley en prácticamente todas las jurisdicciones; (2) representaciones sexuales no consentidas de personas reales identificables — esto constituye NCII (imágenes íntimas no consensuales) independientemente del método de generación; (3) contenido diseñado para facilitar violencia real contra objetivos específicos. Estos límites aplican si tu modelo se ejecuta en local, en la nube o en una máquina aislada.',
+          },
+        ],
+        items: [
+          '**Contenido sexual que involucra a menores:** prohibición legal absoluta en todas las jurisdicciones principales, independientemente del encuadre ficticio o el método de generación. Esto no es una política del modelo — es la ley.',
+          '**Representaciones sexuales no consentidas de personas reales:** las leyes sobre NCII aplican al contenido generado por IA de personas reales identificables en un número creciente de jurisdicciones. "Generado por IA" no es una defensa.',
+          '**Contenido diseñado para facilitar daño real:** usar un encuadre ficticio para extraer información o contenido que permita directamente violencia o daño real elimina la protección ficticia.',
+          '**Distribución pública sin responsabilidad de autoría:** el contenido que publicas, distribuyes o compartes lleva responsabilidad de autoría. "Una IA lo generó" no transfiere esa responsabilidad.',
+          '**Ficción de acoso:** generar ficción cuyo propósito es dañar, intimidar o acosar a una persona real específica — independientemente de si se encuadra como ficción.',
+        ],
+      },
+      models: {
+        id: 'models',
+        title: 'Comparación de modelos: opciones sin censura para ficción',
+        content:
+          '**No todos los modelos sin censura son iguales — el grado de eliminación de RLHF y la calidad del modelo base importan para los casos de uso de escritura de ficción.**',
+        columns: ['Modelo', 'Base', 'VRAM (Q4)', 'Tasa de rechazo', 'Calidad de instrucciones', 'Deriva hacia lo extremo', 'Ideal para'],
+        rows: [
+          { 'Modelo': 'Hermes 3 Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Tasa de rechazo': 'Selectiva', 'Calidad de instrucciones': '★★★★★', 'Deriva hacia lo extremo': 'Baja', 'Ideal para': 'Opción por defecto para ficción seria — mejor seguimiento de instrucciones + capacidad sin censura' },
+          { 'Modelo': 'Dolphin 3.0 Mistral 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Tasa de rechazo': 'Amplia', 'Calidad de instrucciones': '★★★★☆', 'Deriva hacia lo extremo': 'Baja-moderada', 'Ideal para': 'Sistemas de 16–24 GB; contenido adulto en un rango más amplio' },
+          { 'Modelo': 'Dolphin 3.0 Mistral 7B', 'Base': 'Mistral 7B', 'VRAM (Q4)': '~8 GB', 'Tasa de rechazo': 'Amplia', 'Calidad de instrucciones': '★★★☆☆', 'Deriva hacia lo extremo': 'Moderada', 'Ideal para': 'Sistemas con poca VRAM; borradores cortos, pruebas de prompts' },
+          { 'Modelo': 'Hermes 3 Llama 3.2 8B', 'Base': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', 'Tasa de rechazo': 'Selectiva', 'Calidad de instrucciones': '★★★☆☆', 'Deriva hacia lo extremo': 'Baja', 'Ideal para': 'Recursos limitados; diálogos y escenas más cortas' },
+          { 'Modelo': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Tasa de rechazo': 'Limitada', 'Calidad de instrucciones': '★★★★★', 'Deriva hacia lo extremo': 'Ninguna', 'Ideal para': 'Temas oscuros, complejidad moral, violencia — sin necesitar contenido sexual explícito' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Empieza con Hermes 3, no con el fine-tune sin censura más agresivo. Los modelos completamente abliterados (Wizard-Uncensored, Erebus) tienen el rango de contenido más amplio pero un seguimiento de instrucciones notablemente más débil en tareas de ficción complejas — se desvían más rápido de las restricciones, producen prosa de menor calidad en generaciones más largas y mantienen la voz de los personajes con menos fiabilidad. Para ficción que requiere tanto contenido sin censura como prosa de calidad, Hermes 3 es la mejor compensación.',
+          },
+        ],
+        items: [
+          'Nota: los fine-tunes sin censura más antiguos — Midnight Miqu (basado en Miqu-70B), Wizard-LM Uncensored, Mythomax — fueron líderes en 2024 pero han sido superados por Hermes 3 y Dolphin 3.0 en 2026 en métricas de calidad y seguimiento de instrucciones. Si los encuentras recomendados en artículos más antiguos, los equivalentes actuales son Hermes 3 (para descensurado selectivo) y Dolphin 3.0 (para un rango más amplio).',
+        ],
+      },
+      setup: {
+        id: 'setup',
+        title: 'Configuración: Ollama y LM Studio',
+        content:
+          '**Tanto Ollama como LM Studio sirven modelos sin censura a través de una API local compatible con OpenAI — lo que significa que SillyTavern, Agnai y cualquier otra herramienta que hable con un endpoint local funcionan sin configuración adicional.**',
+        promptExamples: [
+          {
+            label: 'Ollama: descargar y ejecutar Hermes 3',
+            text: '# Pull the model\nollama pull nous-hermes3:70b-llama3.3-q4_K_M\n\n# Run it\nollama run nous-hermes3:70b-llama3.3-q4_K_M\n\n# Serve via API (for SillyTavern / Agnai / LM Studio-compatible tools)\nollama serve\n# API available at http://localhost:11434',
+          },
+          {
+            label: 'Ollama: descargar y ejecutar Dolphin 3.0 Mistral 24B',
+            text: '# Pull the model\nollama pull dolphin3:24b-mistral-q4_K_M\n\n# Verify it loaded\nollama list\n\n# Run a test prompt\nollama run dolphin3:24b-mistral-q4_K_M "Write a 100-word villain monologue, gothic register, no disclaimers."',
+          },
+        ],
+        items: [
+          '**Instalación de Ollama:** `brew install ollama` (macOS) o descarga desde ollama.com (Windows/Linux). El comando `ollama serve` inicia la API compatible con OpenAI en `http://localhost:11434`.',
+          '**Instalación de LM Studio:** descarga desde lmstudio.ai. Importa archivos de modelo GGUF directamente; la pestaña de servidor local expone un endpoint compatible con OpenAI en `http://localhost:1234`.',
+          '**Conexión de SillyTavern:** en los ajustes de API, selecciona "Compatible con OpenAI" y apunta la URL base a `http://localhost:11434/v1` (Ollama) o `http://localhost:1234/v1` (LM Studio). Introduce cualquier cadena como clave de API (requerida por el campo pero no validada localmente).',
+          '**Conexión de Agnai:** mismo endpoint compatible con OpenAI; introduce la URL local en los ajustes del adaptador. Funciona de forma idéntica a la configuración de SillyTavern.',
+          '**Cambio de modelo:** cambia entre modelos estándar y sin censura en Ollama con `ollama run [nombre-del-modelo]` — se pueden cargar varios modelos simultáneamente y puedes cambiar por sesión sin reiniciar el servidor.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para escritores que quieren mantener separados los modelos sin censura y los estándar, crea dos instancias de Ollama en puertos diferentes usando la variable de entorno OLLAMA_HOST. Ejemplo: OLLAMA_HOST=127.0.0.1:11435 ollama serve. Esto te permite apuntar SillyTavern o Agnai a la instancia sin censura mientras mantienes tu instancia estándar de Ollama para otras tareas.',
+          },
+        ],
+      },
+      ethics: {
+        id: 'ethics',
+        title: 'Responsabilidades éticas que permanecen',
+        content:
+          '**Ejecutar un modelo en local sin aplicación de políticas en la nube no elimina tus responsabilidades como escritor y editor.** El marco ético que aplica a la ficción de autoría humana aplica igualmente a la ficción asistida por IA.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La configuración local elimina las restricciones de los ToS en la nube, pero no elimina la responsabilidad legal de autoría, la responsabilidad por facilitación de daño ni las obligaciones éticas que aplican a cualquier obra creativa publicada.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Piensa en el modelo local sin censura como un asistente de escritura muy capaz que seguirá cualquier instrucción que le des. El peso legal y ético de lo que produces y distribuyes recae sobre ti, no sobre la herramienta. Las mismas leyes que aplican a la ficción de autoría humana — sobre menores, personas reales, obscenidad e incitación — aplican a la ficción generada por IA distribuida públicamente. El hecho de que ninguna plataforma te impida generar el contenido en local no cambia de lo que eres legalmente responsable si lo publicas.',
+          },
+        ],
+        items: [
+          '**Responsabilidad de autoría:** tú eres el autor de la ficción asistida por IA. "La IA lo generó" no transfiere el copyright, no elimina la responsabilidad ni constituye una defensa para el contenido que viole la ley.',
+          '**Conciencia de la jurisdicción:** las leyes sobre obscenidad, NCII y contenido dañino varían según la jurisdicción. El contenido legal de producir en un país puede constituir un delito penal de distribuir en otro.',
+          '**Personas reales:** generar contenido ficticio negativo sobre personas reales identificables — incluso en marcos claramente ficticios — conlleva riesgo de difamación y NCII según el contenido.',
+          '**Verificación de edad para la distribución:** si distribuyes contenido adulto o maduro producido con modelos sin censura en una plataforma pública, te aplican las obligaciones de verificación de edad que corresponden a cualquier editor de contenido adulto.',
+          '**Archivo responsable:** el contenido sin censura generado localmente debe tratarse con la misma disciplina de almacenamiento que cualquier otro material sensible — no almacenar en directorios sincronizados con la nube, no compartir involuntariamente.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'El error ético más común entre los escritores que usan modelos sin censura es tratar la generación local como una zona libre de contexto. La generación local significa que no hay aplicación de políticas de plataforma — no significa que no haya ley, responsabilidad ni daño. La ausencia de un moderador de contenido no es una autorización.',
+          },
+        ],
+      },
+      workflow: {
+        id: 'workflow',
+        title: 'Flujo de trabajo práctico para escritores de ficción',
+        content:
+          '**La mayoría de los escritores de ficción que usan modelos sin censura los utilizan para escenas específicas en lugar de como sustituto por defecto de su modelo estándar.** El flujo de trabajo a continuación apoya este uso específico.',
+        items: [
+          '**Redacta las escenas estándar con un modelo estándar.** Llama 3.3 70B o Qwen3 32B gestionan la mayor parte de la prosa literaria, incluidos los temas oscuros, la complejidad moral y la profundidad psicológica. Reserva el modelo sin censura para escenas que específicamente requieran contenido que el modelo estándar rechace.',
+          '**Cambia al modelo sin censura para escenas específicas.** En Ollama, ejecuta `ollama run nous-hermes3:70b-llama3.3-q4_K_M` para la escena concreta. En SillyTavern, cambia el modelo en los ajustes de API por sesión. No hay datos que crucen entre sesiones.',
+          '**Usa las mismas plantillas de prompts.** La plantilla de escena de 5 partes, la estructura de diálogo de subtexto y los prompts de contradicción de personajes de [Prompts de LLM local para escritores de ficción](/es/power-local-llm/local-llm-prompts-for-fiction-writers) funcionan de manera idéntica en los modelos sin censura. No necesitas estructuras de prompt diferentes.',
+          '**No añadas instrucciones de generación de contenido que no aparecerían en un brief de autoría humana por razones legales.** El modelo es una herramienta, no una estructura de permisos. Si no incluirías una instrucción en un brief a un ilustrador o ghostwriter humano por razones legales, no la incluyas en el prompt del modelo.',
+          '**Revisa la salida antes de distribuirla.** Los modelos sin censura ocasionalmente producen contenido que supera la oscuridad solicitada o deriva hacia estereotipos. La revisión editorial estándar del contenido asistido por IA aplica.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Mantén un "registro de modelos" por proyecto de escritura — un archivo de texto plano que registra qué modelo generó qué escenas. Esto es útil para la revisión (saber qué modelo produjo una escena ayuda a saber a dónde dirigir las solicitudes de revisión), para la transparencia de atribución si declaras asistencia de IA, y para auditoría si una escena plantea preguntas más adelante.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes',
+        items: [
+          '**Recurrir por defecto al modelo sin censura más agresivo.** Los modelos completamente abliterados (Wizard-Uncensored, Erebus) tienen el seguimiento de instrucciones más débil para escenas complejas. Hermes 3 es una mejor compensación para la calidad de la ficción.',
+          '**Usar modelos sin censura para contenido que los modelos estándar generarían.** La complejidad moral, la psicología oscura, la violencia y los temas adultos en prosa literaria raramente requieren un fine-tune sin censura. Identifica exactamente lo que necesitas antes de cambiar.',
+          '**Tratar la generación local como una zona legalmente libre de contexto.** La ausencia de aplicación de políticas en la nube no significa ausencia de ley. Las responsabilidades de autoría para distribución, personas reales y menores aplican independientemente.',
+          '**No especificar límites de palabras.** Los modelos sin censura rellenan el contenido oscuro para ocupar espacio con la misma facilidad que cualquier otro modelo. Usa las mismas restricciones de límite de palabras de las plantillas de ficción.',
+          '**Almacenar la salida en directorios sincronizados con la nube.** El contenido adulto generado localmente sincronizado con iCloud, Google Drive o OneDrive puede violar los términos de servicio de esas plataformas. Almacena solo localmente.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          'Ficha del modelo Hermes 3 y metodología de fine-tuning — [Nous Research](https://nousresearch.com)',
+          'Documentación técnica de Dolphin 3.0 Mistral — [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
+          'Visión general de técnicas RLHF y alineación — [Anthropic Research](https://anthropic.com/research)',
+          'Artículo 5 de la Ley de IA de la UE — prácticas de IA prohibidas, incluido el contenido que involucra a menores — [EUR-Lex](https://eur-lex.europa.eu)',
+          'NCII (imágenes íntimas no consensuales) — visión general del marco legal — [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '¿Es legal ejecutar LLMs locales sin censura?',
+            a: 'Ejecutar un LLM local sin censura es legal en la mayoría de las jurisdicciones — no existe ninguna ley contra poseer software de IA de código abierto. Lo que generes y distribuyas con él está sujeto a las mismas leyes que cualquier otro contenido de autoría propia: ley de obscenidad, ley de NCII, ley de difamación y leyes sobre contenido que involucra a menores. Legal de ejecutar no significa legal de publicar, compartir o distribuir sin límite.',
+          },
+          {
+            q: '¿Cuál es la diferencia entre Hermes 3 y Dolphin 3.0?',
+            a: 'Hermes 3 (Nous Research) está selectivamente sin censura — reduce los rechazos para contenido adulto mientras conserva algunas barreras para las categorías extremas. El seguimiento de instrucciones es excelente, cercano al modelo base Llama 3.3 70B. Dolphin 3.0 (Cognitive Computations) está más ampliamente sin censura en un rango de contenido más amplio, pero el seguimiento de instrucciones es ligeramente más débil en escenas complejas con múltiples restricciones. Hermes 3 es la mejor opción por defecto para ficción donde la calidad de la prosa importa; Dolphin 3.0 es la mejor opción cuando necesitas el rango de contenido más amplio en un sistema de 16–24 GB.',
+          },
+          {
+            q: '¿Necesito un modelo sin censura para escribir ficción oscura?',
+            a: 'No, para la mayoría de la ficción oscura. Los modelos estándar con ajuste de instrucciones como Llama 3.3 70B y Qwen3 32B generan violencia, complejidad moral, psicología oscura, interioridad del villano, trauma y la mayor parte de la oscuridad literaria sin rechazos cuando se les hace un prompt correcto. Lo que rechazan de manera fiable es el contenido sexual explícito y un conjunto más reducido de escenarios extremos. Si tu ficción oscura no incluye contenido sexual explícito, prueba primero un modelo estándar — puede que no necesites la versión sin censura.',
+          },
+          {
+            q: '¿Puedo usar modelos sin censura en SillyTavern o Agnai?',
+            a: 'Sí. Tanto SillyTavern como Agnai se conectan a cualquier endpoint compatible con OpenAI — incluido Ollama ejecutándose localmente en el puerto 11434. Descarga el modelo sin censura en Ollama, inicia `ollama serve`, y en SillyTavern o Agnai selecciona la API compatible con OpenAI y apúntala a `http://localhost:11434/v1`. Selecciona tu modelo sin censura de la lista de modelos. No se requiere configuración adicional.',
+          },
+          {
+            q: '¿Son seguros los modelos sin censura en una red doméstica?',
+            a: 'Sí, cuando están configurados para vincularse a localhost (la configuración predeterminada en Ollama y LM Studio). La API solo es accesible desde tu máquina. Si expones el puerto en tu red doméstica (por ejemplo, para acceder desde un teléfono), asegúrate de que las reglas del firewall restrinjan el acceso a dispositivos de confianza. No expongas la API de Ollama a la internet pública sin autenticación — la configuración predeterminada no tiene autenticación.',
+          },
+          {
+            q: '¿Qué ocurre con el contenido que genero localmente?',
+            a: 'No ocurre nada automáticamente. El contenido generado localmente no se envía a ningún servidor, no lo registra ningún servicio en la nube ni se usa para el entrenamiento del modelo. Solo existe en tu dispositivo, en el almacenamiento local de tu aplicación (archivos de historial de chat, fichas de personajes, etc.). Tú controlas lo que guardas, lo que borras y lo que compartes. Esta es la principal ventaja estructural de privacidad de la generación local sin censura frente a las alternativas en la nube.',
+          },
+          {
+            q: '¿Puedo mezclar modelos sin censura y estándar en el mismo proyecto de escritura?',
+            a: 'Sí, y este es el flujo de trabajo recomendado. Usa un modelo estándar (Llama 3.3 70B, Qwen3 32B) para la mayor parte de la prosa — los modelos estándar producen prosa literaria de alta calidad para la mayoría del contenido oscuro. Cambia a Hermes 3 o Dolphin 3.0 para escenas específicas que requieran contenido que el modelo estándar rechace. Las mismas plantillas de prompts funcionan en ambos; el estilo de prosa es suficientemente consistente para que la mezcla por escena no sea detectable en la salida.',
+          },
+          {
+            q: '¿Afecta generar contenido con un modelo sin censura al copyright?',
+            a: 'No — la situación del copyright para el contenido generado por IA es idéntica independientemente de si el modelo está censurado o sin censura. La ley de copyright para la salida de IA es incierta en la mayoría de las jurisdicciones a fecha de 2026; la posición general es que los elementos de autoría humana (diseño de prompts, selección, disposición, edición sustancial) pueden ser protegibles, mientras que la salida de IA en bruto no lo es. Usar un modelo sin censura no cambia este análisis.',
+          },
+          {
+            q: '¿Los fine-tunes sin censura pierden conocimiento general?',
+            a: 'Marginalmente, en áreas concretas. Los fine-tunes de descensurado son típicamente pases de reentrenamiento de precisión completa que pueden desviarse ligeramente del modelo base en recuperación de hechos, matemáticas y benchmarks de programación — generalmente 1–3 puntos porcentuales en benchmarks estándar. Para tareas de escritura de ficción, esto es indetectable en la calidad de la salida. Si necesitas el mismo modelo para ficción y trabajo técnico (notas de investigación, revisión de código), mantén instaladas tanto la versión estándar como la sin censura y cambia según la tarea. Hermes 3 conserva la capacidad general mejor que los modelos completamente abliterados.',
+          },
+          {
+            q: '¿Estos modelos están monitoreados o son anónimos?',
+            a: 'Los modelos de peso abierto que se ejecutan localmente a través de Ollama o LM Studio no tienen telemetría, no tienen registro remoto ni seguimiento de uso. Los autores del modelo (Nous Research para Hermes 3, Cognitive Computations para Dolphin) no pueden ver lo que generas — no hay ninguna devolución de llamada al servidor durante la inferencia. El único riesgo de telemetría proviene del frontend (SillyTavern, Agnai — ambos sin telemetría por defecto) o del sistema operativo. Ejecuta un monitor de red (Little Snitch en macOS, Wireshark en Linux) una vez después de la instalación para verificarlo.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Mejores LLMs locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) — comparación de modelos que incluye las selecciones de modelos, los ajustes de muestreo y el rendimiento para la generación narrativa.',
+          '[Prompts de LLM local para escritores de ficción: plantillas y técnicas](/es/power-local-llm/local-llm-prompts-for-fiction-writers) — plantillas de prompts para escritura de escenas, diálogo, construcción de mundos y transferencia de estilo que funcionan en modelos estándar y sin censura.',
+          '[SillyTavern vs Agnai vs RisuAI: mejor frontend de roleplay local](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparación de frontends para roleplay con fichas de personajes, incluidas instrucciones de configuración para backends de Ollama.',
+          '[Cómo ejecutar un LLM local para guión y redacción de novelas](/es/power-local-llm/local-llm-screenwriting-and-novel-drafting) — flujos de trabajo de redacción de formato largo y gestión de capítulos para proyectos de ficción extensa.',
+          '[Inyección de prompts y seguridad de LLM](/es/prompt-engineering/prompt-injection-and-security) — cómo interactúan los prompts adversariales con las capas de seguridad; contexto útil para entender qué elimina el descensurado.',
+          '[System Prompt vs User Prompt: ¿Cuál es la diferencia?](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — la estructura de autoridad que rige el comportamiento del modelo; la distinción del system prompt importa más que la elección del modelo para una salida sin censura consistente.',
+          '[RAG local para datos empresariales privados](/es/power-local-llm/local-rag-for-private-business-data) — configuración de IA solo local para casos de uso sensibles a la privacidad; los mismos principios de privacidad que la generación de ficción local.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'LLMs locales sin censura para escritura creativa: cuándo los escritores los necesitan (2026)',
+      description: 'LLMs locales sin censura para escritura creativa: qué modelos usar, configuración en Ollama, responsabilidades éticas, casos de uso apropiados y los límites que los escritores deben mantener siempre.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/uncensored-local-llm-creative-writing-ethics',
+      inLanguage: 'es',
+      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+    },
+  },
 }

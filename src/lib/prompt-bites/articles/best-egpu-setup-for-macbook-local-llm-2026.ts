@@ -555,4 +555,128 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'MacBook eGPU与本地AI：2026年什么有效', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'zh' },
   },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Hardware & Performance',
+    type: 'how-to',
+    title: 'eGPU para MacBook e IA local: qué funciona en 2026',
+    seoTitle: 'eGPU MacBook IA local 2026 — Alternativas',
+    metaDescription: 'Los MacBooks Apple Silicon no admiten eGPUs para cómputo GPU. Alternativas en 2026: Mac Mini M4 Pro, mini PC AMD con OCuLink, servidor Ollama por LAN.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
+    leadAnswerBlock: '**Los MacBooks con Apple Silicon (M2–M5) no pueden usar eGPUs para cómputo GPU en 2026 — Apple eliminó el soporte de eGPU por Thunderbolt en macOS Ventura. La alternativa: Mac Mini M4 Pro (48 GB de memoria unificada) o mini PC AMD (UM890 Pro) con eGPU OCuLink.**',
+    quickAnswerTop: {
+      question: '¿Puedo usar una eGPU con un MacBook para inferencia local con LLMs?',
+      answer: 'No. Los MacBooks Apple Silicon (M2/M3/M4/M5) no pueden usar eGPUs para cómputo GPU. macOS Ventura y versiones posteriores eliminaron completamente el soporte de eGPU por Thunderbolt. Alternativa: Mac Mini M4 Pro (48 GB de memoria unificada) o mini PC AMD con eGPU OCuLink.',
+      bullets: [
+        'MacBooks Apple Silicon: eGPU NO compatible para cómputo GPU (macOS Ventura+)',
+        'MacBooks Intel (2015–2020): eGPU funcionaba vía Thunderbolt 3 — pero descontinuados',
+        'Mejor alternativa para macOS: Mac Mini M4 Pro (48 GB de memoria unificada)',
+        'Mejor combinación GPU + portabilidad: mini PC AMD (UM890 Pro) + OCuLink + RTX 3090',
+        'OCuLink ofrece ~80% del ancho de banda PCIe x16 — sin cuello de botella para inferencia LLM',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Los MacBooks Apple Silicon no pueden usar eGPUs para cómputo — Apple eliminó la función en macOS Ventura',
+          'MacBooks Intel (2018–2020) admitían eGPU vía Thunderbolt 3 — esa línea está descontinuada',
+          'Para macOS: compra Mac Mini M4 Pro (48 GB) en lugar de intentar ampliar un MacBook con eGPU',
+          'Para portátil + GPU: mini PC AMD (UM890 Pro) + RTX 3090 vía OCuLink — Ollama a 60–80 tok/s',
+          'Las eGPUs Thunderbolt 4 en laptops x86 (Windows/Linux) sí funcionan — con ~35–45% de penalización de ancho de banda',
+        ],
+      },
+      mainContent: {
+        title: 'Por qué las eGPUs no funcionan en MacBooks en 2026',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Las eGPUs no funcionan para inferencia local con LLM acelerada por GPU en MacBooks Apple Silicon en 2026 porque Apple eliminó el soporte de cómputo eGPU por Thunderbolt en macOS Ventura (2022).',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Una eGPU es una tarjeta gráfica externa en una carcasa conectada vía Thunderbolt u OCuLink. En un MacBook con el chip M de Apple, la GPU está integrada en el chip — no se pueden añadir GPUs externas para tareas de cómputo. Metal (la API GPU de Apple) no se extiende a GPUs externas en hardware M-series.',
+          },
+        ],
+        content: 'Apple eliminó el soporte de eGPU por Thunderbolt en macOS Ventura (lanzado en octubre de 2022). Todos los MacBooks Apple Silicon (M1, M2, M3, M4, M5) ejecutan esta versión o versiones posteriores de macOS. Incluso si conectas físicamente una eGPU, macOS no la usará para tareas de cómputo GPU.',
+        items: [
+          '**macOS 13 Ventura (2022)**: soporte eGPU eliminado. Todos los Macs Apple Silicon afectados.',
+          '**macOS 14 Sonoma, 15 Sequoia**: sin soporte de cómputo eGPU.',
+          '**MacBooks Intel (2018–2020)**: eGPU funcionaba vía Thunderbolt 3 en macOS antiguo.',
+          '**Monitor externo vía eGPU**: sigue funcionando en Macs más antiguos como dispositivo de salida.',
+        ],
+      },
+      alternatives: {
+        title: 'Alternativas reales: qué hacer en su lugar',
+        productItems: [
+          {
+            title: 'Mac Mini M4 Pro (48 GB) — Mejor opción macOS',
+            content: 'El Mac Mini M4 Pro con 48 GB de memoria unificada ejecuta Qwen2.5 32B Q4 a 20–30 tok/s vía el backend Metal de Ollama. Precio: ~$1399. Si necesitas quedarte en el ecosistema macOS y necesitas capacidad de modelos 32B+, esta es la ruta de actualización — no una eGPU.',
+            affiliateLinks: [
+              { label: 'Apple Mac Mini M4 Pro en Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
+            ],
+          },
+          {
+            title: 'Mini PC AMD + eGPU OCuLink (Mejor combo GPU/portátil)',
+            content: 'El AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS, ~$480) se conecta a una RTX 3090 o RTX 4090 vía OCuLink (PCIe 4.0 x4, 64 Gbps — ~80% del ancho de banda del slot x16). Ollama en Linux o Windows con CUDA ejecuta 7B Q4 a 65–85 tok/s con una RTX 3090. El mini PC es lo suficientemente pequeño para ponerlo en el escritorio junto a un MacBook y servir Ollama por LAN.',
+            affiliateLinks: [
+              { label: 'AOOSTAR GEM12 Pro OCuLink en Amazon', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+            ],
+          },
+          {
+            title: 'eGPU Thunderbolt 4 en laptop Windows/Linux (si no estás en Mac)',
+            content: 'En un laptop x86 con Windows o Linux con Thunderbolt 4, la eGPU sí funciona para Ollama. La penalización de ancho de banda es ~35–45% vs un slot PCIe x16 nativo, pero la inferencia de Ollama está limitada por el ancho de banda de memoria (no por PCIe). Carcasa recomendada: Razer Core X (~$299) + RTX 3090.',
+            affiliateLinks: [
+              { label: 'Razer Core X eGPU Enclosure en Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+            ],
+          },
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Hay alguna forma de hacer funcionar una eGPU con un M4 MacBook Pro para IA?',
+            a: 'No para cómputo GPU. macOS no expone una API para que GPUs externas ejecuten tareas Metal compute en hardware M-series. La única opción es conectar el MacBook a un servidor Ollama en una máquina separada (un mini PC o escritorio con GPU dedicada) a través de la red local. Establece OLLAMA_HOST=0.0.0.0 en el servidor y apunta las apps del MacBook a esa dirección IP.',
+          },
+          {
+            q: '¿Traerá Apple de vuelta el soporte eGPU para Apple Silicon?',
+            a: 'Poco probable. La arquitectura M-series de Apple integra GPU, CPU y memoria en un solo chip — la filosofía de diseño es memoria unificada, no expansibilidad. Solo el Mac Pro (2023) admite expansión de GPU.',
+          },
+          {
+            q: '¿Puedo usar una GPU NVIDIA para inferencia y canalizar la salida a mi MacBook?',
+            a: 'Sí — este es el enfoque recomendado. Ejecuta Ollama en una máquina Windows o Linux con GPU NVIDIA, exponla en tu LAN (OLLAMA_HOST=0.0.0.0), y conéctate desde tu MacBook vía Open WebUI, Cursor, Continue o cualquier cliente compatible con OpenAI.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Puedo usar una eGPU con un MacBook para inferencia local con LLMs?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. Apple eliminó el soporte de cómputo eGPU en macOS Ventura (2022). Alternativas: Mac Mini M4 Pro (48 GB) o mini PC AMD con OCuLink.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Hay alguna forma de hacer funcionar una eGPU con un M4 MacBook Pro para IA?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No para cómputo GPU. Conecta el MacBook a un servidor Ollama en otra máquina con GPU dedicada a través de tu red local (OLLAMA_HOST=0.0.0.0 en el servidor).',
+          },
+        },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: qué funciona en 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/es/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'es' },
+  },
 }

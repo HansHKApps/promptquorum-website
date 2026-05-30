@@ -449,4 +449,97 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+
+  es: {
+    theme: 'Model Comparisons',
+    title: '¿Qué modelos LLM locales admiten mejor el japonés?',
+    seoTitle: 'Mejores LLMs locales en japonés 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen2.5 7B (multilingüe JA/ZH/EN), Phi-4 (10–12 GB): cuatro LLMs locales para tareas en japonés, todos vía Ollama en 2026.',
+    publishDate: '2026-05-27',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-27',
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen2.5 7B', 'Phi-4'],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermediate',
+    audience: 'Desarrolladores y usuarios que ejecutan LLMs en japonés en local',
+    parentArticle: '/local-llms/best-local-llms-for-coding',
+    siblingBites: ['best-ollama-models-cpu-only', 'can-you-run-qwen3-on-ollama'],
+    is_living_page: false,
+    quickAnswerTop: {
+      en: { question: 'Which local LLM models support Japanese best?', answer: 'Depends on task: Rinna 3.6B for conversation, ELYZA-7B for instruction following, Qwen2.5-Coder for coding.', bullets: ['Rinna 3.6B: 4 GB RAM', 'ELYZA-7B: 6 GB RAM', 'Qwen2.5 7B: multilingual'], updatedDate: '2026-05' },
+      de: { question: 'Beste lokale LLMs für Japanisch?', answer: 'Rinna 3.6B für Konversation, ELYZA-7B für Instruktionen.', bullets: ['Rinna 3.6B: ab 4 GB RAM', 'ELYZA-7B: 6 GB RAM'], updatedDate: '2026-05' },
+      fr: { question: 'Meilleurs LLM locaux pour le japonais ?', answer: 'Rinna 3.6B pour la conversation, ELYZA-7B pour les instructions.', bullets: ['Rinna 3.6B: 4 Go RAM', 'ELYZA-7B: 6 Go RAM'], updatedDate: '2026-05' },
+      ja: { question: '日本語対応ローカルLLMは？', answer: '会話はRinna 3.6B、指示追従はELYZA-7B。', bullets: ['Rinna 3.6B: 4 GB RAM', 'ELYZA-7B: 6 GB RAM'], updatedDate: '2026-05' },
+      zh: { question: '日语本地LLM推荐？', answer: '对话用Rinna 3.6B，指令跟随用ELYZA-7B。', bullets: ['Rinna 3.6B: 4 GB内存', 'ELYZA-7B: 6 GB内存'], updatedDate: '2026-05' },
+      es: {
+        question: '¿Qué modelos LLM locales admiten mejor el japonés?',
+        answer: 'El mejor LLM local en japonés depende de tu tarea. Para conversación: Rinna 3.6B (funciona con 4 GB RAM). Para seguimiento de instrucciones: ELYZA-7B. Para programación con japonés: Qwen2.5-Coder. Todos corren vía Ollama.',
+        bullets: [
+          'Rinna 3.6B — nativo en japonés, 4 GB RAM mínimo, conversación cotidiana',
+          'ELYZA-7B — seguimiento de instrucciones y Q&A, 6 GB RAM',
+          'Qwen2.5 7B — multilingüe JA/ZH/EN y programación, 6 GB RAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Rinna 3.6B es el modelo nativo en japonés más ligero — funciona con 4 GB RAM vía Ollama (solo inferencia; cierra todas las apps en segundo plano) sin fine-tuning',
+          'ELYZA-7B (Llama fine-tuneado) lidera en seguimiento de instrucciones en japonés; úsalo para Q&A y automatización de tareas',
+          'Qwen2.5 7B es la mejor opción multilingüe: japonés robusto junto con chino e inglés, más soporte de programación',
+          'La tokenización japonesa produce ~20–30% menos tokens efectivos/segundo que el inglés debido al overhead de kanji/kana — ten esto en cuenta en las expectativas de latencia',
+          'Q4_K_M es la cuantización mínima recomendada para japonés; Q3 y por debajo muestran degradación medible de calidad',
+        ],
+      },
+      body1: {
+        title: 'Tabla comparativa de modelos en japonés',
+        content: [
+          '<strong>A mayo de 2026, cinco LLMs locales destacan para tareas en japonés: Rinna 3.6B, ELYZA-7B, CyberAgent CALM3-22B, Qwen2.5 7B y Phi-4.</strong> Cada uno cubre un nicho de hardware y caso de uso diferente. La tabla ofrece los puntos de decisión clave.',
+          'Atajo de decisión: usa Rinna 3.6B si solo tienes 4 GB RAM y necesitas conversación nativa en japonés. Usa ELYZA-7B para seguimiento estructurado de instrucciones en hardware de 6 GB. Usa Qwen2.5 7B cuando necesites salida multilingüe en japonés, chino e inglés en un solo modelo.',
+        ],
+        columns: ['Modelo', 'Tamaño / RAM mínima', 'Mejor para'],
+        rows: [
+          { 'Modelo': 'Rinna 3.6B', 'Tamaño / RAM mínima': '3.6B / 4 GB RAM', 'Mejor para': 'Conversación cotidiana en japonés' },
+          { 'Modelo': 'ELYZA-7B', 'Tamaño / RAM mínima': '7B / 6 GB RAM', 'Mejor para': 'Seguimiento de instrucciones, Q&A' },
+          { 'Modelo': 'CyberAgent CALM3-22B', 'Tamaño / RAM mínima': '22B / 16 GB RAM', 'Mejor para': 'Documentos de negocio en japonés' },
+          { 'Modelo': 'Qwen2.5 7B', 'Tamaño / RAM mínima': '7B / 6 GB RAM', 'Mejor para': 'Multilingüe JA/ZH/EN, programación' },
+          { 'Modelo': 'Phi-4', 'Tamaño / RAM mínima': '14B / 10–12 GB RAM', 'Mejor para': 'Razonamiento + japonés (vía fine-tune)' },
+        ],
+      },
+      body2: {
+        title: 'Recomendaciones por tarea',
+        content: [
+          '<strong>Adapta el modelo a tu tarea en lugar de elegir por defecto el más grande disponible.</strong> La tokenización japonesa produce ~20–30% menos tokens efectivos por segundo comparado con texto inglés — el kanji, hiragana y katakana ocupan slots de tokens separados. Un modelo evaluado en 20 tok/s en inglés entrega aproximadamente 14–16 tok/s efectivos en japonés.',
+          'Mapeo tarea-modelo: <strong>Chat cotidiano</strong> → Rinna 3.6B (el más ligero, nativo en japonés, sin fine-tuning requerido). <strong>Documentos de negocio y escritura formal</strong> → ELYZA-7B o CyberAgent CALM3-22B (CALM3 es la opción más fuerte cuando se dispone de 16 GB RAM). <strong>Asistencia de programación en japonés</strong> → Qwen2.5-Coder (modelo de código multilingüe con buen soporte de comentarios y documentación en japonés). <strong>Traducción entre japonés, inglés y chino</strong> → Qwen2.5 7B (un solo modelo para los tres idiomas sin cambiar de modelo).',
+          'La cuantización importa más para japonés que para inglés. Q4_K_M es el mínimo recomendado — los tests muestran una degradación mínima de calidad. Q3_K_M produce una reducción de ~5–10% en la calidad de salida en japonés. La cuantización Q2 no se recomienda para uso en japonés. Todos los modelos de esta comparativa están disponibles en Q4_K_M vía Ollama o LM Studio.',
+          'Para apps que ejecuten estos modelos en Android en Japón, consulta la <a href="/es/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">guía de apps LLM Android para Japón</a>. Para recomendaciones de GPU para ejecutar modelos 7B+ en japonés en Japón, consulta la <a href="/es/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">guía de precios de GPUs en Japón</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respuestas rápidas sobre LLMs locales en japonés',
+        faqs: [
+          {
+            q: '¿Admiten japonés Llama y Mistral?',
+            a: 'Solo soporte básico. Llama 3.1 8B incluye algunos datos de entrenamiento en japonés pero rinde un 30–40% peor que los modelos específicos de japonés en benchmarks de japonés. Mistral 7B tiene datos de entrenamiento en japonés mínimos y no se recomienda para tareas en japonés. Usa ELYZA-7B (fine-tune de Llama) o Rinna 3.6B para salida fiable en japonés.',
+          },
+          {
+            q: '¿Daña la cuantización la calidad en japonés?',
+            a: 'Q4_K_M tiene una degradación mínima y es el mínimo recomendado para japonés. Q3_K_M muestra aproximadamente un 5–10% de reducción de calidad en texto japonés — perceptible en respuestas largas y escritura formal. Evita completamente Q2 para uso en japonés. Q8_0 proporciona la mejor calidad cuando hay VRAM disponible.',
+          },
+          {
+            q: '¿Funciona un modelo en japonés en un MacBook de 8 GB?',
+            a: 'Sí. Rinna 3.6B Q4 y ELYZA-7B Q4_K_M funcionan ambos en un MacBook con 8 GB de memoria unificada vía Ollama. Apple Silicon trata la RAM del sistema como memoria unificada, por lo que los 8 GB completos están disponibles para el modelo. Espera ~8–12 tok/s en hardware M1/M2 con estos tamaños.',
+          },
+          {
+            q: '¿Cómo inicio un modelo en japonés en Ollama?',
+            a: 'Ejecuta <code>ollama run rinna</code> o <code>ollama run elyza</code> en un terminal. Ollama descarga el modelo automáticamente en el primer arranque. Consulta la biblioteca de modelos de Ollama en ollama.com/library para las últimas variantes disponibles y opciones de cuantización.',
+          },
+        ],
+      },
+    },
+  },
 }

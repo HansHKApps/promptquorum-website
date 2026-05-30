@@ -507,4 +507,203 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Bot de WeChat con LLM local: asistente personal 2026',
+    seoTitle: 'Bot de WeChat con LLM local: guía de asistente personal 2026',
+    metaDescription: 'Crea un bot asistente personal en WeChat con LLM local en 2026. WeChatFerry + Ollama en Windows — completamente privado, sin API en la nube, respuestas en tiempo real.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**En 2026 puedes crear un bot asistente personal en WeChat usando WeChatFerry + Ollama. El bot se ejecuta completamente en tu PC con Windows, usa un LLM local (Qwen2.5 7B o 14B) y responde en tiempo real a los mensajes de WeChat sin enviar datos a ninguna API en la nube.**',
+    quickAnswerTop: {
+      question: '¿Cómo creo un bot de WeChat con un LLM local?',
+      answer: 'Usa WeChatFerry (Windows) para conectarte al cliente WeChat PC, enlázalo a Ollama mediante HTTP API y enruta los mensajes entrantes al LLM local. Tiempo total de configuración: 30–60 minutos.',
+      bullets: [
+        'WeChatFerry: el mejor framework de bot WeChat para Windows en 2026',
+        'Ollama: backend de LLM local (se recomienda Qwen2.5 7B para chino)',
+        'Puente en Python: gestión del enrutamiento de mensajes y formato de respuestas',
+        'Ventana de contexto: almacena el historial de conversación para chats de varios turnos',
+        'Privacidad: todos los datos permanecen en tu máquina local, sin llamadas a API en la nube',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'Crea un bot asistente personal en WeChat con WeChatFerry y Ollama en Windows — el LLM se ejecuta localmente y ningún dato sale de tu máquina.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'Esta guía muestra cómo conectar WeChat a un modelo de IA local para que responda automáticamente a mensajes, conteste preguntas y actúe como tu asistente personal dentro de la app de WeChat.',
+      },
+    ],
+    affiliateLinks: [
+      {
+        productName: 'Minisforum UM890 Pro (servidor de IA local)',
+        url: 'https://search.jd.com/Search?keyword=Minisforum+UM890+Pro',
+        productCategory: 'hardware',
+      },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'WeChatFerry + Ollama: la combinación recomendada para un bot local de WeChat en 2026',
+          'Qwen2.5 7B: el mejor modelo local para respuestas en WeChat en chino',
+          'Solo Windows: WeChatFerry se inyecta en el cliente WeChat PC (solo Windows)',
+          'Tiempo de configuración: 30–60 minutos para alguien familiarizado con Python',
+          'Sin API en la nube: toda la inferencia se ejecuta localmente, ningún mensaje se envía al exterior',
+          'Riesgo: los Términos de Servicio de WeChat prohíben los bots automatizados — úsalo solo como asistente personal',
+        ],
+      },
+      overview: {
+        heading: 'Qué construye esta guía',
+        body: 'Esta guía explica paso a paso cómo crear un asistente de IA personal dentro de WeChat que:\n\n1. Monitorea tus mensajes de WeChat en tiempo real\n2. Envía los mensajes entrantes a un modelo Ollama local\n3. Devuelve respuestas generadas por IA en 3–10 segundos\n4. Mantiene el contexto de la conversación a lo largo de varios turnos\n5. Puede activarse con una palabra clave (por ejemplo, "@ai") para evitar responder a todos los mensajes\n\nLa configuración se ejecuta en un PC con Windows o en una máquina virtual Windows. macOS no es compatible con WeChatFerry. El LLM local se ejecuta a través de Ollama — no se necesitan claves de API en la nube.',
+      },
+      requirements: {
+        heading: 'Requisitos',
+        body: 'Hardware y software necesarios antes de empezar:\n\n- **Windows 10/11** (requisito de WeChatFerry)\n- **Cliente WeChat PC** — probado con WeChat 3.9.x\n- **Python 3.10+**\n- **Ollama** instalado en la misma máquina\n- **8 GB de RAM como mínimo** (se recomiendan 16 GB para un rendimiento fluido con el modelo 7B)\n- **6–8 GB de espacio en disco** para los pesos del modelo Qwen2.5 7B\n\nModelo recomendado: **Qwen2.5:7b** — excelente calidad en chino, los 7B parámetros caben en 8 GB de VRAM o se ejecutan a velocidad aceptable en CPU con 16 GB de RAM.',
+      },
+      installation: {
+        heading: 'Instalación paso a paso',
+        numberedItems: [
+          {
+            title: 'Instalar Ollama y descargar Qwen2.5 7B',
+            whyItMatters: 'Descarga Ollama desde ollama.com y ejecuta: `ollama pull qwen2.5:7b`',
+          },
+          {
+            title: 'Iniciar sesión en WeChat PC',
+            whyItMatters: 'Abre WeChat en Windows y escanea el código QR para iniciar sesión. Mantenlo conectado y ejecutándose en segundo plano.',
+          },
+          {
+            title: 'Instalar WeChatFerry',
+            whyItMatters: 'Instala mediante pip: `pip install wcferry`. WeChatFerry se inyecta en el proceso de WeChat para exponer una API de mensajes.',
+          },
+          {
+            title: 'Crear el manejador de mensajes en Python',
+            whyItMatters: 'Crea `wechat_bot.py` con el cliente WeChatFerry, las llamadas a la HTTP API de Ollama y la lógica de enrutamiento de mensajes.',
+          },
+          {
+            title: 'Probar con un mensaje a ti mismo',
+            whyItMatters: 'Envíate un mensaje de WeChat que empiece por "@ai" y verifica que el bot responde en menos de 10 segundos.',
+          },
+          {
+            title: 'Añadir historial de conversación',
+            whyItMatters: 'Almacena los últimos 10 mensajes por contacto en un dict para habilitar el contexto de conversación de varios turnos.',
+          },
+          {
+            title: 'Ejecutar como servicio en segundo plano',
+            whyItMatters: 'Usa NSSM (Non-Sucking Service Manager) para ejecutar el script Python como un servicio de Windows que se inicia automáticamente.',
+          },
+        ],
+      },
+      codeExample: {
+        heading: 'Código Python esencial',
+        body: 'El código mínimo funcional del bot usa WeChatFerry para recibir mensajes y la HTTP API de Ollama para generar respuestas:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen2.5:7b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
+      },
+      modelChoice: {
+        heading: 'Mejores modelos locales para conversaciones de WeChat en chino',
+        body: 'La elección del modelo afecta significativamente la calidad de las respuestas a mensajes en chino.',
+        tableData: {
+          headers: ['Modelo', 'Tamaño', 'Calidad en chino', 'Velocidad (CPU)', 'Velocidad (8 GB VRAM)'],
+          rows: [
+            ['Qwen2.5:7b', '4,7 GB', 'Excelente', '3–5 tok/s', '30–45 tok/s'],
+            ['Qwen2.5:14b', '9 GB', 'Óptima', '1–2 tok/s', '15–20 tok/s'],
+            ['Qwen2.5:3b', '2 GB', 'Buena', '8–12 tok/s', '60+ tok/s'],
+            ['Llama3.1:8b', '4,7 GB', 'Moderada', '3–5 tok/s', '30–45 tok/s'],
+          ],
+        },
+      },
+      limitations: {
+        heading: 'Limitaciones y riesgos',
+        body: '**Términos de Servicio de WeChat:** Los Términos de Servicio de WeChat prohíben los bots automatizados, los scrapers y los clientes de terceros. El uso de WeChatFerry podría acarrear la suspensión de la cuenta si los sistemas antifraude de WeChat lo detectan. Usa esta configuración solo para productividad personal — no para mensajería masiva, marketing o automatización comercial.\n\n**Solo Windows:** WeChatFerry utiliza inyección de DLL en Windows para conectarse al proceso de WeChat. No funciona en macOS ni en Linux.\n\n**Dependencia de la versión del cliente WeChat:** WeChatFerry mantiene compatibilidad con versiones específicas del cliente WeChat PC. Verifica la lista de versiones compatibles en el repositorio de GitHub de WeChatFerry antes de actualizar WeChat.\n\n**Latencia:** La inferencia solo en CPU con un modelo 7B tarda entre 5 y 15 segundos por respuesta, lo que puede resultar lento en el chat. Una GPU de 8 GB reduce ese tiempo a 1–3 segundos.',
+      },
+      faq: {
+        faqs: [
+          {
+            q: '¿Este bot de WeChat funciona en Mac?',
+            a: 'No. WeChatFerry requiere Windows y se conecta al cliente WeChat para Windows mediante inyección de DLL. Los usuarios de macOS pueden ejecutar Windows en una máquina virtual (Parallels o VMware Fusion) para usar esta configuración.',
+          },
+          {
+            q: '¿Mi cuenta de WeChat puede ser baneada por usar un bot?',
+            a: 'WeChat prohíbe los bots automatizados en sus Términos de Servicio. Las cuentas detectadas usando herramientas de automatización corren el riesgo de suspensión temporal o ban permanente. Úsalo solo para productividad personal con un volumen bajo de mensajes.',
+          },
+          {
+            q: '¿Cuál es el mejor modelo de Ollama para mensajes de WeChat en chino?',
+            a: 'Qwen2.5 7B es el mejor equilibrio entre calidad y velocidad para respuestas en WeChat en chino — excelente comprensión del chino, suficientemente rápido en la mayoría del hardware, y el modelo de 4,7 GB cabe en 8 GB de VRAM.',
+          },
+          {
+            q: '¿Puede el bot gestionar chats grupales?',
+            a: 'Sí. WeChatFerry expone los mensajes de grupo junto con el ID de sala. Modifica el manejador `on_message` para comprobar `msg.roomid` y filtrar en qué grupos debe responder el bot. Añade una palabra clave de activación para evitar responder a todos los mensajes del grupo.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'es',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Cómo creo un bot de WeChat con un LLM local?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Usa WeChatFerry (Windows) para conectarte al cliente WeChat PC, enlázalo a Ollama mediante HTTP API y enruta los mensajes entrantes al LLM local. Tiempo total de configuración: 30–60 minutos con Python.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Este bot de WeChat funciona en Mac?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. WeChatFerry requiere Windows. Los usuarios de macOS pueden ejecutar Windows en una máquina virtual (Parallels o VMware Fusion).',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cuál es el mejor modelo para mensajes de WeChat en chino?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Qwen2.5 7B es el mejor equilibrio entre calidad y velocidad — excelente comprensión del chino, 4,7 GB caben en 8 GB de VRAM, responde en 1–3 segundos con GPU.',
+          },
+        },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      inLanguage: 'es',
+      name: 'Crear un bot de WeChat con LLM local',
+      step: [
+        { '@type': 'HowToStep', name: 'Instalar Ollama y descargar Qwen2.5 7B', text: 'Descarga Ollama y ejecuta: ollama pull qwen2.5:7b' },
+        { '@type': 'HowToStep', name: 'Iniciar sesión en WeChat PC', text: 'Abre WeChat en Windows y mantenlo conectado' },
+        { '@type': 'HowToStep', name: 'Instalar WeChatFerry', text: 'pip install wcferry' },
+        { '@type': 'HowToStep', name: 'Crear el manejador de mensajes en Python', text: 'Escribe el código del bot para enrutar mensajes de WeChat a la API de Ollama' },
+        { '@type': 'HowToStep', name: 'Probar y ejecutar como servicio', text: 'Prueba con un mensaje a ti mismo, luego ejecútalo como servicio de Windows en segundo plano' },
+      ],
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Bot de WeChat con LLM local: asistente personal 2026',
+      description: 'Crea un bot asistente personal en WeChat con WeChatFerry y Ollama en Windows — completamente local, sin API en la nube.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/wechat-bot-local-llm-personal-assistant-2026',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+    },
+    relatedReading: {
+      items: [
+        '[Guía de integración de WeChat con LLM local — 3 patrones de integración](/es/power-local-llm/wechat-local-llm-integration-2026) — patrones webhook, WeChatFerry y servidor mini PC para desarrolladores',
+        '[Agentes de IA locales con MCP 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — amplía tu LLM local con llamadas a herramientas y automatización más allá de WeChat',
+        '[Mejor mini PC para servidor Ollama siempre activo](/es/prompt-bites/best-mini-pc-for-ollama-server-always-on) — opciones de hardware para ejecutar un servidor de bot WeChat 24/7',
+      ],
+    },
+  },
 }

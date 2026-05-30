@@ -1564,4 +1564,364 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'Agentes de IA locales para flujos de trabajo empresariales: guía de cumplimiento UE 2026',
+    seoTitle: 'Agentes de IA locales para empresas: cumplimiento GDPR y EU AI Act 2026',
+    intro:
+      'Los agentes de IA locales simplifican materialmente el cumplimiento normativo en la UE. Cuando el modelo, los servidores de herramientas y los datos residen dentro de tu propia infraestructura, el modelo de amenaza del LLM en la nube desaparece: Schrems II, listas de subencargados y evaluaciones de impacto de transferencias transfronterizas dejan de aplicarse. El trabajo real se traslada a las normativas que siguen vigentes: controles GDPR sobre los datos que procesas, clasificación bajo el EU AI Act del flujo de trabajo automatizado, y requisitos específicos de cada región (DACH: Consejo de Empresa, §203 StGB) para flujos que manejan datos de empleados o datos confidenciales. Esta guía recorre 5 plantillas de flujos de trabajo listos para producción, los controles que cada uno necesita, y las opciones de modelo y stack que resisten una auditoría.',
+    metaDescription:
+      'Despliega agentes de IA locales para procesamiento de documentos, gestión de correos y generación de informes bajo el GDPR y el EU AI Act. Arquitectura, controles de cumplimiento y 5 plantillas de flujos de trabajo.',
+    twitterDescription:
+      'Agentes de IA locales + cumplimiento UE: 5 plantillas de flujos de trabajo, controles GDPR, clasificación EU AI Act, especificidades DACH. Los datos no salen de tu infraestructura.',
+    current_models_mentioned: [
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Qwen3 32B',
+      'Llama 3.2 3B',
+      'Llama 3.3 70B',
+      'Mistral Large',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'NVIDIA L40S 48 GB',
+    ],
+    audience:
+      'Equipos empresariales, Delegados de Protección de Datos, responsables de cumplimiento y líderes de TI que despliegan agentes de IA locales bajo el GDPR, el EU AI Act y los requisitos específicos de empleo y confidencialidad de la región DACH.',
+    readTime: '14 min de lectura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'agente de IA local',
+    targetKeywords: [
+      'agentes de ia locales gdpr',
+      'eu ai act agentes empresariales',
+      'llm local flujos de trabajo empresariales',
+      'agente ia on-premise cumplimiento',
+      'gdpr agente ia dpia',
+      'consejo empresa agente ia',
+    ],
+    leadAnswerBlock:
+      '**Los agentes de IA locales son compatibles con el GDPR por arquitectura, no por casualidad, pero solo cuando todo el stack (modelo, servidores de herramientas, registro de auditoría, almacén vectorial) corre dentro de la infraestructura del responsable del tratamiento con cero egreso de datos. Cinco flujos de trabajo empresariales cubren la mayor parte de la demanda en producción: ingesta y clasificación de documentos, triaje de correos con borradores de respuesta, resumen de reuniones con extracción de acciones, generación de informes de cumplimiento y procesamiento de facturas con conciliación de pedidos. Cada uno tiene una clasificación diferente bajo el EU AI Act (la mayoría son de riesgo limitado, el cribado de RRHH es de alto riesgo, ninguna plantilla está prohibida) y un umbral de DPIA distinto. El stack recomendado es Ollama o vLLM sirviendo Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (modelos con tool-calling), con Cline o Goose+MCP como runtime del agente, un registro de auditoría inmutable y aprobación humana en cada acción de escritura o envío. Desplegar sin DPIA, mezclar datos personales y empresariales en un mismo workspace y omitir las puertas de aprobación en las acciones de envío son los tres errores más frecuentes.**',
+    quickAnswerTop: {
+      es: {
+        question: '¿Son los agentes de IA locales compatibles con el GDPR para flujos de trabajo empresariales?',
+        answer:
+          'Los agentes de IA locales son compatibles con el GDPR por arquitectura, pero no son conformes con el GDPR por defecto. La arquitectura elimina el modelo de amenaza del LLM en la nube: sin Schrems II, sin lista de subencargados, sin evaluación de impacto de transferencias transfronterizas, porque el modelo, los servidores de herramientas y los datos residen todos dentro de la infraestructura del responsable del tratamiento. El trabajo restante son los controles del GDPR aplicables a cualquier sistema que procesa datos personales: base jurídica (artículo 6), minimización de datos (artículo 5), limitación de finalidad (artículo 5), seguridad del tratamiento (artículo 32), registro de auditoría y una DPIA (artículo 35) cuando el flujo de trabajo tiene un alto impacto en las personas. El EU AI Act añade una segunda capa: la mayoría de los flujos de trabajo empresariales son de riesgo limitado (solo obligaciones de transparencia), el cribado de RRHH y las decisiones de crédito son de alto riesgo (evaluación de conformidad completa), y algunos patrones (reconocimiento de emociones en el entorno laboral, puntuación social) están prohibidos. Construir el stack local es la parte fácil; documentar los controles y ejecutar la DPIA es el trabajo real.',
+        bullets: [
+          'La arquitectura local elimina el modelo de amenaza del LLM en la nube. El trabajo GDPR restante: minimización de datos, base jurídica, seguridad del tratamiento, registro de auditoría y una DPIA cuando el flujo de trabajo lo justifique.',
+          '5 plantillas de flujos de trabajo cubren la mayor parte de la demanda: ingesta de documentos, triaje de correos, resumen de reuniones, informes de cumplimiento, procesamiento de facturas.',
+          'Clasificación bajo el EU AI Act: la mayoría de las plantillas son de riesgo limitado (solo transparencia); el cribado de RRHH es de alto riesgo (evaluación de conformidad completa); el reconocimiento de emociones en el trabajo y la puntuación social están prohibidos.',
+          'Stack: Ollama o vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (tool-calling) + Cline o Goose+MCP + registro de auditoría inmutable + aprobación humana en cada acción de escritura/envío.',
+          'DACH añade dos capas: codecisión del Consejo de Empresa para flujos que manejan datos de empleados; §203 StGB de confidencialidad profesional para abogados, médicos y auditores.',
+          'Tres errores frecuentes: desplegar sin DPIA, mezclar datos personales y empresariales en un mismo workspace, omitir las puertas de aprobación en acciones de envío.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Qué hacen los agentes de IA locales para los equipos empresariales', anchor: '#what-agents-do' },
+      { label: '5 plantillas de flujos de trabajo empresariales', anchor: '#workflow-templates' },
+      { label: 'Clasificación bajo el EU AI Act', anchor: '#ai-act' },
+      { label: 'Controles GDPR para flujos de trabajo de agentes', anchor: '#gdpr-controls' },
+      { label: 'Alemania: Consejo de Empresa y §203 StGB', anchor: '#dach-specifics' },
+      { label: 'Elegir el modelo adecuado', anchor: '#model-pick' },
+      { label: 'Comparativa de stacks de agentes', anchor: '#stack-comparison' },
+      { label: 'Errores frecuentes', anchor: '#common-mistakes' },
+      { label: 'Fuentes', anchor: '#sources' },
+      { label: 'Preguntas frecuentes', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-business-workflows-eu-compliance-static.html',
+    gammaDescription: 'La presentación a continuación cubre: 5 plantillas de flujos de trabajo en producción para agentes de IA locales conformes con la UE (ingesta de documentos, triaje de correos, resumen de reuniones, informes de cumplimiento, procesamiento de facturas), clasificación de riesgo bajo el EU AI Act (riesgo limitado vs. alto riesgo vs. prohibido), 6 controles GDPR (base jurídica, minimización de datos, DPIA), especificidades DACH (Consejo de Empresa BetrVG §87, §203 StGB confidencialidad profesional), tabla de selección de modelos y 5 errores frecuentes de despliegue. Descarga el PDF como tarjeta de referencia de cumplimiento UE en IA.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Agentes de IA locales para flujos de trabajo empresariales: guía de cumplimiento UE 2026',
+      description: 'Despliega agentes de IA locales para procesamiento de documentos, gestión de correos y generación de informes bajo el GDPR y el EU AI Act. Arquitectura, controles de cumplimiento y 5 plantillas de flujos de trabajo.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-agents-business-workflows-eu-compliance',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**La arquitectura local es el control de privacidad más sólido.** Cuando el modelo, los servidores de herramientas y los datos residen dentro de la infraestructura del responsable del tratamiento con cero egreso, el modelo de amenaza del LLM en la nube desaparece: Schrems II, listas de subencargados y evaluaciones de impacto de transferencias transfronterizas dejan de aplicarse.',
+          '**5 plantillas de flujos de trabajo cubren la mayor parte de la demanda en producción:** ingesta y clasificación de documentos, triaje de correos con borradores de respuesta, resumen de reuniones con extracción de acciones, generación de informes de cumplimiento, procesamiento de facturas con conciliación de pedidos. Cada una tiene una clasificación de datos, base jurídica, nivel en el AI Act y formato de registro de auditoría definidos.',
+          '**Los niveles del EU AI Act determinan las obligaciones.** La mayoría de los flujos de trabajo empresariales son de riesgo limitado (transparencia al usuario de que la IA está involucrada). El cribado de RRHH, las decisiones de crédito y la elegibilidad a prestaciones son de alto riesgo y requieren una evaluación de conformidad completa. El reconocimiento de emociones en el entorno laboral y la puntuación social están prohibidos.',
+          '**El trabajo del GDPR no cambia al operar en local.** Base jurídica (artículo 6), minimización de datos (artículo 5), seguridad del tratamiento (artículo 32), registro de auditoría y una DPIA (artículo 35) para flujos de trabajo de alto impacto. El stack local facilita evidenciar estos controles, pero no los hace opcionales.',
+          '**DACH añade dos capas.** La codecisión del Consejo de Empresa (BetrVG §87) se aplica siempre que el agente toque datos de empleados, incluso de forma pasiva. El §203 StGB de confidencialidad profesional (abogados, médicos, auditores, asesores fiscales) convierte la arquitectura local en un requisito obligatorio, no en una preferencia.',
+          '**El stack de referencia:** Ollama o vLLM sirviendo un modelo con tool-calling (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B para trabajo general; Llama 3.2 3B para triaje de correos ligero), con Cline o Goose+MCP como runtime del agente, un registro de auditoría append-only inmutable y aprobación humana en cada acción de escritura o envío.',
+          '**Tres modos de fallo a evitar:** desplegar sin DPIA un flujo de trabajo que la necesite, mezclar datos personales y empresariales en un único workspace de agente, y omitir las puertas de aprobación en acciones salientes (envío de correo, firma de contrato, autorización de pago).',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Arquitectura:** Ollama o vLLM + modelo con tool-calling + runtime del agente (Cline o Goose+MCP) + registro de auditoría + almacén RAG, todo en la infraestructura del responsable del tratamiento.',
+          '**Flujos de trabajo cubiertos:** ingesta de documentos, triaje de correos, resumen de reuniones, informes de cumplimiento, procesamiento de facturas.',
+          '**Distribución bajo el EU AI Act en las 5 plantillas:** 4 de riesgo limitado, 1 de alto riesgo (cuando se usa para cribado de RRHH), 0 prohibidas.',
+          '**Umbral de DPIA:** obligatoria para el alto riesgo, basada en criterios del artículo 35 para las demás. La mayoría de los equipos debería ejecutar una para cualquier flujo que toque datos de categorías especiales.',
+          '**Dimensionamiento de hardware:** Gemma 4 27B y Qwen3 32B caben en 24 GB de VRAM en Q4_K_M; GLM-5.1 32B y Llama 3.3 70B necesitan 48 GB+ para contexto sin restricciones.',
+          '**Retención del registro de auditoría:** los requisitos del registro de actividades del tratamiento del artículo 30 del GDPR marcan el mínimo; las normas sectoriales (servicios financieros, sanidad) lo amplían. 6 años es el valor seguro por defecto para la mayoría de los entornos empresariales.',
+          '**Coste:** cero en gasto de API; el hardware se amortiza frente a una suscripción SaaS de IA empresarial en 6–12 meses para un equipo de 20+ usuarios.',
+        ],
+      },
+      whatAgentsDo: {
+        id: 'what-agents-do',
+        title: 'Qué hacen los agentes de IA locales para los equipos empresariales',
+        content:
+          '**Un agente de IA local es un modelo con tool-calling que corre dentro de la infraestructura del responsable del tratamiento con puertas de aprobación explícitas entre las acciones de lectura y escritura.** No es un asistente de chat, ni un automatizador de flujos de trabajo (n8n, Zapier), ni un clasificador fine-tuned: es la capa que convierte un modelo en algo que opera sobre tus sistemas.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Un agente de IA local es un modelo con tool-calling más una superficie de herramientas más una puerta de aprobación, que corre completamente dentro de la infraestructura del responsable del tratamiento, convirtiendo el cumplimiento europeo de un ejercicio de documentación en una propiedad arquitectónica.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Un agente es un modelo que puede leer tu sistema de archivos, consultar tu base de datos, enviar un correo o llamar a tu API interna, con un humano aprobando cada acción que escribe o envía. Ejecuta el modelo, las herramientas y el registro de auditoría en tu propio hardware y sustituyes todo el stack de cumplimiento del LLM en la nube (Schrems II, listas de subencargados, evaluaciones de impacto de transferencias transfronterizas) por un único hecho arquitectónico: nada sale de tu red. Lo que queda son los controles del GDPR sobre los datos en sí, que aplican a cualquier sistema, en la nube o en local.',
+          },
+        ],
+        items: [
+          '**Definición:** modelo + superficie de herramientas (sistema de archivos, base de datos, correo, calendario, API interna) + puerta de aprobación por cada escritura = agente. El modelo propone; el runtime del agente ejecuta; el humano aprueba todo lo que muta el estado o sale de la red.',
+          '**Distinción frente a las herramientas de automatización.** n8n, Zapier y Make.com son flujos de trabajo deterministas: desencadenadores explícitos, ramas explícitas, acciones explícitas. Un agente es no determinista: el modelo decide qué herramienta invocar y con qué argumentos según la entrada y el estado de la conversación. Usa automatización cuando la ruta es fija; usa un agente cuando la ruta varía según la entrada.',
+          '**Distinción frente a un asistente de chat.** Un asistente de chat responde preguntas; un agente ejecuta acciones. Un "resume este correo" al estilo ChatGPT devuelve texto; un agente lee la bandeja de entrada, clasifica mensajes, redacta respuestas y las encola para aprobación. Superficie distinta, perfil de riesgo distinto.',
+          '**Por qué "local" importa específicamente para los flujos de trabajo empresariales:** la residencia de datos es demostrable (los bytes nunca salen de tu red), el rastro de auditoría es de extremo a extremo (el mismo registro captura la invocación del modelo, la llamada a la herramienta y el resultado), y no hay ningún subencargado tercero en la cadena. El argumento de cumplimiento se escribe solo cuando la arquitectura elimina categorías enteras de riesgo.',
+          '**Dónde encajan los agentes locales en la organización:** en cualquier flujo de trabajo que maneje datos personales (GDPR), datos de empleados (Consejo de Empresa), datos confidenciales de terceros (NDA, §203 StGB) o datos empresariales regulados (financiero, salud, legal). Los agentes locales no mejoran flujos de trabajo que solo tocan datos públicos; ahí los agentes en la nube suelen ser más rápidos y baratos.',
+          'Para la capa de protocolo que hace todo esto práctico, consulta [Conectar Ollama a bases de datos y APIs con MCP: configuración de agente local 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026).',
+        ],
+      },
+      workflowTemplates: {
+        id: 'workflow-templates',
+        title: '5 plantillas de flujos de trabajo empresariales',
+        content:
+          '**Estas cinco plantillas cubren la mayor parte de la demanda en producción de agentes locales en equipos empresariales.** Cada una se describe como desencadenador → herramientas → recomendación de modelo → patrón de aprobación → nivel en el AI Act.',
+        items: [
+          '**1. Ingesta y clasificación de documentos.** Desencadenador: PDF o escaneo llega a una carpeta vigilada o por correo. Herramientas: sistema de archivos (lectura), OCR (cuando sea necesario), modelo de clasificación, base de datos (escritura). Modelo: Gemma 4 27B o Qwen3 32B para tool-calling y salida estructurada. Patrón de aprobación: automático para lectura y clasificación, manual para enrutamiento si el documento menciona a una persona. Nivel en el AI Act: riesgo limitado. DPIA: basada en criterios.',
+          '**2. Triaje de correos con borradores de respuesta.** Desencadenador: nuevo mensaje en una bandeja de entrada monitorizada. Herramientas: IMAP/Graph API (solo lectura), modelo de clasificación, almacén de borradores (escritura), notificación. Modelo: Llama 3.2 3B es suficiente para el triaje; Gemma 4 27B para generar borradores. Patrón de aprobación: automático para clasificación y borrador, manual para envío (siempre). Nivel en el AI Act: riesgo limitado. DPIA: basada en criterios; obligatoria si la bandeja de entrada maneja datos de empleados.',
+          '**3. Resumen de reuniones y extracción de acciones.** Desencadenador: transcripción llega al almacenamiento (Whisper o proveedor). Herramientas: sistema de archivos (lectura), modelo de resumen, modelo de extracción, destino de salida (Notion/Jira/wiki interno vía API). Modelo: Qwen3 32B para contexto largo (128K) en transcripciones de una hora. Patrón de aprobación: automático para el resumen, manual para los elementos de acción publicados en sistemas externos. Nivel en el AI Act: riesgo limitado; verifica la captura del consentimiento antes de procesar cada transcripción.',
+          '**4. Generación de informes de cumplimiento.** Desencadenador: programado (mensual, trimestral). Herramientas: base de datos (lectura), almacén de plantillas de informes, renderizador de informes, notificación al revisor. Modelo: GLM-5.1 32B o Llama 3.3 70B: contexto largo, salida estructurada, baja alucinación. Patrón de aprobación: automático para extracción de datos, manual para el informe publicado. Nivel en el AI Act: riesgo limitado; verifica que las fuentes de datos subyacentes tienen una base jurídica documentada. Combínalo con [salida estructurada y modo JSON](/es/prompt-engineering/structured-output-and-json-mode) para mantener estable la forma del informe.',
+          '**5. Procesamiento y validación de facturas.** Desencadenador: factura llega a la bandeja de entrada de finanzas o carpeta de AP. Herramientas: sistema de archivos (lectura), OCR, integración ERP (lectura de pedido y proveedor), cola de excepciones (escritura). Modelo: Gemma 4 27B para tool-calling; Qwen3 32B cuando las facturas tienen diseños no estándar. Patrón de aprobación: automático para extracción y conciliación de pedidos, manual para cualquier excepción (discrepancia, proveedor nuevo, importe elevado). Nivel en el AI Act: riesgo limitado. DPIA: normalmente no se activa.',
+          '**Patrón común en las cinco:** los pasos de lectura se aprueban automáticamente; los pasos de escritura que afectan a sistemas externos o a los derechos de las personas se aprueban manualmente. El registro de auditoría captura cada decisión.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Las 5 plantillas difieren en desencadenador y salida, pero comparten una regla: los pasos de lectura se aprueban automáticamente, los de escritura o envío requieren aprobación humana y cada acción queda registrada en un log de auditoría inmutable.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Elige la plantilla que coincida con un flujo de trabajo que ya realizas de forma manual. Conecta el agente para que lea las entradas (sistema de archivos, bandeja de entrada, carpeta de transcripciones), clasifique o redacte, y luego espere revisión humana antes de enviar o escribir nada. La puerta de aprobación es la diferencia entre un agente útil y un incidente regulatorio.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Empieza con una plantilla, no con cinco. La ingesta de documentos y el triaje de correos son los dos puntos de entrada de menor riesgo: ambos son de riesgo limitado, ambos tienen límites de aprobación claros (enrutar, enviar), y ambos construyen la infraestructura de registro de auditoría que reutilizarás en las otras tres. La adopción escalonada supera al despliegue paralelo para los equipos de cumplimiento.',
+          },
+        ],
+      },
+      aiAct: {
+        id: 'ai-act',
+        title: 'Clasificación bajo el EU AI Act para agentes empresariales',
+        content:
+          '**El EU AI Act clasifica los sistemas de IA según el riesgo para los derechos fundamentales, no según la sofisticación técnica.** El mismo modelo y stack sirve flujos de trabajo de riesgo limitado y de alto riesgo; las obligaciones se aplican al uso, no a la tecnología.',
+        items: [
+          '**Riesgo limitado (la mayoría de las plantillas):** obligaciones de transparencia. El usuario que recibe un correo o resumen generado por IA debe saber que la IA estuvo involucrada. Una marca clara en el mensaje y una línea de divulgación en la documentación del sistema para el usuario final suelen bastar. No se requiere evaluación de conformidad.',
+          '**Alto riesgo (casos de uso específicos):** evaluación de conformidad completa, registro en la base de datos de la UE, vigilancia postcomercialización y un organismo notificado en algunas subcategorías. Los patrones que alcanzan el alto riesgo en equipos empresariales son el cribado de RRHH (clasificación de CV, puntuación de candidatos), las decisiones de crédito, la elegibilidad a prestaciones y el acceso a servicios públicos. El anexo III de la norma es la lista operativa.',
+          '**Prohibido (no desplegar):** identificación biométrica en tiempo real en espacios públicos (con excepciones estrechas para las fuerzas del orden), puntuación social de personas físicas, técnicas manipuladoras dirigidas a vulnerabilidades, reconocimiento de emociones en el entorno laboral (con excepciones médicas/de seguridad limitadas), predicción policial basada en perfiles.',
+          '**Correspondencia práctica flujo de trabajo → nivel para las 5 plantillas:** ingesta de documentos (riesgo limitado), triaje de correos (riesgo limitado), resumen de reuniones (riesgo limitado; verificar consentimiento), informes de cumplimiento (riesgo limitado), procesamiento de facturas (riesgo limitado). Las cinco plantillas base son todas de riesgo limitado; las mismas plantillas repropuestas para cribado de RRHH o decisiones de crédito heredan las obligaciones de alto riesgo por el uso.',
+          '**La distinción proveedor vs. operador importa.** Si incorporas el modelo en un producto vendido a terceros, eres proveedor (más obligaciones). Si operas el sistema en tu propio nombre, eres operador (menos obligaciones, pero reales). Los agentes locales solo para uso interno suelen convertirte en operador.',
+          '**Elemento de acción para cualquier nuevo flujo de trabajo:** clasifícalo antes de aprobar el despliegue. La clasificación es una decisión única (riesgo limitado / alto / prohibido) con justificación escrita, firmada por el DPD o el responsable de cumplimiento, y guardada en el expediente técnico del sistema de IA.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'La lista de casos de alto riesgo del anexo III del EU AI Act es la referencia operativa: consúltala directamente cuando clasifiques un flujo de trabajo. No te bases en artículos de resumen; el texto legal es suficientemente breve y preciso para usarlo como lista de verificación.',
+          },
+        ],
+      },
+      gdprControls: {
+        id: 'gdpr-controls',
+        title: 'Controles GDPR para flujos de trabajo de agentes',
+        content:
+          '**La arquitectura local elimina una amenaza (el intercambio de datos con el LLM en la nube), pero no elimina las obligaciones del GDPR sobre los datos en sí.** Seis controles cubren la mayoría de los flujos de trabajo de agentes; esos mismos seis se corresponden limpiamente con el expediente técnico que el EU AI Act espera para sistemas de alto riesgo.',
+        items: [
+          '**1. Base jurídica (artículo 6).** Documenta qué base aplica antes del despliegue: consentimiento, contrato, obligación legal, interés legítimo, intereses vitales o tarea de interés público. La mayoría de los flujos de trabajo de agentes empresariales operan sobre contrato (relación con empleado/cliente) o interés legítimo (con una prueba de ponderación documentada). Los datos de categorías especiales (salud, biometría, opinión política) necesitan además una condición del artículo 9.',
+          '**2. Minimización de datos (artículo 5(1)(c)).** El agente solo debe ver los datos personales que el flujo de trabajo necesita. Implicación práctica: fragmenta y filtra en la capa RAG, no en el modelo. Evita transmitir documentos completos a la conversación cuando solo una sección es relevante. Evita conservar prompts intermedios que contengan datos personales una vez completada la tarea.',
+          '**3. Limitación de finalidad (artículo 5(1)(b)).** El agente no debe reutilizarse entre tareas sin una reevaluación. Un flujo de trabajo aprobado para procesar facturas no puede absorber silenciosamente funciones de evaluación del rendimiento de empleados: eso es una nueva finalidad, una nueva base jurídica, una nueva decisión de DPIA.',
+          '**4. Seguridad del tratamiento (artículo 32).** Cifrado en reposo, control de acceso al workspace, registro de auditoría inmutable y un plan de respuesta a incidentes que incluya "el modelo produjo una salida que no debería haber producido". La arquitectura local cubre mucho aquí; no asumas que lo cubre todo.',
+          '**5. Registro de auditoría.** Campos mínimos del registro por acción del agente: marca de tiempo, usuario/iniciador, identificador y versión del modelo, hash de la entrada, llamadas a herramientas y argumentos, hash de la salida, aprobador (cuando se aplicó aprobación manual). Almacenamiento append-only; protección de integridad (cadena de hash o líneas de log firmadas).',
+          '**6. DPIA (artículo 35).** Obligatoria cuando el flujo de trabajo implica tratamiento sistemático de datos personales con impacto significativo, datos de categorías especiales a escala, o alto riesgo bajo el AI Act. Basada en criterios para todo lo demás. La DPIA documenta los controles, el riesgo residual y la firma del DPD.',
+          'Para la arquitectura del lado de los datos sobre la que se construye esto, consulta [RAG local para datos empresariales privados](/es/power-local-llm/local-rag-for-private-business-data): los controles RAG alimentan el mismo pipeline de auditoría.',
+          'Para los controles de prompt y salida aplicados sobre esto, consulta [gobernanza de prompts en producción](/es/prompt-engineering/prompt-governance-in-production) y [prompt injection y seguridad](/es/prompt-engineering/prompt-injection-and-security).',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La arquitectura local elimina el modelo de amenaza del LLM en la nube; los controles GDPR sobre los datos en sí (base jurídica, minimización, seguridad del tratamiento, registro de auditoría, DPIA) siguen vigentes y el expediente técnico los documenta en un único formato.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Ir a local no desactiva el GDPR. Desactiva la parte del GDPR que se preocupa por Schrems II y los acuerdos de encargado, y deja la parte que se preocupa por qué datos ve el agente, por qué los ve y qué evidencia conservas. El stack local facilita producir esa evidencia: el mismo registro de auditoría alimenta tanto el expediente GDPR como el expediente técnico del AI Act.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Un error frecuente: desplegar primero y redactar la DPIA después. Las autoridades de control esperan la DPIA antes de que comience el tratamiento (artículo 35(1)). Para flujos de trabajo que toquen datos de empleados o sean de alto riesgo bajo el AI Act, redacta la DPIA en el momento del diseño: es breve (4–8 páginas) y fuerza decisiones que son costosas de revisar más adelante.',
+          },
+        ],
+      },
+      dachSpecifics: {
+        id: 'dach-specifics',
+        title: 'Alemania: codecisión del Consejo de Empresa y §203 StGB',
+        content:
+          '**Los flujos de trabajo DACH tienen dos capas adicionales que las guías en inglés pasan por alto con frecuencia.** Ambas se activan pronto y ambas bloquean la decisión si se omiten.',
+        items: [
+          '**Codecisión del Consejo de Empresa (BetrVG §87(1) Nr. 6).** Cualquier sistema técnico que supervise la conducta o el rendimiento de los empleados activa la codecisión. Los tribunales laborales alemanes interpretan "supervisar" de forma amplia: un agente que clasifica correos de empleados o resume reuniones de empleados cuenta. El Consejo de Empresa debe participar en el momento del diseño, no después del despliegue. Omitir este paso ha anulado despliegues de agentes a posteriori.',
+          '**Implicación práctica:** antes de desplegar cualquier flujo de trabajo que procese datos de empleados, incluso de forma pasiva, incluso si la salida inmediata beneficia al propio empleado, involucra al Consejo de Empresa. El acuerdo (Betriebsvereinbarung) pasa a formar parte del expediente técnico del sistema. La mayoría de los Consejos de Empresa son constructivos cuando se los involucra pronto; casi ninguno lo es cuando se los involucra tarde.',
+          '**§203 StGB confidencialidad profesional.** Abogados, médicos, auditores, asesores fiscales y ciertas otras profesiones tienen responsabilidad penal por la divulgación no autorizada de información de clientes. La excepción para "auxiliares" (§203(3)) cubre al personal interno, pero no cubre automáticamente a los proveedores de servicios externos. Un LLM en la nube es un proveedor de servicios externo; ese es el núcleo jurídico por el que los despachos sujetos al §203 han migrado a stacks locales.',
+          '**Implicación práctica:** para cualquier profesión vinculada por el §203, la arquitectura local no es una preferencia sino el requisito predeterminado que permite que el flujo de trabajo exista. El contrato con el proveedor del agente (si lo hay) debe incluir cláusulas de cumplimiento del §203; el expediente técnico debe documentar que ningún dato de cliente sale de la infraestructura del despacho.',
+          '**Austria y Suiza:** Austria refleja de cerca el §203 (StGB §121); la confidencialidad suiza (artículo 321 StGB CH) es aún más amplia. La conclusión arquitectónica es la misma: local puro, sin excepciones para datos profesionales confidenciales.',
+          'Para el panorama de cumplimiento del lado de los datos en el mismo responsable del tratamiento, consulta [RAG local para datos empresariales privados](/es/power-local-llm/local-rag-for-private-business-data): los stacks de RAG y de agentes comparten el registro de auditoría y la capa de control de acceso.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Involucra al Consejo de Empresa en el momento del diseño, no en el del despliegue. Los tribunales laborales alemanes han anulado despliegues de agentes que procesaban datos de empleados sin una Betriebsvereinbarung previa. El coste de involucrar al Consejo de Empresa pronto es de horas; el coste de involucrarlos tarde es un despliegue pausado y una renegociación desde una posición más débil.',
+          },
+        ],
+      },
+      modelPick: {
+        id: 'model-pick',
+        title: 'Elegir el modelo adecuado para agentes empresariales',
+        content:
+          '**La fiabilidad del tool-calling es una propiedad del modelo, no del harness.** El mismo harness combinado con un modelo pequeño de propósito general falla; combinado con un modelo de 27B+ ajustado para tool-calling funciona. Elige primero el modelo.',
+        items: [
+          '**Gemma 4 27B (`gemma4:27b`).** El mejor modelo de tool-calling de propósito general en mayo de 2026. Cabe en 16 GB de memoria unificada o 24 GB de VRAM en Q4_K_M. Fiable en ingesta de documentos, triaje de correos y procesamiento de facturas. Algo conservador en llamadas encadenadas a herramientas, lo que encaja bien con flujos de trabajo empresariales donde cada paso tiene aprobación explícita de todos modos.',
+          '**GLM-5.1 32B (`glm5:32b`).** 128K de contexto de serie. Fuerte fiabilidad de tool-calling. La opción para informes de cumplimiento y resúmenes de reuniones con entradas largas. Necesita 24 GB+ de VRAM en Q4_K_M para contexto sin restricciones.',
+          '**Qwen3 32B (`qwen3:32b`).** Equilibrado, muy fiable en planes de múltiples pasos. Buen respaldo cuando Gemma 4 es demasiado conservador. 32K de contexto de serie; suficiente para la mayoría de las tareas empresariales.',
+          '**Llama 3.3 70B (`llama3.3:70b`).** Mayor techo, hardware más pesado. 48 GB+ de VRAM o 64 GB de memoria unificada en Q4_K_M. Úsalo para informes de cumplimiento y gestión de excepciones donde la fiabilidad importa más que la velocidad.',
+          '**Llama 3.2 3B (`llama3.2:3b`).** Opción ligera para triaje de alto volumen. Corre cómodamente en 8 GB de VRAM. Suficiente para "¿es este correo de soporte al cliente / ventas / spam?"; no suficiente para redactar respuestas. Combínalo con un modelo de 27B+ para el paso de redacción.',
+          '**Mistral Large.** Alternativa alojada en la UE para configuraciones híbridas donde el local puro es excesivo pero la nube estadounidense no es una opción. Ejecuta a través del endpoint de la UE de Mistral con un DPA en vigor; los datos permanecen en jurisdicción de la UE.',
+          '**Evitar para trabajo de tool-calling:** cualquier cosa por debajo de 7B para trabajo en producción, cualquier modelo de propósito general sin entrenamiento explícito en tool-calling, y cuantizaciones más agresivas que Q4_K_M en el extremo pequeño. Los síntomas son llamadas a herramientas malformadas, argumentos alucinados y bucles de agente detenidos.',
+          'Para los datos comparativos, consulta [Los mejores modelos locales para tool-calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026). Para el dimensionamiento de VRAM y hardware con los mismos modelos, consulta [Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Q4_K_M es el mínimo en producción para la fiabilidad del tool-calling. Q3 y por debajo degradan la precisión del tool-calling antes de degradar la calidad del chat, que es la forma incorrecta de fallar en un flujo de trabajo regulado. Si la VRAM es escasa, baja un nivel de parámetros (32B → 27B) antes de bajar un nivel de cuantización (Q4 → Q3).',
+          },
+        ],
+      },
+      stackComparison: {
+        id: 'stack-comparison',
+        title: 'Comparativa de stacks de agentes para uso empresarial',
+        content:
+          '**Cuatro runtimes de agentes son creíbles para flujos de trabajo empresariales en 2026.** Difieren en la UX de las puertas de aprobación, la riqueza del rastro de auditoría y el código personalizado que cada uno requiere.',
+        columns: ['Runtime', 'Configuración', 'Puertas de aprobación', 'Rastro de auditoría', 'Mejor para'],
+        rows: [
+          { 'Runtime': 'Cline (VS Code)', 'Configuración': 'Instalar una extensión', 'Puertas de aprobación': 'Por paso, en el IDE; lista de aprobación automática', 'Rastro de auditoría': 'Log dentro de la extensión; requiere exportación para cumplimiento', 'Mejor para': 'Flujos de trabajo orientados al código, auditoría de un solo desarrollador' },
+          { 'Runtime': 'Goose + MCP', 'Configuración': 'Brew install + mcp.json', 'Puertas de aprobación': 'Prompts CLI; configurable por herramienta', 'Rastro de auditoría': 'Archivo de log CLI; rotar a almacenamiento inmutable', 'Mejor para': 'Flujos de trabajo CLI, servidores sin interfaz gráfica' },
+          { 'Runtime': 'n8n self-hosted + Ollama', 'Configuración': 'Docker + nodo LLM de n8n', 'Puertas de aprobación': 'Nodos human-in-the-loop a nivel de flujo de trabajo', 'Rastro de auditoría': 'Log de ejecución nativo de n8n + base de datos', 'Mejor para': 'Flujos de trabajo de forma determinista con uno o dos pasos de modelo' },
+          { 'Runtime': 'LangGraph personalizado + Ollama', 'Configuración': 'Proyecto Python, suite de pruebas real', 'Puertas de aprobación': 'Construidas por ti (API de interrupciones)', 'Rastro de auditoría': 'Construido por ti', 'Mejor para': 'Flujos de trabajo en producción que justifican la inversión de ingeniería' },
+        ],
+        items: [
+          '**Elige Cline + Ollama** si el equipo es de perfil técnico y los flujos de trabajo caben dentro de VS Code. Menor fricción de instalación, camino más rápido a un agente funcional.',
+          '**Elige Goose + MCP** si el flujo de trabajo corre en un servidor sin interfaz gráfica (un informe de cumplimiento programado, un ingestor que vigila carpetas) donde no hay IDE.',
+          '**Elige n8n + Ollama** si el flujo de trabajo tiene una forma determinista con uno o dos pasos de modelo. Los nodos human-in-the-loop de n8n te dan puertas de aprobación sin una UI personalizada.',
+          '**Elige LangGraph personalizado** solo cuando la forma del flujo de trabajo sea genuinamente incompatible con lo anterior. El esfuerzo de construcción es real; el código del rastro de auditoría y las puertas de aprobación corre por tu cuenta.',
+          '**Para una comparativa honesta de fiabilidad entre estos stacks**, consulta [Agentes de IA locales en 2026: lo que realmente funciona (y lo que aún falla)](/es/power-local-llm/autonomous-local-agents-actually-work).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Cline es el punto de partida con menor fricción incluso para flujos de trabajo no orientados al código. Conecta los servidores MCP (sistema de archivos, sqlite, IMAP) y tendrás ingesta de documentos, procesamiento de facturas y triaje de correos en un único runtime, sin escribir un orquestador. Migra a LangGraph solo cuando la forma del flujo de trabajo supere genuinamente la UX de pasos por alcance de Cline.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores frecuentes al desplegar agentes locales en flujos de trabajo empresariales de la UE',
+        items: [
+          '**Error 1: desplegar sin DPIA.** Cualquier flujo de trabajo que toque datos de categorías especiales o que tome decisiones sobre personas necesita una DPIA. La DPIA es breve —4–8 páginas para la mayoría de los flujos de agentes— pero es obligatoria y es lo primero que pide la autoridad de control. Redáctala antes del despliegue, no después.',
+          '**Error 2: usar un agente conectado a la nube para documentos confidenciales.** Un modelo local no es suficiente si el runtime del agente, el registro de auditoría o el almacén de embeddings residen en la nube de un tercero. La arquitectura es de extremo a extremo; una única dependencia en la nube en la cadena rompe el argumento de local puro.',
+          '**Error 3: no tener puerta de aprobación en acciones de escritura o envío.** El agente lee, clasifica, redacta, envía. El paso de envío es el que los humanos deben aprobar siempre, independientemente de lo fiable que haya sido el modelo. Los agentes con envío automático son la manera en que el regulador se entera de ti.',
+          '**Error 4: mezclar datos personales y empresariales en un único workspace.** El directorio de trabajo del agente y el almacén vectorial deben tener alcance por flujo de trabajo, no ser compartidos. La contaminación cruzada viola la limitación de finalidad; la recuperación es costosa.',
+          '**Error 5: omitir el registro de auditoría.** "Podemos reconstruirlo del historial de conversación del modelo" no es un registro de auditoría. Append-only, con cadena de hash, retenido según el período de retención pertinente, consultable por los responsables de solicitudes de acceso de los interesados: esa es la barra mínima.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          '[Texto consolidado del EU AI Act (artificialintelligenceact.eu)](https://artificialintelligenceact.eu/the-act/) — agregado de seguimiento oficial del reglamento; el anexo III es la lista operativa de alto riesgo.',
+          '[Texto completo del GDPR (gdpr-info.eu)](https://gdpr-info.eu/) — los artículos 5, 6, 25, 32, 35 son los operativos para el diseño de agentes.',
+          '[Marco de gestión del riesgo de IA del NIST](https://www.nist.gov/itl/ai-risk-management-framework) — no europeo, no vinculante, pero la estructura GOVERN / MAP / MEASURE / MANAGE es una lista de verificación útil para preparar auditorías.',
+          '[Directrices del EDPB 03/2018 sobre la toma de decisiones individuales automatizadas](https://edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en) — operativas para cualquier flujo de trabajo que tome decisiones sobre personas; relevantes tanto bajo el artículo 22 del GDPR como bajo el AI Act.',
+          '[Documento de posición del BfDI sobre sistemas de IA (Comisionado Federal de Alemania para la Protección de Datos)](https://www.bfdi.bund.de/) — específico para DACH; hace referencia al §203 StGB y a la práctica del Consejo de Empresa.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          {
+            q: '¿Son los agentes de IA locales conformes con el GDPR por defecto?',
+            a: 'No: son compatibles con el GDPR por arquitectura, pero no conformes por defecto. La arquitectura local pura elimina el modelo de amenaza del LLM en la nube (Schrems II, listas de subencargados, transferencias transfronterizas), pero los controles del GDPR sobre los datos en sí siguen aplicándose: base jurídica (artículo 6), minimización de datos (artículo 5), seguridad del tratamiento (artículo 32), registro de auditoría y una DPIA cuando el flujo de trabajo lo justifique. El stack local facilita evidenciar estos controles; no los hace opcionales.',
+          },
+          {
+            q: '¿Qué flujos de trabajo son de alto riesgo bajo el EU AI Act?',
+            a: 'El anexo III enumera los casos de uso operativos de alto riesgo. Los patrones que afectan con más frecuencia a los equipos empresariales son los de RRHH (cribado de CV, clasificación de candidatos, evaluación del rendimiento), las decisiones de crédito, la elegibilidad a prestaciones y el acceso a servicios esenciales. La mayoría de los flujos de trabajo empresariales generales (ingesta de documentos, triaje de correos, resumen de reuniones, procesamiento de facturas, informes de cumplimiento) son de riesgo limitado: solo obligaciones de transparencia, sin evaluación de conformidad completa.',
+          },
+          {
+            q: '¿Necesito una DPIA para un agente de triaje de correos?',
+            a: 'Depende. Una DPIA es obligatoria cuando el flujo de trabajo implica tratamiento sistemático de datos personales con impacto significativo (artículo 35(1)) o aparece en las listas de DPIA obligatoria de la autoridad de control. Un agente de triaje de bandeja de entrada general a menudo no se activa automáticamente; el mismo agente en una bandeja de entrada de RRHH o candidatos, sí. La mayoría de los equipos debería ejecutar una DPIA breve en cualquier bandeja que contenga datos de empleados, independientemente de los criterios estrictos de activación: el coste es de horas, el beneficio es una aprobación documentada.',
+          },
+          {
+            q: '¿Puede un agente local procesar datos de empleados?',
+            a: 'Sí, con dos pasos adicionales en DACH. Primero, codecisión del Consejo de Empresa (BetrVG §87(1) Nr. 6): involucra al Consejo de Empresa en el momento del diseño y firma una Betriebsvereinbarung que defina finalidad, retención, acceso y requisitos de auditoría. Segundo, base jurídica bajo el GDPR: normalmente contrato o interés legítimo con una prueba de ponderación documentada. Omitir el paso del Consejo de Empresa ha anulado despliegues a posteriori en los tribunales laborales alemanes.',
+          },
+          {
+            q: '¿Qué tamaño de modelo maneja flujos de trabajo empresariales de forma fiable?',
+            a: 'Gemma 4 27B es el valor fiable por defecto para tool-calling de propósito general. GLM-5.1 32B es la opción cuando la entrada es larga (informes de cumplimiento, transcripciones de reuniones de una hora): 128K de contexto de serie. Qwen3 32B es el respaldo equilibrado. Llama 3.3 70B tiene el mayor techo pero necesita 48 GB+ de VRAM. Llama 3.2 3B es suficiente para clasificación de alto volumen, no para redactar. Los modelos por debajo de 7B emiten llamadas a herramientas malformadas independientemente del runtime del agente que los envuelva.',
+          },
+          {
+            q: '¿Cómo audito lo que hizo el agente?',
+            a: 'Cada acción del agente escribe una entrada de log: marca de tiempo, usuario/iniciador, identificador y versión del modelo, hash de la entrada, llamadas a herramientas con argumentos, hash de la salida, aprobador cuando se aplicó aprobación manual. El almacenamiento es append-only con protección de integridad (cadena de hash o líneas de log firmadas). La retención sigue los requisitos del registro de actividades del tratamiento del artículo 30 del GDPR como mínimo; las normas sectoriales (servicios financieros, salud) lo amplían. El registro de auditoría responde a las solicitudes de acceso de los interesados y alimenta el expediente técnico del AI Act en un único formato.',
+          },
+          {
+            q: '¿Puedo compartir un agente entre departamentos?',
+            a: 'Arquitectónicamente sí, legalmente complicado. Cada departamento tiene su propia finalidad, su propia base jurídica, su propia retención y potencialmente su propio acuerdo con el Consejo de Empresa. Los agentes compartidos difuminan todo esto y crean riesgo de contaminación cruzada bajo la limitación de finalidad (artículo 5(1)(b)). El patrón más limpio: un runtime de agente, workspaces separados por flujo de trabajo, registros de auditoría separados por flujo de trabajo, despliegue único del modelo subyacente. El modelo es un recurso compartido; los flujos de trabajo no.',
+          },
+          {
+            q: '¿Qué pasa con las filiales transfronterizas?',
+            a: 'Si el responsable del tratamiento es la entidad de la UE y los datos permanecen en infraestructura de la UE, la arquitectura local pura cubre por defecto la mayor parte de la preocupación transfronteriza. Presta atención a dos casos: una filial fuera de la UE que ejecuta el agente local sobre datos personales de la UE (los datos deben permanecer en la UE; el agente puede operarse de forma remota siempre que no egrese ningún dato personal) y un equipo de soporte fuera de la UE que accede a la salida del agente (trátalo como una transferencia; documenta la base jurídica bajo el capítulo V del GDPR). Mistral Large en Scaleway es la opción híbrida común cuando el local puro es excesivo y la nube estadounidense no es una opción.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[RAG local para datos empresariales privados](/es/power-local-llm/local-rag-for-private-business-data) — la arquitectura del lado de los datos conforme con el GDPR que alimenta el mismo pipeline de auditoría.',
+          '[Conectar Ollama a bases de datos y APIs con MCP: configuración de agente local 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — la capa de protocolo para herramientas de sistema de archivos, base de datos, navegador y GitHub.',
+          '[Agentes de IA locales en 2026: lo que realmente funciona (y lo que aún falla)](/es/power-local-llm/autonomous-local-agents-actually-work) — comparativa honesta de fiabilidad entre los cuatro runtimes recomendados anteriormente.',
+          '[Sustituir Zapier con agentes de IA locales](/es/power-local-llm/replace-zapier-with-local-ai-agents) — plantillas de flujos de trabajo n8n + Ollama para el extremo determinista del espectro de agentes.',
+          '[Los mejores modelos locales para tool-calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — benchmarks comparativos para los modelos recomendados en esta guía.',
+          '[Lista de verificación de seguridad y privacidad para LLM local](/es/local-llms/local-llm-security-privacy-checklist) — capa de controles para el mismo hardware que ejecuta estos flujos de trabajo.',
+        ],
+      },
+    },
+  },
 }
