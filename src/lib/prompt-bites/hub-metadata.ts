@@ -20,12 +20,12 @@ export const HUB_METADATA: HubMetadataConfig = {
     es: 'Consejos LLM Local: {{count}} Respuestas sobre VRAM, Ollama y GPU',
   },
   descriptions: {
-    en: 'Quick answers to {{count}} local LLM questions: VRAM requirements, Ollama vs LM Studio, quantization basics, GPUs under $600, and proven setup tips for running models locally.',
-    de: '{{count}} Antworten zu lokalen LLMs: VRAM-Anforderungen, Ollama vs LM Studio, Quantisierung, GPUs unter 600 €, und praktische Setup-Tipps.',
-    fr: '{{count}} réponses sur les LLM locaux: VRAM, Ollama vs LM Studio, quantification, GPU sous 600 €, et conseils de configuration éprouvés.',
-    ja: '{{count}}のローカルLLM質問への回答：VRAM要件、Ollama vs LM Studio、量化、600ドル以下のGPU、実証済みのセットアップのコツ。',
-    zh: '{{count}}个本地LLM问题的答案：VRAM要求、Ollama vs LM Studio、量化、600美元以下的GPU、久经考验的设置技巧。',
-    es: '{{count}} respuestas sobre LLM local: VRAM, Ollama vs LM Studio, cuantización, GPU bajo $600, y consejos de configuración comprobados.',
+    en: '{{count}} answers on VRAM requirements, Ollama vs LM Studio, quantization, GPUs under $600, and local LLM setup tips.',
+    de: '{{count}} Antworten zu VRAM, Ollama vs LM Studio, Quantisierung, GPUs unter 600 €, und Setup-Tipps für lokale LLMs.',
+    fr: '{{count}} réponses sur VRAM, Ollama vs LM Studio, quantification, GPU sous 600 €, et conseils de configuration pour LLM local.',
+    ja: '{{count}}個の回答：VRAM、Ollama vs LM Studio、量化、600ドル以下のGPU、ローカルLLMのセットアップのコツ。',
+    zh: '{{count}}个答案：VRAM、Ollama vs LM Studio、量化、600美元以下的GPU、本地LLM设置技巧。',
+    es: '{{count}} respuestas sobre VRAM, Ollama vs LM Studio, cuantización, GPU bajo $600, y consejos de configuración para LLM local.',
   },
 }
 

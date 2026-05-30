@@ -502,7 +502,7 @@ End with: "You're already doing prompt engineering—now do it better."`}
                 <li>• Good use of formatting (bullets, emphasis)</li>
               </ul>
 
-              <strong className="block text-gray-900 mt-4 mb-2">Areas for Improvement:</strong>
+              <strong className="block text-gray-900 mt-4 mb-2">{t.areasForImprovement}</strong>
               <ul className="ml-4 text-sm text-gray-700 space-y-1">
                 <li>• Could include more diverse examples</li>
                 <li>• Interactive elements would enhance engagement</li>
@@ -518,7 +518,7 @@ End with: "You're already doing prompt engineering—now do it better."`}
             onClick={() => toggleCollapsible('suggestions')}
             className="w-full flex items-center justify-between gap-3 px-4 py-3 bg-gray-50 hover:bg-gray-100 transition-colors"
           >
-            <span className="text-sm font-semibold text-gray-900">Improvement Suggestions (3)</span>
+            <span className="text-sm font-semibold text-gray-900">{t.improvementSuggestions}</span>
             <span className={`text-lg text-gray-600 transition-transform ${expandedCollapsible === 'suggestions' ? 'rotate-180' : ''}`}>▼</span>
           </button>
           {expandedCollapsible === 'suggestions' && (
