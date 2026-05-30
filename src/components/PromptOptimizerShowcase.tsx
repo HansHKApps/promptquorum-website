@@ -319,28 +319,28 @@ export function PromptOptimizerShowcase({ lang = 'en' }: { lang?: Lang }) {
           className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={!prompt.trim()}
         >
-          Optimize Prompt
+          {t.optimizePrompt}
         </button>
         <button
           className="px-6 py-3 border-2 border-gray-300 text-text-primary font-semibold rounded-lg hover:border-gray-400 transition-colors"
         >
-          Compare Frameworks
+          {t.compareFrameworks}
         </button>
       </div>
 
       {/* Help Text */}
       <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
         <p className="text-sm text-text-secondary">
-          📚 Need help optimizing your prompt?{' '}
+          📚 {t.helpOptimize}{' '}
           <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">
-            View prompt engineering best practices
+            {t.promptEngineeringBestPractices}
           </a>
         </p>
       </div>
 
       {/* Footer Alert */}
       <div className="mt-6 p-3 bg-gray-100 rounded text-xs text-text-secondary text-center">
-        ⚙️ Optimization engine powered by {currentProvider?.name}
+        ⚙️ {t.optimizationEngine} {currentProvider?.name}
       </div>
     </div>
   )

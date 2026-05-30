@@ -326,7 +326,7 @@ function FeaturesContent({ initialLang }: { initialLang?: import("@/hooks/useLan
         {/* Prompt Optimizer Showcase */}
         <div className="mb-20">
           <div className="bg-surface-highlight border border-primary/20 rounded-xl p-8 sm:p-12">
-            <PromptOptimizerShowcase />
+            <PromptOptimizerShowcase lang={lang} />
           </div>
         </div>
 
@@ -337,7 +337,7 @@ function FeaturesContent({ initialLang }: { initialLang?: import("@/hooks/useLan
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">{t.optimizationDesc}</p>
           </div>
           <div className="bg-surface-highlight border border-primary/20 rounded-xl p-8 sm:p-12">
-            <OptimizationShowcase />
+            <OptimizationShowcase lang={lang} />
           </div>
         </div>
 
@@ -348,7 +348,7 @@ function FeaturesContent({ initialLang }: { initialLang?: import("@/hooks/useLan
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">{t.quorumDesc}</p>
           </div>
           <div className="bg-surface-highlight border border-primary/20 rounded-xl p-8 sm:p-12">
-            <QuorumShowcase />
+            <QuorumShowcase lang={lang} />
           </div>
         </div>
 
