@@ -9,11 +9,18 @@ import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
-const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO' }
-const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO' }
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث' }
 
 function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
+}
+
+function getImagePath(basePath: string, lang: string): string {
+  const supportedLangs = ['es', 'de', 'fr', 'ja', 'zh']
+  if (!supportedLangs.includes(lang)) return basePath
+  const dotIndex = basePath.lastIndexOf('.')
+  return basePath.slice(0, dotIndex) + `-${lang}` + basePath.slice(dotIndex)
 }
 
 function renderDescription(text: string, lang: Language): React.ReactNode {
@@ -1231,7 +1238,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           {/* Image 1: VRAM Requirements */}
           <figure className="mb-10">
             <img
-              src="/images/local-llm-vram-requirements.svg"
+              src={getImagePath('/images/local-llm-vram-requirements.svg', lang)}
               alt="VRAM requirements for local LLMs: 3B models need 4 GB, 7B needs 8 GB (RTX 4060 / Apple M3 limit), 13B needs 16 GB, 70B models like Llama 4 Scout need 40 GB+ at Q4_K_M quantization"
               className="w-full rounded-xl border border-primary/15"
               loading="lazy"
@@ -1334,7 +1341,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
         {/* Image 2: Local vs Cloud Comparison */}
         <figure className="mb-16">
           <img
-            src="/images/local-vs-cloud-llm-comparison.svg"
+            src={getImagePath('/images/local-vs-cloud-llm-comparison.svg', lang)}
             alt="Local LLMs vs Cloud APIs comparison table: local costs $0 per token after hardware with full privacy; cloud APIs charge $0.15–$60 per 1M tokens with excellent quality and instant setup"
             className="w-full rounded-xl border border-primary/15"
             loading="lazy"
@@ -1349,7 +1356,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
         {/* Recently Published — auto-surfaced articles with publishDate within 15 days */}
         {(() => {
           const RECENT_HEADING: Record<string, string> = {
-            en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新增',
+            en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新增', es: 'Nuevo este mes', pt: 'Novo este mês', ar: 'جديد هذا الشهر',
           }
           const RECENT_SUB: Record<string, string> = {
             en: 'Just published — disappears from this spot after 14 days',
@@ -1357,6 +1364,9 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
             fr: 'Vient de paraître — disparaît de cet emplacement après 14 jours',
             ja: '公開されたばかり — 14日後にここから消えます',
             zh: '刚刚发布 — 14天后从此处消失',
+            es: 'Recién publicado — desaparece de este lugar después de 14 días',
+            pt: 'Recém publicado — desaparece deste local após 14 dias',
+            ar: 'نُشر للتو — يختفي من هنا بعد 14 يومًا',
           }
           const recentSlugs = Object.entries(LLM_SLUG_TO_KEY)
             .filter(([, key]) => isNewArticle(llmContent[key]?.en?.publishDate))
@@ -1391,7 +1401,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
         {/* Image 3: Top Models 2026 */}
         <figure className="mb-16">
           <img
-            src="/images/top-open-source-models-2026.svg"
+            src={getImagePath('/images/top-open-source-models-2026.svg', lang)}
             alt="Top open-source local models 2026: Llama 4 Scout 109B MoE for reasoning, Qwen3.5 72B for coding, DeepSeek V3 671B MoE for math, Mistral 7B for speed at 8 GB VRAM, Phi-3.5 Mini 3.8B for low-power devices at 4 GB VRAM"
             className="w-full rounded-xl border border-primary/15"
             loading="lazy"
@@ -1421,7 +1431,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
         {/* Image 4: Ollama Quick Start */}
         <figure className="mb-16">
           <img
-            src="/images/ollama-quick-start-commands.svg"
+            src={getImagePath('/images/ollama-quick-start-commands.svg', lang)}
             alt="Ollama terminal showing two commands: ollama pull llama3.2 downloads the 4.7 GB Q4_K_M model, ollama run llama3.2 starts an interactive session at 60 tokens per second on GPU or 12 tokens per second on CPU"
             className="w-full rounded-xl border border-primary/15"
             loading="lazy"
@@ -1451,7 +1461,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
         {/* Image 5: PromptQuorum Dispatch */}
         <figure className="mb-16">
           <img
-            src="/images/promptquorum-local-cloud-dispatch.svg"
+            src={getImagePath('/images/promptquorum-local-cloud-dispatch.svg', lang)}
             alt="PromptQuorum architecture diagram: one prompt dispatched to local Ollama LLM and 25+ cloud APIs including GPT-4o, Claude 4.6, and Gemini 2.5 simultaneously, with side-by-side results comparison view"
             className="w-full rounded-xl border border-primary/15"
             loading="lazy"

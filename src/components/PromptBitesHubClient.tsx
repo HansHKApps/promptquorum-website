@@ -9,9 +9,9 @@ import { PROMPT_BITES_PUBLISHED_SLUGS } from '@/lib/prompt-bites/published'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
-const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO' }
-const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO' }
-const RECENT_HEADING: Record<string, string> = { en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増', es: 'Nuevo este mes' }
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث' }
+const RECENT_HEADING: Record<string, string> = { en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増', es: 'Nuevo este mes', pt: 'Novo este mês', ar: 'جديد هذا الشهر' }
 const RECENT_SUB: Record<string, string> = {
   en: 'Just published — disappears from this spot after 14 days',
   de: 'Gerade veröffentlicht — verschwindet nach 14 Tagen',
@@ -19,6 +19,8 @@ const RECENT_SUB: Record<string, string> = {
   ja: '公開されたばかり — 14日後にここから消えます',
   zh: '刚刚发布 — 14天后从此处消失',
   es: 'Recién publicado — desaparece de este lugar después de 14 días',
+  pt: 'Recém publicado — desaparece deste local após 14 dias',
+  ar: 'نُشر للتو — يختفي من هنا بعد 14 يومًا',
 }
 
 interface Props {

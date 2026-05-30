@@ -15,8 +15,8 @@ import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
 import { isPowerLLMArticlePublished, isPowerLLMHubPublished } from './published'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
-const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO' }
-const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO' }
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث' }
 import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
 
 const BASE = 'https://www.promptquorum.com'
@@ -1369,7 +1369,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es') {
           {/* Recently Published — auto-surfaced articles with publishDate within 15 days */}
           {(() => {
             const RECENT_HEADING: Record<string, string> = {
-              en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増', es: 'Nuevo Este Mes',
+              en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増', es: 'Nuevo Este Mes', pt: 'Novo este mês', ar: 'جديد هذا الشهر',
             }
             const RECENT_SUB: Record<string, string> = {
               en: 'Just published — disappears from this spot after 14 days',
@@ -1378,6 +1378,8 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es') {
               ja: '公開されたばかり — 14日後にここから消えます',
               zh: '刚刚发布 — 14天后从此处消失',
               es: 'Recién publicado — desaparece de este lugar después de 14 días',
+              pt: 'Recém publicado — desaparece deste local após 14 dias',
+              ar: 'نُشر للتو — يختفي من هنا بعد 14 يومًا',
             }
             const recentSlugs = Object.entries(powerLLMContent)
               .filter(([slug, content]) => isNewArticle(content?.['en']?.publishDate) && isPowerLLMArticlePublished(slug, 'en'))
