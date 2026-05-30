@@ -9843,6 +9843,124 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
       },
     },
+    es: {
+      category: 'Investigación',
+      title: 'Herramientas de Optimización y Comparación de Prompts: Descripción del Mercado 2026',
+      intro: 'El mercado de Herramientas de Prompts para LLM alcanzó $456M en 2024 (proyectado $1,018M en 2031). Comparación independiente de 17 herramientas en 6 grupos — precios, características y datos de adquisición. Marzo 2026.',
+      publishDate: 'Published March 2026',
+      readTime: '15 min de lectura',
+      metaDescription: 'Compara herramientas de optimización de prompts (PrompTessor, PromptPerfect, Promptmetheus, PromptHub, PromptLayer, Vellum AI, Braintrust, LangSmith, Promptfoo, Langfuse, Galileo AI, Agenta) en precios, características e integraciones.',
+      educationalLevel: 'Intermediate',
+      sections: {
+        downloadReport: {
+          downloadCta: {
+            label: 'Descargar Informe Completo en PDF',
+            href: '/es/pdfs/prompt-optimization-market-overview-2026.pdf',
+            description: 'Descarga gratuita — informe completo con tablas de precios, comparaciones de herramientas y cronología de adquisiciones (PDF, marzo 2026)',
+          },
+        },
+        marketOverview: {
+          title: 'El Mercado de Herramientas de Prompts para LLM en 2026',
+          content: [
+            'El mercado global de Herramientas de Generación de Prompts para LLM alcanzó USD 456 millones en 2024 y se proyecta que llegue a USD 1,018 millones en 2031, creciendo a una tasa de crecimiento anual compuesto (CAGR) del 12.0%. El crecimiento es impulsado por empresas que avanzan desde deployments experimentales de IA hacia ingeniería de prompts estructurada y gobernada — formalizando librerías de prompts, implementando capas de cumplimiento e implementando plataformas de gestión centralizadas.',
+            'Dos adquisiciones hito en principios de 2026 señalan consolidación del mercado: OpenAI adquirió Promptfoo en marzo de 2026, integrando pruebas de seguridad de IA en su plataforma Frontier. ClickHouse adquirió Langfuse en enero de 2026, unificando observabilidad de IA con infraestructura de base de datos analítica.',
+          ],
+          items: [
+            'Optimizadores Consumer & Prosumer: PrompTessor, PromptPerfect, Promptmetheus',
+            'Gestión de Prompts para Equipos: PromptHub, PromptLayer, Vellum AI, Maxim AI',
+            'Evaluación y Observabilidad para Desarrolladores: Braintrust, LangSmith, Promptfoo, Langfuse, Galileo AI, Agenta',
+            'Librerías de Prompts y Mercados: PromptBase, AIPRM, FlowGPT',
+            'Frameworks Open-Source: DSPy, DSPyLab',
+            'Comparación Multi-Modelo: Prompts.ai',
+          ],
+        },
+        group1Intro: {
+          title: 'Grupo 1: Optimizadores de Prompts Consumer & Prosumer',
+          content: 'Los optimizadores de prompts consumer y prosumer sirven a usuarios individuales, creadores de contenido, marketers y usuarios no técnicos que buscan mejorar la calidad de prompts sin escribir código. Tres herramientas lideran este grupo en 2026.',
+        },
+        promptTessor: {
+          title: 'PrompTessor',
+          content: 'PrompTessor puntúa prompts en una escala de efectividad 0—100 en 6 dimensiones: Claridad, Especificidad, Contexto, Orientación a Objetivos, Estructura y Restricciones. Proporciona ingeniería inversa desde imágenes, video, audio y texto (agregado en 2026) y soporta 30+ idiomas con adaptación de contexto cultural.',
+          columns: ['Plan', 'Precio', 'Detalles Clave'],
+          rows: [
+            { 'Plan': 'Gratis', 'Precio': '$0', 'Detalles Clave': 'Análisis básico, 1 prompt gratis' },
+            { 'Plan': 'Básico', 'Precio': 'Desde $7/mes', 'Detalles Clave': 'Análisis y optimización ilimitados básicos' },
+            { 'Plan': 'Pro', 'Precio': '$10/mes', 'Detalles Clave': 'Todas las características, solicitudes ilimitadas' },
+          ],
+        },
+        promptPerfect: {
+          title: 'PromptPerfect',
+          content: 'PromptPerfect actúa como un entorno de desarrollo integrado (IDE) para prompts, enfocándose en optimización en tiempo real con resultados entregados en aproximadamente 10 segundos. Soporta optimización multi-objetivo y soporte de prompts en múltiples idiomas con plantillas preconstruidas.',
+          columns: ['Plan', 'Precio', 'Detalles'],
+          rows: [
+            { 'Plan': 'Gratis', 'Precio': '$0', 'Detalles': '10 optimizaciones/mes' },
+            { 'Plan': 'Estándar', 'Precio': '$20/mes', 'Detalles': 'Límites aumentados' },
+            { 'Plan': 'Enterprise', 'Precio': 'Personalizado', 'Detalles': 'Características completas de equipo' },
+          ],
+        },
+        promptmetheus: {
+          title: 'Promptmetheus',
+          content: 'Promptmetheus apunta a ingenieros de prompts profesionales y desarrolladores de IA. Soporta pruebas en 150+ modelos de 15 proveedores — uno de los ambientes de prueba multi-modelo más amplios disponibles. Característica clave: composabilidad de prompts permite encadenar prompts simples en pipelines modulares.',
+        },
+        group2Intro: {
+          title: 'Grupo 2: Gestión de Prompts para Equipos',
+          content: 'Herramientas de gestión de prompts para equipos centralizan el control de versiones, el almacenamiento y la distribución de prompts a través de múltiples aplicaciones e integraciones. Cuatro líderes: PromptHub, PromptLayer, Vellum AI, Maxim AI.',
+        },
+        promptHub: {
+          title: 'PromptHub',
+          content: 'PromptHub proporciona un repositorio centralizado para versiones de prompts con control de acceso granular, historial de cambios y rastreo de auditoría. Soporta integración seamless con APIs de modelos frontier.',
+        },
+        group3Intro: {
+          title: 'Grupo 3: Evaluación y Observabilidad para Desarrolladores',
+          content: 'Herramientas de evaluación y observabilidad inspeccionan respuestas de modelos, rastrea coste y latencia, y proporciona señales de calidad. Seis herramientas en este grupo: Braintrust, LangSmith, Promptfoo, Langfuse, Galileo AI, Agenta.',
+        },
+        braintrust: {
+          title: 'Braintrust',
+          content: 'Plataforma de observabilidad completa para aplicaciones LLM. Registra cada llamada de modelo con métricas, proporciona reprodución de sesiones y facilita evaluación a través de múltiples dimensiones.',
+        },
+        langSmith: {
+          title: 'LangSmith',
+          content: 'LangSmith de LangChain proporciona debugging, pruebas y monitoreo para aplicaciones LLM. Integración profunda con el ecosistema de LangChain.',
+        },
+        promptfoo: {
+          title: 'Promptfoo',
+          content: 'Framework open source para ingeniería de prompts impulsada por pruebas y seguridad de IA. Adquirido por OpenAI en marzo de 2026. Incluye casos de prueba en YAML, red teaming automático e integración CI/CD.',
+        },
+        langfuse: {
+          title: 'Langfuse',
+          content: 'Plataforma open source de observabilidad LLM con gestión de prompts, adquirida por ClickHouse en enero de 2026. Autohospedable bajo licencia MIT. Registra cada llamada de modelo con coste, latencia y métricas de tokens.',
+        },
+        galileoAI: {
+          title: 'Galileo AI',
+          content: 'Enfocado en coste de evaluación y seguridad en tiempo de ejecución. Modelos de evaluación Luna-2 ofrecen scoring de bajo coste — reduciendo costes de evaluación hasta 97% comparado con APIs de modelos frontier.',
+        },
+        agenta: {
+          title: 'Agenta',
+          content: 'Plataforma completamente open source de LLMOps que ofrece gestión de prompts, evaluaciones y observabilidad de LLM en un entorno integrado. Particularmente fuerte para equipos que desean flexibilidad open source sin sacrificar una interfaz pulida.',
+        },
+        group4Intro: {
+          title: 'Grupo 4: Librerías de Prompts y Mercados',
+          content: 'Mercados de prompts permiten a los usuarios descubrir, compartir y monetizar prompts. Tres plataformas principales: PromptBase, AIPRM, FlowGPT.',
+        },
+        group5Intro: {
+          title: 'Grupo 5: Frameworks Open-Source',
+          content: 'DSPy y DSPyLab proporcionan frameworks programáticos para ingeniería de prompts, enfocándose en composición modular y optimización de prompts sistematizada.',
+        },
+        group6Intro: {
+          title: 'Grupo 6: Comparación Multi-Modelo',
+          content: 'Prompts.ai es la herramienta única en esta categoría, permitiendo enviar un prompt a múltiples modelos simultáneamente y comparar resultados en tiempo real.',
+        },
+        conclusion: {
+          title: 'Conclusión: El Mercado de Herramientas de Prompts en 2026',
+          content: [
+            'El mercado de herramientas de optimización de prompts se ha fragmentado en seis categorías distintas, cada una sirviendo diferentes segmentos de usuarios y patrones de uso.',
+            'Las adquisiciones de Promptfoo (OpenAI) y Langfuse (ClickHouse) señalan que el mercado está madurando hacia consolidación alrededor de proveedores de infraestructura mayores.',
+            'Para equipos empresariales, la selección correcta de herramienta depende de: escala de deployment, soporte de múltiples modelos, integración con stacks existentes, y si necesitas hosting cloud vs auto-hospedaje.',
+            'El crecimiento del 12% CAGR proyectado es impulsado por empresas que avanzan desde prototipado ad-hoc hacia ingeniería de prompts gobernada y sistematizada.',
+          ],
+        },
+      },
+    },
     fr: {
       category: 'Recherche',
       title: 'Outils d\'optimisation et de comparaison de prompts : Vue d\'ensemble du marché 2026',
