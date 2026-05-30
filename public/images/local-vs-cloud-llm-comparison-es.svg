@@ -1,0 +1,68 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <rect x="20" y="12" width="760" height="396" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="46" font-family="system-ui,-apple-system,sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">LLMs Locales vs APIs en la Nube</text>
+  <text x="400" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Cómo elegir según tus prioridades</text>
+
+  <!-- Header row -->
+  <rect x="36" y="82" width="352" height="40" rx="8" fill="#E8DEF8"/>
+  <rect x="412" y="82" width="352" height="40" rx="8" fill="#F3EEF7"/>
+  <text x="212" y="107" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">LLM Local</text>
+  <text x="588" y="107" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">API en la Nube</text>
+
+  <!-- Divider line -->
+  <line x1="400" y1="82" x2="400" y2="390" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row backgrounds (alternating) -->
+  <rect x="36" y="130" width="728" height="48" rx="0" fill="#F7F2FA" opacity="0.5"/>
+  <rect x="36" y="226" width="728" height="48" rx="0" fill="#F7F2FA" opacity="0.5"/>
+  <rect x="36" y="322" width="728" height="48" rx="0" fill="#F7F2FA" opacity="0.5"/>
+
+  <!-- Row dividers -->
+  <line x1="36" y1="130" x2="764" y2="130" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="178" x2="764" y2="178" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="226" x2="764" y2="226" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="274" x2="764" y2="274" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="322" x2="764" y2="322" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="370" x2="764" y2="370" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Row labels (left edge) -->
+  <text x="52" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">COSTE</text>
+  <text x="52" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">PRIVACIDAD</text>
+  <text x="52" y="246" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">CONFIGURACIÓN</text>
+  <text x="52" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">CALIDAD</text>
+  <text x="52" y="342" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">IDEAL PARA</text>
+
+  <!-- Row 1: Cost -->
+  <text x="108" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">$0/token después del hardware</text>
+  <text x="108" y="166" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Se ejecuta en GPU que ya tienes</text>
+  <text x="416" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">$0,15–$60 por 1M tokens</text>
+  <text x="416" y="166" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Varía según modelo y proveedor</text>
+
+  <!-- Row 2: Privacy -->
+  <text x="108" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Total — datos nunca dejan el dispositivo</text>
+  <text x="108" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Cumple GDPR / HIPAA por defecto</text>
+  <text x="416" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">Se envía a servidores del proveedor</text>
+  <text x="416" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Verifica política de retención de datos</text>
+
+  <!-- Row 3: Setup -->
+  <text x="108" y="246" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">10 min — Instalar Ollama + pull</text>
+  <text x="108" y="262" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Requiere hardware compatible</text>
+  <text x="416" y="246" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Instantáneo — solo clave API</text>
+  <text x="416" y="262" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Sin requisitos de hardware</text>
+
+  <!-- Row 4: Quality -->
+  <text x="108" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">Buena — modelos abiertos 7B a 70B</text>
+  <text x="108" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">70B iguala benchmarks de GPT-4o Mini</text>
+  <text x="416" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Excelente — GPT-4o, Claude 4.6</text>
+  <text x="416" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Modelos frontera, actualizados continuamente</text>
+
+  <!-- Row 5: Best for -->
+  <text x="108" y="342" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#6750A4">Tareas sensibles a privacidad &amp; alto volumen</text>
+  <text x="108" y="358" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Industrias reguladas, uso offline</text>
+  <text x="416" y="342" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#7D5260">Mejor calidad &amp; prototipado rápido</text>
+  <text x="416" y="358" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Capacidades frontera, configuración mínima</text>
+
+  <text x="400" y="398" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">PromptQuorum envía un prompt a local + nube simultáneamente — compara resultados lado a lado</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
