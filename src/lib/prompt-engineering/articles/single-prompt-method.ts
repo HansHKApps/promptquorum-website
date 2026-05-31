@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Die Single Step Prompt Methode ist ein minimalistisches Prompt-Framework, bei dem Sie die gesamte Aufgabe in einer sorgfältig strukturierten Anweisung beschreiben, anstatt ein Mehrturngespräch zu führen. Diese Methode reduziert den Aufwand, macht es einfacher, Ergebnisse zwischen Modellen zu vergleichen, und ist das standardmäßige Startframework für neue Benutzer in PromptQuorum.',
       publishDate: '2026-03-24',
       seoTitle: 'Single Step Prompt Methode: 5 Bausteine & Beispiele',
-      metaDescription: 'Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem Prompt vereinen. Strukturierte Prompts erzielen konsistente Ergebnisse — kein Mehrturngespräch erforderlich.',
+      metaDescription: 'Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einem Prompt vereinen. Strukturierte Prompts liefern konsistente Ergebnisse ohne Mehrfachdialog.',
       ogDescription: 'Single-Step-Methode: 5 Bausteine, 5 Praxisbeispiele, Vergleichstabellen vs CO-STAR/RTF/SPECS. Standard-Framework in PromptQuorum für alle Modelle.',
       twitterDescription: 'Ein Prompt. Fünf Bausteine. Strukturierter Ansatz schlägt vage Anweisungen. Die Single-Step-Methode ist der Startpunkt — erst bei Bedarf zu CO-STAR wechseln.',
       readTime: '8 Min. Lesezeit',

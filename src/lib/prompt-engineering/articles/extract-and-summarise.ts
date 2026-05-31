@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'KI-gestützte Dokumentenzusammenfassung verkürzt die Überprüfungszeit um 60–80 % mit 0,7% Halluzinationsraten. Lernen Sie extractive vs. abstractive Ansätze, welche Modelle zu verwenden sind, und wie Sie Prompts für quelltreue Ausgaben strukturieren.',
       publishDate: '2026-03-23',
       dateModified: '2026-05-04',
-      metaDescription: 'Extraktive Zusammenfassung: 0 % Halluzination. Abstrakte: 0,7–14 %. Welche Technik für Rechts-, Finanz-, Forschungsdokumente. Mit Prompt-Vorlagen für GPT, Claude, Gemini.',
+      metaDescription: 'Extraktive Zusammenfassung: 0 % Halluzination, abstrakte: 0,7–14 %. Welche Technik für Rechts-, Finanz- und Forschungsdokumente passt. Mit Prompt-Vorlagen.',
       ogDescription: 'Erfahren Sie, welche KI-Modelle bei der Dokumentenzusammenfassung am wenigsten halluzinieren. Tested across 25 documents with prompt templates for faithful extraction.',
       twitterDescription: 'Halluzinationsraten für Document Summarization: Gemini 3 Flash 0,7%, Claude Sonnet 4.6 ~1%, GPT-4o ~2%. Mit Prompt-Vorlagen für sichere Zusammenfassungen.',
       readTime: '8 min Lesezeit',

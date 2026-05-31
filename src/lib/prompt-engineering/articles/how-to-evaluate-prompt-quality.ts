@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2026-10-10',
       theme: 'Techniques',
       title: 'Prompt-Qualität bewerten: Ein praktischer Leitfaden',
-      seoTitle: 'Prompt-Qualität bewerten: Metriken, Tests & Checkliste (2026)',
+      seoTitle: 'Prompt-Qualität bewerten: Metriken, Tests & Checkliste',
       metaDescription: 'Prompt-Qualität systematisch messen: Testsets mit 20 Fällen, Pass/Fail-Scoring und LLM-as-Judge. Framework für Accuracy, Konsistenz und Instruction-Following.',
       ogDescription: 'Prompt-Qualität bewerten mit Testsets, Scoring-Rubrics und Multi-Modell-Vergleich. GPT vs Claude Pass-Raten im direkten Vergleich mit PromptQuorum.',
       twitterDescription: 'Framework zur Bewertung von Prompt-Qualität: Testsets, Metriken und automatisiertes Scoring. Schluss mit manuellem Spot-Checking.',

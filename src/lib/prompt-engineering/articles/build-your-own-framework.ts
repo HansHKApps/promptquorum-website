@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     title: 'Eigenes Prompt-Framework erstellen: 5-Schritte-Prozess (2026)',
     seoTitle: 'Eigenes Prompt-Framework entwickeln: 5-Schritte-Anleitung',
     intro: 'Wenn Standardframeworks wie CO-STAR, CRAFT und RISEN nicht zu Ihrem Workflow passen, liefert ein maßgeschneidertes Prompt-Framework eine wiederverwendbare, testbare Struktur. Diese Anleitung erklärt, wann ein eigenes Framework sinnvoll ist, wie der 5-Schritte-Prozess funktioniert und zeigt ein konkretes Praxisbeispiel.',
-    metaDescription: 'Eigenes Prompt-Framework in 5 Schritten erstellen: Ziel definieren, 3–6 Komponenten identifizieren, an 10 Prompts testen, verfeinern, dokumentieren. Mit REPAIR-Beispiel für Support-Teams.',
+    metaDescription: 'Eigenes Prompt-Framework in 5 Schritten: Ziel, 3–6 Komponenten, an 10 Prompts testen, verfeinern, dokumentieren. Mit REPAIR-Beispiel für Support-Teams.',
     ogDescription: 'Eigenes Prompt-Framework in 5 Schritten: Ziel definieren, 3–6 Komponenten identifizieren, an 10 Prompts testen, verfeinern, dokumentieren. Modellübergreifende Tests mit PromptQuorum.',
     twitterDescription: 'Standardframeworks passen nicht? Eigenes Framework in 5 Schritten. REPAIR-Beispiel für Support-Teams. 3–6 Komponenten, 10-Prompt-Validierung.',
     publishDate: '2026-05-02',

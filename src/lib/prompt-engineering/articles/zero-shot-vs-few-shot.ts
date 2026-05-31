@@ -123,6 +123,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
   theme: 'Techniques',
   title: 'Zero-Shot vs. Few-Shot Prompting',
+  seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: Wann was?',
   intro: 'Zero-Shot Prompting stellt dem Modell kein Beispiel zur Verfügung und verlässt sich vollständig auf das Vorwissen des Modells, während Few-Shot Prompting einige Beispiele einbettet, damit das Modell ein gewünschtes Muster nachahmen kann.',
   publishDate: '2026-03-26',
   readTime: '6 min Lesezeit',

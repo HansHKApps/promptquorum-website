@@ -438,8 +438,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     publishDate: '2026-03-26',
     dateModified: '2026-05-03',
     readTime: '13 Min. Lesezeit',
-    seoTitle: 'Tree of Thought vs ReAct 2026: Welche fortgeschrittene Reasoning-Technik?',
-    metaDescription: 'Tree-of-Thought erkundet mehrere Lösungszweige für Planung; ReAct verschränkt Reasoning mit Tool-Calls. In 2026 ist ReAct in GPT-4o, Claude und Gemini nativ integriert.',
+    seoTitle: 'Tree of Thought vs. ReAct 2026: Welche Reasoning-Technik?',
+    metaDescription: 'Tree-of-Thought erkundet mehrere Lösungszweige; ReAct verschränkt Reasoning mit Tool-Calls. 2026 ist ReAct in GPT-4o, Claude und Gemini nativ integriert.',
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die KI-Agenten erstellen, Produktteams, die mehrstufige Workflows entwerfen, Forscher',
     schema: {

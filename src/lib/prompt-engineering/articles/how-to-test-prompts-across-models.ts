@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Techniken',
     title: 'Prompts über mehrere Modelle testen: Multi-Modell-Evaluation',
     seoTitle: 'Prompts modellübergreifend testen: GPT vs Claude vs Gemini',
-    metaDescription: 'Denselben Prompt parallel auf GPT, Claude, Gemini und Llama testen. JSON-Zuverlässigkeit, Pass-Raten, Ablehnungsmuster und Kosten pro Token vergleichen. Multi-Modell-Framework mit Testvorlagen. April 2026.',
+    metaDescription: 'Denselben Prompt parallel auf GPT, Claude, Gemini und Llama testen: JSON-Zuverlässigkeit, Pass-Raten, Ablehnungsmuster und Token-Kosten vergleichen. April 2026.',
     ogTitle: 'Ihr Prompt funktioniert bei GPT-4o — bei Claude scheitert er. Warum?',
     ogDescription: 'Ein Prompt, der auf GPT 95% erreicht, kann auf Claude lautlos scheitern — andere JSON-Verarbeitung, andere Ablehnungsschwellen, andere Instruktionspriorisierung. Ohne parallelen Test erfahren Sie es nie.',
     twitterTitle: 'GPT-4o vs Claude vs Gemini: Prompt bei allen 3 testen',

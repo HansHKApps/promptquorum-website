@@ -416,6 +416,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     de: {
       theme: 'Techniques',
       title: 'Prompt Injection & Sicherheit: So verteidigen Sie KI-Systeme',
+      seoTitle: 'Prompt Injection 2026: KI-Systeme absichern',
+      metaDescription: 'Abwehrmuster gegen Prompt Injection, Eingabevalidierung und Sandboxing für Cloud- und lokale LLMs. Mit Sicherheits-Checkliste.',
       intro: 'Prompt Injection — das Einschleusen schädlicher Anweisungen in Benutzereingaben oder Dokumente, um System-Prompt-Kontrollen zu umgehen — ist OWASP LLM #1. Erfahren Sie mehr über Angriffstypen, Unterschiede zum Jailbreaking und 5 mehrschichtige Verteidigungsmaßnahmen.',
       publishDate: '2026-03-31',
       dateModified: '2026-03-31',

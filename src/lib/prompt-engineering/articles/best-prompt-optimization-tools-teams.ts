@@ -527,7 +527,7 @@ tests:
   de: {
     theme: 'Tools & Plattformen',
     title: 'Die besten Prompt-Optimierungs-Tools für Teams',
-    seoTitle: 'Beste Prompt-Optimierungstools für Teams 2026: Vergleich & Ranking',
+    seoTitle: 'Beste Prompt-Optimierungstools für Teams 2026',
     intro: '**Prompt-Optimierung für Teams erfordert vier Funktionen: versionierte Speicherung, A/B-Varianten-Tests, Output-Bewertung und gemeinschaftliche Überprüfung. Kein einzelnes Tool deckt alle vier Funktionen ab. Dieser Leitfaden bewertet sieben spezialisierte Tools — plus PromptQuorum für modellübergreifende Vergleiche — nach Team-Typ, Preisgestaltung und Workflow-Anpassung.**',
     metaDescription: 'Kein einzelnes Tool deckt Versionierung, A/B-Tests, Scoring und Review ab. Braintrust führt bei Evaluation (500 $/Monat), Vellum bei Produktion, Promptfoo ist kostenlos. Stack-Empfehlungen nach Teamgröße.',
     ogTitle: 'Ihr Team verbringt 5+ Stunden/Woche mit Prompt-Tuning? Diese Tools lösen das',

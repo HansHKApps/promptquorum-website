@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Prompt Chaining ist eine Technik, bei der Sie eine komplexe Aufgabe in mehrere kleinere Prompts zerlegen und die Ausgabe eines Schritts als Eingabe für den nächsten verwenden. Dies ermöglicht es Ihnen, zuverlässige Multi-Step-Workflows zu erstellen, anstatt sich auf einen einzigen, übermäßig komplizierten Prompt zu verlassen.',
       publishDate: '2026-03-26',
       seoTitle: 'Prompt Chaining: Komplexe Aufgaben in Fokussierte Schritte',
-      metaDescription: 'Prompt Chaining zerlegt Aufgaben in fokussierte Schritte für bessere Genauigkeit. Multi-Step-Workflows mit bewährten Praktiken für Claude, GPT und lokale Sprachmodelle.',
+      metaDescription: 'Prompt Chaining zerlegt Aufgaben in fokussierte Schritte für mehr Genauigkeit. Multi-Step-Workflows mit bewährten Praktiken für Claude, GPT und lokale Modelle.',
       readTime: '9 Min. Lesezeit',
       educationalLevel: 'Intermediate',
       audience: 'Entwickler und Teams, die AI-Workflows entwickeln',

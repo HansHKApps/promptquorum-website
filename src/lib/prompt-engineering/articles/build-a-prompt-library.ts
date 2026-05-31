@@ -622,7 +622,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   title: 'Erstelle eine Prompt-Bibliothek, die Zeit spart',
   intro: 'Eine Prompt-Bibliothek ist eine teamweite Sammlung getesteter Anweisungen mit Metadaten, die Ihrem Team hilft, Prompts zu standardisieren, zu teilen und zu verbessern. Richtig aufgebaut, wird sie zum zweiten Gehirn Ihres Teams: Sie reduziert Setup-Zeit, beschleunigt das Onboarding und verhindert, dass bewährte Prompts in persönlichen Notizen verloren gehen. Dieses 12-Schritte-Framework zeigt, wie Sie eine Prompt-Bibliothek bauen, die Ihr Team tatsächlich nutzt.',
   seoTitle: 'Prompt-Bibliothek erstellen: Wiederverwendbare KI-Vorlagen',
-  metaDescription: 'Prompt-Bibliothek mit Metadaten, Versionierung und Team-Governance aufbauen. Getestete KI-Prompts projektübergreifend wiederverwenden. Schritt-für-Schritt-Anleitung mit Vorlagen. April 2026.',
+  metaDescription: 'Prompt-Bibliothek mit 8-Feld-Metadaten und Governance aufbauen. Getestete Prompts projektübergreifend wiederverwenden. Mit Vorlage und Beispiel. April 2026.',
   ogDescription: 'Ihr Team schreibt dieselben KI-Prompts jeden Tag neu. Eine gemeinsame Prompt-Bibliothek mit getesteten Vorlagen, klarer Zuständigkeit und Versionskontrolle löst genau dieses Problem.',
   twitterDescription: 'Prompt-Bibliothek → getestete Vorlagen → konsistente KI-Ergebnisse. In einer Woche aufbauen. Schritt-für-Schritt-Anleitung.',
   publishDate: '2026-03-24',

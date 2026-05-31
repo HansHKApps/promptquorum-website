@@ -404,7 +404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Techniken',
     title: 'Zuverlässige strukturierte Daten mit Prompts: 3 Techniken',
     seoTitle: 'Zuverlässige strukturierte Daten mit Prompts: 3 Techniken',
-    metaDescription: 'JSON-Modus erzwingt Syntax, nicht Feldvollständigkeit. Schema-Einbettung, Ausgabebeispiele und Feldanweisungen erreichen 95%+ Zuverlässigkeit ohne API-Änderungen.',
+    metaDescription: 'JSON-Modus erzwingt nur Syntax, nicht Feldvollständigkeit. Schema-Einbettung, Beispiele und Feldanweisungen erreichen 95 % Zuverlässigkeit ohne API-Änderung.',
     ogDescription: 'JSON-Modus verhindert fehlerhafte JSON, nicht fehlende Felder oder falsche Typen. Drei Prompt-Techniken — Schema im Prompt, Ausgabebeispiele, Feldanweisungen — erreichen 95%+ strukturierte Output-Zuverlässigkeit ohne API-Änderungen.',
     twitterDescription: 'JSON-Modus behebt Syntax, nicht Schema-Konformität. Schema im Prompt + ein Ausgabebeispiel + Feldanweisungen → 95%+ strukturierte Output-Zuverlässigkeit. Keine API-Änderungen erforderlich.',
     intro: '**Die meisten Ausfälle bei strukturierter Ausgabe entstehen innerhalb gültigen JSON — erforderliche Felder fehlen, Daten sind als einfache Strings formatiert, Enum-Werte sind falsch geschrieben, nullable Felder geben Leerstrings statt null zurück.** APIs mit JSON-Modus und tool_use verhindern nicht analysierbare Ausgaben, tun aber nichts gegen Schema-Konformitätsfehler. Drei Prompt-Techniken beheben das, was JSON-Modus hinterlässt.',

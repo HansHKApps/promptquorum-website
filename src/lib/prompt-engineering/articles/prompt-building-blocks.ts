@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Die 5 Bausteine eines jeden Prompts',
       seoTitle: '5 Bausteine für jeden KI-Prompt mit Vorlage',
       intro: '**Jeder effektive KI-Prompt benötigt fünf Bausteine: Rolle & Kontext, Aufgabe / Anweisung, Eingabe & Beispiele, Einschränkungen und Ausgabeformat — fehlt einer, werden Ergebnisse inkonsistent, falsch formatiert oder halluziniert.**',
-      metaDescription: 'Jeder gute KI-Prompt braucht 5 Teile: Rolle, Aufgabe, Input, Einschränkungen, Ausgabeformat. Fehlt einer, sinkt die Qualität. Kopierfertige Vorlage für alle Sprachmodelle.',
+      metaDescription: 'Jeder gute KI-Prompt braucht 5 Teile: Rolle, Aufgabe, Input, Einschränkungen, Ausgabeformat. Fehlt einer, sinkt die Qualität. Mit kopierfertiger Vorlage.',
       ogTitle: 'Fehlt einer dieser 5 Prompt-Bausteine, wird die KI-Antwort unbrauchbar',
       ogDescription: 'Rolle, Aufgabe, Input, Einschränkungen, Ausgabeformat. Eine Vorlage für alle Modelle. Sofort einsetzbar.',
       twitterTitle: '5 Bausteine für jeden KI-Prompt',

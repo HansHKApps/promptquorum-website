@@ -468,7 +468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Große Sprachmodelle sagen das nächste Token per Wahrscheinlichkeitsverteilung voraus — kein Verstehen, kein Abrufen. Lerne Tokenisierung, Attention, RLHF und Inferenzparameter.',
       publishDate: '2026-03-30',
       seoTitle: 'LLMs: Tokens, Attention & Inferenz (2026) – Wirklich erklärt',
-      metaDescription: 'LLMs sagen Tokens per Wahrscheinlichkeitsverteilung voraus—nicht Verständnis. Tokenisierung, Transformer-Attention, RLHF und Inferenzparameter mit Modellbenchmarks.',
+      metaDescription: 'LLMs sagen Tokens per Wahrscheinlichkeitsverteilung voraus – nicht aus Verständnis. Tokenisierung, Transformer-Attention, RLHF und Inferenzparameter erklärt.',
       dateModified: '2026-04-12',
       readTime: '12 Min. Lesezeit',
       educationalLevel: 'Beginner',

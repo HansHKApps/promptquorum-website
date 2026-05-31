@@ -35,8 +35,8 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
   }, de: {
   theme: 'Werkzeuge & Plattformen',
   title: 'Prompt-Testing- & Evaluierungs-Tools 2026: Promptfoo vs Braintrust vs DeepEval',
-  seoTitle: 'Prompt-Testing- & Evaluierungs-Tools 2026: Promptfoo vs Braintrust vs DeepEval',
-  metaDescription: 'Promptfoo erkennt Regressionen in Sekunden (kostenlos). Braintrust führt Batch-Evals mit menschlichen Prüfern durch (500 $/Monat). DeepEval bewertet RAG mit RAGAS-Metriken. LangSmith tracet Fehler. Phoenix überwacht Produktion.',
+  seoTitle: 'Prompt-Testing-Tools 2026: Promptfoo, Braintrust, DeepEval',
+  metaDescription: 'Promptfoo erkennt Regressionen sofort (gratis), Braintrust bietet Batch-Evals, DeepEval bewertet RAG, LangSmith trackt Fehler, Phoenix überwacht Produktion.',
   ogTitle: 'Promptfoo in Sekunden. Braintrust in Stunden. Was brauchen Sie?',
   ogDescription: 'Schnelle CI/CD-Tests vs. Batch-Evals vs. RAG-Scoring vs. Tracing vs. Monitoring. 5 Tools, 5 Aufgaben. Vergleichstabelle.',
   twitterTitle: 'Prompt-Testing-Tools 2026: Die 5-Stufen-Pipeline im Vergleich',

@@ -491,8 +491,8 @@ tests:
   de: {
     theme: 'Tools & Plattformen',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
-    seoTitle: 'Braintrust vs PromptHub vs Vellum: 2-Tool Stack 2026',
-    metaDescription: 'Braintrust (€249/Monat) bewertet Prompts. Vellum (€200-500/Monat) testet A/B. Promptfoo kostenlos CI/CD. PromptHub (€50-200/Monat) versioniert. Teams brauchen genau 2.',
+    seoTitle: 'Braintrust vs. PromptHub vs. Vellum: 2-Tool-Stack 2026',
+    metaDescription: 'Braintrust (€249/Mon.) bewertet Prompts, Vellum testet A/B, Promptfoo ist kostenloses CI/CD, PromptHub versioniert. Die meisten Teams brauchen genau 2 Tools.',
     ogTitle: 'Alle 4 Prompt-Tools kaufen verschwendet €700+/Monat. Der 2-Tool-Stack',
     ogDescription: 'Braintrust scored. Vellum splits traffic. Promptfoo catches regressions. PromptHub versions. Pick 2. Comparison table inside.',
     twitterTitle: 'Braintrust vs PromptHub vs Vellum vs Promptfoo: Welche 2 wählen?',

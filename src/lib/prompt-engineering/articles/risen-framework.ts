@@ -424,7 +424,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-04',
       readTime: '13 Min. Lesezeit',
       seoTitle: 'RISEN-Framework: 5-stufig iterativ Prompts verfeinern (2026)',
-      metaDescription: 'RISEN verfeinert Prompts iterativ durch 5 Schritte. Dokumentiert Änderungen, evaluiert Qualität, plant nächste Verbesserungen. Multi-Modell-Tests mit PromptQuorum.',
+      metaDescription: 'RISEN verfeinert Prompts iterativ in 5 Schritten: Änderungen dokumentieren, Qualität evaluieren, nächste Schritte planen. Multi-Modell-Tests mit PromptQuorum.',
       educationalLevel: 'Intermediate',
       audience: 'Entwickler, die Prompt-Workflows aufbauen, Produktteams iterieren Inhalte, Teams mit mehrstufigen Reviews',
       primaryTerm: 'RISEN-Framework',

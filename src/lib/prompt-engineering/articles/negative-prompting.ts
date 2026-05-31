@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   dateModified: '2026-05-04',
   readTime: '6 min Lesezeit',
   next_refresh_due: '2026-11-03',
-  metaDescription: 'Negatives Prompting: „Nicht-Tun"-Regeln für Verbotswörter, Themen und Formate. 4-Kategorien-Modell mit Beispielen und Modellvergleich für GPT, Claude und Gemini.',
+  metaDescription: 'Negatives Prompting definiert, was die KI vermeiden soll: Inhalte, Stil, Struktur, Verhalten. Verhindert unerwünschte Ausgaben. Mit Leitfaden und Beispielen.',
   primaryTerm: 'Negatives Prompting',
   seoTitle: 'Negatives Prompting 2026: Explizite Regeln für KI-Kontrolle',
   educationalLevel: 'Intermediate',

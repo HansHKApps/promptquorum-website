@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-10-29',
     theme: 'Workflows',
     title: 'Prompt-Engineering-Setup für kleine Teams (2026)',
-    seoTitle: 'Prompt-Engineering-Setup für kleine Teams: Tools & Workflow (2026)',
+    seoTitle: 'Prompt-Engineering für kleine Teams: Tools & Workflow',
     metaDescription: 'Prompt-Engineering für kleine Teams einrichten: YAML-Bibliothek, Git-Versionierung, 20-Testfälle und Ownership-Regeln. Komplett in einer Woche.',
     ogDescription: 'Prompt-Engineering-Setup für Teams von 2–15: Shared Library, Git-Versionierung, Multi-Modell-Tests mit PromptQuorum und klare Ownership. In einer Woche einsatzbereit.',
     twitterDescription: 'Vom Prompt-Chaos zum strukturierten Setup in einer Woche. YAML-Library, Git, 20-Testfälle, Named Owners. Für Teams von 2–15.',

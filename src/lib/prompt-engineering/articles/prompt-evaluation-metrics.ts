@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Prompt-Evaluierungsmetriken: Welche Metriken gelten für welche Ausgaben?',
-      seoTitle: 'Prompt-Evaluationsmetriken: Pass Rate, BLEU & LLM-as-Judge (2026)',
+      seoTitle: 'Prompt-Metriken: Pass Rate, BLEU & LLM-as-Judge (2026)',
       metaDescription: 'Welche Prompt-Metriken für welchen Output-Typ: Pass Rate für JSON, BLEU für Übersetzung, Semantic Similarity für Paraphrase, LLM-as-Judge für Freitext.',
       ogDescription: 'Die richtige Prompt-Metrik nach Output-Typ wählen. Pass Rate, BLEU, Semantic Similarity und LLM-as-Judge im Vergleich — mit Regressions-Erkennung.',
       twitterDescription: 'Pass Rate, BLEU oder LLM-as-Judge? Die richtige Prompt-Metrik nach Output-Typ wählen. Framework mit Regressions-Alerts.',

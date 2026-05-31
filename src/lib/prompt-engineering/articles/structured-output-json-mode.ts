@@ -454,8 +454,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-26',
       dateModified: '2026-04-05',
       readTime: '10 min Lesezeit',
-      seoTitle: 'Strukturierte Ausgabe & JSON-Modus in LLMs: Verwendung, Beispiele und Vergleich',
-      metaDescription: 'Erfahre, wann strukturierte Ausgabe, JSON-Modus oder Function Calling sinnvoll ist. Vergleiche JSON-Compliance nach Modell, sieh Beispiele und meistere Schema-Design für APIs.',
+      seoTitle: 'Strukturierte Ausgabe & JSON-Modus in LLMs: Leitfaden 2026',
+      metaDescription: 'Wann strukturierte Ausgabe, JSON-Modus oder Function Calling sinnvoll ist: JSON-Compliance nach Modell, Beispiele und Schema-Design für APIs und Pipelines.',
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',

@@ -508,7 +508,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   intro: 'Kein einzelnes KI-Modell ist für alle Aufgaben das Beste. GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro, DeepSeek und Baidu ERNIE dominieren jeweils in verschiedenen Aufgaben, Regionen und Budgets. Diese Anleitung bietet Ihnen ein praktisches Entscheidungsrahmenwerk — nicht noch eine weitere Benchmark-Liste.',
   publishDate: '2026-03-23',
   seoTitle: 'GPT vs Claude vs Gemini 2026: Welches Modell?',
-  metaDescription: 'GPT-4o für Integrationen, Claude für Schreibqualität, Gemini für Kosteneffizienz. Alle mit 1M Kontext. Entscheidungsmatrix, Preisvergleich und Routing-Leitfaden.',
+  metaDescription: 'GPT-4o für Integrationen, Claude für Schreibqualität, Gemini für Kosten. Alle mit 1M Kontext. Mit Entscheidungsmatrix, Preisvergleich und Routing-Guide.',
   ogTitle: 'GPT-4o vs Claude Opus 4.7 vs Gemini 3.1 Pro: Welches gewinnt für IHRE Aufgabe?',
   ogDescription: 'Kein KI-Modell gewinnt bei allem. GPT-4o dominiert Tool-Integration, Claude führt bei Textqualität, Gemini bietet beste Kosteneffizienz. Vergleich auf realen Aufgaben.',
   twitterTitle: 'GPT-4o vs Claude vs Gemini 3.1 Pro: Welches Modell? (2026)',

@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-26',
       readTime: '6 Min. Lesezeit',
       seoTitle: 'Constrained Prompting: KI-Ausgaben strukturieren',
-      metaDescription: 'Constrained Prompting für strukturierte KI-Ausgaben. Wie Sie Regeln, Formate und Inhaltsrichtlinien direkt im Prompt definieren. Für GPT-4o, Claude Sonnet 4.6 und Gemini 3.1 Pro.',
+      metaDescription: 'Constrained Prompting für strukturierte KI-Ausgaben: Regeln, Formate und Inhaltsrichtlinien direkt im Prompt definieren. Für GPT-4o, Claude und Gemini.',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Constrained Prompting',
       dateModified: '2026-05-03',

@@ -271,7 +271,7 @@ tests:
     theme: 'Team-Governance',
     title: 'Prompt-Audit & Regressionstests: Stille Fehler vor Produktion erkennen (2026)',
     seoTitle: 'Prompt-Audit & Regressionstests: Stille Fehler (2026)',
-    metaDescription: 'Erstelle eine Testsuite mit Golden Cases, Edge Cases und adversarialen Eingaben. Blockiere Deployment bei >5% Pass-Rate-Rückgang. Promptfoo, Braintrust, PromptQuorum.',
+    metaDescription: 'Testsuite mit Golden Cases, Edge Cases und adversarialen Eingaben erstellen. Deployment bei über 5 % Pass-Raten-Rückgang blockieren. Promptfoo & Braintrust.',
     ogDescription: 'Prompt-Regressionstests: 3-Komponenten-Suite, 5-Schritt-Audit, CI/CD-Gate bei 5%. Promptfoo (kostenlos), Braintrust (Cloud), PromptQuorum (Multi-Modell).',
     twitterDescription: 'Prompts scheitern still — kein Fehlerlog, kein Crash. Regressionstests sind die einzige Verteidigung. Golden Set + Edge Cases + CI/CD-Gate bei 5%.',
     publishDate: '2026-05-02',

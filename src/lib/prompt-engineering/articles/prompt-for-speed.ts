@@ -287,6 +287,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       theme: 'Grundlagen',
       title: 'Schnellere KI-Antworten: So prompts man für Geschwindigkeit',
+      seoTitle: 'Schnellere KI-Antworten 2026: Prompts für Speed',
+      metaDescription: 'LLM-Inferenz um 30–50 % beschleunigen: kurze Prompts und Batching. Latenz und Kosten senken, ohne Qualität zu opfern.',
       intro: 'Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht durch Hardware-Latenz. Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist.',
       publishDate: '2026-03-22',
       readTime: '9 Min. Lesezeit',
