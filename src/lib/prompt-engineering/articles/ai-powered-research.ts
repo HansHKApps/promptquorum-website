@@ -1087,8 +1087,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-powered-research',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
+        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-powered-research?lang=es',
         inLanguage: 'es',
         headline: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',
         description: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero las tasas de alucinación del 9,2 % hacen obligatorios los flujos de verificación. Cubre Elicit, Consensus, Perplexity, scite.ai, verificación cruzada multi-modelo y frameworks de prompts para investigación.',

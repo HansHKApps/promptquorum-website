@@ -1233,7 +1233,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: 'Cómo construir una biblioteca de prompts: plantilla de 8 campos, gobernanza y guía de adopción para equipos',
         description: 'Qué es una biblioteca de prompts, por qué tu equipo debería construir una, cómo estructurarla y mantenerla, y mejores prácticas para versiones y gobernanza.',
         datePublished: '2026-03-24',
@@ -1248,7 +1249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         proficiencyLevel: 'Beginner',
         audience: { '@type': 'Audience', audienceType: 'Líderes de equipo y profesionales que adoptan herramientas de IA' },
-        url: 'https://www.promptquorum.com/es/prompt-engineering/build-a-prompt-library',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/build-a-prompt-library?lang=es',
         inLanguage: 'es',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
       },

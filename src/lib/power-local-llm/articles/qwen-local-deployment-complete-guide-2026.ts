@@ -1472,7 +1472,8 @@ docker run --gpus all \\
     },
     faqSchema: {
       '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@type': 'FAQPage',,
+    'inLanguage': 'es'
       inLanguage: 'es',
       mainEntity: [
         {
@@ -1531,7 +1532,7 @@ docker run --gpus all \\
       headline: 'Despliegue Local de Qwen: Guía Completa de Producción 2026',
       description:
         'Despliega Qwen 7B a 72B en producción: servidor API Docker Compose, configuración multi-GPU, benchmarks de hardware y comparación de costes con Alibaba Cloud.',
-      url: 'https://www.promptquorum.com/es/power-local-llm/qwen-local-deployment-complete-guide-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/qwen-local-deployment-complete-guide-2026?lang=es',
       inLanguage: 'es',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',

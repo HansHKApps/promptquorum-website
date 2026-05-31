@@ -799,8 +799,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/prompting-across-languages',
+      '@type': 'TechArticle',,
+    'inLanguage': 'es'
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompting-across-languages?lang=es',
       inLanguage: 'es',
       headline: 'Prompting en Diferentes Idiomas: Cómo Obtener Resultados Coherentes',
       description: 'Los LLMs fueron entrenados principalmente en inglés — hacer prompting en francés, alemán, japonés o árabe activa una región diferente del conocimiento del modelo con menor precisión y mayor costo de tokens.',

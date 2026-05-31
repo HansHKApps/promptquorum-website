@@ -604,12 +604,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: 'Alucinaciones de IA: Por qué la IA inventa cosas — y cómo detenerlas',
         description: 'Por qué los modelos de lenguaje alucinan, cómo detectar alucinaciones y técnicas para reducirlas. Aprende estrategias de diseño de prompts, enfoques a nivel de sistema y puntuación de consenso multi-modelo.',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=es',
         inLanguage: 'es',
         keywords: ['alucinaciones de IA', 'alucinaciones LLM', 'detección de alucinaciones', 'prompt engineering', 'consenso multi-modelo', 'RAG'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

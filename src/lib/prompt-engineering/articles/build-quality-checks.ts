@@ -951,14 +951,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: 'Calidad de código IA en CI/CD: detectar alucinaciones y dependencias fabricadas',
         description: 'Diseña gates de calidad CI/CD para código generado por IA. Incluye detección de alucinaciones, validación de dependencias, gates de seguridad y prácticas amigables para el desarrollador.',
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        url: 'https://www.promptquorum.com/es/prompt-engineering/build-quality-checks',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/build-quality-checks?lang=es',
         inLanguage: 'es',
         keywords: ['gates de calidad', 'CI/CD', 'alucinaciones IA', 'revisión de código', 'escaneo de seguridad', 'validación de dependencias', 'controles de build'],
         proficiencyLevel: 'Intermediate',

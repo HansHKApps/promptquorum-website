@@ -2941,11 +2941,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'NewsArticle',,
+    'inLanguage': 'es'
       headline: 'Las mejores apps de LLM local para Android en 2026: 6 apps comparadas en teléfonos reales',
       datePublished: '2026-05-08',
       dateModified: '2026-05-08',
-      url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-apps-android-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-apps-android-2026?lang=es',
       inLanguage: 'es',
       image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=es',
       author: {

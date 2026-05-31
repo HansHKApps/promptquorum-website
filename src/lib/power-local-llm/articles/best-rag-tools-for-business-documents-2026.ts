@@ -712,7 +712,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     faqSchema: {
       '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@type': 'FAQPage',,
+    'inLanguage': 'es'
       inLanguage: 'es',
       mainEntity: [
         {
@@ -762,7 +763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      url: 'https://www.promptquorum.com/es/power-local-llm/best-rag-tools-for-business-documents-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-rag-tools-for-business-documents-2026?lang=es',
       inLanguage: 'es',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },

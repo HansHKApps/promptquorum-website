@@ -990,7 +990,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       primaryTerm: 'Optimización de prompts',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         proficiencyLevel: 'Beginner to Intermediate',
         dependencies: 'Basic understanding of LLMs and prompt structure',
         headline: 'Cómo optimizar prompts: técnicas y mejores prácticas de optimización de prompts',
@@ -1016,7 +1017,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
-        url: 'https://www.promptquorum.com/es/prompt-engineering/fundamentals-of-prompt-optimization',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/fundamentals-of-prompt-optimization?lang=es',
         inLanguage: 'es',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },

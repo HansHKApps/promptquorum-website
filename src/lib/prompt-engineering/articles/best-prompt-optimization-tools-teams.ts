@@ -1334,11 +1334,12 @@ tests:
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+    'inLanguage': 'es'
       headline: 'Mejores herramientas de optimización de prompts para equipos 2026',
       description:
         'Seis herramientas para optimización de prompts a escala de equipo: comparadas por A/B testing, características de colaboración, integración CI/CD y precios.',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-optimization-tools-for-teams',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=es',
       inLanguage: 'es',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',

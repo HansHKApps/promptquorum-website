@@ -376,12 +376,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '13 min de lectura',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: 'Tokens, costes y límites: La economía del prompting de IA en 2026',
         description: 'Aprende cómo los tokens controlan los costes y límites de la IA. Entiende los modelos de precios, los límites de tasa y las estrategias para optimizar el gasto en GPT-4o, Claude, Gemini y modelos locales.',
         datePublished: '2026-03-22',
         dateModified: '2026-04-12',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=es',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

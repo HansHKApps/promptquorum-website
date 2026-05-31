@@ -1417,7 +1417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/es/prompt-engineering/geopolitics-and-ai',
+        'url': 'https://www.promptquorum.com/es/prompt-engineering/geopolitics-and-ai?lang=es',
         'inLanguage': 'es',
         headline: 'Geopolítica de la IA explicada: EU AI Act vs. EE.UU. vs. China (Análisis 2026)',
         description: 'EE.UU., China y la Unión Europea persiguen visiones incompatibles de la gobernanza de la IA. Para las organizaciones que despliegan IA, estas diferencias se traducen en obligaciones de cumplimiento concretas, restricciones de adquisición y requisitos de residencia de datos.',

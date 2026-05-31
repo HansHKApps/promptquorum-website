@@ -626,10 +626,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+     'inLanguage': 'es'
       headline: 'IA local detrás de un cortafuegos: Guía de despliegue sin conexión 2026',
       description: 'Despliega LLMs locales sin conexión detrás de un cortafuegos: lista de comprobación previa, flujo de trabajo air-gap con Ollama y llama.cpp, dimensionamiento de NAS y notas de cumplimiento normativo.',
-      url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-behind-firewall-offline-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-behind-firewall-offline-2026?lang=es',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

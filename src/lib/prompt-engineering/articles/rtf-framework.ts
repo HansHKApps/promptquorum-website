@@ -985,12 +985,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       aboutTopics: ['Prompting RTF', 'Frameworks de Prompt', 'Prompt Engineering'],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: 'El Framework RTF: Rol, Tarea, Formato (2026)',
         description: 'Cómo funciona el Framework RTF (Rol, Tarea, Formato), cuándo usarlo y cómo PromptQuorum ofrece RTF como opción integrada.',
         datePublished: '2026-03-24',
         dateModified: '2026-05-04',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/rtf-framework',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/rtf-framework?lang=es',
         inLanguage: 'es',
         keywords: ['Framework RTF', 'Rol Tarea Formato', 'frameworks de prompt', 'prompt engineering', 'PromptQuorum', 'prompting LLM'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

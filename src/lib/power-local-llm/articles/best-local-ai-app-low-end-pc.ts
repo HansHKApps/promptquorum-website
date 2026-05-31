@@ -2119,7 +2119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/es/power-local-llm/best-local-ai-app-low-end-pc',
+      'url': 'https://www.promptquorum.com/es/power-local-llm/best-local-ai-app-low-end-pc?lang=es',
       'inLanguage': 'es',
       'headline': 'Mejores apps de IA local para PCs de gama baja en 2026 (8 GB RAM, sin GPU)',
       'description':

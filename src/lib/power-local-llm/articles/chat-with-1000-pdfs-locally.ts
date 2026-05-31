@@ -3308,7 +3308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
       'inLanguage': 'es',
-      'url': 'https://www.promptquorum.com/es/power-local-llm/chat-with-1000-pdfs-locally',
+      'url': 'https://www.promptquorum.com/es/power-local-llm/chat-with-1000-pdfs-locally?lang=es',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',

@@ -2677,7 +2677,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     faqSchema: {
       '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@type': 'FAQPage',,
+    'inLanguage': 'es'
       inLanguage: 'es',
       mainEntity: [
         { '@type': 'Question', name: '¿Puedo correr modelos Apple MLX en Windows o Linux?', acceptedAnswer: { '@type': 'Answer', text: 'No. MLX es solo para macOS y requiere Apple Silicon. Los modelos GGUF vía llama.cpp funcionan en todas las plataformas. Para uso multiplataforma, Ollama con formato GGUF funciona tanto en Mac como en sistemas NVIDIA.' } },

@@ -2100,7 +2100,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     itemListSchema: {
       '@context': 'https://schema.org',
-      '@type': 'ItemList',
+      '@type': 'ItemList',,
+    'inLanguage': 'es'
       name: 'Top 5 apps de IA local para usuarios sin conocimientos técnicos en 2026',
       numberOfItems: 5,
       itemListOrder: 'https://schema.org/ItemListOrderAscending',
@@ -2154,7 +2155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '5 apps de IA local que funcionan sin terminal (2026)',
       description: 'Cero comandos de terminal. Sin Python. Sin Docker. 5 apps de IA local que un usuario sin conocimientos técnicos puede instalar en 10 minutos. Probadas con principiantes reales en 2026.',
-      url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-non-technical-users',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-non-technical-users?lang=es',
       inLanguage: 'es',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',

@@ -932,12 +932,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-04',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: 'Los 5 bloques de construcción que todo prompt necesita',
         description: 'Los 5 bloques de construcción de todo prompt: rol y contexto, tarea/instrucción, input y ejemplos, restricciones y formato de output. Con estos cinco componentes, cada prompt de IA se vuelve fiable y repetible.',
         datePublished: '2026-03-01',
         dateModified: '2026-05-04',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/5-building-blocks-every-prompt-needs',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/5-building-blocks-every-prompt-needs?lang=es',
         inLanguage: 'es',
         proficiencyLevel: 'Beginner',
         keywords: ['estructura del prompt', 'bloques de construcción del prompt', 'rol y contexto', 'formato de output', 'restricciones del prompt', 'ejemplos few-shot', 'prompt engineering', 'modelos de lenguaje'],

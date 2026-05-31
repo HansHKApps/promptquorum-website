@@ -656,14 +656,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+    'inLanguage': 'es'
       headline: 'Mejores IDEs y editores de prompt engineering 2026',
       description: 'Cursor cuesta $20/mes; LM Studio es $0 tras la inversión en hardware. Seis IDEs de prompt engineering, cada uno optimizado para un caso de uso diferente. Aquí tienes cuál encaja con el tuyo.',
       datePublished: '2026-04-10',
       dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-engineering-ides',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-engineering-ides?lang=es',
       inLanguage: 'es',
       proficiencyLevel: 'Intermediate',
       about: [

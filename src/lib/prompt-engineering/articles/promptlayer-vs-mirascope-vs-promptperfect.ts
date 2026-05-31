@@ -1159,7 +1159,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+     'inLanguage': 'es'
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
       description: 'PromptLayer registra y versiona llamadas LLM, Mirascope es un SDK Python gratuito para apps LLM type-safe, PromptPerfect reescribe prompts automáticamente. Tres herramientas, tres problemas distintos — elige exactamente una.',
       datePublished: '2026-04-10',
@@ -1170,7 +1171,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
-      url: 'https://www.promptquorum.com/es/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=es',
       inLanguage: 'es',
       about: [
         { '@type': 'Thing', name: 'Gestión de Prompts' },
@@ -1189,7 +1190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'ItemList',
       name: 'PromptLayer vs Mirascope vs PromptPerfect: Comparativa de herramientas',
       inLanguage: 'es',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect?lang=es',
       numberOfItems: 3,
       itemListElement: [
         {

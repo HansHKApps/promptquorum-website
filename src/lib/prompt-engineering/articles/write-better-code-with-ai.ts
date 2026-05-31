@@ -1034,7 +1034,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         inLanguage: 'es',
         headline: 'Cómo Escribir Mejor Código con IA: Prompts, Modelos y Seguridad en 2026',
         description: 'Domina la generación de código con IA con prompts estructurados, comparativa de modelos y flujos de trabajo de seguridad. Aprende ajustes de temperatura, modelos locales y cómo evitar el 45 % de las alucinaciones.',
@@ -1049,7 +1050,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Seguridad del código' },
         ],
         image: 'https://www.promptquorum.com/es/api/og/write-better-code-with-ai',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/write-better-code-with-ai',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/write-better-code-with-ai?lang=es',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       howToSchema: {

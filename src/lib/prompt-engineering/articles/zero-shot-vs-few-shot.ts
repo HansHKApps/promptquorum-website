@@ -260,7 +260,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
   metaDescription: 'Zero-Shot vs. Few-Shot Prompting: comparación de ambas técnicas, cuándo usar cada una y cómo PromptQuorum te ayuda a elegir la estrategia correcta.',
   schema: {
     '@context': 'https://schema.org',
-    '@type': 'TechArticle',
+    '@type': 'TechArticle',,
+      'inLanguage': 'es'
     headline: 'Zero-Shot vs. Few-Shot Prompting',
     description: 'Una comparación práctica del Zero-Shot y Few-Shot Prompting, cuándo usar cada técnica y cómo PromptQuorum te ayuda a seleccionar la estrategia correcta.',
     datePublished: '2026-03-26',
@@ -268,7 +269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keywords: ['Zero-Shot Prompting', 'Few-Shot Prompting', 'prompt engineering', 'PromptQuorum'],
     author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-    url: 'https://www.promptquorum.com/es/prompt-engineering/zero-shot-vs-few-shot',
+    url: 'https://www.promptquorum.com/es/prompt-engineering/zero-shot-vs-few-shot?lang=es',
     inLanguage: 'es',
   },
   sections: {

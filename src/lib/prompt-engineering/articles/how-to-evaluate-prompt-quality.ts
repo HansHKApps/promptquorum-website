@@ -592,14 +592,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: 'Cómo evaluar la calidad de los prompts: un framework práctico',
         description: 'Evalúa la calidad de los prompts con un conjunto de 20 casos, puntuación pass/fail binaria y rúbricas LLM-as-judge. Mide precisión, consistencia y tasa de seguimiento de instrucciones entre modelos.',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-04-29',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-evaluate-prompt-quality',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-evaluate-prompt-quality?lang=es',
         inLanguage: 'es',
         proficiencyLevel: 'Intermediate',
         about: [

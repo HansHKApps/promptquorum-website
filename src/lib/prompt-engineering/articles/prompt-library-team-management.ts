@@ -379,8 +379,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-library-team-management',
+      '@type': 'TechArticle',,
+     'inLanguage': 'es'
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-library-team-management?lang=es',
       inLanguage: 'es',
       headline: 'Gestión de biblioteca de prompts: cómo organizar, versionar y gobernar los prompts del equipo',
       description: 'Gestiona bibliotecas de prompts del equipo: estructura de carpetas, convenciones de nombres, versionado Git, control de acceso y flujo de deprecación.',

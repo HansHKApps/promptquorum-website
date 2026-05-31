@@ -2767,9 +2767,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+    'inLanguage': 'es'
       headline: 'Crea un asistente de voz local en tu teléfono: Whisper + LLM local (sin nube) — 2026',
-      url: 'https://www.promptquorum.com/es/power-local-llm/voice-assistant-local-mobile-offline',
+      url: 'https://www.promptquorum.com/es/power-local-llm/voice-assistant-local-mobile-offline?lang=es',
       image: {
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/og-image.png',

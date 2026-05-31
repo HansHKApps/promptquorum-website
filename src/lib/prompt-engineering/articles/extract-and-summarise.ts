@@ -1194,10 +1194,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: 'Extrae y resume con IA',
         description: 'El resumen de documentos con IA reduce el tiempo de revisión entre un 60 y un 80 % con tasas de alucinación del 0,7 %. Aprende los enfoques extractivo vs abstractivo, qué modelos usar y cómo estructurar prompts para salidas fieles.',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/extract-and-summarise',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/extract-and-summarise?lang=es',
         inLanguage: 'es',
         datePublished: '2026-03-23',
         dateModified: '2026-05-04',

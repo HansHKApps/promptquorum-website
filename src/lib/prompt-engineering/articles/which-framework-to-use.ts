@@ -406,8 +406,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/which-prompt-framework-should-you-use',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
+        url: 'https://www.promptquorum.com/es/prompt-engineering/which-prompt-framework-should-you-use?lang=es',
         inLanguage: 'es',
         headline: '¿Qué framework de prompts deberías usar?',
         description: 'Cómo elegir el framework de prompt correcto para GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales — y cómo PromptQuorum automatiza la selección de frameworks.',

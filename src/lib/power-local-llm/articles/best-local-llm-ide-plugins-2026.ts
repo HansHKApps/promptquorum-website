@@ -865,7 +865,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     faqSchema: {
       '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@type': 'FAQPage',,
+     'inLanguage': 'es'
       mainEntity: [
         {
           '@type': 'Question',
@@ -904,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Comparativa clasificada de Continue, Cline, Tabby, Aider y Cursor para uso de LLM local en VS Code y JetBrains. Incluye guía de configuración, recomendaciones de modelos y comparación de rendimiento.',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-ide-plugins-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-ide-plugins-2026?lang=es',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

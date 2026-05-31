@@ -1048,7 +1048,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     faqSchema: {
       '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@type': 'FAQPage',,
+     'inLanguage': 'es'
       mainEntity: [
         {
           '@type': 'Question',
@@ -1093,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Listas completas de componentes para tres builds de workstation de IA local: $1200 económico, $2500 recomendado, $5000 profesional. Incluye benchmarks de rendimiento para modelos de 7B a 70B.',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      url: 'https://www.promptquorum.com/es/power-local-llm/best-workstation-build-local-ai-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-workstation-build-local-ai-2026?lang=es',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

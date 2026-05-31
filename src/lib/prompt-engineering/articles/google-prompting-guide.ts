@@ -1070,12 +1070,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+    'inLanguage': 'es'
       headline: "La Guía de Prompts de Google",
       description: "Domina los 5 principios de prompts de Google: claridad, restricciones, ejemplos, roles, estructura. Aplícalos en Gemini, GPT-4o, Claude y modelos locales para resultados predecibles.",
       datePublished: '2026-03-24',
       dateModified: '2026-05-03',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/google-prompting-guide',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/google-prompting-guide?lang=es',
       inLanguage: 'es',
       keywords: ['Google Prompting Guide', 'mejores prácticas de prompts', 'ingeniería de prompts', 'Gemini 3.1 Pro', 'GPT-4o', 'Claude Opus 4.7', 'frameworks de prompts', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', jobTitle: 'Founder', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

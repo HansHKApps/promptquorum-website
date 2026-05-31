@@ -456,12 +456,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '10 min de lectura',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+       'inLanguage': 'es'
         headline: 'Temperatura y Top-P: Controla la creatividad de la IA',
         description: 'Aprende cómo la temperatura y el top-p controlan la aleatoriedad de la IA. Configuraciones prácticas para codificación, resúmenes, brainstorming y equilibrar creatividad con fiabilidad.',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/temperature-and-top-p-control-ai-creativity',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=es',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },

@@ -598,12 +598,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2026-09-03',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: '¿Está muerto el prompt engineering? Cómo evolucionó hacia el context design (2026)',
         description: 'El prompt engineering pasó por 7 fases distintas desde GPT-3 (2020) hasta el context design (2026). Línea de tiempo completa con 12+ citas de investigación y análisis de por qué la disciplina se transformó pero no desapareció.',
         datePublished: '2026-03-01',
         dateModified: '2026-05-03',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/how-prompt-engineering-evolved',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/how-prompt-engineering-evolved?lang=es',
         inLanguage: 'es',
         keywords: ['historia del prompt engineering', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'línea de tiempo del prompt engineering', 'InstructGPT', 'RLHF'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

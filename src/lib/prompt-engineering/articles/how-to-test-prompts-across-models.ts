@@ -539,14 +539,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+    'inLanguage': 'es'
       headline: 'Cómo probar prompts entre modelos: evaluación multi-modelo',
       description: 'Las pruebas de prompts multi-modelo despachan el mismo prompt a GPT-4o, Claude Opus 4.7 y Gemini en paralelo para revelar fallos JSON, diferencias en patrones de rechazo y compensaciones de costo antes de la producción.',
       datePublished: '2026-04-10',
       dateModified: '2026-04-10',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-test-prompts-across-models',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-test-prompts-across-models?lang=es',
       inLanguage: 'es',
       keywords: 'pruebas de prompts multi-modelo, GPT-4o vs Claude, evaluación de prompts, comparación de costos LLM, prompts agnósticos al modelo',
       proficiencyLevel: 'Intermediate',

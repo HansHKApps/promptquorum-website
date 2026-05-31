@@ -359,8 +359,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
   readTime: '12 min de lectura',
   schema: {
     '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-glossary',
+    '@type': 'TechArticle',,
+      'inLanguage': 'es'
+    url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-glossary?lang=es',
     inLanguage: 'es',
     headline: 'Glosario de Prompt Engineering: 500 términos clave',
     datePublished: '2026-03-28',

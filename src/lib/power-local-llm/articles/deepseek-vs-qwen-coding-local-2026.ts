@@ -692,7 +692,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     faqSchema: {
       '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      '@type': 'FAQPage',,
+    'inLanguage': 'es'
       inLanguage: 'es',
       mainEntity: [
         {
@@ -761,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/es/power-local-llm/deepseek-vs-qwen-coding-local-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=es',
       inLanguage: 'es',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },

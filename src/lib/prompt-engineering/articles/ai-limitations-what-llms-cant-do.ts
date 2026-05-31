@@ -783,8 +783,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-limitations-what-llms-cant-do',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
+        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es',
         inLanguage: 'es',
         headline: 'Limitaciones de la IA — Lo que los LLMs no pueden hacer',
         description: 'Los ocho límites estructurales de los grandes modelos de lenguaje: cortes de conocimiento, alucinación, sin datos en tiempo real, context windows, sin memoria persistente, sesgo y la incapacidad de verificar outputs.',

@@ -716,7 +716,8 @@ jobs:
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+     'inLanguage': 'es'
       headline: 'Control de versiones de prompts: seguimiento, rollback y flujos de trabajo en equipo',
       description: 'Los prompts sin versionar fallan silenciosamente — sin historial no hay rollback. Aplica el versionado MAJOR.MINOR.PATCH, flujos de trabajo de Git y pruebas de regresión automatizadas a cada cambio de prompt.',
       datePublished: '2026-04-30',
@@ -724,7 +725,7 @@ jobs:
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-version-control-workflows',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-version-control-workflows?lang=es',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
       keywords: ['control de versiones de prompts', 'versionado de prompts', 'flujo de trabajo Git para prompts', 'gestión de cambios de prompts', 'cómo versionar prompts de IA'],

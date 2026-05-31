@@ -745,7 +745,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'TechArticle',,
+      'inLanguage': 'es'
         headline: 'Salida estructurada y modo JSON: obtén datos utilizables de la IA',
         description: 'Domina la salida estructurada y el modo JSON en prompts. Aprende a diseñar esquemas, imponer JSON válido, comparar el cumplimiento de los modelos y evitar errores comunes en sistemas de producción.',
         datePublished: '2026-03-26',
@@ -753,7 +754,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['salida estructurada', 'modo JSON', 'prompt engineering', 'diseño de esquemas', 'salida legible por máquinas', 'validación JSON', 'plantillas de prompts'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        url: 'https://www.promptquorum.com/es/prompt-engineering/structured-output-json-mode',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/structured-output-json-mode?lang=es',
         inLanguage: 'es',
       },
       howToSchema: {

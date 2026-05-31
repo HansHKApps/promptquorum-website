@@ -716,14 +716,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+     'inLanguage': 'es'
       headline: 'Configuración de prompt engineering para equipos pequeños (2026)',
       description: 'Aprende a configurar el prompt engineering para equipos pequeños: biblioteca YAML compartida, versionado Git, conjunto de 20 casos de prueba y reglas de propiedad. Configuración completa en una semana.',
       author:    { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified:  '2026-04-29',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-setup-small-teams',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-setup-small-teams?lang=es',
       inLanguage:       'es',
       proficiencyLevel: 'Intermediate',
       about: [

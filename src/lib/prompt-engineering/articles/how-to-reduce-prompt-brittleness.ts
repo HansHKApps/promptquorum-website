@@ -852,14 +852,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',
+      '@type': 'TechArticle',,
+    'inLanguage': 'es'
       headline: 'Cómo reducir la fragilidad de prompts',
       description: 'La fragilidad de prompts causa fallos en producción que son invisibles en las pruebas. Aprende 7 técnicas — salida estructurada, instrucciones defensivas, suites de regresión — para que los prompts sean fiables.',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-reduce-prompt-brittleness',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-reduce-prompt-brittleness?lang=es',
       inLanguage: 'es',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
