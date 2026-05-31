@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: 'Mejor GPU cloud para fine-tuning de LLMs por menos de $1/hora (2026)',
     seoTitle: 'GPU cloud fine-tuning LLM menos $1/hora 2026',
-    metaDescription: 'Fine-tuning de Llama 3.1 8B o Qwen2.5 14B con QLoRA por menos de $1/hora en RunPod, Vast.ai o Lambda Labs. Opciones de GPU más baratas, costes reales y comparativa.',
+    metaDescription: 'Fine-tuning de Llama 3.1 8B o Qwen2.5 14B con QLoRA por menos de $1/h en RunPod, Vast.ai o Lambda Labs. Opciones de GPU más baratas y costes reales.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

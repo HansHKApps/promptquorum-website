@@ -412,8 +412,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Tool Comparisons',
     title: 'Cómo convertir modelos de Ollama a formato MLX',
-    seoTitle: 'Convertir modelos de Ollama a MLX 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'No puedes convertir directamente modelos de Ollama a MLX. Usa pesos de Hugging Face + mlx-lm convert. La mayoría de modelos populares ya tienen versiones MLX preconvertidas.',
+    seoTitle: 'Convertir modelos de Ollama a MLX 2026 | PromptQuorum',
+    metaDescription: 'No puedes convertir modelos de Ollama a MLX directamente. Usa pesos de Hugging Face + mlx-lm convert. La mayoría de modelos populares ya tienen versión MLX.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

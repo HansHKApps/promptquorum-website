@@ -422,8 +422,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Privacy & Security',
     title: '¿Es Qwen compatible con el RGPD?',
-    seoTitle: '¿Es Qwen compatible con el RGPD? 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen ejecutado localmente es compatible con el RGPD: sin transferencia de datos, sin problema del Artículo 44. La API de Qwen (Alibaba Cloud) requiere CCT como cualquier proveedor no europeo. Mayo 2026.',
+    seoTitle: '¿Es Qwen compatible con el RGPD? 2026 | PromptQuorum',
+    metaDescription: 'Qwen en local cumple el RGPD: sin transferencia de datos ni problema del Artículo 44. La API de Qwen (Alibaba Cloud) requiere CCT como toda no europea. 2026.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

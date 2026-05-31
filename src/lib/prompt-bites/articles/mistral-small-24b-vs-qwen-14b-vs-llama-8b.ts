@@ -441,8 +441,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Model Comparisons',
     title: 'Mistral Small 24B vs Qwen 2.5 14B vs Llama 3.1 8B: ¿cuál ejecutar en local?',
-    seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.1 8B: 4.9 GB VRAM. Qwen 2.5 14B: 9.3 GB, MMLU 74.8%. Mistral Small 24B: 14.4 GB, MMLU 81%. Elige según tu nivel de VRAM. Respuesta rápida de PromptQuorum.',
+    seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026',
+    metaDescription: 'Llama 3.1 8B: 4,9 GB VRAM. Qwen 2.5 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Elige según tu nivel de VRAM. Respuesta rápida.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',

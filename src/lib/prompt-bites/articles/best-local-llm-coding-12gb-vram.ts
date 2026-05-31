@@ -440,8 +440,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Hardware-Specific',
     title: '¿Mejor LLM local para programar con 12 GB de VRAM?',
-    seoTitle: 'Mejor LLM de Programación para 12 GB 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen 2.5 Coder 14B Q4_K_M: mejor LLM de programación para 12 GB con ~10 GB, mayor HumanEval. DeepSeek 14B Q4 como alternativa. Compatibles con RTX 3060/3080 Ti 12 GB.',
+    seoTitle: 'Mejor LLM de programación para 12 GB 2026 | PromptQuorum',
+    metaDescription: 'Qwen 2.5 Coder 14B Q4_K_M: mejor LLM de programación para 12 GB con ~10 GB y mayor HumanEval. DeepSeek 14B Q4 como alternativa. Para RTX 3060/3080 Ti.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

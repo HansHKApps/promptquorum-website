@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Quick Answers',
     title: '¿Qué LLM Local es Mejor para un Laptop con 16 GB de RAM?',
-    seoTitle: 'Mejor LLM Local 16 GB de RAM 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Mejor LLM local 16 GB de RAM 2026 | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M (~5 tok/s) para laptops con 16 GB de RAM sin GPU. Qwen 2.5 Coder 7B para programación. Apple Silicon ~3× más rápido. PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

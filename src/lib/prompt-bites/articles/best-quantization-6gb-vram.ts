@@ -464,8 +464,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Quantization & VRAM',
     title: '¿Mejor cuantización para 6 GB de VRAM: qué nivel cabe?',
-    seoTitle: 'Mejor cuantización para 6 GB VRAM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Q4_K_M para modelos 7B: 4,9 GB, cabe en 6 GB VRAM con 1,1 GB para contexto. Q5_K_M cabe justo. Q6_K y superiores superan los 6 GB. Respuesta rápida de PromptQuorum.',
+    seoTitle: 'Mejor cuantización para 6 GB VRAM 2026 | PromptQuorum',
+    metaDescription: 'Q4_K_M para modelos 7B: 4,9 GB, cabe en 6 GB de VRAM con 1,1 GB para contexto. Q5_K_M cabe justo; Q6_K y superiores superan los 6 GB. Respuesta rápida.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',

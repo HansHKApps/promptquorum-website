@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: '¿Es el Mac Mini M4 bueno para LLMs locales en 2026?',
     seoTitle: 'Mac Mini M4 para LLMs locales 2026 | Prompt Bites',
-    metaDescription: 'Sí, el Mac Mini M4 ejecuta LLMs locales bien. El M4 Pro con 24 GB de memoria unificada maneja modelos 8B sin problemas y es la mejor opción Apple en relación calidad-precio.',
+    metaDescription: 'Sí, el Mac Mini M4 ejecuta LLMs locales bien. El M4 Pro con 24 GB unificados maneja modelos 8B con holgura y es la mejor opción Apple en calidad-precio.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

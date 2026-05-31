@@ -555,9 +555,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Privacy & Security',
     title: 'Mejor VPN para desarrollo de IA en China 2026',
-    seoTitle: 'Mejor VPN para desarrollo IA en China 2026: GitHub + HuggingFace',
+    seoTitle: 'Mejor VPN para IA en China 2026: GitHub y HuggingFace',
     metaDescription:
-      'Top 5 VPNs para desarrolladores de IA en China: accede a HuggingFace, GitHub, Docker Hub y PyPI. Tests de velocidad, precios y cuáles funcionan realmente en 2026. Afiliado.',
+      'Top 5 VPN para desarrolladores de IA en China: accede a HuggingFace, GitHub, Docker Hub y PyPI. Velocidad, precios y cuáles funcionan en 2026.',
     publishDate: '2026-05-26',
     dateModified: '2026-05-26',
     freshness_tier: 'semi_annual',

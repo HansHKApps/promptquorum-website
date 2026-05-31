@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quick Answers',
     title: '¿Puedes Ejecutar RAG con 2 GB de RAM?',
     seoTitle: 'RAG con 2 GB de RAM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 permiten ejecutar RAG con 2 GB de RAM (~1.3–1.5 GB en total). Los modelos 7B+ necesitan 8 GB mínimo. Respuesta rápida de PromptQuorum.',
+    metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 permiten RAG con 2 GB de RAM (~1,3–1,5 GB total). Los modelos 7B+ necesitan al menos 8 GB. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

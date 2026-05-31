@@ -437,8 +437,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Model Comparisons',
     title: '¿Los mejores modelos MoE para coding local?',
-    seoTitle: 'Mejores modelos MoE para coding 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Mixtral 8x7B: 26 GB VRAM, 46.7B parámetros. DeepSeek V2: 16 GB VRAM, puntuaciones top en coding. MoE activa solo los parámetros activos. Respuesta rápida de PromptQuorum.',
+    seoTitle: 'Mejores modelos MoE para coding 2026 | PromptQuorum',
+    metaDescription: 'Mixtral 8x7B: 26 GB VRAM, 46,7B parámetros. DeepSeek V2: 16 GB VRAM, top en coding. MoE solo activa los parámetros necesarios. Respuesta rápida.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

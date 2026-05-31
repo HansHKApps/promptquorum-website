@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware Guides',
     title: '¿Puedes ejecutar un LLM local en un teléfono Xperia?',
     seoTitle: 'LLM local en Xperia Japón 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'El Xperia 1 VI (12 GB) ejecuta Phi-4 Q4 y Rinna 3.6B. El Xperia 5 V (8 GB) corre modelos 3B. El Xperia 10 VI (6 GB) está limitado a TinyLlama. Usa MLC Chat, sin root.',
+    metaDescription: 'El Xperia 1 VI (12 GB) ejecuta Phi-4 Q4 y Rinna 3.6B; el Xperia 5 V (8 GB) corre modelos 3B; el 10 VI (6 GB), solo TinyLlama. MLC Chat, sin root.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',

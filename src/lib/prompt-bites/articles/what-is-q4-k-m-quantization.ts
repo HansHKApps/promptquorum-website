@@ -399,8 +399,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Quantization & VRAM',
     title: '¿Qué es la cuantización Q4_K_M?',
-    seoTitle: 'Guía de cuantización Q4_K_M 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Q4_K_M significa cuantización de 4 bits k-quant a calidad media. Mejor que Q4_0, más pequeño que Q8_0. Usa Q4_K_M como predeterminado para Ollama. Guía rápida de PromptQuorum.',
+    seoTitle: 'Guía de cuantización Q4_K_M 2026 | PromptQuorum',
+    metaDescription: 'Q4_K_M es cuantización de 4 bits k-quant de calidad media: mejor que Q4_0, más pequeña que Q8_0. Úsala por defecto en Ollama. Guía rápida de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

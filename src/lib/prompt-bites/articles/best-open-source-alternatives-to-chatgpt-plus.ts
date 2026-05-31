@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Cost & Comparisons',
     type: 'comparison',
     title: 'Mejores Alternativas Open Source a ChatGPT Plus 2026',
-    seoTitle: 'Mejores Alternativas Gratuitas Open Source a ChatGPT Plus 2026',
+    seoTitle: 'Alternativas open source gratuitas a ChatGPT Plus 2026',
     metaDescription: 'Mejores alternativas open source a ChatGPT Plus en 2026. Compara Ollama+Open WebUI, LM Studio, Jan y AnythingLLM — gratis, privado, sin suscripción requerida.',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,

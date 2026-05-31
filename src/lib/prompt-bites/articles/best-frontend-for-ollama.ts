@@ -443,7 +443,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     title: '¿Mejor frontend para Ollama?',
     seoTitle: '¿Mejor frontend para Ollama? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Open WebUI es el mejor frontend para Ollama. SillyTavern para juego de rol, Jan para gestión de modelos. Los tres son gratuitos y código abierto. Actualizado en mayo 2026.',
+    metaDescription: 'Open WebUI es el mejor frontend para Ollama. SillyTavern para roleplay y Jan para gestión de modelos. Los tres son gratuitos y open source. Mayo 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

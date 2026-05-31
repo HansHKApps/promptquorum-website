@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Quantization & VRAM',
     title: '¿Mejores modelos Ollama para 4 GB de VRAM?',
-    seoTitle: 'Modelos Ollama para 4 GB VRAM 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Modelos Ollama para 4 GB VRAM 2026 | PromptQuorum',
     metaDescription: '4 GB de VRAM es ajustado. Phi-4 Mini Q4 (3,2 GB), Gemma 2 2B (1,5 GB), SmolLM 1.7B (1,0 GB). Llama 3 8B no cabe. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

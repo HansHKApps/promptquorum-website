@@ -452,8 +452,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Tool Comparisons',
     title: '¿Las mejores apps de LLM local para Android?',
-    seoTitle: 'Mejores apps Android para LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Mejores apps Android para LLMs locales: MLC Chat (más fácil), Pocketpal (flexible), Termux + Ollama (control total). Todo funciona sin conexión. Respuesta rápida de PromptQuorum.',
+    seoTitle: 'Mejores apps Android para LLM 2026 | PromptQuorum',
+    metaDescription: 'Mejores apps Android para LLMs locales: MLC Chat (más fácil), PocketPal (flexible) y Termux + Ollama (control total). Todo funciona sin conexión.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

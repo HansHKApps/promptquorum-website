@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     title: '¿Jan vs LM Studio: Cuál es mejor?',
     seoTitle: 'Jan vs LM Studio: Cuál usar | Prompt Bites | PromptQuorum',
-    metaDescription: 'Jan: código abierto, ~30 extensiones. LM Studio: interfaz pulida, librería más grande. Para personalización elige Jan; para facilidad, LM Studio. Respuesta rápida de PromptQuorum.',
+    metaDescription: 'Jan: open source, ~30 extensiones. LM Studio: interfaz pulida y librería más grande. Para personalizar elige Jan; para facilidad, LM Studio. Respuesta rápida.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

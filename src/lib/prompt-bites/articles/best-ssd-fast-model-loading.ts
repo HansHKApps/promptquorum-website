@@ -782,8 +782,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Hardware-Specific',
     title: '¿Mejor SSD para cargar modelos rápido en 2026?',
-    seoTitle: 'Mejor SSD para carga rápida de modelos LLM 2026 | Prompt Bites',
-    metaDescription: 'Mejor SSD para carga rápida de modelos LLM: un NVMe PCIe Gen4 como el Samsung 990 Pro 2 TB. Alta lectura secuencial carga modelos de varios GB en RAM en segundos.',
+    seoTitle: 'Mejor SSD para carga rápida de modelos LLM 2026',
+    metaDescription: 'Mejor SSD para cargar modelos LLM rápido: un NVMe PCIe Gen4 como el Samsung 990 Pro 2 TB. Su lectura secuencial carga varios GB en RAM en segundos.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

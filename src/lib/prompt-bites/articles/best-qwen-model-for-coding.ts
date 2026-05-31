@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: '¿Cuál es el mejor modelo Qwen para programar?',
     seoTitle: 'Qwen2.5-Coder 2026: 7B vs 14B vs 32B por nivel de VRAM',
-    metaDescription: 'Qwen2.5-Coder 32B lidera con 24 GB VRAM (HumanEval 91.5%). A 8 GB: el 7B alcanza 79.7%. El 14B es el punto óptimo a 12 GB. Guía de tamaños por nivel de hardware.',
+    metaDescription: 'Qwen2.5-Coder 32B lidera con 24 GB de VRAM (HumanEval 91,5%). Con 8 GB el 7B logra 79,7%. El 14B es el punto óptimo a 12 GB. Guía de tamaños por hardware.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

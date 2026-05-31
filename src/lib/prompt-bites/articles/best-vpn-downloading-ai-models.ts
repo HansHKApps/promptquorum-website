@@ -982,8 +982,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Privacy & Security',
     title: 'Las mejores VPN para descargar modelos de IA en 2026',
-    seoTitle: 'Las 5 mejores VPN para descargar modelos de IA 2026 | Prompt Bites',
-    metaDescription: 'Las 5 mejores VPN para descargar modelos de IA en 2026: ProtonVPN (auditada, plan gratuito), Mullvad (anónima), NordVPN (más de 6.000 servidores), Surfshark (más barata), ExpressVPN (más rápida).',
+    seoTitle: 'Las 5 mejores VPN para descargar modelos de IA 2026',
+    metaDescription: 'Las 5 mejores VPN para descargar modelos de IA en 2026: ProtonVPN (plan gratis), Mullvad (anónima), NordVPN, Surfshark (barata) y ExpressVPN (rápida).',
     publishDate: '2026-05-22',
     dateModified: '2026-05-23',
     freshness_tier: 'semi_annual',

@@ -400,8 +400,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Privacy & Security',
     title: '¿Puede un LLM local ayudar con el cumplimiento del RGPD?',
-    seoTitle: '¿LLM local ayuda con el RGPD? 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Sí — ejecutar un LLM de código abierto localmente elimina por completo el problema de transferencia de datos a terceros países del Artículo 44 del RGPD. Mejores modelos para organizaciones con datos sensibles en 2026.',
+    seoTitle: '¿LLM local ayuda con el RGPD? 2026 | PromptQuorum',
+    metaDescription: 'Sí: ejecutar un LLM de código abierto en local elimina el problema de transferencia del Artículo 44 del RGPD. Mejores modelos para datos sensibles en 2026.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

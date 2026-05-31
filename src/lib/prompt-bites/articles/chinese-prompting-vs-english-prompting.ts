@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Model Comparisons',
     title: 'Prompts en chino vs inglés: ¿cuál es mejor para LLMs locales?',
-    seoTitle: 'Prompts en chino vs inglés 2026: eficiencia de tokens en LLMs',
+    seoTitle: 'Prompts en chino vs inglés 2026: eficiencia de tokens',
     metaDescription: 'Los prompts en chino usan 30–50% menos tokens en Qwen2.5. El inglés produce cadenas de razonamiento más fuertes. Técnicas mixtas y guía por modelo.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',

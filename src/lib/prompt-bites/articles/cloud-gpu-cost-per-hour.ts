@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: '¿Cuánto cuesta un GPU en la nube por hora en 2026?',
     seoTitle: 'Precio GPU en la nube por hora 2026 | Prompt Bites',
-    metaDescription: 'Precio de GPU en la nube por hora (mayo 2026): RTX 4090 ~$0.30-0.80, A100 80 GB ~$0.90-1.90, H100 ~$2.20-4.00. Rangos aproximados entre los principales proveedores.',
+    metaDescription: 'Precio de GPU cloud por hora (mayo 2026): RTX 4090 ~$0,30–0,80, A100 80 GB ~$0,90–1,90, H100 ~$2,20–4,00. Rangos aproximados entre los principales proveedores.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Hardware Guides',
     title: '¿Cuál es la mejor GPU por precio para LLMs locales en Japón?',
-    seoTitle: 'Mejor GPU para LLMs en Japón 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Mejor GPU para LLMs en Japón 2026 | PromptQuorum',
     metaDescription:
       'RTX 3060 12 GB es la mejor GPU por precio en Japón: ~¥40,000 nueva, ¥25,000 de segunda mano. Modelos 7B a 20–25 tok/s. Disponible en Tsukumo y Dospara.',
     publishDate: '2026-05-27',

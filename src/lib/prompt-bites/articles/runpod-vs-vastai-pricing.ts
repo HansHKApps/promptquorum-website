@@ -720,7 +720,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     title: 'RunPod vs Vast.ai: ¿Cuál es más barato en 2026?',
     seoTitle: 'RunPod vs Vast.ai precios 2026 | Prompt Bites',
-    metaDescription: 'Vast.ai es más barato en GPUs spot/interrumpibles; RunPod es más fiable para cargas sostenidas. Snapshot de tarifas por hora de mayo 2026 — verifica las tarifas actuales.',
+    metaDescription: 'Vast.ai es más barato en GPUs spot/interrumpibles; RunPod es más fiable para cargas sostenidas. Tarifas por hora de mayo 2026; verifica las tarifas actuales.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

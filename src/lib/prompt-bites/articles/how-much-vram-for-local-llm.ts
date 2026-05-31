@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Quantization & VRAM',
     title: '¿Cuánta VRAM necesitas para un LLM local?',
-    seoTitle: 'Requisitos de VRAM para LLMs locales 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Requisitos de VRAM para LLMs locales 2026 | PromptQuorum',
     metaDescription: '4 GB para Phi-4 Mini Q4. 6 GB para Llama 3 8B Q4_K_M. 12 GB para Qwen 14B. Fórmula: params × 0,7 = GB en Q4. Guía de VRAM de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

@@ -626,7 +626,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: '¿Mejor eGPU para Ollama en un MacBook en 2026?',
     seoTitle: 'eGPU para Ollama en MacBook 2026 | Prompt Bites',
-    metaDescription: 'No existe ningún eGPU funcional para Ollama en un MacBook Apple Silicon. La memoria unificada y la ausencia de soporte PCIe lo descartan. Usa más memoria unificada o un portátil Linux.',
+    metaDescription: 'No existe un eGPU funcional para Ollama en un MacBook Apple Silicon: la memoria unificada y la falta de PCIe lo descartan. Usa más memoria o un portátil Linux.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

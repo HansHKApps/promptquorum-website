@@ -411,8 +411,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Privacy & Security',
     title: '¿Es seguro usar DeepSeek bajo el RGPD?',
-    seoTitle: '¿DeepSeek es seguro para el RGPD? 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'La API de DeepSeek es el LLM de mayor riesgo para el RGPD: jurisdicción china, ley PIPL, sin decisión de adecuación de la UE. Los pesos locales de DeepSeek son de menor riesgo. Mayo 2026.',
+    seoTitle: '¿DeepSeek es seguro para el RGPD? 2026 | PromptQuorum',
+    metaDescription: 'La API de DeepSeek es el LLM de mayor riesgo RGPD: jurisdicción china, ley PIPL y sin adecuación de la UE. Los pesos locales son de menor riesgo. Mayo 2026.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

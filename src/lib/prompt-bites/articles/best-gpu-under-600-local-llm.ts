@@ -744,7 +744,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Hardware-Specific',
     title: '¿La mejor GPU por menos de $600 para LLMs locales en 2026?',
-    seoTitle: 'Mejor GPU por menos de $600 para LLM local 2026 | Prompt Bites',
+    seoTitle: 'Mejor GPU por menos de $600 para LLM local 2026',
     metaDescription: 'Mejor GPU por menos de $600 para LLMs locales: RTX 4060 Ti 16 GB (~$424 nueva). 16 GB de VRAM es el punto óptimo para modelos 14B. Precios de mayo 2026.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',

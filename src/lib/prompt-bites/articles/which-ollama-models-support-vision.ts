@@ -402,8 +402,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Ollama',
     title: '¿Qué modelos de Ollama son compatibles con visión?',
-    seoTitle: 'Modelos de visión de Ollama 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'LLaVA, Gemma 3 multimodal y Qwen-VL son compatibles con visión en Ollama. Empieza con: ollama run llava. Todos aceptan imágenes a través de la API de Ollama. Actualizado 2026.',
+    seoTitle: 'Modelos de visión de Ollama 2026 | PromptQuorum',
+    metaDescription: 'LLaVA, Gemma 3 multimodal y Qwen-VL soportan visión en Ollama. Empieza con: ollama run llava. Todos aceptan imágenes vía la API de Ollama. Actualizado 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

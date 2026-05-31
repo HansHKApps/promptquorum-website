@@ -352,8 +352,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Tool Comparisons',
     title: 'MLX vs Ollama vs llama.cpp: ¿Cuál motor de inferencia deberías usar?',
-    seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'En Apple Silicon, usa MLX (~65 tok/s en M5 Pro). En GPUs NVIDIA, usa Ollama por simplicidad o llama.cpp por control. Ollama envuelve llama.cpp. Respuesta rápida.',
+    seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | PromptQuorum',
+    metaDescription: 'En Apple Silicon usa MLX (~65 tok/s en M5 Pro). En NVIDIA, Ollama por simplicidad o llama.cpp por control. Ollama envuelve a llama.cpp. Respuesta rápida.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

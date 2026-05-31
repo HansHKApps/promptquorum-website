@@ -394,7 +394,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Quantization & VRAM',
     title: '¿Mejor LLM local para 6 GB de VRAM?',
-    seoTitle: '6 GB VRAM: mejor LLM local 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: '6 GB VRAM: mejor LLM local 2026 | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M (5,5 GB) es la mejor opción para 6 GB de VRAM. Phi-4 Q4 y Mistral 7B Q4_K_S son alternativas sólidas. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

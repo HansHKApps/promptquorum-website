@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: 'Mejor Mini PC para Servidor Ollama Siempre Encendido 2026',
     seoTitle: 'Mejor Mini PC para Servidor Ollama Always-On 2026',
-    metaDescription: 'Ejecuta Ollama 24/7 en un mini PC que consume 15–35 W. Mejores opciones: Minisforum UM890 Pro, AOOSTAR GEM12, Beelink SER8. Especificaciones, consumo de energía y enlaces de compra.',
+    metaDescription: 'Ejecuta Ollama 24/7 en un mini PC de 15–35 W. Mejores opciones: Minisforum UM890 Pro, AOOSTAR GEM12 y Beelink SER8. Especificaciones, consumo y compra.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

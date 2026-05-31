@@ -744,8 +744,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Hardware-Specific',
     title: '¿Mejor GPU por menos de $300 para LLMs locales en 2026?',
-    seoTitle: 'Mejor GPU por menos de $300 para LLM local 2026 | Prompt Bites',
-    metaDescription: 'Mejor GPU por menos de $300 para LLMs locales: RTX 3060 12 GB usada ($150-250). CUDA funciona al instante con Ollama. RX 6700 XT más barata pero requiere ROCm. Mayo 2026.',
+    seoTitle: 'Mejor GPU por menos de $300 para LLM local 2026',
+    metaDescription: 'Mejor GPU bajo $300 para LLMs locales: RTX 3060 12 GB usada ($150–250), CUDA al instante con Ollama. La RX 6700 XT es más barata pero requiere ROCm.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

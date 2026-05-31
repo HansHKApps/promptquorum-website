@@ -394,7 +394,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     title: '¿Cuáles son las mejores apps de LLM local para Android en Japón?',
     seoTitle: 'Mejores LLM Android Japón 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'MLC Chat ejecuta Rinna 3.6B con 4 GB de RAM. PocketPal AI soporta ELYZA-7B con 6 GB. Termux+Ollama añade Qwen2.5 7B para dispositivos con 8 GB o más. Todo funciona offline en Japón.',
+    metaDescription: 'MLC Chat ejecuta Rinna 3.6B con 4 GB de RAM. PocketPal AI soporta ELYZA-7B con 6 GB. Termux + Ollama añade Qwen2.5 7B con 8 GB+. Todo offline en Japón.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',

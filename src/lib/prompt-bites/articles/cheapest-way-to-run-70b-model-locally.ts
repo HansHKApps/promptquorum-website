@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: 'Forma Más Barata de Ejecutar un Modelo 70B Localmente 2026',
     seoTitle: 'Forma Más Barata de Ejecutar Modelo 70B Localmente 2026',
-    metaDescription: 'Las formas más baratas de ejecutar un LLM 70B localmente en 2026: Mac Mini M4 Pro 48GB ($2,000), RTX 3090 dual ($2,200), y CPU-only 128GB RAM. Rendimiento vs costo comparados.',
+    metaDescription: 'Formas más baratas de ejecutar un LLM 70B en local en 2026: Mac Mini M4 Pro 48GB ($2,000), dual RTX 3090 ($2,200) o CPU con 128GB de RAM. Rendimiento vs costo.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

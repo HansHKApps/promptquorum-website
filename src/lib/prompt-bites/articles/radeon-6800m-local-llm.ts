@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: '¿Puedes ejecutar LLMs locales en una Radeon RX 6800M?',
     seoTitle: '¿Radeon 6800M para LLM local? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Sí — Radeon RX 6800M (12 GB VRAM) ejecuta LLMs vía ROCm en Linux o llama.cpp en todas las plataformas. Llama 3 8B Q4 corre a ~12 tok/s. El soporte ROCm en Windows es limitado.',
+    metaDescription: 'Sí: la Radeon RX 6800M (12 GB) ejecuta LLMs vía ROCm en Linux o llama.cpp. Llama 3 8B Q4 corre a ~12 tok/s. El soporte ROCm en Windows es limitado.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

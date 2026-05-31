@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: '¿Se puede ejecutar Qwen 3 en Ollama?',
     seoTitle: 'Ejecutar Qwen 3 en Ollama 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Sí — Ollama admite todos los tamaños de Qwen 3 desde 0.6B hasta 72B. Ejecuta con: ollama run qwen3:8b. El modelo 8B necesita ~6 GB de VRAM. Variante MoE disponible. Actualizado mayo 2026.',
+    metaDescription: 'Sí: Ollama admite todos los tamaños de Qwen 3, de 0.6B a 72B. Ejecuta: ollama run qwen3:8b. El 8B necesita ~6 GB de VRAM. Variante MoE disponible. Mayo 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

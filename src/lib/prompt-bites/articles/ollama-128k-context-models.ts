@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: '¿Qué modelos de Ollama admiten contexto de 128K?',
     seoTitle: 'Ollama contexto 128K 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.1 8B y Qwen 2.5 14B admiten contexto de 128K o más en Ollama. Qwen 2.5 alcanza 1M de tokens. El contexto completo aumenta significativamente la VRAM. Actualizado 2026.',
+    metaDescription: 'Llama 3.1 8B y Qwen 2.5 14B admiten 128K de contexto o más en Ollama; Qwen 2.5 llega a 1M de tokens. El contexto completo aumenta mucho la VRAM. 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

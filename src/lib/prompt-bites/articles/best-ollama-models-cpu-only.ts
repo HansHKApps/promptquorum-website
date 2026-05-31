@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: '¿Los mejores modelos de Ollama solo para CPU?',
     seoTitle: 'Mejores modelos de Ollama sin GPU 2026 | PromptQuorum',
-    metaDescription: 'Phi-4 Mini Q4 es el mejor modelo de Ollama solo para CPU: 4 GB de RAM, ~5 tok/s. Llama 3 8B Q4 requiere 8 GB de RAM. Gemma 2B es el más rápido en CPU (~6 tok/s). Sin GPU. Mayo 2026.',
+    metaDescription: 'Phi-4 Mini Q4 es el mejor modelo de Ollama solo para CPU: 4 GB de RAM, ~5 tok/s. Llama 3 8B Q4 pide 8 GB. Gemma 2B es el más rápido en CPU (~6 tok/s). Sin GPU.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

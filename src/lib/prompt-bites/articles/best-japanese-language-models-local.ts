@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Model Comparisons',
     title: '¿Qué modelos LLM locales admiten mejor el japonés?',
-    seoTitle: 'Mejores LLMs locales en japonés 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Mejores LLMs locales en japonés 2026 | PromptQuorum',
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen2.5 7B (multilingüe JA/ZH/EN), Phi-4 (10–12 GB): cuatro LLMs locales para tareas en japonés, todos vía Ollama en 2026.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',

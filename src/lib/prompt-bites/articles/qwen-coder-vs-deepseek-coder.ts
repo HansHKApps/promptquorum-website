@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     title: 'Qwen Coder vs DeepSeek Coder: ¿Cuál es mejor?',
     seoTitle: 'Qwen Coder vs DeepSeek Coder? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen 2.5 Coder gana en Python y TypeScript. DeepSeek Coder tiene soporte de lenguajes más amplio. Ambos necesitan ~10 GB VRAM en 14B Q4. Respuesta rápida de PromptQuorum.',
+    metaDescription: 'Qwen 2.5 Coder gana en Python y TypeScript; DeepSeek Coder cubre más lenguajes. Ambos piden ~10 GB de VRAM en 14B Q4. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

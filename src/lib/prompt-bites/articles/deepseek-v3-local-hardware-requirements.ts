@@ -552,8 +552,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Model Comparisons',
     title: '¿Cuáles son los requisitos de hardware para ejecutar DeepSeek V3 en local?',
-    seoTitle: 'DeepSeek V3 en local 2026: la realidad de los 400 GB + alternativas',
-    metaDescription: 'DeepSeek V3 es un modelo MoE de 671B — inviable en hardware de consumo. Q4_K_M necesita ~400 GB RAM. Alternativas prácticas con cifras exactas para cada nivel de VRAM.',
+    seoTitle: 'DeepSeek V3 en local 2026: 400 GB y alternativas reales',
+    metaDescription: 'DeepSeek V3 es un MoE de 671B, inviable en hardware de consumo: Q4_K_M necesita ~400 GB de RAM. Alternativas prácticas con cifras exactas por nivel de VRAM.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

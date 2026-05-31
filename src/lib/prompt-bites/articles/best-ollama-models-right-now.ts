@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: '¿Los mejores modelos de Ollama ahora mismo?',
     seoTitle: 'Mejores modelos de Ollama 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Mejor modelo general de Ollama: Llama 3 8B Q4. Mejor para código: Qwen 2.5 Coder 14B Q4. Mejor compacto: Phi-4 Mini Q4. Actualizado mensualmente. Última verificación mayo 2026.',
+    metaDescription: 'Mejor modelo general de Ollama: Llama 3 8B Q4. Mejor para código: Qwen 2.5 Coder 14B Q4. Mejor compacto: Phi-4 Mini Q4. Actualizado mensualmente. Mayo 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

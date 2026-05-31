@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Model Comparisons',
     title: 'Qwen 14B vs Llama 3 8B: ¿cuál funciona mejor en local?',
-    seoTitle: 'Qwen 14B vs Llama 3 8B: ¿Cuál elegir? 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Qwen 14B vs Llama 3 8B: ¿Cuál elegir? 2026 | PromptQuorum',
     metaDescription: 'Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 2.5 14B: 10 GB, MMLU 74.8%. Con 12 GB de VRAM, Qwen 14B gana en calidad. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
