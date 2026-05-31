@@ -2498,5 +2498,17 @@ if __name__ == "__main__":
         ],
       },
     },
-  },
+       schema: {
+       '@context': 'https://schema.org',
+       '@type': 'TechArticle',
+       headline: 'Pipeline multimodal de IA local 2026: combina voz, visión y texto sin conexión',
+       description: 'Ejecuta IA de voz + visión + texto localmente en 2026. Combina whisper.cpp, LLaVA 1.6, Ollama y Piper TTS. Orquestador Python completo — sin nube, sin claves de API.',
+       url: 'https://www.promptquorum.com/es/power-local-llm/local-multimodal-pipeline-voice-vision-text?lang=es',
+       inLanguage: 'es',
+       datePublished: '2026-05-24',
+       dateModified: '2026-05-24',
+       author: { '@type': 'Person', name: 'Hans Kuepper' },
+       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+     },
+},
 }

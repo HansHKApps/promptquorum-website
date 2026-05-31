@@ -2718,5 +2718,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Mejores herramientas de programación con IA 2026: Cursor vs Continue.dev',
+      description: 'Compara las mejores herramientas de programación con IA en 2026: GitHub Copilot, Cursor, Cline, Continue.dev y más. Precios, local vs nube, autocompletado y funciones agénticas analizados.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-ai-coding-tools-comparison-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

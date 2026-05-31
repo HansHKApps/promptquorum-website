@@ -2822,5 +2822,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'El mejor NAS y almacenamiento para modelos de IA local 2026: guía de compra',
+      description: 'Comparativa de NAS Synology y QNAP más SSD Samsung y WD para modelos de IA local: redundancia RAID 6, carga rápida de modelos, capacidad y precios de mayo de 2026.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-nas-storage-local-ai-models-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

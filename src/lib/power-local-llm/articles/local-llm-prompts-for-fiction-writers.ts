@@ -3756,5 +3756,17 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         ],
       },
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Prompts para LLM local para escritores de ficción: 15 plantillas y técnicas (2026)',
+      description: '15 plantillas de prompts para escritores de ficción que usan LLM locales. Escritura de escenas, desarrollo de personajes, diálogo, construcción de mundos, transferencia de estilo, revisión y plantillas editoriales — listas para copiar en Ollama y LM Studio.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-prompts-for-fiction-writers?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

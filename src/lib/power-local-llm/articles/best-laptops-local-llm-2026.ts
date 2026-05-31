@@ -2935,5 +2935,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Los mejores portátiles para ejecutar LLMs locales: guía de compra 2026',
+      description: 'Los mejores portátiles para ejecutar LLMs locales en 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, VRAM y velocidades reales en tokens comparadas por rango de precio.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-laptops-local-llm-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

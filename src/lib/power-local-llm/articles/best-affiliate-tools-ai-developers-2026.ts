@@ -1419,5 +1419,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', 'position': 7, 'name': 'Amazon Afiliados', 'description': '1–4% de comisión en componentes de PC y hardware.' },
       ],
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Mejores programas de afiliados para desarrolladores de IA: gana mientras construyes (2026)',
+      description: 'Siete programas de afiliados para desarrolladores de IA: NordVPN (hasta 100%), Coursera (hasta 45%), RunPod (10%), DataCamp (25%), v0/Vercel (30% recurrente), Cursor y Amazon Afiliados (1–4%).',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-affiliate-tools-ai-developers-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

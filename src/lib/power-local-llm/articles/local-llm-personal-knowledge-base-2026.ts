@@ -2777,5 +2777,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Construye una base de conocimiento personal con IA local: guía de stack 2026',
+      description: 'Base de conocimiento personal con IA local 2026: 3 arquitecturas comparadas (Obsidian, AnythingLLM, Python + ChromaDB). Escala a más de 100.000 elementos. Captura, RAG, sincronización, backup.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-personal-knowledge-base-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

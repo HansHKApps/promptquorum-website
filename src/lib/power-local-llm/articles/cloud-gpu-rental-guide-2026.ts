@@ -2587,5 +2587,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Guía de alquiler de GPU en la nube 2026: RunPod vs Lambda vs Vast.ai',
+      description: 'Guía de alquiler GPU cloud 2026: RunPod, Vast.ai, Lambda Labs comparados. Precios por hora para A100, H100, RTX 4090. Cuándo alquilar una GPU es mejor que comprar hardware propio.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/cloud-gpu-rental-guide-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

@@ -2880,5 +2880,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Mejores cursos y certificaciones de IA: guía de compra 2026',
+      description: 'Tres itinerarios de aprendizaje de IA comparados para 2026: cursos gratuitos, cursos estructurados de pago y certificaciones — con una recomendación clara para orientarte, desarrollar profundidad o conseguir una credencial.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-ai-courses-certifications-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

@@ -1994,5 +1994,17 @@ jobs:
         ],
       },
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'LLM Local en CI/CD: Revisión de Código Automatizada Sin Cloud',
+      description: 'Revisión de código con LLM local autoalojado en GitHub Actions: arquitectura, YAML de flujo de trabajo funcional, dimensionamiento de hardware por tamaño de equipo, modelo de seguridad y punto de equilibrio económico frente a GitHub Advanced Security.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-code-review-ci-cd?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

@@ -2323,5 +2323,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
-  },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Mejores LLM locales para escritura creativa 2026: ficción, diálogo y construcción de mundos',
+      description: 'Comparativa de 6 modelos locales para escritura creativa: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 y variantes sin censura. Probados en más de 50 prompts creativos.',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-creative-writing-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

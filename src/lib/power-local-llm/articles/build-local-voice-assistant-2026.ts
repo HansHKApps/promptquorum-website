@@ -2453,5 +2453,17 @@ if __name__ == "__main__":
         ],
       },
     },
-  },
+       schema: {
+       '@context': 'https://schema.org',
+       '@type': 'TechArticle',
+       headline: 'Crea un asistente de voz completamente offline en 2026: Whisper + LLM + Piper (paso a paso)',
+       description: 'whisper.cpp para STT, Ollama + Llama 3.1 8B para razonamiento, Piper TTS para audio. Latencia de 1–2 s en GPU. Orquestador Python + configuración de palabra de activación. 2026.',
+       url: 'https://www.promptquorum.com/es/power-local-llm/build-local-voice-assistant-2026?lang=es',
+       inLanguage: 'es',
+       datePublished: '2026-05-24',
+       dateModified: '2026-05-24',
+       author: { '@type': 'Person', name: 'Hans Kuepper' },
+       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+     },
+},
 }
