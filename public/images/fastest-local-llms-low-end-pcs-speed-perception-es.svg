@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">&#xbf;Qu&#xe9; es realmente "r&#xe1;pido" para los LLMs locales?</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Umbrales de velocidad para uso interactivo. Por debajo de 15 tok/seg → baja de modelo antes de comprar hardware.</text>
+
+  <!-- Speed tier 1: Below 10 -->
+  <rect x="18" y="62" width="764" height="56" rx="6" fill="#FFF3F3" stroke="#EA4335" stroke-width="1.5"/>
+  <text x="38" y="84" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#EA4335">Por debajo de 10 tok/seg → Parece roto</text>
+  <text x="38" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Las palabras aparecen de una en una con pausas notables. Inutilizable para chat interactivo. Soluci&#xf3;n: cambia a un modelo m&#xe1;s peque&#xf1;o o cuant. Q2.</text>
+
+  <!-- Speed tier 2: 15–25 -->
+  <rect x="18" y="130" width="764" height="56" rx="6" fill="#FFFBF0" stroke="#F4B400" stroke-width="1.5"/>
+  <text x="38" y="152" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#F4B400">15–25 tok/seg → Aceptable</text>
+  <text x="38" y="174" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Velocidad legible para la mayor&#xed;a. Buena para preguntas y respuestas, res&#xfa;menes de documentos y ayuda con c&#xf3;digo. Ligero retraso pero manejable.</text>
+
+  <!-- Speed tier 3: 30+ -->
+  <rect x="18" y="198" width="370" height="56" rx="6" fill="#F0FFF4" stroke="#34A853" stroke-width="1.5"/>
+  <text x="38" y="220" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853">30+ tok/seg → Fluido</text>
+  <text x="38" y="242" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Se siente como un asistente real. C&#xf3;modo para todas las tareas interactivas, incluida la revisi&#xf3;n de c&#xf3;digo.</text>
+
+  <!-- Speed tier 4: 60+ -->
+  <rect x="412" y="198" width="370" height="56" rx="6" fill="#F0FFF4" stroke="#34A853" stroke-width="1.5"/>
+  <text x="432" y="220" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853">60+ tok/seg → Instant&#xe1;neo</text>
+  <text x="432" y="242" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">M&#xe1;s r&#xe1;pido de lo que puedes leer. Ideal para autocompletado en tiempo real e iteraci&#xf3;n r&#xe1;pida.</text>
+
+  <!-- Hardware examples -->
+  <text x="400" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ejemplos de hardware:</text>
+  <text x="120" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Solo CPU: 5–15 t/s</text>
+  <text x="280" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">GPU de 4 GB: 20–40 t/s</text>
+  <text x="460" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">GPU de 8 GB: 25–60 t/s</text>
+  <text x="640" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Modelo 3B en GPU: 60–120 t/s</text>
+
+  <!-- Arrows showing speed scale -->
+  <line x1="18" y1="315" x2="782" y2="315" stroke="#E8DEF8" stroke-width="2"/>
+  <text x="18" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">0</text>
+  <text x="140" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">10</text>
+  <text x="290" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#F4B400">25</text>
+  <text x="440" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#34A853">40</text>
+  <text x="590" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#34A853">60</text>
+  <text x="735" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#34A853">80+ tok/seg</text>
+
+  <!-- Footer -->
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/fastest-local-llms-low-end-pcs</text>
+</svg>

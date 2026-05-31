@@ -1,0 +1,130 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Calculadora de requisitos de VRAM
+  </text>
+
+  <!-- Formula Section -->
+  <g id="formula-section">
+    <!-- Box background -->
+    <rect x="40" y="60" width="720" height="100" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Formula title -->
+    <text x="60" y="85" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" font-weight="700">
+      VRAM (GB) = (Tama&#xf1;o del modelo × Bits de cuantizaci&#xf3;n) ÷ 8
+    </text>
+
+    <!-- Formula explanation -->
+    <text x="60" y="115" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" font-weight="600">
+      Tama&#xf1;o del modelo: par&#xe1;metros en miles de millones (7B, 13B, 70B)
+    </text>
+    <text x="60" y="140" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" font-weight="600">
+      Bits de cuantizaci&#xf3;n: FP16 (16 bits), Q8 (8 bits), Q5 (5 bits), Q4 (4 bits)
+    </text>
+  </g>
+
+  <!-- Examples Section -->
+  <g id="examples-section">
+    <text x="60" y="190" font-family="system-ui, sans-serif" font-size="18" fill="#1C1B1F" font-weight="700">
+      Ejemplos:
+    </text>
+
+    <!-- Example 1: 7B Q4 -->
+    <g id="example1">
+      <rect x="55" y="210" width="200" height="80" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+      <text x="70" y="235" font-family="system-ui, sans-serif" font-size="15" fill="#6750A4" font-weight="700">
+        Modelo 7B Q4
+      </text>
+      <text x="70" y="260" font-family="'SF Mono', monospace" font-size="13" fill="#1C1B1F" font-weight="600">
+        (7 × 4) ÷ 8 = 3.5 GB
+      </text>
+      <text x="70" y="282" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+        Ideal para: port&#xe1;tiles
+      </text>
+    </g>
+
+    <!-- Example 2: 13B Q5 -->
+    <g id="example2">
+      <rect x="300" y="210" width="200" height="80" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+      <text x="315" y="235" font-family="system-ui, sans-serif" font-size="15" fill="#6750A4" font-weight="700">
+        Modelo 13B Q5
+      </text>
+      <text x="315" y="260" font-family="'SF Mono', monospace" font-size="13" fill="#1C1B1F" font-weight="600">
+        (13 × 5) ÷ 8 = 8.1 GB
+      </text>
+      <text x="315" y="282" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+        Ideal para: escritorio
+      </text>
+    </g>
+
+    <!-- Example 3: 70B Q4 -->
+    <g id="example3">
+      <rect x="545" y="210" width="215" height="80" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+      <text x="560" y="235" font-family="system-ui, sans-serif" font-size="15" fill="#6750A4" font-weight="700">
+        Modelo 70B Q4
+      </text>
+      <text x="560" y="260" font-family="'SF Mono', monospace" font-size="13" fill="#1C1B1F" font-weight="600">
+        (70 × 4) ÷ 8 = 35 GB
+      </text>
+      <text x="560" y="282" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+        Ideal para: servidor/RTX 4090
+      </text>
+    </g>
+  </g>
+
+  <!-- Quantization Scale -->
+  <g id="quantization-scale">
+    <text x="60" y="325" font-family="system-ui, sans-serif" font-size="18" fill="#1C1B1F" font-weight="700">
+      Equilibrio entre calidad de cuantizaci&#xf3;n y VRAM:
+    </text>
+
+    <!-- FP16 -->
+    <rect x="60" y="350" width="130" height="50" rx="5" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="125" y="373" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      FP16
+    </text>
+    <text x="125" y="392" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      Mejor calidad
+    </text>
+
+    <!-- Q8 -->
+    <rect x="210" y="350" width="130" height="50" rx="5" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="275" y="373" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      Q8
+    </text>
+    <text x="275" y="392" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      99% de calidad
+    </text>
+
+    <!-- Q5 -->
+    <rect x="360" y="350" width="130" height="50" rx="5" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+    <text x="425" y="373" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      Q5
+    </text>
+    <text x="425" y="392" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      95% de calidad
+    </text>
+
+    <!-- Q4 -->
+    <rect x="510" y="350" width="130" height="50" rx="5" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+    <text x="575" y="373" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      Q4
+    </text>
+    <text x="575" y="392" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      90–95% de calidad
+    </text>
+
+    <!-- Note -->
+    <text x="660" y="373" font-family="system-ui, sans-serif" font-size="12" fill="#7D5260" font-weight="600">
+      ← Recomendado
+    </text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="415" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    A&#xf1;ade un 25% de margen para la memoria del sistema, el contexto y la seguridad
+  </text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

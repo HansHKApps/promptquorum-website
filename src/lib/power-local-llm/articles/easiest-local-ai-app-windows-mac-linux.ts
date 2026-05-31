@@ -2030,7 +2030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Comienza con LM Studio a menos que tengas una razón específica para no hacerlo. Tiene la mejor interfaz, la biblioteca de modelos más grande y una ruta de actualización clara (pestaña Local Server) si quieres conectar otras herramientas más adelante. Si prefieres firmemente el software de código abierto, Jan es la opción equivalente.',
           },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-en.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-es.svg',
         imageCaption: 'Comparación de características LM Studio vs Jan vs GPT4All: LM Studio ofrece 50.000+ modelos, API local, multi-chat y la mejor interfaz; Jan es la alternativa de código abierto (AGPLv3); GPT4All es la opción más sencilla de ventana única para principiantes absolutos.',
       },
       lmStudio: {
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'En macOS, LM Studio detecta tu hardware automáticamente y recomienda el mejor nivel de cuantización para tu memoria disponible. Acepta la recomendación a menos que tengas una razón específica para modificarla. En Windows con GPU NVIDIA, LM Studio habilita automáticamente la aceleración por GPU — no necesitas configurar CUDA.',
           },
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-en.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-es.svg',
         imageCaption: 'Configuración de LM Studio en 4 pasos: (1) descarga el instalador desde lmstudio.ai, (2) instala y abre la aplicación, (3) navega por la pestaña Discover y descarga el modelo Q4_K_M (~2,7–5 GB), (4) abre Chat, selecciona el modelo y empieza a chatear — no se requiere terminal.',
       },
       jan: {
@@ -2094,7 +2094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'GPT4All incluye una función "LocalDocs" que te permite agregar una carpeta de documentos (PDFs, archivos de texto) y hacer preguntas sobre ellos. Esta es una versión simplificada de RAG — útil para preguntas básicas sobre documentos sin configurar LlamaIndex o AnythingLLM. La precisión es limitada en comparación con una configuración RAG adecuada, pero no requiere ninguna configuración adicional.',
           },
         ],
-        image: '/images/easiest-local-ai-app-which-app-en.svg',
+        image: '/images/easiest-local-ai-app-which-app-es.svg',
         imageCaption: 'Qué aplicación de IA local instalar: LM Studio para la mejor interfaz y acceso a API (50.000+ modelos); Jan como alternativa de código abierto AGPLv3; GPT4All para la experiencia más sencilla de ventana única para principiantes con ~20 modelos seleccionados. Las tres son gratuitas y funcionan sin cuenta en la nube.',
       },
       firstModel: {
@@ -2115,7 +2115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Comienza con el modelo más pequeño que se ejecute lo suficientemente rápido como para sentirse interactivo (más de 8 tokens por segundo en velocidad de escritura en tiempo real). Un modelo grande y lento es peor de usar que uno pequeño y rápido — la frustración de esperar 10 segundos por oración derrota el propósito. Actualiza a un modelo más grande cuando hayas experimentado los límites del pequeño.',
           },
         ],
-        image: '/images/easiest-local-ai-app-first-model-guide-en.svg',
+        image: '/images/easiest-local-ai-app-first-model-guide-es.svg',
         imageCaption: 'Guía del primer modelo según RAM disponible: ≤8 GB → Phi-4 Mini 3,8B (~2,7 GB, 15–30 tok/s en Apple Silicon); 8–16 GB → Llama 3.2 3B o Qwen3 8B; 16–32 GB → Qwen3 14B (~8,9 GB); 32 GB+ → Llama 3.3 70B (~40 GB).',
       },
       hardware: {
@@ -2146,7 +2146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'No intentes ejecutar un modelo más grande que tu RAM disponible. LM Studio usará el disco como intercambio si el modelo no cabe en RAM, lo que hace que la generación sea tan lenta (~0,5 tokens/seg) que la aplicación parece rota. Siempre comprueba el tamaño del modelo en la pestaña Discover antes de descargarlo y compáralo con tu RAM disponible.',
           },
         ],
-        image: '/images/easiest-local-ai-app-hardware-guide-en.svg',
+        image: '/images/easiest-local-ai-app-hardware-guide-es.svg',
         imageCaption: 'Requisitos de hardware para IA local: Apple Silicon (M1–M5) ejecuta modelos más rápido con memoria unificada; GPU NVIDIA habilita inferencia rápida en Windows/Linux; GPU AMD tiene soporte ROCm en mejora; Intel/AMD solo CPU ejecuta modelos de 3B–7B a 5–15 tok/s en cualquier portátil de 8 GB.',
       },
       commonMistakes: {

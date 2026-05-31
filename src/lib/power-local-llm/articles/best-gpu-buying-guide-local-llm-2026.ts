@@ -3115,7 +3115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ideal para': 'GPU única para 70B en Q4',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-en.svg',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-es.svg',
         imageCaption:
           'Ocho GPUs de consumo para LLMs locales comparadas por VRAM, velocidad de inferencia 7B Q4, consumo energético y precio de mayo de 2026 en cuatro rangos de presupuesto. La VRAM sube de 12 GB (RTX 3060) a 32 GB (RTX 5090); compra por el tamaño de modelo que necesitas antes de optimizar la velocidad.',
       },
@@ -3343,7 +3343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Empieza con el modelo más grande que realmente quieres ejecutar y deja que eso establezca tu rango. Solo entonces mira el precio, la marca y si tu fuente de alimentación puede manejar la tarjeta. Hacerlo en el orden contrario es como la gente gasta de más o compra una tarjeta que no puede ejecutar su modelo.',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-en.svg',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-es.svg',
         imageCaption:
           'Flujo de decisión de cuatro preguntas para elegir una GPU de LLM local: el tamaño del modelo objetivo más grande establece el rango, el techo de presupuesto acota la elección, NVIDIA frente a AMD decide la marca, y el margen de la fuente de alimentación confirma la elección del rango entusiasta.',
       },

@@ -1394,7 +1394,7 @@ schema: {
           id: 'mac-mini-m4',
           title: 'Mac Mini M4 Pro: la opción Apple Silicon',
           content: '**El Mac mini M4 Pro con 64 GB de memoria unificada ejecuta Llama 3.3 70B a 10–15 tok/s por $2,299 — el mini PC más compacto con capacidad para 70B a partir de abril de 2026.** La arquitectura de memoria unificada significa que los 64 GB completos son accesibles tanto para la CPU como para la GPU (Metal). Sin restricciones de VRAM ni cuello de botella PCIe. El Neural Engine de Apple Silicon no se usa para la inferencia LLM — la GPU Metal gestiona todo el trabajo.',
-          image: '/images/best-mini-pcs-local-llm-mac-mini-perf-en.svg',
+          image: '/images/best-mini-pcs-local-llm-mac-mini-perf-es.svg',
           imageCaption: 'Benchmarks de rendimiento del Mac mini M4 Pro: 64 GB de memoria unificada ejecuta Llama 3.3 70B a 10–15 tok/s por $2,299; el M4 de 16 GB no puede cargar modelos 70B.',
           columns: ['Configuración Mac mini', '7B Q4 tok/s', '70B Q4 tok/s', 'Precio'],
           rows: [
@@ -1414,7 +1414,7 @@ schema: {
           id: 'framework-desktop',
           title: 'Framework Desktop: AMD Ryzen AI Max 395+',
           content: '**El Framework Desktop con AMD Ryzen AI Max 395+ y 128 GB de memoria unificada LPDDR5X ejecuta Llama 3.3 70B a 20+ tok/s por $1,999 — lanzado a finales de 2025 y diseñado específicamente para cargas de trabajo de LLMs locales.** El Framework Desktop utiliza la APU Strix Halo con 128 GB de memoria unificada accesible tanto para la CPU como para la GPU integrada Radeon 8060S. Comercializado explícitamente para IA local — una primera vez en hardware PC convencional.',
-          image: '/images/best-mini-pcs-local-llm-framework-comparison-en.svg',
+          image: '/images/best-mini-pcs-local-llm-framework-comparison-es.svg',
           imageCaption: 'Framework Desktop vs Mac mini M4 Pro: Framework ejecuta Llama 3.3 70B a 20–25 tok/s con 128 GB de memoria unificada por $1,999; el Mac mini M4 Pro entrega 10–15 tok/s con 64 GB por $2,299.',
           items: [
             '**CPU:** AMD Ryzen AI Max 395+ (16 núcleos Zen 5)',
@@ -1437,7 +1437,7 @@ schema: {
           id: 'platforms',
           title: '¿Qué plataforma de mini PC ofrece el mejor valor?',
           content: '**El ASUS PN51 con Ryzen 5 y RTX 5060 Ti ofrece el mejor valor x86 tradicional a $900 — rendimiento LLM idéntico al de una torre completa a la mitad del precio.**',
-          image: '/images/best-mini-pcs-local-llm-platform-value-en.svg',
+          image: '/images/best-mini-pcs-local-llm-platform-value-es.svg',
           imageCaption: 'Comparación de valor de plataformas mini PC: el ASUS PN51 con RTX 5060 Ti ofrece el mejor valor a ~$900; el Intel NUC 13 con dock eGPU Thunderbolt cuesta ~$1,300 por calidad de construcción premium.',
           items: [
             '**Intel NUC 13 Pro (Core i7):** CPU compacta y actualizable de 65W. GPU vía dock eGPU Thunderbolt 3. $600 base + $450 RTX 5060 Ti + $250 dock = $1,300. Mejor calidad de construcción.',
@@ -1450,7 +1450,7 @@ schema: {
           id: 'gpu-options',
           title: '¿Qué GPU cabe en un case de mini PC?',
           content: '**La RTX 5060 Ti de 16 GB se convirtió en la opción ideal para Mini-ITX a finales de 2025 — cabe en todos los cases a 217mm, ejecuta 13B en Q4 con margen de VRAM, por menos de $500.** La RTX 5070 funciona en la mayoría de los cases pero mide — algunas variantes superan los 220mm.',
-          image: '/images/best-mini-pcs-local-llm-gpu-compatibility-en.svg',
+          image: '/images/best-mini-pcs-local-llm-gpu-compatibility-es.svg',
           imageCaption: 'Tabla de compatibilidad de GPU para cases Mini-ITX: RTX 5060 Ti 16 GB cabe en todos los cases a 217mm por $450–500; RTX 5070 y RTX 4070 requieren medir la variante.',
           columns: ['GPU', 'VRAM', 'Modelo máximo', 'Cabe en Mini-ITX', 'Precio (2026)'],
           rows: [
@@ -1465,7 +1465,7 @@ schema: {
           id: 'cooling',
           title: '¿Cómo gestionar la refrigeración en un case de mini PC compacto?',
           content: '**Espera 60–70°C en la GPU y 50–60 dB de ruido de ventilador con carga completa de inferencia LLM. El undervolting reduce las temperaturas 5–10°C sin pérdida de velocidad medible.**',
-          image: '/images/best-mini-pcs-local-llm-cooling-guide-en.svg',
+          image: '/images/best-mini-pcs-local-llm-cooling-guide-es.svg',
           imageCaption: 'Guía de refrigeración para mini PC: 4 pasos — monitorear temperaturas GPU con GPU-Z/HWiNFO64, undervolting con MSI Afterburner (–50 mV ahorra 5–10°C), reemplazar ventiladores con Noctua/BeQuiet! ($50–80), optimizar el flujo de aire del case.',
           items: [
             '**Temperaturas:** GPU 60–70°C, CPU 55–65°C bajo inferencia sostenida. No es peligroso pero los ventiladores se aceleran.',

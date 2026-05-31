@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <text x="400" y="36" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Elige tu GPU en 4 preguntas</text>
+
+  <!-- Arrows between steps -->
+  <text x="205" y="106" font-size="22" fill="#6750A4" text-anchor="middle">&#8594;</text>
+  <text x="390" y="106" font-size="22" fill="#6750A4" text-anchor="middle">&#8594;</text>
+  <text x="575" y="106" font-size="22" fill="#6750A4" text-anchor="middle">&#8594;</text>
+
+  <!-- Step 1 -->
+  <circle cx="120" cy="98" r="26" fill="#6750A4"/>
+  <text x="120" y="106" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="120" y="152" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">&#xbf;Modelo m&#xe1;s grande?</text>
+  <text x="120" y="176" font-size="11" fill="#49454F" text-anchor="middle">7B &#8594; Gama econ&#xf3;mica</text>
+  <text x="120" y="193" font-size="11" fill="#49454F" text-anchor="middle">14B &#8594; Gama media</text>
+  <text x="120" y="210" font-size="11" fill="#49454F" text-anchor="middle">22B &#8594; Gama alta</text>
+  <text x="120" y="227" font-size="11" fill="#49454F" text-anchor="middle">33B &#8594; 4090 / 70B &#8594; 5090</text>
+
+  <!-- Step 2 -->
+  <circle cx="305" cy="98" r="26" fill="#6750A4"/>
+  <text x="305" y="106" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="305" y="152" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">&#xbf;Presupuesto m&#xe1;ximo?</text>
+  <text x="305" y="176" font-size="11" fill="#49454F" text-anchor="middle">Menos de $250: RTX 3060</text>
+  <text x="305" y="193" font-size="11" fill="#49454F" text-anchor="middle">Menos de $520: 4060 Ti 16GB</text>
+  <text x="305" y="210" font-size="11" fill="#49454F" text-anchor="middle">~$1,150: RTX 4080 Super</text>
+  <text x="305" y="227" font-size="11" fill="#49454F" text-anchor="middle">$2,480+: 4090 o 5090</text>
+
+  <!-- Step 3 -->
+  <circle cx="490" cy="98" r="26" fill="#6750A4"/>
+  <text x="490" y="106" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="490" y="152" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">&#xbf;NVIDIA o AMD?</text>
+  <text x="490" y="176" font-size="11" fill="#49454F" text-anchor="middle">Por defecto, NVIDIA —</text>
+  <text x="490" y="193" font-size="11" fill="#49454F" text-anchor="middle">CUDA funciona al instante.</text>
+  <text x="490" y="210" font-size="11" fill="#49454F" text-anchor="middle">Elige AMD solo si aceptas</text>
+  <text x="490" y="227" font-size="11" fill="#49454F" text-anchor="middle">el tiempo de configurar ROCm.</text>
+
+  <!-- Step 4 -->
+  <circle cx="675" cy="98" r="26" fill="#6750A4"/>
+  <text x="675" y="106" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="675" y="152" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">&#xbf;Margen de la fuente?</text>
+  <text x="675" y="176" font-size="11" fill="#49454F" text-anchor="middle">Gama media y superior:</text>
+  <text x="675" y="193" font-size="11" fill="#49454F" text-anchor="middle">tarjetas de 285–575 W.</text>
+  <text x="675" y="210" font-size="11" fill="#49454F" text-anchor="middle">La RTX 5090 necesita una</text>
+  <text x="675" y="227" font-size="11" fill="#49454F" text-anchor="middle">fuente de 850–1000 W.</text>
+
+  <line x1="18" y1="266" x2="782" y2="266" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="296" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Si tienes dudas: compra la tarjeta m&#xe1;s peque&#xf1;a que admita tu modelo objetivo.</text>
+  <text x="400" y="320" font-size="11" fill="#79747E" text-anchor="middle">La VRAM decide qu&#xe9; modelos funcionan; el resto es optimizaci&#xf3;n. Precios: instant&#xe1;nea de EE.&#xa0;UU. de mayo de 2026.</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

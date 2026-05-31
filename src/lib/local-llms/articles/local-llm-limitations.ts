@@ -711,7 +711,7 @@ schema: {
             'La brecha de calidad depende de la tarea. Para resumen, Q&A simple, traducción y explicación de código, un modelo 7B produce resultados difíciles de distinguir de GPT-4o en evaluaciones ciegas. La brecha es mayor en: razonamiento complejo de múltiples pasos, matemáticas avanzadas, escritura larga y matizada, y tareas que requieren conocimiento actual del mundo.',
             'Las limitaciones de los modelos locales se superponen con las restricciones más amplias de los LLMs — las alucinaciones, los fallos de razonamiento y los cortes de conocimiento afectan a todos los modelos independientemente del despliegue. Para el panorama completo de lo que los LLMs aún no pueden hacer de forma fiable, consulta [Limitaciones de la IA: lo que los LLMs no pueden hacer](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).',
           ],
-          image: '/images/local-llm-limitations-quality-benchmarks-en.svg',
+          image: '/images/local-llm-limitations-quality-benchmarks-es.svg',
           imageCaption: 'Brecha de calidad: puntuaciones en benchmarks — Los modelos locales 7B puntúan 10–20 puntos menos en razonamiento y codificación que GPT-4o',
           rows: [
             { 'Tipo de tarea': 'Q&A simple', 'Local 7B': 'Adecuado', 'Local 70B': 'Bueno', 'GPT-4o': 'Excelente' },
@@ -748,7 +748,7 @@ schema: {
             'GPT-4o genera aproximadamente 80-150 tokens/seg bajo carga típica. Un modelo 7B local en una CPU moderna de laptop genera 10-25 tokens/seg — 4-10× más lento. En una NVIDIA RTX 4090 (la GPU de consumo más rápida), el mismo modelo 7B alcanza 130-160 tokens/seg — comparable a la velocidad de la nube, pero el hardware cuesta $1,600+.',
             'Para uso de chat interactivo, la diferencia de velocidad es notable pero tolerable a 20+ tok/seg. Para procesamiento por lotes (resumir cientos de documentos), la brecha de velocidad se convierte en una restricción significativa.',
           ],
-          image: '/images/local-llm-limitations-speed-comparison-en.svg',
+          image: '/images/local-llm-limitations-speed-comparison-es.svg',
           imageCaption: 'Velocidad: LLMs locales vs APIs en la nube — La CPU local produce 4–10× menos tokens por segundo que las APIs en la nube',
         },
         whenSpeedMatters: {
@@ -775,7 +775,7 @@ schema: {
             '**Ejecutar un modelo local capaz (13B+) requiere hardware que no todos los usuarios tienen.** El mínimo para una experiencia local genuinamente útil — igualando la calidad de GPT-3.5 — es 16 GB de RAM y una CPU moderna o chip Apple Silicon. Esto excluye a aproximadamente la mitad de los laptops de consumo actualmente en uso. Para un desglose detallado y cálculos de VRAM, consulta la [Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026).',
             'Igualar la calidad de los modelos de última generación localmente requiere un modelo 70B, que demanda 40-48 GB de RAM — solo disponible en estaciones de trabajo de alta gama o Mac Studio / Mac Pro con 64+ GB de memoria unificada. Si tu hardware es limitado, las APIs en la nube ofrecen mejor calidad a un menor costo de configuración.',
           ],
-          image: '/images/local-llm-limitations-hardware-requirements-en.svg',
+          image: '/images/local-llm-limitations-hardware-requirements-es.svg',
           imageCaption: 'Requisitos de hardware por tamaño de modelo — 16 GB de RAM mínimo para modelos 7B utilizables · 40+ GB para modelos 70B de calidad de última generación',
           rows: [
             { 'Hardware': 'Laptop básico (8 GB RAM, solo CPU)', 'Modelo máx. útil': '7B a Q4_K_M', 'Equivalente de calidad': 'Por debajo de GPT-3.5' },
@@ -838,7 +838,7 @@ schema: {
             'El mantenimiento añade complejidad continua: los nuevos lanzamientos de modelos deben descargarse manualmente, las herramientas de inferencia requieren actualizaciones y surgen problemas de compatibilidad de hardware con las actualizaciones del sistema operativo. Para un usuario que quiere centrarse en usar IA en lugar de gestionar infraestructura, las APIs en la nube tienen una carga operativa dramáticamente menor.',
             'Consulta [cómo instalar Ollama](/es/local-llms/run-first-local-llm) para instrucciones paso a paso y [Solución de problemas de LLM local](/es/local-llms/troubleshooting-local-llm-setup) para correcciones de los errores más comunes.',
           ],
-          image: '/images/local-llm-limitations-setup-time-en.svg',
+          image: '/images/local-llm-limitations-setup-time-es.svg',
           imageCaption: 'Tiempo de configuración: Local vs Nube — La configuración local toma 20–40 minutos; las APIs en la nube están listas en 5 minutos',
         },
         whenSetupMatters: {

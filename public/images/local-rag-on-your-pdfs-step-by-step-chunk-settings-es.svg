@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="27" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ajustes de fragmentos: predeterminado vs recomendado (Paso 7)</text>
+
+  <!-- Left panel: Default (red) -->
+  <rect x="18" y="42" width="367" height="240" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="18" y="42" width="367" height="4" rx="0" fill="#EA4335"/>
+  <text x="201" y="68" font-size="14" font-weight="700" fill="#EA4335" text-anchor="middle">Predeterminado — Recuperaci&#xf3;n deficiente</text>
+  <text x="201" y="86" font-size="10" fill="#79747E" text-anchor="middle">Ajustes de f&#xe1;brica de AnythingLLM</text>
+
+  <text x="36" y="115" font-size="12" font-weight="700" fill="#1C1B1F">Tama&#xf1;o de fragmento</text>
+  <text x="260" y="115" font-size="22" font-weight="700" fill="#EA4335" text-anchor="middle">512</text>
+  <text x="320" y="115" font-size="11" fill="#49454F">tokens</text>
+
+  <text x="36" y="147" font-size="12" font-weight="700" fill="#1C1B1F">Solapamiento</text>
+  <text x="260" y="147" font-size="22" font-weight="700" fill="#EA4335" text-anchor="middle">0</text>
+  <text x="320" y="147" font-size="11" fill="#49454F">tokens</text>
+
+  <text x="36" y="179" font-size="12" font-weight="700" fill="#1C1B1F">Top-K</text>
+  <text x="260" y="179" font-size="22" font-weight="700" fill="#EA4335" text-anchor="middle">4</text>
+  <text x="320" y="179" font-size="11" fill="#49454F">fragmentos</text>
+
+  <line x1="36" y1="195" x2="367" y2="195" stroke="#F7F2FA" stroke-width="1.5"/>
+
+  <text x="201" y="218" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">Problema: las frases cortadas en los l&#xed;mites</text>
+  <text x="201" y="234" font-size="11" font-weight="700" fill="#EA4335" text-anchor="middle">de los fragmentos se descartan en silencio</text>
+  <text x="201" y="256" font-size="10" fill="#79747E" text-anchor="middle">Resultado: la recuperaci&#xf3;n pierde contexto relevante</text>
+  <text x="201" y="272" font-size="10" fill="#79747E" text-anchor="middle">Los PDF rara vez encajan en ventanas de 512 tokens</text>
+
+  <!-- Right panel: Recommended (green) -->
+  <rect x="415" y="42" width="367" height="240" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="415" y="42" width="367" height="4" rx="0" fill="#34A853"/>
+  <text x="598" y="68" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Recomendado — Mejor recuperaci&#xf3;n</text>
+  <text x="598" y="86" font-size="10" fill="#79747E" text-anchor="middle">Ajustes del espacio de trabajo → Base de datos vectorial</text>
+
+  <text x="433" y="115" font-size="12" font-weight="700" fill="#1C1B1F">Tama&#xf1;o de fragmento</text>
+  <text x="657" y="115" font-size="22" font-weight="700" fill="#34A853" text-anchor="middle">1000</text>
+  <text x="717" y="115" font-size="11" fill="#49454F">tokens</text>
+
+  <text x="433" y="147" font-size="12" font-weight="700" fill="#1C1B1F">Solapamiento</text>
+  <text x="657" y="147" font-size="22" font-weight="700" fill="#34A853" text-anchor="middle">200</text>
+  <text x="717" y="147" font-size="11" fill="#49454F">tokens</text>
+
+  <text x="433" y="179" font-size="12" font-weight="700" fill="#1C1B1F">Top-K</text>
+  <text x="657" y="179" font-size="22" font-weight="700" fill="#34A853" text-anchor="middle">4–6</text>
+  <text x="717" y="179" font-size="11" fill="#49454F">fragmentos</text>
+
+  <line x1="433" y1="195" x2="775" y2="195" stroke="#F7F2FA" stroke-width="1.5"/>
+
+  <text x="598" y="218" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">Resultado: las frases que cruzan l&#xed;mites de</text>
+  <text x="598" y="234" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">fragmentos aparecen en la ventana de solapamiento</text>
+  <text x="598" y="256" font-size="10" fill="#79747E" text-anchor="middle">Tiempo de re-embebido: ~5 s para 20 PDF / 3000 fragmentos</text>
+  <text x="598" y="272" font-size="10" fill="#79747E" text-anchor="middle">La mayor palanca de calidad de recuperaci&#xf3;n en AnythingLLM</text>
+
+  <!-- Footer -->
+  <line x1="18" y1="295" x2="782" y2="295" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="314" font-size="11" fill="#79747E" text-anchor="middle">D&#xf3;nde cambiarlo: Ajustes del espacio de trabajo → Base de datos vectorial → guardar → re-embeber cuando se solicite</text>
+  <text x="400" y="332" font-size="10" fill="#79747E" text-anchor="middle">Documentos cortos (memos de 1 p&#xe1;gina, c&#xf3;digo): prueba 256/64 si 1000/200 empeora la recuperaci&#xf3;n</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

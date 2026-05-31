@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="380" fill="#FFFFFF"/>
+<text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama vs LM Studio vs Jan AI vs GPT4All &#x2014; Comparaci&#xf3;n completa</text>
+<line x1="18" y1="40" x2="782" y2="40" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="18" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Factor</text>
+<text x="200" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Ollama</text>
+<text x="370" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio</text>
+<text x="540" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jan AI</text>
+<text x="700" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">GPT4All</text>
+<line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="18" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Ideal para</text>
+<text x="200" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Desarrolladores</text>
+<text x="370" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Principiantes</text>
+<text x="540" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Usuarios de privacidad</text>
+<text x="700" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">No t&#xe9;cnicos</text>
+<line x1="18" y1="108" x2="782" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Interfaz</text>
+<text x="200" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Terminal + API</text>
+<text x="370" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">GUI de escritorio</text>
+<text x="540" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">GUI de escritorio</text>
+<text x="700" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">GUI de escritorio</text>
+<line x1="18" y1="178" x2="782" y2="178" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Modelos</text>
+<text x="200" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">~200</text>
+<text x="370" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">HF (todos GGUF)</text>
+<text x="540" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">~50 + HF</text>
+<text x="700" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">~50</text>
+<line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Puerto de API</text>
+<text x="200" y="200" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">11434</text>
+<text x="370" y="200" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#49454F" text-anchor="middle">1234</text>
+<text x="540" y="200" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#49454F" text-anchor="middle">1337</text>
+<text x="700" y="200" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#49454F" text-anchor="middle">4891*</text>
+<line x1="18" y1="318" x2="782" y2="318" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Telemetr&#xed;a</text>
+<text x="200" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Ninguna</text>
+<text x="370" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#EA4335" text-anchor="middle">An&#xf3;n. (activa)</text>
+<text x="540" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Ninguna</text>
+<text x="700" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#F4B400" text-anchor="middle">Opcional</text>
+<line x1="18" y1="388" x2="782" y2="388" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">C&#xf3;digo abierto</text>
+<text x="200" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">S&#xed; (MIT)</text>
+<text x="370" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#EA4335" text-anchor="middle">No</text>
+<text x="540" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">S&#xed; (MIT)</text>
+<text x="700" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">S&#xed; (MIT)</text>
+<line x1="18" y1="9999" x2="782" y2="9999" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#79747E" text-anchor="start">* API de GPT4All opcional. LM Studio: desactiva la anal&#xed;tica en Settings &#x2192; Privacy. Abril de 2026.</text>
+<text x="792" y="375" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

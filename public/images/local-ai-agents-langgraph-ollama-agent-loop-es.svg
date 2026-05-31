@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Bucle del agente: Observar-Razonar-Actuar
+  </text>
+
+  <!-- Step 1: Observe -->
+  <circle cx="80" cy="120" r="22" fill="#6750A4"/>
+  <text x="80" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="80" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Observar</text>
+  <text x="80" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Contexto y</text>
+  <text x="80" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">estado</text>
+
+  <!-- Arrow 1 -->
+  <text x="140" y="128" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 2: Reason -->
+  <circle cx="240" cy="120" r="22" fill="#6750A4"/>
+  <text x="240" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="240" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Razonar</text>
+  <text x="240" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">El LLM</text>
+  <text x="240" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">decide</text>
+
+  <!-- Arrow 2 -->
+  <text x="300" y="128" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 3: Act -->
+  <circle cx="400" cy="120" r="22" fill="#6750A4"/>
+  <text x="400" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="400" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Actuar</text>
+  <text x="400" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Llamar</text>
+  <text x="400" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">herramienta</text>
+
+  <!-- Arrow 3 -->
+  <text x="460" y="128" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 4: Observe -->
+  <circle cx="560" cy="120" r="22" fill="#6750A4"/>
+  <text x="560" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="560" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Observar</text>
+  <text x="560" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Resultado</text>
+  <text x="560" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">herramienta</text>
+
+  <!-- Arrow 4 -->
+  <text x="620" y="128" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 5: Decide -->
+  <circle cx="720" cy="120" r="22" fill="#6750A4"/>
+  <text x="720" y="128" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="720" y="165" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Decidir</text>
+  <text x="720" y="182" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">&#xbf;Listo?</text>
+  <text x="720" y="194" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Repetir/fin</text>
+
+  <!-- Loop-back arrow -->
+  <path d="M 700 142 Q 700 260 80 260 Q 80 142 100 135" stroke="#6750A4" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+  <text x="400" y="280" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">Repetir hasta completar la tarea</text>
+
+  <!-- Footer note -->
+  <text x="400" y="320" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+    Los agentes locales ejecutan este bucle en local: sin llamadas a API, control total de los datos, pero m&#xe1;s lento que la nube
+  </text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

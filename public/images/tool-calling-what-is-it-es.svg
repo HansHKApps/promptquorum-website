@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="310" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="40" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">C&#xf3;mo funciona la llamada a herramientas &#x2014; del prompt a la ejecuci&#xf3;n</text>
+  <!-- Circles -->
+  <circle cx="80" cy="90" r="22" fill="#6750A4"/>
+  <text x="80" y="97" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <circle cx="220" cy="90" r="22" fill="#6750A4"/>
+  <text x="220" y="97" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <circle cx="360" cy="90" r="22" fill="#6750A4"/>
+  <text x="360" y="97" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <circle cx="500" cy="90" r="22" fill="#6750A4"/>
+  <text x="500" y="97" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <circle cx="640" cy="90" r="22" fill="#6750A4"/>
+  <text x="640" y="97" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <!-- Arrows -->
+  <text x="118" y="98" font-size="20" fill="#6750A4" text-anchor="middle">&#x2192;</text>
+  <text x="258" y="98" font-size="20" fill="#6750A4" text-anchor="middle">&#x2192;</text>
+  <text x="398" y="98" font-size="20" fill="#6750A4" text-anchor="middle">&#x2192;</text>
+  <text x="538" y="98" font-size="20" fill="#6750A4" text-anchor="middle">&#x2192;</text>
+  <!-- Step labels -->
+  <text x="80" y="130" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Prompt del usuario</text>
+  <text x="220" y="130" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Lee los esquemas</text>
+  <text x="360" y="130" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Emite JSON</text>
+  <text x="500" y="130" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Valida</text>
+  <text x="640" y="130" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ejecuta la herramienta</text>
+  <!-- Subtexts -->
+  <text x="80" y="148" font-size="10" fill="#49454F" text-anchor="middle">cualquier descripci&#xf3;n de tarea</text>
+  <text x="220" y="148" font-size="10" fill="#49454F" text-anchor="middle">el LLM ve las definiciones</text>
+  <text x="220" y="162" font-size="10" fill="#49454F" text-anchor="middle">de herramientas disponibles</text>
+  <text x="360" y="148" font-size="10" fill="#49454F" text-anchor="middle">{tool, arguments}</text>
+  <text x="360" y="162" font-size="10" fill="#49454F" text-anchor="middle">salida estructurada</text>
+  <text x="500" y="148" font-size="10" fill="#49454F" text-anchor="middle">el entorno comprueba</text>
+  <text x="500" y="162" font-size="10" fill="#49454F" text-anchor="middle">la coincidencia del esquema</text>
+  <text x="640" y="148" font-size="10" fill="#49454F" text-anchor="middle">sistema de archivos, BD,</text>
+  <text x="640" y="162" font-size="10" fill="#49454F" text-anchor="middle">navegador, API&#x2026;</text>
+  <!-- Footer -->
+  <text x="400" y="240" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">El mismo modelo maneja OpenAI JSON &#xb7; Cline XML &#xb7; MCP JSON-RPC &#xb7; Aider SEARCH/REPLACE &#x2014; el formato es una decisi&#xf3;n del entorno</text>
+<text x="792" y="305" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

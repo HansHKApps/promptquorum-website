@@ -1661,7 +1661,7 @@ schema: {
         },
         topFrontends: {
           title: 'Los 8 mejores frontends para LLMs locales: comparativa de características',
-          image: '/images/frontend-selection-guide-en.svg',
+          image: '/images/frontend-selection-guide-es.svg',
           imageCaption: 'Elige tu frontend para LLM local según el caso de uso: todas las opciones se conectan a la misma API de Ollama.',
           rows: [
             { 'Frontend': 'Open WebUI', 'Tipo': 'App web (Docker)', 'Ideal para': 'Funciones avanzadas, RAG, equipos', 'Tiempo de config.': '5 min (con Docker)', 'RAM necesaria': '12 GB+', 'Código abierto': 'Sí' },
@@ -1677,7 +1677,7 @@ schema: {
         },
         openWebUI: {
           title: '¿Por qué Open WebUI es el frontend más popular?',
-          image: '/images/open-webui-architecture-en.svg',
+          image: '/images/open-webui-architecture-es.svg',
           imageCaption: 'Open WebUI se sitúa entre tu navegador y Ollama, habilitando acceso multi-usuario, RAG y funciones multimodales mediante Docker.',
           content: [
             '**Open WebUI es el frontend para LLMs locales más descargado en GitHub con más de 25.000 estrellas: integra RAG, multimodal, búsqueda web y colaboración multi-usuario en un único contenedor Docker.** Funciona con Ollama, LM Studio o cualquier API compatible con OpenAI.',

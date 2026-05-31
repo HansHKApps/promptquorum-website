@@ -427,7 +427,7 @@ schema: {
             { 'Hardware': 'Escritorio RTX 5090', 'Modelo': 'Llama 4 Scout', 'Velocidad': '120-180 tok/seg (est.)', 'Throttle': 'Ninguno (24/7)' },
           ],
           columns: ['Hardware', 'Modelo', 'Velocidad', 'Throttle'],
-          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-en.svg',
+          image: '/images/laptop-vs-desktop-local-llm-performance-comparison-es.svg',
           imageCaption: 'Rendimiento laptop vs escritorio: MacBook Pro M4 Max alcanza 35 tok/seg antes del throttling, mientras el escritorio RTX 4070 Ti sostiene 80 tok/seg 24/7 — una diferencia de velocidad de 2.3×. Eficiencia de costo: $140 por tok/seg (laptop) vs $19 por tok/seg (escritorio).',
         },
         thermals: {
@@ -438,7 +438,7 @@ schema: {
             'Laptops gaming: Mejor refrigeración, pero aún hacen throttling después de 30-45 minutos de carga sostenida.',
             'Solución: Usa el laptop para sesiones cortas (chat, experimentación), no para servicios 24/7. El M5 Max amplía la ventana a 15-18 min, una mejora modesta sobre el M4 Max (18-22 min sostenido, pero mayor velocidad de pico).',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-thermal-throttling-en.svg',
+          image: '/images/laptop-vs-desktop-local-llm-thermal-throttling-es.svg',
           imageCaption: 'Throttling térmico a lo largo del tiempo: MacBook Pro M4 Max cae de 35 tok/seg a 18–22 tok/seg después de 18 minutos bajo carga. El escritorio RTX 4070 Ti mantiene 80 tok/seg sostenidos indefinidamente sin throttling.',
         },
         cost: {
@@ -452,7 +452,7 @@ schema: {
             { 'Opción': 'Escritorio RTX 5090 (32 GB)', 'Costo': '$2,500-3,000', 'Velocidad LLM': '120-180 tok/seg (est.)', 'Costo/tok/seg': '$17-25' },
           ],
           columns: ['Opción', 'Costo', 'Velocidad LLM', 'Costo/tok/seg'],
-          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-en.svg',
+          image: '/images/laptop-vs-desktop-local-llm-cost-efficiency-es.svg',
           imageCaption: 'Comparación de costo por token/seg: MacBook Pro M4 Max (~$100/tok/seg) es 5.3× más caro que el escritorio RTX 4070 Ti ($19/tok/seg). El escritorio RTX 4090 ($22/tok/seg) escala a modelos 70B sin throttle.',
         },
         whenToChoose: {
@@ -475,7 +475,7 @@ schema: {
             'Priorizas la eficiencia de costo.',
             'Quieres evitar el throttling térmico.',
           ],
-          image: '/images/laptop-vs-desktop-local-llm-decision-framework-en.svg',
+          image: '/images/laptop-vs-desktop-local-llm-decision-framework-es.svg',
           imageCaption: 'Marco de decisión: Elige laptop si necesitas portabilidad diaria (15-25 tok/seg, $140/tok/seg). Elige escritorio si necesitas modelos 70B, velocidad sostenida (80+ tok/seg) o eficiencia de costo ($19/tok/seg).',
         },
         buyingGuide: {

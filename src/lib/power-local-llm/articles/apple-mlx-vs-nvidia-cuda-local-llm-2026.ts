@@ -2328,7 +2328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       architecture: {
         id: 'architecture',
         title: 'Diferencias de arquitectura que lo cambian todo',
-        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-en.svg',
+        image: '/images/apple-mlx-vs-nvidia-cuda-architecture-es.svg',
         imageCaption: 'Memoria unificada de Apple Silicon vs GPU discreta NVIDIA: CPU, GPU y Neural Engine comparten 128GB a 614 GB/s vs 24GB GDDR6X dedicados a 1,008 GB/s, separados por el bus PCIe.',
         content: 'Apple Silicon y las GPU NVIDIA están construidas en torno a arquitecturas de memoria fundamentalmente diferentes. Esta única diferencia — memoria compartida frente a dedicada — determina qué modelos puedes correr y a qué velocidad.',
         snippetBlocks: [
@@ -2380,7 +2380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Benchmarks de rendimiento: tokens por segundo por modelo',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-en.svg',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-es.svg',
         imageCaption: 'Comparativa de velocidad de inferencia: RTX 4090 entrega ~150 tok/s en Llama 3 8B pero no puede cargar el 70B; M5 Max 128GB entrega ~75 tok/s en 8B y ~18 tok/s en 70B.',
         content: 'La velocidad de inferencia se mide en tokens por segundo (tok/s) — cuanto mayor, mejor para uso interactivo. NVIDIA domina en velocidad con modelos pequeños; Apple gana cuando los modelos superan la [capacidad de VRAM](/es/local-llms/how-much-vram-local-llm).',
         snippetBlocks: [
@@ -2407,7 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: 'Comparativa de costos: costo total del sistema por tamaño de modelo',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-en.svg',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-es.svg',
         imageCaption: 'Costo total del sistema para correr modelos de 7B a 120B+ en local: NVIDIA gana por debajo de $1,500; Apple gana en el nivel de 70B ($5,999 dispositivo único vs más de $7,000 sistema multi-GPU).',
         content: 'El costo total del sistema incluye la tarjeta GPU más el PC para NVIDIA; solo el Mac para Apple. El punto de cruce donde Apple resulta más barata es el nivel de los modelos de 70B.',
         snippetBlocks: [

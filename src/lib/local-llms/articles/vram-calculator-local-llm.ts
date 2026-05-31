@@ -677,7 +677,7 @@ schema: {
         formula: {
           id: 'vram-formula',
           title: '¿Cuál es la fórmula de VRAM?',
-          image: '/images/vram-calculator-local-llm-formula-en.svg',
+          image: '/images/vram-calculator-local-llm-formula-es.svg',
           imageCaption: 'Fórmula VRAM con 3 ejemplos de cálculo: modelo de 7B en Q4 = 3,5 GB, 13B en Q5 = 8,1 GB, 70B en Q8 = 70 GB. Añade siempre un 25–40 % de margen para contexto, procesamiento por lotes y sobrecarga del sistema.',
           content: [
             'La fórmula para el requisito de VRAM es engañosamente sencilla:',
@@ -695,7 +695,7 @@ schema: {
         quantization: {
           id: 'quantization-levels',
           title: '¿Qué significan los niveles de cuantización?',
-          image: '/images/vram-calculator-local-llm-quant-levels-en.svg',
+          image: '/images/vram-calculator-local-llm-quant-levels-es.svg',
           imageCaption: 'Comparación de niveles de cuantización: FP16 (100 % de calidad), Q8 (99 %), Q5 (95 %, recomendado), Q4 (90–95 %), Q3 (80–85 %), Q2 (70 %). Q5 reduce un modelo de 7B de 14 GB a 4,4 GB con solo un 5 % de pérdida de calidad.',
           content: '🔍 **Idea clave:** La cuantización intercambia tamaño de archivo por calidad. Q5 es el punto óptimo (95 % de calidad, 68 % más pequeño). Q4 es aceptable para la mayoría de los usuarios. Q3 y niveles inferiores son solo para dispositivos edge o cuando la VRAM es críticamente limitada.',
           rows: [
@@ -712,7 +712,7 @@ schema: {
         quickRef: {
           id: 'quick-reference',
           title: 'Tabla de referencia rápida: VRAM por modelo y cuantización',
-          image: '/images/vram-calculator-local-llm-quick-ref-en.svg',
+          image: '/images/vram-calculator-local-llm-quick-ref-es.svg',
           imageCaption: 'Matriz de referencia rápida de VRAM: modelos de 3B a 70B en FP16, Q8, Q5 y Q4. Verde = cabe en GPU de 12 GB. Ámbar = requiere 16–24 GB. Rojo = requiere 40+ GB o múltiples GPU.',
           rows: [
             { 'Modelo': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1,9 GB', 'Q4': '1,5 GB' },
@@ -726,7 +726,7 @@ schema: {
         realWorld: {
           id: 'real-world-examples',
           title: 'Ejemplos del mundo real',
-          image: '/images/vram-calculator-local-llm-gpu-scenarios-en.svg',
+          image: '/images/vram-calculator-local-llm-gpu-scenarios-es.svg',
           imageCaption: 'Escenarios GPU del mundo real: RTX 4090 (24 GB), RTX 4080 (16 GB), RTX 4070 Ti (12 GB), M5 Max Mac (36 GB) y RTX 3060 (12 GB): qué modelos Llama 3.1 puede ejecutar cada uno a varios niveles de cuantización.',
           content: [
             'Cálculos prácticos de VRAM para escenarios habituales:',
@@ -741,7 +741,7 @@ schema: {
         overhead: {
           id: 'hidden-overhead',
           title: '¿Qué sobrecarga oculta de VRAM debes contemplar?',
-          image: '/images/vram-calculator-local-llm-overhead-en.svg',
+          image: '/images/vram-calculator-local-llm-overhead-es.svg',
           imageCaption: 'Desglose de la sobrecarga oculta de VRAM: ventana de contexto (2–3 GB para 4k tokens), procesamiento por lotes (×4 para batch=4), sobrecarga del sistema (500 MB–1 GB) y margen de seguridad total del 25–40 %.',
           content: [
             '**La fórmula calcula solo los pesos del modelo.** El uso real de VRAM será mayor por varios factores. Presupuesta un 25–40 % adicional sobre la cantidad calculada.',
@@ -768,7 +768,7 @@ schema: {
         accuracy: {
           id: 'accuracy',
           title: '¿Qué tan precisa es la fórmula?',
-          image: '/images/vram-calculator-local-llm-accuracy-en.svg',
+          image: '/images/vram-calculator-local-llm-accuracy-es.svg',
           imageCaption: 'Precisión de la fórmula VRAM ±10 %: variación causada por el formato de cuantización (GGUF vs GPTQ vs AWQ), arquitectura del modelo (Transformer vs MoE) y motor de inferencia (vLLM vs llama.cpp vs Ollama).',
           content: [
             '**La fórmula es precisa dentro de ±10 % para la mayoría de los casos.** El uso real de VRAM varía según la implementación, la arquitectura del modelo y las optimizaciones del motor de inferencia.',
@@ -779,7 +779,7 @@ schema: {
         commonMistakes: {
           id: 'common-mistakes',
           title: 'Errores comunes en el cálculo de VRAM',
-          image: '/images/vram-calculator-local-llm-mistakes-en.svg',
+          image: '/images/vram-calculator-local-llm-mistakes-es.svg',
           imageCaption: '4 errores comunes de VRAM: olvidar la sobrecarga de contexto (añade 1,5–3 GB), confundir 70B parámetros con 70 GB de VRAM, ignorar 1–2 GB de sobrecarga del sistema y comprar una GPU exactamente al tamaño calculado sin margen del 25 %.',
           items: [
             '**Olvidar la sobrecarga de contexto.** Un modelo de 7B en Q4 ocupa 3,5 GB, pero con contexto de 4k necesita 5–6 GB en total.',

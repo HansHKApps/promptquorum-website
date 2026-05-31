@@ -1262,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tier-1-high-commission',
         title: 'Nivel 1 — Programas de alta comisión',
         content: 'Estos tres programas ofrecen las tasas de comisión más altas para audiencias de desarrolladores de IA. Cada uno responde a una necesidad real: privacidad para el trabajo remoto con IA, alquiler de GPU en la nube y herramientas de IA para frontend.',
-        image: '/images/affiliate-commission-comparison-en.svg',
+        image: '/images/affiliate-commission-comparison-es.svg',
         imageCaption: 'Tasas de comisión de 7 programas. NordVPN y Coursera lideran en primera venta y tasas recurrentes.',
         subsections: [
           {
@@ -1340,7 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Programa': 'Cursor', 'Comisión': 'Ver página del programa', 'Cookie': 'Ver página del programa', 'Método de pago': 'Ver página del programa', 'Ideal para': 'Herramientas de código IA, reseñas de IDEs' },
           { 'Programa': 'Amazon Afiliados', 'Comisión': '1–4%', 'Cookie': '24 horas', 'Método de pago': 'Banco / tarjeta regalo', 'Ideal para': 'Reseñas de hardware GPU, RAM, NAS' },
         ],
-        image: '/images/affiliate-earnings-calculator-en.svg',
+        image: '/images/affiliate-earnings-calculator-es.svg',
         imageCaption: 'Estimación de ingresos mensuales basada en un CTR del 2% y una tasa de conversión del 3%.',
       },
       earningsCalculator: {

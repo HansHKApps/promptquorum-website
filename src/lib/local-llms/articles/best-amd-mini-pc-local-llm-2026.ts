@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Mini PC': 'AOOSTAR GEM12 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96 GB DDR5X-8000', 'NPU': '50 TOPS', 'Precio': '$1.799', 'Estado': 'Listo para producción' },
           { 'Mini PC': 'GMKtec EVO-X2', 'CPU': 'Ryzen AI Max 385', 'iGPU': 'Radeon 8050S', 'RAM': '64 GB DDR5X-7500', 'NPU': '45 TOPS', 'Precio': '$1.199', 'Estado': 'Opción de entrada' },
         ],
-        image: '/images/best-amd-mini-pc-comparison-en.svg',
+        image: '/images/best-amd-mini-pc-comparison-es.svg',
         imageCaption: 'Precio, RAM, potencia NPU y rendimiento en los cuatro modelos de mini PC. Minisforum ofrece el mejor balance, Beelink la máxima memoria y GMKtec el punto de entrada.',
       },
       'minisforum-ms-a2': {
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qwen 2.5 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Nota: estas estimaciones se basan en aceleración iGPU más NPU. La inferencia solo con CPU sería 3–5 veces más lenta.',
         ],
-        image: '/images/best-amd-mini-pc-benchmarks-en.svg',
+        image: '/images/best-amd-mini-pc-benchmarks-es.svg',
         imageCaption: 'Tokens/seg en modelos de 8B, 32B y 70B. Minisforum/Beelink/AOOSTAR alcanzan rendimiento idéntico gracias al mismo chip Ryzen AI Max+ 395. El GMKtec EVO-X2 es un 10–15% más lento con el Ryzen AI Max 385.',
       },
       'decision-matrix': {
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollador Linux-first que quiere configuración sin complicaciones: Beelink GTR9 Pro (incluye Ubuntu + ROCm)',
           'Quieres la opción más silenciosa: Minisforum MS-A2 (38 dB en reposo)',
         ],
-        image: '/images/best-amd-mini-pc-decision-tree-en.svg',
+        image: '/images/best-amd-mini-pc-decision-tree-es.svg',
         imageCaption: 'Árbol de decisión: adapta tus prioridades al mini PC correcto. Los compradores que priorizan el precio empiezan con GMKtec. Los usuarios avanzados e investigadores prefieren Beelink. Minisforum es la mejor opción general.',
       },
       'linux-setup': {
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ventaja de costo:** AMD ahorra $1.100–2.400 por unidad. En escala (equipos), son $5.500–12.000 en 5 unidades.',
           '**Compensación:** Pierdes macOS, Xcode y Final Cut Pro. Ganas flexibilidad de Linux, transferencia de habilidades ROCm y menor costo.',
         ],
-        image: '/images/best-amd-mini-pc-amd-vs-apple-en.svg',
+        image: '/images/best-amd-mini-pc-amd-vs-apple-es.svg',
         imageCaption: 'Comparación lado a lado: los mini PCs AMD Ryzen AI Max+ ($1.599–1.899) entregan rendimiento y memoria unificada equivalentes al Mac Studio M4 Max ($2.999–3.999) a un costo 40–50% menor.',
       },
       'eu-considerations': {

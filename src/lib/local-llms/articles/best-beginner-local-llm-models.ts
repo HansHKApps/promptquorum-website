@@ -459,7 +459,7 @@ schema: {
             'El número de parámetros (3B, 7B, 13B) es el principal determinante de los requisitos de RAM. Con la [cuantización de 4 bits](/es/local-llms/llm-quantization-explained) -- el estándar para la mayoría de herramientas de inferencia local -- multiplica el número de parámetros por ~0,5 para estimar los GB de RAM necesarios. Un modelo de 7B en Q4_K_M requiere aproximadamente 4,5 GB de RAM.',
             'Para la mayoría de principiantes, **los modelos de 7B con cuantización Q4_K_M** ofrecen el mejor equilibrio de calidad, velocidad y uso de RAM en máquinas con 8 GB o más. En máquinas con 4-6 GB de RAM, los modelos de 3B son el techo práctico.',
           ],
-          image: '/images/best-beginner-local-llm-models-3b-vs-7b-en.svg',
+          image: '/images/best-beginner-local-llm-models-3b-vs-7b-es.svg',
           imageCaption: 'Compromiso entre parámetros 3B y 7B -- los modelos de 3B usan 2-3 GB de RAM a 25-60 tok/s; los modelos de 7B usan 4,5-5 GB de RAM a 10-20 tok/s con calidad significativamente mejor en razonamiento complejo y documentos largos.',
         },
         llama32: {
@@ -559,7 +559,7 @@ schema: {
             { 'Modelo': 'Qwen2.5 7B', 'RAM': '4,7 GB', 'Velocidad (CPU)': '10-18 tok/s', 'Contexto': '128K', 'Mejor para': 'Multilingüe, codificación' },
           ],
           columns: ['Modelo', 'RAM', 'Velocidad (CPU)', 'Contexto', 'Mejor para'],
-          image: '/images/best-beginner-local-llm-models-comparison-table-en.svg',
+          image: '/images/best-beginner-local-llm-models-comparison-table-es.svg',
           imageCaption: 'Cinco modelos LLM locales para principiantes comparados por RAM, velocidad de inferencia CPU, ventana de contexto y caso de uso -- todos evaluados con cuantización Q4_K_M mediante Ollama. Llama 3.2 3B es el primer modelo recomendado; Gemma 3 2B es el más rápido con 1,7 GB de RAM.',
         },
         whichToStart: {
@@ -573,7 +573,7 @@ schema: {
             '**Principalmente tareas de codificación**: `ollama run qwen2.5:7b` -- mejor puntuación HumanEval de esta lista; excelente en Python, JavaScript y SQL.',
             '**Idioma distinto al inglés**: `ollama run qwen2.5:7b` -- soporte nativo de 29 idiomas, sin sobrecarga de traducción.',
           ],
-          image: '/images/best-beginner-local-llm-models-ram-decision-en.svg',
+          image: '/images/best-beginner-local-llm-models-ram-decision-es.svg',
           imageCaption: 'Guía de selección de modelo según RAM -- Gemma 3 2B con ≤4 GB de RAM, Llama 3.2 3B con 8 GB (mejor primer modelo), Qwen2.5 7B con 8 GB+ para cargas de trabajo multilingüe y codificación. Todos se ejecutan con `ollama run` sin configuración manual.',
         },
         regionalContext: {

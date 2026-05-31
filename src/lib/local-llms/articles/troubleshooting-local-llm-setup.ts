@@ -350,7 +350,7 @@ schema: {
             'Conexión rechazada: Ollama no está en ejecución. Inícialo con `ollama serve` o reinicia el servicio.',
             'Salida corrupta: plantilla de prompt incorrecta. Usa la variante Instruct del modelo, no la variante base.',
           ],
-          image: '/images/troubleshooting-error-symptoms-quick-ref-en.svg',
+          image: '/images/troubleshooting-error-symptoms-quick-ref-es.svg',
           imageCaption: 'Los 10 errores más comunes de LLM local con síntomas y soluciones — referencia rápida para configuraciones de Ollama, LM Studio y vLLM (abril de 2026).',
         },
         error1: {
@@ -363,7 +363,7 @@ schema: {
             '**Cierra las aplicaciones en segundo plano antes de cargar el modelo** — los navegadores y otras apps consumen RAM que el modelo necesita.',
             '**Cambia a un modelo más pequeño**: si 8B falla con 8 GB de RAM, prueba `llama3.2:3b` (requiere solo ~2,5 GB).',
           ],
-          image: '/images/troubleshooting-ram-by-model-size-en.svg',
+          image: '/images/troubleshooting-ram-by-model-size-es.svg',
           imageCaption: 'Requisitos de RAM de LLM local por tamaño de modelo: llama3.2 1B–3B cabe en 8 GB, los modelos 7B–8B necesitan 16 GB, los modelos 70B necesitan 64 GB con cuantización Q4_K_M.',
         },
         error1Code: {
@@ -379,7 +379,7 @@ schema: {
           ],
           codeBlock: '# NVIDIA — debe mostrar el nombre de la GPU y la versión del driver\nnvidia-smi\n\n# AMD en Linux\nrocm-smi\n\n# macOS — verificar si Metal está disponible\nsystem_profiler SPDisplaysDataType | grep "Metal"',
           codeLanguage: 'bash',
-          image: '/images/troubleshooting-gpu-detection-en.svg',
+          image: '/images/troubleshooting-gpu-detection-es.svg',
           imageCaption: 'Solo CPU vs GPU activa: Ollama en CPU da 2–8 tok/s; el modo GPU da 30–120 tok/s. Verifica con ollama ps o nvidia-smi.',
         },
         error2Fixes: {
@@ -504,7 +504,7 @@ schema: {
             '**Usar el nombre de modelo incorrecto en Ollama** — `llama3.2` y `llama3.2:3b` son etiquetas de Ollama diferentes. Ejecuta `ollama list` para ver los nombres exactos de los modelos descargados.',
             '**No reiniciar Ollama después de actualizar el driver** — Ollama detecta la GPU al arrancar. Después de actualizar los drivers de NVIDIA o ROCm, reinicia Ollama completamente (`ollama serve`) para volver a detectar la GPU.',
           ],
-          image: '/images/troubleshooting-debug-steps-en.svg',
+          image: '/images/troubleshooting-debug-steps-es.svg',
           imageCaption: 'Proceso de depuración de LLM local en 5 pasos: verificar RAM → verificar GPU → verificar servidor → verificar modelo → verificar calidad de salida. Detente en el primer paso fallido.',
         },
         sources: {

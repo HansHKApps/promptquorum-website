@@ -587,7 +587,7 @@ schema: {
             { 'Aspecto': 'Cuándo usar', 'Fine-Tuning': '99% de los casos', 'Pre-Training': 'Necesidades especializadas raras' },
           ],
           columns: ['Aspecto', 'Fine-Tuning', 'Pre-Training'],
-          image: '/images/create-custom-local-models-finetuning-vs-pretraining-comparison-en.svg',
+          image: '/images/create-custom-local-models-finetuning-vs-pretraining-comparison-es.svg',
           imageCaption: 'Fine-tuning (1–4 horas, $100–500, 8 GB VRAM) vs pre-training (semanas–meses, $50K–500K, 100+ GB): comparación de tiempo de entrenamiento, costo, requisitos de datos y cuándo usar cada enfoque.',
         },
         finetuningPath: {
@@ -602,7 +602,7 @@ schema: {
             'Fusiona el adaptador LoRA en el modelo base.',
             'Despliega como modelo de producción.',
           ],
-          image: '/images/create-custom-local-models-7step-finetuning-path-en.svg',
+          image: '/images/create-custom-local-models-7step-finetuning-path-es.svg',
           imageCaption: 'Flujo de trabajo de fine-tuning en 7 pasos: recolectar datos → elegir modelo base → entrenar con LoRA (3–5 epochs, 8 GB VRAM) → evaluar → fusionar → convertir a GGUF → desplegar en Ollama. Tiempo total: 1–4 horas.',
         },
         loraVsFull: {
@@ -611,7 +611,7 @@ schema: {
           content: [
             'LoRA (Low-Rank Adaptation) actualiza solo el 1–2% de los pesos del modelo, haciéndolo 4× más rápido y requiriendo 80–90% menos VRAM que el fine-tuning completo. El fine-tuning completo actualiza todos los pesos y ofrece resultados marginalmente mejores (2–5% de mejora en precisión) pero requiere 64+ GB VRAM y cómputo significativo.',
           ],
-          image: '/images/create-custom-local-models-lora-vs-fulltuning-comparison-en.svg',
+          image: '/images/create-custom-local-models-lora-vs-fulltuning-comparison-es.svg',
           imageCaption: 'LoRA (4× más rápido, 8 GB VRAM, 95–98% de precisión) vs fine-tuning completo (velocidad base, 64+ GB VRAM, +2–5% de ganancia): comparación del compromiso velocidad-precisión y requisitos de VRAM.',
         },
         vramRequirements: {
@@ -620,7 +620,7 @@ schema: {
           content: [
             'No todos los modelos caben en 8 GB VRAM para fine-tuning con LoRA. Esto es lo que puedes ejecutar:',
           ],
-          image: '/images/create-custom-local-models-vram-by-model-en.svg',
+          image: '/images/create-custom-local-models-vram-by-model-es.svg',
           imageCaption: 'Compatibilidad de VRAM para fine-tuning: modelos 3B–8B ✓ funcionan en 8 GB, 13B ✓ funciona pero ajustado, 32B requiere 64+ GB, 70B no es viable. LoRA añade ~25% de overhead para entrenamiento por lotes.',
         },
         ollamaDeployment: {
@@ -653,7 +653,7 @@ schema: {
           content: [
             'Existen tres enfoques principales para modelos personalizados. Elige según tus datos, presupuesto y plazos:',
           ],
-          image: '/images/create-custom-local-models-cost-benefit-matrix-en.svg',
+          image: '/images/create-custom-local-models-cost-benefit-matrix-es.svg',
           imageCaption: 'Matriz de decisión: usa RAG si no tienes datos de entrenamiento ($0), fine-tuning si tienes 500+ ejemplos ($100–500, 1–4 horas), o pre-training si tienes 100B+ tokens ($50K–500K, semanas–meses).',
         },
         domainAdaptation: {

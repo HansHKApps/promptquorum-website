@@ -1,0 +1,82 @@
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- Background -->
+  <rect width="900" height="400" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="450" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    LangGraph: nodos, aristas y estado
+  </text>
+
+  <!-- LEFT COLUMN: Agent Flow -->
+  <g>
+    <!-- START node -->
+    <circle cx="100" cy="100" r="20" fill="#6750A4"/>
+    <text x="100" y="107" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">INICIO</text>
+
+    <!-- Arrow to reasoning node -->
+    <path d="M 100 120 L 100 160" stroke="#6750A4" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Reasoning Node (LLM) -->
+    <rect x="30" y="160" width="140" height="70" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="100" y="187" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">LLM</text>
+    <text x="100" y="205" font-size="11" fill="#49454F" text-anchor="middle" font-weight="600">Razonar y planificar</text>
+
+    <!-- Decision: call tool vs done -->
+    <path d="M 170 190 L 240 160" stroke="#6750A4" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="190" y="170" font-size="10" fill="#6750A4" font-weight="600">llamar herramienta</text>
+
+    <path d="M 170 210 L 240 280" stroke="#34A853" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-green)"/>
+    <text x="190" y="235" font-size="10" fill="#34A853" font-weight="600">listo</text>
+
+    <!-- Tool Execution Node -->
+    <rect x="240" y="120" width="140" height="70" rx="6" fill="#FFF3E0" stroke="#F4B400" stroke-width="2.5"/>
+    <text x="310" y="147" font-size="13" font-weight="700" fill="#F4B400" text-anchor="middle">Herramienta</text>
+    <text x="310" y="165" font-size="11" fill="#49454F" text-anchor="middle" font-weight="600">Ejecutar</text>
+
+    <!-- Tool result back to reasoning (loop) -->
+    <path d="M 310 120 Q 310 90 100 90 Q 100 160 100 160" stroke="#6750A4" stroke-width="2.5" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+    <text x="200" y="85" font-size="10" fill="#6750A4" font-weight="600">repetir con resultados</text>
+
+    <!-- End Node -->
+    <circle cx="310" cy="300" r="20" fill="#34A853"/>
+    <text x="310" y="307" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">FIN</text>
+  </g>
+
+  <!-- RIGHT COLUMN: Agent State Box -->
+  <rect x="500" y="60" width="360" height="320" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+
+  <!-- State Box Title -->
+  <text x="680" y="88" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Estado del agente</text>
+
+  <!-- Divider line -->
+  <line x1="510" y1="100" x2="850" y2="100" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- State fields with better spacing -->
+  <text x="525" y="125" font-size="12" font-weight="700" fill="#1C1B1F">📋 Contexto</text>
+  <text x="525" y="143" font-family="'SF Mono'" font-size="10" fill="#49454F">Tarea e historial del usuario</text>
+
+  <text x="525" y="170" font-size="12" font-weight="700" fill="#1C1B1F">🔍 Observaciones</text>
+  <text x="525" y="188" font-family="'SF Mono'" font-size="10" fill="#49454F">Resultados de herramientas, registro de pasos</text>
+
+  <text x="525" y="215" font-size="12" font-weight="700" fill="#1C1B1F">🎯 Decisiones</text>
+  <text x="525" y="233" font-family="'SF Mono'" font-size="10" fill="#49454F">Siguiente herramienta a llamar</text>
+
+  <text x="525" y="260" font-size="12" font-weight="700" fill="#1C1B1F">💾 Memoria</text>
+  <text x="525" y="278" font-family="'SF Mono'" font-size="10" fill="#49454F">Historial de la conversaci&#xf3;n</text>
+
+  <text x="525" y="305" font-size="12" font-weight="700" fill="#1C1B1F">⚙️ Estado</text>
+  <text x="525" y="323" font-family="'SF Mono'" font-size="10" fill="#49454F">Activo / Listo / Error</text>
+
+  <text x="525" y="350" font-size="12" font-weight="700" fill="#1C1B1F">🔄 Pasos m&#xe1;ximos</text>
+  <text x="525" y="368" font-family="'SF Mono'" font-size="10" fill="#49454F">L&#xed;mite fijo (p. ej., 10–20)</text>
+
+  <!-- Arrow marker definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#6750A4"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34A853"/>
+    </marker>
+  </defs>
+<text x="892" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -904,7 +904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Datos rápidos',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-setup-en.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-setup-es.svg',
         imageCaption: 'Tiempo de configuración e instalación: SillyTavern 15 minutos (git clone + npm), Agnai usuario único 10 minutos (npm), Agnai servidor compartido 30 minutos (+ MongoDB + autenticación), RisuAI 5 minutos (descarga la app de escritorio, sin terminal). Usuarios primerizos: RisuAI es el más rápido.',
         items: [
           '**SillyTavern** — Node.js + UI en navegador, alojado localmente. Personalización más profunda, comunidad más grande.',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparativa de tres interfaces',
         content:
           '**Mismas tarjetas de personaje, mismos backends de modelos — diferente densidad de funciones y usuario objetivo.** La tabla siguiente mapea las diferencias relevantes para la decisión.',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-comparison-en.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-comparison-es.svg',
         imageCaption: 'Comparativa de funciones: SillyTavern ofrece libros de lore y extensiones más profundos, chat grupal multicarácter (maduro), sin modo multiusuario. Agnai añade modo multiusuario/servidor compartido real, libros de lore más simples. RisuAI configuración más sencilla (5 min), apps móviles integradas, conjunto de funciones más ligero. Las tres cargan tarjetas de personaje Tavern v2.',
         snippetBlocks: [
           {
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Formato de tarjeta de personaje (Tavern v2): la lingua franca',
         content:
           '**Las tres interfaces cargan la especificación de tarjetas de personaje Tavern v2, lo que hace trivial la migración entre ellas.** Una tarjeta es un PNG con JSON embebido en los metadatos; el mismo archivo se abre en cualquiera de las tres.',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-character-cards-en.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-character-cards-es.svg',
         imageCaption: 'Formato de tarjeta de personaje Tavern v2: PNG + metadatos JSON embebidos. Contiene nombre, descripción, personalidad, escenario, primer mensaje, diálogo de ejemplo, prompt del sistema. Interoperable entre SillyTavern, Agnai, RisuAI (todas cargan la misma especificación). La especificación V3 (mayo 2026) añade lore embebido nativo y soporte multilingüe, compatible hacia atrás. Las tarjetas comunitarias de chub.ai funcionan en las tres interfaces.',
         items: [
           '**Qué contiene una tarjeta Tavern v2:** nombre, descripción, personalidad, escenario, primer mensaje, diálogo de ejemplo, etiquetas, notas del creador y un prompt del sistema. Los campos opcionales cubren entradas de libros de lore y ajustes de muestreo específicos del personaje.',
@@ -1059,7 +1059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recomendaciones de modelos por interfaz',
         content:
           '**La elección de interfaz no limita la elección de modelo.** Las tres hablan los mismos backends — Ollama es el más común — y las recomendaciones de modelos a continuación se aplican igualmente a SillyTavern, Agnai y RisuAI.',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-models-en.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-models-es.svg',
         imageCaption: 'Modelos recomendados (las 3 interfaces): Llama 3.3 70B es el estándar (mejor todo-terreno, 42 GB VRAM, consistencia de voz). Qwen3 32B es la opción popular para rigs de 24 GB (calidad casi equivalente a 70B). Command R+ 104B para especialistas en diálogo (escenas grupales, 62 GB VRAM). Hermes 3 para trabajo de 70B sin censura. Evitar modelos <13B sin ajuste fino creativo.',
         items: [
           '**Llama 3.3 70B** — la mejor opción local todo-terreno para trabajo con personajes. Mayor consistencia de voz en sesiones largas, sigue bien la dirección del personaje, maneja temas oscuros cuando el prompt del sistema enmarca el trabajo como ficción. Requiere ~42 GB VRAM en Q4_K_M.',
@@ -1102,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decisión: qué interfaz debes elegir',
         content:
           '**Tres preguntas llevan a la mayoría de usuarios a la opción correcta.**',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-decision-en.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-decision-es.svg',
         imageCaption: 'Diagrama de decisión: (1) ¿Compartir con otros escritores? → Sí: Agnai (único multiusuario). (2) ¿Quieres personalización profunda? → Sí: SillyTavern. (3) ¿Primero el móvil? → Sí: RisuAI (apps empaquetadas para iOS/Android). Por defecto si no estás seguro: SillyTavern (el 80% de usuarios termina aquí). Las tarjetas de personaje se transfieren entre las tres — el costo de cambio es mínimo.',
         columns: ['Tu situación', 'Elige'],
         rows: [

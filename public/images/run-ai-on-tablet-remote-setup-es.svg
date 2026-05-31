@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">IA remota desde tu tableta: configuraci&#xf3;n en 4 pasos</text>
+
+  <!-- Step 1 -->
+  <circle cx="114" cy="100" r="22" fill="#6750A4"/>
+  <text x="114" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="114" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Instala Ollama</text>
+  <text x="114" y="163" font-size="11" fill="#49454F" text-anchor="middle">en la m&#xe1;quina de casa</text>
+  <text x="114" y="179" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">brew install ollama</text>
+  <text x="114" y="195" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">(macOS / Linux)</text>
+
+  <text x="209" y="107" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 2 -->
+  <circle cx="305" cy="100" r="22" fill="#6750A4"/>
+  <text x="305" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="305" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Descarga el modelo +</text>
+  <text x="305" y="161" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Open WebUI</text>
+  <text x="305" y="179" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ollama pull</text>
+  <text x="305" y="195" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">llama3.3:70b</text>
+
+  <text x="400" y="107" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 3 -->
+  <circle cx="496" cy="100" r="22" fill="#6750A4"/>
+  <text x="496" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="496" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Encuentra la IP</text>
+  <text x="496" y="161" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">de casa</text>
+  <text x="496" y="179" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ipconfig (Windows)</text>
+  <text x="496" y="195" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Preferencias (Mac)</text>
+
+  <text x="591" y="107" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 4 -->
+  <circle cx="687" cy="100" r="22" fill="#6750A4"/>
+  <text x="687" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="687" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Abre en el navegador</text>
+  <text x="687" y="161" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">de la tableta</text>
+  <text x="687" y="179" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">http://[IP]:3000</text>
+  <text x="687" y="195" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">(Safari / Chrome)</text>
+
+  <line x1="18" y1="218" x2="782" y2="218" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="242" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">&#xbf;Por qu&#xe9; una conexi&#xf3;n remota?</text>
+  <text x="400" y="266" font-size="12" fill="#49454F" text-anchor="middle">Sin l&#xed;mite de RAM en el dispositivo — ejecuta modelos 70B en tu Mac, PC o servidor Linux de casa</text>
+  <text x="400" y="286" font-size="12" fill="#49454F" text-anchor="middle">La CPU/GPU de casa gestiona todo el c&#xf3;mputo; el navegador de la tableta es solo la interfaz</text>
+  <text x="400" y="314" font-size="11" fill="#79747E" text-anchor="middle">Velocidad: ~20–40 tok/seg con Apple M2+ o GPU reciente   |   Requiere la misma red Wi-Fi</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1471,7 +1471,7 @@ schema: {
             'Ventaja de ChatGPT Plus: modo GPT-5.2 Thinking, multimodal (imagen/audio/video), sin configuración, inicio inmediato',
             'Pro $100 es el mejor valor para usuarios avanzados — 5× los límites de Plus, acceso a GPT-5.4 Pro por $100/mes',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-es.svg',
           imageCaption: 'macOS vs Windows vs Linux para LLMs locales: macOS ofrece la configuración más sencilla desde $1,099; Windows entrega el mayor rendimiento de GPU; Linux proporciona la mejor relación costo-rendimiento desde $810 en total.'
         },
         'quickFacts': {

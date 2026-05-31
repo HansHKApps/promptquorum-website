@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Gu&#xed;a de cuantizaci&#xf3;n: equilibrio entre velocidad y calidad</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Q4 es la opci&#xf3;n est&#xe1;ndar. Baja a Q3/Q2 solo cuando se agote la VRAM.</text>
+
+  <!-- Column headers -->
+  <text x="38" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Nivel</text>
+  <text x="130" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">P&#xe9;rdida de calidad</text>
+  <text x="260" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Ahorro de VRAM</text>
+  <text x="400" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Ganancia de velocidad</text>
+  <text x="520" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Mistral 7B cabe en</text>
+  <text x="680" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Veredicto</text>
+  <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Q8 -->
+  <text x="38" y="106" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q8</text>
+  <text x="130" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">~0%</text>
+  <text x="260" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#EA4335">0% (precisi&#xf3;n completa)</text>
+  <text x="400" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#EA4335">igual que FP16</text>
+  <text x="520" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">~8 GB de VRAM</text>
+  <text x="680" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">evitar — muy lento</text>
+  <line x1="18" y1="116" x2="782" y2="116" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Q4 — highlighted as recommended -->
+  <rect x="18" y="121" width="764" height="38" fill="#F7F2FA" rx="2"/>
+  <text x="38" y="144" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#6750A4">Q4 ★</text>
+  <text x="130" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">~1%</text>
+  <text x="260" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">50% de ahorro</text>
+  <text x="400" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">referencia base</text>
+  <text x="520" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">~4,5 GB de VRAM</text>
+  <text x="680" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6750A4">recomendado ★</text>
+  <line x1="18" y1="159" x2="782" y2="159" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 3: Q3 -->
+  <text x="38" y="185" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q3</text>
+  <text x="130" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#F4B400">~3%</text>
+  <text x="260" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">62% de ahorro</text>
+  <text x="400" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#F4B400">+15% m&#xe1;s r&#xe1;pido</text>
+  <text x="520" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">~3,5 GB de VRAM</text>
+  <text x="680" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#F4B400">aceptable</text>
+  <line x1="18" y1="195" x2="782" y2="195" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Q2 -->
+  <text x="38" y="221" font-family="'SF Mono',Monaco,monospace" font-size="13" font-weight="700" fill="#1C1B1F">Q2</text>
+  <text x="130" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#EA4335">~10%</text>
+  <text x="260" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853">75% de ahorro</text>
+  <text x="400" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#F4B400">+30% m&#xe1;s r&#xe1;pido</text>
+  <text x="520" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">~2,5 GB de VRAM</text>
+  <text x="680" y="221" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#EA4335">solo como &#xfa;ltimo recurso</text>
+  <line x1="18" y1="231" x2="782" y2="231" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Key insight box -->
+  <rect x="18" y="245" width="764" height="60" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="38" y="267" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">Regla clave: cuantiza modelos m&#xe1;s grandes, no cambies a modelos m&#xe1;s peque&#xf1;os.</text>
+  <text x="38" y="287" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">Mistral 7B Q2 supera a TinyLlama 1B Q4 en velocidad y calidad con 4 GB de VRAM.</text>
+  <text x="38" y="303" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Q2 es un 30% m&#xe1;s r&#xe1;pido que Q4 porque requiere menos ancho de banda de memoria por pasada.</text>
+
+  <!-- Footer -->
+  <text x="400" y="338" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/fastest-local-llms-low-end-pcs</text>
+</svg>

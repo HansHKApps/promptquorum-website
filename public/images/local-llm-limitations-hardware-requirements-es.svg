@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Requisitos de hardware seg&#xfa;n el tama&#xf1;o del modelo</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">16 GB de RAM como m&#xed;nimo para modelos 7B utilizables &#xb7; 40+ GB para modelos 70B de calidad frontera</text>
+
+  <!-- Table Header -->
+  <rect x="20" y="60" width="760" height="25" rx="3" fill="#F5F5F5"/>
+  <text x="40" y="78" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Hardware</text>
+  <text x="280" y="78" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Modelo m&#xe1;ximo</text>
+  <text x="500" y="78" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Nivel de calidad</text>
+
+  <!-- Row 1: 8 GB -->
+  <rect x="20" y="85" width="760" height="40" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Port&#xe1;til (8 GB de RAM, solo CPU)</text>
+  <text x="280" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#6750A4">7B @ Q4_K_M</text>
+  <text x="500" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E">Por debajo de GPT-3.5</text>
+  <text x="40" y="118" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Lento, resultados marginales</text>
+
+  <!-- Row 2: 16 GB -->
+  <rect x="20" y="125" width="760" height="40" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Gama media (16 GB de RAM)</text>
+  <text x="280" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">13B @ Q4_K_M</text>
+  <text x="500" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E">&#x2248; GPT-3.5</text>
+  <text x="40" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Bueno para la mayor&#xed;a de las tareas</text>
+
+  <!-- Row 3: 24 GB (GPU) -->
+  <rect x="20" y="165" width="760" height="40" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="182" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">GPU de gama alta (24 GB de VRAM, RTX 4090)</text>
+  <text x="280" y="182" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">34B @ Q4_K_M</text>
+  <text x="500" y="182" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E">&#x2248; GPT-4</text>
+  <text x="40" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Coste: 1.600 $+</text>
+
+  <!-- Row 4: 40+ GB -->
+  <rect x="20" y="205" width="760" height="40" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Estaci&#xf3;n de trabajo (40+ GB de RAM o VRAM)</text>
+  <text x="280" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">70B (precisi&#xf3;n completa)</text>
+  <text x="500" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E">&#x2248; GPT-4o</text>
+  <text x="40" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Mac Studio o multi-GPU</text>
+
+  <!-- Bottom note -->
+  <rect x="20" y="260" width="760" height="45" rx="3" fill="#F5F5F5" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="40" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">&#x1f4a1; Consejo: usa Ollama o LM Studio para comprobar la VRAM exacta antes de descargar. A&#xf1;ade un 25% de margen para memoria del sistema, contexto y seguridad.</text>
+
+  <!-- Footer -->
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/local-llm-limitations</text>
+</svg>

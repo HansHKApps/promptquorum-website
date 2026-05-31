@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Cinco patrones de agentes locales
+  </text>
+
+  <!-- Pattern 1: Research Agent -->
+  <rect x="28" y="55" width="280" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="168" y="78" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Agente de investigaci&#xf3;n</text>
+  <text x="45" y="100" font-size="11" fill="#49454F" font-weight="600">Tareas:</text>
+  <text x="45" y="116" font-family="'SF Mono'" font-size="10" fill="#49454F">• Buscar en web y documentos</text>
+  <text x="45" y="130" font-family="'SF Mono'" font-size="10" fill="#49454F">• Sintetizar hallazgos</text>
+  <text x="45" y="144" font-family="'SF Mono'" font-size="10" fill="#49454F">• Citar fuentes</text>
+  <text x="45" y="162" font-size="10" fill="#6750A4" font-weight="600">Ideal para: B&#xfa;squeda de datos, comparaciones</text>
+
+  <!-- Pattern 2: Code Agent -->
+  <rect x="316" y="55" width="280" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="456" y="78" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Agente de c&#xf3;digo</text>
+  <text x="333" y="100" font-size="11" fill="#49454F" font-weight="600">Tareas:</text>
+  <text x="333" y="116" font-family="'SF Mono'" font-size="10" fill="#49454F">• Escribir y ejecutar c&#xf3;digo</text>
+  <text x="333" y="130" font-family="'SF Mono'" font-size="10" fill="#49454F">• Depurar e iterar</text>
+  <text x="333" y="144" font-family="'SF Mono'" font-size="10" fill="#49454F">• Devolver resultados</text>
+  <text x="333" y="162" font-size="10" fill="#6750A4" font-weight="600">Ideal para: An&#xe1;lisis de datos, matem&#xe1;ticas</text>
+
+  <!-- Pattern 3: Planning Agent -->
+  <rect x="604" y="55" width="168" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="688" y="78" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Agente de planificaci&#xf3;n</text>
+  <text x="621" y="100" font-size="11" fill="#49454F" font-weight="600">Tareas:</text>
+  <text x="621" y="116" font-family="'SF Mono'" font-size="10" fill="#49454F">• Desglosar tareas</text>
+  <text x="621" y="130" font-family="'SF Mono'" font-size="10" fill="#49454F">• Delegar a otros</text>
+  <text x="621" y="144" font-family="'SF Mono'" font-size="10" fill="#49454F">• Orquestar</text>
+  <text x="621" y="162" font-size="10" fill="#6750A4" font-weight="600">Ideal para: Flujos de trabajo complejos</text>
+
+  <!-- Pattern 4: Conversational Agent -->
+  <rect x="28" y="195" width="280" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="168" y="218" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Agente conversacional</text>
+  <text x="45" y="240" font-size="11" fill="#49454F" font-weight="600">Tareas:</text>
+  <text x="45" y="256" font-family="'SF Mono'" font-size="10" fill="#49454F">• Mantener la memoria de la conversaci&#xf3;n</text>
+  <text x="45" y="270" font-family="'SF Mono'" font-size="10" fill="#49454F">• Responder preguntas</text>
+  <text x="45" y="284" font-family="'SF Mono'" font-size="10" fill="#49454F">• Aprender de los comentarios</text>
+  <text x="45" y="302" font-size="10" fill="#6750A4" font-weight="600">Ideal para: Chatbots, sistemas de preguntas y respuestas</text>
+
+  <!-- Pattern 5: Workflow Automation -->
+  <rect x="316" y="195" width="456" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="544" y="218" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Agente de automatizaci&#xf3;n de flujos de trabajo</text>
+  <text x="333" y="240" font-size="11" fill="#49454F" font-weight="600">Tareas:</text>
+  <text x="333" y="256" font-family="'SF Mono'" font-size="10" fill="#49454F">• Monitorizar correos, bases de datos o APIs</text>
+  <text x="333" y="270" font-family="'SF Mono'" font-size="10" fill="#49454F">• Ejecutar acciones de forma aut&#xf3;noma (filtrar, enviar, actualizar)</text>
+  <text x="333" y="284" font-family="'SF Mono'" font-size="10" fill="#49454F">• Enviar confirmaciones y registros</text>
+  <text x="333" y="302" font-size="10" fill="#6750A4" font-weight="600">Ideal para: Automatizaci&#xf3;n, sistemas de notificaci&#xf3;n, procesamiento de tareas</text>
+
+  <!-- Key insight -->
+  <rect x="28" y="335" width="744" height="70" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="400" y="360" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Idea clave: selecci&#xf3;n del patr&#xf3;n de agente</text>
+  <text x="400" y="380" font-size="11" fill="#49454F" text-anchor="middle">
+    Elige tu patr&#xf3;n seg&#xfa;n la necesidad principal: razonamiento (investigaci&#xf3;n), ejecuci&#xf3;n de c&#xf3;digo (agente de c&#xf3;digo),
+  </text>
+  <text x="400" y="395" font-size="11" fill="#49454F" text-anchor="middle">
+    planificaci&#xf3;n (agente de planificaci&#xf3;n), conversaci&#xf3;n (conversacional) o automatizaci&#xf3;n (agente de flujos de trabajo).
+  </text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

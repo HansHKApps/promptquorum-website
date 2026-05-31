@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'Frontend de chat multi-usuario con RAG opcional',
           },
         ],
-        image: '/images/rag-vs-platforms-comparison-table-en.svg',
+        image: '/images/rag-vs-platforms-comparison-table-es.svg',
         imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI en un corpus de 5.047 páginas: AnythingLLM con la tasa de alucinaciones más baja (6%), PrivateGPT con la recuperación más rápida (240 ms p50), Open WebUI con el mejor soporte multi-usuario — las tres escalan hasta ~8.000–12.000 páginas en hardware de consumo.',
       },
       whichOne: {
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Las diferencias arquitectónicas desaparecen por debajo de ~1.000 páginas — las tres se sienten rápidas. Se vuelven decisivas por encima de ~5.000 páginas: el paso de re-ranking de AnythingLLM añade ~70 ms pero recupera ~3 puntos porcentuales de recall; Qdrant de PrivateGPT permite mantener el índice en disco sin paginación; la ausencia de re-ranking en Open WebUI es la principal razón de su tasa de alucinaciones más alta de las tres.',
           },
         ],
-        image: '/images/rag-vs-platforms-architecture-en.svg',
+        image: '/images/rag-vs-platforms-architecture-es.svg',
         imageCaption: 'Comparativa de arquitectura del pipeline RAG: AnythingLLM usa LangChain.js + LanceDB con re-ranking por cross-encoder; PrivateGPT usa LlamaIndex + Qdrant con chunking configurable y API REST; Open WebUI usa unstructured.io + ChromaDB con recuperación densa de una sola etapa y sin re-ranking.',
       },
       anythingllmDeep: {
@@ -2318,7 +2318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'PrivateGPT gana en búsqueda vectorial bruta porque Qdrant es la base de datos vectorial más madura de las tres y permanece caliente en memoria bajo consultas repetidas. Open WebUI pierde terreno por el overhead del middleware FastAPI y la ausencia de una fase de re-ranking que capturaría los fallos de recuperación.',
           },
         ],
-        image: '/images/rag-vs-platforms-latency-breakdown-en.svg',
+        image: '/images/rag-vs-platforms-latency-breakdown-es.svg',
         imageCaption: 'Desglose de la latencia de recuperación en 5.047 páginas: PrivateGPT el más rápido con 240 ms p50 / 720 ms p95; AnythingLLM 310 ms p50 / 880 ms p95 (incluye 70 ms de re-ranking); Open WebUI el más lento con 380 ms p50 / 1.040 ms p95 sin fase de re-ranking.',
       },
       hallucination: {
@@ -2341,7 +2341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'El razonamiento multi-salto es donde sufren las tres plataformas. La solución no es la plataforma — es tu modelo de chat. Cambiar Llama 3.3 8B por Qwen3 14B redujo las alucinaciones multi-salto en ~10 puntos porcentuales en cada plataforma. La calidad del RAG es necesaria pero no suficiente; el modelo de chat tiene que razonar realmente sobre los chunks recuperados.',
           },
         ],
-        image: '/images/rag-vs-platforms-hallucination-rate-en.svg',
+        image: '/images/rag-vs-platforms-hallucination-rate-es.svg',
         imageCaption: 'Tasas de alucinación en 50 consultas valoradas: AnythingLLM 6% en total (0% en búsqueda factual, 0% en resumen); PrivateGPT 11%; Open WebUI 14% — el razonamiento multi-salto es el tipo de consulta más débil para las tres plataformas.',
       },
       citations: {
@@ -2368,7 +2368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Probado en el corpus de 5.047 páginas: cambiar el embedder por defecto por `BAAI/bge-m3` mejoró el recall global en 4–7 puntos porcentuales en las tres plataformas, pero triplicó el tiempo de indexación y añadió ~1 GB de memoria GPU durante el proceso.',
           'Para corpus multilingüe (alemán, francés, japonés, chino mezclados), `bge-m3` es la elección que supera al defecto en las tres plataformas — pero solo el pipeline de PrivateGPT lo soporta de forma nativa sin pasar por Ollama.',
         ],
-        image: '/images/rag-vs-platforms-embedding-flexibility-en.svg',
+        image: '/images/rag-vs-platforms-embedding-flexibility-es.svg',
         imageCaption: 'Flexibilidad del modelo de embedding: AnythingLLM ofrece 8 backends seleccionables desde la interfaz incluyendo Ollama, OpenAI y Cohere; PrivateGPT soporta cualquier modelo HuggingFace sentence-transformers de forma nativa, incluyendo bge-m3 para más de 100 idiomas; Open WebUI usa embedders servidos por Ollama más SentenceTransformers.',
       },
       hiddenCosts: {

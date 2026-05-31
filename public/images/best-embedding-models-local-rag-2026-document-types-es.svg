@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Rendimiento retrieval@10 por tipo de documento (25 consultas cada uno)
+  </text>
+
+  <!-- Headers -->
+  <text x="100" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, -apple-system, sans-serif">Modelo</text>
+  <text x="200" y="65" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">Legal</text>
+  <text x="300" y="65" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">Investigaci&#xf3;n</text>
+  <text x="420" y="65" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">C&#xf3;digo</text>
+  <text x="560" y="65" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">Multiling&#xfc;e</text>
+  <line x1="20" y1="72" x2="780" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: nomic-embed-text-v2 -->
+  <text x="50" y="99" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">nomic-v2</text>
+  <text x="200" y="99" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">88%</text>
+  <text x="300" y="99" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">90%</text>
+  <text x="420" y="99" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">82%</text>
+  <text x="560" y="99" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">92%</text>
+  <line x1="20" y1="108" x2="780" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: bge-large-en-v1.5 -->
+  <text x="50" y="135" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">bge-large</text>
+  <text x="200" y="135" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">94%</text>
+  <text x="300" y="135" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">93%</text>
+  <text x="420" y="135" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">85%</text>
+  <text x="560" y="135" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">79%</text>
+  <line x1="20" y1="144" x2="780" y2="144" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: gte-large -->
+  <text x="50" y="171" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">gte-large</text>
+  <text x="200" y="171" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">92%</text>
+  <text x="300" y="171" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">92%</text>
+  <text x="420" y="171" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">86%</text>
+  <text x="560" y="171" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">78%</text>
+  <line x1="20" y1="180" x2="780" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: mxbai-embed-large -->
+  <text x="50" y="207" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">mxbai-large</text>
+  <text x="200" y="207" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">91%</text>
+  <text x="300" y="207" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">91%</text>
+  <text x="420" y="207" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">84%</text>
+  <text x="560" y="207" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">80%</text>
+  <line x1="20" y1="216" x2="780" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: snowflake-arctic -->
+  <text x="50" y="243" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">snowflake</text>
+  <text x="200" y="243" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">88%</text>
+  <text x="300" y="243" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">89%</text>
+  <text x="420" y="243" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">83%</text>
+  <text x="560" y="243" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">86%</text>
+  <line x1="20" y1="252" x2="780" y2="252" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6: jina-embeddings-v3 -->
+  <text x="50" y="279" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">jina-v3</text>
+  <rect x="180" y="269" width="80" height="18" fill="#E8DEF8" rx="3"/>
+  <text x="200" y="283" font-size="12" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">93%</text>
+  <rect x="280" y="269" width="80" height="18" fill="#E8DEF8" rx="3"/>
+  <text x="300" y="283" font-size="12" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">92%</text>
+  <rect x="400" y="269" width="80" height="18" fill="#E8DEF8" rx="3"/>
+  <text x="420" y="283" font-size="12" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">87%</text>
+  <rect x="540" y="269" width="80" height="18" fill="#E8DEF8" rx="3"/>
+  <text x="560" y="283" font-size="12" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">89%</text>
+  <line x1="20" y1="288" x2="780" y2="288" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Key insights -->
+  <text x="50" y="330" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Ideas clave:</text>
+  <text x="50" y="352" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">• jina-v3 es el &#xfa;nico modelo por encima del 87% en todos los tipos de documento — consistente en legal (93%), investigaci&#xf3;n (92%), c&#xf3;digo (87%), multiling&#xfc;e (89%).</text>
+  <text x="50" y="372" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">• Los modelos solo en ingl&#xe9;s (bge-large, gte-large) caen 10–15% en contenido multiling&#xfc;e. La recuperaci&#xf3;n de c&#xf3;digo es la m&#xe1;s dif&#xed;cil para los seis modelos (82–87%).</text>
+  <text x="50" y="392" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">• Para corpus mixtos, los embedders multiling&#xfc;es ahora igualan o superan a los de solo ingl&#xe9;s en texto en ingl&#xe9;s mientras se mantienen s&#xf3;lidos en otros idiomas.</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

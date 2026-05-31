@@ -319,7 +319,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
-          image: '/images/local-llm-one-click-installers-tool-overview-en.svg',
+          image: '/images/local-llm-one-click-installers-tool-overview-es.svg',
           imageCaption: '4 instaladores de LLM local de un clic: Ollama (puerto 11434, desarrolladores), LM Studio (puerto 1234, principiantes), Jan AI (puerto 1337, usuarios de privacidad), GPT4All (puerto 4891, no técnicos). Todos usan llama.cpp y formato GGUF.',
           items: [
             '**Ollama**: ideal para desarrolladores -- orientado a terminal, API compatible con OpenAI, más de 4.500 modelos, se ejecuta como servicio en segundo plano.',
@@ -353,7 +353,7 @@ schema: {
         },
         ollama: {
           id: 'ollama',
-          image: '/images/local-llm-one-click-installers-ollama-install-steps-en.svg',
+          image: '/images/local-llm-one-click-installers-ollama-install-steps-es.svg',
           imageCaption: 'Instalación de Ollama en 3 pasos: visitar ollama.com/download, ejecutar el instalador .pkg o .exe, luego ejecutar ollama run llama4:scout en la terminal. Ollama se instala como servicio en segundo plano y expone una API compatible con OpenAI en localhost:11434.',
           title: '¿Para qué es mejor Ollama?',
           content: [
@@ -429,7 +429,7 @@ schema: {
         },
         fullComparison: {
           id: 'full-comparison-table',
-          image: '/images/local-llm-one-click-installers-comparison-table-en.svg',
+          image: '/images/local-llm-one-click-installers-comparison-table-es.svg',
           imageCaption: 'Comparación completa de Ollama vs LM Studio vs Jan AI vs GPT4All: mejor caso de uso, tipo de interfaz, número de modelos, puertos API (11434/1234/1337/4891), estado de telemetría y licencia de código abierto para las cuatro herramientas.',
           title: '¿Cómo se comparan estos cuatro instaladores?',
           rows: [
@@ -444,7 +444,7 @@ schema: {
         },
         whichToChoose: {
           id: 'which-should-you-choose',
-          image: '/images/local-llm-one-click-installers-privacy-ranking-en.svg',
+          image: '/images/local-llm-one-click-installers-privacy-ranking-es.svg',
           imageCaption: 'Ranking de privacidad de LLM local: Jan AI y Ollama no recopilan telemetría (MIT código abierto), GPT4All solo opt-in, LM Studio analítica anónima activada por defecto (deshabilitar: Configuración → Privacidad → desactivar).',
           title: '¿Qué instalador de un clic deberías elegir?',
           items: [

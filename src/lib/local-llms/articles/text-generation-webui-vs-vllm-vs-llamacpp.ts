@@ -443,7 +443,7 @@ schema: {
             { 'Función': 'Precio', 'llama.cpp': 'Gratis', 'vLLM': 'Gratis', 'Text-Gen-WebUI': 'Gratis' },
           ],
           columns: ['Función', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
-          image: '/images/inference-engine-feature-comparison-en.svg',
+          image: '/images/inference-engine-feature-comparison-es.svg',
           imageCaption: 'Comparación de funciones: llama.cpp (biblioteca C++, GGUF, CUDA + Metal) vs vLLM (framework Python, 100-1000+ tok/s GPU, solo NVIDIA) vs Text-Generation-WebUI (app Python, GGUF + safetensors, LoRA integrado).',
         },
         llamacpp: {
@@ -501,7 +501,7 @@ schema: {
             { 'Escenario': 'Phi-3 3.8B en M4 MacBook Pro', 'llama.cpp': '30 tokens/seg', 'vLLM': 'N/A (sin soporte Metal)', 'Text-Gen-WebUI': '25 tokens/seg' },
           ],
           columns: ['Escenario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
-          image: '/images/inference-engine-performance-benchmarks-en.svg',
+          image: '/images/inference-engine-performance-benchmarks-es.svg',
           imageCaption: 'Gráfico de rendimiento: llama.cpp y Text-Gen-WebUI logran ~150 tok/s en RTX 4090. vLLM alcanza 300 tok/s con procesamiento por lotes pero ~0,5 tok/s en CPU -- no recomendado para inferencia solo en CPU.',
         },
         productionDeployments: {
@@ -525,7 +525,7 @@ schema: {
             '**vLLM:** Sirves una API con 50+ usuarios concurrentes, tienes GPUs NVIDIA y necesitas el máximo rendimiento. Estándar de producción.',
             '**Text-Generation-WebUI:** Estás ajustando modelos fino, probando adaptadores LoRA o experimentando con configuraciones de inferencia avanzadas. La mejor opción para investigación.',
           ],
-          image: '/images/inference-engine-when-to-use-en.svg',
+          image: '/images/inference-engine-when-to-use-es.svg',
           imageCaption: 'Guía de decisión para motores de inferencia: llama.cpp para Mac/CPU o Ollama, vLLM para producción con GPU NVIDIA y 50+ usuarios concurrentes, Text-Generation-WebUI para ajuste fino LoRA e investigación.',
         },
         regionalContext: {

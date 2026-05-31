@@ -785,7 +785,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: '**En una oración:** La VRAM es el grupo de memoria dedicado de la GPU — el único número que determina qué modelos de IA puedes ejecutar localmente y con qué calidad.' },
           ],
-          image: '/images/vram-formula-calculator-en.svg',
+          image: '/images/vram-formula-calculator-es.svg',
           imageCaption: 'Calculadora de VRAM mostrando la fórmula (Tamaño del modelo × Bits) ÷ 8, con ejemplos: 8B Q4_K_M = 4,7 GB, 13B Q5_K_M = 9,1 GB, 70B Q4_K_M = 40 GB. Q4_K_M es el punto óptimo recomendado para la mayoría del hardware.',
         },
         kvCache: {
@@ -825,7 +825,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: 'A mayo de 2026, la serie RTX 50 (Blackwell) es la generación actual. La RTX 5090 (32 GB) está lista para el futuro con modelos 70B. La RTX 4090 sigue siendo excelente valor para compradores actuales.' },
           ],
-          image: '/images/gpu-tier-comparison-en.svg',
+          image: '/images/gpu-tier-comparison-es.svg',
           imageCaption: 'Recomendaciones por nivel de GPU: $600 RTX 4070 Ti (12 GB, modelos 7-13B, 80 tok/s), $1.200 RTX 4080 (16 GB, 13-30B, 120 tok/s), $1.800 RTX 4090 (24 GB, 70B, 150 tok/s), $2.000 RTX 5090 (32 GB, 70B+, 200 tok/s), $3.999 DGX Spark (128 GB, cualquier modelo). La elección de GPU importa 10 veces más que la CPU.',
         },
         vramTiers: {
@@ -866,7 +866,7 @@ schema: {
             { type: 'warning', text: 'Las GPUs RTX 4090 para laptop tienen 16 GB de VRAM (no 24 GB). Comparten el mismo techo de modelos que la RTX 4080 de escritorio.' },
             { type: 'keyPoint', text: 'Cuándo actualizar a 24 GB (RTX 4090 escritorio): solo si necesitas modelos 32B+ en Q8, o quieres ejecutar dos modelos simultáneamente sin recargar.' },
           ],
-          image: '/images/models-for-16gb-vram-en.svg',
+          image: '/images/models-for-16gb-vram-es.svg',
           imageCaption: 'Gráfico de barras mostrando qué modelos caben en 16 GB VRAM: Mistral Small 3.1 24B Q4_K_M (13 GB ✅), Devstral Small 24B Q4_K_M (16 GB ✅), Qwen2.5 14B Q8_0 (15 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌). Mejor opción: Mistral Small 3.1 24B a 55 tok/s.',
         },
         modelsFor12GB: {
@@ -910,7 +910,7 @@ schema: {
             { type: 'keyPoint', text: '🏆 Mejor para RTX 4090 (24 GB): Qwen 3.6 27B Q4_K_M (~16 GB, 77,2% SWE-bench) para el mejor modelo de programación denso. Para razonamiento: DeepSeek-R1 32B Q4_K_M (~19 GB, 60 tok/s). Mejor que Llama 3.3 70B Q2_K con mucho menos VRAM.' },
             { type: 'warning', text: 'Si específicamente necesitas calidad 70B en Q4+, la RTX 4090 no es la GPU correcta. Necesitas 2× RTX 4090 (48 GB combinados vía paralelismo tensorial) o una RTX 6000 Ada (48 GB). Ejecutar 70B en Q2_K en una sola 4090 degrada notablemente la calidad de salida.' },
           ],
-          image: '/images/rtx4090-70b-reality-en.svg',
+          image: '/images/rtx4090-70b-reality-es.svg',
           imageCaption: 'Requisitos de VRAM vs límite de 24 GB de RTX 4090: Qwen 3.6 27B Q4_K_M (16 GB ✅), DeepSeek-R1 32B Q4_K_M (19 GB ✅), Qwen2.5 32B Q5_K_M (21 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌ -- supera los 24 GB en un 63%). Punto óptimo: modelos 27-32B en Q4-Q5.',
         },
         cpuRam: {
@@ -944,7 +944,7 @@ schema: {
             { type: 'keyPoint', text: 'Realidad CPU vs GPU: Una NVIDIA RTX 3060 12 GB usada (~$200) ejecuta Llama 3.1 8B a 70+ tok/s — 5-8 veces más rápido que el Ryzen 9 7950X en inferencia solo CPU. Si la velocidad importa, compra una GPU antes de añadir RAM.' },
             { type: 'warning', text: 'Ejecutar un modelo 7B en 16 GB de RAM solo con CPU deja menos de 7 GB para el SO y el navegador. Con contextos de conversación largos (32k+ tokens), el archivo del modelo crece más allá de su tamaño base y puede causar agotamiento de RAM. Mantén el tamaño del contexto por debajo de 4096 en máquinas solo CPU de 16 GB.' },
           ],
-          image: '/images/cpu-inference-speed-en.svg',
+          image: '/images/cpu-inference-speed-es.svg',
           imageCaption: 'Velocidades de inferencia solo CPU en Ryzen 9 7950X: Gemma 2 2B Q8_0 (28 tok/s más rápido), Phi-4 Mini Q4_K_M (25 tok/s mejor opción), Llama 3.1 8B Q8_0 (8 tok/s). Una RTX 3060 usada ($200) logra 5-8 veces más rápido.',
         },
         storage: {
@@ -970,7 +970,7 @@ schema: {
             { 'Presupuesto': '$4000 (gama alta)', 'GPU': '2× RTX 4090', 'CPU': 'Ryzen 9 7950X', 'RAM': '128 GB', 'Modelos': 'Cualquiera (70B+)', 'Costo': 'Excesivo para uso personal' },
           ],
           columns: ['Presupuesto', 'GPU', 'CPU', 'RAM', 'Modelos', 'Costo'],
-          image: '/images/budget-builds-en.svg',
+          image: '/images/budget-builds-es.svg',
           imageCaption: 'Tres configuraciones de build: $1500 nivel de entrada (RTX 4070 Ti, i7 13700, 16 GB) para modelos 7-13B, $2500 build sólido (RTX 4080, i7 14700K, 32 GB) para 13-30B, $4000 gama alta (2× RTX 4090, Ryzen 9, 128 GB) para cualquier modelo. El nivel medio ofrece el mejor valor.',
         },
         cantAffordHardware: {
@@ -1010,7 +1010,7 @@ schema: {
             { type: 'keyPoint', text: 'Referencia de velocidad RTX 4070 Ti: Llama 3.1 8B Q4_K_M = 85-95 tok/s. Llama 3.1 13B Q4_K_M = 60-70 tok/s. Qwen2.5 7B Q8_0 = 90-95 tok/s. Estos valores asumen --n-gpu-layers 99 y --ctx-size 2048.' },
             { type: 'warning', text: 'Aumentar --ctx-size más allá de 8192 en una GPU de 12 GB causará que las capas del modelo se descarguen de vuelta a la CPU si el KV cache agota la VRAM restante. Si la velocidad cae repentinamente en conversaciones largas, reduce el tamaño del contexto o usa --flash-attn.' },
           ],
-          image: '/images/llamacpp-speed-flags-en.svg',
+          image: '/images/llamacpp-speed-flags-es.svg',
           imageCaption: 'Configuración predeterminada de llama.cpp: ~40 tok/s. Optimizada (--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn): ~90 tok/s — una mejora de velocidad del 125% en RTX 4070 Ti ejecutando Llama 3.1 8B Q4_K_M.',
         },
         mac: {
@@ -1027,7 +1027,7 @@ schema: {
             { 'Mac': 'M5 Max (MacBook Pro / Studio)', 'Memoria GPU': '128 GB unificada, 460-614 GB/s', 'Ideal para': 'Modelos 70B en Q4_K_M', 'Limitación': 'Primer Mac que cabe 70B correctamente' },
           ],
           columns: ['Mac', 'Memoria GPU', 'Ideal para', 'Limitación'],
-          image: '/images/mac-hardware-comparison-en.svg',
+          image: '/images/mac-hardware-comparison-es.svg',
           imageCaption: 'Comparación de hardware Mac: M3 MacBook Pro 16" (18 GB, 7B), M4 Max (48-96 GB, 13-30B), M5 Pro (64 GB, 30B), M5 Max (128 GB, 70B en Q4_K_M). M5 Max es el primer Mac que maneja modelos 70B comparable a estaciones con doble RTX 4090.',
         },
         serverVsConsumer: {
@@ -1041,7 +1041,7 @@ schema: {
             '**Servidor (RTX 6000 Ada)**: ~$5000, 48 GB VRAM, diseñado para uso 24/7, mejor refrigeración, corrección de errores.',
             '**Recomendación**: Comienza con RTX 4090. Si ejecutas modelos 70B 24/7 para múltiples usuarios, actualiza a doble A100 o RTX 6000.',
           ],
-          image: '/images/server-vs-consumer-en.svg',
+          image: '/images/server-vs-consumer-es.svg',
           imageCaption: 'Hardware consumidor vs servidor: RTX 4090 ($1800, 24 GB, un usuario, uso parcial) vs RTX 6000 Ada ($5000+, 48 GB, multi-usuario, servicio 24/7). Comienza con hardware de consumidor; actualiza a servidor solo si ejecutas servicios de producción.',
         },
         dgxSpark: {

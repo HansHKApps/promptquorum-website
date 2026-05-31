@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    4 categor&#xed;as de seguridad
+  </text>
+
+  <!-- Quadrant 1: Injection (top-left) -->
+  <rect x="40" y="70" width="350" height="150" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="215" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">Inyecci&#xf3;n</text>
+  <text x="215" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Patrones de inyecci&#xf3;n SQL, XSS y de comandos</text>
+
+  <!-- Quadrant 2: Auth (top-right) -->
+  <rect x="410" y="70" width="350" height="150" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+  <text x="585" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">Fallos de autenticaci&#xf3;n</text>
+  <text x="585" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Autenticaci&#xf3;n, autorizaci&#xf3;n y manejo de sesiones</text>
+
+  <!-- Quadrant 3: Secrets (bottom-left) -->
+  <rect x="40" y="240" width="350" height="150" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+  <text x="215" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">Secretos codificados</text>
+  <text x="215" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Claves de API, contrase&#xf1;as y credenciales en el c&#xf3;digo</text>
+
+  <!-- Quadrant 4: Logic (bottom-right) -->
+  <rect x="410" y="240" width="350" height="150" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="585" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">Errores de l&#xf3;gica</text>
+  <text x="585" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Fallos de l&#xf3;gica de negocio, condiciones de carrera</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

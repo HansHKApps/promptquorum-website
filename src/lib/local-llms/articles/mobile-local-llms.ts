@@ -1918,7 +1918,7 @@ schema: {
             { 'Dispositivo': 'iPad Pro (M4)', 'Tamaño máximo de modelo': '13B', 'Velocidad': '15 tok/seg', 'Memoria': 'Compartida 16 GB' },
           ],
           note: 'El Pixel 9 Pro ejecuta Gemini Nano de forma nativa a través de la API AICore de Google — el acceso no está disponible para apps de terceros todavía. El Samsung Galaxy S25 Ultra ofrece Samsung Galaxy AI (híbrido en dispositivo + nube) — inferencia puramente local mediante MLC Chat o LLaMa Lite.',
-          image: '/images/mobile-local-llms-hardware-comparison-en.svg',
+          image: '/images/mobile-local-llms-hardware-comparison-es.svg',
           imageCaption: 'Comparación de hardware móvil para LLM: iPad Pro M4 lidera con 15 tok/seg en modelos 13B, Snapdragon X Elite ejecuta 7B a 5 tok/seg, iPhone 16 Pro maneja 3B a 4 tok/seg.',
         },
         apps: {
@@ -1936,7 +1936,7 @@ schema: {
             { 'App': 'MLC LLM (dev)', 'Plataforma': 'Android', 'Modelos soportados': '1–7B via MLC', 'Precio': 'Gratis (desarrollador)' },
           ],
           note: 'PocketPal AI (lanzada en enero de 2025) es ahora la app de LLM local móvil más popular con más de 500.000 descargas en iOS y Android (abril de 2026). MLC Chat de MLC-AI ofrece el soporte de modelos más amplio (Llama, Qwen, Gemma, Phi) con interfaces idénticas en iOS y Android.',
-          image: '/images/mobile-local-llms-app-ecosystem-en.svg',
+          image: '/images/mobile-local-llms-app-ecosystem-es.svg',
           imageCaption: 'Top 5 apps de LLM móvil: PocketPal AI (500K+ descargas, iOS + Android), MLC Chat (soporte más amplio, 1–7B), Ollama iOS, Private LLM (5,99 $, 3–13B en iPad), LLaMa Lite (Android).',
         },
         frameworks: {
@@ -1972,7 +1972,7 @@ schema: {
           content: [
             '**El móvil es 15–50× más lento que el escritorio debido al ancho de banda de memoria.** Un iPhone A18 tiene ~68 GB/seg de ancho de banda; una [RTX 4090](/es/local-llms/local-llm-hardware-guide-2026) tiene 1.008 GB/seg. La velocidad de inferencia de LLM escala directamente con el ancho de banda de memoria.',
           ],
-          image: '/images/mobile-local-llms-speed-comparison-en.svg',
+          image: '/images/mobile-local-llms-speed-comparison-es.svg',
           imageCaption: 'Velocidad de LLM móvil vs escritorio: RTX 4090 a 150 tok/seg es 10× más rápido que iPad M4 (15 tok/seg) y 37× más rápido que iPhone 16 Pro (4 tok/seg).',
           columns: ['Dispositivo', 'Modelo', 'Tokens/seg'],
           rows: [
@@ -1991,7 +1991,7 @@ schema: {
             '**China:** Los LLMs locales móviles que ejecutan Qwen2.5 cumplen con la Ley de Seguridad de Datos de China de 2021 sin registro CAC. Huawei Kirin 9000S y MediaTek Dimensity 9300 admiten inferencia en dispositivo para modelos en chino.',
             '**Latinoamérica/España:** Los LLMs locales en español ofrecen privacidad de datos sin depender de servidores externos, lo que es relevante para sectores legales, médicos y educativos donde la confidencialidad es prioritaria.',
           ],
-          image: '/images/mobile-local-llms-bandwidth-gap-en.svg',
+          image: '/images/mobile-local-llms-bandwidth-gap-es.svg',
           imageCaption: 'Brecha de ancho de banda de memoria: iPhone A18 a 68 GB/seg vs RTX 4090 a 1.008 GB/seg — una diferencia de 15× que explica directamente por qué los LLMs móviles son 15–50× más lentos que en escritorio.',
         },
         useCases: {
@@ -2020,7 +2020,7 @@ schema: {
             '**Sin 7B en iPhone:** El modelo práctico máximo en cualquier iPhone es 3B. Intentar usar 7B causa cierres inesperados o una velocidad de minutos por respuesta. Si necesitas 7B, usa Android Snapdragon X Elite o iPad.',
             '**Realidad de la memoria compartida:** Los dispositivos móviles comparten la RAM entre el SO, las apps y el LLM — nunca obtienes toda la RAM anunciada para inferencia.',
           ],
-          image: '/images/mobile-local-llms-battery-drain-en.svg',
+          image: '/images/mobile-local-llms-battery-drain-es.svg',
           imageCaption: 'Duración de batería bajo inferencia de LLM: iPad Pro M4 dura 5 horas, Galaxy S25 Ultra 3,5 horas, iPhone 16 Pro 3 horas, iPhone 16 solo 2 horas de inferencia continua.',
         },
         future: {

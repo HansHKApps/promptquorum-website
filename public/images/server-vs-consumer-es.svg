@@ -1,0 +1,83 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Hardware de servidor vs de consumo
+  </text>
+
+  <!-- Center divider -->
+  <line x1="400" y1="55" x2="400" y2="395" stroke="#E8DEF8" stroke-width="2.5"/>
+
+  <!-- Consumer Side (Left) -->
+  <g id="consumer-side">
+    <!-- Box -->
+    <rect x="40" y="70" width="320" height="300" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Title -->
+    <text x="200" y="105" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">
+      De consumo
+    </text>
+    <text x="200" y="130" font-family="system-ui, sans-serif" font-size="15" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      RTX 4090
+    </text>
+
+    <line x1="50" y1="140" x2="350" y2="140" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <!-- Specs -->
+    <text x="60" y="165" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Precio: $1800</text>
+    <text x="60" y="185" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">VRAM: 24 GB</text>
+    <text x="60" y="205" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Consumo: 575W</text>
+    <text x="60" y="225" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Usuarios: Individual</text>
+    <text x="60" y="245" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Ciclo de uso: Parcial</text>
+    <text x="60" y="265" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Refrigeraci&#xf3;n: Ventiladores est&#xe1;ndar</text>
+
+    <!-- Use case -->
+    <rect x="50" y="285" width="300" height="60" rx="6" fill="#FEF7FF" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="200" y="305" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Para uso personal,
+    </text>
+    <text x="200" y="325" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">
+      investigaci&#xf3;n, prototipado
+    </text>
+  </g>
+
+  <!-- Server Side (Right) -->
+  <g id="server-side">
+    <!-- Box -->
+    <rect x="440" y="70" width="320" height="300" rx="8" fill="#FEF7FF" stroke="#7D5260" stroke-width="2.5"/>
+
+    <!-- Title -->
+    <text x="600" y="105" font-family="system-ui, sans-serif" font-size="20" fill="#7D5260" text-anchor="middle" font-weight="700">
+      De servidor
+    </text>
+    <text x="600" y="130" font-family="system-ui, sans-serif" font-size="15" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      RTX 6000 Ada / A100
+    </text>
+
+    <line x1="450" y1="140" x2="750" y2="140" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <!-- Specs -->
+    <text x="460" y="165" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Precio: $5000+</text>
+    <text x="460" y="185" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">VRAM: 48+ GB</text>
+    <text x="460" y="205" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Consumo: 700W+</text>
+    <text x="460" y="225" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Usuarios: Multiusuario</text>
+    <text x="460" y="245" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Ciclo de uso: 24/7</text>
+    <text x="460" y="265" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Refrigeraci&#xf3;n: Activa/l&#xed;quida</text>
+
+    <!-- Use case -->
+    <rect x="450" y="285" width="300" height="60" rx="6" fill="#FEF7FF" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="600" y="305" font-family="system-ui, sans-serif" font-size="12" fill="#7D5260" text-anchor="middle" font-weight="700">
+      Para apps en producci&#xf3;n,
+    </text>
+    <text x="600" y="325" font-family="system-ui, sans-serif" font-size="12" fill="#7D5260" text-anchor="middle" font-weight="700">
+      servicios API, empresas
+    </text>
+  </g>
+
+  <!-- Bottom recommendation -->
+  <text x="400" y="415" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    Empieza con la RTX 4090. Pasa a la RTX 6000 solo si la usas 24/7 para varios usuarios.
+  </text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -350,7 +350,7 @@ schema: {
             '**No establecer la longitud de contexto para documentos largos:** Ollama usa por defecto 2048 tokens. Una propuesta de 2 páginas tiene aproximadamente 1.500-2.000 palabras, cerca o por encima de este límite. Establece como mínimo `PARAMETER num_ctx 8192` en tu Modelfile para tareas de redacción profesional. Para revisión de contratos o informes de varias páginas, usa 32K de contexto.',
             '**Usar el mismo modelo para redacción y edición:** El mejor flujo de trabajo es de dos etapas: genera un borrador inicial con cualquier modelo 7B (rápido), luego usa Mistral Small 3.1 24B en modo edición para refinar el tono, eliminar jerga y mejorar la estructura. Usar un modelo de 70B para ambas tareas es más lento y produce salidas menos concisas que este enfoque de dos modelos.',
           ],
-          image: '/images/common-mistakes-prevention-en.svg',
+          image: '/images/common-mistakes-prevention-es.svg',
           imageCaption: 'Lado izquierdo (rojo): Errores comunes al configurar asistentes de redacción local. Lado derecho (verde): Soluciones comprobadas. Errores clave a evitar: usar modelos 70B para correos rápidos, omitir ejemplos de voz de marca, confiar en borradores sin refinar, ignorar las limitaciones de la ventana de contexto y usar configuraciones únicas para todo.',
         },
         'setup': {
@@ -362,7 +362,7 @@ schema: {
             'Asigna un atajo de teclado (p. ej., Ctrl+K) para activar la autocompletación.',
             'Redacta el correo → selecciona → Ctrl+K → "Refina este correo para [tono]" → copia el resultado.',
           ],
-          image: '/images/setup-workflow-business-writing-en.svg',
+          image: '/images/setup-workflow-business-writing-es.svg',
           imageCaption: 'Flujo de trabajo de configuración en cinco pasos: 1) Instala Ollama desde ollama.ai, 2) Descarga el modelo Mistral Small 3.1, 3) Instala la extensión Continue para VS Code, 4) Crea un system prompt personalizado con ejemplos de voz de marca, 5) Usa el atajo Ctrl+K para refinar correos profesionales. Tiempo total de configuración: ~10 minutos.',
         },
         'regional-context': {

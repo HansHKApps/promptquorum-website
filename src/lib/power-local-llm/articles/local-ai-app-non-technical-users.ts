@@ -1910,7 +1910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala esta si eres: un padre que quiere un ChatGPT privado, un periodista con un portátil económico, un profesor que demuestra IA a estudiantes, o cualquier persona cuya primera reacción a "abre el terminal" es "¿qué terminal?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-en.svg',
+        image: '/images/local-ai-nontechnical-gpt4all-install-steps-es.svg',
         imageCaption: 'Proceso de instalación de GPT4All en 4 pasos: descarga ~290 MB desde gpt4all.io, ejecuta el instalador, elige Llama 3.2 3B (2 GB de descarga), empieza a chatear — completamente sin conexión en cualquier portátil con 8 GB de RAM.',
       },
       jan: {
@@ -1932,7 +1932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala esta si eres: un residente que se preocupa por su privacidad digital, un periodista que maneja fuentes confidenciales, un abogado que no puede enviar borradores a APIs en la nube, o cualquier persona cuyo modelo de amenaza incluye "¿qué envía esta app al exterior?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-en.svg',
+        image: '/images/local-ai-nontechnical-jan-privacy-features-es.svg',
         imageCaption: 'Comparativa de privacidad de Jan: la IA en la nube envía los prompts a servidores remotos con SDKs de análisis; Jan ofrece cero telemetría, código fuente auditable bajo AGPL y funcionamiento completamente sin conexión tras la instalación.',
       },
       msty: {
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala esta si eres: un diseñador que encuentra feas las interfaces de chat básicas, un estudiante que quiere comparar dos respuestas de modelos en paralelo, o un escritor que quiere que la IA lea tu carpeta de notas desde el principio.',
           },
         ],
-        image: '/images/local-ai-nontechnical-msty-ui-features-en.svg',
+        image: '/images/local-ai-nontechnical-msty-ui-features-es.svg',
         imageCaption: 'Matriz de características de Msty: el chat dividido (exclusivo de Msty) muestra dos modelos en paralelo; las pilas de conocimiento (exclusivas) anclan documentos a espacios de trabajo — gratuito para uso personal en Windows, macOS y Linux.',
       },
       anythingllm: {
@@ -1976,7 +1976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala esta si eres: un dueño de pequeño negocio que quiere hacer preguntas sobre una carpeta de contratos, un investigador con una carpeta de "Artículos por leer", o alguien que encuentra confusas las interfaces modernas y prefiere algo que se parezca a Outlook.',
           },
         ],
-        image: '/images/local-ai-nontechnical-anythingllm-workspace-en.svg',
+        image: '/images/local-ai-nontechnical-anythingllm-workspace-es.svg',
         imageCaption: 'Modelo de espacio de trabajo de AnythingLLM Desktop: los espacios de trabajo (izquierda) contienen documentos (centro) que la IA cita al responder preguntas del chat (derecha) — todo indexado localmente, sin API en la nube.',
       },
       lmStudio: {
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala esta si eres: un usuario de Mac que quiere la IA local más rápida en Apple Silicon, un escritor con un MacBook de 16 GB+ que quiere probar varios modelos, o alguien que encuentra los catálogos curados de Jan y GPT4All demasiado pequeños.',
           },
         ],
-        image: '/images/local-ai-nontechnical-lmstudio-mac-speed-en.svg',
+        image: '/images/local-ai-nontechnical-lmstudio-mac-speed-es.svg',
         imageCaption: 'Velocidad de modelos de LM Studio en Apple Silicon: Phi-4 Mini alcanza 55–70 tok/s en un M3 con 8 GB; Llama 3.3 8B Q4_K_M alcanza 35–42 tok/s en un M3 Pro con 16 GB con kernels Metal personalizados.',
       },
       stumblingBlocks: {

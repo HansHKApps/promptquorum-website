@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cómo se comparan los 6 modelos de embedding en 2026?',
         content:
           'Probados en 4 tipos de documentos (contratos legales, artículos de investigación, código fuente y wiki empresarial multilingüe) con 100 consultas evaluadas por modelo. Hardware: NVIDIA RTX 4070 (12 GB VRAM) para datos GPU; Apple M3 Pro (18 GB de memoria unificada) para datos CPU. Tamaño de chunk 256 tokens, tamaño de lote 32. Los números son medianas de tres ejecuciones.',
-        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-es.svg',
         imageCaption: 'Precisión retrieval@10 en 4 tipos de documentos: jina-embeddings-v3 lidera globalmente al 92%, bge-large domina el texto en inglés (94% legal, 93% investigación) pero cae al 79% en contenido multilingüe, nomic-embed-text-v2 destaca en multilingüe (92%) con el mayor soporte entre idiomas.',
         columns: ['Modelo', 'Dim', 'Velocidad (CPU)', 'Velocidad (GPU)', 'Memoria', 'retrieval@10', 'Multilingüe', 'Mejor para'],
         rows: [
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Precisión de recuperación por tipo de documento (retrieval@10)',
         content:
           '**retrieval@10 = % de consultas donde el chunk correcto aparece en los 10 primeros resultados.** Mayor es mejor. Los números provienen de 25 consultas evaluadas por tipo de documento por modelo.',
-        image: '/images/best-embedding-models-local-rag-2026-document-types-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-document-types-es.svg',
         imageCaption: 'Retrieval@10 por tipo de documento: jina-embeddings-v3 es el único modelo que se mantiene por encima del 87% en los cuatro tipos (legal 93%, investigación 92%, código 87%, multilingüe 89%). Los modelos solo en inglés (bge-large, gte-large) destacan en legal/investigación pero caen 10–15 puntos en multilingüe. La recuperación de código es la más difícil (82–87% en todos los modelos).',
         columns: ['Modelo', 'Legal', 'Investigación', 'Código', 'Multilingüe', 'Global'],
         rows: [
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Velocidad de embedding en CPU (chunks por segundo)',
         content:
           '**Rendimiento con tamaño de lote 32, chunks de 256 tokens, en Apple M3 Pro (sin GPU).** Mayor es mejor. La velocidad CPU determina si puedes reindexar un corpus de 5.000 páginas en el almuerzo (jina, nomic) o necesitas planificar una ejecución nocturna (bge-large, gte-large).',
-        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-es.svg',
         imageCaption: 'Rendimiento de embedding CPU vs GPU: nomic-embed-text-v2 domina en CPU a 580 chunks/seg (5× más rápido que bge-large a 95), reduciendo el tiempo de reindexación de 55 minutos a 9 minutos en un corpus de 5K páginas. La GPU reduce la brecha; nomic sigue liderando a 4.800 chunks/seg en RTX 4070.',
         columns: ['Modelo', 'Chunks/seg (CPU)', 'Tiempo de indexación corpus 5K páginas', 'Notas'],
         rows: [
@@ -725,7 +725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Huella de memoria y el trade-off de dimensiones',
         content:
           '**El número de dimensiones es la elección más sobreingenieriada en RAG local.** Más dimensiones ayudan a la recuperación hasta ~1.024, luego se estabilizan. Más allá de eso, pagas el doble de almacenamiento por ganancias inferiores a 1 punto porcentual.',
-        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-es.svg',
         imageCaption: 'Trade-off de dimensiones vs almacenamiento en corpus de 50K páginas: 768 dims = 0,9 GB, 1.024 dims = 1,2 GB (+33%), 3.072 dims = 3,6 GB (+300%) con solo <0,5% de ganancia de retrieval. Los modelos Matryoshka (jina-v3, nomic) permiten truncar de 1.024→512→256 dimensiones sin re-embedder, intercambiando ~1–3% de retrieval por 50% de ahorro en almacenamiento.',
         items: [
           '**768 dimensiones (nomic-embed-text-v2):** 768 × 4 bytes = 3 KB por chunk. Un corpus de 5.000 páginas dividido en chunks de 256 tokens (~30.000 chunks) necesita ~90 MB solo para vectores.',
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Árbol de decisión: ¿qué embedder deberías elegir?',
         content:
           '**Cinco preguntas binarias, en orden, llevan a la mayoría de lectores al embedder correcto.**',
-        image: '/images/best-embedding-models-local-rag-2026-decision-tree-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-es.svg',
         imageCaption: 'Diagrama de flujo de 5 pasos: disponibilidad de GPU → idioma del corpus → longitud de documento → necesidades de truncamiento de dimensiones → licencia comercial. Elección predeterminada si no estás seguro: jina-embeddings-v3 (92% retrieval@10, 89 idiomas multilingüe, flexibilidad de dimensiones Matryoshka). Verifica la licencia CC BY-NC para despliegues comerciales.',
         items: [
           '**1. ¿Tienes una GPU disponible para indexar?** → No: nomic-embed-text-v2 (5× velocidad CPU). Sí: continúa.',

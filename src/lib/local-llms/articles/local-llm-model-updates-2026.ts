@@ -352,7 +352,7 @@ schema: {
         q12026: {
           title: '¿Qué modelos LLM locales se lanzaron en el Q1 2026?',
           content: 'A abril de 2026, los lanzamientos notables de modelos open-weight de enero a abril de 2026. Todos los modelos a continuación están disponibles en varios formatos de cuantización -- consulta la [guía de cuantización](/es/local-llms/llm-quantization-explained) para conocer los detalles sobre las diferencias entre Q4 y Q5:',
-          image: '/images/q1-2026-model-releases-timeline-en.svg',
+          image: '/images/q1-2026-model-releases-timeline-es.svg',
           imageCaption: 'Línea de tiempo de lanzamientos de LLM locales del Q1 2026: Phi-4 Mini (enero, 3.8B), Gemma 3 (febrero, visión en todos los tamaños), Llama 4 Scout (marzo, arquitectura MoE) y Mistral Small 3.2 (abril). Todos se añadieron a Ollama en días tras el anuncio open-weight.',
           rows: [
             { 'Modelo': 'Gemma 3 (todos los tamaños)', 'Lanzamiento': 'Febrero 2026', 'Desarrollador': 'Google', 'Característica clave': 'Visión en todos los tamaños, contexto 128K, Apache 2.0', 'Ollama': 'ollama run gemma3:9b' },
@@ -364,7 +364,7 @@ schema: {
         },
         q42025: {
           title: '¿Qué modelos del Q4 2025 siguen siendo los más importantes en 2026?',
-          image: '/images/model-comparison-2026-en.svg',
+          image: '/images/model-comparison-2026-es.svg',
           imageCaption: 'Comparación de modelos LLM locales en abril de 2026: Llama 3.3 70B lidera con 82% MMLU y 42 GB VRAM, Qwen2.5 7B ofrece el mejor soporte multilingüe con 74% MMLU y 5 GB VRAM, Gemma 3 9B añade capacidades de visión, DeepSeek-R1 7B se especializa en tareas de razonamiento con 52% MATH. Todos ejecutables mediante Ollama.',
           rows: [
             { 'Modelo': 'Llama 3.3 70B', 'Lanzamiento': 'Diciembre 2025', 'Especificaciones clave': '82% MMLU, 88% HumanEval, contexto 128K', 'Sigue siendo relevante': 'Sí -- mejor opción 70B' },
@@ -391,7 +391,7 @@ schema: {
           content: [
             '**La mejora de dos años en la calidad de los modelos ejecutables localmente es sustancial.** A abril de 2026, un modelo de 7B (Qwen2.5 7B, 74% MMLU) iguala el rendimiento en benchmark de un modelo de 13B de principios de 2024. Un modelo de 70B (Llama 3.3 70B, 82% MMLU) iguala el rendimiento de GPT-4 (2023) -- un modelo que hace 3 años requería infraestructura de servidores de mil millones de dólares ahora funciona en un Mac Studio. Para recomendaciones de hardware según cada clase de modelo, consulta la [guía de hardware LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026).',
           ],
-          image: '/images/llm-quality-improvement-2024-2026-en.svg',
+          image: '/images/llm-quality-improvement-2024-2026-es.svg',
           imageCaption: 'Mejora de calidad de LLM locales 2024-2026: los modelos de clase 7B mejoraron del 64% MMLU (Mistral 7B, principios de 2024) al 74% (Qwen2.5 7B, abril de 2026). La clase 70B mejoró del 75% (Llama 3.3 70B) al 82-84% (Llama 3.3 70B y Qwen2.5 72B). Cada 18-24 meses, la calidad de los modelos locales avanza una generación.',
           rows: [
             { 'Año': 'Principios de 2024', 'Mejor 7B MMLU': '~64% (Mistral 7B)', 'Mejor 70B local MMLU': '~75% (Llama 3.3 70B)', 'Hardware necesario': '7B: 8 GB RAM; 70B: 48 GB RAM' },

@@ -427,7 +427,7 @@ schema: {
             '**Prueba de coherencia en formato largo**: pide un cuento de 1,000 palabras con un giro final específico. ¿El modelo plantea la preparación de forma natural y entrega el desenlace?',
             '**Prueba de diálogo**: escribe una escena con dos personajes con diferentes patrones de habla. ¿Cada personaje suena distinto, o el diálogo parece uniforme?',
           ],
-          image: '/images/creative-writing-model-comparison-en.svg',
+          image: '/images/creative-writing-model-comparison-es.svg',
           imageCaption: 'Comparación de LLM locales para escritura creativa: Llama 3.3 70B (40GB, mejor prosa), Mistral 24B (14GB, nivel 16GB), Llama 3.1 8B (6GB, nivel de entrada).',
         },
         llama33: {
@@ -445,7 +445,7 @@ schema: {
             { 'Especificación': 'Comando de Ollama', 'Valor': 'ollama run llama3.3:70b' },
           ],
           columns: ['Especificación', 'Valor'],
-          image: '/images/creative-writing-quality-spectrum-en.svg',
+          image: '/images/creative-writing-quality-spectrum-es.svg',
           imageCaption: 'Espectro de calidad de escritura creativa con LLM locales: 8B maneja historias de 500 palabras, 24B hasta 2K palabras, 70B sostiene escenas de 1K-3K palabras con el mayor rango estilístico.',
         },
         mistralSmall: {
@@ -496,7 +496,7 @@ schema: {
             '**Divide las tareas largas en secciones**: para un capítulo de 3,000 palabras, genéralo en secciones de 500 palabras. Esto mantiene al modelo dentro de su rango de coherencia fiable.',
             '**Compara salidas locales y en la nube**: usa [PromptQuorum](/) para enviar el mismo prompt creativo a tu modelo local de Ollama y a modelos en la nube simultáneamente — útil para calibrar cuándo la calidad local es suficiente.',
           ],
-          image: '/images/creative-writing-temperature-guide-en.svg',
+          image: '/images/creative-writing-temperature-guide-es.svg',
           imageCaption: 'Guía de temperatura de LLM para escritura creativa: 0.7 predeterminado es demasiado plano, 0.9-1.05 óptimo para ficción, por encima de 1.1 produce salida incoherente.',
         },
         promptExamples: {

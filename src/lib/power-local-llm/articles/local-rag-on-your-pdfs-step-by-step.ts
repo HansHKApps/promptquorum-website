@@ -2460,7 +2460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM también tiene un LLM predeterminado integrado y un embedder predeterminado integrado. Ambos son deliberadamente pequeños para que la aplicación arranque rápido en hardware de gama baja. Los reemplazamos en los pasos 4 y 6 porque la calidad de recuperación es todo en un sistema RAG.',
           },
         ],
-        image: '/images/local-rag-on-your-pdfs-step-by-step-rag-architecture-en.svg',
+        image: '/images/local-rag-on-your-pdfs-step-by-step-rag-architecture-es.svg',
         imageCaption: 'Stack RAG local: Ollama (runtime, localhost:11434), Llama 3.3 8B Q4_K_M (~4,9 GB, modelo de respuesta), AnythingLLM Desktop (interfaz + almacén vectorial LanceDB) y nomic-embed-text-v1.5 (~280 MB embedder). Flujo de datos: PDFs → AnythingLLM → nomic-embed-text → LanceDB → Llama 3.3 8B → Respuesta.',
       },
       prerequisites: {
@@ -2475,7 +2475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Permisos:** AnythingLLM no necesita admin/root. Ollama se instala en `/usr/local/bin` en macOS/Linux (pide contraseña una vez) o `%LOCALAPPDATA%` en Windows (sin admin).',
           '**Documentos listos:** 5–20 PDFs para empezar. Cantidades mayores también funcionan, pero un conjunto pequeño permite probar la calidad de recuperación más rápido.',
         ],
-        image: '/images/local-rag-on-your-pdfs-step-by-step-prerequisites-en.svg',
+        image: '/images/local-rag-on-your-pdfs-step-by-step-prerequisites-es.svg',
         imageCaption: 'Requisitos del sistema: 16 GB de RAM (mínimo para Llama 3.3 8B Q4 + AnythingLLM), 20 GB de disco libre, 50 Mbps para la descarga del modelo. macOS 12+, Windows 10/11 o Linux. AnythingLLM no requiere permisos de administrador.',
       },
       step1InstallOllama: {
@@ -2518,7 +2518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '¿Ya tienes otros modelos de Ollama? `ollama list` los muestra todos. Puedes mantener varios modelos instalados y cambiar entre ellos en la configuración del workspace de AnythingLLM.',
           },
         ],
-        image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-en.svg',
+        image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-es.svg',
         imageCaption: 'Opciones de modelo por RAM: Llama 3.3 8B Q4_K_M (~4,9 GB, 16 GB de RAM, ~8 min a 50 Mbps) es el recomendado; Phi-4 Mini Q4 (~2,4 GB, 8 GB de RAM, ~4 min) para equipos con poca memoria; Mistral 7B Q4_K_M (~4,1 GB, 16 GB de RAM, ~7 min) como alternativa.',
       },
       step3InstallAnythingLlm: {
@@ -2539,7 +2539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'El LLM predeterminado de AnythingLLM es un modelo integrado muy pequeño destinado únicamente a la demo de bienvenida. En el siguiente paso lo apuntaremos a tu Ollama local. No uses el predeterminado para consultas reales; las respuestas serán demasiado débiles para ser útiles.',
           },
         ],
-        image: '/images/local-rag-on-your-pdfs-step-by-step-install-flow-en.svg',
+        image: '/images/local-rag-on-your-pdfs-step-by-step-install-flow-es.svg',
         imageCaption: 'Instalación de AnythingLLM Desktop en 4 pasos: Descargar desde anythingllm.com (~600 MB), Instalar sin admin, Abrir y omitir el aviso de nube, luego elegir "Local Setup" para mantener todos los datos sin conexión.',
       },
       step4ConfigureEmbedding: {
@@ -2562,7 +2562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '¿Por qué nomic-embed-text-v1.5 específicamente? En mayo de 2026 ocupa el top 5 del ranking MTEB Retrieval para cualquier modelo de menos de 500 MB, corre a 400–800 chunks/s en una CPU moderna y a más de 2000 chunks/s en Apple Silicon, y tiene licencia Apache 2.0. Es el primer upgrade estándar para casi todos los stacks RAG locales; consulta la [comparativa de modelos de embedding](/es/power-local-llm/best-embedding-models-local-rag-2026) para conocer las alternativas.',
           },
         ],
-        image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-en.svg',
+        image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-es.svg',
         imageCaption: 'Paso 4 en dos paneles: Preferencia de LLM (Proveedor = Ollama, Endpoint = http://127.0.0.1:11434, Modelo = llama3.3:8b-instruct-q4_K_M), luego Preferencia de Embedding (primero descarga nomic-embed-text, luego selecciona nomic-embed-text:latest vía Ollama).',
       },
       step5UploadPdfs: {
@@ -2582,7 +2582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Los PDFs de escaneos OCR antiguos suelen contener texto corrupto o capas de texto vacías; el archivo parece correcto al ojo humano, pero AnythingLLM extrae "[image]" o cadenas vacías. Abre el PDF en un editor de texto (o ejecuta `pdftotext file.pdf -` de poppler-utils) para confirmar que existe la capa de texto antes de subirlo.',
           },
         ],
-        image: '/images/local-rag-on-your-pdfs-step-by-step-embed-flow-en.svg',
+        image: '/images/local-rag-on-your-pdfs-step-by-step-embed-flow-es.svg',
         imageCaption: 'Del PDF subido a la consulta en 5 pasos: Subir PDFs (arrastrar y soltar) → Extraer capa de texto → Dividir en chunks (1000 tokens / 200 de superposición) → Procesar con nomic-embed-text vía Ollama → Almacenar en LanceDB y hacer preguntas. Velocidad: 400–800 chunks/s en CPU, más de 2000 en Apple Silicon.',
       },
       step6TestQueries: {
@@ -2614,7 +2614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'El ajuste empírico supera a la teoría: haz las mismas 5 queries de prueba antes y después del cambio de tamaño de chunk y compara. Si la recuperación a 1000/200 es peor, probablemente tienes documentos muy cortos (memos de una página, docstrings de código): prueba 256/64 en su lugar.',
           },
         ],
-        image: '/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-en.svg',
+        image: '/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-es.svg',
         imageCaption: 'Configuración de chunks predeterminada vs. recomendada: los valores predeterminados 512/0/Top-K 4 dejan fragmentos de oraciones en los límites. Los valores recomendados 1000 tokens / 200 de superposición / Top-K 4–6 capturan las oraciones en los límites dentro de la ventana de superposición. Volver a procesar 20 PDFs tarda ~5 segundos.',
       },
       sampleQueries: {
@@ -2659,7 +2659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Usa estos tres patrones de query como tu conjunto de prueba tras cada cambio en la configuración de recuperación. Si la recuperación de hechos falla pero la síntesis funciona, tus chunks son demasiado grandes. Si la síntesis falla pero la recuperación de hechos funciona, tu top-k es demasiado bajo. El patrón de lo que falla te dice qué parámetro ajustar.',
           },
         ],
-        image: '/images/local-rag-on-your-pdfs-step-by-step-query-types-en.svg',
+        image: '/images/local-rag-on-your-pdfs-step-by-step-query-types-es.svg',
         imageCaption: '3 tipos de query RAG: Recuperación de hechos (cita directa + referencia = saludable; respuesta genérica = recuperación rota), Síntesis (3–5 oraciones del abstract + conclusión = saludable), Entre documentos (citas de ambos artículos = saludable; cita solo uno o inventa = roto). Verde = saludable, rojo = arregla primero la recuperación.',
       },
       troubleshooting: {
@@ -2700,7 +2700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         columns: ['Síntoma', 'Causa probable', 'Solución'],
-        image: '/images/local-rag-on-your-pdfs-step-by-step-troubleshooting-en.svg',
+        image: '/images/local-rag-on-your-pdfs-step-by-step-troubleshooting-es.svg',
         imageCaption: 'Seis modos de fallo: conexión rechazada (ejecutar ollama serve), descarga detenida (Ctrl+C → df -h → reintentar), embedding colgado (esperar 30–60 s), chunks irrelevantes (aplicar Pasos 4 + 7), respuestas cortas/genéricas (configurar llama3.3:8b-instruct-q4_K_M, subir Top-K), chunks vacíos de PDFs escaneados (ejecutar ocrmypdf primero).',
       },
       regionalContext: {

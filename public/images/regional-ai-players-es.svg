@@ -1,0 +1,149 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- Background -->
+  <rect width="900" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="450" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Liderazgo regional en IA y actores dominantes
+  </text>
+
+  <!-- EU Players (Left) -->
+  <g id="eu-players">
+    <!-- Region header -->
+    <rect x="30" y="60" width="260" height="40" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="160" y="86" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇪🇺 Uni&#xf3;n Europea
+    </text>
+
+    <!-- Players -->
+    <text x="50" y="130" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Modelos de frontera:</text>
+
+    <!-- Mistral -->
+    <rect x="40" y="145" width="240" height="50" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="160" y="165" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Mistral AI</text>
+    <text x="160" y="182" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Par&#xed;s — modelos de 7B a 120B</text>
+
+    <!-- Stability AI -->
+    <rect x="40" y="205" width="240" height="50" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="160" y="225" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Stability AI</text>
+    <text x="160" y="242" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">RU — difusi&#xf3;n, modelos abiertos</text>
+
+    <!-- Contributors -->
+    <text x="50" y="290" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Actores destacados:</text>
+
+    <rect x="40" y="305" width="240" height="45" rx="6" fill="#FEF7FF" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="160" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="600">
+      Hugging Face (FR), Big Science
+    </text>
+    <text x="160" y="338" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">
+      BLOOM, investigaci&#xf3;n abierta
+    </text>
+
+    <!-- Challenge -->
+    <rect x="40" y="365" width="240" height="60" rx="6" fill="#FFEBEE" stroke="#D32F2F" stroke-width="1.5"/>
+    <text x="160" y="385" font-family="system-ui, sans-serif" font-size="12" fill="#D32F2F" text-anchor="middle" font-weight="700">
+      Desaf&#xed;o
+    </text>
+    <text x="160" y="403" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="500">
+      C&#xf3;digo abierto s&#xf3;lido, pero
+    </text>
+    <text x="160" y="418" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="500">
+      sin financiaci&#xf3;n a escala de EE. UU.
+    </text>
+  </g>
+
+  <!-- US Players (Center) -->
+  <g id="us-players">
+    <!-- Region header -->
+    <rect x="320" y="60" width="260" height="40" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="450" y="86" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇺🇸 Estados Unidos
+    </text>
+
+    <!-- Leaders -->
+    <text x="340" y="130" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">L&#xed;deres de frontera:</text>
+
+    <!-- OpenAI -->
+    <rect x="330" y="145" width="240" height="50" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="450" y="165" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">OpenAI</text>
+    <text x="450" y="182" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">GPT-4o, l&#xed;der del mercado</text>
+
+    <!-- Google/DeepMind -->
+    <rect x="330" y="205" width="240" height="50" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="450" y="225" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Google DeepMind</text>
+    <text x="450" y="242" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Gemini, infraestructura importante</text>
+
+    <!-- Anthropic/Meta -->
+    <text x="340" y="290" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Contribuyentes principales:</text>
+
+    <rect x="330" y="305" width="240" height="45" rx="6" fill="#FEF7FF" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="450" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="600">
+      Anthropic, Meta, xAI
+    </text>
+    <text x="450" y="338" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">
+      Claude, Llama, Grok
+    </text>
+
+    <!-- Advantage -->
+    <rect x="330" y="365" width="240" height="60" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="1.5"/>
+    <text x="450" y="385" font-family="system-ui, sans-serif" font-size="12" fill="#388E3C" text-anchor="middle" font-weight="700">
+      Ventaja
+    </text>
+    <text x="450" y="403" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="500">
+      Financiaci&#xf3;n de capital riesgo,
+    </text>
+    <text x="450" y="418" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="500">
+      escala de c&#xf3;mputo, talento
+    </text>
+  </g>
+
+  <!-- China Players (Right) -->
+  <g id="china-players">
+    <!-- Region header -->
+    <rect x="610" y="60" width="260" height="40" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2"/>
+    <text x="740" y="86" font-family="system-ui, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle" font-weight="700">
+      🇨🇳 China
+    </text>
+
+    <!-- State-backed players -->
+    <text x="630" y="130" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">L&#xed;deres respaldados por el Estado:</text>
+
+    <!-- Baidu -->
+    <rect x="620" y="145" width="240" height="50" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="740" y="165" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">Baidu</text>
+    <text x="740" y="182" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Ernie Bot, b&#xfa;squeda + IA</text>
+
+    <!-- Alibaba/Tencent -->
+    <rect x="620" y="205" width="240" height="50" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="740" y="225" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">Alibaba, Tencent</text>
+    <text x="740" y="242" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Nube + bots de IA m&#xf3;viles</text>
+
+    <!-- Others -->
+    <text x="630" y="290" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">Emergentes:</text>
+
+    <rect x="620" y="305" width="240" height="45" rx="6" fill="#FEF7FF" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="740" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="600">
+      Zhipu AI, SenseTime
+    </text>
+    <text x="740" y="338" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">
+      ChatGLM, modelos de visi&#xf3;n
+    </text>
+
+    <!-- Control model -->
+    <rect x="620" y="365" width="240" height="60" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="740" y="385" font-family="system-ui, sans-serif" font-size="12" fill="#7D5260" text-anchor="middle" font-weight="700">
+      Gobernanza
+    </text>
+    <text x="740" y="403" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="500">
+      Se requiere aprobaci&#xf3;n estatal,
+    </text>
+    <text x="740" y="418" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="500">
+      supervisi&#xf3;n de la CAC
+    </text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="450" y="480" font-family="system-ui, sans-serif" font-size="13" fill="#49454F" text-anchor="middle" font-weight="600">
+    EE. UU. tiene escala + velocidad | la UE tiene impulso de c&#xf3;digo abierto | China tiene respaldo estatal + control
+  </text>
+<text x="892" y="495" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

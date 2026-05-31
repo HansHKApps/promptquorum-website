@@ -395,7 +395,7 @@ schema: {
           callouts: [
             { type: '💡', text: 'Consejo Pro: las capas son ligeras — lo que importa es la velocidad de comunicación entre GPUs. Las capas 1–40 en GPU1 y las capas 41–80 en GPU2 implican una transferencia de GPU por token. Por eso NVLink es importante.' },
           ],
-          image: '/images/multi-gpu-local-llms-layer-splitting-en.svg',
+          image: '/images/multi-gpu-local-llms-layer-splitting-es.svg',
           imageCaption: 'División de capas en 2 GPUs: modelo 70B de 80 capas distribuido (capas 1–40 en GPU 1, capas 41–80 en GPU 2), con comunicación PCIe entre GPUs añadiendo ~10% de overhead (~100 tok/sec en dual RTX 4090).',
         },
         vllmSetup: {
@@ -407,7 +407,7 @@ schema: {
           callouts: [
             { type: '⚠️', text: 'Advertencia: ambas GPUs deben tener la misma VRAM. Si combinas RTX 4090 (24 GB) + RTX 4080 (16 GB), vLLM quedará limitado a 16 GB por GPU. Usa GPUs del mismo modelo para un rendimiento óptimo.' },
           ],
-          image: '/images/multi-gpu-local-llms-vllm-setup-en.svg',
+          image: '/images/multi-gpu-local-llms-vllm-setup-es.svg',
           imageCaption: 'Configuración vLLM multi-GPU en 4 pasos: verificar ambas GPUs visibles (nvidia-smi), instalar vLLM, lanzar con --tensor-parallel-size 2, verificar que ambas GPUs estén cargadas y alcancen ~100 tok/sec.',
         },
         ollamaSetup: {
@@ -441,7 +441,7 @@ schema: {
           callouts: [
             { type: '📌', text: 'Punto clave: dos RTX 4090 ofrecen ~100 tok/sec en modelos 70B — aproximadamente el 90% de la velocidad de una sola GPU, con un overhead de comunicación del 5–10%. La RTX 5090 (32 GB GDDR7, lanzada en enero de 2026) cambió la ecuación: una sola 5090 ejecuta 70B Q4 sin división a 40–50 tok/sec. Las 5090 duales (64 GB combinados) son el primer setup de consumo capaz de manejar modelos 405B Q4.' },
           ],
-          image: '/images/multi-gpu-local-llms-performance-table-en.svg',
+          image: '/images/multi-gpu-local-llms-performance-table-es.svg',
           imageCaption: 'Comparación de rendimiento GPU en 8 filas para modelos 70B: la RTX 4090 única no puede ejecutar 70B, el dual RTX 4090 ofrece 100 tok/sec ($3,600), la RTX 5090 32GB ejecuta 70B Q4 a 40–50 tok/sec ($2,000), el dual RTX 5090 maneja 405B Q4 a 25–35 tok/sec ($4,000).',
         },
         whenToUse: {
@@ -457,7 +457,7 @@ schema: {
           callouts: [
             { type: '💡', text: 'Consejo Pro: para experimentar con modelos 70B, prueba primero el CPU offloading con una sola GPU (8–10 tok/sec en RTX 4090). Una vez confirmada la demanda en producción, invierte en una segunda RTX 4090 para el setup multi-GPU (100 tok/sec).' },
           ],
-          image: '/images/multi-gpu-local-llms-when-to-use-en.svg',
+          image: '/images/multi-gpu-local-llms-when-to-use-es.svg',
           imageCaption: 'Matriz de decisión multi-GPU: úsalo si ejecutas modelos 70B+, sirves a 50+ usuarios concurrentes o necesitas 100+ tok/sec para producción; omítelo si aún no has comprado la 2.ª GPU o estás experimentando.',
         },
         commonMistakes: {

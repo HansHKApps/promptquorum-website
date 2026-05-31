@@ -302,7 +302,7 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
-          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-en.svg',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-os-summary-es.svg',
           imageCaption: 'macOS vs Windows vs Linux para LLMs locales: macOS ofrece la configuración más sencilla desde $1.099; Windows entrega el máximo rendimiento GPU; Linux ofrece la mejor relación costo-rendimiento desde $810 en total.',
           items: [
             'macOS (Apple Silicon): Cero costo GPU, Ollama gratuito, maneja Llama 3.1 8B sin problemas. Mejor para usuarios ocasionales o no técnicos.',
@@ -318,7 +318,7 @@ schema: {
         'hardware-cost': {
           id: 'hardware-cost',
           title: '¿Cuál es el costo de hardware por sistema operativo?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-en.svg',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-es.svg',
           imageCaption: 'Costo de hardware Mac vs Windows vs Linux para LLMs locales: M5 Max a $3.499–4.999 ejecuta 70B Q8 a 25–35 tok/s; RTX 5090 a ~$2.000 alcanza 40–50 tok/s; RTX 4090 usada a $1.000–1.400 ofrece soporte 70B Q4.',
           content: [
             '**macOS (generación Apple M5 — envío marzo 2026):** MacBook Pro M5 Pro 64 GB ($2.499–3.199) ejecuta 70B Q4 a 15–20 tok/s. MacBook Pro M5 Max 128 GB ($3.499–4.999) ejecuta 70B Q8 a 25–35 tok/s. MacBook Air M5 32 GB ($1.099–1.299) maneja 8B sin problemas. Costo adicional total al actualizar: $0 si ya tienes un Mac; $1.099+ si compras nuevo.',
@@ -333,7 +333,7 @@ schema: {
         'setup': {
           id: 'setup',
           title: '¿Cuál es la configuración y la complejidad?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-en.svg',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-es.svg',
           imageCaption: 'Tiempo de configuración de LLM local por SO: macOS tarda 6 minutos sin comandos de terminal; Windows tarda 15–20 minutos con GUI; Linux Ubuntu requiere 40–70 minutos incluyendo la instalación de CUDA.',
           content: [
             '**macOS:** Descarga Ollama (1 minuto), ejecuta la app, selecciona Llama 3.1 8B (5 minutos) = 6 minutos en total, cero comandos de terminal. Mejor para usuarios no técnicos.',
@@ -351,7 +351,7 @@ schema: {
         'performance': {
           id: 'performance',
           title: '¿Cómo se comparan las velocidades de inferencia?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-performance-en.svg',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-performance-es.svg',
           imageCaption: 'Comparación de velocidad de inferencia de LLM local: RTX 5090 lidera a 40–50 tok/s para modelos 70B; M5 Max alcanza 25–35 tok/s; M5 Pro logra 15–20 tok/s; RTX 5060 Ti 16 GB no puede ejecutar 70B.',
           content: [
             '**macOS (generación Apple M5 — envío marzo 2026):** M5 Pro (64 GB) ejecuta Llama 3.1 70B Q4 a 15–20 tok/s. M5 Max (128 GB, 614 GB/s de ancho de banda) ejecuta 70B Q8 a 25–35 tok/s — una mejora de 4× frente al M4 Max (que era impráctica para 70B).',
@@ -371,7 +371,7 @@ schema: {
         'tools': {
           id: 'tools',
           title: '¿Qué herramientas y frameworks están soportados por SO?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-tool-support-en.svg',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-tool-support-es.svg',
           imageCaption: 'Soporte de herramientas y frameworks por SO: Ollama funciona en los tres; LM Studio no tiene GUI nativa en Linux; vLLM y el fine-tuning con CUDA son exclusivos de Linux con rendimiento completo.',
           content: [
             '**Ollama (motor de inferencia): macOS ✓, Windows ✓, Linux ✓.** Funciones idénticas en los tres.',
@@ -388,7 +388,7 @@ schema: {
         'tco': {
           id: 'tco',
           title: '¿Cuál es el costo total de propiedad en 3 años?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-tco-en.svg',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-tco-es.svg',
           imageCaption: 'Costo total de propiedad de 3 años para LLMs locales: Linux + RTX 5060 Ti es el más barato a $810; Mac mini M4 Pro cuesta $2.319; MacBook Pro M5 Max cuesta $3.529; Linux + RTX 5090 ofrece el mejor valor GPU a $1.500.',
           content: [
             '| Configuración | Año 1 | Año 2–3 | Total 3 años |',

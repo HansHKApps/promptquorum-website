@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTableSection: {
         id: 'comparison-table-main',
         title: 'Tabla comparativa de asistentes de código IA (mayo 2026)',
-        image: '/images/best-ai-coding-assistant-local-llm-comparison-en.svg',
+        image: '/images/best-ai-coding-assistant-local-llm-comparison-es.svg',
         imageCaption: 'Comparación de asistentes de código IA: Continue.dev (mejor en general, gratis), Cursor ($20/mes, mejor UX), Sourcegraph Cody ($9/usuario/mes, mejor para equipos), Tabnine ($12/mes, mejor privacidad), Windsurf (gratis/$15/mes, alternativa en ascenso). Todos soportan LLMs locales con complejidad de configuración variable. Mayo 2026.',
         content: 'Comparación directa de funciones y precios. Precios verificados en sitios web de proveedores en mayo 2026 y actualizados mensualmente. El soporte LLM local varía desde integración nativa (Continue.dev) hasta configuración específica del proveedor (Cursor, Cody) hasta solo enterprise (Tabnine self-hosted). Los precios pueden variar según tu país.',
         note: 'Todos los precios verificados directamente en los sitios web oficiales de los proveedores. Suscríbete para estar al día de las últimas actualizaciones de mayo 2026.',
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localLlmIntegration: {
         id: 'local-llm-integration',
         title: 'Profundidad de integración LLM local: La diferencia clave',
-        image: '/images/best-ai-coding-assistant-local-llm-integration-en.svg',
+        image: '/images/best-ai-coding-assistant-local-llm-integration-es.svg',
         imageCaption: 'Comparación de profundidad de integración LLM local: Continue.dev (arriba a la derecha = configuración fácil + soporte completo de funciones en local), Cursor (dificultad moderada, cloud-first con fallback local), Sourcegraph Cody (equilibrado pero cloud-first), Tabnine (abajo a la izquierda = solo enterprise, complejo), Windsurf (soporte en ascenso). El gráfico muestra facilidad de configuración vs completitud de funciones.',
         content: 'No todo el "soporte de LLM local" es igual. Esta es la comparación honesta:\n\n**Continue.dev: Soporte nativo de primera clase**\nContinue.dev fue diseñado con el LLM local como objetivo principal. La configuración está en un archivo config.json. Apunta a tu URL de Ollama, selecciona un modelo y listo. Todas las funciones—chat, completados en línea, modo de edición—funcionan en local. Sin manejo especial necesario. Este es el estándar de oro.\n\n**Cursor: Configuración de endpoint personalizado**\nCursor soporta LLMs locales vía la función "API OpenAI personalizada". Configuras tu endpoint de Ollama (con headers CORS) como URL base. Los completados se dirigen a tu modelo local. Esto funciona, pero algunas funciones de Cursor (como el modo agéntico Composer) pueden hacer fallback a la nube silenciosamente. La configuración es más complicada que en Continue.dev (15 minutos vs 5 minutos).\n\n**Sourcegraph Cody: Configuración de Ollama disponible**\nCody soporta Ollama vía configuración. El chat y los completados funcionan en local. Pero Cody fue construido cloud-first—la experiencia del producto asume la nube. Los completados en línea apuntan por defecto a la nube y debes seleccionar manualmente tu modelo local.\n\n**Tabnine: Solo implementación enterprise**\nLa opción self-hosted de Tabnine es solo para enterprise y requiere infraestructura dedicada. El plan estándar tiene soporte de LLM local limitado. No es para desarrolladores individuales.\n\n**Windsurf: Integración de Ollama más reciente**\nWindsurf añadió soporte de Ollama a finales de 2025. Funciona, pero es más reciente que Continue.dev. Espera algunas asperezas ocasionales. La integración mejorará con el tiempo.',
         items: [
@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decisionMatrix: {
         id: 'decision-matrix',
         title: 'Matriz de decisión: ¿Qué herramienta es la tuya?',
-        image: '/images/best-ai-coding-assistant-local-llm-decision-tree-en.svg',
+        image: '/images/best-ai-coding-assistant-local-llm-decision-tree-es.svg',
         imageCaption: 'Árbol de decisión para elegir asistentes de código IA: Inicio → Presupuesto (Gratis/De pago) → Camino gratuito: ¿Soporte local? (Sí=Continue.dev, No=Windsurf) → Camino de pago: ¿Solo/Equipo? (Solo=Cursor, Equipo=Cody/Tabnine). Las recomendaciones muestran las ventajas de cada elección.',
         content: 'Usa esta matriz para encontrar tu mejor opción.',
         items: [
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       privacySection: {
         id: 'privacy-enterprise',
         title: 'Privacidad y consideraciones enterprise',
-        image: '/images/best-ai-coding-assistant-local-llm-privacy-en.svg',
+        image: '/images/best-ai-coding-assistant-local-llm-privacy-es.svg',
         imageCaption: 'Comparación del flujo de datos: Continue.dev local (100% permanece en la máquina), Cursor híbrido (consultas a Cursor), Sourcegraph Cody nube (contexto de código a Sourcegraph), Tabnine self-hosted (tu infraestructura), GitHub Copilot (código a Microsoft), Windsurf híbrido (opcional). El cumplimiento GDPR/HIPAA requiere únicamente local o self-hosted.',
         content: 'Entender qué envía cada herramienta a los servidores es crítico para el trabajo en entornos regulados.',
         items: [

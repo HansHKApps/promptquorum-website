@@ -386,7 +386,7 @@ schema: {
             { 'Cuantización': 'Q8', 'Uso de RAM': 'Muy alto', 'Velocidad': 'Lenta', 'Calidad': 'Casi FP16', 'Ideal para': 'Benchmarking' },
           ],
           columns: ['Cuantización', 'Uso de RAM', 'Velocidad', 'Calidad', 'Ideal para'],
-          image: '/images/quantization-levels-comparison-vram-savings-en.svg',
+          image: '/images/quantization-levels-comparison-vram-savings-es.svg',
           imageCaption: 'Ahorro de VRAM por nivel de cuantización: FP32 = 280 GB, Q8 = 140 GB (50% de ahorro), Q4 = 70 GB (75% de ahorro), Q3 = 53 GB (81% de ahorro). Q4 es el punto óptimo para la mayoría de los usuarios.',
         },
         'choices': {
@@ -398,7 +398,7 @@ schema: {
             '**32 GB de RAM:** Q5, Q6 o Q8 (modelos más grandes, mayor calidad)',
             '**Precisión máxima:** Q8 (cuando la VRAM no es una restricción)',
           ],
-          image: '/images/quantization-levels-comparison-hardware-guide-en.svg',
+          image: '/images/quantization-levels-comparison-hardware-guide-es.svg',
           imageCaption: 'Guía de selección de hardware: 8 GB de RAM → Q3/Q4 (modelos 7B), 16 GB → Q4_K_M (recomendado), 32 GB+ → Q5/Q6/Q8 (modelos más grandes, mayor calidad), 64 GB+ → Q8 o FP32 (investigación/médico).',
         },
         'vram': {
@@ -426,7 +426,7 @@ schema: {
             'Impacto real: Q4 vs Q8 = 1–2% menos respuestas correctas de cada 100 preguntas.',
             'Para chat/escritura: diferencia imperceptible. Para problemas STEM: Q8 es más seguro.',
           ],
-          image: '/images/quantization-levels-comparison-quality-loss-en.svg',
+          image: '/images/quantization-levels-comparison-quality-loss-es.svg',
           imageCaption: 'Benchmarks de pérdida de calidad: Q8 = -0.1% de pérdida, Q5 = -0.5% de pérdida, Q4 = -1.2% de pérdida, Q3 = -3.7% de pérdida en MMLU. La pérdida de calidad de Q4 es imperceptible para la mayoría de las tareas.',
         },
         'when': {

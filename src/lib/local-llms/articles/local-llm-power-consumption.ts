@@ -372,7 +372,7 @@ schema: {
         gpuPower: {
           id: 'gpu-power',
           title: '¿Cuánta energía consume cada GPU en inferencia LLM?',
-          image: '/images/local-llm-power-consumption-gpu-power-draw-en.svg',
+          image: '/images/local-llm-power-consumption-gpu-power-draw-es.svg',
           imageCaption: 'Consumo de energía de GPU para inferencia LLM local: RTX 5090/4090 a 575W (fuente 1200W+), RTX 4080/4070 Ti a 200–360W, Apple M5 Max/Pro a 25–35W (10× más eficiente por token). Requisitos mínimos de fuente incluidos.',
           content: [
             '**La RTX 4090 y la RTX 5090 consumen 575W a plena carga — el nivel más alto disponible para LLMs locales.** El consumo de energía de la GPU es el factor dominante en la elección de la fuente y en la factura eléctrica.',
@@ -398,7 +398,7 @@ schema: {
         systemPower: {
           id: 'system-power',
           title: '¿Cuánta energía consume en total un PC LLM local?',
-          image: '/images/local-llm-power-consumption-apple-vs-nvidia-en.svg',
+          image: '/images/local-llm-power-consumption-apple-vs-nvidia-es.svg',
           imageCaption: 'RTX 4090 vs Apple M5 Max eficiencia energética: 575W y $52/mes vs 25–35W y $2.60/mes a $0.12/kWh. El M5 Max es 10× más eficiente por token en inferencia de modelos 7B.',
           content: [
             '**La GPU no es el único consumidor de energía.** Ten en cuenta también la CPU, la RAM, el almacenamiento y la placa base:',
@@ -418,7 +418,7 @@ schema: {
         electricityCost: {
           id: 'electricity-cost',
           title: '¿Cuánto cuesta ejecutar un LLM local 24/7?',
-          image: '/images/local-llm-power-consumption-electricity-cost-en.svg',
+          image: '/images/local-llm-power-consumption-electricity-cost-es.svg',
           imageCaption: 'Costo de electricidad 24/7 para LLM local a $0.12/kWh: RTX 4090 $52/mes ($625/año), RTX 4080 $30/mes, RTX 4070 Ti $26/mes, Apple M5 Max $2.60/mes ($32/año).',
           content: [
             '**Suponiendo $0.12/kWh (promedio EE.UU.):**',
@@ -487,7 +487,7 @@ schema: {
         regionalContext: {
           id: 'regional-context',
           title: 'Costos de electricidad por región',
-          image: '/images/local-llm-power-consumption-regional-costs-en.svg',
+          image: '/images/local-llm-power-consumption-regional-costs-es.svg',
           imageCaption: 'Costo mensual de inferencia LLM local por región: EE.UU. $52 (RTX 4090) vs $2.60 (M5 Max), Alemania €152 vs €7.60, Francia €130 vs €6.50, Japón ¥12,960 vs ¥648, China ¥504 vs ¥25. Tarifas estimadas para 2026.',
           content: [
             '**UE (Alemania/Francia): €0.30–0.40/kWh — 3× el promedio de EE.UU.** Ejecutar una RTX 4090 24/7 cuesta €120–160/mes en Alemania. El RGPD fomenta el despliegue en las instalaciones, pero los costos de energía hacen que Apple Silicon o la inferencia GPU con límite de potencia sean esenciales para usuarios de la UE.',

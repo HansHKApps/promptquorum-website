@@ -1,0 +1,124 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- Background -->
+  <rect width="900" height="480" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="450" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Cronolog&#xed;a de la regulaci&#xf3;n global de la IA: 2022–2026
+  </text>
+
+  <!-- Center timeline line -->
+  <line x1="80" y1="280" x2="870" y2="280" stroke="#E8DEF8" stroke-width="3"/>
+
+  <!-- Year markers -->
+  <text x="130" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2022</text>
+  <circle cx="130" cy="280" r="6" fill="#6750A4"/>
+
+  <text x="260" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2023</text>
+  <circle cx="260" cy="280" r="6" fill="#6750A4"/>
+
+  <text x="390" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2024</text>
+  <circle cx="390" cy="280" r="6" fill="#6750A4"/>
+
+  <text x="520" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2025</text>
+  <circle cx="520" cy="280" r="6" fill="#6750A4"/>
+
+  <text x="650" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2026</text>
+  <circle cx="650" cy="280" r="6" fill="#6750A4"/>
+
+  <!-- 2022 Events -->
+  <!-- EU -->
+  <g>
+    <line x1="130" y1="280" x2="100" y2="180" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="20" y="90" width="160" height="85" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="100" y="110" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Ley de IA de la UE</text>
+    <text x="100" y="128" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="600">Propuesta</text>
+    <text x="100" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Marco basado en riesgo</text>
+    <text x="100" y="156" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">esbozado</text>
+  </g>
+
+  <!-- US -->
+  <g>
+    <line x1="130" y1="280" x2="160" y2="380" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="100" y="385" width="120" height="80" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="160" y="405" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Orden Biden</text>
+    <text x="160" y="423" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="600">Orden ejecutiva</text>
+    <text x="160" y="438" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">sobre seguridad de IA</text>
+  </g>
+
+  <!-- 2023 Events -->
+  <!-- EU -->
+  <g>
+    <line x1="260" y1="280" x2="230" y2="180" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="150" y="90" width="160" height="85" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="230" y="110" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Ley de IA</text>
+    <text x="230" y="128" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Negociada</text>
+    <text x="230" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Acuerdo final sobre</text>
+    <text x="230" y="156" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">niveles de riesgo y reglas</text>
+  </g>
+
+  <!-- China -->
+  <g>
+    <line x1="260" y1="280" x2="290" y2="380" stroke="#7D5260" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="230" y="385" width="120" height="80" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="290" y="405" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">Reglas CAC</text>
+    <text x="290" y="423" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="600">Recomendaci&#xf3;n</text>
+    <text x="290" y="438" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">reglas de algoritmos</text>
+  </g>
+
+  <!-- 2024 Events -->
+  <!-- EU -->
+  <g>
+    <line x1="390" y1="280" x2="360" y2="180" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="280" y="90" width="160" height="85" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="360" y="110" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">🎯 Ley de IA de la UE</text>
+    <text x="360" y="128" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Adoptada oficialmente</text>
+    <text x="360" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">La aplicaci&#xf3;n comienza</text>
+    <text x="360" y="156" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Ene 2025+</text>
+  </g>
+
+  <!-- US -->
+  <g>
+    <line x1="390" y1="280" x2="420" y2="380" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="360" y="385" width="120" height="80" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="420" y="405" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">NIST RMF</text>
+    <text x="420" y="423" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="600">Lanzamiento 1.1</text>
+    <text x="420" y="438" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Marco voluntario</text>
+  </g>
+
+  <!-- 2025 Events -->
+  <!-- EU -->
+  <g>
+    <line x1="520" y1="280" x2="490" y2="180" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="410" y="90" width="160" height="85" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="490" y="110" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">🎯 Aplicaci&#xf3;n</text>
+    <text x="490" y="128" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Inicio gradual</text>
+    <text x="490" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">IA prohibida vetada</text>
+    <text x="490" y="156" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Enero 2025</text>
+  </g>
+
+  <!-- China -->
+  <g>
+    <line x1="520" y1="280" x2="550" y2="380" stroke="#7D5260" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="490" y="385" width="120" height="80" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="550" y="405" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">Reglas LLM</text>
+    <text x="550" y="423" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="600">Endurecimiento</text>
+    <text x="550" y="438" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Controles m&#xe1;s estrictos</text>
+  </g>
+
+  <!-- 2026 Events -->
+  <!-- US -->
+  <g>
+    <line x1="650" y1="280" x2="680" y2="380" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="620" y="385" width="120" height="80" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="680" y="405" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Posible</text>
+    <text x="680" y="423" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" text-anchor="middle" font-weight="600">legislaci&#xf3;n de IA</text>
+    <text x="680" y="438" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">a&#xfa;n incierta</text>
+  </g>
+
+  <!-- Bottom legend -->
+  <rect x="80" y="450" width="740" height="20" rx="4" fill="#F7F2FA"/>
+  <text x="90" y="464" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+    🇪🇺 La UE lidera con reglas prescriptivas | 🇺🇸 EE. UU. adopta un enfoque sectorial + voluntario | 🇨🇳 China impone control estatal sobre la IA
+  </text>
+<text x="892" y="475" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

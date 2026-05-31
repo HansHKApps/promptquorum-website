@@ -1,0 +1,58 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="440" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Formato GGUF: archivo de modelo cuantizado autocontenido</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Un solo archivo .gguf contiene todo lo necesario para ejecutar el modelo &#x2014; sin descargas adicionales</text>
+
+  <!-- Main GGUF File Box -->
+  <rect x="50" y="65" width="700" height="310" fill="none" stroke="#6750A4" stroke-width="2.5" rx="10" filter="url(#shadow)"/>
+
+  <!-- File label banner -->
+  <rect x="50" y="65" width="700" height="34" rx="10" fill="#6750A4"/>
+  <rect x="50" y="85" width="700" height="14" fill="#6750A4"/>
+  <text x="400" y="87" font-family="'SF Mono','Monaco',monospace" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf  (~4.5 GB)</text>
+
+  <!-- Component 1: Quantized Weights (top-left) -->
+  <rect x="70" y="110" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="217" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Pesos cuantizados</text>
+  <text x="217" y="155" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">8 mil millones de par&#xe1;metros</text>
+  <text x="217" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Precisi&#xf3;n de 4 bits (Q4_K_M)</text>
+  <rect x="160" y="183" width="115" height="22" rx="4" fill="#6750A4"/>
+  <text x="217" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">~4.5 GB en disco</text>
+
+  <!-- Component 2: Model Metadata (top-right) -->
+  <rect x="385" y="110" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="532" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Metadatos del modelo</text>
+  <text x="532" y="155" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Arquitectura: Transformer</text>
+  <text x="532" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Longitud de contexto: 128K tokens</text>
+  <text x="532" y="191" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Tama&#xf1;o oculto: 4096</text>
+
+  <!-- Component 3: Tokenizer (bottom-left) -->
+  <rect x="70" y="235" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="217" y="258" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Tokenizador</text>
+  <text x="217" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Vocabulario (128K tokens)</text>
+  <text x="217" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Asignaciones token &#x2192; ID</text>
+  <text x="217" y="316" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Reglas de codificaci&#xf3;n (BPE)</text>
+
+  <!-- Component 4: Format Info (bottom-right) -->
+  <rect x="385" y="235" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="532" y="258" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Informaci&#xf3;n del formato</text>
+  <text x="532" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Versi&#xf3;n de GGUF: 3</text>
+  <text x="532" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Sumas de verificaci&#xf3;n de integridad</text>
+  <text x="532" y="316" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Compatible con CPU + GPU</text>
+
+  <!-- Bottom callout inside box -->
+  <rect x="70" y="355" width="660" height="14" rx="4" fill="#F7F2FA"/>
+  <text x="400" y="366" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#6750A4" text-anchor="middle">&#x2713; Funciona con Ollama &#xb7; LM Studio &#xb7; Jan AI &#xb7; llama.cpp &#x2014; sin archivos de configuraci&#xf3;n aparte</text>
+
+  <!-- Footer note -->
+  <text x="400" y="408" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Reemplaza al antiguo formato GGML. El nivel de cuantizaci&#xf3;n se codifica en el nombre del archivo (Q4_K_M arriba).</text>
+  <text x="400" y="426" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#79747E" text-anchor="middle">Ollama descarga los archivos GGUF autom&#xe1;ticamente cuando ejecutas: ollama pull llama3.1:8b</text>
+<text x="792" y="435" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

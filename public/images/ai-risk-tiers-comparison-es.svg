@@ -1,0 +1,196 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Clasificaci&#xf3;n del riesgo de IA: tres modelos regulatorios
+  </text>
+
+  <!-- EU Risk-Based Tiers (Left) -->
+  <g id="eu-tiers">
+    <!-- Label -->
+    <text x="130" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇪🇺 Ley de IA de la UE
+    </text>
+
+    <!-- Prohibited Risk -->
+    <rect x="20" y="85" width="220" height="85" rx="6" fill="#FFEBEE" stroke="#D32F2F" stroke-width="2.5"/>
+    <text x="130" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#D32F2F" text-anchor="middle" font-weight="700">
+      Riesgo prohibido
+    </text>
+    <text x="30" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Manipulaci&#xf3;n subliminal
+    </text>
+    <text x="30" y="143" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Explotar a personas vulnerables
+    </text>
+    <text x="30" y="161" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      = Prohibido por completo
+    </text>
+
+    <!-- High Risk -->
+    <rect x="20" y="180" width="220" height="85" rx="6" fill="#FFF3E0" stroke="#F57C00" stroke-width="2.5"/>
+    <text x="130" y="200" font-family="system-ui, sans-serif" font-size="14" fill="#F57C00" text-anchor="middle" font-weight="700">
+      Riesgo alto
+    </text>
+    <text x="30" y="220" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Contrataci&#xf3;n/empleo
+    </text>
+    <text x="30" y="238" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Reconocimiento facial
+    </text>
+    <text x="30" y="256" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      = Requisitos exigentes
+    </text>
+
+    <!-- Limited Risk -->
+    <rect x="20" y="275" width="220" height="85" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="2.5"/>
+    <text x="130" y="295" font-family="system-ui, sans-serif" font-size="14" fill="#388E3C" text-anchor="middle" font-weight="700">
+      Riesgo limitado
+    </text>
+    <text x="30" y="315" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Chatbots, LLM
+    </text>
+    <text x="30" y="333" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Divulgaci&#xf3;n obligatoria
+    </text>
+    <text x="30" y="351" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      = Reglas de transparencia
+    </text>
+
+    <!-- Minimal Risk -->
+    <rect x="20" y="370" width="220" height="75" rx="6" fill="#F0F4C3" stroke="#AFB42B" stroke-width="2.5"/>
+    <text x="130" y="390" font-family="system-ui, sans-serif" font-size="14" fill="#AFB42B" text-anchor="middle" font-weight="700">
+      Riesgo m&#xed;nimo
+    </text>
+    <text x="30" y="410" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Filtros de spam, anal&#xed;tica
+    </text>
+    <text x="30" y="428" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      = Pocas restricciones
+    </text>
+  </g>
+
+  <!-- US Sectoral Approach (Center) -->
+  <g id="us-approach">
+    <!-- Label -->
+    <text x="400" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇺🇸 EE. UU. sectorial
+    </text>
+
+    <!-- Healthcare -->
+    <rect x="290" y="85" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Salud y finanzas
+    </text>
+    <text x="300" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      Supervisi&#xf3;n de FDA, FTC
+    </text>
+    <text x="300" y="143" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      Existen requisitos de
+    </text>
+    <text x="300" y="161" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      precisi&#xf3;n y equidad
+    </text>
+
+    <!-- Employment -->
+    <rect x="290" y="190" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="210" font-family="system-ui, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Empleo y vivienda
+    </text>
+    <text x="300" y="230" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      Reglas de EEOC, HUD
+    </text>
+    <text x="300" y="248" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      Auditor&#xed;as de sesgo, divulgaci&#xf3;n
+    </text>
+    <text x="300" y="266" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      en algunos estados
+    </text>
+
+    <!-- Tech Sector -->
+    <rect x="290" y="295" width="220" height="150" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="315" font-family="system-ui, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Tecnolog&#xed;a, contenido, otros
+    </text>
+    <text x="300" y="335" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      Est&#xe1;ndares en su mayor&#xed;a
+    </text>
+    <text x="300" y="353" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      voluntarios (NIST RMF,
+    </text>
+    <text x="300" y="371" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      ISO 42001)
+    </text>
+    <text x="300" y="389" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+    </text>
+    <text x="300" y="407" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      La FTC act&#xfa;a solo si es
+    </text>
+    <text x="300" y="425" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      injusto/enga&#xf1;oso
+    </text>
+  </g>
+
+  <!-- China Algorithm Governance (Right) -->
+  <g id="china-approach">
+    <!-- Label -->
+    <text x="670" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle" font-weight="700">
+      🇨🇳 Algoritmos de China
+    </text>
+
+    <!-- CAC Controlled -->
+    <rect x="560" y="85" width="220" height="100" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">
+      Controlado por la CAC
+    </text>
+    <text x="570" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Algoritmos de
+    </text>
+    <text x="570" y="143" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      recomendaci&#xf3;n (redes,
+    </text>
+    <text x="570" y="161" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      v&#xed;deo, b&#xfa;squeda)
+    </text>
+
+    <!-- Content Regulation -->
+    <rect x="560" y="195" width="220" height="110" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="215" font-family="system-ui, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">
+      Contenido y seguridad
+    </text>
+    <text x="570" y="235" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Mensajes pol&#xed;ticos,
+    </text>
+    <text x="570" y="253" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      escrutinio de info falsa
+    </text>
+    <text x="570" y="271" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Localizaci&#xf3;n de datos
+    </text>
+
+    <!-- Emerging LLM Rules -->
+    <rect x="560" y="315" width="220" height="130" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="335" font-family="system-ui, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">
+      Requisitos de LLM
+    </text>
+    <text x="570" y="355" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Aprobaci&#xf3;n previa de la CAC
+    </text>
+    <text x="570" y="373" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Pruebas de alineaci&#xf3;n
+    </text>
+    <text x="570" y="391" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      de valores obligatorias
+    </text>
+    <text x="570" y="409" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Control estatal = prioridad
+    </text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="400" y="485" font-family="system-ui, sans-serif" font-size="13" fill="#49454F" text-anchor="middle" font-weight="600">
+    UE: basado en reglas (mismas reglas en todas partes) | EE. UU.: basado en el mercado (espec&#xed;fico por sector) | China: basado en control (aprobaci&#xf3;n estatal obligatoria)
+  </text>
+<text x="792" y="495" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

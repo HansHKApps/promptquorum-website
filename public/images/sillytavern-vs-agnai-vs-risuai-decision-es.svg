@@ -1,0 +1,85 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="380" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Elige tu frontend de roleplay: 3 preguntas
+  </text>
+
+  <!-- Question 1 -->
+  <circle cx="80" cy="100" r="22" fill="#6750A4"/>
+  <text x="80" y="108" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">?</text>
+  <text x="80" y="145" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">&#xbf;Compartir con</text>
+  <text x="80" y="162" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">otros escritores?</text>
+
+  <!-- Arrow 1 -->
+  <text x="140" y="108" font-size="20" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">→</text>
+
+  <!-- Question 2 -->
+  <circle cx="200" cy="100" r="22" fill="#6750A4"/>
+  <text x="200" y="108" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">?</text>
+  <text x="200" y="145" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">&#xbf;Quieres</text>
+  <text x="200" y="162" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">personalizaci&#xf3;n profunda?</text>
+
+  <!-- Arrow 2 -->
+  <text x="260" y="108" font-size="20" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">→</text>
+
+  <!-- Question 3 -->
+  <circle cx="320" cy="100" r="22" fill="#6750A4"/>
+  <text x="320" y="108" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">?</text>
+  <text x="320" y="145" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">&#xbf;M&#xf3;vil primero</text>
+  <text x="320" y="162" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">o escritorio?</text>
+
+  <!-- Branches -->
+  <!-- Branch 1: Sharing? Yes → Agnai -->
+  <line x1="80" y1="122" x2="80" y2="200" stroke="#6750A4" stroke-width="2"/>
+  <text x="50" y="165" font-size="10" font-weight="600" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">S&#xcd;</text>
+
+  <rect x="35" y="200" width="90" height="50" rx="4" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <text x="80" y="220" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">AGNAI</text>
+  <text x="80" y="240" font-size="9" font-weight="600" fill="#49454F" text-anchor="middle" font-family="'SF Mono', Monaco, monospace">Multiusuario</text>
+
+  <!-- Branch 1 No: Skip to next question -->
+  <text x="110" y="165" font-size="10" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">NO</text>
+
+  <!-- Branch 2: Deep customisation? Yes → SillyTavern -->
+  <line x1="200" y1="122" x2="200" y2="200" stroke="#6750A4" stroke-width="2"/>
+  <text x="170" y="165" font-size="10" font-weight="600" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">S&#xcd;</text>
+
+  <rect x="155" y="200" width="90" height="50" rx="4" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="200" y="220" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">SILLYTAVERN</text>
+  <text x="200" y="240" font-size="9" font-weight="600" fill="#49454F" text-anchor="middle" font-family="'SF Mono', Monaco, monospace">Funciones profundas</text>
+
+  <!-- Branch 2 No: Skip to next question -->
+  <text x="230" y="165" font-size="10" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">NO</text>
+
+  <!-- Branch 3: Mobile first? Yes → RisuAI -->
+  <line x1="320" y1="122" x2="320" y2="200" stroke="#6750A4" stroke-width="2"/>
+  <text x="290" y="165" font-size="10" font-weight="600" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">S&#xcd;</text>
+
+  <rect x="275" y="200" width="90" height="50" rx="4" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <text x="320" y="220" font-size="12" font-weight="700" fill="#EA4335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">RISUAI</text>
+  <text x="320" y="240" font-size="9" font-weight="600" fill="#49454F" text-anchor="middle" font-family="'SF Mono', Monaco, monospace">Apps m&#xf3;viles</text>
+
+  <!-- Branch 3 No: Default to SillyTavern -->
+  <line x1="350" y1="165" x2="380" y2="165" stroke="#49454F" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="355" y="180" font-size="10" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">NO</text>
+
+  <rect x="380" y="155" width="90" height="50" rx="4" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="425" y="175" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">SILLYTAVERN</text>
+  <text x="425" y="195" font-size="9" font-weight="600" fill="#49454F" text-anchor="middle" font-family="'SF Mono', Monaco, monospace">Opci&#xf3;n por defecto</text>
+
+  <!-- Verdict box -->
+  <rect x="50" y="290" width="700" height="80" fill="#F7F2FA" rx="4" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="70" y="312" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Conclusi&#xf3;n:</text>
+  <text x="70" y="332" font-size="10" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Los tres cargan las mismas tarjetas de personaje Tavern v2. Puedes mover tus personajes entre ellos sin conversi&#xf3;n. Empieza con</text>
+  <text x="70" y="347" font-size="10" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">el que mejor se adapte a tu flujo de trabajo hoy; cambiar despu&#xe9;s es trivial. La mayor&#xed;a acaba en SillyTavern — el 80% comparte un flujo similar.</text>
+  <text x="70" y="362" font-size="10" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Si tienes dudas, prueba RisuAI primero (instalaci&#xf3;n de 5 minutos) — el coste de cambiar es casi nulo.</text>
+<text x="792" y="375" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Cobertura del EU AI Act:** La ley cubre 450 millones de consumidores en 27 estados miembros de la UE. El umbral de riesgo sistémico para modelos GPAI es 10²⁵ FLOPs de cómputo de entrenamiento — el nivel al que se aplican requisitos adicionales de pruebas adversariales.',
             '**Declaración de Bletchley (noviembre de 2023):** Firmada por 28 naciones incluyendo EE.UU., China y estados miembros de la UE — el consenso internacional de seguridad de IA más amplio hasta la fecha, aunque no vinculante.',
           ],
-          image: '/images/ai-regulation-timeline-en.svg',
+          image: '/images/ai-regulation-timeline-es.svg',
           imageCaption: 'Línea temporal regulatoria global de IA 2022–2026: propuesta del EU AI Act (2021), CHIPS Act (2022), reglas de algoritmos del CAC (2022–2023), EU AI Act adoptado (2024), fase de aplicación enero 2025.',
         },
 
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Posición de Europa:** Lidera en regulación de IA — el EU AI Act es el marco de referencia global — e investigación de pesos abiertos (Mistral de Francia). Va por detrás en capacidad de modelos de frontera e inversión privada. Compensa mediante apalancamiento regulatorio: el Efecto Bruselas obliga a los proveedores de EE.UU. y China a cumplir con los estándares de la UE para productos globales.',
             '**La capa de hardware:** Las GPU Nvidia H100/H200 dominan el entrenamiento de IA. Los controles de exportación de EE.UU. restringen las ventas a China. DeepSeek R1 entrenado en GPU H800 restringidas a un costo reportado de ~$6M — una reducción del 94% frente a las estimaciones de entrenamiento de GPT-4o — demostrando que los controles de hardware no han detenido la IA de frontera china.',
           ],
-          image: '/images/regional-ai-players-en.svg',
+          image: '/images/regional-ai-players-es.svg',
           imageCaption: 'EE.UU.: OpenAI, Anthropic, Google DeepMind (financiados por VC). UE: Mistral, Hugging Face (open-source, infra-financiados vs. EE.UU.). China: Baidu, Alibaba, Tencent (respaldados por el estado, supervisión del CAC).',
         },
 
@@ -1662,7 +1662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Aplicación:** La Oficina de IA de la UE (dentro de la Comisión Europea) supervisa los modelos GPAI. Las autoridades nacionales de vigilancia del mercado aplican las reglas de IA de alto riesgo. Multas: hasta €35M o el 7% de la facturación global por prácticas prohibidas; €15M o el 3% por infracciones de alto riesgo.',
             '**Cronograma:** Prácticas prohibidas: agosto de 2024. Obligaciones GPAI: agosto de 2025. Sistemas de IA de alto riesgo: agosto de 2026. IA de alto riesgo en productos regulados: agosto de 2027.',
           ],
-          image: '/images/ai-risk-tiers-comparison-en.svg',
+          image: '/images/ai-risk-tiers-comparison-es.svg',
           imageCaption: 'Sistema de 4 niveles de riesgo del EU AI Act: Inaceptable (prohibido ago. 2024), Alto riesgo (evaluación de conformidad), Limitado (solo divulgación), Mínimo (sin obligaciones).',
         },
 

@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 415" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- White background -->
+  <rect width="800" height="415" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">C&#xf3;mo elegir el frontend de LLM local adecuado</text>
+  <text x="400" y="52" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="500" fill="#79747E" text-anchor="middle">Elige seg&#xfa;n el caso de uso &#x2014; todos los frontends se conectan a la misma API de Ollama</text>
+
+  <!-- Column 1: Just Chatting (x: 50-265) -->
+  <rect x="50" y="68" width="215" height="295" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+  <rect x="50" y="68" width="215" height="48" rx="8" fill="#E8DEF8"/>
+  <!-- rounded bottom mask for header top corners only -->
+  <rect x="50" y="92" width="215" height="24" fill="#E8DEF8"/>
+  <text x="157" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Solo chatear</text>
+  <text x="157" y="108" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="500" fill="#49454F" text-anchor="middle">0&#x2013;3 min de config. &#xb7; 8 GB RAM</text>
+
+  <!-- Card: Enchanted UI -->
+  <rect x="65" y="130" width="185" height="72" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="80" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Enchanted UI</text>
+  <text x="80" y="167" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">Web &#xb7; 0 min de config.</text>
+  <text x="80" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Lo m&#xe1;s r&#xe1;pido, sin instalaci&#xf3;n</text>
+
+  <!-- Card: Jan AI -->
+  <rect x="65" y="216" width="185" height="72" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="80" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Jan AI</text>
+  <text x="80" y="253" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">Escritorio &#xb7; 3 min de config.</text>
+  <text x="80" y="269" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Sin conexi&#xf3;n primero, macOS/Windows</text>
+
+  <text x="157" y="345" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Ideal para principiantes</text>
+
+  <!-- Column 2: Developer Work (x: 293-508) -->
+  <rect x="293" y="68" width="215" height="295" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+  <rect x="293" y="68" width="215" height="48" rx="8" fill="#E8DEF8"/>
+  <rect x="293" y="92" width="215" height="24" fill="#E8DEF8"/>
+  <text x="400" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Trabajo de desarrollo</text>
+  <text x="400" y="108" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="500" fill="#49454F" text-anchor="middle">2&#x2013;5 min de config. &#xb7; 8 GB RAM</text>
+
+  <!-- Card: Continue.dev -->
+  <rect x="308" y="130" width="185" height="72" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="323" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Continue.dev</text>
+  <text x="323" y="167" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">Ext. de VS Code &#xb7; 2 min de config.</text>
+  <text x="323" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Autocompletado de c&#xf3;digo en l&#xed;nea</text>
+
+  <!-- Card: Gradio/Streamlit -->
+  <rect x="308" y="216" width="185" height="72" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="323" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Gradio / Streamlit</text>
+  <text x="323" y="253" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">Python &#xb7; 5 min de config.</text>
+  <text x="323" y="269" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">UI personalizada para equipos de ML</text>
+
+  <text x="400" y="345" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Ideal para desarrolladores en solitario</text>
+
+  <!-- Column 3: Team + RAG (x: 536-751) — highlighted -->
+  <rect x="536" y="68" width="215" height="295" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2.5"/>
+  <rect x="536" y="68" width="215" height="48" rx="8" fill="#6750A4"/>
+  <rect x="536" y="92" width="215" height="24" fill="#6750A4"/>
+  <text x="643" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">Equipo + RAG</text>
+  <text x="643" y="108" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="500" fill="#E8DEF8" text-anchor="middle">5 min de config. &#xb7; 12 GB+ RAM</text>
+
+  <!-- Card: Open WebUI -->
+  <rect x="551" y="130" width="185" height="110" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="566" y="152" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Open WebUI</text>
+  <text x="566" y="169" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">Docker &#xb7; 5 min de config.</text>
+  <text x="566" y="186" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">RAG + multimodal + b&#xfa;squeda web</text>
+  <text x="566" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Multiusuario + controles de admin.</text>
+  <text x="566" y="218" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">25.000+ estrellas en GitHub</text>
+
+  <text x="643" y="345" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Ideal para 5+ desarrolladores</text>
+
+  <!-- Bottom bar -->
+  <rect x="50" y="380" width="700" height="26" rx="5" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="400" y="397" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Todos los frontends comparten una instancia de Ollama &#xb7; Cambia cuando quieras &#xb7; Sin volver a descargar modelos</text>
+<text x="792" y="410" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1000 650" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- White background -->
+  <rect width="1000" height="650" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="500" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">Errores comunes al escribir textos de negocio con LLM locales</text>
+
+  <!-- Row 1: Using 70B Models -->
+  <rect x="40" y="70" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="115" r="20" fill="#D32F2F"/>
+  <text x="80" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">Usar modelos de 70B para correos</text>
+  <text x="115" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Los modelos grandes generan texto prolijo y sobreexplicado.</text>
+  <text x="115" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Lentos (m&#xe1;s de 30 segundos) y desperdician recursos de c&#xf3;mputo.</text>
+  <text x="115" y="151" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Inadecuados para correspondencia comercial r&#xe1;pida.</text>
+
+  <rect x="520" y="70" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="115" r="20" fill="#388E3C"/>
+  <text x="560" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">Usar modelos de 7B&#x2013;24B en su lugar</text>
+  <text x="595" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Los modelos m&#xe1;s peque&#xf1;os (7B&#x2013;24B) son precisos y concisos.</text>
+  <text x="595" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">R&#xe1;pidos (5&#x2013;15 segundos) y m&#xe1;s eficientes.</text>
+  <text x="595" y="151" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Mistral Small 3.1 24B ideal para textos de negocio.</text>
+
+  <!-- Row 2: No Style Examples -->
+  <rect x="40" y="210" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="255" r="20" fill="#D32F2F"/>
+  <text x="80" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">Sin ejemplos de voz de marca</text>
+  <text x="115" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">El modelo adivina tu estilo de escritura y suele errar el tono.</text>
+  <text x="115" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Produce texto gen&#xe9;rico, al estilo de ChatGPT.</text>
+  <text x="115" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Sin coherencia de marca entre correos.</text>
+
+  <rect x="520" y="210" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="255" r="20" fill="#388E3C"/>
+  <text x="560" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">Proporciona 2&#x2013;3 correos de ejemplo</text>
+  <text x="595" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Incluye correos reales enviados en el prompt de sistema como referencia de estilo.</text>
+  <text x="595" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">El modelo aprende tu tono, elecci&#xf3;n de palabras y formalidad.</text>
+  <text x="595" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">El resultado se alinea con la voz de marca autom&#xe1;ticamente.</text>
+
+  <!-- Row 3: Trusting First Draft -->
+  <rect x="40" y="350" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="395" r="20" fill="#D32F2F"/>
+  <text x="80" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">Confiar en el primer borrador</text>
+  <text x="115" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Los modelos generan texto gramaticalmente correcto pero impersonal.</text>
+  <text x="115" y="413" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">A menudo suena formal o forzado sin refinamiento.</text>
+  <text x="115" y="431" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Carece del toque humano para la correspondencia profesional.</text>
+
+  <rect x="520" y="350" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="395" r="20" fill="#388E3C"/>
+  <text x="560" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">Usa 1&#x2013;2 ciclos de refinamiento</text>
+  <text x="595" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Redacta primero y luego refina con prompts de edici&#xf3;n (2&#x2013;3 iteraciones).</text>
+  <text x="595" y="413" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Prompts: &#x201c;Elimina la jerga, usa palabras m&#xe1;s simples, a&#xf1;ade claridad.&#x201d;</text>
+  <text x="595" y="431" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">El resultado final es pulido y profesionalmente apropiado.</text>
+
+  <!-- Row 4: Missing Context Length -->
+  <rect x="40" y="490" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="535" r="20" fill="#D32F2F"/>
+  <text x="80" y="542" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">Longitud de contexto predeterminada (2K)</text>
+  <text x="115" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Ollama usa por defecto una ventana de contexto de 2048 tokens.</text>
+  <text x="115" y="553" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Las propuestas y contratos de varias p&#xe1;ginas se truncan.</text>
+  <text x="115" y="571" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">El modelo pierde contexto importante del documento durante el proceso.</text>
+
+  <rect x="520" y="490" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="535" r="20" fill="#388E3C"/>
+  <text x="560" y="542" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">Aumenta el contexto a 8K&#x2013;32K</text>
+  <text x="595" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Configura PARAMETER num_ctx 8192 en el Modelfile de Ollama.</text>
+  <text x="595" y="553" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Admite propuestas de 2&#x2013;5 p&#xe1;ginas sin truncamiento.</text>
+  <text x="595" y="571" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Usa contexto de 32K para revisiones completas de contratos.</text>
+
+  <!-- Footer -->
+  <text x="500" y="630" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">Buenas pr&#xe1;cticas: empieza con modelos de 7B&#x2013;24B, aporta ejemplos de marca, refina de forma iterativa y configura el contexto seg&#xfa;n tu caso de uso.</text>
+<text x="992" y="645" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

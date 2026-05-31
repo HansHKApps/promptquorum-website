@@ -419,7 +419,7 @@ schema: {
             'En la inferencia, la salida del adaptador se combina con la salida del modelo principal mediante multiplicación de matrices. La penalización de velocidad es mínima (~5 %).',
             'Resultado: un modelo específico del dominio que rinde mejor en tus tareas usando solo 8 GB de VRAM en lugar de 26 GB.',
           ],
-          image: '/images/fine-tuning-local-llms-lora-architecture-en.svg',
+          image: '/images/fine-tuning-local-llms-lora-architecture-es.svg',
           imageCaption: 'LoRA agrega pequeñas matrices adaptadoras entrenables junto a los pesos congelados del modelo base. Solo el 0,4 % de los parámetros del modelo Llama 13B se actualiza durante el entrenamiento, reduciendo el VRAM y el tiempo en 100×.',
         },
         qloraSection: {
@@ -439,7 +439,7 @@ schema: {
             { 'Método': 'QLoRA (base 4 bits)', 'VRAM Modelo 7B': '8 GB', 'VRAM Modelo 13B': '14 GB', 'Calidad vs Completo': '~95 %' },
           ],
           columns: ['Método', 'VRAM Modelo 7B', 'VRAM Modelo 13B', 'Calidad vs Completo'],
-          image: '/images/fine-tuning-local-llms-lora-vram-comparison-en.svg',
+          image: '/images/fine-tuning-local-llms-lora-vram-comparison-es.svg',
           imageCaption: 'Requisitos de VRAM por método de fine-tuning en modelos de 7B, 13B y 70B. El fine-tuning completo requiere 28+ GB para 7B; QLoRA lo reduce a 8 GB. Para empresas, QLoRA permite el fine-tuning de modelos de 70B en dual RTX 4090s (~40 GB en total).',
         },
         finetuningVsRag: {
@@ -469,7 +469,7 @@ schema: {
           ],
           codeBlock: '[\n  {"instruction": "Translate to French", "input": "Hello world", "output": "Bonjour le monde"},\n  {"instruction": "Summarize", "input": "Long text...", "output": "Summary..."},\n  {"instruction": "Code review", "input": "Python code...", "output": "Review comments..."}\n]\n\n# OR instruction-only format:\n[\n  {"text": "<|user|>Translate to French\\nHello<|assistant|>Bonjour"},\n  {"text": "<|user|>Summarize\\nText<|assistant|>Summary"}\n]',
           codeLanguage: 'json',
-          image: '/images/fine-tuning-local-llms-lora-training-workflow-en.svg',
+          image: '/images/fine-tuning-local-llms-lora-training-workflow-es.svg',
           imageCaption: 'Flujo de trabajo de preparación de datos de entrenamiento: recopila 500+ pares instrucción/salida específicos del dominio, formatea en JSONL (uno por línea) y cárgalos en SFTTrainer. La calidad importa más que la cantidad — 100 ejemplos de alta calidad superan a 1000 de baja calidad.',
         },
         trainingSetup: {

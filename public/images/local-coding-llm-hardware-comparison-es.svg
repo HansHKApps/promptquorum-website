@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" width="800" height="310" role="img" aria-label="Mejor hardware para programar sin conexi&#xf3;n con LLM locales — tabla comparativa que clasifica 5 port&#xe1;tiles por memoria unificada, soporte de modelos 30B, tokens por segundo y duraci&#xf3;n de bater&#xed;a bajo carga de LLM">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description>
+        <dc:creator>PromptQuorum</dc:creator>
+        <dc:rights>© PromptQuorum — promptquorum.com</dc:rights>
+        <dc:source>https://promptquorum.com/power-local-llm/local-coding-llm-without-internet</dc:source>
+        <dc:title>Best Hardware for Offline Coding with Local LLMs</dc:title>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+
+  <!-- Background -->
+  <rect width="800" height="310" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif">Mejor hardware para programar sin conexi&#xf3;n con LLM locales</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="47" font-size="13" fill="#49454F" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif">Clasificado por memoria unificada, duraci&#xf3;n de bater&#xed;a y soporte de modelos 30B</text>
+
+  <!-- Column headers -->
+  <text x="50" y="70" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui,-apple-system,sans-serif">Hardware</text>
+  <text x="230" y="70" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui,-apple-system,sans-serif">Memoria</text>
+  <text x="305" y="70" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui,-apple-system,sans-serif">Modelo 30B</text>
+  <text x="415" y="70" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui,-apple-system,sans-serif">Tok/s</text>
+  <text x="490" y="70" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui,-apple-system,sans-serif">Bater&#xed;a</text>
+  <text x="570" y="70" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui,-apple-system,sans-serif">Veredicto</text>
+
+  <!-- Header divider -->
+  <line x1="18" y1="78" x2="782" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Apple M5 MacBook Pro 64 GB ★ (highlighted purple) -->
+  <rect x="18" y="80" width="764" height="32" rx="2" fill="#F7F2FA"/>
+  <text x="18" y="101" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui,-apple-system,sans-serif">  Apple M5 MacBook Pro 64 GB ★</text>
+  <text x="230" y="101" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">64 GB unificada</text>
+  <text x="305" y="101" font-size="12" fill="#34A853" font-weight="700" font-family="system-ui,-apple-system,sans-serif">✓ cabe + margen</text>
+  <text x="415" y="101" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">35–50 tok/s</text>
+  <text x="490" y="101" font-size="12" fill="#34A853" font-weight="700" font-family="system-ui,-apple-system,sans-serif">6–8 h</text>
+  <text x="570" y="101" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">Mejor en general</text>
+  <line x1="18" y1="114" x2="782" y2="114" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Apple M5 MacBook Pro 36 GB -->
+  <text x="24" y="133" font-size="12" fill="#1C1B1F" font-family="system-ui,-apple-system,sans-serif">Apple M5 MacBook Pro 36 GB</text>
+  <text x="230" y="133" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">36 GB unificada</text>
+  <text x="305" y="133" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">✓ cabe, justo</text>
+  <text x="415" y="133" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">30–45 tok/s</text>
+  <text x="490" y="133" font-size="12" fill="#34A853" font-weight="700" font-family="system-ui,-apple-system,sans-serif">6–8 h</text>
+  <text x="570" y="133" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">Opci&#xf3;n s&#xf3;lida</text>
+  <line x1="18" y1="146" x2="782" y2="146" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Apple M4 MacBook Pro 36 GB -->
+  <text x="24" y="165" font-size="12" fill="#1C1B1F" font-family="system-ui,-apple-system,sans-serif">Apple M4 MacBook Pro 36 GB</text>
+  <text x="230" y="165" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">36 GB unificada</text>
+  <text x="305" y="165" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">✓ cabe, justo</text>
+  <text x="415" y="165" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">25–40 tok/s</text>
+  <text x="490" y="165" font-size="12" fill="#34A853" font-weight="700" font-family="system-ui,-apple-system,sans-serif">6–7 h</text>
+  <text x="570" y="165" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">Buena relaci&#xf3;n calidad-precio</text>
+  <line x1="18" y1="178" x2="782" y2="178" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: RTX 4090 Laptop 16 GB VRAM -->
+  <text x="24" y="197" font-size="12" fill="#1C1B1F" font-family="system-ui,-apple-system,sans-serif">RTX 4090 Laptop 16 GB VRAM</text>
+  <text x="230" y="197" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">16 GB VRAM</text>
+  <text x="305" y="197" font-size="12" fill="#EA4335" font-weight="700" font-family="system-ui,-apple-system,sans-serif">solo 7B (30B = OOM)</text>
+  <text x="415" y="197" font-size="12" fill="#34A853" font-weight="700" font-family="system-ui,-apple-system,sans-serif">60–80 tok/s</text>
+  <text x="490" y="197" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">~2 h</text>
+  <text x="570" y="197" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">R&#xe1;pido, poca bater&#xed;a</text>
+  <line x1="18" y1="210" x2="782" y2="210" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: RTX 4070 Laptop 8 GB VRAM -->
+  <text x="24" y="229" font-size="12" fill="#1C1B1F" font-family="system-ui,-apple-system,sans-serif">RTX 4070 Laptop 8 GB VRAM</text>
+  <text x="230" y="229" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">8 GB VRAM</text>
+  <text x="305" y="229" font-size="12" fill="#EA4335" font-weight="700" font-family="system-ui,-apple-system,sans-serif">solo 7B</text>
+  <text x="415" y="229" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">30–45 tok/s</text>
+  <text x="490" y="229" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">~2.5 h</text>
+  <text x="570" y="229" font-size="12" fill="#49454F" font-family="system-ui,-apple-system,sans-serif">Opci&#xf3;n de entrada</text>
+
+  <!-- Footer divider -->
+  <line x1="18" y1="245" x2="782" y2="245" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer note -->
+  <text x="400" y="265" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif">★ Recomendado para viajar sin conexi&#xf3;n · Verde = mejor en la m&#xe9;trica · OOM = sin memoria para 30B en Q4_K_M</text>
+
+  <!-- Attribution -->
+  <text x="400" y="283" font-size="11" fill="#79747E" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif">promptquorum.com/power-local-llm/local-coding-llm-without-internet</text>
+
+  <!-- Corner attribution mark -->
+  <text x="782" y="300" font-size="9" fill="#79747E" text-anchor="end" font-family="system-ui,-apple-system,sans-serif">promptquorum.com</text>
+</svg>

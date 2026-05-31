@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <text x="400" y="26" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ventana de contexto: declarada vs. pr&#xe1;ctica (programaci&#xf3;n)</text>
+  <text x="400" y="45" font-size="11" fill="#79747E" text-anchor="middle">Los modelos de programaci&#xf3;n pierden calidad de atenci&#xf3;n m&#xe1;s all&#xe1; de aproximadamente la mitad de la ventana declarada. Plan&#xed;ficate seg&#xfa;n la columna pr&#xe1;ctica.</text>
+  <text x="30" y="68" font-size="12" font-weight="700" fill="#79747E">Modelo</text>
+  <text x="185" y="68" font-size="12" font-weight="700" fill="#79747E">Declarada</text>
+  <text x="255" y="68" font-size="12" font-weight="700" fill="#79747E">Pr&#xe1;ctica (programaci&#xf3;n)</text>
+  <text x="420" y="68" font-size="12" font-weight="700" fill="#79747E">Veredicto</text>
+  <line x1="18" y1="75" x2="782" y2="75" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="30" y="95" font-size="12" font-weight="600" fill="#1C1B1F">Qwen3-Coder 30B</text>
+  <text x="185" y="95" font-size="11" fill="#49454F">256K</text>
+  <text x="255" y="95" font-size="11" fill="#49454F">~64K&#x2013;128K</text>
+  <text x="420" y="95" font-size="11" font-weight="600" fill="#34A853">Mejor open-weight de contexto largo</text>
+  <line x1="18" y1="107" x2="782" y2="107" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="127" font-size="12" font-weight="600" fill="#1C1B1F">Qwen3-Coder 7B</text>
+  <text x="185" y="127" font-size="11" fill="#49454F">128K</text>
+  <text x="255" y="127" font-size="11" fill="#49454F">~32K&#x2013;64K</text>
+  <text x="420" y="127" font-size="11" fill="#49454F">Bueno para trabajo de un solo archivo</text>
+  <line x1="18" y1="139" x2="782" y2="139" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="159" font-size="12" font-weight="600" fill="#1C1B1F">DeepSeek Coder V3</text>
+  <text x="185" y="159" font-size="11" fill="#49454F">128K</text>
+  <text x="255" y="159" font-size="11" fill="#49454F">~64K&#x2013;96K</text>
+  <text x="420" y="159" font-size="11" font-weight="600" fill="#34A853">L&#xed;der de contexto largo en este grupo</text>
+  <line x1="18" y1="171" x2="782" y2="171" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="191" font-size="12" font-weight="600" fill="#1C1B1F">Codestral 22B</text>
+  <text x="185" y="191" font-size="11" fill="#49454F">32K</text>
+  <text x="255" y="191" font-size="11" fill="#49454F">~16K&#x2013;24K</text>
+  <text x="420" y="191" font-size="11" font-weight="600" fill="#F4B400">El m&#xe1;s ajustado en el nivel 22B+</text>
+  <line x1="18" y1="203" x2="782" y2="203" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="223" font-size="12" font-weight="600" fill="#1C1B1F">Granite Code 34B</text>
+  <text x="185" y="223" font-size="11" fill="#49454F">128K</text>
+  <text x="255" y="223" font-size="11" fill="#49454F">~32K&#x2013;64K</text>
+  <text x="420" y="223" font-size="11" fill="#49454F">Recuerdo promedio; no es l&#xed;der</text>
+  <line x1="18" y1="235" x2="782" y2="235" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="255" font-size="12" font-weight="600" fill="#1C1B1F">Llama 3.3 Code</text>
+  <text x="185" y="255" font-size="11" fill="#49454F">128K</text>
+  <text x="255" y="255" font-size="11" fill="#49454F">~32K&#x2013;64K</text>
+  <text x="420" y="255" font-size="11" fill="#49454F">Por detr&#xe1;s de Qwen3-Coder en recuerdo</text>
+  <line x1="18" y1="267" x2="782" y2="267" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="30" y="287" font-size="12" font-weight="600" fill="#1C1B1F">StarCoder 2 15B</text>
+  <text x="185" y="287" font-size="11" fill="#49454F">16K</text>
+  <text x="255" y="287" font-size="11" fill="#49454F">~8K&#x2013;12K</text>
+  <text x="420" y="287" font-size="11" font-weight="600" fill="#F4B400">L&#xed;mite m&#xe1;s estricto de este grupo</text>
+  <line x1="18" y1="299" x2="782" y2="299" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="323" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Contexto pr&#xe1;ctico = recuerdo &#xfa;til con calidad de atenci&#xf3;n plena &#xb7; Las cifras de marketing son l&#xed;mites superiores</text>
+  <text x="400" y="344" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

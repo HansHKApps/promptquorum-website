@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 295" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="295" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jan — Funciones de privacidad de un vistazo</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">C&#xf3;digo abierto AGPL · Cero telemetr&#xed;a · Binario auditable</text>
+  <!-- Left panel: Cloud AI -->
+  <rect x="22" y="62" width="354" height="198" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="22" y="62" width="354" height="4" rx="0" fill="#EA4335"/>
+  <text x="199" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#EA4335" text-anchor="middle">IA en la nube — los datos salen del equipo</text>
+  <text x="44" y="114" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  Las indicaciones se env&#xed;an a servidores remotos</text>
+  <text x="44" y="136" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  Un SDK de an&#xe1;lisis rastrea tu uso</text>
+  <text x="44" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  C&#xf3;digo cerrado — no se puede verificar</text>
+  <text x="44" y="180" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  Requiere internet para funcionar</text>
+  <text x="44" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  Coste de suscripci&#xf3;n con el tiempo</text>
+  <text x="44" y="224" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✗  Hay que renunciar al entrenamiento</text>
+  <!-- Right panel: Jan -->
+  <rect x="424" y="62" width="354" height="198" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="424" y="62" width="354" height="4" rx="0" fill="#34A853"/>
+  <text x="601" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Jan — Todo permanece local</text>
+  <text x="446" y="114" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  Cero telemetr&#xed;a — no se env&#xed;a nada</text>
+  <text x="446" y="136" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  Sin ning&#xfa;n SDK de an&#xe1;lisis</text>
+  <text x="446" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  C&#xf3;digo AGPL — binario auditable</text>
+  <text x="446" y="180" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  Funciona sin conexi&#xf3;n tras instalar</text>
+  <text x="446" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  Gratis para siempre, sin suscripci&#xf3;n</text>
+  <text x="446" y="224" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">✓  No entrena modelos con tus datos</text>
+  <!-- Footer -->
+  <text x="400" y="277" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-ai-app-non-technical-users</text>
+</svg>

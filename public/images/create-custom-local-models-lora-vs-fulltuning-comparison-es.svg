@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui">
+    LoRA vs Ajuste Fino Completo
+  </text>
+
+  <!-- Left Panel: LoRA (Fast) -->
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#6750A4"/>
+
+  <text x="198" y="82" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui">LoRA (Recomendado)</text>
+
+  <text x="48" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Velocidad:</text>
+  <text x="48" y="128" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">4&#xd7; m&#xe1;s r&#xe1;pido</text>
+
+  <text x="48" y="150" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">VRAM Requerida:</text>
+  <text x="48" y="168" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">8 GB</text>
+
+  <text x="48" y="190" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Pesos Actualizados:</text>
+  <text x="48" y="208" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">1&#x2013;2% del modelo</text>
+
+  <text x="48" y="230" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Precisi&#xf3;n vs Completo:</text>
+  <text x="48" y="248" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#6750A4">95&#x2013;98%</text>
+
+  <text x="48" y="280" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Ideal para:</text>
+  <text x="48" y="298" font-family="system-ui" font-size="11" fill="#49454F">La mayor&#xed;a de proyectos, c&#xf3;mputo</text>
+  <text x="48" y="312" font-family="system-ui" font-size="11" fill="#49454F">limitado, iteraci&#xf3;n r&#xe1;pida</text>
+
+  <!-- Right Panel: Full Fine-Tuning (Slow) -->
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#79747E"/>
+
+  <text x="602" y="82" font-size="15" font-weight="700" fill="#79747E" text-anchor="middle" font-family="system-ui">Ajuste Fino Completo</text>
+
+  <text x="452" y="110" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Velocidad:</text>
+  <text x="452" y="128" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">1&#xd7; (l&#xed;nea base)</text>
+
+  <text x="452" y="150" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">VRAM Requerida:</text>
+  <text x="452" y="168" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">64+ GB</text>
+
+  <text x="452" y="190" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Pesos Actualizados:</text>
+  <text x="452" y="208" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">100% del modelo</text>
+
+  <text x="452" y="230" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Precisi&#xf3;n vs LoRA:</text>
+  <text x="452" y="248" font-family="'SF Mono', Monaco" font-size="13" font-weight="600" fill="#79747E">+2&#x2013;5% de ganancia</text>
+
+  <text x="452" y="280" font-weight="700" fill="#1C1B1F" font-family="system-ui" font-size="12">Ideal para:</text>
+  <text x="452" y="298" font-family="system-ui" font-size="11" fill="#49454F">Grandes conjuntos de datos (10K+),</text>
+  <text x="452" y="312" font-family="system-ui" font-size="11" fill="#49454F">presupuesto ilimitado</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

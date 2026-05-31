@@ -1786,7 +1786,7 @@ schema: {
             '**Configuración de LM Studio (5 minutos)**: descarga LM Studio desde lmstudio.ai → ejecuta el instalador → abre la app → haz clic en "Buscar modelos" → busca "llama4:scout" o "llama3.2:3b" para una primera prueba ligera → haz clic en descargar → espera al modelo → haz clic en "Iniciar servidor" → abre la pestaña de chat. Listo.',
             'Ambas son genuinamente sencillas. Ollama es más rápido si ya usas la terminal; LM Studio es más rápido si no quieres tocar la terminal.',
           ],
-          image: '/images/ollama-vs-lm-studio-interface-comparison-en.svg',
+          image: '/images/ollama-vs-lm-studio-interface-comparison-es.svg',
           imageCaption: 'Ollama corre mediante comandos CLI y expone una REST API en localhost:11434; LM Studio incluye un navegador visual de modelos, chat y controles de GPU en una app de escritorio.',
         },
         modelManagement: {
@@ -1840,7 +1840,7 @@ schema: {
             'Necesitas soporte de API estable y listo para producción.',
             'Quieres automatizar la descarga y gestión de modelos (por ejemplo, en scripts de shell o pipelines de CI/CD).',
           ],
-          image: '/images/ollama-vs-lm-studio-when-to-use-en.svg',
+          image: '/images/ollama-vs-lm-studio-when-to-use-es.svg',
           imageCaption: 'Ollama es ideal para desarrolladores que necesitan una API y automatización; LM Studio es ideal para principiantes que quieren una interfaz de chat de escritorio con ajustes visuales.',
         },
         whenLmStudio: {

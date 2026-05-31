@@ -1,0 +1,82 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <style>
+      .title { font-size: 24px; font-weight: 700; fill: #1C1B1F; }
+      .subtitle { font-size: 14px; font-weight: 600; fill: #6750A4; }
+      .label { font-size: 12px; font-weight: 600; fill: #79747E; }
+      .value { font-size: 11px; font-weight: 400; fill: #49454F; }
+      .badge { font-size: 10px; font-weight: 700; fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="400" y="35" class="title" text-anchor="middle">Asistentes de Programaci&#xf3;n IA para LLMs Locales — Mayo 2026</text>
+
+  <!-- Card 1: Continue.dev -->
+  <rect x="30" y="70" width="140" height="170" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+  <circle cx="100" cy="95" r="20" fill="#6750A4"/>
+  <text x="100" y="103" class="badge" text-anchor="middle">1</text>
+  <text x="100" y="130" class="subtitle" text-anchor="middle">Continue.dev</text>
+  <text x="100" y="150" class="value" text-anchor="middle">Gratis</text>
+  <text x="100" y="167" class="value" text-anchor="middle">&#x2705; Local Nativo</text>
+  <text x="100" y="184" class="value" text-anchor="middle">&#x1f513; C&#xf3;digo Abierto</text>
+  <text x="100" y="201" class="label" text-anchor="middle">Mejor Global</text>
+
+  <!-- Card 2: Cursor -->
+  <rect x="190" y="70" width="140" height="170" rx="8" fill="#FFF8F6" stroke="#E8DEF8" stroke-width="2"/>
+  <circle cx="260" cy="95" r="20" fill="#7D5260"/>
+  <text x="260" y="103" class="badge" text-anchor="middle">2</text>
+  <text x="260" y="130" class="subtitle" text-anchor="middle">Cursor</text>
+  <text x="260" y="150" class="value" text-anchor="middle">$20/mes</text>
+  <text x="260" y="167" class="value" text-anchor="middle">&#x2699;&#xfe0f; V&#xed;a Configuraci&#xf3;n</text>
+  <text x="260" y="184" class="value" text-anchor="middle">&#x1f512; Cerrado</text>
+  <text x="260" y="201" class="label" text-anchor="middle">Mejor UX</text>
+
+  <!-- Card 3: Sourcegraph Cody -->
+  <rect x="350" y="70" width="140" height="170" rx="8" fill="#F2F8F5" stroke="#E8DEF8" stroke-width="2"/>
+  <circle cx="420" cy="95" r="20" fill="#34A853"/>
+  <text x="420" y="103" class="badge" text-anchor="middle">3</text>
+  <text x="420" y="130" class="subtitle" text-anchor="middle">Cody</text>
+  <text x="420" y="150" class="value" text-anchor="middle">$9/usuario/mes</text>
+  <text x="420" y="167" class="value" text-anchor="middle">&#x1f465; Para Equipos</text>
+  <text x="420" y="184" class="value" text-anchor="middle">&#x1f510; OSS Parcial</text>
+  <text x="420" y="201" class="label" text-anchor="middle">Mejor Equipos</text>
+
+  <!-- Card 4: Tabnine -->
+  <rect x="510" y="70" width="140" height="170" rx="8" fill="#FEF8F5" stroke="#E8DEF8" stroke-width="2"/>
+  <circle cx="580" cy="95" r="20" fill="#EA4335"/>
+  <text x="580" y="103" class="badge" text-anchor="middle">4</text>
+  <text x="580" y="130" class="subtitle" text-anchor="middle">Tabnine</text>
+  <text x="580" y="150" class="value" text-anchor="middle">$12/mes</text>
+  <text x="580" y="167" class="value" text-anchor="middle">&#x1f512; Autoalojado</text>
+  <text x="580" y="184" class="value" text-anchor="middle">&#x1f4ca; SOC 2</text>
+  <text x="580" y="201" class="label" text-anchor="middle">Mejor Privacidad</text>
+
+  <!-- Card 5: Windsurf -->
+  <rect x="670" y="70" width="120" height="170" rx="8" fill="#F5F6FF" stroke="#E8DEF8" stroke-width="2"/>
+  <circle cx="730" cy="95" r="20" fill="#3C4BF0"/>
+  <text x="730" y="103" class="badge" text-anchor="middle">5</text>
+  <text x="730" y="130" class="subtitle" text-anchor="middle">Windsurf</text>
+  <text x="730" y="150" class="value" text-anchor="middle">Gratis/$15</text>
+  <text x="730" y="167" class="value" text-anchor="middle">&#x26a1; Nuevo</text>
+  <text x="730" y="184" class="value" text-anchor="middle">&#x1f195; En Alza</text>
+  <text x="730" y="201" class="label" text-anchor="middle">Alternativa</text>
+
+  <!-- Bottom section: Key metrics -->
+  <line x1="30" y1="270" x2="770" y2="270" stroke="#E8DEF8" stroke-width="1"/>
+
+  <text x="40" y="295" class="subtitle">&#x1f4ca; Comparaci&#xf3;n R&#xe1;pida</text>
+
+  <text x="40" y="320" class="label">&#x2705; = Soporte LLM Local</text>
+  <text x="40" y="340" class="value">Continue: Ollama/LM Studio Nativo  •  Cursor: Endpoint personalizado  •  Cody: Configuraci&#xf3;n Ollama</text>
+  <text x="40" y="357" class="value">Tabnine: Autoalojado empresarial  •  Windsurf: Ollama (a&#xf1;adido 2025)</text>
+
+  <text x="40" y="380" class="label">&#x1f3c6; Ideal para diferentes necesidades:</text>
+  <text x="40" y="397" class="value">Privacidad: Continue.dev  •  UX: Cursor  •  Equipos: Cody  •  Cumplimiento: Tabnine  •  Innovaci&#xf3;n: Windsurf</text>
+
+  <!-- Watermark -->
+  <text x="750" y="415" class="label" text-anchor="end">© 2026 PromptQuorum</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

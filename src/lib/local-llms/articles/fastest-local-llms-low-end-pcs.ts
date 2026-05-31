@@ -475,7 +475,7 @@ schema: {
             { 'Hardware': '16 GB+', 'Model': 'Modelos 13B', 'Quant': 'Q4', 'Speed': '20–50 t/s', 'Experience': 'sólido' },
           ],
           columns: ['Hardware', 'Model', 'Quant', 'Speed', 'Experience'],
-          image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-en.svg',
+          image: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-es.svg',
           imageCaption: 'Velocidad de LLM local por nivel de hardware: solo CPU (5–15 tok/s, 2.5 GB RAM), GPU 4 GB (20–40 tok/s), GPU 6 GB (15–30 tok/s), punto óptimo GPU 8 GB (25–60 tok/s, Mistral 7B Q4), 16 GB+ (20–50 tok/s). Benchmarks de abril de 2026.',
         },
         'gpu-vs-cpu': {
@@ -487,7 +487,7 @@ schema: {
             '**Inferencia CPU:** 1–5 tok/s en multi-núcleo moderno. Funciona en cualquier lugar. La más lenta.',
             '**Regla:** Si tienes cualquier GPU (incluso integrada), úsala. La CPU es el último recurso.',
           ],
-          image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-en.svg',
+          image: '/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-es.svg',
           imageCaption: 'Comparativa de velocidad CPU vs GPU para LLMs locales: solo CPU alcanza 10–25 tok/s (modelos 3B) y 15–40 tok/s. GPU (RTX 3060, 8 GB) llega a 25–60 tok/s — entre 4 y 10 veces más rápida que la inferencia solo en CPU.',
         },
         'why-small-models-faster': {
@@ -527,7 +527,7 @@ schema: {
             'Mistral 7B Q2 supera a TinyLlama 1.1B Q4 tanto en velocidad como en calidad.',
             'Los modelos más rápidos sacrifican calidad por velocidad — pero ajustar temperature y top-p recupera buena parte de esa calidad. Una temperature baja (0.1–0.3) en modelos rápidos produce resultados más consistentes que la configuración predeterminada. Consulta [temperature y top-p explicados](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity) para los ajustes exactos.',
           ],
-          image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-en.svg',
+          image: '/images/fastest-local-llms-low-end-pcs-quantization-guide-es.svg',
           imageCaption: 'Compromisos de cuantización para LLMs locales: Q4 (1% de pérdida de calidad, 50% de ahorro en VRAM, 4.5 GB para Mistral 7B) es el estándar. Q2 es un 30% más rápido pero con 10% de caída de calidad. Evita Q8 — costo 2× de VRAM con ganancia mínima.',
         },
         'cpu-tricks': {
@@ -566,7 +566,7 @@ schema: {
             '**30+ tok/s → fluido.** Se siente como un asistente real. Cómodo para todas las tareas interactivas.',
             '**60+ tok/s → instantáneo.** Más rápido que la lectura. Ideal para autocompletado en tiempo real e iteración rápida.',
           ],
-          image: '/images/fastest-local-llms-low-end-pcs-speed-perception-en.svg',
+          image: '/images/fastest-local-llms-low-end-pcs-speed-perception-es.svg',
           imageCaption: 'Umbrales de percepción de velocidad para LLMs locales: por debajo de 10 tok/s se siente roto, 15–25 tok/s es aceptable para preguntas y respuestas, 30+ tok/s es fluido para todas las tareas, 60+ tok/s habilita el autocompletado en tiempo real.',
         },
         'what-to-avoid': {

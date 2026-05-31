@@ -1637,7 +1637,7 @@ schema: {
             '---',
             '🔍 **¿Sabías que:** El formato de la API de OpenAI se ha convertido en el estándar no oficial para todas las APIs de LLMs. Anthropic (Claude), Google (Gemini) y todas las principales herramientas de inferencia local (Ollama, vLLM, LM Studio, llama.cpp) ahora lo soportan. El código escrito contra este formato es verdaderamente agnóstico al proveedor — lo más parecido a una API universal que tiene la industria de la IA.',
           ],
-          image: '/images/openai-compatible-one-line-change-en.svg',
+          image: '/images/openai-compatible-one-line-change-es.svg',
           imageCaption: 'Cambiar de OpenAI a Ollama requiere modificar 2 líneas -- base_url y api_key -- el resto del código permanece idéntico.',
         },
         ollamaEndpoint: {
@@ -1651,7 +1651,7 @@ schema: {
             { 'Endpoint': 'List Models', 'URL': 'GET http://localhost:11434/v1/models', 'Descripción': 'Lista los modelos disponibles' },
           ],
           columns: ['Endpoint', 'URL', 'Descripción'],
-          image: '/images/openai-compatible-api-request-flow-en.svg',
+          image: '/images/openai-compatible-api-request-flow-es.svg',
           imageCaption: 'Ollama intercepta la petición en formato OpenAI y ejecuta la inferencia localmente -- la respuesta se devuelve en el mismo formato OpenAI, sin necesidad de internet.',
         },
         pythonOpenAI: {
@@ -1703,7 +1703,7 @@ schema: {
           content: '**El streaming te permite mostrar las respuestas a medida que se generan, token a token, en lugar de esperar a la respuesta completa.** A partir de mayo de 2026, el streaming funciona con todos los modelos locales a través de la API compatible con OpenAI.',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
-          image: '/images/openai-compatible-streaming-vs-batch-en.svg',
+          image: '/images/openai-compatible-streaming-vs-batch-es.svg',
           imageCaption: 'Con stream=True, Ollama entrega el primer token en ~0.1s -- los usuarios ven la salida inmediatamente en lugar de esperar la respuesta completa.',
         },
         functionCalling: {
@@ -1718,7 +1718,7 @@ schema: {
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
-          image: '/images/openai-compatible-function-calling-en.svg',
+          image: '/images/openai-compatible-function-calling-es.svg',
           imageCaption: 'Flujo de function calling con Ollama: el modelo local devuelve JSON tool_call y tu app ejecuta la función -- soportado por Llama 4 Scout, Qwen3 8B, Gemma 4 9B y Mistral.',
         },
         regionalContext: {
@@ -1744,7 +1744,7 @@ schema: {
             '---',
             '⚠️ **Advertencia:** La API de Ollama NO tiene autenticación por defecto. Si la expones a tu red (`OLLAMA_HOST=0.0.0.0`), cualquier persona en esa red puede enviar peticiones, cargar modelos y consumir recursos de GPU. Para configuraciones multiusuario o de producción, coloca un reverse proxy (nginx, Caddy) con autenticación delante de Ollama — nunca expongas el puerto 11434 directamente a internet.',
           ],
-          image: '/images/openai-compatible-platform-comparison-en.svg',
+          image: '/images/openai-compatible-platform-comparison-es.svg',
           imageCaption: 'Ollama (puerto 11434), vLLM (puerto 8000) y LM Studio (puerto 1234) exponen todos endpoints compatibles con OpenAI -- código cliente idéntico, diferentes puertos y casos de uso.',
         },
         faqSection: {

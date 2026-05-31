@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350" role="img" aria-label="LM Studio vs Jan vs GPT4All — &#xbf;Cu&#xe1;l deber&#xed;as instalar?">
+  <rect width="800" height="350" fill="#FFFFFF" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio vs Jan vs GPT4All — &#xbf;Cu&#xe1;l deber&#xed;as instalar?</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Asocia tu situaci&#xf3;n con la app adecuada — las tres son gratis y funcionan sin conexi&#xf3;n</text>
+
+  <!-- Top separator -->
+  <line x1="20" y1="54" x2="780" y2="54" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <text x="20" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Tu situaci&#xf3;n</text>
+  <text x="680" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Elige</text>
+
+  <!-- Header underline -->
+  <line x1="20" y1="78" x2="780" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 — y=100 -->
+  <text x="20" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">RTX 3060+ o Mac M3+, m&#xe1;xima velocidad</text>
+  <rect x="590" y="82" width="180" height="26" rx="13" fill="#6750A4"/>
+  <text x="680" y="99" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">LM Studio</text>
+  <line x1="20" y1="120" x2="780" y2="120" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 — y=136 -->
+  <text x="20" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">C&#xf3;digo totalmente abierto, telemetr&#xed;a cero</text>
+  <rect x="590" y="118" width="180" height="26" rx="13" fill="#34A853"/>
+  <text x="680" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Jan</text>
+  <line x1="20" y1="156" x2="780" y2="156" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 — y=172 -->
+  <text x="20" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Port&#xe1;til de 4 a&#xf1;os, 8 GB de RAM, sin GPU</text>
+  <rect x="590" y="154" width="180" height="26" rx="13" fill="#7D5260"/>
+  <text x="680" y="171" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">GPT4All</text>
+  <line x1="20" y1="192" x2="780" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 — y=208 -->
+  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Chatear con PDFs sin configuraci&#xf3;n</text>
+  <rect x="590" y="190" width="180" height="26" rx="13" fill="#6750A4"/>
+  <text x="680" y="207" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">LM Studio</text>
+  <line x1="20" y1="228" x2="780" y2="228" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 — y=244 -->
+  <text x="20" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Empresa de la UE, cumplimiento de telemetr&#xed;a</text>
+  <rect x="590" y="226" width="180" height="26" rx="13" fill="#34A853"/>
+  <text x="680" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Jan</text>
+  <line x1="20" y1="264" x2="780" y2="264" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6 — y=280 -->
+  <text x="20" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="start">Usuario no t&#xe9;cnico, instalaci&#xf3;n m&#xe1;s sencilla</text>
+  <rect x="590" y="262" width="180" height="26" rx="13" fill="#7D5260"/>
+  <text x="680" y="279" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">GPT4All</text>
+  <line x1="20" y1="300" x2="780" y2="300" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Footer -->
+  <text x="400" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">Empieza con LM Studio — es la opci&#xf3;n por defecto para el 80% de los usuarios · Las tres comparten archivos de modelo GGUF · promptquorum.com</text>
+</svg>

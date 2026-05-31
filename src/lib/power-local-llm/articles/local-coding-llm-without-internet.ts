@@ -686,7 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'No necesitas los diez desde el primer día. El setup offline mínimamente útil es el LLM, Continue.dev o Aider y el caché de paquetes para el lenguaje que usarás en el viaje. Añade Devdocs y el volcado de Stack Overflow una vez que lo básico funcione.',
           },
         ],
-        image: '/images/local-coding-llm-offline-stack-en.svg',
+        image: '/images/local-coding-llm-offline-stack-es.svg',
         imageCaption: 'Stack offline para programar — 5 componentes principales: Continue.dev + Qwen3-Coder 30B (~18 GB), Devdocs/Zeal (~3–5 GB), Verdaccio para npm, devpi/wheelhouse para paquetes Python y ripgrep + rga para búsqueda local de código y PDFs.',
       },
       flightTest: {
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Guarda esta lista de verificación como un script. Un archivo bash de 30 líneas (`pre-flight.sh`) que ejecute `ollama pull`, `npm install`, `pip install`, `git fetch --all` y `docker pull` para tus dependencias habituales convierte todo el proceso en un solo comando. La primera ejecución tarda 45 minutos; las siguientes tardan 5 porque todo está cacheado.',
           },
         ],
-        image: '/images/local-coding-llm-pre-flight-checklist-en.svg',
+        image: '/images/local-coding-llm-pre-flight-checklist-es.svg',
         imageCaption: 'Lista de verificación offline previa al vuelo — 5 pasos: (1) descargar LLM con ollama pull, (2) calentar caché con npm install / pip install / cargo build, (3) sincronizar Devdocs (~3–5 GB), (4) clonar repos con git clone --mirror, (5) prueba "sin luz" de 30 minutos antes del viaje.',
       },
       hardware: {
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Si ya tienes un MacBook Pro M3 o M4 de 32 GB, no necesitas actualizarlo. El modelo 7B funciona cómodamente con 8 GB de RAM y ofrece el 80–85% de la calidad del 30B. La recomendación de 64 GB es para usuarios que compran el equipo específicamente para programar offline; los que ya tienen hardware deben probar primero con el 7B.',
           },
         ],
-        image: '/images/local-coding-llm-hardware-comparison-en.svg',
+        image: '/images/local-coding-llm-hardware-comparison-es.svg',
         imageCaption: 'Comparación de hardware para programar offline: Apple M5 MacBook Pro 64 GB es la opción recomendada (35–50 tok/s, batería 6–8 h, soporte completo del modelo 30B); portátil RTX 4090 gana en tokens/seg pero dura ~2 h bajo inferencia; RTX 4070/4090 limitados al modelo 7B con 8–16 GB VRAM.',
       },
       modelChoice: {
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Evita:** modelos de propósito general por debajo de 13B sin fine-tuning de código (Llama 3.2 7B, Mistral 7B) y cualquier cuantización más agresiva que Q4_K_M. Ambos fallan de forma obvia en trabajo de programación real.',
           '**Para la comparación completa de modelos de código** incluyendo puntuaciones HumanEval+ por lenguaje, consulta [Los mejores modelos locales de código en 2026: Qwen3-Coder vs DeepSeek vs Codestral](/es/power-local-llm/best-local-coding-models-2026).',
         ],
-        image: '/images/local-coding-llm-model-choice-en.svg',
+        image: '/images/local-coding-llm-model-choice-es.svg',
         imageCaption: 'Modelos locales de código para trabajo offline: Qwen3-Coder 30B Q4_K_M (~18 GB, 24 GB RAM) es el predeterminado recomendado; Qwen3-Coder 7B (~5 GB, 8 GB RAM) es el respaldo ligero con 80–85% de calidad; DeepSeek Coder V3 (~25 GB) para flujos de trabajo con contextos de 128K; Codestral 22B para el autocompletado más rápido.',
       },
       dependencyCache: {
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Generación de imágenes y assets que llama a servicios externos.** Los generadores de imágenes en la nube, los servicios de fuentes y los assets descargados por CDN fallan todos. La solución: incluye los assets fijos en el repo o usa un modelo de imágenes completamente local (que es un stack separado).',
           '**La solución al problema "¿cómo se llamaba esa librería?" es el propio modelo.** Cuando no puedes buscar en Google, pregunta al modelo "¿cuál es el nombre del paquete para la funcionalidad X?" — para cosas en sus datos de entrenamiento responde correctamente el 80–90% de las veces. Verifica en el caché de paquetes antes de instalar.',
         ],
-        image: '/images/local-coding-llm-what-breaks-en.svg',
+        image: '/images/local-coding-llm-what-breaks-es.svg',
         imageCaption: 'Qué falla offline y la solución: (1) paquetes sin caché — instálalos antes de salir; (2) conocimiento de API post-corte — clona el código fuente y usa ripgrep; (3) viajes de autenticación OAuth — completa la auth antes de perder señal; (4) tests contra API remotas — usa mock con msw/nock; (5) imágenes Docker faltantes — ejecuta docker pull antes del vuelo.',
       },
       updates: {

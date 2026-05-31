@@ -1,0 +1,76 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Layer Splitting Across 2 GPUs</dc:title>
+    <dc:creator>PromptQuorum</dc:creator>
+    <dc:rights>© PromptQuorum 2026</dc:rights>
+    <dc:source>https://www.promptquorum.com/local-llms/multi-gpu-local-llms</dc:source>
+  </metadata>
+
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">C&#xf3;mo se reparten las capas de un modelo 70B entre 2 GPU</text>
+
+  <!-- Step 1: Full Model -->
+  <circle cx="80" cy="80" r="22" fill="#6750A4"/>
+  <text x="80" y="88" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="80" y="125" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Modelo completo</text>
+  <text x="80" y="145" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">80 capas</text>
+  <text x="80" y="160" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Llama 3.3 70B</text>
+
+  <!-- Arrow 1 -->
+  <text x="140" y="88" font-family="system-ui, sans-serif" font-size="24" fill="#6750A4">→</text>
+
+  <!-- Step 2: GPU 1 -->
+  <circle cx="220" cy="80" r="22" fill="#6750A4"/>
+  <text x="220" y="88" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="220" y="125" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">GPU 1</text>
+  <text x="220" y="145" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Capas 1–40</text>
+  <text x="220" y="160" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">24 GB VRAM</text>
+
+  <!-- Arrow 2 -->
+  <text x="280" y="88" font-family="system-ui, sans-serif" font-size="24" fill="#6750A4">→</text>
+
+  <!-- Step 3: GPU 2 -->
+  <circle cx="360" cy="80" r="22" fill="#6750A4"/>
+  <text x="360" y="88" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="360" y="125" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">GPU 2</text>
+  <text x="360" y="145" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Capas 41–80</text>
+  <text x="360" y="160" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">24 GB VRAM</text>
+
+  <!-- Arrow 3 -->
+  <text x="420" y="88" font-family="system-ui, sans-serif" font-size="24" fill="#6750A4">→</text>
+
+  <!-- Step 4: Communication -->
+  <circle cx="500" cy="80" r="22" fill="#6750A4"/>
+  <text x="500" y="88" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="500" y="125" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Por token</text>
+  <text x="500" y="145" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">PCIe: 64 GB/s</text>
+  <text x="500" y="160" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">~10% de sobrecarga</text>
+
+  <!-- Arrow 4 -->
+  <text x="560" y="88" font-family="system-ui, sans-serif" font-size="24" fill="#6750A4">→</text>
+
+  <!-- Step 5: Result -->
+  <circle cx="640" cy="80" r="22" fill="#34A853"/>
+  <text x="640" y="88" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="640" y="125" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Velocidad</text>
+  <text x="640" y="145" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">~100 tok/seg</text>
+  <text x="640" y="160" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">90% de una sola GPU</text>
+
+  <!-- Flow diagram below -->
+  <rect x="40" y="210" width="720" height="120" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+
+  <text x="60" y="235" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">Flujo de inferencia (por token):</text>
+
+  <text x="60" y="260" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#1C1B1F"><tspan font-weight="700">Token de entrada</tspan> → GPU 1 procesa las capas 1–40 → GPU 2 procesa las capas 41–80 → token de salida</text>
+
+  <text x="60" y="285" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Cada token requiere UNA transferencia GPU a GPU (despu&#xe9;s de GPU 1 → GPU 2)</text>
+
+  <text x="60" y="305" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• El ancho de banda PCIe (64 GB/s) es el cuello de botella; NVLink (900 GB/s) ser&#xed;a 14× m&#xe1;s r&#xe1;pido pero no est&#xe1; disponible en las RTX de consumo</text>
+
+  <text x="60" y="325" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">• Para un modelo 70B: ~96 bytes transferidos por token (~10% del tiempo de inferencia esperando la comunicaci&#xf3;n entre GPU)</text>
+
+  <!-- Corner attribution -->
+  <text x="730" y="348" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>

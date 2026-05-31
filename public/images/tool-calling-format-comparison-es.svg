@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 285" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="285" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="22" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Formatos de llamada a herramientas &#x2014; misma capacidad, distintos protocolos</text>
+  <line x1="18" y1="30" x2="782" y2="30" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Column headers -->
+  <text x="18" y="52" font-size="12" font-weight="700" fill="#79747E">Formato</text>
+  <text x="248" y="52" font-size="12" font-weight="700" fill="#79747E">Usado en</text>
+  <text x="556" y="52" font-size="12" font-weight="700" fill="#79747E">Rigurosidad</text>
+  <!-- Vertical dividers -->
+  <line x1="235" y1="30" x2="235" y2="210" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="545" y1="30" x2="545" y2="210" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Header underline -->
+  <line x1="18" y1="60" x2="782" y2="60" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1: y=82 -->
+  <text x="18" y="82" font-size="12" font-weight="600" fill="#1C1B1F">OpenAI tools (JSON)</text>
+  <text x="248" y="82" font-size="11" fill="#49454F">Continue.dev Agent, OpenAI API</text>
+  <text x="556" y="82" font-size="11" fill="#34A853" font-weight="700">Validado por esquema</text>
+  <line x1="18" y1="97" x2="782" y2="97" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 2: y=116 -->
+  <text x="18" y="116" font-size="12" font-weight="600" fill="#1C1B1F">Cline XML</text>
+  <text x="248" y="116" font-size="11" fill="#49454F">Extensi&#xf3;n de Cline para VS Code</text>
+  <text x="556" y="116" font-size="11" fill="#F4B400" font-weight="700">Muy estricto &#x26A0;</text>
+  <line x1="18" y1="131" x2="782" y2="131" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3: y=150 -->
+  <text x="18" y="150" font-size="12" font-weight="600" fill="#1C1B1F">MCP JSON-RPC 2.0</text>
+  <text x="248" y="150" font-size="11" fill="#49454F">Goose, Cline, LM Studio</text>
+  <text x="556" y="150" font-size="11" fill="#34A853" font-weight="700">Validado por esquema</text>
+  <line x1="18" y1="165" x2="782" y2="165" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4: y=184 -->
+  <text x="18" y="184" font-size="12" font-weight="600" fill="#1C1B1F">Aider SEARCH/REPLACE</text>
+  <text x="248" y="184" font-size="11" fill="#49454F">Aider CLI</text>
+  <text x="556" y="184" font-size="11" fill="#EA4335" font-weight="700">Coincidencia literal de patrones</text>
+  <!-- Footer -->
+  <text x="400" y="250" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Los cinco modelos de referencia manejan los cuatro formatos &#x2014; el formato es una decisi&#xf3;n del entorno</text>
+<text x="792" y="280" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="27" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">6 fallos comunes — Referencia r&#xe1;pida de soluciones</text>
+
+  <!-- Header row -->
+  <rect x="0" y="40" width="800" height="34" fill="#6750A4"/>
+  <text x="130" y="62" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">S&#xed;ntoma</text>
+  <text x="390" y="62" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Causa probable</text>
+  <text x="660" y="62" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Soluci&#xf3;n</text>
+
+  <!-- Column dividers -->
+  <line x1="260" y1="40" x2="260" y2="346" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="520" y1="40" x2="520" y2="346" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <rect x="0" y="74" width="800" height="44" fill="#FFFFFF"/>
+  <text x="130" y="91" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">No se conecta a Ollama</text>
+  <text x="130" y="107" font-size="10" fill="#49454F" text-anchor="middle">error "Connection refused"</text>
+  <text x="390" y="99" font-size="10" fill="#49454F" text-anchor="middle">Servicio no activo / endpoint incorrecto</text>
+  <text x="660" y="91" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">ollama serve</text>
+  <text x="660" y="107" font-size="10" fill="#49454F" text-anchor="middle">confirma el endpoint: 127.0.0.1:11434</text>
+
+  <!-- Row 2 -->
+  <rect x="0" y="118" width="800" height="44" fill="#F7F2FA"/>
+  <text x="130" y="135" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">La descarga del modelo se atasca</text>
+  <text x="130" y="151" font-size="10" fill="#49454F" text-anchor="middle">en 0% o 99%</text>
+  <text x="390" y="143" font-size="10" fill="#49454F" text-anchor="middle">Problema de CDN o disco lleno</text>
+  <text x="660" y="135" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">Ctrl+C → df -h → repetir pull</text>
+  <text x="660" y="151" font-size="10" fill="#49454F" text-anchor="middle">Ollama reanuda desde el &#xfa;ltimo byte</text>
+
+  <!-- Row 3 -->
+  <rect x="0" y="162" width="800" height="44" fill="#FFFFFF"/>
+  <text x="130" y="179" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">El paso de embeddings se cuelga</text>
+  <text x="130" y="195" font-size="10" fill="#49454F" text-anchor="middle">barra de progreso congelada</text>
+  <text x="390" y="187" font-size="10" fill="#49454F" text-anchor="middle">Primera carga del modelo en RAM</text>
+  <text x="660" y="179" font-size="10" fill="#49454F" text-anchor="middle">Espera 30&#x2013;60 s — la primera carga</text>
+  <text x="660" y="195" font-size="10" fill="#49454F" text-anchor="middle">tarda 10&#x2013;40 s seg&#xfa;n la velocidad del disco</text>
+
+  <!-- Row 4 -->
+  <rect x="0" y="206" width="800" height="44" fill="#F7F2FA"/>
+  <text x="130" y="223" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Recuperaci&#xf3;n: fragmentos irrelevantes</text>
+  <text x="130" y="239" font-size="10" fill="#49454F" text-anchor="middle">citas no relacionadas con la consulta</text>
+  <text x="390" y="231" font-size="10" fill="#49454F" text-anchor="middle">Fragmentos 512/0 + embedder d&#xe9;bil</text>
+  <text x="660" y="223" font-size="10" fill="#6750A4" text-anchor="middle">Aplica el paso 4 (nomic-embed-text)</text>
+  <text x="660" y="239" font-size="10" fill="#6750A4" text-anchor="middle">+ paso 7 (1000/200) · vuelve a generar embeddings</text>
+
+  <!-- Row 5 -->
+  <rect x="0" y="250" width="800" height="44" fill="#FFFFFF"/>
+  <text x="130" y="267" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Respuestas gen&#xe9;ricas / cortas</text>
+  <text x="130" y="283" font-size="10" fill="#49454F" text-anchor="middle">ignora el contenido del PDF</text>
+  <text x="390" y="275" font-size="10" fill="#49454F" text-anchor="middle">A&#xfa;n est&#xe1; seleccionado el LLM peque&#xf1;o por defecto</text>
+  <text x="660" y="267" font-size="10" fill="#49454F" text-anchor="middle">Configura el LLM → llama3.3:8b-instruct-q4_K_M</text>
+  <text x="660" y="283" font-size="10" fill="#49454F" text-anchor="middle">Sube el Top-K de 4 a 6</text>
+
+  <!-- Row 6 -->
+  <rect x="0" y="294" width="800" height="44" fill="#F7F2FA"/>
+  <text x="130" y="311" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">PDF escaneados → fragmentos vac&#xed;os</text>
+  <text x="130" y="327" font-size="10" fill="#49454F" text-anchor="middle">el texto se extrae como "[image]"</text>
+  <text x="390" y="319" font-size="10" fill="#49454F" text-anchor="middle">Sin capa de texto — imagen r&#xe1;ster pura</text>
+  <text x="660" y="311" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#6750A4" text-anchor="middle">ocrmypdf input.pdf output.pdf</text>
+  <text x="660" y="327" font-size="10" fill="#49454F" text-anchor="middle">luego vuelve a subir el resultado con OCR</text>
+
+  <!-- Table outer border -->
+  <rect x="0" y="40" width="800" height="298" fill="none" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer -->
+  <line x1="18" y1="354" x2="782" y2="354" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="374" font-size="11" fill="#79747E" text-anchor="middle">Todos los fallos se resuelven siguiendo la configuraci&#xf3;n de 7 pasos en orden — los pasos 4 y 7 son los m&#xe1;s cr&#xed;ticos</text>
+  <text x="400" y="394" font-size="10" fill="#79747E" text-anchor="middle">Problemas de recuperaci&#xf3;n: arregla siempre el embedder (paso 4) + el tama&#xf1;o de fragmento (paso 7) antes de cambiar el modelo de respuesta</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 358" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="358" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">&#xbf;Con qu&#xe9; modelo deber&#xed;as empezar?</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Elige seg&#xfa;n la RAM disponible — decide antes de descargar</text>
+
+  <!-- Box 1: ≤4 GB → Gemma 2 2B (amber) -->
+  <rect x="20" y="58" width="238" height="255" rx="8" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="20" y="58" width="238" height="5"   rx="0" fill="#F4B400"/>
+  <circle cx="139" cy="106" r="26" fill="#F4B400"/>
+  <text x="139" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">≤ 4 GB</text>
+  <text x="139" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Gemma 2 2B</text>
+  <text x="139" y="170" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">ollama run gemma2:2b</text>
+  <line x1="38" y1="184" x2="240" y2="184" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="139" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">1.7 GB RAM · 40–60 tok/s</text>
+  <text x="139" y="220" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Modelo CPU m&#xe1;s r&#xe1;pido</text>
+  <text x="139" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Ideal para probar tu configuraci&#xf3;n</text>
+
+  <!-- Box 2: 8 GB → Llama 3.2 3B ★ (purple, recommended) -->
+  <rect x="281" y="58" width="238" height="255" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+  <rect x="281" y="58" width="238" height="5"   rx="0" fill="#6750A4"/>
+  <circle cx="400" cy="106" r="26" fill="#6750A4"/>
+  <text x="400" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8 GB</text>
+  <text x="400" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Llama 3.2 3B ★</text>
+  <text x="400" y="170" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">ollama run llama3.2:3b</text>
+  <line x1="299" y1="184" x2="501" y2="184" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="400" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">2.5 GB RAM · contexto 128K</text>
+  <text x="400" y="220" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Mejor equilibrio entre calidad y velocidad</text>
+  <text x="400" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">★ Ideal para la mayor&#xed;a de principiantes</text>
+
+  <!-- Box 3: 8 GB+ → Qwen2.5 7B (green) -->
+  <rect x="542" y="58" width="238" height="255" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="542" y="58" width="238" height="5"   rx="0" fill="#34A853"/>
+  <circle cx="661" cy="106" r="26" fill="#34A853"/>
+  <text x="661" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8 GB+</text>
+  <text x="661" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen2.5 7B</text>
+  <text x="661" y="170" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">ollama run qwen2.5:7b</text>
+  <line x1="560" y1="184" x2="762" y2="184" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="661" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">4.7 GB RAM · 29 idiomas</text>
+  <text x="661" y="220" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Mejor para programaci&#xf3;n y multiling&#xfc;e</text>
+  <text x="661" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#34A853" text-anchor="middle">Un paso m&#xe1;s para uso serio</text>
+
+  <!-- Footer note -->
+  <text x="400" y="333" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Considera tambi&#xe9;n: Phi-3.5 Mini 3.8B para razonamiento y programaci&#xf3;n con 4–6 GB de RAM</text>
+  <text x="400" y="349" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/best-beginner-local-llm-models</text>
+</svg>

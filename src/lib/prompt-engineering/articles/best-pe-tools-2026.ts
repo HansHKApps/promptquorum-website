@@ -831,7 +831,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'which-problem-each-tool-solves',
       title: '¿Qué problema resuelve cada herramienta?',
       content: '**Cinco cuellos de botella bloquean a los equipos de prompt engineering:** evaluación (¿funciona esto?), testing (¿se romperá?), versionado (¿qué versión se desplegó?), despliegue (¿cómo sirvo esto?) y observabilidad (¿por qué falló?). Cada herramienta se especializa en uno o dos.',
-      image: '/images/best-pe-tools-2026-bottlenecks-to-tools-en.svg',
+      image: '/images/best-pe-tools-2026-bottlenecks-to-tools-es.svg',
       imageCaption: '5 cuellos de botella del prompt engineering mapeados a la herramienta especializada para cada uno: Braintrust (evaluación), Promptfoo (testing), PromptHub (versionado), Vellum (despliegue), LangSmith (observabilidad).'
     },
     wherePromptQuorum: {
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Comparación de modelos lado a lado vía Playground; integración con servidor MCP',
         'Precios: Gratis (1M trazas, 10k puntuaciones, usuarios ilimitados); Pro $249/mes; Enterprise personalizado'
       ],
-      image: '/images/best-pe-tools-2026-braintrust-eval-loop-en.svg',
+      image: '/images/best-pe-tools-2026-braintrust-eval-loop-es.svg',
       imageCaption: 'Bucle de eval de 4 pasos de Braintrust: definir evals → ejecutar automáticamente → puntuar con feedback humano → compilar en dataset. Jueces LLM + feedback humano construyen ground truth para futuras evaluaciones.'
     },
     vellum: {
@@ -936,7 +936,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Uso intensivo de LangChain:** LangSmith (imprescindible para tracing de cadenas) + Promptfoo (tests unitarios) + Confident AI o Braintrust (evals offline)',
         '**Enterprise (gobernanza importante):** PromptHub (trazas de auditoría) + Braintrust o Confident AI (gobernanza de eval) + Vellum (monitorización en producción)'
       ],
-      image: '/images/best-pe-tools-2026-decision-guide-en.svg',
+      image: '/images/best-pe-tools-2026-decision-guide-es.svg',
       imageCaption: 'Recomendaciones de stack por tipo de equipo: todos los equipos empiezan con PromptQuorum; startups añaden Promptfoo + PromptHub; equipos de producción añaden Vellum; equipos LangChain añaden LangSmith; equipos enterprise usan PromptHub + Braintrust + Vellum para gobernanza.'
     },
     howToStack: {
@@ -976,7 +976,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           fix: 'Usa Vellum para monitorización de prompts en producción o LangSmith si usas LangChain. Ambos registran el par completo prompt–respuesta con atribución de coste.'
         }
       ],
-      image: '/images/best-pe-tools-2026-common-mistakes-en.svg',
+      image: '/images/best-pe-tools-2026-common-mistakes-es.svg',
       imageCaption: '4 errores que cometen los equipos de prompt engineering: comprar herramientas que se solapan, saltarse el testing CI/CD, versionado tardío y usar observabilidad genérica en lugar de herramientas específicas para prompts como Vellum o LangSmith.'
     },
     regionalConsiderations: {

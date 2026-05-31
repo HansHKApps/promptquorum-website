@@ -1291,7 +1291,7 @@ schema: {
             { label: '❌ Prompt malo', text: 'Generar código para combinar arrays' },
             { label: '✅ Prompt bueno', text: 'Implementa merge_sorted_arrays(arr1: List[int], arr2: List[int]) -> List[int] usando un algoritmo de dos punteros. Docstring: Combina dos arrays ordenados en un único array ordenado.' },
           ],
-          image: '/images/local-llms-for-coding-workflows-generation-workflow-en.svg',
+          image: '/images/local-llms-for-coding-workflows-generation-workflow-es.svg',
           imageCaption: 'Flujo de generación de código: escribe un prompt detallado con la firma de la función y el docstring → envíalo al modelo Qwen2.5-Coder o CodeLlama 7B → el modelo genera la implementación → revisa el código en busca de errores → integra en la aplicación. Los 5 pasos son esenciales.',
         },
         codeReview: {
@@ -1335,7 +1335,7 @@ schema: {
             'Editor Cursor: Soporte integrado para Ollama. No requiere configuración.',
             'Autocompletado en línea: Ctrl+Shift+\\\\ (VS Code) o Cmd+Shift+\\\\ (Mac) activa la sugerencia del LLM local.',
           ],
-          image: '/images/local-llms-for-coding-workflows-ide-setup-en.svg',
+          image: '/images/local-llms-for-coding-workflows-ide-setup-es.svg',
           imageCaption: 'Configuración de integración con IDE: instala Ollama (ollama.ai) → instala la extensión Continue.dev para VS Code → configura localhost:11434 → selecciona el modelo Qwen2.5-Coder 7B → usa Ctrl+Shift+\\ para activar sugerencias en línea. Configuración completa en 3 pasos.',
         },
         commonMistakes: {
@@ -1348,7 +1348,7 @@ schema: {
             '**Esperar que entienda la arquitectura.** Los modelos locales entienden funciones individuales, no el diseño del sistema.',
             '**No usar un modelo específico para programación.** Los modelos de propósito general (Llama 3.1 8B, Mistral 7B) obtienen entre un 15 y un 25% menos en HumanEval que los modelos de programación (Qwen2.5-Coder 7B: 72% vs Llama 3.1 8B: 55%). Usa siempre un modelo entrenado específicamente para código. En Ollama: `ollama pull qwen2.5-coder:7b` — no `ollama pull llama3.1:8b` para tareas de programación.',
           ],
-          image: '/images/local-llms-for-coding-workflows-mistakes-en.svg',
+          image: '/images/local-llms-for-coding-workflows-mistakes-es.svg',
           imageCaption: 'Errores comunes de programación vs buenas prácticas: evita los modelos de 3B (poca precisión), usa como mínimo Qwen2.5-Coder 7B (72% HumanEval). Establece límites de iteración (10-20), revisa siempre el código, usa modelos específicos para código — no Mistral ni Llama de propósito general.',
         },
         faqSection: {

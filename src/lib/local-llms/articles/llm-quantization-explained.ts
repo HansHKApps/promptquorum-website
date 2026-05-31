@@ -670,7 +670,7 @@ schema: {
             { 'Nivel': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7,7 GB', 'Pérdida de calidad': 'Insignificante', 'Cuándo usar': '16+ GB de RAM, máxima calidad' },
           ],
           columns: ['Nivel', 'Bits', 'RAM (7B)', 'Pérdida de calidad', 'Cuándo usar'],
-          image: '/images/quantization-levels-comparison-en.svg',
+          image: '/images/quantization-levels-comparison-es.svg',
           imageCaption: 'Niveles de cuantización comparados: de Q2_K (mayor compresión) a Q8_0 (mayor calidad). Q4_K_M es el estándar recomendado para la mayoría de usuarios.',
         },
         gguf: {
@@ -682,7 +682,7 @@ schema: {
             'A partir de abril de 2026, GGUF es el formato estándar para Ollama, LM Studio, Jan AI y GPT4All. Cuando ejecutas [`ollama pull llama3.1:8b`](/es/local-llms/how-to-install-ollama), Ollama descarga internamente un archivo GGUF. Cuando LM Studio muestra tamaños de archivos de modelos, esos son tamaños de archivos GGUF.',
             'El nivel de cuantización es parte del nombre de archivo: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` es un GGUF cuantizado a Q4_K_M de Llama 3.1 8B.',
           ],
-          image: '/images/gguf-format-structure-en.svg',
+          image: '/images/gguf-format-structure-es.svg',
           imageCaption: 'El formato GGUF contiene pesos cuantizados, metadatos del modelo (tokenizador, longitud de contexto) y versión del formato en un único archivo autosuficiente.',
         },
         ramSavings: {
@@ -696,7 +696,7 @@ schema: {
             { 'Tamaño del modelo': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
           ],
           columns: ['Tamaño del modelo', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
-          image: '/images/ram-savings-by-model-size-en.svg',
+          image: '/images/ram-savings-by-model-size-es.svg',
           imageCaption: 'Ahorro de RAM por tamaño de modelo: modelos de 3B a 70B en niveles de cuantización FP16, Q8_0, Q4_K_M y Q3_K_S.',
         },
         qualityLoss: {

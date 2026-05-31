@@ -1,0 +1,129 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <style>
+      .title { font-size: 22px; font-weight: 700; fill: #1C1B1F; }
+      .decision { font-size: 13px; font-weight: 600; fill: #1C1B1F; }
+      .answer { font-size: 12px; font-weight: 700; fill: #FFFFFF; }
+      .arrow { stroke: #6750A4; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .edge-label { font-size: 11px; font-weight: 500; fill: #6750A4; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#6750A4"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="35" class="title" text-anchor="middle">&#xc1;rbol de Decisi&#xf3;n: Asistente de Programaci&#xf3;n con IA</text>
+
+  <!-- Start -->
+  <rect x="325" y="50" width="150" height="45" rx="6" fill="#6750A4"/>
+  <text x="400" y="80" class="answer" text-anchor="middle">Comenzar Aqu&#xed;</text>
+
+  <!-- Level 1: Budget? -->
+  <rect x="300" y="130" width="200" height="50" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="400" y="160" class="decision" text-anchor="middle">Presupuesto: &#xbf;Gratis o de Pago?</text>
+
+  <!-- Arrows from Start -->
+  <path d="M 400 95 L 400 130" class="arrow"/>
+
+  <!-- Level 2a: Free path -->
+  <rect x="50" y="220" width="150" height="50" rx="6" fill="#F0E8FF" stroke="#6750A4" stroke-width="1"/>
+  <text x="125" y="250" class="decision" text-anchor="middle">Gratis: &#xbf;Soporte local?</text>
+
+  <text x="225" y="150" class="edge-label">Gratis</text>
+  <path d="M 350 180 L 150 220" class="arrow"/>
+
+  <!-- Level 2b: Paid path -->
+  <rect x="600" y="220" width="150" height="50" rx="6" fill="#F0E8FF" stroke="#6750A4" stroke-width="1"/>
+  <text x="675" y="250" class="decision" text-anchor="middle">Pago: &#xbf;Solo o Equipo?</text>
+
+  <text x="525" y="150" class="edge-label">Pago</text>
+  <path d="M 450 180 L 650 220" class="arrow"/>
+
+  <!-- Level 3a: Free + Local -->
+  <rect x="25" y="310" width="100" height="45" rx="6" fill="#34A853"/>
+  <text x="75" y="330" class="answer" text-anchor="middle">✅</text>
+  <text x="75" y="342" class="answer" text-anchor="middle" font-size="10">Continue.dev</text>
+
+  <text x="70" y="305" class="edge-label" font-size="10">S&#xed;</text>
+  <path d="M 100 270 L 75 310" class="arrow"/>
+
+  <!-- Level 3b: Free + No local -->
+  <rect x="175" y="310" width="100" height="45" rx="6" fill="#EA4335"/>
+  <text x="225" y="335" class="answer" text-anchor="middle" font-size="11">Windsurf</text>
+  <text x="225" y="347" class="answer" text-anchor="middle" font-size="9">(nivel gratuito)</text>
+
+  <text x="140" y="305" class="edge-label" font-size="10">No</text>
+  <path d="M 150 270 L 225 310" class="arrow"/>
+
+  <!-- Level 3c: Paid + Solo -->
+  <rect x="560" y="310" width="100" height="45" rx="6" fill="#7D5260"/>
+  <text x="610" y="330" class="answer" text-anchor="middle">💎</text>
+  <text x="610" y="342" class="answer" text-anchor="middle" font-size="10">Cursor</text>
+
+  <text x="625" y="305" class="edge-label" font-size="10">Solo</text>
+  <path d="M 650 270 L 610 310" class="arrow"/>
+
+  <!-- Level 3d: Paid + Team -->
+  <rect x="710" y="310" width="100" height="45" rx="6" fill="#34A853"/>
+  <text x="760" y="335" class="answer" text-anchor="middle" font-size="11">Cody o</text>
+  <text x="760" y="347" class="answer" text-anchor="middle" font-size="9">Tabnine</text>
+
+  <text x="705" y="305" class="edge-label" font-size="10">Equipo</text>
+  <path d="M 700 270 L 760 310" class="arrow"/>
+
+  <!-- Detailed Outcomes -->
+  <line x1="40" y1="385" x2="760" y2="385" stroke="#E8DEF8" stroke-width="1"/>
+
+  <text x="50" y="410" class="title" font-size="14">Opciones Recomendadas:</text>
+
+  <!-- Continue.dev recommendation -->
+  <rect x="50" y="425" width="160" height="135" rx="6" fill="#F0FFE8" stroke="#34A853" stroke-width="2"/>
+  <text x="130" y="448" class="decision" text-anchor="middle">Continue.dev</text>
+  <text x="60" y="468" class="edge-label">✅ Ventajas:</text>
+  <text x="65" y="483" class="edge-label">• Gratis y c&#xf3;digo abierto</text>
+  <text x="65" y="497" class="edge-label">• Ollama/LM Studio nativo</text>
+  <text x="65" y="511" class="edge-label">• Funciona sin conexi&#xf3;n</text>
+  <text x="65" y="525" class="edge-label">• Soporte multi-IDE</text>
+  <text x="65" y="540" class="edge-label" font-size="10">Ideal para desarrolladores</text>
+  <text x="65" y="553" class="edge-label" font-size="10">que priorizan la privacidad</text>
+
+  <!-- Cursor recommendation -->
+  <rect x="235" y="425" width="160" height="135" rx="6" fill="#FFF5F0" stroke="#7D5260" stroke-width="2"/>
+  <text x="315" y="448" class="decision" text-anchor="middle">Cursor</text>
+  <text x="245" y="468" class="edge-label">✅ Ventajas:</text>
+  <text x="250" y="483" class="edge-label">• Mejor UX de autocompletado</text>
+  <text x="250" y="497" class="edge-label">• R&#xe1;pido y responsivo</text>
+  <text x="250" y="511" class="edge-label">• Alternativa LLM local</text>
+  <text x="250" y="525" class="edge-label">• Vale $20/mes</text>
+  <text x="250" y="540" class="edge-label" font-size="10">Ideal para desarrolladores</text>
+  <text x="250" y="553" class="edge-label" font-size="10">dispuestos a invertir</text>
+
+  <!-- Cody recommendation -->
+  <rect x="420" y="425" width="160" height="135" rx="6" fill="#F0FFE8" stroke="#34A853" stroke-width="2"/>
+  <text x="500" y="448" class="decision" text-anchor="middle">Cody ($9/usuario/mes)</text>
+  <text x="430" y="468" class="edge-label">✅ Ventajas:</text>
+  <text x="435" y="483" class="edge-label">• Funciones de equipo</text>
+  <text x="435" y="497" class="edge-label">• Contexto del c&#xf3;digo base</text>
+  <text x="435" y="511" class="edge-label">• Nivel empresarial</text>
+  <text x="435" y="525" class="edge-label">• Soporte LLM local</text>
+  <text x="435" y="540" class="edge-label" font-size="10">Ideal para equipos que</text>
+  <text x="435" y="553" class="edge-label" font-size="10">necesitan colaboraci&#xf3;n</text>
+
+  <!-- Tabnine recommendation -->
+  <rect x="605" y="425" width="160" height="135" rx="6" fill="#FFF5F0" stroke="#EA4335" stroke-width="2"/>
+  <text x="685" y="448" class="decision" text-anchor="middle">Tabnine Autoalojado</text>
+  <text x="615" y="468" class="edge-label">✅ Ventajas:</text>
+  <text x="620" y="483" class="edge-label">• Privacidad total de datos</text>
+  <text x="620" y="497" class="edge-label">• Certificado SOC 2</text>
+  <text x="620" y="511" class="edge-label">• En tu infraestructura</text>
+  <text x="620" y="525" class="edge-label">• Listo para HIPAA/GDPR</text>
+  <text x="620" y="540" class="edge-label" font-size="10">Ideal para salud,</text>
+  <text x="620" y="553" class="edge-label" font-size="10">finanzas y defensa</text>
+
+  <!-- Watermark -->
+  <text x="750" y="590" class="edge-label" text-anchor="end">© 2026 PromptQuorum</text>
+<text x="792" y="595" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

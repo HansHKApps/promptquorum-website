@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" font-family="system-ui,-apple-system,sans-serif">
+
+  <!-- Background -->
+  <rect width="800" height="280" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Modelos de programaci&#xf3;n locales para trabajo sin conexi&#xf3;n — 2026</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="47" font-size="13" fill="#49454F" text-anchor="middle">Cuantizaci&#xf3;n Q4_K_M · Todos se ejecutan con Ollama en hardware local</text>
+
+  <!-- Column Headers -->
+  <text x="50" y="70" font-size="12" font-weight="700" fill="#79747E">Modelo</text>
+  <text x="240" y="70" font-size="12" font-weight="700" fill="#79747E">Disco (Q4)</text>
+  <text x="320" y="70" font-size="12" font-weight="700" fill="#79747E">RAM m&#xed;n.</text>
+  <text x="400" y="70" font-size="12" font-weight="700" fill="#79747E">Lenguajes</text>
+  <text x="510" y="70" font-size="12" font-weight="700" fill="#79747E">Ideal para</text>
+
+  <!-- Header Divider -->
+  <line x1="18" y1="78" x2="782" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Qwen3-Coder 30B (highlighted/recommended) -->
+  <rect x="18" y="80" width="764" height="32" rx="2" fill="#F7F2FA"/>
+  <text x="50" y="101" font-size="12" font-weight="700" fill="#6750A4">Qwen3-Coder 30B ★</text>
+  <text x="240" y="101" font-size="12" fill="#49454F">~18 GB</text>
+  <text x="320" y="101" font-size="12" fill="#49454F">24 GB</text>
+  <text x="400" y="101" font-size="12" fill="#49454F">TS, Python, Rust, Go</text>
+  <text x="510" y="101" font-size="12" fill="#49454F">Mejor en general — refactorizaciones, llamadas a herramientas, ctx 32K</text>
+
+  <!-- Row separator after row 1 -->
+  <line x1="18" y1="112" x2="782" y2="112" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Qwen3-Coder 7B -->
+  <text x="50" y="133" font-size="12" font-weight="600" fill="#1C1B1F">Qwen3-Coder 7B</text>
+  <text x="240" y="133" font-size="12" font-weight="700" fill="#34A853">~5 GB</text>
+  <text x="320" y="133" font-size="12" font-weight="700" fill="#34A853">8 GB</text>
+  <text x="400" y="133" font-size="12" fill="#49454F">TS, Python, Rust</text>
+  <text x="510" y="133" font-size="12" fill="#49454F">80–85% de calidad · cabe en m&#xe1;quinas de 16 GB</text>
+
+  <!-- Row separator after row 2 -->
+  <line x1="18" y1="144" x2="782" y2="144" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: DeepSeek Coder V3 -->
+  <text x="50" y="165" font-size="12" font-weight="600" fill="#1C1B1F">DeepSeek Coder V3</text>
+  <text x="240" y="165" font-size="12" font-weight="700" fill="#F4B400">~25 GB</text>
+  <text x="320" y="165" font-size="12" font-weight="700" fill="#F4B400">32 GB</text>
+  <text x="400" y="165" font-size="12" fill="#49454F">Todos los principales</text>
+  <text x="510" y="165" font-size="12" fill="#49454F">Contexto de 128K · ideal para bases de c&#xf3;digo grandes</text>
+
+  <!-- Row separator after row 3 -->
+  <line x1="18" y1="176" x2="782" y2="176" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Codestral 22B -->
+  <text x="50" y="197" font-size="12" font-weight="600" fill="#1C1B1F">Codestral 22B</text>
+  <text x="240" y="197" font-size="12" fill="#49454F">~13 GB</text>
+  <text x="320" y="197" font-size="12" fill="#49454F">16 GB</text>
+  <text x="400" y="197" font-size="12" fill="#49454F">TS, Python</text>
+  <text x="510" y="197" font-size="12" fill="#49454F">Autocompletado m&#xe1;s r&#xe1;pido · llamadas a herramientas m&#xe1;s d&#xe9;biles</text>
+
+  <!-- Last row separator (prominent) -->
+  <line x1="18" y1="213" x2="782" y2="213" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer note -->
+  <text x="400" y="235" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">★ Predeterminado recomendado · Ejecuta con: ollama pull qwen3-coder:30b</text>
+
+  <!-- Attribution -->
+  <text x="400" y="253" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-coding-llm-without-internet</text>
+
+</svg>

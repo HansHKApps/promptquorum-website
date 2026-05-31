@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">IA en el dispositivo Android: configuraci&#xf3;n Termux + Ollama (5 pasos)</text>
+
+  <!-- Step circles at y=100, centers at x: 94, 247, 400, 553, 706 -->
+  <!-- Step 1 -->
+  <circle cx="94" cy="100" r="22" fill="#6750A4"/>
+  <text x="94" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="94" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Instala Termux</text>
+  <text x="94" y="163" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">desde F-Droid</text>
+  <text x="94" y="178" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#EA4335" text-anchor="middle">(no Play Store)</text>
+
+  <!-- Arrow 1→2 -->
+  <text x="170" y="107" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 2 -->
+  <circle cx="247" cy="100" r="22" fill="#6750A4"/>
+  <text x="247" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="247" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Actualiza e instala curl</text>
+  <text x="247" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">pkg update &amp;&amp;</text>
+  <text x="247" y="178" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">pkg install curl</text>
+
+  <!-- Arrow 2→3 -->
+  <text x="323" y="107" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 3 -->
+  <circle cx="400" cy="100" r="22" fill="#6750A4"/>
+  <text x="400" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="400" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Instala Ollama</text>
+  <text x="400" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">curl -fsSL</text>
+  <text x="400" y="178" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">ollama.com/install.sh | sh</text>
+
+  <!-- Arrow 3→4 -->
+  <text x="477" y="107" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 4 -->
+  <circle cx="553" cy="100" r="22" fill="#6750A4"/>
+  <text x="553" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="553" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Descarga un modelo</text>
+  <text x="553" y="163" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ollama pull phi4-mini</text>
+  <text x="553" y="178" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">o qwen3:1.7b</text>
+
+  <!-- Arrow 4→5 -->
+  <text x="630" y="107" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 5 -->
+  <circle cx="706" cy="100" r="22" fill="#6750A4"/>
+  <text x="706" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="706" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Sirve y chatea</text>
+  <text x="706" y="163" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ollama serve</text>
+  <text x="706" y="178" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">localhost:11434</text>
+
+  <!-- Divider -->
+  <line x1="18" y1="210" x2="782" y2="210" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Requirements note -->
+  <text x="400" y="238" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Requisitos del dispositivo para inferencia en el dispositivo</text>
+  <text x="400" y="262" font-size="12" fill="#49454F" text-anchor="middle">M&#xed;nimo 8 GB RAM: Samsung Galaxy Tab S10+, OnePlus Pad 2, Xiaomi Pad 7 Pro</text>
+  <text x="400" y="282" font-size="12" fill="#49454F" text-anchor="middle">6 GB RAM: solo Qwen3 1.7B   |   Pixel Tablet (Tensor G2): usa conexi&#xf3;n remota en su lugar</text>
+  <text x="400" y="308" font-size="11" fill="#79747E" text-anchor="middle">Chips m&#xe1;s r&#xe1;pidos para inferencia LLM: Snapdragon 8 Gen 3, Dimensity 9300 (~15–25 tok/seg en modelos de 1.7B)</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" font-family="system-ui,-apple-system,sans-serif">
+  <!-- Background -->
+  <rect width="800" height="300" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qu&#xe9; falla realmente sin conexi&#xf3;n &#x2014; y c&#xf3;mo solucionarlo</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="47" font-size="13" fill="#49454F" text-anchor="middle">5 modos de fallo con soluciones previas</text>
+
+  <!-- Column Headers -->
+  <text x="40" y="68" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">#</text>
+  <text x="100" y="68" font-size="12" font-weight="700" fill="#79747E">Qu&#xe9; falla</text>
+  <text x="470" y="68" font-size="12" font-weight="700" fill="#79747E">La soluci&#xf3;n</text>
+
+  <!-- Header divider -->
+  <line x1="18" y1="76" x2="782" y2="76" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <circle cx="40" cy="99" r="12" fill="#EA4335"/>
+  <text x="40" y="103" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="100" y="103" font-size="12" font-weight="600" fill="#1C1B1F">Paquetes nuevos que no est&#xe1;n en cach&#xe9;</text>
+  <text x="470" y="103" font-size="11" fill="#6750A4">Preinstala con npm install &#xb7; pip download &#xb7; cargo fetch antes de despegar</text>
+  <line x1="18" y1="115" x2="782" y2="115" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <circle cx="40" cy="131" r="12" fill="#EA4335"/>
+  <text x="40" y="135" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="100" y="135" font-size="12" font-weight="600" fill="#1C1B1F">Conocimiento de API posterior al corte</text>
+  <text x="470" y="135" font-size="11" fill="#6750A4">Clona el c&#xf3;digo fuente de la librer&#xed;a &#xb7; usa rg para encontrar firmas reales</text>
+  <line x1="18" y1="147" x2="782" y2="147" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <circle cx="40" cy="163" r="12" fill="#EA4335"/>
+  <text x="40" y="167" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="100" y="167" font-size="12" font-weight="600" fill="#1C1B1F">Idas y vueltas de OAuth / SSO</text>
+  <text x="470" y="167" font-size="11" fill="#6750A4">Completa la autenticaci&#xf3;n antes de perder se&#xf1;al &#xb7; guarda tokens en cach&#xe9; (12&#x2013;24 h)</text>
+  <line x1="18" y1="179" x2="782" y2="179" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <circle cx="40" cy="195" r="12" fill="#EA4335"/>
+  <text x="40" y="199" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="100" y="199" font-size="12" font-weight="600" fill="#1C1B1F">Pruebas que llaman a APIs remotas</text>
+  <text x="470" y="199" font-size="11" fill="#6750A4">Simula con msw / nock / vcr &#xb7; pregraba los fixtures</text>
+  <line x1="18" y1="211" x2="782" y2="211" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <circle cx="40" cy="227" r="12" fill="#EA4335"/>
+  <text x="40" y="231" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="100" y="231" font-size="12" font-weight="600" fill="#1C1B1F">Im&#xe1;genes Docker no descargadas previamente</text>
+  <text x="470" y="231" font-size="11" fill="#6750A4">Ejecuta docker pull para cada imagen base antes del vuelo</text>
+
+  <!-- Last separator (prominent) -->
+  <line x1="18" y1="243" x2="782" y2="243" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer note -->
+  <text x="400" y="263" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Prep&#xe1;rate antes de despegar &#x2014; los 5 tienen soluciones sin conexi&#xf3;n &#xb7; Ver: Lista de verificaci&#xf3;n previa</text>
+
+  <!-- Attribution -->
+  <text x="400" y="281" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-coding-llm-without-internet</text>
+</svg>

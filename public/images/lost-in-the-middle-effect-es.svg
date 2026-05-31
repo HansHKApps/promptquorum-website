@@ -1,0 +1,83 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="qualityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#34A853" stop-opacity="1"/>
+      <stop offset="22%"  stop-color="#F4B400" stop-opacity="1"/>
+      <stop offset="40%"  stop-color="#E67C73" stop-opacity="1"/>
+      <stop offset="60%"  stop-color="#E67C73" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#F4B400" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#34A853" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- White background -->
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <!-- Card -->
+  <rect x="24" y="16" width="752" height="368" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">El efecto "perdido en el medio": ventana de contexto de 128K</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="72" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F" text-anchor="middle">Los LLM recuerdan de forma fiable la informaci&#xf3;n al inicio y al final, pero omiten detalles situados en el medio</text>
+
+  <!-- Context window bar background -->
+  <rect x="60" y="100" width="680" height="80" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Quality gradient bar -->
+  <rect x="60" y="100" width="680" height="80" rx="8" fill="url(#qualityGradient)" opacity="0.25"/>
+
+  <!-- Zone labels inside bar -->
+  <!-- Start zone: 0–20% = HIGH -->
+  <rect x="68" y="108" width="124" height="64" rx="6" fill="#34A853" opacity="0.18"/>
+  <text x="130" y="135" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">ALTA</text>
+  <text x="130" y="153" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853" text-anchor="middle">Calidad de recuerdo</text>
+
+  <!-- Middle zone: 30–70% = LOW (40K–80K) -->
+  <rect x="276" y="108" width="248" height="64" rx="6" fill="#E67C73" opacity="0.18"/>
+  <text x="400" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#E67C73" text-anchor="middle">BAJA — a menudo ignorada</text>
+  <text x="400" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#E67C73" text-anchor="middle">Rango de 40K a 80K tokens</text>
+
+  <!-- End zone: 80–100% = HIGH -->
+  <rect x="548" y="108" width="184" height="64" rx="6" fill="#34A853" opacity="0.18"/>
+  <text x="640" y="135" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">ALTA</text>
+  <text x="640" y="153" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853" text-anchor="middle">Calidad de recuerdo</text>
+
+  <!-- Token position labels below bar -->
+  <text x="60"  y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">0</text>
+  <text x="196" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">25K</text>
+  <text x="332" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">50K</text>
+  <text x="468" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">75K</text>
+  <text x="604" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">100K</text>
+  <text x="740" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">128K</text>
+  <text x="400" y="212" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">← Posici&#xf3;n del token en la ventana de contexto →</text>
+
+  <!-- Mitigation strategies -->
+  <text x="400" y="244" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">C&#xf3;mo evitarlo</text>
+
+  <!-- 3 strategy boxes -->
+  <rect x="48" y="258" width="210" height="90" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="153" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">① Coloca al inicio</text>
+  <text x="153" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Pon la informaci&#xf3;n cr&#xed;tica</text>
+  <text x="153" y="314" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">al principio del prompt</text>
+  <text x="153" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Zona m&#xe1;s fiable</text>
+
+  <rect x="295" y="258" width="210" height="90" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">② Usa RAG</text>
+  <text x="400" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Recupera de 3 a 5 fragmentos</text>
+  <text x="400" y="314" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">relevantes (4K–8K tokens)</text>
+  <text x="400" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Evita el medio por completo</text>
+
+  <rect x="542" y="258" width="210" height="90" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="647" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">③ Fragmenta documentos</text>
+  <text x="647" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Procesa en secciones</text>
+  <text x="647" y="314" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">solapadas de 16K a 32K</text>
+  <text x="647" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Mantiene el contenido en zona segura</text>
+
+  <!-- Source footnote -->
+  <text x="400" y="376" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Fuente: "Lost in the Middle: How Language Models Use Long Contexts" — Liu et al., 2023 (arxiv.org/abs/2307.03172)</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <metadata>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">On-Premises Hardware Requirements by Scale</dc:title>
+    <dc:creator>PromptQuorum</dc:creator>
+    <dc:rights>© PromptQuorum 2026</dc:rights>
+    <dc:source>https://www.promptquorum.com/local-llms/private-local-ai-for-business</dc:source>
+  </metadata>
+
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <text x="400" y="30" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Requisitos de hardware por escala de despliegue</text>
+
+  <!-- Tier 1: Workstation -->
+  <rect x="28" y="55" width="225" height="345" rx="6" fill="#FFF8E1" stroke="#F4B400" stroke-width="2"/>
+  <text x="140" y="85" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#F57F17" text-anchor="middle">Equipo peque&#xf1;o (prueba de concepto)</text>
+
+  <text x="48" y="115" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Tama&#xf1;o del modelo:</text>
+  <text x="48" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">7B &#x2013; 13B par&#xe1;metros</text>
+
+  <text x="48" y="155" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">GPU:</text>
+  <text x="48" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">1&#xd7; RTX 4090 (24 GB)</text>
+
+  <text x="48" y="195" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">CPU y RAM:</text>
+  <text x="48" y="210" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">32 GB de RAM del sistema</text>
+
+  <text x="48" y="235" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Usuarios:</text>
+  <text x="48" y="250" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">5 &#x2013; 20 concurrentes</text>
+
+  <text x="48" y="275" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Coste:</text>
+  <text x="48" y="290" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#F57F17">$3,000 &#x2013; $4,500</text>
+
+  <text x="48" y="315" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Tiempo de configuraci&#xf3;n:</text>
+  <text x="48" y="330" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">1 &#x2013; 2 d&#xed;as</text>
+
+  <text x="48" y="355" font-family="system-ui, sans-serif" font-size="10" fill="#F4B400" font-weight="600">&#x2713; Ideal para pruebas</text>
+  <text x="48" y="370" font-family="system-ui, sans-serif" font-size="10" fill="#F4B400" font-weight="600">&#x2713; Configuraci&#xf3;n de un solo puesto</text>
+
+  <!-- Tier 2: Production -->
+  <rect x="287" y="55" width="225" height="345" rx="6" fill="#E8F5E9" stroke="#34A853" stroke-width="2"/>
+  <text x="399" y="85" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Producci&#xf3;n (peque&#xf1;a empresa)</text>
+
+  <text x="307" y="115" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Tama&#xf1;o del modelo:</text>
+  <text x="307" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">13B &#x2013; 70B par&#xe1;metros</text>
+
+  <text x="307" y="155" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">GPU:</text>
+  <text x="307" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">2&#x2013;4&#xd7; RTX 4090</text>
+  <text x="307" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">(o 1&#xd7; A100 80GB)</text>
+
+  <text x="307" y="210" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">CPU y RAM:</text>
+  <text x="307" y="225" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">64 GB de RAM del sistema</text>
+
+  <text x="307" y="250" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Usuarios:</text>
+  <text x="307" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">50 &#x2013; 200 concurrentes</text>
+
+  <text x="307" y="290" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Coste:</text>
+  <text x="307" y="305" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853">$12,000 &#x2013; $20,000</text>
+
+  <text x="307" y="330" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Tiempo de configuraci&#xf3;n:</text>
+  <text x="307" y="345" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">1 &#x2013; 2 semanas</text>
+
+  <text x="307" y="370" font-family="system-ui, sans-serif" font-size="10" fill="#34A853" font-weight="600">&#x2713; Listo para producci&#xf3;n</text>
+
+  <!-- Tier 3: Enterprise -->
+  <rect x="546" y="55" width="226" height="345" rx="6" fill="#F3E5F5" stroke="#6750A4" stroke-width="2"/>
+  <text x="659" y="85" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Empresa (gran escala)</text>
+
+  <text x="566" y="115" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Tama&#xf1;o del modelo:</text>
+  <text x="566" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">70B &#x2013; 405B (MoE)</text>
+
+  <text x="566" y="155" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">GPU:</text>
+  <text x="566" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">4&#x2013;8&#xd7; A100 80GB</text>
+  <text x="566" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">(o cl&#xfa;steres H100)</text>
+
+  <text x="566" y="210" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">CPU y RAM:</text>
+  <text x="566" y="225" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">256 GB+ de RAM del sistema</text>
+
+  <text x="566" y="250" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Usuarios:</text>
+  <text x="566" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">500+ concurrentes</text>
+
+  <text x="566" y="290" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Coste:</text>
+  <text x="566" y="305" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4">$50,000+</text>
+
+  <text x="566" y="330" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Tiempo de configuraci&#xf3;n:</text>
+  <text x="566" y="345" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">1 &#x2013; 3 meses</text>
+
+  <text x="566" y="370" font-family="system-ui, sans-serif" font-size="10" fill="#6750A4" font-weight="600">&#x2713; Arquitectura personalizada</text>
+
+  <text x="800" y="410" font-family="system-ui, sans-serif" font-size="10" fill="#999999" text-anchor="end">promptquorum.com</text>
+</svg>

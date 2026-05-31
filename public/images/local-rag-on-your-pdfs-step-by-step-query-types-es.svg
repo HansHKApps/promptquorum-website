@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="system-ui, -apple-system, sans-serif">
+  <metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="340" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">Tipos de consulta en RAG local — C&#xf3;mo son las respuestas correctas</text>
+  <rect x="0" y="38" width="800" height="36" fill="#6750A4"/>
+  <text x="80" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Tipo de consulta</text>
+  <text x="240" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Consulta de ejemplo</text>
+  <text x="490" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Patr&#xf3;n de respuesta correcta</text>
+  <text x="710" y="61" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Se&#xf1;al de fallo</text>
+  <line x1="160" y1="38" x2="160" y2="254" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="320" y1="38" x2="320" y2="254" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="630" y1="38" x2="630" y2="254" stroke="#E8DEF8" stroke-width="1"/>
+  <rect x="0" y="74" width="800" height="58" fill="#FFFFFF"/>
+  <circle cx="30" cy="103" r="10" fill="#34A853"/>
+  <text x="80" y="97" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Recuerdo de datos</text>
+  <text x="80" y="113" font-size="10" fill="#49454F" text-anchor="middle">prueba de fundamento</text>
+  <text x="240" y="97" font-size="11" fill="#49454F" text-anchor="middle">"&#xbf;Qu&#xe9; tama&#xf1;o de muestra</text>
+  <text x="240" y="112" font-size="11" fill="#49454F" text-anchor="middle">us&#xf3; Smith 2024?"</text>
+  <text x="490" y="97" font-size="11" fill="#34A853" text-anchor="middle">Cita directa + referencia</text>
+  <text x="490" y="112" font-size="11" fill="#34A853" text-anchor="middle">del fragmento de origen</text>
+  <text x="710" y="97" font-size="11" fill="#EA4335" text-anchor="middle">Respuesta gen&#xe9;rica,</text>
+  <text x="710" y="112" font-size="11" fill="#EA4335" text-anchor="middle">sin cita ni referencia</text>
+  <rect x="0" y="132" width="800" height="58" fill="#F7F2FA"/>
+  <circle cx="30" cy="161" r="10" fill="#6750A4"/>
+  <text x="80" y="155" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">S&#xed;ntesis</text>
+  <text x="80" y="171" font-size="10" fill="#49454F" text-anchor="middle">prueba de integraci&#xf3;n</text>
+  <text x="240" y="155" font-size="11" fill="#49454F" text-anchor="middle">"Resume la principal</text>
+  <text x="240" y="170" font-size="11" fill="#49454F" text-anchor="middle">contribuci&#xf3;n."</text>
+  <text x="490" y="155" font-size="11" fill="#34A853" text-anchor="middle">3&#x2013;5 frases de los fragmentos</text>
+  <text x="490" y="170" font-size="11" fill="#34A853" text-anchor="middle">de resumen + conclusi&#xf3;n</text>
+  <text x="710" y="155" font-size="11" fill="#EA4335" text-anchor="middle">Repite el t&#xed;tulo o</text>
+  <text x="710" y="170" font-size="11" fill="#EA4335" text-anchor="middle">cita una sola l&#xed;nea</text>
+  <rect x="0" y="190" width="800" height="64" fill="#FFFFFF"/>
+  <circle cx="30" cy="222" r="10" fill="#F4B400"/>
+  <text x="80" y="216" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Entre documentos</text>
+  <text x="80" y="232" font-size="10" fill="#49454F" text-anchor="middle">prueba de recuperaci&#xf3;n</text>
+  <text x="240" y="213" font-size="11" fill="#49454F" text-anchor="middle">"&#xbf;En qu&#xe9; discrepan Smith</text>
+  <text x="240" y="228" font-size="11" fill="#49454F" text-anchor="middle">y Jones sobre el</text>
+  <text x="240" y="243" font-size="11" fill="#49454F" text-anchor="middle">solapamiento de fragmentos?"</text>
+  <text x="490" y="216" font-size="11" fill="#34A853" text-anchor="middle">Cita ambos art&#xed;culos</text>
+  <text x="490" y="231" font-size="11" fill="#34A853" text-anchor="middle">con atribuci&#xf3;n expl&#xed;cita</text>
+  <text x="710" y="213" font-size="11" fill="#EA4335" text-anchor="middle">Cita solo un art&#xed;culo</text>
+  <text x="710" y="228" font-size="11" fill="#EA4335" text-anchor="middle">o inventa una discrepancia</text>
+  <rect x="0" y="38" width="800" height="216" fill="none" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="0" y1="132" x2="800" y2="132" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="0" y1="190" x2="800" y2="190" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="18" y1="272" x2="782" y2="272" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="292" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle">Verde = correcto · Rojo = recuperaci&#xf3;n rota (ajusta el tama&#xf1;o de fragmento o el embedder, no el modelo de respuesta)</text>
+  <text x="400" y="310" font-size="11" fill="#79747E" text-anchor="middle">Usa los 3 tipos de consulta como conjunto de prueba tras cada cambio de configuraci&#xf3;n — el patr&#xf3;n de fallo indica qu&#xe9; ajustar</text>
+  <text x="792" y="334" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

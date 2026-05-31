@@ -1846,7 +1846,7 @@ schema: {
             { 'Factor': 'Dependencia del proveedor', 'API en la nube (GPT-5.2)': 'Alta — cambios de formato de API, cambios de precio', 'IA on-premises': 'Ninguna — cambia modelos/frameworks libremente' },
           ],
           columns: ['Factor', 'API en la nube (GPT-5.2)', 'IA on-premises'],
-          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-en.svg',
+          image: '/images/private-local-ai-for-business-on-prem-vs-cloud-es.svg',
           imageCaption: 'Las APIs en la nube exponen los datos a servidores externos con latencia de 200–500ms y costes anuales de $20.000+, mientras que la infraestructura on-premises mantiene los datos localmente con latencia de 50–150ms y costes anuales amortizados de $5.000.',
         },
         compliance: {
@@ -1858,7 +1858,7 @@ schema: {
             '**SOC2 (Empresarial):** Registros de auditoría, cifrado y controles de acceso. La IA local te da control total sobre el cumplimiento.',
             'Documenta tu despliegue: cifrado en reposo y en tránsito, registros de acceso, políticas de retención de datos.',
           ],
-          image: '/images/private-local-ai-for-business-compliance-checklist-en.svg',
+          image: '/images/private-local-ai-for-business-compliance-checklist-es.svg',
           imageCaption: 'Requisitos de cumplimiento de la IA on-premises: GDPR exige residencia de datos en la UE y acuerdos de tratamiento, HIPAA exige cifrado AES-256 y registro de auditoría, SOC2 exige controles de acceso y planes de respuesta a incidentes.',
         },
         architecture: {
@@ -1870,13 +1870,13 @@ schema: {
           ],
           codeBlock: '# Ejemplo: despliegue en Kubernetes (abril de 2026)\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-3.3-70B-Instruct\n        - --tensor-parallel-size 2\n        - --gpu-memory-utilization 0.95\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2× RTX 5090 por pod',
           codeLanguage: 'yaml',
-          image: '/images/private-local-ai-for-business-latency-performance-en.svg',
+          image: '/images/private-local-ai-for-business-latency-performance-es.svg',
           imageCaption: 'La infraestructura on-premises alcanza una latencia de primer token de 50–150ms frente a los 200–500ms de las APIs en la nube, sin RTT de red, sin colas en la nube, rendimiento predecible y solicitudes concurrentes ilimitadas.',
         },
         deploymentScale: {
           id: 'deployment-scale',
           title: 'Requisitos de hardware según la escala de despliegue',
-          image: '/images/private-local-ai-for-business-hardware-requirements-en.svg',
+          image: '/images/private-local-ai-for-business-hardware-requirements-es.svg',
           imageCaption: 'Requisitos de hardware según la escala: los equipos pequeños necesitan 1× RTX 5090 ($2.000), los despliegues en producción requieren 2–4× RTX 5090 ($4.000–$8.000), la escala empresarial requiere clústeres A100 o configuraciones multinodo RTX 5090 ($30.000+).',
           content: [
             'Ajusta tu despliegue según las necesidades de concurrencia y rendimiento de tokens. Comienza con una sola GPU para pruebas y añade más GPUs para cargas de trabajo en producción.',
@@ -1896,7 +1896,7 @@ schema: {
           content: [
             'El coste on-premises asume: 1× RTX 5090 ($2.000) amortizado en 36 meses = $56/mes en hardware. Añade $50/mes de electricidad (media EE. UU.) y $27/mes de refrigeración/red. Total: ~$133/mes fijos independientemente del volumen. Precio de API en la nube basado en GPT-5.2 a $0,005/1K tokens (abril de 2026). Punto de equilibrio: ~100M tokens/mes.',
           ],
-          image: '/images/private-local-ai-for-business-cost-breakeven-en.svg',
+          image: '/images/private-local-ai-for-business-cost-breakeven-es.svg',
           imageCaption: 'Análisis del punto de equilibrio: la infraestructura on-premises resulta rentable a partir de los 200M+ tokens/mes, amortizándose en 3–4 meses frente a los $20.000+ anuales de las APIs en la nube.',
         },
         useCases: {
@@ -1909,7 +1909,7 @@ schema: {
             '**Fabricación:** Mantenimiento predictivo, control de calidad, manteniendo los datos propietarios on-premises.',
             '**Gobierno:** Procesamiento de documentos clasificados, restringido a instalaciones seguras.',
           ],
-          image: '/images/private-local-ai-for-business-use-cases-en.svg',
+          image: '/images/private-local-ai-for-business-use-cases-es.svg',
           imageCaption: 'La IA on-premises responde a necesidades críticas en cinco sectores: sanidad (cumplimiento HIPAA), finanzas (seguridad de datos), legal (registros de auditoría), fabricación (datos propietarios) y gobierno (procesamiento clasificado).',
         },
         commonMistakes: {
@@ -1922,7 +1922,7 @@ schema: {
             '**Postura de seguridad deficiente.** El aislamiento de red, el cifrado y los controles de acceso son críticos. Realiza auditorías periódicas.',
             '**Usar modelos open-source antiguos.** Los modelos de 2023 están desactualizados. Vuelve a entrenar o ajusta de forma periódica a medida que surjan nuevos modelos base.',
           ],
-          image: '/images/private-local-ai-for-business-common-mistakes-en.svg',
+          image: '/images/private-local-ai-for-business-common-mistakes-es.svg',
           imageCaption: 'Cuatro errores críticos en el despliegue de IA on-premises: subestimar el coste total de propiedad (presupuesta 3–5 veces el coste del hardware), diseño de escalado deficiente (una GPU única no puede manejar producción), descuido de la recuperación ante desastres y postura de seguridad débil.',
         },
         faqSection: {

@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**El prompt chaining significa conectar varios prompts para que cada uno realice una subtarea enfocada y pase su resultado hacia adelante.** En lugar de pedirle al modelo que "haga todo a la vez", creas una secuencia como "analizar → estructurar → generar → revisar."',
             'Cada paso tiene una entrada clara, un formato de salida claro y una responsabilidad estrecha. La cadena en su conjunto se comporta más como un pipeline o workflow que como un chat, lo que la hace más fácil de depurar, mantener y reutilizar.',
           ],
-          image: '/images/prompt-chaining-basic-flow-en.svg',
+          image: '/images/prompt-chaining-basic-flow-es.svg',
           imageCaption: 'Diagrama que muestra cómo el prompt chaining divide una tarea compleja en llamadas LLM secuenciales con salidas intermedias que alimentan el siguiente paso.',
         },
         whyItMatters: {
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Para los equipos, las cadenas de prompts se convierten en bloques de construcción en sistemas de IA más grandes en lugar de conversaciones puntuales.',
           ],
-          image: '/images/prompt-chaining-patterns-en.svg',
+          image: '/images/prompt-chaining-patterns-es.svg',
           imageCaption: 'Patrones típicos de prompt chaining: workflows secuenciales, de bifurcación y map-reduce usados en pipelines LLM de producción.',
         },
         keyTakeaways: {
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Puedes implementar estas cadenas de forma síncrona (paso a paso en una sola sesión) o como trabajos separados orquestados por tu aplicación.',
           ],
-          image: '/images/prompt-chaining-example-en.svg',
+          image: '/images/prompt-chaining-example-es.svg',
           imageCaption: 'Ejemplo trabajado de una cadena de prompts: extraer entidades, clasificar la intención y luego generar una respuesta estructurada en tres pasos LLM.',
         },
         example: {

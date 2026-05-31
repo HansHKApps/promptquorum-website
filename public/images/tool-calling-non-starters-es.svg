@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 285" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="285" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="22" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Modelos que no sirven para llamada a herramientas &#x2014; 3 categor&#xed;as de fallo</text>
+  <line x1="18" y1="30" x2="782" y2="30" stroke="#EA4335" stroke-width="1.5"/>
+  <!-- Column headers -->
+  <text x="18" y="52" font-size="12" font-weight="700" fill="#EA4335">Categor&#xed;a de modelo</text>
+  <text x="310" y="52" font-size="12" font-weight="700" fill="#EA4335">Por qu&#xe9; falla</text>
+  <!-- Vertical divider -->
+  <line x1="300" y1="30" x2="300" y2="225" stroke="#EA4335" stroke-width="1"/>
+  <!-- Header underline -->
+  <line x1="18" y1="60" x2="782" y2="60" stroke="#EA4335" stroke-width="1.5"/>
+  <!-- Row 1: y=85 -->
+  <circle cx="285" cy="85" r="12" fill="#EA4335"/>
+  <text x="285" y="90" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#x2717;</text>
+  <text x="18" y="85" font-size="12" font-weight="700" fill="#EA4335">Modelos por debajo de 7B</text>
+  <text x="18" y="100" font-size="10" fill="#79747E">(Llama 3.2 1B/3B, Phi-3 Mini, Gemma 2 2B)</text>
+  <text x="310" y="85" font-size="11" fill="#49454F">Llamadas mal formadas en tareas multipaso</text>
+  <line x1="18" y1="112" x2="782" y2="112" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 2: y=140 -->
+  <circle cx="285" cy="140" r="12" fill="#EA4335"/>
+  <text x="285" y="145" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#x2717;</text>
+  <text x="18" y="140" font-size="12" font-weight="700" fill="#EA4335">Sin entrenamiento en llamadas</text>
+  <text x="18" y="155" font-size="10" fill="#79747E">(la mayor&#xed;a de modelos de chat gen&#xe9;ricos de 7B&#x2013;13B)</text>
+  <text x="310" y="140" font-size="11" fill="#49454F">Parafrasea las llamadas como texto narrativo</text>
+  <line x1="18" y1="167" x2="782" y2="167" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3: y=195 -->
+  <circle cx="285" cy="195" r="12" fill="#EA4335"/>
+  <text x="285" y="200" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#x2717;</text>
+  <text x="18" y="195" font-size="12" font-weight="700" fill="#EA4335">Cuantizaci&#xf3;n Q3 / Q2</text>
+  <text x="18" y="210" font-size="10" fill="#79747E">(Q4_K_M es el m&#xed;nimo para producci&#xf3;n)</text>
+  <text x="310" y="195" font-size="11" fill="#49454F">Degrada la fiabilidad de las herramientas antes que la calidad del chat</text>
+  <!-- Footer -->
+  <text x="400" y="255" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">S&#xed;ntoma: XML mal formado en Cline, bucles atascados &#x2014; cambia el modelo, no el entorno</text>
+<text x="792" y="280" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

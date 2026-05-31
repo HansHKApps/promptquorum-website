@@ -1551,7 +1551,7 @@ schema: {
             '- Razonamiento: ambos modelos encontrados. Qwen es más rápido, Llama es más general.',
             '- Acción final: sintetizar la respuesta y devolver.',
           ],
-          image: '/images/local-ai-agents-langgraph-ollama-agent-loop-en.svg',
+          image: '/images/local-ai-agents-langgraph-ollama-agent-loop-es.svg',
           imageCaption: 'Bucle observar-razonar-actuar del agente: ciclo de cinco pasos en el que el LLM decide qué herramienta llamar a continuación, la ejecuta, observa el resultado y repite hasta completar la tarea. Los agentes locales ejecutan este bucle completamente en el dispositivo sin llamadas a la API.',
           snippetBlocks: [
             { type: 'one-sentence', text: 'Un agente de IA es un programa que usa un LLM para decidir qué herramienta llamar a continuación, observa el resultado y decide de nuevo, repitiendo hasta que la tarea esté completa.' },
@@ -1564,7 +1564,7 @@ schema: {
           id: 'agent-vs-chains',
           title: '¿Cuál es la diferencia entre agentes y cadenas?',
           content: '**Los agentes toman decisiones dinámicas en tiempo de ejecución; las cadenas siguen una secuencia predeterminada. Usa agentes cuando la tarea requiere razonamiento o recuperación de errores — usa cadenas para flujos de trabajo fijos y predecibles.**',
-          image: '/images/local-ai-agents-langgraph-ollama-agents-vs-chains-en.svg',
+          image: '/images/local-ai-agents-langgraph-ollama-agents-vs-chains-es.svg',
           imageCaption: 'Comparación entre agentes y cadenas: los agentes usan razonamiento dinámico del LLM con bucles y autocorrección, ideales para tareas de razonamiento complejo; las cadenas siguen secuencias predeterminadas sin bucles, más rápidas pero inflexibles. Elige agentes para tareas que requieren adaptación, cadenas para flujos de trabajo fijos.',
           callouts: [
             { type: 'note', text: 'Los agentes son más lentos e impredecibles que las cadenas porque el LLM debe tomar una decisión en cada paso. Si la velocidad es crítica y tu flujo de trabajo es conocido de antemano, usa una cadena.' },
@@ -1588,7 +1588,7 @@ schema: {
             '- **Aristas:** transiciones entre nodos (condicionales basadas en la salida del LLM).',
             '- **Herramientas:** funciones que el LLM puede llamar (búsqueda web, ejecución de código, consultas a bases de datos).',
           ],
-          image: '/images/local-ai-agents-langgraph-ollama-langgraph-structure-en.svg',
+          image: '/images/local-ai-agents-langgraph-ollama-langgraph-structure-es.svg',
           imageCaption: 'Arquitectura del agente LangGraph con flujo de estado: los nodos representan el razonamiento del LLM y la ejecución de herramientas, las aristas representan transiciones condicionales, y el estado del agente mantiene contexto, observaciones, memoria y estado a lo largo del flujo de trabajo agéntico.',
           snippetBlocks: [
             { type: 'plain-terms', text: 'LangGraph es como un diagrama de flujo donde el LLM decide qué flecha seguir en cada caja de decisión — y puede retroceder cuando algo sale mal.' },
@@ -1598,7 +1598,7 @@ schema: {
           id: 'tools-functions',
           title: '¿Qué herramientas pueden usar los agentes?',
           content: '**La capacidad de un agente está definida completamente por sus herramientas — las funciones que puede llamar para interactuar con el mundo. Limita a 5–10 herramientas por agente para evitar la parálisis de decisión.**',
-          image: '/images/local-ai-agents-langgraph-ollama-tool-types-en.svg',
+          image: '/images/local-ai-agents-langgraph-ollama-tool-types-es.svg',
           imageCaption: 'Herramientas comunes de agentes: búsqueda web (latencia 2–5 s), ejecución de código (100–500 ms), operaciones de archivos (50–200 ms), consultas de bases de datos (100–800 ms) y recuperación de documentos mediante RAG (200–600 ms). Limitar los agentes a 5–10 herramientas evita la parálisis de decisión y reduce la latencia por paso.',
           callouts: [
             { type: 'warning', text: 'Demasiadas herramientas confunden al LLM — la latencia por paso aumenta y el agente selecciona la herramienta incorrecta con mayor frecuencia. Comienza con 3–5 herramientas esenciales.' },
@@ -1640,7 +1640,7 @@ schema: {
           id: 'patterns',
           title: '¿Qué patrones de agentes locales funcionan mejor?',
           content: '**Cinco patrones cubren la mayoría de los casos de uso de agentes locales. Elige según si la necesidad principal es razonamiento, ejecución de código, planificación, conversación o automatización.**',
-          image: '/images/local-ai-agents-langgraph-ollama-agent-patterns-en.svg',
+          image: '/images/local-ai-agents-langgraph-ollama-agent-patterns-es.svg',
           imageCaption: 'Cinco patrones de agentes locales: agentes de investigación para búsqueda de hechos, agentes de código para análisis de datos, agentes de planificación para flujos de trabajo complejos, agentes conversacionales para chatbots y preguntas y respuestas, y automatización de flujos de trabajo para procesamiento de emails y ejecución de tareas. Elige según la necesidad principal.',
           items: [
             '**Agente de investigación:** busca documentos y la web, sintetiza hallazgos.',

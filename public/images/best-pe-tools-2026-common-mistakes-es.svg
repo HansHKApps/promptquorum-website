@@ -1,0 +1,94 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- White background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    4 errores comunes
+  </text>
+
+  <!-- Left column header (Mistake) -->
+  <rect x="18" y="45" width="360" height="28" fill="#FFEBEE"/>
+  <text x="200" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#C62828" text-anchor="middle">
+    ❌ Error
+  </text>
+
+  <!-- Right column header (Fix) -->
+  <rect x="422" y="45" width="360" height="28" fill="#E8F5E9"/>
+  <text x="602" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#2E7D32" text-anchor="middle">
+    ✓ Soluci&#xf3;n
+  </text>
+
+  <line x1="18" y1="73" x2="782" y2="73" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <text x="40" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Comprar herramientas
+  </text>
+  <text x="40" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    que se solapan (las 5)
+  </text>
+
+  <text x="442" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Elige 2–3 herramientas que cubran
+  </text>
+  <text x="442" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    flujos de trabajo distintos
+  </text>
+
+  <line x1="18" y1="138" x2="782" y2="138" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="40" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Omitir las pruebas
+  </text>
+  <text x="40" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    de CI/CD
+  </text>
+
+  <text x="442" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Prueba r&#xe1;pido con Promptfoo
+  </text>
+  <text x="442" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    antes de las evaluaciones en producci&#xf3;n
+  </text>
+
+  <line x1="18" y1="193" x2="782" y2="193" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="40" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    No versionar los
+  </text>
+  <text x="40" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    prompts desde el d&#xed;a 1
+  </text>
+
+  <text x="442" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    A&#xf1;ade versionado con PromptHub
+  </text>
+  <text x="442" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    desde el principio
+  </text>
+
+  <line x1="18" y1="248" x2="782" y2="248" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="40" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    Usar observabilidad
+  </text>
+  <text x="40" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+    gen&#xe9;rica (Datadog)
+  </text>
+
+  <text x="442" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    Usa Vellum o LangSmith
+  </text>
+  <text x="442" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">
+    para trazado espec&#xed;fico de prompts
+  </text>
+
+  <!-- Footer -->
+  <text x="400" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">
+    Estos errores se acumulan con el tiempo. Empieza con l&#xed;mites claros entre herramientas.
+  </text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

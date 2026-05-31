@@ -323,7 +323,7 @@ schema: {
             { 'Tipo de agente': 'Local Llama 13B (RTX 4090)', 'Por paso': '2–3 s', 'Por bucle de razonamiento': '6–10 s', 'Escalabilidad': 'Limitada por hardware' },
             { 'Tipo de agente': 'Local Qwen 32B (RTX 4090)', 'Por paso': '3–5 s', 'Por bucle de razonamiento': '10–15 s', 'Escalabilidad': 'Limitada por hardware' },
           ],
-          image: '/images/local-vs-cloud-agents-speed-comparison-en.svg',
+          image: '/images/local-vs-cloud-agents-speed-comparison-es.svg',
           imageCaption: 'Los agentes Cloud responden en 100–300ms por paso; los agentes locales tardan 2–5 segundos. Cloud gestiona la UX interactiva; local es práctico para automatización y procesamiento por lotes.',
         },
         cost: {
@@ -339,7 +339,7 @@ schema: {
             { 'Volumen mensual': '100M tokens/mes', 'Cloud (GPT-4)': '$2.000', 'Cloud (Claude)': '$2.000', 'Local (amortizado)': '$50 + electricidad' },
             { 'Volumen mensual': '1B tokens/mes', 'Cloud (GPT-4)': '$20.000', 'Cloud (Claude)': '$20.000', 'Local (amortizado)': '$300' },
           ],
-          image: '/images/local-vs-cloud-agents-cost-breakeven-en.svg',
+          image: '/images/local-vs-cloud-agents-cost-breakeven-es.svg',
           imageCaption: 'Punto de equilibrio de coste en 50M tokens/mes: Cloud es más barato por debajo, local es 10–60× más barato por encima. Coste de hardware RTX 4090 amortizado en 3 años más electricidad.',
         },
         privacy: {
@@ -380,7 +380,7 @@ schema: {
             'Los datos no son sensibles y no aplican restricciones regulatorias.',
             'Quieres infraestructura gestionada sin overhead de DevOps.',
           ],
-          image: '/images/local-vs-cloud-agents-decision-tree-en.svg',
+          image: '/images/local-vs-cloud-agents-decision-tree-es.svg',
           imageCaption: 'Marco de decisión: elige Cloud para razonamiento complejo, UX interactiva, bajo volumen (<50M/mes) y datos no sensibles. Elige local para datos con requisitos de privacidad, alto volumen (>50M/mes), cumplimiento RGPD/HIPAA y personalización total.',
         },
         chooseLocal: {
@@ -405,7 +405,7 @@ schema: {
             'Ejemplo de flujo de trabajo: Un agente de soporte enruta preguntas del tipo FAQ al Llama 13B local (2 s, gratuito) y escala los problemas complejos a GPT-4 (200ms, $0,02). Resultado: 80% de reducción de costes sin pérdida de calidad en consultas complejas.',
             'Herramientas como [PromptQuorum](https://www.promptquorum.com?lang=es) despachan a múltiples modelos y comparan resultados — ideal para configuraciones híbridas.',
           ],
-          image: '/images/local-vs-cloud-agents-hybrid-flow-en.svg',
+          image: '/images/local-vs-cloud-agents-hybrid-flow-es.svg',
           imageCaption: 'Enfoque híbrido: enruta las consultas simples a agentes locales (Llama 13B, 2 s, gratuito) y escala el razonamiento complejo a Cloud (GPT-4, 200ms, $0,02). Resultado: 80% de reducción de costes sin pérdida de calidad en problemas difíciles.',
         },
         regionalContext: {

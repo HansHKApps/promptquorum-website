@@ -575,7 +575,7 @@ schema: {
             { 'Modelo': 'Mistral 7B v0.3', 'Ventana de contexto': '32K', 'Límite práctico': '~16K fiable', 'Comando Ollama': 'ollama run llama3.2' },
           ],
           columns: ['Modelo', 'Ventana de contexto', 'Límite práctico', 'Comando Ollama'],
-          image: '/images/long-context-models-comparison-en.svg',
+          image: '/images/long-context-models-comparison-es.svg',
           imageCaption: '6 modelos LLM locales con soporte de contexto 128K -- el límite práctico fiable es 32K para modelos 7B y 64K para modelos 70B.',
         },
         ramForLongContext: {
@@ -592,7 +592,7 @@ schema: {
             { 'Modelo': 'Llama 3.3 70B Q4_K_M', 'Contexto 4K': '~40 GB', 'Contexto 32K': '~45 GB', 'Contexto 128K': '~55 GB' },
           ],
           columns: ['Modelo', 'Contexto 4K', 'Contexto 32K', 'Contexto 128K'],
-          image: '/images/long-context-ram-scaling-en.svg',
+          image: '/images/long-context-ram-scaling-es.svg',
           imageCaption: 'La RAM del caché KV escala con la longitud del contexto -- un modelo 7B en Q4_K_M necesita ~6 GB con 4K de contexto, pero ~14 GB con 128K.',
         },
         practicalVsTheoretical: {
@@ -604,7 +604,7 @@ schema: {
             'Para los modelos locales en particular, el límite práctico fiable escala con el tamaño del modelo: los modelos 3B ≈ 8K-16K fiable; los modelos 7B-8B ≈ 16K-32K fiable; los modelos 70B ≈ 64K fiable. Estas son aproximaciones -- el límite real depende de la tarea específica y de qué tan "importante" es la información recuperada.',
             'Las ventanas de contexto largo permiten más entrada, pero la estructura del prompt determina si el modelo usa ese contexto de forma efectiva. Técnicas como RAG, encadenamiento de prompts y estrategias de gestión de ventanas de contexto se cubren en la [guía de prompt engineering](https://www.promptquorum.com/es/prompt-engineering).',
           ],
-          image: '/images/lost-in-the-middle-effect-en.svg',
+          image: '/images/lost-in-the-middle-effect-es.svg',
           imageCaption: 'El efecto "lost in the middle": los LLM recuperan el contenido al inicio y al final de la ventana de contexto de forma fiable, pero pierden el rango de 40K-80K tokens.',
         },
         contextSettings: {
@@ -616,7 +616,7 @@ schema: {
           ],
           codeBlock: '# Set context length at runtime\nollama run llama3.2 --ctx 32768\n\n# Or create a custom model with a Modelfile\ncat << EOF > Modelfile\nFROM llama3.1:8b\nPARAMETER num_ctx 32768\nEOF\nollama create llama3.1-32k -f Modelfile\nollama run llama3.1-32k',
           codeLanguage: 'bash',
-          image: '/images/ollama-context-modelfile-en.svg',
+          image: '/images/ollama-context-modelfile-es.svg',
           imageCaption: 'Configurar num_ctx 32768 en un Modelfile desbloquea el contexto de 32K en Ollama -- verificado con `ollama ps` mostrando la columna CTX.',
         },
         regionalContext: {

@@ -1,0 +1,60 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Comparaci&#xf3;n de rendimiento: port&#xe1;til vs escritorio
+  </text>
+
+  <!-- Left Panel: Laptop (Red/Problem) -->
+  <rect x="28" y="55" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+
+  <text x="198" y="85" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">MacBook Pro M3 Max</text>
+
+  <!-- Laptop specs -->
+  <text x="48" y="115" font-size="12" font-weight="700" fill="#1C1B1F">Velocidad m&#xe1;xima:</text>
+  <text x="48" y="133" font-size="14" font-weight="700" fill="#EA4335">25 tok/seg</text>
+
+  <text x="48" y="160" font-size="12" font-weight="700" fill="#1C1B1F">Tras 15 min:</text>
+  <text x="48" y="178" font-size="14" font-weight="700" fill="#EA4335">12-15 tok/seg</text>
+  <text x="48" y="195" font-size="11" fill="#79747E">(50% de ralentizaci&#xf3;n)</text>
+
+  <text x="48" y="225" font-size="12" font-weight="700" fill="#1C1B1F">Modelo m&#xe1;ximo:</text>
+  <text x="48" y="243" font-size="13" fill="#49454F">Llama 3.1 7B</text>
+
+  <text x="48" y="273" font-size="12" font-weight="700" fill="#1C1B1F">Coste:</text>
+  <text x="48" y="291" font-size="13" fill="#49454F">$140/tok/seg</text>
+
+  <!-- Right Panel: Desktop (Green/Solution) -->
+  <rect x="432" y="55" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+
+  <text x="602" y="85" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Escritorio RTX 4070 Ti</text>
+
+  <!-- Desktop specs -->
+  <text x="452" y="115" font-size="12" font-weight="700" fill="#1C1B1F">Velocidad sostenida:</text>
+  <text x="452" y="133" font-size="14" font-weight="700" fill="#34A853">80 tok/seg</text>
+
+  <text x="452" y="160" font-size="12" font-weight="700" fill="#1C1B1F">Tras 24 horas:</text>
+  <text x="452" y="178" font-size="14" font-weight="700" fill="#34A853">80 tok/seg</text>
+  <text x="452" y="195" font-size="11" fill="#79747E">(0% de ralentizaci&#xf3;n)</text>
+
+  <text x="452" y="225" font-size="12" font-weight="700" fill="#1C1B1F">Modelo m&#xe1;ximo:</text>
+  <text x="452" y="243" font-size="13" fill="#49454F">Llama 3.1 70B</text>
+
+  <text x="452" y="273" font-size="12" font-weight="700" fill="#1C1B1F">Coste:</text>
+  <text x="452" y="291" font-size="13" fill="#49454F">$19/tok/seg</text>
+
+  <!-- Speed ratio badge -->
+  <circle cx="400" cy="320" r="18" fill="#6750A4"/>
+  <text x="400" y="327" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3.2×</text>
+  <text x="400" y="345" font-size="11" fill="#6750A4" text-anchor="middle" font-weight="600">m&#xe1;s r&#xe1;pido</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

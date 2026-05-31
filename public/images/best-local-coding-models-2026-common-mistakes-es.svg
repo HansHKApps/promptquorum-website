@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" font-family="system-ui,-apple-system,sans-serif">
+  <rect width="800" height="430" fill="#FFFFFF"/>
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">6 errores comunes al elegir un modelo de programaci&#xf3;n local</text>
+  <line x1="18" y1="38" x2="782" y2="38" stroke="#E8DEF8" stroke-width="1.5"/>
+  <circle cx="38" cy="62" r="14" fill="#EA4335"/>
+  <text x="38" y="66" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="62" y="57" font-size="12" font-weight="700" fill="#1C1B1F">Elegir por la puntuaci&#xf3;n del ranking, no por el margen de VRAM</text>
+  <text x="62" y="73" font-size="11" fill="#49454F">Un modelo con &lt;2–4 GB de margen en Q4_K_M se vuelca a disco y queda inservible para programar de forma interactiva.</text>
+  <line x1="18" y1="88" x2="782" y2="88" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="109" r="14" fill="#EA4335"/>
+  <text x="38" y="113" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="62" y="104" font-size="12" font-weight="700" fill="#1C1B1F">Confiar en la ventana de contexto declarada como l&#xed;mite pr&#xe1;ctico</text>
+  <text x="62" y="120" font-size="11" fill="#49454F">La calidad de atenci&#xf3;n en c&#xf3;digo cae m&#xe1;s all&#xe1; de ~la mitad de la cifra anunciada. Planifica con la columna de ventana de trabajo pr&#xe1;ctica.</text>
+  <line x1="18" y1="135" x2="782" y2="135" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="156" r="14" fill="#EA4335"/>
+  <text x="38" y="160" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="62" y="151" font-size="12" font-weight="700" fill="#1C1B1F">Saltarse la lectura de la licencia</text>
+  <text x="62" y="167" font-size="11" fill="#49454F">Codestral en un producto comercial sin Mistral Commercial = fallo de adquisici&#xf3;n. Lee la licencia antes de integrar.</text>
+  <line x1="18" y1="182" x2="782" y2="182" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="203" r="14" fill="#EA4335"/>
+  <text x="38" y="207" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="62" y="198" font-size="12" font-weight="700" fill="#1C1B1F">Ignorar la fiabilidad de las llamadas a herramientas al elegir para un harness de agente</text>
+  <text x="62" y="214" font-size="11" fill="#49454F">Los modelos 7B suelen fallar los esquemas XML estrictos de Cline y el modo Agent de Continue.dev. Usa 30B+ para bucles de agente.</text>
+  <line x1="18" y1="229" x2="782" y2="229" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="250" r="14" fill="#EA4335"/>
+  <text x="38" y="254" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="62" y="245" font-size="12" font-weight="700" fill="#1C1B1F">Usar un solo modelo para chat y autocompletado</text>
+  <text x="62" y="261" font-size="11" fill="#49454F">Un modelo 30B es excesivo para autocompletar en 200 ms. Usa un modelo aparte de 1.5B–7B para las completaciones; deja el 30B para el chat.</text>
+  <line x1="18" y1="276" x2="782" y2="276" stroke="#F7F2FA" stroke-width="1"/>
+  <circle cx="38" cy="297" r="14" fill="#EA4335"/>
+  <text x="38" y="301" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="62" y="292" font-size="12" font-weight="700" fill="#1C1B1F">No revisar el modelo y la licencia despu&#xe9;s de 6 meses</text>
+  <text x="62" y="308" font-size="11" fill="#49454F">Las l&#xed;neas de pesos abiertos se actualizan; las licencias cambian; los c&#xe1;lculos de VRAM mejoran. Revisa tus elecciones para noviembre de 2026.</text>
+  <line x1="18" y1="323" x2="782" y2="323" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="350" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Margen de VRAM + lectura de licencia + pruebas de bucle de agente = los 3 pasos m&#xe1;s omitidos · mayo de 2026</text>
+  <text x="400" y="400" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">promptquorum.com</text>
+</svg>

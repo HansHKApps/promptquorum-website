@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Herramienta': 'SAST Tradicional', 'Detección de Bugs': 'Menos del 20 %', 'Tasa de Falsos Positivos': 'Alta', 'Profundidad de Contexto': 'Basado en reglas', 'Precio/Dev/Mes': 'Variable' },
           ],
           tableFormat: true,
-          image: '/images/code-review-tool-comparison-en.svg',
+          image: '/images/code-review-tool-comparison-es.svg',
           imageCaption: 'Herramientas de revisión de código con IA comparadas: PromptQuorum despacha a GPT-4o + Claude simultáneamente — dos modelos detectan diferentes clases de bugs que cualquier modelo individual por separado.',
         },
 
@@ -917,7 +917,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Los prompts acotados y con contexto rico — que especifican lenguaje, framework, prioridades de revisión y formato de salida — reducen los falsos positivos y mejoran la calidad de la señal; los prompts vagos como "revisa este código" producen salidas genéricas con mucho ruido.',
             'El prompt engineering es la práctica de estructurar instrucciones de IA para restringir y dirigir la salida del modelo. Para la revisión de código, la variable más impactante es el alcance explícito: cuando le dices al modelo exactamente qué clases de problemas priorizar, produce menos comentarios de estilo y más hallazgos de lógica y seguridad.',
           ],
-          image: '/images/code-review-workflow-en.svg',
+          image: '/images/code-review-workflow-es.svg',
           imageCaption: 'Flujo de trabajo de revisión de código con IA estructurado: agregar contexto de función y especificar el enfoque de revisión (seguridad, rendimiento, estilo) aumenta la tasa de hallazgos accionables 3 veces.',
         },
 
@@ -979,7 +979,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Herramienta': 'GitHub Advanced Security (CodeQL)', 'Puntuación de Detección (código IA)': '84/100', 'Falsos Positivos': 'Medio', 'Mejor Para': 'Organizaciones GitHub-first; cobertura semántica profunda' },
           ],
           tableFormat: true,
-          image: '/images/code-review-security-steps-en.svg',
+          image: '/images/code-review-security-steps-es.svg',
           imageCaption: 'Cuatro categorías de seguridad para prompts de revisión de código con IA: inyección, autenticación, secretos codificados y errores de lógica de negocio — cada una requiere un encuadre de prompt diferente.',
         },
 

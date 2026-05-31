@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 295" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="295" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Msty — Funciones clave para usuarios no t&#xe9;cnicos</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Gratis para uso personal · Windows, macOS, Linux</text>
+  <!-- Column headers -->
+  <text x="75" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Funci&#xf3;n</text>
+  <text x="310" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Qu&#xe9; significa para ti</text>
+  <text x="648" y="74" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">&#xbf;&#xda;nica?</text>
+  <line x1="18" y1="81" x2="782" y2="81" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1: Split Chat (highlighted) -->
+  <rect x="18" y="83" width="764" height="36" rx="2" fill="#F7F2FA"/>
+  <text x="75" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4">Split Chat</text>
+  <text x="310" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Dos modelos responden la misma pregunta en paralelo</text>
+  <circle cx="666" cy="101" r="10" fill="#34A853"/>
+  <text x="666" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="119" x2="782" y2="119" stroke="#E8DEF8" stroke-width="1"/>
+  <!-- Row 2: Document Chat -->
+  <text x="75" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Document Chat</text>
+  <text x="310" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Arrastra PDF/DOCX a la barra lateral y pregunta al instante</text>
+  <circle cx="666" cy="137" r="10" fill="#F4B400"/>
+  <text x="666" y="142" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">±</text>
+  <line x1="18" y1="155" x2="782" y2="155" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3: Knowledge Stacks -->
+  <text x="75" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Knowledge Stacks</text>
+  <text x="310" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Fija documentos a un espacio para que cada chat los conozca</text>
+  <circle cx="666" cy="173" r="10" fill="#34A853"/>
+  <text x="666" y="178" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="191" x2="782" y2="191" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4: One-click Model Install -->
+  <text x="75" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Instalaci&#xf3;n de modelos con un clic</text>
+  <text x="310" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Biblioteca de modelos curada, descarga con un clic</text>
+  <circle cx="666" cy="209" r="10" fill="#F4B400"/>
+  <text x="666" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">±</text>
+  <line x1="18" y1="227" x2="782" y2="227" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 5: GPU Auto-Detect -->
+  <text x="75" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Detecci&#xf3;n autom&#xe1;tica de GPU</text>
+  <text x="310" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Apple Silicon, NVIDIA y AMD se usan autom&#xe1;ticamente</text>
+  <circle cx="666" cy="245" r="10" fill="#F4B400"/>
+  <text x="666" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">±</text>
+  <line x1="18" y1="263" x2="782" y2="263" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Footer -->
+  <text x="400" y="281" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">✓ Exclusivo de Msty  ·  ± Tambi&#xe9;n en otras apps  ·  promptquorum.com</text>
+</svg>

@@ -348,7 +348,7 @@ schema: {
           ],
           columns: ['Hardware', 'Llama 3.2 8B', 'Llama 3.3 70B', 'Qwen2.5 32B', 'Coste'],
           content: ['*con offloading a RAM — degradación significativa de la calidad'],
-          image: '/images/gpu-vs-cpu-vs-apple-silicon-speed-comparison-en.svg',
+          image: '/images/gpu-vs-cpu-vs-apple-silicon-speed-comparison-es.svg',
           imageCaption: 'La GPU domina en modelos de 8B: RTX 5090 a 200 tok/s (40× más rápida que la CPU a 5 tok/s). Mac Studio M2 Ultra es único: el único hardware de consumo que ejecuta Llama 3.3 70B de forma nativa a 35 tok/s.',
         },
         nvidia: {
@@ -429,7 +429,7 @@ schema: {
             { 'Hardware': 'API OpenAI ($0,01 por 1.000 tokens)', 'Coste inicial': 'Pago por uso', 'Tokens/s': 'Ilimitado', 'Tokens/año (24/7)': 'Ilimitado', 'Coste a largo plazo': '$10 por 1 M de tokens' },
           ],
           columns: ['Hardware', 'Coste inicial', 'Tokens/s', 'Tokens/año (24/7)', 'Coste a largo plazo'],
-          image: '/images/gpu-vs-cpu-vs-apple-silicon-cost-performance-en.svg',
+          image: '/images/gpu-vs-cpu-vs-apple-silicon-cost-performance-es.svg',
           imageCaption: 'Coste vs rendimiento: RTX 4070 Ti ($600, 80 tok/s) ofrece la mejor relación calidad-precio. M5 Max es gratuito si ya tienes un Mac. RTX 4090 domina en rendimiento pero cuesta $1.800.',
         },
         whenToChoose: {
@@ -441,7 +441,7 @@ schema: {
             '**Elige solo CPU**: estás sin conexión, necesitas procesar documentos por lotes durante la noche o quieres cero inversión en hardware.',
             '**Elige Apple Silicon**: tienes un Mac, ejecutas solo modelos de 7B y valoras el bajo consumo energético.',
           ],
-          image: '/images/gpu-vs-cpu-vs-apple-silicon-decision-matrix-en.svg',
+          image: '/images/gpu-vs-cpu-vs-apple-silicon-decision-matrix-es.svg',
           imageCaption: 'Matriz de decisión: la GPU gana para IA en producción y chat en tiempo real. M5 Max es ideal para usuarios de Mac con modelos de 7–13B. Solo CPU es impráctica para uso interactivo.',
         },
         commonMistakes: {

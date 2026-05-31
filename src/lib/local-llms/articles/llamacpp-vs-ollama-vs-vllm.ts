@@ -346,7 +346,7 @@ schema: {
             { 'Backend': 'vLLM', 'Tokens/seg': '34', 'ms/token': '29', 'VRAM usada': '41 GB', 'Throughput en batch': '250+ tok/s (continuo)' },
           ],
           columns: ['Backend', 'Tokens/seg', 'ms/token', 'VRAM usada', 'Throughput en batch'],
-          image: '/images/llamacpp-ollama-vllm-speed-comparison-en.svg',
+          image: '/images/llamacpp-ollama-vllm-speed-comparison-es.svg',
           imageCaption: 'Comparativa de velocidad y throughput: llama.cpp 38 tok/s por token único (26ms), Ollama 36 tok/s, vLLM 34 tok/s en solicitud única, pero vLLM 250+ tok/s en batch (10 solicitudes simultáneas).',
         },
         'speedRTX3060': {
@@ -398,7 +398,7 @@ schema: {
             '**vLLM:** `pip install vllm`, luego `python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.3-8B-Instruct`. 15 min de instalación (Python + dependencias).',
             'Ganador en simplicidad: **Ollama**.',
           ],
-          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-en.svg',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-complexity-es.svg',
           imageCaption: 'Tiempo de instalación de LLM local por sistema operativo: macOS tarda 6 minutos sin comandos de terminal; Windows tarda 15–20 minutos con interfaz gráfica; Linux Ubuntu requiere 40–70 minutos incluyendo la instalación de CUDA.',
         },
         'api': {
@@ -421,7 +421,7 @@ schema: {
             '**Ollama:** Simplicidad todo-en-uno. Úsalo para interfaz de chat y uso personal. Funciona en Mac, Linux, Windows.',
             '**vLLM:** Servidor API en producción. Úsalo para despliegues multi-usuario y requisitos de alto throughput. **Requiere NVIDIA CUDA — no funciona en Apple Silicon (M1/M2/M3/M4).**',
           ],
-          image: '/images/llamacpp-ollama-vllm-backend-selection-en.svg',
+          image: '/images/llamacpp-ollama-vllm-backend-selection-es.svg',
           imageCaption: 'Matriz de selección de backend: Ollama ideal para chat personal (1 usuario). llama.cpp para inferencia personalizada. vLLM es la única opción para API en producción con 10+ usuarios simultáneos. Los tres producen salidas de modelo idénticas.',
         },
         'mistakes': {

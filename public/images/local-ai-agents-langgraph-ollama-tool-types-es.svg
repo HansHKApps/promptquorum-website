@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    Herramientas de agente: tipos y casos de uso
+  </text>
+
+  <!-- Table Structure -->
+  <!-- Header Row -->
+  <rect x="18" y="48" width="764" height="28" fill="#F7F2FA"/>
+  <text x="35" y="68" font-size="12" font-weight="700" fill="#79747E">Tipo de herramienta</text>
+  <text x="240" y="68" font-size="12" font-weight="700" fill="#79747E">Prop&#xf3;sito</text>
+  <text x="520" y="68" font-size="12" font-weight="700" fill="#79747E">Latencia</text>
+  <text x="680" y="68" font-size="12" font-weight="700" fill="#79747E">Caso de uso</text>
+
+  <!-- Header divider -->
+  <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Web Search -->
+  <circle cx="35" cy="107" r="8" fill="#6750A4"/>
+  <text x="35" y="111" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="85" y="111" font-size="12" font-weight="600" fill="#1C1B1F">B&#xfa;squeda web</text>
+  <text x="240" y="111" font-size="11" fill="#49454F">Encontrar informaci&#xf3;n en l&#xed;nea</text>
+  <text x="520" y="111" font-size="11" fill="#F4B400">2–5s</text>
+  <text x="680" y="111" font-size="11" fill="#6750A4">Investigaci&#xf3;n, verificaci&#xf3;n</text>
+  <line x1="18" y1="123" x2="782" y2="123" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Code Execution -->
+  <circle cx="35" cy="150" r="8" fill="#6750A4"/>
+  <text x="35" y="154" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="85" y="154" font-size="12" font-weight="600" fill="#1C1B1F">Ejecuci&#xf3;n de c&#xf3;digo</text>
+  <text x="240" y="154" font-size="11" fill="#49454F">Ejecutar Python, calcular matem&#xe1;ticas</text>
+  <text x="520" y="154" font-size="11" fill="#34A853">100–500ms</text>
+  <text x="680" y="154" font-size="11" fill="#6750A4">An&#xe1;lisis de datos, c&#xe1;lculo</text>
+  <line x1="18" y1="166" x2="782" y2="166" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: File Operations -->
+  <circle cx="35" cy="193" r="8" fill="#6750A4"/>
+  <text x="35" y="197" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="85" y="197" font-size="12" font-weight="600" fill="#1C1B1F">Operaciones de archivos</text>
+  <text x="240" y="197" font-size="11" fill="#49454F">Leer/escribir/listar archivos</text>
+  <text x="520" y="197" font-size="11" fill="#34A853">50–200ms</text>
+  <text x="680" y="197" font-size="11" fill="#6750A4">Acceso a documentos</text>
+  <line x1="18" y1="209" x2="782" y2="209" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Database Query -->
+  <circle cx="35" cy="236" r="8" fill="#6750A4"/>
+  <text x="35" y="240" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="85" y="240" font-size="12" font-weight="600" fill="#1C1B1F">Consulta de base de datos</text>
+  <text x="240" y="240" font-size="11" fill="#49454F">Buscar datos estructurados</text>
+  <text x="520" y="240" font-size="11" fill="#34A853">100–800ms</text>
+  <text x="680" y="240" font-size="11" fill="#6750A4">Consulta de datos</text>
+  <line x1="18" y1="252" x2="782" y2="252" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: RAG Vector DB -->
+  <circle cx="35" cy="279" r="8" fill="#6750A4"/>
+  <text x="35" y="283" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="85" y="283" font-size="12" font-weight="600" fill="#1C1B1F">Recuperaci&#xf3;n de documentos</text>
+  <text x="240" y="283" font-size="11" fill="#49454F">B&#xfa;squeda sem&#xe1;ntica (RAG)</text>
+  <text x="520" y="283" font-size="11" fill="#34A853">200–600ms</text>
+  <text x="680" y="283" font-size="11" fill="#6750A4">Base de conocimiento</text>
+
+  <!-- Footer note -->
+  <text x="400" y="325" font-size="11" fill="#49454F" text-anchor="middle" font-weight="600">
+    Limita los agentes a 5–10 herramientas como m&#xe1;ximo. Demasiadas herramientas confunden al LLM y aumentan la latencia por paso.
+  </text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

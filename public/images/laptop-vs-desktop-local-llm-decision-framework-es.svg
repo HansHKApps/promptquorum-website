@@ -1,0 +1,68 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Marco de decisi&#xf3;n: port&#xe1;til vs escritorio
+  </text>
+
+  <!-- Start: Decision Question -->
+  <rect x="300" y="60" width="200" height="50" rx="6" fill="#6750A4" filter="url(#shadow)"/>
+  <text x="400" y="85" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#xbf;Necesitas mover</text>
+  <text x="400" y="100" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">tu LLM entre</text>
+  <text x="400" y="115" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">ubicaciones a diario?</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="110" x2="400" y2="135" stroke="#6750A4" stroke-width="2"/>
+  <polygon points="400,135 396,127 404,127" fill="#6750A4"/>
+
+  <!-- First decision: Portability -->
+  <g>
+    <!-- Left path: YES -->
+    <line x1="400" y1="140" x2="250" y2="170" stroke="#6750A4" stroke-width="2"/>
+    <text x="315" y="150" font-size="11" font-weight="600" fill="#6750A4">S&#xcd;</text>
+
+    <!-- Laptop box -->
+    <rect x="150" y="170" width="200" height="70" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="150" y="170" width="200" height="4" rx="0" fill="#EA4335"/>
+    <text x="250" y="195" font-size="13" font-weight="700" fill="#EA4335" text-anchor="middle">PORT&#xc1;TIL</text>
+    <text x="160" y="218" font-size="11" fill="#49454F">Port&#xe1;til, 15-25 tok/seg</text>
+    <text x="160" y="232" font-size="11" fill="#49454F">Se ralentiza tras 15-20 min</text>
+
+    <!-- Right path: NO -->
+    <line x1="400" y1="140" x2="550" y2="170" stroke="#6750A4" stroke-width="2"/>
+    <text x="465" y="150" font-size="11" font-weight="600" fill="#6750A4">NO</text>
+
+    <!-- Next question -->
+    <rect x="475" y="170" width="150" height="70" rx="6" fill="#6750A4" filter="url(#shadow)"/>
+    <text x="550" y="195" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#xbf;Modelos de 70B</text>
+    <text x="550" y="210" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">o 80+ tok/seg?</text>
+
+    <!-- Arrow from second decision -->
+    <line x1="550" y1="240" x2="550" y2="265" stroke="#6750A4" stroke-width="2"/>
+    <polygon points="550,265 546,257 554,257" fill="#6750A4"/>
+
+    <!-- Desktop box -->
+    <rect x="430" y="250" width="240" height="70" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="430" y="250" width="240" height="4" rx="0" fill="#34A853"/>
+    <text x="550" y="275" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">ESCRITORIO</text>
+    <text x="445" y="298" font-size="10" fill="#49454F">RTX 4090: 150 tok/seg</text>
+    <text x="445" y="311" font-size="10" fill="#49454F">Ejecuta cualquier modelo 24/7</text>
+
+    <!-- Cost comparison badges (moved down) -->
+    <circle cx="250" cy="320" r="28" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="2"/>
+    <text x="250" y="318" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">$140</text>
+    <text x="250" y="333" font-size="10" fill="#6750A4" text-anchor="middle">/tok/seg</text>
+
+    <circle cx="550" cy="320" r="28" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="2"/>
+    <text x="550" y="318" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">$19</text>
+    <text x="550" y="333" font-size="10" fill="#6750A4" text-anchor="middle">/tok/seg</text>
+  </g>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,75 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <!-- White background -->
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Lanzamientos de LLM locales del Q1 2026
+  </text>
+
+  <!-- Timeline line -->
+  <line x1="80" y1="100" x2="720" y2="100" stroke="#E8DEF8" stroke-width="2"/>
+
+  <!-- January 2026 marker -->
+  <circle cx="150" cy="100" r="8" fill="#6750A4"/>
+  <text x="150" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    Enero
+  </text>
+  <text x="150" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#49454F" text-anchor="middle">
+    Phi-4 Mini
+  </text>
+  <text x="150" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+    3.8B, 70% HumanEval
+  </text>
+
+  <!-- February 2026 marker -->
+  <circle cx="300" cy="100" r="8" fill="#6750A4"/>
+  <text x="300" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    Febrero
+  </text>
+  <text x="300" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#49454F" text-anchor="middle">
+    Gemma 3
+  </text>
+  <text x="300" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+    1B&#x2013;27B, Visi&#xf3;n
+  </text>
+
+  <!-- March 2026 marker -->
+  <circle cx="450" cy="100" r="8" fill="#6750A4"/>
+  <text x="450" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    Marzo
+  </text>
+  <text x="450" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#49454F" text-anchor="middle">
+    Llama 4 Scout
+  </text>
+  <text x="450" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+    MoE, contexto de 10M
+  </text>
+
+  <!-- April 2026 marker -->
+  <circle cx="600" cy="100" r="8" fill="#6750A4"/>
+  <text x="600" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    Abril
+  </text>
+  <text x="600" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#49454F" text-anchor="middle">
+    Mistral Small 3.2
+  </text>
+  <text x="600" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+    Instrucciones mejoradas
+  </text>
+
+  <!-- Key insight box -->
+  <rect x="60" y="250" width="680" height="120" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="80" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+    Tendencias clave del Q1 2026:
+  </text>
+  <text x="80" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F">
+    &#x2022; Capacidades de visi&#xf3;n en expansi&#xf3;n (Gemma 3 en todos los tama&#xf1;os)
+  </text>
+  <text x="80" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F">
+    &#x2022; La arquitectura MoE se vuelve est&#xe1;ndar (Llama 4 Scout)
+  </text>
+  <text x="80" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F">
+    &#x2022; Todos los lanzamientos disponibles en Ollama a los pocos d&#xed;as del lanzamiento de pesos abiertos
+  </text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

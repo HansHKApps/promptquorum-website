@@ -2584,7 +2584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mejor para': 'Cobertura amplia de lenguajes, incluidos lenguajes de nicho',
           },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-en.svg',
+        image: '/images/best-local-coding-models-2026-model-comparison-es.svg',
         imageCaption: 'Siete modelos de código local comparados por VRAM, ventana de contexto, licencia y caso de uso óptimo con Q4_K_M en mayo de 2026. Qwen3-Coder 30B es la opción por defecto para 24 GB; DeepSeek Coder V3 lidera en contexto largo; StarCoder 2 15B lidera en cobertura de lenguajes de nicho.',
       },
       whichOne: {
@@ -2603,7 +2603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Programo en Rust, Lua, Haskell, Solidity u otros lenguajes de nicho', 'Opción': 'StarCoder 2 15B' },
           { 'Tu situación': 'Mi prioridad es tokens por segundo, no la calidad absoluta', 'Opción': 'Codestral 22B' },
         ],
-        image: '/images/best-local-coding-models-2026-which-pick-en.svg',
+        image: '/images/best-local-coding-models-2026-which-pick-es.svg',
         imageCaption: 'Ocho atajos de decisión que mapean restricciones de hardware, licencia, contexto y caso de uso al modelo de código local correcto. La VRAM es el primer filtro; la licencia es el segundo.',
       },
       qwenCoderDeep: {
@@ -2745,7 +2745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Para una explicación más profunda de cómo funciona la cuantización y por qué Q4_K_M es el estándar más citado, consulta [Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained). El resto de esta guía asume los cálculos anteriores.',
           },
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-en.svg',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-es.svg',
         imageCaption: 'Requisitos de VRAM por nivel de cuantización para modelos de 7B y 30B, de Q4_K_M a FP16. Q4_K_M es el estándar recomendado con ~0,60 GB por cada mil millones de parámetros; añade 2-4 GB de overhead para contexto y herramientas.',
       },
       contextWindow: {
@@ -2769,7 +2769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'El contexto de trabajo práctico es lo que determina si el modelo puede mantener tu repositorio en mente, no el número del titular. Para refactorizaciones multiarchivo, prioriza la columna de recuperación real sobre la columna de marketing — los 32K de Codestral son reales, los 128K de Llama 3.3 son parciales.',
           },
         ],
-        image: '/images/best-local-coding-models-2026-context-window-en.svg',
+        image: '/images/best-local-coding-models-2026-context-window-es.svg',
         imageCaption: 'Ventana de contexto declarada vs. práctica de trabajo para siete modelos de código local. Los modelos de código pierden calidad de atención a partir de aproximadamente la mitad de la ventana declarada; planifica según la columna práctica, no el número de marketing.',
       },
       licensing: {
@@ -2792,7 +2792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La licencia de Codestral atrapa a equipos que hacen prototipos con él y luego lanzan sin revisar. Si el modelo toca a un usuario de pago — incluso indirectamente a través de una herramienta interna que genera artefactos orientados al cliente — necesitas la licencia comercial de Mistral. Migra a Qwen3-Coder o Granite Code (ambos Apache 2.0) antes de la integración para evitar el ciclo de renegociación de licencia.',
           },
         ],
-        image: '/images/best-local-coding-models-2026-licence-comparison-en.svg',
+        image: '/images/best-local-coding-models-2026-licence-comparison-es.svg',
         imageCaption: 'Comparativa de licencias de seis modelos de código local: cuatro con Apache 2.0 (uso comercial sin restricciones), Codestral requiere licencia comercial de pago de Mistral para producción, y StarCoder 2 usa OpenRAIL-M con restricciones de caso de uso.',
       },
       decisionTree: {
@@ -2824,7 +2824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'El árbol de decisión es intencionalmente corto. La mayoría de los equipos se complican demasiado en la elección del modelo y no suficiente en la elección del harness — consulta [Continue.dev vs Cline vs Aider](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) para el lado del harness. Las diferencias entre los modelos confiables son menores que las diferencias de ajuste al harness.',
           },
         ],
-        image: '/images/best-local-coding-models-2026-decision-tree-en.svg',
+        image: '/images/best-local-coding-models-2026-decision-tree-es.svg',
         imageCaption: 'Flujo de decisión de seis preguntas para elegir un modelo de código local: VRAM primero, licencia segundo, contexto tercero, fiabilidad del agente cuarto, cobertura de lenguajes de nicho quinto, velocidad vs. calidad último. Qwen3-Coder 30B es el estándar seguro en 24 GB.',
       },
       commonMistakes: {
@@ -2838,7 +2838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Error 5: no combinar un modelo de autocompletado pequeño con el modelo de chat más grande.** Un modelo de chat de 30B es excesivo para autocompletado de menos de 200 ms. Ejecuta un modelo de autocompletado de 1,5B-7B junto al modelo de chat — la VRAM total se mantiene manejable y la latencia permanece interactiva.',
           '**Error 6: no revisar la ficha de modelo cada seis meses.** Las líneas de modelos de pesos abiertos se actualizan; las recetas de cuantización mejoran; las licencias a veces se endurecen. La opción por defecto de hoy no es necesariamente la de noviembre de 2026.',
         ],
-        image: '/images/best-local-coding-models-2026-common-mistakes-en.svg',
+        image: '/images/best-local-coding-models-2026-common-mistakes-es.svg',
         imageCaption: 'Seis errores comunes al elegir un modelo de código local: ignorar el margen de VRAM, confiar en los números de contexto del marketing, no leer la licencia, pasar por alto la fiabilidad de tool-calling del agente, ejecutar un único modelo para chat y autocompletado, y no reevaluar cada seis meses.',
       },
       sources: {

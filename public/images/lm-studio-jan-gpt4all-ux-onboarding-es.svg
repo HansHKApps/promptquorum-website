@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" width="800" height="310" role="img" aria-label="LM Studio vs Jan vs GPT4All — Onboarding: clics hasta el primer chat">
+  <rect width="800" height="310" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio vs Jan vs GPT4All — Onboarding: clics hasta el primer chat</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Medido desde la instalaci&#xf3;n nueva hasta la primera respuesta del chat con un modelo 8B recomendado</text>
+
+  <!-- Top separator -->
+  <line x1="20" y1="54" x2="780" y2="54" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Column headers -->
+  <text x="20" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="start">Paso</text>
+  <text x="330" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">LM Studio</text>
+  <text x="490" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Jan</text>
+  <text x="650" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">GPT4All</text>
+
+  <!-- Header underline -->
+  <line x1="20" y1="78" x2="780" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Download installer (y=96) -->
+  <text x="20" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start">Descargar instalador</text>
+  <text x="330" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">S&#xed;</text>
+  <text x="490" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">S&#xed;</text>
+  <text x="650" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">S&#xed;</text>
+  <line x1="20" y1="108" x2="780" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Admin rights needed? (y=124) -->
+  <text x="20" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start">&#xbf;Requiere permisos de administrador?</text>
+  <text x="330" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">No</text>
+  <text x="490" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">No</text>
+  <text x="650" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">No</text>
+  <line x1="20" y1="136" x2="780" y2="136" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Suggested model at launch (y=152) -->
+  <text x="20" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start">Modelo sugerido al iniciar</text>
+  <text x="330" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">S&#xed;</text>
+  <text x="490" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">S&#xed;</text>
+  <text x="650" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">S&#xed;</text>
+  <line x1="20" y1="164" x2="780" y2="164" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Time to first reply (y=180) -->
+  <text x="20" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start">Tiempo hasta la primera respuesta (8B)</text>
+  <text x="330" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">~3 min</text>
+  <text x="490" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">~3 min</text>
+  <text x="650" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">~2 min</text>
+  <line x1="20" y1="192" x2="780" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Total clicks to first chat (y=208) — special highlight -->
+  <text x="20" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#49454F" text-anchor="start">Clics totales hasta el primer chat</text>
+  <text x="330" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#F4B400" text-anchor="middle">6</text>
+  <text x="490" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">5</text>
+  <!-- GPT4All winner badge background -->
+  <rect x="621" y="194" width="58" height="22" rx="11" fill="#34A853"/>
+  <text x="650" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4 ✓</text>
+
+  <!-- Bottom prominent divider -->
+  <line x1="20" y1="220" x2="780" y2="220" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Footer -->
+  <text x="400" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">GPT4All gana en sencillez de onboarding — 4 clics, 2 min · Las tres apps: sin GPU ni permisos de administrador · promptquorum.com</text>
+</svg>

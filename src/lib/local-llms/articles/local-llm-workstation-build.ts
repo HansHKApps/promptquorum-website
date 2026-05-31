@@ -1924,7 +1924,7 @@ schema: {
             { 'Componente': 'Total', 'Modelo': '--', 'Precio (Abril 2026)': '$4,000–6,000', 'Notas': 'Varía con los precios de mercado de GPU y la elección de refrigeración.' },
           ],
           columns: ['Componente', 'Modelo', 'Precio (Abril 2026)', 'Notas'],
-          image: '/images/local-llm-workstation-build-components-layout-en.svg',
+          image: '/images/local-llm-workstation-build-components-layout-es.svg',
           imageCaption: 'Componentes de la estación de trabajo: GPUs dual RTX 4090 (48GB VRAM total), CPU Threadripper 7970X (32 núcleos), 128GB RAM DDR5, fuente de 2000W y sistema de refrigeración líquida para disipación de 1,200W.',
         },
         'dual-gpu': {
@@ -1944,7 +1944,7 @@ schema: {
             { type: 'one-sentence', text: 'Las GPUs duales ejecutan modelos independientes por tarjeta (más simple) o agrupan su VRAM mediante NVLink (complejo pero permite modelos más grandes).' },
             { type: 'plain-terms', text: 'Piénsalo como dos computadoras separadas (en paralelo) vs. una supercomputadora compartida (NVLink). En paralelo es más fácil de configurar; compartida da más potencia para modelos enormes.' },
           ],
-          image: '/images/local-llm-workstation-build-dual-gpu-config-en.svg',
+          image: '/images/local-llm-workstation-build-dual-gpu-config-es.svg',
           imageCaption: 'Tres opciones de configuración GPU dual: independiente en paralelo (cargas de trabajo heterogéneas, sin NVLink), puente NVLink (pool VRAM unificado de 48GB, ventanas de contexto grandes) y paralelismo tensorial (modelo 70B único dividido entre GPUs para 28 tok/s de rendimiento).',
         },
         'rtx5090-vs-4090': {
@@ -1974,7 +1974,7 @@ schema: {
           callouts: [
             { type: '🛠️ Best Practice', text: 'Usa pasta térmica con conductividad 5+ W/mK (Noctua NT-H2, Corsair TM30). La pasta barata puede añadir 10–15°C a las temperaturas y anular la garantía de la GPU.' },
           ],
-          image: '/images/local-llm-workstation-build-cooling-setup-en.svg',
+          image: '/images/local-llm-workstation-build-cooling-setup-es.svg',
           imageCaption: 'Disipación de calor: 1,200W total de las GPUs dual RTX 4090 (450W cada una) y CPU Threadripper (200W). Soluciones de refrigeración: circuito líquido personalizado ($1,500–2,500), AIO dual 360mm ($600–900) o refrigeración por aire (no recomendada, causa throttling térmico).',
         },
         'power': {
@@ -1991,7 +1991,7 @@ schema: {
             { type: '⚠️ Warning', text: 'Los tomacorrientes domésticos suelen ser de 15A a 120V (1,800W máximo). Un equipo con dual 4090 disparará el disyuntor. Instala un circuito dedicado de 240V 20A ($200–400 de honorarios de electricista).' },
             { type: '📌 Key Point', text: 'Usa siempre fuentes modulares. Las GPUs duales tienen docenas de pines de alimentación; los cables no modulares crean riesgos de incendio por resistencia de contacto en los conectores multipín.' },
           ],
-          image: '/images/local-llm-workstation-build-power-electrical-en.svg',
+          image: '/images/local-llm-workstation-build-power-electrical-es.svg',
           imageCaption: 'Requisitos de alimentación: ~1,100W continuos (450W + 450W GPUs, 200W CPU) con picos de 1,300W. Opciones de fuente: única de 2000W (más simple, cables limpios) o dual de 1200W (redundante, configuración compleja). Ambas requieren circuito dedicado de 20A 240V.',
         },
         'perf': {

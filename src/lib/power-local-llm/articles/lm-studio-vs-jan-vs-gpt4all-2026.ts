@@ -1480,7 +1480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '¿Cómo se comparan LM Studio, Jan y GPT4All en 2026?',
         content: 'Probadas en Apple M5 MacBook Pro (16 GB de memoria unificada) y un escritorio con NVIDIA RTX 4070 (12 GB de VRAM, 32 GB de RAM del sistema) con Windows 11. Las tres apps se probaron con el mismo modelo de clase 8B (Llama 3.3 8B Q4_K_M) para una comparación directa.',
-        image: '/images/lm-studio-jan-gpt4all-comparison-table-en.svg',
+        image: '/images/lm-studio-jan-gpt4all-comparison-table-es.svg',
         imageCaption: 'Comparativa de funciones LM Studio vs Jan vs GPT4All (2026, probadas en M5 MacBook + RTX 4070): LM Studio lidera en velocidad (38 tok/s M5, 74 tok/s RTX 4070) y biblioteca de modelos; Jan gana en privacidad (cero telemetría, AGPL open source); GPT4All tiene la instalación más pequeña (290 MB) y el requisito de RAM más bajo (4 GB).',
         rows: [
           { 'Criterio': 'Ideal para', 'LM Studio': 'Usuarios avanzados', 'Jan': 'Usuarios de privacidad', 'GPT4All': 'Principiantes' },
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-one',
         title: '¿Cuál deberías elegir?',
         content: '**La elección correcta depende de tu hardware, tu postura de privacidad y tu nivel técnico.** Usa este atajo de decisión:',
-        image: '/images/lm-studio-jan-gpt4all-verdict-en.svg',
+        image: '/images/lm-studio-jan-gpt4all-verdict-es.svg',
         imageCaption: 'Qué app de IA local de escritorio elegir: LM Studio para velocidad máxima en RTX 3060+ o M3+ Mac y chat con PDF integrado; Jan para código AGPL open source y cero telemetría incluyendo cumplimiento en la UE; GPT4All para hardware antiguo con 8 GB de RAM o usuarios que quieren la instalación más sencilla.',
         rows: [
           { 'Tu situación': 'Tengo RTX 3060+ o Mac M3+, quiero velocidad máxima', 'Elige': 'LM Studio' },
@@ -1515,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'speed-benchmarks',
         title: '¿Qué tan rápida es cada app en hardware real?',
         content: 'Tokens por segundo medidos durante una generación de 200 tokens con Llama 3.3 8B Q4_K_M cargado completamente en memoria. Valores redondeados al token entero más cercano.',
-        image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-en.svg',
+        image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-es.svg',
         imageCaption: 'Benchmarks de velocidad en hardware real (Llama 3.3 8B Q4_K_M): LM Studio lidera con 38/74/52 tok/s en M5/RTX4070/RTX3060; Jan con 32/65/48 tok/s; GPT4All con 24/52/40 tok/s. Solo CPU (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s.',
         rows: [
           { 'Hardware': 'Apple M5 MacBook Pro (16 GB)', 'LM Studio': '38 tok/s', 'Jan': '32 tok/s', 'GPT4All': '24 tok/s' },
@@ -1547,7 +1547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Paso': '5. Clics totales hasta el primer chat', 'LM Studio': '6', 'Jan': '5', 'GPT4All': '4' },
         ],
         columns: ['Paso', 'LM Studio', 'Jan', 'GPT4All'],
-        image: '/images/lm-studio-jan-gpt4all-ux-onboarding-en.svg',
+        image: '/images/lm-studio-jan-gpt4all-ux-onboarding-es.svg',
         imageCaption: 'GPT4All requiere 4 clics y 2 minutos hasta el primer chat — el menor de las tres apps; LM Studio tarda 6 clics y Jan 5 desde una instalación nueva.',
       },
       modelLibrary: {
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy-telemetry',
         title: '¿Estas apps envían datos a algún lugar?',
         content: '**En privacidad, Jan toma la delantera.** Cada app gestiona la telemetría de forma diferente:',
-        image: '/images/lm-studio-jan-gpt4all-privacy-telemetry-en.svg',
+        image: '/images/lm-studio-jan-gpt4all-privacy-telemetry-es.svg',
         imageCaption: 'Comparativa de privacidad: Jan tiene cero telemetría y código AGPL open source; GPT4All tiene telemetría solo opt-in y licencia MIT; LM Studio tiene telemetría anónima opt-out y es propietario. Ninguna de las tres envía prompts ni datos de conversaciones a ningún lugar.',
         items: [
           '**LM Studio** — Envía eventos de uso anónimos por defecto. Se puede desactivar en Configuración → Privacidad. Los prompts y las salidas del modelo nunca salen del dispositivo.',
