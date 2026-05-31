@@ -253,7 +253,6 @@ schema: {
         'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison',
         'description': 'vLLM dominates production (highest throughput). llama.cpp powers Ollama (lightest). Text-Generation-WebUI best for research. 2026 inference engine comparison.',
         'url': 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -276,7 +275,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
-        'inLanguage': 'en',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -302,7 +300,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -616,7 +613,6 @@ schema: {
         'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026: Comparación de Motores de Inferencia',
         'description': 'vLLM domina la producción (mayor rendimiento). llama.cpp impulsa Ollama (el más ligero). Text-Generation-WebUI ideal para investigación. Comparación de motores de inferencia 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -639,7 +635,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
-        'inLanguage': 'es',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -665,7 +660,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -955,7 +949,6 @@ schema: {
       'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026: Vergleich von Inference-Engines',
       'description': 'vLLM dominiert Production (höchster Durchsatz). llama.cpp treibt Ollama an (leichteste). Text-Generation-WebUI beste für Forschung. 2026 Inference-Engine Vergleich.',
       'url': 'https://www.promptquorum.com/de/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
-      'inLanguage': 'de',
       'datePublished': '2026-04-04',
       'dateModified': '2026-04-15',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -977,7 +970,6 @@ schema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
-      'inLanguage': 'de',
       'numberOfItems': 3,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'llama.cpp', 'description': 'C++-Bibliothek. CPU ausgezeichnet, GPU gut. 1-100 Tokens/Sek. GGUF-Format. Unterstützt Ollama. Beste für Consumer-Geräte und CPU-Inferenz.' },
@@ -1216,7 +1208,6 @@ schema: {
         'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026 : Comparaison des moteurs d\'inférence',
         'description': 'vLLM domine la production (débit maximal). llama.cpp alimente Ollama (le plus léger). Text-Generation-WebUI meilleur pour la recherche. Comparaison 2026 des moteurs d\'inférence.',
         'url': 'https://www.promptquorum.com/fr/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-15',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1238,7 +1229,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
-        'inLanguage': 'fr',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -1264,7 +1254,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1559,7 +1548,6 @@ schema: {
         'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推論エンジン比較',
         'description': 'vLLM が本番環境を主導（最高スループット）。llama.cpp が Ollama を駆動（最軽量）。Text-Generation-WebUI は研究に最適。2026年推論エンジン比較。',
         'url': 'https://www.promptquorum.com/ja/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-15',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1581,7 +1569,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
-        'inLanguage': 'ja',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -1607,7 +1594,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1902,7 +1888,6 @@ schema: {
         'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推理引擎对比',
         'description': 'vLLM 主导生产环境（最高吞吐量）。llama.cpp 驱动 Ollama（最轻量）。Text-Generation-WebUI 最适合研究。2026年推理引擎对比。',
         'url': 'https://www.promptquorum.com/zh/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-15',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1924,7 +1909,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
-        'inLanguage': 'zh',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -1950,7 +1934,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',

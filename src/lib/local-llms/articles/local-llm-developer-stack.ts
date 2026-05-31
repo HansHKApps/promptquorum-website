@@ -41,7 +41,6 @@ schema: {
         'headline': 'Best Local LLM Stack for Developers (April 2026)',
         'description': 'Production-grade local LLM stack: vLLM, FastAPI API server, IDE integration with VS Code Copilot, real-time code completions, 30-50 tokens/second.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-developer-stack',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -59,7 +58,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Set Up a Local LLM Developer Stack',
-        'inLanguage': 'en',
         'totalTime': 'PT120M',
         'step': [
           { '@type': 'HowToStep', 'name': 'Install Ollama (Tier 1)', 'text': 'Run `brew install ollama` on macOS or download the Windows installer. Then run `ollama run llama3.2` to start a local model.' },
@@ -72,7 +70,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Which tier should I use?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Tier 1 if solo (casual use). Tier 2 if single dev + IDE integration. Tier 3 if team + 24/7 service.' } },
           { '@type': 'Question', 'name': 'Can I use vLLM instead of Ollama?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, but more setup. vLLM is faster (batching) and more flexible (Python API).' } },
@@ -276,7 +273,6 @@ schema: {
         'headline': 'Mejor Stack Local de LLM para Desarrolladores (abril 2026)',
         'description': 'Stack de nivel producción: vLLM, FastAPI, integración IDE con VS Code Copilot, completaciones de código en tiempo real, 30-50 tokens/segundo. Sin dependencia de proveedor.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-developer-stack?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -300,7 +296,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Cómo configurar un stack de desarrollador con LLM local',
-        'inLanguage': 'es',
         'totalTime': 'PT120M',
         'step': [
           { '@type': 'HowToStep', 'name': 'Instalar Ollama (Nivel 1)', 'text': 'Ejecutar `brew install ollama` en macOS o descargar el instalador para Windows. Luego ejecutar `ollama run llama3.2` para iniciar un modelo local.' },
@@ -313,7 +308,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Qué nivel debo usar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nivel 1 para uso individual (casual). Nivel 2 para un desarrollador con integración de IDE. Nivel 3 para equipos con servicio 24/7.' } },
           { '@type': 'Question', 'name': '¿Puedo usar vLLM en lugar de Ollama?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, pero requiere más configuración. vLLM es más rápido (procesamiento por lotes) y más flexible (API de Python).' } },
@@ -513,7 +507,6 @@ schema: {
         'headline': 'Best Local LLM Stack für Entwickler (April 2026)',
         'description': 'Produktionsreifer Stack: vLLM, FastAPI, IDE-Integration VS Code, Echtzeit-Code-Vervollständigung, 30-50 Token/Sekunde. DSGVO-konform, kein Vendor Lock-in.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-developer-stack',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -531,7 +524,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Wie man einen lokalen LLM-Developer-Stack einrichtet',
-        'inLanguage': 'de',
         'totalTime': 'PT120M',
         'step': [
           { '@type': 'HowToStep', 'name': 'Ollama installieren (Stufe 1)', 'text': '`brew install ollama` auf macOS ausführen oder den Windows-Installer herunterladen. Dann `ollama run llama3.2` starten, um ein lokales Modell zu laden.' },
@@ -544,7 +536,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Welche Stufe soll ich verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Stufe 1 für Einzelnutzer (gelegentlicher Gebrauch). Stufe 2 für einzelne Entwickler mit IDE-Integration. Stufe 3 für Teams mit 24/7-Betrieb.' } },
           { '@type': 'Question', 'name': 'Kann ich vLLM statt Ollama verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, aber mit mehr Aufwand. vLLM ist schneller (Batching) und flexibler (Python-API).' } },
@@ -722,7 +713,6 @@ schema: {
         'headline': 'Meilleur Stack LLM Local pour Développeurs (avril 2026)',
         'description': 'Stack production : vLLM, FastAPI, intégration IDE VS Code, complétions temps réel, 30-50 tokens/s. RGPD conforme, sans dépendance fournisseur.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-developer-stack',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -740,7 +730,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Comment configurer un stack LLM local pour développeurs',
-        'inLanguage': 'fr',
         'totalTime': 'PT120M',
         'step': [
           { '@type': 'HowToStep', 'name': 'Installer Ollama (Niveau 1)', 'text': 'Exécuter `brew install ollama` sur macOS ou télécharger l\'installateur Windows. Puis lancer `ollama run llama3.2` pour démarrer un modèle local.' },
@@ -753,7 +742,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Quel niveau dois-je utiliser ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Niveau 1 pour usage solo (occasionnel). Niveau 2 pour un développeur seul avec intégration IDE. Niveau 3 pour une équipe avec service 24/7.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser vLLM à la place d\'Ollama ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, mais avec plus de configuration. vLLM est plus rapide (batching) et plus flexible (API Python).' } },
@@ -927,7 +915,6 @@ schema: {
         'headline': '開発者向けベストローカルLLMスタック（2026年4月）',
         'description': '本番グレードスタック：vLLM・FastAPI・IDE統合実現。VS Code Copilot拡張でリアルタイムコード補完、30-50トークン/秒。ベンダーロックインなし。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-developer-stack',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -945,7 +932,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'ローカルLLM開発者スタックのセットアップ方法',
-        'inLanguage': 'ja',
         'totalTime': 'PT120M',
         'step': [
           { '@type': 'HowToStep', 'name': 'Ollamaのインストール（階層1）', 'text': 'macOSで`brew install ollama`を実行するか、Windowsインストーラーをダウンロードします。次に`ollama run llama3.2`を実行してローカルモデルを起動します。' },
@@ -958,7 +944,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'どの階層を使うべきですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '個人利用（カジュアル）なら階層1。IDE統合が必要な単独開発者なら階層2。チームや24/7サービスなら階層3。' } },
           { '@type': 'Question', 'name': 'OllamaのかわりにvLLMを使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可能ですが、セットアップが増えます。vLLMはバッチ処理で高速で、Python APIによる柔軟性も優れています。' } },
@@ -1131,7 +1116,6 @@ schema: {
         'headline': '开发者最佳本地LLM技术栈（2026年4月）',
         'description': '生产级技术栈：vLLM、FastAPI、IDE集成实现实时代码补全。30-50令牌/秒，符合PIPL合规，无厂商锁定。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-developer-stack',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1149,7 +1133,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': '如何搭建本地LLM开发者技术栈',
-        'inLanguage': 'zh',
         'totalTime': 'PT120M',
         'step': [
           { '@type': 'HowToStep', 'name': '安装Ollama（层级一）', 'text': '在macOS上运行`brew install ollama`或下载Windows安装程序。然后运行`ollama run llama3.2`启动本地模型。' },
@@ -1162,7 +1145,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '应该使用哪个层级？', 'acceptedAnswer': { '@type': 'Answer', 'text': '个人使用（临时用途）选层级一。单人开发加IDE集成选层级二。团队和24/7服务选层级三。' } },
           { '@type': 'Question', 'name': '可以用vLLM代替Ollama吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，但配置更复杂。vLLM批处理更快，Python API更灵活。' } },

@@ -181,7 +181,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis',
-        'inLanguage': 'en',
         'proficiencyLevel': 'Beginner',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
@@ -214,7 +213,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I switch between local and cloud models in the same application?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Ollama and LM Studio expose an OpenAI-compatible REST API at localhost. Any application built on the OpenAI SDK can switch to local by changing the base URL to localhost:11434 (Ollama) or localhost:1234 (LM Studio). No code changes required.' } },
           { '@type': 'Question', 'name': 'Do cloud API providers train on my prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For paid API tiers, most providers (OpenAI, Anthropic, Google) opt API customers out of training data collection by default. Free tiers typically use inputs for improvement. Always verify the current data policy for your specific tier.' } },
@@ -408,7 +406,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-cloud-apis?lang=es',
-        'inLanguage': 'es',
         'proficiencyLevel': 'Beginner',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -431,7 +428,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         'name': 'LLMs locales vs APIs en la nube: Comparación de 8 factores 2026',
         'numberOfItems': 8,
         'itemListElement': [
@@ -448,7 +444,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo cambiar entre modelos locales y en la nube en la misma aplicación?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Ollama y LM Studio exponen una API REST compatible con OpenAI en localhost. Cualquier aplicación construida sobre el SDK de OpenAI puede cambiar a local modificando la URL base a localhost:11434 (Ollama) o localhost:1234 (LM Studio). No se requieren cambios en el código.' } },
           { '@type': 'Question', 'name': '¿Los proveedores de APIs en la nube entrenan con mis prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para los niveles de API de pago, la mayoría de los proveedores (OpenAI, Anthropic, Google) excluyen a los clientes de API de la recopilación de datos de entrenamiento por defecto. Los niveles gratuitos típicamente usan las entradas para mejoras. Siempre verifica la política de datos vigente para tu nivel específico.' } },
@@ -463,7 +458,6 @@ schema: {
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'inLanguage': 'es',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro'],
@@ -665,7 +659,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-cloud-apis',
-        'inLanguage': 'de',
         'proficiencyLevel': 'Beginner',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -682,7 +675,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'de',
         'name': 'Lokale LLMs vs. Cloud-APIs: 8-Faktoren-Vergleich 2026',
         'numberOfItems': 8,
         'itemListElement': [
@@ -699,7 +691,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich in derselben Anwendung zwischen lokalen und Cloud-Modellen wechseln?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Ollama und LM Studio bieten beide eine OpenAI-kompatible REST-API auf localhost an. Jede mit dem OpenAI-SDK erstellte Anwendung kann ihre Basis-URL auf localhost:11434 (Ollama) oder localhost:1234 (LM Studio) zeigen, um ein lokales Modell ohne Codeänderungen zu verwenden.' } },
           { '@type': 'Question', 'name': 'Trainieren Cloud-API-Anbieter mit meinen Prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für kostenpflichtige API-Tiers schließen die meisten großen Anbieter API-Kunden standardmäßig von der Trainingsdatensammlung aus. Kostenlose Tiers verwenden Eingaben in der Regel zur Verbesserung.' } },
@@ -716,7 +707,6 @@ schema: {
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'inLanguage': 'de',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro'],
@@ -912,7 +902,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-cloud-apis',
-        'inLanguage': 'fr',
         'proficiencyLevel': 'Beginner',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -929,7 +918,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'fr',
         'name': 'LLMs locaux vs APIs cloud : Comparaison 8 facteurs 2026',
         'numberOfItems': 8,
         'itemListElement': [
@@ -946,7 +934,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Puis-je basculer entre modèles locaux et cloud dans la même application ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Ollama et LM Studio exposent une API REST compatible OpenAI sur localhost. Toute application construite sur le SDK OpenAI peut pointer vers localhost:11434 (Ollama) ou localhost:1234 (LM Studio) sans modifier le code.' } },
           { '@type': 'Question', 'name': 'Les fournisseurs d\'APIs cloud s\'entraînent-ils sur mes prompts ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les niveaux API payants, la plupart des grands fournisseurs excluent les clients API de la collecte de données d\'entraînement par défaut. Les niveaux gratuits utilisent généralement les entrées pour l\'amélioration.' } },
@@ -963,7 +950,6 @@ schema: {
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'inLanguage': 'fr',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro'],
@@ -1159,7 +1145,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-vs-cloud-apis',
-        'inLanguage': 'ja',
         'proficiencyLevel': 'Beginner',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1176,7 +1161,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'ja',
         'name': 'ローカルLLM vs クラウドAPI：8要素比較2026',
         'numberOfItems': 8,
         'itemListElement': [
@@ -1193,7 +1177,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': '同じアプリでローカルとクラウドモデルを切り替えられますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。OllamaとLM StudioはOpenAI互換REST APIをlocalhostで公開しています。ベースURLをlocalhost:11434（Ollama）またはlocalhost:1234（LM Studio）に変更するだけでコード変更なしに切り替え可能です。' } },
           { '@type': 'Question', 'name': 'クラウドAPIプロバイダーはプロンプトでトレーニングしますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '有料APIティアではほとんどのプロバイダーがデフォルトでトレーニングデータ収集から除外しています。無料ティアは通常入力データを改善に使用します。' } },
@@ -1210,7 +1193,6 @@ schema: {
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'inLanguage': 'ja',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro'],
@@ -1406,7 +1388,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-vs-cloud-apis',
-        'inLanguage': 'zh',
         'proficiencyLevel': 'Beginner',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1423,7 +1404,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'zh',
         'name': '本地LLM vs 云端API：8大因素对比2026',
         'numberOfItems': 8,
         'itemListElement': [
@@ -1440,7 +1420,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '可以在同一应用中切换本地和云端模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。Ollama和LM Studio在localhost上公开OpenAI兼容REST API。将base URL指向localhost:11434（Ollama）或localhost:1234（LM Studio）即可无需更改代码使用本地模型。' } },
           { '@type': 'Question', 'name': '云端API提供商会用我的提示词训练吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '付费API层级的大多数提供商默认将API客户排除在训练数据收集之外。免费层级通常使用输入进行改进。请核实您使用的特定层级的当前数据政策。' } },
@@ -1457,7 +1436,6 @@ schema: {
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'inLanguage': 'zh',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro'],

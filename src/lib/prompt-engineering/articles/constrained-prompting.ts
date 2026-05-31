@@ -706,7 +706,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/constrained-prompting?lang=es',
         inLanguage: 'es',
         headline: 'Constrained Prompting: Fuerza formatos de salida de IA (2026)',
@@ -1637,7 +1636,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'TechArticle',
     'headline': '制約付きプロンプティング：完全ガイド',
     'url': 'https://www.promptquorum.com/ja/prompt-engineering/constrained-prompting',
-    'inLanguage': 'ja',
     'image': 'https://www.promptquorum.com/og-constrained-prompting-ja.png',
     'datePublished': '2026-01-20',
     'dateModified': '2026-04-28',
@@ -1661,7 +1659,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'inLanguage': 'ja',
     'mainEntity': [
       {
         '@type': 'Question',
@@ -1748,7 +1745,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   howToSchema: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    'inLanguage': 'ja',
     'name': '制約付きプロンプティング統合：5ステップ',
     'step': [
       {
@@ -1786,7 +1782,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   itemListSchema: {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    'inLanguage': 'ja',
     'name': '制約付きプロンプティングの種類',
     'itemListElement': [
       {
@@ -2133,7 +2128,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'TechArticle',
     'headline': '受限提示：完整指南',
     'url': 'https://www.promptquorum.com/zh/prompt-engineering/constrained-prompting',
-    'inLanguage': 'zh',
     'image': 'https://www.promptquorum.com/og-constrained-prompting-zh.png',
     'datePublished': '2026-01-20',
     'dateModified': '2026-04-28',
@@ -2157,7 +2151,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'inLanguage': 'zh',
     'mainEntity': [
       {
         '@type': 'Question',
@@ -2244,7 +2237,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   howToSchema: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    'inLanguage': 'zh',
     'name': '受限提示集成：5个步骤',
     'step': [
       {
@@ -2282,7 +2274,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   itemListSchema: {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    'inLanguage': 'zh',
     'name': '受限提示的类型',
     'itemListElement': [
       {

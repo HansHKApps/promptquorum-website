@@ -189,7 +189,6 @@ schema: {
         'headline': 'Air-Gapped Local LLM Deployment',
         'description': 'Air-gapped local LLM deployment: complete isolation architecture, network security, updates management, and classified data handling.',
         'url': 'https://www.promptquorum.com/local-llms/on-prem-air-gapped-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -200,7 +199,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -248,7 +246,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Air-Gapped Local LLM Deployment',
-        'inLanguage': 'en',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -453,7 +450,6 @@ schema: {
         'headline': 'Despliegue de LLM Local con Air-Gap',
         'description': 'Despliegue de LLM local con air-gap: arquitectura de aislamiento completo, seguridad de red, gestión de actualizaciones y manejo de datos clasificados.',
         'url': 'https://www.promptquorum.com/es/local-llms/on-prem-air-gapped-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -464,7 +460,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -512,7 +507,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Despliegue de LLM Local con Air-Gap',
-        'inLanguage': 'es',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -729,7 +723,6 @@ schema: {
         'headline': 'On-Prem Air-Gapped Local LLMs: Isolierte Bereitstellung für klassifizierte Umgebungen',
         'description': 'Air-Gapped Local LLM Bereitstellung: komplette Isolierungsarchitektur, Netzwerksicherheit, Update-Verwaltung und Klassifizierungsdaten-Handling.',
         'url': 'https://www.promptquorum.com/de/local-llms/on-prem-air-gapped-local-llm',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -740,7 +733,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Wie aktualisieren Sie Modelle in einem Air-Gapped-System?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Manuell per verschlüsseltem USB oder über ein internes, vom Internet isoliertes sicheres Netzwerk. Alle Updates erfordern Change-Control-Genehmigung und Audit-Trails.' } },
           { '@type': 'Question', 'name': 'Können wir Cloud-Backups für Air-Gapped-Systeme verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Cloud-Backups erfordern Internetverbindung (aufheben Air-Gapping). Verwenden Sie physische Backups (verschlüsselte Festplatten) in separater sicherer Einrichtung.' } },
@@ -755,7 +747,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Air-Gapped-Isolierungskomponenten',
-        'inLanguage': 'de',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Vollständige Netzwerkisolierung', 'description': 'Air-Gapped-Infrastruktur hat keine Netzwerkverbindung zum Internet oder zu externen Systemen und stellt Null-Zugang von außen sicher.' },
@@ -949,7 +940,6 @@ schema: {
         'headline': 'On-Prem Air-Gapped Local LLMs: Déploiement isolé pour environnements classifiés',
         'description': 'Déploiement air-gapped d\'LLM local: architecture d\'isolement complet, sécurité réseau, gestion des mises à jour et données classifiées.',
         'url': 'https://www.promptquorum.com/fr/local-llms/on-prem-air-gapped-local-llm',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -960,7 +950,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Comment mettez-vous à jour les modèles dans un système air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Manuellement via USB chiffré, ou via un réseau sécurisé isolé interne. Toutes les mises à jour exigent approbation du contrôle des changements et pistes d\'audit.' } },
           { '@type': 'Question', 'name': 'Pouvons-nous utiliser des sauvegardes cloud pour les systèmes air-gapped?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Les sauvegardes cloud exigent connexion Internet (annulent air-gapping). Utilisez sauvegardes physiques (disques durs chiffrés) stockés dans installation sécurisée séparée.' } },
@@ -973,7 +962,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Composants d\'isolement air-gapped',
-        'inLanguage': 'fr',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Isolement réseau complet', 'description': 'L\'infrastructure air-gapped n\'a aucune connexion réseau à Internet ou à systèmes externes, assurant zéro accès externe.' },
@@ -1125,7 +1113,6 @@ schema: {
         'headline': 'オンプレミス・エアギャップローカルLLM: 機密環境の隔離デプロイ',
         'description': 'エアギャップローカルLLMデプロイメント: 完全隔離アーキテクチャ、ネットワークセキュリティ、更新管理、機密データ処理。',
         'url': 'https://www.promptquorum.com/ja/local-llms/on-prem-air-gapped-local-llm',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1309,7 +1296,6 @@ schema: {
         'headline': '本地LLM气隙部署: 隔离架构与分类数据保护',
         'description': '了解如何在完全隔离的网络环境中部署本地LLM: 包括网络隔离架构设计、模型离线管理、安全更新流程和分类信息保护。',
         'url': 'https://www.promptquorum.com/zh/local-llms/on-prem-air-gapped-local-llm',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1325,7 +1311,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1373,7 +1358,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '本地LLM气隙部署',
-        'inLanguage': 'zh',
         'numberOfItems': 3,
         'itemListElement': [
           {

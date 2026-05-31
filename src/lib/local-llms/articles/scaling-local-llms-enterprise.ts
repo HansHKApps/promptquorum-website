@@ -173,7 +173,6 @@ schema: {
         'headline': 'Enterprise Scale Local LLMs',
         'description': 'Scale local LLMs: Kubernetes, load balancing, redundancy, monitoring. Multi-GPU production deployment.',
         'url': 'https://www.promptquorum.com/local-llms/scaling-local-llms-enterprise',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -184,7 +183,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -240,7 +238,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Enterprise Scale Local LLMs',
-        'inLanguage': 'en',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -429,7 +426,6 @@ schema: {
         'headline': 'LLMs locales a escala empresarial',
         'description': 'Escala LLMs locales: Kubernetes, balanceo de carga, redundancia, monitoreo. Despliegue multi-GPU en producción.',
         'url': 'https://www.promptquorum.com/es/local-llms/scaling-local-llms-enterprise?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -440,7 +436,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -496,7 +491,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LLMs locales a escala empresarial',
-        'inLanguage': 'es',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -694,7 +688,6 @@ schema: {
         'headline': 'Local LLMs in der Enterprise skalieren',
         'description': 'Skaliere Local LLMs: Kubernetes, Load Balancing, Redundanz, Monitoring. Multi-GPU-Produktionsdeployment mit hoher Verfügbarkeit.',
         'url': 'https://www.promptquorum.com/de/local-llms/scaling-local-llms-enterprise',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -705,7 +698,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -777,7 +769,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Local LLMs in der Enterprise skalieren',
-        'inLanguage': 'de',
         'numberOfItems': 3,
         'itemListElement': [
           {

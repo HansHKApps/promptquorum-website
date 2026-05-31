@@ -1134,7 +1134,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Entscheidungsleitfaden zur Skalierung von lokalem RAG von 1.000 bis 10.000+ PDFs. Architektur-Vergleich, gemessene Benchmarks und die vier Upgrades (Hybrid-Suche, Reranking, Metadaten-Filterung, hierarchischer Abruf), die die Skalierungs-Klippe ebnen.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'inLanguage': 'de',
       'url': 'https://www.promptquorum.com/de/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Person',
@@ -1727,7 +1726,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Guide décisionnel évolution RAG local 1.000 à 10.000+ PDF. Comparaison architecture, benchmarks mesurés, quatre upgrades (recherche hybride, reranking, filtrage métadonnées, récupération hiérarchique) qui aplatissent falaise évolution.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'inLanguage': 'fr',
       'url': 'https://www.promptquorum.com/fr/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Person',
@@ -2320,7 +2318,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'ローカルRAGを1,000~10,000+ PDFまでスケーリング。アーキテクチャ比較、実測ベンチマーク、スケーリング cliff を平坦化する4つアップグレード（ハイブリッド検索、リランキング、メタデータフィルタリング、階層検索）。',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'inLanguage': 'ja',
       'url': 'https://www.promptquorum.com/ja/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Organization',
@@ -2720,7 +2717,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'name': 'PromptQuorum',
         'url': 'https://www.promptquorum.com',
       },
-      'inLanguage': 'zh',
       'educationalLevel': 'Advanced',
       'about': [
         { '@type': 'Thing', 'name': 'RAG (Retrieval-Augmented Generation)' },
@@ -3307,7 +3303,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Guía de decisión para escalar RAG local de 1.000 a 10.000+ PDFs. Comparación de arquitecturas, benchmarks medidos y las cuatro mejoras (búsqueda híbrida, reranking, filtrado de metadatos, recuperación jerárquica) que eliminan el precipicio de escalado.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'inLanguage': 'es',
       'url': 'https://www.promptquorum.com/es/power-local-llm/chat-with-1000-pdfs-locally?lang=es',
       'author': {
         '@type': 'Person',

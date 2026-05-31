@@ -1071,7 +1071,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-    'inLanguage': 'es',
       headline: "La Guía de Prompts de Google",
       description: "Domina los 5 principios de prompts de Google: claridad, restricciones, ejemplos, roles, estructura. Aplícalos en Gemini, GPT-4o, Claude y modelos locales para resultados predecibles.",
       datePublished: '2026-03-24',

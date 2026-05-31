@@ -697,7 +697,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-     'inLanguage': 'es',
       headline: 'DeepSeek vs Qwen: Comparativa de LLM local 2026',
       description:
         'DeepSeek-R1 destilado vs Qwen2.5 LLM local: comparativa directa de VRAM, MMLU, MATH-500 y HumanEval. Qué modelo ejecutar en cada nivel de hardware en 2026.',

@@ -476,7 +476,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'NewsArticle',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding',
-        'inLanguage': 'en',
         'headline': 'Best Coding LLMs 2026: Kimi K2.6 (87/100) vs Qwen 3.6 vs Devstral',
         'description': 'May 2026: Kimi K2.6 (87/100 real-world) is the best local coding LLM. Compare with Qwen 3.6 27B (77.2% SWE-bench) and Devstral 24B. SWE-bench replaces HumanEval.',
         'datePublished': '2026-04-04',
@@ -496,7 +495,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'What is the best local LLM for coding in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B -- 87% HumanEval, 79% MBPP, 40+ programming languages, 128K context, FIM support. Requires ~20 GB RAM at Q4_K_M. For 8 GB machines: Qwen3 8B (72% HumanEval, 4.7 GB RAM).' } },
           { '@type': 'Question', 'name': 'What is HumanEval and why does it matter?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval is a benchmark of 164 Python programming problems. The model must generate a correct function body for each. Pass@1 (percentage solved on first attempt) is the standard metric. It is the most widely-used measure for comparing coding models.' } },
@@ -515,7 +513,6 @@ schema: {
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding',
         'name': 'Best Local LLMs for Coding 2026 -- HumanEval Rankings',
-        'inLanguage': 'en',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '87% HumanEval. 79% MBPP. 20 GB RAM. 40+ languages. FIM support. ollama run qwen2.5-coder:32b', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding#qwen25-coder-32b' },
@@ -996,7 +993,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'NewsArticle',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-coding?lang=es',
-        'inLanguage': 'es',
         'headline': 'Mejores LLMs locales para programación 2026: Kimi K2.6 (87/100) vs Qwen 3.6 vs Devstral',
         'description': 'Mayo 2026: Kimi K2.6 (87/100 real) es el mejor LLM local de programación. Comparación con Qwen 3.6 27B (77,2% SWE-bench) y Devstral 24B. SWE-bench reemplaza a HumanEval.',
         'datePublished': '2026-04-04',
@@ -1016,7 +1012,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuál es el mejor LLM local para programación en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 — 87/100 en programación real (MoE, licencia MIT). Mejor modelo denso: Qwen 3.6 27B — 77,2% SWE-bench, 22 GB de VRAM. Para máquinas de 8 GB: Qwen3 8B (72% HumanEval, 4,7 GB de RAM).' } },
           { '@type': 'Question', 'name': '¿Qué es HumanEval y por qué importa?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval es un benchmark de 164 problemas de programación en Python. El modelo debe generar un cuerpo de función correcto para cada uno. Pass@1 (porcentaje resuelto en el primer intento) es la métrica estándar. Es la medida más utilizada para comparar modelos de programación.' } },
@@ -1035,7 +1030,6 @@ schema: {
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-coding?lang=es',
         'name': 'Mejores LLMs locales para programación 2026 -- Clasificaciones HumanEval',
-        'inLanguage': 'es',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '87% HumanEval. 79% MBPP. 20 GB RAM. 40+ lenguajes. Soporte FIM. ollama run qwen2.5-coder:32b', 'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-coding#qwen25-coder-32b?lang=es' },
@@ -1409,7 +1403,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'NewsArticle',
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-coding',
-        'inLanguage': 'de',
         'headline': 'Beste lokale LLMs für Programmierung 2026: Kimi K2.6 (87/100) vs Qwen 3.6',
         'description': 'Mai 2026: Kimi K2.6 (87/100 Real-World) ist das beste lokale Programmier-LLM. Vergleich mit Qwen 3.6 27B (77,2% SWE-bench) und Devstral 24B. SWE-bench ersetzt HumanEval.',
         'datePublished': '2026-04-04',
@@ -1429,7 +1422,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Was ist das beste lokale LLM für Programmierung 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B -- 87% HumanEval, 79% MBPP, 40+ Programmiersprachen, 128K Kontext, FIM-Unterstützung. Erfordert ~20 GB RAM bei Q4_K_M. Für 8-GB-Maschinen: Qwen3 8B (72% HumanEval, 4,7 GB RAM).' } },
           { '@type': 'Question', 'name': 'Was ist HumanEval und warum ist es wichtig?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval ist ein Benchmark mit 164 Python-Programmierungsproblemen. Das Modell muss einen korrekten Funktionstext für jedes generieren. Pass@1 (Prozentsatz beim ersten Versuch gelöst) ist die Standard-Metrik. Es ist das am weitesten verbreitete Maß für den Vergleich von Programmierungsmodellen.' } },
@@ -1453,7 +1445,6 @@ schema: {
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-coding',
         'name': 'Beste lokale LLMs für Programmierung 2026 -- HumanEval-Rangierungen',
-        'inLanguage': 'de',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '87% HumanEval. 79% MBPP. 20 GB RAM. 40+ Sprachen. FIM-Unterstützung. ollama run qwen2.5-coder:32b', 'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-coding#qwen25-coder-32b' },
@@ -1818,7 +1809,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'NewsArticle',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-coding',
-        'inLanguage': 'fr',
         'headline': 'Meilleurs LLMs locaux pour la programmation 2026 : Kimi K2.6 (87/100) vs Qwen 3.6',
         'description': 'Mai 2026 : Kimi K2.6 (87/100 real-world) est le meilleur LLM local pour la programmation. Comparé avec Qwen 3.6 27B (77,2% SWE-bench) et Devstral 24B. SWE-bench remplace HumanEval.',
         'datePublished': '2026-04-04',
@@ -1838,7 +1828,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Quel est le meilleur LLM local pour la programmation en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B — 87% HumanEval, 79% MBPP, 40+ langages de programmation, 128K contexte, support FIM. Nécessite ~20 GB RAM à Q4_K_M. Pour les machines 8 GB : Qwen3 8B (72% HumanEval, 4.5 GB RAM).' } },
           { '@type': 'Question', 'name': 'Qu\'est-ce que HumanEval et pourquoi c\'est important?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval est un benchmark de 164 problèmes de programmation Python. Le modèle doit générer un corps de fonction correct pour chacun. Les scores pass@1 (pourcentage résolu à la première tentative) sont la métrique standard. C\'est la mesure la plus largement utilisée pour comparer les modèles de programmation.' } },
@@ -1857,7 +1846,6 @@ schema: {
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-coding',
         'name': 'Meilleurs LLMs locaux pour la programmation 2026 — Classements HumanEval',
-        'inLanguage': 'fr',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '87% HumanEval. 79% MBPP. 20 GB RAM. 40+ langues. Support FIM. ollama run qwen2.5-coder:32b', 'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-coding#qwen25-coder-32b' },

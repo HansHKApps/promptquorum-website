@@ -188,7 +188,6 @@ schema: {
         'headline': 'Ollama Command Guide: Every Command Explained (2026)',
         'description': 'Ollama commands explained 2026: pull, run, list, rm, serve, create, with examples. Complete CLI reference covers 95% of use cases.',
         'url': 'https://www.promptquorum.com/local-llms/ollama-command-guide',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -208,7 +207,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -453,7 +451,6 @@ schema: {
         'headline': 'Ollama Befehls-Anleitung: Alle Befehle erklärt (2026)',
         'description': 'Ollama-Befehle erklärt 2026: pull, run, list, rm, serve, create mit Beispielen. Vollständige CLI-Referenz deckt 95% der Anwendungsfälle ab.',
         'url': 'https://www.promptquorum.com/de/local-llms/ollama-command-guide',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -464,7 +461,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Wie aktualisiere ich ein heruntergeladenes Modell?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Führen Sie `ollama pull <model>` erneut aus. Ollama aktualisiert das Modell, wenn eine neue Version verfügbar ist. Sie müssen das alte nicht manuell löschen.' } },
           { '@type': 'Question', 'name': 'Wie ändere ich den Standard-Chat-Prompt?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Verwenden Sie ein Modelfile mit SYSTEM-Befehl. Erstellen Sie ein Modelfile mit Ihrem benutzerdefinierten Prompt, dann `ollama create <name> -f Modelfile`.' } },
@@ -480,7 +476,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Ollama Befehle',
-        'inLanguage': 'de',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '`ollama pull <model>` -- Modell herunterladen (z. B. `ollama pull llama3.2:3b`).' },
@@ -681,7 +676,6 @@ schema: {
         'headline': 'Guide des commandes Ollama: Toutes les commandes expliquées (2026)',
         'description': 'Commandes Ollama expliquées 2026: pull, run, list, rm, serve, create avec exemples. Référence CLI complète couvre 95% des cas d\'usage.',
         'url': 'https://www.promptquorum.com/fr/local-llms/ollama-command-guide',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -692,7 +686,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Comment mettre à jour un modèle téléchargé?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Exécutez `ollama pull <model>` à nouveau. Ollama met à jour le modèle s\'il existe une nouvelle version. Vous n\'avez pas besoin de supprimer l\'ancien manuellement.' } },
           { '@type': 'Question', 'name': 'Comment modifier l\'invocation par défaut du chat?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Utilisez un Modelfile avec la commande SYSTEM. Créez un Modelfile avec votre invocation personnalisée, puis `ollama create <name> -f Modelfile`.' } },
@@ -706,7 +699,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Commandes Ollama',
-        'inLanguage': 'fr',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '`ollama pull <model>` -- Télécharger un modèle (p. ex. `ollama pull llama3.2:3b`).' },
@@ -907,7 +899,6 @@ schema: {
         'headline': 'Ollama コマンドガイド: すべてのコマンド説明 (2026)',
         'description': 'Ollama コマンド説明 2026: pull, run, list, rm, serve, create と例。完全な CLI リファレンスが 95% の使用ケースをカバー。',
         'url': 'https://www.promptquorum.com/ja/local-llms/ollama-command-guide',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -918,7 +909,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ダウンロード済みモデルを更新するには？', 'acceptedAnswer': { '@type': 'Answer', 'text': '`ollama pull <model>` を再度実行。新しいバージョンがある場合、Ollama が更新します。古いものを手動で削除する必要はない。' } },
           { '@type': 'Question', 'name': 'デフォルトチャットプロンプトを変更するには？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'SYSTEM コマンド付き Modelfile を使用。カスタムプロンプト付き Modelfile を作成してから `ollama create <name> -f Modelfile`。' } },
@@ -932,7 +922,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Ollama コマンド',
-        'inLanguage': 'ja',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '`ollama pull <model>` -- モデルをダウンロード（例: `ollama pull llama3.2:3b`）。' },
@@ -1125,7 +1114,6 @@ schema: {
         'headline': 'Guía de Comandos de Ollama: Todos los Comandos Explicados (2026)',
         'description': 'Comandos de Ollama explicados 2026: pull, run, list, rm, serve, create con ejemplos. Referencia CLI completa cubre el 95% de los casos de uso.',
         'url': 'https://www.promptquorum.com/es/local-llms/ollama-command-guide?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1145,7 +1133,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1373,7 +1360,6 @@ schema: {
         'headline': 'Ollama 命令指南: 每个命令详解 (2026)',
         'description': 'Ollama 命令详解 2026: pull, run, list, rm, serve, create 等完整 CLI 参考。涵盖 95% 的实际使用场景。',
         'url': 'https://www.promptquorum.com/zh/local-llms/ollama-command-guide',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1384,7 +1370,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Ollama 模型存储在哪里？', 'acceptedAnswer': { '@type': 'Answer', 'text': '默认：macOS/Linux 上 `~/.ollama/models` 或 Windows 上 `%USERPROFILE%\\.ollama\\models`。设置 `OLLAMA_MODELS` 环境变量可更改位置。' } },
           { '@type': 'Question', 'name': '能在计算机间移动模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。将 `~/.ollama/models` 中的模型文件复制到另一台计算机的 `~/.ollama/models`，然后 `ollama list` 将自动识别它们。' } },
@@ -1398,7 +1383,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Ollama 命令',
-        'inLanguage': 'zh',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '`ollama pull <model>` -- 下载模型（例如 `ollama pull llama3.2:3b`）。' },

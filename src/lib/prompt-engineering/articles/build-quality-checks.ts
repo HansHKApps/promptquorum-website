@@ -952,7 +952,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         headline: 'Calidad de código IA en CI/CD: detectar alucinaciones y dependencias fabricadas',
         description: 'Diseña gates de calidad CI/CD para código generado por IA. Incluye detección de alucinaciones, validación de dependencias, gates de seguridad y prácticas amigables para el desarrollador.',
         datePublished: '2026-03-24',

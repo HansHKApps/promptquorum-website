@@ -991,7 +991,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         proficiencyLevel: 'Beginner to Intermediate',
         dependencies: 'Basic understanding of LLMs and prompt structure',
         headline: 'Cómo optimizar prompts: técnicas y mejores prácticas de optimización de prompts',

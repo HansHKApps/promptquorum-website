@@ -1335,7 +1335,6 @@ tests:
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-    'inLanguage': 'es',
       headline: 'Mejores herramientas de optimización de prompts para equipos 2026',
       description:
         'Seis herramientas para optimización de prompts a escala de equipo: comparadas por A/B testing, características de colaboración, integración CI/CD y precios.',

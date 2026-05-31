@@ -506,7 +506,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-       'inLanguage': 'es',
         headline: 'Respuestas de IA más rápidas: Cómo hacer prompts para la velocidad',
         description: 'Los prompts lentos de IA tienen una sola causa: la ambigüedad. Cinco decisiones de diseño dan respuestas precisas y rápidas en el primer intento.',
         datePublished: '2026-03-22',

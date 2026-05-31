@@ -1642,7 +1642,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-    'inLanguage': 'es',
       headline: 'Agentes de IA locales para flujos de trabajo empresariales: guía de cumplimiento UE 2026',
       description: 'Despliega agentes de IA locales para procesamiento de documentos, gestión de correos y generación de informes bajo el GDPR y el EU AI Act. Arquitectura, controles de cumplimiento y 5 plantillas de flujos de trabajo.',
       url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=es',

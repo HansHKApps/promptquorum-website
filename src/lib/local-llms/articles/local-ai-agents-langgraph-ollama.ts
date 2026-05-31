@@ -266,7 +266,6 @@ schema: {
         'headline': 'Local AI Agents With LangGraph and Ollama: Build Autonomous Decision-Making Systems',
         'description': 'AI agents observe, reason, call tools, then repeat. LangGraph + Ollama run this locally — no API costs, full data control. Here\'s how to build and deploy one.',
         'url': 'https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'proficiencyLevel': 'Advanced',
@@ -285,7 +284,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'How much faster are cloud agents vs local agents?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Cloud agents: ~1 sec per reasoning step. Local agents: ~3–5 sec per step depending on model size and hardware. Local inference adds latency but eliminates API costs and keeps all data on your own hardware.' } },
           { '@type': 'Question', 'name': 'Can local agents access the internet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, if you provide a web_search tool. The agent calls that tool the same way it calls any other function. Popular options include the DuckDuckGo search API and SerpAPI for structured results.' } },
@@ -568,7 +566,6 @@ schema: {
         'headline': 'Lokale KI-Agenten mit LangGraph und Ollama: Autonome Entscheidungsfindungssysteme bauen',
         'description': 'KI-Agenten beobachten, denken nach, rufen Tools auf und wiederholen sich. LangGraph + Ollama arbeiten lokal – keine API-Kosten, vollständige Datenkontrolle. So bauen und stellen Sie einen bereit.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-ai-agents-langgraph-ollama',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'proficiencyLevel': 'Advanced',
@@ -587,7 +584,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Wie viel schneller sind Cloud-Agenten als lokale Agenten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Cloud-Agenten: ~1 Sekunde pro Überlegungsschritt. Lokale Agenten: ~3–5 Sekunden pro Schritt je nach Modellgröße und Hardware. Lokale Inferenz fügt Latenz hinzu, beseitigt aber API-Kosten und speichert alle Daten auf Ihrer eigenen Hardware.' } },
           { '@type': 'Question', 'name': 'Können lokale Agenten auf das Internet zugreifen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, wenn Sie ein web_search-Tool bereitstellen. Der Agent ruft dieses Tool genauso auf wie jedes andere. Beliebte Optionen sind die DuckDuckGo-Such-API und SerpAPI für strukturierte Ergebnisse.' } },
@@ -864,7 +860,6 @@ schema: {
         'headline': 'Agents IA Locaux avec LangGraph et Ollama : Construire des Systèmes de Prise de Décision Autonomes',
         'description': 'Les agents IA observent, raisonnent, appellent des outils, puis répètent. LangGraph + Ollama fonctionnent localement — zéro coût API, contrôle complet des données. Voici comment en construire un.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-ai-agents-langgraph-ollama',
-        'inLanguage': 'fr',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'datePublished': '2026-04-04',
@@ -883,7 +878,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Quelle est la différence de vitesse entre les agents cloud et les agents locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Agents cloud : ~1 sec par étape de raisonnement. Agents locaux : ~3–5 sec par étape selon la taille du modèle et le matériel. L\'inférence locale ajoute de la latence mais élimine les coûts API et garde toutes les données sur votre propre matériel.' } },
           { '@type': 'Question', 'name': 'Les agents locaux peuvent-ils accéder à Internet ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, si vous fournissez un outil web_search. L\'agent appelle cet outil comme n\'importe quel autre fonction. Les options populaires incluent l\'API DuckDuckGo et SerpAPI pour les résultats structurés.' } },
@@ -1158,7 +1152,6 @@ schema: {
         'headline': 'LangGraphとOllamaを使用したローカルAIエージェント：自律的な意思決定システムを構築する',
         'description': 'AIエージェントは観察し、推論し、ツールを呼び出し、繰り返します。LangGraph + Ollamaはローカルで実行 — APIコストなし、完全なデータ制御。構築と展開の方法を説明します。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-ai-agents-langgraph-ollama',
-        'inLanguage': 'ja',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'datePublished': '2026-04-04',
@@ -1177,7 +1170,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'クラウドエージェント対ローカルエージェントの速度はどのくらい違うか', 'acceptedAnswer': { '@type': 'Answer', 'text': 'クラウドエージェント：推論ステップあたり約1秒。ローカルエージェント：モデルサイズとハードウェアに応じてステップあたり約3～5秒。ローカル推論はレイテンシを追加しますがAPIコストを排除し、すべてのデータを自身のハードウェアに保持します。' } },
           { '@type': 'Question', 'name': 'ローカルエージェントはインターネットにアクセスできるか', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、web_searchツールを提供すれば。エージェントは他の関数と同じようにそのツールを呼び出します。DuckDuckGo検索APIと構造化結果用SerpAPIを含む一般的なオプション。' } },
@@ -1452,7 +1444,6 @@ schema: {
         'headline': '使用LangGraph和Ollama的本地AI智能体：构建自主决策系统',
         'description': 'AI智能体观察、推理、调用工具，然后重复。LangGraph + Ollama本地运行——零API成本、完全数据控制。以下是构建和部署的方法。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-ai-agents-langgraph-ollama',
-        'inLanguage': 'zh',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'datePublished': '2026-04-04',
@@ -1471,7 +1462,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '云智能体和本地智能体快多少', 'acceptedAnswer': { '@type': 'Answer', 'text': '云智能体：每个推理步骤约1秒。本地智能体：根据模型大小和硬件每步约3～5秒。本地推理增加延迟但消除API成本并在自己的硬件上保留所有数据。' } },
           { '@type': 'Question', 'name': '本地智能体能访问互联网吗', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，如果你提供web_search工具。智能体以与任何其他函数相同的方式调用该工具。热门选项包括DuckDuckGo搜索API和结构化结果的SerpAPI。' } },
@@ -1754,7 +1744,6 @@ schema: {
         'headline': 'Agentes de IA Locales con LangGraph y Ollama: Construye Sistemas de Toma de Decisiones Autónomos',
         'description': 'Los agentes de IA observan, razonan, llaman herramientas y repiten. LangGraph + Ollama ejecutan esto localmente — sin costos de API, control total de datos. Así se construye y despliega uno.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-ai-agents-langgraph-ollama?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'proficiencyLevel': 'Advanced',
@@ -1773,7 +1762,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuánto más rápidos son los agentes en la nube frente a los agentes locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Agentes en la nube: ~1 segundo por paso de razonamiento. Agentes locales: ~3–5 segundos por paso según el tamaño del modelo y el hardware. La inferencia local agrega latencia pero elimina los costos de API y mantiene todos los datos en tu propio hardware.' } },
           { '@type': 'Question', 'name': '¿Pueden los agentes locales acceder a internet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, si proporcionas una herramienta web_search. El agente llama a esa herramienta de la misma manera que llama a cualquier otra función. Las opciones más populares incluyen la API de búsqueda de DuckDuckGo y SerpAPI para resultados estructurados.' } },

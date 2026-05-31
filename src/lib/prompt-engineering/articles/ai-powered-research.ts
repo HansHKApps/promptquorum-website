@@ -1088,7 +1088,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/ai-powered-research?lang=es',
         inLanguage: 'es',
         headline: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',

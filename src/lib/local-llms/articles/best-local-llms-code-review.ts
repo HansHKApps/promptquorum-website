@@ -163,7 +163,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-code-review',
-        'inLanguage': 'en',
         'headline': 'Best Local LLMs for Code Review in 2026: Ranked by Bug Detection, Speed, and VRAM',
         'description': 'Qwen2.5-Coder 32B catches 88% of code review bugs at 20 GB RAM. Llama 3.3 70B best for security. DeepSeek-R1 14B best for algorithms. Comparison by code type.',
         'datePublished': '2026-04-05',
@@ -183,7 +182,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I use a 13B model for code review?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes for linting-level feedback -- style and obvious bugs. For security and performance review, use 32B+. Qwen2.5-Coder 32B at 20 GB RAM is the practical minimum for serious code review.' } },
           { '@type': 'Question', 'name': 'How many files can I review in parallel?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'vLLM default batch=32. On 70B models, batch=1 per file is realistic. Process 5-10 files sequentially for full review in 10-15 minutes.' } },
@@ -199,7 +197,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Set Up a Local Code Review Pipeline with Qwen2.5-Coder',
-        'inLanguage': 'en',
         'totalTime': 'PT20M',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Start vLLM with Qwen2.5-Coder 32B', 'text': 'Run: python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-Coder-32B-Instruct' },
@@ -214,7 +211,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Best Local LLMs by Code Type 2026',
-        'inLanguage': 'en',
         'numberOfItems': 6,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Security review (injection, XSS, CSRF)', 'description': 'Best model: Llama 3.3 70B (40 GB RAM). Highest security pattern recognition across full codebases with 128K context.' },
@@ -381,7 +377,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-code-review?lang=es',
-        'inLanguage': 'es',
         'headline': 'Mejores LLMs locales para Code Review en 2026: Clasificados por detección de errores, velocidad y VRAM',
         'description': 'Qwen2.5-Coder 32B detecta el 88% de errores en code review con 20 GB de RAM. Llama 3.3 70B ideal para seguridad. DeepSeek-R1 14B ideal para algoritmos. Comparación por tipo de código.',
         'datePublished': '2026-04-05',
@@ -401,7 +396,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo usar un modelo de 13B para code review?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí para feedback de nivel lint -- estilo y errores obvios. Para revisión de seguridad y rendimiento, usa 32B+. Qwen2.5-Coder 32B con 20 GB de RAM es el mínimo práctico para code review serio.' } },
           { '@type': 'Question', 'name': '¿Cuántos archivos puedo revisar en paralelo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El batch predeterminado de vLLM es 32. Con modelos de 70B, batch=1 por archivo es lo realista. Procesa 5-10 archivos de forma secuencial para una revisión completa en 10-15 minutos.' } },
@@ -417,7 +411,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Cómo configurar un pipeline local de code review con Qwen2.5-Coder',
-        'inLanguage': 'es',
         'totalTime': 'PT20M',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Inicia vLLM con Qwen2.5-Coder 32B', 'text': 'Ejecuta: python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-Coder-32B-Instruct' },
@@ -432,7 +425,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Mejores LLMs locales por tipo de código 2026',
-        'inLanguage': 'es',
         'numberOfItems': 6,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Revisión de seguridad (injection, XSS, CSRF)', 'description': 'Mejor modelo: Llama 3.3 70B (40 GB RAM). Mayor reconocimiento de patrones de seguridad en bases de código completas con contexto de 128K.' },
@@ -598,7 +590,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-code-review',
-        'inLanguage': 'de',
         'headline': 'Beste lokale LLMs für Code Review in 2026: Rangiert nach Fehlerdetection, Geschwindigkeit und VRAM',
         'description': 'Qwen2.5-Coder 32B erkennt 88% Code-Review-Fehler bei 20 GB RAM. Llama 3.3 70B beste für Sicherheit. DeepSeek-R1 14B beste für Algorithmen. Vergleich nach Code-Typ.',
         'datePublished': '2026-04-05',
@@ -618,7 +609,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich ein 13B-Modell für Code Review verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja für Linting-Level-Feedback -- Style und offensichtliche Fehler. Für Sicherheits- und Leistungs-Review verwenden Sie 32B+. Qwen2.5-Coder 32B bei 20 GB RAM ist die praktische Mindestanforderung für ernsthaften Code Review.' } },
           { '@type': 'Question', 'name': 'Wie viele Dateien kann ich parallel überprüfen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'vLLM Standard batch=32. Bei 70B-Modellen ist batch=1 pro Datei realistisch. Verarbeiten Sie 5-10 Dateien sequenziell für vollständiges Review in 10-15 Minuten.' } },
@@ -636,7 +626,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Wie man eine lokale Code-Review-Pipeline mit Qwen2.5-Coder einrichtet',
-        'inLanguage': 'de',
         'totalTime': 'PT20M',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Starten Sie vLLM mit Qwen2.5-Coder 32B', 'text': 'Führen Sie aus: python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-Coder-32B-Instruct' },
@@ -651,7 +640,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Beste lokale LLMs nach Code-Typ 2026',
-        'inLanguage': 'de',
         'numberOfItems': 6,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Sicherheitsüberprüfung (Injection, XSS, CSRF)', 'description': 'Bestes Modell: Llama 3.3 70B (40 GB RAM). Höchste Sicherheitsmuster-Erkennung über ganze Codebasen mit 128K-Kontext.' },
@@ -817,7 +805,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-code-review',
-        'inLanguage': 'fr',
         'headline': "Meilleurs LLMs locaux pour Code Review en 2026 : Classés par détection de bugs, vitesse et VRAM",
         'description': "Qwen2.5-Coder 32B détecte 88% bugs revue code à 20 GB RAM. Llama 3.3 70B meilleur sécurité. DeepSeek-R1 14B meilleur algorithmes.",
         'datePublished': '2026-04-05',
@@ -837,7 +824,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': "Puis-je utiliser modèle 13B pour revue code ?", 'acceptedAnswer': { '@type': 'Answer', 'text': "Oui pour feedback lint-level -- style bugs évidents. Revue sécurité, utilisez 32B+. Qwen2.5-Coder 32B à 20 GB RAM minimum pratique." } },
           { '@type': 'Question', 'name': "Combien fichiers je peux examiner parallèle ?", 'acceptedAnswer': { '@type': 'Answer', 'text': "vLLM défaut batch=32. Modèles 70B, batch=1 par fichier réaliste. Traitez 5-10 fichiers séquentiellement 10-15 minutes." } },
@@ -853,7 +839,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': "Comment configurer pipeline revue code local avec Qwen2.5-Coder",
-        'inLanguage': 'fr',
         'totalTime': 'PT20M',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': "Démarrez vLLM avec Qwen2.5-Coder 32B", 'text': "Exécutez : python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-Coder-32B-Instruct" },
@@ -868,7 +853,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': "Meilleurs LLMs locaux par type code 2026",
-        'inLanguage': 'fr',
         'numberOfItems': 6,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': "Revue sécurité (injection, XSS, CSRF)", 'description': "Meilleur modèle : Llama 3.3 70B (40 GB RAM). Reconnaissance pattern sécurité la plus élevée codebases complètes avec contexte 128K." },

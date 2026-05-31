@@ -262,7 +262,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         mainEntity: [
           { '@type': 'Question', name: 'Is Ollama free to use?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Ollama is free and MIT-licensed open source with no usage limits or subscription fees. Models are downloaded for free from ollama.com/library.' } },
           { '@type': 'Question', name: 'What is the difference between Ollama and LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama is terminal-first with a REST API at localhost:11434 and no GUI. LM Studio is a desktop app with built-in chat, model browser, and local server. Both expose OpenAI-compatible APIs.' } },
@@ -544,7 +543,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         mainEntity: [
           { '@type': 'Question', name: '¿Es Ollama gratuito?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Ollama es gratuito y de código abierto con licencia MIT, sin límites de uso ni cuotas de suscripción. Los modelos se descargan de forma gratuita desde ollama.com/library.' } },
           { '@type': 'Question', name: '¿Cuál es la diferencia entre Ollama y LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama está orientado a terminal con una API REST en localhost:11434 y sin GUI. LM Studio es una aplicación de escritorio con chat integrado, explorador de modelos y servidor local. Ambos exponen APIs compatibles con OpenAI.' } },
@@ -810,7 +808,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         mainEntity: [
           { '@type': 'Question', name: 'Welcher lokale LLM-Installer ist am besten für Anfänger?', acceptedAnswer: { '@type': 'Answer', text: 'GPT4All für die absolut einfachste Erfahrung -- einzelnes Installationsprogramm, kein Terminal, One-Click-Model-Downloads. LM Studio für Anfänger, die mehr Model-Wahl wünschen. Ollama wird für Anfänger nicht empfohlen.' } },
           { '@type': 'Question', name: 'Welches Tool ist am privatesten?', acceptedAnswer: { '@type': 'Answer', text: 'Jan AI -- vollständig Open Source, keine Telemetrie, Chat lokal gespeichert, vollständig offline. Ollama ist auch vollständig privat. LM Studio erfasst anonyme Analytik -- in Einstellungen deaktivieren.' } },
@@ -1075,7 +1072,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'Quel installateur LLM local est le meilleur pour les débutants ?', acceptedAnswer: { '@type': 'Answer', text: 'GPT4All pour l\'expérience la plus simple -- programme d\'installation unique, pas de terminal, téléchargements en un clic. LM Studio pour plus de choix de modèles. Ollama n\'est pas recommandé pour les débutants.' } },
           { '@type': 'Question', name: 'Quel outil est le plus privé ?', acceptedAnswer: { '@type': 'Answer', text: 'Jan AI -- open source MIT, pas de télémétrie, chat local, entièrement hors ligne. Ollama aussi entièrement privé. LM Studio collecte l\'analytique -- désactiver dans les paramètres.' } },
@@ -1340,7 +1336,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: '初心者に最適？', acceptedAnswer: { '@type': 'Answer', text: 'GPT4All -- 最シンプル単一インストーラーターミナル不要ワンクリック。LM Studio -- モデル豊富初心者向け。Ollama -- GUI非搭載初心者非推奨。' } },
           { '@type': 'Question', name: '最もプライベート？', acceptedAnswer: { '@type': 'Answer', text: 'Jan AI -- MIT完全オープンソーステレメトリなしチャットローカルJSON完全オフライン。Ollama -- テレメトリなし確認。LM Studio -- 匿名分析デフォルト無効化要。' } },
@@ -1607,7 +1602,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: '初学者最好的安装器？', acceptedAnswer: { '@type': 'Answer', text: 'GPT4All -- 最简单体验：单一安装程序、无需终端、一键下载。LM Studio -- 更多模型选择。Ollama -- 无图形界面不推荐初学者。' } },
           { '@type': 'Question', name: '最私密的工具？', acceptedAnswer: { '@type': 'Answer', text: 'Jan AI -- MIT开源无遥测本地JSON完全离线。Ollama -- 也完全私密无遥测确认。LM Studio -- 匿名分析默认禁用。' } },

@@ -209,7 +209,6 @@ schema: {
         'headline': 'Install Ollama: 2-Minute Setup for macOS, Windows & Linux',
         'description': 'Install Ollama in 2 minutes on any OS: download, run ollama run llama3.2, start chatting. Complete setup guide with troubleshooting for Beginners 2026.',
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -229,7 +228,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -485,7 +483,6 @@ schema: {
         'headline': 'Instalar Ollama: Configuración en 2 Minutos para macOS, Windows y Linux',
         'description': 'Instala Ollama en 2 minutos en cualquier sistema operativo: descarga, ejecuta ollama run llama3.2, empieza a chatear. Guía completa de configuración con solución de problemas para principiantes 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/how-to-install-ollama?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -511,7 +508,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -867,7 +863,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         mainEntity: [
           { '@type': 'Question', name: 'Ist Ollama kostenlos?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, Ollama ist kostenlos und Open-Source unter der MIT-Lizenz. Es gibt keine Nutzungsbeschränkungen, keine erforderlichen API-Schlüssel, und die gesamte Inference läuft lokal auf Ihrem Computer.' } },
           { '@type': 'Question', name: 'Funktioniert Ollama unter Windows?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ollama hat seit 2024 ein stabiles natives Windows-Installationsprogramm (2026 mit verbesserter Performance). Laden Sie es von ollama.com herunter. Es unterstützt NVIDIA-GPUs über CUDA und AMD-GPUs über ROCm unter Windows.' } },
@@ -1193,7 +1188,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'Ollama est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, Ollama est gratuit et open-source sous licence MIT. Il n\'y a pas de limites d\'utilisation, pas de clés API requises, et toute l\'inférence s\'exécute localement sur votre machine.' } },
           { '@type': 'Question', name: 'Ollama fonctionne-t-il sur Windows ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Ollama dispose d\'un programme d\'installation Windows natif stable depuis 2024 (2026 avec performances améliorées). Téléchargez-le depuis ollama.com. Il supporte les GPU NVIDIA via CUDA et les GPU AMD via ROCm sur Windows.' } },
@@ -1519,7 +1513,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: 'Ollama は無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、Ollama は MIT ライセンス下で無料かつオープンソース。使用制限、API キー不要、すべての推論はマシンでローカルに実行。' } },
           { '@type': 'Question', name: 'Ollama は Windows で動作しますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Ollama は 2024 年以降、安定したネイティブ Windows インストーラーを持つ (2026 年にパフォーマンス改善)。ollama.com からダウンロード。Windows で NVIDIA GPU を CUDA 経由で、AMD GPU を ROCm 経由でサポート。' } },
@@ -1845,7 +1838,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: 'Ollama 是免费的吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，Ollama 在 MIT 许可证下免费且开源。没有使用限制、不需要 API 密钥，所有推理都在您的机器上本地运行。' } },
           { '@type': 'Question', name: 'Ollama 可以在 Windows 上使用吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。Ollama 自 2024 年以来有稳定的原生 Windows 安装程序 (2026 年性能改进)。从 ollama.com 下载。在 Windows 上通过 CUDA 支持 NVIDIA GPU，通过 ROCm 支持 AMD GPU。' } },

@@ -201,7 +201,6 @@ schema: {
         'headline': 'Local LLM VRAM Requirements 2026: 7B to 70B Quantized Models',
         'description': 'How much VRAM does a 70B LLM need? See exact 2026 requirements for Q4/Q5 quantization, 13B–70B models, and what fits in 24GB–32GB GPUs.',
         'url': 'https://www.promptquorum.com/local-llms/how-much-vram-local-llm?lang=en',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-05-06',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -221,7 +220,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -499,7 +497,6 @@ schema: {
         'headline': 'Requisitos de VRAM para LLM local 2026: modelos cuantizados de 7B a 70B',
         'description': '¿Cuánta VRAM necesita un LLM de 70B? Consulta los requisitos exactos de 2026 para cuantización Q4/Q5, modelos de 13B a 70B y qué cabe en GPUs de 24 GB a 32 GB.',
         'url': 'https://www.promptquorum.com/es/local-llms/how-much-vram-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-05-06',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -519,7 +516,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -811,7 +807,6 @@ schema: {
         headline: 'Combien de VRAM avez-vous besoin pour exécuter un Local LLM en 2026?',
         description: 'VRAM exact pour Local LLMs: 7B nécessite 4-5 GB (Q4), 13B nécessite 8-10 GB, 70B nécessite 35-40 GB. Formule, sélection GPU et compromis de quantification. Guide 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/how-much-vram-local-llm',
-        'inLanguage': 'fr',
         dateModified: '2026-04-07',
         'datePublished': '2026-04-04',
         author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -848,7 +843,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'Puis-je exécuter Mistral 7B sur une GPU 6 GB?', acceptedAnswer: { '@type': 'Answer', text: 'À peine, à Q4 avec surcharge serrée. Pratiquement, non. Achetez au moins 8 GB. Vous aurez des erreurs OOM avec 6 GB.' } },
           { '@type': 'Question', name: 'Combien de VRAM ai-je besoin pour fine-tuner un modèle 7B?', acceptedAnswer: { '@type': 'Answer', text: 'Pour LoRA: 12-16 GB. Fine-tuning complet: 28 GB+. Le fine-tuning nécessite l\'état optimiseur (2-4× VRAM du modèle), pas seulement l\'inférence.' } },
@@ -989,7 +983,6 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: '6GB GPUでMistral 7Bを実行できますか?', acceptedAnswer: { '@type': 'Answer', text: 'Q4でギリギリです。実際のところ、いいえ。最低8GBを購入してください。6GBではOOMエラーが発生します。' } },
           { '@type': 'Question', name: '7BモデルのファインチューニングにはどのくらいのVRAMが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA用: 12-16GB。フルファインチューニング: 28GB以上。ファインチューニングはオプティマイザー状態(モデルVRAMの2-4倍)が必要です。' } },
@@ -1079,7 +1072,6 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: '我可以在6GB GPU上运行Mistral 7B吗?', acceptedAnswer: { '@type': 'Answer', text: '勉强,Q4显存紧张。实际上不行。至少买8GB。6GB会导致OOM错误。' } },
           { '@type': 'Question', name: '微调7B模型需要多少显存?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA: 12-16GB。全微调: 28GB以上。微调需要优化器状态(模型显存的2-4倍),而不仅仅是推理。' } },

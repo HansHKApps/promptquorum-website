@@ -312,7 +312,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/local-llms/best-beginner-local-llm-models?lang=en',
-        'inLanguage': 'en',
         headline: 'Llama 3.2, Phi-4 Mini, Gemma 3: Best Beginner LLMs 2026',
         description: 'Llama 3.2 3B = 2.5 GB RAM, 25-45 tok/s. Phi-4 Mini = 2.5 GB. Gemma 3 2B = 1.7 GB, 40-60 tok/s. Full comparison table and Ollama commands. April 2026.',
         'datePublished': '2026-04-04',
@@ -337,7 +336,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'en',
         name: '5 Best Beginner Local LLM Models 2026',
         numberOfItems: 5,
         itemListElement: [
@@ -351,7 +349,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         mainEntity: [
           { '@type': 'Question', name: 'What is the best local LLM model for beginners in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.2 3B for most users -- runs on any machine with 4 GB RAM, downloads in under 5 minutes, and produces strong instruction-following output. For 8 GB RAM, Qwen2.5 7B offers better coding and multilingual performance. For absolute lowest RAM, Gemma 3 2B runs on 1.7 GB at 40-60 tok/sec on CPU.' } },
           { '@type': 'Question', name: 'What is the minimum RAM to run a local LLM?', acceptedAnswer: { '@type': 'Answer', text: 'The practical minimum for useful output is 4 GB RAM with a 3B model at Q4_K_M quantization. 8 GB RAM unlocks 7B models which produce noticeably better results on complex tasks.' } },
@@ -369,7 +366,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Download and Run a Beginner Local LLM',
-        'inLanguage': 'en',
         'step': [
           { '@type': 'HowToStep', 'name': 'Install Ollama', 'text': 'Install Ollama from ollama.com -- single installer on macOS, Windows, and Linux. No manual configuration required.' },
           { '@type': 'HowToStep', 'name': 'Choose your model by RAM', 'text': 'Under 4 GB RAM: ollama run gemma3:2b. 8 GB RAM first model: ollama run llama3.2:3b. 4-6 GB with reasoning focus: ollama run phi4-mini. 8 GB+ for coding/multilingual: ollama run qwen2.5:7b.' },
@@ -682,7 +678,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/es/local-llms/best-beginner-local-llm-models?lang=es',
-        'inLanguage': 'es',
         headline: 'Llama 3.2, Phi-4 Mini, Gemma 3: Mejores LLMs para principiantes 2026',
         description: 'Llama 3.2 3B = 2,5 GB RAM, 25-45 tok/s. Phi-4 Mini = 2,5 GB. Gemma 3 2B = 1,7 GB, 40-60 tok/s. Tabla de comparación completa y comandos de Ollama. Abril 2026.',
         'datePublished': '2026-04-04',
@@ -707,7 +702,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         name: '5 mejores modelos LLM locales para principiantes 2026',
         numberOfItems: 5,
         itemListElement: [
@@ -721,7 +715,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         mainEntity: [
           { '@type': 'Question', name: '¿Cuál es el mejor modelo LLM local para principiantes en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.2 3B para la mayoría de usuarios -- funciona en cualquier máquina con 4 GB de RAM, se descarga en menos de 5 minutos y produce una salida con buen seguimiento de instrucciones. Con 8 GB de RAM, Qwen2.5 7B ofrece mejor rendimiento en codificación y multilingüe. Para la RAM más baja posible, Gemma 3 2B funciona con 1,7 GB a 40-60 tok/s en CPU.' } },
           { '@type': 'Question', name: '¿Cuál es la RAM mínima para ejecutar un LLM local?', acceptedAnswer: { '@type': 'Answer', text: 'El mínimo práctico para una salida útil es 4 GB de RAM con un modelo de 3B con cuantización Q4_K_M. Con 8 GB de RAM puedes acceder a modelos de 7B que producen resultados notablemente mejores en tareas complejas.' } },
@@ -739,7 +732,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Cómo descargar y ejecutar un LLM local para principiantes',
-        'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'name': 'Instalar Ollama', 'text': 'Instala Ollama desde ollama.com -- un solo instalador en macOS, Windows y Linux. Sin configuración manual necesaria.' },
           { '@type': 'HowToStep', 'name': 'Elegir el modelo según la RAM disponible', 'text': 'Menos de 4 GB de RAM: ollama run gemma3:2b. 8 GB de RAM, primer modelo: ollama run llama3.2:3b. 4-6 GB con enfoque en razonamiento: ollama run phi4-mini. 8 GB+ para codificación/multilingüe: ollama run qwen2.5:7b.' },
@@ -1058,7 +1050,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/de/local-llms/best-beginner-local-llm-models',
-        'inLanguage': 'de',
         'headline': 'Llama 3.2, Phi-4 Mini, Gemma 3: Beste Einsteiger-LLMs 2026',
         'description': 'Llama 3.2 3B = 2,5 GB RAM, 25–45 Tok/s. Phi-4 Mini = 2,5 GB. Gemma 3 2B = 1,7 GB, 40–60 Tok/s. Vergleichstabelle + Ollama-Befehle. April 2026.',
         'datePublished': '2026-04-04',
@@ -1082,7 +1073,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'de',
         'name': '5 beste Einsteiger-LLM-Modelle 2026',
         'numberOfItems': 5,
         'itemListElement': [
@@ -1096,7 +1086,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Welches lokale LLM-Modell ist 2026 am besten für Einsteiger?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B für die meisten Benutzer – läuft auf jeder Maschine mit 4 GB RAM, lädt in unter 5 Minuten herunter. Bei 8 GB RAM bietet Qwen2.5 7B bessere Coding- und Mehrsprachigkeits-Leistung. Gemma 3 2B läuft mit 1,7 GB bei 40–60 Tok/s.' } },
           { '@type': 'Question', 'name': 'Wie viel RAM ist mindestens erforderlich, um ein lokales LLM zu betreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': '4 GB RAM mit einem 3B-Modell bei Q4_K_M-Quantisierung. 8 GB RAM schalten 7B-Modelle frei, die deutlich bessere Ergebnisse liefern.' } },
@@ -1116,7 +1105,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Wie man ein lokales LLM für Einsteiger herunterlädt und startet',
-        'inLanguage': 'de',
         'step': [
           { '@type': 'HowToStep', 'name': 'Ollama installieren', 'text': 'Installieren Sie Ollama von ollama.com – ein einzelner Installer für macOS, Windows und Linux. Keine manuelle Konfiguration erforderlich.' },
           { '@type': 'HowToStep', 'name': 'Modell nach RAM auswählen', 'text': 'Unter 4 GB RAM: ollama run gemma3:2b. 8 GB RAM, erstes Modell: ollama run llama3.2:3b. 4–6 GB mit Reasoning-Fokus: ollama run phi4-mini. 8 GB+ für Coding/Mehrsprachigkeit: ollama run qwen2.5:7b.' },
@@ -1427,7 +1415,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-beginner-local-llm-models',
-        'inLanguage': 'fr',
         'headline': 'Llama 3.2, Phi-4 Mini, Gemma 3 : Meilleurs LLMs Débutants 2026',
         'description': 'Llama 3.2 3B = 2.5 Go RAM, 25–45 tok/s. Phi-4 Mini = 2.5 Go. Gemma 3 2B = 1.7 Go, 40–60 tok/s. Tableau comparatif + commandes Ollama. Avril 2026.',
         'datePublished': '2026-04-04',
@@ -1451,7 +1438,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'fr',
         'name': '5 meilleurs modèles LLM locaux débutants 2026',
         'numberOfItems': 5,
         'itemListElement': [
@@ -1465,7 +1451,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Quel est le meilleur modèle LLM local pour débutants en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B pour la plupart des utilisateurs — fonctionne sur toute machine avec 4 Go de RAM, se télécharge en moins de 5 minutes. Avec 8 Go, Qwen2.5 7B offre de meilleures performances. Gemma 3 2B tourne avec 1.7 Go à 40–60 tok/s.' } },
           { '@type': 'Question', 'name': 'Quelle est la RAM minimum pour exécuter un LLM local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': '4 Go de RAM avec un modèle 3B en Q4_K_M. 8 Go donnent accès aux modèles 7B avec de meilleurs résultats.' } },
@@ -1483,7 +1468,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Comment télécharger et exécuter un LLM local pour débutant',
-        'inLanguage': 'fr',
         'step': [
           { '@type': 'HowToStep', 'name': 'Installer Ollama', 'text': 'Installez Ollama depuis ollama.com — un seul installeur sur macOS, Windows et Linux. Aucune configuration manuelle requise.' },
           { '@type': 'HowToStep', 'name': 'Choisir votre modèle selon la RAM', 'text': 'Moins de 4 Go : ollama run gemma3:2b. 8 Go, premier modèle : ollama run llama3.2:3b. 4–6 Go avec focus raisonnement : ollama run phi4-mini. 8 Go+ pour code/multilingue : ollama run qwen2.5:7b.' },
@@ -1794,7 +1778,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-beginner-local-llm-models',
-        'inLanguage': 'ja',
         'headline': 'Llama 3.2・Phi-4 Mini・Gemma 3：2026年初心者向けLLM比較',
         'description': 'Llama 3.2 3B=2.5GB RAM、Phi-4 Mini=2.5GB、Gemma 3 2B=1.7GB。RAM・速度・品質で5モデルを比較。Ollamaコマンド付き。2026年4月。',
         'datePublished': '2026-04-04',
@@ -1818,7 +1801,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'ja',
         'name': '2026年初心者向けローカルLLMベスト5',
         'numberOfItems': 5,
         'itemListElement': [
@@ -1832,7 +1814,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': '2026年に初心者向けの最良のローカルLLMモデルは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ほとんどのユーザーにはLlama 3.2 3B——4 GB RAMのどのマシンでも動作し、5分以内にダウンロードできます。8 GB RAMにはQwen2.5 7Bが多言語・コーディングで優秀。Gemma 3 2Bは1.7 GBで最低RAMで動作します。' } },
           { '@type': 'Question', 'name': 'ローカルLLMに必要な最低RAMはどれくらいですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M量子化の3Bモデルで4 GB RAMが実用的な最低値。8 GB RAMで7Bモデルが解放され、複雑なタスクで明らかに優れた結果を生成します。' } },
@@ -1850,7 +1831,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': '初心者向けローカルLLMのダウンロードと実行方法',
-        'inLanguage': 'ja',
         'step': [
           { '@type': 'HowToStep', 'name': 'Ollamaをインストール', 'text': 'ollama.comからOllamaをインストール——macOS・Windows・Linuxに対応した単一インストーラー。手動設定は不要です。' },
           { '@type': 'HowToStep', 'name': 'RAMに応じてモデルを選択', 'text': '4 GB RAM未満：ollama run gemma3:2b。8 GB RAM、最初のモデル：ollama run llama3.2:3b。4〜6 GB RAM、推論重視：ollama run phi4-mini。8 GB+ コーディング/多言語：ollama run qwen2.5:7b。' },
@@ -2161,7 +2141,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-beginner-local-llm-models',
-        'inLanguage': 'zh',
         'headline': 'Llama 3.2、Phi-4 Mini、Gemma 3：2026年初学者本地LLM推荐',
         'description': 'Llama 3.2 3B=2.5 GB内存，Phi-4 Mini=2.5 GB，Gemma 3 2B=1.7 GB，40–60词/秒。5款模型完整对比表+Ollama命令。2026年4月。',
         'datePublished': '2026-04-04',
@@ -2185,7 +2164,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'zh',
         'name': '2026年五款最佳初学者本地LLM模型',
         'numberOfItems': 5,
         'itemListElement': [
@@ -2199,7 +2177,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '2026年初学者最佳本地LLM模型是哪款？', 'acceptedAnswer': { '@type': 'Answer', 'text': '大多数用户推荐Llama 3.2 3B——可在任何4 GB内存的机器上运行，下载时间不到5分钟，指令遵循输出质量强。8 GB内存时，Qwen2.5 7B提供更好的编程和多语言性能。内存要求最低的是Gemma 3 2B，仅需1.7 GB，CPU上40–60词/秒。' } },
           { '@type': 'Question', 'name': '运行本地LLM的最低内存是多少？', 'acceptedAnswer': { '@type': 'Answer', 'text': '实用输出的实际最低要求是4 GB内存配合Q4_K_M量化的3B模型。8 GB内存可解锁7B模型，在复杂任务上效果明显更好。' } },
@@ -2217,7 +2194,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': '如何下载和运行初学者本地LLM',
-        'inLanguage': 'zh',
         'step': [
           { '@type': 'HowToStep', 'name': '安装Ollama', 'text': '从ollama.com安装Ollama——macOS、Windows和Linux上均有单一安装程序。无需手动配置。' },
           { '@type': 'HowToStep', 'name': '根据内存选择模型', 'text': '内存不足4 GB：ollama run gemma3:2b。8 GB首选：ollama run llama3.2:3b。4–6 GB注重推理：ollama run phi4-mini。8 GB+编程/多语言：ollama run qwen2.5:7b。' },

@@ -153,7 +153,6 @@ schema: {
         'headline': 'VPNs for Local LLM Teams: Remote Access, Security, Split Tunneling',
         'description': 'VPN for local LLM server access: WireGuard, OpenVPN setup. Remote team access, security. Split tunneling guide.',
         'url': 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -173,7 +172,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'url': 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users',
         'mainEntity': [
           {
@@ -230,7 +228,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users',
-        'inLanguage': 'en',
         'name': 'VPN Setup Options for Local LLM Remote Access',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'WireGuard: 5-10ms latency, 30 min setup, 4,000 LOC (auditable), public key authentication. Recommended.' },

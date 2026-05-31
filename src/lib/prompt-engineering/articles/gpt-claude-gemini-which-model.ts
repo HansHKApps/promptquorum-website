@@ -1887,7 +1887,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-    'inLanguage': 'es',
       url: 'https://www.promptquorum.com/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=es',
       inLanguage: 'es',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

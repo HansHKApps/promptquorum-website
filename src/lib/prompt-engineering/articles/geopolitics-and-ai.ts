@@ -25,7 +25,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=en',
-        'inLanguage': 'en',
         headline: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
         description: 'The US, China, and European Union are pursuing incompatible visions of AI governance. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements.',
         datePublished: '2026-04-01',
@@ -841,7 +840,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         'url': 'https://www.promptquorum.com/de/prompt-engineering/geopolitics-and-ai',
-        'inLanguage': 'de',
         headline: 'KI-Geopolitik erklärt: EU AI Act vs. USA vs. China (Analyse 2026)',
         description: 'Die USA, China und die Europäische Union verfolgen unvereinbare Visionen der KI-Governance — die USA priorisieren Wettbewerbsfähigkeit, China betont staatliche Kontrolle, und die EU baut einen rechtsbasierten Rahmen. Für Organisationen, die KI einsetzen, entstehen daraus konkrete Compliance-Pflichten, Beschaffungsbeschränkungen und Anforderungen an den Datenspeicherort.',
         datePublished: '2026-04-01',
@@ -854,7 +852,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Was ist der EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der EU AI Act ist das erste umfassende KI-Gesetz der Welt, das im März 2024 mit 523 Stimmen verabschiedet wurde. Es klassifiziert KI-Systeme in vier Risikostufen — Inakzeptabel, Hoch, Begrenzt und Minimal — und sieht unterschiedliche Anforderungen und Bußgelder vor. Die vollständige Durchsetzung gilt ab August 2026.' } },
           { '@type': 'Question', 'name': 'Gilt der EU AI Act auch für Unternehmen außerhalb der EU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Der EU AI Act gilt für jede Organisation, die KI-Systeme auf dem EU-Markt anbietet oder deren KI-Ergebnisse in der EU genutzt werden — unabhängig vom Unternehmenssitz. Dieser extraterritoriale Geltungsbereich wird als Brussels Effect bezeichnet und bedeutet, dass auch US- und asiatische Anbieter compliant sein müssen.' } },
@@ -1418,7 +1415,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         'url': 'https://www.promptquorum.com/es/prompt-engineering/geopolitics-and-ai?lang=es',
-        'inLanguage': 'es',
         headline: 'Geopolítica de la IA explicada: EU AI Act vs. EE.UU. vs. China (Análisis 2026)',
         description: 'EE.UU., China y la Unión Europea persiguen visiones incompatibles de la gobernanza de la IA. Para las organizaciones que despliegan IA, estas diferencias se traducen en obligaciones de cumplimiento concretas, restricciones de adquisición y requisitos de residencia de datos.',
         datePublished: '2026-04-01',
@@ -1431,7 +1427,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Qué es el EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El EU AI Act es el primer marco legal integral del mundo para la inteligencia artificial, aprobado por el Parlamento Europeo en marzo de 2024 con 523 votos a favor. Clasifica los sistemas de IA en cuatro niveles de riesgo — Inaceptable, Alto, Limitado y Mínimo — y aplica diferentes requisitos y multas a cada nivel. La aplicación plena entra en vigor en agosto de 2026.' } },
           { '@type': 'Question', 'name': '¿Se aplica el EU AI Act a empresas fuera de la UE?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. El EU AI Act se aplica a cualquier organización que coloque sistemas de IA en el mercado de la UE o cuyos resultados de IA se utilicen en la UE, independientemente de dónde esté radicada la organización. Este alcance extraterritorial se denomina Efecto Bruselas y significa que los proveedores de IA estadounidenses y asiáticos también deben cumplir si atienden a usuarios de la UE.' } },
@@ -2062,7 +2057,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         'url': 'https://www.promptquorum.com/fr/prompt-engineering/geopolitics-and-ai',
-        'inLanguage': 'fr',
         headline: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent pour la domination de l\'IA',
         description: 'Les États-Unis, la Chine et l\'Union européenne poursuivent des visions incompatibles de la gouvernance de l\'IA. Pour les organisations déployant l\'IA, ces différences se traduisent par des obligations de conformité concrètes, des contraintes d\'approvisionnement et des exigences de résidence des données.',
         datePublished: '2026-04-01',
@@ -2114,7 +2108,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Qu\'est-ce que la loi IA de l\'UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La loi IA de l\'UE est le premier cadre legal complet au monde sur l\'intelligence artificielle, adoptee par le Parlement europeen en mars 2024 avec 523 voix pour. Elle classe les systemes d\'IA en quatre niveaux de risque — Inacceptable, Eleve, Limite et Minimal — avec des exigences et amendes differentes. L\'application complete entre en vigueur en aout 2026.' } },
           { '@type': 'Question', 'name': 'La loi IA de l\'UE s\'applique-t-elle aux entreprises hors UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. La loi IA de l\'UE s\'applique a toute organisation qui commercialise des systemes d\'IA dans l\'UE ou dont les resultats d\'IA sont utilises dans l\'UE, independamment du siege de l\'organisation. Cette portee extraterritoriale, appelee effet Bruxelles, oblige les fournisseurs americains et asiatiques a se conformer s\'ils servent des utilisateurs europeens.' } },
@@ -2785,7 +2778,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         'url': 'https://www.promptquorum.com/ja/prompt-engineering/geopolitics-and-ai',
-        'inLanguage': 'ja',
         headline: '地政学とAI：米国、中国、EUのAI支配競争解説（2026年分析）',
         description: '米国、中国、EUはAIガバナンスに関して相反するビジョンを追求しており、AIを展開する組織にとっては具体的なコンプライアンス義務、調達制約、データ保管要件に直結します。',
         datePublished: '2026-04-01',
@@ -2837,7 +2829,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'EU AI法とは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'EU AI法は世界初の包括的なAI法規制で、2024年3月に欧州議会で523票の賛成で採択されました。AIシステムを4つのリスクレベル（禁止、高リスク、限定的リスク、最小リスク）に分類し、それぞれ異なる要件と罰則を設けています。完全施行は2026年8月から始まります。' } },
           { '@type': 'Question', 'name': 'EU AI法はEU域外の企業にも適用されますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。EU AI法はEU市場でAIシステムを提供するすべての組織、またはその出力がEU内で使用されるすべての組織に適用されます（所在地に関わらず）。この域外適用は「ブリュッセル効果」と呼ばれ、米国やアジアのAI企業もEUユーザーを対象とする場合はコンプライアンスが必要です。' } },
@@ -2950,7 +2941,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         'url': 'https://www.promptquorum.com/zh/prompt-engineering/geopolitics-and-ai',
-        'inLanguage': 'zh',
         headline: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权（2026年分析）',
         description: '美国、中国和欧盟正在追求互不兼容的AI治理愿景。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据存储位置要求。',
         datePublished: '2026-04-01',

@@ -190,7 +190,6 @@ schema: {
         'headline': 'Local RAG 2026: Build Document Q&A Systems Without Cloud APIs',
         'description': 'Local RAG 2026: build document Q&A systems, vector databases, chunking strategies, and retrieval optimization. Complete guide.',
         'url': 'https://www.promptquorum.com/local-llms/local-rag-2026',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -198,7 +197,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'How many documents can local RAG handle?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chroma handles 100K-1M documents on consumer hardware. Qdrant scales to billions with distributed setup. Beyond 1M, use Qdrant or Milvus.' } },
           { '@type': 'Question', 'name': 'What latency should I expect?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Embedding query (nomic-embed-text on CPU): 50-200ms. Retrieval (Chroma on disk): 10-50ms. LLM generation: 2-10 seconds. Total: 2-10 seconds per query.' } },
@@ -400,7 +398,6 @@ schema: {
         'headline': 'RAG Local 2026: Construye Sistemas de Preguntas y Respuestas sin APIs en la Nube',
         'description': 'RAG Local 2026: construye sistemas de preguntas y respuestas, bases de datos vectoriales, estrategias de chunking y optimización de recuperación. Guía completa.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-rag-2026?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -423,7 +420,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuántos documentos puede manejar el RAG local?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chroma maneja entre 100K y 1M documentos en hardware de consumo. Qdrant escala a miles de millones con configuración distribuida. Por encima de 1M, usa Qdrant o Milvus.' } },
           { '@type': 'Question', 'name': '¿Qué latencia debo esperar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Consulta de embedding (nomic-embed-text en CPU): 50-200ms. Recuperación (Chroma en disco): 10-50ms. Generación del LLM: 2-10 segundos. Total: 2-10 segundos por consulta.' } },
@@ -626,7 +622,6 @@ schema: {
         'headline': 'Lokale RAG 2026: Erstellen Sie Dokumenten-Q&A-Systeme ohne Cloud-APIs',
         'description': 'Lokale RAG 2026: erstellen Sie Dokumenten-Q&A-Systeme, Vektordatenbanken, Chunk-Strategien und Abrufoptimierung. Vollständiger Leitfaden.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-rag-2026',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -634,7 +629,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Wie viele Dokumente kann lokales RAG handhaben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chroma handhabet 100K-1M Dokumente auf Consumer-Hardware. Qdrant skaliert zu Milliarden mit verteiltem Setup. Über 1M verwenden Sie Qdrant oder Milvus.' } },
           { '@type': 'Question', 'name': 'Welche Latenz sollte ich erwarten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Embedding-Abfrage (nomic-embed-text auf CPU): 50-200ms. Abruf (Chroma auf Disk): 10-50ms. LLM-Generierung: 2-10 Sekunden. Gesamt: 2-10 Sekunden pro Abfrage.' } },
@@ -837,7 +831,6 @@ schema: {
         'headline': 'RAG local 2026 : créer des systèmes de questions-réponses sur documents sans APIs cloud',
         'description': 'RAG local 2026 : créez des systèmes de questions-réponses, bases de données vectorielles, stratégies de chunking et optimisation de récupération. Guide complet.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-rag-2026',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -845,7 +838,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Combien de documents peut gérer RAG local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chroma gère 100K-1M documents sur hardware consumer. Qdrant scale à milliards avec déploiement distribué. Au-delà 1M, utilisez Qdrant ou Milvus.' } },
           { '@type': 'Question', 'name': 'Quelle latence dois-je attendre ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Requête embedding (nomic-embed-text sur CPU) : 50-200ms. Récupération (Chroma sur disque) : 10-50ms. Génération LLM : 2-10 secondes. Total : 2-10 secondes par requête.' } },

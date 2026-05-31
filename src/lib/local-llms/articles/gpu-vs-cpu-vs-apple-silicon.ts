@@ -246,7 +246,6 @@ schema: {
         'headline': 'GPU vs CPU vs Apple Silicon 2026: CUDA, Metal & Memory Bandwidth',
         'description': 'Which compute platform for local LLMs? RTX 5090 (200 tok/sec) vs M2 Ultra (60 tok/sec, runs 70B natively) vs CPU (5 tok/sec). CUDA ecosystem, memory bandwidth, cost. April 2026.',
         'url': 'https://www.promptquorum.com/local-llms/gpu-vs-cpu-vs-apple-silicon',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -262,7 +261,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Is GPU or CPU better for running local LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPU is significantly better for real-time inference. NVIDIA RTX 4090 runs 7B models at 150 tokens/sec; a high-end CPU like Intel i9 runs the same model at 3–5 tokens/sec. CPU inference produces 5–10 second response latency, making it impractical for interactive chat.' } },
           { '@type': 'Question', 'name': 'Can Apple Silicon run local LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Apple M-series (M3, M4) run 7B models at 25–30 tokens/sec using unified memory — significantly better than CPU-only x86 systems but slower than discrete NVIDIA GPUs. Apple Silicon cannot run 70B models due to unified memory limits.' } },
@@ -280,7 +278,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'GPU vs CPU vs Apple Silicon for Local LLMs: Architecture Comparison',
-        'inLanguage': 'en',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'NVIDIA RTX 5090 (GPU)', 'description': 'Flagship NVIDIA GPU 2025: 200 tok/sec on 8B models, 50 tok/sec on 70B. 32 GB VRAM, 1,792 GB/s bandwidth. Best performance, highest cost ($2,000). Ideal for production workloads and large model inference.' },
@@ -531,7 +528,6 @@ schema: {
         'headline': 'GPU vs CPU vs Apple Silicon 2026: CUDA, Metal y ancho de banda de memoria',
         'description': '¿Qué plataforma de cómputo elegir para LLMs locales? RTX 5090 (200 tok/s) vs M2 Ultra (60 tok/s, 70B nativo) vs CPU (5 tok/s). Ecosistema CUDA, ancho de banda de memoria, costes. Abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -552,7 +548,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Es mejor la GPU o la CPU para ejecutar LLMs locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La GPU es significativamente mejor para inferencia en tiempo real. NVIDIA RTX 4090 ejecuta modelos de 7B a 150 tokens/s; una CPU de gama alta como Intel i9 ejecuta el mismo modelo a 3–5 tokens/s. La inferencia por CPU produce una latencia de respuesta de 5–10 segundos, lo que la hace impráctica para chat interactivo.' } },
           { '@type': 'Question', 'name': '¿Puede Apple Silicon ejecutar LLMs locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. La serie Apple M (M3, M4) ejecuta modelos de 7B a 25–30 tokens/s usando memoria unificada — significativamente mejor que los sistemas x86 solo con CPU, pero más lento que las GPU NVIDIA discretas. Apple Silicon no puede ejecutar modelos de 70B debido a los límites de memoria unificada.' } },
@@ -570,7 +565,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'GPU vs CPU vs Apple Silicon para LLMs locales: Comparativa de arquitecturas',
-        'inLanguage': 'es',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'NVIDIA RTX 5090 (GPU)', 'description': 'GPU insignia NVIDIA 2025: 200 tok/s en modelos de 8B, 50 tok/s en 70B. 32 GB VRAM, 1.792 GB/s de ancho de banda. Mejor rendimiento, mayor coste ($2.000). Ideal para cargas de trabajo en producción e inferencia de modelos grandes.' },
@@ -825,7 +819,6 @@ schema: {
         'headline': 'GPU vs CPU vs Apple Silicon 2026: CUDA, Metal & Speicherbandbreite',
         'description': 'Welche Compute-Plattform für lokale LLMs? RTX 5090 (200 Tok/s) vs M2 Ultra (60 Tok/s, 70B nativ) vs CPU (5 Tok/s). CUDA-Ökosystem, Speicherbandbreite, Kosten. April 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/gpu-vs-cpu-vs-apple-silicon',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -841,7 +834,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Ist GPU oder CPU besser zum Ausführen lokaler LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPU ist deutlich besser für Echtzeitinferenz. NVIDIA RTX 4090 führt 7B-Modelle mit 150 Token/s aus; eine High-End-CPU wie Intel i9 führt das gleiche Modell mit 3–5 Token/s aus. CPU-Inferenz erzeugt 5–10 Sekunden Antwortlatenz, was interaktiven Chat unpraktisch macht.' } },
           { '@type': 'Question', 'name': 'Kann Apple Silicon lokale LLMs ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Apple M-Serie (M3, M4) führt 7B-Modelle mit 25–30 Token/s mit einheitlichem Speicher aus – deutlich besser als nur CPU x86-Systeme, aber langsamer als diskrete NVIDIA-GPUs. Apple Silicon kann 70B-Modelle nicht ausführen, da einheitliche Speicherlimits gelten.' } },
@@ -861,7 +853,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'GPU vs CPU vs Apple Silicon für lokale LLMs: Architekturvergleich',
-        'inLanguage': 'de',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'NVIDIA RTX 5090 (GPU)', 'description': 'Flaggschiff-GPU 2025: 200 Tok/s bei 8B-Modellen, 50 Tok/s bei 70B. 32 GB VRAM, 1.792 GB/s Bandbreite. Beste Leistung, höchste Kosten (2.000 €). Ideal für produktive Workloads und große Modell-Inferenz.' },
@@ -1108,7 +1099,6 @@ schema: {
         'headline': 'GPU vs CPU vs Apple Silicon 2026 : CUDA, Metal et Bande Passante',
         'description': 'Quelle plateforme informatique pour les LLM locaux ? RTX 5090 (200 Tok/s) vs M2 Ultra (60 Tok/s, 70B natif) vs CPU (5 Tok/s). Écosystème CUDA, bande passante mémoire, coûts. Avril 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/gpu-vs-cpu-vs-apple-silicon',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -1124,7 +1114,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Le GPU ou le CPU est-il meilleur pour exécuter les LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Le GPU est nettement meilleur pour l\'inférence en temps réel. NVIDIA RTX 4090 exécute les modèles 7B à 150 tokens/s ; un CPU haut de gamme comme Intel i9 exécute le même modèle à 3–5 tokens/s. L\'inférence CPU produit une latence de réponse de 5–10 secondes, ce qui rend le chat interactif impratique.' } },
           { '@type': 'Question', 'name': 'Apple Silicon peut-il exécuter les LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. La série Apple M (M3, M4) exécute les modèles 7B à 25–30 tokens/s avec mémoire unifiée – nettement meilleur que les systèmes x86 CPU seul, mais plus lent que les GPU NVIDIA discrets. Apple Silicon ne peut pas exécuter les modèles 70B en raison des limites de mémoire unifiée.' } },
@@ -1142,7 +1131,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'GPU vs CPU vs Apple Silicon pour les LLM Locaux : Comparaison d\'Architecture',
-        'inLanguage': 'fr',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'NVIDIA RTX 5090 (GPU)', 'description': 'GPU vaisseau amiral 2025 : 200 Tok/s sur modèles 8B, 50 Tok/s sur 70B. 32 Go VRAM, bande passante 1 792 Go/s. Meilleures performances, coûts les plus élevés (2 000 €). Idéal pour charges productives et inférence grands modèles.' },
@@ -1355,7 +1343,6 @@ schema: {
         'headline': 'GPU vs CPU vs Apple Silicon 2026：CUDA、Metal、メモリ帯域幅',
         'description': 'ローカル LLM にはどのコンピュートプラットフォーム？RTX 5090（200 Tok/s）vs M2 Ultra（60 Tok/s、70B ネイティブ）vs CPU（5 Tok/s）。CUDA エコシステム、メモリ帯域幅、コスト。2026年4月。',
         'url': 'https://www.promptquorum.com/ja/local-llms/gpu-vs-cpu-vs-apple-silicon',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1371,7 +1358,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'GPU か CPU か、ローカル LLM 実行にはどちらが良い？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPU が圧倒的です。NVIDIA RTX 4090 は 7B モデルを 150 トークン/秒で実行。Intel i9 は同モデルを 3–5 トークン/秒で実行。CPU インファレンスは 5–10 秒レイテンシー、対話的チャット不可能。' } },
           { '@type': 'Question', 'name': 'Apple Silicon はローカル LLM 実行可能か？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Apple M（M3、M4）シリーズは 7B モデルを 25–30 トークン/秒で実行（統合メモリ）。NVIDIA 離散 GPU より遅いが、x86 CPU のみシステムより大幅に高速。70B モデルは Apple Silicon メモリ制限で実行不可（M2 Ultra 除く）。' } },
@@ -1389,7 +1375,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'GPU vs CPU vs Apple Silicon ローカル LLM：アーキテクチャ比較',
-        'inLanguage': 'ja',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'NVIDIA RTX 5090（GPU）', 'description': '2025 フラッグシップ GPU：8B モデル 200 Tok/s、70B は 50 Tok/s。32GB VRAM、1,792 GB/s 帯域幅。最高性能、最高コスト（2,000 ドル）。本格的ワークロード・大規模モデル推論向け。' },
@@ -1602,7 +1587,6 @@ schema: {
         'headline': 'GPU vs CPU vs Apple Silicon 2026：CUDA、Metal、内存带宽',
         'description': '本地大模型应该选什么计算平台？RTX 5090（200 Tok/s）vs M2 Ultra（60 Tok/s、70B 原生）vs CPU（5 Tok/s）。CUDA 生态、内存带宽、成本对比。2026年4月。',
         'url': 'https://www.promptquorum.com/zh/local-llms/gpu-vs-cpu-vs-apple-silicon',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1618,7 +1602,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '本地大模型推理选 GPU 还是 CPU？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPU 绝对更优。NVIDIA RTX 4090 运行 7B 模型 150 令牌/秒。Intel i9 仅 3-5 令牌/秒。CPU 推理 5-10 秒延迟，对话不可用。' } },
           { '@type': 'Question', 'name': 'Apple Silicon 能运行本地大模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。Apple M（M3、M4）系列运行 7B 模型 25-30 令牌/秒（统一内存）。速度慢于 NVIDIA GPU，但远快于仅 CPU 系统。70B 模型超出 Apple Silicon 内存限制（M2 Ultra 除外）。' } },
@@ -1636,7 +1619,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'GPU vs CPU vs Apple Silicon 本地大模型：架构对比',
-        'inLanguage': 'zh',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'NVIDIA RTX 5090（GPU）', 'description': '2025 年旗舰 GPU：8B 模型 200 Tok/s，70B 50 Tok/s。32GB VRAM，1792 GB/s 带宽。最高性能，最高成本（2000 美元）。用于认真工作和大模型推理。' },

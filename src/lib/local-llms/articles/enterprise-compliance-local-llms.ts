@@ -181,7 +181,6 @@ schema: {
         'headline': 'Enterprise Compliance Local LLMs',
         'description': 'Enterprise AI compliance: GDPR, HIPAA, SOC2, EU AI Act requirements. Local LLM regulatory guide.',
         'url': 'https://www.promptquorum.com/local-llms/enterprise-compliance-local-llms',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -192,7 +191,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -248,7 +246,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Enterprise Compliance Local LLMs',
-        'inLanguage': 'en',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -447,7 +444,6 @@ schema: {
         'headline': 'Cumplimiento Empresarial con LLMs Locales',
         'description': 'Cumplimiento de IA empresarial: GDPR, HIPAA, SOC2, requisitos de la Ley de IA de la UE. Guía regulatoria para LLMs locales.',
         'url': 'https://www.promptquorum.com/es/local-llms/enterprise-compliance-local-llms?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -458,7 +454,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -514,7 +509,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Cumplimiento Empresarial con LLMs Locales',
-        'inLanguage': 'es',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -719,7 +713,6 @@ schema: {
         'headline': 'Enterprise Compliance: DSGVO, HIPAA, SOC2 und KI-Regulierung',
         'description': 'DSGVO, HIPAA, SOC2 Compliance mit Local LLMs: Regulatorischer Leitfaden für Unternehmensdeployments. Datenschutz und Audit-Anforderungen.',
         'url': 'https://www.promptquorum.com/de/local-llms/enterprise-compliance-local-llms',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -730,7 +723,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Garantiert lokales LLM-Deployment DSGVO-Compliance?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein -- lokales Deployment ist notwendig, aber nicht ausreichend. Sie benötigen immer noch ordnungsgemäße Zugriffskontrolle, Verschlüsselung, Datenspeicherrichtlinien und Incident-Response-Verfahren. Local LLMs heben das Cloud-Anbieterrisiko auf, heben aber nicht die Compliance-Verantwortung auf.' } },
           { '@type': 'Question', 'name': 'Wie lange dauert SOC2 Type II-Zertifizierung?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Normalerweise 6-12 Monate. Sie müssen 6+ Monate ununterbrochener Einhaltung mit Sicherheitskontrollen (Verschlüsselung, Zugriffsprotokolle, Incident Response) nachweisen. Local LLM-Deployment kann dies beschleunigen, indem es vollständige Kontrolle über alle erforderlichen Kontrollen bietet.' } },
@@ -746,7 +738,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Enterprise Compliance Local LLMs',
-        'inLanguage': 'de',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'DSGVO und Datenschutz', 'description': 'Personenbezogene Daten müssen in der EU bleiben, Betroffenenrechte (Zugang, Löschung, Portabilität) sind garantiert, und Compliance ist für EU-Operationen obligatorisch.' },
@@ -927,7 +918,6 @@ schema: {
         'headline': 'Conformité Entreprise: RGPD, HIPAA, SOC2 et Réglementations IA',
         'description': 'Conformité IA entreprise: RGPD, HIPAA, SOC2, exigences Loi IA UE. Guide réglementaire Local LLM.',
         'url': 'https://www.promptquorum.com/fr/local-llms/enterprise-compliance-local-llms',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -938,7 +928,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Le déploiement local LLM garantit-il la conformité RGPD?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non -- le déploiement local est nécessaire mais insuffisant. Vous devez toujours avoir des contrôles d\'accès appropriés, chiffrement, politiques de rétention des données et procédures de réponse aux incidents. Les LLMs locaux éliminent le risque du vendeur cloud mais n\'éliminent pas la responsabilité de conformité.' } },
           { '@type': 'Question', 'name': 'Combien de temps prend la certification SOC2 Type II?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Généralement 6-12 mois. Vous devez démontrer 6+ mois de conformité continue avec les contrôles de sécurité (chiffrement, journaux d\'accès, réponse aux incidents). Le déploiement local LLM peut accélérer cela en fournissant un contrôle complet sur tous les contrôles requis.' } },
@@ -952,7 +941,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Conformité Entreprise Local LLMs',
-        'inLanguage': 'fr',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'RGPD et résidence des données', 'description': 'Les données personnelles doivent rester dans l\'UE, les droits des sujets (accès, suppression, portabilité) sont garantis, et la conformité est obligatoire pour les opérations dans l\'UE.' },
@@ -1131,7 +1119,6 @@ schema: {
         'headline': 'エンタープライズコンプライアンス: GDPR、HIPAA、SOC2、AI規制',
         'description': 'エンタープライズAIコンプライアンス: GDPR、HIPAA、SOC2、EU AI Act要件。Local LLM規制ガイド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/enterprise-compliance-local-llms',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1142,7 +1129,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Local LLM展開はGDPRコンプライアンスを保証するか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ -- Local展開は必要ですが十分ではない。適切なアクセスコントロール、暗号化、データ保持ポリシー、インシデント対応手順が必要。Local LLMsはCloud ベンダーリスク要因を削除しますが、コンプライアンス責任は削除しない。' } },
           { '@type': 'Question', 'name': 'SOC2 Type II認証はどのくらい時間がかかるか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '通常6-12ヶ月。6ヶ月以上の継続的なセキュリティコントロール（暗号化、アクセスログ、インシデント対応）のコンプライアンス証拠を示す必要がある。Local LLM展開はすべての要求コントロールの完全な制御を提供してこれを加速化できる。' } },
@@ -1156,7 +1142,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'エンタープライズコンプライアンス Local LLMs',
-        'inLanguage': 'ja',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'GDPRとデータレジデンシー', 'description': '個人データはEU内に留まる必要がある。データサブジェクトの権利（アクセス、削除、ポータビリティ）が保証される。EU操業はコンプライアンス必須。' },
@@ -1335,7 +1320,6 @@ schema: {
         'headline': '企业合规: GDPR、HIPAA、SOC2 和 AI 法规',
         'description': '企业 AI 合规：GDPR、HIPAA、SOC2、EU AI Act 要求。Local LLM 法规指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/enterprise-compliance-local-llms',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1346,7 +1330,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Local LLM 部署保证 GDPR 合规吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不—本地部署是必要但不充分。您仍需要适当的访问控制、加密、数据保留政策和事件响应程序。Local LLMs 消除云供应商风险因素但不消除合规责任。' } },
           { '@type': 'Question', 'name': 'SOC2 Type II 认证需要多长时间？', 'acceptedAnswer': { '@type': 'Answer', 'text': '通常 6-12 个月。您必须展示 6+ 个月的持续安全控制合规（加密、访问日志、事件响应）。Local LLM 部署可以通过提供对所有必需控制的完全控制来加速这一过程。' } },
@@ -1360,7 +1343,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '企业合规 Local LLMs',
-        'inLanguage': 'zh',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'GDPR 和数据驻留', 'description': '个人数据必须留在 EU。数据主体有权利（访问、删除、可移植性）。EU 运营需要合规。' },

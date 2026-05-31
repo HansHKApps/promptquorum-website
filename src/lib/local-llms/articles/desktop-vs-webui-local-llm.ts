@@ -164,7 +164,6 @@ schema: {
         'headline': 'Desktop vs Web UI for Local LLMs: Which Interface Should You Choose?',
         'description': 'Desktop vs web UI for local LLMs 2026: comparison on interfaces, features, sharing, scalability. When to use each for production deployment.',
         'url': 'https://www.promptquorum.com/local-llms/desktop-vs-webui-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -172,7 +171,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I run Open WebUI and LM Studio at the same time?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Open WebUI (browser) and LM Studio (desktop) can both connect to the same Ollama backend. They share the model.' } },
           { '@type': 'Question', 'name': 'Which is faster, desktop or web UI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Desktop apps have less overhead (no web server), so marginally faster. Difference is imperceptible for inference speed.' } },
@@ -337,7 +335,6 @@ schema: {
         'headline': 'Desktop vs Web UI para LLMs locales: ¿Qué interfaz debes elegir?',
         'description': 'Desktop vs Web UI para LLMs locales 2026: comparación de interfaces, funciones, compatibilidad, escalabilidad. Cuándo usar cada uno para despliegue en producción.',
         'url': 'https://www.promptquorum.com/es/local-llms/desktop-vs-webui-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -346,7 +343,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo ejecutar Open WebUI y LM Studio al mismo tiempo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Open WebUI (navegador) y LM Studio (escritorio) pueden conectarse al mismo backend de Ollama. Comparten el modelo.' } },
           { '@type': 'Question', 'name': '¿Cuál es más rápida, la app de escritorio o la interfaz web?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Las apps de escritorio tienen menos sobrecarga (sin servidor web), por lo que son marginalmente más rápidas. La diferencia es imperceptible en la velocidad de inferencia.' } },
@@ -512,7 +508,6 @@ schema: {
         'headline': 'Desktop vs Web-UI für lokale LLMs: Welche Oberfläche sollten Sie wählen?',
         'description': 'Desktop vs Web-UI für lokale LLMs 2026: Vergleich von Oberflächen, Funktionen, Freigabe, Skalierbarkeit. Wann welche für Produktionsbereitschaft wählen.',
         'url': 'https://www.promptquorum.com/de/local-llms/desktop-vs-webui-local-llm',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -520,7 +515,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich Open WebUI und LM Studio gleichzeitig ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Open WebUI (Browser) und LM Studio (Desktop) können beide mit demselben Ollama-Backend verbunden werden. Sie teilen sich das Modell.' } },
           { '@type': 'Question', 'name': 'Welche ist schneller, Desktop oder Web-UI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Desktop-Apps haben weniger Overhead (kein Webserver), also marginal schneller. Der Unterschied ist für Inferenzgeschwindigkeit nicht wahrnehmbar.' } },
@@ -686,7 +680,6 @@ schema: {
         'headline': 'Bureau vs Interface Web pour LLM locaux : quelle interface choisir ?',
         'description': 'Bureau vs interface Web pour LLM locaux 2026: comparaison d\'interfaces, fonctionnalités, partage, scalabilité. Quand utiliser chacun pour production.',
         'url': 'https://www.promptquorum.com/fr/local-llms/desktop-vs-webui-local-llm',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -694,7 +687,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Peux-je exécuter Open WebUI et LM Studio en même temps ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Open WebUI (navigateur) et LM Studio (bureau) peuvent tous deux se connecter au même backend Ollama. Ils partagent le modèle.' } },
           { '@type': 'Question', 'name': 'Lequel est plus rapide, bureau ou interface Web ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Apps de bureau ont moins de surcharge (pas de serveur Web), donc marginalement plus rapides. La différence est imperceptible pour la vitesse d\'inférence.' } },
@@ -860,7 +852,6 @@ schema: {
         'headline': 'デスクトップ対Webインターフェース: ローカルLLMに最適なインターフェースを選択',
         'description': 'デスクトップ対Webインターフェース 2026: インターフェース、機能、共有、スケーラビリティの比較。本番展開に各を使用する時期。',
         'url': 'https://www.promptquorum.com/ja/local-llms/desktop-vs-webui-local-llm',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -868,7 +859,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Open WebUIとLM Studioを同時に実行できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Open WebUI (ブラウザ) とLM Studio (デスクトップ) は両方同じOllamaバックエンドに接続可能。モデルを共有します。' } },
           { '@type': 'Question', 'name': 'デスクトップとWeb UIどちらが速いですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'デスクトップアプリはオーバーヘッド少ない (Webサーバーなし)、わずかに速い。推論速度への違いは認識できません。' } },
@@ -1034,7 +1024,6 @@ schema: {
         'headline': '桌面应用对Web界面：本地LLM的最佳界面选择',
         'description': '桌面应用对Web界面 2026: 界面、功能、共享、可扩展性比较。何时在本地LLM生产部署中使用各种。',
         'url': 'https://www.promptquorum.com/zh/local-llms/desktop-vs-webui-local-llm',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -1042,7 +1031,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '我可以同时运行Open WebUI和LM Studio吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。Open WebUI（浏览器）和LM Studio（桌面）都可以连接到相同的Ollama后端。他们共享模型。' } },
           { '@type': 'Question', 'name': '桌面应用和Web UI哪个更快？', 'acceptedAnswer': { '@type': 'Answer', 'text': '桌面应用开销更少（无Web服务器），略快一点。对推论速度的影响不明显。' } },

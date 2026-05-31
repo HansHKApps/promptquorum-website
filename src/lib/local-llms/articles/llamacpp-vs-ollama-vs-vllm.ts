@@ -38,7 +38,6 @@ schema: {
         'headline': 'llama.cpp vs Ollama vs vLLM 2026: Speed, Batching & GPU Benchmarks',
         'description': 'llama.cpp: 38 tok/s single-token (fastest). Ollama: 5-min setup (simplest). vLLM: 250+ tok/s batched (highest throughput). RTX 4090 benchmarks, feature matrix. April 2026.',
         'url': 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -54,7 +53,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Which is faster: llama.cpp, Ollama, or vLLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For single requests: llama.cpp (38 tok/s on RTX 4090). For concurrent users: vLLM (250+ tok/s with continuous batching, 5–7× faster). Ollama is 5–10% slower than llama.cpp but simpler to set up.' } },
           { '@type': 'Question', 'name': 'Does vLLM work on Mac Apple Silicon?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. vLLM requires NVIDIA CUDA and does not support Apple Silicon. For Mac, use llama.cpp with Metal or Ollama (which uses llama.cpp internally).' } },
@@ -73,7 +71,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs Ollama vs vLLM: Feature Comparison',
-        'inLanguage': 'en',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama.cpp', 'description': 'Compile-from-source inference backend. Fastest single-token latency (38 tok/s on RTX 4090). Manual GGUF model management. OpenAI-compatible API via llama-server. Best quantization support. No native batching.' },
@@ -271,7 +268,6 @@ schema: {
         'headline': 'llama.cpp vs Ollama vs vLLM 2026: Velocidad, Batching y Benchmarks GPU',
         'description': 'llama.cpp: 38 tok/s por token (más rápido). Ollama: 5 minutos de setup (más simple). vLLM: 250+ tok/s en batch (mayor throughput). Benchmarks RTX 4090. Abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/llamacpp-vs-ollama-vs-vllm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -292,7 +288,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuál es más rápido: llama.cpp, Ollama o vLLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para solicitudes únicas: llama.cpp (38 tok/s en RTX 4090). Para usuarios simultáneos: vLLM (250+ tok/s con batching continuo, 5–7× más rápido). Ollama es 5–10% más lento que llama.cpp pero más simple de configurar.' } },
           { '@type': 'Question', 'name': '¿vLLM funciona en Mac Apple Silicon?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. vLLM requiere NVIDIA CUDA y no es compatible con Apple Silicon. Para Mac, usa llama.cpp con Metal o Ollama (que usa llama.cpp internamente).' } },
@@ -311,7 +306,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs Ollama vs vLLM: Comparativa de características',
-        'inLanguage': 'es',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama.cpp', 'description': 'Backend de inferencia compilado desde código fuente. Latencia por token más baja (38 tok/s en RTX 4090). Gestión manual de modelos GGUF. API compatible con OpenAI mediante llama-server. Mejor soporte de cuantización. Sin batching nativo.' },
@@ -507,7 +501,6 @@ schema: {
         'headline': 'llama.cpp vs Ollama vs vLLM 2026: Geschwindigkeit & GPU-Benchmarks',
         'description': 'llama.cpp: 38 Tok/s Single-Token (schnellstes). Ollama: 5-Min-Setup (einfachstes). vLLM: 250+ Tok/s Batch (höchster Durchsatz). RTX 4090 Benchmarks. April 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/llamacpp-vs-ollama-vs-vllm',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -523,7 +516,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Was ist schneller: llama.cpp, Ollama oder vLLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Einzelne Anfragen: llama.cpp (38 Tok/s auf RTX 4090). Gleichzeitige Benutzer: vLLM (250+ Tok/s mit kontinuierlichem Batching, 5–7× schneller). Ollama ist 5–10 % langsamer als llama.cpp, aber einfacher einzurichten.' } },
           { '@type': 'Question', 'name': 'Funktioniert vLLM auf Mac Apple Silicon?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. vLLM benötigt NVIDIA CUDA und unterstützt Apple Silicon nicht. Für Mac: llama.cpp mit Metal oder Ollama (das intern llama.cpp verwendet).' } },
@@ -542,7 +534,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs. Ollama vs. vLLM: Feature-Vergleich',
-        'inLanguage': 'de',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama.cpp', 'description': 'Compile-from-source-Inferenz-Backend. Schnellste Einzel-Token-Latenz (36 Tok/s). Manuelle GGUF-Modellverwaltung. OpenAI-kompatible API via llama-server. Beste Quantisierungsunterstützung. Kein natives Batching.' },
@@ -738,7 +729,6 @@ schema: {
         'headline': 'llama.cpp vs Ollama vs vLLM 2026 : Vitesse & Benchmarks GPU',
         'description': 'llama.cpp : 38 tok/s par token (plus rapide). Ollama : 5 min (plus simple). vLLM : 250+ tok/s batch (meilleur débit). Benchmarks RTX 4090. Avril 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/llamacpp-vs-ollama-vs-vllm',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -754,7 +744,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Lequel est le plus rapide : llama.cpp, Ollama ou vLLM ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Requêtes uniques : llama.cpp (38 tok/s sur RTX 4090). Utilisateurs simultanés : vLLM (250+ tok/s avec traitement par lots continu, 5–7× plus rapide). Ollama est 5–10% plus lent que llama.cpp mais plus simple à configurer.' } },
           { '@type': 'Question', 'name': 'vLLM fonctionne-t-il sur Mac Apple Silicon ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. vLLM nécessite NVIDIA CUDA et ne prend pas en charge Apple Silicon. Pour Mac, utilisez llama.cpp avec Metal ou Ollama (qui utilise llama.cpp en interne).' } },
@@ -771,7 +760,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs Ollama vs vLLM : Comparaison des fonctionnalités',
-        'inLanguage': 'fr',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama.cpp', 'description': 'Backend d\'inférence compilé depuis les sources. Latence par token la plus faible (36 tok/s). Gestion manuelle des modèles GGUF. API compatible OpenAI via llama-server. Meilleure prise en charge de la quantification. Pas de batching natif.' },
@@ -959,7 +947,6 @@ schema: {
         'headline': 'llama.cpp vs Ollama vs vLLM 2026：速度・バッチ処理・GPU性能比較',
         'description': 'llama.cpp：シングルトークン最速（38 tok/s）。Ollama：最も簡単（5分）。vLLM：最大スループット（250+ tok/s）。RTX 4090ベンチマーク。2026年4月。',
         'url': 'https://www.promptquorum.com/ja/local-llms/llamacpp-vs-ollama-vs-vllm',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -975,7 +962,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'llama.cpp、Ollama、vLLMの中で最も速いのはどれですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'シングルリクエスト：llama.cpp（RTX 4090で38 tok/s）。同時ユーザー：vLLM（連続バッチで250+ tok/s、5–7倍高速）。Ollamaはllama.cppより5–10%遅いですが、セットアップがより簡単です。' } },
           { '@type': 'Question', 'name': 'vLLMはMac Apple Siliconで動作しますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。vLLMはNVIDIA CUDAが必要で、Apple Siliconには対応していません。Macではllama.cpp（Metal使用）またはOllama（llama.cpp内部使用）を使用してください。' } },
@@ -992,7 +978,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'llama.cpp vs Ollama vs vLLM: 機能比較',
-        'inLanguage': 'ja',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama.cpp', 'description': 'ソースコンパイル型の推論バックエンド。最速のシングルトークンレイテンシ（RTX 4090で38トークン/秒）。GGUFモデルの手動管理。llama-server経由のOpenAI互换API。最高の量子化対応。ネイティブバッチなし。' },

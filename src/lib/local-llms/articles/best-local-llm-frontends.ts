@@ -244,7 +244,6 @@ schema: {
         'headline': 'Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More',
         'description': 'Best local LLM chat UIs in 2026: Open WebUI (25k GitHub stars), Enchanted UI (fastest), Jan AI (offline app). Feature comparison and setup guide.',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -265,7 +264,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'en',
         'name': 'Best Local LLM Frontends 2026',
         'numberOfItems': 8,
         'itemListElement': [
@@ -282,7 +280,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -545,7 +542,6 @@ schema: {
         'headline': 'Beste lokale LLM-Frontends 2026: Open WebUI, Enchanted UI und mehr',
         'description': 'Vergleich von 8 lokalen LLM-Frontends: Open WebUI (25k Sterne, RAG), Enchanted UI (schnell), Jan AI (Desktop), Continue.dev (Code) und weitere. Funktionsvergleich und Einrichtungsanleitung.',
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llm-frontends',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -566,7 +562,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'de',
         'name': 'Beste lokale LLM-Frontends 2026',
         'numberOfItems': 8,
         'itemListElement': [
@@ -583,7 +578,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -862,7 +856,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llm-frontends',
-        'inLanguage': 'fr',
         'headline': 'Meilleures interfaces locales LLM en 2026 : Open WebUI, Enchanted UI et autres',
         'description': 'Comparez 8 interfaces LLM locales : Open WebUI (25k étoiles, RAG), Enchanted UI (plus rapide), Jan AI (bureau), Continue.dev (code) et plus. Comparaison et guide de configuration.',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -891,7 +884,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -949,7 +941,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Top 8 interfaces LLM locales en 2026',
-        'inLanguage': 'fr',
         'numberOfItems': 8,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Interface web tout-en-un avec RAG, multimodal, knowledge bases. Docker requis. 12 GB RAM+.' },
@@ -1186,7 +1177,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llm-frontends',
-        'inLanguage': 'ja',
         'headline': '2026年最高のローカルLLMフロントエンド：Open WebUI、Enchanted UIなど',
         'description': '8つのローカルLLMインターフェース比較：Open WebUI（25kスター、RAG）、Enchanted UI（最速）、Jan AI（デスクトップ）、Continue.dev（コード）など。機能比較＆セットアップ。',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1215,7 +1205,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1273,7 +1262,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '2026年トップ8ローカルLLMフロントエンド',
-        'inLanguage': 'ja',
         'numberOfItems': 8,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'オールインワンWebUI、RAG・マルチモーダル・知識ベース。Docker必須。12GB RAM以上。' },
@@ -1513,7 +1501,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llm-frontends',
-        'inLanguage': 'zh',
         'headline': '2026年最佳本地LLM前端：Open WebUI、Enchanted UI等',
         'description': '8个本地LLM界面对比：Open WebUI（25k星、RAG）、Enchanted UI（最速）、Jan AI（桌面）、Continue.dev（代码）等。功能对比和设置指南。',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1542,7 +1529,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1600,7 +1586,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '2026年8大本地LLM前端',
-        'inLanguage': 'zh',
         'numberOfItems': 8,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': '一体化Web UI，具RAG、多模态、知识库。需Docker。12GB+ RAM。' },
@@ -1852,7 +1837,6 @@ schema: {
         'headline': 'Los mejores frontends para LLMs locales 2026',
         'description': 'Compara 8 frontends para LLMs locales: Open WebUI (25k estrellas, RAG), Enchanted UI (el más rápido), Jan AI (app de escritorio). Tabla de características y guía de configuración.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-frontends?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1873,7 +1857,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         'name': 'Los mejores frontends para LLMs locales 2026',
         'numberOfItems': 8,
         'itemListElement': [
@@ -1890,7 +1873,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',

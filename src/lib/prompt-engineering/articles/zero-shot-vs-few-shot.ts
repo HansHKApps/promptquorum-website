@@ -261,7 +261,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-      'inLanguage': 'es',
     headline: 'Zero-Shot vs. Few-Shot Prompting',
     description: 'Una comparación práctica del Zero-Shot y Few-Shot Prompting, cuándo usar cada técnica y cómo PromptQuorum te ayuda a seleccionar la estrategia correcta.',
     datePublished: '2026-03-26',

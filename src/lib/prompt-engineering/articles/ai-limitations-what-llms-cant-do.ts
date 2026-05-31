@@ -784,7 +784,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es',
         inLanguage: 'es',
         headline: 'Limitaciones de la IA — Lo que los LLMs no pueden hacer',

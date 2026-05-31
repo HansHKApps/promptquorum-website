@@ -219,7 +219,6 @@ schema: {
         'headline': 'Fix Local LLM Errors in 2026: 10 Common Problems in Ollama, LM Studio, and vLLM',
         'description': 'Fix out-of-memory crashes, GPU not detected, connection refused, and garbled output in Ollama and LM Studio. Exact commands: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
         'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -242,7 +241,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Debug Local LLM Setup Errors',
-        'inLanguage': 'en',
         'step': [
           { '@type': 'HowToStep', 'name': 'Fix out-of-memory errors', 'text': 'Switch to a smaller quantization (Q4_K_M) or smaller model. Check RAM with free -h.' },
           { '@type': 'HowToStep', 'name': 'Enable GPU detection', 'text': 'Update drivers (NVIDIA 525+), set OLLAMA_GPU_LAYERS=999, verify with nvidia-smi.' },
@@ -254,7 +252,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -523,7 +520,6 @@ schema: {
         'headline': 'Corregir errores de LLM local en 2026: 10 problemas frecuentes en Ollama, LM Studio y vLLM',
         'description': 'Soluciona cuelgues por falta de memoria, GPU no detectada, conexión rechazada y salida corrupta en Ollama y LM Studio. Comandos exactos: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
         'url': 'https://www.promptquorum.com/es/local-llms/troubleshooting-local-llm-setup?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -546,7 +542,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Depurar errores de configuración de LLM local',
-        'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'name': 'Corregir errores de falta de memoria', 'text': 'Cambia a una cuantización más pequeña (Q4_K_M) o a un modelo más pequeño. Verifica la RAM con free -h.' },
           { '@type': 'HowToStep', 'name': 'Activar la detección de GPU', 'text': 'Actualiza los drivers (NVIDIA 525+), establece OLLAMA_GPU_LAYERS=999, verifica con nvidia-smi.' },
@@ -558,7 +553,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -648,7 +642,6 @@ schema: {
     'headline': 'Lokale LLM-Fehler 2026 beheben: 10 häufige Probleme in Ollama, LM Studio und vLLM',
     'description': 'Beheben Sie Out-of-Memory-Abstürze, GPU nicht erkannt, Connection Refused und fehlerhafte Ausgabe in Ollama und LM Studio. Exakte Befehle: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
     'url': 'https://www.promptquorum.com/de/local-llms/troubleshooting-local-llm-setup',
-    'inLanguage': 'de',
     'datePublished': '2026-04-04',
     'dateModified': '2026-04-16',
     'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -672,7 +665,6 @@ schema: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     'name': 'Fehler bei der Einrichtung lokaler LLMs debuggen',
-    'inLanguage': 'de',
     'step': [
       { '@type': 'HowToStep', 'name': 'Out-of-Memory-Fehler beheben', 'text': 'Wechsel zu kleinerer Quantisierung (Q4_K_M) oder kleinerem Modell. Speicher mit free -h überprüfen.' },
       { '@type': 'HowToStep', 'name': 'GPU-Erkennung aktivieren', 'text': 'Treiber aktualisieren (NVIDIA 525+), OLLAMA_GPU_LAYERS=999 setzen, nvidia-smi zur Überprüfung ausführen.' },
@@ -684,7 +676,6 @@ schema: {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'inLanguage': 'de',
     'mainEntity': [
       {
         '@type': 'Question',
@@ -943,7 +934,6 @@ schema: {
       'headline': 'Corriger les erreurs locales LLM 2026 : 10 problèmes courants dans Ollama, LM Studio et vLLM',
       'description': 'Correction des plantages dus au manque de mémoire, du GPU non détecté, de la connexion refusée et de la sortie brouillée dans Ollama et LM Studio. Commandes exactes : OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
       'url': 'https://www.promptquorum.com/fr/local-llms/troubleshooting-local-llm-setup',
-      'inLanguage': 'fr',
       'datePublished': '2026-04-04',
       'dateModified': '2026-04-16',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -967,7 +957,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Déboguer les erreurs de configuration LLM local',
-        'inLanguage': 'fr',
         'step': [
           { '@type': 'HowToStep', 'name': 'Corriger les erreurs de mémoire insuffisante', 'text': 'Passer à une quantification plus petite (Q4_K_M) ou un modèle plus petit. Vérifier la RAM avec free -h.' },
           { '@type': 'HowToStep', 'name': 'Activer la détection du GPU', 'text': 'Mettre à jour les pilotes (NVIDIA 525+), définir OLLAMA_GPU_LAYERS=999, vérifier avec nvidia-smi.' },
@@ -979,7 +968,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1237,7 +1225,6 @@ schema: {
     'headline': 'ローカルLLMエラーを2026年に修正する：Ollama、LM Studio、vLLMの10個の一般的な問題',
     'description': 'ローカルLLMのメモリ不足のクラッシュ、GPU検出エラー、接続拒否、出力破損を修正します。各エラーの正確なコマンド — OLLAMA_GPU_LAYERS、ollama rm、nvidia-smi。',
     'url': 'https://www.promptquorum.com/ja/local-llms/troubleshooting-local-llm-setup',
-    'inLanguage': 'ja',
     'datePublished': '2026-04-04',
     'dateModified': '2026-04-16',
     'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1261,7 +1248,6 @@ schema: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     'name': 'ローカルLLMセットアップエラーをデバッグする',
-    'inLanguage': 'ja',
     'step': [
       { '@type': 'HowToStep', 'name': 'メモリ不足エラーを修正する', 'text': '小さい量子化（Q4_K_M）または小さいモデルに切り替えます。free -hでRAMを確認します。' },
       { '@type': 'HowToStep', 'name': 'GPU検出を有効にする', 'text': 'ドライバをアップデートします（NVIDIA 525+）、OLLAMA_GPU_LAYERS=999を設定します、nvidia-smiで確認します。' },
@@ -1273,7 +1259,6 @@ schema: {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'inLanguage': 'ja',
     'mainEntity': [
       {
         '@type': 'Question',
@@ -1587,7 +1572,6 @@ schema: {
     'headline': '修复本地 LLM 错误 2026：Ollama、LM Studio 和 vLLM 的 10 个常见问题',
     'description': '修复本地 LLM 的内存不足崩溃、GPU 无法检测、连接被拒绝和输出乱码问题。Ollama 和 LM Studio 的确切命令：OLLAMA_GPU_LAYERS、ollama rm、nvidia-smi。',
     'url': 'https://www.promptquorum.com/zh/local-llms/troubleshooting-local-llm-setup',
-    'inLanguage': 'zh',
     'datePublished': '2026-04-04',
     'dateModified': '2026-04-16',
     'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1611,7 +1595,6 @@ schema: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     'name': '调试本地 LLM 设置错误',
-    'inLanguage': 'zh',
     'step': [
       { '@type': 'HowToStep', 'name': '修复内存不足错误', 'text': '切换到更小的量化（Q4_K_M）或更小的模型。使用 free -h 检查 RAM。' },
       { '@type': 'HowToStep', 'name': '启用 GPU 检测', 'text': '更新驱动程序（NVIDIA 525+），设置 OLLAMA_GPU_LAYERS=999，运行 nvidia-smi 验证。' },
@@ -1623,7 +1606,6 @@ schema: {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'inLanguage': 'zh',
     'mainEntity': [
       {
         '@type': 'Question',

@@ -717,7 +717,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-     'inLanguage': 'es',
       headline: 'Configuración de prompt engineering para equipos pequeños (2026)',
       description: 'Aprende a configurar el prompt engineering para equipos pequeños: biblioteca YAML compartida, versionado Git, conjunto de 20 casos de prueba y reglas de propiedad. Configuración completa en una semana.',
       author:    { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

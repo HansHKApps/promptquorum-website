@@ -2942,7 +2942,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'NewsArticle',
-    'inLanguage': 'es',
       headline: 'Las mejores apps de LLM local para Android en 2026: 6 apps comparadas en teléfonos reales',
       datePublished: '2026-05-08',
       dateModified: '2026-05-08',

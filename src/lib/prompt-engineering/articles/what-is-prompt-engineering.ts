@@ -690,7 +690,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/what-is-prompt-engineering?lang=es',
         inLanguage: 'es',
         headline: '¿Qué es el Prompt Engineering?',

@@ -226,7 +226,6 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     'name': 'Wie Sie Ihren Prompt-Testing-Stack wählen',
-    'inLanguage': 'de',
     'description': 'Ein 6-Schritte-Leitfaden zur Auswahl der richtigen Kombination von Prompt-Testing-Tools für Ihre LLM-Anwendung.',
     'step': [
       {
@@ -666,7 +665,6 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     'name': 'Cómo elegir tu stack de testing de prompts',
-    'inLanguage': 'es',
     'description': 'Una guía de 6 pasos para seleccionar la combinación correcta de herramientas de testing de prompts para tu aplicación LLM.',
     'step': [
       { '@type': 'HowToStep', 'position': 1, 'name': 'Empieza con Promptfoo', 'text': 'Todos: empieza con Promptfoo (gratis) en tu pipeline CI/CD. Ejecuta tests en cada commit. Esto es innegociable.' },
@@ -1156,7 +1154,6 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     'name': '如何选择您的提示词测试技术栈',
-    'inLanguage': 'zh',
     'description': '为您的LLM应用程序选择合适的提示词测试工具组合的6步指南。',
     'step': [
       {

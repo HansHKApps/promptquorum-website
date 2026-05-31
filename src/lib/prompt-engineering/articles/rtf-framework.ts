@@ -986,7 +986,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         headline: 'El Framework RTF: Rol, Tarea, Formato (2026)',
         description: 'Cómo funciona el Framework RTF (Rol, Tarea, Formato), cuándo usarlo y cómo PromptQuorum ofrece RTF como opción integrada.',
         datePublished: '2026-03-24',

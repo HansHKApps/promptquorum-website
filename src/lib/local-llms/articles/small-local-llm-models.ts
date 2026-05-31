@@ -45,7 +45,6 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-05',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models',
-        'inLanguage': 'en',
         author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
@@ -73,7 +72,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         mainEntity: [
           { '@type': 'Question', name: 'Using Q8_0 quantization instead of Q4_K_M', acceptedAnswer: { '@type': 'Answer', text: 'Q8_0 requires nearly double the RAM of Q4_K_M for minimal quality improvement at small scale. A Llama 3.2 3B model at Q8_0 needs ~3.8 GB RAM vs ~2.5 GB for Q4_K_M. On a 4 GB machine, Q8_0 may trigger swap usage and make inference 3-5× slower. Always use Q4_K_M as the default for sub-4B models.' } },
           { '@type': 'Question', name: 'Running a base model instead of the instruct variant', acceptedAnswer: { '@type': 'Answer', text: 'Base models (e.g., llama3.2:3b-text) are pre-fine-tuning checkpoints trained to predict the next token in text. They do not follow instructions. When you ask a base model "What is 2+2?", it may complete the sentence as a quiz rather than answer "4". Always use the instruct variant: llama3.2:3b (Ollama defaults to instruct for named models).' } },
@@ -321,7 +319,6 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-05',
         'url': 'https://www.promptquorum.com/es/local-llms/small-local-llm-models?lang=es',
-        'inLanguage': 'es',
         author: { '@type': 'Person', 'name': 'Hans Kuepper' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
@@ -350,7 +347,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         mainEntity: [
           { '@type': 'Question', name: 'Usar cuantización Q8_0 en lugar de Q4_K_M', acceptedAnswer: { '@type': 'Answer', text: 'Q8_0 requiere casi el doble de RAM que Q4_K_M con una mejora mínima de calidad a pequeña escala. Un modelo Llama 3.2 3B con Q8_0 necesita ~3,8 GB de RAM frente a ~2,5 GB con Q4_K_M. En una máquina de 4 GB, Q8_0 puede activar el uso de swap y hacer la inferencia 3-5 veces más lenta. Usa siempre Q4_K_M como valor predeterminado para modelos sub-4B.' } },
           { '@type': 'Question', name: 'Ejecutar un modelo base en lugar de la variante instruct', acceptedAnswer: { '@type': 'Answer', text: 'Los modelos base (por ejemplo, llama3.2:3b-text) son puntos de control previos al ajuste fino, entrenados para predecir el siguiente token en el texto. No siguen instrucciones. Cuando le preguntas a un modelo base "¿Cuánto es 2+2?", puede completar la frase como un cuestionario en lugar de responder "4". Usa siempre la variante instruct: llama3.2:3b (Ollama usa instruct por defecto para los modelos con nombre).' } },
@@ -576,7 +572,6 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/de/local-llms/small-local-llm-models',
-        'inLanguage': 'de',
         author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -589,7 +584,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         mainEntity: [
           { '@type': 'Question', name: 'Was ist das kleinste lokale LLM, das nützliche Ausgaben produziert?', acceptedAnswer: { '@type': 'Answer', text: 'Seit April 2026 ist das praktische Minimum ein 3B-Modell bei Q4_K_M-Quantisierung. Modelle unter 2B Parametern produzieren kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und komplexem Reasoning. Für die meisten Fälle beginnen Sie mit einem 3B-Modell.' } },
           { '@type': 'Question', name: 'Kann ich ein 3B-Modell auf einem Telefon ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja -- Llama 3.2 1B und 3B sind speziell für die mobile Bereitstellung auf dem Gerät konzipiert. Inferenzen auf einem modernen Telefon erzeugen 15-30 tok/sec für 1B-Modelle. Mobile Frameworks wie MLC LLM unterstützen iOS, aber Ollama und LM Studio funktionieren derzeit nicht auf iOS/Android.' } },
@@ -635,7 +629,6 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/fr/local-llms/small-local-llm-models',
-        'inLanguage': 'fr',
         author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -648,7 +641,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'Quel est le plus petit LLM local qui produit une sortie utile ?', acceptedAnswer: { '@type': 'Answer', text: 'Depuis avril 2026, le minimum pratique pour une sortie utile est un modèle 3B à quantification Q4_K_M. Les modèles sous 2B paramètres produisent des phrases cohérentes mais peinent avec les instructions multi-étapes et le reasoning complexe. Pour la plupart des cas, commencez avec un modèle 3B.' } },
           { '@type': 'Question', name: 'Puis-je exécuter un modèle 3B sur un téléphone ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui -- Llama 3.2 1B et 3B sont spécifiquement conçus pour le déploiement mobile sur appareil. Les inférences sur un téléphone moderne produisent 15-30 tok/sec pour les modèles 1B. Les frameworks mobiles comme MLC LLM supportent iOS, mais Ollama et LM Studio ne fonctionnent pas actuellement sur iOS/Android.' } },
@@ -696,7 +688,6 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/ja/local-llms/small-local-llm-models',
-        'inLanguage': 'ja',
         author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -709,7 +700,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: '有用な出力を生成する最小のローカルLLMは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月以降、有用な出力の実用的な最小値はQ4_K_M量子化での3Bモデルです。2Bパラメータ未満のモデルは一貫した文を生成しますが、複数ステップの指示と複雑な推論に苦労しています。ほとんどの場合、3Bモデルから始めてください。' } },
           { '@type': 'Question', name: '3Bモデルを携帯電話で実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい -- Llama 3.2 1Bと3Bはモバイルデバイスでの展開用に設計されています。最新の携帯電話での推論は1Bモデルで15～30トークン/秒を生成します。MLC LLMなどのモバイルフレームワークはiOSをサポートしていますが、OllamaとLM StudioはiOS/Androidで現在動作しません。' } },
@@ -920,7 +910,6 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/zh/local-llms/small-local-llm-models',
-        'inLanguage': 'zh',
         author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -933,7 +922,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: '生成有用输出的最小本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '截至2026年4月，有用输出的实际最小值是Q4_K_M量化下的3B模型。2B参数以下的模型可以生成连贯的单句，但在多步骤指令和复杂推理方面表现不佳。对于大多数情况，从3B模型开始。' } },
           { '@type': 'Question', name: '我可以在手机上运行3B模型吗？', acceptedAnswer: { '@type': 'Answer', text: '可以----Llama 3.2 1B和3B专为移动设备部署而设计。在现代手机上的推理为1B模型生成15-30个令牌/秒。MLC LLM等移动框架支持iOS，但Ollama和LM Studio目前不能在iOS/Android上运行。' } },

@@ -216,7 +216,6 @@ schema: {
         'headline': 'LM Studio vs Jan AI 2026: Features, Speed, UI Comparison',
         'description': 'LM Studio vs Jan AI: Feature comparison, speed, UI, API support. Which local LLM desktop app is better? April 2026 review.',
         'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -236,7 +235,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -490,7 +488,6 @@ schema: {
         'headline': 'LM Studio vs Jan AI: Welches ist besser für lokale LLMs?',
         'description': 'LM Studio führt für Anfänger: schnelleres Setup, integrierte HuggingFace-Suche, 3 Jahre Erfolgsbilanz. Jan AI für Entwickler: Plugins, mehrere API-Endpunkte, lokales RAG. April 2026 Entscheidungsleitfaden.',
         'url': 'https://www.promptquorum.com/de/local-llms/lm-studio-vs-jan-ai',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -511,7 +508,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Welches sollte ich für mein erstes lokales LLM wählen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio. Einfachere Benutzeroberfläche, schnelleres Setup, integrierte Modell-Erkennung. Jan AI, wenn Sie Plugins experimentieren möchten.' } },
           { '@type': 'Question', 'name': 'Kann ich die LM Studio API mit VS Code Copilot verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Starten Sie den LM Studio Server, kopieren Sie die Endpunkt-URL in die Copilot-Einstellungen.' } },
@@ -532,7 +528,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI: Welches ist besser für lokale LLMs?',
         'url': 'https://www.promptquorum.com/de/local-llms/lm-studio-vs-jan-ai',
-        'inLanguage': 'de',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio: Einfacher, stabiler, 3 Jahre Erfolgsbilanz. Ideal für Anfänger.' },
           { '@type': 'ListItem', position: 2, name: 'Jan AI: Neuere Lösung, Plug-in-System, besser für Entwickler. Häufigere Updates.' },
@@ -750,7 +745,6 @@ schema: {
         'headline': 'LM Studio vs Jan AI : Lequel choisir pour les LLM locaux ?',
         'description': 'LM Studio domine pour les débutants : installation rapide, recherche HuggingFace intégrée, 3 ans de fiabilité. Jan AI pour les développeurs : plugins, API multiples, RAG local. Guide 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/lm-studio-vs-jan-ai',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -771,7 +765,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Lequel choisir pour mon premier LLM local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio. Interface plus simple, setup plus rapide, découverte de modèles intégrée. Jan AI si vous voulez expérimenter les plugins.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser l\'API LM Studio avec Copilot ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Démarrez le serveur LM Studio, copiez l\'endpoint dans Copilot.' } },
@@ -790,7 +783,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI : Lequel choisir pour les LLM locaux ?',
         'url': 'https://www.promptquorum.com/fr/local-llms/lm-studio-vs-jan-ai',
-        'inLanguage': 'fr',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio : simple, stable, 3 ans de suivi. Idéal pour débutants.' },
           { '@type': 'ListItem', position: 2, name: 'Jan AI : plus récent, système de plugins, meilleur pour développeurs. Mises à jour fréquentes.' },
@@ -1018,7 +1010,6 @@ schema: {
         'headline': 'LM Studio vs Jan AI：ローカルLLMにはどちらが優れているか？',
         'description': 'LM Studioは初心者向け：セットアップが速い、HuggingFaceの検索機能が組み込み、3年の信頼実績。Jan AIは開発者向け：プラグインシステム、複数のAPIエンドポイント、ローカルRAG対応。2026年の決定ガイド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/lm-studio-vs-jan-ai',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1039,7 +1030,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ローカルLLMを初めて使う場合は、どちらを選ぶべきですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio。より簡単なUI、セットアップが速く、モデルの発見が組み込み。プラグインでいろいろ試してみたい場合はJan AIです。' } },
           { '@type': 'Question', 'name': 'LM Studio APIはVS Code Copilotで使用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。LM Studioサーバーを開始し、エンドポイントURLをCopilot拡張設定にコピーしてください。' } },
@@ -1058,7 +1048,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI：ローカルLLMにはどちらが優れているか？',
         'url': 'https://www.promptquorum.com/ja/local-llms/lm-studio-vs-jan-ai',
-        'inLanguage': 'ja',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio：シンプル、安定、3年の信頼実績。初心者向け。' },
           { '@type': 'ListItem', position: 2, name: 'Jan AI：新しい、プラグインシステム、開発者向け。更新が頻繁。' },
@@ -1286,7 +1275,6 @@ schema: {
         'headline': 'LM Studio vs Jan AI：哪款本地LLM应用更好用？',
         'description': 'LM Studio适合初学者：安装快、集成HuggingFace搜索、3年稳定记录。Jan AI适合开发者：插件系统、多API端口、本地RAG。2026年选择指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/lm-studio-vs-jan-ai',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1307,7 +1295,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '第一次用本地LLM选哪个？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio。界面简单、安装快、模型发现内置。想试验插件就选Jan AI。' } },
           { '@type': 'Question', 'name': '能在VS Code Copilot用LM Studio API吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。启动LM Studio服务器，复制端口到Copilot设置。' } },
@@ -1326,7 +1313,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI：哪款本地LLM应用更好用？',
         'url': 'https://www.promptquorum.com/zh/local-llms/lm-studio-vs-jan-ai',
-        'inLanguage': 'zh',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio：简洁、稳定、3年历史。最适合初学者。' },
           { '@type': 'ListItem', position: 2, name: 'Jan AI：更新、插件系统、更好支持开发者。更新频繁。' },
@@ -1544,7 +1530,6 @@ schema: {
         'headline': 'LM Studio vs Jan AI: ¿Cuál es mejor para LLMs locales?',
         'description': 'LM Studio es mejor para principiantes: configuración más rápida, búsqueda HuggingFace integrada, 3 años de historial. Jan AI para desarrolladores: plugins, múltiples endpoints API, RAG local. Guía de decisión de abril de 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-vs-jan-ai?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1565,7 +1550,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuál debería elegir para mi primer LLM local — LM Studio o Jan AI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio. Tiene una interfaz más simple, configuración más rápida y descubrimiento de modelos integrado desde Hugging Face. Jan AI es mejor si quieres experimentar con plugins y extensibilidad.' } },
           { '@type': 'Question', 'name': '¿Puedo usar la API de LM Studio con VS Code Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Inicia el servidor local de LM Studio, copia la URL del endpoint (localhost:1234) y pégala en los ajustes de la extensión VS Code Copilot como URL base.' } },
@@ -1584,7 +1568,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI: ¿Cuál es mejor para LLMs locales?',
         'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-vs-jan-ai?lang=es',
-        'inLanguage': 'es',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio: más simple, más estable, 3 años de historial. Mejor para principiantes.' },
           { '@type': 'ListItem', position: 2, name: 'Jan AI: más reciente, sistema de plugins, mejor para desarrolladores. Actualizaciones más frecuentes.' },

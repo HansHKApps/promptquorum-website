@@ -172,7 +172,6 @@ schema: {
         'headline': 'Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain',
         'description': 'Best local RAG tools: Open WebUI, LlamaIndex, LangChain, and more. Document Q&A, retrieval, chunking.',
         'url': 'https://www.promptquorum.com/local-llms/best-local-rag-tools',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -180,7 +179,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'How many documents can local RAG handle?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chroma handles 100K-1M documents easily on consumer hardware. Beyond 1M, use Qdrant or Milvus.' } },
           { '@type': 'Question', 'name': 'Can RAG work with images?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Only if you extract text first (OCR). For true image understanding, use multimodal models like Llama 3.2 Vision with RAG.' } },

@@ -216,7 +216,6 @@ schema: {
         'headline': 'LoRA Fine-Tuning for Local LLMs 2026: Unsloth Tutorial on 8 GB VRAM with Llama 3.1',
         'description': 'Fine-tune Llama 3.1 8B with LoRA on 8 GB VRAM in 1–2 hours using Unsloth (4× faster). Only 500 examples needed. Full code, hyperparameters, and LoRA vs RAG decision matrix.',
         'url': 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
@@ -251,7 +250,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -578,7 +576,6 @@ schema: {
         'headline': 'Fine-Tuning LoRA para LLMs Locales 2026: Tutorial de Unsloth en 8 GB de VRAM con Llama 3.1',
         'description': 'Haz fine-tuning de Llama 3.1 8B con LoRA en 8 GB de VRAM en 1–2 horas usando Unsloth (4× más rápido). Solo 500 ejemplos necesarios. Código completo, hiperparámetros y matriz de decisión LoRA vs RAG.',
         'url': 'https://www.promptquorum.com/es/local-llms/fine-tuning-local-llms-lora?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -600,7 +597,6 @@ schema: {
         '@type': 'HowTo',
         'name': 'Cómo hacer fine-tuning de un LLM local con LoRA usando Unsloth',
         'description': 'Guía paso a paso para hacer fine-tuning de Llama 3.1 8B con LoRA en 8 GB de VRAM usando Unsloth en 2 horas.',
-        'inLanguage': 'es',
         'totalTime': 'PT2H',
         'estimatedCost': { '@type': 'PriceSpecification', 'priceCurrency': 'USD', 'price': '0' },
         'step': [
@@ -614,7 +610,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -726,7 +721,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Flujo de trabajo de fine-tuning con LoRA',
-        'inLanguage': 'es',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Preparar datos de entrenamiento', 'description': 'Crea 500–5000 ejemplos de alta calidad en formato de chat. La calidad importa más que la cantidad.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Hacer fine-tuning con unsloth o HuggingFace TRL', 'description': 'Unsloth es 2× más rápido en hardware de consumo. Requiere 8 GB de VRAM para modelos de 7B con cuantización de 4 bits.' },
@@ -948,7 +942,6 @@ schema: {
         'headline': 'LoRA Fine-Tuning für lokale LLMs 2026: Unsloth-Anleitung mit Llama 3.1 auf 8 GB VRAM',
         'description': 'Fine-Tunen Sie Llama 3.1 8B mit LoRA auf 8 GB VRAM in 1–2 Stunden mit Unsloth (4× schneller). Benötigt nur 500 Beispiele. Vollständiger Code, Hyperparameter und LoRA vs RAG Entscheidungsmatrix.',
         'url': 'https://www.promptquorum.com/de/local-llms/fine-tuning-local-llms-lora',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
@@ -970,7 +963,6 @@ schema: {
         '@type': 'HowTo',
         'name': 'Wie man ein lokales LLM mit LoRA unter Verwendung von Unsloth fine-tuned',
         'description': 'Schritt-für-Schritt-Anleitung zum Fine-Tuning von Llama 3.1 8B mit LoRA auf 8 GB VRAM mit Unsloth in 2 Stunden.',
-        'inLanguage': 'de',
         'totalTime': 'PT2H',
         'estimatedCost': { '@type': 'PriceSpecification', 'priceCurrency': 'USD', 'price': '0' },
         'step': [
@@ -984,7 +976,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1112,7 +1103,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LoRA Fine-Tuning Arbeitsablauf',
-        'inLanguage': 'de',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Trainingsdaten vorbereiten', 'description': 'Erstellen Sie 500–5000 hochwertige Beispiele in Chat-Format. Qualität ist wichtiger als Quantität.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Fine-Tune mit Unsloth oder HuggingFace TRL', 'description': 'Unsloth ist 2× schneller auf Consumer-Hardware. Erfordert 8 GB VRAM für 7B Modelle bei 4-Bit Quantisierung.' },
@@ -1334,7 +1324,6 @@ schema: {
         'headline': 'Fine-Tuning LoRA pour LLMs locaux 2026 : Tutoriel Unsloth sur 8 Go de VRAM avec Llama 3.1',
         'description': 'Fine-tuner Llama 3.1 8B avec LoRA sur 8 Go de VRAM en 1–2 heures avec Unsloth (4× plus rapide). Nécessite seulement 500 exemples. Code complet, hyperparamètres et matrice de décision LoRA vs RAG.',
         'url': 'https://www.promptquorum.com/fr/local-llms/fine-tuning-local-llms-lora',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
@@ -1356,7 +1345,6 @@ schema: {
         '@type': 'HowTo',
         'name': 'Comment fine-tuner un LLM local avec LoRA en utilisant Unsloth',
         'description': 'Guide étape par étape pour fine-tuner Llama 3.1 8B avec LoRA sur 8 Go de VRAM avec Unsloth en 2 heures.',
-        'inLanguage': 'fr',
         'totalTime': 'PT2H',
         'estimatedCost': { '@type': 'PriceSpecification', 'priceCurrency': 'USD', 'price': '0' },
         'step': [
@@ -1370,7 +1358,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1458,7 +1445,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Workflow fine-tuning LoRA',
-        'inLanguage': 'fr',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Préparer les données d\'entraînement', 'description': 'Créez 500–5000 exemples de haute qualité en format chat. La qualité prime sur la quantité.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Fine-tuner avec Unsloth ou HF TRL', 'description': 'Unsloth est 2× plus rapide sur matériel grand public. Nécessite 8 Go VRAM pour modèles 7B en quantisation 4 bits.' },
@@ -1680,7 +1666,6 @@ schema: {
         'headline': 'LoRA ファインチューニング入門 2026年 : Unsloth で Llama 3.1 を 8GB VRAM で実行',
         'description': 'Unsloth（4倍高速）を使用して、Llama 3.1 8B を 8GB VRAM で 1～2時間でファインチューニングします。500例のみ必要。完全なコード、ハイパーパラメータ、および LoRA vs RAG 決定マトリックス。',
         'url': 'https://www.promptquorum.com/ja/local-llms/fine-tuning-local-llms-lora',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1702,7 +1687,6 @@ schema: {
         '@type': 'HowTo',
         'name': 'Unsloth を使用してローカル LLM を LoRA でファインチューニングする方法',
         'description': 'Unsloth を使用して Llama 3.1 8B を 8GB VRAM で LoRA でファインチューニングするためのステップバイステップ ガイド（2時間）。',
-        'inLanguage': 'ja',
         'totalTime': 'PT2H',
         'estimatedCost': { '@type': 'PriceSpecification', 'priceCurrency': 'USD', 'price': '0' },
         'step': [
@@ -1716,7 +1700,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1804,7 +1787,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LoRA ファインチューニング ワークフロー',
-        'inLanguage': 'ja',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'トレーニングデータを準備', 'description': 'チャット形式で500～5000の高品質な例を作成します。品質が量を上回ります。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Unsloth または HF TRL でファインチューン', 'description': 'Unsloth はコンシューマーハードウェアで2倍高速です。4ビット量子化で 7B モデルに 8GB VRAM が必要です。' },
@@ -2026,7 +2008,6 @@ schema: {
         'headline': 'LoRA 微调本地 LLM 2026：Unsloth 8GB VRAM Llama 3.1 教程',
         'description': '使用 Unsloth（快 4 倍）在 8GB VRAM 上 1-2 小时内微调 Llama 3.1 8B。只需 500 个示例。完整代码、超参数和 LoRA vs RAG 决策矩阵。',
         'url': 'https://www.promptquorum.com/zh/local-llms/fine-tuning-local-llms-lora',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -2048,7 +2029,6 @@ schema: {
         '@type': 'HowTo',
         'name': '如何使用 Unsloth 用 LoRA 微调本地 LLM',
         'description': '使用 Unsloth 在 8GB VRAM 上 2 小时内微调 Llama 3.1 8B with LoRA 的分步指南。',
-        'inLanguage': 'zh',
         'totalTime': 'PT2H',
         'estimatedCost': { '@type': 'PriceSpecification', 'priceCurrency': 'USD', 'price': '0' },
         'step': [
@@ -2062,7 +2042,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -2173,7 +2152,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'zh',
         'name': 'LoRA 微调工作流',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '准备训练数据', 'description': '创建 500-5000 个高质量示例的聊天格式。质量比数量更重要。' },

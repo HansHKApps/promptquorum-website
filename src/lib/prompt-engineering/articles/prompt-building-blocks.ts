@@ -933,7 +933,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         headline: 'Los 5 bloques de construcción que todo prompt necesita',
         description: 'Los 5 bloques de construcción de todo prompt: rol y contexto, tarea/instrucción, input y ejemplos, restricciones y formato de output. Con estos cinco componentes, cada prompt de IA se vuelve fiable y repetible.',
         datePublished: '2026-03-01',

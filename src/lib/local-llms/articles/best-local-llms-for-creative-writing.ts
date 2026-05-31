@@ -28,7 +28,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-creative-writing',
-        'inLanguage': 'en',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'Creative writing AI' },
@@ -53,7 +52,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Improve Local LLM Creative Writing Output',
-        'inLanguage': 'en',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Specify style concretely with author reference' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Assign the model a professional writing role' },
@@ -66,7 +64,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Best Local LLMs for Creative Writing 2026',
-        'inLanguage': 'en',
         'numberOfItems': 4,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Meta Llama 3.3 70B', 'description': 'Best prose quality. 40 GB RAM. Widest stylistic range. 1K-3K word coherence. ollama run llama3.3:70b' },
@@ -78,7 +75,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can a local LLM replace a writing assistant like Claude or GPT-4o for fiction?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For short-form content (under 500 words), a well-prompted 13B+ local model produces output that is difficult to distinguish from cloud models in blind tests. For long-form fiction (novels, full short stories), Claude Opus 4.7 and GPT-4o maintain narrative coherence more reliably at any hardware tier. A 70B local model narrows this gap significantly.' } },
           { '@type': 'Question', 'name': 'Does the model remember earlier parts of my story?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Only within the current context window. If your conversation history exceeds the model\'s context limit (typically 4K-128K tokens), earlier details are forgotten. For long projects, periodically provide a story summary at the start of each session to re-establish context.' } },
@@ -323,7 +319,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-creative-writing?lang=es',
-        'inLanguage': 'es',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'IA para escritura creativa' },
@@ -347,7 +342,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Cómo mejorar la salida de escritura creativa de un LLM local',
-        'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Especifica el estilo de forma concreta con referencia de autor' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Asigna al modelo un rol de escritor profesional' },
@@ -360,7 +354,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Mejores LLM locales para escritura creativa 2026',
-        'inLanguage': 'es',
         'numberOfItems': 4,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Meta Llama 3.3 70B', 'description': 'Mejor calidad de prosa. 40 GB de RAM. Mayor rango estilístico. Coherencia de 1K-3K palabras. ollama run llama3.3:70b' },
@@ -372,7 +365,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puede un LLM local reemplazar a un asistente de escritura como Claude o GPT-4o para ficción?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para contenido de formato corto (menos de 500 palabras), un modelo local de 13B+ bien prompeado produce una salida que es difícil de distinguir de los modelos en la nube en pruebas ciegas. Para ficción de formato largo (novelas, cuentos completos), Claude Opus 4.7 y GPT-4o mantienen la coherencia narrativa de forma más fiable en cualquier nivel de hardware. Un modelo local de 70B reduce significativamente esta brecha.' } },
           { '@type': 'Question', 'name': '¿El modelo recuerda partes anteriores de mi historia?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Solo dentro de la ventana de contexto actual. Si el historial de conversación supera el límite de contexto del modelo (generalmente 4K-128K tokens), los detalles anteriores se olvidan. Para proyectos largos, proporciona periódicamente un resumen de la historia al inicio de cada sesión para restablecer el contexto.' } },
@@ -753,7 +745,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Beste lokale LLMs für kreatives Schreiben 2026',
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-creative-writing',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -761,7 +752,6 @@ schema: {
         'proficiencyLevel': 'Anfänger',
         'mainEntity': {
           '@type': 'FAQPage',
-          'inLanguage': 'de',
           'mainEntity': [],
         },
       },
@@ -915,7 +905,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Meilleurs LLMs locaux pour écriture créative 2026',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-creative-writing',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -923,7 +912,6 @@ schema: {
         'proficiencyLevel': 'Débutant',
         'mainEntity': {
           '@type': 'FAQPage',
-          'inLanguage': 'fr',
           'mainEntity': [],
         },
       },
@@ -1080,7 +1068,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': '2026年の最高の創作文章向けローカルLLM',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llms-for-creative-writing',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1088,7 +1075,6 @@ schema: {
         'proficiencyLevel': '初心者',
         'mainEntity': {
           '@type': 'FAQPage',
-          'inLanguage': 'ja',
           'mainEntity': [],
         },
       },
@@ -1243,7 +1229,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': '2026年最佳创意写作本地LLM',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llms-for-creative-writing',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1251,7 +1236,6 @@ schema: {
         'proficiencyLevel': '初学者',
         'mainEntity': {
           '@type': 'FAQPage',
-          'inLanguage': 'zh',
           'mainEntity': [],
         },
       },

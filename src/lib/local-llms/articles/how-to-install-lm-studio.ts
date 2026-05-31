@@ -195,7 +195,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio',
-        'inLanguage': 'en',
         'headline': 'Install LM Studio: GUI Setup for macOS, Windows & Linux',
         'description': 'Install LM Studio on macOS, Windows, or Linux: download, load a model, and start chatting in 5 minutes. No terminal needed. Beginner guide 2026.',
         'datePublished': '2026-04-04',
@@ -217,7 +216,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -459,7 +457,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/es/local-llms/how-to-install-lm-studio?lang=es',
-        'inLanguage': 'es',
         'headline': 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
         'description': 'Instala LM Studio en macOS, Windows o Linux: descarga un modelo y empieza a chatear en 5 minutos. Sin terminal. Guía para principiantes 2026.',
         'datePublished': '2026-04-04',
@@ -481,7 +478,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -822,7 +818,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         mainEntity: [
           {
             '@type': 'Question',
@@ -1141,7 +1136,6 @@ schema: {
         'headline': 'Installer LM Studio : guide de configuration de l\'application desktop pour macOS, Windows et Linux',
         'description': 'Guide étape par étape d\'installation de LM Studio et configuration du premier modèle. Exécuteur de LLM local piloté par interface graphique avec interface de chat et serveur local compatible OpenAI.',
         'url': 'https://www.promptquorum.com/fr/local-llms/how-to-install-lm-studio',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1181,7 +1175,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'LM Studio affiche « Not enough memory to load model »', acceptedAnswer: { '@type': 'Answer', text: 'Le modèle nécessite plus de RAM que disponible. Fermez autres applications pour libérer de la mémoire, ou sélectionnez une quantification plus petite (Q3_K_S au lieu de Q4_K_M). Règle générale : multipliez la taille du fichier par 1,2 pour estimer la RAM requise. Un fichier de 4,5 GB nécessite ~5,4 GB de RAM libres.' } },
           { '@type': 'Question', name: 'Le modèle génère très lentement (moins de 5 tokens/seconde)', acceptedAnswer: { '@type': 'Answer', text: 'Le modèle s\'exécute entièrement sur le CPU. Vérifiez Couches GPU dans le panneau droit -- si cela affiche 0, votre GPU n\'est pas utilisé. Sur macOS, LM Studio active Metal (GPU) automatiquement pour Apple Silicon. Sur Windows/Linux avec NVIDIA, assurez-vous que votre pilote est à jour et augmentez Couches GPU au maximum.' } },
@@ -1425,14 +1418,12 @@ schema: {
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
-        'inLanguage': 'ja'
       },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'LM Studioをインストールしてはじめてのモデルを実行する方法',
         'totalTime': 'PT5M',
-        'inLanguage': 'ja',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'lmstudio.aiからLM Studioをダウンロード' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'macOS、WindowsまたはLinuxにインストール' },
@@ -1444,7 +1435,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: 'LM Studioが「モデルをロードするメモリが不足しています」と表示される', acceptedAnswer: { '@type': 'Answer', text: 'モデルには利用可能なメモリより多いRAMが必要。他のアプリケーションを閉じてメモリを解放するか、より小さい量子化を選択。' } },
           { '@type': 'Question', name: 'モデルが非常にゆっくり生成される（秒あたり5トークン未満）', acceptedAnswer: { '@type': 'Answer', text: 'モデルはCPU上で完全に実行。右パネルのGPU Layersをチェック--0が表示される場合、GPUは使用されていない。' } },
@@ -1463,7 +1453,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'LM Studio vs Ollama Comparison',
         'numberOfItems': 6,
-        'inLanguage': 'ja',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Interface', 'description': 'LM Studio: graphical desktop app. Ollama: terminal plus API.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Model source', 'description': 'LM Studio: any GGUF on Hugging Face. Ollama: curated library of ~200 models.' },
@@ -1689,14 +1678,12 @@ schema: {
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
-        'inLanguage': 'zh'
       },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': '如何安装 LM Studio 并运行您的第一个模型',
         'totalTime': 'PT5M',
-        'inLanguage': 'zh',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': '从 lmstudio.ai 下载 LM Studio' },
           { '@type': 'HowToStep', 'position': 2, 'name': '在 macOS、Windows 或 Linux 上安装' },
@@ -1708,7 +1695,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: 'LM Studio 显示"没有足够的内存来加载模型"', acceptedAnswer: { '@type': 'Answer', text: '模型需要比可用更多的 RAM。关闭其他应用以释放内存，或选择更小的量化。' } },
           { '@type': 'Question', name: '模型生成非常缓慢（每秒 5 个令牌以下）', acceptedAnswer: { '@type': 'Answer', text: '模型完全在 CPU 上运行。检查右窗格中的 GPU 层 - 如果显示 0，您的 GPU 未被使用。' } },
@@ -1727,7 +1713,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'LM Studio vs Ollama Comparison',
         'numberOfItems': 6,
-        'inLanguage': 'zh',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Interface', 'description': 'LM Studio: graphical desktop app. Ollama: terminal plus API.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Model source', 'description': 'LM Studio: any GGUF on Hugging Face. Ollama: curated library of ~200 models.' },

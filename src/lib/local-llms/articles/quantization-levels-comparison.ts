@@ -1108,7 +1108,6 @@ schema: {
         'headline': 'Q4 vs Q5 vs Q8: どの量子化レベルを使用する?',
         'description': 'GGUF量子化完全比較: Q2、Q3、Q4、Q5、Q6、Q8。精度、遅延、メモリトレードオフをマスター。ローカルLLM性能最適化。',
         'url': 'https://www.promptquorum.com/ja/local-llms/quantization-levels-comparison',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1118,7 +1117,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Q4とQ5、どちらを選ぶ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4を選ぶ。Q5はメモリ(22GB)多いのに、品質向上(5%)わずか。コストに見合わない。' } },
           { '@type': 'Question', 'name': 'Q4の品質低下は感知できるか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ほぼ不可。ユーザーテストでもQ4/Q6同等と評価。テキスト生成は品質5%低下で知覚困難。' } },
@@ -1250,7 +1248,6 @@ schema: {
         'headline': 'Q4 vs Q5 vs Q8: 应该使用哪个量子化级别?',
         'description': 'GGUF量子化完整比较: Q2、Q3、Q4、Q5、Q6、Q8、FP32。精度、延迟、内存权衡。本地LLM性能优化。',
         'url': 'https://www.promptquorum.com/zh/local-llms/quantization-levels-comparison',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1260,7 +1257,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Q4和Q5，选择哪个?', 'acceptedAnswer': { '@type': 'Answer', 'text': '选Q4。Q5内存(22GB)更多，质量改进(5%)微小。成本效益差。' } },
           { '@type': 'Question', 'name': 'Q4质量损失能感知吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '几乎不能。用户测试Q4/Q6评价相同。文本生成5%质量损失难以察觉。' } },

@@ -26,7 +26,6 @@ schema: {
         'headline': 'NAS Storage for Local LLMs: RAID 6, Backup & Redundancy',
         'description': 'Best NAS for local LLMs: RAID 6 redundancy, backup strategy, and model library organization. Compare Synology, QNAP, and TrueNAS.',
         'url': 'https://www.promptquorum.com/local-llms/best-nas-storage-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }
@@ -45,7 +44,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -204,7 +202,6 @@ schema: {
         'headline': 'NAS para LLMs Locales: RAID 6, Backup y Redundancia',
         'description': 'Mejor NAS para LLMs locales: redundancia RAID 6, estrategia de backup y organización de la biblioteca de modelos. Compara Synology, QNAP y TrueNAS.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-nas-storage-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -224,7 +221,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -371,7 +367,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/de/local-llms/best-nas-storage-local-llm',
-        'inLanguage': 'de',
         'headline': 'NAS-Speicher für lokale LLMs: RAID 6, Sicherung & Redundanz',
         'description': 'Beste NAS für lokale LLMs: RAID-6-Redundanz, Sicherungsstrategie und Organisation der Modellbibliothek. Vergleich: Synology, QNAP und TrueNAS. Kostenlos -- April 2026.',
         'datePublished': '2026-04-05',
@@ -402,7 +397,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-nas-storage-local-llm',
-        'inLanguage': 'fr',
         'headline': 'NAS pour LLM locaux 2026: RAID 6, Sauvegarde & Redondance',
         'description': 'Meilleur NAS pour LLM locaux : redondance RAID 6, stratégie de sauvegarde et organisation de la bibliothèque de modèles. Comparez Synology, QNAP et TrueNAS. Gratuit -- avril 2026.',
         'datePublished': '2026-04-05',
@@ -429,7 +423,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-nas-storage-local-llm',
-        'inLanguage': 'ja',
         'headline': 'ローカルLLM用NAS 2026: RAID 6、バックアップ & 冗長性',
         'description': 'ローカルLLM向けベストNAS：RAID 6冗長性、バックアップ戦略、モデルライブラリ組織。Synology、QNAP、TrueNASを比較。無料--2026年4月。',
         'datePublished': '2026-04-05',
@@ -456,7 +449,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-nas-storage-local-llm',
-        'inLanguage': 'zh',
         'headline': '本地LLM的NAS存储 2026: RAID 6 与备份冗余',
         'description': '本地LLM最佳NAS：RAID 6冗余、备份策略和模型库组织。对比Synology、QNAP和TrueNAS。免费--2026年4月。',
         'datePublished': '2026-04-05',

@@ -239,7 +239,6 @@ schema: {
         'headline': 'Run 70B LLMs on Consumer Hardware 2026: RAM & GPU Setup',
         'description': 'Run Llama 3.3 and Qwen2.5 70B models locally: RAM requirements, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Complete hardware guide -- April 2026.',
         'url': 'https://www.promptquorum.com/local-llms/70b-models-consumer-hardware',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -263,7 +262,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Run a 70B Model on Consumer Hardware with Ollama',
-        'inLanguage': 'en',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Verify you have 40+ GB available RAM or unified memory' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Install Ollama from ollama.com' },
@@ -276,7 +274,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Consumer Hardware for 70B Local LLM Inference 2026',
-        'inLanguage': 'en',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max 64GB', 'description': 'Full GPU. 20-30 tok/sec. Best laptop. ~$3,500.' },
@@ -291,7 +288,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'What is the cheapest hardware that can run a 70B model usably?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As of April 2026, a used Mac Studio M2 Ultra (64 GB unified memory) for ~$2,000 is the cheapest path to 70B inference at 25+ tok/sec. A new machine equivalent would be the M5 Max MacBook Pro 64 GB (~$3,500). An NVIDIA RTX 4090 desktop build (24 GB VRAM + 32 GB RAM) costs ~$3,000-$4,000 total but produces slower inference due to layer offloading.' } },
           { '@type': 'Question', 'name': 'Can I run a 70B model on two GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes -- llama.cpp and Ollama support multi-GPU inference on NVIDIA hardware. Two RTX 4090s (48 GB total VRAM) fit a Q4_K_M 70B model entirely in VRAM. Ollama handles multi-GPU automatically when multiple GPUs are present. Tensor parallelism in llama.cpp (`--tensor-split`) controls how layers are distributed.' } },
@@ -537,7 +533,6 @@ schema: {
         'headline': 'Cómo ejecutar modelos 70B en hardware de consumo 2026: RAM y GPU',
         'description': 'Ejecuta modelos Llama 3.3 y Qwen2.5 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Guía de hardware completa -- abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/70b-models-consumer-hardware?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -561,7 +556,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Cómo ejecutar un modelo 70B en hardware de consumo con Ollama',
-        'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Verifica que tienes más de 40 GB de RAM disponible o memoria unificada' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Instala Ollama desde ollama.com' },
@@ -574,7 +568,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Hardware de consumo para inferencia local de LLM 70B en 2026',
-        'inLanguage': 'es',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max 64 GB', 'description': 'GPU completa. 20-30 tok/seg. Mejor laptop. ~$3,500.' },
@@ -589,7 +582,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuál es el hardware más barato que puede ejecutar un modelo 70B de forma utilizable?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En abril de 2026, un Mac Studio M2 Ultra de segunda mano (64 GB de memoria unificada) por ~$2,000 es el camino más económico hacia la inferencia 70B a 25+ tok/seg. Un equipo nuevo equivalente sería el MacBook Pro M5 Max de 64 GB (~$3,500). Un escritorio con NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) cuesta ~$3,000-$4,000 en total, pero produce una inferencia más lenta debido al layer offloading.' } },
           { '@type': 'Question', 'name': '¿Puedo ejecutar un modelo 70B en dos GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí -- llama.cpp y Ollama admiten inferencia multi-GPU en hardware NVIDIA. Dos RTX 4090 (48 GB de VRAM total) caben un modelo 70B en Q4_K_M completamente en VRAM. Ollama gestiona el multi-GPU automáticamente cuando hay múltiples GPUs presentes. El paralelismo de tensores en llama.cpp (`--tensor-split`) controla cómo se distribuyen las capas.' } },
@@ -631,7 +623,6 @@ schema: {
     'headline': 'So führst du 70B Local LLM Modelle auf Consumer Hardware 2026 aus',
     'description': '70B Local LLMs auf Consumer Hardware ausführen: RAM-Anforderungen, GPU-Optionen, Layer Offloading und Quantisierung. Was Du für Llama 3.3 benötigst -- kostenlos April 2026.',
     'url': 'https://www.promptquorum.com/de/local-llms/70b-models-consumer-hardware',
-    'inLanguage': 'de',
     'datePublished': '2026-04-04',
     'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
     'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -653,7 +644,6 @@ schema: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     'name': 'So führst du 70B Modelle auf Consumer Hardware aus',
-    'inLanguage': 'de',
     'step': [
       { '@type': 'HowToStep', 'position': 1, 'name': 'Überprüfe deine Hardware-Anforderungen', 'text': 'Bestimme, ob deine Hardware 40-48 GB RAM insgesamt bereitstellen kann. Apple Silicon Macs mit 64 GB, NVIDIA RTX 4090 mit 32 GB System RAM oder CPU-only Systeme mit 64 GB sind alle machbar.' },
       { '@type': 'HowToStep', 'position': 2, 'name': 'Wähle dein 70B Modell', 'text': 'Entscheide zwischen Llama 3.3 70B für Englisch oder Qwen2.5 72B für Multilingual und Coding.' },
@@ -665,7 +655,6 @@ schema: {
   itemListSchema: {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    'inLanguage': 'de',
     'name': 'Hardware-Optionen für 70B Modelle',
     'itemListElement': [
       { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max (64 GB unified)', 'description': 'Kann 70B ausführen -- vollständig auf GPU, 20-30 tok/sec' },
@@ -678,7 +667,6 @@ schema: {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'inLanguage': 'de',
     'mainEntity': [
       {
         '@type': 'Question',
@@ -1144,7 +1132,6 @@ schema: {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'inLanguage': 'ja',
     mainEntity: [
       { '@type': 'Question', name: '70Bモデルを実行するには最小限のハードウェアは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月時点では、使用可能で実用的な最小限は64GB統合メモリを備えたApple M5 Max MacBook Pro、またはレイヤーオフロード機能を備えたNVIDIA RTX 4090（24GB VRAM）+ 32GB システムRAMです。CPU専用70B推論は技術的には可能（64GB RAM）ですが、1～3 tok/secしか生成しないため、対話的な使用には現実的ではありません。' } },
       { '@type': 'Question', name: 'Apple SiliconとNVIDIA GPUで70Bモデルを実行する場合、なぜ速度に違いがあるのですか？', acceptedAnswer: { '@type': 'Answer', text: 'Apple Siliconは統合メモリを使用します。CPU と GPU は同じ物理メモリプールを共有するため、メモリ帯域幅の制限がありません。NVIDIA GPUは独立したVRAMを持つため、24GBのVRAMには70Bモデルの約60％しか格納できず、残りのレイヤーはCPU上で実行され、メモリ帯域幅のボトルネックが生じます。' } },
@@ -1545,7 +1532,6 @@ schema: {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'inLanguage': 'zh',
     mainEntity: [
       {
         '@type': 'Question',

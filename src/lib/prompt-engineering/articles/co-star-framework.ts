@@ -24,7 +24,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/prompt-engineering/co-star-framework?lang=en',
-        'inLanguage': 'en',
         headline: 'The CO-STAR Framework',
         description: 'How the CO-STAR Framework (Context, Objective, Style, Tone, Audience, Response) works, when to use it, and how PromptQuorum offers CO-STAR as a built-in option.',
         datePublished: '2026-03-24',
@@ -49,7 +48,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        'inLanguage': 'en',
         'name': 'Use the CO-STAR Framework',
         'step': [
           { '@type': 'HowToStep', 'name': 'Define Context', 'text': 'Start with background information and relevant facts the model needs to understand the task.' },
@@ -63,7 +61,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -362,7 +359,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/de/prompt-engineering/co-star-framework',
-        'inLanguage': 'de',
         headline: 'CO-STAR-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe, Response',
         description: 'Das CO-STAR-Framework strukturiert komplexe Prompts in 6 Komponenten: Kontext, Ziel, Stil, Ton, Zielgruppe und Response. Wie es funktioniert, wann man es einsetzt, und wie PromptQuorum es als integrierte Option anbietet.',
         datePublished: '2026-03-24',
@@ -387,7 +383,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -692,7 +687,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/co-star-framework?lang=es',
         inLanguage: 'es',
         headline: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta',
@@ -990,7 +984,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/prompt-engineering/co-star-framework',
-        'inLanguage': 'fr',
         headline: 'Framework CO-STAR : Contexte, Objectif, Style, Ton, Audience, Réponse',
         description: 'Comment fonctionne le framework CO-STAR (Contexte, Objectif, Style, Ton, Audience, Réponse), quand l\'utiliser, et comment PromptQuorum l\'intègre comme option native.',
         datePublished: '2026-03-24',
@@ -1015,7 +1008,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1328,7 +1320,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ja/prompt-engineering/co-star-framework',
-        'inLanguage': 'ja',
         headline: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス',
         description: 'CO-STARフレームワークの仕組み、使用するタイミング、PromptQuorumがどのように組み込みオプションとして実装しているかについてのガイド。',
         datePublished: '2026-03-24',
@@ -1353,7 +1344,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1667,7 +1657,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/zh/prompt-engineering/co-star-framework',
-        'inLanguage': 'zh',
         headline: 'CO-STAR框架：背景、目标、风格、语调、受众、回应',
         description: 'CO-STAR框架如何运作，何时使用，以及PromptQuorum如何将CO-STAR作为内置选项实现的指南。',
         datePublished: '2026-03-24',
@@ -1692,7 +1681,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',

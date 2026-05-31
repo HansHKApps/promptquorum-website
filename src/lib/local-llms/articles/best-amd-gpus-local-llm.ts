@@ -26,7 +26,6 @@ schema: {
         'headline': 'Best AMD GPUs for Local LLMs 2026: RX 7900 XTX',
         'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. ROCm setup, vLLM performance, cost-per-TFLOP analysis. When to buy AMD over CUDA. April 2026.',
         'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -46,7 +45,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -247,7 +245,6 @@ schema: {
         'headline': 'Mejores GPUs AMD para LLMs locales 2026: RX 7900 XTX',
         'description': 'Compara AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuración de ROCm, rendimiento en vLLM, análisis de coste por TFLOP. Cuándo elegir AMD sobre CUDA. Abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -267,7 +264,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -430,7 +426,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm?lang=es',
         name: 'Mejores GPUs AMD para LLMs locales',
         itemListElement: [
@@ -580,7 +575,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'de',
         'url': 'https://www.promptquorum.com/de/local-llms/best-amd-gpus-local-llm',
         name: 'Beste AMD-GPUs für lokale LLMs',
         itemListElement: [
@@ -739,7 +733,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'fr',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-amd-gpus-local-llm',
         name: 'Meilleures GPU AMD pour les LLM locaux',
         itemListElement: [
@@ -898,7 +891,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'ja',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-amd-gpus-local-llm',
         name: 'ローカル LLM 向けベスト AMD GPU',
         itemListElement: [
@@ -1062,7 +1054,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'zh',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-amd-gpus-local-llm',
         about: [
           { '@type': 'Thing', name: 'AMD ROCm' },

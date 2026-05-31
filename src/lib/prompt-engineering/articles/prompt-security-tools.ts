@@ -382,7 +382,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-     'inLanguage': 'es',
       headline: 'Pruebas de seguridad de prompts: herramientas y métodos para detectar vulnerabilidades de injection',
       description: 'Pruebas de prompt injection: injection directa vs indirecta, herramientas, saneamiento de entrada, validación de salida y cobertura del OWASP LLM Top 10.',
       datePublished: '2026-05-02',

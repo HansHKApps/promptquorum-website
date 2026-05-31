@@ -150,7 +150,6 @@ schema: {
         'headline': 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
         'description': 'Use Ollama with VS Code via Continue.dev for local code completions -- no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -168,7 +167,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -412,7 +410,6 @@ schema: {
         'name': 'Wie man lokale LLMs mit VS Code und Cursor 2026 nutzt',
         'description': 'Wie man lokale LLMs in VS Code und Cursor für private, schnelle Code-Unterstützung mit PromptQuorum-Integration nutzt.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llms-with-vscode-cursor',
-        'inLanguage': 'de',
         'step': [
           { '@type': 'HowToStep', 'name': 'Installieren Sie Continue.dev für VS Code', 'text': 'Installieren Sie die Continue-Erweiterung aus dem VS Code Marketplace und konfigurieren Sie sie, um auf Ihren lokalen Ollama-Server zu zeigen.' },
           { '@type': 'HowToStep', 'name': 'Konfigurieren Sie Cursor mit lokalem LLM', 'text': 'In Cursor-Einstellungen stellen Sie den KI-Anbieter auf Ihren lokalen Ollama-Endpunkt (http://localhost:11434).' },
@@ -423,7 +420,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         mainEntity: [
           { '@type': 'Question', name: 'Ist lokale Code-Vervollständigung schneller als Cloud?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Cloud-Vervollständigungen (GitHub Copilot) sind schneller wegen optimierter Server. Lokale Vervollständigungen haben höhere Latenz, aber Null-Kosten und Null-Datenschutzrisiko.' } },
           { '@type': 'Question', name: 'Kann ich lokale Vervollständigungen mit anderen IDEs nutzen (PyCharm, Neovim)?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber Setup variiert. PyCharm hat ein Ollama-Plugin. Für Neovim verwenden Sie cmp-ollama (Completion-Plugin). Prüfen Sie immer die IDE-Community auf Integrationen.' } },
@@ -435,7 +431,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Lokale LLMs mit VS Code und Cursor: Einrichtung und Best Practices',
-        'inLanguage': 'de',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code nutzt die Continue.dev-Erweiterung, um sich mit lokalen Modellen zu verbinden (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor ist ein VS Code-Fork mit eingebauter lokaler Modellunterstützung. Keine Erweiterung erforderlich.' },
@@ -588,7 +583,6 @@ schema: {
         'name': 'Comment utiliser les LLM locaux avec VS Code et Cursor 2026',
         'description': 'Comment utiliser les LLM locaux dans VS Code et Cursor pour l\'assistance code privée et rapide avec intégration PromptQuorum.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-with-vscode-cursor',
-        'inLanguage': 'fr',
         'step': [
           { '@type': 'HowToStep', 'name': 'Installez Continue.dev pour VS Code', 'text': 'Installez l\'extension Continue depuis la marketplace VS Code et configurez-la pour pointer vers votre serveur Ollama local.' },
           { '@type': 'HowToStep', 'name': 'Configurez Cursor avec LLM local', 'text': 'Dans les paramètres de Cursor, réglez le fournisseur d\'IA sur votre point de terminaison Ollama local (http://localhost:11434).' },
@@ -599,7 +593,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'Les complétions de code locales sont-elles plus rapides que le cloud ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Les complétions cloud (GitHub Copilot) sont plus rapides en raison des serveurs optimisés. Les complétions locales ont une latence plus élevée mais zéro coût et zéro risque de confidentialité.' } },
           { '@type': 'Question', name: 'Puis-je utiliser les complétions locales avec d\'autres IDE (PyCharm, Neovim) ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, mais la configuration varie. PyCharm a un plugin Ollama. Pour Neovim, utilisez cmp-ollama (plugin de complétions). Vérifiez toujours auprès de la communauté IDE les intégrations.' } },
@@ -611,7 +604,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LLM Locaux avec VS Code et Cursor : Configuration et Bonnes Pratiques',
-        'inLanguage': 'fr',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code utilise l\'extension Continue.dev pour se connecter aux modèles locaux (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor est un fork VS Code avec support de modèle local intégré. Aucune extension requise.' },
@@ -779,7 +771,6 @@ schema: {
         'name': 'VS CodeとCursorで 2026年ローカル LLM を使用する方法',
         'description': 'VS CodeとCursorでローカルLLMを使用してプライベートで高速なコードアシスタンスを得る方法(PromptQuorum統合)',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-with-vscode-cursor',
-        'inLanguage': 'ja',
         'step': [
           { '@type': 'HowToStep', 'name': 'VS Code用Continue.devをインストール', 'text': 'VS Code Marketplaceからcontinue拡張をインストールし、ローカルOllamaサーバーをポイントするように設定。' },
           { '@type': 'HowToStep', 'name': 'ローカルLLMでCursorを設定', 'text': 'Cursor設定でAIプロバイダーをローカルOllamaエンドポイント（http://localhost:11434）に設定。' },
@@ -790,7 +781,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: 'ローカルコード補完はクラウドより速いですか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。クラウド補完（GitHub Copilot）は最適化されたサーバーで速いです。ローカル補完はレイテンシが高いですがゼロコストとゼロプライバシーリスク。' } },
           { '@type': 'Question', name: '他のIDE（PyCharm、Neovim）でローカル補完を使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、しかしセットアップは異なる。PyCharmはOllamaプラグインを持つ。Neovimの場合、cmp-ollama（補完プラグイン）を使用。常にIDEコミュニティ統合をチェック。' } },
@@ -802,7 +792,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'VS CodeとCursorでローカルLLMを使用する：セットアップとベストプラクティス',
-        'inLanguage': 'ja',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS CodeはContinue.dev拡張機能を使用してローカルモデル（Ollama、LM Studio、vLLM）に接続します。' },
           { '@type': 'ListItem', position: 2, name: 'Cursorはビルトインのローカルモデルサポート付きのVS Codeフォークです。拡張機能は不要です。' },
@@ -955,7 +944,6 @@ schema: {
         'name': '如何在VS Code和Cursor中使用本地LLM 2026',
         'description': '如何在VS Code和Cursor中使用本地LLM进行私密、快速的代码帮助（带PromptQuorum集成）。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-with-vscode-cursor',
-        'inLanguage': 'zh',
         'step': [
           { '@type': 'HowToStep', 'name': '安装VS Code的Continue.dev', 'text': '从VS Code市场安装Continue扩展并将其配置为指向您的本地Ollama服务器。' },
           { '@type': 'HowToStep', 'name': '在Cursor中配置本地LLM', 'text': '在Cursor设置中，将AI提供程序设置为您的本地Ollama端点（http://localhost:11434）。' },
@@ -966,7 +954,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: '本地代码补全比云更快吗？', acceptedAnswer: { '@type': 'Answer', text: '不。云补全（GitHub Copilot）由于优化的服务器而更快。本地补全具有更高延迟但零成本和零隐私风险。' } },
           { '@type': 'Question', name: '我可以在其他IDE（PyCharm、Neovim）中使用本地补全吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，但设置有所不同。PyCharm有Ollama插件。对于Neovim，使用cmp-ollama（补全插件）。始终检查IDE社区以了解集成。' } },
@@ -978,7 +965,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'VS Code和Cursor中的本地LLM：设置和最佳实践',
-        'inLanguage': 'zh',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code使用Continue.dev扩展连接到本地模型（Ollama、LM Studio、vLLM）。' },
           { '@type': 'ListItem', position: 2, name: 'Cursor是一个VS Code分支，具有内置的本地模型支持。无需扩展。' },
@@ -1133,7 +1119,6 @@ schema: {
         'name': 'Cómo usar LLMs locales con VS Code y Cursor 2026',
         'description': 'Cómo usar LLMs locales en VS Code y Cursor para asistencia de código privada y rápida con integración de PromptQuorum.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llms-with-vscode-cursor?lang=es',
-        'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'name': 'Instala Continue.dev para VS Code', 'text': 'Instala la extensión Continue desde el marketplace de VS Code y configúrala para que apunte a tu servidor Ollama local.' },
           { '@type': 'HowToStep', 'name': 'Configura Cursor con LLM local', 'text': 'En los ajustes de Cursor, establece el proveedor de IA como tu endpoint local de Ollama (http://localhost:11434).' },
@@ -1144,7 +1129,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         mainEntity: [
           { '@type': 'Question', name: '¿Las completaciones de código locales son más rápidas que las de la nube?', acceptedAnswer: { '@type': 'Answer', text: 'No. Las completaciones en la nube (GitHub Copilot) son más rápidas gracias a servidores optimizados. Las completaciones locales tienen mayor latencia, pero tienen coste cero y cero riesgo para la privacidad.' } },
           { '@type': 'Question', name: '¿Puedo usar completaciones locales con otros IDEs (PyCharm, Neovim)?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, aunque la configuración varía. PyCharm tiene un plugin para Ollama. Para Neovim, usa cmp-ollama (plugin de completaciones). Consulta siempre la comunidad de tu IDE para conocer las integraciones disponibles.' } },
@@ -1156,7 +1140,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LLMs Locales con VS Code y Cursor: Configuración y Mejores Prácticas',
-        'inLanguage': 'es',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.' },

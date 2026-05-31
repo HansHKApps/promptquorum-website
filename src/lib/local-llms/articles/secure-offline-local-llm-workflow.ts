@@ -156,7 +156,6 @@ schema: {
         'headline': 'Secure Offline LLM Workflow: Air-Gapped Setup, Zero Network, Data Handling',
         'description': 'Secure offline local LLM workflow: Air-gapped server, encrypted USB data transfer, hardcopy output. No network risk.',
         'url': 'https://www.promptquorum.com/local-llms/secure-offline-local-llm-workflow',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

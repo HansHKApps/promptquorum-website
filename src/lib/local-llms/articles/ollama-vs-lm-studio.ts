@@ -48,7 +48,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio?lang=en',
-        'inLanguage': 'en',
         'proficiencyLevel': 'Beginner',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
@@ -83,7 +82,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I use Ollama and LM Studio at the same time?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Ollama runs as a background service and LM Studio is a desktop app -- both can run simultaneously. However, they cannot serve the same model at the same time without doubling VRAM usage. You typically choose one as your active inference tool.' } },
           { '@type': 'Question', 'name': 'Can I use the same models in both Ollama and LM Studio?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Both support GGUF and safetensors formats. Models downloaded in Ollama can be imported into LM Studio by pointing to the model file location. By default they use separate folders but LM Studio can be configured to use Ollama\'s model folder.' } },
@@ -365,7 +363,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-05',
         'url': 'https://www.promptquorum.com/de/local-llms/ollama-vs-lm-studio',
-        'inLanguage': 'de',
         'proficiencyLevel': 'Anfänger',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
@@ -383,7 +380,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Ollama vs LM Studio Funktionsvergleich 2026',
-        'inLanguage': 'de',
         'numberOfItems': 10,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Benutzeroberfläche', 'description': 'Ollama: Nur CLI. LM Studio: Vollständige grafische App.' },
@@ -401,7 +397,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich Ollama und LM Studio gleichzeitig nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Ollama läuft als Hintergrunddienst, LM Studio ist eine Desktop-App – beide können gleichzeitig laufen. Sie können nicht dieselbe Modell gleichzeitig servieren, ohne den VRAM zu verdoppeln. Üblicherweise wählen Sie eines als aktives Inferenz-Tool.' } },
           { '@type': 'Question', 'name': 'Kann ich die gleichen Modelle in beiden Tools verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Beide unterstützen GGUF- und Safetensors-Formate. In Ollama heruntergeladene Modelle können in LM Studio importiert werden, indem Sie auf den Modell-Dateipfad verweisen. Standardmäßig verwenden sie separate Ordner, aber LM Studio kann so konfiguriert werden, dass es Ollamaʹs Modellordner nutzt.' } },
@@ -692,7 +687,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-05',
         'url': 'https://www.promptquorum.com/fr/local-llms/ollama-vs-lm-studio',
-        'inLanguage': 'fr',
         'proficiencyLevel': 'Débutant',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
@@ -710,7 +704,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Comparaison des fonctionnalités Ollama vs LM Studio 2026',
-        'inLanguage': 'fr',
         'numberOfItems': 10,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Interface utilisateur', 'description': 'Ollama : CLI uniquement. LM Studio : Application graphique complète.' },
@@ -728,7 +721,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Puis-je utiliser Ollama et LM Studio simultanément ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Ollama fonctionne comme service d\'arrière-plan, LM Studio est une application de bureau – les deux peuvent fonctionner ensemble. Ils ne peuvent pas servir le même modèle simultanément sans doubler la RAM. Généralement, vous en choisissez un comme outil actif pour l\'inférence.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser les mêmes modèles dans les deux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Les deux supportent les formats GGUF et Safetensors. Un modèle téléchargé dans Ollama peut être importé dans LM Studio (ou vice versa) en pointant vers le chemin du fichier. Par défaut, ils utilisent des dossiers séparés, mais LM Studio peut être configuré pour utiliser le dossier Ollama.' } },
@@ -1016,7 +1008,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-05',
         'url': 'https://www.promptquorum.com/ja/local-llms/ollama-vs-lm-studio',
-        'inLanguage': 'ja',
         'proficiencyLevel': '初心者',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
@@ -1034,7 +1025,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Ollama vs LM Studio 機能比較 2026',
-        'inLanguage': 'ja',
         'numberOfItems': 10,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'ユーザー インターフェース', 'description': 'Ollama: CLI のみ。LM Studio: 完全なグラフィカル アプリ。' },
@@ -1052,7 +1042,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Ollama と LM Studio を同時に使用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Ollama はバックグラウンド サービスで動作し、LM Studio はデスクトップ アプリです。両方を同時に実行可能。ただし同一モデルを同時にサーブすると VRAM が倍になります。通常は片方をアクティブな推論ツールとして選択します。' } },
           { '@type': 'Question', 'name': 'Ollama と LM Studio で同じモデルを使用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。両方とも GGUF と Safetensors 形式をサポートしています。Ollama でダウンロードしたモデルは LM Studio にインポート可能（モデル ファイル位置を指定）。デフォルトでは別々のフォルダを使用しますが、LM Studio を Ollama のモデル フォルダを使用するよう設定可能。' } },
@@ -1341,7 +1330,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-05',
         'url': 'https://www.promptquorum.com/zh/local-llms/ollama-vs-lm-studio',
-        'inLanguage': 'zh',
         'proficiencyLevel': '初学者',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
@@ -1359,7 +1347,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Ollama vs LM Studio 功能对比 2026',
-        'inLanguage': 'zh',
         'numberOfItems': 10,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '用户界面', 'description': 'Ollama: 仅限 CLI。LM Studio: 完整图形应用。' },
@@ -1377,7 +1364,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '我能同时使用 Ollama 和 LM Studio 吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。Ollama 作为后台服务（CLI 基础）、LM Studio 作为桌面应用，两者可以同时运行。但不能同时处理相同模型（VRAM 会加倍）。通常一个是"活跃"推理工具。' } },
           { '@type': 'Question', 'name': '两者都能用相同的模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。两者都支持 GGUF 和 Safetensors 格式。从 Ollama 下载的模型可以导入 LM Studio（反之亦然）。默认使用不同文件夹，但可配置 LM Studio 使用 Ollama 模型文件夹。' } },
@@ -1670,7 +1656,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/es/local-llms/ollama-vs-lm-studio?lang=es',
-        'inLanguage': 'es',
         'proficiencyLevel': 'Principiante',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
@@ -1688,7 +1673,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Comparación de funciones Ollama vs LM Studio 2026',
-        'inLanguage': 'es',
         'numberOfItems': 10,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Interfaz de usuario', 'description': 'Ollama: solo CLI. LM Studio: aplicación gráfica completa.' },
@@ -1706,7 +1690,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo usar Ollama y LM Studio al mismo tiempo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Ollama corre como servicio en segundo plano y LM Studio es una aplicación de escritorio — ambos pueden ejecutarse simultáneamente. Sin embargo, no pueden servir el mismo modelo al mismo tiempo sin duplicar el uso de VRAM. Normalmente eliges uno como tu herramienta de inferencia activa.' } },
           { '@type': 'Question', 'name': '¿Puedo usar los mismos modelos en ambas herramientas?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Ambas soportan los formatos GGUF y safetensors. Los modelos descargados en Ollama pueden importarse en LM Studio apuntando a la ubicación del archivo del modelo. Por defecto usan carpetas separadas, pero LM Studio puede configurarse para usar la carpeta de modelos de Ollama.' } },

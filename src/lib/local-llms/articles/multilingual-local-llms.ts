@@ -340,7 +340,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/es/local-llms/multilingual-local-llms?lang=es',
-        'inLanguage': 'es',
         'headline': 'Los mejores LLM locales multilingues 2026: Qwen2.5 vs Mistral',
         'description': 'Qwen2.5 domina los idiomas asiáticos (15-25% mejor que Llama en JMT-bench). Mistral competitivo en idiomas europeos. Comparativa de benchmarks y recomendaciones -- abril 2026.',
         'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-en.svg',
@@ -372,7 +371,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        'inLanguage': 'es',
         'url': 'https://www.promptquorum.com/es/local-llms/multilingual-local-llms?lang=es',
         'name': 'Cómo evaluar la calidad multilingue en LLM locales',
         'step': [
@@ -411,7 +409,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'url': 'https://www.promptquorum.com/es/local-llms/multilingual-local-llms?lang=es',
         'mainEntity': [
           {
@@ -459,7 +456,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         'url': 'https://www.promptquorum.com/es/local-llms/multilingual-local-llms?lang=es',
         'name': 'Comparativa de idiomas para modelos de lenguaje locales',
         'description': 'Comparativa del soporte de idiomas en Qwen2.5, Llama, Mistral y Gemma para chino, japonés, coreano, francés, alemán, español, italiano y árabe.',
@@ -811,7 +807,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/de/local-llms/multilingual-local-llms',
-        'inLanguage': 'de',
         'headline': 'Beste mehrsprachige lokale LLMs 2026: Qwen2.5 vs. Mistral',
         'description': 'Vergleich mehrsprachiger lokaler Sprachmodelle: Qwen2.5 7B dominiert asiatische Sprachen. Mistral konkurriert bei europäischen Sprachen. Benchmarks, Hardware-Anforderungen.',
         'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-de.svg',
@@ -844,7 +839,6 @@ schema: {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        'inLanguage': 'de',
         'url': 'https://www.promptquorum.com/de/local-llms/multilingual-local-llms',
         'name': 'Mehrsprachige lokale LLMs auswählen und verwenden',
         'step': [
@@ -883,7 +877,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'url': 'https://www.promptquorum.com/de/local-llms/multilingual-local-llms',
         'mainEntity': [
           {
@@ -987,7 +980,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'de',
         'url': 'https://www.promptquorum.com/de/local-llms/multilingual-local-llms',
         'name': 'Sprachvergleich für lokale Sprachmodelle',
         'description': 'Vergleich von Sprachunterstützung in Qwen2.5, Llama, Mistral und Gemma für Chinesisch, Japanisch, Koreanisch, Französisch, Deutsch, Spanisch, Italienisch und Arabisch.',
@@ -1330,7 +1322,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/local-llms/multilingual-local-llms',
-        'inLanguage': 'fr',
         'headline': 'Meilleurs LLMs locaux multilingues 2026 : Qwen2.5 vs Mistral',
         'description': 'Comparaison des LLMs locaux multilingues : Qwen2.5 7B domine les langues asiatiques. Mistral rivalise sur les langues européennes. Benchmarks, exigences matérielles.',
         'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-fr.svg',
@@ -1363,7 +1354,6 @@ schema: {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        'inLanguage': 'fr',
         'url': 'https://www.promptquorum.com/fr/local-llms/multilingual-local-llms',
         'name': 'Sélectionner et utiliser les LLMs locaux multilingues',
         'step': [
@@ -1402,7 +1392,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'url': 'https://www.promptquorum.com/fr/local-llms/multilingual-local-llms',
         'mainEntity': [
           {
@@ -1490,7 +1479,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'fr',
         'url': 'https://www.promptquorum.com/fr/local-llms/multilingual-local-llms',
         'name': 'Comparaison des langues pour les modèles de langage locaux',
         'description': 'Comparaison du support linguistique dans Qwen2.5, Llama, Mistral et Gemma pour le chinois, le japonais, le coréen, le français, l\'allemand, l\'espagnol, l\'italien et l\'arabe.',
@@ -1832,7 +1820,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ja/local-llms/multilingual-local-llms',
-        'inLanguage': 'ja',
         'headline': 'ベスト多言語ローカルLLM 2026：Qwen2.5 vs Mistral',
         'description': '多言語ローカルLLM比較：Qwen2.5 7B はアジア言語で支配的。Mistral はヨーロッパ言語で競争。ベンチマーク、ハードウェア要件。',
         'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-ja.svg',
@@ -1866,7 +1853,6 @@ schema: {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        'inLanguage': 'ja',
         'url': 'https://www.promptquorum.com/ja/local-llms/multilingual-local-llms',
         'name': '多言語ローカルLLM選択と利用',
         'step': [
@@ -1906,7 +1892,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'url': 'https://www.promptquorum.com/ja/local-llms/multilingual-local-llms',
         'mainEntity': [
           {
@@ -1995,7 +1980,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'ja',
         'url': 'https://www.promptquorum.com/ja/local-llms/multilingual-local-llms',
         'name': 'ローカル言語モデル向け言語比較',
         'description': 'Qwen2.5、Llama、Mistral、Gemma における中国語、日本語、韓国語、フランス語、ドイツ語、スペイン語、イタリア語、アラビア語のサポート比較。',

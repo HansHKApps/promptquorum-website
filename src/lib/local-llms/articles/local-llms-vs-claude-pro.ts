@@ -211,7 +211,6 @@ schema: {
         'headline': 'Local LLMs vs Claude Pro: Cost Analysis, Privacy, Model Quality Comparison',
         'description': 'Claude Pro vs Local LLMs: cost, privacy, quality comparison. Anthropic vs open source.',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -233,7 +232,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I use Claude Pro offline?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Claude Pro requires active internet connection and Anthropic servers. Local Llama 3.1 works fully offline.' } },
           { '@type': 'Question', 'name': 'Does Anthropic use my Claude Pro conversations for training?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No (as of April 2026). Anthropic explicitly does not train on chat history. Conversations are logged for safety/debugging but not used for model improvement.' } },
@@ -249,7 +247,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Claude Pro vs Local Llama 3.1 70B Comparison',
-        'inLanguage': 'en',
         'itemListElement': [
           { '@type': 'Thing', 'name': 'Claude Pro', 'description': 'Anthropic cloud subscription at $20/month with 200K token context window, image understanding, and privacy guarantees.' },
           { '@type': 'Thing', 'name': 'Local Llama 3.1 70B', 'description': 'Open-source model on RTX 4090 ($1,000 used) with 128K token context, full fine-tuning support, and offline operation.' },
@@ -461,7 +458,6 @@ schema: {
         'headline': 'LLMs Locales vs Claude Pro: Análisis de costos, privacidad y comparativa de calidad del modelo',
         'description': 'Claude Pro vs LLMs locales: comparativa de costo, privacidad y calidad. Anthropic vs código abierto.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-claude-pro?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -483,7 +479,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-claude-pro?lang=es',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo usar Claude Pro sin conexión?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Claude Pro requiere conexión a internet activa y los servidores de Anthropic. Llama 3.1 local funciona completamente sin conexión.' } },
           { '@type': 'Question', 'name': '¿Anthropic usa mis conversaciones de Claude Pro para entrenar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No (a partir de abril de 2026). Anthropic no entrena explícitamente con el historial de chat. Las conversaciones se registran para seguridad/depuración pero no se usan para mejorar el modelo.' } },
@@ -499,7 +494,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Comparativa Claude Pro vs Llama 3.1 70B local',
-        'inLanguage': 'es',
         'itemListElement': [
           { '@type': 'Thing', 'name': 'Claude Pro', 'description': 'Suscripción en la nube de Anthropic a $20/mes con ventana de contexto de 200K tokens, comprensión de imágenes y garantías de privacidad.' },
           { '@type': 'Thing', 'name': 'Llama 3.1 70B local', 'description': 'Modelo de código abierto en RTX 4090 (~$1,000 usada) con contexto de 128K tokens, soporte completo de fine-tuning y operación offline.' },
@@ -719,7 +713,6 @@ schema: {
         'headline': 'Lokale LLMs vs Claude Pro: Kostenanalyse, Datenschutz, Modellqualitätsvergleich',
         'description': 'Claude Pro vs lokale LLMs: Kosten, Datenschutz, Qualitätsvergleich. Anthropic vs Open Source.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -741,7 +734,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich Claude Pro offline verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Claude Pro erfordert aktive Internetverbindung und Anthropic-Server. Lokales Llama 3.1 funktioniert vollständig offline.' } },
           { '@type': 'Question', 'name': 'Verwendet Anthropic meine Claude Pro-Konversationen zum Trainieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein (seit April 2026). Anthropic trainiert explizit nicht auf Chat-Verlauf. Konversationen werden für Sicherheit/Debugging protokolliert, aber nicht für Modell-Verbesserung verwendet.' } },
@@ -759,7 +751,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Claude Pro vs Lokales Llama 3.1 70B Vergleich',
-        'inLanguage': 'de',
         'itemListElement': [
           { '@type': 'Thing', 'name': 'Claude Pro', 'description': 'Anthropic Cloud-Abonnement für 20€/Monat mit 200K Token-Kontextfenster, Bildverständnis und Datenschutzgarantien.' },
           { '@type': 'Thing', 'name': 'Lokales Llama 3.1 70B', 'description': 'Open-Source-Modell auf RTX 4090 (~1.400€ gebraucht) mit 128K Token-Kontext, vollständigem Fine-Tuning Support und Offline-Betrieb.' },
@@ -971,7 +962,6 @@ schema: {
         'headline': 'LLMs Locaux vs Claude Pro: Analyse coûts, confidentialité, comparaison qualité modèle',
         'description': 'LLMs locaux vs Claude Pro: coûts, confidentialité, comparaison qualité. Anthropic vs open source.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -993,7 +983,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Puis-je utiliser Claude Pro hors ligne?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Claude Pro requiert connexion internet active et serveurs Anthropic. Llama 3.1 local fonctionne entièrement hors ligne.' } },
           { '@type': 'Question', 'name': 'Anthropic utilise-t-il mes conversations Claude Pro pour entraînement?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non (depuis avril 2026). Anthropic n\'entraîne explicitement pas sur l\'historique chat. Les conversations sont journalisées pour sécurité/débogage mais non utilisées pour amélioration modèle.' } },
@@ -1009,7 +998,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Comparaison Claude Pro vs Llama 3.1 70B local',
-        'inLanguage': 'fr',
         'itemListElement': [
           { '@type': 'Thing', 'name': 'Claude Pro', 'description': 'Abonnement cloud Anthropic à 20€/mois avec fenêtre contexte 200K tokens, compréhension images, garanties confidentialité.' },
           { '@type': 'Thing', 'name': 'Llama 3.1 70B local', 'description': 'Modèle open-source sur RTX 4090 (~1 200€ d\'occasion) avec contexte 128K tokens, support fine-tuning complet, opération hors ligne.' },
@@ -1221,7 +1209,6 @@ schema: {
         'headline': 'ローカルLLM対Claude Pro: コスト分析、プライバシー、モデル品質比較',
         'description': 'ローカルLLM対Claude Pro: コスト、プライバシー、品質比較。Anthropic対オープンソース。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1243,7 +1230,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Claude Proをオフラインで使用できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。Claude Proはアクティブなインターネット接続とAnthropicサーバーが必要です。ローカルLlama 3.1は完全にオフラインで動作します。' } },
           { '@type': 'Question', 'name': 'AnthropicはClaude Proの会話を学習に使用しますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ（2026年4月現在）。Anthropicは明示的にチャット履歴で学習しません。会話はセキュリティ/デバッグのため記録されますが、モデル改善には使用されません。' } },
@@ -1259,7 +1245,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Claude Pro対ローカルLlama 3.1 70B比較',
-        'inLanguage': 'ja',
         'itemListElement': [
           { '@type': 'Thing', 'name': 'Claude Pro', 'description': '月¥3,200のAnthropicクラウドサブスクリプション、200Kトークンコンテキストウィンドウ、画像理解、プライバシー保証付き。' },
           { '@type': 'Thing', 'name': 'ローカルLlama 3.1 70B', 'description': 'RTX 4090（中古約¥189,000）上のオープンソースモデル、128Kトークンコンテキスト、完全なファインチューニングサポート、オフライン操作。' },
@@ -1471,7 +1456,6 @@ schema: {
         'headline': '本地LLM vs Claude Pro: 成本分析、隐私、模型质量对比',
         'description': '本地LLM vs Claude Pro: 成本、隐私、质量对比。Anthropic vs 开源。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1493,7 +1477,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-vs-claude-pro',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '我能离线使用Claude Pro吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不能。Claude Pro需要活跃网络连接和Anthropic服务器。本地Llama 3.1完全离线运作。' } },
           { '@type': 'Question', 'name': 'Anthropic用我的Claude Pro对话进行训练吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不（2026年4月起）。Anthropic明确不用聊天记录训练。对话被记录用于安全/调试但不用于模型改进。' } },
@@ -1509,7 +1492,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Claude Pro vs 本地Llama 3.1 70B对比',
-        'inLanguage': 'zh',
         'itemListElement': [
           { '@type': 'Thing', 'name': 'Claude Pro', 'description': 'Anthropic云订阅月$20，200K令牌上下文窗口、图像理解、隐私保证。' },
           { '@type': 'Thing', 'name': '本地Llama 3.1 70B', 'description': 'RTX 4090（二手约$1,000）上开源模型，128K令牌上下文、完整微调支持、离线运作。' },

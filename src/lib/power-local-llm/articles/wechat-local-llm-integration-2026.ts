@@ -1346,7 +1346,6 @@ while True:
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-     'inLanguage': 'es',
       headline: 'WeChat + LLM local: Guía para desarrolladores 2026',
       description: 'Conecta WeChat a un LLM local con WeChatFerry y Ollama. Tres patrones de integración, recomendaciones de modelos, configuración de servidor mini PC y cumplimiento de la DSL china.',
       url: 'https://www.promptquorum.com/es/power-local-llm/wechat-local-llm-integration-2026?lang=es',

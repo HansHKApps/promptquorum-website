@@ -360,7 +360,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-      'inLanguage': 'es',
     url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-glossary?lang=es',
     inLanguage: 'es',
     headline: 'Glosario de Prompt Engineering: 500 términos clave',

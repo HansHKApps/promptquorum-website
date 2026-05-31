@@ -345,7 +345,6 @@ schema: {
         'headline': 'New Ollama Models May 2026: Latest Releases & Updates',
         'description': 'Looking for new Ollama models? See the latest May 2026 releases, what is new, and which models are worth using for chat, coding, and reasoning.',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=en',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-06',
         'proficiencyLevel': 'Beginner',
@@ -365,7 +364,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Top Open Source Models on Ollama -- April 2026',
         'description': 'The most downloaded and highest-performing open source models available via Ollama',
-        'inLanguage': 'en',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'url': 'https://ollama.com/library/llama3.2', 'description': 'Best first model. 2.5 GB RAM. 60% HumanEval. Most tutorials. ollama run llama3.2:3b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.1 8B', 'url': 'https://ollama.com/library/llama3.1', 'description': 'Best quality general chat. 5.5 GB RAM. 72% HumanEval. ollama run llama3.2' },
@@ -383,7 +381,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -816,7 +813,6 @@ schema: {
         'headline': 'Nuevos modelos Ollama mayo de 2026: Últimos lanzamientos y actualizaciones',
         'description': '¿Buscas nuevos modelos de Ollama? Consulta los últimos lanzamientos de mayo de 2026, qué hay de nuevo y qué modelos vale la pena usar para chat, programación y razonamiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/top-open-source-models-ollama?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-06',
         'proficiencyLevel': 'Beginner',
@@ -836,7 +832,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Mejores modelos de código abierto en Ollama -- Abril de 2026',
         'description': 'Los modelos de código abierto más descargados y con mejor rendimiento disponibles a través de Ollama',
-        'inLanguage': 'es',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'url': 'https://ollama.com/library/llama3.2', 'description': 'Mejor primer modelo. 2,5 GB de RAM. 60% HumanEval. Más tutoriales. ollama run llama3.2:3b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.1 8B', 'url': 'https://ollama.com/library/llama3.1', 'description': 'Mejor chat general de calidad. 5,5 GB de RAM. 72% HumanEval. ollama run llama3.2' },
@@ -854,7 +849,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1202,7 +1196,6 @@ schema: {
         'headline': 'Die besten Open-Source-Modelle auf Ollama 2026',
         'description': 'Die beliebtesten Open-Source-Modelle auf Ollama im April 2026: Llama am meisten heruntergeladen, Qwen2.5 am schnellsten wachsend, DeepSeek-R1 für Reasoning.',
         'url': 'https://www.promptquorum.com/de/local-llms/top-open-source-models-ollama',
-        'inLanguage': 'de',
         'datePublished': '2026-04-11',
         'dateModified': '2026-05-06',
         'author': {
@@ -1224,7 +1217,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'de',
         'name': 'Top 10 Open-Source-Modelle auf Ollama',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': 'Das am häufigsten heruntergeladene Modell, ideal für Anfänger und Allzweckanwendungen. 6,5 GB RAM erforderlich.' },
@@ -1242,7 +1234,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1574,7 +1565,6 @@ schema: {
         'headline': 'Les meilleurs modèles open source sur Ollama 2026',
         'description': 'Les modèles open source Ollama les plus populaires en avril 2026 : Llama le plus téléchargé, Qwen2.5 en plus forte croissance, DeepSeek-R1 pour le raisonnement.',
         'url': 'https://www.promptquorum.com/fr/local-llms/top-open-source-models-ollama',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-11',
         'dateModified': '2026-05-06',
         'author': {
@@ -1596,7 +1586,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'fr',
         'name': 'Top 10 modèles open source sur Ollama',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': 'Le modèle le plus téléchargé, idéal pour les débutants et les applications polyvalentes. 6.5 GB RAM requis.' },
@@ -1614,7 +1603,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1946,7 +1934,6 @@ schema: {
         'headline': '2026年Ollama最高のオープンソースモデル',
         'description': '2026年4月のOllama最人気オープンソースモデル：Llamaが最多DL、Qwen2.5が急成長、DeepSeek-R1が推論最強。',
         'url': 'https://www.promptquorum.com/ja/local-llms/top-open-source-models-ollama',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-11',
         'dateModified': '2026-05-06',
         'author': {
@@ -1972,7 +1959,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'ja',
         'name': 'Ollama トップ10 オープンソースモデル',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': '最多DLモデル。初心者向け・汎用。6.5GB RAM要。' },
@@ -1990,7 +1976,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -2298,7 +2283,6 @@ schema: {
         'headline': '2026年Ollama最佳开源模型：下载量排行前十',
         'description': '2026年4月，Ollama最受欢迎的开源模型包括Llama 3.1（下载最多）、Qwen2.5（增长最快）、DeepSeek-R1（推理最强）。',
         'url': 'https://www.promptquorum.com/zh/local-llms/top-open-source-models-ollama',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-11',
         'dateModified': '2026-05-06',
         'author': {
@@ -2324,7 +2308,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'zh',
         'name': 'Ollama Top 10 开源模型',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': '下载量最高。通用、初学者适用。6.5GB RAM。' },
@@ -2342,7 +2325,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',

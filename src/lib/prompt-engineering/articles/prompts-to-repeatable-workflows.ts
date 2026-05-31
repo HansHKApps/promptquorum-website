@@ -376,7 +376,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-     'inLanguage': 'es',
       url: 'https://www.promptquorum.com/es/prompt-engineering/prompts-to-repeatable-workflows?lang=es',
       inLanguage: 'es',
       headline: 'De prompts a flujos de trabajo repetibles: plantillas de automatización para equipos en producción',

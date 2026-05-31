@@ -784,7 +784,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         headline: 'Controla la salida: cumplimiento de JSON Schema, constrained decoding y selección de formato',
         description: 'Domina el control de salida en LLMs: constrained decoding, formato basado en prompts, parámetros de muestreo y la compensación de calidad de razonamiento. Guía de producción para JSON, JSONL, CSV.',
         url: 'https://www.promptquorum.com/es/prompt-engineering/control-the-output?lang=es',

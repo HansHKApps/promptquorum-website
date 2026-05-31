@@ -800,7 +800,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-    'inLanguage': 'es',
       url: 'https://www.promptquorum.com/es/prompt-engineering/prompting-across-languages?lang=es',
       inLanguage: 'es',
       headline: 'Prompting en Diferentes Idiomas: Cómo Obtener Resultados Coherentes',

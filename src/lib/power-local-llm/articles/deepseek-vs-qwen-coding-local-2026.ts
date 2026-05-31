@@ -693,7 +693,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-    'inLanguage': 'es',
       inLanguage: 'es',
       mainEntity: [
         {

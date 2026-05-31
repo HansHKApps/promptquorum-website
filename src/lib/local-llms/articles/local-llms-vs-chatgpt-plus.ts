@@ -242,7 +242,6 @@ schema: {
         'headline': 'Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers',
         'description': 'ChatGPT Plus: $20/mo = $720 over 3 years. Local Llama 3.3 70B on RTX 5060 Ti: $500 GPU + $90 power = $590 total. Breakeven 14 months. 7 ChatGPT tiers compared.',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com' },
@@ -262,7 +261,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Is ChatGPT Plus worth $20/month compared to local LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For light users (under 5 hrs/week), yes — $20/month Plus is easier than buying a $450 GPU. For regular professional use (10+ hrs/week), local Llama 3.3 70B on RTX 5060 Ti breaks even in ~14 months and then costs only electricity (~$30/year). Plus stays ahead on novel reasoning via GPT-5.2 Thinking.' } },
           { '@type': 'Question', 'name': 'What is the new ChatGPT Pro $100 tier launched April 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI launched Pro $100 on April 9, 2026, bridging the gap between Plus ($20) and Pro ($200). Pro $100 includes 5× Plus usage limits, GPT-5.4 Pro model access, and o1 Pro mode for deeper reasoning. It targets power users who hit Plus rate limits (160 msg/3hr) but do not need the full Pro $200 tier.' } },
@@ -279,7 +277,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'ChatGPT Pricing Tiers April 2026',
         'numberOfItems': 7,
-        'inLanguage': 'en',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Free', 'description': '$0/month. GPT-5.3 with ads since February 2026. 10 messages per 5 hours. For occasional users.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Go', 'description': '$8/month. GPT-5.3 with ads. Higher limits than Free (~100 msg/5hr). Budget option with ad-supported model.' },
@@ -533,7 +530,6 @@ schema: {
         'headline': 'Lokale LLMs vs ChatGPT Plus 2026: Vollständiger Kostenvergleich über 7 Preisstufen',
         'description': 'ChatGPT Plus: 20€/Monat = 720€ über 3 Jahre. Lokales Llama 3.3 70B auf RTX 5060 Ti: ~600€ GPU + 90€ Strom = 590€ gesamt. Amortisationspunkt 14 Monate. 7 ChatGPT-Stufen im Vergleich.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com' },
@@ -553,7 +549,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Lohnt sich ChatGPT Plus für 20€/Monat gegenüber lokalen LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für Leichtnutzer (unter 5 Std./Woche): ja — 20€/Monat Plus ist einfacher als ein 450€ GPU zu kaufen. Für regelmäßige Profi-Nutzung (10+ Std./Woche) amortisiert sich lokales Llama 3.3 70B auf RTX 5060 Ti in ~14 Monaten und kostet dann nur noch Strom (~30€/Jahr). Plus bleibt vorne durch neuartiges Denken via GPT-5.2 Thinking.' } },
           { '@type': 'Question', 'name': 'Was ist die neue ChatGPT Pro €100-Stufe vom April 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI startete Pro €100 am 9. April 2026, schließt die Lücke zwischen Plus (20€) und Pro (200€). Pro €100 beinhaltet 5× Plus-Nutzungslimits, GPT-5.4 Pro Modell-Zugriff und o1 Pro-Modus für tieferes Denken. Es zielt auf Powernutzer, die Plus-Ratenbegrenzungen (160 Nachr./3h) treffen, aber nicht die volle Pro €200-Stufe benötigen.' } },
@@ -572,7 +567,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'ChatGPT Preisstufen April 2026',
         'numberOfItems': 7,
-        'inLanguage': 'de',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Free', 'description': '0€/Monat. GPT-5.3 mit Werbung seit Februar 2026. 10 Nachrichten pro 5 Stunden. Für gelegentliche Nutzer.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Go', 'description': '8€/Monat. GPT-5.3 mit Werbung. Höhere Limits als Free (~100 Nachr./5h). Budget-Option mit anzeigengestütztem Modell.' },
@@ -818,7 +812,6 @@ schema: {
         'headline': 'LLMs locaux vs ChatGPT Plus 2026 : Comparaison tarifaire complète sur 7 niveaux',
         'description': 'ChatGPT Plus : 20€/mois = 720€ sur 3 ans. LLM Llama 3.3 70B local sur RTX 5060 Ti : 600€ GPU + 90€ électricité = 590€ total. Rentabilité 14 mois. 7 niveaux ChatGPT comparés.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com' },
@@ -838,7 +831,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ChatGPT Plus vaut-il 20€/mois par rapport aux LLMs locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les utilisateurs légers (moins de 5 heures/semaine), oui — 20€/mois Plus est plus facile que d\'acheter une GPU à 450€. Pour une utilisation professionnelle régulière (10+ heures/semaine), Llama 3.3 70B local sur RTX 5060 Ti se rentabilise en ~14 mois puis ne coûte que l\'électricité (~30€/an). Plus reste en tête sur le raisonnement novateur via GPT-5.2 Thinking.' } },
           { '@type': 'Question', 'name': 'Qu\'est-ce que le nouveau niveau ChatGPT Pro 100€ lancé en avril 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI a lancé Pro 100€ le 9 avril 2026, comblant l\'écart entre Plus (20€) et Pro (200€). Pro 100€ inclut 5× les limites de Plus, l\'accès au modèle GPT-5.4 Pro et le mode o1 Pro pour un raisonnement plus profond. Il cible les utilisateurs intensifs qui atteignent les limites de Plus (160 messages/3h) mais n\'ont pas besoin du tier Pro 200€ complet.' } },
@@ -855,7 +847,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Niveaux tarifaires ChatGPT avril 2026',
         'numberOfItems': 7,
-        'inLanguage': 'fr',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Free', 'description': '0€/mois. GPT-5.3 avec publicités depuis février 2026. 10 messages par 5 heures. Pour utilisateurs occasionnels.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Go', 'description': '8€/mois. GPT-5.3 avec publicités. Limites plus hautes que Free (~100 messages/5h). Option budget avec modèle soutenu par publicités.' },
@@ -1101,7 +1092,6 @@ schema: {
         'headline': 'ローカルLLM vs ChatGPT Plus 2026：7つの価格レベルの完全比較',
         'description': 'ChatGPT Plus：20€/月 = 3年で約144,000円。RTX 5060 Ti 上のローカル Llama 3.3 70B：約94,800円 GPU + 22,500円電気代 = 約117,300円。損益分岐点14ヶ月。7つの ChatGPT レベルを比較。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1121,7 +1111,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ChatGPT Plus は月額20€の価値があります？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ライトユーザー（週5時間未満）の場合：はい — 月額20€の Plus は 94,800円の GPU を購入するより簡単です。定期的なプロ使用（週10時間以上）の場合：ローカル Llama 3.3 70B は RTX 5060 Ti で約14ヶ月で損益分岐点に達し、その後は電気代のみ（年約7,500円）です。Plus は GPT-5.2 Thinking での斬新な推論で先を行きます。' } },
           { '@type': 'Question', 'name': '2026年4月に立ち上がった新しい ChatGPT Pro 100€ レベルとは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI は 2026年4月9日に Pro 100€ を立ち上げ、Plus（20€）とオリジナル Pro（200€）の間のギャップを埋めました。Pro 100€ は Plus の 5 倍の使用制限、GPT-5.4 Pro モデルアクセス、より深い推論のための o1 Proモードを含みます。Plus の制限に達するパワーユーザーを対象としていますが、フル Pro 200€ レベルは必要ありません。' } },
@@ -1138,7 +1127,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'ChatGPT 価格レベル 2026年4月',
         'numberOfItems': 7,
-        'inLanguage': 'ja',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Free', 'description': '0円/月。2026年2月より GPT-5.3 と広告。5 時間ごと 10 メッセージ。たまに使用する人向け。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Go', 'description': '月額800円程度。GPT-5.3 と広告。Free よりも高い制限（~100メッセージ/5時間）。広告サポートモデルの予算オプション。' },
@@ -1383,7 +1371,6 @@ schema: {
         'headline': '本地LLM vs ChatGPT Plus 2026：7个价格级别完整对比',
         'description': 'ChatGPT Plus：$20/月 = 3年$720。RTX 5060 Ti本地Llama 3.3 70B：约$500 GPU + $90电费 = $590总计。平衡点14个月。7个ChatGPT级别对比。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1403,7 +1390,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-vs-chatgpt-plus',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ChatGPT Plus是否值得每月$20与本地LLM相比？', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于轻度用户（每周少于5小时），是的——每月$20的Plus比购买$500 GPU更简单。对于定期专业使用（每周10小时以上），本地Llama 3.3 70B在RTX 5060 Ti上在约14个月内平衡，然后仅成本电费（约$30/年）。Plus通过GPT-5.2 Thinking在新颖推理上保持领先。' } },
           { '@type': 'Question', 'name': '2026年4月推出的新ChatGPT Pro 100€级别是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI于2026年4月9日推出Pro 100€，填补Plus（$20）和Pro（$200）之间的空白。Pro 100€包括Plus限制的5倍、GPT-5.4 Pro模型访问权限和用于更深入推理的o1 Pro模式。它针对触及Plus速率限制（160条消息/3小时）但不需要完整Pro 200€级别的高级用户。' } },
@@ -1420,7 +1406,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'ChatGPT价格级别2026年4月',
         'numberOfItems': 7,
-        'inLanguage': 'zh',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Free', 'description': '$0/月。自2026年2月起GPT-5.3带广告。5小时10条消息。偶尔使用的用户。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Go', 'description': '$8/月。GPT-5.3带广告。Free限制更高（~100条消息/5小时）。带广告支持的预算选项。' },
@@ -1667,7 +1652,6 @@ schema: {
         'headline': 'LLMs locales vs ChatGPT Plus 2026: Comparación completa de costos en 7 niveles de precios',
         'description': 'ChatGPT Plus: $20/mes = $720 en 3 años. Llama 3.3 70B local en RTX 5060 Ti: $500 GPU + $90 electricidad = $590 total. Punto de equilibrio: 14 meses. 7 niveles de ChatGPT comparados.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-chatgpt-plus?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com' },
@@ -1687,7 +1671,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-chatgpt-plus?lang=es',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Vale la pena ChatGPT Plus a $20/mes frente a los LLMs locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para usuarios ligeros (menos de 5 hrs/semana), sí — $20/mes de Plus es más fácil que comprar una GPU de $450. Para uso profesional regular (más de 10 hrs/semana), Llama 3.3 70B local en RTX 5060 Ti alcanza el equilibrio en ~14 meses y luego solo cuesta electricidad (~$30/año). Plus sigue por delante en razonamiento novedoso vía GPT-5.2 Thinking.' } },
           { '@type': 'Question', 'name': '¿Qué es el nuevo nivel ChatGPT Pro $100 lanzado en abril de 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI lanzó Pro $100 el 9 de abril de 2026, cerrando la brecha entre Plus ($20) y Pro ($200). Pro $100 incluye 5× los límites de uso de Plus, acceso al modelo GPT-5.4 Pro y el modo o1 Pro para razonamiento más profundo. Está dirigido a usuarios avanzados que alcanzan los límites de velocidad de Plus (160 mensajes/3h) pero no necesitan el nivel completo Pro $200.' } },
@@ -1704,7 +1687,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Niveles de precios de ChatGPT abril de 2026',
         'numberOfItems': 7,
-        'inLanguage': 'es',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Free', 'description': '$0/mes. GPT-5.3 con anuncios desde febrero de 2026. 10 mensajes por 5 horas. Para usuarios ocasionales.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Go', 'description': '$8/mes. GPT-5.3 con anuncios. Límites más altos que Free (~100 mensajes/5h). Opción económica con modelo financiado por anuncios.' },

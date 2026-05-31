@@ -1238,7 +1238,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/teaching-with-ai?lang=es',
         inLanguage: 'es',
         headline: 'Enseñar con IA en 2026: Estudio Harvard Muestra 2× Más Aprendizaje — Herramientas, Prompts y Guía Ley de IA de la UE',

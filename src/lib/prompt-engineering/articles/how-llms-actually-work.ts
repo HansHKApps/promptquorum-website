@@ -720,7 +720,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/how-llms-actually-work?lang=es',
         inLanguage: 'es',
         headline: 'Cómo funcionan realmente los LLMs: tokens, attention e inferencia',

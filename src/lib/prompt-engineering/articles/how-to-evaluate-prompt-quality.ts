@@ -593,7 +593,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         headline: 'Cómo evaluar la calidad de los prompts: un framework práctico',
         description: 'Evalúa la calidad de los prompts con un conjunto de 20 casos, puntuación pass/fail binaria y rúbricas LLM-as-judge. Mide precisión, consistencia y tasa de seguimiento de instrucciones entre modelos.',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

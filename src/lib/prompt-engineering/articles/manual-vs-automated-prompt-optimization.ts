@@ -446,7 +446,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-     'inLanguage': 'es',
       headline: 'Optimización manual vs automatizada de prompts: cuándo iterar, cuándo automatizar',
       description: 'Optimización manual vs automatizada de prompts: elige según el número de prompts. Framework de decisión de escalabilidad.',
       datePublished: '2026-04-26',

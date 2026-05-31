@@ -190,7 +190,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Local LLM Model Updates 2026: Every Major Open-Weight Release This Year',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -242,7 +241,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -493,7 +491,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Actualizaciones de modelos LLM locales 2026: Todos los lanzamientos open-weight importantes del año',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -518,7 +515,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         'name': 'Principales lanzamientos de LLM locales del Q1 2026',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026?lang=es',
         'numberOfItems': 4,
@@ -552,7 +548,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -806,7 +801,6 @@ schema: {
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-model-updates-2026',
         'headline': 'ローカルLLMモデルアップデート2026年：すべての大型オープンウェイトリリース',
         'description': 'ローカルLLMモデルアップデート2026：Gemma 3、Llama 4 Scout、DeepSeek-R1 を含むすべての大型オープンウェイトリリース、仕様、ベンチマーク、Ollama 対応。2026年4月更新。',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -823,7 +817,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'ja',
         'name': 'Q1 2026 ローカルLLMリリース',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-model-updates-2026',
         'numberOfItems': 4,
@@ -837,7 +830,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'オープンウェイトリリース後、新しいモデルが Ollama にどのくらい素早く表示されますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Meta、Google、Mistral、Alibaba からのメジャーリリースの場合、通常1～7日です。Llama 3.3 70B は Meta のオープンウェイトリリースの3日後に Ollama ライブラリに表示されました。小さいまたはコミュニティモデルは2～4週間かかることがあります。' } },
           { '@type': 'Question', 'name': 'Llama 3.1 8B からより新しいモデルにアップグレードすべきですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.1 8B を一般的なタスク用に使用していて品質に満足している場合、アップグレードはオプションです。Qwen2.5 7B はベンチマークで若干高いスコアで、多言語とコーディング対応が優れています。ほとんどの英語中心の一般的な使用では、実用的な品質差は小さいです。' } },
@@ -1009,7 +1001,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Lokale LLM-Modell-Updates 2026: Alle großen Open-Weight-Releases dieses Jahr',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-model-updates-2026',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1026,7 +1017,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'de',
         'name': 'Große lokale LLM-Releases Q1 2026',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-model-updates-2026',
         'numberOfItems': 4,
@@ -1040,7 +1030,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Wie schnell erscheinen neue Modelle in Ollama nach ihrem Open-Weight-Release?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Typischerweise 1-7 Tage für große Modell-Releases von Meta, Google, Mistral und Alibaba. Llama 3.3 70B erschien 3 Tage nach Metas Open-Weight-Release in der Ollama-Bibliothek. Kleinere oder Community-Modelle können 2-4 Wochen dauern.' } },
           { '@type': 'Question', 'name': 'Sollte ich von Llama 3.1 8B auf ein neueres Modell upgraden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Wenn Sie Llama 3.1 8B für allgemeine Aufgaben verwenden und mit der Qualität zufrieden sind, ist ein Upgrade optional. Qwen2.5 7B hat etwas höhere Benchmark-Scores mit besserer mehrsprachiger und Codierungsunterstützung. Für die meisten englischsprachigen allgemeinen Verwendungen ist der praktische Qualitätsunterschied klein.' } },
@@ -1229,7 +1218,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': '本地LLM模型更新2026：所有重大开源权重发布',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-model-updates-2026',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1250,7 +1238,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '2026年Q1重大本地LLM发布',
-        'inLanguage': 'zh',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-model-updates-2026',
         'numberOfItems': 4,
         'itemListElement': [
@@ -1283,7 +1270,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1524,7 +1510,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Mises à jour des LLM locaux 2026 : Chaque release open-weight majeure de l\'année',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-model-updates-2026',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1541,7 +1526,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'fr',
         'name': 'Releases LLM locaux majeurs Q1 2026',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-model-updates-2026',
         'numberOfItems': 4,
@@ -1555,7 +1539,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'À quelle vitesse les nouveaux modèles apparaissent-ils dans Ollama après leur release open-weight ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Généralement 1-7 jours pour les releases majeures de Meta, Google, Mistral et Alibaba. L\'équipe Ollama priorise les releases très connues -- Llama 3.3 70B est apparu dans la bibliothèque Ollama 3 jours après la release open-weight de Meta. Les modèles plus petits ou communautaires peuvent prendre 2-4 semaines.' } },
           { '@type': 'Question', 'name': 'Dois-je mettre à niveau Llama 3.1 8B vers un modèle plus récent ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Si vous utilisez Llama 3.1 8B pour des tâches générales et êtes satisfait de la qualité, la mise à niveau est facultative. Qwen2.5 7B a des scores de benchmark légèrement plus élevés et un meilleur support multilingue et de codage. Pour la plupart des utilisations générales en anglais, la différence de qualité pratique est mineure.' } },

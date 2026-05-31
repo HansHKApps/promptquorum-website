@@ -95,7 +95,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -386,7 +385,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-06',
         'url': 'https://www.promptquorum.com/es/local-llms/long-context-local-llms?lang=es',
-        'inLanguage': 'es',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'LLM de contexto largo' },
@@ -408,7 +406,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Cómo configurar la longitud de contexto en Ollama',
-        'inLanguage': 'es',
         'totalTime': 'PT5M',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Verificar el contexto por defecto con ollama show', 'text': 'Ejecuta: ollama show llama3.1:8b -- busca num_ctx en la salida' },
@@ -422,7 +419,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LLM locales por tamaño de ventana de contexto -- Ollama mayo 2026',
-        'inLanguage': 'es',
         'numberOfItems': 12,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 4 Scout 17B (MoE)',     'description': '10M tokens de contexto. ~256K-1M práctico con 150+ GB. Mejor para cargas de trabajo de un millón de tokens. ollama run llama4:scout' },
@@ -442,7 +438,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -895,7 +890,6 @@ schema: {
         'headline': '长上下文本地LLM 2026：哪些模型支持128K标记？',
         'description': '2026年大多数本地LLM理论上支持128K标记上下文窗口，但实际可用上下文通常为16K-32K标记。Llama 3.1 8B、Qwen2.5和Mistral Small 3.1均支持128K上下文。RAM扩展规律与Ollama配置指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/long-context-local-llms',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -918,7 +912,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': '如何在Ollama中设置上下文长度',
-        'inLanguage': 'zh',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': '使用ollama show验证模型支持长上下文', 'text': '运行ollama show <model>以检查num_ctx参数，确认模型支持长上下文。' },
           { '@type': 'HowToStep', 'position': 2, 'name': '创建包含PARAMETER num_ctx的Modelfile', 'text': '创建Modelfile，添加"FROM <model>"和"PARAMETER num_ctx 32768"，将上下文设置为32K标记。' },
@@ -929,7 +922,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1000,7 +992,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'zh',
         'name': '2026年支持128K上下文窗口的本地LLM',
         'numberOfItems': 8,
         'itemListElement': [

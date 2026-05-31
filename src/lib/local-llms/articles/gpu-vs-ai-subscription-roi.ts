@@ -273,7 +273,6 @@ schema: {
         'headline': 'GPU vs ChatGPT Plus 2026: When Buying a GPU Pays Back the Subscription',
         'description': 'Used RTX 5060 Ti ($450) breaks even with ChatGPT Plus ($240/yr) in 18–24 months at 5 hrs/week. Heavy users save $5,000+ over 5 years. Full ROI tables across 7 ChatGPT tiers.',
         'url': 'https://www.promptquorum.com/local-llms/gpu-vs-ai-subscription-roi',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -291,7 +290,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'url': 'https://www.promptquorum.com/local-llms/gpu-vs-ai-subscription-roi',
         'mainEntity': [
           { '@type': 'Question', 'name': 'What if electricity costs are much higher in my region?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'At $0.30/kWh (European rates), RTX 5060 Ti costs $60/year instead of $30. Breakeven extends to 2 years. Still competitive for 5+ hours/week.' } },
@@ -309,7 +307,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'GPU vs ChatGPT Plus 5-Year ROI by Usage Tier 2026',
         'numberOfItems': 5,
-        'inLanguage': 'en',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Light user (2 hrs/week)', 'description': 'GPU $600 total vs ChatGPT Plus $1,200. GPU loses by $600. Stay with subscription.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Casual user (5 hrs/week)', 'description': 'GPU $600 total vs ChatGPT Plus $1,200. GPU saves $600. Breakeven: 18-24 months.' },
@@ -585,7 +582,6 @@ schema: {
         'headline': 'GPU vs ChatGPT Plus 2026: Cuándo comprar una GPU es más rentable que la suscripción',
         'description': 'RTX 5060 Ti de segunda mano ($450) alcanza el punto de equilibrio con ChatGPT Plus ($240/año) en 18–24 meses a 5 h/semana. Usuarios intensivos ahorran $5,000+ en 5 años. Tablas ROI completas para los 7 niveles de ChatGPT.',
         'url': 'https://www.promptquorum.com/es/local-llms/gpu-vs-ai-subscription-roi?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -603,7 +599,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'url': 'https://www.promptquorum.com/es/local-llms/gpu-vs-ai-subscription-roi?lang=es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Qué pasa si los costos de electricidad son mucho más altos en mi región?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A $0.30/kWh (tarifas europeas), la RTX 5060 Ti cuesta $60/año en vez de $30. El punto de equilibrio se extiende a 2 años. Sigue siendo competitivo para 5+ horas/semana.' } },
@@ -621,7 +616,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'GPU vs ChatGPT Plus ROI a 5 años por nivel de uso 2026',
         'numberOfItems': 5,
-        'inLanguage': 'es',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Usuario ocasional (2 h/semana)', 'description': 'GPU $600 total vs ChatGPT Plus $1,200. La GPU pierde por $600. Mantén la suscripción.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Usuario casual (5 h/semana)', 'description': 'GPU $600 total vs ChatGPT Plus $1,200. La GPU ahorra $600. Punto de equilibrio: 18–24 meses.' },
@@ -850,7 +844,6 @@ schema: {
       'headline': 'GPU vs ChatGPT Plus 2026: Wann sich der GPU-Kauf gegenüber dem Abonnement amortisiert',
       'description': 'Gebrauchte RTX 5060 Ti (449 €) amortisiert sich mit ChatGPT Plus (240 €/Jahr) in 18 Monaten. 5-Jahres-ROI für alle Nutzungsebenen. DSGVO-konform.',
       'url': 'https://www.promptquorum.com/de/local-llms/gpu-vs-ai-subscription-roi',
-      'inLanguage': 'de',
       'datePublished': '2026-04-05',
       'dateModified': '2026-04-25',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -870,7 +863,6 @@ schema: {
       '@type': 'ItemList',
       'name': 'GPU vs ChatGPT Plus 5-Jahres-ROI nach Nutzungsebene 2026',
       'numberOfItems': 5,
-      'inLanguage': 'de',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Gelegentlicher Nutzer (2 Stunden/Woche)', 'description': 'GPU 592 € gesamt vs ChatGPT Plus 1.200 €. GPU verliert um 608 €. Bleiben Sie bei Abonnement.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Sporadischer Nutzer (5 Stunden/Woche)', 'description': 'GPU 592 € gesamt vs ChatGPT Plus 1.200 €. GPU spart 608 €. Payback: 18–24 Monate.' },
@@ -1197,7 +1189,6 @@ schema: {
         'headline': 'GPU 対 ChatGPT Plus 2026: 中古 GPU (¥56,000) が 18 ヶ月で元が取れる時代',
         'description': '中古 RTX 5060 Ti (¥56,000) は ChatGPT Plus (¥30,000/年) と 18–24 ヶ月で損益分岐点に達します。重度ユーザーは 5 年で ¥540 万以上節約できます。7 つの ChatGPT ティア全体での完全な ROI テーブル。',
         'url': 'https://www.promptquorum.com/ja/local-llms/gpu-vs-ai-subscription-roi',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1215,7 +1206,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'url': 'https://www.promptquorum.com/ja/local-llms/gpu-vs-ai-subscription-roi',
         'mainEntity': [
           { '@type': 'Question', 'name': '地域の電気代がはるかに高い場合はどうなりますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '¥44/kWh (欧州レート) では、RTX 4070 の電気代は年 ¥4,000 ではなく ¥7,000 です。損益分岐点は 1.5 年ではなく 2 年に延長されます。週 5 時間以上ではまだ競争力があります。' } },
@@ -1234,7 +1224,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'GPU vs ChatGPT Plus 5 年 ROI (ティア別) 2026',
         'numberOfItems': 5,
-        'inLanguage': 'ja',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'ライトユーザー (週 2 時間)', 'description': 'GPU ¥91,000 合計 vs ChatGPT Plus ¥150,000。GPU は ¥59,000 負け。サブスクリプションを保つ。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'カジュアルユーザー (週 5 時間)', 'description': 'GPU ¥91,000 合計 vs ChatGPT Plus ¥150,000。GPU は ¥59,000 勝利。損益分岐点: 18-24 ヶ月。' },
@@ -1517,7 +1506,6 @@ schema: {
         'headline': 'GPU vs ChatGPT Plus 2026: 二手GPU在18个月内收回成本的时代',
         'description': '二手RTX 5060 Ti ($450) 与ChatGPT Plus ($240/年) 在18–24个月内收回成本。重度用户5年省$5,000+。7个ChatGPT价格层级全表对比。',
         'url': 'https://www.promptquorum.com/zh/local-llms/gpu-vs-ai-subscription-roi',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1535,7 +1523,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'url': 'https://www.promptquorum.com/zh/local-llms/gpu-vs-ai-subscription-roi',
         'mainEntity': [
           { '@type': 'Question', 'name': '如果我的地区的电力成本更高怎么办?', 'acceptedAnswer': { '@type': 'Answer', 'text': '在€0.30/kWh (欧洲费率)，RTX 4070的成本为每年$60而不是$30。损益分岐点延长至2年而不是1.5年。每周5小时以上仍然具有竞争力。' } },
@@ -1554,7 +1541,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'GPU vs ChatGPT Plus 5年ROI (按使用级别) 2026',
         'numberOfItems': 5,
-        'inLanguage': 'zh',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '轻度用户 (每周2小时)', 'description': 'GPU $600总计 vs ChatGPT Plus $1,200。GPU 亏损$600。保留订阅。' },
           { '@type': 'ListItem', 'position': 2, 'name': '休闲用户 (每周5小时)', 'description': 'GPU $600总计 vs ChatGPT Plus $1,200。GPU 赢$600。损益分岐点: 18-24个月。' },

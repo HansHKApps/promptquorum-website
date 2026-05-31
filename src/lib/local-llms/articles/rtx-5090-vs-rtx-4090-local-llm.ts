@@ -128,7 +128,6 @@ schema: {
         'headline': 'RTX 5090 vs RTX 4090: Which GPU for Local LLMs in 2026?',
         'description': 'RTX 5090 vs RTX 4090 for local LLMs: Speed comparison, VRAM analysis, cost-per-performance, when to upgrade.',
         'url': 'https://www.promptquorum.com/local-llms/rtx-5090-vs-rtx-4090-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -279,7 +278,6 @@ schema: {
         'headline': 'RTX 5090 vs RTX 4090: ¿Qué GPU para LLMs locales en 2026?',
         'description': 'RTX 5090 vs RTX 4090 para LLMs locales: comparativa de velocidad, análisis de VRAM, coste por rendimiento, cuándo actualizar.',
         'url': 'https://www.promptquorum.com/es/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -299,7 +297,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Vale la pena la RTX 5090 para ejecutar Llama 3 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Solo si necesitas 45+ tokens/seg. La 4090 te da 36, que es "suficiente" para la mayoría. Los 9 tokens/seg extra cuestan $1.000.' } },
           { '@type': 'Question', 'name': '¿Debo comprar una RTX 5090 o dos RTX 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Dos 4090 (~$2.500 usadas) superan a la 5090 ($1.999) en velocidad y flexibilidad. Puedes ejecutar varios modelos en paralelo. La 5090 tiene una configuración más sencilla, pero es más cara.' } },
@@ -441,7 +438,6 @@ schema: {
         'headline': 'RTX 5090 vs RTX 4090: Welche GPU für lokale LLMs 2026?',
         'description': 'RTX 5090 vs RTX 4090 für lokale LLMs: Geschwindigkeitsvergleich, VRAM-Analyse, Kosten-pro-Performance, Upgrade-Leitfaden.',
         'url': 'https://www.promptquorum.com/de/local-llms/rtx-5090-vs-rtx-4090-local-llm',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -451,7 +447,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Lohnt sich RTX 5090 zum Ausführen von Llama 3 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nur wenn Sie >45 Token/s benötigen. 4090 gibt Ihnen 36, was „ausreichend" für die meisten ist. Die zusätzlichen 9 Token/s kosten €1.000.' } },
           { '@type': 'Question', 'name': 'Sollte ich RTX 5090 oder zwei RTX 4090er kaufen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Zwei 4090er (~€3.500 gebraucht) schlagen 5090 (€2.500) bei Geschwindigkeit und Flexibilität. Sie können mehrere Modelle parallel ausführen. 5090 hat einfacheres Setup, aber teurer.' } },

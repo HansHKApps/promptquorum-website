@@ -174,7 +174,6 @@ schema: {
         'headline': 'What Are Local LLMs? How AI Models Run on Your Hardware',
         'description': 'Local LLMs run AI models on your own hardware -- no internet required. Learn what they are, how they work, and when to use them. Guide for 2026.',
         'url': 'https://www.promptquorum.com/local-llms/what-are-local-llms',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -194,7 +193,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -425,7 +423,6 @@ schema: {
         'headline': '¿Qué son los LLM locales? Cómo los modelos de IA se ejecutan en tu hardware',
         'description': 'Los LLM locales ejecutan modelos de IA en tu propio hardware, sin necesidad de internet. Aprende qué son, cómo funcionan y cuándo usarlos. Guía para 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/what-are-local-llms?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -445,7 +442,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -535,7 +531,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Déboguer les erreurs de configuration LLM local',
-        'inLanguage': 'fr',
         'step': [
           { '@type': 'HowToStep', 'name': 'Corriger les erreurs de mémoire insuffisante', 'text': 'Passer à une quantification plus petite (Q4_K_M) ou un modèle plus petit. Vérifier la RAM avec free -h.' },
           { '@type': 'HowToStep', 'name': 'Activer la détection du GPU', 'text': 'Mettre à jour les pilotes (NVIDIA 525+), définir OLLAMA_GPU_LAYERS=999, vérifier avec nvidia-smi.' },

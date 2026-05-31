@@ -24,7 +24,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-business-writing',
-        'inLanguage': 'en',
         'headline': 'Best Local LLMs for Business Writing in 2026: Email, Proposals, and Brand Voice',
         'description': 'Mistral Small 3.1 24B leads for emails and memos. Qwen2.5 7B excels at non-English writing. 7B-24B models outperform 70B. Ollama setup in 10 minutes.',
         'datePublished': '2026-04-05',
@@ -58,7 +57,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Why is Mistral Small 3.1 better than Llama 3.1 for email?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mistral Small 3.1 is more concise. Llama 3.1 is more adaptable. For pure speed/brevity: Mistral Small 3.1. For tone matching: Llama 3.1.' } },
           { '@type': 'Question', 'name': 'Can I use a 13B model for business writing?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, but unnecessary. 7B is faster and equally good. 13B is slightly better at long proposals (>2 pages).' } },
@@ -228,7 +226,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-business-writing?lang=es',
-        'inLanguage': 'es',
         'headline': 'Mejores LLMs locales para redacción profesional en 2026: correos, propuestas y voz de marca',
         'description': 'Mistral Small 3.1 24B lidera para correos y memos. Qwen2.5 7B destaca en redacción multilingüe. Los modelos 7B-24B superan a los 70B. Configuración con Ollama en 10 minutos.',
         'datePublished': '2026-04-05',
@@ -248,7 +245,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         'name': 'Mejores LLMs locales para tareas de redacción profesional 2026',
         'numberOfItems': 7,
         'itemListElement': [
@@ -264,7 +260,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Por qué Mistral Small 3.1 es mejor que Llama 3.1 para correos?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mistral Small 3.1 es más conciso. Llama 3.1 es más adaptable. Para pura brevedad/precisión: Mistral Small 3.1. Para ajuste de tono: Llama 3.1.' } },
           { '@type': 'Question', 'name': '¿Puedo usar un modelo 13B para redacción profesional?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, pero no es necesario. El 7B es más rápido e igual de bueno. El 13B es ligeramente mejor para propuestas largas (más de 2 páginas).' } },
@@ -430,7 +425,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-business-writing',
-        'inLanguage': 'de',
         'headline': 'Die besten lokalen LLMs für Geschäftskorrespondenz 2026: E-Mail, Angebote und Markenstimme',
         'description': 'Mistral Small 3.1 24B führt bei E-Mails und Memos. Qwen2.5 7B bei mehrsprachiger Korrespondenz. 7B-24B-Modelle übertreffen 70B. Ollama-Setup in 10 Minuten.',
         'datePublished': '2026-04-05',
@@ -450,7 +444,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'de',
         'name': 'Beste lokale LLMs für Geschäftskorrespondenz-Aufgaben 2026',
         'numberOfItems': 7,
         'itemListElement': [
@@ -466,7 +459,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Warum ist Mistral Small 3.1 besser als Llama 3.1 für E-Mails?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mistral Small 3.1 ist präziser. Llama 3.1 ist anpassungsfähiger. Für reine Kürze/Präzision: Mistral Small 3.1. Für Tonanpassung: Llama 3.1.' } },
           { '@type': 'Question', 'name': 'Kann ich ein 13B-Modell für Geschäftskorrespondenz verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, aber unnötig. 7B ist schneller und qualitativ gleichwertig. 13B ist für lange Angebote (>2 Seiten) leicht besser.' } },
@@ -638,7 +630,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-business-writing',
-        'inLanguage': 'fr',
         'headline': 'Meilleurs LLMs locaux pour rédaction professionnelle en 2026 : emails, propositions et voix de marque',
         'description': 'Mistral Small 3.1 24B excelle pour emails et mémos. Qwen2.5 7B pour correspondance multilingue. Modèles 7B-24B surpassent 70B. Configuration Ollama en 10 minutes.',
         'datePublished': '2026-04-05',
@@ -658,7 +649,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'fr',
         'name': 'Meilleurs LLMs locaux pour tâches de rédaction professionnelle 2026',
         'numberOfItems': 7,
         'itemListElement': [
@@ -674,7 +664,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Pourquoi Mistral Small 3.1 est-il meilleur que Llama 3.1 pour les emails?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mistral Small 3.1 est plus concis. Llama 3.1 est plus adaptable. Pour pure brièveté/précision: Mistral Small 3.1. Pour adaptation tonale: Llama 3.1.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser un modèle 13B pour rédaction professionnelle?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, mais inutile. 7B est plus rapide et aussi bon. 13B est légèrement meilleur pour propositions longues (>2 pages).' } },
@@ -840,7 +829,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llms-business-writing',
-        'inLanguage': 'ja',
         'headline': '2026年ビジネスライティング向けベストなローカルLLM: メール、提案、ブランドボイス',
         'description': 'Mistral Small 3.1 24Bはメールとメモにリード。Qwen2.5 7Bは多言語対応に優秀。7B-24Bモデルが70B超。Ollama設定は10分。',
         'datePublished': '2026-04-05',
@@ -860,7 +848,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'ja',
         'name': '2026年ビジネスライティング タスク向けベストなローカルLLM',
         'numberOfItems': 7,
         'itemListElement': [
@@ -876,7 +863,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'なぜMistral Small 3.1がメール向けLlama 3.1より優れているのか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mistral Small 3.1はより簡潔。Llama 3.1はより適応可能。純粋な速さ/精度: Mistral Small 3.1。トーン適応: Llama 3.1。' } },
           { '@type': 'Question', 'name': 'ビジネスライティング向けに13Bモデルを使用できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、しかし不要。7Bはより高速で同等に良好。13Bは長い提案（>2ページ）でやや良好。' } },
@@ -1042,7 +1028,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llms-business-writing',
-        'inLanguage': 'zh',
         'headline': '2026年商业写作最佳本地LLM：电子邮件、提案和品牌声音',
         'description': 'Mistral Small 3.1 24B在电子邮件和备忘录中表现最佳。Qwen2.5 7B擅长多语言写作。7B-24B模型超越70B。Ollama设置仅需10分钟。',
         'datePublished': '2026-04-05',
@@ -1062,7 +1047,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'zh',
         'name': '2026年商业写作任务最佳本地LLM',
         'numberOfItems': 7,
         'itemListElement': [
@@ -1078,7 +1062,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '为什么Mistral Small 3.1对电子邮件更好？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mistral Small 3.1更精确。Llama 3.1更灵活。纯粹为了简洁/精确：Mistral Small 3.1。音调适应：Llama 3.1。' } },
           { '@type': 'Question', 'name': '我可以为商业写作使用13B模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，但不必要。7B更快，质量相当。13B对长提案（>2页）略好。' } },

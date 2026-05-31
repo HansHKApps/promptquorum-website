@@ -265,7 +265,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-2026',
-        'inLanguage': 'en',
         headline: 'Best Local LLMs in 2026: Top Models Ranked by Task, Hardware, and Quality',
         description: 'Best local LLMs in 2026 ranked: Llama 3.3 70B, Qwen2.5 72B, Mistral Small 3.1, Gemma 3 9B, and Phi-4 Mini -- with VRAM requirements and benchmark scores.',
         dateModified: '2026-04-05',
@@ -285,7 +284,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'en',
         name: 'Best Local LLMs 2026 -- Benchmark Comparison',
         numberOfItems: 5,
         itemListElement: [
@@ -555,7 +553,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-2026?lang=es',
-        'inLanguage': 'es',
         headline: 'Mejores LLMs locales en 2026: Top modelos clasificados por tarea, hardware y calidad',
         description: 'Mejores LLMs locales en 2026: Llama 3.3 70B, Qwen2.5 72B, Mistral Small 3.1, Gemma 3 9B y Phi-4 Mini -- con requisitos de VRAM y puntuaciones de benchmark.',
         dateModified: '2026-04-05',
@@ -575,7 +572,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         name: 'Mejores LLMs locales 2026 -- Comparación de benchmarks',
         numberOfItems: 5,
         itemListElement: [
@@ -852,7 +848,6 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'http
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'fr',
         name: 'Meilleurs LLMs locaux 2026 : Top modèles classés par tâche, matériel et qualité',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: '**Best Overall**: Meta Llama 3.3 70B -- correspond à GPT-4 (2023) sur MMLU (82 %), nécessite 40 GB RAM avec Q4_K_M.' },
@@ -866,7 +861,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-2026',
-        'inLanguage': 'fr',
         headline: 'Meilleurs LLMs locaux 2026 : Llama 3.3, Qwen2.5, Mistral',
         description: 'Meilleurs LLMs locaux 2026 : Llama 3.3 70B (global), Qwen2.5 72B (code), Mistral Small 3.1 (16 GB), Gemma 3 9B (gamme intermédiaire). Benchmarks et exigences VRAM.',
         dateModified: '2026-04-04',
@@ -1094,7 +1088,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llms-2026',
-        'inLanguage': 'ja',
         headline: '2026年 最高のローカルLLM：タスク・ハードウェア・品質で評価したトップモデル',
         description: '2026年の最高のローカルLLM：Llama 3.3 70B（総合性能）、Qwen2.5 72B（コード・多言語）、Mistral Small 3.1（7Bクラス）。ベンチマークとVRAM要件。',
         dateModified: '2026-04-04',
@@ -1114,7 +1107,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'ja',
         name: '2026年の最高のローカルLLMモデル',
         numberOfItems: 5,
         itemListElement: [
@@ -1337,7 +1329,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llms-2026',
-        'inLanguage': 'zh',
         headline: '2026年最佳本地大语言模型：按任务、硬件和质量排名的顶级模型',
         description: '2026年最佳本地大语言模型：Llama 3.3 70B（综合性能）、Qwen2.5 72B（代码和多语言）、Mistral Small 3.1（7B级）。基准测试和VRAM要求。',
         dateModified: '2026-04-04',
@@ -1357,7 +1348,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'zh',
         name: '2026年最佳本地大语言模型',
         numberOfItems: 5,
         itemListElement: [

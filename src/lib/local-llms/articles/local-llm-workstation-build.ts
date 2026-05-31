@@ -219,7 +219,6 @@ schema: {
         'headline': 'Local LLM Workstation Build 2026: Dual RTX 4090, Threadripper, $4,000–6,000',
         'description': 'Build a $4,000–6,000 workstation: 2× RTX 4090 (48 GB VRAM), Threadripper 7970X, 128 GB DDR5. Serves 2–3 concurrent 70B users at 14 tok/s each. Complete cooling, PSU, electrical guide.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-workstation-build',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': {
@@ -302,7 +301,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-workstation-build',
         'mainEntity': [
           {
@@ -589,7 +587,6 @@ schema: {
         'headline': 'Lokale LLM-Workstation Build 2026: Dual RTX 4090, Threadripper, €4.000–6.000',
         'description': '€4.000–6.000 Workstation: 2× RTX 4090 (48 GB VRAM), Threadripper 7970X, 128 GB DDR5. Bedient 2–3 gleichzeitige 70B-Benutzer bei 14 Token/s. Kompletter Kühl-, Netzteil- und Stromversorgungsleitfaden.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-workstation-build',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': {
@@ -672,7 +669,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-workstation-build',
         'mainEntity': [
           {
@@ -972,7 +968,6 @@ schema: {
         'headline': 'Station de Travail LLM Local 2026 : Dual RTX 4090, Threadripper, 4–6K €',
         'description': 'Station de travail 4 000–6 000 € : 2× RTX 4090 (48 GB VRAM), Threadripper 7970X, 128 GB DDR5. Dessert 2–3 utilisateurs 70B simultanés 14 tok/s. Guides complets refroidissement, alimentation, électrique.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-workstation-build',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': {
@@ -1055,7 +1050,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-workstation-build',
         'mainEntity': [
           {
@@ -1337,7 +1331,6 @@ schema: {
         'headline': 'ローカルLLM ワークステーション構築2026：RTX 4090×2、Threadripper、$4,000–6,000',
         'description': '$4,000–6,000ワークステーション：RTX 4090×2（48GB VRAM）、Threadripper 7970X、128GB DDR5。70B×2–3名同時14トークン/秒。冷却・電源・電気配線完全ガイド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-workstation-build',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': {
@@ -1419,7 +1412,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-workstation-build',
         'mainEntity': [
           {
@@ -1704,7 +1696,6 @@ schema: {
         'headline': '本地LLM工作站构建2026：双RTX 4090、Threadripper、$4,000–6,000',
         'description': '$4,000–6,000工作站：双RTX 4090（48GB显存）、Threadripper 7970X、128GB DDR5。同时支持2–3名70B用户14 tok/s。包含冷却、电源、电气完整指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-workstation-build',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': {
@@ -1786,7 +1777,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-workstation-build',
         'mainEntity': [
           {
@@ -2070,7 +2060,6 @@ schema: {
         'headline': 'Estación de Trabajo LLM Local 2026: Dual RTX 4090, Threadripper, $4,000–6,000',
         'description': 'Construye una estación de trabajo de $4,000–6,000: 2× RTX 4090 (48 GB VRAM), Threadripper 7970X, 128 GB DDR5. Sirve a 2–3 usuarios 70B concurrentes a 14 tok/s cada uno. Guía completa de refrigeración, fuente de alimentación y configuración eléctrica.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-workstation-build?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': {
@@ -2153,7 +2142,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-workstation-build?lang=es',
         'mainEntity': [
           {

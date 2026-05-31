@@ -1234,7 +1234,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         headline: 'Cómo construir una biblioteca de prompts: plantilla de 8 campos, gobernanza y guía de adopción para equipos',
         description: 'Qué es una biblioteca de prompts, por qué tu equipo debería construir una, cómo estructurarla y mantenerla, y mejores prácticas para versiones y gobernanza.',
         datePublished: '2026-03-24',

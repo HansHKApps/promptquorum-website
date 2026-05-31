@@ -27,7 +27,6 @@ schema: {
         'headline': 'Best 7B Models 2026: Llama 3.1, Mistral, Qwen2.5, Phi Comparison',
         'description': 'Best 7B models for 8GB VRAM in 2026: Llama 3.1 7B (82% MATH), Mistral 7B (92% instruction-following), Qwen2.5 7B (27 languages). Consumer GPU setup guide.',
         'url': 'https://www.promptquorum.com/local-llms/best-7b-models-consumer-hardware',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -47,7 +46,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -86,7 +84,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Best 7B Models for Consumer Hardware 2026',
         'description': 'Top-performing 7B LLMs for 8GB VRAM consumer GPUs, ranked by use case.',
-        'inLanguage': 'en',
         'numberOfItems': 4,
         'itemListElement': [
           {
@@ -293,7 +290,6 @@ schema: {
         'headline': 'Mejores modelos 7B 2026: comparativa Llama 3.1, Mistral, Qwen2.5, Phi',
         'description': 'Mejores modelos 7B para 8 GB de VRAM en 2026: Llama 3.1 7B (82% MATH), Mistral 7B (92% seguimiento de instrucciones), Qwen2.5 7B (27 idiomas). Guía de configuración para GPU de consumo.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-7b-models-consumer-hardware?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -313,7 +309,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -352,7 +347,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Mejores modelos 7B para hardware de consumo 2026',
         'description': 'Los LLMs 7B de mayor rendimiento para GPUs de consumo con 8 GB de VRAM, clasificados por caso de uso.',
-        'inLanguage': 'es',
         'numberOfItems': 4,
         'itemListElement': [
           {
@@ -558,7 +552,6 @@ schema: {
         'headline': 'Beste 7B-Modelle 2026: Llama 3.1, Mistral, Qwen2.5, Phi Vergleich',
         'description': 'Beste 7B-Modelle für 8 GB VRAM 2026: Llama 3.1 (82 % MATH), Mistral 7B (92 % Instruktionsbefolgung), Qwen2,5 7B (27 Sprachen). Consumer-GPU-Anleitung.',
         'url': 'https://www.promptquorum.com/de/local-llms/best-7b-models-consumer-hardware',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -578,7 +571,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -627,7 +619,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Beste 7B-Modelle für Consumer-Hardware 2026',
         'description': 'Leistungsstärkste 7B-LLMs für Consumer-GPUs mit 8 GB VRAM, nach Anwendungsfall gerankt.',
-        'inLanguage': 'de',
         'numberOfItems': 4,
         'itemListElement': [
           {
@@ -836,7 +827,6 @@ schema: {
         'headline': 'Meilleurs modèles 7B 2026 : Llama 3.1, Mistral, Qwen2.5, Phi — Comparatif',
         'description': 'Meilleurs modèles 7B 2026 pour 8 Go VRAM : Llama 3.1 7B (82 % MATH), Mistral 7B (92 % instructions), Qwen2.5 7B (27 langues). Guide GPU grand public.',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-7b-models-consumer-hardware',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -856,7 +846,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -895,7 +884,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Meilleurs modèles 7B pour GPU grand public 2026',
         'description': 'Meilleurs LLM 7B pour GPU grand public avec 8 Go de VRAM, classés par cas d\'usage.',
-        'inLanguage': 'fr',
         'numberOfItems': 4,
         'itemListElement': [
           {
@@ -1101,7 +1089,6 @@ schema: {
         'headline': 'コンシューマGPU向け7Bモデル比較2026：Llama 3.1、Mistral、Qwen2.5、Phi',
         'description': '2026年コンシューマGPU（8GB VRAM）向け7Bモデル比較：Llama 3.1 7B（MATH 82%）、Mistral 7B（指示追従92%）、Qwen2.5 7B（27言語対応）。Ollama設定ガイド付き。',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-7b-models-consumer-hardware',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1121,7 +1108,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1160,7 +1146,6 @@ schema: {
         '@type': 'ItemList',
         'name': '2026年コンシューマハードウェア向け最良の7Bモデル',
         'description': 'ユースケース別にランク付けされた8GB VRAMコンシューマGPU向けトップ7B LLMモデル。',
-        'inLanguage': 'ja',
         'numberOfItems': 4,
         'itemListElement': [
           {
@@ -1366,7 +1351,6 @@ schema: {
         'headline': '2026年消费级GPU最佳7B模型：Llama 3.1、Mistral、Qwen2.5、Phi对比',
         'description': '2026年消费级GPU（8GB显存）最佳7B模型对比：Llama 3.1 7B（MATH 82%）、Mistral 7B（指令遵循92%）、Qwen2.5 7B（27种语言）。含Ollama配置指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-7b-models-consumer-hardware',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1386,7 +1370,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1425,7 +1408,6 @@ schema: {
         '@type': 'ItemList',
         'name': '2026年消费级硬件最佳7B模型',
         'description': '按使用场景排名的8GB显存消费级GPU顶级7B LLM模型。',
-        'inLanguage': 'zh',
         'numberOfItems': 4,
         'itemListElement': [
           {

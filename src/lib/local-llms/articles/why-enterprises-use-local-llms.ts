@@ -188,7 +188,6 @@ schema: {
         'headline': 'Why Enterprises Choose Local LLMs',
         'description': 'Why enterprises use local LLMs: cost analysis, GDPR/HIPAA compliance, data sovereignty, vendor lock-in avoidance.',
         'url': 'https://www.promptquorum.com/local-llms/why-enterprises-use-local-llms',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -199,7 +198,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -247,7 +245,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Why Enterprises Choose Local LLMs',
-        'inLanguage': 'en',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -451,7 +448,6 @@ schema: {
         'headline': 'Por qué las empresas eligen LLMs locales',
         'description': 'Por qué las empresas usan LLMs locales: análisis de costos, cumplimiento GDPR/HIPAA, soberanía de datos, evitar la dependencia de proveedores.',
         'url': 'https://www.promptquorum.com/es/local-llms/why-enterprises-use-local-llms?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -462,7 +458,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -510,7 +505,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Por qué las empresas eligen LLMs locales',
-        'inLanguage': 'es',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -697,7 +691,6 @@ schema: {
         'headline': 'Warum Unternehmen lokale LLMs wählen',
         'description': 'Warum Unternehmen lokale LLMs einsetzen: Kostenanalyse, DSGVO/BSI-Compliance, Datenschutz, Vermeidung von Herstellerbindung.',
         'url': 'https://www.promptquorum.com/de/local-llms/why-enterprises-use-local-llms',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -708,7 +701,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -751,7 +743,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Warum Unternehmen lokale LLMs wählen',
-        'inLanguage': 'de',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -938,7 +929,6 @@ schema: {
         'headline': 'Pourquoi les entreprises choisissent les LLM locaux',
         'description': 'Pourquoi les entreprises utilisent les LLM locaux : analyse des coûts, conformité RGPD/CNIL, souveraineté des données, évitement du verrouillage fournisseur.',
         'url': 'https://www.promptquorum.com/fr/local-llms/why-enterprises-use-local-llms',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -949,7 +939,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -992,7 +981,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Pourquoi les entreprises choisissent les LLM locaux',
-        'inLanguage': 'fr',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -1179,7 +1167,6 @@ schema: {
         'headline': 'エンタープライズがローカルLLMを選ぶ理由',
         'description': 'エンタープライズがローカルLLMを使う理由：コスト分析、METI/データセキュリティ法コンプライアンス、データ主権、ベンダーロックイン回避。',
         'url': 'https://www.promptquorum.com/ja/local-llms/why-enterprises-use-local-llms',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1190,7 +1177,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1233,7 +1219,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'エンタープライズがローカルLLMを選ぶ理由',
-        'inLanguage': 'ja',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -1420,7 +1405,6 @@ schema: {
         'headline': '企业为什么选择本地LLM',
         'description': '企业使用本地LLM的原因：成本分析、数据安全法合规性、数据主权、避免供应商锁定。',
         'url': 'https://www.promptquorum.com/zh/local-llms/why-enterprises-use-local-llms',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1431,7 +1415,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1474,7 +1457,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '企业为什么选择本地LLM',
-        'inLanguage': 'zh',
         'numberOfItems': 3,
         'itemListElement': [
           {

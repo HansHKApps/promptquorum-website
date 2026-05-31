@@ -436,7 +436,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/local-llms/llm-quantization-explained?lang=en',
-        'inLanguage': 'en',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'Q4_K_M quantization' },
@@ -509,7 +508,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -947,7 +945,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/es/local-llms/llm-quantization-explained?lang=es',
-        'inLanguage': 'es',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'Cuantización Q4_K_M' },
@@ -974,7 +971,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Ahorro de RAM por tamaño de modelo: Q4_K_M vs FP16 (2026)',
-        'inLanguage': 'es',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Modelo 3B', 'description': 'FP16: 6 GB de RAM. Q4_K_M: 2 GB de RAM. Ahorro: 67%. Funciona en dispositivos de 4 GB.' },
@@ -987,7 +983,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1419,7 +1414,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/de/local-llms/llm-quantization-explained',
-        'inLanguage': 'de',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'LLM-Quantisierung' },
@@ -1447,7 +1441,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LLM-Quantisierungsstufen: RAM vs. Qualität-Tradeoffs',
-        'inLanguage': 'de',
         'itemListElement': [
           {
             '@type': 'ListItem',
@@ -1490,7 +1483,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1893,7 +1885,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/fr/local-llms/llm-quantization-explained',
-        'inLanguage': 'fr',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'Quantification LLM' },
@@ -1921,7 +1912,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Niveaux de quantification LLM : Compromis RAM vs qualité',
-        'inLanguage': 'fr',
         'itemListElement': [
           {
             '@type': 'ListItem',
@@ -1964,7 +1954,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -2356,7 +2345,6 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/ja/local-llms/llm-quantization-explained',
-        'inLanguage': 'ja',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'LLM量子化' },
@@ -2384,7 +2372,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LLM量子化レベル：RAM対品質',
-        'inLanguage': 'ja',
         'itemListElement': [
           {
             '@type': 'ListItem',
@@ -2427,7 +2414,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -2819,7 +2805,6 @@ schema: {
         'datePublished': '2026-04-02',
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/zh/local-llms/llm-quantization-explained',
-        'inLanguage': 'zh',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'LLM量化' },
@@ -2838,7 +2823,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '本地LLM量化级别：RAM对质量',
-        'inLanguage': 'zh',
         'itemListElement': [
           {
             '@type': 'ListItem',
@@ -2881,7 +2865,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',

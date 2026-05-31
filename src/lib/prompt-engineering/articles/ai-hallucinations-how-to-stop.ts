@@ -605,7 +605,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         headline: 'Alucinaciones de IA: Por qué la IA inventa cosas — y cómo detenerlas',
         description: 'Por qué los modelos de lenguaje alucinan, cómo detectar alucinaciones y técnicas para reducirlas. Aprende estrategias de diseño de prompts, enfoques a nivel de sistema y puntuación de consenso multi-modelo.',
         datePublished: '2026-03-22',

@@ -227,7 +227,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'Best Affiliate Programs for AI Developers (2026)',
       'description': 'Seven affiliate programs that pay commissions on products AI developers recommend: VPNs, cloud GPU rentals, coding assistants, and online courses.',
       'numberOfItems': 7,
-      'inLanguage': 'en',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'NordVPN Affiliate Program', 'description': 'Up to 100% first-sale commission, 30% renewals, 30-day cookie.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Coursera Affiliate Program', 'description': '15–45% per course sale, 30-day cookie, AI/ML course catalog.' },
@@ -467,7 +466,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'Beste Affiliate-Programme für KI-Entwickler (2026)',
       'description': 'Sieben Affiliate-Programme, die Provisionen auf Produkte zahlen, die KI-Entwickler empfehlen: VPNs, Cloud-GPU-Miete, Coding-Assistenten und Online-Kurse.',
       'numberOfItems': 7,
-      'inLanguage': 'de',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'NordVPN-Affiliate-Programm', 'description': 'Bis zu 100 % Erstkauf-Provision, 30 % Verlängerungen, 30-Tage-Cookie.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Coursera-Affiliate-Programm', 'description': '15–45 % pro Kursverkauf, 30-Tage-Cookie, KI/ML-Kurskatalog.' },
@@ -704,7 +702,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'Meilleurs programmes d\'affiliation pour développeurs IA (2026)',
       'description': 'Sept programmes d\'affiliation versant des commissions sur des produits recommandés par les développeurs IA : VPN, location de GPU cloud, assistants de code et formations en ligne.',
       'numberOfItems': 7,
-      'inLanguage': 'fr',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Programme affilié NordVPN', 'description': 'Jusqu\'à 100 % de commission à la première vente, 30 % sur les renouvellements, cookie 30 jours.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Programme affilié Coursera', 'description': '15–45 % par vente de cours, cookie 30 jours, catalogue de cours IA/ML.' },
@@ -940,7 +937,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'AIデベロッパー向けおすすめアフィリエイトプログラム（2026年）',
       'description': '7つのアフィリエイトプログラムがAIデベロッパーの推奨製品に報酬を支払います：VPN、クラウドGPUレンタル、コーディングアシスタント、オンラインコース。',
       'numberOfItems': 7,
-      'inLanguage': 'ja',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'NordVPNアフィリエイトプログラム', 'description': '初回販売最大100%、更新30%、30日Cookie。' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Courseraアフィリエイトプログラム', 'description': 'コース販売1件につき15〜45%、30日Cookie、AI/MLコースカタログ。' },
@@ -1177,7 +1173,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'AI开发者最佳联盟计划（2026）',
       'description': '七个联盟计划为AI开发者推荐的产品支付佣金：VPN、云GPU租用、代码助手和在线课程。',
       'numberOfItems': 7,
-      'inLanguage': 'zh',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'NordVPN联盟计划', 'description': '首次销售最高100%佣金，续期30%，30天Cookie。' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Coursera联盟计划', 'description': '每次课程销售15–45%，30天Cookie，AI/ML课程目录。' },
@@ -1414,7 +1409,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'Mejores programas de afiliados para desarrolladores de IA (2026)',
       'description': 'Siete programas de afiliados que pagan comisiones sobre productos que recomiendan los desarrolladores de IA: VPNs, alquiler de GPU en la nube, asistentes de código y cursos online.',
       'numberOfItems': 7,
-      'inLanguage': 'es',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Programa de afiliados de NordVPN', 'description': 'Hasta 100% de comisión en la primera venta, 30% en renovaciones, cookie de 30 días.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Programa de afiliados de Coursera', 'description': '15–45% por venta de curso, cookie de 30 días, catálogo de cursos de IA/ML.' },

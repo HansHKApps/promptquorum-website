@@ -175,7 +175,6 @@ schema: {
         'headline': 'Corporate RAG Local LLMs',
         'description': 'Corporate RAG with local LLMs: secure document Q&A, proprietary knowledge bases, audit trails, multi-user access control, enterprise.',
         'url': 'https://www.promptquorum.com/local-llms/corporate-rag-local-llms',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -186,7 +185,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -242,7 +240,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Corporate RAG Local LLMs',
-        'inLanguage': 'en',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -433,7 +430,6 @@ schema: {
         'headline': 'RAG Corporativo LLMs Locales',
         'description': 'RAG corporativo con LLMs locales: Q&A documental seguro, bases de conocimiento propietarias, audit trails, control de acceso multiusuario, empresa.',
         'url': 'https://www.promptquorum.com/es/local-llms/corporate-rag-local-llms?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -444,7 +440,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -500,7 +495,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'RAG Corporativo LLMs Locales',
-        'inLanguage': 'es',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -701,7 +695,6 @@ schema: {
         'headline': 'Corporate RAG lokale LLMs',
         'description': 'Corporate RAG mit lokalen LLMs: sichere Dokumenten-Q&A, proprietäre Wissensdatenbanken, Audit-Trails, Multi-Nutzer-Zugriffskontrolle, Enterprise.',
         'url': 'https://www.promptquorum.com/de/local-llms/corporate-rag-local-llms',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -712,7 +705,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -784,7 +776,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Corporate RAG lokale LLMs',
-        'inLanguage': 'de',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -971,7 +962,6 @@ schema: {
         'headline': 'RAG d\'entreprise LLMs locaux',
         'description': 'RAG d\'entreprise avec LLMs locaux : Q&A documentaire sécurisé, bases de connaissances propriétaires, audit trails, contrôle d\'accès multi-utilisateurs, entreprise.',
         'url': 'https://www.promptquorum.com/fr/local-llms/corporate-rag-local-llms',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -982,7 +972,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1030,7 +1019,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'RAG d\'entreprise LLMs locaux',
-        'inLanguage': 'fr',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -1217,7 +1205,6 @@ schema: {
         'headline': '企業RAGローカルLLM',
         'description': '企業RAGとローカルLLM：セキュアなドキュメントQ&A、独自知識ベース、監査証跡、マルチユーザーアクセス制御、エンタープライズ。',
         'url': 'https://www.promptquorum.com/ja/local-llms/corporate-rag-local-llms',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1233,7 +1220,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1281,7 +1267,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '企業RAGローカルLLM',
-        'inLanguage': 'ja',
         'numberOfItems': 3,
         'itemListElement': [
           {
@@ -1468,7 +1453,6 @@ schema: {
         'headline': '企业RAG本地LLM',
         'description': '企业RAG与本地LLM：安全文档问答、专有知识库、审计跟踪、多用户访问控制、企业级。',
         'url': 'https://www.promptquorum.com/zh/local-llms/corporate-rag-local-llms',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1484,7 +1468,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1532,7 +1515,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '企业RAG本地LLM',
-        'inLanguage': 'zh',
         'numberOfItems': 3,
         'itemListElement': [
           {

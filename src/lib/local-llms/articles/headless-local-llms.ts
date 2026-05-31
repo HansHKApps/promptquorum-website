@@ -145,7 +145,6 @@ schema: {
         'headline': 'Headless Local LLMs: Running Models Without a UI (2026)',
         'description': 'Headless local LLM deployment 2026: run Ollama, vLLM, and inference APIs without UI. Production setup for servers and microservices.',
         'url': 'https://www.promptquorum.com/local-llms/headless-local-llms',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -153,7 +152,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can Ollama and vLLM run on the same GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not simultaneously. They will compete for VRAM. Run one or the other, or use multiple GPUs.' } },
           { '@type': 'Question', 'name': 'Is it safe to expose the API to the internet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No, not without authentication. Always put an API key, firewall, or reverse proxy in front. Never expose localhost:11434 directly.' } },
@@ -309,7 +307,6 @@ schema: {
         'headline': 'LLMs locales headless: ejecutar modelos sin interfaz de usuario (2026)',
         'description': 'Despliegue de LLM local headless 2026: ejecuta Ollama, vLLM y APIs de inferencia sin UI. Configuración de producción para servidores y microservicios.',
         'url': 'https://www.promptquorum.com/es/local-llms/headless-local-llms?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -328,7 +325,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Pueden Ollama y vLLM ejecutarse en la misma GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No de forma simultánea. Competirán por la VRAM. Ejecuta uno u otro, o usa varias GPUs.' } },
           { '@type': 'Question', 'name': '¿Es seguro exponer la API a internet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No, sin autenticación no es seguro. Siempre coloca una clave API, firewall o proxy inverso por delante. Nunca expongas localhost:11434 directamente.' } },
@@ -340,7 +336,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Despliegue de LLM local headless',
-        'inLanguage': 'es',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Iniciar Ollama en modo headless', 'description': 'Ejecuta ollama serve para exponer la REST API en localhost:11434. Usa la variable de entorno OLLAMA_HOST para puertos personalizados.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Interactuar mediante REST API', 'description': 'Llama a la API desde Python, Node.js o curl. Ollama es compatible con OpenAI para una integración sencilla.' },
@@ -494,7 +489,6 @@ schema: {
         'headline': 'Headless Local LLMs: Modelle ohne Benutzeroberfläche ausführen (2026)',
         'description': 'Headless-LLM-Deployment mit Ollama und vLLM: Produktionssetup für Server und Microservices ohne UI. Skalierung, Überwachung und DSGVO-Compliance.',
         'url': 'https://www.promptquorum.com/de/local-llms/headless-local-llms',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -502,7 +496,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Können Ollama und vLLM auf der gleichen GPU laufen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht gleichzeitig. Sie konkurrieren um VRAM. Betreiben Sie eins oder das andere, oder nutzen Sie mehrere GPUs.' } },
           { '@type': 'Question', 'name': 'Ist es sicher, die API ins Internet freizugeben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein, nicht ohne Authentifizierung. Immer einen API-Schlüssel, eine Firewall oder einen Reverse Proxy davor setzen. Geben Sie localhost:11434 niemals direkt frei.' } },
@@ -516,7 +509,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Headless-LLM-Deployment',
-        'inLanguage': 'de',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Starten Sie Ollama im Headless-Modus', 'description': 'Führen Sie ollama serve aus, um die REST API auf localhost:11434 freizugeben. Nutzen Sie die Umgebungsvariable OLLAMA_HOST für benutzerdefinierte Ports.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Interagieren Sie über REST API', 'description': 'Rufen Sie die API aus Python, Node.js oder curl auf. Ollama ist OpenAI-kompatibel für einfache Integration.' },
@@ -662,7 +654,6 @@ schema: {
         'headline': 'LLMs Headless locaux : exécuter des modèles sans interface utilisateur (2026)',
         'description': 'Déploiement LLM Headless avec Ollama et vLLM : configuration de production pour serveurs et microservices, sans interface utilisateur.',
         'url': 'https://www.promptquorum.com/fr/local-llms/headless-local-llms',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -670,7 +661,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Ollama et vLLM peuvent-ils s\'exécuter sur le même GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non, pas simultanément. Ils concourront pour la VRAM. Exécutez l\'un ou l\'autre, ou utilisez plusieurs GPU.' } },
           { '@type': 'Question', 'name': 'Est-il sûr d\'exposer l\'API à Internet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non, pas sans authentification. Placez toujours une clé API, un pare-feu ou un proxy inverse en avant. Ne jamais exposer localhost:11434 directement.' } },
@@ -682,7 +672,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Déploiement LLM Headless',
-        'inLanguage': 'fr',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Démarrez Ollama en mode Headless', 'description': 'Exécutez ollama serve pour exposer l\'API REST sur localhost:11434. Utilisez la variable d\'environnement OLLAMA_HOST pour les ports personnalisés.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Interagir via API REST', 'description': 'Appelez l\'API depuis Python, Node.js ou curl. Ollama est compatible OpenAI pour une intégration facile.' },
@@ -827,7 +816,6 @@ schema: {
         'headline': 'Headless Local LLMs: UIなしでモデルを実行する (2026)',
         'description': 'Headless LLMデプロイメント: OllamaやvLLMをUIなしで実行。本番環境向けサーバーおよびマイクロサービス構成のセットアップと監視。',
         'url': 'https://www.promptquorum.com/ja/local-llms/headless-local-llms',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'about': [
@@ -840,7 +828,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'OllamaとvLLMは同じGPUで実行できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ、同時には実行できません。VRAMを競合します。片方だけを実行するか、複数のGPUを使用してください。' } },
           { '@type': 'Question', 'name': 'APIをインターネットに公開するのは安全ですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ、認証なしではありません。常にAPIキー、ファイアウォール、または逆プロキシを前に配置してください。localhost:11434を直接公開しないでください。' } },
@@ -852,7 +839,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Headless LLMデプロイメント',
-        'inLanguage': 'ja',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Ollamaをheadlessモードで起動', 'description': 'ollama serveを実行して、localhost:11434でREST APIを公開。OLLAMA_HOST環境変数でカスタムポートを使用可能。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'REST API経由で対話', 'description': 'Python、Node.js、またはcurlからAPIを呼び出し。OllamaはOpenAI互換で統合が容易。' },
@@ -997,7 +983,6 @@ schema: {
         'headline': 'Headless本地LLMs: 无界面运行模型 (2026)',
         'description': 'Headless LLM部署: 无界面运行Ollama和vLLM。面向服务器和微服务的生产环境配置、监视和扩展。',
         'url': 'https://www.promptquorum.com/zh/local-llms/headless-local-llms',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'about': [
@@ -1010,7 +995,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Ollama和vLLM可以在同一GPU上运行吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不能,不能同时运行。它们会竞争VRAM。运行其中一个或使用多个GPU。' } },
           { '@type': 'Question', 'name': '在互联网上公开API安全吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不,没有身份验证则不安全。始终在前面放置API密钥、防火墙或反向代理。永远不要直接公开localhost:11434。' } },
@@ -1022,7 +1006,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Headless LLM部署',
-        'inLanguage': 'zh',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '以headless模式启动Ollama', 'description': '运行ollama serve以在localhost:11434上公开REST API。使用OLLAMA_HOST环境变量进行自定义端口。' },
           { '@type': 'ListItem', 'position': 2, 'name': '通过REST API交互', 'description': '从Python、Node.js或curl调用API。Ollama与OpenAI兼容,易于集成。' },

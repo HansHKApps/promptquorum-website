@@ -148,7 +148,6 @@ schema: {
         'headline': 'Best Laptops for Local LLMs: GPU Specs, Battery Life, Buying Guide',
         'description': 'Best laptops for local LLMs: GPU requirements, model size limits, battery impact. RTX 4060/4070, 16GB VRAM minimum.',
         'url': 'https://www.promptquorum.com/local-llms/best-laptops-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -168,7 +167,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'url': 'https://www.promptquorum.com/local-llms/best-laptops-local-llm',
         'mainEntity': [
           {
@@ -257,7 +255,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/local-llms/best-laptops-local-llm',
-        'inLanguage': 'en',
         'name': 'Best Gaming Laptops for Local LLMs 2026',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'Budget Gaming Laptop: RTX 4060 (8GB), 16GB RAM, $1,200-1,500. Runs 7B at 10-12 tok/s.' },

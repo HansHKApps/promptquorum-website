@@ -949,7 +949,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
       'url': 'https://www.promptquorum.com/de/power-local-llm/local-ai-app-with-built-in-rag',
-      'inLanguage': 'de',
       'image': 'https://www.promptquorum.com/de/api/og/local-ai-app-with-built-in-rag',
       'author': {
         '@type': 'Person',
@@ -978,7 +977,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'de',
       'name': 'Lokale KI-Desktop-Apps mit integriertem RAG 2026',
       'numberOfItems': 3,
       'itemListElement': [
@@ -1449,7 +1447,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
       'url': 'https://www.promptquorum.com/fr/power-local-llm/local-ai-app-with-built-in-rag',
-      'inLanguage': 'fr',
       'image': 'https://www.promptquorum.com/fr/api/og/local-ai-app-with-built-in-rag',
       'author': {
         '@type': 'Person',
@@ -1478,7 +1475,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'fr',
       'name': 'Applications IA desktop locales RAG intégré 2026',
       'numberOfItems': 3,
       'itemListElement': [
@@ -1949,7 +1945,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
       'url': 'https://www.promptquorum.com/ja/power-local-llm/local-ai-app-with-built-in-rag',
-      'inLanguage': 'ja',
       'image': 'https://www.promptquorum.com/ja/api/og/local-ai-app-with-built-in-rag',
       'author': {
         '@type': 'Organization',
@@ -1982,7 +1977,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'ja',
       'name': 'ローカル AI デスクトップアプリ（内蔵 RAG 対応）2026年',
       'numberOfItems': 3,
       'itemListElement': [
@@ -2453,7 +2447,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
       'url': 'https://www.promptquorum.com/zh/power-local-llm/local-ai-app-with-built-in-rag',
-      'inLanguage': 'zh',
       'image': 'https://www.promptquorum.com/zh/api/og/local-ai-app-with-built-in-rag',
       'author': {
         '@type': 'Organization',
@@ -2486,7 +2479,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'zh',
       'name': '2026年本地AI桌面应用，内置RAG',
       'numberOfItems': 3,
       'itemListElement': [
@@ -2975,7 +2967,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
       'url': 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-with-built-in-rag?lang=es',
-      'inLanguage': 'es',
       'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=es',
       'author': {
         '@type': 'Person',
@@ -3004,7 +2995,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'es',
       'name': 'Apps de escritorio de IA local con RAG integrado en 2026',
       'numberOfItems': 3,
       'itemListElement': [

@@ -207,7 +207,6 @@ schema: {
         'headline': 'Local LLMs for Coding Workflows 2026: Qwen2.5-Coder 92% HumanEval',
         'description': 'Local coding models (Qwen2.5-Coder 32B: 92.7% HumanEval, CodeLlama 34B: 75% HumanEval) generate, review, and test code privately without cloud APIs. Complete setup guides for VS Code and Cursor.',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
@@ -226,7 +225,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Which local LLM is best for coding in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B (92.7% HumanEval) for maximum quality on 24 GB VRAM. Qwen2.5-Coder 7B (72%) for speed on 5 GB VRAM. For MacBook: Qwen2.5-Coder 7B runs at 30–60 tok/sec on M1 Pro+.' } },
           { '@type': 'Question', 'name': 'How does Qwen2.5-Coder 32B compare to GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B scores 92.7% on HumanEval — within 2% of Copilot\'s backend (~94%). Speed: local is 2–5 seconds vs Copilot\'s ~300ms. Quality is near-parity. Cost: local $0/month after hardware; Copilot $228/year.' } },
@@ -243,7 +241,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Best Local Coding LLMs by HumanEval Score 2026',
         'numberOfItems': 6,
-        'inLanguage': 'en',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '92.7% HumanEval. 22 GB VRAM Q4. Best local coding model. ollama pull qwen2.5-coder:32b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'CodeLlama 34B', 'description': '75% HumanEval. 22 GB VRAM Q4. Legacy Llama-based coding model.' },
@@ -454,7 +451,6 @@ schema: {
         'headline': 'Lokale LLMs für Programmier-Workflows 2026: Qwen2.5-Coder 92% HumanEval',
         'description': 'Lokale Programmierungsmodelle (Qwen2.5-Coder 32B: 92,7% HumanEval, CodeLlama 34B: 75% HumanEval) generieren, überprüfen und testen Code privat ohne Cloud-APIs. Komplette Setup-Anleitungen für VS Code und Cursor.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llms-for-coding-workflows',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
@@ -473,7 +469,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Welches lokale LLM ist 2026 am besten für Programmieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B (92,7% HumanEval) für maximale Qualität auf 24 GB VRAM. Qwen2.5-Coder 7B (72%) für Geschwindigkeit auf 5 GB VRAM. Für MacBook: Qwen2.5-Coder 7B mit 30–60 Token/sec auf M1 Pro+.' } },
           { '@type': 'Question', 'name': 'Wie vergleicht sich Qwen2.5-Coder 32B mit GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B erreicht 92,7% auf HumanEval — innerhalb von 2% von Copilots Backend (~94%). Geschwindigkeit: lokal 2–5 Sekunden vs. Copilots ~300ms. Qualität ist nahezu gleichwertig. Kosten: lokal 0 €/Monat nach Hardware; Copilot ca. 188 €/Jahr.' } },
@@ -492,7 +487,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Beste lokale Programmier-LLMs nach HumanEval-Score 2026',
         'numberOfItems': 6,
-        'inLanguage': 'de',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '92,7% HumanEval. 22 GB VRAM Q4. Bestes lokales Programmierungsmodell. ollama pull qwen2.5-coder:32b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'CodeLlama 34B', 'description': '75% HumanEval. 22 GB VRAM Q4. Legacy Llama-basiertes Programmierungsmodell.' },
@@ -695,7 +689,6 @@ schema: {
         'headline': 'LLMs locaux pour les workflows de programmation 2026 : Qwen2.5-Coder 92% HumanEval',
         'description': 'Modèles de programmation locaux (Qwen2.5-Coder 32B: 92,7% HumanEval, CodeLlama 34B: 75% HumanEval) génèrent, examinent et testent le code en privé sans APIs cloud. Guides complets de configuration pour VS Code et Cursor.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-for-coding-workflows',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
@@ -714,7 +707,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Quel est le meilleur LLM local pour la programmation en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B (92,7% HumanEval) pour la qualité maximale sur 24 GB de VRAM. Qwen2.5-Coder 7B (72%) pour la vitesse sur 5 GB de VRAM. Pour MacBook : Qwen2.5-Coder 7B à 30–60 tokens/sec sur M1 Pro+.' } },
           { '@type': 'Question', 'name': 'Comment Qwen2.5-Coder 32B se compare-t-il à GitHub Copilot ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B obtient 92,7% sur HumanEval — à 2% du backend de Copilot (~94%). Vitesse : local 2–5 secondes vs Copilot ~300ms. Qualité quasi-équivalente. Coût : local env. 188 €/an après matériel ; Copilot env. 188 €/an.' } },
@@ -731,7 +723,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Meilleurs LLMs de programmation locaux par score HumanEval 2026',
         'numberOfItems': 6,
-        'inLanguage': 'fr',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '92,7% HumanEval. 22 GB VRAM Q4. Meilleur modèle de programmation local. ollama pull qwen2.5-coder:32b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'CodeLlama 34B', 'description': '75% HumanEval. 22 GB VRAM Q4. Modèle de programmation Llama hérité.' },
@@ -934,7 +925,6 @@ schema: {
         'headline': 'ローカルLLMによるプログラミングワークフロー2026: Qwen2.5-Coder 92% HumanEval',
         'description': 'ローカルプログラミングモデル（Qwen2.5-Coder 32B: 92.7% HumanEval、CodeLlama 34B: 75% HumanEval）はクラウドAPIなしでコード生成、審査、テストを行います。VS CodeとCursorの完全セットアップガイド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llms-for-coding-workflows',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -953,7 +943,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': '2026年のプログラミング向けベストローカルLLMは？', 'acceptedAnswer': { '@type': 'Answer', 'text': '24 GB VRAMで最大品質なら Qwen2.5-Coder 32B（92.7% HumanEval）。5 GB VRAMで速度なら Qwen2.5-Coder 7B（72%）。MacBook：M1 Pro+ で 30～60 tokens/sec。' } },
           { '@type': 'Question', 'name': 'Qwen2.5-Coder 32BはGitHub Copilotとどう比較？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32BはHumanEvalで92.7% — Copilotバックエンド（~94%）の2%以内。速度：ローカル2～5秒 vs Copilot ~300ms。品質ほぼ同等。費用：ローカル硬体後0円/月；Copilot 約¥37,200/年。' } },
@@ -970,7 +959,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'ローカルプログラミングLLMベスト（HumanEval スコア2026）',
         'numberOfItems': 6,
-        'inLanguage': 'ja',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '92.7% HumanEval。22 GB VRAM Q4。最高のローカルプログラミングモデル。ollama pull qwen2.5-coder:32b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'CodeLlama 34B', 'description': '75% HumanEval。22 GB VRAM Q4。レガシーLlama ベースプログラミングモデル。' },
@@ -1173,7 +1161,6 @@ schema: {
         'headline': '本地LLM编程工作流2026: Qwen2.5-Coder 92% HumanEval',
         'description': '本地编程模型（Qwen2.5-Coder 32B: 92.7% HumanEval、CodeLlama 34B: 75% HumanEval）无需云API即可生成、审查和测试代码。VS Code和Cursor完整设置指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llms-for-coding-workflows',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1192,7 +1179,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '2026年编程的最佳本地LLM是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在24 GB VRAM上的最大质量为Qwen2.5-Coder 32B（92.7% HumanEval）。5 GB VRAM上的速度为Qwen2.5-Coder 7B（72%）。MacBook：M1 Pro+上30-60个tokens/秒。' } },
           { '@type': 'Question', 'name': 'Qwen2.5-Coder 32B与GitHub Copilot相比如何？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B在HumanEval上获得92.7% — 在Copilot的后端（~94%）的2%以内。速度：本地2-5秒 vs Copilot ~300ms。质量基本相当。成本：本地硬体后$0/月；Copilot $228/年。' } },
@@ -1209,7 +1195,6 @@ schema: {
         '@type': 'ItemList',
         'name': '按HumanEval评分的最佳本地编程LLM 2026',
         'numberOfItems': 6,
-        'inLanguage': 'zh',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '92.7% HumanEval。22 GB VRAM Q4。最佳本地编程模型。ollama pull qwen2.5-coder:32b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'CodeLlama 34B', 'description': '75% HumanEval。22 GB VRAM Q4。传统Llama基础编程模型。' },
@@ -1419,7 +1404,6 @@ schema: {
         'headline': 'LLMs Locales para Flujos de Trabajo de Programación 2026: Qwen2.5-Coder 92% HumanEval',
         'description': 'Modelos de programación local (Qwen2.5-Coder 32B: 92,7% HumanEval, CodeLlama 34B: 75% HumanEval) generan, revisan y prueban código de forma privada sin APIs en la nube. Guías completas de configuración para VS Code y Cursor.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llms-for-coding-workflows?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1443,7 +1427,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuál es el mejor LLM local para programar en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B (92,7% HumanEval) para máxima calidad con 24 GB de VRAM. Qwen2.5-Coder 7B (72%) para velocidad con 5 GB. Para MacBook: Qwen2.5-Coder 7B via Ollama funciona a 30-60 tokens/seg en M1 Pro+.' } },
           { '@type': 'Question', 'name': '¿Cómo se compara Qwen2.5-Coder 32B con GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5-Coder 32B obtiene un 92,7% en HumanEval — a solo un 2% del backend de Copilot (~94%). Velocidad: local 2-5 segundos vs ~300 ms de Copilot. Calidad prácticamente equivalente. Coste: local $0/mes tras el hardware; Copilot $228/año.' } },
@@ -1460,7 +1443,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Mejores LLMs de Programación Local por Puntuación HumanEval 2026',
         'numberOfItems': 6,
-        'inLanguage': 'es',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen2.5-Coder 32B', 'description': '92,7% HumanEval. 22 GB VRAM Q4. Mejor modelo de programación local. ollama pull qwen2.5-coder:32b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'CodeLlama 34B', 'description': '75% HumanEval. 22 GB VRAM Q4. Modelo de programación basado en Llama heredado.' },

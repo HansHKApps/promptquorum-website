@@ -1072,13 +1072,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'datePublished': '2026-04-05',
         'dateModified': '2026-05-03',
         'url': 'https://www.promptquorum.com/zh/local-llms/private-local-llm-sensitive-data',
-        'inLanguage': 'zh',
         'educationalLevel': 'intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [],
       },
     },
@@ -1138,13 +1136,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'datePublished': '2026-04-05',
         'dateModified': '2026-05-03',
         'url': 'https://www.promptquorum.com/de/local-llms/private-local-llm-sensitive-data',
-        'inLanguage': 'de',
         'educationalLevel': 'intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Warum können Cloud-LLMs keine sensiblen Daten verarbeiten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Cloud-APIs (ChatGPT, Claude) senden Daten an Remote-Server. DSGVO und HIPAA verbieten dies für regulierte Daten ohne explizite Vereinbarung. Selbst mit Vereinbarung trägt der Cloud-Anbieter das Risiko, nicht Sie. Lokales Deployment = Sie kontrollieren die Sicherheit.' }},
           { '@type': 'Question', 'name': 'Wie viel kostet ein lokales LLM zu betreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Anfangskosten: 3.000–6.000 € für GPU-Hardware (RTX 4090, A100 oder Mac Studio). Laufende Kosten: ~0 € (nur Strom ~50–100 €/Monat für Always-On). Nach 1–2 Jahren hat sich Hardware amortisiert. Cloud-APIs: $1.000+/Monat bei kontinuierlicher Nutzung. Lokal ist langfristig billiger.' }},

@@ -178,7 +178,6 @@ schema: {
         'headline': 'Open WebUI vs SillyTavern 2026: Team Chat vs Roleplay Frontend',
         'description': 'Open WebUI (professional chat, multi-user, Docker) vs SillyTavern (character roleplay, lorebooks, group chat) for local LLMs. Both use Ollama, vLLM, llama.cpp backends. Feature matrix, April 2026 comparison.',
         'url': 'https://www.promptquorum.com/local-llms/open-webui-vs-sillytavern',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -194,7 +193,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Should I use Open WebUI or SillyTavern?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI for work, research, and team deployment (built-in multi-user, professional interface, Docker). SillyTavern for creative writing and character roleplay (character cards, lorebooks, group chat, voice integration). Both connect to the same inference backends (Ollama, vLLM, llama.cpp) so speed is identical.' } },
           { '@type': 'Question', 'name': 'Can I use SillyTavern for team chat?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. SillyTavern is single-user by design — conversations overwrite each other when shared. For teams, use Open WebUI which has built-in multi-user support, per-user conversation history, and API key management.' } },
@@ -208,7 +206,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Open WebUI vs SillyTavern: Feature Comparison',
-        'inLanguage': 'en',
         'numberOfItems': 2,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Python FastAPI + Svelte frontend. Multi-user support with API key management. Docker deployment. Professional chat interface with RAG plugins and document upload. Best for teams, research, and professional workflows.' },
@@ -412,7 +409,6 @@ schema: {
         'headline': 'Open WebUI vs SillyTavern 2026: Team-Chat vs Roleplay-Frontend',
         'description': 'Open WebUI (professioneller Chat, Multi-User, Docker) vs SillyTavern (Rollenspiel, Lorebooks, Gruppenchat) für lokale LLMs. Beide nutzen Ollama, vLLM, llama.cpp. Feature-Matrix April 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/open-webui-vs-sillytavern',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -428,7 +424,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Soll ich Open WebUI oder SillyTavern verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI für Arbeit, Recherche und Team-Deployment (eingebauter Multi-User-Support, professionelle Oberfläche, Docker). SillyTavern für kreatives Schreiben und Charakter-Rollenspiel (Character Cards, Lorebooks, Gruppen-Chat). Beide verbinden sich mit denselben Backends (Ollama, vLLM, llama.cpp), sodass die Geschwindigkeit identisch ist.' } },
           { '@type': 'Question', 'name': 'Kann ich SillyTavern für Team-Chat verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. SillyTavern ist von Grund auf Einzelnutzer-Software. Für Teams verwenden Sie Open WebUI mit eingebautem Multi-User-Support, benutzerspezifischem Konversationsverlauf und API-Schlüssel-Verwaltung.' } },
@@ -444,7 +439,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Open WebUI vs SillyTavern: Funktionsvergleich',
-        'inLanguage': 'de',
         'numberOfItems': 2,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Python FastAPI + Svelte-Frontend. Multi-User-Support mit API-Schlüssel-Verwaltung. Docker-Deployment. Professionelle Chat-Oberfläche mit RAG-Plugins und Dokument-Upload. Ideal für Teams, Recherche und professionelle Workflows.' },
@@ -640,7 +634,6 @@ schema: {
         'headline': 'Open WebUI vs SillyTavern 2026 : Équipe vs Roleplay Frontend',
         'description': 'Open WebUI (chat pro, multi-utilisateur, Docker) vs SillyTavern (roleplay, lorebooks, chat de groupe) pour LLM locaux. Ollama, vLLM, llama.cpp compatibles. Comparaison avril 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/open-webui-vs-sillytavern',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -656,7 +649,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Dois-je utiliser Open WebUI ou SillyTavern ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI pour le travail, la recherche et le déploiement en équipe (multi-utilisateur, interface professionnelle, Docker). SillyTavern pour l\'écriture créative et le roleplay (fiches, lorebooks, chat de groupe). Les deux utilisent les mêmes backends (Ollama, vLLM, llama.cpp).' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser SillyTavern pour le chat d\'équipe ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. SillyTavern est mono-utilisateur. Pour les équipes, utilisez Open WebUI avec support multi-utilisateur intégré, historiques par utilisateur et gestion des clés API.' } },
@@ -670,7 +662,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Open WebUI vs SillyTavern : Comparatif fonctionnel',
-        'inLanguage': 'fr',
         'numberOfItems': 2,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Frontend Python FastAPI + Svelte. Support multi-utilisateur avec gestion des clés API. Déploiement Docker. Interface chat professionnelle avec plugins RAG et import de documents. Idéal pour les équipes, la recherche et les workflows professionnels.' },
@@ -848,7 +839,6 @@ schema: {
         'headline': 'Open WebUI vs SillyTavern 2026：チーム用チャット vs ロールプレイ',
         'description': 'Open WebUI（プロ向けチャット、マルチユーザー、Docker）vs SillyTavern（ロールプレイ、Lorebooks、グループチャット）。Ollama・vLLM・llama.cpp対応。2026年4月比較。',
         'url': 'https://www.promptquorum.com/ja/local-llms/open-webui-vs-sillytavern',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -864,7 +854,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Open WebUI と SillyTavern どちらを選ぶ？', 'acceptedAnswer': { '@type': 'Answer', 'text': '業務・調査・チーム向け → Open WebUI（マルチユーザー、プロ向けUI、Docker）。創作・キャラクター・ロールプレイ向け → SillyTavern（キャラクターカード、Lorebooks、グループチャット、音声統合）。両者とも同じ推論バックエンド（Ollama、vLLM、llama.cpp）を使用。' } },
           { '@type': 'Question', 'name': 'SillyTavern でチームチャットできる？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'できない。シングルユーザー設計 — 会話が上書きされる。チーム向けは Open WebUI のみ（マルチユーザー組込み、ユーザー別履歴、APIキー管理）。' } },
@@ -878,7 +867,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Open WebUI vs SillyTavern：機能比較',
-        'inLanguage': 'ja',
         'numberOfItems': 2,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Python FastAPI + Svelte フロントエンド。APIキー管理によるマルチユーザー対応。Docker デプロイ。RAG プラグイン＆ドキュメント upload 付きプロ向けチャット UI。チーム、調査、プロフェッショナルワークフロー向け。' },
@@ -1056,7 +1044,6 @@ schema: {
         'headline': 'Open WebUI vs SillyTavern 2026：团队聊天 vs 角色扮演前端对比',
         'description': 'Open WebUI（专业聊天、多用户、Docker）vs SillyTavern（角色扮演、世界观书、群组聊天）本地LLM前端对比。兼容Ollama、vLLM、llama.cpp。2026年4月指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/open-webui-vs-sillytavern',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1072,7 +1059,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '我应该使用 Open WebUI 还是 SillyTavern？', 'acceptedAnswer': { '@type': 'Answer', 'text': '工作/研究/团队部署 → Open WebUI（多用户、专业界面、Docker）。创意写作和角色扮演 → SillyTavern（角色卡、世界观书、群组聊天、语音集成）。两者都使用相同的推理后端（Ollama、vLLM、llama.cpp）。' } },
           { '@type': 'Question', 'name': '我可以使用 SillyTavern 进行团队聊天吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不行。SillyTavern 是单用户设计 — 对话会相互覆盖。团队用 Open WebUI，它有内置多用户支持、用户级历史和 API 密钥管理。' } },
@@ -1086,7 +1072,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Open WebUI vs SillyTavern：功能对比',
-        'inLanguage': 'zh',
         'numberOfItems': 2,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Python FastAPI + Svelte 前端。通过API密钥管理支持多用户。Docker部署。包含RAG插件和文档上传的专业聊天界面。最适合团队、研究和专业工作流。' },
@@ -1263,7 +1248,6 @@ schema: {
         'headline': 'Open WebUI vs SillyTavern 2026: Chat de Equipo vs Frontend de Roleplay',
         'description': 'Open WebUI (chat profesional, multiusuario, Docker) vs SillyTavern (roleplay de personajes, lorebooks, chat grupal) para LLMs locales. Ambos usan backends Ollama, vLLM, llama.cpp. Matriz de funciones, comparación abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/open-webui-vs-sillytavern?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1284,7 +1268,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Debo usar Open WebUI o SillyTavern?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI para trabajo, investigación y despliegue en equipo (multiusuario integrado, interfaz profesional, Docker). SillyTavern para escritura creativa y roleplay de personajes (fichas de personaje, lorebooks, chat grupal, integración de voz). Ambos se conectan a los mismos backends de inferencia (Ollama, vLLM, llama.cpp) por lo que la velocidad es idéntica.' } },
           { '@type': 'Question', 'name': '¿Puedo usar SillyTavern para chat en equipo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. SillyTavern es de un solo usuario por diseño — las conversaciones se sobreescriben cuando se comparte. Para equipos, usa Open WebUI, que tiene soporte multiusuario integrado, historial de conversación por usuario y gestión de claves API.' } },
@@ -1298,7 +1281,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Open WebUI vs SillyTavern: Comparativa de funciones',
-        'inLanguage': 'es',
         'numberOfItems': 2,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Frontend Python FastAPI + Svelte. Soporte multiusuario con gestión de claves API. Despliegue Docker. Interfaz de chat profesional con plugins RAG y carga de documentos. Ideal para equipos, investigación y flujos de trabajo profesionales.' },

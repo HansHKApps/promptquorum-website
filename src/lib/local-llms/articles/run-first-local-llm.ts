@@ -216,7 +216,6 @@ schema: {
         'headline': 'Run Your First Local LLM in 10 Minutes (Step-by-Step)',
         'description': 'Run your first local LLM in 10 minutes with Ollama: install, pull a 3B model, and get a response -- no API key, no account needed after download.',
         'url': 'https://www.promptquorum.com/local-llms/run-first-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -238,7 +237,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Run Your First Local LLM in 10 Minutes',
-        'inLanguage': 'en',
         'totalTime': 'PT10M',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Install Ollama', 'text': 'Download and install Ollama from ollama.ai. Verify installation with `ollama --version`.' },
@@ -251,7 +249,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -338,7 +335,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'en',
         'name': 'Best First Local LLM Models by RAM',
         'numberOfItems': 4,
         'itemListElement': [
@@ -557,7 +553,6 @@ schema: {
         'headline': 'Ejecuta tu primer LLM local en 10 minutos (paso a paso)',
         'description': 'Ejecuta tu primer LLM local en menos de 10 minutos con Ollama: instala, descarga un modelo 3B y obtén una respuesta — sin API key ni cuenta después de la descarga.',
         'url': 'https://www.promptquorum.com/es/local-llms/run-first-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -579,7 +574,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Cómo ejecutar tu primer LLM local en 10 minutos',
-        'inLanguage': 'es',
         'totalTime': 'PT10M',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Instalar Ollama', 'text': 'Descarga e instala Ollama desde ollama.ai. Verifica la instalación con `ollama --version`.' },
@@ -592,7 +586,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -679,7 +672,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         'name': 'Mejores primeros modelos LLM local por RAM',
         'numberOfItems': 4,
         'itemListElement': [
@@ -707,7 +699,6 @@ schema: {
         'headline': 'Lokales LLM in 10 Minuten starten: Ollama Schritt-für-Schritt',
         'description': 'Erstes lokales LLM mit Ollama in 10 Minuten: Installation, Modell laden, erste Abfrage. Funktioniert auf Mac, Windows und Linux ohne Cloud.',
         'url': 'https://www.promptquorum.com/de/local-llms/run-first-local-llm',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
@@ -745,7 +736,6 @@ schema: {
         'headline': 'Lancer votre premier LLM local en 10 minutes avec Ollama',
         'description': 'Premier LLM local avec Ollama en 10 minutes : installation, téléchargement du modèle, première requête. Fonctionne sur Mac, Windows et Linux.',
         'url': 'https://www.promptquorum.com/fr/local-llms/run-first-local-llm',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
@@ -785,7 +775,6 @@ schema: {
         'headline': 'Ollamaで初めてのローカルLLMを10分で起動するステップバイステップガイド2026',
         'description': 'Ollamaを使って初めてのローカルLLMを10分以内で実行。インストール、モデルダウンロード、初回プロンプト実行まで完全解説。Mac・Windows・Linux対応、クラウド不要。',
         'url': 'https://www.promptquorum.com/ja/local-llms/run-first-local-llm',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
@@ -825,7 +814,6 @@ schema: {
         'headline': '10分钟内用Ollama运行第一个本地LLM：分步安装指南2026',
         'description': '用Ollama在10分钟内运行第一个本地LLM：安装、模型下载、首次推理完整指南。支持Mac、Windows、Linux，无需云端或GPU。',
         'url': 'https://www.promptquorum.com/zh/local-llms/run-first-local-llm',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },

@@ -340,7 +340,6 @@ schema: {
         'headline': 'Run Local LLMs on a Laptop: RAM, Speed & Thermals 2026',
         'description': 'Run local LLMs on laptops with 8 GB RAM. Covers best models (Llama 3.2 3B, Mistral 7B, Qwen2.5 7B), thermal throttling fixes, battery optimization, and Q4_K_M quantization settings.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -371,7 +370,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -459,7 +457,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Reduce Thermal Throttling on a Laptop During Local LLM Inference',
-        'inLanguage': 'en',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Use a laptop stand with airflow clearance', 'text': 'Raise the laptop 2-3 cm on a stand to improve exhaust airflow and delay throttling onset from 10 to 20+ minutes.' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Disable Intel Turbo Boost or AMD Precision Boost', 'text': 'Running at base clock speed produces steady performance without thermal spikes. On macOS, use Low Power mode in Battery settings.' },
@@ -801,7 +798,6 @@ schema: {
         'headline': 'Ejecutar LLMs Locales en un Portátil: RAM, Velocidad y Temperatura 2026',
         'description': 'Ejecuta LLMs locales en portátiles con 8 GB de RAM. Cubre los mejores modelos (Llama 3.2 3B, Mistral 7B, Qwen2.5 7B), correcciones de throttling térmico, optimización de batería y configuración de cuantización Q4_K_M.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-on-laptop?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -825,7 +821,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Mejores modelos LLM locales para portátiles 2026',
-        'inLanguage': 'es',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': 'Modelo 3B. 2,5 GB de RAM. 25–45 tok/seg en CPU, 60–100 tok/seg en Apple Silicon. Mejor modelo de inicio para portátiles de 8 GB.' },
@@ -838,7 +833,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -926,7 +920,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Cómo reducir el throttling térmico en un portátil durante la inferencia de LLMs locales',
-        'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Usa un soporte para portátil con espacio de ventilación', 'text': 'Eleva el portátil 2–3 cm sobre un soporte para mejorar el flujo de aire de escape y retrasar el inicio del throttling de 10 a más de 20 minutos.' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Desactiva Intel Turbo Boost o AMD Precision Boost', 'text': 'Funcionar a velocidad de reloj base produce rendimiento estable sin picos térmicos. En macOS, usa el modo Bajo consumo en los ajustes de batería.' },
@@ -1239,7 +1232,6 @@ schema: {
         'headline': 'Local LLMs auf Laptop (8-16GB VRAM) - Performance Guide 2026',
         'description': 'Praxis-Guide für leistungsstarke Local LLMs auf Laptops mit wenig VRAM. Mit Quantisierungs-Tricks, besten Modellen und echten Performance-Benchmarks.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-on-laptop',
-        'inLanguage': 'de',
         'datePublished': '2026-01-01',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1278,7 +1270,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         mainEntity: [
           { '@type': 'Question', name: 'Wird das Ausführen eines Local LLM meinen Laptop über die Zeit hinweg beschädigen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein -- moderne CPUs und GPUs sind für die sichere Handhabung kontinuierlicher hoher Lasten ausgelegt. Ein Laptop-Ständer und angemessene Belüftung verhindern übermäßige Wärmeentwicklung.' } },
           { '@type': 'Question', name: 'Kann ich ein Local LLM auf einem 4-GB-RAM-Laptop ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Kaum. Ein 2B-Modell benötigt etwa 1,7 GB RAM für das Modell, das OS benötigt 2-3 GB gleichzeitig. Bei 4 GB Gesamt-RAM wird Swap-Nutzung Inferenz 5-10× langsamer machen.' } },
@@ -1603,7 +1594,6 @@ schema: {
         'headline': 'Local LLMs sur ordinateur portable (8-16 Go VRAM) - Guide Performance 2026',
         'description': 'Guide pratique pour exécuter des Local LLMs puissants avec peu de VRAM. Astuces de quantification, meilleurs modèles et benchmarks réels.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-on-laptop',
-        'inLanguage': 'fr',
         'datePublished': '2026-01-01',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1642,7 +1632,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         mainEntity: [
           { '@type': 'Question', name: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?', acceptedAnswer: { '@type': 'Answer', text: 'Non -- les CPU et GPU modernes gèrent les charges élevées continues en toute sécurité. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur.' } },
           { '@type': 'Question', name: 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'À peine. Un modèle 2B nécessite environ 1,7 GB de RAM, l\'OS a besoin de 2-3 GB simultanément. Avec 4 GB au total, l\'utilisation d\'échange rendra l\'inférence 5-10× plus lente.' } },
@@ -1967,7 +1956,6 @@ schema: {
         'headline': 'ノートPCでLocal LLMを動かす（8〜16GB VRAM）実測性能ガイド 2026',
         'description': '低VRAM環境で高性能Local LLMを動かす実践ガイド。量子化テクニック、おすすめモデル、実測ベンチマークを詳しく解説。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-on-laptop',
-        'inLanguage': 'ja',
         'datePublished': '2026-01-01',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -2006,7 +1994,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         mainEntity: [
           { '@type': 'Question', name: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ--最新のCPUとGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。' } },
           { '@type': 'Question', name: '4GB RAMノートパソコンでローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'ほぼ。2Bモデルは約1.7GB RAMが必要で、OSは2-3GB必要です。4GB合計では、スワップ使用により推論が5-10倍遅くなります。' } },
@@ -2331,7 +2318,6 @@ schema: {
         'headline': '笔记本运行 Local LLM（8-16GB 显存）实测性能指南 2026',
         'description': '低显存环境运行高性能 Local LLM 的完整指南。涵盖量化技巧、最佳模型推荐与真实性能测试。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-on-laptop',
-        'inLanguage': 'zh',
         'datePublished': '2026-01-01',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -2370,7 +2356,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         mainEntity: [
           { '@type': 'Question', name: '运行本地LLM会随着时间推移损伤笔记本电脑吗？', acceptedAnswer: { '@type': 'Answer', text: '否 -- 现代CPU和GPU设计可安全处理持续的高负荷。笔记本电脑支架和适当的通风可防止过度热量积聚。' } },
           { '@type': 'Question', name: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '勉强。2B模型需要约1.7GB RAM，操作系统需要2-3GB。在4GB总RAM下，交换使用使推理速度降低5-10倍。' } },

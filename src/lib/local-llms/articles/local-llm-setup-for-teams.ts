@@ -27,7 +27,6 @@ schema: {
         'headline': 'Local LLM Server for Teams: Access Control & Cost Tracking',
         'description': 'Team local LLM server setup with vLLM, nginx, access control, and usage tracking. Multi-user setup guide, cost comparison, and role-based permissions.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -40,7 +39,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Set Up a Local LLM Server for Teams',
-        'inLanguage': 'en',
         'step': [
           { '@type': 'HowToStep', 'name': 'Small Team Setup (5-10 users)', 'text': 'Single vLLM server + nginx + token auth. Hardware: RTX 4090 + 64GB RAM + 1TB SSD. Cost: $2,500 hardware + $50/mo electricity.' },
           { '@type': 'HowToStep', 'name': 'Medium Team Setup (10-50 users)', 'text': 'Dual-GPU cluster + load balancer + Prometheus monitoring. Hardware: 2× RTX 4090 + 128GB RAM. Cost: $5,000 hardware + $100/mo electricity.' },
@@ -50,7 +48,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -238,7 +235,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Local LLM Setup for Business Teams',
         'numberOfItems': 8,
-        'inLanguage': 'en',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'Small team (5-10): Single server (vLLM) + nginx + auth = $3K hardware, $50/mo electricity.' },
           { '@type': 'ListItem', position: 2, name: 'Medium team (10-50): Dual-GPU cluster + load balancer + Prometheus monitoring = $6K hardware, $100/mo electricity.' },
@@ -271,7 +267,6 @@ schema: {
         'headline': 'Lokaler LLM-Server für Teams: Zugriffskontrolle & Kostenattribution',
         'description': 'Team-lokaler LLM-Server mit vLLM, nginx, Zugriffskontrolle und Nutzungsverfolgung. Multi-User-Setup, Kostenvergleich und rollenbasierte Berechtigungen.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-setup-for-teams',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -284,7 +279,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Lokalen LLM-Server für Teams einrichten',
-        'inLanguage': 'de',
         'step': [
           { '@type': 'HowToStep', 'name': 'Kleines Team-Setup (5-10 Benutzer)', 'text': 'Einzelner vLLM-Server + nginx + Token-Auth. Hardware: RTX 4090 + 64 GB RAM + 1 TB SSD. Kosten: 2.500 € Hardware + 50 €/Monat Strom.' },
           { '@type': 'HowToStep', 'name': 'Mittleres Team-Setup (10-50 Benutzer)', 'text': 'Dual-GPU-Cluster + Load Balancer + Prometheus-Monitoring. Hardware: 2× RTX 4090 + 128 GB RAM. Kosten: 5.000 € Hardware + 100 €/Monat Strom.' },
@@ -294,7 +288,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -480,7 +473,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Lokales LLM-Setup für Business-Teams',
         'numberOfItems': 8,
-        'inLanguage': 'de',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'Kleines Team (5-10): Einzelner Server (vLLM) + nginx + Auth = 3.000 € Hardware, 50 €/Monat Strom.' },
           { '@type': 'ListItem', position: 2, name: 'Mittleres Team (10-50): Dual-GPU-Cluster + Load Balancer + Prometheus-Monitoring = 6.000 € Hardware, 100 €/Monat Strom.' },
@@ -513,7 +505,6 @@ schema: {
         'headline': 'Serveur LLM local pour équipes: Contrôle d\'accès et attribution des coûts',
         'description': 'Serveur LLM local pour équipes avec vLLM, nginx, contrôle d\'accès et suivi d\'utilisation. Configuration multi-utilisateurs, comparaison des coûts et permissions basées sur les rôles.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-setup-for-teams',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -526,7 +517,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Configurer un serveur LLM local pour équipes',
-        'inLanguage': 'fr',
         'step': [
           { '@type': 'HowToStep', 'name': 'Petite équipe (5-10 utilisateurs)', 'text': 'Serveur vLLM unique + nginx + authentification par token. Matériel: RTX 4090 + 64 GB RAM + 1 TB SSD. Coût: 2 500 € matériel + 50 €/mois électricité.' },
           { '@type': 'HowToStep', 'name': 'Équipe moyenne (10-50 utilisateurs)', 'text': 'Cluster dual-GPU + load balancer + monitoring Prometheus. Matériel: 2× RTX 4090 + 128 GB RAM. Coût: 5 000 € matériel + 100 €/mois électricité.' },
@@ -536,7 +526,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Combien coûte un serveur LLM local en équipe comparé aux API cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Serveur unique: 2 500 € matériel + 50 €/mois électricité (600 €/an) contre 1 000+€/mois API cloud (12 000+€/an). Période d\'amortissement: 2-3 mois pour les équipes actives.' } },
           { '@type': 'Question', 'name': 'Comment configurer l\'authentification utilisateur pour un serveur LLM en équipe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OAuth 2.0 avec SSO (Active Directory / Okta) pour enterprise. Authentification simple par token pour PME. Toutes les requêtes sont enregistrées avec ID utilisateur, timestamp et nombre de tokens pour l\'attribution des coûts.' } },
@@ -682,7 +671,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Configuration LLM local pour équipes professionnelles',
         'numberOfItems': 8,
-        'inLanguage': 'fr',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'Petite équipe (5-10): Serveur unique (vLLM) + nginx + auth = 3 000 € matériel, 50 €/mois électricité.' },
           { '@type': 'ListItem', position: 2, name: 'Équipe moyenne (10-50): Cluster dual-GPU + load balancer + monitoring Prometheus = 6 000 € matériel, 100 €/mois électricité.' },
@@ -715,7 +703,6 @@ schema: {
         'headline': 'チームローカルLLMサーバー: アクセス制御とコスト追跡',
         'description': 'vLLM、nginx、アクセス制御、利用状況追跡を使用したチームローカルLLMサーバー。マルチユーザーセットアップ、コスト比較、ロールベース権限。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-setup-for-teams',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -728,7 +715,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'チームローカルLLMサーバーをセットアップする',
-        'inLanguage': 'ja',
         'step': [
           { '@type': 'HowToStep', 'name': 'スモールチームセットアップ（5～10ユーザー）', 'text': '単一vLLMサーバー + nginx + トークン認証。ハードウェア: RTX 4090 + 64GB RAM + 1TB SSD。コスト: $2,500ハードウェア + $50/月電力。' },
           { '@type': 'HowToStep', 'name': 'ミディアムチームセットアップ（10～50ユーザー）', 'text': 'デュアルGPUクラスタ + ロードバランサー + Prometheusモニタリング。ハードウェア: 2× RTX 4090 + 128GB RAM。コスト: $5,000ハードウェア + $100/月電力。' },
@@ -738,7 +724,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'チームローカルLLMサーバーはクラウドAPIと比べていくらかかりますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '単一サーバー: $2,500ハードウェア + $50/月電力（$600/年）対クラウドAPI $1,000+/月（$12,000+/年）。回収期間: アクティブなチームで2～3か月。' } },
           { '@type': 'Question', 'name': 'チームLLMサーバーのユーザー認証をセットアップするにはどうすればよいですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'エンタープライズ向けOAuth 2.0 + SSO（Active Directory / Okta）。SMB向け簡単なトークン認証。すべてのクエリはユーザーID、タイムスタンプ、生成トークン数で記録されます。' } },
@@ -884,7 +869,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'チームビジネス向けローカルLLMセットアップ',
         'numberOfItems': 8,
-        'inLanguage': 'ja',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'スモールチーム（5～10）: 単一サーバー（vLLM）+ nginx + 認証 = $3Kハードウェア、$50/月電力。' },
           { '@type': 'ListItem', position: 2, name: 'ミディアムチーム（10～50）: デュアルGPUクラスタ + ロードバランサー + Prometheusモニタリング = $6Kハードウェア、$100/月電力。' },
@@ -917,7 +901,6 @@ schema: {
         'headline': '团队本地LLM服务器: 访问控制与成本追踪',
         'description': '使用vLLM、nginx、访问控制和使用跟踪的团队本地LLM服务器。多用户设置、成本比较和基于角色的权限。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-setup-for-teams',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -930,7 +913,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': '设置团队本地LLM服务器',
-        'inLanguage': 'zh',
         'step': [
           { '@type': 'HowToStep', 'name': '小型团队设置（5-10用户）', 'text': '单一vLLM服务器 + nginx + 令牌认证。硬件: RTX 4090 + 64GB RAM + 1TB SSD。成本: $2,500硬件 + $50/月电力。' },
           { '@type': 'HowToStep', 'name': '中等团队设置（10-50用户）', 'text': '双GPU集群 + 负载均衡器 + Prometheus监控。硬件: 2× RTX 4090 + 128GB RAM。成本: $5,000硬件 + $100/月电力。' },
@@ -940,7 +922,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '团队本地LLM服务器与云API相比成本如何?', 'acceptedAnswer': { '@type': 'Answer', 'text': '单一服务器: $2,500硬件 + $50/月电力（$600/年）对比云API $1,000+/月（$12,000+/年）。回本期: 活跃团队2-3个月。' } },
           { '@type': 'Question', 'name': '如何为团队LLM服务器设置用户认证?', 'acceptedAnswer': { '@type': 'Answer', 'text': '企业级OAuth 2.0 + SSO（Active Directory / Okta）。中小企业简单令牌认证。所有查询都记录用户ID、时间戳和生成令牌数用于成本分配。' } },
@@ -1086,7 +1067,6 @@ schema: {
         '@type': 'ItemList',
         'name': '团队本地LLM服务器设置',
         'numberOfItems': 8,
-        'inLanguage': 'zh',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: '小型团队（5-10）: 单一服务器（vLLM）+ nginx + 认证 = $3K硬件，$50/月电力。' },
           { '@type': 'ListItem', position: 2, name: '中等团队（10-50）: 双GPU集群 + 负载均衡器 + Prometheus监控 = $6K硬件，$100/月电力。' },
@@ -1119,7 +1099,6 @@ schema: {
         'headline': 'Servidor LLM local para equipos: control de acceso y seguimiento de costos',
         'description': 'Servidor LLM local para equipos con vLLM, nginx, control de acceso y seguimiento de uso. Configuración multiusuario, comparación de costos y permisos por roles.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-setup-for-teams?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1132,7 +1111,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Configurar un servidor LLM local para equipos',
-        'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'name': 'Equipo pequeño (5-10 usuarios)', 'text': 'Un servidor vLLM único + nginx + autenticación por token. Hardware: RTX 4090 + 64GB RAM + 1TB SSD. Costo: $2.500 en hardware + $50/mes en electricidad.' },
           { '@type': 'HowToStep', 'name': 'Equipo mediano (10-50 usuarios)', 'text': 'Clúster dual-GPU + load balancer + monitoreo con Prometheus. Hardware: 2× RTX 4090 + 128GB RAM. Costo: $5.000 en hardware + $100/mes en electricidad.' },
@@ -1142,7 +1120,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1329,7 +1306,6 @@ schema: {
         '@type': 'ItemList',
         'name': 'Configuración de LLM local para equipos empresariales',
         'numberOfItems': 8,
-        'inLanguage': 'es',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'Equipo pequeño (5-10): Servidor único (vLLM) + nginx + autenticación = $3K en hardware, $50/mes en electricidad.' },
           { '@type': 'ListItem', position: 2, name: 'Equipo mediano (10-50): Clúster dual-GPU + load balancer + monitoreo Prometheus = $6K en hardware, $100/mes en electricidad.' },

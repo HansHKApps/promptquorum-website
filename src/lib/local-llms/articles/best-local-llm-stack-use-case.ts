@@ -241,7 +241,6 @@ schema: {
         'headline': 'Best Local LLM Stack by Use Case 2026: Coding, Writing, RAG, Agents',
         'description': 'Best local LLM stack by use case April 2026: Coding → vLLM + Qwen2.5-Coder. Writing → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. Hardware tiers 8–24 GB VRAM. Complete setup guide.',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llm-stack-use-case',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -260,7 +259,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Should I use Ollama or vLLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama for chat UI + simplicity. vLLM for API server + batch processing + performance. Not mutually exclusive; can run both.' } },
           { '@type': 'Question', 'name': 'Can I use Ollama for production API?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, but vLLM is faster (3–5× higher throughput). Ollama is good for <10 req/sec. vLLM for 10+ req/sec.' } },
@@ -274,7 +272,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Local LLM Stack Guide by Use Case',
-        'inLanguage': 'en',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Writing & Content Creation', 'description': 'Ollama + OpenWebUI + Llama 3.3 (24GB) or Llama 3.2 8B (8GB). Best for long-form writing with adjustable 8K–32K context windows. Simple setup, no coding required. Best chat UX among local LLM frontends.' },
@@ -520,7 +517,6 @@ for filename, review in reviews:
         'headline': 'Mejor stack de LLM local por caso de uso 2026: Código, Escritura, RAG, Agentes',
         'description': 'Mejor stack LLM local por caso de uso abril 2026: Código → vLLM + Qwen2.5-Coder. Escritura → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. VRAM 8–24 GB. Guía completa de configuración.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-stack-use-case?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -548,7 +544,6 @@ for filename, review in reviews:
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Debo usar Ollama o vLLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama para UI de chat + simplicidad. vLLM para servidor API + procesamiento por lotes + rendimiento. No son mutuamente excluyentes; puedes ejecutar ambos.' } },
           { '@type': 'Question', 'name': '¿Puedo usar Ollama como API de producción?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, pero vLLM es más rápido (3–5× mayor throughput). Ollama es adecuado para <10 req/seg. vLLM para 10+ req/seg.' } },
@@ -562,7 +557,6 @@ for filename, review in reviews:
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Guía de stack de LLM local por caso de uso',
-        'inLanguage': 'es',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Escritura y creación de contenido', 'description': 'Ollama + OpenWebUI + Llama 3.3 (24 GB) o Llama 3.2 8B (8 GB). Ideal para escritura de texto largo con ventanas de contexto ajustables de 8K–32K. Configuración sencilla, sin necesidad de código. Mejor UX de chat entre los frontends de LLM locales.' },
@@ -810,7 +804,6 @@ schema: {
         'headline': 'Bester lokaler LLM-Stack nach Anwendungsfall 2026: Coding, Schreiben, RAG, Agenten',
         'description': 'Lokaler LLM-Stack nach Anwendungsfall April 2026: Coding → vLLM + Qwen2.5-Coder. Schreiben → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. 8–24 GB VRAM.',
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llm-stack-use-case',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -829,7 +822,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Soll ich Ollama oder vLLM verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama für Chat-UI + Einfachheit. vLLM für API-Server + Batch-Verarbeitung + Performance. Nicht gegenseitig ausschließend; beide können gleichzeitig betrieben werden.' } },
           { '@type': 'Question', 'name': 'Kann ich Ollama als Produktions-API verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, aber vLLM ist schneller (3–5-fach höherer Durchsatz). Ollama eignet sich für <10 Anfragen/Sek. vLLM für 10+ Anfragen/Sek.' } },
@@ -845,7 +837,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Lokaler LLM-Stack-Leitfaden nach Anwendungsfall',
-        'inLanguage': 'de',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Schreiben & Content-Erstellung', 'description': 'Ollama + OpenWebUI + Llama 3.3 (24 GB) oder Llama 3.2 8B (8 GB). Bestens für langes Schreiben mit einstellbaren 8K–32K-Kontextfenstern. Einfache Einrichtung, kein Coding erforderlich. Beste Chat-UX unter lokalen LLM-Frontends.' },
@@ -1091,7 +1082,6 @@ schema: {
         'headline': 'Stack LLM local 2026 : Coding, Rédaction, RAG, Agents',
         'description': 'Stack LLM local par cas d\'usage avril 2026 : Coding → vLLM + Qwen2.5-Coder. Rédaction → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. 8–24 Go VRAM. Guide complet.',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llm-stack-use-case',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -1110,7 +1100,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Dois-je utiliser Ollama ou vLLM ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama pour l\'interface chat + simplicité. vLLM pour le serveur API + traitement par lots + performance. Pas mutuellement exclusifs ; les deux peuvent fonctionner simultanément.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser Ollama pour une API de production ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, mais vLLM est plus rapide (débit 3–5× supérieur). Ollama convient pour <10 req/s. vLLM pour 10+ req/s.' } },
@@ -1124,7 +1113,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Guide du stack LLM local par cas d\'usage',
-        'inLanguage': 'fr',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Rédaction & création de contenu', 'description': 'Ollama + OpenWebUI + Llama 3.3 (24 Go) ou Llama 3.2 8B (8 Go). Idéal pour la rédaction longue avec fenêtres de contexte ajustables 8K–32K. Configuration simple, aucun code requis. Meilleure UX chat parmi les interfaces LLM locales.' },
@@ -1370,7 +1358,6 @@ schema: {
         'headline': 'ユースケース別ローカルLLMスタック2026：コーディング、ライティング、RAG、エージェント',
         'description': 'ユースケース別ローカルLLMスタック2026年4月：コーディング→vLLM + Qwen2.5-Coder。ライティング→Ollama + Llama 3.3。RAG→LlamaIndex + Qdrant。VRAM 8–24 GB対応。',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llm-stack-use-case',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1389,7 +1376,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'OllamaとvLLMはどちらを使うべきですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OllamaはチャットUI + シンプルさ向け。vLLMはAPIサーバー + バッチ処理 + パフォーマンス向け。両方並行実行可能。' } },
           { '@type': 'Question', 'name': 'Ollamaを本番環境のAPIに使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '使えますが、vLLMの方が高速（3–5倍のスループット）。Ollamaは<10 req/s向け。vLLMは10+ req/s向け。' } },
@@ -1403,7 +1389,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'ユースケース別ローカルLLMスタックガイド',
-        'inLanguage': 'ja',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'ライティング & コンテンツ作成', 'description': 'Ollama + OpenWebUI + Llama 3.3（24 GB）またはLlama 3.2 8B（8 GB）。調整可能なコンテキストウィンドウ（8K–32K）で長文ライティングに最適。シンプルな設定、コード不要。ローカルLLMフロントエンドの中で最高のUX。' },
@@ -1649,7 +1634,6 @@ schema: {
         'headline': '按用途分类2026年最佳本地LLM堆栈：编程、写作、RAG、智能体',
         'description': '按用途本地LLM堆捨2026年4月：编程→vLLM+Qwen2.5-Coder，写作→Ollama+Llama 3.3，RAG→LlamaIndex+Qdrant。8-24 GB显存。完整配置指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llm-stack-use-case',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1668,7 +1652,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '应该选Ollama还是vLLM？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama适合聊天UI + 简单开发。vLLM適合API服务器 + 批量处理。两者不互斥。' } },
           { '@type': 'Question', 'name': 'Ollama可以用于生产环API吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，但vLLM更快（吐射3–5倍）。Ollama适合<10 req/s，vLLM适合高10+ req/s。' } },
@@ -1682,7 +1665,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '按用途本地LLM堆栈指南',
-        'inLanguage': 'zh',
         'numberOfItems': 7,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '写作 & 内容创作', 'description': 'Ollama + OpenWebUI + Llama 3.3（24 GB）或Llama 3.2 8B（8 GB）。可调节的上下文窗口（8K–32K）适合长文写作。配置简单，无需编程。本地LLM前端中最佳聊天体验。' },

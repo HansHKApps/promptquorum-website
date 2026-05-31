@@ -585,7 +585,6 @@ schema: {
         'headline': 'Local LLM Hardware Guide 2026: What GPU Do You Need?',
         'description': 'What GPU do you need for local LLMs? See exact requirements for 7B–70B models, real RTX 4070–5090 benchmarks, and avoid wasting money.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=en',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -607,7 +606,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Calculate Local LLM Hardware Requirements',
-        'inLanguage': 'en',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Calculate VRAM needs', 'text': 'Use formula: VRAM (GB) = (Model Size × Quantization Bits) ÷ 8. Example: 70B model at Q4 = (70 × 4) ÷ 8 = 35 GB.' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Choose GPU tier', 'text': 'Match VRAM need to GPU: 8GB (RTX 4070 Ti), 16GB (RTX 4080), 24GB (RTX 4090), 48GB+ (server GPU).' },
@@ -619,7 +617,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I run a 70B model on a laptop?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Only with heavy quantization (Q2, 2-bit) and CPU fallback. Impractical. Laptops are suited for 7B models. For 70B, use a desktop with RTX 4090+.' } },
           { '@type': 'Question', 'name': 'Is RTX 4090 overkill for personal use?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not if you run 70B models or multiple models simultaneously. For just 7B chat, RTX 4070 Ti suffices. RTX 4090 is future-proof if you want flexibility.' } },
@@ -647,7 +644,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'en',
         'name': 'GPU Hardware Tiers for Local LLMs',
         'numberOfItems': 7,
         'itemListElement': [
@@ -663,7 +659,6 @@ schema: {
       breadcrumbSchema: {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
-        'inLanguage': 'en',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'PromptQuorum', 'item': 'https://www.promptquorum.com' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Local LLMs', 'item': 'https://www.promptquorum.com/local-llms' },
@@ -1188,7 +1183,6 @@ schema: {
         'headline': 'Guía de hardware para LLMs locales 2026: ¿Qué GPU necesitas?',
         'description': '¿Qué GPU necesitas para LLMs locales? Consulta los requisitos exactos para modelos 7B–70B, benchmarks reales RTX 4070–5090 y evita desperdiciar dinero.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-hardware-guide-2026?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1214,7 +1208,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Cómo calcular los requisitos de hardware para LLMs locales',
-        'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Calcula las necesidades de VRAM', 'text': 'Usa la fórmula: VRAM (GB) = (Tamaño del modelo × Bits de cuantización) ÷ 8. Ejemplo: modelo 70B en Q4 = (70 × 4) ÷ 8 = 35 GB.' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Elige el nivel de GPU', 'text': 'Ajusta la necesidad de VRAM a la GPU: 8 GB (RTX 4070 Ti), 16 GB (RTX 4080), 24 GB (RTX 4090), 48 GB+ (GPU de servidor).' },
@@ -1226,7 +1219,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo ejecutar un modelo 70B en una laptop?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Solo con cuantización pesada (Q2, 2 bits) y respaldo a CPU. Poco práctico. Las laptops son adecuadas para modelos 7B. Para 70B, usa una computadora de escritorio con RTX 4090+.' } },
           { '@type': 'Question', 'name': '¿Es la RTX 4090 excesiva para uso personal?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No si ejecutas modelos 70B o varios modelos simultáneamente. Para solo chat con 7B, la RTX 4070 Ti es suficiente. La RTX 4090 está preparada para el futuro si quieres flexibilidad.' } },
@@ -1246,7 +1238,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         'name': 'Niveles de hardware GPU para LLMs locales',
         'numberOfItems': 7,
         'itemListElement': [
@@ -1517,7 +1508,6 @@ schema: {
         'headline': 'Lokale LLM Hardware 2026: GPU VRAM-Rechner & Benchmarks',
         'description': 'Lokale LLM Hardware-Anleitung: GPU-, CPU- und RAM-Anforderungen für 7B- und 70B-Modelle. VRAM-Rechner, Benchmarks, Optimierung. Kostenlos in Beta -- Mai 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-hardware-guide-2026',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1538,7 +1528,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Wie man lokale LLM-Hardware-Anforderungen berechnet',
-        'inLanguage': 'de',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'VRAM-Anforderungen berechnen', 'text': 'Verwenden Sie die Formel: VRAM (GB) = (Modellgröße × Quantisierungsbits) ÷ 8. Beispiel: 70B-Modell bei Q4 = (70 × 4) ÷ 8 = 35 GB.' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'GPU-Tier auswählen', 'text': 'Passen Sie VRAM-Bedarf an GPU an: 8GB (RTX 4070 Ti), 16GB (RTX 4080), 24GB (RTX 4090), 48GB+ (Server-GPU).' },
@@ -1549,7 +1538,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich ein 70B-Modell auf einem Laptop ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nur mit schwerer Quantisierung (Q2, 2-Bit) und CPU-Fallback. Unpraktisch. Laptops eignen sich für 7B-Modelle. Für 70B verwenden Sie einen Desktop mit RTX 4090+.' } },
           { '@type': 'Question', 'name': 'Ist RTX 4090 übertrieben für Privatanwender?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein, wenn Sie 70B-Modelle ausführen oder mehrere Modelle gleichzeitig. Für nur 7B-Chat reicht RTX 4070 Ti. RTX 4090 ist zukunftssicher, wenn Sie Flexibilität wünschen.' } },
@@ -1566,7 +1554,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'de',
         'name': 'GPU-Hardware-Stufen für lokale LLMs',
         'numberOfItems': 4,
         'itemListElement': [
@@ -1820,7 +1807,6 @@ schema: {
         'headline': 'Guide Matériel LLM Local 2026: Calculateur VRAM & Benchmarks',
         'description': 'Guide matériel local LLM: exigences GPU, CPU et RAM pour modèles 7B et 70B. Calculateur VRAM, benchmarks, optimisation. Gratuit en bêta - - mai 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-hardware-guide-2026',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1841,7 +1827,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'Comment calculer les exigences matériel local LLM',
-        'inLanguage': 'fr',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Calculer besoins VRAM', 'text': 'Utilisez formule: VRAM (GB) = (Taille modèle × Bits quantisation) ÷ 8. Exemple: modèle 70B à Q4 = (70 × 4) ÷ 8 = 35 GB.' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Choisir tier GPU', 'text': 'Appariez besoin VRAM à GPU: 8GB (RTX 4070 Ti), 16GB (RTX 4080), 24GB (RTX 4090), 48GB+ (GPU serveur).' },
@@ -1852,7 +1837,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Puis-je exécuter un modèle 70B sur laptop?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Seulement avec quantisation lourde (Q2, 2-bit) et fallback CPU. Impratique. Laptops conviennent pour modèles 7B. Pour 70B, utilisez desktop avec RTX 4090+.' } },
           { '@type': 'Question', 'name': 'RTX 4090 est-elle excessive pour usage personnel?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non si vous exécutez modèles 70B ou multiples modèles simultanément. Pour juste chat 7B, RTX 4070 Ti suffit. RTX 4090 est à l\'épreuve du temps si vous voulez flexibilité.' } },
@@ -1869,7 +1853,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'fr',
         'name': 'Tiers matériel GPU pour local LLMs',
         'numberOfItems': 4,
         'itemListElement': [
@@ -2120,7 +2103,6 @@ schema: {
         'headline': 'ローカルLLMハードウェア2026: GPU VRAM計算機ベンチマーク',
         'description': 'ローカルLLMハードウェアガイド: 7Bおよび70Bモデルの GPU、CPU、RAM要件。VRAM計算機、ベンチマーク、最適化。無料ベータ版 -- 2026年5月。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-hardware-guide-2026',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -2141,7 +2123,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'ローカル LLM ハードウェア要件を計算する方法',
-        'inLanguage': 'ja',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'VRAM 需要を計算する', 'text': '公式を使用: VRAM (GB) = (モデル サイズ × 量子化 ビット) ÷ 8。例: Q4 での 70B モデル = (70 × 4) ÷ 8 = 35 GB。' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'GPU ティアを選択', 'text': 'VRAM 要件を GPU にマッチさせる: 8GB (RTX 4070 Ti)、16GB (RTX 4080)、24GB (RTX 4090)、48GB+ (サーバー GPU)。' },
@@ -2152,7 +2133,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ラップトップで 70B モデルを実行できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Heavy 量子化 (Q2、2 ビット) と CPU フォールバックのみ。非現実的。ラップトップは 7B モデルに適しています。70B の場合は、RTX 4090 以上のデスクトップを使用します。' } },
           { '@type': 'Question', 'name': '個人使用には RTX 4090 はオーバーキルですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ、70B モデルを実行するか、複数のモデルを同時に実行する場合。7B チャットのみの場合、RTX 4070 Ti で十分です。柔軟性を望む場合、RTX 4090 は将来に備えています。' } },
@@ -2169,7 +2149,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'ja',
         'name': 'ローカル LLM 用 GPU ハードウェア ティア',
         'numberOfItems': 4,
         'itemListElement': [
@@ -2414,7 +2393,6 @@ schema: {
         'headline': '本地LLM硬件2026：GPU VRAM计算器和基准测试',
         'description': '本地LLM硬件指南：7B和70B模型的GPU、CPU、RAM需求。VRAM计算器、基准测试、优化。免费测试版 -- 2026年5月。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-hardware-guide-2026',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -2435,7 +2413,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': '如何计算本地LLM硬件要求',
-        'inLanguage': 'zh',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': '计算VRAM需求', 'text': '使用公式：VRAM (GB) = (模型大小 × 量化位数) ÷ 8。示例：Q4下的70B模型 = (70 × 4) ÷ 8 = 35 GB。' },
           { '@type': 'HowToStep', 'position': 2, 'name': '选择GPU层级', 'text': '将VRAM需求匹配到GPU：8GB (RTX 4070 Ti)、16GB (RTX 4080)、24GB (RTX 4090)、48GB+ (服务器GPU)。' },
@@ -2446,7 +2423,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '我可以在笔记本电脑上运行70B模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '仅使用重度量化 (Q2, 2位) 和CPU回退。不切实际。笔记本电脑适合7B模型。对于70B，使用配备RTX 4090+的台式机。' } },
           { '@type': 'Question', 'name': 'RTX 4090对个人使用是否过度？', 'acceptedAnswer': { '@type': 'Answer', 'text': '如果您运行70B模型或同时运行多个模型，则否。仅用于7B聊天，RTX 4070 Ti足够。如果您想要灵活性，RTX 4090面向未来。' } },
@@ -2463,7 +2439,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'zh',
         'name': '本地LLM的GPU硬件层级',
         'numberOfItems': 4,
         'itemListElement': [

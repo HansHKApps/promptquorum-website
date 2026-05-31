@@ -1312,7 +1312,6 @@ tests:
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-    'inLanguage': 'es',
       headline: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
       description: 'Braintrust ($249/mes) evalúa prompts. Vellum ($200–500/mes) hace A/B testing en producción. Promptfoo CI/CD gratis. PromptHub ($50–200/mes) versiona. La mayoría de equipos necesita exactamente 2.',
       datePublished: '2026-04-10',

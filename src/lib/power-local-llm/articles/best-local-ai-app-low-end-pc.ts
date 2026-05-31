@@ -845,7 +845,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/de/power-local-llm/best-local-ai-app-low-end-pc',
-      'inLanguage': 'de',
       'headline': 'Beste lokale KI-Apps für leistungsschwache PCs in 2026 (8 GB RAM, ohne GPU)',
       'description':
         'Ollama, GPT4All, Jan und llama.cpp auf 8-GB-RAM-Laptops mit integrierter Grafik getestet. Tokens/Sek., Speicherdruck, exakte Einstellungen.',
@@ -875,7 +874,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'de',
       'name': 'Beste lokale KI-Apps für 8-GB-RAM-Laptops ohne GPU in 2026',
       'numberOfItems': 4,
       'itemListElement': [
@@ -1125,7 +1123,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/fr/power-local-llm/best-local-ai-app-low-end-pc',
-      'inLanguage': 'fr',
       'headline': 'Meilleures applications d\'IA locale pour PC modestes en 2026 (8 Go RAM, sans GPU)',
       'description': 'Ollama, GPT4All, Jan et llama.cpp testés sur des portables 8 Go RAM avec graphiques intégrés. Tokens/s, pression mémoire, réglages exacts.',
       'datePublished': '2026-05-07',
@@ -1146,7 +1143,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'fr',
       'name': 'Meilleures apps d\'IA locale pour portables 8 Go RAM sans GPU en 2026',
       'numberOfItems': 4,
       'itemListElement': [
@@ -1400,7 +1396,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/ja/power-local-llm/best-local-ai-app-low-end-pc',
-      'inLanguage': 'ja',
       'headline': 'ロースペックPC向けベストローカルAIアプリ 2026年版（8GB RAM・GPUなし）',
       'description': 'Ollama、GPT4All、Jan、llama.cppを8GB RAM・統合グラフィックスノートPCでテスト。tok/秒、メモリ圧、設定。',
       'datePublished': '2026-05-07',
@@ -1421,7 +1416,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'ja',
       'name': '2026年8GB RAM・GPUなしノートPC向けベストローカルAIアプリ',
       'numberOfItems': 4,
       'itemListElement': [
@@ -1675,7 +1669,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/zh/power-local-llm/best-local-ai-app-low-end-pc',
-      'inLanguage': 'zh',
       'headline': '2026年低配PC最佳本地AI应用（8GB内存，无独立GPU）',
       'description': 'Ollama、GPT4All、Jan和llama.cpp在8GB内存集成显卡笔记本上实测。tokens/秒、内存压力、精确设置。',
       'datePublished': '2026-05-07',
@@ -1696,7 +1689,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'zh',
       'name': '2026年8GB内存无GPU笔记本最佳本地AI应用',
       'numberOfItems': 4,
       'itemListElement': [
@@ -2120,7 +2112,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/es/power-local-llm/best-local-ai-app-low-end-pc?lang=es',
-      'inLanguage': 'es',
       'headline': 'Mejores apps de IA local para PCs de gama baja en 2026 (8 GB RAM, sin GPU)',
       'description':
         'Ollama, GPT4All, Jan y llama.cpp probados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s, presión de memoria, configuraciones exactas.',
@@ -2150,7 +2141,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'es',
       'name': 'Mejores apps de IA local para portátiles con 8 GB RAM sin GPU en 2026',
       'numberOfItems': 4,
       'itemListElement': [

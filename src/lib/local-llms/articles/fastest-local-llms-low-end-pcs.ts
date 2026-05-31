@@ -273,7 +273,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Fastest Local LLMs for Low-End PCs 2026: Models by VRAM Tier',
         'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
@@ -294,7 +293,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -368,7 +366,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Fastest Local LLMs by Hardware Tier 2026',
-        'inLanguage': 'en',
         'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [
@@ -645,7 +642,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs Locales más Rápidos para PCs de Gama Baja 2026: Modelos por Nivel de VRAM',
         'url': 'https://www.promptquorum.com/es/local-llms/fastest-local-llms-low-end-pcs?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -666,7 +662,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -740,7 +735,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LLMs Locales más Rápidos por Nivel de Hardware 2026',
-        'inLanguage': 'es',
         'url': 'https://www.promptquorum.com/es/local-llms/fastest-local-llms-low-end-pcs?lang=es',
         'numberOfItems': 5,
         'itemListElement': [
@@ -978,7 +972,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Schnellste lokale LLMs für Low-End-PCs',
         'url': 'https://www.promptquorum.com/de/local-llms/fastest-local-llms-low-end-pcs',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -999,7 +992,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1089,7 +1081,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Beste lokale LLM-Modelle nach Hardware-Einschränkung',
-        'inLanguage': 'de',
         'url': 'https://www.promptquorum.com/de/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [
@@ -1325,7 +1316,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs locaux les plus rapides pour PC bas de gamme',
         'url': 'https://www.promptquorum.com/fr/local-llms/fastest-local-llms-low-end-pcs',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1346,7 +1336,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1444,7 +1433,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Meilleurs modèles LLM locaux par contrainte matérielle',
-        'inLanguage': 'fr',
         'url': 'https://www.promptquorum.com/fr/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [
@@ -1680,7 +1668,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': '低スペックPCで動く最速ローカルLLM',
         'url': 'https://www.promptquorum.com/ja/local-llms/fastest-local-llms-low-end-pcs',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1701,7 +1688,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1799,7 +1785,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'ハードウェア制約別ベストローカルLLMモデル',
-        'inLanguage': 'ja',
         'url': 'https://www.promptquorum.com/ja/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [
@@ -2035,7 +2020,6 @@ schema: {
         '@type': 'TechArticle',
         'headline': '低配PC最快本地大语言模型',
         'url': 'https://www.promptquorum.com/zh/local-llms/fastest-local-llms-low-end-pcs',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -2056,7 +2040,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -2154,7 +2137,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '按硬件限制分类的最佳本地LLM模型',
-        'inLanguage': 'zh',
         'url': 'https://www.promptquorum.com/zh/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [

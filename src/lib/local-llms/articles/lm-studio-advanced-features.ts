@@ -26,7 +26,6 @@ schema: {
         'headline': 'LM Studio Advanced Features 2026: GPU, API, Fine-Tuning',
         'description': 'LM Studio advanced features: GPU optimization, context window, API, and batch inference. Developer guide for local LLM production workflows. 2026.',
         'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -59,7 +58,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -517,7 +515,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         datePublished: '2026-04-04',
         dateModified: '2026-04-08',
         mainEntity: [
@@ -881,7 +878,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         datePublished: '2026-04-04',
         dateModified: '2026-04-08',
         mainEntity: [
@@ -985,7 +981,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ja/local-llms/lm-studio-advanced-features',
-        'inLanguage': 'ja',
         'headline': 'LM Studio高度な機能 2026: GPU、API、ファインチューニング',
         'description': 'LM Studio高度な機能：GPU最適化、コンテキストウィンドウ、API、LoRAファインチューニング、バッチ推論。デベロッパーガイド。無料--2026年4月。',
         'datePublished': '2026-04-04',
@@ -1138,7 +1133,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/zh/local-llms/lm-studio-advanced-features',
-        'inLanguage': 'zh',
         'headline': 'LM Studio高级功能 2026: GPU、API、微调',
         'description': 'LM Studio高级功能：GPU优化、上下文窗口、API、LoRA微调和批量推理。开发者指南。免费--2026年4月。',
         'datePublished': '2026-04-04',
@@ -1299,7 +1293,6 @@ schema: {
         'headline': 'LM Studio: Funciones avanzadas 2026 (GPU, API y ajuste fino)',
         'description': 'Funciones avanzadas de LM Studio: optimización de GPU, ventana de contexto, API e inferencia por lotes. Guía para desarrolladores en flujos de trabajo locales de LLM en producción. 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-advanced-features?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1321,7 +1314,6 @@ schema: {
         '@type': 'HowTo',
         'name': 'Configurar las funciones avanzadas de LM Studio',
         'description': 'Guía paso a paso para optimizar la asignación de GPU, la longitud del contexto, la configuración de la API, la inferencia por lotes y el benchmarking en LM Studio.',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'step': [
@@ -1336,7 +1328,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-04-18',
         mainEntity: [

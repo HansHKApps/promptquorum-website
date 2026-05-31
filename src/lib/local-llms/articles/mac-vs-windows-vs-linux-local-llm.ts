@@ -228,7 +228,6 @@ schema: {
         'headline': 'Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared',
         'description': 'MacBook Pro M5 Max 128GB: 70B at 25–35 tok/s, 614 GB/s bandwidth. Windows RTX 5090 32GB: 70B at 40–50 tok/s, $2,000. Linux: 1–5% faster, $810 TCO 3 years. Full OS comparison.',
         'url': 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -492,7 +491,6 @@ schema: {
         'headline': 'Mac vs Windows vs Linux para LLMs locales 2026: Apple M5, RTX 5090 y servidor Linux comparados',
         'description': 'MacBook Pro M5 Max 128GB: 70B a 25–35 tok/s, 614 GB/s de ancho de banda. Windows RTX 5090 32GB: 70B a 40–50 tok/s, $2.000. Linux: 1–5% más rápido, $810 TCO 3 años. Comparación completa de sistemas operativos.',
         'url': 'https://www.promptquorum.com/es/local-llms/mac-vs-windows-vs-linux-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -515,7 +513,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'url': 'https://www.promptquorum.com/es/local-llms/mac-vs-windows-vs-linux-local-llm?lang=es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo ejecutar Llama 3.1 70B en macOS?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí — MacBook Pro M5 Pro (64 GB) ejecuta 70B Q4 a 15–20 tok/s. M5 Max (128 GB) ejecuta 70B Q8 a 25–35 tok/s. Mac mini M4 Pro (64 GB, vigente) ejecuta 70B a 10–15 tok/s. Las configuraciones más pequeñas (32 GB o menos) no caben en 70B.' } },
@@ -531,7 +528,6 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'inLanguage': 'es',
         'name': 'macOS vs Windows vs Linux para LLMs locales abril de 2026',
         'numberOfItems': 3,
         'itemListElement': [
@@ -705,7 +701,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/de/local-llms/mac-vs-windows-vs-linux-local-llm',
-        'inLanguage': 'de',
         'headline': 'Mac vs Windows vs Linux für LLMs 2026: M5 vs RTX 5090',
         'description': 'MacBook Pro M5 Max 128GB: 70B bei 25–35 tok/s, 614 GB/s Bandbreite. Windows RTX 5090 32GB: 70B bei 40–50 tok/s, ca. 1.900 €. Linux: 1–5% schneller, ca. 770 € Gesamtkosten 3 Jahre.',
         'datePublished': '2026-04-05',
@@ -724,7 +719,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Ist macOS oder Windows besser für lokale LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'macOS ist besser für Einfachheit (6 Min Setup). Windows ist besser für Peak-Leistung (RTX 5090, 40–50 tok/s). Wahl basierend auf Ihrer Priorität: Einfachheit vs. Leistung.' } },
           { '@type': 'Question', 'name': 'Sollte ich M5 Max oder RTX 5090 kaufen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'M5 Max (ca. 5.694–6.999 €) für portabel + einfach + privat. RTX 5090 (ca. 1.900 €) für maximale Geschwindigkeit + Aufrüstbarkeit. RTX ist billiger pro TFLOPS, aber M5 ist tragbar.' } },
@@ -744,7 +738,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'macOS vs Windows vs Linux für lokale LLMs 2026 – OS-Vergleich',
-        'inLanguage': 'de',
         'numberOfItems': 3,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'macOS (Apple M5 Silicon)', 'description': 'Setup: 6 Min. M5 Max 128GB: 70B bei 25–35 tok/s. M5 Pro 64GB: 70B bei 15–20 tok/s. Kostenlos, wenn Mac vorhanden. Leise, Gebrauchsfertigkeit.' },
@@ -973,7 +966,6 @@ schema: {
             'headline': 'Mac vs Windows vs Linux pour les LLM locaux 2026 : Apple M5, RTX 5090 et serveur Linux comparés',
             'description': 'MacBook Pro M5 Max 128 Go : 70B à 25–35 jetons/s, 614 Go/s bande passante. Windows RTX 5090 32 Go : 70B à 40–50 jetons/s, 1.999 €. Linux : 1–5% plus rapide, 540 € TCO 3 ans. Comparaison complète du système d\'exploitation.',
             'url': 'https://www.promptquorum.com/fr/local-llms/mac-vs-windows-vs-linux-local-llm',
-            'inLanguage': 'fr',
             'datePublished': '2026-04-05',
             'dateModified': '2026-04-19',
             'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -991,7 +983,6 @@ schema: {
           faqSchema: {
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            'inLanguage': 'fr',
             'url': 'https://www.promptquorum.com/fr/local-llms/mac-vs-windows-vs-linux-local-llm',
             'mainEntity': [
               { '@type': 'Question', 'name': 'Puis-je exécuter Llama 3.1 70B sur macOS ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui — MacBook Pro M5 Pro (64 Go) exécute 70B Q4 à 15–20 jetons/sec. M5 Max (128 Go) exécute 70B Q8 à 25–35 jetons/sec. Mac mini M4 Pro (64 Go, toujours actuel) exécute 70B à 10–15 jetons/sec. Les configurations plus petites (32 Go ou moins) ne peuvent pas contenir 70B.' } },
@@ -1007,7 +998,6 @@ schema: {
           itemListSchema: {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
-            'inLanguage': 'fr',
             'name': 'macOS vs Windows vs Linux pour les LLM locaux avril 2026',
             'numberOfItems': 3,
             'itemListElement': [
@@ -1226,7 +1216,6 @@ schema: {
             'headline': 'Mac vs Windows vs Linux でローカルLLM 2026年 : Apple M5、RTX 5090 とLinuxサーバー比較',
             'description': 'MacBook Pro M5 Max 128GB : 70B を25–35トークン/秒、614GB/s帯域幅。Windows RTX 5090 32GB : 70B を40–50トークン/秒、2,000ドル。Linux : 1–5%高速、3年TCO 810ドル。完全なOS比較。',
             'url': 'https://www.promptquorum.com/ja/local-llms/mac-vs-windows-vs-linux-local-llm',
-            'inLanguage': 'ja',
             'datePublished': '2026-04-05',
             'dateModified': '2026-04-19',
             'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1244,7 +1233,6 @@ schema: {
           faqSchema: {
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            'inLanguage': 'ja',
             'url': 'https://www.promptquorum.com/ja/local-llms/mac-vs-windows-vs-linux-local-llm',
             'mainEntity': [
               { '@type': 'Question', 'name': 'macOS で Llama 3.1 70B を実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい — MacBook Pro M5 Pro（64GB）は70B Q4を15–20トークン/秒で実行。M5 Max（128GB）は70B Q8を25–35トークン/秒で実行。Mac mini M4 Pro（64GB、現行）は70B を10–15トークン/秒で実行。小さい構成（32GB以下）は70B を収容できません。' } },
@@ -1260,7 +1248,6 @@ schema: {
           itemListSchema: {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
-            'inLanguage': 'ja',
             'name': 'macOS vs Windows vs Linux ローカルLLM 2026年4月',
             'numberOfItems': 3,
             'itemListElement': [
@@ -1479,7 +1466,6 @@ schema: {
             'headline': 'Mac vs Windows vs Linux 本地LLM 2026：Apple M5、RTX 5090和Linux服务器对比',
             'description': 'MacBook Pro M5 Max 128GB：70B在25–35标记/秒，614GB/s带宽。Windows RTX 5090 32GB：70B在40–50标记/秒，2000美元。Linux：快1–5%，3年TCO 810美元。完整操作系统对比。',
             'url': 'https://www.promptquorum.com/zh/local-llms/mac-vs-windows-vs-linux-local-llm',
-            'inLanguage': 'zh',
             'datePublished': '2026-04-05',
             'dateModified': '2026-04-19',
             'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1497,7 +1483,6 @@ schema: {
           faqSchema: {
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            'inLanguage': 'zh',
             'url': 'https://www.promptquorum.com/zh/local-llms/mac-vs-windows-vs-linux-local-llm',
             'mainEntity': [
               { '@type': 'Question', 'name': '能在macOS上运行Llama 3.1 70B吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能——MacBook Pro M5 Pro（64GB）运行70B Q4为15–20标记/秒。M5 Max（128GB）运行70B Q8为25–35标记/秒。Mac mini M4 Pro（64GB、现行）运行70B为10–15标记/秒。更小配置（32GB以下）装不下70B。' } },
@@ -1513,7 +1498,6 @@ schema: {
           itemListSchema: {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
-            'inLanguage': 'zh',
             'name': 'Mac vs Windows vs Linux 本地LLM 2026年4月',
             'numberOfItems': 3,
             'itemListElement': [

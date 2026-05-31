@@ -377,7 +377,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-      'inLanguage': 'es',
         headline: 'Tokens, costes y límites: La economía del prompting de IA en 2026',
         description: 'Aprende cómo los tokens controlan los costes y límites de la IA. Entiende los modelos de precios, los límites de tasa y las estrategias para optimizar el gasto en GPT-4o, Claude, Gemini y modelos locales.',
         datePublished: '2026-03-22',

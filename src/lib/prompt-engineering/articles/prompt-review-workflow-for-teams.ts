@@ -833,7 +833,6 @@ require_code_owner_reviews: true`,
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-     'inLanguage': 'es',
       headline: 'Flujo de Revisión de Prompts para Equipos: Lista de Verificación y Gates CI/CD',
       description: 'Los prompts sin revisar fallan 3× más. Un flujo de revisión de prompts: lista de 7 puntos, 3 roles de revisores y gates CI/CD. Automatiza el 70 %, mantén el 30 % manual.',
       datePublished: '2026-04-29',

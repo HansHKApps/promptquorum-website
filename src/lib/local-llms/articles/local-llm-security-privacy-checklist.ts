@@ -248,7 +248,6 @@ schema: {
         'headline': 'Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup',
         'description': '12-step checklist for local LLM privacy in 2026: model provenance, telemetry opt-out, network isolation, disk encryption, and access controls.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-security-privacy-checklist',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
@@ -268,7 +267,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -585,7 +583,6 @@ schema: {
       'headline': 'Lista de Verificación de Seguridad y Privacidad para LLMs Locales: 12 Pasos para una Configuración Segura',
       'description': 'Lista de 12 pasos para la privacidad de LLMs locales en 2026: procedencia del modelo, opt-out de telemetría, aislamiento de red, cifrado de disco y controles de acceso.',
       'url': 'https://www.promptquorum.com/es/local-llms/local-llm-security-privacy-checklist?lang=es',
-      'inLanguage': 'es',
       'datePublished': '2026-04-04',
       'dateModified': '2026-04-18',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -605,7 +602,6 @@ schema: {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      'inLanguage': 'es',
       'mainEntity': [
         {
           '@type': 'Question',
@@ -923,7 +919,6 @@ schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/de/local-llms/local-llm-security-privacy-checklist',
-      'inLanguage': 'de',
       'headline': 'Checkliste für Sicherheit und Datenschutz bei lokalen LLMs: 12 Schritte zu einem sicheren Setup',
       'description': '12-Schritte-Sicherheitscheckliste für lokale LLMs: Telemetrie, Checksummen, Port 11434, Festplattenverschlüsselung. DSGVO und HIPAA inklusive. April 2026.',
       'datePublished': '2026-04-04',
@@ -1124,7 +1119,6 @@ schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-security-privacy-checklist',
-      'inLanguage': 'fr',
       'headline': 'Liste de Contrôle Sécurité et Confidentialité des LLM Locaux : 12 Étapes pour une Configuration Sûre',
       'description': 'Liste de contrôle en 12 étapes pour sécuriser un LLM local : télémétrie, checksums, port 11434, chiffrement disque. RGPD et HIPAA inclus. Avril 2026.',
       'datePublished': '2026-04-04',
@@ -1348,7 +1342,6 @@ schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-security-privacy-checklist',
-      'inLanguage': 'ja',
       'headline': 'ローカルLLMセキュリティ&プライバシーチェックリスト：12ステップで安全なセットアップを実現',
       'description': 'ローカルLLMを安全に設定する12ステップ：テレメトリ無効化、チェックサム確認、ポート11434の分離、ディスク暗号化。GDPRとHIPAAにも対応。2026年4月更新。',
       'datePublished': '2026-04-04',
@@ -1595,7 +1588,6 @@ schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-security-privacy-checklist',
-      'inLanguage': 'zh',
       'headline': '本地LLM安全与隐私检查清单：12个步骤实现安全设置',
       'description': '本地LLM安全设置12步清单：禁用遥测、验证校验和、隔离端口11434、启用磁盘加密。涵盖GDPR与HIPAA合规。2026年4月。',
       'datePublished': '2026-04-04',

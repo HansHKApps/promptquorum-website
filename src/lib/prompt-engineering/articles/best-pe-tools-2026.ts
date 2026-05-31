@@ -731,7 +731,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-      'inLanguage': 'es',
     headline: 'Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso',
     description: 'Las mejores herramientas de PE en 2026: Braintrust (eval), Vellum (producción), Promptfoo (testing), PromptHub (versionado), LangSmith (tracing). La mayoría de equipos necesita solo 2–3.',
     author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

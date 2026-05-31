@@ -277,7 +277,6 @@ schema: {
         'headline': 'LM Studio and Ollama OpenAI-Compatible API: Python and Node.js Setup Guide (localhost:1234 and 11434)',
         'description': 'Change one line -- base_url to localhost -- to run Ollama as a drop-in OpenAI API. Python, Node.js, streaming, and function calling all work unchanged.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api?lang=en',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -300,7 +299,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -728,7 +726,6 @@ schema: {
         'headline': 'LM Studio und Ollama OpenAI-kompatible API: Python und Node.js Setup Guide (localhost:1234 und 11434)',
         'description': 'Ändere eine Zeile -- base_url zu localhost -- um Ollama als Drop-in OpenAI API zu laufen. Python, Node.js, Streaming und Function Calling funktionieren alle unverändert.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-openai-compatible-api',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
@@ -988,7 +985,6 @@ schema: {
         'headline': 'API compatible OpenAI pour LLM locaux : Guide Python & Node.js 2026',
         'description': 'Changez une ligne -- base_url vers localhost -- pour utiliser Ollama comme API OpenAI. Python, Node.js, streaming et appels de fonctions fonctionnent sans modification.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-openai-compatible-api',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1005,7 +1001,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Dois-je modifier mon code OpenAI pour utiliser Ollama ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Définissez base_url="http://localhost:11434/v1" et api_key="ollama". Tout le reste reste identique.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser l\'API depuis un autre ordinateur sur mon réseau ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Définissez OLLAMA_HOST=0.0.0.0:11434 avant de lancer Ollama. Pointez le code sur http://<ip-machine>:11434/v1.' } },
@@ -1024,7 +1019,6 @@ schema: {
         '@type': 'HowTo',
         'name': 'Comment utiliser LM Studio ou Ollama avec l\'API compatible OpenAI',
         'description': 'Connectez Python ou Node.js à LM Studio (localhost:1234) ou Ollama (localhost:11434) avec le SDK OpenAI.',
-        'inLanguage': 'fr',
         'step': [
           { '@type': 'HowToStep', 'name': 'Installer le SDK OpenAI', 'text': 'Exécutez pip install openai (Python) ou npm install openai (Node.js). Aucun package spécifique à la plateforme nécessaire.' },
           { '@type': 'HowToStep', 'name': 'Démarrer LM Studio ou Ollama', 'text': 'LM Studio : chargez un modèle et activez Local Server (port 1234). Ollama : exécutez ollama serve (port 11434).' },
@@ -1036,7 +1030,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Ports API compatibles OpenAI pour LLM locaux : LM Studio, Ollama et vLLM',
-        'inLanguage': 'fr',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'LM Studio', 'description': 'localhost:1234/v1 -- Activer sous l\'onglet Local Server ; gestion des modèles par interface graphique ; GPU non requis ; API compatible OpenAI' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Ollama', 'description': 'localhost:11434/v1 -- Démarrer avec ollama serve ; idéal pour scripts et automatisation ; GPU non requis ; API compatible OpenAI' },
@@ -1248,7 +1241,6 @@ schema: {
         'headline': 'ローカルLLM向けOpenAI互換API：Python・Node.jsセットアップガイド 2026',
         'description': 'base_urlをlocalhostに変更するだけでOllamaをOpenAI APIの代替として使用できます。Python・Node.js・ストリーミング・Function Callingがコード変更なしで動作します。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-openai-compatible-api',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1265,7 +1257,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           { '@type': 'Question', 'name': 'OllamaでOpenAIのコードを変更する必要がありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不要です。base_url="http://localhost:11434/v1"とapi_key="ollama"を設定するだけで他はすべてそのまま動作します。' } },
           { '@type': 'Question', 'name': 'LM StudioにはOpenAI互換APIがありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。http://localhost:1234/v1に公開。Local ServerタブでStart Serverをクリック。Ollamaと同じコードでポートを1234に変更するだけです。' } },
@@ -1284,7 +1275,6 @@ schema: {
         '@type': 'HowTo',
         'name': 'LM StudioまたはOllamaでOpenAI互換APIを使う方法',
         'description': 'OpenAI SDKを使ってPythonまたはNode.jsをLM Studio（localhost:1234）またはOllama（localhost:11434）に接続します。',
-        'inLanguage': 'ja',
         'step': [
           { '@type': 'HowToStep', 'name': 'OpenAI SDKのインストール', 'text': 'pip install openai（Python）またはnpm install openai（Node.js）を実行。プラットフォーム固有のパッケージは不要です。' },
           { '@type': 'HowToStep', 'name': 'LM StudioまたはOllamaを起動', 'text': 'LM Studio：モデルを読み込みLocal Serverを有効化（ポート1234）。Ollama：ollama serveを実行（ポート11434）。' },
@@ -1296,7 +1286,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'ローカルLLM OpenAI互換APIポート：LM Studio・Ollama・vLLM',
-        'inLanguage': 'ja',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'LM Studio', 'description': 'localhost:1234/v1 -- Local Serverタブで有効化；GUIベースのモデル管理；GPU不要；OpenAI互換API' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Ollama', 'description': 'localhost:11434/v1 -- ollama serveで起動；スクリプト・自動化に最適；GPU不要；OpenAI互換API' },
@@ -1508,7 +1497,6 @@ schema: {
         'headline': '本地LLM的OpenAI兼容API：Python与Node.js实战指南 2026',
         'description': '只需将base_url改为localhost，即可用Ollama完全替代OpenAI的Python和Node.js客户端。支持流式输出和函数调用，无需修改代码。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-openai-compatible-api',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1525,7 +1513,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           { '@type': 'Question', 'name': '使用Ollama需要修改OpenAI代码吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不需要。设置base_url="http://localhost:11434/v1"和api_key="ollama"，其他代码保持不变。' } },
           { '@type': 'Question', 'name': 'LM Studio有OpenAI兼容API吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '有，在http://localhost:1234/v1。在Local Server选项卡下启用。与Ollama代码相同，端口改为1234。' } },
@@ -1544,7 +1531,6 @@ schema: {
         '@type': 'HowTo',
         'name': '如何将LM Studio或Ollama与OpenAI兼容API配合使用',
         'description': '使用OpenAI SDK将Python或Node.js连接到LM Studio（localhost:1234）或Ollama（localhost:11434）。',
-        'inLanguage': 'zh',
         'step': [
           { '@type': 'HowToStep', 'name': '安装OpenAI SDK', 'text': '运行pip install openai（Python）或npm install openai（Node.js）。无需特定平台的软件包。' },
           { '@type': 'HowToStep', 'name': '启动LM Studio或Ollama', 'text': 'LM Studio：加载模型并启用Local Server（端口1234）。Ollama：运行ollama serve（端口11434）。' },
@@ -1556,7 +1542,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '本地LLM OpenAI兼容API端口：LM Studio、Ollama和vLLM',
-        'inLanguage': 'zh',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'LM Studio', 'description': 'localhost:1234/v1 -- 在Local Server选项卡下启用；基于GUI的模型管理；无需GPU；OpenAI兼容API' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Ollama', 'description': 'localhost:11434/v1 -- 通过ollama serve启动；适合脚本和自动化；无需GPU；OpenAI兼容API' },
@@ -1837,7 +1822,6 @@ schema: {
         'headline': 'API compatible con OpenAI para LLMs locales: Guía de configuración con Python y Node.js (localhost:1234 y 11434)',
         'description': 'Cambia una línea -- base_url a localhost -- para usar Ollama como API OpenAI de reemplazo directo. Python, Node.js, streaming y function calling funcionan sin cambios.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-openai-compatible-api?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1860,7 +1844,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',

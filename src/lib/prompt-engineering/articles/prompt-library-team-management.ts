@@ -380,7 +380,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-     'inLanguage': 'es',
       url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-library-team-management?lang=es',
       inLanguage: 'es',
       headline: 'Gestión de biblioteca de prompts: cómo organizar, versionar y gobernar los prompts del equipo',

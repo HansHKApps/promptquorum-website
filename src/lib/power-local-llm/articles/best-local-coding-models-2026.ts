@@ -2918,7 +2918,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-    'inLanguage': 'es',
       headline: 'Mejores modelos de código local en 2026: Qwen3-Coder vs DeepSeek vs Codestral',
       description: 'Seis modelos de código local comparados en tamaño, contexto, licencia, VRAM y dirección de HumanEval+. Qwen3-Coder 30B es la opción recomendada para mayo de 2026; análisis completo en el artículo.',
       image: 'https://www.promptquorum.com/es/api/og/power-local-llm/best-local-coding-models-2026',

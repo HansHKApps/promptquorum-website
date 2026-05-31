@@ -239,7 +239,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ItemList',
         'name': 'Best CPU-Only LLMs 2026',
         'url': 'https://www.promptquorum.com/local-llms/best-cpu-only-llm?lang=en',
-        'inLanguage': 'en',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Best Overall CPU LLM (3.8B, 12 tok/s)' },
@@ -252,7 +251,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         mainEntity: [
           {
             '@type': 'Question',
@@ -467,7 +465,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ItemList',
         'name': 'Mejores LLM solo CPU 2026',
         'url': 'https://www.promptquorum.com/es/local-llms/best-cpu-only-llm?lang=es',
-        'inLanguage': 'es',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Mejor LLM CPU general (3,8B, 12 tok/s)' },
@@ -480,7 +477,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         mainEntity: [
           {
             '@type': 'Question',
@@ -703,7 +699,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ItemList',
         'name': 'Beste CPU-only LLMs 2026',
         'url': 'https://www.promptquorum.com/de/local-llms/best-cpu-only-llm',
-        'inLanguage': 'de',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Bestes CPU-LLM gesamt (3,8B, 12 Tok/Sek)' },
@@ -1015,7 +1010,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ItemList',
         'name': 'Meilleurs LLMs CPU-only 2026',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-cpu-only-llm',
-        'inLanguage': 'fr',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Meilleur LLM CPU global (3.8B, 12 tok/s)' },
@@ -1311,7 +1305,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ItemList',
         'name': '最高の CPU-only LLMs 2026',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-cpu-only-llm',
-        'inLanguage': 'ja',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — 最高の CPU LLM（3.8B、12 トークン/秒）' },
@@ -1607,7 +1600,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ItemList',
         'name': '2026年最佳CPU-only LLM',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-cpu-only-llm',
-        'inLanguage': 'zh',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — 综合最佳CPU LLM（3.8B，12令牌/秒）' },

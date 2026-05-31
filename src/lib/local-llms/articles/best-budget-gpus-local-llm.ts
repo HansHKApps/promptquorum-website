@@ -189,7 +189,6 @@ schema: {
         'headline': 'RTX 3060 Local LLM Guide 2026: What Models You Can Run',
         'description': 'What local LLMs can you run on RTX 3060 12GB or 6GB? See best models for coding, chat, and reasoning in 2026 with real VRAM limits and performance tips.',
         'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -209,7 +208,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -507,7 +505,6 @@ schema: {
         'headline': 'Guía de LLMs locales con RTX 3060 2026: qué modelos puedes ejecutar',
         'description': '¿Qué LLMs locales puedes ejecutar en RTX 3060 12GB o 6GB? Consulta los mejores modelos para código, chat y razonamiento en 2026 con límites reales de VRAM y consejos de rendimiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-budget-gpus-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -527,7 +524,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -873,7 +869,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/de/local-llms/best-budget-gpus-local-llm',
-        'inLanguage': 'de',
         name: 'Beste Budget-GPUs für lokale LLMs',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'RTX 3060 12GB (€150-190 gebraucht) ist die beste Budget-Wahl für 7B-13B-Modelle.' },
@@ -895,7 +890,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'url': 'https://www.promptquorum.com/de/local-llms/best-budget-gpus-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Lohnt sich RTX 3060 12GB 2026 noch?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. 4+ Jahre alt, aber 12GB VRAM ist zeitlos. Läuft Llama 3.3 8B und Mistral 7B reibungslos. Ideal wenn gebraucht unter €190 gefunden.' } },
@@ -1012,7 +1006,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-budget-gpus-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': 'RTX 3060 12GB vaut-il toujours le coup en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. 4+ ans, mais 12GB VRAM ne vieillit pas. Exécute Llama 3.3 8B et Mistral 7B en douceur. Idéal si vous trouvez un occasion <€190.' } },
@@ -1068,7 +1061,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-budget-gpus-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': 'RTX 3060 12GBは2026年でも買う価値がありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。4年以上前ですが、12GB VRAMは時代遅れになりません。Llama 3.3 8BとMistral 7Bを滑らかに実行できます。中古で¥37,500未満で見つかれば買いです。' } },
@@ -1249,7 +1241,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-budget-gpus-local-llm',
-        'inLanguage': 'zh',
         name: '本地LLM的最佳预算GPU',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'RTX 3060 12GB（二手200-250美元）是7B-13B模型的最佳整体预算选择。' },
@@ -1271,7 +1262,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-budget-gpus-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': 'RTX 3060 12GB在2026年还值得买吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。它已有4年多，但12GB VRAM永不过时。平稳运行Llama 3.3 8B和Mistral 7B。如果能找到二手250美元以下的就买。' } },

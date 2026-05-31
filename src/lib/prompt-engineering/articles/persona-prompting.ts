@@ -22,7 +22,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting?lang=en',
-      'inLanguage': 'en',
       headline: 'Persona Prompting: Give Your AI a Role and Watch It Improve',
       description: 'What persona prompting is, why it matters, core building blocks, practical examples, and how to test personas across multiple AI models.',
       datePublished: '2026-03-26',
@@ -39,7 +38,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'en',
       numberOfItems: 5,
       itemListElement: [
         {
@@ -356,7 +354,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/de/prompt-engineering/persona-prompting',
-      'inLanguage': 'de',
       headline: 'Persona-Prompting: Geben Sie Ihrer KI eine Rolle und sehen Sie die Verbesserung',
       description: 'Was Persona-Prompting ist, warum es wichtig ist, Kernbausteine, praktische Beispiele und wie Sie Personas über mehrere KI-Modelle hinweg testen.',
       datePublished: '2026-03-26',
@@ -373,7 +370,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'de',
       numberOfItems: 5,
       itemListElement: [
         {
@@ -698,7 +694,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/es/prompt-engineering/persona-prompting?lang=es',
-      'inLanguage': 'es',
       headline: 'Persona Prompting: dale un rol a tu IA y observa cómo mejora',
       description: 'Qué es el persona prompting, por qué importa, los bloques de construcción fundamentales, ejemplos prácticos y cómo probar personas en múltiples modelos de IA.',
       datePublished: '2026-03-26',
@@ -715,7 +710,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'es',
       numberOfItems: 5,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Persona Prompting', description: 'Solo cambia el texto de entrada; funciona en todos los proveedores; reversible en segundos; mejor para roles multi-dominio y pruebas.' },
@@ -900,7 +894,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/fr/prompt-engineering/persona-prompting',
-      'inLanguage': 'fr',
       headline: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
       description: 'Ce qu\'est le persona prompting, pourquoi c\'est important, éléments clés, exemples pratiques et comment tester les personas sur plusieurs modèles IA.',
       datePublished: '2026-03-26',
@@ -917,7 +910,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'fr',
       numberOfItems: 5,
       itemListElement: [
         {
@@ -1243,7 +1235,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/ja/prompt-engineering/persona-prompting',
-      'inLanguage': 'ja',
       headline: 'ペルソナプロンプティング：AIに一貫性のある役割を与える',
       description: 'ペルソナプロンプティングの概要、重要性、7つの基本構成要素、実践的な例、複数のAIモデル間でのペルソナテスト方法。',
       datePublished: '2026-03-26',
@@ -1261,7 +1252,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'ja',
       numberOfItems: 5,
       itemListElement: [
         {
@@ -1479,7 +1469,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'url': 'https://www.promptquorum.com/zh/prompt-engineering/persona-prompting',
-      'inLanguage': 'zh',
       headline: '人物角色提示：引导AI表现出一致的专家行为',
       description: '人物角色提示是什么、为什么重要、7个核心构成要素、实践例子以及如何跨多个AI模型测试人物角色。',
       datePublished: '2026-03-26',
@@ -1497,7 +1486,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'inLanguage': 'zh',
       numberOfItems: 5,
       itemListElement: [
         {

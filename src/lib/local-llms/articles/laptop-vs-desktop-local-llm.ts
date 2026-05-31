@@ -280,7 +280,6 @@ schema: {
         'headline': 'Laptop vs Desktop for Local LLMs: 7× Cost Gap, Thermal Throttling Data & 2026 Buying Guide',
         'description': 'Desktop RTX 4070 Ti: 80 tok/sec sustained at $19/tok/sec. MacBook M5 Max: 55-70 tok/sec (est.), throttles after 15-18 min, $50-70/tok/sec. Full thermal data, cost analysis, M5 Max 70B capability, and 2026 buying guide.',
         'url': 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -305,7 +304,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -343,7 +341,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Laptop vs Desktop Cost Comparison for Local LLMs 2026',
-        'inLanguage': 'en',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'MacBook Pro 16" M5 Max', 'description': '$3,500-4,000 · 55-70 tok/sec (est.) · $50-70/tok/sec · First laptop to load 70B; M5 generation with 4× faster LLM processing.' },
@@ -628,7 +625,6 @@ schema: {
         'headline': 'Laptop vs escritorio para LLMs locales: brecha de costo 7×, datos de throttling térmico y guía de compra 2026',
         'description': 'Escritorio RTX 4070 Ti: 80 tok/seg sostenido a $19/tok/seg. MacBook M5 Max: 55-70 tok/seg (est.), throttling después de 15-18 min, $50-70/tok/seg. Datos térmicos completos, análisis de costos, capacidad 70B del M5 Max y guía de compra 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/laptop-vs-desktop-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -653,7 +649,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -691,7 +686,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Comparación de costos laptop vs escritorio para LLMs locales 2026',
-        'inLanguage': 'es',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'MacBook Pro 16" M5 Max', 'description': '$3,500-4,000 · 55-70 tok/seg (est.) · $50-70/tok/seg · Primer laptop en cargar 70B; generación M5 con procesamiento LLM 4× más rápido.' },
@@ -941,7 +935,6 @@ schema: {
         'headline': 'Laptop vs. Desktop für lokale LLMs 2026: Kosten, Geschwindigkeit & 70B-Fähigkeit',
         'description': 'RTX 4070 Ti: 80 Tok/Sek, 21 €/Tok/Sek. MacBook M4 Max: 35 Tok/Sek, Drosselung nach 18 Min. 70B-Modelle: Desktop oder Mac Studio. Kaufratgeber 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/laptop-vs-desktop-local-llm',
-        'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -966,7 +959,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1014,7 +1006,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Laptop vs. Desktop Kostenvergleich für lokale LLMs 2026',
-        'inLanguage': 'de',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'MacBook Pro 16" M5 Max', 'description': '3.999 € · 25 Tok/Sek · 160 €/Tok/Sek · Ideal für: Apple-Ökosystem und Mobilität (M3-Generation).' },
@@ -1255,7 +1246,6 @@ schema: {
         'headline': 'Laptop vs bureau pour les LLMs locaux 2026 : coût, vitesse & capacité 70B',
         'description': 'RTX 4070 Ti : 80 tok/s, 21 €/tok/s. MacBook M4 Max : 35 tok/s, throttling après 18 min. Modèles 70B nécessitent un bureau. Guide d\'achat avril 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/laptop-vs-desktop-local-llm',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1280,7 +1270,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1318,7 +1307,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Comparatif coût laptop vs bureau pour LLMs locaux 2026',
-        'inLanguage': 'fr',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'MacBook Pro 16" M5 Max', 'description': '3 999 € · 25 tok/s · 160 €/tok/s · Idéal pour : écosystème Apple et mobilité (génération M3).' },
@@ -1559,7 +1547,6 @@ schema: {
         'headline': 'ローカルLLM向けラップトップ vs デスクトップ 2026：コスト・速度・70B対応能力',
         'description': 'RTX 4070 Ti：80トークン/秒、コスト19ドル/トークン/秒。MacBook M4 Max：35トークン/秒（18分後にスロットリング）、約100ドル/トークン/秒。70Bモデルの実行にはデスクトップまたはMac Studio M2 Ultraが必要。2026年4月購入ガイド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/laptop-vs-desktop-local-llm',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1584,7 +1571,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1622,7 +1608,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'ローカルLLM向けラップトップ vs デスクトップ コスト比較 2026',
-        'inLanguage': 'ja',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'MacBook Pro 16インチ M5 Max', 'description': '3,500ドル · 25トークン/秒 · 140ドル/トークン/秒 · 最適用途：Appleエコシステムと携帯性（M3世代）。' },
@@ -1863,7 +1848,6 @@ schema: {
         'headline': '本地LLM笔记本 vs 台式机 2026：成本、速度与70B模型能力',
         'description': 'RTX 4070 Ti：80令牌/秒，成本19美元/令牌/秒。MacBook M4 Max：35令牌/秒（18分钟后降频），约100美元/令牌/秒。运行70B模型需要台式机或Mac Studio M2 Ultra。2026年4月购买指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/laptop-vs-desktop-local-llm',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -1888,7 +1872,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -1926,7 +1909,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': '本地LLM笔记本 vs 台式机成本对比 2026',
-        'inLanguage': 'zh',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'MacBook Pro 16英寸 M5 Max', 'description': '3500美元 · 25令牌/秒 · 140美元/令牌/秒 · 最适合：Apple生态系统与便携性（M3世代）。' },

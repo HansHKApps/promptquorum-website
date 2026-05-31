@@ -225,7 +225,6 @@ schema: {
         'headline': 'Best Mini PCs for Local LLMs 2026: Mac Mini M4 Pro, Framework Desktop, and Mini-ITX Builds',
         'description': 'Mac mini M4 Pro (64 GB unified): 70B at 10–15 tok/s. Framework Desktop 128 GB: 70B at 20+ tok/s. ASUS PN51 + RTX 5060 Ti: $900, 7B at 25 tok/s. Full 2026 comparison.',
         'url': 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
@@ -247,7 +246,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'en',
         'url': 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I run 13B models smoothly on a mini PC?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, at Q4 quantization with RTX 5060 Ti (16 GB) or RTX 4070 (12 GB). RTX 4060 Ti (8 GB) is too tight for comfortable 13B — VRAM headroom drops under 1 GB.' } },
@@ -266,7 +264,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'en',
         'name': 'Best Mini PCs for Local LLM Inference 2026',
         'numberOfItems': 5,
         'itemListElement': [
@@ -498,7 +495,6 @@ schema: {
         'headline': 'Die besten Mini-PCs für lokale LLMs 2026: Mac Mini M4 Pro, Framework Desktop und Mini-ITX-Builds im Vergleich',
         'description': 'Mac mini M4 Pro (64 GB Unified): 70B bei 10–15 tok/s. Framework Desktop 128 GB: 70B bei 20+ tok/s. ASUS PN51 + RTX 5060 Ti: ca. 900 €, 7B bei 25 tok/s. Vergleich 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'de',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
@@ -520,7 +516,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'de',
         'url': 'https://www.promptquorum.com/de/local-llms/best-mini-pcs-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich 13B-Modelle flüssig auf einem Mini-PC ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, bei Q4-Quantisierung mit RTX 5060 Ti (16 GB) oder RTX 4070 (12 GB). Die RTX 4060 Ti (8 GB) ist für komfortablen 13B-Betrieb zu knapp — der VRAM-Spielraum sinkt unter 1 GB.' } },
@@ -541,7 +536,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/de/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'de',
         'name': 'Beste Mini-PCs für lokale LLM-Inferenz 2026',
         'numberOfItems': 5,
         'itemListElement': [
@@ -762,7 +756,6 @@ schema: {
         'headline': 'Meilleurs mini PC pour LLM locaux 2026 : Mac Mini M4 Pro, Framework Desktop et builds Mini-ITX',
         'description': 'Mac mini M4 Pro (64 Go unifié) : 70B à 10–15 tok/s. Framework Desktop 128 Go : 70B à 20+ tok/s. ASUS PN51 + RTX 5060 Ti : env. 900 €, 7B à 25 tok/s. Comparatif 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'fr',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
@@ -784,7 +777,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'fr',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-mini-pcs-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Puis-je exécuter des modèles 13B sans problème sur un mini PC ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, en quantification Q4 avec RTX 5060 Ti (16 Go) ou RTX 4070 (12 Go). Le RTX 4060 Ti (8 Go) est trop limité pour le 13B — la marge VRAM tombe sous 1 Go.' } },
@@ -803,7 +795,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'fr',
         'name': 'Meilleurs mini PC pour l’inférence LLM locale 2026',
         'numberOfItems': 5,
         'itemListElement': [
@@ -1022,7 +1013,6 @@ schema: {
         'headline': 'ローカルLLM向けミニPC 2026年版：Mac Mini M4 Pro・Framework Desktop・Mini-ITXビルド比較',
         'description': 'Mac mini M4 Pro（64 GB統合）：70Bを10〜15 tok/sで実行。Framework Desktop 128 GB：70Bが20+ tok/s。ASUS PN51 + RTX 5060 Ti（約¥140,000）：7Bが25 tok/s。2026年完全比較。',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'ja',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
@@ -1044,7 +1034,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'ja',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-mini-pcs-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ミニPCで13Bモデルをスムーズに実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti（16 GB）またはRTX 4070（12 GB）でQ4量子化なら可能。RTX 4060 Ti（8 GB）は13Bにはタイト — VRAMヘッドルームが1 GB未満。' } },
@@ -1063,7 +1052,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'ja',
         'name': '2026年版ローカルLLM推論向けミニPCベスト',
         'numberOfItems': 5,
         'itemListElement': [
@@ -1283,7 +1271,6 @@ schema: {
         'headline': '2026年本地LLM迷你PC推荐：Mac Mini M4 Pro、Framework Desktop与Mini-ITX构建对比',
         'description': 'Mac mini M4 Pro（64 GB统一内存）：70B达10〜15 tok/s。Framework Desktop 128 GB：70B超20 tok/s。ASUS PN51 + RTX 5060 Ti（$900）：7B达25 tok/s。2026年完整对比。',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'zh',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
@@ -1305,7 +1292,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'zh',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-mini-pcs-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': '迷你PC能流畅运行13B模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能，使用RTX 5060 Ti（16 GB）或RTX 4070（12 GB）进行Q4量化。RTX 4060 Ti（8 GB）运行13B过于紧张——VRAM余量降至1 GB以下。' } },
@@ -1324,7 +1310,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-mini-pcs-local-llm',
-        'inLanguage': 'zh',
         'name': '2026年本地LLM推理最佳迷你PC',
         'numberOfItems': 5,
         'itemListElement': [
@@ -1556,7 +1541,6 @@ schema: {
         'headline': 'Mejores mini PCs para LLMs locales 2026: Mac Mini M4 Pro, Framework Desktop y builds Mini-ITX',
         'description': 'Mac mini M4 Pro (64 GB unificado): 70B a 10–15 tok/s. Framework Desktop 128 GB: 70B a 20+ tok/s. ASUS PN51 + RTX 5060 Ti: $900, 7B a 25 tok/s. Comparación completa 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-mini-pcs-local-llm?lang=es',
-        'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
@@ -1578,7 +1562,6 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'inLanguage': 'es',
         'url': 'https://www.promptquorum.com/es/local-llms/best-mini-pcs-local-llm?lang=es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo ejecutar modelos 13B sin problemas en un mini PC?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, con cuantización Q4 con RTX 5060 Ti (16 GB) o RTX 4070 (12 GB). La RTX 4060 Ti (8 GB) es demasiado ajustada para 13B cómodo — el margen de VRAM cae por debajo de 1 GB.' } },
@@ -1597,7 +1580,6 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'url': 'https://www.promptquorum.com/es/local-llms/best-mini-pcs-local-llm?lang=es',
-        'inLanguage': 'es',
         'name': 'Mejores mini PCs para inferencia LLM local 2026',
         'numberOfItems': 5,
         'itemListElement': [
