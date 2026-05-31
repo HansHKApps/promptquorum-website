@@ -595,5 +595,5 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**Style：指定音调、语言和格式偏好。** 示例："技术受众。使用精确的术语。以 markdown 报告的形式返回。"',
     ],
   },
-} },
-  };
+},
+};
