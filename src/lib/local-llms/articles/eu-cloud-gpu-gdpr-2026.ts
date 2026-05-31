@@ -762,6 +762,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '¿Qué proveedor EU tiene mayor disponibilidad de H100?', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway, seguido de OVHcloud. Nebius aumenta rápidamente su inventario de H100 (Q3 2026 planificado).' } },
       ],
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'GPU en la nube UE y RGPD 2026: Guía de cumplimiento para IA',
+      description: 'GPU en la nube en la UE conforme al RGPD: compara OVHcloud, Scaleway y Hetzner, residencia de datos, cláusulas contractuales y costes para IA en 2026.',
+      url: 'https://www.promptquorum.com/es/local-llms/eu-cloud-gpu-gdpr-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     title: 'EU-Cloud-GPU mit DSGVO 2026: Hetzner vs Scaleway vs OVHcloud',

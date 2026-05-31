@@ -1043,6 +1043,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Mejor mini PC AMD para LLM locales 2026: Ryzen AI Max+ 395 (128 GB)',
+      description: 'Las mini PC AMD Ryzen AI Max+ 395 con 128 GB ejecutan modelos 70B localmente. Benchmarks, precios y comparativa de Framework Desktop, GMKtec y Minisforum.',
+      url: 'https://www.promptquorum.com/es/local-llms/best-amd-mini-pc-local-llm-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     freshness_tier: 'semi_annual',
