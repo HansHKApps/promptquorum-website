@@ -2461,7 +2461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'La mayoría de los consejos sobre portátiles para LLMs locales empiezan por la GPU y terminan ahí. El número que realmente decide qué modelo cabe es la memoria: la VRAM en un portátil gaming de Windows, o la memoria unificada en Apple Silicon — y un modelo que no cabe en memoria no logra cargarse o va arrastrándose en swap. Esta guía compara cuatro familias de portátiles según tres estilos de compra: un Apple MacBook Pro para tener la mayor memoria en un cuerpo portátil, un Lenovo ThinkPad o un portátil gaming ASUS ROG para velocidad de GPU NVIDIA, y un Framework Laptop 16 para reparabilidad y actualizaciones. Espera que una máquina portátil funcione entre un 20 y un 30 % más lento que un escritorio con el mismo chip debido a los límites térmicos. Los precios aquí son una instantánea de mayo de 2026 — los precios de los portátiles cambian con los ciclos de modelo y las ofertas, así que confirma el precio actual antes de comprar.',
     metaDescription:
-      'Los mejores portátiles para ejecutar LLMs locales en 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, VRAM y velocidades reales en tokens comparadas por rango de precio.',
+      'Los mejores portátiles para LLMs locales en 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad y ASUS ROG. RAM, VRAM y velocidades reales por rango de precio.',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — cuatro familias de portátiles para LLMs locales, una regla: compra por memoria. La VRAM o la memoria unificada decide el modelo que cabe, no el nombre de la GPU.',
     affiliateDisclosure: true,

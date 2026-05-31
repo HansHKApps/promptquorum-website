@@ -2329,7 +2329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Una base de conocimiento personal (PKB) construida sobre IA local en 2026 tiene cinco capas: captura (web clipper, reenvío de email, hoja de compartir en móvil), almacenamiento (vault de Markdown o carpeta de documentos), embeddings (modelo local via Ollama), recuperación (RAG) e interfaz (chat o búsqueda semántica). Tres arquitecturas cubren aproximadamente el 95 % de los casos reales — centrada en Obsidian (orientada a notas, escala hasta ~50.000 elementos), centrada en AnythingLLM (orientada a documentos, escala hasta ~100.000 elementos) y un stack personalizado de Python + ChromaDB (orientada a ingenieros, escala por encima de 1 millón de elementos). El mínimo de hardware es un portátil con 16 GB de RAM; más allá de 10.000 elementos, planifica 32 GB. La decisión de escalado más importante no es el LLM — sino si tu pipeline de captura sobrevive al uso diario en móvil, donde llega la mayor parte del conocimiento.',
     metaDescription:
-      'Base de conocimiento personal con IA local 2026: 3 arquitecturas comparadas (Obsidian, AnythingLLM, Python + ChromaDB). Escala a más de 100.000 elementos. Captura, RAG, sincronización, backup.',
+      'Base de conocimiento personal con IA local 2026: Obsidian, AnythingLLM y Python + ChromaDB comparados. Escala a 100.000+ elementos. Captura, RAG y backup.',
     twitterDescription:
       'Tres arquitecturas de PKB con IA local en 2026: Obsidian (~50K elementos), AnythingLLM (~100K), Python + ChromaDB (1M+). Captura, RAG, sync móvil, backup, escalado.',
     current_models_mentioned: [

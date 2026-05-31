@@ -2399,7 +2399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Seis apps de Android ejecutan modelos de lenguaje grandes completamente sin conexión en 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI y PocketPal AI. Difieren en la utilización del NPU, la amplitud de la biblioteca de modelos y la integración con Android — y la mejor opción depende de si quieres velocidad (MLC Chat con NPU Hexagon), máxima flexibilidad de modelos (Ollama via Termux) o una interfaz nativa pulida (Layla o PocketPal AI). Esta guía compara las seis en el Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) y OnePlus 13 (Snapdragon 8 Elite), cubriendo la inferencia de Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, las realidades de la fragmentación de Android y cómo cada app gestiona el almacenamiento, los límites en segundo plano y el panel compartir de Android.',
     metaDescription:
-      '6 apps de LLM local para Android probadas en teléfonos reales en 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, PocketPal AI. Velocidades de tokens y soporte NPU.',
+      '6 apps de LLM local para Android probadas en teléfonos reales en 2026: MLC Chat, Maid, Layla, Ollama vía Termux y PocketPal AI. Velocidad y soporte NPU.',
     twitterDescription:
       'IA local en Android en 2026: MLC Chat alcanza ~40 tok/seg con NPU Hexagon de Snapdragon. Maid da acceso GGUF completo. Ollama via Termux es el camino para usuarios avanzados. Comparación completa de 6 apps en S25 Ultra, Pixel 9 Pro, OnePlus 13.',
     current_models_mentioned: [

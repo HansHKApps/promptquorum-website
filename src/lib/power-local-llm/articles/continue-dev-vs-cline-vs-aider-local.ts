@@ -2491,7 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Continue.dev, Cline y Aider son las tres herramientas de código open-source serias que se integran correctamente con un LLM local en 2026. No son intercambiables: cada una está construida alrededor de una primitiva de flujo de trabajo diferente — autocompletado, bucle de agente autónomo o diff nativo de Git. Elige primero según el flujo de trabajo y en segundo lugar el modelo, y evitarás el 90% de los problemas de integración.',
     metaDescription:
-      'Continue.dev, Cline y Aider comparados como agentes de código local en 2026. Modelo de edición, integración con IDE, deshacer y estrategia de contexto — elegidos por flujo de trabajo, no por hype.',
+      'Continue.dev, Cline y Aider comparados como agentes de código local en 2026: modelo de edición, integración con IDE, deshacer y estrategia de contexto.',
     twitterDescription:
       'Tres herramientas de código local, tres primitivas de flujo de trabajo distintas. Continue.dev para autocompletado, Cline para agentes autónomos, Aider para diffs nativos de Git. Veredicto por flujo de trabajo.',
     current_models_mentioned: [

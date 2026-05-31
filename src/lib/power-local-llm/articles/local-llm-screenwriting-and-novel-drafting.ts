@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Los LLMs locales integrados en un flujo de trabajo de redacción de novelas o guiones te permiten generar borradores de escenas, beat sheets, pasadas de diálogo y rondas de revisión sin acceso a internet, registro en la nube ni límites de uso. Esta guía cubre el flujo de trabajo completo: selección de modelos, gestión de la ventana de contexto para trabajos de formato largo, andamiaje por capítulos, generación de escenas y las herramientas que conectan un LLM local con tu software de escritura.',
     metaDescription:
-      'Flujo de trabajo completo para usar LLMs locales en la redacción de novelas y guiones: selección de modelos, gestión del contexto, andamiaje por capítulos, generación de escenas e integraciones de herramientas para escritores.',
+      'Flujo completo para escribir novelas y guiones con LLMs locales: selección de modelos, gestión del contexto, andamiaje por capítulos y generación de escenas.',
     twitterDescription:
       'Cómo usar LLMs locales para redactar novelas y guiones: gestión de ventana de contexto, andamiaje por capítulos, generación de escenas, pasadas de diálogo e integraciones de herramientas.',
     current_models_mentioned: [

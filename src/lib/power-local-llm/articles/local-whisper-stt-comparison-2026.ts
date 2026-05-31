@@ -2651,11 +2651,11 @@ for segment in segments:
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: Benchmarks STT local, configuración y aceleración GPU',
-    seoTitle: 'Whisper.cpp vs faster-whisper 2026: Benchmarks STT local y configuración',
+    seoTitle: 'Whisper.cpp vs faster-whisper 2026: STT local y benchmarks',
     intro:
       'whisper.cpp y faster-whisper son las dos implementaciones dominantes del modelo Whisper de OpenAI para transcripción local y offline en 2026. whisper.cpp es un port puro en C/C++ que funciona en Apple Metal, CUDA, Vulkan y CPU — ideal para Apple Silicon, sistemas embebidos y aplicaciones de voz en tiempo real. faster-whisper es una librería Python que usa CTranslate2 y logra un rendimiento de hasta ~4× el original de Whisper en GPUs NVIDIA mediante cuantización int8. Esta guía cubre instalación, benchmarks de rendimiento, configuración de transcripción en tiempo real y una comparación directa entre plataformas para que elijas la herramienta adecuada.',
     metaDescription:
-      'Compara whisper.cpp y faster-whisper para reconocimiento de voz local en 2026. Benchmarks WER, velocidad GPU vs CPU, Apple Silicon Metal, transcripción en tiempo real y guías de instalación. Todo offline.',
+      'Compara whisper.cpp y faster-whisper para voz local en 2026: WER, velocidad GPU vs CPU, Apple Silicon Metal y transcripción en tiempo real. Todo offline.',
     twitterDescription:
       'whisper.cpp vs faster-whisper: benchmarks de reconocimiento de voz local 2026. Velocidad CPU vs GPU, Apple Metal, precisión WER, transcripción en tiempo real. Sin nube, sin costo.',
     audience:

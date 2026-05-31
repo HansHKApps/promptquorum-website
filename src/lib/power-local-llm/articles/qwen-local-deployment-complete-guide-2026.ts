@@ -1052,7 +1052,7 @@ docker run --gpus all \\
     title: 'Despliegue Local de Qwen: Guía Completa de Producción 2026',
     seoTitle: 'Qwen 2026 en Producción: Docker, Servidor API y Multi-GPU',
     metaDescription:
-      'Despliega Qwen 7B a 72B en producción: servidor API con Docker Compose, configuración multi-GPU, benchmarks de hardware y comparación de costes con Alibaba Cloud. Mayo 2026.',
+      'Despliega Qwen 7B a 72B en producción: servidor API con Docker Compose, multi-GPU, benchmarks de hardware y comparación de costes con Alibaba Cloud. 2026.',
     twitterDescription:
       'Qwen 7B alcanza 25 tok/s en una RTX 3060. Qwen 72B necesita dos RTX 4090 o una GPU en la nube. Guía completa de Docker, servidor API y multi-GPU para 2026.',
     affiliateDisclosure: true,

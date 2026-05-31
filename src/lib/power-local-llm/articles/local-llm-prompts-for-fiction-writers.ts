@@ -3144,11 +3144,11 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Prompts para LLM local para escritores de ficción: 15 plantillas y técnicas (2026)',
-    seoTitle: 'Prompts LLM local para escritores de ficción: 15 plantillas 2026',
+    seoTitle: '15 prompts de LLM local para escritores de ficción 2026',
     intro:
       'Los LLM locales producen ficción notablemente mejor cuando les das prompts estructurados en lugar de solicitudes abiertas. Esta guía cubre 15 plantillas de prompts que funcionan — para escritura de escenas, desarrollo de personajes, diálogo, construcción de mundos, transferencia de estilo, revisión y tareas editoriales — todas probadas con Llama 3.3 70B, Qwen3 32B y Mistral Large ejecutándose localmente a través de Ollama o LM Studio. Cada plantilla está lista para copiar y pegar e incluye qué ajustar según el género.',
     metaDescription:
-      '15 plantillas de prompts para escritores de ficción que usan LLM locales. Escritura de escenas, desarrollo de personajes, diálogo, construcción de mundos, transferencia de estilo, revisión y plantillas editoriales — listas para copiar en Ollama y LM Studio.',
+      '15 plantillas de prompts para escritores de ficción con LLM locales: escenas, personajes, diálogo, mundos y estilo. Listas para Ollama y LM Studio.',
     twitterDescription:
       '15 plantillas de prompts para ficción con LLM local: escenas, diálogo, personajes, construcción de mundos, transferencia de estilo, revisión, editorial. Probadas con Llama 3.3 70B, Qwen3 32B.',
     current_models_mentioned: [

@@ -2363,11 +2363,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'El mejor NAS y almacenamiento para modelos de IA local 2026: guía de compra',
-    seoTitle: 'Mejor NAS y SSD para modelos de IA local 2026: guía de compra',
+    seoTitle: 'Mejor NAS y SSD para modelos de IA local 2026',
     intro:
       'La mayoría de los consejos de almacenamiento para IA local optimizan un único número —la capacidad— y pasan por alto que hay dos tareas de almacenamiento involucradas. Un SSD NVMe rápido es el lugar desde donde se cargan los modelos en el momento de la inferencia; un NAS es donde reside la biblioteca de modelos, se mantiene respaldada y se comparte entre varias máquinas. Ambos no son intercambiables, y comprar uno cuando se necesita el otro es el error de almacenamiento más común. Esta guía compara los NAS de Synology y QNAP para el rol de biblioteca, y los SSD de Samsung y Western Digital para el rol de carga, en las cifras que determinan la compra: capacidad, redundancia, velocidad de transferencia y precio. Una advertencia sobre el precio: la escasez de chips de memoria de 2026 elevó los precios de los SSD muy por encima de los niveles anteriores, por lo que cada precio aquí es una instantánea de mayo de 2026 — confirma el precio actual antes de comprar.',
     metaDescription:
-      'Comparativa de NAS Synology y QNAP más SSD Samsung y WD para modelos de IA local: redundancia RAID 6, carga rápida de modelos, capacidad y precios de mayo de 2026.',
+      'Compara NAS Synology y QNAP más SSD Samsung y WD para modelos de IA local: redundancia RAID 6, carga rápida, capacidad y precios de 2026.',
     twitterDescription:
       'NAS para la biblioteca de modelos, SSD NVMe para carga rápida — dos tareas, no una. Synology, QNAP, Samsung, WD comparados para almacenamiento de IA local con precios de mayo de 2026.',
     affiliateDisclosure: true,

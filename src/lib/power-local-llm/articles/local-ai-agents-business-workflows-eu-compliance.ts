@@ -1571,11 +1571,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Agentes de IA locales para flujos de trabajo empresariales: guía de cumplimiento UE 2026',
-    seoTitle: 'Agentes de IA locales para empresas: cumplimiento GDPR y EU AI Act 2026',
+    seoTitle: 'Agentes de IA locales para empresas 2026: GDPR y EU AI Act',
     intro:
       'Los agentes de IA locales simplifican materialmente el cumplimiento normativo en la UE. Cuando el modelo, los servidores de herramientas y los datos residen dentro de tu propia infraestructura, el modelo de amenaza del LLM en la nube desaparece: Schrems II, listas de subencargados y evaluaciones de impacto de transferencias transfronterizas dejan de aplicarse. El trabajo real se traslada a las normativas que siguen vigentes: controles GDPR sobre los datos que procesas, clasificación bajo el EU AI Act del flujo de trabajo automatizado, y requisitos específicos de cada región (DACH: Consejo de Empresa, §203 StGB) para flujos que manejan datos de empleados o datos confidenciales. Esta guía recorre 5 plantillas de flujos de trabajo listos para producción, los controles que cada uno necesita, y las opciones de modelo y stack que resisten una auditoría.',
     metaDescription:
-      'Despliega agentes de IA locales para procesamiento de documentos, gestión de correos y generación de informes bajo el GDPR y el EU AI Act. Arquitectura, controles de cumplimiento y 5 plantillas de flujos de trabajo.',
+      'Despliega agentes de IA locales para documentos, correos e informes bajo GDPR y EU AI Act. Arquitectura, cumplimiento y 5 plantillas de flujo de trabajo.',
     twitterDescription:
       'Agentes de IA locales + cumplimiento UE: 5 plantillas de flujos de trabajo, controles GDPR, clasificación EU AI Act, especificidades DACH. Los datos no salen de tu infraestructura.',
     current_models_mentioned: [

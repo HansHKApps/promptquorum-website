@@ -2908,7 +2908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'La mayoría de los consejos sobre GPUs para LLMs locales optimizan el número equivocado. La velocidad en tokens por segundo decide qué tan rápido responde un modelo, pero la VRAM decide si el modelo puede ejecutarse — y un modelo que no cabe en memoria es infinitamente más lento que uno que sí cabe. Esta guía compara ocho GPUs de consumo en cuatro rangos de precio según las cifras que realmente determinan una compra: capacidad de VRAM, velocidad de inferencia medida, consumo energético y precio. Una advertencia sobre los precios: los precios de GPUs se dispararon en 2026 debido a una escasez de memoria, y las tarjetas ahora se venden entre 1,5 y 2 veces por encima de su precio de lista original — cada precio aquí es un dato de mayo de 2026, así que verifica el precio actual antes de comprar.',
     metaDescription:
-      'Ocho GPUs comparadas para LLMs locales en cuatro presupuestos: RTX 3060 al RTX 5090. VRAM, tokens/s, consumo energético y precios de mayo 2026 — con el tamaño de modelo que corre cada rango.',
+      'Ocho GPUs comparadas para LLMs locales en 4 presupuestos: de la RTX 3060 a la RTX 5090. VRAM, tokens/s, consumo y precios 2026 por tamaño de modelo.',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — ocho GPUs, cuatro presupuestos, una regla: compra por VRAM.',
     affiliateDisclosure: true,

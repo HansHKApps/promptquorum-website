@@ -2248,7 +2248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Apple MLX vs NVIDIA CUDA para LLMs locales',
     title: 'Apple MLX vs NVIDIA CUDA para LLMs locales: ¿Qué sistema elegir en 2026?',
     seoTitle: 'Apple MLX vs NVIDIA CUDA para LLMs locales 2026',
-    metaDescription: 'Apple M5 Max vs RTX 4090/5090 para LLMs locales: datos de benchmark, costo total por tamaño de modelo, consumo eléctrico y recomendaciones claras por caso de uso para 2026.',
+    metaDescription: 'Apple M5 Max vs RTX 4090/5090 para LLMs locales: benchmarks, costo total por tamaño de modelo, consumo eléctrico y recomendaciones por caso de uso. 2026.',
     readTime: '18 min de lectura',
     targetKeywords: [
       'apple mlx vs nvidia cuda llm local',

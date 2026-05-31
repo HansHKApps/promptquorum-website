@@ -2537,9 +2537,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Apps de IA local con RAG integrado: Chatea con tus archivos (sin configuración)',
-    seoTitle: 'Apps RAG integrado 2026: chat con PDFs local, sin base vectorial',
+    seoTitle: 'Apps con RAG integrado 2026: chat con PDFs sin BD vectorial',
     metaDescription:
-      '3 apps de escritorio te permiten cargar un PDF y hacer preguntas en menos de 5 minutos — sin base vectorial, sin Python. LM Studio, Jan y AnythingLLM probados en documentos de 1.000 páginas. Mayo 2026.',
+      '3 apps de escritorio cargan un PDF y responden en 5 minutos, sin base vectorial ni Python. LM Studio, Jan y AnythingLLM, probadas en PDFs de 1.000 páginas.',
     twitterDescription:
       '3 apps de IA local con RAG integrado que funcionan de inmediato. Carga un PDF, haz una pregunta. Probadas en documentos de 1.000 páginas en mayo 2026.',
     current_models_mentioned: [

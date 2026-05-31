@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Los LLMs locales pueden redactar respuestas de email, resumir bandejas de entrada, generar agendas de reuniones y clasificar eventos del calendario — todo sin enviar tus mensajes a una API en la nube. Esta guía cubre las arquitecturas prácticas: automatización IMAP local con Ollama, clientes de email open-source con plugins de IA local, y los fundamentos de privacidad para mantener los datos de comunicación en tu máquina.',
     metaDescription:
-      'Cómo automatizar la redacción de emails, el resumen de la bandeja de entrada y la gestión del calendario con un LLM local. Ollama, integración IMAP y automatización de comunicaciones con privacidad.',
+      'Automatiza emails, resumen de bandeja y gestión de calendario con un LLM local. Ollama, integración IMAP y automatización privada de comunicaciones.',
     twitterDescription:
       'Automatización de email con LLM local: redacta respuestas, resume bandejas de entrada, genera agendas — todo local, sin API en la nube. Guía de configuración para flujos de trabajo Ollama + IMAP.',
     current_models_mentioned: [

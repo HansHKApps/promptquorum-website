@@ -1422,7 +1422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'LM Studio vs Jan vs GPT4All: qué app de IA local gana en 2026',
     seoTitle: 'LM Studio vs Jan vs GPT4All 2026: probados en M5 + RTX 4070',
     intro: 'LM Studio, Jan y GPT4All son las tres apps de escritorio más populares para ejecutar LLMs locales en 2026. Probadas en paralelo sobre hardware idéntico (Apple M5 MacBook y NVIDIA RTX 4070), cada una gana en un escenario distinto. LM Studio lidera en velocidad y biblioteca de modelos, Jan en UX y privacidad, y GPT4All en simplicidad de instalación multiplataforma.',
-    metaDescription: '3 apps de IA de escritorio probadas en M5 MacBook y RTX 4070. LM Studio gana en velocidad, Jan en UX, GPT4All en simplicidad. Comparativa completa con benchmarks.',
+    metaDescription: '3 apps de IA de escritorio probadas en MacBook M5 y RTX 4070: LM Studio gana en velocidad, Jan en UX y GPT4All en simplicidad. Comparativa con benchmarks.',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — tres ganadores, tres escenarios. Probados en hardware real en mayo de 2026.',
     current_models_mentioned: ['Llama 3.3 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 3 4B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],

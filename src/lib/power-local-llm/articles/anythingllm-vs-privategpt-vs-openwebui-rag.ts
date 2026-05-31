@@ -2028,7 +2028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'AnythingLLM, PrivateGPT y Open WebUI son las tres plataformas RAG autoalojadas más serias de 2026. Cargamos un corpus idéntico de 5.047 páginas en cada una, ejecutamos 50 consultas en 5 tipos de preguntas y medimos la latencia de recuperación, la tasa de alucinaciones, la calidad de las citas y los costos ocultos de los que nadie habla (re-embedding, almacenamiento en la base de datos vectorial, picos de GPU durante la indexación). El campeón de las demos no es el campeón en producción.',
     metaDescription:
-      '3 plataformas RAG locales probadas en un corpus de 5.047 páginas. AnythingLLM, PrivateGPT y Open WebUI: benchmarks de precisión, latencia y citas. Veredicto de mayo 2026.',
+      '3 plataformas RAG locales probadas en un corpus de 5.047 páginas. AnythingLLM, PrivateGPT y Open WebUI: precisión, latencia y citas. Veredicto de 2026.',
     twitterDescription:
       'Duelo RAG local: AnythingLLM vs PrivateGPT vs Open WebUI en 5.047 páginas. Distintos ganadores en precisión, latencia y escalabilidad. Benchmarks completos.',
     current_models_mentioned: [

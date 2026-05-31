@@ -439,11 +439,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
     title: 'IA local detrás de un cortafuegos: Guía de despliegue sin conexión 2026',
-    seoTitle: 'IA local offline detrás de cortafuegos 2026: Guía de configuración',
+    seoTitle: 'IA local offline tras cortafuegos 2026: configuración',
     intro:
       'Ejecutar una IA local detrás de un cortafuegos corporativo o en un entorno air-gapped requiere descargar todas las dependencias antes de perder el acceso a Internet. Un archivo que falte — una configuración de tokenizador, una plantilla de prompt, un fragmento de modelo cuantizado — rompe el proceso sin dar ningún aviso. Esta guía te ofrece una lista de comprobación completa antes del despliegue, un flujo de trabajo offline paso a paso para Ollama y llama.cpp, y recomendaciones de hardware para organizaciones en entornos gobernados por leyes de residencia de datos.',
     metaDescription:
-      'Despliega LLMs locales sin conexión detrás de un cortafuegos: lista de comprobación completa, flujo de trabajo air-gap con Ollama y llama.cpp, dimensionamiento de NAS y notas de cumplimiento normativo.',
+      'Despliega LLMs locales sin conexión tras un cortafuegos: lista completa, flujo air-gap con Ollama y llama.cpp, dimensionamiento de NAS y notas de cumplimiento.',
     twitterDescription:
       'Despliegue de LLM local offline: descarga todo antes de perder Internet. Lista de comprobación, flujo air-gap con Ollama, dimensionamiento NAS, cumplimiento normativo.',
     gammaEmbedUrl: '/presentations/local-ai-behind-firewall-offline-2026-static.html',

@@ -2212,11 +2212,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Conecta Ollama a bases de datos y APIs con MCP: configuración de agentes locales 2026',
-    seoTitle: 'Ollama + MCP local: conecta IA a bases de datos y APIs (2026)',
+    seoTitle: 'Ollama + MCP local 2026: conecta IA a bases de datos y APIs',
     intro:
       'Model Context Protocol (MCP) es la capa que faltaba entre un modelo Ollama local y el resto de tu máquina. Con un único archivo de configuración y un modelo que soporta tool calling, el mismo agente puede consultar una base de datos Postgres, leer y escribir archivos en un directorio aislado, controlar un navegador sin cabeza y abrir pull requests en GitHub — todo corriendo en tu laptop, todo sin conexión. Esta guía recorre el proceso completo con un modelo de seguridad que no asume que confías en el modelo.',
     metaDescription:
-      'Guía de configuración para agentes de IA locales en 2026 usando Ollama y Model Context Protocol (MCP). Filesystem, SQLite/Postgres, navegador, servidor GitHub, configuración JSON funcional y un modelo de sandboxing que no confía en el LLM.',
+      'Configura agentes de IA locales en 2026 con Ollama y MCP: filesystem, SQLite/Postgres, navegador, servidor GitHub, JSON funcional y un modelo de sandboxing.',
     twitterDescription:
       'Ollama local + MCP = un agente de IA que lee archivos, consulta bases de datos y controla un navegador — completamente offline. Configs funcionales, los cuatro servidores esenciales y un modelo de seguridad que no confía en el modelo.',
     current_models_mentioned: [

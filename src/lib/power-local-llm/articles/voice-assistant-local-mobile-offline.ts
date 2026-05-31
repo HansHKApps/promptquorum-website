@@ -2349,7 +2349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Un asistente de voz completamente offline en iPhone o Android en 2026 combina tres componentes: Whisper para convertir voz a texto, un LLM local en el dispositivo para generar la respuesta y Piper o el TTS del sistema para la síntesis de voz. La latencia real desde que hablas hasta el primer audio en teléfonos de gama alta es de 0,8–1,5 segundos, por debajo del umbral de 2 segundos que "se siente usable". Esta guía cubre el camino en iPhone (LLM Farm + WhisperKit), Android (Layla + Whisper.cpp) e híbrido (STT en el teléfono + Ollama remoto), con cifras medidas de latencia, batería y precisión.',
     metaDescription:
-      'IA de voz completamente offline en iPhone y Android en 2026. Whisper STT local + LLM local + Piper TTS. Configuración en iPhone, Android e híbrida; latencia, batería, privacidad.',
+      'IA de voz totalmente offline en iPhone y Android en 2026: Whisper STT + LLM local + Piper TTS. Configuración iPhone, Android e híbrida. Latencia y batería.',
     twitterDescription:
       'Crea un reemplazo de Siri que funciona offline: Whisper STT local + Phi-4 Mini + Piper TTS. Voz al primer audio en menos de 1,5 segundos en teléfonos de gama alta. Configuración iPhone + Android.',
     current_models_mentioned: [

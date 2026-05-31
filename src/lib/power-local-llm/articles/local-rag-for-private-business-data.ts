@@ -3098,7 +3098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Los equipos jurídicos, médicos y financieros se enfrentan al mismo problema: los documentos que más valor aportaría buscar con IA son precisamente los que no pueden salir de la organización. Este artículo recoge la arquitectura, el conjunto de controles y la matriz de decisión de patrones de despliegue para un RAG autoalojado que cumple el RGPD, la Ley de IA de la UE, HIPAA y las expectativas del Datenschutz alemán — redactado para el responsable de cumplimiento que necesita enviar un único documento a su equipo de TI y que este sepa qué construir.',
     metaDescription:
-      'RAG local conforme al RGPD para equipos jurídicos, médicos y financieros. Arquitectura, registro de auditoría, alcance de la EIPD y 3 patrones de despliegue comparados.',
+      'RAG local conforme al RGPD para equipos jurídicos, médicos y financieros: arquitectura, registro de auditoría, alcance de la EIPD y 3 patrones de despliegue.',
     twitterDescription:
       'RAG local que cumple el RGPD y la Ley de IA de la UE. Air-gap, registros de auditoría, trazabilidad de datos, alcance de la EIPD y 3 patrones de despliegue — el artículo que los responsables de cumplimiento envían a TI.',
     audience:

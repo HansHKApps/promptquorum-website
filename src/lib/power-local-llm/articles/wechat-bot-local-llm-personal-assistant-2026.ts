@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Productivity & Knowledge Tools',
     title: 'Bot de WeChat con LLM local: asistente personal 2026',
     seoTitle: 'Bot de WeChat con LLM local: guía de asistente personal 2026',
-    metaDescription: 'Crea un bot asistente personal en WeChat con LLM local en 2026. WeChatFerry + Ollama en Windows — completamente privado, sin API en la nube, respuestas en tiempo real.',
+    metaDescription: 'Crea un bot asistente personal en WeChat con LLM local en 2026: WeChatFerry + Ollama en Windows. Totalmente privado, sin API en la nube y en tiempo real.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

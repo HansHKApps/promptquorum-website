@@ -1862,7 +1862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Los LLMs locales sin censura permiten a los escritores de ficción generar contenido adulto, moralmente complejo y oscuro que los servicios en la nube rechazan, sin que los datos abandonen tu máquina. Esta guía cubre qué modelos usar, cómo configurarlos mediante Ollama o LM Studio, las responsabilidades éticas genuinas que aplican incluso cuando no hay aplicación de términos de servicio, y los casos de uso específicos donde los modelos sin censura son apropiados frente a donde no lo son.',
     metaDescription:
-      'LLMs locales sin censura para escritura creativa: qué modelos usar, configuración en Ollama, responsabilidades éticas, casos de uso apropiados y los límites que los escritores deben mantener siempre.',
+      'LLMs locales sin censura para escritura creativa: qué modelos usar, configuración en Ollama, ética, casos de uso y los límites que conviene mantener.',
     twitterDescription:
       'LLMs locales sin censura para escritores de ficción: qué modelos, configuración en Ollama y la ética real — cuándo son apropiados y qué responsabilidades siguen teniendo los escritores.',
     current_models_mentioned: [

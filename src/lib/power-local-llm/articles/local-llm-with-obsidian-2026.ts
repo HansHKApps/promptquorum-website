@@ -2252,7 +2252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Cinco plugins de Obsidian convierten un vault en un segundo cerebro funcional en 2026 cuando se combinan con un backend local de Ollama: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT y BMO Chatbot. Cada uno cubre una capa diferente: búsqueda semántica, chat en línea, generación por plantillas, conversación con privacidad prioritaria, chat ligero con contexto. La combinación recomendada para la mayoría de usuarios es Smart Connections + Copilot for Obsidian: uno gestiona la vinculación semántica en todo el vault, el otro proporciona la interfaz de chat. Esta guía clasifica los cinco plugins según la calidad de búsqueda en el vault, velocidad de generación, personalización de prompts y comportamiento de sincronización móvil, con pasos concretos de configuración para Ollama.',
     metaDescription:
-      'Cinco plugins de Obsidian probados con Ollama local en 2026: Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot. Mejor combinación, escala del vault y sincronización móvil.',
+      'Cinco plugins de Obsidian probados con Ollama local en 2026: Smart Connections, Copilot, Text Generator, Local GPT y BMO Chatbot. La mejor combinación.',
     twitterDescription:
       'Mejor combinación Obsidian + LLM local en 2026: Smart Connections (búsqueda semántica del vault) + Copilot for Obsidian (chat). Los 5 plugins probados con Ollama. Advertencias de sincronización móvil.',
     current_models_mentioned: [

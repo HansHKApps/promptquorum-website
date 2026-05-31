@@ -2573,11 +2573,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Guía para armar una PC con IA local 2026: 3 niveles de presupuesto',
-    seoTitle: 'PC para IA local 2026: del presupuesto básico a la estación 70B',
+    seoTitle: 'PC para IA local 2026: del básico a la estación 70B',
     intro:
       'La mayoría de las guías para armar una PC con IA local empiezan por la CPU, pero es la GPU y su VRAM lo que decide qué modelos puede ejecutar la máquina — cada otra parte se elige para dar soporte a esa GPU. Esta guía ofrece tres listas de componentes completas para una PC dedicada a LLM locales: una configuración económica para modelos 7B-13B, una configuración media para modelos 14B-33B y una configuración entusiasta para trabajar con modelos 70B. Cada nivel incluye los componentes exactos, el rendimiento esperado y el costo total. Una advertencia sobre los precios: la escasez de chips de memoria de 2026 empujó los precios de las GPU a 1,5-2 veces por encima del precio de lista, lo que eleva el costo de cada configuración aquí respecto a los mismos componentes de hace un año — toma cada cifra como una instantánea de mayo de 2026 y aprovecha el mercado de GPU usadas cuando puedas.',
     metaDescription:
-      'Tres configuraciones completas de PC para IA local en 2026: económica 7B-13B, media 14B-33B y entusiasta 70B. Listas de componentes exactas, tokens por segundo esperados y costos totales de mayo de 2026.',
+      'Tres PCs para IA local en 2026: económica 7B–13B, media 14B–33B y entusiasta 70B. Listas de componentes exactas, tokens/s esperados y costos totales.',
     twitterDescription:
       'Guía para armar una PC con IA local: tres niveles de presupuesto con listas de componentes completas para modelos de 7B a 70B. El aumento de precios de GPU en 2026 encareció cada configuración — aquí están los totales de mayo de 2026.',
     affiliateDisclosure: true,

@@ -2025,7 +2025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Ejecutar una IA local en una tablet es práctico en 2026 en iPads de alta gama y dispositivos Android con 8 GB o más de RAM. Esta guía cubre las opciones: inferencia en el dispositivo con Pocket Paladin y LLM Farm en iPad, Termux + Ollama en Android, y la alternativa de conexión remota (conectar la tablet a un Mac o PC que ejecute Ollama por Wi-Fi local) para dispositivos que no pueden ejecutar inferencia localmente.',
     metaDescription:
-      'Cómo ejecutar IA localmente en un iPad o tablet Android en 2026. Aplicaciones de inferencia en el dispositivo, Termux + Ollama en Android y conexión remota a tu Mac o PC en casa explicados.',
+      'Cómo ejecutar IA en local en un iPad o tablet Android en 2026: apps de inferencia en el dispositivo, Termux + Ollama y conexión remota a tu Mac o PC de casa.',
     twitterDescription:
       'Ejecuta IA en tu iPad o tablet Android en 2026: inferencia en el dispositivo (Pocket Paladin, LLM Farm, Termux+Ollama), conexión remota a Mac/PC de casa y selección de modelos por dispositivo.',
     current_models_mentioned: [

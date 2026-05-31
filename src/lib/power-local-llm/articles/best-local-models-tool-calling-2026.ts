@@ -1883,11 +1883,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Mejores modelos locales para Tool Calling en 2026: Benchmarks y comparativa',
-    seoTitle: 'Mejores modelos locales para Tool Calling 2026: Benchmarks MCP reales',
+    seoTitle: 'Mejores modelos locales para Tool Calling 2026: MCP real',
     intro:
       'La fiabilidad en las llamadas a herramientas es el factor determinante de si un agente local completa una tarea o se detiene. El harness que envuelve el modelo importa menos — mismo Cline, mismos servidores MCP, mismo prompt: el modelo emite llamadas a herramientas bien formadas o no lo hace. Esta guía compara los cinco modelos fiables para Tool Calling en mayo de 2026 (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) en flujos de trabajo MCP reales, identifica los modos de fallo y te indica qué modelo elegir según tu presupuesto de VRAM.',
     metaDescription:
-      'Compara Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B para fiabilidad en Tool Calling. Benchmarks MCP reales, no puntuaciones de leaderboard.',
+      'Compara Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B en fiabilidad de Tool Calling. Benchmarks MCP reales, no de leaderboard.',
     twitterDescription:
       '5 modelos locales evaluados en tool calls MCP reales: Gemma 4, GLM-5.1, Qwen3, Qwen3-Coder, Llama 3.3. Tasas de fiabilidad, VRAM y modos de fallo.',
     current_models_mentioned: [

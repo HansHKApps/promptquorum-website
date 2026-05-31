@@ -1511,7 +1511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Reemplaza GitHub Copilot con un LLM local: Configuración + Comparativa de costos 2026',
-    seoTitle: 'Reemplaza GitHub Copilot con LLM local: Continue.dev + Qwen3-Coder',
+    seoTitle: 'Reemplaza GitHub Copilot con LLM local y Continue.dev',
     intro: 'En 2026 puedes reemplazar una suscripción mensual de GitHub Copilot de $20 con un stack completamente local: Continue.dev + Ollama + Qwen3-Coder 30B (o 7B para hardware de gama baja). En un horizonte de 24 meses, la configuración local cuesta menos si ya tienes una GPU RTX 3060+ o un Mac M3+. La calidad es competitiva en codebases privados; Copilot sigue siendo mejor en librerías poco comunes con escasos datos de entrenamiento.',
     metaDescription: '$0/mes vs $20/mes. Continue.dev + Qwen3-Coder vs GitHub Copilot. Prueba real en proyecto Next.js. Guía de configuración, cálculo de costos, veredicto honesto.',
     twitterDescription: 'Reemplaza Copilot con Continue.dev + Qwen3-Coder. Configuración, cálculo de costos (equilibrio en 24 meses) y comparativa honesta de calidad.',

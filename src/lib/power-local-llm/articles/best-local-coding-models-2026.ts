@@ -2405,11 +2405,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Mejores modelos de código local en 2026: Qwen3-Coder vs DeepSeek vs Codestral',
-    seoTitle: 'Mejores modelos de código local 2026: Qwen3, DeepSeek, Codestral',
+    seoTitle: 'Mejores modelos de código local 2026: Qwen3 y DeepSeek',
     intro:
       'Seis modelos de código de pesos abiertos compiten por el liderazgo en 2026: Qwen3-Coder (30B y 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code y StarCoder 2. Se diferencian en cantidad de parámetros, ventana de contexto, énfasis del entrenamiento, licencia y huella de VRAM. La elección correcta depende de qué restricción te afecta primero según tu hardware y tu lenguaje de programación. Esta guía los compara con información públicamente verificable: arquitectura, tamaños, contexto, licencias, cálculo de VRAM y dirección de benchmarks reportada por cada proveedor, con enlaces a cada ficha de modelo para que puedas comprobar los datos tú mismo.',
     metaDescription:
-      '6 modelos de código local comparados en VRAM, dirección de benchmark HumanEval+, licencia y ventana de contexto. Qwen3-Coder 30B es la opción recomendada para mayo de 2026.',
+      '6 modelos de código local comparados en VRAM, HumanEval+, licencia y ventana de contexto. Qwen3-Coder 30B es la opción recomendada para mayo de 2026.',
     twitterDescription:
       'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — seis modelos de código de pesos abiertos, seis puntos fuertes diferentes. El veredicto por escenario está adentro.',
     current_models_mentioned: [

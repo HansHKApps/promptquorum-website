@@ -2215,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Cinco apps para iPhone ejecutan LLMs reales completamente en el dispositivo en 2026: PocketPal AI, Private LLM, MLC Chat, LLM Farm y Apple Intelligence (integrado en el sistema). Todas funcionan sin WiFi una vez descargado el modelo. Esta guía las clasifica por tokens por segundo en iPhone 16 Pro e iPhone 17 Pro, biblioteca de modelos, gestión de RAM, privacidad e integración con iOS.',
     metaDescription:
-      'Cinco apps para iPhone que ejecutan LLMs reales en el dispositivo en 2026. PocketPal AI, Private LLM, MLC Chat y LLM Farm probadas en iPhone 16 Pro y 17 Pro. Velocidad, privacidad y biblioteca de modelos comparadas.',
+      'Cinco apps de iPhone que ejecutan LLMs en el dispositivo en 2026: PocketPal AI, Private LLM, MLC Chat y LLM Farm en iPhone 16/17 Pro. Velocidad y privacidad.',
     twitterDescription:
       'IA local en iPhone en 2026: PocketPal AI (gratis), Private LLM (~10 € de pago único, Siri), MLC Chat (la más rápida), LLM Farm (la más configurable). Todas funcionan sin conexión tras descargar el modelo.',
     current_models_mentioned: [

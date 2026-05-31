@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Coding Assistants',
     title: 'Mejores plugins IDE para LLMs locales en 2026 (VS Code y JetBrains)',
-    seoTitle: 'Mejores plugins IDE para LLM local 2026 (VS Code y JetBrains)',
+    seoTitle: 'Mejores plugins IDE para LLM local 2026: VS Code y JetBrains',
     metaDescription: 'Continue, Cline, Aider, Tabby — clasificados por soporte de modelos locales en 2026. ¿Qué plugin IDE se conecta mejor a Ollama o LM Studio?',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,

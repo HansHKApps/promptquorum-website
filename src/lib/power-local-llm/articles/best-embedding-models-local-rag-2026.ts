@@ -456,11 +456,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'Mejores modelos de embedding para RAG local en 2026 (probados con documentos reales)',
-    seoTitle: 'Mejores modelos de embedding para RAG local 2026: 6 modelos comparados',
+    seoTitle: 'Mejores modelos de embedding para RAG local 2026: 6 opciones',
     intro:
       'Seis modelos de embedding de pesos abiertos — nomic-embed-text-v2, bge-large-en-v1.5, gte-large, mxbai-embed-large, snowflake-arctic-embed y jina-embeddings-v3 — probados en 4 tipos de documentos (contratos legales, artículos de investigación, código fuente y wiki empresarial multilingüe). 100 consultas evaluadas por modelo, retrieval@10 medido contra un conjunto de respuestas conocidas, rendimiento de embedding en CPU y GPU en hardware de consumo. Un modelo gana en precisión global, otro en velocidad CPU, y el debate sobre el número de dimensiones tiene una respuesta clara.',
     metaDescription:
-      'Nomic, BGE, GTE, Mixedbread, Snowflake y Jina probados en contratos legales, artículos de investigación, código y wiki multilingüe. retrieval@10, velocidad, memoria. Veredicto de mayo 2026.',
+      'Nomic, BGE, GTE, Mixedbread, Snowflake y Jina probados en contratos legales, papers, código y wiki multilingüe. retrieval@10, velocidad y memoria. 2026.',
     twitterDescription:
       '6 modelos de embedding locales comparados en 4 tipos de documentos. retrieval@10, velocidad CPU/GPU, memoria, calidad multilingüe. Un modelo domina en precisión. Todos los números adentro.',
     current_models_mentioned: [

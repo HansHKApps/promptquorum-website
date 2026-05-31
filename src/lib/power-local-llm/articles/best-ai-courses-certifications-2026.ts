@@ -2411,11 +2411,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Mejores cursos y certificaciones de IA: guía de compra 2026',
-    seoTitle: 'Mejores cursos y certificaciones de IA 2026: gratis y de pago',
+    seoTitle: 'Mejores cursos y certificaciones de IA 2026: gratis o pago',
     intro:
       'La mayoría de las listas de "mejores cursos de IA" clasifican los cursos por el reconocimiento de la marca e ignoran la pregunta que realmente importa: ¿qué quieres hacer con esa habilidad después? Un curso gratuito de fundamentos y un itinerario de certificación de pago no son productos que compitan entre sí — sirven a objetivos distintos. Esta guía organiza el aprendizaje de IA en tres categorías — cursos gratuitos, cursos estructurados de pago y certificaciones — y da una recomendación clara para cada objetivo: orientarte sin coste, desarrollar profundidad práctica u obtener una credencial que un empleador reconozca. También cubre una cuarta vía que las grandes plataformas infravaloran: el prompt engineering como habilidad propia. Los precios de los cursos cambian con las promociones y los niveles de suscripción, por lo que cada cifra aquí es un snapshot de mayo de 2026 — consulta el precio actual en la plataforma antes de inscribirte.',
     metaDescription:
-      'Tres itinerarios de aprendizaje de IA comparados para 2026: cursos gratuitos, cursos estructurados de pago y certificaciones — con una recomendación clara para orientarte, desarrollar profundidad o conseguir una credencial.',
+      'Tres itinerarios de IA comparados para 2026: cursos gratuitos, cursos de pago estructurados y certificaciones, con una recomendación clara para cada objetivo.',
     twitterDescription:
       'Cursos gratuitos, cursos de pago, certificaciones — tres itinerarios de aprendizaje de IA, una regla: elige según tu objetivo. Oriéntate gratis, desarrolla profundidad con un itinerario de pago, obtén una credencial cuando un empleador la exija.',
     affiliateDisclosure: true,

@@ -1555,11 +1555,11 @@ jobs:
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'LLM Local en CI/CD: Revisión de Código Automatizada Sin Cloud',
-    seoTitle: 'Revisión de Código con LLM Local en CI/CD 2026: Automatiza las PR',
+    seoTitle: 'Revisión de código con LLM local en CI/CD: automatiza tus PR',
     intro:
       'La revisión de código con LLM local autoalojado coloca un modelo Qwen3-Coder detrás de tu pipeline CI/CD para que cada pull request reciba una revisión sin que la base de código salga de tu red. La arquitectura es directa — un servidor GPU dedicado con Ollama, una GitHub Action personalizada que llama a su API HTTP, y un prompt de revisión ajustado para la tasa de falsos positivos — y la economía se inclina a favor del autoalojamiento en algún punto entre 15 y 25 asientos pagados de GitHub. Esta guía recorre la arquitectura, un flujo de trabajo de GitHub Actions funcional, el dimensionamiento de hardware por tamaño de equipo, el modelo de seguridad y las trampas operativas que afectan a los equipos en el segundo mes.',
     metaDescription:
-      'Revisión de código con LLM local autoalojado en GitHub Actions: arquitectura, YAML de flujo de trabajo funcional, dimensionamiento de hardware por tamaño de equipo, modelo de seguridad y punto de equilibrio económico frente a GitHub Advanced Security.',
+      'Revisión de código con LLM local autoalojado en GitHub Actions: arquitectura, YAML funcional, dimensionamiento de hardware por equipo y modelo de seguridad.',
     twitterDescription:
       'Revisión de código autoalojada en un servidor GPU dentro de tu red. GitHub Actions llama a Ollama, Qwen3-Coder revisa las PR, ningún código sale de tu perímetro. Configuración, dimensionamiento y cruce de costos incluidos.',
     current_models_mentioned: [

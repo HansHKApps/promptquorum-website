@@ -459,11 +459,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Agentes de IA locales en 2026: lo que realmente funciona (y lo que sigue fallando)',
-    seoTitle: 'Agentes de IA locales 2026: lo que funciona, lo que falla (análisis honesto)',
+    seoTitle: 'Agentes de IA locales 2026: lo que funciona y lo que falla',
     intro:
       'Seis stacks de agentes de IA locales, cinco tareas reales, treinta días de evaluación. Dos stacks completan las tareas de forma fiable. Tres fallan de maneras que los demos no muestran. Uno es prácticamente inutilizable. Este es el informe honesto: qué hace realmente cada configuración de agente en una refactorización, una tarea de investigación, un triaje de correo, un scrape-y-resumen y una búsqueda de bugs, con los fallos nombrados específicamente y el coste de supervisión cuantificado.',
     metaDescription:
-      '6 stacks de agentes de IA locales probados en 5 tareas reales. 2 funcionan de forma fiable, 3 fallan de maneras que los demos ocultan, 1 es inutilizable. Cline, LangGraph, AutoGPT y MetaGPT evaluados.',
+      '6 stacks de agentes de IA locales probados en 5 tareas reales: 2 funcionan, 3 fallan como los demos ocultan y 1 es inutilizable. Cline, LangGraph y AutoGPT.',
     twitterDescription:
       'Probé 6 stacks de agentes locales en 5 tareas reales durante 30 días. 2 funcionaron, 3 fallaron de formas inesperadas, 1 era inutilizable. El veredicto honesto sobre qué stacks entregan trabajo real y cuáles solo entregan demos.',
     current_models_mentioned: [

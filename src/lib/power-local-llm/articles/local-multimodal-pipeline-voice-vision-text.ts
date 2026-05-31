@@ -1956,7 +1956,7 @@ if __name__ == "__main__":
     intro:
       'Un pipeline multimodal de IA local combina modelos especializados independientes para cada modalidad — whisper.cpp para la entrada de voz, LLaVA o Llama 3.2 Vision para la comprensión de imágenes, un LLM de Ollama para el razonamiento textual y Piper TTS para la salida de voz — orquestados en un sistema coherente que funciona 100 % sin conexión. Este es el equivalente local de las capacidades multimodales de GPT-4o: ningún modelo individual lo entiende todo, pero el orquestador dirige cada tipo de entrada al modelo correcto y combina las salidas. Esta guía muestra cómo construir un pipeline multimodal local con estos componentes de código abierto — cubriendo la arquitectura, el stack de componentes, los niveles de hardware, cinco casos de uso prácticos y un orquestador asíncrono en Python que procesa entradas de voz y visión en paralelo.',
     metaDescription:
-      'Ejecuta IA de voz + visión + texto localmente en 2026. Combina whisper.cpp, LLaVA 1.6, Ollama y Piper TTS. Orquestador Python completo — sin nube, sin claves de API.',
+      'Ejecuta IA de voz, visión y texto en local en 2026 con whisper.cpp, LLaVA 1.6, Ollama y Piper TTS. Orquestador Python completo, sin nube ni claves de API.',
     twitterDescription:
       'IA multimodal local en 2026: combina Whisper STT + visión LLaVA + LLM Ollama + Piper TTS en un pipeline sin conexión. Guía de arquitectura, niveles de hardware y código Python.',
     readTime: '16 min de lectura',

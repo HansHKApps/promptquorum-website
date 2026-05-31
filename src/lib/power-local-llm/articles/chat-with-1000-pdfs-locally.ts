@@ -2773,11 +2773,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'Chatea con 1000+ PDFs en local: RAG a escala más allá de los ejemplos de prueba',
-    seoTitle: 'Chatea con 1000 PDFs en local 2026: Arquitectura RAG local a gran escala',
+    seoTitle: 'Chatea con 1000 PDFs en local 2026: RAG a gran escala',
     intro:
       'Guía de decisión para usuarios avanzados con corpus personales de 1.000-10.000+ documentos — bibliotecas de investigación, archivos legales, wikis internos. Los ajustes predeterminados fallan alrededor de 5.000 chunks; este artículo muestra las cuatro rutas de escalado (AnythingLLM ajustado, LlamaIndex local, Ollama+ChromaDB personalizado, Ollama+Qdrant producción) con latencia medida, almacenamiento y benchmarks de indexación a 100, 1.000 y 10.000 documentos.',
     metaDescription:
-      'Escalar RAG local a 1.000-10.000+ PDFs. Árbol de decisión de arquitectura, benchmarks medidos, almacenamiento y latencia a 100/1k/10k documentos en AnythingLLM, LlamaIndex, ChromaDB, Qdrant. Mayo 2026.',
+      'Escala RAG local a 1.000–10.000+ PDFs: árbol de arquitectura, benchmarks, almacenamiento y latencia en AnythingLLM, LlamaIndex, ChromaDB y Qdrant.',
     twitterDescription:
       'Cuando el RAG básico falla: escalar el chat personal con documentos a 1.000-10.000 PDFs en local. Árbol de decisión de arquitectura + benchmarks medidos en cuatro stacks de código abierto. Mayo 2026.',
     current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],

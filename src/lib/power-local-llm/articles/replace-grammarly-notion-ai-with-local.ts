@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Grammarly y Notion AI envían tu escritura a servidores en la nube para procesarla — tus borradores de correo, documentos confidenciales y notas personales pasan por sistemas de IA de terceros por diseño. Un LLM local ejecutado mediante Ollama o LM Studio puede reemplazar a ambos para la mayoría de las tareas de escritura: corrección gramatical y de estilo, redacción de documentos, resumen de contenido y toma de notas asistida por IA — sin que ningún dato salga de tu equipo.',
     metaDescription:
-      'Reemplaza Grammarly y Notion AI con un LLM local: comparativa de privacidad, coste y capacidades. Guías de configuración para corrección de escritura, redacción de documentos y automatización de notas.',
+      'Reemplaza Grammarly y Notion AI con un LLM local: privacidad, coste y capacidades comparadas. Guías para corrección, redacción de documentos y notas.',
     twitterDescription:
       'Reemplaza Grammarly (corrección gramatical/estilo) y Notion AI (redacción de documentos, notas) con un LLM local — los datos no salen de tu equipo. Privacidad, coste y guía de configuración.',
     current_models_mentioned: [

@@ -1715,7 +1715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Mejores apps de IA local para PCs de gama baja en 2026 (8 GB RAM, sin GPU)',
-    seoTitle: 'Mejores apps IA local PC 8 GB RAM 2026: probadas solo con CPU',
+    seoTitle: 'Mejores apps de IA local en PC de 8 GB 2026: solo CPU',
     metaDescription:
       'Ollama, GPT4All, Jan y llama.cpp probados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s, presión de memoria, configuraciones exactas. Mayo 2026.',
     twitterDescription:

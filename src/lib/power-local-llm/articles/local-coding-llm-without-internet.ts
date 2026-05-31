@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Una configuración de programación completamente offline en 2026 cabe en unos 60 GB en disco y sobrevive un vuelo de 14 horas sin una sola llamada de red. El stack incluye un LLM local (Qwen3-Coder 30B), una integración de editor (Continue.dev o Aider), un espejo de documentación offline (Devdocs o Zeal), un registro de paquetes en caché (Verdaccio para npm, devpi para pip) y una búsqueda de código local (ripgrep más rga). Las únicas cosas que realmente fallan sin internet son instalar paquetes de terceros completamente nuevos y el conocimiento del modelo sobre APIs publicadas después de su fecha de corte de entrenamiento; ambas se pueden resolver descargando lo necesario antes de perder la conexión.',
     metaDescription:
-      'Stack de programación offline probado en un vuelo de 14 horas. LLM local, npm/pip en caché, Devdocs, ripgrep — ~60 GB en disco, cero llamadas de red. Lista de verificación previa al vuelo incluida.',
+      'Stack de programación offline probado en un vuelo de 14 horas: LLM local, npm/pip en caché, Devdocs y ripgrep. ~60 GB en disco, cero red. Con checklist previa.',
     twitterDescription:
       'Un setup de programación que sobrevive 14 horas de vuelo. ~60 GB en disco: Qwen3-Coder + Continue.dev + Devdocs + npm/pip en caché. Lista de verificación previa al vuelo + qué falla realmente sin conexión.',
     current_models_mentioned: [

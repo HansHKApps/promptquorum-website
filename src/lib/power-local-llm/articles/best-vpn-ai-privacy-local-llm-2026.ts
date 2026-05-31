@@ -470,11 +470,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Mejor VPN para la privacidad con IA: protege tu entorno de LLM local 2026',
-    seoTitle: 'Mejor VPN para privacidad con LLM local 2026: 4 proveedores comparados',
+    seoTitle: 'Mejor VPN para LLM local 2026: 4 proveedores comparados',
     intro:
       'Un LLM local mantiene tus prompts y documentos fuera de los servidores en la nube, pero en el momento en que accedes a ese LLM de forma remota —o cuando buscas modelos, pesos y actualizaciones— tu tráfico de red sigue saliendo del edificio. Una VPN cierra esa última brecha: cifra la conexión entre una máquina remota y el servidor del LLM, y oculta a tu proveedor de internet qué servicios de IA estás usando. Esta guía compara cuatro proveedores de VPN de consumo —ProtonVPN, NordVPN, Mullvad y Surfshark— en los aspectos que realmente importan para una configuración de privacidad con IA: política sin registros, jurisdicción, soporte de WireGuard y precio. Una advertencia sobre los precios: los precios de las VPN fluctúan mucho con los ciclos promocionales, por lo que cada cifra aquí es una instantánea de mayo de 2026; confirma la tarifa actual en el sitio del proveedor antes de suscribirte.',
     metaDescription:
-      'ProtonVPN, NordVPN, Mullvad y Surfshark comparados para proteger un entorno de LLM local: política sin registros, jurisdicción, WireGuard y precios de mayo de 2026.',
+      'ProtonVPN, NordVPN, Mullvad y Surfshark comparados para proteger un entorno LLM local: política sin registros, jurisdicción, WireGuard y precios de 2026.',
     twitterDescription:
       'ProtonVPN, NordVPN, Mullvad, Surfshark: cuatro VPN comparadas para la privacidad del LLM local. La regla de decisión: elige por jurisdicción y prueba de sin registros, no por velocidad bruta.',
     affiliateDisclosure: true,

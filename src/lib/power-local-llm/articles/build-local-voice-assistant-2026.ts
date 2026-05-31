@@ -2038,7 +2038,7 @@ if __name__ == "__main__":
     intro:
       'Un asistente de voz completamente offline en 2026 combina tres componentes: whisper.cpp para el reconocimiento de voz, un LLM local (Llama 3.1 8B, Phi-4 o Mistral 7B mediante Ollama) para el razonamiento, y Piper TTS para la salida de audio. La latencia de extremo a extremo en un equipo de escritorio con GPU es de 1 a 2 segundos, comparable a Alexa o Google Assistant. En un Mac Mini M5, es inferior a 1,5 segundos. En una Raspberry Pi 5, es de 5 a 8 segundos — suficiente para consultas manos libres, no para conversaciones fluidas. Esta guía recorre cada capa paso a paso, con tablas de hardware, código del orquestador Python, configuración de la palabra de activación y técnicas de optimización de latencia.',
     metaDescription:
-      'whisper.cpp para STT, Ollama + Llama 3.1 8B para razonamiento, Piper TTS para audio. Latencia de 1–2 s en GPU. Orquestador Python + configuración de palabra de activación. 2026.',
+      'whisper.cpp (STT), Ollama + Llama 3.1 8B (razonamiento) y Piper TTS (audio). Latencia 1–2 s en GPU. Orquestador Python y palabra de activación. 2026.',
     twitterDescription:
       'Asistente de voz offline DIY en 2026: Whisper STT + LLM local + Piper TTS. Sin nube, sin suscripción. Guía completa con especificaciones de hardware, código Python y configuración de palabra de activación.',
     audience:
