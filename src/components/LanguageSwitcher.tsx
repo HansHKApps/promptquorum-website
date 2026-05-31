@@ -13,14 +13,14 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const languageNames: Record<Language, Record<Language, string>> = {
-    en: { en: 'English', de: 'German', fr: 'French', ja: 'Japanese', zh: 'Chinese', es: 'Spanish', pt: 'Portuguese', ar: 'Arabic' },
-    de: { en: 'Englisch', de: 'Deutsch', fr: 'Französisch', ja: 'Japanisch', zh: 'Chinesisch', es: 'Spanisch', pt: 'Portugiesisch', ar: 'Arabisch' },
-    fr: { en: 'Anglais', de: 'Allemand', fr: 'Français', ja: 'Japonais', zh: 'Chinois', es: 'Espagnol', pt: 'Portugais', ar: 'Arabe' },
-    ja: { en: '英語', de: 'ドイツ語', fr: 'フランス語', ja: '日本語', zh: '中国語', es: 'スペイン語', pt: 'ポルトガル語', ar: 'アラビア語' },
-    zh: { en: '英文', de: '德文', fr: '法文', ja: '日文', zh: '中文', es: '西班牙文', pt: '葡萄牙文', ar: '阿拉伯文' },
-    es: { en: 'Inglés', de: 'Alemán', fr: 'Francés', ja: 'Japonés', zh: 'Chino', es: 'Español', pt: 'Portugués', ar: 'Árabe' },
-    pt: { en: 'Inglês', de: 'Alemão', fr: 'Francês', ja: 'Japonês', zh: 'Chinês', es: 'Espanhol', pt: 'Português', ar: 'Árabe' },
-    ar: { en: 'الإنجليزية', de: 'الألمانية', fr: 'الفرنسية', ja: 'اليابانية', zh: 'الصينية', es: 'الإسبانية', pt: 'البرتغالية', ar: 'العربية' },
+    en: { en: 'English', de: 'German', fr: 'French', ja: 'Japanese', zh: 'Chinese', es: 'Spanish', pt: 'Portuguese (Brazil)', ar: 'Arabic' },
+    de: { en: 'Englisch', de: 'Deutsch', fr: 'Französisch', ja: 'Japanisch', zh: 'Chinesisch', es: 'Spanisch', pt: 'Portugiesisch (Brasilien)', ar: 'Arabisch' },
+    fr: { en: 'Anglais', de: 'Allemand', fr: 'Français', ja: 'Japonais', zh: 'Chinois', es: 'Espagnol', pt: 'Portugais (Brésil)', ar: 'Arabe' },
+    ja: { en: '英語', de: 'ドイツ語', fr: 'フランス語', ja: '日本語', zh: '中国語', es: 'スペイン語', pt: 'ポルトガル語（ブラジル）', ar: 'アラビア語' },
+    zh: { en: '英文', de: '德文', fr: '法文', ja: '日文', zh: '中文', es: '西班牙文', pt: '葡萄牙文（巴西）', ar: '阿拉伯文' },
+    es: { en: 'Inglés', de: 'Alemán', fr: 'Francés', ja: 'Japonés', zh: 'Chino', es: 'Español', pt: 'Portugués (Brasil)', ar: 'Árabe' },
+    pt: { en: 'Inglês', de: 'Alemão', fr: 'Francês', ja: 'Japonês', zh: 'Chinês', es: 'Espanhol', pt: 'Português (Brasil)', ar: 'Árabe' },
+    ar: { en: 'الإنجليزية', de: 'الألمانية', fr: 'الفرنسية', ja: 'اليابانية', zh: 'الصينية', es: 'الإسبانية', pt: 'البرتغالية (البرازيل)', ar: 'العربية' },
   }
 
   const languageCodes: { code: Language; flag: string; comingSoon?: boolean }[] = [

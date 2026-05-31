@@ -20,3 +20,19 @@ export type PathPrefixLang = typeof PATH_PREFIX_LANGS[number];
  */
 export const ALL_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const;
 export type Lang = typeof ALL_LANGS[number];
+
+/**
+ * OUTPUT_LOCALE: Maps an internal language code to the outward-facing locale
+ * that search engines and users see — hreflang values and schema `inLanguage`.
+ *
+ * The internal code stays `'pt'` (used in URLs, type unions, validation arrays);
+ * only the emitted locale is regionalized. Portuguese targets Brazil (`pt-BR`):
+ * BR vocabulary/spelling, LGPD-relevant market. Any code not listed here is
+ * emitted unchanged.
+ */
+export const OUTPUT_LOCALE: Record<string, string> = { pt: 'pt-BR' };
+
+/** Convert an internal language code to its outward-facing locale (e.g. pt → pt-BR). */
+export function toOutputLocale(lang: string): string {
+  return OUTPUT_LOCALE[lang] ?? lang;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { HowItWorksPageClient } from '@/components/HowItWorksPageClient'
 import { generateAlternates } from '@/lib/hreflang'
+import { toOutputLocale } from '@/lib/i18n/constants'
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
@@ -48,7 +49,7 @@ export default async function HowItWorksPage({ searchParams }: PageProps) {
       '@type': 'WebPage',
       'name': 'How PromptQuorum Works — Write, Optimize, Dispatch, Quorum',
       'url': `https://www.promptquorum.com/how-it-works${langSuffix}`,
-      'inLanguage': selectedLang,
+      'inLanguage': toOutputLocale(selectedLang),
       'description': 'A complete guide to the PromptQuorum 4-stage workflow: structured prompt writing with 9 frameworks, LLM-powered optimization, one-click dispatch to 25+ AI services, and multi-model Quorum analysis.',
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
     },
@@ -64,7 +65,7 @@ export default async function HowItWorksPage({ searchParams }: PageProps) {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
       'name': 'How to Use PromptQuorum: 4-Stage Workflow',
-      'inLanguage': selectedLang,
+      'inLanguage': toOutputLocale(selectedLang),
       'totalTime': 'PT8M',
       'description': 'A complete guide to the PromptQuorum 4-stage workflow for multi-model AI dispatch and consensus analysis.',
       'image': 'https://www.promptquorum.com/og-image.png',
@@ -102,7 +103,7 @@ export default async function HowItWorksPage({ searchParams }: PageProps) {
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      'inLanguage': selectedLang,
+      'inLanguage': toOutputLocale(selectedLang),
       'mainEntity': [
         {
           '@type': 'Question',

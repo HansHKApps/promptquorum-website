@@ -20,6 +20,8 @@
  *   generateAlternates('/', selectedLang, true, undefined, ['ja'])
  *     → languages.ja = BASE + '/ja'  (trailing slash stripped)
  */
+import { toOutputLocale } from './i18n/constants'
+
 export function generateAlternates(
   path: string,
   selectedLang: string = 'en',
@@ -63,8 +65,9 @@ export function generateAlternates(
   return {
     canonical,
     languages: {
+      // hreflang VALUE is the outward-facing locale (pt → pt-BR); the URL path is unchanged.
       ...Object.fromEntries(
-        (LANGS as readonly string[]).map(lang => [lang, langUrl(lang)])
+        (LANGS as readonly string[]).map(lang => [toOutputLocale(lang), langUrl(lang)])
       ),
       'x-default': `${BASE}${path}`,
     },

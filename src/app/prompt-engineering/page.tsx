@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
 import { generateAlternates } from '@/lib/hreflang'
+import { toOutputLocale } from '@/lib/i18n/constants'
 import { peContent } from '@/lib/prompt-engineering/content'
 import type { Language } from '@/translations'
 import { truncateTitle } from '@/lib/utils'
@@ -263,7 +264,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       '@type': 'WebPage',
       'name': t.promptEngineeringHubTitle,
       'url': `https://www.promptquorum.com/prompt-engineering${langSuffix}`,
-      'inLanguage': selectedLang,
+      'inLanguage': toOutputLocale(selectedLang),
       'description': t.promptEngineeringHubDescription,
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
       'speakable': {
@@ -276,7 +277,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       '@type': 'CollectionPage',
       'name': t.promptEngineeringHubTitle,
       'url': `https://www.promptquorum.com/prompt-engineering${langSuffix}`,
-      'inLanguage': selectedLang,
+      'inLanguage': toOutputLocale(selectedLang),
       'description': t.promptEngineeringHubDescription,
       'numberOfItems': 80,
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
@@ -285,7 +286,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      'inLanguage': selectedLang,
+      'inLanguage': toOutputLocale(selectedLang),
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': BREADCRUMB_HOME[selectedLang] ?? 'Home', 'item': 'https://www.promptquorum.com' },
         { '@type': 'ListItem', 'position': 2, 'name': BREADCRUMB_LABELS[selectedLang] ?? 'Prompt Engineering', 'item': `https://www.promptquorum.com/prompt-engineering${langSuffix}` },
@@ -294,7 +295,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      'inLanguage': selectedLang,
+      'inLanguage': toOutputLocale(selectedLang),
       'mainEntity': faqsForLang.map(({ q, a }) => ({
         '@type': 'Question',
         'name': q,
@@ -305,7 +306,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       '@context': 'https://schema.org',
       '@type': 'HowTo',
       'name': howToForLang.name,
-      'inLanguage': selectedLang,
+      'inLanguage': toOutputLocale(selectedLang),
       'step': howToForLang.steps.map((s, i) => ({
         '@type': 'HowToStep',
         'position': i + 1,
@@ -317,7 +318,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       'name': t.promptEngineeringHubTitle,
-      'inLanguage': selectedLang,
+      'inLanguage': toOutputLocale(selectedLang),
       'numberOfItems': 8,
       'itemListElement': (() => {
         const names = ITEM_LIST_NAMES[selectedLang] ?? ITEM_LIST_NAMES['en']

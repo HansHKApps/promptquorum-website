@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       'ja': 'https://www.promptquorum.com/ja',
       'zh': 'https://www.promptquorum.com/zh',
       'es': 'https://www.promptquorum.com/es',
-      'pt': 'https://www.promptquorum.com/pt',
+      'pt-BR': 'https://www.promptquorum.com/pt',
       // TODO: Add dir="rtl" when lang === 'ar' — August 2026
       'ar': 'https://www.promptquorum.com/ar',
       'x-default': 'https://www.promptquorum.com',

@@ -7,6 +7,7 @@ import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { themes } from '@/lib/prompt-engineering/themes'
 import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
 import { generateAlternates } from '@/lib/hreflang'
+import { toOutputLocale } from '@/lib/i18n/constants'
 import { getPEGeoEntities, type Language } from '@/lib/geo-schema'
 import { truncateTitle } from '@/lib/utils'
 
@@ -500,7 +501,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     name: article.title,
     description: article.intro,
     url: canonicalUrl,
-    inLanguage: selectedLang,
+    inLanguage: toOutputLocale(selectedLang),
     educationalLevel,
     ...(audience && { audience: { '@type': 'Audience', audienceType: audience } }),
     learningResourceType: 'Article',
