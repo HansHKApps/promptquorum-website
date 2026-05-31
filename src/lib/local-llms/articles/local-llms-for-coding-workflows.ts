@@ -257,7 +257,7 @@ schema: {
       title: 'Lokale LLMs für Programmier-Workflows: Code-Generierung, Überprüfung und Tests',
       seoTitle: 'Beste lokale Programmiermodelle 2026: 72–92,7% Genauigkeit',
       intro: 'Lokale LLMs können beim Programmieren helfen: Boilerplate generieren, Code überprüfen, Tests schreiben und Funktionen erklären. Ab April 2026 erreichen Modelle wie Qwen2.5-Coder 32B und CodeLlama 34B 72–92,7% Genauigkeit auf HumanEval-Benchmarks. Die Geschwindigkeit ist langsamer als Cloud-Lösungen (2–5 Sekunden pro Antwort), aber Ihr Code bleibt privat.',
-      metaDescription: 'Lokale Kodierungsmodelle (Qwen2.5-Coder, CodeLlama) erreichen 72–92,7% HumanEval-Genauigkeit. Generieren, überprüfen und testen Sie Code privat ohne Cloud-APIs. Setup-Anleitungen für VS Code und Cursor.',
+      metaDescription: 'Lokale LLMs für Coding-Workflows 2026: Qwen 2.5 Coder, DeepSeek und Codestral in VS Code, Continue und Aider. Setup und Modellauswahl im Vergleich.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-24',
       leadAnswerBlock: '**Lokale LLMs können beim Programmieren helfen: Boilerplate generieren, Code überprüfen, Tests schreiben und Funktionen erklären. Ab April 2026 erreichen Modelle wie Qwen2.5-Coder 32B (92,7% HumanEval) und CodeLlama 34B (75% HumanEval) moderne Genauigkeit auf Programmierungs-Benchmarks.**',

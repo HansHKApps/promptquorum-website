@@ -559,7 +559,7 @@ schema: {
       title: 'Lokale LLM Trends 2026–2027: 5 Schlüsselvorhersagen für Enterprise-Adoption und On-Device-KI',
       seoTitle: 'Lokale LLM Trends 2026–2027: 5 Vorhersagen',
       intro: 'Bis Ende 2026: 1–3B-Modelle konkurrieren mit 7B-Qualität, On-Device-Inferenz funktioniert auf iPhones (A18) und Snapdragon X Elite Telefonen, Reasoning-Modelle verbessern Genauigkeit um 15–30%, und 50% großer Unternehmen planen lokale Inferenz für sensible Workloads. Dieser Leitfaden behandelt die 5 Schlüsseltrends, die lokale KI 2026–2027 mit Zeitplänen, Benchmarks und Adoptionsprognosen umgestalten.',
-      metaDescription: '1–3B-Modelle erreichen 7B-Qualität 2026. Smartphones führen lokale LLMs mit 15–30 Token/Sek. aus. Reasoning-Modelle verbessern Genauigkeit um 15–30%. 50% der Unternehmen adoptieren On-Premises-Inferenz bis 2027.',
+      metaDescription: 'Die Zukunft lokaler LLMs: 1–3B-Modelle erreichen 2026 7B-Qualität, Smartphones laufen mit 15–30 Token/Sek. 50 % der Unternehmen bis 2027.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-20',
       leadAnswerBlock: '**Bis Ende 2026: 1–3B-Modelle konkurrieren mit 7B-Qualität, On-Device-Inferenz funktioniert auf iPhones (A18) und Snapdragon X Elite Telefonen, Reasoning-Modelle verbessern Genauigkeit um 15–30%, und 50% großer Unternehmen planen lokale Inferenz für sensible Workloads.**',

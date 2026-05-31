@@ -536,7 +536,7 @@ schema: {
     de: {
       theme: 'Modelle nach Anwendungsfall',
       title: 'Beste 7B-Modelle für Consumer-Hardware',
-      seoTitle: 'Beste 7B Local LLMs für Consumer Hardware (2026) – KI auf Laptop & PC',
+      seoTitle: 'Beste 7B-Modelle für Consumer-Hardware 2026',
       intro: '**Für Consumer-GPUs mit 8–12 GB VRAM führen Llama 3.1 7B, Mistral 7B und Qwen2,5 7B die 7B-Kategorie im Jahr 2026 an.** Stand April 2026 erreichen alle drei ~15 Tokens/Sek. auf einer RTX 3060 12 GB, unterscheiden sich jedoch in Schlussfolgern (Llama 3.1 gewinnt mit 82 % MATH), Instruktionsbefolgung (Mistral gewinnt mit 92 %) und Mehrsprachigkeit (Qwen2,5 gewinnt mit 27 Sprachen). Wählen Sie das Modell anhand Ihres Anwendungsfalls.',
       metaDescription: 'Die besten 7B Local LLMs für normale Hardware. Vergleiche Geschwindigkeit, RAM und Coding-Leistung. Leistungsstarke KI lokal auf Laptop oder PC nutzen.',
       publishDate: '2026-04-05',

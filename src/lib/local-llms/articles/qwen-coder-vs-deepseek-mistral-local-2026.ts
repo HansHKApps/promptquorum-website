@@ -296,7 +296,7 @@ DEEPSEEK_MODEL=deepseek-chat
     title: 'Qwen 3.6 Coder vs. DeepSeek Coder vs. Mistral Devstral: Lokaler Coding-Benchmark 2026',
     seoTitle: 'Qwen 3.6 Coder vs. DeepSeek vs. Mistral: Code-Benchmark 2026',
     intro: 'Qwen 3.6 27B erreicht 92,1% HumanEval und 77,2% SWE-bench lokal auf 16 GB VRAM. DeepSeek Coder erreicht 91,6% HumanEval als Cloud-API. Mistral Devstral Small 24B erreicht 90,1% HumanEval und fuehrt bei agentischen Multi-Datei-Aufgaben.',
-    metaDescription: 'Code-Benchmark: Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder (0,14 $/1M), Mistral Devstral (Agent-Aufgaben). Kosten, Latenz, Hardware-Anforderungen.',
+    metaDescription: 'Qwen 2.5 Coder vs. DeepSeek vs. Mistral für lokales Coding 2026: Benchmarks, VRAM-Bedarf und Performance. Das beste lokale Coding-Modell.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '9 min Lesezeit',

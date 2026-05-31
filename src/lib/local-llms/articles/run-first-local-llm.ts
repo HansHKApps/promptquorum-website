@@ -685,7 +685,7 @@ schema: {
     de: {
       theme: 'Erste Schritte',
       title: 'Führe dein erstes lokales LLM aus: Von Installation bis erste Antwort in 10 Minuten',
-      seoTitle: 'Lokales LLM in 10 Minuten starten: Ollama Schritt-für-Schritt',
+      seoTitle: 'Erstes lokales LLM ausführen 2026: Ollama für Einsteiger',
       intro: 'Dein erstes lokales LLM mit Ollama auszuführen dauert weniger als 10 Minuten. Installiere Ollama, führe einen Befehl aus, um ein Modell zu laden, und beginne, in deinem Terminal zu chatten -- kein API-Schlüssel, kein Konto und keine Internetverbindung nach dem initialen Download erforderlich. Ab April 2026 ist das schnellste Anfängermodell Llama 3.2 3B mit 25-45 Tokens/Sekunde auf einer modernen Laptop-CPU.',
       metaDescription: 'Erstes lokales LLM mit Ollama in 10 Minuten: Installation, Modell laden, erste Abfrage. Funktioniert auf Mac, Windows und Linux ohne Cloud.',
       publishDate: '2026-04-04',

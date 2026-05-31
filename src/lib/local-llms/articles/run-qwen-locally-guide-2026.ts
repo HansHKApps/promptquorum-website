@@ -651,7 +651,7 @@ LOCAL_LLM_MODEL=qwen3:27b
     title: 'Qwen 3 lokal ausführen 2026: Vollständige Anleitung mit Ollama und LM Studio',
     seoTitle: 'Qwen 3 lokal ausführen 2026: Ollama & LM Studio Setup',
     intro: 'Qwen 3.6 27B läuft auf einer einzelnen Consumer-GPU (16 GB VRAM) über Ollama oder LM Studio. Die Einrichtung dauert weniger als 10 Minuten. Dieser Leitfaden deckt Modellauswahl, Hardware-Anforderungen, Ollama-CLI-Installation, LM Studio GUI-Setup, die entscheidende num_ctx-Korrektur, Stromverbrauch und TCO sowie die Verbindung mit PromptQuorum für Multi-Modell-Dispatch ab.',
-    metaDescription: 'Schritt-für-Schritt-Anleitung: Qwen 3.6 27B auf Ollama oder LM Studio. Hardware-Anforderungen (16 GB VRAM), kritische num_ctx-Einstellung, Stromverbrauch, PromptQuorum.',
+    metaDescription: 'Qwen lokal ausführen 2026: Anleitung mit Ollama und LM Studio. Hardware-Anforderungen, Modellauswahl und Performance-Tuning für Qwen 2.5.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '10 Min. Lesezeit',

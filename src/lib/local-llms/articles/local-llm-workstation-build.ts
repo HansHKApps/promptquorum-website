@@ -376,7 +376,7 @@ schema: {
       freshness_tier: 'annual',
       theme: 'Hardware Setups',
       title: 'Local LLM PC bauen: Beste Workstation (GPU, VRAM, 7B–70B Modelle)',
-      seoTitle: 'Lokale LLM-Workstation Build 2026: Dual RTX 4090, €4–6K, 70B-fähig',
+      seoTitle: 'Lokale LLM-Workstation bauen 2026: Guide für 70B',
       intro: '**Eine professionelle Workstation für lokale LLM-Inferenz in Produktionsqualität kostet €4.000–6.000 und verfügt über zwei RTX 4090 GPUs (insgesamt 48 GB VRAM), Threadripper 7970X CPU (32 Kerne), 128 GB DDR5 RAM, benutzerdefinierte Kühlung und ein 2.000 W Netzteil.** Ab April 2026 können 2–3 gleichzeitige 70B-Benutzer bei 14 Token/s bedient werden, Llama 3.3 70B Feinabstimmung lässt sich parallel zu Inferenz betreiben, und On-Premises-Bereitstellung ohne Cloud-API-Kosten ist möglich.',
       metaDescription: 'Baue deine Local LLM Workstation mit der richtigen GPU, VRAM und RAM. Konkrete PC-Builds für 7B–70B Modelle mit Ollama und LM Studio.',
       publishDate: '2026-04-05',

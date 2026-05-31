@@ -628,7 +628,7 @@ schema: {
     de: {
     theme: 'Kosten & Vergleiche',
     title: 'GPU vs ChatGPT Plus 2026: Wann sich der GPU-Kauf gegenüber dem Abonnement amortisiert',
-    seoTitle: 'GPU vs ChatGPT Plus 2026: 449 € GPU amortisiert sich in 18 Monaten',
+    seoTitle: 'GPU vs. KI-Abo 2026: Wann lokale Hardware sich lohnt',
     intro: 'Eine gebrauchte RTX 5060 Ti 16 GB (449 €) amortisiert sich mit ChatGPT Plus (240 €/Jahr) in 18–24 Monaten bei 5 Stunden Nutzung pro Woche.',
     metaDescription: 'Gebrauchte RTX 5060 Ti (449 €) amortisiert sich mit ChatGPT Plus (240 €/Jahr) in 18 Monaten.',
     publishDate: '2026-04-05',

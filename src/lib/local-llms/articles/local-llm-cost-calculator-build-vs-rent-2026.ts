@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Cost & Comparisons',
     title: 'LLM Kostenrechner: Kaufen vs. Mieten 2026',
     seoTitle: 'LLM Kostenrechner: GPU kaufen vs. Cloud mieten 2026',
-    metaDescription: 'GPU-Workstation kaufen oder Cloud-GPU mieten? Vollständiger TCO-Vergleich 2026 — Amortisation bei ~1.800 GPU-Stunden. Mit Stromkosten-Kalkulator für Deutschland.',
+    metaDescription: 'Lokale LLM-Kosten 2026: Hardware kaufen vs. Cloud-GPU mieten. Break-even-Rechner für RTX 4090, Mac und Cloud. Wann sich Eigenbau lohnt.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

@@ -227,7 +227,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: '70B-Modelle auf 24GB VRAM ausführen: Fortgeschrittene Techniken',
-      seoTitle: '70B-Modelle auf 24GB VRAM ausführen: Kompletter Setup-Guide 2026',
+      seoTitle: '70B-Modelle mit 24 GB VRAM ausführen 2026',
       intro: 'Ein 70B-Modell (normalerweise 40+ GB erforderlich) auf 24 GB VRAM auszuführen ist mit aggressiver Quantisierung (Q2-Q3) und Layer-Offloading möglich, aber das Ergebnis ist langsam (~3-5 Token/Sek.). Ab April 2026 ist dies unpraktisch für Echtzeit-Chat, aber praktikabel für Batch-Verarbeitung oder Experimente.',
       metaDescription: '70B-Modelle auf 24GB VRAM 2026: Quantisierung (Q4_K_M), Offloading, Layer-Splitting. Techniken mit Trade-offs und Leistungsdaten.',
       publishDate: '2026-04-04',

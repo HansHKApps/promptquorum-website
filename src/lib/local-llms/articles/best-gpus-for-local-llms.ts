@@ -457,7 +457,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: 'Die besten GPUs für lokale LLMs 2026: Kompletter Benchmark- und Auswahlführer',
-      seoTitle: 'Die besten GPUs für lokale LLMs 2026: VRAM, Geschwindigkeit & Wertführer',
+      seoTitle: 'Beste GPUs für lokale LLMs 2026: VRAM, Speed & Wert',
       intro: 'Die Wahl der richtigen GPU für lokale LLMs hängt vom Budget, der Modellgröße und der gewünschten Geschwindigkeit ab. Im April 2026 dominiert die NVIDIA RTX 40/50 Serie (RTX 4090 für unbegrenztes Budget, RTX 4070 Ti für bestes Preis-Leistungs-Verhältnis, RTX 4080 für ausgewogene Lösung). Dieser Leitfaden vergleicht 15+ GPUs mit echten Benchmarks, VRAM, Stromverbrauch und Preis-zu-Leistungs-Verhältnis.',
       metaDescription: 'Beste GPUs für lokale LLMs 2026: RTX 4090, 4080, 4070 Ti. Benchmarks zu VRAM, Stromverbrauch, Kosten und Leistung pro Euro.',
       publishDate: '2026-04-04',

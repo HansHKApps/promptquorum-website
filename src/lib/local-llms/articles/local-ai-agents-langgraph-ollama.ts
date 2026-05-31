@@ -315,7 +315,7 @@ schema: {
       title: 'Lokale KI-Agenten mit LangGraph und Ollama: Autonome Entscheidungsfindungssysteme bauen',
       seoTitle: 'Lokale KI-Agenten mit LangGraph + Ollama (2026)',
       intro: 'KI-Agenten folgen einer Schleife: Kontext beobachten, über die beste Aktion nachdenken, ein Werkzeug aufrufen und dann wiederholen, bis die Aufgabe abgeschlossen ist. LangGraph ist ein Framework zum Erstellen dieser agentischen Workflows mit lokalen LLMs über Ollama. Ab April 2026 können lokale Agenten Automatisierung, Recherche und Entscheidungsunterstützung ohne Cloud-Abhängigkeit handhaben.',
-      metaDescription: 'KI-Agenten beobachten, denken nach, rufen Tools auf und wiederholen sich. LangGraph + Ollama arbeiten lokal – keine API-Kosten, vollständige Datenkontrolle. So bauen und stellen Sie einen bereit.',
+      metaDescription: 'Lokale KI-Agenten mit LangGraph und Ollama bauen 2026: autonome Workflows ohne Cloud. Tool-Calling, Speicher und Multi-Agent-Systeme mit Code.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-24',
       leadAnswerBlock: '**KI-Agenten sind Systeme, die Aktionen basierend auf Beobachtungen und Überlegungen ausführen. LangGraph ist ein Framework zum Erstellen agentischer Workflows mit lokalen LLMs. Agenten können Dokumente durchsuchen, Tools verwenden und sequenzielle Entscheidungen treffen.**',

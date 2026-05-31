@@ -690,7 +690,7 @@ schema: {
   de: {
     theme: 'Getting Started',
     title: 'Checkliste für Sicherheit und Datenschutz bei lokalen LLMs: 12 Schritte zu einem sicheren Setup',
-    seoTitle: 'Lokale LLM Sicherheit & Datenschutz: 12-Schritte-Checkliste 2026',
+    seoTitle: 'LLM-Sicherheit & Datenschutz-Checkliste 2026 (DSGVO)',
     intro: 'Ein lokales LLM hält Ihre Prompts von externen Servern fern, macht Ihre Umgebung aber nicht automatisch sicher. Risiken wie Telemetrie, nicht vertrauenswürdige Modelldateien und exponierte APIs können Daten noch immer preisgeben. Diese Checkliste zeigt genau, wie Sie ein lokales LLM in unter 10 Minuten sichern.',
     metaDescription: '12-Schritte-Sicherheitscheckliste für lokale LLMs: Telemetrie, Checksummen, Port 11434, Festplattenverschlüsselung. DSGVO und HIPAA inklusive. April 2026.',
     twitterDescription: '12-Schritte-Sicherheitscheckliste für lokale LLMs: Telemetrie, Checksummen, Port 11434, Festplattenverschlüsselung. DSGVO und HIPAA.',

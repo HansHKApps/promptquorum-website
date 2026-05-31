@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     title: 'Qwen lokal einrichten für DSGVO-konforme Workflows',
     seoTitle: 'DSGVO-konformes lokales LLM mit Qwen 2026 | PromptQuorum',
-    metaDescription: 'Schritt-für-Schritt-Anleitung zum DSGVO-konformen Betrieb von Qwen 2.5 14B lokal: Ollama-Installation, Netzwerkisolierung, Festplattenverschlüsselung und Artikel-30-Protokollierung. Mai 2026.',
+    metaDescription: 'Qwen lokal DSGVO-konform einrichten 2026: Anleitung für datenschutzkonforme KI. Ollama, Verschlüsselung und Zugriffskontrolle für Unternehmen.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     readTime: '9 Min. Lesezeit',

@@ -544,7 +544,7 @@ schema: {
       title: 'Mac vs Windows vs Linux für lokale LLMs 2026: Apple M5, RTX 5090 und Linux Server verglichen',
       seoTitle: 'Mac vs Windows vs Linux für LLMs 2026: M5 vs RTX 5090',
       intro: '**macOS mit Apple M5 Silicon ist das einfachste Setup — Ollama wird in 6 Minuten installiert und läuft Llama 3.1 8B mit 40–60 tok/s auf M5 Pro ohne zusätzliche Hardware. MacBook Pro M5 Max (128 GB, 614 GB/s Bandbreite) verarbeitet 70B mit 25–35 tok/s — eine 4×-Verbesserung gegenüber M4 Max. Windows mit RTX 5090 (32 GB, ca. 3.449 €) läuft 70B mit 40–50 tok/s. Linux ist 1–5% schneller als Windows bei identischer Hardware und kostet ca. 770 € in 3 Jahren für Produktionsserver. Ab April 2026 hat die M5-Generation die Geschwindigkeitslücke zwischen Apple Silicon und diskreten GPUs deutlich geschlossen.**',
-      metaDescription: 'MacBook Pro M5 Max 128GB: 70B bei 25–35 tok/s, 614 GB/s Bandbreite. Windows RTX 5090 32GB: 70B bei 40–50 tok/s, ca. 1.900 €. Linux: 1–5% schneller, ca. 770 € Gesamtkosten 3 Jahre.',
+      metaDescription: 'Mac vs. Windows vs. Linux für lokale LLMs 2026: Performance, Setup-Aufwand und Kompatibilität. Welches OS die beste Erfahrung für lokale KI bietet.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**macOS mit Apple M5 Silicon ist das einfachste Setup — Ollama wird in 6 Minuten installiert und läuft Llama 3.1 8B mit 40–60 tok/s auf M5 Pro ohne zusätzliche Hardware. MacBook Pro M5 Max (128 GB, 614 GB/s Bandbreite) verarbeitet 70B mit 25–35 tok/s — eine 4×-Verbesserung gegenüber M4 Max. Windows mit RTX 5090 (32 GB, ca. 3.449 €) läuft 70B mit 40–50 tok/s. Linux ist 1–5% schneller als Windows bei identischer Hardware und kostet ca. 770 € in 3 Jahren für Produktionsserver.**',

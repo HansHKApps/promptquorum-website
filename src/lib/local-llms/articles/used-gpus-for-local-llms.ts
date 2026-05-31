@@ -451,7 +451,7 @@ schema: {
       freshness_tier: 'annual',
       theme: 'GPU Buying Guides',
       title: 'Gebrauchte GPUs für lokale LLMs: Die besten Sparangebote',
-      seoTitle: 'Beste gebrauchte GPUs für LLMs: RTX 3060, 3080, 4090 Kaufleitfaden',
+      seoTitle: 'Gebrauchte GPUs für lokale LLMs 2026: Wert & Risiken',
       intro: '**Gebrauchte GPUs bieten 30-50% Ersparnis gegenüber Neuware bei minimalem Leistungsrisiko bei bewährten Modellen wie RTX 3060 12GB und RTX 3080.** Im April 2026 ist der Gebrauchtmarkt von Ex-Mining- und Ex-Gaming-Karten zu stabilen Preisen überschwemmt. Der Kauf von gebrauchter Hardware macht Sinn für Ihr erstes System oder beim Aufrüsten; Mining-Karten sind riskant, es sei denn, Sie können vor Ort testen.',
       metaDescription: 'Beste gebrauchte GPUs für lokale LLMs: RTX 3060, 3080, 3090, 4090. Wo kaufen, Risikobewertung, Bench-Test-Anleitung.',
       publishDate: '2026-04-05',

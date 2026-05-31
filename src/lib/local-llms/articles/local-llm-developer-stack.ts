@@ -479,9 +479,9 @@ schema: {
     de: {
       theme: 'Tools & Oberflächen',
       title: 'Best Local LLM Stack für Entwickler (April 2026)',
-      seoTitle: 'Lokaler LLM-Dev-Stack: CLI → API → Produktion Setup-Guide 2026',
+      seoTitle: 'Lokaler LLM-Entwickler-Stack 2026: Tools & Setup',
       intro: '**Entwickler sollten vLLM + FastAPI + VS Code Copilot-Erweiterung für produktionsreifen lokalen LLM-Betrieb verwenden.** Ab April 2026 ermöglicht dieser Stack Echtzeit-Code-Vervollständigungen, Batch-Verarbeitung und OpenAI-API-Kompatibilität ohne Vendor Lock-in. Alternative (einfacher): Ollama + llama.cpp CLI für einzelne Skripte.',
-      metaDescription: 'Lokale LLM-Entwicklungsumgebung in 3 Stufen: (1) Ollama CLI in 5 Min, (2) vLLM + FastAPI in 30 Min, (3) Multi-GPU-Produktion mit nginx und Prometheus. VS Code und Cursor Integration. April 2026.',
+      metaDescription: 'Lokaler LLM-Entwickler-Stack 2026: Ollama, Continue, Aider und VS Code für KI-Entwicklung ohne Cloud. Tools, IDE-Integration und Workflow.',
       twitterDescription: '3-Stufen lokaler LLM-Dev-Stack: Ollama CLI (5 Min) → vLLM API (30 Min) → Produktion Multi-GPU (2 Std). VS Code + Cursor. April 2026.',
       publishDate: '2026-04-05',
       readTime: '10 Min. Lesezeit',

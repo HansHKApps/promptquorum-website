@@ -362,7 +362,7 @@ schema: {
     de: {
       theme: 'Privacy & Business',
       seoTitle: 'NAS-Speicher für lokale LLMs: RAID 6, Sicherung & Redundanz',
-      metaDescription: 'Beste NAS für lokale LLMs: RAID-6-Redundanz, Sicherungsstrategie und Organisation der Modellbibliothek. Vergleich: Synology, QNAP und TrueNAS. Kostenlos -- April 2026.',
+      metaDescription: 'Bestes NAS für lokale LLM-Modellspeicherung 2026: Kapazität, Geschwindigkeit und Netzwerk. Synology, QNAP und DIY-Optionen im Vergleich.',
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

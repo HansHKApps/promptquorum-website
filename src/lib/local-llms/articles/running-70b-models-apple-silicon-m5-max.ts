@@ -797,7 +797,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
     title: '70B+-Modelle auf Apple Silicon 2026: M5 Max Kompletleitfaden',
     seoTitle: '70B-Modelle auf M5 Max 128GB: 12–20 tok/s, GPT-4o-Qualität',
     intro: '70B und größere LLMs lokal auf dem Apple Silicon M5 Max (128 GB) ausführen. Vollständiger Einrichtungsleitfaden mit Ollama und MLX, Quantisierungsvergleich (Q4/Q5/Q8), 8B-vs-70B-Qualitätsbenchmarks, reale tok/s-Werte, 70B-vs-Cloud-API-Kostenanalyse, alternative 70B+-Modelle, Geschwindigkeitsoptimierung und M5-Ultra-Prognosen für 2026.',
-    metaDescription: 'M5 Max 128GB läuft 70B-Modelle mit 12–20 tok/s. Q5-Qualität entspricht GPT-4o innerhalb von 3%. Kompletter Setup mit Ollama/MLX, Quantisierungsleitfaden, Benchmarks.',
+    metaDescription: '70B-Modelle auf Apple Silicon M5 Max ausführen 2026: Unified Memory, Tokens/Sek. und Quantisierung. Performance und Setup für große LLMs am Mac.',
     twitterDescription: '70B LLMs auf M5 Max 128 GB: 12–20 tok/s, Q4–Q8, entspricht Cloud-Qualität innerhalb 3 %, 0 €/Monat. Vollständiger Einrichtungs- und Benchmark-Leitfaden.',
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',

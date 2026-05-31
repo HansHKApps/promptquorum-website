@@ -751,7 +751,7 @@ schema: {
       title: 'Prompt Engineering für lokale LLMs 2026: CoT & Few-Shot',
       seoTitle: 'Prompt Engineering für lokale LLMs 2026: CoT & Few-Shot',
       intro: 'Lokale 7B–13B-Modelle reagieren anders auf Prompts als GPT-5.2 oder Claude. Sie benötigen explizite Struktur, klarere Anweisungen und 3–5 Few-Shot-Beispiele, während Cloud-Modelle nur 1–2 benötigen. Im April 2026 gehören zu bewährten Techniken Chain-of-Thought-Prompting (+10–20% Genauigkeit), Rollendefinition, strukturierte Ausgabeformatierung (JSON) und System-Prompt-Konfiguration in Ollama und LM Studio.',
-      metaDescription: 'Gedankenketten-Prompting steigert 7B-Genauigkeit um 10–20%. Few-Shot (3–5 Beispiele) schlägt Zero-Shot um 15–25%. System-Prompt-Anleitung für Ollama & LM Studio.',
+      metaDescription: 'Prompt Engineering für lokale Modelle 2026: Techniken für kleinere LLMs. System-Prompts, Few-Shot und Formatierung für bessere Ergebnisse.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-25',
       leadAnswerBlock: '**Lokale LLMs (7B-13B-Modelle) reagieren anders auf Prompts als Cloud-APIs. Sie benötigen explizite Struktur, klarere Anweisungen und weniger Abhängigkeit vom kontextbasierten Lernen.**',

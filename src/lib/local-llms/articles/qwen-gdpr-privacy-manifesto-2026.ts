@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Das Local-LLM-Datenschutz-Manifest 2026: Warum Open Weights fuer EU-Konformitaet unverzichtbar sind',
     seoTitle: 'Lokale LLMs: DSGVO-Konformität und offene Gewichte 2026',
     intro: 'Jede Anfrage an eine Cloud-KI ist eine Datenuebertragung. Jede Datenuebertragung auf Nicht-EU-Server erfordert eine Rechtsgrundlage nach DSGVO Art. 44. Lokale LLMs mit Open Weights — Qwen 3.6 27B als bestes Beispiel — eliminieren diese Compliance-Risikokategorie vollstaendig.',
-    metaDescription: 'Warum Open-Weight-Modelle wie Qwen 3.6 27B DSGVO-konform sind. Lokale Bereitstellung eliminiert Artikel-44-Transfers und garantiert Datensouveränität für EU-Organisationen.',
+    metaDescription: 'Qwen DSGVO-Datenschutz-Manifest 2026: Warum lokales Qwen die datenschutzfreundlichste KI-Wahl ist. Keine Datenübertragung, volle Kontrolle.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '11 min Lesezeit',

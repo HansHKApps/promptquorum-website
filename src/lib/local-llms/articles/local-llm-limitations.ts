@@ -1009,7 +1009,7 @@ schema: {
       title: 'Lokales LLM vs Cloud API: Wann welches verwenden (2026 Vergleich)',
       seoTitle: 'Lokales LLM vs Cloud: Datenschutz vs Geschwindigkeit 2026',
       intro: 'Lokale LLMs bieten Datenschutz und Kontrolle, haben aber erhebliche Leistungslücken. Erfahren Sie, welche 6 kritischen Grenzen lokale Modelle haben — und wann Sie Cloud-APIs stattdessen verwenden sollten.',
-      metaDescription: 'Lokal = 100% Datenschutz, 0 Euro Kosten, 10x langsamer. Cloud = 50–150 Tokens/s, 0,01–0,05 Euro pro 1K Tokens, Web-Zugriff. Vergleichstabelle + Entscheidungshilfe. April 2026.',
+      metaDescription: 'Grenzen lokaler LLMs 2026: Kontextfenster, Reasoning-Lücken und Hardware-Engpässe. Was lokale Modelle nicht können und wann Cloud-APIs besser sind.',
       twitterDescription: 'Lokales LLM: datenschutzsicher, kostenlos, aber 10x langsamer. Cloud: schnell + intelligent, kostet Geld. Vergleich nach Anwendungsfall. April 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-18',

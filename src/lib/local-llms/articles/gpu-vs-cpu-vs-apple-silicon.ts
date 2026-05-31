@@ -580,9 +580,9 @@ schema: {
     de: {
       theme: 'Hardware & Leistung',
       title: 'GPU vs CPU vs Apple Silicon für lokale LLMs: Leistungsanalyse',
-      seoTitle: 'GPU vs CPU vs Apple Silicon 2026: CUDA, Metal & Speicherbandbreite',
+      seoTitle: 'GPU vs. CPU vs. Apple Silicon 2026: LLM-Performance',
       intro: 'Die RTX 5090 dominiert mit 200 Tok/s auf Llama 3.2 8B, aber Mac Studio M2 Ultra (192 GB einheitlicher Speicher) führt Llama 3.3 70B nativ mit 35 Tok/s aus – etwas, das keine Consumer-GPU erreicht. CPU-Inferenz mit 5 Tok/s ist für Echtzeitanwendungen unpraktisch. Dieser Leitfaden vergleicht alle drei Architekturen hinsichtlich Speicherbandbreite, Kosten und Anwendungsfällen (April 2026).',
-      metaDescription: 'Welche Compute-Plattform für lokale LLMs? RTX 5090 (200 Tok/s) vs M2 Ultra (60 Tok/s, 70B nativ) vs CPU (5 Tok/s). CUDA-Ökosystem, Speicherbandbreite, Kosten. April 2026.',
+      metaDescription: 'GPU vs. CPU vs. Apple Silicon für lokale LLMs 2026: Benchmarks und Tokens/Sek. NVIDIA, AMD und Apple M4 für KI-Inferenz im Vergleich.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-20',
       leadAnswerBlock: '**Die RTX 5090 dominiert bei Geschwindigkeit (200 Tok/s bei 8B-Modellen), aber Mac Studio M2 Ultra führt Llama 3.3 70B einmalig nativ mit 35 Tok/s aus – etwas, das keine Consumer-GPU erreicht. Die Speicherbandbreite erklärt die 30–40× Geschwindigkeitslücke zwischen GPU und CPU.**',

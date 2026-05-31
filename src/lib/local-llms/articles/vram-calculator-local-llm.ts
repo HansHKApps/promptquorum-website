@@ -841,7 +841,7 @@ schema: {
       title: 'VRAM-Rechner 2026: GPU-Anforderungen für 7B/13B/70B LLMs (Q4, Q5, Q8)',
       seoTitle: 'VRAM-Rechner 2026: GPU-Anforderungen für 7B/13B/70B LLMs',
       intro: 'Interaktiver VRAM-Rechner für lokale LLMs. Geben Sie Modellgröße, Quantisierung, Kontextlänge und Batch-Größe ein, um den exakten GPU-VRAM-Bedarf zu berechnen. Funktioniert für 1B–405B-Modelle bei FP16, Q8, Q5, Q4-Quantisierung. Aktualisiert April 2026 mit RTX 4090, 4080, 3060-Kompatibilität und Overhead-Berechnungen.',
-      metaDescription: 'Interaktiver VRAM-Rechner: Berechnen Sie exakte GPU-Anforderungen für 7B (3,5 GB Q4), 13B (6,5 GB Q4), 70B (35 GB Q4) LLM-Modelle. Prüfen Sie RTX 4090, 4080, 4070 Ti Kompatibilität. Q4/Q5/Q8-Quantisierung. Kontext-, Batch- und Systemoverhead enthalten.',
+      metaDescription: 'Interaktiver VRAM-Rechner 2026: GPU-Bedarf für 7B (3,5 GB Q4), 13B (6,5 GB), 70B (35 GB) berechnen. RTX 4090/4080/4070 Ti, Q4/Q5/Q8-Quantisierung.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**Diese Anleitung erklärt, wie Sie exakte VRAM-Anforderungen für jede Modell- und Hardware-Kombination berechnen. Die Formel ist einfach: (Modellgröße GB × Quantisierungs-Bits) ÷ 8 = VRAM erforderlich.**',

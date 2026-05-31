@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Alibaba Cloud vs Tencent Cloud GPU für KI 2026: Vollständiger Vergleich',
     seoTitle: 'Alibaba vs Tencent Cloud GPU KI 2026: Preisvergleich',
     metaDescription:
-      'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL für KI-GPU-Miete 2026: Preise, Qwen-Performance, Datenspeicherung in China und Setup-Anleitung. Werbung enthält Affiliate-Links.',
+      'Alibaba Cloud vs. Tencent Cloud für KI-GPU-Workloads 2026: Preise, H20-Verfügbarkeit, Regionen und DSGVO – für europäische KI-Teams.',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: 'Entwickler in China oder mit China-bezogenen Workloads, die zwischen chinesischen Cloud-GPU-Anbietern wählen.',

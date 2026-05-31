@@ -474,7 +474,7 @@ schema: {
     de: {
       theme: 'Tools & Schnittstellen',
       title: 'llama.cpp vs Ollama vs vLLM 2026: Geschwindigkeit & GPU-Benchmarks',
-      seoTitle: 'llama.cpp vs Ollama vs vLLM 2026: Geschwindigkeit & GPU-Benchmarks',
+      seoTitle: 'llama.cpp vs. Ollama vs. vLLM 2026: Welche Engine?',
       intro: '**llama.cpp ist am schnellsten pro Token bei kleinen Modellen; Ollama ist am einfachsten; vLLM ist am besten für Durchsatz und Batching.** Stand April 2026: Wählen Sie nach Anwendungsfall – gelegentlicher Chat → Ollama; Einzelnutzer-Geschwindigkeit → llama.cpp; Multi-User/Batching → vLLM. Alle drei führen dieselben Modelle aus und erzeugen identische Ausgaben – Geschwindigkeit und Durchsatz unterscheiden sich.',
       metaDescription: 'llama.cpp: 38 Tok/s Single-Token (schnellstes). Ollama: 5-Min-Setup (einfachstes). vLLM: 250+ Tok/s Batch (höchster Durchsatz). RTX 4090 Benchmarks. April 2026.',
       publishDate: '2026-04-05',

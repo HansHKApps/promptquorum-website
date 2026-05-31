@@ -778,7 +778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     title: 'EU-Cloud-GPU mit DSGVO 2026: Hetzner vs Scaleway vs OVHcloud',
     seoTitle: 'EU Cloud-GPU DSGVO 2026: Hetzner, Scaleway, OVHcloud',
-    metaDescription: 'DSGVO-konforme Cloud-GPU-Anbieter für EU-Kunden: Hetzner (€184/Monat pauschal, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius. Datenresidenz, AVV, Schrems-II-konform.',
+    metaDescription: 'EU-Cloud-GPU-Anbieter mit DSGVO-Konformität 2026: souveräne KI-Infrastruktur in Europa. Scaleway, OVHcloud und Hetzner im Vergleich.',
     intro: 'EU-Unternehmen, die personenbezogene Daten verarbeiten, müssen DSGVO-konforme Cloud-GPU-Anbieter nutzen. Dieser Leitfaden vergleicht sieben DSGVO-native Optionen (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) getestet im Mai 2026 nach Preisgestaltung, Konformitätsposition und Schrems-II-Risiko.',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',

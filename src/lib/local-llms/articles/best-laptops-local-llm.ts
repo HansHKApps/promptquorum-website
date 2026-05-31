@@ -459,7 +459,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Hardware Setups',
       title: 'Beste Laptops für lokale LLMs 2026',
-      seoTitle: 'Beste Laptops für lokale LLMs 2026: GPU-Spezifikationen und Kaufleitfaden',
+      seoTitle: 'Beste Laptops für lokale LLMs 2026: GPU-Specs & Kaufguide',
       intro: '**High-End-Laptops mit RTX 4060 oder RTX 4070 GPUs können 7B-Modelle mit 8–12 Token/Sec ausführen und ermöglichen offline KI unterwegs.** Im April 2026 sollten Sie mit €1.100–2.400 für einen Gaming-Laptop mit ausreichend VRAM rechnen. Die Leistung fällt um 20–30% hinter Desktops zurück, was auf Thermal Throttling zurückzuführen ist, aber die Portabilität macht sie ideal für Forscher, Content Creator und Remote Worker, die lokale LLMs ohne Cloud-API-Aufrufe benötigen.',
       metaDescription: 'Beste Laptops für lokale LLMs: GPU-Anforderungen, Modellgrößen, Akkulaufzeit. RTX 4060/4070, 16GB VRAM Minimum.',
       publishDate: '2026-04-05',

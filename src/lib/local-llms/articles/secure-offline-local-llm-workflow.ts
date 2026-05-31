@@ -404,7 +404,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
       title: 'Sichere Offline-Workflow mit lokalen LLMs aufbauen',
-      seoTitle: 'Sichere Offline-LLM-Workflow: Isolierte Systeme, Zero-Network, Datenschutz',
+      seoTitle: 'Sicherer Offline-LLM-Workflow: Air-Gapped & Datenschutz',
       intro: '**Für maximale Datenschutz: Isolierte Workflow mit Offline-LLM-Server (kein Netzwerk), Datenübertragung via verschlüsseltem USB.** Seit April 2026 erforderlich für hochsichere Umgebungen (juristische Ermittlungen, genetische Gesundheitsdaten, Forschung mit Sicherheitsstufen). Setup dauert 1-2 Tage; operativer Aufwand ist moderat.',
       metaDescription: 'Sichere Offline-LLM-Workflow: Isolierter Server, verschlüsselter USB-Datentransfer, Hardcopy-Ausgabe. Null Netzwerkrisiko.',
       publishDate: '2026-04-05',

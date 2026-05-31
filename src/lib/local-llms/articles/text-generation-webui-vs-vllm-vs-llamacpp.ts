@@ -731,7 +731,7 @@ schema: {
     de: {
       theme: 'Tools & Interfaces',
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026: Vergleich von Inference-Engines',
-      seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
+      seoTitle: 'Text Generation WebUI vs. vLLM vs. llama.cpp 2026',
       intro: 'Text-Generation-WebUI, vLLM und llama.cpp sind drei beliebte Inference-Engines zum Ausführen lokaler LLMs, jede optimiert für unterschiedliche Anwendungsfälle. llama.cpp ist die leichteste und unterstützt Ollama; vLLM ist die schnellste für High-Throughput-Production-APIs; Text-Generation-WebUI ist die funktionsreichste für Experimente. Im April 2026 dominiert vLLM Production-Deployments, llama.cpp dominiert Consumer-Geräte, und Text-Generation-WebUI dominiert Forschungs- und Fine-Tuning-Workflows.',
       metaDescription: 'vLLM dominiert Production (höchster Durchsatz). llama.cpp treibt Ollama an. Text-Generation-WebUI für Forschung und LoRA. Inference-Engine-Vergleich 2026.',
       publishDate: '2026-04-04',

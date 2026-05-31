@@ -503,9 +503,9 @@ schema: {
     de: {
       theme: 'Modelle nach Anwendungsfall',
       title: 'Q4 vs Q5 vs Q8: Welche Quantisierungsstufe sollten Sie wählen?',
-      seoTitle: 'Q4 vs Q5 vs Q8: Beste LLM-Quantisierung für Speed, RAM & Qualität (2026)',
+      seoTitle: 'Quantisierungsstufen 2026: Q2 bis Q8 für lokale LLMs',
       intro: '**Q4 (4-Bit) ist der optimale Kompromiss: 87,5 % VRAM-Ersparnis mit unmerklichem Qualitätsverlust.** Ab April 2026 ist Q5 überflüssig (nur 5 % bessere Qualität, gleiche VRAM-Kosten wie Q4), und Q8 ist für Perfektionisten mit überschüssigem VRAM. FP32 (vollständige Genauigkeit) ist für die Inferenz auf Verbraucherhardware nie notwendig.',
-      metaDescription: 'Vollständiger GGUF-Quantisierungsvergleich: Q2, Q3, Q4, Q5, Q6, Q8. Lernen Sie die Kompromisse bei Genauigkeit, Latenz und Speicher für optimale lokale LLM-Leistung.',
+      metaDescription: 'Quantisierungsstufen im Vergleich 2026: Q2 bis Q8 für lokale LLMs. Qualität, VRAM-Bedarf und Geschwindigkeit. Welche Stufe für welche Hardware.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-18',
       leadAnswerBlock: '**Q4 (4-Bit) ist der optimale Kompromiss: 87,5 % VRAM-Ersparnis mit unmerklichem Qualitätsverlust. Ab April 2026 ist Q5 überflüssig (nur 5 % bessere Qualität, gleiche VRAM-Kosten wie Q4), und Q8 ist für Perfektionisten mit überschüssigem VRAM.**',

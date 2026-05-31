@@ -251,7 +251,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
       title: 'Lokaler LLM-Server für Business-Teams: Multi-User-Zugriff & Kostenscaling',
-      seoTitle: 'Lokaler LLM-Server für Teams: Zugriffskontrolle & Kostenattribution',
+      seoTitle: 'Lokales LLM-Setup für Teams 2026: Self-Hosted KI',
       intro: '**Stellen Sie einen gemeinsamen lokalen LLM-Server für 5-20 Team-Mitglieder mit vLLM + nginx Load Balancer bereit.** Stand April 2026: Team-Inferenz kostet 50 €/Monat (Strom) vs. 1.000+€/Monat (Cloud-APIs). Dieser Leitfaden behandelt Multi-User-Zugriff, rollenbasierte Berechtigungen, Nutzungsmessung und Kostenattribution.',
       metaDescription: 'Team-lokaler LLM-Server mit vLLM, nginx, Zugriffskontrolle und Nutzungsverfolgung. Multi-User-Setup, Kostenvergleich und rollenbasierte Berechtigungen.',
       publishDate: '2026-04-05',

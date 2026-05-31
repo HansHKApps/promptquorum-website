@@ -686,9 +686,9 @@ schema: {
     de: {
       theme: 'Hardware & Performance',
       title: 'Multi-GPU Lokale LLMs 2026: 70B-Modelle auf 2+ GPUs mit vLLM und Ollama ausführen',
-      seoTitle: 'Multi-GPU Lokale LLMs 2026: Dual RTX 4090 für 70B bei 100 tok/s',
+      seoTitle: 'Multi-GPU für lokale LLMs 2026: Lohnt die zweite Karte?',
       intro: 'Mit mehreren GPUs können Sie 70B+ Modelle ausführen, die nicht in den VRAM einer einzelnen GPU passen. Zwei RTX 4090s (insgesamt 48 GB) führen Llama 3.3 70B bei Q4-Quantisierung mit etwa 100 Token/Sekunde aus – nur 5–10 % langsamer als eine theoretische einzelne 48-GB-GPU aufgrund des Overhead der GPU-zu-GPU-Kommunikation. Ab April 2026 unterstützen sowohl vLLM (Tensor-Parallelismus) als auch Ollama (automatisches Layer-Splitting) Multi-GPU aus dem Kasten heraus. NVLink reduziert den Overhead auf 3–5 %, ist aber auf Consumer-RTX-Karten nicht verfügbar – PCIe 4.0/5.0 ist für die meisten Dual-GPU-Setups ausreichend.',
-      metaDescription: '2× RTX 4090 (insgesamt 48 GB): Llama 3.3 70B bei 100 tok/sec für €3.998. Nur 5–10 % Geschwindigkeitsstrafe vs. theoretische einzelne GPU. vLLM Tensor-Parallelismus + Ollama Auto-Split. NVLink vs. PCIe.',
+      metaDescription: 'Multi-GPU-Setups für lokale LLMs 2026: Lohnt eine zweite Grafikkarte? VRAM-Pooling, Tensor-Parallelität und Performance-Skalierung für 70B.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-16',
       leadAnswerBlock: '**Dual RTX 4090s (insgesamt 48 GB) führen Llama 3.3 70B mit etwa 100 Token/Sekunde aus – nur 5–10 % langsamer als eine theoretische einzelne 48-GB-GPU. Dies ist das kostengünstigste Multi-GPU-Setup für 70B-Modelle im Jahr 2026.**',

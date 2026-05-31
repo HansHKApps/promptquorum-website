@@ -749,9 +749,9 @@ schema: {
     de: {
       theme: 'Modelle nach Anwendungsfall',
       title: 'Lokale LLMs auf 4–8 GB RAM: Phi-4 Mini & Mistral 7B Geschwindigkeit 2026',
-      seoTitle: 'Lokale LLMs mit 4–8 GB RAM: Phi-4 Mini, Mistral 7B Speed-Guide 2026',
+      seoTitle: 'Schnellste lokale LLMs für schwache PCs 2026',
       intro: '**Nur CPU: Phi-4 Mini 3.8B erreicht 5–15 Tok/s. 4 GB VRAM: TinyLlama 1.1B Q5 erreicht 20–40 Tok/s. 8 GB VRAM (Sweet Spot): Mistral 7B Q4 erreicht 25–60 Tok/s.** Stand April 2026 liefern 1B–3B-Modelle 60–120 Tok/s für maximale Geschwindigkeit; 8 GB VRAM ermöglicht ein vollständiges Assistenten-Erlebnis. Alle Modelle laufen über Ollama — Befehle für jede Stufe enthalten.',
-      metaDescription: 'Lokale LLMs auf schwacher Hardware: CPU-only (Phi-4 Mini, 5–15 Tok/s), 4 GB VRAM (TinyLlama, 20–40 Tok/s), 8 GB VRAM (Mistral 7B Q4, 25–60 Tok/s). Hardware-Modell-Tabelle, Quantisierung, Benchmarks. Kostenlos, offline. April 2026.',
+      metaDescription: 'Lokale LLMs auf schwacher Hardware 2026: CPU-only (Phi-4 Mini, 5–15 Tok/s), 4 GB VRAM (TinyLlama), 8 GB VRAM (Mistral 7B Q4). Mit Benchmarks.',
       twitterDescription: 'CPU: Phi-4 Mini 5–15 Tok/s. 4GB GPU: TinyLlama 20–40 Tok/s. 8GB GPU: Mistral 7B 25–60 Tok/s. Kostenloser Hardware-Guide. April 2026.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-18',

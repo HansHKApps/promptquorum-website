@@ -329,7 +329,7 @@ schema: {
       title: 'Beste lokale LLM-Frontends 2026: Open WebUI, Enchanted UI und mehr',
       seoTitle: 'Beste lokale LLM-Frontends 2026: 8-Frontend-Vergleich',
       intro: 'Ein Frontend (oder Chat-Oberfläche) ist die Schnittstelle, mit der Sie mit Ihrem lokalen LLM interagieren. Ollama und LM Studio können Modelle ausführen, aber für ein poliertes Chat-Erlebnis verwenden die meisten Entwickler ein Frontend von Drittanbietern. Ab April 2026 ist Open WebUI die funktionsreichste Option (25.000+ GitHub-Sterne), Enchanted UI bietet das schnellste Lightweight-Erlebnis, und Jan AI bietet eine Offline-App-Alternative. Dieser Leitfaden vergleicht 8 Frontends nach Funktionen, Einrichtungszeit und optimalen Anwendungsfällen.',
-      metaDescription: 'Vergleich von 8 lokalen LLM-Frontends: Open WebUI (25k Sterne, RAG), Enchanted UI (schnell), Jan AI (Desktop), Continue.dev (Code) und weitere. Funktionsvergleich und Einrichtungsanleitung.',
+      metaDescription: 'Die besten lokalen LLM-Frontends 2026: Open WebUI, LM Studio, Jan, SillyTavern und mehr. Funktionen, Bedienung und Backends im Vergleich.',
       publishDate: '2026-04-04',
       readTime: '11 Min. Lesezeit',
       educationalLevel: 'Beginner to Advanced',

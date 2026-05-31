@@ -971,7 +971,7 @@ schema: {
       title: 'Was sind lokale LLMs? Wie die Ausführung von KI-Modellen auf Ihrer eigenen Hardware funktioniert',
       seoTitle: 'Was sind lokale LLMs? Vorteile, Risiken & Einstieg 2026',
       intro: 'Ein lokales LLM ist ein KI-Sprachmodell, das vollständig auf Ihrer eigenen Hardware ausgeführt wird -- keine Internetverbindung, keine API-Aufrufe, keine Daten, die Ihren Computer verlassen. Sie laden die Modellgewichte als Datei herunter, führen eine Inferenz-Engine wie Ollama oder LM Studio aus, und das Modell antwortet ausschließlich von Ihrer CPU oder GPU. Ab April 2026 sind die praktischsten Modelle für Anfänger Llama 3.2 3B und Phi-3 Mini.',
-      metaDescription: 'Klare Erklärung lokaler LLMs: vollständige Privatsphäre, keine Kosten, Offline-Nutzung. Vergleichen Sie Vor- und Nachteile und erfahren Sie, wie Sie mit Ollama und LM Studio beginnen.',
+      metaDescription: 'Was sind lokale LLMs? KI-Modelle, die offline auf Ihrer Hardware laufen. Vorteile, Funktionsweise und Einstieg in lokale Sprachmodelle ohne Cloud.',
       publishDate: '2026-04-04',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Beginner',

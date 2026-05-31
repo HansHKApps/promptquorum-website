@@ -593,7 +593,7 @@ schema: {
       title: 'Beste lokale LLMs für kreatives Schreiben 2026: Fiktion, Poesie und Long-Form-Content',
       seoTitle: 'Beste lokale LLMs für kreatives Schreiben',
       intro: 'Die besten lokalen LLMs für kreatives Schreiben 2026 sind Meta Llama 3.3 70B (beste Prosaqualität), Mistral Small 3.1 24B (beste Qualität unter 16 GB RAM) und spezialisierte Fine-Tunes wie Fimbulvetr und Midnight-Rose (optimiert für Fiktion und Roleplay). Die Qualität des kreativen Schreibens wird durch Standard-Benchmarks nicht ausreichend gemessen -- es erfordert die Bewertung von narrativer Kohärenz, stilistischer Vielfalt und Instruktionsbefolge bei offenen Prompts.',
-      metaDescription: 'Top 5 lokale LLMs für Fiktion, Poesie & Long-Form-Texte 2026. Llama 3.3 70B beste Prosa, Mistral 24B beste 16GB, Fine-Tunes für Roleplay. Nach narrativer Kohärenz bewertet.',
+      metaDescription: 'Die besten lokalen LLMs für kreatives Schreiben 2026: unzensierte Modelle und Top-Modelle für Belletristik, Rollenspiele und Storytelling.',
       publishDate: '2026-04-04',
       readTime: '8 min Lesedauer',
       educationalLevel: 'Anfänger',

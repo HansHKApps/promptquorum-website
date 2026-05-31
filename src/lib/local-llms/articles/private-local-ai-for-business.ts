@@ -286,7 +286,7 @@ de: {
       title: 'Private lokale KI für Unternehmen: On-Premises-Bereitstellung ohne Cloud',
       seoTitle: 'Lokale KI für Unternehmen 2026: DSGVO & HIPAA, $83/Monat',
       intro: 'Die Bereitstellung lokaler LLMs On-Premises eliminiert Cloud-Kosten, gewährleistet Datenschutz und gibt Ihnen vollständige Kontrolle. Im April 2026 verlagern Unternehmen die Inferenz auf On-Premises-Infrastruktur, um Vorschriften (DSGVO, HIPAA) einzuhalten und wiederkehrende API-Gebühren zu vermeiden. Dieser Leitfaden behandelt Bereitstellung, Konformität und praktische geschäftliche Anwendungsfälle.',
-      metaDescription: 'On-Premises-KI rentiert ab 200M Tokens/Monat: $83/Monat Hardware vs $1.000/Monat GPT-5 API. DSGVO, HIPAA, SOC2-konform. Llama 3.3 70B auf RTX 5090 oder vLLM-Cluster.',
+      metaDescription: 'Private lokale KI für Unternehmen 2026: DSGVO-konforme On-Premises-LLMs ohne Cloud. Datenschutz, Kosten und Setup für den Mittelstand.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-20',
       leadAnswerBlock: '**Die Bereitstellung lokaler LLMs On-Premises eliminiert Cloud-Kosten, gewährleistet Datenschutz und gibt Ihnen vollständige Kontrolle. Im April 2026 verlagern Unternehmen die Inferenz auf On-Premises-Infrastruktur, um Vorschriften einzuhalten und wiederkehrende API-Gebühren zu vermeiden.**',
