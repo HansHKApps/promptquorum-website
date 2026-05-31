@@ -464,7 +464,7 @@ jobs:
     intro:
       'Selbstgehostete lokale LLM Code Review setzt ein Qwen3-Coder Modell hinter Ihre CI/CD Pipeline, sodass jede Pull Request überprüft wird, ohne dass die Codebasis Ihr Netzwerk verlässt. Die Architektur ist unkompliziert — ein dedizierter GPU Server mit Ollama, eine benutzerdefinierte GitHub Action, die die HTTP API aufruft, und ein Review Prompt mit angepasster False-Positive Rate — und die Wirtschaftlichkeit kippen zugunsten von Self-Hosting irgendwo zwischen 15 und 25 bezahlten GitHub Seats. Dieser Leitfaden führt durch die Architektur, einen funktionierenden GitHub Actions Workflow, Hardware Dimensionierung nach Teamgröße, das Sicherheitsmodell und die operativen Fallstricke, die Teams im zweiten Monat treffen.',
     metaDescription:
-      'Selbstgehostete lokale LLM Code Review in GitHub Actions: Architektur, funktionierende Workflow YAML, Hardware Dimensionierung nach Teamgröße, Sicherheitsmodell und wirtschaftliche Kostenparität mit GitHub Advanced Security.',
+      'Selbstgehostete LLM-Code-Review in GitHub Actions: Architektur, funktionierende Workflow-YAML, Hardware-Dimensionierung nach Teamgröße und Sicherheitsmodell.',
     twitterDescription:
       'Selbstgehostete Code Review auf einem GPU Server in Ihrem Netzwerk. GitHub Actions ruft Ollama auf, Qwen3-Coder überprüft PRs, keine Codebasis verlässt Ihren Perimeter. Setup, Dimensionierung und Kostenparität im Inneren.',
     current_models_mentioned: [

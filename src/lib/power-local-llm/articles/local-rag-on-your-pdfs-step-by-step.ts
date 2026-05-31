@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'Lokales RAG auf deinen PDFs in 30 Minuten (Ollama + AnythingLLM)',
-    seoTitle: 'Lokales RAG auf PDFs in 30 Minuten 2026: Ollama + AnythingLLM',
+    seoTitle: 'Lokales RAG auf PDFs 2026: Ollama + AnythingLLM',
     intro:
       'Eine vollständige Anleitung zum schnellsten Weg zu einem funktionsfähigen persönlichen RAG-System auf einem Laptop mit 16 GB RAM. Stack: Ollama, Llama 3.3 8B, AnythingLLM, nomic-embed-text. Gesamtdauer: 30 Minuten vom leeren System bis zum Chatten mit deinen eigenen PDFs.',
     metaDescription:

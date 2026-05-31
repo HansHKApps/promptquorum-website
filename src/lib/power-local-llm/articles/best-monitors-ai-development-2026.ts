@@ -988,11 +988,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Beste Monitore für KI-Entwicklung und LLM-Arbeit 2026',
-    seoTitle: 'Bester Monitor für KI-Entwicklung 2026: 4K- und Ultrawide-Guide',
+    seoTitle: 'Bester Monitor für KI-Entwicklung 2026: 4K & Ultrawide',
     intro:
       'Die meisten Monitor-Empfehlungen für Entwickler optimieren auf Gaming-Werte, die am Schreibtisch keine Rolle spielen — Bildwiederholrate über 120 Hz, Reaktionszeit im einstelligen Millisekundenbereich. KI-Entwicklungsarbeit ist anders: Sie lesen lange Modellausgaben, überfliegen Diffs über mehrere Dateien und halten Terminal, Editor und Doku-Tab gleichzeitig sichtbar. Die Bildschirmwerte, die dieses Erlebnis tatsächlich entscheiden, sind die nutzbare Pixelfläche, die Schärfe des Panels, die Textdarstellung und der Sehkomfort über eine lange Arbeitssitzung. Dieser Leitfaden vergleicht vier Monitor-Kategorien — 4K mit 27 Zoll, 34-Zoll-Ultrawide, 40-Zoll-plus-Super-Ultrawide und Budget-1440p — anhand dieser Kriterien, mit einer klaren Empfehlung für jeden Arbeitsstil. Die hier genannten Preise sind eine Momentaufnahme vom Mai 2026; Monitorpreise schwanken mit den Verkaufszyklen, prüfen Sie also den aktuellen Preis, bevor Sie kaufen.',
     metaDescription:
-      'Vier Monitor-Kategorien für KI- und LLM-Entwicklung im Vergleich: 4K mit 27 Zoll, 34-Zoll-Ultrawide, 40-Zoll-Super-Ultrawide und Budget-1440p — mit einer Empfehlung für jeden Arbeitsstil.',
+      'Vier Monitor-Kategorien für KI-Entwicklung: 4K-27-Zoll, 34-Zoll-Ultrawide, 40-Zoll-Super-Ultrawide und Budget-1440p. Mit Empfehlung je Arbeitsstil.',
     twitterDescription:
       '4K mit 27 Zoll, 34-Zoll-Ultrawide, 40-Zoll-Super-Ultrawide, Budget-1440p — vier Monitor-Kategorien für die KI-Entwicklung, eine Regel: kaufen Sie nach nutzbarer Pixelfläche und scharfem Text, nicht nach Bildwiederholrate.',
     affiliateDisclosure: true,

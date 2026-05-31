@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Lokale LLMs lassen sich in den Schreib-Workflow für Romane und Drehbücher integrieren: Szenentwürfe, Beat Sheets, Dialogdurchläufe und Überarbeitungsrunden — ohne Internetzugang, Cloud-Logging oder Nutzungslimits. Dieser Leitfaden deckt den vollständigen Workflow ab: Modellauswahl, Kontextfensterverwaltung für Langformarbeiten, Kapitelstruktur, Szenengenerierung und Tools, die ein lokales LLM mit Ihrer Schreibsoftware verbinden.',
     metaDescription:
-      'Vollständiger Workflow für lokale LLMs beim Schreiben von Romanen und Drehbüchern: Modellauswahl, Kontextverwaltung, Kapitelstruktur, Szenengenerierung und Tool-Integrationen.',
+      'Workflow für lokale LLMs beim Roman- und Drehbuchschreiben: Modellauswahl, Kontextverwaltung, Kapitelstruktur, Szenengenerierung und Tool-Integration.',
     twitterDescription:
       'Lokale LLMs für Roman- und Drehbuchautoren: Kontextfensterverwaltung, Kapitelstruktur, Szenengenerierung, Dialogdurchläufe und Tool-Integrationen.',
     current_models_mentioned: [

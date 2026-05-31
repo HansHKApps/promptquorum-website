@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Continue.dev, Cline und Aider sind die drei ernsthaften Open-Source-Coding-Harnesses, die sich sauber mit einem lokalen LLM in 2026 kombinieren lassen. Sie sind nicht austauschbar: Jeder ist um ein anderes Workflow-Primitive herum aufgebaut — Autocomplete, autonome Agent-Schleife oder Git-natives Diff. Wählen Sie nach Workflow zuerst aus, Modell zuerst, und Sie vermeiden 90 % der Integrationsprobleme.',
     metaDescription:
-      'Continue.dev, Cline und Aider als lokale Coding Agents 2026 verglichen. Edit-Modell, IDE-Integration, Rückgängigmachen und Kontext-Strategien — nach Workflow gewählt, nicht nach Hype.',
+      'Continue.dev, Cline und Aider als lokale Coding-Agenten 2026 im Vergleich: Edit-Modell, IDE-Integration, Undo und Kontext-Strategien nach Workflow.',
     twitterDescription:
       'Drei lokale Coding-Harnesses, drei verschiedene Workflow-Primitive. Continue.dev für Autocomplete, Cline für autonome Agenten, Aider für Git-native Diffs. Fazit pro Workflow siehe unten.',
     current_models_mentioned: [

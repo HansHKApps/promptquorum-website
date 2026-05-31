@@ -394,7 +394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Beste lokale LLMs für kreatives Schreiben 2026: Belletristik, Dialog & Weltenbau',
-    seoTitle: 'Beste lokale LLMs für kreatives Schreiben 2026: Getestete Picks',
+    seoTitle: 'Beste lokale LLMs für kreatives Schreiben 2026',
     intro:
       'Beim kreativen Schreiben punkten lokale LLMs nicht nur mit Datenschutz und Kosteneffizienz. Die besten Instruct-tuned und Uncensored Open-Weight-Modelle 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command R+, Yi-1.5 34B sowie die Hermes/Dolphin-Uncensored-Derivate — liefern Belletristik, Dialog und Weltenbau, die auf den meisten Prompts mit führenden Cloud-Modellen mithalten können. Die Unterschiede liegen in der Stimmkonsistenz, der Bereitschaft für dunkle oder erwachsene Themen und der Fähigkeit, Anweisungen natürlich umzusetzen. Dieser Leitfaden testet sechs Modelle auf 50+ kreative Prompts aus Belletristik, Dialog, Poesie und Weltenbau — inklusive der optimalen Temperatur- und Top-p-Einstellungen.',
     metaDescription:

@@ -936,7 +936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Ein lokales LLM hält Ihre Prompts und Dokumente von Cloud-Servern fern, doch sobald Sie aus der Ferne auf dieses LLM zugreifen — oder nach Modellen, Gewichten und Updates suchen — verlässt Ihr Netzwerkverkehr weiterhin das Haus. Ein VPN schließt diese letzte Lücke: Es verschlüsselt die Verbindung zwischen einem entfernten Rechner und dem LLM-Server, und es verbirgt vor Ihrem Internetanbieter, welche KI-Dienste Sie ansteuern. Dieser Leitfaden vergleicht vier Verbraucher-VPN-Anbieter — ProtonVPN, NordVPN, Mullvad und Surfshark — anhand der Kriterien, die für ein KI-Datenschutz-Setup wirklich zählen: No-Logs-Richtlinie, Rechtsprechung, WireGuard-Unterstützung und Preis. Ein Vorbehalt zum Preis: Die VPN-Preise schwanken stark mit den Aktionszyklen, daher ist jede Angabe hier eine Momentaufnahme vom Mai 2026 — prüfen Sie den aktuellen Tarif auf der Anbieterseite, bevor Sie ein Abonnement abschließen.',
     metaDescription:
-      'ProtonVPN, NordVPN, Mullvad und Surfshark im Vergleich für den Schutz eines lokalen LLM-Setups: No-Logs-Richtlinie, Rechtsprechung, WireGuard und Preise (Stand Mai 2026).',
+      'ProtonVPN, NordVPN, Mullvad und Surfshark im Vergleich für lokale LLM-Setups: No-Logs, Rechtsprechung, WireGuard und Preise. Stand Mai 2026.',
     twitterDescription:
       'ProtonVPN, NordVPN, Mullvad, Surfshark — vier VPNs im Vergleich für den Datenschutz lokaler LLMs. Die Entscheidungsregel: nach Rechtsprechung und No-Logs-Nachweis wählen, nicht nach reiner Geschwindigkeit.',
     affiliateDisclosure: true,

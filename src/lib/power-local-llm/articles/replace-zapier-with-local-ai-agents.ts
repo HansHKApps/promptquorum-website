@@ -488,7 +488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Zapier durch lokale KI-Agenten ersetzen: 5 Workflows sparen €27,99/Monat (2026)',
     seoTitle: 'Zapier durch lokale KI-Agenten ersetzen 2026 ohne Cloud',
     intro: 'Zapier Pro kostet €27,99/Monat für 2.000 Tasks. Eine selbstgehostete n8n-Instanz plus Ollama mit Llama 3.2 3B ersetzt die fünf Workflows, auf die die meisten Benutzer angewiesen sind — Gmail-Triage, RSS-Zusammenfassungen, Kalender-Erinnerungen, Datei-Sicherung und Content-Planung — für €0/Monat nach der Hardware. Dieser Leitfaden zeigt den genauen Stack, Einrichtungs-Checklisten pro Workflow, ehrliche Zuverlässigkeitszahlen aus einem 30-Tage-Test und die Grenzen, wo Zapier immer noch gewinnt (verwaltetes OAuth, öffentliche Webhooks ohne Tunnel).',
-    metaDescription: 'Ersetzen Sie 5 Zapier-Workflows mit lokalen KI-Agenten mit n8n + Ollama. Einrichtungszeit, €27,99/Monat Ersparnis, 30-Tage-Zuverlässigkeitstest, ehrliche Grenzen.',
+    metaDescription: '5 Zapier-Workflows mit lokalen KI-Agenten ersetzen (n8n + Ollama): Einrichtungszeit, 27,99 €/Monat Ersparnis, 30-Tage-Test und ehrliche Grenzen.',
     twitterDescription: 'Hosten Sie 5 Zapier-Workflows selbst mit n8n + Ollama + Llama 3.2. Kostenrechnung, Einrichtungs-Checklisten und was noch die Cloud braucht.',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen2.5 7B', 'Phi-3.5 Mini 3.8B'],
     current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],

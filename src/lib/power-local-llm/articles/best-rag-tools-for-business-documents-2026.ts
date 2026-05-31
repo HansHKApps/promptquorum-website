@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'RAG & Document Chat',
     title: 'Beste RAG-Tools für Geschäftsdokumente 2026',
     seoTitle: 'Beste RAG-Tools für Geschäftsdokumente 2026',
-    metaDescription: 'Beste RAG-Tools für Geschäftsdokumente 2026: AnythingLLM, PrivateGPT, Open WebUI und mehr. Genauigkeit, Datenschutz und Integration für Unternehmen im Vergleich.',
+    metaDescription: 'Beste RAG-Tools für Geschäftsdokumente 2026: AnythingLLM, PrivateGPT, Open WebUI und mehr. Genauigkeit, Datenschutz und Integration im Vergleich.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

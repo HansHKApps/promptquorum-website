@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Uncensored lokale LLMs ermöglichen Autoren, reife, moralisch komplexe und düstere Inhalte zu generieren, die Cloud-Dienste ablehnen — ohne dass Daten dein Gerät verlassen. Dieser Leitfaden behandelt die geeigneten Modelle, die Einrichtung über Ollama oder LM Studio, die ethischen Verantwortlichkeiten die auch ohne ToS-Durchsetzung gelten, und die spezifischen Anwendungsfälle, für die Uncensored-Modelle geeignet bzw. ungeeignet sind.',
     metaDescription:
-      'Uncensored lokale LLMs für kreatives Schreiben: welche Modelle, Ollama-Einrichtung, ethische Pflichten, zulässige Anwendungsfälle und was Autoren trotzdem beachten müssen.',
+      'Unzensierte lokale LLMs für kreatives Schreiben: welche Modelle, Ollama-Setup, ethische Pflichten, zulässige Anwendungsfälle und was Autoren beachten müssen.',
     twitterDescription:
       'Uncensored lokale LLMs für Belletristik-Autoren — welche Modelle, Ollama-Einrichtung und die echten Ethik-Fragen: Wann sie geeignet sind und welche Verantwortung Autoren trotzdem tragen.',
     current_models_mentioned: [

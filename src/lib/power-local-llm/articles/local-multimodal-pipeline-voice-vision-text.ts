@@ -574,7 +574,7 @@ if __name__ == "__main__":
     intro:
       'Eine lokale multimodale KI-Pipeline kombiniert separate spezialisierte Modelle für jede Modalität — whisper.cpp für Spracheingabe, LLaVA oder Llama 3.2 Vision für Bildverständnis, ein Ollama LLM für Textreasoning und Piper TTS für Sprachausgabe — orchestriert zu einem kohärenten System, das 100 % offline arbeitet. Dies ist das lokale Äquivalent zu GPT-4os multimodalen Fähigkeiten: kein einzelnes Modell versteht alles, aber der Orchestrator leitet jeden Eingabetyp an das richtige Modell weiter und kombiniert die Ausgaben. Dieser Leitfaden zeigt, wie Sie lokale multimodale Pipeline-Funktionen aus diesen Open-Source-Komponenten aufbauen — mit Abdeckung der Architektur, des Component-Stacks, Hardware-Tiers, fünf praktischer Use Cases und eines Python-Async-Orchestrators, der Sprach- und Vision-Eingaben parallel verarbeitet.',
     metaDescription:
-      'Lokale multimodale KI-Pipeline 2026 aufbauen: whisper.cpp für Spracheingabe, LLaVA 1.6 für Vision, Ollama für Textreasoning, Piper TTS für Sprachausgabe. Architektur, Hardware-Tiers, Use Cases und Python-Orchestrator-Code. Vollständig offline.',
+      'Lokale multimodale KI-Pipeline 2026: whisper.cpp (Sprache), LLaVA 1.6 (Vision), Ollama (Text) und Piper TTS. Architektur, Hardware-Tiers und Code. Offline.',
     twitterDescription:
       'Lokale multimodale KI 2026: Whisper STT + LLaVA Vision + Ollama LLM + Piper TTS in einer Offline-Pipeline kombinieren. Architektur-Leitfaden, Hardware-Tiers und Python-Code.',
     readTime: '18 Min. Lesezeit',

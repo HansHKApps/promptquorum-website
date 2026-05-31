@@ -10,7 +10,7 @@
  *   - languages: full set of 5 language URLs + x-default (always EN)
  */
 
-import { ALL_LANGS, type Lang } from '@/lib/i18n/constants'
+import { ALL_LANGS, toOutputLocale, type Lang } from '@/lib/i18n/constants'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -27,7 +27,8 @@ export function powerLLMAlternates(selectedLang: Lang, slug?: string) {
     canonical: `${BASE}${pathFor(selectedLang, slug)}`,
     languages: {
       ...Object.fromEntries(
-        langs.map((l) => [l, `${BASE}${pathFor(l, slug)}`])
+        // hreflang VALUE is the outward-facing locale (pt → pt-BR); the /pt path is unchanged.
+        langs.map((l) => [toOutputLocale(l), `${BASE}${pathFor(l, slug)}`])
       ),
       'x-default': `${BASE}${pathFor('en', slug)}`,
     },

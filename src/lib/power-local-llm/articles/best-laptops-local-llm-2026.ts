@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Die meisten Laptop-Empfehlungen für lokale LLMs beginnen bei der GPU und hören dort auch wieder auf. Die Kennzahl, die tatsächlich darüber entscheidet, welches Modell passt, ist der Arbeitsspeicher: VRAM bei einem Windows-Gaming-Laptop oder Unified Memory bei Apple Silicon — und ein Modell, das nicht in den Speicher passt, lädt entweder gar nicht erst oder kriecht über Swap dahin. Dieser Leitfaden vergleicht vier Laptop-Familien anhand von drei Kaufstilen: ein Apple MacBook Pro für den meisten Arbeitsspeicher in einem portablen Gehäuse, ein Lenovo ThinkPad oder ein ASUS-ROG-Gaming-Laptop für NVIDIA-GPU-Geschwindigkeit und ein Framework Laptop 16 für Reparierbarkeit und Aufrüstbarkeit. Rechnen Sie damit, dass ein portables Gerät 20-30 % langsamer läuft als ein Desktop mit demselben Chip, weil thermische Grenzen es ausbremsen. Die Preise hier sind eine Momentaufnahme vom Mai 2026 — Laptop-Preise bewegen sich mit Modellzyklen und Aktionen, prüfen Sie also den aktuellen Preis, bevor Sie kaufen.',
     metaDescription:
-      'Vier Laptop-Familien für lokale LLMs im Vergleich: MacBook Pro, Lenovo ThinkPad, ASUS ROG und Framework 16. Kaufen Sie zuerst nach Speicher — VRAM oder Unified Memory entscheidet, welches Modell passt.',
+      'Vier Laptop-Familien für lokale LLMs im Vergleich: MacBook Pro, ThinkPad, ASUS ROG und Framework 16. Erst nach Speicher kaufen – VRAM entscheidet.',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — vier Laptop-Familien für lokale LLMs, eine Regel: nach Speicher kaufen. VRAM oder Unified Memory entscheidet über das passende Modell, nicht der GPU-Name.',
     affiliateDisclosure: true,

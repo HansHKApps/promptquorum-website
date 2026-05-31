@@ -637,7 +637,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     intro:
       'Lokale LLMs produzieren messbar bessere Belletristik, wenn sie strukturierte Prompts statt offener Anfragen erhalten. Dieser Leitfaden enthält 15 Prompt-Vorlagen, die funktionieren — für Szenen-Schreiben, Charakterentwicklung, Dialog, Weltenbau, Stiltransfer, Überarbeitung und redaktionelle Aufgaben — alle getestet mit Llama 3.3 70B, Qwen3 32B und Mistral Large lokal über Ollama oder LM Studio. Jede Vorlage ist kopierfertig und enthält Hinweise zur Genre-Anpassung.',
     metaDescription:
-      '15 Prompt-Vorlagen für Belletristik-Autoren mit lokalen LLMs. Szenen-Schreiben, Charakterentwicklung, Dialog, Weltenbau, Stiltransfer, Überarbeitung und redaktionelle Vorlagen — kopierfertig für Ollama und LM Studio.',
+      '15 Prompt-Vorlagen für Belletristik-Autoren mit lokalen LLMs: Szenen, Charaktere, Dialog, Weltenbau und Überarbeitung – kopierfertig für Ollama und LM Studio.',
     twitterDescription:
       '15 Prompt-Vorlagen für lokale LLM-Belletristik: Szenen, Dialog, Charakterentwicklung, Weltenbau, Stiltransfer, Überarbeitung, Lektorat. Getestet mit Llama 3.3 70B, Qwen3 32B.',
     current_models_mentioned: [

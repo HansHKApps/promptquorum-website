@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Die Ausführung einer lokalen KI auf einem Tablet ist 2026 auf High-End-iPads und Android-Geräten mit 8 GB+ RAM praktisch. Diese Anleitung behandelt die Optionen: lokale Inferenz auf iPad mit Pocket Paladin und LLM Farm, Termux + Ollama auf Android sowie die Remote-Verbindungsmöglichkeit (Verbindung eines Tablets mit einem Mac oder PC, auf dem Ollama über lokales Wi-Fi ausgeführt wird) für Geräte, die keine lokale Inferenz durchführen können.',
     metaDescription:
-      'So führen Sie KI lokal auf einem iPad oder Android-Tablet 2026 aus. Lokale Inferenz-Apps, Termux + Ollama auf Android und Remote-Verbindung zu einem Home-Mac oder PC erklärt.',
+      'KI lokal auf iPad oder Android-Tablet ausführen 2026: lokale Inferenz-Apps, Termux + Ollama auf Android und Remote-Verbindung zu Mac oder PC.',
     twitterDescription:
       'KI auf Ihrem iPad oder Android-Tablet 2026 ausführen: lokale Inferenz (Pocket Paladin, LLM Farm, Termux+Ollama), Remote-Verbindung zu einem Home-Mac/PC und Modellauswahl pro Gerät.',
     current_models_mentioned: [

@@ -608,7 +608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Entscheidungsleitfaden für Poweruser mit 1.000-10.000+ persönlichen Dokumentenbeständen – Forschungsbibliotheken, Rechtsarchive, interne Wikis. Standardeinstellungen scheitern um 5.000 Chunks; dieser Artikel zeigt die vier Skalierungspfade (AnythingLLM optimiert, LlamaIndex lokal, Ollama+ChromaDB benutzerdefiniert, Ollama+Qdrant Produktion) mit gemessener Latenz, Speicher und Indexierungs-Benchmarks bei 100, 1.000 und 10.000 Dokumenten.',
     metaDescription:
-      'Skalierung von lokalem RAG auf 1.000-10.000+ PDFs. Architektur-Entscheidungsbaum, gemessene Benchmarks, Speicher und Latenz bei 100/1k/10k Dokumenten über AnythingLLM, LlamaIndex, ChromaDB, Qdrant. Mai 2026.',
+      'Lokales RAG auf 1.000–10.000+ PDFs skalieren: Architektur, Benchmarks, Speicher und Latenz über AnythingLLM, LlamaIndex, ChromaDB und Qdrant. Mai 2026.',
     twitterDescription:
       'Wenn Standard-RAG scheitert: Skalierung von persönlichem Dokument-Chat auf 1.000-10.000 PDFs lokal. Architektur-Entscheidungsbaum + gemessene Benchmarks über vier Open-Source-Stacks. Mai 2026.',
     current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],

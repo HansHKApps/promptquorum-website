@@ -444,7 +444,7 @@ if __name__ == "__main__":
     intro:
       'Ein vollständig offline arbeitender Sprachassistent kombiniert 2026 drei Komponenten: whisper.cpp für die Spracherkennung, ein lokales LLM (Llama 3.1 8B, Phi-4 oder Mistral 7B via Ollama) für die Verarbeitung und Piper TTS für die Sprachausgabe. Die End-to-End-Latenz auf einem Desktop-GPU-Setup beträgt 1–2 Sekunden – vergleichbar mit Alexa oder Google Assistant. Auf dem Mac Mini M5 liegt sie unter 1,5 Sekunden. Auf dem Raspberry Pi 5 beträgt sie 5–8 Sekunden – nutzbar für Anfragen ohne Bildschirm, nicht für natürliche Konversation. Dieser Leitfaden führt durch jeden Schritt mit Hardware-Tabellen, Python-Orchestrator-Code, Wake-Word-Setup und Latenzoptimierungsmaßnahmen.',
     metaDescription:
-      'Vollständig offline Sprachassistenten bauen 2026 mit whisper.cpp für STT, Ollama + Llama 3.1 8B für die Verarbeitung und Piper TTS für die Sprachausgabe. Schritt-für-Schritt-Anleitung mit Hardwareanforderungen, Python-Code, Wake-Word-Setup und Latenzoptimierung.',
+      'Offline-Sprachassistent bauen 2026: whisper.cpp (STT), Ollama + Llama 3.1 8B und Piper TTS. Anleitung mit Hardware, Python-Code und Wake-Word-Setup.',
     twitterDescription:
       'DIY offline Sprachassistent 2026: Whisper STT + lokales LLM + Piper TTS. Keine Cloud, kein Abonnement. Vollständige Bauanleitung mit Hardware-Spezifikationen, Python-Code und Wake-Word-Setup.',
     readTime: '14 Min. Lesezeit',
