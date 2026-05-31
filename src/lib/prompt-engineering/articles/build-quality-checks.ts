@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'KI-Build-Quality-Checks: Halluzinationen und gefälschte Abhängigkeiten erkennen',
       seoTitle: 'KI-Code-Qualitätsprüfung: Halluzinationen in CI/CD erkennen',
-      metaDescription: 'KI-gestützten Code absichern: Abhängigkeitsprüfung, API-Validierung, Slopsquatting-Erkennung und Multi-Modell-Review in Ihrer CI/CD-Pipeline. Schritt-für-Schritt-Leitfaden. April 2026.',
+      metaDescription: 'KI-Code absichern: Abhängigkeitsprüfung, API-Validierung, Slopsquatting-Erkennung und Multi-Modell-Review in der CI/CD-Pipeline. Schritt für Schritt.',
       ogTitle: '3 Wege, wie KI-generierter Code Ihre CI/CD-Pipeline bricht – und wie Sie es beheben',
       ogDescription: 'KI-generierter Code kompiliert sauber, erfindet aber Pakete und APIs, die nicht existieren. Herkömmliche Tests erkennen das nicht. So bauen Sie Gates, die diese Fehler vor dem Merge abfangen.',
       twitterTitle: 'Ihre CI/CD erkennt keine KI-Halluzinationen. Das sollten Sie hinzufügen',
