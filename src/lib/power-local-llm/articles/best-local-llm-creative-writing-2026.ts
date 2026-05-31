@@ -1950,7 +1950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Mejores LLM locales para escritura creativa 2026: ficción, diálogo y construcción de mundos',
-    seoTitle: 'Mejores LLM locales para escritura creativa 2026',
+    seoTitle: 'Mejores LLM locales para escritura creativa 2026: 6 modelos',
     intro:
       'La escritura creativa es la carga de trabajo en la que los LLM locales ganan por más que solo privacidad y precio. Los mejores modelos de peso abierto con ajuste de instrucciones y sin censura de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command R+, Yi-1.5 34B y los derivados sin censura Hermes/Dolphin — producen ficción, diálogo y construcción de mundos que se mantiene a la par de los modelos cloud de frontera en la mayoría de los prompts. Las diferencias están en la consistencia de voz, la disposición para manejar temas oscuros o para adultos y la naturalidad con que siguen instrucciones. Esta guía prueba seis modelos en más de 50 prompts creativos de ficción, diálogo, poesía y construcción de mundos, con los valores de temperatura y top-p que requiere cada uno.',
     metaDescription:
