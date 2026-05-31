@@ -336,7 +336,7 @@ schema: {
       title: 'Consumo de Energía de LLMs Locales 2026: RTX 4090, RTX 5090 y M5 Max Comparados',
       seoTitle: 'Consumo energético LLM local 2026: RTX 4090 575W = $52/mes',
       intro: 'Ejecutar LLMs locales consume una cantidad significativa de energía. La RTX 4090 consume 575W bajo carga (se requiere fuente de 1200W, $52/mes a $0.12/kWh). La RTX 5090 consume 575W con 32 GB de VRAM GDDR7. Apple M5 Max ejecuta modelos 7B con solo 30W en total — 10× más eficiente energéticamente por token que NVIDIA. A partir de abril de 2026, comprender los requisitos de energía previene daños en el hardware y ayuda a planificar los costos de electricidad en mercados de EE.UU., UE, Japón y China.',
-      metaDescription: 'RTX 4090: 575W, $52/mes. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× más eficiente por token). Se requiere fuente 1200W. Refrigeración y costos regionales incluidos.',
+      metaDescription: 'RTX 4090: 575 W, $52/mes. RTX 5090: 575 W, 32 GB GDDR7. M5 Max: 30 W (10× más eficiente por token). Fuente 1200 W. Refrigeración y costos regionales.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-25',
       leadAnswerBlock: '**Ejecutar LLMs locales consume una cantidad significativa de energía. La RTX 4090 consume 575W bajo carga (se requiere fuente de 1200W, $52/mes a $0.12/kWh). La RTX 5090 consume 575W con 32 GB de VRAM GDDR7. Apple M5 Max ejecuta modelos 7B con solo 30W en total — 10× más eficiente energéticamente por token que NVIDIA. A partir de abril de 2026, comprender los requisitos de energía previene daños en el hardware y ayuda a planificar los costos de electricidad.**',

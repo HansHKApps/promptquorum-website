@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
   theme: 'Tools & Platforms',
   title: 'Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso',
-  seoTitle: 'Mejores herramientas de prompt engineering 2026: 6 comparadas por tipo de problema',
+  seoTitle: 'Mejores herramientas de prompt engineering 2026: 6 opciones',
   metaDescription: 'Promptfoo es gratis. Braintrust desde $249/mes. Vellum desde $500. Comparativa de 6 herramientas de PE clasificadas según el problema que resuelven en 2026.',
   ogTitle: '6 herramientas de prompt engineering clasificadas — ¿cuál resuelve tu cuello de botella?',
   ogDescription: 'Evaluación, testing, versionado, producción, despacho multi-modelo. Una herramienta por tarea. Tabla comparativa incluida.',

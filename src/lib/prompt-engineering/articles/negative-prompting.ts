@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   title: 'Negative prompting: dile a la IA lo que NO debe hacer',
   intro: 'El negative prompting es una técnica en la que le dices al modelo lo que debe evitar — contenido, estilo, estructura o comportamientos — para que las salidas se mantengan dentro de límites claros. Actúa como una "capa de protección" sobre tus instrucciones habituales.',
   seoTitle: 'Negative Prompting 2026: protege tus salidas de IA',
-  metaDescription: 'El negative prompting le dice a la IA qué evitar: contenido, estilo, estructura, comportamientos. Previene salidas no deseadas. Guía completa con ejemplos de prompts.',
+  metaDescription: 'El negative prompting le dice a la IA qué evitar: contenido, estilo, estructura y comportamientos. Previene salidas no deseadas. Guía con ejemplos.',
   publishDate: '2026-03-26',
   dateModified: '2026-05-04',
   lastFactChecked: '2026-05-04',

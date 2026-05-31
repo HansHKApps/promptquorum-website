@@ -252,6 +252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
   theme: 'Techniques',
   title: 'Zero-Shot vs. Few-Shot Prompting',
+  seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: cuál usar',
   intro: 'El Zero-Shot Prompting no incluye ejemplos en el prompt y depende completamente del conocimiento previo del modelo, mientras que el Few-Shot Prompting incorpora algunos ejemplos para que el modelo pueda imitar un patrón deseado.',
   publishDate: '2026-03-26',
   readTime: '6 min de lectura',

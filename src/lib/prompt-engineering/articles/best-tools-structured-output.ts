@@ -662,8 +662,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     theme: 'Tools & Platforms',
     title: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
-    seoTitle: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
-    metaDescription: '6 herramientas de structured output comparadas: Instructor, Outlines, Pydantic AI, LangChain, Marvin, PromptQuorum. Tabla lado a lado: precios, soporte de modelos locales.',
+    seoTitle: 'Mejores herramientas de Structured Output y JSON Mode 2026',
+    metaDescription: '6 herramientas de structured output comparadas: Instructor, Outlines, Pydantic AI, LangChain, Marvin y PromptQuorum. Precios y soporte de modelos locales.',
     ogTitle: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
     ogDescription: '6 herramientas de structured output LLM comparadas: Instructor para reintentos, Outlines para constrained decoding, Pydantic AI para agentes. Testea consistencia con PromptQuorum.',
     twitterTitle: 'Mejores herramientas para Structured Output y JSON Mode (2026)',

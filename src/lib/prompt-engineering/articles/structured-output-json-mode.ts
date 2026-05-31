@@ -740,8 +740,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-26',
       dateModified: '2026-04-05',
       readTime: '10 min de lectura',
-      seoTitle: 'Salida estructurada y modo JSON en LLMs: uso, ejemplos y comparación',
-      metaDescription: 'Aprende cuándo usar salida estructurada, modo JSON o llamada a funciones. Compara el cumplimiento JSON por modelo, ve ejemplos reales y domina el diseño de esquemas para APIs y pipelines de datos.',
+      seoTitle: 'Salida estructurada y modo JSON en LLMs: guía completa',
+      metaDescription: 'Aprende cuándo usar salida estructurada, modo JSON o llamada a funciones. Compara el cumplimiento JSON por modelo y domina el diseño de esquemas para APIs.',
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',

@@ -979,7 +979,7 @@ schema: {
       title: 'LLMs Locales con VS Code y Cursor: Configuración y Mejores Prácticas',
       seoTitle: 'LLMs Locales en VS Code y Cursor: Guía de Configuración 2026',
       intro: 'VS Code y Cursor (un editor de código orientado a la IA) pueden usar LLMs locales para completar y sugerir código, mediante la extensión Continue.dev (VS Code) o la integración directa (Cursor). A partir de abril de 2026, las completaciones de código locales son prácticas para modelos 7B-13B y requieren 8-16 GB de RAM. Esta guía cubre la configuración, los mejores modelos y el ajuste del rendimiento.',
-      metaDescription: 'Usa Ollama con VS Code mediante Continue.dev para completaciones de código locales sin necesidad de clave API. Mejores modelos, requisitos de VRAM e integración con Cursor para 2026.',
+      metaDescription: 'Usa Ollama en VS Code con Continue.dev para completados de código locales sin clave API. Mejores modelos, requisitos de VRAM e integración con Cursor 2026.',
       publishDate: '2026-04-04',
       readTime: '10 min de lectura',
       educationalLevel: 'Intermediate',

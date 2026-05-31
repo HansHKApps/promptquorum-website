@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       dateModified: '2026-04-12',
       seoTitle: 'Costes y límites de tokens de IA explicados 2026',
-      metaDescription: 'Cada prompt usa tokens — la unidad que controla los costes y límites de la IA. Entiende el conteo de tokens, los precios para GPT-4o/Claude/Gemini y la opción de LLM local.',
+      metaDescription: 'Cada prompt usa tokens, la unidad que controla los costes y límites de la IA. Entiende el conteo, los precios de GPT-4o/Claude/Gemini y el LLM local.',
       readTime: '13 min de lectura',
       schema: {
         '@context': 'https://schema.org',

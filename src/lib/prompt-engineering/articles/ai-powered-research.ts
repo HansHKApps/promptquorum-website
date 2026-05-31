@@ -1083,7 +1083,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-04',
       readTime: '9 min de lectura',
       seoTitle: 'Investigación con IA: Verifica Citas y Evita Alucinaciones',
-      metaDescription: 'Reduce la revisión bibliográfica de semanas a horas. Detecta alucinaciones (9,2 %), verifica citas con Elicit, Consensus, scite.ai. Domina los flujos de trabajo de investigación.',
+      metaDescription: 'Reduce la revisión bibliográfica de semanas a horas. Detecta alucinaciones (9,2 %) y verifica citas con Elicit, Consensus y scite.ai. Flujos con IA.',
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',

@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Tools & Platforms',
     title: 'Optimización manual vs automatizada de prompts: cuándo iterar, cuándo automatizar',
     seoTitle: 'Optimización manual vs automatizada: elige tu enfoque',
-    metaDescription: 'Optimización manual vs automatizada de prompts: elige según el número de prompts y recursos. Cuándo iterar a mano, cuándo automatizar. Framework de decisión y comparativa.',
+    metaDescription: 'Optimización manual vs automatizada de prompts: elige según el número de prompts y recursos. Cuándo iterar a mano y cuándo automatizar. Con framework.',
     intro: '**La optimización de prompts puede ser manual (tú reescribes el prompt) o automatizada (un framework lo reescribe por ti).** La optimización manual te da control pero escala solo hasta ~50 prompts en producción. La optimización automatizada (DSPy, TextGrad, Promptfoo) escala a 100+ prompts pero requiere datos de entrenamiento etiquetados y definiciones de métricas. Esta guía muestra cuándo usar cada enfoque y cómo funcionan juntos.',
     publishDate: '2026-04-26',
     dateModified: '2026-05-05',

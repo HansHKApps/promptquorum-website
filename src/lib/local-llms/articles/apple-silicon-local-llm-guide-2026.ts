@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple Silicon para LLMs locales 2026: Guía completa de M1 a M5 Max',
     seoTitle: 'Apple Silicon 2026: M5 Pro vs M5 Max para LLMs locales',
     intro: 'Guía completa para ejecutar LLMs locales en Apple Silicon en 2026. Compara los chips M1 hasta M5 Max con niveles de memoria unificada, benchmarks de aceleración GPU Metal, análisis de consumo energético y recomendaciones de modelos por configuración de Mac. Incluye diagrama de decisión entre MacBook Pro, Mac Mini y Mac Studio, comparación de frameworks (Ollama vs MLX vs llama.cpp) y escenarios reales (agente de código, pipeline RAG, asistente de voz, multimodal). Cubre por qué la memoria unificada de Apple Silicon elimina los cuellos de botella de VRAM que afectan a las GPUs discretas, permitiendo modelos de 70B en hardware de consumo sin configuración de drivers.',
-    metaDescription: 'M5 Pro ejecuta modelos 34B a 15–20 tok/s por $1,400. M5 Max ejecuta modelos 70B a 12–18 tok/s por $3,500. Guía completa con benchmarks, niveles de memoria y diagrama de selección de Mac. Los precios pueden variar según tu país.',
+    metaDescription: 'M5 Pro ejecuta 34B a 15–20 tok/s ($1,400); M5 Max corre 70B a 12–18 tok/s ($3,500). Benchmarks, niveles de memoria y guía de selección de Mac.',
     twitterDescription: 'Apple Silicon para LLMs locales: M1→M5 Max, memoria unificada, GPU Metal, mejores modelos, MLX vs Ollama. Guía completa 2026.',
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',

@@ -613,8 +613,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     theme: 'Tools & Platforms',
     title: 'Mejores IDEs y editores de prompt engineering 2026',
-    seoTitle: 'Mejores IDEs y editores de prompt engineering 2026: guía en 6 herramientas',
-    metaDescription: 'Cursor cuesta $20/mes; LM Studio es $0 tras la inversión en hardware. Seis IDEs de prompt engineering, cada uno optimizado para un caso de uso diferente. Aquí tienes cuál encaja con el tuyo.',
+    seoTitle: 'Mejores IDEs de prompt engineering 2026: 6 herramientas',
+    metaDescription: 'Cursor cuesta $20/mes; LM Studio, $0 tras invertir en hardware. Seis IDEs de prompt engineering, cada uno para un caso de uso. Descubre cuál encaja contigo.',
     ogTitle: 'Mejores IDEs y editores de prompt engineering 2026: guía',
     ogDescription: 'Cursor, LM Studio, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio — seis opciones de IDE, cada una para un flujo de trabajo diferente. Encuentra el tuyo.',
     twitterTitle: 'Mejores IDEs y editores de prompt engineering 2026: guía',

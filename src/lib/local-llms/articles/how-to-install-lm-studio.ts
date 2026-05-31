@@ -274,7 +274,7 @@ schema: {
       freshness_tier: 'annual',
       theme: 'Getting Started',
       title: 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
-      seoTitle: 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
+      seoTitle: 'Instalar LM Studio: guía GUI para macOS, Windows y Linux',
       intro: 'LM Studio es una aplicación de escritorio que te permite explorar, descargar y ejecutar LLMs locales a través de una interfaz gráfica, sin necesidad de comandos en la terminal. Funciona en macOS, Windows y Linux, e incluye una interfaz de chat integrada y un servidor local compatible con OpenAI. A partir de abril de 2026, LM Studio admite cualquier modelo GGUF cuantizado de Hugging Face.',
       metaDescription: 'Instala LM Studio en macOS, Windows o Linux: descarga un modelo y empieza a chatear en 5 minutos. Sin terminal. Guía para principiantes 2026.',
       publishDate: '2026-04-04',

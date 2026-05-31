@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '7 min de lectura',
       educationalLevel: 'Intermediate',
       seoTitle: 'El Framework CRAFT: Contexto, Rol, Audiencia 2026',
-      metaDescription: 'Framework CRAFT (Contexto, Rol, Audiencia, Formato, Tono): escribe copy de IA con identidad de marca usando 5 campos estructurados. Plantillas, ejemplos y comparación con CO-STAR.',
+      metaDescription: 'Framework CRAFT (Contexto, Rol, Audiencia, Formato, Tono): escribe copy de IA con identidad de marca en 5 campos. Plantillas y comparación con CO-STAR.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

@@ -364,7 +364,7 @@ schema: {
       title: 'Configuración de ventana de contexto en Ollama: 64K–1M tokens en Strix Halo, RTX, Mac 2026',
       seoTitle: 'LLM local contexto largo 2026: 64K a 1M tokens en Ollama',
       intro: 'La revolución del contexto 2026 ya llegó. Llama 4 Scout soporta hasta 10M de tokens de contexto (práctico: 256K-1M), DeepSeek V4-Flash entrega 1M de tokens, y Qwen 3.6 soporta 256K tokens nativamente (extensible a 1M mediante YaRN). Aunque la mayoría de los modelos 7B-8B se estabilizan en 16K-32K de contexto práctico, los nuevos modelos MoE llevan los límites prácticos a 256K-1M tokens en hardware de consumo. Ollama usa 2048 tokens por defecto -- esta guía muestra qué modelos soportan qué, los requisitos de RAM en cada nivel y cómo configurar el contexto largo.',
-      metaDescription: 'Configura ventanas de contexto de Ollama en Strix Halo, RTX 4090, Apple Silicon: 64K, 128K, 256K, 1M tokens. Ajustes num_ctx, VRAM por plataforma, límites Vulkan.',
+      metaDescription: 'Configura ventanas de contexto en Ollama (Strix Halo, RTX 4090, Apple Silicon): 64K, 128K, 256K y 1M tokens. Ajustes num_ctx, VRAM y límites Vulkan.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Llama 4 Scout soporta hasta 10M de tokens de contexto (práctico: 256K-1M en hardware de consumo). DeepSeek V4-Flash entrega 1M de tokens. Qwen 3.6 soporta 256K de forma nativa (extensible a 1M mediante YaRN). Mientras los modelos 7B-8B se mantienen fiables en 16K-32K tokens, los nuevos modelos MoE y variantes de 70B+ extienden los límites prácticos a 256K-1M. Ollama usa 2048 por defecto -- establece num_ctx explícitamente para usar contexto largo.**',
       nextStep: {

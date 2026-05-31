@@ -590,7 +590,7 @@ schema: {
       title: 'Cuantización de LLM: Q4 vs Q5 vs Q8 explicada (cuándo usar cada una)',
       seoTitle: 'Cuantización LLM 2026: Q4_K_M vs Q8_0 — Guía de VRAM',
       intro: 'Guía completa para elegir la cuantización de LLM adecuada para tu hardware: Q4_K_M para 6–8 GB de VRAM, Q5_K_M para 16 GB, Q8_0 para 24+ GB. Incluye el formato GGUF explicado, desglose de pérdida de calidad por nivel de cuantización y técnicas avanzadas (CPU offloading y layer splitting multi-GPU). Aprende a ejecutar Llama 3.3 70B en RTX 4090 mediante offloading, 2× RTX 4090 mediante layer splitting o Mac Studio M2 Ultra de forma nativa. Actualizado mayo 2026.',
-      metaDescription: 'Entiende la cuantización de LLM en 2026: diferencias entre Q4_K_M, Q5_K_M y Q8_0. Ahorro de memoria, compromisos de calidad, tabla de tamaños de modelos y recomendaciones por caso de uso.',
+      metaDescription: 'Entiende la cuantización de LLM en 2026: Q4_K_M, Q5_K_M y Q8_0. Ahorro de memoria, compromisos de calidad y recomendaciones por caso de uso.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen2.5', 'Mistral'],

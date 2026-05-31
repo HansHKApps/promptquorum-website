@@ -261,7 +261,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: '¿Qué son los LLM locales? Cómo ejecutar modelos de IA en tu propio hardware',
-      seoTitle: '¿Qué son los LLM locales? Cómo los modelos de IA se ejecutan en tu hardware',
+      seoTitle: '¿Qué son los LLM locales? IA que corre en tu hardware',
       intro: 'Un LLM local es un modelo de lenguaje de IA que se ejecuta completamente en tu propio hardware: sin conexión a internet, sin llamadas a API, sin datos que abandonen tu máquina. Descarga los pesos del modelo como un archivo, ejecuta un motor de inferencia como Ollama o LM Studio, y el modelo responde desde tu CPU o GPU. A partir de abril de 2026, los modelos más prácticos para principiantes son Llama 3.2 3B y Phi-3 Mini.',
       metaDescription: 'Los LLM locales ejecutan modelos de IA en tu propio hardware, sin necesidad de internet. Aprende qué son, cómo funcionan y cuándo usarlos. Guía para 2026.',
       leadAnswerBlock: '**Los LLM locales ejecutan toda la inferencia en tu propio hardware con coste cero por token y privacidad total.** Las API en la nube (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) ofrecen mayor calidad con una configuración mínima.',

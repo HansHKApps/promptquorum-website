@@ -355,9 +355,9 @@ schema: {
   es: {
     theme: 'Getting Started',
     title: 'Lista de Verificación de Seguridad y Privacidad para LLMs Locales: 12 Pasos para una Configuración Segura',
-    seoTitle: 'Mantén tus Datos Privados: Guía de Seguridad para LLMs Locales 2026',
+    seoTitle: 'Seguridad de LLMs locales 2026: mantén tus datos privados',
     intro: 'Ejecutar un LLM local mantiene tus prompts fuera de servidores externos, pero no hace que tu configuración sea automáticamente segura. Riesgos como la telemetría, archivos de modelos no confiables y APIs expuestas pueden seguir filtrando datos. Esta lista de verificación muestra exactamente cómo proteger un LLM local en menos de 10 minutos.',
-    metaDescription: 'Lista de 12 pasos: deshabilita telemetría, verifica checksums, aísla el puerto 11434, habilita cifrado de disco. Cumplimiento GDPR e HIPAA. Configuración air-gapped. 2026.',
+    metaDescription: 'Lista de 12 pasos: desactiva telemetría, verifica checksums, aísla el puerto 11434 y cifra el disco. Cumplimiento GDPR e HIPAA. Configuración air-gapped.',
     twitterDescription: 'Lista de verificación de seguridad para LLMs locales en 12 pasos: deshabilita telemetría, verifica checksums, aísla el puerto 11434, habilita cifrado de disco. GDPR e HIPAA incluidos.',
     publishDate: '2026-04-04',
     dateModified: '2026-04-18',

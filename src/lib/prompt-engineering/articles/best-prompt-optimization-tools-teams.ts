@@ -920,9 +920,9 @@ tests:
   es: {
     theme: 'Tools & Platforms',
     title: 'Mejores herramientas de optimización de prompts para equipos',
-    seoTitle: 'Mejores herramientas de optimización de prompts para equipos 2026: clasificadas y comparadas',
+    seoTitle: 'Optimización de prompts para equipos 2026: top herramientas',
     intro: '**La optimización de prompts para equipos requiere cuatro capacidades: almacenamiento versionado, testing A/B de variantes, puntuación del output y revisión colaborativa. Ninguna herramienta única cubre las cuatro. Esta guía clasifica siete herramientas especializadas — más PromptQuorum para comparación multi-modelo — por tipo de equipo, precios y ajuste al flujo de trabajo.**',
-    metaDescription: 'Ninguna herramienta única cubre versionado, A/B testing, scoring y revisión. Braintrust lidera en eval ($500/mes), Vellum lidera en A/B de producción, Promptfoo es gratis CI/CD, DSPy auto-optimiza desde ejemplos. Recomendaciones de stack por tamaño de equipo.',
+    metaDescription: 'Ninguna herramienta cubre versionado, A/B, scoring y revisión. Braintrust lidera en eval, Vellum en A/B, Promptfoo es gratis. Stack por tamaño de equipo.',
     ogTitle: '¿Tu equipo gasta 5+ horas/semana ajustando prompts? Estas herramientas lo resuelven',
     ogDescription: 'Vellum reduce el A/B testing a menos de 1 hora. DSPy auto-optimiza desde 20 ejemplos. Promptfoo es gratis. ¿Qué stack encaja con tu equipo?',
     twitterTitle: 'Herramientas de optimización de prompts para equipos 2026: 6 comparadas',

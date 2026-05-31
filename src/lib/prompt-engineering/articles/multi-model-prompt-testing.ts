@@ -415,7 +415,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Workflows & Automatización',
     title: 'Pruebas de prompts multi-modelo: Comparar resultados en GPT-4o, Claude y Gemini',
     seoTitle: 'Pruebas multi-modelo: GPT-4o, Claude, Gemini',
-    metaDescription: 'Pruebas de prompts multi-modelo: por qué los resultados difieren en GPT-4o, Claude 4.6, Gemini 2.5. Construye una matriz de prueba, evalúa resultados con PromptQuorum.',
+    metaDescription: 'Pruebas de prompts multimodelo: por qué los resultados difieren en GPT-4o, Claude 4.6 y Gemini 2.5. Construye una matriz y evalúa con PromptQuorum.',
     ogDescription: 'Cómo probar prompts en múltiples modelos — por qué los resultados divergen, cómo construir una matriz de prueba, criterios de puntuación, herramientas (PromptQuorum, Promptfoo) y cómo interpretar los resultados.',
     twitterDescription: 'Pruebas multi-modelo: GPT-4o vs Claude vs Gemini. Matriz de prueba, puntuación, PromptQuorum + Promptfoo.',
     intro: 'Ejecutar un prompt en un único modelo y publicar el resultado es una estrategia con un punto de fallo único. Los modelos tienen distribuciones de entrenamiento distintas, valores predeterminados de formato diferentes y umbrales distintos para verbosidad y seguimiento de instrucciones. Las pruebas multi-modelo revelan estas divergencias antes de que lleguen a los usuarios.',

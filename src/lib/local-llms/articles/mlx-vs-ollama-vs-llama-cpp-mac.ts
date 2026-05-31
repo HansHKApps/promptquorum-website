@@ -1554,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'MLX vs Ollama vs llama.cpp en Mac 2026: ¿Qué motor de inferencia usar en Mac?',
     seoTitle: 'MLX vs Ollama vs llama.cpp 2026: Prueba de velocidad',
     intro: 'MLX vs Ollama vs llama.cpp en Apple Silicon 2026: benchmarks de velocidad, facilidad de uso, compatibilidad de modelos, Metal GPU e integración con Python. Incluye tabla comparativa, tiempos de configuración y recomendaciones de uso.',
-    metaDescription: 'MLX: 15–25% más rápido en Apple Silicon. Ollama: el más fácil. llama.cpp: el más compatible. Benchmarks de velocidad, tiempo de configuración y cuándo usar cada framework.',
+    metaDescription: 'MLX: 15–25% más rápido en Apple Silicon. Ollama: el más fácil. llama.cpp: el más compatible. Benchmarks de velocidad, setup y cuándo usar cada framework.',
     twitterDescription: 'MLX vs Ollama vs llama.cpp en Mac: velocidad, facilidad de uso, soporte de modelos. ¿Qué framework para LLMs en Apple Silicon en 2026?',
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',

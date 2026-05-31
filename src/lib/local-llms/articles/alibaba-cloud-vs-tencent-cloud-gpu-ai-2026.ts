@@ -324,9 +324,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs Tencent Cloud GPU para IA 2026: Comparativa Completa',
-    seoTitle: 'Alibaba vs Tencent Cloud GPU IA 2026: Velocidad Qwen y Precios',
+    seoTitle: 'Alibaba vs Tencent Cloud GPU IA 2026: Qwen y precios',
     metaDescription:
-      'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL para alquiler de GPU en China 2026: precios, rendimiento Qwen, residencia de datos y guía de configuración. Comparativa de nubes chinas.',
+      'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL para alquiler de GPU en China 2026: precios, rendimiento Qwen, residencia de datos y configuración.',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience:

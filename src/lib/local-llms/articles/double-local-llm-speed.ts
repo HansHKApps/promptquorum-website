@@ -296,7 +296,7 @@ schema: {
       freshness_tier: 'annual',
       theme: 'Hardware & Performance',
       title: 'Cómo duplicar la velocidad de LLMs locales: Técnicas de optimización',
-      seoTitle: 'Cómo duplicar la velocidad de LLMs locales: Guía de optimización 2026',
+      seoTitle: 'Cómo duplicar la velocidad de LLMs locales: guía 2026',
       intro: 'Los LLMs locales pueden ser 2-3× más rápidos con la optimización adecuada. Las técnicas incluyen: deshabilitar el logging, reducir el batch size, optimizar la cuantización, usar motores de inferencia más rápidos y ajustar la memoria GPU. A partir de abril de 2026, combinar estas técnicas puede lograr una mejora de velocidad de 2× sin pérdida de calidad.',
       metaDescription: 'Acelera la inferencia de LLMs locales 2-3× en 2026: ajuste GPU, batch size, cuantización. Técnicas de optimización en producción con benchmarks incluidos.',
       publishDate: '2026-04-04',

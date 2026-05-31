@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-04',
       readTime: '6 min de lectura',
       seoTitle: 'Framework RTF: Estructura de Prompt Rol, Tarea, Formato',
-      metaDescription: 'RTF = Rol + Tarea + Formato. La estructura de prompt de 3 campos que supera los enfoques verbosos en tareas rutinarias. Plantillas, ejemplos y guía de actualización.',
+      metaDescription: 'RTF = Rol + Tarea + Formato. La estructura de prompt de 3 campos que supera a los enfoques verbosos en tareas rutinarias. Plantillas y ejemplos.',
       ogDescription: 'RTF: framework de prompt de 3 componentes. Rol, Tarea, Formato. Aprende por qué.',
       twitterDescription: 'RTF = Rol + Tarea + Formato. Estructura de prompt más simple para tareas rutinarias. Por qué los equipos eligen esto sobre frameworks complejos.',
       leadAnswerBlock: '**RTF = Rol, Tarea, Formato. Tres componentes, cero sobrecarga. Define quién es el modelo, qué debe hacer y cómo debe verse la respuesta. Úsalo como predeterminado para tareas rutinarias — resúmenes, revisiones de código, emails, notas de reuniones. Cambia a CO-STAR cuando el tono/audiencia importan, SPECS cuando el esquema importa, TRACE cuando el razonamiento importa. RTF es el framework más liviano que aún impone estructura.**',

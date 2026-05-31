@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'El Manifiesto de Privacidad de LLMs Locales 2026: Por qué los Pesos Abiertos son Imprescindibles para el Cumplimiento del RGPD en la UE',
     seoTitle: 'Qwen 3 y RGPD: ¿Puedes usarlo en la UE en 2026?',
     intro: 'Cada prompt enviado a una IA en la nube es una transferencia de datos. Cada transferencia de datos a un servidor fuera de la UE requiere una base legal según el Artículo 44 del RGPD. Los LLMs locales con pesos abiertos — Qwen 3.6 27B a la cabeza — eliminan por completo esta categoría de riesgo de cumplimiento. Este manifiesto defiende los LLMs locales de pesos abiertos como la capa de IA fundacional para las organizaciones gobernadas por el RGPD, y recorre cada artículo relevante del RGPD, las obligaciones de la Ley de IA de la UE 2026 y los contraargumentos que merecen atención.',
-    metaDescription: 'Qwen 3 desplegado localmente elimina los problemas de transferencia del Artículo 44 del RGPD. Los datos nunca salen de tu servidor. Residencia de datos en la UE y requisitos de la APD explicados.',
+    metaDescription: 'Qwen 3 desplegado en local elimina los problemas de transferencia del Artículo 44 del RGPD: los datos nunca salen de tu servidor. Residencia de datos en la UE.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '11 min de lectura',

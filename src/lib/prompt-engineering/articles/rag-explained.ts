@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-05',
       readTime: '12 min de lectura',
       seoTitle: 'RAG explicado 2026: guía de Retrieval-Augmented Generation',
-      metaDescription: 'RAG explicado: pipeline de 4 etapas, tamaños óptimos de fragmentos, umbrales de relevancia, comparación de bases de datos vectoriales. Guía de decisión RAG vs fine-tuning.',
+      metaDescription: 'RAG explicado: pipeline de 4 etapas, tamaños óptimos de fragmentos, umbrales de relevancia y comparación de bases vectoriales. RAG vs fine-tuning.',
       ogDescription: 'RAG reduce las alucinaciones al anclar las respuestas en tus documentos. Cómo funciona el pipeline de 4 etapas y por qué supera al fine-tuning.',
       twitterDescription: 'RAG (Retrieval-Augmented Generation) reduce alucinaciones. Cómo funciona el pipeline de 4 etapas y por qué supera al fine-tuning.',
       quickFacts: [

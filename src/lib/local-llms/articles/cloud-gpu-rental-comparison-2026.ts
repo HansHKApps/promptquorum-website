@@ -542,8 +542,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     title: 'Alquiler de GPU en la Nube 2026: RunPod vs Vast.ai vs Lambda Labs (Probado Mayo 2026)',
-    seoTitle: 'Alquiler de GPU en la Nube 2026: RunPod vs Vast.ai vs Lambda Labs',
-    metaDescription: 'Compara RunPod, Vast.ai y Lambda Labs para inferencia LLM local: precios ($0.34–$2.99/hr), SLA de uptime, cumplimiento GDPR y tiempo de configuración. Mayo 2026.',
+    seoTitle: 'Alquiler de GPU cloud 2026: RunPod vs Vast.ai vs Lambda',
+    metaDescription: 'Compara RunPod, Vast.ai y Lambda Labs para inferencia LLM: precios ($0.34–$2.99/hr), SLA de uptime, cumplimiento GDPR y tiempo de configuración. 2026.',
     intro: 'Alquilar GPUs en la nube es un 30–50% más barato que comprar hardware si necesitas potencia de cómputo de forma ocasional. Esta comparativa canónica prueba tres proveedores líderes (RunPod, Vast.ai, Lambda Labs) en precio, fiabilidad, cumplimiento GDPR y facilidad de uso. Actualizado mensualmente.',
     publishDate: '2026-05-17',
     dateModified: '2026-05-18',

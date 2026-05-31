@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Calidad de código IA en CI/CD: detectar alucinaciones y dependencias fabricadas',
       seoTitle: 'Calidad de código IA: detectar alucinaciones en CI/CD',
-      metaDescription: 'Añade controles de calidad conscientes de IA a tu pipeline CI/CD: validación de dependencias, verificación de APIs, detección de slopsquatting y revisión multi-modelo. Guía paso a paso. Abril 2026.',
+      metaDescription: 'Añade controles de calidad con IA a tu pipeline CI/CD: validación de dependencias, verificación de APIs, detección de slopsquatting y revisión multimodelo.',
       ogTitle: '3 formas en que el código generado por IA rompe tu CI/CD — y cómo solucionarlo',
       ogDescription: 'El código generado por IA compila correctamente pero inventa paquetes que no existen y llama APIs que nunca se construyeron. Los tests y lint tradicionales no detectan esto. Aquí aprenderás a construir gates que lo atrapen.',
       twitterTitle: 'Tu CI/CD no puede detectar alucinaciones de IA. Aquí está lo que añadir',

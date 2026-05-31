@@ -770,8 +770,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
     lastFactChecked: '2026-04-29',
-    seoTitle: 'Prompting Multilingüe: Resultados Coherentes de IA en Cualquier Idioma',
-    metaDescription: 'Los LLMs entrenados en ~46 % de inglés tienen peor rendimiento en francés, alemán, japonés y árabe. Aprende qué modelos manejan mejor cada idioma y cómo escribir prompts multilingües.',
+    seoTitle: 'Prompting multilingüe: resultados de IA coherentes',
+    metaDescription: 'Los LLMs, entrenados en ~46 % de inglés, rinden peor en francés, alemán, japonés y árabe. Qué modelos manejan cada idioma y cómo escribir buenos prompts.',
     readTime: '12 min de lectura',
     educationalLevel: 'Intermediate',
     toc: [

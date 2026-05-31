@@ -899,9 +899,9 @@ tests:
   es: {
     theme: 'Tools & Platforms',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
-    seoTitle: 'Braintrust vs PromptHub vs Vellum: stack de 2 herramientas 2026',
+    seoTitle: 'Braintrust vs PromptHub vs Vellum: el stack de 2 en 2026',
     intro: '**Cuatro herramientas dominan la gestión de prompts para equipos: Braintrust para evaluación de output, PromptHub para control de versiones, Vellum para A/B testing en producción y Promptfoo para prevención de regresiones CI/CD.** La mayoría de equipos compra las cuatro y desperdicia $1.000+/mes. El stack correcto siempre son exactamente dos herramientas — una para evaluación, otra para despliegue.',
-    metaDescription: 'Braintrust ($249/mes) evalúa prompts. Vellum ($200–500/mes) hace A/B testing en producción. Promptfoo CI/CD gratis. PromptHub ($50–200/mes) versiona. La mayoría de equipos necesita exactamente 2.',
+    metaDescription: 'Braintrust ($249/mes) evalúa prompts. Vellum ($200–500/mes) hace A/B en producción. Promptfoo es gratis. PromptHub versiona. La mayoría necesita solo 2.',
     ogTitle: 'Comprar las 4 herramientas de prompts desperdicia $1.000+/mes. Aquí está el stack de 2 herramientas',
     ogDescription: 'Braintrust puntúa. Vellum divide el tráfico. Promptfoo detecta regresiones. PromptHub versiona. Elige 2. Tabla comparativa incluida.',
     twitterTitle: 'Braintrust vs PromptHub vs Vellum vs Promptfoo: cuáles 2 elegir',

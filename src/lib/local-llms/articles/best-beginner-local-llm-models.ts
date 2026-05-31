@@ -377,7 +377,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: 'Mejores LLMs locales para principiantes 2026: Modelos de 4 GB y 8 GB de RAM (Llama 3.2, Phi-4, Gemma 3)',
-      seoTitle: 'Mejores LLMs locales para principiantes 2026: Modelos de 4 GB–8 GB RAM comparados',
+      seoTitle: 'Mejores LLMs locales para principiantes 2026: 4–8 GB de RAM',
       intro: 'Los cinco mejores modelos LLM locales para principiantes en 2026 son Meta Llama 3.2 3B, Microsoft Phi-4 Mini, Google Gemma 3 2B, Mistral 7B v0.3 y Qwen2.5 7B. Cada uno funciona en hardware de consumo con 4-8 GB de RAM y produce calidad de salida adecuada para tareas cotidianas.',
       leadAnswerBlock: '**Los cinco mejores modelos LLM locales para principiantes en 2026 son Llama 3.2 3B, Phi-4 Mini 3.8B, Gemma 3 2B, Mistral 7B v0.3 y Qwen2.5 7B. Todos funcionan con 4-8 GB de RAM con un solo comando de Ollama.**',
       metaDescription: 'Comparados: Llama 3.2 3B (2,5 GB), Phi-4 Mini (2,5 GB), Gemma 3 2B (1,7 GB), Mistral y Qwen 7B. Requisitos de RAM, benchmarks de velocidad, comandos de Ollama.',

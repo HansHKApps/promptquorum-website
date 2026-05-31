@@ -812,7 +812,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       title: 'Prompt injection y seguridad: cómo defender los sistemas de IA',
       intro: 'La prompt injection — incrustar instrucciones maliciosas en la entrada del usuario o en documentos para anular los controles del system prompt — es el OWASP LLM #1. Aprende los tipos de ataque, las diferencias con el jailbreaking y 5 defensas por capas.',
       publishDate: '2026-03-30',
-      seoTitle: 'Ataques de prompt injection 2026: cómo proteger tus prompts de IA',
+      seoTitle: 'Prompt injection 2026: cómo proteger tus prompts de IA',
       metaDescription: 'Aprende patrones de defensa contra la prompt injection, validación de entrada y sandboxing para LLMs en la nube y locales. Incluye checklist de seguridad.',
       ogDescription: 'Ataques y defensa contra prompt injection. Patrones de seguridad para LLMs.',
       twitterDescription: 'Aprende defensa contra prompt injection: validación de entrada, sandboxing, patrones de detección. Guía de seguridad para aplicaciones LLM.',

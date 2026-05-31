@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple Silicon vs NVIDIA GPU para LLMs locales 2026: Rendimiento, Costo, Workflow Comparados',
     seoTitle: 'Apple Silicon vs NVIDIA para LLMs locales 2026',
     intro: 'Apple Silicon vs NVIDIA GPU para LLMs locales: M5 Max vs RTX 4090 velocidad, costo, consumo, límite de VRAM vs memoria unificada, comparación de workflow. El punto de cruce: ~24 GB de tamaño de modelo. Por debajo de ese límite, NVIDIA es más rápido. Por encima, Apple Silicon es la única opción consumer.',
-    metaDescription: 'M5 Max vs RTX 4090: velocidad, costo, consumo, VRAM vs memoria unificada. Punto de cruce a ~24 GB. Por debajo de 24 GB: NVIDIA más rápido. Por encima: solo Apple Silicon. Comparación completa.',
+    metaDescription: 'M5 Max vs RTX 4090: velocidad, costo, consumo y VRAM vs memoria unificada. Punto de cruce a ~24 GB: por debajo gana NVIDIA, por encima solo Apple Silicon.',
     twitterDescription: 'Mac vs NVIDIA para IA local 2026: M5 Max vs RTX 4090 benchmarks, TCO a 3 años, costos de electricidad y comparación de workflow. Punto de cruce a ~24 GB de tamaño de modelo.',
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',

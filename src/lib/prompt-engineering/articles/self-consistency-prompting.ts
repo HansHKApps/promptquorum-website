@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '12 min de lectura',
       educationalLevel: 'Intermediate',
       audience: 'Desarrolladores que crean pipelines de razonamiento de IA fiables, analistas que toman decisiones críticas con IA, investigadores en prompt engineering',
-      seoTitle: 'Self-Consistency Prompting: múltiples respuestas, elige la mejor',
+      seoTitle: 'Self-Consistency Prompting: varias respuestas, la mejor',
       metaDescription: 'El self-consistency prompting genera 5–20 caminos de razonamiento y elige la respuesta mayoritaria. Mejora la precisión en matemáticas del 56% al 74%.',
       ogDescription: 'Una respuesta de IA puede ser incorrecta. ¿Cinco respuestas de IA que coinciden? Mucho más fiable. El self-consistency mejora la precisión 15–25 puntos muestreando múltiples caminos de razonamiento y eligiendo el consenso.',
       twitterDescription: 'Self-consistency: haz a la IA la misma pregunta 5–20 veces, elige la respuesta mayoritaria. Técnica sencilla, mejora dramática de la precisión en tareas de razonamiento.',

@@ -354,7 +354,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Team Governance',
     title: 'Pruebas de seguridad de prompts: herramientas y métodos para detectar vulnerabilidades de injection',
     seoTitle: 'Pruebas de injection de prompts: herramientas Garak y PyRIT',
-    metaDescription: 'Prueba la prompt injection con Garak (40+ ataques) y PyRIT (multi-turno). Defensa de 4 capas: filtrado de entrada, esquema, separación de privilegios, aislamiento.',
+    metaDescription: 'Prueba la prompt injection con Garak (40+ ataques) y PyRIT (multironda). Defensa en 4 capas: filtrado de entrada, esquema, privilegios y aislamiento.',
     ogDescription: 'Detecta vulnerabilidades de prompt injection: ataques directos e indirectos, herramientas Garak y PyRIT, stack de defensa de 4 capas. Pruebas multi-modelo con PromptQuorum.',
     twitterDescription: 'La prompt injection es OWASP LLM01 — el riesgo de seguridad #1. Garak para pruebas automatizadas, PyRIT para red-teaming, stack de defensa de 4 capas.',
     publishDate: '2026-05-02',

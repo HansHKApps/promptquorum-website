@@ -1082,9 +1082,9 @@ schema: {
     es: {
       theme: 'Tools & Interfaces',
       title: 'Open WebUI vs SillyTavern: Mejor Interfaz de Chat para LLMs Locales',
-      seoTitle: 'Open WebUI vs SillyTavern 2026: Chat de Equipo vs Frontend de Roleplay',
+      seoTitle: 'Open WebUI vs SillyTavern 2026: chat de equipo vs roleplay',
       intro: '**Open WebUI es la elección profesional para chat: limpio, rápido, compatible con múltiples usuarios y con OpenAI.** A partir de abril de 2026, SillyTavern destaca en roleplay y chat basado en personajes, pero carece de soporte multiusuario. Ambos usan backends idénticos (Ollama, vLLM, llama.cpp), así que elige según tu flujo de trabajo: Open WebUI para trabajo/investigación, SillyTavern para escritura creativa y roleplay de personajes.',
-      metaDescription: 'Open WebUI (chat profesional, multiusuario, Docker) vs SillyTavern (roleplay de personajes, lorebooks, chat grupal) para LLMs locales. Ambos usan backends Ollama, vLLM, llama.cpp. Matriz de funciones, comparación abril 2026.',
+      metaDescription: 'Open WebUI (chat profesional multiusuario, Docker) vs SillyTavern (roleplay, lorebooks, chat grupal) para LLMs locales. Backends Ollama, vLLM y llama.cpp.',
       twitterDescription: 'Open WebUI: chat de equipo profesional y multiusuario. SillyTavern: roleplay, lorebooks, chat grupal. Ambos funcionan con Ollama y vLLM. Comparación abril 2026.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',

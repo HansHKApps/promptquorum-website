@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Hardware Setups',
     title: 'Mejor Mini PC AMD para LLM Local 2026: AOOSTAR, Minisforum, Beelink, GMKtec Comparados',
     seoTitle: 'Mini PC AMD 2026: Minisforum vs Beelink Comparados',
-    metaDescription: 'Compara mini PCs AMD Ryzen AI Max+: Minisforum MS-A2, Beelink GTR9, AOOSTAR GEM12, GMKtec EVO-X2. Especificaciones, precios, rendimiento en modelos 70B. Mayo 2026.',
+    metaDescription: 'Compara mini PCs AMD Ryzen AI Max+: Minisforum MS-A2, Beelink GTR9, AOOSTAR GEM12 y GMKtec EVO-X2. Especificaciones, precios y rendimiento en 70B. 2026.',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
     intro: '**Los mini PCs AMD Ryzen AI Max+ 395 con 64–128 GB de memoria unificada pueden ejecutar modelos 30–70B sin conexión a internet con rendimiento de estación de trabajo por $1.200–2.500 USD.** La nueva categoría de mini PC de fabricantes OEM chinos (AOOSTAR, Minisforum, Beelink, GMKtec) atrae a compradores que se actualizan desde laptops o que quieren evitar el costo del Mac Studio (más de $3.000). Estos equipos combinan CPU Zen 5 + iGPU Radeon 8060S + NPU de 50 TOPS en un tamaño menor que una torre de escritorio, con soporte ROCm en Linux que madura rápidamente. Los precios pueden variar según tu país.',

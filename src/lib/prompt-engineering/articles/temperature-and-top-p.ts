@@ -451,8 +451,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Temperatura y Top-P: Controla la creatividad de la IA',
       intro: 'La temperatura y el top-p controlan lo aventureras o conservadoras que son las elecciones de palabras de la IA. Ajustando estos parámetros, equilibras creatividad versus fiabilidad — los valores más altos producen outputs sorprendentes y variados; los más bajos producen outputs seguros y predecibles.',
       publishDate: '2026-03-22',
-      seoTitle: 'Temperatura y Top-P 2026: Ajusta la creatividad y precisión de la IA',
-      metaDescription: 'Temperatura 0–2, Top-P 0.1–1.0: Establece la aleatoriedad de la IA con precisión para codificación, resúmenes o brainstorming. Rangos prácticos verificados en ChatGPT, Claude, Gemini.',
+      seoTitle: 'Temperatura y Top-P 2026: ajusta creatividad y precisión',
+      metaDescription: 'Temperatura 0–2 y Top-P 0.1–1.0: define la aleatoriedad de la IA para código, resúmenes o brainstorming. Rangos prácticos para ChatGPT, Claude y Gemini.',
       readTime: '10 min de lectura',
       schema: {
         '@context': 'https://schema.org',

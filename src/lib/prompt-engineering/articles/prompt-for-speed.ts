@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Los prompts lentos de IA tienen una sola causa: la ambigüedad obliga al modelo a adivinar. Elimina la ambigüedad con cinco decisiones de diseño y obtendrás respuestas precisas y rápidas en el primer intento — en cualquier modelo.',
       publishDate: '2026-03-22',
       seoTitle: 'Prompts de IA más rápidos: Técnicas de velocidad 2026',
-      metaDescription: 'Los prompts lentos de IA = ambigüedad que obliga a adivinar al modelo. 5 cambios de diseño que dan respuestas precisas en el primer intento en GPT-4o, Claude y Gemini.',
+      metaDescription: 'Los prompts lentos de IA son ambigüedad que obliga a adivinar al modelo. 5 cambios de diseño para respuestas precisas a la primera en GPT-4o y Claude.',
       readTime: '8 min de lectura',
       schema: {
         '@context': 'https://schema.org',

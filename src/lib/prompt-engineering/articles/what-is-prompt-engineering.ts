@@ -682,9 +682,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       theme: 'Fundamentals',
       title: '¿Qué es el Prompt Engineering? — Guía PromptQuorum',
-      seoTitle: '¿Qué es el Prompt Engineering en 2026? Guía para principiantes',
+      seoTitle: '¿Qué es el prompt engineering en 2026? Guía básica',
       intro: 'Prompt engineering: diseñar entradas de texto para obtener respuestas fiables y precisas de LLMs como GPT-4o, Claude y Gemini. Aprende las técnicas esenciales, los frameworks y por qué importa para la calidad del output de IA.',
-      metaDescription: 'Prompt engineering 2026: diseña entradas de texto para obtener resultados fiables. Aprende role prompting, chain-of-thought y few-shot para ChatGPT, Claude y Ollama.',
+      metaDescription: 'Prompt engineering en 2026: diseña entradas de texto para resultados fiables. Aprende role prompting, chain-of-thought y few-shot para ChatGPT y Claude.',
       publishDate: '2026-03-01',
       readTime: '10 min de lectura',
       schema: {

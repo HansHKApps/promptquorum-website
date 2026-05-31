@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatización',
     title: 'Flujo de trabajo de prompt engineering para desarrolladores: configuración de IDE, pruebas e integración CI/CD',
-    seoTitle: 'Prompt engineering para desarrolladores: configuración de IDE y CI/CD',
+    seoTitle: 'Prompt engineering para desarrolladores: IDE y CI/CD',
     metaDescription: 'Flujo de trabajo de prompts en 5 etapas: Cursor/VS Code, Promptfoo en 30s, versionado en Git, gate CI/CD al 85%, monitoreo en producción.',
     ogDescription: 'Flujo de trabajo de prompts para desarrolladores: IDE Cursor o VS Code, bucle de prueba local de 30 segundos, versionado Git, gate CI/CD con GitHub Actions, monitoreo de calidad en producción.',
     twitterDescription: 'Escribir → probar en 30s → versionar → gate CI/CD → monitorear. El flujo de trabajo de prompts en 5 etapas. Cursor + Promptfoo + Git.',

@@ -290,7 +290,7 @@ schema: {
       title: 'Mejor stack de LLM local por caso de uso 2026: Escritura, Código, RAG, Agentes',
       seoTitle: 'Mejor stack LLM local 2026: Código, RAG, Escritura y Agentes',
       intro: '**El mejor stack de LLM local depende de tu flujo de trabajo: escritura → Ollama + OpenWebUI + Llama 3.3, desarrollo → vLLM + Qwen2.5-Coder + extensión IDE, investigación → LangGraph + vLLM. En abril de 2026, ninguna herramienta lo hace todo bien.** Esta guía mapea 7 casos de uso comunes a su stack óptimo (backend + UI + integraciones) y niveles de hardware (8–24 GB VRAM).',
-      metaDescription: 'Stack LLM local por caso de uso abril 2026: Código → vLLM + Qwen2.5-Coder. Escritura → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. VRAM 8–24 GB. Guía completa.',
+      metaDescription: 'Stack LLM local por caso de uso 2026: código → vLLM + Qwen2.5-Coder; escritura → Ollama + Llama 3.3; RAG → LlamaIndex + Qdrant. VRAM 8–24 GB.',
       twitterDescription: 'Stacks LLM local por caso de uso: Código → vLLM + Qwen2.5-Coder. Escritura → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. Agentes → LangGraph + vLLM. Guía abril 2026.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',

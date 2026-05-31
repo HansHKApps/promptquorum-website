@@ -839,7 +839,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   lastFactChecked: '2026-05-03',
   readTime: '13 min de lectura',
   seoTitle: 'Chain-of-Thought Prompting: Aumenta la Precisión un 40%',
-  metaDescription: 'Chain-of-Thought mejora el razonamiento entre un 10 y un 40 % en tareas de matemáticas y lógica. Aprende cuándo usar CoT a nivel de prompt frente a los modos de razonamiento integrados.',
+  metaDescription: 'Chain-of-Thought mejora el razonamiento entre un 10 y un 40 % en matemáticas y lógica. Aprende cuándo usar CoT frente a los modos de razonamiento integrados.',
   educationalLevel: 'Intermediate',
   primaryTerm: 'Chain-of-Thought Prompting',
   audience: 'Desarrolladores, científicos de datos y equipos que trabajan con GPT-4o, Claude, Gemini o LLMs locales',

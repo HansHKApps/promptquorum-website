@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     title: 'Cómo elegir un framework de prompts para tu equipo: ¿CO-STAR, CRAFT, RISEN o personalizado?',
     seoTitle: 'Framework de prompts para equipos: CO-STAR vs CRAFT',
     intro: 'Los equipos que escriben prompts sin un framework compartido producen resultados inconsistentes, gastan tiempo extra en la incorporación de nuevos miembros y se alejan cada vez más entre sí a medida que crece el equipo. Esta guía proporciona una matriz de decisión para elegir entre CO-STAR, CRAFT, RISEN, RTF y frameworks personalizados según el caso de uso principal de tu equipo.',
-    metaDescription: 'Elige un framework de prompts para el equipo: CO-STAR para tareas complejas, CRAFT para contenido, RISEN para instrucciones, RTF para salida estructurada. Matriz de decisión.',
+    metaDescription: 'Elige un framework de prompts: CO-STAR para tareas complejas, CRAFT para contenido, RISEN para instrucciones y RTF para salida estructurada. Con matriz.',
     ogDescription: 'Cómo los equipos eligen un framework de prompts — matriz de decisión por caso de uso, comparación CO-STAR vs CRAFT vs RISEN vs RTF, cuándo el personalizado es mejor y ruta de incorporación del equipo.',
     twitterDescription: 'CO-STAR vs CRAFT vs RISEN vs RTF: ¿qué framework se adapta a tu equipo? Matriz de decisión + ruta de incorporación del equipo.',
     publishDate: '2026-05-02',

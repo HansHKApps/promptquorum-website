@@ -1493,7 +1493,7 @@ schema: {
       title: 'Agentes de IA Locales con LangGraph y Ollama: Construye Sistemas de Toma de Decisiones Autónomos',
       seoTitle: 'Crea Agentes de IA Locales con LangGraph + Ollama (2026)',
       intro: 'Los agentes de IA siguen un bucle: observar el contexto, razonar sobre la mejor acción, llamar a una herramienta y repetir hasta completar la tarea. LangGraph es un framework para construir estos flujos de trabajo agénticos usando LLMs locales a través de Ollama. A partir de abril de 2026, los agentes locales gestionan automatización, investigación y soporte de decisiones sin ninguna dependencia de la nube.',
-      metaDescription: 'Los agentes de IA observan, razonan, llaman herramientas y repiten. LangGraph + Ollama ejecutan esto localmente — sin costos de API, control total de datos. Así se construye y despliega uno.',
+      metaDescription: 'Los agentes de IA observan, razonan, llaman herramientas y repiten. LangGraph + Ollama lo ejecutan en local, sin costos de API. Así se construye y despliega.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-24',
       leadAnswerBlock: '**Los agentes de IA son sistemas que toman acciones basadas en observaciones y razonamiento. LangGraph es un framework para construir flujos de trabajo agénticos usando LLMs locales. Los agentes pueden explorar documentos, usar herramientas y tomar decisiones secuenciales.**',

@@ -232,7 +232,7 @@ schema: {
       title: 'Mejores GPUs AMD para LLMs locales',
       seoTitle: 'Mejores GPUs AMD para LLMs locales 2026: Guía de comparación',
       intro: '**La AMD RX 6800 XT y la RX 7900 XTX son alternativas sólidas a NVIDIA, con un rendimiento por dólar 15-20% mejor, pero sufren de menor compatibilidad con ONNX Runtime y los drivers de vLLM.** A partir de abril de 2026, AMD ROCm (HIP) ha madurado, aunque las capas de compatibilidad añaden fricción. NVIDIA CUDA sigue siendo el camino más sencillo para LLMs locales. Usa AMD solo si encuentras una gran oferta de segunda mano o ya tienes hardware AMD.',
-      metaDescription: 'Compara AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX. Configuración de ROCm, rendimiento en vLLM, análisis de coste por TFLOP y cuándo comprar AMD. Actualizado abril 2026.',
+      metaDescription: 'Compara AMD RX 6800 XT y RX 7900 XTX vs NVIDIA RTX: configuración ROCm, rendimiento en vLLM, coste por TFLOP y cuándo comprar AMD. Actualizado 2026.',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**La AMD RX 6800 XT y la RX 7900 XTX son alternativas sólidas a NVIDIA, con un rendimiento por dólar 15-20% mejor, pero sufren de menor compatibilidad con ONNX Runtime y los drivers de vLLM.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan sus flujos de trabajo de LLMs locales',

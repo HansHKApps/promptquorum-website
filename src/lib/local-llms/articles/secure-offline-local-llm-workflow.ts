@@ -191,7 +191,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
       title: 'Cómo construir un flujo de trabajo local con LLM offline seguro',
-      seoTitle: 'Flujo de trabajo LLM offline seguro: Configuración air-gapped, cero red, manejo de datos',
+      seoTitle: 'Flujo de trabajo LLM offline seguro: air-gapped y cero red',
       intro: '**Para máxima privacidad, construye un flujo de trabajo air-gapped: servidor LLM offline (cero red), transferencia de datos vía USB cifrado.** A partir de abril de 2026, esto es obligatorio en entornos de alta seguridad (descubrimiento legal, datos genéticos de salud, investigación clasificada). La configuración tarda 1-2 días; la carga operativa es moderada.',
       metaDescription: 'Flujo de trabajo LLM offline seguro: servidor air-gapped, transferencia de datos por USB cifrado, salida en papel. Sin riesgo de red.',
       publishDate: '2026-04-05',

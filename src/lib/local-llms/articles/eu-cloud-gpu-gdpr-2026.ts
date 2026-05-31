@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     title: 'GPU Cloud RGPD UE 2026: Hetzner vs Scaleway vs OVHcloud (Probado Mayo 2026)',
     seoTitle: 'GPU Cloud RGPD UE 2026: Hetzner, Scaleway, OVHcloud',
-    metaDescription: 'Proveedores de GPU cloud conformes con el RGPD de la UE en 2026: Hetzner, Scaleway, OVHcloud. Precios, residencia de datos y cumplimiento del Acta de IA de la UE verificados. También relevante para LFPDPPP (México), Ley 25.326 (Argentina) y Ley 1581 (Colombia).',
+    metaDescription: 'Proveedores de GPU cloud conformes con el RGPD en 2026: Hetzner, Scaleway, OVHcloud. Precios, residencia de datos y cumplimiento del Acta de IA de la UE.',
     intro: 'Las organizaciones de la UE que procesan datos personales deben usar proveedores de GPU cloud conformes con el RGPD. Esta guía compara siete opciones nativas de RGPD (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) probadas en mayo de 2026 por precio, postura de cumplimiento y riesgo Schrems II. Todos los proveedores destacados garantizan residencia de datos en la UE y ofrecen DPA adecuados. Para equipos en Latinoamérica que deben cumplir leyes como la LFPDPPP (México), Ley 25.326 (Argentina) o Ley 1581 (Colombia), los proveedores EU-nativos ofrecen contratos de protección de datos equivalentes.',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',

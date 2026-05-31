@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Ollama en Mac 2026: Guía completa de configuración Apple Silicon (M1–M5, GPU Metal)',
     seoTitle: 'Ollama en Mac 2026: Configura M1–M5 en 2 minutos',
     intro: 'Guía completa de instalación de Ollama para Mac con Apple Silicon 2026. Instalación con un solo comando, verificación de GPU Metal, gestión de modelos (pull, run, list), optimización de memoria para configuraciones con múltiples modelos y configuración de la API REST para desarrolladores.',
-    metaDescription: 'Instala Ollama en Mac con un solo comando. GPU Metal automático, descarga cualquier modelo Llama o Mistral, ejecuta localmente en 2 minutos. API REST para desarrolladores.',
+    metaDescription: 'Instala Ollama en Mac con un solo comando. GPU Metal automática, descarga cualquier modelo Llama o Mistral y ejecútalo en local en 2 minutos. Con API REST.',
     twitterDescription: 'Ollama en Mac: instala en 2 minutos, GPU Metal automático, ejecuta cualquier LLM de forma local. Guía completa para M1-M5.',
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',

@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Los grandes modelos de lenguaje producen con confianza información falsa. Estos errores — llamados alucinaciones — van desde citas inventadas hasta hechos fabricados presentados con total autoridad. Entender por qué ocurren y cómo detectarlas y reducirlas es esencial para cualquiera que use LLMs en trabajo real.',
       publishDate: '2026-03-22',
       seoTitle: 'Alucinaciones de IA: Cómo detectarlas y reducirlas 2026',
-      metaDescription: 'Entiende por qué los LLMs alucinan y aprende técnicas de prompting probadas para minimizar errores. Sección especial sobre LLMs locales y puntuación de consenso de PromptQuorum.',
+      metaDescription: 'Entiende por qué los LLMs alucinan y aplica técnicas probadas de prompting para minimizar errores. Incluye LLMs locales y el consenso de PromptQuorum.',
       readTime: '12 min de lectura',
       educationalLevel: 'Beginner',
       schema: {

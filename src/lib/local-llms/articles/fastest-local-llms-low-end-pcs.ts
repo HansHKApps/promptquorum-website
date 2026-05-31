@@ -383,7 +383,7 @@ schema: {
       title: 'LLMs Locales más Rápidos para PCs de Gama Baja en 2026: Modelos por Nivel de VRAM (CPU a 8 GB)',
       seoTitle: 'LLMs Locales con 4–8 GB RAM: Phi-4 Mini, TinyLlama 2026',
       intro: '**Solo CPU: Phi-4 Mini 3.8B alcanza 5–15 tok/s. 4 GB VRAM: TinyLlama 1.1B Q5 llega a 20–40 tok/s. 8 GB VRAM (punto óptimo): Mistral 7B Q4 y Llama 3.1 8B Q4 alcanzan 25–60 tok/s.** A partir de abril de 2026, los modelos 1B–3B llegan a 60–120 tok/s para máxima velocidad; 8 GB VRAM ofrece una experiencia completa de asistente a velocidades interactivas. Todos los modelos funcionan en Ollama — comandos de instalación incluidos para cada nivel.',
-      metaDescription: 'Ejecuta IA gratis y sin conexión: Phi-4 Mini (CPU, 5–15 tok/s), TinyLlama (4 GB, 25 tok/s), Mistral 7B Q4 (8 GB, 50 tok/s). Tabla de hardware + guía de cuantización.',
+      metaDescription: 'Ejecuta IA gratis y sin conexión: Phi-4 Mini (CPU, 5–15 tok/s), TinyLlama (4 GB, 25 tok/s), Mistral 7B Q4 (8 GB, 50 tok/s). Hardware y cuantización.',
       twitterDescription: 'Solo CPU: Phi-4 Mini 5–15 tok/s. GPU 4 GB: TinyLlama 20–40 tok/s. GPU 8 GB: Mistral 7B 25–60 tok/s. Guía de hardware gratuita. Abril 2026.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',

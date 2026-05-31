@@ -237,7 +237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Mejor configuración de LLM local para datos sensibles',
       seoTitle: 'LLM local para datos sensibles 2026: guía HIPAA y PCI-DSS',
       intro: '**Los LLM locales garantizan cero egreso de datos: historial médico, documentos financieros y escritos legales nunca salen de tu máquina.** Desde abril de 2026, los sectores sujetos a regulación estricta (sanidad HIPAA, finanzas PCI-DSS, privilegio abogado-cliente legal) exigen inferencia air-gapped. Esta guía cubre la configuración segura, el registro de auditoría y la verificación de cumplimiento.',
-      metaDescription: 'Cero egreso de datos: LLM local para HIPAA (sanidad), PCI-DSS (finanzas) y privilegio legal. Configuración air-gapped, registros de auditoría, GDPR Artículo 32 incluido.',
+      metaDescription: 'Cero egreso de datos: LLM local para HIPAA (sanidad), PCI-DSS (finanzas) y privilegio legal. Configuración air-gapped, registros de auditoría y GDPR Art. 32.',
       publishDate: '2026-04-05',
       dateModified: '2026-05-03',
       leadAnswerBlock: '**Los LLM locales garantizan cero egreso de datos: historial médico, documentos financieros y escritos legales nunca salen de tu máquina.**',

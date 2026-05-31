@@ -684,7 +684,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Techniques',
     title: 'Persona Prompting: dale un rol a tu IA y observa cómo mejora',
     intro: 'El persona prompting es la práctica de definir un rol claro, una visión del mundo y un comportamiento para un modelo de IA, de modo que responda de forma consistente como un experto o personaje específico en muchos prompts y sesiones.',
-    seoTitle: 'Persona Prompting: Desbloquea un comportamiento experto consistente de IA',
+    seoTitle: 'Persona Prompting: comportamiento experto y consistente',
     metaDescription: 'Domina el persona prompting para IA estable sin fine-tuning. Aprende los 7 bloques de construcción, plantillas y prueba personas en GPT, Claude, Gemini.',
     publishDate: '2026-03-26',
     readTime: '13 min de lectura',

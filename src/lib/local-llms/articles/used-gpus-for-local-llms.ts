@@ -242,7 +242,7 @@ schema: {
       freshness_tier: 'annual',
       theme: 'GPU Buying Guides',
       title: 'GPUs de segunda mano para LLMs locales: Las mejores opciones por precio',
-      seoTitle: 'Mejores GPUs de segunda mano para LLMs locales: Guía de compra RTX 3060, 3080, 4090',
+      seoTitle: 'GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 4090',
       intro: '**Las GPUs de segunda mano ofrecen un ahorro del 30-50% frente a las nuevas, con un riesgo de rendimiento mínimo en modelos de probada fiabilidad como la RTX 3060 12GB y la RTX 3080.** En abril de 2026, el mercado de segunda mano está inundado de tarjetas ex-minería y ex-gaming a precios estables. Comprar de segunda mano tiene sentido para tu primer equipo o al actualizar; las tarjetas de minería son arriesgadas a menos que puedas probarlas in situ.',
       metaDescription: 'Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.',
       publishDate: '2026-04-05',

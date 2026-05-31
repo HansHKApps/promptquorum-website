@@ -377,7 +377,7 @@ schema: {
       title: 'Prompt Engineering para LLMs locales 2026: CoT y Few-Shot',
       seoTitle: 'Prompt Engineering para LLMs locales 2026: CoT y Few-Shot',
       intro: 'Los modelos locales 7B–13B responden de forma diferente a los prompts que GPT-5.2 o Claude. Necesitan estructura explícita, instrucciones más claras y 3–5 ejemplos few-shot donde los modelos cloud necesitan 1–2. En abril de 2026, las técnicas probadas incluyen el prompting por cadena de pensamiento (+10–20% de precisión), la definición de roles, el formato estructurado de salida (JSON) y la configuración del system prompt en Ollama y LM Studio.',
-      metaDescription: 'La cadena de pensamiento mejora la precisión de los modelos 7B un 10–20%. Few-shot (3–5 ejemplos) supera a zero-shot en un 15–25%. Guía de system prompt para Ollama y LM Studio.',
+      metaDescription: 'La cadena de pensamiento sube la precisión de los modelos 7B un 10–20%. El few-shot (3–5 ejemplos) supera al zero-shot un 15–25%. Guía de system prompt.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-25',
       leadAnswerBlock: '**Los LLMs locales (modelos 7B-13B) responden de forma diferente a los prompts que las APIs en la nube. Necesitan estructura explícita, instrucciones más claras y menos dependencia del aprendizaje en contexto.**',

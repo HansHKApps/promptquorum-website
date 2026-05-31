@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     dateModified: '2026-05-03',
     readTime: '9 min de lectura',
     seoTitle: 'Guía de Prompts de Google: 5 Principios Clave',
-    metaDescription: 'Domina los 5 principios de prompts de Google: claridad, restricciones, ejemplos, roles, estructura. Aplícalos en Gemini, GPT-4o, Claude y modelos locales para resultados predecibles.',
+    metaDescription: 'Domina los 5 principios de prompts de Google: claridad, restricciones, ejemplos, roles y estructura. Aplícalos en Gemini, GPT-4o, Claude y modelos locales.',
     ogTitle: 'Guía de Prompts de Google: 5 Principios Clave + Ejemplos',
     ogDescription: 'Domina los 5 principios de prompts de Google: claridad, restricciones, ejemplos, roles, estructura. Aplícalos en Gemini, GPT-4o, Claude y modelos locales para resultados predecibles.',
     twitterTitle: 'Guía de Prompts de Google: 5 Principios Clave + Ejemplos',

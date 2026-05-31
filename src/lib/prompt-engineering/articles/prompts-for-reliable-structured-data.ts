@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Techniques',
     title: 'Prompts para datos estructurados fiables: 3 técnicas (2026)',
     seoTitle: 'Prompts para datos estructurados fiables: 3 técnicas (2026)',
-    metaDescription: 'El modo JSON impone la sintaxis JSON, no la completitud de campos. La incrustación de esquemas, los ejemplos de salida y las instrucciones de campo elevan la fiabilidad al 95%+ sin cambios en la API.',
+    metaDescription: 'El modo JSON impone la sintaxis, no la completitud de campos. Esquemas embebidos, ejemplos de salida e instrucciones de campo elevan la fiabilidad al 95 %+.',
     ogDescription: 'El modo JSON detiene el JSON malformado, no los campos faltantes ni los tipos incorrectos. Tres técnicas de prompt — incrustación del esquema, ejemplos de salida, instrucciones de campo — elevan la fiabilidad al 95%+ sin cambios en la API.',
     twitterDescription: 'El modo JSON corrige la sintaxis, no la conformidad del esquema. Esquema en el prompt + un ejemplo de salida + instrucciones de campo → 95%+ de fiabilidad en salida estructurada. No se necesitan cambios en la API.',
     intro: '**La mayoría de los fallos de salida estructurada ocurren dentro de JSON válido — campos requeridos faltantes, fechas formateadas como cadenas simples, valores de enum mal escritos, campos nullable que devuelven cadenas vacías en lugar de null.** El modo JSON a nivel de API y tool_use eliminan la salida no analizable pero no hacen nada para los fallos de conformidad del esquema. Tres técnicas de prompt corrigen lo que el modo JSON deja atrás.',

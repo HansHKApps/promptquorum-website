@@ -287,7 +287,7 @@ schema: {
       title: 'Modelos LLM locales pequeños: los mejores sub-4B para máquinas con poca RAM en 2026',
       seoTitle: 'Modelos LLM locales pequeños 2026: top 5 sub-4B clasificados',
       intro: 'Los LLMs locales pequeños (1B-4B parámetros) funcionan en máquinas con 4-8 GB de RAM y producen 30-70 tokens/seg en CPU -- suficientemente rápido para chat en tiempo real. Los mejores modelos pequeños en 2026 son Microsoft Phi-4 Mini 3.8B (mejor razonamiento), Google Gemma 2 2B (el más rápido), Qwen2.5 3B (mejor para código) y Meta Llama 3.2 3B (mejor uso general).',
-      metaDescription: 'Mejores modelos LLM locales sub-4B para 4-8 GB de RAM: Phi-4 Mini (68% MMLU), Gemma 2 (el más rápido), Qwen2.5 (código), Llama 3.2 (general). Clasificación de abril 2026.',
+      metaDescription: 'Mejores modelos LLM locales sub-4B para 4–8 GB de RAM: Phi-4 Mini (68% MMLU), Gemma 2 (el más rápido), Qwen2.5 (código) y Llama 3.2 (general). 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Los LLMs locales pequeños (1B-4B parámetros) funcionan en máquinas con 4-8 GB de RAM y producen 30-70 tokens/seg en CPU -- suficientemente rápido para chat en tiempo real.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',

@@ -354,7 +354,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
     title: 'Cómo ejecutar Qwen2-VL en local en 2026: guía de OCR de documentos y visión',
     seoTitle: 'Ejecutar Qwen2-VL en local 2026: guía de OCR y visión',
     intro: 'Qwen2-VL es el modelo de visión-lenguaje abierto de Alibaba, y su variante de 7B se ejecuta en local con aproximadamente 6 GB de VRAM mediante Ollama o LM Studio. Lee documentos, capturas de pantalla, gráficos y fotos, y supera a todos los demás modelos de visión locales en OCR de chino, japonés y coreano. Esta guía cubre la selección del modelo, el hardware, la configuración con Ollama y LM Studio, la extracción de documentos multilingüe y la comparación de Qwen2-VL con LLaVA y Llama 3.2 Vision.',
-    metaDescription: 'Ejecuta Qwen2-VL en local con ~6 GB de VRAM mediante Ollama: pasos de instalación, OCR de documentos en chino y japonés, preguntas sobre imágenes y comparativa con LLaVA.',
+    metaDescription: 'Ejecuta Qwen2-VL en local con ~6 GB de VRAM vía Ollama: instalación, OCR en chino y japonés, preguntas sobre imágenes y comparación con LLaVA.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     readTime: '11 min de lectura',

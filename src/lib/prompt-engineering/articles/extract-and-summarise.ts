@@ -1157,7 +1157,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-23',
       dateModified: '2026-05-04',
       seoTitle: 'Extrae y resume documentos: técnica de IA sin alucinaciones',
-      metaDescription: 'Resumen extractivo: 0 % de alucinación. Abstractivo: 0,7–14 %. Aprende qué técnica usar para documentos legales, financieros e investigación. Incluye plantillas de prompts.',
+      metaDescription: 'Resumen extractivo: 0 % de alucinación. Abstractivo: 0,7–14 %. Aprende qué técnica usar en documentos legales, financieros e investigación. Con plantillas.',
       ogTitle: 'Extractivo = 0 % de alucinación. Abstractivo = 0,7–14 %. ¿Cuál usar?',
       ogDescription: '¿Qué modelo de IA alucina menos al resumir documentos? Probamos 25 documentos con GPT-4o, Claude Sonnet 4.6 y Gemini 3.1 Pro. Resultados, plantillas de prompts y estrategias de chunking.',
       twitterTitle: 'Resumen con IA: extractivo vs abstractivo (guía 2026)',

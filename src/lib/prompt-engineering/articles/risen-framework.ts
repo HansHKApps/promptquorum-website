@@ -841,7 +841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '13 min de lectura',
-      seoTitle: 'Framework RISEN: 5 Pasos para Refinamiento Iterativo de Prompts (2026)',
+      seoTitle: 'Framework RISEN: refina prompts en 5 pasos iterativos',
       metaDescription: 'RISEN refina prompts de forma iterativa con 5 pasos. Documenta cambios, evalúa calidad, planifica siguientes mejoras. Pruebas multi-modelo con PromptQuorum.',
       educationalLevel: 'Intermediate',
       audience: 'Desarrolladores construyendo flujos de trabajo de prompts, equipos de producto iterando contenido, equipos haciendo revisiones multi-etapa',

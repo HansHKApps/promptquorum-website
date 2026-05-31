@@ -284,7 +284,7 @@ dispatch_rules:
     title: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2: LLM Local vs Cloud Comparación 2026',
     seoTitle: 'Qwen 3 vs Claude 4.6 vs DeepSeek R2: Comparativa 2026',
     intro: 'Qwen 3.6 27B alcanza 92,1% HumanEval y 77,2% SWE-bench de forma local con 16 GB de VRAM. Claude Sonnet 4.6 logra 89,4% HumanEval sin requerimientos de hardware. DeepSeek R2 ofrece razonamiento frontier a $0,14/1M tokens de entrada. Esta comparativa cubre datos de benchmarks, jurisdicción GDPR de la UE, matemáticas de coste por token y el problema de la capa de despacho que hace obsoletas las estrategias de modelo único en 2026.',
-    metaDescription: 'Compara Qwen 3.6 27B (92,1% HumanEval, 16 GB VRAM), Claude Sonnet 4.6 (89,4%, $3/1M) y DeepSeek R2 ($0,14/1M). Análisis de cumplimiento GDPR, coste y hardware para 2026.',
+    metaDescription: 'Compara Qwen 3.6 27B (92,1% HumanEval, 16 GB VRAM), Claude Sonnet 4.6 (89,4%, $3/1M) y DeepSeek R2 ($0,14/1M). Cumplimiento GDPR, coste y hardware 2026.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '10 min de lectura',

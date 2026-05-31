@@ -690,8 +690,8 @@ jobs:
     audience: 'Desarrolladores que gestionan prompts LLM en producción, prompt engineers, líderes de equipos de ingeniería',
     primaryTerm: 'Prompt Version Control',
     readTime: '10 min de lectura',
-    seoTitle: 'Control de versiones de prompts: Git, Semver y guía de rollback',
-    metaDescription: 'Los prompts sin versionar fallan silenciosamente — sin rollback sin historial de cambios. Aplica el versionado MAJOR.MINOR.PATCH y flujos de trabajo de Git a cada cambio de prompt.',
+    seoTitle: 'Control de versiones de prompts: Git, Semver y rollback',
+    metaDescription: 'Los prompts sin versionar fallan en silencio: sin rollback ni historial. Aplica el versionado MAJOR.MINOR.PATCH y Git a cada cambio de prompt.',
     leadAnswerBlock: '**El control de versiones de prompts rastrea cada cambio de un prompt de IA usando versionado semántico (MAJOR.MINOR.PATCH) y flujos de trabajo de Git. Permite rollback instantáneo, colaboración en equipo y detección de regresiones — la misma disciplina que se aplica al código, aplicada a los prompts.**',
     quickFacts: [
       'Versionado semántico para prompts: MAJOR en cambios de formato de salida que rompen compatibilidad, MINOR en mejoras de calidad, PATCH en correcciones de errores tipográficos/clarificaciones',

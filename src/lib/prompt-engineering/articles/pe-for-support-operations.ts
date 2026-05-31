@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Workflows & Automatización',
     title: 'Prompt engineering para operaciones de soporte: plantillas de respuesta consistentes y precisas',
     seoTitle: 'Prompts de soporte: guía de plantillas',
-    metaDescription: 'Diseña prompts de soporte para triage, escalación y control de tono. Salvaguardas evitan errores de política. Patrones de transferencia aclaran los desencadenantes de escalación.',
+    metaDescription: 'Diseña prompts de soporte para triage, escalación y control de tono. Las salvaguardas evitan errores de política y aclaran cuándo escalar un caso.',
     ogDescription: 'Cómo los equipos de soporte usan el prompt engineering — plantillas de triage y escalación, controles de tono y empatía, salvaguardas de cumplimiento de políticas y cuándo transferir a personas.',
     twitterDescription: 'PE para ops de soporte: plantillas de triage, lógica de escalación, controles de tono, salvaguardas de políticas. Respuestas consistentes sin perder el toque humano.',
     intro: 'Los equipos de soporte se enfrentan a un desafío de prompting que la mayoría de los otros casos de uso no tienen: el coste de una mala salida no es estético — es una relación con el cliente, una violación de política o una exposición legal. El prompt engineering para operaciones de soporte significa diseñar con precisión, consistencia y escalación correcta como objetivos principales.',

@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     title: 'Construye tu propio framework de prompts: proceso de 5 pasos',
     seoTitle: 'Crear un framework de prompts personalizado: 5 pasos',
     intro: 'Cuando los frameworks existentes — CO-STAR, CRAFT, RISEN — no se adaptan a tu flujo de trabajo, construir un framework de prompts personalizado le da a tu equipo una estructura reutilizable y testeable. Esta guía cubre cuándo construir vs adoptar, el proceso de 5 pasos y un ejemplo práctico.',
-    metaDescription: 'Aprende cuándo y cómo construir un framework de prompts personalizado: proceso de 5 pasos desde el objetivo hasta la documentación. Con el ejemplo REPAIR para equipos de soporte.',
+    metaDescription: 'Aprende cuándo y cómo crear un framework de prompts propio: proceso de 5 pasos del objetivo a la documentación. Con el ejemplo REPAIR para soporte.',
     ogDescription: 'Construye un framework de prompts personalizado en 5 pasos: define el objetivo, identifica 3-6 componentes, prueba en 10 prompts, refina, documenta. Pruebas entre modelos con PromptQuorum.',
     twitterDescription: '¿Los frameworks estándar no encajan? Construye el tuyo en 5 pasos. Ejemplo REPAIR para equipos de soporte. 3-6 componentes, validación con 10 prompts.',
     publishDate: '2026-05-02',

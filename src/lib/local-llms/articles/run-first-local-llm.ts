@@ -351,7 +351,7 @@ schema: {
       title: 'Ejecuta tu primer LLM local en 10 minutos: De la instalación a la primera respuesta',
       seoTitle: 'Ejecuta tu primer LLM local en 10 minutos (paso a paso)',
       intro: 'Ejecutar tu primer LLM local con Ollama tarda menos de 10 minutos. Instala Ollama, ejecuta un comando para descargar un modelo y empieza a chatear en tu terminal — sin API key, sin cuenta y sin conexión a internet después de la descarga inicial. A partir de abril de 2026, el modelo más rápido para principiantes es Llama 3.2 3B con 25-45 tokens/seg en una CPU moderna de laptop.',
-      metaDescription: 'Ejecuta tu primer LLM local en menos de 10 minutos con Ollama: instala, descarga un modelo 3B y obtén una respuesta — sin API key ni internet después de la descarga.',
+      metaDescription: 'Ejecuta tu primer LLM local en 10 minutos con Ollama: instala, descarga un modelo 3B y obtén respuesta. Sin API key ni internet tras la descarga.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ejecutar tu primer LLM local tarda menos de 10 minutos con Ollama. Instala Ollama, ejecuta un comando para descargar un modelo y empieza a chatear en tu terminal — sin API key, sin cuenta y sin conexión a internet después de la descarga inicial.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',

@@ -308,7 +308,7 @@ schema: {
       title: 'Cómo ejecutar modelos 70B en hardware de consumo 2026: RAM y GPU',
       seoTitle: '70B en hardware de consumo 2026: guía de RAM y GPU',
       intro: 'Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading. En abril de 2026, Llama 3.3 70B y Qwen2.5 72B son los dos modelos 70B principales disponibles.',
-      metaDescription: 'Ejecuta modelos Llama 3.3 y Qwen2.5 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Guía de hardware completa -- abril 2026.',
+      metaDescription: 'Ejecuta Llama 3.3 y Qwen2.5 70B en local: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading y benchmarks. Guía de hardware completa 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLMs locales',

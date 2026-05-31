@@ -252,8 +252,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)',
       intro: 'Los LLM no tienen memoria a largo plazo — solo "ven" una ventana deslizante de tokens recientes. Aprende por qué la IA olvida el contexto, cómo estructurar los prompts para mantenerte dentro de los límites y cómo gestionar las context windows en modelos en la nube y locales.',
       publishDate: '2026-03-22',
-      seoTitle: 'Context windows 2026: por qué la IA olvida y cómo gestionarlo',
-      metaDescription: 'Las context windows limitan la entrada a los LLM: supera el límite y los mensajes más antiguos desaparecen en silencio. Aprende a mantener el control con GPT-4o, Claude Opus 4.7 y Ollama.',
+      seoTitle: 'Context windows 2026: por qué la IA olvida y gestionarlo',
+      metaDescription: 'Las context windows limitan la entrada a los LLM: supera el límite y los mensajes antiguos desaparecen. Aprende a controlarlo en GPT-4o, Claude y Ollama.',
       readTime: '11 min de lectura',
       educationalLevel: 'Beginner',
       schema: {

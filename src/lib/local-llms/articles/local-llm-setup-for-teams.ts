@@ -1083,7 +1083,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
       title: 'Servidor LLM local para equipos empresariales: acceso multiusuario y control de costos',
-      seoTitle: 'Servidor LLM local para equipos: control de acceso y seguimiento de costos',
+      seoTitle: 'Servidor LLM local para equipos: acceso y control de costos',
       intro: '**Despliega un servidor LLM local compartido para 5-20 miembros de equipo usando vLLM + nginx load balancer.** A partir de abril de 2026, la inferencia a escala de equipo cuesta $50/mes (electricidad) frente a $1.000+/mes (APIs en la nube). Esta guía cubre el acceso multiusuario, permisos basados en roles, medición de uso y atribución de costos.',
       metaDescription: 'Servidor LLM local para equipos con vLLM, nginx, control de acceso y seguimiento de uso. Configuración multiusuario, comparación de costos y permisos por roles.',
       publishDate: '2026-04-05',

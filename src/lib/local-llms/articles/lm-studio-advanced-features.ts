@@ -1280,7 +1280,7 @@ schema: {
       title: 'LM Studio: Funciones avanzadas 2026 (GPU, LoRA y ajuste fino)',
       seoTitle: 'LM Studio 2026: API local, capas GPU y LoRA explicados',
       intro: 'LM Studio es principalmente una app de chat, pero también incluye funciones avanzadas para desarrolladores: configuración de memoria GPU, ajuste de ventana de contexto, API compatible con OpenAI e integración con herramientas de ajuste fino. A partir de abril de 2026, LM Studio está expandiéndose más allá del chat para soportar flujos de trabajo profesionales como ajuste fino con LoRA e inferencia por lotes.',
-      metaDescription: 'El servidor API de LM Studio (puerto 1234), el control de capas GPU, el ajuste de la ventana de contexto, la carga/descarga de LoRA y la inferencia por lotes: guía avanzada para 2026.',
+      metaDescription: 'Servidor API de LM Studio (puerto 1234), control de capas GPU, ajuste de la ventana de contexto, carga de LoRA e inferencia por lotes: guía avanzada 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio es principalmente una app de chat, pero también incluye funciones avanzadas para desarrolladores: configuración de memoria GPU, ajuste de ventana de contexto, API compatible con OpenAI e integración con herramientas de ajuste fino.**',
       audience: 'Ingenieros que despliegan LLMs locales en entornos de producción o empresariales',

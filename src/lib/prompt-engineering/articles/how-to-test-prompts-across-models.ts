@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     current_models_mentioned: ['GPT-4o', 'Claude Opus 4.7', 'Gemini 1.5 Pro', 'Llama 2 70B'],
     title: 'Cómo probar prompts entre modelos: evaluación multi-modelo',
     seoTitle: 'Prueba prompts entre modelos: GPT vs Claude vs Gemini (2026)',
-    metaDescription: 'Prueba el mismo prompt en GPT, Claude, Gemini y Llama en paralelo. Compara fiabilidad JSON, tasas de éxito, patrones de rechazo y costo por token. Framework de evaluación multi-modelo con plantillas de conjuntos de prueba.',
+    metaDescription: 'Prueba el mismo prompt en GPT, Claude, Gemini y Llama en paralelo. Compara fiabilidad JSON, tasas de éxito, rechazos y costo por token. Con plantillas.',
     ogTitle: 'Tu prompt funciona en GPT-4o. Falla en Claude. Aquí está el motivo.',
     ogDescription: 'Un prompt que puntúa 95 % en GPT puede fallar silenciosamente en Claude — diferente manejo de JSON, diferentes umbrales de rechazo, diferentes prioridades de instrucción. No lo sabrás hasta que pruebes el mismo prompt en ambos.',
     twitterTitle: 'GPT-4o vs Claude vs Gemini: prueba tu prompt en los 3',

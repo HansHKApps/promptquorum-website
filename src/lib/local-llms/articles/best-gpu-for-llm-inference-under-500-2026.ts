@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Hardware & Performance',
     title: 'Mejor GPU para inferencia LLM por menos de $500 (2026)',
     seoTitle: 'Mejor GPU para inferencia LLM por menos de $500 (2026)',
-    metaDescription: 'RTX 4060 Ti 16GB, RTX 3090 de segunda mano, RX 7800 XT — clasificadas por VRAM, velocidad y valor para IA local. Elige la GPU correcta según el tamaño de tu modelo.',
+    metaDescription: 'RTX 4060 Ti 16GB, RTX 3090 usada y RX 7800 XT, clasificadas por VRAM, velocidad y valor para IA local. Elige la GPU según el tamaño de tu modelo. 2026.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

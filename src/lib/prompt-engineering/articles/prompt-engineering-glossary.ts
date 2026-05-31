@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   intro: 'Definiciones concisas de los 500 términos más importantes del prompt engineering — desde tokens y context windows hasta orquestación de agentes, RAG y métricas de evaluación.',
   publishDate: '2026-03-28',
   seoTitle: 'Glosario de IA y Prompt Engineering: 500+ términos definidos',
-  metaDescription: '500 términos de prompt engineering definidos: tokens, CoT, RAG, agentes, seguridad y métricas de evaluación. Referencia A–Z para desarrolladores y profesionales de IA.',
+  metaDescription: '500 términos de prompt engineering definidos: tokens, CoT, RAG, agentes, seguridad y métricas de evaluación. Referencia A–Z para desarrolladores de IA.',
   readTime: '12 min de lectura',
   schema: {
     '@context': 'https://schema.org',

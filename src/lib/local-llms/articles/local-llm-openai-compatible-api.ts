@@ -1557,7 +1557,7 @@ schema: {
       next_refresh_due: '2026-11-04',
       theme: 'Tools & Interfaces',
       title: 'API compatible con OpenAI para LLMs locales (Ollama, vLLM, LM Studio) — Guía Python y Node.js 2026',
-      seoTitle: 'LM Studio & Ollama API OpenAI: Configuración en Python y Node.js (2026)',
+      seoTitle: 'API OpenAI con LM Studio y Ollama: Python y Node.js 2026',
       intro: 'LM Studio (localhost:1234), Ollama (localhost:11434) y vLLM (localhost:8000) exponen APIs REST en formato OpenAI. Usa el SDK oficial de Python o Node.js de OpenAI con cualquier modelo local cambiando solo dos líneas: establece base_url en tu endpoint local y api_key en cualquier cadena de texto. A partir de mayo de 2026, esta es la forma estándar de ejecutar LLMs locales en aplicaciones Python y Node.js de producción sin costes en la nube ni dependencia de un proveedor.',
       metaDescription: 'Guías de configuración para la API compatible con OpenAI de LM Studio y Ollama con ejemplos de código en Python/Node.js, streaming y function calling.',
       publishDate: '2026-04-04',

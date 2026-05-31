@@ -1057,7 +1057,7 @@ schema: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       title: 'VPN y AI local: todo lo que necesitas saber',
-      seoTitle: 'VPN para equipos con LLM local: acceso remoto, seguridad, split tunneling',
+      seoTitle: 'VPN para LLM local: acceso remoto, seguridad y split tunnel',
       intro: '**Los miembros remotos del equipo pueden acceder al servidor LLM local a través de la VPN corporativa sin exponerlo a internet público.** A partir de abril de 2026, VPN + reglas de firewall reemplazan la suscripción a la API en la nube para equipos distribuidos. Esta guía cubre la configuración, el impacto en el rendimiento y las consideraciones de seguridad.',
       metaDescription: 'VPN para acceso al servidor LLM local: configuración de WireGuard y OpenVPN. Acceso de equipo remoto, seguridad. Guía de split tunneling.',
       publishDate: '2026-04-05',

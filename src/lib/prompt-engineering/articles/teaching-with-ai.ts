@@ -1213,7 +1213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-04',
       readTime: '8 min de lectura',
       seoTitle: 'Enseñar con IA en 2026: Guía 2× Más Aprendizaje',
-      metaDescription: 'Estudio Harvard: la tutoría con IA duplica las ganancias de aprendizaje, 18 % menos de tiempo. Herramientas: Khanmigo, MagicSchool, Claude. Los prompts estructurados ahorran 5–13 h/semana. Incluye guía de la Ley de IA de la UE.',
+      metaDescription: 'Estudio de Harvard: la tutoría con IA duplica el aprendizaje en un 18 % menos de tiempo. Herramientas: Khanmigo, MagicSchool y Claude. Con guía de la UE.',
       educationalLevel: 'Beginner',
       audience: 'Docentes, directores escolares y profesionales de la educación que usan herramientas de IA',
       aboutTopics: ['IA en la educación', 'Khanmigo', 'Ley de IA de la UE'],

@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Tools & Platforms',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: elige uno',
-    metaDescription: 'PromptLayer ($49/mes) registra llamadas LLM, Mirascope (gratis) construye apps Python, PromptPerfect ($20/mes) reescribe prompts. Problemas distintos — elige exactamente uno.',
+    metaDescription: 'PromptLayer ($49/mes) registra llamadas LLM, Mirascope (gratis) crea apps Python y PromptPerfect ($20/mes) reescribe prompts. Problemas distintos: elige uno.',
     intro: '**PromptLayer registra y versiona llamadas LLM (gratis–$49/mes para equipos pequeños). Mirascope es un SDK Python gratuito para apps LLM type-safe. PromptPerfect reescribe prompts automáticamente para mejores resultados ($0–$20/mes). Estas tres herramientas resuelven problemas distintos — elige exactamente una según tu cuello de botella.**',
     publishDate: '2026-04-10',
     dateModified: '2026-05-01',

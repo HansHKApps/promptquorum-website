@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Policy & Compliance',
       title: 'Geopolítica de la IA explicada: EU AI Act vs. EE.UU. vs. China (Análisis 2026)',
       intro: 'EE.UU., China y la Unión Europea persiguen visiones incompatibles de la gobernanza de la IA — EE.UU. prioriza la competitividad, China enfatiza el control estatal y la UE construye un marco legal basado en derechos. Para las organizaciones que despliegan IA, estas diferencias se traducen en obligaciones de cumplimiento concretas, restricciones de adquisición y requisitos de residencia de datos que aplican independientemente de dónde esté radicada la organización.',
-      metaDescription: 'EU AI Act, controles de exportación de EE.UU., CAC de China: tres marcos incompatibles. Cómo afectan la adquisición de IA, la residencia de datos y la disponibilidad de modelos en 2026.',
+      metaDescription: 'EU AI Act, controles de exportación de EE. UU. y CAC de China: tres marcos incompatibles. Cómo afectan a la compra de IA y la residencia de datos en 2026.',
       seoTitle: 'Geopolítica de la IA 2026: Análisis EE.UU., UE y China',
       publishDate: '2026-04-01',
       dateModified: '2026-04-02',
