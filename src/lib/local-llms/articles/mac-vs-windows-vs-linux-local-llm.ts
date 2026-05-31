@@ -491,7 +491,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Mac vs Windows vs Linux para LLMs locales 2026: Apple M5, RTX 5090 y servidor Linux comparados',
         'description': 'MacBook Pro M5 Max 128GB: 70B a 25–35 tok/s, 614 GB/s de ancho de banda. Windows RTX 5090 32GB: 70B a 40–50 tok/s, $2.000. Linux: 1–5% más rápido, $810 TCO 3 años. Comparación completa de sistemas operativos.',
-        'url': 'https://www.promptquorum.com/es/local-llms/mac-vs-windows-vs-linux-local-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/mac-vs-windows-vs-linux-local-llm?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -516,7 +516,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'es',
-        'url': 'https://www.promptquorum.com/es/local-llms/mac-vs-windows-vs-linux-local-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/mac-vs-windows-vs-linux-local-llm?lang=es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo ejecutar Llama 3.1 70B en macOS?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí — MacBook Pro M5 Pro (64 GB) ejecuta 70B Q4 a 15–20 tok/s. M5 Max (128 GB) ejecuta 70B Q8 a 25–35 tok/s. Mac mini M4 Pro (64 GB, vigente) ejecuta 70B a 10–15 tok/s. Las configuraciones más pequeñas (32 GB o menos) no caben en 70B.' } },
           { '@type': 'Question', 'name': '¿Puedo usar GPU AMD en lugar de NVIDIA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windows: Limitado (el soporte ROCm mejora pero lleva 3–6 meses de retraso respecto a CUDA). Linux: Excelente soporte ROCm para la serie RX 7000. AMD es 10–20% más lento que NVIDIA equivalente para inferencia LLM a partir de abril de 2026. Para AMD en Linux: configura HSA_OVERRIDE_GFX_VERSION antes de iniciar Ollama.' } },

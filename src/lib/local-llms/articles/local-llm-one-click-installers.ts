@@ -524,7 +524,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Instaladores de LLM local de un clic: Ollama vs LM Studio vs Jan AI vs GPT4All comparados',
         description: 'Compara Ollama, LM Studio, Jan AI y GPT4All — puertos API, telemetría, número de modelos, valoraciones de privacidad y qué instalador se adapta a tu caso de uso.',
-        url: 'https://www.promptquorum.com/es/local-llms/local-llm-one-click-installers',
+        url: 'https://www.promptquorum.com/es/local-llms/local-llm-one-click-installers?lang=es',
         inLanguage: 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-05-05',

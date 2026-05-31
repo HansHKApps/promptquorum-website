@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'TechArticle',
         'headline': 'Qwen 3 vs Llama 4 vs Mistral Small 24B: Comparativa de benchmarks 2026',
         'description': 'Comparativa completa de benchmarks: Qwen 3.6 27B (77,2% SWE-bench), Llama 4 Scout (MoE, contexto 10M), Mistral Small 24B + modelos heredados Mistral 24B/Qwen 2.5 14B/Llama 3.1 8B.',
-        'url': 'https://www.promptquorum.com/es/local-llms/qwen-vs-llama-vs-mistral',
+        'url': 'https://www.promptquorum.com/es/local-llms/qwen-vs-llama-vs-mistral?lang=es',
         'inLanguage': 'es',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },

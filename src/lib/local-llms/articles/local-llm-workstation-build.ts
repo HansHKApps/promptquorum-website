@@ -2069,7 +2069,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Estación de Trabajo LLM Local 2026: Dual RTX 4090, Threadripper, $4,000–6,000',
         'description': 'Construye una estación de trabajo de $4,000–6,000: 2× RTX 4090 (48 GB VRAM), Threadripper 7970X, 128 GB DDR5. Sirve a 2–3 usuarios 70B concurrentes a 14 tok/s cada uno. Guía completa de refrigeración, fuente de alimentación y configuración eléctrica.',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-workstation-build',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-workstation-build?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
@@ -2154,7 +2154,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'es',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-workstation-build',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-workstation-build?lang=es',
         'mainEntity': [
           {
             '@type': 'Question',

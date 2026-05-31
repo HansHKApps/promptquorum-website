@@ -484,7 +484,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Instalar Ollama: Configuración en 2 Minutos para macOS, Windows y Linux',
         'description': 'Instala Ollama en 2 minutos en cualquier sistema operativo: descarga, ejecuta ollama run llama3.2, empieza a chatear. Guía completa de configuración con solución de problemas para principiantes 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/how-to-install-ollama',
+        'url': 'https://www.promptquorum.com/es/local-llms/how-to-install-ollama?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',

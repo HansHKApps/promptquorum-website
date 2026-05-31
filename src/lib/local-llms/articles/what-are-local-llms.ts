@@ -424,7 +424,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '¿Qué son los LLM locales? Cómo los modelos de IA se ejecutan en tu hardware',
         'description': 'Los LLM locales ejecutan modelos de IA en tu propio hardware, sin necesidad de internet. Aprende qué son, cómo funcionan y cuándo usarlos. Guía para 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/what-are-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/what-are-local-llms?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',

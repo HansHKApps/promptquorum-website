@@ -379,7 +379,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Mejores GPUs de segunda mano para LLMs locales: Guía de compra RTX 3060, 3080, 4090',
         'description': 'Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.',
-        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -401,7 +401,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'inLanguage': 'es',
-        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms?lang=es',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -443,7 +443,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms?lang=es',
         'inLanguage': 'es',
         'name': 'GPUs de segunda mano para LLMs locales: Comparativa de costes y fiabilidad',
         'itemListElement': [

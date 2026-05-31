@@ -428,7 +428,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs locales a escala empresarial',
         'description': 'Escala LLMs locales: Kubernetes, balanceo de carga, redundancia, monitoreo. Despliegue multi-GPU en producción.',
-        'url': 'https://www.promptquorum.com/es/local-llms/scaling-local-llms-enterprise',
+        'url': 'https://www.promptquorum.com/es/local-llms/scaling-local-llms-enterprise?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',

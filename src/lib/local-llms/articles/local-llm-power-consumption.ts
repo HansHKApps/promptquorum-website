@@ -569,7 +569,7 @@ schema: {
         description: 'RTX 4090: 575W, $52/mes a $0.12/kWh. RTX 5090: 575W, 32GB VRAM. M5 Max: 30W (10× más eficiente). Se requiere fuente 1200W. Refrigeración y costos regionales incluidos.',
         datePublished: '2026-04-04',
         dateModified: '2026-04-25',
-        url: 'https://www.promptquorum.com/es/local-llms/local-llm-power-consumption',
+        url: 'https://www.promptquorum.com/es/local-llms/local-llm-power-consumption?lang=es',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

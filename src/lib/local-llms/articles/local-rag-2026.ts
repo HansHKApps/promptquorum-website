@@ -399,7 +399,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'RAG Local 2026: Construye Sistemas de Preguntas y Respuestas sin APIs en la Nube',
         'description': 'RAG Local 2026: construye sistemas de preguntas y respuestas, bases de datos vectoriales, estrategias de chunking y optimización de recuperación. Guía completa.',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-rag-2026',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-rag-2026?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

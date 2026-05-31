@@ -946,7 +946,7 @@ schema: {
         'description': 'Guía práctica para elegir niveles de cuantización de LLM según la VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 comparados con tablas de RAM, pérdida de calidad y casos de uso.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
-        'url': 'https://www.promptquorum.com/es/local-llms/llm-quantization-explained',
+        'url': 'https://www.promptquorum.com/es/local-llms/llm-quantization-explained?lang=es',
         'inLanguage': 'es',
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1054,7 +1054,7 @@ schema: {
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'url': 'https://www.promptquorum.com/es/local-llms/llm-quantization-explained',
+        'url': 'https://www.promptquorum.com/es/local-llms/llm-quantization-explained?lang=es',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro'],

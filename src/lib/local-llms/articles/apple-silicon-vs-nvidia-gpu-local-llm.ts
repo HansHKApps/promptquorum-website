@@ -581,6 +581,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Apple Silicon vs NVIDIA GPU para LLMs locales 2026',
+      description: 'M5 Max vs RTX 4090: velocidad, costo, consumo, VRAM vs memoria unificada. Comparativa completa.',
+      url: 'https://www.promptquorum.com/es/local-llms/apple-silicon-vs-nvidia-gpu-local-llm?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-15',
+      dateModified: '2026-05-15',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     freshness_tier: 'semi_annual',

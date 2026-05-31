@@ -584,7 +584,7 @@ schema: {
       '@type': 'TechArticle',
       'headline': 'Lista de Verificación de Seguridad y Privacidad para LLMs Locales: 12 Pasos para una Configuración Segura',
       'description': 'Lista de 12 pasos para la privacidad de LLMs locales en 2026: procedencia del modelo, opt-out de telemetría, aislamiento de red, cifrado de disco y controles de acceso.',
-      'url': 'https://www.promptquorum.com/es/local-llms/local-llm-security-privacy-checklist',
+      'url': 'https://www.promptquorum.com/es/local-llms/local-llm-security-privacy-checklist?lang=es',
       'inLanguage': 'es',
       'datePublished': '2026-04-04',
       'dateModified': '2026-04-18',

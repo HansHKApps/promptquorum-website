@@ -727,6 +727,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio',
+      description: 'Compara Apple M5 Pro, M5 Max y Mac Studio para LLM local: memoria unificada, tok/s y precio.',
+      url: 'https://www.promptquorum.com/es/local-llms/apple-silicon-m5-local-llm?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-18',
+      dateModified: '2026-05-18',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     freshness_tier: 'semi_annual',

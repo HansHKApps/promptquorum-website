@@ -492,7 +492,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Actualizaciones de modelos LLM locales 2026: Todos los lanzamientos open-weight importantes del año',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
@@ -520,7 +520,7 @@ schema: {
         '@type': 'ItemList',
         'inLanguage': 'es',
         'name': 'Principales lanzamientos de LLM locales del Q1 2026',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026?lang=es',
         'numberOfItems': 4,
         'itemListElement': [
           {

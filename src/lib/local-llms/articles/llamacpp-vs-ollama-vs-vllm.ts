@@ -270,7 +270,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'llama.cpp vs Ollama vs vLLM 2026: Velocidad, Batching y Benchmarks GPU',
         'description': 'llama.cpp: 38 tok/s por token (más rápido). Ollama: 5 minutos de setup (más simple). vLLM: 250+ tok/s en batch (mayor throughput). Benchmarks RTX 4090. Abril 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/llamacpp-vs-ollama-vs-vllm',
+        'url': 'https://www.promptquorum.com/es/local-llms/llamacpp-vs-ollama-vs-vllm?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',

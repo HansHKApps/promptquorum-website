@@ -625,6 +625,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Cómo configurar Qwen localmente para flujos de trabajo RGPD 2026',
+      description: 'Guía paso a paso para ejecutar Qwen 2.5 14B localmente con cumplimiento RGPD completo.',
+      url: 'https://www.promptquorum.com/es/local-llms/qwen-local-gdpr-setup-guide-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-22',
+      dateModified: '2026-05-22',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   zh: {
     theme: 'Privacy & Security',

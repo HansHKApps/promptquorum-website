@@ -417,6 +417,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         plainTerms: 'Tu elección de LLM importa para el RGPD por el lugar donde se almacenan tus datos, qué país es propietario del modelo, cuánto tiempo guarda el proveedor tus datos y si necesitas contratos legales para mover datos entre fronteras.',
       },
     ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Comparación de riesgos RGPD: Qwen vs DeepSeek vs Llama vs Claude 2026',
+      description: 'Comparación de LLM conforme al RGPD: matriz de riesgo para DeepSeek, Qwen, Llama y Claude.',
+      url: 'https://www.promptquorum.com/es/local-llms/gdpr-llm-risk-comparison-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-22',
+      dateModified: '2026-05-22',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     theme: 'Privacy & Security',

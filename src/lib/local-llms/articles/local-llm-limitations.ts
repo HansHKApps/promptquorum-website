@@ -545,7 +545,7 @@ schema: {
         description: 'Los LLMs locales están 10–20 puntos por debajo de GPT-4o en benchmarks de razonamiento, requieren 16 GB+ de RAM para modelos 7B y no tienen acceso a la web. Las 6 limitaciones con datos de benchmarks y orientación para decidir entre local y nube.',
         datePublished: '2026-04-04',
         dateModified: '2026-04-18',
-        url: 'https://www.promptquorum.com/es/local-llms/local-llm-limitations',
+        url: 'https://www.promptquorum.com/es/local-llms/local-llm-limitations?lang=es',
         inLanguage: 'es',
         proficiencyLevel: 'Beginner',
         about: [

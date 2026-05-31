@@ -998,5 +998,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Ollama en Mac 2026: Guía de configuración Apple Silicon (M1–M5)',
+      description: 'Instala Ollama en Mac con un solo comando. GPU Metal automático, descarga de modelos en minutos.',
+      url: 'https://www.promptquorum.com/es/local-llms/ollama-on-mac-apple-silicon-setup-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-15',
+      dateModified: '2026-05-15',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
 }

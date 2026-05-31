@@ -544,6 +544,18 @@ while True:
         ]
       }
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Whisper en Apple Silicon 2026: Benchmarks Metal, Configuración Core ML',
+      description: 'Whisper en Mac: benchmarks GPU Metal M1–M5, configuración, transcripción rápida sin GPU externa.',
+      url: 'https://www.promptquorum.com/es/local-llms/apple-silicon-whisper-metal-benchmark?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-15',
+      dateModified: '2026-05-15',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     freshness_tier: 'semi_annual',

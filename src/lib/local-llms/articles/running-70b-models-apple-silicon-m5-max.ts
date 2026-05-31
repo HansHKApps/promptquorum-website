@@ -777,6 +777,18 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
         ],
       },
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Ejecutar modelos 70B en Apple Silicon 2026: Guía M5 Max',
+      description: 'M5 Max 128 GB ejecuta modelos 70B a 12–20 tok/s. Calidad comparable a GPT-4o en local.',
+      url: 'https://www.promptquorum.com/es/local-llms/running-70b-models-apple-silicon-m5-max?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-15',
+      dateModified: '2026-05-15',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     freshness_tier: 'semi_annual',

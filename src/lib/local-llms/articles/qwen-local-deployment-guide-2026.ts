@@ -402,7 +402,7 @@ curl http://localhost:11434/v1/chat/completions \\
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'es',
-      url: 'https://www.promptquorum.com/es/local-llms/qwen-local-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/es/local-llms/qwen-local-deployment-guide-2026?lang=es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

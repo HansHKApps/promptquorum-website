@@ -552,6 +552,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Apple Silicon para LLMs locales 2026: Guía completa de M1 a M5 Max',
+      description: 'M5 Pro ejecuta modelos 34B a 15–20 tok/s por $1,400. M5 Max ejecuta modelos 70B a 12–20 tok/s. Guía completa de chips Apple Silicon para LLM.',
+      url: 'https://www.promptquorum.com/es/local-llms/apple-silicon-local-llm-guide-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-15',
+      dateModified: '2026-05-15',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     freshness_tier: 'annual',

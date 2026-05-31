@@ -246,7 +246,7 @@ schema: {
         '@type': 'NewsArticle',
         'headline': 'Mejores GPUs AMD para LLMs locales 2026: RX 7900 XTX',
         'description': 'Compara AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuración de ROCm, rendimiento en vLLM, análisis de coste por TFLOP. Cuándo elegir AMD sobre CUDA. Abril 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
@@ -431,7 +431,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'es',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm?lang=es',
         name: 'Mejores GPUs AMD para LLMs locales',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'La AMD RX 6800 XT (16GB, ~$300-350 de segunda mano) y la RX 7900 XTX (24GB, ~$400-500 de segunda mano) son las únicas opciones viables para LLMs locales.' },

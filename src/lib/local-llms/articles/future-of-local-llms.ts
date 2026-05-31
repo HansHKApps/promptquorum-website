@@ -464,7 +464,7 @@ schema: {
         '@type': 'BlogPosting',
         headline: 'Tendencias de LLM local 2026–2027: 5 predicciones clave para la adopción empresarial',
         description: 'Los modelos de 1–3B rivalizan con la calidad 7B en 2026. Los smartphones ejecutan LLMs locales a 15–30 tok/seg. Los modelos de razonamiento mejoran la precisión un 15–30%. El 50% de las empresas adoptará inferencia local para 2027.',
-        url: 'https://www.promptquorum.com/es/local-llms/future-of-local-llms',
+        url: 'https://www.promptquorum.com/es/local-llms/future-of-local-llms?lang=es',
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'es',

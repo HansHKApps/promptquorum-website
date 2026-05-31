@@ -1132,7 +1132,7 @@ schema: {
         '@type': 'HowTo',
         'name': 'Cómo usar LLMs locales con VS Code y Cursor 2026',
         'description': 'Cómo usar LLMs locales en VS Code y Cursor para asistencia de código privada y rápida con integración de PromptQuorum.',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-with-vscode-cursor',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-with-vscode-cursor?lang=es',
         'inLanguage': 'es',
         'step': [
           { '@type': 'HowToStep', 'name': 'Instala Continue.dev para VS Code', 'text': 'Instala la extensión Continue desde el marketplace de VS Code y configúrala para que apunte a tu servidor Ollama local.' },

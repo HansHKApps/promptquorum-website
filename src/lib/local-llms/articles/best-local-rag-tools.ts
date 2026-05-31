@@ -362,7 +362,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Mejores herramientas RAG locales en 2026: Open WebUI, LlamaIndex y LangChain',
         description: 'Mejores herramientas RAG locales: Open WebUI, LlamaIndex, LangChain y más. Q&A de documentos, recuperación, chunking.',
-        url: 'https://www.promptquorum.com/es/local-llms/best-local-rag-tools',
+        url: 'https://www.promptquorum.com/es/local-llms/best-local-rag-tools?lang=es',
         inLanguage: 'es',
         datePublished: '2026-04-04',
         author: { '@type': 'Person', 'name': 'Hans Kuepper' },

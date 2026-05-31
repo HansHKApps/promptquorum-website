@@ -1669,7 +1669,7 @@ schema: {
         'headline': 'Ollama vs LM Studio en 2026: ¿Qué herramienta LLM local deberías elegir?',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
-        'url': 'https://www.promptquorum.com/es/local-llms/ollama-vs-lm-studio',
+        'url': 'https://www.promptquorum.com/es/local-llms/ollama-vs-lm-studio?lang=es',
         'inLanguage': 'es',
         'proficiencyLevel': 'Principiante',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },

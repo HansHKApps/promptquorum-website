@@ -1851,7 +1851,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Los mejores frontends para LLMs locales 2026',
         'description': 'Compara 8 frontends para LLMs locales: Open WebUI (25k estrellas, RAG), Enchanted UI (el más rápido), Jan AI (app de escritorio). Tabla de características y guía de configuración.',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-frontends',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-frontends?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',

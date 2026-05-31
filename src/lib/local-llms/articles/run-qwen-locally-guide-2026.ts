@@ -631,6 +631,18 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
       },
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Cómo ejecutar Qwen 3 localmente en 2026: Guía Ollama y LM Studio',
+      description: 'Configuración paso a paso de Qwen 3 27B en Ollama o LM Studio con requisitos de hardware.',
+      url: 'https://www.promptquorum.com/es/local-llms/run-qwen-locally-guide-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-16',
+      dateModified: '2026-05-16',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     freshness_tier: 'semi_annual',

@@ -556,7 +556,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Ejecuta tu primer LLM local en 10 minutos (paso a paso)',
         'description': 'Ejecuta tu primer LLM local en menos de 10 minutos con Ollama: instala, descarga un modelo 3B y obtén una respuesta — sin API key ni cuenta después de la descarga.',
-        'url': 'https://www.promptquorum.com/es/local-llms/run-first-local-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/run-first-local-llm?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',

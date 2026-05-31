@@ -688,6 +688,18 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
         ],
       },
     },
+     schema: {
+       '@context': 'https://schema.org',
+       '@type': 'TechArticle',
+       headline: 'Cómo ejecutar Qwen2-VL en local en 2026: OCR de documentos y visión',
+       description: 'Ejecuta Qwen2-VL en local con ~6 GB de VRAM mediante Ollama: OCR, visión, pasos de instalación.',
+       url: 'https://www.promptquorum.com/es/local-llms/run-qwen-vl-locally-2026?lang=es',
+       inLanguage: 'es',
+       datePublished: '2026-05-22',
+       dateModified: '2026-05-22',
+       author: { '@type': 'Person', name: 'Hans Kuepper' },
+       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+     },
   },
 
   de: {

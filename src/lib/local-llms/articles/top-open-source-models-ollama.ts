@@ -815,7 +815,7 @@ schema: {
         '@type': 'NewsArticle',
         'headline': 'Nuevos modelos Ollama mayo de 2026: Últimos lanzamientos y actualizaciones',
         'description': '¿Buscas nuevos modelos de Ollama? Consulta los últimos lanzamientos de mayo de 2026, qué hay de nuevo y qué modelos vale la pena usar para chat, programación y razonamiento.',
-        'url': 'https://www.promptquorum.com/es/local-llms/top-open-source-models-ollama',
+        'url': 'https://www.promptquorum.com/es/local-llms/top-open-source-models-ollama?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-06',

@@ -308,7 +308,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs locales headless: ejecutar modelos sin interfaz de usuario (2026)',
         'description': 'Despliegue de LLM local headless 2026: ejecuta Ollama, vLLM y APIs de inferencia sin UI. Configuración de producción para servidores y microservicios.',
-        'url': 'https://www.promptquorum.com/es/local-llms/headless-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/headless-local-llms?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

@@ -203,7 +203,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'NAS para LLMs Locales: RAID 6, Backup y Redundancia',
         'description': 'Mejor NAS para LLMs locales: redundancia RAID 6, estrategia de backup y organización de la biblioteca de modelos. Compara Synology, QNAP y TrueNAS.',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-nas-storage-local-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-nas-storage-local-llm?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

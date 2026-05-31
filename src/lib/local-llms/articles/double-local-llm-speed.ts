@@ -471,7 +471,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Cómo duplicar la velocidad de LLMs locales: Guía de optimización 2026',
         description: 'Acelera la inferencia de LLMs locales 2-3× en 2026: ajuste GPU, batch size, cuantización. Técnicas de optimización en producción con benchmarks incluidos.',
-        url: 'https://www.promptquorum.com/es/local-llms/double-local-llm-speed',
+        url: 'https://www.promptquorum.com/es/local-llms/double-local-llm-speed?lang=es',
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'es',

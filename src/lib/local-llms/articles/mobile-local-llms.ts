@@ -2100,7 +2100,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'LLMs locales en móviles 2026: iPhone 16 Pro, iPad M4 y Snapdragon X',
         description: 'iPad Pro M4 ejecuta Llama 7B a 15 tok/seg, admite modelos 13B. iPhone 16 Pro: 3B a 4 tok/seg. Android Snapdragon X Elite: 7B a 5 tok/seg. Apps, batería y benchmarks.',
-        url: 'https://www.promptquorum.com/es/local-llms/mobile-local-llms',
+        url: 'https://www.promptquorum.com/es/local-llms/mobile-local-llms?lang=es',
         inLanguage: 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-05-17',
@@ -2155,7 +2155,7 @@ schema: {
         name: 'Dispositivos móviles para inferencia de LLM local 2026',
         description: 'Comparación estructurada de hardware de 6 dispositivos móviles para ejecutar LLMs locales: iPad Pro M4 (15 tok/seg en Llama 7B, admite 13B), Snapdragon X Elite (5 tok/seg en 7B), iPhone 16 Pro (4 tok/seg en 3B), Galaxy S25 Ultra (4 tok/seg en 7B), Pixel 9 Pro (3 tok/seg en 3B), iPhone 16 (3 tok/seg en 3B).',
         inLanguage: 'es',
-        url: 'https://www.promptquorum.com/es/local-llms/mobile-local-llms',
+        url: 'https://www.promptquorum.com/es/local-llms/mobile-local-llms?lang=es',
         variableMeasured: [
           {
             '@type': 'PropertyValue',

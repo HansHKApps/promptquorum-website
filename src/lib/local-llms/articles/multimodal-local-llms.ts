@@ -227,6 +227,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
       },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'LLMs locales multimodales: visión, audio y procesamiento de texto',
+        description: 'LLMs locales multimodales 2026: visión, OCR, procesamiento de imágenes. LLaVA, Qwen-VL.',
+        url: 'https://www.promptquorum.com/es/local-llms/multimodal-local-llms?lang=es',
+        inLanguage: 'es',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-04',
+        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      },
     },
     de: {
       freshness_tier: 'semi_annual',

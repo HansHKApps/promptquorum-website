@@ -275,7 +275,7 @@ schema: {
         description: 'Comparación completa de cuantización GGUF: Q2, Q3, Q4, Q5, Q6, Q8. Aprende los compromisos entre precisión, latencia y memoria para un rendimiento óptimo de LLM local.',
         datePublished: '2026-04-05',
         dateModified: '2026-04-18',
-        url: 'https://www.promptquorum.com/es/local-llms/quantization-levels-comparison',
+        url: 'https://www.promptquorum.com/es/local-llms/quantization-levels-comparison?lang=es',
         inLanguage: 'es',
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', 'name': 'Hans Kuepper' },

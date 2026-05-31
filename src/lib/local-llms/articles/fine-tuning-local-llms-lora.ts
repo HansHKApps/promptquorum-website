@@ -577,7 +577,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Fine-Tuning LoRA para LLMs Locales 2026: Tutorial de Unsloth en 8 GB de VRAM con Llama 3.1',
         'description': 'Haz fine-tuning de Llama 3.1 8B con LoRA en 8 GB de VRAM en 1–2 horas usando Unsloth (4× más rápido). Solo 500 ejemplos necesarios. Código completo, hiperparámetros y matriz de decisión LoRA vs RAG.',
-        'url': 'https://www.promptquorum.com/es/local-llms/fine-tuning-local-llms-lora',
+        'url': 'https://www.promptquorum.com/es/local-llms/fine-tuning-local-llms-lora?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',

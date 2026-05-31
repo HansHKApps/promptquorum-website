@@ -1187,7 +1187,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Guía de hardware para LLMs locales 2026: ¿Qué GPU necesitas?',
         'description': '¿Qué GPU necesitas para LLMs locales? Consulta los requisitos exactos para modelos 7B–70B, benchmarks reales RTX 4070–5090 y evita desperdiciar dinero.',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-hardware-guide-2026',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-hardware-guide-2026?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',

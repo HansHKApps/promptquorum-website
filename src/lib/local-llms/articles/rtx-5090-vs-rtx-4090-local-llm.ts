@@ -278,7 +278,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'RTX 5090 vs RTX 4090: ¿Qué GPU para LLMs locales en 2026?',
         'description': 'RTX 5090 vs RTX 4090 para LLMs locales: comparativa de velocidad, análisis de VRAM, coste por rendimiento, cuándo actualizar.',
-        'url': 'https://www.promptquorum.com/es/local-llms/rtx-5090-vs-rtx-4090-local-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/rtx-5090-vs-rtx-4090-local-llm?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',

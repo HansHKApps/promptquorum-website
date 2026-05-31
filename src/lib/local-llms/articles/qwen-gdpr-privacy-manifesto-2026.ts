@@ -445,6 +445,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'El Manifiesto de Privacidad de LLMs Locales 2026: Pesos Abiertos',
+      description: 'Qwen 3 local elimina problemas de transferencia de datos RGPD. Por qué los pesos abiertos ganan.',
+      url: 'https://www.promptquorum.com/es/local-llms/qwen-gdpr-privacy-manifesto-2026?lang=es',
+      inLanguage: 'es',
+      datePublished: '2026-05-16',
+      dateModified: '2026-05-16',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
   },
   de: {
     freshness_tier: 'semi_annual',

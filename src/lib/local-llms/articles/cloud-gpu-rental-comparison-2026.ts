@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'ComparisonChart',
-      url: 'https://www.promptquorum.com/es/local-llms/cloud-gpu-rental-comparison-2026',
+      url: 'https://www.promptquorum.com/es/local-llms/cloud-gpu-rental-comparison-2026?lang=es',
       inLanguage: 'es',
       headline: 'Alquiler de GPU en la Nube 2026: RunPod vs Vast.ai vs Lambda Labs',
       description: 'Comparativa detallada de precios, SLA de uptime y características de los tres principales proveedores de alquiler de GPU en la nube.',

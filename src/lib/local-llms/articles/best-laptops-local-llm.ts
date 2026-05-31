@@ -409,7 +409,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Mejores Laptops para LLMs Locales: GPU, Batería y Guía de Compra 2026',
         description: 'Mejores laptops para LLMs locales: requisitos de GPU, límites de tamaño de modelos, impacto en la batería. RTX 4060/4070, mínimo 16GB VRAM.',
-        url: 'https://www.promptquorum.com/es/local-llms/best-laptops-local-llm',
+        url: 'https://www.promptquorum.com/es/local-llms/best-laptops-local-llm?lang=es',
         inLanguage: 'es',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -431,7 +431,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'es',
-        url: 'https://www.promptquorum.com/es/local-llms/best-laptops-local-llm',
+        url: 'https://www.promptquorum.com/es/local-llms/best-laptops-local-llm?lang=es',
         mainEntity: [
           { '@type': 'Question', name: '¿Puedo ejecutar un modelo 7B con la batería de mi laptop gaming?', acceptedAnswer: { '@type': 'Answer', text: 'Técnicamente sí, pero la GPU se desactiva con batería. La inferencia cae a 2-3 tok/s (muy lento). Conéctala a la corriente para uso real.' }},
           { '@type': 'Question', name: '¿Es suficiente una laptop RTX 4060 para modelos 7B?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, a 10-12 tok/s tras el throttling. Aceptable para escritura y brainstorming. No ideal para producción.' }},
@@ -448,7 +448,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/es/local-llms/best-laptops-local-llm',
+        url: 'https://www.promptquorum.com/es/local-llms/best-laptops-local-llm?lang=es',
         inLanguage: 'es',
         name: 'Mejores laptops gaming para LLMs locales 2026',
         itemListElement: [

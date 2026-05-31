@@ -465,7 +465,7 @@ schema: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways']
         },
-        url: 'https://www.promptquorum.com/es/local-llms/vram-calculator-local-llm',
+        url: 'https://www.promptquorum.com/es/local-llms/vram-calculator-local-llm?lang=es',
         inLanguage: 'es'
       },
       faqSchema: {
@@ -554,7 +554,7 @@ schema: {
         description: 'Calculadora interactiva de VRAM para LLMs locales. Calcula los requisitos exactos de GPU para cualquier combinación de tamaño de modelo (1B–405B), cuantización (FP16, Q8, Q5, Q4, Q3, Q2), longitud de contexto (2K–128K tokens) y tamaño de lote (1–8). Incluye verificación de compatibilidad GPU en tiempo real para RTX 5070/5080/5090 y M5 Max.',
         applicationCategory: 'UtilityApplication',
         operatingSystem: 'Web',
-        url: 'https://www.promptquorum.com/es/local-llms/vram-calculator-local-llm',
+        url: 'https://www.promptquorum.com/es/local-llms/vram-calculator-local-llm?lang=es',
         inLanguage: 'es',
         offers: {
           '@type': 'Offer',

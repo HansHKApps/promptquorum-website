@@ -543,7 +543,7 @@ print(embedding.data[0].embedding[:5])`,
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/es/local-llms/xinference-llama-qwen-chatglm-mistral',
+      'url': 'https://www.promptquorum.com/es/local-llms/xinference-llama-qwen-chatglm-mistral?lang=es',
       'inLanguage': 'es',
       'headline': 'Xinference: ejecutar Llama 3, Qwen, ChatGLM y Mistral localmente 2026',
       'description': 'Xinference soporta Llama 3, Qwen 2.5, ChatGLM4 y Mistral de forma nativa. pip install, xi launch — API compatible con OpenAI disponible en localhost:9997.',

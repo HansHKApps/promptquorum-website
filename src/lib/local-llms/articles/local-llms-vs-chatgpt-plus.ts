@@ -1666,7 +1666,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs locales vs ChatGPT Plus 2026: Comparación completa de costos en 7 niveles de precios',
         'description': 'ChatGPT Plus: $20/mes = $720 en 3 años. Llama 3.3 70B local en RTX 5060 Ti: $500 GPU + $90 electricidad = $590 total. Punto de equilibrio: 14 meses. 7 niveles de ChatGPT comparados.',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-chatgpt-plus',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-chatgpt-plus?lang=es',
         'inLanguage': 'es',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -1686,7 +1686,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-chatgpt-plus',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-chatgpt-plus?lang=es',
         'inLanguage': 'es',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Vale la pena ChatGPT Plus a $20/mes frente a los LLMs locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para usuarios ligeros (menos de 5 hrs/semana), sí — $20/mes de Plus es más fácil que comprar una GPU de $450. Para uso profesional regular (más de 10 hrs/semana), Llama 3.3 70B local en RTX 5060 Ti alcanza el equilibrio en ~14 meses y luego solo cuesta electricidad (~$30/año). Plus sigue por delante en razonamiento novedoso vía GPT-5.2 Thinking.' } },

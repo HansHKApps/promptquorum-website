@@ -1200,7 +1200,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'VPN para equipos con LLM local: acceso remoto, seguridad, split tunneling',
         description: 'VPN para acceso al servidor LLM local: configuración de WireGuard y OpenVPN. Acceso de equipo remoto, seguridad. Guía de split tunneling.',
-        url: 'https://www.promptquorum.com/es/local-llms/vpn-for-local-llm-users',
+        url: 'https://www.promptquorum.com/es/local-llms/vpn-for-local-llm-users?lang=es',
         inLanguage: 'es',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
@@ -1222,7 +1222,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'es',
-        url: 'https://www.promptquorum.com/es/local-llms/vpn-for-local-llm-users',
+        url: 'https://www.promptquorum.com/es/local-llms/vpn-for-local-llm-users?lang=es',
         mainEntity: [
           {
             '@type': 'Question',
@@ -1277,7 +1277,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/es/local-llms/vpn-for-local-llm-users',
+        url: 'https://www.promptquorum.com/es/local-llms/vpn-for-local-llm-users?lang=es',
         inLanguage: 'es',
         name: 'Opciones de configuración VPN para acceso remoto a LLM local',
         itemListElement: [

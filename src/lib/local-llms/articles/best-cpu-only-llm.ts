@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Mejores LLM solo CPU 2026',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-cpu-only-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-cpu-only-llm?lang=es',
         'inLanguage': 'es',
         'numberOfItems': 5,
         'itemListElement': [

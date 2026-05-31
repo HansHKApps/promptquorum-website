@@ -1254,7 +1254,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/local-llms/run-70b-models-24gb-vram',
+        url: 'https://www.promptquorum.com/es/local-llms/run-70b-models-24gb-vram?lang=es',
         inLanguage: 'es',
         headline: 'Ejecutar modelos 70B en 24 GB de VRAM: guía completa 2026',
         description: 'Ejecutar modelos 70B en 24 GB de VRAM 2026: cuantización (Q4_K_M), offloading, división de capas. Técnicas con compromisos y datos de rendimiento.',
