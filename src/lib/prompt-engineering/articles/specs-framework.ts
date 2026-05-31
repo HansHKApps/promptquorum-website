@@ -132,4 +132,129 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'semi_annual',
+    theme: 'Frameworks',
+    title: 'El Framework SPECS',
+    intro: 'El Framework SPECS es una estructura de prompts que convierte solicitudes vagas en especificaciones precisas para que los grandes modelos de lenguaje produzcan salidas predecibles y procesables. En PromptQuorum, el Framework SPECS está disponible como una opción integrada que cualquier usuario puede seleccionar y aplicar directamente en la app.',
+    publishDate: '2026-03-24',
+    readTime: '8 min de lectura',
+    seoTitle: 'Framework SPECS 2026: estructura de prompts precisa',
+    metaDescription: 'SPECS: Scope, Purpose, Examples, Constraints, Steps. Estructura de prompts detallada con guía y buenas prácticas para salidas predecibles.',
+    educationalLevel: 'Intermediate',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'El Framework SPECS',
+      description: 'Cómo funciona el Framework SPECS (Scope, Purpose, Examples, Constraints, Steps), cuándo usarlo y cómo PromptQuorum lo ofrece como opción integrada.',
+      datePublished: '2026-03-24',
+      dateModified: '2026-03-24',
+      keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'Prompt Engineering' },
+        { '@type': 'Thing', name: 'Frameworks de prompts' },
+        { '@type': 'Thing', name: 'Grandes modelos de lenguaje' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+      ],
+    },
+    sections: {
+      whatIsSPECS: {
+        title: 'Qué es el Framework SPECS',
+        content: [
+          '**El Framework SPECS es un patrón de prompts orientado a la especificación que trata cada prompt como un mini documento de requisitos en lugar de un mensaje de chat informal.** Está diseñado para tareas donde la precisión, la estructura y la repetibilidad importan más que la creatividad abierta. SPECS funciona bien con modelos como GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales, porque elimina la ambigüedad de tus instrucciones.',
+          'SPECS es especialmente útil cuando distintas personas o sistemas deben ejecutar el mismo prompt y obtener resultados consistentes. Al convertir el prompt en una especificación clara, facilitas la depuración de problemas, la comparación del comportamiento de los modelos y el cumplimiento de estándares en tus flujos de trabajo.',
+        ],
+      },
+      fiveComponents: {
+        title: 'Los cinco componentes de SPECS',
+        content: [
+          '**Un buen prompt SPECS define los cinco componentes para que el modelo sepa exactamente qué hacer, por qué y cómo dar formato a la respuesta.** Cada componente se centra en una parte distinta de la instrucción.',
+          'Las definiciones habituales son:',
+        ],
+        items: [
+          'Scope (alcance): qué abarca la tarea y qué queda explícitamente fuera.',
+          'Purpose (propósito): el objetivo o la decisión que debe respaldar la salida.',
+          'Examples (ejemplos): una o más entradas y salidas de muestra para guiar al modelo.',
+          'Constraints (restricciones): reglas estrictas como límites de longitud, formatos o comportamientos prohibidos.',
+          'Steps (pasos): la secuencia interna que el modelo debe seguir para llegar a la salida.',
+        ],
+      },
+      whySPECSIsUseful: {
+        title: 'Por qué el Framework SPECS es útil',
+        content: [
+          '**El Framework SPECS es útil para tareas analíticas, operativas y de integración donde necesitas resultados utilizables por una máquina, no solo prosa legible.** Reduce las suposiciones ocultas y hace explícita cada parte del prompt, algo esencial para los flujos de trabajo en producción.',
+          'Entre sus beneficios habituales están:',
+        ],
+        items: [
+          'Depuración más sencilla, porque puedes ajustar o probar componentes individuales de la especificación.',
+          'Salidas más estables entre modelos y ejecuciones, gracias a las restricciones y los ejemplos.',
+          'Mejor encaje con el procesamiento posterior, ya que la estructura se conoce de antemano.',
+        ],
+      },
+      badVsGoodExample: {
+        title: 'Ejemplo: prompt SPECS malo vs bueno',
+        content: [
+          '**La diferencia entre una solicitud sin estructura y una basada en SPECS se hace evidente cuando ves la misma tarea escrita de ambas formas.** Aquí tienes un ejemplo para extraer información de un texto.',
+          '**[Prompt malo]**',
+          '"Lee este correo de un cliente y resume los puntos principales."',
+          '**[Prompt bueno]**',
+          '"Scope: Analiza un único correo de soporte al cliente y extrae la información clave relevante para nuestro equipo de soporte. Ignora oportunidades de marketing o ventas. Purpose: Produce un resumen estructurado que pueda registrarse en nuestro sistema de tickets y que ayude a los agentes a responder más rápido. Examples: Entrada: \'Intenté restablecer mi contraseña dos veces hoy y el enlace caducó las dos veces…\' Salida: {"issue_type": "password_reset", "urgency": "medium", "summary": "El enlace de restablecimiento caduca antes de que el usuario complete el proceso"} Constraints: La salida debe ser JSON válido con las claves `issue_type`, `urgency` y `summary`. No añadas campos adicionales. `urgency` debe ser uno de: low, medium, high. Steps: 1) Identifica el problema principal, 2) infiere la urgencia según el impacto y la frustración, 3) escribe un resumen conciso de menos de 25 palabras."',
+          'La versión SPECS define exactamente qué debe producir el modelo, cómo debe razonar y cómo se usará el resultado.',
+        ],
+      },
+      whenToUse: {
+        title: 'Cuándo usar el Framework SPECS',
+        content: [
+          '**Deberías usar el Framework SPECS cuando tu objetivo principal es una salida estructurada y fiable, no la lluvia de ideas exploratoria.** Esto suele incluir:',
+        ],
+        items: [
+          'Extracción de datos de correos, chats o documentos hacia esquemas fijos.',
+          'Transformación de código, generación de documentación y refactorización con reglas estrictas.',
+          'Generación de informes donde los encabezados, las métricas y los formatos están predefinidos.',
+          'Cualquier flujo de trabajo donde la salida de la IA alimenta directamente a otro sistema o script.',
+        ],
+      },
+      howPQImplements: {
+        title: 'Cómo implementa PromptQuorum el Framework SPECS',
+        content: [
+          '**PromptQuorum es una herramienta de dispatch de IA multimodelo que ofrece el Framework SPECS como una de sus estructuras de prompts integradas, para que los usuarios diseñen prompts tipo especificación sin construirlos desde cero.** Cuando eliges SPECS en PromptQuorum, la app muestra campos dedicados para Scope, Purpose, Examples, Constraints y Steps y luego los ensambla en una única instrucción bien estructurada.',
+          'Dentro de PromptQuorum, el Framework SPECS te permite:',
+        ],
+        items: [
+          'Capturar cada componente en un campo aparte para que la especificación se mantenga legible y fácil de editar.',
+          'Aplicar el mismo prompt basado en SPECS a varios modelos en paralelo, lo que facilita comparar cómo manejan los distintos proveedores los formatos estrictos.',
+          'Guardar y compartir plantillas SPECS para flujos recurrentes como resúmenes de tickets, generación de informes o revisiones de código.',
+        ],
+      },
+      usingSpecsWithOthers: {
+        title: 'Usar SPECS con otros frameworks',
+        content: [
+          '**Deberías posicionar el Framework SPECS como la columna vertebral de las salidas estructuradas y combinarlo con otros frameworks para tareas complementarias.** Un patrón práctico es:',
+        ],
+        items: [
+          'Usa SPECS para todo lo que deba producir estructuras predecibles o alimentar herramientas.',
+          'Usa frameworks creativos como CRAFT para marketing y redacción publicitaria.',
+          'Usa frameworks orientados al razonamiento como Analizar–Planificar–Ejecutar (APE) cuando quieras ver el razonamiento intermedio.',
+          'Usa frameworks generales de un solo paso para tareas rápidas que no justifican una especificación completa.',
+        ],
+      },
+      howToStart: {
+        title: 'Cómo usar el Framework SPECS',
+        numberedItems: [
+          '**Setting (entorno): Aporta contexto sobre el entorno, el sistema o el dominio.** Ejemplo: \'Eres un analista de datos en una empresa de salud. La privacidad del paciente es crítica. Todas las consultas deben cumplir con HIPAA.\'',
+          '**Problem statement (problema): Indica el problema específico que estás resolviendo.** Ejemplo: \'Identifica qué cohortes de pacientes muestran baja adherencia a la medicación en los últimos 90 días.\'',
+          '**Examples (ejemplos): Aporta 2–3 ejemplos concretos de buena salida.** Para análisis, muestra una tabla o hallazgos de muestra. Para generación de código, muestra código funcional que siga tu estilo.',
+          '**Constraints (restricciones): Enumera reglas y preferencias estrictas.** Ejemplo: \'Usa solo SQL (nada de Python). La consulta debe ejecutarse en menos de 5 segundos. La salida debe estar anonimizada (sin nombres de pacientes).\'',
+          '**Style (estilo): Especifica el tono, el idioma y el formato preferidos.** Ejemplo: \'Audiencia técnica. Usa terminología precisa. Devuelve un informe en markdown.\'',
+        ],
+      },
+    },
+  },
 };
