@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Tool Comparisons',
     title: 'MLX vs Ollama vs llama.cpp: Welche Inferenz-Engine sollten Sie verwenden?',
-    seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'MLX vs. Ollama vs. llama.cpp: lokale Engines 2026',
     metaDescription: 'Auf Apple Silicon: MLX (~65 tok/s auf M5 Pro). Auf NVIDIA-GPUs: Ollama für Einfachheit oder llama.cpp für Kontrolle. Ollama nutzt llama.cpp. Schnelle Antwort.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',

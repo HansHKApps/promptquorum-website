@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Tool Comparisons',
     title: 'Cursor Pro vs Continue.dev: Lohnen sich 20 $/Monat 2026?',
-    seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
+    seoTitle: 'Cursor Pro vs. Continue.dev 2026: Welches Tool?',
     metaDescription: 'Cursor Pro (~20 €/Monat) gewinnt für Cloud-Modelle und polierte UX. Continue.dev ist kostenlos und besser für lokale Ollama-Modelle. Wahl nach Modellstandort.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',

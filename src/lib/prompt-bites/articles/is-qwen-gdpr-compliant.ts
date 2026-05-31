@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Privacy & Security',
     title: 'Ist Qwen DSGVO-konform?',
     seoTitle: 'Ist Qwen DSGVO-konform? 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Lokal betriebenes Qwen ist DSGVO-konform — kein Datentransfer, kein Artikel-44-Problem. Qwen-API (Alibaba Cloud) erfordert SCC wie jeder Nicht-EU-Anbieter. Stand Mai 2026.',
+    metaDescription: 'Ist Qwen DSGVO-konform? Die Alibaba-Cloud-API speichert Daten in China. Lokal über Ollama betrieben ist Qwen vollständig DSGVO-konform.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

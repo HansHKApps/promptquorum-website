@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     title: 'Beste MoE-Modelle für lokales Coding?',
-    seoTitle: 'Beste MoE-Modelle für Coding 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Beste MoE-Modelle für lokales Coding 2026',
     metaDescription: 'Mixtral 8x7B：26 GB VRAM, 46,7B params. DeepSeek V2：16 GB VRAM, bestes Coding. MoE aktiviert nur aktive Parameter. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

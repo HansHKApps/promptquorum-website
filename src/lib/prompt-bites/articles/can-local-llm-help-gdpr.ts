@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Privacy & Security',
     title: 'Kann ein lokales LLM bei der DSGVO-Compliance helfen?',
-    seoTitle: 'Lokales LLM für DSGVO-Compliance 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Hilft ein lokales LLM bei der DSGVO?',
     metaDescription: 'Ja — lokales Open-Weight-LLM beseitigt das DSGVO-Artikel-44-Drittlandtransfer-Problem vollständig. Beste Modelle für datensensible Organisationen 2026.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',

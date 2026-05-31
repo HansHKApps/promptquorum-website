@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Quantization & VRAM',
     title: 'Beste Quantisierung für 6 GB VRAM: Welche Stufe passt?',
-    seoTitle: 'Beste Quantisierung für 6 GB VRAM 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Beste Quantisierung für 6 GB VRAM 2026',
     metaDescription: 'Q4_K_M für 7B-Modelle: 4,9 GB, passt mit 1,1 GB Puffer für Kontext. Q5_K_M passt knapp. Q6_K und höher überschreiten 6 GB. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',

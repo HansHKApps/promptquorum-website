@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: 'Beste SSD für schnelles Modell-Laden 2026?',
     seoTitle: 'Beste SSD für schnelles LLM-Modell-Laden 2026 | Prompt Bites',
-    metaDescription: 'Beste SSD für schnelles LLM-Modell-Laden: PCIe-Gen4-NVMe wie die Samsung 990 Pro 2 TB. Hohe sequenzielle Leseraten ziehen Mehr-GB-Modelle in Sekunden in den RAM.',
+    metaDescription: 'Schnelleres Laden lokaler LLMs mit der richtigen SSD: NVMe Gen4 lädt 70B in Sekunden. Lesegeschwindigkeit, Kapazität und Preis-Leistung im Vergleich.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

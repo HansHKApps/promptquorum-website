@@ -135,7 +135,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     title: 'Welches LLM ist aktuell das beste?',
     seoTitle: 'Beste LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Cloud Coding: Claude Opus 4.7 (87,6% SWE-Bench). Allgemeiner Chat: GPT-5.5 Instant (52,5% weniger Halluzinationen). Lokal: Llama 4 Scout oder Qwen 2.5 14B. Monatlich aktualisiert.',
+    metaDescription: 'Das beste lokale LLM jetzt: Llama 3.3 70B für die meisten, Qwen 2.5 Coder fürs Programmieren, Phi-4 für schwache Hardware. Nach Anwendungsfall und VRAM.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

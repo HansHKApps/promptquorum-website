@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: 'Bester eGPU für Ollama auf einem MacBook 2026?',
     seoTitle: 'eGPU für Ollama auf MacBook 2026 | Prompt Bites',
-    metaDescription: 'Für Ollama auf einem Apple-Silicon-MacBook gibt es kein funktionierendes eGPU. Unified Memory und fehlende PCIe-Anbindung schließen es aus. Mehr Unified Memory oder Linux-Laptop wählen.',
+    metaDescription: 'eGPU mit Ollama am MacBook? Apple Silicon unterstützt keine eGPU – nur Intel-Macs (Thunderbolt 3, AMD). Für M1–M4: lokale Modelle oder Cloud-GPU.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

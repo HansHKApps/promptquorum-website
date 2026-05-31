@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     title: 'Bestes 14B-Modell für Coding?',
-    seoTitle: 'Beste 14B-Modelle für Coding 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Beste 14B-Modelle für lokales Coding 2026',
     metaDescription: 'Qwen 2.5 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73%. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

@@ -99,8 +99,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Privacy & Security',
     title: 'Ist DeepSeek DSGVO-sicher?',
-    seoTitle: 'Ist DeepSeek DSGVO-sicher? 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'DeepSeek-API hat das höchste DSGVO-Risiko aller LLMs: chinesisches Datenzugriffsrecht, keine EU-Angemessenheitsentscheidung. Lokale DeepSeek-Gewichte sind sicherer. Mai 2026.',
+    seoTitle: 'Ist DeepSeek DSGVO-konform?',
+    metaDescription: 'Ist DeepSeek DSGVO-konform? Die DeepSeek-API speichert Daten in China – ein DSGVO-Risiko. Lokal über Ollama betrieben bleibt DeepSeek DSGVO-konform.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

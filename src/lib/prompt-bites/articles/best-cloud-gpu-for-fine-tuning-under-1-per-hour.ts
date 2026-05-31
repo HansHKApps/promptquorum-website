@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: 'Günstigste Cloud-GPU für LLM-Fine-Tuning unter 1 $/Stunde (2026)',
     seoTitle: 'Cloud-GPU Fine-Tuning unter 1 $/Stunde 2026',
-    metaDescription: 'Fine-Tuning von Llama 3.1 8B oder Qwen2.5 14B mit QLoRA für unter 1 $/Stunde auf RunPod, Vast.ai oder Lambda Labs. Günstigste GPU-Optionen und tatsächliche Kosten.',
+    metaDescription: 'Cloud-GPUs unter 1 $/Stunde zum Fine-Tuning: RTX 4090 ab 0,34 $, A100 ab 0,66 $. Vast.ai, RunPod und mehr im Vergleich. Spot-Preise und Verfügbarkeit.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',

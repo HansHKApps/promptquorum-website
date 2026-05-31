@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Hardware-Specific',
     title: 'Bestes LLM für AMD 5700X + RTX 3070 Ti?',
-    seoTitle: 'AMD 5700X + RTX 3070 Ti: beste LLMs | Prompt Bites | PromptQuorum',
+    seoTitle: 'Beste lokale LLMs: AMD 5700X + RTX 3070 Ti',
     metaDescription: 'Llama 3 8B Q4_K_M und Mistral 7B Q5_K_M laufen mit 22–25 tok/s auf RTX 3070 Ti: beide nutzen ~6 GB VRAM. GPU, nicht CPU, ist das Upgrade-Ziel für LLMs.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

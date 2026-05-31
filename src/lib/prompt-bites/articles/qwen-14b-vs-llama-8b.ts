@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     title: 'Qwen 14B vs. Llama 3 8B: Welches läuft lokal besser?',
-    seoTitle: 'Qwen 14B vs Llama 3 8B: Welches? 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Qwen 14B vs. Llama 8B für lokales Coding',
     metaDescription: 'Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 2.5 14B: 10 GB, 74,8% MMLU. Bei 12 GB VRAM: Qwen gewinnt. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

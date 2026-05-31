@@ -167,8 +167,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: Einrichtung und Performance',
-    seoTitle: 'Strix Halo Ollama Vulkan Einrichtung 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU): 96 GB Unified Memory, läuft 70B-Modelle via Ollama Vulkan unter Linux. ~22 tok/s bei Llama 3.1 8B. Schnelle Antwort von PromptQuorum.',
+    seoTitle: 'Strix Halo: Ollama mit Vulkan einrichten 2026',
+    metaDescription: 'AMD Strix Halo mit Ollama und Vulkan einrichten: Treiber, Konfiguration und Performance-Tuning für lokale LLMs auf der Ryzen AI Max APU.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',

@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Tool Comparisons',
     title: 'Ollama vs LM Studio: Welches sollten Sie wählen?',
-    seoTitle: 'Ollama vs LM Studio? | Prompt Bites | PromptQuorum',
+    seoTitle: 'Ollama vs. LM Studio 2026: Welches lokale LLM-Tool?',
     metaDescription: 'Ollama (Port 11434): Terminal und APIs. LM Studio (Port 1234): GUI-Oberfläche. Beide kostenlos, Modelle laufen lokal. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',

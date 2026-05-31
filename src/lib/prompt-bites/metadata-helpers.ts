@@ -3,7 +3,7 @@
  * Mirrors powerLLMAlternates — uses path-prefix locales (/de/prompt-bites/...).
  */
 
-import { ALL_LANGS, type Lang } from '@/lib/i18n/constants'
+import { ALL_LANGS, toOutputLocale, type Lang } from '@/lib/i18n/constants'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -18,7 +18,8 @@ export function promptBitesAlternates(selectedLang: Lang, slug?: string) {
   return {
     canonical: `${BASE}${pathFor(selectedLang, slug)}`,
     languages: {
-      ...Object.fromEntries(ALL_LANGS.map((l) => [l, `${BASE}${pathFor(l, slug)}`])),
+      // hreflang VALUE is the outward-facing locale (pt → pt-BR); the /pt path is unchanged.
+      ...Object.fromEntries(ALL_LANGS.map((l) => [toOutputLocale(l), `${BASE}${pathFor(l, slug)}`])),
       'x-default': `${BASE}${pathFor('en', slug)}`,
     },
   }
