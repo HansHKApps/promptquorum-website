@@ -2497,8 +2497,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-    'inLanguage': 'es'
+      '@type': 'TechArticle',
+    'inLanguage': 'es',
       headline: 'AnythingLLM vs PrivateGPT vs Open WebUI: El mejor RAG local en 2026',
       description: '3 plataformas RAG locales probadas en un corpus de 5.047 páginas. AnythingLLM, PrivateGPT y Open WebUI: benchmarks de precisión, latencia y citas. Veredicto de mayo 2026.',
       image: 'https://www.promptquorum.com/es/api/og/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',

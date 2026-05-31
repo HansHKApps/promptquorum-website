@@ -704,8 +704,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-    'inLanguage': 'es'
+      '@type': 'TechArticle',
+    'inLanguage': 'es',
       headline: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
       description: 'Compara seis bibliotecas para structured output LLM: Instructor, Outlines, Pydantic AI, LangChain, Marvin y PromptQuorum. Clasificadas por cumplimiento de esquema, soporte de lenguaje, compatibilidad con modelos locales y precios.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },

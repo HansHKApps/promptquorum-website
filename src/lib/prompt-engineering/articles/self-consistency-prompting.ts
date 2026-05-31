@@ -544,8 +544,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         headline: 'Self-Consistency Prompting: genera múltiples respuestas y elige la correcta',
         description: 'El self-consistency prompting mejora la precisión de la IA en matemáticas, lógica y análisis generando múltiples caminos de razonamiento y seleccionando la respuesta mayoritaria. Técnica, ejemplos y análisis costo-beneficio.',
         datePublished: '2026-03-26',

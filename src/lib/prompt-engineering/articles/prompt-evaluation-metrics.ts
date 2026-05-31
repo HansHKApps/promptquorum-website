@@ -538,8 +538,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         headline: 'Métricas de evaluación de prompts: qué medir y cómo',
         description: 'Las métricas de evaluación de prompts incluyen pass rate, puntuación BLEU, similitud semántica y puntuación LLM-as-judge.',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

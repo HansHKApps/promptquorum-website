@@ -505,8 +505,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ],
   schema: {
     '@context': 'https://schema.org',
-    '@type': 'TechArticle',,
-      'inLanguage': 'es'
+    '@type': 'TechArticle',
+      'inLanguage': 'es',
     headline: 'Negative Prompting: dile a la IA lo que NO debe hacer',
     description: 'Qué es el negative prompting, por qué importa y cómo usar reglas explícitas de "no hacer" para mantener las salidas de IA dentro de límites seguros y conformes a la marca.',
     datePublished: '2026-03-26',

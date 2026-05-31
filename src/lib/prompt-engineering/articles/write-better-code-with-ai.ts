@@ -1034,8 +1034,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         inLanguage: 'es',
         headline: 'Cómo Escribir Mejor Código con IA: Prompts, Modelos y Seguridad en 2026',
         description: 'Domina la generación de código con IA con prompts estructurados, comparativa de modelos y flujos de trabajo de seguridad. Aprende ajustes de temperatura, modelos locales y cómo evitar el 45 % de las alucinaciones.',

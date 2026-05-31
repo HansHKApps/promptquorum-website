@@ -386,8 +386,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-     'inLanguage': 'es'
+      '@type': 'TechArticle',
+     'inLanguage': 'es',
       url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-framework-for-teams?lang=es',
       inLanguage: 'es',
       headline: 'Cómo elegir un framework de prompts para tu equipo: ¿CO-STAR, CRAFT, RISEN o personalizado?',

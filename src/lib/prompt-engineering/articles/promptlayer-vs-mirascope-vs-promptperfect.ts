@@ -1159,8 +1159,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-     'inLanguage': 'es'
+      '@type': 'TechArticle',
+     'inLanguage': 'es',
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
       description: 'PromptLayer registra y versiona llamadas LLM, Mirascope es un SDK Python gratuito para apps LLM type-safe, PromptPerfect reescribe prompts automáticamente. Tres herramientas, tres problemas distintos — elige exactamente una.',
       datePublished: '2026-04-10',

@@ -537,8 +537,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ogDescription: '¿Prompt engineering o fine-tuning? Comparativa completa de coste, tiempo y reversibilidad con diagrama de decisión.',
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-    'inLanguage': 'es'
+      '@type': 'TechArticle',
+    'inLanguage': 'es',
       url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=es',
       inLanguage: 'es',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

@@ -757,8 +757,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-     'inLanguage': 'es'
+      '@type': 'TechArticle',
+     'inLanguage': 'es',
       headline: 'Tree of Thought y ReAct: Razonamiento avanzado para problemas difíciles',
       description: 'Cómo funcionan Tree-of-Thought (explorar múltiples ramas) y ReAct (bucles razonar-actuar), y cuándo usarlos para resolver problemas complejos de forma más fiable.',
       datePublished: '2026-03-26',

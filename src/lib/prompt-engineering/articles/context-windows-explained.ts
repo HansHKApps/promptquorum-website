@@ -258,8 +258,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/context-windows-explained-why-ai-forgets?lang=es',
         inLanguage: 'es',
         headline: 'Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)',

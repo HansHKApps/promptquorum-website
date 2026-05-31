@@ -539,8 +539,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-    'inLanguage': 'es'
+      '@type': 'TechArticle',
+    'inLanguage': 'es',
       headline: 'Cómo probar prompts entre modelos: evaluación multi-modelo',
       description: 'Las pruebas de prompts multi-modelo despachan el mismo prompt a GPT-4o, Claude Opus 4.7 y Gemini en paralelo para revelar fallos JSON, diferencias en patrones de rechazo y compensaciones de costo antes de la producción.',
       datePublished: '2026-04-10',

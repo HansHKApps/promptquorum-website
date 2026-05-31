@@ -557,8 +557,8 @@ tests:
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-     'inLanguage': 'es'
+      '@type': 'TechArticle',
+     'inLanguage': 'es',
       headline: 'Auditoría de prompts y pruebas de regresión: detecta fallos silenciosos antes de producción (2026)',
       description: 'Suite de pruebas de regresión de prompts: 10-20 casos golden, casos límite, entradas adversariales. Bloquea el despliegue si la tasa cae >5%. Promptfoo, Braintrust y PromptQuorum.',
       url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-audit-regression?lang=es',

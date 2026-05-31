@@ -705,8 +705,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/constrained-prompting?lang=es',
         inLanguage: 'es',
         headline: 'Constrained Prompting: Fuerza formatos de salida de IA (2026)',

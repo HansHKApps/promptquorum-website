@@ -2100,8 +2100,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     itemListSchema: {
       '@context': 'https://schema.org',
-      '@type': 'ItemList',,
-    'inLanguage': 'es'
+      '@type': 'ItemList',
+    'inLanguage': 'es',
       name: 'Top 5 apps de IA local para usuarios sin conocimientos técnicos en 2026',
       numberOfItems: 5,
       itemListOrder: 'https://schema.org/ItemListOrderAscending',

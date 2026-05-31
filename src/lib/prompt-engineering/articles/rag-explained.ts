@@ -743,8 +743,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         headline: 'RAG explicado: cómo anclar las respuestas de IA en datos reales (2026)',
         description: 'Cómo funciona la generación aumentada por recuperación, por qué reduce las alucinaciones y cómo implementar un pipeline RAG de 4 etapas para datos privados o frecuentemente cambiantes.',
         datePublished: '2026-03-26',

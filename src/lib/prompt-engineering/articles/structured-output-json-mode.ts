@@ -745,8 +745,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         headline: 'Salida estructurada y modo JSON: obtén datos utilizables de la IA',
         description: 'Domina la salida estructurada y el modo JSON en prompts. Aprende a diseñar esquemas, imponer JSON válido, comparar el cumplimiento de los modelos y evitar errores comunes en sistemas de producción.',
         datePublished: '2026-03-26',

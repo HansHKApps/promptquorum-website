@@ -381,8 +381,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-     'inLanguage': 'es'
+      '@type': 'TechArticle',
+     'inLanguage': 'es',
       headline: 'Flujo de trabajo de prompt engineering para desarrolladores: configuración de IDE, pruebas e integración CI/CD',
       description: 'Flujo de trabajo de prompt engineering para desarrolladores: configuración de IDE, bucle de prueba local, control de versiones Git, gates CI/CD y monitoreo en producción.',
       datePublished: '2026-05-02',

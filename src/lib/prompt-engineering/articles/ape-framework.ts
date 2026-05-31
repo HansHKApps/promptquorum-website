@@ -280,8 +280,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         headline: 'El Framework APE: Analizar, Planificar, Ejecutar — Prompts Estructurados que Muestran su Razonamiento',
         description: 'El Framework APE divide cada prompt de IA en Analizar, Planificar y Ejecutar — haciendo el razonamiento del modelo visible y verificable. Plantilla, ejemplos y comparación con otros frameworks.',
         datePublished: '2026-03-24',

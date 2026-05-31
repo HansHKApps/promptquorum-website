@@ -406,8 +406,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/which-prompt-framework-should-you-use?lang=es',
         inLanguage: 'es',
         headline: '¿Qué framework de prompts deberías usar?',

@@ -656,8 +656,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-    'inLanguage': 'es'
+      '@type': 'TechArticle',
+    'inLanguage': 'es',
       headline: 'Mejores IDEs y editores de prompt engineering 2026',
       description: 'Cursor cuesta $20/mes; LM Studio es $0 tras la inversión en hardware. Seis IDEs de prompt engineering, cada uno optimizado para un caso de uso diferente. Aquí tienes cuál encaja con el tuyo.',
       datePublished: '2026-04-10',

@@ -704,8 +704,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-    'inLanguage': 'es'
+      '@type': 'TechArticle',
+    'inLanguage': 'es',
       headline: 'Prompts para datos estructurados fiables: 3 técnicas (2026)',
       description: 'El modo JSON impone la sintaxis JSON, no la completitud de campos. La incrustación de esquemas, los ejemplos de salida y las instrucciones de campo elevan la fiabilidad al 95%+ sin cambios en la API.',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

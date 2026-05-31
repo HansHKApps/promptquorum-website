@@ -1023,8 +1023,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/seo-meets-ai?lang=es',
         inLanguage: 'es',
         headline: 'SEO y la IA: Cómo GEO Está Reemplazando el Manual Tradicional',

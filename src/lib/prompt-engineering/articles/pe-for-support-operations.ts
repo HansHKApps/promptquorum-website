@@ -403,8 +403,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'Prompt Engineering para operaciones de soporte',
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-     'inLanguage': 'es'
+      '@type': 'TechArticle',
+     'inLanguage': 'es',
       url: 'https://www.promptquorum.com/es/prompt-engineering/pe-for-support-operations?lang=es',
       headline: 'Prompt engineering para operaciones de soporte: plantillas de respuesta consistentes y precisas',
       description: 'Cómo los equipos de soporte diseñan prompts para triage, escalación, resolución y seguimiento — incluyendo controles de tono, salvaguardas de cumplimiento de políticas y patrones de transferencia a personas.',

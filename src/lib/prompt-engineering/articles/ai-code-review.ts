@@ -726,8 +726,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howToName: 'Cómo usar IA para revisión de código',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         url: 'https://www.promptquorum.com/es/prompt-engineering/ai-code-review?lang=es',
         inLanguage: 'es',
         headline: 'Revisión de Código con IA 2026: Mejores Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',

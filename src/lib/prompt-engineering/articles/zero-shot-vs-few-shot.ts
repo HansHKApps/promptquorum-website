@@ -260,8 +260,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
   metaDescription: 'Zero-Shot vs. Few-Shot Prompting: comparación de ambas técnicas, cuándo usar cada una y cómo PromptQuorum te ayuda a elegir la estrategia correcta.',
   schema: {
     '@context': 'https://schema.org',
-    '@type': 'TechArticle',,
-      'inLanguage': 'es'
+    '@type': 'TechArticle',
+      'inLanguage': 'es',
     headline: 'Zero-Shot vs. Few-Shot Prompting',
     description: 'Una comparación práctica del Zero-Shot y Few-Shot Prompting, cuándo usar cada técnica y cómo PromptQuorum te ayuda a seleccionar la estrategia correcta.',
     datePublished: '2026-03-26',

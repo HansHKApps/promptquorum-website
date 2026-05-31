@@ -2377,8 +2377,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-    'inLanguage': 'es'
+      '@type': 'TechArticle',
+    'inLanguage': 'es',
       headline: 'Ejecuta IA local en tu tablet: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'Cómo ejecutar IA localmente en un iPad o tablet Android en 2026. Aplicaciones de inferencia en el dispositivo, Termux + Ollama en Android y conexión remota a tu Mac o PC en casa explicados.',

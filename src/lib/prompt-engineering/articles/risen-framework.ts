@@ -1182,8 +1182,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-       'inLanguage': 'es'
+        '@type': 'TechArticle',
+       'inLanguage': 'es',
         headline: 'Framework RISEN: Refinar, Inspeccionar, Resumir, Evaluar, Próximos Pasos (2026)',
         description: 'El Framework RISEN para refinamiento iterativo de prompts: Refinar borradores, Inspeccionar cambios, Resumir resultados, Evaluar según criterios, planificar Próximos Pasos. Pruebas multi-modelo con PromptQuorum.',
         datePublished: '2026-03-24',

@@ -1641,8 +1641,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaDescription: 'La presentación a continuación cubre: 5 plantillas de flujos de trabajo en producción para agentes de IA locales conformes con la UE (ingesta de documentos, triaje de correos, resumen de reuniones, informes de cumplimiento, procesamiento de facturas), clasificación de riesgo bajo el EU AI Act (riesgo limitado vs. alto riesgo vs. prohibido), 6 controles GDPR (base jurídica, minimización de datos, DPIA), especificidades DACH (Consejo de Empresa BetrVG §87, §203 StGB confidencialidad profesional), tabla de selección de modelos y 5 errores frecuentes de despliegue. Descarga el PDF como tarjeta de referencia de cumplimiento UE en IA.',
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-    'inLanguage': 'es'
+      '@type': 'TechArticle',
+    'inLanguage': 'es',
       headline: 'Agentes de IA locales para flujos de trabajo empresariales: guía de cumplimiento UE 2026',
       description: 'Despliega agentes de IA locales para procesamiento de documentos, gestión de correos y generación de informes bajo el GDPR y el EU AI Act. Arquitectura, controles de cumplimiento y 5 plantillas de flujos de trabajo.',
       url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-agents-business-workflows-eu-compliance?lang=es',

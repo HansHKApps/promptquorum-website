@@ -307,8 +307,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Framework CRAFT (Contexto, Rol, Audiencia, Formato, Tono): escribe copy de IA con identidad de marca usando 5 campos estructurados. Plantillas, ejemplos y comparación con CO-STAR.',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         headline: 'El Framework CRAFT',
         description: 'Cómo funciona el Framework CRAFT (Contexto, Rol, Audiencia, Formato y Tono), cuándo usarlo y cómo PromptQuorum ofrece CRAFT como opción integrada.',
         datePublished: '2026-03-24',

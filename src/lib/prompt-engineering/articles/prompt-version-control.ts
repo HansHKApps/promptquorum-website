@@ -716,8 +716,8 @@ jobs:
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-     'inLanguage': 'es'
+      '@type': 'TechArticle',
+     'inLanguage': 'es',
       headline: 'Control de versiones de prompts: seguimiento, rollback y flujos de trabajo en equipo',
       description: 'Los prompts sin versionar fallan silenciosamente — sin historial no hay rollback. Aplica el versionado MAJOR.MINOR.PATCH, flujos de trabajo de Git y pruebas de regresión automatizadas a cada cambio de prompt.',
       datePublished: '2026-04-30',

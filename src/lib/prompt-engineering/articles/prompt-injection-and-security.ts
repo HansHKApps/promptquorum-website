@@ -820,8 +820,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       readTime: '10 min de lectura',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',,
-      'inLanguage': 'es'
+        '@type': 'TechArticle',
+      'inLanguage': 'es',
         headline: 'Prompt injection y seguridad: cómo defender los sistemas de IA',
         description: 'La prompt injection es el OWASP LLM #1. Aprende los tipos de ataque, las diferencias con el jailbreaking y un framework de 5 defensas por capas.',
         datePublished: '2026-03-30',

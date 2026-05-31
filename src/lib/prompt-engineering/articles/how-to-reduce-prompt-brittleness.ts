@@ -852,8 +852,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-    'inLanguage': 'es'
+      '@type': 'TechArticle',
+    'inLanguage': 'es',
       headline: 'Cómo reducir la fragilidad de prompts',
       description: 'La fragilidad de prompts causa fallos en producción que son invisibles en las pruebas. Aprende 7 técnicas — salida estructurada, instrucciones defensivas, suites de regresión — para que los prompts sean fiables.',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

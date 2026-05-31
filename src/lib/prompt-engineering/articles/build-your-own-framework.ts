@@ -448,8 +448,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-     'inLanguage': 'es'
+      '@type': 'TechArticle',
+     'inLanguage': 'es',
       url: 'https://www.promptquorum.com/es/prompt-engineering/build-your-own-framework?lang=es',
       inLanguage: 'es',
       headline: 'Construye tu propio framework de prompts: proceso de 5 pasos',

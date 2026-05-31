@@ -388,8 +388,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'TechArticle',,
-     'inLanguage': 'es'
+      '@type': 'TechArticle',
+     'inLanguage': 'es',
       url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-documentation-templates?lang=es',
       inLanguage: 'es',
       headline: 'Plantillas de documentación de prompts: 6 formatos reutilizables para equipos',
