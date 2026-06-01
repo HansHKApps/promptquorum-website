@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'European enterprises sending source code to external AI APIs must conduct a Data Protection Impact Assessment (DPIA) under GDPR Article 35 before deployment — source code containing personal data processing logic is classified as high-risk automated processing. The CNIL (France\'s data protection authority) confirmed in January 2026 that both GDPR and the EU AI Act apply simultaneously to AI-assisted code review when personal data is processed. European enterprises are paralysed between AI adoption and regulatory compliance risk — €1.2 billion in GDPR fines were levied in 2024, including a €30.5 million penalty against Clearview AI.',
             'For EU teams, CodeRabbit and Augment Code offer on-premise/self-hosted deployment for teams with 500+ seats, keeping source code within the organisation\'s infrastructure. Mistral AI (France) is deployable locally via Ollama for teams requiring zero cloud egress — Mistral Large handles code review tasks on-premise with no data leaving EU infrastructure.',
-            'Chinese development teams use Qwen3 (Alibaba) and DeepSeek V4 Flash as locally-deployable code review models, both of which support Chinese-language code comments and documentation — critical for mixed-language codebases common in Chinese enterprise environments. Japanese enterprises under METI data governance guidelines deploy LLaMA 4 Scout or LLaMA 3.3-based code review workflows locally via Ollama — LLaMA 4 Scout requires ~10 GB VRAM for inference, with zero external API calls.',
+            'Chinese development teams use Qwen3 (Alibaba) and DeepSeek V4 Flash as locally-deployable code review models, both of which support Chinese-language code comments and documentation — critical for mixed-language codebases common in Chinese enterprise environments. Japanese enterprises under METI data governance guidelines deploy LLaMA 4 Scout or LLaMA 3.3-based code review workflows locally via Ollama — LLaMA 4 Scout requires ~55 GB VRAM for inference, with zero external API calls.',
           ],
         },
 
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Can I run AI code review locally for fully private code?',
-              a: 'Yes. Devstral Small 24B (Mistral AI, 16 GB RAM) and LLaMA 4 Scout (10 GB VRAM, 10M context) run fully on-premises via Ollama. No code is transmitted to external APIs. For EU teams requiring GDPR compliance without a DPIA, local deployment eliminates the data processing concern entirely. Quality is lower than frontier cloud models on complex security analysis but sufficient for most PR-level review.',
+              a: 'Yes. Devstral Small 24B (Mistral AI, 16 GB RAM) and LLaMA 4 Scout (~55 GB VRAM, 10M context) run fully on-premises via Ollama. No code is transmitted to external APIs. For EU teams requiring GDPR compliance without a DPIA, local deployment eliminates the data processing concern entirely. Quality is lower than frontier cloud models on complex security analysis but sufficient for most PR-level review.',
             },
             {
               q: 'What is the best AI code review tool for small teams (under 10 developers)?',
@@ -1021,7 +1021,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '¿Cómo afectan las regulaciones regionales a la revisión de código con IA?',
           content: [
             'Las empresas europeas que envían código fuente a APIs de IA externas deben realizar una Evaluación de Impacto de Protección de Datos (EIPD) bajo el Artículo 35 del RGPD antes del despliegue — el código fuente que contiene lógica de procesamiento de datos personales se clasifica como procesamiento automatizado de alto riesgo. La CNIL (autoridad francesa de protección de datos) confirmó en enero de 2026 que tanto el RGPD como la Ley de IA de la UE se aplican simultáneamente a la revisión de código asistida por IA cuando se procesan datos personales. Para equipos de la UE, CodeRabbit y Augment Code ofrecen despliegue on-premise/autohospedado para equipos de 500+ puestos.',
-            'Los equipos de desarrollo chinos usan Qwen3 (Alibaba) y DeepSeek V4 Flash como modelos de revisión de código desplegables localmente, ambos compatibles con comentarios de código en chino. Las empresas japonesas bajo las directrices de gobernanza de datos de METI despliegan flujos de trabajo de revisión de código basados en LLaMA 4 Scout o LLaMA 3.3 localmente mediante Ollama — LLaMA 4 Scout requiere ~10 GB de VRAM para inferencia, sin llamadas API externas.',
+            'Los equipos de desarrollo chinos usan Qwen3 (Alibaba) y DeepSeek V4 Flash como modelos de revisión de código desplegables localmente, ambos compatibles con comentarios de código en chino. Las empresas japonesas bajo las directrices de gobernanza de datos de METI despliegan flujos de trabajo de revisión de código basados en LLaMA 4 Scout o LLaMA 3.3 localmente mediante Ollama — LLaMA 4 Scout requiere ~55 GB de VRAM para inferencia, sin llamadas API externas.',
             'Para España y Latinoamérica, la Ley Orgánica de Protección de Datos (LOPD) de España incorpora el RGPD con requisitos adicionales de notificación. En Latinoamérica, las organizaciones deben verificar las leyes de privacidad locales (como la LGPD de Brasil o la Ley de Protección de Datos Personales de Colombia) antes de enviar código con datos de usuarios a APIs de IA en la nube.',
           ],
         },
@@ -1122,7 +1122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Puedo ejecutar la revisión de código con IA localmente para código totalmente privado?',
-              a: 'Sí. Devstral Small 24B (Mistral AI, 16 GB RAM) y LLaMA 4 Scout (10 GB VRAM, contexto de 10M) se ejecutan completamente en local mediante Ollama. No se transmite código a APIs externas. Para equipos de la UE que requieran cumplimiento del RGPD sin una EIPD, el despliegue local elimina por completo la preocupación por el procesamiento de datos. La calidad es inferior a los modelos en la nube frontier en análisis de seguridad complejos pero suficiente para la mayoría de las revisiones a nivel de PR.',
+              a: 'Sí. Devstral Small 24B (Mistral AI, 16 GB RAM) y LLaMA 4 Scout (~55 GB VRAM, contexto de 10M) se ejecutan completamente en local mediante Ollama. No se transmite código a APIs externas. Para equipos de la UE que requieran cumplimiento del RGPD sin una EIPD, el despliegue local elimina por completo la preocupación por el procesamiento de datos. La calidad es inferior a los modelos en la nube frontier en análisis de seguridad complejos pero suficiente para la mayoría de las revisiones a nivel de PR.',
             },
             {
               q: '¿Cuál es la mejor herramienta de revisión de código con IA para equipos pequeños (menos de 10 desarrolladores)?',
