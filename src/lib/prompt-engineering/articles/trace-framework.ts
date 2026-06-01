@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**The TRACE Framework is a reasoning-first prompt pattern that forces large language models to show their working, not just their final answer.** It is designed for tasks where you care about how the model arrived at a result, such as technical analysis, strategy, or complex troubleshooting.',
             'A common interpretation of TRACE is:',
-            'TRACE works on all major models — GPT-5 (OpenAI), Claude 4.7 Opus (Anthropic), Gemini 3 Pro (Google DeepMind), and local models via Ollama or LM Studio — but models follow the five stages with different levels of discipline. Testing the same TRACE prompt across multiple models reveals which provider reasons most transparently for your specific task.',
+            'TRACE works on all major models — GPT-5 (OpenAI), Claude 4.8 Opus (Anthropic), Gemini 3 Pro (Google DeepMind), and local models via Ollama or LM Studio — but models follow the five stages with different levels of discipline. Testing the same TRACE prompt across multiple models reveals which provider reasons most transparently for your specific task.',
           ],
           items: [
             'Think: Restate and interpret the problem in your own words.',
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**El Framework TRACE es un patrón de prompt centrado en el razonamiento que obliga a los modelos de lenguaje de gran escala a mostrar su trabajo, no solo su respuesta final.** Está diseñado para tareas donde te importa cómo llegó el modelo a un resultado, como análisis técnico, estrategia o resolución de problemas complejos.',
             'Una interpretación común de TRACE es:',
-            'TRACE funciona en todos los modelos principales — GPT-5 (OpenAI), Claude 4.7 Opus (Anthropic), Gemini 3 Pro (Google DeepMind) y modelos locales via Ollama o LM Studio — pero los modelos siguen las cinco etapas con diferentes niveles de disciplina. Probar el mismo prompt TRACE en múltiples modelos revela qué proveedor razona más transparentemente para tu tarea específica.',
+            'TRACE funciona en todos los modelos principales — GPT-5 (OpenAI), Claude 4.8 Opus (Anthropic), Gemini 3 Pro (Google DeepMind) y modelos locales via Ollama o LM Studio — pero los modelos siguen las cinco etapas con diferentes niveles de disciplina. Probar el mismo prompt TRACE en múltiples modelos revela qué proveedor razona más transparentemente para tu tarea específica.',
           ],
           items: [
             'Pensar: Reformular e interpretar el problema con tus propias palabras.',

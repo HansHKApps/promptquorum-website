@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'PromptQuorum Consensus Test: Prompt Structure Impact',
           content: [
-            '**Tested in PromptQuorum — 40 summarisation prompts dispatched to GPT-4o, Claude Opus 4.7, and Gemini 1.5 Pro:** Unstructured prompts produced inconsistent length and structure across all three models in 37 of 40 cases. After rewriting with the five building blocks above, all three models produced consistent, on-format responses on the first attempt in 40 of 40 cases.',
+            '**Tested in PromptQuorum — 40 summarisation prompts dispatched to GPT-4o, Claude Opus 4.8, and Gemini 1.5 Pro:** Unstructured prompts produced inconsistent length and structure across all three models in 37 of 40 cases. After rewriting with the five building blocks above, all three models produced consistent, on-format responses on the first attempt in 40 of 40 cases.',
             'This consensus effect — where structured prompts produce identical behavior across different models — is the core insight behind prompt engineering. The five building blocks work because they exploit how all major LLMs process instructions identically.',
           ],
           callouts: [
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'These are the key technical decisions that interact with prompt engineering:',
           ],
           items: [
-            '**Model selection:** GPT-4o, Claude Opus 4.7, and Gemini 1.5 Pro respond differently to the same prompt. Choosing the right model for the task is part of the engineering process. Mistral AI (Europe) and Qwen (China) follow the same prompting principles but may require adjusted output format specifications due to differences in instruction-following behavior. The same structured prompt works globally across all major model families → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Model selection:** GPT-4o, Claude Opus 4.8, and Gemini 1.5 Pro respond differently to the same prompt. Choosing the right model for the task is part of the engineering process. Mistral AI (Europe) and Qwen (China) follow the same prompting principles but may require adjusted output format specifications due to differences in instruction-following behavior. The same structured prompt works globally across all major model families → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**System vs. user prompts:** The system prompt sets persistent instructions for an entire session; the user prompt is the per-request input. Getting this split right determines consistency at scale → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Context windows:** Every model has a maximum token limit for input + output combined. Long prompts reduce the available space for the model\'s answer — and models start to ignore earlier content as the window fills → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Token limits and cost:** Precise, concise prompts use fewer tokens per call, reduce latency, and stay within rate limits — directly affecting cost at scale → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'PromptQuorum Konsenstest: Auswirkungen der Prompt-Struktur',
           content: [
-            'PromptQuorum entsendete denselben unstrukturierten Prompt ("fassen Sie diesen Text zusammen") an GPT-4o, Claude Opus 4.7 und Gemini 1.5 Pro. Die Ergebnisse unterschieden sich in Länge, Detail und Struktur auf allen drei Modellen. Als dieselbe Aufgabe mit den fünf Bausteinen oben umgeschrieben wurde, erzeugten alle drei Modelle konsistente, formatgerechte Antworten beim ersten Versuch.',
+            'PromptQuorum entsendete denselben unstrukturierten Prompt ("fassen Sie diesen Text zusammen") an GPT-4o, Claude Opus 4.8 und Gemini 1.5 Pro. Die Ergebnisse unterschieden sich in Länge, Detail und Struktur auf allen drei Modellen. Als dieselbe Aufgabe mit den fünf Bausteinen oben umgeschrieben wurde, erzeugten alle drei Modelle konsistente, formatgerechte Antworten beim ersten Versuch.',
             'Dieser Konsenseffekt — bei dem strukturierte Prompts identisches Verhalten über verschiedene Modelle hinweg erzeugen — ist die Kernidee des Prompt Engineering. Die fünf Bausteine funktionieren, weil sie ausnutzen, wie alle großen LLMs Anweisungen identisch verarbeiten.',
           ],
           callouts: [
@@ -570,7 +570,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Dies sind die wichtigsten technischen Entscheidungen, die mit Prompt Engineering interagieren:',
           ],
           items: [
-            '**Modellauswahl:** GPT-4o, Claude Opus 4.7 und Gemini 1.5 Pro reagieren unterschiedlich auf denselben Prompt. Das richtige Modell für die Aufgabe zu wählen ist Teil des Engineering-Prozesses. Mistral AI (Europa) und Qwen (China) folgen denselben Prompting-Prinzipien, erfordern aber möglicherweise angepassste Ausgabeformat-Spezifikationen aufgrund von Unterschieden im Instruction-Following-Verhalten. Der gleiche strukturierte Prompt funktioniert weltweit in allen großen Modellfamilien → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Modellauswahl:** GPT-4o, Claude Opus 4.8 und Gemini 1.5 Pro reagieren unterschiedlich auf denselben Prompt. Das richtige Modell für die Aufgabe zu wählen ist Teil des Engineering-Prozesses. Mistral AI (Europa) und Qwen (China) folgen denselben Prompting-Prinzipien, erfordern aber möglicherweise angepassste Ausgabeformat-Spezifikationen aufgrund von Unterschieden im Instruction-Following-Verhalten. Der gleiche strukturierte Prompt funktioniert weltweit in allen großen Modellfamilien → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**System- vs. Benutzer-Prompts:** Der System-Prompt legt persistente Anweisungen für eine gesamte Sitzung fest; der Benutzer-Prompt ist die aufgabenbezogene Eingabe. Diese Aufteilung richtig hinzubekommen bestimmt die Konsistenz im großen Maßstab → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Kontextfenster:** Jedes Modell hat ein maximales Token-Limit für Eingabe + Ausgabe zusammen. Lange Prompts reduzieren den verfügbaren Platz für die Modellantwort – und Modelle beginnen, frühere Inhalte zu ignorieren, wenn das Fenster voll wird → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Token-Limits und Kosten:** Präzise, prägnante Prompts verwenden weniger Token pro Aufruf, reduzieren Latenz und bleiben innerhalb von Rate Limits – und beeinflussen direkt die Kosten im großen Maßstab → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'Test de consenso PromptQuorum: Impacto de la estructura del prompt',
           content: [
-            '**Probado en PromptQuorum — 40 prompts de resumen enviados a GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro:** Los prompts no estructurados produjeron longitud y estructura inconsistentes en los tres modelos en 37 de 40 casos. Tras reescribir con los cinco bloques de construcción anteriores, los tres modelos produjeron respuestas consistentes y con el formato correcto en el primer intento en 40 de 40 casos.',
+            '**Probado en PromptQuorum — 40 prompts de resumen enviados a GPT-4o, Claude Opus 4.8 y Gemini 1.5 Pro:** Los prompts no estructurados produjeron longitud y estructura inconsistentes en los tres modelos en 37 de 40 casos. Tras reescribir con los cinco bloques de construcción anteriores, los tres modelos produjeron respuestas consistentes y con el formato correcto en el primer intento en 40 de 40 casos.',
             'Este efecto de consenso — donde los prompts estructurados producen un comportamiento idéntico en diferentes modelos — es la idea central del prompt engineering. Los cinco bloques de construcción funcionan porque explotan cómo todos los principales LLMs procesan las instrucciones de forma idéntica.',
           ],
           callouts: [
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Estas son las decisiones técnicas clave que interactúan con el prompt engineering:',
           ],
           items: [
-            '**Selección de modelo:** GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro responden de forma diferente al mismo prompt. Elegir el modelo correcto para la tarea forma parte del proceso de ingeniería. Mistral AI (Europa) y Qwen (China) siguen los mismos principios de prompting pero pueden requerir especificaciones de formato de output ajustadas debido a diferencias en el comportamiento de seguimiento de instrucciones. El mismo prompt estructurado funciona globalmente en todas las principales familias de modelos → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Selección de modelo:** GPT-4o, Claude Opus 4.8 y Gemini 1.5 Pro responden de forma diferente al mismo prompt. Elegir el modelo correcto para la tarea forma parte del proceso de ingeniería. Mistral AI (Europa) y Qwen (China) siguen los mismos principios de prompting pero pueden requerir especificaciones de formato de output ajustadas debido a diferencias en el comportamiento de seguimiento de instrucciones. El mismo prompt estructurado funciona globalmente en todas las principales familias de modelos → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**System prompts vs. user prompts:** El system prompt establece instrucciones persistentes para toda una sesión; el user prompt es el input por solicitud. Hacer bien esta división determina la consistencia a escala → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Context windows:** Cada modelo tiene un límite máximo de tokens para input + output combinado. Los prompts largos reducen el espacio disponible para la respuesta del modelo — y los modelos empiezan a ignorar el contenido anterior a medida que la ventana se llena → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Límites de tokens y costes:** Los prompts precisos y concisos usan menos tokens por llamada, reducen la latencia y se mantienen dentro de los límites de tasa — afectando directamente al coste a escala → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'Test de consensus PromptQuorum : Impact de la structure du prompt',
           content: [
-            'PromptQuorum a envoyé le même prompt non structuré ("résumez ce texte") à GPT-4o, Claude Opus 4.7 et Gemini 1.5 Pro. Les résultats variaient en longueur, détail et structure sur tous les trois modèles. Lorsque la même tâche a été réécrite à l\'aide des cinq blocs de construction ci-dessus, les trois modèles ont produit des réponses cohérentes et formatées correctement au premier essai.',
+            'PromptQuorum a envoyé le même prompt non structuré ("résumez ce texte") à GPT-4o, Claude Opus 4.8 et Gemini 1.5 Pro. Les résultats variaient en longueur, détail et structure sur tous les trois modèles. Lorsque la même tâche a été réécrite à l\'aide des cinq blocs de construction ci-dessus, les trois modèles ont produit des réponses cohérentes et formatées correctement au premier essai.',
             'Cet effet de consensus — où les prompts structurés produisent un comportement identique entre différents modèles — est l\'idée centrale du prompt engineering. Les cinq blocs de construction fonctionnent parce qu\'ils exploitent la manière dont tous les principaux LLM traitent les instructions de manière identique.',
           ],
           callouts: [
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Voici les principales décisions techniques qui interagissent avec le prompt engineering :',
           ],
           items: [
-            '**Sélection du modèle :** GPT-4o, Claude Opus 4.7 et Gemini 1.5 Pro réagissent différemment au même prompt. Choisir le bon modèle pour la tâche fait partie du processus d\'ingénierie → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Sélection du modèle :** GPT-4o, Claude Opus 4.8 et Gemini 1.5 Pro réagissent différemment au même prompt. Choisir le bon modèle pour la tâche fait partie du processus d\'ingénierie → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**Prompts système vs. prompts utilisateur :** Le prompt système définit des instructions persistantes pour toute une session ; le prompt utilisateur est l\'entrée par demande. Bien gérer cette séparation détermine la cohérence à grande échelle → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Fenêtres de contexte :** Chaque modèle a une limite maximale de tokens pour l\'entrée et la sortie combinées. Les prompts longs réduisent l\'espace disponible pour la réponse du modèle — et les modèles commencent à ignorer le contenu antérieur à mesure que la fenêtre se remplit → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Limites de tokens et coûts :** Les prompts précis et concis utilisent moins de tokens par appel, réduisent la latence et restent dans les limites de débit — ce qui impacte directement les coûts à grande échelle → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
@@ -1544,7 +1544,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'プロンプトエンジニアリングと相互作用する主要な技術的意思決定は以下のとおりです：',
           ],
           items: [
-            '**モデルの選択：** GPT-4o、Claude Opus 4.7、Gemini 1.5 Proは同じプロンプトに対して異なる反応を示します。タスクに適したモデルを選ぶことも、エンジニアリングプロセスの一部です → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**モデルの選択：** GPT-4o、Claude Opus 4.8、Gemini 1.5 Proは同じプロンプトに対して異なる反応を示します。タスクに適したモデルを選ぶことも、エンジニアリングプロセスの一部です → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**システムプロンプトとユーザープロンプト：** システムプロンプトはセッション全体の永続的な指示を設定し、ユーザープロンプトはリクエストごとの入力です。この分割を適切に行うことが、大規模での一貫性を決定します → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**コンテキストウィンドウ：** すべてのモデルには、入力と出力を合わせた最大トークン制限があります。長いプロンプトはモデルの回答に使えるスペースを減らします。また、ウィンドウが満たされるにつれて、モデルは以前のコンテンツを無視し始めます → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**トークン制限とコスト：** 精密で簡潔なプロンプトは呼び出しごとのトークン数を削減し、レイテンシを低下させ、レート制限内に収まります — 大規模ではコストに直接影響します → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'PromptQuorum 共识测试：提示结构的影响',
           content: [
-            'PromptQuorum 将相同的非结构化提示（"总结这段文本"）发送到 GPT-4o、Claude Opus 4.7 和 Gemini 1.5 Pro。结果在所有三个模型上的长度、细节和结构都有所不同。当使用上述五个构建块重新编写相同的任务时，所有三个模型都在第一次尝试时生成了一致的、格式正确的响应。',
+            'PromptQuorum 将相同的非结构化提示（"总结这段文本"）发送到 GPT-4o、Claude Opus 4.8 和 Gemini 1.5 Pro。结果在所有三个模型上的长度、细节和结构都有所不同。当使用上述五个构建块重新编写相同的任务时，所有三个模型都在第一次尝试时生成了一致的、格式正确的响应。',
             '这种共识效应——结构化提示在不同模型间产生相同行为——是提示工程的核心洞察。五个构建块之所以有效，是因为它们利用了所有主要大语言模型相同的指令处理方式。',
           ],
           callouts: [
@@ -1850,7 +1850,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '以下是与提示词工程相互影响的关键技术决策：',
           ],
           items: [
-            '**模型选择：** GPT-4o、Claude Opus 4.7 和 Gemini 1.5 Pro 对相同提示词的响应各有不同。为任务选择合适的模型是工程流程的一部分。Mistral AI（欧洲）和阿里云 Qwen（中国）遵循相同的提示工程原则，但由于指令跟随行为的差异，可能需要调整输出格式规范。相同的结构化提示在全球所有主要模型族中都有效 → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**模型选择：** GPT-4o、Claude Opus 4.8 和 Gemini 1.5 Pro 对相同提示词的响应各有不同。为任务选择合适的模型是工程流程的一部分。Mistral AI（欧洲）和阿里云 Qwen（中国）遵循相同的提示工程原则，但由于指令跟随行为的差异，可能需要调整输出格式规范。相同的结构化提示在全球所有主要模型族中都有效 → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**系统提示词与用户提示词：** 系统提示词为整个会话设置持久指令；用户提示词是每次请求的输入。正确划分这两者决定了大规模使用时的一致性 → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**上下文窗口：** 每个模型都有输入+输出组合的最大词元限制。较长的提示词会减少模型回答的可用空间——随着窗口填满，模型开始忽略较早的内容 → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**词元限制与成本：** 精确、简洁的提示词每次调用使用更少的词元，降低延迟，并保持在速率限制内——直接影响大规模使用时的成本 → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',

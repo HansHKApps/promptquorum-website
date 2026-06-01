@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'CISOs, procurement teams, and compliance officers choosing between proprietary and open-weight LLMs',
     primaryTerm: 'GDPR risk comparison LLM models',
     leadAnswerBlock: '**DeepSeek API presents the highest GDPR risk of any major LLM due to Chinese data-access law (PIPL); Qwen and Llama run locally carry equivalent low risk; Claude and GPT-4o APIs with EU residency carry medium risk and require Standard Contractual Clauses (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 2.5 14B', 'Qwen local', 'Llama 4 Scout', 'Claude 3.5 Sonnet', 'GPT-5.5 Instant', 'Claude Opus 4.7'],
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 2.5 14B', 'Qwen local', 'Llama 4 Scout', 'Claude 3.5 Sonnet', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       en: {
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'CISOs, equipos de adquisiciones y responsables de cumplimiento que eligen entre LLMs propietarios y de pesos abiertos',
     primaryTerm: 'comparación de riesgo RGPD modelos LLM',
     leadAnswerBlock: '**La API de DeepSeek presenta el mayor riesgo RGPD de cualquier LLM importante debido a la ley china de acceso a datos (PIPL); Qwen y Llama ejecutados localmente tienen un riesgo igualmente bajo; las API de Claude y GPT-4o con residencia EU tienen riesgo medio y requieren Cláusulas Contractuales Estándar (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 2.5 14B', 'Qwen local', 'Llama 4 Scout', 'Claude 3.5 Sonnet', 'GPT-5.5 Instant', 'Claude Opus 4.7'],
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 2.5 14B', 'Qwen local', 'Llama 4 Scout', 'Claude 3.5 Sonnet', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
       { label: 'Cuatro vectores de riesgo RGPD para LLMs', anchor: 'risk-vectors' },

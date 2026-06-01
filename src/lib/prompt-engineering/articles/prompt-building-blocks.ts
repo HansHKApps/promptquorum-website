@@ -1666,7 +1666,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Ces 5 éléments s\'appliquent-ils à tous les modèles IA ?',
-              a: 'Oui. Que vous utilisiez GPT-5, Claude 4.7, Gemini 3 Pro, ou des modèles open-source via Ollama et LM Studio, ces 5 éléments fonctionnent sur tous. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — s\'applique universellement.',
+              a: 'Oui. Que vous utilisiez GPT-5, Claude 4.8, Gemini 3 Pro, ou des modèles open-source via Ollama et LM Studio, ces 5 éléments fonctionnent sur tous. La structure minimale varie légèrement en syntaxe, mais le modèle conceptuel — rôle, instruction, exemples, contraintes, format — s\'applique universellement.',
             },
           ],
         },
@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'これらの5つの構成要素が重要な理由',
           content: [
             '5つの構成要素モデルは、OpenAI、Google、Anthropic、独立した実践者からのプロンプトエンジニアリングガイダンスから生まれた収束コンセンサスを反映しています。役割、指示、例、制約、出力形式は、2023年以降に発表されたすべての主要フレームワークに異なる名前で登場しています。これは偶然ではなく、確率的モデルが有用で一貫性のある結果を生産するために必要な最小限の情報です。',
-            'ビジネス上の論理は直截的です。役割とコンテキストがないと、書き直しが必要なジェネリックな答えが生じます。制約がないとハルシネーションのリスクとブランド外の出力が増加します。出力形式がないと、解析またはコピーペーストできない結果が生じます。5つの構成要素モデルはこれら3つの障害モードをすべて一度に対処し、GPT-5、Claude 4.7、Gemini 3 Pro、およびローカルで実行される LLM に等しく適用されます。',
+            'ビジネス上の論理は直截的です。役割とコンテキストがないと、書き直しが必要なジェネリックな答えが生じます。制約がないとハルシネーションのリスクとブランド外の出力が増加します。出力形式がないと、解析またはコピーペーストできない結果が生じます。5つの構成要素モデルはこれら3つの障害モードをすべて一度に対処し、GPT-5、Claude 4.8、Gemini 3 Pro、およびローカルで実行される LLM に等しく適用されます。',
             '日本企業向けの注記：METI AI Governance 2024 の要件を満たす場合、制約セクションでこれを明示的に述べることが重要です。Ollama や LM Studio を使用した企業内のローカル推論は、日本の個人情報保護方針と企業ガバナンス基準への完全な準拠を確保しながら、プロンプト精度の利点をもたらします。',
           ],
         },
@@ -2077,7 +2077,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'これらの5つの構成要素はすべての LLM モデルに適用されますか',
-              a: 'はい。GPT-5、Claude 4.7、Gemini 3 Pro、または Ollama や LM Studio を経由するオープンソース LLM を使用しているかどうかにかかわらず、これら5つの構成要素はすべてで機能します。最小構造は構文において若干異なりますが、概念的モデル（役割、指示、例、制約、形式）はすべてのモデルに普遍的に適用されます。',
+              a: 'はい。GPT-5、Claude 4.8、Gemini 3 Pro、または Ollama や LM Studio を経由するオープンソース LLM を使用しているかどうかにかかわらず、これら5つの構成要素はすべてで機能します。最小構造は構文において若干異なりますが、概念的モデル（役割、指示、例、制約、形式）はすべてのモデルに普遍的に適用されます。',
             },
             {
               q: 'METI の AI ガバナンスガイドラインはプロンプト設計に影響しますか',

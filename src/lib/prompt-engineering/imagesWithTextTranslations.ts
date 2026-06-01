@@ -598,7 +598,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
     title: 'Puntos clave',
     isTldr: true,
     items: [
-      'El prompting multimodal combina texto e imágenes; modelos como GPT-4o y Claude Opus 4.7 se destacan en el análisis y la descripción de imágenes',
+      'El prompting multimodal combina texto e imágenes; modelos como GPT-4o y Claude Opus 4.8 se destacan en el análisis y la descripción de imágenes',
       'Existen tres modos: Imagen→Texto (describir/analizar), Texto→Imagen (generar) e Imagen↔Imagen (editar/transformar)',
       'Los modelos de visión-lenguaje tienen dificultades con el conteo preciso, los límites de objetos detallados y la lectura de texto pequeño en imágenes',
       'Sigue patrones estructurados: sé específico sobre los objetivos de análisis, proporciona contexto y usa ejemplos para lograr consistencia',
@@ -636,7 +636,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Cómo los modelos de visión-lenguaje ven las imágenes',
     content: [
-      '**Los modelos de visión-lenguaje como GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro convierten imágenes en vectores de alta dimensión (embeddings) utilizando un codificador visual y luego procesan esos embeddings junto con los tokens de texto en un espacio semántico compartido.** Este enfoque otorga a los VLM fortalezas claras en múltiples tareas: identifican objetos, leen texto, comprenden relaciones espaciales y razonan sobre el contenido en múltiples imágenes. Gemini 1.5 Pro admite hasta 1 millón de tokens, lo que permite el análisis de secuencias multimodales más largas que la context window de 128k de GPT-4o. Entender los [límites de la context window](/es/prompt-engineering/context-windows-explained-why-ai-forgets) te ayuda a estructurar prompts que eviten la truncación cuando trabajas con descripciones de imágenes largas o secuencias de múltiples imágenes.',
+      '**Los modelos de visión-lenguaje como GPT-4o, Claude Opus 4.8 y Gemini 1.5 Pro convierten imágenes en vectores de alta dimensión (embeddings) utilizando un codificador visual y luego procesan esos embeddings junto con los tokens de texto en un espacio semántico compartido.** Este enfoque otorga a los VLM fortalezas claras en múltiples tareas: identifican objetos, leen texto, comprenden relaciones espaciales y razonan sobre el contenido en múltiples imágenes. Gemini 1.5 Pro admite hasta 1 millón de tokens, lo que permite el análisis de secuencias multimodales más largas que la context window de 128k de GPT-4o. Entender los [límites de la context window](/es/prompt-engineering/context-windows-explained-why-ai-forgets) te ayuda a estructurar prompts que eviten la truncación cuando trabajas con descripciones de imágenes largas o secuencias de múltiples imágenes.',
       'Los VLM se destacan en la comprensión de escenas, el análisis de documentos y la comparación de elementos visuales. Sin embargo, tienen debilidades predecibles:',
     ],
     items: [
@@ -708,7 +708,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
   promptquorumHelps: {
     title: 'Cómo PromptQuorum te ayuda a hacer prompts con imágenes',
     content: [
-      '**PromptQuorum es una plataforma de distribución de prompts multimodelo que te permite probar prompts multimodales en GPT-4o, Claude Opus 4.7, Gemini 1.5 Pro y otros modelos simultáneamente.** Al probar el mismo prompt de descripción de imagen de producto en tres modelos, GPT-4o devolvió la salida más estructurada, Claude Opus 4.7 logró la mayor precisión en la extracción de texto y Gemini 1.5 Pro capturó más detalles contextuales — revelando que diferentes modelos se destacan en diferentes tareas de análisis de imágenes. Claude Opus 4.7 es preciso en el análisis de documentos; GPT-4o se destaca en la comprensión de escenas; Gemini 1.5 Pro maneja el razonamiento multimodal complejo.',
+      '**PromptQuorum es una plataforma de distribución de prompts multimodelo que te permite probar prompts multimodales en GPT-4o, Claude Opus 4.8, Gemini 1.5 Pro y otros modelos simultáneamente.** Al probar el mismo prompt de descripción de imagen de producto en tres modelos, GPT-4o devolvió la salida más estructurada, Claude Opus 4.8 logró la mayor precisión en la extracción de texto y Gemini 1.5 Pro capturó más detalles contextuales — revelando que diferentes modelos se destacan en diferentes tareas de análisis de imágenes. Claude Opus 4.8 es preciso en el análisis de documentos; GPT-4o se destaca en la comprensión de escenas; Gemini 1.5 Pro maneja el razonamiento multimodal complejo.',
       'Al distribuir el mismo prompt multimodal a los tres, ves qué modelo responde mejor y luego usas el Consensus Scoring para ponderar sus resultados.',
     ],
     items: [
@@ -736,7 +736,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
     faqs: [
       {
         q: '¿Qué modelo de visión-lenguaje es mejor para analizar imágenes?',
-        a: 'No hay un único modelo mejor. GPT-4o se destaca en la comprensión general de escenas y el razonamiento complejo. Claude Opus 4.7 es preciso en el análisis de documentos y la extracción de texto. Gemini 1.5 Pro maneja contextos multimodales más largos (1 millón de tokens). Usa PromptQuorum para probar los tres en tu tarea específica.',
+        a: 'No hay un único modelo mejor. GPT-4o se destaca en la comprensión general de escenas y el razonamiento complejo. Claude Opus 4.8 es preciso en el análisis de documentos y la extracción de texto. Gemini 1.5 Pro maneja contextos multimodales más largos (1 millón de tokens). Usa PromptQuorum para probar los tres en tu tarea específica.',
       },
       {
         q: '¿Pueden los modelos de visión-lenguaje contar objetos con precisión?',
@@ -748,11 +748,11 @@ export const imagesWithTextEs: Record<string, PESection> = {
       },
       {
         q: '¿Qué formatos de imagen admiten los modelos de visión-lenguaje?',
-        a: 'GPT-4o, Claude Opus 4.7 y Gemini 1.5 Pro aceptan JPEG, PNG, GIF y WebP. La mayoría admite imágenes de hasta 20 MB. Los límites específicos varían según el modelo; consulta la documentación de OpenAI y Anthropic para obtener detalles actuales.',
+        a: 'GPT-4o, Claude Opus 4.8 y Gemini 1.5 Pro aceptan JPEG, PNG, GIF y WebP. La mayoría admite imágenes de hasta 20 MB. Los límites específicos varían según el modelo; consulta la documentación de OpenAI y Anthropic para obtener detalles actuales.',
       },
       {
         q: '¿Puedo usar modelos locales como Ollama para el prompting multimodal?',
-        a: 'Sí. Modelos como LLaVA y Ollama admiten el análisis de imágenes local. Los modelos locales ofrecen privacidad, pero menor precisión que GPT-4o o Claude Opus 4.7. Úsalos para tareas no críticas o cuando la privacidad sea esencial.',
+        a: 'Sí. Modelos como LLaVA y Ollama admiten el análisis de imágenes local. Los modelos locales ofrecen privacidad, pero menor precisión que GPT-4o o Claude Opus 4.8. Úsalos para tareas no críticas o cuando la privacidad sea esencial.',
       },
       {
         q: '¿Cómo mejoro la consistencia en la generación de texto a imagen?',

@@ -429,7 +429,7 @@ schema: {
           title: '🏆 Best Local LLM by Use Case',
           content: [
             '- **Best for privacy and compliance** → Local LLM (Ollama + Llama 3.3 70B or Qwen2.5 7B)',
-            '- **Best for reasoning and coding** → Cloud API (OpenAI GPT-4o or Anthropic Claude Opus 4.7)',
+            '- **Best for reasoning and coding** → Cloud API (OpenAI GPT-4o or Anthropic Claude Opus 4.8)',
             '- **Best for speed with good quality** → Cloud API (OpenAI GPT-4o mini for 10× cheaper token cost)',
             '- **Best for cost at scale** → Local LLM (if you have the hardware; amortized cost approaches zero)',
             '- **Best for trying both approaches** → [PromptQuorum](/) (dispatch to both local and cloud, see the quality difference before choosing)',
@@ -927,7 +927,7 @@ schema: {
           title: '🏆 Mejor LLM local por caso de uso',
           content: [
             '- **Mejor para privacidad y cumplimiento** → LLM local (Ollama + Llama 3.3 70B o Qwen2.5 7B)',
-            '- **Mejor para razonamiento y codificación** → API en la nube (OpenAI GPT-4o o Anthropic Claude Opus 4.7)',
+            '- **Mejor para razonamiento y codificación** → API en la nube (OpenAI GPT-4o o Anthropic Claude Opus 4.8)',
             '- **Mejor para velocidad con buena calidad** → API en la nube (OpenAI GPT-4o mini a 10× menor costo por token)',
             '- **Mejor para costo a escala** → LLM local (si tienes el hardware; el costo amortizado se acerca a cero)',
             '- **Mejor para probar ambos enfoques** → [PromptQuorum](/) (envía a ambos local y nube, ve la diferencia de calidad antes de elegir)',

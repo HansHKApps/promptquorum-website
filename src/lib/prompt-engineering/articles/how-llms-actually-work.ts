@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'What is the difference between a context window and memory?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'The context window is all the text the model can see during a single inference call — including the system prompt, conversation history, and the current user message. It is not persistent memory: when the conversation ends, the model retains nothing. GPT-4o has a 128,000-token context window (~96,000 words). Claude Opus 4.7 supports 200,000 tokens (~150,000 words). Gemini 3.1 Pro supports 2,000,000 tokens (~1,500,000 words).',
+              text: 'The context window is all the text the model can see during a single inference call — including the system prompt, conversation history, and the current user message. It is not persistent memory: when the conversation ends, the model retains nothing. GPT-4o has a 128,000-token context window (~96,000 words). Claude Opus 4.8 supports 200,000 tokens (~150,000 words). Gemini 3.1 Pro supports 2,000,000 tokens (~1,500,000 words).',
             },
           },
           {
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'What is the difference between GPT-4o, Claude, and Gemini architecturally?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'All three are transformer-based LLMs trained on massive text corpora, but they differ in scale, context window, and post-training approach. GPT-4o (OpenAI) has a 128,000-token context window. Claude Opus 4.7 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has the largest context window at 2,000,000 tokens. These differences affect cost, latency, and suitability for different tasks — GPT-4o excels at reasoning, Claude at long context and nuance, Gemini at ultra-long document processing.',
+              text: 'All three are transformer-based LLMs trained on massive text corpora, but they differ in scale, context window, and post-training approach. GPT-4o (OpenAI) has a 128,000-token context window. Claude Opus 4.8 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has the largest context window at 2,000,000 tokens. These differences affect cost, latency, and suitability for different tasks — GPT-4o excels at reasoning, Claude at long context and nuance, Gemini at ultra-long document processing.',
             },
           },
           {
@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLMs predict tokens, not answers.** They generate statistically probable text sequences — not retrieved facts, logical deductions, or verified information.',
             '**1 token ≈ 0.75 English words.** A 1,000-word document uses ~1,300 tokens. Chinese and Japanese are ~50% denser.',
             '**[Temperature](/prompt-engineering/prompt-engineering-glossary#temperature) controls creativity vs. determinism.** Temperature 0 = deterministic. Temperature 1.0 = proportional sampling. Above 1.5 = high hallucination risk.',
-            '**[Context windows](/prompt-engineering/prompt-engineering-glossary#context-window) are not memory.** GPT-4o: 128k tokens. Claude Opus 4.7: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nothing persists between sessions.',
+            '**[Context windows](/prompt-engineering/prompt-engineering-glossary#context-window) are not memory.** GPT-4o: 128k tokens. Claude Opus 4.8: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nothing persists between sessions.',
             '**Position matters.** Transformer [attention](/prompt-engineering/prompt-engineering-glossary#attention) weights the beginning and end of the context more heavily. Put critical instructions first and last — not buried in the middle.',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) shapes behavior, not capability.** Refusals, tone, and helpfulness come from post-training fine-tuning — not the base model architecture.',
           ],
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[Tokenization](/prompt-engineering/prompt-engineering-glossary#tokenization): How Text Becomes Numbers',
           content: [
-            '**Before an LLM can process any text, it must convert it into a sequence of integer token IDs — a process called [tokenization](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-4o uses Byte Pair Encoding (BPE), which breaks text into frequently occurring sub-word units. Claude Opus 4.7 and Gemini 3.1 Pro use similar sub-word tokenization schemes.',
+            '**Before an LLM can process any text, it must convert it into a sequence of integer token IDs — a process called [tokenization](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-4o uses Byte Pair Encoding (BPE), which breaks text into frequently occurring sub-word units. Claude Opus 4.8 and Gemini 3.1 Pro use similar sub-word tokenization schemes.',
             'Tokenization is language-dependent. English text averages approximately 1 token per 0.75 words. Chinese and Japanese average 1 token per 0.5 words — meaning the same document costs roughly twice as many tokens in Chinese as in English, which directly affects API cost and context window usage.',
           ],
           tableFormat: true,
@@ -300,7 +300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Pretraining:** Unsupervised next-token prediction on web-scale data. Encodes language patterns, world knowledge, and reasoning shortcuts into model weights (~70B–405B parameters for frontier models).',
             '**Supervised Fine-Tuning (SFT):** The model is trained on curated instruction-response pairs to behave like an assistant rather than a raw text predictor.',
             '**RLHF / DPO:** Human preferences steer the model toward helpful, harmless, and honest outputs. DPO (Direct Preference Optimization) is a more computationally efficient alternative used by Llama and Mistral models.',
-            '**Constitutional AI (Anthropic):** Claude is additionally trained using a set of principles ("constitution") to reduce reliance on human feedback for every edge case — Claude Opus 4.7 uses this approach.',
+            '**Constitutional AI (Anthropic):** Claude is additionally trained using a set of principles ("constitution") to reduce reliance on human feedback for every edge case — Claude Opus 4.8 uses this approach.',
           ],
         },
 
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Model', 'Context window', 'Approximate word equivalent', 'Practical document limit'],
           rows: [
             { Model: 'GPT-4o (OpenAI)', 'Context window': '128,000 tokens', 'Approximate word equivalent': '~96,000 words', 'Practical document limit': '~200-page PDF' },
-            { Model: 'Claude Opus 4.7 (Anthropic)', 'Context window': '200,000 tokens', 'Approximate word equivalent': '~150,000 words', 'Practical document limit': '~300-page PDF' },
+            { Model: 'Claude Opus 4.8 (Anthropic)', 'Context window': '200,000 tokens', 'Approximate word equivalent': '~150,000 words', 'Practical document limit': '~300-page PDF' },
             { Model: 'Gemini 3.1 Pro (Google DeepMind)', 'Context window': '2,000,000 tokens', 'Approximate word equivalent': '~1,500,000 words', 'Practical document limit': '~3,000-page PDF' },
             { Model: 'LLaMA 3.1 70B (Meta, via Ollama)', 'Context window': '128,000 tokens', 'Approximate word equivalent': '~96,000 words', 'Practical document limit': '~200-page PDF' },
           ],
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'Testing Temperature Effects Across Models in PromptQuorum',
           content: [
-            '**Tested in PromptQuorum — sending the same creative brief to GPT-4o, Claude Opus 4.7, and Gemini 3.1 Pro at temperature 0 vs. temperature 0.9 showed that Claude Opus 4.7 has the smallest output variance between temperatures, while Gemini 3.1 Pro shows the highest variance.** At temperature 0.9, Gemini 3.1 Pro produced outputs 34% longer on average than at temperature 0.',
+            '**Tested in PromptQuorum — sending the same creative brief to GPT-4o, Claude Opus 4.8, and Gemini 3.1 Pro at temperature 0 vs. temperature 0.9 showed that Claude Opus 4.8 has the smallest output variance between temperatures, while Gemini 3.1 Pro shows the highest variance.** At temperature 0.9, Gemini 3.1 Pro produced outputs 34% longer on average than at temperature 0.',
             'Using PromptQuorum\'s multi-model dispatch, you can run any prompt simultaneously against all available models at a specified temperature and compare outputs side-by-side — making it practical to calibrate temperature settings for your specific task rather than relying on model defaults.',
           ],
         },
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'What is the difference between a context window and memory?',
-              a: 'The context window is all text the model can see during one inference call — system prompt, history, and current message. It is not persistent: when the conversation ends, the model retains nothing. GPT-4o: 128,000 tokens. Claude Opus 4.7: 200,000 tokens. Gemini 3.1 Pro: 2,000,000 tokens.',
+              a: 'The context window is all text the model can see during one inference call — system prompt, history, and current message. It is not persistent: when the conversation ends, the model retains nothing. GPT-4o: 128,000 tokens. Claude Opus 4.8: 200,000 tokens. Gemini 3.1 Pro: 2,000,000 tokens.',
             },
             {
               q: 'What is the "lost in the middle" effect and how do I avoid it?',
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'What is the difference between GPT-4o, Claude, and Gemini architecturally?',
-              a: 'All three are transformer-based LLMs trained on massive text corpora but differ in scale and post-training. GPT-4o (OpenAI) has 128,000-token context and excels at reasoning. Claude Opus 4.7 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has 2,000,000 tokens for ultra-long document processing. These differences affect cost, latency, and suitability for different tasks.',
+              a: 'All three are transformer-based LLMs trained on massive text corpora but differ in scale and post-training. GPT-4o (OpenAI) has 128,000-token context and excels at reasoning. Claude Opus 4.8 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has 2,000,000 tokens for ultra-long document processing. These differences affect cost, latency, and suitability for different tasks.',
             },
           ],
         },
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['große Sprachmodelle', 'LLM-Architektur', 'Transformer', 'Tokenisierung', 'Aufmerksamkeitsmechanismus', 'RLHF', 'Temperatur', 'Kontextfenster', 'Prompt Engineering', 'GPT-4o', 'Claude'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLMs sagen Tokens voraus, keine Antworten.** Sie erzeugen statistisch wahrscheinliche Textsequenzen — keine abgerufenen Fakten, logischen Schlussfolgerungen oder verifizierten Informationen.',
             '**1 Token ≈ 0,75 englische Wörter.** Ein 1.000-Wort-Dokument verwendet ~1.300 Tokens. Chinesisch und Japanisch sind ~50 % dichter.',
             '**[Temperatur](/prompt-engineering/prompt-engineering-glossary#temperature) steuert Kreativität vs. Determinismus.** Temperatur 0 = deterministisch. Temperatur 1,0 = proportionales Sampling. Über 1,5 = hohes Halluzinationsrisiko.',
-            '**[Kontextfenster](/prompt-engineering/prompt-engineering-glossary#context-window) sind kein Gedächtnis.** GPT-4o: 128k Tokens. Claude Opus 4.7: 200k Tokens. Gemini 3.1 Pro: 2 Mio. Tokens. Nichts bleibt zwischen Sitzungen erhalten.',
+            '**[Kontextfenster](/prompt-engineering/prompt-engineering-glossary#context-window) sind kein Gedächtnis.** GPT-4o: 128k Tokens. Claude Opus 4.8: 200k Tokens. Gemini 3.1 Pro: 2 Mio. Tokens. Nichts bleibt zwischen Sitzungen erhalten.',
             '**Position ist entscheidend.** Der Transformer-[Attention](/prompt-engineering/prompt-engineering-glossary#attention)-Mechanismus gewichtet Anfang und Ende des Kontexts stärker. Wichtige Anweisungen zuerst und zuletzt platzieren — nicht in der Mitte.',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) formt Verhalten, nicht Fähigkeiten.** Ablehnungen, Ton und Hilfsbereitschaft entstehen durch Post-Training-Fine-Tuning — nicht durch die Basisarchitektur.',
           ],
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[Tokenisierung](/prompt-engineering/prompt-engineering-glossary#tokenization): Wie Text zu Zahlen wird',
           content: [
-            '**Bevor ein LLM Text verarbeiten kann, muss er diesen in eine Folge ganzzahliger Token-IDs umwandeln — ein Prozess, der als [Tokenisierung](/prompt-engineering/prompt-engineering-glossary#tokenization) bezeichnet wird.** GPT-4o verwendet Byte Pair Encoding (BPE), das Text in häufig vorkommende Subwort-Einheiten zerlegt. Claude Opus 4.7 und Gemini 3.1 Pro verwenden ähnliche Subwort-Tokenisierungsverfahren.',
+            '**Bevor ein LLM Text verarbeiten kann, muss er diesen in eine Folge ganzzahliger Token-IDs umwandeln — ein Prozess, der als [Tokenisierung](/prompt-engineering/prompt-engineering-glossary#tokenization) bezeichnet wird.** GPT-4o verwendet Byte Pair Encoding (BPE), das Text in häufig vorkommende Subwort-Einheiten zerlegt. Claude Opus 4.8 und Gemini 3.1 Pro verwenden ähnliche Subwort-Tokenisierungsverfahren.',
             'Tokenisierung ist sprachabhängig. Englischer Text umfasst durchschnittlich 1 Token pro 0,75 Wörtern. Chinesisch und Japanisch kommen auf 1 Token pro 0,5 Wörtern — dasselbe Dokument kostet auf Chinesisch also etwa doppelt so viele Tokens wie auf Englisch, was sich direkt auf API-Kosten und die Nutzung des Kontextfensters auswirkt.',
           ],
           tableFormat: true,
@@ -557,7 +557,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Vortraining:** Unüberwachte Vorhersage des nächsten Tokens auf webskalierten Daten. Kodiert Sprachmuster, Weltwissen und Reasoning-Abkürzungen in Modellgewichte (~70B–405B Parameter bei Frontier-Modellen).',
             '**Supervised Fine-Tuning (SFT):** Das Modell wird auf kuratierten Anweisungs-Antwort-Paaren trainiert, um sich wie ein Assistent zu verhalten statt wie ein reiner Textprediktor.',
             '**RLHF / DPO:** Menschliche Präferenzen steuern das Modell in Richtung hilfreicher, harmloser und ehrlicher Ausgaben. DPO (Direct Preference Optimization) ist eine recheneffizientere Alternative, die von Llama- und Mistral-Modellen genutzt wird.',
-            '**Constitutional AI (Anthropic):** Claude wird zusätzlich mit einem Satz von Prinzipien ("Verfassung") trainiert, um die Abhängigkeit von menschlichem Feedback bei Randfällen zu reduzieren — Claude Opus 4.7 verwendet diesen Ansatz.',
+            '**Constitutional AI (Anthropic):** Claude wird zusätzlich mit einem Satz von Prinzipien ("Verfassung") trainiert, um die Abhängigkeit von menschlichem Feedback bei Randfällen zu reduzieren — Claude Opus 4.8 verwendet diesen Ansatz.',
           ],
         },
         inference: {
@@ -585,7 +585,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Modell', 'Kontextfenster', 'Ungefähres Wortäquivalent', 'Praktisches Dokumentenlimit'],
           rows: [
             { Modell: 'GPT-4o (OpenAI)', Kontextfenster: '128.000 Tokens', 'Ungefähres Wortäquivalent': '~96.000 Wörter', 'Praktisches Dokumentenlimit': '~200-seitiges PDF' },
-            { Modell: 'Claude Opus 4.7 (Anthropic)', Kontextfenster: '200.000 Tokens', 'Ungefähres Wortäquivalent': '~150.000 Wörter', 'Praktisches Dokumentenlimit': '~300-seitiges PDF' },
+            { Modell: 'Claude Opus 4.8 (Anthropic)', Kontextfenster: '200.000 Tokens', 'Ungefähres Wortäquivalent': '~150.000 Wörter', 'Praktisches Dokumentenlimit': '~300-seitiges PDF' },
             { Modell: 'Gemini 3.1 Pro (Google DeepMind)', Kontextfenster: '2.000.000 Tokens', 'Ungefähres Wortäquivalent': '~1.500.000 Wörter', 'Praktisches Dokumentenlimit': '~3.000-seitiges PDF' },
             { Modell: 'LLaMA 3.1 70B (Meta, via Ollama)', Kontextfenster: '128.000 Tokens', 'Ungefähres Wortäquivalent': '~96.000 Wörter', 'Praktisches Dokumentenlimit': '~200-seitiges PDF' },
           ],
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'Temperature-Effekte über Modelle hinweg in PromptQuorum testen',
           content: [
-            '**Getestet in PromptQuorum — das Senden desselben kreativen Briefings an GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro bei Temperatur 0 vs. Temperatur 0,9 zeigte, dass Claude Opus 4.7 die geringste Ausgabevariation zwischen Temperaturen aufweist, während Gemini 3.1 Pro die höchste Variation zeigt.** Bei Temperatur 0,9 erzeugte Gemini 3.1 Pro im Durchschnitt 34 % längere Ausgaben als bei Temperatur 0.',
+            '**Getestet in PromptQuorum — das Senden desselben kreativen Briefings an GPT-4o, Claude Opus 4.8 und Gemini 3.1 Pro bei Temperatur 0 vs. Temperatur 0,9 zeigte, dass Claude Opus 4.8 die geringste Ausgabevariation zwischen Temperaturen aufweist, während Gemini 3.1 Pro die höchste Variation zeigt.** Bei Temperatur 0,9 erzeugte Gemini 3.1 Pro im Durchschnitt 34 % längere Ausgaben als bei Temperatur 0.',
             'Mit PromptQuorums Multi-Modell-Dispatch kannst du jeden Prompt gleichzeitig gegen alle verfügbaren Modelle bei einer bestimmten Temperatur ausführen und Ausgaben nebeneinander vergleichen — was es praktisch macht, Temperatureinstellungen für eine bestimmte Aufgabe zu kalibrieren statt auf Modell-Standardeinstellungen zu vertrauen.',
           ],
         },
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Was ist der Unterschied zwischen einem Kontextfenster und Gedächtnis?',
-              a: 'Das Kontextfenster umfasst den gesamten Text, den das Modell während eines Inferenzaufrufs sehen kann — System-Prompt, Verlauf und aktuelle Nachricht. Es ist kein persistentes Gedächtnis: Wenn das Gespräch endet, behält das Modell nichts. GPT-4o: 128.000 Tokens. Claude Opus 4.7: 200.000 Tokens. Gemini 3.1 Pro: 2.000.000 Tokens.',
+              a: 'Das Kontextfenster umfasst den gesamten Text, den das Modell während eines Inferenzaufrufs sehen kann — System-Prompt, Verlauf und aktuelle Nachricht. Es ist kein persistentes Gedächtnis: Wenn das Gespräch endet, behält das Modell nichts. GPT-4o: 128.000 Tokens. Claude Opus 4.8: 200.000 Tokens. Gemini 3.1 Pro: 2.000.000 Tokens.',
             },
             {
               q: 'Was ist der "Lost in the Middle"-Effekt und wie vermeide ich ihn?',
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Was ist der Unterschied zwischen GPT-4o, Claude und Gemini in der Architektur?',
-              a: 'Alle drei sind transformerbasierte LLMs, unterscheiden sich aber in Skalierung, Kontextfenster und Post-Training. GPT-4o (OpenAI): 128.000 Tokens. Claude Opus 4.7 (Anthropic): 200.000 Tokens, verwendet Constitutional AI. Gemini 3.1 Pro (Google DeepMind): 2.000.000 Tokens. Diese Unterschiede beeinflussen Kosten, Latenz und Eignung — GPT-4o glänzt beim Reasoning, Claude bei langem Kontext, Gemini bei der Verarbeitung extrem langer Dokumente.',
+              a: 'Alle drei sind transformerbasierte LLMs, unterscheiden sich aber in Skalierung, Kontextfenster und Post-Training. GPT-4o (OpenAI): 128.000 Tokens. Claude Opus 4.8 (Anthropic): 200.000 Tokens, verwendet Constitutional AI. Gemini 3.1 Pro (Google DeepMind): 2.000.000 Tokens. Diese Unterschiede beeinflussen Kosten, Latenz und Eignung — GPT-4o glänzt beim Reasoning, Claude bei langem Kontext, Gemini bei der Verarbeitung extrem langer Dokumente.',
             },
             {
               q: 'Wie viele Tokens hat ein Text von 1.000 Wörtern?',
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['grandes modelos de lenguaje', 'arquitectura LLM', 'transformer', 'tokenización', 'mecanismo de attention', 'RLHF', 'temperatura', 'context window', 'prompt engineering', 'GPT-4o', 'Claude'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Los LLMs predicen tokens, no respuestas.** Generan secuencias de texto estadísticamente probables — no hechos recuperados, deducciones lógicas ni información verificada.',
             '**1 token ≈ 0.75 palabras en inglés.** Un documento de 1.000 palabras usa ~1.300 tokens. El chino y el japonés son ~50% más densos.',
             '**[La temperatura](/prompt-engineering/prompt-engineering-glossary#temperature) controla creatividad vs. determinismo.** Temperatura 0 = determinista. Temperatura 1.0 = muestreo proporcional. Por encima de 1.5 = alto riesgo de alucinación.',
-            '**Los [context windows](/prompt-engineering/prompt-engineering-glossary#context-window) no son memoria.** GPT-4o: 128k tokens. Claude Opus 4.7: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nada persiste entre sesiones.',
+            '**Los [context windows](/prompt-engineering/prompt-engineering-glossary#context-window) no son memoria.** GPT-4o: 128k tokens. Claude Opus 4.8: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nada persiste entre sesiones.',
             '**La posición importa.** El [attention](/prompt-engineering/prompt-engineering-glossary#attention) del transformer pondera más el inicio y el final del contexto. Pon las instrucciones críticas al principio y al final — no enterradas en el medio.',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) da forma al comportamiento, no a la capacidad.** Los rechazos, el tono y la utilidad vienen del fine-tuning post-entrenamiento — no de la arquitectura base.',
           ],
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[Tokenización](/prompt-engineering/prompt-engineering-glossary#tokenization): Cómo el texto se convierte en números',
           content: [
-            '**Antes de que un LLM pueda procesar cualquier texto, debe convertirlo en una secuencia de IDs de token enteros — un proceso llamado [tokenización](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-4o usa Byte Pair Encoding (BPE), que divide el texto en unidades de subpalabras que aparecen con frecuencia. Claude Opus 4.7 y Gemini 3.1 Pro usan esquemas de tokenización de subpalabras similares.',
+            '**Antes de que un LLM pueda procesar cualquier texto, debe convertirlo en una secuencia de IDs de token enteros — un proceso llamado [tokenización](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-4o usa Byte Pair Encoding (BPE), que divide el texto en unidades de subpalabras que aparecen con frecuencia. Claude Opus 4.8 y Gemini 3.1 Pro usan esquemas de tokenización de subpalabras similares.',
             'La tokenización depende del idioma. El texto en inglés promedia aproximadamente 1 token por 0.75 palabras. El chino y el japonés promedian 1 token por 0.5 palabras — lo que significa que el mismo documento cuesta aproximadamente el doble de tokens en chino que en inglés, lo que afecta directamente al coste de la API y al uso del context window.',
           ],
           tableFormat: true,
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Pretraining:** Predicción no supervisada del siguiente token en datos a escala web. Codifica patrones de lenguaje, conocimiento del mundo y atajos de razonamiento en los pesos del modelo (~70B–405B parámetros para modelos frontier).',
             '**Supervised Fine-Tuning (SFT):** El modelo se entrena en pares instrucción-respuesta curados para comportarse como un asistente en lugar de un predictor de texto puro.',
             '**RLHF / DPO:** Las preferencias humanas dirigen el modelo hacia outputs útiles, inofensivos y honestos. DPO (Direct Preference Optimization) es una alternativa más eficiente computacionalmente utilizada por los modelos Llama y Mistral.',
-            '**Constitutional AI (Anthropic):** Claude se entrena adicionalmente usando un conjunto de principios ("constitución") para reducir la dependencia de la retroalimentación humana en casos extremos — Claude Opus 4.7 usa este enfoque.',
+            '**Constitutional AI (Anthropic):** Claude se entrena adicionalmente usando un conjunto de principios ("constitución") para reducir la dependencia de la retroalimentación humana en casos extremos — Claude Opus 4.8 usa este enfoque.',
           ],
         },
         inference: {
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Modelo', 'Context window', 'Equivalente aproximado en palabras', 'Límite práctico de documento'],
           rows: [
             { Modelo: 'GPT-4o (OpenAI)', 'Context window': '128.000 tokens', 'Equivalente aproximado en palabras': '~96.000 palabras', 'Límite práctico de documento': '~PDF de 200 páginas' },
-            { Modelo: 'Claude Opus 4.7 (Anthropic)', 'Context window': '200.000 tokens', 'Equivalente aproximado en palabras': '~150.000 palabras', 'Límite práctico de documento': '~PDF de 300 páginas' },
+            { Modelo: 'Claude Opus 4.8 (Anthropic)', 'Context window': '200.000 tokens', 'Equivalente aproximado en palabras': '~150.000 palabras', 'Límite práctico de documento': '~PDF de 300 páginas' },
             { Modelo: 'Gemini 3.1 Pro (Google DeepMind)', 'Context window': '2.000.000 tokens', 'Equivalente aproximado en palabras': '~1.500.000 palabras', 'Límite práctico de documento': '~PDF de 3.000 páginas' },
             { Modelo: 'LLaMA 3.1 70B (Meta, vía Ollama)', 'Context window': '128.000 tokens', 'Equivalente aproximado en palabras': '~96.000 palabras', 'Límite práctico de documento': '~PDF de 200 páginas' },
           ],
@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'Probando los efectos de la temperatura en varios modelos en PromptQuorum',
           content: [
-            '**Probado en PromptQuorum — enviar el mismo brief creativo a GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro a temperatura 0 vs. temperatura 0.9 mostró que Claude Opus 4.7 tiene la menor variación de output entre temperaturas, mientras que Gemini 3.1 Pro muestra la mayor variación.** A temperatura 0.9, Gemini 3.1 Pro produjo outputs un 34% más largos en promedio que a temperatura 0.',
+            '**Probado en PromptQuorum — enviar el mismo brief creativo a GPT-4o, Claude Opus 4.8 y Gemini 3.1 Pro a temperatura 0 vs. temperatura 0.9 mostró que Claude Opus 4.8 tiene la menor variación de output entre temperaturas, mientras que Gemini 3.1 Pro muestra la mayor variación.** A temperatura 0.9, Gemini 3.1 Pro produjo outputs un 34% más largos en promedio que a temperatura 0.',
             'Usando el dispatch multi-modelo de PromptQuorum, puedes ejecutar cualquier prompt simultáneamente contra todos los modelos disponibles a una temperatura especificada y comparar outputs en paralelo — haciendo práctico calibrar los ajustes de temperatura para tu tarea específica en lugar de confiar en los valores predeterminados del modelo.',
           ],
         },
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cuál es la diferencia entre un context window y la memoria?',
-              a: 'El context window es todo el texto que el modelo puede ver durante una sola llamada de inferencia — system prompt, historial y message actual. No es memoria persistente: cuando termina la conversación, el modelo no retiene nada. GPT-4o: 128.000 tokens. Claude Opus 4.7: 200.000 tokens. Gemini 3.1 Pro: 2.000.000 tokens.',
+              a: 'El context window es todo el texto que el modelo puede ver durante una sola llamada de inferencia — system prompt, historial y message actual. No es memoria persistente: cuando termina la conversación, el modelo no retiene nada. GPT-4o: 128.000 tokens. Claude Opus 4.8: 200.000 tokens. Gemini 3.1 Pro: 2.000.000 tokens.',
             },
             {
               q: '¿Qué es el efecto "lost in the middle" y cómo evitarlo?',
@@ -936,7 +936,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cuál es la diferencia entre GPT-4o, Claude y Gemini arquitecturalmente?',
-              a: 'Los tres son LLMs basados en transformer pero difieren en escala y post-entrenamiento. GPT-4o (OpenAI): 128.000 tokens de contexto, destaca en razonamiento. Claude Opus 4.7 (Anthropic): 200.000 tokens, usa Constitutional AI para la alineación. Gemini 3.1 Pro (Google DeepMind): 2.000.000 tokens para el procesamiento de documentos ultra-largos. Estas diferencias afectan al coste, la latencia y la idoneidad para diferentes tareas.',
+              a: 'Los tres son LLMs basados en transformer pero difieren en escala y post-entrenamiento. GPT-4o (OpenAI): 128.000 tokens de contexto, destaca en razonamiento. Claude Opus 4.8 (Anthropic): 200.000 tokens, usa Constitutional AI para la alineación. Gemini 3.1 Pro (Google DeepMind): 2.000.000 tokens para el procesamiento de documentos ultra-largos. Estas diferencias afectan al coste, la latencia y la idoneidad para diferentes tareas.',
             },
             {
               q: '¿Cuántos tokens tiene un texto de 1000 palabras?',
@@ -985,7 +985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['grands modèles de langage', 'architecture LLM', 'transformer', 'tokenisation', 'mécanisme d\'attention', 'RLHF', 'température', 'fenêtre de contexte', 'ingénierie de prompt', 'GPT-4o', 'Claude'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -1019,7 +1019,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Les LLMs prédisent des tokens, pas des réponses.** Ils génèrent des séquences de texte statistiquement probables — pas des faits récupérés, des déductions logiques ou des informations vérifiées.',
             '**1 token ≈ 0,75 mot en anglais.** Un document de 1 000 mots utilise ~1 300 tokens. Le chinois et le japonais sont ~50 % plus denses.',
             '**La [température](/prompt-engineering/prompt-engineering-glossary#temperature) contrôle créativité vs déterminisme.** Température 0 = déterministe. Température 1,0 = échantillonnage proportionnel. Au-dessus de 1,5 = risque élevé d\'hallucination.',
-            '**Les [fenêtres de contexte](/prompt-engineering/prompt-engineering-glossary#context-window) ne sont pas de la mémoire.** GPT-4o : 128k tokens. Claude Opus 4.7 : 200k tokens. Gemini 3.1 Pro : 2 M de tokens. Rien ne persiste entre les sessions.',
+            '**Les [fenêtres de contexte](/prompt-engineering/prompt-engineering-glossary#context-window) ne sont pas de la mémoire.** GPT-4o : 128k tokens. Claude Opus 4.8 : 200k tokens. Gemini 3.1 Pro : 2 M de tokens. Rien ne persiste entre les sessions.',
             '**La position est déterminante.** Le mécanisme d\'[attention](/prompt-engineering/prompt-engineering-glossary#attention) transformer pondère davantage le début et la fin du contexte. Placez les instructions critiques en premier et en dernier — pas au milieu.',
             '**Le [RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) façonne le comportement, pas les capacités.** Les refus, le ton et la serviabilité proviennent du fine-tuning post-entraînement — pas de l\'architecture de base.',
           ],
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[Tokenisation](/prompt-engineering/prompt-engineering-glossary#tokenization) : comment le texte devient des nombres',
           content: [
-            '**Avant qu\'un LLM puisse traiter du texte, il doit le convertir en une séquence d\'identifiants de tokens entiers — un processus appelé [tokenisation](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-4o utilise le Byte Pair Encoding (BPE), qui décompose le texte en unités de sous-mots fréquents. Claude Opus 4.7 et Gemini 3.1 Pro utilisent des schémas de tokenisation par sous-mots similaires.',
+            '**Avant qu\'un LLM puisse traiter du texte, il doit le convertir en une séquence d\'identifiants de tokens entiers — un processus appelé [tokenisation](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-4o utilise le Byte Pair Encoding (BPE), qui décompose le texte en unités de sous-mots fréquents. Claude Opus 4.8 et Gemini 3.1 Pro utilisent des schémas de tokenisation par sous-mots similaires.',
             'La tokenisation dépend de la langue. Le texte anglais représente en moyenne 1 token pour 0,75 mots. Le chinois et le japonais atteignent 1 token pour 0,5 mots — le même document coûte donc environ deux fois plus de tokens en chinois qu\'en anglais, ce qui affecte directement le coût de l\'API et l\'utilisation de la fenêtre de contexte.',
           ],
           tableFormat: true,
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Pré-entraînement :** Prédiction non supervisée du prochain token sur des données à l\'échelle du web. Encode les patterns linguistiques, les connaissances du monde et les raccourcis de raisonnement dans les poids du modèle (~70B–405B paramètres pour les modèles frontier).',
             '**Supervised Fine-Tuning (SFT) :** Le modèle est entraîné sur des paires instruction-réponse soigneusement sélectionnées pour se comporter comme un assistant plutôt que comme un simple prédicteur de texte.',
             '**RLHF / DPO :** Les préférences humaines orientent le modèle vers des sorties utiles, inoffensives et honnêtes. Le DPO (Direct Preference Optimization) est une alternative plus efficace en calcul utilisée par les modèles Llama et Mistral.',
-            '**Constitutional AI (Anthropic) :** Claude est en plus entraîné avec un ensemble de principes (« constitution ») pour réduire la dépendance aux retours humains pour chaque cas limite — Claude Opus 4.7 utilise cette approche.',
+            '**Constitutional AI (Anthropic) :** Claude est en plus entraîné avec un ensemble de principes (« constitution ») pour réduire la dépendance aux retours humains pour chaque cas limite — Claude Opus 4.8 utilise cette approche.',
           ],
         },
         inference: {
@@ -1086,7 +1086,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Modèle', 'Fenêtre de contexte', 'Équivalent en mots approximatif', 'Limite pratique pour les documents'],
           rows: [
             { Modèle: 'GPT-4o (OpenAI)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
-            { Modèle: 'Claude Opus 4.7 (Anthropic)', 'Fenêtre de contexte': '200 000 tokens', 'Équivalent en mots approximatif': '~150 000 mots', 'Limite pratique pour les documents': '~300 pages PDF' },
+            { Modèle: 'Claude Opus 4.8 (Anthropic)', 'Fenêtre de contexte': '200 000 tokens', 'Équivalent en mots approximatif': '~150 000 mots', 'Limite pratique pour les documents': '~300 pages PDF' },
             { Modèle: 'Gemini 3.1 Pro (Google DeepMind)', 'Fenêtre de contexte': '2 000 000 tokens', 'Équivalent en mots approximatif': '~1 500 000 mots', 'Limite pratique pour les documents': '~3 000 pages PDF' },
             { Modèle: 'LLaMA 3.1 70B (Meta, via Ollama)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
           ],
@@ -1120,7 +1120,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'Tester les effets de température entre modèles dans PromptQuorum',
           content: [
-            '**Testé dans PromptQuorum — l\'envoi du même brief créatif à GPT-4o, Claude Opus 4.7 et Gemini 3.1 Pro à température 0 vs température 0,9 a montré que Claude Opus 4.7 présente la plus faible variation de sortie entre températures, tandis que Gemini 3.1 Pro affiche la plus grande variation.** À température 0,9, Gemini 3.1 Pro a produit des sorties en moyenne 34 % plus longues qu\'à température 0.',
+            '**Testé dans PromptQuorum — l\'envoi du même brief créatif à GPT-4o, Claude Opus 4.8 et Gemini 3.1 Pro à température 0 vs température 0,9 a montré que Claude Opus 4.8 présente la plus faible variation de sortie entre températures, tandis que Gemini 3.1 Pro affiche la plus grande variation.** À température 0,9, Gemini 3.1 Pro a produit des sorties en moyenne 34 % plus longues qu\'à température 0.',
             'Avec le dispatch multi-modèle de PromptQuorum, vous pouvez exécuter n\'importe quel prompt simultanément contre tous les modèles disponibles à une température spécifiée et comparer les sorties côte à côte — ce qui rend pratique le calibrage des paramètres de température pour votre tâche spécifique plutôt que de s\'appuyer sur les valeurs par défaut des modèles.',
           ],
         },
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Quelle est la différence entre une fenêtre de contexte et la mémoire ?',
-              a: 'La fenêtre de contexte englobe tout le texte que le modèle peut voir lors d\'un appel d\'inférence — system prompt, historique et message actuel. Ce n\'est pas de la mémoire persistante : lorsque la conversation se termine, le modèle ne retient rien. GPT-4o : 128 000 tokens. Claude Opus 4.7 : 200 000 tokens. Gemini 3.1 Pro : 2 000 000 tokens.',
+              a: 'La fenêtre de contexte englobe tout le texte que le modèle peut voir lors d\'un appel d\'inférence — system prompt, historique et message actuel. Ce n\'est pas de la mémoire persistante : lorsque la conversation se termine, le modèle ne retient rien. GPT-4o : 128 000 tokens. Claude Opus 4.8 : 200 000 tokens. Gemini 3.1 Pro : 2 000 000 tokens.',
             },
             {
               q: 'Qu\'est-ce que l\'effet « lost in the middle » et comment l\'éviter ?',
@@ -1179,7 +1179,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Quelle est la différence architecturale entre GPT-4o, Claude et Gemini ?',
-              a: 'Tous trois sont des LLMs basés sur transformer mais diffèrent en taille, fenêtre de contexte et post-entraînement. GPT-4o (OpenAI) : 128 000 tokens. Claude Opus 4.7 (Anthropic) : 200 000 tokens, utilise le Constitutional AI. Gemini 3.1 Pro (Google DeepMind) : 2 000 000 tokens. Ces différences influencent le coût, la latence et l\'adéquation — GPT-4o excelle en raisonnement, Claude sur les longs contextes, Gemini pour le traitement de documents extrêmement longs.',
+              a: 'Tous trois sont des LLMs basés sur transformer mais diffèrent en taille, fenêtre de contexte et post-entraînement. GPT-4o (OpenAI) : 128 000 tokens. Claude Opus 4.8 (Anthropic) : 200 000 tokens, utilise le Constitutional AI. Gemini 3.1 Pro (Google DeepMind) : 2 000 000 tokens. Ces différences influencent le coût, la latence et l\'adéquation — GPT-4o excelle en raisonnement, Claude sur les longs contextes, Gemini pour le traitement de documents extrêmement longs.',
             },
             {
               q: 'Combien de tokens représentent 1 000 mots ?',
@@ -1230,7 +1230,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['大規模言語モデル', 'LLMアーキテクチャ', 'Transformer', 'トークン化', '注意メカニズム', 'RLHF', '温度', 'コンテキストウィンドウ', 'プロンプトエンジニアリング', 'GPT-4o', 'Claude'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -1265,7 +1265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLMはトークンを予測し、回答を予測しません。** これらは統計的に可能性の高いテキストシーケンスを生成します — 取得された事実、論理的推論、または検証された情報ではありません。',
             '**1トークン≈0.75英語単語。** 1,000語のドキュメントは〜1,300トークンを使用します。中国語と日本語は〜50％密です。',
             '**[温度](/prompt-engineering/prompt-engineering-glossary#temperature)は創造性対決定性を制御します。** 温度0 =決定的。温度1.0 =比例サンプリング。1.5以上 =高い幻覚リスク。',
-            '**[コンテキストウィンドウ](/prompt-engineering/prompt-engineering-glossary#context-window)はメモリではありません。** GPT-4o：128kトークン。Claude Opus 4.7：200kトークン。Gemini 3.1 Pro：200万トークン。セッション間で何も保持されません。',
+            '**[コンテキストウィンドウ](/prompt-engineering/prompt-engineering-glossary#context-window)はメモリではありません。** GPT-4o：128kトークン。Claude Opus 4.8：200kトークン。Gemini 3.1 Pro：200万トークン。セッション間で何も保持されません。',
             '**位置は決定的です。** トランスフォーマー[注意](/prompt-engineering/prompt-engineering-glossary#attention)メカニズムは、コンテキストの開始と終了の方が中央より重い。重要な指示を最初と最後に配置してください — 中央ではありません。',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf)は動作を形作る、機能ではない。** 拒否、トーン、有用性はポストトレーニングの微調整から生じます — ベースアーキテクチャではなく。',
           ],
@@ -1274,7 +1274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[トークン化](/prompt-engineering/prompt-engineering-glossary#tokenization)：テキストが数字になる方法',
           content: [
-            '**LLMがテキストを処理する前に、それを整数トークンIDのシーケンスに変換する必要があります — [トークン化](/prompt-engineering/prompt-engineering-glossary#tokenization)と呼ばれるプロセス。** GPT-4oはバイトペアエンコーディング（BPE）を使用し、テキストを一般的な部分単語ユニットに分割します。Claude Opus 4.7とGemini 3.1 Proは同様のサブワードトークン化スキームを使用します。',
+            '**LLMがテキストを処理する前に、それを整数トークンIDのシーケンスに変換する必要があります — [トークン化](/prompt-engineering/prompt-engineering-glossary#tokenization)と呼ばれるプロセス。** GPT-4oはバイトペアエンコーディング（BPE）を使用し、テキストを一般的な部分単語ユニットに分割します。Claude Opus 4.8とGemini 3.1 Proは同様のサブワードトークン化スキームを使用します。',
             'トークン化は言語に依存しています。英語のテキストは平均1トークンあたり0.75単語です。中国語と日本語は1トークンあたり0.5単語になります — 同じドキュメントは中国語では英語の約2倍のトークンがかかり、APIコストとコンテキストウィンドウの使用法に直接影響します。',
           ],
           tableFormat: true,
@@ -1307,7 +1307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**事前トレーニング：** Webスケールデータの教師なし次トークン予測。言語パターン、世界知識、推論のショートカットをモデルウェイト（フロンティアモデルで70B〜405Bパラメータ）にエンコードします。',
             '**監視されたファインチューニング（SFT）：** モデルは、純粋なテキスト予測器ではなくアシスタントとして動作するために、キュートされた指示応答ペアで訓練されます。',
             '**RLHF / DPO：** 人的嗜好がモデルを有用で無害で誠実な出力に向かって導きます。DPO（Direct Preference Optimization）はLlamaおよびMistralモデルで使用される、より計算効率の高い代替手段です。',
-            '**Constitutional AI（Anthropic）：** Claudeは、エッジケースで人的フィードバックへの依存性を減らすために、原則のセット（「憲法」）を使って追加でトレーニングされます — Claude Opus 4.7はこのアプローチを使用します。',
+            '**Constitutional AI（Anthropic）：** Claudeは、エッジケースで人的フィードバックへの依存性を減らすために、原則のセット（「憲法」）を使って追加でトレーニングされます — Claude Opus 4.8はこのアプローチを使用します。',
           ],
         },
 
@@ -1337,7 +1337,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['モデル', 'コンテキストウィンドウ', '概算単語相当', '実用的なドキュメント制限'],
           rows: [
             { 'モデル': 'GPT-4o（OpenAI）', 'コンテキストウィンドウ': '128,000トークン', '概算単語相当': '〜96,000単語', '実用的なドキュメント制限': '〜200ページのPDF' },
-            { 'モデル': 'Claude Opus 4.7（Anthropic）', 'コンテキストウィンドウ': '200,000トークン', '概算単語相当': '〜150,000単語', '実用的なドキュメント制限': '〜300ページのPDF' },
+            { 'モデル': 'Claude Opus 4.8（Anthropic）', 'コンテキストウィンドウ': '200,000トークン', '概算単語相当': '〜150,000単語', '実用的なドキュメント制限': '〜300ページのPDF' },
             { 'モデル': 'Gemini 3.1 Pro（Google DeepMind）', 'コンテキストウィンドウ': '2,000,000トークン', '概算単語相当': '〜1,500,000単語', '実用的なドキュメント制限': '〜3,000ページのPDF' },
             { 'モデル': 'LLaMA 3.1 70B（Meta、Ollamaより）', 'コンテキストウィンドウ': '128,000トークン', '概算単語相当': '〜96,000単語', '実用的なドキュメント制限': '〜200ページのPDF' },
           ],
@@ -1374,7 +1374,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'PromptQuorumを使用したモデル全体の温度効果をテストします',
           content: [
-            '**PromptQuorumでテスト済み — 温度0対温度0.9の同じ創造的なブリーフィングをGPT-4o、Claude Opus 4.7、Gemini 3.1 Proに送信すると、Claude Opus 4.7は気温の間で出力の変動が最も低く、Gemini 3.1 Proは最も高いです。** 温度0.9では、Gemini 3.1 Proは温度0での平均出力より平均34％長い出力を生成しました。',
+            '**PromptQuorumでテスト済み — 温度0対温度0.9の同じ創造的なブリーフィングをGPT-4o、Claude Opus 4.8、Gemini 3.1 Proに送信すると、Claude Opus 4.8は気温の間で出力の変動が最も低く、Gemini 3.1 Proは最も高いです。** 温度0.9では、Gemini 3.1 Proは温度0での平均出力より平均34％長い出力を生成しました。',
             'PromptQuorumのマルチモデルディスパッチを使用すると、特定の温度で利用可能なすべてのモデルに対して同時に各プロンプトを実行し、側次に出力を比較できます — これは特定のタスクの温度設定をキャリブレートし、モデルのデフォルトを信頼する代わりに、実用的にします。',
           ],
         },
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'コンテキストウィンドウとメモリの違いは何ですか？',
-              a: 'コンテキストウィンドウは、推論呼び出し中にモデルが見ることができるすべてのテキストをカバーしています — システムプロンプト、履歴、現在のメッセージ。永続的なメモリではありません。会話が終わると、モデルは何も保持します。GPT-4o：128,000トークン。Claude Opus 4.7：200,000トークン。Gemini 3.1 Pro：2,000,000トークン。',
+              a: 'コンテキストウィンドウは、推論呼び出し中にモデルが見ることができるすべてのテキストをカバーしています — システムプロンプト、履歴、現在のメッセージ。永続的なメモリではありません。会話が終わると、モデルは何も保持します。GPT-4o：128,000トークン。Claude Opus 4.8：200,000トークン。Gemini 3.1 Pro：2,000,000トークン。',
             },
             {
               q: '「Lost in the Middle」効果は何ですか、そしてどのようにそれを避けますか？',
@@ -1436,7 +1436,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'アーキテクチャのGPT-4o、Claude、Geminはどのように異なりますか？',
-              a: '3つはすべてトランスフォーマーベースのLLMですが、スケーリング、コンテキストウィンドウ、ポストトレーニングが異なります。GPT-4o（OpenAI）：128,000トークン。Claude Opus 4.7（Anthropic）：200,000トークン、Constitutional AIを使用します。Gemini 3.1 Pro（Google DeepMind）：2,000,000トークン。これらの違いはコスト、遅延、適合性に影響を与えます — GPT-4oは推論で輝き、長コンテキストではClaude、Geminは非常に長いドキュメント処理に適しています。',
+              a: '3つはすべてトランスフォーマーベースのLLMですが、スケーリング、コンテキストウィンドウ、ポストトレーニングが異なります。GPT-4o（OpenAI）：128,000トークン。Claude Opus 4.8（Anthropic）：200,000トークン、Constitutional AIを使用します。Gemini 3.1 Pro（Google DeepMind）：2,000,000トークン。これらの違いはコスト、遅延、適合性に影響を与えます — GPT-4oは推論で輝き、長コンテキストではClaude、Geminは非常に長いドキュメント処理に適しています。',
             },
             {
               q: '1,000文字のテキストにはいくつのトークンがありますか？',
@@ -1488,7 +1488,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['大型语言模型', 'LLM架构', 'Transformer', '令牌化', '注意力机制', 'RLHF', '温度', '上下文窗口', '提示工程', 'GPT-4o', 'Claude'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -1523,7 +1523,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLM预测令牌，而非答案。** 它们生成统计上可能的文本序列——不是检索到的事实、逻辑推理或经过验证的信息。',
             '**1个令牌≈0.75个英语单词。** 1,000词的文档使用约1,300个令牌。中文和日文密度约高50%。',
             '**[温度](/prompt-engineering/prompt-engineering-glossary#temperature)控制创意与确定性。** 温度0=确定性。温度1.0=按比例采样。超过1.5=高幻觉风险。',
-            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary#context-window)不是记忆。** GPT-4o：128k令牌。Claude Opus 4.7：200k令牌。Gemini 3.1 Pro：200万令牌。会话之间不保留任何内容。',
+            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary#context-window)不是记忆。** GPT-4o：128k令牌。Claude Opus 4.8：200k令牌。Gemini 3.1 Pro：200万令牌。会话之间不保留任何内容。',
             '**位置至关重要。** Transformer[注意力](/prompt-engineering/prompt-engineering-glossary#attention)机制对上下文开头和结尾的权重高于中间。将重要指令放在最前面和最后面——而不是中间。',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf)塑造行为，而非能力。** 拒绝、语气和有用性来自训练后微调——而非基础架构。',
           ],
@@ -1532,7 +1532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[令牌化](/prompt-engineering/prompt-engineering-glossary#tokenization)：文本如何变为数字',
           content: [
-            '**在LLM处理文本之前，必须将其转换为整数令牌ID序列——这一过程称为[令牌化](/prompt-engineering/prompt-engineering-glossary#tokenization)。** GPT-4o使用字节对编码（BPE），将文本分解为常见的子词单元。Claude Opus 4.7和Gemini 3.1 Pro使用类似的子词令牌化方案。',
+            '**在LLM处理文本之前，必须将其转换为整数令牌ID序列——这一过程称为[令牌化](/prompt-engineering/prompt-engineering-glossary#tokenization)。** GPT-4o使用字节对编码（BPE），将文本分解为常见的子词单元。Claude Opus 4.8和Gemini 3.1 Pro使用类似的子词令牌化方案。',
             '令牌化取决于语言。英文文本平均每0.75个单词对应1个令牌。中文和日文为每0.5个词对应1个令牌——同一文档的中文版本需要约英文版两倍的令牌，直接影响API成本和上下文窗口使用。',
           ],
           tableFormat: true,
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**预训练：** 对网络规模数据进行无监督的下一个令牌预测。将语言模式、世界知识和推理捷径编码到模型权重中（前沿模型约70B至405B参数）。',
             '**监督微调（SFT）：** 在精心策划的指令-响应对上训练模型，使其表现得像助手而非纯文本预测器。',
             '**RLHF / DPO：** 人类偏好引导模型产生有用、无害和诚实的输出。DPO（直接偏好优化）是Llama和Mistral模型使用的计算效率更高的替代方案。',
-            '**Constitutional AI（Anthropic）：** Claude额外使用一套原则（"宪法"）进行训练，以减少对边缘案例中人类反馈的依赖——Claude Opus 4.7使用此方法。',
+            '**Constitutional AI（Anthropic）：** Claude额外使用一套原则（"宪法"）进行训练，以减少对边缘案例中人类反馈的依赖——Claude Opus 4.8使用此方法。',
           ],
         },
 
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['模型', '上下文窗口', '近似单词当量', '实际文档限制'],
           rows: [
             { '模型': 'GPT-4o（OpenAI）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
-            { '模型': 'Claude Opus 4.7（Anthropic）', '上下文窗口': '200,000令牌', '近似单词当量': '约150,000词', '实际文档限制': '约300页PDF' },
+            { '模型': 'Claude Opus 4.8（Anthropic）', '上下文窗口': '200,000令牌', '近似单词当量': '约150,000词', '实际文档限制': '约300页PDF' },
             { '模型': 'Gemini 3.1 Pro（Google DeepMind）', '上下文窗口': '2,000,000令牌', '近似单词当量': '约1,500,000词', '实际文档限制': '约3,000页PDF' },
             { '模型': 'LLaMA 3.1 70B（Meta，通过Ollama）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
           ],
@@ -1632,7 +1632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: '使用PromptQuorum测试跨模型的温度效果',
           content: [
-            '**在PromptQuorum中测试——向GPT-4o、Claude Opus 4.7和Gemini 3.1 Pro分别在温度0和温度0.9下发送相同的创意简报，显示Claude Opus 4.7在不同温度间的输出变化最小，而Gemini 3.1 Pro的变化最大。** 在温度0.9时，Gemini 3.1 Pro生成的输出平均比温度0时长34%。',
+            '**在PromptQuorum中测试——向GPT-4o、Claude Opus 4.8和Gemini 3.1 Pro分别在温度0和温度0.9下发送相同的创意简报，显示Claude Opus 4.8在不同温度间的输出变化最小，而Gemini 3.1 Pro的变化最大。** 在温度0.9时，Gemini 3.1 Pro生成的输出平均比温度0时长34%。',
             '使用PromptQuorum的多模型调度，您可以同时针对所有可用模型在特定温度下运行每个提示，并并排比较输出——这使得校准特定任务的温度设置变得实际可行，而不是依赖模型默认值。',
           ],
         },
@@ -1682,7 +1682,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '上下文窗口和记忆有什么区别？',
-              a: '上下文窗口涵盖模型在推理调用期间能看到的所有文本——系统提示、历史记录和当前消息。它不是持久记忆：对话结束时，模型不保留任何内容。GPT-4o：128,000令牌。Claude Opus 4.7：200,000令牌。Gemini 3.1 Pro：2,000,000令牌。',
+              a: '上下文窗口涵盖模型在推理调用期间能看到的所有文本——系统提示、历史记录和当前消息。它不是持久记忆：对话结束时，模型不保留任何内容。GPT-4o：128,000令牌。Claude Opus 4.8：200,000令牌。Gemini 3.1 Pro：2,000,000令牌。',
             },
             {
               q: '"Lost in the Middle"效应是什么，如何避免？',
@@ -1694,7 +1694,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'GPT-4o、Claude和Gemini在架构上有何不同？',
-              a: '三者都是基于Transformer的LLM，但在扩展、上下文窗口和训练后处理上有所不同。GPT-4o（OpenAI）：128,000令牌。Claude Opus 4.7（Anthropic）：200,000令牌，使用Constitutional AI。Gemini 3.1 Pro（Google DeepMind）：2,000,000令牌。这些差异影响成本、延迟和适用性——GPT-4o在推理上表现出色，Claude擅长长上下文，Gemini适合处理超长文档。',
+              a: '三者都是基于Transformer的LLM，但在扩展、上下文窗口和训练后处理上有所不同。GPT-4o（OpenAI）：128,000令牌。Claude Opus 4.8（Anthropic）：200,000令牌，使用Constitutional AI。Gemini 3.1 Pro（Google DeepMind）：2,000,000令牌。这些差异影响成本、延迟和适用性——GPT-4o在推理上表现出色，Claude擅长长上下文，Gemini适合处理超长文档。',
             },
             {
               q: '1,000词的文本有多少个令牌？',

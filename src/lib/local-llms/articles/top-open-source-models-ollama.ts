@@ -11,17 +11,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-07-01',
       next_refresh_due: '2026-06-30',
+      last_full_refresh: '2026-06-01',
+      current_models_mentioned: ['Llama 4 Scout', 'Qwen 3.6 27B', 'Kimi K2.6', 'Devstral Small 24B', 'DeepSeek-R1', 'Gemma 4', 'GLM-5.1', 'Mistral 7B', 'Phi-4 Mini'],
+      current_benchmarks_used: ['SWE-bench', 'HumanEval', 'MATH'],
       theme: 'Best Models',
       title: '10 Best Open Source LLMs for Ollama in 2026 (Ranked & Tested)',
       seoTitle: 'Best Ollama Models 2026: Top 10 Open Source LLMs',
       intro: 'The most downloaded models on Ollama in 2026 are Llama 4 Scout and Llama 3.x (most popular overall), Qwen3 (fastest growing, best coding), Gemma 4 (best for agents and tool calling), Mistral (most efficient), and DeepSeek-R1 (best reasoning). New in May 2026: Kimi K2.6 (MoE, MIT licensed, top-tier coding), Qwen 3.6 (77.2% SWE-bench), and GLM-5.1.',
-      metaDescription: 'Compare 10 best open-source LLMs for Ollama in 2026: Llama 3.3 70B, Qwen 2.5, Mistral, DeepSeek. Verified benchmarks, RAM requirements, setup time.',
+      metaDescription: 'Compare 10 best open-source LLMs for Ollama in 2026: Llama 4 Scout, Qwen 3.6, Kimi K2.6, DeepSeek-R1. Verified benchmarks, RAM requirements, setup time.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**The most downloaded models on Ollama in 2026 are Llama 4 Scout (best overall, MoE), Qwen3 (fastest growing, best coding), Gemma 4 (tool calling, vision), Mistral (most efficient), and DeepSeek-R1 (best reasoning). New in May 2026: Kimi K2.6 (top-tier coding), Qwen 3.6 27B (77.2% SWE-bench), and GLM-5.1.**',
       quickAnswerTop: {
         en: {
-          question: 'What are the best open source models for Ollama in May 2026?',
-          answer: 'The top open source Ollama models in May 2026 are Llama 4 Scout (best overall), Kimi K2.6 (best coding, MoE), Qwen 3.6 27B (best dense coding model), Devstral Small 24B (best agentic coding), Mistral 7B (speed on modest hardware), and Phi-4 Mini (best for 4-8 GB VRAM). Install any with: ollama pull <model-name>',
+          question: 'What are the best open source models for Ollama in June 2026?',
+          answer: 'The top open source Ollama models in June 2026 are Llama 4 Scout (best overall), Kimi K2.6 (best coding, MoE), Qwen 3.6 27B (best dense coding model), Devstral Small 24B (best agentic coding), Mistral 7B (speed on modest hardware), and Phi-4 Mini (best for 4-8 GB VRAM). Install any with: ollama pull <model-name>',
           bullets: [
             '→Llama 4 Scout 17B — best overall quality, MoE architecture, ~10 GB VRAM',
             '→Kimi K2.6 — top coding model (87/100 real-world), MoE (42B active/1T total), MIT license',
@@ -113,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Best reasoning**: DeepSeek-R1 7B and 14B -- chain-of-thought reasoning model, significantly above standard models on math and logic.',
             '**Best coding**: Kimi K2.6 (frontier MoE), Qwen 3.6 27B (best dense), Devstral Small 24B (best agentic) -- highest benchmarks at their sizes.',
             '**Best image understanding**: Gemma 4 9B (vision + tool calling) and Llama 3.2 Vision 11B -- both support image input locally.',
-            'As of May 2026, the Ollama library contains 4,500+ models. All are available via `ollama pull <name>`.',
+            'As of June 2026, the Ollama library contains 4,500+ models. All are available via `ollama pull <name>`.',
           ],
         },
         whatsNew: {
@@ -137,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'most-popular-models-on-ollama',
           title: 'Which Models Are Most Popular on Ollama in 2026?',
           content: [
-            '**Popularity on Ollama is measured by download counts visible on each model\'s library page.** As of May 2026, the top downloaded models are still dominated by Meta\'s Llama family -- Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model. However, Llama 4 Scout has climbed rapidly since its April 2026 release.',
+            '**Popularity on Ollama is measured by download counts visible on each model\'s library page.** As of June 2026, the top downloaded models are still dominated by Meta\'s Llama family -- Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model. However, Llama 4 Scout has climbed rapidly since its April 2026 release.',
             'Qwen3 is the fastest-growing model family in the Ollama library, with Qwen3 and the new Qwen 3.6 dense variant quickly displacing Qwen2.5. DeepSeek-R1 and the new DeepSeek-R2 saw major spikes following releases and remain highly downloaded for reasoning tasks.',
             'Meta released **Llama 4** in April 2026 with Scout (17B active, 109B total, MoE) and Maverick (17B active, 400B total) variants. Llama 4 Scout is now stable in the Ollama library (`ollama pull llama4:scout`). The Llama 4 family uses Mixture-of-Experts (MoE) architecture — only 17B parameters are active per token, making Scout runnable on ~10 GB VRAM despite having 109B total parameters. For lightweight setups (8 GB RAM), Llama 3.2 3B remains the easiest first model. The Ollama ecosystem expanded significantly in late April / early May 2026. Kimi K2.6 (Moonshot AI, MIT license, 42B active / 1T total MoE) became the first non-Western model to reach Tier A in coding benchmarks (87/100). Qwen 3.6 27B achieved 77.2% SWE-bench as the best dense coding model. Ollama v0.22.1 added Gemma 4 support with thinking and tool calling improvements. The Ollama library now references 4,500+ models.',
           ],
@@ -195,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         visionModels: {
           id: 'vision-models',
           title: 'Which Ollama Models Support Image Input?',
-          content: 'As of May 2026, these models on Ollama support image input (multimodal): Gemma 4 supports both vision AND tool calling — unique among vision models on Ollama.',
+          content: 'As of June 2026, these models on Ollama support image input (multimodal): Gemma 4 supports both vision AND tool calling — unique among vision models on Ollama.',
           rows: [
             { 'Model': 'llama3.2-vision:11b', 'RAM': '~8 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run llama3.2-vision:11b' },
             { 'Model': 'llama3.2-vision:90b', 'RAM': '~55 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run llama3.2-vision:90b' },
@@ -210,7 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         fullTop10: {
           id: 'full-top-10-comparison',
           title: 'What Are the Top 10 Open Source Models on Ollama?',
-          content: 'Download counts still favor Llama 3.x and Qwen 2.5 due to tutorial prevalence. For new projects in May 2026, prefer Llama 4 Scout, Qwen3, and Gemma 4.',
+          content: 'Download counts still favor Llama 3.x and Qwen 2.5 due to tutorial prevalence. For new projects in June 2026, prefer Llama 4 Scout, Qwen3, and Gemma 4.',
           rows: [
             { '#': '1', 'Model': 'Llama 3.2 3B', 'Best For': 'First model, general chat', 'RAM': '2.5 GB', 'HumanEval': '60%' },
             { '#': '2', 'Model': 'Llama 4 Scout 17B', 'Best For': 'Best overall quality, MoE', 'RAM': '~10 GB', 'HumanEval': '85%' },
@@ -225,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
           image: '/images/ollama-top10-models-comparison-en.svg',
-          imageCaption: 'Top 10 Ollama models: RAM from 1.7 GB (gemma2:2b) to 16 GB (Devstral). Preferred for new projects in May 2026: Llama 4 Scout, Qwen3, Gemma 4.',
+          imageCaption: 'Top 10 Ollama models: RAM from 1.7 GB (gemma2:2b) to 16 GB (Devstral). Preferred for new projects in June 2026: Llama 4 Scout, Qwen3, Gemma 4.',
         },
         howToBrowse: {
           id: 'how-to-browse-ollama-library',
@@ -287,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'How many models are in the Ollama library?',
-              a: 'As of May 2026, the Ollama library contains approximately 4,500+ models (curated + community contributions) with official support. Hugging Face hosts thousands of additional GGUF models that can be loaded via Ollama using custom Modelfiles.',
+              a: 'As of June 2026, the Ollama library contains approximately 4,500+ models (curated + community contributions) with official support. Hugging Face hosts thousands of additional GGUF models that can be loaded via Ollama using custom Modelfiles.',
             },
             {
               q: 'Can I use models from Hugging Face directly in Ollama?',
@@ -323,7 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Are open source models on Ollama truly free to use commercially?',
-              a: 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral 7B, Qwen2.5, and Gemma 3 use Apache 2.0 (fully commercial-friendly). Always verify the licence before enterprise deployment -- check the model\'s Hugging Face page or Ollama library entry.',
+              a: 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral 7B, Qwen3, and Gemma models use Apache 2.0 (fully commercial-friendly). Always verify the licence before enterprise deployment -- check the model\'s Hugging Face page or Ollama library entry.',
             },
           ],
         },
@@ -344,15 +347,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'NewsArticle',
-        'headline': 'New Ollama Models May 2026: Latest Releases & Updates',
-        'description': 'Looking for new Ollama models? See the latest May 2026 releases, what is new, and which models are worth using for chat, coding, and reasoning.',
+        'headline': 'New Ollama Models June 2026: Latest Releases & Updates',
+        'description': 'Looking for new Ollama models? See the latest June 2026 releases, what is new, and which models are worth using for chat, coding, and reasoning.',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=en',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-05-06',
+        'dateModified': '2026-06-01',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'Best Ollama models 2026' },
-          { '@type': 'Thing', 'name': 'Ollama model list April 2026' },
+          { '@type': 'Thing', 'name': 'Ollama model list June 2026' },
           { '@type': 'Thing', 'name': 'DeepSeek-R1 Ollama' },
           { '@type': 'Thing', 'name': 'Gemma 4 Ollama' },
           { '@type': 'Thing', 'name': 'Qwen 3.6 / Qwen3-Coder Ollama' },
@@ -364,7 +367,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Top Open Source Models on Ollama -- April 2026',
+        'name': 'Top Open Source Models on Ollama -- June 2026',
         'description': 'The most downloaded and highest-performing open source models available via Ollama',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'url': 'https://ollama.com/library/llama3.2', 'description': 'Best first model. 2.5 GB RAM. 60% HumanEval. Most tutorials. ollama run llama3.2:3b' },
@@ -389,7 +392,7 @@ schema: {
             'name': 'How many models are in the Ollama library?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'As of May 2026, the Ollama library contains approximately 4,500+ models (curated + community contributions) with official support. Hugging Face hosts thousands of additional GGUF models that can be loaded via Ollama using custom Modelfiles.',
+              'text': 'As of June 2026, the Ollama library contains approximately 4,500+ models (curated + community contributions) with official support. Hugging Face hosts thousands of additional GGUF models that can be loaded via Ollama using custom Modelfiles.',
             }
           },
           {
@@ -461,15 +464,15 @@ schema: {
             'name': 'Are open source models on Ollama truly free to use commercially?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral 7B, Qwen2.5, and Gemma 3 use Apache 2.0 (fully commercial-friendly). Always verify the licence before enterprise deployment -- check the model\'s Hugging Face page or Ollama library entry.',
+              'text': 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral 7B, Qwen3, and Gemma models use Apache 2.0 (fully commercial-friendly). Always verify the licence before enterprise deployment -- check the model\'s Hugging Face page or Ollama library entry.',
             }
           },
           {
             '@type': 'Question',
-            'name': 'What are the best new Ollama models in April 2026?',
+            'name': 'What are the best new Ollama models in June 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Three major releases in April 2026: Gemma 4 9B (Google, April 2 -- best for agent tasks and tool calling, 6 GB RAM), Qwen3 7B (Alibaba -- 76% HumanEval, best at 7B class, Apache 2.0), and Llama 4 Scout 8B (Meta, March 2026 -- 10M context window preview). Pull commands: ollama run gemma4:9b, ollama run qwen3:7b, ollama run llama4:8b.',
+              'text': 'The latest additions are Kimi K2.6 (Moonshot AI, MIT -- frontier MoE coding, 87/100 real-world, 42B active/1T total), Qwen 3.6 27B (Alibaba -- best dense coding model, 77.2% SWE-bench), and GLM-5.1 (Zhipu AI -- structured code generation, SWE-Bench Pro leader). Gemma 4 9B (Google, April 2, 2026) added vision and tool calling. Pull commands: ollama run kimi-k2.6, ollama run qwen3.6:27b, ollama run glm-5.1, ollama run gemma4:9b.',
             }
           },
         ]
@@ -488,8 +491,8 @@ schema: {
       leadAnswerBlock: '**Los modelos más descargados en Ollama en 2026 son Llama 4 Scout (mejor en general, MoE), Qwen3 (mayor crecimiento, mejor en programación), Gemma 4 (tool calling, visión), Mistral (el más eficiente) y DeepSeek-R1 (mejor en razonamiento). Novedades de mayo de 2026: Kimi K2.6 (programación de primer nivel), Qwen 3.6 27B (77,2% SWE-bench) y GLM-5.1.**',
       quickAnswerTop: {
         en: {
-          question: 'What are the best open source models for Ollama in May 2026?',
-          answer: 'The top open source Ollama models in May 2026 are Llama 4 Scout (best overall), Kimi K2.6 (best coding, MoE), Qwen 3.6 27B (best dense coding model), Devstral Small 24B (best agentic coding), Mistral 7B (speed on modest hardware), and Phi-4 Mini (best for 4-8 GB VRAM). Install any with: ollama pull <model-name>',
+          question: 'What are the best open source models for Ollama in June 2026?',
+          answer: 'The top open source Ollama models in June 2026 are Llama 4 Scout (best overall), Kimi K2.6 (best coding, MoE), Qwen 3.6 27B (best dense coding model), Devstral Small 24B (best agentic coding), Mistral 7B (speed on modest hardware), and Phi-4 Mini (best for 4-8 GB VRAM). Install any with: ollama pull <model-name>',
           bullets: [
             '→Llama 4 Scout 17B — best overall quality, MoE architecture, ~10 GB VRAM',
             '→Kimi K2.6 — top coding model (87/100 real-world), MoE (42B active/1T total), MIT license',

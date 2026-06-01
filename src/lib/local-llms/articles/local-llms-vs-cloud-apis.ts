@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Local LLMs vs Cloud APIs 2026: Privacy, Cost, and Quality',
       intro: 'Local LLMs run on your own hardware with zero API costs and full data privacy. Cloud APIs like OpenAI GPT-4o and Anthropic Claude 4.6 deliver higher output quality and require no hardware setup. The right choice depends on your data sensitivity, budget, required model quality, and whether you need offline access.',
       metaDescription: 'Local LLMs cost $0/token after hardware; cloud APIs cost $0.15-$60/1M tokens. Full 2026 comparison: privacy, cost, speed, quality across 8 factors.',
-      leadAnswerBlock: '**Local LLMs run all inference on your own hardware at zero token cost with full data privacy.** Cloud APIs (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) deliver higher quality with minimal setup.',
+      leadAnswerBlock: '**Local LLMs run all inference on your own hardware at zero token cost with full data privacy.** Cloud APIs (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) deliver higher quality with minimal setup.',
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       audience: 'Beginners running their first local LLM on consumer hardware',
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'Local LLMs cost $0 per token after hardware. Cloud APIs cost $0.15-$60 per 1M tokens depending on the model.',
-            'Cloud APIs (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) outperform all locally-runnable models on complex reasoning and code tasks.',
+            'Cloud APIs (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) outperform all locally-runnable models on complex reasoning and code tasks.',
             'Local models match cloud quality for summarization, translation, and simple Q&A at 7B-13B scale.',
             'Local inference is 2-10× slower than cloud APIs on consumer hardware. An RTX 4070 Ti narrows this gap to roughly equal speed for 7B models.',
             'Use local LLMs when: data privacy is non-negotiable, costs are high, or offline access is required. Use cloud APIs when: maximum quality matters and cost is acceptable.',
@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'how-do-costs-compare',
           title: 'How Do the Costs of Local LLMs and Cloud APIs Compare?',
           content: [
-            '**Cloud APIs cost $0.15-$60 per 1M tokens; local LLMs cost $0 per token after the hardware investment.** Cloud API pricing varies by model tier. In 2026, representative prices per 1M tokens: GPT-4o at $2.50 input / $10 output, Claude Opus 4.7 at $3.00 / $15, Gemini 3.1 Pro at $1.25 / $5, and GPT-4o Mini at $0.15 / $0.60.',
+            '**Cloud APIs cost $0.15-$60 per 1M tokens; local LLMs cost $0 per token after the hardware investment.** Cloud API pricing varies by model tier. In 2026, representative prices per 1M tokens: GPT-4o at $2.50 input / $10 output, Claude Opus 4.8 at $3.00 / $15, Gemini 3.1 Pro at $1.25 / $5, and GPT-4o Mini at $0.15 / $0.60.',
             'A developer running 10M output tokens per month on GPT-4o pays approximately $100/month. The same workload on a local 8B model costs $0 per token -- the only cost is electricity (roughly $0.10-0.30/hour for GPU inference) and the upfront hardware.',
             'Local LLMs become cost-effective within weeks for high-volume use cases. For occasional use (a few thousand tokens per day), cloud APIs are cheaper when you factor in the time cost of setup and maintenance.',
           ],
@@ -240,7 +240,7 @@ schema: {
       seoTitle: 'LLMs locales vs APIs cloud 2026: privacidad, costo, calidad',
       intro: 'Los LLMs locales se ejecutan en tu propio hardware sin costos de API y con privacidad total de datos. Las APIs en la nube como OpenAI GPT-4o y Anthropic Claude 4.6 ofrecen mayor calidad de salida y no requieren configuración de hardware. La elección correcta depende de la sensibilidad de tus datos, tu presupuesto, la calidad del modelo requerida y si necesitas acceso sin conexión.',
       metaDescription: 'Los LLMs locales cuestan $0/token tras el hardware; las APIs cloud, $0.15–$60/1M tokens. Comparación 2026 de privacidad, costo, velocidad y calidad.',
-      leadAnswerBlock: '**Los LLMs locales ejecutan toda la inferencia en tu propio hardware a costo de token cero con privacidad total de datos.** Las APIs en la nube (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) ofrecen mayor calidad con configuración mínima.',
+      leadAnswerBlock: '**Los LLMs locales ejecutan toda la inferencia en tu propio hardware a costo de token cero con privacidad total de datos.** Las APIs en la nube (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) ofrecen mayor calidad con configuración mínima.',
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       audience: 'Principiantes ejecutando su primer LLM local en hardware de consumo',
@@ -268,7 +268,7 @@ schema: {
           isTldr: true,
           items: [
             'Los LLMs locales cuestan $0 por token tras el hardware. Las APIs en la nube cuestan $0.15-$60 por 1M tokens según el modelo.',
-            'Las APIs en la nube (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) superan a todos los modelos ejecutables localmente en tareas complejas de razonamiento y código.',
+            'Las APIs en la nube (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) superan a todos los modelos ejecutables localmente en tareas complejas de razonamiento y código.',
             'Los modelos locales igualan la calidad de la nube en resumen, traducción y preguntas simples a escala 7B-13B.',
             'La inferencia local es 2-10× más lenta que las APIs en la nube en hardware de consumo. Una RTX 4070 Ti reduce esta diferencia a una velocidad aproximadamente equivalente para modelos 7B.',
             'Usa LLMs locales cuando: la privacidad de datos no es negociable, los costos son altos o se requiere acceso sin conexión. Usa APIs en la nube cuando: la calidad máxima importa y el costo es aceptable.',
@@ -302,7 +302,7 @@ schema: {
           id: 'how-do-costs-compare',
           title: '¿Cómo se comparan los costos de los LLMs locales y las APIs en la nube?',
           content: [
-            '**Las APIs en la nube cuestan $0.15-$60 por 1M tokens; los LLMs locales cuestan $0 por token tras la inversión en hardware.** Los precios de las APIs en la nube varían según el nivel del modelo. En 2026, precios representativos por 1M tokens: GPT-4o a $2.50 de entrada / $10 de salida, Claude Opus 4.7 a $3.00 / $15, Gemini 3.1 Pro a $1.25 / $5, y GPT-4o Mini a $0.15 / $0.60.',
+            '**Las APIs en la nube cuestan $0.15-$60 por 1M tokens; los LLMs locales cuestan $0 por token tras la inversión en hardware.** Los precios de las APIs en la nube varían según el nivel del modelo. En 2026, precios representativos por 1M tokens: GPT-4o a $2.50 de entrada / $10 de salida, Claude Opus 4.8 a $3.00 / $15, Gemini 3.1 Pro a $1.25 / $5, y GPT-4o Mini a $0.15 / $0.60.',
             'Un desarrollador que procesa 10M tokens de salida por mes con GPT-4o paga aproximadamente $100/mes. La misma carga de trabajo en un modelo local 8B cuesta $0 por token -- el único costo es la electricidad (aproximadamente $0.10-0.30/hora para inferencia GPU) y el hardware inicial.',
             'Los LLMs locales se vuelven rentables en semanas para casos de uso de alto volumen. Para uso ocasional (unos pocos miles de tokens por día), las APIs en la nube son más baratas cuando se considera el costo de tiempo de configuración y mantenimiento.',
           ],
@@ -422,7 +422,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
           { '@type': 'SoftwareApplication', 'name': 'GPT-4o' },
-          { '@type': 'SoftwareApplication', 'name': 'Claude Opus 4.7' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Opus 4.8' },
         ],
       },
       itemListSchema: {
@@ -470,7 +470,7 @@ schema: {
       seoTitle: 'Lokale LLMs vs. Cloud-APIs 2026: Datenschutz und Kosten',
       intro: 'Lokale LLMs laufen auf Ihrer eigenen Hardware ohne API-Kosten und mit vollständigem Datenschutz. Cloud-APIs wie OpenAI GPT-4o und Anthropic Claude 4.6 liefern höhere Ausgabequalität und erfordern keine Hardware-Einrichtung. Die richtige Wahl hängt von Ihrer Datensensibilität, Ihrem Budget, der erforderlichen Modellqualität und der Frage ab, ob Sie Offline-Zugriff benötigen.',
       metaDescription: 'Lokale LLMs kosten $0/Token nach Hardware; Cloud-APIs $0,15-$60/1 Mio. Tokens. 2026-Vergleich über 8 Faktoren: Datenschutz, Kosten, Qualität.',
-      leadAnswerBlock: '**Lokale LLMs führen alle Berechnungen auf Ihrer eigenen Hardware durch \u2013 ohne Token-Kosten und mit vollständigem Datenschutz.** Cloud-APIs (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) liefern höhere Qualität mit minimalem Einrichtungsaufwand.',
+      leadAnswerBlock: '**Lokale LLMs führen alle Berechnungen auf Ihrer eigenen Hardware durch \u2013 ohne Token-Kosten und mit vollständigem Datenschutz.** Cloud-APIs (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) liefern höhere Qualität mit minimalem Einrichtungsaufwand.',
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '8 Min. Lesezeit',
@@ -498,7 +498,7 @@ schema: {
           isTldr: true,
           items: [
             'Lokale LLMs kosten $0 pro Token nach der Hardware-Investition. Cloud-APIs kosten $0,15\u2013$60 pro 1\u00a0Mio. Tokens je nach Modell.',
-            'Cloud-APIs (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) übertreffen alle lokal ausführbaren Modelle bei komplexen Denkaufgaben und Code-Aufgaben.',
+            'Cloud-APIs (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) übertreffen alle lokal ausführbaren Modelle bei komplexen Denkaufgaben und Code-Aufgaben.',
             'Lokale Modelle erreichen Cloud-Qualität bei Zusammenfassungen, Übersetzungen und einfachen Fragen auf 7B\u201313B-Ebene.',
             'Lokale Inferenz ist auf Consumer-Hardware 2\u201310× langsamer als Cloud-APIs. Eine RTX 4070 Ti schließt diesen Abstand für 7B-Modelle auf annähernd gleiche Geschwindigkeit.',
             'Wählen Sie lokale LLMs, wenn: Datenschutz unverzichtbar ist, Kosten hoch sind oder Offline-Zugriff erforderlich ist. Wählen Sie Cloud-APIs, wenn: maximale Qualität entscheidend ist und die Kosten akzeptabel sind.',
@@ -532,7 +532,7 @@ schema: {
           id: 'how-do-costs-compare',
           title: 'Wie unterscheiden sich die Kosten von lokalen LLMs und Cloud-APIs?',
           content: [
-            '**Cloud-APIs kosten $0,15\u2013$60 pro 1\u00a0Mio. Tokens; lokale LLMs kosten $0 pro Token nach der Hardware-Investition.** Die Cloud-API-Preise variieren je nach Modell-Tier. Im Jahr 2026 betragen repräsentative Preise pro 1\u00a0Mio. Tokens: GPT-4o bei $2,50 Eingabe / $10 Ausgabe, Claude Opus 4.7 bei $3,00 / $15, Gemini 3.1 Pro bei $1,25 / $5 und GPT-4o Mini bei $0,15 / $0,60.',
+            '**Cloud-APIs kosten $0,15\u2013$60 pro 1\u00a0Mio. Tokens; lokale LLMs kosten $0 pro Token nach der Hardware-Investition.** Die Cloud-API-Preise variieren je nach Modell-Tier. Im Jahr 2026 betragen repräsentative Preise pro 1\u00a0Mio. Tokens: GPT-4o bei $2,50 Eingabe / $10 Ausgabe, Claude Opus 4.8 bei $3,00 / $15, Gemini 3.1 Pro bei $1,25 / $5 und GPT-4o Mini bei $0,15 / $0,60.',
             'Ein Entwickler, der 10\u00a0Mio. Ausgabe-Tokens pro Monat mit GPT-4o verarbeitet, zahlt ca. $100/Monat. Die gleiche Arbeitslast auf einem lokalen 8B-Modell kostet $0 pro Token \u2014 der einzige Kostenfaktor ist Strom (ca. $0,10\u20130,30/Stunde für GPU-Inferenz) und die anfängliche Hardware-Investition.',
             'Lokale LLMs werden bei hohem Volumen innerhalb von Wochen kostengünstiger. Bei gelegentlicher Nutzung (wenige Tausend Tokens pro Tag) sind Cloud-APIs günstiger, wenn man den Zeitaufwand für Einrichtung und Wartung berücksichtigt.',
           ],
@@ -719,7 +719,7 @@ schema: {
       seoTitle: 'LLMs locaux vs APIs cloud 2026 : Confidentialité et coûts',
       intro: 'Les LLMs locaux s\'exécutent sur votre propre matériel sans frais d\'API et avec une confidentialité totale. Les APIs cloud comme OpenAI GPT-4o et Anthropic Claude 4.6 offrent une qualité de sortie supérieure sans configuration matérielle. Le choix dépend de la sensibilité de vos données, de votre budget, de la qualité de modèle requise et de votre besoin d\'accès hors ligne.',
       metaDescription: 'LLMs locaux : $0/token après le matériel ; APIs cloud : $0,15-$60/1M tokens. Comparaison 2026 : confidentialité, coûts, qualité sur 8 facteurs.',
-      leadAnswerBlock: '**Les LLMs locaux exécutent toutes les inférences sur votre propre matériel -- sans coût par token et avec une confidentialité totale.** Les APIs cloud (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) offrent une qualité supérieure avec une configuration minimale.',
+      leadAnswerBlock: '**Les LLMs locaux exécutent toutes les inférences sur votre propre matériel -- sans coût par token et avec une confidentialité totale.** Les APIs cloud (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) offrent une qualité supérieure avec une configuration minimale.',
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '8 min de lecture',
@@ -748,7 +748,7 @@ schema: {
           title: 'Points clés',
           items: [
             'Les LLMs locaux coûtent $0 par token après l\'investissement matériel. Les APIs cloud coûtent $0,15-$60 par million de tokens selon le modèle.',
-            'Les APIs cloud (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro) surpassent tous les modèles exécutables localement sur les tâches complexes de raisonnement et de code.',
+            'Les APIs cloud (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) surpassent tous les modèles exécutables localement sur les tâches complexes de raisonnement et de code.',
             'Les modèles locaux atteignent la qualité cloud pour la synthèse, la traduction et les questions simples à l\'échelle 7B-13B.',
             'L\'inférence locale est 2 à 10 fois plus lente que les APIs cloud sur le matériel grand public. Une RTX 4070 Ti réduit cet écart à une vitesse approximativement équivalente pour les modèles 7B.',
             'Choisissez un LLM local si : la confidentialité est non négociable, les coûts sont élevés ou l\'accès hors ligne est requis. Choisissez une API cloud si : la qualité maximale est essentielle et le coût est acceptable.',
@@ -779,7 +779,7 @@ schema: {
         costComparison: {
           title: 'Comment les coûts des LLMs locaux et des APIs cloud se comparent-ils ?',
           content: [
-            '**Les APIs cloud coûtent $0,15-$60 par million de tokens ; les LLMs locaux coûtent $0 par token après l\'investissement matériel.** Les tarifs des APIs cloud varient selon le niveau du modèle. En 2026, les prix représentatifs par million de tokens : GPT-4o à $2,50 en entrée / $10 en sortie, Claude Opus 4.7 à $3,00 / $15, Gemini 3.1 Pro à $1,25 / $5, et GPT-4o Mini à $0,15 / $0,60.',
+            '**Les APIs cloud coûtent $0,15-$60 par million de tokens ; les LLMs locaux coûtent $0 par token après l\'investissement matériel.** Les tarifs des APIs cloud varient selon le niveau du modèle. En 2026, les prix représentatifs par million de tokens : GPT-4o à $2,50 en entrée / $10 en sortie, Claude Opus 4.8 à $3,00 / $15, Gemini 3.1 Pro à $1,25 / $5, et GPT-4o Mini à $0,15 / $0,60.',
             'Un développeur traitant 10 millions de tokens de sortie par mois avec GPT-4o paie environ $100/mois. La même charge sur un modèle local 8B coûte $0 par token -- le seul coût est l\'électricité (environ $0,10-0,30/heure pour l\'inférence GPU) et le matériel initial.',
             'Les LLMs locaux deviennent économiquement avantageux en quelques semaines pour les cas d\'usage à volume élevé. Pour une utilisation occasionnelle (quelques milliers de tokens par jour), les APIs cloud sont moins chères en tenant compte du temps de configuration et de maintenance.',
           ],
@@ -962,7 +962,7 @@ schema: {
       seoTitle: 'ローカルLLM vs クラウドAPI 2026：プライバシーとコスト比較',
       intro: 'ローカルLLMはAPIコストなし、完全なデータプライバシーを確保しながら自社ハードウェアで動作します。OpenAI GPT-4oやAnthropic Claude 4.6などのクラウドAPIはハードウェア設定不要で高品質な出力を提供します。最適な選択は、データの機密性、予算、必要なモデル品質、オフラインアクセスの必要性によって異なります。',
       metaDescription: 'ローカルLLMはハードウェア投資後$0/トークン；クラウドAPIは$0.15〜$60/100万トークン。プライバシー・コスト・品質を8つの要素で2026年完全比較。',
-      leadAnswerBlock: '**ローカルLLMはトークンコストゼロ・完全なデータプライバシーで自社ハードウェア上で推論を実行します。** クラウドAPI（GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro）は最小限のセットアップで高品質な出力を提供します。',
+      leadAnswerBlock: '**ローカルLLMはトークンコストゼロ・完全なデータプライバシーで自社ハードウェア上で推論を実行します。** クラウドAPI（GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro）は最小限のセットアップで高品質な出力を提供します。',
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '8分で読める',
@@ -991,7 +991,7 @@ schema: {
           title: '重要ポイント',
           items: [
             'ローカルLLMはハードウェア投資後$0/トークン。クラウドAPIはモデルによって$0.15〜$60/100万トークン。',
-            'クラウドAPI（GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro）は複雑な推論・コードタスクでローカル実行可能なすべてのモデルを上回ります。',
+            'クラウドAPI（GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro）は複雑な推論・コードタスクでローカル実行可能なすべてのモデルを上回ります。',
             'ローカルモデルは要約・翻訳・シンプルなQ&Aにおいて7B〜13Bスケールでクラウド品質に匹敵します。',
             'コンシューマーハードウェアではローカル推論はクラウドAPIより2〜10倍遅い。RTX 4070 Tiはこのギャップをほぼゼロにします。',
             'データプライバシーが最優先、コストが高い、またはオフラインアクセスが必要な場合はローカルLLMを選択。最高品質が必要でコストが許容できる場合はクラウドAPIを選択。',
@@ -1022,7 +1022,7 @@ schema: {
         costComparison: {
           title: 'ローカルLLMとクラウドAPIのコストはどう違いますか？',
           content: [
-            '**クラウドAPIは100万トークンあたり$0.15〜$60；ローカルLLMはハードウェア投資後$0/トークン。** クラウドAPIの価格はモデルティアによって異なります。2026年の代表的な100万トークンあたりの価格：GPT-4oが入力$2.50/出力$10、Claude Opus 4.7が$3.00/$15、Gemini 3.1 Proが$1.25/$5、GPT-4o Miniが$0.15/$0.60。',
+            '**クラウドAPIは100万トークンあたり$0.15〜$60；ローカルLLMはハードウェア投資後$0/トークン。** クラウドAPIの価格はモデルティアによって異なります。2026年の代表的な100万トークンあたりの価格：GPT-4oが入力$2.50/出力$10、Claude Opus 4.8が$3.00/$15、Gemini 3.1 Proが$1.25/$5、GPT-4o Miniが$0.15/$0.60。',
             'GPT-4oで月間1,000万出力トークンを処理する開発者は約$100/月を支払います。同じワークロードをローカル8Bモデルで処理するとトークンコストは$0 -- GPU推論の電気代（約$0.10〜0.30/時間）と初期ハードウェア投資のみです。',
             'ローカルLLMは大量使用のユースケースでは数週間以内にコスト効率が高まります。断続的な使用（1日数千トークン）では、セットアップと管理の時間コストを考慮するとクラウドAPIの方が安価です。',
           ],
@@ -1205,7 +1205,7 @@ schema: {
       seoTitle: '本地LLM vs 云端API 2026：隐私与成本全面对比',
       intro: '本地LLM在您自己的硬件上运行，无需API费用，数据完全保密。云端API（如OpenAI GPT-4o、Anthropic Claude 4.6）无需硬件配置即可提供更高质量的输出。最佳选择取决于数据敏感性、预算、所需模型质量以及是否需要离线访问。',
       metaDescription: '本地LLM硬件投资后每token费用为$0；云端API费用为$0.15-$60/百万token。2026年完整对比：隐私、成本、质量8大因素。',
-      leadAnswerBlock: '**本地LLM在您自己的硬件上运行所有推理，token成本为零，数据完全私密。** 云端API（GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro）以最少的设置提供更高质量。',
+      leadAnswerBlock: '**本地LLM在您自己的硬件上运行所有推理，token成本为零，数据完全私密。** 云端API（GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro）以最少的设置提供更高质量。',
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '阅读约8分钟',
@@ -1234,7 +1234,7 @@ schema: {
           title: '核心要点',
           items: [
             '本地LLM硬件投资后每token费用为$0。云端API根据模型每百万token费用为$0.15-$60。',
-            '云端API（GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro）在复杂推理和代码任务上优于所有可本地运行的模型。',
+            '云端API（GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro）在复杂推理和代码任务上优于所有可本地运行的模型。',
             '本地模型在摘要、翻译和简单问答等任务上以7B-13B规模达到云端质量。',
             '在消费级硬件上，本地推理比云端API慢2-10倍。RTX 4070 Ti可将7B模型的速度差距缩小至接近相当。',
             '数据隐私不可妥协、成本较高或需要离线访问时选择本地LLM；需要最高质量且成本可接受时选择云端API。',
@@ -1265,7 +1265,7 @@ schema: {
         costComparison: {
           title: '本地LLM和云端API的成本如何对比？',
           content: [
-            '**云端API每百万token费用为$0.15-$60；本地LLM硬件投资后每token费用为$0。** 云端API价格因模型层级而异。2026年代表性价格（每百万token）：GPT-4o输入$2.50/输出$10，Claude Opus 4.7 $3.00/$15，Gemini 3.1 Pro $1.25/$5，GPT-4o Mini $0.15/$0.60。',
+            '**云端API每百万token费用为$0.15-$60；本地LLM硬件投资后每token费用为$0。** 云端API价格因模型层级而异。2026年代表性价格（每百万token）：GPT-4o输入$2.50/输出$10，Claude Opus 4.8 $3.00/$15，Gemini 3.1 Pro $1.25/$5，GPT-4o Mini $0.15/$0.60。',
             '使用GPT-4o每月处理1000万输出token的开发者每月支付约$100。同等工作量在本地8B模型上运行每token成本为$0 -- 唯一的费用是电费（GPU推理约$0.10-0.30/小时）和前期硬件投资。',
             '对于高频使用场景，本地LLM在几周内即可实现成本效益。对于偶发使用（每天数千token），考虑到设置和维护的时间成本，云端API更为经济。',
           ],

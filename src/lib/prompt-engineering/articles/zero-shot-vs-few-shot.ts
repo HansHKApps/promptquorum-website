@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         howPQHelps: {
           title: 'How PromptQuorum Helps You Choose',
           content: [
-            '**PromptQuorum is a multi-model AI dispatch tool that lets you test zero shot and few shot prompts across multiple providers in one place.** You can send the same instruction-only prompt and the same example-augmented prompt to models such as GPT-4o, Claude Opus 4.7, and Gemini 3.1 Pro side by side.',
+            '**PromptQuorum is a multi-model AI dispatch tool that lets you test zero shot and few shot prompts across multiple providers in one place.** You can send the same instruction-only prompt and the same example-augmented prompt to models such as GPT-4o, Claude Opus 4.8, and Gemini 3.1 Pro side by side.',
             'Inside PromptQuorum, you can:',
           ],
           items: [
@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     howPQHelps: {
       title: 'Wie PromptQuorum Ihnen bei der Wahl hilft',
       content: [
-        '**PromptQuorum ist ein Multi-Model-AI-Dispatch-Tool, mit dem Sie Zero-Shot- und Few-Shot-Prompts an mehreren Anbietern an einem Ort testen können.** Sie können denselben Anweisungs-Only-Prompt und denselben beispielerweiterten Prompt nebeneinander an Modelle wie GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro senden.',
+        '**PromptQuorum ist ein Multi-Model-AI-Dispatch-Tool, mit dem Sie Zero-Shot- und Few-Shot-Prompts an mehreren Anbietern an einem Ort testen können.** Sie können denselben Anweisungs-Only-Prompt und denselben beispielerweiterten Prompt nebeneinander an Modelle wie GPT-4o, Claude Opus 4.8 und Gemini 3.1 Pro senden.',
         'Innerhalb von PromptQuorum können Sie:',
       ],
       items: [
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     howPQHelps: {
       title: 'Cómo te ayuda PromptQuorum a elegir',
       content: [
-        '**PromptQuorum es una herramienta de despacho multi-modelo de IA que te permite probar prompts Zero-Shot y Few-Shot en múltiples proveedores en un solo lugar.** Puedes enviar el mismo prompt solo con instrucciones y el mismo prompt con ejemplos a modelos como GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro en paralelo.',
+        '**PromptQuorum es una herramienta de despacho multi-modelo de IA que te permite probar prompts Zero-Shot y Few-Shot en múltiples proveedores en un solo lugar.** Puedes enviar el mismo prompt solo con instrucciones y el mismo prompt con ejemplos a modelos como GPT-4o, Claude Opus 4.8 y Gemini 3.1 Pro en paralelo.',
         'Dentro de PromptQuorum, puedes:',
       ],
       items: [
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     howPQHelps: {
       title: 'Comment PromptQuorum vous aide',
       content: [
-        '**PromptQuorum est un outil de dispatch multi-modèle qui vous permet de tester les prompts Zero-Shot et Few-Shot chez plusieurs fournisseurs en un seul endroit.** Vous pouvez envoyer le même prompt basé sur les instructions et le même prompt augmenté par des exemples côte à côte aux modèles comme GPT-4o, Claude Opus 4.7 et Gemini 3.1 Pro.',
+        '**PromptQuorum est un outil de dispatch multi-modèle qui vous permet de tester les prompts Zero-Shot et Few-Shot chez plusieurs fournisseurs en un seul endroit.** Vous pouvez envoyer le même prompt basé sur les instructions et le même prompt augmenté par des exemples côte à côte aux modèles comme GPT-4o, Claude Opus 4.8 et Gemini 3.1 Pro.',
         'Dans PromptQuorum, vous pouvez:',
       ],
       items: [
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     howPQHelps: {
       title: 'PromptQuorumがどのように選択を支援するか',
       content: [
-        '**PromptQuorumは、複数のプロバイダー間でゼロショットとフューショットプロンプトをテストできるマルチモデルAIディスパッチツールです。** 指示のみのプロンプトと例を拡張したプロンプトの両方を、GPT-4o、Claude Opus 4.7、Gemini 3.1 Proなどのモデルに並行して送信できます。',
+        '**PromptQuorumは、複数のプロバイダー間でゼロショットとフューショットプロンプトをテストできるマルチモデルAIディスパッチツールです。** 指示のみのプロンプトと例を拡張したプロンプトの両方を、GPT-4o、Claude Opus 4.8、Gemini 3.1 Proなどのモデルに並行して送信できます。',
         'PromptQuorum内では、以下を実行できます：',
       ],
       items: [
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     howPQHelps: {
       title: 'PromptQuorum 如何帮助您选择',
       content: [
-        '**PromptQuorum 是一款多模型 AI 分派工具，让您在一个地方跨多个提供商测试零样本和少样本提示。** 您可以将相同的仅指令提示和相同的示例增强提示并行发送到 GPT-4o、Claude Opus 4.7 和 Gemini 3.1 Pro 等模型。',
+        '**PromptQuorum 是一款多模型 AI 分派工具，让您在一个地方跨多个提供商测试零样本和少样本提示。** 您可以将相同的仅指令提示和相同的示例增强提示并行发送到 GPT-4o、Claude Opus 4.8 和 Gemini 3.1 Pro 等模型。',
         '在 PromptQuorum 中，您可以：',
       ],
       items: [

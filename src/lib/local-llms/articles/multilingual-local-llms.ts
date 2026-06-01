@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**European languages (German, French, Spanish, Italian)**: Mistral and Llama 3.x are competitive with Qwen2.5 for EU languages; Qwen2.5 still leads on code-mixed and formal register tasks.',
             '**Japanese and Korean**: Qwen2.5 is significantly stronger -- 15-25% better on language-specific benchmarks than Llama 3.x at the same size.',
             '**Chinese (Simplified and Traditional)**: Qwen2.5 is the dominant model -- trained on the largest Chinese corpus of any open-weight model.',
-            'As of April 2026, no locally-runnable model matches GPT-4o or Claude Opus 4.7 quality in Japanese or Korean for complex tasks. Qwen2.5 is the best available locally.',
+            'As of April 2026, no locally-runnable model matches GPT-4o or Claude Opus 4.8 quality in Japanese or Korean for complex tasks. Qwen2.5 is the best available locally.',
           ],
         },
         whichSupport: {
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Idiomas europeos (alemán, francés, español, italiano)**: Mistral y Llama 3.x son competitivos con Qwen2.5 para idiomas de la UE; Qwen2.5 sigue liderando en tareas de registro formal y código mixto.',
             '**Japonés y coreano**: Qwen2.5 es significativamente más fuerte -- 15-25% mejor en benchmarks específicos de idioma que Llama 3.x en el mismo tamaño.',
             '**Chino (simplificado y tradicional)**: Qwen2.5 es el modelo dominante -- entrenado con el mayor corpus chino de cualquier modelo de pesos abiertos.',
-            'A partir de abril de 2026, ningún modelo ejecutable localmente iguala la calidad de GPT-4o o Claude Opus 4.7 en japonés o coreano para tareas complejas. Qwen2.5 es la mejor opción disponible localmente.',
+            'A partir de abril de 2026, ningún modelo ejecutable localmente iguala la calidad de GPT-4o o Claude Opus 4.8 en japonés o coreano para tareas complejas. Qwen2.5 es la mejor opción disponible localmente.',
           ],
         },
         whichSupport: {

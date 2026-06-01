@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor: Pydantic Extraction',
-        content: '**Instructor is the most widely adopted structured output library. It wraps any LLM API — OpenAI GPT-4.5, Claude 4.7, Gemini, Ollama, vLLM — and returns validated Pydantic models instead of raw text.** Instructor handles retries automatically when validation fails, making it production-grade without extra error handling.',
+        content: '**Instructor is the most widely adopted structured output library. It wraps any LLM API — OpenAI GPT-4.5, Claude 4.8, Gemini, Ollama, vLLM — and returns validated Pydantic models instead of raw text.** Instructor handles retries automatically when validation fails, making it production-grade without extra error handling.',
         items: [
           'Compatible with 20+ LLM providers (OpenAI, Anthropic, Google, local models via Ollama/vLLM)',
           'Pydantic v2 schemas: type hints, validation rules, docstring descriptions embedded in schema',
@@ -182,7 +182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: Cross-Model Testing',
-        content: '**PromptQuorum is not a structured output library itself, but a testing platform for validating structured output consistency across models.** Run the same prompt against GPT-4.5, Claude 4.7 Opus, Gemini 3.1 Pro, and 20+ other models simultaneously. Measure schema compliance, latency, and cost per model.',
+        content: '**PromptQuorum is not a structured output library itself, but a testing platform for validating structured output consistency across models.** Run the same prompt against GPT-4.5, Claude 4.8 Opus, Gemini 3.1 Pro, and 20+ other models simultaneously. Measure schema compliance, latency, and cost per model.',
         items: [
           'Multi-model dispatch in a single API call — test one prompt against 25+ models',
           'Structured output compliance metrics — pass rate, latency, cost per model',
@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'How do I test if structured output is reliable?',
-            a: 'Use PromptQuorum to run the same prompt across multiple models and measure schema compliance. Different models (GPT-4.5, Claude 4.7, Gemini 3.1) have different structured output reliability. Test before deploying to production. Unit test with Instructor/Pydantic validation locally.'
+            a: 'Use PromptQuorum to run the same prompt across multiple models and measure schema compliance. Different models (GPT-4.5, Claude 4.8, Gemini 3.1) have different structured output reliability. Test before deploying to production. Unit test with Instructor/Pydantic validation locally.'
           },
           {
             q: 'What does "constrained decoding" mean?',
@@ -425,7 +425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor: Pydantic-Extraktion',
-        content: '**Instructor ist die am weitesten verbreitete Structured Output-Bibliothek. Sie umhüllt jede LLM-API — OpenAI GPT-4.5, Claude 4.7, Gemini, Ollama, vLLM — und gibt validierte Pydantic-Modelle statt Rohtext zurück.** Instructor behandelt Retries automatisch bei Validierungsfehlern, was es produktionsreif ohne zusätzliche Fehlerbehandlung macht.',
+        content: '**Instructor ist die am weitesten verbreitete Structured Output-Bibliothek. Sie umhüllt jede LLM-API — OpenAI GPT-4.5, Claude 4.8, Gemini, Ollama, vLLM — und gibt validierte Pydantic-Modelle statt Rohtext zurück.** Instructor behandelt Retries automatisch bei Validierungsfehlern, was es produktionsreif ohne zusätzliche Fehlerbehandlung macht.',
         items: [
           'Kompatibel mit 20+ LLM-Providern (OpenAI, Anthropic, Google, lokale Modelle via Ollama/vLLM)',
           'Pydantic v2 Schemas: Typ-Hinweise, Validierungsregeln, Docstring-Beschreibungen im Schema',
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: Modellübergreifende Tests',
-        content: '**PromptQuorum ist keine Structured Output-Bibliothek selbst, sondern eine Testplattform zur Validierung der Structured Output-Konsistenz über Modelle hinweg.** Führen Sie denselben Prompt gleichzeitig gegen GPT-4.5, Claude 4.7 Opus, Gemini 3.1 Pro und 20+ weitere Modelle aus. Messen Sie Schema-Konformität, Latenz und Kosten pro Modell.',
+        content: '**PromptQuorum ist keine Structured Output-Bibliothek selbst, sondern eine Testplattform zur Validierung der Structured Output-Konsistenz über Modelle hinweg.** Führen Sie denselben Prompt gleichzeitig gegen GPT-4.5, Claude 4.8 Opus, Gemini 3.1 Pro und 20+ weitere Modelle aus. Messen Sie Schema-Konformität, Latenz und Kosten pro Modell.',
         items: [
           'Multi-Modell-Dispatch in einem einzigen API-Aufruf — einen Prompt gegen 25+ Modelle testen',
           'Structured Output-Konformitätsmetriken — Erfolgsrate, Latenz, Kosten pro Modell',
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Wie teste ich, ob Structured Output zuverlässig ist?',
-            a: 'Verwenden Sie PromptQuorum, um denselben Prompt über mehrere Modelle hinweg auszuführen und die Schema-Konformität zu messen. Verschiedene Modelle (GPT-4.5, Claude 4.7, Gemini 3.1) haben unterschiedliche Zuverlässigkeit. Testen Sie vor der Bereitstellung in der Produktion.'
+            a: 'Verwenden Sie PromptQuorum, um denselben Prompt über mehrere Modelle hinweg auszuführen und die Schema-Konformität zu messen. Verschiedene Modelle (GPT-4.5, Claude 4.8, Gemini 3.1) haben unterschiedliche Zuverlässigkeit. Testen Sie vor der Bereitstellung in der Produktion.'
           },
           {
             q: 'Was bedeutet "Constrained Decoding"?',
@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor: extracción Pydantic',
-        content: '**Instructor es la biblioteca de structured output más adoptada. Envuelve cualquier API LLM — OpenAI GPT-4.5, Claude 4.7, Gemini, Ollama, vLLM — y devuelve modelos Pydantic validados en lugar de texto sin formato.** Instructor gestiona reintentos automáticamente cuando falla la validación, haciéndolo apto para producción sin manejo de errores adicional.',
+        content: '**Instructor es la biblioteca de structured output más adoptada. Envuelve cualquier API LLM — OpenAI GPT-4.5, Claude 4.8, Gemini, Ollama, vLLM — y devuelve modelos Pydantic validados en lugar de texto sin formato.** Instructor gestiona reintentos automáticamente cuando falla la validación, haciéndolo apto para producción sin manejo de errores adicional.',
         items: [
           'Compatible con 20+ proveedores LLM (OpenAI, Anthropic, Google, modelos locales vía Ollama/vLLM)',
           'Esquemas Pydantic v2: hints de tipo, reglas de validación, descripciones de docstring integradas en el esquema',
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: testing multi-modelo',
-        content: '**PromptQuorum no es una biblioteca de structured output en sí misma, sino una plataforma de testing para validar la consistencia del structured output entre modelos.** Ejecuta el mismo prompt simultáneamente contra GPT-4.5, Claude 4.7 Opus, Gemini 3.1 Pro y 20+ modelos más. Mide el cumplimiento del esquema, la latencia y el coste por modelo.',
+        content: '**PromptQuorum no es una biblioteca de structured output en sí misma, sino una plataforma de testing para validar la consistencia del structured output entre modelos.** Ejecuta el mismo prompt simultáneamente contra GPT-4.5, Claude 4.8 Opus, Gemini 3.1 Pro y 20+ modelos más. Mide el cumplimiento del esquema, la latencia y el coste por modelo.',
         items: [
           'Despacho multi-modelo en una sola llamada API — testea un prompt contra 25+ modelos',
           'Métricas de cumplimiento de structured output — tasa de paso, latencia, coste por modelo',
@@ -959,7 +959,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿Cómo testo si el structured output es fiable?',
-            a: 'Usa PromptQuorum para ejecutar el mismo prompt en múltiples modelos y medir el cumplimiento del esquema. Diferentes modelos (GPT-4.5, Claude 4.7, Gemini 3.1) tienen distintos niveles de fiabilidad de structured output. Testea antes de desplegar en producción.'
+            a: 'Usa PromptQuorum para ejecutar el mismo prompt en múltiples modelos y medir el cumplimiento del esquema. Diferentes modelos (GPT-4.5, Claude 4.8, Gemini 3.1) tienen distintos niveles de fiabilidad de structured output. Testea antes de desplegar en producción.'
           },
           {
             q: '¿Qué significa "constrained decoding"?',
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor : extraction Pydantic',
-        content: '**Instructor est la bibliothèque de Structured Output la plus répandue. Elle enveloppe toute API LLM — OpenAI GPT-4.5, Claude 4.7, Gemini, Ollama, vLLM — et retourne des modèles Pydantic validés plutôt que du texte brut.** Instructor gère les retries automatiquement en cas d\'échec de validation, ce qui le rend prêt pour la production sans gestion d\'erreurs supplémentaire.',
+        content: '**Instructor est la bibliothèque de Structured Output la plus répandue. Elle enveloppe toute API LLM — OpenAI GPT-4.5, Claude 4.8, Gemini, Ollama, vLLM — et retourne des modèles Pydantic validés plutôt que du texte brut.** Instructor gère les retries automatiquement en cas d\'échec de validation, ce qui le rend prêt pour la production sans gestion d\'erreurs supplémentaire.',
         items: [
           'Compatible avec 20+ fournisseurs LLM (OpenAI, Anthropic, Google, modèles locaux via Ollama/vLLM)',
           'Schémas Pydantic v2 : indices de type, règles de validation, descriptions docstring intégrées au schéma',
@@ -1154,7 +1154,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum : tests multi-modèles',
-        content: '**PromptQuorum n\'est pas une bibliothèque de Structured Output en soi, mais une plateforme de test pour valider la cohérence du Structured Output entre les modèles.** Exécutez le même prompt simultanément contre GPT-4.5, Claude 4.7 Opus, Gemini 3.1 Pro et 20+ autres modèles. Mesurez la conformité du schéma, la latence et le coût par modèle.',
+        content: '**PromptQuorum n\'est pas une bibliothèque de Structured Output en soi, mais une plateforme de test pour valider la cohérence du Structured Output entre les modèles.** Exécutez le même prompt simultanément contre GPT-4.5, Claude 4.8 Opus, Gemini 3.1 Pro et 20+ autres modèles. Mesurez la conformité du schéma, la latence et le coût par modèle.',
         items: [
           'Dispatch multi-modèles en un seul appel API — tester un prompt contre 25+ modèles',
           'Métriques de conformité Structured Output — taux de réussite, latence, coût par modèle',
@@ -1280,7 +1280,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Comment tester si Structured Output est fiable ?',
-            a: 'Utilisez PromptQuorum pour exécuter le même prompt sur plusieurs modèles et mesurer la conformité du schéma. Les modèles différents (GPT-4.5, Claude 4.7, Gemini 3.1) ont une fiabilité Structured Output différente. Testez avant de déployer en production.'
+            a: 'Utilisez PromptQuorum pour exécuter le même prompt sur plusieurs modèles et mesurer la conformité du schéma. Les modèles différents (GPT-4.5, Claude 4.8, Gemini 3.1) ont une fiabilité Structured Output différente. Testez avant de déployer en production.'
           },
           {
             q: 'Qu\'entend-on par "décodage contraint" ?',
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor：Pydantic抽出',
-        content: '**InstructorはStructured Outputライブラリとして最も広く採用されています。あらゆるLLM API — OpenAI GPT-4.5、Claude 4.7、Gemini、Ollama、vLLM — をラップし、生テキストではなく検証済みPydanticモデルを返します。** バリデーション失敗時のリトライを自動処理し、追加のエラー処理なしで本番対応です。',
+        content: '**InstructorはStructured Outputライブラリとして最も広く採用されています。あらゆるLLM API — OpenAI GPT-4.5、Claude 4.8、Gemini、Ollama、vLLM — をラップし、生テキストではなく検証済みPydanticモデルを返します。** バリデーション失敗時のリトライを自動処理し、追加のエラー処理なしで本番対応です。',
         items: [
           '20以上のLLM Providerと互換（OpenAI、Anthropic、Google、Ollama/vLLM経由のローカルモデル）',
           'Pydantic v2スキーマ：型ヒント、バリデーションルール、スキーマに埋め込まれたdocstring説明',
@@ -1471,7 +1471,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum：クロスモデルテスト',
-        content: '**PromptQuorum自体はStructured Outputライブラリではなく、モデル間のStructured Output一貫性を検証するためのテストプラットフォームです。** GPT-4.5、Claude 4.7 Opus、Gemini 3.1 Pro、20以上の他のモデルに対して同じプロンプトを同時に実行します。モデルごとのスキーマ準拠率、レイテンシ、コストを測定します。',
+        content: '**PromptQuorum自体はStructured Outputライブラリではなく、モデル間のStructured Output一貫性を検証するためのテストプラットフォームです。** GPT-4.5、Claude 4.8 Opus、Gemini 3.1 Pro、20以上の他のモデルに対して同じプロンプトを同時に実行します。モデルごとのスキーマ準拠率、レイテンシ、コストを測定します。',
         items: [
           '単一API呼び出しでマルチモデルディスパッチ — 25以上のモデルに対してプロンプトをテスト',
           'Structured Output準拠メトリクス — 合格率、レイテンシ、モデルごとのコスト',
@@ -1597,7 +1597,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Structured Outputが信頼性を高いかテストするにはどうすればよいですか？',
-            a: 'PromptQuorumを使用して、複数のモデルで同じプロンプトを実行し、スキーマ準拠を測定します。異なるモデル（GPT-4.5、Claude 4.7、Gemini 3.1）はStructured Outputの信頼性が異なります。本番デプロイ前にテストしてください。'
+            a: 'PromptQuorumを使用して、複数のモデルで同じプロンプトを実行し、スキーマ準拠を測定します。異なるモデル（GPT-4.5、Claude 4.8、Gemini 3.1）はStructured Outputの信頼性が異なります。本番デプロイ前にテストしてください。'
           },
           {
             q: '「Constrained Decoding」とはどういう意味ですか？',
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor：Pydantic提取',
-        content: '**Instructor是采用最广泛的结构化输出库。它封装任何LLM API — OpenAI GPT-4.5、Claude 4.7、Gemini、Ollama、vLLM — 并返回经验证的Pydantic模型而非原始文本。** Instructor在验证失败时自动处理重试，无需额外错误处理即可达到生产级别。',
+        content: '**Instructor是采用最广泛的结构化输出库。它封装任何LLM API — OpenAI GPT-4.5、Claude 4.8、Gemini、Ollama、vLLM — 并返回经验证的Pydantic模型而非原始文本。** Instructor在验证失败时自动处理重试，无需额外错误处理即可达到生产级别。',
         items: [
           '兼容20+个LLM Provider（OpenAI、Anthropic、Google、通过Ollama/vLLM的本地模型）',
           'Pydantic v2模式：类型提示、验证规则、嵌入模式的docstring描述',
@@ -1796,7 +1796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum：跨模型测试',
-        content: '**PromptQuorum本身不是结构化输出库，而是用于验证跨模型结构化输出一致性的测试平台。** 同时对GPT-4.5、Claude 4.7 Opus、Gemini 3.1 Pro和20+其他模型运行相同的Prompt。测量每个模型的模式合规性、延迟和成本。',
+        content: '**PromptQuorum本身不是结构化输出库，而是用于验证跨模型结构化输出一致性的测试平台。** 同时对GPT-4.5、Claude 4.8 Opus、Gemini 3.1 Pro和20+其他模型运行相同的Prompt。测量每个模型的模式合规性、延迟和成本。',
         items: [
           '单次API调用中的多模型分发 — 对25+模型测试一个Prompt',
           '结构化输出合规性指标 — 通过率、延迟、每个模型的成本',
@@ -1923,7 +1923,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '如何测试结构化输出的可靠性？',
-            a: '使用PromptQuorum在多个模型上运行相同的Prompt并测量模式合规性。不同模型（GPT-4.5、Claude 4.7、Gemini 3.1）有不同的结构化输出可靠性。在部署到生产前进行测试。'
+            a: '使用PromptQuorum在多个模型上运行相同的Prompt并测量模式合规性。不同模型（GPT-4.5、Claude 4.8、Gemini 3.1）有不同的结构化输出可靠性。在部署到生产前进行测试。'
           },
           {
             q: '"约束解码"是什么意思？',

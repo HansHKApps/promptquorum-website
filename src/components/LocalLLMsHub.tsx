@@ -581,7 +581,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Can local LLMs match cloud models like GPT-4o?',
-      a: 'On coding and reasoning tasks, Llama 4 Scout, DeepSeek V3, and Qwen3 score within 5–10% of GPT-4o mini on standard benchmarks (MMLU, HumanEval). Claude Opus 4.7 and GPT-4o maintain an edge on complex multi-step tasks.'
+      a: 'On coding and reasoning tasks, Llama 4 Scout, DeepSeek V3, and Qwen3 score within 5–10% of GPT-4o mini on standard benchmarks (MMLU, HumanEval). Claude Opus 4.8 and GPT-4o maintain an edge on complex multi-step tasks.'
     },
     {
       q: 'How do I fine-tune a local model?',
@@ -639,7 +639,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Können lokale LLMs Cloud-Modelle wie GPT-4o entsprechen?',
-      a: 'Bei Coding- und Reasoning-Aufgaben erzielen Llama 4 Scout, DeepSeek V3 und Qwen3 bei Standard-Benchmarks (MMLU, HumanEval) Ergebnisse in 5–10% von GPT-4o mini. Claude Opus 4.7 und GPT-4o behaupten einen Vorteil bei komplexen mehrstufigen Aufgaben.'
+      a: 'Bei Coding- und Reasoning-Aufgaben erzielen Llama 4 Scout, DeepSeek V3 und Qwen3 bei Standard-Benchmarks (MMLU, HumanEval) Ergebnisse in 5–10% von GPT-4o mini. Claude Opus 4.8 und GPT-4o behaupten einen Vorteil bei komplexen mehrstufigen Aufgaben.'
     },
     {
       q: 'Wie fine-tunne ich ein lokales Modell?',
@@ -705,7 +705,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'Les LLMs locaux peuvent-ils rivaliser avec les modèles cloud comme GPT-4o ?',
-      a: 'Sur les tâches de codage et de raisonnement, Llama 4 Scout, DeepSeek V3 et Qwen3 obtiennent des résultats à 5–10% de GPT-4o mini sur les benchmarks standard (MMLU, HumanEval). Claude Opus 4.7 et GPT-4o conservent un avantage sur les tâches multi-étapes complexes.'
+      a: 'Sur les tâches de codage et de raisonnement, Llama 4 Scout, DeepSeek V3 et Qwen3 obtiennent des résultats à 5–10% de GPT-4o mini sur les benchmarks standard (MMLU, HumanEval). Claude Opus 4.8 et GPT-4o conservent un avantage sur les tâches multi-étapes complexes.'
     },
     {
       q: 'Comment affiner un modèle local ?',
@@ -763,7 +763,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: 'ローカルLLMはGPT-4oなどのクラウドモデルに対抗できますか？',
-      a: 'コーディングと推論タスクでは、Llama 4 Scout、DeepSeek V3、Qwen3は標準ベンチマーク（MMLU、HumanEval）でGPT-4o miniの5–10%以内のスコアを取得します。Claude Opus 4.7とGPT-4oは複雑なマルチステップタスクで優位性を保っています。'
+      a: 'コーディングと推論タスクでは、Llama 4 Scout、DeepSeek V3、Qwen3は標準ベンチマーク（MMLU、HumanEval）でGPT-4o miniの5–10%以内のスコアを取得します。Claude Opus 4.8とGPT-4oは複雑なマルチステップタスクで優位性を保っています。'
     },
     {
       q: 'ローカルモデルはどのようにファインチューニングしますか？',
@@ -821,7 +821,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '本地LLM能否与GPT-4o等云模型相匹敌？',
-      a: '在编码和推理任务上，Llama 4 Scout、DeepSeek V3和Qwen3在标准基准（MMLU、HumanEval）上的得分在GPT-4o mini的5–10%以内。Claude Opus 4.7和GPT-4o在复杂的多步任务上保持优势。'
+      a: '在编码和推理任务上，Llama 4 Scout、DeepSeek V3和Qwen3在标准基准（MMLU、HumanEval）上的得分在GPT-4o mini的5–10%以内。Claude Opus 4.8和GPT-4o在复杂的多步任务上保持优势。'
     },
     {
       q: '如何微调本地模型？',
@@ -879,7 +879,7 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
     },
     {
       q: '¿Pueden los LLMs locales competir con modelos cloud como GPT-4o?',
-      a: 'En tareas de código y razonamiento, Llama 4 Scout, DeepSeek V3 y Qwen3 obtienen resultados a un 5–10% de GPT-4o mini en benchmarks estándar (MMLU, HumanEval). Claude Opus 4.7 y GPT-4o mantienen ventaja en tareas complejas de múltiples pasos.'
+      a: 'En tareas de código y razonamiento, Llama 4 Scout, DeepSeek V3 y Qwen3 obtienen resultados a un 5–10% de GPT-4o mini en benchmarks estándar (MMLU, HumanEval). Claude Opus 4.8 y GPT-4o mantienen ventaja en tareas complejas de múltiples pasos.'
     },
     {
       q: '¿Cómo hago fine-tuning de un modelo local?',
@@ -1054,7 +1054,7 @@ const HUB_FAQS_BOTTOM: { q: string; a: string }[] = [
   },
   {
     q: 'Is a local LLM better than ChatGPT?',
-    a: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-4o, Claude Opus 4.7) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 4 Scout, Qwen3 72B) match or exceed GPT-4o mini on most everyday tasks — at zero per-query cost.',
+    a: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-4o, Claude Opus 4.8) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 4 Scout, Qwen3 72B) match or exceed GPT-4o mini on most everyday tasks — at zero per-query cost.',
   },
   {
     q: 'How much RAM do I need to run a local LLM?',

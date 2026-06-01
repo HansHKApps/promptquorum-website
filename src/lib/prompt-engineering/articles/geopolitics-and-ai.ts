@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'What AI applications does the EU ban outright?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act prohibits: social scoring systems by public authorities, real-time biometric surveillance in public spaces (with narrow law enforcement exceptions), AI that exploits cognitive vulnerabilities, and untargeted scraping of facial images from the internet to build recognition databases. These are categorized as Unacceptable Risk.' } },
           { '@type': 'Question', name: 'How does US AI regulation differ from the EU approach?', acceptedAnswer: { '@type': 'Answer', text: 'The US uses a sectoral, voluntary approach — existing regulators (FTC, FDA, CFPB, EEOC) apply their mandates to AI within their domains. There is no federal AI law equivalent to the EU AI Act. The Biden Executive Order on AI Safety (October 2023) was revoked by the Trump administration in January 2025 and replaced with a competitiveness-focused AI Action Plan.' } },
           { '@type': 'Question', name: 'Is China\'s AI as capable as US AI systems?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1, released January 2025, exceeded GPT-4o on reasoning and coding benchmarks (AIME 2024: 79.8% vs GPT-4o\'s 74.4%, MATH-500: 97.3%, HumanEval) while reportedly training at ~$6 million — a 94% cost reduction vs estimated frontier model training costs. China\'s leading models — including Alibaba\'s Qwen 2.5 and Baidu\'s ERNIE 4.0 — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs, but DeepSeek\'s success demonstrates those controls have significant limits.' } },
-          { '@type': 'Question', name: 'Can EU companies use GPT-4o and Claude under the AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, for most use cases. GPT-4o and Claude Opus 4.7 qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.' } },
+          { '@type': 'Question', name: 'Can EU companies use GPT-4o and Claude under the AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, for most use cases. GPT-4o and Claude Opus 4.8 qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.' } },
           { '@type': 'Question', name: 'What is the UK AI Safety Institute (AISI)?', acceptedAnswer: { '@type': 'Answer', text: 'The UK AI Safety Institute (AISI) was established in November 2023 following the AI Safety Summit at Bletchley Park. It conducts technical research on AI safety, evaluates frontier AI models for dangerous capabilities, and publishes safety reports. The AISI operates independently of commercial AI developers and collaborates with the US AI Safety Institute.' } },
           { '@type': 'Question', name: 'How does DeepSeek affect the AI geopolitics race?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1\'s January 2025 release demonstrated that frontier AI capabilities are achievable at significantly lower compute costs than previously assumed. This weakens the argument that export controls on Nvidia GPUs will permanently limit Chinese AI development. It accelerated US and EU policy discussions about whether compute-based containment strategies are sufficient.' } },
           { '@type': 'Question', name: 'What is the Brussels Effect in AI?', acceptedAnswer: { '@type': 'Answer', text: 'The Brussels Effect describes how EU regulations become de facto global standards because multinational companies find it easier to apply the strictest standard worldwide rather than maintain separate compliance stacks per jurisdiction. For AI, this means the EU AI Act effectively raises standards for GPT-4o, Claude, and Gemini globally — regardless of where users are located.' } },
@@ -237,7 +237,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'If You\'re an EU-Based Organization: Critical Compliance Deadlines',
           content: [
             '**The EU AI Act is binding and enforced as of August 2026.** If your organization is EU-headquartered or serves EU users, you must comply with its four-tier risk classification system. Fines for prohibited practices reach €35 million or 7% of global turnover — whichever is higher. Non-compliance is not negotiable.',
-            '**If you deploy GPT-4o, Claude Opus 4.7, or Gemini 3.1 Pro in the EU, you must audit their General Purpose AI (GPAI) compliance documentation.** OpenAI, Anthropic, and Google published transparency documentation (training data summaries, capability limitations, safety testing) as of August 2025. Store these attestations as proof of compliance — regulators will ask.',
+            '**If you deploy GPT-4o, Claude Opus 4.8, or Gemini 3.1 Pro in the EU, you must audit their General Purpose AI (GPAI) compliance documentation.** OpenAI, Anthropic, and Google published transparency documentation (training data summaries, capability limitations, safety testing) as of August 2025. Store these attestations as proof of compliance — regulators will ask.',
             '**High-risk AI systems (hiring, credit decisions, healthcare, law enforcement) require conformity assessments before deployment.** This means testing for bias, documentation of human oversight mechanisms, and audit trails of all AI decisions. Open-weights models deployed locally (LLaMA via Ollama, Mistral Large) satisfy data residency requirements — no data leaves your infrastructure, and you control the audit trail.',
             '**The Brussels Effect applies to you.** If your AI system reaches a single EU resident, the EU AI Act applies — even if your company is headquartered in the US or China. This means enforcing the same compliance level globally is often simpler than maintaining multiple configurations.',
           ],
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Chinese AI APIs (DeepSeek, ERNIE 4.0, Qwen via Alibaba Cloud) filter content at the API level — political topics, CPC criticism, and Taiwan/Tibet/Xinjiang return `is_safe: 0` in HTTP 200 responses, not HTTP 4xx. Handle these explicitly in your application code.',
             'Mistral models and local Ollama deployments satisfy EU AI Act data residency requirements — prompts and outputs never leave your infrastructure. This is the lowest-friction path to EU GDPR + AI Act compliance for prompt engineers.',
-            'GPT-4o and Claude Opus 4.7 are GPAI-compliant under the EU AI Act as of August 2025. You can use them in EU-facing deployments without additional model-level compliance work — your obligation is at the application (deployer) level, not the model level.',
+            'GPT-4o and Claude Opus 4.8 are GPAI-compliant under the EU AI Act as of August 2025. You can use them in EU-facing deployments without additional model-level compliance work — your obligation is at the application (deployer) level, not the model level.',
             'The Brussels Effect means prompts sent to US-hosted models for products used by EU residents are subject to EU AI Act requirements — even if your company is not EU-based.',
             'For multi-jurisdictional testing, dispatch the same prompt to Mistral (EU-compliant), GPT-4o (US/GPAI), and Qwen (China-accessible) simultaneously to benchmark outputs across regulatory contexts. PromptQuorum supports this natively.',
           ],
@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               type: 'pro-tip',
               label: 'Pro Tip: Write Prompts in the Target Language',
-              text: 'GPT-4o, Claude Opus 4.7, and Gemini 3.1 Pro perform significantly better on German, French, Japanese, and Chinese tasks when the prompt itself is in that language. English prompts for non-English output add a translation layer that degrades quality. If you\'re optimizing model performance for a specific country, write your prompts in that country\'s language from the start.',
+              text: 'GPT-4o, Claude Opus 4.8, and Gemini 3.1 Pro perform significantly better on German, French, Japanese, and Chinese tasks when the prompt itself is in that language. English prompts for non-English output add a translation layer that degrades quality. If you\'re optimizing model performance for a specific country, write your prompts in that country\'s language from the start.',
             },
           ],
           tableFormat: true,
@@ -273,14 +273,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Region': 'European Union',
               'Legal constraint on prompts': 'EU AI Act: prompts generating content that interacts with EU consumers must include AI disclosure. GDPR: prompts must not include personal data without legal basis. High-risk AI applications (HR, credit, healthcare) require human oversight — prompts must not automate final decisions.',
-              'Language optimization': 'Write prompts in the target language (German, French, etc.) — GPT-4o and Claude Opus 4.7 perform significantly better on non-English tasks when prompts are in the same language as the desired output. Explicitly specify output language in system prompts.',
+              'Language optimization': 'Write prompts in the target language (German, French, etc.) — GPT-4o and Claude Opus 4.8 perform significantly better on non-English tasks when prompts are in the same language as the desired output. Explicitly specify output language in system prompts.',
               'Recommended model': 'Mistral Large (French, EU-headquartered), local Ollama deployment (data never leaves infrastructure), or GPT-4o/Claude with EU-region API endpoints and SCCs.',
             },
             {
               'Region': 'United States',
               'Legal constraint on prompts': 'No federal AI law, but sector rules apply: HIPAA (healthcare — PHI must not appear in prompts), CCPA/CPRA (California — personal data in prompts triggers consumer rights), FTC Act (prompts must not generate deceptive content in consumer contexts). State biometric laws (Illinois BIPA) restrict prompts that process facial/voice data.',
-              'Language optimization': 'US frontier models (GPT-4o, Claude Opus 4.7) are English-optimized and perform at their ceiling on English prompts. For Spanish-language US markets, explicitly instruct the model in Spanish or use a bilingual system prompt — do not rely on auto-detection.',
-              'Recommended model': 'GPT-4o or Claude Opus 4.7 for general use. For regulated healthcare or financial prompts, use API with SCCs and avoid sending PHI/PII in prompt context.',
+              'Language optimization': 'US frontier models (GPT-4o, Claude Opus 4.8) are English-optimized and perform at their ceiling on English prompts. For Spanish-language US markets, explicitly instruct the model in Spanish or use a bilingual system prompt — do not rely on auto-detection.',
+              'Recommended model': 'GPT-4o or Claude Opus 4.8 for general use. For regulated healthcare or financial prompts, use API with SCCs and avoid sending PHI/PII in prompt context.',
             },
             {
               'Region': 'China',
@@ -292,13 +292,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
               'Region': 'UK / Post-Brexit',
               'Legal constraint on prompts': 'UK GDPR (equivalent to EU GDPR) applies to personal data. UK AI Safety Institute focuses on frontier model evaluation, not application-level compliance. No mandatory AI disclosure law — UK chose a pro-innovation, sector-led approach. OFCOM regulates AI-generated content in broadcast contexts.',
               'Language optimization': 'British English spellings and idioms in prompts improve output quality for UK-facing content. GPT-4o responds to explicit "UK English" instructions in system prompts; without them, defaults to American English.',
-              'Recommended model': 'GPT-4o or Claude Opus 4.7. UK-EU data transfers require SCCs post-Brexit — UK adequacy decision from EU in place but subject to review.',
+              'Recommended model': 'GPT-4o or Claude Opus 4.8. UK-EU data transfers require SCCs post-Brexit — UK adequacy decision from EU in place but subject to review.',
             },
             {
               'Region': 'Japan',
               'Legal constraint on prompts': 'Japan\'s Act on Protection of Personal Information (APPI) restricts use of personal data in AI prompts. Japan has no AI-specific law (as of 2026) — guidance from METI and Ministry of Internal Affairs is voluntary. Japan participated in the Hiroshima AI Process — adherence to its 11 principles is encouraged for Japanese enterprises.',
-              'Language optimization': 'Japanese prompts on Japanese-language tasks outperform English prompts across all major models. GPT-4o and Claude Opus 4.7 handle Japanese well; Rakuten AI and NTT LLMs are available for Japan-specific deployments. Avoid casual (tame-go) register in system prompts — polite (keigo) framing improves compliance and output quality for Japanese business contexts.',
-              'Recommended model': 'GPT-4o or Claude Opus 4.7 for general Japanese tasks. Rakuten AI (Rakuten Group) or NTT LLMs for Japan-domestic compliance-sensitive deployments.',
+              'Language optimization': 'Japanese prompts on Japanese-language tasks outperform English prompts across all major models. GPT-4o and Claude Opus 4.8 handle Japanese well; Rakuten AI and NTT LLMs are available for Japan-specific deployments. Avoid casual (tame-go) register in system prompts — polite (keigo) framing improves compliance and output quality for Japanese business contexts.',
+              'Recommended model': 'GPT-4o or Claude Opus 4.8 for general Japanese tasks. Rakuten AI (Rakuten Group) or NTT LLMs for Japan-domestic compliance-sensitive deployments.',
             },
           ],
         },
@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'The race is not only about who builds the most capable models. It is about which regulatory framework becomes the global default. The EU AI Act, by applying to any AI system deployed to EU users, has already made Brussels the effective regulator of OpenAI, Anthropic, and Google DeepMind globally. Hardware control is a third dimension: the CHIPS and Science Act ($52 billion) and Nvidia GPU export controls aim to limit China\'s compute access. DeepSeek R1\'s January 2025 release — competitive with GPT-4o at a fraction of the training cost — demonstrated those controls have limits. See [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) for how these dynamics affect model availability.',
           ],
           items: [
-            '**US position:** Leads on frontier model capability (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro), chip design (Nvidia, AMD), and AI investment ($67B private investment in 2023 per OECD). No unified federal AI law — accelerates deployment but creates compliance fragmentation.',
+            '**US position:** Leads on frontier model capability (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro), chip design (Nvidia, AMD), and AI investment ($67B private investment in 2023 per OECD). No unified federal AI law — accelerates deployment but creates compliance fragmentation.',
             '**China\'s position:** Leads on AI patent volume, facial recognition scale, and state-directed infrastructure deployment. Models (Qwen 2.5, ERNIE 4.0, DeepSeek R1) are competitive on many benchmarks. Hardware dependence on Nvidia architectures is the primary strategic vulnerability export controls target.',
             '**Europe\'s position:** Leads on AI regulation — the EU AI Act is the global reference framework — and open-weights research (Mistral from France). Trails on frontier model capability and private investment. Compensates through regulatory leverage: the Brussels Effect forces US and Chinese providers to comply with EU standards for global products.',
             '**The hardware layer:** Nvidia H100/H200 GPUs dominate AI training. US export controls restrict sales to China. DeepSeek R1 trained on restricted H800 GPUs at reported ~$6M — a 94% cost reduction vs GPT-4o training estimates — demonstrating hardware controls have not halted Chinese frontier AI.',
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**EU-based organizations:** Must comply with the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) directly. High-risk AI systems (HR, credit, healthcare, public services) require conformity assessments, human oversight documentation, and registration in the [EU AI database](https://digital-strategy.ec.europa.eu/en/policies/ai-office) before August 2026. All AI handling personal data must comply with GDPR — including AI training pipelines and output processing.',
             '**Non-EU organizations serving EU users:** Subject to the Brussels Effect — the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) applies to your AI outputs if they reach EU users. GPAI models used in EU-facing products must comply with transparency obligations (August 2025 onwards). Failing to comply carries the same fines as EU-headquartered violators.',
-            '**US AI tools in EU deployments:** GPT-4o, Claude Opus 4.7, and Gemini 3.1 Pro are all classified as GPAI models. OpenAI, Anthropic, and Google have published EU AI Act GPAI compliance documentation. Organizations using these tools in high-risk AI systems (as deployers) remain responsible for their own conformity assessments — the provider\'s GPAI compliance does not cover your deployment.',
+            '**US AI tools in EU deployments:** GPT-4o, Claude Opus 4.8, and Gemini 3.1 Pro are all classified as GPAI models. OpenAI, Anthropic, and Google have published EU AI Act GPAI compliance documentation. Organizations using these tools in high-risk AI systems (as deployers) remain responsible for their own conformity assessments — the provider\'s GPAI compliance does not cover your deployment.',
             '**Chinese AI tools:** DeepSeek R1 and other Chinese models are available internationally but carry additional procurement risk for EU and US organizations — data residency is unclear, the provider is subject to CAC content regulations, and the Cyberspace Administration of China can compel data disclosure. Government and critical infrastructure organizations in EU and NATO member states are restricting or prohibiting Chinese AI tool usage.',
             '**Data residency:** EU GDPR restricts personal data transfer to countries without "adequacy" decisions or appropriate safeguards. AI inference on personal data using US providers requires Standard Contractual Clauses (SCCs) or relies on the EU-US Data Privacy Framework (2023). Transfer to China has no adequacy decision — contractual safeguards must be in place and are difficult to enforce.',
             '**Procurement decisions:** US federal agencies are prohibited from using AI from designated Chinese entities. Several EU member states (Germany, France, Netherlands) have issued guidance restricting Chinese AI tools in government procurement. For private sector organizations, procurement policy should address the jurisdiction of the AI provider\'s training data, content moderation practices, and government access provisions.',
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defGPAI: {
           title: 'Definition: General Purpose AI (GPAI)',
-          content: 'An AI system trained on broad data with a general architecture (not specialized or domain-specific) that can be adapted for a wide range of downstream tasks. GPT-4o, Claude Opus 4.7, and Gemini 3.1 Pro are GPAI models. Under the EU AI Act, GPAI models with >10^25 FLOP training compute face transparency obligations including training data summaries, capability documentation, and copyright compliance.',
+          content: 'An AI system trained on broad data with a general architecture (not specialized or domain-specific) that can be adapted for a wide range of downstream tasks. GPT-4o, Claude Opus 4.8, and Gemini 3.1 Pro are GPAI models. Under the EU AI Act, GPAI models with >10^25 FLOP training compute face transparency obligations including training data summaries, capability documentation, and copyright compliance.',
         },
 
         defCAC: {
@@ -891,7 +891,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wenn Sie eine EU-basierte Organisation sind: Kritische Compliance-Fristen',
           content: [
             '**Der EU AI Act ist verbindlich und wird ab August 2026 durchgesetzt.** Wenn Ihre Organisation in der EU ansässig ist oder EU-Nutzer bedient, müssen Sie sein vierteiliges Risikoeinstufungssystem erfüllen. Geldstrafen für verbotene Praktiken erreichen 35 Mio. EUR oder 7% des weltweiten Umsatzes — je nachdem, welcher Wert höher ist. Nicht-Konformität ist nicht verhandelbar.',
-            '**Wenn Sie GPT-4o, Claude Opus 4.7 oder Gemini 3.1 Pro in der EU einsetzen, müssen Sie ihre Konformitätsdokumentation zu General Purpose AI (GPAI) überprüfen.** OpenAI, Anthropic und Google veröffentlichten Transparenzdokumentation (Trainingsdaten-Zusammenfassungen, Leistungsgrenzen, Sicherheitstests) ab August 2025. Speichern Sie diese Bescheinigungen als Nachweis der Konformität — Regulierungsbehörden werden danach fragen.',
+            '**Wenn Sie GPT-4o, Claude Opus 4.8 oder Gemini 3.1 Pro in der EU einsetzen, müssen Sie ihre Konformitätsdokumentation zu General Purpose AI (GPAI) überprüfen.** OpenAI, Anthropic und Google veröffentlichten Transparenzdokumentation (Trainingsdaten-Zusammenfassungen, Leistungsgrenzen, Sicherheitstests) ab August 2025. Speichern Sie diese Bescheinigungen als Nachweis der Konformität — Regulierungsbehörden werden danach fragen.',
             '**Hochrisiko-KI-Systeme (Einstellung, Kreditentscheidungen, Gesundheitswesen, Strafverfolgung) erfordern Konformitätsbewertungen vor dem Einsatz.** Dies bedeutet Tests auf Voreingenommenheit, Dokumentation von Überwachungsmechanismen durch Menschen und Audit-Protokolle aller KI-Entscheidungen. Open-Weights-Modelle, die lokal eingesetzt werden (LLaMA via Ollama, Mistral Large), erfüllen Datenspeicherort-Anforderungen — keine Daten verlassen Ihre Infrastruktur, und Sie kontrollieren die Audit-Spur.',
             '**Der Brussels Effect gilt auch für Sie.** Wenn Ihre KI-System einen einzelnen EU-Einwohner erreicht, gilt der EU AI Act — auch wenn Ihr Unternehmen in den USA oder China ansässig ist. Dies bedeutet, dass die Durchsetzung der gleichen Compliance-Stufe global oft einfacher ist als die Verwaltung mehrerer Konfigurationen.',
           ],
@@ -903,7 +903,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Chinesische KI-APIs (DeepSeek, ERNIE 4.0, Qwen via Alibaba Cloud) filtern Inhalte auf API-Ebene — politische Themen, KP-Kritik und Taiwan/Tibet/Xinjiang geben `is_safe: 0` in HTTP-200-Antworten zurück, nicht HTTP-4xx. Behandeln Sie diese explizit in Ihrem Anwendungscode.',
             'Mistral-Modelle und lokale Ollama-Implementierungen erfüllen EU AI Act-Anforderungen an Datenspeicherorte — Prompts und Outputs verlassen nie Ihre Infrastruktur. Dies ist der reibungsloseste Weg zu EU GDPR + AI Act-Konformität für Prompt Engineers.',
-            'GPT-4o und Claude Opus 4.7 sind ab August 2025 GPAI-konform unter dem EU AI Act. Sie können sie in EU-bezogenen Implementierungen ohne zusätzliche Konformitätsarbeit auf Modellebene verwenden — Ihre Verpflichtung liegt auf der Anwendungsebene (Bereitsteller), nicht auf der Modellebene.',
+            'GPT-4o und Claude Opus 4.8 sind ab August 2025 GPAI-konform unter dem EU AI Act. Sie können sie in EU-bezogenen Implementierungen ohne zusätzliche Konformitätsarbeit auf Modellebene verwenden — Ihre Verpflichtung liegt auf der Anwendungsebene (Bereitsteller), nicht auf der Modellebene.',
             'Der Brussels Effect bedeutet, dass Prompts, die für EU-Bewohner bestimmte Produkte an US-gehostete Modelle gesendet werden, EU AI Act-Anforderungen unterliegen — auch wenn Ihr Unternehmen nicht in der EU ansässig ist.',
             'Für Multi-Jurisdiktions-Tests versenden Sie denselben Prompt gleichzeitig an Mistral (EU-konform), GPT-4o (US/GPAI) und Qwen (China-zugänglich), um Outputs über Regulierungskontexte hinweg zu vergleichen. PromptQuorum unterstützt dies nativ.',
           ],
@@ -920,14 +920,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Region': 'Europäische Union',
               'Gesetzliche Einschränkung für Prompts': 'EU AI Act: Prompts, die Inhalte für EU-Verbraucher generieren, müssen KI-Offenlegung enthalten. GDPR: Prompts dürfen personenbezogene Daten nicht ohne Rechtsgrundlage enthalten. Hochrisiko-KI-Anwendungen (HR, Kredit, Gesundheitswesen) erfordern Überwachung durch Menschen — Prompts dürfen finale Entscheidungen nicht automatisieren.',
-              'Sprachoptimierung': 'Schreiben Sie Prompts in der Zielsprache (Deutsch, Französisch usw.) — GPT-4o und Claude Opus 4.7 performen deutlich besser bei Nicht-Englisch-Aufgaben, wenn Prompts in der gleichen Sprache wie die gewünschte Ausgabe sind. Geben Sie die Ausgabesprache in System-Prompts explizit an.',
+              'Sprachoptimierung': 'Schreiben Sie Prompts in der Zielsprache (Deutsch, Französisch usw.) — GPT-4o und Claude Opus 4.8 performen deutlich besser bei Nicht-Englisch-Aufgaben, wenn Prompts in der gleichen Sprache wie die gewünschte Ausgabe sind. Geben Sie die Ausgabesprache in System-Prompts explizit an.',
               'Empfohlenes Modell': 'Mistral Large (Französisch, in der EU ansässig), lokale Ollama-Implementierung (Daten verlassen nie die Infrastruktur) oder GPT-4o/Claude mit EU-Region API-Endpoints und SCCs.',
             },
             {
               'Region': 'Vereinigte Staaten',
               'Gesetzliche Einschränkung für Prompts': 'Kein bundesweites KI-Gesetz, aber Sektorregeln gelten: HIPAA (Gesundheitswesen — PHI darf nicht in Prompts vorkommen), CCPA/CPRA (Kalifornien — personenbezogene Daten in Prompts triggern Verbraucherrechte), FTC Act (Prompts dürfen keinen täuschenden Inhalt in Verbraucherkontext generieren). Biometrische Gesetze der Bundesstaaten (Illinois BIPA) beschränken Prompts, die Gesichts-/Sprachdaten verarbeiten.',
-              'Sprachoptimierung': 'US-Frontier-Modelle (GPT-4o, Claude Opus 4.7) sind Englisch-optimiert und erreichen ihre Spitzenleistung bei Englisch-Prompts. Für spanischsprachige US-Märkte instrui Sie das Modell explizit auf Spanisch oder verwenden Sie einen zweisprachigen System-Prompt — verlassen Sie sich nicht auf automatische Erkennung.',
-              'Empfohlenes Modell': 'GPT-4o oder Claude Opus 4.7 für allgemeine Nutzung. Für regulierte Gesundheits- oder Finanz-Prompts verwenden Sie API mit SCCs und senden Sie keine PHI/PII im Prompt-Kontext.',
+              'Sprachoptimierung': 'US-Frontier-Modelle (GPT-4o, Claude Opus 4.8) sind Englisch-optimiert und erreichen ihre Spitzenleistung bei Englisch-Prompts. Für spanischsprachige US-Märkte instrui Sie das Modell explizit auf Spanisch oder verwenden Sie einen zweisprachigen System-Prompt — verlassen Sie sich nicht auf automatische Erkennung.',
+              'Empfohlenes Modell': 'GPT-4o oder Claude Opus 4.8 für allgemeine Nutzung. Für regulierte Gesundheits- oder Finanz-Prompts verwenden Sie API mit SCCs und senden Sie keine PHI/PII im Prompt-Kontext.',
             },
             {
               'Region': 'China',
@@ -939,13 +939,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
               'Region': 'UK / Post-Brexit',
               'Gesetzliche Einschränkung für Prompts': 'UK GDPR (äquivalent zu EU GDPR) gilt für personenbezogene Daten. UK AI Safety Institute konzentriert sich auf Frontier-Modell-Evaluierung, nicht auf Konformität auf Anwendungsebene. Kein verbindliches KI-Offenlegungsgesetz — UK wählte einen innovationsfreundlichen, sektorgeführten Ansatz. OFCOM reguliert KI-generierte Inhalte in Broadcast-Kontexten.',
               'Sprachoptimierung': 'Britisches Englisch Rechtschreibungen und Redewendungen in Prompts verbessern die Ausgabequalität für UK-bezogene Inhalte. GPT-4o antwortet auf explizite "UK English"-Anweisungen in System-Prompts; ohne diese standardmäßig auf American English.',
-              'Empfohlenes Modell': 'GPT-4o oder Claude Opus 4.7. UK-EU-Datenübertragungen erfordern SCCs post-Brexit — UK-Angemessenheitsentscheidung der EU ist vorhanden, aber Überprüfung unterliegt.',
+              'Empfohlenes Modell': 'GPT-4o oder Claude Opus 4.8. UK-EU-Datenübertragungen erfordern SCCs post-Brexit — UK-Angemessenheitsentscheidung der EU ist vorhanden, aber Überprüfung unterliegt.',
             },
             {
               'Region': 'Japan',
               'Gesetzliche Einschränkung für Prompts': 'Japans Act on Protection of Personal Information (APPI) beschränkt die Verwendung personenbezogener Daten in KI-Prompts. Japan hat kein KI-spezifisches Gesetz (ab 2026) — Richtlinien von METI und Ministry of Internal Affairs sind freiwillig. Japan nahm am Hiroshima AI Process teil — Einhaltung seiner 11 Prinzipien wird für japanische Unternehmungen empfohlen.',
-              'Sprachoptimierung': 'Japanische Prompts für japanischsprachige Aufgaben outperformen Englisch-Prompts über alle großen Modelle. GPT-4o und Claude Opus 4.7 behandeln Japanisch gut; Rakuten AI und NTT LLMs sind für Japan-spezifische Implementierungen verfügbar. Vermeiden Sie Casual (tame-go) Register in System-Prompts — höfliche (keigo) Formulierung verbessert Konformität und Ausgabequalität für japanische Geschäftskontexte.',
-              'Empfohlenes Modell': 'GPT-4o oder Claude Opus 4.7 für allgemeine japanische Aufgaben. Rakuten AI (Rakuten Group) oder NTT LLMs für Japan-inländische Konformitäts-sensitive Implementierungen.',
+              'Sprachoptimierung': 'Japanische Prompts für japanischsprachige Aufgaben outperformen Englisch-Prompts über alle großen Modelle. GPT-4o und Claude Opus 4.8 behandeln Japanisch gut; Rakuten AI und NTT LLMs sind für Japan-spezifische Implementierungen verfügbar. Vermeiden Sie Casual (tame-go) Register in System-Prompts — höfliche (keigo) Formulierung verbessert Konformität und Ausgabequalität für japanische Geschäftskontexte.',
+              'Empfohlenes Modell': 'GPT-4o oder Claude Opus 4.8 für allgemeine japanische Aufgaben. Rakuten AI (Rakuten Group) oder NTT LLMs für Japan-inländische Konformitäts-sensitive Implementierungen.',
             },
           ],
         },
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Das Rennen geht nicht nur darum, wer die fähigsten Modelle baut. Es geht darum, welcher Regulierungsrahmen zur globalen Standard wird. Der EU AI Act, indem er auf jedes KI-System gilt, das für EU-Nutzer bereitgestellt wird, hat bereits Brüssel zum effektiven Regulator von OpenAI, Anthropic und Google DeepMind global gemacht. Hardware-Kontrolle ist eine dritte Dimension: Der CHIPS and Science Act (52 Milliarden USD) und Nvidia GPU-Exportkontrollen zielen darauf ab, Chinas Compute-Zugang zu begrenzen. DeepSeeks R1-Freigabe im Januar 2025 — wettbewerbsfähig mit GPT-4o bei einem Bruchteil der Trainings-Kosten — zeigte, dass diese Kontrollen Grenzen haben. Siehe [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) für wie diese Dynamiken Modell-Verfügbarkeit beeinflussen.',
           ],
           items: [
-            '**US-Position:** Führt bei Frontier-Modell-Leistung (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro), Chip-Design (Nvidia, AMD) und KI-Investitionen (67 Mrd. USD private Investition 2023 pro OECD). Kein einheitliches bundesweites KI-Gesetz — beschleunigt Bereitstellung, schafft aber Compliance-Fragmentierung.',
+            '**US-Position:** Führt bei Frontier-Modell-Leistung (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro), Chip-Design (Nvidia, AMD) und KI-Investitionen (67 Mrd. USD private Investition 2023 pro OECD). Kein einheitliches bundesweites KI-Gesetz — beschleunigt Bereitstellung, schafft aber Compliance-Fragmentierung.',
             '**Chinas Position:** Führt bei KI-Patent-Volumen, Gesichtserkennung im großen Maßstab und staatlich geleiteter Infrastruktur-Bereitstellung. Modelle (Qwen 2.5, ERNIE 4.0, DeepSeek R1) sind bei vielen Benchmarks wettbewerbsfähig. Hardware-Abhängigkeit von Nvidia-Architekturen ist die primäre strategische Schwachstelle, die Export-Kontrolle anvisiert.',
             '**Europas Position:** Führt bei KI-Regulierung — der EU AI Act ist das globale Referenz-Framework — und Open-Weights-Forschung (Mistral aus Frankreich). Bleibt bei Frontier-Modell-Leistung und private Investitionen zurück. Kompensiert durch Regulierungs-Hebelwirkung: Der Brussels Effect zwingt US- und chinesische Anbieter, EU-Standards für globale Produkte zu erfüllen.',
             '**Die Hardware-Schicht:** Nvidia H100/H200 GPUs dominieren KI-Training. US-Exportkontrollen beschränken Verkäufe nach China. DeepSeek R1 trainiert auf beschränkten H800 GPUs bei berichteten ~6 Mio. USD — eine 94% Kostenreduktion vs GPT-4o Trainings-Schätzungen — zeigt, dass Hardware-Kontrolle chinesische Frontier-KI nicht gestoppt hat.',
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**EU-basierte Organisationen:** Müssen den EU AI Act direkt befolgen. Hochrisiko-KI-Systeme (HR, Kredit, Gesundheitswesen, öffentliche Services) verlangen Konformitätsbewertungen, Menschliche Überwachungs-Dokumentation und Registrierung in der EU AI-Datenbank vor August 2026. Alle KI, die personenbezogene Daten behandelt, muss GDPR befolgen — einschließlich KI-Trainings-Pipelines und Output-Verarbeitung.',
             '**Nicht-EU-Organisationen, die EU-Nutzer bedienen:** Unterliegen dem Brussels Effect — der EU AI Act gilt für Ihre KI-Outputs, wenn sie EU-Nutzer erreichen. GPAI-Modelle, die in EU-bezogenen Produkten genutzt werden, müssen Transparenzverpflichtungen befolgen (ab August 2025). Nicht-Konformität trägt die gleichen Geldstrafen wie EU-ansässige Violators.',
-            '**US KI-Tools in EU-Einsätzen:** GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro sind alle als GPAI-Modelle klassifiziert. OpenAI, Anthropic und Google veröffentlichten EU AI Act GPAI-Konformitäts-Dokumentation. Organisationen, die diese Tools in Hochrisiko-KI-Systemen (als Bereitsteller) nutzen, bleiben selbst verantwortlich für ihre eigenen Konformitätsbewertungen — der Provider\'s GPAI-Konformität deckt nicht Ihren Einsatz.',
+            '**US KI-Tools in EU-Einsätzen:** GPT-4o, Claude Opus 4.8 und Gemini 3.1 Pro sind alle als GPAI-Modelle klassifiziert. OpenAI, Anthropic und Google veröffentlichten EU AI Act GPAI-Konformitäts-Dokumentation. Organisationen, die diese Tools in Hochrisiko-KI-Systemen (als Bereitsteller) nutzen, bleiben selbst verantwortlich für ihre eigenen Konformitätsbewertungen — der Provider\'s GPAI-Konformität deckt nicht Ihren Einsatz.',
             '**Chinesische KI-Tools:** DeepSeek R1 und andere chinesische Modelle sind international verfügbar, tragen aber zusätzliche Beschaffungs-Risiko für EU und US-Organisationen — Datenspeicherort ist unklar, der Provider unterliegt CAC-Content-Regulierungen und die Cyberspace Administration of China kann Daten-Offenlegung zwingen. Regierungs- und kritische Infrastruktur-Organisationen in EU und NATO-Mitgliedstaaten schränken oder verbieten chinesische KI-Tool-Nutzung.',
             '**Datenspeicherort:** EU GDPR schränkt personenbezogenen Daten-Transfer zu Ländern ohne "Angemessenheit"-Entscheidungen oder angemessene Sicherheitsvorkehrungen ein. KI-Inferenz auf personenbezogenen Daten, die US-Provider nutzen, verlangt Standard Contractual Clauses (SCCs) oder verlässt sich auf das EU-US Data Privacy Framework (2023). Transfer nach China hat keine Angemessenheits-Entscheidung — contractuelle Sicherheitsvorkehrungen müssen vorhanden sein und sind schwer durchzusetzen.',
             '**Beschaffungs-Entscheidungen:** US-Bundesbehörden sind verboten, KI von designierten chinesischen Entitäten zu nutzen. Mehrere EU-Mitgliedstaaten (Deutschland, Frankreich, Niederlande) gaben Richtlinien aus, die chinesische KI-Tools in Regierungs-Beschaffung einschränken. Für Private-Sector-Organisationen sollte Beschaffungs-Politik die Jurisdiktion der KI-Provider\'s Trainingsdaten, Content-Moderations-Praktiken und Regierungs-Zugangs-Bestimmungen adressieren.',
@@ -1286,7 +1286,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defGPAI: {
           title: 'Definition: General Purpose AI (GPAI)',
-          content: 'Ein KI-System, trainiert auf breite Daten mit einer allgemeinen Architektur (nicht spezialisiert oder Domäne-spezifisch), die für eine Breite Reihe von Downstream-Aufgaben angepasst werden kann. GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro sind GPAI-Modelle. Unter dem EU AI Act, GPAI-Modelle mit >10^25 FLOP Trainings-Compute-Seite Transparenzverpflichtungen enthalten Trainingsdaten-Zusammenfassungen, Leistungs-Dokumentation und Copyright-Konformität.',
+          content: 'Ein KI-System, trainiert auf breite Daten mit einer allgemeinen Architektur (nicht spezialisiert oder Domäne-spezifisch), die für eine Breite Reihe von Downstream-Aufgaben angepasst werden kann. GPT-4o, Claude Opus 4.8 und Gemini 3.1 Pro sind GPAI-Modelle. Unter dem EU AI Act, GPAI-Modelle mit >10^25 FLOP Trainings-Compute-Seite Transparenzverpflichtungen enthalten Trainingsdaten-Zusammenfassungen, Leistungs-Dokumentation und Copyright-Konformität.',
         },
 
         defCAC: {
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', 'name': '¿Qué aplicaciones de IA prohíbe la UE de forma absoluta?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El EU AI Act prohíbe: sistemas de puntuación social por parte de autoridades públicas, vigilancia biométrica en tiempo real en espacios públicos (con excepciones reducidas para fuerzas del orden), IA que explote vulnerabilidades cognitivas y la recopilación masiva de imágenes faciales de internet para construir bases de datos de reconocimiento. Estas están categorizadas como Riesgo Inaceptable.' } },
           { '@type': 'Question', 'name': '¿En qué se diferencia la regulación de IA de EE.UU. del enfoque de la UE?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'EE.UU. utiliza un enfoque sectorial y voluntario: los reguladores existentes (FTC, FDA, CFPB, EEOC) aplican sus mandatos a la IA en sus dominios. No existe ninguna ley federal de IA equivalente al EU AI Act. La Orden Ejecutiva de Biden sobre Seguridad de la IA (octubre de 2023) fue revocada por la administración Trump en enero de 2025 y reemplazada por un Plan de Acción de IA centrado en la competitividad.' } },
           { '@type': 'Question', 'name': '¿La IA de China es tan capaz como los sistemas de IA de EE.UU.?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1, lanzado en enero de 2025, superó a GPT-4o en benchmarks de razonamiento y codificación (AIME 2024: 79.8% vs 74.4% de GPT-4o, MATH-500: 97.3%, HumanEval) mientras que supuestamente se entrenó a un costo de ~6 millones de dólares — una reducción del 94% frente a los costos estimados de entrenamiento de modelos de frontera. Los modelos líderes de China son competitivos en muchas tareas pero quedan por detrás en razonamiento multilingüe y benchmarks de seguridad.' } },
-          { '@type': 'Question', 'name': '¿Pueden las empresas de la UE usar GPT-4o y Claude bajo el AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para la mayoría de los casos de uso. GPT-4o y Claude Opus 4.7 califican como modelos de Propósito General de IA (GPAI) y deben cumplir obligaciones de transparencia — incluyendo publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — que entraron en vigor en agosto de 2025. OpenAI y Anthropic han publicado documentación de cumplimiento GPAI para usuarios de la UE.' } },
+          { '@type': 'Question', 'name': '¿Pueden las empresas de la UE usar GPT-4o y Claude bajo el AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para la mayoría de los casos de uso. GPT-4o y Claude Opus 4.8 califican como modelos de Propósito General de IA (GPAI) y deben cumplir obligaciones de transparencia — incluyendo publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — que entraron en vigor en agosto de 2025. OpenAI y Anthropic han publicado documentación de cumplimiento GPAI para usuarios de la UE.' } },
           { '@type': 'Question', 'name': '¿Cómo afecta DeepSeek a la carrera geopolítica de la IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El lanzamiento de DeepSeek R1 en enero de 2025 demostró que las capacidades de IA de frontera son alcanzables a costos de cómputo significativamente menores de lo que se asumía previamente. Esto debilita el argumento de que los controles de exportación sobre las GPU de Nvidia limitarán permanentemente el desarrollo de IA en China. Aceleró los debates de política en EE.UU. y la UE sobre si las estrategias de contención basadas en cómputo son suficientes.' } },
           { '@type': 'Question', 'name': '¿Qué es el Efecto Bruselas en la IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El Efecto Bruselas describe cómo las regulaciones de la UE se convierten en estándares globales de facto porque las empresas multinacionales encuentran más fácil aplicar el estándar más estricto en todo el mundo en lugar de mantener pilas de cumplimiento separadas por jurisdicción. Para la IA, esto significa que el EU AI Act efectivamente eleva los estándares para GPT-4o, Claude y Gemini globalmente — independientemente de dónde estén ubicados los usuarios.' } },
           { '@type': 'Question', 'name': '¿Pueden las organizaciones de la UE usar DeepSeek para aplicaciones comerciales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Técnicamente sí, con Cláusulas Contractuales Estándar (SCC) conformes con el RGPD. En la práctica, las SCC son difíciles de hacer cumplir frente a las obligaciones de la ley china que requieren el cumplimiento del acceso a datos del CAC. Alemania (BSI), Francia (ANSSI) y los Países Bajos (NCSC) han emitido avisos que restringen las herramientas de IA chinas para el gobierno y las infraestructuras críticas. Las organizaciones del sector privado deben realizar una Evaluación de Impacto de Transferencia bajo el Artículo 46 del RGPD antes de procesar datos personales a través de DeepSeek.' } },
@@ -1477,7 +1477,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Si eres una organización con sede en la UE: Plazos de cumplimiento críticos',
           content: [
             '**El EU AI Act es vinculante y se aplica a partir de agosto de 2026.** Si tu organización tiene sede en la UE o atiende a usuarios de la UE, debes cumplir con su sistema de clasificación de riesgo de cuatro niveles. Las multas por prácticas prohibidas alcanzan €35 millones o el 7% de la facturación global — lo que sea mayor. El incumplimiento no es negociable.',
-            '**Si despliegas GPT-4o, Claude Opus 4.7 o Gemini 3.1 Pro en la UE, debes auditar su documentación de cumplimiento de IA de Propósito General (GPAI).** OpenAI, Anthropic y Google publicaron documentación de transparencia (resúmenes de datos de entrenamiento, limitaciones de capacidades, pruebas de seguridad) a partir de agosto de 2025. Guarda estas certificaciones como prueba de cumplimiento — los reguladores las pedirán.',
+            '**Si despliegas GPT-4o, Claude Opus 4.8 o Gemini 3.1 Pro en la UE, debes auditar su documentación de cumplimiento de IA de Propósito General (GPAI).** OpenAI, Anthropic y Google publicaron documentación de transparencia (resúmenes de datos de entrenamiento, limitaciones de capacidades, pruebas de seguridad) a partir de agosto de 2025. Guarda estas certificaciones como prueba de cumplimiento — los reguladores las pedirán.',
             '**Los sistemas de IA de alto riesgo (contratación, decisiones de crédito, atención sanitaria, aplicación de la ley) requieren evaluaciones de conformidad antes del despliegue.** Esto significa pruebas de sesgo, documentación de mecanismos de supervisión humana y trazas de auditoría de todas las decisiones de IA. Los modelos de pesos abiertos desplegados localmente (LLaMA vía Ollama, Mistral Large) satisfacen los requisitos de residencia de datos — ningún dato sale de tu infraestructura y tú controlas la traza de auditoría.',
             '**El Efecto Bruselas se aplica a ti.** Si tu sistema de IA llega a un único residente de la UE, el EU AI Act se aplica — aunque tu empresa tenga sede en EE.UU. o China. Esto significa que aplicar el mismo nivel de cumplimiento globalmente suele ser más sencillo que mantener múltiples configuraciones.',
           ],
@@ -1489,7 +1489,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Las APIs de IA chinas (DeepSeek, ERNIE 4.0, Qwen vía Alibaba Cloud) filtran contenido a nivel de API — los temas políticos, las críticas al PCCh y los temas de Taiwán/Tíbet/Xinjiang devuelven `is_safe: 0` en respuestas HTTP 200, no HTTP 4xx. Manéjalos explícitamente en el código de tu aplicación.',
             'Los modelos Mistral y los despliegues locales de Ollama satisfacen los requisitos de residencia de datos del EU AI Act — los prompts y salidas nunca salen de tu infraestructura. Esta es la ruta de menor fricción hacia el cumplimiento de RGPD + EU AI Act para prompt engineers.',
-            'GPT-4o y Claude Opus 4.7 son conformes con GPAI bajo el EU AI Act a partir de agosto de 2025. Puedes usarlos en despliegues orientados a la UE sin trabajo de cumplimiento adicional a nivel de modelo — tu obligación está a nivel de aplicación (desplegador), no a nivel de modelo.',
+            'GPT-4o y Claude Opus 4.8 son conformes con GPAI bajo el EU AI Act a partir de agosto de 2025. Puedes usarlos en despliegues orientados a la UE sin trabajo de cumplimiento adicional a nivel de modelo — tu obligación está a nivel de aplicación (desplegador), no a nivel de modelo.',
             'El Efecto Bruselas significa que los prompts enviados a modelos alojados en EE.UU. para productos utilizados por residentes de la UE están sujetos a los requisitos del EU AI Act — aunque tu empresa no tenga sede en la UE.',
             'Para pruebas multijurisdiccionales, despacha el mismo prompt a Mistral (conforme con la UE), GPT-4o (EE.UU./GPAI) y Qwen (accesible en China) simultáneamente para comparar salidas en diferentes contextos regulatorios. PromptQuorum lo soporta de forma nativa.',
           ],
@@ -1504,7 +1504,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               type: 'pro-tip',
               label: 'Consejo profesional: Escribe prompts en el idioma objetivo',
-              text: 'GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro tienen un rendimiento significativamente mejor en tareas en alemán, francés, japonés y chino cuando el propio prompt está en ese idioma. Los prompts en inglés para salida en otro idioma añaden una capa de traducción que degrada la calidad. Si estás optimizando el rendimiento del modelo para un país específico, escribe tus prompts en el idioma de ese país desde el principio.',
+              text: 'GPT-4o, Claude Opus 4.8 y Gemini 3.1 Pro tienen un rendimiento significativamente mejor en tareas en alemán, francés, japonés y chino cuando el propio prompt está en ese idioma. Los prompts en inglés para salida en otro idioma añaden una capa de traducción que degrada la calidad. Si estás optimizando el rendimiento del modelo para un país específico, escribe tus prompts en el idioma de ese país desde el principio.',
             },
           ],
           tableFormat: true,
@@ -1513,14 +1513,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Región': 'Unión Europea',
               'Restricción legal en prompts': 'EU AI Act: los prompts que generan contenido que interactúa con consumidores de la UE deben incluir divulgación de IA. RGPD: los prompts no deben incluir datos personales sin base legal. Las aplicaciones de IA de alto riesgo (RRHH, crédito, salud) requieren supervisión humana — los prompts no deben automatizar decisiones finales.',
-              'Optimización de idioma': 'Escribe prompts en el idioma objetivo (alemán, francés, etc.) — GPT-4o y Claude Opus 4.7 tienen un rendimiento significativamente mejor en tareas no inglesas cuando los prompts están en el mismo idioma que la salida deseada. Especifica el idioma de salida explícitamente en los system prompts.',
+              'Optimización de idioma': 'Escribe prompts en el idioma objetivo (alemán, francés, etc.) — GPT-4o y Claude Opus 4.8 tienen un rendimiento significativamente mejor en tareas no inglesas cuando los prompts están en el mismo idioma que la salida deseada. Especifica el idioma de salida explícitamente en los system prompts.',
               'Modelo recomendado': 'Mistral Large (francés, sede en la UE), despliegue local de Ollama (los datos nunca salen de la infraestructura), o GPT-4o/Claude con endpoints de API de la región UE y SCC.',
             },
             {
               'Región': 'Estados Unidos',
               'Restricción legal en prompts': 'Sin ley federal de IA, pero aplican reglas sectoriales: HIPAA (salud — la PHI no debe aparecer en los prompts), CCPA/CPRA (California — los datos personales en prompts activan derechos del consumidor), Ley FTC (los prompts no deben generar contenido engañoso en contextos de consumo). Las leyes biométricas estatales (Illinois BIPA) restringen los prompts que procesan datos faciales/de voz.',
-              'Optimización de idioma': 'Los modelos de frontera de EE.UU. (GPT-4o, Claude Opus 4.7) están optimizados para el inglés y tienen su mejor rendimiento en prompts en inglés. Para mercados de habla hispana en EE.UU., instruye explícitamente al modelo en español o usa un system prompt bilingüe — no confíes en la detección automática.',
-              'Modelo recomendado': 'GPT-4o o Claude Opus 4.7 para uso general. Para prompts regulados en salud o finanzas, usa la API con SCC y evita enviar PHI/PII en el contexto del prompt.',
+              'Optimización de idioma': 'Los modelos de frontera de EE.UU. (GPT-4o, Claude Opus 4.8) están optimizados para el inglés y tienen su mejor rendimiento en prompts en inglés. Para mercados de habla hispana en EE.UU., instruye explícitamente al modelo en español o usa un system prompt bilingüe — no confíes en la detección automática.',
+              'Modelo recomendado': 'GPT-4o o Claude Opus 4.8 para uso general. Para prompts regulados en salud o finanzas, usa la API con SCC y evita enviar PHI/PII en el contexto del prompt.',
             },
             {
               'Región': 'China',
@@ -1532,13 +1532,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
               'Región': 'Reino Unido / Post-Brexit',
               'Restricción legal en prompts': 'El RGPD del Reino Unido (equivalente al RGPD de la UE) aplica a los datos personales. El UK AI Safety Institute se centra en la evaluación de modelos de frontera, no en el cumplimiento a nivel de aplicación. Sin ley de divulgación de IA obligatoria — el Reino Unido eligió un enfoque pro-innovación liderado por el sector. OFCOM regula el contenido generado por IA en contextos de radiodifusión.',
               'Optimización de idioma': 'Las ortografías y expresiones del inglés británico en los prompts mejoran la calidad de salida para contenido orientado al Reino Unido. GPT-4o responde a instrucciones explícitas de "inglés del Reino Unido" en los system prompts; sin ellas, utiliza el inglés americano por defecto.',
-              'Modelo recomendado': 'GPT-4o o Claude Opus 4.7. Las transferencias de datos del Reino Unido a la UE requieren SCC post-Brexit — la decisión de adecuación del Reino Unido por parte de la UE está vigente pero sujeta a revisión.',
+              'Modelo recomendado': 'GPT-4o o Claude Opus 4.8. Las transferencias de datos del Reino Unido a la UE requieren SCC post-Brexit — la decisión de adecuación del Reino Unido por parte de la UE está vigente pero sujeta a revisión.',
             },
             {
               'Región': 'Japón',
               'Restricción legal en prompts': 'La Ley japonesa de Protección de Información Personal (APPI) restringe el uso de datos personales en prompts de IA. Japón no tiene una ley específica de IA (a partir de 2026) — la orientación del METI y el Ministerio de Asuntos Internos es voluntaria. Japón participó en el Proceso AI de Hiroshima — se alienta la adhesión a sus 11 principios para las empresas japonesas.',
-              'Optimización de idioma': 'Los prompts en japonés para tareas en japonés superan a los prompts en inglés en todos los modelos principales. GPT-4o y Claude Opus 4.7 manejan bien el japonés; Rakuten AI y NTT LLMs están disponibles para despliegues específicos de Japón. Evita el registro casual (tame-go) en los system prompts — el registro formal (keigo) mejora el cumplimiento y la calidad de salida para contextos empresariales japoneses.',
-              'Modelo recomendado': 'GPT-4o o Claude Opus 4.7 para tareas japonesas generales. Rakuten AI (Rakuten Group) o NTT LLMs para despliegues nacionales de Japón con sensibilidad al cumplimiento.',
+              'Optimización de idioma': 'Los prompts en japonés para tareas en japonés superan a los prompts en inglés en todos los modelos principales. GPT-4o y Claude Opus 4.8 manejan bien el japonés; Rakuten AI y NTT LLMs están disponibles para despliegues específicos de Japón. Evita el registro casual (tame-go) en los system prompts — el registro formal (keigo) mejora el cumplimiento y la calidad de salida para contextos empresariales japoneses.',
+              'Modelo recomendado': 'GPT-4o o Claude Opus 4.8 para tareas japonesas generales. Rakuten AI (Rakuten Group) o NTT LLMs para despliegues nacionales de Japón con sensibilidad al cumplimiento.',
             },
           ],
         },
@@ -1633,7 +1633,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'La carrera no se trata solo de quién construye los modelos más capaces. Se trata de qué marco regulatorio se convierte en el estándar global predeterminado. El EU AI Act, al aplicarse a cualquier sistema de IA desplegado para usuarios de la UE, ya ha hecho de Bruselas el regulador efectivo de OpenAI, Anthropic y Google DeepMind globalmente. Consulta [open source vs. LLM propietarios](/prompt-engineering/open-source-vs-proprietary-llms) para ver cómo estas dinámicas afectan la disponibilidad de modelos.',
           ],
           items: [
-            '**Posición de EE.UU.:** Lidera en capacidad de modelos de frontera (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro), diseño de chips (Nvidia, AMD) e inversión en IA ($67B de inversión privada en 2023 según la OCDE). Sin ley federal unificada de IA — acelera el despliegue pero crea fragmentación de cumplimiento.',
+            '**Posición de EE.UU.:** Lidera en capacidad de modelos de frontera (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro), diseño de chips (Nvidia, AMD) e inversión en IA ($67B de inversión privada en 2023 según la OCDE). Sin ley federal unificada de IA — acelera el despliegue pero crea fragmentación de cumplimiento.',
             '**Posición de China:** Lidera en volumen de patentes de IA, escala de reconocimiento facial y despliegue de infraestructura dirigido por el estado. Los modelos (Qwen 2.5, ERNIE 4.0, DeepSeek R1) son competitivos en muchos benchmarks. La dependencia del hardware en arquitecturas Nvidia es la principal vulnerabilidad estratégica que buscan los controles de exportación.',
             '**Posición de Europa:** Lidera en regulación de IA — el EU AI Act es el marco de referencia global — e investigación de pesos abiertos (Mistral de Francia). Va por detrás en capacidad de modelos de frontera e inversión privada. Compensa mediante apalancamiento regulatorio: el Efecto Bruselas obliga a los proveedores de EE.UU. y China a cumplir con los estándares de la UE para productos globales.',
             '**La capa de hardware:** Las GPU Nvidia H100/H200 dominan el entrenamiento de IA. Los controles de exportación de EE.UU. restringen las ventas a China. DeepSeek R1 entrenado en GPU H800 restringidas a un costo reportado de ~$6M — una reducción del 94% frente a las estimaciones de entrenamiento de GPT-4o — demostrando que los controles de hardware no han detenido la IA de frontera china.',
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defGPAI: {
           title: 'Definición: IA de Propósito General (GPAI)',
-          content: 'Un sistema de IA entrenado en datos amplios con una arquitectura general (no especializada ni específica de dominio) que puede adaptarse para una amplia gama de tareas. GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro son modelos GPAI. Según el EU AI Act, los modelos GPAI con más de 10²⁵ FLOP de cómputo de entrenamiento tienen obligaciones de transparencia que incluyen resúmenes de datos de entrenamiento, documentación de capacidades y cumplimiento de derechos de autor.',
+          content: 'Un sistema de IA entrenado en datos amplios con una arquitectura general (no especializada ni específica de dominio) que puede adaptarse para una amplia gama de tareas. GPT-4o, Claude Opus 4.8 y Gemini 3.1 Pro son modelos GPAI. Según el EU AI Act, los modelos GPAI con más de 10²⁵ FLOP de cómputo de entrenamiento tienen obligaciones de transparencia que incluyen resúmenes de datos de entrenamiento, documentación de capacidades y cumplimiento de derechos de autor.',
         },
 
         defCAC: {
@@ -2867,7 +2867,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'EU組織の場合：重要なコンプライアンス期限',
           content: [
             '**EU AI法は拘束力があり、2026年8月から実施される。** EU本拠地の組織またはEUユーザーにサービスを提供する場合、4部構成のリスク分類システムを満たす必要がある。禁止慣行の罰金は3500万ユーロまたは世界売上の7%に達する — どちらか大きい方。非準拠は交渉の余地がない。',
-            '**EU内でGPT-4o、Claude Opus 4.7、またはGemini 3.1 Proを展開する場合、汎用AI（GPAI）の準拠ドキュメントを確認する必要がある。** OpenAI、Anthropic、GoogleはAug 2025からトランスペアレンシードキュメント（訓練データサマリー、パフォーマンスボーダー、セキュリティテスト）を発行している。これらの認定書を準拠の証拠として保存 — 規制当局がそれを求める。',
+            '**EU内でGPT-4o、Claude Opus 4.8、またはGemini 3.1 Proを展開する場合、汎用AI（GPAI）の準拠ドキュメントを確認する必要がある。** OpenAI、Anthropic、GoogleはAug 2025からトランスペアレンシードキュメント（訓練データサマリー、パフォーマンスボーダー、セキュリティテスト）を発行している。これらの認定書を準拠の証拠として保存 — 規制当局がそれを求める。',
             '**高リスクAIシステム（採用、信用決定、ヘルスケア、執行）は展開前に準拠評価が必要。** これは、バイアスのテスト、人間監視メカニズムのドキュメント、すべてのAI決定の監査ログを意味する。ローカルに展開されるオープンウェイトモデル（LLaMA via Ollama、Mistral Large）はデータ常駐要件を満たす — データは決してインフラから出ず、監査証跡を制御する。',
             '**ブリュッセル効果はあなたにも適用される。** あなたのAIシステムが単一のEU住民に到達した場合、EU AI法が適用される — 組織がUS または中国に本拠地を置いている場合でも。つまり、複数の構成の管理より全体的に同じコンプライアンスレベルを実施する方が簡単。',
           ],
@@ -2878,7 +2878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '中国のAI API（DeepSeek、ERNIE 4.0、Qwen via Alibaba Cloud）はAPIレベルでコンテンツをフィルタリング — 政治的なトピック、CP批判、台湾/チベット/新疆の独立は HTTP-200 でレスポンスで is_safe: 0 を返す、HTTP-4xx ではない。アプリケーションコードで明示的に処理。',
             'Mistralモデルとローカル Ollama 実装はEU AI法のデータ常駐要件を満たす — プロンプトと出力はインフラを離れない。これがプロンプトエンジニアのEU GDPR + AI法準拠への最もスムーズな方法。',
-            'GPT-4o と Claude Opus 4.7 は August 2025 から EU AI法の GPAI準拠。EU関連の実装で追加のモデルレベル準拠作業なしで使用可能 — 責務はアプリケーションレベル（プロバイダー）にある、モデルレベルではない。',
+            'GPT-4o と Claude Opus 4.8 は August 2025 から EU AI法の GPAI準拠。EU関連の実装で追加のモデルレベル準拠作業なしで使用可能 — 責務はアプリケーションレベル（プロバイダー）にある、モデルレベルではない。',
             'ブリュッセル効果は、EU住民向けのプロンプトが米国ホストのモデルに送信される場合、EU AI法の要件に従う — 組織がEU内に本拠地を置いていない場合でも。',
             'マルチジュリスディクション・テストでは同じプロンプトを同時に Mistral（EU準拠）、GPT-4o（US/GPAI）、Qwen（中国アクセス可能）に送信して、規制コンテキスト全体で出力を比較。PromptQuorum はこれをネイティブにサポート。',
           ],
@@ -2895,14 +2895,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '地域': 'ヨーロッパ連合',
               'プロンプトの法的制限': 'EU AI法：EU消費者向けコンテンツを生成するプロンプトはAI開示を含む必要がある。GDPR：プロンプトに法的根拠なく個人データを含めることはできない。高リスクAIアプリケーション（HR、クレジット、ヘルスケア）は人間の監視が必要 — プロンプトは最終決定を自動化することはできない。',
-              '言語最適化': 'ターゲット言語（ドイツ語、フランス語など）でプロンプトを書く — GPT-4o と Claude Opus 4.7 は、プロンプトが出力と同じ言語の場合、非英語タスクでかなり良好。出力言語をシステムプロンプトに明示的に指定。',
+              '言語最適化': 'ターゲット言語（ドイツ語、フランス語など）でプロンプトを書く — GPT-4o と Claude Opus 4.8 は、プロンプトが出力と同じ言語の場合、非英語タスクでかなり良好。出力言語をシステムプロンプトに明示的に指定。',
               '推奨モデル': 'Mistral Large（フランス語、EU本拠地）、ローカル Ollama 実装（データはインフラを離れない）、またはEU地域APIエンドポイントと SCC を持つGPT-4o/Claude。',
             },
             {
               '地域': 'アメリカ合衆国',
               'プロンプトの法的制限': '連邦AI法なし、ただしセクター規則が適用：HIPAA（ヘルスケア — PHI はプロンプトに含まれない）、CCPA/CPRA（カリフォルニア — プロンプト内の個人データは消費者権利をトリガー）、FTC法（プロンプトは消費者コンテキストで欺瞞的なコンテンツを生成することはできない）。州の生体認証法（イリノイ BIPA）は顔/音声データを処理するプロンプトを制限。',
-              '言語最適化': 'US フロンティアモデル（GPT-4o、Claude Opus 4.7）は英語に最適化され、英語プロンプトで最高のパフォーマンスを達成。スペイン語の米国市場では、モデルに明示的にスペイン語を指示するか、二言語システムプロンプトを使用 — 自動検出に依存しないこと。',
-              '推奨モデル': '一般使用では GPT-4o または Claude Opus 4.7。規制されたヘルスケアまたは金融プロンプトでは、SCC を備えた API を使用し、プロンプトコンテキストで PHI/PII を送信しないこと。',
+              '言語最適化': 'US フロンティアモデル（GPT-4o、Claude Opus 4.8）は英語に最適化され、英語プロンプトで最高のパフォーマンスを達成。スペイン語の米国市場では、モデルに明示的にスペイン語を指示するか、二言語システムプロンプトを使用 — 自動検出に依存しないこと。',
+              '推奨モデル': '一般使用では GPT-4o または Claude Opus 4.8。規制されたヘルスケアまたは金融プロンプトでは、SCC を備えた API を使用し、プロンプトコンテキストで PHI/PII を送信しないこと。',
             },
             {
               '地域': '中国',
@@ -2914,13 +2914,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
               '地域': 'UK / ポストブレグジット',
               'プロンプトの法的制限': 'UK GDPR（EU GDPR と同等）個人データに適用。UK AI Safety Institute はモデルレベルの準拠ではなくフロンティアモデル評価に焦点。拘束力のあるAI開示法なし — UK はイノベーション志向のセクター主導のアプローチを選択。OFCOM はブロードキャストコンテキストで AI生成コンテンツを規制。',
               '言語最適化': 'プロンプト内のイギリス英語の綴りと慣用句が UK 関連コンテンツの出力品質を向上させる。GPT-4o は明示的な「UK English」の指示に応答；これなしで標準は American English。',
-              '推奨モデル': 'GPT-4o または Claude Opus 4.7。UK-EU データ転送はブレグジット後 SCC が必要 — UK 適切性決定が存在するも審査対象。',
+              '推奨モデル': 'GPT-4o または Claude Opus 4.8。UK-EU データ転送はブレグジット後 SCC が必要 — UK 適切性決定が存在するも審査対象。',
             },
             {
               '地域': '日本',
               'プロンプトの法的制限': '日本個人情報保護法（APPI）はAIプロンプトでの個人データ使用を制限。日本は専門AIの法律を持たない（2026年）— METI と内務省のガイダンスは任意。日本は広島AIプロセスに参加 — その11の原則への準拠は日本企業に推奨。',
-              '言語最適化': '日本語タスク用の日本語プロンプトはすべての主要モデルで英語プロンプトを上回る。GPT-4o と Claude Opus 4.7 は日本語をよく処理；楽天 AI と NTT LLM は日本固有の実装で利用可能。カジュアル（タメ口）レジスターをシステムプロンプトで避ける — 敬語の定式化は日本のビジネスコンテキストで準拠と出力品質を改善。',
-              '推奨モデル': '一般的な日本語タスク用 GPT-4o または Claude Opus 4.7。楽天 AI（楽天グループ）または NTT LLM は日本国内準拠に敏感な実装用。',
+              '言語最適化': '日本語タスク用の日本語プロンプトはすべての主要モデルで英語プロンプトを上回る。GPT-4o と Claude Opus 4.8 は日本語をよく処理；楽天 AI と NTT LLM は日本固有の実装で利用可能。カジュアル（タメ口）レジスターをシステムプロンプトで避ける — 敬語の定式化は日本のビジネスコンテキストで準拠と出力品質を改善。',
+              '推奨モデル': '一般的な日本語タスク用 GPT-4o または Claude Opus 4.8。楽天 AI（楽天グループ）または NTT LLM は日本国内準拠に敏感な実装用。',
             },
           ],
         },
@@ -3056,7 +3056,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'EU AI法案明确禁止哪些AI应用？', acceptedAnswer: { '@type': 'Answer', text: 'EU AI法案禁止：公共当局的社会评分系统、公共场所的实时生物特征监控（警执法例外除外）、利用认知漏洞的AI以及从互联网无差别抓取面部图像来构建识别数据库。这些被归类为不可接受的风险。' } },
           { '@type': 'Question', name: '美国AI监管与欧盟方式有何不同？', acceptedAnswer: { '@type': 'Answer', text: '美国采用部门化、自愿性方式——现有监管机构（FTC、FDA、CFPB、EEOC）在其领域内对AI适用其任务。没有等同于EU AI法案的联邦AI法。Biden关于AI安全的行政令（2023年10月）于2025年1月被Trump政府撤销，取而代之的是以竞争力为中心的AI行动计划。' } },
           { '@type': 'Question', name: '中国的AI与美国AI系统一样强大吗？', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1于2025年1月发布，在多个基准（AIME 2024、MATH-500、HumanEval）上与GPT-4o相当，同时据报训练成本仅为其一小部分。中国的主要模型——包括阿里巴巴的Qwen和百度的ERNIE——在许多任务上具有竞争力，但在多语言推理和安全基准上落后。硬件出口管制限制了中国获取最新Nvidia GPU的途径。' } },
-          { '@type': 'Question', name: '欧盟公司能否在AI法案下使用GPT-4o和Claude？', acceptedAnswer: { '@type': 'Answer', text: '是的，在大多数用例中可以。GPT-4o和Claude Opus 4.7符合通用AI（GPAI）模型条件，必须遵守透明度义务——包括发布训练数据摘要和遵守欧盟版权法——这于2025年8月生效。OpenAI和Anthropic都已为欧盟用户发布了GPAI合规文档。' } },
+          { '@type': 'Question', name: '欧盟公司能否在AI法案下使用GPT-4o和Claude？', acceptedAnswer: { '@type': 'Answer', text: '是的，在大多数用例中可以。GPT-4o和Claude Opus 4.8符合通用AI（GPAI）模型条件，必须遵守透明度义务——包括发布训练数据摘要和遵守欧盟版权法——这于2025年8月生效。OpenAI和Anthropic都已为欧盟用户发布了GPAI合规文档。' } },
           { '@type': 'Question', name: '英国AI安全研究所（AISI）是什么？', acceptedAnswer: { '@type': 'Answer', text: '英国AI安全研究所（AISI）于2023年11月在Bletchley Park的AI安全峰会后成立。它进行AI安全的技术研究，评估前沿AI模型的危险能力，并发布安全报告。AISI独立于商业AI开发者运作，与美国AI安全研究所合作。' } },
           { '@type': 'Question', name: 'DeepSeek如何影响AI地缘政治竞争？', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1于2025年1月发布，表明可以以远低于先前假设的计算成本实现前沿AI能力。这削弱了出口管制Nvidia GPU将永久限制中国AI发展的论点。它加速了美国和欧盟关于基于计算的遏制战略是否充分的政策讨论。' } },
           { '@type': 'Question', name: '什么是AI中的布鲁塞尔效应？', acceptedAnswer: { '@type': 'Answer', text: '布鲁塞尔效应描述欧盟法规如何成为事实上的全球标准，因为跨国公司发现在全球应用最严格的标准比维护每个管辖区的单独合规堆栈更简单。对于AI，这意味着EU AI法案实际上为GPT-4o、Claude和Gemini设定了全球标准——无论用户位于何处。' } },
@@ -3136,7 +3136,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '如果您是欧盟组织：关键合规期限',
           content: [
             '**EU AI法案于2026年8月具有约束力和强制执行。** 如果您的组织以欧盟为基地或为欧盟用户服务，您必须遵守其四级风险分类系统。禁止行为的罚款最高€3500万或全球营业额的7%——以较高者为准。不合规是不可协商的。',
-            '**如果您在欧盟中部署GPT-4o、Claude Opus 4.7或Gemini 3.1 Pro，您必须审核其通用AI（GPAI）合规文档。** OpenAI、Anthropic和Google已于2025年8月发布了透明度文档（训练数据摘要、能力限制、安全测试）。保存这些证明作为合规证据——监管机构会问询。',
+            '**如果您在欧盟中部署GPT-4o、Claude Opus 4.8或Gemini 3.1 Pro，您必须审核其通用AI（GPAI）合规文档。** OpenAI、Anthropic和Google已于2025年8月发布了透明度文档（训练数据摘要、能力限制、安全测试）。保存这些证明作为合规证据——监管机构会问询。',
             '**高风险AI系统（招聘、信贷决策、医疗、执法）在部署前需要符合性评估。** 这意味着测试偏见、记录人工监督机制文档和所有AI决策的审计日志。本地部署的开源权重模型（通过Ollama的LLaMA、Mistral Large）满足数据驻留要求——没有数据离开您的基础设施，您控制审计日志。',
             '**布鲁塞尔效应适用于您。** 如果您的AI系统到达单个欧盟居民，EU AI法案适用——即使您的公司总部在美国或中国。这意味着全球执行相同的合规级别通常比维护多个配置更简单。',
           ],
@@ -3148,7 +3148,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '中国AI API（DeepSeek、ERNIE 4.0、通过Alibaba Cloud的Qwen）在API级别过滤内容——政治话题、CPC批评和台湾/西藏/新疆返回HTTP 200响应中的`is_safe: 0`，而不是HTTP 4xx。在您的应用代码中明确处理这些。',
             'Mistral模型和本地Ollama部署满足EU AI法案的数据驻留要求——提示和输出永远不会离开您的基础设施。这是提示工程师实现欧盟GDPR + AI法案合规的最低摩擦路径。',
-            'GPT-4o和Claude Opus 4.7从2025年8月起在EU AI法案下符合GPAI条件。您可以在面向欧盟的部署中使用它们，无需额外的模型级合规工作——您的义务在应用（部署者）级别，而非模型级别。',
+            'GPT-4o和Claude Opus 4.8从2025年8月起在EU AI法案下符合GPAI条件。您可以在面向欧盟的部署中使用它们，无需额外的模型级合规工作——您的义务在应用（部署者）级别，而非模型级别。',
             '布鲁塞尔效应意味着为欧盟居民使用的产品发送到美国托管模型的提示受EU AI法案要求的约束——即使您的公司不以欧盟为基地。',
             '对于多管辖区测试，同时向Mistral（欧盟兼容）、GPT-4o（美国/GPAI）和Qwen（中国可访问）分派相同提示，以在监管环境下对输出进行基准测试。PromptQuorum本质上支持这一点。',
           ],
@@ -3165,14 +3165,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '地区': '欧洲联盟',
               '对提示的法律约束': 'EU AI法案：与欧盟消费者互动的提示生成内容必须包括AI披露。GDPR：提示必须不包含没有法律依据的个人数据。高风险AI应用（人力资源、信贷、医疗）需要人工监督——提示不能自动化最终决策。',
-              '语言优化': '用目标语言（德文、法文等）写提示——GPT-4o和Claude Opus 4.7在非英语任务上表现明显更好，当提示与所需输出使用相同语言时。在系统提示中明确指定输出语言。',
+              '语言优化': '用目标语言（德文、法文等）写提示——GPT-4o和Claude Opus 4.8在非英语任务上表现明显更好，当提示与所需输出使用相同语言时。在系统提示中明确指定输出语言。',
               '推荐模型': 'Mistral Large（法国、欧盟总部）、本地Ollama部署（数据永远不离开基础设施）或GPT-4o/Claude使用欧盟区域API端点和SCC。',
             },
             {
               '地区': '美国',
               '对提示的法律约束': '无联邦AI法，但适用部门规则：HIPAA（医疗——PHI不能出现在提示中）、CCPA/CPRA（加州——提示中的个人数据触发消费者权利）、FTC法案（提示不能在消费者环境中生成欺骗内容）。州生物特征法（伊利诺伊州BIPA）限制处理面部/语音数据的提示。',
-              '语言优化': '美国前沿模型（GPT-4o、Claude Opus 4.7）是英文优化的，在英文提示上达到其天花板表现。对于西班牙语美国市场，在西班牙语中明确指示模型或使用双语系统提示——不要依赖自动检测。',
-              '推荐模型': '通用使用GPT-4o或Claude Opus 4.7。对于受监管的医疗或金融提示，使用API与SCC并避免在提示上下文中发送PHI/PII。',
+              '语言优化': '美国前沿模型（GPT-4o、Claude Opus 4.8）是英文优化的，在英文提示上达到其天花板表现。对于西班牙语美国市场，在西班牙语中明确指示模型或使用双语系统提示——不要依赖自动检测。',
+              '推荐模型': '通用使用GPT-4o或Claude Opus 4.8。对于受监管的医疗或金融提示，使用API与SCC并避免在提示上下文中发送PHI/PII。',
             },
             {
               '地区': '中国',
@@ -3184,13 +3184,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
               '地区': '英国/脱欧后',
               '对提示的法律约束': '英国GDPR（等同于欧盟GDPR）适用于个人数据。英国AI安全研究所关注前沿模型评估，不是应用级合规。无强制AI披露法——英国选择了以创新为先、部门主导的方式。OFCOM在广播环境中监管AI生成内容。',
               '语言优化': '英国英文拼写和习语在提示中改善英国面向内容的输出质量。GPT-4o对系统提示中的显式"英国英文"指令有反应；否则默认为美国英文。',
-              '推荐模型': 'GPT-4o或Claude Opus 4.7。脱欧后的英国-欧盟数据转移需要SCC——欧盟向英国的充分性决定已生效但受审查。',
+              '推荐模型': 'GPT-4o或Claude Opus 4.8。脱欧后的英国-欧盟数据转移需要SCC——欧盟向英国的充分性决定已生效但受审查。',
             },
             {
               '地区': '日本',
               '对提示的法律约束': '日本个人信息保护法（APPI）限制在AI提示中使用个人数据。日本没有AI特定法（截至2026年）——来自METI和内务部的指导是自愿性。日本参与了广岛AI进程——日本企业鼓励遵守其11项原则。',
-              '语言优化': '日文提示在日文语言任务上优于所有主要模型的英文提示。GPT-4o和Claude Opus 4.7很好地处理日文；楽天AI和NTT LLM可用于日本特定部署。避免在系统提示中使用非正式（tame-go）寄存器——礼貌（keigo）框架改善了日本商业环境中的合规和输出质量。',
-              '推荐模型': '通用日文任务使用GPT-4o或Claude Opus 4.7。使用楽天AI（楽天集团）或NTT LLM用于日本国内合规敏感部署。',
+              '语言优化': '日文提示在日文语言任务上优于所有主要模型的英文提示。GPT-4o和Claude Opus 4.8很好地处理日文；楽天AI和NTT LLM可用于日本特定部署。避免在系统提示中使用非正式（tame-go）寄存器——礼貌（keigo）框架改善了日本商业环境中的合规和输出质量。',
+              '推荐模型': '通用日文任务使用GPT-4o或Claude Opus 4.8。使用楽天AI（楽天集团）或NTT LLM用于日本国内合规敏感部署。',
             },
           ],
         },

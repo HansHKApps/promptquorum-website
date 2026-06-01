@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'GPT-3', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'GPT-4', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'ChatGPT', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 1.5 Pro', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'Meta AI', url: 'https://www.meta.com' },
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Year': '2023', 'Milestone': 'Frameworks formalised: CRAFT, CO-STAR, SPECS, RISEN; official guides from OpenAI and Google', 'Why It Matters': 'Turned prompt engineering from personal craft into teachable, shareable practice' },
             { 'Year': '2023–2024', 'Milestone': 'APE paper (Zhou et al.) and DSPy framework — AI-optimised prompts', 'Why It Matters': 'LLMs shown to write prompts as well as humans; automated prompt optimisation became practical' },
             { 'Year': '2024', 'Milestone': 'Llama 3-class models; context windows exceed 1M tokens (Gemini 1.5 Pro)', 'Why It Matters': 'Open-source LLMs for private deployment; massive context shifted focus to context engineering' },
-            { 'Year': '2025 (Q1–Q2)', 'Milestone': 'Extended thinking / reasoning modes: Claude 4.7 Sonnet, OpenAI o3, DeepSeek R1, Gemini Deep Think', 'Why It Matters': 'Models internalize step-by-step reasoning; prompt-level CoT becomes optional on frontier models' },
+            { 'Year': '2025 (Q1–Q2)', 'Milestone': 'Extended thinking / reasoning modes: Claude 4.8 Sonnet, OpenAI o3, DeepSeek R1, Gemini Deep Think', 'Why It Matters': 'Models internalize step-by-step reasoning; prompt-level CoT becomes optional on frontier models' },
             { 'Year': '2025 (Q3–Q4)', 'Milestone': 'LLaMA 4 (MoE); context windows reach 10M tokens on some models', 'Why It Matters': 'Open-weights models reach near-frontier quality; MoE architecture reduces compute costs for self-hosting' },
             { 'Year': '2026', 'Milestone': 'Context design and multi-agent orchestration replace simple prompt tweaking', 'Why It Matters': 'Prompting becomes one layer in a composed context — system-level thinking required; prompt engineering skill embedded in all AI-using roles' },
           ],
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqTest: {
           title: 'PromptQuorum マルチモデルテスト：フレームワークのモデル間での効果',
           content: [
-            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-4o、Claude Opus 4.7、Gemini 1.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
+            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-4o、Claude Opus 4.8、Gemini 1.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
             'PromptQuorumは、この期間に正式化された9つのフレームワーク — CO-STAR、CRAFT、RISEN、SPECS、TRACE、その他4つ — を単一のインターフェースに統合し、実践者が毎回ゼロから構築することなく各構造を適用できるようにしています。',
           ],
         },

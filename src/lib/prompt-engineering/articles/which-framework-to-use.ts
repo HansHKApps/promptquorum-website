@@ -21,11 +21,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Which Prompt Framework Should You Use?',
-        description: 'How to choose the right prompt framework for GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro, and local models — and how PromptQuorum automates framework selection.',
+        description: 'How to choose the right prompt framework for GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models — and how PromptQuorum automates framework selection.',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use',
-        keywords: ['prompt frameworks', 'prompt engineering', 'GPT-4o', 'Claude Opus 4.7', 'Gemini 3.1 Pro', 'PromptQuorum'],
+        keywords: ['prompt frameworks', 'prompt engineering', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'name': 'Choose the Right Prompt Framework',
         'step': [
           { '@type': 'HowToStep', 'name': 'Identify Your Task Type', 'text': 'Determine if you need structured reasoning (Chain-of-Thought), tool use (ReAct), multi-step thinking (Tree-of-Thought), or creative output. Task type drives framework choice.' },
-          { '@type': 'HowToStep', 'name': 'Check Model Compatibility', 'text': 'Some frameworks work better with specific models. GPT-4o and Claude Opus 4.7 handle complex frameworks. Local models via Ollama may prefer simpler structures.' },
+          { '@type': 'HowToStep', 'name': 'Check Model Compatibility', 'text': 'Some frameworks work better with specific models. GPT-4o and Claude Opus 4.8 handle complex frameworks. Local models via Ollama may prefer simpler structures.' },
           { '@type': 'HowToStep', 'name': 'Test Framework on Your Data', 'text': 'Run your task with 2–3 candidate frameworks. Measure output quality, latency, and cost. Pick the framework with the best results for your use case.' },
           { '@type': 'HowToStep', 'name': 'Document Your Choice', 'text': 'Record which framework you chose and why in your prompt library. This makes results reproducible across teams and models.' }
         ]
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'Do prompt frameworks work with local LLMs like Ollama?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Frameworks work with GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro, and local models via Ollama or LM Studio. Some complex frameworks (e.g., Tree-of-Thought) may require larger local models (13B+).' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Frameworks work with GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models via Ollama or LM Studio. Some complex frameworks (e.g., Tree-of-Thought) may require larger local models (13B+).' }
           },
           {
             '@type': 'Question',
@@ -78,14 +78,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatFrameworksDo: {
           title: 'What Prompt Frameworks Actually Do',
           content: [
-            '**Prompt frameworks give you a repeatable structure for prompts so that GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro, and other models know exactly what role to take, what context to use, and how to format outputs.** A framework is not a model feature; it is a template that controls how you talk to the model. When you use a consistent framework, you reduce hallucination risk because the model receives clearer objectives, constraints, and output formats.',
+            '**Prompt frameworks give you a repeatable structure for prompts so that GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and other models know exactly what role to take, what context to use, and how to format outputs.** A framework is not a model feature; it is a template that controls how you talk to the model. When you use a consistent framework, you reduce hallucination risk because the model receives clearer objectives, constraints, and output formats.',
             'Most frameworks decompose a prompt into building blocks such as objective, role, context, constraints, and format. This structure turns a vague request like "help me with this" into a well-specified task with measurable quality. In practice, frameworks are especially helpful when you need reproducible outputs across different models and providers such as OpenAI, Anthropic, and Google DeepMind.',
           ],
         },
         frameworksAtAGlance: {
           title: 'The Major Prompt Frameworks at a Glance',
           content: [
-            '**The main prompt frameworks differ in their focus: some optimize for structured reasoning, others for creativity, and others for crisp specifications.** For multi-model work across GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro, and local models via Ollama or LM Studio, you will usually rotate between a small set of well-tested frameworks.',
+            '**The main prompt frameworks differ in their focus: some optimize for structured reasoning, others for creativity, and others for crisp specifications.** For multi-model work across GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models via Ollama or LM Studio, you will usually rotate between a small set of well-tested frameworks.',
             'Here are the most common frameworks and what they are best for:',
           ],
           columns: ['Framework', 'Best for', 'Core idea'],
@@ -118,13 +118,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'You need strict JSON with fixed fields across GPT-4o and Gemini 3.1 Pro, which points to a specification-heavy framework like SPECS.',
             'You are exploring product positioning ideas and care more about divergent options than strict structure, which points to CRAFT.',
-            'You are debugging a complex reasoning failure in Claude Opus 4.7 and need explicit step-by-step thinking, which points to TRACE or a chain-of-thought style framework.',
+            'You are debugging a complex reasoning failure in Claude Opus 4.8 and need explicit step-by-step thinking, which points to TRACE or a chain-of-thought style framework.',
           ],
         },
         howPQHandlesFrameworks: {
           title: 'How PromptQuorum Handles Frameworks for You',
           content: [
-            '**PromptQuorum is a multi-model AI dispatch tool that includes the main prompt frameworks, an automatic framework selector, and a custom framework editor so that you do not have to manage templates manually.** PromptQuorum can send one prompt, structured with your chosen framework, to GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro, and local models via Ollama or LM Studio in parallel.',
+            '**PromptQuorum is a multi-model AI dispatch tool that includes the main prompt frameworks, an automatic framework selector, and a custom framework editor so that you do not have to manage templates manually.** PromptQuorum can send one prompt, structured with your chosen framework, to GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models via Ollama or LM Studio in parallel.',
             'Inside PromptQuorum, you can:',
           ],
           items: [
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '"Look at this data and tell me what you think."',
             '**[Good Prompt]**',
             '"You are a data analyst. Scope: Analyze the attached sales data for Q1 2026 in the EU market. Purpose: Identify the three most important trends that a VP of Sales should know before planning Q2. Examples: Structure insights as numbered findings with one sentence per finding. Constraints: Do not invent data; if a metric is missing, say "not in dataset". Steps: 1) Describe overall trend, 2) Highlight country-level outliers, 3) Suggest one concrete action per finding."',
-            'In PromptQuorum, you can store this structure as a reusable framework and apply it to GPT-4o, Claude Opus 4.7, and Gemini 3.1 Pro in parallel, then compare how each model handles the same specification.',
+            'In PromptQuorum, you can store this structure as a reusable framework and apply it to GPT-4o, Claude Opus 4.8, and Gemini 3.1 Pro in parallel, then compare how each model handles the same specification.',
           ],
         },
         conclusion: {
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What is the best prompt framework for all tasks?', a: 'There is no universal best framework. Chain-of-Thought works for reasoning, ReAct for tool use, Tree-of-Thought for complex multi-step tasks. Test frameworks on your specific task to find the best fit.' },
-            { q: 'Do prompt frameworks work with local LLMs like Ollama?', a: 'Yes. Frameworks work with GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro, and local models via Ollama or LM Studio. Some complex frameworks (e.g., Tree-of-Thought) may require larger local models (13B+).' },
+            { q: 'Do prompt frameworks work with local LLMs like Ollama?', a: 'Yes. Frameworks work with GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models via Ollama or LM Studio. Some complex frameworks (e.g., Tree-of-Thought) may require larger local models (13B+).' },
             { q: 'Can I switch frameworks for the same task?', a: 'Yes. Framework choice is iterative. If Chain-of-Thought produces slow results, switch to a simpler method. If outputs lack detail, upgrade to Tree-of-Thought. Test and iterate based on results.' },
             { q: 'How do I know which framework is best for my task?', a: 'Start by identifying your task type: Are you optimizing for reasoning depth, creativity, speed, or precise structured output? Then match it to a framework (CoT for reasoning, CRAFT for creativity, SPECS for precision). Test 2–3 frameworks and compare outputs.' },
             { q: 'Can I combine multiple frameworks in one prompt?', a: 'Yes. Layering frameworks is common. Use CO-STAR to set context and audience, then add Chain-of-Thought for reasoning, then SPECS for output constraints. The key is clarity—make sure the model understands each component.' },
@@ -221,10 +221,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/de/prompt-engineering/which-prompt-framework-should-you-use',
         headline: 'Welches Prompt-Framework ist das richtige für Sie? (2026)',
-        description: 'Vergleich der wichtigsten Prompt-Frameworks: CO-STAR, CRAFT, SPECS, RISEN, TRACE. Wählen Sie das richtige Framework für GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle.',
+        description: 'Vergleich der wichtigsten Prompt-Frameworks: CO-STAR, CRAFT, SPECS, RISEN, TRACE. Wählen Sie das richtige Framework für GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle.',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['Prompt-Frameworks', 'Prompt Engineering', 'GPT-4o', 'Claude Opus 4.7', 'Gemini 3.1 Pro', 'PromptQuorum'],
+        keywords: ['Prompt-Frameworks', 'Prompt Engineering', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'name': 'Das richtige Prompt-Framework wählen',
         'step': [
           { '@type': 'HowToStep', 'name': 'Identifizieren Sie Ihren Aufgabentyp', 'text': 'Bestimmen Sie, ob Sie strukturiertes Reasoning (Chain-of-Thought), Werkzeugnutzung (ReAct), mehrstufiges Denken (Tree-of-Thought) oder kreative Ausgaben benötigen. Der Aufgabentyp bestimmt die Framework-Wahl.' },
-          { '@type': 'HowToStep', 'name': 'Überprüfen Sie die Modellkompatibilität', 'text': 'Einige Frameworks funktionieren besser mit bestimmten Modellen. GPT-4o und Claude Opus 4.7 handhaben komplexe Frameworks. Lokale Modelle via Ollama bevorzugen einfachere Strukturen.' },
+          { '@type': 'HowToStep', 'name': 'Überprüfen Sie die Modellkompatibilität', 'text': 'Einige Frameworks funktionieren besser mit bestimmten Modellen. GPT-4o und Claude Opus 4.8 handhaben komplexe Frameworks. Lokale Modelle via Ollama bevorzugen einfachere Strukturen.' },
           { '@type': 'HowToStep', 'name': 'Testen Sie das Framework mit Ihren Daten', 'text': 'Testen Sie Ihre Aufgabe mit 2–3 Kandidaten-Frameworks. Messen Sie Ausgabequalität, Latenz und Kosten. Wählen Sie das Framework mit den besten Ergebnissen.' },
           { '@type': 'HowToStep', 'name': 'Dokumentieren Sie Ihre Wahl', 'text': 'Verzeichnen Sie, welches Framework Sie gewählt haben und warum, in Ihrer Prompt-Bibliothek. So werden Ergebnisse über Teams und Modelle hinweg reproduzierbar.' }
         ]
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'Funktionieren Prompt-Frameworks mit lokalen LLMs wie Ollama?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Frameworks funktionieren mit GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro und lokalen Modellen via Ollama oder LM Studio. Einige komplexe Frameworks benötigen größere lokale Modelle (13B+).' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Frameworks funktionieren mit GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokalen Modellen via Ollama oder LM Studio. Einige komplexe Frameworks benötigen größere lokale Modelle (13B+).' }
           },
           {
             '@type': 'Question',
@@ -264,14 +264,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatFrameworksDo: {
           title: 'Was Prompt-Frameworks tatsächlich leisten',
           content: [
-            '**Prompt-Frameworks geben Ihnen eine wiederholbare Struktur für Prompts, sodass GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro und andere Modelle genau wissen, welche Rolle sie einnehmen, welchen Kontext sie verwenden und wie sie Ausgaben formatieren sollen.** Ein Framework ist kein Modellemerkmal; es ist eine Vorlage, die steuert, wie Sie mit dem Modell sprechen. Wenn Sie ein konsistentes Framework verwenden, reduzieren Sie das Halluzinationsrisiko, da das Modell klarere Ziele, Einschränkungen und Ausgabeformate erhält.',
+            '**Prompt-Frameworks geben Ihnen eine wiederholbare Struktur für Prompts, sodass GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und andere Modelle genau wissen, welche Rolle sie einnehmen, welchen Kontext sie verwenden und wie sie Ausgaben formatieren sollen.** Ein Framework ist kein Modellemerkmal; es ist eine Vorlage, die steuert, wie Sie mit dem Modell sprechen. Wenn Sie ein konsistentes Framework verwenden, reduzieren Sie das Halluzinationsrisiko, da das Modell klarere Ziele, Einschränkungen und Ausgabeformate erhält.',
             'Die meisten Frameworks zerlegen einen Prompt in Bausteine wie Ziel, Rolle, Kontext, Einschränkungen und Format. Diese Struktur verwandelt eine vage Anfrage wie „hilf mir damit" in eine klar spezifizierte Aufgabe mit messbarer Qualität. In der Praxis sind Frameworks besonders hilfreich, wenn Sie reproduzierbare Ausgaben über verschiedene Modelle und Anbieter wie OpenAI, Anthropic und Google DeepMind hinweg benötigen.',
           ],
         },
         frameworksAtAGlance: {
           title: 'Die wichtigsten Prompt-Frameworks im Überblick',
           content: [
-            '**Die wichtigsten Prompt-Frameworks unterscheiden sich in ihrem Fokus: Einige optimieren für strukturiertes Reasoning, andere für Kreativität, wieder andere für präzise Spezifikationen.** Bei der Arbeit mit mehreren Modellen — GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro und lokalen Modellen über Ollama oder LM Studio — wechseln Sie in der Regel zwischen einer kleinen Auswahl erprobter Frameworks.',
+            '**Die wichtigsten Prompt-Frameworks unterscheiden sich in ihrem Fokus: Einige optimieren für strukturiertes Reasoning, andere für Kreativität, wieder andere für präzise Spezifikationen.** Bei der Arbeit mit mehreren Modellen — GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokalen Modellen über Ollama oder LM Studio — wechseln Sie in der Regel zwischen einer kleinen Auswahl erprobter Frameworks.',
             'Hier sind die gängigsten Frameworks und ihre optimalen Einsatzgebiete:',
           ],
           columns: ['Framework', 'Am besten für', 'Kernidee'],
@@ -304,13 +304,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Sie benötigen striktes JSON mit festen Feldern über GPT-4o und Gemini 3.1 Pro hinweg — das deutet auf ein spezifikationslastiges Framework wie SPECS hin.',
             'Sie erkunden Produkt-Positionierungsideen und legen mehr Wert auf divergente Optionen als auf strikte Struktur — das deutet auf CRAFT hin.',
-            'Sie debuggen einen komplexen Reasoning-Fehler in Claude Opus 4.7 und benötigen explizites Schritt-für-Schritt-Denken — das deutet auf TRACE oder ein Chain-of-Thought-Framework hin.',
+            'Sie debuggen einen komplexen Reasoning-Fehler in Claude Opus 4.8 und benötigen explizites Schritt-für-Schritt-Denken — das deutet auf TRACE oder ein Chain-of-Thought-Framework hin.',
           ],
         },
         howPQHandlesFrameworks: {
           title: 'Wie PromptQuorum Frameworks für Sie verwaltet',
           content: [
-            '**PromptQuorum ist ein Multi-Modell-KI-Dispatch-Tool mit den wichtigsten Prompt-Frameworks, einem automatischen Framework-Selektor und einem benutzerdefinierten Framework-Editor, damit Sie Vorlagen nicht manuell pflegen müssen.** PromptQuorum kann einen Prompt, strukturiert mit Ihrem gewählten Framework, gleichzeitig an GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro und lokale Modelle über Ollama oder LM Studio senden.',
+            '**PromptQuorum ist ein Multi-Modell-KI-Dispatch-Tool mit den wichtigsten Prompt-Frameworks, einem automatischen Framework-Selektor und einem benutzerdefinierten Framework-Editor, damit Sie Vorlagen nicht manuell pflegen müssen.** PromptQuorum kann einen Prompt, strukturiert mit Ihrem gewählten Framework, gleichzeitig an GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle über Ollama oder LM Studio senden.',
             'In PromptQuorum können Sie:',
           ],
           items: [
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '"Schau dir diese Daten an und sag mir, was du denkst."',
             '**[Guter Prompt]**',
             '"Du bist Datenanalyst. Umfang: Analysiere die beigefügten Umsatzdaten für Q1 2026 im EU-Markt. Zweck: Identifiziere die drei wichtigsten Trends, die ein VP Sales vor der Q2-Planung kennen sollte. Beispiele: Strukturiere Erkenntnisse als nummerierte Befunde mit einem Satz pro Befund. Einschränkungen: Erfinde keine Daten; wenn eine Kennzahl fehlt, schreibe nicht im Datensatz. Schritte: 1) Gesamttrend beschreiben, 2) Länderspezifische Ausreißer hervorheben, 3) Eine konkrete Maßnahme pro Befund vorschlagen."',
-            'In PromptQuorum können Sie diese Struktur als wiederverwendbares Framework speichern und gleichzeitig auf GPT-4o, Claude Opus 4.7 und Gemini 3.1 Pro anwenden, um zu vergleichen, wie jedes Modell mit derselben Spezifikation umgeht.',
+            'In PromptQuorum können Sie diese Struktur als wiederverwendbares Framework speichern und gleichzeitig auf GPT-4o, Claude Opus 4.8 und Gemini 3.1 Pro anwenden, um zu vergleichen, wie jedes Modell mit derselben Spezifikation umgeht.',
           ],
         },
         conclusion: {
@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Häufig Gestellte Fragen',
           faqs: [
             { q: 'Was ist das beste Prompt-Framework für alle Aufgaben?', a: 'Es gibt kein universelles bestes Framework. Chain-of-Thought funktioniert für Reasoning, ReAct für Tool-Nutzung, Tree-of-Thought für komplexe mehrstufige Aufgaben. Testen Sie Frameworks auf Ihrer spezifischen Aufgabe, um die beste Lösung zu finden.' },
-            { q: 'Funktionieren Prompt-Frameworks mit lokalen LLMs wie Ollama?', a: 'Ja. Frameworks funktionieren mit GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro und lokalen Modellen via Ollama oder LM Studio. Einige komplexe Frameworks (z.B. Tree-of-Thought) erfordern möglicherweise größere lokale Modelle (13B+).' },
+            { q: 'Funktionieren Prompt-Frameworks mit lokalen LLMs wie Ollama?', a: 'Ja. Frameworks funktionieren mit GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokalen Modellen via Ollama oder LM Studio. Einige komplexe Frameworks (z.B. Tree-of-Thought) erfordern möglicherweise größere lokale Modelle (13B+).' },
             { q: 'Kann ich Frameworks für die gleiche Aufgabe wechseln?', a: 'Ja. Framework-Wahl ist iterativ. Wenn Chain-of-Thought langsame Ergebnisse liefert, wechseln Sie zu einer einfacheren Methode. Wenn Ausgaben zu wenig Detail haben, upgraden Sie auf Tree-of-Thought. Testen und iterieren Sie basierend auf Ergebnissen.' },
             { q: 'Wie weiß ich, welches Framework das beste für meine Aufgabe ist?', a: 'Beginnen Sie damit, Ihren Aufgabentyp zu identifizieren: Optimieren Sie für Reasoning-Tiefe, Kreativität, Geschwindigkeit oder präzise strukturierte Ausgabe? Dann ordnen Sie ihn einem Framework zu (CoT für Reasoning, CRAFT für Kreativität, SPECS für Präzision). Testen Sie 2–3 Frameworks und vergleichen Sie Ausgaben.' },
             { q: 'Kann ich mehrere Frameworks in einem Prompt kombinieren?', a: 'Ja. Das Schichten von Frameworks ist üblich. Verwenden Sie CO-STAR zur Festlegung von Kontext und Audience, fügen Sie dann Chain-of-Thought für Reasoning hinzu, dann SPECS für Output-Einschränkungen. Das Wichtigste ist Klarheit—stellen Sie sicher, dass das Modell jede Komponente versteht.' },
@@ -408,10 +408,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/es/prompt-engineering/which-prompt-framework-should-you-use?lang=es',
         inLanguage: 'es',
         headline: '¿Qué framework de prompts deberías usar?',
-        description: 'Cómo elegir el framework de prompt correcto para GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales — y cómo PromptQuorum automatiza la selección de frameworks.',
+        description: 'Cómo elegir el framework de prompt correcto para GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales — y cómo PromptQuorum automatiza la selección de frameworks.',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-4o', 'Claude Opus 4.7', 'Gemini 3.1 Pro', 'PromptQuorum'],
+        keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.7', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Elegir el Framework de Prompt Correcto',
         step: [
           { '@type': 'HowToStep', name: 'Identifica tu tipo de tarea', text: 'Determina si necesitas razonamiento estructurado (Chain-of-Thought), uso de herramientas (ReAct), pensamiento multi-paso (Tree-of-Thought) o output creativo. El tipo de tarea guía la elección del framework.' },
-          { '@type': 'HowToStep', name: 'Verifica la compatibilidad con el modelo', text: 'Algunos frameworks funcionan mejor con modelos específicos. GPT-4o y Claude Opus 4.7 manejan frameworks complejos. Los modelos locales via Ollama pueden preferir estructuras más simples.' },
+          { '@type': 'HowToStep', name: 'Verifica la compatibilidad con el modelo', text: 'Algunos frameworks funcionan mejor con modelos específicos. GPT-4o y Claude Opus 4.8 manejan frameworks complejos. Los modelos locales via Ollama pueden preferir estructuras más simples.' },
           { '@type': 'HowToStep', name: 'Prueba el framework con tus datos', text: 'Ejecuta tu tarea con 2-3 frameworks candidatos. Mide la calidad del output, latencia y costo. Elige el framework con mejores resultados para tu caso de uso.' },
           { '@type': 'HowToStep', name: 'Documenta tu elección', text: 'Registra qué framework elegiste y por qué en tu biblioteca de prompts. Esto hace los resultados reproducibles entre equipos y modelos.' }
         ]
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '¿Los frameworks de prompt funcionan con LLMs locales como Ollama?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los frameworks funcionan con GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio. Algunos frameworks complejos (ej., Tree-of-Thought) pueden requerir modelos locales más grandes (13B+).' }
+            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los frameworks funcionan con GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio. Algunos frameworks complejos (ej., Tree-of-Thought) pueden requerir modelos locales más grandes (13B+).' }
           },
           {
             '@type': 'Question',
@@ -464,14 +464,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatFrameworksDo: {
           title: 'Lo que los frameworks de prompt realmente hacen',
           content: [
-            '**Los frameworks de prompt te dan una estructura repetible para los prompts para que GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y otros modelos sepan exactamente qué rol adoptar, qué contexto usar y cómo formatear los outputs.** Un framework no es una característica del modelo; es una plantilla que controla cómo hablas con el modelo. Cuando usas un framework consistente, reduces el riesgo de alucinaciones porque el modelo recibe objetivos, restricciones y formatos de output más claros.',
+            '**Los frameworks de prompt te dan una estructura repetible para los prompts para que GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y otros modelos sepan exactamente qué rol adoptar, qué contexto usar y cómo formatear los outputs.** Un framework no es una característica del modelo; es una plantilla que controla cómo hablas con el modelo. Cuando usas un framework consistente, reduces el riesgo de alucinaciones porque el modelo recibe objetivos, restricciones y formatos de output más claros.',
             'La mayoría de los frameworks descomponen un prompt en bloques de construcción como objetivo, rol, contexto, restricciones y formato. Esta estructura convierte una solicitud vaga como "ayúdame con esto" en una tarea bien especificada con calidad medible. En la práctica, los frameworks son especialmente útiles cuando necesitas outputs reproducibles en diferentes modelos y proveedores como OpenAI, Anthropic y Google DeepMind.',
           ],
         },
         frameworksAtAGlance: {
           title: 'Los principales frameworks de prompt de un vistazo',
           content: [
-            '**Los principales frameworks de prompt difieren en su enfoque: algunos optimizan el razonamiento estructurado, otros la creatividad y otros las especificaciones precisas.** Para trabajo multi-modelo entre GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio, generalmente rotarás entre un pequeño conjunto de frameworks bien probados.',
+            '**Los principales frameworks de prompt difieren en su enfoque: algunos optimizan el razonamiento estructurado, otros la creatividad y otros las especificaciones precisas.** Para trabajo multi-modelo entre GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio, generalmente rotarás entre un pequeño conjunto de frameworks bien probados.',
             'Aquí están los frameworks más comunes y para qué son mejores:',
           ],
           columns: ['Framework', 'Mejor para', 'Idea central'],
@@ -504,13 +504,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Necesitas JSON estricto con campos fijos en GPT-4o y Gemini 3.1 Pro, lo que apunta a un framework con muchas especificaciones como SPECS.',
             'Estás explorando ideas de posicionamiento de producto y te importan más las opciones divergentes que la estructura estricta, lo que apunta a CRAFT.',
-            'Estás depurando un fallo de razonamiento complejo en Claude Opus 4.7 y necesitas pensamiento paso a paso explícito, lo que apunta a TRACE o un framework de estilo chain-of-thought.',
+            'Estás depurando un fallo de razonamiento complejo en Claude Opus 4.8 y necesitas pensamiento paso a paso explícito, lo que apunta a TRACE o un framework de estilo chain-of-thought.',
           ],
         },
         howPQHandlesFrameworks: {
           title: 'Cómo PromptQuorum maneja los frameworks por ti',
           content: [
-            '**PromptQuorum es una herramienta de despacho de IA multi-modelo que incluye los principales frameworks de prompt, un selector automático de frameworks y un editor de frameworks personalizados para que no tengas que gestionar plantillas manualmente.** PromptQuorum puede enviar un prompt, estructurado con tu framework elegido, a GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio en paralelo.',
+            '**PromptQuorum es una herramienta de despacho de IA multi-modelo que incluye los principales frameworks de prompt, un selector automático de frameworks y un editor de frameworks personalizados para que no tengas que gestionar plantillas manualmente.** PromptQuorum puede enviar un prompt, estructurado con tu framework elegido, a GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio en paralelo.',
             'Dentro de PromptQuorum, puedes:',
           ],
           items: [
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '"Mira estos datos y dime qué piensas."',
             '**[Prompt Bueno]**',
             '"Eres un analista de datos. Alcance: Analiza los datos de ventas adjuntos del Q1 2026 en el mercado UE. Propósito: Identifica las tres tendencias más importantes que un VP de Ventas debería conocer antes de planificar el Q2. Ejemplos: Estructura los insights como hallazgos numerados con una oración por hallazgo. Restricciones: No inventes datos; si falta una métrica, di \'no está en el conjunto de datos\'. Pasos: 1) Describe la tendencia general, 2) Destaca los valores atípicos a nivel de país, 3) Sugiere una acción concreta por hallazgo."',
-            'En PromptQuorum, puedes almacenar esta estructura como un framework reutilizable y aplicarla a GPT-4o, Claude Opus 4.7 y Gemini 3.1 Pro en paralelo, luego comparar cómo cada modelo maneja la misma especificación.',
+            'En PromptQuorum, puedes almacenar esta estructura como un framework reutilizable y aplicarla a GPT-4o, Claude Opus 4.8 y Gemini 3.1 Pro en paralelo, luego comparar cómo cada modelo maneja la misma especificación.',
           ],
         },
         conclusion: {
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Cuál es el mejor framework de prompt para todas las tareas?', a: 'No hay un mejor framework universal. Chain-of-Thought funciona para el razonamiento, ReAct para el uso de herramientas, Tree-of-Thought para tareas complejas multi-paso. Prueba frameworks en tu tarea específica para encontrar el mejor ajuste.' },
-            { q: '¿Los frameworks de prompt funcionan con LLMs locales como Ollama?', a: 'Sí. Los frameworks funcionan con GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio. Algunos frameworks complejos (ej., Tree-of-Thought) pueden requerir modelos locales más grandes (13B+).' },
+            { q: '¿Los frameworks de prompt funcionan con LLMs locales como Ollama?', a: 'Sí. Los frameworks funcionan con GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales via Ollama o LM Studio. Algunos frameworks complejos (ej., Tree-of-Thought) pueden requerir modelos locales más grandes (13B+).' },
             { q: '¿Puedo cambiar de framework para la misma tarea?', a: 'Sí. La elección del framework es iterativa. Si Chain-of-Thought produce resultados lentos, cambia a un método más simple. Si los outputs carecen de detalle, actualiza a Tree-of-Thought. Prueba e itera según los resultados.' },
             { q: '¿Cómo sé qué framework es el mejor para mi tarea?', a: 'Empieza identificando tu tipo de tarea: ¿Estás optimizando para profundidad de razonamiento, creatividad, velocidad o output estructurado preciso? Luego emparéjalo con un framework (CoT para razonamiento, CRAFT para creatividad, SPECS para precisión). Prueba 2-3 frameworks y compara outputs.' },
             { q: '¿Puedo combinar múltiples frameworks en un solo prompt?', a: 'Sí. Combinar frameworks es común. Usa CO-STAR para establecer contexto y audiencia, luego añade Chain-of-Thought para el razonamiento, luego SPECS para restricciones de output. La clave es la claridad — asegúrate de que el modelo entienda cada componente.' },
@@ -607,10 +607,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/prompt-engineering/which-prompt-framework-should-you-use',
         headline: 'Quel framework de prompt choisir ? (2026)',
-        description: 'Comparaison des frameworks de prompt majeurs : CO-STAR, CRAFT, SPECS, RISEN, TRACE. Choisissez le bon framework pour GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro et modèles locaux.',
+        description: 'Comparaison des frameworks de prompt majeurs : CO-STAR, CRAFT, SPECS, RISEN, TRACE. Choisissez le bon framework pour GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro et modèles locaux.',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-4o', 'Claude Opus 4.7', 'Gemini 3.1 Pro', 'PromptQuorum'],
+        keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
@@ -620,7 +620,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'name': 'Choisir le bon framework de prompt',
         'step': [
           { '@type': 'HowToStep', 'name': 'Identifiez votre type de tâche', 'text': 'Déterminez si vous avez besoin de raisonnement structuré (Chain-of-Thought), d\'utilisation d\'outils (ReAct), de pensée multi-étapes (Tree-of-Thought) ou de créativité. Le type de tâche détermine le choix du framework.' },
-          { '@type': 'HowToStep', 'name': 'Vérifiez la compatibilité du modèle', 'text': 'Certains frameworks fonctionnent mieux avec des modèles spécifiques. GPT-4o et Claude Opus 4.7 gèrent les frameworks complexes. Les modèles locaux via Ollama préfèrent les structures plus simples.' },
+          { '@type': 'HowToStep', 'name': 'Vérifiez la compatibilité du modèle', 'text': 'Certains frameworks fonctionnent mieux avec des modèles spécifiques. GPT-4o et Claude Opus 4.8 gèrent les frameworks complexes. Les modèles locaux via Ollama préfèrent les structures plus simples.' },
           { '@type': 'HowToStep', 'name': 'Testez le framework avec vos données', 'text': 'Testez votre tâche avec 2–3 frameworks candidats. Mesurez la qualité, la latence et le coût. Choisissez le framework avec les meilleurs résultats.' },
           { '@type': 'HowToStep', 'name': 'Documentez votre choix', 'text': 'Enregistrez quel framework vous avez choisi et pourquoi, dans votre bibliothèque de prompts. Cela rend les résultats reproductibles sur les équipes et les modèles.' }
         ]
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'Les frameworks de prompt fonctionnent-ils avec les LLM locaux comme Ollama ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Les frameworks fonctionnent avec GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro et les modèles locaux via Ollama ou LM Studio. Certains frameworks complexes nécessitent des modèles locaux plus grands (13B+).' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Les frameworks fonctionnent avec GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux via Ollama ou LM Studio. Certains frameworks complexes nécessitent des modèles locaux plus grands (13B+).' }
           },
           {
             '@type': 'Question',
@@ -650,14 +650,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatFrameworksDo: {
           title: 'Ce que font réellement les frameworks de prompt',
           content: [
-            '**Les frameworks de prompt vous donnent une structure répétable pour que GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro et autres modèles sachent exactement quel rôle adopter, quel contexte utiliser et comment formater les sorties.** Un framework n\'est pas une fonctionnalité du modèle : c\'est un gabarit qui contrôle la façon dont vous communiquez avec lui. Un framework cohérent réduit le risque d\'hallucination car le modèle reçoit des objectifs, des contraintes et des formats de sortie plus clairs.',
+            '**Les frameworks de prompt vous donnent une structure répétable pour que GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro et autres modèles sachent exactement quel rôle adopter, quel contexte utiliser et comment formater les sorties.** Un framework n\'est pas une fonctionnalité du modèle : c\'est un gabarit qui contrôle la façon dont vous communiquez avec lui. Un framework cohérent réduit le risque d\'hallucination car le modèle reçoit des objectifs, des contraintes et des formats de sortie plus clairs.',
             'La plupart des frameworks décomposent un prompt en blocs : objectif, rôle, contexte, contraintes et format. Cette structure transforme une demande vague comme « aide-moi avec ça » en tâche précise à qualité mesurable.',
           ],
         },
         frameworksAtAGlance: {
           title: 'Les principaux frameworks de prompt en un coup d\'œil',
           content: [
-            '**Les frameworks se distinguent par leur approche : certains optimisent le raisonnement structuré, d\'autres la créativité, d\'autres encore la précision des spécifications.** Pour un travail multi-modèles (GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro, modèles locaux via Ollama), vous alternerez généralement entre quelques frameworks éprouvés.',
+            '**Les frameworks se distinguent par leur approche : certains optimisent le raisonnement structuré, d\'autres la créativité, d\'autres encore la précision des spécifications.** Pour un travail multi-modèles (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, modèles locaux via Ollama), vous alternerez généralement entre quelques frameworks éprouvés.',
             'Les frameworks les plus courants et leurs usages optimaux :',
           ],
           columns: ['Framework', 'Idéal pour', 'Concept clé'],
@@ -690,13 +690,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Vous avez besoin de JSON strict avec des champs fixes sur GPT-4o et Gemini 3.1 Pro → framework lourd en spécifications comme SPECS.',
             'Vous explorez des idées de positionnement produit et valorisez les options divergentes plutôt que la structure stricte → CRAFT.',
-            'Vous déboguez un raisonnement complexe dans Claude Opus 4.7 et avez besoin d\'un raisonnement pas-à-pas explicite → TRACE ou framework chain-of-thought.',
+            'Vous déboguez un raisonnement complexe dans Claude Opus 4.8 et avez besoin d\'un raisonnement pas-à-pas explicite → TRACE ou framework chain-of-thought.',
           ],
         },
         howPQHandlesFrameworks: {
           title: 'Comment PromptQuorum gère les frameworks',
           content: [
-            '**PromptQuorum est un outil de dispatch IA multi-modèles avec les principaux frameworks intégrés, un sélecteur automatique et un éditeur personnalisé — sans gestion manuelle des gabarits.** PromptQuorum peut envoyer un prompt structuré avec votre framework choisi simultanément à GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro et aux modèles locaux via Ollama ou LM Studio.',
+            '**PromptQuorum est un outil de dispatch IA multi-modèles avec les principaux frameworks intégrés, un sélecteur automatique et un éditeur personnalisé — sans gestion manuelle des gabarits.** PromptQuorum peut envoyer un prompt structuré avec votre framework choisi simultanément à GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro et aux modèles locaux via Ollama ou LM Studio.',
             'Dans PromptQuorum, vous pouvez :',
           ],
           items: [
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '« Regarde ces données et dis-moi ce que tu en penses. »',
             '**[Bon prompt]**',
             '« Tu es analyste de données. Périmètre : analyse les données de ventes Q1 2026 sur le marché UE. Objectif : identifie les trois tendances les plus importantes qu\'un VP Ventes doit connaître avant de planifier le Q2. Exemples : structure les insights en constats numérotés, une phrase par constat. Contraintes : n\'invente pas de données ; si une métrique manque, écris "absent du jeu de données". Étapes : 1) décrire la tendance globale, 2) mettre en évidence les outliers par pays, 3) proposer une action concrète par constat. »',
-            'Dans PromptQuorum, vous pouvez stocker cette structure comme framework réutilisable et l\'appliquer en parallèle à GPT-4o, Claude Opus 4.7 et Gemini 3.1 Pro.',
+            'Dans PromptQuorum, vous pouvez stocker cette structure comme framework réutilisable et l\'appliquer en parallèle à GPT-4o, Claude Opus 4.8 et Gemini 3.1 Pro.',
           ],
         },
         conclusion: {
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Questions Fréquemment Posées',
           faqs: [
             { q: 'Quel est le meilleur framework de prompt pour toutes les tâches ?', a: 'Il n\'y a pas de meilleur framework universel. Chain-of-Thought fonctionne pour le raisonnement, ReAct pour l\'utilisation d\'outils, Tree-of-Thought pour les tâches complexes multi-étapes. Testez les frameworks sur votre tâche spécifique pour trouver la meilleure solution.' },
-            { q: 'Les frameworks de prompt fonctionnent-ils avec les LLMs locaux comme Ollama ?', a: 'Oui. Les frameworks fonctionnent avec GPT-4o, Claude Opus 4.7, Gemini 3.1 Pro et les modèles locaux via Ollama ou LM Studio. Certains frameworks complexes (par exemple, Tree-of-Thought) peuvent nécessiter des modèles locaux plus grands (13B+).' },
+            { q: 'Les frameworks de prompt fonctionnent-ils avec les LLMs locaux comme Ollama ?', a: 'Oui. Les frameworks fonctionnent avec GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux via Ollama ou LM Studio. Certains frameworks complexes (par exemple, Tree-of-Thought) peuvent nécessiter des modèles locaux plus grands (13B+).' },
             { q: 'Puis-je changer de framework pour la même tâche ?', a: 'Oui. Le choix du framework est itératif. Si Chain-of-Thought produit des résultats lents, passez à une méthode plus simple. Si les résultats manquent de détails, passez à Tree-of-Thought. Testez et itérez en fonction des résultats.' },
             { q: 'Comment savoir quel framework est le meilleur pour ma tâche ?', a: 'Commencez par identifier le type de votre tâche : Optimisez-vous pour la profondeur du raisonnement, la créativité, la vitesse ou une sortie structurée précise ? Ensuite, associez-le à un framework (CoT pour le raisonnement, CRAFT pour la créativité, SPECS pour la précision). Testez 2–3 frameworks et comparez les résultats.' },
             { q: 'Puis-je combiner plusieurs frameworks dans un seul prompt ?', a: 'Oui. Superposer les frameworks est courant. Utilisez CO-STAR pour définir le contexte et l\'audience, puis ajoutez Chain-of-Thought pour le raisonnement, puis SPECS pour les contraintes de sortie. L\'essentiel est la clarté—assurez-vous que le modèle comprend chaque composant.' },
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Chain-of-Thought、ReAct、Tree-of-Thoughtを比較。ユースケース別に選べるフレームワーク。メリット・デメリット解説。',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['プロンプトフレームワーク', 'プロンプトエンジニアリング', 'GPT-4o', 'Claude Opus 4.7', 'Gemini 3.1 Pro', 'PromptQuorum'],
+        keywords: ['プロンプトフレームワーク', 'プロンプトエンジニアリング', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
@@ -805,7 +805,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'name': '適切なプロンプトフレームワークを選択する',
         'step': [
           { '@type': 'HowToStep', 'name': 'タスクタイプを特定する', 'text': '構造化推論（Chain-of-Thought）、ツール使用（ReAct）、多段階思考（Tree-of-Thought）、または創造的出力が必要かを判断します。タスクタイプがフレームワーク選択を決定します。' },
-          { '@type': 'HowToStep', 'name': 'モデルの互換性を確認する', 'text': '一部のフレームワークは特定のモデルでより効果的です。GPT-4oとClaude Opus 4.7は複雑なフレームワークに対応します。Ollamaのローカルモデルはシンプルな構造を好みます。' },
+          { '@type': 'HowToStep', 'name': 'モデルの互換性を確認する', 'text': '一部のフレームワークは特定のモデルでより効果的です。GPT-4oとClaude Opus 4.8は複雑なフレームワークに対応します。Ollamaのローカルモデルはシンプルな構造を好みます。' },
           { '@type': 'HowToStep', 'name': 'データでフレームワークをテストする', 'text': '2–3個の候補フレームワークでタスクをテストします。出力品質、レイテンシ、コストを測定します。最良の結果が得られたフレームワークを選択します。' },
           { '@type': 'HowToStep', 'name': '選択を文書化する', 'text': 'プロンプトライブラリに、選択したフレームワークと理由を記録します。これにより、チームとモデル全体で結果が再現可能になります。' }
         ]
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'プロンプトフレームワークはOllamaなどのローカルLLMで機能しますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。フレームワークはGPT-4o、Claude Opus 4.7、Gemini 3.1 Pro、およびOllamaやLM Studio経由のローカルモデルで機能します。一部の複雑なフレームワーク（例：Tree-of-Thought）は、より大きなローカルモデル（13B+）を必要とします。' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。フレームワークはGPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、およびOllamaやLM Studio経由のローカルモデルで機能します。一部の複雑なフレームワーク（例：Tree-of-Thought）は、より大きなローカルモデル（13B+）を必要とします。' }
           },
           {
             '@type': 'Question',
@@ -835,14 +835,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatFrameworksDo: {
           title: 'プロンプトフレームワークが実際に行うこと',
           content: [
-            '**プロンプトフレームワークは、GPT-4o、Claude Opus 4.7、Gemini 3.1 Proおよびその他のモデルが、どの役割を担うべきか、どのコンテキストを使用すべきか、出力をどのようにフォーマットすべきかを正確に把握できるよう、プロンプトに繰り返し使える構造を提供します。** フレームワークはモデルの機能ではなく、モデルとのコミュニケーション方法を制御するテンプレートです。一貫したフレームワークを使用すると、モデルがより明確な目標、制約、出力形式を受け取るため、幻覚リスクが低減されます。',
+            '**プロンプトフレームワークは、GPT-4o、Claude Opus 4.8、Gemini 3.1 Proおよびその他のモデルが、どの役割を担うべきか、どのコンテキストを使用すべきか、出力をどのようにフォーマットすべきかを正確に把握できるよう、プロンプトに繰り返し使える構造を提供します。** フレームワークはモデルの機能ではなく、モデルとのコミュニケーション方法を制御するテンプレートです。一貫したフレームワークを使用すると、モデルがより明確な目標、制約、出力形式を受け取るため、幻覚リスクが低減されます。',
             'ほとんどのフレームワークは、プロンプトを目的、役割、コンテキスト、制約、フォーマットなどの構成要素に分解します。この構造により、「これを手伝って」のような曖昧なリクエストが、測定可能な品質を持つ明確に指定されたタスクに変換されます。',
           ],
         },
         frameworksAtAGlance: {
           title: '主要なプロンプトフレームワーク一覧',
           content: [
-            '**主要なプロンプトフレームワークはその焦点が異なります。構造的な推論を最適化するもの、創造性を重視するもの、精確な仕様記述を優先するものがあります。** GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro、OllamaやLM Studio経由のローカルモデルなど複数モデルで作業する場合、少数の実績あるフレームワークを使い分けることが一般的です。',
+            '**主要なプロンプトフレームワークはその焦点が異なります。構造的な推論を最適化するもの、創造性を重視するもの、精確な仕様記述を優先するものがあります。** GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、OllamaやLM Studio経由のローカルモデルなど複数モデルで作業する場合、少数の実績あるフレームワークを使い分けることが一般的です。',
             '最も一般的なフレームワークとその最適な用途：',
           ],
           columns: ['フレームワーク', '最適な用途', 'コアアイデア'],
@@ -875,13 +875,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'GPT-4oとGemini 3.1 Proで固定フィールドの厳格なJSONが必要 → SPECS のような仕様重視フレームワーク',
             '製品ポジショニングのアイデアを探索しており、厳格な構造より多様な選択肢を重視 → CRAFT',
-            'Claude Opus 4.7で複雑な推論エラーをデバッグしており、明示的なステップバイステップの思考が必要 → TRACEまたはチェーン・オブ・ソートフレームワーク',
+            'Claude Opus 4.8で複雑な推論エラーをデバッグしており、明示的なステップバイステップの思考が必要 → TRACEまたはチェーン・オブ・ソートフレームワーク',
           ],
         },
         howPQHandlesFrameworks: {
           title: 'PromptQuorumによるフレームワーク管理',
           content: [
-            '**PromptQuorumは、主要なプロンプトフレームワーク、自動フレームワークセレクター、カスタムフレームワークエディターを備えたマルチモデルAIディスパッチツールで、テンプレートの手動管理が不要です。** 選択したフレームワークで構造化したプロンプトを、GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro、OllamaやLM Studio経由のローカルモデルに同時に送信できます。',
+            '**PromptQuorumは、主要なプロンプトフレームワーク、自動フレームワークセレクター、カスタムフレームワークエディターを備えたマルチモデルAIディスパッチツールで、テンプレートの手動管理が不要です。** 選択したフレームワークで構造化したプロンプトを、GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、OllamaやLM Studio経由のローカルモデルに同時に送信できます。',
             'PromptQuorumでできること：',
           ],
           items: [
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '「このデータを見て、どう思うか教えて。」',
             '**【良いプロンプト】**',
             '「あなたはデータアナリストです。スコープ：EU市場の2026年Q1の売上データを分析する。目的：VP営業がQ2計画前に知るべき最も重要な3つのトレンドを特定する。例：各発見事項を番号付きで、1文ずつ記述する。制約：データを捏造しない。指標がない場合は「データセットに存在しない」と記載する。手順：1）全体トレンドを説明する、2）国別の外れ値をハイライトする、3）各発見事項に対して1つの具体的なアクションを提案する。」',
-            'PromptQuorumでは、この構造を再利用可能なフレームワークとして保存し、GPT-4o、Claude Opus 4.7、Gemini 3.1 Proに同時に適用して、各モデルが同じ仕様をどのように処理するかを比較できます。',
+            'PromptQuorumでは、この構造を再利用可能なフレームワークとして保存し、GPT-4o、Claude Opus 4.8、Gemini 3.1 Proに同時に適用して、各モデルが同じ仕様をどのように処理するかを比較できます。',
           ],
         },
         conclusion: {
@@ -952,7 +952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'よくある質問',
           faqs: [
             { q: 'すべてのタスクに最適なプロンプトフレームワークは何ですか？', a: 'すべてのタスクに対する普遍的な最適なフレームワークはありません。Chain-of-Thoughtは推論に機能し、ReActはツールの使用に、Tree-of-Thoughtは複雑なマルチステップタスクに機能します。特定のタスクでフレームワークをテストして、最適なものを見つけてください。' },
-            { q: 'プロンプトフレームワークはOllamaなどのローカルLLMで機能しますか？', a: 'はい。フレームワークはGPT-4o、Claude Opus 4.7、Gemini 3.1 Pro、およびOllamaまたはLM Studio経由のローカルモデルで機能します。一部の複雑なフレームワーク（例：Tree-of-Thought）では、より大きなローカルモデル（13B以上）が必要な場合があります。' },
+            { q: 'プロンプトフレームワークはOllamaなどのローカルLLMで機能しますか？', a: 'はい。フレームワークはGPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、およびOllamaまたはLM Studio経由のローカルモデルで機能します。一部の複雑なフレームワーク（例：Tree-of-Thought）では、より大きなローカルモデル（13B以上）が必要な場合があります。' },
             { q: '同じタスクでフレームワークを切り替えることはできますか？', a: 'はい。フレームワークの選択は反復的です。Chain-of-Thoughtが遅い結果を生成する場合は、より単純な方法に切り替えます。出力が詳細に欠ける場合は、Tree-of-Thoughtにアップグレードします。結果に基づいてテストと反復を行います。' },
             { q: 'タスクに最適なフレームワークをどのようにして知ることができますか？', a: 'タスクタイプを特定することから始めます：推論の深さ、創造性、速度、または正確な構造化出力を最適化していますか？次に、フレームワーク（推論用CoT、創造性用CRAFT、精度用SPECS）にマップします。2～3のフレームワークをテストして、出力を比較します。' },
             { q: '1つのプロンプトに複数のフレームワークを組み合わせることはできますか？', a: 'はい。フレームワークをレイヤーリングするのは一般的です。CO-STARを使用してコンテキストとオーディエンスを設定し、Chain-of-Thoughtで推論を追加し、SPECS出力制約を追加します。重要なのは明確性です。モデルが各コンポーネントを理解していることを確認してください。' },
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Chain-of-Thought vs ReAct vs Tree-of-Thought框架对比。按用例选择。优缺点解析，推荐决策指南。',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        keywords: ['提示框架', '提示工程', 'GPT-4o', 'Claude Opus 4.7', 'Gemini 3.1 Pro', 'PromptQuorum'],
+        keywords: ['提示框架', '提示工程', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
@@ -990,7 +990,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'name': '选择正确的提示词框架',
         'step': [
           { '@type': 'HowToStep', 'name': '确定您的任务类型', 'text': '判断您是否需要结构化推理（Chain-of-Thought）、工具使用（ReAct）、多步思维（Tree-of-Thought）或创意输出。任务类型决定框架选择。' },
-          { '@type': 'HowToStep', 'name': '检查模型兼容性', 'text': '某些框架在特定模型上效果更好。GPT-4o和Claude Opus 4.7支持复杂框架。通过Ollama的本地模型可能更喜欢简单结构。' },
+          { '@type': 'HowToStep', 'name': '检查模型兼容性', 'text': '某些框架在特定模型上效果更好。GPT-4o和Claude Opus 4.8支持复杂框架。通过Ollama的本地模型可能更喜欢简单结构。' },
           { '@type': 'HowToStep', 'name': '用您的数据测试框架', 'text': '用2–3个候选框架测试任务。测量输出质量、延迟和成本。选择效果最佳的框架。' },
           { '@type': 'HowToStep', 'name': '文档化您的选择', 'text': '在提示词库中记录选择的框架及原因。这使结果在团队和模型中可复现。' }
         ]
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': '提示词框架是否与Ollama等本地LLM兼容？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '是的。框架与GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro以及通过Ollama或LM Studio的本地模型兼容。一些复杂框架（如Tree-of-Thought）可能需要更大的本地模型（13B+）。' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': '是的。框架与GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro以及通过Ollama或LM Studio的本地模型兼容。一些复杂框架（如Tree-of-Thought）可能需要更大的本地模型（13B+）。' }
           },
           {
             '@type': 'Question',
@@ -1020,14 +1020,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatFrameworksDo: {
           title: '提示词框架的实际作用',
           content: [
-            '**提示词框架为您的提示词提供可重复的结构，使GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro和其他模型确切知道应扮演什么角色、使用什么上下文以及如何格式化输出。** 框架不是模型功能，而是控制您与模型通信方式的模板。使用一致的框架可以降低幻觉风险，因为模型接收到更清晰的目标、约束和输出格式。',
+            '**提示词框架为您的提示词提供可重复的结构，使GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro和其他模型确切知道应扮演什么角色、使用什么上下文以及如何格式化输出。** 框架不是模型功能，而是控制您与模型通信方式的模板。使用一致的框架可以降低幻觉风险，因为模型接收到更清晰的目标、约束和输出格式。',
             '大多数框架将提示词分解为目标、角色、上下文、约束和格式等构建块。这种结构将"帮我处理这个"之类的模糊请求转变为具有可测量质量的明确指定任务。',
           ],
         },
         frameworksAtAGlance: {
           title: '主要提示词框架一览',
           content: [
-            '**主要提示词框架在侧重点上各有不同：有些优化结构化推理，有些注重创造力，还有一些强调精确规范。** 对于跨GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro和本地模型（通过Ollama或LM Studio）的多模型工作，通常在少数经过验证的框架之间切换。',
+            '**主要提示词框架在侧重点上各有不同：有些优化结构化推理，有些注重创造力，还有一些强调精确规范。** 对于跨GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro和本地模型（通过Ollama或LM Studio）的多模型工作，通常在少数经过验证的框架之间切换。',
             '最常用的框架及其最适用场景：',
           ],
           columns: ['框架', '最适用于', '核心理念'],
@@ -1060,13 +1060,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '需要跨GPT-4o和Gemini 3.1 Pro使用固定字段的严格JSON → 规范密集型框架如SPECS',
             '正在探索产品定位想法，更注重发散性选项而非严格结构 → CRAFT',
-            '在Claude Opus 4.7中调试复杂推理失败，需要明确的逐步思考 → TRACE或思维链框架',
+            '在Claude Opus 4.8中调试复杂推理失败，需要明确的逐步思考 → TRACE或思维链框架',
           ],
         },
         howPQHandlesFrameworks: {
           title: 'PromptQuorum如何为您管理框架',
           content: [
-            '**PromptQuorum是一款多模型AI调度工具，内置主要提示词框架、自动框架选择器和自定义框架编辑器，无需手动管理模板。** PromptQuorum可将用所选框架结构化的一个提示词同时发送到GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro以及通过Ollama或LM Studio的本地模型。',
+            '**PromptQuorum是一款多模型AI调度工具，内置主要提示词框架、自动框架选择器和自定义框架编辑器，无需手动管理模板。** PromptQuorum可将用所选框架结构化的一个提示词同时发送到GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro以及通过Ollama或LM Studio的本地模型。',
             '在PromptQuorum中，您可以：',
           ],
           items: [
@@ -1107,7 +1107,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '"看看这些数据，告诉我你的看法。"',
             '**【高效提示词】**',
             '"你是数据分析师。范围：分析2026年Q1欧盟市场的附件销售数据。目的：识别VP销售在规划Q2前需要了解的三个最重要趋势。示例：将洞察结构化为编号发现，每条发现一句话。约束：不要编造数据；如果某项指标缺失，请说明"数据集中不存在"。步骤：1）描述整体趋势，2）突出国别异常，3）为每条发现建议一个具体行动。"',
-            '在PromptQuorum中，您可以将此结构保存为可复用框架，同时应用于GPT-4o、Claude Opus 4.7和Gemini 3.1 Pro，然后比较每个模型如何处理相同规范。',
+            '在PromptQuorum中，您可以将此结构保存为可复用框架，同时应用于GPT-4o、Claude Opus 4.8和Gemini 3.1 Pro，然后比较每个模型如何处理相同规范。',
           ],
         },
         conclusion: {
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '常见问题',
           faqs: [
             { q: '所有任务最好的提示词框架是什么？', a: '没有通用最佳框架。Chain-of-Thought适合推理，ReAct适合工具使用，Tree-of-Thought适合复杂的多步骤任务。在您的特定任务上测试框架，找到最合适的。' },
-            { q: '提示词框架能在Ollama等本地LLM上使用吗？', a: '可以。框架适用于GPT-4o、Claude Opus 4.7、Gemini 3.1 Pro以及通过Ollama或LM Studio的本地模型。某些复杂框架（例如Tree-of-Thought）可能需要更大的本地模型（13B+）。' },
+            { q: '提示词框架能在Ollama等本地LLM上使用吗？', a: '可以。框架适用于GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro以及通过Ollama或LM Studio的本地模型。某些复杂框架（例如Tree-of-Thought）可能需要更大的本地模型（13B+）。' },
             { q: '我可以针对同一任务切换框架吗？', a: '可以。框架选择是迭代的。如果Chain-of-Thought生成缓慢的结果，切换到更简单的方法。如果输出缺乏细节，升级为Tree-of-Thought。根据结果进行测试和迭代。' },
             { q: '我如何知道哪个框架最适合我的任务？', a: '首先识别您的任务类型：是否在优化推理深度、创意、速度或精确的结构化输出？然后匹配到框架（推理用CoT、创意用CRAFT、精度用SPECS）。测试2-3个框架并比较输出。' },
             { q: '我可以在一个提示词中组合多个框架吗？', a: '可以。框架分层很常见。使用CO-STAR设置上下文和受众，添加Chain-of-Thought进行推理，再添加SPECS输出约束。关键是明确性——确保模型理解每个组件。' },

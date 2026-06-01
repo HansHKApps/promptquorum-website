@@ -85,8 +85,8 @@ export const translations = {
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt Engineering Best Practices 2026: Frameworks",
-    promptEngineeringHubDescription: "Master prompt engineering: chain-of-thought, few-shot, and RAG techniques for GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. 80 guides across 9 topics.",
-    promptEngineeringHubOgDescription: "80 prompt engineering articles for all skill levels — chain-of-thought, RAG, few-shot prompting, team governance, and evaluation for GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.",
+    promptEngineeringHubDescription: "Master prompt engineering: chain-of-thought, few-shot, and RAG techniques for GPT-4o, Claude 4.8 Sonnet, and Gemini 2.5 Pro. 80 guides across 9 topics.",
+    promptEngineeringHubOgDescription: "80 prompt engineering articles for all skill levels — chain-of-thought, RAG, few-shot prompting, team governance, and evaluation for GPT-4o, Claude 4.8 Sonnet, and Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 prompt engineering guides across 9 topics. Start with Fundamentals, master Evaluation & Reliability — for GPT-4o, Claude, and Gemini.",
     localLlmsHubTitle: "Best Local LLMs by VRAM Tier 2026: 12GB, 24GB, 48GB Guide",
     localLlmsHubDescription: "Best local LLM models ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials — May 2026.",
@@ -366,8 +366,8 @@ export const translations = {
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt Engineering Best Practices 2026: Frameworks",
-    promptEngineeringHubDescription: "Beherrschen Sie Prompt Engineering: Chain-of-Thought, Few-Shot und RAG-Techniken für GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro. 80 Leitfäden.",
-    promptEngineeringHubOgDescription: "80 Prompt-Engineering-Artikel für alle Kenntnisstufen — Chain-of-Thought, RAG, Few-Shot, Team-Governance und Evaluierung für GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro.",
+    promptEngineeringHubDescription: "Beherrschen Sie Prompt Engineering: Chain-of-Thought, Few-Shot und RAG-Techniken für GPT-4o, Claude 4.8 Sonnet und Gemini 2.5 Pro. 80 Leitfäden.",
+    promptEngineeringHubOgDescription: "80 Prompt-Engineering-Artikel für alle Kenntnisstufen — Chain-of-Thought, RAG, Few-Shot, Team-Governance und Evaluierung für GPT-4o, Claude 4.8 Sonnet und Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 Prompt-Engineering-Leitfäden in 9 Themenbereichen. Beginnen Sie mit Grundlagen, meistern Sie Evaluierung — für GPT-4o, Claude und Gemini.",
     localLlmsHubTitle: "Beste lokale LLMs nach VRAM-Tier 2026: 12GB, 24GB, 48GB",
     localLlmsHubDescription: "Beste lokale LLM-Modelle nach VRAM-Tier (4–48 GB): RTX 3060 12GB, RTX 4090, Apple Silicon-Leitfäden. Ollama-Einrichtung, Hardware-Tier-Vergleich, Anfänger-Anleitungen — Mai 2026.",
@@ -647,8 +647,8 @@ export const translations = {
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt Engineering Best Practices 2026: Frameworks",
-    promptEngineeringHubDescription: "Maîtrisez le prompt engineering : chain-of-thought, few-shot et techniques RAG pour GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro. 80 guides en 9 thèmes.",
-    promptEngineeringHubOgDescription: "80 articles de prompt engineering pour tous niveaux — chaîne de pensée, RAG, few-shot, gouvernance d'équipe et évaluation pour GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.",
+    promptEngineeringHubDescription: "Maîtrisez le prompt engineering : chain-of-thought, few-shot et techniques RAG pour GPT-4o, Claude 4.8 Sonnet et Gemini 2.5 Pro. 80 guides en 9 thèmes.",
+    promptEngineeringHubOgDescription: "80 articles de prompt engineering pour tous niveaux — chaîne de pensée, RAG, few-shot, gouvernance d'équipe et évaluation pour GPT-4o, Claude 4.8 Sonnet et Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 guides de prompt engineering en 9 thématiques. Commencez par les Fondamentaux, maîtrisez l'Évaluation — pour GPT-4o, Claude et Gemini.",
     localLlmsHubTitle: "Meilleur LLM local par VRAM 2026: 12GB, 24GB, 48GB",
     localLlmsHubDescription: "Meilleurs modèles LLM locaux par tier VRAM (4–48 Go): RTX 3060 12GB, RTX 4090, guides Apple Silicon. Configuration Ollama, comparaison hardware, tutoriels débutants — mai 2026.",
@@ -928,8 +928,8 @@ export const translations = {
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt工程Best Practices 2026：フレームワーク",
-    promptEngineeringHubDescription: "チェーン・オブ・ソート、few-shot、RAG技法をGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで習得。80本ガイド9テーマ。",
-    promptEngineeringHubOgDescription: "全スキルレベル対応80本のプロンプトエンジニアリング記事 — チェーン・オブ・ソート、RAG、few-shot、チームガバナンス、評価をGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro向けに解説。",
+    promptEngineeringHubDescription: "チェーン・オブ・ソート、few-shot、RAG技法をGPT-4o、Claude 4.8 Sonnet、Gemini 2.5 Proで習得。80本ガイド9テーマ。",
+    promptEngineeringHubOgDescription: "全スキルレベル対応80本のプロンプトエンジニアリング記事 — チェーン・オブ・ソート、RAG、few-shot、チームガバナンス、評価をGPT-4o、Claude 4.8 Sonnet、Gemini 2.5 Pro向けに解説。",
     promptEngineeringHubTwitterDescription: "9テーマ80本のプロンプトエンジニアリングガイド。基礎から始め、評価と信頼性を習得 — GPT-4o、Claude、Gemini対応。",
     localLlmsHubTitle: "2026年VRAM別最高ローカルLLM：12GB、24GB、48GB完全ガイド",
     localLlmsHubDescription: "2026年VRAM別（4～48GB）最高ローカルLLMランキング：RTX 3060 12GB、RTX 4090、Apple Siliconガイド。Ollama設定、ハードウェア比較、初心者向けチュートリアル。",
@@ -1209,8 +1209,8 @@ export const translations = {
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "提示词工程Best Practices 2026：框架",
-    promptEngineeringHubDescription: "掌握链式思维、few-shot、RAG技术，用于GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro。80篇文章9大主题。",
-    promptEngineeringHubOgDescription: "全技能水平80篇提示词工程文章——思维链、RAG、few-shot提示、团队治理和评估，适用于GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro。",
+    promptEngineeringHubDescription: "掌握链式思维、few-shot、RAG技术，用于GPT-4o、Claude 4.8 Sonnet、Gemini 2.5 Pro。80篇文章9大主题。",
+    promptEngineeringHubOgDescription: "全技能水平80篇提示词工程文章——思维链、RAG、few-shot提示、团队治理和评估，适用于GPT-4o、Claude 4.8 Sonnet和Gemini 2.5 Pro。",
     promptEngineeringHubTwitterDescription: "9大主题80篇提示词工程指南。从基础知识开始，精通评估与可靠性——适用于GPT-4o、Claude和Gemini。",
     localLlmsHubTitle: "2026VRAM等级最佳本地LLM：12GB、24GB、48GB完整指南",
     localLlmsHubDescription: "2026按VRAM等级（4～48GB）最佳本地LLM排名：RTX 3060 12GB、RTX 4090、Apple Silicon指南。Ollama配置、硬件对比、初学者教程。",
@@ -1490,8 +1490,8 @@ export const translations = {
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt Engineering: mejores prácticas 2026 y frameworks",
-    promptEngineeringHubDescription: "Domina el prompt engineering: chain-of-thought, few-shot y técnicas RAG para GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro. 80 guías en 9 temas.",
-    promptEngineeringHubOgDescription: "80 artículos de prompt engineering para todos los niveles — chain-of-thought, RAG, few-shot, gobernanza de equipos y evaluación para GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro.",
+    promptEngineeringHubDescription: "Domina el prompt engineering: chain-of-thought, few-shot y técnicas RAG para GPT-4o, Claude 4.8 Sonnet y Gemini 2.5 Pro. 80 guías en 9 temas.",
+    promptEngineeringHubOgDescription: "80 artículos de prompt engineering para todos los niveles — chain-of-thought, RAG, few-shot, gobernanza de equipos y evaluación para GPT-4o, Claude 4.8 Sonnet y Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 guías de prompt engineering en 9 temas. Empieza por los fundamentos, domina la evaluación y la fiabilidad — para GPT-4o, Claude y Gemini.",
     localLlmsHubTitle: "Mejores LLMs locales por VRAM 2026: 12GB, 24GB, 48GB",
     localLlmsHubDescription: "Mejores modelos LLM locales por tier VRAM (4-48 GB): RTX 3060 12GB, RTX 4090, guías Apple Silicon. Configuración Ollama, comparativa hardware, tutoriales principiantes — mayo 2026.",
