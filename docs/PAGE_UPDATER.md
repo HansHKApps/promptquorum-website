@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This file governs how content pages are updated. It exists because of a proven failure mode: Claude Code updates the top of a page (lead paragraph, Quick Answer, Key Takeaways) and leaves the rest stale. This produces pages that contradict themselves — "Model X is best" at the top, "use Model Y" in the comparison tables. Google reads the whole page. Users read the whole page. Half-updated pages perform worse than consistently outdated pages because they signal low editorial quality.
+This file governs how content pages are updated. It exists because of a proven failure mode: Claude Code updates the top of a page (lead paragraph, Quick Answer, Key Takeaways) and leaves the rest stale. This produces pages that contradict themselves — "Model X is best" at the top, "use Model Y" in the comparison tables. Google reads the whole page. Users read the whole page. Half-updated pages perform worse than consistently outdated ones, because the internal contradiction signals low editorial quality to both readers and search engines.
 
 **This protocol applies to every page update, regardless of content type.**
 
@@ -16,7 +16,9 @@ This file governs how content pages are updated. It exists because of a proven f
 
 ## Freshness Tiers
 
-Every page has a `freshness_tier` in its frontmatter. This determines how often updates are needed and what kind of update is required.
+Every page has a `freshness_tier` field in its article object (these are inline-multilingual `.ts` files under `src/lib/<cluster>/articles/`, not YAML frontmatter — the field lives in the EN block of the article object). This determines how often updates are needed and what kind of update is required.
+
+**Note on field location:** Gate fields like `freshness_tier`, `next_refresh_due`, `last_full_refresh`, `dateModified`, `current_models_mentioned`, and `audience` live in the **EN block** of each article. Translated blocks (de/es/fr/ja/zh) typically omit these and start at `theme` — that is by design, not a defect. Read freshness/gate fields from the EN block.
 
 | Tier | Refresh Cycle | Trigger | Update Scope |
 |------|--------------|---------|--------------|
@@ -45,15 +47,17 @@ Do not assign `monthly` to:
 
 These belong in `evergreen` or `semi_annual`.
 
-### Frontmatter for Monthly Pages
+### Gate Fields for Monthly Pages
 
-```yaml
-freshness_tier: monthly
-next_refresh_due: 2026-06-05
-last_full_refresh: 2026-05-05
-current_models_mentioned: [Kimi K2.6, Qwen 3.6 27B, Devstral Small 24B]
-current_benchmarks_used: [SWE-bench, LiveCodeBench]
-current_hardware_mentioned: [RTX 4090, RTX 5080, M5 Pro]
+These are fields in the EN block of the article object (illustrative values — the operator/agent fills real values per page at update time; do NOT treat the examples below as current data):
+
+```ts
+freshness_tier: 'monthly',
+next_refresh_due: '2026-06-05',
+last_full_refresh: '2026-05-05',
+current_models_mentioned: ['<model>', '<model>', '<model>'],   // e.g. the models the page currently features
+current_benchmarks_used: ['<benchmark>', '<benchmark>'],        // e.g. SWE-bench, LiveCodeBench
+current_hardware_mentioned: ['<gpu>', '<gpu>', '<apple-silicon>'],
 ```
 
 ---
@@ -169,7 +173,7 @@ Examples: "Ollama vs LM Studio," "Best Local LLM Frontends," "One-Click Installe
 
 6. **Align recommendations to search intent** — if the top queries are "best X for 8GB RAM" and the page leads with a model requiring 22GB, the page structure is wrong. Put the answer to the highest-impression query closest to the top.
 
-**Example GSC-driven decisions:**
+**Example GSC-driven decisions** (illustrative — the model names, dates, and numbers are placeholders showing the *pattern*, not current data):
 
 | GSC Signal | Action |
 |-----------|--------|
@@ -228,18 +232,21 @@ After updating, verify:
 
 ### Step 5: Multi-Language Propagation
 
-After the English (EN) page is finalized, propagate changes to all 5 language versions:
+After the English (EN) page is finalized, propagate changes to all active non-English language versions. The active set is **6 languages total** (EN + 5):
 - DE (German)
+- ES (Spanish)
 - FR (French)
-- ZH (Chinese)
 - JA (Japanese)
+- ZH (Chinese)
+
+**Reserved languages — `pt` and `ar`:** These exist in the `Language` type but have no content yet. Do NOT propagate to them or fabricate blocks for them. Only translate `pt`/`ar` once their content is authored. When `pt` is authored it MUST be **Brazilian Portuguese** (pt-BR — você form, BR vocabulary such as *arquivo*/*tela*/*gerenciar*, LGPD/ANPD for compliance, hreflang and schema.inLanguage = `pt-BR`), never European Portuguese. `ar` is **RTL** and must keep Latin technical terms LTR.
 
 **Language update rules:**
 - Model names, benchmark names, ollama commands, and VRAM numbers are language-independent — copy exactly
-- Translate updated prose sections
+- Translate updated prose sections following the **geo-translation** guide (the authoritative per-language localization spec)
 - Do NOT re-translate unchanged sections — only translate what actually changed
 - Update `dateModified` in all language versions
-- Regional context sections (EU/GDPR, Japan/METI, China/CAC) may need language-specific updates
+- Regional context sections (EU/GDPR, France/CNIL, Japan/METI, China Data Security Law, Brazil/LGPD, Gulf/PDPL) may need language-specific updates — apply only where the article is fundamentally about compliance or data governance
 
 ### Step 6: Report What Was Updated
 
@@ -259,7 +266,7 @@ After completing the update, output a section-by-section report:
 - Section "Common Mistakes": NO CHANGE — still accurate
 - TOC anchors: FIXED — 2 mismatched IDs corrected
 - Frontmatter: UPDATED — dateModified, current_models_mentioned, next_refresh_due
-- Languages pending: DE, FR, ZH, JA
+- Languages pending: DE, ES, FR, JA, ZH
 ```
 
 This report serves as the audit trail for the update and prevents the "I think I updated it" problem.
@@ -281,8 +288,8 @@ This report serves as the audit trail for the update and prevents the "I think I
 **Why it fails:** "Qwen 3.6 27B" replacing "Qwen2.5-Coder 32B" changes the meaning when the section discusses 32B-specific VRAM requirements or HumanEval scores that don't apply to Qwen 3.6.
 
 ### 4. Update English Only
-**Wrong:** Refresh EN page, forget DE/FR/ZH/JA versions.
-**Why it fails:** Language variants rank independently. Stale DE page still gets German traffic with wrong recommendations.
+**Wrong:** Refresh EN page, forget the DE/ES/FR/JA/ZH versions.
+**Why it fails:** Language variants rank independently. A stale DE or ES page still gets German or Spanish traffic with outdated recommendations.
 
 ### 5. Update Content, Skip Frontmatter
 **Wrong:** Update all sections but forget to change `dateModified`, `current_models_mentioned`, `next_refresh_due`.
@@ -336,6 +343,9 @@ Many pages include embedded slide decks and downloadable PDF reference cards. Th
 
 ### GEO_WRITING_GUIDELINES.md
 This file does NOT replace GEO writing guidelines. All updates must follow existing H2/H3 rules, lead answer block format, meta description formulas, Sources requirements, Related Reading requirements, and FAQ format. This file adds the update-specific process on top.
+
+### geo-translation (per-language localization) and geo-meta-optimizer (meta tags)
+Step 5 translations must follow the **geo-translation** guide (the authoritative localization spec — 6 active languages, pt/ar reserved, Brazilian Portuguese for pt, RTL for ar). Title/meta-description optimization follows **geo-meta-optimizer** (per-language length targets, hard length gate). This protocol governs the *content refresh*; those two govern *how translation and meta are produced*. Keep all three in sync on the language set.
 
 ### CONTENT_FRESHNESS_CLASSIFICATION.md
 This file extends the freshness system by adding the `monthly` tier and defining the operational process for each refresh cycle.
