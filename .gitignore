@@ -7,6 +7,9 @@ out/
 public/data/seo-registry.json
 tsconfig.tsbuildinfo
 
+# macOS Finder metadata
+.DS_Store
+
 # Playwright run artifacts (regenerated on every run)
 test-results/
 playwright-report/
