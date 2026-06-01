@@ -8,7 +8,8 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
+      next_seo_review_due: '2026-07-01',
       theme: 'Best Models',
       title: 'Qwen 2.5 vs Llama 3.3 vs Mistral: Local LLM Comparison 2026',
       seoTitle: 'Qwen 3.6 vs Llama 4 vs Mistral 2026: Which LLM Wins?',
@@ -16,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Qwen 3.6 27B: 77.2% SWE-bench. Llama 4 Scout: MoE, ~10 GB VRAM. Mistral Small 3.1: 79% MMLU. Plus Qwen 2.5 14B vs Llama 3.1 8B vs Mistral 24B.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      next_refresh_due: '2026-11-06',
+      next_refresh_due: '2026-06-30',
       leadAnswerBlock: '**Qwen 3.6 27B leads dense model coding (77.2% SWE-bench). Llama 4 Scout is the most versatile (17B active, MoE, 10M context). Mistral Small 3.1 24B offers the best quality per VRAM at 14 GB.**',
       nextStep: {
         text: 'Decided on a model? Here\'s how to run Qwen locally, step by step.',
@@ -461,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gammaDescription: 'The slide deck below covers: Qwen 3.6 vs Llama 4 Scout vs Mistral benchmark comparison (May 2026 — SWE-bench, MoE efficiency), which model wins by task (coding, multilingual, long-context, RAM efficiency), size-by-size comparison including MoE tier, Devstral for agentic coding, Codestral for IDE, and Ollama quick-start commands. Download the PDF as a local LLM model selection reference card.',
     },
     es: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Qwen 2.5 vs Llama 3.3 vs Mistral: Comparativa de LLM Local 2026',
       seoTitle: 'Qwen 3.6 vs Llama 4 vs Mistral 2026: ¿Qué LLM Gana?',
@@ -469,7 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Qwen 3.6 27B: 77,2% SWE-bench. Llama 4 Scout: MoE, ~10 GB VRAM. Mistral Small 3.1: 79% MMLU. Más: Qwen 2.5 14B vs Llama 3.1 8B vs Mistral 24B.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      next_refresh_due: '2026-11-06',
+      next_refresh_due: '2026-06-30',
       leadAnswerBlock: '**Qwen 3.6 27B lidera el programación en modelos densos (77,2% SWE-bench). Llama 4 Scout es el más versátil (17B activo, MoE, contexto 10M). Mistral Small 3.1 24B ofrece la mejor calidad por VRAM a 14 GB.**',
       nextStep: {
         text: '¿Ya elegiste tu modelo? Aquí tienes cómo ejecutar Qwen en local, paso a paso.',

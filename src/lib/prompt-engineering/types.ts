@@ -58,9 +58,13 @@ export interface PEArticle {
   gammaDescription?: string  // SEO-optimised description of slide deck contents (2-3 sentences, primary keyword + specific numbers)
   widgetEmbedUrl?: string    // Interactive widget embed URL (audit guide, calculator, decision tree, etc.)
   widgetDescription?: string // SEO-optimised description of widget contents (2-3 sentences, explaining what user will learn/achieve)
-  freshness_tier?: 'evergreen' | 'semi_annual' | 'annual'
+  freshness_tier?: 'evergreen' | 'semi_annual' | 'annual' | 'monthly'
   next_refresh_due?: string
+  last_full_refresh?: string
+  next_seo_review_due?: string
+  last_seo_review?: string
   current_models_mentioned?: string[]
+  current_benchmarks_used?: string[]
   current_hardware_mentioned?: string[]
   archive_after?: string
   specific_year?: number

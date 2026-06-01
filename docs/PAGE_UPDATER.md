@@ -18,7 +18,7 @@ This file governs how content pages are updated. It exists because of a proven f
 
 Every page has a `freshness_tier` field in its article object (these are inline-multilingual `.ts` files under `src/lib/<cluster>/articles/`, not YAML frontmatter — the field lives in the EN block of the article object). This determines how often updates are needed and what kind of update is required.
 
-**Note on field location:** Gate fields like `freshness_tier`, `next_refresh_due`, `last_full_refresh`, `dateModified`, `current_models_mentioned`, and `audience` live in the **EN block** of each article. Translated blocks (de/es/fr/ja/zh) typically omit these and start at `theme` — that is by design, not a defect. Read freshness/gate fields from the EN block.
+**Note on field location:** Gate fields like `freshness_tier`, `next_refresh_due`, `last_full_refresh`, `next_seo_review_due`, `last_seo_review`, `dateModified`, `current_models_mentioned`, and `audience` live in the **EN block** of each article. Translated blocks (de/es/fr/ja/zh) typically omit these and start at `theme` — that is by design, not a defect. Read freshness/gate fields from the EN block. (Some older files redundantly repeat `freshness_tier`/`next_refresh_due` in each language block; keep those in sync when present, but the EN block is authoritative.)
 
 | Tier | Refresh Cycle | Trigger | Update Scope |
 |------|--------------|---------|--------------|
@@ -53,12 +53,33 @@ These are fields in the EN block of the article object (illustrative values — 
 
 ```ts
 freshness_tier: 'monthly',
-next_refresh_due: '2026-06-05',
+next_refresh_due: '2026-06-05',        // content/facts — monthly (every 30 days)
 last_full_refresh: '2026-05-05',
+next_seo_review_due: '2026-07-01',     // title/meta/intent — QUARTERLY (Jul 1 / Oct 1 / Jan 1 / Apr 1)
+last_seo_review: '2026-04-01',
 current_models_mentioned: ['<model>', '<model>', '<model>'],   // e.g. the models the page currently features
 current_benchmarks_used: ['<benchmark>', '<benchmark>'],        // e.g. SWE-bench, LiveCodeBench
 current_hardware_mentioned: ['<gpu>', '<gpu>', '<apple-silicon>'],
 ```
+
+### Two Cadences: Monthly Facts vs. Quarterly SEO Review
+
+A `monthly` page has **two independent update cadences**. Do not conflate them.
+
+| Cadence | Field | Frequency | Scope |
+|---------|-------|-----------|-------|
+| **Content / facts** | `next_refresh_due` | Every 30 days | Models, benchmarks, VRAM, ollama commands, ranking order, prices, speed tables — everything in the Type A–E checklists |
+| **SEO review** | `next_seo_review_due` | **Quarterly** — fixed calendar anchors **Jul 1 / Oct 1 / Jan 1 / Apr 1** | Title tag, meta description, OG/Twitter description, H2 intent-alignment to top GSC queries, structural ordering |
+
+**Why two cadences:** Facts go stale monthly — leaving them stale makes the page *wrong*. Title/meta tags are different: every change forces Google to re-crawl and re-evaluate, and the SERP needs weeks to settle a new title. Changing titles monthly creates ranking volatility and destroys any clean read on whether a change helped CTR. A quarter accumulates enough CTR/position data to judge. So title/meta tuning is **scheduled quarterly, not monthly**.
+
+**Rules:**
+- The monthly content refresh is **facts-only**. It does **not** rewrite the title/meta/descriptions.
+- **Exception (always allowed):** if a monthly fact refresh makes the title or meta *contradict* the updated body (Anti-Pattern #6), fix it on the spot — a forced correction is not a scheduled SEO change.
+- The quarterly SEO review **requires GSC data** (Step 0) — it is the heaviest consumer of per-page query/CTR/position signal. Without GSC, skip the SEO review; do not guess at titles.
+- When `next_refresh_due` and `next_seo_review_due` both fall in the same month, do them together: facts first, then meta.
+- Set `last_seo_review` to the date a review actually ran, and roll `next_seo_review_due` to the next fixed quarter anchor.
+- Quarterly SEO review applies to **`monthly`-tier pages only**. `semi_annual` pages already fold a structural/meta review into their twice-yearly refresh.
 
 ---
 

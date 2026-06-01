@@ -8,7 +8,9 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'annual',
+      freshness_tier: 'monthly',
+      next_seo_review_due: '2026-07-01',
+      next_refresh_due: '2026-06-30',
       theme: 'GPU Buying Guides',
       title: 'RTX 3060 12GB: Run Qwen 3 8B, Llama 4 Scout, Mistral 7B (2026 Guide)',
       seoTitle: 'RTX 3060 12GB: Best Budget GPU for Local LLMs 2026',
@@ -325,7 +327,7 @@ schema: {
       },
     },
     es: {
-      freshness_tier: 'annual',
+      freshness_tier: 'monthly',
       theme: 'GPU Buying Guides',
       title: 'RTX 3060 12GB: Ejecuta Qwen 3 8B, Llama 4 Scout, Mistral 7B (Guía 2026)',
       seoTitle: 'RTX 3060 12GB: Mejor GPU económica para LLMs locales 2026',

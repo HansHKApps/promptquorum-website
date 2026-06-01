@@ -8,8 +8,9 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-10-04',
+      freshness_tier: 'monthly',
+      next_seo_review_due: '2026-07-01',
+      next_refresh_due: '2026-06-30',
       theme: 'Best Models',
       title: 'Best Coding LLMs 2026: Qwen vs DeepSeek vs Llama Performance',
       seoTitle: 'Best Local Coding LLMs 2026: Qwen vs DeepSeek vs Llama',
@@ -526,8 +527,8 @@ schema: {
       gammaDescription: 'Interactive 14-slide presentation covering: HumanEval benchmark comparison, hardware-matched model selection (8GB, 16GB, 20+GB RAM), Qwen2.5-Coder 32B (87%) vs DeepSeek-Coder V2 Lite (81%) vs Qwen3 8B (72%), and IDE integration with Continue.dev. Download the reference card as PDF.',
     },
     es: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-10-04',
+      freshness_tier: 'monthly',
+      next_refresh_due: '2026-06-30',
       theme: 'Best Models',
       title: 'Mejores LLMs locales para programación 2026: Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: 'Mejores LLMs locales para código 2026: Kimi K2.6 vs Qwen',
@@ -1043,8 +1044,8 @@ schema: {
       gammaDescription: 'Presentación interactiva de 14 diapositivas que cubre: comparación de benchmark HumanEval, selección de modelo ajustada al hardware (8GB, 16GB, 20+GB RAM), Qwen2.5-Coder 32B (87%) vs DeepSeek-Coder V2 Lite (81%) vs Qwen3 8B (72%) e integración IDE con Continue.dev. Descarga la tarjeta de referencia en PDF.',
     },
     de: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-10-04',
+      freshness_tier: 'monthly',
+      next_refresh_due: '2026-06-30',
       theme: 'Beste Modelle',
       title: 'Beste lokale LLMs für Programmierung 2026: Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: 'Beste LLMs für Coding 2026: Kimi K2.6 (87/100) vs Qwen 3.6',
@@ -1458,8 +1459,8 @@ schema: {
       gammaDescription: 'Interaktive 14-Folien-Präsentation mit: HumanEval-Benchmark-Vergleich, hardwareoptimierte Modellauswahl (8GB, 16GB, 20+GB RAM), Qwen2.5-Coder 32B (87%) vs DeepSeek-Coder V2 Lite (81%) vs Qwen3 8B (72%), IDE-Integration mit Continue.dev. Referenzkarte als PDF herunterladen.',
     },
     fr: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-10-04',
+      freshness_tier: 'monthly',
+      next_refresh_due: '2026-06-30',
       theme: 'Meilleurs Modèles',
       title: 'Meilleurs LLMs locaux pour la programmation 2026 : Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: 'LLMs pour le code 2026 : Kimi K2.6 (87/100) vs Qwen 3.6',
@@ -1859,8 +1860,8 @@ schema: {
       gammaDescription: 'Présentation interactive de 14 diapositives couvrant : comparaison des benchmarks HumanEval, sélection optimisée par matériel (8GB, 16GB, 20+GB RAM), Qwen2.5-Coder 32B (87%) vs DeepSeek-Coder V2 Lite (81%) vs Qwen3 8B (72%), intégration IDE avec Continue.dev. Téléchargez la carte de référence au format PDF.',
     },
     ja: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-10-04',
+      freshness_tier: 'monthly',
+      next_refresh_due: '2026-06-30',
       theme: 'ベストモデル',
       title: '2026年最高のコーディング用ローカルLLM：Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: 'コーディング用ローカルLLM 2026：Kimi K2.6（87/100）vs Qwen 3.6',
@@ -2201,8 +2202,8 @@ schema: {
       gammaDescription: 'インタラクティブ14スライドプレゼンテーション：HumanEvalベンチマーク比較、ハードウェア別モデル選択（8GB、16GB、20+GB RAM）、Qwen2.5-Coder 32B（87%）vs DeepSeek-Coder V2 Lite（81%）vs Qwen3 8B（72%）、Continue.devを使用したIDE統合。PDFとしてダウンロードして参考カードとして使用。',
     },
     zh: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-10-04',
+      freshness_tier: 'monthly',
+      next_refresh_due: '2026-06-30',
       theme: '最佳模型',
       title: '2026年最佳本地编码LLM：Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: '2026年最佳本地编程LLM：Kimi K2.6（87/100）vs Qwen 3.6 vs Llama',

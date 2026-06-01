@@ -8,7 +8,9 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
+      next_seo_review_due: '2026-07-01',
+      next_refresh_due: '2026-06-30',
       theme: 'Best Models',
       title: 'Ollama Context Window Configuration: 64K–1M Tokens on Strix Halo, RTX, Mac 2026',
       seoTitle: 'Local LLM Long Context 2026: 64K to 1M Tokens in Ollama',
@@ -359,7 +361,7 @@ schema: {
       gammaDescription: 'The slide deck below covers: 128K context window models compared (Llama 3.1, Qwen2.5, Mistral Small 3.1), RAM usage at 4K/32K/128K context lengths, the "lost in the middle" effect and practical reliable limits (~32K for 7B models), and how to set num_ctx in Ollama. Download the PDF as a long context local LLM reference card.',
     },
     es: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Configuración de ventana de contexto en Ollama: 64K–1M tokens en Strix Halo, RTX, Mac 2026',
       seoTitle: 'LLM local contexto largo 2026: 64K a 1M tokens en Ollama',

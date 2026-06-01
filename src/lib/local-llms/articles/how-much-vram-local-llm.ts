@@ -8,8 +8,9 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-11-06',
+      freshness_tier: 'monthly',
+      next_seo_review_due: '2026-07-01',
+      next_refresh_due: '2026-06-30',
       theme: 'GPU Buying Guides',
       title: 'How Much VRAM for Local LLM? 7B to 70B Charts (2026)',
       seoTitle: 'How Much VRAM for Local LLM? 7B to 70B Charts (2026)',
@@ -305,8 +306,8 @@ schema: {
       },
     },
     es: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-11-06',
+      freshness_tier: 'monthly',
+      next_refresh_due: '2026-06-30',
       theme: 'GPU Buying Guides',
       title: '¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)',
       seoTitle: '¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)',

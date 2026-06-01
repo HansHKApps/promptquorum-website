@@ -8,7 +8,9 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
+      next_seo_review_due: '2026-07-01',
+      next_refresh_due: '2026-06-30',
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
       seoTitle: 'LLM Hardware Requirements 2026: 4GB to 70B VRAM Guide',
@@ -669,7 +671,7 @@ schema: {
       gammaDescription: 'The slide deck below covers: GPU VRAM tiers for 12/16/24 GB, best models per tier with VRAM usage and speed benchmarks, CPU-only inference on 16 GB RAM, and llama.cpp speed flags for RTX 4070 Ti. Download the PDF as a Local LLM Hardware Guide 2026 reference card.',
     },
     es: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Hardware & Performance',
       title: 'Hardware para LLMs Locales 2026: GPU vs Mini PC vs Mac Comparado',
       seoTitle: 'Requisitos Hardware LLM 2026: Guía 4GB a 70B VRAM',

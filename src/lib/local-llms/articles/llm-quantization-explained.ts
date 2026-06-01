@@ -8,8 +8,9 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-11-06',
+      freshness_tier: 'monthly',
+      next_seo_review_due: '2026-07-01',
+      next_refresh_due: '2026-06-30',
       theme: 'Best Models',
       title: 'LLM Quantization: Q4 vs Q5 vs Q8 Explained (When to Use Each)',
       seoTitle: 'LLM Quantization 2026: Q4_K_M vs Q8_0 VRAM Guide',
@@ -584,8 +585,8 @@ schema: {
       gammaDescription: 'The slide deck below covers: Q4_K_M vs Q8_0 vs GGUF format comparison, RAM savings by model size (3B-70B), quality loss by quantization level, and which quantization to choose for your hardware. Download the PDF as an LLM quantization reference card.',
     },
     es: {
-      freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-11-06',
+      freshness_tier: 'monthly',
+      next_refresh_due: '2026-06-30',
       theme: 'Best Models',
       title: 'Cuantización de LLM: Q4 vs Q5 vs Q8 explicada (cuándo usar cada una)',
       seoTitle: 'Cuantización LLM 2026: Q4_K_M vs Q8_0 — Guía de VRAM',

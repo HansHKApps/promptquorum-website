@@ -33,9 +33,13 @@ export interface BlogPost {
   faqSchema?: Record<string, unknown>
   howToSchema?: Record<string, unknown>
   itemListSchema?: Record<string, unknown>
-  freshness_tier?: 'evergreen' | 'semi_annual' | 'annual'
+  freshness_tier?: 'evergreen' | 'semi_annual' | 'annual' | 'monthly'
   next_refresh_due?: string
+  last_full_refresh?: string
+  next_seo_review_due?: string
+  last_seo_review?: string
   current_models_mentioned?: string[]
+  current_benchmarks_used?: string[]
   current_hardware_mentioned?: string[]
   archive_after?: string
   specific_year?: number

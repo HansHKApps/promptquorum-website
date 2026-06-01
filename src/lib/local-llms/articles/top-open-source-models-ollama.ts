@@ -8,7 +8,9 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
+      next_seo_review_due: '2026-07-01',
+      next_refresh_due: '2026-06-30',
       theme: 'Best Models',
       title: '10 Best Open Source LLMs for Ollama in 2026 (Ranked & Tested)',
       seoTitle: 'Best Ollama Models 2026: Top 10 Open Source LLMs',
@@ -476,7 +478,7 @@ schema: {
       gammaDescription: 'The slide deck below covers: top 10 Ollama models by download count, performance comparison (60-74% HumanEval), best models by use case (chat, coding, reasoning, vision), DeepSeek-R1 chain-of-thought reasoning, and exact pull commands. Download the PDF as your Ollama model selection reference card.',
     },
     es: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Best Models',
       title: '10 Mejores LLMs de Código Abierto para Ollama en 2026 (Clasificados y Probados)',
       seoTitle: 'Mejores Modelos Ollama 2026: Top 10 LLMs de Código Abierto',
