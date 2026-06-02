@@ -320,14 +320,18 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     ja: { home: 'ホーム', hub: 'プロンプトエンジニアリング' },
     zh: { home: '主页', hub: '提示词工程' },
     pt: { home: 'Início', hub: 'Prompt Engineering' },
+    es: { home: 'Inicio', hub: 'Prompt Engineering' },
+    ar: { home: 'الرئيسية', hub: 'Prompt Engineering' },
   }
+  // Fall back to English so an unmapped locale can never throw at render time.
+  const bcLabel = breadcrumbLabels[selectedLang] ?? breadcrumbLabels.en
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: breadcrumbLabels[selectedLang].home, item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: breadcrumbLabels[selectedLang].hub, item: 'https://www.promptquorum.com/prompt-engineering' },
+      { '@type': 'ListItem', position: 1, name: bcLabel.home, item: 'https://www.promptquorum.com' },
+      { '@type': 'ListItem', position: 2, name: bcLabel.hub, item: 'https://www.promptquorum.com/prompt-engineering' },
       { '@type': 'ListItem', position: 3, name: article.title, item: canonicalUrl },
     ],
   }
