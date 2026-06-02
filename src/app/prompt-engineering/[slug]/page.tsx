@@ -319,6 +319,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     fr: { home: 'Accueil', hub: 'Prompt Engineering' },
     ja: { home: 'ホーム', hub: 'プロンプトエンジニアリング' },
     zh: { home: '主页', hub: '提示词工程' },
+    pt: { home: 'Início', hub: 'Prompt Engineering' },
   }
 
   const breadcrumbSchema = {
