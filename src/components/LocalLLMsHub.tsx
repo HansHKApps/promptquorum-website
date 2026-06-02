@@ -1,13 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import { useMemo } from 'react'
 import { llmThemes, type LLMTheme } from '@/lib/local-llms/themes'
-import { llmContent } from '@/lib/local-llms/content'
-import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
+import { LazySection } from './hub/LazySection'
+import type { LLMHubData } from '@/lib/local-llms/hub-data'
 
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد' }
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث' }
@@ -1081,27 +1082,35 @@ function slugToTitle(slug: string): string {
     .join(' ')
 }
 
-// Returns the article title from content, or a readable fallback from the slug
-function getArticleTitle(articleKey: string, lang: Language): string {
-  const contentKey = LLM_SLUG_TO_KEY[articleKey]
-  if (contentKey && llmContent[contentKey]?.[lang]?.title) return llmContent[contentKey][lang].title
-  if (contentKey && llmContent[contentKey]?.en?.title)     return llmContent[contentKey].en.title
+// Returns the article title from the server-precomputed titlesMap, or a readable fallback
+function getArticleTitle(
+  articleKey: string,
+  lang: Language,
+  titlesMap: Record<string, Partial<Record<Language, string>>>
+): string {
+  const titles = titlesMap[articleKey]
+  if (titles?.[lang]) return titles[lang]!
+  if (titles?.en) return titles.en!
   return slugToTitle(articleKey)
 }
 
-function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: string; lang: Language }) {
-  const title = getArticleTitle(articleKey, lang)
+function ArticleCard({
+  articleKey, dot, lang, titlesMap, datesMap, liveSet,
+}: {
+  articleKey: string
+  dot: string
+  lang: Language
+  titlesMap: Record<string, Partial<Record<Language, string>>>
+  datesMap: Record<string, { publishDate?: string; dateModified?: string }>
+  liveSet: Set<string>
+}) {
+  if (!liveSet.has(articleKey)) return null
+
+  const title = getArticleTitle(articleKey, lang, titlesMap)
   const href = navHref(`/local-llms/${articleKey}`, lang)
-  const contentKey = LLM_SLUG_TO_KEY[articleKey]
-  const hasContent = !!(contentKey && llmContent[contentKey])
-
-  // Future-proof: if no content, don't render the card
-  if (!hasContent) {
-    return null
-  }
-
-  const publishDate = llmContent[contentKey]?.en?.publishDate
-  const dateModified = llmContent[contentKey]?.en?.dateModified
+  const dates = datesMap[articleKey]
+  const publishDate = dates?.publishDate
+  const dateModified = dates?.dateModified
   const showNew = isNewArticle(publishDate)
   const showUpdated = !showNew && isUpdatedArticle(publishDate, dateModified)
 
@@ -1130,8 +1139,12 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
   )
 }
 
-function ArticleComingSoon({ articleKey, lang }: { articleKey: string; lang: Language }) {
-  const title = getArticleTitle(articleKey, lang)
+function ArticleComingSoon({ articleKey, lang, titlesMap }: {
+  articleKey: string
+  lang: Language
+  titlesMap: Record<string, Partial<Record<Language, string>>>
+}) {
+  const title = getArticleTitle(articleKey, lang, titlesMap)
   return (
     <div className="flex items-start gap-3 bg-card border border-primary/20 rounded-xl p-4 opacity-50 cursor-default select-none">
       <span className="flex-shrink-0 w-2 h-2 rounded-full mt-2 bg-gray-300" />
@@ -1143,13 +1156,18 @@ function ArticleComingSoon({ articleKey, lang }: { articleKey: string; lang: Lan
   )
 }
 
-function ThemeSection({ theme, lang }: { theme: LLMTheme; lang: Language }) {
+function ThemeSection({ theme, lang, titlesMap, datesMap, liveSet }: {
+  theme: LLMTheme
+  lang: Language
+  titlesMap: Record<string, Partial<Record<Language, string>>>
+  datesMap: Record<string, { publishDate?: string; dateModified?: string }>
+  liveSet: Set<string>
+}) {
   const colors = THEME_COLORS[theme.id] ?? { badge: 'bg-gray-50 text-gray-700 border-gray-200', dot: 'bg-gray-400' }
   const label = THEME_LABELS[theme.id]?.[lang] ?? THEME_LABELS[theme.id]?.['en'] ?? theme.title
 
-  // Filter to articles: live ones (have content and not coming soon), and coming soon ones
   const liveArticles = theme.articleKeys.filter(
-    key => !COMING_SOON_SLUGS.has(key) && !!(LLM_SLUG_TO_KEY[key] && llmContent[LLM_SLUG_TO_KEY[key]])
+    key => !COMING_SOON_SLUGS.has(key) && liveSet.has(key)
   )
   const soonArticles = theme.articleKeys.filter(key => COMING_SOON_SLUGS.has(key))
   const hasContent = liveArticles.length > 0 || soonArticles.length > 0
@@ -1168,10 +1186,10 @@ function ThemeSection({ theme, lang }: { theme: LLMTheme; lang: Language }) {
       {hasContent ? (
         <div className="grid sm:grid-cols-2 gap-3">
           {liveArticles.map(key => (
-            <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} />
+            <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} titlesMap={titlesMap} datesMap={datesMap} liveSet={liveSet} />
           ))}
           {soonArticles.map(key => (
-            <ArticleComingSoon key={key} articleKey={key} lang={lang} />
+            <ArticleComingSoon key={key} articleKey={key} lang={lang} titlesMap={titlesMap} />
           ))}
         </div>
       ) : (
@@ -1183,8 +1201,14 @@ function ThemeSection({ theme, lang }: { theme: LLMTheme; lang: Language }) {
   )
 }
 
-function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
+  initialLang?: import("@/hooks/useLang").Lang
+  titlesMap: Record<string, Partial<Record<Language, string>>>
+  datesMap: Record<string, { publishDate?: string; dateModified?: string }>
+  liveSlugs: string[]
+}) {
   const lang = useLang(initialLang)
+  const liveSet = useMemo(() => new Set(liveSlugs), [liveSlugs])
 
   return (
     <div className="min-h-screen bg-surface pt-24 pb-20">
@@ -1368,9 +1392,8 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
             pt: 'Recém publicado — desaparece deste local após 14 dias',
             ar: 'نُشر للتو — يختفي من هنا بعد 14 يومًا',
           }
-          const recentSlugs = Object.entries(LLM_SLUG_TO_KEY)
-            .filter(([, key]) => isNewArticle(llmContent[key]?.en?.publishDate))
-            .map(([slug]) => slug)
+          const recentSlugs = Object.keys(datesMap)
+            .filter(slug => isNewArticle(datesMap[slug]?.publishDate))
           if (recentSlugs.length === 0) return null
           const dotColor = 'bg-emerald-400'
           return (
@@ -1386,7 +1409,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
               <p className="text-xs text-emerald-700/70 mb-5">{RECENT_SUB[lang] ?? RECENT_SUB['en']}</p>
               <div className="grid sm:grid-cols-2 gap-5">
                 {recentSlugs.map(slug => (
-                  <ArticleCard key={slug} articleKey={slug} dot={dotColor} lang={lang} />
+                  <ArticleCard key={slug} articleKey={slug} dot={dotColor} lang={lang} titlesMap={titlesMap} datesMap={datesMap} liveSet={liveSet} />
                 ))}
               </div>
             </section>
@@ -1394,8 +1417,10 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
         })()}
 
         {/* Theme sections */}
-        {llmThemes.map(theme => (
-          <ThemeSection key={theme.id} theme={theme} lang={lang} />
+        {llmThemes.map((theme, idx) => (
+          <LazySection key={theme.id} eager={idx < 2}>
+            <ThemeSection theme={theme} lang={lang} titlesMap={titlesMap} datesMap={datesMap} liveSet={liveSet} />
+          </LazySection>
         ))}
 
         {/* Image 3: Top Models 2026 */}
@@ -1559,6 +1584,11 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
   )
 }
 
-export function LocalLLMsHub({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
-  return <LocalLLMsHubContent initialLang={initialLang} />
+export function LocalLLMsHub({ initialLang, titlesMap, datesMap, liveSlugs }: {
+  initialLang?: import("@/hooks/useLang").Lang
+  titlesMap: Record<string, Partial<Record<Language, string>>>
+  datesMap: Record<string, { publishDate?: string; dateModified?: string }>
+  liveSlugs: string[]
+}) {
+  return <LocalLLMsHubContent initialLang={initialLang} titlesMap={titlesMap} datesMap={datesMap} liveSlugs={liveSlugs} />
 }

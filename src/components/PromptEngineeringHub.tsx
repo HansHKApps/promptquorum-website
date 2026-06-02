@@ -11,6 +11,7 @@ import { getArticleHighlight, type ArticleHighlight } from './hub/hub-utils'
 import { LevelBar } from './hub/LevelBar'
 import { HubArticleCard } from './hub/HubArticleCard'
 import { GuideStarWidget, type RecommendedArticle } from './hub/GuideStarWidget'
+import { LazySection } from './hub/LazySection'
 
 function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
@@ -797,7 +798,7 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
 
         {/* Theme sections */}
         <div className="space-y-20">
-          {themes.map((theme) => {
+          {themes.map((theme, idx) => {
             const label = THEME_LABELS[theme.id]?.[lang] ?? THEME_LABELS[theme.id]?.['en'] ?? theme.title
             const colors = THEME_COLORS[theme.id]
             const articleKeys = theme.articleKeys ?? theme.subSections?.flatMap(s => s.articleKeys) ?? []
@@ -807,7 +808,8 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
             const callout = THEME_CALLOUTS[theme.id]?.[lang] ?? THEME_CALLOUTS[theme.id]?.['en']
 
             return (
-              <section key={theme.id} id={theme.id}>
+              <LazySection key={theme.id} eager={idx < 2}>
+              <section id={theme.id}>
                 {/* Theme header */}
                 <div className="mb-8">
                   <div className="flex items-baseline gap-3 mb-2">
@@ -869,6 +871,7 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
                   </div>
                 )}
               </section>
+              </LazySection>
             )
           })}
         </div>

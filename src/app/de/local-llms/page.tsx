@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
+import { buildLLMHubData } from '@/lib/local-llms/hub-data'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'de'
@@ -27,5 +28,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function DeLocalLLMsPage() {
-  return <LocalLLMsHub initialLang="de" />
+  return <LocalLLMsHub initialLang="de" {...buildLLMHubData()} />
 }
